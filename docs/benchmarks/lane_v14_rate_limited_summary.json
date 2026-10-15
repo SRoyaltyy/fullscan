@@ -1,0 +1,32 @@
+{
+  "pass": false,
+  "metrics": {
+    "action": 0,
+    "lane": 0,
+    "sectors": 0,
+    "action_precision": null,
+    "action_recall": 0
+  },
+  "tp": 0,
+  "fp": 0,
+  "fn_or_unavailable": 20,
+  "availability": 0,
+  "acceptance_eligible": false,
+  "scope": "Service-blocked development run: zero analyzed rows; no semantic accuracy estimate or acceptance credit",
+  "best_consecutive_passes": 0,
+  "run_id": 38672751849,
+  "execution_commit": "b890c8ed258710de879a0583fd5024baafce0ace",
+  "stop_reason": "rate_limited",
+  "artifacts": [
+    {
+      "id": 11945226746,
+      "name": "lane-semantic-development-score",
+      "digest": "sha256:56890264a6b2d90e8231e18809dbe7a12a9b59decb63eba2d236f230bb88ff32"
+    },
+    {
+      "id": 11944961871,
+      "name": "lane-glm-provider-100",
+      "digest": "sha256:0135957b9cd314779a7861f1c236288365d0f72df284cd6a79f17fff2390d408"
+    }
+  ]
+}

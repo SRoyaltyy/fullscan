@@ -1,0 +1,1491 @@
+{
+  "version": "frontier-title-reference-v1",
+  "judge": "assistant independent judgment",
+  "scope": "title-only events/actions; reliable official identity knowledge allowed for sector and public institution type; no article-body event facts",
+  "input_sha256": "92c2c76f24dcc9d06693bda8e809591ca06ef2679fcfc8a6104dd3495746f632",
+  "original_reference_bytes_available": true,
+  "acceptance_eligible": true,
+  "frozen_before_program_execution": true,
+  "frozen_at": "2026-10-14T04:38:27.099Z",
+  "candidate_intended": "semantic-headlines-v9 / headline-ontology-v7",
+  "reference_protocol": {
+    "public_action": "Reported concrete act of public government/court/regulator/central bank/statutory public institution; speech/statistics and private processes false; unresolved authority or actual performance null. State ownership of an ordinary commercial corporation alone does not make it public authority.",
+    "lane": "Locked 55 classes. Alternatives listed only for coequal events or genuine title/ontology boundary ambiguity, before any outputs for this input are inspected.",
+    "sector": "Eleven coarse business-activity sectors. Direct issuer/operating industry only; exclude incidental financiers, publishers, stock-watch footers and speculative downstream effects. Commodity/macro prints alone empty. Specific affected activity may differ from whole-issuer catalog sector.",
+    "novelty": "Compared to 300 recoverable prior semantic runtime titles and this reserve's other titles by normalized title/URL and conservative token overlap. Does not certify exhaustive exclusion from older unrelated JEV experiments."
+  },
+  "identity_sources": [
+    {
+      "rows": [
+        1
+      ],
+      "url": "https://www.sec.gov/Archives/edgar/data/1007587/000100758726000004/kvhi-20251231.htm",
+      "use": "KVH mobile connectivity/products; Technology catalog/product versus Communication Services operating-provider boundary fixed as alternatives."
+    },
+    {
+      "rows": [
+        21
+      ],
+      "url": "https://www.sec.gov/Archives/edgar/data/1049502/000119312526066820/mksi-20251231.htm",
+      "use": "MKS semiconductor/electronics equipment business."
+    },
+    {
+      "rows": [
+        10
+      ],
+      "url": "https://www.samsungsds.com/eu/news/woojung-mou.html",
+      "use": "Air freight logistics activity identity, not acquisition event verification."
+    },
+    {
+      "rows": [
+        13
+      ],
+      "url": "https://www.kap.org.tr/tr/Bildirim/1641754",
+      "use": "Listed Efor Yatirim parent tea operation, distinguish namesakes and parent holding."
+    },
+    {
+      "rows": [
+        24
+      ],
+      "url": "https://assets.tabunghaji.gov.my/uploads/TH_AR_23_19_07_compressed_d932b80c5d.pdf",
+      "use": "Statutory public institution, deposit/investment services."
+    },
+    {
+      "rows": [
+        33
+      ],
+      "url": "https://www.nrc.gov/facilities-safety/new-reactors/advanced-reactors/modernizing-how-we-regulate/rulemaking/part-53-risk-informed-technology-inclusive-regulatory-framework-for-advanced-reactors",
+      "use": "Identity of Part53 nuclear licensing framework; event occurrence judged from headline only."
+    },
+    {
+      "rows": [
+        45
+      ],
+      "url": "https://selinc.com/company/about/",
+      "use": "Electrical protection/control device manufacturing."
+    },
+    {
+      "rows": [
+        47
+      ],
+      "url": "https://bruton-ltd.com/news/bruton-limited-brut-results-for-the-six-months-ended-june-30-2026/",
+      "use": "VLCC marine shipping operator business."
+    },
+    {
+      "rows": [
+        50
+      ],
+      "url": "https://www.amu.ac.in/amucentres/amu-kishanganj-centre",
+      "use": "AMU central public university institution identity."
+    },
+    {
+      "rows": [
+        69
+      ],
+      "url": "https://ir.emperydigital.com/company-information",
+      "use": "Digital asset treasury business."
+    },
+    {
+      "rows": [
+        73
+      ],
+      "url": "https://www.akerasa.com/en/about",
+      "use": "Industrial investment/operating holding identity."
+    },
+    {
+      "rows": [
+        95
+      ],
+      "url": "https://www.cupidlimited.com/about-us/",
+      "use": "Contraceptive medical products and diagnostic kits."
+    }
+  ],
+  "records": [
+    {
+      "n": 1,
+      "title": "KVH Industries added to S&P Global BMI Index: what it means for KVH Industries stock - AD HOC NEWS",
+      "action": false,
+      "acceptable_lane_classes": [
+        "flow_index"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Technology"
+        ],
+        [
+          "Communication Services"
+        ],
+        [
+          "Communication Services",
+          "Technology"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 2,
+      "title": "Eliminating inconsistency between peace agreement and Armenian Constitution is necessary - Presidential Representative - Apa.az",
+      "action": false,
+      "acceptable_lane_classes": [
+        "statement_public"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 3,
+      "title": "Inside The September 2026 S&P 500 Momentum Index Reconstitution - Seeking Alpha",
+      "action": false,
+      "acceptable_lane_classes": [
+        "flow_index",
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 4,
+      "title": "Trump hits campaign trail following weaker-than-expected jobs report - Good Morning America",
+      "action": false,
+      "acceptable_lane_classes": [
+        "statement_public",
+        "discard"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 5,
+      "title": "NIO Stock Hits The Brakes After 3-Day Rally: Xiaomi Reportedly In Talks Over Last German Hub Amid 90% Sales Crash - Stocktwits",
+      "action": false,
+      "acceptable_lane_classes": [
+        "rumor",
+        "regime_state",
+        "print_vs_priced"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Consumer Cyclical"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 6,
+      "title": "BT Group Reportedly in Talks With UK Officials Over Antitrust Scrutiny of Potential TalkTalk Deal - marketscreener.com",
+      "action": false,
+      "acceptable_lane_classes": [
+        "rumor",
+        "deal_review",
+        "statement_public"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Communication Services"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 7,
+      "title": "Kapitalo Investimentos Ltda Acquires 42,650 Shares of NVIDIA Corporation $NVDA - MarketBeat",
+      "action": false,
+      "acceptable_lane_classes": [
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Technology"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 8,
+      "title": "Fresh blow to flyers: IndiGo levies fuel surcharge of up to Rs 10,000 from Oct 6; ticket prices to go up - The New Indian Express",
+      "action": false,
+      "acceptable_lane_classes": [
+        "input_cost"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Industrials"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 9,
+      "title": "NowVertical Group Announces Appointment of Andre Garber as CEO and an Up to $15.1 Million Brokered Private Placement of Units and Convertible Debenture Units - The Manila Times",
+      "action": false,
+      "acceptable_lane_classes": [
+        "key_person",
+        "dilution",
+        "credit_funding"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Technology"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 10,
+      "title": "Samsung SDS Acquires Woojung Air to Expand Air Freight Capabilities - THE ELEC, Korea Electronics Industry Media",
+      "action": false,
+      "acceptable_lane_classes": [
+        "corporate_action_mna"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Industrials"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 11,
+      "title": "BD Strengthens Leadership in Peripheral Vascular Innovation with Positive AGILITY Trial Results - Morningstar",
+      "action": false,
+      "acceptable_lane_classes": [
+        "trial_readout"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Healthcare"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 12,
+      "title": "FBI Arrests Ransomware Negotiator, 54, on 2 Counts (2026) - shattered.io",
+      "action": true,
+      "acceptable_lane_classes": [
+        "blast_legal"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 13,
+      "title": "Efor Yatirim Says It Decides To Withdraw From Private Placement Capital Increase Process Aimed At Raising 3 Bln Lira - TradingView",
+      "action": false,
+      "acceptable_lane_classes": [
+        "dilution",
+        "statement_public"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Consumer Defensive"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 14,
+      "title": "US Crude Inventories Fall as SPR Draws Continue - IndexBox",
+      "action": true,
+      "acceptable_lane_classes": [
+        "inventory_print"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 15,
+      "title": "IndiGo hikes fuel surcharge for domestic, international flights amid spike in ATF costs - Deccan Herald",
+      "action": false,
+      "acceptable_lane_classes": [
+        "input_cost"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Industrials"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 16,
+      "title": "Minnesota, U.S. Leaders react to DOJ investigation on Rep. Ilhan Omar - KTTC",
+      "action": true,
+      "acceptable_lane_classes": [
+        "regulatory_probe",
+        "statement_public",
+        "blast_legal"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 17,
+      "title": "U.S. stock futures rise as investors brace for bank earnings, inflation data By Investing.com - Investing.com",
+      "action": false,
+      "acceptable_lane_classes": [
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        [],
+        [
+          "Financial"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 18,
+      "title": "Russia Eases Diesel Export Ban After Putin-Trump Deal on Global Supplies - NDTV Profit",
+      "action": true,
+      "acceptable_lane_classes": [
+        "sanction_lift"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Energy"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 19,
+      "title": "US Crude Inventories Fall 2.09 Million Barrels - TradingView",
+      "action": false,
+      "acceptable_lane_classes": [
+        "inventory_print"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 20,
+      "title": "Indexed To 2015, India IPO Market Has Outperformed Every Major IPO market Is India providing an IDEAL ''EXIT OPTION'' making it an attractive destination? Or is the ''DIVERSITY on IPO Street'' pulling the money in? Shereen Bhan Prashant Nair Sriram Iyer H - LinkedIn",
+      "action": false,
+      "acceptable_lane_classes": [
+        "discard",
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 21,
+      "title": "MKS (MKSI) Could Be 35% Undervalued Following FTSE All World Index Inclusion - Simply Wall Street",
+      "action": false,
+      "acceptable_lane_classes": [
+        "flow_index"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Technology"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 22,
+      "title": "OpenAI safety leader David Robinson resigns amid top-level exits | Head of Safety Systems also resigned earlier | Inshorts - Inshorts",
+      "action": false,
+      "acceptable_lane_classes": [
+        "key_person"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Technology"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 23,
+      "title": "Singapore Court Approves Jetstar Asia Debt Restructuring Plan - TRAICY Global",
+      "action": true,
+      "acceptable_lane_classes": [
+        "distress_restruct",
+        "blast_legal"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Industrials"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 24,
+      "title": "Tabung Haji Restores Main Services After Cyberattack - BusinessToday Malaysia",
+      "action": true,
+      "acceptable_lane_classes": [
+        "blast_cyber"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Financial"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 25,
+      "title": "Germany reaffirms Russia sanctions after Trump-Putin diesel supply agreement - Anadolu Ajansı",
+      "action": false,
+      "acceptable_lane_classes": [
+        "statement_public"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 26,
+      "title": "Embattled Northern California charter school files for bankruptcy - The Almanac",
+      "action": false,
+      "acceptable_lane_classes": [
+        "distress_restruct"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Consumer Defensive"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 27,
+      "title": "Glaukos Corp (GKOS) Reports Positive Phase 4 Trial Results for i - GuruFocus",
+      "action": false,
+      "acceptable_lane_classes": [
+        "trial_readout"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Healthcare"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 28,
+      "title": "Merlin Demonstrates Autonomous Flight Capabilities at Texas Department of Transportation Project NEXUS eIPP Kickoff Event",
+      "action": false,
+      "acceptable_lane_classes": [
+        null
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Industrials"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 29,
+      "title": "IG Group Shares Plunge c25% After De Facto Profit Warning - Share Talk",
+      "action": false,
+      "acceptable_lane_classes": [
+        "preannounce"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Financial"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 30,
+      "title": "Russian drone strike sparks factory fire in Rivne Oblast, prompting evacuations - The New Voice of Ukraine",
+      "action": false,
+      "acceptable_lane_classes": [
+        "blast_ops"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 31,
+      "title": "Liquidia Falls as Patent Ruling Overhang Continues - Quiver Quantitative",
+      "action": false,
+      "acceptable_lane_classes": [
+        "regime_state",
+        "ip_ruling"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Healthcare"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 32,
+      "title": "Richmond City Council weighs real estate tax rate cut amid concerns over slowing revenue - WTVR.com",
+      "action": false,
+      "acceptable_lane_classes": [
+        "statement_public"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Real Estate"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 33,
+      "title": "NRC unveils Part 53 final rule - American Nuclear Society -- ANS",
+      "action": true,
+      "acceptable_lane_classes": [
+        "standard_mandate",
+        "gate"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Utilities"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 34,
+      "title": "The week ahead: Europe in the spotlight, as investors digest impact of payrolls - FXStreet",
+      "action": false,
+      "acceptable_lane_classes": [
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 35,
+      "title": "ViiV Healthcare’s long-acting HIV treatment Cabenuva (cabotegravir + rilpivirine) meets primary endpoint of superior viral suppression vs. daily oral therapy in people with viremia - Business Wire",
+      "action": false,
+      "acceptable_lane_classes": [
+        "trial_readout"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Healthcare"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 36,
+      "title": "The Refinancing Squeeze Facing Middle-Market Companies - Law.com",
+      "action": false,
+      "acceptable_lane_classes": [
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 37,
+      "title": "Weekly round-up: Steel and raw material prices surge on tight supply, higher input costs - BigMint",
+      "action": false,
+      "acceptable_lane_classes": [
+        "regime_state",
+        "input_cost"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 38,
+      "title": "Production halted again at Jamuna Fertilizer Factory two days after restart - দৈনিক আগামীর সময়",
+      "action": false,
+      "acceptable_lane_classes": [
+        "blast_ops"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Basic Materials"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 39,
+      "title": "The IMF attacks subsidies for being more expensive and less effective in the face of the rising cost of living. - Demócrata",
+      "action": false,
+      "acceptable_lane_classes": [
+        "statement_public"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 40,
+      "title": "Trader could face bankruptcy after market stint - BBC",
+      "action": false,
+      "acceptable_lane_classes": [
+        "discard"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 41,
+      "title": "IMF: Tokenized Securities Market Quadruples - 조선일보",
+      "action": false,
+      "acceptable_lane_classes": [
+        "print_vs_priced",
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 42,
+      "title": "CT State Expands Manufacturing Programs At 13 Training Locations - CT News Junkie",
+      "action": true,
+      "acceptable_lane_classes": [
+        "capacity"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Consumer Defensive"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 43,
+      "title": "Kuwait Finance House Receives KD 14.8 Mln From Mushrif On Bankruptcy Judge's Decision - TradingView",
+      "action": true,
+      "acceptable_lane_classes": [
+        "blast_legal",
+        "credit_funding"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Financial",
+          "Industrials"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 44,
+      "title": "Delhi Court Rules Against Bail For MCOCA Accused - Rediff",
+      "action": true,
+      "acceptable_lane_classes": [
+        "blast_legal"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 45,
+      "title": "SEL Expands Manufacturing Operations in West Lafayette - Big Country News |",
+      "action": false,
+      "acceptable_lane_classes": [
+        "capacity"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Industrials"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 46,
+      "title": "Tamoil joins Italy’s patchwork fuel price cap - Decode39",
+      "action": false,
+      "acceptable_lane_classes": [
+        "price_cap"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Energy"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 47,
+      "title": "Bruton Limited Initiates Strategic Review - TradingView",
+      "action": false,
+      "acceptable_lane_classes": [
+        "strategic_review"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Industrials"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 48,
+      "title": "US futures climb as oil prices ease, investors await jobs report | National News | 2news.com - KTVN",
+      "action": false,
+      "acceptable_lane_classes": [
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 49,
+      "title": "EU Tightens Stablecoin Regulation, Sets 2027 Compliance Deadline - KuCoin",
+      "action": true,
+      "acceptable_lane_classes": [
+        "standard_mandate"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Financial"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 50,
+      "title": "AMU agrees to student demands; announces student-union election, replaces proctor - Careers360",
+      "action": true,
+      "acceptable_lane_classes": [
+        "policy_personnel",
+        "key_person",
+        "statement_public"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Consumer Defensive"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 51,
+      "title": "Activist investor Elliott backs Air Liquide strategy, pushes for faster buyback - gasworld",
+      "action": false,
+      "acceptable_lane_classes": [
+        "activist_campaign"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Basic Materials"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 52,
+      "title": "Israeli forces kill three Palestinians as Gaza ceasefire agreement violations continue - TRT World",
+      "action": true,
+      "acceptable_lane_classes": [
+        null,
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 53,
+      "title": "Iraq puts 2 million barrels through Hormuz to chase better oil prices - middle-east-online.com",
+      "action": null,
+      "acceptable_lane_classes": [
+        "demand"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Energy"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 54,
+      "title": "Neinor Homes completes buyback after acquiring 3% of its share capital - Prop News Time",
+      "action": false,
+      "acceptable_lane_classes": [
+        "capital_return"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Real Estate"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 55,
+      "title": "MacKenzie Realty Capital Unveils Strategic Review, Halts Preferred Stock Buybacks; Shares Drop Pre-Bell - Moomoo",
+      "action": false,
+      "acceptable_lane_classes": [
+        "capital_return",
+        "strategic_review"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Real Estate"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 56,
+      "title": "Antitrust approval for Stahl-Henkel, buyback at Tecnica Group - La conceria.it",
+      "action": true,
+      "acceptable_lane_classes": [
+        "deal_review",
+        "capital_return"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Basic Materials",
+          "Consumer Cyclical"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 57,
+      "title": "Student union election cancelled at Odisha’s Aska college; protest erupts over indefinite closure - Odisha TV",
+      "action": false,
+      "acceptable_lane_classes": [
+        "capacity",
+        "discard"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Consumer Defensive"
+        ],
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 58,
+      "title": "2 Years After Historic Union Vote, Bicycle Health Clinicians Still Lack a Contract - Behavioral Health Business",
+      "action": false,
+      "acceptable_lane_classes": [
+        "regime_state",
+        "labor_organize"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Healthcare"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 59,
+      "title": "NNPC Stations: YPP slams Tinubu’s 30-day fuel subsidy, demands transparency - Peoples Gazette Nigeria",
+      "action": false,
+      "acceptable_lane_classes": [
+        "statement_public"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Energy"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 60,
+      "title": "EXCLUSIVE| 1,653 Seats Won Unopposed: How Big-Ticket MLAs Are Shaping Odisha Student Union Election Battles - Argus News English",
+      "action": false,
+      "acceptable_lane_classes": [
+        "discard"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 61,
+      "title": "Water supply disruptions hit Leitrim following plant shutdown - Leitrim Observer",
+      "action": false,
+      "acceptable_lane_classes": [
+        "blast_ops"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Utilities"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 62,
+      "title": "WOLVERINE ASSET MANAGEMENT LLC Trims Stake in Westin Acquisition Corp (WSTN) by 39.66% - GuruFocus",
+      "action": false,
+      "acceptable_lane_classes": [
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Financial"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 63,
+      "title": "Broadcom Reportedly in Talks for Over $50 Billion Financing as Oracle, SpaceX Seek Funds to Buy AI Chips - TradingKey",
+      "action": false,
+      "acceptable_lane_classes": [
+        "rumor",
+        "statement_public"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Technology",
+          "Industrials"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 64,
+      "title": "A magnitude 4.8 earthquake just shook southeast Victoria. Here’s why we may expect more - The Conversation",
+      "action": false,
+      "acceptable_lane_classes": [
+        "cat_weather"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 65,
+      "title": "Former engineer sentenced for ransomware-style attack on employer - SC Media",
+      "action": true,
+      "acceptable_lane_classes": [
+        "blast_legal"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 66,
+      "title": "When Can a SEC Investigation Turn Into a Criminal Investigation? - JDSupra",
+      "action": false,
+      "acceptable_lane_classes": [
+        "discard"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 67,
+      "title": "A 1954 Rule Called Section 1035 Lets You Trade a Bad Annuity for a Better One With No Tax Bill. The Agent Selling the New One Rarely Mentions the Surrender Charge on the Old One - 24/7 Wall St.",
+      "action": false,
+      "acceptable_lane_classes": [
+        "discard"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Financial"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 68,
+      "title": "Koscom to Showcase Tokenized Securities Platform, Financial AI at Korea Fintech Week 2026 - bloomingbit",
+      "action": false,
+      "acceptable_lane_classes": [
+        "statement_public",
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Technology"
+        ],
+        [
+          "Financial",
+          "Technology"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 69,
+      "title": "Empery Proxy Fight Brings Bad Blood to Delaware Supreme Court - cedarnews.net",
+      "action": false,
+      "acceptable_lane_classes": [
+        "activist_campaign",
+        "blast_legal"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Financial"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 70,
+      "title": "Gazipur garment factory fire contained after 3.5 hours - bdnews24.com",
+      "action": false,
+      "acceptable_lane_classes": [
+        "blast_ops"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Consumer Cyclical"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 71,
+      "title": "Rocket Pharma secures up to $150M credit facility - The Pharma Letter",
+      "action": false,
+      "acceptable_lane_classes": [
+        "credit_funding"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Healthcare"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 72,
+      "title": "Cyberattack hits La Liga club! Fans' personal data may be at risk - Dailysports",
+      "action": false,
+      "acceptable_lane_classes": [
+        "blast_cyber"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Communication Services"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 73,
+      "title": "How Index Inclusion Will Impact Aker Stock Investors - Simply Wall Street",
+      "action": false,
+      "acceptable_lane_classes": [
+        "flow_index",
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Industrials"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 74,
+      "title": "‘Umamusume’ Spin-Off Series Aims For Guinness World Record - THE MAGIC RAIN",
+      "action": false,
+      "acceptable_lane_classes": [
+        "discard"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Communication Services"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 75,
+      "title": "Luminis Health Says Systems Restored After Cyberattack, But Key Questions Remain - Eye On Annapolis",
+      "action": false,
+      "acceptable_lane_classes": [
+        "blast_cyber"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Healthcare"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 76,
+      "title": "Insider Selling: Samsara (NYSE:IOT) Insider Sells $5,977,450.71 in Stock - MarketBeat",
+      "action": false,
+      "acceptable_lane_classes": [
+        "insider_flow"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Technology"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 77,
+      "title": "Lithium Universe CFO John Sobolewski Resigns - TradingView",
+      "action": false,
+      "acceptable_lane_classes": [
+        "key_person"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Basic Materials"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 78,
+      "title": "Michael Ovitz Must Complete Deposition in Julia Ormond Case After Epstein Questions Sparked Walkout - Yahoo News UK",
+      "action": null,
+      "acceptable_lane_classes": [
+        "blast_legal"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 79,
+      "title": "HSCI / HK Connect Dec 2026 Index Rebalance Forecast - Smartkarma",
+      "action": false,
+      "acceptable_lane_classes": [
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 80,
+      "title": "Fortis Healthcare, Apollo Hospitals, Max, Medanta shares rise: Should investors buy after 30% cancer drug price cap? - Livemint",
+      "action": true,
+      "acceptable_lane_classes": [
+        "price_cap"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Healthcare"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 81,
+      "title": "FDA Approves Juvmo for Parkinson’s Disease - Pharmacy Practice News",
+      "action": true,
+      "acceptable_lane_classes": [
+        "gate"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Healthcare"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 82,
+      "title": "Trump Announces Russia Ukraine Energy Ceasefire Agreement Claim - SuaraGarut.ID",
+      "action": null,
+      "acceptable_lane_classes": [
+        "statement_public",
+        "rumor"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Energy"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 83,
+      "title": "Ronaldo Walkout Costs Portugal 400,000+ Instagram Followers - heavy.com",
+      "action": false,
+      "acceptable_lane_classes": [
+        "discard"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 84,
+      "title": "Federal jobs report shows rise in unemployment rates - 9News",
+      "action": false,
+      "acceptable_lane_classes": [
+        "print_vs_priced"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 85,
+      "title": "Volvo Cars issues profit warning as China sales fall - Financial Times",
+      "action": false,
+      "acceptable_lane_classes": [
+        "preannounce"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Consumer Cyclical"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 86,
+      "title": "Preliminary results of Belarus. INNOPROM: record attendance, participation from 45 countries, new contracts - СБ. Беларусь",
+      "action": false,
+      "acceptable_lane_classes": [
+        "demand",
+        "print_vs_priced",
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 87,
+      "title": "Atlas Critical Minerals Intersects High-Grade Graphite; All 20 Drill Holes Confirm Mineralization, with Intercepts up to 33.78 Meters at 7.97% Graphitic Carbon",
+      "action": false,
+      "acceptable_lane_classes": [
+        "reserve_revision",
+        null
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Basic Materials"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 88,
+      "title": "A Shift in Altcoin Market Structure Is Raising Eyebrows: 5 Cryptos Worth Having for What Comes Next - Bitget",
+      "action": false,
+      "acceptable_lane_classes": [
+        "discard"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 89,
+      "title": "Gold Price Forecast: Falling Oil Prices Boost Gold, Central Bank Rate Hike Risks Remain Key - TradingKey",
+      "action": false,
+      "acceptable_lane_classes": [
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 90,
+      "title": "Texas Oil, School Funding And Your Tax Bill: Buckingham Explains - Dallas Express",
+      "action": false,
+      "acceptable_lane_classes": [
+        "statement_public",
+        "discard"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 91,
+      "title": "Express Wash Concepts Acquires Three Clean Hub Car Wash Locations in Metro Detroit - citybiz",
+      "action": false,
+      "acceptable_lane_classes": [
+        "corporate_action_mna"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Consumer Cyclical"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 92,
+      "title": "Ghosts of past subsidies haunt Nigeria’s petrol discount sale - Businessday NG",
+      "action": false,
+      "acceptable_lane_classes": [
+        "regime_state",
+        "statement_public"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Energy"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 93,
+      "title": "Security Systems Provider Serving Texas Homes and Businesses Files for Chapter 11 Bankruptcy - WhatNow",
+      "action": false,
+      "acceptable_lane_classes": [
+        "distress_restruct"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Industrials"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 94,
+      "title": "Tenable Rises as Index Inclusion Appears to Drive Buying Interest - Quiver Quantitative",
+      "action": false,
+      "acceptable_lane_classes": [
+        "flow_index"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Technology"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 95,
+      "title": "Cupid Limited Stock Update: Share Price Hits Fresh Highs on Guidance & Index Inclusion - LatestLY",
+      "action": false,
+      "acceptable_lane_classes": [
+        "guidance",
+        "flow_index"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Healthcare"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 96,
+      "title": "Consumer product safety recall roundup for October 09, 2026 - ConsumerAffairs",
+      "action": false,
+      "acceptable_lane_classes": [
+        "product_harm"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 97,
+      "title": "APC Writes INEC, Demands Enforcement Of Supreme Court Judgment On Party Membership Register - Channels Television",
+      "action": false,
+      "acceptable_lane_classes": [
+        "statement_public"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 98,
+      "title": "Farther Finance Advisors LLC Acquires 13,741 Shares of MetLife, Inc. $MET - MarketBeat",
+      "action": false,
+      "acceptable_lane_classes": [
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Financial"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 99,
+      "title": "6K Additive secures 30-month Nickel 718 Powder supply agreement with ADDMAN - Defense and Munitions",
+      "action": false,
+      "acceptable_lane_classes": [
+        "demand"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Basic Materials",
+          "Industrials"
+        ]
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    },
+    {
+      "n": 100,
+      "title": "ECB policymakers, accounts dampen near-term rate hike bets - WNWN-FM",
+      "action": false,
+      "acceptable_lane_classes": [
+        "statement_public",
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Independent title-only judgment before this batch's first classifier execution; official identity context where cited."
+    }
+  ]
+}

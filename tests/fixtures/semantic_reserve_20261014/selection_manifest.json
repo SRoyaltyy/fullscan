@@ -1,0 +1,12 @@
+{
+  "archive_commit": "a62a3cc16b0a7303a7c4fa1b855566f75f23bd33",
+  "seed": 20261014,
+  "sampling_frame": "All title rows exposed in 2026-10-02 through 2026-10-13 intake Markdown files; no semantic selection by classifier correctness.",
+  "source_rows": 3975,
+  "known_tested_rows": 300,
+  "selected_rows": 1000,
+  "excluded_before_selection": 236,
+  "novelty": "Normalized publisher/number-insensitive title equality, same URL, or conservative token-set similarity. Compared to three recoverable prior runtime input sets and all selected titles.",
+  "historical_exclusion_scope": "300 recoverable semantic benchmark titles. Earlier unrelated JEV trash-classifier archives not reconstructed; no claim of exhaustive historical exclusion.",
+  "reference_status": "not yet judged or frozen; reserve inputs only; no acceptance claim"
+}

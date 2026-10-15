@@ -1,0 +1,27 @@
+{
+  "pass": false,
+  "metrics": {
+    "action": 0.89,
+    "lane": 0.92,
+    "sectors": 0.89,
+    "action_precision": 0.7083333333333334,
+    "action_recall": 1
+  },
+  "tp": 17,
+  "fp": 7,
+  "fn_or_unavailable": 0,
+  "availability": 1,
+  "acceptance_eligible": false,
+  "scope": "Development replay after first holdout failed; never increments acceptance streak",
+  "best_consecutive_passes": 0,
+  "run_id": 38605686197,
+  "runtime_commit": "d2e3947a4d9beba6544e23b21f6057505e2f36e8",
+  "program_artifact": {
+    "id": 11915573318,
+    "sha256": "723bfb07a8354ed847ab91c07af6741929f70e7765a240370da0c226f41e12e2"
+  },
+  "score_artifact": {
+    "id": 11916840595,
+    "sha256": "c3cfb4a7905c809ea9b48510283618c4a29df922fe1adca6c26e59e4b88a83b5"
+  }
+}

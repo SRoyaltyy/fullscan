@@ -1,0 +1,29 @@
+name: Lane workflow contract check
+on:
+  push:
+    branches: [codex/lane-provider-repair-20261014]
+    paths:
+      - '.github/workflows/lane_workflow_contract_check.yml'
+      - '.github/workflows/lane_provider_validation.yml'
+      - '.github/workflows/lane_semantic_holdout.yml'
+      - 'src/test_workflow_fromjson.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/workflows/
+            /src/
+            /02_lessons/lane/
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate all workflow and free-provider contracts
+        run: PYTHONPATH=. python -m src.test_workflow_fromjson

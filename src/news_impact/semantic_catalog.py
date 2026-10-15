@@ -34,10 +34,15 @@ class CompanyCatalog:
     def candidates(self,title):
         # Strip publisher suffix only for retrieval, never change model input.
         text=title.rsplit(' - ',1)[0];low=name_key(text);hits=[]
+        # Parse complete ticker tokens once. The previous prefix match could
+        # mistake the exchange in (LSE:XYZ) for a US issuer whose ticker is LSE.
+        explicit=set(re.findall(r'\$([A-Z][A-Z0-9.-]*)(?![A-Za-z0-9])',text))
+        explicit.update(re.findall(r'\((?:(?:NASDAQ|NYSE|NYSEAMERICAN|AMEX|LSE|TSX|TSXV|ASX|HKEX|NSE|BSE):\s*)?([A-Z][A-Z0-9.-]*)\)',text))
+        explicit={ticker.removesuffix('.US') for ticker in explicit}
         for row in self.rows:
-            tick=re.escape(row['Ticker']);strength=None
-            if re.search(r'(?:\$|\((?:(?:NASDAQ|NYSE|AMEX):\s*)?)'+tick+r'(?=\)|\b)',text):strength='explicit_ticker'
-            elif row['_name'] and phrase(low,row['_name']):
+            strength=None
+            if row['Ticker'] in explicit:strength='explicit_ticker'
+            elif row['_name'] and row['_name'] in low and phrase(low,row['_name']):
                 words=row['_name'].split()
                 if len(words)>=2 or (len(words[0])>=5 and words[0] not in GENERIC):strength='name_candidate'
                 # Short distinctive legal names (e.g. three-letter companies)

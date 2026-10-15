@@ -1,0 +1,23 @@
+{
+  "pass": false,
+  "metrics": {
+    "action": 0.93,
+    "lane": 0.87,
+    "sectors": 0.86,
+    "action_precision": 0.9333333333333333,
+    "action_recall": 0.8235294117647058
+  },
+  "tp": 14,
+  "fp": 1,
+  "fn_or_unavailable": 3,
+  "availability": 1,
+  "acceptance_eligible": true,
+  "batch": 1,
+  "reference_sha256": "dc3ea1285aa28b7c860f6de5ab5ec43255c53874c12d4faa95d700bafb3ff0cc",
+  "input_sha256": "92c2c76f24dcc9d06693bda8e809591ca06ef2679fcfc8a6104dd3495746f632",
+  "reference_frozen_at": "2026-10-14T04:38:27.099Z",
+  "program_started_at": "2026-10-14T04:40:53.782853+00:00",
+  "known_previous_semantic_inputs": 300,
+  "best_consecutive_passes": 0,
+  "target_consecutive_passes": 10
+}

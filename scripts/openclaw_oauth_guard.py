@@ -43,7 +43,9 @@ STATUS = Path(os.environ.get("OPENCLAW_GUARD_STATUS",
 RENEW_WINDOW_MIN = int(os.environ.get("OPENCLAW_RENEW_WINDOW_MIN", "90"))
 MIN_LEFT_MIN = int(os.environ.get("OPENCLAW_MIN_LEFT_MIN", "0"))
 CALL_TIMEOUT = int(os.environ.get("OPENCLAW_GUARD_CALL_TIMEOUT", "90"))
-MODEL = os.environ.get("OPENCLAW_BACKEND_MODEL", "xai/grok-4.3")
+# Renewal health is independent of the model selected for large essays.
+# A failing 4.6 completion must not misdiagnose a valid 4.3 OAuth route.
+MODEL = os.environ.get("OPENCLAW_GUARD_MODEL", "xai/grok-4.3")
 PAID_ENV = ("XAI_API_KEY", "OPENCLAW_XAI_API_KEY", "GROK_API_KEY")
 
 
@@ -225,8 +227,8 @@ def real_completion(result: dict, tag: str) -> bool:
         with urllib.request.urlopen(req, timeout=CALL_TIMEOUT) as resp:
             data = json.loads(resp.read()[:20000])
         content = ((data.get("choices") or [{}])[0].get("message") or {}).get("content") or ""
-        ok = "42" in content and "timed out" not in content.lower()
-        result[f"call_{tag}"] = {"http": 200, "secs": round(time.time() - t0, 1),
+        ok = str(content).strip() == "42"
+        result[f"call_{tag}"] = {"http": 200, "model_requested": MODEL, "secs": round(time.time() - t0, 1),
                                  "answer": content[:40], "ok": ok}
     except urllib.error.HTTPError as e:
         ok = False

@@ -59,5 +59,17 @@ jobs:
           FULLSCAN_HOME: /home/gha
         run: |
           MODE="${{ github.event.inputs.mode || 'all' }}"
-          sudo -n env -u XAI_API_KEY FULLSCAN_HOME=/home/gha \
-            python3 scripts/openclaw_oauth_guard.py "$MODE"
+          if [ "$MODE" = all ]; then
+            # Verify the actual installed timer unit, not just the Actions copy.
+            sudo -n systemctl start fullscan-openclaw-oauth.service
+            python3 - <<'PY'
+          import json,sys
+          data=json.load(open('/home/gha/fullscan-logs/openclaw_guard_status.json'))
+          safe={k:v for k,v in data.items() if k not in ('renew_call_tail','renew_error_hint')}
+          print(json.dumps(safe,indent=2))
+          sys.exit(0 if data.get('ok') else 1)
+          PY
+          else
+            sudo -n env -u XAI_API_KEY FULLSCAN_HOME=/home/gha \
+              python3 scripts/openclaw_oauth_guard.py "$MODE"
+          fi

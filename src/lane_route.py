@@ -214,9 +214,9 @@ MS_MODELS = [
     "Qwen/Qwen3-8B",
     "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
 ]
-# Zhipu current free Flash only. Never glm-5.x (TokenHub) and never older
-# glm-4-flash siblings (those are last-resort, not primary / news).
-ZHIPU_MODELS = ["glm-4.7-flash"]
+# Zhipu current Flash models. GLM-5.3 Flash is already deployed elsewhere
+# in this repo (#568/#582) and passed the live credential probe.
+ZHIPU_MODELS = ["glm-5.3-flash", "glm-4.7-flash"]
 ZHIPU_URLS = [
     "https://open.bigmodel.cn/api/paas/v4/chat/completions",
     "https://api.z.ai/api/paas/v4/chat/completions",
@@ -655,7 +655,7 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
         if lane == "openclaw":
             raw = openclaw_models()
         elif lane == "zhipu":
-            # glm-4.7-flash first. 429 hops to the next $0 flash on this key.
+            # Current 5.3 Flash first. 429 hops to the next Flash on this key.
             # glm-4.6-flash 403 and glm-4.6v-flash 429 are per-ID, not a dead key.
             # glm-4.6v-flash is the other $0 text/vision flash. No 4.5, no
             # 250414, no paid glm-4.7-flashx.
@@ -1099,6 +1099,12 @@ def openai_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None
             "max_tokens": max_tokens if budget is None else budget,
             "temperature": 0.1,
         }
+        # Match the already deployed GLM Flash payload contract (#568).
+        # 5.3 Flash always thinks; disabling thinking is rejected and a
+        # small budget can leave no visible JSON after reasoning.
+        if model.lower().startswith("glm-5.3-flash"):
+            payload["reasoning_effort"] = "low"
+            payload["max_tokens"] = max(payload["max_tokens"], 16000)
         if use_tools:
             payload['tools'] = [{'type': 'function', 'function': {
                 'name': 'emit_lane_result',

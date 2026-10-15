@@ -1,0 +1,37 @@
+{
+  "pass": false,
+  "metrics": {
+    "action": 0.9,
+    "lane": 0.94,
+    "sectors": 0.87,
+    "action_precision": 0.9473684210526315,
+    "action_recall": 0.9
+  },
+  "tp": 18,
+  "fp": 1,
+  "fn_or_unavailable": 2,
+  "availability": 1,
+  "acceptance_eligible": true,
+  "reserve_batch": 2,
+  "reference_sha256": "9dea4a9f37882b1de73abac70b0f5d52b42f40fa22e8bb96ac8fdad593a6fae4",
+  "raw_sha256": "54383af3c7c9e3c3907e5f7f9800c7f32962ecf06f7e8466903ea58847724bd0",
+  "input_sha256": "cf60e9b315856ede67b7de0be6932228a906cf2cdd3ed1af01ecf6ea8fba9e5f",
+  "reference_frozen_at": "2026-10-14T05:03:42.063Z",
+  "program_started_at": "2026-10-14T17:42:58.126287+00:00",
+  "best_consecutive_passes": 0,
+  "target_consecutive_passes": 10,
+  "run_id": 38608978245,
+  "runtime_commit": "369584cfa712a6147c5615f320948ffc05df8004",
+  "artifacts": [
+    {
+      "id": 11916794524,
+      "name": "lane-frozen-holdout-score-02",
+      "digest": "sha256:67ae256cd667b105caec7ca087c64be0f54923a97bd55f0e60061c1478a101cf"
+    },
+    {
+      "id": 11916074751,
+      "name": "lane-glm-provider-100",
+      "digest": "sha256:6207f3237747d413bebd58a2a1cba1e155afba15b8d4146d353971c6de4f611b"
+    }
+  ]
+}

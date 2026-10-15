@@ -37,16 +37,27 @@ def compare(inputs,reference,raw):
     passed=all(metrics[k] is not None and metrics[k]>=.9 for k in metrics)
     return {'pass':passed,'metrics':metrics,'tp':tp,'fp':fp,'fn_or_unavailable':fn,'availability':sum(r['program'] is not None for r in rows)/100,'samples':rows}
 
+def acceptance_candidate(reference,raw):
+    """Fail closed on diagnostic references and changing catalog facts."""
+    if reference.get('acceptance_eligible') is False or reference.get('original_reference_bytes_available') is False:
+        raise ValueError('Diagnostic/reconstructed reference cannot establish acceptance')
+    if not raw.get('runtime_sha256') or not raw.get('configuration'):
+        raise ValueError('Missing runtime fingerprints/configuration; cannot establish a frozen acceptance candidate')
+    catalog=raw.get('catalog')
+    if not isinstance(catalog,dict) or not catalog.get('available') or not catalog.get('sha256'):
+        raise ValueError('Missing frozen company catalog fingerprint')
+    return {'runtime':raw['runtime_sha256'],'configuration':raw['configuration'],'catalog_sha256':catalog['sha256']}
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--inputs',type=pathlib.Path,required=True);p.add_argument('--references',type=pathlib.Path,required=True);p.add_argument('--outputs',type=pathlib.Path,required=True);p.add_argument('--report',type=pathlib.Path,required=True);args=p.parse_args()
-    batches=[];titles=set();streak=0;best=0;runtime=None;configuration=None
+    batches=[];titles=set();streak=0;best=0;candidate=None
     for b in range(1,11):
         stem=f'batch_{b:02d}';ip=args.inputs/(stem+'.json');rp=args.references/(stem+'.json');op=args.outputs/(stem+'.json')
         if not ip.exists() or not rp.exists() or not op.exists():batches.append({'batch':b,'pass':False,'status':'missing_input_reference_or_output'});streak=0;continue
         inp=json.loads(ip.read_text());ref=json.loads(rp.read_text());raw=json.loads(op.read_text())
-        if not raw.get('runtime_sha256') or not raw.get('configuration'):raise ValueError('Missing runtime fingerprints/configuration; cannot establish a frozen acceptance candidate')
-        if runtime is None:runtime=raw['runtime_sha256'];configuration=raw['configuration']
-        if raw['runtime_sha256']!=runtime or raw['configuration']!=configuration:raise ValueError('Candidate changed across acceptance batches: restart streak')
+        current=acceptance_candidate(ref,raw)
+        if candidate is None:candidate=current
+        if current!=candidate:raise ValueError('Candidate or catalog changed across acceptance batches: restart streak')
         digest=hashlib.sha256(ip.read_bytes()).hexdigest()
         if raw['input_sha256']!=digest or ref['input_sha256']!=digest:raise ValueError('Frozen input hash mismatch')
         if not ref.get('frozen_before_program_execution'):raise ValueError('Unfrozen reference cannot establish acceptance')
@@ -62,3 +73,5 @@ def main():
     for b in batches:print(json.dumps({k:v for k,v in b.items() if k!='samples'}))
 
 if __name__=='__main__':main()
+
+

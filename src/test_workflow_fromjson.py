@@ -724,9 +724,9 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     assert sf_ids and not any(m.startswith("Pro/") for m in sf_ids), sf_ids
     zhipu_block = py.split("ZHIPU_MODELS")[1].split("ZHIPU_URLS")[0]
     zhipu_ids = re.findall(r'"(glm-[^"]+)"', zhipu_block)
-    assert zhipu_ids == ["glm-4.7-flash"], zhipu_ids
+    assert zhipu_ids == ["glm-5.3-flash", "glm-4.7-flash"], zhipu_ids
     assert all("flash" in m for m in zhipu_ids), zhipu_ids
-    assert "glm-5." not in zhipu_block
+    assert all(m in {"glm-5.3-flash", "glm-4.7-flash"} for m in zhipu_ids), zhipu_ids
     assert "glm-4-flash-250414" not in zhipu_block
     assert "glm-4.5-flash" not in zhipu_block
 
@@ -1064,7 +1064,7 @@ def test_lane_cyrus_primary_allowlists_ban_old_flash() -> None:
         tokenhub_models,
     )
 
-    assert ZHIPU_MODELS == ["glm-4.7-flash"]
+    assert ZHIPU_MODELS == ["glm-5.3-flash", "glm-4.7-flash"]
     assert qwen_models() == ["qwen-flash"]
     assert QWEN_MODELS[0] == "qwen-flash"
     assert tokenhub_models()[0] == "glm-5.3-flash"
@@ -1110,7 +1110,7 @@ def test_lane_cyrus_primary_allowlists_ban_old_flash() -> None:
     ]
     by_hop = dict(news_plan)
     assert "deepseek" not in by_hop
-    assert by_hop["zhipu"] == ["glm-4.7-flash"]
+    assert by_hop["zhipu"] == ["glm-5.3-flash", "glm-4.7-flash"]
     assert by_hop["siliconflow"][0] == "Qwen/Qwen3-8B"
     assert by_hop["qwen"] == ["qwen-flash"]
     assert by_hop["tokenhub"][0] == "glm-5.3-flash"
@@ -1416,11 +1416,21 @@ def test_postclose_all_clears_leftover_sparse_checkout() -> None:
     sparse_on_ecs = []
     for path in sorted(WF.glob("*.yml")):
         text = path.read_text(encoding="utf-8")
-        if "sparse-checkout:" not in text or "self-hosted" not in text:
-            continue
-        assert "if: always()" in text, path.name
-        assert text.rfind(disable) > text.rfind("sparse-checkout:"), path.name
-        sparse_on_ecs.append(path.name)
+        jobs = text.split("\njobs:", 1)[-1]
+        has_sparse_ecs = False
+        # An independent Ubuntu grader can follow the ECS job. Its checkout
+        # must not be compared to cleanup in another job/workspace.
+        for name, body in re.findall(
+            r"(?ms)^  ([A-Za-z_][A-Za-z0-9_-]*):\s*\n(.*?)(?=^  [A-Za-z_][A-Za-z0-9_-]*:\s*$|\Z)",
+            jobs,
+        ):
+            if "sparse-checkout:" not in body or "self-hosted" not in body:
+                continue
+            assert "if: always()" in body, (path.name, name)
+            assert body.rfind(disable) > body.rfind("sparse-checkout:"), (path.name, name)
+            has_sparse_ecs = True
+        if has_sparse_ecs:
+            sparse_on_ecs.append(path.name)
     assert sparse_on_ecs == [
         "install_paper_backstop.yml",
         "install_paper_open.yml",
