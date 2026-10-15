@@ -123,8 +123,9 @@ jobs:
           FORCE="${{ github.event.inputs.force }}"
           echo "ET_HM=$ET_HM DOW=$DOW event=${{ github.event_name }} force=$FORCE"
           if [ "${{ github.event_name }}" = "push" ] && [ "$FORCE" != "true" ]; then
-            if [ "$ET_HM" -lt 355 ]; then
+            if [ "$ET_HM" -lt 355 ] || [ "$ET_HM" -ge 925 ]; then
               echo "before 03:55 ET — overnight merge/touch is not a packet. Weekday cron 05:55 + 05:40 scrape own the clock."
+              echo "after 09:25 ET is not a packet either (a 23:07 ET merge must not freeze tomorrow's predict)."
               echo "go=no" >> "$GITHUB_OUTPUT"
             elif [ "$DOW" -ge 6 ]; then
               echo "weekend push poke swallowed — weekday cron owns the clock"
