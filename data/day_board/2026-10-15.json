@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T08:11:29.207527-04:00",
+  "generated_at": "2026-10-15T08:17:49.374729-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -346,13 +346,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 8427,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
+          "size": 8442,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 15 fail",
           "bullets": [
             "general_predict:missing",
             "events:zero_events",
-            "finviz_market_digest:missing",
-            "sector_predict:missing"
+            "news_judge:missing",
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -361,9 +361,9 @@
           "path": "01_daily/2026-10-15_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False missing=['events', 'general_predict']",
-          "size": 7829,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, general_predict",
+          "reason": "all_ok=False missing=['events', 'news_judge', 'general_predict']",
+          "size": 7451,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, general_predict",
           "bullets": []
         },
         {
@@ -372,11 +372,11 @@
           "path": "01_daily/2026-10-15_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False News judge, news parse, finviz digest, and map-heat tables are genuine, same-day, complete artifacts (live futures tape,",
-          "size": 1209,
-          "said": "ok=False \u00b7 missing \u2014 general market predict is required core; no same-day direction packet exists 01_daily/general/2026-10-15_predict.md",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
-            "News judge, news parse, finviz digest, and map-heat tables are genuine, same-day, complete artifacts (live futures tape, full calendar, 142 captain cards, NEWS_PARSE_BEGIN/MAP_HEAT_OK markers present). Sector predicts are optional today and their absence is not penalized. The missing finviz_market_digest_close is a post-close artifact not expected pre-open. The day fails because the general market predict is entirely absent and the events JSON is an empty zero-event scan that contradicts the day's own size-gated calendar."
+            "Grok returned an empty review"
           ]
         },
         {
@@ -543,17 +543,17 @@
           "path": "01_daily/weather/2026-10-15_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9329 vix=calm yields=falling",
-          "size": 9329,
+          "reason": "sectors=11 bytes=9330 vix=calm yields=falling",
+          "size": 9330,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
           ]
         }
       ],
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
       ]
     },
     {
@@ -755,11 +755,11 @@
           "path": "01_daily/weather/2026-10-15_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9329 vix=calm yields=falling",
-          "size": 9329,
+          "reason": "sectors=11 bytes=9330 vix=calm yields=falling",
+          "size": 9330,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
           ]
         },
         {
@@ -1031,29 +1031,11 @@
     "weather": {
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
       ]
     }
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T06:17:05.437421-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-15_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2241897,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -4014,6 +3996,31 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-10-15 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T08:17:48.699300-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-15_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9330,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-15_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5068,
+          "preview": "# Weather report \u2014 2026-10-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
