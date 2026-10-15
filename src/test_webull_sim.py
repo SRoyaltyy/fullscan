@@ -1603,7 +1603,7 @@ def test_close_equity_notes_are_add_only() -> None:
     text = MARK_NOTES_PATH.read_text(encoding="utf-8")
     lines = [line for line in text.splitlines() if line.strip()]
     assert text.endswith("\n")
-    assert len(lines) == 12
+    assert len(lines) >= 12  # later add-only notes may follow the first 12
     for line, name in zip(lines[:6], SIX_CLOSE_BOOKS):
         assert json.loads(line) == {
             "date": "2026-10-06",
@@ -1622,7 +1622,7 @@ def test_close_equity_notes_are_add_only() -> None:
         if row.get("record") == "webull_sim" and row.get("kind") == "day"
     }
     closes = {}
-    for line, name in zip(lines[6:], SIX_CLOSE_BOOKS):
+    for line, name in zip(lines[6:12], SIX_CLOSE_BOOKS):
         note = json.loads(line)
         assert note["date"] == "2026-10-06"
         assert note["name"] == name
