@@ -1,17 +1,11 @@
 {
-  "updated_at": "2026-10-15T13:58:33-04:00",
+  "updated_at": "2026-10-15T14:08:22-04:00",
   "runs": [
     {
       "date": "2026-10-15",
       "workflow": "supergrok_ping",
       "file": "2026-10-15_supergrok_ping.json",
       "updated_at": "2026-10-15T10:13:27-04:00"
-    },
-    {
-      "date": "2026-10-15",
-      "workflow": "factor_mine",
-      "file": "2026-10-15_factor_mine.json",
-      "updated_at": "2026-10-15T11:21:06-04:00"
     },
     {
       "date": "2026-10-15",
@@ -27,9 +21,9 @@
     },
     {
       "date": "2026-10-15",
-      "workflow": "webull_sim",
-      "file": "2026-10-15_webull_sim.json",
-      "updated_at": "2026-10-15T13:58:33-04:00"
+      "workflow": "factor_mine",
+      "file": "2026-10-15_factor_mine.json",
+      "updated_at": "2026-10-15T14:08:22-04:00"
     }
   ]
 }
