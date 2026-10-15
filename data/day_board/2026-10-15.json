@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T05:13:46.118924-04:00",
+  "generated_at": "2026-10-15T05:41:09.676352-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -181,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 3,
       "n_req": 9,
       "n_opt_ok": 2,
       "n_opt": 14,
@@ -334,13 +334,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7579,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
+          "size": 7576,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
           "bullets": [
             "general_predict:missing",
             "events:zero_events",
             "news_judge:missing",
-            "news_actions:missing"
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -359,11 +359,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-10-15_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -1363,6 +1365,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-15T05:13:36.520845-04:00\nraw=565 unique_events=4 tickers=61"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T05:41:09.396231-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-15_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9327,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-15_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5065,
+          "preview": "# Weather report \u2014 2026-10-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
