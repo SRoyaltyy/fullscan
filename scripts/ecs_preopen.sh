@@ -168,6 +168,29 @@ dispatch_ubuntu_book() {
 }
 dispatch_ubuntu_book
 
+# Client cap is short. The gateway's own 10800s timer stays (the runtime
+# door requires it) but a hung read restarts the gateway once so the
+# zombie does not block the next call. Breaker opens on the first timeout.
+export OPENCLAW_READ_CAP_S="${OPENCLAW_READ_CAP_S:-75}"
+export OPENCLAW_BREAKER_N="${OPENCLAW_BREAKER_N:-1}"
+export OPENCLAW_RESTART_ON_TIMEOUT="${OPENCLAW_RESTART_ON_TIMEOUT:-1}"
+export PREOPEN_LLM_TIMEOUT="${PREOPEN_LLM_TIMEOUT:-420}"
+# Free Zhipu only. Never point this timer at paid api.deepseek.com.
+if [ -n "${ZHIPU_API_KEY:-}" ]; then
+  case "${DEEPSEEK_BASE_URL:-https://api.deepseek.com}" in
+    *api.deepseek.com*)
+      export DEEPSEEK_API_KEY="$ZHIPU_API_KEY"
+      export DEEPSEEK_BASE_URL="https://open.bigmodel.cn/api/paas/v4"
+      export LLM_MODEL_OVERRIDE="${LLM_MODEL_OVERRIDE:-glm-5.3-flash}"
+      echo "[ecs-preopen] free fallback = zhipu glm-5.3-flash (paid DeepSeek not used)"
+      ;;
+  esac
+fi
+if [ -n "${TOKENHUB_API_KEY:-}" ] && [ -z "${LLM_FALLBACK_API_KEY:-}" ]; then
+  export LLM_FALLBACK_API_KEY="$TOKENHUB_API_KEY"
+  export LLM_FALLBACK_BASE_URL="${TOKENHUB_BASE_URL:-}"
+  export LLM_FALLBACK_MODEL="${LLM_FALLBACK_MODEL:-glm-5.3}"
+fi
 # Grok first, no paid inference (Cyrus rule): ECS Pre-Open is Grok-only
 # unless the env file / caller already chose a backend.
 export LLM_BACKEND="${LLM_BACKEND:-grok}"
@@ -199,6 +222,7 @@ bash scripts/safe_git_push.sh \
   01_daily/_transcripts/ 01_daily/_channel1/ \
   01_daily/*_preopen_qc.json 01_daily/*_preopen_status.json \
   01_daily/*_preopen_status.md \
+  01_daily/_openclaw_preopen_health.json \
   01_daily/*_grok_review.json 01_daily/*_grok_review.md \
   01_daily/*_stock_book.md 01_daily/_ecs_clock.md \
   data/stock_book/ data/paper/ data/join/ data/universe/ \

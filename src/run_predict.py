@@ -89,6 +89,67 @@ def _update_scoreboard(date_str: str, decision: dict, horizon_calls: dict,
     scoreboard.save(board)
 
 
+def _trace_is_grok(date_str: str) -> bool:
+    path = os.path.join(config.DAILY_GENERAL, f"{date_str}_predict_trace.md")
+    try:
+        with open(path, encoding="utf-8", errors="replace") as fh:
+            head = fh.read(2500).lower()
+    except OSError:
+        return False
+    return ("xai/grok" in head) or ("provider: openclaw" in head)
+
+
+def _grok_then_free(rubric: str, user_msg: str, date_str: str,
+                    stage_label: str) -> str:
+    """Grok first. After a hang, one no-search Grok try, then the free model.
+
+    Native search is what sat for 240s on 2026-10-14 while a 17+25 probe
+    was fine. The documents are already in the prompt, so the second try
+    does not ask Grok to browse.
+    """
+    messages = [{"role": "system", "content": rubric},
+                {"role": "user", "content": user_msg}]
+    trace = os.path.join(config.DAILY_GENERAL, f"{date_str}_predict_trace.md")
+    transcript = os.path.join("01_daily/_transcripts", f"{date_str}_predict.json")
+    if (os.environ.get("OPENCLAW_RESTART_ON_TIMEOUT") == "1"
+            and config.openclaw_enabled()):
+        from .openclaw_fastfail import predict_attempt
+        kind = predict_attempt()
+        if kind in ("search", "nosearch"):
+            text = deepseek_client._openclaw_chat(
+                messages, tools=(kind == "search"), max_tokens=8000,
+                temperature=0.2, transcript_path=transcript,
+                trace_path=trace, stage_label=stage_label + f" {kind}",
+            ) or ""
+            if text.strip():
+                return text
+            if kind == "search":
+                kind2 = predict_attempt()
+                if kind2 == "nosearch":
+                    text = deepseek_client._openclaw_chat(
+                        messages, tools=False, max_tokens=8000,
+                        temperature=0.2, transcript_path=transcript,
+                        trace_path=trace, stage_label=stage_label + " nosearch",
+                    ) or ""
+                    if text.strip():
+                        return text
+    # Grok shots are spent. Do not open another native-search turn.
+    # The free primary (glm-5.3-flash) answers; paid api.deepseek.com stays blocked.
+    if deepseek_client._free_primary_ready():
+        deepseek_client._FALLBACK["free_primary"] = True
+        try:
+            return deepseek_client.chat(
+                messages, model=config.MODEL_PREDICT, tools=True,
+                max_tokens=8000, force_deepseek=True,
+                transcript_path=transcript, trace_path=trace,
+                stage_label=stage_label)
+        finally:
+            deepseek_client._FALLBACK["free_primary"] = False
+    return deepseek_client.chat(
+        messages, model=config.MODEL_PREDICT, tools=True, max_tokens=8000,
+        transcript_path=transcript, trace_path=trace, stage_label=stage_label)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
@@ -100,13 +161,20 @@ def main() -> None:
     config.require_llm()
     path = os.path.join(config.DAILY_GENERAL, f"{date_str}_predict.md")
 
+    rewrite = os.environ.get("PREDICT_GROK_REWRITE") == "1"
+    keep_existing = False
     if not args.force:
         existing = output_qc.qc_general_predict(path)
-        if existing.ok:
+        grok_trace = _trace_is_grok(date_str)
+        if existing.ok and not (rewrite and not grok_trace):
             print(f"[predict] {date_str}: skip, quality-ok already on disk "
                   f"({existing.size} chars) — not rewriting a pre-open copy")
             return
-        if os.path.exists(path):
+        if existing.ok and rewrite and not grok_trace:
+            keep_existing = True
+            print(f"[predict] {date_str}: essay is quality-ok but not a Grok "
+                  "trace — one rewrite attempt; the file stays if Grok is empty")
+        elif os.path.exists(path):
             print(f"[predict] {date_str}: existing file rejected "
                   f"({existing.reason}) — throwing out and rerunning")
             output_qc.reject(path)
@@ -177,14 +245,8 @@ def main() -> None:
         if attempt and preopen.past_predict_cutoff() and not args.force:
             print("[predict] past 09:25 ET, not retrying")
             break
-        text = deepseek_client.chat(
-            [{"role": "system", "content": rubric},
-             {"role": "user", "content": user_msg}],
-            model=config.MODEL_PREDICT, tools=True, max_tokens=8000,
-            transcript_path=os.path.join("01_daily/_transcripts",
-                                         f"{date_str}_predict.json"),
-            trace_path=os.path.join(config.DAILY_GENERAL,
-                                    f"{date_str}_predict_trace.md"),
+        text = _grok_then_free(
+            rubric, user_msg, date_str,
             stage_label=f"PREDICT {date_str}"
                         + (f" retry{attempt}" if attempt else ""))
 
@@ -218,6 +280,11 @@ def main() -> None:
               f" -> {path}")
         return
 
+    if keep_existing:
+        print(f"[predict] Grok rewrite did not land "
+              f"({getattr(last_qc, 'reason', 'unknown')}) — keeping the "
+              "essay already on disk")
+        return
     print(f"[predict] FAIL-CLOSED after {args.retries + 1} attempt(s) "
           f"({getattr(last_qc, 'reason', 'unknown')}) — no file, no scoreboard")
     output_qc.reject(path)

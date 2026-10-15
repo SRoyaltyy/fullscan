@@ -101,6 +101,22 @@ def test_grok_backend_skips_deepseek_preflight(monkeypatch):
     assert rpa._deepseek_credits_ok() is False
 
 
+def test_glm_trace_is_not_success(monkeypatch):
+    monkeypatch.setattr(h, "breaker_opened", lambda: False)
+    monkeypatch.setattr(h, "reset_breaker", lambda: None)
+    st = {"predict": True, "trace": False}
+    envs = []
+    def run(e):
+        envs.append(e)
+        st["trace"] = True
+    r = h.heal("d", lambda: st["predict"], run, guard=G(), now=_early,
+               trace_ok=lambda: st["trace"])
+    assert r["ok"] and r["retries"] == 1
+    assert envs[0]["PREDICT_GROK_REWRITE"] == "1"
+    assert envs[0]["OPENCLAW_RESTART_ON_TIMEOUT"] == "1"
+    assert "XAI_API_KEY" not in envs[0]
+
+
 def test_ecs_preopen_exports_grok_before_run():
     from pathlib import Path
     s = (Path(__file__).resolve().parent.parent / "scripts" / "ecs_preopen.sh").read_text()

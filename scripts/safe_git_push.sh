@@ -75,7 +75,11 @@ git config user.email "bot@users.noreply.github.com"
 
 # ECS 2026-09-07/08: `could not read Username for 'https://github.com'`.
 # GITHUB_TOKEN is already on the job; pin origin so push is not interactive.
-TOKEN="${GITHUB_TOKEN:-${GH_TOKEN:-}}"
+# FULLSCAN_PUSH_TOKEN is a long-lived credential on the box, if Cyrus
+# has set one. GITHUB_TOKEN is the job token: GitHub revokes it the
+# moment a step is cancelled (2026-10-14 15:16Z, "Invalid username or
+# token" after earlier pushes in the same step had succeeded).
+TOKEN="${FULLSCAN_PUSH_TOKEN:-${GITHUB_TOKEN:-${GH_TOKEN:-}}}"
 REPO="${GITHUB_REPOSITORY:-SRoyaltyy/fullscan}"
 if [ -n "$TOKEN" ]; then
   git remote set-url origin \
@@ -172,10 +176,15 @@ if [ "${#CAND[@]}" -eq 0 ]; then
 fi
 
 fetch_main() {
-  local n
+  local n err
   for n in 1 2 3; do
-    if git fetch -q origin main; then return 0; fi
+    if err=$(git fetch origin main 2>&1); then return 0; fi
     echo "[safe-push] fetch failed (${n}/3) — retry"
+    printf '%s\n' "$err" | head -5
+    if printf '%s' "$err" | grep -Eq 'Invalid username or token|Authentication failed|401'; then
+      echo "[safe-push] credential rejected. If this step was cancelled, GitHub already revoked GITHUB_TOKEN — that is not a bad stored password. A FULLSCAN_PUSH_TOKEN on the box would survive a cancel."
+      return 1
+    fi
     sleep $((5 * n))
   done
   return 1

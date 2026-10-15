@@ -250,6 +250,29 @@ def _land(date: str, key: str, title: str = "") -> None:
         print(f"[preopen-all] WARN: land {key} failed: {e}", flush=True)
 
 
+def _predict_trace_is_grok(date: str) -> bool:
+    path = _p("01_daily", "general", f"{date}_predict_trace.md")
+    try:
+        head = path.read_text(encoding="utf-8", errors="replace")[:2500].lower()
+    except OSError:
+        return False
+    return ("xai/grok" in head) or ("provider: openclaw" in head)
+
+
+def _step_budget(want: int, floor: int = 20) -> int | None:
+    """Shrink a tail step so it finishes before FULLSCAN_STEP_DEADLINE.
+
+    None means there is not enough time left — skip the step. The 50m
+    GitHub kill revokes GITHUB_TOKEN mid-push (2026-10-14 15:16Z).
+    """
+    rem = step_deadline.remaining_s()
+    if rem is None:
+        return want
+    if rem < floor + 8:
+        return None
+    return max(floor, min(want, int(rem - 8)))
+
+
 def _heal_general_predict(date: str, cmd: list[str], timeout_s: int) -> None:
     """Grok-only hard-restart + retry of the general predict (max 2, <09:00 ET).
     A still-missing predict stays missing so the REQUIRED check goes red."""
@@ -278,7 +301,13 @@ def _heal_general_predict(date: str, cmd: list[str], timeout_s: int) -> None:
         return r.returncode
 
     try:
-        res = heal.heal(date, _ok, _rerun, log_text=_log)
+        def _trace() -> bool:
+            if (os.environ.get("LLM_BACKEND") != "grok"
+                    and os.environ.get("GROK_ONLY") != "1"):
+                return True
+            return _predict_trace_is_grok(date)
+
+        res = heal.heal(date, _ok, _rerun, log_text=_log, trace_ok=_trace)
     except Exception as e:  # noqa: BLE001
         print(f"[preopen-all] predict heal crashed: {e}", flush=True)
         return
@@ -730,6 +759,15 @@ def run(date: str | None = None, force: bool = False,
                 _land(date, "news_parse", "News parse (limit-80 retry)")
 
     if not skip_writes and not skip_essays:
+        # Prove the gateway with a tiny completion before any essay.
+        # A port that answers is not a Grok that answers (2026-10-14).
+        if os.environ.get("OPENCLAW_RESTART_ON_TIMEOUT") == "1":
+            try:
+                from .openclaw_fastfail import ensure_before_essays
+                ensure_before_essays()
+            except Exception as exc:  # noqa: BLE001
+                print(f"[preopen-all] WARN: gateway probe crashed: {exc}",
+                      flush=True)
         # A single hung Grok call at 10800s ate 2026-09-04 (0 essays on ECS).
         # Morning packet must fail over to DeepSeek in minutes, not hours.
         prev_llm_to = os.environ.get("OPENCLAW_TIMEOUT")
@@ -846,24 +884,41 @@ def run(date: str | None = None, force: bool = False,
             print("[preopen-all] → live 1d BUY/SELL strip (dashboards poll main)")
             # morning_look wraps publish_live_boards: factor-mine rows from
             # the last commit before 09:30 ET instead of the evening panel.
-            _run([py, "-m", "src.morning_look", "live_boards",
-                  "--date", date, "--write", "--no-extras"], timeout_s=480)
-            _land(date, "live_boards", "Live 1d BUY/SELL strip")
+            live_s = _step_budget(120)
+            if live_s is None:
+                print("[preopen-all] skip live_boards — step deadline too close "
+                      "(a 480s hang here cancelled the job and revoked the push token)")
+            else:
+                _run([py, "-m", "src.morning_look", "live_boards",
+                      "--date", date, "--write", "--no-extras"], timeout_s=live_s)
+                _land(date, "live_boards", "Live 1d BUY/SELL strip")
             if force or not preopen.past_predict_cutoff():
-                print("[preopen-all] → sleeve (after book is on main)")
-                _run([py, "-m", "src.sleeve_combine_bt",
-                      "--mode", "io_boost", "--hold", "3d"], timeout_s=1200)
-                print("[preopen-all] → flatten_hard_red live card (after book)")
-                _run([py, "-m", "src.sleeve_merge", "--card",
-                      "--date", date, "--write-card"], timeout_s=420)
+                sleeve_s = _step_budget(180)
+                if sleeve_s is None:
+                    print("[preopen-all] skip sleeve — step deadline too close")
+                else:
+                    print("[preopen-all] → sleeve (after book is on main)")
+                    _run([py, "-m", "src.sleeve_combine_bt",
+                          "--mode", "io_boost", "--hold", "3d"], timeout_s=sleeve_s)
+                flat_s = _step_budget(120)
+                if flat_s is None:
+                    print("[preopen-all] skip flatten card — step deadline too close")
+                else:
+                    print("[preopen-all] → flatten_hard_red live card (after book)")
+                    _run([py, "-m", "src.sleeve_merge", "--card",
+                          "--date", date, "--write-card"], timeout_s=flat_s)
                 snapshot_persist(date)
                 _land(date, "flatten", "Flatten live card")
         # 09:25 stops essays, not the paper tape. book_ok can be false
         # while a book file is already on disk; follow that book and
         # append. Printed days stay printed.
-        print("[preopen-all] → paper (append after the last printed date)")
-        _run([py, "-m", "src.paper_trade_append", "--date", date, "--top", "10"],
-             timeout_s=900)
+        paper_s = _step_budget(180)
+        if paper_s is None:
+            print("[preopen-all] skip paper append — step deadline too close")
+        else:
+            print("[preopen-all] → paper (append after the last printed date)")
+            _run([py, "-m", "src.paper_trade_append", "--date", date, "--top", "10"],
+                 timeout_s=paper_s)
         _land(date, "paper", "Paper dashboard")
     else:
         print("[preopen-all] --no-book: leaving stock book to a later click")

@@ -100,6 +100,19 @@ jobs:
           else
             echo "no persist lock dir (ubuntu) — continue"
           fi
+          # 04:00-10:30 ET the only ECS box belongs to xAI renew and Pre-Open.
+          # Schedule and ubuntu dispatches are not this box.
+          ON_ECS=1
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event_name }}" = "push" ] || [ "${{ github.event.inputs.runner }}" = "ubuntu" ]; then
+            ON_ECS=0
+          fi
+          if [ "$ON_ECS" = 1 ]; then
+            ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+            if [ "$ET_HM" -ge 400 ] && [ "$ET_HM" -lt 1030 ]; then
+              echo "morning window (04:00-10:30 ET) — yield ECS to xAI reauth and Pre-Open"
+              echo "skip=yes" >> "$GITHUB_ENV"
+            fi
+          fi
 
       - uses: actions/checkout@v4
         if: env.skip != 'yes'
