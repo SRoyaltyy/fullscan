@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T08:50:19.994542-04:00",
+  "generated_at": "2026-10-15T08:50:31.216422-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -346,13 +346,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 8431,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 15 fail",
+          "size": 8427,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
           "bullets": [
             "general_predict:missing",
             "events:zero_events",
-            "news_judge:missing",
-            "finviz_market_digest:missing"
+            "finviz_market_digest:missing",
+            "sector_predict:missing"
           ]
         },
         {
@@ -361,9 +361,9 @@
           "path": "01_daily/2026-10-15_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False missing=['events', 'news_judge', 'general_predict']",
-          "size": 7679,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, general_predict",
+          "reason": "all_ok=False missing=['events', 'general_predict']",
+          "size": 7656,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, general_predict",
           "bullets": []
         },
         {
@@ -543,8 +543,8 @@
           "path": "01_daily/weather/2026-10-15_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9330 vix=calm yields=falling",
-          "size": 9330,
+          "reason": "sectors=11 bytes=9329 vix=calm yields=falling",
+          "size": 9329,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
@@ -760,8 +760,8 @@
           "path": "01_daily/weather/2026-10-15_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9330 vix=calm yields=falling",
-          "size": 9330,
+          "reason": "sectors=11 bytes=9329 vix=calm yields=falling",
+          "size": 9329,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
@@ -1041,24 +1041,6 @@
     }
   },
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T07:21:51.931118-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-10-15_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1123110,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -4138,6 +4120,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat tables",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T08:50:30.283728-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-15_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 278827,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-15_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18541,
+          "preview": "# MAP HEAT \u2014 2026-10-15\nExport `finviz_2026-10-15.csv` \u00b7 11616 names \u00b7 generated 2026-10-15T06:37:37.848810-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-15\nExport `finviz_2026-10-15.csv` \u00b7 11616 names \u00b7 generated 2026-10-15T06:37:37.848810-04:00"
     }
   ],
   "href": {
