@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T07:24:53.204648-04:00",
+  "generated_at": "2026-10-15T08:11:28.126579-04:00",
   "run_id": "38714326944",
   "runner": "GitHub Actions 1000030400",
   "all_ok": false,
@@ -9,13 +9,16 @@
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "(review)",
-      "reason": "empty_review_reply"
+      "path": "01_daily/general/2026-10-15_predict.md",
+      "reason": "missing \u2014 general market predict is required core; no same-day direction packet exists"
+    },
+    {
+      "path": "01_daily/events/2026-10-15_events.json",
+      "reason": "zero_events \u2014 empty events array despite a heavy same-day calendar (PPI, Retail Sales, claims, mega-cap earnings) in map_heat; catcher reports found=0 with blank coverage assessment, not a usable real scan"
     }
   ],
   "missing_required": [
     "events",
-    "news_judge",
     "general_predict"
   ],
   "attempts": [
@@ -167,10 +170,10 @@
       },
       {
         "kind": "news_judge",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-10-15_judge.md",
-        "size": 0
+        "size": 9415
       },
       {
         "kind": "news_parse",
@@ -212,7 +215,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-10-15_map_heat.json",
-        "size": 277618
+        "size": 278827
       },
       {
         "kind": "map_heat_baseline",
