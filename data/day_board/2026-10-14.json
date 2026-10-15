@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T23:14:43.246549-04:00",
+  "generated_at": "2026-10-14T23:14:48.464315-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1072,31 +1072,6 @@
     }
   },
   "lands": [
-    {
-      "key": "events_catcher",
-      "title": "Event catcher (gap hunt, no carry)",
-      "date": "2026-10-14",
-      "ok": false,
-      "pushed": true,
-      "at": "2026-10-14T09:34:55.319545-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-10-14_events.json",
-          "ok": false,
-          "reason": "zero_events",
-          "size": 212,
-          "preview": "0 events \u00b7 "
-        },
-        {
-          "path": "01_daily/events/2026-10-14_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 205,
-          "preview": "# Event Scan \u2014 2026-10-14 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
-        }
-      ],
-      "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-14 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -3693,6 +3668,24 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T23:14:47.540176-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-14_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "href": {
@@ -3702,14 +3695,6 @@
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
   },
   "frozen_write_skips": [
-    {
-      "path": "data/day_board/2026-10-14.json",
-      "at": "2026-10-14T10:28:48-04:00",
-      "commit_msg": "auto: land paper [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
     {
       "path": "01_daily/2026-10-14_stock_book.md",
       "at": "2026-10-14T10:28:53-04:00",
@@ -5298,6 +5283,14 @@
       "path": "data/join/2026-10-14_ranked.csv",
       "at": "2026-10-14T23:14:43-04:00",
       "commit_msg": "auto: land join [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38674627338",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T23:14:48-04:00",
+      "commit_msg": "auto: land peer_rs [2026-10-14]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "38674627338",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
