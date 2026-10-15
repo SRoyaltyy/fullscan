@@ -81,6 +81,24 @@
           "s": -1.645,
           "sells": [],
           "sit": false
+        },
+        {
+          "buys": [],
+          "date": "2026-10-15",
+          "equity": 9188.3,
+          "mean": -3.837,
+          "picks": [],
+          "reasons": [
+            "seal not committed before 09:30 ET: never committed"
+          ],
+          "s": null,
+          "sells": [
+            "DHT",
+            "ECO",
+            "JLHL",
+            "ODD"
+          ],
+          "sit": true
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -160,6 +178,24 @@
           "s": -1.645,
           "sells": [],
           "sit": false
+        },
+        {
+          "buys": [],
+          "date": "2026-10-15",
+          "equity": 9188.3,
+          "mean": -3.837,
+          "picks": [],
+          "reasons": [
+            "seal not committed before 09:30 ET: never committed"
+          ],
+          "s": null,
+          "sells": [
+            "DHT",
+            "ECO",
+            "JLHL",
+            "ODD"
+          ],
+          "sit": true
         }
       ],
       "label": "starts 10-08 open, no past days",

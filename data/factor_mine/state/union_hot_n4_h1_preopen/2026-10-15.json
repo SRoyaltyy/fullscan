@@ -1,0 +1,94 @@
+{
+  "buys": [],
+  "cash": 9188.3,
+  "date": "2026-10-15",
+  "equity": 9188.3,
+  "fees": 13.6339,
+  "fills": [
+    {
+      "fees": 2.2988,
+      "fill_rule": "open",
+      "pnl": -287.46,
+      "price": 23.835,
+      "shares": 92,
+      "side": "SELL",
+      "ticker": "DHT"
+    },
+    {
+      "fees": 2.0929,
+      "fill_rule": "open",
+      "pnl": -255.16,
+      "price": 89.67,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 6.8779,
+      "fill_rule": "open",
+      "pnl": -234.15,
+      "price": 4.34,
+      "shares": 525,
+      "side": "SELL",
+      "ticker": "JLHL"
+    },
+    {
+      "fees": 2.3643,
+      "fill_rule": "open",
+      "pnl": -34.93,
+      "price": 21.95,
+      "shares": 112,
+      "side": "SELL",
+      "ticker": "ODD"
+    }
+  ],
+  "holdings": [],
+  "label": "starts 10-08 open, no past days",
+  "mean": -3.837,
+  "n_trades_today": 4,
+  "parent": "union_hot_n4_h1",
+  "picks": [],
+  "reasons": [
+    "seal not committed before 09:30 ET: never committed"
+  ],
+  "recipe": "union_hot_n4_h1_preopen",
+  "s": null,
+  "seal_sha256": null,
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 23.835,
+      "shares": 92,
+      "side": "SELL",
+      "ticker": "DHT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 89.67,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "ECO"
+    },
+    {
+      "fill_rule": "open",
+      "price": 4.34,
+      "shares": 525,
+      "side": "SELL",
+      "ticker": "JLHL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 21.95,
+      "shares": 112,
+      "side": "SELL",
+      "ticker": "ODD"
+    }
+  ],
+  "sit": true,
+  "state": {
+    "after": "2026-10-15",
+    "cash": 9188.3,
+    "pos": {},
+    "yday_equity": 9188.3
+  }
+}
