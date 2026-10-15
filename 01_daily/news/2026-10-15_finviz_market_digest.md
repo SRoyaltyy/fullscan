@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-15
 
-**Generated:** 2026-10-15T04:20:27.281982-04:00 (America/New_York)
+**Generated:** 2026-10-15T04:22:13.210074-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to a mixed, tech-led weaker start as Asian chip stocks slide and traders await key inflation and activity data
 **Prior close:** SPX —  Nasdaq —  Dow —
