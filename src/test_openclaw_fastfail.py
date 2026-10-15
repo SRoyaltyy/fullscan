@@ -214,7 +214,7 @@ def test_wiring_strings():
     assert "_openclaw_oauth_status.json" in guard
     assert "OnCalendar=Mon..Fri *-*-* 04:10:00 America/New_York" in timer
     assert "past 09:25 ET — scrape refuses a late map_heat (exit 0)" in yml
-    assert "loopback gateway is not reachable" in yml
+    assert "predict needs Grok: no reachable OpenClaw gateway" in yml
     timeouts = (root / "scripts" / "ensure_openclaw_timeouts.sh").read_text(encoding="utf-8")
     enable = (root / "scripts" / "enable_openclaw_chat.sh").read_text(encoding="utf-8")
     reauth = (root / "scripts" / "xai_device_reauth.py").read_text(encoding="utf-8")
