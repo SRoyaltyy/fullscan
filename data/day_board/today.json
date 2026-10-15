@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T08:24:20.213988-04:00",
+  "generated_at": "2026-10-15T08:24:30.150491-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -103,42 +103,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T08:21:59.806797-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-15_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2242367,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KEYS, FORM, AVPT, MU, SKHY"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KEYS, FORM, AVPT, MU, SKHY"
-    },
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T08:22:05.772943-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-15_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -407,6 +371,41 @@
         }
       ],
       "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-15\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-10-15",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-15T08:24:27.140235-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-10-15",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-10-15T08:24:29.185276-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-10-15_events.json",
+          "ok": false,
+          "reason": "zero_events",
+          "size": 212,
+          "preview": "0 events \u00b7 "
+        },
+        {
+          "path": "01_daily/events/2026-10-15_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 205,
+          "preview": "# Event Scan \u2014 2026-10-15 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
+        }
+      ],
+      "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-15 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
