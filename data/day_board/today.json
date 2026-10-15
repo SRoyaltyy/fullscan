@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T04:37:26.611990-04:00",
+  "generated_at": "2026-10-15T04:37:35.220522-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T04:20:27.297634-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-15_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 5731,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-10-15_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2637,
-          "preview": "# Finviz homepage market digest \u2014 2026-10-15\n**Generated:** 2026-10-15T04:20:27.281982-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a mixed, tech-led weaker start as Asian chip stocks slide and traders await key inflation and activity data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** US CPI print and renewed rate-hike concerns\n**Leaders:** PNC, SCHW, USB\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** PNC, SCHW, USB\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-15\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-15\n**Generated:** 2026-10-15T04:20:27.281982-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a mixed, tech-led weaker start as Asian chip stocks slide and traders await key inflation and activity data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** US CPI print and renewed rate-hike concerns\n**Leaders:** PNC, SCHW, USB\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** PNC, SCHW, USB\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-15\n**Clock use:** `same_morning`"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -221,6 +196,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-15\nExport `finviz_2026-10-14.csv` \u00b7 11616 names \u00b7 generated 2026-10-15T04:25:29.692568-04:00"
+    },
+    {
+      "key": "map_heat_baseline",
+      "title": "Map heat night baseline",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T04:37:34.718080-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-15_research_baseline.json",
+          "ok": true,
+          "reason": "",
+          "size": 336767,
+          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-15_research_baseline.md",
+          "ok": true,
+          "reason": "",
+          "size": 35107,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-15\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-15\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
