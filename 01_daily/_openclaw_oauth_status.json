@@ -1,0 +1,35 @@
+{
+  "mode": "all",
+  "started_et": "2026-10-14T23:08:22.835682-04:00",
+  "openclaw_version": "OpenClaw 2026.7.1-2 (0790d9f)",
+  "paid_key_in_env_stripped": false,
+  "expires_before": "2026-10-15T02:24:01.971000+00:00",
+  "minutes_left_before": -44.7,
+  "expiry_source": "models auth list",
+  "has_refresh_token": null,
+  "gateway_token_len": 48,
+  "call_renew": {
+    "http": 200,
+    "secs": 8.8,
+    "answer": "42",
+    "ok": true
+  },
+  "expires_after": "2026-10-15T09:08:45.626000+00:00",
+  "minutes_left_after": 359.7,
+  "renew": "OK",
+  "main_pid": 2284740,
+  "pid_comm": "openclaw-gatewa",
+  "unit_active": "active",
+  "unit_sub": "running",
+  "pid_alive": true,
+  "call_pre": {
+    "http": 200,
+    "secs": 7.2,
+    "answer": "42",
+    "ok": true
+  },
+  "guard": "OK",
+  "ok": true,
+  "exit": 0,
+  "finished_et": "2026-10-14T23:09:12.626673-04:00"
+}
