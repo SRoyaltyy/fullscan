@@ -1,0 +1,7 @@
+{
+  "ok": false,
+  "reason": "ReadTimeout",
+  "detail": "HTTPConnectionPool(host='127.0.0.1', port=18789): Read timed out. (read timeout=25)",
+  "model": "xai/grok-4.6",
+  "restarted": true
+}
