@@ -1,8 +1,8 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T08:24:29.166627-04:00",
-  "run_id": "38714326944",
-  "runner": "GitHub Actions 1000030400",
+  "generated_at": "2026-10-15T08:29:47.728402-04:00",
+  "run_id": "38731981090",
+  "runner": "GitHub Actions 1000030758",
   "all_ok": false,
   "qc_all_ok": false,
   "book_ok": false,
@@ -67,21 +67,21 @@
     {
       "key": "catalyst",
       "title": "Catalyst dossiers (after book)",
-      "returncode": 4,
-      "status": "FAIL",
-      "detail": "0/8 dossiers (grok timeout x0, deepseek empty)"
+      "returncode": 3,
+      "status": "DEGRADED",
+      "detail": "1/8 dossiers (grok timeout x0, deepseek empty)"
     }
   ],
   "github_runs": [
     {
       "workflow": "preopen_all.yml",
-      "n_today": 3,
+      "n_today": 8,
       "latest": {
-        "id": 38714326944,
+        "id": 38731981090,
         "status": "in_progress",
         "conclusion": null,
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38714326944"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38731981090"
       }
     },
     {
@@ -112,8 +112,14 @@
     },
     {
       "workflow": "news_judge.yml",
-      "n_today": 0,
-      "latest": null
+      "n_today": 2,
+      "latest": {
+        "id": 38731985715,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38731985715"
+      }
     },
     {
       "workflow": "news_actions.yml",
@@ -125,8 +131,8 @@
       "n_today": 1,
       "latest": {
         "id": 38714330459,
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "cancelled",
         "event": "workflow_dispatch",
         "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38714330459"
       }
@@ -184,7 +190,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-15_actions.json",
-        "size": 42193
+        "size": 42982
       },
       {
         "kind": "finviz_digest",
