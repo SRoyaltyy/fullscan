@@ -1,7 +1,7 @@
 # Primary-origin action documents
 
-Updated 2026-10-15T12:28:40.302903+00:00. 1969 dated documents in the configured 3-day window; 1 newly retained; 755 repeat observations.
-Source health: 329/338 checked successfully. Collection uses zero LLM calls.
+Updated 2026-10-15T17:47:31.406388+00:00. 2001 dated documents in the configured 3-day window; 130 newly retained; 1163 repeat observations.
+Source health: 333/338 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
@@ -12,6 +12,9 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## decision_published
 
+- [HP22 5EZ, Arla Foods Limited: environmental permit issued - EPR/XP3039ZS/V008](https://www.gov.uk/government/publications/hp22-5ez-arla-foods-limited-environmental-permit-issued-eprxp3039zsv008) — Environment Agency; 2026-10-15T16:56:07+00:00
+- [LS12 3AL, Oates Environmental Limited: environmental permit issued - EPR/YP3832WS/V006](https://www.gov.uk/government/publications/ls12-3al-oates-environmental-limited-environmental-permit-issued-epryp3832wsv006) — Environment Agency; 2026-10-15T16:55:33+00:00
+- [CAC Outcome: UNISON, Unite the Union & AMG Scot Ltd](https://www.gov.uk/government/publications/cac-outcome-unison-unite-the-union-amg-scot-ltd) — Central Arbitration Committee; 2026-10-15T15:32:44+00:00
 - [Suspended and revoked licences and registrations for manufacturers and wholesalers of medicines and ingredients](https://www.gov.uk/government/publications/suspended-licences-for-manufacturers-and-wholesalers-of-medicines) — Medicines and Healthcare products Regulatory Agency; 2026-10-15T11:52:47+00:00
 - [Company Names Tribunal undefended decisions and orders](https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders) — Company Names Tribunal; 2026-10-15T11:07:14+00:00
 - [Company Names Tribunal decision: DPI World Shipping Services Limited](https://www.gov.uk/government/publications/company-names-tribunal-decision-dpi-world-shipping-services-limited) — Company Names Tribunal; 2026-10-15T11:06:44+00:00
@@ -36,7 +39,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [West Winch Primary School: 13 October 2026](https://www.gov.uk/government/publications/west-winch-primary-school-13-october-2026) — Office of the Schools Adjudicator; 2026-10-13T14:40:03+00:00
 - [St Giles' Church of England Aided Infant School: 13 October 2026](https://www.gov.uk/government/publications/st-giles-church-of-england-aided-infant-school-13-october-2026) — Office of the Schools Adjudicator; 2026-10-12T23:00:00+00:00
 - [Ashwicken Church of England Voluntary Aided Primary School: 13 October 2026](https://www.gov.uk/government/publications/ashwicken-church-of-england-voluntary-aided-primary-school-13-october-2016) — Office of the Schools Adjudicator; 2026-10-12T23:00:00+00:00
-- [CAC Outcome: Unite the Union & Kingdom Cleaning Limited](https://www.gov.uk/government/publications/cac-outcome-unite-the-union-kingdom-cleaning-limited) — Central Arbitration Committee; 2026-10-12T15:30:45+00:00
 
 ## final_rule_published
 
@@ -84,6 +86,43 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## judicial_decision_published
 
+- [M C Patel v Holiday Inn Sittingbourne: 2304258/2025](https://www.gov.uk/employment-tribunal-decisions/m-c-patel-v-holiday-inn-sittingbourne-2304258-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T15:56:40+00:00
+- [3 Lower Farm Cottages Grafton Tewkesbury Gloucestershire GL20 7AT : BIR/47UF/F77/2026/0002](https://www.gov.uk/residential-property-tribunal-decisions/3-lower-farm-cottages-grafton-tewkesbury-gloucestershire-gl20-7at-bir-slash-47uf-slash-f77-slash-2026-slash-0002) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-15T15:52:25+00:00
+- [16 Colinwood Close, Great Wyrley, Walsall, WS6 6JF: BIR/41UF/OAF/2026/0004](https://www.gov.uk/residential-property-tribunal-decisions/16-colinwood-close-great-wyrley-walsall-ws6-6jf-bir-slash-41uf-slash-oaf-slash-2026-slash-0004) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-15T15:50:06+00:00
+- [Ms Nahwere and Ms Naturinda v Savannah Care Ltd: 2309783/2025 and others](https://www.gov.uk/employment-tribunal-decisions/ms-nahwere-and-ms-naturinda-v-savannah-care-ltd-2309783-slash-2025-and-others) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T15:48:38+00:00
+- [6-12 Saffron House, Mill Road. Shrewsbury SY2 6AY: BIR/00CG/LDC/2026/0011](https://www.gov.uk/residential-property-tribunal-decisions/6-12-saffron-house-mill-road-shrewsbury-sy2-6ay-bir-slash-00cg-slash-ldc-slash-2026-slash-0011) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-15T15:46:26+00:00
+- [Lorne Court 6 School Road B13 9ET: BIR/00CN/LDC/2026/0023](https://www.gov.uk/residential-property-tribunal-decisions/lorne-court-6-school-road-b13-9et-bir-slash-00cn-slash-ldc-slash-2026-slash-0023) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-15T15:45:06+00:00
+- [J Pyne v Spaghetti Tree Restaurants Ltd: 6013501/2025 and 6021513/2025](https://www.gov.uk/employment-tribunal-decisions/j-pyne-v-spaghetti-tree-restaurants-ltd-6013501-slash-2025-and-6021513-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T15:44:01+00:00
+- [28 Californian Grove, Burntwood WS7 2BG:BIR/41UD/OAF/2026/0010](https://www.gov.uk/residential-property-tribunal-decisions/28-californian-grove-burntwood-ws7-2bg-bir-slash-41ud-slash-oaf-slash-2026-slash-0010) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-15T15:43:47+00:00
+- [332 Yardley Green Road, Bordesley Green, Birmingham B9 5JL : BIR/00CN/HSE/2026/0003](https://www.gov.uk/residential-property-tribunal-decisions/332-yardley-green-road-bordesley-green-birmingham-b9-5jl-bir-slash-00cn-slash-hse-slash-2026-slash-0003) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-15T15:42:29+00:00
+- [1A St Michaels Court, Stoney Stanton, Leicester, LE9 4TH : BIR/31UB/F77/2025/0020](https://www.gov.uk/residential-property-tribunal-decisions/1a-st-michaels-court-stoney-stanton-leicester-le9-4th-bir-slash-31ub-slash-f77-slash-2025-slash-0020) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-15T15:40:59+00:00
+- [Mr M Kavanagh v Two Chics Media Ltd: 6023359/2024](https://www.gov.uk/employment-tribunal-decisions/mr-m-kavanagh-v-two-chics-media-ltd-6023359-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T15:39:21+00:00
+- [89A Dorridge Road, Dorridge, Solihull B93 8BS: BIR/00CT/HTD/2025/0001](https://www.gov.uk/residential-property-tribunal-decisions/89a-dorridge-road-dorridge-solihull-b93-8bs-bir-slash-00ct-slash-htd-slash-2025-slash-0001) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-15T15:36:53+00:00
+- [110 Riverdale Park , Bent lane, Staveley, Chesterfield, S43 3UQ : BIR/17UD/PHI/2025/0033](https://www.gov.uk/residential-property-tribunal-decisions/110-riverdale-park-bent-lane-staveley-chesterfield-s43-3uq-bir-slash-17ud-slash-phi-slash-2025-slash-0033) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-15T15:34:59+00:00
+- [Ms A Forbes v Skanska Rashleigh Weatherfoil Ltd: 2300795/2026](https://www.gov.uk/employment-tribunal-decisions/ms-a-forbes-v-skanska-rashleigh-weatherfoil-ltd-2300795-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T15:33:53+00:00
+- [74 Wheat Street, Nuneaton, Warwickshire, CV11 4BH : BIR/44UC/F77/2026/0024](https://www.gov.uk/residential-property-tribunal-decisions/74-wheat-street-nuneaton-warwickshire-cv11-4bh-bir-slash-44uc-slash-f77-slash-2026-slash-0024) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-15T15:33:30+00:00
+- [10 Ladycroft, Birmingham, B18 8EG : BIR/00CN/HMK/2025/0019](https://www.gov.uk/residential-property-tribunal-decisions/10-ladycroft-birmingham-b18-8eg-bir-slash-00cn-slash-hmk-slash-2025-slash-0019) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-15T15:30:54+00:00
+- [Remy Dhami v Secretary of State for Work and Pensions (PIP): (2026) UKUT 371 (AAC)](https://www.gov.uk/administrative-appeals-tribunal-decisions/remy-dhami-v-secretary-of-state-for-work-and-pensions-pip-2026-ukut-371-aac) — HM Courts & Tribunals Service; Upper Tribunal (Administrative Appeals Chamber); 2026-10-15T15:30:07+00:00
+- [Mrs N I E Villanueva v Support Services Leaders Ltd: 2300026/2026](https://www.gov.uk/employment-tribunal-decisions/mrs-n-i-e-villanueva-v-support-services-leaders-ltd-2300026-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T15:29:14+00:00
+- [206 Heather Road, Small Heath, Birmingham, B10 9BD: BIR/00CN/HNB/2025/0015](https://www.gov.uk/residential-property-tribunal-decisions/206-heather-road-small-heath-birmingham-b10-9bd-bir-slash-00cn-slash-hnb-slash-2025-slash-0015) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-15T15:29:13+00:00
+- [32 Anerley Road, Kingstanding, Birmingham, B44 9QE: BIR/00CN/MNR/2025/0841](https://www.gov.uk/residential-property-tribunal-decisions/32-anerley-road-kingstanding-birmingham-b44-9qe-bir-slash-00cn-slash-mnr-slash-2025-slash-0841) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-15T15:28:01+00:00
+- [207 Runcorn Rd., Balsall Heath, Birmingham, B12 8QY: BIR/00CN/MNR/2025/0712](https://www.gov.uk/residential-property-tribunal-decisions/207-runcorn-rd-dot-balsall-heath-birmingham-b12-8qy-bir-slash-00cn-slash-mnr-slash-2025-slash-0712) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-15T15:26:30+00:00
+- [Flat 1, 170 Stratford Rd., Sparkbrook, Birmingham, B11 1AG: BIR/00CN/MDR/2026/0003](https://www.gov.uk/residential-property-tribunal-decisions/flat-1-170-stratford-rd-dot-sparkbrook-birmingham-b11-1ag-bir-slash-00cn-slash-mdr-slash-2026-slash-0003) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-15T15:25:09+00:00
+- [Ms C Iyiegbu v Guy’s and St Thomas’ NHS Foundation Trust: 2305733/2023 and Others](https://www.gov.uk/employment-tribunal-decisions/ms-c-iyiegbu-v-guys-and-st-thomas-nhs-foundation-trust-2305733-slash-2023-and-others) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T15:12:10+00:00
+- [Ms D v Greater Glasgow Health Board: (2026) EAT 160](https://www.gov.uk/employment-appeal-tribunal-decisions/ms-d-v-greater-glasgow-health-board-2026-eat-160) — HM Courts & Tribunals Service; Employment Appeal Tribunal; 2026-10-15T15:09:16+00:00
+- [Mr A Mahmood v Macmillan Cancer Support: 2303242/2024](https://www.gov.uk/employment-tribunal-decisions/mr-a-mahmood-v-macmillan-cancer-support-2303242-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T15:04:02+00:00
+- [Mr A Mouti v London Ambulance Service NHS Trust: 2304111/2023](https://www.gov.uk/employment-tribunal-decisions/mr-a-mouti-v-london-ambulance-service-nhs-trust-2304111-slash-2023) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T14:57:12+00:00
+- [S Cogley v Leigh Academies Trust: 2303627/2020](https://www.gov.uk/employment-tribunal-decisions/s-cogley-v-leigh-academies-trust-2303627-slash-2020) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T14:27:32+00:00
+- [Mr J Hanne v Dumpling Design Ltd and Secretary of State: 6012648/2026](https://www.gov.uk/employment-tribunal-decisions/mr-j-hanne-v-dumpling-design-ltd-and-secretary-of-state-6012648-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T14:21:55+00:00
+- [Ms S Naluwooza v Lewisham Music: 2309196/2024](https://www.gov.uk/employment-tribunal-decisions/ms-s-naluwooza-v-lewisham-music-2309196-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T14:18:43+00:00
+- [Mrs N Leeks v The Royal Marsden NHS Foundation Trust: 2300573/2021](https://www.gov.uk/employment-tribunal-decisions/mrs-n-leeks-v-the-royal-marsden-nhs-foundation-trust-2300573-slash-2021) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T14:13:57+00:00
+- [S Randall v Swale Academies Trust: 2303664/2020](https://www.gov.uk/employment-tribunal-decisions/s-randall-v-swale-academies-trust-2303664-slash-2020) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T14:09:53+00:00
+- [R Fesenko v BodyWell Group: 6045934/2025](https://www.gov.uk/employment-tribunal-decisions/r-fesenko-v-bodywell-group-6045934-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T14:06:06+00:00
+- [V S David v Mrs L M B Weston and Simply English Edinburgh: 8001649/2025 and 8001671/2025](https://www.gov.uk/employment-tribunal-decisions/v-s-david-v-mrs-l-m-b-weston-and-simply-english-edinburgh-8001649-slash-2025-and-8001671-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T14:01:18+00:00
+- [P Diaconu v Paddington Dental Partnership Ltd: 6035968/2026](https://www.gov.uk/employment-tribunal-decisions/p-diaconu-v-paddington-dental-partnership-ltd-6035968-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T13:59:45+00:00
+- [V Vida v Your Square Ltd (in voluntary liquidation): 2304602/2020](https://www.gov.uk/employment-tribunal-decisions/v-vida-v-your-square-ltd-in-voluntary-liquidation-2304602-slash-2020) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T13:55:46+00:00
+- [Mrs N Williams v K Freemantle and others: 6033588/2025 and 6037190/2025](https://www.gov.uk/employment-tribunal-decisions/mrs-n-williams-v-k-freemantle-and-others-6033588-slash-2025-and-6037190-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T13:52:13+00:00
+- [C Sissons v Kent Catholic Schools Partnership: 2303724/2020](https://www.gov.uk/employment-tribunal-decisions/c-sissons-v-kent-catholic-schools-partnership-2303724-slash-2020) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T12:34:47+00:00
 - [Ms K Hering v Dr I Basnett: 6004706/2024](https://www.gov.uk/employment-tribunal-decisions/ms-k-hering-v-dr-i-basnett-6004706-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T10:19:25+00:00
 - [C MacGregor v Unisus Group Ltd: 6015508/2026](https://www.gov.uk/employment-tribunal-decisions/c-macgregor-v-unisus-group-ltd-6015508-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T10:11:47+00:00
 - [S Abbott v Southern Housing: 6009504/2025](https://www.gov.uk/employment-tribunal-decisions/s-abbott-v-southern-housing-6009504-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T10:09:20+00:00
@@ -223,50 +262,13 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Z Stephenson v Goodenough St Austell Ltd: 6023508/2026](https://www.gov.uk/employment-tribunal-decisions/z-stephenson-v-goodenough-st-austell-ltd-6023508-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-13T08:32:14+00:00
 - [E R Amobeda v Dynamic Support Ltd: 6022957/2025](https://www.gov.uk/employment-tribunal-decisions/e-r-amobeda-v-dynamic-support-ltd-6022957-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-13T08:29:31+00:00
 - [Mr A Ekwireke v BRSK Ltd: 6038689/2025](https://www.gov.uk/employment-tribunal-decisions/mr-a-ekwireke-v-brsk-ltd-6038689-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-13T08:23:25+00:00
-- [ZP v Disclosure and Barring Service: (2026) UKUT 373 (AAC)](https://www.gov.uk/administrative-appeals-tribunal-decisions/zp-v-disclosure-and-barring-service-2026-ukut-373-aac) — HM Courts & Tribunals Service; Upper Tribunal (Administrative Appeals Chamber); 2026-10-12T16:26:19+00:00
-- [HYM v The Secretary of State for Work and Pensions (PIP): (2026) UKUT 367 (AAC)](https://www.gov.uk/administrative-appeals-tribunal-decisions/hym-v-the-secretary-of-state-for-work-and-pensions-pip-2026-ukut-367-aac) — HM Courts & Tribunals Service; Upper Tribunal (Administrative Appeals Chamber); 2026-10-12T16:20:50+00:00
-- [Kirsty Bell v Secretary of State for Work and Pensions (UC): (2026) UKUT 365 (AAC)](https://www.gov.uk/administrative-appeals-tribunal-decisions/kirsty-bell-v-secretary-of-state-for-work-and-pensions-uc-2026-ukut-365-aac) — HM Courts & Tribunals Service; Upper Tribunal (Administrative Appeals Chamber); 2026-10-12T16:13:54+00:00
-- [JH v The Disclosure and Barring Service: (2026) UKUT 361 (AAC)](https://www.gov.uk/administrative-appeals-tribunal-decisions/jh-v-the-disclosure-and-barring-service-2026-ukut-361-aac) — HM Courts & Tribunals Service; Upper Tribunal (Administrative Appeals Chamber); 2026-10-12T16:08:49+00:00
-- [Abdelaziz Dawod v 1) Secretary of State for Work and Pensions 2) Darahim Khair Alla (UC): (2026) UKUT 360 (AAC)](https://www.gov.uk/administrative-appeals-tribunal-decisions/abdelaziz-dawod-v-1-secretary-of-state-for-work-and-pensions-2-darahim-khair-alla-uc-2026-ukut-360-aac) — HM Courts & Tribunals Service; Upper Tribunal (Administrative Appeals Chamber); 2026-10-12T15:44:30+00:00
-- [KMV v 1) Secretary of State for Work and Pensions 2) QRB (CSM): (2026) UKUT 359 (AAC)](https://www.gov.uk/administrative-appeals-tribunal-decisions/kmv-v-1-secretary-of-state-for-work-and-pensions-2-qrb-csm-2026-ukut-359-aac) — HM Courts & Tribunals Service; Upper Tribunal (Administrative Appeals Chamber); 2026-10-12T15:36:55+00:00
-- [Shaun Gleeson v Secretary of State for Work and Pensions (ESA): (2026) UKUT 358 (AAC)](https://www.gov.uk/administrative-appeals-tribunal-decisions/shaun-gleeson-v-secretary-of-state-for-work-and-pensions-esa-2026-ukut-358-aac) — HM Courts & Tribunals Service; Upper Tribunal (Administrative Appeals Chamber); 2026-10-12T15:32:24+00:00
-- [Ismail Hamed v Secretary of State for Work and Pensions (PIP): (2026) UKUT 353 (AAC)](https://www.gov.uk/administrative-appeals-tribunal-decisions/ismail-hamed-v-secretary-of-state-for-work-and-pensions-pip-2026-ukut-353-aac) — HM Courts & Tribunals Service; Upper Tribunal (Administrative Appeals Chamber); 2026-10-12T15:27:44+00:00
-- [Mr K Waterfield v SE Trains Ltd: 6007709/2024](https://www.gov.uk/employment-tribunal-decisions/mr-k-waterfield-v-se-trains-ltd-6007709-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T15:22:07+00:00
-- [Mr C Correddu v Nando’s Chickenland Ltd: 6036956/2025](https://www.gov.uk/employment-tribunal-decisions/mr-c-correddu-v-nandos-chickenland-ltd-6036956-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T15:19:48+00:00
-- [Ms R Hornsby v University of Greenwich: 6017863/2024](https://www.gov.uk/employment-tribunal-decisions/ms-r-hornsby-v-university-of-greenwich-6017863-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T15:15:00+00:00
-- [Mr Rossi v Cell Therapy Catapult Ltd: 2306767/2023](https://www.gov.uk/employment-tribunal-decisions/mr-rossi-v-cell-therapy-catapult-ltd-2306767-slash-2023) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T15:13:12+00:00
-- [Ms T Tolstik v Mr A Denizalti T/a Café Time: 6017116/2025](https://www.gov.uk/employment-tribunal-decisions/ms-t-tolstik-v-mr-a-denizalti-t-slash-a-cafe-time-6017116-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T15:10:28+00:00
-- [Mr G Ikponmwosa v Beezees Creation Ltd and Ms T A Mebitaghan: 6023961/2025](https://www.gov.uk/employment-tribunal-decisions/mr-g-ikponmwosa-v-beezees-creation-ltd-and-ms-t-a-mebitaghan-6023961-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T15:09:01+00:00
-- [Mr S Donnelly v DFDS (Guernsey) Ltd: 2308011/2023](https://www.gov.uk/employment-tribunal-decisions/mr-s-donnelly-v-dfds-guernsey-ltd-2308011-slash-2023) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T15:07:29+00:00
-- [Mrs C Izquierdo v Mr N Faulkner, Sole Proprietor of The Drive Prep School: 6037582/2025](https://www.gov.uk/employment-tribunal-decisions/mrs-c-izquierdo-v-mr-n-faulkner-sole-proprietor-of-the-drive-prep-school-6037582-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T15:05:41+00:00
-- [Mr A O Sekyere v Mr O Olies: 6015890/2026](https://www.gov.uk/employment-tribunal-decisions/mr-a-o-sekyere-v-mr-o-olies-6015890-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T15:04:34+00:00
-- [Miss C Davies v Swanton Care & Community Ltd: 6009459/2026](https://www.gov.uk/employment-tribunal-decisions/miss-c-davies-v-swanton-care-and-community-ltd-6009459-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T13:51:24+00:00
-- [M O Ogunbayo v Llewelyn Support Services Ltd: 6047376/2025](https://www.gov.uk/employment-tribunal-decisions/m-o-ogunbayo-v-llewelyn-support-services-ltd-6047376-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T13:50:04+00:00
-- [Mr C Freedman v G E S Ltd: 2404812/2024](https://www.gov.uk/employment-tribunal-decisions/mr-c-freedman-v-g-e-s-ltd-2404812-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T13:30:37+00:00
-- [G Hardman v Khan Mather Ltd: 2400083/2026](https://www.gov.uk/employment-tribunal-decisions/g-hardman-v-khan-mather-ltd-2400083-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T13:28:56+00:00
-- [Mr L Awan v Northern Care Alliance NHS Foundation Trust: 6025676/2025](https://www.gov.uk/employment-tribunal-decisions/mr-l-awan-v-northern-care-alliance-nhs-foundation-trust-6025676-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T13:23:12+00:00
-- [I S Lidberg v Michael Hall School: 6041470/2025](https://www.gov.uk/employment-tribunal-decisions/i-s-lidberg-v-michael-hall-school-6041470-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T13:08:05+00:00
-- [Mr A Hunter and Others v Universal Pharmacy Ltd: 3304521/2025 and Others](https://www.gov.uk/employment-tribunal-decisions/mr-a-hunter-and-others-v-universal-pharmacy-ltd-3304521-slash-2025-and-others) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T13:07:39+00:00
-- [Ms R Patrick v West Thames College: 6019268/2025](https://www.gov.uk/employment-tribunal-decisions/ms-r-patrick-v-west-thames-college-6019268-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T13:00:26+00:00
-- [Ms S Brazdilova v Nines Casino Ltd and Others: 6004701/2025](https://www.gov.uk/employment-tribunal-decisions/ms-s-brazdilova-v-nines-casino-ltd-and-others-6004701-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:59:42+00:00
-- [A C Jugut v Isaac Creative Hair Ltd: 3306077/2023 and 3302983/2024](https://www.gov.uk/employment-tribunal-decisions/a-c-jugut-v-isaac-creative-hair-ltd-3306077-slash-2023-and-3302983-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:57:53+00:00
-- [D Moley v St Thomas Of Canterbury R C Primary School and Medway Council: 2305327/2020](https://www.gov.uk/employment-tribunal-decisions/d-moley-v-st-thomas-of-canterbury-r-c-primary-school-and-medway-council-2305327-slash-2020) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:57:35+00:00
-- [Mr A Brown v Pinnacle FM Ltd: 3300559/2025 and Others](https://www.gov.uk/employment-tribunal-decisions/mr-a-brown-v-pinnacle-fm-ltd-3300559-slash-2025-and-others) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:54:14+00:00
-- [A Clark v St Thomas Of Canterbury R C Primary School and Medway Council: 2305324/2020](https://www.gov.uk/employment-tribunal-decisions/a-clark-v-st-thomas-of-canterbury-r-c-primary-school-and-medway-council-2305324-slash-2020) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:53:59+00:00
-- [S Wright v The Kemnal Academies Trust: 2303650/2020](https://www.gov.uk/employment-tribunal-decisions/s-wright-v-the-kemnal-academies-trust-2303650-slash-2020) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:51:00+00:00
-- [Mr Z Papp v Apcoa Parking Ltd: 3306488/2024](https://www.gov.uk/employment-tribunal-decisions/mr-z-papp-v-apcoa-parking-ltd-3306488-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:48:10+00:00
-- [Ms L Hughes v Inspiring Vet Care Ltd: 3304696/2024](https://www.gov.uk/employment-tribunal-decisions/ms-l-hughes-v-inspiring-vet-care-ltd-3304696-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:46:52+00:00
-- [A Manclark v The Kemnal Academies Trust: 2303646/2020](https://www.gov.uk/employment-tribunal-decisions/a-manclark-v-the-kemnal-academies-trust-2303646-slash-2020) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:46:39+00:00
-- [M Bennett v Total Home Delivery Ltd: 3307668/2025](https://www.gov.uk/employment-tribunal-decisions/m-bennett-v-total-home-delivery-ltd-3307668-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:45:16+00:00
-- [Mr K Fok v Kier Ltd: 6015973/2024](https://www.gov.uk/employment-tribunal-decisions/mr-k-fok-v-kier-ltd-6015973-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:44:46+00:00
-- [A Bouzazi and Others v Safe Hands Care and Support Services Ltd: 2405826/2023 and Others](https://www.gov.uk/employment-tribunal-decisions/a-bouzazi-and-others-v-safe-hands-care-and-support-services-ltd-2405826-slash-2023-and-others) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:38:25+00:00
-- [Ms S Croft v Yell Sales Ltd: 6022083/2025](https://www.gov.uk/employment-tribunal-decisions/ms-s-croft-v-yell-sales-ltd-6022083-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:36:34+00:00
-- [Dr S U Chaudhary v Lewisham Hospital NHS Trust University Hospital Lewisham and The Ashford and St Peters Hospitals NHS Trust: 6006386/2025](https://www.gov.uk/employment-tribunal-decisions/dr-s-u-chaudhary-v-lewisham-hospital-nhs-trust-university-hospital-lewisham-and-the-ashford-and-st-peters-hospitals-nhs-trust-6006386-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:34:10+00:00
-- [Miss Thirugnanasampanthan and Mr Shiyamalan v Irving Stores Ltd: 2300585/2026 and 6011464/2026](https://www.gov.uk/employment-tribunal-decisions/miss-thirugnanasampanthan-and-mr-shiyamalan-v-irving-stores-ltd-2300585-slash-2026-and-6011464-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:30:57+00:00
-- [Miss H Holt v Sysco GB Ltd: 6025978/2025](https://www.gov.uk/employment-tribunal-decisions/miss-h-holt-v-sysco-gb-ltd-6025978-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:28:50+00:00
 
 ## judicial_opinion_published
 
+- [1:24-cv-01504 - WESTWIND PARTNERS, LLP v. USA](https://www.govinfo.gov/app/details/USCOURTS-cofc-1_24-cv-01504/context) — United States Court of Federal Claims; 2026-10-15T13:51:29+00:00
+- [25-10505 - Russo v. Livingston et al](https://www.govinfo.gov/app/details/USCOURTS-cand-4_25-cv-10505/context) — District Court Northern District of California; 2026-10-15T13:51:29+00:00
+- [25-10767 - Samberg v. Whitestone Home Furnishings, LLC](https://www.govinfo.gov/app/details/USCOURTS-cand-3_25-cv-10767/context) — District Court Northern District of California; 2026-10-15T13:51:29+00:00
+- [26-7273 - Mark M. v. SSA Commissioner](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-07273/context) — District Court Northern District of California; 2026-10-15T13:51:29+00:00
 - [25-193 - MASSAQUOI v. THE GEO GROUP, INC.](https://www.govinfo.gov/app/details/USCOURTS-pawd-3_25-cv-00193/context) — District Court Western District of Pennsylvania; 2026-10-14T22:50:00+00:00
 - [22-2126 - In re Carvana Co Securities Litigation](https://www.govinfo.gov/app/details/USCOURTS-azd-2_22-cv-02126/context) — District Court District of Arizona; 2026-10-14T22:50:00+00:00
 - [15-2035 - USA v. Solis](https://www.govinfo.gov/app/details/USCOURTS-waed-1_15-cr-02035/context) — District Court Eastern District of Washington; 2026-10-14T22:49:00+00:00
@@ -1090,6 +1092,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## law_published
 
+- [Public Law 119 - 36 - Homebuyers Privacy Protection Act](https://www.govinfo.gov/app/details/PLAW-119publ36) — Public and Private Laws; 2026-10-15T14:31:00+00:00
 - [Public Law 119 - 120 - Billion Dollar Boondoggle Act of 2025](https://www.govinfo.gov/app/details/PLAW-119publ120) — Public and Private Laws; 2026-10-15T12:16:00+00:00
 
 ## legislative_document_published
@@ -1377,7 +1380,16 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## presidential_document_published
 
+- [DCPD-202500895 - Remarks on Signing the Homebuyers Privacy Protection Act and Executive Orders and Announcing the 2026 Group of Twenty (G-20) Nations Summit in Miami, Florida, and an Exchange With Reporters](https://www.govinfo.gov/app/details/DCPD-202500895) — Compilation of Presidential Documents; 2026-10-15T14:26:00+00:00
+- [DCPD-202600602 - Remarks in an Exchange With Reporters at the Trump International Golf Links and Hotel Doonbeg in Doonbeg, Ireland](https://www.govinfo.gov/app/details/DCPD-202600602) — Compilation of Presidential Documents; 2026-10-14T20:40:01+00:00
+- [DCPD-202600600 - Remarks Prior to a Meeting With Prime Minister Micheál Martin of Ireland and an Exchange With Reporters in Dublin, Ireland](https://www.govinfo.gov/app/details/DCPD-202600600) — Compilation of Presidential Documents; 2026-10-14T20:40:01+00:00
+- [DCPD-202600604 - Remarks at the 2026 Amgen Irish Open Trophy Ceremony in Doonbeg, Ireland](https://www.govinfo.gov/app/details/DCPD-202600604) — Compilation of Presidential Documents; 2026-10-14T20:40:00+00:00
+- [DCPD-202600603 - Remarks in an Exchange With Reporters During the Amgen Irish Open in Doonbeg, Ireland](https://www.govinfo.gov/app/details/DCPD-202600603) — Compilation of Presidential Documents; 2026-10-14T20:40:00+00:00
+- [DCPD-202600591 - Remarks on Signing the Hershel 'Woody' Williams National Medal of Honor Monument Location Act in Arlington, Texas](https://www.govinfo.gov/app/details/DCPD-202600591) — Compilation of Presidential Documents; 2026-10-14T20:40:00+00:00
 - [Establishment of a Committee of Inquiry To Investigate Allegations of False Statements by Lisa DeNell Cook](https://www.federalregister.gov/documents/2026/10/14/2026-21061/establishment-of-a-committee-of-inquiry-to-investigate-allegations-of-false-statements-by-lisa) — Executive Office of the President; 2026-10-14T00:00:00+00:00
+- [DCPD-202600599 - Remarks in an Exchange With Reporters Following a Visit With President Catherine Connolly of Ireland in Dublin, Ireland](https://www.govinfo.gov/app/details/DCPD-202600599) — Compilation of Presidential Documents; 2026-10-13T20:31:00+00:00
+- [DCPD-202600601 - Remarks to United States Embassy Personnel and Business Leaders in Dublin, Ireland](https://www.govinfo.gov/app/details/DCPD-202600601) — Compilation of Presidential Documents; 2026-10-13T20:31:00+00:00
+- [DCPD-202500807 - Remarks on Signing the VA Home Loan Program Reform Act and an Exchange With Reporters](https://www.govinfo.gov/app/details/DCPD-202500807) — Compilation of Presidential Documents; 2026-10-13T18:49:00+00:00
 - [National Energy Dominance Month, 2026](https://www.federalregister.gov/documents/2026/10/13/2026-20969/national-energy-dominance-month-2026) — Executive Office of the President; 2026-10-13T00:00:00+00:00
 - [Columbus Day, 2026](https://www.federalregister.gov/documents/2026/10/13/2026-20972/columbus-day-2026) — Executive Office of the President; 2026-10-13T00:00:00+00:00
 
@@ -1413,10 +1425,73 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## requires_semantic_review
 
+- [Fireside Chat: Michelle Alexopoulos, External Deputy Governor](https://www.bankofcanada.ca/2026/10/fireside-chat-michelle-alexopoulos-external-deputy-governor-october-16-2026/) — Bank of Canada — Upcoming events; 2026-10-16T17:45:13+00:00
+- [Panel: Tiff Macklem, Governor](https://www.bankofcanada.ca/2026/10/panel-tiff-macklem-governor-october-16-2026/) — Bank of Canada — Upcoming events; 2026-10-16T17:37:13+00:00
 - [Fireside chat with Michelle Alexopoulos, External Deputy Governor of the Bank of Canada](https://www.bankofcanada.ca/2026/10/fireside-chat-michelle-alexopoulos-external-deputy-governor-bank-canada-2026-10-16/) — Bank of Canada — Press; 2026-10-16T08:00:31+00:00
 - [Panel with Tiff Macklem, Governor of the Bank of Canada](https://www.bankofcanada.ca/2026/10/panel-tiff-macklem-governor-bank-canada-2016-10-16/) — Bank of Canada — Press; 2026-10-16T00:15:17+00:00
+- [President of the Eurogroup, Kyriakos Pierrakakis, discusses “How to raise Europe’s productivity” with the Atlantic Council at the IMF meetings in Bangkok](https://www.consilium.europa.eu/en/press/press-releases/2026/10/15/president-of-the-eurogroup-kyriakos-pierrakakis-discusses-how-to-raise-europe-s-productivity-with-the-atlantic-council-at-the-imf-meetings-in-bangkok/) — Council of the European Union; 2026-10-15T18:15:00+00:00
+- [Closing loopholes: Council lists individuals and entities for circumventing EU sanctions](https://www.consilium.europa.eu/en/press/press-releases/2026/10/15/closing-loopholes-council-lists-individuals-and-entities-for-circumventing-eu-sanctions/) — Council of the European Union; 2026-10-15T17:50:00+00:00
 - [Panel: Carolyn Rogers, Senior Deputy Governor](https://www.bankofcanada.ca/2026/10/panel-carolyn-rogers-senior-deputy-governor-october-15-2026/) — Bank of Canada — Upcoming events; 2026-10-15T17:28:24+00:00
+- [Housing Authority highly concerned about serious deficiencies in lift replacement works at two estates under Tenants Purchase Scheme](https://www.info.gov.hk/gia/general/202610/16/P2026101600011.htm) — Hong Kong Government Information Services; 2026-10-15T16:28:00+00:00
+- [EMSD's inspections reveal serious deficiencies in lift replacement works undertaken by registered lift contractor at two estates](https://www.info.gov.hk/gia/general/202610/16/P2026101500836.htm) — Hong Kong Government Information Services; 2026-10-15T16:02:22+00:00
+- [The Building (Local Authority Charges and Amendments Relating to Charging) (England) Regulations 2026](http://www.legislation.gov.uk/uksi/2026/1094/made) — UK legislation; 2026-10-15T15:39:14.723842+00:00
+- [Serial No. 118-69 - SAFEGUARDING MAIN STREET: COMBATING FRAUD AND EXPLOITATION IN OUR CAPITAL MARKETS](https://www.govinfo.gov/app/details/CHRG-118hhrg64154) — Congressional Hearings; 2026-10-15T15:24:00+00:00
+- [HA appeals to public for a patient requiring urgent liver transplant](https://www.info.gov.hk/gia/general/202610/15/P2026101500817.htm) — Hong Kong Government Information Services; 2026-10-15T15:16:00+00:00
+- [Serial No. 119-61 - THE ROLE OF SELF-REGULATORY ORGANIZATIONS IN U.S. MARKETS: EXAMINING FINRA AND THE MSRB](https://www.govinfo.gov/app/details/CHRG-119hhrg63968) — Congressional Hearings; 2026-10-15T15:00:00+00:00
+- [S. Hrg. 119-363 - HEARING ON THE NOMINATIONS OF HO NIEH TO BE A MEMBER OF THE NUCLEAR REGULATORY COMMISSION AND DOUGLAS TROUTMAN TO BE ASSISTANT ADMINISTRATOR FOR TOXIC SUBSTANCES OF THE ENVIRONMENTAL PROTECTION AGENCY](https://www.govinfo.gov/app/details/CHRG-119shrg63414) — Congressional Hearings; 2026-10-15T14:52:00+00:00
+- [The Welfare Food (Amendment) (England and Wales) Regulations 2026](http://www.legislation.gov.uk/uksi/2026/1092/made) — UK legislation; 2026-10-15T14:38:34.398741+00:00
+- [The First-tier Tribunal and Upper Tribunal (Chambers) (Amendment No. 2) Order 2026](http://www.legislation.gov.uk/uksi/2026/1083/made) — UK legislation; 2026-10-15T14:38:23.983722+00:00
+- [The Port of Tyne Harbour Revision Order 2026](http://www.legislation.gov.uk/uksi/2026/1088/made) — UK legislation; 2026-10-15T14:38:13.971273+00:00
+- [Serial No. 119-19 - HEARING FOR THE PURPOSE OF RECEIVING TESTIMONY FROM THE HONORABLE MICHAEL S. SELIG, CHAIRMAN, U.S. COMMODITY FUTURES TRADING COMMISSION](https://www.govinfo.gov/app/details/CHRG-119hhrg64650) — Congressional Hearings; 2026-10-15T14:15:00+00:00
+- [S. Hrg.119-71 - STATE, FOREIGN OPERATIONS, AND RELATED PROGRAMS APPROPRIATIONS FOR FISCAL YEAR 2026](https://www.govinfo.gov/app/details/CHRG-119shrg60279) — Congressional Hearings; 2026-10-15T14:15:00+00:00
+- [FS begins visit to Bangkok, Thailand (with photos/video)](https://www.info.gov.hk/gia/general/202610/15/P2026101500767.htm) — Hong Kong Government Information Services; 2026-10-15T14:10:00+00:00
+- [Updated national policy statement for ports](https://www.gov.uk/government/speeches/updated-national-policy-statement-for-ports) — Department for Transport; 2026-10-15T14:09:25+00:00
+- [DA8 2AD, Secure Measures Marine Limited: environmental permit application advertisement - EPR/ZP3521SN/A003](https://www.gov.uk/government/publications/da8-2ad-secure-measures-marine-limited-environmental-permit-application-advertisement-eprzp3521sna003) — Environment Agency; 2026-10-15T13:54:38+00:00
+- [EX15 2FP, Acorn Bioenergy Operations Limited: environmental permit application advertisement - EPR/WP3227MF/A001](https://www.gov.uk/government/publications/ex15-2fp-acorn-bioenergy-operations-limited-environmental-permit-application-advertisement-eprwp3227mfa001) — Environment Agency; 2026-10-15T13:43:29+00:00
+- [Serial No. 119-42 - INNOVATION WITH INTEGRITY: EXAMINING THE RISKS AND BENEFITS OF AI CHATBOTS](https://www.govinfo.gov/app/details/CHRG-119hhrg61999) — Congressional Hearings; 2026-10-15T13:43:00+00:00
+- [Government announces quarterly land sale programme for October to December 2026](https://www.info.gov.hk/gia/general/202610/15/P2026101500656.htm) — Hong Kong Government Information Services; 2026-10-15T13:16:00+00:00
+- [18.5569 ZAR = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-zar.en.html?date=2026-10-15&rate=18.5569) — European Central Bank — South African rand (ZAR); 2026-10-15T13:15:00+00:00
+- [37.592 THB = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-thb.en.html?date=2026-10-15&rate=37.592) — European Central Bank — Thai baht (THB); 2026-10-15T13:15:00+00:00
+- [1.4379 SGD = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-sgd.en.html?date=2026-10-15&rate=1.4379) — European Central Bank — Singapore dollar (SGD); 2026-10-15T13:15:00+00:00
+- [70.693 PHP = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-php.en.html?date=2026-10-15&rate=70.693) — European Central Bank — Philippine peso (PHP); 2026-10-15T13:15:00+00:00
+- [2.0012 NZD = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-nzd.en.html?date=2026-10-15&rate=2.0012) — European Central Bank — New Zealand dollar (NZD); 2026-10-15T13:15:00+00:00
+- [4.5757 MYR = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-myr.en.html?date=2026-10-15&rate=4.5757) — European Central Bank — Malaysian ringgit (MYR); 2026-10-15T13:15:00+00:00
+- [20.7596 MXN = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-mxn.en.html?date=2026-10-15&rate=20.7596) — European Central Bank — Mexican peso (MXN); 2026-10-15T13:15:00+00:00
+- [1508.48 KRW = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-krw.en.html?date=2026-10-15&rate=1508.48) — European Central Bank — South Korean won (KRW); 2026-10-15T13:15:00+00:00
+- [106.5408 INR = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-inr.en.html?date=2026-10-15&rate=106.5408) — European Central Bank — Indian rupee (INR); 2026-10-15T13:15:00+00:00
+- [20112.25 IDR = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-idr.en.html?date=2026-10-15&rate=20112.25) — European Central Bank — Indonesian rupiah (IDR); 2026-10-15T13:15:00+00:00
+- [8.7953 HKD = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-hkd.en.html?date=2026-10-15&rate=8.7953) — European Central Bank — Hong Kong dollar (HKD); 2026-10-15T13:15:00+00:00
+- [7.4993 CNY = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-cny.en.html?date=2026-10-15&rate=7.4993) — European Central Bank — Chinese yuan renminbi (CNY); 2026-10-15T13:15:00+00:00
+- [1.5923 CAD = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-cad.en.html?date=2026-10-15&rate=1.5923) — European Central Bank — Canadian dollar (CAD); 2026-10-15T13:15:00+00:00
+- [5.6679 BRL = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-brl.en.html?date=2026-10-15&rate=5.6679) — European Central Bank — Brasilian real (BRL); 2026-10-15T13:15:00+00:00
+- [1.6218 AUD = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-aud.en.html?date=2026-10-15&rate=1.6218) — European Central Bank — Australian dollar (AUD); 2026-10-15T13:15:00+00:00
+- [55.3873 TRY = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-try.en.html?date=2026-10-15&rate=55.3873) — European Central Bank — Turkish lira (TRY); 2026-10-15T13:15:00+00:00
+- [10.6520 NOK = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-nok.en.html?date=2026-10-15&rate=10.6520) — European Central Bank — Norwegian krone (NOK); 2026-10-15T13:15:00+00:00
+- [136.40 ISK = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-isk.en.html?date=2026-10-15&rate=136.40) — European Central Bank — Icelandic krona (ISK); 2026-10-15T13:15:00+00:00
+- [0.9305 CHF = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-chf.en.html?date=2026-10-15&rate=0.9305) — European Central Bank — Swiss franc (CHF); 2026-10-15T13:15:00+00:00
+- [11.1765 SEK = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-sek.en.html?date=2026-10-15&rate=11.1765) — European Central Bank — Swedish krona (SEK); 2026-10-15T13:15:00+00:00
+- [5.3337 RON = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-ron.en.html?date=2026-10-15&rate=5.3337) — European Central Bank — Romanian leu (RON); 2026-10-15T13:15:00+00:00
+- [4.3700 PLN = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-pln.en.html?date=2026-10-15&rate=4.3700) — European Central Bank — Polish zloty (PLN); 2026-10-15T13:15:00+00:00
+- [363.60 HUF = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-huf.en.html?date=2026-10-15&rate=363.60) — European Central Bank — Hungarian forint (HUF); 2026-10-15T13:15:00+00:00
+- [0.84610 GBP = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-gbp.en.html?date=2026-10-15&rate=0.84610) — European Central Bank — Pound sterling (GBP); 2026-10-15T13:15:00+00:00
+- [7.4750 DKK = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-dkk.en.html?date=2026-10-15&rate=7.4750) — European Central Bank — Danish krone (DKK); 2026-10-15T13:15:00+00:00
+- [24.353 CZK = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-czk.en.html?date=2026-10-15&rate=24.353) — European Central Bank — Czech koruna (CZK); 2026-10-15T13:15:00+00:00
+- [177.06 JPY = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-jpy.en.html?date=2026-10-15&rate=177.06) — European Central Bank — Japanese yen (JPY); 2026-10-15T13:15:00+00:00
+- [1.1208 USD = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-usd.en.html?date=2026-10-15&rate=1.1208) — European Central Bank — US dollar (USD); 2026-10-15T13:15:00+00:00
+- [3.4769 ILS = 1 EUR 2026-10-15 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-ils.en.html?date=2026-10-15&rate=3.4769) — European Central Bank — ILS; 2026-10-15T13:15:00+00:00
+- [Trade remedies notice: definitive anti-dumping duty on certain excavators originating from China](https://www.gov.uk/government/publications/trade-remedies-notice-definitive-anti-dumping-duty-on-certain-excavators-originating-from-china) — Department for Business, Innovation, Science and Trade; Department for Business and Trade; 2026-10-15T13:00:00+00:00
+- [Trade remedies notice: definitive countervailing duty on certain excavators originating from China](https://www.gov.uk/government/publications/trade-remedies-notice-definitive-countervailing-duty-on-certain-excavators-originating-from-china) — Department for Business, Innovation, Science and Trade; Department for Business and Trade; 2026-10-15T13:00:00+00:00
+- [Speech by Commissioner Albuquerque (by video message) for the Malta's Financial Wellbeing Conference 2026: From Access to Trust](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2176) — European Commission press and decisions; 2026-10-15T12:59:53+00:00
+- [The Income Tax (Pay As You Earn) (Amendment No. 3) Regulations 2026](http://www.legislation.gov.uk/uksi/2026/1082/made) — UK legislation; 2026-10-15T12:56:08.412642+00:00
 - [Press briefing - Employment, Social Policy, Health and Consumer Affairs Council (Employment and social policy) of 19 October 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/10/15/press-briefing-employment-social-policy-health-and-consumer-affairs-council-employment-and-social-policy-of-19-october-2026/) — Council of the European Union; 2026-10-15T12:40:00+00:00
+- [EX15 3PY, Stuart Caton: environmental: permit application advertisement EPR/BP3027MH/A001](https://www.gov.uk/government/publications/ex15-3py-stuart-caton-environmental-permit-application-advertisement-eprbp3027mha001) — Environment Agency; 2026-10-15T12:39:46+00:00
+- [TA10 0JA, Phil Higginson and Helen Lazenby: environmental: permit application advertisement EPR/FP3127MV/A001](https://www.gov.uk/government/publications/ta10-0ja-phil-higginson-and-helen-lazenby-environmental-permit-application-advertisement-eprfp3127mva001) — Environment Agency; 2026-10-15T12:39:13+00:00
+- [SP5 4BT, Dr Callum Hunter: environmental: permit application advertisement EPR/JP3327MP/A001](https://www.gov.uk/government/publications/sp5-4bt-dr-callum-hunter-environmental-permit-application-advertisement-eprjp3327mpa001) — Environment Agency; 2026-10-15T12:38:35+00:00
+- [DN14 9LZ, Carlton Towers Events Ltd: environmental: permit application advertisement EPR/YP3021MY/A001](https://www.gov.uk/government/publications/dn14-9lz-carlton-towers-events-ltd-environmental-permit-application-advertisement-epryp3021mya001) — Environment Agency; 2026-10-15T12:37:56+00:00
+- [FAYUVI](http://www.fda.gov/vaccines-blood-biologics/fayuvi) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-15T12:23:29+00:00
+- [Enhancement works to commence in Central Government-Aided Emergency Hospital](https://www.info.gov.hk/gia/general/202610/15/P2026101500669.htm) — Hong Kong Government Information Services; 2026-10-15T12:06:00+00:00
+- [Commission launches RAISE pledging initiative to boost AI support for researchers across Europe](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2175) — European Commission press and decisions; 2026-10-15T12:03:07+00:00
+- [29 more nomination forms for Election Committee Subsector Ordinary Elections received today](https://www.info.gov.hk/gia/general/202610/15/P2026101500661.htm) — Hong Kong Government Information Services; 2026-10-15T12:00:00+00:00
 - [Rescheduling of the EU-GCC Summit](https://www.consilium.europa.eu/en/press/press-releases/2026/10/15/postponement-of-the-second-eu-gcc-summit/) — Council of the European Union; 2026-10-15T12:00:00+00:00
 - [S. Rept. 119-151](https://www.govinfo.gov/app/details/CRPT-119srpt151) — Congressional Reports; 2026-10-15T11:57:00+00:00
 - [Senior Infrastructure Architect](https://www.bis.org/vacancy/jr100471) — Bank for International Settlements — View feed; 2026-10-15T11:55:00+00:00
@@ -1430,6 +1505,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [The Global Human Rights and International Humanitarian Law Sanctions (Overseas Territories) Order 2026](http://www.legislation.gov.uk/uksi/2026/1089/made) — UK legislation; 2026-10-15T10:43:20.289254+00:00
 - [Bradley John MARGACH](https://www.thegazette.co.uk/notice/5229942) — The Gazette official public record; 2026-10-15T10:40:09+00:00
 - [Rescheduling of the EU-GCC Summit](https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2172) — European Commission press and decisions; 2026-10-15T10:31:50+00:00
+- [Forecasting oil prices: What works best and when](https://www.bankofcanada.ca/2026/10/sparks-at-bank-article-2026-24/) — Bank of Canada — Subscribe to ; 2026-10-15T10:30:44+00:00
 - [Scam alert related to banks](https://www.info.gov.hk/gia/general/202610/15/P2026101500490.htm) — Hong Kong Government Information Services; 2026-10-15T10:00:00+00:00
 - [David Roberts CV and questionnaire for the Treasury Select Committee](https://www.bankofengland.co.uk/news/2026/october/david-roberts-tsc-reappointment) — Bank of England; 2026-10-15T09:52:41+00:00
 - [Hong Kong Customs organises Customs YES Youth International Engagement Tour to Macao (with photos)](https://www.info.gov.hk/gia/general/202610/15/P2026101500482.htm) — Hong Kong Government Information Services; 2026-10-15T09:40:00+00:00
@@ -1459,7 +1535,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Another new drug approved for registration under "1+" mechanism](https://www.info.gov.hk/gia/general/202610/15/P2026101500399.htm) — Hong Kong Government Information Services; 2026-10-15T07:40:00+00:00
 - [ESCB SSM Shared Values Charter 2026](https://www.ecb.europa.eu//pub/pdf/other/ESCB-SSM-Shared-Values-Charter-2026.en.pdf) — European Central Bank — Publications; 2026-10-15T07:30:00+00:00
 - [Steady progress on the One Europe, One Market roadmap](https://ec.europa.eu/commission/presscorner/detail/en/jp_26_2169) — European Commission press and decisions; 2026-10-15T06:36:43+00:00
-- [HKMA announces "ART" Framework to promote responsible AI adoption](https://www.info.gov.hk/gia/general/202610/15/P2026101500186.htm) — Hong Kong Government Information Services; 2026-10-15T06:30:00+00:00
+- [HKMA announces "ART" Framework to promote responsible AI adoption (with photo)](https://www.info.gov.hk/gia/general/202610/15/P2026101500186.htm) — Hong Kong Government Information Services; 2026-10-15T06:30:00+00:00
 - [H. Rept. 119-840](https://www.govinfo.gov/app/details/CRPT-119hrpt840) — Congressional Reports; 2026-10-15T05:12:00+00:00
 - [Panel with Carolyn Rogers, Senior Deputy Governor of the Bank of Canada](https://www.bankofcanada.ca/2026/10/panel-with-carolyn-rogers-senior-deputy-governor-of-the-bank-of-canada-2026-10-15/) — Bank of Canada — Press; 2026-10-15T05:00:34+00:00
 - [Hong Kong Space Museum to screen new 3D dome show "Explore 3D" (with photos)](https://www.info.gov.hk/gia/general/202610/15/P2026101500251.htm) — Hong Kong Government Information Services; 2026-10-15T04:52:00+00:00
@@ -1475,6 +1551,15 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Reopening of Fanling Swimming Pool](https://www.info.gov.hk/gia/general/202610/15/P2026101500212.htm) — Hong Kong Government Information Services; 2026-10-15T01:54:47+00:00
 - [Speech by Board Member KOEDA in Kumamoto (Economic Activity, Prices, and Monetary Policy in Japan)](http://www.boj.or.jp/en/about/press/koen_2026/ko261015a.htm) — Bank of Japan; 2026-10-15T01:30:00+00:00
 - [Summary of the "Meeting on Market Operations" (October 2026)](http://www.boj.or.jp/en/paym/market/mkt261015a.pdf) — Bank of Japan; 2026-10-15T01:00:00+00:00
+- [Nebahat Evyat Işbilen v Selman Turk & Ors](https://caselaw.nationalarchives.gov.uk/ewhc/bp/2026/2635) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
+- [The Secretary of State for the Home Department v MD Shahadat Hossain](https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/1310) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
+- [G O v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.9cv3ns87) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
+- [YY & Anor v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.t6cd8v3m) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
+- [S & Ors v The Entry Clearance Officer](https://caselaw.nationalarchives.gov.uk/tna.ksh7cbcn) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
+- [Nasir Saeed v Greater Manchester City Authority & Anor](https://caselaw.nationalarchives.gov.uk/ewcc/2026/62) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
+- [HS v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.7f5g7rbp) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
+- [D v Greater Glasgow Health Board](https://caselaw.nationalarchives.gov.uk/eat/2026/160) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
+- [Iran-related Designations; Cuba Designation; Issuance of New and Amended General Licenses and Frequently Asked Questions](https://ofac.treasury.gov/recent-actions/20261015) — Treasury Office of Foreign Assets Control; 2026-10-15T00:00:00+00:00
 - [Chokepoint disruptions and their macroeconomic consequences](https://www.bis.org/publications/bulletin-138-chokepoint-disruptions-and-their-macroeconomic-consequences) — Bank for International Settlements — View feed; 2026-10-15T00:00:00+00:00
 - [R v Nahim Mohammed](https://caselaw.nationalarchives.gov.uk/ewca/crim/2026/1330) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
 - [X v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.wbxs5dbh) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
@@ -1482,17 +1567,12 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [BL & Anor v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.t6cwjv3m) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
 - [Parbhuram Pundarikakshan v Registrar of Approved Driving Instructors](https://caselaw.nationalarchives.gov.uk/ukftt/grc/2026/1413) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
 - [Avanton Capital CC Limited v LUC Construction Limited](https://caselaw.nationalarchives.gov.uk/ewhc/tcc/2026/2630) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
+- [Correction Slip](http://www.legislation.gov.uk/uksi/2026/857/pdfs/uksics_20260857_en_001.pdf) — UK legislation; 2026-10-14T23:00:00+00:00
 - [Correction SLip](http://www.legislation.gov.uk/wsi/2026/116/pdfs/wsics_20260116_mi_001.pdf) — UK legislation; 2026-10-14T23:00:00+00:00
 - [Contract Award Notice: ECB - Request for Proposal under the ECB's Dynamic Purchasing System for the offsetting of the ECB's greenhouse gas emissions (714312-2026)](https://www.ecb.europa.eu//ecb/jobsproc/proc/pdf/ecb.procurContractAwardNotice-2026-OJS200-00714312.en.pdf) — European Central Bank — Open procurements, award notices and lists of suppliers; 2026-10-14T22:00:00+00:00
 - [Main messages from the Tripartite Social Summit](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2165) — European Commission press and decisions; 2026-10-14T22:00:00+00:00
-- [DCPD-202600602 - Remarks in an Exchange With Reporters at the Trump International Golf Links and Hotel Doonbeg in Doonbeg, Ireland](https://www.govinfo.gov/app/details/DCPD-202600602) — Compilation of Presidential Documents; 2026-10-14T20:40:01+00:00
-- [DCPD-202600600 - Remarks Prior to a Meeting With Prime Minister Micheál Martin of Ireland and an Exchange With Reporters in Dublin, Ireland](https://www.govinfo.gov/app/details/DCPD-202600600) — Compilation of Presidential Documents; 2026-10-14T20:40:01+00:00
-- [DCPD-202600604 - Remarks at the 2026 Amgen Irish Open Trophy Ceremony in Doonbeg, Ireland](https://www.govinfo.gov/app/details/DCPD-202600604) — Compilation of Presidential Documents; 2026-10-14T20:40:00+00:00
-- [DCPD-202600603 - Remarks in an Exchange With Reporters During the Amgen Irish Open in Doonbeg, Ireland](https://www.govinfo.gov/app/details/DCPD-202600603) — Compilation of Presidential Documents; 2026-10-14T20:40:00+00:00
-- [DCPD-202600591 - Remarks on Signing the Hershel 'Woody' Williams National Medal of Honor Monument Location Act in Arlington, Texas](https://www.govinfo.gov/app/details/DCPD-202600591) — Compilation of Presidential Documents; 2026-10-14T20:40:00+00:00
 - [Commissioner Roswall's speech at the Inaugural Convening of the Women Public Sector Climate Leaders Network](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2168) — European Commission press and decisions; 2026-10-14T20:24:59+00:00
 - [S. Hrg. 119-204 - CONFIRMATION HEARING ON FEDERAL APPOINTMENTS](https://www.govinfo.gov/app/details/CHRG-119shrg61895) — Congressional Hearings; 2026-10-14T19:55:00+00:00
-- [Serial No. 118-69 - SAFEGUARDING MAIN STREET: COMBATING FRAUD AND EXPLOITATION IN OUR CAPITAL MARKETS](https://www.govinfo.gov/app/details/CHRG-118hhrg64154) — Congressional Hearings; 2026-10-14T19:51:00+00:00
 - [GDUFA Paid Facilities List](http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list) — Food and Drug Administration — What's New: Drugs; 2026-10-14T19:50:00+00:00
 - [FDA Rare Disease Innovation Hub](http://www.fda.gov/industry/medical-products-rare-diseases-and-conditions/fda-rare-disease-innovation-hub) — Food and Drug Administration — What's New: Drugs; 2026-10-14T19:45:24+00:00
 - [Media advisory - European Council meeting of 15-16 October 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/10/14/media-advisory-european-council-meeting-of-15-16-october-2026/) — Council of the European Union; 2026-10-14T19:00:00+00:00
@@ -1506,7 +1586,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Main messages from the Tripartite Social Summit of 14 October 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/10/14/main-messages-from-the-tripartite-social-summit-of-14-october-2026/) — Council of the European Union; 2026-10-14T17:55:00+00:00
 - [Remarks by President António Costa at the press conference following the Tripartite Social Summit](https://www.consilium.europa.eu/en/press/press-releases/2026/10/14/remarks-by-president-antonio-costa-at-the-press-conference-following-the-tripartite-social-summit/) — Council of the European Union; 2026-10-14T17:53:00+00:00
 - [LLOYDS DEVELOPMENTS LIMITED](https://www.thegazette.co.uk/notice/5230674) — The Gazette official public record; 2026-10-14T17:30:55+00:00
-- [FAYUVI](http://www.fda.gov/vaccines-blood-biologics/fayuvi) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-14T17:22:10+00:00
 - [H. Rept. 119-1](https://www.govinfo.gov/app/details/CRPT-119hrpt1) — Congressional Reports; 2026-10-14T17:19:00+00:00
 - [Fireside Chat: Tiff Macklem, Governor](https://www.bankofcanada.ca/2026/10/fireside-chat-tiff-macklem-governor-october-14-2026/) — Bank of Canada — Upcoming events; 2026-10-14T17:01:17+00:00
 - [Statement by General Partner](https://www.thegazette.co.uk/notice/5231125) — The Gazette official public record; 2026-10-14T17:00:17+00:00
@@ -1516,7 +1595,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Commission awards six projects making lasting contributions for Europe's cohesion at REGIOSTARS ceremony *](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2167) — European Commission press and decisions; 2026-10-14T16:10:29+00:00
 - [The Housing (Empty Dwelling Management Orders) (Prescribed Period of Time and Prescribed Requirements) (England) (Amendment) Order 2026](http://www.legislation.gov.uk/uksi/2026/1085/made) — UK legislation; 2026-10-14T16:10:00.359091+00:00
 - [Rare Disease Framework](http://www.fda.gov/industry/fda-rare-disease-innovation-hub/rare-disease-framework) — Food and Drug Administration — What's New: Drugs; 2026-10-14T15:53:13+00:00
-- [S .Hrg.119-71 - STATE, FOREIGN OPERATIONS, AND RELATED PROGRAMS APPROPRIATIONS FOR FISCAL YEAR 2026](https://www.govinfo.gov/app/details/CHRG-119shrg60279) — Congressional Hearings; 2026-10-14T15:52:00+00:00
 - [FDA Launches the Rare Disease Framework Initiative to Develop a Holistic, Fit-For-Purpose Framework for Rare Disease Drug Development](http://www.fda.gov/news-events/press-announcements/fda-launches-rare-disease-framework-initiative-develop-holistic-fit-purpose-framework-rare-disease) — Food and Drug Administration — Press Releases; 2026-10-14T15:50:52+00:00
 - [FDA Rare Disease Framework Initiative Public Meeting - 10/28/2026](http://www.fda.gov/news-events/fda-meetings-conferences-and-workshops/fda-rare-disease-framework-initiative-public-meeting-10282026) — Food and Drug Administration — What's New: Drugs; 2026-10-14T15:49:59+00:00
 - [The Anti-social Behaviour (Provision of Information) Regulations 2026](http://www.legislation.gov.uk/uksi/2026/1081/made) — UK legislation; 2026-10-14T15:34:07.123818+00:00
@@ -1831,10 +1909,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [House Hearing, 111th Congress - BUILDING CAPACITY TO PROTECT U.S. NATIONAL SECURITY: THE FISCAL YEAR 2010 INTERNATIONAL AFFAIRS BUDGET](https://www.govinfo.gov/app/details/CHRG-111hhrg49710) — Congressional Hearings; 2026-10-13T21:15:00+00:00
 - [In Their Own Words: Health Care Providers](http://www.fda.gov/drugs/prescribe-confidence/their-own-words-health-care-providers) — Food and Drug Administration — What's New: Drugs; 2026-10-13T20:48:27+00:00
 - [Prescribe with Confidence](http://www.fda.gov/drugs/drug-safety-and-availability/prescribe-confidence) — Food and Drug Administration — What's New: Drugs; 2026-10-13T20:48:23+00:00
-- [DCPD-202600599 - Remarks in an Exchange With Reporters Following a Visit With President Catherine Connolly of Ireland in Dublin, Ireland](https://www.govinfo.gov/app/details/DCPD-202600599) — Compilation of Presidential Documents; 2026-10-13T20:31:00+00:00
-- [DCPD-202600601 - Remarks to United States Embassy Personnel and Business Leaders in Dublin, Ireland](https://www.govinfo.gov/app/details/DCPD-202600601) — Compilation of Presidential Documents; 2026-10-13T20:31:00+00:00
 - [Enlargement: EU opens accession negotiations with Ukraine on internal market, competitiveness and inclusive growth](https://www.consilium.europa.eu/en/press/press-releases/2026/10/13/enlargement-eu-opens-accession-negotiations-with-ukraine-on-internal-market-competitiveness-and-inclusive-growth/) — Council of the European Union; 2026-10-13T19:26:00+00:00
-- [DCPD-202500807 - Remarks on Signing the VA Home Loan Program Reform Act and an Exchange With Reporters](https://www.govinfo.gov/app/details/DCPD-202500807) — Compilation of Presidential Documents; 2026-10-13T18:49:00+00:00
 - [Enlargement: Albania and EU provisionally close negotiations on enterprise and industrial policy](https://www.consilium.europa.eu/en/press/press-releases/2026/10/13/enlargement-albania-and-eu-provisionally-close-negotiations-on-enterprise-and-industrial-policy/) — Council of the European Union; 2026-10-13T18:35:00+00:00
 - [Philip R. Lane: The AI opportunity for Europe](https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261013~9db9bf4fd6.en.html) — European Central Bank; 2026-10-13T18:30:00+00:00
 - [Pan Pepin Inc. Issues Allergy Alert of Para Bien Al Grano Due to Undeclared Sesame](http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/pan-pepin-inc-issues-allergy-alert-para-bien-al-grano-due-undeclared-sesame) — Food and Drug Administration — Food Allergies; 2026-10-13T18:07:00+00:00
@@ -1963,61 +2038,16 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Correction Slip](http://www.legislation.gov.uk/nisr/2026/171/pdfs/nisrcs_20260171_en_001.pdf) — UK legislation; 2026-10-12T23:00:00+00:00
 - [Enlargement: EU and Montenegro close accession negotiations in the areas of economic and monetary policy, statistics, and social policy and employment](https://www.consilium.europa.eu/en/press/press-releases/2026/10/12/enlargement-eu-and-montenegro-close-accession-negotiations-in-the-areas-of-economic-and-monetary-policy-statistics-and-social-policy-and-employment/) — Council of the European Union; 2026-10-12T18:50:00+00:00
 - [Media advisory - General Affairs Council and accession conferences with Albania, the Republic of Moldova and Ukraine of 13 October 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/10/12/media-advisory-general-affairs-council-and-accession-conferences-with-albania-the-republic-of-moldova-and-ukraine-of-13-october-2026/) — Council of the European Union; 2026-10-12T17:51:00+00:00
-- [The Enterprise Act 2002 (Specification of Additional Section 58 Consideration) Order 2026](http://www.legislation.gov.uk/uksi/2026/1075/made) — UK legislation; 2026-10-12T16:31:50.236338+00:00
-- [EU-UK summit to take place in Brussels on 20 November](https://www.consilium.europa.eu/en/press/press-releases/2026/10/12/eu-uk-summit-to-take-place-in-brussels-on-20-november/) — Council of the European Union; 2026-10-12T16:30:00+00:00
-- [Multilateralism: Council sets EU position ahead of climate change and biodiversity summits](https://www.consilium.europa.eu/en/press/press-releases/2026/10/12/multilateralism-council-sets-eu-position-ahead-of-climate-change-and-biodiversity-summits/) — Council of the European Union; 2026-10-12T16:03:00+00:00
-- [The Armed Forces (Service Complaints) (Amendment) (No. 2) Regulations 2026](http://www.legislation.gov.uk/uksi/2026/1068/made) — UK legislation; 2026-10-12T15:16:34.284299+00:00
-- [Speech by President António Costa at the opening session of the 24th edition of the European Week of Regions and Cities](https://www.consilium.europa.eu/en/press/press-releases/2026/10/12/speech-by-president-antonio-costa-at-the-opening-session-of-the-24th-edition-of-the-european-week-of-regions-and-cities/) — Council of the European Union; 2026-10-12T15:15:00+00:00
-- [UK/USA: Exchange of Letters on Amendments to Agreement on Mutual Recognition of Certificate of Conformity for Marine Equipment (CS No.1/2026)](https://www.gov.uk/government/publications/ukusa-exchange-of-letters-on-amendments-to-agreement-on-mutual-recognition-of-certificate-of-conformity-for-marine-equipment-cs-no12026) — Foreign, Commonwealth & Development Office; 2026-10-12T14:34:07+00:00
-- [Senior/Lead Data & Analytics Engineer](https://www.bis.org/vacancy/jr100498) — Bank for International Settlements — View feed; 2026-10-12T13:30:00+00:00
-- [DPRK: Council adds three individuals and four entities to sanctions lists over nuclear, missile programmes and Russia ties](https://www.consilium.europa.eu/en/press/press-releases/2026/10/12/dprk-council-adds-three-individuals-and-four-entities-to-sanctions-lists-over-nuclear-missile-programmes-and-russia-ties/) — Council of the European Union; 2026-10-12T13:20:00+00:00
-- [18.4945 ZAR = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-zar.en.html?date=2026-10-12&rate=18.4945) — European Central Bank — South African rand (ZAR); 2026-10-12T13:15:00+00:00
-- [37.585 THB = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-thb.en.html?date=2026-10-12&rate=37.585) — European Central Bank — Thai baht (THB); 2026-10-12T13:15:00+00:00
-- [1.4314 SGD = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-sgd.en.html?date=2026-10-12&rate=1.4314) — European Central Bank — Singapore dollar (SGD); 2026-10-12T13:15:00+00:00
-- [70.169 PHP = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-php.en.html?date=2026-10-12&rate=70.169) — European Central Bank — Philippine peso (PHP); 2026-10-12T13:15:00+00:00
-- [1.9968 NZD = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-nzd.en.html?date=2026-10-12&rate=1.9968) — European Central Bank — New Zealand dollar (NZD); 2026-10-12T13:15:00+00:00
-- [4.5663 MYR = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-myr.en.html?date=2026-10-12&rate=4.5663) — European Central Bank — Malaysian ringgit (MYR); 2026-10-12T13:15:00+00:00
-- [20.5081 MXN = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-mxn.en.html?date=2026-10-12&rate=20.5081) — European Central Bank — Mexican peso (MXN); 2026-10-12T13:15:00+00:00
-- [1490.53 KRW = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-krw.en.html?date=2026-10-12&rate=1490.53) — European Central Bank — South Korean won (KRW); 2026-10-12T13:15:00+00:00
-- [107.0860 INR = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-inr.en.html?date=2026-10-12&rate=107.0860) — European Central Bank — Indian rupee (INR); 2026-10-12T13:15:00+00:00
-- [20036.18 IDR = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-idr.en.html?date=2026-10-12&rate=20036.18) — European Central Bank — Indonesian rupiah (IDR); 2026-10-12T13:15:00+00:00
-- [8.7743 HKD = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-hkd.en.html?date=2026-10-12&rate=8.7743) — European Central Bank — Hong Kong dollar (HKD); 2026-10-12T13:15:00+00:00
-- [7.4832 CNY = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-cny.en.html?date=2026-10-12&rate=7.4832) — European Central Bank — Chinese yuan renminbi (CNY); 2026-10-12T13:15:00+00:00
-- [1.5946 CAD = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-cad.en.html?date=2026-10-12&rate=1.5946) — European Central Bank — Canadian dollar (CAD); 2026-10-12T13:15:00+00:00
-- [5.5819 BRL = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-brl.en.html?date=2026-10-12&rate=5.5819) — European Central Bank — Brasilian real (BRL); 2026-10-12T13:15:00+00:00
-- [1.6032 AUD = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-aud.en.html?date=2026-10-12&rate=1.6032) — European Central Bank — Australian dollar (AUD); 2026-10-12T13:15:00+00:00
-- [55.1635 TRY = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-try.en.html?date=2026-10-12&rate=55.1635) — European Central Bank — Turkish lira (TRY); 2026-10-12T13:15:00+00:00
-- [10.6955 NOK = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-nok.en.html?date=2026-10-12&rate=10.6955) — European Central Bank — Norwegian krone (NOK); 2026-10-12T13:15:00+00:00
-- [136.40 ISK = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-isk.en.html?date=2026-10-12&rate=136.40) — European Central Bank — Icelandic krona (ISK); 2026-10-12T13:15:00+00:00
-- [0.9312 CHF = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-chf.en.html?date=2026-10-12&rate=0.9312) — European Central Bank — Swiss franc (CHF); 2026-10-12T13:15:00+00:00
-- [11.1965 SEK = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-sek.en.html?date=2026-10-12&rate=11.1965) — European Central Bank — Swedish krona (SEK); 2026-10-12T13:15:00+00:00
-- [5.3370 RON = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-ron.en.html?date=2026-10-12&rate=5.3370) — European Central Bank — Romanian leu (RON); 2026-10-12T13:15:00+00:00
-- [4.3850 PLN = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-pln.en.html?date=2026-10-12&rate=4.3850) — European Central Bank — Polish zloty (PLN); 2026-10-12T13:15:00+00:00
-- [365.13 HUF = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-huf.en.html?date=2026-10-12&rate=365.13) — European Central Bank — Hungarian forint (HUF); 2026-10-12T13:15:00+00:00
-- [0.84478 GBP = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-gbp.en.html?date=2026-10-12&rate=0.84478) — European Central Bank — Pound sterling (GBP); 2026-10-12T13:15:00+00:00
-- [7.4748 DKK = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-dkk.en.html?date=2026-10-12&rate=7.4748) — European Central Bank — Danish krone (DKK); 2026-10-12T13:15:00+00:00
-- [24.391 CZK = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-czk.en.html?date=2026-10-12&rate=24.391) — European Central Bank — Czech koruna (CZK); 2026-10-12T13:15:00+00:00
-- [177.33 JPY = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-jpy.en.html?date=2026-10-12&rate=177.33) — European Central Bank — Japanese yen (JPY); 2026-10-12T13:15:00+00:00
-- [1.1181 USD = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-usd.en.html?date=2026-10-12&rate=1.1181) — European Central Bank — US dollar (USD); 2026-10-12T13:15:00+00:00
-- [3.4320 ILS = 1 EUR 2026-10-12 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-ils.en.html?date=2026-10-12&rate=3.4320) — European Central Bank — ILS; 2026-10-12T13:15:00+00:00
-- [​The EBA releases the final technical package for release 4.4 of its reporting and Pillar 3 disclosure framework](https://www.eba.europa.eu/publications-and-media/press-releases/eba-releases-final-technical-package-release-44-its-reporting-and-pillar-3-disclosure-framework) — European Banking Authority; 2026-10-12T13:10:34+00:00
-- [SS17 9FD, London Gateway Logistics Park Development Limited: environmental permit application advertisement - EPR/HP3027MV/A001](https://www.gov.uk/government/publications/ss17-9fd-london-gateway-logistics-park-development-limited-environmental-permit-application-advertisement-eprhp3027mva001) — Environment Agency; 2026-10-12T12:44:23+00:00
-- [HP5 2UA, Steven Ellis and Sara Payne: environmental permit application advertisement - EPR/TP3320UM](https://www.gov.uk/government/publications/hp5-2ua-steven-ellis-and-sara-payne-environmental-permit-application-advertisement-eprtp3320um) — Environment Agency; 2026-10-12T12:42:47+00:00
-- [Lebanon: EU establishes new CSDP support mission to strengthen defence and security institutions](https://www.consilium.europa.eu/en/press/press-releases/2026/10/12/lebanon-eu-establishes-new-csdp-support-mission-to-strengthen-defence-and-security-institutions/) — Council of the European Union; 2026-10-12T12:40:00+00:00
-- [SO50 6PQ, VEOLIA ES HAMPSHIRE LTD: environmental permit application advertisement - EPR/HP3526MP/A001](https://www.gov.uk/government/publications/so50-6pq-veolia-es-hampshire-ltd-environmental-permit-application-advertisement-eprhp3526mpa001) — Environment Agency; 2026-10-12T12:33:19+00:00
-- [Russia’s war of aggression against Ukraine: EU agrees largest-ever package of listings targeting almost 1600 individuals and entities in Russia’s military-industrial complex](https://www.consilium.europa.eu/en/press/press-releases/2026/10/12/russia-s-war-of-aggression-against-ukraine-eu-agrees-largest-ever-package-of-listings-targeting-almost-1600-individuals-and-entities-in-russia-s-military-industrial-complex/) — Council of the European Union; 2026-10-12T12:33:00+00:00
 
 ## Source failures and coverage warnings
 
 - us-govinfo-bills: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-bills-enr: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
-- us-govinfo-dcpd: unchanged; feed_at_capacity; daily snapshots may miss overflow
-- us-govinfo-chrg: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-alsd: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-almd: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-akd: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-caed: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
-- us-govinfo-uscourts-cand: unchanged; feed_at_capacity; daily snapshots may miss overflow
+- us-govinfo-uscourts-cand: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
 - us-govinfo-uscourts-casd: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-cod: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-ctd: unchanged; feed_at_capacity; daily snapshots may miss overflow
@@ -2025,8 +2055,8 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-govinfo-uscourts-flsd: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-flnd: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-gamd: unchanged; feed_at_capacity; daily snapshots may miss overflow
-- us-govinfo-uscourts-gand: parse_or_network_error; 
-- us-govinfo-uscourts-idd: fetch_failed; 
+- us-govinfo-uscourts-gand: ok; stale_feed_outside_requested_window
+- us-govinfo-uscourts-idd: ok; stale_feed_outside_requested_window
 - us-govinfo-uscourts-ilnd: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-ilsd: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-insd: unchanged; feed_at_capacity; daily snapshots may miss overflow
@@ -2063,7 +2093,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-govinfo-uscourts-tnmd: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-txwd: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-utd: unchanged; feed_at_capacity; daily snapshots may miss overflow
-- us-govinfo-uscourts-vid: parse_or_network_error; 
 - us-govinfo-uscourts-vtd: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-waed: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-wiwd: unchanged; feed_at_capacity; daily snapshots may miss overflow
@@ -2155,10 +2184,9 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-govinfo-uscourts-wiwb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-wyb: unchanged; stale_feed_outside_requested_window
 - us-govinfo-uscourts-jpml: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
-- us-govinfo-uscourts-cofc: unchanged; feed_at_capacity; daily snapshots may miss overflow
-- us-white-house-0691096d16: unchanged; stale_feed_outside_requested_window
-- us-fed-7cfba7c4ca: fetch_failed; 
-- us-fed-1555c8e0e5: ok; stale_feed_outside_requested_window
+- us-white-house-0691096d16: ok; stale_feed_outside_requested_window
+- us-fed-7cfba7c4ca: ok; stale_feed_outside_requested_window
+- us-fed-1555c8e0e5: fetch_failed; 
 - us-fed-ba8ad56252: ok; stale_feed_outside_requested_window
 - us-fed-1549fdd7e4: fetch_failed; 
 - us-fed-95066bc761: fetch_failed; 
@@ -2166,55 +2194,52 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fed-8d9ba6faea: fetch_failed; 
 - us-cftc-fda5c3631d: ok; stale_feed_outside_requested_window
 - us-fda-df70b9f330: ok; stale_feed_outside_requested_window
-- us-fda-1a1096082f: unchanged; stale_feed_outside_requested_window
-- us-fda-2d9c4fc2f9: unchanged; stale_feed_outside_requested_window
-- us-fda-8fc09ac0a2: unchanged; stale_feed_outside_requested_window
+- us-fda-1a1096082f: ok; stale_feed_outside_requested_window
+- us-fda-2d9c4fc2f9: ok; stale_feed_outside_requested_window
+- us-fda-8fc09ac0a2: ok; stale_feed_outside_requested_window
 - us-fda-3eaddf14de: ok; stale_feed_outside_requested_window
 - us-fda-a25233bfac: ok; stale_feed_outside_requested_window
 - us-fda-1ca201e48f: ok; stale_feed_outside_requested_window
 - us-fda-c7d1d1cd64: unchanged; stale_feed_outside_requested_window
 - us-fda-d7692535f0: ok; stale_feed_outside_requested_window
-- us-nlrb-3db5e72bf9: unchanged; stale_feed_outside_requested_window
-- us-nlrb-c15d588b2d: unchanged; stale_feed_outside_requested_window
+- us-nlrb-3db5e72bf9: ok; stale_feed_outside_requested_window
+- us-nlrb-c15d588b2d: ok; stale_feed_outside_requested_window
 - us-ca-oal-c1209cfd66: unchanged; stale_feed_outside_requested_window
 - eu-ecb-f4cd34bf25: unchanged; stale_feed_outside_requested_window
 - eu-ecb-fb5fd59aed: ok; stale_feed_outside_requested_window
 - eu-ecb-b84350c252: ok; stale_feed_outside_requested_window
 - eu-ecb-af0dbdabee: ok; stale_feed_outside_requested_window
-- eu-ecb-bca2a70864: unchanged; stale_feed_outside_requested_window
-- eu-ecb-0370c1f1df: unchanged; stale_feed_outside_requested_window
-- eu-ecb-c12c22cb78: unchanged; stale_feed_outside_requested_window
+- eu-ecb-bca2a70864: ok; stale_feed_outside_requested_window
+- eu-ecb-0370c1f1df: ok; stale_feed_outside_requested_window
+- eu-ecb-c12c22cb78: ok; stale_feed_outside_requested_window
 - eu-ssm-3d2756b202: ok; stale_feed_outside_requested_window
 - ca-gazette-821b285be1: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-2d47daa483: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-c2eb48e1fa: unchanged; stale_feed_outside_requested_window
-- ca-boc-4aa19b2183: unchanged; stale_feed_outside_requested_window
-- ca-boc-4ad6189e69: unchanged; stale_feed_outside_requested_window
-- ca-boc-1f26bb2971: unchanged; stale_feed_outside_requested_window
-- ca-boc-4192a605ae: unchanged; stale_feed_outside_requested_window
-- ca-boc-5cc0603f1f: unchanged; stale_feed_outside_requested_window
-- ca-boc-a61b683fac: unchanged; stale_feed_outside_requested_window
-- ca-boc-161ba50d6e: unchanged; stale_feed_outside_requested_window
+- ca-boc-4aa19b2183: ok; stale_feed_outside_requested_window
+- ca-boc-1f26bb2971: ok; stale_feed_outside_requested_window
+- ca-boc-4192a605ae: ok; stale_feed_outside_requested_window
+- ca-boc-5cc0603f1f: ok; stale_feed_outside_requested_window
+- ca-boc-a61b683fac: ok; stale_feed_outside_requested_window
+- ca-boc-161ba50d6e: ok; stale_feed_outside_requested_window
 - ca-boc-1c9979e6ac: ok; stale_feed_outside_requested_window
-- ca-boc-b8fa2876ef: unchanged; stale_feed_outside_requested_window
-- ca-boc-b06a91e186: unchanged; stale_feed_outside_requested_window
-- ca-boc-f2811531de: unchanged; stale_feed_outside_requested_window
-- ca-boc-71c82276e6: unchanged; stale_feed_outside_requested_window
-- ca-boc-c1617c3a5b: unchanged; stale_feed_outside_requested_window
-- ca-boc-ddf593b208: unchanged; stale_feed_outside_requested_window
+- ca-boc-b8fa2876ef: ok; stale_feed_outside_requested_window
+- ca-boc-b06a91e186: ok; stale_feed_outside_requested_window
+- ca-boc-f2811531de: ok; stale_feed_outside_requested_window
+- ca-boc-71c82276e6: ok; stale_feed_outside_requested_window
+- ca-boc-c1617c3a5b: ok; stale_feed_outside_requested_window
+- ca-boc-ddf593b208: ok; stale_feed_outside_requested_window
 - ca-boc-affce837d4: ok; stale_feed_outside_requested_window
-- ca-boc-e24c58f2d0: unchanged; stale_feed_outside_requested_window
-- ca-boc-9308ff5fe4: unchanged; stale_feed_outside_requested_window
-- ca-boc-9f75c25657: unchanged; stale_feed_outside_requested_window
-- ca-boc-cffefa81f7: unchanged; stale_feed_outside_requested_window
-- ca-boc-762f78f374: unchanged; stale_feed_outside_requested_window
-- ca-boc-49364b93d8: unchanged; stale_feed_outside_requested_window
-- ca-boc-a5cb9e38c1: unchanged; stale_feed_outside_requested_window
-- ca-boc-2fbc8b5053: unchanged; stale_feed_outside_requested_window
-- ca-boc-7b07e406da: unchanged; stale_feed_outside_requested_window
-- ca-boc-903390d96d: unchanged; stale_feed_outside_requested_window
+- ca-boc-e24c58f2d0: ok; stale_feed_outside_requested_window
+- ca-boc-9308ff5fe4: ok; stale_feed_outside_requested_window
+- ca-boc-9f75c25657: ok; stale_feed_outside_requested_window
+- ca-boc-cffefa81f7: ok; stale_feed_outside_requested_window
+- ca-boc-762f78f374: ok; stale_feed_outside_requested_window
+- ca-boc-49364b93d8: ok; stale_feed_outside_requested_window
+- ca-boc-7b07e406da: ok; stale_feed_outside_requested_window
+- ca-boc-903390d96d: ok; stale_feed_outside_requested_window
 - ca-boc-1da610df86: ok; stale_feed_outside_requested_window
-- ca-boc-63e377340d: unchanged; stale_feed_outside_requested_window
+- ca-boc-63e377340d: ok; stale_feed_outside_requested_window
 - ca-supreme-d329809c56: ok; stale_feed_outside_requested_window
 - au-rba-75f3866f45: unchanged; stale_feed_outside_requested_window
 - au-rba-4c2add8718: unchanged; stale_feed_outside_requested_window
@@ -2223,7 +2248,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - au-rba-5ba995e001: unchanged; stale_feed_outside_requested_window
 - au-rba-5469539a63: unchanged; stale_feed_outside_requested_window
 - au-rba-bb9b5c009f: unchanged; stale_feed_outside_requested_window
-- hk-government-a5249d2406: blocked; 
+- hk-government-a5249d2406: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
 - sg-hsa-621a78d387: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - jp-pmda-f78c81268a: unchanged; stale_feed_outside_requested_window
 - jp-pmda-c845d5b3de: unchanged; stale_feed_outside_requested_window

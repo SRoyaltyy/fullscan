@@ -1,1 +1,123 @@
-[]
+[
+  {
+    "title": "S. Hrg.119-71 - STATE, FOREIGN OPERATIONS, AND RELATED PROGRAMS APPROPRIATIONS FOR FISCAL YEAR 2026",
+    "url": "https://www.govinfo.gov/app/details/CHRG-119shrg60279",
+    "native_id": "CHRG-119shrg60279",
+    "published_at": "2026-10-15T14:15:00+00:00",
+    "published_raw": "Thu, 15 Oct 2026 14:15:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "hearing_record",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Hearings",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-chrg",
+    "n": 546,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-15T17:47:31.406388+00:00",
+    "source_ids": [
+      "us-govinfo-chrg"
+    ]
+  },
+  {
+    "title": "Serial No. 118-69 - SAFEGUARDING MAIN STREET: COMBATING FRAUD AND EXPLOITATION IN OUR CAPITAL MARKETS",
+    "url": "https://www.govinfo.gov/app/details/CHRG-118hhrg64154",
+    "native_id": "CHRG-118hhrg64154",
+    "published_at": "2026-10-15T15:24:00+00:00",
+    "published_raw": "Thu, 15 Oct 2026 15:24:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "hearing_record",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Hearings",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-chrg",
+    "n": 547,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-15T17:47:31.406388+00:00",
+    "source_ids": [
+      "us-govinfo-chrg"
+    ]
+  },
+  {
+    "title": "FAYUVI",
+    "url": "http://www.fda.gov/vaccines-blood-biologics/fayuvi",
+    "native_id": "http://www.fda.gov/vaccines-blood-biologics/fayuvi",
+    "published_at": "2026-10-15T12:23:29+00:00",
+    "published_raw": "Thu, 15 Oct 2026 08:23:29 EDT",
+    "summary": "Treatment of neurologic manifestations of mucopolysaccharidosis type IIIA (MPS IIIA, Sanfilippo syndrome type A) in pediatric patients with preserved neurodevelopmental function.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 1412,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-15T17:47:31.406388+00:00",
+    "source_ids": [
+      "us-fda-03f7703006"
+    ]
+  },
+  {
+    "title": "HKMA announces \"ART\" Framework to promote responsible AI adoption (with photo)",
+    "url": "https://www.info.gov.hk/gia/general/202610/15/P2026101500186.htm",
+    "native_id": "https://www.info.gov.hk/gia/general/202610/15/P2026101500186.htm",
+    "published_at": "2026-10-15T06:30:00+00:00",
+    "published_raw": "Thu, 15 Oct 2026 14:30:00 +0800",
+    "summary": "The following is issued on behalf of the Hong Kong Monetary Authority: The Hong Kong Monetary Authority (HKMA) announced today (October 15) the \"ART\" Framework to support the responsible adoption of AI in the banking sector, fostering an AI-enabled banking ecosystem with \"Accountability\", \"Resilience\", and \"Trust\". AI systems are becoming more autonomous, with greater access to data, tools and workflows. With the aim of supporting banks in seizing the opportunities presented by AI while maintaining robust governance and operational resilience, key initiatives under the \"ART\" Framework include: Issued the latest Supervisory Guidance for Responsible Adoption of Artificial Intelligence, drawing on insights from the second cohort of the Generative AI (GenAI) Sandbox ; An AI training data sharing platform in collaboration with Hong Kong Cyberport Management Company Limited (Cyberport) and the University of Hong Kong, with data quality assurance as a core design principle; and Further testing of agentic AI applications through the GenA.I. Sandbox++ and an upcoming discussion paper on a proposed supervisory framework for agentic A.I. governance, exploring intent-anchored accountability, a",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Hong Kong Government Information Services",
+      "jurisdiction": "HK",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "hk-government-a5249d2406",
+    "n": 1640,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-15T17:47:31.406388+00:00",
+    "source_ids": [
+      "hk-government-a5249d2406"
+    ]
+  },
+  {
+    "title": "The Global Human Rights and International Humanitarian Law Sanctions (Overseas Territories) Order 2026",
+    "url": "http://www.legislation.gov.uk/uksi/2026/1089/made",
+    "native_id": "http://www.legislation.gov.uk/id/uksi/2026/1089",
+    "published_at": "2026-10-15T10:43:20.289254+00:00",
+    "published_raw": "2026-10-15T11:43:20.289254+01:00",
+    "summary": "This Order extends with modifications the Global Human Rights and International Humanitarian Law Sanctions Regulations 2026 (S.I. 2026/1071) (“the GHRIHLS Regulations”) as amended from time to time to all British overseas territories except Bermuda and Gibraltar (which implement sanctions under their own legislative arrangements).",
+    "source_metadata": {
+      "document_type": "legislation_document",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "UK legislation",
+      "jurisdiction": "UK",
+      "family": "legal_instruments"
+    },
+    "primary_source_id": "uk-legislation-82947c2f93",
+    "n": 2156,
+    "first_seen": "2026-10-15T12:16:32.997656+00:00",
+    "last_seen": "2026-10-15T17:47:31.406388+00:00",
+    "source_ids": [
+      "uk-legislation-82947c2f93",
+      "uk-legislation-e981891c4a"
+    ]
+  }
+]
