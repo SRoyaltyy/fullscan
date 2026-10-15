@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T05:49:14.864154-04:00",
+  "generated_at": "2026-10-15T05:49:28.121267-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,8 +8,8 @@
     "MISSING News judge MD `01_daily/news/2026-10-15_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 5,
-    "partial": 3,
+    "ok": 6,
+    "partial": 2,
     "fail": 0,
     "n": 8
   },
@@ -557,7 +557,7 @@
           "size": 7558267,
           "said": "27 rows",
           "bullets": [
-            "RSG, ELV, AUPH, YPF, GCT, CVLT, SONO, MRK"
+            "AUPH, RSG, ELV, CVLT, YPF, GCT, SONO, EMBC"
           ]
         },
         {
@@ -570,13 +570,13 @@
           "size": 8358668,
           "said": "25 rows",
           "bullets": [
-            "PFE, CDNA, CVLT, A, RSG, LLY, AUPH, CXT"
+            "PFE, A, CVLT, CDNA, ROST, DHR, DG, TEL"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "PFE, CDNA, CVLT, A, RSG"
+        "PFE, A, CVLT, CDNA, ROST"
       ]
     },
     {
@@ -649,11 +649,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 4,
       "files": [
         {
@@ -743,7 +743,7 @@
           "size": 8358668,
           "said": "25 rows",
           "bullets": [
-            "PFE, CDNA, CVLT, A, RSG, LLY, AUPH, CXT"
+            "PFE, A, CVLT, CDNA, ROST, DHR, DG, TEL"
           ]
         },
         {
@@ -777,10 +777,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-15_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1476017,
+          "said": "1d BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -788,21 +788,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-10-15_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 83497,
+          "said": "Stock book \u2014 2026-10-15",
+          "bullets": [
+            "_Generated 2026-10-15T05:45:40.954940-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-10-15_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -841,7 +844,7 @@
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
       "status": "OK",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
@@ -852,10 +855,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-15_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1476017,
+          "said": "1d BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -902,8 +905,74 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "CON",
+        "score": 0.7856556108017361
+      },
+      {
+        "ticker": "SGRY",
+        "score": 0.7287287616401872
+      },
+      {
+        "ticker": "HITI",
+        "score": 0.48601836919705854
+      },
+      {
+        "ticker": "AMN",
+        "score": 0.7601225205328173
+      },
+      {
+        "ticker": "ASTH",
+        "score": 0.7019757271272404
+      },
+      {
+        "ticker": "MD",
+        "score": 0.6971374925900011
+      },
+      {
+        "ticker": "PACS",
+        "score": 0.8932406667174411
+      },
+      {
+        "ticker": "NTAP",
+        "score": 0.09630838517576984
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "NEOV",
+        "score": -0.4009564139437413
+      },
+      {
+        "ticker": "OKLO",
+        "score": -0.28823224215502663
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.23171947325900127
+      },
+      {
+        "ticker": "NNDM",
+        "score": -0.13271542898503363
+      },
+      {
+        "ticker": "POWL",
+        "score": -0.09490889772550341
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.3553332818307756
+      },
+      {
+        "ticker": "TE",
+        "score": -0.31155503699104947
+      },
+      {
+        "ticker": "NRGV",
+        "score": -0.26083097895752283
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {},
@@ -1886,6 +1955,59 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RSG, ELV, AUPH, YPF, GCT \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PFE, CDNA, CVLT, A, RSG"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T05:49:27.312806-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-15_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1476017,
+          "preview": "1d BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
+        },
+        {
+          "path": "data/stock_book/2026-10-15_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-15_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2585,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-15_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12445,
+          "preview": "2026-10-15 BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12445,
+          "preview": "2026-10-15 BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
+        },
+        {
+          "path": "01_daily/2026-10-15_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84617,
+          "preview": "# Stock book \u2014 2026-10-15\n_Generated 2026-10-15T05:45:40.954940-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-15 BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 2026-10-15 BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 # Stock book \u2014 2026-10-15\n_Generated 2026-10-15T05:45:40.954940-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
