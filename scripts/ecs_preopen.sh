@@ -209,6 +209,16 @@ if [ "${FORCE:-}" = "true" ] || [ "${FORCE:-}" = "1" ]; then
 fi
 [ -n "${1:-}" ] && ARGS+=("$@")
 
+# The 04:40 GitHub renew is a second job on this box. If Pre-Open already
+# holds the runner, that job queues and the token can die mid-essay
+# (2026-10-15, run 38704557910, expiry 05:08 ET). Renew here first when
+# the token expires before this run ends.
+if [ -f "$ROOT/scripts/openclaw_oauth_guard.py" ]; then
+  echo "[ecs-preopen] renew xAI if expiry is before this run ends"
+  OPENCLAW_RUN_COVER_MIN=75 "$PY" "$ROOT/scripts/openclaw_oauth_guard.py" renew \
+    || echo "[ecs-preopen] renew failed — James auto-clicks Allow; not sending a device code to Cyrus"
+fi
+
 set +e
 "$PY" -m src.run_preopen_all "${ARGS[@]}"
 code=$?

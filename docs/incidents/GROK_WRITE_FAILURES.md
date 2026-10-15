@@ -72,7 +72,7 @@ The hang is the long search turn, not "the gateway process is dead" and not "the
 
 #597 (merged, `e89f204`) lets `glm-5.3-flash` answer when Grok is empty, and still blocks `api.deepseek.com`. This incident's fixes sit on top of that. They do not turn paid DeepSeek or paid `glm-5.3` back on. A probe the same day (`38602435068`) saw Zhipu `glm-5.3` HTTP 429 (no balance). That model stays off.
 
-#598 is open on purpose. It would refuse to seal a plan unless `grok_ok` is true and the trace is Grok. Cyrus has not accepted that gate. Do not merge it from this work.
+Cyrus ruled that a GLM predict counts. #598, which would refuse to seal a plan unless `grok_ok` is true and the trace is Grok, is closed and not merged.
 
 ## Why the token looks dead in the morning
 
@@ -96,13 +96,13 @@ These are durable. A one-off rerun would hit the same cashier.
 6. The Pre-Open step sets a 40 minute deadline, under the 50 minute kill, and the tail steps (live boards, sleeve, paper) shrink or skip. `live_boards` no longer gets a flat 480s at the end.
 7. `safe_git_push.sh` prefers `FULLSCAN_PUSH_TOKEN` when that secret exists, and says plainly when a cancel has revoked `GITHUB_TOKEN`. Until that secret is set, the deadline is what keeps the push alive.
 
-Paid providers stay off. Engine files pinned by `ENGINE_SHA256` were not edited. No past day's buy/sell record was rewritten. #598 was not merged.
+Paid providers stay off. Engine files pinned by `ENGINE_SHA256` were not edited. No past day's buy/sell record was rewritten. #598 is closed, not merged: a GLM predict counts.
 
 ## What only Cyrus can do
 
-If the 04:10 renew says `invalid_grant` or "interactive device login needed", open the verification URL the guard prints and press Allow on the xAI account that owns this gateway. A script cannot click that.
+James auto-clicks Allow on an xAI device login. The phone backup that sent the `user_code` to Cyrus is off. Do not DM Cyrus for that click.
 
-If mornings should still push after GitHub has cancelled a step, add a long-lived `FULLSCAN_PUSH_TOKEN` secret (a PAT with contents write on this repo). Do not put a paid DeepSeek key or a paid GLM key back in to "fix" a hang.
+If mornings should still push after GitHub has cancelled a step, add a long-lived `FULLSCAN_PUSH_TOKEN` secret (a PAT with contents write on this repo). Do not put a paid DeepSeek key or a paid GLM key back in to "fix" a hang. A Grok credits or subscription 403 is the same kind of empty account.
 
 ## Every distinct failure mode in the logs
 
@@ -200,15 +200,15 @@ Surveyed 2026-10-15 from the failed and cancelled runs of Pre-Open, Post-Close, 
 
 ### What is already changed, and what is not
 
-#597, #599, and #600 already change modes 1, 2, 3, 8, 22, 25, 26, and 31. Mode 14 is changed only for the GitHub publisher and the 04:10 ET timer; a dead refresh token is still mode 11.
+#597, #599, #600, and #603 are on main. Together they change modes 1, 2, 3, 6, 8, 9, 12, 13, 14, 16, 19, 22, 24, 25, 26, 29, 30, 31, 32, and 33. Mode 39 is PR #604 and is not on main yet. A dead refresh token is still mode 11.
 
 Still owner-only: mode 11 (open the device URL and press Allow), mode 15 if the message is the credits/subscription 403, and mode 27 until a `FULLSCAN_PUSH_TOKEN` secret exists.
 
-Left as they are on purpose: paid DeepSeek and paid `glm-5.3` stay off (17, 18); the gateway timer stays 10800s; missed days stay missing; #598 stays unmerged.
+Left as they are on purpose: paid DeepSeek and paid `glm-5.3` stay off (17, 18); the gateway timer stays 10800s; missed days stay missing. Cyrus ruled a GLM predict counts, so #598 is closed and not merged.
 
 ## Fix pass after the catalog
 
-These modes are changed in code now. The ones above that #597 / #599 / #600 already closed stay closed.
+#603 is on main. The bullets through mode 3 are that merge. Mode 39 is this PR (#604) and is not on main yet.
 
 - Mode 9 and the leftover of mode 2: a sector whose breaker file is already open does not sleep 60–120s, and a `/v1/models` 200 does not clear that file. After Grok is empty, free `glm-5.3-flash` may write the sector. Paid DeepSeek stays blocked.
 - Mode 14, the skip half: a token that expires before 06:30 ET is not "fresh", even when more than 90 minutes remain. The 00:41 ET run on 2026-10-15 had 267 minutes left and an expiry of 05:08 ET, which is before the 05:55 Pre-Open. It skipped. A later 17+25 that returns 42 without moving that expiry is not treated as a renew (mode 13). OpenClaw refreshes only an already-expired profile, so the guard nudges that expiry field, calls once more, and restores the file if the expiry still does not move. It does not touch the profile while a Grok job is running.
@@ -219,14 +219,62 @@ These modes are changed in code now. The ones above that #597 / #599 / #600 alre
 - Mode 30: the scrape step exits 0 after 09:25 ET instead of going red for obeying the cutoff. It still does not write.
 - Mode 32: when today's packet is quality-ok but the trace is not Grok, and the clock is before 09:00 ET, the general predict is healed. A failed heal keeps the essay. Past days are not rewritten.
 - Mode 25, leftover: sector predict and the map-heat refresh shrink to the step deadline instead of a flat 2400s / 540s. When the map-heat refresh no longer fits, the night baseline is written through so a missing `map_heat_research` file does not fail the run after the essay (mode 33).
+- Mode 25, the essay half (this PR): `PREOPEN_LLM_TIMEOUT=900` gave events, the catcher, news actions, news judge, and the general predict 960s each. Run `38704557910` on 2026-10-15 died at the 50-minute step kill with no `2026-10-15` general predict. Those five essays now split the step deadline, and a child deadline cannot extend past the parent's. The workflow cap is 420s, matching systemd.
 - Mode 3, leftover: a forced gateway restart used to call a 60-second PONG first. The restart budget (45s) expired before `systemctl` ran, so the 10800s turn stayed up. A forced restart now skips that ping and bounces immediately. If `systemctl restart` is not allowed, it kills the listener on 18789. It also does not rewrite `openclaw.json` when chat completions are already on (mode 6 / 24 on the restart path). A failed pre-essay probe marks the run so the predict does not open a second native-search turn.
+- Mode 39: the 04:40 ET guard is a second job on the only ECS runner. On 2026-10-15 it never started while Pre-Open `38704557910` held the runner, and the published token expired at 05:08 ET. ECS Pre-Open now renews as its own first Grok step when the expiry is before the run ends. That renew does not treat `ecs_preopen.sh` itself as a second Grok job, or the nudge would refuse to run. The device `user_code` is not published for Cyrus's phone. James auto-clicks Allow.
 
 Cannot be fixed from this session:
 
-- Mode 11, when the refresh token is dead. The guard will say device login. A Grok Bot on the Google account can open the verification URL and press Allow. This session cannot see that Google login, and no device code is waiting right now.
+- Mode 11, when the refresh token is dead. The guard says device login and prints the URL. James auto-clicks Allow. The code is not sent to Cyrus. No device code is waiting right now.
 - Mode 15, the credits/subscription 403, and modes 17 and 18. Those accounts are empty. Paying for DeepSeek, paid `glm-5.3`, or Grok credits needs Cyrus. The free `glm-5.3-flash` path is the backup.
 - Mode 27. `FULLSCAN_PUSH_TOKEN` is a GitHub secret. A Google login does not create it. Until it exists, a cancelled step still cannot push. The deadline is what keeps the normal push alive.
 - Mode 20, a second computer. Post-close already yields from 04:00–10:30 ET. This session cannot add another ECS runner.
 - Mode 34, a FRED 502. The code already falls back to the database. The upstream outage is not ours.
 - Mode 38, a person pressing Force cancel. `cancel-in-progress` stays false so a running Grok pass is not killed by a twin.
 - Modes 35, 36, and 37 are not in the current tree. The f-string is gone, those workflow files parse, and a Pre-Open run now always has a preopen job when the clock gate says go.
+
+## Status of every mode
+
+Proof is strict. A run id is listed only when a real morning Pre-Open exercised the fix. Everything else is unproven until that morning. Failure run ids in the catalog above show the bug, not the fix. #603 is on main and no morning has completed on it. This PR is #604. `38704557910` is the 2026-10-15 Pre-Open that held the runner; it is on an older SHA and is not proof.
+
+| # | Short name | Category | Hangs or kills the morning job? | Fix | Proof |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Native-search read timeout, then the breaker | hang | yes | #599 merged | unproven until first morning on fix |
+| 2 | Each sector burns its own timeout, no breaker | timeout | yes | #599 merged; leftover sleep is #603 merged | unproven until first morning on fix |
+| 3 | Gateway keeps the 10800s turn after the client gives up | hang | yes | #599 merged; the restart that actually kills the listener is #603 merged | unproven until first morning on fix |
+| 4 | PONG treated as a finished xAI login | auth | yes | already gone from tree | unproven until first morning on fix |
+| 5 | HTTP 500 marks the gateway down for the rest of the run | other | yes | already gone from tree | unproven until first morning on fix |
+| 6 | Config rewrite returns one 127-character body for every sector | other | yes | #603 merged | unproven until first morning on fix |
+| 7 | Format check throws out a real essay | other | no | not code: the format contract stays | unproven until first morning on fix |
+| 8 | Backup announced, then posted to OpenClaw again | other | yes | #597 merged | unproven until first morning on fix |
+| 9 | After the breaker, sectors sleep and stay degraded | hang | yes | #603 merged | unproven until first morning on fix |
+| 10 | grok_ok is the reviewer, not the writer | other | no | not code: read the trace; grok_ok is the auditor | unproven until first morning on fix |
+| 11 | Device login never finished | auth | yes | not code: James presses Allow | unproven until first morning on fix |
+| 12 | Device waiter missing the user bus | auth | yes | #603 merged | unproven until first morning on fix |
+| 13 | A 17+25 answer of 42 did not move the expiry | auth | yes | #603 merged | unproven until first morning on fix |
+| 14 | Six-hour token, and a still-valid token skipped the morning | auth | yes | #599 merged for the 04:10 and 04:40 clocks; the skip-when-it-dies-before-06:30 half is #603 merged | unproven until first morning on fix |
+| 15 | 64-char bearer 401, or Grok credits/subscription 403 | auth | yes | #599 merged for the 64-char 401; not code: Grok credits or subscription | unproven until first morning on fix |
+| 16 | Gateway process down, or gateway.mode missing | other | yes | #603 merged | unproven until first morning on fix |
+| 17 | Paid DeepSeek HTTP 402 | auth | yes | not code: do not enable paid DeepSeek | unproven until first morning on fix |
+| 18 | Paid glm-5.3 HTTP 429 | auth | yes | not code: do not enable paid glm-5.3. Run 38704557910 also got 1113 from glm-5.3-flash; PR #604 pending does not retry that and skips the key for the rest of the morning | unproven until first morning on fix |
+| 19 | TokenHub read timeout retried until the step dies | timeout | yes | #603 merged | unproven until first morning on fix |
+| 20 | One ECS runner, so other Grok jobs wait or get cancelled | other | yes | not code: a second ECS runner cannot be added from here | unproven until first morning on fix |
+| 21 | Backing off a systemd lock exited 1 | other | yes | already gone from tree | unproven until first morning on fix |
+| 22 | Night post-close sits across renew and the morning | timeout | yes | #599 merged | unproven until first morning on fix |
+| 23 | Shared workdir left sparse, or the fetch never finishes | other | yes | already gone from tree | unproven until first morning on fix |
+| 24 | Two writers rewrite openclaw.json in the same minute | other | yes | #603 merged | unproven until first morning on fix |
+| 25 | 50-minute step kill revokes the push | timeout | yes | #599 merged; sector and map-heat budgets are #603 merged; the five essays that still blew the 50m kill on 38704557910 are PR #604 pending | unproven until first morning on fix |
+| 26 | live_boards sat 480s at the end | timeout | yes | #599 merged | unproven until first morning on fix |
+| 27 | Cancel revokes GITHUB_TOKEN | other | yes | not code: set the FULLSCAN_PUSH_TOKEN secret | unproven until first morning on fix |
+| 28 | Pages upload 403 after the job is already dead | other | yes | not code: follows a cancelled job (mode 27) | unproven until first morning on fix |
+| 29 | Ubuntu cron calls the loopback gateway and burns 50 minutes | hang | yes | #603 merged | unproven until first morning on fix |
+| 30 | Late Finviz scrape exits 1 for obeying the cutoff | other | yes | #603 merged | unproven until first morning on fix |
+| 31 | An evening push starts a morning packet | other | no | #600 merged | unproven until first morning on fix |
+| 32 | A quality-ok packet skips the Grok rewrite | other | no | #603 merged | unproven until first morning on fix |
+| 33 | Missing map_heat_research fails the run after Grok wrote | other | yes | #603 merged | unproven until first morning on fix |
+| 34 | FRED DGS30 HTTP 502 | other | no | not code: upstream; the code already falls back to the database | unproven until first morning on fix |
+| 35 | Map-heat f-string SyntaxError | other | yes | already gone from tree | unproven until first morning on fix |
+| 36 | Invalid workflow, zero jobs | other | yes | already gone from tree | unproven until first morning on fix |
+| 37 | Run red, every recorded job green, no preopen job | other | yes | already gone from tree | unproven until first morning on fix |
+| 38 | A person Force-cancels a live Grok pass | other | yes | not code: do not Force-cancel a live pass | unproven until first morning on fix |
+| 39 | 04:40 OAuth guard queues behind Pre-Open and the token expires | auth | yes | PR #604 pending | unproven until first morning on fix |

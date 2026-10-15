@@ -78,6 +78,18 @@ def token_is_fresh(left_min: float | None, exp: datetime | None,
     now = now or datetime.now(timezone.utc)
     if exp.tzinfo is None:
         exp = exp.replace(tzinfo=timezone.utc)
+    # Pre-Open sets this to the run length. A token that dies before the
+    # run ends is not fresh, even when it still clears the 90-minute rule.
+    # The 04:40 guard is a second job on the only ECS runner, so it queues
+    # behind Pre-Open and never renews (2026-10-15, run 38704557910).
+    raw_cover = (os.environ.get("OPENCLAW_RUN_COVER_MIN") or "").strip()
+    if raw_cover:
+        try:
+            run_end = now + timedelta(minutes=float(raw_cover))
+        except ValueError:
+            run_end = None
+        if run_end is not None and exp <= run_end:
+            return False
     cover = morning_cover_deadline(now)
     if cover is not None and exp <= cover:
         return False
@@ -402,9 +414,38 @@ def hard_restart(result: dict) -> None:
 GROK_JOBS = r"src.map_heat_postclose|src.run_preopen_all|ecs_preopen|ecs_map_postclose|-m src.map_heat"
 
 
+def _process_ancestors() -> set[int]:
+    """This process and its parents. ecs_preopen.sh is the parent when it renews."""
+    pids = {os.getpid()}
+    pid = os.getpid()
+    for _ in range(8):
+        try:
+            stat = Path(f"/proc/{pid}/status").read_text(encoding="utf-8")
+        except OSError:
+            break
+        match = re.search(r"^PPid:\s+(\d+)", stat, re.M)
+        if not match:
+            break
+        pid = int(match.group(1))
+        if pid <= 1 or pid in pids:
+            break
+        pids.add(pid)
+    return pids
+
+
+def _other_grok_job(line: str, ancestors: set[int]) -> bool:
+    if "pgrep" in line or "oauth_guard" in line:
+        return False
+    match = re.match(r"\s*(\d+)", line)
+    if match and int(match.group(1)) in ancestors:
+        return False
+    return True
+
+
 def grok_job_running() -> bool:
     r = subprocess.run(["pgrep", "-af", GROK_JOBS], capture_output=True, text=True)
-    lines = [l for l in r.stdout.splitlines() if "pgrep" not in l and "oauth_guard" not in l]
+    ancestors = _process_ancestors()
+    lines = [l for l in r.stdout.splitlines() if _other_grok_job(l, ancestors)]
     return bool(lines)
 
 

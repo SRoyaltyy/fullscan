@@ -341,7 +341,7 @@ def test_ranker_inputs_before_llm_packet() -> None:
     book = (ROOT / "src" / "run_stock_book_all.py").read_text(encoding="utf-8")
     assert "wait_for_night_baseline" in pre
     wx = pre.find('step("weather", "Weather / regime"')
-    pred = pre.find('step("general_predict"')
+    pred = pre.find('_one_essay(1, "general_predict"')
     assert 0 <= wx < pred
     wxb = book.find("Weather / regime (before LLM heals")
     ev = book.find("Event scanner (primary)")
@@ -364,7 +364,7 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert 'PREOPEN_LLM_TIMEOUT", "420"' in pre
     assert "10800s ate 2026-09-04" in pre
     assert "subprocess {llm_sub_t}s" in pre or "llm_sub_t" in pre
-    assert 'timeout_s=llm_sub_t' in pre
+    assert "_essay_timeout(n_left, llm_sub_t)" in pre
     # 2400s let every sector burn a retry after the breaker was already open
     # and pushed the step into the 50-minute kill. The budget shrinks first.
     assert "_step_budget(600, floor=60)" in pre
@@ -377,7 +377,7 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "retry once before QC" in pre
     assert "retry --limit 80" in pre
     assert "rebuild after essays" in pre
-    gen = pre.find('step("general_predict"')
+    gen = pre.find('_one_essay(1, "general_predict"')
     heat = pre.find('step(\n                    "map_heat_research"')
     if heat < 0:
         heat = pre.find('"Map heat morning delta refresh"')

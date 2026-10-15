@@ -39,6 +39,39 @@ def test_share_splits_evenly_and_clamps() -> None:
         assert step_deadline.share(1, 180, 600, reserve_s=30) == 0.0
 
 
+def test_child_env_never_extends_the_parent_deadline() -> None:
+    with _with_deadline(30):
+        parent = float(os.environ[step_deadline.ENV])
+        env = step_deadline.child_env(900)
+        assert float(env[step_deadline.ENV]) <= parent + 0.01
+    with mock.patch.dict(os.environ, {}, clear=False):
+        os.environ.pop(step_deadline.ENV, None)
+        env = step_deadline.child_env(300)
+        rem = float(env[step_deadline.ENV]) - time.time()
+        assert 270 <= rem <= 290
+
+
+def test_essay_timeout_saves_a_slice_for_general_predict() -> None:
+    """Five 960s essays do not fit a 2400s step. Each must shrink."""
+    from src.run_preopen_all import _essay_timeout
+
+    clock = {"now": 5_000_000.0}
+    deadline = clock["now"] + 2400
+    with mock.patch.object(step_deadline.time, "time", lambda: clock["now"]), \
+            mock.patch.dict(os.environ, {
+                step_deadline.ENV: f"{deadline:.0f}"}):
+        for n_left in (5, 4, 3, 2, 1):
+            sl = _essay_timeout(n_left, 960)
+            assert sl is not None and 90 <= sl <= 480, (n_left, sl)
+            clock["now"] += sl
+        assert clock["now"] <= deadline + 1
+    with mock.patch.dict(os.environ, {}, clear=False):
+        os.environ.pop(step_deadline.ENV, None)
+        assert _essay_timeout(5, 960) == 960
+    with _with_deadline(150):
+        assert _essay_timeout(5, 960) is None
+
+
 def test_narrowed_sets_and_restores_and_never_extends() -> None:
     with mock.patch.dict(os.environ, {}, clear=False):
         os.environ.pop(step_deadline.ENV, None)
@@ -142,6 +175,8 @@ if __name__ == "__main__":
     for fn in [
         test_share_is_none_when_unbounded,
         test_share_splits_evenly_and_clamps,
+        test_child_env_never_extends_the_parent_deadline,
+        test_essay_timeout_saves_a_slice_for_general_predict,
         test_narrowed_sets_and_restores_and_never_extends,
         test_sector_loop_gives_each_sector_a_slice_and_stops_when_spent,
         test_sector_loop_does_not_start_a_doomed_sector,

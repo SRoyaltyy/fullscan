@@ -430,6 +430,23 @@ jobs:
           pip install -r requirements.txt
           pip install psycopg2-binary yfinance pandas requests openai ddgs || true
 
+      - name: Renew xAI if the token dies before this run ends
+        # The 04:40 guard is a second job on the only ECS runner. On
+        # 2026-10-15 it never started: Pre-Open 38704557910 held the
+        # runner and the token expired at 05:08 ET. Renew here, before
+        # the essays, when expiry is inside this run. James auto-clicks
+        # Allow. Do not send the device code to Cyrus.
+        if: env.skip != 'yes' && github.event_name == 'workflow_dispatch' && github.event.inputs.runner == 'ecs'
+        env:
+          OPENCLAW_RUN_COVER_MIN: "75"
+          FULLSCAN_HOME: /home/gha
+        run: |
+          echo "renew inside Pre-Open — expiry must outlast this run"
+          sudo -n env -u XAI_API_KEY -u OPENCLAW_XAI_API_KEY -u GROK_API_KEY \
+            FULLSCAN_HOME=/home/gha HOME=/home/gha OPENCLAW_RUN_COVER_MIN=75 \
+            python3 scripts/openclaw_oauth_guard.py renew \
+            || echo "renew failed — James auto-clicks Allow; not sending a device code to Cyrus"
+
       - name: Pre-Open ALL (predictive + QC + workflow check)
         if: env.skip != 'yes' && env.skip_python != 'yes'
         env:
@@ -461,7 +478,10 @@ jobs:
           GROK_ONLY: "0"
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'deepseek' }}
           FINVIZ_SKIP_LIVE: "1"
-          PREOPEN_LLM_TIMEOUT: "900"
+          # 900 let five essays each hold ~16 min. Run 38704557910 died at
+          # the 50-minute step kill with no general predict. 420 matches
+          # the systemd cap; the essays also split FULLSCAN_STEP_DEADLINE.
+          PREOPEN_LLM_TIMEOUT: "420"
         # was 180: 10-06/10-07 ECS hangs sat ~90 min here before cancel.
         timeout-minutes: 50
         run: |

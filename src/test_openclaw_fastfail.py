@@ -95,7 +95,7 @@ def test_morning_box_yield(monkeypatch):
     assert not pc.morning_box_yield(datetime(2026, 10, 15, 5, 0, tzinfo=ET))
 
 
-def test_token_dying_before_0630_is_not_fresh():
+def test_token_dying_before_0630_is_not_fresh(monkeypatch):
     import importlib.util
     from datetime import timedelta, timezone
     from pathlib import Path
@@ -117,6 +117,14 @@ def test_token_dying_before_0630_is_not_fresh():
     assert guard.renew_verdict(exp, exp, now) == "NEEDS_FORCE"
     later = datetime(2026, 10, 15, 14, 0, tzinfo=timezone.utc)
     assert guard.renew_verdict(exp, later, now) == "OK"
+    # 10:00 ET is more than 8h before the next 06:30, so a 100-minute
+    # token is fresh until Pre-Open says the run itself ends sooner.
+    afternoon = datetime(2026, 10, 15, 14, 0, tzinfo=timezone.utc)
+    exp3 = afternoon + timedelta(minutes=100)
+    assert guard.token_is_fresh(100, exp3, afternoon) is True
+    monkeypatch.setenv("OPENCLAW_RUN_COVER_MIN", "120")
+    assert guard.token_is_fresh(100, exp3, afternoon) is False
+    monkeypatch.delenv("OPENCLAW_RUN_COVER_MIN", raising=False)
 
 
 def test_nudge_expiry_only_touches_the_matching_field(tmp_path):
@@ -218,6 +226,11 @@ def test_wiring_strings():
     assert "XDG_RUNTIME_DIR" in reauth
     assert "quality-ok packet has no Grok trace" in orch
     assert "passthrough (deadline)" in orch
+    assert "renew inside Pre-Open" in yml
+    assert "not sending a device code to Cyrus" in yml
+    assert "James auto-clicks Allow" in reauth
+    pre_sh = (root / "scripts" / "ecs_preopen.sh").read_text(encoding="utf-8")
+    assert "OPENCLAW_RUN_COVER_MIN=75" in pre_sh
     assert "FULLSCAN_PUSH_TOKEN" in push
     assert "Invalid username or token" in push
     # The publish step must not keep a raw token. The redaction list is the contract.
@@ -229,3 +242,16 @@ def test_wiring_strings():
     assert "user_code" in drop and "access_token" in drop
     assert "gateway_token_len" not in drop
     json.dumps(sample)
+
+
+def test_preopen_parent_is_not_another_grok_job():
+    import importlib.util
+    from pathlib import Path
+    path = Path(__file__).resolve().parent.parent / "scripts" / "openclaw_oauth_guard.py"
+    spec = importlib.util.spec_from_file_location("openclaw_oauth_guard_jobs", path)
+    guard = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(guard)
+    ancestors = {100, 200}
+    assert guard._other_grok_job("100 bash scripts/ecs_preopen.sh", ancestors) is False
+    assert guard._other_grok_job("300 python3 scripts/openclaw_oauth_guard.py renew", ancestors) is False
+    assert guard._other_grok_job("400 python -m src.run_preopen_all", ancestors) is True
