@@ -1449,5 +1449,7 @@
   "judge_tickers": {
     "XLE": -1.5,
     "AEM": -1.5
-  }
+  },
+  "catalyst_tickers": 0,
+  "catalyst_date": "2026-10-15"
 }
