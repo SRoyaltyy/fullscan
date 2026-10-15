@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T23:21:44.514239-04:00",
+  "generated_at": "2026-10-14T23:26:53.123546-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -559,8 +559,8 @@
           "path": "01_daily/weather/2026-10-14_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9592 vix=falling yields=falling",
-          "size": 9592,
+          "reason": "sectors=11 bytes=9676 vix=falling yields=flat",
+          "size": 9676,
           "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
           "bullets": [
             "hostile: Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
@@ -781,8 +781,8 @@
           "path": "01_daily/weather/2026-10-14_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9592 vix=falling yields=falling",
-          "size": 9592,
+          "reason": "sectors=11 bytes=9676 vix=falling yields=flat",
+          "size": 9676,
           "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
           "bullets": [
             "hostile: Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
@@ -808,10 +808,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2243111,
-          "said": "204 rows",
+          "size": 2261198,
+          "said": "208 rows",
           "bullets": [
-            "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, CORT"
+            "HALO, ONC, LLY, HRMY, ARQT, AVAH, WAY, CORT"
           ]
         },
         {
@@ -833,9 +833,9 @@
           "path": "data/stock_book/2026-10-14_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=188",
-          "size": 1477625,
-          "said": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
+          "reason": "horizons=5 names=184",
+          "size": 1464416,
+          "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
           "bullets": []
         },
         {
@@ -845,10 +845,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 71632,
+          "size": 69352,
           "said": "Stock book \u2014 2026-10-14",
           "bullets": [
-            "_Generated 2026-10-14T23:21:06.653432-04:00_",
+            "_Generated 2026-10-14T23:26:49.966983-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -889,9 +889,9 @@
           "bullets": []
         }
       ],
-      "said": "204 rows",
+      "said": "208 rows",
       "bullets": [
-        "HALO, ONC, LLY, HRMY, ETON"
+        "HALO, ONC, LLY, HRMY, ARQT"
       ]
     },
     {
@@ -911,9 +911,9 @@
           "path": "data/stock_book/2026-10-14_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=188",
-          "size": 1477625,
-          "said": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
+          "reason": "horizons=5 names=184",
+          "size": 1464416,
+          "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
           "bullets": []
         },
         {
@@ -962,70 +962,70 @@
   "selections": {
     "buy_1d": [
       {
+        "ticker": "NTAP",
+        "score": 0.18239590894266144
+      },
+      {
         "ticker": "BAND",
         "score": 0.5054596446690593
       },
       {
         "ticker": "CNK",
-        "score": 0.6357966990020554
+        "score": 0.6462022471693012
       },
       {
         "ticker": "WLY",
-        "score": 0.564450143358312
+        "score": 0.5881875461728525
       },
       {
         "ticker": "FIS",
-        "score": 0.2277386619475122
+        "score": 0.22514446794935988
       },
       {
         "ticker": "PRCH",
-        "score": 0.5607716584458136
+        "score": 0.5404266780690136
       },
       {
         "ticker": "TMUS",
-        "score": 0.44425258383753136
+        "score": 0.4429443674043055
       },
       {
         "ticker": "UPWK",
-        "score": 0.4653823007267254
-      },
-      {
-        "ticker": "TDS",
-        "score": 0.4243288052195573
+        "score": 0.4411786722204654
       }
     ],
     "sell_1d": [
       {
         "ticker": "EOSE",
-        "score": -0.32888358264634404
+        "score": -0.3332996476105277
       },
       {
         "ticker": "TE",
-        "score": -0.29309623791804923
+        "score": -0.29778163594966284
       },
       {
         "ticker": "NEOV",
-        "score": -0.34925812899442465
+        "score": -0.357067975796452
       },
       {
         "ticker": "PLUG",
-        "score": -0.21282865720419036
+        "score": -0.21292045250555586
       },
       {
         "ticker": "OKLO",
-        "score": -0.24039000857402237
+        "score": -0.2387618044895793
       },
       {
         "ticker": "FCEL",
-        "score": -0.22290235609057574
+        "score": -0.22590146154242213
       },
       {
         "ticker": "NNDM",
-        "score": -0.16148069733311426
+        "score": -0.16961541699668248
       },
       {
         "ticker": "QUBT",
-        "score": -0.16802532043576818
+        "score": -0.17822254200443488
       }
     ],
     "flatten": {
@@ -3955,30 +3955,6 @@
   },
   "frozen_write_skips": [
     {
-      "path": "01_daily/2026-10-14_preopen_status.json",
-      "at": "2026-10-14T10:43:07-04:00",
-      "commit_msg": "auto: land events_catcher [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "data/day_board/2026-10-14.json",
-      "at": "2026-10-14T10:43:07-04:00",
-      "commit_msg": "auto: land events_catcher [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "01_daily/news/2026-10-14_actions.json",
-      "at": "2026-10-14T10:43:25-04:00",
-      "commit_msg": "auto: land news_actions [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T10:43:25-04:00",
       "commit_msg": "auto: land news_actions [2026-10-14]",
@@ -5552,6 +5528,30 @@
       "commit_msg": "auto: stock book leftover sweep",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "38675443695",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-14_stock_book.md",
+      "at": "2026-10-14T23:27:20-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-14",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38675443495",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-14_input_health.json",
+      "at": "2026-10-14T23:27:20-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-14",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38675443495",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-14_stock_book.json",
+      "at": "2026-10-14T23:27:20-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-14",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38675443495",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
     }
   ]
