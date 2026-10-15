@@ -114,11 +114,16 @@ def _run_group(cmd: list[str], timeout_s: int | None):
     20 min to return)."""
     import os as _os
     import signal as _signal
+    rem = step_deadline.remaining_s()
+    wait_s = timeout_s
+    if rem is not None:
+        capped = max(1, int(rem))
+        wait_s = capped if wait_s is None else max(1, min(int(wait_s), capped))
     p = subprocess.Popen(cmd, cwd=str(ROOT),
-                         env=step_deadline.child_env(timeout_s),
+                         env=step_deadline.child_env(wait_s),
                          start_new_session=True)
     try:
-        p.wait(timeout=timeout_s)
+        p.wait(timeout=wait_s)
     except subprocess.TimeoutExpired:
         try:
             _os.killpg(p.pid, _signal.SIGKILL)
@@ -257,6 +262,25 @@ def _predict_trace_is_grok(date: str) -> bool:
     except OSError:
         return False
     return ("xai/grok" in head) or ("provider: openclaw" in head)
+
+
+def _essay_timeout(n_left: int, ceiling: int) -> int | None:
+    """Seconds for one of the required essays still left in this step.
+
+    None means skip: the deadline cannot hold another essay. Without a
+    deadline the ceiling is used as-is. With one, the essays split what
+    remains so general predict is not the call the 50-minute kill cuts
+    off. Run 38704557910 set PREOPEN_LLM_TIMEOUT=900, so events and the
+    catcher each held the step for a quarter hour and the predict was
+    never written.
+    """
+    slice_s = step_deadline.share(
+        n_left, floor_s=90, ceiling_s=float(ceiling), reserve_s=120)
+    if slice_s is None:
+        return ceiling
+    if slice_s <= 0:
+        return None
+    return int(slice_s)
 
 
 def _step_budget(want: int, floor: int = 20) -> int | None:
@@ -781,26 +805,38 @@ def run(date: str | None = None, force: bool = False,
               f"subprocess {llm_sub_t}s "
               "(hung Grok fails over; 10800s ate 2026-09-04)")
         try:
-            step("events", "Event scanner (primary)",
-                 [py, "-m", "src.run_events", "--date", date, *fa],
-                 timeout_s=llm_sub_t)
-            step("events_catcher", "Event catcher (gap hunt, no carry)",
-                 [py, "-m", "src.run_events_catcher", "--date", date, *fa],
-                 timeout_s=llm_sub_t)
+            def _one_essay(n_left: int, key: str, title: str,
+                           cmd: list[str]) -> None:
+                budget = _essay_timeout(n_left, llm_sub_t)
+                if budget is None:
+                    print(f"[preopen-all] skip {title} — step deadline "
+                          "too close for another essay")
+                    return
+                step(key, title, cmd, timeout_s=budget)
+
+            _one_essay(5, "events", "Event scanner (primary)",
+                       [py, "-m", "src.run_events", "--date", date, *fa])
+            _one_essay(4, "events_catcher",
+                       "Event catcher (gap hunt, no carry)",
+                       [py, "-m", "src.run_events_catcher", "--date", date, *fa])
             # Actions before judge so the same-run fallback can stitch them.
-            step("news_actions", "News actions",
-                 [py, "-m", "src.news_actions", "--hours", "48", "--limit", "400",
-                  "--date", date, *fa], timeout_s=llm_sub_t)
-            step("news_judge", "News judge",
-                 [py, "-m", "src.run_news_judge", "--date", date, *fa],
-                 timeout_s=llm_sub_t)
+            _one_essay(3, "news_actions", "News actions",
+                       [py, "-m", "src.news_actions", "--hours", "48",
+                        "--limit", "400", "--date", date, *fa])
+            _one_essay(2, "news_judge", "News judge",
+                       [py, "-m", "src.run_news_judge", "--date", date, *fa])
             # Required essays BEFORE optional map-heat (540s ate general
-            # on 2026-09-09 inside the 55m step).
-            step("general_predict", "General market predict",
-                 [py, "-m", "src.run_predict", "--date", date, *fa],
-                 timeout_s=llm_sub_t)
-            _heal_general_predict(date, [py, "-m", "src.run_predict",
-                                         "--date", date, *fa], llm_sub_t)
+            # on 2026-09-09 inside the 55m step). The five essays share
+            # the step deadline so this one still starts (38704557910).
+            _one_essay(1, "general_predict", "General market predict",
+                       [py, "-m", "src.run_predict", "--date", date, *fa])
+            heal_budget = _step_budget(min(llm_sub_t, 420), floor=90)
+            if heal_budget is None:
+                print("[preopen-all] skip predict heal — step deadline "
+                      "too close")
+            else:
+                _heal_general_predict(date, [py, "-m", "src.run_predict",
+                                             "--date", date, *fa], heal_budget)
             sec_s = _step_budget(600, floor=60)
             if sec_s is None:
                 print("[preopen-all] skip sector predict — step deadline "

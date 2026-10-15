@@ -28,7 +28,17 @@ def child_env(timeout_s: int | None, base: dict | None = None) -> dict:
     if timeout_s is None or timeout_s <= 0:
         env.pop(ENV, None)
         return env
-    env[ENV] = f"{time.time() + max(1, timeout_s - MARGIN_S):.0f}"
+    new = time.time() + max(1, timeout_s - MARGIN_S)
+    prev = env.get(ENV)
+    if prev:
+        try:
+            # A 960s child must not push past the parent's 40-minute
+            # step deadline. GitHub kills the job at 50 minutes and
+            # revokes the push token (2026-10-15 run 38704557910).
+            new = min(new, float(prev))
+        except ValueError:
+            pass
+    env[ENV] = f"{new:.0f}"
     return env
 
 

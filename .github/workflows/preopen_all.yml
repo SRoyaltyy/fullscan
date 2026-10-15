@@ -478,7 +478,10 @@ jobs:
           GROK_ONLY: "0"
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'deepseek' }}
           FINVIZ_SKIP_LIVE: "1"
-          PREOPEN_LLM_TIMEOUT: "900"
+          # 900 let five essays each hold ~16 min. Run 38704557910 died at
+          # the 50-minute step kill with no general predict. 420 matches
+          # the systemd cap; the essays also split FULLSCAN_STEP_DEADLINE.
+          PREOPEN_LLM_TIMEOUT: "420"
         # was 180: 10-06/10-07 ECS hangs sat ~90 min here before cancel.
         timeout-minutes: 50
         run: |
