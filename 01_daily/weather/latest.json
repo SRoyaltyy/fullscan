@@ -1,6 +1,6 @@
 {
  "date": "2026-10-14",
- "generated_at": "2026-10-14T14:06:29.434277-04:00",
+ "generated_at": "2026-10-14T23:14:33.640959-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,23 +17,23 @@
   "fed_score": 0.0,
   "dollar_oil_score": 0.5,
   "futures_score": 0.0,
-  "yields": "flat",
+  "yields": "falling",
   "yields_source": "fred_dgs10",
-  "dgs10_delta_1d": 0.02,
-  "dgs10_current": 5.24,
-  "dollar": "strong",
+  "dgs10_delta_1d": -0.03,
+  "dgs10_current": 5.21,
+  "dollar": "soft",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.52,
-  "vix_ratio": 0.903,
-  "vix_spot": 17.12,
-  "vix_delta_1d": 1.85,
+  "dxy_pct_1d": -0.24,
+  "vix_ratio": 0.898,
+  "vix_spot": 16.87,
+  "vix_delta_1d": 1.6,
   "vix_ratio_source": "vix/vix3m",
-  "vix": "spiking",
-  "oil_pct_1d": 1.76,
-  "oil": "rising",
+  "vix": "falling",
+  "oil_pct_1d": -0.38,
+  "oil": "flat",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.234,
+  "regime_corr": 0.729,
   "sectors": {
    "Basic Materials": {
     "score": 7.7,
@@ -180,14 +180,14 @@
   },
   "size": {
    "micro": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-mixed, dollar soft [general predict + factors]"
    },
    "small": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-mixed, dollar soft [general predict + factors]"
    },
    "large": {
     "stance": "neutral",
@@ -222,9 +222,9 @@
     "why": "risk-mixed [general predict]"
    },
    "rut": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-mixed, dollar soft [general predict + factors]"
    },
    "none": {
     "stance": "neutral",
@@ -246,14 +246,14 @@
   },
   "beta": {
    "high": {
-    "stance": "hostile",
-    "confidence": "high",
-    "why": "VIX spiking — high beta is the exit door [channel1 + general]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-mixed, VIX falling"
    },
    "low": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "defensive ballast bid in stress [general + channel1]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-mixed, VIX falling"
    },
    "mid": {
     "stance": "neutral",
@@ -285,14 +285,14 @@
   },
   "vol": {
    "high": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "stress market — high-vol names de-rate fast [general + channel1]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "calm tape — vol regime not decisive [general + channel1]"
    },
    "low": {
-    "stance": "favorable",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "low-vol preferred in stress"
+    "why": "calm tape"
    },
    "mid": {
     "stance": "neutral",
@@ -341,14 +341,14 @@
   },
   "style": {
    "growth": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "yields falling — duration/growth re-rates [factor: Bond yields]"
    },
    "value": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "yields flat/unknown"
+    "why": "value lags duration rallies"
    },
    "blend": {
     "stance": "neutral",
