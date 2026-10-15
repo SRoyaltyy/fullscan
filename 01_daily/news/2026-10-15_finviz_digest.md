@@ -1,13 +1,13 @@
 # Finviz Daily Digest — 2026-10-15
 
-_Generated 2026-10-15T04:22:04.005103-04:00 · export=data/exports/finviz_2026-10-14.csv · ticker digests=5887 · high-signal=2046_
+_Generated 2026-10-15T07:24:52.862668-04:00 · export=data/exports/finviz_2026-10-15.csv · ticker digests=5887 · high-signal=2046_
 
 ## Major indices (live quote page)
 
-- **S&P 500 (SPY)**: FISV, NU, LPLA: Analyst Picks Top 3 Financial Stocks In Forgettable Year For Sector
-- **Nasdaq-100 (QQQ)**: Michael Burry Warns Wall Streets Pain Trade Can Last As Mag 7 Weakness Could Deepen Red October Call
-- **Dow Jones (DIA)**: Michael Burry Flags Bull Trap Risk, Holds Back On New Shorts  Why Trumps Fannie-Freddie Call Matters To His Portfolio
-- **Russell 2000 (IWM)**: Is ETF Innovation Inviting a Regulatory Sledgehammer?
+- **S&P 500 (SPY)**: Michael Burry Weighs Peter Schiffs S&P 500 Crash Warning As UBS Flags Fed Risk  Rare October Hike Odds Hit 70%
+- **Nasdaq-100 (QQQ)**: Michael Burry Weighs Peter Schiffs S&P 500 Crash Warning As UBS Flags Fed Risk  Rare October Hike Odds Hit 70%
+- **Dow Jones (DIA)**: S&P 500, Dow, Nasdaq Drop Under Pressure From Elevated Yields As Investors Shrug Off Trumps Iran Sanction Relief  NVDA, BA, AMD, NVTS, CBRS In Focus
+- **Russell 2000 (IWM)**: Evolution Metals Just Joined the Indexes Behind $12.2 Trillion in Invested Assets (NASDAQ: EMAT)
 
 ## High-signal ticker digests (ranked)
 

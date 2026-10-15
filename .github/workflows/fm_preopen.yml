@@ -94,6 +94,20 @@ jobs:
         run: |
           python3 -m src.test_v4_engine_pins
           python3 -m src.past_day_lock --check
+      - name: Predict on main (fail and name 'predict missing')
+        # Mirrors h1_forward.yml: no general predict on origin/main, no seal.
+        # 10-15 the seal could not happen and nothing said why.
+        if: steps.pick.outputs.go == 'true' && steps.pick.outputs.step == 'seal'
+        env:
+          D: ${{ github.event.inputs.date }}
+        run: |
+          set -euo pipefail
+          D="${D:-$(TZ=America/New_York date +%F)}"
+          git fetch -q origin main
+          if ! timeout 60 python3 scripts/preflight.py --workflow fm_preopen --date "$D"; then
+            echo "::error::predict missing: 01_daily/general/${D}_predict.md is not on main; Factor Mine pre-open not sealed"
+            exit 1
+          fi
       - name: Seal (before 09:30 ET)
         if: steps.pick.outputs.go == 'true' && steps.pick.outputs.step == 'seal'
         env:

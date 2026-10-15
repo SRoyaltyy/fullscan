@@ -148,6 +148,49 @@ def _post(payload: dict, retries: int = 4) -> dict:
         raise
 
 
+def _no_balance(text: str) -> bool:
+    """Zhipu 429 code 1113 is an empty package, not a rate limit."""
+    raw = (text or "").replace(" ", "")
+    if "余额不足" in raw or "无可用资源包" in raw:
+        return True
+    return '"code":"1113"' in raw or '"code":1113' in raw
+
+
+def _primary_empty_path() -> str:
+    override = (os.environ.get("LLM_PRIMARY_EMPTY_FILE") or "").strip()
+    if override:
+        return override
+    home = os.environ.get("HOME") or "/tmp"
+    return os.path.join(home, ".fullscan-llm-primary-empty.json")
+
+
+def _note_primary_empty(detail: str) -> None:
+    """Remember a no-balance primary for six hours.
+
+    Each essay is its own process. Without this file, every one of them
+    retries the empty glm-5.3-flash key four times (run 38704557910).
+    """
+    path = _primary_empty_path()
+    body = json.dumps({
+        "until": time.time() + 6 * 3600,
+        "detail": (detail or "")[:200],
+    })
+    try:
+        with open(path, "w", encoding="utf-8") as fh:
+            fh.write(body)
+    except OSError as exc:
+        print(f"[llm] could not record empty primary: {exc}", flush=True)
+
+
+def _primary_is_empty() -> bool:
+    try:
+        with open(_primary_empty_path(), encoding="utf-8") as fh:
+            body = json.load(fh)
+        return float(body.get("until") or 0) > time.time()
+    except (OSError, ValueError, TypeError):
+        return False
+
+
 def _post_once(payload: dict, retries: int = 4) -> dict:
     if not config.DEEPSEEK_API_KEY:
         raise RuntimeError("DEEPSEEK_API_KEY not set (fallback unavailable)")
@@ -180,6 +223,13 @@ def _post_once(payload: dict, retries: int = 4) -> dict:
             if r.status_code == 402:
                 raise RuntimeError(
                     f"DeepSeek 402 Payment Required: {r.text[:200]}")
+            if r.status_code == 429 and _no_balance(r.text):
+                # Retrying an empty package cannot succeed. Four backoffs
+                # cost about three minutes per essay on 2026-10-15.
+                if not fallback_active():
+                    _note_primary_empty(r.text)
+                raise RuntimeError(
+                    f"HTTP 429 no balance: {r.text[:200]}")
             if r.status_code in (429, 500, 502, 503):
                 last = f"HTTP {r.status_code}: {r.text[:200]}"
                 if not _backoff(attempt):
@@ -476,10 +526,26 @@ def _breaker_open() -> bool:
     return bool(_breaker_file()) and _breaker_count() >= max(1, n)
 
 
-def _read_cap(read_to):
-    """Fail-fast cap on one OpenClaw read (OPENCLAW_READ_CAP_S)."""
+def _is_long_read_stage(stage_label: str) -> bool:
+    """General predict and news judge: big turns that need the long cap.
+    Sector predicts ("SECTOR PREDICT ...") and everything else do not."""
+    label = (stage_label or "").strip().upper()
+    return label.startswith("PREDICT ") or label.startswith("NEWS_JUDGE")
+
+
+def _read_cap(read_to, stage_label: str = ""):
+    """Fail-fast cap on one OpenClaw read.
+
+    OPENCLAW_READ_CAP_S for most calls (75s on Pre-Open). General predict
+    and news judge use OPENCLAW_PREDICT_READ_CAP_S when set: on 10-15 run
+    38720850552 grok-4.6 answered HTTP 200 and the 75s cap aborted every
+    predict call.
+    """
+    name = "OPENCLAW_READ_CAP_S"
+    if _is_long_read_stage(stage_label) and os.environ.get("OPENCLAW_PREDICT_READ_CAP_S"):
+        name = "OPENCLAW_PREDICT_READ_CAP_S"
     try:
-        cap = int(os.environ.get("OPENCLAW_READ_CAP_S", "0"))
+        cap = int(os.environ.get(name, "0"))
     except ValueError:
         cap = 0
     return min(read_to, cap) if cap > 0 else read_to
@@ -524,7 +590,7 @@ def _post_openclaw(messages: list[dict], max_tokens: int,
             break
         read_to = step_deadline.bounded(config.OPENCLAW_TIMEOUT,
                                         reserve=fallback_reserve, floor=30)
-        read_to = _read_cap(read_to)
+        read_to = _read_cap(read_to, stage_label)
         if config.OPENCLAW_TOKEN:
             headers["Authorization"] = f"Bearer {config.OPENCLAW_TOKEN}"
         try:
@@ -1313,15 +1379,20 @@ def chat(messages: list[dict], model: str, *args, **kwargs) -> str:
         # Sectors used to stop at DEGRADED when SuperGrok remaining was
         # unknown, which also blocked this free model. Paid DeepSeek stays
         # blocked inside _chat_impl. tools=False skips the SearXNG loop.
-        print("[llm] GROK_ONLY: Grok empty — trying free provider "
-              f"{os.environ.get('LLM_MODEL_OVERRIDE')}", flush=True)
-        _FALLBACK["free_primary"] = True
-        try:
-            out = _chat_impl(messages, model, *args,
-                             **{**kwargs, "force_deepseek": True, "tools": False})
-        finally:
-            _FALLBACK["free_primary"] = False
-        empty = not out or len(out.strip()) < 40
+        if _primary_is_empty():
+            print("[llm] free primary has no balance — skipping to the "
+                  "TokenHub backup", flush=True)
+        else:
+            print("[llm] GROK_ONLY: Grok empty — trying free provider "
+                  f"{os.environ.get('LLM_MODEL_OVERRIDE')}", flush=True)
+            _FALLBACK["free_primary"] = True
+            try:
+                out = _chat_impl(
+                    messages, model, *args,
+                    **{**kwargs, "force_deepseek": True, "tools": False})
+            finally:
+                _FALLBACK["free_primary"] = False
+            empty = not out or len(out.strip()) < 40
     if (empty
             and (os.environ.get("LLM_MODEL_OVERRIDE") or "").strip()
             and not last_sector_degraded()

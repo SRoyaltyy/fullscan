@@ -83,11 +83,24 @@ jobs:
           }
 
           dispatch_preopen_ubuntu() {
-            echo "MISSING morning pack → preopen_all.yml ubuntu (no silent DeepSeek)"
+            # Name kept for callers. 10-15: ubuntu cannot reach Grok, so the
+            # heal goes to the ECS box, Grok-only (preflight checks it).
+            # Only start a Pre-Open when none for today is queued, running or
+            # already succeeded (10-15: a twin 38729972443 queued at 07:48 ET).
+            local ok_today
+            ok_today=$(gh api "repos/${REPO}/actions/workflows/preopen_all.yml/runs?per_page=20" \
+              --jq '[.workflow_runs[] | select(.conclusion=="success" or .status!="completed") | .created_at] | .[]' 2>/dev/null \
+              | while read -r c; do TZ=America/New_York date -d "$c" +%F; done | grep -cx "$TODAY" || true)
+            if [ "${ok_today:-0}" != "0" ]; then
+              echo "Pre-Open for $TODAY already queued/running/succeeded — orchestrator does not start another"
+              return 0
+            fi
+            echo "MISSING morning pack → preopen_all.yml ecs (Grok)"
             gh api --method POST "repos/${REPO}/actions/workflows/preopen_all.yml/dispatches" \
               -f ref=main \
-              -f "inputs[runner]=ubuntu" \
-              -f "inputs[llm_backend]=auto" \
+              -f "inputs[runner]=ecs" \
+              -f "inputs[llm_backend]=grok" \
+              -f "inputs[started_by]=orchestrator" \
               || true
           }
 

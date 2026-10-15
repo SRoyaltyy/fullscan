@@ -1,6 +1,6 @@
 # Finviz Daily Digest — 2026-10-15
 
-_Generated 2026-10-15T04:22:04.005103-04:00 · export=data/exports/finviz_2026-10-14.csv · ticker digests=5887 · high-signal=2046_
+_Generated 2026-10-15T06:34:19.268602-04:00 · export=data/exports/finviz_2026-10-15.csv · ticker digests=5887 · high-signal=2046_
 
 ## Major indices (live quote page)
 

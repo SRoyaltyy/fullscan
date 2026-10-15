@@ -372,12 +372,14 @@ def assert_preopen_job(text: str, *, source: str = "preopen_all.yml") -> None:
     if not raw:
         raise AssertionError(f"{source}: job `preopen` has no runs-on")
 
-    ubuntu = as_labels(eval_runs_on(raw, event_name="push", runner=""))
-    if ubuntu != ["ubuntu-latest"]:
-        raise AssertionError(
-            f"{source}: preopen ubuntu branch resolved to {ubuntu}, "
-            "expected ['ubuntu-latest']"
-        )
+    # 2026-10-15: schedule/push go to ECS (only box with Grok).
+    for ev in ("push", "schedule"):
+        unattended = as_labels(eval_runs_on(raw, event_name=ev, runner=""))
+        if unattended != ECS_LABELS:
+            raise AssertionError(
+                f"{source}: preopen {ev} resolved to {unattended}, "
+                f"expected {ECS_LABELS}"
+            )
     ubuntu_dispatch = as_labels(
         eval_runs_on(raw, event_name="workflow_dispatch", runner="ubuntu")
     )
@@ -480,8 +482,11 @@ def test_good_fromjson_resolves_both_branches() -> None:
     assert eval_runs_on(
         good, event_name="workflow_dispatch", runner="ecs"
     ) == ECS_LABELS
+    # assert_preopen_job now requires schedule/push -> ECS (2026-10-15).
+    new = ("${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' "
+           "|| fromJSON('[\"self-hosted\",\"ecs\"]') }}")
     assert_preopen_job(
-        "jobs:\n  preopen:\n    runs-on: " + good + "\n",
+        "jobs:\n  preopen:\n    runs-on: " + new + "\n",
         source="good.yml",
     )
 

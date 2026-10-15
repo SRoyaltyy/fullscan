@@ -256,7 +256,7 @@ Proof is strict. A run id is listed only when a real morning Pre-Open exercised 
 | 15 | 64-char bearer 401, or Grok credits/subscription 403 | auth | yes | #599 merged for the 64-char 401; not code: Grok credits or subscription | unproven until first morning on fix |
 | 16 | Gateway process down, or gateway.mode missing | other | yes | #603 merged | unproven until first morning on fix |
 | 17 | Paid DeepSeek HTTP 402 | auth | yes | not code: do not enable paid DeepSeek | unproven until first morning on fix |
-| 18 | Paid glm-5.3 HTTP 429 | auth | yes | not code: do not enable paid glm-5.3 | unproven until first morning on fix |
+| 18 | Paid glm-5.3 HTTP 429 | auth | yes | not code: do not enable paid glm-5.3. Run 38704557910 also got 1113 from glm-5.3-flash; PR #604 pending does not retry that and skips the key for the rest of the morning | unproven until first morning on fix |
 | 19 | TokenHub read timeout retried until the step dies | timeout | yes | #603 merged | unproven until first morning on fix |
 | 20 | One ECS runner, so other Grok jobs wait or get cancelled | other | yes | not code: a second ECS runner cannot be added from here | unproven until first morning on fix |
 | 21 | Backing off a systemd lock exited 1 | other | yes | already gone from tree | unproven until first morning on fix |

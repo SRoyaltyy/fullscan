@@ -1,0 +1,71 @@
+{
+  "institutions": 2148,
+  "by_jurisdiction": {
+    "US": 680,
+    "UK": 1274,
+    "INT": 68,
+    "US-state": 59,
+    "US-CA": 1,
+    "US-NY": 1,
+    "US-TX": 1,
+    "US-FL": 1,
+    "EU": 10,
+    "CA": 4,
+    "AU": 5,
+    "NZ": 4,
+    "HK": 6,
+    "SG": 4,
+    "IN": 5,
+    "CN": 3,
+    "JP": 4,
+    "KR": 2,
+    "TW": 1,
+    "MY": 1,
+    "TH": 1,
+    "PH": 2,
+    "ID": 1,
+    "BR": 1,
+    "MX": 1,
+    "ZA": 1,
+    "CH": 1,
+    "SE": 1,
+    "NO": 1,
+    "DE": 2,
+    "FR": 1,
+    "ES": 1
+  },
+  "uk_status": {
+    "closed": 598,
+    "live": 355,
+    "exempt": 301,
+    "joining": 12,
+    "transitioning": 1
+  },
+  "candidate_channels": 497,
+  "enabled_channels": 338,
+  "channel_statuses": {
+    "ok": 358,
+    "fetch_failed": 76,
+    "valid_empty": 6,
+    "blocked": 15,
+    "invalid_feed_or_network_error": 42
+  },
+  "directory_gaps": [
+    {
+      "institution_id": "us-fdic",
+      "url": "https://public.govdelivery.com/topics/USFDIC_26/feed.rss",
+      "status": "external_feed_host_not_approved; not requested"
+    }
+  ],
+  "institution_records": 2148,
+  "count_caution": "Overlapping directory identities and channel owners, including closed/historical bodies; not unique active institutions or working websites.",
+  "directory_record_groups": {
+    "us-fr": 473,
+    "uk-gov": 1267,
+    "govinfo_court": 165,
+    "central_banks": 63,
+    "us_states": 59,
+    "curated_channel_owner": 121
+  },
+  "excluded_reference_channels": 34
+}
