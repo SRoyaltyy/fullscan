@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T23:20:45.953303-04:00",
+  "generated_at": "2026-10-14T23:20:51.907799-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -113,31 +113,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz_market_digest_close",
-      "title": "Finviz homepage market digest (close)",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T16:26:38.066974-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-14_finviz_market_digest_close.json",
-          "ok": true,
-          "reason": "",
-          "size": 8495,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-10-14_finviz_market_digest_close.md",
-          "ok": true,
-          "reason": "",
-          "size": 3864,
-          "preview": "# Finviz homepage market digest (close) \u2014 2026-10-14\n**Generated:** 2026-10-14T16:26:38.042296-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed sharply lower as hotter CPI data lifted Treasury yields, boosted Fed hike odds and pressured AI and semiconductor shares\n**Prior close:** SPX -1.10%  Nasdaq -1.90%  Dow -0.10%\n**SPX:** -1.10%  **Nasdaq:** -1.90%  **Dow:** -0.10%\n**Oil:** \u2014\n**CPI/Fed:** headline CPI rose 3; 0.2% hike (0.2% consensus, pushing Treasury yields higher and Fed rate-hike)\n**Leaders:** NVDA, AVGO, AMD, ORCL, DELL, BCS, CRWV, BAC, LLY, BSP, NFLX\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-15\n**Clock use:** `next_open`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-14\n**Generated:** 2026-10-14T16:26:38.042296-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed sharply lower as hotter CPI data lifted Treasury yields, boosted Fed hike odds and pressured AI and semiconductor shares\n**Prior close:** SPX -1.10%  Nasdaq -1.90%  Dow -0.10%\n**SPX:** -1.10%  **Nasdaq:** -1.90%  **Dow:** -0.10%\n**Oil:** \u2014\n**CPI/Fed:** headline CPI rose 3; 0.2% hike (0.2% consensus, pushing Treasury yields higher and Fed rate-hike)\n**Leaders:** NVDA, AVGO, AMD, ORCL, DELL, BCS, CRWV, BAC, LLY, BSP, NFLX\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-15\n**Clock use:** `next_open`"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -417,6 +392,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 7.7, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': -0.686, 'dir': 'flat', 'conf': 0.427, 'source': 'llm'}, Consumer Cyclical={'score': -0.187, 'dir': 'down', 'conf': 0.507, 'source': 'llm'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T23:20:50.968776-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-14_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2243111,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
