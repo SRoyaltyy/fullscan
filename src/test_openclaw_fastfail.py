@@ -169,6 +169,7 @@ def test_wiring_strings():
     assert "gateway.mode set to local" in enable
     assert "XDG_RUNTIME_DIR" in reauth
     assert "quality-ok packet has no Grok trace" in orch
+    assert "passthrough (deadline)" in orch
     assert "FULLSCAN_PUSH_TOKEN" in push
     assert "Invalid username or token" in push
     # The publish step must not keep a raw token. The redaction list is the contract.

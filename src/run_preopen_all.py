@@ -818,8 +818,20 @@ def run(date: str | None = None, force: bool = False,
             os.environ["OPENCLAW_TIMEOUT"] = map_heat_http
             try:
                 if heat_budget is None:
-                    print("[preopen-all] skip map heat refresh — step deadline "
-                          "too close")
+                    print("[preopen-all] skip map heat LLM refresh — step "
+                          "deadline too close")
+                    # The packet still requires map_heat_research. A skipped
+                    # LLM refresh must not fail the morning after Grok wrote
+                    # (2026-09-02 run 33618162369). Passthrough copies the
+                    # night baseline and does not call the model.
+                    if not _packet_step_done("map_heat_research", date):
+                        print("[preopen-all] writing night baseline "
+                              "passthrough (deadline)")
+                        step("map_heat_research",
+                             "Map heat passthrough after deadline",
+                             [py, "-m", "src.map_heat_refresh", "--date", date,
+                              "--passthrough", *fa],
+                             timeout_s=60)
                     heat_code = 0
                 else:
                     map_heat_sub = heat_budget
