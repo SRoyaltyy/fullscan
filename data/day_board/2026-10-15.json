@@ -1,10 +1,11 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T08:22:49.252679-04:00",
+  "generated_at": "2026-10-15T08:24:09.237470-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-15_predict.md` \u2014 missing"
+    "MISSING General predict MD `01_daily/general/2026-10-15_predict.md` \u2014 missing",
+    "MISSING News judge MD `01_daily/news/2026-10-15_judge.md` \u2014 missing"
   ],
   "counts": {
     "ok": 7,
@@ -179,7 +180,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 7,
+      "n_req_ok": 6,
       "n_req": 9,
       "n_opt_ok": 3,
       "n_opt": 14,
@@ -259,15 +260,11 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-15_judge.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 9415,
-          "said": "1. **Hot September CPI revives October Fed rate-hike odds (odds as high as 70% intraday, ~33% on Kalshi)** \u2014 the single dominant macro driver; sets the entire r",
-          "bullets": [
-            "2. **Fed officials push back on October hike (Williams, Goolsbee \"discouraging but no rush\", three officials temper bets); dollar retreats from 18-month high, yields fall** \u2014 the offsetting dovish sleeve that determines whether the CPI shock becomes a sustained de-rate or a one-day fade. Channel: rates.",
-            "3. **Nasdaq ends sharply lower as hot CPI stirs rate-hike worries; leading AI shares tumble** \u2014 the risk-channel expression of #1/#2; tells us where the pain concentrates (crowded AI/tech beta). Channel: risk.",
-            "4. **Gold whipsaws: drops $100+ on hawkish Fed comments, then climbs 1% as hike bets ease** \u2014 rescued gold; real-rate proxy that confirms the intraday dovish reversal and moves the GDX/miner basket. Channel: rates/sentiment."
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "research_json",
@@ -346,7 +343,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 8442,
+          "size": 8431,
           "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 15 fail",
           "bullets": [
             "general_predict:missing",
@@ -361,9 +358,9 @@
           "path": "01_daily/2026-10-15_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False missing=['events', 'general_predict']",
-          "size": 7829,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, general_predict",
+          "reason": "all_ok=False missing=['events', 'news_judge', 'general_predict']",
+          "size": 7451,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, general_predict",
           "bullets": []
         },
         {
@@ -547,13 +544,13 @@
           "size": 9329,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
           ]
         }
       ],
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
       ]
     },
     {
@@ -739,15 +736,11 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-15_judge.md",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 9415,
-          "said": "1. **Hot September CPI revives October Fed rate-hike odds (odds as high as 70% intraday, ~33% on Kalshi)** \u2014 the single dominant macro driver; sets the entire r",
-          "bullets": [
-            "2. **Fed officials push back on October hike (Williams, Goolsbee \"discouraging but no rush\", three officials temper bets); dollar retreats from 18-month high, yields fall** \u2014 the offsetting dovish sleeve that determines whether the CPI shock becomes a sustained de-rate or a one-day fade. Channel: rates.",
-            "3. **Nasdaq ends sharply lower as hot CPI stirs rate-hike worries; leading AI shares tumble** \u2014 the risk-channel expression of #1/#2; tells us where the pain concentrates (crowded AI/tech beta). Channel: risk.",
-            "4. **Gold whipsaws: drops $100+ on hawkish Fed comments, then climbs 1% as hike bets ease** \u2014 rescued gold; real-rate proxy that confirms the intraday dovish reversal and moves the GDX/miner basket. Channel: rates/sentiment."
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_weather",
@@ -759,7 +752,7 @@
           "size": 9329,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
           ]
         },
         {
@@ -782,10 +775,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2242367,
-          "said": "201 rows",
+          "size": 2241897,
+          "said": "204 rows",
           "bullets": [
-            "KEYS, FORM, AVPT, MU, SKHY, SMTC, NVDA, APH"
+            "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, WAY"
           ]
         },
         {
@@ -808,8 +801,8 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1450660,
-          "said": "1d BUY AMN, HITI, CON, SGRY, NTAP, MQ, ASTH, IT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, POWL, TE",
+          "size": 1476285,
+          "said": "1d BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -819,10 +812,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 83837,
+          "size": 84353,
           "said": "Stock book \u2014 2026-10-15",
           "bullets": [
-            "_Generated 2026-10-15T08:22:15.048564-04:00_",
+            "_Generated 2026-10-15T08:02:43.704458-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -863,9 +856,9 @@
           "bullets": []
         }
       ],
-      "said": "201 rows",
+      "said": "204 rows",
       "bullets": [
-        "KEYS, FORM, AVPT, MU, SKHY"
+        "HALO, ONC, LLY, HRMY, ETON"
       ]
     },
     {
@@ -886,8 +879,8 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1450660,
-          "said": "1d BUY AMN, HITI, CON, SGRY, NTAP, MQ, ASTH, IT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, POWL, TE",
+          "size": 1476285,
+          "said": "1d BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -936,70 +929,70 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "AMN",
-        "score": 0.6750506257507881
-      },
-      {
         "ticker": "HITI",
-        "score": 0.37652405660275373
+        "score": 0.5573663097140535
       },
       {
         "ticker": "CON",
-        "score": 0.5830630579022049
+        "score": 0.7879056108017362
       },
       {
         "ticker": "SGRY",
-        "score": 0.5151037234562534
+        "score": 0.7309787616401873
       },
       {
-        "ticker": "NTAP",
-        "score": 0.2924494562525348
-      },
-      {
-        "ticker": "MQ",
-        "score": 0.7904010382375091
+        "ticker": "AMN",
+        "score": 0.7623725205328171
       },
       {
         "ticker": "ASTH",
-        "score": 0.48793905530768616
+        "score": 0.7042257271272405
       },
       {
-        "ticker": "IT",
-        "score": 0.5855093291752584
+        "ticker": "MD",
+        "score": 0.6993874925900012
+      },
+      {
+        "ticker": "PACS",
+        "score": 0.8922406667174412
+      },
+      {
+        "ticker": "NTAP",
+        "score": 0.09630838517576984
       }
     ],
     "sell_1d": [
       {
         "ticker": "NEOV",
-        "score": -0.3755535550153534
+        "score": -0.38545641394374136
       },
       {
         "ticker": "OKLO",
-        "score": -0.2659668014580737
+        "score": -0.2672322421550266
       },
       {
         "ticker": "FCEL",
-        "score": -0.21380145060394223
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.3365519085866714
-      },
-      {
-        "ticker": "POWL",
-        "score": -0.07133125701012376
-      },
-      {
-        "ticker": "TE",
-        "score": -0.2926184563775822
-      },
-      {
-        "ticker": "NRGV",
-        "score": -0.23945560269184185
+        "score": -0.21621947325900126
       },
       {
         "ticker": "NNDM",
-        "score": 0.055384307494657406
+        "score": -0.13271542898503363
+      },
+      {
+        "ticker": "POWL",
+        "score": -0.0794088977255034
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.33983328183077566
+      },
+      {
+        "ticker": "TE",
+        "score": -0.2960550369910495
+      },
+      {
+        "ticker": "NRGV",
+        "score": -0.2470809789575228
       }
     ],
     "flatten": {
@@ -1031,127 +1024,11 @@
     "weather": {
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
       ]
     }
   },
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T06:28:37.207803-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 20922,
-          "preview": "2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 990,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-10-15.json",
-          "ok": true,
-          "reason": "",
-          "size": 149790,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-10-15_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 114285,
-          "preview": "2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 765363,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-10-15_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 765363,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/factor_mine/morning_look/2026-10-15.json",
-          "ok": true,
-          "reason": "",
-          "size": 180323,
-          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 1073944,
-          "preview": "2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 765363,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 114285,
-          "preview": "2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 765363,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 765363,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 1073944,
-          "preview": "2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1533,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1533,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_f"
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -4105,6 +3982,31 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T08:24:08.181810-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-15_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97156,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-15_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 12008,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-15\n_Generated 2026-10-15T07:24:52.862668-04:00 \u00b7 export=data/exports/finviz_2026-10-15.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-15\n_Generated 2026-10-15T07:24:52.862668-04:00 \u00b7 export=data/exports/finviz_2026-10-15.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
     }
   ],
   "href": {
