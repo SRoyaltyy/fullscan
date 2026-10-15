@@ -23826,6 +23826,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-15",
+          "actual_pct": 2.09,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -33211,7 +33223,7 @@
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-15_lesson.md",
       "sources_used": [
         {
           "url": "https://www.ibtimes.com/ppi-was-much-higher-expected-odds-fed-rate-hike-edged-down-anyway-3808612",
@@ -33268,7 +33280,8 @@
       "key_interaction": "Hot PPI and AI-credit stress amplified the open dump, then were offset when bonds rallied anyway — net SPX +0.33% masked a violent rotation day",
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
-      "outlier_watch": "TSMC record beat vs seventh SOX down day; hot PPI vs falling 10Y and falling hike odds; NDX V-recovery vs Nasdaq 351 new lows"
+      "outlier_watch": "TSMC record beat vs seventh SOX down day; hot PPI vs falling 10Y and falling hike odds; NDX V-recovery vs Nasdaq 351 new lows",
+      "lesson_schema_ok": true
     }
   ]
 }
