@@ -1295,14 +1295,14 @@
         "fed_rate_path"
       ],
       "entry_date": "2026-10-15",
-      "entry_open": 228.91,
+      "entry_open": 228.79,
       "window_through": "2026-10-15",
       "trading_days_elapsed": 0,
       "complete": false,
       "latest_close": 233.0,
-      "current_return_pct": -1.76,
+      "current_return_pct": -1.81,
       "horizon_returns_pct": {},
-      "mfe_pct": 1.06,
+      "mfe_pct": 1.01,
       "mfe_day": "2026-10-15",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-15"

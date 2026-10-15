@@ -3976,14 +3976,6 @@
   },
   "frozen_write_skips": [
     {
-      "path": "data/day_board/2026-10-14.json",
-      "at": "2026-10-14T11:19:47-04:00",
-      "commit_msg": "auto: land join [2026-10-14]",
-      "workflow": "Stock Book ALL (one-shot)",
-      "run_id": "38587756171",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
       "path": "data/join/2026-10-14_ranked.csv",
       "at": "2026-10-14T11:19:47-04:00",
       "commit_msg": "auto: land join [2026-10-14]",
@@ -5573,6 +5565,14 @@
       "commit_msg": "auto: post-close last-closed [2026-10-15_1924]",
       "workflow": "Post-Close last-closed (ubuntu/DeepSeek sidecar)",
       "run_id": "38792335268",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-14/_board.json",
+      "at": "2026-10-15T19:09:44-04:00",
+      "commit_msg": "auto: post-close ALL [2026-10-14]",
+      "workflow": "Post-Close ALL (grade + learn + next captains)",
+      "run_id": "38820913907",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
     }
   ]
