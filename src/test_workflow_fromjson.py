@@ -540,6 +540,12 @@ def test_preopen_all_job_resolves_ubuntu_and_ecs() -> None:
     runner = text.split("runner:", 1)[1].split("run_date:", 1)[0]
     assert 'default: "ecs"' in runner
     assert 'default: "ubuntu"' not in runner
+    # Mode 39: the 05:55 schedule lands on ECS and has no runner input.
+    # The in-job renew must run there. Only an explicit ubuntu dispatch skips it.
+    renew = text.split("Renew xAI if the token dies before this run ends", 1)[1]
+    renew = renew.split("- name: Pre-Open ALL", 1)[0]
+    assert "github.event.inputs.runner != 'ubuntu'" in renew
+    assert "github.event_name == 'workflow_dispatch' && github.event.inputs.runner == 'ecs'" not in renew
 
 
 def test_stock_book_all_fromjson_resolves() -> None:
