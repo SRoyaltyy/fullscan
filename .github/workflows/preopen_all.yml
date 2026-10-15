@@ -496,7 +496,10 @@ jobs:
         # runner and the token expired at 05:08 ET. Renew here, before
         # the essays, when expiry is inside this run. James auto-clicks
         # Allow. Do not send the device code to Cyrus.
-        if: env.skip != 'yes' && github.event_name == 'workflow_dispatch' && github.event.inputs.runner == 'ecs'
+        # Schedule and push have no runner input and land on ECS (#608).
+        # The old if required workflow_dispatch && runner == ecs, so the
+        # 05:55 cron skipped this renew. Ubuntu is the only skip.
+        if: env.skip != 'yes' && github.event.inputs.runner != 'ubuntu'
         env:
           OPENCLAW_RUN_COVER_MIN: "75"
           FULLSCAN_HOME: /home/gha
