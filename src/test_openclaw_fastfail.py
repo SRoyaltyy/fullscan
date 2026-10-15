@@ -38,9 +38,10 @@ def test_predict_attempt_search_then_nosearch_then_skip(monkeypatch, tmp_path):
     assert ff.predict_attempt(restart=lambda: True) == "skip"
 
 
-def test_probe_ok_and_restart(monkeypatch):
+def test_probe_ok_and_restart(monkeypatch, tmp_path):
     from src import config
     monkeypatch.setenv("OPENCLAW_RESTART_ON_TIMEOUT", "1")
+    monkeypatch.setenv("OPENCLAW_BREAKER_FILE", str(tmp_path / "b.txt"))
     monkeypatch.setattr(config, "OPENCLAW_GATEWAY_URL", "http://127.0.0.1:9")
     monkeypatch.setattr(config, "OPENCLAW_TOKEN", "")
     monkeypatch.setattr(config, "OPENCLAW_AGENT", "openclaw/default")
@@ -70,6 +71,7 @@ def test_probe_ok_and_restart(monkeypatch):
     out = ff.ensure_before_essays(probe=probe, restart=lambda: restarts.append(1) or True)
     assert out["ok"] and out.get("restarted") and restarts == [1]
     assert written["ok"]
+    assert (tmp_path / "b.txt.restarted").is_file()
 
 
 def test_step_budget_skips_when_deadline_is_close(monkeypatch):
@@ -167,6 +169,8 @@ def test_wiring_strings():
     orch = (root / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
     assert "skip openclaw config set" in timeouts
     assert "gateway.mode set to local" in enable
+    assert "skip hung chat ping" in enable
+    assert "killing listener on 18789" in enable
     assert "XDG_RUNTIME_DIR" in reauth
     assert "quality-ok packet has no Grok trace" in orch
     assert "passthrough (deadline)" in orch

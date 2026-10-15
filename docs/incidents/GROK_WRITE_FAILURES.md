@@ -218,7 +218,8 @@ These modes are changed in code now. The ones above that #597 / #599 / #600 alre
 - Mode 29: the ubuntu Pre-Open unsets a loopback `OPENCLAW_GATEWAY_URL` and uses the free model. It does not sit on `127.0.0.1:18789`.
 - Mode 30: the scrape step exits 0 after 09:25 ET instead of going red for obeying the cutoff. It still does not write.
 - Mode 32: when today's packet is quality-ok but the trace is not Grok, and the clock is before 09:00 ET, the general predict is healed. A failed heal keeps the essay. Past days are not rewritten.
-- Mode 25, leftover: sector predict and the map-heat refresh shrink to the step deadline instead of a flat 2400s / 540s.
+- Mode 25, leftover: sector predict and the map-heat refresh shrink to the step deadline instead of a flat 2400s / 540s. When the map-heat refresh no longer fits, the night baseline is written through so a missing `map_heat_research` file does not fail the run after the essay (mode 33).
+- Mode 3, leftover: a forced gateway restart used to call a 60-second PONG first. The restart budget (45s) expired before `systemctl` ran, so the 10800s turn stayed up. A forced restart now skips that ping and bounces immediately. If `systemctl restart` is not allowed, it kills the listener on 18789. It also does not rewrite `openclaw.json` when chat completions are already on (mode 6 / 24 on the restart path). A failed pre-essay probe marks the run so the predict does not open a second native-search turn.
 
 Cannot be fixed from this session:
 

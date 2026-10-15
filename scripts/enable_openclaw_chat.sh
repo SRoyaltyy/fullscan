@@ -147,6 +147,9 @@ wait_port() {
 
 chat_ping() {
   # Try Bearer, then x-api-key. 48-char live first; 64-char secret last.
+  # $1 is the curl max-time. A forced restart must not use 60s: that ate
+  # the whole restart budget on 2026-10-14 while the hung turn stayed up.
+  local max="${1:-60}"
   local first=() mid=() last=() seen="|"
   local t hdr code
   for t in "$TOKEN" "$CFG_TOKEN" "$GW_ENV_TOKEN" "$ENV_TOKEN"; do
@@ -166,7 +169,7 @@ chat_ping() {
     for hdr in bearer xapikey; do
       rm -f /tmp/oc_chat.json /tmp/oc_chat.err
       if [ "$hdr" = "bearer" ]; then
-        code=$(curl -sS -m 60 -o /tmp/oc_chat.json -w "%{http_code}" \
+        code=$(curl -sS -m "$max" -o /tmp/oc_chat.json -w "%{http_code}" \
           -H "Authorization: Bearer ${t}" \
           -H "x-api-key: ${t}" \
           -H "Content-Type: application/json" \
@@ -175,7 +178,7 @@ chat_ping() {
           -d "{\"model\":\"${AGENT}\",\"messages\":[{\"role\":\"user\",\"content\":\"Reply with exactly the word PONG\"}],\"max_tokens\":16,\"temperature\":0}" \
           "$GW/v1/chat/completions" 2>/tmp/oc_chat.err || echo 000)
       else
-        code=$(curl -sS -m 60 -o /tmp/oc_chat.json -w "%{http_code}" \
+        code=$(curl -sS -m "$max" -o /tmp/oc_chat.json -w "%{http_code}" \
           -H "x-api-key: ${t}" \
           -H "x-openclaw-model: ${BACKEND}" \
           -H "Content-Type: application/json" \
@@ -249,9 +252,12 @@ start_gateway() {
 }
 
 # --- 1. enable classroom in JSON ---
-cp -a "$CFG" "${CFG}.bak.$(date -u +%Y%m%dT%H%M%SZ)"
-python3 - "$CFG" <<'PY'
-import json, sys
+# Rewriting openclaw.json while a turn is in flight is the
+# ConfigMutationConflict that flattened every sector on 2026-09-08.
+# Touch the file only when chat completions are actually off.
+CHAT_OUT=$(python3 - "$CFG" <<'PY'
+import json, shutil, sys
+from datetime import datetime, timezone
 path = sys.argv[1]
 with open(path, encoding="utf-8") as f:
     data = json.load(f)
@@ -260,55 +266,115 @@ http = gw.setdefault("http", {})
 ends = http.setdefault("endpoints", {})
 chat = ends.setdefault("chatCompletions", {})
 before = bool(chat.get("enabled"))
-chat["enabled"] = True
-with open(path, "w", encoding="utf-8") as f:
-    json.dump(data, f, indent=2)
-    f.write("\n")
-print(f"chatCompletions.enabled: {before} -> True")
-print("NEED_RESTART" if not before else "ALREADY_ON")
+if before:
+    print("chatCompletions.enabled already true — not rewriting")
+    print("ALREADY_ON")
+else:
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    shutil.copy2(path, f"{path}.bak.{stamp}")
+    chat["enabled"] = True
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+        f.write("\n")
+    print(f"chatCompletions.enabled: {before} -> True")
+    print("NEED_RESTART")
 PY
+)
+printf '%s\n' "$CHAT_OUT"
 
 if [ "$(id -u)" -eq 0 ]; then
   chown -R "$GHA_USER:$GHA_USER" /home/gha/.openclaw 2>/dev/null || true
 fi
 
-if command -v openclaw >/dev/null 2>&1; then
-  if [ "$(id -u)" -eq 0 ]; then
-    sudo -u "$GHA_USER" -H env HOME="$HOME" openclaw config set \
-      gateway.http.endpoints.chatCompletions.enabled true 2>&1 | tail -8
-  else
-    openclaw config set gateway.http.endpoints.chatCompletions.enabled true 2>&1 | tail -8
+if printf '%s\n' "$CHAT_OUT" | grep -qx 'NEED_RESTART'; then
+  if command -v openclaw >/dev/null 2>&1; then
+    if [ "$(id -u)" -eq 0 ]; then
+      sudo -u "$GHA_USER" -H env HOME="$HOME" openclaw config set \
+        gateway.http.endpoints.chatCompletions.enabled true 2>&1 | tail -8
+    else
+      openclaw config set gateway.http.endpoints.chatCompletions.enabled true 2>&1 | tail -8
+    fi
   fi
+else
+  echo "chat already on — skip openclaw config set (avoids ConfigMutationConflict)"
 fi
 
+force_on() {
+  case "${OPENCLAW_FORCE_RESTART:-0}" in
+    1|true|yes|TRUE|YES) return 0 ;;
+  esac
+  return 1
+}
+
+# A client read timeout does not cancel the gateway's 10800s turn.
+# systemctl restart needs root. The morning job often is not root, and
+# the hung pid is still ours, so kill the listener when restart did not run.
+kill_listener() {
+  echo "killing listener on 18789 — a client timeout does not end the 10800s turn"
+  local pids=""
+  if command -v ss >/dev/null 2>&1; then
+    pids=$(ss -ltnp 2>/dev/null | awk '/:18789/ {print}' | grep -o 'pid=[0-9]*' | cut -d= -f2 | sort -u || true)
+  fi
+  if [ -n "$pids" ]; then
+    local p
+    for p in $pids; do
+      kill -9 "$p" 2>/dev/null || true
+      echo "killed pid $p"
+    done
+    return 0
+  fi
+  if command -v fuser >/dev/null 2>&1; then
+    fuser -k 18789/tcp 2>/dev/null || true
+    echo "fuser -k 18789/tcp"
+    return 0
+  fi
+  pkill -u "$(id -u)" -f "openclaw gateway" 2>/dev/null || true
+  echo "pkill openclaw gateway (own uid)"
+}
+
 # --- 2. if already answering, leave the running process alone ---
-# Soft skip (port up + short PONG) is not enough: on 2026-10-06 and
+# Soft skip (port up + PONG) is not enough: on 2026-10-06 and
 # 2026-10-12 the gateway still answered PONG while every real LLM call
-# hung at read-timeout 240s. OPENCLAW_FORCE_RESTART=1 always bounces.
-FORCE_RESTART="${OPENCLAW_FORCE_RESTART:-0}"
-if port_up; then
+# hung. OPENCLAW_FORCE_RESTART must bounce WITHOUT waiting on that PONG.
+# The old order called chat_ping (-m 60) first, and the 45s restart
+# budget expired before systemctl ever ran.
+if port_up && force_on; then
+  echo "FORCE_RESTART — skip hung chat ping and bounce the gateway now"
+elif port_up; then
   echo "port 18789 already listening — ping before restart"
   if chat_ping; then
-    if [ "$FORCE_RESTART" = "1" ] || [ "$FORCE_RESTART" = "true" ] || [ "$FORCE_RESTART" = "yes" ]; then
-      echo "CLASSROOM_OPEN=yes but OPENCLAW_FORCE_RESTART=$FORCE_RESTART — hard restart"
-    else
-      echo "CLASSROOM_OPEN=yes (no restart needed)"
-      exit 0
-    fi
-  else
-    echo "port up but chat not 200 — restart required to load chatCompletions"
+    echo "CLASSROOM_OPEN=yes (no restart needed)"
+    exit 0
   fi
+  echo "port up but chat not 200 — restart required to load chatCompletions"
 fi
 
 # --- 3. bounce or start ---
+bounced=0
 if command -v systemctl >/dev/null 2>&1 && systemctl is-active --quiet fullscan-openclaw-gateway 2>/dev/null; then
   echo "restart fullscan-openclaw-gateway"
-  systemctl restart fullscan-openclaw-gateway
+  if systemctl restart fullscan-openclaw-gateway; then
+    bounced=1
+  else
+    echo "systemctl restart failed"
+  fi
 elif command -v systemctl >/dev/null 2>&1 && systemctl list-units --all --no-legend 2>/dev/null | grep -q fullscan-openclaw-gateway; then
   echo "start existing fullscan-openclaw-gateway unit"
-  systemctl start fullscan-openclaw-gateway
+  if systemctl start fullscan-openclaw-gateway; then
+    bounced=1
+  fi
 else
   start_gateway
+  bounced=1
+fi
+if [ "$bounced" -eq 0 ]; then
+  kill_listener
+  sleep 2
+  if ! port_up; then
+    start_gateway || true
+  else
+    echo "listener died and the port came back"
+  fi
 fi
 
 wait_port || start_gateway
@@ -318,9 +384,13 @@ echo "GET $GW/health"
 curl -sS -m 8 -w " HTTP %{http_code}\n" "$GW/health" | tail -3
 
 # --- 4. ping with retries (gateway can take a minute after restart) ---
+PING_MAX=60
+if force_on; then
+  PING_MAX=12
+fi
 for try in 1 2 3 4 5; do
   echo "chat ping try $try"
-  if chat_ping; then
+  if chat_ping "$PING_MAX"; then
     echo "CLASSROOM_OPEN=yes"
     exit 0
   fi
