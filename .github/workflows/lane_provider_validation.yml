@@ -124,7 +124,7 @@ jobs:
       FULLSCAN_HOME: /home/gha
       OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
       OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
-      OPENCLAW_BACKEND_MODEL: xai/grok-4.6
+      OPENCLAW_BACKEND_MODEL: xai/grok-4.3
       OPENCLAW_GUARD_CALL_TIMEOUT: '60'
       OPENCLAW_LANE_TIMEOUT: '300'
     steps:
@@ -144,7 +144,7 @@ jobs:
       - name: Diagnose timer, OAuth and both Grok model paths
         id: diagnose
         working-directory: lane_grok_${{ github.run_id }}_${{ github.run_attempt }}
-        run: PYTHONPATH=.:scripts python3 scripts/diagnose_openclaw_lane.py --output provider_results/grok_diagnostic.json --model xai/grok-4.6
+        run: PYTHONPATH=.:scripts python3 scripts/diagnose_openclaw_lane.py --output provider_results/grok_diagnostic.json --model xai/grok-4.3
       - name: Program-only Grok development 100-title replay when healthy and idle
         if: steps.diagnose.outputs.ready == 'true'
         working-directory: lane_grok_${{ github.run_id }}_${{ github.run_attempt }}
@@ -154,7 +154,7 @@ jobs:
             --output provider_results/grok_program_outputs.json \
             --limit 100 --budget-seconds 3600 --headline-timeout 650 \
             --batch-size 10 --batch-interval-seconds 30 --require-catalog --no-review --sector-review --action-review --sector-roles --resume \
-            --providers openclaw --models xai/grok-4.6
+            --providers openclaw --models xai/grok-4.3
       - uses: actions/upload-artifact@v4
         if: always()
         with:

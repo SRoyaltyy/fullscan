@@ -1,0 +1,40 @@
+{
+  "run_id": 38679906948,
+  "commit": "836bdf9e3761ee15bbc8f0e8e7e1c79b6b301f31",
+  "model_required": "xai/grok-4.6",
+  "status": "provider_health_guard_failed",
+  "grok_busy": false,
+  "health_calls": [
+    {
+      "model_requested": "xai/grok-4.3",
+      "http": 200,
+      "ok": true,
+      "secs": 6.2
+    },
+    {
+      "model_requested": "xai/grok-4.6",
+      "http": 200,
+      "ok": false,
+      "secs": 23.3,
+      "failure_kind": "onboarding_response_instead_of_requested_arithmetic"
+    }
+  ],
+  "headline_calls": 0,
+  "semantic_accuracy_measured": false,
+  "best_consecutive_passes": 0,
+  "artifacts": {
+    "diagnostic": {
+      "id": 11947564258,
+      "sha256": "1e534404a098269a1e8155552b43a7a01734cdd5e5d748bb74ca8fd0beffc4fb"
+    },
+    "score": {
+      "id": 11947659179,
+      "sha256": "a90e4683bf50bf0df4d5e20e7ec85ff9434ae91cf7b0ca2da0f71497dbebbf03"
+    }
+  },
+  "tests": {
+    "semantic": 77,
+    "provider": 5,
+    "workflow": 23
+  }
+}
