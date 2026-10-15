@@ -3976,14 +3976,6 @@
   },
   "frozen_write_skips": [
     {
-      "path": "data/stock_book/2026-10-14_stock_book.json",
-      "at": "2026-10-14T11:10:56-04:00",
-      "commit_msg": "auto: stock book leftover sweep",
-      "workflow": "Stock Book ALL (one-shot)",
-      "run_id": "38586271842",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
       "path": "01_daily/weather/2026-10-14_weather.json",
       "at": "2026-10-14T11:19:29-04:00",
       "commit_msg": "auto: land weather [2026-10-14]",
@@ -5573,6 +5565,14 @@
       "commit_msg": "auto: finviz ALL (export+digest+groups+tape+colors) [2026-10-14]",
       "workflow": "Finviz ALL (GH-hosted Elite)",
       "run_id": "38688897048",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-14/_board.json",
+      "at": "2026-10-15T15:24:26-04:00",
+      "commit_msg": "auto: post-close ALL [2026-10-14]",
+      "workflow": "Post-Close last-closed (ubuntu/DeepSeek sidecar)",
+      "run_id": "38792335268",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
     }
   ]
