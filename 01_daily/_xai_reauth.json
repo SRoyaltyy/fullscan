@@ -1,14 +1,11 @@
 {
-  "status": "waiting",
-  "oauth": "FAIL",
+  "status": "ok",
+  "oauth": "OK",
   "pong_ok": null,
-  "reason": "James auto-clicks Allow; not sending the code to Cyrus",
-  "user_code": "N7RE-A8BV",
-  "verification_uri": "https://accounts.x.ai/oauth2/device?user_code=N7RE-A8BV",
-  "expires_at": "2026-10-15T20:14:17.229768-04:00",
+  "reason": "device login completed",
+  "user_code": null,
+  "verification_uri": "https://accounts.x.ai/oauth2/device",
+  "expires_at": null,
   "source": "xai_device_reauth",
-  "pid": 2403622,
-  "waiter_pid": 2403621,
-  "host": "iZt4nagf215582ts0wf5jcZ",
-  "updated_at": "2026-10-15T19:45:17.230399-04:00"
+  "updated_at": "2026-10-15T19:46:12.578822-04:00"
 }
