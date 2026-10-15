@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T08:50:36.881223-04:00",
+  "generated_at": "2026-10-15T08:50:57.991442-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -346,13 +346,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 8427,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
+          "size": 8431,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 15 fail",
           "bullets": [
             "general_predict:missing",
             "events:zero_events",
-            "finviz_market_digest:missing",
-            "sector_predict:missing"
+            "news_judge:missing",
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -361,9 +361,9 @@
           "path": "01_daily/2026-10-15_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False missing=['events', 'general_predict']",
-          "size": 7656,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, general_predict",
+          "reason": "all_ok=False missing=['events', 'news_judge', 'general_predict']",
+          "size": 7679,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, general_predict",
           "bullets": []
         },
         {
@@ -543,8 +543,8 @@
           "path": "01_daily/weather/2026-10-15_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9329 vix=calm yields=falling",
-          "size": 9329,
+          "reason": "sectors=11 bytes=9330 vix=calm yields=falling",
+          "size": 9330,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
@@ -760,8 +760,8 @@
           "path": "01_daily/weather/2026-10-15_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9329 vix=calm yields=falling",
-          "size": 9329,
+          "reason": "sectors=11 bytes=9330 vix=calm yields=falling",
+          "size": 9330,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
@@ -827,7 +827,7 @@
           "size": 83837,
           "said": "Stock book \u2014 2026-10-15",
           "bullets": [
-            "_Generated 2026-10-15T08:35:06.586234-04:00_",
+            "_Generated 2026-10-15T08:50:31.314330-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -1041,24 +1041,6 @@
     }
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T07:23:05.562437-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-15_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2241897,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -4145,6 +4127,59 @@
         }
       ],
       "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-15\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T08:50:57.029082-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-15_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1450660,
+          "preview": "1d BUY AMN, HITI, CON, SGRY, NTAP, MQ, ASTH, IT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, POWL, TE, NRGV, NNDM"
+        },
+        {
+          "path": "data/stock_book/2026-10-15_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-15_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2503,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-15_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12442,
+          "preview": "2026-10-15 BUY AMN, HITI, CON, SGRY, NTAP, MQ, ASTH, IT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, POWL, TE, NRGV, NNDM"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12442,
+          "preview": "2026-10-15 BUY AMN, HITI, CON, SGRY, NTAP, MQ, ASTH, IT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, POWL, TE, NRGV, NNDM"
+        },
+        {
+          "path": "01_daily/2026-10-15_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84944,
+          "preview": "# Stock book \u2014 2026-10-15\n_Generated 2026-10-15T08:50:31.314330-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY AMN, HITI, CON, SGRY, NTAP, MQ, ASTH, IT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, POWL, TE, NRGV, NNDM \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-15 BUY AMN, HITI, CON, SGRY, NTAP, MQ, ASTH, IT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, POWL, TE, NRGV, NNDM \u00b7 2026-10-15 BUY AMN, HITI, CON, SGRY, NTAP, MQ, ASTH, IT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, POWL, TE, NRGV, NNDM \u00b7 # Stock book \u2014 2026-10-15\n_Generated 2026-10-15T08:50:31.314330-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
