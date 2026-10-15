@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T07:24:54.927555-04:00",
+  "generated_at": "2026-10-15T07:34:05.365302-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -806,7 +806,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1475489,
+          "size": 1476285,
           "said": "1d BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
@@ -817,10 +817,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 84297,
+          "size": 84353,
           "said": "Stock book \u2014 2026-10-15",
           "bullets": [
-            "_Generated 2026-10-15T06:28:12.415981-04:00_",
+            "_Generated 2026-10-15T07:25:39.869584-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -884,7 +884,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1475489,
+          "size": 1476285,
           "said": "1d BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
@@ -1034,31 +1034,6 @@
     }
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T05:41:09.396231-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-10-15_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9327,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-15_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5065,
-          "preview": "# Weather report \u2014 2026-10-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -3745,6 +3720,59 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-15\n_Generated 2026-10-15T07:24:52.862668-04:00 \u00b7 export=data/exports/finviz_2026-10-15.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11739 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T07:33:57.896001-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-15_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1476285,
+          "preview": "1d BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
+        },
+        {
+          "path": "data/stock_book/2026-10-15_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-15_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2537,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-15_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12444,
+          "preview": "2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12444,
+          "preview": "2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
+        },
+        {
+          "path": "01_daily/2026-10-15_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 85473,
+          "preview": "# Stock book \u2014 2026-10-15\n_Generated 2026-10-15T07:25:39.869584-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 # Stock book \u2014 2026-10-15\n_Generated 2026-10-15T07:25:39.869584-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
