@@ -62,6 +62,11 @@
     "id": "single_preopen",
     "check": "concurrency preopen-all + flock",
     "enforced": "y"
+   },
+   {
+    "id": "ecs_code_current",
+    "check": "ecs code stale: git rev-parse HEAD == ls-remote origin main for /home/gha/fullscan and /home/gha/fullscan-paper-open",
+    "enforced": "y"
    }
   ],
   "openclaw_grok_ping": [
@@ -248,6 +253,13 @@
  },
  "checks": {
   "preopen_all": [
+   {
+    "id": "ecs_code_current",
+    "plain": "ecs code stale: ECS checkout HEAD must equal origin/main (GitHub main)",
+    "extra_checkouts": [
+     "/home/gha/fullscan-paper-open"
+    ]
+   },
    {
     "id": "runner_is_ecs",
     "plain": "Pre-Open is not on the ECS box (GitHub's own servers cannot reach Grok)"
