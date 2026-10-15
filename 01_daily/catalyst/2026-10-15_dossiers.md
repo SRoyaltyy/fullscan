@@ -10,7 +10,7 @@
 - **META** [earnings] earnings AMC
 - **TSLA** [earnings] earnings AMC
 - **NFLX** [earnings] earnings AMC
-- **UEC** [override_captain] OVERRIDE Uranium
+- **NE** [override_captain] OVERRIDE card Oil & Gas Drilling
 
 ## DOSSIERS
 - **GOOG** Bearish conv=16 +7/-8 [earnings] backend=grok_native
@@ -19,5 +19,12 @@
   - negative Adverse litigation outcome/patent invalidation/antitrust ruling 2026-07-23: the European Commission fined Google (Alphabet) a total of €890 million for two breaches o
   - negative Policy reversal/new regulation/tax increase 2026-10-05: Poland's competition authority (UOKiK) opened an investigation in October 2026, suspecting
   - positive Earnings beat (revenue, EBITDA, EPS) 2026-07-22: total consolidated revenue of $119.8 billion (+24% YoY, or +23% constant currency).
+- **GOOGL** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 GOOGL
+- **MSFT** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 MSFT
+- **AMZN** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 AMZN
+- **META** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 META
+- **TSLA** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 TSLA
+- **NFLX** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NFLX
+- **NE** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NE
 
 CATALYST_DAILY_DEGRADED 1/8
