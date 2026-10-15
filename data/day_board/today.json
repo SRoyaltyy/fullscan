@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T05:41:51.360896-04:00",
+  "generated_at": "2026-10-15T05:45:03.440890-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T04:40:11.943046-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-15_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 459585,
-          "preview": "raw=562 usable=97 single=40 \u00b7 Dollar retreats from 18-month high despite hot CPI as Fed officials temper hike  | Dollar retreats from 18-month high despite hot CPI as Fed officials temper hike  | Fed Interest Rate Hike Seems More Likely This Month After Alarming Inflation Dat | Core inflation has not cooled as expected; does the Federal Reserve still have r | Dollar retreats from 18-month high as Treasury yields dip; Fed hike bets ease - "
-        },
-        {
-          "path": "01_daily/news/2026-10-15_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 7712,
-          "preview": "# News Parse v2 \u2014 2026-10-15T04:40:00.723032-04:00\nWindow\u224848h | news_mode=on | raw=562 | usable=97 | single_name=40 | noise_dropped=425\nusable polarity={'+': 1, '-': 16, 'mixed': 1, 'neutral': 79}"
-        }
-      ],
-      "preview": "raw=562 usable=97 single=40 \u00b7 Dollar retreats from 18-month high despite hot CPI as Fed officials temper hike  | Dollar retreats from 18-month high despite hot CPI as Fed officials temper hike  | Fed Interest Rate Hike Seems More Likely This Month After Alarming Inflation Dat | Core inflation has not cooled as expected; does the Federal Reserve still have r | Dollar retreats from 18-month high as Treasury yields dip; Fed hike bets ease -  \u00b7 # News Parse v2 \u2014 2026-10-15T04:40:00.723032-04:00\nWindow\u224848h | news_mode=on | raw=562 | usable=97 | single_name=40 | noise_dropped=425\nusable polarity={'+': 1, '-': 16, 'mixed': 1, 'neutral': 79}"
-    },
     {
       "key": "events",
       "title": "Event scanner (primary)",
@@ -185,6 +160,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AUPH, RSG, ELV, CVLT, YPF \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PFE, A, CVLT, CDNA, ROST"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T05:45:02.584384-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-15_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9330,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-15_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5068,
+          "preview": "# Weather report \u2014 2026-10-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
