@@ -24,6 +24,27 @@ def test_ok_no_retry(monkeypatch):
     assert r["ok"] and g.n == 0
 
 
+def test_spent_shot_does_not_open_another_search(monkeypatch):
+    from src import run_predict
+    monkeypatch.setenv("OPENCLAW_RESTART_ON_TIMEOUT", "1")
+    monkeypatch.setattr(run_predict.config, "openclaw_enabled", lambda: True)
+    monkeypatch.setattr(
+        "src.openclaw_fastfail.predict_attempt", lambda restart=None: "skip")
+    calls = []
+    monkeypatch.setattr(
+        run_predict.deepseek_client, "_openclaw_chat",
+        lambda *a, **k: calls.append(("openclaw", k.get("tools"))))
+    monkeypatch.setattr(
+        run_predict.deepseek_client, "chat",
+        lambda *a, **k: calls.append(("chat", k.get("tools"),
+                                      k.get("force_deepseek"))))
+    monkeypatch.setattr(
+        run_predict.deepseek_client, "_free_primary_ready", lambda: False)
+    assert run_predict._grok_then_free(
+        "r", "u", "2026-10-15", "PREDICT 2026-10-15") == ""
+    assert calls == []
+
+
 def test_empty_retries_grok_only(monkeypatch):
     monkeypatch.setattr(h, "breaker_opened", lambda: False)
     monkeypatch.setattr(h, "reset_breaker", lambda: None)

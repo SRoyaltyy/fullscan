@@ -101,6 +101,20 @@ def _clear_breaker() -> None:
     dc.reset_openclaw_breaker("fastfail predict shot")
 
 
+def clear_predict_shot() -> None:
+    """Allow one no-search essay after a heal proves 17+25.
+
+    The shot file is per run. The first nosearch can be spent while the
+    gateway is still wedged. A later 42 must not be followed by a native
+    search turn (run 38720850552).
+    """
+    _restarted, shot = _markers()
+    try:
+        shot.unlink(missing_ok=True)
+    except OSError:
+        pass
+
+
 def predict_attempt(restart=None) -> str:
     """How the general predict may call Grok: search, nosearch, or skip.
 

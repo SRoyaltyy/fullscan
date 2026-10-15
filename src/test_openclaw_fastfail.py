@@ -36,6 +36,8 @@ def test_predict_attempt_search_then_nosearch_then_skip(monkeypatch, tmp_path):
     monkeypatch.setattr(dc, "_breaker_file", lambda: str(tmp_path / "b.txt"))
     assert ff.predict_attempt(restart=lambda: True) == "nosearch"
     assert ff.predict_attempt(restart=lambda: True) == "skip"
+    ff.clear_predict_shot()
+    assert ff.predict_attempt(restart=lambda: True) == "nosearch"
 
 
 def test_probe_ok_and_restart(monkeypatch, tmp_path):

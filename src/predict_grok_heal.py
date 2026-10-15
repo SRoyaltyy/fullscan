@@ -94,6 +94,10 @@ def heal(date: str, predict_ok, run_predict, *, log_text=lambda: "",
                              + (" — auth: device login needed" if auth else ""))
             break
         reset_breaker()
+        # The 42 just proved a no-search call. Spend the retry on one
+        # no-search essay, not a native-search turn.
+        from .openclaw_fastfail import clear_predict_shot
+        clear_predict_shot()
         out["retries"] += 1
         env = dict(os.environ, GROK_ONLY="1", LLM_BACKEND="grok",
                    PREDICT_GROK_REWRITE="1", OPENCLAW_RESTART_ON_TIMEOUT="1")

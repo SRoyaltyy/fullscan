@@ -133,8 +133,22 @@ def _grok_then_free(rubric: str, user_msg: str, date_str: str,
                     ) or ""
                     if text.strip():
                         return text
-    # Grok shots are spent. Do not open another native-search turn.
-    # The free primary (glm-5.3-flash) answers; paid api.deepseek.com stays blocked.
+        # The search shot and the one no-search shot are spent, or the
+        # shot file already said skip. chat(tools=True) would open another
+        # native-search turn. Run 38720850552 did that after a 6.9s 42.
+        if deepseek_client._free_primary_ready():
+            deepseek_client._FALLBACK["free_primary"] = True
+            try:
+                return deepseek_client.chat(
+                    messages, model=config.MODEL_PREDICT, tools=False,
+                    max_tokens=8000, force_deepseek=True,
+                    transcript_path=transcript, trace_path=trace,
+                    stage_label=stage_label)
+            finally:
+                deepseek_client._FALLBACK["free_primary"] = False
+        return ""
+    # Restart-on-timeout is off. One Grok search, then the free model.
+    # Paid api.deepseek.com stays blocked.
     if deepseek_client._free_primary_ready():
         deepseek_client._FALLBACK["free_primary"] = True
         try:
