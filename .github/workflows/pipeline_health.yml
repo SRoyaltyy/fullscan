@@ -91,6 +91,11 @@ jobs:
         run: |
           set -uo pipefail
           export HOME=/home/gha
+          DATE_P="${{ github.event.inputs.date }}"
+          DATE_P="${DATE_P:-$(TZ=America/New_York date +%F)}"
+          python3 -m src.workflow_progress beat --workflow pipeline_health --date "$DATE_P" --stages audit --stage audit >> /tmp/progress_beat.log 2>&1 &
+          echo $! > /tmp/progress_beat.pid
+          trap 'kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true' EXIT
           chmod +x scripts/enable_openclaw_chat.sh scripts/ecs_preopen.sh scripts/ecs_map_postclose.sh || true
 
           JOB="${{ github.event.inputs.job }}"
@@ -118,6 +123,7 @@ jobs:
           echo "CMD: python -m src.pipeline_health ${ARGS[*]}"
           echo "JOB=$JOB ET_HM=$(TZ=America/New_York date +%H%M)"
           python -m src.pipeline_health "${ARGS[@]}"
+          python3 -m src.workflow_progress touch --workflow pipeline_health --date "$DATE_P" --stage audit --state ok || true
 
       - name: Show report
         if: always()

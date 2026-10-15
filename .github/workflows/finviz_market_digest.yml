@@ -122,7 +122,11 @@ jobs:
           ARGS=(--date "$DATE")
           [ "${{ github.event.inputs.force }}" = "true" ] && ARGS+=(--force)
           echo "CMD: python -m src.finviz_market_digest ${ARGS[*]}"
+          python3 -m src.workflow_progress beat --workflow homepage_digest --date "$DATE" --stages morning,close --stage morning >> /tmp/progress_beat.log 2>&1 &
+          echo $! > /tmp/progress_beat.pid
+          trap 'kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true' EXIT
           python -m src.finviz_market_digest "${ARGS[@]}"
+          python3 -m src.workflow_progress touch --workflow homepage_digest --date "$DATE" --stage morning --state ok || true
 
       - name: Live homepage market digest (close answer-key)
         if: env.slot == 'close' && github.event.inputs.backfill_from == ''
@@ -137,7 +141,11 @@ jobs:
           ARGS=(--date "$DATE" --close)
           [ "${{ github.event.inputs.force }}" = "true" ] && ARGS+=(--force)
           echo "CMD: python -m src.finviz_market_digest ${ARGS[*]}"
+          python3 -m src.workflow_progress beat --workflow homepage_digest --date "$DATE" --stages morning,close --stage close >> /tmp/progress_beat.log 2>&1 &
+          echo $! > /tmp/progress_beat.pid
+          trap 'kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true' EXIT
           python -m src.finviz_market_digest "${ARGS[@]}"
+          python3 -m src.workflow_progress touch --workflow homepage_digest --date "$DATE" --stage close --state ok || true
 
       - name: Wayback / archive.ph backfill
         if: github.event.inputs.backfill_from != ''

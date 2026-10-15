@@ -34,6 +34,11 @@ jobs:
           }
       - name: Real Grok completion through the gateway
         run: |
+          DATE=$(TZ=America/New_York date +%F)
+          python3 -m src.workflow_progress beat --workflow supergrok_canary --date "$DATE" --stages ping --stage ping >> /tmp/progress_beat.log 2>&1 &
+          echo $! > /tmp/progress_beat.pid
+          trap 'kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true' EXIT
           sudo -n env -u XAI_API_KEY -u OPENCLAW_XAI_API_KEY -u GROK_API_KEY \
             FULLSCAN_HOME=/home/gha GITHUB_STEP_SUMMARY="$GITHUB_STEP_SUMMARY" \
             python3 scripts/grok_auth_canary.py
+          python3 -m src.workflow_progress touch --workflow supergrok_canary --date "$DATE" --stage ping --state ok || true

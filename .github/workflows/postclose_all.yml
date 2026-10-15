@@ -41,6 +41,10 @@ on:
         description: "Closed session YYYY-MM-DD (empty = last closed ET)"
         required: false
         default: ""
+      stage:
+        description: "empty = full pack. Solo: outcome, horizon, reflect, sector_outcomes, sector_reflect, learn, captains. A sealed output is refused."
+        required: false
+        default: ""
       force:
         description: "true = rewrite even if files exist"
         required: false
@@ -138,7 +142,7 @@ jobs:
           }
 
       - name: Skip if post-close pack already on disk (no LLM)
-        if: env.skip != 'yes' && github.event.inputs.force != 'true'
+        if: env.skip != 'yes' && github.event.inputs.force != 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.stage == '')
         run: |
           DATE="${{ github.event.inputs.run_date }}"
           if [ -z "$DATE" ] && [ "${{ github.event_name }}" = "push" ]; then
@@ -206,7 +210,19 @@ jobs:
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ "$FORCE" = "true" ] && ARGS+=(--force)
           echo "CMD: python -m src.run_postclose_all ${ARGS[*]}"
-          python -m src.run_postclose_all "${ARGS[@]}"
+          STAGE="${{ github.event.inputs.stage }}"
+          if [ -n "$STAGE" ]; then
+            if [ -z "$DATE" ]; then
+              DATE=$(python3 -c "from src.skip_if_good import last_closed_session; print(last_closed_session())")
+              echo "solo stage — last_closed=$DATE"
+            fi
+            SOLO=(--workflow postclose --stage "$STAGE" --date "$DATE")
+            [ "$FORCE" = "true" ] && SOLO+=(--force)
+            echo "CMD: python -m src.workflow_stages run ${SOLO[*]}"
+            python -m src.workflow_stages run "${SOLO[@]}"
+          else
+            python -m src.run_postclose_all "${ARGS[@]}"
+          fi
 
       - name: Commit post-close artifacts
         if: always() && env.skip != 'yes' && env.skip_python != 'yes'

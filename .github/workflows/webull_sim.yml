@@ -59,7 +59,13 @@ jobs:
         if: github.event_name != 'pull_request'
         env:
           THEME_RADAR_DIR: ${{ runner.temp }}/theme-radar
-        run: python3 -m src.webull_sim
+        run: |
+          DATE=$(TZ=America/New_York date +%F)
+          python3 -m src.workflow_progress beat --workflow webull_sim --date "$DATE" --stages rows --stage rows >> /tmp/progress_beat.log 2>&1 &
+          echo $! > /tmp/progress_beat.pid
+          trap 'kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true' EXIT
+          python3 -m src.webull_sim
+          python3 -m src.workflow_progress touch --workflow webull_sim --date "$DATE" --stage rows --state ok || true
       - name: Land the sim books
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |

@@ -104,6 +104,8 @@ def _push_pack(date: str) -> None:
         "01_daily/general/", "01_daily/sectors/", "01_daily/map_heat/",
         "01_daily/news/", "01_daily/_transcripts/", "01_daily/_channel1/",
         f"01_daily/{date}_learnings.md",
+        f"01_daily/_progress/{date}_postclose.json",
+        "01_daily/_progress/manifest.json",
         "02_lessons/", "03_scoreboard/",
         "00_grounding/mutable_policy.md",
         "00_grounding/engine_policy.json",
@@ -135,7 +137,58 @@ def run(date: str | None = None, force: bool = False,
         _run_one(one, force=force)
 
 
+_TRACKER = None
+
+
+def _progress_begin(date: str) -> None:
+    global _TRACKER
+    try:
+        from .workflow_progress import ProgressWriter, StageBoard
+        from .workflow_stages import POSTCLOSE_GROUPS, stage_names
+        names = stage_names("postclose")
+        model = (os.environ.get("LLM_MODEL_OVERRIDE")
+                 or os.environ.get("LLM_BACKEND") or "")
+        writer = ProgressWriter(
+            "postclose", date, names, model=model, heartbeat=True)
+        writer.begin(reset=True, heartbeat=True)
+        _TRACKER = StageBoard(writer, POSTCLOSE_GROUPS)
+    except Exception as exc:  # noqa: BLE001
+        print(f"[postclose-all] WARN: progress begin failed: {exc}", flush=True)
+        _TRACKER = None
+
+
+def _progress_end() -> None:
+    global _TRACKER
+    tracker = _TRACKER
+    _TRACKER = None
+    if tracker is None:
+        return
+    try:
+        tracker.close_pending()
+        tracker.writer.finish()
+    except Exception as exc:  # noqa: BLE001
+        print(f"[postclose-all] WARN: progress end failed: {exc}", flush=True)
+
+
+def _note(title: str, status: str, error: str = "") -> None:
+    tracker = _TRACKER
+    if tracker is None or title not in tracker.key_stage:
+        return
+    try:
+        tracker.on_key(title, status, error=error)
+    except Exception as exc:  # noqa: BLE001
+        print(f"[postclose-all] WARN: progress {title}: {exc}", flush=True)
+
+
 def _run_one(date: str, force: bool = False) -> None:
+    _progress_begin(date)
+    try:
+        _run_one_body(date, force=force)
+    finally:
+        _progress_end()
+
+
+def _run_one_body(date: str, force: bool = False) -> None:
     target = next_weekday(date)
     py = sys.executable
     print("")
@@ -156,14 +209,17 @@ def _run_one(date: str, force: bool = False) -> None:
         if morning_box_yield():
             print("[postclose-all] morning window — stopping so reauth "
                   "and Pre-Open can use this ECS box")
+            _note(title, "skipped", "morning window")
             return 0
         if done and not force:
             print(f"[postclose-all] skip {title} (already on disk)")
+            _note(title, "ok")
             return 0
         left = seconds_until_yield()
         if left is not None and timeout_s is not None:
             timeout_s = min(timeout_s, max(30, int(left)))
         print(f"\n[postclose-all] → {title}")
+        _note(title, "running")
         prev = None
         if llm_timeout_s is not None:
             prev = os.environ.get("OPENCLAW_TIMEOUT")
@@ -185,6 +241,9 @@ def _run_one(date: str, force: bool = False) -> None:
                     os.environ["OPENCLAW_TIMEOUT"] = prev
         if code != 0:
             print(f"[postclose-all] WARN: {title} exited {code}")
+            _note(title, "failed", f"exit {code}")
+        else:
+            _note(title, "ok")
         return code
 
     llm_to = _llm_http_timeout()

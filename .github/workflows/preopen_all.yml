@@ -71,6 +71,10 @@ on:
         description: "YYYY-MM-DD (empty = today ET)"
         required: false
         default: ""
+      stage:
+        description: "empty = full packet. Solo: prep, news, judge, general_predict, sectors, sectors:<Name>, map_heat, book_sleeve, catalyst, qc. A sealed output is refused."
+        required: false
+        default: ""
       force:
         description: "true = ignore 09:25 ET cutoff AND skip-if-good (full rewrite)"
         required: false
@@ -124,31 +128,36 @@ jobs:
     outputs:
       go: ${{ steps.g.outputs.go }}
     steps:
+      - uses: actions/checkout@v4
       - id: g
         run: |
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
           DOW=$(TZ=America/New_York date +%u)
           FORCE="${{ github.event.inputs.force }}"
-          echo "ET_HM=$ET_HM DOW=$DOW event=${{ github.event_name }} force=$FORCE"
-          if [ "${{ github.event_name }}" = "push" ] && [ "$FORCE" != "true" ]; then
-            if [ "$ET_HM" -lt 355 ] || [ "$ET_HM" -ge 925 ]; then
-              echo "before 03:55 ET — overnight merge/touch is not a packet. Weekday cron 05:55 + 05:40 scrape own the clock."
-              echo "after 09:25 ET is not a packet either (a 23:07 ET merge must not freeze tomorrow's predict)."
-              echo "go=no" >> "$GITHUB_OUTPUT"
-            elif [ "$DOW" -ge 6 ]; then
-              echo "weekend push poke swallowed — weekday cron owns the clock"
-              echo "go=no" >> "$GITHUB_OUTPUT"
-            else
-              echo "go=yes" >> "$GITHUB_OUTPUT"
-            fi
-          else
+          EVENT="${{ github.event_name }}"
+          echo "ET_HM=$ET_HM DOW=$DOW event=$EVENT force=$FORCE"
+          if python3 -m src.workflow_stages gate --event "$EVENT" --et-hm "$ET_HM" --dow "$DOW" --force "$FORCE"; then
             echo "go=yes" >> "$GITHUB_OUTPUT"
+          else
+            if [ "$EVENT" = "push" ] && [ "$FORCE" != "true" ]; then
+              if [ "$ET_HM" -lt 355 ] || [ "$ET_HM" -ge 925 ]; then
+                echo "before 03:55 ET — overnight merge/touch is not a packet. Weekday cron 05:55 + 05:40 scrape own the clock."
+                echo "after 09:25 ET is not a packet either (a 23:07 ET merge must not freeze tomorrow's predict)."
+              fi
+              if [ "$ET_HM" -ge 300 ] && [ "$ET_HM" -lt 940 ]; then
+                echo "push during 03:00-09:40 ET is not a Pre-Open packet"
+              fi
+              if [ "$DOW" -ge 6 ]; then
+                echo "weekend push poke swallowed — weekday cron owns the clock"
+              fi
+            fi
+            echo "go=no" >> "$GITHUB_OUTPUT"
           fi
 
   scrape:
     name: Finviz scrape (ubuntu — ECS 403s)
     needs: gate
-    if: needs.gate.outputs.go == 'yes'
+    if: needs.gate.outputs.go == 'yes' && (github.event_name != 'workflow_dispatch' || github.event.inputs.stage == '' || github.event.inputs.stage == 'prep')
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -169,7 +178,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Skip if digest + overlay already on disk
-        if: env.skip != 'yes' && github.event.inputs.force != 'true'
+        if: env.skip != 'yes' && github.event.inputs.force != 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.stage == '')
         run: |
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
@@ -216,7 +225,7 @@ jobs:
   land_book:
     name: Land book + green (ubuntu — no Grok, no ECS)
     needs: [gate, scrape]
-    if: ${{ needs.gate.outputs.go == 'yes' && always() && github.event.inputs.with_book != 'false' }}
+    if: ${{ needs.gate.outputs.go == 'yes' && always() && github.event.inputs.with_book != 'false' && (github.event_name != 'workflow_dispatch' || github.event.inputs.stage == '') }}
     runs-on: ubuntu-latest
     timeout-minutes: 90
     env:
@@ -405,7 +414,7 @@ jobs:
           }
 
       - name: Twin guard (completed Pre-Open pass already landed)
-        if: env.skip != 'yes' && github.event.inputs.force != 'true'
+        if: env.skip != 'yes' && github.event.inputs.force != 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.stage == '')
         run: |
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
@@ -415,7 +424,7 @@ jobs:
           fi
 
       - name: Skip if packet AND stock book already on disk (no LLM)
-        if: env.skip != 'yes' && github.event.inputs.force != 'true'
+        if: env.skip != 'yes' && github.event.inputs.force != 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.stage == '')
         run: |
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
@@ -457,7 +466,7 @@ jobs:
           bash scripts/ensure_ecs_clock.sh
 
       - name: Gate — weekend
-        if: env.skip != 'yes' && github.event.inputs.force != 'true'
+        if: env.skip != 'yes' && github.event.inputs.force != 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.stage == '')
         run: |
           DOW=$(TZ=America/New_York date +%u)
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
@@ -597,7 +606,16 @@ jobs:
           # 40 min, under the 50m step kill. A cancel revokes GITHUB_TOKEN
           # mid-push (2026-10-14 15:16Z). Tail steps must finish first.
           export FULLSCAN_STEP_DEADLINE=$(( $(date +%s) + 2400 ))
-          python -m src.run_preopen_all "${ARGS[@]}"
+          STAGE="${{ github.event.inputs.stage }}"
+          if [ -n "$STAGE" ]; then
+            [ -n "$DATE" ] || DATE=$(TZ=America/New_York date +%F)
+            SOLO=(--workflow preopen --stage "$STAGE" --date "$DATE")
+            [ "$FORCE" = "true" ] && SOLO+=(--force)
+            echo "CMD: python -m src.workflow_stages run ${SOLO[*]}"
+            python -m src.workflow_stages run "${SOLO[@]}"
+          else
+            python -m src.run_preopen_all "${ARGS[@]}"
+          fi
 
       - name: Show QC
         if: "!cancelled() && env.skip != 'yes' && env.skip_python != 'yes'"
@@ -616,7 +634,7 @@ jobs:
           export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
           unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
           cd "${GITHUB_WORKSPACE:-.}"
-          PATHS=(01_daily/_ecs_clock.md data/day_board/)
+          PATHS=(01_daily/_ecs_clock.md data/day_board/ 01_daily/_progress/)
           if [ "${skip_python:-}" != "yes" ]; then
             PATHS+=(01_daily/general/ 01_daily/sectors/ 01_daily/events
               01_daily/news/ 01_daily/map_heat/ 01_daily/catalyst/
@@ -660,7 +678,19 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           chmod +x scripts/publish_dashboard.sh || true
+          D="${{ github.event.inputs.run_date }}"
+          D="${D:-$(TZ=America/New_York date +%F)}"
+          python3 -m src.workflow_progress touch --workflow preopen --date "$D" --stage deploy --state running || true
+          set +e
           bash scripts/publish_dashboard.sh
+          code=$?
+          set -e
+          if [ "$code" -eq 0 ]; then
+            python3 -m src.workflow_progress touch --workflow preopen --date "$D" --stage deploy --state ok || true
+          else
+            python3 -m src.workflow_progress touch --workflow preopen --date "$D" --stage deploy --state failed --error "publish exit $code" || true
+          fi
+          exit "$code"
 
       - name: Refresh GitHub Pages workflow (backup)
         if: "!cancelled() && env.skip != 'yes'"
