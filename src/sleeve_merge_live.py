@@ -993,10 +993,12 @@ def inject_today_panel(html: str, panel: str) -> str:
 
 def inject_today_from_disk(path: Path | None = None) -> bool:
     path = path or (DASH_DIR / "index.html")
-    if not TODAY_JSON.is_file() or not path.is_file():
+    from .sleeve_live_card import flatten_card_path
+    src = flatten_card_path(TODAY_JSON, TODAY_JSON.with_name("today_live.json"))
+    if not src.is_file() or not path.is_file():
         return False
     try:
-        card = json.loads(TODAY_JSON.read_text(encoding="utf-8"))
+        card = json.loads(src.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return False
     html = path.read_text(encoding="utf-8")
@@ -1121,7 +1123,10 @@ def write_card(card: dict) -> dict[str, Path]:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     DASH_DIR.mkdir(parents=True, exist_ok=True)
     DAILY_DIR.mkdir(parents=True, exist_ok=True)
-    TODAY_JSON.write_text(json.dumps(card, indent=2), encoding="utf-8")
+    # Side file: today.json stays frozen 03:00-09:40 ET (src/sleeve_live_card.py).
+    from .sleeve_live_card import write_today
+    wrote = write_today(card, today_path=TODAY_JSON,
+                        live_path=TODAY_JSON.with_name("today_live.json"))
     POSITIONS_JSON.write_text(
         json.dumps(positions_doc(card), indent=2), encoding="utf-8")
     daily = DAILY_DIR / f"{card['date']}_flatten_card.md"
@@ -1143,7 +1148,7 @@ def write_card(card: dict) -> dict[str, Path]:
             f"{today_panel_html(card)}</main></body></html>",
             encoding="utf-8")
     return {
-        "today": TODAY_JSON,
+        **wrote,
         "positions": POSITIONS_JSON,
         "daily": daily,
         "dashboard": html_path,
