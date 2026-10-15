@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T23:15:36.721621-04:00",
+  "generated_at": "2026-10-14T23:20:45.953303-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -808,10 +808,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2243111,
-          "said": "204 rows",
+          "size": 2261198,
+          "said": "208 rows",
           "bullets": [
-            "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, CORT"
+            "HALO, ONC, LLY, HRMY, ARQT, AVAH, WAY, CORT"
           ]
         },
         {
@@ -833,9 +833,9 @@
           "path": "data/stock_book/2026-10-14_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=188",
-          "size": 1477625,
-          "said": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
+          "reason": "horizons=5 names=184",
+          "size": 1464487,
+          "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
           "bullets": []
         },
         {
@@ -845,10 +845,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 71632,
+          "size": 69370,
           "said": "Stock book \u2014 2026-10-14",
           "bullets": [
-            "_Generated 2026-10-14T23:14:58.278718-04:00_",
+            "_Generated 2026-10-14T09:18:35.516113-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -889,9 +889,9 @@
           "bullets": []
         }
       ],
-      "said": "204 rows",
+      "said": "208 rows",
       "bullets": [
-        "HALO, ONC, LLY, HRMY, ETON"
+        "HALO, ONC, LLY, HRMY, ARQT"
       ]
     },
     {
@@ -911,9 +911,9 @@
           "path": "data/stock_book/2026-10-14_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=188",
-          "size": 1477625,
-          "said": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
+          "reason": "horizons=5 names=184",
+          "size": 1464487,
+          "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
           "bullets": []
         },
         {
@@ -962,70 +962,70 @@
   "selections": {
     "buy_1d": [
       {
+        "ticker": "NTAP",
+        "score": 0.18239590894266144
+      },
+      {
         "ticker": "BAND",
         "score": 0.5054596446690593
       },
       {
         "ticker": "CNK",
-        "score": 0.6357966990020554
+        "score": 0.6462022471693012
       },
       {
         "ticker": "WLY",
-        "score": 0.564450143358312
+        "score": 0.5881875461728525
       },
       {
         "ticker": "FIS",
-        "score": 0.2277386619475122
+        "score": 0.22514446794935988
       },
       {
         "ticker": "PRCH",
-        "score": 0.5607716584458136
+        "score": 0.5404266780690136
       },
       {
         "ticker": "TMUS",
-        "score": 0.44425258383753136
+        "score": 0.4429443674043055
       },
       {
         "ticker": "UPWK",
-        "score": 0.4653823007267254
-      },
-      {
-        "ticker": "TDS",
-        "score": 0.4243288052195573
+        "score": 0.4411786722204654
       }
     ],
     "sell_1d": [
       {
         "ticker": "EOSE",
-        "score": -0.32888358264634404
+        "score": -0.3332996476105277
       },
       {
         "ticker": "TE",
-        "score": -0.29309623791804923
+        "score": -0.29778163594966284
       },
       {
         "ticker": "NEOV",
-        "score": -0.34925812899442465
+        "score": -0.357067975796452
       },
       {
         "ticker": "PLUG",
-        "score": -0.21282865720419036
+        "score": -0.21292045250555586
       },
       {
         "ticker": "OKLO",
-        "score": -0.24039000857402237
+        "score": -0.2387618044895793
       },
       {
         "ticker": "FCEL",
-        "score": -0.22290235609057574
+        "score": -0.22590146154242213
       },
       {
         "ticker": "NNDM",
-        "score": -0.16148069733311426
+        "score": -0.16961541699668248
       },
       {
         "ticker": "QUBT",
-        "score": -0.16802532043576818
+        "score": -0.17822254200443488
       }
     ],
     "flatten": {
@@ -1072,31 +1072,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat_research",
-      "title": "Map heat morning delta refresh",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T09:53:19.152094-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-14_research.json",
-          "ok": true,
-          "reason": "",
-          "size": 26057,
-          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-14_research.md",
-          "ok": true,
-          "reason": "",
-          "size": 26057,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-14\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-14\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -3819,6 +3794,31 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T23:20:44.920077-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-14_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9592,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 7.7, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': -0.686, 'dir': 'flat', 'conf': 0.427, 'source': 'llm'}, Consumer Cyclical={'score': -0.187, 'dir': 'down', 'conf': 0.507, 'source': 'llm'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-14_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5202,
+          "preview": "# Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 7.7, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': -0.686, 'dir': 'flat', 'conf': 0.427, 'source': 'llm'}, Consumer Cyclical={'score': -0.187, 'dir': 'down', 'conf': 0.507, 'source': 'llm'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
@@ -3828,22 +3828,6 @@
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
   },
   "frozen_write_skips": [
-    {
-      "path": "data/day_board/2026-10-14.json",
-      "at": "2026-10-14T10:32:57-04:00",
-      "commit_msg": "auto: land map_heat [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "data/day_board/2026-10-14.json",
-      "at": "2026-10-14T10:33:07-04:00",
-      "commit_msg": "auto: land map_heat_baseline [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
     {
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T10:33:26-04:00",
@@ -5426,6 +5410,22 @@
       "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-14]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "38674627338",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/weather/2026-10-14_weather.json",
+      "at": "2026-10-14T23:20:46-04:00",
+      "commit_msg": "auto: land weather [2026-10-14]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38675443695",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T23:20:46-04:00",
+      "commit_msg": "auto: land weather [2026-10-14]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38675443695",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
     }
   ]
