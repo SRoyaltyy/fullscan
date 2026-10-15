@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-10-15T03:58:04.596300+00:00",
+  "source": "https://query.wikidata.org/sparql",
+  "license": "Wikidata structured data CC0",
+  "scope": "Broad business/organization identity/industry snapshot; incomplete worldwide coverage, not benchmark-selected",
+  "query": "SELECT DISTINCT ?company ?companyLabel ?companyDescription ?industry ?industryLabel\nWHERE {\n  { SELECT ?company ?industry WHERE { VALUES ?type { wd:Q783794 wd:Q4830453 wd:Q891723 } ?company wdt:P31 ?type; wdt:P452 ?industry. } LIMIT 20000 }\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"en\". }\n}\n",
+  "requested_binding_limit": 20000,
+  "bindings": 18125,
+  "companies": 16711,
+  "sha256": "1bbf0d62ecb1b3583305d86440be71662a865b9318775a7750a5d5b44af350ac",
+  "raw_response_sha256": "9db9b38361330b8fe43a00b27cbcb343d0e14ea39ecbabcbd26dc29b6fefaeba",
+  "contains_sector_labels": false,
+  "contains_event_or_action_labels": false,
+  "gzip_sha256": "6fee2e77925477bc122220ff739adec5bea9272b379be3dbcf611650c3ecc38b",
+  "builder_commit": "b9ceffc777318f1aefef215bbbb7b0e7e8107970",
+  "builder_run_id": 38678921875,
+  "artifact_sha256": "9ee077b68ae792ae82a59a1695e75768556e620ee955bb38d200d1e923963292",
+  "runtime_encoding": "Lossless gzip of original snapshot JSON; mtime zero"
+}

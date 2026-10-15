@@ -1,5 +1,4 @@
 name: Lane batched semantic development comparison
-# Strict GLM development retry after rate limits; model candidate and frozen inputs unchanged.
 on:
   push:
     branches: [codex/lane-provider-repair-20261014]
@@ -19,7 +18,28 @@ concurrency:
   group: lane-provider-validation-${{ github.ref }}-${{ contains(github.event.head_commit.message, '[grok-only]') && 'grok' || 'glm' }}
   cancel-in-progress: false
 jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/
+            /scripts/
+            /tests/fixtures/
+            /data/exports/finviz_latest.csv
+            /data/exports/wikidata_companies.json.gz
+            /data/exports/wikidata_companies_provenance.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate contracts and regression repairs before model calls
+        run: PYTHONPATH=.:scripts python -m unittest discover -s scripts -p 'test_semantic*.py' && PYTHONPATH=.:scripts python -m unittest discover -s scripts -p 'test_provider_repairs.py'
   glm:
+    needs: contracts
     if: ${{ !contains(github.event.head_commit.message, '[grok-only]') && !contains(github.event.head_commit.message, '[skip provider validation]') }}
     runs-on: ubuntu-latest
     timeout-minutes: 65
@@ -33,11 +53,11 @@ jobs:
             /scripts/
             /tests/fixtures/
             /data/exports/finviz_latest.csv
+            /data/exports/wikidata_companies.json.gz
+            /data/exports/wikidata_companies_provenance.json
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Validate contracts and regression repairs
-        run: PYTHONPATH=.:scripts python -m unittest discover -s scripts -p 'test_semantic*.py' && PYTHONPATH=.:scripts python -m unittest discover -s scripts -p 'test_provider_repairs.py'
       - name: Program-only GLM development 100-title replay
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -96,16 +116,17 @@ jobs:
           name: lane-glm-provider-100
           path: provider_results/
   grok:
+    needs: contracts
     if: ${{ contains(github.event.head_commit.message, '[grok-only]') && !contains(github.event.head_commit.message, '[skip provider validation]') }}
     runs-on: [self-hosted, ecs]
-    timeout-minutes: 65
+    timeout-minutes: 75
     env:
       FULLSCAN_HOME: /home/gha
       OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
       OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
-      OPENCLAW_BACKEND_MODEL: xai/grok-4.3
-      OPENCLAW_GUARD_CALL_TIMEOUT: '45'
-      OPENCLAW_LANE_TIMEOUT: '120'
+      OPENCLAW_BACKEND_MODEL: xai/grok-4.6
+      OPENCLAW_GUARD_CALL_TIMEOUT: '60'
+      OPENCLAW_LANE_TIMEOUT: '300'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -117,11 +138,13 @@ jobs:
             /scripts/
             /tests/fixtures/
             /data/exports/finviz_latest.csv
+            /data/exports/wikidata_companies.json.gz
+            /data/exports/wikidata_companies_provenance.json
             /requirements.txt
       - name: Diagnose timer, OAuth and both Grok model paths
         id: diagnose
         working-directory: lane_grok_${{ github.run_id }}_${{ github.run_attempt }}
-        run: PYTHONPATH=.:scripts python3 scripts/diagnose_openclaw_lane.py --output provider_results/grok_diagnostic.json
+        run: PYTHONPATH=.:scripts python3 scripts/diagnose_openclaw_lane.py --output provider_results/grok_diagnostic.json --model xai/grok-4.6
       - name: Program-only Grok development 100-title replay when healthy and idle
         if: steps.diagnose.outputs.ready == 'true'
         working-directory: lane_grok_${{ github.run_id }}_${{ github.run_attempt }}
@@ -129,9 +152,9 @@ jobs:
           PYTHONPATH=. python3 scripts/run_semantic_headlines.py \
             --input tests/fixtures/semantic_frozen_20261014/batch_02.json \
             --output provider_results/grok_program_outputs.json \
-            --limit 100 --budget-seconds 3600 --headline-timeout 450 \
+            --limit 100 --budget-seconds 3600 --headline-timeout 650 \
             --batch-size 10 --batch-interval-seconds 30 --require-catalog --no-review --sector-review --action-review --sector-roles --resume \
-            --providers openclaw --models xai/grok-4.3
+            --providers openclaw --models xai/grok-4.6
       - uses: actions/upload-artifact@v4
         if: always()
         with:

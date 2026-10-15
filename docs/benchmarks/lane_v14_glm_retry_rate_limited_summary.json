@@ -1,0 +1,22 @@
+{
+  "run_id": 38677069775,
+  "commit": "57416471a02987e8d118d3fdf2d6c2f3b58832cd",
+  "scope": "Strict GLM development-only retry of batch02",
+  "status": "provider_rate_limited",
+  "bounded_attempts": 3,
+  "unique_checkpoint_rows": 10,
+  "analyzed_rows": 0,
+  "semantic_accuracy_measured": false,
+  "best_consecutive_passes": 0,
+  "artifacts": {
+    "raw": {
+      "id": 11947280059,
+      "sha256": "0b4f034f1628aa73e568f156d75d2e694dd3e3a6c3cad0676ba229fd5028924d"
+    },
+    "score": {
+      "id": 11946514823,
+      "sha256": "6b4b0d9d87f795267fbcb1fd57603a1b5e4a4b413c16018054590d4e59ea14a6"
+    }
+  },
+  "fresh_holdouts_consumed": 0
+}

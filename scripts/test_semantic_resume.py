@@ -105,6 +105,25 @@ class ResumeAndRateTests(unittest.TestCase):
             self.assertEqual(path.read_bytes(),previous)
             self.assertEqual(json.loads(previous)['title'],'初稿')
 
+    def test_runner_rejects_changed_openclaw_transport_before_resume_calls(self):
+        import contextlib,io,os,sys,types
+        from run_semantic_headlines import main
+        class Client:
+            def __init__(self,*args,**kwargs):
+                self.provider_order=['openclaw'];self.model_allowlist=('xai/grok-4.6',)
+                self.review=False;self.sector_review=False;self.action_review=False;self.sector_roles=False
+                self.catalog=types.SimpleNamespace(metadata={'available':True,'sha256':'catalog'})
+        with tempfile.TemporaryDirectory() as directory:
+            inp=pathlib.Path(directory)/'input.json';out=pathlib.Path(directory)/'output.json'
+            inp.write_text('[]')
+            argv=['runner','--input',str(inp),'--output',str(out),'--no-review','--resume']
+            with patch.object(sys,'argv',argv),patch('run_semantic_headlines.SemanticHeadlineClient',Client),patch('run_semantic_headlines.signal.signal'),contextlib.redirect_stdout(io.StringIO()):
+                with patch.dict(os.environ,{'OPENCLAW_LANE_TIMEOUT':'300','OPENCLAW_AGENT':'openclaw/default'}):main()
+                saved=json.loads(out.read_text())
+                self.assertEqual(saved['configuration']['openclaw_transport'],{'agent':'openclaw/default','timeout_seconds':300})
+                with patch.dict(os.environ,{'OPENCLAW_LANE_TIMEOUT':'120','OPENCLAW_AGENT':'openclaw/default'}):
+                    with self.assertRaisesRegex(ValueError,'configuration'):main()
+
     def test_runner_resumes_partial_batch_without_repeating_completed_row(self):
         import contextlib,io,sys,types
         from run_semantic_headlines import main

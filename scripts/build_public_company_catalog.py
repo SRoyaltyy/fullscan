@@ -4,7 +4,7 @@ Wikidata CC0 business facts are candidates for model disambiguation, never
 event labels, public-authority labels, or eleven-sector benchmark answers.
 This builder deliberately accepts no title, fixture, or benchmark inputs.
 """
-import argparse,datetime,hashlib,json,pathlib,time,urllib.error,urllib.parse,urllib.request
+import argparse,datetime,gzip,hashlib,json,pathlib,time,urllib.error,urllib.parse,urllib.request
 
 ENDPOINT="https://query.wikidata.org/sparql"
 
@@ -13,7 +13,7 @@ def query_text(limit):
     # Snapshot bytes, not the service's transient row order, pin this candidate.
     return """SELECT DISTINCT ?company ?companyLabel ?companyDescription ?industry ?industryLabel
 WHERE {
-  { SELECT ?company ?industry WHERE { VALUES ?type { wd:Q783794 wd:Q4830453 wd:Q891723 } ?company wdt:P31 ?type. ?article schema:about ?company; schema:isPartOf <https://en.wikipedia.org/>. OPTIONAL { ?company wdt:P452 ?industry. } } LIMIT """+str(limit)+""" }
+  { SELECT ?company ?industry WHERE { VALUES ?type { wd:Q783794 wd:Q4830453 wd:Q891723 } ?company wdt:P31 ?type; wdt:P452 ?industry. } LIMIT """+str(limit)+""" }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
 """
@@ -41,7 +41,7 @@ def build(output,limit):
     for row in bindings:
         uri=value(row,"company");qid=uri.rsplit("/",1)[-1]
         name=value(row,"companyLabel");industry=value(row,"industryLabel")
-        if not qid.startswith("Q") or not name or name==qid or not (industry or value(row,"companyDescription")):continue
+        if not qid.startswith("Q") or not name or name==qid or not industry:continue
         target=companies.setdefault(qid,{"id":qid,"Company":name,
             "description":value(row,"companyDescription"),"tickers":set(),"industries":set()})
         target["tickers"].add(value(row,"ticker"));target["industries"].add(industry)
@@ -51,12 +51,15 @@ def build(output,limit):
     output.mkdir(parents=True,exist_ok=True)
     body=(json.dumps(rows,ensure_ascii=False,indent=2)+"\n").encode()
     (output/"wikidata_companies.json").write_bytes(body)
+    compressed=gzip.compress(body,mtime=0)
+    (output/"wikidata_companies.json.gz").write_bytes(compressed)
     metadata={"generated_at":datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "source":ENDPOINT,"license":"Wikidata structured data CC0",
         "scope":"Broad business/organization identity/industry snapshot; incomplete worldwide coverage, not benchmark-selected",
         "query":query,"requested_binding_limit":limit,"bindings":len(bindings),"companies":len(rows),
         "sha256":hashlib.sha256(body).hexdigest(),
         "raw_response_sha256":hashlib.sha256(response).hexdigest(),
+        "gzip_sha256":hashlib.sha256(compressed).hexdigest(),
         "contains_sector_labels":False,"contains_event_or_action_labels":False}
     (output/"provenance.json").write_text(json.dumps(metadata,indent=2)+"\n")
     print(json.dumps(metadata))

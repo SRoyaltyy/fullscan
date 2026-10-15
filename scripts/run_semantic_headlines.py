@@ -1,5 +1,5 @@
 """Runtime benchmark runner: title-only input, never loads judge/reference labels."""
-import argparse,hashlib,json,pathlib,time,signal
+import argparse,hashlib,json,os,pathlib,time,signal
 from datetime import datetime,timezone
 from src.news_impact.semantic_headlines import SemanticHeadlineClient,rate_limit_only
 
@@ -84,6 +84,10 @@ def main():
     sources=('src/lane_route.py','src/news_impact/semantic_headlines.py','src/news_impact/semantic_ontology.py','src/news_impact/semantic_catalog.py','src/news_impact/sector_batch_review.py','src/news_impact/schema.py','src/news_impact/semantic_adapter.py','scripts/run_semantic_headlines.py')
     result['runtime_sha256']={p:hashlib.sha256((root/p).read_bytes()).hexdigest() for p in sources}
     result['configuration']={'providers':client.provider_order,'models':client.model_allowlist,'review':client.review,'sector_review':client.sector_review,'action_review':client.action_review,'sector_roles':client.sector_roles,'headline_timeout':args.headline_timeout,'batch_size':args.batch_size,'batch_interval_seconds':args.batch_interval_seconds}
+    if 'openclaw' in client.provider_order:
+        raw_timeout=(os.environ.get('OPENCLAW_LANE_TIMEOUT') or '').strip()
+        timeout=int(raw_timeout) if raw_timeout.isdigit() else 300
+        result['configuration']['openclaw_transport']={'agent':(os.environ.get('OPENCLAW_AGENT') or 'openclaw/default').strip(),'timeout_seconds':max(30,timeout)}
     result['catalog']=client.catalog.metadata
     args.output.parent.mkdir(parents=True,exist_ok=True)
     if args.resume and args.output.exists():result=restore_checkpoint(json.loads(args.output.read_text()),result,selected)

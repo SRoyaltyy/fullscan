@@ -3,12 +3,16 @@ import argparse, contextlib, hashlib, io, json, os, pathlib, re, subprocess
 from datetime import datetime, timezone
 import openclaw_oauth_guard as guard
 
+def requested_model_ready(calls,model):
+    return any(c.get('ok') and c.get('model_requested')==model for c in calls)
+
 
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--output', type=pathlib.Path, required=True)
+    parser.add_argument('--model', choices=('xai/grok-4.3','xai/grok-4.6'), default='xai/grok-4.3')
     args=parser.parse_args()
-    out={'generated_at':datetime.now(timezone.utc).isoformat(), 'calls':[]}
+    out={'generated_at':datetime.now(timezone.utc).isoformat(), 'calls':[], 'model_required':args.model}
     expiry,source,refresh=guard.xai_oauth_expiry()
     out.update(oauth_expiry_before=expiry.isoformat() if expiry else None,
                expiry_source=source, has_refresh_token=refresh,
@@ -50,8 +54,7 @@ def main():
             out['calls'].append({'model_requested':model,**call})
     expiry,_,_=guard.xai_oauth_expiry()
     out['oauth_expiry_after']=expiry.isoformat() if expiry else None
-    out['lane_ready']=any(c.get('ok') and c['model_requested']=='xai/grok-4.3'
-                          for c in out['calls'])
+    out['lane_ready']=requested_model_ready(out['calls'],args.model)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(out,indent=2))
     print(json.dumps(out,indent=2))
