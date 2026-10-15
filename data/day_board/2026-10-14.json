@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T23:40:39.254933-04:00",
+  "generated_at": "2026-10-14T23:40:45.211722-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1072,59 +1072,6 @@
     }
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T10:10:42.751687-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-10-14_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1464487,
-          "preview": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT"
-        },
-        {
-          "path": "data/stock_book/2026-10-14_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-10-14_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2448,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-10-14_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12444,
-          "preview": "2026-10-14 BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12444,
-          "preview": "2026-10-14 BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT"
-        },
-        {
-          "path": "01_daily/2026-10-14_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 70476,
-          "preview": "# Stock book \u2014 2026-10-14\n_Generated 2026-10-14T10:10:16.669845-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-14 BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT \u00b7 2026-10-14 BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT \u00b7 # Stock book \u2014 2026-10-14\n_Generated 2026-10-14T10:10:16.669845-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -3973,6 +3920,122 @@
         }
       ],
       "preview": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT \u00b7 2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT \u00b7 # Stock book \u2014 2026-10-14\n_Generated 2026-10-14T23:40:13.188858-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T23:40:44.289810-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 21268,
+          "preview": "2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 971,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-14.json",
+          "ok": true,
+          "reason": "",
+          "size": 273815,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-14_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 173847,
+          "preview": "2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 717809,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-14_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 717809,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-10-14.json",
+          "ok": true,
+          "reason": "",
+          "size": 166518,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 987921,
+          "preview": "2026-10-14 BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 717809,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 173847,
+          "preview": "2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 717809,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 717809,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 987921,
+          "preview": "2026-10-14 BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1567,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1567,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-14 BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_"
     }
   ],
   "href": {
@@ -3982,14 +4045,6 @@
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
   },
   "frozen_write_skips": [
-    {
-      "path": "data/day_board/2026-10-14.json",
-      "at": "2026-10-14T11:02:14-04:00",
-      "commit_msg": "auto: land map_heat_research [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
     {
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T11:03:44-04:00",
@@ -5578,6 +5633,14 @@
       "path": "data/stock_book/2026-10-14_suggestions.json",
       "at": "2026-10-14T23:40:39-04:00",
       "commit_msg": "auto: land stock_book [2026-10-14]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38677004092",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T23:40:45-04:00",
+      "commit_msg": "auto: land live_boards [2026-10-14]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "38677004092",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
