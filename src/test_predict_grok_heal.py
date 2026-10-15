@@ -117,6 +117,23 @@ def test_glm_trace_is_not_success(monkeypatch):
     assert "XAI_API_KEY" not in envs[0]
 
 
+def test_empty_backup_does_not_skip_grok_when_gateway_is_set(monkeypatch):
+    """Zhipu/TokenHub 402 must not cancel essays on the ECS gateway."""
+    from pathlib import Path
+    from src import run_preopen_all as rpa
+    monkeypatch.setenv("LLM_BACKEND", "auto")
+    monkeypatch.setenv("GROK_ONLY", "0")
+    monkeypatch.setenv("OPENCLAW_GATEWAY_URL", "http://127.0.0.1:18789")
+    assert rpa._gateway_blocks_essay_skip() is True
+    monkeypatch.delenv("OPENCLAW_GATEWAY_URL")
+    assert rpa._gateway_blocks_essay_skip() is False
+    monkeypatch.setenv("OPENCLAW_GATEWAY_URL", "http://127.0.0.1:18789")
+    monkeypatch.setenv("LLM_BACKEND", "deepseek")
+    assert rpa._gateway_blocks_essay_skip() is False
+    src = Path(__file__).resolve().parent.joinpath("run_preopen_all.py").read_text()
+    assert "runs (gateway is set)" in src
+
+
 def test_ecs_preopen_exports_grok_before_run():
     from pathlib import Path
     s = (Path(__file__).resolve().parent.parent / "scripts" / "ecs_preopen.sh").read_text()
