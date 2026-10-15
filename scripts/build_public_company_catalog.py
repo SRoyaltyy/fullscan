@@ -9,14 +9,14 @@ import argparse,datetime,hashlib,json,pathlib,time,urllib.error,urllib.parse,url
 ENDPOINT="https://query.wikidata.org/sparql"
 
 def query_text(limit):
-    return """SELECT DISTINCT ?company ?companyLabel ?companyDescription ?ticker ?industry ?industryLabel
+    # Bound the fact scan before the expensive English label/description join.
+    # Snapshot bytes, not the service's transient row order, pin this candidate.
+    return """SELECT DISTINCT ?company ?companyLabel ?companyDescription ?industry ?industryLabel
 WHERE {
-  ?company wdt:P452 ?industry.
-  OPTIONAL { ?company wdt:P249 ?ticker. }
+  { SELECT ?company ?industry WHERE { ?company wdt:P452 ?industry. } LIMIT """+str(limit)+""" }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-ORDER BY ?company ?industry ?ticker
-LIMIT """+str(limit)
+"""
 
 def build(output,limit):
     query=query_text(limit)
