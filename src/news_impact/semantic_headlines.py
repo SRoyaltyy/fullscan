@@ -14,7 +14,7 @@ from .schema import EVENT_CLASSES
 from .semantic_ontology import ONTOLOGY_VERSION, ontology_text
 from .semantic_catalog import CompanyCatalog
 
-VERSION='semantic-headlines-v12'
+VERSION='semantic-headlines-v13'
 SECTORS=('Basic Materials','Communication Services','Consumer Cyclical','Consumer Defensive','Energy','Financial','Healthcare','Industrials','Real Estate','Technology','Utilities')
 STAGES=('reported','proposal','future','negated','retrospective','uncertain')
 ACTION_KINDS=('decision','procedural_step','official_engagement','personnel_change','official_clarification','monetary_operation','administrative_operation','communication','statistical_release','historical_summary','private_business','other')
@@ -101,14 +101,16 @@ def validation_errors(result,title):
     return errors
 
 class SemanticHeadlineClient:
-    def __init__(self,provider_order=None,review=True,model_allowlist=None,catalog=None,sector_review=False,action_review=False):
+    def __init__(self,provider_order=None,review=True,model_allowlist=None,catalog=None,sector_review=False,action_review=False,sector_roles=False):
         if action_review and review:raise ValueError('action_review requires review=False; it replaces the full audit')
+        if sector_roles and review:raise ValueError('sector_roles requires review=False; it uses the independent sector pass')
         keys,ollama_url,gh_direct=route.load_keys()
         self.ctx={'keys':keys,'ollama_url':ollama_url,'gh_direct':gh_direct}
         self.provider_order=provider_order or list(route.CLASSIFY_LANES)
         self.review=review
         self.action_review=action_review
-        self.sector_review=sector_review or action_review
+        self.sector_roles=sector_roles
+        self.sector_review=sector_review or action_review or sector_roles
         self.model_allowlist=tuple(model_allowlist) if model_allowlist is not None else None
         if self.model_allowlist==():raise ValueError('An explicit model allowlist cannot be empty')
         self.last_draft=None

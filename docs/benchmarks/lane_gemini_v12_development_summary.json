@@ -1,0 +1,23 @@
+{
+  "pass": false,
+  "metrics": {
+    "action": 0.9,
+    "lane": 0.9,
+    "sectors": 0.86,
+    "action_precision": 0.8095238095238095,
+    "action_recall": 0.85
+  },
+  "tp": 17,
+  "fp": 4,
+  "fn_or_unavailable": 3,
+  "availability": 1,
+  "acceptance_eligible": false,
+  "scope": "Development replay after second holdout failed; never increments acceptance streak",
+  "best_consecutive_passes": 0,
+  "run_id": 38610678006,
+  "execution_commit": "6b40f515d02dc2f523b840df9a7685b14cb78fce",
+  "first_stage_provider_counts": {
+    "gemini": 66,
+    "zhipu": 34
+  }
+}

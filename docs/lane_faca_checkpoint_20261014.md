@@ -80,3 +80,15 @@ Run 38608978245, execution commit 369584cfa712a6147c5615f320948ffc05df8004: all 
 Batch_03's 100 reference labels were independently prepared and frozen at 2026-10-14T17:53:14.580Z, before any execution of that batch. Input SHA256 13e7174383594e2f7af4bb081aa677a9e35a29e20cdf5a34e4de33252a97c83c. Official identity sources and title/ontology ambiguity notes are included. Batch_03 remains unrun.
 
 Next development comparison uses the already approved gemini-2.5-flash first, with the same two-stage batched design and bounded recovery, replaying failed batch_02. This changes provider configuration and therefore is a new acceptance candidate if it qualifies. No labels are changed; batch_03 remains withheld. Historical acceptance score artifact references remain pinned to GLM V12.
+
+## 2026-10-15 continuation: completed Gemini comparison; V13 sector roles
+
+Gemini-first development run 38610678006 completed before the conversation timeout. It analyzed all 100 but failed: action agreement 90%, precision 80.9524% (17 TP, 4 FP), recall 85% (17/20), Lane 90%, exact sectors 86%. First-stage providers: {"gemini":66,"zhipu":34}; this was not a pure Gemini result. Batch_02 remains development-only. No fresh acceptance runs followed. Streak remains 0/10.
+
+The workflow checker is repaired to check sparse-checkout cleanup within individual ECS jobs, independently of later Ubuntu grading jobs. Only the two ECS installer jobs actually enable sparse checkout; the Lane ECS jobs use full checkout and remain covered by the clean:false guards. Dedicated workflow contract run 38611394819 passed all 23 tests at commit 4ec9e334fde0c1789634441f4f99994da97926f2.
+
+V13 adds opt-in --sector-roles within the existing independent fact/sector batch call. The model provides a semantic role and literal role evidence for each candidate. Python keeps issuer/operator, target-business and policy-target-industry roles for final tags; incidental investor/lender, adviser/analyst, publisher/venue, macro/background and personal/campus roles remain in raw review output. Invalid/missing roles are unavailable, never a fabricated empty sector result. No runtime reference labels, entity exception lists, title regex classifiers or additional normal model calls are introduced. Batches remain ten titles with two normal prompts and bounded failed-subset retries; output caps unchanged.
+
+A reported meeting with a public official can include that official as a participant even when visitors are the grammatical subject. Explicitly fresh/latest executive/judicial instruments remain extractable separately from private filings and old background rulings. These clarify generic missed-action boundaries.
+
+All 55 semantic contracts passed locally. V13 live performance remains unmeasured. The workflow replays failed batch_02 with GLM first; batch_03 remains frozen and unrun. Source/configuration changes restart any future acceptance streak. The ten-pass goal is not met.
