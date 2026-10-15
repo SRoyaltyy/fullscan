@@ -112,7 +112,7 @@ def test_cancel_in_progress_off_on_grok_jobs() -> None:
     group_line = next(ln for ln in pre.splitlines() if ln.strip().startswith("group:"))
     assert group_line.strip() == "group: preopen-all"
     assert "ubuntu-0" not in group_line and "ubuntu-stop" not in group_line
-    assert "cancel-in-progress: false" in pre
+    assert "cancel-in-progress: true" in pre
 
 
 def test_excel_mine_poke_on_main() -> None:
@@ -942,7 +942,7 @@ def test_ubuntu_preopen_not_blocked_by_queued_ecs() -> None:
     """ECS and ubuntu queue on one group. Ubuntu must not silently pick DeepSeek."""
     yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
     assert "\n  group: preopen-all\n" in yml
-    assert "cancel-in-progress: false" in yml
+    assert "cancel-in-progress: true" in yml
     assert "&& 'ubuntu' || 'ecs'" not in yml
     assert "github.event_name == 'push'" in yml
     assert "&& 'deepseek'" not in yml
