@@ -168,10 +168,12 @@ dispatch_ubuntu_book() {
 }
 dispatch_ubuntu_book
 
-# Client cap is short. The gateway's own 10800s timer stays (the runtime
+# Client cap 300s: run 38720850552 (10-15) got grok-4.6 HTTP 200 then
+# "Request was aborted" at the old 75s cap on every predict call.
+# Client cap is bounded. The gateway's own 10800s timer stays (the runtime
 # door requires it) but a hung read restarts the gateway once so the
 # zombie does not block the next call. Breaker opens on the first timeout.
-export OPENCLAW_READ_CAP_S="${OPENCLAW_READ_CAP_S:-75}"
+export OPENCLAW_READ_CAP_S="${OPENCLAW_READ_CAP_S:-300}"
 export OPENCLAW_BREAKER_N="${OPENCLAW_BREAKER_N:-1}"
 export OPENCLAW_RESTART_ON_TIMEOUT="${OPENCLAW_RESTART_ON_TIMEOUT:-1}"
 export PREOPEN_LLM_TIMEOUT="${PREOPEN_LLM_TIMEOUT:-420}"

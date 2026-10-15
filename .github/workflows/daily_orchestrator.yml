@@ -83,11 +83,13 @@ jobs:
           }
 
           dispatch_preopen_ubuntu() {
-            echo "MISSING morning pack → preopen_all.yml ubuntu (no silent DeepSeek)"
+            # Name kept for callers. 10-15: ubuntu cannot reach Grok, so the
+            # heal goes to the ECS box, Grok-only (preflight checks it).
+            echo "MISSING morning pack → preopen_all.yml ecs (Grok)"
             gh api --method POST "repos/${REPO}/actions/workflows/preopen_all.yml/dispatches" \
               -f ref=main \
-              -f "inputs[runner]=ubuntu" \
-              -f "inputs[llm_backend]=auto" \
+              -f "inputs[runner]=ecs" \
+              -f "inputs[llm_backend]=grok" \
               || true
           }
 

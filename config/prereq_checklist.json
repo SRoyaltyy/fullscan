@@ -1,0 +1,296 @@
+{
+ "date": "2026-10-15",
+ "preflight": {
+  "fail_within_s": 60,
+  "report": "01_daily/_progress/<date>_<workflow>_preflight.md",
+  "report_json": "01_daily/_progress/<date>_<workflow>_preflight.json",
+  "script": "scripts/preflight.py --workflow <name>"
+ },
+ "workflows": {
+  "preopen_all": [
+   {
+    "id": "runner_is_ecs",
+    "check": "assert runner label self-hosted,ecs; fail if ubuntu for predict job",
+    "enforced": "n"
+   },
+   {
+    "id": "gateway_up",
+    "check": "curl 127.0.0.1:18789 health <5s",
+    "enforced": "n"
+   },
+   {
+    "id": "xai_token_outlives_run",
+    "check": "oauth_guard status: expiry > now+75min",
+    "enforced": "n"
+   },
+   {
+    "id": "backend_grok_first",
+    "check": "LLM_BACKEND != deepseek and SuperGrok unknown => grok",
+    "enforced": "n"
+   },
+   {
+    "id": "backup_has_credit",
+    "check": "1-token probe DeepSeek/GLM-flash; 402/429/1113/400 => fail",
+    "enforced": "n"
+   },
+   {
+    "id": "no_unapproved_paid_fallback",
+    "check": "LLM_FALLBACK_MODEL empty or allowlisted",
+    "enforced": "n"
+   },
+   {
+    "id": "read_cap_fits",
+    "check": "OPENCLAW_READ_CAP_S >= 300",
+    "enforced": "n"
+   },
+   {
+    "id": "ecs_runner_idle",
+    "check": "no other in_progress run on ecs runner",
+    "enforced": "n"
+   },
+   {
+    "id": "finviz_scrape_landed",
+    "check": "needs: scrape",
+    "enforced": "y"
+   },
+   {
+    "id": "clock_gate",
+    "check": "ET 03:55-09:25 for push",
+    "enforced": "y"
+   },
+   {
+    "id": "single_preopen",
+    "check": "concurrency preopen-all + flock",
+    "enforced": "y"
+   }
+  ],
+  "openclaw_grok_ping": [
+   {
+    "id": "runner_is_ecs",
+    "check": "runs-on",
+    "enforced": "y"
+   },
+   {
+    "id": "model_expected",
+    "check": "ping model 4.3 by design; essays 4.6",
+    "enforced": "y"
+   }
+  ],
+  "grok_auth_canary": [
+   {
+    "id": "fired_today",
+    "check": "run exists for today before 05:00 ET",
+    "enforced": "n"
+   }
+  ],
+  "xai_reauth": [
+   {
+    "id": "runs_before_preopen",
+    "check": "scheduled/chained before 05:40 ET",
+    "enforced": "n"
+   }
+  ],
+  "openclaw_oauth_guard": [
+   {
+    "id": "ran_before_preopen",
+    "check": "run succeeded today before 05:40 ET",
+    "enforced": "n"
+   }
+  ],
+  "runtime_door": [
+   {
+    "id": "gateway_timeout_10800",
+    "check": "run door check",
+    "enforced": "y"
+   }
+  ],
+  "finviz_preopen_scrape": [
+   {
+    "id": "finviz_not_403",
+    "check": "HEAD finviz returns 200",
+    "enforced": "n"
+   }
+  ],
+  "finviz_market_digest": [
+   {
+    "id": "scrape_landed",
+    "check": "today's scrape file on main",
+    "enforced": "n"
+   }
+  ],
+  "catalyst_daily": [
+   {
+    "id": "not_in_preopen_window",
+    "check": "refuse ECS 05:00-09:20 ET unless predict landed",
+    "enforced": "n"
+   }
+  ],
+  "stock_book_all": [
+   {
+    "id": "predict_present",
+    "check": "predict on main or skip-if-good",
+    "enforced": "y"
+   }
+  ],
+  "sleeve_merge_live": [
+   {
+    "id": "book_success",
+    "check": "workflow_run success",
+    "enforced": "y"
+   }
+  ],
+  "publish_strategy_tickets": [
+   {
+    "id": "upstream_success_main",
+    "check": "gate",
+    "enforced": "y"
+   }
+  ],
+  "fm_preopen": [
+   {
+    "id": "predict_on_main",
+    "check": "fail with named item if missing at seal",
+    "enforced": "n"
+   }
+  ],
+  "factor_mine": [
+   {
+    "id": "history_unchanged",
+    "check": "assert_history_unchanged",
+    "enforced": "y"
+   }
+  ],
+  "h1_forward": [
+   {
+    "id": "predict_on_main",
+    "check": "exit 1 if missing",
+    "enforced": "y"
+   }
+  ],
+  "input_freeze": [
+   {
+    "id": "freeze_window",
+    "check": "gate",
+    "enforced": "y"
+   }
+  ],
+  "webull_paper": [
+   {
+    "id": "h1_seal_success",
+    "check": "workflow_run success main",
+    "enforced": "y"
+   }
+  ],
+  "webull_sim": [
+   {
+    "id": "yfinance_up",
+    "check": "fetch SPY open",
+    "enforced": "n"
+   },
+   {
+    "id": "after_freeze",
+    "check": "ET >= 09:40",
+    "enforced": "y"
+   }
+  ],
+  "deploy_dashboard": [
+   {
+    "id": "live_pages_newest_day",
+    "check": "fetch each calendar page after deploy",
+    "enforced": "n"
+   }
+  ],
+  "postclose_all": [
+   {
+    "id": "runner_is_ecs_or_flag_degraded",
+    "check": "label check",
+    "enforced": "n"
+   }
+  ],
+  "pipeline_health": [
+   {
+    "id": "scheduled",
+    "check": "cron enabled",
+    "enforced": "n"
+   }
+  ],
+  "forward_shadow_v1": [
+   {
+    "id": "yfinance_up",
+    "check": "fetch SPY",
+    "enforced": "n"
+   }
+  ],
+  "excel_bot": [
+   {
+    "id": "signal_freeze_verify",
+    "check": "signal_freeze.py --verify",
+    "enforced": "y"
+   }
+  ],
+  "theme_radar_sim": [
+   {
+    "id": "universe_file_0430",
+    "check": "fullscan universe file dated today by 04:30 ET",
+    "enforced": "n"
+   },
+   {
+    "id": "working_copy_on_main",
+    "check": "git rev-parse HEAD == origin/main and runs point at it",
+    "enforced": "n"
+   },
+   {
+    "id": "plan_before_0930",
+    "check": "plan commit time < 09:30 ET",
+    "enforced": "n"
+   }
+  ]
+ },
+ "checks": {
+  "preopen_all": [
+   {
+    "id": "runner_is_ecs",
+    "plain": "Pre-Open is not on the ECS box (GitHub's own servers cannot reach Grok)"
+   },
+   {
+    "id": "backend_grok",
+    "plain": "LLM_BACKEND is not grok",
+    "expect": "grok"
+   },
+   {
+    "id": "gateway_up",
+    "plain": "OpenClaw gateway 127.0.0.1:18789 did not answer within 5s",
+    "url": "http://127.0.0.1:18789/health",
+    "timeout_s": 5
+   },
+   {
+    "id": "xai_token_outlives_run",
+    "plain": "xAI login expires before this run can finish (needs >= 75 min left)",
+    "min_left_min": 75
+   },
+   {
+    "id": "no_unapproved_paid_fallback",
+    "plain": "fallback model is not on the approved free list",
+    "approved": [
+     "",
+     "glm-5.3-flash"
+    ]
+   },
+   {
+    "id": "no_twin_preopen",
+    "plain": "another Pre-Open is already running"
+   },
+   {
+    "id": "read_cap_fits",
+    "plain": "OPENCLAW_READ_CAP_S is under 300s, too short for predict calls",
+    "min_s": 300
+   }
+  ],
+  "fm_preopen": [
+   {
+    "id": "predict_on_main",
+    "plain": "predict missing: 01_daily/general/<date>_predict.md is not on main"
+   }
+  ]
+ }
+}
