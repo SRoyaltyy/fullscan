@@ -152,7 +152,7 @@ def source_metadata(source,row):
 def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
     headers={}
     # Conditional caching is safe for fixed feed URLs, not moving date-filtered APIs.
-    if previous and source['adapter'] in ('rss','html_index'):
+    if previous and source.get('conditional_cache',True) and source['adapter'] in ('rss','html_index'):
         if previous.get('etag'):headers['If-None-Match']=previous['etag']
         if previous.get('last_modified'):headers['If-Modified-Since']=previous['last_modified']
     adapter=source['adapter'];url=source['url'];rows=[];pages=0;warnings=[];status=None;response_headers={};first_hash=None;oldest=None
@@ -162,7 +162,7 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
     elif adapter=='govuk_search':
         url+='?'+urllib.parse.urlencode({'filter_content_store_document_type':source['document_type'],'filter_public_timestamp':'from:'+iso(start)+',to:'+iso(end),'count':1000,'order':'-public_timestamp','start':0})
     elif adapter=='hkma_press':
-        url+='?'+urllib.parse.urlencode({'lang':'en','choose':'date','from':start.date().isoformat(),'to':end.date().isoformat(),'sortby':'date','sortorder':'desc','pagesize':source.get('page_size',1000),'offset':0})
+        url+='?'+urllib.parse.urlencode({'lang':'en','sortby':'date','sortorder':'desc','pagesize':source.get('page_size',100),'offset':0})
     seen_urls=set()
     while url:
         if url in seen_urls:raise ValueError('Pagination cycle')
@@ -183,7 +183,9 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
             page=blob['result']['records']
             for r in page:
                 rows.append({'title':clean(r['title']),'url':r['link'],'native_id':r['link'],'published_at':iso(date(r['date'])) if date(r.get('date')) else None,'published_raw':r.get('date'),'issuer':'Hong Kong Monetary Authority','summary':''})
-            if len(page)>=source.get('page_size',1000):
+            publication_dates=[date(r.get('date')) for r in page]
+            ordered=bool(publication_dates) and all(publication_dates) and publication_dates==sorted(publication_dates,reverse=True)
+            if len(page)>=source.get('page_size',100) and not (ordered and min(publication_dates)<start):
                 query=dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query));query['offset']=int(query.get('offset',0))+len(page);url=source['url']+'?'+urllib.parse.urlencode(query)
             else:url=None
         else:

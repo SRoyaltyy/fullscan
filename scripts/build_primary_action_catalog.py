@@ -26,6 +26,7 @@ def channel_scope(source):
  # Retain verification in the catalog, but do not collect reference-only feeds daily.
  label=(source['url']+' '+source['name']).lower()
  if source.get('document_type') in ('farming_grant','business_finance_support_scheme'):return 'funding guidance/opportunity listing; not an award decision'
+ if 'federalreserve.gov/feeds/' in label and re.search(r'/feeds/(?:s_t_|m_w_|feds(?:_|\.)|clp\.|g\d|h\d|prates\.|testimony\.)',label):return 'Fed research, speeches/testimony or reference data; policy releases remain enabled'
  if any(x in label for x in ('exchange rate','exchangerate','exchange_rate','eurofxref','reference rate','research paper','working paper','discussion paper','statistical release','currentfaqs','/speeches','press_speeches','/research/','/blog','/podcast')):return 'reference data, research, speeches or commentary'
  return None
 
@@ -37,7 +38,7 @@ def build(root):
  for agency in json.loads(body):
   institutions.append({'id':'us-fr:'+str(agency['id']),'name':agency['name'],'jurisdiction':'US','website':agency.get('agency_url') or agency['url'],'official_directory_url':agency['url'],'status':'listed; active/historical status not supplied by directory','shared_publication_source_ids':['us-federal-register'],'parent_id':('us-fr:'+str(agency['parent_id'])) if agency.get('parent_id') else None})
  sources.append({'id':'us-federal-register','name':'Federal Register issuing agencies','jurisdiction':'US','family':'rules_notices_and_presidential_documents','url':'https://www.federalregister.gov/api/v1/documents.json','adapter':'federal_register','discovery_url':'https://www.federalregister.gov/developers/documentation/api/v1','candidate_origin':'documented_official_api'})
- sources.append({'id':'hk-hkma-public-press','name':'Hong Kong Monetary Authority official press releases','jurisdiction':'HK','family':'monetary_and_supervisory','url':'https://api.hkma.gov.hk/public/press-releases','adapter':'hkma_press','discovery_url':'https://apidocs.hkma.gov.hk/documentation/press-releases/','candidate_origin':'documented_official_api; date filtering and offset pagination'})
+ sources.append({'id':'hk-hkma-public-press','name':'Hong Kong Monetary Authority official press releases','jurisdiction':'HK','family':'monetary_and_supervisory','url':'https://api.hkma.gov.hk/public/press-releases','adapter':'hkma_press','discovery_url':'https://apidocs.hkma.gov.hk/documentation/press-releases/','candidate_origin':'documented_official_api; descending dates, client-side window and offset pagination'})
  body,_=read_url(DIRECTORIES['uk_organisations']);evidence_row(DIRECTORIES['uk_organisations'],body);first=json.loads(body)
  pages=[first]
  def uk_page(n):
@@ -100,6 +101,9 @@ def build(root):
  for s in sources:locks.setdefault(urllib.parse.urlsplit(s['url']).hostname,threading.Semaphore(2))
  def verify(source):
   try:
+   if 'www.federalreserve.gov/feeds/' in source['url']:
+    # The public server accepts ordinary GETs but rejects some conditional requests with HTTP 406.
+    source=source|{'conditional_cache':False}
    with locks[urllib.parse.urlsplit(source['url']).hostname]:
     # RSS/index verification retains only parser metadata; API verification is date-bounded.
     rows,state=fetch_source(source,now()-timedelta(days=3),now(),max_pages=1)

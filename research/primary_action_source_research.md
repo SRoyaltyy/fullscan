@@ -13,7 +13,7 @@ This is an engineering discovery record. Candidate endpoints become collection c
 | Congress | Official legislative source, not congress.com | https://www.congress.gov/rss/ |
 | US Supreme Court | Official opinions and orders are separate publication channels | https://www.supremecourt.gov/orders/ordersofthecourt |
 | OFAC | Recent sanctions actions, including dates in official publication URLs | https://ofac.treasury.gov/recent-actions |
-| HKMA | Documented press-release JSON API, date filters and offset pagination | https://apidocs.hkma.gov.hk/documentation/press-releases/ |
+| HKMA | Documented press-release JSON API, descending dates and offset pagination; unavailable endpoints remain disabled | https://apidocs.hkma.gov.hk/documentation/press-releases/ |
 | HKMA API parameters | pagesize, offset, choose/from/to, sort order | https://apidocs.hkma.gov.hk/documentation/ |
 | Hong Kong SFC | Official RSS discovery page; endpoints still require native parser verification | https://www.sfc.hk/en/RSS-Feeds |
 

@@ -124,7 +124,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref_name }}
-          fetch-depth: 0
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /config/primary_action_sources.json
+            /data/primary_actions/
+            /docs/primary-actions/
       - uses: actions/download-artifact@v4
         with:
           name: primary-actions-daily-feed

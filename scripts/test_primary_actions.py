@@ -127,11 +127,17 @@ class PrimaryActionsTests(unittest.TestCase):
   self.assertEqual(previous_artifact([a],'main')['id'],1);self.assertIsNone(previous_artifact([a],'unrelated'))
   main=a|{'id':2,'created_at':'2026-10-14','workflow_run':{'head_branch':'main'}};self.assertEqual(previous_artifact([a,main],'main')['id'],2)
 
- def test_hkma_documented_date_filter_and_pagination(self):
+ def test_hkma_documented_sort_and_pagination(self):
   calls=[];pages=[[{'title':'Adjustment of Base Rate','date':'2026-10-15','link':'https://www.hkma.gov.hk/eng/news/1/'}],[]]
   def fetch(url,**kw):calls.append(url);return 200,json.dumps({'header':{'success':True},'result':{'records':pages.pop(0)}}).encode(),{},url
   rows,h=fetch_source(SOURCE|{'adapter':'hkma_press','url':'https://api.hkma.gov.hk/public/press-releases','page_size':1},ASOF-timedelta(days=3),ASOF,fetch=fetch)
-  self.assertEqual(rows[0]['issuer'],'Hong Kong Monetary Authority');self.assertEqual(h['requests'],2);self.assertIn('choose=date',calls[0]);self.assertIn('offset=1',calls[1])
+  self.assertEqual(rows[0]['issuer'],'Hong Kong Monetary Authority');self.assertEqual(h['requests'],2);self.assertIn('sortby=date',calls[0]);self.assertIn('offset=1',calls[1])
+
+ def test_public_feed_can_disable_unsupported_conditional_headers(self):
+  calls=[]
+  def fetch(url,**kw):calls.append(kw['headers']);return 200,RSS,{},url
+  fetch_source(SOURCE|{'conditional_cache':False},ASOF-timedelta(days=3),ASOF,{'etag':'tag','last_modified':'old'},fetch)
+  self.assertEqual(calls,[{}])
 
 if __name__=='__main__':unittest.main()
 
