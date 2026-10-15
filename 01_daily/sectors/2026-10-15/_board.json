@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T07:19:10.510099-04:00",
+  "generated_at": "2026-10-15T08:26:21.304349-04:00",
   "summary": "",
   "sectors": [
     {
@@ -21,7 +21,7 @@
       "components": {},
       "status": "DEGRADED",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Communication Services",
@@ -41,7 +41,7 @@
       "components": {},
       "status": "DEGRADED",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Consumer Cyclical",
@@ -61,7 +61,7 @@
       "components": {},
       "status": "DEGRADED",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Consumer Defensive",
@@ -81,7 +81,7 @@
       "components": {},
       "status": "DEGRADED",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Energy",
@@ -101,7 +101,7 @@
       "components": {},
       "status": "DEGRADED",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Financial",
@@ -121,7 +121,7 @@
       "components": {},
       "status": "DEGRADED",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Healthcare",
@@ -141,7 +141,7 @@
       "components": {},
       "status": "DEGRADED",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Industrials",
@@ -161,7 +161,7 @@
       "components": {},
       "status": "DEGRADED",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Real Estate",
@@ -181,7 +181,7 @@
       "components": {},
       "status": "DEGRADED",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Technology",
@@ -201,7 +201,7 @@
       "components": {},
       "status": "DEGRADED",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": "prefer_deepseek"
     },
     {
       "sector": "Utilities",
@@ -221,7 +221,7 @@
       "components": {},
       "status": "DEGRADED",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": "prefer_deepseek"
     }
   ]
 }
