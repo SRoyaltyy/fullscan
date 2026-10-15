@@ -2927,33 +2927,33 @@
           {
             "ticker": "TMUS",
             "side": "long",
-            "open": null,
+            "open": 155.0,
             "px": 166.2,
             "px_src": "session_export+elite_live_skipped",
-            "low": null,
+            "low": 152.05,
             "scoops": {
               "0.5": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 0.5,
-                "fill": null
+                "fill": 154.225
               },
               "1.0": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 1.0,
-                "fill": null
+                "fill": 153.45
               },
               "1.5": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 1.5,
-                "fill": null
+                "fill": 152.675
               },
               "2.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 2.0,
                 "fill": null
               },
               "3.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 3.0,
                 "fill": null
               }
@@ -2963,33 +2963,33 @@
           {
             "ticker": "TRU",
             "side": "long",
-            "open": null,
+            "open": 66.42,
             "px": 70.19,
             "px_src": "session_export+elite_live_skipped",
-            "low": null,
+            "low": 65.735,
             "scoops": {
               "0.5": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 0.5,
-                "fill": null
+                "fill": 66.0879
               },
               "1.0": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 1.0,
-                "fill": null
+                "fill": 65.7558
               },
               "1.5": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 1.5,
                 "fill": null
               },
               "2.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 2.0,
                 "fill": null
               },
               "3.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 3.0,
                 "fill": null
               }
@@ -2999,33 +2999,33 @@
           {
             "ticker": "WSM",
             "side": "long",
-            "open": null,
+            "open": 238.29,
             "px": 231.03,
             "px_src": "session_export+elite_live_skipped",
-            "low": null,
+            "low": 238.59,
             "scoops": {
               "0.5": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 0.5,
                 "fill": null
               },
               "1.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 1.0,
                 "fill": null
               },
               "1.5": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 1.5,
                 "fill": null
               },
               "2.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 2.0,
                 "fill": null
               },
               "3.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 3.0,
                 "fill": null
               }
@@ -3035,33 +3035,33 @@
           {
             "ticker": "CNK",
             "side": "long",
-            "open": null,
+            "open": 37.88,
             "px": 38.38,
             "px_src": "session_export+elite_live_skipped",
-            "low": null,
+            "low": 37.46,
             "scoops": {
               "0.5": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 0.5,
-                "fill": null
+                "fill": 37.6906
               },
               "1.0": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 1.0,
-                "fill": null
+                "fill": 37.5012
               },
               "1.5": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 1.5,
                 "fill": null
               },
               "2.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 2.0,
                 "fill": null
               },
               "3.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 3.0,
                 "fill": null
               }
@@ -3071,35 +3071,35 @@
           {
             "ticker": "AVPT",
             "side": "long",
-            "open": null,
+            "open": 14.39,
             "px": 13.67,
             "px_src": "session_export+elite_live_skipped",
-            "low": null,
+            "low": 13.94,
             "scoops": {
               "0.5": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 0.5,
-                "fill": null
+                "fill": 14.3181
               },
               "1.0": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 1.0,
-                "fill": null
+                "fill": 14.2461
               },
               "1.5": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 1.5,
-                "fill": null
+                "fill": 14.1742
               },
               "2.0": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 2.0,
-                "fill": null
+                "fill": 14.1022
               },
               "3.0": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 3.0,
-                "fill": null
+                "fill": 13.9583
               }
             },
             "tag": "RESEARCH"
@@ -3107,33 +3107,33 @@
           {
             "ticker": "WLY",
             "side": "long",
-            "open": null,
+            "open": 52.29,
             "px": 47.61,
             "px_src": "session_export+elite_live_skipped",
-            "low": null,
+            "low": 51.06,
             "scoops": {
               "0.5": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 0.5,
-                "fill": null
+                "fill": 52.0285
               },
               "1.0": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 1.0,
-                "fill": null
+                "fill": 51.7671
               },
               "1.5": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 1.5,
-                "fill": null
+                "fill": 51.5056
               },
               "2.0": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 2.0,
-                "fill": null
+                "fill": 51.2442
               },
               "3.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 3.0,
                 "fill": null
               }
@@ -3143,33 +3143,33 @@
           {
             "ticker": "CDNA",
             "side": "long",
-            "open": null,
+            "open": 64.4,
             "px": 64.95,
             "px_src": "session_export+elite_live_skipped",
-            "low": null,
+            "low": 63.342,
             "scoops": {
               "0.5": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 0.5,
-                "fill": null
+                "fill": 64.078
               },
               "1.0": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 1.0,
-                "fill": null
+                "fill": 63.756
               },
               "1.5": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 1.5,
-                "fill": null
+                "fill": 63.434
               },
               "2.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 2.0,
                 "fill": null
               },
               "3.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 3.0,
                 "fill": null
               }
@@ -3179,33 +3179,33 @@
           {
             "ticker": "RRC",
             "side": "long",
-            "open": null,
+            "open": 42.35,
             "px": 37.86,
             "px_src": "session_export+elite_live_skipped",
-            "low": null,
+            "low": 41.58,
             "scoops": {
               "0.5": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 0.5,
-                "fill": null
+                "fill": 42.1382
               },
               "1.0": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 1.0,
-                "fill": null
+                "fill": 41.9265
               },
               "1.5": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 1.5,
-                "fill": null
+                "fill": 41.7148
               },
               "2.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 2.0,
                 "fill": null
               },
               "3.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 3.0,
                 "fill": null
               }
@@ -3215,33 +3215,33 @@
           {
             "ticker": "PACS",
             "side": "long",
-            "open": null,
+            "open": 44.17,
             "px": 42.84,
             "px_src": "session_export+elite_live_skipped",
-            "low": null,
+            "low": 44.0,
             "scoops": {
               "0.5": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 0.5,
                 "fill": null
               },
               "1.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 1.0,
                 "fill": null
               },
               "1.5": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 1.5,
                 "fill": null
               },
               "2.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 2.0,
                 "fill": null
               },
               "3.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 3.0,
                 "fill": null
               }
@@ -3251,33 +3251,33 @@
           {
             "ticker": "ETON",
             "side": "long",
-            "open": null,
+            "open": 53.5,
             "px": 59.18,
             "px_src": "session_export+elite_live_skipped",
-            "low": null,
+            "low": 52.66,
             "scoops": {
               "0.5": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 0.5,
-                "fill": null
+                "fill": 53.2325
               },
               "1.0": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 1.0,
-                "fill": null
+                "fill": 52.965
               },
               "1.5": {
-                "kind": "no_open",
+                "kind": "scoop",
                 "x": 1.5,
-                "fill": null
+                "fill": 52.6975
               },
               "2.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 2.0,
                 "fill": null
               },
               "3.0": {
-                "kind": "no_open",
+                "kind": "no_dip",
                 "x": 3.0,
                 "fill": null
               }

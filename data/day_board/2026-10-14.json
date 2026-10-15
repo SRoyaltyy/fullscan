@@ -3955,62 +3955,6 @@
   },
   "frozen_write_skips": [
     {
-      "path": "01_daily/news/2026-10-14_parsed.json",
-      "at": "2026-10-14T10:34:38-04:00",
-      "commit_msg": "auto: land news_parse [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "data/day_board/2026-10-14.json",
-      "at": "2026-10-14T10:34:38-04:00",
-      "commit_msg": "auto: land news_parse [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "01_daily/2026-10-14_preopen_qc.json",
-      "at": "2026-10-14T10:34:49-04:00",
-      "commit_msg": "auto: land news_parse [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "01_daily/2026-10-14_preopen_status.json",
-      "at": "2026-10-14T10:34:49-04:00",
-      "commit_msg": "auto: land news_parse [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "01_daily/news/2026-10-14_parsed.json",
-      "at": "2026-10-14T10:34:49-04:00",
-      "commit_msg": "auto: land news_parse [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "data/day_board/2026-10-14.json",
-      "at": "2026-10-14T10:34:49-04:00",
-      "commit_msg": "auto: land news_parse [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "01_daily/2026-10-14_preopen_qc.json",
-      "at": "2026-10-14T10:43:07-04:00",
-      "commit_msg": "auto: land events_catcher [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
       "path": "01_daily/2026-10-14_preopen_status.json",
       "at": "2026-10-14T10:43:07-04:00",
       "commit_msg": "auto: land events_catcher [2026-10-14]",
@@ -5550,6 +5494,62 @@
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T23:21:44-04:00",
       "commit_msg": "auto: land paper [2026-10-14]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38675443695",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-14_stock_book.md",
+      "at": "2026-10-14T23:22:06-04:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38675443695",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/_channel1/2026-10-14_predict.json",
+      "at": "2026-10-14T23:22:06-04:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38675443695",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/weather/2026-10-14_weather.json",
+      "at": "2026-10-14T23:22:06-04:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38675443695",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/join/2026-10-14_ranked.csv",
+      "at": "2026-10-14T23:22:06-04:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38675443695",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-14_input_health.json",
+      "at": "2026-10-14T23:22:06-04:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38675443695",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-14_stock_book.json",
+      "at": "2026-10-14T23:22:06-04:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38675443695",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-14_suggestions.json",
+      "at": "2026-10-14T23:22:06-04:00",
+      "commit_msg": "auto: stock book leftover sweep",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "38675443695",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
