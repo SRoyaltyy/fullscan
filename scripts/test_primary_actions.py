@@ -157,6 +157,29 @@ class PrimaryActionsTests(unittest.TestCase):
   self.assertIn('https://www.congress.gov/rss/senate-floor-today.xml', by['us-congress']['feed_urls'])
   self.assertIn('https://www.ustr.gov/rss.xml', by['us-ustr']['feed_urls'])
   self.assertIn('https://www.cisa.gov/cybersecurity-advisories/all.xml', by['us-cisa']['feed_urls'])
+  self.assertIn('https://www.federalreserve.gov/feeds/speeches.xml', by['us-fed-speeches']['feed_urls'])
+  self.assertEqual(by['us-fed-speeches']['document_type'],'official_statement')
+  self.assertIn('https://www.cbo.gov/publications/all/rss.xml', by['us-cbo']['feed_urls'])
+  self.assertIn('https://apps.bea.gov/rss/rss.xml', by['us-bea']['feed_urls'])
+  self.assertIn('https://www.census.gov/economic-indicators/indicator.xml', by['us-census']['feed_urls'])
+  self.assertNotIn('https://www.doi.gov/rss/news.xml', by['us-doi']['feed_urls'])
+
+ def test_public_inspection_and_openfda_keep_dated_actions_only(self):
+  calls=[]
+  one={'title':'Treasury notice','document_number':'2026-21105','html_url':'https://www.federalregister.gov/public-inspection/2026-21105/x','publication_date':'2026-10-16','type':'Notice','agencies':[{'name':'Treasury Department','id':497}],'pdf_url':'https://public-inspection.federalregister.gov/2026-21105.pdf'}
+  def fetch(url,**kw):calls.append(url);return 200,json.dumps({'results':[one],'count':1}).encode(),{},url
+  rows,health=fetch_source(SOURCE|{'adapter':'public_inspection','url':'https://www.federalregister.gov/api/v1/public-inspection-documents.json'},ASOF-timedelta(days=3),ASOF,fetch=fetch)
+  self.assertIn('public-inspection-documents.json',calls[0]);self.assertNotIn('publication_date',calls[0]);self.assertEqual(rows[0]['native_id'],'2026-21105');self.assertEqual(health['status'],'ok')
+  blob={'meta':{'results':{'total':1}},'results':[{'application_number':'ANDA091433','sponsor_name':'Hikma','submissions':[{'submission_status':'AP','submission_number':'1','submission_status_date':'20110923','application_docs':[{'url':'http://www.accessdata.fda.gov/old.pdf'}]},{'submission_status':'AP','submission_number':'2','submission_status_date':'20261014','application_docs':[{'url':'https://www.accessdata.fda.gov/bad file.pdf'},{'url':'https://www.accessdata.fda.gov/letter.pdf'}]},{'submission_status':'TA','submission_number':'3','submission_status_date':'20261014'}]}]}
+  rows,health=fetch_source(SOURCE|{'adapter':'openfda_approvals','url':'https://api.fda.gov/drug/drugsfda.json'},ASOF-timedelta(days=3),ASOF,fetch=lambda u,**kw:(200,json.dumps(blob).encode(),{},u))
+  self.assertEqual(len(rows),1);self.assertEqual(rows[0]['url'],'https://www.accessdata.fda.gov/letter.pdf');self.assertEqual(source_metadata(SOURCE,rows[0])['document_stage'],'approval_published')
+  rows,health=fetch_source(SOURCE|{'adapter':'openfda_approvals','url':'https://api.fda.gov/drug/drugsfda.json'},ASOF-timedelta(days=3),ASOF,fetch=lambda u,**kw:(404,b'',{},u))
+  self.assertEqual(health['status'],'valid_empty');self.assertEqual(rows,[])
+
+ def test_named_official_statements_stay_when_research_speeches_are_excluded(self):
+  from build_primary_action_catalog import channel_scope
+  speech={'name':'Federal Reserve speeches','url':'https://www.federalreserve.gov/feeds/speeches.xml','document_type':'official_statement'}
+  self.assertIsNone(channel_scope(speech));self.assertTrue(channel_scope(dict(speech,document_type='official_announcement')))
 
  def test_public_feed_can_disable_unsupported_conditional_headers(self):
   calls=[]

@@ -155,6 +155,7 @@ def source_metadata(source,row):
     if kind=='court_order':stage='judicial_order_published'
     if kind=='presidential_document':stage='presidential_document_published'
     if kind=='treasury_auction':stage='fiscal_auction_announced'
+    if kind=='fda_approval':stage='approval_published'
     return {'document_type':kind,'document_stage':stage,'concrete_public_action':None,'classification_status':'source_metadata_only; semantic action verdict not inferred','issuer':row.get('issuer') or source['name'],'jurisdiction':source['jurisdiction'],'family':source['family']}
 
 def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
@@ -169,6 +170,10 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
         url+='?'+urllib.parse.urlencode(query)
     elif adapter=='govuk_search':
         url+='?'+urllib.parse.urlencode({'filter_content_store_document_type':source['document_type'],'filter_public_timestamp':'from:'+iso(start)+',to:'+iso(end),'count':1000,'order':'-public_timestamp','start':0})
+    elif adapter=='public_inspection':
+        url='https://www.federalregister.gov/api/v1/public-inspection-documents.json?'+urllib.parse.urlencode({'per_page':1000})
+    elif adapter=='openfda_approvals':
+        url=source['url']+'?'+urllib.parse.urlencode({'search':'submissions.submission_status_date:['+start.strftime('%Y%m%d')+' TO '+end.strftime('%Y%m%d')+']','limit':100})
     elif adapter=='hkma_press':
         url+='?'+urllib.parse.urlencode({'lang':'en','sortby':'date','sortorder':'desc','pagesize':source.get('page_size',100),'offset':0})
     seen_urls=set()
@@ -178,7 +183,9 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
         if pages>max_pages:warnings.append('pagination_budget_reached');break
         status,body,response_headers,resolved=fetch(url,headers=headers if pages==1 else {})
         if status==304:return [],{**(previous or {}),'status':'unchanged','http_status':304,'requests':pages}
-        if status!=200:return rows,{'status':'blocked' if status in (401,403,429) else 'fetch_failed','http_status':status,'requests':pages,'warnings':warnings,'fetched_rows':len(rows)}
+        if status!=200:
+            if adapter=='openfda_approvals' and status==404:return [],{'status':'valid_empty','http_status':404,'requests':pages,'warnings':warnings+['openfda_no_matches_in_window'],'fetched_rows':0}
+            return rows,{'status':'blocked' if status in (401,403,429) else 'fetch_failed','http_status':status,'requests':pages,'warnings':warnings,'fetched_rows':len(rows)}
         if first_hash is None:first_hash=hashlib.sha256(body).hexdigest()
         if adapter in ('rss','html_index'):
             rows=feed_rows(body,resolved) if adapter=='rss' else index_rows(body,source)
@@ -201,6 +208,27 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
                 if billions and billions>=1:title+=f' (${billions:.0f} billion offering)'
                 rows.append({'title':clean(title),'url':f'https://www.treasurydirect.gov/instit/annceresult/press/preanre/{pdf[2:6]}/{pdf}','native_id':cusip,'published_at':iso(published),'published_raw':record.get('auctionDate') if resulted else record.get('announcementDate'),'document_type':'treasury_auction','issuer':'U.S. Department of the Treasury','summary':''})
             url=None
+        elif adapter=='openfda_approvals':
+            blob=json.loads(body)
+            if not isinstance(blob.get('results'),list):raise ValueError('Expected openFDA results')
+            for application in blob['results']:
+                appl=str(application.get('application_number') or '');sponsor=clean(application.get('sponsor_name') or 'FDA applicant')
+                for submission in application.get('submissions') or []:
+                    if submission.get('submission_status')!='AP':continue
+                    raw=str(submission.get('submission_status_date') or '')
+                    published=date(raw[:4]+'-'+raw[4:6]+'-'+raw[6:]) if len(raw)==8 and raw.isdigit() else None
+                    if not published or published<start or published>end+timedelta(days=1):continue
+                    fallback='https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo='+re.sub(r'\D','',appl)
+                    link=None
+                    for raw in [d.get('url') for d in (submission.get('application_docs') or [])]:
+                        if not str(raw or '').startswith(('https://','http://')) or any(c.isspace() for c in str(raw)):continue
+                        try:link=canonical_url(raw);break
+                        except ValueError:continue
+                    link=link or fallback
+                    rows.append({'title':clean(f'FDA approval {sponsor} {appl}'),'url':link,'native_id':appl+':'+str(submission.get('submission_number') or '')+':'+raw,'published_at':iso(published),'published_raw':raw,'document_type':'fda_approval','issuer':'Food and Drug Administration','summary':''})
+            got=len(blob['results']);total=int(((blob.get('meta') or {}).get('results') or {}).get('total') or got);skip=int(dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query)).get('skip') or 0)
+            if skip+got<total and got:url=source['url']+'?'+urllib.parse.urlencode({'search':'submissions.submission_status_date:['+start.strftime('%Y%m%d')+' TO '+end.strftime('%Y%m%d')+']','limit':100,'skip':skip+got})
+            else:url=None
         elif adapter=='hkma_press':
             blob=json.loads(body)
             if blob.get('header',{}).get('success') is not True or not isinstance(blob.get('result',{}).get('records'),list):raise ValueError('Expected HKMA successful structured records')
@@ -215,9 +243,11 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
         else:
             blob=json.loads(body)
             if not isinstance(blob.get('results'),list):raise ValueError('Expected structured results')
-            if adapter=='federal_register':
+            if adapter in ('federal_register','public_inspection'):
                 for r in blob['results']:
-                    rows.append({'title':clean(r['title']),'url':r['html_url'],'native_id':r['document_number'],'published_at':iso(date(r['publication_date'])),'published_raw':r['publication_date'],'document_type':r['type'],'issuer':'; '.join(a.get('name') or a.get('raw_name') or 'Issuing agency unresolved' for a in r.get('agencies',[])),'issuer_ids':[f"us-fr:{a['id']}" for a in r.get('agencies',[]) if a.get('id') is not None],'summary':clean(r.get('abstract',''))[:1200],'official_pdf_url':r.get('pdf_url')})
+                    if not r.get('title') or not r.get('html_url') or not r.get('document_number'):continue
+                    published=date(r.get('publication_date'))
+                    rows.append({'title':clean(r['title']),'url':r['html_url'],'native_id':r['document_number'],'published_at':iso(published) if published else None,'published_raw':r.get('publication_date'),'document_type':r.get('type') or 'Notice','issuer':'; '.join(a.get('name') or a.get('raw_name') or 'Issuing agency unresolved' for a in r.get('agencies',[])),'issuer_ids':[f"us-fr:{a['id']}" for a in r.get('agencies',[]) if a.get('id') is not None],'summary':clean(r.get('abstract',''))[:1200],'official_pdf_url':r.get('pdf_url')})
                 url=blob.get('next_page_url')
                 if blob.get('count',0)>2000:warnings.append('federal_register_2000_result_limit; use narrower date windows')
             else:
@@ -316,7 +346,7 @@ def collect(catalog,ledger,output,lookback_days=3,workers=8,fetch=get,asof=None)
     report.update(catalog_disabled_channels=len(catalog['sources'])-len(sources),changed_existing_documents=len(ledger.changed_ids))
     atomic_json(output/'report.json',report)
     atomic_json(output/'pending_headlines.json',[{'n':r['n'],'title':r['title'],'url':r['url'],'published_at':r['published_at'],'official_issuer':r['source_metadata']['issuer'],'document_type':r['source_metadata']['document_type'],'document_stage':r['source_metadata']['document_stage'],'source_ids':r['source_ids']} for r in new if r.get('published_at')])
-    final_stages={'final_rule_published','decision_published','judicial_decision_published','judicial_opinion_published','judicial_order_published','law_published','instrument_published','presidential_document_published','fiscal_auction_announced'}
+    final_stages={'final_rule_published','decision_published','judicial_decision_published','judicial_opinion_published','judicial_order_published','law_published','instrument_published','presidential_document_published','fiscal_auction_announced','approval_published'}
     atomic_json(output/'action_documents.json',[r for r in current if r['source_metadata']['document_stage'] in final_stages])
     atomic_json(output/'proposals_and_procedure.json',[r for r in current if r['source_metadata']['document_stage'] not in final_stages and r['source_metadata']['document_stage']!='requires_semantic_review'])
     atomic_json(output/'updated_documents_review.json',ledger.documents(ledger.changed_ids))

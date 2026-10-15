@@ -114,3 +114,70 @@ FTC, CFTC, FCC, HHS, State Department press, BLS, SEC EDGAR Atom, California OAL
 - TreasuryDirect announced auctions are a first-class adapter. A result with a yield or bid-to-cover is labeled as an auction result and dated on the auction date. An announcement without a result stays an announcement.
 
 The scheduled catalog refresh compares the seed and implementation hashes. The next run on the default branch re-verifies these URLs before enabling them. A host that returns 403 stays disabled and is reported.
+
+## Every requested site, checked 15 Oct 2026
+
+“Parsable” means this client received JSON, XML, or RSS/Atom with a public GET and no API key. A key requirement, a 403, or an HTML page with no feed is recorded and not treated as a working collector source. CourtListener is not a .gov host, and PACER is paid, so neither is fetched.
+
+| Site | Parsable endpoint that answered | Collector |
+|---|---|---|
+| Federal Register | `api/v1/documents.json` and public inspection `public-inspection-documents.json` (131 documents, one page) | Both. Public inspection is the advance copy. |
+| Regulations.gov | API exists | Key required. Published rules still come through the Federal Register. |
+| GovInfo | Collection RSS already collected. `bulkdata/json/FR` is a year/folder listing | RSS for bills, laws, courts, Record, presidential documents. Bulk XML is a backfill tree, not the daily parser. API needs a key. |
+| eCFR | `ecfr.gov/api/versioner/v1/titles.json` | Codified titles, not a change feed. Amendments arrive in the Federal Register. |
+| USA.gov agency index | HTML directory | Used as an identity list, not a publication feed. |
+| Congress.gov | Three public RSS files. API v3 | RSS collected. Full bill actions need an api.data.gov key. |
+| House.gov | No RSS at the paths tried | Floor activity is the Congress.gov House feed. |
+| Senate.gov | HTML at the guessed RSS path | Floor activity is the Congress.gov Senate feed. |
+| CBO | `cbo.gov/publications/all/rss.xml` (30 dated items) | Seeded. |
+| GAO | — | 403 on the RSS paths. |
+| White House actions | `whitehouse.gov/presidential-actions/feed/` | Collected. |
+| White House briefing room | `whitehouse.gov/news/feed/` (30 items, 4–15 Oct) | Seeded as official statements. Birthday messages sit in the same feed as policy posts. |
+| Federal Reserve policy | `feeds/press_monetary.xml`, `press_all.xml` | Collected. |
+| Federal Reserve speeches | `feeds/speeches.xml` (15 dated items) | Seeded. Research and testimony feeds stay excluded. |
+| SEC press and speeches | `sec.gov/news/pressreleases.rss`, `sec.gov/news/speeches.rss` | Both seeded. Litigation RSS returned 403. |
+| SEC EDGAR / data.sec.gov | — | 403 to this client, including `data.sec.gov/submissions/`. Company filings are not collected. |
+| CFTC | — | 403. |
+| Treasury press | `home.treasury.gov/news/press-releases/feed` | Timed out. |
+| Treasury auctions | TreasuryDirect JSON, and Fiscal Data `auctions_query` JSON | TreasuryDirect is the collector. Fiscal Data is the same auctions in another keyless JSON API. |
+| OFAC recent actions | HTML index with dates in the URL | Collected. RSS is 404. |
+| OFAC SDN bulk | `treasury.gov/ofac/downloads/sdn.xml` and the Sanctions List Service XML | Full designation list, not a daily headline feed. Not ingested as one row per name. |
+| OCC, FDIC, FinCEN | — | Seed RSS paths are 404. |
+| CFPB | `consumerfinance.gov/about-us/newsroom/feed/` | Answers. |
+| FHFA | — | No RSS at the paths tried. |
+| FSOC | Treasury / Federal Register | No separate feed found. Designations that are published hit the Federal Register. |
+| openFDA Drugs@FDA | `api.fda.gov/drug/drugsfda.json` with a submission-date search | Adapter keeps approval (`AP`) submissions inside the window. A 14-day check returned 86. An empty window is HTTP 404 and is stored as no matches. Device `pma.json` also answers and is not on the daily pass. |
+| FDA press RSS | Several topic feeds | Press-announcements path is 404. Topic feeds that parse stay. |
+| FTC | — | 403 on the press RSS. |
+| DOJ | `justice.gov/news/rss` and the Antitrust Division filter | Both seeded. |
+| FERC | HTML decisions index | No RSS answered. |
+| EPA | `epa.gov/newsreleases/search/rss` | HTTP 202 HTML, not a feed. Rules still go through the Federal Register. |
+| Energy | `energy.gov/rss.xml` | Parses, and the newest item is from 2020. Not seeded. |
+| Commerce, BIS | — | Commerce RSS 403. BIS RSS 404. Export-control rules that are notices still go through the Federal Register. |
+| USTR | `ustr.gov/rss.xml` | Seeded. |
+| USITC | — | Timed out. |
+| Labor | `dol.gov/rss/releases.xml` | Answers. |
+| OSHA | — | 403. |
+| IRS | — | No RSS at the paths tried. Tax rules that are published hit the Federal Register. |
+| Supreme Court | Slip-opinion and orders HTML indexes | Collected. |
+| PACER | Paid docket system | Not fetched. |
+| CourtListener | Unofficial REST API | Not a government host. Not fetched. |
+| BLS | `api.bls.gov/publicAPI/v1/timeseries/data/{series}` for one series | RSS is 403. One series is not the Employment Situation release, so it is not a daily headline source. |
+| BEA | `apps.bea.gov/rss/rss.xml` (48 dated releases). The data API needs a key | RSS seeded. |
+| Census | `census.gov/economic-indicators/indicator.xml` (18 indicators, including retail sales). Data API needs a key | Indicator feed seeded. |
+| FRED | API exists on `api.stlouisfed.org` | Key required. Host is not a `.gov` suffix. Not fetched. |
+| USDA WASDE | A report-numbered XML file such as `wasde1026.xml` | No stable feed URL. Not seeded. |
+| USDA, Education, DHS, State, DOT, FAA, HHS, CMS | — | 403 or 404 on the RSS paths tried. |
+| Defense | `defense.gov` ArticleCS RSS (10 items, 14 Oct) | Seeded. |
+| HUD | `hud.gov/rss.xml` (through 14 Oct) | Seeded. |
+| Interior | `doi.gov/feeds/content/36980/rss.xml` | Replaces the 404 `/rss/news.xml`. The live channel was empty on this check. |
+| Veterans Affairs | `news.va.gov/feed/` | Seeded. The feed mixes benefit news with general posts. |
+| FCC | — | 403. |
+| CPSC | Recalls RSS path | 404. |
+| NLRB | `nlrb.gov/rss/rssPressReleases.xml` | Seeded. |
+| EEOC, NRC, EXIM, GSA | — | 404, 503, or no feed at the paths tried. |
+| FEC | HTML data pages. `api.open.fec.gov` needs a key | Not seeded. |
+| FMC | `fmc.gov/rss` | Parses, last item May 2024. Not seeded. |
+| SBA | `sba.gov/feed` | Seeded. |
+| Data.gov / api.data.gov | Catalog search returned 404 from here | api.data.gov is the key service for GovInfo, Congress, and Regulations.gov. |
+| SAM.gov | Opportunities API | Key required. A solicitation is not an award. |
