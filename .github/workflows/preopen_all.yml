@@ -101,13 +101,9 @@ permissions:
 concurrency:
   # One group across ECS and ubuntu. A same-day twin queues instead of
   # writing a second LLM packet in parallel (2026-09-25). cancel-in-progress
-  # 2026-10-14 23:07 ET: a merge poke started a night packet because
-  # 23:07 is not "before 03:55". cancel-in-progress true lets this
-  # follow-up push stop that run. The morning cron is schedule, not
-  # a second push, so it is not cancelled by this. Set back to false
-  # after the night run is dead and before any later yml poke.
+  # stays false so a running Grok pass is not killed by the queued twin.
   group: preopen-all
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
