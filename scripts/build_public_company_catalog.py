@@ -11,7 +11,8 @@ ENDPOINT="https://query.wikidata.org/sparql"
 def query_text(limit):
     return """SELECT DISTINCT ?company ?companyLabel ?companyDescription ?ticker ?industry ?industryLabel
 WHERE {
-  ?company wdt:P249 ?ticker; wdt:P452 ?industry.
+  ?company wdt:P452 ?industry.
+  OPTIONAL { ?company wdt:P249 ?ticker. }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
 ORDER BY ?company ?industry ?ticker
@@ -52,7 +53,7 @@ def build(output,limit):
     (output/"wikidata_companies.json").write_bytes(body)
     metadata={"generated_at":datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "source":ENDPOINT,"license":"Wikidata structured data CC0",
-        "scope":"Broad listed-company identity/industry snapshot; incomplete worldwide coverage, not benchmark-selected",
+        "scope":"Broad business/organization identity/industry snapshot; incomplete worldwide coverage, not benchmark-selected",
         "query":query,"requested_binding_limit":limit,"bindings":len(bindings),"companies":len(rows),
         "sha256":hashlib.sha256(body).hexdigest(),
         "raw_response_sha256":hashlib.sha256(response).hexdigest(),
