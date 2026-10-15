@@ -212,7 +212,7 @@ Surveyed 2026-10-15 from the failed and cancelled runs of Pre-Open, Post-Close, 
 
 ### What is already changed, and what is not
 
-#597, #599, #600, #603, and #604 are on main. Together they change modes 1, 2, 3, 6, 8, 9, 12, 13, 14, 16, 18 (the no-balance skip), 19, 22, 24, 25, 26, 29, 30, 31, 32, 33, and 39. Mode 43 is #608, on main: the button, push, and schedule use the ECS runner unless ubuntu is explicit. Mode 40's grok default and ECS routing are #608; the empty-balance essay skip is still PR #607. Mode 41 is PR #607 and is not on main yet. Mode 42 is not code: the ECS runner dropped and GitHub uploaded no step log. Mode 44 is not code: run `38731981090` selected paid OpenRouter `z-ai/glm-5.3` and the account could only afford about 2000 tokens (HTTP 402). A dead refresh token is still mode 11. On 2026-10-15 at 06:56 ET the ECS gateway answered a no-search ping (`xai/grok-4.3`, HTTP 200, `PONG`), so mode 11 is not the current blocker.
+#597, #599, #600, #603, and #604 are on main. Together they change modes 1, 2, 3, 6, 8, 9, 12, 13, 14, 16, 18 (the no-balance skip), 19, 22, 24, 25, 26, 29, 30, 31, 32, 33, and 39. Mode 43 is #608, on main: the button, push, and schedule use the ECS runner unless ubuntu is explicit. Mode 40's grok default and ECS routing are #608; the empty-balance essay skip is #607, on main. Mode 41 is #607, on main. The no-search retry after a 42 and the listener kill before `systemctl` are #607, on main. Mode 42 is not code: the ECS runner dropped and GitHub uploaded no step log. Mode 44 is not code: run `38731981090` selected paid OpenRouter `z-ai/glm-5.3` and the account could only afford about 2000 tokens (HTTP 402). A dead refresh token is still mode 11. On 2026-10-15 at 06:56 ET the ECS gateway answered a no-search ping (`xai/grok-4.3`, HTTP 200, `PONG`). At 09:46 ET the published guard said the token was fresh until 11:54 ET, with no verification URL, so mode 11 is not the current blocker.
 
 Still owner-only: mode 11 (open the device URL and press Allow), mode 15 if the message is the credits/subscription 403, and mode 27 until a `FULLSCAN_PUSH_TOKEN` secret exists.
 
@@ -220,7 +220,7 @@ Left as they are on purpose: paid DeepSeek, paid `glm-5.3`, and paid OpenRouter 
 
 ## Fix pass after the catalog
 
-#603 and #604 are on main. The bullets through mode 3 are #603. Mode 39, the essay-budget half of mode 25, and the no-balance skip in mode 18 are #604. Modes 40, 41, and 43 are PR #607 and are not on main yet. Mode 42 is not code. Mode 44 is not code: OpenRouter `z-ai/glm-5.3` on run `38731981090` returned HTTP 402 because the account could only afford about 2000 tokens.
+#603, #604, #607, and #608 are on main. The bullets through mode 3 are #603. Mode 39, the essay-budget half of mode 25, and the no-balance skip in mode 18 are #604. Mode 43 and the grok default are #608. The empty-balance essay skip, the stock-book deadline, the no-search retry, and the listener kill are #607. Mode 42 is not code. Mode 44 is not code: OpenRouter `z-ai/glm-5.3` on run `38731981090` returned HTTP 402 because the account could only afford about 2000 tokens.
 
 - Mode 9 and the leftover of mode 2: a sector whose breaker file is already open does not sleep 60–120s, and a `/v1/models` 200 does not clear that file. After Grok is empty, free `glm-5.3-flash` may write the sector. Paid DeepSeek stays blocked.
 - Mode 14, the skip half: a token that expires before 06:30 ET is not "fresh", even when more than 90 minutes remain. The 00:41 ET run on 2026-10-15 had 267 minutes left and an expiry of 05:08 ET, which is before the 05:55 Pre-Open. It skipped. A later 17+25 that returns 42 without moving that expiry is not treated as a renew (mode 13). OpenClaw refreshes only an already-expired profile, so the guard nudges that expiry field, calls once more, and restores the file if the expiry still does not move. It does not touch the profile while a Grok job is running.
@@ -257,9 +257,9 @@ Proof is strict. A run id is listed only when a real morning Pre-Open exercised 
 
 | # | Short name | Category | Hangs or kills the morning job? | Fix | Proof |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Native-search read timeout, then the breaker | hang | yes | #599 merged; the heal must not open another search turn after the 42, PR #607 pending | unproven until first morning on fix |
+| 1 | Native-search read timeout, then the breaker | hang | yes | #599 merged; the heal must not open another search turn after the 42, #607 merged | unproven until first morning on fix |
 | 2 | Each sector burns its own timeout, no breaker | timeout | yes | #599 merged; leftover sleep is #603 merged | unproven until first morning on fix |
-| 3 | Gateway keeps the 10800s turn after the client gives up | hang | yes | #599 merged; #603 kills the listener; the 75s cap still fired before that kill on 38720850552, PR #607 pending | unproven until first morning on fix |
+| 3 | Gateway keeps the 10800s turn after the client gives up | hang | yes | #599 merged; #603 kills the listener; the 75s cap still fired before that kill on 38720850552, #607 merged | unproven until first morning on fix |
 | 4 | PONG treated as a finished xAI login | auth | yes | already gone from tree | unproven until first morning on fix |
 | 5 | HTTP 500 marks the gateway down for the rest of the run | other | yes | already gone from tree | unproven until first morning on fix |
 | 6 | Config rewrite returns one 127-character body for every sector | other | yes | #603 merged | unproven until first morning on fix |
@@ -296,8 +296,8 @@ Proof is strict. A run id is listed only when a real morning Pre-Open exercised 
 | 37 | Run red, every recorded job green, no preopen job | other | yes | already gone from tree | unproven until first morning on fix |
 | 38 | A person Force-cancels a live Grok pass | other | yes | not code: do not Force-cancel a live pass | unproven until first morning on fix |
 | 39 | 04:40 OAuth guard queues behind Pre-Open and the token expires | auth | yes | #604 merged | unproven until first morning on fix |
-| 40 | Pre-Open defaults to deepseek, so Grok is never called | auth | yes | #608 merged the grok default and ECS routing; empty Zhipu/TokenHub no longer cancels Grok when the gateway is set, PR #607 pending | unproven until first morning on fix |
-| 41 | Nested stock-book wait ignores the step deadline | timeout | yes | PR #607 pending | unproven until first morning on fix |
+| 40 | Pre-Open defaults to deepseek, so Grok is never called | auth | yes | #608 merged the grok default and ECS routing; empty Zhipu/TokenHub no longer cancels Grok when the gateway is set, #607 merged | unproven until first morning on fix |
+| 41 | Nested stock-book wait ignores the step deadline | timeout | yes | #607 merged | unproven until first morning on fix |
 | 42 | ECS runner drops and the step log never uploads | other | yes | not code: the ECS runner dropped; GitHub uploaded no step log | unproven until first morning on fix |
 | 43 | Pre-Open button defaults to ubuntu, so Grok is never reached | auth | yes | #608 merged | unproven until first morning on fix |
 | 44 | OpenRouter glm-5.3 selected, account cannot afford the essay | auth | yes | not code: do not buy OpenRouter credits | unproven until first morning on fix |
