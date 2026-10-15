@@ -1,12 +1,11 @@
 {
-  "status": "waiting",
-  "oauth": "FAIL",
+  "status": "ok",
+  "oauth": "OK",
   "pong_ok": null,
-  "reason": "Approve this code on the phone at accounts.x.ai",
-  "user_code": "PRQY-M3W8",
-  "verification_uri": "https://accounts.x.ai/oauth2/device?user_code=PRQY-M3W8",
-  "expires_at": "2026-10-15T06:06:34.471680-04:00",
+  "reason": "device login completed",
+  "user_code": null,
+  "verification_uri": "https://accounts.x.ai/oauth2/device",
+  "expires_at": null,
   "source": "xai_device_reauth",
-  "pid": 2353917,
-  "updated_at": "2026-10-15T05:52:34.472176-04:00"
+  "updated_at": "2026-10-15T05:54:33.031510-04:00"
 }
