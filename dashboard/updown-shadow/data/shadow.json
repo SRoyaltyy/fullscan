@@ -3123,7 +3123,7 @@
   "strategy": "updown_rel1_hv_v1",
   "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
   "days_locked": 6,
-  "days_realized": 4,
+  "days_realized": 5,
   "days_missed": 0,
   "missed_dates": [],
   "rule": {
@@ -3132,29 +3132,29 @@
    "missed": "Missed days (not frozen before 09:25 ET) are recorded in MISSED.jsonl, never back-filled, and earn nothing."
   },
   "gross": {
-   "cum": 0.0231381387,
-   "mean_bp": 57.4712148831,
-   "t_nw": 4.1322757783
+   "cum": 0.0411922613,
+   "mean_bp": 81.2686336908,
+   "t_nw": 7.4153226048
   },
   "net5": {
-   "cum": 0.0184660033,
-   "mean_bp": 45.9712148831,
-   "t_nw": 3.3009075289
+   "cum": 0.0352533832,
+   "mean_bp": 69.7486336908,
+   "t_nw": 6.2949838685
   },
   "net10": {
-   "cum": 0.0138097948,
-   "mean_bp": 34.4712148831,
-   "t_nw": 2.4706027721
+   "cum": 0.0293415361,
+   "mean_bp": 58.2286336908,
+   "t_nw": 5.19690961
   },
   "net15": {
-   "cum": 0.0091694772,
-   "mean_bp": 22.9712148831,
-   "t_nw": 1.6425631372
+   "cum": 0.023456628,
+   "mean_bp": 46.7086336908,
+   "t_nw": 4.1215650191
   },
   "hedged_net10": {
-   "cum": -0.0022408964,
-   "mean_bp": -5.437204278,
-   "t_nw": -0.4789708586
+   "cum": 0.0089647798,
+   "mean_bp": 18.0172370193,
+   "t_nw": 1.3575751202
   },
   "iwm_oo1": {
    "cum": null,
@@ -3162,15 +3162,15 @@
    "t_nw": null
   },
   "rand_med_net10": {
-   "cum": -0.013046771,
-   "mean_bp": -32.7751623239,
-   "t_nw": -16.4772524473
+   "cum": -0.0166987558,
+   "mean_bp": -33.6206522917,
+   "t_nw": -17.8765688889
   },
-  "best_stock": "ALHC",
-  "best_stock_contrib": 0.0037777783,
-  "net10_ex_best_cum": 0.0099786474,
-  "mean_turnover": 2.3,
-  "status": "collecting (4 realized days; kill check from day 20/60, promotion review not before day 120)",
+  "best_stock": "CIFR",
+  "best_stock_contrib": 0.0054281503,
+  "net10_ex_best_cum": 0.0238258351,
+  "mean_turnover": 2.304,
+  "status": "collecting (5 realized days; kill check from day 20/60, promotion review not before day 120)",
   "killed": false
  },
  "realized_cols": [
@@ -3232,7 +3232,7 @@
    -0.0030700788,
    0.003863629,
    1.0,
-   0.010651764
+   0.0096110708
   ],
   [
    "2026-10-08",
@@ -3262,7 +3262,7 @@
    -0.0057447575,
    0.0029998665,
    0.729,
-   -0.004090684
+   -0.001157382
   ],
   [
    "2026-10-09",
@@ -3292,37 +3292,67 @@
    -0.0052584095,
    0.005218993,
    0.923,
-   0.0054496275
+   0.0050146539
   ],
   [
    "2026-10-12",
    "2026-10-13",
    50,
    50,
-   0.0,
+   0.017645831,
    2.0,
    -1.5369709,
-   -0.002825424,
-   -0.0043425946,
+   -0.0050561738,
+   0.0098746386,
+   -0.001849049,
+   -0.00175958,
    null,
    null,
-   "AAOI;ACN;AEHR;ALHC;AMD;ANF;APLD;ARW;ASML;ASST;ASTS;ATI;AVAV;BE;BRKR;BSP;BTDR;CAT;CEG;CF;CIFR;CLSK;COHR;CORZ;CRL;CRWD;CTVA;DAR;DDOG;DINO;DK;DOCN;EAT;FIGR;FRVO;GH;GKOS;GME;GRAL;GRML;HUT;INIO;INOD;INTC;IONQ;IOVA;IREN;JNJ;KOD;MDGL;MP;MPC;MRNA;MRVL;MSTR;MTSI;MU;MXL;NBIS;NTRA;NTSK;NVT;OKLO;ONDS;PANW;PBF;PCVX;PENG;PLNT;PRAX;PURR;PWR;RBRK;RIOT;ROIV;SCCO;SMMT;SMR;SNOW;SPHR;STX;TEAM;TEM;TGTX;TLN;TTMI;TVTX;TWLO;TWST;TXG;UMC;VEEA;VLO;VSAT;VSH;VST;VSXY;WOLF;WULF;XP",
+   0.016645831,
+   0.0088746386,
+   0.015645831,
+   0.0078746386,
+   0.014645831,
+   0.0068746386,
+   0.012803896,
+   -0.0018510935,
+   0.010108988,
+   -0.0037002612,
+   0.0082909877,
+   -0.0055343957,
+   0.0064814653,
+   0.998,
+   0.012537824
+  ],
+  [
+   "2026-10-13",
+   "2026-10-14",
+   50,
+   50,
+   0.0,
+   2.32,
+   -0.02778901,
+   -0.025684002,
+   -0.000713733,
    null,
-   -0.001,
-   -0.0053425946,
-   -0.002,
-   -0.0063425946,
-   -0.003,
-   -0.0073425946,
+   null,
+   "AEHR;AGX;ALHC;AMD;APLD;ASTS;ASX;AVAV;AXTI;BRKR;BSP;CEG;CIFR;COHR;CRCL;CRH;CRWD;DDOG;DHT;DOCN;DY;ELF;FCEL;FIGR;FLEX;FORM;FPS;FROG;FRVO;FSLY;FTAI;GDDY;GFI;GH;GKOS;GLW;GRAL;GRML;HPE;IBRX;INIO;INTC;IOVA;KOD;KRMN;LITE;LRCX;LUNR;LW;MKSI;MMED;MRNA;MRVL;MTSI;MU;MXL;NBIS;NKTR;NVTS;OKTA;ONDS;ONON;ONTO;PANW;PCVX;PINS;PL;PRAX;PURR;RIVN;ROIV;SANM;SHOP;SIMO;SITM;SMMT;SNAP;SNDK;STX;SWKS;SYRE;TEAM;TEM;TER;TLN;TSEM;TTAN;TTMI;TVTX;TWLO;TXG;VIAV;VICR;VKTX;VSH;VST;WDC;WFF;WING;WULF",
+   null,
+   -0.00116,
+   -0.001873733,
+   -0.00232,
+   -0.003033733,
+   -0.00348,
+   -0.004193733,
    null,
    -0.00182,
-   -0.0015492678,
+   -0.0007029965,
    -0.00364,
-   -0.0033092678,
+   -0.0025029966,
    -0.00546,
-   -0.00504,
-   1.0,
-   -0.002
+   -0.0043029966,
+   0.994,
+   -0.00232
   ]
  ]
 }
