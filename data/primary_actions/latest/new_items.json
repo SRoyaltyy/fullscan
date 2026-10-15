@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "title": "Minutes of the SONIA Stakeholder Advisory Group - 25 September 2026",
+    "url": "https://www.bankofengland.co.uk/minutes/2026/september/sonia-stakeholder-advisory-group-25-september-2026",
+    "native_id": "{488AD0B8-FA84-4827-9B1D-01D8607EDBE7}",
+    "published_at": "2026-10-15T08:27:59+00:00",
+    "published_raw": "Thu, 15 Oct 2026 09:27:59 +0100",
+    "summary": "The SONIA Stakeholder Advisory Group supports the Bank’s administration of SONIA by providing advice and technical input to the Bank and the SONIA Oversight Committee",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank of England",
+      "jurisdiction": "UK",
+      "family": "monetary_and_supervisory"
+    },
+    "primary_source_id": "uk-boe-4feb372611",
+    "n": 2200,
+    "first_seen": "2026-10-15T12:28:40.302903+00:00",
+    "last_seen": "2026-10-15T12:28:40.302903+00:00",
+    "source_ids": [
+      "uk-boe-4feb372611"
+    ]
+  }
+]

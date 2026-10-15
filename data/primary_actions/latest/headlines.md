@@ -1,7 +1,7 @@
 # Primary-origin action documents
 
-Updated 2026-10-15T12:25:40.816793+00:00. 1969 dated documents in the configured 3-day window; 0 newly retained; 852 repeat observations.
-Source health: 335/338 checked successfully. Collection uses zero LLM calls.
+Updated 2026-10-15T12:28:40.302903+00:00. 1969 dated documents in the configured 3-day window; 1 newly retained; 755 repeat observations.
+Source health: 329/338 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
@@ -264,7 +264,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Dr S U Chaudhary v Lewisham Hospital NHS Trust University Hospital Lewisham and The Ashford and St Peters Hospitals NHS Trust: 6006386/2025](https://www.gov.uk/employment-tribunal-decisions/dr-s-u-chaudhary-v-lewisham-hospital-nhs-trust-university-hospital-lewisham-and-the-ashford-and-st-peters-hospitals-nhs-trust-6006386-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:34:10+00:00
 - [Miss Thirugnanasampanthan and Mr Shiyamalan v Irving Stores Ltd: 2300585/2026 and 6011464/2026](https://www.gov.uk/employment-tribunal-decisions/miss-thirugnanasampanthan-and-mr-shiyamalan-v-irving-stores-ltd-2300585-slash-2026-and-6011464-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:30:57+00:00
 - [Miss H Holt v Sysco GB Ltd: 6025978/2025](https://www.gov.uk/employment-tribunal-decisions/miss-h-holt-v-sysco-gb-ltd-6025978-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:28:50+00:00
-- [Creative Process Digital Ltd v Mr T Tolhurst-Cherriman: 2305206/2023](https://www.gov.uk/employment-tribunal-decisions/creative-process-digital-ltd-v-mr-t-tolhurst-cherriman-2305206-slash-2023) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:27:12+00:00
 
 ## judicial_opinion_published
 
@@ -1450,6 +1449,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Volume and price statistics of external merchandise trade in August 2026](https://www.info.gov.hk/gia/general/202610/15/P2026101500323.htm) — Hong Kong Government Information Services; 2026-10-15T08:30:00+00:00
 - [Speech by Commissioner Lahbib at the International Conference on the Protection of Aid Workers](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2171) — European Commission press and decisions; 2026-10-15T08:29:41+00:00
 - [H. Rept. 119-841](https://www.govinfo.gov/app/details/CRPT-119hrpt841) — Congressional Reports; 2026-10-15T08:28:00+00:00
+- [Minutes of the SONIA Stakeholder Advisory Group - 25 September 2026](https://www.bankofengland.co.uk/minutes/2026/september/sonia-stakeholder-advisory-group-25-september-2026) — Bank of England; 2026-10-15T08:27:59+00:00
 - [H. Rept. 119-834](https://www.govinfo.gov/app/details/CRPT-119hrpt834) — Congressional Reports; 2026-10-15T08:26:00+00:00
 - [Inspection of aquatic products imported from Japan](https://www.info.gov.hk/gia/general/202610/15/P2026101500492.htm) — Hong Kong Government Information Services; 2026-10-15T08:22:00+00:00
 - [Daily News 15 / 10 / 2026](https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2170) — European Commission press and decisions; 2026-10-15T08:19:59+00:00
@@ -2025,8 +2025,8 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-govinfo-uscourts-flsd: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-flnd: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-gamd: unchanged; feed_at_capacity; daily snapshots may miss overflow
-- us-govinfo-uscourts-gand: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
-- us-govinfo-uscourts-idd: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
+- us-govinfo-uscourts-gand: parse_or_network_error; 
+- us-govinfo-uscourts-idd: fetch_failed; 
 - us-govinfo-uscourts-ilnd: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-ilsd: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-insd: unchanged; feed_at_capacity; daily snapshots may miss overflow
@@ -2063,7 +2063,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-govinfo-uscourts-tnmd: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-txwd: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-utd: unchanged; feed_at_capacity; daily snapshots may miss overflow
-- us-govinfo-uscourts-vid: unchanged; feed_at_capacity; daily snapshots may miss overflow
+- us-govinfo-uscourts-vid: parse_or_network_error; 
 - us-govinfo-uscourts-vtd: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-waed: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-wiwd: unchanged; feed_at_capacity; daily snapshots may miss overflow
@@ -2157,22 +2157,22 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-govinfo-uscourts-jpml: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-cofc: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-white-house-0691096d16: unchanged; stale_feed_outside_requested_window
-- us-fed-7cfba7c4ca: ok; stale_feed_outside_requested_window
+- us-fed-7cfba7c4ca: fetch_failed; 
 - us-fed-1555c8e0e5: ok; stale_feed_outside_requested_window
 - us-fed-ba8ad56252: ok; stale_feed_outside_requested_window
 - us-fed-1549fdd7e4: fetch_failed; 
 - us-fed-95066bc761: fetch_failed; 
-- us-fed-ec604ccde0: ok; stale_feed_outside_requested_window
-- us-fed-8d9ba6faea: ok; stale_feed_outside_requested_window
+- us-fed-ec604ccde0: fetch_failed; 
+- us-fed-8d9ba6faea: fetch_failed; 
 - us-cftc-fda5c3631d: ok; stale_feed_outside_requested_window
-- us-fda-df70b9f330: unchanged; stale_feed_outside_requested_window
-- us-fda-1a1096082f: ok; stale_feed_outside_requested_window
-- us-fda-2d9c4fc2f9: ok; stale_feed_outside_requested_window
-- us-fda-8fc09ac0a2: ok; stale_feed_outside_requested_window
-- us-fda-3eaddf14de: unchanged; stale_feed_outside_requested_window
-- us-fda-a25233bfac: unchanged; stale_feed_outside_requested_window
+- us-fda-df70b9f330: ok; stale_feed_outside_requested_window
+- us-fda-1a1096082f: unchanged; stale_feed_outside_requested_window
+- us-fda-2d9c4fc2f9: unchanged; stale_feed_outside_requested_window
+- us-fda-8fc09ac0a2: unchanged; stale_feed_outside_requested_window
+- us-fda-3eaddf14de: ok; stale_feed_outside_requested_window
+- us-fda-a25233bfac: ok; stale_feed_outside_requested_window
 - us-fda-1ca201e48f: ok; stale_feed_outside_requested_window
-- us-fda-c7d1d1cd64: ok; stale_feed_outside_requested_window
+- us-fda-c7d1d1cd64: unchanged; stale_feed_outside_requested_window
 - us-fda-d7692535f0: ok; stale_feed_outside_requested_window
 - us-nlrb-3db5e72bf9: unchanged; stale_feed_outside_requested_window
 - us-nlrb-c15d588b2d: unchanged; stale_feed_outside_requested_window
@@ -2181,9 +2181,9 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - eu-ecb-fb5fd59aed: ok; stale_feed_outside_requested_window
 - eu-ecb-b84350c252: ok; stale_feed_outside_requested_window
 - eu-ecb-af0dbdabee: ok; stale_feed_outside_requested_window
-- eu-ecb-bca2a70864: ok; stale_feed_outside_requested_window
-- eu-ecb-0370c1f1df: ok; stale_feed_outside_requested_window
-- eu-ecb-c12c22cb78: ok; stale_feed_outside_requested_window
+- eu-ecb-bca2a70864: unchanged; stale_feed_outside_requested_window
+- eu-ecb-0370c1f1df: unchanged; stale_feed_outside_requested_window
+- eu-ecb-c12c22cb78: unchanged; stale_feed_outside_requested_window
 - eu-ssm-3d2756b202: ok; stale_feed_outside_requested_window
 - ca-gazette-821b285be1: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-2d47daa483: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
@@ -2195,14 +2195,14 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - ca-boc-5cc0603f1f: unchanged; stale_feed_outside_requested_window
 - ca-boc-a61b683fac: unchanged; stale_feed_outside_requested_window
 - ca-boc-161ba50d6e: unchanged; stale_feed_outside_requested_window
-- ca-boc-1c9979e6ac: unchanged; stale_feed_outside_requested_window
+- ca-boc-1c9979e6ac: ok; stale_feed_outside_requested_window
 - ca-boc-b8fa2876ef: unchanged; stale_feed_outside_requested_window
 - ca-boc-b06a91e186: unchanged; stale_feed_outside_requested_window
 - ca-boc-f2811531de: unchanged; stale_feed_outside_requested_window
 - ca-boc-71c82276e6: unchanged; stale_feed_outside_requested_window
 - ca-boc-c1617c3a5b: unchanged; stale_feed_outside_requested_window
 - ca-boc-ddf593b208: unchanged; stale_feed_outside_requested_window
-- ca-boc-affce837d4: unchanged; stale_feed_outside_requested_window
+- ca-boc-affce837d4: ok; stale_feed_outside_requested_window
 - ca-boc-e24c58f2d0: unchanged; stale_feed_outside_requested_window
 - ca-boc-9308ff5fe4: unchanged; stale_feed_outside_requested_window
 - ca-boc-9f75c25657: unchanged; stale_feed_outside_requested_window
@@ -2213,7 +2213,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - ca-boc-2fbc8b5053: unchanged; stale_feed_outside_requested_window
 - ca-boc-7b07e406da: unchanged; stale_feed_outside_requested_window
 - ca-boc-903390d96d: unchanged; stale_feed_outside_requested_window
-- ca-boc-1da610df86: unchanged; stale_feed_outside_requested_window
+- ca-boc-1da610df86: ok; stale_feed_outside_requested_window
 - ca-boc-63e377340d: unchanged; stale_feed_outside_requested_window
 - ca-supreme-d329809c56: ok; stale_feed_outside_requested_window
 - au-rba-75f3866f45: unchanged; stale_feed_outside_requested_window
