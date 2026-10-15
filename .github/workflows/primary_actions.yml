@@ -1,0 +1,74 @@
+name: Primary-origin action documents
+on:
+  push:
+    branches: [codex/primary-action-scanner-20261015, main]
+    paths:
+      - 'src/primary_actions.py'
+      - 'scripts/build_primary_action_catalog.py'
+      - 'scripts/test_primary_actions.py'
+      - 'config/primary_action_seeds.json'
+      - '.github/workflows/primary_actions.yml'
+  schedule:
+    - cron: '17 1,13 * * *'
+  workflow_dispatch:
+    inputs:
+      refresh_catalog:
+        description: Rebuild and live-verify the institution and source catalog
+        type: boolean
+        default: false
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: primary-action-documents-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/primary_actions.py
+            /scripts/build_primary_action_catalog.py
+            /scripts/test_primary_actions.py
+            /config/primary_action_seeds.json
+            /config/primary_action_sources.json
+            /data/primary_actions/institution_registry.json
+            /docs/primary-actions/
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline parser, provenance, dedup and official-domain contracts
+        run: PYTHONPATH=. python -m unittest discover -s scripts -p 'test_primary_actions.py'
+      - name: Discover official institutions and verify publication channels
+        run: PYTHONPATH=. python scripts/build_primary_action_catalog.py
+      - name: Collect primary headlines with no LLM and no credentials
+        run: PYTHONPATH=. python -m src.primary_actions --days 3 --workers 8 --state data/primary_actions_state/ledger.sqlite3 --output data/primary_actions/latest
+      - name: Assert every audited collector request is an unauthenticated official-source GET
+        if: always()
+        run: |
+          PYTHONPATH=. python - <<'PY'
+          import json,pathlib
+          from src.primary_actions import allowed_public_source
+          p=pathlib.Path('research/http_request_audit.json')
+          if p.exists():
+              audit=json.loads(p.read_text())
+              assert all(allowed_public_source(x['url']) and x['method']=='GET' and x['body_bytes']==0 and x['authorization_sent'] is False for x in audit)
+              print('Official-source GET requests audited:',len(audit))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: primary-actions-verification
+          retention-days: 90
+          path: |
+            config/primary_action_sources.json
+            data/primary_actions/institution_registry.json
+            data/primary_actions/latest/
+            data/primary_actions_state/ledger.sqlite3
+            docs/primary-actions/
+            research/http_request_audit.json
