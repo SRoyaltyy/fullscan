@@ -13,7 +13,7 @@ def draft():
 def facts():
     bank={'sector':'Financial','activity':'banking','entity':'Bank X','basis':'business_identity','evidence':'Bank X','role':'investor_or_lender','role_evidence':'Bank X buys shares'}
     maker={'sector':'Healthcare','activity':'medical devices','entity':'Maker Y','basis':'headline_activity','evidence':'device','role':'target_business','role_evidence':'FDA approves Maker Y device'}
-    return {'results':[{'n':1,'sectors':[bank,maker],'actions':valid()['actions'],'unknowns':[]}]}
+    return {'results':[{'n':1,'coverage':{'institutional_predicates':['FDA approves'],'business_subjects':['Maker Y','Bank X']},'sectors':[bank,maker],'actions':valid()['actions'],'unknowns':[]}]}
 
 class SectorRoleTests(unittest.TestCase):
     def run_review(self,blob):

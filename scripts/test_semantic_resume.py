@@ -66,7 +66,7 @@ class ResumeAndRateTests(unittest.TestCase):
 
     def test_valid_first_stage_is_reused_without_a_new_lane_call(self):
         old=record(lane())
-        second=record({'results':[{'n':7,'sectors':valid()['sectors'],'actions':valid()['actions'],'unknowns':[]}]})
+        second=record({'results':[{'n':7,'coverage':{'institutional_predicates':['FDA approves'],'business_subjects':['device']},'sectors':valid()['sectors'],'actions':valid()['actions'],'unknowns':[]}]})
         with patch('src.news_impact.semantic_headlines.route.load_keys',return_value=({},'', '')):
             client=SemanticHeadlineClient(['zhipu'],review=False,action_review=True)
         with patch.object(client,'_request',return_value=second) as ask:

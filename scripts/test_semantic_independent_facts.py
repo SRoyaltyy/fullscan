@@ -10,7 +10,7 @@ def lane():
 
 def facts(include_actions=True):
     result={'n':1,'sectors':valid()['sectors'],'unknowns':[]}
-    if include_actions:result['actions']=valid()['actions']
+    if include_actions:result.update(actions=valid()['actions'],coverage={'institutional_predicates':['FDA approves'],'business_subjects':['device']})
     return {'results':[result]}
 
 class IndependentFactsTests(unittest.TestCase):
@@ -39,6 +39,31 @@ class IndependentFactsTests(unittest.TestCase):
         self.assertIsNone(out['model_output'])
         self.assertNotIn('analysis_output',out)
         self.assertEqual(out['draft_analysis']['status'],'analyzed')
+
+    def test_coverage_is_preserved_as_evidence_without_changing_labels(self):
+        blob=facts()
+        responses=[({'results':[{'n':1,'analysis':lane()}]},'glm-5.3-flash'),(blob,'glm-5.3-flash')]
+        with patch('src.news_impact.semantic_headlines.route.load_keys',return_value=({'zhipu':'synthetic'},'', '')),patch('src.news_impact.semantic_headlines.route.ask_lane',side_effect=responses) as ask:
+            out=SemanticHeadlineClient(['zhipu'],review=False,action_review=True).analyze_many([{'n':1,'title':'FDA approves device'}])[0]
+        self.assertEqual(ask.call_count,2)
+        self.assertEqual(out['fact_review']['model_output']['coverage'],blob['results'][0]['coverage'])
+        self.assertNotIn('coverage',out['analysis_output'])
+        self.assertTrue(out['analysis_output']['actions'][0]['concrete_public_action'])
+
+    def test_missing_or_cross_title_coverage_fails_closed(self):
+        import copy
+        original=facts()
+        variants=[]
+        absent=copy.deepcopy(original);del absent['results'][0]['coverage'];variants.append(absent)
+        wrong=copy.deepcopy(original);wrong['results'][0]['coverage']['business_subjects']=['another row company'];variants.append(wrong)
+        malformed=copy.deepcopy(original);malformed['results'][0]['coverage']['institutional_predicates']='FDA approves';variants.append(malformed)
+        for blob in variants:
+            with self.subTest(blob=blob):
+                responses=[({'results':[{'n':1,'analysis':lane()}]},'glm-5.3-flash'),(blob,'glm-5.3-flash'),(blob,'glm-5.3-flash')]
+                with patch('src.news_impact.semantic_headlines.route.load_keys',return_value=({'zhipu':'synthetic'},'', '')),patch('src.news_impact.semantic_headlines.route.ask_lane',side_effect=responses):
+                    out=SemanticHeadlineClient(['zhipu'],review=False,action_review=True).analyze_many([{'n':1,'title':'FDA approves device'}])[0]
+                self.assertEqual(out['status'],'unavailable')
+                self.assertNotIn('analysis_output',out)
 
     def test_full_audit_cannot_add_a_third_call(self):
         with patch('src.news_impact.semantic_headlines.route.load_keys') as keys:

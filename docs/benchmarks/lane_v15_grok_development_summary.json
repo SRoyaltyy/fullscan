@@ -1,0 +1,30 @@
+{
+  "candidate": "semantic-headlines-v15",
+  "run_id": 38680245701,
+  "commit": "fe205a4e80ec4bec89b12e4990b8dbae98d0ffce",
+  "scope": "Development replay after second holdout failed; never increments acceptance streak",
+  "pass": false,
+  "metrics": {
+    "action": 0.96,
+    "lane": 0.92,
+    "sectors": 0.84,
+    "action_precision": 0.9444444444444444,
+    "action_recall": 0.85
+  },
+  "tp": 17,
+  "fp": 1,
+  "fn_or_unavailable": 3,
+  "availability": 1,
+  "acceptance_eligible": false,
+  "best_consecutive_passes": 0,
+  "artifacts": {
+    "raw": {
+      "id": 11947958196,
+      "zip_sha256": "7d7669de0332c9b45ef06a439aa47de3a84818a6d6f76be48ff5b4e805ff2658"
+    },
+    "score": {
+      "id": 11948816109,
+      "zip_sha256": "56ad1420fb6c21c3a7114b99c3732055304fcbc4c30a86770d3cf405331542b1"
+    }
+  }
+}
