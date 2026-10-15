@@ -1,0 +1,148 @@
+name: Primary-origin action documents
+on:
+  push:
+    branches: [codex/primary-action-scanner-20261015, main]
+    paths:
+      - 'src/primary_actions.py'
+      - 'scripts/*primary_action*.py'
+      - 'config/primary_action_seeds.json'
+      - 'config/primary_action_taxonomy.json'
+      - '.github/workflows/primary_actions.yml'
+  schedule:
+    - cron: '17 1,13 * * *'
+  workflow_dispatch:
+    inputs:
+      refresh_catalog:
+        description: Rebuild and live-verify the institution and source catalog
+        type: boolean
+        default: false
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: primary-action-documents-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/primary_actions.py
+            /scripts/*primary_action*.py
+            /config/primary_action*.json
+            /data/primary_actions/institution_registry.json
+            /docs/primary-actions/
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline parser, provenance, dedup and official-domain contracts
+        run: PYTHONPATH=.:scripts python -m unittest discover -s scripts -p 'test_primary_actions.py'
+      - name: Find previous verified state without resetting IDs on promotion
+        id: previous
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts?name=primary-actions-state&per_page=100" > /tmp/primary-states.json
+          gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts?name=primary-actions-verification&per_page=100" > /tmp/primary-baselines.json
+          PYTHONPATH=.:scripts python - <<'PY'
+          import json,os
+          from primary_action_ops import previous_artifact
+          rows=json.load(open('/tmp/primary-states.json'))['artifacts']+json.load(open('/tmp/primary-baselines.json'))['artifacts']
+          chosen=previous_artifact(rows,os.environ['GITHUB_REF_NAME'])
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('run_id='+str(chosen['workflow_run']['id'] if chosen else '')+'\n')
+              f.write('name='+(chosen['name'] if chosen else '')+'\n')
+          print('Restore state:',{k:chosen[k] for k in ('name','created_at','workflow_run')} if chosen else 'BOOTSTRAP: no recoverable branch state')
+          PY
+      - uses: actions/download-artifact@v4
+        if: steps.previous.outputs.run_id != ''
+        with:
+          name: ${{ steps.previous.outputs.name }}
+          run-id: ${{ steps.previous.outputs.run_id }}
+          github-token: ${{ github.token }}
+          path: .
+      - name: Decide weekly or implementation-change catalog refresh
+        id: refresh
+        env:
+          FORCE_REFRESH: ${{ inputs.refresh_catalog }}
+        run: |
+          flag=""
+          if [ "$FORCE_REFRESH" = "true" ]; then flag="--force"; fi
+          echo "needed=$(PYTHONPATH=. python scripts/primary_action_ops.py refresh-needed $flag)" >> "$GITHUB_OUTPUT"
+      - name: Discover official institutions and verify publication channels
+        id: catalog
+        if: steps.refresh.outputs.needed == 'true'
+        continue-on-error: true
+        run: PYTHONPATH=. python scripts/build_primary_action_catalog.py
+      - name: Collect primary headlines with no LLM and no credentials
+        run: PYTHONPATH=. python -m src.primary_actions --days 3 --workers 8 --state data/primary_actions_state/ledger.sqlite3 --output data/primary_actions/latest
+      - name: Audit official requests, zero inference spend, and persistent state
+        env:
+          CATALOG_REFRESH_OUTCOME: ${{ steps.catalog.outcome }}
+        run: |
+          PYTHONPATH=. python scripts/primary_action_ops.py audit
+          python - <<'PY'
+          import json,os,pathlib
+          p=pathlib.Path('data/primary_actions/latest/run_status.json')
+          p.write_text(json.dumps({'catalog_refresh_outcome':os.environ['CATALOG_REFRESH_OUTCOME'],'state_restore_run':'${{ steps.previous.outputs.run_id }}','state_artifact':'${{ steps.previous.outputs.name }}'},indent=2)+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: primary-actions-state
+          retention-days: 90
+          if-no-files-found: error
+          path: |
+            data/primary_actions_state/ledger.sqlite3
+            config/primary_action_sources.json
+            data/primary_actions/institution_registry.json
+            docs/primary-actions/source_catalog.md
+            docs/primary-actions/catalog_summary.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: primary-actions-daily-feed
+          retention-days: 90
+          path: |
+            data/primary_actions/latest/
+            config/primary_action_sources.json
+            data/primary_actions/institution_registry.json
+            docs/primary-actions/
+            research/http_request_audit.json
+  publish:
+    needs: collect
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /config/primary_action_sources.json
+            /data/primary_actions/
+            /docs/primary-actions/
+      - uses: actions/download-artifact@v4
+        with:
+          name: primary-actions-daily-feed
+          path: .
+      - name: Publish verified public source catalog and latest headlines
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/primary_actions/latest config/primary_action_sources.json data/primary_actions/institution_registry.json docs/primary-actions/source_catalog.md docs/primary-actions/catalog_summary.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Refresh official action headlines and source health [skip ci]"
+          git pull --rebase origin "$BRANCH"
+          git push origin HEAD:"$BRANCH"
+
