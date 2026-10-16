@@ -5,14 +5,14 @@
   "run_id": "38872917753",
   "model": "",
   "started_at": "2026-10-16T04:34:22-04:00",
-  "updated_at": "2026-10-16T07:21:35-04:00",
-  "heartbeat_at": "2026-10-16T07:21:35-04:00",
+  "updated_at": "2026-10-16T07:21:47-04:00",
+  "heartbeat_at": "2026-10-16T07:21:47-04:00",
   "stages": [
     {
       "name": "land_closed",
-      "state": "running",
+      "state": "ok",
       "started_at": "2026-10-16T04:34:22-04:00",
-      "ended_at": "",
+      "ended_at": "2026-10-16T07:21:47-04:00",
       "heartbeat_at": "2026-10-16T07:21:35-04:00",
       "done": 1,
       "total": 1,
