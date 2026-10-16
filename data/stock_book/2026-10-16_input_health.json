@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T07:17:45.322038-04:00",
+  "generated_at": "2026-10-16T08:44:46.921945-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -26,16 +26,16 @@
     {
       "name": "news_actions",
       "family": "news",
-      "status": "missing",
-      "n": 0,
+      "status": "ok",
+      "n": 99,
       "detail": ""
     },
     {
       "name": "news_judge",
       "family": "news",
-      "status": "missing",
+      "status": "ok",
       "n": null,
-      "detail": "LLM ticker tilts absent"
+      "detail": ""
     },
     {
       "name": "finviz_digest",
@@ -68,9 +68,9 @@
     {
       "name": "events",
       "family": "addon",
-      "status": "degraded",
+      "status": "ok",
       "n": null,
-      "detail": "no events"
+      "detail": "40 events, scan_date=2026-10-16"
     },
     {
       "name": "map_heat",
@@ -82,9 +82,9 @@
     {
       "name": "general_predict",
       "family": "general",
-      "status": "missing",
+      "status": "ok",
       "n": null,
-      "detail": "s_general=0 \u2014 weight renormalized away"
+      "detail": ""
     },
     {
       "name": "sector_predicts",
@@ -103,20 +103,20 @@
   ],
   "family_status": {
     "join": "ok",
-    "news": "missing",
+    "news": "ok",
     "ab": "ok",
     "peer": "ok",
     "heat": "degraded",
-    "general": "missing",
+    "general": "ok",
     "sector": "missing"
   },
   "families_present": {
     "join": true,
-    "news": false,
+    "news": true,
     "ab": true,
     "peer": true,
     "heat": true,
-    "general": false,
+    "general": true,
     "sector": false
   },
   "learn_grade": true,
