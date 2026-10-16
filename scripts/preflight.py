@@ -73,7 +73,7 @@ def _expiry_minutes_left(env) -> float | None:
             "import openclaw_oauth_guard as g; e, _, _ = g.xai_oauth_expiry(); "
             "print(e.isoformat() if e else '')")
     r = subprocess.run([sys.executable, "-c", code], cwd=ROOT, env=env,
-                       capture_output=True, text=True, timeout=min(25, _left()))
+                       capture_output=True, text=True, timeout=min(60, _left()))
     out = (r.stdout or "").strip().splitlines()
     if not out or not out[-1]:
         return None

@@ -469,6 +469,16 @@ def xai_oauth_expiry() -> tuple[datetime | None, str, bool | None]:
     if fixed:
         log(f"chowned auth store files to {GHA}: {', '.join(sorted(set(fixed))[:8])}")
 
+    # Fast path: read the sqlite/file store first (#619). The openclaw CLI
+    # can take >25s on ECS, which timed out Pre-Open preflight on 10-16.
+    try:
+        dt, src, has_r = _xai_oauth_expiry_from_files()
+    except Exception as e:  # noqa: BLE001
+        log(f"store read failed, falling back to CLI: {type(e).__name__}")
+        dt = None
+    if dt:
+        return dt, src, has_r
+
     for args in (["openclaw", "models", "auth", "list", "--provider", "xai", "--json"],
                  ["openclaw", "models", "status", "--json"]):
         r = as_gha(args, 60)
