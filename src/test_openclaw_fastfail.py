@@ -262,3 +262,71 @@ def test_preopen_parent_is_not_another_grok_job():
     assert guard._other_grok_job("100 bash scripts/ecs_preopen.sh", ancestors) is False
     assert guard._other_grok_job("300 python3 scripts/openclaw_oauth_guard.py renew", ancestors) is False
     assert guard._other_grok_job("400 python -m src.run_preopen_all", ancestors) is True
+
+
+def test_xai_oauth_expiry_reads_auth_list_json_and_files(tmp_path, monkeypatch):
+    """Renew must see expiry even when a long JWT would hide xai/oauth in a 400-char dump,
+    and when the only readable copy is auth-profiles.json on disk (root-owned login case).
+    """
+    import importlib.util
+    import json
+    from datetime import datetime, timezone
+    from pathlib import Path
+    path = Path(__file__).resolve().parent.parent / "scripts" / "openclaw_oauth_guard.py"
+    # When this test file is standalone in the PR workspace, point at sibling.
+    if not path.is_file():
+        path = Path(__file__).resolve().parent / "openclaw_oauth_guard.py"
+    spec = importlib.util.spec_from_file_location("openclaw_oauth_guard_expiry", path)
+    guard = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(guard)
+
+    exp_iso = "2026-10-16T12:00:00.000Z"
+    exp = datetime(2026, 10, 16, 12, 0, tzinfo=timezone.utc)
+    long_jwt = "eyJ" + ("a" * 500)
+
+    # 1) auth list JSON shape (no tokens) — the real CLI summary.
+    list_json = {
+        "agentId": "main",
+        "provider": "xai",
+        "profiles": [{
+            "id": "xai:fngcyrus@gmail.com",
+            "provider": "xai",
+            "type": "oauth",
+            "label": "xai",
+            "expiresAt": exp_iso,
+        }],
+    }
+    assert guard._parse_auth_list_json(list_json)[0] == exp
+
+    # 2) File store with numeric ms expires (OpenClaw on-disk shape).
+    oc = tmp_path / ".openclaw" / "agents" / "main" / "agent"
+    oc.mkdir(parents=True)
+    (oc / "auth-profiles.json").write_text(json.dumps({
+        "profiles": {
+            "xai:oauth": {
+                "type": "oauth",
+                "provider": "xai",
+                "access": long_jwt,
+                "refresh": long_jwt,
+                "expires": int(exp.timestamp() * 1000),
+            }
+        }
+    }), encoding="utf-8")
+    monkeypatch.setattr(guard, "HOME", str(tmp_path))
+    dt, src, has_r = guard._xai_oauth_expiry_from_files(tmp_path / ".openclaw")
+    assert dt is not None
+    assert abs((dt - exp).total_seconds()) < 1
+    assert src.startswith("file:")
+    assert has_r is True
+
+    # 3) Walker must not require a 400-char dump that starts with the JWT.
+    big = {
+        "access": long_jwt,
+        "refresh": long_jwt,
+        "provider": "xai",
+        "type": "oauth",
+        "expires": exp_iso,
+    }
+    assert guard._is_xai_oauth_dict(big)
+    assert guard._expiry_from_dict(big)[0] is not None
+
