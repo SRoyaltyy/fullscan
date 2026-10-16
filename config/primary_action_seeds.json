@@ -271,7 +271,7 @@
    "discovery_url": "https://www.ferc.gov/news-events/news/decisions-notices",
    "index_url": "https://www.ferc.gov/news-events/news/decisions-notices",
    "link_pattern": "/news-events/news/[^/?#]+$",
-   "notes": "Still blocked via relay 2026-10-16: entire site returns Cloudflare JS challenge (403 'Just a moment...'). Needs headless browser or FERC eLibrary API."
+   "notes": "Whole site sits behind a Cloudflare JS challenge from datacenter IPs (relay cannot pass); fetched via tier-3 Jina reader fallback, verified 2026-10-17."
   },
   {
    "id": "us-dol",
@@ -672,7 +672,9 @@
    "jurisdiction": "AU",
    "family": "competition_and_enforcement",
    "discovery_url": "https://www.accc.gov.au/news-centre",
-   "notes": "RSS discontinued (rss.xml 404); news-centre listing is JS-rendered (verified via relay 2026-10-16). Needs headless browser."
+   "notes": "RSS discontinued (rss.xml 404); news-centre listing is JS-rendered but parseable via tier-3 Jina reader fallback, verified 2026-10-17.",
+   "index_url": "https://www.accc.gov.au/news-centre",
+   "link_pattern": "/media-release/[a-z0-9-]+$"
   },
   {
    "id": "au-apra",
@@ -705,7 +707,8 @@
    "jurisdiction": "NZ",
    "family": "monetary_operations",
    "discovery_url": "https://www.rbnz.govt.nz/news-and-events/how-we-release-information",
-   "notes": "Still blocked via relay 2026-10-16: whole domain returns geo/ASN block page 'Website unavailable' (403). Needs NZ-resident egress."
+   "notes": "Official domain geo-blocks all datacenter IPs (403 'Website unavailable'); discovered via Google News site:rbnz.govt.nz mirror, verified 2026-10-17 (19 items/14d).",
+   "google_news_url": "https://news.google.com/rss/search?q=site%3Arbnz.govt.nz+when%3A14d&hl=en-NZ&gl=NZ&ceid=NZ:en"
   },
   {
    "id": "nz-commerce",
