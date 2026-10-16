@@ -436,6 +436,36 @@ def from_h1(root: Path, day: str) -> list[dict]:
                  str(H1_LOG), f"sealed {p.get('committed_at', '')}")]
 
 
+HOLDUP_LOG = "research/hot_n4_clean_v4/forward/holdup_log.jsonl"
+
+
+def from_holdup(root: Path, day: str) -> list[dict]:
+    """Holdup row: OK/SIT only when D's plan is sealed on main, else MISSING.
+
+    Added 2026-10-17: holdup had no plan on 2026-10-15/16 and the page still
+    showed 0 MISSING because holdup had no row at all. Read-only.
+    """
+    plans, missing = [], []
+    try:
+        for ln in (root / HOLDUP_LOG).read_text(encoding="utf-8").splitlines():
+            if ln.strip():
+                o = json.loads(ln)
+                if o.get("date") == day and o.get("kind") == "plan":
+                    plans.append(o)
+                elif o.get("date") == day and o.get("kind") == "missing":
+                    missing.append(o)
+    except (OSError, ValueError) as e:
+        return [_row("holdup", "holdup", "MISSING", source=HOLDUP_LOG, note=f"log unreadable: {e}")]
+    if len(plans) != 1:
+        note = (missing[0].get("reason") if missing else "no sealed plan row") if not plans \
+            else f"{len(plans)} plan rows"
+        return [_row("holdup", "holdup", "MISSING", source=HOLDUP_LOG, note=note)]
+    p = plans[0]
+    buys, sells = _tk(p.get("picks")), _tk(p.get("planned_sells"))
+    return [_row("holdup", "holdup", "OK" if (buys or sells) else "SIT", buys, sells,
+                 HOLDUP_LOG, f"sealed {p.get('committed_at', '')}")]
+
+
 def from_webull_sim(root: Path, day: str) -> list[dict]:
     names, today = set(), {}
     try:
@@ -558,7 +588,7 @@ def from_theme_radar(day: str, fetch=_fetch, now: datetime | None = None) -> lis
 
 def build(root: Path, day: str, fetch=_fetch, now: datetime | None = None) -> dict:
     now = now or datetime.now(ET)
-    rows = (from_tickets(root, day) + from_preopen(root, day) + from_h1(root, day)
+    rows = (from_tickets(root, day) + from_preopen(root, day) + from_h1(root, day) + from_holdup(root, day)
             + from_webull_sim(root, day) + from_theme_radar(day, fetch, now))
     rows = apply_required_files(root, day, rows)
     counts: dict[str, dict[str, int]] = {}

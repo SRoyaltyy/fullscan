@@ -238,3 +238,17 @@ def test_predict_not_on_main_refuses_ok_even_if_worktree_has_it() -> None:
     assert st["fm_a"]["status"] == "OK"
     assert st["h1"]["status"] == "OK"
     assert st["theme_radar:fpe_delta_t3_earn_today_3d"]["status"] in ("WAIT", "MISSING")
+
+
+def test_holdup_row_missing_without_plan(tmp_path):
+    import json as _j
+    from src import strategy_status_publish as ssp
+    f = tmp_path / ssp.HOLDUP_LOG
+    f.parent.mkdir(parents=True)
+    f.write_text(_j.dumps({"date": "2026-10-16", "kind": "missing",
+                           "reason": "missing: plan not sealed before open"}) + "\n"
+                 + _j.dumps({"date": "2026-10-19", "kind": "plan",
+                             "picks": [{"ticker": "AAA"}], "committed_at": "x"}) + "\n")
+    assert ssp.from_holdup(tmp_path, "2026-10-15")[0]["status"] == "MISSING"
+    assert ssp.from_holdup(tmp_path, "2026-10-16")[0]["status"] == "MISSING"
+    assert ssp.from_holdup(tmp_path, "2026-10-19")[0]["status"] == "OK"
