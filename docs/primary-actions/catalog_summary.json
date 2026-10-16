@@ -41,16 +41,15 @@
     "joining": 12,
     "transitioning": 1
   },
-  "candidate_channels": 519,
-  "enabled_channels": 360,
+  "candidate_channels": 520,
+  "enabled_channels": 371,
   "channel_statuses": {
-    "ok": 375,
-    "valid_empty": 9,
+    "ok": 389,
+    "valid_empty": 10,
     "key_not_configured": 3,
     "blocked": 16,
-    "fetch_failed": 73,
-    "invalid_feed_or_network_error": 42,
-    "rate_limited": 1
+    "fetch_failed": 60,
+    "invalid_feed_or_network_error": 42
   },
   "directory_gaps": [
     {
@@ -69,7 +68,7 @@
     "us_states": 59,
     "curated_channel_owner": 131
   },
-  "excluded_reference_channels": 35,
-  "enabled_healthy_channels": 357,
+  "excluded_reference_channels": 34,
+  "enabled_healthy_channels": 368,
   "enabled_pending_channels": 3
 }

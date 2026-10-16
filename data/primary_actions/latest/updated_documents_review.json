@@ -1,75 +1,86 @@
 [
   {
-    "title": "Comment on The 2026 Veterans Benefits Guide is now available online by Mary Dickerson",
-    "url": "https://news.va.gov/149864/2026-veterans-benefits-guide-available-online/",
-    "native_id": "https://news.va.gov/?p=149864#comment-998948",
-    "published_at": "2026-10-15T10:21:51+00:00",
-    "published_raw": "Thu, 15 Oct 2026 10:21:51 +0000",
-    "summary": "I would like the BTSSS system explained in an A B C form to follow when submitting travel reimbursement requests, and is there a way to log in to the system directly?",
+    "title": "Notice of proposed amendments (NPA) reference table",
+    "url": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-reference-table",
+    "native_id": "/government/publications/notice-of-proposed-amendments-npa-reference-table",
+    "published_at": "2026-10-16T09:51:09+00:00",
+    "published_raw": "2026-10-16T09:51:09Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Military Aviation Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:military-aviation-authority"
+    ],
+    "summary": "The Military Aviation Authority (MAA) NPA table provides information of proposed changes in regulations and release date.",
     "source_metadata": {
-      "document_type": "official_announcement",
+      "document_type": "regulation",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Veterans Affairs news — VA News » Comments Feed",
-      "jurisdiction": "US",
-      "family": "executive_and_administrative"
+      "issuer": "Ministry of Defence; Military Aviation Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
     },
-    "primary_source_id": "us-va-0f2d7a719d",
-    "n": 2278,
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 379,
     "first_seen": "2026-10-16T09:45:56.224277+00:00",
-    "last_seen": "2026-10-16T09:45:56.224277+00:00",
+    "last_seen": "2026-10-16T09:52:07.458179+00:00",
     "source_ids": [
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d"
+      "uk-govuk-regulation"
     ]
   },
   {
-    "title": "Comment on Build your skills at VA: Training programs to explore by Milton Bracy",
-    "url": "https://news.va.gov/149686/build-your-skills-va-training-programs-explore/",
-    "native_id": "https://news.va.gov/?p=149686#comment-998966",
-    "published_at": "2026-10-15T11:31:36+00:00",
-    "published_raw": "Thu, 15 Oct 2026 11:31:36 +0000",
-    "summary": "I'm currently enrolled at Colorado Technical University earning a BS in Business Administration concentrating on Healthcare Management. I graduate March 2027. Can the VA assist me with internship and finding employment?",
+    "title": "Notice of proposed amendments (NPA) documents",
+    "url": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-2014-documents",
+    "native_id": "/government/publications/notice-of-proposed-amendments-npa-2014-documents",
+    "published_at": "2026-10-16T09:48:46+00:00",
+    "published_raw": "2026-10-16T09:48:46Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Military Aviation Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:military-aviation-authority"
+    ],
+    "summary": "MAA issuing of an NPA allows a consultation period to be undertaken on a proposed amendment or the implementation of new regulation.",
+    "source_metadata": {
+      "document_type": "regulation",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Ministry of Defence; Military Aviation Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 380,
+    "first_seen": "2026-10-16T09:45:56.224277+00:00",
+    "last_seen": "2026-10-16T09:52:07.458179+00:00",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "title": "Statement by Executive Vice-President Mînzatu ahead of the International Day for the Eradication of Poverty",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2188",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2188",
+    "published_at": "2026-10-16T08:53:34+00:00",
+    "published_raw": "Fri, 16 Oct 2026 08:53:34 GMT",
+    "summary": "European Commission Statement Brussels, 16 Oct 2026 Poverty must not define anyone's future. Too many people across Europe are still unable to afford a home, heating, food, healthcare or education. Currently, one...",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department of Veterans Affairs news — VA News » Comments Feed",
-      "jurisdiction": "US",
-      "family": "executive_and_administrative"
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
     },
-    "primary_source_id": "us-va-0f2d7a719d",
-    "n": 2281,
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 2282,
     "first_seen": "2026-10-16T09:45:56.224277+00:00",
-    "last_seen": "2026-10-16T09:45:56.224277+00:00",
+    "last_seen": "2026-10-16T09:52:07.458179+00:00",
     "source_ids": [
-      "us-va-0f2d7a719d",
-      "us-va-0f2d7a719d"
+      "eu-commission-07d4f58ccf"
     ]
   }
 ]

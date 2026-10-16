@@ -1,7 +1,7 @@
 # Primary-origin action documents
 
-Updated 2026-10-16T09:45:56.224277+00:00. 2521 dated documents in the configured 3-day window; 2611 newly retained; 79 repeat observations.
-Source health: 352/360 checked successfully. Collection uses zero LLM calls.
+Updated 2026-10-16T09:52:07.458179+00:00. 2563 dated documents in the configured 3-day window; 42 newly retained; 994 repeat observations.
+Source health: 367/371 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
@@ -94,6 +94,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## judicial_decision_published
 
+- [Ms K Chan v Time 4 U Ltd: 6025143/2025](https://www.gov.uk/employment-tribunal-decisions/ms-k-chan-v-time-4-u-ltd-6025143-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T09:50:25+00:00
 - [H Singh v EEM Holdings Ltd: 3306472/2025](https://www.gov.uk/employment-tribunal-decisions/h-singh-v-eem-holdings-ltd-3306472-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T08:44:36+00:00
 - [Mr M Turner v Great Yarmouth Borough Council: 3303462/2024](https://www.gov.uk/employment-tribunal-decisions/mr-m-turner-v-great-yarmouth-borough-council-3303462-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T08:40:55+00:00
 - [M C Patel v Holiday Inn Sittingbourne: 2304258/2025](https://www.gov.uk/employment-tribunal-decisions/m-c-patel-v-holiday-inn-sittingbourne-2304258-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-15T15:56:40+00:00
@@ -1649,6 +1650,9 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## legislative_document_published
 
+- [H.R. 10820 (IH) - Epstein Wall Street Records Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10820ih) — Congressional Bills; 2026-10-16T09:51:01+00:00
+- [H.R. 10823 (IH) - Northwest Wetlands Voluntary Incentives Program Act](https://www.govinfo.gov/app/details/BILLS-119hr10823ih) — Congressional Bills; 2026-10-16T09:51:01+00:00
+- [H.R. 10818 (IH) - Fire Service Workforce Stability Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10818ih) — Congressional Bills; 2026-10-16T09:51:00+00:00
 - [S. 5475 (IS) - Timely Access to Coverage Decisions Act](https://www.govinfo.gov/app/details/BILLS-119s5475is) — Congressional Bills; 2026-10-16T04:36:00+00:00
 - [H.R. 10826 (IH) - Justice for Citizens Wrongfully Detained by ICE Act](https://www.govinfo.gov/app/details/BILLS-119hr10826ih) — Congressional Bills; 2026-10-16T02:25:06+00:00
 - [H. Res. 1625 (IH) - Expressing support for a whole child approach to education and recognizing the role of parents, educators, and community members in providing a whole child approach to education for each student.](https://www.govinfo.gov/app/details/BILLS-119hres1625ih) — Congressional Bills; 2026-10-16T02:25:06+00:00
@@ -2033,6 +2037,8 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Fireside Chat: Michelle Alexopoulos, External Deputy Governor](https://www.bankofcanada.ca/2026/10/fireside-chat-michelle-alexopoulos-external-deputy-governor-october-16-2026/) — Bank of Canada — Upcoming events; 2026-10-16T17:45:13+00:00
 - [Panel: Tiff Macklem, Governor](https://www.bankofcanada.ca/2026/10/panel-tiff-macklem-governor-october-16-2026/) — Bank of Canada — Upcoming events; 2026-10-16T17:37:13+00:00
 - [Remarks by President António Costa at the joint doorstep with Presidents Volodymyr Zelenskyy and Ursula von der Leyen](https://www.consilium.europa.eu/en/press/press-releases/2026/10/16/remarks-by-president-antonio-costa-at-the-joint-doorstep-with-presidents-volodymyr-zelenskyy-and-ursula-von-der-leyen/) — Council of the European Union; 2026-10-16T09:55:00+00:00
+- [Notice of proposed amendments (NPA) reference table](https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-reference-table) — Ministry of Defence; Military Aviation Authority; 2026-10-16T09:51:09+00:00
+- [Notice of proposed amendments (NPA) documents](https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-2014-documents) — Ministry of Defence; Military Aviation Authority; 2026-10-16T09:48:46+00:00
 - [Product Recall: Pimple Popping Squishes containing needles sold via AliExpress (2610-0049)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-pimple-popping-squishes-containing-needles-sold-via-aliexpress-2610-0049) — Office for Product Safety and Standards; 2026-10-16T09:09:30+00:00
 - [Green Gas Support Scheme (GGSS): open to applications](https://www.gov.uk/government/publications/green-gas-support-scheme-ggss) — Department for Energy Security and Net Zero; Department for Business, Energy & Industrial Strategy; 2026-10-16T09:00:01+00:00
 - [Green Gas Support Scheme: budget management](https://www.gov.uk/government/publications/green-gas-support-scheme-budget-management) — Department for Energy Security and Net Zero; 2026-10-16T09:00:01+00:00
@@ -2148,6 +2154,29 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [GREATER MANCHESTER LIEUTENANCY](https://www.thegazette.co.uk/notice/5231299) — The Gazette official public record; 2026-10-15T12:10:33+00:00
 - [Crown Office](https://www.thegazette.co.uk/notice/5231295) — The Gazette official public record; 2026-10-15T12:10:27+00:00
 - [Commission launches RAISE pledging initiative to boost AI support for researchers across Europe](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2175) — European Commission press and decisions; 2026-10-15T12:03:07+00:00
+- [Florida Man Pleads Guilty to Illegal Opioid Distribution Conspiracy](https://www.justice.gov/opa/pr/florida-man-pleads-guilty-illegal-opioid-distribution-conspiracy) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [DOJ, ATF, Law Enforcement Partners Conclude Operation Show Me Justice](https://www.justice.gov/opa/pr/doj-atf-law-enforcement-partners-conclude-operation-show-me-justice) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [Illegal Alien from Mexico Sentenced for International Conspiracy to Smuggle Aliens from Canada into United States](https://www.justice.gov/opa/pr/illegal-alien-mexico-sentenced-international-conspiracy-smuggle-aliens-canada-united-states) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [Owner of Health Care Software Company Sentenced to 19 Years in Prison for $1B Medicare Fraud](https://www.justice.gov/opa/pr/owner-health-care-software-company-sentenced-19-years-prison-1b-medicare-fraud) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [Justice Department, Law Enforcement Partners Announce Results of 8-Week Law Enforcement Surge Focused on Violent Crime Reduction](https://www.justice.gov/opa/video/justice-department-law-enforcement-partners-announce-results-8-week-law-enforcement-surge) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [San Diego Man Pleads Guilty to Tax Evasion](https://www.justice.gov/opa/pr/san-diego-man-pleads-guilty-tax-evasion) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [Justice Department Sues State of California over Voter List](https://www.justice.gov/opa/pr/justice-department-sues-state-california-over-voter-list) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [Justice Department Files Complaints Against the Cities of St. Paul and Portland Challenging Mask Ban and Identification Requirements for Federal Officers](https://www.justice.gov/opa/pr/justice-department-files-complaints-against-cities-st-paul-and-portland-challenging-mask-ban) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [Deputy Assistant Attorney General Stephanie A. Greco Delivers Remarks at the 2026 Antitrust Tech Summit](https://www.justice.gov/opa/speech/deputy-assistant-attorney-general-stephanie-greco-delivers-remarks-2026-antitrust-tech) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [Retired Boca Raton Attorney Pleads Guilty to Attempting to Obtain Child Sexual Abuse Material](https://www.justice.gov/usao-sdfl/pr/retired-boca-raton-attorney-pleads-guilty-attempting-obtain-child-sexual-abuse) — Department of Justice; 2026-10-15T12:00:00+00:00
+- [Disgraced Former FBI Agent Sentenced in Second Federal Prosecution](https://www.justice.gov/usao-edmi/pr/disgraced-former-fbi-agent-sentenced-second-federal-prosecution) — Department of Justice; 2026-10-15T12:00:00+00:00
+- [Maryland Father and Son Indicted on Dog Fighting, Breeding, and Transportation Charges After Law Enforcement Seizes 44 Dogs](https://www.justice.gov/usao-md/pr/maryland-father-and-son-indicted-dog-fighting-breeding-and-transportation-charges-after) — Department of Justice; 2026-10-15T12:00:00+00:00
+- [Former Postal Employee Sentenced to 20 Months in Prison for Fraud in Connection with Unemployment Insurance Benefits](https://www.justice.gov/usao-edmi/pr/former-postal-employee-sentenced-20-months-prison-fraud-connection-unemployment) — Department of Justice; 2026-10-15T12:00:00+00:00
+- [Two New York Men Indicted For Fentanyl Distribution Conspiracy That Involved The On-Campus Rape And Death Of One College Student And Near-Death Of Another](https://www.justice.gov/usao-sdny/pr/two-new-york-men-indicted-fentanyl-distribution-conspiracy-involved-campus-rape-and) — Department of Justice; 2026-10-15T12:00:00+00:00
+- [The Eastern District of Michigan Joins DOJ Fraud Division, IRS, and IRS-CI in National Tax Enforcement Surge Exposing Two Defendants Involved in Tax Fraud](https://www.justice.gov/usao-edmi/pr/eastern-district-michigan-joins-doj-fraud-division-irs-and-irs-ci-national-tax) — Department of Justice; 2026-10-15T12:00:00+00:00
+- [National Fraud Enforcement Division and the Department of Health and Human Services Announce Self-Disclosure Protocol for Criminal Health Care Fraud](https://www.justice.gov/opa/pr/national-fraud-enforcement-division-and-department-health-and-human-services-announce-self) — Department of Justice; 2026-10-15T12:00:00+00:00
+- [Park Hill Resident Pleads Guilty To Child Neglect In Indian Country](https://www.justice.gov/usao-edok/pr/park-hill-resident-pleads-guilty-child-neglect-indian-country) — Department of Justice; 2026-10-15T12:00:00+00:00
+- [Convicted Felon Sentenced in Case Involving a Loaded Pistol, Cocaine, and Two Young Children in Car](https://www.justice.gov/usao-dc/pr/convicted-felon-sentenced-case-involving-loaded-pistol-cocaine-and-two-young-children) — Department of Justice; 2026-10-15T12:00:00+00:00
+- [CVS Agrees to Pay $315M for Illegally Filling Unlawful Opioid Prescriptions and for Submitting False Claims to the Federal Government](https://www.justice.gov/usao-hi/pr/cvs-agrees-pay-315m-illegally-filling-unlawful-opioid-prescriptions-and-submitting-false) — Department of Justice; 2026-10-15T12:00:00+00:00
+- [Justice Department Files Complaint Against California Ticket Broker for Using Unlawful Tactics to Purchase Millions of Tickets to Popular Live Events](https://www.justice.gov/opa/pr/justice-department-files-complaint-against-california-ticket-broker-using-unlawful-tactics) — Department of Justice; 2026-10-15T12:00:00+00:00
+- [Springfield Man Sentenced to 48 Months for Being a Felon in Possession of a Firearm](https://www.justice.gov/usao-wdmo/pr/springfield-man-sentenced-48-months-being-felon-possession-firearm) — Department of Justice; 2026-10-15T12:00:00+00:00
+- [Mexican illegal alien with prior cocaine trafficking convictions pleads guilty to illegally reentering United States](https://www.justice.gov/usao-sdoh/pr/mexican-illegal-alien-prior-cocaine-trafficking-convictions-pleads-guilty-illegally) — Department of Justice; 2026-10-15T12:00:00+00:00
+- [Serbian national sentenced to 17 years in federal prison as part of Homeland Security Task Force investigation into international cocaine trafficking conspiracy](https://www.justice.gov/usao-edtx/pr/serbian-national-sentenced-17-years-federal-prison-part-homeland-security-task-force) — Department of Justice; 2026-10-15T12:00:00+00:00
 - [Rescheduling of the EU-GCC Summit](https://www.consilium.europa.eu/en/press/press-releases/2026/10/15/postponement-of-the-second-eu-gcc-summit/) — Council of the European Union; 2026-10-15T12:00:00+00:00
 - [Unemployment Insurance Weekly Claims Report](http://www.dol.gov/node/186182) — Department of Labor; 2026-10-15T12:00:00+00:00
 - [Russian National Arrested and Extradited to New York on Charges of Evading Sanctions on Russia](https://www.justice.gov/usao-ndny/pr/russian-national-arrested-and-extradited-new-york-charges-evading-sanctions-russia) — Department of Justice; 2026-10-15T12:00:00+00:00
@@ -2188,11 +2217,13 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [ESCB SSM Shared Values Charter 2026](https://www.ecb.europa.eu//pub/pdf/other/ESCB-SSM-Shared-Values-Charter-2026.en.pdf) — European Central Bank — Publications; 2026-10-15T07:30:00+00:00
 - [H. Rept. 119-840](https://www.govinfo.gov/app/details/CRPT-119hrpt840) — Congressional Reports; 2026-10-15T05:12:00+00:00
 - [Panel with Carolyn Rogers, Senior Deputy Governor of the Bank of Canada](https://www.bankofcanada.ca/2026/10/panel-with-carolyn-rogers-senior-deputy-governor-of-the-bank-of-canada-2026-10-15/) — Bank of Canada — Press; 2026-10-15T05:00:34+00:00
+- [Bowman, Supervisory Modernization After Silicon Valley Bank](https://www.federalreserve.gov/newsevents/speech/bowman20261014a.htm) — Federal Reserve Board — All Speeches; 2026-10-15T02:55:00+00:00
 - [Presidential Message on the Birthday of President Dwight D. Eisenhower](https://www.whitehouse.gov/briefings-statements/2026/10/presidential-message-on-the-birthday-of-president-dwight-d-eisenhower-c6b1/) — White House briefing room; 2026-10-15T02:17:50+00:00
 - [The Child Minding and Day Care Exceptions (Revocation and Transitional Provision) (Wales) (Amendment) Order 2026 / Gorchymyn Eithriadau Gwarchod Plant a Gofal Dydd (Dirymu a Darpariaeth Drosiannol) (Cymru) (Diwygio) 2026](http://www.legislation.gov.uk/wsi/2026/122/made) — UK legislation; 2026-10-15T02:05:05.423787+00:00
 - [The Gas Safety (Installation and Use) (Amendment) Regulations (Northern Ireland) 2026](http://www.legislation.gov.uk/nisr/2026/178/made) — UK legislation; 2026-10-15T02:04:55.372622+00:00
 - [Speech by Board Member KOEDA in Kumamoto (Economic Activity, Prices, and Monetary Policy in Japan)](http://www.boj.or.jp/en/about/press/koen_2026/ko261015a.htm) — Bank of Japan; 2026-10-15T01:30:00+00:00
 - [Summary of the "Meeting on Market Operations" (October 2026)](http://www.boj.or.jp/en/paym/market/mkt261015a.pdf) — Bank of Japan; 2026-10-15T01:00:00+00:00
+- [FW Aviation (Holdings) 1 Limited v VietJet Aviation Joint Stock Company](https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/2633) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
 - [Chokepoint disruptions and their macroeconomic consequences](https://www.bis.org/publications/bulletin-138-chokepoint-disruptions-and-their-macroeconomic-consequences) — Bank for International Settlements — View feed; 2026-10-15T00:00:00+00:00
 - [Nebahat Evyat Işbilen v Selman Turk & Ors](https://caselaw.nationalarchives.gov.uk/ewhc/bp/2026/2635) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
 - [The Secretary of State for the Home Department v MD Shahadat Hossain](https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/1310) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
@@ -2214,6 +2245,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Contract Award Notice: ECB - Request for Proposal under the ECB's Dynamic Purchasing System for the offsetting of the ECB's greenhouse gas emissions (714312-2026)](https://www.ecb.europa.eu//ecb/jobsproc/proc/pdf/ecb.procurContractAwardNotice-2026-OJS200-00714312.en.pdf) — European Central Bank — Open procurements, award notices and lists of suppliers; 2026-10-14T22:00:00+00:00
 - [President Trump Visits Montana with a Record of Results for Workers, Families, and Communities](https://www.whitehouse.gov/releases/2026/10/president-trump-visits-montana-with-a-record-of-results-for-workers-families-and-communities/) — White House briefing room; 2026-10-14T21:58:37+00:00
 - [HUD Makes It Easier to Build More Housing](http://www.hud.gov/news/hud-no-26-085) — Department of Housing and Urban Development; 2026-10-14T21:01:30+00:00
+- [SR 26-8](https://www.federalreserve.gov/supervisionreg/srletters/SR2608.htm) — Federal Reserve Board — Supervision and Regulation and Consumer Affairs Letters, Supervision Manuals; 2026-10-14T21:00:00+00:00
 - [Hegseth: Autonomous Warfare Command Has Always Been End State](https://www.war.gov/News/News-Stories/Article/Article/4625816/hegseth-autonomous-warfare-command-has-always-been-end-state/) — Department of Defense releases; 2026-10-14T20:56:00+00:00
 - [Deepfake phishing: Don’t be fooled.](https://news.va.gov/149747/deepfake-phishing-dont-be-fooled/) — Department of Veterans Affairs news; 2026-10-14T20:30:00+00:00
 - [S. Hrg. 119-204 - CONFIRMATION HEARING ON FEDERAL APPOINTMENTS](https://www.govinfo.gov/app/details/CHRG-119shrg61895) — Congressional Hearings; 2026-10-14T19:55:00+00:00
@@ -2256,8 +2288,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [VA improves health information sharing with community providers](https://news.va.gov/150152/health-information-sharing-community-providers/) — Department of Veterans Affairs news; 2026-10-14T14:30:00+00:00
 - [S. Hrg. 118-356 - BOEING'S BROKEN SAFETY CULTURE: CEO DAVE CALHOUN TESTIFIES](https://www.govinfo.gov/app/details/CHRG-118shrg56049) — Congressional Hearings; 2026-10-14T14:08:00+00:00
 - [S. Hrg. 119-065 - FINANCIAL SERVICES AND GENERAL GOVERNMENT APPROPRIATIONS FOR FISCAL YEAR 2026](https://www.govinfo.gov/app/details/CHRG-119shrg60261) — Congressional Hearings; 2026-10-14T14:08:00+00:00
-- [Notice of proposed amendments (NPA) reference table](https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-reference-table) — Ministry of Defence; Military Aviation Authority; 2026-10-14T14:06:50+00:00
-- [Notice of proposed amendments (NPA) documents](https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-2014-documents) — Ministry of Defence; Military Aviation Authority; 2026-10-14T14:06:42+00:00
 - [What’s New for Biologics](http://www.fda.gov/vaccines-blood-biologics/news-events-biologics/whats-new-biologics) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-14T14:06:29+00:00
 - [CV31 1AY, Bellway Homes Limited: environmental: permit application advertisement EPR/BP3720MH/A001](https://www.gov.uk/government/publications/cv31-1ay-bellway-homes-limited-environmental-permit-application-advertisement-eprbp3720mha001--2) — Environment Agency; 2026-10-14T14:05:26+00:00
 - [Commercialising Knowledge Assets Fund: successful projects](https://www.gov.uk/government/publications/commercialising-knowledge-assets-fund-successful-projects) — Government Office for Technology Transfer; Department for Business, Innovation, Science and Trade; 2026-10-14T14:02:11+00:00
@@ -2301,6 +2331,18 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [177.39 JPY = 1 EUR 2026-10-14 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-jpy.en.html?date=2026-10-14&rate=177.39) — European Central Bank — Japanese yen (JPY); 2026-10-14T13:15:00+00:00
 - [1.1195 USD = 1 EUR 2026-10-14 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-usd.en.html?date=2026-10-14&rate=1.1195) — European Central Bank — US dollar (USD); 2026-10-14T13:15:00+00:00
 - [3.4443 ILS = 1 EUR 2026-10-14 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-ils.en.html?date=2026-10-14&rate=3.4443) — European Central Bank — ILS; 2026-10-14T13:15:00+00:00
+- [Maine Tax Preparer Pleads Guilty to Filing False Returns for Clients](https://www.justice.gov/opa/pr/maine-tax-preparer-pleads-guilty-filing-false-returns-clients) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Florida Man Sentenced to Prison for Tax Refund Fraud](https://www.justice.gov/opa/pr/florida-man-sentenced-prison-tax-refund-fraud) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Texas Tax Preparer Sentenced to Prison as Part of False Tax Return Scheme](https://www.justice.gov/opa/pr/texas-tax-preparer-sentenced-prison-part-false-tax-return-scheme) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Minneapolis Father and Son Plead Guilty to $9 Million Fraud Conspiracy](https://www.justice.gov/opa/pr/minneapolis-father-and-son-plead-guilty-9-million-fraud-conspiracy) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [New Jersey Brothers Plead Guilty to Stealing More Than $2.6 Million, Collectively, in Tax Refunds](https://www.justice.gov/opa/pr/new-jersey-brothers-plead-guilty-stealing-more-26-million-collectively-tax-refunds) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Texas Residents Charged with Promoting Illegal Tax Shelter](https://www.justice.gov/opa/pr/texas-residents-charged-promoting-illegal-tax-shelter) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Mississippi Man Convicted by Federal Jury of Participating in a Criminal Conspiracy to Distribute Child Sexual Abuse Material](https://www.justice.gov/opa/pr/mississippi-man-convicted-federal-jury-participating-criminal-conspiracy-distribute-child) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [DOJ’s Fraud Division, IRS, and IRS-CI Expose More than $490M in Tax Fraud in National Tax Enforcement Surge](https://www.justice.gov/opa/pr/dojs-fraud-division-irs-and-irs-ci-expose-more-490m-tax-fraud-national-tax-enforcement-surge) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Kansas Business Owner Sent to Prison for Employment Tax Crimes](https://www.justice.gov/opa/pr/kansas-business-owner-sent-prison-employment-tax-crimes) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Justice Department Announces Significant Charges from National Tax Fraud Enforcement Surge](https://www.justice.gov/opa/video/justice-department-announces-significant-charges-national-tax-fraud-enforcement-surge) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Justice Department Opens Investigation of Pennsauken, New Jersey’s Allegedly Unconstitutional Permit Delays](https://www.justice.gov/opa/pr/justice-department-opens-investigation-pennsauken-new-jerseys-allegedly-unconstitutional) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Mexican Citizens Charged in a Fraudulent Tax Scheme](https://www.justice.gov/opa/pr/mexican-citizens-charged-fraudulent-tax-scheme) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
 - [NE66 3RQ, Robert Thompson, David Thompson, Kathryn Thompson and Bethan Thompson: environmental permit application advertisement - EPR/KP3326MQ/A002](https://www.gov.uk/government/publications/ne66-3rq-robert-thompson-david-thompson-kathryn-thompson-and-bethan-thompson-environmental-permit-application-advertisement-eprkp3326mqa002) — Environment Agency; 2026-10-14T11:36:46+00:00
 - [NE22 7FJ, JDR Cable Systems Limited: environmental permit application advertisement - EPR/NP3025MA/A001](https://www.gov.uk/government/publications/ne22-7fj-jdr-cable-systems-limited-environmental-permit-application-advertisement-eprnp3025maa001) — Environment Agency; 2026-10-14T11:35:07+00:00
 - [AL4 0SA, Luton Metal Recycling Limited: environmental permit application advertisement - EPR/YP3522SE/V002](https://www.gov.uk/government/publications/al4-0sa-luton-metal-recycling-limited-environmental-permit-application-advertisement-epryp3522sev002) — Environment Agency; 2026-10-14T11:33:34+00:00
@@ -2567,113 +2609,119 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-openfda-drugs: valid_empty; openfda_no_matches_in_window
 - us-congress-bills: key_not_configured; DATA_GOV_API_KEY is not set
 - us-regulations-documents: key_not_configured; DATA_GOV_API_KEY is not set
-- us-govinfo-plaw: key_not_configured; DATA_GOV_API_KEY is not set
-- us-govinfo-bills-enr: ok; stale_feed_outside_requested_window
-- us-govinfo-chrg: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
-- us-govinfo-uscourts-almd: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-caed: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
-- us-govinfo-uscourts-cand: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
-- us-govinfo-uscourts-casd: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
-- us-govinfo-uscourts-gand: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-idd: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-ilnd: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-moed: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-sdd: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-vtd: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-waed: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
-- us-govinfo-uscourts-wvnd: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-wyd: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-ca2: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-cadc: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-almb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-alnb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-alsb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-akb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-areb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-arwb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-azb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-caeb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-cacb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-cob: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-dcb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-ctb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-deb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-flsb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-flmb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-ganb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-gamb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-hib: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-ilsb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-ilcb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-insb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-ianb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-kyeb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-laeb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-lawb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-lamb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-meb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-mdb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-miwb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-mnb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-msnb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-moeb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-mowb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-mtb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-nvb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-nhb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-nyeb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-nynb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-nceb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-ncwb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-ohnb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-ohsb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-okeb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-oknb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-okwb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-orb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-paeb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-pamb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-pawb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-prb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-rib: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-scb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-sdb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-tnmb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-txwb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-vawb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-vib: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-waeb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-wawb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-wvnb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-wieb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-wiwb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-wyb: ok; stale_feed_outside_requested_window
-- us-govinfo-uscourts-jpml: ok; stale_feed_outside_requested_window
-- us-white-house-0691096d16: ok; stale_feed_outside_requested_window
-- us-doj-1eabdef711: ok; stale_feed_outside_requested_window
+- us-govinfo-plaw-api: key_not_configured; DATA_GOV_API_KEY is not set
+- us-govinfo-bills-enr: unchanged; stale_feed_outside_requested_window
+- us-govinfo-chrg: unchanged; feed_at_capacity_in_requested_window; snapshots may miss overflow
+- us-govinfo-uscourts-almd: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-caed: unchanged; feed_at_capacity_in_requested_window; snapshots may miss overflow
+- us-govinfo-uscourts-cand: unchanged; feed_at_capacity_in_requested_window; snapshots may miss overflow
+- us-govinfo-uscourts-casd: unchanged; feed_at_capacity_in_requested_window; snapshots may miss overflow
+- us-govinfo-uscourts-gand: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-idd: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-ilnd: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-moed: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-sdd: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-vtd: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-waed: unchanged; feed_at_capacity_in_requested_window; snapshots may miss overflow
+- us-govinfo-uscourts-wvnd: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-wyd: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-ca2: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-cadc: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-almb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-alnb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-alsb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-akb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-areb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-arwb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-azb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-caeb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-cacb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-cob: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-dcb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-ctb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-deb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-flsb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-flmb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-ganb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-gamb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-hib: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-ilsb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-ilcb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-insb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-ianb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-kyeb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-laeb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-lawb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-lamb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-meb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-mdb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-miwb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-mnb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-msnb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-moeb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-mowb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-mtb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-nvb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-nhb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-nyeb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-nynb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-nceb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-ncwb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-ohnb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-ohsb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-okeb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-oknb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-okwb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-orb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-paeb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-pamb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-pawb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-prb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-rib: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-scb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-sdb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-tnmb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-txwb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-vawb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-vib: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-waeb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-wawb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-wvnb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-wieb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-wiwb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-wyb: unchanged; stale_feed_outside_requested_window
+- us-govinfo-uscourts-jpml: unchanged; stale_feed_outside_requested_window
+- us-white-house-0691096d16: unchanged; stale_feed_outside_requested_window
 - us-fed-7cfba7c4ca: ok; stale_feed_outside_requested_window
 - us-fed-a383ca0d09: ok; stale_feed_outside_requested_window
-- us-fed-1401ff4ff2: fetch_failed; 
+- us-fed-1401ff4ff2: ok; stale_feed_outside_requested_window
 - us-fed-1555c8e0e5: ok; stale_feed_outside_requested_window
-- us-fed-ba8ad56252: fetch_failed; 
-- us-fed-0023b1ebca: fetch_failed; 
-- us-fed-ec604ccde0: fetch_failed; 
-- us-fed-8d9ba6faea: fetch_failed; 
+- us-fed-ba8ad56252: ok; stale_feed_outside_requested_window
+- us-fed-0023b1ebca: ok; stale_feed_outside_requested_window
+- us-fed-a93c08c457: ok; stale_feed_outside_requested_window
+- us-fed-1d7a0dba2e: ok; stale_feed_outside_requested_window
+- us-fed-95066bc761: ok; stale_feed_outside_requested_window
+- us-fed-b9c811c1fd: ok; stale_feed_outside_requested_window
+- us-fed-ec604ccde0: ok; stale_feed_outside_requested_window
+- us-fed-910310a6e3: ok; stale_feed_outside_requested_window
+- us-fed-eea49fa482: ok; stale_feed_outside_requested_window
+- us-fed-8d9ba6faea: ok; stale_feed_outside_requested_window
+- us-fed-0a7a64daa4: ok; stale_feed_outside_requested_window
 - us-cftc-fda5c3631d: ok; stale_feed_outside_requested_window
-- us-fda-df70b9f330: ok; stale_feed_outside_requested_window
-- us-fda-1a1096082f: ok; stale_feed_outside_requested_window
-- us-fda-2d9c4fc2f9: ok; stale_feed_outside_requested_window
-- us-fda-8fc09ac0a2: ok; stale_feed_outside_requested_window
-- us-fda-3eaddf14de: ok; stale_feed_outside_requested_window
+- us-fda-df70b9f330: unchanged; stale_feed_outside_requested_window
+- us-fda-1a1096082f: unchanged; stale_feed_outside_requested_window
+- us-fda-2d9c4fc2f9: unchanged; stale_feed_outside_requested_window
+- us-fda-8fc09ac0a2: unchanged; stale_feed_outside_requested_window
+- us-fda-3eaddf14de: unchanged; stale_feed_outside_requested_window
 - us-fda-a25233bfac: ok; stale_feed_outside_requested_window
 - us-fda-1ca201e48f: ok; stale_feed_outside_requested_window
-- us-fda-c7d1d1cd64: ok; stale_feed_outside_requested_window
-- us-fda-d7692535f0: ok; stale_feed_outside_requested_window
-- us-nlrb-3db5e72bf9: ok; stale_feed_outside_requested_window
-- us-nlrb-c15d588b2d: ok; stale_feed_outside_requested_window
-- us-sba-9d801f4285: ok; stale_feed_outside_requested_window
-- us-ca-oal-c1209cfd66: ok; stale_feed_outside_requested_window
-- eu-ecb-f4cd34bf25: ok; stale_feed_outside_requested_window
+- us-fda-c7d1d1cd64: unchanged; stale_feed_outside_requested_window
+- us-fda-d7692535f0: unchanged; stale_feed_outside_requested_window
+- us-nlrb-3db5e72bf9: unchanged; stale_feed_outside_requested_window
+- us-nlrb-c15d588b2d: unchanged; stale_feed_outside_requested_window
+- us-sba-9d801f4285: unchanged; stale_feed_outside_requested_window
+- us-ca-oal-c1209cfd66: unchanged; stale_feed_outside_requested_window
+- eu-ecb-f4cd34bf25: unchanged; stale_feed_outside_requested_window
 - eu-ecb-fb5fd59aed: ok; stale_feed_outside_requested_window
 - eu-ecb-b84350c252: ok; stale_feed_outside_requested_window
 - eu-ecb-af0dbdabee: ok; stale_feed_outside_requested_window
@@ -2681,18 +2729,18 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - eu-ecb-0370c1f1df: ok; stale_feed_outside_requested_window
 - eu-ecb-c12c22cb78: ok; stale_feed_outside_requested_window
 - eu-ssm-3d2756b202: ok; stale_feed_outside_requested_window
-- ca-gazette-821b285be1: ok; stale_feed_outside_requested_window
-- ca-gazette-2d47daa483: ok; stale_feed_outside_requested_window
+- ca-gazette-821b285be1: unchanged; stale_feed_outside_requested_window
+- ca-gazette-2d47daa483: unchanged; stale_feed_outside_requested_window
 - ca-gazette-c2eb48e1fa: ok; stale_feed_outside_requested_window
 - ca-boc-4aa19b2183: ok; stale_feed_outside_requested_window
 - ca-boc-1f26bb2971: ok; stale_feed_outside_requested_window
 - ca-boc-4192a605ae: ok; stale_feed_outside_requested_window
 - ca-boc-5cc0603f1f: ok; stale_feed_outside_requested_window
 - ca-boc-a61b683fac: ok; stale_feed_outside_requested_window
-- ca-boc-161ba50d6e: ok; stale_feed_outside_requested_window
-- ca-boc-1c9979e6ac: ok; stale_feed_outside_requested_window
+- ca-boc-161ba50d6e: unchanged; stale_feed_outside_requested_window
+- ca-boc-1c9979e6ac: unchanged; stale_feed_outside_requested_window
 - ca-boc-b8fa2876ef: ok; stale_feed_outside_requested_window
-- ca-boc-b06a91e186: ok; stale_feed_outside_requested_window
+- ca-boc-b06a91e186: unchanged; stale_feed_outside_requested_window
 - ca-boc-f2811531de: ok; stale_feed_outside_requested_window
 - ca-boc-71c82276e6: ok; stale_feed_outside_requested_window
 - ca-boc-c1617c3a5b: ok; stale_feed_outside_requested_window
@@ -2701,21 +2749,22 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - ca-boc-e24c58f2d0: ok; stale_feed_outside_requested_window
 - ca-boc-9308ff5fe4: ok; stale_feed_outside_requested_window
 - ca-boc-9f75c25657: ok; stale_feed_outside_requested_window
-- ca-boc-cffefa81f7: ok; stale_feed_outside_requested_window
+- ca-boc-cffefa81f7: unchanged; stale_feed_outside_requested_window
 - ca-boc-762f78f374: ok; stale_feed_outside_requested_window
-- ca-boc-49364b93d8: ok; stale_feed_outside_requested_window
-- ca-boc-7b07e406da: ok; stale_feed_outside_requested_window
-- ca-boc-903390d96d: ok; stale_feed_outside_requested_window
+- ca-boc-49364b93d8: unchanged; stale_feed_outside_requested_window
+- ca-boc-7b07e406da: unchanged; stale_feed_outside_requested_window
+- ca-boc-903390d96d: unchanged; stale_feed_outside_requested_window
 - ca-boc-1da610df86: ok; stale_feed_outside_requested_window
 - ca-boc-63e377340d: ok; stale_feed_outside_requested_window
 - ca-supreme-d329809c56: ok; stale_feed_outside_requested_window
-- au-rba-75f3866f45: ok; stale_feed_outside_requested_window
-- au-rba-4c2add8718: ok; stale_feed_outside_requested_window
-- au-rba-fe06b804cb: ok; stale_feed_outside_requested_window
-- au-rba-9e35f5f8d1: ok; stale_feed_outside_requested_window
-- au-rba-5ba995e001: ok; stale_feed_outside_requested_window
-- au-rba-bb9b5c009f: ok; stale_feed_outside_requested_window
-- sg-hsa-621a78d387: ok; stale_feed_outside_requested_window
-- jp-pmda-f78c81268a: ok; stale_feed_outside_requested_window
-- jp-pmda-ba69b0656f: ok; stale_feed_outside_requested_window
-- jp-pmda-c845d5b3de: ok; stale_feed_outside_requested_window
+- au-rba-75f3866f45: unchanged; stale_feed_outside_requested_window
+- au-rba-4c2add8718: unchanged; stale_feed_outside_requested_window
+- au-rba-fe06b804cb: unchanged; stale_feed_outside_requested_window
+- au-rba-9e35f5f8d1: unchanged; stale_feed_outside_requested_window
+- au-rba-5ba995e001: unchanged; stale_feed_outside_requested_window
+- au-rba-bb9b5c009f: unchanged; stale_feed_outside_requested_window
+- hk-government-a5249d2406: blocked; 
+- sg-hsa-621a78d387: unchanged; stale_feed_outside_requested_window
+- jp-pmda-f78c81268a: unchanged; stale_feed_outside_requested_window
+- jp-pmda-ba69b0656f: unchanged; stale_feed_outside_requested_window
+- jp-pmda-c845d5b3de: unchanged; stale_feed_outside_requested_window
