@@ -313,6 +313,46 @@ def _xai_oauth_expiry_from_files(root: Path | None = None) -> tuple[datetime | N
             dt, has_r = _expiry_from_dict(node)
             if dt:
                 return dt, f"file:{path.name}", has_r
+    # OpenClaw 2026.7+ also keeps the store in openclaw-agent.sqlite
+    # (auth_profile_store.store_json). Read that without printing tokens.
+    try:
+        import sqlite3
+    except ImportError:
+        sqlite3 = None  # type: ignore
+    if sqlite3 is not None:
+        for db_path in sorted(root.rglob("openclaw-agent.sqlite")):
+            try:
+                if db_path.stat().st_size > 50_000_000:
+                    continue
+                con = sqlite3.connect(f"file:{db_path}?mode=ro", uri=True, timeout=5)
+                try:
+                    row = con.execute(
+                        "SELECT store_json FROM auth_profile_store LIMIT 1"
+                    ).fetchone()
+                finally:
+                    con.close()
+            except Exception:
+                continue
+            if not row or not row[0]:
+                continue
+            try:
+                data = json.loads(row[0])
+            except json.JSONDecodeError:
+                continue
+            profiles = data.get("profiles") if isinstance(data, dict) else None
+            nodes = []
+            if isinstance(profiles, dict):
+                for pid, cred in profiles.items():
+                    if isinstance(cred, dict):
+                        node = dict(cred)
+                        node.setdefault("id", pid)
+                        nodes.append(node)
+            for node in nodes:
+                if not _is_xai_oauth_dict(node):
+                    continue
+                dt, has_r = _expiry_from_dict(node)
+                if dt:
+                    return dt, f"sqlite:{db_path.name}", has_r
     return None, "unreadable", None
 
 
@@ -356,6 +396,70 @@ def ensure_auth_store_owned_by_gha(root: Path | None = None) -> list[str]:
         except OSError:
             continue
     return fixed
+
+
+def auth_store_diag() -> dict:
+    """No tokens. Inventory for War room when expiry is unreadable."""
+    root = Path(HOME) / ".openclaw"
+    out: dict = {
+        "home": HOME,
+        "euid": os.geteuid(),
+        "openclaw_dir": root.is_dir(),
+        "files": [],
+        "cli": {},
+    }
+    if root.is_dir():
+        for path in sorted(root.rglob("*")):
+            if not path.is_file():
+                continue
+            if path.name not in ("auth-profiles.json", "oauth.json", "auth.json",
+                                 "auth-state.json", "openclaw-agent.sqlite"):
+                continue
+            try:
+                st = path.stat()
+                entry = {
+                    "name": path.name,
+                    "rel": str(path.relative_to(root)),
+                    "size": st.st_size,
+                    "uid": st.st_uid,
+                    "mode": oct(st.st_mode & 0o777),
+                }
+                if path.suffix == ".json" and st.st_size < 2_000_000:
+                    try:
+                        data = json.loads(path.read_text(encoding="utf-8"))
+                        profiles = data.get("profiles") if isinstance(data, dict) else None
+                        summary = []
+                        if isinstance(profiles, dict):
+                            for pid, cred in list(profiles.items())[:8]:
+                                if isinstance(cred, dict):
+                                    summary.append({
+                                        "id": str(pid)[:80],
+                                        "provider": cred.get("provider"),
+                                        "type": cred.get("type"),
+                                        "has_expires": any(
+                                            k in cred for k in (
+                                                "expires", "expiresAt", "expires_at", "expiry")),
+                                    })
+                        entry["profiles"] = summary
+                    except (OSError, json.JSONDecodeError):
+                        entry["profiles"] = "unreadable"
+                out["files"].append(entry)
+            except OSError as e:
+                out["files"].append({"name": path.name, "error": type(e).__name__})
+    r = as_gha(["openclaw", "models", "auth", "list", "--provider", "xai", "--json"], 60)
+    raw = (r.stdout or "")
+    err = (r.stderr or "")
+    out["cli"] = {
+        "rc": r.returncode,
+        "stdout_len": len(raw),
+        "stderr_len": len(err),
+        "profiles_none": "Profiles: (none)" in raw,
+        "stdout_head": re.sub(
+            r"(eyJ[\w.-]{10,}|[A-Za-z0-9_\-]{40,})", "<redacted>",
+            re.sub(r"\s+", " ", raw))[:240],
+    }
+    return out
+
 
 
 def xai_oauth_expiry() -> tuple[datetime | None, str, bool | None]:
@@ -416,6 +520,10 @@ def renew(result: dict) -> bool:
     result["has_refresh_token"] = has_r
     log(f"xAI OAuth expires={result['expires_before']} left_min={result['minutes_left_before']} via {src}")
     if exp is None:
+        try:
+            result["auth_diag"] = auth_store_diag()
+        except Exception as e:
+            result["auth_diag"] = {"error": type(e).__name__}
         result["renew"] = "FAIL: no xAI OAuth profile readable (login missing?)"
         return False
     if token_is_fresh(left, exp, now):
