@@ -342,7 +342,7 @@ jobs:
     needs: gate
     if: ${{ needs.gate.outputs.go == 'yes' }}
     runs-on: ${{ (github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
-    timeout-minutes: 2
+    timeout-minutes: 7
     env:
       HOME: ${{ (github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
       FULLSCAN_HOME: ${{ (github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
@@ -355,10 +355,19 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       FULLSCAN_PUSH_TOKEN: ${{ secrets.FULLSCAN_PUSH_TOKEN }}
     steps:
+      # Reuse the runner's warm workspace (clean: false) so only the delta
+      # is fetched; its own 5 min cap. 10-16 06:49: clean checkout of the
+      # 6.9 GB tree overran the old 2 min job cap. No sparse on ECS.
       - uses: actions/checkout@v4
+        timeout-minutes: 5
         with:
           ref: main
           fetch-depth: 1
+          clean: false
+      - name: Full tree after leftover sparse-checkout
+        run: |
+          git sparse-checkout disable || true
+          test -f requirements.txt || { echo "ERROR: requirements.txt missing"; exit 1; }
       - name: Check prerequisites
         id: pf
         run: |
