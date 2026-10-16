@@ -21,8 +21,8 @@
    "SIT": 0
   },
   "h1": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "paper": {
@@ -47,7 +47,7 @@
   }
  },
  "date": "2026-10-16",
- "generated_at": "2026-10-16T07:45:40-04:00",
+ "generated_at": "2026-10-16T08:05:35-04:00",
  "strategies": [
   {
    "buys": [
@@ -5493,13 +5493,23 @@
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "XP",
+    "INDP",
+    "QTEX",
+    "BBWI"
+   ],
    "family": "h1",
    "name": "h1",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-10-16T12:05:11Z",
+   "sells": [
+    "KOD 27",
+    "NAUT 1234",
+    "PENG 34",
+    "SDEV 1222"
+   ],
    "source": "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
