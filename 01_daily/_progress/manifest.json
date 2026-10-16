@@ -14,12 +14,6 @@
       "updated_at": "2026-10-15T12:56:58-04:00"
     },
     {
-      "date": "2026-10-14",
-      "workflow": "postclose",
-      "file": "2026-10-14_postclose.json",
-      "updated_at": "2026-10-15T15:24:33-04:00"
-    },
-    {
       "date": "2026-10-15",
       "workflow": "pipeline_health",
       "file": "2026-10-15_pipeline_health.json",
@@ -53,12 +47,18 @@
       "date": "2026-10-16",
       "workflow": "finviz_scrape",
       "file": "2026-10-16_finviz_scrape.json",
-      "updated_at": "2026-10-16T04:18:31-04:00"
+      "updated_at": "2026-10-16T04:21:44-04:00"
     },
     {
-      "date": "2026-10-16",
-      "workflow": "factor_mine",
-      "file": "2026-10-16_factor_mine.json",
+      "date": "2026-10-14",
+      "workflow": "postclose",
+      "file": "2026-10-14_postclose.json",
+      "updated_at": "2026-10-16T04:34:16-04:00"
+    },
+    {
+      "date": "2026-10-15",
+      "workflow": "postclose",
+      "file": "2026-10-15_postclose.json",
       "updated_at": "2026-10-16T04:34:32-04:00"
     }
   ]
