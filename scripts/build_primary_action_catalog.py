@@ -97,6 +97,8 @@ def build(root):
    if seed.get('index_url'):
     url=seed['index_url']
     sources.append({'id':seed['id']+'-index','name':seed['name'],'jurisdiction':seed['jurisdiction'],'family':seed['family'],'url':url,'adapter':'html_index','document_type':seed.get('document_type','official_announcement'),'link_pattern':seed['link_pattern'],'discovery_url':seed['discovery_url'],'candidate_origin':'specific_publication_link_selector'})
+   if seed.get('google_news_url'):
+    sources.append({'id':seed['id']+'-gnews','name':seed['name']+' (official-site news mirror)','jurisdiction':seed['jurisdiction'],'family':seed['family'],'url':seed['google_news_url'],'adapter':'google_news_rss','document_type':seed.get('document_type','official_announcement'),'discovery_url':seed['discovery_url'],'candidate_origin':'third_party_discovery_index_of_official_site; official_domain_geo_blocks_datacenter_egress','saturation_limit':100})
  locks={}
  for s in sources:locks.setdefault(urllib.parse.urlsplit(s['url']).hostname,threading.Semaphore(2))
  def verify(source):
