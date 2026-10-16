@@ -1,6 +1,6 @@
 {
- "date": "2026-10-15",
- "generated_at": "2026-10-15T13:51:18.442067-04:00",
+ "date": "2026-10-16",
+ "generated_at": "2026-10-16T05:46:30.851523-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -8,29 +8,27 @@
   "unknown"
  ],
  "signals": {
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "risk": "unknown",
   "yields_score": null,
   "fed_score": null,
   "dollar_oil_score": null,
   "futures_score": null,
-  "yields": "falling",
-  "yields_source": "fred_dgs10",
-  "dgs10_delta_1d": -0.03,
-  "dgs10_current": 5.21,
+  "yields": "unknown",
+  "yields_source": "llm_factor_fallback",
   "dollar": "soft",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.49,
-  "vix_ratio": 0.895,
-  "vix_spot": 16.66,
-  "vix_delta_1d": -0.21,
+  "dxy_pct_1d": -0.29,
+  "vix_ratio": 0.866,
+  "vix_spot": 16.01,
+  "vix_delta_1d": -0.45,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": 1.59,
-  "oil": "rising",
+  "oil_pct_1d": -2.62,
+  "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": -0.003,
+  "regime_corr": -0.018,
   "sectors": {
    "Basic Materials": {
     "score": -4.97,
@@ -298,58 +296,58 @@
   },
   "profit": {
    "no": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "risk-unknown, F&G None"
-   },
-   "yes": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "—"
+    "why": "no yields/risk signals"
    },
    "thin": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "—"
+    "why": "no yields/risk signals"
+   },
+   "yes": {
+    "stance": "unknown",
+    "confidence": "low",
+    "why": "no yields/risk signals"
    }
   },
   "lev": {
-   "high": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "—"
-   },
    "low": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "—"
+    "why": "no signals"
    },
    "mid": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "—"
+    "why": "no signals"
+   },
+   "high": {
+    "stance": "unknown",
+    "confidence": "low",
+    "why": "no signals"
    },
    "neg_equity": {
-    "stance": "hostile",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "negative equity is distressed in any regime"
+    "why": "no signals"
    }
   },
   "style": {
    "growth": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "yields falling — duration/growth re-rates [factor: Bond yields]"
-   },
-   "value": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "value lags duration rallies"
+    "why": "no yields/risk signals"
    },
    "blend": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "—"
+    "why": "no yields/risk signals"
+   },
+   "value": {
+    "stance": "unknown",
+    "confidence": "low",
+    "why": "no yields/risk signals"
    }
   },
   "mom": {

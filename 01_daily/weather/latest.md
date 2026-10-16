@@ -1,12 +1,12 @@
-# Weather report — 2026-10-15
+# Weather report — 2026-10-16
 
 Is today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade.
 
 ## Snapshot
 
 - **Risk state:** UNKNOWN
-- **Yields:** falling (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** rising | **VIX:** falling (ratio 0.90 via vix/vix3m) spot 16.66
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.00
+- **Yields:** unknown (llm_factor_fallback) | **Dollar:** soft (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.87 via vix/vix3m) spot 16.01
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.02
 - **High-impact events:** 0 bullish vs 0 bearish
 - ⚠️ **Data gaps:** general predict run, general predict factor scoreboard
 
@@ -57,26 +57,26 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| profit:no | ⛅ neutral | low | risk-unknown, F&G None |
-| profit:yes | ⛅ neutral | low | — |
-| profit:thin | ⛅ neutral | low | — |
+| profit:no | ❔ unknown | low | no yields/risk signals |
+| profit:thin | ❔ unknown | low | no yields/risk signals |
+| profit:yes | ❔ unknown | low | no yields/risk signals |
 
 ## Style (growth/value)
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | 🌤️ favorable | medium | yields falling — duration/growth re-rates [factor: Bond yields] |
-| style:value | ⛅ neutral | low | value lags duration rallies |
-| style:blend | ⛅ neutral | low | — |
+| style:growth | ❔ unknown | low | no yields/risk signals |
+| style:blend | ❔ unknown | low | no yields/risk signals |
+| style:value | ❔ unknown | low | no yields/risk signals |
 
 ## Leverage
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| lev:high | ⛅ neutral | low | — |
-| lev:low | ⛅ neutral | low | — |
-| lev:mid | ⛅ neutral | low | — |
-| lev:neg_equity | 🌧️ hostile | low | negative equity is distressed in any regime |
+| lev:low | ❔ unknown | low | no signals |
+| lev:mid | ❔ unknown | low | no signals |
+| lev:high | ❔ unknown | low | no signals |
+| lev:neg_equity | ❔ unknown | low | no signals |
 
 ## Momentum state
 

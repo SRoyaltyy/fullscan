@@ -1,0 +1,311 @@
+{
+  "date": "2026-10-16",
+  "generated_at": "2026-10-16T05:42:59.560605-04:00",
+  "overall": "PARTIAL",
+  "ranker_ready": false,
+  "counts": {
+    "ok": 6,
+    "partial": 1,
+    "fail": 1,
+    "n": 8
+  },
+  "buy_1d": [
+    {
+      "ticker": "CON",
+      "score": 0.6451168820909512
+    },
+    {
+      "ticker": "AMN",
+      "score": 0.5884795100085922
+    },
+    {
+      "ticker": "HITI",
+      "score": 0.3685678731715655
+    },
+    {
+      "ticker": "SGRY",
+      "score": 0.5128537234562535
+    },
+    {
+      "ticker": "ASTH",
+      "score": 0.5384464496419931
+    },
+    {
+      "ticker": "NTAP",
+      "score": 0.3478071041356559
+    },
+    {
+      "ticker": "MQ",
+      "score": 0.8299452647162282
+    },
+    {
+      "ticker": "BAND",
+      "score": 0.7334445684017012
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "NEOV",
+      "score": -0.4544672247029171
+    },
+    {
+      "ticker": "OKLO",
+      "score": -0.2828224891959171
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.28286010485607493
+    },
+    {
+      "ticker": "POWL",
+      "score": -0.0683231628947133
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.36856911583923274
+    },
+    {
+      "ticker": "TE",
+      "score": -0.1905242370154927
+    },
+    {
+      "ticker": "NNDM",
+      "score": 0.09783274698943863
+    },
+    {
+      "ticker": "AMSC",
+      "score": -0.16013252422597485
+    }
+  ],
+  "flatten": {},
+  "general": {},
+  "sectors": {},
+  "lands": [
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T04:17:35.292225-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-16_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 4651,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-10-16_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 2218,
+          "preview": "# Finviz homepage market digest \u2014 2026-10-16\n**Generated:** 2026-10-16T04:17:35.265184-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set for a slightly higher open with bank earnings, economic data, and options expiration in focus\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** TRV, TFC, MTB, CFG, RF\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** TRV, TFC, MTB, CFG, RF\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-16\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-16\n**Generated:** 2026-10-16T04:17:35.265184-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set for a slightly higher open with bank earnings, economic data, and options expiration in focus\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** TRV, TFC, MTB, CFG, RF\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** TRV, TFC, MTB, CFG, RF\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-16\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T04:18:13.948113-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-16_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 96870,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-16_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11706,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-16\n_Generated 2026-10-16T04:18:13.735532-04:00 \u00b7 export=data/exports/finviz_2026-10-16.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        },
+        {
+          "path": "data/exports/finviz_2026-10-16.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11511846,
+          "preview": "11747 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-10-16_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 96870,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-16\n_Generated 2026-10-16T04:18:13.735532-04:00 \u00b7 export=data/exports/finviz_2026-10-16.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11747 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+    },
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T04:18:22.017865-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-16_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 4651,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-10-16_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 2218,
+          "preview": "# Finviz homepage market digest \u2014 2026-10-16\n**Generated:** 2026-10-16T04:18:22.004335-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set for a slightly higher open with bank earnings, economic data, and options expiration in focus\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** TRV, TFC, MTB, CFG, RF\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** TRV, TFC, MTB, CFG, RF\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-16\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-16\n**Generated:** 2026-10-16T04:18:22.004335-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set for a slightly higher open with bank earnings, economic data, and options expiration in focus\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** TRV, TFC, MTB, CFG, RF\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** TRV, TFC, MTB, CFG, RF\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-16\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T04:21:39.359032-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-16_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 274991,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-16_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18454,
+          "preview": "# MAP HEAT \u2014 2026-10-16\nExport `finviz_2026-10-16.csv` \u00b7 11616 names \u00b7 generated 2026-10-16T04:21:39.295411-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-16\nExport `finviz_2026-10-16.csv` \u00b7 11616 names \u00b7 generated 2026-10-16T04:21:39.295411-04:00"
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T05:41:39.675514-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-10-16_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1123098,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T05:41:53.100641-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-16_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9278,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-16_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5010,
+          "preview": "# Weather report \u2014 2026-10-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T05:42:00.209570-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-16_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2218618,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KEYS, FORM, AVPT, MU, SKHY"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KEYS, FORM, AVPT, MU, SKHY"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T05:42:15.447468-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-16_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T05:42:43.644877-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-16_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7567321,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIVN, HTHT, VFF, SWKS, AUPH"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-16_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8358136,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PFE, HTHT, DHR, LLY, SHO"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIVN, HTHT, VFF, SWKS, AUPH \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PFE, HTHT, DHR, LLY, SHO"
+    }
+  ],
+  "source": "publish_live_boards"
+}

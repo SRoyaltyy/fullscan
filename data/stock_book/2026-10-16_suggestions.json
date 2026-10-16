@@ -1,0 +1,599 @@
+{
+  "date": "2026-10-16",
+  "horizons": {
+    "1d": {
+      "buy": [
+        {
+          "ticker": "CON",
+          "score": 0.6451168820909512
+        },
+        {
+          "ticker": "AMN",
+          "score": 0.5884795100085922
+        },
+        {
+          "ticker": "HITI",
+          "score": 0.3685678731715655
+        },
+        {
+          "ticker": "SGRY",
+          "score": 0.5128537234562535
+        },
+        {
+          "ticker": "ASTH",
+          "score": 0.5384464496419931
+        },
+        {
+          "ticker": "NTAP",
+          "score": 0.3478071041356559
+        },
+        {
+          "ticker": "MQ",
+          "score": 0.8299452647162282
+        },
+        {
+          "ticker": "BAND",
+          "score": 0.7334445684017012
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "NEOV",
+          "score": -0.4544672247029171
+        },
+        {
+          "ticker": "OKLO",
+          "score": -0.2828224891959171
+        },
+        {
+          "ticker": "FCEL",
+          "score": -0.28286010485607493
+        },
+        {
+          "ticker": "POWL",
+          "score": -0.0683231628947133
+        },
+        {
+          "ticker": "EOSE",
+          "score": -0.36856911583923274
+        },
+        {
+          "ticker": "TE",
+          "score": -0.1905242370154927
+        },
+        {
+          "ticker": "NNDM",
+          "score": 0.09783274698943863
+        },
+        {
+          "ticker": "AMSC",
+          "score": -0.16013252422597485
+        }
+      ]
+    },
+    "3d": {
+      "buy": [
+        {
+          "ticker": "MQ",
+          "score": 0.9236813550839917
+        },
+        {
+          "ticker": "CBRL",
+          "score": 0.8572507732080275
+        },
+        {
+          "ticker": "AVPT",
+          "score": 0.8425663613851111
+        },
+        {
+          "ticker": "SHOO",
+          "score": 0.83616960932022
+        },
+        {
+          "ticker": "BAND",
+          "score": 0.8203907042022853
+        },
+        {
+          "ticker": "FIGS",
+          "score": 0.7945161503398255
+        },
+        {
+          "ticker": "SONO",
+          "score": 0.7925122189182479
+        },
+        {
+          "ticker": "SIG",
+          "score": 0.7701953337888459
+        },
+        {
+          "ticker": "ARQT",
+          "score": 0.725926701782462
+        },
+        {
+          "ticker": "PACS",
+          "score": 0.7023789572482613
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.7019139137384407
+        },
+        {
+          "ticker": "ETON",
+          "score": 0.6976707366951469
+        },
+        {
+          "ticker": "WAY",
+          "score": 0.6901919097037241
+        },
+        {
+          "ticker": "LAUR",
+          "score": 0.6589957654603344
+        },
+        {
+          "ticker": "OLLI",
+          "score": 0.6492761067679871
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ROIV",
+          "score": -0.6787789502842032
+        },
+        {
+          "ticker": "SOC",
+          "score": -0.5510395509502064
+        },
+        {
+          "ticker": "BAK",
+          "score": -0.5296446153251867
+        },
+        {
+          "ticker": "PCT",
+          "score": -0.5233421939401264
+        },
+        {
+          "ticker": "NEOV",
+          "score": -0.5233331664782332
+        },
+        {
+          "ticker": "AIRS",
+          "score": -0.5231012159305896
+        },
+        {
+          "ticker": "CGEM",
+          "score": -0.50341335092898
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.5019338758435073
+        },
+        {
+          "ticker": "PRM",
+          "score": -0.5001681396555138
+        },
+        {
+          "ticker": "ACDC",
+          "score": -0.4956067085002301
+        },
+        {
+          "ticker": "RC",
+          "score": -0.4914074112449862
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.48737918832093385
+        },
+        {
+          "ticker": "LFMD",
+          "score": -0.486197478344771
+        },
+        {
+          "ticker": "ALMS",
+          "score": -0.48320589583070356
+        },
+        {
+          "ticker": "CMTG",
+          "score": -0.4802369346734847
+        }
+      ]
+    },
+    "1w": {
+      "buy": [
+        {
+          "ticker": "MQ",
+          "score": 0.9910595454562472
+        },
+        {
+          "ticker": "CBRL",
+          "score": 0.9123820772412561
+        },
+        {
+          "ticker": "AVPT",
+          "score": 0.907793296074245
+        },
+        {
+          "ticker": "SHOO",
+          "score": 0.9035676475072125
+        },
+        {
+          "ticker": "BAND",
+          "score": 0.8812380731309701
+        },
+        {
+          "ticker": "FIGS",
+          "score": 0.8592185250754756
+        },
+        {
+          "ticker": "SONO",
+          "score": 0.8540619086485128
+        },
+        {
+          "ticker": "SIG",
+          "score": 0.8308871918863026
+        },
+        {
+          "ticker": "ARQT",
+          "score": 0.7723724750444037
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.7643000690937507
+        },
+        {
+          "ticker": "ETON",
+          "score": 0.7421969209941541
+        },
+        {
+          "ticker": "WAY",
+          "score": 0.7384891737562993
+        },
+        {
+          "ticker": "PACS",
+          "score": 0.7335421633457064
+        },
+        {
+          "ticker": "LAUR",
+          "score": 0.6942660748924834
+        },
+        {
+          "ticker": "OLLI",
+          "score": 0.6810219794180024
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ROIV",
+          "score": -0.733687337266713
+        },
+        {
+          "ticker": "SOC",
+          "score": -0.61787158730949
+        },
+        {
+          "ticker": "BAK",
+          "score": -0.5907375235704464
+        },
+        {
+          "ticker": "PCT",
+          "score": -0.5889250461931195
+        },
+        {
+          "ticker": "AIRS",
+          "score": -0.5843073478873227
+        },
+        {
+          "ticker": "NEOV",
+          "score": -0.5788321579216917
+        },
+        {
+          "ticker": "PRM",
+          "score": -0.5671240549273955
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.5649380029384281
+        },
+        {
+          "ticker": "CGEM",
+          "score": -0.5649059230841806
+        },
+        {
+          "ticker": "ACDC",
+          "score": -0.5589427314609998
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.5497792970358454
+        },
+        {
+          "ticker": "RC",
+          "score": -0.5466799898175284
+        },
+        {
+          "ticker": "LFMD",
+          "score": -0.54619597094126
+        },
+        {
+          "ticker": "ALMS",
+          "score": -0.5456780899850335
+        },
+        {
+          "ticker": "CMTG",
+          "score": -0.5399163404577895
+        }
+      ]
+    },
+    "2w": {
+      "buy": [
+        {
+          "ticker": "MQ",
+          "score": 1.0392008881445214
+        },
+        {
+          "ticker": "AVPT",
+          "score": 0.9536884747404364
+        },
+        {
+          "ticker": "SHOO",
+          "score": 0.9489046472052103
+        },
+        {
+          "ticker": "CBRL",
+          "score": 0.9475759340868164
+        },
+        {
+          "ticker": "BAND",
+          "score": 0.926407932239538
+        },
+        {
+          "ticker": "FIGS",
+          "score": 0.9024929211686685
+        },
+        {
+          "ticker": "SONO",
+          "score": 0.897156439117273
+        },
+        {
+          "ticker": "SIG",
+          "score": 0.8730617064742885
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.8051581952386684
+        },
+        {
+          "ticker": "ARQT",
+          "score": 0.7994725560016538
+        },
+        {
+          "ticker": "ETON",
+          "score": 0.7701257824378263
+        },
+        {
+          "ticker": "WAY",
+          "score": 0.7639926089161104
+        },
+        {
+          "ticker": "PACS",
+          "score": 0.7425739084998129
+        },
+        {
+          "ticker": "LAUR",
+          "score": 0.7108444159481866
+        },
+        {
+          "ticker": "EZPW",
+          "score": 0.6992369759524493
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ROIV",
+          "score": -0.7726106588388286
+        },
+        {
+          "ticker": "SOC",
+          "score": -0.6638923492463977
+        },
+        {
+          "ticker": "PCT",
+          "score": -0.634311295316234
+        },
+        {
+          "ticker": "BAK",
+          "score": -0.6297158674382223
+        },
+        {
+          "ticker": "AIRS",
+          "score": -0.6238342853045212
+        },
+        {
+          "ticker": "PRM",
+          "score": -0.6132893827131405
+        },
+        {
+          "ticker": "NEOV",
+          "score": -0.6123267112773919
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.6060050472020034
+        },
+        {
+          "ticker": "CGEM",
+          "score": -0.6059669866566872
+        },
+        {
+          "ticker": "ACDC",
+          "score": -0.6028236026241802
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.5937525201575226
+        },
+        {
+          "ticker": "ALMS",
+          "score": -0.5909833541123084
+        },
+        {
+          "ticker": "LFMD",
+          "score": -0.5850124485594019
+        },
+        {
+          "ticker": "RC",
+          "score": -0.5820258829176551
+        },
+        {
+          "ticker": "CMTG",
+          "score": -0.5770745284070284
+        }
+      ]
+    },
+    "1m": {
+      "buy": [
+        {
+          "ticker": "MQ",
+          "score": 1.1134967848366393
+        },
+        {
+          "ticker": "AVPT",
+          "score": 1.025611662958523
+        },
+        {
+          "ticker": "SHOO",
+          "score": 1.02317313142988
+        },
+        {
+          "ticker": "CBRL",
+          "score": 1.0082297750609812
+        },
+        {
+          "ticker": "BAND",
+          "score": 0.9935603791455441
+        },
+        {
+          "ticker": "FIGS",
+          "score": 0.9737893688781967
+        },
+        {
+          "ticker": "SONO",
+          "score": 0.9650399514279329
+        },
+        {
+          "ticker": "ARHS",
+          "score": 0.9412054442190274
+        },
+        {
+          "ticker": "SLDE",
+          "score": 0.873901780604841
+        },
+        {
+          "ticker": "ARQT",
+          "score": 0.8505092853116842
+        },
+        {
+          "ticker": "ETON",
+          "score": 0.819109357870202
+        },
+        {
+          "ticker": "WAY",
+          "score": 0.8170082649080284
+        },
+        {
+          "ticker": "PACS",
+          "score": 0.7765310015446387
+        },
+        {
+          "ticker": "LAUR",
+          "score": 0.7494704958107417
+        },
+        {
+          "ticker": "EZPW",
+          "score": 0.74882435585207
+        }
+      ],
+      "sell": [
+        {
+          "ticker": "ROIV",
+          "score": -0.8331745563803277
+        },
+        {
+          "ticker": "SOC",
+          "score": -0.7375330350804055
+        },
+        {
+          "ticker": "PCT",
+          "score": -0.7065804743337589
+        },
+        {
+          "ticker": "BAK",
+          "score": -0.6969406224560389
+        },
+        {
+          "ticker": "AIRS",
+          "score": -0.6911932418452013
+        },
+        {
+          "ticker": "PRM",
+          "score": -0.6870794680781547
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.6754159119609083
+        },
+        {
+          "ticker": "CGEM",
+          "score": -0.673679151545449
+        },
+        {
+          "ticker": "NEOV",
+          "score": -0.6733294089832509
+        },
+        {
+          "ticker": "ACDC",
+          "score": -0.6726276958043618
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.6625662397742853
+        },
+        {
+          "ticker": "ALMS",
+          "score": -0.6598840941805963
+        },
+        {
+          "ticker": "LFMD",
+          "score": -0.6510580398062644
+        },
+        {
+          "ticker": "BORR",
+          "score": -0.6447431377721555
+        },
+        {
+          "ticker": "RC",
+          "score": -0.6428393404622711
+        }
+      ]
+    }
+  },
+  "buy_1d": [
+    "CON",
+    "AMN",
+    "HITI",
+    "SGRY",
+    "ASTH",
+    "NTAP",
+    "MQ",
+    "BAND"
+  ],
+  "sell_1d": [
+    "NEOV",
+    "OKLO",
+    "FCEL",
+    "POWL",
+    "EOSE",
+    "TE",
+    "NNDM",
+    "AMSC"
+  ]
+}
