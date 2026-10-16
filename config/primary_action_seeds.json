@@ -270,8 +270,8 @@
    "family": "energy_orders_and_rates",
    "discovery_url": "https://www.ferc.gov/news-events/news/decisions-notices",
    "index_url": "https://www.ferc.gov/news-events/news/decisions-notices",
-   "link_pattern": "/news-events/news/[^/?#]+$",
-   "notes": "Whole site sits behind a Cloudflare JS challenge from datacenter IPs (relay cannot pass); fetched via tier-3 Jina reader fallback, verified 2026-10-17."
+   "link_pattern": "/news-events/news/[a-z0-9-]{25,}$",
+   "notes": "Whole site behind a Cloudflare JS challenge from datacenter IPs; fetched via tier-3 Jina reader fallback, verified 2026-10-17. Pattern requires >=25-char slugs to exclude nav pages."
   },
   {
    "id": "us-dol",
