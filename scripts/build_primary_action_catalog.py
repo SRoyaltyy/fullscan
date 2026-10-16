@@ -5,7 +5,7 @@ Unverified/blocked endpoints remain visible and disabled, never padded into cove
 """
 import argparse,concurrent.futures,hashlib,json,pathlib,re,threading,urllib.parse
 from collections import Counter
-from src.primary_actions import VERSION,Links,get,feed_rows,index_rows,now,iso,atomic_json,fetch_source,HTTP_AUDIT,allowed_public_source
+from src.primary_actions import VERSION,Links,get,feed_rows,index_rows,now,iso,atomic_json,fetch_source,HTTP_AUDIT,allowed_public_source,data_gov_api_key,KEYED_ADAPTERS,validate_source_ids
 from datetime import timedelta
 
 DIRECTORIES={
@@ -25,19 +25,34 @@ def read_url(url):
 def channel_scope(source):
  # Retain verification in the catalog, but do not collect reference-only feeds daily.
  label=(source['url']+' '+source['name']).lower()
+ if source.get('document_type')=='official_statement':return None
  if source.get('document_type') in ('farming_grant','business_finance_support_scheme'):return 'funding guidance/opportunity listing; not an award decision'
  if 'federalreserve.gov/feeds/' in label and re.search(r'/feeds/(?:s_t_|m_w_|feds(?:_|\.)|clp\.|g\d|h\d|prates\.|testimony\.)',label):return 'Fed research, speeches/testimony or reference data; policy releases remain enabled'
  if any(x in label for x in ('exchange rate','exchangerate','exchange_rate','eurofxref','reference rate','research paper','working paper','discussion paper','statistical release','currentfaqs','/speeches','press_speeches','/research/','/blog','/podcast')):return 'reference data, research, speeches or commentary'
  return None
 
+def verification_result(source,rows,state,stamp):
+ exclusion=channel_scope(source)
+ good=state['status'] in ('ok','valid_empty') and (source['adapter']!='html_index' or bool(rows))
+ # Keep configured keyed adapters eligible for the next run after key repair or quota recovery.
+ retry=source['adapter'] in KEYED_ADAPTERS and state['status'] in ('key_not_configured','key_invalid','key_disabled','key_unverified','key_unauthorized','rate_limited','blocked','fetch_failed')
+ return source|{'enabled':bool((good or retry) and not exclusion),'verified_healthy':bool(good),'scope_exclusion':exclusion,'verification':state|{'checked_at':stamp,'sample_titles':[r['title'] for r in rows[:3]],'parsed_rows':len(rows)}}
+
 def build(root):
  seeds=json.loads((root/'config/primary_action_seeds.json').read_text(encoding='utf-8'))['sources']
+ declared_types={u:s['document_type'] for s in seeds if s.get('document_type') for u in s.get('feed_urls',[])}
  institutions=[];sources=[];evidence=[];gaps=[];stamp=iso(now())
  def evidence_row(url,body):evidence.append({'url':url,'verified_at':stamp,'sha256':hashlib.sha256(body).hexdigest(),'bytes':len(body)})
  body,_=read_url(DIRECTORIES['us_agencies']);evidence_row(DIRECTORIES['us_agencies'],body)
  for agency in json.loads(body):
   institutions.append({'id':'us-fr:'+str(agency['id']),'name':agency['name'],'jurisdiction':'US','website':agency.get('agency_url') or agency['url'],'official_directory_url':agency['url'],'status':'listed; active/historical status not supplied by directory','shared_publication_source_ids':['us-federal-register'],'parent_id':('us-fr:'+str(agency['parent_id'])) if agency.get('parent_id') else None})
  sources.append({'id':'us-federal-register','name':'Federal Register issuing agencies','jurisdiction':'US','family':'rules_notices_and_presidential_documents','url':'https://www.federalregister.gov/api/v1/documents.json','adapter':'federal_register','discovery_url':'https://www.federalregister.gov/developers/documentation/api/v1','candidate_origin':'documented_official_api'})
+ sources.append({'id':'us-federal-register-inspection','name':'Federal Register public inspection','jurisdiction':'US','family':'rules_notices_and_presidential_documents','url':'https://www.federalregister.gov/api/v1/public-inspection-documents.json','adapter':'public_inspection','discovery_url':'https://www.federalregister.gov/developers/documentation/api/v1','candidate_origin':'documented_official_api'})
+ sources.append({'id':'us-openfda-drugs','name':'openFDA Drugs@FDA approvals','jurisdiction':'US','family':'product_permissions_and_safety','document_type':'fda_approval','url':'https://api.fda.gov/drug/drugsfda.json','adapter':'openfda_approvals','discovery_url':'https://open.fda.gov/apis/drug/drugsfda/','candidate_origin':'documented_official_api'})
+ sources.append({'id':'us-congress-bills','name':'Congress.gov bill actions','jurisdiction':'US','family':'legislative_procedure','url':'https://api.congress.gov/v3/bill','adapter':'congress_bills','discovery_url':'https://api.congress.gov/','candidate_origin':'documented_official_api; api.data.gov key'})
+ sources.append({'id':'us-regulations-documents','name':'Regulations.gov posted documents','jurisdiction':'US','family':'rules_notices_and_presidential_documents','url':'https://api.regulations.gov/v4/documents','adapter':'regulations_documents','discovery_url':'https://open.gsa.gov/api/regulationsgov/','candidate_origin':'documented_official_api; api.data.gov key'})
+ sources.append({'id':'us-govinfo-plaw-api','name':'GovInfo public laws','jurisdiction':'US','family':'legislative_and_presidential_documents','document_type':'public_law','url':'https://api.govinfo.gov/collections/PLAW','adapter':'govinfo_packages','discovery_url':'https://api.govinfo.gov/docs/','candidate_origin':'documented_official_api; api.data.gov key'})
+ sources.append({'id':'us-treasury-auctions','name':'TreasuryDirect announced auctions','jurisdiction':'US','family':'fiscal_operations','document_type':'treasury_auction','url':'https://www.treasurydirect.gov/TA_WS/securities/announced?format=json','adapter':'treasury_announced','discovery_url':'https://www.treasurydirect.gov/webapis/webapisindex.htm','candidate_origin':'documented_official_api'})
  sources.append({'id':'hk-hkma-public-press','name':'Hong Kong Monetary Authority official press releases','jurisdiction':'HK','family':'monetary_and_supervisory','url':'https://api.hkma.gov.hk/public/press-releases','adapter':'hkma_press','discovery_url':'https://apidocs.hkma.gov.hk/documentation/press-releases/','candidate_origin':'documented_official_api; descending dates, client-side window and offset pagination'})
  body,_=read_url(DIRECTORIES['uk_organisations']);evidence_row(DIRECTORIES['uk_organisations'],body);first=json.loads(body)
  pages=[first]
@@ -93,10 +108,11 @@ def build(root):
     if not url.startswith(('https://','http://')) or url in candidate_urls:continue
     if not allowed_public_source(url):
      gaps.append({'institution_id':seed['id'],'url':url,'status':'external_feed_host_not_approved; not requested'});continue
-    candidate_urls.add(url);sources.append({'id':seed['id']+'-'+hashlib.sha256(url.encode()).hexdigest()[:10],'name':seed['name']+(' — '+title if title else ''),'jurisdiction':seed['jurisdiction'],'family':seed['family'],'url':url,'adapter':'rss','document_type':seed.get('document_type','official_announcement'),'discovery_url':seed['discovery_url'],'candidate_origin':'official_page_feed_link' if any(u==url for u,_ in found) else 'proposed_seed_url_requires_live_check','saturation_limit':100})
+    candidate_urls.add(url);sources.append({'id':seed['id']+'-'+hashlib.sha256(url.encode()).hexdigest()[:10],'name':seed['name']+(' — '+title if title else ''),'jurisdiction':seed['jurisdiction'],'family':seed['family'],'url':url,'adapter':'rss','document_type':declared_types.get(url,seed.get('document_type','official_announcement')),'discovery_url':seed['discovery_url'],'candidate_origin':'official_page_feed_link' if any(u==url for u,_ in found) else 'proposed_seed_url_requires_live_check','saturation_limit':100})
    if seed.get('index_url'):
     url=seed['index_url']
     sources.append({'id':seed['id']+'-index','name':seed['name'],'jurisdiction':seed['jurisdiction'],'family':seed['family'],'url':url,'adapter':'html_index','document_type':seed.get('document_type','official_announcement'),'link_pattern':seed['link_pattern'],'discovery_url':seed['discovery_url'],'candidate_origin':'specific_publication_link_selector'})
+ validate_source_ids(sources)
  locks={}
  for s in sources:locks.setdefault(urllib.parse.urlsplit(s['url']).hostname,threading.Semaphore(2))
  def verify(source):
@@ -107,10 +123,7 @@ def build(root):
    with locks[urllib.parse.urlsplit(source['url']).hostname]:
     # RSS/index verification retains only parser metadata; API verification is date-bounded.
     rows,state=fetch_source(source,now()-timedelta(days=3),now(),max_pages=1)
-   good=state['status'] in ('ok','valid_empty')
-   if source['adapter']=='html_index':good=good and bool(rows)
-   exclusion=channel_scope(source)
-   return source|{'enabled':good and not exclusion,'scope_exclusion':exclusion,'verification':state|{'checked_at':stamp,'sample_titles':[r['title'] for r in rows[:3]],'parsed_rows':len(rows)}}
+   return verification_result(source,rows,state,stamp)
   except Exception as exc:return source|{'enabled':False,'verification':{'status':'invalid_feed_or_network_error','checked_at':stamp,'exception_type':type(exc).__name__}}
  verified=[]
  with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
@@ -121,9 +134,13 @@ def build(root):
   if institution['id'] in by_seed:institution['shared_publication_source_ids']=by_seed[institution['id']]
  registry={'version':'primary-action-institutions-v1','generated_at':stamp,'scope':'Directory identities include historical/closed bodies. Shared portals are not counted as thousands of distinct working websites. Publication-channel health is separate.','institutions':institutions,'directory_evidence':evidence,'directory_gaps':gaps}
  catalog={'version':VERSION,'generated_at':stamp,'seed_sha256':hashlib.sha256((root/'config/primary_action_seeds.json').read_bytes()).hexdigest(),'implementation_sha256':hashlib.sha256((root/'src/primary_actions.py').read_bytes()+(root/'scripts/build_primary_action_catalog.py').read_bytes()).hexdigest(),'scope':'Official publication endpoints; enabled only after successful live parsing. Source status never proves enactment of every document.','sources':verified,'discovery_pages':discovery}
+ catalog['credential_configuration']={'data_gov_api_key_configured':bool(data_gov_api_key())}
+ catalog['scope']='Official publication endpoints; keyed adapters remain eligible while setup or quota recovery is pending. Verification health is separate from enabled status.'
  atomic_json(root/'data/primary_actions/institution_registry.json',registry);atomic_json(root/'config/primary_action_sources.json',catalog)
  summary={'institutions':len(institutions),'by_jurisdiction':dict(Counter(i['jurisdiction'] for i in institutions)),'uk_status':dict(Counter(i['status'] for i in institutions if i['id'].startswith('uk-gov:'))),'candidate_channels':len(verified),'enabled_channels':sum(v['enabled'] for v in verified),'channel_statuses':dict(Counter(v['verification']['status'] for v in verified)),'directory_gaps':gaps}
  summary.update(institution_records=len(institutions),count_caution='Overlapping directory identities and channel owners, including closed/historical bodies; not unique active institutions or working websites.',directory_record_groups=dict(Counter(i['id'].split(':')[0] if ':' in i['id'] else 'govinfo_court' if i['id'].startswith('us-govinfo-') else 'curated_channel_owner' for i in institutions)),excluded_reference_channels=sum(bool(v.get('scope_exclusion')) for v in verified))
+ summary['enabled_healthy_channels']=sum(v['enabled'] and v.get('verified_healthy',False) for v in verified)
+ summary['enabled_pending_channels']=sum(v['enabled'] and not v.get('verified_healthy',False) for v in verified)
  atomic_json(root/'docs/primary-actions/catalog_summary.json',summary)
  lines=['# Primary-origin source catalog','',f"Verified {stamp}. {summary['institutions']} institution records; {summary['enabled_channels']} enabled publication channels out of {len(verified)} checked candidates.",'','Institution records include historical/closed bodies and shared portals. This is a maintained coverage catalog, not an exhaustive worldwide directory. Disabled/blocked channels remain visible below.','', '| Institution / publication channel | Jurisdiction | Family | Adapter | Enabled | Verification |','|---|---|---|---|---|---|']
  for s in verified:lines.append('| '+s['name'].replace('|','/')+' | '+s['jurisdiction']+' | '+s['family']+' | ['+s['adapter']+']('+s['url']+') | '+str(s['enabled'])+' | '+s['verification']['status']+('; '+s['scope_exclusion'] if s.get('scope_exclusion') else '')+' |')
@@ -137,4 +154,3 @@ def main():
  try:print(json.dumps(build(a.root),indent=2))
  finally:atomic_json(a.root/'research/http_request_audit.json',HTTP_AUDIT)
 if __name__=='__main__':main()
-

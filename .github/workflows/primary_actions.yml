@@ -1,7 +1,7 @@
 name: Primary-origin action documents
 on:
   push:
-    branches: [codex/primary-action-scanner-20261015, main]
+    branches: [codex/primary-action-scanner-20261015, cursor/us-action-sources-9b60, main]
     paths:
       - 'src/primary_actions.py'
       - 'scripts/*primary_action*.py'
@@ -70,6 +70,7 @@ jobs:
         id: refresh
         env:
           FORCE_REFRESH: ${{ inputs.refresh_catalog }}
+          DATA_GOV_API_KEY: ${{ secrets.DATA_GOV_API_KEY }}
         run: |
           flag=""
           if [ "$FORCE_REFRESH" = "true" ]; then flag="--force"; fi
@@ -78,12 +79,17 @@ jobs:
         id: catalog
         if: steps.refresh.outputs.needed == 'true'
         continue-on-error: true
+        env:
+          DATA_GOV_API_KEY: ${{ secrets.DATA_GOV_API_KEY }}
         run: PYTHONPATH=. python scripts/build_primary_action_catalog.py
-      - name: Collect primary headlines with no LLM and no credentials
+      - name: Collect primary headlines with no LLM
+        env:
+          DATA_GOV_API_KEY: ${{ secrets.DATA_GOV_API_KEY }}
         run: PYTHONPATH=. python -m src.primary_actions --days 3 --workers 8 --state data/primary_actions_state/ledger.sqlite3 --output data/primary_actions/latest
       - name: Audit official requests, zero inference spend, and persistent state
         env:
           CATALOG_REFRESH_OUTCOME: ${{ steps.catalog.outcome }}
+          DATA_GOV_API_KEY: ${{ secrets.DATA_GOV_API_KEY }}
         run: |
           PYTHONPATH=. python scripts/primary_action_ops.py audit
           python - <<'PY'
@@ -145,4 +151,3 @@ jobs:
           git commit -m "Refresh official action headlines and source health [skip ci]"
           git pull --rebase origin "$BRANCH"
           git push origin HEAD:"$BRANCH"
-
