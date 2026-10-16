@@ -1,0 +1,299 @@
+{
+  "ticker": "GOOG",
+  "analysis_date": "2026-10-16",
+  "current_price": "338.2",
+  "net_signal": "Neutral",
+  "conviction": 15,
+  "catalyst_stack": "On 2026-04-29 Alphabet beat Q1 revenue at $109.9B versus $107.2B and lifted 2026 capex to $180\u2013$190B, then on 2026-07-22 printed Q2 revenue of $119.80B with Google Cloud up 82% YoY and raised capex again to $195\u2013$205B. On 2026-09-02 a U.S. court rejected the DOJ\u2019s bid to force an AdX sale, substituting behavioral remedies, with October follow-through transferring a Maps patent case and dismissing Chegg/Penske AI Overviews suits. Offsetting that, a 2026-06-01 equity raise of about $80B was upsized to roughly $84.75B, Waymo software recalls landed on 2026-05-06 and 2026-06-21, and 2026-07-16 reports that Gemini 3.5 Pro was months behind coincided with about a 4.4% share drop. Into mid-October, Constellation (3.59 GW) and AEP fuel-cell power deals plus Street PT hikes (JPMorgan to $425 on 2026-10-15) support the AI-build narrative, while Google is appealing EU demands to open Android AI features and share search data.",
+  "key_assumption": "The September AdX outcome stays behavioral rather than structural, EU AI/search-sharing appeals do not hit default Search distribution, and $195\u2013205B of 2026 capex is absorbed by Cloud/AI demand instead of becoming an overbuild write-down.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        11,
+        9,
+        10
+      ],
+      "event_date": "2026-09-02",
+      "evidence_excerpt": "the court rejected the DOJ's push for a breakup of AdX (or the ad tech business)",
+      "source_urls": [
+        "https://www.reuters.com/legal/litigation/google-defeats-us-bid-force-ad-tech-sale-2026-09-02/",
+        "https://www.justice.gov/opa/pr/department-justice-again-wins-substantial-relief-against-google"
+      ],
+      "confidence": 91
+    },
+    {
+      "taxonomy": "Capacity expansion announced",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        21,
+        2,
+        13,
+        3
+      ],
+      "event_date": "2026-04-29",
+      "evidence_excerpt": "updated its 2026 capital expenditure guidance range to $180 billion to $190 billion, up from its previous estimate of $175 billion to $185 billion",
+      "source_urls": [
+        "https://www.cnbc.com/2026/04/29/alphabet-googl-q1-2026-earnings.html"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        1,
+        8,
+        2
+      ],
+      "event_date": "2026-10-15",
+      "evidence_excerpt": "CNN Multi-Year AI Partnership (announced October 15, 2026)",
+      "source_urls": [
+        "https://www.reuters.com/business/media-telecom/cnn-signs-multi-year-ai-partnership-with-google-2026-10-15/",
+        "https://in.marketscreener.com/news/cnn-signs-multi-year-ai-partnership-with-google-ce785dd3de81f424"
+      ],
+      "confidence": 82
+    },
+    {
+      "taxonomy": "Share repurchase program/increased dividend",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        22
+      ],
+      "event_date": "2026-04-29",
+      "evidence_excerpt": "Board declared a 5% increase to a quarterly cash dividend of $0.22 per share",
+      "source_urls": [
+        "https://files.quartr.com/reports/5e087-2026-04-29-20-46-03.pdf?ref=TWFya2V0QmVhdCBNZWRpYSBMTEM%3D",
+        "https://www.fool.com/investing/2026/08/27/alphabet-is-paying-a-dividend-while-selling-usd85-billion-of-new-stock/"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        20,
+        12
+      ],
+      "event_date": "2026-04-29",
+      "evidence_excerpt": "Revenue: $109.9 billion vs $107.2 billion expected by analysts polled by LSEG",
+      "source_urls": [
+        "https://www.cnbc.com/2026/04/29/alphabet-googl-q1-2026-earnings.html",
+        "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-release.pdf"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "event_date": "2026-10-15",
+      "evidence_excerpt": "JPMorgan Chase & Co. lifted their price objective on Alphabet from $420.00 to $425.00",
+      "source_urls": [
+        "https://www.marketbeat.com/instant-alerts/analyst-alphabet-nasdaq-goog-price-target-raised-to-42500-2026-10-15/",
+        "https://www.pricetargets.com/NASDAQ/GOOGL/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Positive personnel change",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 3,
+      "event_ids": [
+        19
+      ],
+      "event_date": "2026-06-08",
+      "evidence_excerpt": "Alphabet named company veteran Marsida Saraci as the tech giant\u2019s next principal accounting officer",
+      "source_urls": [
+        "https://www.cfodive.com/news/alphabet-names-head-accounting-officer-women/822272/",
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000059/goog-20260602.htm"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Policy reversal/new regulation/tax increase",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 10,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-10-16",
+      "evidence_excerpt": "Alphabet's Google appeals EU requests to open Android AI features to rivals and share search data",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/stocks/articles/j-p-morgan-drops-sharp-080910133.html"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Product delay/failure/rejection/safety recall",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 7,
+      "event_ids": [
+        15,
+        14,
+        16
+      ],
+      "event_date": "2026-06-21",
+      "evidence_excerpt": "Waymo is recalling 3,871 robotaxis in the US due to a software issue that could cause vehicles to drive into freeway construction zones.",
+      "source_urls": [
+        "https://hotpaths.com/waymo-recalls-3871-robotaxis-over-software-issue/",
+        "https://www.detroitnews.com/story/business/autos/2026/06/21/waymo-recalls-nearly-3900-robotaxis-in-u-s-for-sofware-fix/90636623007/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Dilutive offering/distressed fundraising/down round",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 4,
+      "event_ids": [
+        17,
+        18
+      ],
+      "event_date": "2026-06-01",
+      "evidence_excerpt": "Alphabet announced an $80 billion equity raise on June 1 to fund its artificial intelligence (AI) build-out, then upsized it to $84.75 billion",
+      "source_urls": [
+        "https://www.fool.com/investing/2026/08/27/alphabet-is-paying-a-dividend-while-selling-usd85-billion-of-new-stock/",
+        "https://www.hpcwire.com/off-the-wire/alphabet-announces-80b-capital-raise-including-10b-berkshire-hathaway-investment/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Policy reversal/new regulation/tax increase",
+      "type": "negative",
+      "event_date": "2026-07-23",
+      "evidence_excerpt": "the Commission issued Google a fine of \u20ac460 million and a fine of \u20ac430 million respectively.",
+      "source_urls": [
+        "https://digital-strategy.ec.europa.eu/en/news/commission-fines-google-eu890-million-breaches-digital-markets-act"
+      ],
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Policy reversal/new regulation/tax increase",
+      "type": "negative",
+      "event_date": "2026-07-16",
+      "evidence_excerpt": "The European Commission has issued two sets of binding specification measures to Google under the Digital Markets Act.",
+      "source_urls": [
+        "https://digital-strategy.ec.europa.eu/en/news/commission-provides-guidance-google-ai-interoperability-android-and-sharing-google-search-data"
+      ],
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Product delay/failure/rejection/safety recall",
+      "type": "negative",
+      "event_date": "2026-07-16",
+      "evidence_excerpt": "The search giant's Gemini 3.5 Pro AI model is months behind schedule due to the company's efforts to improve its performance",
+      "source_urls": [
+        "https://www.cnbc.com/2026/07/16/alphabet-stock-gemini-3-5-pro-ai.html"
+      ],
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 7,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Product delay/failure/rejection/safety recall",
+      "type": "negative",
+      "event_date": "2026-05-12",
+      "evidence_excerpt": "Waymo has filed a voluntary recall with the National Highway Traffic Safety Administration (NHTSA) covering 3,791 robotaxis",
+      "source_urls": [
+        "https://electrek.co/2026/05/12/waymo-recalls-3791-robotaxis-flooded-road-ota-software-fix/"
+      ],
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 7,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Lawsuit/securities class action",
+      "type": "negative",
+      "event_date": "2026-10-15",
+      "evidence_excerpt": "a class action was filed on behalf of persons or entities who purchased or otherwise acquired Alphabet Inc.",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2026/10/16/3382223/32719/en/googl-class-action-reminder-robbins-llp-reminds-investors-of-the-lead-plaintiff-deadline-in-the-alphabet-inc-securities-class-action-lawsuit.html"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "event_date": "2026-07-22",
+      "evidence_excerpt": "Revenue: $119.80 billion vs $116.93 billion expected by LSEG",
+      "source_urls": [
+        "https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Capacity expansion announced",
+      "type": "positive",
+      "event_date": "2026-07-22",
+      "evidence_excerpt": "Google now expects capex for the year of $195 billion to $205 billion, up from the $180 billion to $190 billion",
+      "source_urls": [
+        "https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-16",
+  "cutoff_date": null,
+  "role": "earnings"
+}

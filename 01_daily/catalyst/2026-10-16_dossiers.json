@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-16",
+  "generated_at": "2026-10-16T06:05:12.677517-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 1,
+  "status": "DEGRADED",
+  "targets": [
+    {
+      "ticker": "GOOG",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "GOOGL",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "MSFT",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "AMZN",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "META",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "TSLA",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "NFLX",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "UEC",
+      "role": "override_captain",
+      "why": "OVERRIDE Uranium"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "GOOG",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "net_signal": "Neutral",
+      "conviction": 15,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On 2026-04-29 Alphabet beat Q1 revenue at $109.9B versus $107.2B and lifted 2026 capex to $180\u2013$190B, then on 2026-07-22 printed Q2 revenue of $119.80B with Google Cloud up 82% YoY and raised capex again to $195\u2013$205B. On 2026-09-02 a U.S. court rejected the DOJ\u2019s bid to force an AdX sale, substituting behavioral remedies, with October follow-through transferring a Maps patent case and dismissing Chegg/Penske AI Overviews suits. Offsetting that, a 2026-06-01 equity raise of about $80B was upsized to roughly $84.75B, Waymo software recalls landed on 2026-05-06 and 2026-06-21, and 2026-07-16 reports that Gemini 3.5 Pro was months behind coincided with about a 4.4% share drop. Into mid-October, Constellation (3.59 GW) and AEP fuel-cell power deals plus Street PT hikes (JPMorgan to $425 on 2026-10-15) support the AI-build narrative, while Google is appealing EU demands to open Android AI features and share search data.",
+      "key_assumption": "The September AdX outcome stays behavioral rather than structural, EU AI/search-sharing appeals do not hit default Search distribution, and $195\u2013205B of 2026 capex is absorbed by Cloud/AI demand instead of becoming an overbuild write-down.",
+      "n_pos": 9,
+      "n_neg": 8,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Favorable court ruling/patent grant",
+          "event_date": "2026-09-02",
+          "headline": "the court rejected the DOJ's push for a breakup of AdX (or the ad tech business)",
+          "weight": 10,
+          "confidence": 91
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Policy reversal/new regulation/tax increase",
+          "event_date": "2026-10-16",
+          "headline": "Alphabet's Google appeals EU requests to open Android AI features to rivals and share search data",
+          "weight": 10,
+          "confidence": 75
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Policy reversal/new regulation/tax increase",
+          "event_date": "2026-07-23",
+          "headline": "the Commission issued Google a fine of \u20ac460 million and a fine of \u20ac430 million respectively.",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Policy reversal/new regulation/tax increase",
+          "event_date": "2026-07-16",
+          "headline": "The European Commission has issued two sets of binding specification measures to Google under the Digital Markets Act.",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Product delay/failure/rejection/safety recall",
+          "event_date": "2026-06-21",
+          "headline": "Waymo is recalling 3,871 robotaxis in the US due to a software issue that could cause vehicles to drive into freeway construction zones.",
+          "weight": 7,
+          "confidence": 90
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Product delay/failure/rejection/safety recall",
+          "event_date": "2026-07-16",
+          "headline": "The search giant's Gemini 3.5 Pro AI model is months behind schedule due to the company's efforts to improve its performance",
+          "weight": 7,
+          "confidence": 80
+        }
+      ],
+      "error": null
+    }
+  ]
+}
