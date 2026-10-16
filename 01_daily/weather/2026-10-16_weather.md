@@ -5,8 +5,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** ON (general predict up score +5.5, conf 0.721)
-- **Yields:** flat (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.89 via vix/vix3m) spot 16.56
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.53
+- **Yields:** flat (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** flat | **VIX:** spiking (ratio 1.02 via vix/vix3m) spot 21.7
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.63
 - **High-impact events:** 8 bullish vs 10 bearish
 
 ## Sectors
@@ -29,8 +29,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| size:micro | 🌤️ favorable | medium | risk-on with soft dollar — small-cap tape works; risk-on, dollar soft [general predict + factors] |
-| size:small | 🌤️ favorable | medium | risk-on with soft dollar — small-cap tape works; risk-on, dollar soft [general predict + factors] |
+| size:micro | ⛅ neutral | low | risk-on, dollar flat [general predict + factors] |
+| size:small | ⛅ neutral | low | risk-on, dollar flat [general predict + factors] |
 | size:large | ⛅ neutral | low | risk-on — mega leads less in broad rallies [general predict] |
 | size:mega | ⛅ neutral | low | risk-on — mega leads less in broad rallies [general predict] |
 | size:mid | ⛅ neutral | low | no dedicated mid-cap signal in v1 |
@@ -39,8 +39,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| beta:high | 🌤️ favorable | medium | risk-on, VIX falling — high beta outperforms [general + channel1] |
-| beta:low | ⛅ neutral | low | risk-on — low beta lags rallies |
+| beta:high | 🌧️ hostile | high | VIX spiking — high beta is the exit door [channel1 + general] |
+| beta:low | 🌤️ favorable | medium | defensive ballast bid in stress [general + channel1] |
 | beta:mid | ⛅ neutral | low | beta-neutral zone |
 
 ## Short interest (multiplier, not direction)
