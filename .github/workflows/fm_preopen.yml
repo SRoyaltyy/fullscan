@@ -22,6 +22,9 @@ on:
   schedule:
     - cron: "2 13 * * 1-5"    # 09:02 EDT seal
     - cron: "15 13 * * 1-5"   # 09:15 EDT seal fallback
+    # 10-16: GitHub created no run for 09:02 or 09:15. Off-minute backups.
+    - cron: "7 13 * * 1-5"    # 09:07 EDT seal backup
+    - cron: "19 13 * * 1-5"   # 09:19 EDT seal backup
     - cron: "40 21 * * 1-5"   # 17:40 EDT book
   workflow_run:
     workflows:
@@ -66,7 +69,7 @@ jobs:
           set -euo pipefail
           step=book
           if [ "$EV" = "workflow_dispatch" ]; then step="$IN_STEP"
-          elif [ "$EV" = "schedule" ] && { [ "$SCHED" = "2 13 * * 1-5" ] || [ "$SCHED" = "15 13 * * 1-5" ]; }; then step=seal
+          elif [ "$EV" = "schedule" ] && { [ "$SCHED" = "2 13 * * 1-5" ] || [ "$SCHED" = "15 13 * * 1-5" ] || [ "$SCHED" = "7 13 * * 1-5" ] || [ "$SCHED" = "19 13 * * 1-5" ]; }; then step=seal
           elif [ "$EV" = "workflow_run" ] && [ "$WF" = "Pre-Open ALL (predictive one-shot)" ]; then step=seal
           fi
           hhmm=$((10#$(TZ=America/New_York date +%H%M)))
@@ -91,9 +94,15 @@ jobs:
         run: pip install numpy pandas pyarrow requests yfinance
       - name: Pins and past-day lock
         if: steps.pick.outputs.go == 'true'
+        # Gate before the seal. Own time limit; a timeout fails the job, so
+        # the seal never runs on an unchecked lock (fail closed).
+        timeout-minutes: 4
         run: |
           python3 -m src.test_v4_engine_pins
-          python3 -m src.past_day_lock --check
+          if ! timeout 210 python3 -m src.past_day_lock --check; then
+            echo "::error::past-day lock check failed or exceeded 210s; seal refused (fail closed)"
+            exit 1
+          fi
       - name: Predict on main (fail and name 'predict missing')
         # Mirrors h1_forward.yml: no general predict on origin/main, no seal.
         # 10-15 the seal could not happen and nothing said why.

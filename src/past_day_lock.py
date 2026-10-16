@@ -858,6 +858,30 @@ def assert_manifest_prefix(base_text: str, head_text: str) -> None:
         raise PastDayLockError("past-day lock: manifest line changed")
 
 
+# 2026-10-16: check_manifest re-read and re-parsed each record file once per
+# manifest row (9.5 min in fm_preopen). Parse each file once per process,
+# keyed by path + mtime + size. Every row is still hashed (full coverage).
+_PARSE_CACHE: dict = {}
+
+
+def _cached(kind: str, path: Path, parse):
+    st = path.stat()
+    key = (kind, str(path), st.st_mtime_ns, st.st_size)
+    if key not in _PARSE_CACHE:
+        _PARSE_CACHE[key] = parse(path.read_text(encoding="utf-8"))
+    return _PARSE_CACHE[key]
+
+
+def _index_webull_days(text: str) -> dict:
+    idx: dict = {}
+    for line in text.splitlines():
+        if not line.strip():
+            continue
+        row = json.loads(line)
+        idx.setdefault((str(row.get("name") or ""), str(row.get("date") or "")), []).append(line)
+    return idx
+
+
 def _digest_for_row(row: dict) -> str | None:
     record = str(row.get("record") or "")
     date = str(row.get("date") or "")
@@ -876,7 +900,7 @@ def _digest_for_row(row: dict) -> str | None:
         path = FACTOR_MINE_DIR / f"{name}.md"
         if not path.is_file():
             return None
-        lines = locked_lines_by_date(path.read_text(encoding="utf-8")).get(date) or []
+        lines = _cached("fm", path, locked_lines_by_date).get(date) or []
         if not lines:
             return None
         return sha256_text("\n".join(lines) + "\n")
@@ -886,7 +910,7 @@ def _digest_for_row(row: dict) -> str | None:
         path = directory / filename
         if not path.is_file():
             return None
-        _header, days, _undated = _split_csv(path.read_text(encoding="utf-8"), column)
+        _header, days, _undated = _cached(f"csv:{column}", path, lambda t: _split_csv(t, column))
         lines = days.get(date) or []
         if not lines:
             return None
@@ -895,13 +919,7 @@ def _digest_for_row(row: dict) -> str | None:
         path = WEBULL_DIR / "days.jsonl"
         if not path.is_file():
             return None
-        matched = []
-        for line in path.read_text(encoding="utf-8").splitlines():
-            if not line.strip():
-                continue
-            row = json.loads(line)
-            if str(row.get("name") or "") == name and str(row.get("date") or "") == date:
-                matched.append(line)
+        matched = _cached("webull_idx", path, _index_webull_days).get((name, date), [])
         if len(matched) != 1:
             return None
         return sha256_text(matched[0] + "\n")
