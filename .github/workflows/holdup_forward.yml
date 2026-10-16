@@ -22,6 +22,15 @@ name: Holdup append-only forward
 on:
   schedule:
     - cron: "5 13 * * 1-5"
+    - cron: "17,41 12 * * 1-5"
+  # Hosted cron ran 4-8 h late on 2026-10-07..16 (always after the open), so
+  # also start right after Pre-Open ALL, the same trigger h1 uses.
+  workflow_run:
+    workflows:
+      - "Pre-Open ALL (predictive one-shot)"
+      - "h1 append-only forward"
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
     inputs:
       session_date:
@@ -38,6 +47,7 @@ concurrency:
 
 jobs:
   append:
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -71,7 +81,15 @@ jobs:
           HOLDUP_GIT_REF: origin/main
           HOLDUP_MODE: plan
           PLAN_SESSION: ${{ github.event.inputs.session_date }}
-        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/holdup_restart.py research/hot_n4_clean_v4/forward/forward.py
+        run: |
+          set -euo pipefail
+          F=research/hot_n4_clean_v4/forward/forward.py
+          # Add-only catch-up first: passed sessions before today become the
+          # standard missing line, so the plan below targets today.
+          if [ -z "${PLAN_SESSION}" ]; then
+            HOLDUP_MODE=catch_up PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/holdup_restart.py "$F"
+          fi
+          PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/holdup_restart.py "$F"
       - name: Commit the append
         if: always()
         run: |

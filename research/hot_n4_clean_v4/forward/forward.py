@@ -187,6 +187,38 @@ def plan_clock(session: str, now: datetime | None = None) -> str | None:
     return None
 
 
+def catch_up_main() -> int:
+    """HOLDUP_MODE=catch_up: record passed sessions as missing, add-only.
+
+    A session whose 09:30 ET open is gone, before today's ET date, can never
+    be planned. Append the standard missing line for each, in order, so the
+    plan run that follows targets today instead of a stale day (2026-10-15/16:
+    a late cron left the book days behind). Writes nothing when the next
+    session is today or later, or a plan is still open.
+    """
+    records = load()
+    if open_plan(records) is not None:
+        print("catch-up: a plan is open; nothing to record")
+        return 0
+    target, why = plan_target(records, "")
+    n = 0
+    while not why and target is not None:
+        now = utc_now()
+        today = now.astimezone(ZoneInfo("America/New_York")).date().isoformat()
+        if target >= today or not plan_clock(target, now):
+            break
+        append_records([seal_decision({"date": target, "recipe": current_book().recipe}, now)])
+        print(f"missing: plan not sealed before open {target} (catch-up)", flush=True)
+        n += 1
+        last = target
+        records = load()
+        target, why = plan_target(records, "")
+    if n:
+        write_page(records, _status(last, None, MISSING_REASON, "missing"))
+    print(f"catch-up: recorded {n} passed session(s); next {target}")
+    return 0
+
+
 def plan_target(records: list[dict], requested: str) -> tuple[str | None, str | None]:
     """Next book session, or the requested date when it is that session.
 
@@ -194,8 +226,12 @@ def plan_target(records: list[dict], requested: str) -> tuple[str | None, str | 
     PLAN run moves to the following session.
     """
     dates = book_dates(records)
-    target = next_session(dates[-1])
     skipped = {row["date"] for row in records if row.get("kind") == "missing"}
+    # Start after the latest recorded day, book or missing. The ledger only
+    # accepts a missing/plan line after the last missing line, so walking
+    # from the last book day into a gap before it fails "missing order"
+    # (2026-10-15/16: target 2026-10-06 after missing 2026-10-14).
+    target = next_session(max([dates[-1], *skipped]))
     while target in skipped:
         target = next_session(target)
     if requested and requested != target:
@@ -730,6 +766,9 @@ def plan_main() -> int:
     if why or target is None:
         _fail(why or "no session")
         return 1
+    # Catch up: a past session whose 09:30 ET open has gone by can never be
+    # planned. Record it missing (add-only, in order) and move on, so a late
+    # or skipped run cannot leave the book one stale day behind forever.
     # Before any input is built. A late schedule that has already filled D,
     # or a run before 08:00 ET on the target date, must not seal that date.
     if _early_stop(target):
@@ -1285,6 +1324,8 @@ def main() -> int:
         return correct_open_main()
     if mode == "backfill":
         return backfill_closed_plan()
+    if mode == "catch_up":
+        return catch_up_main()
     if mode != "plan":
         _fail(f"HOLDUP_MODE {mode}")
         return 1
