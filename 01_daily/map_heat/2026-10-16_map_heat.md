@@ -1,6 +1,6 @@
-# MAP HEAT — 2026-10-15
+# MAP HEAT — 2026-10-16
 
-Export `finviz_2026-10-15.csv` · 11616 names · generated 2026-10-15T06:37:37.848810-04:00
+Export `finviz_2026-10-16.csv` · 11616 names · generated 2026-10-16T04:21:39.295411-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -69,24 +69,11 @@ Export `finviz_2026-10-15.csv` · 11616 names · generated 2026-10-15T06:37:37.8
 **SIZE GATE on** — high-impact print and/or mega-cap earnings today.
 
 Econ (importance ≥ 2):
-- 08:30 ET  PPI MoM  actual —  cons 0.5%  surprise —  prev 0.4%
-- 08:30 ET  Retail Sales MoM  actual —  cons 0.3%  surprise —  prev 1.2%
-- 08:30 ET  Core PPI MoM  actual —  cons 0.3%  surprise —  prev 0.2%
-- 08:30 ET  Initial Jobless Claims  actual —  cons 200K  surprise —  prev 197K
-- 08:30 ET  NY Empire State Manufacturing Index  actual —  cons 10.3  surprise —  prev 7.60
-- 08:30 ET  Philadelphia Fed Manufacturing Index  actual —  cons 28.4  surprise —  prev 37.8
-- 08:30 ET  Retail Sales Control Group MoM  actual —  cons 0.3%  surprise —  prev 1.4%
-- 08:30 ET  Retail Sales Ex Autos MoM  actual —  cons 0.5%  surprise —  prev 1.4%
-- 10:00 ET  Business Inventories MoM  actual —  cons 0.4%  surprise —  prev 0.8%
-- 11:00 ET  Atlanta Fed GDPNow  actual —  cons 3.6%  surprise —  prev 3.6%
-- 12:00 ET  EIA Crude Oil Stocks Change  actual —  cons —  surprise —  prev -3.186M
-- 12:00 ET  EIA Gasoline Stocks Change  actual —  cons —  surprise —  prev 0.382M
-- 16:30 ET  Fed Hammack Speech  actual —  cons —  surprise —  prev —
-- 23:30 ET  Fed Chair Warsh Speech  actual —  cons —  surprise —  prev —
 - 08:30 ET  Export Prices MoM  actual —  cons 1%  surprise —  prev 0.6%
 - 08:30 ET  Import Prices MoM  actual —  cons 0.8%  surprise —  prev 0.7%
 - 09:15 ET  Industrial Production MoM  actual —  cons 0.4%  surprise —  prev 0%
-- 16:00 ET  Net Long-term TIC Flows  actual —  cons $125.7B  surprise —  prev -$27.9B
+- 14:00 ET  Monthly Budget Statement  actual —  cons -$29B  surprise —  prev -$167B
+- 16:00 ET  Net Long-term TIC Flows  actual —  cons $75.2B  surprise —  prev -$27.9B
 - 10:00 ET  NAHB Housing Market Index  actual —  cons 31  surprise —  prev 32
 - 08:15 ET  ADP Employment Change Weekly  actual —  cons —  surprise —  prev 24.75K
 - 08:30 ET  Building Permits Prel  actual —  cons 1.39M  surprise —  prev 1.403M
@@ -96,7 +83,7 @@ Econ (importance ≥ 2):
 - 10:00 ET  Pending Home Sales MoM  actual —  cons 0.2%  surprise —  prev 0.3%
 - 10:00 ET  Pending Home Sales YoY  actual —  cons 1.0%  surprise —  prev -4.7%
 - 11:00 ET  Atlanta Fed GDPNow  actual —  cons —  surprise —  prev —
-- 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev —
+- 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev -11.1M
 - 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev 7.5%
 - 10:30 ET  EIA Crude Oil Stocks Change  actual —  cons —  surprise —  prev —
 - 10:30 ET  EIA Gasoline Stocks Change  actual —  cons —  surprise —  prev —
@@ -109,58 +96,71 @@ Econ (importance ≥ 2):
 - 08:30 ET  Durable Goods Orders MoM  actual —  cons 0.2%  surprise —  prev 0%
 - 08:30 ET  Durable Goods Orders Ex Transp MoM  actual —  cons 0.3%  surprise —  prev 0.3%
 - 09:00 ET  S&P/Case-Shiller Home Price YoY  actual —  cons —  surprise —  prev 2.5%
+- 10:00 ET  CB Consumer Confidence  actual —  cons —  surprise —  prev 81.9
+- 10:00 ET  New Home Sales  actual —  cons —  surprise —  prev 0.684M
+- 10:00 ET  New Home Sales MoM  actual —  cons —  surprise —  prev 6.4%
+- 11:00 ET  Atlanta Fed GDPNow  actual —  cons —  surprise —  prev —
+- 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev —
+- 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev —
+- 08:30 ET  Goods Trade Balance Adv  actual —  cons —  surprise —  prev -$132.1B
+- 08:30 ET  Retail Inventories Ex Autos MoM Adv  actual —  cons —  surprise —  prev —
+- 08:30 ET  Wholesale Inventories MoM Adv  actual —  cons 0.1%  surprise —  prev —
+- 10:30 ET  EIA Crude Oil Stocks Change  actual —  cons —  surprise —  prev —
+- 10:30 ET  EIA Gasoline Stocks Change  actual —  cons —  surprise —  prev —
+- 11:00 ET  Atlanta Fed GDPNow  actual —  cons —  surprise —  prev —
+- 14:00 ET  Fed Interest Rate Decision  actual —  cons 4.0%  surprise —  prev 4%
 
 Mega-cap earnings:
-- AMC **GOOG**  EPS est 3.0178  (Alphabet Inc)
-- AMC **GOOGL**  EPS est 3.0194  (Alphabet Inc)
-- AMC **MSFT**  EPS est 4.7162  (Microsoft Corp)
-- BMO **AMZN**  EPS est 1.8233  (Amazon.com Inc)
-- BMO **TSM**  EPS est 4.4577  (Taiwan Semiconductor Manufacturing ADR)
-- AMC **META**  EPS est 6.7551  (Meta Platforms Inc)
-- AMC **TSLA**  EPS est 0.455  (Tesla Inc)
-- BMO **LLY**  EPS est 5.5958  (Lilly(Eli) & Co)
-- AMC **V**  EPS est 3.4392  (Visa Inc)
-- BMO **MA**  EPS est 5.1623  (Mastercard Incorporated)
-- BMO **ABBV**  EPS est 3.7356  (Abbvie Inc)
-- AMC **INTC**  EPS est 0.4005  (Intel Corp)
-- BMO **CVX**  EPS est 4.8709  (Chevron Corp)
-- BMO **KO**  EPS est 0.8802  (Coca-Cola Co)
-- BMO **MRK**  EPS est 2.0942  (Merck & Co Inc)
-- BMO **PG**  EPS est 1.8829  (Procter & Gamble Co)
-- AMC **LRCX**  EPS est 2.1771  (Lam Research Corp)
+- AMC **GOOG**  EPS est 3.0189  (Alphabet Inc)
+- AMC **GOOGL**  EPS est 3.0205  (Alphabet Inc)
+- AMC **MSFT**  EPS est 4.7159  (Microsoft Corp)
+- AMC **AMZN**  EPS est 1.9637  (Amazon.com Inc)
+- AMC **META**  EPS est 6.671  (Meta Platforms Inc)
+- AMC **TSLA**  EPS est 0.4481  (Tesla Inc)
+- BMO **LLY**  EPS est 5.5955  (Lilly(Eli) & Co)
+- AMC **SKHY**  EPS est 6.1349  (SK Hynix Inc ADR)
+- AMC **V**  EPS est 3.4397  (Visa Inc)
+- BMO **MA**  EPS est 5.1636  (Mastercard Incorporated)
+- AMC **INTC**  EPS est 0.401  (Intel Corp)
+- BMO **ABBV**  EPS est 3.7358  (Abbvie Inc)
+- BMO **CVX**  EPS est 4.8843  (Chevron Corp)
+- BMO **KO**  EPS est 0.8803  (Coca-Cola Co)
+- BMO **PG**  EPS est 1.8819  (Procter & Gamble Co)
+- BMO **MRK**  EPS est 2.0941  (Merck & Co Inc)
+- AMC **LRCX**  EPS est 2.1769  (Lam Research Corp)
 - BMO **CAT**  EPS est 7.0345  (Caterpillar Inc)
-- BMO **PM**  EPS est 2.2933  (Philip Morris International Inc)
 - BMO **HSBC**  EPS est 2.2019  (HSBC Holdings plc ADR)
-- BMO **GE**  EPS est 2.0049  (GE Aerospace)
-- BMO **SHEL**  EPS est 3.4937  (Shell Plc ADR)
+- BMO **GE**  EPS est 2.0083  (GE Aerospace)
+- BMO **PM**  EPS est 2.2965  (Philip Morris International Inc)
 - AMC **NFLX**  EPS est 0.8211  (Netflix Inc)
-- BMO **NVS**  EPS est 2.2765  (Novartis AG ADR)
-- BMO **AZN**  EPS est 2.6075  (Astrazeneca plc)
+- BMO **SHEL**  EPS est 3.4937  (Shell Plc ADR)
+- BMO **NVS**  EPS est 2.2755  (Novartis AG ADR)
 - AMC **SAP**  EPS est 2.0388  (Sap SE ADR)
-- AMC **TXN**  EPS est 2.4186  (Texas Instruments Inc)
-- BMO **RTX**  EPS est 1.7772  (RTX Corp)
-- BMO **TMO**  EPS est 6.4017  (Thermo Fisher Scientific Inc)
+- BMO **AZN**  EPS est 2.5969  (Astrazeneca plc)
+- BMO **TMO**  EPS est 6.4032  (Thermo Fisher Scientific Inc)
+- AMC **TXN**  EPS est 2.4194  (Texas Instruments Inc)
+- BMO **RTX**  EPS est 1.7802  (RTX Corp)
 - BMO **GEV**  EPS est 3.9942  (GE Vernova Inc)
-- AMC **KLAC**  EPS est 1.1838  (KLA Corp)
-- BMO **LIN**  EPS est 4.5166  (Linde Plc)
-- AMC **IBM**  EPS est 2.8616  (International Business Machines Corp)
-- BMO **AXP**  EPS est 4.5845  (American Express Co)
-- BMO **APH**  EPS est 0.7217  (Amphenol Corp)
+- AMC **KLAC**  EPS est 1.184  (KLA Corp)
+- BMO **LIN**  EPS est 4.5177  (Linde Plc)
+- AMC **IBM**  EPS est 2.8625  (International Business Machines Corp)
+- BMO **AXP**  EPS est 4.5843  (American Express Co)
 - AMC **SNDK**  EPS est 46.1738  (Sandisk Corp)
+- BMO **APH**  EPS est 0.7217  (Amphenol Corp)
+- AMC **GILD**  EPS est 2.1767  (Gilead Sciences Inc)
 - BMO **VZ**  EPS est 1.2743  (Verizon Communications Inc)
-- BMO **ABT**  EPS est 1.4193  (Abbott Laboratories)
-- BMO **UNP**  EPS est 3.4712  (Union Pacific Corp)
-- AMC **TMUS**  EPS est 2.8866  (T-Mobile US Inc)
+- BMO **ABT**  EPS est 1.4194  (Abbott Laboratories)
+- BMO **UNP**  EPS est 3.4708  (Union Pacific Corp)
 
 Options event-vol flags (NOT direction):
-- **GOOG** exp 2026-10-16 ATM IV 0.0078 implied move +0.0% put/call OI —
-- **GOOGL** exp 2026-10-16 ATM IV 0.001 implied move +0.0% put/call OI —
+- **GOOG** exp 2026-10-16 ATM IV 0.001 implied move +0.0% put/call OI —
+- **GOOGL** exp 2026-10-16 ATM IV 0.0078 implied move +0.0% put/call OI —
 - **MSFT** exp 2026-10-16 ATM IV 0.0039 implied move +0.0% put/call OI —
-- **AMZN** exp 2026-10-16 ATM IV 0.0078 implied move +0.0% put/call OI —
-- **TSM** exp 2026-10-16 ATM IV 0.0001 implied move 0.0% put/call OI —
-- **META** exp 2026-10-16 ATM IV 0.0003 implied move 0.0% put/call OI —
-- **TSLA** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI —
-- **LLY** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI —
+- **AMZN** exp 2026-10-16 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **META** exp 2026-10-16 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **TSLA** exp 2026-10-16 ATM IV 0.001 implied move +0.0% put/call OI —
+- **LLY** exp 2026-10-16 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **SKHY** exp 2026-10-16 ATM IV 0.0039 implied move +0.0% put/call OI —
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 4 min **NVDA,META** Why CoreWeave stock panic matters to Nvidia, explained in under 30 seconds (Yahoo Finance)
-- 6 min **PNC** PNC Reports Third Quarter 2026 Net Income of $2.1 Billion, $4.97 Diluted EPS or $5.09 as Adjusted (PR Newswire)
-- 7 min **BGSI** Notice of Boyd Group Services Inc. 2026 Third Quarter Results Conference Call (PR Newswire)
-- 7 min **FHN** First Horizon Corporation Reports Third Quarter 2026 Results and Announces Strategic Balance Sheet Changes to Support Earnings and Growth (PR Newswire)
-- 7 min **GPUS** Hyperscale Data Announces Preliminary Third Quarter 2026 Revenue of Approximately $40 Million, Up 64% Compared to Third Quarter 2025 (PR Newswire)
-- 7 min **AKAM** AI, Enterprise SaaS Workloads Drive Akamai Cloud Momentum (GlobeNewswire)
-- 7 min **PFSA** Profusa Receives ISO 13485:2016 Certificate from GMED (GlobeNewswire)
-- 7 min **WPRT** Westport Rebrands as Aetherion Technologies, Focused on Accelerating Proven Solutions for Heavy-Duty Clean Transport (GlobeNewswire)
-- 7 min **ZDGE** Zedge To Report Fourth Quarter & Fiscal Year End 2026 Results (ACCESSWIRE)
-- 7 min **NXDR** Nextdoor Announces Date for Third Quarter 2026 Financial Results and Conference Call (Business Wire)
-- 7 min **SRFM,PLTR** Surf Air Mobility Signs OperatorOS Contract with Flying Zebra (Business Wire)
-- 7 min **ITT** ITT Announces Third Quarter 2026 Earnings Release and Conference Call Dates (Business Wire)
-- 7 min **RKLB** Rocket Lab Shares Slide 15% as Neutron Rocket Launch Delayed Until 2027 (InvestorsHub)
-- 11 min **SKHY** SK Hynix Seeks US Approval for Chip Equipment Shipments to China as Solidigm Plans American Factory (InvestorsHub)
-- 13 min **TSM** TSMC Reports Record Q3 Profit of $23.55 Billion as AI Demand Drives Growth and US Expansion Plans (InvestorsHub)
-- 16 min **SPCX,TSLA** Barclays Expects Tesla-SpaceX Merger Announcement Ahead of December Shareholder Meeting (InvestorsHub)
-- 17 min **SHEL** Transaction in Own Shares (GlobeNewswire)
-- 18 min **TSLA** Tesla set to unveil next generation Roadster sports EV after years of delay (Reuters)
-- 18 min **WMT,AAPL,NFLX** Premarket Movers: AAPL Gains On China AI Approval Report  Why WMT, NFLX Stocks Are Also Rising (Stocktwits)
-- 20 min **NVDA,TSM,AAPL** Taiwan chipmaker TSMC explores Texas investment to expand production in the US (Associated Press)
-- 29 min **AMD,NVDA,TSM,AAPL** Can robust TSMC earnings help settle AI jitters? (Investing.com)
-- 31 min **SLF** Sunlife unveils new global brand (PR Newswire)
-- 32 min **BAC,JPM** Wall St banks caught in capital markets lull after a strong first half of 2026 (Reuters)
-- 33 min **CRWV,NBIS,IREN,NVDA,ORCL** CoreWeave Stock Sinks Again as AI Debt Panic Spreads. Will Nvidia Come to the Rescue? (Barrons.com)
-- 37 min **ZYME** Zymeworks Announces Participation in Upcoming Investor Conferences and Date of Third Quarter 2026 Financial Results (GlobeNewswire)
+- 8 min **MSCI** Indonesian stocks plunge 11% as MSCI proposes emerging market downgrade (Euronews)
+- 17 min **AA** AA Stock Rises Overnight: Alcoa CEO Bets On Massena East For Cash Pump As Alumina Market Tightens (Stocktwits)
+- 19 min **MCO** High Rates Have Upturned How Moody's Looks at Credit Risk, Chief Credit Officer Says (The Wall Street Journal)
+- 33 min **TSM** Amid TSMC-Terafab Talks, Taiwan Said To Be Mulling Greater Curbs On AI Chip Sales To China (Stocktwits)
+- 34 min **META,AAPL** Meta Releases Muse Spark Open With an Unlikely Assist From Apple: Why It Can Afford to Give It Away (TIKR)
+- 38 min **CRWV,SKHY,NVDA** Asian stocks rise as tech bounces from rout, Warsh upbeat on AI (AFP)
+- 52 min **V** Visa Direct moves stablecoin payments into commercial deployment (Electronic Payments)
+- 56 min **TSLA,SPCX** Teslas $250,000 Roadster Deposit: Is It a Rounding Error at 186x Earnings? (TIKR)
+- 1 hour **BLK** BlackRock CEO Larry Fink Flags a Different AI Risk, and It Isnt the Bubble (BeInCrypto)
+- 1 hour **COMP** Kaplan Fox Encourages Compass, Inc. (COMP) Investors with Significant Losses to Contact the Firm Before December 8, 2026 (Newsfile)
+- 1 hour **VRNS** Proofpoint to acquire Varonis in $6.3bn cybersecurity deal (Verdict)
+- 1 hour **PLTR,ONDS,GME** ONDS Stock Heads For Third Red Week, But Retail Stands Firm On Drone Defense Opportunity  Will Be Epic Like GameStop' (Stocktwits)
+- 1 hour **CRM,META,GOOGL** Look How Much Money the AI Gods Are Giving Away (Barrons.com)
+- 1 hour **SKHY** Samsung, SK Hynix aim to ease AI memory bottlenecks with zHBM, HBF (DigiTimes)
+- 1 hour **WCN** Bernstein Names Top Pick in U.S. Waste Sector (Investing.com)
+- 1 hour **BABA** Tencent Says Outside AI Models Were Behind the Amap Probe: Heres Whats at Stake (TIKR)
+- 1 hour **WSE** Wise raises 2027 revenue outlook after 21% second-quarter growth (Proactive)
+- 1 hour **NVDA,SMCI** Taiwan to curb AI chip sales to China for more U.S. alignment- Bloomberg (Investing.com)
+- 1 hour **WES** Iofina commissions its largest iodine plant to date (Proactive)
+- 1 hour **CRWV** Most Asian stocks rise as calm returns after CoreWeave shock; Indonesia faces market downgrade (Reuters)
+- 1 hour **INSW** International Seaways Expands VLCC Fleet Through Strategic Combination with Bruton Limited. (Business Wire)
+- 1 hour **TSM,SPY** Stock Market: Will S&P 500 Open Up or Down Today? (Benzinga Prediction Markets)
+- 1 hour **TSLA,FLY,SPCX,ASTS,RKLB** Stocktwits Space Race Weekly: SPCX Weathers Selloff Better Than ASTS, RKLB And FLY  RDW Fares Best (Stocktwits)
+- 2 hours **WIT** Wipro shares hit two-month high as revenue beat offsets weak deal bookings (Investing.com)
+- 2 hours **CRWV,SOXX,ASML,TSM,AAPL** Stocktwits AI Roundup: AI Chip Selloff Deepens, CoreWeave Debt Concerns And Apples China AI Launch (Stocktwits)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
