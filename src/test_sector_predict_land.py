@@ -192,13 +192,206 @@ def test_skip_if_good_still_short_circuits_run_one() -> None:
         path.write_text(_ok_essay(), encoding="utf-8")
         with mock.patch.object(rsp.config, "DAILY_SECTORS",
                                str(tmp / "01_daily" / "sectors")), \
+                mock.patch.object(rsp, "essay_exists_on_main",
+                                  return_value=False), \
                 mock.patch.object(rsp.config, "require_llm", lambda: None), \
                 mock.patch.object(rsp, "deepseek_client") as chat:
             rec = rsp.run_one("Energy", date, "ch1", force=False)
         assert rec.get("skipped") is True
         assert rec.get("quality") == "ok"
+        assert rec.get("reason") != "exists_on_main"
         assert chat.chat.call_count == 0
         assert path.read_text(encoding="utf-8") == _ok_essay()
+
+
+def test_ubuntu_grok_fails_fast() -> None:
+    try:
+        rsp.refuse_ubuntu_grok("ubuntu", "grok")
+    except SystemExit as exc:
+        assert "ubuntu cannot reach OpenClaw" in str(exc)
+    else:
+        raise AssertionError("ubuntu+grok must exit")
+    rsp.refuse_ubuntu_grok("ubuntu", "deepseek")
+    rsp.refuse_ubuntu_grok("ubuntu", "auto")
+    rsp.refuse_ubuntu_grok("ecs", "grok")
+    rsp.refuse_ubuntu_grok("", "grok")
+
+
+def test_backfill_bypasses_only_past_or_current_session() -> None:
+    import os
+    os.environ["SECTOR_BACKFILL"] = "1"
+    try:
+        assert rsp.backfill_bypasses_cutoff("2026-09-28", today="2026-09-28")
+        assert rsp.backfill_bypasses_cutoff("2026-09-27", today="2026-09-28")
+        assert not rsp.backfill_bypasses_cutoff("2026-09-29", today="2026-09-28")
+        assert not rsp.backfill_bypasses_cutoff("", today="2026-09-28")
+    finally:
+        os.environ.pop("SECTOR_BACKFILL", None)
+    assert not rsp.backfill_bypasses_cutoff("2026-09-28", today="2026-09-28")
+
+
+def test_cutoff_still_refuses_without_backfill() -> None:
+    import os
+    os.environ.pop("SECTOR_BACKFILL", None)
+    with mock.patch.object(rsp, "essay_exists_on_main", return_value=False), \
+            mock.patch.object(rsp.config, "require_llm", lambda: None), \
+            mock.patch.object(rsp.config, "DAILY_SECTORS", "/tmp/sector-predict-test"), \
+            mock.patch.object(
+                rsp.preopen, "refuse_if_late",
+                side_effect=SystemExit(
+                    "[preopen] refusing sector-predict Financial: "
+                    "past 09:25 ET cutoff")), \
+            mock.patch.object(rsp, "deepseek_client") as chat:
+        rec = rsp.run_one("Financial", "2026-09-28", "ch1", force=False)
+    assert rec.get("reason") == "past_cutoff"
+    assert chat.chat.call_count == 0
+
+
+def test_backfill_does_not_apply_cutoff() -> None:
+    import os
+    os.environ["SECTOR_BACKFILL"] = "1"
+    try:
+        with mock.patch.object(rsp, "essay_exists_on_main", return_value=False), \
+                mock.patch.object(rsp.config, "require_llm", lambda: None), \
+                mock.patch.object(rsp.config, "DAILY_SECTORS",
+                                  "/tmp/sector-predict-test"), \
+                mock.patch.object(
+                    rsp.preopen, "refuse_if_late",
+                    side_effect=AssertionError("cutoff must not run")), \
+                mock.patch.object(
+                    rsp, "_load_system_prompt",
+                    side_effect=RuntimeError("past the cutoff gate")):
+            try:
+                rsp.run_one("Financial", "2020-01-02", "ch1", force=False)
+            except RuntimeError as exc:
+                assert "past the cutoff gate" in str(exc)
+            else:
+                raise AssertionError("expected to pass the cutoff gate")
+    finally:
+        os.environ.pop("SECTOR_BACKFILL", None)
+
+
+def test_exists_on_main_is_append_only() -> None:
+    import subprocess
+    date = "2026-09-28"
+    with tempfile.TemporaryDirectory() as d:
+        tmp = Path(d)
+        subprocess.check_call(["git", "init", "-b", "main"], cwd=d)
+        subprocess.check_call(
+            ["git", "config", "user.email", "t@example.com"], cwd=d)
+        subprocess.check_call(["git", "config", "user.name", "t"], cwd=d)
+        rel = tmp / "01_daily" / "sectors" / date
+        rel.mkdir(parents=True)
+        essay = rel / "financial_predict.md"
+        essay.write_text("already on main", encoding="utf-8")
+        subprocess.check_call(["git", "add", "."], cwd=d)
+        subprocess.check_call(["git", "commit", "-m", "essay"], cwd=d)
+        assert rsp.essay_exists_on_main(date, "Financial", root=d) is True
+        assert rsp.essay_exists_on_main(date, "Healthcare", root=d) is False
+
+        sec = tmp / "work" / "01_daily" / "sectors" / date
+        sec.mkdir(parents=True)
+        local = sec / "financial_predict.md"
+        local.write_text("local draft", encoding="utf-8")
+        with mock.patch.object(rsp, "essay_exists_on_main", return_value=True), \
+                mock.patch.object(rsp.config, "DAILY_SECTORS",
+                                  str(tmp / "work" / "01_daily" / "sectors")), \
+                mock.patch.object(rsp, "deepseek_client") as chat:
+            rec = rsp.run_one("Financial", date, "ch1", force=True)
+        assert rec.get("reason") == "exists_on_main"
+        assert chat.chat.call_count == 0
+        assert local.read_text(encoding="utf-8") == "local draft"
+
+
+def test_essay_header_records_model_and_backfill() -> None:
+    decision = {
+        "predicted_direction": "up",
+        "predicted_magnitude_band": "mild",
+        "total_score": 1.0,
+        "multiplier": 1.0,
+        "divergence_flagged": False,
+        "model": "deepseek/deepseek-chat",
+        "written_after_open": True,
+        "written_at": "2026-09-28T18:00:00Z",
+    }
+    with tempfile.TemporaryDirectory() as d:
+        path = str(Path(d) / "financial_predict.md")
+        rsp._write_essay(
+            path, "Financial", "2026-09-28", "financial", "tape",
+            "BODY", decision)
+        text = Path(path).read_text(encoding="utf-8")
+    assert "- model: **deepseek/deepseek-chat**" in text
+    assert "- written_after_open: **true**" in text
+    assert "- written_at: **2026-09-28T18:00:00Z**" in text
+    assert "'model': 'deepseek/deepseek-chat'" in text
+    assert "'written_after_open': True" in text
+    assert "'written_at': '2026-09-28T18:00:00Z'" in text
+
+
+def test_grok_model_header_matches_backend_id() -> None:
+    decision = {
+        "predicted_direction": "down",
+        "predicted_magnitude_band": "mild",
+        "total_score": -1.0,
+        "multiplier": 1.0,
+        "divergence_flagged": False,
+        "model": "xai/grok-4.6",
+    }
+    with tempfile.TemporaryDirectory() as d:
+        path = str(Path(d) / "technology_predict.md")
+        rsp._write_essay(
+            path, "Technology", "2026-09-28", "technology", "", "BODY", decision)
+        text = Path(path).read_text(encoding="utf-8")
+    assert "- model: **xai/grok-4.6**" in text
+    assert "written_after_open" not in text
+
+
+def test_auto_fallback_flag_allows_deepseek_when_remaining_unknown() -> None:
+    import os
+    from src import config, deepseek_client as dc
+    os.environ.pop("SECTOR_PREDICT_AUTO_FALLBACK", None)
+    config.apply_llm_backend("auto")
+    assert dc._sector_deepseek_allowed(None) is False
+    os.environ["SECTOR_PREDICT_AUTO_FALLBACK"] = "1"
+    try:
+        assert dc._sector_deepseek_allowed(None) is True
+        config.apply_llm_backend("grok")
+        assert dc._sector_deepseek_allowed(None) is False
+        config.apply_llm_backend("deepseek")
+        assert dc._sector_deepseek_allowed(None) is True
+    finally:
+        os.environ.pop("SECTOR_PREDICT_AUTO_FALLBACK", None)
+        config.apply_llm_backend("auto")
+
+
+def test_sector_predict_dispatch_inputs() -> None:
+    text = (WF / "sector_predict.yml").read_text(encoding="utf-8")
+    assert 'default: "Technology"' in text
+    assert "Default is Technology" in text
+    assert "empty string to run all 11" in text
+    assert "default: ecs" in text
+    assert "default: grok" in text
+    assert "default: false" in text
+    assert "group: sector-predict-${{ inputs.runner }}" in text
+    assert "cancel-in-progress: false" in text
+    assert (
+        "github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' "
+        "|| fromJSON('[\"self-hosted\",\"ecs\"]')"
+    ) in text
+    assert "'/home/runner'" in text
+    assert "ubuntu cannot reach OpenClaw" in text
+    assert "llm_backend=deepseek" in text
+    assert "--backfill" in text
+    assert "git fetch origin main" in text
+    assert "ensure_openclaw" not in text
+    assert "openclaw.json" not in text
+    # Default click stays on ECS home, not the hosted runner.
+    assert "'/home/gha'" in text
+    from src.test_workflow_fromjson import ECS_LABELS, eval_runs_on, parse_workflow_jobs
+    raw = parse_workflow_jobs(text)["predict"]["runs-on"]
+    assert eval_runs_on(raw, event_name="workflow_dispatch", runner="ecs") == ECS_LABELS
+    assert eval_runs_on(raw, event_name="workflow_dispatch", runner="ubuntu") == "ubuntu-latest"
+    assert eval_runs_on(raw, event_name="workflow_dispatch", runner="") == ECS_LABELS
 
 
 def main() -> None:
@@ -210,6 +403,15 @@ def main() -> None:
         test_loop_mid_commits_each_success_not_skip_or_fail,
         test_workflows_share_one_runner_and_safe_push,
         test_skip_if_good_still_short_circuits_run_one,
+        test_ubuntu_grok_fails_fast,
+        test_backfill_bypasses_only_past_or_current_session,
+        test_cutoff_still_refuses_without_backfill,
+        test_backfill_does_not_apply_cutoff,
+        test_exists_on_main_is_append_only,
+        test_essay_header_records_model_and_backfill,
+        test_grok_model_header_matches_backend_id,
+        test_auto_fallback_flag_allows_deepseek_when_remaining_unknown,
+        test_sector_predict_dispatch_inputs,
     ]
     failed = 0
     for fn in tests:
