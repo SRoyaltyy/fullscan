@@ -20,11 +20,16 @@ concurrency:
 jobs:
   canary:
     runs-on: [self-hosted, ecs]
-    timeout-minutes: 8
+    timeout-minutes: 15
     steps:
+      # Self-hosted ECS: keep the full tree (the next step disables sparse
+      # for later jobs), but shallow fetch and its own timeout so a stalled
+      # fetch fails fast and visibly instead of eating the job budget.
       - uses: actions/checkout@v4
+        timeout-minutes: 10
         with:
           clean: false
+          fetch-depth: 1
       - name: Full tree after leftover sparse-checkout
         run: |
           git sparse-checkout disable || true

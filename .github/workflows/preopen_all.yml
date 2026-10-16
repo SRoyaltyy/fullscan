@@ -124,11 +124,21 @@ jobs:
   gate:
     name: Clock gate (merge poke is not a 01:00 packet)
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 12
     outputs:
       go: ${{ steps.g.outputs.go }}
     steps:
+      # Gate only needs src/workflow_stages.py and its imports. A full-tree
+      # checkout hung 5 min on 2026-10-16 (runs 38872343696, 38872955497).
       - uses: actions/checkout@v4
+        timeout-minutes: 8
+        with:
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/*.py
+            /requirements.txt
       - id: g
         run: |
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
