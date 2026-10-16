@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T08:31:59.440098-04:00",
+  "generated_at": "2026-10-16T10:05:04.796318-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -540,17 +540,19 @@
           "path": "01_daily/weather/2026-10-16_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9279 vix=falling yields=flat",
-          "size": 9279,
+          "reason": "sectors=11 bytes=9936 vix=falling yields=flat",
+          "size": 9936,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+            "events bull 8 / bear 10"
           ]
         }
       ],
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+        "events bull 8 / bear 10"
       ]
     },
     {
@@ -752,11 +754,12 @@
           "path": "01_daily/weather/2026-10-16_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9279 vix=falling yields=flat",
-          "size": 9279,
+          "reason": "sectors=11 bytes=9936 vix=falling yields=flat",
+          "size": 9936,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+            "events bull 8 / bear 10"
           ]
         },
         {
@@ -804,9 +807,9 @@
           "path": "data/stock_book/2026-10-16_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=216",
-          "size": 1451052,
-          "said": "1d BUY CON, AMN, HITI, SGRY, PRCH, ASTH, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, POWL, EOSE, TE",
+          "reason": "horizons=5 names=190",
+          "size": 1427418,
+          "said": "1d BUY MQ, PDFS, IT, TOST, PRCH, VEEV, ARQT, ETON \u00b7 SELL ROIV, SOC, NEOV, GH, IFRX, APA \u00b7 0.61285",
           "bullets": []
         },
         {
@@ -816,10 +819,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 84397,
+          "size": 70199,
           "said": "Stock book \u2014 2026-10-16",
           "bullets": [
-            "_Generated 2026-10-16T07:17:48.574195-04:00_",
+            "_Generated 2026-10-16T08:44:51.266687-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -830,8 +833,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 585,
-          "said": "0 green \u00b7",
+          "size": 1884,
+          "said": "106 green \u00b7 KEYS, FORM, AVPT, APH, CRM, AVT, NTAP, SONO, LSCC, RELY",
           "bullets": []
         },
         {
@@ -882,9 +885,9 @@
           "path": "data/stock_book/2026-10-16_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=216",
-          "size": 1451052,
-          "said": "1d BUY CON, AMN, HITI, SGRY, PRCH, ASTH, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, POWL, EOSE, TE",
+          "reason": "horizons=5 names=190",
+          "size": 1427418,
+          "said": "1d BUY MQ, PDFS, IT, TOST, PRCH, VEEV, ARQT, ETON \u00b7 SELL ROIV, SOC, NEOV, GH, IFRX, APA \u00b7 0.61285",
           "bullets": []
         },
         {
@@ -933,78 +936,125 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "CON",
-        "score": 0.6451168820909512
+        "ticker": "MQ",
+        "score": 0.8511789715391587
       },
       {
-        "ticker": "AMN",
-        "score": 0.5884795100085922
+        "ticker": "PDFS",
+        "score": 0.872233496988466
       },
       {
-        "ticker": "HITI",
-        "score": 0.3685678731715655
+        "ticker": "IT",
+        "score": 0.627017225665278
       },
       {
-        "ticker": "SGRY",
-        "score": 0.5128537234562535
+        "ticker": "TOST",
+        "score": 0.6468419674087901
       },
       {
         "ticker": "PRCH",
-        "score": 0.734307049827778
+        "score": 0.7457274747806698
       },
       {
-        "ticker": "ASTH",
-        "score": 0.5384464496419931
+        "ticker": "VEEV",
+        "score": 0.38742739960243766
       },
       {
-        "ticker": "NTAP",
-        "score": 0.3478071041356559
+        "ticker": "ARQT",
+        "score": 0.7322906177197818
       },
       {
-        "ticker": "MQ",
-        "score": 0.8299452647162282
+        "ticker": "ETON",
+        "score": 0.6790226285447538
+      },
+      {
+        "ticker": "WAY",
+        "score": 0.6546862774511255
+      },
+      {
+        "ticker": "EZPW",
+        "score": 0.5800061502991833
+      },
+      {
+        "ticker": "TRU",
+        "score": 0.4908549938624168
+      },
+      {
+        "ticker": "LAUR",
+        "score": 0.5302736707886009
+      },
+      {
+        "ticker": "ABX",
+        "score": 0.4913072001518869
       }
     ],
     "sell_1d": [
       {
+        "ticker": "ROIV",
+        "score": -0.48709479949516915
+      },
+      {
+        "ticker": "SOC",
+        "score": -0.34511898896846693
+      },
+      {
         "ticker": "NEOV",
-        "score": -0.4544672247029171
+        "score": -0.34303785903424716
       },
       {
-        "ticker": "OKLO",
-        "score": -0.2828224891959171
+        "ticker": "GH",
+        "score": -0.30388006888422486
       },
       {
-        "ticker": "FCEL",
-        "score": -0.28286010485607493
+        "ticker": "IFRX",
+        "score": -0.3017490744169558
       },
       {
-        "ticker": "POWL",
-        "score": -0.0683231628947133
+        "ticker": "APA",
+        "score": -0.30081492982785313
       },
       {
-        "ticker": "EOSE",
-        "score": -0.36856911583923274
+        "ticker": "BIDU",
+        "score": -0.29776399422600847
       },
       {
-        "ticker": "TE",
-        "score": -0.1905242370154927
+        "ticker": "PYXS",
+        "score": -0.29419699244350644
       },
       {
-        "ticker": "NNDM",
-        "score": 0.09783274698943863
+        "ticker": "ALK",
+        "score": -0.28935565926940376
       },
       {
-        "ticker": "AMSC",
-        "score": -0.16013252422597485
+        "ticker": "ALMS",
+        "score": -0.2842794811706928
+      },
+      {
+        "ticker": "AIRS",
+        "score": -0.2838266187659991
+      },
+      {
+        "ticker": "CMTG",
+        "score": -0.27719883299783515
+      },
+      {
+        "ticker": "WVE",
+        "score": -0.2704424574071478
+      },
+      {
+        "ticker": "AXSM",
+        "score": -0.2657406531307958
+      },
+      {
+        "ticker": "PCT",
+        "score": -0.2644755409844818
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 cash $103,064.62 \u00b7 morning S missing",
+      "said": "0 priced buys \u00b7 cash $110,337.65",
       "bullets": [
         "0 priced buys",
-        "cash $103,064.62",
-        "morning S missing"
+        "cash $110,337.65"
       ]
     },
     "general": {
@@ -1024,7 +1074,8 @@
     "weather": {
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+        "events bull 8 / bear 10"
       ]
     }
   },
@@ -4083,6 +4134,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-16T08:31:58.620008-04:00\nraw=4515 unique_events=6 tickers=99"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T10:05:03.726596-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-16_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9936,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-16_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5409,
+          "preview": "# Weather report \u2014 2026-10-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
@@ -4090,5 +4166,23 @@
     "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",
     "factor_mine": "https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/",
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
-  }
+  },
+  "frozen_write_skips": [
+    {
+      "path": "01_daily/weather/2026-10-16_weather.json",
+      "at": "2026-10-16T10:05:05-04:00",
+      "commit_msg": "auto: land weather [2026-10-16]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38912377222",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-16.json",
+      "at": "2026-10-16T10:05:05-04:00",
+      "commit_msg": "auto: land weather [2026-10-16]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38912377222",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    }
+  ]
 }
