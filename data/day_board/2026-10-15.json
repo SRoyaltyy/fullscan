@@ -1,8 +1,8 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T16:21:47.592559-04:00",
+  "generated_at": "2026-10-16T01:49:52.727483-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-15_predict.md` \u2014 missing"
   ],
@@ -96,12 +96,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97156,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 92371,
+          "said": "5903 tickers \u00b7 1757 signals \u00b7 top ABBV, AJG, AME, AMGN, APH, ARM, ASML, BA",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "How Has Merck's Story Changed?",
+            "Employers Shift Focus from Retirement Access to Financial Outcomes",
+            "AMETEK Announces Third Quarter 2026 Earnings Call and Webcasted Investor Conference Call Information"
           ]
         },
         {
@@ -111,10 +111,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11984,
+          "size": 10038,
           "said": "Finviz Daily Digest \u2014 2026-10-15",
           "bullets": [
-            "_Generated 2026-10-15T07:24:52.862668-04:00 \u00b7 export=data/exports/finviz_2026-10-15.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-16T01:49:51.406646-04:00 \u00b7 export=data/exports/finviz_2026-10-15.csv \u00b7 ticker digests=5903 \u00b7 high-signal=1757_",
             "Major indices (live quote page)"
           ]
         },
@@ -169,11 +169,11 @@
           ]
         }
       ],
-      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+      "said": "5903 tickers \u00b7 1757 signals \u00b7 top ABBV, AJG, AME, AMGN, APH, ARM, ASML, BA",
       "bullets": [
-        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-        "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-        "Banks have profited from idle cash for years. AI agents could change that."
+        "How Has Merck's Story Changed?",
+        "Employers Shift Focus from Retirement Access to Financial Outcomes",
+        "AMETEK Announces Third Quarter 2026 Earnings Call and Webcasted Investor Conference Call Information"
       ]
     },
     {
@@ -194,12 +194,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97156,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 92371,
+          "said": "5903 tickers \u00b7 1757 signals \u00b7 top ABBV, AJG, AME, AMGN, APH, ARM, ASML, BA",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "How Has Merck's Story Changed?",
+            "Employers Shift Focus from Retirement Access to Financial Outcomes",
+            "AMETEK Announces Third Quarter 2026 Earnings Call and Webcasted Investor Conference Call Information"
           ]
         },
         {
@@ -349,12 +349,12 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 8427,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
+          "size": 8423,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
             "general_predict:missing",
             "events:zero_events",
-            "finviz_market_digest:missing",
+            "sector_predict:missing",
             "sector_predict:missing"
           ]
         },
@@ -365,7 +365,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['events', 'general_predict']",
-          "size": 7656,
+          "size": 7651,
           "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, general_predict",
           "bullets": []
         },
@@ -532,12 +532,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97156,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 92371,
+          "said": "5903 tickers \u00b7 1757 signals \u00b7 top ABBV, AJG, AME, AMGN, APH, ARM, ASML, BA",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "How Has Merck's Story Changed?",
+            "Employers Shift Focus from Retirement Access to Financial Outcomes",
+            "AMETEK Announces Third Quarter 2026 Earnings Call and Webcasted Investor Conference Call Information"
           ]
         },
         {
@@ -636,12 +636,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97156,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 92371,
+          "said": "5903 tickers \u00b7 1757 signals \u00b7 top ABBV, AJG, AME, AMGN, APH, ARM, ASML, BA",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "How Has Merck's Story Changed?",
+            "Employers Shift Focus from Retirement Access to Financial Outcomes",
+            "AMETEK Announces Third Quarter 2026 Earnings Call and Webcasted Investor Conference Call Information"
           ]
         },
         {
@@ -734,12 +734,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97156,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 92371,
+          "said": "5903 tickers \u00b7 1757 signals \u00b7 top ABBV, AJG, AME, AMGN, APH, ARM, ASML, BA",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "How Has Merck's Story Changed?",
+            "Employers Shift Focus from Retirement Access to Financial Outcomes",
+            "AMETEK Announces Third Quarter 2026 Earnings Call and Webcasted Investor Conference Call Information"
           ]
         },
         {
@@ -1044,31 +1044,6 @@
     }
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T08:26:43.455507-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-10-15_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9330,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-15_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5068,
-          "preview": "# Weather report \u2014 2026-10-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -4275,6 +4250,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-15\n**Generated:** 2026-10-15T16:21:46.468693-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher as hotter PPI and firm retail sales drove rotation out of AI-focused tech into defensive groups while falling Treasury yields supported a late-session rebound\n**Prior close:** SPX \u2014  Nasdaq +1.36%  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** +1.36%  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** 3.6% cut (about 3.6% after two analysts cut)\n**Leaders:** LLY, UNH, VEEV, MRNA, CRWV, NVDA, VRT, DELL, TSM, BNY, PNC, SCHW, USB, ERIC, IBKR, JBHT\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-16\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T01:49:51.674804-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-15_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 92371,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-15_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 10063,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-15\n_Generated 2026-10-16T01:49:51.406646-04:00 \u00b7 export=data/exports/finviz_2026-10-15.csv \u00b7 ticker digests=5903 \u00b7 high-signal=1757_"
+        },
+        {
+          "path": "data/exports/finviz_2026-10-15.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11511846,
+          "preview": "11747 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11511846,
+          "preview": "11747 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-10-15_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97061,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-15\n_Generated 2026-10-16T01:49:51.406646-04:00 \u00b7 export=data/exports/finviz_2026-10-15.csv \u00b7 ticker digests=5903 \u00b7 high-signal=1757_ \u00b7 11747 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11747 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
@@ -5000,6 +5021,62 @@
       "path": "data/exports/finviz_2026-10-15.csv",
       "at": "2026-10-16T01:49:27-04:00",
       "commit_msg": "auto: land finviz export [2026-10-15]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "38857482937",
+      "manifest": "research/input_freeze/2026-10-15/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-15_grok_review.json",
+      "at": "2026-10-16T01:49:53-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-15]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "38857482937",
+      "manifest": "research/input_freeze/2026-10-15/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-15_preopen_qc.json",
+      "at": "2026-10-16T01:49:53-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-15]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "38857482937",
+      "manifest": "research/input_freeze/2026-10-15/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-15_preopen_status.json",
+      "at": "2026-10-16T01:49:53-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-15]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "38857482937",
+      "manifest": "research/input_freeze/2026-10-15/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-10-15_finviz_digest.json",
+      "at": "2026-10-16T01:49:53-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-15]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "38857482937",
+      "manifest": "research/input_freeze/2026-10-15/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-10-15_finviz_digest.md",
+      "at": "2026-10-16T01:49:53-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-15]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "38857482937",
+      "manifest": "research/input_freeze/2026-10-15/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-15.json",
+      "at": "2026-10-16T01:49:53-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-15]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "38857482937",
+      "manifest": "research/input_freeze/2026-10-15/manifest.json"
+    },
+    {
+      "path": "data/exports/finviz_2026-10-15.csv",
+      "at": "2026-10-16T01:49:53-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-15]",
       "workflow": "Finviz ALL (GH-hosted Elite)",
       "run_id": "38857482937",
       "manifest": "research/input_freeze/2026-10-15/manifest.json"
