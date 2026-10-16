@@ -190,7 +190,9 @@ def index_rows(body,source):
     dates={href:raw for href,title,raw in parser.dated if date(raw)}
     for href,title in parser.links:
         url=urllib.parse.urljoin(urllib.parse.urljoin(source['url'],parser.base_href or ''),href)
-        if len(title)<12 or not pattern.search(urllib.parse.urlsplit(url).path) or url in seen:continue
+        parsed=urllib.parse.urlsplit(url)
+        if parsed.path.rstrip('/')==urllib.parse.urlsplit(source['url']).path.rstrip('/'):continue
+        if len(title)<12 or not pattern.search(parsed.path) or url in seen:continue
         seen.add(url);published=iso(date(dates[href])) if href in dates else None
         title=re.sub(r'^\d{1,2}\s+(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+20\d{2}\s*[|\u2013\u2014-]?\s*','',title,flags=re.I).strip() or title
         match=re.search(r'/(20\d{2})[/\-](\d{2})[/\-](\d{2})(?:/|\b)',url)
@@ -240,6 +242,17 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
         if first_hash is None:first_hash=hashlib.sha256(body).hexdigest()
         if adapter in ('rss','google_news_rss','html_index'):
             rows=feed_rows(body,resolved) if adapter!='html_index' else index_rows(body,source)
+            if adapter=='html_index' and not rows:
+                # A 200 page with zero selector matches is usually a JS-shell (client-rendered
+                # listing) served to a bot-grade client; the edge relay cannot fix that. Render
+                # once through the tier-3 headless reader before declaring the selector empty.
+                try:
+                    rendered=jina_get(url,timeout=20)
+                    if rendered and rendered[0]==200:
+                        rendered_rows=index_rows(rendered[1],source)
+                        if rendered_rows:
+                            rows=rendered_rows;warnings.append('listing_rendered_via_tier3_reader');response_headers=rendered[2];resolved=rendered[3]
+                except Exception:pass
             dates=[date(r.get('published_at')) for r in rows if date(r.get('published_at'))]
             if adapter=='rss' and len(rows)>=source.get('saturation_limit',100) and dates and min(dates)>=start:warnings.append('feed_at_capacity_in_requested_window; snapshots may miss overflow')
             url=None
