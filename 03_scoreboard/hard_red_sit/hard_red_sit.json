@@ -2961,42 +2961,6 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "FIS",
-            "side": "long",
-            "open": null,
-            "px": 34.52,
-            "px_src": "session_export",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
             "ticker": "TOST",
             "side": "long",
             "open": null,
@@ -3033,10 +2997,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "PDFS",
+            "ticker": "FIG",
             "side": "long",
             "open": null,
-            "px": 56.43,
+            "px": 20.21,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3069,10 +3033,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "YOU",
+            "ticker": "AVPT",
             "side": "long",
             "open": null,
-            "px": 40.47,
+            "px": 13.67,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3141,46 +3105,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "FANG",
+            "ticker": "FIGS",
             "side": "long",
             "open": null,
-            "px": 185.85,
-            "px_src": "session_export",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "ARQT",
-            "side": "long",
-            "open": null,
-            "px": 27.63,
+            "px": 13.62,
             "px_src": "session_export",
             "low": null,
             "scoops": {
