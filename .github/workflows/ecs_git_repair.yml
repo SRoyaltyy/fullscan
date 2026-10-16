@@ -50,12 +50,17 @@ jobs:
             say "fetch probe rc=$RC in $(( $(date +%s) - S ))s (124 = still hangs)"
           done
           say "### Webull env presence (set/empty only; values never printed)"
+          # Never prints values: awk emits only "set"/"empty" per key.
           for F in /home/gha/.fullscan.env /home/gha/.fullscan-paper.env; do
-            if [ ! -r "$F" ] && ! sudo -n test -r "$F" 2>/dev/null; then say "$F: missing/unreadable"; continue; fi
+            if [ -r "$F" ]; then RD=(cat "$F")
+            elif sudo -n test -r "$F" 2>/dev/null; then RD=(sudo -n cat "$F")
+            else say "$F: missing/unreadable"; continue; fi
             for K in WEBULL_APP_KEY WEBULL_APP_SECRET WEBULL_ACCOUNT_ID; do
-              V=$( (cat "$F" 2>/dev/null || sudo -n cat "$F") | grep -E "^(export )?$K=" | tail -1 | cut -d= -f2- | tr -d "\"' ")
-              if [ -n "$V" ]; then say "$F $K: set"; else say "$F $K: empty"; fi
-              unset V
+              ST=$("${RD[@]}" 2>/dev/null | awk -v k="$K" '
+                { sub(/^export[ \t]+/, "") }
+                index($0, k "=") == 1 { v = substr($0, length(k) + 2); gsub(/["'"'"' \t\r]/, "", v); last = (v != "") ? "set" : "empty" }
+                END { print (last == "" ? "empty (key absent)" : last) }' || true)
+              say "$F $K: ${ST:-unknown}"
             done
           done
           say "token files (names only):"
