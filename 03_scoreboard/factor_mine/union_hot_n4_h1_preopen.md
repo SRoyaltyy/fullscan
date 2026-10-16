@@ -4,7 +4,7 @@ _starts 10-08 open, no past days. Parent recipe `union_hot_n4_h1` (same selectio
 
 _Factor Mine recipe union_hot_n4_h1, not the separate IRONCLAD h1 book (research/hot_n4_clean_v4/forward_h1)._
 
-Equity: 9188.3 | days: 6
+Equity: 9188.3 | days: 7
 
 | date | S | picks | buys | sells | cash | equity | mean% | sit / reason |
 |---|---|---|---|---|---|---|---|---|
@@ -14,3 +14,4 @@ Equity: 9188.3 | days: 6
 | 2026-10-13 | -6.767 | - | - | - | 10000.0 | 10000.0 | 0.0 | S=-6.77 <= -3: no buys |
 | 2026-10-14 | -1.645 | JLHL, ODD, ECO, DHT | JLHL 525@4.76, ODD 112@22.22, ECO 25@99.71, DHT 92@26.91 | - | 30.46 | 9554.92 | -4.4508 | - |
 | 2026-10-15 | None | - | - | DHT 92@23.835, ECO 25@89.67, JLHL 525@4.34, ODD 112@21.95 | 9188.3 | 9188.3 | -3.837 | seal not committed before 09:30 ET: never committed |
+| 2026-10-16 | None | - | - | - | 9188.3 | 9188.3 | 0.0 | no pre-open weather S: no buys |

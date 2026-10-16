@@ -99,6 +99,19 @@
             "ODD"
           ],
           "sit": true
+        },
+        {
+          "buys": [],
+          "date": "2026-10-16",
+          "equity": 9188.3,
+          "mean": 0.0,
+          "picks": [],
+          "reasons": [
+            "no pre-open weather S: no buys"
+          ],
+          "s": null,
+          "sells": [],
+          "sit": true
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -195,6 +208,19 @@
             "JLHL",
             "ODD"
           ],
+          "sit": true
+        },
+        {
+          "buys": [],
+          "date": "2026-10-16",
+          "equity": 9188.3,
+          "mean": 0.0,
+          "picks": [],
+          "reasons": [
+            "no pre-open weather S: no buys"
+          ],
+          "s": null,
+          "sells": [],
           "sit": true
         }
       ],

@@ -6068,3 +6068,5 @@
 {"date":"2026-10-16","kind":"day","name":"yday_gainer_h1","record":"factor_mine","sha256":"787bc02e17f8b797da21f34c89624b40fc13664e21c03ca0655e71123280f8ec"}
 {"date":"2026-10-16","kind":"day","name":"yday_gainer_h3","record":"factor_mine","sha256":"30e007ef8213ccc30d3569c8ac6390906643c9c348c62b6dfc91759cd0a4d635"}
 {"date":"2026-10-16","kind":"day","name":"yday_gainer_h5","record":"factor_mine","sha256":"df4528444e30a2258f28daaa40f043998b63d550d378a09ef2e783da5b931718"}
+{"date":"2026-10-16","kind":"day","name":"union_hot_n4_h1_preopen","record":"factor_mine","sha256":"0205d3e8b8ebd705d88dc9faf595658617ee593e43aeaef4d359e83eedd91e31"}
+{"date":"2026-10-16","kind":"day","name":"union_hot_n4_holdup_preopen","record":"factor_mine","sha256":"0205d3e8b8ebd705d88dc9faf595658617ee593e43aeaef4d359e83eedd91e31"}
