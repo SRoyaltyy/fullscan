@@ -80,7 +80,9 @@ def google_news_get(url,headers=None,timeout=20):
     u=urllib.parse.urlsplit(url)
     if u.hostname!='news.google.com' or not u.path.startswith('/rss/') or 'site%3A' not in u.query.replace('site%3a','site%3A'):
         raise ValueError('google_news adapter only for news.google.com/rss/search with site: query')
-    HTTP_AUDIT.append({'url':url,'method':'GET','body_bytes':0,'authorization_sent':False,'via_google_news':True})
+    match=re.search(r'(?:^|&)q=site%3A([^&]+?)(?:\+|$)',u.query)
+    official='https://'+urllib.parse.unquote(match.group(1)) if match else url
+    HTTP_AUDIT.append({'url':official,'method':'GET','body_bytes':0,'authorization_sent':False,'via_google_news':True,'requested_url':url})
     request=urllib.request.Request(url,headers={'User-Agent':USER_AGENT,'Accept':'application/rss+xml, application/atom+xml;q=0.9'})
     with urllib.request.build_opener().open(request,timeout=timeout) as response:
         body=response.read(MAX_BYTES+1)
