@@ -1,206 +1,26 @@
 [
   {
-    "title": "Notice of proposed amendments (NPA) reference table",
-    "url": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-reference-table",
-    "native_id": "/government/publications/notice-of-proposed-amendments-npa-reference-table",
-    "published_at": "2026-10-16T09:51:09+00:00",
-    "published_raw": "2026-10-16T09:51:09Z",
-    "document_type": "regulation",
-    "issuer": "Ministry of Defence; Military Aviation Authority",
-    "issuer_ids": [
-      "uk-gov:ministry-of-defence",
-      "uk-gov:military-aviation-authority"
-    ],
-    "summary": "The Military Aviation Authority (MAA) NPA table provides information of proposed changes in regulations and release date.",
-    "source_metadata": {
-      "document_type": "regulation",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Ministry of Defence; Military Aviation Authority",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-regulation",
-    "n": 22,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-10-16T10:36:18.842579+00:00",
-    "source_ids": [
-      "uk-govuk-regulation"
-    ]
-  },
-  {
-    "title": "Notice of proposed amendments (NPA) documents",
-    "url": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-2014-documents",
-    "native_id": "/government/publications/notice-of-proposed-amendments-npa-2014-documents",
-    "published_at": "2026-10-16T09:48:46+00:00",
-    "published_raw": "2026-10-16T09:48:46Z",
-    "document_type": "regulation",
-    "issuer": "Ministry of Defence; Military Aviation Authority",
-    "issuer_ids": [
-      "uk-gov:ministry-of-defence",
-      "uk-gov:military-aviation-authority"
-    ],
-    "summary": "MAA issuing of an NPA allows a consultation period to be undertaken on a proposed amendment or the implementation of new regulation.",
-    "source_metadata": {
-      "document_type": "regulation",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Ministry of Defence; Military Aviation Authority",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-regulation",
-    "n": 23,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-10-16T10:36:18.842579+00:00",
-    "source_ids": [
-      "uk-govuk-regulation"
-    ]
-  },
-  {
-    "title": "EMSD's inspections reveal serious deficiencies in lift replacement works undertaken by registered lift contractor at two estates",
-    "url": "https://www.info.gov.hk/gia/general/202610/16/P2026101500836.htm",
-    "native_id": "https://www.info.gov.hk/gia/general/202610/16/P2026101500836.htm",
-    "published_at": "2026-10-15T16:02:22+00:00",
-    "published_raw": "Fri, 16 Oct 2026 00:02:22 +0800",
-    "summary": "​In response to the recent allegations of non-compliance by Taizoom Elevator Company (HK) Limited (Taizoom), the Electrical and Mechanical Services Department (EMSD) takes the matter seriously and conducted surprise inspections on the lift works concerned. The inspections revealed serious deficiencies in lift replacement works carried out by Taizoom in two Tenants Purchase Scheme Estates, involving 9 lifts in Tsui Ping (North) Estate in Kwun Tong, of which the replacement was completed between February and July 2026, and 39 lifts in Pok Hong Estate in Sha Tin, of which the replacement was completed between May 2025 and July 2026. Regarding the fire resisting doorsets, including door frame components, although a fire resisting rating certificate was submitted, it was found that only the fire resisting doors were installed as required, but the corresponding door frame components were not installed, and the lift works were claimed to be completed. The absence of these door frame components in the lifts concerned is a non-compliance, but the lifts can still operate safely. The EMSD has instructed Taizoom to review the lifts at the aforementioned estates and install the outstanding door",
+    "title": "Closing loopholes: Council lists individuals and entities for circumventing EU sanctions",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/15/closing-loopholes-council-lists-individuals-and-entities-for-circumventing-eu-sanctions/",
+    "native_id": "151380",
+    "published_at": "2026-10-15T17:50:00+00:00",
+    "published_raw": "2026-10-15T17:50:00Z",
+    "summary": "The Council has adopted restrictive measures against three individuals and nine entities involved in the import of sanctioned goods to Russia, and in the circumvention of sanctions related to oil and financial transactions.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Hong Kong Government Information Services",
-      "jurisdiction": "HK",
-      "family": "executive_and_administrative"
+      "issuer": "Council of the European Union",
+      "jurisdiction": "EU",
+      "family": "sanctions_and_legislation"
     },
-    "primary_source_id": "hk-government-a5249d2406",
-    "n": 2319,
+    "primary_source_id": "eu-council-9d9e9444da",
+    "n": 2269,
     "first_seen": "2026-10-15T17:47:31.406388+00:00",
-    "last_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-16T11:34:38.353462+00:00",
     "source_ids": [
-      "hk-government-a5249d2406"
-    ]
-  },
-  {
-    "title": "Don’t Be Left Out in the Cold This Holiday Season with Unsafe Presents: Buy from Trusted Sources",
-    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Dont-Be-Left-Out-in-the-Cold-This-Holiday-Season-with-Unsafe-Presents-Buy-from-Trusted-Sources",
-    "native_id": "https://www.cpsc.gov/_6d039050-7fba-4cdf-8361-f7db2f5e3963",
-    "published_at": null,
-    "published_raw": "Tue, 12/09/2025 - 12:00",
-    "summary": "CPSC Reminds Consumers to Shop Safely This Holiday Season",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3537,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-16T10:36:18.842579+00:00",
-    "source_ids": [
-      "us-cpsc-08fe06e2e6"
-    ]
-  },
-  {
-    "title": "Put Safety on the Menu: Consumer Product Safety Commission Offers Safe Cooking Tips for a Joyful Holiday Season",
-    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
-    "native_id": "https://www.cpsc.gov/_59de4207-4ace-44ca-ace0-3cde0cfb8ddb",
-    "published_at": null,
-    "published_raw": "Wed, 11/19/2025 - 12:00",
-    "summary": "WASHINGTON, D.C. – As families across America prepare to gather for Thanksgiving, the U.S. Consumer Product Safety Commission (CPSC) is issuing an urgent reminder that the holiday season marks the most dangerous time of year for cooking-related fires and",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3538,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-16T10:36:18.842579+00:00",
-    "source_ids": [
-      "us-cpsc-08fe06e2e6"
-    ]
-  },
-  {
-    "title": "La CPSC aprueba nueva norma federal de seguridad para las bolas de gel con el fin de reducir el riesgo de lesiones y muerte niños pequeños",
-    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Water-Beads-to-Reduce-the-Risk-of-Injury-and-Death-to-Young-Children",
-    "native_id": "https://www.cpsc.gov/_51cc46a0-5dc1-4f70-8cc1-c6b5b0f0a782",
-    "published_at": null,
-    "published_raw": "Thu, 08/21/2025 - 12:00",
-    "summary": "WASHINGTON D. C. – La Comisión de Seguridad de Productos del Consumidor (CPSC, por sus iniciales en inglés) aprobó una norma de seguridad de productos de consumo para juguetes tipo bolas de gel, lo que refleja el compromiso constante de la entidad con la",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3539,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-16T10:36:18.842579+00:00",
-    "source_ids": [
-      "us-cpsc-08fe06e2e6"
-    ]
-  },
-  {
-    "title": "La CPSC aprueba nueva norma federal de seguridad para flotadores de cuello con el fin de prevenir muertes de bebés y lesiones graves",
-    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Neck-Floats-to-Prevent-Infant-Deaths-and-Serious-Injuries",
-    "native_id": "https://www.cpsc.gov/_4014aab3-f30e-41aa-ad48-dd7587119b4c",
-    "published_at": null,
-    "published_raw": "Thu, 08/21/2025 - 12:00",
-    "summary": "La Comisión de Seguridad de Productos del Consumidor de EE. UU. (CPSC) aprobó una norma de seguridad de productos de consumo para mejorar la seguridad de los flotadores de cuello, un juguete acuático destinado a niños de hasta cuatro años de edad.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3540,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-16T10:36:18.842579+00:00",
-    "source_ids": [
-      "us-cpsc-08fe06e2e6"
-    ]
-  },
-  {
-    "title": "La CPSC Retira Normas Desactualizadas, Que No Contribuyen a Un Avance en la Seguridad; El Nuevo Liderazgo Se Enfoca en Peligros Que Representan Riesgos Reales",
-    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/La-CPSC-Retira-Normas-Desactualizadas-Que-No-Contribuyen-a-Un-Avance-en-la-Seguridad-El-Nuevo-Liderazgo-Se-Enfoca-en-Peligros-Que-Representan-Riesgos-Reales",
-    "native_id": "https://www.cpsc.gov/_ff913f8e-db56-4208-ba2f-a2582d4d76f7",
-    "published_at": null,
-    "published_raw": "Wed, 08/20/2025 - 12:00",
-    "summary": "La Comisión de Seguridad de Productos del Consumidor (CPSC) anunció hoy que retirará varias normas vigentes y proyectos de reglamentación que ya no concuerdan con las prioridades de la entidad y que no contribuyen a mejorar la seguridad.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Consumer Product Safety Commission",
-      "jurisdiction": "US",
-      "family": "product_safety"
-    },
-    "primary_source_id": "us-cpsc-08fe06e2e6",
-    "n": 3541,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-16T10:36:18.842579+00:00",
-    "source_ids": [
-      "us-cpsc-08fe06e2e6"
+      "eu-council-9d9e9444da"
     ]
   }
 ]

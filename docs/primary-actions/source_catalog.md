@@ -1,13 +1,13 @@
 # Primary-origin source catalog
 
-Verified 2026-10-16T10:35:23.661531+00:00. 2150 institution records; 358 enabled publication channels out of 461 checked candidates.
+Verified 2026-10-16T11:33:34.323773+00:00. 2150 institution records; 359 enabled publication channels out of 461 checked candidates.
 
 Institution records include historical/closed bodies and shared portals. This is a maintained coverage catalog, not an exhaustive worldwide directory. Disabled/blocked channels remain visible below.
 
 | Institution / publication channel | Jurisdiction | Family | Adapter | Enabled | Verification |
 |---|---|---|---|---|---|
 | Federal Register issuing agencies | US | rules_notices_and_presidential_documents | [federal_register](https://www.federalregister.gov/api/v1/documents.json) | True | ok |
-| Hong Kong Monetary Authority official press releases | HK | monetary_and_supervisory | [hkma_press](https://api.hkma.gov.hk/public/press-releases) | False | invalid_feed_or_network_error |
+| Hong Kong Monetary Authority official press releases | HK | monetary_and_supervisory | [hkma_press](https://api.hkma.gov.hk/public/press-releases) | True | ok |
 | GOV.UK decision | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
 | GOV.UK regulation | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
 | GOV.UK statutory instrument | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
@@ -215,10 +215,10 @@ Institution records include historical/closed bodies and shared portals. This is
 | United States International Trade Commission | US | trade_and_judicial | [html_index](https://www.usitc.gov/press_room/) | True | ok |
 | Federal Reserve Board | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_monetary.xml) | True | ok |
 | Federal Reserve Board | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_enforcement.xml) | True | ok |
-| Federal Reserve Board | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_bcreg.xml) | False | fetch_failed |
+| Federal Reserve Board | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_bcreg.xml) | True | ok |
 | Federal Reserve Board — All Press Releases | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_all.xml) | True | ok |
-| Federal Reserve Board — Orders on Banking Applications | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_orders.xml) | True | ok |
-| Federal Reserve Board — Other Announcements | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_other.xml) | True | ok |
+| Federal Reserve Board — Orders on Banking Applications | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_orders.xml) | False | fetch_failed |
+| Federal Reserve Board — Other Announcements | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_other.xml) | False | fetch_failed |
 | Federal Reserve Board — All Speeches | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/speeches.xml) | False | ok; reference data, research, speeches or commentary |
 | Federal Reserve Board — All Testimony | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/testimony.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — All Speeches & Testimony | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/speeches_and_testimony.xml) | False | ok; reference data, research, speeches or commentary |
@@ -227,36 +227,36 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Reserve Board — Governor Michael S. Barr | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_barr.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Governor Lisa D. Cook | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_cook.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Governor Jerome H. Powell | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_powell.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Governor Christopher J. Waller | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_waller.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Governor Christopher J. Waller | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_waller.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Credit and Liquidity Programs and the Balance Sheet | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/clp.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Current Frequently Asked Questions | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/currentfaqs.xml) | False | fetch_failed; reference data, research, speeches or commentary |
 | Federal Reserve Board — Office of Inspector General | US | monetary_operations | [rss](https://oig.federalreserve.gov/feeds/oig.xml) | False | fetch_failed |
 | Federal Reserve Board — Regulatory Reform | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/regreform.xml) | False | fetch_failed |
 | Federal Reserve Board — Board Meetings | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/boardmeetings.xml) | True | ok |
-| Federal Reserve Board — Reporting Forms | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/reportforms-rss.xml) | False | fetch_failed |
-| Federal Reserve Board — Supervision and Regulation and Consumer Affairs Letters, Supervision Manuals | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/bankinginfo-rss.xml) | False | fetch_failed |
+| Federal Reserve Board — Reporting Forms | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/reportforms-rss.xml) | True | ok |
+| Federal Reserve Board — Supervision and Regulation and Consumer Affairs Letters, Supervision Manuals | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/bankinginfo-rss.xml) | True | ok |
 | Federal Reserve Board — Coronavirus Disease 2019 (COVID-19) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/covid-19.xml) | False | fetch_failed |
 | Federal Reserve Board — All Federal Reserve Board working papers | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/working_papers.xml) | False | ok; reference data, research, speeches or commentary |
 | Federal Reserve Board — Finance and Economics Discussion Series | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/feds.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — International Finance Discussion Papers | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/ifdp.xml) | False | ok; reference data, research, speeches or commentary |
-| Federal Reserve Board — FEDS Notes | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/feds_notes.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — All Data Download announcements | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/datadownload.xml) | False | invalid_feed_or_network_error |
+| Federal Reserve Board — FEDS Notes | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/feds_notes.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — All Data Download announcements | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/datadownload.xml) | False | fetch_failed |
 | Federal Reserve Board — Assets and Liabilities of Commercial Banks in the United State (H.8) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/h8.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Charge-Off and Delinquency Rates | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/chgdel.xml) | False | fetch_failed |
 | Federal Reserve Board — Commercial Paper | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/cp.xml) | False | fetch_failed |
-| Federal Reserve Board — Consumer Credit | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/g19.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Factors Affecting Reserve Balances (H.4.1) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/h41.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Consumer Credit | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/g19.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Factors Affecting Reserve Balances (H.4.1) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/h41.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Finance Companies | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/g20.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Financial Obligations Ratios | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/for.xml) | False | fetch_failed |
 | Federal Reserve Board — Financial Accounts of the United States (Z.1) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/z1.xml) | False | fetch_failed |
-| Federal Reserve Board — Financial Accounts Guide | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/fofguide.xml) | True | ok |
+| Federal Reserve Board — Financial Accounts Guide | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/fofguide.xml) | False | fetch_failed |
 | Federal Reserve Board — Foreign Exchange Rates (G.5/H.10) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/h10.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Industrial Production and Capacity Utilization (G.17) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/g17.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Policy Rates | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/prates.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Selected Interest Rates (H.15) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/h15.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Industrial Production and Capacity Utilization (G.17) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/g17.xml) | False | invalid_feed_or_network_error |
+| Federal Reserve Board — Policy Rates | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/prates.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Selected Interest Rates (H.15) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/h15.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Senior Credit Officer Opinion Survey on Dealer Financing Terms | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/scoos.xml) | False | fetch_failed |
-| Federal Reserve Board — Senior Loan Officer Opinion Survey on Bank Lending Practices | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/sloos.xml) | False | fetch_failed |
-| Federal Reserve Board — Survey of Terms of Business Lending (E.2) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/e2.xml) | False | fetch_failed |
+| Federal Reserve Board — Senior Loan Officer Opinion Survey on Bank Lending Practices | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/sloos.xml) | True | ok |
+| Federal Reserve Board — Survey of Terms of Business Lending (E.2) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/e2.xml) | True | ok |
 | Federal Deposit Insurance Corporation | US | financial_enforcement | [html_index](https://www.fdic.gov/news/press-releases) | True | ok |
 | Office of the Comptroller of the Currency | US | financial_enforcement | [rss](https://www.occ.gov/rss/occ_news.xml) | False | fetch_failed |
 | Office of the Comptroller of the Currency | US | financial_enforcement | [rss](https://www.occ.gov/rss/index-rss.html) | False | invalid_feed_or_network_error |
@@ -430,10 +430,10 @@ Institution records include historical/closed bodies and shared portals. This is
 | Australian Competition and Consumer Commission | AU | competition_and_enforcement | [rss](https://www.accc.gov.au/media-release/rss.xml) | False | blocked |
 | Australian Prudential Regulation Authority | AU | financial_supervision | [rss](https://www.apra.gov.au/rss.xml) | True | ok |
 | Australian Prudential Regulation Authority — Sitemap | AU | financial_supervision | [rss](https://www.apra.gov.au/sitemap.xml) | False | invalid_feed_or_network_error |
-| Hong Kong Government Information Services | HK | executive_and_administrative | [rss](https://www.info.gov.hk/gia/rss/general_en.xml) | True | ok |
+| Hong Kong Government Information Services | HK | executive_and_administrative | [rss](https://www.info.gov.hk/gia/rss/general_en.xml) | False | blocked |
 | Hong Kong Securities and Futures Commission | HK | financial_enforcement | [rss](https://www.sfc.hk/en/RSS-Feeds/Press-releases) | True | ok |
 | Health Sciences Authority Singapore — Health Sciences Authority — Announcements | SG | product_permissions_and_safety | [rss](https://www.hsa.gov.sg/announcements/rss.xml) | True | ok |
-| Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/pressreleases_rss.xml) | True | ok |
+| Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/pressreleases_rss.xml) | False | fetch_failed |
 | Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/notifications_rss.xml) | False | fetch_failed |
 | Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/speeches_rss.xml) | False | fetch_failed; reference data, research, speeches or commentary |
 | Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/tenders_rss.xml) | False | fetch_failed |
