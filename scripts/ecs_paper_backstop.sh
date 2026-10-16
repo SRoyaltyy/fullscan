@@ -144,6 +144,16 @@ TMP="$(mktemp -d)"
 # 2026-10-16: host git fetch hung with no timeout (unit allows 7200s), so
 # the 09:12 backstop left no record. Bound it; the EXIT trap (finalize)
 # commits a blocked record with the reason.
+# 2026-10-16: a job killed mid-git left a lock in this shared checkout and
+# the backstop's fetch could not take it. Clear a lock only when no git
+# process is running here and the lock is over 10 minutes old.
+if ! pgrep -u "$(id -u)" -x git >/dev/null 2>&1; then
+  for L in .git/index.lock .git/shallow.lock .git/HEAD.lock .git/refs/remotes/origin/main.lock; do
+    if [ -f "$L" ] && [ -n "$(find "$L" -mmin +10 2>/dev/null)" ]; then
+      echo "backstop: clearing stale $L"; rm -f "$L"
+    fi
+  done
+fi
 FETCH_RC=0
 timeout 60 git fetch origin main || FETCH_RC=$?
 if [ "$FETCH_RC" -ne 0 ]; then

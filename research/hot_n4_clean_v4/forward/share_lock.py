@@ -44,6 +44,27 @@ def journal_path(date: str) -> Path:
     return _root() / "data" / "paper_open" / f"{date}_submit.json"
 
 
+def webull_not_sent_reason(date: str) -> str:
+    """Plain record of why Webull got nothing for ``date``.
+
+    No submit journal means no order left for that session. Read the day's
+    paper_open status (what the sender itself recorded) so the skip row
+    says why, instead of only that the lock is absent. Read-only.
+    """
+    status_path = _root() / "data" / "paper_open" / f"{date}_status.json"
+    try:
+        status = json.loads(status_path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return "webull not_sent: no paper_open status recorded (sender never ran)"
+    except (OSError, json.JSONDecodeError):
+        return "webull not_sent: paper_open status unreadable"
+    if not isinstance(status, dict):
+        return "webull not_sent: paper_open status unreadable"
+    state = str(status.get("status") or "unknown")
+    detail = str(status.get("error") or status.get("note") or "").strip()
+    return f"webull not_sent: paper_open status={state}" + (f" ({detail})" if detail else "")
+
+
 def buys_from_journal(payload: dict, date: str) -> dict[str, int]:
     """Sealed BUY share counts on a paper submit journal.
 
@@ -128,6 +149,7 @@ def resolve_share_lock(date: str, share_lock=AUTO):
     if not path.is_file():
         raise SentShareLockMissing(
             f"sent share lock missing for {date}; refusing to size buys from the open"
+            f"; {webull_not_sent_reason(date)}"
         )
     try:
         payload = json.loads(path.read_text(encoding="utf-8"))
