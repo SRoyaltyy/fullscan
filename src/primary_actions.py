@@ -59,12 +59,46 @@ def relayed_get(url,timeout=20):
         if len(body)>MAX_BYTES:raise ValueError('Response exceeds public-document metadata size limit')
         return response.status,body,dict(response.headers),url
 
+def jina_get(url,timeout=20):
+    # Tier-3 fallback: hosted headless-browser reader (r.jina.ai) that renders JS
+    # challenges (Cloudflare/Akamai bot walls) which the edge relay also cannot pass.
+    # Only ever called for URLs that already passed allowed_public_source() in get().
+    target='https://r.jina.ai/'+urllib.parse.quote(url,safe='')
+    HTTP_AUDIT.append({'url':url,'method':'GET','body_bytes':0,'authorization_sent':False,'via_jina':True})
+    request=urllib.request.Request(target,headers={'User-Agent':USER_AGENT,'X-Respond-With':'html'})
+    with urllib.request.build_opener().open(request,timeout=timeout+40) as response:
+        body=response.read(MAX_BYTES+1)
+        if len(body)>MAX_BYTES:raise ValueError('Response exceeds public-document metadata size limit')
+        return response.status,body,dict(response.headers),url
+
+def google_news_get(url,headers=None,timeout=20):
+    # Discovery mirror for official domains that geo-block all datacenter IPs (e.g.
+    # rbnz.govt.nz). Hardcoded to news.google.com RSS search endpoints whose query is
+    # site:<official-host>; item links are Google redirect URLs resolving to the
+    # official domain. Not an official host, so the official-source policy in get()
+    # does not apply; this function is the only sanctioned path to that host.
+    u=urllib.parse.urlsplit(url)
+    if u.hostname!='news.google.com' or not u.path.startswith('/rss/') or 'site%3A' not in u.query.replace('site%3a','site%3A'):
+        raise ValueError('google_news adapter only for news.google.com/rss/search with site: query')
+    HTTP_AUDIT.append({'url':url,'method':'GET','body_bytes':0,'authorization_sent':False,'via_google_news':True})
+    request=urllib.request.Request(url,headers={'User-Agent':USER_AGENT,'Accept':'application/rss+xml, application/atom+xml;q=0.9'})
+    with urllib.request.build_opener().open(request,timeout=timeout) as response:
+        body=response.read(MAX_BYTES+1)
+        if len(body)>MAX_BYTES:raise ValueError('Response exceeds public-document metadata size limit')
+        return response.status,body,dict(response.headers),response.url
+
 def get(url,headers=None,timeout=20):
     canonical_url(url)
     if not allowed_public_source(url):raise ValueError('URL outside explicit official-source host policy')
     if any(k.lower() not in ('if-none-match','if-modified-since') for k in (headers or {})):raise ValueError('Only public conditional-cache headers are accepted')
     HTTP_AUDIT.append({'url':url,'method':'GET','body_bytes':0,'authorization_sent':False})
     request=urllib.request.Request(url,headers={'User-Agent':USER_AGENT,'Accept':'application/json, application/atom+xml, application/rss+xml, text/html;q=0.8',**(headers or {})})
+    def _fallback():
+        try:relayed=relayed_get(url,timeout)
+        except Exception:relayed=None
+        if relayed and relayed[0]==200:return relayed
+        try:return jina_get(url,timeout)
+        except Exception:return None
     try:
         with urllib.request.build_opener(OfficialRedirects()).open(request,timeout=timeout) as response:
             body=response.read(MAX_BYTES+1)
@@ -72,14 +106,12 @@ def get(url,headers=None,timeout=20):
             return response.status,body,dict(response.headers),response.url
     except urllib.error.HTTPError as exc:
         if exc.code in RELAY_RETRY_STATUSES:
-            try:relayed=relayed_get(url,timeout)
-            except Exception:relayed=None
-            if relayed and relayed[0]==200:return relayed
+            fallback=_fallback()
+            if fallback:return fallback
         return exc.code,b'',dict(exc.headers),url
     except (urllib.error.URLError,TimeoutError,OSError):
-        try:relayed=relayed_get(url,timeout)
-        except Exception:relayed=None
-        if relayed and relayed[0]==200:return relayed
+        fallback=_fallback()
+        if fallback:return fallback
         raise
 
 def text(element,name):
@@ -141,6 +173,12 @@ class DatedLinks(Links):
                     if parts[2]<100:parts[2]+=2000
                     try:raw=iso(datetime(parts[2],parts[0],parts[1],tzinfo=timezone.utc))
                     except ValueError:pass
+            if not raw:
+                match=re.search(r'\b(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(20\d{2})\b',joined,re.I)
+                if match:
+                    months={'jan':1,'feb':2,'mar':3,'apr':4,'may':5,'jun':6,'jul':7,'aug':8,'sep':9,'oct':10,'nov':11,'dec':12}
+                    try:raw=iso(datetime(int(match[3]),months[match[2][:3].lower()],int(match[1]),tzinfo=timezone.utc))
+                    except ValueError:pass
             for href,title in context['links']:self.dated.append((href,title,raw))
 
 def index_rows(body,source):
@@ -152,6 +190,7 @@ def index_rows(body,source):
         url=urllib.parse.urljoin(urllib.parse.urljoin(source['url'],parser.base_href or ''),href)
         if len(title)<12 or not pattern.search(urllib.parse.urlsplit(url).path) or url in seen:continue
         seen.add(url);published=iso(date(dates[href])) if href in dates else None
+        title=re.sub(r'^\d{1,2}\s+(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+20\d{2}\s*[|\u2013\u2014-]?\s*','',title,flags=re.I).strip() or title
         match=re.search(r'/(20\d{2})[/\-](\d{2})[/\-](\d{2})(?:/|\b)',url)
         if match and not published:
             try:published=iso(datetime(*map(int,match.groups()),tzinfo=timezone.utc))
@@ -192,12 +231,13 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
         if url in seen_urls:raise ValueError('Pagination cycle')
         seen_urls.add(url);pages+=1
         if pages>max_pages:warnings.append('pagination_budget_reached');break
-        status,body,response_headers,resolved=fetch(url,headers=headers if pages==1 else {})
+        fetch_fn=google_news_get if adapter=='google_news_rss' else fetch
+        status,body,response_headers,resolved=fetch_fn(url,headers=headers if pages==1 else {})
         if status==304:return [],{**(previous or {}),'status':'unchanged','http_status':304,'requests':pages}
         if status!=200:return rows,{'status':'blocked' if status in (401,403,429) else 'fetch_failed','http_status':status,'requests':pages,'warnings':warnings,'fetched_rows':len(rows)}
         if first_hash is None:first_hash=hashlib.sha256(body).hexdigest()
-        if adapter in ('rss','html_index'):
-            rows=feed_rows(body,resolved) if adapter=='rss' else index_rows(body,source)
+        if adapter in ('rss','google_news_rss','html_index'):
+            rows=feed_rows(body,resolved) if adapter!='html_index' else index_rows(body,source)
             dates=[date(r.get('published_at')) for r in rows if date(r.get('published_at'))]
             if adapter=='rss' and len(rows)>=source.get('saturation_limit',100) and dates and min(dates)>=start:warnings.append('feed_at_capacity_in_requested_window; snapshots may miss overflow')
             url=None
