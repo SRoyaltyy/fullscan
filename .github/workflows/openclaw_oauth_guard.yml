@@ -39,11 +39,15 @@ concurrency:
 jobs:
   guard:
     runs-on: [self-hosted, ecs]
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
+      # Shallow fetch + its own timeout so a stalled checkout fails fast
+      # (renew 38880024469 hung at checkout on 2026-10-16).
       - uses: actions/checkout@v4
+        timeout-minutes: 10
         with:
           clean: false
+          fetch-depth: 1
       - name: Full tree after leftover sparse-checkout
         run: |
           git sparse-checkout disable || true
