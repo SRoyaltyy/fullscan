@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T12:06:32.418010-04:00",
+  "generated_at": "2026-10-16T12:07:09.143761-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -808,8 +808,8 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=190",
-          "size": 1427418,
-          "said": "1d BUY MQ, PDFS, IT, TOST, PRCH, VEEV, ARQT, ETON \u00b7 SELL ROIV, SOC, NEOV, GH, IFRX, APA \u00b7 0.61285",
+          "size": 1417631,
+          "said": "1d BUY CDNA, VEEV, ILMN, BLFS, PRCH, BAND, EZPW, AVPT \u00b7 SELL NEOV, VSAT, SOC, APA, VNET, BIDU \u00b7 0.61285",
           "bullets": []
         },
         {
@@ -819,10 +819,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 70199,
+          "size": 70323,
           "said": "Stock book \u2014 2026-10-16",
           "bullets": [
-            "_Generated 2026-10-16T08:44:51.266687-04:00_",
+            "_Generated 2026-10-16T12:06:41.950044-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -833,8 +833,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1884,
-          "said": "106 green \u00b7 KEYS, FORM, AVPT, APH, CRM, AVT, NTAP, SONO, LSCC, RELY",
+          "size": 2012,
+          "said": "116 green \u00b7 ARQT, ETON, AMN, SGRY, BLFS, AGEN, PCRX, CDNA, WAY, CORT",
           "bullets": []
         },
         {
@@ -886,8 +886,8 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=190",
-          "size": 1427418,
-          "said": "1d BUY MQ, PDFS, IT, TOST, PRCH, VEEV, ARQT, ETON \u00b7 SELL ROIV, SOC, NEOV, GH, IFRX, APA \u00b7 0.61285",
+          "size": 1417631,
+          "said": "1d BUY CDNA, VEEV, ILMN, BLFS, PRCH, BAND, EZPW, AVPT \u00b7 SELL NEOV, VSAT, SOC, APA, VNET, BIDU \u00b7 0.61285",
           "bullets": []
         },
         {
@@ -936,118 +936,118 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "MQ",
-        "score": 0.8511789715391587
-      },
-      {
-        "ticker": "PDFS",
-        "score": 0.872233496988466
-      },
-      {
-        "ticker": "IT",
-        "score": 0.627017225665278
-      },
-      {
-        "ticker": "TOST",
-        "score": 0.6468419674087901
-      },
-      {
-        "ticker": "PRCH",
-        "score": 0.7457274747806698
+        "ticker": "CDNA",
+        "score": 0.897576252299225
       },
       {
         "ticker": "VEEV",
-        "score": 0.38742739960243766
+        "score": 0.48926923854784043
       },
       {
-        "ticker": "ARQT",
-        "score": 0.7322906177197818
+        "ticker": "ILMN",
+        "score": 0.4862978878647207
       },
       {
-        "ticker": "ETON",
-        "score": 0.6790226285447538
+        "ticker": "BLFS",
+        "score": 0.8458674143942335
       },
       {
-        "ticker": "WAY",
-        "score": 0.6546862774511255
+        "ticker": "PRCH",
+        "score": 0.7579758901468567
+      },
+      {
+        "ticker": "BAND",
+        "score": 0.7254047714770866
       },
       {
         "ticker": "EZPW",
-        "score": 0.5800061502991833
+        "score": 0.5955012420003307
+      },
+      {
+        "ticker": "AVPT",
+        "score": 0.6904683623881902
+      },
+      {
+        "ticker": "NTAP",
+        "score": 0.32823297740760293
       },
       {
         "ticker": "TRU",
-        "score": 0.4908549938624168
+        "score": 0.5033293692454031
       },
       {
-        "ticker": "LAUR",
-        "score": 0.5302736707886009
+        "ticker": "SONO",
+        "score": 0.6903840428253398
+      },
+      {
+        "ticker": "CHEF",
+        "score": 0.6379790731999151
       },
       {
         "ticker": "ABX",
-        "score": 0.4913072001518869
+        "score": 0.4750229544765023
       }
     ],
     "sell_1d": [
       {
-        "ticker": "ROIV",
-        "score": -0.48709479949516915
+        "ticker": "NEOV",
+        "score": -0.3558701784935489
+      },
+      {
+        "ticker": "VSAT",
+        "score": -0.33308226234166394
       },
       {
         "ticker": "SOC",
-        "score": -0.34511898896846693
-      },
-      {
-        "ticker": "NEOV",
-        "score": -0.34303785903424716
-      },
-      {
-        "ticker": "GH",
-        "score": -0.30388006888422486
-      },
-      {
-        "ticker": "IFRX",
-        "score": -0.3017490744169558
+        "score": -0.318606964684087
       },
       {
         "ticker": "APA",
-        "score": -0.30081492982785313
+        "score": -0.31221522645427974
+      },
+      {
+        "ticker": "VNET",
+        "score": -0.3064848007586833
       },
       {
         "ticker": "BIDU",
-        "score": -0.29776399422600847
-      },
-      {
-        "ticker": "PYXS",
-        "score": -0.29419699244350644
+        "score": -0.30083354416331093
       },
       {
         "ticker": "ALK",
         "score": -0.28935565926940376
       },
       {
-        "ticker": "ALMS",
-        "score": -0.2842794811706928
+        "ticker": "FNV",
+        "score": -0.2880221955735393
       },
       {
-        "ticker": "AIRS",
-        "score": -0.2838266187659991
+        "ticker": "NN",
+        "score": -0.2870855567438641
       },
       {
         "ticker": "CMTG",
-        "score": -0.27719883299783515
+        "score": -0.28637279127034204
       },
       {
-        "ticker": "WVE",
-        "score": -0.2704424574071478
+        "ticker": "TDTH",
+        "score": -0.28321754638170527
       },
       {
-        "ticker": "AXSM",
-        "score": -0.2657406531307958
+        "ticker": "NPWR",
+        "score": -0.27153721132440944
       },
       {
-        "ticker": "PCT",
-        "score": -0.2644755409844818
+        "ticker": "PAL",
+        "score": -0.2696734793844309
+      },
+      {
+        "ticker": "TRGP",
+        "score": -0.26795131965376706
+      },
+      {
+        "ticker": "ROIV",
+        "score": -0.26211196897867123
       }
     ],
     "flatten": {
@@ -1080,24 +1080,6 @@
     }
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-16T06:41:15.003177-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-16_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2218618,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KEYS, FORM, AVPT, MU, SKHY"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KEYS, FORM, AVPT, MU, SKHY"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -4402,6 +4384,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T12:07:08.209032-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-16_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1417631,
+          "preview": "1d BUY CDNA, VEEV, ILMN, BLFS, PRCH, BAND, EZPW, AVPT \u00b7 SELL NEOV, VSAT, SOC, APA, VNET, BIDU, ALK, FNV"
+        },
+        {
+          "path": "data/stock_book/2026-10-16_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2012,
+          "preview": "green 116 \u00b7 ARQT, ETON, AMN, SGRY, BLFS, AGEN, PCRX, CDNA, WAY, CORT"
+        },
+        {
+          "path": "data/stock_book/2026-10-16_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2502,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-16_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12967,
+          "preview": "2026-10-16 BUY CDNA, VEEV, ILMN, BLFS, PRCH, BAND, EZPW, AVPT \u00b7 SELL NEOV, VSAT, SOC, APA, VNET, BIDU, ALK, FNV"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12967,
+          "preview": "2026-10-16 BUY CDNA, VEEV, ILMN, BLFS, PRCH, BAND, EZPW, AVPT \u00b7 SELL NEOV, VSAT, SOC, APA, VNET, BIDU, ALK, FNV"
+        },
+        {
+          "path": "01_daily/2026-10-16_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 71435,
+          "preview": "# Stock book \u2014 2026-10-16\n_Generated 2026-10-16T12:06:41.950044-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CDNA, VEEV, ILMN, BLFS, PRCH, BAND, EZPW, AVPT \u00b7 SELL NEOV, VSAT, SOC, APA, VNET, BIDU, ALK, FNV \u00b7 green 116 \u00b7 ARQT, ETON, AMN, SGRY, BLFS, AGEN, PCRX, CDNA, WAY, CORT \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-16 BUY CDNA, VEEV, ILMN, BLFS, PRCH, BAND, EZPW, AVPT \u00b7 SELL NEOV, VSAT, SOC, APA, VNET, BIDU, ALK, FNV \u00b7 2026-10-16 BUY CDNA, VEEV, ILMN, BLFS, PRCH, BAND, EZPW, AVPT \u00b7 SELL NEOV, VSAT, SOC, APA, VNET, BIDU, ALK, FNV \u00b7 # Stock book \u2014 2026-10-16\n_Generated 2026-10-16T12:06:41.950044-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -5239,6 +5274,54 @@
       "path": "data/day_board/2026-10-16.json",
       "at": "2026-10-16T12:06:32-04:00",
       "commit_msg": "auto: land peer_rs [2026-10-16]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38928589752",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-16_stock_book.md",
+      "at": "2026-10-16T12:07:09-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-16]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38928589752",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-16.json",
+      "at": "2026-10-16T12:07:09-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-16]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38928589752",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-16_green.json",
+      "at": "2026-10-16T12:07:09-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-16]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38928589752",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-16_input_health.json",
+      "at": "2026-10-16T12:07:09-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-16]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38928589752",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-16_stock_book.json",
+      "at": "2026-10-16T12:07:09-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-16]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38928589752",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-16_suggestions.json",
+      "at": "2026-10-16T12:07:09-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-16]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "38928589752",
       "manifest": "research/input_freeze/2026-10-16/manifest.json"
