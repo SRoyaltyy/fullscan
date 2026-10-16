@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_green, no 🚨
 
-Cash book **-22.51%** ($7,749) · signal-only (no cash/fees) was +37.42%. Starts YES **3/30**. Fills 265 · skips 312 · realized $-335.16.
+Cash book **-23.56%** ($7,644) · signal-only (no cash/fees) was +37.42%. Starts YES **3/30**. Fills 267 · skips 312 · realized $-335.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -427,6 +427,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **SELL** | `RXRX` | 2 | $3.65 | $0.10 | $-1.51 | $135.03 | ▼ -1.51 after sell → book $7,602.89; vs 09:30 mark -0.09 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-15 09:30 ET | **BUY** | `PRMB` | 1 | $18.96 | $0.19 | — | $115.87 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=-1.2; leftover $22.50 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $115.87 | ▲ close $7,748.92 vs 09:30 $7,603.20 (session +146.23) | 16:00 close · cash $115.87 · equity $7,748.92 vs 09:30 $7,603.20 (+145.72; session marks +146.23) · 9 name(s) marked open→close (per-name table). AIP×46 09:30 $18.82 → close $19.92 +50.60; CNK×25 09:30 $38.44 → close $38.52 +2.00; CXW×28 09:30 $32.47 → close $31.23 -34.72; EGG×221 09:30 $4.60 → close $4.71 +24.31; NVTS×96 09:30 $8.89 → close $9.23 +32.64; TMUS×6 09:30 $160.74 → close $157.03 -22.26; TRU×14 09:30 $68.55 → close $74.12 +77.98; WLY×18 09:30 $52.10 → close $52.97 +15.66; PRMB×1 09:30 $18.96 → close $18.98 +0.02 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $115.87 | ▲ 09:30 equity $7,784.67 vs yday $7,748.92 (+35.75) | 09:30 open · cash $115.87 (unchanged overnight, no fees) · equity $7,784.67 vs prior close $7,748.92 (+35.75) · 9 name(s) re-marked at the open (per-name table). AIP×46 yday $19.92 → 09:30 $19.66 -12.19; CNK×25 yday $38.52 → 09:30 $38.67 +3.75; CXW×28 yday $31.23 → 09:30 $31.23 +0.00; EGG×221 yday $4.71 → 09:30 $4.87 +35.36; NVTS×96 yday $9.23 → 09:30 $8.98 -24.19; PRMB×1 yday $18.98 → 09:30 $19.24 +0.26; TMUS×6 yday $157.03 → 09:30 $158.99 +11.76; TRU×14 yday $74.12 → 09:30 $74.90 +10.92; WLY×18 yday $52.97 → 09:30 $53.53 +10.08 | — |
+| 2026-10-16 09:30 ET | **BUY** | `AVPT` | 1 | $15.03 | $0.15 | — | $100.69 | — | union ∩ last_green, no 🚨; gate last_green=True; list flatten; ret5=+3.2; leftover $16.55 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `SMMT` | 1 | $15.39 | $0.16 | — | $85.14 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-10.5; leftover $16.55 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $85.14 | ▼ close $7,643.97 vs 09:30 $7,784.67 (session -140.39) | 16:00 close · cash $85.14 · equity $7,643.97 vs 09:30 $7,784.67 (-140.70; session marks -140.39) · 11 name(s) marked open→close (per-name table). AIP×46 09:30 $19.66 → close $18.76 -41.17; CNK×25 09:30 $38.67 → close $38.48 -4.75; CXW×28 09:30 $31.23 → close $30.67 -15.68; EGG×221 09:30 $4.87 → close $4.91 +8.84; NVTS×96 09:30 $8.98 → close $8.34 -61.25; PRMB×1 09:30 $19.24 → close $19.72 +0.48; TMUS×6 09:30 $158.99 → close $159.10 +0.66; TRU×14 09:30 $74.90 → close $74.08 -11.48; WLY×18 09:30 $53.53 → close $52.72 -14.58; AVPT×1 09:30 $15.03 → close $14.33 -0.70; SMMT×1 09:30 $15.39 → close $14.63 -0.76 | — |
 
 ## Not taken
 

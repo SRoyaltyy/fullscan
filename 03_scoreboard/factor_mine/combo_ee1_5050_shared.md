@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_e_fresh_h1 w=0.5,0.5 net=priority
 
-Cash book **-14.30%** ($8,570) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 154 · skips 250 · realized $+4004.41.
+Cash book **-14.12%** ($8,588) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 157 · skips 250 · realized $+4004.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $385.41.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $266.47.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -317,6 +317,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `PNC` | 1 | $208.49 | $1.99 | — | $574.07 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+0.0; combo leftover $252.00; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `SCHW` | 2 | $93.39 | $1.87 | — | $385.41 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.3; combo leftover $252.00; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $385.41 | ▼ close $8,569.90 vs 09:30 $8,673.01 (session -90.44) | 16:00 close · cash $385.41 · equity $8,569.90 vs 09:30 $8,673.01 (-103.11; session marks -90.44) · 11 name(s) marked open→close (per-name table). BAC×33 09:30 $51.46 → close $51.70 +7.92; FAST×35 09:30 $52.19 → close $50.38 -63.35; MS×9 09:30 $182.49 → close $182.10 -3.51; PGR×8 09:30 $217.72 → close $213.75 -31.76; BNY×1 09:30 $139.81 → close $142.09 +2.28; CMC×3 09:30 $69.38 → close $65.37 -12.03; ERIC×23 09:30 $10.65 → close $10.71 +1.41; FHN×11 09:30 $22.34 → close $22.86 +5.72; PLD×1 09:30 $132.04 → close $126.94 -5.10; PNC×1 09:30 $208.49 → close $214.94 +6.45; SCHW×2 09:30 $93.39 → close $94.16 +1.53 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $385.41 | ▲ 09:30 equity $8,608.89 vs yday $8,569.90 (+38.99) | 09:30 open · cash $385.41 (unchanged overnight, no fees) · equity $8,608.89 vs prior close $8,569.90 (+38.99) | — |
+| 2026-10-16 09:30 ET | **BUY** | `AA` | 1 | $41.65 | $0.42 | — | $343.34 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-5.6; combo leftover $55.06; owner union_e_fresh_h3 | join🔴 sector🟡 gen🟢 news🔴 digest🔴 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `RF` | 1 | $27.89 | $0.28 | — | $315.17 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+0.9; combo leftover $55.06; owner union_e_fresh_h3 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `WSE` | 4 | $12.05 | $0.49 | — | $266.47 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+3.6; combo leftover $55.06; owner union_e_fresh_h3 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $266.47 | ▼ close $8,588.26 vs 09:30 $8,608.89 (session -19.43) | 16:00 close · cash $266.47 · equity $8,588.26 vs 09:30 $8,608.89 (-20.63; session marks -19.43) · 14 name(s) marked open→close (per-name table). BAC×33 09:30 $52.14 → close $51.23 -30.03; BNY×1 09:30 $143.24 → close $143.30 +0.06; CMC×3 09:30 $66.19 → close $64.98 -3.63; ERIC×23 09:30 $10.57 → close $10.55 -0.46; FAST×35 09:30 $50.77 → close $51.02 +8.75; FHN×11 09:30 $23.02 → close $22.88 -1.54; MS×9 09:30 $182.68 → close $180.57 -18.99; PGR×8 09:30 $213.99 → close $218.49 +36.00; PLD×1 09:30 $128.07 → close $125.75 -2.32; PNC×1 09:30 $216.58 → close $217.39 +0.81; SCHW×2 09:30 $93.54 → close $91.96 -3.16; AA×1 09:30 $41.65 → close $41.45 -0.20; RF×1 09:30 $27.89 → close $27.45 -0.44; WSE×4 09:30 $12.05 → close $10.98 -4.28 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **-16.36%** ($8,364) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 401 · skips 100 · realized $-529.03.
+Cash book **-17.68%** ($8,232) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 415 · skips 100 · realized $-529.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -563,6 +563,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `MNSO` | 97 | $10.41 | $2.28 | — | $1,280.08 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+14.3; leftover $1017.76 | join🟢 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `ENGS` | 290 | $3.50 | $3.74 | — | $261.34 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+12.0; leftover $1017.76 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $261.34 | ▲ close $8,363.79 vs 09:30 $8,217.92 (session +177.82) | 16:00 close · cash $261.34 · equity $8,363.79 vs 09:30 $8,217.92 (+145.87; session marks +177.82) · 8 name(s) marked open→close (per-name table). ACI×83 09:30 $12.99 → close $13.03 +3.32; ITW×3 09:30 $272.49 → close $271.19 -3.90; LW×18 09:30 $53.79 → close $54.21 +7.56; ETSY×12 09:30 $84.47 → close $89.18 +56.52; BLMN×107 09:30 $9.48 → close $9.93 +48.15; CHWY×48 09:30 $21.00 → close $21.31 +14.88; MNSO×97 09:30 $10.41 → close $10.58 +16.49; ENGS×290 09:30 $3.50 → close $3.62 +34.80 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $261.34 | ▲ 09:30 equity $8,386.01 vs yday $8,363.79 (+22.22) | 09:30 open · cash $261.34 (unchanged overnight, no fees) · equity $8,386.01 vs prior close $8,363.79 (+22.22) · 8 name(s) re-marked at the open (per-name table). ACI×83 yday $13.03 → 09:30 $13.03 +0.00; BLMN×107 yday $9.93 → 09:30 $9.90 -2.68; CHWY×48 yday $21.31 → 09:30 $21.34 +1.44; ENGS×290 yday $3.62 → 09:30 $3.72 +29.00; ETSY×12 yday $89.18 → 09:30 $89.50 +3.84; ITW×3 yday $271.19 → 09:30 $273.23 +6.12; LW×18 yday $54.21 → 09:30 $54.48 +4.86; MNSO×97 yday $10.58 → 09:30 $10.37 -20.37 | — |
+| 2026-10-16 09:30 ET | **SELL** | `ACI` | 83 | $13.03 | $2.26 | $+32.85 | $1,340.57 | ▲ +32.85 after sell → book $8,383.74; vs 09:30 mark -2.27 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `BLMN` | 107 | $9.90 | $2.34 | $+40.83 | $2,398.06 | ▲ +40.83 after sell → book $8,381.40; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **SELL** | `CHWY` | 48 | $21.34 | $2.15 | $+12.03 | $3,420.23 | ▲ +12.03 after sell → book $8,379.25; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **SELL** | `ENGS` | 290 | $3.72 | $3.80 | $+56.26 | $4,495.23 | ▲ +56.26 after sell → book $8,375.45; vs 09:30 mark -3.80 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `ETSY` | 12 | $89.50 | $2.05 | $+56.29 | $5,567.18 | ▲ +56.29 after sell → book $8,373.40; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `LW` | 18 | $54.48 | $2.06 | $+8.31 | $6,545.76 | ▲ +8.31 after sell → book $8,371.34; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **SELL** | `MNSO` | 97 | $10.37 | $2.31 | $-8.47 | $7,549.34 | ▼ -8.47 after sell → book $8,369.03; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **BUY** | `IT` | 5 | $209.00 | $2.00 | — | $6,502.34 | — | union ∩ break10, no 🚨; gate break_10=True; list flatten; ret5=+6.1; leftover $1078.48 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-16 09:30 ET | **BUY** | `TOST` | 33 | $32.59 | $2.09 | — | $5,424.78 | — | union ∩ break10, no 🚨; gate break_10=True; list flatten; ret5=+5.5; leftover $1078.48 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `YOU` | 23 | $45.60 | $2.06 | — | $4,373.92 | — | union ∩ break10, no 🚨; gate break_10=True; list flatten; 🔵; ret5=+4.5; leftover $1078.48 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-16 09:30 ET | **BUY** | `POOL` | 6 | $170.06 | $2.01 | — | $3,351.55 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer; ret5=+6.9; leftover $1078.48 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `TRU` | 14 | $74.90 | $2.03 | — | $2,300.92 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,ohlc_hot; 🔵; ret5=+14.8; leftover $1078.48 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `DGX` | 4 | $239.67 | $2.00 | — | $1,340.24 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_mover; 🔵; ret5=+3.6; leftover $1078.48 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `BBWI` | 52 | $20.45 | $2.15 | — | $274.69 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+15.4; leftover $1078.48 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $274.69 | ▼ close $8,231.95 vs 09:30 $8,386.01 (session -122.74) | 16:00 close · cash $274.69 · equity $8,231.95 vs 09:30 $8,386.01 (-154.06; session marks -122.74) · 8 name(s) marked open→close (per-name table). ITW×3 09:30 $273.23 → close $272.28 -2.85; IT×5 09:30 $209.00 → close $205.35 -18.25; TOST×33 09:30 $32.59 → close $31.62 -32.01; YOU×23 09:30 $45.60 → close $43.93 -38.41; POOL×6 09:30 $170.06 → close $172.57 +15.06; TRU×14 09:30 $74.90 → close $74.08 -11.48; DGX×4 09:30 $239.67 → close $235.00 -18.68; BBWI×52 09:30 $20.45 → close $20.14 -16.12 | — |
 
 ## Not taken
 

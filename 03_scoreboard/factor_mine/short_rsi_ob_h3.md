@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · RSI overbought
 
-Cash book **-5.74%** ($9,426) · signal-only (no cash/fees) was -115.85%. Starts YES **1/30**. Fills 334 · skips 279 · realized $-808.98.
+Cash book **-5.90%** ($9,410) · signal-only (no cash/fees) was -115.85%. Starts YES **1/30**. Fills 334 · skips 279 · realized $-808.98.
 
 ## How this sleeve decides (like you are 10)
 
@@ -494,6 +494,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **COVER** | `QTEX` | 363 | $1.44 | $4.68 | $+95.82 | $14,309.32 | ▲ +95.82 after sell → book $9,472.33; vs 09:30 mark -4.68 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-15 09:30 ET | **COVER** | `WFF` | 42 | $0.15 | $0.19 | $+612.12 | $14,302.83 | ▲ +612.12 after sell → book $9,472.14; vs 09:30 mark -0.19 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,302.83 | ▼ close $9,425.60 vs 09:30 $9,492.37 (session -46.54) | 16:00 close · cash $14,302.83 · equity $9,425.60 vs 09:30 $9,492.37 (-66.77; session marks -46.54) · 6 name(s) marked open→close (per-name table). EGG×184 09:30 $4.60 → close $4.71 -20.24; EPR×14 09:30 $55.57 → close $55.15 +5.88; HLP×281 09:30 $2.98 → close $3.00 -5.62; ITW×3 09:30 $272.49 → close $271.19 +3.90; MX×290 09:30 $2.63 → close $2.75 -34.80; TBBB×14 09:30 $56.34 → close $56.03 +4.34 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,302.83 | ▼ 09:30 equity $9,397.58 vs yday $9,425.60 (-28.02) | 09:30 open · cash $14,302.83 (unchanged overnight, no fees) · equity $9,397.58 vs prior close $9,425.60 (-28.02) · 6 name(s) re-marked at the open (per-name table). EGG×184 yday $4.71 → 09:30 $4.87 -29.44; EPR×14 yday $55.15 → 09:30 $55.26 -1.54; HLP×281 yday $3.00 → 09:30 $2.94 +16.86; ITW×3 yday $271.19 → 09:30 $273.23 -6.12; MX×290 yday $2.75 → 09:30 $2.73 +5.80; TBBB×14 yday $56.03 → 09:30 $57.00 -13.58 | — |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,302.83 | ▲ close $9,409.69 vs 09:30 $9,397.58 (session +12.11) | 16:00 close · cash $14,302.83 · equity $9,409.69 vs 09:30 $9,397.58 (+12.11; session marks +12.11) · 6 name(s) marked open→close (per-name table). EGG×184 09:30 $4.87 → close $4.91 -7.36; EPR×14 09:30 $55.26 → close $55.71 -6.30; HLP×281 09:30 $2.94 → close $3.00 -16.86; ITW×3 09:30 $273.23 → close $272.28 +2.85; MX×290 09:30 $2.73 → close $2.56 +49.30; TBBB×14 09:30 $57.00 → close $57.68 -9.52 | — |
 
 ## Not taken
 

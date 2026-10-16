@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data)
 
-Cash book **-9.11%** ($9,089) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 8 · skips 7 · realized $-603.63.
+Cash book **-7.88%** ($9,212) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 8 · skips 7 · realized $-603.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -172,6 +172,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `FIS` | 125 | $36.40 | $2.37 | — | $4,611.31 | — | Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data); gate clk_insider_cash_stab=True; rank cond; list flatten; 🔵; ret5=+4.9; leftover $4581.84 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-15 09:30 ET | **BUY** | `PBR-A` | 201 | $22.79 | $2.60 | — | $27.92 | — | Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data); gate clk_insider_cash_stab=True; rank cond; list ohlc_hot; ret5=+6.5; leftover $4581.84 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.92 | ▼ close $9,088.78 vs 09:30 $9,163.67 (session -69.93) | 16:00 close · cash $27.92 · equity $9,088.78 vs 09:30 $9,163.67 (-74.89; session marks -69.93) · 2 name(s) marked open→close (per-name table). FIS×125 09:30 $36.40 → close $36.13 -33.75; PBR-A×201 09:30 $22.79 → close $22.61 -36.18 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $27.92 | ▲ 09:30 equity $9,195.38 vs yday $9,088.78 (+106.60) | 09:30 open · cash $27.92 (unchanged overnight, no fees) · equity $9,195.38 vs prior close $9,088.78 (+106.60) · 2 name(s) re-marked at the open (per-name table). FIS×125 yday $36.13 → 09:30 $36.42 +36.25; PBR-A×201 yday $22.61 → 09:30 $22.96 +70.35 | — |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.92 | ▲ close $9,212.47 vs 09:30 $9,195.38 (session +17.09) | 16:00 close · cash $27.92 · equity $9,212.47 vs 09:30 $9,195.38 (+17.09; session marks +17.09) · 2 name(s) marked open→close (per-name table). FIS×125 09:30 $36.42 → close $36.01 -51.25; PBR-A×201 09:30 $22.96 → close $23.30 +68.34 | — |
 
 ## Not taken
 

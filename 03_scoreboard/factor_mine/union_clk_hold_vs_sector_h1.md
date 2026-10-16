@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-10.64%** ($8,936) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 293 · skips 96 · realized $+387.41.
+Cash book **-12.24%** ($8,776) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 301 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -457,6 +457,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `BBWI` | 95 | $19.19 | $2.27 | — | $1,852.21 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+6.4; leftover $1838.77 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `CHWY` | 87 | $21.00 | $2.25 | — | $22.96 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+14.3; leftover $1838.77 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22.96 | ▲ close $8,936.03 vs 09:30 $8,605.65 (session +341.22) | 16:00 close · cash $22.96 · equity $8,936.03 vs 09:30 $8,605.65 (+330.38; session marks +341.22) · 6 name(s) marked open→close (per-name table). BLMN×130 09:30 $9.48 → close $9.93 +58.50; ETSY×15 09:30 $84.47 → close $89.18 +70.65; MNSO×115 09:30 $10.41 → close $10.58 +19.55; SG×120 09:30 $10.21 → close $10.60 +46.80; BBWI×95 09:30 $19.19 → close $20.44 +118.75; CHWY×87 09:30 $21.00 → close $21.31 +26.97 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $22.96 | ▼ 09:30 equity $8,914.59 vs yday $8,936.03 (-21.44) | 09:30 open · cash $22.96 (unchanged overnight, no fees) · equity $8,914.59 vs prior close $8,936.03 (-21.44) · 6 name(s) re-marked at the open (per-name table). BBWI×95 yday $20.44 → 09:30 $20.45 +0.95; BLMN×130 yday $9.93 → 09:30 $9.90 -3.25; CHWY×87 yday $21.31 → 09:30 $21.34 +2.61; ETSY×15 yday $89.18 → 09:30 $89.50 +4.80; MNSO×115 yday $10.58 → 09:30 $10.37 -24.15; SG×120 yday $10.60 → 09:30 $10.58 -2.40 | — |
+| 2026-10-16 09:30 ET | **SELL** | `CHWY` | 87 | $21.34 | $2.28 | $+25.05 | $1,877.26 | ▲ +25.05 after sell → book $8,912.31; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **SELL** | `ETSY` | 15 | $89.50 | $2.06 | $+155.06 | $3,217.70 | ▲ +155.06 after sell → book $8,910.25; vs 09:30 mark -2.06 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `MNSO` | 115 | $10.37 | $2.36 | $-4.70 | $4,407.89 | ▼ -4.70 after sell → book $8,907.89; vs 09:30 mark -2.36 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **BUY** | `VFC` | 50 | $17.32 | $2.14 | — | $3,539.75 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+17.0; leftover $881.58 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `WM` | 3 | $224.78 | $2.00 | — | $2,863.41 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+6.7; leftover $881.58 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `JBHT` | 3 | $228.00 | $2.00 | — | $2,177.41 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list earn_react; 🔵; ret5=+3.0; leftover $881.58 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `EBAY` | 7 | $123.94 | $2.01 | — | $1,307.82 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+9.8; leftover $881.58 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `EGG` | 181 | $4.87 | $2.53 | — | $423.82 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer,yday_mover; ret5=+4.7; leftover $881.58 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $423.82 | ▼ close $8,775.51 vs 09:30 $8,914.59 (session -121.70) | 16:00 close · cash $423.82 · equity $8,775.51 vs 09:30 $8,914.59 (-139.08; session marks -121.70) · 8 name(s) marked open→close (per-name table). BBWI×95 09:30 $20.45 → close $20.14 -29.45; BLMN×130 09:30 $9.90 → close $9.95 +5.85; SG×120 09:30 $10.58 → close $10.04 -64.80; VFC×50 09:30 $17.32 → close $16.85 -23.50; WM×3 09:30 $224.78 → close $226.86 +6.24; JBHT×3 09:30 $228.00 → close $228.78 +2.34; EBAY×7 09:30 $123.94 → close $120.28 -25.62; EGG×181 09:30 $4.87 → close $4.91 +7.24 | — |
 
 ## Not taken
 

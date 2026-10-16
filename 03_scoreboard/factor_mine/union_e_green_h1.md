@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-8.64%** ($9,136) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 124 · skips 17 · realized $-2405.95.
+Cash book **-10.24%** ($8,976) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 132 · skips 17 · realized $-2405.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -288,6 +288,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `PNC` | 10 | $208.49 | $2.02 | — | $2,547.13 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+0.0; leftover $2284.32 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `SCHW` | 24 | $93.39 | $2.06 | — | $303.58 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+1.3; leftover $2284.32 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $303.58 | ▲ close $9,136.38 vs 09:30 $9,141.40 (session +7.58) | 16:00 close · cash $303.58 · equity $9,136.38 vs 09:30 $9,141.40 (-5.02; session marks +7.58) · 4 name(s) marked open→close (per-name table). CMC×32 09:30 $69.38 → close $65.37 -128.32; FHN×102 09:30 $22.34 → close $22.86 +53.04; PNC×10 09:30 $208.49 → close $214.94 +64.50; SCHW×24 09:30 $93.39 → close $94.16 +18.36 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $303.58 | ▲ 09:30 equity $9,180.46 vs yday $9,136.38 (+44.08) | 09:30 open · cash $303.58 (unchanged overnight, no fees) · equity $9,180.46 vs prior close $9,136.38 (+44.08) · 4 name(s) re-marked at the open (per-name table). CMC×32 yday $65.37 → 09:30 $66.19 +26.24; FHN×102 yday $22.86 → 09:30 $23.02 +16.32; PNC×10 yday $214.94 → 09:30 $216.58 +16.40; SCHW×24 yday $94.16 → 09:30 $93.54 -14.88 | — |
+| 2026-10-16 09:30 ET | **SELL** | `CMC` | 32 | $66.19 | $2.11 | $-106.28 | $2,419.55 | ▼ -106.28 after sell → book $9,178.35; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `FHN` | 102 | $23.02 | $2.33 | $+64.73 | $4,765.26 | ▲ +64.73 after sell → book $9,176.02; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `PNC` | 10 | $216.58 | $2.05 | $+76.83 | $6,929.01 | ▲ +76.83 after sell → book $9,173.97; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `SCHW` | 24 | $93.54 | $2.09 | $-0.67 | $9,171.88 | ▼ -0.67 after sell → book $9,171.88; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **BUY** | `CFG` | 35 | $64.50 | $2.10 | — | $6,912.28 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-1.0; leftover $2292.97 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `IBKR` | 26 | $86.27 | $2.07 | — | $4,667.20 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-0.5; leftover $2292.97 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `JBHT` | 10 | $228.00 | $2.02 | — | $2,385.18 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+3.0; leftover $2292.97 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `MTB` | 10 | $221.49 | $2.02 | — | $168.26 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+0.5; leftover $2292.97 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $168.26 | ▼ close $8,976.40 vs 09:30 $9,180.46 (session -187.28) | 16:00 close · cash $168.26 · equity $8,976.40 vs 09:30 $9,180.46 (-204.06; session marks -187.28) · 4 name(s) marked open→close (per-name table). CFG×35 09:30 $64.50 → close $63.36 -39.90; IBKR×26 09:30 $86.27 → close $82.69 -93.08; JBHT×10 09:30 $228.00 → close $228.78 +7.80; MTB×10 09:30 $221.49 → close $215.28 -62.10 | — |
 
 ## Not taken
 

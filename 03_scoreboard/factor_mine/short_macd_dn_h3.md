@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **+8.57%** ($10,857) · signal-only (no cash/fees) was -1.81%. Starts YES **18/30**. Fills 380 · skips 334 · realized $-941.09.
+Cash book **+14.34%** ($11,434) · signal-only (no cash/fees) was -1.81%. Starts YES **18/30**. Fills 383 · skips 334 · realized $-941.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -540,6 +540,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **COVER** | `ZENA` | 790 | $1.08 | $10.19 | $-16.60 | $17,561.20 | ▼ -16.60 after sell → book $11,158.62; vs 09:30 mark -10.19 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-15 09:30 ET | **SHORT** | `SHOO` | 124 | $44.74 | $2.58 | — | $23,106.38 | — | MACD histogram < 0; gate macd_down=True; list flatten; ret5=+0.3; leftover $5579.31 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23,106.38 | ▼ close $10,856.63 vs 09:30 $11,181.58 (session -299.41) | 16:00 close · cash $23,106.38 · equity $10,856.63 vs 09:30 $11,181.58 (-324.95; session marks -299.41) · 10 name(s) marked open→close (per-name table). ACRS×172 09:30 $3.42 → close $3.49 -12.04; AIP×38 09:30 $18.82 → close $19.92 -41.80; BLFS×17 09:30 $38.61 → close $38.61 -0.00; EPR×14 09:30 $55.57 → close $55.15 +5.88; MX×284 09:30 $2.63 → close $2.75 -34.08; NVTS×78 09:30 $8.89 → close $9.23 -26.52; PDFS×16 09:30 $40.70 → close $41.27 -9.12; SMMT×51 09:30 $15.09 → close $15.37 -14.28; TMUS×5 09:30 $160.74 → close $157.03 +18.55; SHOO×124 09:30 $44.74 → close $46.24 -186.00 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $23,106.38 | ▼ 09:30 equity $10,855.24 vs yday $10,856.63 (-1.39) | 09:30 open · cash $23,106.38 (unchanged overnight, no fees) · equity $10,855.24 vs prior close $10,856.63 (-1.39) · 10 name(s) re-marked at the open (per-name table). ACRS×172 yday $3.49 → 09:30 $3.51 -3.44; AIP×38 yday $19.92 → 09:30 $19.66 +10.07; BLFS×17 yday $38.61 → 09:30 $38.61 -0.00; EPR×14 yday $55.15 → 09:30 $55.26 -1.54; MX×284 yday $2.75 → 09:30 $2.73 +5.68; NVTS×78 yday $9.23 → 09:30 $8.98 +19.66; PDFS×16 yday $41.27 → 09:30 $40.49 +12.48; SHOO×124 yday $46.24 → 09:30 $46.51 -33.48; SMMT×51 yday $15.37 → 09:30 $15.39 -1.02; TMUS×5 yday $157.03 → 09:30 $158.99 -9.80 | — |
+| 2026-10-16 09:30 ET | **SHORT** | `TWLO` | 6 | $276.58 | $2.08 | — | $24,763.78 | — | MACD histogram < 0; gate macd_down=True; list flatten; ret5=-0.9; leftover $1809.21 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **SHORT** | `CXW` | 57 | $31.23 | $2.23 | — | $26,541.66 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-4.5; leftover $1809.21 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **SHORT** | `EGG` | 371 | $4.87 | $4.91 | — | $28,343.52 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer,yday_mover; ret5=+4.7; leftover $1809.21 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $28,343.52 | ▲ close $11,433.96 vs 09:30 $10,855.24 (session +587.94) | 16:00 close · cash $28,343.52 · equity $11,433.96 vs 09:30 $10,855.24 (+578.72; session marks +587.94) · 13 name(s) marked open→close (per-name table). ACRS×172 09:30 $3.51 → close $3.28 +39.56; AIP×38 09:30 $19.66 → close $18.76 +34.01; BLFS×17 09:30 $38.61 → close $38.61 -0.00; EPR×14 09:30 $55.26 → close $55.71 -6.30; MX×284 09:30 $2.73 → close $2.56 +48.28; NVTS×78 09:30 $8.98 → close $8.34 +49.76; PDFS×16 09:30 $40.49 → close $39.22 +20.32; SHOO×124 09:30 $46.51 → close $45.27 +153.76; SMMT×51 09:30 $15.39 → close $14.63 +38.76; TMUS×5 09:30 $158.99 → close $159.10 -0.55; TWLO×6 09:30 $276.58 → close $244.37 +193.26; CXW×57 09:30 $31.23 → close $30.67 +31.92; EGG×371 09:30 $4.87 → close $4.91 -14.84 | — |
 
 ## Not taken
 

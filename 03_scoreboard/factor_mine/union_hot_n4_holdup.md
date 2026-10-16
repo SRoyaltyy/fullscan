@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `holdup` · hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book
 
-Cash book **+47.25%** ($14,725) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 116 · skips 79 · realized $+4974.44.
+Cash book **+47.40%** ($14,740) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 120 · skips 79 · realized $+4974.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -278,6 +278,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `BLMN` | 376 | $9.48 | $4.85 | — | $3,617.62 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; ret5=+14.4; leftover $3572.28 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `CHWY` | 170 | $21.00 | $2.50 | — | $45.12 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; ret5=+14.3; leftover $3572.28 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $45.12 | ▲ close $14,724.92 vs 09:30 $14,289.13 (session +447.44) | 16:00 close · cash $45.12 · equity $14,724.92 vs 09:30 $14,289.13 (+435.79; session marks +447.44) · 4 name(s) marked open→close (per-name table). LW×66 09:30 $53.79 → close $54.21 +27.72; ETSY×42 09:30 $84.47 → close $89.18 +197.82; BLMN×376 09:30 $9.48 → close $9.93 +169.20; CHWY×170 09:30 $21.00 → close $21.31 +52.70 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $45.12 | ▲ 09:30 equity $14,751.88 vs yday $14,724.92 (+26.96) | 09:30 open · cash $45.12 (unchanged overnight, no fees) · equity $14,751.88 vs prior close $14,724.92 (+26.96) · 4 name(s) re-marked at the open (per-name table). BLMN×376 yday $9.93 → 09:30 $9.90 -9.40; CHWY×170 yday $21.31 → 09:30 $21.34 +5.10; ETSY×42 yday $89.18 → 09:30 $89.50 +13.44; LW×66 yday $54.21 → 09:30 $54.48 +17.82 | — |
+| 2026-10-16 09:30 ET | **SELL** | `BLMN` | 376 | $9.90 | $4.94 | $+150.01 | $3,764.46 | ▲ +150.01 after sell → book $14,746.94; vs 09:30 mark -4.94 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `CHWY` | 170 | $21.34 | $2.56 | $+52.74 | $7,389.70 | ▲ +52.74 after sell → book $14,744.38; vs 09:30 mark -2.56 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `ETSY` | 42 | $89.50 | $2.16 | $+206.99 | $11,146.54 | ▲ +206.99 after sell → book $14,742.22; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `LW` | 66 | $54.48 | $2.23 | $+41.12 | $14,740.00 | ▲ +41.12 after sell → book $14,740.00; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,740.00 | ▲ close $14,740.00 vs 09:30 $14,751.88 (session +0.00) | 16:00 close · cash $14,740.00 · no lots left · equity $14,740.00. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-10.55%** ($8,944) · signal-only (no cash/fees) was -18.73%. Starts YES **20/30**. Fills 82 · skips 104 · realized $-87.73.
+Cash book **-9.93%** ($9,007) · signal-only (no cash/fees) was -18.73%. Starts YES **20/30**. Fills 82 · skips 104 · realized $-87.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -246,6 +246,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `PNC` | 1 | $208.49 | $1.99 | — | $389.80 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+0.0; leftover $287.48 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `SCHW` | 3 | $93.39 | $2.00 | — | $107.62 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+1.3; leftover $287.48 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $107.62 | ▼ close $8,944.46 vs 09:30 $8,953.56 (session -1.07) | 16:00 close · cash $107.62 · equity $8,944.46 vs 09:30 $8,953.56 (-9.10; session marks -1.07) · 6 name(s) marked open→close (per-name table). ASML×2 09:30 $1615.77 → close $1657.44 +83.35; PGR×21 09:30 $217.72 → close $213.75 -83.37; CMC×4 09:30 $69.38 → close $65.37 -16.04; FHN×12 09:30 $22.34 → close $22.86 +6.24; PNC×1 09:30 $208.49 → close $214.94 +6.45; SCHW×3 09:30 $93.39 → close $94.16 +2.30 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $107.62 | ▲ 09:30 equity $8,957.63 vs yday $8,944.46 (+13.17) | 09:30 open · cash $107.62 (unchanged overnight, no fees) · equity $8,957.63 vs prior close $8,944.46 (+13.17) · 6 name(s) re-marked at the open (per-name table). ASML×2 yday $1657.44 → 09:30 $1659.01 +3.14; CMC×4 yday $65.37 → 09:30 $66.19 +3.28; FHN×12 yday $22.86 → 09:30 $23.02 +1.92; PGR×21 yday $213.75 → 09:30 $213.99 +5.04; PNC×1 yday $214.94 → 09:30 $216.58 +1.64; SCHW×3 yday $94.16 → 09:30 $93.54 -1.86 | — |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $107.62 | ▲ close $9,006.70 vs 09:30 $8,957.63 (session +49.07) | 16:00 close · cash $107.62 · equity $9,006.70 vs 09:30 $8,957.63 (+49.07; session marks +49.07) · 6 name(s) marked open→close (per-name table). ASML×2 09:30 $1659.01 → close $1641.52 -34.98; CMC×4 09:30 $66.19 → close $64.98 -4.84; FHN×12 09:30 $23.02 → close $22.88 -1.68; PGR×21 09:30 $213.99 → close $218.49 +94.50; PNC×1 09:30 $216.58 → close $217.39 +0.81; SCHW×3 09:30 $93.54 → close $91.96 -4.74 | — |
 
 ## Not taken
 

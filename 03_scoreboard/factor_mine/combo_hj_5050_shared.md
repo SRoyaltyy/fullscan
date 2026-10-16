@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/union_join_vol_green_h1 w=0.5,0.5 net=priority
 
-Cash book **+19.60%** ($11,960) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 453 · skips 100 · realized $+1412.04.
+Cash book **+18.24%** ($11,824) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 459 · skips 100 · realized $+1412.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $75.19.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $71.36.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -616,6 +616,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `BLMN` | 306 | $9.48 | $3.95 | — | $2,975.59 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+14.4; combo leftover $2901.88; owner union_hot_n4_h1 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `CHWY` | 138 | $21.00 | $2.40 | — | $75.19 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+14.3; combo leftover $2901.88; owner union_hot_n4_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $75.19 | ▲ close $11,959.80 vs 09:30 $11,623.00 (session +362.88) | 16:00 close · cash $75.19 · equity $11,959.80 vs 09:30 $11,623.00 (+336.80; session marks +362.88) · 4 name(s) marked open→close (per-name table). LW×53 09:30 $53.79 → close $54.21 +22.26; ETSY×34 09:30 $84.47 → close $89.18 +160.14; BLMN×306 09:30 $9.48 → close $9.93 +137.70; CHWY×138 09:30 $21.00 → close $21.31 +42.78 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $75.19 | ▲ 09:30 equity $11,981.48 vs yday $11,959.80 (+21.68) | 09:30 open · cash $75.19 (unchanged overnight, no fees) · equity $11,981.48 vs prior close $11,959.80 (+21.68) | — |
+| 2026-10-16 09:30 ET | **SELL** | `CHWY` | 138 | $21.34 | $2.45 | $+42.07 | $3,017.66 | ▲ +42.07 after sell → book $11,979.03; vs 09:30 mark -2.45 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **SELL** | `ETSY` | 34 | $89.50 | $2.13 | $+166.80 | $6,058.53 | ▲ +166.80 after sell → book $11,976.90; vs 09:30 mark -2.13 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `LW` | 53 | $54.48 | $2.18 | $+32.24 | $8,943.79 | ▲ +32.24 after sell → book $11,974.72; vs 09:30 mark -2.18 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `BBWI` | 145 | $20.45 | $2.42 | — | $5,976.12 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+15.4; combo leftover $2981.26; owner union_hot_n4_h1 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `VFC` | 172 | $17.32 | $2.51 | — | $2,994.57 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+17.0; combo leftover $2981.26; owner union_hot_n4_h1 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `TRU` | 39 | $74.90 | $2.11 | — | $71.36 | — | top 4 by hot; rank hot_score; list yday_gainer,ohlc_hot; 🔵; ret5=+14.8; combo leftover $2981.26; owner union_hot_n4_h1 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $71.36 | ▼ close $11,823.68 vs 09:30 $11,981.48 (session -144.00) | 16:00 close · cash $71.36 · equity $11,823.68 vs 09:30 $11,981.48 (-157.80; session marks -144.00) · 4 name(s) marked open→close (per-name table). BLMN×306 09:30 $9.90 → close $9.95 +13.77; BBWI×145 09:30 $20.45 → close $20.14 -44.95; VFC×172 09:30 $17.32 → close $16.85 -80.84; TRU×39 09:30 $74.90 → close $74.08 -31.98 | — |
 
 ## Not taken
 

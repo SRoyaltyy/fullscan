@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+17.61%** ($11,761) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 20 · skips 0 · realized $-826.45.
+Cash book **+16.84%** ($11,684) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 27 · skips 0 · realized $-826.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -184,3 +184,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `PNC` | 10 | $208.49 | $2.02 | — | $4,479.32 | — | combo gate; gate macd_up=True,rsi_os=True; list earn_react; ret5=+0.0; leftover $2179.00 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `JBHT` | 9 | $232.93 | $2.02 | — | $2,380.93 | — | combo gate; gate macd_up=True,rsi_os=True; list overnight; 🔵; ret5=+4.3; leftover $2179.00 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,380.93 | ▲ close $11,761.34 vs 09:30 $11,678.72 (session +93.09) | 16:00 close · cash $2,380.93 · equity $11,761.34 vs 09:30 $11,678.72 (+82.62; session marks +93.09) · 4 name(s) marked open→close (per-name table). LW×55 09:30 $53.79 → close $54.21 +23.10; FIS×59 09:30 $36.40 → close $36.13 -15.93; PNC×10 09:30 $208.49 → close $214.94 +64.50; JBHT×9 09:30 $232.93 → close $235.31 +21.42 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,380.93 | ▼ 09:30 equity $11,743.91 vs yday $11,761.34 (-17.43) | 09:30 open · cash $2,380.93 (unchanged overnight, no fees) · equity $11,743.91 vs prior close $11,761.34 (-17.43) · 4 name(s) re-marked at the open (per-name table). FIS×59 yday $36.13 → 09:30 $36.42 +17.11; JBHT×9 yday $235.31 → 09:30 $228.00 -65.79; LW×55 yday $54.21 → 09:30 $54.48 +14.85; PNC×10 yday $214.94 → 09:30 $216.58 +16.40 | — |
+| 2026-10-16 09:30 ET | **SELL** | `FIS` | 59 | $36.42 | $2.19 | $-3.18 | $4,527.52 | ▼ -3.18 after sell → book $11,741.72; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `PNC` | 10 | $216.58 | $2.05 | $+76.83 | $6,691.27 | ▲ +76.83 after sell → book $11,739.67; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **BUY** | `DGX` | 4 | $239.67 | $2.00 | — | $5,730.59 | — | combo gate; gate macd_up=True,rsi_os=True; list yday_mover; 🔵; ret5=+3.6; leftover $1115.21 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `PLNT` | 22 | $49.48 | $2.06 | — | $4,639.97 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; 🔵; ret5=+12.2; leftover $1115.21 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `WM` | 4 | $224.78 | $2.00 | — | $3,738.85 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; ret5=+6.7; leftover $1115.21 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `EFX` | 6 | $161.77 | $2.01 | — | $2,766.22 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; ret5=+10.8; leftover $1115.21 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `INTU` | 3 | $332.34 | $2.00 | — | $1,767.20 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; 🔵; ret5=+8.7; leftover $1115.21 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 judge🔴 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,767.20 | ▼ close $11,684.30 vs 09:30 $11,743.91 (session -45.30) | 16:00 close · cash $1,767.20 · equity $11,684.30 vs 09:30 $11,743.91 (-59.61; session marks -45.30) · 7 name(s) marked open→close (per-name table). JBHT×9 09:30 $228.00 → close $228.78 +7.02; LW×55 09:30 $54.48 → close $53.59 -48.95; DGX×4 09:30 $239.67 → close $235.00 -18.68; PLNT×22 09:30 $49.48 → close $50.92 +31.68; WM×4 09:30 $224.78 → close $226.86 +8.32; EFX×6 09:30 $161.77 → close $161.25 -3.12; INTU×3 09:30 $332.34 → close $325.15 -21.57 | — |

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g, no 🚨
 
-Cash book **-10.23%** ($8,976) · signal-only (no cash/fees) was -14.17%. Starts YES **21/30**. Fills 306 · skips 286 · realized $-156.04.
+Cash book **-6.43%** ($9,357) · signal-only (no cash/fees) was -14.17%. Starts YES **21/30**. Fills 306 · skips 286 · realized $-156.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -468,6 +468,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **SELL** | `QSI` | 4 | $1.35 | $0.09 | $-0.66 | $9.75 | ▼ -0.66 after sell → book $8,767.20; vs 09:30 mark -0.08 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-15 09:30 ET | **SELL** | `RXRX` | 1 | $3.65 | $0.06 | $-0.77 | $13.34 | ▼ -0.77 after sell → book $8,767.14; vs 09:30 mark -0.06 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13.34 | ▲ close $8,976.47 vs 09:30 $8,767.35 (session +209.33) | 16:00 close · cash $13.34 · equity $8,976.47 vs 09:30 $8,767.35 (+209.12; session marks +209.33) · 1 name(s) marked open→close (per-name table). EGG×1903 09:30 $4.60 → close $4.71 +209.33 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13.34 | ▲ 09:30 equity $9,280.95 vs yday $8,976.47 (+304.48) | 09:30 open · cash $13.34 (unchanged overnight, no fees) · equity $9,280.95 vs prior close $8,976.47 (+304.48) · 1 name(s) re-marked at the open (per-name table). EGG×1903 yday $4.71 → 09:30 $4.87 +304.48 | — |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13.34 | ▲ close $9,357.07 vs 09:30 $9,280.95 (session +76.12) | 16:00 close · cash $13.34 · equity $9,357.07 vs 09:30 $9,280.95 (+76.12; session marks +76.12) · 1 name(s) marked open→close (per-name table). EGG×1903 09:30 $4.87 → close $4.91 +76.12 | — |
 
 ## Not taken
 

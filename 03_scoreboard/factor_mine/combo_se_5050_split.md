@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · split short_news_r_h3/union_e_fresh_h3 w=0.5,0.5 net=priority
 
-Cash book **-13.34%** ($8,666) · signal-only (no cash/fees) was —. Starts YES **21/30**. Fills 297 · skips 315 · realized $+2068.42.
+Cash book **-13.23%** ($8,677) · signal-only (no cash/fees) was —. Starts YES **21/30**. Fills 300 · skips 315 · realized $+2068.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,710.40.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,858.00.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -520,6 +520,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **COVER** | `AEHL` | 211 | $9.03 | $2.72 | $+245.53 | $5,158.96 | ▲ +245.53 after sell → book $4,606.02; vs 09:30 mark -2.72 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,067.01 | ▲ 09:30 equity $4,608.74 vs yday $4,091.53 (+517.21) | 09:30 open · cash $7,067.01 (unchanged overnight, no fees) · equity $4,608.74 vs prior close $4,091.53 (+517.21) · 3 name(s) re-marked at the open (per-name table). AEHL×211 yday $11.49 → 09:30 $9.03 +519.06; MOH×1 yday $209.19 → 09:30 $210.39 -1.20; NOG×13 yday $26.30 → 09:30 $26.35 -0.65 | — |
 | 2026-10-15 09:30 ET | **SHORT** | `AA` | 57 | $39.77 | $2.25 | — | $7,423.60 | — | news🔴; gate news=bad; list overnight; ret5=-5.6; leftover $2303.01 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `RF` | 1 | $27.89 | $0.28 | — | $258.63 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+0.9; leftover $40.97 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `WSE` | 3 | $12.05 | $0.37 | — | $222.11 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+3.6; leftover $40.97 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,635.89 | ▲ close $4,582.15 vs 09:30 $4,496.85 (session +87.51) | 16:00 close · cash $9,635.89 · equity $4,582.15 vs 09:30 $4,496.85 (+85.30; session marks +87.51) · 4 name(s) marked open→close (per-name table). AA×57 09:30 $41.65 → close $41.45 +11.40; MOH×1 09:30 $214.05 → close $207.36 +6.69; NOG×13 09:30 $26.05 → close $27.16 -14.43; RBLX×43 09:30 $51.50 → close $49.55 +83.85 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,423.60 | ▼ 09:30 equity $4,496.85 vs yday $4,572.41 (-75.56) | 09:30 open · cash $7,423.60 (unchanged overnight, no fees) · equity $4,496.85 vs prior close $4,572.41 (-75.56) · 3 name(s) re-marked at the open (per-name table). AA×57 yday $40.42 → 09:30 $41.65 -70.11; MOH×1 yday $212.50 → 09:30 $214.05 -1.55; NOG×13 yday $25.75 → 09:30 $26.05 -3.90 | — |
+| 2026-10-16 09:30 ET | **SHORT** | `RBLX` | 43 | $51.50 | $2.21 | — | $9,635.89 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+12.3; leftover $2248.43 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 
 ## Not taken
 

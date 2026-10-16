@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **-7.95%** ($9,205) · signal-only (no cash/fees) was -16.54%. Starts YES **11/30**. Fills 53 · skips 85 · realized $-1342.35.
+Cash book **-7.38%** ($9,262) · signal-only (no cash/fees) was -16.54%. Starts YES **11/30**. Fills 53 · skips 85 · realized $-1342.35.
 
 ## How this sleeve decides (like you are 10)
 
@@ -216,6 +216,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.97 | ▲ close $9,056.88 vs 09:30 $8,880.64 (session +183.94) | 16:00 close · cash $5.97 · equity $9,056.88 vs 09:30 $8,880.64 (+176.24; session marks +183.94) · 2 name(s) marked open→close (per-name table). AMX×205 09:30 $21.62 → close $21.84 +45.10; BAC×89 09:30 $49.83 → close $51.39 +138.84 | — |
 | 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.97 | ▲ 09:30 equity $9,079.51 vs yday $9,056.88 (+22.63) | 09:30 open · cash $5.97 (unchanged overnight, no fees) · equity $9,079.51 vs prior close $9,056.88 (+22.63) · 2 name(s) re-marked at the open (per-name table). AMX×205 yday $21.84 → 09:30 $21.92 +16.40; BAC×89 yday $51.39 → 09:30 $51.46 +6.23 | — |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.97 | ▲ close $9,205.42 vs 09:30 $9,079.51 (session +125.91) | 16:00 close · cash $5.97 · equity $9,205.42 vs 09:30 $9,079.51 (+125.91; session marks +125.91) · 2 name(s) marked open→close (per-name table). AMX×205 09:30 $21.92 → close $22.43 +104.55; BAC×89 09:30 $51.46 → close $51.70 +21.36 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.97 | ▲ 09:30 equity $9,283.53 vs yday $9,205.42 (+78.11) | 09:30 open · cash $5.97 (unchanged overnight, no fees) · equity $9,283.53 vs prior close $9,205.42 (+78.11) · 2 name(s) re-marked at the open (per-name table). AMX×205 yday $22.43 → 09:30 $22.62 +38.95; BAC×89 yday $51.70 → 09:30 $52.14 +39.16 | — |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.97 | ▼ close $9,261.99 vs 09:30 $9,283.53 (session -21.54) | 16:00 close · cash $5.97 · equity $9,261.99 vs 09:30 $9,283.53 (-21.54; session marks -21.54) · 2 name(s) marked open→close (per-name table). AMX×205 09:30 $22.62 → close $22.91 +59.45; BAC×89 09:30 $52.14 → close $51.23 -80.99 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-8.35%** ($9,165) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 202 · skips 209 · realized $-2117.42.
+Cash book **-8.40%** ($9,160) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 202 · skips 209 · realized $-2117.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -364,6 +364,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **SELL** | `LVWR` | 13 | $1.57 | $0.26 | $-0.77 | $49.40 | ▼ -0.77 after sell → book $9,124.61; vs 09:30 mark -0.27 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-15 09:30 ET | **SELL** | `WFF` | 1 | $0.15 | $0.02 | $-14.81 | $49.53 | ▼ -14.81 after sell → book $9,124.59; vs 09:30 mark -0.02 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $49.53 | ▲ close $9,164.85 vs 09:30 $9,125.23 (session +40.26) | 16:00 close · cash $49.53 · equity $9,164.85 vs 09:30 $9,125.23 (+39.62; session marks +40.26) · 2 name(s) marked open→close (per-name table). CNK×116 09:30 $38.44 → close $38.52 +9.28; HLP×1549 09:30 $2.98 → close $3.00 +30.98 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $49.53 | ▼ 09:30 equity $9,089.31 vs yday $9,164.85 (-75.54) | 09:30 open · cash $49.53 (unchanged overnight, no fees) · equity $9,089.31 vs prior close $9,164.85 (-75.54) · 2 name(s) re-marked at the open (per-name table). CNK×116 yday $38.52 → 09:30 $38.67 +17.40; HLP×1549 yday $3.00 → 09:30 $2.94 -92.94 | — |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $49.53 | ▲ close $9,160.21 vs 09:30 $9,089.31 (session +70.90) | 16:00 close · cash $49.53 · equity $9,160.21 vs 09:30 $9,089.31 (+70.90; session marks +70.90) · 2 name(s) marked open→close (per-name table). CNK×116 09:30 $38.67 → close $38.48 -22.04; HLP×1549 09:30 $2.94 → close $3.00 +92.94 | — |
 
 ## Not taken
 

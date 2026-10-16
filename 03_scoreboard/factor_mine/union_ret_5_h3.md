@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **-2.21%** ($9,779) · signal-only (no cash/fees) was +97.62%. Starts YES **29/30**. Fills 280 · skips 293 · realized $+1779.39.
+Cash book **-4.41%** ($9,559) · signal-only (no cash/fees) was +97.62%. Starts YES **29/30**. Fills 281 · skips 293 · realized $+1779.39.
 
 ## How this sleeve decides (like you are 10)
 
@@ -441,6 +441,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `ACI` | 1 | $12.99 | $0.13 | — | $71.26 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+11.4; leftover $20.21 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `SG` | 1 | $10.21 | $0.11 | — | $60.95 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+10.7; leftover $20.21 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $60.95 | ▲ close $9,778.71 vs 09:30 $9,435.81 (session +343.52) | 16:00 close · cash $60.95 · equity $9,778.71 vs 09:30 $9,435.81 (+342.90; session marks +343.52) · 12 name(s) marked open→close (per-name table). ECO×11 09:30 $89.67 → close $89.18 -5.39; ETSY×15 09:30 $84.47 → close $89.18 +70.65; HLP×418 09:30 $2.98 → close $3.00 +8.36; JLHL×249 09:30 $4.34 → close $4.77 +107.07; MNSO×114 09:30 $10.41 → close $10.58 +19.38; ODD×53 09:30 $21.95 → close $23.17 +64.66; PINS×53 09:30 $21.59 → close $22.71 +59.10; VFC×74 09:30 $16.76 → close $17.00 +17.76; BLMN×2 09:30 $9.48 → close $9.93 +0.90; ENGS×5 09:30 $3.50 → close $3.62 +0.60; ACI×1 09:30 $12.99 → close $13.03 +0.04; SG×1 09:30 $10.21 → close $10.60 +0.39 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $60.95 | ▲ 09:30 equity $9,809.33 vs yday $9,778.71 (+30.62) | 09:30 open · cash $60.95 (unchanged overnight, no fees) · equity $9,809.33 vs prior close $9,778.71 (+30.62) · 12 name(s) re-marked at the open (per-name table). ACI×1 yday $13.03 → 09:30 $13.03 +0.00; BLMN×2 yday $9.93 → 09:30 $9.90 -0.05; ECO×11 yday $89.18 → 09:30 $91.86 +29.48; ENGS×5 yday $3.62 → 09:30 $3.72 +0.50; ETSY×15 yday $89.18 → 09:30 $89.50 +4.80; HLP×418 yday $3.00 → 09:30 $2.94 -25.08; JLHL×249 yday $4.77 → 09:30 $4.80 +7.47; MNSO×114 yday $10.58 → 09:30 $10.37 -23.94; ODD×53 yday $23.17 → 09:30 $23.34 +9.01; PINS×53 yday $22.71 → 09:30 $22.80 +4.77; SG×1 yday $10.60 → 09:30 $10.58 -0.02; VFC×74 yday $17.00 → 09:30 $17.32 +23.68 | — |
+| 2026-10-16 09:30 ET | **BUY** | `GLND` | 3 | $3.33 | $0.11 | — | $50.85 | — | rank by ret_5; rank ret_5; list yday_mover; ret5=+32.2; leftover $10.16 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $50.85 | ▼ close $9,558.71 vs 09:30 $9,809.33 (session -250.51) | 16:00 close · cash $50.85 · equity $9,558.71 vs 09:30 $9,809.33 (-250.62; session marks -250.51) · 13 name(s) marked open→close (per-name table). ACI×1 09:30 $13.03 → close $13.09 +0.06; BLMN×2 09:30 $9.90 → close $9.95 +0.09; ECO×11 09:30 $91.86 → close $89.70 -23.76; ENGS×5 09:30 $3.72 → close $3.75 +0.15; ETSY×15 09:30 $89.50 → close $85.14 -65.40; HLP×418 09:30 $2.94 → close $3.00 +25.08; JLHL×249 09:30 $4.80 → close $4.66 -34.86; MNSO×114 09:30 $10.37 → close $10.19 -20.52; ODD×53 09:30 $23.34 → close $22.43 -48.23; PINS×53 09:30 $22.80 → close $21.91 -47.17; SG×1 09:30 $10.58 → close $10.04 -0.54; VFC×74 09:30 $17.32 → close $16.85 -34.78; GLND×3 09:30 $3.33 → close $3.12 -0.63 | — |
 
 ## Not taken
 

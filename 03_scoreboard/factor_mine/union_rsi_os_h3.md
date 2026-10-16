@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-22.12%** ($7,788) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 120 · skips 88 · realized $-2389.72.
+Cash book **-22.72%** ($7,728) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 121 · skips 88 · realized $-2389.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -282,6 +282,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `PNC` | 1 | $208.49 | $1.99 | — | $986.57 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list earn_react; ret5=+0.0; leftover $341.02 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `JBHT` | 1 | $232.93 | $1.99 | — | $751.65 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list overnight; 🔵; ret5=+4.3; leftover $341.02 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $751.65 | ▲ close $7,787.56 vs 09:30 $7,762.95 (session +34.60) | 16:00 close · cash $751.65 · equity $7,787.56 vs 09:30 $7,762.95 (+24.61; session marks +34.60) · 8 name(s) marked open→close (per-name table). BAC×38 09:30 $51.46 → close $51.70 +9.12; LW×36 09:30 $53.79 → close $54.21 +15.12; MS×10 09:30 $182.49 → close $182.10 -3.90; FIS×9 09:30 $36.40 → close $36.13 -2.43; DGX×1 09:30 $235.85 → close $239.15 +3.30; BNY×2 09:30 $139.81 → close $142.09 +4.56; PNC×1 09:30 $208.49 → close $214.94 +6.45; JBHT×1 09:30 $232.93 → close $235.31 +2.38 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $751.65 | ▲ 09:30 equity $7,819.56 vs yday $7,787.56 (+32.00) | 09:30 open · cash $751.65 (unchanged overnight, no fees) · equity $7,819.56 vs prior close $7,787.56 (+32.00) · 8 name(s) re-marked at the open (per-name table). BAC×38 yday $51.70 → 09:30 $52.14 +16.72; BNY×2 yday $142.09 → 09:30 $143.24 +2.30; DGX×1 yday $239.15 → 09:30 $239.67 +0.52; FIS×9 yday $36.13 → 09:30 $36.42 +2.61; JBHT×1 yday $235.31 → 09:30 $228.00 -7.31; LW×36 yday $54.21 → 09:30 $54.48 +9.72; MS×10 yday $182.10 → 09:30 $182.68 +5.80; PNC×1 yday $214.94 → 09:30 $216.58 +1.64 | — |
+| 2026-10-16 09:30 ET | **BUY** | `PLNT` | 3 | $49.48 | $1.49 | — | $601.72 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; 🔵; ret5=+12.2; leftover $150.33 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $601.72 | ▼ close $7,728.02 vs 09:30 $7,819.56 (session -90.05) | 16:00 close · cash $601.72 · equity $7,728.02 vs 09:30 $7,819.56 (-91.54; session marks -90.05) · 9 name(s) marked open→close (per-name table). BAC×38 09:30 $52.14 → close $51.23 -34.58; BNY×2 09:30 $143.24 → close $143.30 +0.12; DGX×1 09:30 $239.67 → close $235.00 -4.67; FIS×9 09:30 $36.42 → close $36.01 -3.69; JBHT×1 09:30 $228.00 → close $228.78 +0.78; LW×36 09:30 $54.48 → close $53.59 -32.04; MS×10 09:30 $182.68 → close $180.57 -21.10; PNC×1 09:30 $216.58 → close $217.39 +0.81; PLNT×3 09:30 $49.48 → close $50.92 +4.32 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off, no 🚨
 
-Cash book **-22.35%** ($7,765) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 379 · skips 105 · realized $-1593.31.
+Cash book **-22.85%** ($7,715) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 385 · skips 105 · realized $-1593.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -544,6 +544,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `EPR` | 17 | $55.57 | $2.04 | — | $1,238.74 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; ret5=+0.9; leftover $982.24 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `ITW` | 3 | $272.49 | $2.00 | — | $419.27 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+3.2; leftover $982.24 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $419.27 | ▲ close $7,765.24 vs 09:30 $7,640.26 (session +143.83) | 16:00 close · cash $419.27 · equity $7,765.24 vs 09:30 $7,640.26 (+124.98; session marks +143.83) · 8 name(s) marked open→close (per-name table). POOL×5 09:30 $160.58 → close $169.12 +42.70; TBBB×17 09:30 $56.34 → close $56.03 -5.27; TRU×14 09:30 $68.55 → close $74.12 +77.98; IT×4 09:30 $199.10 → close $207.31 +32.84; FIS×26 09:30 $36.40 → close $36.13 -7.02; YOU×22 09:30 $44.40 → close $45.02 +13.64; EPR×17 09:30 $55.57 → close $55.15 -7.14; ITW×3 09:30 $272.49 → close $271.19 -3.90 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $419.27 | ▲ 09:30 equity $7,832.40 vs yday $7,765.24 (+67.16) | 09:30 open · cash $419.27 (unchanged overnight, no fees) · equity $7,832.40 vs prior close $7,765.24 (+67.16) · 8 name(s) re-marked at the open (per-name table). EPR×17 yday $55.15 → 09:30 $55.26 +1.87; FIS×26 yday $36.13 → 09:30 $36.42 +7.54; IT×4 yday $207.31 → 09:30 $209.00 +6.76; ITW×3 yday $271.19 → 09:30 $273.23 +6.12; POOL×5 yday $169.12 → 09:30 $170.06 +4.70; TBBB×17 yday $56.03 → 09:30 $57.00 +16.49; TRU×14 yday $74.12 → 09:30 $74.90 +10.92; YOU×22 yday $45.02 → 09:30 $45.60 +12.76 | — |
+| 2026-10-16 09:30 ET | **SELL** | `FIS` | 26 | $36.42 | $2.09 | $-3.64 | $1,364.10 | ▼ -3.64 after sell → book $7,830.31; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `TBBB` | 17 | $57.00 | $2.06 | $+12.39 | $2,331.04 | ▲ +12.39 after sell → book $7,828.25; vs 09:30 mark -2.06 | dropped from list after 2 sess (min 1) | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **SELL** | `TRU` | 14 | $74.90 | $2.05 | $+114.64 | $3,377.59 | ▲ +114.64 after sell → book $7,826.20; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `TOST` | 34 | $32.59 | $2.09 | — | $2,267.44 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ret5=+5.5; leftover $1125.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `AVPT` | 74 | $15.03 | $2.21 | — | $1,153.00 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ret5=+3.2; leftover $1125.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `AMX` | 49 | $22.62 | $2.14 | — | $42.49 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+1.3; leftover $1125.86 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $42.49 | ▼ close $7,715.20 vs 09:30 $7,832.40 (session -104.56) | 16:00 close · cash $42.49 · equity $7,715.20 vs 09:30 $7,832.40 (-117.20; session marks -104.56) · 8 name(s) marked open→close (per-name table). EPR×17 09:30 $55.26 → close $55.71 +7.65; IT×4 09:30 $209.00 → close $205.35 -14.60; ITW×3 09:30 $273.23 → close $272.28 -2.85; POOL×5 09:30 $170.06 → close $172.57 +12.55; YOU×22 09:30 $45.60 → close $43.93 -36.74; TOST×34 09:30 $32.59 → close $31.62 -32.98; AVPT×74 09:30 $15.03 → close $14.33 -51.80; AMX×49 09:30 $22.62 → close $22.91 +14.21 | — |
 
 ## Not taken
 

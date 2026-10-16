@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-39.67%** ($6,033) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 379 · skips 98 · realized $-2571.92.
+Cash book **-40.14%** ($5,986) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 387 · skips 98 · realized $-2571.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -540,6 +540,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `FIS` | 20 | $36.40 | $2.05 | — | $1,763.67 | — | rank by rsi; rank rsi; list flatten; 🔵; ret5=+4.9; leftover $747.51 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-15 09:30 ET | **BUY** | `CHWY` | 35 | $21.00 | $2.10 | — | $1,026.57 | — | rank by rsi; rank rsi; list ohlc_hot; ret5=+14.3; leftover $747.51 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,026.57 | ▲ close $6,032.61 vs 09:30 $5,998.64 (session +59.12) | 16:00 close · cash $1,026.57 · equity $6,032.61 vs 09:30 $5,998.64 (+33.97; session marks +59.12) · 7 name(s) marked open→close (per-name table). LW×14 09:30 $53.79 → close $54.21 +5.88; DGX×3 09:30 $235.85 → close $239.15 +9.90; BNY×5 09:30 $139.81 → close $142.09 +11.40; JBHT×3 09:30 $232.93 → close $235.31 +7.14; PNC×3 09:30 $208.49 → close $214.94 +19.35; FIS×20 09:30 $36.40 → close $36.13 -5.40; CHWY×35 09:30 $21.00 → close $21.31 +10.85 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,026.57 | ▲ 09:30 equity $6,033.54 vs yday $6,032.61 (+0.93) | 09:30 open · cash $1,026.57 (unchanged overnight, no fees) · equity $6,033.54 vs prior close $6,032.61 (+0.93) · 7 name(s) re-marked at the open (per-name table). BNY×5 yday $142.09 → 09:30 $143.24 +5.75; CHWY×35 yday $21.31 → 09:30 $21.34 +1.05; DGX×3 yday $239.15 → 09:30 $239.67 +1.56; FIS×20 yday $36.13 → 09:30 $36.42 +5.80; JBHT×3 yday $235.31 → 09:30 $228.00 -21.93; LW×14 yday $54.21 → 09:30 $54.48 +3.78; PNC×3 yday $214.94 → 09:30 $216.58 +4.92 | — |
+| 2026-10-16 09:30 ET | **SELL** | `BNY` | 5 | $143.24 | $2.02 | $+13.12 | $1,740.74 | ▲ +13.12 after sell → book $6,031.51; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `CHWY` | 35 | $21.34 | $2.12 | $+7.69 | $2,485.53 | ▲ +7.69 after sell → book $6,029.40; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **SELL** | `FIS` | 20 | $36.42 | $2.07 | $-3.72 | $3,211.86 | ▼ -3.72 after sell → book $6,027.33; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `PNC` | 3 | $216.58 | $2.02 | $+20.25 | $3,859.58 | ▲ +20.25 after sell → book $6,025.31; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **BUY** | `EFX` | 4 | $161.77 | $2.00 | — | $3,210.50 | — | rank by rsi; rank rsi; list ohlc_hot; ret5=+10.8; leftover $771.92 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `RF` | 27 | $27.89 | $2.07 | — | $2,455.40 | — | rank by rsi; rank rsi; list earn_react; ret5=+0.9; leftover $771.92 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `PLNT` | 15 | $49.48 | $2.04 | — | $1,711.16 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+12.2; leftover $771.92 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `INTU` | 2 | $332.34 | $2.00 | — | $1,044.49 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+8.7; leftover $771.92 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 judge🔴 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,044.49 | ▼ close $5,986.34 vs 09:30 $6,033.54 (session -30.87) | 16:00 close · cash $1,044.49 · equity $5,986.34 vs 09:30 $6,033.54 (-47.20; session marks -30.87) · 7 name(s) marked open→close (per-name table). DGX×3 09:30 $239.67 → close $235.00 -14.01; JBHT×3 09:30 $228.00 → close $228.78 +2.34; LW×14 09:30 $54.48 → close $53.59 -12.46; EFX×4 09:30 $161.77 → close $161.25 -2.08; RF×27 09:30 $27.89 → close $27.45 -11.88; PLNT×15 09:30 $49.48 → close $50.92 +21.60; INTU×2 09:30 $332.34 → close $325.15 -14.38 | — |
 
 ## Not taken
 

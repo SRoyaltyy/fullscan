@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-11.25%** ($8,875) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 404 · skips 105 · realized $-723.91.
+Cash book **-12.88%** ($8,712) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 414 · skips 105 · realized $-723.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -565,6 +565,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `NAUT` | 523 | $2.07 | $6.75 | — | $1,263.02 | — | rank by cond; rank cond; list ohlc_hot; ret5=+10.2; leftover $1082.89 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `COP` | 7 | $143.00 | $2.01 | — | $260.01 | — | rank by cond; rank cond; list ohlc_hot; ret5=+9.6; leftover $1082.89 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $260.01 | ▲ close $8,874.78 vs 09:30 $8,703.06 (session +201.82) | 16:00 close · cash $260.01 · equity $8,874.78 vs 09:30 $8,703.06 (+171.72; session marks +201.82) · 8 name(s) marked open→close (per-name table). AMX×50 09:30 $21.92 → close $22.43 +25.50; TRU×16 09:30 $68.55 → close $74.12 +89.12; CAH×4 09:30 $252.00 → close $253.71 +6.84; FIS×29 09:30 $36.40 → close $36.13 -7.83; IT×5 09:30 $199.10 → close $207.31 +41.05; KURA×112 09:30 $9.62 → close $9.70 +8.96; NAUT×523 09:30 $2.07 → close $2.16 +47.07; COP×7 09:30 $143.00 → close $141.73 -8.89 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $260.01 | ▲ 09:30 equity $8,927.73 vs yday $8,874.78 (+52.95) | 09:30 open · cash $260.01 (unchanged overnight, no fees) · equity $8,927.73 vs prior close $8,874.78 (+52.95) · 8 name(s) re-marked at the open (per-name table). AMX×50 yday $22.43 → 09:30 $22.62 +9.50; CAH×4 yday $253.71 → 09:30 $254.81 +4.40; COP×7 yday $141.73 → 09:30 $142.69 +6.72; FIS×29 yday $36.13 → 09:30 $36.42 +8.41; IT×5 yday $207.31 → 09:30 $209.00 +8.45; KURA×112 yday $9.70 → 09:30 $9.68 -2.24; NAUT×523 yday $2.16 → 09:30 $2.17 +5.23; TRU×16 yday $74.12 → 09:30 $74.90 +12.48 | — |
+| 2026-10-16 09:30 ET | **SELL** | `CAH` | 4 | $254.81 | $2.02 | $+7.22 | $1,277.23 | ▲ +7.22 after sell → book $8,925.71; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `COP` | 7 | $142.69 | $2.03 | $-6.21 | $2,274.03 | ▼ -6.21 after sell → book $8,923.68; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `FIS` | 29 | $36.42 | $2.10 | $-3.59 | $3,328.11 | ▼ -3.59 after sell → book $8,921.58; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `KURA` | 112 | $9.68 | $2.35 | $+2.04 | $4,409.92 | ▲ +2.04 after sell → book $8,919.23; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **SELL** | `NAUT` | 523 | $2.17 | $6.84 | $+38.71 | $5,537.98 | ▲ +38.71 after sell → book $8,912.38; vs 09:30 mark -6.85 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **BUY** | `VEEV` | 3 | $319.95 | $2.00 | — | $4,576.13 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ret5=+9.9; leftover $1107.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `PDFS` | 27 | $40.49 | $2.07 | — | $3,480.83 | — | rank by cond; rank cond; list flatten,probable,yday_gainer,yday_mover; 🔵; ret5=-20.9; leftover $1107.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-16 09:30 ET | **BUY** | `YOU` | 24 | $45.60 | $2.06 | — | $2,384.37 | — | rank by cond; rank cond; list flatten; 🔵; ret5=+4.5; leftover $1107.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-16 09:30 ET | **BUY** | `AVPT` | 73 | $15.03 | $2.21 | — | $1,284.97 | — | rank by cond; rank cond; list flatten; ret5=+3.2; leftover $1107.60 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `CFG` | 17 | $64.50 | $2.04 | — | $186.43 | — | rank by cond; rank cond; list earn_react; 🔵; ret5=-1.0; leftover $1107.60 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $186.43 | ▼ close $8,711.51 vs 09:30 $8,927.73 (session -190.49) | 16:00 close · cash $186.43 · equity $8,711.51 vs 09:30 $8,927.73 (-216.22; session marks -190.49) · 8 name(s) marked open→close (per-name table). AMX×50 09:30 $22.62 → close $22.91 +14.50; IT×5 09:30 $209.00 → close $205.35 -18.25; TRU×16 09:30 $74.90 → close $74.08 -13.12; VEEV×3 09:30 $319.95 → close $310.36 -28.77; PDFS×27 09:30 $40.49 → close $39.22 -34.29; YOU×24 09:30 $45.60 → close $43.93 -40.08; AVPT×73 09:30 $15.03 → close $14.33 -51.10; CFG×17 09:30 $64.50 → close $63.36 -19.38 | — |
 
 ## Not taken
 

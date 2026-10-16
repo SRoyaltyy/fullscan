@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g, no 🚨
 
-Cash book **-35.72%** ($6,428) · signal-only (no cash/fees) was +8.62%. Starts YES **0/30**. Fills 272 · skips 78 · realized $-274.79.
+Cash book **-37.30%** ($6,271) · signal-only (no cash/fees) was +8.62%. Starts YES **0/30**. Fills 278 · skips 78 · realized $-274.79.
 
 ## How this sleeve decides (like you are 10)
 
@@ -434,6 +434,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `COP` | 5 | $143.00 | $2.00 | — | $800.78 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+9.6; leftover $758.89 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `RELX` | 19 | $37.98 | $2.05 | — | $77.01 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+7.0; leftover $758.89 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $77.01 | ▲ close $6,427.85 vs 09:30 $6,348.19 (session +86.35) | 16:00 close · cash $77.01 · equity $6,427.85 vs 09:30 $6,348.19 (+79.66; session marks +86.35) · 8 name(s) marked open→close (per-name table). AMX×38 09:30 $21.92 → close $22.43 +19.38; ITW×3 09:30 $272.49 → close $271.19 -3.90; MNSO×79 09:30 $10.41 → close $10.58 +13.43; NVTS×82 09:30 $8.89 → close $9.23 +27.88; SG×82 09:30 $10.21 → close $10.60 +31.98; TBBB×14 09:30 $56.34 → close $56.03 -4.34; COP×5 09:30 $143.00 → close $141.73 -6.35; RELX×19 09:30 $37.98 → close $38.42 +8.27 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $77.01 | ▲ 09:30 equity $6,441.01 vs yday $6,427.85 (+13.16) | 09:30 open · cash $77.01 (unchanged overnight, no fees) · equity $6,441.01 vs prior close $6,427.85 (+13.16) · 8 name(s) re-marked at the open (per-name table). AMX×38 yday $22.43 → 09:30 $22.62 +7.22; COP×5 yday $141.73 → 09:30 $142.69 +4.80; ITW×3 yday $271.19 → 09:30 $273.23 +6.12; MNSO×79 yday $10.58 → 09:30 $10.37 -16.59; NVTS×82 yday $9.23 → 09:30 $8.98 -20.66; RELX×19 yday $38.42 → 09:30 $39.49 +20.33; SG×82 yday $10.60 → 09:30 $10.58 -1.64; TBBB×14 yday $56.03 → 09:30 $57.00 +13.58 | — |
+| 2026-10-16 09:30 ET | **SELL** | `COP` | 5 | $142.69 | $2.02 | $-5.58 | $788.44 | ▼ -5.58 after sell → book $6,438.98; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `MNSO` | 79 | $10.37 | $2.25 | $-4.48 | $1,605.41 | ▼ -4.48 after sell → book $6,436.73; vs 09:30 mark -2.25 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `RELX` | 19 | $39.49 | $2.07 | $+24.48 | $2,353.66 | ▲ +24.48 after sell → book $6,434.66; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **BUY** | `GLND` | 235 | $3.33 | $3.03 | — | $1,568.08 | — | union ∩ news_g, no 🚨; gate news=good; list yday_mover; ret5=+32.2; leftover $784.55 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `Z` | 25 | $31.32 | $2.06 | — | $783.01 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+7.9; leftover $784.55 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `ELF` | 6 | $116.25 | $2.01 | — | $83.50 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+9.6; leftover $784.55 | join🟢 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $83.50 | ▼ close $6,270.54 vs 09:30 $6,441.01 (session -157.02) | 16:00 close · cash $83.50 · equity $6,270.54 vs 09:30 $6,441.01 (-170.47; session marks -157.02) · 8 name(s) marked open→close (per-name table). AMX×38 09:30 $22.62 → close $22.91 +11.02; ITW×3 09:30 $273.23 → close $272.28 -2.85; NVTS×82 09:30 $8.98 → close $8.34 -52.32; SG×82 09:30 $10.58 → close $10.04 -44.28; TBBB×14 09:30 $57.00 → close $57.68 +9.52; GLND×235 09:30 $3.33 → close $3.12 -49.35; Z×25 09:30 $31.32 → close $30.82 -12.50; ELF×6 09:30 $116.25 → close $113.54 -16.26 | — |
 
 ## Not taken
 

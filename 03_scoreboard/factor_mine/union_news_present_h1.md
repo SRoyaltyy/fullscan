@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_present, no 🚨
 
-Cash book **-15.13%** ($8,487) · signal-only (no cash/fees) was -2.20%. Starts YES **0/30**. Fills 370 · skips 106 · realized $-251.67.
+Cash book **-18.07%** ($8,193) · signal-only (no cash/fees) was -2.20%. Starts YES **0/30**. Fills 376 · skips 106 · realized $-251.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -532,6 +532,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `YOU` | 23 | $44.40 | $2.06 | — | $1,172.28 | — | union ∩ news_present, no 🚨; gate news_present=True; list flatten; 🔵; ret5=+4.1; leftover $1060.22 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `EPR` | 19 | $55.57 | $2.05 | — | $114.40 | — | union ∩ news_present, no 🚨; gate news_present=True; list probable,yday_gainer,yday_mover; ret5=+0.9; leftover $1060.22 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $114.40 | ▲ close $8,486.57 vs 09:30 $8,341.17 (session +170.23) | 16:00 close · cash $114.40 · equity $8,486.57 vs 09:30 $8,341.17 (+145.40; session marks +170.23) · 8 name(s) marked open→close (per-name table). NVTS×104 09:30 $8.89 → close $9.23 +35.36; PRMB×55 09:30 $18.96 → close $18.98 +1.10; IT×5 09:30 $199.10 → close $207.31 +41.05; FIS×29 09:30 $36.40 → close $36.13 -7.83; TOST×35 09:30 $29.95 → close $32.22 +79.45; PDFS×26 09:30 $40.70 → close $41.27 +14.82; YOU×23 09:30 $44.40 → close $45.02 +14.26; EPR×19 09:30 $55.57 → close $55.15 -7.98 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $114.40 | ▲ 09:30 equity $8,499.62 vs yday $8,486.57 (+13.05) | 09:30 open · cash $114.40 (unchanged overnight, no fees) · equity $8,499.62 vs prior close $8,486.57 (+13.05) · 8 name(s) re-marked at the open (per-name table). EPR×19 yday $55.15 → 09:30 $55.26 +2.09; FIS×29 yday $36.13 → 09:30 $36.42 +8.41; IT×5 yday $207.31 → 09:30 $209.00 +8.45; NVTS×104 yday $9.23 → 09:30 $8.98 -26.21; PDFS×26 yday $41.27 → 09:30 $40.49 -20.28; PRMB×55 yday $18.98 → 09:30 $19.24 +14.30; TOST×35 yday $32.22 → 09:30 $32.59 +12.95; YOU×23 yday $45.02 → 09:30 $45.60 +13.34 | — |
+| 2026-10-16 09:30 ET | **SELL** | `EPR` | 19 | $55.26 | $2.07 | $-10.00 | $1,162.27 | ▼ -10.00 after sell → book $8,497.56; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **SELL** | `FIS` | 29 | $36.42 | $2.10 | $-3.59 | $2,216.36 | ▼ -3.59 after sell → book $8,495.46; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `NVTS` | 104 | $8.98 | $2.33 | $-107.28 | $3,147.74 | ▼ -107.28 after sell → book $8,493.13; vs 09:30 mark -2.33 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `TWLO` | 3 | $276.58 | $2.00 | — | $2,316.00 | — | union ∩ news_present, no 🚨; gate news_present=True; list flatten; ret5=-0.9; leftover $1049.25 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `AVPT` | 69 | $15.03 | $2.20 | — | $1,276.73 | — | union ∩ news_present, no 🚨; gate news_present=True; list flatten; ret5=+3.2; leftover $1049.25 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `SMMT` | 68 | $15.39 | $2.19 | — | $228.02 | — | union ∩ news_present, no 🚨; gate news_present=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-10.5; leftover $1049.25 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $228.02 | ▼ close $8,192.90 vs 09:30 $8,499.62 (session -293.84) | 16:00 close · cash $228.02 · equity $8,192.90 vs 09:30 $8,499.62 (-306.72; session marks -293.84) · 8 name(s) marked open→close (per-name table). IT×5 09:30 $209.00 → close $205.35 -18.25; PDFS×26 09:30 $40.49 → close $39.22 -33.02; PRMB×55 09:30 $19.24 → close $19.72 +26.40; TOST×35 09:30 $32.59 → close $31.62 -33.95; YOU×23 09:30 $45.60 → close $43.93 -38.41; TWLO×3 09:30 $276.58 → close $244.37 -96.63; AVPT×69 09:30 $15.03 → close $14.33 -48.30; SMMT×68 09:30 $15.39 → close $14.63 -51.68 | — |
 
 ## Not taken
 

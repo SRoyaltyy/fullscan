@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 3
 
-Cash book **-26.04%** ($7,396) · signal-only (no cash/fees) was -21.14%. Starts YES **1/30**. Fills 141 · skips 162 · realized $-2181.08.
+Cash book **-25.20%** ($7,480) · signal-only (no cash/fees) was -21.14%. Starts YES **1/30**. Fills 141 · skips 162 · realized $-2181.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -305,6 +305,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `AMX` | 166 | $21.92 | $2.49 | — | $3,650.34 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list yday_gainer; 🔵; ret5=-2.1; leftover $3645.78 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `CAH` | 14 | $252.00 | $2.03 | — | $120.31 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list ohlc_hot; ret5=+6.7; leftover $3645.78 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $120.31 | ▲ close $7,395.63 vs 09:30 $7,291.55 (session +108.60) | 16:00 close · cash $120.31 · equity $7,395.63 vs 09:30 $7,291.55 (+104.08; session marks +108.60) · 2 name(s) marked open→close (per-name table). AMX×166 09:30 $21.92 → close $22.43 +84.66; CAH×14 09:30 $252.00 → close $253.71 +23.94 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $120.31 | ▲ 09:30 equity $7,442.57 vs yday $7,395.63 (+46.94) | 09:30 open · cash $120.31 (unchanged overnight, no fees) · equity $7,442.57 vs prior close $7,395.63 (+46.94) · 2 name(s) re-marked at the open (per-name table). AMX×166 yday $22.43 → 09:30 $22.62 +31.54; CAH×14 yday $253.71 → 09:30 $254.81 +15.40 | — |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $120.31 | ▲ close $7,480.21 vs 09:30 $7,442.57 (session +37.64) | 16:00 close · cash $120.31 · equity $7,480.21 vs 09:30 $7,442.57 (+37.64; session marks +37.64) · 2 name(s) marked open→close (per-name table). AMX×166 09:30 $22.62 → close $22.91 +48.14; CAH×14 09:30 $254.81 → close $254.06 -10.50 | — |
 
 ## Not taken
 

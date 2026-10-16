@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g hold 5, no 🚨
 
-Cash book **-26.48%** ($7,352) · signal-only (no cash/fees) was +99.58%. Starts YES **1/30**. Fills 180 · skips 344 · realized $-1589.16.
+Cash book **-27.70%** ($7,230) · signal-only (no cash/fees) was +99.58%. Starts YES **1/30**. Fills 190 · skips 344 · realized $-1589.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -342,6 +342,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.89 | ▼ close $7,005.21 vs 09:30 $7,327.55 (session -322.34) | 16:00 close · cash $20.89 · equity $7,005.21 vs 09:30 $7,327.55 (-322.34; session marks -322.34) · 2 name(s) marked open→close (per-name table). FLUT×47 09:30 $77.48 → close $74.26 -151.34; GENI×570 09:30 $6.43 → close $6.13 -171.00 | — |
 | 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20.89 | ▲ 09:30 equity $7,032.42 vs yday $7,005.21 (+27.21) | 09:30 open · cash $20.89 (unchanged overnight, no fees) · equity $7,032.42 vs prior close $7,005.21 (+27.21) · 2 name(s) re-marked at the open (per-name table). FLUT×47 yday $74.26 → 09:30 $73.99 -12.69; GENI×570 yday $6.13 → 09:30 $6.20 +39.90 | — |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.89 | ▲ close $7,351.95 vs 09:30 $7,032.42 (session +319.53) | 16:00 close · cash $20.89 · equity $7,351.95 vs 09:30 $7,032.42 (+319.53; session marks +319.53) · 2 name(s) marked open→close (per-name table). FLUT×47 09:30 $73.99 → close $76.18 +102.93; GENI×570 09:30 $6.20 → close $6.58 +216.60 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20.89 | ▲ 09:30 equity $7,442.73 vs yday $7,351.95 (+90.78) | 09:30 open · cash $20.89 (unchanged overnight, no fees) · equity $7,442.73 vs prior close $7,351.95 (+90.78) · 2 name(s) re-marked at the open (per-name table). FLUT×47 yday $76.18 → 09:30 $77.02 +39.48; GENI×570 yday $6.58 → 09:30 $6.67 +51.30 | — |
+| 2026-10-16 09:30 ET | **SELL** | `FLUT` | 47 | $77.02 | $2.17 | $-228.49 | $3,638.66 | ▼ -228.49 after sell → book $7,440.56; vs 09:30 mark -2.17 | dropped from list after 5 sess (min 5) | — |
+| 2026-10-16 09:30 ET | **SELL** | `GENI` | 570 | $6.67 | $7.48 | $-83.23 | $7,433.08 | ▼ -83.23 after sell → book $7,433.08; vs 09:30 mark -7.48 | dropped from list after 5 sess (min 5) | — |
+| 2026-10-16 09:30 ET | **BUY** | `NVTS` | 103 | $8.98 | $2.30 | — | $6,506.05 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; ret5=-15.6; leftover $929.14 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `ITW` | 3 | $273.23 | $2.00 | — | $5,684.36 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list yday_gainer; ret5=+2.4; leftover $929.14 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `AMX` | 41 | $22.62 | $2.11 | — | $4,754.83 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list yday_gainer; ret5=+1.3; leftover $929.14 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `TBBB` | 16 | $57.00 | $2.04 | — | $3,840.79 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+5.6; leftover $929.14 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `GLND` | 279 | $3.33 | $3.60 | — | $2,908.12 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list yday_mover; ret5=+32.2; leftover $929.14 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `Z` | 29 | $31.32 | $2.08 | — | $1,997.76 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list ohlc_hot; ret5=+7.9; leftover $929.14 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `SG` | 87 | $10.58 | $2.25 | — | $1,075.05 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+10.8; leftover $929.14 | join🔴 sector🔴 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `ELF` | 7 | $116.25 | $2.01 | — | $259.29 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+9.6; leftover $929.14 | join🟢 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $259.29 | ▼ close $7,229.86 vs 09:30 $7,442.73 (session -184.83) | 16:00 close · cash $259.29 · equity $7,229.86 vs 09:30 $7,442.73 (-212.87; session marks -184.83) · 8 name(s) marked open→close (per-name table). NVTS×103 09:30 $8.98 → close $8.34 -65.71; ITW×3 09:30 $273.23 → close $272.28 -2.85; AMX×41 09:30 $22.62 → close $22.91 +11.89; TBBB×16 09:30 $57.00 → close $57.68 +10.88; GLND×279 09:30 $3.33 → close $3.12 -58.59; Z×29 09:30 $31.32 → close $30.82 -14.50; SG×87 09:30 $10.58 → close $10.04 -46.98; ELF×7 09:30 $116.25 → close $113.54 -18.97 | — |
 
 ## Not taken
 

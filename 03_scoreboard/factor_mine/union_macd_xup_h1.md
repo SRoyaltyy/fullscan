@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-7.34%** ($9,266) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 263 · skips 71 · realized $-1788.82.
+Cash book **-8.52%** ($9,148) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 266 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -425,6 +425,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **SELL** | `HLP` | 1570 | $2.98 | $20.55 | $+179.00 | $9,193.67 | ▲ +179.00 after sell → book $9,193.67; vs 09:30 mark -20.55 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-15 09:30 ET | **BUY** | `SCHW` | 98 | $93.39 | $2.28 | — | $38.68 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list earn_react; ret5=+1.3; leftover $9193.67 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $38.68 | ▲ close $9,266.36 vs 09:30 $9,216.62 (session +74.97) | 16:00 close · cash $38.68 · equity $9,266.36 vs 09:30 $9,216.62 (+49.74; session marks +74.97) · 1 name(s) marked open→close (per-name table). SCHW×98 09:30 $93.39 → close $94.16 +74.97 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $38.68 | ▼ 09:30 equity $9,205.60 vs yday $9,266.36 (-60.76) | 09:30 open · cash $38.68 (unchanged overnight, no fees) · equity $9,205.60 vs prior close $9,266.36 (-60.76) · 1 name(s) re-marked at the open (per-name table). SCHW×98 yday $94.16 → 09:30 $93.54 -60.76 | — |
+| 2026-10-16 09:30 ET | **SELL** | `SCHW` | 98 | $93.54 | $2.37 | $+9.55 | $9,203.23 | ▲ +9.55 after sell → book $9,203.23; vs 09:30 mark -2.37 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **BUY** | `EPR` | 83 | $55.26 | $2.24 | — | $4,614.41 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable,yday_gainer,yday_mover; ret5=+1.4; leftover $4601.61 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `DGX` | 19 | $239.67 | $2.05 | — | $58.63 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_mover; 🔵; ret5=+3.6; leftover $4601.61 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $58.63 | ▼ close $9,147.56 vs 09:30 $9,205.60 (session -51.38) | 16:00 close · cash $58.63 · equity $9,147.56 vs 09:30 $9,205.60 (-58.04; session marks -51.38) · 2 name(s) marked open→close (per-name table). EPR×83 09:30 $55.26 → close $55.71 +37.35; DGX×19 09:30 $239.67 → close $235.00 -88.73 | — |
 
 ## Not taken
 

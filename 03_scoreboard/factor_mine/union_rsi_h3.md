@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-25.19%** ($7,481) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 267 · skips 269 · realized $-1699.80.
+Cash book **-26.84%** ($7,316) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 269 · skips 269 · realized $-1699.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -428,6 +428,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `FIS` | 4 | $36.40 | $1.47 | — | $825.70 | — | rank by rsi; rank rsi; list flatten; 🔵; ret5=+4.9; leftover $159.14 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-15 09:30 ET | **BUY** | `CHWY` | 7 | $21.00 | $1.49 | — | $677.21 | — | rank by rsi; rank rsi; list ohlc_hot; ret5=+14.3; leftover $159.14 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $677.21 | ▲ close $7,481.19 vs 09:30 $7,204.49 (session +281.06) | 16:00 close · cash $677.21 · equity $7,481.19 vs 09:30 $7,204.49 (+276.70; session marks +281.06) · 10 name(s) marked open→close (per-name table). BAC×18 09:30 $51.46 → close $51.70 +4.32; ETSY×11 09:30 $84.47 → close $89.18 +51.81; FRSH×65 09:30 $13.67 → close $14.25 +37.70; JLHL×188 09:30 $4.34 → close $4.77 +80.84; KLRA×84 09:30 $10.55 → close $11.71 +97.44; LW×17 09:30 $53.79 → close $54.21 +7.14; MS×4 09:30 $182.49 → close $182.10 -1.56; BNY×1 09:30 $139.81 → close $142.09 +2.28; FIS×4 09:30 $36.40 → close $36.13 -1.08; CHWY×7 09:30 $21.00 → close $21.31 +2.17 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $677.21 | ▲ 09:30 equity $7,520.16 vs yday $7,481.19 (+38.97) | 09:30 open · cash $677.21 (unchanged overnight, no fees) · equity $7,520.16 vs prior close $7,481.19 (+38.97) · 10 name(s) re-marked at the open (per-name table). BAC×18 yday $51.70 → 09:30 $52.14 +7.92; BNY×1 yday $142.09 → 09:30 $143.24 +1.15; CHWY×7 yday $21.31 → 09:30 $21.34 +0.21; ETSY×11 yday $89.18 → 09:30 $89.50 +3.52; FIS×4 yday $36.13 → 09:30 $36.42 +1.16; FRSH×65 yday $14.25 → 09:30 $14.39 +9.10; JLHL×188 yday $4.77 → 09:30 $4.80 +5.64; KLRA×84 yday $11.71 → 09:30 $11.75 +3.36; LW×17 yday $54.21 → 09:30 $54.48 +4.59; MS×4 yday $182.10 → 09:30 $182.68 +2.32 | — |
+| 2026-10-16 09:30 ET | **BUY** | `RF` | 3 | $27.89 | $0.85 | — | $592.69 | — | rank by rsi; rank rsi; list earn_react; ret5=+0.9; leftover $96.74 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `PLNT` | 1 | $49.48 | $0.50 | — | $542.72 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+12.2; leftover $96.74 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $542.72 | ▼ close $7,316.29 vs 09:30 $7,520.16 (session -202.53) | 16:00 close · cash $542.72 · equity $7,316.29 vs 09:30 $7,520.16 (-203.87; session marks -202.53) · 12 name(s) marked open→close (per-name table). BAC×18 09:30 $52.14 → close $51.23 -16.38; BNY×1 09:30 $143.24 → close $143.30 +0.06; CHWY×7 09:30 $21.34 → close $20.97 -2.59; ETSY×11 09:30 $89.50 → close $85.14 -47.96; FIS×4 09:30 $36.42 → close $36.01 -1.64; FRSH×65 09:30 $14.39 → close $13.74 -42.25; JLHL×188 09:30 $4.80 → close $4.66 -26.32; KLRA×84 09:30 $11.75 → close $11.25 -42.00; LW×17 09:30 $54.48 → close $53.59 -15.13; MS×4 09:30 $182.68 → close $180.57 -8.44; RF×3 09:30 $27.89 → close $27.45 -1.32; PLNT×1 09:30 $49.48 → close $50.92 +1.44 | — |
 
 ## Not taken
 

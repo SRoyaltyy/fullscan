@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `rank_w` · sell `list` · S-boost `none` · rank-weighted leftover
 
-Cash book **-19.94%** ($8,006) · signal-only (no cash/fees) was -10.41%. Starts YES **1/30**. Fills 200 · skips 213 · realized $-994.96.
+Cash book **-20.07%** ($7,993) · signal-only (no cash/fees) was -10.41%. Starts YES **1/30**. Fills 200 · skips 213 · realized $-994.96.
 
 ## How this sleeve decides (like you are 10)
 
@@ -358,6 +358,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $154.73 | ▲ 09:30 equity $7,819.88 vs yday $7,704.59 (+115.29) | 09:30 open · cash $154.73 (unchanged overnight, no fees) · equity $7,819.88 vs prior close $7,704.59 (+115.29) · 6 name(s) re-marked at the open (per-name table). AVPT×50 yday $14.00 → 09:30 $13.99 -0.50; CNK×28 yday $38.20 → 09:30 $38.44 +6.72; TMUS×14 yday $157.79 → 09:30 $160.74 +41.30; TRU×27 yday $66.94 → 09:30 $68.55 +43.47; WLY×6 yday $51.49 → 09:30 $52.10 +3.66; WSM×6 yday $242.48 → 09:30 $245.92 +20.64 | — |
 | 2026-10-15 09:30 ET | **BUY** | `FIS` | 1 | $36.40 | $0.37 | — | $117.96 | — | rank-weighted leftover; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+4.9; leftover $36.84 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $117.96 | ▲ close $8,005.81 vs 09:30 $7,819.88 (session +186.30) | 16:00 close · cash $117.96 · equity $8,005.81 vs 09:30 $7,819.88 (+185.93; session marks +186.30) · 7 name(s) marked open→close (per-name table). AVPT×50 09:30 $13.99 → close $14.87 +44.00; CNK×28 09:30 $38.44 → close $38.52 +2.24; TMUS×14 09:30 $160.74 → close $157.03 -51.94; TRU×27 09:30 $68.55 → close $74.12 +150.39; WLY×6 09:30 $52.10 → close $52.97 +5.22; WSM×6 09:30 $245.92 → close $252.03 +36.66; FIS×1 09:30 $36.40 → close $36.13 -0.27 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $117.96 | ▲ 09:30 equity $8,070.10 vs yday $8,005.81 (+64.29) | 09:30 open · cash $117.96 (unchanged overnight, no fees) · equity $8,070.10 vs prior close $8,005.81 (+64.29) · 7 name(s) re-marked at the open (per-name table). AVPT×50 yday $14.87 → 09:30 $15.03 +8.00; CNK×28 yday $38.52 → 09:30 $38.67 +4.20; FIS×1 yday $36.13 → 09:30 $36.42 +0.29; TMUS×14 yday $157.03 → 09:30 $158.99 +27.44; TRU×27 yday $74.12 → 09:30 $74.90 +21.06; WLY×6 yday $52.97 → 09:30 $53.53 +3.36; WSM×6 yday $252.03 → 09:30 $252.02 -0.06 | — |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $117.96 | ▼ close $7,992.75 vs 09:30 $8,070.10 (session -77.35) | 16:00 close · cash $117.96 · equity $7,992.75 vs 09:30 $8,070.10 (-77.35; session marks -77.35) · 7 name(s) marked open→close (per-name table). AVPT×50 09:30 $15.03 → close $14.33 -35.00; CNK×28 09:30 $38.67 → close $38.48 -5.32; FIS×1 09:30 $36.42 → close $36.01 -0.41; TMUS×14 09:30 $158.99 → close $159.10 +1.54; TRU×27 09:30 $74.90 → close $74.08 -22.14; WLY×6 09:30 $53.53 → close $52.72 -4.86; WSM×6 09:30 $252.02 → close $250.16 -11.16 | — |
 
 ## Not taken
 

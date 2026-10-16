@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_up, no 🚨
 
-Cash book **-2.87%** ($9,713) · signal-only (no cash/fees) was +63.53%. Starts YES **26/30**. Fills 296 · skips 288 · realized $-45.00.
+Cash book **-2.34%** ($9,766) · signal-only (no cash/fees) was +63.53%. Starts YES **26/30**. Fills 297 · skips 288 · realized $-45.00.
 
 ## How this sleeve decides (like you are 10)
 
@@ -458,6 +458,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `TOST` | 4 | $29.95 | $1.21 | — | $276.51 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list flatten; 🔵; ret5=-2.3; leftover $126.96 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `YOU` | 2 | $44.40 | $0.89 | — | $186.82 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list flatten; 🔵; ret5=+4.1; leftover $126.96 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $186.82 | ▲ close $9,712.93 vs 09:30 $9,604.88 (session +112.54) | 16:00 close · cash $186.82 · equity $9,712.93 vs 09:30 $9,604.88 (+108.05; session marks +112.54) · 11 name(s) marked open→close (per-name table). CNK×31 09:30 $38.44 → close $38.52 +2.48; CXW×34 09:30 $32.47 → close $31.23 -42.16; EGG×272 09:30 $4.60 → close $4.71 +29.92; PRIM×14 09:30 $75.66 → close $73.75 -26.74; PRMB×63 09:30 $18.96 → close $18.98 +1.26; TRU×17 09:30 $68.55 → close $74.12 +94.69; WLY×22 09:30 $52.10 → close $52.97 +19.14; WSM×4 09:30 $245.92 → close $252.03 +24.44; FIS×3 09:30 $36.40 → close $36.13 -0.81; TOST×4 09:30 $29.95 → close $32.22 +9.08; YOU×2 09:30 $44.40 → close $45.02 +1.24 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $186.82 | ▲ 09:30 equity $9,805.41 vs yday $9,712.93 (+92.48) | 09:30 open · cash $186.82 (unchanged overnight, no fees) · equity $9,805.41 vs prior close $9,712.93 (+92.48) · 11 name(s) re-marked at the open (per-name table). CNK×31 yday $38.52 → 09:30 $38.67 +4.65; CXW×34 yday $31.23 → 09:30 $31.23 +0.00; EGG×272 yday $4.71 → 09:30 $4.87 +43.52; FIS×3 yday $36.13 → 09:30 $36.42 +0.87; PRIM×14 yday $73.75 → 09:30 $73.67 -1.12; PRMB×63 yday $18.98 → 09:30 $19.24 +16.38; TOST×4 yday $32.22 → 09:30 $32.59 +1.48; TRU×17 yday $74.12 → 09:30 $74.90 +13.26; WLY×22 yday $52.97 → 09:30 $53.53 +12.32; WSM×4 yday $252.03 → 09:30 $252.02 -0.04; YOU×2 yday $45.02 → 09:30 $45.60 +1.16 | — |
+| 2026-10-16 09:30 ET | **BUY** | `AVPT` | 2 | $15.03 | $0.31 | — | $156.45 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list flatten; ret5=+3.2; leftover $37.36 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $156.45 | ▼ close $9,765.80 vs 09:30 $9,805.41 (session -39.30) | 16:00 close · cash $156.45 · equity $9,765.80 vs 09:30 $9,805.41 (-39.61; session marks -39.30) · 12 name(s) marked open→close (per-name table). CNK×31 09:30 $38.67 → close $38.48 -5.89; CXW×34 09:30 $31.23 → close $30.67 -19.04; EGG×272 09:30 $4.87 → close $4.91 +10.88; FIS×3 09:30 $36.42 → close $36.01 -1.23; PRIM×14 09:30 $73.67 → close $73.21 -6.44; PRMB×63 09:30 $19.24 → close $19.72 +30.24; TOST×4 09:30 $32.59 → close $31.62 -3.88; TRU×17 09:30 $74.90 → close $74.08 -13.94; WLY×22 09:30 $53.53 → close $52.72 -17.82; WSM×4 09:30 $252.02 → close $250.16 -7.44; YOU×2 09:30 $45.60 → close $43.93 -3.34; AVPT×2 09:30 $15.03 → close $14.33 -1.40 | — |
 
 ## Not taken
 

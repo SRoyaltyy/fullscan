@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten hold 5, stop −8% at 09:30 even inside hold
 
-Cash book **-4.85%** ($9,515) · signal-only (no cash/fees) was +4.47%. Starts YES **3/30**. Fills 198 · skips 322 · realized $+309.24.
+Cash book **-8.34%** ($9,166) · signal-only (no cash/fees) was +4.47%. Starts YES **3/30**. Fills 206 · skips 322 · realized $+309.24.
 
 ## How this sleeve decides (like you are 10)
 
@@ -357,6 +357,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.79 | ▲ close $8,972.31 vs 09:30 $8,813.55 (session +158.76) | 16:00 close · cash $1.79 · equity $8,972.31 vs 09:30 $8,813.55 (+158.76; session marks +158.76) · 2 name(s) marked open→close (per-name table). BLFS×4 09:30 $38.61 → close $38.61 +0.00; PACS×196 09:30 $44.17 → close $44.98 +158.76 | — |
 | 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.79 | ▲ 09:30 equity $9,015.43 vs yday $8,972.31 (+43.12) | 09:30 open · cash $1.79 (unchanged overnight, no fees) · equity $9,015.43 vs prior close $8,972.31 (+43.12) · 2 name(s) re-marked at the open (per-name table). BLFS×4 yday $38.61 → 09:30 $38.61 +0.00; PACS×196 yday $44.98 → 09:30 $45.20 +43.12 | — |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.79 | ▲ close $9,515.23 vs 09:30 $9,015.43 (session +499.80) | 16:00 close · cash $1.79 · equity $9,515.23 vs 09:30 $9,015.43 (+499.80; session marks +499.80) · 2 name(s) marked open→close (per-name table). BLFS×4 09:30 $38.61 → close $38.61 +0.00; PACS×196 09:30 $45.20 → close $47.75 +499.80 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.79 | ▲ 09:30 equity $9,542.67 vs yday $9,515.23 (+27.44) | 09:30 open · cash $1.79 (unchanged overnight, no fees) · equity $9,542.67 vs prior close $9,515.23 (+27.44) · 2 name(s) re-marked at the open (per-name table). BLFS×4 yday $38.61 → 09:30 $38.61 +0.00; PACS×196 yday $47.75 → 09:30 $47.89 +27.44 | — |
+| 2026-10-16 09:30 ET | **SELL** | `PACS` | 196 | $47.89 | $2.69 | $+806.18 | $9,385.54 | ▲ +806.18 after sell → book $9,539.98; vs 09:30 mark -2.69 | dropped from list after 5 sess (min 5) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `IT` | 7 | $209.00 | $2.01 | — | $7,920.53 | — | flatten hold 5, stop −8% at 09:30 even inside hold; list flatten; wish-list (live io HOLD — not a ticket); ret5=+6.1; leftover $1564.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-16 09:30 ET | **BUY** | `TOST` | 47 | $32.59 | $2.13 | — | $6,386.67 | — | flatten hold 5, stop −8% at 09:30 even inside hold; list flatten; wish-list (live io HOLD — not a ticket); ret5=+5.5; leftover $1564.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `TWLO` | 5 | $276.58 | $2.00 | — | $5,001.77 | — | flatten hold 5, stop −8% at 09:30 even inside hold; list flatten; wish-list (live io HOLD — not a ticket); ret5=-0.9; leftover $1564.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `PDFS` | 38 | $40.49 | $2.10 | — | $3,461.04 | — | flatten hold 5, stop −8% at 09:30 even inside hold; list flatten,probable,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); 🔵; ret5=-20.9; leftover $1564.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-16 09:30 ET | **BUY** | `YOU` | 34 | $45.60 | $2.09 | — | $1,908.55 | — | flatten hold 5, stop −8% at 09:30 even inside hold; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+4.5; leftover $1564.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-16 09:30 ET | **BUY** | `AVPT` | 104 | $15.03 | $2.30 | — | $343.13 | — | flatten hold 5, stop −8% at 09:30 even inside hold; list flatten; wish-list (live io HOLD — not a ticket); ret5=+3.2; leftover $1564.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **SELL** | `TWLO` | 5 | $254.45 | $2.03 | $-114.66 | $1,613.37 | ▼ -114.66 after sell → book $9,414.68; vs 09:30 mark -112.66 | stop-loss after 0 sess | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,613.37 | ▼ close $9,165.70 vs 09:30 $9,542.67 (session -248.98) | 16:00 close · cash $1,613.37 · equity $9,165.70 vs 09:30 $9,542.67 (-376.97; session marks -248.98) · 6 name(s) marked open→close (per-name table). BLFS×4 09:30 $38.61 → close $38.61 +0.00; IT×7 09:30 $209.00 → close $205.35 -25.55; TOST×47 09:30 $32.59 → close $31.62 -45.59; PDFS×38 09:30 $40.49 → close $39.22 -48.26; YOU×34 09:30 $45.60 → close $43.93 -56.78; AVPT×104 09:30 $15.03 → close $14.33 -72.80 | — |
 
 ## Not taken
 

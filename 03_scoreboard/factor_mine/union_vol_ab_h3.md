@@ -432,6 +432,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **SELL** | `QSI` | 5 | $1.35 | $0.10 | $-0.82 | $8,980.45 | ▼ -0.82 after sell → book $8,986.36; vs 09:30 mark -0.10 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-15 09:30 ET | **SELL** | `SVC` | 1 | $5.91 | $0.08 | $-1.55 | $8,986.28 | ▼ -1.55 after sell → book $8,986.28; vs 09:30 mark -0.08 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,986.28 | ▲ close $8,986.28 vs 09:30 $8,986.61 (session +0.00) | 16:00 close · cash $8,986.28 · no lots left · equity $8,986.28. | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,986.28 | ▲ 09:30 equity $8,986.28 vs yday $8,986.28 (+0.00) | 09:30 open · cash $8,986.28 · no holdings · equity $8,986.28 vs prior close $8,986.28 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,986.28 | ▲ close $8,986.28 vs 09:30 $8,986.28 (session +0.00) | 16:00 close · cash $8,986.28 · no lots left · equity $8,986.28. | — |
 
 ## Not taken
 

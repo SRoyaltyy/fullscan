@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · top 4 by hot
 
-Cash book **+21.43%** ($12,143) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 137 · skips 47 · realized $+2978.17.
+Cash book **+21.54%** ($12,154) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 141 · skips 47 · realized $+2978.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -298,6 +298,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `BLMN` | 310 | $9.48 | $4.00 | — | $3,063.82 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+14.4; leftover $2946.88 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `CHWY` | 140 | $21.00 | $2.41 | — | $121.41 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+14.3; leftover $2946.88 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $121.41 | ▲ close $12,142.57 vs 09:30 $11,787.50 (session +365.72) | 16:00 close · cash $121.41 · equity $12,142.57 vs 09:30 $11,787.50 (+355.07; session marks +365.72) · 4 name(s) marked open→close (per-name table). LW×54 09:30 $53.79 → close $54.21 +22.68; ETSY×34 09:30 $84.47 → close $89.18 +160.14; BLMN×310 09:30 $9.48 → close $9.93 +139.50; CHWY×140 09:30 $21.00 → close $21.31 +43.40 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $121.41 | ▲ 09:30 equity $12,164.48 vs yday $12,142.57 (+21.91) | 09:30 open · cash $121.41 (unchanged overnight, no fees) · equity $12,164.48 vs prior close $12,142.57 (+21.91) · 4 name(s) re-marked at the open (per-name table). BLMN×310 yday $9.93 → 09:30 $9.90 -7.75; CHWY×140 yday $21.31 → 09:30 $21.34 +4.20; ETSY×34 yday $89.18 → 09:30 $89.50 +10.88; LW×54 yday $54.21 → 09:30 $54.48 +14.58 | — |
+| 2026-10-16 09:30 ET | **SELL** | `BLMN` | 310 | $9.90 | $4.08 | $+123.68 | $3,187.88 | ▲ +123.68 after sell → book $12,160.41; vs 09:30 mark -4.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `CHWY` | 140 | $21.34 | $2.46 | $+42.73 | $6,173.03 | ▲ +42.73 after sell → book $12,157.95; vs 09:30 mark -2.45 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `ETSY` | 34 | $89.50 | $2.13 | $+166.80 | $9,213.90 | ▲ +166.80 after sell → book $12,155.82; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `LW` | 54 | $54.48 | $2.19 | $+32.92 | $12,153.64 | ▲ +32.92 after sell → book $12,153.64; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,153.64 | ▲ close $12,153.64 vs 09:30 $12,164.48 (session +0.00) | 16:00 close · cash $12,153.64 · no lots left · equity $12,153.64. | — |
 
 ## Not taken
 

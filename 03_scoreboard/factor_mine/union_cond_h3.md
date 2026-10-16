@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-8.96%** ($9,104) · signal-only (no cash/fees) was -15.16%. Starts YES **0/30**. Fills 288 · skips 307 · realized $-613.92.
+Cash book **-10.28%** ($8,972) · signal-only (no cash/fees) was -15.16%. Starts YES **0/30**. Fills 290 · skips 307 · realized $-613.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -449,6 +449,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `FIS` | 1 | $36.40 | $0.37 | — | $153.07 | — | rank by cond; rank cond; list flatten; 🔵; ret5=+4.9; leftover $37.97 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-15 09:30 ET | **BUY** | `KURA` | 3 | $9.62 | $0.30 | — | $123.92 | — | rank by cond; rank cond; list yday_gainer,yday_mover; ret5=-9.9; leftover $37.97 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $123.92 | ▲ close $9,104.39 vs 09:30 $8,773.84 (session +331.70) | 16:00 close · cash $123.92 · equity $9,104.39 vs 09:30 $8,773.84 (+330.55; session marks +331.70) · 11 name(s) marked open→close (per-name table). AMX×50 09:30 $21.92 → close $22.43 +25.50; BAC×21 09:30 $51.46 → close $51.70 +5.04; CNK×28 09:30 $38.44 → close $38.52 +2.24; KLRA×102 09:30 $10.55 → close $11.71 +118.32; NAUT×11 09:30 $2.07 → close $2.16 +0.99; PINS×48 09:30 $21.59 → close $22.71 +53.52; SMMT×70 09:30 $15.09 → close $15.37 +19.60; TRU×16 09:30 $68.55 → close $74.12 +89.12; WLY×20 09:30 $52.10 → close $52.97 +17.40; FIS×1 09:30 $36.40 → close $36.13 -0.27; KURA×3 09:30 $9.62 → close $9.70 +0.24 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $123.92 | ▲ 09:30 equity $9,161.15 vs yday $9,104.39 (+56.76) | 09:30 open · cash $123.92 (unchanged overnight, no fees) · equity $9,161.15 vs prior close $9,104.39 (+56.76) · 11 name(s) re-marked at the open (per-name table). AMX×50 yday $22.43 → 09:30 $22.62 +9.50; BAC×21 yday $51.70 → 09:30 $52.14 +9.24; CNK×28 yday $38.52 → 09:30 $38.67 +4.20; FIS×1 yday $36.13 → 09:30 $36.42 +0.29; KLRA×102 yday $11.71 → 09:30 $11.75 +4.08; KURA×3 yday $9.70 → 09:30 $9.68 -0.06; NAUT×11 yday $2.16 → 09:30 $2.17 +0.11; PINS×48 yday $22.71 → 09:30 $22.80 +4.32; SMMT×70 yday $15.37 → 09:30 $15.39 +1.40; TRU×16 yday $74.12 → 09:30 $74.90 +12.48; WLY×20 yday $52.97 → 09:30 $53.53 +11.20 | — |
+| 2026-10-16 09:30 ET | **SELL** | `NAUT` | 11 | $2.17 | $0.29 | $-0.51 | $147.50 | ▼ -0.51 after sell → book $9,160.86; vs 09:30 mark -0.29 | dropped from list after 4 sess (min 3) | — |
+| 2026-10-16 09:30 ET | **BUY** | `AVPT` | 1 | $15.03 | $0.15 | — | $132.31 | — | rank by cond; rank cond; list flatten; ret5=+3.2; leftover $24.58 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $132.31 | ▼ close $8,971.62 vs 09:30 $9,161.15 (session -189.08) | 16:00 close · cash $132.31 · equity $8,971.62 vs 09:30 $9,161.15 (-189.52; session marks -189.08) · 11 name(s) marked open→close (per-name table). AMX×50 09:30 $22.62 → close $22.91 +14.50; BAC×21 09:30 $52.14 → close $51.23 -19.11; CNK×28 09:30 $38.67 → close $38.48 -5.32; FIS×1 09:30 $36.42 → close $36.01 -0.41; KLRA×102 09:30 $11.75 → close $11.25 -51.00; KURA×3 09:30 $9.68 → close $9.08 -1.80; PINS×48 09:30 $22.80 → close $21.91 -42.72; SMMT×70 09:30 $15.39 → close $14.63 -53.20; TRU×16 09:30 $74.90 → close $74.08 -13.12; WLY×20 09:30 $53.53 → close $52.72 -16.20; AVPT×1 09:30 $15.03 → close $14.33 -0.70 | — |
 
 ## Not taken
 

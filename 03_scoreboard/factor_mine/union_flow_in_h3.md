@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **-12.17%** ($8,783) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 90 · skips 105 · realized $-281.48.
+Cash book **-10.46%** ($8,954) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 91 · skips 105 · realized $-281.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -252,6 +252,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $56.97 | ▲ close $8,763.09 vs 09:30 $8,733.33 (session +34.21) | 16:00 close · cash $56.97 · equity $8,763.09 vs 09:30 $8,733.33 (+29.76; session marks +34.21) · 2 name(s) marked open→close (per-name table). EPR×80 09:30 $54.47 → close $54.58 +8.80; TBBB×77 09:30 $56.03 → close $56.36 +25.41 | — |
 | 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $56.97 | ▲ 09:30 equity $8,840.75 vs yday $8,763.09 (+77.66) | 09:30 open · cash $56.97 (unchanged overnight, no fees) · equity $8,840.75 vs prior close $8,763.09 (+77.66) · 2 name(s) re-marked at the open (per-name table). EPR×80 yday $54.58 → 09:30 $55.57 +79.20; TBBB×77 yday $56.36 → 09:30 $56.34 -1.54 | — |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $56.97 | ▼ close $8,783.28 vs 09:30 $8,840.75 (session -57.47) | 16:00 close · cash $56.97 · equity $8,783.28 vs 09:30 $8,840.75 (-57.47; session marks -57.47) · 2 name(s) marked open→close (per-name table). EPR×80 09:30 $55.57 → close $55.15 -33.60; TBBB×77 09:30 $56.34 → close $56.03 -23.87 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $56.97 | ▲ 09:30 equity $8,866.77 vs yday $8,783.28 (+83.49) | 09:30 open · cash $56.97 (unchanged overnight, no fees) · equity $8,866.77 vs prior close $8,783.28 (+83.49) · 2 name(s) re-marked at the open (per-name table). EPR×80 yday $55.15 → 09:30 $55.26 +8.80; TBBB×77 yday $56.03 → 09:30 $57.00 +74.69 | — |
+| 2026-10-16 09:30 ET | **BUY** | `WSE` | 1 | $12.05 | $0.12 | — | $44.80 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; ret5=+3.6; leftover $18.99 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $44.80 | ▲ close $8,953.94 vs 09:30 $8,866.77 (session +87.29) | 16:00 close · cash $44.80 · equity $8,953.94 vs 09:30 $8,866.77 (+87.17; session marks +87.29) · 3 name(s) marked open→close (per-name table). EPR×80 09:30 $55.26 → close $55.71 +36.00; TBBB×77 09:30 $57.00 → close $57.68 +52.36; WSE×1 09:30 $12.05 → close $10.98 -1.07 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-12.28%** ($8,772) · signal-only (no cash/fees) was -40.60%. Starts YES **0/30**. Fills 110 · skips 188 · realized $-1635.94.
+Cash book **-15.17%** ($8,483) · signal-only (no cash/fees) was -40.60%. Starts YES **0/30**. Fills 110 · skips 188 · realized $-1635.94.
 
 ## How this sleeve decides (like you are 10)
 
@@ -268,6 +268,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `JBHT` | 9 | $232.93 | $2.02 | — | $2,239.82 | — | baseline list, no extra gate; list overnight; 🔵; ret5=+4.3; leftover $2160.51 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `WSE` | 178 | $12.11 | $2.52 | — | $81.72 | — | baseline list, no extra gate; list overnight; 🔵; ret5=+1.7; leftover $2160.51 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $81.72 | ▲ close $8,771.88 vs 09:30 $8,642.03 (session +138.61) | 16:00 close · cash $81.72 · equity $8,771.88 vs 09:30 $8,642.03 (+129.85; session marks +138.61) · 4 name(s) marked open→close (per-name table). AA×54 09:30 $39.77 → close $40.42 +35.10; IBKR×26 09:30 $82.77 → close $86.03 +84.76; JBHT×9 09:30 $232.93 → close $235.31 +21.42; WSE×178 09:30 $12.11 → close $12.10 -2.67 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $81.72 | ▼ 09:30 equity $8,770.74 vs yday $8,771.88 (-1.14) | 09:30 open · cash $81.72 (unchanged overnight, no fees) · equity $8,770.74 vs prior close $8,771.88 (-1.14) · 4 name(s) re-marked at the open (per-name table). AA×54 yday $40.42 → 09:30 $41.65 +66.42; IBKR×26 yday $86.03 → 09:30 $86.27 +6.24; JBHT×9 yday $235.31 → 09:30 $228.00 -65.79; WSE×178 yday $12.10 → 09:30 $12.05 -8.01 | — |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $81.72 | ▼ close $8,483.42 vs 09:30 $8,770.74 (session -287.32) | 16:00 close · cash $81.72 · equity $8,483.42 vs 09:30 $8,770.74 (-287.32; session marks -287.32) · 4 name(s) marked open→close (per-name table). AA×54 09:30 $41.65 → close $41.45 -10.80; IBKR×26 09:30 $86.27 → close $82.69 -93.08; JBHT×9 09:30 $228.00 → close $228.78 +7.02; WSE×178 09:30 $12.05 → close $10.98 -190.46 | — |
 
 ## Not taken
 

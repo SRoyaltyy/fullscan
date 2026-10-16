@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short news🔴 ∩ prior MACD histogram > 0
 
-Cash book **+11.10%** ($11,110) · signal-only (no cash/fees) was +37.55%. Starts YES **29/30**. Fills 104 · skips 81 · realized $+1277.69.
+Cash book **+12.92%** ($11,292) · signal-only (no cash/fees) was +37.55%. Starts YES **29/30**. Fills 105 · skips 81 · realized $+1277.69.
 
 ## How this sleeve decides (like you are 10)
 
@@ -265,6 +265,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17,350.77 | ▲ 09:30 equity $11,105.86 vs yday $9,869.96 (+1,235.90) | 09:30 open · cash $17,350.77 (unchanged overnight, no fees) · equity $11,105.86 vs prior close $9,869.96 (+1235.90) · 3 name(s) re-marked at the open (per-name table). AEHL×505 yday $11.49 → 09:30 $9.03 +1242.30; MOH×4 yday $209.19 → 09:30 $210.39 -4.80; NOG×32 yday $26.30 → 09:30 $26.35 -1.60 | — |
 | 2026-10-15 09:30 ET | **COVER** | `AEHL` | 505 | $9.03 | $6.51 | $+587.65 | $12,784.11 | ▲ +587.65 after sell → book $11,099.35; vs 09:30 mark -6.51 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,784.11 | ▲ close $11,110.11 vs 09:30 $11,105.86 (session +10.76) | 16:00 close · cash $12,784.11 · equity $11,110.11 vs 09:30 $11,105.86 (+4.25; session marks +10.76) · 2 name(s) marked open→close (per-name table). MOH×4 09:30 $210.39 → close $212.50 -8.44; NOG×32 09:30 $26.35 → close $25.75 +19.20 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,784.11 | ▼ 09:30 equity $11,094.31 vs yday $11,110.11 (-15.80) | 09:30 open · cash $12,784.11 (unchanged overnight, no fees) · equity $11,094.31 vs prior close $11,110.11 (-15.80) · 2 name(s) re-marked at the open (per-name table). MOH×4 yday $212.50 → 09:30 $214.05 -6.20; NOG×32 yday $25.75 → 09:30 $26.05 -9.60 | — |
+| 2026-10-16 09:30 ET | **SHORT** | `RBLX` | 107 | $51.50 | $2.52 | — | $18,292.09 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list ohlc_hot; ret5=+12.3; leftover $5547.16 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18,292.09 | ▲ close $11,291.68 vs 09:30 $11,094.31 (session +199.89) | 16:00 close · cash $18,292.09 · equity $11,291.68 vs 09:30 $11,094.31 (+197.37; session marks +199.89) · 3 name(s) marked open→close (per-name table). MOH×4 09:30 $214.05 → close $207.36 +26.76; NOG×32 09:30 $26.05 → close $27.16 -35.52; RBLX×107 09:30 $51.50 → close $49.55 +208.65 | — |
 
 ## Not taken
 

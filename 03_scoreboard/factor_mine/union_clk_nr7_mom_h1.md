@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #10 NR7 + moderate momentum
 
-Cash book **-2.49%** ($9,751) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 69 · skips 16 · realized $+1589.64.
+Cash book **-1.67%** ($9,833) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 76 · skips 16 · realized $+1589.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -233,6 +233,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **BUY** | `EQNR` | 36 | $45.50 | $2.10 | — | $3,381.08 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; ret5=+8.8; leftover $1640.42 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **BUY** | `ITW` | 6 | $272.49 | $2.01 | — | $1,744.13 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list yday_gainer; ret5=+3.2; leftover $1640.42 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,744.13 | ▼ close $9,751.25 vs 09:30 $9,855.67 (session -80.84) | 16:00 close · cash $1,744.13 · equity $9,751.25 vs 09:30 $9,855.67 (-104.42; session marks -80.84) · 5 name(s) marked open→close (per-name table). PBR-A×71 09:30 $22.79 → close $22.61 -12.78; COP×11 09:30 $143.00 → close $141.73 -13.97; BP×33 09:30 $49.21 → close $48.44 -25.41; EQNR×36 09:30 $45.50 → close $44.92 -20.88; ITW×6 09:30 $272.49 → close $271.19 -7.80 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,744.13 | ▲ 09:30 equity $9,862.95 vs yday $9,751.25 (+111.70) | 09:30 open · cash $1,744.13 (unchanged overnight, no fees) · equity $9,862.95 vs prior close $9,751.25 (+111.70) · 5 name(s) re-marked at the open (per-name table). BP×33 yday $48.44 → 09:30 $49.35 +30.03; COP×11 yday $141.73 → 09:30 $142.69 +10.56; EQNR×36 yday $44.92 → 09:30 $45.87 +34.02; ITW×6 yday $271.19 → 09:30 $273.23 +12.24; PBR-A×71 yday $22.61 → 09:30 $22.96 +24.85 | — |
+| 2026-10-16 09:30 ET | **SELL** | `BP` | 33 | $49.35 | $2.11 | $+0.42 | $3,370.57 | ▲ +0.42 after sell → book $9,860.84; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `COP` | 11 | $142.69 | $2.05 | $-7.48 | $4,938.11 | ▼ -7.48 after sell → book $9,858.79; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `EQNR` | 36 | $45.87 | $2.12 | $+8.92 | $6,587.13 | ▲ +8.92 after sell → book $9,856.67; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **SELL** | `ITW` | 6 | $273.23 | $2.03 | $+0.40 | $8,224.48 | ▲ +0.40 after sell → book $9,854.64; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **SELL** | `PBR-A` | 71 | $22.96 | $2.23 | $+7.64 | $9,852.41 | ▲ +7.64 after sell → book $9,852.41; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **BUY** | `LW` | 60 | $54.48 | $2.17 | — | $6,581.44 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; 🔵; ret5=+9.6; leftover $3284.14 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **BUY** | `TBBB` | 57 | $57.00 | $2.16 | — | $3,330.28 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list yday_gainer; 🔵; ret5=+5.6; leftover $3284.14 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,330.28 | ▼ close $9,833.44 vs 09:30 $9,862.95 (session -14.64) | 16:00 close · cash $3,330.28 · equity $9,833.44 vs 09:30 $9,862.95 (-29.51; session marks -14.64) · 2 name(s) marked open→close (per-name table). LW×60 09:30 $54.48 → close $53.59 -53.40; TBBB×57 09:30 $57.00 → close $57.68 +38.76 | — |
 
 ## Not taken
 

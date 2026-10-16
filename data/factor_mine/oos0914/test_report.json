@@ -23,7 +23,8 @@
     "2026-10-12",
     "2026-10-13",
     "2026-10-14",
-    "2026-10-15"
+    "2026-10-15",
+    "2026-10-16"
   ],
   "rules": [
     {
@@ -862,14 +863,75 @@
           "equity": 9338.71,
           "mean": 2.1818,
           "mean_flat_15bp": 2.093
+        },
+        {
+          "date": "2026-10-16",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 20.45,
+              "shares": 153,
+              "side": "BUY",
+              "ticker": "BBWI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 17.32,
+              "shares": 181,
+              "side": "BUY",
+              "ticker": "VFC"
+            },
+            {
+              "fill_rule": "open",
+              "price": 74.9,
+              "shares": 41,
+              "side": "BUY",
+              "ticker": "TRU"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 91.86,
+              "shares": 23,
+              "side": "SELL",
+              "ticker": "ECO"
+            },
+            {
+              "fill_rule": "open",
+              "price": 4.8,
+              "shares": 495,
+              "side": "SELL",
+              "ticker": "JLHL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 23.34,
+              "shares": 106,
+              "side": "SELL",
+              "ticker": "ODD"
+            },
+            {
+              "fill_rule": "open",
+              "price": 22.8,
+              "shares": 106,
+              "side": "SELL",
+              "ticker": "PINS"
+            }
+          ],
+          "fees": 20.3579,
+          "cash": 77.8,
+          "equity": 9256.3,
+          "mean": -0.8825,
+          "mean_flat_15bp": -0.7819
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -6.613,
-      "start_day_win_rate": 0.3333,
+      "after_fees_return": -7.437,
+      "start_day_win_rate": 0.28,
       "best_stock": "SDGR",
-      "without_best_stock_return": -10.026
+      "without_best_stock_return": -10.83
     },
     {
       "name": "oos0914_rvol_lg_h1_sx",
@@ -2014,14 +2076,82 @@
           "equity": 11120.75,
           "mean": -0.2149,
           "mean_flat_15bp": -0.1242
+        },
+        {
+          "date": "2026-10-16",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 20.45,
+              "shares": 135,
+              "side": "BUY",
+              "ticker": "BBWI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 43.99,
+              "shares": 63,
+              "side": "BUY",
+              "ticker": "INTA"
+            },
+            {
+              "fill_rule": "open",
+              "price": 10.54,
+              "shares": 263,
+              "side": "BUY",
+              "ticker": "REAL"
+            },
+            {
+              "fill_rule": "open",
+              "price": 47.89,
+              "shares": 58,
+              "side": "BUY",
+              "ticker": "PACS"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 13.03,
+              "shares": 212,
+              "side": "SELL",
+              "ticker": "ACI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 23.02,
+              "shares": 123,
+              "side": "SELL",
+              "ticker": "FHN"
+            },
+            {
+              "fill_rule": "open",
+              "price": 95.83,
+              "shares": 29,
+              "side": "SELL",
+              "ticker": "MDT"
+            },
+            {
+              "fill_rule": "open",
+              "price": 93.54,
+              "shares": 29,
+              "side": "SELL",
+              "ticker": "SCHW"
+            }
+          ],
+          "fees": 19.5428,
+          "cash": 32.17,
+          "equity": 10953.74,
+          "mean": -1.5018,
+          "mean_flat_15bp": -1.367
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": 11.207,
-      "start_day_win_rate": 0.625,
+      "after_fees_return": 9.537,
+      "start_day_win_rate": 0.6,
       "best_stock": "SDEV",
-      "without_best_stock_return": -7.905
+      "without_best_stock_return": -9.311
     },
     {
       "name": "oos0914_break10_h1_sx",
@@ -3165,14 +3295,82 @@
           "equity": 7212.41,
           "mean": -0.0151,
           "mean_flat_15bp": 0.1165
+        },
+        {
+          "date": "2026-10-16",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 20.45,
+              "shares": 88,
+              "side": "BUY",
+              "ticker": "BBWI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 9.905,
+              "shares": 182,
+              "side": "BUY",
+              "ticker": "BLMN"
+            },
+            {
+              "fill_rule": "open",
+              "price": 17.32,
+              "shares": 104,
+              "side": "BUY",
+              "ticker": "VFC"
+            },
+            {
+              "fill_rule": "open",
+              "price": 74.9,
+              "shares": 24,
+              "side": "BUY",
+              "ticker": "TRU"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 9.905,
+              "shares": 184,
+              "side": "SELL",
+              "ticker": "BLMN"
+            },
+            {
+              "fill_rule": "open",
+              "price": 21.34,
+              "shares": 83,
+              "side": "SELL",
+              "ticker": "CHWY"
+            },
+            {
+              "fill_rule": "open",
+              "price": 89.5,
+              "shares": 20,
+              "side": "SELL",
+              "ticker": "ETSY"
+            },
+            {
+              "fill_rule": "open",
+              "price": 54.48,
+              "shares": 32,
+              "side": "SELL",
+              "ticker": "LW"
+            }
+          ],
+          "fees": 18.1922,
+          "cash": 5.96,
+          "equity": 7119.5,
+          "mean": -1.2882,
+          "mean_flat_15bp": -1.083
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -27.876,
+      "after_fees_return": -28.805,
       "start_day_win_rate": 0.0,
       "best_stock": "QSI",
-      "without_best_stock_return": -31.197
+      "without_best_stock_return": -32.082
     },
     {
       "name": "oos0914_zero_candle_h2_sx",
@@ -3855,12 +4053,22 @@
           "equity": 10269.61,
           "mean": 0.0,
           "mean_flat_15bp": 0.0
+        },
+        {
+          "date": "2026-10-16",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 10269.61,
+          "equity": 10269.61,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
       "after_fees_return": 2.696,
-      "start_day_win_rate": 0.375,
+      "start_day_win_rate": 0.36,
       "best_stock": "NAUT",
       "without_best_stock_return": -0.241
     }

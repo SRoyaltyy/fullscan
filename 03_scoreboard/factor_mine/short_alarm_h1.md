@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+2.04%** ($10,204) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 220 · skips 96 · realized $+54.59.
+Cash book **+1.61%** ($10,161) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 228 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -380,6 +380,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 09:30 ET | **SHORT** | `BF-B` | 30 | $28.63 | $2.12 | — | $16,031.28 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+9.1; leftover $869.65 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 09:30 ET | **SHORT** | `USB` | 15 | $56.14 | $2.08 | — | $16,871.30 | — | alarm; gate alarm=True; list earn_react; ret5=+0.2; leftover $869.65 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,871.30 | ▼ close $10,204.44 vs 09:30 $10,455.26 (session -216.90) | 16:00 close · cash $16,871.30 · equity $10,204.44 vs 09:30 $10,455.26 (-250.82; session marks -216.90) · 8 name(s) marked open→close (per-name table). QTTB×82 09:30 $8.01 → close $7.77 +19.68; TLSA×617 09:30 $1.05 → close $1.05 -0.00; SHOO×19 09:30 $44.74 → close $46.24 -28.50; SMMT×57 09:30 $15.09 → close $15.37 -15.96; KLRA×82 09:30 $10.55 → close $11.71 -95.12; GLND×275 09:30 $3.16 → close $3.45 -79.75; BF-B×30 09:30 $28.63 → close $28.58 +1.50; USB×15 09:30 $56.14 → close $57.39 -18.75 | — |
+| 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,871.30 | ▼ 09:30 equity $10,185.18 vs yday $10,204.44 (-19.26) | 09:30 open · cash $16,871.30 (unchanged overnight, no fees) · equity $10,185.18 vs prior close $10,204.44 (-19.26) · 8 name(s) re-marked at the open (per-name table). BF-B×30 yday $28.58 → 09:30 $28.90 -9.60; GLND×275 yday $3.45 → 09:30 $3.33 +33.00; KLRA×82 yday $11.71 → 09:30 $11.75 -3.28; QTTB×82 yday $7.77 → 09:30 $7.82 -4.10; SHOO×19 yday $46.24 → 09:30 $46.51 -5.13; SMMT×57 yday $15.37 → 09:30 $15.39 -1.14; TLSA×617 yday $1.05 → 09:30 $1.08 -18.51; USB×15 yday $57.39 → 09:30 $58.09 -10.50 | — |
+| 2026-10-16 09:30 ET | **COVER** | `BF-B` | 30 | $28.90 | $2.08 | $-12.30 | $16,002.22 | ▼ -12.30 after sell → book $10,183.10; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **COVER** | `GLND` | 275 | $3.33 | $3.55 | $-53.92 | $15,082.92 | ▼ -53.92 after sell → book $10,179.55; vs 09:30 mark -3.55 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **COVER** | `KLRA` | 82 | $11.75 | $2.24 | $-102.92 | $14,117.19 | ▼ -102.92 after sell → book $10,177.32; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **COVER** | `QTTB` | 82 | $7.82 | $2.24 | $+4.51 | $13,473.71 | ▲ +4.51 after sell → book $10,175.08; vs 09:30 mark -2.24 | dropped from list after 2 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **COVER** | `SHOO` | 19 | $46.51 | $2.05 | $-37.77 | $12,587.97 | ▼ -37.77 after sell → book $10,173.03; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 09:30 ET | **COVER** | `SMMT` | 57 | $15.39 | $2.16 | $-21.47 | $11,708.58 | ▼ -21.47 after sell → book $10,170.87; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-16 09:30 ET | **COVER** | `TLSA` | 617 | $1.08 | $7.96 | $-28.39 | $11,034.26 | ▼ -28.39 after sell → book $10,162.91; vs 09:30 mark -7.96 | dropped from list after 2 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-16 09:30 ET | **COVER** | `USB` | 15 | $58.09 | $2.04 | $-33.36 | $10,160.88 | ▼ -33.36 after sell → book $10,160.88; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,160.88 | ▲ close $10,160.88 vs 09:30 $10,185.18 (session +0.00) | 16:00 close · cash $10,160.88 · no lots left · equity $10,160.88. | — |
 
 ## Not taken
 
