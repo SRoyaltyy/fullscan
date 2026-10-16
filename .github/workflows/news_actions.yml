@@ -19,8 +19,14 @@ on:
         description: "Ignore 09:25 ET cutoff and skip-if-good"
         required: false
         default: "false"
-  # NO schedule cron: Pre-Open ALL (06:00 ET) runs morning news actions.
-  # Dispatch-only — orchestrator last-chance fallback after 08:00 ET.
+  # Pre-Open ALL (06:00 ET) runs morning news actions. When that Pre-Open
+  # is cancelled or fails (2026-10-16: actions.json only landed 08:45 ET,
+  # so the decision ticket was not ready for the 08:05 h1 seal send),
+  # these early fallbacks keep news actions from being the bottleneck.
+  # UTC 10:35/11:35 = 06:35/07:35 ET (EDT), 05:35/06:35 ET (EST).
+  # src.news_actions skip-if-good no-ops when today's actions are landed.
+  schedule:
+    - cron: '35 10,11 * * 1-5'
 
 permissions:
   actions: write
@@ -28,7 +34,8 @@ permissions:
 
 concurrency:
   group: news-actions
-  cancel-in-progress: true
+  # A fallback cron never cancels an in-flight dispatched run.
+  cancel-in-progress: ${{ github.event_name != 'schedule' }}
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

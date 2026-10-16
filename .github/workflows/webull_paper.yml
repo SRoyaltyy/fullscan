@@ -12,7 +12,14 @@ name: Webull paper (OpenAPI sandbox)
 # how 2026-10-06 missed the open.
 # ECS fullscan-paper-backstop.timer (09:12 America/New_York) is the on-box
 # backstop when this hosted run is still queued. It is the other sender.
-# A ticket republish or a stock-book rebuild must not submit.
+# A ticket republish or a stock-book rebuild must not submit on its own.
+# Readiness retry (2026-10-16 miss): the seal run fails closed when the
+# decision ticket is not ready yet ("required inputs are not validated").
+# A successful "Publish strategy tickets" run on main re-wakes this job,
+# and it sends ONLY when all hold: before 09:25 ET, today's sealed h1
+# plan is on main, and no submit journal / locked status exists for today.
+# It then runs exactly the seal path (same sealed h1 set, same sender,
+# same fail-closed validate_payload, journal and client_order_id guards).
 # Both paths send the sealed h1 new-buy set for that session (picks the
 # open fill would buy, not names the book already holds), not a Factor Mine
 # HOT4 pick_day rebuild. Published tickets are the readiness signal only.
@@ -23,7 +30,7 @@ on:
   schedule:
     - cron: '7 12,13 * * 1-5'
   workflow_run:
-    workflows: ["h1 append-only forward"]
+    workflows: ["h1 append-only forward", "Publish strategy tickets"]
     types: [completed]
     branches: [main]
   workflow_dispatch:
@@ -54,6 +61,7 @@ jobs:
           WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
           WANT_SUBMIT: ${{ github.event_name == 'workflow_run' }}
           SEAL_EVENT: ${{ github.event_name }}
+          WR_NAME: ${{ github.event.workflow_run.name }}
           PAPER_OPEN_SENDER: ${{ github.event_name == 'workflow_run' && 'seal' || 'none' }}
         run: |
           set -euo pipefail
@@ -64,6 +72,32 @@ jobs:
             echo "not the h1 seal; no paper submit and no paper_open write"
             python3 -m src.workflow_progress touch --workflow webull_paper --date "$DATE" --stage preflight --state skipped --error "not the h1 seal" || true
             exit 0
+          fi
+          if [ "${WR_NAME:-}" = "Publish strategy tickets" ]; then
+            # Readiness retry: only a missed-because-not-ready seal send.
+            ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+            if [ "$ET_HM" -ge 925 ]; then echo "ticket retry: past 09:25 ET; not a sender"; exit 0; fi
+            if ! python3 - "$DATE" <<'PY'
+          import json, sys
+          d = sys.argv[1]
+          ok = False
+          for line in open('research/hot_n4_clean_v4/forward_h1/h1_log.jsonl'):
+              try:
+                  r = json.loads(line)
+              except ValueError:
+                  continue
+              if r.get('kind') == 'plan' and r.get('date') == d:
+                  ok = True
+          sys.exit(0 if ok else 1)
+          PY
+            then echo "ticket retry: no sealed h1 plan for $DATE on main; not a sender"; exit 0; fi
+            if [ -f "data/paper_open/${DATE}_submit.json" ]; then
+              echo "ticket retry: submit journal already exists for $DATE; nothing to retry"; exit 0
+            fi
+            if python3 -c "import sys,json;from src.paper_open import read_status,status_locked;sys.exit(0 if status_locked(read_status('data/paper_open/${DATE}_status.json')) else 1)"; then
+              echo "ticket retry: $DATE status already locked; nothing to retry"; exit 0
+            fi
+            echo "ticket retry: sealed h1 present, no attempt yet, before 09:25 — seal path"
           fi
           python3 -m src.workflow_progress beat --workflow webull_paper --date "$DATE" --stages preflight --stage preflight >> /tmp/progress_beat.log 2>&1 &
           echo $! > /tmp/progress_beat.pid

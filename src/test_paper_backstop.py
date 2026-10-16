@@ -160,7 +160,11 @@ def test_workflow_and_timer_contract() -> None:
     script = (ROOT / "scripts" / "ecs_paper_backstop.sh").read_text(encoding="utf-8")
     installer = (ROOT / "scripts" / "install_paper_backstop.sh").read_text(encoding="utf-8")
     assert h1.startswith("name: h1 append-only forward\n")
-    assert 'workflows: ["h1 append-only forward"]' in paper
+    assert 'workflows: ["h1 append-only forward", "Publish strategy tickets"]' in paper
+    # Ticket-publish wake is a readiness retry only: sealed h1, pre-09:25, no prior attempt.
+    assert 'if [ "$ET_HM" -ge 925 ]; then echo "ticket retry: past 09:25 ET; not a sender"; exit 0; fi' in paper
+    assert "no sealed h1 plan for $DATE on main; not a sender" in paper
+    assert 'data/paper_open/${DATE}_submit.json' in paper
     assert "types: [completed]" in paper
     assert "branches: [main]" in paper
     assert "github.event.workflow_run.conclusion == 'success'" in paper
