@@ -268,6 +268,11 @@ def check_label_weather(date: str) -> bool:
         payload = json.loads(p.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return _log(False, "label_weather", date, "weather unreadable")
+    pred = ROOT / "01_daily" / "general" / f"{date}_predict.md"
+    if payload.get("incomplete") and pred.is_file():
+        return _log(False, "label_weather", date,
+                    "weather marked incomplete (no general_score) and the "
+                    "general predict is now on disk — rebuild")
     if weather_stamped_before_open(payload, date):
         return _log(False, "label_weather", date,
                     f"weather stamped {payload.get('generated_at')} "
