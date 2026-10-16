@@ -81,7 +81,15 @@ jobs:
           HOLDUP_GIT_REF: origin/main
           HOLDUP_MODE: plan
           PLAN_SESSION: ${{ github.event.inputs.session_date }}
-        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/holdup_restart.py research/hot_n4_clean_v4/forward/forward.py
+        run: |
+          set -euo pipefail
+          F=research/hot_n4_clean_v4/forward/forward.py
+          # Add-only catch-up first: passed sessions before today become the
+          # standard missing line, so the plan below targets today.
+          if [ -z "${PLAN_SESSION}" ]; then
+            HOLDUP_MODE=catch_up PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/holdup_restart.py "$F"
+          fi
+          PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/holdup_restart.py "$F"
       - name: Commit the append
         if: always()
         run: |

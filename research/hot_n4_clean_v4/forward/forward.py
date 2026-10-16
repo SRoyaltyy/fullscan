@@ -187,9 +187,36 @@ def plan_clock(session: str, now: datetime | None = None) -> str | None:
     return None
 
 
-def _et_today() -> str:
-    from zoneinfo import ZoneInfo
-    return utc_now().astimezone(ZoneInfo("America/New_York")).date().isoformat()
+def catch_up_main() -> int:
+    """HOLDUP_MODE=catch_up: record passed sessions as missing, add-only.
+
+    A session whose 09:30 ET open is gone, before today's ET date, can never
+    be planned. Append the standard missing line for each, in order, so the
+    plan run that follows targets today instead of a stale day (2026-10-15/16:
+    a late cron left the book days behind). Writes nothing when the next
+    session is today or later, or a plan is still open.
+    """
+    records = load()
+    if open_plan(records) is not None:
+        print("catch-up: a plan is open; nothing to record")
+        return 0
+    target, why = plan_target(records, "")
+    n = 0
+    while not why and target is not None:
+        now = utc_now()
+        today = now.astimezone(ZoneInfo("America/New_York")).date().isoformat()
+        if target >= today or not plan_clock(target, now):
+            break
+        append_records([seal_decision({"date": target, "recipe": current_book().recipe}, now)])
+        print(f"missing: plan not sealed before open {target} (catch-up)", flush=True)
+        n += 1
+        last = target
+        records = load()
+        target, why = plan_target(records, "")
+    if n:
+        write_page(records, _status(last, None, MISSING_REASON, "missing"))
+    print(f"catch-up: recorded {n} passed session(s); next {target}")
+    return 0
 
 
 def plan_target(records: list[dict], requested: str) -> tuple[str | None, str | None]:
@@ -742,15 +769,6 @@ def plan_main() -> int:
     # Catch up: a past session whose 09:30 ET open has gone by can never be
     # planned. Record it missing (add-only, in order) and move on, so a late
     # or skipped run cannot leave the book one stale day behind forever.
-    while not requested and plan_clock(target) and target < _et_today():
-        body = seal_decision({"date": target, "recipe": current_book().recipe})
-        append_records([body])
-        print(f"missing: plan not sealed before open {target} (catch-up)", flush=True)
-        records = load()
-        target, why = plan_target(records, "")
-        if why or target is None:
-            _fail(why or "no session")
-            return 1
     # Before any input is built. A late schedule that has already filled D,
     # or a run before 08:00 ET on the target date, must not seal that date.
     if _early_stop(target):
@@ -1306,6 +1324,8 @@ def main() -> int:
         return correct_open_main()
     if mode == "backfill":
         return backfill_closed_plan()
+    if mode == "catch_up":
+        return catch_up_main()
     if mode != "plan":
         _fail(f"HOLDUP_MODE {mode}")
         return 1
