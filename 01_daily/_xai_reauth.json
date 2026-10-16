@@ -1,13 +1,14 @@
 {
-  "status": "expiring",
-  "oauth": "WARN",
-  "pong_ok": false,
-  "reason": "could not parse openclaw models status --check | Command '['openclaw', 'models', 'status', '--check']' timed out after 20 seconds",
-  "user_code": null,
-  "verification_uri": "https://accounts.x.ai/oauth2/device",
-  "expires_at": null,
-  "updated_at": "2026-10-16T18:56:06.729939-04:00",
-  "source": "pipeline_health",
-  "job": "postclose",
-  "date": "2026-10-16"
+  "status": "waiting",
+  "oauth": "FAIL",
+  "pong_ok": null,
+  "reason": "James auto-clicks Allow; not sending the code to Cyrus",
+  "user_code": "V7WA-EN3Z",
+  "verification_uri": "https://accounts.x.ai/oauth2/device?user_code=V7WA-EN3Z",
+  "expires_at": "2026-10-16T19:29:59.394925-04:00",
+  "source": "xai_device_reauth",
+  "pid": 2451811,
+  "waiter_pid": 2451810,
+  "host": "iZt4nagf215582ts0wf5jcZ",
+  "updated_at": "2026-10-16T19:00:59.398272-04:00"
 }
