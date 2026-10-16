@@ -3,7 +3,7 @@
 Official publication is provenance, not proof that a proposed policy is enacted.
 Only source-provided document metadata is used for stage labels.
 """
-import argparse,concurrent.futures,hashlib,html,json,pathlib,re,sqlite3,threading,time,urllib.parse,urllib.request,urllib.error
+import argparse,concurrent.futures,hashlib,html,json,os,pathlib,re,sqlite3,threading,time,urllib.parse,urllib.request,urllib.error
 import xml.etree.ElementTree as ET
 from datetime import datetime,timedelta,timezone
 from email.utils import parsedate_to_datetime
@@ -13,6 +13,8 @@ VERSION='primary-actions-v1'
 USER_AGENT='FullscanPrimaryActionScanner/1.0 (+https://github.com/SRoyaltyy/fullscan; public documents; no article-body crawling)'
 MAX_BYTES=8_000_000
 HTTP_AUDIT=[]
+RELAY_URL=os.environ.get('PRIMARY_ACTION_RELAY_URL','').strip().rstrip('/')
+RELAY_RETRY_STATUSES=(401,403,406,407,429)
 OFFICIAL_SUFFIXES=('.gov','.gov.uk','.gc.ca','.gov.au','.govt.nz','.gov.hk','.go.jp','.go.kr','.gov.in','.gov.cn','.europa.eu','.gov.sg','.gov.my','.go.th','.gov.ph','.go.id','.gov.br','.gov.za','.gouv.fr','.gov.tw','.parliament.uk')
 OFFICIAL_DOMAINS=('bankofengland.co.uk','bankofcanada.ca','rbi.org.in','snb.ch','riksbank.se','norges-bank.no','bundesbank.de','cnmc.es','banxico.org.mx','resbank.co.za','bis.org','wto.org','imf.org','worldbank.org','un.org','thegazette.co.uk','bot.or.th','bancaditalia.it','bnm.gov.my','newyorkfed.org','boj.or.jp','fca.org.uk','scc-csc.ca','sfc.hk','judiciary.hk','bundeskartellamt.de','autoritedelaconcurrence.fr')
 
@@ -44,6 +46,19 @@ def canonical_url(url):
     q=[(k,v) for k,v in urllib.parse.parse_qsl(u.query,keep_blank_values=True) if not k.lower().startswith('utm_') and k.lower() not in ('fbclid','gclid','oc')]
     return urllib.parse.urlunsplit((u.scheme,u.netloc.lower(),u.path or '/',urllib.parse.urlencode(sorted(q)),''))
 
+def relayed_get(url,timeout=20):
+    # Optional edge relay (Cloudflare Worker in relay/worker.js): fetch the same official
+    # URL from a clean egress IP when this network's range is WAF-blocked. Inert unless
+    # PRIMARY_ACTION_RELAY_URL is set; target host policy is identical to direct fetches.
+    if not RELAY_URL:return None
+    relay=RELAY_URL+'/?url='+urllib.parse.quote(url,safe='')
+    HTTP_AUDIT.append({'url':url,'method':'GET','body_bytes':0,'authorization_sent':False,'via_relay':True})
+    request=urllib.request.Request(relay,headers={'User-Agent':USER_AGENT,'Accept':'application/json, application/atom+xml, application/rss+xml, text/html;q=0.8'})
+    with urllib.request.build_opener(OfficialRedirects()).open(request,timeout=timeout+15) as response:
+        body=response.read(MAX_BYTES+1)
+        if len(body)>MAX_BYTES:raise ValueError('Response exceeds public-document metadata size limit')
+        return response.status,body,dict(response.headers),url
+
 def get(url,headers=None,timeout=20):
     canonical_url(url)
     if not allowed_public_source(url):raise ValueError('URL outside explicit official-source host policy')
@@ -56,7 +71,16 @@ def get(url,headers=None,timeout=20):
             if len(body)>MAX_BYTES:raise ValueError('Response exceeds public-document metadata size limit')
             return response.status,body,dict(response.headers),response.url
     except urllib.error.HTTPError as exc:
+        if exc.code in RELAY_RETRY_STATUSES:
+            try:relayed=relayed_get(url,timeout)
+            except Exception:relayed=None
+            if relayed and relayed[0]==200:return relayed
         return exc.code,b'',dict(exc.headers),url
+    except (urllib.error.URLError,TimeoutError,OSError):
+        try:relayed=relayed_get(url,timeout)
+        except Exception:relayed=None
+        if relayed and relayed[0]==200:return relayed
+        raise
 
 def text(element,name):
     found=next((e for e in element if e.tag.split('}')[-1]==name),None)
