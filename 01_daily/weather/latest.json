@@ -1,6 +1,6 @@
 {
  "date": "2026-10-16",
- "generated_at": "2026-10-16T10:34:41.846632-04:00",
+ "generated_at": "2026-10-16T10:57:23.137318-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -23,17 +23,17 @@
   "dgs10_current": 5.19,
   "dollar": "soft",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.38,
-  "vix_ratio": 0.881,
-  "vix_spot": 16.14,
-  "vix_delta_1d": -0.32,
+  "dxy_pct_1d": -0.35,
+  "vix_ratio": 0.872,
+  "vix_spot": 15.84,
+  "vix_delta_1d": -0.62,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": -2.61,
+  "oil_pct_1d": -2.39,
   "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": -0.349,
+  "regime_corr": -0.337,
   "sectors": {
    "Basic Materials": {
     "score": -4.97,
