@@ -1,16 +1,82 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T05:42:44.390444-04:00",
+  "generated_at": "2026-10-16T05:42:59.560605-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "CON",
+      "score": 0.6451168820909512
+    },
+    {
+      "ticker": "AMN",
+      "score": 0.5884795100085922
+    },
+    {
+      "ticker": "HITI",
+      "score": 0.3685678731715655
+    },
+    {
+      "ticker": "SGRY",
+      "score": 0.5128537234562535
+    },
+    {
+      "ticker": "ASTH",
+      "score": 0.5384464496419931
+    },
+    {
+      "ticker": "NTAP",
+      "score": 0.3478071041356559
+    },
+    {
+      "ticker": "MQ",
+      "score": 0.8299452647162282
+    },
+    {
+      "ticker": "BAND",
+      "score": 0.7334445684017012
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "NEOV",
+      "score": -0.4544672247029171
+    },
+    {
+      "ticker": "OKLO",
+      "score": -0.2828224891959171
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.28286010485607493
+    },
+    {
+      "ticker": "POWL",
+      "score": -0.0683231628947133
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.36856911583923274
+    },
+    {
+      "ticker": "TE",
+      "score": -0.1905242370154927
+    },
+    {
+      "ticker": "NNDM",
+      "score": 0.09783274698943863
+    },
+    {
+      "ticker": "AMSC",
+      "score": -0.16013252422597485
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {},
