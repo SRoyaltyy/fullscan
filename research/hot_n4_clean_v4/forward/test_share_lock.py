@@ -314,3 +314,17 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+def test_missing_lock_names_webull_not_sent(tmp_path, monkeypatch):
+    import json as _json
+    from research.hot_n4_clean_v4.forward import share_lock as sl
+
+    monkeypatch.setattr(sl, "_root", lambda: tmp_path)
+    assert "sender never ran" in sl.webull_not_sent_reason("2026-10-19")
+    d = tmp_path / "data" / "paper_open"
+    d.mkdir(parents=True)
+    (d / "2026-10-19_status.json").write_text(_json.dumps(
+        {"date": "2026-10-19", "status": "blocked", "error": "required inputs are not validated"}))
+    msg = sl.webull_not_sent_reason("2026-10-19")
+    assert msg == "webull not_sent: paper_open status=blocked (required inputs are not validated)"
