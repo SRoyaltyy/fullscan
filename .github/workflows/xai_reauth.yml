@@ -30,7 +30,7 @@ concurrency:
 jobs:
   reauth:
     runs-on: [self-hosted, ecs]
-    timeout-minutes: 16
+    timeout-minutes: 26
     env:
       HOME: /home/gha
       FULLSCAN_HOME: /home/gha
@@ -150,6 +150,14 @@ jobs:
           echo "======== local _xai_reauth.json ========"
           cat 01_daily/_xai_reauth.json 2>/dev/null || echo "(missing)"
           python3 /home/gha/fullscan-logs/publish_reauth.py || true
+          # Red unless the final status is ok (a green run that did nothing
+          # hid 38711127840 and 38820702613).
+          FINAL=$(python3 -c 'import json;print(json.load(open("01_daily/_xai_reauth.json")).get("status"))' 2>/dev/null || echo missing)
+          echo "final status=$FINAL"
+          if [ "$FINAL" != "ok" ]; then
+            echo "::error::xAI reauth final status is '$FINAL', not ok"
+            exit 1
+          fi
           exit 0
 
       - name: Snapshot runtime doors for the phone

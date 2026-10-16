@@ -135,4 +135,3 @@
     {"id":"us-supreme-court-orders","name":"Supreme Court orders of the Court","jurisdiction":"US","family":"judicial_decisions","document_type":"court_order","discovery_url":"https://www.supremecourt.gov/orders/ordersofthecourt","index_url":"https://www.supremecourt.gov/orders/ordersofthecourt","link_pattern":"/orders/courtorders/.*pdf$"}
   ]
 }
-

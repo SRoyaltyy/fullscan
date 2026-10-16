@@ -36,6 +36,8 @@ def test_predict_attempt_search_then_nosearch_then_skip(monkeypatch, tmp_path):
     monkeypatch.setattr(dc, "_breaker_file", lambda: str(tmp_path / "b.txt"))
     assert ff.predict_attempt(restart=lambda: True) == "nosearch"
     assert ff.predict_attempt(restart=lambda: True) == "skip"
+    ff.clear_predict_shot()
+    assert ff.predict_attempt(restart=lambda: True) == "nosearch"
 
 
 def test_probe_ok_and_restart(monkeypatch, tmp_path):
@@ -214,7 +216,7 @@ def test_wiring_strings():
     assert "_openclaw_oauth_status.json" in guard
     assert "OnCalendar=Mon..Fri *-*-* 04:10:00 America/New_York" in timer
     assert "past 09:25 ET — scrape refuses a late map_heat (exit 0)" in yml
-    assert "loopback gateway is not reachable" in yml
+    assert "predict needs Grok: no reachable OpenClaw gateway" in yml
     timeouts = (root / "scripts" / "ensure_openclaw_timeouts.sh").read_text(encoding="utf-8")
     enable = (root / "scripts" / "enable_openclaw_chat.sh").read_text(encoding="utf-8")
     reauth = (root / "scripts" / "xai_device_reauth.py").read_text(encoding="utf-8")
@@ -223,6 +225,11 @@ def test_wiring_strings():
     assert "gateway.mode set to local" in enable
     assert "skip hung chat ping" in enable
     assert "killing listener on 18789" in enable
+    force = enable.split("FORCE_RESTART — skip hung chat ping", 1)[1]
+    assert force.find("kill_listener") < force.find("restart fullscan-openclaw-gateway")
+    ff_src = (root / "src" / "openclaw_fastfail.py").read_text(encoding="utf-8")
+    assert "timeout=150" in ff_src
+    assert "exceeded 150s" in ff_src
     assert "XDG_RUNTIME_DIR" in reauth
     assert "quality-ok packet has no Grok trace" in orch
     assert "passthrough (deadline)" in orch
@@ -255,3 +262,71 @@ def test_preopen_parent_is_not_another_grok_job():
     assert guard._other_grok_job("100 bash scripts/ecs_preopen.sh", ancestors) is False
     assert guard._other_grok_job("300 python3 scripts/openclaw_oauth_guard.py renew", ancestors) is False
     assert guard._other_grok_job("400 python -m src.run_preopen_all", ancestors) is True
+
+
+def test_xai_oauth_expiry_reads_auth_list_json_and_files(tmp_path, monkeypatch):
+    """Renew must see expiry even when a long JWT would hide xai/oauth in a 400-char dump,
+    and when the only readable copy is auth-profiles.json on disk (root-owned login case).
+    """
+    import importlib.util
+    import json
+    from datetime import datetime, timezone
+    from pathlib import Path
+    path = Path(__file__).resolve().parent.parent / "scripts" / "openclaw_oauth_guard.py"
+    # When this test file is standalone in the PR workspace, point at sibling.
+    if not path.is_file():
+        path = Path(__file__).resolve().parent / "openclaw_oauth_guard.py"
+    spec = importlib.util.spec_from_file_location("openclaw_oauth_guard_expiry", path)
+    guard = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(guard)
+
+    exp_iso = "2026-10-16T12:00:00.000Z"
+    exp = datetime(2026, 10, 16, 12, 0, tzinfo=timezone.utc)
+    long_jwt = "eyJ" + ("a" * 500)
+
+    # 1) auth list JSON shape (no tokens) — the real CLI summary.
+    list_json = {
+        "agentId": "main",
+        "provider": "xai",
+        "profiles": [{
+            "id": "xai:fngcyrus@gmail.com",
+            "provider": "xai",
+            "type": "oauth",
+            "label": "xai",
+            "expiresAt": exp_iso,
+        }],
+    }
+    assert guard._parse_auth_list_json(list_json)[0] == exp
+
+    # 2) File store with numeric ms expires (OpenClaw on-disk shape).
+    oc = tmp_path / ".openclaw" / "agents" / "main" / "agent"
+    oc.mkdir(parents=True)
+    (oc / "auth-profiles.json").write_text(json.dumps({
+        "profiles": {
+            "xai:oauth": {
+                "type": "oauth",
+                "provider": "xai",
+                "access": long_jwt,
+                "refresh": long_jwt,
+                "expires": int(exp.timestamp() * 1000),
+            }
+        }
+    }), encoding="utf-8")
+    monkeypatch.setattr(guard, "HOME", str(tmp_path))
+    dt, src, has_r = guard._xai_oauth_expiry_from_files(tmp_path / ".openclaw")
+    assert dt is not None
+    assert abs((dt - exp).total_seconds()) < 1
+    assert src.startswith("file:")
+    assert has_r is True
+
+    # 3) Walker must not require a 400-char dump that starts with the JWT.
+    big = {
+        "access": long_jwt,
+        "refresh": long_jwt,
+        "provider": "xai",
+        "type": "oauth",
+        "expires": exp_iso,
+    }
+    assert guard._is_xai_oauth_dict(big)
+    assert guard._expiry_from_dict(big)[0] is not None
+

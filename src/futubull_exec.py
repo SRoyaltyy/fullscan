@@ -328,7 +328,7 @@ def run(date: str | None, *, env: str = "simulate", submit: bool = False,
         }
         if write:
             write_last(last)
-            if TODAY_JSON.is_file():
+            if TODAY_JSON.is_file() or TODAY_JSON.with_name("today_live.json").is_file():
                 inject_today_from_disk()
         opend.close()
         return 0

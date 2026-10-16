@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `half` · sell `list` · S-boost `none` · deploy half leftover
 
-Cash book **-12.23%** ($8,777) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 368 · skips 107 · realized $-342.82.
+Cash book **-10.90%** ($8,910) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 380 · skips 107 · realized $-342.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -524,6 +524,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `SMMT` | 35 | $15.29 | $2.10 | — | $5,172.93 | — | deploy half leftover; list probable,yday_gainer,yday_mover; ret5=-10.3; leftover $549.71 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-10-14 09:30 ET | **BUY** | `PRMB` | 29 | $18.75 | $2.08 | — | $4,627.10 | — | deploy half leftover; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $549.71 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,627.10 | ▼ close $8,776.82 vs 09:30 $8,795.32 (session -2.16) | 16:00 close · cash $4,627.10 · equity $8,776.82 vs 09:30 $8,795.32 (-18.50; session marks -2.16) · 8 name(s) marked open→close (per-name table). TMUS×3 09:30 $155.00 → close $157.79 +8.37; TRU×8 09:30 $66.42 → close $66.94 +4.16; WSM×2 09:30 $238.29 → close $242.48 +8.38; CNK×14 09:30 $37.88 → close $38.20 +4.48; AVPT×38 09:30 $14.39 → close $14.00 -14.82; WLY×10 09:30 $52.29 → close $51.49 -8.00; SMMT×35 09:30 $15.29 → close $15.13 -5.60; PRMB×29 09:30 $18.75 → close $18.78 +0.87 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,627.10 | ▲ 09:30 equity $8,818.33 vs yday $8,776.82 (+41.51) | 09:30 open · cash $4,627.10 (unchanged overnight, no fees) · equity $8,818.33 vs prior close $8,776.82 (+41.51) · 8 name(s) re-marked at the open (per-name table). AVPT×38 yday $14.00 → 09:30 $13.99 -0.38; CNK×14 yday $38.20 → 09:30 $38.44 +3.36; PRMB×29 yday $18.78 → 09:30 $18.96 +5.22; SMMT×35 yday $15.13 → 09:30 $15.09 -1.40; TMUS×3 yday $157.79 → 09:30 $160.74 +8.85; TRU×8 yday $66.94 → 09:30 $68.55 +12.88; WLY×10 yday $51.49 → 09:30 $52.10 +6.10; WSM×2 yday $242.48 → 09:30 $245.92 +6.88 | — |
+| 2026-10-15 09:30 ET | **SELL** | `AVPT` | 38 | $13.99 | $2.12 | $-19.43 | $5,156.60 | ▼ -19.43 after sell → book $8,816.21; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `CNK` | 14 | $38.44 | $2.05 | $+3.76 | $5,692.70 | ▲ +3.76 after sell → book $8,814.15; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `TMUS` | 3 | $160.74 | $2.02 | $+13.20 | $6,172.91 | ▲ +13.20 after sell → book $8,812.14; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `TRU` | 8 | $68.55 | $2.03 | $+12.99 | $6,719.27 | ▲ +12.99 after sell → book $8,810.10; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `WLY` | 10 | $52.10 | $2.04 | $-5.96 | $7,238.23 | ▼ -5.96 after sell → book $8,808.06; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `WSM` | 2 | $245.92 | $2.02 | $+11.25 | $7,728.06 | ▲ +11.25 after sell → book $8,806.05; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **BUY** | `IT` | 3 | $199.10 | $2.00 | — | $7,128.76 | — | deploy half leftover; list flatten; 🔵; ret5=+5.4; leftover $644.00 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `FIS` | 17 | $36.40 | $2.04 | — | $6,507.91 | — | deploy half leftover; list flatten; 🔵; ret5=+4.9; leftover $644.00 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-15 09:30 ET | **BUY** | `TOST` | 21 | $29.95 | $2.05 | — | $5,876.91 | — | deploy half leftover; list flatten; 🔵; ret5=-2.3; leftover $644.00 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `PDFS` | 15 | $40.70 | $2.04 | — | $5,264.38 | — | deploy half leftover; list flatten,probable,yday_gainer,yday_mover; 🔵; ret5=-20.2; leftover $644.00 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `YOU` | 14 | $44.40 | $2.03 | — | $4,640.75 | — | deploy half leftover; list flatten; 🔵; ret5=+4.1; leftover $644.00 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `SHOO` | 14 | $44.74 | $2.03 | — | $4,012.35 | — | deploy half leftover; list flatten; ret5=+0.3; leftover $644.00 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,012.35 | ▲ close $8,910.17 vs 09:30 $8,818.33 (session +116.32) | 16:00 close · cash $4,012.35 · equity $8,910.17 vs 09:30 $8,818.33 (+91.84; session marks +116.32) · 8 name(s) marked open→close (per-name table). PRMB×29 09:30 $18.96 → close $18.98 +0.58; SMMT×35 09:30 $15.09 → close $15.37 +9.80; IT×3 09:30 $199.10 → close $207.31 +24.63; FIS×17 09:30 $36.40 → close $36.13 -4.59; TOST×21 09:30 $29.95 → close $32.22 +47.67; PDFS×15 09:30 $40.70 → close $41.27 +8.55; YOU×14 09:30 $44.40 → close $45.02 +8.68; SHOO×14 09:30 $44.74 → close $46.24 +21.00 | — |
 
 ## Not taken
 

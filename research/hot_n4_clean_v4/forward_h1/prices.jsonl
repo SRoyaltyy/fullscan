@@ -2796,3 +2796,8 @@
 {"close":2.16,"date":"2026-10-14","high":2.19,"low":1.91,"open":2.0,"ticker":"NAUT","volume":8154300.0}
 {"close":67.589996,"date":"2026-10-14","high":77.410004,"low":67.209999,"open":76.629997,"ticker":"PENG","volume":5843100.0}
 {"close":0.99,"date":"2026-10-14","high":1.19,"low":0.99,"open":1.15,"ticker":"SDEV","volume":8188300.0}
+{"close":275.079987,"date":"2026-10-15","high":275.190002,"low":270.850006,"open":271.420013,"ticker":"IWM","volume":31921315.0}
+{"close":88.120003,"date":"2026-10-15","high":88.5,"low":79.059998,"open":81.300003,"ticker":"KOD","volume":1394517.0}
+{"close":2.16,"date":"2026-10-15","high":2.2,"low":1.88,"open":2.07,"ticker":"NAUT","volume":8502195.0}
+{"close":61.860001,"date":"2026-10-15","high":64.331703,"low":58.900002,"open":64.050003,"ticker":"PENG","volume":6874758.0}
+{"close":1.02,"date":"2026-10-15","high":1.15,"low":0.8802,"open":1.01,"ticker":"SDEV","volume":16935466.0}

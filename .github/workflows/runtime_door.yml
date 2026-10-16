@@ -57,6 +57,10 @@ jobs:
           chmod +x scripts/runtime_status.py scripts/safe_git_push.sh \
             scripts/enable_openclaw_chat.sh scripts/ensure_openclaw_timeouts.sh || true
           HEAL="${{ github.event.inputs.heal }}"
+          DATE=$(TZ=America/New_York date +%F)
+          python3 -m src.workflow_progress beat --workflow runtime_door --date "$DATE" --stages snapshot --stage snapshot >> /tmp/progress_beat.log 2>&1 &
+          echo $! > /tmp/progress_beat.pid
+          trap 'kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true' EXIT
           if [ "$HEAL" = "true" ]; then
             python3 scripts/runtime_status.py --heal || true
           else
@@ -64,3 +68,4 @@ jobs:
           fi
           echo "======== _runtime.json ========"
           cat 01_daily/_runtime.json 2>/dev/null || echo "(missing)"
+          python3 -m src.workflow_progress touch --workflow runtime_door --date "$DATE" --stage snapshot --state ok || true

@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-15",
+  "generated_at": "2026-10-15T04:22:13.210074-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-10-15",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point to a mixed, tech-led weaker start as Asian chip stocks slide and traders await key inflation and activity data",
+  "raw_text": "- S&P 500 futures (@ES) fall 0.29% while Dow Jones futures (@YM) gain 0.33%, indicating a mixed start for US equities\n- Nasdaq 100 futures (@NQ) drop 1.13% and Russell 2000 futures (@ER2) rise 0.39%, highlighting pressure on growth and tech versus small caps\n- Overnight Asian indices trade sharply lower, led by semiconductor weakness, following the prior session’s hot US CPI print and renewed rate-hike concerns\n- European equity markets trade mixed overnight, providing little directional lead for US stocks\n- Oil (@CL) prices decline while gold (@GC) gains in overnight commodity trading, reflecting a cautious macro backdrop\n- Financials come into focus ahead of earnings from PNC (PNC), Charles Schwab (SCHW), and US Bancorp (USB) before the bell, with results seen as potential sector rotation catalysts\n- Today’s 8:30 AM ET data slate includes PPI, retail sales, initial jobless claims, and the Empire State and Philly Fed manufacturing surveys, all expected to drive volatility around inflation and consumer trends",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) **fall 0.29%** while **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) **gain 0.33%**, indicating a mixed start for US equities\n- **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) **drop 1.13%** and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) **rise 0.39%**, highlighting pressure on growth and tech versus small caps\n- **Overnight Asian indices** trade **sharply lower**, led by **semiconductor weakness**, following the prior session’s hot US CPI print and renewed rate-hike concerns\n- **European equity markets** trade **mixed** overnight, providing little directional lead for US stocks\n- **Oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices **decline** while **gold** ([@GC](https://finviz.com/futures_charts?t=GC)) **gains** in overnight commodity trading, reflecting a cautious macro backdrop\n- **Financials** come into focus ahead of earnings from **PNC** ([PNC](https://finviz.com/quote?t=PNC)), **Charles Schwab** ([SCHW](https://finviz.com/quote?t=SCHW)), and **US Bancorp** ([USB](https://finviz.com/quote?t=USB)) before the bell, with results seen as potential **sector rotation catalysts**\n- Today’s **8:30 AM ET** data slate includes **PPI**, **retail sales**, **initial jobless claims**, and the **Empire State and Philly Fed manufacturing surveys**, all expected to drive volatility around inflation and consumer trends",
+  "index_moves": [],
+  "oil": null,
+  "cpi": {
+    "text": "US CPI print and renewed rate-hike concerns",
+    "hotter": false
+  },
+  "fed_odds": null,
+  "named_tickers": [
+    "PNC",
+    "SCHW",
+    "USB"
+  ],
+  "named_leaders": [
+    "PNC",
+    "SCHW",
+    "USB"
+  ],
+  "calendar": [
+    "Overnight Asian indices trade sharply lower, led by semiconductor weakness, following the prior session’s hot US CPI print and renewed rate-hike concerns",
+    "Today’s 8:30 AM ET data slate includes PPI, retail sales, initial jobless claims, and the Empire State and Philly Fed manufacturing surveys, all expected to drive volatility around inflation and consumer trends"
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": {
+      "text": "US CPI print and renewed rate-hike concerns",
+      "hotter": false
+    },
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": true,
+    "fed": true,
+    "bullets": [
+      "Today’s 8:30 AM ET data slate includes PPI, retail sales, initial jobless claims, and the Empire State and Philly Fed manufacturing surveys, all expected to drive volatility around inflation and consumer trends"
+    ],
+    "text": "Today’s 8:30 AM ET data slate includes PPI, retail sales, initial jobless claims, and the Empire State and Philly Fed manufacturing surveys, all expected to drive volatility around inflation and consumer trends"
+  },
+  "earnings_slate": {
+    "tickers": [
+      "PNC",
+      "SCHW",
+      "USB"
+    ],
+    "text": "Financials come into focus ahead of earnings from PNC (PNC), Charles Schwab (SCHW), and US Bancorp (USB) before the bell, with results seen as potential sector rotation catalysts"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 309638,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-15T04:06:48.483",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-9.03%** ($9,097) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 198 · skips 209 · realized $-2117.42.
+Cash book **-8.35%** ($9,165) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 202 · skips 209 · realized $-2117.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -358,6 +358,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `CNK` | 116 | $37.88 | $2.34 | — | $4,419.72 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list flatten; ret5=+7.5; leftover $4408.07 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `HLP` | 1549 | $2.84 | $19.98 | — | $0.58 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+11.9; leftover $4408.07 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.58 | ▲ close $9,097.39 vs 09:30 $8,904.57 (session +251.71) | 16:00 close · cash $0.58 · equity $9,097.39 vs 09:30 $8,904.57 (+192.82; session marks +251.71) · 6 name(s) marked open→close (per-name table). CCCC×7 09:30 $2.72 → close $2.61 -0.77; KLRA×1 09:30 $10.64 → close $10.74 +0.10; LVWR×13 09:30 $1.56 → close $1.57 +0.13; WFF×1 09:30 $1.91 → close $0.17 -1.73; CNK×116 09:30 $37.88 → close $38.20 +37.12; HLP×1549 09:30 $2.84 → close $2.98 +216.86 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.58 | ▲ 09:30 equity $9,125.23 vs yday $9,097.39 (+27.84) | 09:30 open · cash $0.58 (unchanged overnight, no fees) · equity $9,125.23 vs prior close $9,097.39 (+27.84) · 6 name(s) re-marked at the open (per-name table). CCCC×7 yday $2.61 → 09:30 $2.64 +0.21; CNK×116 yday $38.20 → 09:30 $38.44 +27.84; HLP×1549 yday $2.98 → 09:30 $2.98 +0.00; KLRA×1 yday $10.74 → 09:30 $10.55 -0.19; LVWR×13 yday $1.57 → 09:30 $1.57 +0.00; WFF×1 yday $0.17 → 09:30 $0.15 -0.02 | — |
+| 2026-10-15 09:30 ET | **SELL** | `CCCC` | 7 | $2.64 | $0.23 | $-4.11 | $18.83 | ▼ -4.11 after sell → book $9,125.00; vs 09:30 mark -0.23 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SELL** | `KLRA` | 1 | $10.55 | $0.13 | $-1.09 | $29.26 | ▼ -1.09 after sell → book $9,124.88; vs 09:30 mark -0.12 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `LVWR` | 13 | $1.57 | $0.26 | $-0.77 | $49.40 | ▼ -0.77 after sell → book $9,124.61; vs 09:30 mark -0.27 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SELL** | `WFF` | 1 | $0.15 | $0.02 | $-14.81 | $49.53 | ▼ -14.81 after sell → book $9,124.59; vs 09:30 mark -0.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $49.53 | ▲ close $9,164.85 vs 09:30 $9,125.23 (session +40.26) | 16:00 close · cash $49.53 · equity $9,164.85 vs 09:30 $9,125.23 (+39.62; session marks +40.26) · 2 name(s) marked open→close (per-name table). CNK×116 09:30 $38.44 → close $38.52 +9.28; HLP×1549 09:30 $2.98 → close $3.00 +30.98 | — |
 
 ## Not taken
 

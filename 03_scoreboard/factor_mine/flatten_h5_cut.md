@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `cut_loser` · S-boost `none` · after min-hold, cut −3% losers
 
-Cash book **-11.20%** ($8,880) · signal-only (no cash/fees) was +4.47%. Starts YES **4/30**. Fills 180 · skips 349 · realized $+556.94.
+Cash book **-5.83%** ($9,417) · signal-only (no cash/fees) was +4.47%. Starts YES **4/30**. Fills 180 · skips 349 · realized $+556.94.
 
 ## How this sleeve decides (like you are 10)
 
@@ -336,6 +336,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $37.81 | ▼ close $8,763.36 vs 09:30 $8,825.44 (session -62.08) | 16:00 close · cash $37.81 · equity $8,763.36 vs 09:30 $8,825.44 (-62.08; session marks -62.08) · 2 name(s) marked open→close (per-name table). BLFS×3 09:30 $38.61 → close $38.61 +0.00; PACS×194 09:30 $44.70 → close $44.38 -62.08 | — |
 | 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $37.81 | ▼ 09:30 equity $8,722.62 vs yday $8,763.36 (-40.74) | 09:30 open · cash $37.81 (unchanged overnight, no fees) · equity $8,722.62 vs prior close $8,763.36 (-40.74) · 2 name(s) re-marked at the open (per-name table). BLFS×3 yday $38.61 → 09:30 $38.61 +0.00; PACS×194 yday $44.38 → 09:30 $44.17 -40.74 | — |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $37.81 | ▲ close $8,879.76 vs 09:30 $8,722.62 (session +157.14) | 16:00 close · cash $37.81 · equity $8,879.76 vs 09:30 $8,722.62 (+157.14; session marks +157.14) · 2 name(s) marked open→close (per-name table). BLFS×3 09:30 $38.61 → close $38.61 +0.00; PACS×194 09:30 $44.17 → close $44.98 +157.14 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $37.81 | ▲ 09:30 equity $8,922.44 vs yday $8,879.76 (+42.68) | 09:30 open · cash $37.81 (unchanged overnight, no fees) · equity $8,922.44 vs prior close $8,879.76 (+42.68) · 2 name(s) re-marked at the open (per-name table). BLFS×3 yday $38.61 → 09:30 $38.61 +0.00; PACS×194 yday $44.98 → 09:30 $45.20 +42.68 | — |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $37.81 | ▲ close $9,417.14 vs 09:30 $8,922.44 (session +494.70) | 16:00 close · cash $37.81 · equity $9,417.14 vs 09:30 $8,922.44 (+494.70; session marks +494.70) · 2 name(s) marked open→close (per-name table). BLFS×3 09:30 $38.61 → close $38.61 +0.00; PACS×194 09:30 $45.20 → close $47.75 +494.70 | — |
 
 ## Not taken
 

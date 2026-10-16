@@ -1,27 +1,23 @@
 {
-  "mode": "all",
-  "started_et": "2026-10-15T00:41:16.535378-04:00",
+  "mode": "renew",
+  "started_et": "2026-10-16T05:31:31.558734-04:00",
   "openclaw_version": "OpenClaw 2026.7.1-2 (0790d9f)",
   "paid_key_in_env_stripped": false,
-  "expires_before": "2026-10-15T09:08:45.626000+00:00",
-  "minutes_left_before": 267.2,
-  "expiry_source": "models auth list",
-  "has_refresh_token": null,
-  "renew": "SKIP: token fresh",
-  "main_pid": 2284740,
-  "pid_comm": "openclaw-gatewa",
-  "unit_active": "active",
-  "unit_sub": "running",
-  "pid_alive": true,
+  "expires_before": "2026-10-16T10:35:42.665000+00:00",
+  "minutes_left_before": 63.5,
+  "expiry_source": "sqlite:openclaw-agent.sqlite",
+  "has_refresh_token": true,
   "gateway_token_len": 48,
-  "call_pre": {
+  "call_renew": {
     "http": 200,
-    "secs": 8.0,
+    "secs": 9.2,
     "answer": "42",
     "ok": true
   },
-  "guard": "OK",
-  "ok": true,
-  "exit": 0,
-  "finished_et": "2026-10-15T00:41:43.992675-04:00"
+  "expires_after": "2026-10-16T10:35:42.665000+00:00",
+  "minutes_left_after": 62.9,
+  "renew": "FAIL: token dies before 06:30 ET and no auth profile expiry could be nudged \u2014 device login needed",
+  "ok": false,
+  "exit": 2,
+  "finished_et": "2026-10-16T05:32:51.953906-04:00"
 }

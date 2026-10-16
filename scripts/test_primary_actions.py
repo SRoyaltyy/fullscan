@@ -173,7 +173,8 @@ class PrimaryActionsTests(unittest.TestCase):
   blob={'meta':{'results':{'total':1}},'results':[{'application_number':'ANDA091433','sponsor_name':'Hikma','submissions':[{'submission_status':'AP','submission_number':'1','submission_status_date':'20110923','application_docs':[{'url':'http://www.accessdata.fda.gov/old.pdf'}]},{'submission_status':'AP','submission_number':'2','submission_status_date':'20261014','application_docs':[{'url':'https://www.accessdata.fda.gov/bad file.pdf'},{'url':'https://www.accessdata.fda.gov/letter.pdf'}]},{'submission_status':'TA','submission_number':'3','submission_status_date':'20261014'}]}]}
   rows,health=fetch_source(SOURCE|{'adapter':'openfda_approvals','url':'https://api.fda.gov/drug/drugsfda.json'},ASOF-timedelta(days=3),ASOF,fetch=lambda u,**kw:(200,json.dumps(blob).encode(),{},u))
   self.assertEqual(len(rows),1);self.assertEqual(rows[0]['url'],'https://www.accessdata.fda.gov/letter.pdf');self.assertEqual(source_metadata(SOURCE,rows[0])['document_stage'],'approval_published')
-  rows,health=fetch_source(SOURCE|{'adapter':'openfda_approvals','url':'https://api.fda.gov/drug/drugsfda.json'},ASOF-timedelta(days=3),ASOF,fetch=lambda u,**kw:(404,b'',{},u))
+  self.assertEqual(rows[0]['native_id'],'ANDA091433:2:20261014');self.assertEqual(rows[0]['published_raw'],'20261014')
+  rows,health=fetch_source(SOURCE|{'adapter':'openfda_approvals','url':'https://api.fda.gov/drug/drugsfda.json'},ASOF-timedelta(days=3),ASOF,fetch=lambda u,**kw:(404,b'{"error":{"code":"NOT_FOUND","message":"No matches found!"}}',{},u))
   self.assertEqual(health['status'],'valid_empty');self.assertEqual(rows,[])
 
  def test_named_official_statements_stay_when_research_speeches_are_excluded(self):
@@ -241,5 +242,103 @@ class PrimaryActionsTests(unittest.TestCase):
   self.assertFalse(public_get_audit_ok({'url':'https://api.congress.gov/v3/bill?api_key=secret-value','method':'GET','body_bytes':0,'authorization_sent':True}))
   self.assertFalse(public_get_audit_ok({'url':'https://www.federalregister.gov/documents','method':'GET','body_bytes':0,'authorization_sent':True}))
 
-if __name__=='__main__':unittest.main()
+ def test_redirects_scope_credentials_to_the_original_https_origin(self):
+  import urllib.request
+  request=urllib.request.Request('https://api.congress.gov/v3/bill',headers={'X-Api-Key':'secret-value','If-None-Match':'private-etag'})
+  HTTP_AUDIT.clear()
+  same=OfficialRedirects().redirect_request(request,None,302,'Found',{},'https://api.congress.gov/v3/bill/?api_key=secret-value')
+  self.assertEqual(same.get_header('X-api-key'),'secret-value');self.assertNotIn('secret-value',same.full_url)
+  for target in ('https://www.congress.gov/','https://api.govinfo.gov/collections/PLAW','https://api.congress.gov:444/v3/bill'):
+   redirected=OfficialRedirects().redirect_request(request,None,302,'Found',{},target)
+   self.assertIsNone(redirected.get_header('X-api-key'));self.assertIsNone(redirected.get_header('If-none-match'))
+  for target in ('http://api.congress.gov/v3/bill','https://user:secret-value@www.congress.gov/','https://outside.example/'):
+   with self.assertRaises(ValueError):OfficialRedirects().redirect_request(request,None,302,'Found',{},target)
+  self.assertEqual(len(HTTP_AUDIT),4);self.assertTrue(all(public_get_audit_ok(r) for r in HTTP_AUDIT))
+  self.assertNotIn('secret-value',json.dumps(HTTP_AUDIT))
 
+ def test_key_never_sent_over_http_or_to_unrelated_api_data_gov(self):
+  for target in ('http://api.congress.gov/v3/bill','https://api.govinfo.gov:444/collections/PLAW'):
+   with patch('urllib.request.build_opener') as opener:
+    with self.assertRaises(ValueError):get(target)
+    opener.assert_not_called()
+  captured=[]
+  class Resp:
+   status=200;headers={};url='https://api.data.gov/'
+   def read(self,n):return b'{}'
+   def __enter__(self):return self
+   def __exit__(self,*a):return False
+  with patch.dict(os.environ,{'DATA_GOV_API_KEY':'secret-value'}),patch('urllib.request.build_opener') as opener:
+   opener.return_value.open.side_effect=lambda req,**kw:(captured.append(dict(req.header_items())) or Resp())
+   get('https://api.data.gov/')
+  self.assertNotIn('X-api-key',captured[0])
+  self.assertFalse(public_get_audit_ok({'url':'http://api.congress.gov/v3/bill','method':'GET','body_bytes':0,'authorization_sent':True}))
+
+ def test_api_error_codes_and_retry_after_do_not_echo_server_messages(self):
+  cases=[(403,'API_KEY_INVALID','key_invalid'),(403,'API_KEY_UNVERIFIED','key_unverified'),(403,'API_KEY_UNAUTHORIZED','key_unauthorized'),(403,'API_KEY_DISABLED','key_disabled'),(403,'API_KEY_MISSING','key_not_configured'),(429,'OVER_RATE_LIMIT','rate_limited')]
+  with patch.dict(os.environ,{'DATA_GOV_API_KEY':'secret-value'}):
+   for status,code,expected in cases:
+    body=json.dumps({'error':{'code':code,'message':'echo secret-value'}}).encode()
+    rows,state=fetch_source(SOURCE|{'adapter':'congress_bills','url':'https://api.congress.gov/v3/bill'},ASOF-timedelta(days=3),ASOF,fetch=lambda u,**kw:(status,body,{'Retry-After':'3600'},u))
+    self.assertEqual(state['status'],expected);self.assertEqual(state['api_error_code'],code);self.assertEqual(state['retry_after_seconds'],3600)
+    self.assertNotIn('secret-value',json.dumps(state))
+
+ def test_http_error_retains_bounded_body_for_error_classification(self):
+  import io,urllib.error
+  body=b'{"error":{"code":"API_KEY_INVALID"}}'
+  error=urllib.error.HTTPError('https://api.congress.gov/v3/bill',403,'Forbidden',{},io.BytesIO(body))
+  with patch.dict(os.environ,{'DATA_GOV_API_KEY':'secret-value'}),patch('urllib.request.build_opener') as opener:
+   opener.return_value.open.side_effect=error
+   status,received,headers,url=get('https://api.congress.gov/v3/bill?api_key=secret-value')
+  self.assertEqual(status,403);self.assertEqual(received,body);self.assertNotIn('secret-value',url)
+
+ def test_fda_404_without_no_matches_error_is_a_failure(self):
+  for body in (b'',b'<html>Not found</html>',b'{"error":{"code":"NOT_FOUND","message":"Unknown endpoint"}}'):
+   rows,state=fetch_source(SOURCE|{'adapter':'openfda_approvals','url':'https://api.fda.gov/drug/drugsfda.json'},ASOF-timedelta(days=3),ASOF,fetch=lambda u,**kw:(404,body,{},u))
+   self.assertEqual(state['status'],'fetch_failed')
+
+ def test_credential_changes_refresh_catalog_and_key_errors_remain_retryable(self):
+  from build_primary_action_catalog import verification_result
+  from primary_action_ops import refresh_needed
+  import hashlib
+  with tempfile.TemporaryDirectory() as d,patch.dict(os.environ,{'DATA_GOV_API_KEY':''}):
+   root=pathlib.Path(d)
+   for path,value in [('src/primary_actions.py','core'),('scripts/build_primary_action_catalog.py','builder'),('config/primary_action_seeds.json','{}'),('data/primary_actions/institution_registry.json','{}')]:
+    dest=root/path;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(value)
+   (root/'config/primary_action_sources.json').write_text(json.dumps({'generated_at':datetime.now(timezone.utc).isoformat(),'seed_sha256':hashlib.sha256(b'{}').hexdigest(),'implementation_sha256':hashlib.sha256(b'corebuilder').hexdigest(),'credential_configuration':{'data_gov_api_key_configured':False}}))
+   self.assertFalse(refresh_needed(root))
+   os.environ['DATA_GOV_API_KEY']='secret-value';self.assertTrue(refresh_needed(root))
+  for status in ('key_not_configured','key_invalid','key_disabled','key_unverified','key_unauthorized','rate_limited'):
+   row=verification_result(SOURCE|{'adapter':'congress_bills'},[],{'status':status},'checked')
+   self.assertTrue(row['enabled']);self.assertFalse(row['verified_healthy']);self.assertEqual(row['verification']['status'],status)
+  excluded=verification_result(SOURCE|{'adapter':'congress_bills','document_type':'farming_grant'},[],{'status':'key_not_configured'},'checked')
+  self.assertFalse(excluded['enabled'])
+
+ def test_406_conditional_request_recovers_with_a_plain_get(self):
+  calls=[]
+  def fetch(url,**kw):
+   calls.append(kw.get('headers'))
+   return (406,b'',{},url) if kw.get('headers') else (200,RSS,{},url)
+  rows,state=fetch_source(SOURCE,ASOF-timedelta(days=3),ASOF,previous={'etag':'old'},fetch=fetch)
+  self.assertEqual(calls,[{'If-None-Match':'old'},{}]);self.assertEqual(state['status'],'ok');self.assertEqual(state['requests'],2);self.assertEqual(len(rows),1)
+  calls.clear()
+  rows,state=fetch_source(SOURCE,ASOF-timedelta(days=3),ASOF,fetch=lambda u,**kw:(calls.append(kw) or (403,b'',{},u)))
+  self.assertEqual(len(calls),1);self.assertEqual(state['status'],'blocked')
+
+ def test_keyed_setup_failure_does_not_stop_public_collection_or_repeat_ids(self):
+  keyed=SOURCE|{'id':'congress','adapter':'congress_bills','url':'https://api.congress.gov/v3/bill'}
+  with tempfile.TemporaryDirectory() as d,patch.dict(os.environ,{'DATA_GOV_API_KEY':''}):
+   ledger=Ledger(pathlib.Path(d)/'ledger.db');output=pathlib.Path(d)/'out'
+   try:
+    report=collect({'sources':[SOURCE,keyed]},ledger,output,fetch=lambda u,**kw:(200,RSS,{},u),asof=ASOF)
+    self.assertEqual(report['sources_ok'],1);self.assertEqual(report['sources_failed'],1);self.assertEqual(report['sources'][1]['status'],'key_not_configured')
+    self.assertEqual(report['llm_calls'],0);self.assertEqual(len(json.loads((output/'pending_headlines.json').read_text())),1)
+    report=collect({'sources':[SOURCE,keyed]},ledger,output,fetch=lambda u,**kw:(200,RSS,{},u),asof=ASOF)
+    self.assertEqual(report['counts']['new'],0);self.assertEqual(json.loads((output/'pending_headlines.json').read_text()),[])
+    self.assertNotIn('secret-value',(output/'report.json').read_text())
+   finally:ledger.close()
+
+ def test_public_inspection_rule_is_not_a_published_final_rule(self):
+  metadata=source_metadata(SOURCE|{'adapter':'public_inspection'},{'document_type':'Rule'})
+  self.assertEqual(metadata['document_stage'],'public_inspection_pending_publication')
+
+if __name__=='__main__':unittest.main()

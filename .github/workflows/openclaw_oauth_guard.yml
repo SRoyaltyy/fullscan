@@ -65,8 +65,13 @@ jobs:
           FULLSCAN_HOME: /home/gha
         run: |
           MODE="${{ github.event.inputs.mode || 'all' }}"
+          DATE=$(TZ=America/New_York date +%F)
+          python3 -m src.workflow_progress beat --workflow oauth_guard --date "$DATE" --stages renew,guard --stage "$MODE" >> /tmp/progress_beat.log 2>&1 &
+          echo $! > /tmp/progress_beat.pid
+          trap 'kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true' EXIT
           sudo -n env -u XAI_API_KEY FULLSCAN_HOME=/home/gha \
             python3 scripts/openclaw_oauth_guard.py "$MODE"
+          python3 -m src.workflow_progress touch --workflow oauth_guard --date "$DATE" --stage "$MODE" --state ok || true
       - name: Publish OAuth status (no tokens)
         if: always()
         env:

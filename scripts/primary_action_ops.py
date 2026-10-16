@@ -1,7 +1,7 @@
 """Offline catalog refresh, branch-aware state selection, and integrity checks."""
 import argparse,hashlib,json,pathlib,sqlite3
 from datetime import timedelta
-from src.primary_actions import now,date,iso,atomic_json,public_get_audit_ok
+from src.primary_actions import now,date,iso,atomic_json,public_get_audit_ok,data_gov_api_key
 
 def refresh_needed(root,force=False):
     p=root/'config/primary_action_sources.json'
@@ -10,7 +10,8 @@ def refresh_needed(root,force=False):
     seed=hashlib.sha256((root/'config/primary_action_seeds.json').read_bytes()).hexdigest()
     implementation=hashlib.sha256((root/'src/primary_actions.py').read_bytes()+(root/'scripts/build_primary_action_catalog.py').read_bytes()).hexdigest()
     stamp=date(catalog.get('generated_at'))
-    return catalog.get('seed_sha256')!=seed or catalog.get('implementation_sha256')!=implementation or not stamp or now()-stamp>timedelta(days=7)
+    configured=catalog.get('credential_configuration',{}).get('data_gov_api_key_configured',False)
+    return configured!=bool(data_gov_api_key()) or catalog.get('seed_sha256')!=seed or catalog.get('implementation_sha256')!=implementation or not stamp or now()-stamp>timedelta(days=7)
 
 def previous_artifact(artifacts,branch):
     # A main deployment can promote the verified PR state without resetting document IDs.

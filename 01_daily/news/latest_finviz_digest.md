@@ -1,13 +1,13 @@
-# Finviz Daily Digest — 2026-10-15
+# Finviz Daily Digest — 2026-10-16
 
-_Generated 2026-10-15T06:34:19.268602-04:00 · export=data/exports/finviz_2026-10-15.csv · ticker digests=5887 · high-signal=2046_
+_Generated 2026-10-16T04:18:13.735532-04:00 · export=data/exports/finviz_2026-10-16.csv · ticker digests=5887 · high-signal=2046_
 
 ## Major indices (live quote page)
 
-- **S&P 500 (SPY)**: FISV, NU, LPLA: Analyst Picks Top 3 Financial Stocks In Forgettable Year For Sector
-- **Nasdaq-100 (QQQ)**: Michael Burry Warns Wall Streets Pain Trade Can Last As Mag 7 Weakness Could Deepen Red October Call
-- **Dow Jones (DIA)**: Michael Burry Flags Bull Trap Risk, Holds Back On New Shorts  Why Trumps Fannie-Freddie Call Matters To His Portfolio
-- **Russell 2000 (IWM)**: Is ETF Innovation Inviting a Regulatory Sledgehammer?
+- **S&P 500 (SPY)**: Stock Market: Will S&P 500 Open Up or Down Today?
+- **Nasdaq-100 (QQQ)**: Who's Really Making Money in ETFs?
+- **Dow Jones (DIA)**: PPI, Retail Sales Jump, Claims Stay Resilient
+- **Russell 2000 (IWM)**: Who's Really Making Money in ETFs?
 
 ## High-signal ticker digests (ranked)
 

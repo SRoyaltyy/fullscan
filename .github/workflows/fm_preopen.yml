@@ -94,26 +94,52 @@ jobs:
         run: |
           python3 -m src.test_v4_engine_pins
           python3 -m src.past_day_lock --check
+      - name: Predict on main (fail and name 'predict missing')
+        # Mirrors h1_forward.yml: no general predict on origin/main, no seal.
+        # 10-15 the seal could not happen and nothing said why.
+        if: steps.pick.outputs.go == 'true' && steps.pick.outputs.step == 'seal'
+        env:
+          D: ${{ github.event.inputs.date }}
+        run: |
+          set -euo pipefail
+          D="${D:-$(TZ=America/New_York date +%F)}"
+          git fetch -q origin main
+          if ! timeout 60 python3 scripts/preflight.py --workflow fm_preopen --date "$D"; then
+            echo "::error::predict missing: 01_daily/general/${D}_predict.md is not on main; Factor Mine pre-open not sealed"
+            exit 1
+          fi
       - name: Seal (before 09:30 ET)
         if: steps.pick.outputs.go == 'true' && steps.pick.outputs.step == 'seal'
         env:
           D: ${{ github.event.inputs.date }}
         run: |
           set -euo pipefail
+          DATE="${D:-$(TZ=America/New_York date +%F)}"
+          python3 -m src.workflow_progress beat --workflow fm_preopen --date "$DATE" --stages seal,book --stage seal >> /tmp/progress_beat.log 2>&1 &
+          echo $! > /tmp/progress_beat.pid
+          trap 'kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true' EXIT
           python3 -m src.factor_mine_preopen seal ${D:+--date "$D"}
           hhmm=$((10#$(TZ=America/New_York date +%H%M)))
           if [ "$hhmm" -ge 929 ]; then
             echo "09:29 ET passed before the push; not landing a seal at the open"
+            kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true
+            python3 -m src.workflow_progress touch --workflow fm_preopen --date "$DATE" --stage seal --state skipped --error "09:29 ET passed before the push" || true
             exit 0
           fi
           bash scripts/safe_git_push.sh "auto: factor mine pre-open seal $(TZ=America/New_York date +%F)" \
-            data/factor_mine/preopen/seals/
+            data/factor_mine/preopen/seals/ \
+            01_daily/_progress/
+          python3 -m src.workflow_progress touch --workflow fm_preopen --date "$DATE" --stage seal --state ok || true
       - name: Book (after the close)
         if: steps.pick.outputs.go == 'true' && steps.pick.outputs.step == 'book'
         env:
           D: ${{ github.event.inputs.date }}
         run: |
           set -euo pipefail
+          DATE="${D:-$(TZ=America/New_York date +%F)}"
+          python3 -m src.workflow_progress beat --workflow fm_preopen --date "$DATE" --stages seal,book --stage book >> /tmp/progress_beat.log 2>&1 &
+          echo $! > /tmp/progress_beat.pid
+          trap 'kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true' EXIT
           python3 -m src.factor_mine_preopen book ${D:+--date "$D"}
           python3 -m src.past_day_lock --check
           bash scripts/safe_git_push.sh "auto: factor mine pre-open sleeves book" \
@@ -123,7 +149,9 @@ jobs:
             03_scoreboard/factor_mine/union_hot_n4_holdup_preopen.md \
             data/factor_mine/preopen/summary.json \
             dashboard/factor-mine/preopen.json \
-            data/past_day_lock/
+            data/past_day_lock/ \
+            01_daily/_progress/
+          python3 -m src.workflow_progress touch --workflow fm_preopen --date "$DATE" --stage book --state ok || true
       - name: Restamp GitHub Pages
         if: steps.pick.outputs.go == 'true' && steps.pick.outputs.step == 'book'
         env:

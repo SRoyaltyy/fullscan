@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/union_join_vol_green_h1 w=0.5,0.5 net=priority
 
-Cash book **+19.50%** ($11,950) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 445 · skips 100 · realized $+1412.04.
+Cash book **+19.60%** ($11,960) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 453 · skips 100 · realized $+1412.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $115.71.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $75.19.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -606,6 +606,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `ECO` | 30 | $99.71 | $2.08 | — | $3,185.85 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+14.3; combo leftover $3084.02; owner union_hot_n4_h1 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `PINS` | 138 | $22.23 | $2.40 | — | $115.71 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+11.7; combo leftover $3084.02; owner union_hot_n4_h1 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $115.71 | ▼ close $11,949.53 vs 09:30 $12,347.68 (session -371.30) | 16:00 close · cash $115.71 · equity $11,949.53 vs 09:30 $12,347.68 (-398.15; session marks -371.30) · 4 name(s) marked open→close (per-name table). JLHL×647 09:30 $4.76 → close $4.60 -103.52; ODD×138 09:30 $22.22 → close $21.63 -81.42; ECO×30 09:30 $99.71 → close $95.66 -121.50; PINS×138 09:30 $22.23 → close $21.76 -64.86 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $115.71 | ▼ 09:30 equity $11,623.00 vs yday $11,949.53 (-326.53) | 09:30 open · cash $115.71 (unchanged overnight, no fees) · equity $11,623.00 vs prior close $11,949.53 (-326.53) | — |
+| 2026-10-15 09:30 ET | **SELL** | `ECO` | 30 | $89.67 | $2.11 | $-305.39 | $2,803.70 | ▼ -305.39 after sell → book $11,620.89; vs 09:30 mark -2.11 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `JLHL` | 647 | $4.34 | $8.48 | $-288.56 | $5,603.20 | ▼ -288.56 after sell → book $11,612.41; vs 09:30 mark -8.48 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `ODD` | 138 | $21.95 | $2.45 | $-42.12 | $8,629.85 | ▼ -42.12 after sell → book $11,609.96; vs 09:30 mark -2.45 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `PINS` | 138 | $21.59 | $2.45 | $-92.48 | $11,607.51 | ▼ -92.48 after sell → book $11,607.51; vs 09:30 mark -2.45 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **BUY** | `LW` | 53 | $53.79 | $2.15 | — | $8,754.49 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+10.3; combo leftover $2901.88; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ETSY` | 34 | $84.47 | $2.09 | — | $5,880.42 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+16.0; combo leftover $2901.88; owner union_hot_n4_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `BLMN` | 306 | $9.48 | $3.95 | — | $2,975.59 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+14.4; combo leftover $2901.88; owner union_hot_n4_h1 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `CHWY` | 138 | $21.00 | $2.40 | — | $75.19 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+14.3; combo leftover $2901.88; owner union_hot_n4_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $75.19 | ▲ close $11,959.80 vs 09:30 $11,623.00 (session +362.88) | 16:00 close · cash $75.19 · equity $11,959.80 vs 09:30 $11,623.00 (+336.80; session marks +362.88) · 4 name(s) marked open→close (per-name table). LW×53 09:30 $53.79 → close $54.21 +22.26; ETSY×34 09:30 $84.47 → close $89.18 +160.14; BLMN×306 09:30 $9.48 → close $9.93 +137.70; CHWY×138 09:30 $21.00 → close $21.31 +42.78 | — |
 
 ## Not taken
 

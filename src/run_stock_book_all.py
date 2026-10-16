@@ -60,14 +60,25 @@ def _maybe_write_flatten_card(date: str) -> None:
 def _run_group(cmd: list[str], timeout_s: int | None):
     """Run in its own process group; on timeout SIGKILL the whole group so
     grandchildren can't keep the step alive (10-07: a 420s timeout took
-    20 min to return)."""
+    20 min to return).
+
+    The wait stops at FULLSCAN_STEP_DEADLINE. Pre-Open calls this in
+    process after the essays, and the nested live_boards (480s), stock
+    book (900s), and paper (900s) waits used to ignore that wall. GitHub
+    then killed the 50-minute step before the status file could land.
+    """
     import os as _os
     import signal as _signal
+    rem = step_deadline.remaining_s()
+    wait_s = timeout_s
+    if rem is not None:
+        capped = max(1, int(rem))
+        wait_s = capped if wait_s is None else max(1, min(int(wait_s), capped))
     p = subprocess.Popen(cmd, cwd=str(ROOT),
-                         env=step_deadline.child_env(timeout_s),
+                         env=step_deadline.child_env(wait_s),
                          start_new_session=True)
     try:
-        p.wait(timeout=timeout_s)
+        p.wait(timeout=wait_s)
     except subprocess.TimeoutExpired:
         try:
             _os.killpg(p.pid, _signal.SIGKILL)
@@ -85,8 +96,8 @@ def _run(cmd: list[str], check: bool = True, timeout_s: int | None = None) -> in
     print(f"\n>>> {' '.join(cmd)}", flush=True)
     try:
         r = _run_group(cmd, timeout_s)
-    except subprocess.TimeoutExpired:
-        print(f"[all] WARN: timed out after {timeout_s}s: {' '.join(cmd)}",
+    except subprocess.TimeoutExpired as exc:
+        print(f"[all] WARN: timed out after {exc.timeout}s: {' '.join(cmd)}",
               flush=True)
         return 124
     if check and r.returncode != 0:

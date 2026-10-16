@@ -10,7 +10,7 @@ See the source catalog, taxonomy, health reports and workflow for implementation
 
 ## Persistent operation and outputs
 
-The collection job has read-only repository permissions, disabled checkout credentials and no user secrets. Its HTTP client permits only official hosts, public GETs and conditional-cache headers; it blocks external redirects and never executes page JavaScript. A separate publication job commits only the public catalog and headline outputs.
+The collection job has read-only repository permissions and disabled checkout credentials. The optional `DATA_GOV_API_KEY` Actions secret enables Congress.gov, Regulations.gov and GovInfo. The client sends that key only in an `X-Api-Key` header to those three HTTPS origins on port 443. Redirects retain it only on the same origin; cross-origin redirects strip it, and credentialed HTTP downgrades are rejected. Every requested hop is audited without header values or query-string keys. A separate publication job commits only the public catalog and headline outputs.
 
 Each successful run uploads a 90-day SQLite state artifact. The next runner restores it, including canonical URL aliases, source-scoped native IDs and previous source response state. Promotion to main reuses the verified PR state instead of resetting IDs. If no state artifact can be recovered, the job explicitly reports a bootstrap; deduplication beyond the artifact retention period is not guaranteed. Full discovery runs weekly or after source/adapter changes. If a refresh fails, an existing catalog may continue in degraded mode; refresh outcome and catalog age remain visible. Total collection failure fails the job.
 
@@ -52,3 +52,20 @@ PYTHONPATH=. python scripts/primary_action_ops.py audit
 ```
 
 Add official discovery pages to config/primary_action_seeds.json. Prefer documented APIs and advertised RSS/Atom feeds. An HTML adapter requires an explicit publication-link selector and useful dates. Typed document labels are appropriate only for consistently typed channels. Never enable a source merely because it returns HTTP 200.
+
+## Key setup and source recovery
+
+Add the api.data.gov key from the signup email as repository Actions secret `DATA_GOV_API_KEY`. Verify the signup email if required. Do not commit the key or place it in source URLs. GitHub settings: **Settings → Secrets and variables → Actions → New repository secret**. Run the Primary-origin action documents workflow after saving it, or wait for the next scheduled pass.
+
+The catalog records only whether the key is configured. Adding or removing it triggers fresh verification on the next run. Keyed adapters remain eligible after setup or quota failures; their `verified_healthy` flag stays false until a successful response. Summary counts distinguish eligible channels from healthy ones.
+
+| Source status | Next step |
+|---|---|
+| `key_not_configured` | Add the Actions secret; a server `API_KEY_MISSING` response also uses this status |
+| `key_invalid` | Replace the secret with the issued key |
+| `key_unverified` | Complete the email verification |
+| `key_disabled` / `key_unauthorized` | Resolve access with the API provider |
+| `rate_limited` | Allow the quota to recover; numeric Retry-After is retained in source health |
+| `blocked` | Investigate the endpoint or access policy; this status alone does not prove a key issue |
+
+These states follow the api.data.gov [documented error codes](https://api.data.gov/docs/developer-manual/). Arbitrary API error messages and credential values are excluded from published health. openFDA uses its public no-key allowance: only an explicit `NOT_FOUND` / `No matches found!` response is a healthy empty query, rather than treating any 404 as success. FDA submission IDs retain the source date when document links are processed. Public-inspection documents remain pending publication, including documents whose publisher type is Rule.

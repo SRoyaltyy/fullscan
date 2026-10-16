@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-4.57%** ($9,543) · signal-only (no cash/fees) was -55.91%. Starts YES **1/30**. Fills 318 · skips 265 · realized $-1568.09.
+Cash book **-7.47%** ($9,253) · signal-only (no cash/fees) was -55.91%. Starts YES **1/30**. Fills 329 · skips 265 · realized $-1568.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -476,6 +476,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **SHORT** | `JLHL` | 503 | $4.76 | $6.66 | — | $15,937.49 | — | ret_5>15; gate ret_5_min=15.0; list yday_mover; 🔵; ret5=+22.6; leftover $2398.21 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟡 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **SHORT** | `QSI` | 1789 | $1.34 | $23.46 | — | $18,311.29 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; ret5=+15.6; leftover $2398.21 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18,311.29 | ▼ close $9,543.29 vs 09:30 $9,613.78 (session -19.43) | 16:00 close · cash $18,311.29 · equity $9,543.29 vs 09:30 $9,613.78 (-70.49; session marks -19.43) · 11 name(s) marked open→close (per-name table). CCI×6 09:30 $78.93 → close $79.38 -2.70; MRNA×2 09:30 $217.49 → close $226.30 -17.62; NAUT×291 09:30 $2.00 → close $2.16 -46.56; NVAX×43 09:30 $12.69 → close $12.64 +2.15; PCVX×7 09:30 $67.07 → close $67.55 -3.36; PRME×138 09:30 $3.21 → close $3.13 +11.04; QTEX×317 09:30 $1.36 → close $1.46 -31.70; SEZL×4 09:30 $126.68 → close $123.11 +14.28; WFF×37 09:30 $1.91 → close $0.17 +64.01; JLHL×503 09:30 $4.76 → close $4.60 +80.48; QSI×1789 09:30 $1.34 → close $1.39 -89.45 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18,311.29 | ▲ 09:30 equity $9,785.90 vs yday $9,543.29 (+242.61) | 09:30 open · cash $18,311.29 (unchanged overnight, no fees) · equity $9,785.90 vs prior close $9,543.29 (+242.61) · 11 name(s) re-marked at the open (per-name table). CCI×6 yday $79.38 → 09:30 $80.80 -8.52; JLHL×503 yday $4.60 → 09:30 $4.34 +130.78; MRNA×2 yday $226.30 → 09:30 $225.48 +1.64; NAUT×291 yday $2.16 → 09:30 $2.07 +26.19; NVAX×43 yday $12.64 → 09:30 $12.50 +6.02; PCVX×7 yday $67.55 → 09:30 $67.72 -1.19; PRME×138 yday $3.13 → 09:30 $3.12 +1.38; QSI×1789 yday $1.39 → 09:30 $1.35 +71.56; QTEX×317 yday $1.46 → 09:30 $1.44 +6.34; SEZL×4 yday $123.11 → 09:30 $121.24 +7.48; WFF×37 yday $0.17 → 09:30 $0.15 +0.92 | — |
+| 2026-10-15 09:30 ET | **COVER** | `CCI` | 6 | $80.80 | $2.01 | $-11.85 | $17,824.48 | ▼ -11.85 after sell → book $9,783.89; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **COVER** | `MRNA` | 2 | $225.48 | $2.00 | $-6.51 | $17,371.53 | ▼ -6.51 after sell → book $9,781.90; vs 09:30 mark -1.99 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **COVER** | `NAUT` | 291 | $2.07 | $3.75 | $-53.85 | $16,765.40 | ▼ -53.85 after sell → book $9,778.14; vs 09:30 mark -3.76 | dropped from list after 4 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **COVER** | `NVAX` | 43 | $12.50 | $2.12 | $+0.46 | $16,225.78 | ▲ +0.46 after sell → book $9,776.02; vs 09:30 mark -2.12 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **COVER** | `PCVX` | 7 | $67.72 | $2.01 | $+17.85 | $15,749.73 | ▲ +17.85 after sell → book $9,774.01; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **COVER** | `PRME` | 138 | $3.12 | $2.40 | $+109.68 | $15,316.77 | ▲ +109.68 after sell → book $9,771.61; vs 09:30 mark -2.40 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **COVER** | `QTEX` | 317 | $1.44 | $4.09 | $+83.67 | $14,856.20 | ▲ +83.67 after sell → book $9,767.52; vs 09:30 mark -4.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **COVER** | `SEZL` | 4 | $121.24 | $2.00 | $+22.00 | $14,369.24 | ▲ +22.00 after sell → book $9,765.52; vs 09:30 mark -2.00 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **COVER** | `WFF` | 37 | $0.15 | $0.17 | $+539.01 | $14,363.52 | ▲ +539.01 after sell → book $9,765.35; vs 09:30 mark -0.17 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SHORT** | `GLND` | 772 | $3.16 | $10.17 | — | $16,792.87 | — | ret_5>15; gate ret_5_min=15.0; list yday_mover; ret5=+43.9; leftover $2441.34 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SHORT** | `ETSY` | 28 | $84.47 | $2.17 | — | $19,155.86 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; ret5=+16.0; leftover $2441.34 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,155.86 | ▼ close $9,252.52 vs 09:30 $9,785.90 (session -500.49) | 16:00 close · cash $19,155.86 · equity $9,252.52 vs 09:30 $9,785.90 (-533.38; session marks -500.49) · 4 name(s) marked open→close (per-name table). JLHL×503 09:30 $4.34 → close $4.77 -216.29; QSI×1789 09:30 $1.35 → close $1.31 +71.56; GLND×772 09:30 $3.16 → close $3.45 -223.88; ETSY×28 09:30 $84.47 → close $89.18 -131.88 | — |
 
 ## Not taken
 

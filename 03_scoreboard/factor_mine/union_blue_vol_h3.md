@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-13.84%** ($8,616) · signal-only (no cash/fees) was -21.78%. Starts YES **2/30**. Fills 253 · skips 248 · realized $-1054.91.
+Cash book **-11.80%** ($8,820) · signal-only (no cash/fees) was -21.78%. Starts YES **2/30**. Fills 257 · skips 248 · realized $-1054.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -415,6 +415,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **SELL** | `PCRX` | 29 | $36.33 | $2.10 | $-4.17 | $8,113.55 | ▼ -4.17 after sell → book $8,155.61; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-14 09:30 ET | **BUY** | `EGG` | 1863 | $4.34 | $24.03 | — | $4.10 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=-5.8; leftover $8113.55 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.10 | ▲ close $8,616.43 vs 09:30 $8,191.18 (session +484.85) | 16:00 close · cash $4.10 · equity $8,616.43 vs 09:30 $8,191.18 (+425.25; session marks +484.85) · 5 name(s) marked open→close (per-name table). DNA×1 09:30 $11.42 → close $11.53 +0.11; NVAX×1 09:30 $12.69 → close $12.64 -0.05; QSI×9 09:30 $1.34 → close $1.39 +0.45; SVC×1 09:30 $5.89 → close $5.85 -0.04; EGG×1863 09:30 $4.34 → close $4.60 +484.38 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.10 | ▼ 09:30 equity $8,615.53 vs yday $8,616.43 (-0.90) | 09:30 open · cash $4.10 (unchanged overnight, no fees) · equity $8,615.53 vs prior close $8,616.43 (-0.90) · 5 name(s) re-marked at the open (per-name table). DNA×1 yday $11.53 → 09:30 $11.07 -0.46; EGG×1863 yday $4.60 → 09:30 $4.60 +0.00; NVAX×1 yday $12.64 → 09:30 $12.50 -0.14; QSI×9 yday $1.39 → 09:30 $1.35 -0.36; SVC×1 yday $5.85 → 09:30 $5.91 +0.06 | — |
+| 2026-10-15 09:30 ET | **SELL** | `DNA` | 1 | $11.07 | $0.13 | $-1.88 | $15.04 | ▼ -1.88 after sell → book $8,615.40; vs 09:30 mark -0.13 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SELL** | `NVAX` | 1 | $12.50 | $0.15 | $-0.39 | $27.39 | ▼ -0.39 after sell → book $8,615.25; vs 09:30 mark -0.15 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SELL** | `QSI` | 9 | $1.35 | $0.17 | $-1.45 | $39.37 | ▼ -1.45 after sell → book $8,615.08; vs 09:30 mark -0.17 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SELL** | `SVC` | 1 | $5.91 | $0.08 | $-1.55 | $45.20 | ▼ -1.55 after sell → book $8,615.00; vs 09:30 mark -0.08 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $45.20 | ▲ close $8,819.93 vs 09:30 $8,615.53 (session +204.93) | 16:00 close · cash $45.20 · equity $8,819.93 vs 09:30 $8,615.53 (+204.40; session marks +204.93) · 1 name(s) marked open→close (per-name table). EGG×1863 09:30 $4.60 → close $4.71 +204.93 | — |
 
 ## Not taken
 

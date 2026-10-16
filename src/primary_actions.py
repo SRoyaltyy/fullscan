@@ -16,7 +16,8 @@ MAX_BYTES=8_000_000
 HTTP_AUDIT=[]
 OFFICIAL_SUFFIXES=('.gov','.gov.uk','.gc.ca','.gov.au','.govt.nz','.gov.hk','.go.jp','.go.kr','.gov.in','.gov.cn','.europa.eu','.gov.sg','.gov.my','.go.th','.gov.ph','.go.id','.gov.br','.gov.za','.gouv.fr','.gov.tw','.parliament.uk')
 OFFICIAL_DOMAINS=('bankofengland.co.uk','bankofcanada.ca','rbi.org.in','snb.ch','riksbank.se','norges-bank.no','bundesbank.de','cnmc.es','banxico.org.mx','resbank.co.za','bis.org','wto.org','imf.org','worldbank.org','un.org','thegazette.co.uk','bot.or.th','bancaditalia.it','bnm.gov.my','newyorkfed.org','boj.or.jp','fca.org.uk','scc-csc.ca','sfc.hk','judiciary.hk','bundeskartellamt.de','autoritedelaconcurrence.fr')
-KEYED_API_HOSTS={'api.congress.gov','api.regulations.gov','api.govinfo.gov','api.data.gov'}
+KEYED_API_HOSTS={'api.congress.gov','api.regulations.gov','api.govinfo.gov'}
+KEYED_ADAPTERS={'congress_bills','regulations_documents','govinfo_packages'}
 BILL_SLUG={'HR':'house-bill','S':'senate-bill','HJRES':'house-joint-resolution','SJRES':'senate-joint-resolution','HCONRES':'house-concurrent-resolution','SCONRES':'senate-concurrent-resolution','HRES':'house-resolution','SRES':'senate-resolution'}
 BILL_LABEL={'HR':'H.R.','S':'S.','HJRES':'H.J.Res.','SJRES':'S.J.Res.','HCONRES':'H.Con.Res.','SCONRES':'S.Con.Res.','HRES':'H.Res.','SRES':'S.Res.'}
 
@@ -26,8 +27,18 @@ def allowed_public_source(url):
 
 class OfficialRedirects(urllib.request.HTTPRedirectHandler):
     def redirect_request(self,req,fp,code,msg,headers,newurl):
+        canonical_url(newurl)
         if not allowed_public_source(newurl):raise ValueError('Redirect outside explicit official-source host policy')
-        return super().redirect_request(req,fp,code,msg,headers,newurl)
+        newurl=strip_api_key(newurl)
+        old=urllib.parse.urlsplit(req.full_url);new=urllib.parse.urlsplit(newurl)
+        if any(k.lower()=='x-api-key' for k,v in req.header_items()) and new.scheme!='https':raise ValueError('Credentialed redirect requires HTTPS')
+        redirected=super().redirect_request(req,fp,code,msg,headers,newurl)
+        if redirected is not None:
+            if (old.scheme,old.hostname,old.port or 443)!=(new.scheme,new.hostname,new.port or 443):
+                redirected.remove_header('X-api-key')
+                redirected.remove_header('If-none-match');redirected.remove_header('If-modified-since')
+            audit_request(redirected)
+        return redirected
 
 def now():return datetime.now(timezone.utc)
 def iso(dt):return dt.astimezone(timezone.utc).isoformat()
@@ -55,12 +66,21 @@ def strip_api_key(url):
 
 def data_gov_api_key():return os.environ.get('DATA_GOV_API_KEY','').strip()
 
+def keyed_request_url(url):
+    u=urllib.parse.urlsplit(url)
+    return u.scheme=='https' and u.hostname in KEYED_API_HOSTS and u.port in (None,443) and not u.username and not u.password
+
+def audit_request(request):
+    HTTP_AUDIT.append({'url':request.full_url,'method':'GET','body_bytes':0,'authorization_sent':any(k.lower()=='x-api-key' for k,v in request.header_items())})
+
 def public_get_audit_ok(record):
     url=record.get('url') or ''
+    try:canonical_url(url)
+    except ValueError:return False
     if not allowed_public_source(url) or record.get('method')!='GET' or record.get('body_bytes')!=0:return False
     if any(k.lower() in ('api_key','x-api-key') for k,_ in urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query)):return False
     host=(urllib.parse.urlsplit(url).hostname or '').lower()
-    if record.get('authorization_sent'):return host in KEYED_API_HOSTS
+    if record.get('authorization_sent'):return keyed_request_url(url)
     return record.get('authorization_sent') is False
 
 def congress_ordinal(value):
@@ -74,17 +94,33 @@ def get(url,headers=None,timeout=20):
     if any(k.lower() not in ('if-none-match','if-modified-since') for k in (headers or {})):raise ValueError('Only public conditional-cache headers are accepted')
     request_url=strip_api_key(url)
     host=(urllib.parse.urlsplit(request_url).hostname or '').lower()
+    if host in KEYED_API_HOSTS and not keyed_request_url(request_url):raise ValueError('Keyed API requires its HTTPS origin on port 443')
     key=data_gov_api_key()
-    extra={'X-Api-Key':key} if host in KEYED_API_HOSTS and key else {}
-    HTTP_AUDIT.append({'url':request_url,'method':'GET','body_bytes':0,'authorization_sent':bool(extra)})
+    extra={'X-Api-Key':key} if keyed_request_url(request_url) and key else {}
     request=urllib.request.Request(request_url,headers={'User-Agent':USER_AGENT,'Accept':'application/vnd.api+json, application/json, application/atom+xml, application/rss+xml, text/html;q=0.8',**(headers or {}),**extra})
+    audit_request(request)
     try:
         with urllib.request.build_opener(OfficialRedirects()).open(request,timeout=timeout) as response:
             body=response.read(MAX_BYTES+1)
             if len(body)>MAX_BYTES:raise ValueError('Response exceeds public-document metadata size limit')
             return response.status,body,dict(response.headers),response.url
     except urllib.error.HTTPError as exc:
-        return exc.code,b'',dict(exc.headers),url
+        try:body=exc.read(65536)
+        finally:exc.close()
+        return exc.code,body,dict(exc.headers),request_url
+
+def api_error(body):
+    # Persist only known codes, never arbitrary server messages which may echo a key.
+    try:
+        error=json.loads(body).get('error') or {}
+        return error if isinstance(error,dict) else {}
+    except (ValueError,AttributeError):return {}
+
+def failure_status(status,body,keyed=False):
+    code=api_error(body).get('code')
+    known={'API_KEY_MISSING':'key_not_configured','API_KEY_INVALID':'key_invalid','API_KEY_DISABLED':'key_disabled','API_KEY_UNVERIFIED':'key_unverified','API_KEY_UNAUTHORIZED':'key_unauthorized','OVER_RATE_LIMIT':'rate_limited'}
+    if keyed and code in known:return known[code],code
+    return ('rate_limited' if status==429 else 'blocked' if status in (401,403) else 'fetch_failed'),None
 
 def text(element,name):
     found=next((e for e in element if e.tag.split('}')[-1]==name),None)
@@ -184,6 +220,7 @@ def source_metadata(source,row):
     if kind=='presidential_document':stage='presidential_document_published'
     if kind=='treasury_auction':stage='fiscal_auction_announced'
     if kind=='fda_approval':stage='approval_published'
+    if source.get('adapter')=='public_inspection':stage='public_inspection_pending_publication'
     return {'document_type':kind,'document_stage':stage,'concrete_public_action':None,'classification_status':'source_metadata_only; semantic action verdict not inferred','issuer':row.get('issuer') or source['name'],'jurisdiction':source['jurisdiction'],'family':source['family']}
 
 def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
@@ -192,7 +229,7 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
     if previous and source.get('conditional_cache',True) and source['adapter'] in ('rss','html_index'):
         if previous.get('etag'):headers['If-None-Match']=previous['etag']
         if previous.get('last_modified'):headers['If-Modified-Since']=previous['last_modified']
-    adapter=source['adapter'];url=source['url'];rows=[];pages=0;warnings=[];status=None;response_headers={};first_hash=None;oldest=None
+    adapter=source['adapter'];url=source['url'];rows=[];pages=0;requests=0;warnings=[];status=None;response_headers={};first_hash=None;oldest=None
     if adapter=='federal_register':
         query={'per_page':1000,'order':'newest','conditions[publication_date][gte]':start.date().isoformat(),'conditions[publication_date][lte]':end.date().isoformat()}
         url+='?'+urllib.parse.urlencode(query)
@@ -202,14 +239,14 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
         url='https://www.federalregister.gov/api/v1/public-inspection-documents.json?'+urllib.parse.urlencode({'per_page':1000})
     elif adapter=='openfda_approvals':
         url=source['url']+'?'+urllib.parse.urlencode({'search':'submissions.submission_status_date:['+start.strftime('%Y%m%d')+' TO '+end.strftime('%Y%m%d')+']','limit':100})
-    elif adapter in ('congress_bills','regulations_documents','govinfo_packages') and not data_gov_api_key():
+    elif adapter in KEYED_ADAPTERS and not data_gov_api_key():
         return [],{'status':'key_not_configured','http_status':None,'requests':0,'warnings':['DATA_GOV_API_KEY is not set'],'fetched_rows':0}
     elif adapter=='congress_bills':
         url=source['url']+'?'+urllib.parse.urlencode({'format':'json','limit':250,'sort':'updateDate+desc','fromDateTime':start.strftime('%Y-%m-%dT%H:%M:%SZ'),'toDateTime':end.strftime('%Y-%m-%dT%H:%M:%SZ')})
     elif adapter=='regulations_documents':
         url=source['url']+'?'+urllib.parse.urlencode({'filter[postedDate][ge]':start.date().isoformat(),'filter[postedDate][le]':end.date().isoformat(),'sort':'-postedDate','page[size]':250,'page[number]':1})
     elif adapter=='govinfo_packages':
-        url=source['url'].rstrip('/')+'/'+start.strftime('%Y-%m-%dT%H:%M:%SZ')+'?'+urllib.parse.urlencode({'pageSize':100,'offsetMark':'*'})
+        url=source['url'].rstrip('/')+'/'+start.strftime('%Y-%m-%dT%H:%M:%SZ')+'?'+urllib.parse.urlencode({'pageSize':100,'offsetMark':'*','endDate':end.strftime('%Y-%m-%dT%H:%M:%SZ')})
     elif adapter=='hkma_press':
         url+='?'+urllib.parse.urlencode({'lang':'en','sortby':'date','sortorder':'desc','pagesize':source.get('page_size',100),'offset':0})
     seen_urls=set()
@@ -218,10 +255,20 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
         seen_urls.add(url);pages+=1
         if pages>max_pages:warnings.append('pagination_budget_reached');break
         status,body,response_headers,resolved=fetch(url,headers=headers if pages==1 else {})
-        if status==304:return [],{**(previous or {}),'status':'unchanged','http_status':304,'requests':pages}
+        requests+=1
+        if status==406 and headers and pages==1 and adapter in ('rss','html_index'):
+            status,body,response_headers,resolved=fetch(url,headers={});requests+=1
+            warnings.append('conditional_cache_rejected; retried_public_GET_without_cache_headers')
+        if status==304:return [],{**(previous or {}),'status':'unchanged','http_status':304,'requests':requests}
         if status!=200:
-            if adapter=='openfda_approvals' and status==404:return [],{'status':'valid_empty','http_status':404,'requests':pages,'warnings':warnings+['openfda_no_matches_in_window'],'fetched_rows':0}
-            return rows,{'status':'blocked' if status in (401,403,429) else 'fetch_failed','http_status':status,'requests':pages,'warnings':warnings,'fetched_rows':len(rows)}
+            if adapter=='openfda_approvals' and status==404 and api_error(body).get('code')=='NOT_FOUND' and api_error(body).get('message')=='No matches found!':
+                return rows,{'status':'ok' if rows else 'valid_empty','http_status':404,'requests':requests,'warnings':warnings+['openfda_no_matches_in_window'],'fetched_rows':len(rows)}
+            failure,code=failure_status(status,body,adapter in KEYED_ADAPTERS)
+            state={'status':failure,'http_status':status,'requests':requests,'warnings':warnings,'fetched_rows':len(rows)}
+            if code:state['api_error_code']=code
+            retry=next((str(v) for k,v in response_headers.items() if k.lower()=='retry-after'),'')
+            if retry.isdigit():state['retry_after_seconds']=int(retry)
+            return rows,state
         if first_hash is None:first_hash=hashlib.sha256(body).hexdigest()
         if adapter in ('rss','html_index'):
             rows=feed_rows(body,resolved) if adapter=='rss' else index_rows(body,source)
@@ -256,9 +303,9 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
                     if not published or published<start or published>end+timedelta(days=1):continue
                     fallback='https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo='+re.sub(r'\D','',appl)
                     link=None
-                    for raw in [d.get('url') for d in (submission.get('application_docs') or [])]:
-                        if not str(raw or '').startswith(('https://','http://')) or any(c.isspace() for c in str(raw)):continue
-                        try:link=canonical_url(raw);break
+                    for document_url in [d.get('url') for d in (submission.get('application_docs') or [])]:
+                        if not str(document_url or '').startswith(('https://','http://')) or any(c.isspace() for c in str(document_url)) or not allowed_public_source(document_url):continue
+                        try:link=canonical_url(document_url);break
                         except ValueError:continue
                     link=link or fallback
                     rows.append({'title':clean(f'FDA approval {sponsor} {appl}'),'url':link,'native_id':appl+':'+str(submission.get('submission_number') or '')+':'+raw,'published_at':iso(published),'published_raw':raw,'document_type':'fda_approval','issuer':'Food and Drug Administration','summary':''})
@@ -290,6 +337,7 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
                 if posted<start or posted>end+timedelta(days=1):continue
                 rows.append({'title':title,'url':'https://www.regulations.gov/document/'+ident,'native_id':ident,'published_at':iso(posted),'published_raw':attrs.get('postedDate'),'document_type':kind,'issuer':clean(attrs.get('agencyId') or 'Regulations.gov agency'),'summary':''})
             meta=blob.get('meta') or {};page=int(dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query)).get('page[number]') or 1)
+            if meta.get('hasNextPage') and page>=20:warnings.append('regulations_5000_result_limit; use narrower date windows')
             if meta.get('hasNextPage') and page<20 and blob['data']:
                 query=dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query));query['page[number]']=page+1;url=source['url']+'?'+urllib.parse.urlencode(query)
             else:url=None
@@ -337,7 +385,7 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
                 else:url=None
     dates=[date(r.get('published_at')) for r in rows if date(r.get('published_at'))]
     latest=max(dates) if dates else None
-    health={'status':'ok' if rows else 'valid_empty','http_status':status,'requests':pages,'fetched_rows':len(rows),'latest_published_at':iso(latest) if latest else None,'warnings':warnings,'etag':response_headers.get('ETag') or response_headers.get('Etag'),'last_modified':response_headers.get('Last-Modified'),'response_sha256':first_hash}
+    health={'status':'ok' if rows else 'valid_empty','http_status':status,'requests':requests,'fetched_rows':len(rows),'latest_published_at':iso(latest) if latest else None,'warnings':warnings,'etag':response_headers.get('ETag') or response_headers.get('Etag'),'last_modified':response_headers.get('Last-Modified'),'response_sha256':first_hash}
     if latest and latest<start:health['warnings'].append('stale_feed_outside_requested_window')
     if adapter=='html_index' and not rows:health.update(status='selector_empty',warnings=warnings+['HTML selector matched no publication links; not healthy zero activity'])
     return rows,health
@@ -451,4 +499,3 @@ def main():
     if r['sources_ok']==0:raise SystemExit('No configured source succeeded; health report retained')
 
 if __name__=='__main__':main()
-

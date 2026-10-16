@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/union_news_g_h1 w=0.7,0.3 net=priority
 
-Cash book **+14.37%** ($11,436) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 406 · skips 126 · realized $+1716.61.
+Cash book **+13.42%** ($11,342) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 417 · skips 126 · realized $+1716.61.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $649.12.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $59.34.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -567,6 +567,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `MNSO` | 43 | $10.37 | $2.12 | — | $1,101.24 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+11.3; combo leftover $450.17; owner union_news_g_h1 | join🟢 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `SG` | 45 | $10.00 | $2.12 | — | $649.12 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+9.7; combo leftover $450.17; owner union_news_g_h1 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $649.12 | ▼ close $11,436.48 vs 09:30 $11,767.89 (session -290.03) | 16:00 close · cash $649.12 · equity $11,436.48 vs 09:30 $11,767.89 (-331.41; session marks -290.03) · 11 name(s) marked open→close (per-name table). JLHL×432 09:30 $4.76 → close $4.60 -69.12; ODD×92 09:30 $22.22 → close $21.63 -54.28; ECO×20 09:30 $99.71 → close $95.66 -81.00; PINS×92 09:30 $22.23 → close $21.76 -43.24; NVTS×45 09:30 $9.96 → close $9.36 -27.45; ITW×1 09:30 $265.92 → close $269.47 +3.55; AMX×20 09:30 $21.62 → close $21.84 +4.40; TBBB×8 09:30 $56.03 → close $56.36 +2.64; GLND×108 09:30 $4.13 → close $3.90 -25.38; MNSO×43 09:30 $10.37 → close $10.22 -6.45; SG×45 09:30 $10.00 → close $10.14 +6.30 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $649.12 | ▼ 09:30 equity $11,133.56 vs yday $11,436.48 (-302.92) | 09:30 open · cash $649.12 (unchanged overnight, no fees) · equity $11,133.56 vs prior close $11,436.48 (-302.92) | — |
+| 2026-10-15 09:30 ET | **SELL** | `ECO` | 20 | $89.67 | $2.07 | $-204.92 | $2,440.45 | ▼ -204.92 after sell → book $11,131.49; vs 09:30 mark -2.07 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `GLND` | 108 | $3.16 | $2.34 | $-109.96 | $2,779.38 | ▼ -109.96 after sell → book $11,129.14; vs 09:30 mark -2.35 | union_news_g_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `JLHL` | 432 | $4.34 | $5.66 | $-192.67 | $4,648.60 | ▼ -192.67 after sell → book $11,123.48; vs 09:30 mark -5.66 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `ODD` | 92 | $21.95 | $2.30 | $-29.40 | $6,665.71 | ▼ -29.40 after sell → book $11,121.19; vs 09:30 mark -2.29 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `PINS` | 92 | $21.59 | $2.30 | $-62.98 | $8,650.15 | ▼ -62.98 after sell → book $11,118.89; vs 09:30 mark -2.30 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **BUY** | `LW` | 28 | $53.79 | $2.07 | — | $7,141.96 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+10.3; combo leftover $1513.78; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ETSY` | 17 | $84.47 | $2.04 | — | $5,703.92 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+16.0; combo leftover $1513.78; owner union_hot_n4_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `BLMN` | 159 | $9.48 | $2.47 | — | $4,194.14 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+14.4; combo leftover $1513.78; owner union_hot_n4_h1 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `CHWY` | 72 | $21.00 | $2.21 | — | $2,679.93 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+14.3; combo leftover $1513.78; owner union_hot_n4_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `COP` | 9 | $143.00 | $2.02 | — | $1,390.91 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+9.6; combo leftover $1339.97; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `RELX` | 35 | $37.98 | $2.10 | — | $59.34 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+7.0; combo leftover $1339.97; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $59.34 | ▲ close $11,342.06 vs 09:30 $11,133.56 (session +236.08) | 16:00 close · cash $59.34 · equity $11,342.06 vs 09:30 $11,133.56 (+208.50; session marks +236.08) · 12 name(s) marked open→close (per-name table). AMX×20 09:30 $21.92 → close $22.43 +10.20; ITW×1 09:30 $272.49 → close $271.19 -1.30; MNSO×43 09:30 $10.41 → close $10.58 +7.31; NVTS×45 09:30 $8.89 → close $9.23 +15.30; SG×45 09:30 $10.21 → close $10.60 +17.55; TBBB×8 09:30 $56.34 → close $56.03 -2.48; LW×28 09:30 $53.79 → close $54.21 +11.76; ETSY×17 09:30 $84.47 → close $89.18 +80.07; BLMN×159 09:30 $9.48 → close $9.93 +71.55; CHWY×72 09:30 $21.00 → close $21.31 +22.32; COP×9 09:30 $143.00 → close $141.73 -11.43; RELX×35 09:30 $37.98 → close $38.42 +15.23 | — |
 
 ## Not taken
 

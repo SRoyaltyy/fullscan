@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_join_vol_green_h1/union_earn_react_h3 w=0.5,0.5 net=priority
 
-Cash book **-10.61%** ($8,939) · signal-only (no cash/fees) was —. Starts YES **22/30**. Fills 483 · skips 286 · realized $+2954.01.
+Cash book **-10.93%** ($8,907) · signal-only (no cash/fees) was —. Starts YES **22/30**. Fills 485 · skips 286 · realized $+2954.01.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $328.79.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $240.62.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -644,6 +644,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `MS` | 9 | $180.45 | $2.02 | — | $1,986.57 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-2.3; combo leftover $1740.00; owner union_earn_react_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `PGR` | 8 | $206.97 | $2.01 | — | $328.79 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+5.1; combo leftover $1740.00; owner union_earn_react_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $328.79 | ▲ close $8,939.32 vs 09:30 $8,720.94 (session +249.52) | 16:00 close · cash $328.79 · equity $8,939.32 vs 09:30 $8,720.94 (+218.38; session marks +249.52) · 5 name(s) marked open→close (per-name table). ASML×1 09:30 $1676.80 → close $1650.00 -26.80; BAC×34 09:30 $49.83 → close $51.39 +53.04; FAST×36 09:30 $47.51 → close $52.00 +161.82; MS×9 09:30 $180.45 → close $181.51 +9.54; PGR×8 09:30 $206.97 → close $213.46 +51.92 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $328.79 | ▲ 09:30 equity $8,957.20 vs yday $8,939.32 (+17.89) | 09:30 open · cash $328.79 (unchanged overnight, no fees) · equity $8,957.20 vs prior close $8,939.32 (+17.89) | — |
+| 2026-10-15 09:30 ET | **BUY** | `ERIC` | 4 | $10.65 | $0.44 | — | $285.76 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+1.3; combo leftover $46.97; owner union_earn_react_h3 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `FHN` | 2 | $22.34 | $0.45 | — | $240.62 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-1.4; combo leftover $46.97; owner union_earn_react_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $240.62 | ▼ close $8,907.00 vs 09:30 $8,957.20 (session -49.32) | 16:00 close · cash $240.62 · equity $8,907.00 vs 09:30 $8,957.20 (-50.20; session marks -49.32) · 7 name(s) marked open→close (per-name table). ASML×1 09:30 $1615.77 → close $1657.44 +41.67; BAC×34 09:30 $51.46 → close $51.70 +8.16; FAST×36 09:30 $52.19 → close $50.38 -65.16; MS×9 09:30 $182.49 → close $182.10 -3.51; PGR×8 09:30 $217.72 → close $213.75 -31.76; ERIC×4 09:30 $10.65 → close $10.71 +0.24; FHN×2 09:30 $22.34 → close $22.86 +1.04 | — |
 
 ## Not taken
 

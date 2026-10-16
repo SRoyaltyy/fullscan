@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ candle, no 🚨
 
-Cash book **-22.37%** ($7,763) · signal-only (no cash/fees) was +24.03%. Starts YES **8/30**. Fills 278 · skips 304 · realized $-1035.82.
+Cash book **-20.92%** ($7,908) · signal-only (no cash/fees) was +24.03%. Starts YES **8/30**. Fills 283 · skips 304 · realized $-1035.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -438,6 +438,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `DY` | 3 | $266.74 | $2.00 | — | $1,301.16 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; 🔵; ret5=-7.2; leftover $973.49 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `JLHL` | 204 | $4.76 | $2.63 | — | $327.49 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_mover; 🔵; ret5=+22.6; leftover $973.49 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟡 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $327.49 | ▼ close $7,762.87 vs 09:30 $7,825.10 (session -16.38) | 16:00 close · cash $327.49 · equity $7,762.87 vs 09:30 $7,825.10 (-62.23; session marks -16.38) · 10 name(s) marked open→close (per-name table). QSI×4 09:30 $1.34 → close $1.39 +0.20; RXRX×1 09:30 $3.72 → close $3.74 +0.02; TMUS×6 09:30 $155.00 → close $157.79 +16.74; TRU×14 09:30 $66.42 → close $66.94 +7.28; CNK×25 09:30 $37.88 → close $38.20 +8.00; WLY×18 09:30 $52.29 → close $51.49 -14.40; CXW×28 09:30 $33.97 → close $32.56 -39.48; EGG×224 09:30 $4.34 → close $4.60 +58.24; DY×3 09:30 $266.74 → close $259.96 -20.34; JLHL×204 09:30 $4.76 → close $4.60 -32.64 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $327.49 | ▼ 09:30 equity $7,747.90 vs yday $7,762.87 (-14.97) | 09:30 open · cash $327.49 (unchanged overnight, no fees) · equity $7,747.90 vs prior close $7,762.87 (-14.97) · 10 name(s) re-marked at the open (per-name table). CNK×25 yday $38.20 → 09:30 $38.44 +6.00; CXW×28 yday $32.56 → 09:30 $32.47 -2.52; DY×3 yday $259.96 → 09:30 $254.50 -16.38; EGG×224 yday $4.60 → 09:30 $4.60 +0.00; JLHL×204 yday $4.60 → 09:30 $4.34 -53.04; QSI×4 yday $1.39 → 09:30 $1.35 -0.16; RXRX×1 yday $3.74 → 09:30 $3.65 -0.09; TMUS×6 yday $157.79 → 09:30 $160.74 +17.70; TRU×14 yday $66.94 → 09:30 $68.55 +22.54; WLY×18 yday $51.49 → 09:30 $52.10 +10.98 | — |
+| 2026-10-15 09:30 ET | **SELL** | `QSI` | 4 | $1.35 | $0.09 | $-0.66 | $332.80 | ▼ -0.66 after sell → book $7,747.81; vs 09:30 mark -0.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SELL** | `RXRX` | 1 | $3.65 | $0.06 | $-0.77 | $336.39 | ▼ -0.77 after sell → book $7,747.75; vs 09:30 mark -0.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **BUY** | `FIS` | 1 | $36.40 | $0.37 | — | $299.63 | — | union ∩ candle, no 🚨; gate candle_capture=True; list flatten; 🔵; ret5=+4.9; leftover $56.07 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-15 09:30 ET | **BUY** | `PRMB` | 2 | $18.96 | $0.39 | — | $261.32 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,yday_gainer,yday_mover; ret5=-1.2; leftover $56.07 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `AMX` | 2 | $21.92 | $0.44 | — | $217.04 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; 🔵; ret5=-2.1; leftover $56.07 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $217.04 | ▲ close $7,908.21 vs 09:30 $7,747.90 (session +161.65) | 16:00 close · cash $217.04 · equity $7,908.21 vs 09:30 $7,747.90 (+160.31; session marks +161.65) · 11 name(s) marked open→close (per-name table). CNK×25 09:30 $38.44 → close $38.52 +2.00; CXW×28 09:30 $32.47 → close $31.23 -34.72; DY×3 09:30 $254.50 → close $257.78 +9.84; EGG×224 09:30 $4.60 → close $4.71 +24.64; JLHL×204 09:30 $4.34 → close $4.77 +87.72; TMUS×6 09:30 $160.74 → close $157.03 -22.26; TRU×14 09:30 $68.55 → close $74.12 +77.98; WLY×18 09:30 $52.10 → close $52.97 +15.66; FIS×1 09:30 $36.40 → close $36.13 -0.27; PRMB×2 09:30 $18.96 → close $18.98 +0.04; AMX×2 09:30 $21.92 → close $22.43 +1.02 | — |
 
 ## Not taken
 

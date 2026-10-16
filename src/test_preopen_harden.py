@@ -220,18 +220,18 @@ def test_incremental_land_hooks() -> None:
     assert "overlay_at" in ecs
 
 
-def test_preopen_unattended_clock_is_ubuntu() -> None:
-    """Laptop off: weekday cron + orch heal must not queue on ECS."""
+def test_preopen_unattended_clock_is_ecs() -> None:
+    """2026-10-15: ubuntu cannot reach Grok (38714326944 skipped it 108x).
+    Weekday cron + orch heal go to ECS, Grok-only; preflight stops a bad box."""
     yml = (ROOT / ".github" / "workflows" / "preopen_all.yml").read_text(
         encoding="utf-8")
     orch = (ROOT / ".github" / "workflows" / "daily_orchestrator.yml").read_text(
         encoding="utf-8")
     assert 'cron: "55 9 * * 1-5"' in yml
-    assert "github.event_name == 'schedule'" in yml
+    assert "github.event.inputs.runner == 'ubuntu'" in yml
     assert "dispatch_preopen_ubuntu" in orch
-    assert "inputs[llm_backend]=deepseek" in orch
-    assert '-f "inputs[runner]=ubuntu"' in orch
-    # Bare dispatch would default runner=ecs and sit on an offline box.
+    assert '-f "inputs[runner]=ecs"' in orch
+    assert "inputs[llm_backend]=grok" in orch
     assert "maybe preopen_all.yml" in orch
 
 

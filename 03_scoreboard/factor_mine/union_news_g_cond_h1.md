@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢, rank +G−R
 
-Cash book **-34.13%** ($6,587) · signal-only (no cash/fees) was +8.94%. Starts YES **0/30**. Fills 275 · skips 79 · realized $-430.09.
+Cash book **-34.80%** ($6,520) · signal-only (no cash/fees) was +8.94%. Starts YES **0/30**. Fills 282 · skips 79 · realized $-430.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -436,6 +436,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `GLND` | 199 | $4.13 | $2.59 | — | $1,743.53 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_mover; ret5=-26.3; leftover $825.05 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `MNSO` | 79 | $10.37 | $2.23 | — | $922.07 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+11.3; leftover $825.05 | join🟢 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $922.07 | ▲ close $6,586.64 vs 09:30 $6,600.41 (session +1.46) | 16:00 close · cash $922.07 · equity $6,586.64 vs 09:30 $6,600.41 (-13.77; session marks +1.46) · 7 name(s) marked open→close (per-name table). AMX×38 09:30 $21.62 → close $21.84 +8.36; BAC×16 09:30 $49.83 → close $51.39 +24.96; SG×82 09:30 $10.00 → close $10.14 +11.48; TBBB×14 09:30 $56.03 → close $56.36 +4.62; ITW×3 09:30 $265.92 → close $269.47 +10.65; GLND×199 09:30 $4.13 → close $3.90 -46.76; MNSO×79 09:30 $10.37 → close $10.22 -11.85 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $922.07 | ▼ 09:30 equity $6,473.07 vs yday $6,586.64 (-113.57) | 09:30 open · cash $922.07 (unchanged overnight, no fees) · equity $6,473.07 vs prior close $6,586.64 (-113.57) · 7 name(s) re-marked at the open (per-name table). AMX×38 yday $21.84 → 09:30 $21.92 +3.04; BAC×16 yday $51.39 → 09:30 $51.46 +1.12; GLND×199 yday $3.90 → 09:30 $3.16 -147.26; ITW×3 yday $269.47 → 09:30 $272.49 +9.06; MNSO×79 yday $10.22 → 09:30 $10.41 +15.01; SG×82 yday $10.14 → 09:30 $10.21 +5.74; TBBB×14 yday $56.36 → 09:30 $56.34 -0.28 | — |
+| 2026-10-15 09:30 ET | **SELL** | `BAC` | 16 | $51.46 | $2.06 | $+21.98 | $1,743.37 | ▲ +21.98 after sell → book $6,471.01; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `GLND` | 199 | $3.16 | $2.63 | $-199.24 | $2,369.58 | ▼ -199.24 after sell → book $6,468.38; vs 09:30 mark -2.63 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `MNSO` | 79 | $10.41 | $2.25 | $-1.32 | $3,189.72 | ▼ -1.32 after sell → book $6,466.13; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `CAH` | 3 | $252.00 | $2.00 | — | $2,431.72 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+6.7; leftover $797.43 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `COP` | 5 | $143.00 | $2.00 | — | $1,714.72 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+9.6; leftover $797.43 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `RELX` | 20 | $37.98 | $2.05 | — | $952.97 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+7.0; leftover $797.43 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `BNY` | 5 | $139.81 | $2.00 | — | $251.91 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list earn_react; ret5=-3.6; leftover $797.43 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $251.91 | ▲ close $6,520.07 vs 09:30 $6,473.07 (session +62.00) | 16:00 close · cash $251.91 · equity $6,520.07 vs 09:30 $6,473.07 (+47.00; session marks +62.00) · 8 name(s) marked open→close (per-name table). AMX×38 09:30 $21.92 → close $22.43 +19.38; ITW×3 09:30 $272.49 → close $271.19 -3.90; SG×82 09:30 $10.21 → close $10.60 +31.98; TBBB×14 09:30 $56.34 → close $56.03 -4.34; CAH×3 09:30 $252.00 → close $253.71 +5.13; COP×5 09:30 $143.00 → close $141.73 -6.35; RELX×20 09:30 $37.98 → close $38.42 +8.70; BNY×5 09:30 $139.81 → close $142.09 +11.40 | — |
 
 ## Not taken
 

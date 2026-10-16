@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · RSI overbought
 
-Cash book **-5.50%** ($9,450) · signal-only (no cash/fees) was -115.85%. Starts YES **1/30**. Fills 327 · skips 279 · realized $-808.98.
+Cash book **-5.74%** ($9,426) · signal-only (no cash/fees) was -115.85%. Starts YES **1/30**. Fills 334 · skips 279 · realized $-808.98.
 
 ## How this sleeve decides (like you are 10)
 
@@ -485,6 +485,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **SHORT** | `TBBB` | 14 | $56.03 | $2.07 | — | $16,850.93 | — | RSI overbought; gate rsi_ob=True; list yday_gainer; 🔵; ret5=+4.1; leftover $799.47 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **SHORT** | `HLP` | 281 | $2.84 | $3.70 | — | $17,645.27 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; 🔵; ret5=+11.9; leftover $799.47 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,645.27 | ▼ close $9,450.46 vs 09:30 $9,612.76 (session -126.88) | 16:00 close · cash $17,645.27 · equity $9,450.46 vs 09:30 $9,612.76 (-162.30; session marks -126.88) · 13 name(s) marked open→close (per-name table). CCI×7 09:30 $78.93 → close $79.38 -3.15; IOVA×43 09:30 $14.35 → close $14.21 +6.02; MRNA×2 09:30 $217.49 → close $226.30 -17.62; NAUT×290 09:30 $2.00 → close $2.16 -46.40; QSI×426 09:30 $1.34 → close $1.39 -21.30; QTEX×363 09:30 $1.36 → close $1.46 -36.30; WFF×42 09:30 $1.91 → close $0.17 +72.66; EPR×14 09:30 $54.47 → close $54.58 -1.54; EGG×184 09:30 $4.34 → close $4.60 -47.84; MX×290 09:30 $2.75 → close $2.67 +23.20; ITW×3 09:30 $265.92 → close $269.47 -10.65; TBBB×14 09:30 $56.03 → close $56.36 -4.62; HLP×281 09:30 $2.84 → close $2.98 -39.34 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17,645.27 | ▲ 09:30 equity $9,492.37 vs yday $9,450.46 (+41.91) | 09:30 open · cash $17,645.27 (unchanged overnight, no fees) · equity $9,492.37 vs prior close $9,450.46 (+41.91) · 13 name(s) re-marked at the open (per-name table). CCI×7 yday $79.38 → 09:30 $80.80 -9.94; EGG×184 yday $4.60 → 09:30 $4.60 -0.00; EPR×14 yday $54.58 → 09:30 $55.57 -13.86; HLP×281 yday $2.98 → 09:30 $2.98 -0.00; IOVA×43 yday $14.21 → 09:30 $13.98 +9.80; ITW×3 yday $269.47 → 09:30 $272.49 -9.06; MRNA×2 yday $226.30 → 09:30 $225.48 +1.64; MX×290 yday $2.67 → 09:30 $2.63 +11.60; NAUT×290 yday $2.16 → 09:30 $2.07 +26.10; QSI×426 yday $1.39 → 09:30 $1.35 +17.04; QTEX×363 yday $1.46 → 09:30 $1.44 +7.26; TBBB×14 yday $56.36 → 09:30 $56.34 +0.28; WFF×42 yday $0.17 → 09:30 $0.15 +1.05 | — |
+| 2026-10-15 09:30 ET | **COVER** | `CCI` | 7 | $80.80 | $2.01 | $-13.16 | $17,077.66 | ▼ -13.16 after sell → book $9,490.36; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **COVER** | `IOVA` | 43 | $13.98 | $2.12 | $+15.85 | $16,474.31 | ▲ +15.85 after sell → book $9,488.24; vs 09:30 mark -2.12 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **COVER** | `MRNA` | 2 | $225.48 | $2.00 | $-6.51 | $16,021.36 | ▼ -6.51 after sell → book $9,486.25; vs 09:30 mark -1.99 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **COVER** | `NAUT` | 290 | $2.07 | $3.74 | $+19.99 | $15,417.32 | ▲ +19.99 after sell → book $9,482.51; vs 09:30 mark -3.74 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **COVER** | `QSI` | 426 | $1.35 | $5.50 | $+42.16 | $14,836.72 | ▲ +42.16 after sell → book $9,477.01; vs 09:30 mark -5.50 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **COVER** | `QTEX` | 363 | $1.44 | $4.68 | $+95.82 | $14,309.32 | ▲ +95.82 after sell → book $9,472.33; vs 09:30 mark -4.68 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **COVER** | `WFF` | 42 | $0.15 | $0.19 | $+612.12 | $14,302.83 | ▲ +612.12 after sell → book $9,472.14; vs 09:30 mark -0.19 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,302.83 | ▼ close $9,425.60 vs 09:30 $9,492.37 (session -46.54) | 16:00 close · cash $14,302.83 · equity $9,425.60 vs 09:30 $9,492.37 (-66.77; session marks -46.54) · 6 name(s) marked open→close (per-name table). EGG×184 09:30 $4.60 → close $4.71 -20.24; EPR×14 09:30 $55.57 → close $55.15 +5.88; HLP×281 09:30 $2.98 → close $3.00 -5.62; ITW×3 09:30 $272.49 → close $271.19 +3.90; MX×290 09:30 $2.63 → close $2.75 -34.80; TBBB×14 09:30 $56.34 → close $56.03 +4.34 | — |
 
 ## Not taken
 

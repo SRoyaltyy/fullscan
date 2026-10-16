@@ -194,6 +194,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,571.56 | ▲ 09:30 equity $11,175.76 vs yday $11,081.23 (+94.53) | 09:30 open · cash $16,571.56 (unchanged overnight, no fees) · equity $11,175.76 vs prior close $11,081.23 (+94.53) · 1 name(s) re-marked at the open (per-name table). DAL×69 yday $79.57 → 09:30 $78.20 +94.53 | — |
 | 2026-10-14 09:30 ET | **COVER** | `DAL` | 69 | $78.20 | $2.20 | $+97.52 | $11,173.56 | ▲ +97.52 after sell → book $11,173.56; vs 09:30 mark -2.20 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,173.56 | ▲ close $11,173.56 vs 09:30 $11,175.76 (session +0.00) | 16:00 close · cash $11,173.56 · no lots left · equity $11,173.56. | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,173.56 | ▲ 09:30 equity $11,173.56 vs yday $11,173.56 (+0.00) | 09:30 open · cash $11,173.56 · no holdings · equity $11,173.56 vs prior close $11,173.56 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,173.56 | ▲ close $11,173.56 vs 09:30 $11,173.56 (session +0.00) | 16:00 close · cash $11,173.56 · no lots left · equity $11,173.56. | — |
 
 ## Not taken
 

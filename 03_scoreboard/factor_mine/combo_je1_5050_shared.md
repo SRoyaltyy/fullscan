@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_join_vol_green_h1/union_e_fresh_h1 w=0.5,0.5 net=priority
 
-Cash book **-8.37%** ($9,163) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 529 · skips 110 · realized $+1669.53.
+Cash book **-8.55%** ($9,145) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 541 · skips 110 · realized $+1669.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $448.75.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $296.35.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -690,6 +690,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `MS` | 9 | $180.45 | $2.02 | — | $2,106.53 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-2.3; combo leftover $1783.46; owner union_e_fresh_h1 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `PGR` | 8 | $206.97 | $2.01 | — | $448.75 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=+5.1; combo leftover $1783.46; owner union_e_fresh_h1 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $448.75 | ▲ close $9,162.67 vs 09:30 $8,917.32 (session +255.57) | 16:00 close · cash $448.75 · equity $9,162.67 vs 09:30 $8,917.32 (+245.35; session marks +255.57) · 5 name(s) marked open→close (per-name table). ASML×1 09:30 $1676.80 → close $1650.00 -26.80; BAC×35 09:30 $49.83 → close $51.39 +54.60; FAST×37 09:30 $47.51 → close $52.00 +166.31; MS×9 09:30 $180.45 → close $181.51 +9.54; PGR×8 09:30 $206.97 → close $213.46 +51.92 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $448.75 | ▲ 09:30 equity $9,180.82 vs yday $9,162.67 (+18.15) | 09:30 open · cash $448.75 (unchanged overnight, no fees) · equity $9,180.82 vs prior close $9,162.67 (+18.15) | — |
+| 2026-10-15 09:30 ET | **SELL** | `ASML` | 1 | $1615.77 | $2.02 | $-65.04 | $2,062.50 | ▼ -65.04 after sell → book $9,178.80; vs 09:30 mark -2.02 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `BAC` | 35 | $51.46 | $2.12 | $+52.84 | $3,861.48 | ▲ +52.84 after sell → book $9,176.68; vs 09:30 mark -2.12 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `FAST` | 37 | $52.19 | $2.13 | $+169.12 | $5,790.38 | ▲ +169.12 after sell → book $9,174.55; vs 09:30 mark -2.13 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `MS` | 9 | $182.49 | $2.04 | $+14.30 | $7,430.75 | ▲ +14.30 after sell → book $9,172.51; vs 09:30 mark -2.04 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `PGR` | 8 | $217.72 | $2.04 | $+81.95 | $9,170.48 | ▲ +81.95 after sell → book $9,170.48; vs 09:30 mark -2.03 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **BUY** | `BNY` | 9 | $139.81 | $2.02 | — | $7,910.17 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-3.6; combo leftover $1310.07; owner union_e_fresh_h1 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `CMC` | 18 | $69.38 | $2.04 | — | $6,659.28 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+3.2; combo leftover $1310.07; owner union_e_fresh_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ERIC` | 123 | $10.65 | $2.36 | — | $5,347.12 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=+1.3; combo leftover $1310.07; owner union_e_fresh_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `FHN` | 58 | $22.34 | $2.16 | — | $4,049.24 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-1.4; combo leftover $1310.07; owner union_e_fresh_h1 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `PLD` | 9 | $132.04 | $2.02 | — | $2,858.86 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+2.5; combo leftover $1310.07; owner union_e_fresh_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `PNC` | 6 | $208.49 | $2.01 | — | $1,605.91 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+0.0; combo leftover $1310.07; owner union_e_fresh_h1 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `SCHW` | 14 | $93.39 | $2.03 | — | $296.35 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.3; combo leftover $1310.07; owner union_e_fresh_h1 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $296.35 | ▼ close $9,145.37 vs 09:30 $9,180.82 (session -10.46) | 16:00 close · cash $296.35 · equity $9,145.37 vs 09:30 $9,180.82 (-35.45; session marks -10.46) · 7 name(s) marked open→close (per-name table). BNY×9 09:30 $139.81 → close $142.09 +20.52; CMC×18 09:30 $69.38 → close $65.37 -72.18; ERIC×123 09:30 $10.65 → close $10.71 +7.53; FHN×58 09:30 $22.34 → close $22.86 +30.16; PLD×9 09:30 $132.04 → close $126.94 -45.90; PNC×6 09:30 $208.49 → close $214.94 +38.70; SCHW×14 09:30 $93.39 → close $94.16 +10.71 | — |
 
 ## Not taken
 

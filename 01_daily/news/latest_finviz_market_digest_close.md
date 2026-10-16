@@ -1,46 +1,47 @@
-# Finviz homepage market digest (close) — 2026-10-14
+# Finviz homepage market digest (close) — 2026-10-15
 
-**Generated:** 2026-10-14T16:26:38.042296-04:00 (America/New_York)
+**Generated:** 2026-10-15T16:21:46.468693-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks closed sharply lower as hotter CPI data lifted Treasury yields, boosted Fed hike odds and pressured AI and semiconductor shares
-**Prior close:** SPX -1.10%  Nasdaq -1.90%  Dow -0.10%
-**SPX:** -1.10%  **Nasdaq:** -1.90%  **Dow:** -0.10%
+**Banner:** US stocks closed higher as hotter PPI and firm retail sales drove rotation out of AI-focused tech into defensive groups while falling Treasury yields supported a late-session rebound
+**Prior close:** SPX —  Nasdaq +1.36%  Dow —
+**SPX:** —  **Nasdaq:** +1.36%  **Dow:** —
 **Oil:** —
-**CPI/Fed:** headline CPI rose 3; 0.2% hike (0.2% consensus, pushing Treasury yields higher and Fed rate-hike)
-**Leaders:** NVDA, AVGO, AMD, ORCL, DELL, BCS, CRWV, BAC, LLY, BSP, NFLX
-**Next session:** housing no · retail no · Fed yes
+**CPI/Fed:** 3.6% cut (about 3.6% after two analysts cut)
+**Leaders:** LLY, UNH, VEEV, MRNA, CRWV, NVDA, VRT, DELL, TSM, BNY, PNC, SCHW, USB, ERIC, IBKR, JBHT
+**Next session:** housing no · retail yes · Fed no
 **Earnings slate:** —
 **Geo/grain:** —
-**Clock legal for:** 2026-10-15
+**Clock legal for:** 2026-10-16
 **Clock use:** `next_open`
 
 ## Clock
 
-Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-10-15) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
+Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-10-16) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX -1.10% · Nasdaq -1.90% · Dow -0.10%
+- **Prior close:** SPX — · Nasdaq +1.36% · Dow —
 - **Oil:** —
-- **CPI / Fed-odds:** headline CPI rose 3; 0.2% hike (0.2% consensus, pushing Treasury yields higher and Fed rate-hike)
-- **Named leaders:** NVDA, AVGO, AMD, ORCL, DELL, BCS, CRWV, BAC, LLY, BSP, NFLX
-- **Next-session calendar:** housing no · retail no · Fed yes
-  - Netflix (NFLX) said it would cut about 1,000 jobs, or 6% of its workforce, as part of a cost-reduction effort while remaining on track to meet its full-year earnings forecast, while after-hours index futures extended losses modestly as investors looked ahead to more financial sector results and continued Federal Reserve commentary on Thursday.
+- **CPI / Fed-odds:** 3.6% cut (about 3.6% after two analysts cut)
+- **Named leaders:** LLY, UNH, VEEV, MRNA, CRWV, NVDA, VRT, DELL, TSM, BNY, PNC, SCHW, USB, ERIC, IBKR, JBHT
+- **Next-session calendar:** housing no · retail yes · Fed no
+  - September PPI printed at +1.3% month-over-month versus +0.5% consensus and +6.3% year-over-year versus +5.3% expected, while retail sales rose 0.8% month-over-month, initially lifting rate fears before a flight to Treasuries pulled the 10-year yield down about 10 bps to roughly 5.09–5.10%
+  - In after-hours trading, Interactive Brokers (IBKR) reported a revenue beat and raised its quarterly dividend, while J.B. Hunt (JBHT) was due to report after the close, as investors looked ahead to another wave of earnings tomorrow from key transportation and financial names
 - **Earnings slate:** —
 - **Geo / grain:** —
 
 ## Narrative
 
-**US stocks closed sharply lower as hotter CPI data lifted Treasury yields, boosted Fed hike odds and pressured AI and semiconductor shares**
+**US stocks closed higher as hotter PPI and firm retail sales drove rotation out of AI-focused tech into defensive groups while falling Treasury yields supported a late-session rebound**
 
-- The S&P 500 ($SPX) fell about 1.1%, the Nasdaq Composite ($COMP) dropped about 1.9% to 26,693, the Dow Jones ($DJI) lost about 0.1% and the Russell 2000 (IWM) slid about 1.9%, marking the worst session for the major indexes in roughly three months.
-- September headline CPI rose 3.7% year-over-year versus 3.6% forecast and core CPI increased 2.6% versus 2.5% expected, with monthly core up 0.3% versus 0.2% consensus, pushing Treasury yields higher and Fed rate-hike odds to around 50%.
-- AI, technology and semiconductor names led the sell-off, with Nvidia (NVDA) and Broadcom (AVGO) each losing roughly 3% and AMD (AMD) dropping about 6%.
-- Oracle (ORCL) sank about 9%, while Dell Technologies (DELL) tumbled about 11% after a downgrade from Barclays (BCS).
-- CoreWeave (CRWV) plunged about 15% after its bonds turned distressed, with yields hitting around 15% amid rising borrowing costs.
-- Bank of America (BAC) shares fell about 5% as Q3 results missed estimates due to a $1.2 billion regulatory charge tied to money laundering and sanctions violations and weaker FICC trading revenue.
-- Eight of 11 S&P sectors ended lower, while healthcare and other defensives outperformed, with Eli Lilly (LLY) climbing and select energy stocks providing relative support.
-- Bending Spoons (BSP) surged about 41% after Berkshire Hathaway (BRK-B) agreed to invest an additional $330 million in the company.
-- Netflix (NFLX) said it would cut about 1,000 jobs, or 6% of its workforce, as part of a cost-reduction effort while remaining on track to meet its full-year earnings forecast, while after-hours index futures extended losses modestly as investors looked ahead to more financial sector results and continued Federal Reserve commentary on Thursday.
+- The Dow Jones Industrial Average ($DJI) closed at 52,178, up 1.08%, the S&P 500 ($SPX) at 7,744, up 0.33%, the Nasdaq Composite ($COMP) at 26,713, up 0.08%, the Russell 2000 (IWM) gained about 1.36%, and the Nasdaq 100 ($NDX) edged roughly 0.05% lower
+- September PPI printed at +1.3% month-over-month versus +0.5% consensus and +6.3% year-over-year versus +5.3% expected, while retail sales rose 0.8% month-over-month, initially lifting rate fears before a flight to Treasuries pulled the 10-year yield down about 10 bps to roughly 5.09–5.10%
+- Healthcare led with gains of roughly 2.6%, driven by Eli Lilly (LLY) up about 3.6%, UnitedHealth Group (UNH) up about 2.8%, Veeva Systems (VEEV) up around 5%, and Moderna (MRNA) advancing after Goldman Sachs raised its price target ahead of key melanoma vaccine data
+- Technology and AI infrastructure names lagged on funding and balance-sheet concerns, with CoreWeave (CRWV) swinging from a roughly 9.5% intraday drop near its 52-week low to finish about 6% higher after Nvidia (NVDA) CEO Jensen Huang said the firm needs no bailout and its cost of capital is improving, even as its bonds traded near 15% yields
+- Vertiv Holdings (VRT) fell about 3.6% after two analysts cut price targets and traders continued to unwind data-center valuation premiums
+- Dell Technologies (DELL) slid about 7% after a Barclays AI-spending downgrade extended the selloff, while Taiwan Semiconductor Manufacturing (TSM) declined despite posting record profit and guiding December-quarter sales up to $54.3 billion
+- Financials participated in late-session bargain hunting, with Bank of New York Mellon (BNY) climbing after beating Q3 earnings estimates and raising its 2026 growth and operating leverage outlook, while PNC (PNC), Charles Schwab (SCHW), and U.S. Bancorp (USB) also reported beats before the open
+- Ericsson (ERIC) jumped more than 10% on strong Q3 results that beat forecasts, while buyers also moved into materials as part of the broader defensive rotation
+- In after-hours trading, Interactive Brokers (IBKR) reported a revenue beat and raised its quarterly dividend, while J.B. Hunt (JBHT) was due to report after the close, as investors looked ahead to another wave of earnings tomorrow from key transportation and financial names

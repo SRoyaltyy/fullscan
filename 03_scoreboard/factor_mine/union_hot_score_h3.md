@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · rank by hot_score
 
-Cash book **+2.10%** ($10,210) · signal-only (no cash/fees) was +392.57%. Starts YES **29/30**. Fills 276 · skips 265 · realized $+1176.18.
+Cash book **+3.87%** ($10,387) · signal-only (no cash/fees) was +392.57%. Starts YES **29/30**. Fills 282 · skips 265 · realized $+1176.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -435,6 +435,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `HLP` | 455 | $2.84 | $5.87 | — | $1,412.44 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+11.9; leftover $1293.24 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `NTSK` | 62 | $20.76 | $2.18 | — | $123.14 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+7.7; leftover $1293.24 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $123.14 | ▼ close $10,210.38 vs 09:30 $10,385.91 (session -118.72) | 16:00 close · cash $123.14 · equity $10,210.38 vs 09:30 $10,385.91 (-175.53; session marks -118.72) · 10 name(s) marked open→close (per-name table). QSI×2 09:30 $1.34 → close $1.39 +0.10; QTEX×2 09:30 $1.36 → close $1.46 +0.20; JLHL×271 09:30 $4.76 → close $4.60 -43.36; ODD×58 09:30 $22.22 → close $21.63 -34.22; ECO×12 09:30 $99.71 → close $95.66 -48.60; PINS×58 09:30 $22.23 → close $21.76 -27.26; ACI×102 09:30 $12.58 → close $13.08 +51.00; SHAK×18 09:30 $70.75 → close $68.77 -35.64; HLP×455 09:30 $2.84 → close $2.98 +63.70; NTSK×62 09:30 $20.76 → close $20.04 -44.64 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $123.14 | ▼ 09:30 equity $10,043.29 vs yday $10,210.38 (-167.09) | 09:30 open · cash $123.14 (unchanged overnight, no fees) · equity $10,043.29 vs prior close $10,210.38 (-167.09) · 10 name(s) re-marked at the open (per-name table). ACI×102 yday $13.08 → 09:30 $12.99 -9.18; ECO×12 yday $95.66 → 09:30 $89.67 -71.88; HLP×455 yday $2.98 → 09:30 $2.98 +0.00; JLHL×271 yday $4.60 → 09:30 $4.34 -70.46; NTSK×62 yday $20.04 → 09:30 $19.55 -30.38; ODD×58 yday $21.63 → 09:30 $21.95 +18.56; PINS×58 yday $21.76 → 09:30 $21.59 -9.57; QSI×2 yday $1.39 → 09:30 $1.35 -0.08; QTEX×2 yday $1.46 → 09:30 $1.44 -0.04; SHAK×18 yday $68.77 → 09:30 $69.10 +5.94 | — |
+| 2026-10-15 09:30 ET | **SELL** | `QSI` | 2 | $1.35 | $0.05 | $-0.34 | $125.79 | ▼ -0.34 after sell → book $10,043.24; vs 09:30 mark -0.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SELL** | `QTEX` | 2 | $1.44 | $0.05 | $-0.68 | $128.61 | ▼ -0.68 after sell → book $10,043.18; vs 09:30 mark -0.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **BUY** | `BLMN` | 1 | $9.48 | $0.10 | — | $119.03 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+14.4; leftover $18.37 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `NAUT` | 8 | $2.07 | $0.19 | — | $102.28 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+10.2; leftover $18.37 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `MNSO` | 1 | $10.41 | $0.11 | — | $91.77 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+14.3; leftover $18.37 | join🟢 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ENGS` | 5 | $3.50 | $0.19 | — | $74.08 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+12.0; leftover $18.37 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $74.08 | ▲ close $10,386.78 vs 09:30 $10,043.29 (session +344.18) | 16:00 close · cash $74.08 · equity $10,386.78 vs 09:30 $10,043.29 (+343.49; session marks +344.18) · 12 name(s) marked open→close (per-name table). ACI×102 09:30 $12.99 → close $13.03 +4.08; ECO×12 09:30 $89.67 → close $89.18 -5.88; HLP×455 09:30 $2.98 → close $3.00 +9.10; JLHL×271 09:30 $4.34 → close $4.77 +116.53; NTSK×62 09:30 $19.55 → close $20.45 +55.80; ODD×58 09:30 $21.95 → close $23.17 +70.76; PINS×58 09:30 $21.59 → close $22.71 +64.67; SHAK×18 09:30 $69.10 → close $70.61 +27.18; BLMN×1 09:30 $9.48 → close $9.93 +0.45; NAUT×8 09:30 $2.07 → close $2.16 +0.72; MNSO×1 09:30 $10.41 → close $10.58 +0.17; ENGS×5 09:30 $3.50 → close $3.62 +0.60 | — |
 
 ## Not taken
 

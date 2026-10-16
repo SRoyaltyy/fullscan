@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **-3.22%** ($9,678) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 288 · skips 289 · realized $+901.34.
+Cash book **-0.56%** ($9,944) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 293 · skips 289 · realized $+901.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -447,6 +447,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `MOH` | 5 | $210.15 | $2.00 | — | $1,441.20 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+7.3; leftover $1221.29 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `ACI` | 97 | $12.58 | $2.28 | — | $218.66 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+10.8; leftover $1221.29 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $218.66 | ▼ close $9,678.24 vs 09:30 $9,806.25 (session -80.58) | 16:00 close · cash $218.66 · equity $9,678.24 vs 09:30 $9,806.25 (-128.01; session marks -80.58) · 10 name(s) marked open→close (per-name table). NAUT×2 09:30 $2.00 → close $2.16 +0.32; QTEX×3 09:30 $1.36 → close $1.46 +0.30; JLHL×256 09:30 $4.76 → close $4.60 -40.96; ODD×54 09:30 $22.22 → close $21.63 -31.86; ESRT×253 09:30 $4.82 → close $4.78 -10.12; PINS×54 09:30 $22.23 → close $21.76 -25.38; SHAK×17 09:30 $70.75 → close $68.77 -33.66; SG×122 09:30 $10.00 → close $10.14 +17.08; MOH×5 09:30 $210.15 → close $209.19 -4.80; ACI×97 09:30 $12.58 → close $13.08 +48.50 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $218.66 | ▼ 09:30 equity $9,641.35 vs yday $9,678.24 (-36.89) | 09:30 open · cash $218.66 (unchanged overnight, no fees) · equity $9,641.35 vs prior close $9,678.24 (-36.89) · 10 name(s) re-marked at the open (per-name table). ACI×97 yday $13.08 → 09:30 $12.99 -8.73; ESRT×253 yday $4.78 → 09:30 $4.82 +10.12; JLHL×256 yday $4.60 → 09:30 $4.34 -66.56; MOH×5 yday $209.19 → 09:30 $210.39 +6.00; NAUT×2 yday $2.16 → 09:30 $2.07 -0.18; ODD×54 yday $21.63 → 09:30 $21.95 +17.28; PINS×54 yday $21.76 → 09:30 $21.59 -8.91; QTEX×3 yday $1.46 → 09:30 $1.44 -0.06; SG×122 yday $10.14 → 09:30 $10.21 +8.54; SHAK×17 yday $68.77 → 09:30 $69.10 +5.61 | — |
+| 2026-10-15 09:30 ET | **SELL** | `NAUT` | 2 | $2.07 | $0.07 | $-0.31 | $222.73 | ▼ -0.31 after sell → book $9,641.28; vs 09:30 mark -0.07 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `QTEX` | 3 | $1.44 | $0.07 | $-1.00 | $226.98 | ▼ -1.00 after sell → book $9,641.21; vs 09:30 mark -0.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **BUY** | `CHWY` | 1 | $21.00 | $0.21 | — | $205.77 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+14.3; leftover $37.83 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ENGS` | 10 | $3.50 | $0.38 | — | $170.39 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+12.0; leftover $37.83 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `BBWI` | 1 | $19.19 | $0.19 | — | $151.00 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+6.4; leftover $37.83 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $151.00 | ▲ close $9,944.26 vs 09:30 $9,641.35 (session +303.84) | 16:00 close · cash $151.00 · equity $9,944.26 vs 09:30 $9,641.35 (+302.91; session marks +303.84) · 11 name(s) marked open→close (per-name table). ACI×97 09:30 $12.99 → close $13.03 +3.88; ESRT×253 09:30 $4.82 → close $4.73 -22.77; JLHL×256 09:30 $4.34 → close $4.77 +110.08; MOH×5 09:30 $210.39 → close $212.50 +10.55; ODD×54 09:30 $21.95 → close $23.17 +65.88; PINS×54 09:30 $21.59 → close $22.71 +60.21; SG×122 09:30 $10.21 → close $10.60 +47.58; SHAK×17 09:30 $69.10 → close $70.61 +25.67; CHWY×1 09:30 $21.00 → close $21.31 +0.31; ENGS×10 09:30 $3.50 → close $3.62 +1.20; BBWI×1 09:30 $19.19 → close $20.44 +1.25 | — |
 
 ## Not taken
 

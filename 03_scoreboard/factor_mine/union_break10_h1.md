@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **-17.01%** ($8,299) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 387 · skips 100 · realized $-529.03.
+Cash book **-16.36%** ($8,364) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 401 · skips 100 · realized $-529.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -547,6 +547,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `PINS` | 47 | $22.23 | $2.13 | — | $1,203.65 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+11.7; leftover $1050.37 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `ACI` | 83 | $12.58 | $2.24 | — | $157.27 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+10.8; leftover $1050.37 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $157.27 | ▼ close $8,299.22 vs 09:30 $8,402.99 (session -86.28) | 16:00 close · cash $157.27 · equity $8,299.22 vs 09:30 $8,402.99 (-103.77; session marks -86.28) · 8 name(s) marked open→close (per-name table). TRU×15 09:30 $66.42 → close $66.94 +7.80; WLY×20 09:30 $52.29 → close $51.49 -16.00; TBBB×18 09:30 $56.03 → close $56.36 +5.94; JLHL×220 09:30 $4.76 → close $4.60 -35.20; ODD×47 09:30 $22.22 → close $21.63 -27.73; ECO×10 09:30 $99.71 → close $95.66 -40.50; PINS×47 09:30 $22.23 → close $21.76 -22.09; ACI×83 09:30 $12.58 → close $13.08 +41.50 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $157.27 | ▼ 09:30 equity $8,217.92 vs yday $8,299.22 (-81.30) | 09:30 open · cash $157.27 (unchanged overnight, no fees) · equity $8,217.92 vs prior close $8,299.22 (-81.30) · 8 name(s) re-marked at the open (per-name table). ACI×83 yday $13.08 → 09:30 $12.99 -7.47; ECO×10 yday $95.66 → 09:30 $89.67 -59.90; JLHL×220 yday $4.60 → 09:30 $4.34 -57.20; ODD×47 yday $21.63 → 09:30 $21.95 +15.04; PINS×47 yday $21.76 → 09:30 $21.59 -7.76; TBBB×18 yday $56.36 → 09:30 $56.34 -0.36; TRU×15 yday $66.94 → 09:30 $68.55 +24.15; WLY×20 yday $51.49 → 09:30 $52.10 +12.20 | — |
+| 2026-10-15 09:30 ET | **SELL** | `ECO` | 10 | $89.67 | $2.04 | $-104.46 | $1,051.93 | ▼ -104.46 after sell → book $8,215.89; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `JLHL` | 220 | $4.34 | $2.88 | $-98.12 | $2,003.85 | ▼ -98.12 after sell → book $8,213.00; vs 09:30 mark -2.89 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `ODD` | 47 | $21.95 | $2.15 | $-16.97 | $3,033.34 | ▼ -16.97 after sell → book $8,210.85; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `PINS` | 47 | $21.59 | $2.15 | $-34.13 | $4,046.16 | ▼ -34.13 after sell → book $8,208.70; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `TBBB` | 18 | $56.34 | $2.06 | $+1.47 | $5,058.21 | ▲ +1.47 after sell → book $8,206.63; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `TRU` | 15 | $68.55 | $2.06 | $+27.86 | $6,084.41 | ▲ +27.86 after sell → book $8,204.58; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `WLY` | 20 | $52.10 | $2.07 | $-7.92 | $7,124.34 | ▼ -7.92 after sell → book $8,202.51; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **BUY** | `ITW` | 3 | $272.49 | $2.00 | — | $6,304.87 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer; ret5=+3.2; leftover $1017.76 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `LW` | 18 | $53.79 | $2.04 | — | $5,334.61 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+10.3; leftover $1017.76 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ETSY` | 12 | $84.47 | $2.03 | — | $4,318.94 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+16.0; leftover $1017.76 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `BLMN` | 107 | $9.48 | $2.31 | — | $3,302.27 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+14.4; leftover $1017.76 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `CHWY` | 48 | $21.00 | $2.13 | — | $2,292.14 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+14.3; leftover $1017.76 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `MNSO` | 97 | $10.41 | $2.28 | — | $1,280.08 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+14.3; leftover $1017.76 | join🟢 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ENGS` | 290 | $3.50 | $3.74 | — | $261.34 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+12.0; leftover $1017.76 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $261.34 | ▲ close $8,363.79 vs 09:30 $8,217.92 (session +177.82) | 16:00 close · cash $261.34 · equity $8,363.79 vs 09:30 $8,217.92 (+145.87; session marks +177.82) · 8 name(s) marked open→close (per-name table). ACI×83 09:30 $12.99 → close $13.03 +3.32; ITW×3 09:30 $272.49 → close $271.19 -3.90; LW×18 09:30 $53.79 → close $54.21 +7.56; ETSY×12 09:30 $84.47 → close $89.18 +56.52; BLMN×107 09:30 $9.48 → close $9.93 +48.15; CHWY×48 09:30 $21.00 → close $21.31 +14.88; MNSO×97 09:30 $10.41 → close $10.58 +16.49; ENGS×290 09:30 $3.50 → close $3.62 +34.80 | — |
 
 ## Not taken
 

@@ -59,10 +59,15 @@ jobs:
           set -euo pipefail
           # Cron and manual dispatch are not senders. Leave the day's
           # paper_open record untouched.
+          DATE=$(TZ=America/New_York date +%F)
           if [ "$SEAL_EVENT" != "workflow_run" ]; then
             echo "not the h1 seal; no paper submit and no paper_open write"
+            python3 -m src.workflow_progress touch --workflow webull_paper --date "$DATE" --stage preflight --state skipped --error "not the h1 seal" || true
             exit 0
           fi
+          python3 -m src.workflow_progress beat --workflow webull_paper --date "$DATE" --stages preflight --stage preflight >> /tmp/progress_beat.log 2>&1 &
+          echo $! > /tmp/progress_beat.pid
+          trap 'kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true' EXIT
           # WEBULL_ACCOUNT_ID may be absent. paper_open discovers it from
           # the sandbox account list when APP_KEY and APP_SECRET are set.
           ARGS=()
@@ -80,6 +85,7 @@ jobs:
             fi
           fi
           python -m src.paper_open --owner actions "${ARGS[@]}"
+          python3 -m src.workflow_progress touch --workflow webull_paper --date "$DATE" --stage preflight --state ok || true
       - name: Preserve preflight, submission and acknowledgment evidence
         if: always()
         uses: actions/upload-artifact@v4

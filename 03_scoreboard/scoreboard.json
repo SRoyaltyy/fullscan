@@ -23826,6 +23826,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-15",
+          "actual_pct": 2.09,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -33190,6 +33202,86 @@
       "index_carry": -0.411,
       "spy_pct_change": -1.0809673492788385,
       "rel_pct_change": 0.3155698718135924
+    },
+    {
+      "date": "2026-10-15",
+      "topic": "general",
+      "predicted_direction": null,
+      "predicted_magnitude_band": null,
+      "confidence_score": null,
+      "total_score": null,
+      "multiplier": null,
+      "components": {},
+      "leading_sum": null,
+      "actual_open": 7687.31,
+      "actual_close": 7744.06,
+      "actual_pct_change": 0.33,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-15_lesson.md",
+      "sources_used": [
+        {
+          "url": "https://www.ibtimes.com/ppi-was-much-higher-expected-odds-fed-rate-hike-edged-down-anyway-3808612",
+          "date_accessed": "2026-10-15",
+          "summary": "The 8:30 ET PPI was a genuine inflation shock, energy-heavy, and is the best explanation of the cash-session hole.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.ibtimes.com/ppi-was-much-higher-expected-odds-fed-rate-hike-edged-down-anyway-3808612",
+          "date_accessed": "2026-10-15",
+          "summary": "The rates market refused to treat the PPI headline as an October hike lock, which is why the equity hole could be bought.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/15/tsmc-third-quarter-profit-global-ai-.html",
+          "date_accessed": "2026-10-15",
+          "summary": "Fundamental AI demand was reconfirmed the same day chips were sold — a valuation/credit story, not an orders story.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.investors.com/news/technology/chip-stocks-tumble-on-ai-investment-worries/",
+          "date_accessed": "2026-10-15",
+          "summary": "Semis were trading the AI-financing/multiple complex, not the foundry print.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.devdiscourse.com/article/international/3993222-us-stocks-sp-500-nasdaq-pare-declines-as-ai-rout-teeters-healthcare-staples-gain",
+          "date_accessed": "2026-10-15",
+          "summary": "Contemporaneous tape matches the Channel 1 V-shape: inflation scare at the open, rotation/recovery into the afternoon.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.devdiscourse.com/article/international/3993222-us-stocks-sp-500-nasdaq-pare-declines-as-ai-rout-teeters-healthcare-staples-gain",
+          "date_accessed": "2026-10-15",
+          "summary": "Dow outperformance is the index expression of that rotation, not a broad risk-on melt-up.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.theglobeandmail.com/investing/article-ai-rout-slows-as-investors-buy-the-dip-on-tech/",
+          "date_accessed": "2026-10-15",
+          "summary": "Yields, not the PPI print itself, timed the Nasdaq V; levered AI credit stayed the weak link.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-inflation-data-nvidia-amd-micron-ai-fears/",
+          "date_accessed": "2026-10-15",
+          "summary": "Path classification (deep drop, close near high) is independently confirmed; attribution still splits yields vs AI-debt vs inflation.",
+          "verification": "verified"
+        }
+      ],
+      "ops_fail": true,
+      "path_shape": "V-shape (deep intraday drop, closed near high)",
+      "primary_driver": "Defensive rotation out of levered AI/semis into healthcare/Dow, funded by a same-day drop in 10-year yields after a hot PPI open shock",
+      "key_interaction": "Hot PPI and AI-credit stress amplified the open dump, then were offset when bonds rallied anyway — net SPX +0.33% masked a violent rotation day",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes",
+      "outlier_watch": "TSMC record beat vs seventh SOX down day; hot PPI vs falling 10Y and falling hike odds; NDX V-recovery vs Nasdaq 351 new lows",
+      "lesson_schema_ok": true
     }
   ]
 }

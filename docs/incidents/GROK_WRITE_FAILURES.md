@@ -198,17 +198,29 @@ Surveyed 2026-10-15 from the failed and cancelled runs of Pre-Open, Post-Close, 
 
 38. **Force-cancel and queue twins.** `38569102482` was the force-cancelled afternoon Pre-Open. It did not cause the morning hang on `38534415018`. The 2026-10-12 Pre-Open list is full of cancelled dispatches that never reached a Grok line.
 
+39. **The 04:40 ET OAuth guard never gets the only ECS runner.** On 2026-10-15 Pre-Open `38704557910` held that runner, and the published token expiry was 05:08 ET. The renew now runs as the first step inside ECS Pre-Open when the expiry is before the run ends.
+
+40. **The Pre-Open button defaults to `deepseek`, so Grok is never called.** Run `38714326944` (2026-10-15, Ubuntu, `LLM_BACKEND=deepseek`) printed `OpenClaw skipped` and wrote no general predict. The same default is what a dispatch sends when the backend menu is left alone, including a dispatch whose runner is ECS. Push and schedule have no input, and the workflow used `|| 'deepseek'`, so those runs skipped Grok too. #608 set the default and the empty-input fallback to `grok`, and sends push and schedule to the ECS runner. `deepseek` stays an explicit skip.
+
+43. **The Pre-Open button defaults to `ubuntu`, so the dispatch never reaches the ECS gateway.** Run `38730699335` (2026-10-15) started on runner `GitHub Actions 1000030688`. Run `38731981090` finished on `GitHub Actions 1000030758` with the xAI renew step skipped. That machine cannot call `127.0.0.1:18789`. #608 sets the button default to `ecs` and sends push and schedule there too. An explicit `ubuntu` choice fails closed instead of writing a free-model essay.
+
+41. **The nested stock-book wait ignores the step deadline.** Pre-Open calls `run_stock_book_all` in process after the essays. That orchestrator's own waits were 900s for the book, 480s for `live_boards`, and 900s for paper, and the parent `wait()` did not stop at `FULLSCAN_STEP_DEADLINE`. The parent Pre-Open call of `live_boards` was already capped (mode 26). This nested one was not, so the 50-minute step could still die before the status file landed. On 2026-10-15 run `38720850552` the book, the live strip, and paper did land. The runner then dropped (mode 42) with no `2026-10-15` general predict on main.
+
+42. **The ECS runner loses communication and the step log never uploads.** Run `38720850552` (2026-10-15) kept the preopen job until 11:46Z. GitHub then failed it: "The self-hosted runner lost communication with the server." The preopen step log was not uploaded (`log not found`). No general predict was on main. The process kept landing weather, join, and the book after GitHub had marked the runner dead.
+
+44. **OpenRouter `z-ai/glm-5.3` is selected and the account cannot afford the essay.** Run `38731981090` (2026-10-15) was a workflow_dispatch on Ubuntu (`GitHub Actions 1000030758`) with `LLM_BACKEND=deepseek`, `DEEPSEEK_BASE_URL=https://openrouter.ai/api/v1`, and `LLM_MODEL_OVERRIDE=z-ai/glm-5.3`. That combination is the `openrouter-glm` menu, not the `zhipu-glm-flash` default (the Zhipu default also sets a TokenHub fallback, and this run's fallback was empty). OpenClaw was skipped. Every essay returned HTTP 402: "You requested up to 8000 tokens, but can only afford 2037" (events asked for 24000 and could afford 2502). Predict was not written. `grok_ok` is false. Do not buy OpenRouter credits. The free default stays `zhipu-glm-flash`.
+
 ### What is already changed, and what is not
 
-#597, #599, #600, and #603 are on main. Together they change modes 1, 2, 3, 6, 8, 9, 12, 13, 14, 16, 19, 22, 24, 25, 26, 29, 30, 31, 32, and 33. Mode 39 is PR #604 and is not on main yet. A dead refresh token is still mode 11.
+#597, #599, #600, #603, and #604 are on main. Together they change modes 1, 2, 3, 6, 8, 9, 12, 13, 14, 16, 18 (the no-balance skip), 19, 22, 24, 25, 26, 29, 30, 31, 32, 33, and 39. Mode 43 is #608, on main: the button, push, and schedule use the ECS runner unless ubuntu is explicit. Mode 40's grok default and ECS routing are #608; the empty-balance essay skip is #607, on main. Mode 41 is #607, on main. The no-search retry after a 42 and the listener kill before `systemctl` are #607, on main. Mode 42 is not code: the ECS runner dropped and GitHub uploaded no step log. Mode 44 is not code: run `38731981090` selected paid OpenRouter `z-ai/glm-5.3` and the account could only afford about 2000 tokens (HTTP 402). A dead refresh token is still mode 11. On 2026-10-15 at 06:56 ET the ECS gateway answered a no-search ping (`xai/grok-4.3`, HTTP 200, `PONG`). At 09:46 ET the published guard said the token was fresh until 11:54 ET, with no verification URL, so mode 11 is not the current blocker.
 
 Still owner-only: mode 11 (open the device URL and press Allow), mode 15 if the message is the credits/subscription 403, and mode 27 until a `FULLSCAN_PUSH_TOKEN` secret exists.
 
-Left as they are on purpose: paid DeepSeek and paid `glm-5.3` stay off (17, 18); the gateway timer stays 10800s; missed days stay missing. Cyrus ruled a GLM predict counts, so #598 is closed and not merged.
+Left as they are on purpose: paid DeepSeek, paid `glm-5.3`, and paid OpenRouter `z-ai/glm-5.3` stay off (17, 18, 44); the gateway timer stays 10800s; missed days stay missing. Cyrus ruled a GLM predict counts, so #598 is closed and not merged.
 
 ## Fix pass after the catalog
 
-#603 is on main. The bullets through mode 3 are that merge. Mode 39 is this PR (#604) and is not on main yet.
+#603, #604, #607, and #608 are on main. The bullets through mode 3 are #603. Mode 39, the essay-budget half of mode 25, and the no-balance skip in mode 18 are #604. Mode 43 and the grok default are #608. The empty-balance essay skip, the stock-book deadline, the no-search retry, and the listener kill are #607. Mode 42 is not code. Mode 44 is not code: OpenRouter `z-ai/glm-5.3` on run `38731981090` returned HTTP 402 because the account could only afford about 2000 tokens.
 
 - Mode 9 and the leftover of mode 2: a sector whose breaker file is already open does not sleep 60–120s, and a `/v1/models` 200 does not clear that file. After Grok is empty, free `glm-5.3-flash` may write the sector. Paid DeepSeek stays blocked.
 - Mode 14, the skip half: a token that expires before 06:30 ET is not "fresh", even when more than 90 minutes remain. The 00:41 ET run on 2026-10-15 had 267 minutes left and an expiry of 05:08 ET, which is before the 05:55 Pre-Open. It skipped. A later 17+25 that returns 42 without moving that expiry is not treated as a renew (mode 13). OpenClaw refreshes only an already-expired profile, so the guard nudges that expiry field, calls once more, and restores the file if the expiry still does not move. It does not touch the profile while a Grok job is running.
@@ -219,29 +231,35 @@ Left as they are on purpose: paid DeepSeek and paid `glm-5.3` stay off (17, 18);
 - Mode 30: the scrape step exits 0 after 09:25 ET instead of going red for obeying the cutoff. It still does not write.
 - Mode 32: when today's packet is quality-ok but the trace is not Grok, and the clock is before 09:00 ET, the general predict is healed. A failed heal keeps the essay. Past days are not rewritten.
 - Mode 25, leftover: sector predict and the map-heat refresh shrink to the step deadline instead of a flat 2400s / 540s. When the map-heat refresh no longer fits, the night baseline is written through so a missing `map_heat_research` file does not fail the run after the essay (mode 33).
-- Mode 25, the essay half (this PR): `PREOPEN_LLM_TIMEOUT=900` gave events, the catcher, news actions, news judge, and the general predict 960s each. Run `38704557910` on 2026-10-15 died at the 50-minute step kill with no `2026-10-15` general predict. Those five essays now split the step deadline, and a child deadline cannot extend past the parent's. The workflow cap is 420s, matching systemd.
+- Mode 25, the essay half (#604): `PREOPEN_LLM_TIMEOUT=900` gave events, the catcher, news actions, news judge, and the general predict 960s each. Run `38704557910` on 2026-10-15 died at the 50-minute step kill with no `2026-10-15` general predict. Those five essays now split the step deadline, and a child deadline cannot extend past the parent's. The workflow cap is 420s, matching systemd.
 - Mode 3, leftover: a forced gateway restart used to call a 60-second PONG first. The restart budget (45s) expired before `systemctl` ran, so the 10800s turn stayed up. A forced restart now skips that ping and bounces immediately. If `systemctl restart` is not allowed, it kills the listener on 18789. It also does not rewrite `openclaw.json` when chat completions are already on (mode 6 / 24 on the restart path). A failed pre-essay probe marks the run so the predict does not open a second native-search turn.
-- Mode 39: the 04:40 ET guard is a second job on the only ECS runner. On 2026-10-15 it never started while Pre-Open `38704557910` held the runner, and the published token expired at 05:08 ET. ECS Pre-Open now renews as its own first Grok step when the expiry is before the run ends. That renew does not treat `ecs_preopen.sh` itself as a second Grok job, or the nudge would refuse to run. The device `user_code` is not published for Cyrus's phone. James auto-clicks Allow.
+- Mode 39: the 04:40 ET guard is a second job on the only ECS runner. On 2026-10-15 it never started while Pre-Open `38704557910` held the runner, and the published token expired at 05:08 ET. ECS Pre-Open renews before the essays when the expiry is inside the run. That step used to require a manual dispatch with `runner=ecs`, so the 05:55 schedule (which #608 also sends to ECS) skipped it. It now runs for every non-ubuntu Pre-Open. The systemd script already renewed on its own. The device `user_code` is not published for Cyrus's phone. James auto-clicks Allow.
+- Mode 40: the workflow input and the empty-input fallback were `deepseek`, which skips OpenClaw. #608 set both to `grok` and sends push and schedule to the ECS runner. Paid `api.deepseek.com` is still an explicit provider choice, not the default. An explicit ubuntu choice fails closed when the gateway is loopback, so it does not sit on `127.0.0.1:18789` or write a free-model essay. A Zhipu/TokenHub 402 used to set `skip_essays` and cancel Grok on the same run. When the gateway URL is still set, that preflight no longer cancels the essays. `deepseek` still skips them.
+- Mode 3, leftover: on run `38720850552` the 75s restart cap fired while `systemctl restart` was still blocked, so `kill_listener` never ran and the next probe still read-timed-out. A forced restart now kills the listener on 18789 before `systemctl`, and the cap is 150s.
+- Mode 1, leftover: run `38720850552` called Grok (`LLM_BACKEND=grok`). A no-search 17+25 returned 42 in 6.9s. The heal then opened another native-search turn, which hung at 75s, and the free backup was empty (Zhipu 1113, TokenHub 402 code 401008). After that 42 the retry is one no-search essay. A spent shot does not call `chat(tools=True)`.
+- Mode 41: `run_stock_book_all` now stops its own `wait()` at `FULLSCAN_STEP_DEADLINE`. A nested 900s book, 480s `live_boards`, or 900s paper append cannot keep the morning step alive until GitHub kills it. The parent Pre-Open call of `live_boards` was already capped (mode 26).
+- Mode 42 is not a code change. On 2026-10-15 the ECS runner dropped at 11:46Z during run `38720850552`, GitHub uploaded no preopen log, and the job was marked failed. The box answered a new dispatch two minutes later, so this was not a dead runner that needed a reboot.
 
 Cannot be fixed from this session:
 
 - Mode 11, when the refresh token is dead. The guard says device login and prints the URL. James auto-clicks Allow. The code is not sent to Cyrus. No device code is waiting right now.
-- Mode 15, the credits/subscription 403, and modes 17 and 18. Those accounts are empty. Paying for DeepSeek, paid `glm-5.3`, or Grok credits needs Cyrus. The free `glm-5.3-flash` path is the backup.
+- Mode 15, the credits/subscription 403, and modes 17, 18, and 44. Those accounts are empty. Paying for DeepSeek, paid `glm-5.3`, Grok credits, or OpenRouter needs Cyrus. On 2026-10-15 the free Zhipu `glm-5.3-flash` package returned 429 code 1113 on ECS and 400 on Ubuntu, and TokenHub `glm-5.3` returned HTTP 402 code 401008 (free trial exhausted, postpaid billing not enabled). Run `38731981090` selected OpenRouter `z-ai/glm-5.3` and got HTTP 402 ("can only afford 2037" tokens). Leave postpaid off. Do not buy OpenRouter credits. Restoring the free balances is Cyrus's.
 - Mode 27. `FULLSCAN_PUSH_TOKEN` is a GitHub secret. A Google login does not create it. Until it exists, a cancelled step still cannot push. The deadline is what keeps the normal push alive.
 - Mode 20, a second computer. Post-close already yields from 04:00–10:30 ET. This session cannot add another ECS runner.
+- Mode 42, the runner dropping off GitHub mid-step. The log never uploads, so the essay failure on that run cannot be quoted. Nothing in this session restarts the Actions runner.
 - Mode 34, a FRED 502. The code already falls back to the database. The upstream outage is not ours.
 - Mode 38, a person pressing Force cancel. `cancel-in-progress` stays false so a running Grok pass is not killed by a twin.
 - Modes 35, 36, and 37 are not in the current tree. The f-string is gone, those workflow files parse, and a Pre-Open run now always has a preopen job when the clock gate says go.
 
 ## Status of every mode
 
-Proof is strict. A run id is listed only when a real morning Pre-Open exercised the fix. Everything else is unproven until that morning. Failure run ids in the catalog above show the bug, not the fix. #603 is on main and no morning has completed on it. This PR is #604. `38704557910` is the 2026-10-15 Pre-Open that held the runner; it is on an older SHA and is not proof.
+Proof is strict. A run id is listed only when a real morning Pre-Open exercised the fix. Everything else is unproven until that morning. Failure run ids in the catalog above show the bug, not the fix. #603 and #604 are on main. No morning has finished on them. `38704557910` held the runner and died at the 50-minute kill. `38714326944` skipped OpenClaw. `38731981090` ran on Ubuntu with `LLM_BACKEND=deepseek` and OpenRouter `z-ai/glm-5.3`, skipped OpenClaw, and wrote no predict. None of those is proof.
 
 | # | Short name | Category | Hangs or kills the morning job? | Fix | Proof |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Native-search read timeout, then the breaker | hang | yes | #599 merged | unproven until first morning on fix |
+| 1 | Native-search read timeout, then the breaker | hang | yes | #599 merged; the heal must not open another search turn after the 42, #607 merged | unproven until first morning on fix |
 | 2 | Each sector burns its own timeout, no breaker | timeout | yes | #599 merged; leftover sleep is #603 merged | unproven until first morning on fix |
-| 3 | Gateway keeps the 10800s turn after the client gives up | hang | yes | #599 merged; the restart that actually kills the listener is #603 merged | unproven until first morning on fix |
+| 3 | Gateway keeps the 10800s turn after the client gives up | hang | yes | #599 merged; #603 kills the listener; the 75s cap still fired before that kill on 38720850552, #607 merged | unproven until first morning on fix |
 | 4 | PONG treated as a finished xAI login | auth | yes | already gone from tree | unproven until first morning on fix |
 | 5 | HTTP 500 marks the gateway down for the rest of the run | other | yes | already gone from tree | unproven until first morning on fix |
 | 6 | Config rewrite returns one 127-character body for every sector | other | yes | #603 merged | unproven until first morning on fix |
@@ -256,15 +274,15 @@ Proof is strict. A run id is listed only when a real morning Pre-Open exercised 
 | 15 | 64-char bearer 401, or Grok credits/subscription 403 | auth | yes | #599 merged for the 64-char 401; not code: Grok credits or subscription | unproven until first morning on fix |
 | 16 | Gateway process down, or gateway.mode missing | other | yes | #603 merged | unproven until first morning on fix |
 | 17 | Paid DeepSeek HTTP 402 | auth | yes | not code: do not enable paid DeepSeek | unproven until first morning on fix |
-| 18 | Paid glm-5.3 HTTP 429 | auth | yes | not code: do not enable paid glm-5.3. Run 38704557910 also got 1113 from glm-5.3-flash; PR #604 pending does not retry that and skips the key for the rest of the morning | unproven until first morning on fix |
+| 18 | Paid glm-5.3 HTTP 429 | auth | yes | not code: do not enable paid glm-5.3. Run 38704557910 also got 1113 from glm-5.3-flash; #604 merged does not retry that and skips the key for the rest of the morning | unproven until first morning on fix |
 | 19 | TokenHub read timeout retried until the step dies | timeout | yes | #603 merged | unproven until first morning on fix |
 | 20 | One ECS runner, so other Grok jobs wait or get cancelled | other | yes | not code: a second ECS runner cannot be added from here | unproven until first morning on fix |
 | 21 | Backing off a systemd lock exited 1 | other | yes | already gone from tree | unproven until first morning on fix |
 | 22 | Night post-close sits across renew and the morning | timeout | yes | #599 merged | unproven until first morning on fix |
 | 23 | Shared workdir left sparse, or the fetch never finishes | other | yes | already gone from tree | unproven until first morning on fix |
 | 24 | Two writers rewrite openclaw.json in the same minute | other | yes | #603 merged | unproven until first morning on fix |
-| 25 | 50-minute step kill revokes the push | timeout | yes | #599 merged; sector and map-heat budgets are #603 merged; the five essays that still blew the 50m kill on 38704557910 are PR #604 pending | unproven until first morning on fix |
-| 26 | live_boards sat 480s at the end | timeout | yes | #599 merged | unproven until first morning on fix |
+| 25 | 50-minute step kill revokes the push | timeout | yes | #599 merged; sector and map-heat budgets are #603 merged; the five essays that blew the 50m kill on 38704557910 are #604 merged | unproven until first morning on fix |
+| 26 | live_boards sat 480s at the end | timeout | yes | #599 merged for the parent Pre-Open call; the nested stock-book wait is mode 41 | unproven until first morning on fix |
 | 27 | Cancel revokes GITHUB_TOKEN | other | yes | not code: set the FULLSCAN_PUSH_TOKEN secret | unproven until first morning on fix |
 | 28 | Pages upload 403 after the job is already dead | other | yes | not code: follows a cancelled job (mode 27) | unproven until first morning on fix |
 | 29 | Ubuntu cron calls the loopback gateway and burns 50 minutes | hang | yes | #603 merged | unproven until first morning on fix |
@@ -277,4 +295,9 @@ Proof is strict. A run id is listed only when a real morning Pre-Open exercised 
 | 36 | Invalid workflow, zero jobs | other | yes | already gone from tree | unproven until first morning on fix |
 | 37 | Run red, every recorded job green, no preopen job | other | yes | already gone from tree | unproven until first morning on fix |
 | 38 | A person Force-cancels a live Grok pass | other | yes | not code: do not Force-cancel a live pass | unproven until first morning on fix |
-| 39 | 04:40 OAuth guard queues behind Pre-Open and the token expires | auth | yes | PR #604 pending | unproven until first morning on fix |
+| 39 | 04:40 OAuth guard queues behind Pre-Open and the token expires | auth | yes | #604 merged the in-job renew for a manual ECS dispatch; the 05:55 schedule now renews too, because it also runs on ECS | unproven until first morning on fix |
+| 40 | Pre-Open defaults to deepseek, so Grok is never called | auth | yes | #608 merged the grok default and ECS routing; empty Zhipu/TokenHub no longer cancels Grok when the gateway is set, #607 merged | unproven until first morning on fix |
+| 41 | Nested stock-book wait ignores the step deadline | timeout | yes | #607 merged | unproven until first morning on fix |
+| 42 | ECS runner drops and the step log never uploads | other | yes | not code: the ECS runner dropped; GitHub uploaded no step log | unproven until first morning on fix |
+| 43 | Pre-Open button defaults to ubuntu, so Grok is never reached | auth | yes | #608 merged | unproven until first morning on fix |
+| 44 | OpenRouter glm-5.3 selected, account cannot afford the essay | auth | yes | not code: do not buy OpenRouter credits | unproven until first morning on fix |

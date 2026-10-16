@@ -650,11 +650,25 @@ def write_reauth_status(report: Report) -> None:
     REAUTH_JSON.write_text(json.dumps(incoming, indent=2) + "\n", encoding="utf-8")
 
 
+def _reauth_waiting_live(existing: dict) -> bool:
+    """Same rule as xai_device_reauth.waiting_live: waiter alive here + code
+    unexpired. A leftover waiting file must not block a fresh login."""
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("_xai_reauth_mod", XAI_REAUTH)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)  # type: ignore[union-attr]
+        return bool(mod.waiting_live(existing))
+    except Exception:
+        return True  # fail safe: do not stack waiters
+
+
 def _spawn_device_reauth() -> str | None:
     if not XAI_REAUTH.is_file():
         return None
     existing = _load_reauth()
-    if existing.get("status") == "waiting" and existing.get("user_code"):
+    if existing.get("status") == "waiting" and existing.get("user_code") \
+            and _reauth_waiting_live(existing):
         return None
     if grok_busy():
         return None

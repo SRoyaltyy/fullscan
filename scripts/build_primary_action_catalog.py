@@ -5,7 +5,7 @@ Unverified/blocked endpoints remain visible and disabled, never padded into cove
 """
 import argparse,concurrent.futures,hashlib,json,pathlib,re,threading,urllib.parse
 from collections import Counter
-from src.primary_actions import VERSION,Links,get,feed_rows,index_rows,now,iso,atomic_json,fetch_source,HTTP_AUDIT,allowed_public_source
+from src.primary_actions import VERSION,Links,get,feed_rows,index_rows,now,iso,atomic_json,fetch_source,HTTP_AUDIT,allowed_public_source,data_gov_api_key,KEYED_ADAPTERS
 from datetime import timedelta
 
 DIRECTORIES={
@@ -30,6 +30,13 @@ def channel_scope(source):
  if 'federalreserve.gov/feeds/' in label and re.search(r'/feeds/(?:s_t_|m_w_|feds(?:_|\.)|clp\.|g\d|h\d|prates\.|testimony\.)',label):return 'Fed research, speeches/testimony or reference data; policy releases remain enabled'
  if any(x in label for x in ('exchange rate','exchangerate','exchange_rate','eurofxref','reference rate','research paper','working paper','discussion paper','statistical release','currentfaqs','/speeches','press_speeches','/research/','/blog','/podcast')):return 'reference data, research, speeches or commentary'
  return None
+
+def verification_result(source,rows,state,stamp):
+ exclusion=channel_scope(source)
+ good=state['status'] in ('ok','valid_empty') and (source['adapter']!='html_index' or bool(rows))
+ # Keep configured keyed adapters eligible for the next run after key repair or quota recovery.
+ retry=source['adapter'] in KEYED_ADAPTERS and state['status'] in ('key_not_configured','key_invalid','key_disabled','key_unverified','key_unauthorized','rate_limited','blocked','fetch_failed')
+ return source|{'enabled':bool((good or retry) and not exclusion),'verified_healthy':bool(good),'scope_exclusion':exclusion,'verification':state|{'checked_at':stamp,'sample_titles':[r['title'] for r in rows[:3]],'parsed_rows':len(rows)}}
 
 def build(root):
  seeds=json.loads((root/'config/primary_action_seeds.json').read_text(encoding='utf-8'))['sources']
@@ -114,11 +121,7 @@ def build(root):
    with locks[urllib.parse.urlsplit(source['url']).hostname]:
     # RSS/index verification retains only parser metadata; API verification is date-bounded.
     rows,state=fetch_source(source,now()-timedelta(days=3),now(),max_pages=1)
-   if state['status']=='key_not_configured':return source|{'enabled':True,'verification':state|{'checked_at':stamp,'sample_titles':[],'parsed_rows':0}}
-   good=state['status'] in ('ok','valid_empty')
-   if source['adapter']=='html_index':good=good and bool(rows)
-   exclusion=channel_scope(source)
-   return source|{'enabled':good and not exclusion,'scope_exclusion':exclusion,'verification':state|{'checked_at':stamp,'sample_titles':[r['title'] for r in rows[:3]],'parsed_rows':len(rows)}}
+   return verification_result(source,rows,state,stamp)
   except Exception as exc:return source|{'enabled':False,'verification':{'status':'invalid_feed_or_network_error','checked_at':stamp,'exception_type':type(exc).__name__}}
  verified=[]
  with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
@@ -129,9 +132,13 @@ def build(root):
   if institution['id'] in by_seed:institution['shared_publication_source_ids']=by_seed[institution['id']]
  registry={'version':'primary-action-institutions-v1','generated_at':stamp,'scope':'Directory identities include historical/closed bodies. Shared portals are not counted as thousands of distinct working websites. Publication-channel health is separate.','institutions':institutions,'directory_evidence':evidence,'directory_gaps':gaps}
  catalog={'version':VERSION,'generated_at':stamp,'seed_sha256':hashlib.sha256((root/'config/primary_action_seeds.json').read_bytes()).hexdigest(),'implementation_sha256':hashlib.sha256((root/'src/primary_actions.py').read_bytes()+(root/'scripts/build_primary_action_catalog.py').read_bytes()).hexdigest(),'scope':'Official publication endpoints; enabled only after successful live parsing. Source status never proves enactment of every document.','sources':verified,'discovery_pages':discovery}
+ catalog['credential_configuration']={'data_gov_api_key_configured':bool(data_gov_api_key())}
+ catalog['scope']='Official publication endpoints; keyed adapters remain eligible while setup or quota recovery is pending. Verification health is separate from enabled status.'
  atomic_json(root/'data/primary_actions/institution_registry.json',registry);atomic_json(root/'config/primary_action_sources.json',catalog)
  summary={'institutions':len(institutions),'by_jurisdiction':dict(Counter(i['jurisdiction'] for i in institutions)),'uk_status':dict(Counter(i['status'] for i in institutions if i['id'].startswith('uk-gov:'))),'candidate_channels':len(verified),'enabled_channels':sum(v['enabled'] for v in verified),'channel_statuses':dict(Counter(v['verification']['status'] for v in verified)),'directory_gaps':gaps}
  summary.update(institution_records=len(institutions),count_caution='Overlapping directory identities and channel owners, including closed/historical bodies; not unique active institutions or working websites.',directory_record_groups=dict(Counter(i['id'].split(':')[0] if ':' in i['id'] else 'govinfo_court' if i['id'].startswith('us-govinfo-') else 'curated_channel_owner' for i in institutions)),excluded_reference_channels=sum(bool(v.get('scope_exclusion')) for v in verified))
+ summary['enabled_healthy_channels']=sum(v['enabled'] and v.get('verified_healthy',False) for v in verified)
+ summary['enabled_pending_channels']=sum(v['enabled'] and not v.get('verified_healthy',False) for v in verified)
  atomic_json(root/'docs/primary-actions/catalog_summary.json',summary)
  lines=['# Primary-origin source catalog','',f"Verified {stamp}. {summary['institutions']} institution records; {summary['enabled_channels']} enabled publication channels out of {len(verified)} checked candidates.",'','Institution records include historical/closed bodies and shared portals. This is a maintained coverage catalog, not an exhaustive worldwide directory. Disabled/blocked channels remain visible below.','', '| Institution / publication channel | Jurisdiction | Family | Adapter | Enabled | Verification |','|---|---|---|---|---|---|']
  for s in verified:lines.append('| '+s['name'].replace('|','/')+' | '+s['jurisdiction']+' | '+s['family']+' | ['+s['adapter']+']('+s['url']+') | '+str(s['enabled'])+' | '+s['verification']['status']+('; '+s['scope_exclusion'] if s.get('scope_exclusion') else '')+' |')
@@ -145,4 +152,3 @@ def main():
  try:print(json.dumps(build(a.root),indent=2))
  finally:atomic_json(a.root/'research/http_request_audit.json',HTTP_AUDIT)
 if __name__=='__main__':main()
-

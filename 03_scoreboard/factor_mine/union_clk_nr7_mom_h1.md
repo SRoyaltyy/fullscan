@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #10 NR7 + moderate momentum
 
-Cash book **-1.94%** ($9,806) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 62 · skips 16 · realized $+1589.64.
+Cash book **-2.49%** ($9,751) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 69 · skips 16 · realized $+1589.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -224,6 +224,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `ESRT` | 677 | $4.82 | $8.73 | — | $6,528.28 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; 🔵; ret5=+9.7; leftover $3266.72 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `SG` | 326 | $10.00 | $4.21 | — | $3,264.07 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; ret5=+9.7; leftover $3266.72 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,264.07 | ▲ close $9,805.77 vs 09:30 $9,800.15 (session +18.56) | 16:00 close · cash $3,264.07 · equity $9,805.77 vs 09:30 $9,800.15 (+5.62; session marks +18.56) · 2 name(s) marked open→close (per-name table). ESRT×677 09:30 $4.82 → close $4.78 -27.08; SG×326 09:30 $10.00 → close $10.14 +45.64 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,264.07 | ▲ 09:30 equity $9,855.67 vs yday $9,805.77 (+49.90) | 09:30 open · cash $3,264.07 (unchanged overnight, no fees) · equity $9,855.67 vs prior close $9,805.77 (+49.90) · 2 name(s) re-marked at the open (per-name table). ESRT×677 yday $4.78 → 09:30 $4.82 +27.08; SG×326 yday $10.14 → 09:30 $10.21 +22.82 | — |
+| 2026-10-15 09:30 ET | **SELL** | `ESRT` | 677 | $4.82 | $8.87 | $-17.61 | $6,518.34 | ▼ -17.61 after sell → book $9,846.80; vs 09:30 mark -8.87 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `SG` | 326 | $10.21 | $4.29 | $+59.97 | $9,842.51 | ▲ +59.97 after sell → book $9,842.51; vs 09:30 mark -4.29 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `PBR-A` | 71 | $22.79 | $2.20 | — | $8,222.22 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; ret5=+6.5; leftover $1640.42 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `COP` | 11 | $143.00 | $2.02 | — | $6,647.20 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; ret5=+9.6; leftover $1640.42 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `BP` | 33 | $49.21 | $2.09 | — | $5,021.18 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; ret5=+9.7; leftover $1640.42 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `EQNR` | 36 | $45.50 | $2.10 | — | $3,381.08 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; ret5=+8.8; leftover $1640.42 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ITW` | 6 | $272.49 | $2.01 | — | $1,744.13 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list yday_gainer; ret5=+3.2; leftover $1640.42 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,744.13 | ▼ close $9,751.25 vs 09:30 $9,855.67 (session -80.84) | 16:00 close · cash $1,744.13 · equity $9,751.25 vs 09:30 $9,855.67 (-104.42; session marks -80.84) · 5 name(s) marked open→close (per-name table). PBR-A×71 09:30 $22.79 → close $22.61 -12.78; COP×11 09:30 $143.00 → close $141.73 -13.97; BP×33 09:30 $49.21 → close $48.44 -25.41; EQNR×36 09:30 $45.50 → close $44.92 -20.88; ITW×6 09:30 $272.49 → close $271.19 -7.80 | — |
 
 ## Not taken
 

@@ -948,7 +948,7 @@ def test_ubuntu_preopen_not_blocked_by_queued_ecs() -> None:
     assert "&& 'ubuntu' || 'ecs'" not in yml
     assert "github.event_name == 'push'" in yml
     assert "&& 'deepseek'" not in yml
-    assert "github.event.inputs.llm_backend || 'auto'" in yml
+    assert "github.event.inputs.llm_backend || 'grok'" in yml
     assert "--job preopen_pass" in yml
     assert "--skip-sectors" in yml
     assert "'/home/runner'" in yml

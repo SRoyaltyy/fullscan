@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-10.13%** ($8,987) · signal-only (no cash/fees) was +81.51%. Starts YES **27/30**. Fills 264 · skips 225 · realized $+477.57.
+Cash book **-10.14%** ($8,986) · signal-only (no cash/fees) was +81.51%. Starts YES **27/30**. Fills 268 · skips 225 · realized $+477.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -426,6 +426,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **SELL** | `ORBS` | 1238 | $0.82 | $14.13 | $-148.33 | $7,840.49 | ▼ -148.33 after sell → book $8,988.52; vs 09:30 mark -14.13 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-14 09:30 ET | **SELL** | `PCRX` | 31 | $36.33 | $2.10 | $-4.19 | $8,964.62 | ▼ -4.19 after sell → book $8,986.42; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,964.62 | ▲ close $8,987.03 vs 09:30 $9,027.80 (session +0.61) | 16:00 close · cash $8,964.62 · equity $8,987.03 vs 09:30 $9,027.80 (-40.77; session marks +0.61) · 4 name(s) marked open→close (per-name table). NAUT×3 09:30 $2.00 → close $2.16 +0.48; PRME×1 09:30 $3.21 → close $3.13 -0.08; QSI×5 09:30 $1.34 → close $1.39 +0.25; SVC×1 09:30 $5.89 → close $5.85 -0.04 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,964.62 | ▼ 09:30 equity $8,986.61 vs yday $8,987.03 (-0.42) | 09:30 open · cash $8,964.62 (unchanged overnight, no fees) · equity $8,986.61 vs prior close $8,987.03 (-0.42) · 4 name(s) re-marked at the open (per-name table). NAUT×3 yday $2.16 → 09:30 $2.07 -0.27; PRME×1 yday $3.13 → 09:30 $3.12 -0.01; QSI×5 yday $1.39 → 09:30 $1.35 -0.20; SVC×1 yday $5.85 → 09:30 $5.91 +0.06 | — |
+| 2026-10-15 09:30 ET | **SELL** | `NAUT` | 3 | $2.07 | $0.09 | $-0.45 | $8,970.74 | ▼ -0.45 after sell → book $8,986.52; vs 09:30 mark -0.09 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `PRME` | 1 | $3.12 | $0.05 | $-0.93 | $8,973.80 | ▼ -0.93 after sell → book $8,986.46; vs 09:30 mark -0.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SELL** | `QSI` | 5 | $1.35 | $0.10 | $-0.82 | $8,980.45 | ▼ -0.82 after sell → book $8,986.36; vs 09:30 mark -0.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SELL** | `SVC` | 1 | $5.91 | $0.08 | $-1.55 | $8,986.28 | ▼ -1.55 after sell → book $8,986.28; vs 09:30 mark -0.08 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,986.28 | ▲ close $8,986.28 vs 09:30 $8,986.61 (session +0.00) | 16:00 close · cash $8,986.28 · no lots left · equity $8,986.28. | — |
 
 ## Not taken
 

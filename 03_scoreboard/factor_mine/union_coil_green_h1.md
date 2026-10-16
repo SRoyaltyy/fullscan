@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-19.34%** ($8,066) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 369 · skips 101 · realized $-768.45.
+Cash book **-18.27%** ($8,173) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 381 · skips 101 · realized $-768.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -534,6 +534,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `ESRT` | 210 | $4.82 | $2.71 | — | $2,144.73 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+9.7; leftover $1016.45 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `LW` | 19 | $52.02 | $2.05 | — | $1,154.31 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+8.5; leftover $1016.45 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,154.31 | ▼ close $8,065.80 vs 09:30 $8,131.63 (session -50.76) | 16:00 close · cash $1,154.31 · equity $8,065.80 vs 09:30 $8,131.63 (-65.83; session marks -50.76) · 7 name(s) marked open→close (per-name table). TRU×15 09:30 $66.42 → close $66.94 +7.80; CNK×26 09:30 $37.88 → close $38.20 +8.32; WLY×19 09:30 $52.29 → close $51.49 -15.20; SHAK×14 09:30 $70.75 → close $68.77 -27.72; NTSK×48 09:30 $20.76 → close $20.04 -34.56; ESRT×210 09:30 $4.82 → close $4.78 -8.40; LW×19 09:30 $52.02 → close $53.02 +19.00 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,154.31 | ▲ 09:30 equity $8,111.91 vs yday $8,065.80 (+46.11) | 09:30 open · cash $1,154.31 (unchanged overnight, no fees) · equity $8,111.91 vs prior close $8,065.80 (+46.11) · 7 name(s) re-marked at the open (per-name table). CNK×26 yday $38.20 → 09:30 $38.44 +6.24; ESRT×210 yday $4.78 → 09:30 $4.82 +8.40; LW×19 yday $53.02 → 09:30 $53.79 +14.63; NTSK×48 yday $20.04 → 09:30 $19.55 -23.52; SHAK×14 yday $68.77 → 09:30 $69.10 +4.62; TRU×15 yday $66.94 → 09:30 $68.55 +24.15; WLY×19 yday $51.49 → 09:30 $52.10 +11.59 | — |
+| 2026-10-15 09:30 ET | **SELL** | `CNK` | 26 | $38.44 | $2.09 | $+10.40 | $2,151.66 | ▲ +10.40 after sell → book $8,109.82; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `ESRT` | 210 | $4.82 | $2.75 | $-5.46 | $3,161.11 | ▼ -5.46 after sell → book $8,107.07; vs 09:30 mark -2.75 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `LW` | 19 | $53.79 | $2.07 | $+29.52 | $4,181.05 | ▲ +29.52 after sell → book $8,105.00; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `NTSK` | 48 | $19.55 | $2.15 | $-62.37 | $5,117.30 | ▼ -62.37 after sell → book $8,102.85; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `SHAK` | 14 | $69.10 | $2.05 | $-27.18 | $6,082.65 | ▼ -27.18 after sell → book $8,100.80; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `WLY` | 19 | $52.10 | $2.07 | $-7.72 | $7,070.48 | ▼ -7.72 after sell → book $8,098.73; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **BUY** | `FIS` | 27 | $36.40 | $2.07 | — | $6,085.61 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+4.9; leftover $1010.07 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-15 09:30 ET | **BUY** | `YOU` | 22 | $44.40 | $2.06 | — | $5,106.75 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+4.1; leftover $1010.07 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `EPR` | 18 | $55.57 | $2.04 | — | $4,104.45 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; ret5=+0.9; leftover $1010.07 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ITW` | 3 | $272.49 | $2.00 | — | $3,284.98 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+3.2; leftover $1010.07 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `TBBB` | 17 | $56.34 | $2.04 | — | $2,325.16 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+6.3; leftover $1010.07 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `DGX` | 4 | $235.85 | $2.00 | — | $1,379.76 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_mover; ret5=+2.8; leftover $1010.07 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,379.76 | ▲ close $8,172.89 vs 09:30 $8,111.91 (session +86.37) | 16:00 close · cash $1,379.76 · equity $8,172.89 vs 09:30 $8,111.91 (+60.98; session marks +86.37) · 7 name(s) marked open→close (per-name table). TRU×15 09:30 $68.55 → close $74.12 +83.55; FIS×27 09:30 $36.40 → close $36.13 -7.29; YOU×22 09:30 $44.40 → close $45.02 +13.64; EPR×18 09:30 $55.57 → close $55.15 -7.56; ITW×3 09:30 $272.49 → close $271.19 -3.90; TBBB×17 09:30 $56.34 → close $56.03 -5.27; DGX×4 09:30 $235.85 → close $239.15 +13.20 | — |
 
 ## Not taken
 

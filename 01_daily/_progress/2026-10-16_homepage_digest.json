@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "workflow": "homepage_digest",
+  "date": "2026-10-16",
+  "run_id": "38872337889",
+  "model": "",
+  "started_at": "2026-10-16T04:17:34-04:00",
+  "updated_at": "2026-10-16T04:17:49-04:00",
+  "heartbeat_at": "2026-10-16T04:17:49-04:00",
+  "stages": [
+    {
+      "name": "morning",
+      "state": "ok",
+      "started_at": "2026-10-16T04:17:34-04:00",
+      "ended_at": "2026-10-16T04:17:49-04:00",
+      "heartbeat_at": "2026-10-16T04:17:34-04:00",
+      "done": 1,
+      "total": 1,
+      "model": "",
+      "error": ""
+    },
+    {
+      "name": "close",
+      "state": "pending",
+      "started_at": "",
+      "ended_at": "",
+      "heartbeat_at": "",
+      "done": 0,
+      "total": 1,
+      "model": "",
+      "error": ""
+    }
+  ]
+}

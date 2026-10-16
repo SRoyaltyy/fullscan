@@ -372,12 +372,14 @@ def assert_preopen_job(text: str, *, source: str = "preopen_all.yml") -> None:
     if not raw:
         raise AssertionError(f"{source}: job `preopen` has no runs-on")
 
-    ubuntu = as_labels(eval_runs_on(raw, event_name="push", runner=""))
-    if ubuntu != ["ubuntu-latest"]:
-        raise AssertionError(
-            f"{source}: preopen ubuntu branch resolved to {ubuntu}, "
-            "expected ['ubuntu-latest']"
-        )
+    # 2026-10-15: schedule/push go to ECS (only box with Grok).
+    for ev in ("push", "schedule"):
+        unattended = as_labels(eval_runs_on(raw, event_name=ev, runner=""))
+        if unattended != ECS_LABELS:
+            raise AssertionError(
+                f"{source}: preopen {ev} resolved to {unattended}, "
+                f"expected {ECS_LABELS}"
+            )
     ubuntu_dispatch = as_labels(
         eval_runs_on(raw, event_name="workflow_dispatch", runner="ubuntu")
     )
@@ -480,8 +482,11 @@ def test_good_fromjson_resolves_both_branches() -> None:
     assert eval_runs_on(
         good, event_name="workflow_dispatch", runner="ecs"
     ) == ECS_LABELS
+    # assert_preopen_job now requires schedule/push -> ECS (2026-10-15).
+    new = ("${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' "
+           "|| fromJSON('[\"self-hosted\",\"ecs\"]') }}")
     assert_preopen_job(
-        "jobs:\n  preopen:\n    runs-on: " + good + "\n",
+        "jobs:\n  preopen:\n    runs-on: " + new + "\n",
         source="good.yml",
     )
 
@@ -521,6 +526,26 @@ def test_preopen_all_job_resolves_ubuntu_and_ecs() -> None:
     # The live file must not still carry the #242 escape.
     assert r'[\"self-hosted\"' not in text
     assert "fromJSON('[\"self-hosted\",\"ecs\"]')" in text
+    # Mode 40: the morning button calls Grok. #608 set the default and the
+    # empty-input fallback to grok. deepseek remains a choice that skips
+    # OpenClaw; it is not the default.
+    assert "github.event.inputs.llm_backend || 'grok'" in text
+    assert "github.event.inputs.llm_backend || 'deepseek'" not in text
+    assert "github.event.inputs.llm_backend || 'auto'" not in text
+    backend = text.split("llm_backend:", 1)[1].split("with_book:", 1)[0]
+    assert 'default: "grok"' in backend
+    assert 'default: "deepseek"' not in backend
+    # Mode 43: push, schedule, and the button reach ECS unless ubuntu is
+    # explicit (assert_preopen_job).
+    runner = text.split("runner:", 1)[1].split("run_date:", 1)[0]
+    assert 'default: "ecs"' in runner
+    assert 'default: "ubuntu"' not in runner
+    # Mode 39: the 05:55 schedule lands on ECS and has no runner input.
+    # The in-job renew must run there. Only an explicit ubuntu dispatch skips it.
+    renew = text.split("Renew xAI if the token dies before this run ends", 1)[1]
+    renew = renew.split("- name: Pre-Open ALL", 1)[0]
+    assert "github.event.inputs.runner != 'ubuntu'" in renew
+    assert "github.event_name == 'workflow_dispatch' && github.event.inputs.runner == 'ecs'" not in renew
 
 
 def test_stock_book_all_fromjson_resolves() -> None:

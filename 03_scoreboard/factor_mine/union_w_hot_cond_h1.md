@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+18.72%** ($11,872) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 378 · skips 96 · realized $-9.27.
+Cash book **+18.18%** ($11,818) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 394 · skips 96 · realized $-9.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -537,6 +537,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `SMMT` | 99 | $15.29 | $2.29 | — | $1,662.09 | — | rank by w_hot_cond; rank w_hot_cond; list probable,yday_gainer,yday_mover; ret5=-10.3; leftover $1513.74 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-10-14 09:30 ET | **BUY** | `SHAK` | 21 | $70.75 | $2.05 | — | $174.28 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+10.0; leftover $1513.74 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $174.28 | ▼ close $11,872.43 vs 09:30 $12,120.40 (session -218.69) | 16:00 close · cash $174.28 · equity $11,872.43 vs 09:30 $12,120.40 (-247.97; session marks -218.69) · 8 name(s) marked open→close (per-name table). JLHL×318 09:30 $4.76 → close $4.60 -50.88; PINS×68 09:30 $22.23 → close $21.76 -31.96; ECO×15 09:30 $99.71 → close $95.66 -60.75; WLY×28 09:30 $52.29 → close $51.49 -22.40; TRU×22 09:30 $66.42 → close $66.94 +11.44; MOH×7 09:30 $210.15 → close $209.19 -6.72; SMMT×99 09:30 $15.29 → close $15.13 -15.84; SHAK×21 09:30 $70.75 → close $68.77 -41.58 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $174.28 | ▼ 09:30 equity $11,752.55 vs yday $11,872.43 (-119.88) | 09:30 open · cash $174.28 (unchanged overnight, no fees) · equity $11,752.55 vs prior close $11,872.43 (-119.88) · 8 name(s) re-marked at the open (per-name table). ECO×15 yday $95.66 → 09:30 $89.67 -89.85; JLHL×318 yday $4.60 → 09:30 $4.34 -82.68; MOH×7 yday $209.19 → 09:30 $210.39 +8.40; PINS×68 yday $21.76 → 09:30 $21.59 -11.22; SHAK×21 yday $68.77 → 09:30 $69.10 +6.93; SMMT×99 yday $15.13 → 09:30 $15.09 -3.96; TRU×22 yday $66.94 → 09:30 $68.55 +35.42; WLY×28 yday $51.49 → 09:30 $52.10 +17.08 | — |
+| 2026-10-15 09:30 ET | **SELL** | `ECO` | 15 | $89.67 | $2.06 | $-154.69 | $1,517.27 | ▼ -154.69 after sell → book $11,750.49; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `JLHL` | 318 | $4.34 | $4.17 | $-141.83 | $2,893.23 | ▼ -141.83 after sell → book $11,746.33; vs 09:30 mark -4.16 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `MOH` | 7 | $210.39 | $2.03 | $-2.36 | $4,363.93 | ▼ -2.36 after sell → book $11,744.30; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `PINS` | 68 | $21.59 | $2.22 | $-47.59 | $5,830.17 | ▼ -47.59 after sell → book $11,742.08; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `SHAK` | 21 | $69.10 | $2.07 | $-38.78 | $7,279.19 | ▼ -38.78 after sell → book $11,740.00; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `SMMT` | 99 | $15.09 | $2.32 | $-24.40 | $8,770.79 | ▼ -24.40 after sell → book $11,737.69; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `TRU` | 22 | $68.55 | $2.08 | $+42.73 | $10,276.81 | ▲ +42.73 after sell → book $11,735.61; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `WLY` | 28 | $52.10 | $2.10 | $-9.49 | $11,733.51 | ▼ -9.49 after sell → book $11,733.51; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **BUY** | `CAH` | 5 | $252.00 | $2.00 | — | $10,471.51 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+6.7; leftover $1466.69 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `NAUT` | 708 | $2.07 | $9.13 | — | $8,996.82 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+10.2; leftover $1466.69 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `DOCU` | 19 | $75.25 | $2.05 | — | $7,565.02 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+9.2; leftover $1466.69 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `COP` | 10 | $143.00 | $2.02 | — | $6,133.00 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+9.6; leftover $1466.69 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `RELX` | 38 | $37.98 | $2.10 | — | $4,687.47 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+7.0; leftover $1466.69 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `MDT` | 15 | $95.00 | $2.04 | — | $3,260.43 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+10.2; leftover $1466.69 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `LW` | 27 | $53.79 | $2.07 | — | $1,806.03 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+10.3; leftover $1466.69 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ACHC` | 46 | $31.67 | $2.13 | — | $347.08 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+8.3; leftover $1466.69 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $347.08 | ▲ close $11,818.31 vs 09:30 $11,752.55 (session +108.34) | 16:00 close · cash $347.08 · equity $11,818.31 vs 09:30 $11,752.55 (+65.76; session marks +108.34) · 8 name(s) marked open→close (per-name table). CAH×5 09:30 $252.00 → close $253.71 +8.55; NAUT×708 09:30 $2.07 → close $2.16 +63.72; DOCU×19 09:30 $75.25 → close $77.52 +43.13; COP×10 09:30 $143.00 → close $141.73 -12.70; RELX×38 09:30 $37.98 → close $38.42 +16.53; MDT×15 09:30 $95.00 → close $95.45 +6.75; LW×27 09:30 $53.79 → close $54.21 +11.34; ACHC×46 09:30 $31.67 → close $31.04 -28.98 | — |
 
 ## Not taken
 

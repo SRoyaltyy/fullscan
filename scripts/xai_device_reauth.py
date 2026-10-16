@@ -20,6 +20,7 @@ import json
 import os
 import re
 import signal
+import socket
 import subprocess
 import sys
 import time
@@ -35,8 +36,9 @@ OUT = ROOT / "01_daily" / "_xai_reauth.json"
 LOG = Path(os.environ.get("FULLSCAN_LOG", "/home/gha/fullscan-logs/xai_reauth.log"))
 PID = Path(os.environ.get("FULLSCAN_REAUTH_PID", "/home/gha/fullscan-logs/xai_reauth.pid"))
 DEVICE_URI = "https://accounts.x.ai/oauth2/device"
-WAIT_S = 12 * 60
+WAIT_S = 20 * 60  # < 30-min code life; expires_at below caps it
 PUSH = ROOT / "scripts" / "safe_git_push.sh"
+PUBLISH_TRIES = 5
 
 CODE_RE = re.compile(
     r"(?:user[_\s-]*code|enter(?:\s+the)?\s+code|code)\s*[:=]\s*"
@@ -183,10 +185,6 @@ def publish_contents(message: str) -> bool:
         preview = json.loads(OUT.read_text(encoding="utf-8")) if OUT.is_file() else {}
     except (OSError, json.JSONDecodeError):
         preview = {}
-    if preview.get("user_code") and not send_code_to_cyrus():
-        print("[reauth] not sending the device code to Cyrus — James auto-clicks Allow",
-              flush=True)
-        return False
     token = _github_token()
     if not token:
         print("[reauth] contents publish skipped: no GITHUB_TOKEN", flush=True)
@@ -211,12 +209,17 @@ def publish_contents(message: str) -> bool:
     if sha:
         payload["sha"] = sha
     status = _contents_put(url, headers, payload)
-    if status == 409:
+    # 409/422 = main moved under us (stale sha). Re-read the sha and retry.
+    tries = 1
+    while status in (0, 409, 422, 500, 502, 503) and tries < PUBLISH_TRIES:
+        time.sleep(min(2 * tries, 6))
+        tries += 1
         sha = _contents_sha(url, headers)
         if sha:
             payload["sha"] = sha
         else:
             payload.pop("sha", None)
+        print(f"[reauth] contents PUT retry {tries}/{PUBLISH_TRIES}", flush=True)
         status = _contents_put(url, headers, payload)
     if status not in (200, 201):
         print(
@@ -300,19 +303,86 @@ def existing_waiter() -> int | None:
     return pid if pid_alive(pid) else None
 
 
-def waiting_fresh(existing: dict) -> bool:
+
+def ensure_openclaw_auth_owned_by_gha() -> None:
+    """Forced reauth on ECS often runs as root with HOME=/home/gha. Chown the
+    auth store so `sudo -u gha openclaw models auth list` can read expiry.
+    """
+    if os.geteuid() != 0:
+        return
+    home = os.environ.get("HOME") or "/home/gha"
+    root = Path(home) / ".openclaw"
+    if not root.is_dir():
+        return
+    user = os.environ.get("FULLSCAN_USER") or "gha"
+    try:
+        import pwd
+        pw = pwd.getpwnam(user)
+        uid, gid = pw.pw_uid, pw.pw_gid
+    except KeyError:
+        return
+    names = {"auth-profiles.json", "oauth.json", "auth.json", "auth-state.json",
+             "openclaw-agent.sqlite"}
+    fixed = 0
+    for path in root.rglob("*"):
+        if not path.is_file():
+            continue
+        if path.name not in names and not (
+            path.suffix in (".json", ".sqlite") and path.name != "openclaw.json"
+        ):
+            continue
+        if path.name == "openclaw.json":
+            continue
+        try:
+            st = path.stat()
+            if st.st_uid == uid and st.st_gid == gid:
+                continue
+            os.chown(path, uid, gid)
+            if st.st_mode & 0o600 != 0o600:
+                path.chmod((st.st_mode & 0o777) | 0o600)
+            fixed += 1
+        except OSError:
+            continue
+    if fixed:
+        print(f"[reauth] chowned {fixed} openclaw auth file(s) to {user}", flush=True)
+
+
+def hostname() -> str:
+    try:
+        return socket.gethostname()
+    except OSError:
+        return ""
+
+
+def waiting_live(existing: dict) -> bool:
+    """A 'waiting' file counts only if its waiter is alive HERE and the code
+    has not expired. GitHub reaps the in-process waiter when its job ends, so
+    a leftover waiting file (2026-10-15 run 38821015203) must not block a
+    fresh login. Missing waiter_pid/host/expires_at => not live.
+    """
     if existing.get("status") != "waiting" or not existing.get("user_code"):
         return False
     exp = existing.get("expires_at")
     if not exp:
-        return True
+        return False
     try:
         when = datetime.fromisoformat(str(exp).replace("Z", "+00:00"))
-        if when.tzinfo is None:
-            when = when.replace(tzinfo=ET)
-        return when > datetime.now(ET)
     except ValueError:
-        return True
+        return False
+    if when.tzinfo is None:
+        when = when.replace(tzinfo=ET)
+    if when <= datetime.now(ET):
+        return False
+    if not existing.get("host") or existing.get("host") != hostname():
+        return False
+    try:
+        wpid = int(existing.get("waiter_pid") or 0)
+    except (TypeError, ValueError):
+        return False
+    return pid_alive(wpid)
+
+
+waiting_fresh = waiting_live  # old name
 
 
 def spawn_daemon(force: bool) -> int:
@@ -438,7 +508,7 @@ def daemon(force: bool) -> int:
     PID.parent.mkdir(parents=True, exist_ok=True)
     PID.write_text(str(os.getpid()), encoding="utf-8")
     existing = load()
-    if not force and waiting_fresh(existing) and existing_waiter():
+    if not force and waiting_live(existing):
         print("[reauth] waiter already running", flush=True)
         return 0
     print("[reauth] starting openclaw device login", flush=True)
@@ -476,7 +546,7 @@ def daemon(force: bool) -> int:
         except OSError:
             pass
         return 1
-    expires = (datetime.now(ET) + timedelta(minutes=14)).isoformat()
+    expires = (datetime.now(ET) + timedelta(minutes=29)).isoformat()
     dump({
         "status": "waiting",
         "oauth": "FAIL",
@@ -487,20 +557,22 @@ def daemon(force: bool) -> int:
         "expires_at": expires,
         "source": "xai_device_reauth",
         "pid": pid,
+        "waiter_pid": os.getpid(),
+        "host": hostname(),
     })
-    # The URL stays in the local JSON and in this log. James auto-clicks
-    # Allow. Do not Contents-API publish the user_code for Cyrus's phone.
     print(f"[reauth] device url for James: {complete_uri(code, uri)}", flush=True)
-    if send_code_to_cyrus():
-        publish_contents(f"chore: xAI device code {code}")
-    else:
-        print("[reauth] not sending the device code to Cyrus", flush=True)
+    # Land the code on main BEFORE wait_pid so James's auto-click can see it
+    # (#595). #604 gated this behind XAI_REAUTH_SEND_CODE_TO_CYRUS, which
+    # left main showing a stale code for the whole 12-minute wait.
+    if not publish_contents(f"chore: xAI device code {code}"):
+        print("[reauth] WARN: waiting code not on main", flush=True)
     rc = wait_pid(pid, WAIT_S)
     try:
         os.close(fd)
     except OSError:
         pass
     if rc == 0:
+        ensure_openclaw_auth_owned_by_gha()
         dump({
             "status": "ok",
             "oauth": "OK",
@@ -530,11 +602,14 @@ def daemon(force: bool) -> int:
 
 def check(force: bool) -> int:
     existing = load()
-    if waiting_fresh(existing):
-        print("[reauth] already waiting — not starting another", flush=True)
+    if waiting_live(existing):
+        print("[reauth] already waiting (live waiter) — not starting another", flush=True)
         if force:
             return spawn_daemon(True)
         return 0
+    if existing.get("status") == "waiting":
+        print("[reauth] stale waiting file (waiter dead/expired/other host) — starting fresh",
+              flush=True)
     waiter = existing_waiter()
     if waiter:
         print(f"[reauth] daemon {waiter} still alive", flush=True)

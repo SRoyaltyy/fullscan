@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 neg catalyst + weakness + failed recovery
 
-Cash book **-4.94%** ($9,506) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 230 · skips 270 · realized $-967.53.
+Cash book **+6.38%** ($10,638) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 232 · skips 270 · realized $-967.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -388,6 +388,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $19,945.22 | ▼ 09:30 equity $3,168.16 vs yday $10,867.96 (-7,699.80) | 09:30 open · cash $19,945.22 (unchanged overnight, no fees) · equity $3,168.16 vs prior close $10,867.96 (-7699.80) · 2 name(s) re-marked at the open (per-name table). AEHL×499 yday $8.55 → 09:30 $24.20 -7809.35; EQPT×313 yday $15.37 → 09:30 $15.02 +109.55 | — |
 | 2026-10-14 09:30 ET | **COVER** | `EQPT` | 313 | $15.02 | $4.04 | $+238.97 | $15,239.92 | ▲ +238.97 after sell → book $3,164.12; vs 09:30 mark -4.04 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,239.92 | ▲ close $9,506.41 vs 09:30 $3,168.16 (session +6,342.29) | 16:00 close · cash $15,239.92 · equity $9,506.41 vs 09:30 $3,168.16 (+6338.25; session marks +6342.29) · 1 name(s) marked open→close (per-name table). AEHL×499 09:30 $24.20 → close $11.49 +6342.29 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,239.92 | ▲ 09:30 equity $10,733.95 vs yday $9,506.41 (+1,227.54) | 09:30 open · cash $15,239.92 (unchanged overnight, no fees) · equity $10,733.95 vs prior close $9,506.41 (+1227.54) · 1 name(s) re-marked at the open (per-name table). AEHL×499 yday $11.49 → 09:30 $9.03 +1227.54 | — |
+| 2026-10-15 09:30 ET | **COVER** | `AEHL` | 499 | $9.03 | $6.44 | $+580.67 | $10,727.51 | ▲ +580.67 after sell → book $10,727.51; vs 09:30 mark -6.44 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SHORT** | `AA` | 134 | $39.77 | $2.60 | — | $16,054.09 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list overnight; ret5=-5.6; leftover $5363.76 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,054.09 | ▼ close $10,637.81 vs 09:30 $10,733.95 (session -87.10) | 16:00 close · cash $16,054.09 · equity $10,637.81 vs 09:30 $10,733.95 (-96.14; session marks -87.10) · 1 name(s) marked open→close (per-name table). AA×134 09:30 $39.77 → close $40.42 -87.10 | — |
 
 ## Not taken
 

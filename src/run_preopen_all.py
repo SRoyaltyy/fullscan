@@ -255,6 +255,66 @@ def _land(date: str, key: str, title: str = "") -> None:
         print(f"[preopen-all] WARN: land {key} failed: {e}", flush=True)
 
 
+_TRACKER = None
+
+
+def _progress_begin(date: str) -> None:
+    """Open the live progress file. A failure here must not stop the packet."""
+    global _TRACKER
+    try:
+        from .workflow_progress import ProgressWriter, StageBoard
+        from .workflow_stages import (
+            PREOPEN_GROUPS, maybe_seal, stage_names,
+        )
+        names = stage_names("preopen")
+        model = (os.environ.get("LLM_MODEL_OVERRIDE")
+                 or os.environ.get("LLM_BACKEND") or "")
+        writer = ProgressWriter("preopen", date, names, model=model, heartbeat=True)
+        writer.begin(reset=True, heartbeat=True)
+
+        def _seal(stage: str) -> None:
+            maybe_seal("preopen", stage, date)
+
+        _TRACKER = StageBoard(writer, PREOPEN_GROUPS, seal_fn=_seal)
+    except Exception as exc:  # noqa: BLE001
+        print(f"[preopen-all] WARN: progress begin failed: {exc}", flush=True)
+        _TRACKER = None
+
+
+def _progress_end() -> None:
+    global _TRACKER
+    tracker = _TRACKER
+    _TRACKER = None
+    if tracker is None:
+        return
+    try:
+        tracker.close_pending(keep={"deploy"})
+        tracker.writer.finish()
+    except Exception as exc:  # noqa: BLE001
+        print(f"[preopen-all] WARN: progress end failed: {exc}", flush=True)
+
+
+def _note(key: str, status: str, error: str = "") -> None:
+    tracker = _TRACKER
+    if tracker is None or key not in tracker.key_stage:
+        return
+    try:
+        tracker.on_key(key, status, error=error)
+    except Exception as exc:  # noqa: BLE001
+        print(f"[preopen-all] WARN: progress {key} {status}: {exc}", flush=True)
+
+
+def _note_stage(stage: str, status: str, error: str = "",
+                done: int | None = None, total: int | None = None) -> None:
+    tracker = _TRACKER
+    if tracker is None:
+        return
+    try:
+        tracker.on_stage(stage, status, error=error, done=done, total=total)
+    except Exception as exc:  # noqa: BLE001
+        print(f"[preopen-all] WARN: progress {stage} {status}: {exc}", flush=True)
+
+
 def _predict_trace_is_grok(date: str) -> bool:
     path = _p("01_daily", "general", f"{date}_predict_trace.md")
     try:
@@ -326,8 +386,12 @@ def _heal_general_predict(date: str, cmd: list[str], timeout_s: int) -> None:
 
     try:
         def _trace() -> bool:
+            # auto on ECS still has to come back as Grok. deepseek, and
+            # ubuntu after the loopback URL is unset, may keep a free-model
+            # essay.
             if (os.environ.get("LLM_BACKEND") != "grok"
-                    and os.environ.get("GROK_ONLY") != "1"):
+                    and os.environ.get("GROK_ONLY") != "1"
+                    and not _gateway_blocks_essay_skip()):
                 return True
             return _predict_trace_is_grok(date)
 
@@ -340,6 +404,20 @@ def _heal_general_predict(date: str, cmd: list[str], timeout_s: int) -> None:
     if res["ok"] and res["retries"]:
         snapshot_persist(date)
         _land(date, "general_predict", "General market predict (Grok heal)")
+
+
+def _gateway_blocks_essay_skip() -> bool:
+    """An empty Zhipu/TokenHub balance must not cancel Grok essays.
+
+    ``deepseek`` is an explicit skip-Grok choice, so a 402 still skips.
+    ``auto`` and ``grok`` call Grok when OPENCLAW_GATEWAY_URL is set.
+    Ubuntu unsets a loopback URL before this process starts, so a 402
+    there still skips the packet.
+    """
+    backend = (os.environ.get("LLM_BACKEND") or "auto").strip().lower()
+    if backend == "deepseek":
+        return False
+    return bool((os.environ.get("OPENCLAW_GATEWAY_URL") or "").strip())
 
 
 def _deepseek_credits_ok() -> bool:
@@ -618,6 +696,17 @@ def catalyst_attempt_fields(date: str) -> dict:
 def run(date: str | None = None, force: bool = False,
         with_book: bool = True, llm_backend: str | None = None,
         bypass_cutoff: bool = False, skip_sectors: bool = False) -> None:
+    _progress_begin(date or _today())
+    try:
+        _run_preopen_body(date, force, with_book, llm_backend,
+                          bypass_cutoff, skip_sectors)
+    finally:
+        _progress_end()
+
+
+def _run_preopen_body(date: str | None = None, force: bool = False,
+                      with_book: bool = True, llm_backend: str | None = None,
+                      bypass_cutoff: bool = False, skip_sectors: bool = False) -> None:
     date = date or _today()
     if bypass_cutoff:
         os.environ["PREOPEN_BYPASS_CUTOFF"] = "1"
@@ -686,24 +775,31 @@ def run(date: str | None = None, force: bool = False,
                 "returncode": 0, "skipped": True, "status": "DEGRADED",
                 "detail": "skipped: gateway unreachable on this runner",
             })
+            _note(key, "skipped", "gateway unreachable on this runner")
             return 0
         if ((not force) and (not bypass_cutoff) and key in llm_steps
                 and preopen.past_predict_cutoff()):
             print(f"[preopen-all] skip {title} (past 09:25 ET — book still runs)")
             attempts.append({"key": key, "title": title, "cmd": cmd,
                              "returncode": 0, "skipped": True})
+            _note(key, "skipped", "past 09:25 ET")
             return 0
         if not force and _packet_step_done(key, date):
             print(f"[preopen-all] skip {title} (already quality-ok)")
             attempts.append({"key": key, "title": title, "cmd": cmd,
                              "returncode": 0, "skipped": True})
+            _note(key, "ok")
             return 0
         print(f"\n[preopen-all] → {title}")
+        _note(key, "running")
         code = _run(cmd, timeout_s=timeout_s)
         attempts.append({"key": key, "title": title, "cmd": cmd,
                          "returncode": code})
         if code != 0:
             print(f"[preopen-all] WARN: {title} exited {code}")
+            _note(key, "failed", f"exit {code}")
+        else:
+            _note(key, "ok")
         snapshot_persist(date)
         # Catalyst FAIL/DEGRADED still lands for audit (ok=False on the board).
         catalyst_land = (
@@ -719,6 +815,7 @@ def run(date: str | None = None, force: bool = False,
 
     # Weather / join / AB have no LLM clock. Run them before essays so a
     # slow Grok morning cannot leave the ranker with 0/4 book outputs.
+    _note_stage("prep", "running")
     if force or not _exists_gt("data", "universe", f"{date}_membership.csv",
                                min_bytes=50_000):
         print("[preopen-all] → Universe labels (segments)")
@@ -753,11 +850,19 @@ def run(date: str | None = None, force: bool = False,
         _run([py, "-m", "src.ab_enrich", "--date", date], timeout_s=180)
         snapshot_persist(date)
         _land(date, "ab", "AB checklist")
+    _note_stage("prep", "ok")
 
-    if not skip_writes and not skip_essays and not _deepseek_credits_ok():
-        print("[preopen-all] skip LLM essays (DeepSeek credits); "
-              "parse still runs if missing")
-        skip_essays = True
+    if not skip_writes and not skip_essays:
+        # Do not call the preflight when the gateway is set. A 402/429
+        # engages the TokenHub fallback inside that ping, and the free
+        # primary is then skipped for the rest of the morning.
+        if _gateway_blocks_essay_skip():
+            print("[preopen-all] gateway is set — not running the "
+                  "DeepSeek preflight; Grok essays still run", flush=True)
+        elif not _deepseek_credits_ok():
+            print("[preopen-all] skip LLM essays (DeepSeek credits); "
+                  "parse still runs if missing")
+            skip_essays = True
 
     if not skip_writes:
         # Parse is required on the day-board and does not need DeepSeek —
@@ -811,6 +916,7 @@ def run(date: str | None = None, force: bool = False,
                 if budget is None:
                     print(f"[preopen-all] skip {title} — step deadline "
                           "too close for another essay")
+                    _note(key, "skipped", "step deadline")
                     return
                 step(key, title, cmd, timeout_s=budget)
 
@@ -841,6 +947,7 @@ def run(date: str | None = None, force: bool = False,
             if sec_s is None:
                 print("[preopen-all] skip sector predict — step deadline "
                       "too close")
+                _note("sector_predict", "skipped", "step deadline")
             else:
                 step("sector_predict", "Per-sector predict (all 11)",
                      [py, "-m", "src.run_sector_predict", "--date", date, *fa],
@@ -890,6 +997,14 @@ def run(date: str | None = None, force: bool = False,
                 os.environ.pop("OPENCLAW_TIMEOUT", None)
             else:
                 os.environ["OPENCLAW_TIMEOUT"] = prev_llm_to
+    else:
+        why = "packet already on disk" if skip_writes else "essays skipped"
+        for key in ("events", "events_catcher", "news_actions", "news_judge",
+                    "general_predict", "sector_predict", "map_heat_research",
+                    "catalyst"):
+            _note(key, "skipped", why)
+        if skip_writes:
+            _note("news_parse", "skipped", why)
 
     # A GLM essay that passed mechanical QC used to freeze the morning:
     # skip_writes skipped the heal, so 05:55 never asked Grok. Heal only
@@ -898,7 +1013,8 @@ def run(date: str | None = None, force: bool = False,
             and date == _today()):
         grok_lane = (os.environ.get("GROK_ONLY") == "1"
                      or (os.environ.get("LLM_BACKEND") or "").strip().lower()
-                     == "grok")
+                     == "grok"
+                     or _gateway_blocks_essay_skip())
         if grok_lane and not _predict_trace_is_grok(date):
             from . import predict_grok_heal as _pgh
             if _pgh.before_cutoff():
@@ -930,6 +1046,7 @@ def run(date: str | None = None, force: bool = False,
 
     book_ok = True
     if with_book:
+        _note_stage("book_sleeve", "running")
         from . import run_stock_book_all, skip_if_good
         already = (not force) and skip_if_good.check_stock_book_all(date)
         # ubuntu land_book may have written green.json before essays.
@@ -999,8 +1116,13 @@ def run(date: str | None = None, force: bool = False,
             _run([py, "-m", "src.paper_trade_append", "--date", date, "--top", "10"],
                  timeout_s=paper_s)
         _land(date, "paper", "Paper dashboard")
+        if book_ok:
+            _note_stage("book_sleeve", "ok")
+        else:
+            _note_stage("book_sleeve", "failed", "stock book still missing")
     else:
         print("[preopen-all] --no-book: leaving stock book to a later click")
+        _note_stage("book_sleeve", "skipped", "--no-book")
 
     if not skip_writes and not skip_essays:
         from . import catalyst_daily
@@ -1012,6 +1134,7 @@ def run(date: str | None = None, force: bool = False,
 
     # Always rewrite QC from files on disk. A 05:40 FAIL must not outlive
     # a late news_parse (or any other required core file) that landed after.
+    _note_stage("qc", "running")
     qc_path = output_qc.write_preopen_report(date)
     report = output_qc.preopen_report(date)
     print("")
@@ -1215,6 +1338,7 @@ def run(date: str | None = None, force: bool = False,
     print(f"[preopen-all] wrote {md_path}")
     snapshot_persist(date)
     _land(date, "status", "Pre-open status packet")
+    _note_stage("qc", "ok")
 
     degraded = bool(
         missing_required or not report.get("all_ok") or not grok.get("ok")

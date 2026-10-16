@@ -448,7 +448,10 @@ def stock_book_strats(date: str) -> list[dict]:
 
 
 def flatten_strat(date: str) -> dict:
-    card = _load_json(SLEEVE) or {}
+    # Morning card lives in today_live.json during the 03:00-09:40 ET
+    # freeze (src/sleeve_live_card.py); falls back to today.json.
+    live = SLEEVE.with_name("today_live.json")
+    card = _load_json(live if live.is_file() else SLEEVE) or {}
     buys, sells = [], []
     for t in card.get("tickets") or card.get("buys") or []:
         if isinstance(t, dict) and str(t.get("side") or "").upper() in ("SELL", "COVER"):

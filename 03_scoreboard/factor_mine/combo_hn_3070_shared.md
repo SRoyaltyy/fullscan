@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/union_news_g_h1 w=0.3,0.7 net=priority
 
-Cash book **-13.59%** ($8,641) · signal-only (no cash/fees) was —. Starts YES **28/30**. Fills 424 · skips 123 · realized $+818.31.
+Cash book **-14.77%** ($8,523) · signal-only (no cash/fees) was —. Starts YES **28/30**. Fills 435 · skips 123 · realized $+818.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $1,092.25.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $72.58.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -585,6 +585,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `MNSO` | 75 | $10.37 | $2.21 | — | $1,874.48 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+11.3; combo leftover $782.84; owner union_news_g_h1 | join🟢 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `SG` | 78 | $10.00 | $2.22 | — | $1,092.25 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+9.7; combo leftover $782.84; owner union_news_g_h1 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,092.25 | ▼ close $8,641.39 vs 09:30 $8,820.57 (session -150.13) | 16:00 close · cash $1,092.25 · equity $8,641.39 vs 09:30 $8,820.57 (-179.18; session marks -150.13) · 11 name(s) marked open→close (per-name table). JLHL×138 09:30 $4.76 → close $4.60 -22.08; ODD×29 09:30 $22.22 → close $21.63 -17.11; ECO×6 09:30 $99.71 → close $95.66 -24.30; PINS×29 09:30 $22.23 → close $21.76 -13.63; NVTS×78 09:30 $9.96 → close $9.36 -47.58; ITW×2 09:30 $265.92 → close $269.47 +7.10; AMX×36 09:30 $21.62 → close $21.84 +7.92; TBBB×13 09:30 $56.03 → close $56.36 +4.29; GLND×189 09:30 $4.13 → close $3.90 -44.41; MNSO×75 09:30 $10.37 → close $10.22 -11.25; SG×78 09:30 $10.00 → close $10.14 +10.92 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,092.25 | ▼ 09:30 equity $8,426.31 vs yday $8,641.39 (-215.08) | 09:30 open · cash $1,092.25 (unchanged overnight, no fees) · equity $8,426.31 vs prior close $8,641.39 (-215.08) | — |
+| 2026-10-15 09:30 ET | **SELL** | `ECO` | 6 | $89.67 | $2.03 | $-64.28 | $1,628.24 | ▼ -64.28 after sell → book $8,424.28; vs 09:30 mark -2.02 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `GLND` | 189 | $3.16 | $2.60 | $-189.43 | $2,222.88 | ▼ -189.43 after sell → book $8,421.68; vs 09:30 mark -2.60 | union_news_g_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `JLHL` | 138 | $4.34 | $2.44 | $-62.80 | $2,819.37 | ▼ -62.80 after sell → book $8,419.24; vs 09:30 mark -2.44 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `ODD` | 29 | $21.95 | $2.10 | $-12.00 | $3,453.82 | ▼ -12.00 after sell → book $8,417.14; vs 09:30 mark -2.10 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `PINS` | 29 | $21.59 | $2.10 | $-22.59 | $4,077.98 | ▼ -22.59 after sell → book $8,415.05; vs 09:30 mark -2.09 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **BUY** | `LW` | 5 | $53.79 | $2.00 | — | $3,807.02 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+10.3; combo leftover $305.85; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ETSY` | 3 | $84.47 | $2.00 | — | $3,551.61 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+16.0; combo leftover $305.85; owner union_hot_n4_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `BLMN` | 32 | $9.48 | $2.09 | — | $3,246.17 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+14.4; combo leftover $305.85; owner union_hot_n4_h1 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `CHWY` | 14 | $21.00 | $2.03 | — | $2,950.14 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+14.3; combo leftover $305.85; owner union_hot_n4_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `COP` | 10 | $143.00 | $2.02 | — | $1,518.12 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+9.6; combo leftover $1475.07; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `RELX` | 38 | $37.98 | $2.10 | — | $72.58 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+7.0; combo leftover $1475.07; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $72.58 | ▲ close $8,523.02 vs 09:30 $8,426.31 (session +120.22) | 16:00 close · cash $72.58 · equity $8,523.02 vs 09:30 $8,426.31 (+96.71; session marks +120.22) · 12 name(s) marked open→close (per-name table). AMX×36 09:30 $21.92 → close $22.43 +18.36; ITW×2 09:30 $272.49 → close $271.19 -2.60; MNSO×75 09:30 $10.41 → close $10.58 +12.75; NVTS×78 09:30 $8.89 → close $9.23 +26.52; SG×78 09:30 $10.21 → close $10.60 +30.42; TBBB×13 09:30 $56.34 → close $56.03 -4.03; LW×5 09:30 $53.79 → close $54.21 +2.10; ETSY×3 09:30 $84.47 → close $89.18 +14.13; BLMN×32 09:30 $9.48 → close $9.93 +14.40; CHWY×14 09:30 $21.00 → close $21.31 +4.34; COP×10 09:30 $143.00 → close $141.73 -12.70; RELX×38 09:30 $37.98 → close $38.42 +16.53 | — |
 
 ## Not taken
 
