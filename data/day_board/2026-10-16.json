@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T13:32:58.865435-04:00",
+  "generated_at": "2026-10-16T13:33:05.010193-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1088,31 +1088,6 @@
     }
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-10-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-16T06:49:56.748840-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-10-16_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9278,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-16_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5010,
-          "preview": "# Weather report \u2014 2026-10-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -4382,6 +4357,122 @@
         }
       ],
       "preview": "1d BUY CDNA, VEEV, BLFS, ILMN, PRCH, AVPT, OLLI, EZPW \u00b7 SELL VSAT, NEOV, SOC, TDTH, VNET, AUR, BIDU, RC \u00b7 green 112 \u00b7 WAY, CORT, INCY, AMN, EXEL, ADMA, PCRX, CON, SIBN, BIIB \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-16 BUY CDNA, VEEV, BLFS, ILMN, PRCH, AVPT, OLLI, EZPW \u00b7 SELL VSAT, NEOV, SOC, TDTH, VNET, AUR, BIDU, RC \u00b7 2026-10-16 BUY CDNA, VEEV, BLFS, ILMN, PRCH, AVPT, OLLI, EZPW \u00b7 SELL VSAT, NEOV, SOC, TDTH, VNET, AUR, BIDU, RC \u00b7 # Stock book \u2014 2026-10-16\n_Generated 2026-10-16T13:32:31.982694-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T13:33:04.067756-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 22304,
+          "preview": "2026-10-16 BUY CDNA, VEEV, BLFS, ILMN, PRCH, AVPT, OLLI, EZPW \u00b7 SELL VSAT, NEOV, SOC, TDTH, VNET, AUR, BIDU, RC"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1007,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-16.json",
+          "ok": true,
+          "reason": "",
+          "size": 296537,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-16_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 221546,
+          "preview": "2026-10-16 BUY CDNA, VEEV, BLFS, ILMN, PRCH, AVPT, OLLI, EZPW \u00b7 SELL VSAT, NEOV, SOC, TDTH, VNET, AUR, BIDU, RC"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 711094,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-16_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 711094,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-10-16.json",
+          "ok": true,
+          "reason": "",
+          "size": 166725,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 981896,
+          "preview": "2026-10-16 BUY MQ, PDFS, IT, TOST, PRCH, VEEV, ARQT, ETON \u00b7 SELL ROIV, SOC, NEOV, GH, IFRX, APA, BIDU, PYXS"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 711094,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 221546,
+          "preview": "2026-10-16 BUY CDNA, VEEV, BLFS, ILMN, PRCH, AVPT, OLLI, EZPW \u00b7 SELL VSAT, NEOV, SOC, TDTH, VNET, AUR, BIDU, RC"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 711094,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 711094,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 981896,
+          "preview": "2026-10-16 BUY MQ, PDFS, IT, TOST, PRCH, VEEV, ARQT, ETON \u00b7 SELL ROIV, SOC, NEOV, GH, IFRX, APA, BIDU, PYXS"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1462,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1462,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-16 BUY CDNA, VEEV, BLFS, ILMN, PRCH, AVPT, OLLI, EZPW \u00b7 SELL VSAT, NEOV, SOC, TDTH, VNET, AUR, BIDU, RC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-16 BUY CDNA, VEEV, BLFS, ILMN, PRCH, AVPT, OLLI, EZPW \u00b7 SELL VSAT, NEOV, SOC, TDTH, VNET, AUR, BIDU, RC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-16 BUY MQ, PDFS, IT, TOST, PRCH, VEEV, ARQT, ETON \u00b7 SELL ROIV, SOC, NEOV, GH, IFRX, APA, BIDU, PYXS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-16 BUY CDNA, VEEV, BLFS, ILMN, PRCH, AVPT, OLLI, EZPW \u00b7 SELL VSAT, NEOV, SOC, TDTH, VNET, AUR, BIDU, RC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_leg"
     }
   ],
   "href": {
@@ -5507,6 +5598,14 @@
       "path": "data/stock_book/2026-10-16_suggestions.json",
       "at": "2026-10-16T13:32:59-04:00",
       "commit_msg": "auto: land stock_book [2026-10-16]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38939869661",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-16.json",
+      "at": "2026-10-16T13:33:05-04:00",
+      "commit_msg": "auto: land live_boards [2026-10-16]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "38939869661",
       "manifest": "research/input_freeze/2026-10-16/manifest.json"
