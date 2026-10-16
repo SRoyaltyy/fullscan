@@ -1,6 +1,6 @@
 {
  "date": "2026-10-16",
- "generated_at": "2026-10-16T12:06:18.024404-04:00",
+ "generated_at": "2026-10-16T13:32:05.146425-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -21,19 +21,19 @@
   "yields_source": "fred_dgs10",
   "dgs10_delta_1d": -0.02,
   "dgs10_current": 5.19,
-  "dollar": "soft",
+  "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.18,
-  "vix_ratio": 0.892,
-  "vix_spot": 16.56,
-  "vix_delta_1d": 0.1,
+  "dxy_pct_1d": -0.1,
+  "vix_ratio": 1.02,
+  "vix_spot": 21.7,
+  "vix_delta_1d": 5.24,
   "vix_ratio_source": "vix/vix3m",
-  "vix": "falling",
-  "oil_pct_1d": -1.53,
-  "oil": "falling",
+  "vix": "spiking",
+  "oil_pct_1d": 0.43,
+  "oil": "flat",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": -0.527,
+  "regime_corr": -0.627,
   "sectors": {
    "Basic Materials": {
     "score": -4.97,
@@ -179,14 +179,14 @@
   },
   "size": {
    "micro": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "risk-on with soft dollar — small-cap tape works; risk-on, dollar soft [general predict + factors]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-on, dollar flat [general predict + factors]"
    },
    "small": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "risk-on with soft dollar — small-cap tape works; risk-on, dollar soft [general predict + factors]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-on, dollar flat [general predict + factors]"
    },
    "large": {
     "stance": "neutral",
@@ -221,9 +221,9 @@
     "why": "risk-on — mega leads less in broad rallies [general predict]"
    },
    "rut": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "risk-on with soft dollar — small-cap tape works; risk-on, dollar soft [general predict + factors]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-on, dollar flat [general predict + factors]"
    },
    "none": {
     "stance": "neutral",
@@ -245,14 +245,14 @@
   },
   "beta": {
    "high": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "risk-on, VIX falling — high beta outperforms [general + channel1]"
+    "stance": "hostile",
+    "confidence": "high",
+    "why": "VIX spiking — high beta is the exit door [channel1 + general]"
    },
    "low": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "risk-on — low beta lags rallies"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "defensive ballast bid in stress [general + channel1]"
    },
    "mid": {
     "stance": "neutral",
@@ -284,14 +284,14 @@
   },
   "vol": {
    "high": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "calm tape — vol regime not decisive [general + channel1]"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "stress market — high-vol names de-rate fast [general + channel1]"
    },
    "low": {
-    "stance": "neutral",
+    "stance": "favorable",
     "confidence": "low",
-    "why": "calm tape"
+    "why": "low-vol preferred in stress"
    },
    "mid": {
     "stance": "neutral",
