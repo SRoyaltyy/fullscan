@@ -1,0 +1,64 @@
+name: ECS git repair (manual)
+# 2026-10-16: every git fetch on ecs-openclaw froze from 06:48 ET after jobs
+# were killed mid-fetch. Manual only. No checkout (that is what hangs).
+# Kills stray git processes, removes git lock files in both checkouts,
+# probes a bounded fetch, and reports Webull env presence as set/empty only.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ecs-git-repair
+  cancel-in-progress: false
+jobs:
+  repair:
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 10
+    steps:
+      - name: Repair and report
+        shell: bash
+        run: |
+          set -uo pipefail
+          SUM="${GITHUB_STEP_SUMMARY:-/dev/null}"
+          say() { echo "$*"; echo "$*" >> "$SUM"; }
+          say "## ECS git repair $(TZ=America/New_York date '+%F %T ET')"
+          say "### Stray git processes (before)"
+          ps -eo pid,etimes,user,args --no-headers | awk '$4 ~ /(^|\/)git(-remote-https)?$/ || $4 ~ /git-remote-https/ {print}' | tee -a "$SUM" || true
+          # Kill git processes older than 120s (never this job's own shell).
+          for pid in $(ps -eo pid,etimes,args --no-headers | awk '($3 ~ /(^|\/)git$/ || $3 ~ /git-remote-https/) && $2 > 120 {print $1}'); do
+            say "kill git pid $pid"; kill "$pid" 2>/dev/null || sudo -n kill "$pid" 2>/dev/null || say "  could not kill $pid"
+          done
+          sleep 2
+          for pid in $(ps -eo pid,etimes,args --no-headers | awk '($3 ~ /(^|\/)git$/ || $3 ~ /git-remote-https/) && $2 > 120 {print $1}'); do
+            say "kill -9 git pid $pid"; kill -9 "$pid" 2>/dev/null || sudo -n kill -9 "$pid" 2>/dev/null || true
+          done
+          for R in /home/gha/actions-runner/_work/fullscan/fullscan /home/gha/fullscan; do
+            say "### $R"
+            if [ ! -d "$R/.git" ]; then say "no .git"; continue; fi
+            LOCKS=$(find "$R/.git" -maxdepth 4 -name '*.lock' 2>/dev/null)
+            if [ -n "$LOCKS" ]; then
+              say "removing locks:"; echo "$LOCKS" | tee -a "$SUM"
+              echo "$LOCKS" | while read -r f; do rm -f "$f" 2>/dev/null || sudo -n rm -f "$f" || say "  could not remove $f"; done
+            else
+              say "no lock files"
+            fi
+            say "shallow: $( [ -f "$R/.git/shallow" ] && echo yes || echo no )"
+            S=$(date +%s)
+            timeout 90 git -C "$R" -c safe.directory="$R" fetch -q --depth 1 origin main > /tmp/repair_fetch.log 2>&1
+            RC=$?
+            tail -3 /tmp/repair_fetch.log | tee -a "$SUM"
+            say "fetch probe rc=$RC in $(( $(date +%s) - S ))s (124 = still hangs)"
+          done
+          say "### Webull env presence (set/empty only; values never printed)"
+          for F in /home/gha/.fullscan.env /home/gha/.fullscan-paper.env; do
+            if [ ! -r "$F" ] && ! sudo -n test -r "$F" 2>/dev/null; then say "$F: missing/unreadable"; continue; fi
+            for K in WEBULL_APP_KEY WEBULL_APP_SECRET WEBULL_ACCOUNT_ID; do
+              V=$( (cat "$F" 2>/dev/null || sudo -n cat "$F") | grep -E "^(export )?$K=" | tail -1 | cut -d= -f2- | tr -d "\"' ")
+              if [ -n "$V" ]; then say "$F $K: set"; else say "$F $K: empty"; fi
+              unset V
+            done
+          done
+          say "token files (names only):"
+          ls -1d /home/gha/.webull* /home/gha/*token* /home/gha/.config/webull* 2>/dev/null | tee -a "$SUM" || say "none found"
+          say "### Runner service"
+          systemctl list-units --no-pager 'actions.runner*' 2>/dev/null | head -5 | tee -a "$SUM" || true
