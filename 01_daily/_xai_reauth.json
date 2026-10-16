@@ -1,11 +1,13 @@
 {
-  "status": "ok",
-  "oauth": "OK",
-  "pong_ok": null,
-  "reason": "device login completed",
+  "status": "expiring",
+  "oauth": "WARN",
+  "pong_ok": false,
+  "reason": "could not parse openclaw models status --check | Command '['openclaw', 'models', 'status', '--check']' timed out after 20 seconds",
   "user_code": null,
   "verification_uri": "https://accounts.x.ai/oauth2/device",
   "expires_at": null,
-  "source": "xai_device_reauth",
-  "updated_at": "2026-10-16T05:35:51.467336-04:00"
+  "updated_at": "2026-10-16T18:56:06.729939-04:00",
+  "source": "pipeline_health",
+  "job": "postclose",
+  "date": "2026-10-16"
 }
