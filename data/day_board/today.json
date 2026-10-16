@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T13:33:11.437529-04:00",
+  "generated_at": "2026-10-16T13:42:50.386046-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,126 +11,118 @@
   },
   "buy_1d": [
     {
-      "ticker": "CDNA",
-      "score": 0.897576252299225
+      "ticker": "MQ",
+      "score": 0.8511789715391587
     },
     {
-      "ticker": "VEEV",
-      "score": 0.48926923854784043
+      "ticker": "PDFS",
+      "score": 0.872233496988466
     },
     {
-      "ticker": "BLFS",
-      "score": 0.8442700111413193
+      "ticker": "IT",
+      "score": 0.627017225665278
     },
     {
-      "ticker": "ILMN",
-      "score": 0.48371108862390966
+      "ticker": "TOST",
+      "score": 0.6468419674087901
     },
     {
       "ticker": "PRCH",
-      "score": 0.7257962886201001
+      "score": 0.7457274747806698
     },
     {
-      "ticker": "AVPT",
-      "score": 0.7181728590192753
+      "ticker": "VEEV",
+      "score": 0.38742739960243766
     },
     {
-      "ticker": "OLLI",
-      "score": 0.6916870745226578
+      "ticker": "ARQT",
+      "score": 0.7322906177197818
+    },
+    {
+      "ticker": "ETON",
+      "score": 0.6790226285447538
+    },
+    {
+      "ticker": "WAY",
+      "score": 0.6546862774511255
     },
     {
       "ticker": "EZPW",
-      "score": 0.5979154132345297
+      "score": 0.5800061502991833
     },
     {
-      "ticker": "RELY",
-      "score": 0.6464148028886494
+      "ticker": "TRU",
+      "score": 0.4908549938624168
     },
     {
       "ticker": "LAUR",
-      "score": 0.5901602551274321
-    },
-    {
-      "ticker": "BJ",
-      "score": 0.47191391476465067
-    },
-    {
-      "ticker": "DT",
-      "score": 0.2370963388237307
-    },
-    {
-      "ticker": "AVO",
-      "score": 0.6227849974682826
-    },
-    {
-      "ticker": "PCTY",
-      "score": 0.6131965107841564
+      "score": 0.5302736707886009
     },
     {
       "ticker": "ABX",
-      "score": 0.48599606479139695
+      "score": 0.4913072001518869
     }
   ],
   "sell_1d": [
     {
-      "ticker": "VSAT",
-      "score": -0.34832289214798723
-    },
-    {
-      "ticker": "NEOV",
-      "score": -0.3413350069718331
+      "ticker": "ROIV",
+      "score": -0.48709479949516915
     },
     {
       "ticker": "SOC",
-      "score": -0.31713269170208
+      "score": -0.34511898896846693
     },
     {
-      "ticker": "TDTH",
-      "score": -0.3093293843856901
+      "ticker": "NEOV",
+      "score": -0.34303785903424716
     },
     {
-      "ticker": "VNET",
-      "score": -0.305557322214917
+      "ticker": "GH",
+      "score": -0.30388006888422486
     },
     {
-      "ticker": "AUR",
-      "score": -0.30175578838236555
+      "ticker": "IFRX",
+      "score": -0.3017490744169558
+    },
+    {
+      "ticker": "APA",
+      "score": -0.30081492982785313
     },
     {
       "ticker": "BIDU",
-      "score": -0.2937783535597766
+      "score": -0.29776399422600847
     },
     {
-      "ticker": "RC",
-      "score": -0.29234084976121294
-    },
-    {
-      "ticker": "CMTG",
-      "score": -0.2898956910068245
+      "ticker": "PYXS",
+      "score": -0.29419699244350644
     },
     {
       "ticker": "ALK",
       "score": -0.28935565926940376
     },
     {
-      "ticker": "NN",
-      "score": -0.28647415479072014
+      "ticker": "ALMS",
+      "score": -0.2842794811706928
     },
     {
-      "ticker": "BAK",
-      "score": -0.28303531395141274
+      "ticker": "AIRS",
+      "score": -0.2838266187659991
     },
     {
-      "ticker": "U",
-      "score": -0.28288055055024325
+      "ticker": "CMTG",
+      "score": -0.27719883299783515
     },
     {
-      "ticker": "PAL",
-      "score": -0.2759735281498387
+      "ticker": "WVE",
+      "score": -0.2704424574071478
     },
     {
-      "ticker": "NPWR",
-      "score": -0.2742814288528712
+      "ticker": "AXSM",
+      "score": -0.2657406531307958
+    },
+    {
+      "ticker": "PCT",
+      "score": -0.2644755409844818
     }
   ],
   "flatten": {

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T13:33:11.437529-04:00",
+  "generated_at": "2026-10-16T13:42:50.386046-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -540,19 +540,17 @@
           "path": "01_daily/weather/2026-10-16_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9808 vix=spiking yields=flat",
-          "size": 9808,
+          "reason": "sectors=11 bytes=9279 vix=falling yields=flat",
+          "size": 9279,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
-            "events bull 8 / bear 10"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
           ]
         }
       ],
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
-        "events bull 8 / bear 10"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
       ]
     },
     {
@@ -754,12 +752,11 @@
           "path": "01_daily/weather/2026-10-16_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9808 vix=spiking yields=flat",
-          "size": 9808,
+          "reason": "sectors=11 bytes=9279 vix=falling yields=flat",
+          "size": 9279,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
-            "events bull 8 / bear 10"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
           ]
         },
         {
@@ -782,10 +779,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2286855,
+          "size": 2218618,
           "said": "205 rows",
           "bullets": [
-            "NUTX, LLY, WAY, CORT, INCY, ONC, HALO, AMN"
+            "KEYS, FORM, AVPT, MU, SKHY, APH, SMTC, NVDA"
           ]
         },
         {
@@ -807,9 +804,9 @@
           "path": "data/stock_book/2026-10-16_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=200",
-          "size": 1466913,
-          "said": "1d BUY CDNA, VEEV, BLFS, ILMN, PRCH, AVPT, OLLI, EZPW \u00b7 SELL VSAT, NEOV, SOC, TDTH, VNET, AUR \u00b7 0.61285",
+          "reason": "horizons=5 names=190",
+          "size": 1427418,
+          "said": "1d BUY MQ, PDFS, IT, TOST, PRCH, VEEV, ARQT, ETON \u00b7 SELL ROIV, SOC, NEOV, GH, IFRX, APA \u00b7 0.61285",
           "bullets": []
         },
         {
@@ -819,10 +816,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 76708,
+          "size": 70199,
           "said": "Stock book \u2014 2026-10-16",
           "bullets": [
-            "_Generated 2026-10-16T13:32:31.982694-04:00_",
+            "_Generated 2026-10-16T13:42:48.094077-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -833,8 +830,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1959,
-          "said": "112 green \u00b7 WAY, CORT, INCY, AMN, EXEL, ADMA, PCRX, CON, SIBN, BIIB",
+          "size": 1884,
+          "said": "106 green \u00b7 KEYS, FORM, AVPT, APH, CRM, AVT, NTAP, SONO, LSCC, RELY",
           "bullets": []
         },
         {
@@ -865,7 +862,7 @@
       ],
       "said": "205 rows",
       "bullets": [
-        "NUTX, LLY, WAY, CORT, INCY"
+        "KEYS, FORM, AVPT, MU, SKHY"
       ]
     },
     {
@@ -885,9 +882,9 @@
           "path": "data/stock_book/2026-10-16_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=200",
-          "size": 1466913,
-          "said": "1d BUY CDNA, VEEV, BLFS, ILMN, PRCH, AVPT, OLLI, EZPW \u00b7 SELL VSAT, NEOV, SOC, TDTH, VNET, AUR \u00b7 0.61285",
+          "reason": "horizons=5 names=190",
+          "size": 1427418,
+          "said": "1d BUY MQ, PDFS, IT, TOST, PRCH, VEEV, ARQT, ETON \u00b7 SELL ROIV, SOC, NEOV, GH, IFRX, APA \u00b7 0.61285",
           "bullets": []
         },
         {
@@ -936,126 +933,118 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "CDNA",
-        "score": 0.897576252299225
+        "ticker": "MQ",
+        "score": 0.8511789715391587
       },
       {
-        "ticker": "VEEV",
-        "score": 0.48926923854784043
+        "ticker": "PDFS",
+        "score": 0.872233496988466
       },
       {
-        "ticker": "BLFS",
-        "score": 0.8442700111413193
+        "ticker": "IT",
+        "score": 0.627017225665278
       },
       {
-        "ticker": "ILMN",
-        "score": 0.48371108862390966
+        "ticker": "TOST",
+        "score": 0.6468419674087901
       },
       {
         "ticker": "PRCH",
-        "score": 0.7257962886201001
+        "score": 0.7457274747806698
       },
       {
-        "ticker": "AVPT",
-        "score": 0.7181728590192753
+        "ticker": "VEEV",
+        "score": 0.38742739960243766
       },
       {
-        "ticker": "OLLI",
-        "score": 0.6916870745226578
+        "ticker": "ARQT",
+        "score": 0.7322906177197818
+      },
+      {
+        "ticker": "ETON",
+        "score": 0.6790226285447538
+      },
+      {
+        "ticker": "WAY",
+        "score": 0.6546862774511255
       },
       {
         "ticker": "EZPW",
-        "score": 0.5979154132345297
+        "score": 0.5800061502991833
       },
       {
-        "ticker": "RELY",
-        "score": 0.6464148028886494
+        "ticker": "TRU",
+        "score": 0.4908549938624168
       },
       {
         "ticker": "LAUR",
-        "score": 0.5901602551274321
-      },
-      {
-        "ticker": "BJ",
-        "score": 0.47191391476465067
-      },
-      {
-        "ticker": "DT",
-        "score": 0.2370963388237307
-      },
-      {
-        "ticker": "AVO",
-        "score": 0.6227849974682826
-      },
-      {
-        "ticker": "PCTY",
-        "score": 0.6131965107841564
+        "score": 0.5302736707886009
       },
       {
         "ticker": "ABX",
-        "score": 0.48599606479139695
+        "score": 0.4913072001518869
       }
     ],
     "sell_1d": [
       {
-        "ticker": "VSAT",
-        "score": -0.34832289214798723
-      },
-      {
-        "ticker": "NEOV",
-        "score": -0.3413350069718331
+        "ticker": "ROIV",
+        "score": -0.48709479949516915
       },
       {
         "ticker": "SOC",
-        "score": -0.31713269170208
+        "score": -0.34511898896846693
       },
       {
-        "ticker": "TDTH",
-        "score": -0.3093293843856901
+        "ticker": "NEOV",
+        "score": -0.34303785903424716
       },
       {
-        "ticker": "VNET",
-        "score": -0.305557322214917
+        "ticker": "GH",
+        "score": -0.30388006888422486
       },
       {
-        "ticker": "AUR",
-        "score": -0.30175578838236555
+        "ticker": "IFRX",
+        "score": -0.3017490744169558
+      },
+      {
+        "ticker": "APA",
+        "score": -0.30081492982785313
       },
       {
         "ticker": "BIDU",
-        "score": -0.2937783535597766
+        "score": -0.29776399422600847
       },
       {
-        "ticker": "RC",
-        "score": -0.29234084976121294
-      },
-      {
-        "ticker": "CMTG",
-        "score": -0.2898956910068245
+        "ticker": "PYXS",
+        "score": -0.29419699244350644
       },
       {
         "ticker": "ALK",
         "score": -0.28935565926940376
       },
       {
-        "ticker": "NN",
-        "score": -0.28647415479072014
+        "ticker": "ALMS",
+        "score": -0.2842794811706928
       },
       {
-        "ticker": "BAK",
-        "score": -0.28303531395141274
+        "ticker": "AIRS",
+        "score": -0.2838266187659991
       },
       {
-        "ticker": "U",
-        "score": -0.28288055055024325
+        "ticker": "CMTG",
+        "score": -0.27719883299783515
       },
       {
-        "ticker": "PAL",
-        "score": -0.2759735281498387
+        "ticker": "WVE",
+        "score": -0.2704424574071478
       },
       {
-        "ticker": "NPWR",
-        "score": -0.2742814288528712
+        "ticker": "AXSM",
+        "score": -0.2657406531307958
+      },
+      {
+        "ticker": "PCT",
+        "score": -0.2644755409844818
       }
     ],
     "flatten": {
@@ -1082,8 +1071,7 @@
     "weather": {
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
-        "events bull 8 / bear 10"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
       ]
     }
   },
@@ -5687,6 +5675,30 @@
       "commit_msg": "auto: stock book leftover sweep",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "38939869661",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-16_stock_book.md",
+      "at": "2026-10-16T13:43:16-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-16",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38940439851",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-16_input_health.json",
+      "at": "2026-10-16T13:43:16-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-16",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38940439851",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-16_stock_book.json",
+      "at": "2026-10-16T13:43:16-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-16",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38940439851",
       "manifest": "research/input_freeze/2026-10-16/manifest.json"
     }
   ]
