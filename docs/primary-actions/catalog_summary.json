@@ -1,7 +1,7 @@
 {
-  "institutions": 2148,
+  "institutions": 2150,
   "by_jurisdiction": {
-    "US": 680,
+    "US": 682,
     "UK": 1274,
     "INT": 68,
     "US-state": 59,
@@ -41,14 +41,14 @@
     "joining": 12,
     "transitioning": 1
   },
-  "candidate_channels": 497,
-  "enabled_channels": 338,
+  "candidate_channels": 461,
+  "enabled_channels": 358,
   "channel_statuses": {
-    "ok": 358,
-    "fetch_failed": 76,
-    "valid_empty": 6,
-    "blocked": 15,
-    "invalid_feed_or_network_error": 42
+    "ok": 371,
+    "invalid_feed_or_network_error": 38,
+    "valid_empty": 7,
+    "blocked": 12,
+    "fetch_failed": 33
   },
   "directory_gaps": [
     {
@@ -57,7 +57,7 @@
       "status": "external_feed_host_not_approved; not requested"
     }
   ],
-  "institution_records": 2148,
+  "institution_records": 2150,
   "count_caution": "Overlapping directory identities and channel owners, including closed/historical bodies; not unique active institutions or working websites.",
   "directory_record_groups": {
     "us-fr": 473,
@@ -65,7 +65,7 @@
     "govinfo_court": 165,
     "central_banks": 63,
     "us_states": 59,
-    "curated_channel_owner": 121
+    "curated_channel_owner": 123
   },
   "excluded_reference_channels": 34
 }
