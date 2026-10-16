@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16T18:56:07-04:00",
+  "updated_at": "2026-10-16T18:57:57-04:00",
   "runs": [
     {
       "date": "2026-10-15",
@@ -71,25 +71,19 @@
       "date": "2026-10-16",
       "workflow": "webull_sim",
       "file": "2026-10-16_webull_sim.json",
-      "updated_at": "2026-10-16T14:12:48-04:00"
+      "updated_at": "2026-10-16T18:53:38-04:00"
     },
     {
       "date": "2026-10-15",
       "workflow": "postclose",
       "file": "2026-10-15_postclose.json",
-      "updated_at": "2026-10-16T15:02:07-04:00"
+      "updated_at": "2026-10-16T18:56:27-04:00"
     },
     {
       "date": "2026-10-16",
-      "workflow": "homepage_digest",
-      "file": "2026-10-16_homepage_digest.json",
-      "updated_at": "2026-10-16T16:28:46-04:00"
-    },
-    {
-      "date": "2026-10-16",
-      "workflow": "pipeline_health",
-      "file": "2026-10-16_pipeline_health.json",
-      "updated_at": "2026-10-16T18:56:07-04:00"
+      "workflow": "postclose",
+      "file": "2026-10-16_postclose.json",
+      "updated_at": "2026-10-16T18:57:57-04:00"
     }
   ]
 }
