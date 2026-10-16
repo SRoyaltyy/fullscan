@@ -5,6 +5,11 @@ name: ECS git repair (manual)
 # probes a bounded fetch, and reports Webull env presence as set/empty only.
 on:
   workflow_dispatch:
+    inputs:
+      materialize:
+        description: "true = restore the runner workspace to a full tree once (sparse-checkout disable, up to 40 min)"
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -13,7 +18,7 @@ concurrency:
 jobs:
   repair:
     runs-on: [self-hosted, ecs]
-    timeout-minutes: 10
+    timeout-minutes: 50
     steps:
       - name: Repair and report
         shell: bash
@@ -67,3 +72,22 @@ jobs:
           ls -1d /home/gha/.webull* /home/gha/*token* /home/gha/.config/webull* 2>/dev/null | tee -a "$SUM" || say "none found"
           say "### Runner service"
           systemctl list-units --no-pager 'actions.runner*' 2>/dev/null | head -5 | tee -a "$SUM" || true
+      - name: Restore full tree in the runner workspace (once)
+        if: github.event.inputs.materialize == 'true'
+        shell: bash
+        timeout-minutes: 40
+        run: |
+          set -uo pipefail
+          R=/home/gha/actions-runner/_work/fullscan/fullscan
+          SUM="${GITHUB_STEP_SUMMARY:-/dev/null}"
+          say() { echo "$*"; echo "$*" >> "$SUM"; }
+          say "### Full-tree restore"
+          say "sparse before: $(git -C "$R" config --get core.sparseCheckout || echo unset)"
+          S=$(date +%s)
+          git -C "$R" -c safe.directory="$R" sparse-checkout disable
+          RC=$?
+          say "sparse-checkout disable rc=$RC in $(( $(date +%s) - S ))s"
+          say "sparse after: $(git -C "$R" config --get core.sparseCheckout || echo unset)"
+          S=$(date +%s); git -C "$R" -c safe.directory="$R" status --porcelain -uno >/dev/null 2>&1
+          say "git status (warm index) in $(( $(date +%s) - S ))s"
+          exit $RC

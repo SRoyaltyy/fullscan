@@ -36,23 +36,33 @@ def classify(http: int | None, text: str, minutes_left: float | None) -> str:
     return "FAIL"
 
 
-def call() -> tuple[int | None, str, float]:
+LONG_PROMPT = (
+    "Write a detailed, numbered 40-point checklist (each point 3-4 sentences) for "
+    "auditing a pre-market equity screening pipeline: data freshness, clock windows, "
+    "sealing, fail-closed gates, broker paper mirrors, and post-close review. "
+    "After the checklist, on its own last line, write the number 42."
+)
+
+
+def call(long: bool = False) -> tuple[int | None, str, float]:
     tok = g.gateway_token()
+    prompt = LONG_PROMPT if long else "What is 17+25? Reply with only the number."
     body = json.dumps({
         "model": os.environ.get("OPENCLAW_AGENT", "openclaw/default"),
-        "messages": [{"role": "user", "content": "What is 17+25? Reply with only the number."}],
-        "max_tokens": 16, "temperature": 0,
+        "messages": [{"role": "user", "content": prompt}],
+        "max_tokens": 6000 if long else 16, "temperature": 0,
     }).encode()
     req = urllib.request.Request(g.GW + "/v1/chat/completions", data=body, method="POST")
     req.add_header("Content-Type", "application/json")
     req.add_header("x-openclaw-model", g.MODEL)
-    req.add_header("x-openclaw-session-key", f"fullscan-grok-canary-{int(time.time())}")
+    req.add_header("x-openclaw-session-key", f"fullscan-grok-canary-{'long-' if long else ''}{int(time.time())}")
     if tok:
         req.add_header("Authorization", f"Bearer {tok}")
     t0 = time.time()
     try:
-        with urllib.request.urlopen(req, timeout=g.CALL_TIMEOUT) as r:
-            raw = r.read()[:20000].decode("utf-8", "replace")
+        timeout = int(os.environ.get("CANARY_LONG_TIMEOUT", "420")) if long else g.CALL_TIMEOUT
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            raw = r.read()[:200000].decode("utf-8", "replace")
         try:
             d = json.loads(raw)
             text = ((d.get("choices") or [{}])[0].get("message") or {}).get("content") or raw
@@ -68,13 +78,26 @@ def call() -> tuple[int | None, str, float]:
 def main() -> int:
     for k in g.PAID_ENV:
         os.environ.pop(k, None)
+    # No-write: this script only prints and appends to $GITHUB_STEP_SUMMARY.
+    long = os.environ.get("CANARY_LONG", "").lower() in ("1", "true", "yes")
     exp, src, _ = g.xai_oauth_expiry()
     left = (exp - datetime.now(timezone.utc)).total_seconds() / 60 if exp else None
-    http, text, secs = call()
-    verdict = classify(http, text, left)
+    try:
+        from zoneinfo import ZoneInfo
+        exp_et = exp.astimezone(ZoneInfo("America/New_York")).strftime("%Y-%m-%d %H:%M ET") if exp else "unknown"
+    except Exception:
+        exp_et = str(exp)
+    print(f"xAI OAuth expiry: {exp_et} (source {src}; minutes left {left and round(left)})")
+    http, text, secs = call(long)
+    verdict = classify(http, text[-400:] if long else text, left)
+    if long and verdict == "OK":
+        print(f"long call: {secs:.1f}s, {len(text)} chars")
+        if secs <= 75:
+            print(f"::warning::long call finished in {secs:.1f}s (not >75s)")
     snippet = re.sub(r"(eyJ[\w.-]{10,}|[A-Za-z0-9_\-]{40,})", "<redacted>", re.sub(r"\s+", " ", text))[:200]
     if verdict == "OK":
-        line = f"✅ Grok auth canary OK: answered in {secs:.1f}s; OAuth minutes left {left and round(left)}"
+        line = (f"✅ Grok auth canary OK{' (long)' if long else ''}: answered in {secs:.1f}s"
+                f"{f', {len(text)} chars' if long else ''}; OAuth expiry {exp_et}, minutes left {left and round(left)}")
     elif verdict == "DEVICE_LOGIN":
         line = (f"❌ DEVICE LOGIN NEEDED: Grok (xAI OAuth) on ECS needs an interactive device login "
                 f"before the 05:49 ET Pre-Open. http={http} minutes_left={left and round(left)} reply: {snippet}")
