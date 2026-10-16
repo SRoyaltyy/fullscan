@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T10:06:08.941850-04:00",
+  "generated_at": "2026-10-16T10:28:16.604302-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,118 +11,118 @@
   },
   "buy_1d": [
     {
-      "ticker": "CDNA",
-      "score": 0.897576252299225
+      "ticker": "MQ",
+      "score": 0.8511789715391587
     },
     {
-      "ticker": "VEEV",
-      "score": 0.48926923854784043
+      "ticker": "PDFS",
+      "score": 0.872233496988466
     },
     {
-      "ticker": "ILMN",
-      "score": 0.4862978878647207
+      "ticker": "IT",
+      "score": 0.627017225665278
     },
     {
-      "ticker": "BLFS",
-      "score": 0.8458674143942335
+      "ticker": "TOST",
+      "score": 0.6468419674087901
     },
     {
       "ticker": "PRCH",
-      "score": 0.7579758901468567
+      "score": 0.7457274747806698
     },
     {
-      "ticker": "BAND",
-      "score": 0.7254047714770866
+      "ticker": "VEEV",
+      "score": 0.38742739960243766
+    },
+    {
+      "ticker": "ARQT",
+      "score": 0.7322906177197818
+    },
+    {
+      "ticker": "ETON",
+      "score": 0.6790226285447538
+    },
+    {
+      "ticker": "WAY",
+      "score": 0.6546862774511255
     },
     {
       "ticker": "EZPW",
-      "score": 0.5955012420003307
-    },
-    {
-      "ticker": "AVPT",
-      "score": 0.6904683623881902
-    },
-    {
-      "ticker": "NTAP",
-      "score": 0.32823297740760293
+      "score": 0.5800061502991833
     },
     {
       "ticker": "TRU",
-      "score": 0.5033293692454031
+      "score": 0.4908549938624168
     },
     {
-      "ticker": "SONO",
-      "score": 0.6903840428253398
-    },
-    {
-      "ticker": "CHEF",
-      "score": 0.6379790731999151
+      "ticker": "LAUR",
+      "score": 0.5302736707886009
     },
     {
       "ticker": "ABX",
-      "score": 0.4750229544765023
+      "score": 0.4913072001518869
     }
   ],
   "sell_1d": [
     {
-      "ticker": "NEOV",
-      "score": -0.3558701784935489
-    },
-    {
-      "ticker": "VSAT",
-      "score": -0.33308226234166394
+      "ticker": "ROIV",
+      "score": -0.48709479949516915
     },
     {
       "ticker": "SOC",
-      "score": -0.318606964684087
+      "score": -0.34511898896846693
+    },
+    {
+      "ticker": "NEOV",
+      "score": -0.34303785903424716
+    },
+    {
+      "ticker": "GH",
+      "score": -0.30388006888422486
+    },
+    {
+      "ticker": "IFRX",
+      "score": -0.3017490744169558
     },
     {
       "ticker": "APA",
-      "score": -0.31221522645427974
-    },
-    {
-      "ticker": "VNET",
-      "score": -0.3064848007586833
+      "score": -0.30081492982785313
     },
     {
       "ticker": "BIDU",
-      "score": -0.30083354416331093
+      "score": -0.29776399422600847
+    },
+    {
+      "ticker": "PYXS",
+      "score": -0.29419699244350644
     },
     {
       "ticker": "ALK",
       "score": -0.28935565926940376
     },
     {
-      "ticker": "FNV",
-      "score": -0.2880221955735393
+      "ticker": "ALMS",
+      "score": -0.2842794811706928
     },
     {
-      "ticker": "NN",
-      "score": -0.2870855567438641
+      "ticker": "AIRS",
+      "score": -0.2838266187659991
     },
     {
       "ticker": "CMTG",
-      "score": -0.28637279127034204
+      "score": -0.27719883299783515
     },
     {
-      "ticker": "TDTH",
-      "score": -0.28321754638170527
+      "ticker": "WVE",
+      "score": -0.2704424574071478
     },
     {
-      "ticker": "NPWR",
-      "score": -0.27153721132440944
+      "ticker": "AXSM",
+      "score": -0.2657406531307958
     },
     {
-      "ticker": "PAL",
-      "score": -0.2696734793844309
-    },
-    {
-      "ticker": "TRGP",
-      "score": -0.26795131965376706
-    },
-    {
-      "ticker": "ROIV",
-      "score": -0.26211196897867123
+      "ticker": "PCT",
+      "score": -0.2644755409844818
     }
   ],
   "flatten": {
@@ -146,59 +146,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "flatten",
-      "title": "Flatten live card",
-      "date": "2026-10-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-16T07:20:14.727728-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-10-16_flatten_card.md",
-          "ok": true,
-          "reason": "",
-          "size": 2017,
-          "preview": "# flatten_robust card \u2014 2026-10-16\n_Generated 2026-10-16T11:20:13 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$103,064.62** (after 09:30 $103,064.62 \u00b7 after 16:00 $103,064.62)\n- Prior close **$103,064.62** \u00b7 09:30 **$103,064.62** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$103,064.62**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$103,064.62**"
-        },
-        {
-          "path": "data/sleeve_merge/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 7358,
-          "preview": "2026-10-15 BUY \u2014 \u00b7 SELL \u2014"
-        },
-        {
-          "path": "data/sleeve_merge/today_live.json",
-          "ok": true,
-          "reason": "",
-          "size": 4529,
-          "preview": "keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
-        },
-        {
-          "path": "data/sleeve_merge/daily_marks.json",
-          "ok": true,
-          "reason": "",
-          "size": 161757,
-          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
-        },
-        {
-          "path": "data/sleeve_merge/equity_curve.csv",
-          "ok": true,
-          "reason": "",
-          "size": 4033,
-          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
-        },
-        {
-          "path": "dashboard/sleeve-merge/index.html",
-          "ok": true,
-          "reason": "",
-          "size": 51956,
-          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
-        }
-      ],
-      "preview": "# flatten_robust card \u2014 2026-10-16\n_Generated 2026-10-16T11:20:13 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$103,064.62** (after 09:30 $103,064.62 \u00b7 after 16:00 $103,064.62)\n- Prior close **$103,064.62** \u00b7 09:30 **$103,064.62** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$103,064.62**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$103,064.62** \u00b7 2026-10-15 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\":"
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -478,6 +425,31 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T10:28:15.588860-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-16_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9937,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-16_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5409,
+          "preview": "# Weather report \u2014 2026-10-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
