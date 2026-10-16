@@ -1,35 +1,612 @@
 [
   {
-    "title": "Real Food for Real Heroes: Secretary Kennedy Welcomes Lou Ferrigno, Dean Cain, and Kyle Reyes to The Real Food Show",
-    "url": "https://www.hhs.gov/press-room/secretary-kennedy-lou-ferrigno-dean-cain-real-food-show.html",
-    "native_id": "https://www.hhs.gov/press-room/secretary-kennedy-lou-ferrigno-dean-cain-real-food-show.html",
-    "published_at": "2026-10-16T16:45:00+00:00",
-    "published_raw": "Fri, 16 Oct 2026 12:45:00 -0400",
-    "summary": "HHS Secretary Robert F. Kennedy, Jr. released a new episode of The Real Food Show with Lou Ferrigno (The Incredible Hulk), Dean Cain (Superman), and Kyle Reyes.",
+    "title": "Justice Department Reaches Settlement Agreement with City of Lexington, Mississippi, Regarding Lexington Police Department’s Unlawful Police Practices",
+    "url": "https://www.justice.gov/opa/pr/justice-department-reaches-settlement-agreement-city-lexington-mississippi-regarding",
+    "native_id": "https://www.justice.gov/opa/pr/justice-department-reaches-settlement-agreement-city-lexington-mississippi-regarding",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "The Justice Department announced today that it has obtained an out-of-court settlement agreement with the City of Lexington, Mississippi, to remedy certain violations described in the Department’s Sept. 26, 2024, findings report. Specifically, the Department found that the Lexington Police Department (LPD) engages in a pattern or practice of civil rights violations.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Health and Human Services",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "health_administration"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-hhs-6f995a5754",
-    "n": 4219,
-    "first_seen": "2026-10-16T16:57:58.207129+00:00",
-    "last_seen": "2026-10-16T16:57:58.207129+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4221,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
     "source_ids": [
-      "us-hhs-6f995a5754"
+      "us-doj-b3d27e1dc3",
+      "us-doj-e05071794d"
     ]
   },
   {
-    "title": "First Circuit dimisses petitions for review - In re: MCP 191, No. 24-8028",
-    "url": "https://www.fcc.gov/edoc/425930",
-    "native_id": "425930",
+    "title": "New Jersey Man Indicted on Arson Charges Connected to Retail Store Fire",
+    "url": "https://www.justice.gov/usao-md/pr/new-jersey-man-indicted-arson-charges-connected-retail-store-fire",
+    "native_id": "https://www.justice.gov/usao-md/pr/new-jersey-man-indicted-arson-charges-connected-retail-store-fire",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "Baltimore, Maryland – A New Jersey man is facing indictment, today, after using fire and explosive materials in a Maryland retail store. Anthony John Rhodes, 37, of Short Pump, is charged with malicious destruction of property by fire. The charges stem from an incident in which Rhodes set a fire in an Elkton retail store during business hours while customers shopped.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4222,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Previously convicted sex offender sentenced to 35 years in prison",
+    "url": "https://www.justice.gov/usao-edva/pr/previously-convicted-sex-offender-sentenced-35-years-prison",
+    "native_id": "https://www.justice.gov/usao-edva/pr/previously-convicted-sex-offender-sentenced-35-years-prison",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "Previously convicted sex offender Brian James Backues, 46, of Portsmouth, was sentenced 35 years in prison for production of child sexual abuse material (CSAM), coercion and enticement of a minor, receipt of CSAM, and possession of CSAM.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4223,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Miracle-Ear and its Foundation Agree to Pay over $6.4 Million to Resolve False Claims Allegations Concerning the Paycheck Protection Program",
+    "url": "https://www.justice.gov/usao-edwi/pr/miracle-ear-and-its-foundation-agree-pay-over-64-million-resolve-false-claims",
+    "native_id": "https://www.justice.gov/usao-edwi/pr/miracle-ear-and-its-foundation-agree-pay-over-64-million-resolve-false-claims",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4224,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Baltimore Felon Pleads Guilty to Firearm Charges",
+    "url": "https://www.justice.gov/usao-md/pr/baltimore-felon-pleads-guilty-firearm-charges",
+    "native_id": "https://www.justice.gov/usao-md/pr/baltimore-felon-pleads-guilty-firearm-charges",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "Baltimore, Maryland – A Baltimore man pled guilty in federal court to firearm-possession charges. Arsenio Hall, 37, is charged with possession of a firearm and ammunition by a prohibited person. Hall is prohibited from possessing firearms and ammunition due to a prior felony conviction.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4225,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Nashville Man Convicted of Operating Major Cocaine and Fentanyl Trafficking Operation from Downtown Nashville Apartment",
+    "url": "https://www.justice.gov/usao-mdtn/pr/nashville-man-convicted-operating-major-cocaine-and-fentanyl-trafficking-operation",
+    "native_id": "https://www.justice.gov/usao-mdtn/pr/nashville-man-convicted-operating-major-cocaine-and-fentanyl-trafficking-operation",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4226,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Milwaukee Man Sentenced to 38 Years in Federal Prison for Murder of Letter Carrier",
+    "url": "https://www.justice.gov/usao-edwi/pr/milwaukee-man-sentenced-38-years-federal-prison-murder-letter-carrier",
+    "native_id": "https://www.justice.gov/usao-edwi/pr/milwaukee-man-sentenced-38-years-federal-prison-murder-letter-carrier",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4227,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "The United States Attorney’s Office for the Middle District of Tennessee Joins DOJ Fraud Division, IRS, and IRS-CI in National Tax Enforcement Surge Exposing Tax Fraud",
+    "url": "https://www.justice.gov/usao-mdtn/pr/united-states-attorneys-office-middle-district-tennessee-joins-doj-fraud-division-irs",
+    "native_id": "https://www.justice.gov/usao-mdtn/pr/united-states-attorneys-office-middle-district-tennessee-joins-doj-fraud-division-irs",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4228,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "The District of Alaska Joins DOJ Fraud Division, IRS, and IRS-CI in National Tax Enforcement Surge Exposing Over $490 Million in Tax Fraud",
+    "url": "https://www.justice.gov/usao-ak/pr/district-alaska-joins-doj-fraud-division-irs-and-irs-ci-national-tax-enforcement-surge",
+    "native_id": "https://www.justice.gov/usao-ak/pr/district-alaska-joins-doj-fraud-division-irs-and-irs-ci-national-tax-enforcement-surge",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4229,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Muncie Man Accused of Falsely Requesting over $1 Million in COVID-19 Relief Tax Credits",
+    "url": "https://www.justice.gov/usao-sdin/pr/muncie-man-accused-falsely-requesting-over-1-million-covid-19-relief-tax-credits",
+    "native_id": "https://www.justice.gov/usao-sdin/pr/muncie-man-accused-falsely-requesting-over-1-million-covid-19-relief-tax-credits",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4230,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "D.C. Mother Pleads Guilty to Perjury for Lying to Grand Jury During Investigation into Her 2-Year-Old Son’s Murder",
+    "url": "https://www.justice.gov/usao-dc/pr/dc-mother-pleads-guilty-perjury-lying-grand-jury-during-investigation-her-2-year-old",
+    "native_id": "https://www.justice.gov/usao-dc/pr/dc-mother-pleads-guilty-perjury-lying-grand-jury-during-investigation-her-2-year-old",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "Monet Jones, 28, of Washington, D.C., pleaded guilty today for lying to the grand jury about the beating death of her 2-year-old child, Mars Jones, announced U.S. Attorney Jeanine Ferris Pirro.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4231,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Spokane Man Sentenced to 5 Years for Receipt of Child Pornography",
+    "url": "https://www.justice.gov/usao-edwa/pr/spokane-man-sentenced-5-years-receipt-child-pornography",
+    "native_id": "https://www.justice.gov/usao-edwa/pr/spokane-man-sentenced-5-years-receipt-child-pornography",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4232,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Escaped Shreveport Inmate Who Triggered Multi-Agency Manhunt Indicted for Violent Carjacking",
+    "url": "https://www.justice.gov/usao-wdla/pr/escaped-shreveport-inmate-who-triggered-multi-agency-manhunt-indicted-violent",
+    "native_id": "https://www.justice.gov/usao-wdla/pr/escaped-shreveport-inmate-who-triggered-multi-agency-manhunt-indicted-violent",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4233,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Connecticut Physician and His Practices Pay More Than $860K to Settle False Claims Act Allegations",
+    "url": "https://www.justice.gov/usao-ct/pr/connecticut-physician-and-his-practices-pay-more-860k-settle-false-claims-act",
+    "native_id": "https://www.justice.gov/usao-ct/pr/connecticut-physician-and-his-practices-pay-more-860k-settle-false-claims-act",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "STEVEN MURPHY, M.D. and his practices, MURPHY MEDICAL ASSOCIATES, LLC and DIAGNOSTIC AND MEDICAL SPECIALISTS OF GREENWICH, LLC, located in Stamford, have entered into a civil settlement agreement with the federal and state governments in which they will pay $866,539 to settle allegations of COVID-19 related fraud and health care fraud. As part of the settlement, Murphy and his practices agreed to be excluded from all federal health care programs for a period of three years.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4234,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Georgia Inmates Sentenced in Police‑Impersonation Jury‑Duty Call Scheme",
+    "url": "https://www.justice.gov/usao-mdga/pr/georgia-inmates-sentenced-police-impersonation-jury-duty-call-scheme",
+    "native_id": "https://www.justice.gov/usao-mdga/pr/georgia-inmates-sentenced-police-impersonation-jury-duty-call-scheme",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "ALBANY, Ga. – Two Georgia inmates who orchestrated a phone scheme from behind bars, extorting at least 119 citizens by demanding payment for supposed missed jury‑duty fines, have been sentenced to federal prison following an investigation conducted by the FBI.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4235,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Previously Convicted Bank Robber Charged Again for Robbing Banks Wearing “Old Man” Mask",
+    "url": "https://www.justice.gov/usao-mdfl/pr/previously-convicted-bank-robber-charged-again-robbing-banks-wearing-old-man-mask",
+    "native_id": "https://www.justice.gov/usao-mdfl/pr/previously-convicted-bank-robber-charged-again-robbing-banks-wearing-old-man-mask",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "Tampa, Florida – David Sartin, Jr. (40, St. Petersburg) has been charged by criminal complaint with two counts of bank robbery. If convicted, he faces up to 20 years in federal prison on each count. United States Attorney Gregory W. Kehoe made the announcement.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4236,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Final Defendant Sentenced in a Conspiracy to Distribute Counterfeit Pills Containing Fentanyl",
+    "url": "https://www.justice.gov/usao-edky/pr/final-defendant-sentenced-conspiracy-distribute-counterfeit-pills-containing-fentanyl",
+    "native_id": "https://www.justice.gov/usao-edky/pr/final-defendant-sentenced-conspiracy-distribute-counterfeit-pills-containing-fentanyl",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4237,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Shiprock Man Sentenced to 20 Years in Prison for Second-Degree Murder",
+    "url": "https://www.justice.gov/usao-nm/pr/shiprock-man-sentenced-20-years-prison-second-degree-murder",
+    "native_id": "https://www.justice.gov/usao-nm/pr/shiprock-man-sentenced-20-years-prison-second-degree-murder",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "Edison Brady was sentenced to 20 years in prison for fatally stabbing a man in broad daylight near a community grocery store in Shiprock, New Mexico.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4238,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Panama City Drug Trafficking Organization Dismantled by Homeland Security Task Force Prosecution",
+    "url": "https://www.justice.gov/usao-ndfl/pr/panama-city-drug-trafficking-organization-dismantled-homeland-security-task-force",
+    "native_id": "https://www.justice.gov/usao-ndfl/pr/panama-city-drug-trafficking-organization-dismantled-homeland-security-task-force",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "Tallahassee, Florida – Mario Swanston, 45, of Miami, Florida; Santana Wyvonne Harris, 41, of Panama City, Florida; Shannon Jarbar Clayton, 46, of Panama City, Florida; Elizabeth Gray, 37, of Panama City, Florida; and Shontell Fedd, 49, of Panama City, Florida were each sentenced by U.S. District Judge Mark E. Walker in federal court after previously pleading guilty to conspiracy to possess with intent to distribute cocaine and marijuana.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4239,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "11th Circuit Affirms Conviction, 30-Year Sentence in Cold Case Prosecution of 2001 Murder of Pregnant Army Private in Germany",
+    "url": "https://www.justice.gov/usao-ndfl/pr/11th-circuit-affirms-conviction-30-year-sentence-cold-case-prosecution-2001-murder",
+    "native_id": "https://www.justice.gov/usao-ndfl/pr/11th-circuit-affirms-conviction-30-year-sentence-cold-case-prosecution-2001-murder",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "Pensacola, Florida – The United States Court of Appeals for the Eleventh Circuit affirmed the conviction and sentence of Shannon L. Wilkerson, 46, for the 2001 murder of 19-year-old Army Private First Class Amanda Gonzales and her unborn child.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4240,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Massachusetts Man Charged for His Role in Marriage and Immigration Document Fraud",
+    "url": "https://www.justice.gov/usao-ndoh/pr/massachusetts-man-charged-his-role-marriage-and-immigration-document-fraud",
+    "native_id": "https://www.justice.gov/usao-ndoh/pr/massachusetts-man-charged-his-role-marriage-and-immigration-document-fraud",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "A 31-year-old man has been charged for his role in a conspiracy where he allegedly agreed to be paid to enter into a sham marriage to allow a co-conspirator to illegally obtain a green card.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4241,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "U.S. Attorney’s Office for the District of Puerto Rico Announces Creation of the Interagency Fraud Enforcement Task Force",
+    "url": "https://www.justice.gov/usao-pr/pr/us-attorneys-office-district-puerto-rico-announces-creation-interagency-fraud",
+    "native_id": "https://www.justice.gov/usao-pr/pr/us-attorneys-office-district-puerto-rico-announces-creation-interagency-fraud",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "SAN JUAN, Puerto Rico – Acting United States Attorney Héctor Ramírez Carbó announced the creation of the Puerto Rico Interagency Fraud Enforcement Task Force, bringing together federal law enforcement agencies, state partners, and inspectors general to strengthen efforts to identify, investigate, and prosecute fraud against government programs and American taxpayers.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4242,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "St. Louis County Man Admits Using Fraudulent Deed Filings to Steal At Least 14 Properties",
+    "url": "https://www.justice.gov/usao-edmo/pr/st-louis-county-man-admits-using-fraudulent-deed-filings-steal-least-14-properties",
+    "native_id": "https://www.justice.gov/usao-edmo/pr/st-louis-county-man-admits-using-fraudulent-deed-filings-steal-least-14-properties",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "James L. Townes Jr. admitted that his scheme involved the use of the names of 10 or more individuals and that the intended losses exceeded $1,500,000.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4243,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Mexican National Charged with Possession with Intent to Distribute Cocaine and Methamphetamine in Lafayette",
+    "url": "https://www.justice.gov/usao-wdla/pr/mexican-national-charged-possession-intent-distribute-cocaine-and-methamphetamine",
+    "native_id": "https://www.justice.gov/usao-wdla/pr/mexican-national-charged-possession-intent-distribute-cocaine-and-methamphetamine",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4244,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Fort Thompson Woman Sentenced to 5 Years in Federal Prison for Assault Resulting in Serious Bodily Injury",
+    "url": "https://www.justice.gov/usao-sd/pr/fort-thompson-woman-sentenced-5-years-federal-prison-assault-resulting-serious-bodily",
+    "native_id": "https://www.justice.gov/usao-sd/pr/fort-thompson-woman-sentenced-5-years-federal-prison-assault-resulting-serious-bodily",
+    "published_at": "2026-10-16T12:00:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 12:00:00 +0000",
+    "summary": "United States Attorney Ron Parsons announced today that U.S. District Judge Eric C. Schulte has sentenced a Fort Thompson, South Dakota, woman convicted of Assault Resulting in Serious Bodily Injury. The sentencing took place on October 5, 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 4245,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "In the Matter of Mexico IP Phone LLC",
+    "url": "https://www.fcc.gov/edoc/425921",
+    "native_id": "425921",
     "published_at": null,
     "published_raw": "",
-    "summary": "First Circuit Court of Appeals dismisses petitions in part and hold them in abeyance in part",
+    "summary": "FCC removes the certification of Mexico IP Phone from the Robocall Mitigation Database for intentionally recertifying its RMD certification without the required information and for transmitting high-volume illegal traffic.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -40,12 +617,900 @@
       "family": "telecom_rules_and_licences"
     },
     "primary_source_id": "us-fcc-adabf37abf",
-    "n": 4220,
-    "first_seen": "2026-10-16T16:57:58.207129+00:00",
-    "last_seen": "2026-10-16T16:57:58.207129+00:00",
+    "n": 4246,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
     "source_ids": [
-      "us-fcc-782802e621",
-      "us-fcc-adabf37abf"
+      "us-fcc-adabf37abf",
+      "us-fcc-eeb7d739be"
+    ]
+  },
+  {
+    "title": "151/2026 : 15 October 2026 - Opinion of the Advocate General at the Court Andrea Biondi in Case C-627/24 P",
+    "url": "https://curia.europa.eu/site/jcms/p1_1000088593",
+    "native_id": "https://curia.europa.eu/site/jcms/p1_1000088600",
+    "published_at": "2026-10-15T08:21:59+00:00",
+    "published_raw": "Thu, 15 Oct 2026 10:21:59 +0200",
+    "summary": "Bytedance v Commission Advocate General Biondi: the Court should dismiss the action brought by Bytedance (TikTok) against the decision of the Commission designating it as a gatekeeper under the Digital Markets Act",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Court of Justice of the European Union",
+      "jurisdiction": "EU",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "eu-court-1433471e58",
+    "n": 4247,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "eu-court-1433471e58"
+    ]
+  },
+  {
+    "title": "150/2026 : 15 October 2026 - Judgment of the Court in Case C-521/25",
+    "url": "https://curia.europa.eu/site/jcms/p1_1000088594",
+    "native_id": "https://curia.europa.eu/site/jcms/p1_1000088601",
+    "published_at": "2026-10-15T08:21:59+00:00",
+    "published_raw": "Thu, 15 Oct 2026 10:21:59 +0200",
+    "summary": "Commission v Hungary (Penalties for trafficking in human beings) Area of Freedom, Security and Justice Failure of a Member State to fulfil its obligations: by converting the final custodial sentences imposed for trafficking in human beings into ‘special reintegration detention’, Hungary has infringed EU law",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Court of Justice of the European Union",
+      "jurisdiction": "EU",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "eu-court-1433471e58",
+    "n": 4248,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "eu-court-1433471e58"
+    ]
+  },
+  {
+    "title": "149/2026 : 15 October 2026 - Judgment of the Court in Case C-857/24",
+    "url": "https://curia.europa.eu/site/jcms/p1_1000088568",
+    "native_id": "https://curia.europa.eu/site/jcms/p1_1000088575",
+    "published_at": "2026-10-15T07:50:02+00:00",
+    "published_raw": "Thu, 15 Oct 2026 09:50:02 +0200",
+    "summary": "daa and Others Transport Air transport: an annual passenger limit set down in a development consent relating to an airport may be taken into account when allocating slots to airlines",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Court of Justice of the European Union",
+      "jurisdiction": "EU",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "eu-court-1433471e58",
+    "n": 4249,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "eu-court-1433471e58"
+    ]
+  },
+  {
+    "title": "148/2026 : 15 October 2026 - Judgment of the Court in Case C-275/25",
+    "url": "https://curia.europa.eu/site/jcms/p1_1000088569",
+    "native_id": "https://curia.europa.eu/site/jcms/p1_1000088576",
+    "published_at": "2026-10-15T07:50:03+00:00",
+    "published_raw": "Thu, 15 Oct 2026 09:50:03 +0200",
+    "summary": "[Kolwager] Privileges and immunities The Court clarifies the conditions for determining the domicile for tax purposes of officials and other servants of the European Union",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Court of Justice of the European Union",
+      "jurisdiction": "EU",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "eu-court-1433471e58",
+    "n": 4250,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "eu-court-1433471e58"
+    ]
+  },
+  {
+    "title": "147/2026 : 15 October 2026 - Judgment of the Court in Case C-70/25",
+    "url": "https://curia.europa.eu/site/jcms/p1_1000088570",
+    "native_id": "https://curia.europa.eu/site/jcms/p1_1000088577",
+    "published_at": "2026-10-15T07:50:03+00:00",
+    "published_raw": "Thu, 15 Oct 2026 09:50:03 +0200",
+    "summary": "[Tukowiecka] Free movement of capital Payment services: gross negligence on the part of the customer does not exempt the payment service provider from the obligation to immediately refund the amount of an unauthorised payment transaction",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Court of Justice of the European Union",
+      "jurisdiction": "EU",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "eu-court-1433471e58",
+    "n": 4251,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "eu-court-1433471e58"
+    ]
+  },
+  {
+    "title": "146/2026 : 14 October 2026 - Judgment of the General Court in Case T-134/24",
+    "url": "https://curia.europa.eu/site/jcms/p1_1000088536",
+    "native_id": "https://curia.europa.eu/site/jcms/p1_1000088538",
+    "published_at": "2026-10-14T07:37:38+00:00",
+    "published_raw": "Wed, 14 Oct 2026 09:37:38 +0200",
+    "summary": "Technius v Commission Digital Services Act: the General Court dismisses Stripchat’s action against its designation as a very large online platform",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Court of Justice of the European Union",
+      "jurisdiction": "EU",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "eu-court-1433471e58",
+    "n": 4252,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "eu-court-1433471e58"
+    ]
+  },
+  {
+    "title": "NHAI Successfully Defends Arbitration Case in Chittorgarh–Udaipur National Highway Project to Safeguard Public Funds - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9yLUIzNmNtemxpdURQWG12d0tBSjNoeU9kTmpjSlR0cHlHRkVubGJHVEtUZUV3MHFmY2ZMN09CQkt6VmEzT0ExQjhFajk2S3JHckZGdVg2MGJUQzV5S0xzZk1mQ3JkaklFZnMwMEZ0dlAwWnRjX2R0T3Vkdw",
+    "native_id": "CBMie0FVX3lxTE9yLUIzNmNtemxpdURQWG12d0tBSjNoeU9kTmpjSlR0cHlHRkVubGJHVEtUZUV3MHFmY2ZMN09CQkt6VmEzT0ExQjhFajk2S3JHckZGdVg2MGJUQzV5S0xzZk1mQ3JkaklFZnMwMEZ0dlAwWnRjX2R0T3Vkdw",
+    "published_at": "2026-10-16T11:51:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 11:51:00 GMT",
+    "summary": "NHAI Successfully Defends Arbitration Case in Chittorgarh–Udaipur National Highway Project to Safeguard Public Funds Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4253,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "PIB Backgrounder - www.pib.gov.in",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE92UmxxeklSUVNsb0MyMWV6M0ZLQXlESVNBdFFWMG5OLUZnSkVoWXhtTGZaRkstUmRTQ1htNEFqTkQ4anZpczFadlh1LVRydGMxdGdMbUxNOEhkNHhJUGd4ZFFvY3dFSkc2WGgwWFFBaUxwVFB2MkpENA",
+    "native_id": "CBMieEFVX3lxTE92UmxxeklSUVNsb0MyMWV6M0ZLQXlESVNBdFFWMG5OLUZnSkVoWXhtTGZaRkstUmRTQ1htNEFqTkQ4anZpczFadlh1LVRydGMxdGdMbUxNOEhkNHhJUGd4ZFFvY3dFSkc2WGgwWFFBaUxwVFB2MkpENA",
+    "published_at": "2026-10-14T07:03:00+00:00",
+    "published_raw": "Wed, 14 Oct 2026 07:03:00 GMT",
+    "summary": "PIB Backgrounder www.pib.gov.in",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4254,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "India’s Ramsar Site tally reaches 103 with addition of Sukhna Wetland (Chandigarh) and Sauj Jheel (UP) - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBta05USWVfcUdVZXV1d0xfREZ2NXFSb1Y1VXBBck1CNDBtMFRnaEt0MUJYQWNKSUg2ZDVRT0pma1VZRl9ZSlVFdWMyaWVXRHdhOGhmUzY5R0xpb1ZLRWVrN201dFNIZXhUal9FWTRSeFRSSThpaWNab1ZBbGIwUQ",
+    "native_id": "CBMifkFVX3lxTFBta05USWVfcUdVZXV1d0xfREZ2NXFSb1Y1VXBBck1CNDBtMFRnaEt0MUJYQWNKSUg2ZDVRT0pma1VZRl9ZSlVFdWMyaWVXRHdhOGhmUzY5R0xpb1ZLRWVrN201dFNIZXhUal9FWTRSeFRSSThpaWNab1ZBbGIwUQ",
+    "published_at": "2026-10-15T15:11:00+00:00",
+    "published_raw": "Thu, 15 Oct 2026 15:11:00 GMT",
+    "summary": "India’s Ramsar Site tally reaches 103 with addition of Sukhna Wetland (Chandigarh) and Sauj Jheel (UP) Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4255,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "Prime Minister extends greetings to National Security Guard personnel on Raising Day - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9PYUpoeENkalVYd0VHNlBLS2JBYllHSmJLdWhuVUVYY3FZY0dNY2JjeHhZQ0FDbnpEbGJraXRtbVFXSnRXdTdKNHY4UUZod3ExTDNDbGVzWU4xcU5MUUNzeXdmbFpYZHBJYUcw",
+    "native_id": "CBMia0FVX3lxTE9PYUpoeENkalVYd0VHNlBLS2JBYllHSmJLdWhuVUVYY3FZY0dNY2JjeHhZQ0FDbnpEbGJraXRtbVFXSnRXdTdKNHY4UUZod3ExTDNDbGVzWU4xcU5MUUNzeXdmbFpYZHBJYUcw",
+    "published_at": "2026-10-16T13:07:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 13:07:00 GMT",
+    "summary": "Prime Minister extends greetings to National Security Guard personnel on Raising Day Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4256,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "The cumulative exports (merchandise & services) during April-September 2026-27 are estimated at US$ 476.20 Billion, as compared to US$ 418.31 Billion in April-September 2025-26, an estimated growth of 13.84%. - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBxd0ZPdW1EcWVreWNXR3RfZ2pBV1c4MXJlVjhPV3UzVVkzd1dYekdsZUhPVWhKRHhrWHNnWDNzc1I0akFQMzBGOTVLa3JQNXZlNnFpenFfS2E3QlNqTEVPeUZsNE9JQUktOGpR",
+    "native_id": "CBMia0FVX3lxTFBxd0ZPdW1EcWVreWNXR3RfZ2pBV1c4MXJlVjhPV3UzVVkzd1dYekdsZUhPVWhKRHhrWHNnWDNzc1I0akFQMzBGOTVLa3JQNXZlNnFpenFfS2E3QlNqTEVPeUZsNE9JQUktOGpR",
+    "published_at": "2026-10-15T11:46:00+00:00",
+    "published_raw": "Thu, 15 Oct 2026 11:46:00 GMT",
+    "summary": "The cumulative exports (merchandise & services) during April-September 2026-27 are estimated at US$ 476.20 Billion, as compared to US$ 418.31 Billion in April-September 2025-26, an estimated growth of 13.84%. Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4257,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "Ayush Innovation Sees Eightfold Rise in Patent Filings - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9iRlUtalJ4dnM3QmdlZFpDQlFhNnFsNTc2QnBvY0pZWVBsbFQzQS1JeWVlcEUzR2Nob3NEWmw5UjgtVWNXemFEcjR6ZVdpWnlJVFNrZldVM3ZtOXJVTnhGdkFoeHA3aVBHa0lZ",
+    "native_id": "CBMia0FVX3lxTE9iRlUtalJ4dnM3QmdlZFpDQlFhNnFsNTc2QnBvY0pZWVBsbFQzQS1JeWVlcEUzR2Nob3NEWmw5UjgtVWNXemFEcjR6ZVdpWnlJVFNrZldVM3ZtOXJVTnhGdkFoeHA3aVBHa0lZ",
+    "published_at": "2026-10-16T09:03:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 09:03:00 GMT",
+    "summary": "Ayush Innovation Sees Eightfold Rise in Patent Filings Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4258,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "Raksha Rajya Mantri Chairs Special Joint State Representatives and Additional Director General’s Conference of NCC in Guwahati, Assam - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9uSWtYRHdPbWRqRlNaekQ3V2NVVXM4SDQ3VjVDNktzME5vN2E0eUQwMl9GR0tkUENwVk9NVE5wc3c2ZGFVeVp4cVNpTG1BLUZSbDlfeW5NdGIteVp4UEM5R1hzMA",
+    "native_id": "CBMiY0FVX3lxTE9uSWtYRHdPbWRqRlNaekQ3V2NVVXM4SDQ3VjVDNktzME5vN2E0eUQwMl9GR0tkUENwVk9NVE5wc3c2ZGFVeVp4cVNpTG1BLUZSbDlfeW5NdGIteVp4UEM5R1hzMA",
+    "published_at": "2026-10-15T11:39:00+00:00",
+    "published_raw": "Thu, 15 Oct 2026 11:39:00 GMT",
+    "summary": "Raksha Rajya Mantri Chairs Special Joint State Representatives and Additional Director General’s Conference of NCC in Guwahati, Assam Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4259,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "Ministry of Tribal Affairs holds the first meeting of the Working Group on Tribal Languages - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE11eHBzcElvVS1Tb0dkZ3p3VWk3VGFfT0tFeXBsMGJiXzZvejZGV01BczlQLXpLVG51YkVBaVlXSzFKdzhhRExuWFkxZ0tTWkpKYzJVSEZIMWk1amM0YkNmcFBPaENPOTFiQVdFM09YcmpqSTF2Mk5JZy1SQjdfdw",
+    "native_id": "CBMifkFVX3lxTE11eHBzcElvVS1Tb0dkZ3p3VWk3VGFfT0tFeXBsMGJiXzZvejZGV01BczlQLXpLVG51YkVBaVlXSzFKdzhhRExuWFkxZ0tTWkpKYzJVSEZIMWk1amM0YkNmcFBPaENPOTFiQVdFM09YcmpqSTF2Mk5JZy1SQjdfdw",
+    "published_at": "2026-10-15T05:14:00+00:00",
+    "published_raw": "Thu, 15 Oct 2026 05:14:00 GMT",
+    "summary": "Ministry of Tribal Affairs holds the first meeting of the Working Group on Tribal Languages Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4260,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "Cabinet approves continuation of the National Social Assistance Programme for five years from 2026-27 to 2030-31 - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5mcTdGNWl4bUs1XzJTSURPelhBMVB2OTliVk1yN2JzSkxLRFhFVmhROTcxUHFTcVpnN1V0eTNSVEdkRzRoVW1ZUVlVZ19tQnNHLWVWVms2c0lJLU4yT2tnaVA5bmdfa2pTSEFITXd2LVpmdlFsTFVfRmE2dHo",
+    "native_id": "CBMifEFVX3lxTE5mcTdGNWl4bUs1XzJTSURPelhBMVB2OTliVk1yN2JzSkxLRFhFVmhROTcxUHFTcVpnN1V0eTNSVEdkRzRoVW1ZUVlVZ19tQnNHLWVWVms2c0lJLU4yT2tnaVA5bmdfa2pTSEFITXd2LVpmdlFsTFVfRmE2dHo",
+    "published_at": "2026-10-14T10:36:00+00:00",
+    "published_raw": "Wed, 14 Oct 2026 10:36:00 GMT",
+    "summary": "Cabinet approves continuation of the National Social Assistance Programme for five years from 2026-27 to 2030-31 Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4261,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "Union Minister of Culture and Tourism Shri Gajendra Singh Shekhawat Inaugurates ‘TAKSHANAM’, An Exhibition Bringing Together 150 Artists and Over 250 Sculptures at NGMA - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1OZjBDZlFWa3Znem1hNm5xTGNJREVKNlY3V0hxSDN3eFhNWWtJZDJfemI4MHN5ODNDWUJpbTlRVmxMbWQ4MnpmTW1NUk1ITzhyck5GcjlCeGUxMnZHdzR1XzJfeEVNclZt",
+    "native_id": "CBMiaEFVX3lxTE1OZjBDZlFWa3Znem1hNm5xTGNJREVKNlY3V0hxSDN3eFhNWWtJZDJfemI4MHN5ODNDWUJpbTlRVmxMbWQ4MnpmTW1NUk1ITzhyck5GcjlCeGUxMnZHdzR1XzJfeEVNclZt",
+    "published_at": "2026-10-15T15:54:00+00:00",
+    "published_raw": "Thu, 15 Oct 2026 15:54:00 GMT",
+    "summary": "Union Minister of Culture and Tourism Shri Gajendra Singh Shekhawat Inaugurates ‘TAKSHANAM’, An Exhibition Bringing Together 150 Artists and Over 250 Sculptures at NGMA Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4262,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "India Must Move from Being a Global Content Market to a Creator of Globally Competitive Media and Entertainment Companies: Secretary, I&B, at CII Big Picture Summit 2026 - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBkRTZBbDBaZ29qdmRTS1B3cWo5V2lnekpOWm5BT2tvemNPeUFOdVAwTV9YWE1PbFB3SDJwRkt4eTlNeTFiUDBtV1dKNFVpY2MwTlJYaXlfRUhaUzhUa3NaTTZzdw",
+    "native_id": "CBMiY0FVX3lxTFBkRTZBbDBaZ29qdmRTS1B3cWo5V2lnekpOWm5BT2tvemNPeUFOdVAwTV9YWE1PbFB3SDJwRkt4eTlNeTFiUDBtV1dKNFVpY2MwTlJYaXlfRUhaUzhUa3NaTTZzdw",
+    "published_at": "2026-10-15T10:46:00+00:00",
+    "published_raw": "Thu, 15 Oct 2026 10:46:00 GMT",
+    "summary": "India Must Move from Being a Global Content Market to a Creator of Globally Competitive Media and Entertainment Companies: Secretary, I&B, at CII Big Picture Summit 2026 Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4263,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "National Steering Committee Approves ₹1,194.92 Crore Investment Under PM-SETU for Five ITI Clusters Across Maharashtra, Odisha and Jammu & Kashmir - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE0xVURPeHZFWVJmQ25jU0lCTVhtUXhQRHNjYkUycTRGUm84My1BNXA3UDZQWEVhclROdXh4bHd4RHlESVYxeVFRbmVTdjloVU9ZNWFxVWItaW9XVkVFd1VDbE5NQ25oWkdXTHluRnhWdmo5aENQUDZ3S1dMVQ",
+    "native_id": "CBMie0FVX3lxTE0xVURPeHZFWVJmQ25jU0lCTVhtUXhQRHNjYkUycTRGUm84My1BNXA3UDZQWEVhclROdXh4bHd4RHlESVYxeVFRbmVTdjloVU9ZNWFxVWItaW9XVkVFd1VDbE5NQ25oWkdXTHluRnhWdmo5aENQUDZ3S1dMVQ",
+    "published_at": "2026-10-16T09:55:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 09:55:00 GMT",
+    "summary": "National Steering Committee Approves ₹1,194.92 Crore Investment Under PM-SETU for Five ITI Clusters Across Maharashtra, Odisha and Jammu & Kashmir Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4264,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "CABINET DECISIONS 2025 - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8wNmZiMW00SkhEWTdxUzBram5ILXlOa1AwUWxiSGRXM2xEU3E3Wkg4Tk9qczRGYktidlZKQS1SR0xjYnk4ejNYankyTHFMa19yV0pGUEJTTnByRl83M0dJei1wM1NUZGZrQWJ5aUtKWmg",
+    "native_id": "CBMicEFVX3lxTE8wNmZiMW00SkhEWTdxUzBram5ILXlOa1AwUWxiSGRXM2xEU3E3Wkg4Tk9qczRGYktidlZKQS1SR0xjYnk4ejNYankyTHFMa19yV0pGUEJTTnByRl83M0dJei1wM1NUZGZrQWJ5aUtKWmg",
+    "published_at": "2026-10-15T15:56:00+00:00",
+    "published_raw": "Thu, 15 Oct 2026 15:56:00 GMT",
+    "summary": "CABINET DECISIONS 2025 Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4265,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "Cabinet approves Productivity Linked Bonus (PLB) for 78 days to Railway Employees - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAyN3JCMS1GQlNuRUpFNUFuMW83M3F3ODdJN3dwdkVUVHpqZmtmcDE3WkU2ZDh0TkpESzkxYzJERkFJT0tTY0tjVjJzWi1iQzlVaFVBRFpMWWJFM2NCNFFHdHBXcHA1bzd2",
+    "native_id": "CBMiaEFVX3lxTFAyN3JCMS1GQlNuRUpFNUFuMW83M3F3ODdJN3dwdkVUVHpqZmtmcDE3WkU2ZDh0TkpESzkxYzJERkFJT0tTY0tjVjJzWi1iQzlVaFVBRFpMWWJFM2NCNFFHdHBXcHA1bzd2",
+    "published_at": "2026-10-14T10:33:00+00:00",
+    "published_raw": "Wed, 14 Oct 2026 10:33:00 GMT",
+    "summary": "Cabinet approves Productivity Linked Bonus (PLB) for 78 days to Railway Employees Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4266,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "ਟੈਂਡਰ - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5lSnhCRkhqVG95THN2aEt1QnQwMTg4TEVrcUtwY1lqd1haVW9saU5wUGVIUV9ONmxCMUFpWXVjWEZ3RnVaRlp1eHdhbFMzOEZtdlZlSzJzMU5xRWxYem90MDBGVzVOYzVuSG9NbC1UeFVzOUVHX0E",
+    "native_id": "CBMidkFVX3lxTE5lSnhCRkhqVG95THN2aEt1QnQwMTg4TEVrcUtwY1lqd1haVW9saU5wUGVIUV9ONmxCMUFpWXVjWEZ3RnVaRlp1eHdhbFMzOEZtdlZlSzJzMU5xRWxYem90MDBGVzVOYzVuSG9NbC1UeFVzOUVHX0E",
+    "published_at": "2026-10-16T06:32:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 06:32:00 GMT",
+    "summary": "ਟੈਂਡਰ Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4267,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "Cabinet approves Productivity Linked Bonus (PLB) for 78 days to Railway Employees - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9XczhlelQxdS1ZMHhWUWttVGlteENoWGpxbks3WUFoZFJaekt1X0dXNzZYbjhlWWg0RHlCY2VKVkl5MmIxTXpnajJOSEl4dG9OMS1UQTh4UmlxVTZVOGdVemRDRjNRV1dPUjF0Qy05U0dYa01FbHVRUXVVZw",
+    "native_id": "CBMie0FVX3lxTE9XczhlelQxdS1ZMHhWUWttVGlteENoWGpxbks3WUFoZFJaekt1X0dXNzZYbjhlWWg0RHlCY2VKVkl5MmIxTXpnajJOSEl4dG9OMS1UQTh4UmlxVTZVOGdVemRDRjNRV1dPUjF0Qy05U0dYa01FbHVRUXVVZw",
+    "published_at": "2026-10-14T10:33:00+00:00",
+    "published_raw": "Wed, 14 Oct 2026 10:33:00 GMT",
+    "summary": "Cabinet approves Productivity Linked Bonus (PLB) for 78 days to Railway Employees Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4268,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "| PIB - pib.gov.in",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9WdWZ5T00ycFcwZVZDelBxZGZPTnhjZXhYVGJfZUh2bTk5ZzlzOG90eG9XQlJHbDNyVUFpNUticTZHMmpjZ1lrdVNwZjJkYW0yM1o4VGdfMi1SZ3Vna2k4SVhGb2hLRkRuS3Bib2UwZw",
+    "native_id": "CBMib0FVX3lxTE9WdWZ5T00ycFcwZVZDelBxZGZPTnhjZXhYVGJfZUh2bTk5ZzlzOG90eG9XQlJHbDNyVUFpNUticTZHMmpjZ1lrdVNwZjJkYW0yM1o4VGdfMi1SZ3Vna2k4SVhGb2hLRkRuS3Bib2UwZw",
+    "published_at": "2026-10-14T14:59:00+00:00",
+    "published_raw": "Wed, 14 Oct 2026 14:59:00 GMT",
+    "summary": "| PIB pib.gov.in",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4269,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "PRESIDENT OF INDIA PAYS FLORAL TRIBUTES TO DR. APJ ABDUL KALAM ON HIS BIRTH ANNIVERSARY - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9jUDNvRmVCZXE1LW0yMUowNlRfbHFZdll6SUxKQlhtdjYzTFBGQV9jaGRWTlQtWnV5MUtLOFVrZVNEdkpiWVB2UGFfeTNyRkxHdExqUmFhNF9rQTFXeUZmcWNkUmRvU1NyV3ZhLVcwRE1lUVd2ZzV3aXZZb1I",
+    "native_id": "CBMifEFVX3lxTE9jUDNvRmVCZXE1LW0yMUowNlRfbHFZdll6SUxKQlhtdjYzTFBGQV9jaGRWTlQtWnV5MUtLOFVrZVNEdkpiWVB2UGFfeTNyRkxHdExqUmFhNF9rQTFXeUZmcWNkUmRvU1NyV3ZhLVcwRE1lUVd2ZzV3aXZZb1I",
+    "published_at": "2026-10-15T06:58:00+00:00",
+    "published_raw": "Thu, 15 Oct 2026 06:58:00 GMT",
+    "summary": "PRESIDENT OF INDIA PAYS FLORAL TRIBUTES TO DR. APJ ABDUL KALAM ON HIS BIRTH ANNIVERSARY Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4270,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "Manufacturing Momentum:Building a Self-Reliant India - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9zazRZV0FSRlE2VW05MVA5aVZWRmhfQS1iU3J2NEFzdUg0T2RDX19VZU1lUkFfT3Vsc0RyRWZKczF3cnYwRERPLWtIYm9Za2M0dWxCTnJ4VHYzc0gtZVRndGFJbG9rdXFLeDFrRG1uaU1nVzEtQV9F",
+    "native_id": "CBMid0FVX3lxTE9zazRZV0FSRlE2VW05MVA5aVZWRmhfQS1iU3J2NEFzdUg0T2RDX19VZU1lUkFfT3Vsc0RyRWZKczF3cnYwRERPLWtIYm9Za2M0dWxCTnJ4VHYzc0gtZVRndGFJbG9rdXFLeDFrRG1uaU1nVzEtQV9F",
+    "published_at": "2026-10-16T11:01:46+00:00",
+    "published_raw": "Fri, 16 Oct 2026 11:01:46 GMT",
+    "summary": "Manufacturing Momentum:Building a Self-Reliant India Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4271,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "Copyright Policy | PIB - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE85VVotMGktaE9ZazI0a0hKN3hzaU84aHpqNUtWQzdDcmtYVlA2MVFmRzRhTFB1YlpaU0VOdlpWYnFZdkFoNGJpMktOVkdUZk5ReFl4TEY4VDhMc0dwSTdoWlpMUUFfNmdmdmdScXRVYUNoS29KZnVDUVB3Yw",
+    "native_id": "CBMie0FVX3lxTE85VVotMGktaE9ZazI0a0hKN3hzaU84aHpqNUtWQzdDcmtYVlA2MVFmRzRhTFB1YlpaU0VOdlpWYnFZdkFoNGJpMktOVkdUZk5ReFl4TEY4VDhMc0dwSTdoWlpMUUFfNmdmdmdScXRVYUNoS29KZnVDUVB3Yw",
+    "published_at": "2026-10-15T14:30:00+00:00",
+    "published_raw": "Thu, 15 Oct 2026 14:30:00 GMT",
+    "summary": "Copyright Policy | PIB Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4272,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "Release of 121st Issue of Sarvekshana, Journal of Official Statistics - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBIaFNzeTBxRnBjQjkxbnNiRUdXSElxTWlrQkYxTVJ2WUNZNEJCZzdpUzQ4N29waE51eDlYQUgtU2FBOGttMV81VjBob0NtRGk2Zi1Vbjh4RzlvLVpndmJBaG5DNEhuLXBFUWppUk9FcFJNQko3TFhVSEkxNHU1Zw",
+    "native_id": "CBMifkFVX3lxTFBIaFNzeTBxRnBjQjkxbnNiRUdXSElxTWlrQkYxTVJ2WUNZNEJCZzdpUzQ4N29waE51eDlYQUgtU2FBOGttMV81VjBob0NtRGk2Zi1Vbjh4RzlvLVpndmJBaG5DNEhuLXBFUWppUk9FcFJNQko3TFhVSEkxNHU1Zw",
+    "published_at": "2026-10-14T13:34:00+00:00",
+    "published_raw": "Wed, 14 Oct 2026 13:34:00 GMT",
+    "summary": "Release of 121st Issue of Sarvekshana, Journal of Official Statistics Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4273,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "PIB Backgrounder - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNcUQ3cUd5ODY0QVo3X0Q2RGF6NjJnbDUycHlSOHdmOW5ucU5taFpDc1Iyb2tUM0ttTGl2aVEzVXZmZ2pTeVk0S1pMYV90U0NoTVFPbU5xcTlfRnFqNDNiWUZIbnMtdVkyZVJMWWY1NUszRUVSd2QyUjA1UUlZV1k4cQ",
+    "native_id": "CBMigAFBVV95cUxNcUQ3cUd5ODY0QVo3X0Q2RGF6NjJnbDUycHlSOHdmOW5ucU5taFpDc1Iyb2tUM0ttTGl2aVEzVXZmZ2pTeVk0S1pMYV90U0NoTVFPbU5xcTlfRnFqNDNiWUZIbnMtdVkyZVJMWWY1NUszRUVSd2QyUjA1UUlZV1k4cQ",
+    "published_at": "2026-10-16T06:35:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 06:35:00 GMT",
+    "summary": "PIB Backgrounder Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4274,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "BHAVYA: Creating Investment-Ready Manufacturing Ecosystems - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFByV1o4aGt4MlZ4Uk50c3l5VE1qRUJuRXlSWGxsZE1qd0RucUlQbGVUdjRoY1RqZlE5eFB0TnIxNkdWdjdOdVVaaVE0OUJlcnJFdllNY2pMYU5uSXdwN2NvT2RSQW5ITjB1QjJyVHAxZkl1T0Y5OFE5UFhENXE4UQ",
+    "native_id": "CBMifkFVX3lxTFByV1o4aGt4MlZ4Uk50c3l5VE1qRUJuRXlSWGxsZE1qd0RucUlQbGVUdjRoY1RqZlE5eFB0TnIxNkdWdjdOdVVaaVE0OUJlcnJFdllNY2pMYU5uSXdwN2NvT2RSQW5ITjB1QjJyVHAxZkl1T0Y5OFE5UFhENXE4UQ",
+    "published_at": "2026-10-14T06:59:00+00:00",
+    "published_raw": "Wed, 14 Oct 2026 06:59:00 GMT",
+    "summary": "BHAVYA: Creating Investment-Ready Manufacturing Ecosystems Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4275,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "India's Defence Strength Powering National Security through Self-Reliance - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNSXhmbWpCRmpqV01rdkJhc2VWZFRIbk92TGtJUllkV2pQaS1vR2Z5ZzgzdlNsUXVOZktzUnE2ZWRjckZ3bmxSNnlvbEh4VGNuZkpNSG9yanZPQUhybUNfSDZzYmZwdVJ3akdlUzlHMEhOVVZCSHhFb2pxRVFSc2NGdmZMWnZDNklWQlE",
+    "native_id": "CBMiigFBVV95cUxNSXhmbWpCRmpqV01rdkJhc2VWZFRIbk92TGtJUllkV2pQaS1vR2Z5ZzgzdlNsUXVOZktzUnE2ZWRjckZ3bmxSNnlvbEh4VGNuZkpNSG9yanZPQUhybUNfSDZzYmZwdVJ3akdlUzlHMEhOVVZCSHhFb2pxRVFSc2NGdmZMWnZDNklWQlE",
+    "published_at": "2026-10-14T14:25:00+00:00",
+    "published_raw": "Wed, 14 Oct 2026 14:25:00 GMT",
+    "summary": "India's Defence Strength Powering National Security through Self-Reliance Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4276,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "14th India-Mongolia Joint Working Group meeting reaffirms commitment to strengthening bilateral defence partnership - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZS1QbzZkRDFGVmhNUDJSZmJ1TllwRVVFWnl6Wmhwc3Y2bDNlZ1FVdlNwWjRFS18tQjR0U1VOR0hTc2I0R21LRUFnMzNfNGRlcHhXbmlXM0dyemp6a19CbmlIMA",
+    "native_id": "CBMiY0FVX3lxTE9iZS1QbzZkRDFGVmhNUDJSZmJ1TllwRVVFWnl6Wmhwc3Y2bDNlZ1FVdlNwWjRFS18tQjR0U1VOR0hTc2I0R21LRUFnMzNfNGRlcHhXbmlXM0dyemp6a19CbmlIMA",
+    "published_at": "2026-10-16T11:12:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 11:12:00 GMT",
+    "summary": "14th India-Mongolia Joint Working Group meeting reaffirms commitment to strengthening bilateral defence partnership Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4277,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "NFSC Fellowship Empowers Ajay Kumar to Pursue His PhD - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1pYmJSVGw2WDQ3SGN3RUtnNFJKMzg3cG1ZdXNNXzR4N29YNEl4djN1NXdKNjhYOU1RVExmaHFiRlhnaXVFeEFCMmMyUGJveFUtRi1LQjVYY1d0dHJIMkM4eWJJOGJzUHZfazZoTzJiTVBoZ2g2T196VWdqaw",
+    "native_id": "CBMie0FVX3lxTE1pYmJSVGw2WDQ3SGN3RUtnNFJKMzg3cG1ZdXNNXzR4N29YNEl4djN1NXdKNjhYOU1RVExmaHFiRlhnaXVFeEFCMmMyUGJveFUtRi1LQjVYY1d0dHJIMkM4eWJJOGJzUHZfazZoTzJiTVBoZ2g2T196VWdqaw",
+    "published_at": "2026-10-16T08:24:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 08:24:00 GMT",
+    "summary": "NFSC Fellowship Empowers Ajay Kumar to Pursue His PhD Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4278,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "Central Government approves India’s accession to Southern Indian Ocean Fisheries Agreement (SIOFA) - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBuUDdIVnBrQ0lvX21oYlJHUkVtakt2QjN1VzZ4UFF5VzNENGM4NUVKaVdscXl6djBoN0xzbjVLMFhmbXNlbXZQR2x4WW9oeW5IbnhXRkluS3RZS3M0aUJGaHlIa3J0dWVQdjdiX25oZUNWZlZBLVBOYzMtbll3UQ",
+    "native_id": "CBMifkFVX3lxTFBuUDdIVnBrQ0lvX21oYlJHUkVtakt2QjN1VzZ4UFF5VzNENGM4NUVKaVdscXl6djBoN0xzbjVLMFhmbXNlbXZQR2x4WW9oeW5IbnhXRkluS3RZS3M0aUJGaHlIa3J0dWVQdjdiX25oZUNWZlZBLVBOYzMtbll3UQ",
+    "published_at": "2026-10-14T11:48:00+00:00",
+    "published_raw": "Wed, 14 Oct 2026 11:48:00 GMT",
+    "summary": "Central Government approves India’s accession to Southern Indian Ocean Fisheries Agreement (SIOFA) Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4279,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "Swachhata Se Sabhyata Session Held At Department of Social Justice and Empowerment - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQSXZQcEV3S2YzTWhsaElsSURsVDJmNExLTWszYmtyalhWYUdoZHBxb2txU1A2N3N2djFlNEFacVdTbE96aGxkWXUwVWVOSkhmTEE1X0xIV29WTDNUTWx4V1FyRFJfSVRQbGRibnBxQng0SFg1SThBbkxSUnozTFE5aWsyR2pwRUIyOWtB",
+    "native_id": "CBMiiwFBVV95cUxQSXZQcEV3S2YzTWhsaElsSURsVDJmNExLTWszYmtyalhWYUdoZHBxb2txU1A2N3N2djFlNEFacVdTbE96aGxkWXUwVWVOSkhmTEE1X0xIV29WTDNUTWx4V1FyRFJfSVRQbGRibnBxQng0SFg1SThBbkxSUnozTFE5aWsyR2pwRUIyOWtB",
+    "published_at": "2026-10-14T11:30:00+00:00",
+    "published_raw": "Wed, 14 Oct 2026 11:30:00 GMT",
+    "summary": "Swachhata Se Sabhyata Session Held At Department of Social Justice and Empowerment Press Information Bureau",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4280,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "Integrated Transport and Logistics Authority (ITLA) - pib.gov.in",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTVZnd1ZUX2ZSeDJvWTFHdVBtZC0zaHp2THJLOVBQTzdVbzUzSVdEMk5ZaXJOZW1HRFJjNjJFR2lrRkNCcG9RMEVJdE1BZ01yazBtSERDRFNjcUxHWjZIblo3OHd6dUVCUFFHV3JUY0hTMGlQQ3llWkYxYmZFa2pXVmdMbWVuSExXWnVuWXc2amtiQUxJYW0ybnVR",
+    "native_id": "CBMimgFBVV95cUxNTVZnd1ZUX2ZSeDJvWTFHdVBtZC0zaHp2THJLOVBQTzdVbzUzSVdEMk5ZaXJOZW1HRFJjNjJFR2lrRkNCcG9RMEVJdE1BZ01yazBtSERDRFNjcUxHWjZIblo3OHd6dUVCUFFHV3JUY0hTMGlQQ3llWkYxYmZFa2pXVmdMbWVuSExXWnVuWXc2amtiQUxJYW0ybnVR",
+    "published_at": "2026-10-14T12:21:56+00:00",
+    "published_raw": "Wed, 14 Oct 2026 12:21:56 GMT",
+    "summary": "Integrated Transport and Logistics Authority (ITLA) pib.gov.in",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4281,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "Women, Work and Enterprise: India’s Push for Better Livelihoods - www.pib.gov.in",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9nMno2WnVmRkFHbFNhTnBrVnU0Ni1ZcHRFeFNnSDNxMjF6aktYM0s2M24zWXBqZGpremRVNXlPWHc4M0RKWkRGRXNfRExMZ1lVaEpOQjJ6RG5pT0NKYm9raXFvUTB4dm44MDhn",
+    "native_id": "CBMia0FVX3lxTE9nMno2WnVmRkFHbFNhTnBrVnU0Ni1ZcHRFeFNnSDNxMjF6aktYM0s2M24zWXBqZGpremRVNXlPWHc4M0RKWkRGRXNfRExMZ1lVaEpOQjJ6RG5pT0NKYm9raXFvUTB4dm44MDhn",
+    "published_at": "2026-10-15T06:53:00+00:00",
+    "published_raw": "Thu, 15 Oct 2026 06:53:00 GMT",
+    "summary": "Women, Work and Enterprise: India’s Push for Better Livelihoods www.pib.gov.in",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "India Press Information Bureau (official-site news mirror)",
+      "jurisdiction": "IN",
+      "family": "executive_and_administrative"
+    },
+    "primary_source_id": "in-pib-gnews",
+    "n": 4282,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "in-pib-gnews"
+    ]
+  },
+  {
+    "title": "JFTC Holds the Knowledge Co-Creation Program for Developing Countries on the Antimonopoly Act and Competition Policy | Japan Fair Trade Commission - 公正取引委員会",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPV1V5WDM3aTN6WTYzcUhGdkYweDRzZmZ4RGR3UWU5MmtJUEF6UlZXMVYzeWQyNjRzNUZDVzlPSTdzTFVoZ24xYVdCVUFfVXZkQzR3OHVqX1lGNDVxdVQ5NjVTSlYwa2NxektQNGp6M2U4blpubTZtS3QxV3JvVW5aNmxB",
+    "native_id": "CBMiggFBVV95cUxPV1V5WDM3aTN6WTYzcUhGdkYweDRzZmZ4RGR3UWU5MmtJUEF6UlZXMVYzeWQyNjRzNUZDVzlPSTdzTFVoZ24xYVdCVUFfVXZkQzR3OHVqX1lGNDVxdVQ5NjVTSlYwa2NxektQNGp6M2U4blpubTZtS3QxV3JvVW5aNmxB",
+    "published_at": "2026-10-14T09:27:17+00:00",
+    "published_raw": "Wed, 14 Oct 2026 09:27:17 GMT",
+    "summary": "JFTC Holds the Knowledge Co-Creation Program for Developing Countries on the Antimonopoly Act and Competition Policy | Japan Fair Trade Commission 公正取引委員会",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Japan Fair Trade Commission (official-site news mirror)",
+      "jurisdiction": "JP",
+      "family": "competition_and_enforcement"
+    },
+    "primary_source_id": "jp-jftc-gnews",
+    "n": 4283,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
+    "source_ids": [
+      "jp-jftc-gnews"
     ]
   }
 ]

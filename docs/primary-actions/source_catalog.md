@@ -1,6 +1,6 @@
 # Primary-origin source catalog
 
-Verified 2026-10-16T16:56:08.416284+00:00. 2150 institution records; 458 enabled publication channels out of 543 checked candidates.
+Verified 2026-10-16T17:09:20.895193+00:00. 2150 institution records; 462 enabled publication channels out of 546 checked candidates.
 
 Institution records include historical/closed bodies and shared portals. This is a maintained coverage catalog, not an exhaustive worldwide directory. Disabled/blocked channels remain visible below.
 
@@ -212,7 +212,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Securities and Exchange Commission | US | enforcement_and_market_rules | [rss](https://www.sec.gov/enforcement-litigation/administrative-proceedings/rss) | True | ok |
 | Federal Trade Commission | US | competition_and_enforcement | [rss](https://www.ftc.gov/news-events/news/press-releases/rss) | False | invalid_feed_or_network_error |
 | Federal Trade Commission — Press Releases | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/press-release.xml) | True | ok |
-| Federal Trade Commission — Competition Press Releases | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/press-release-competition.xml) | False | invalid_feed_or_network_error |
+| Federal Trade Commission — Competition Press Releases | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/press-release-competition.xml) | True | ok |
 | Federal Trade Commission — Consumer Protection Press Releases | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/press-release-consumer-protection.xml) | True | ok |
 | Federal Trade Commission — HSR Early Termination Notices | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/hsr-early-termination-notices.xml) | True | ok |
 | Federal Trade Commission — Consumer Blog | US | competition_and_enforcement | [rss](https://www.consumer.ftc.gov/blog/gd-rss.xml) | False | ok; reference data, research, speeches or commentary |
@@ -244,7 +244,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Reserve Board — Governor Christopher J. Waller | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_waller.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Credit and Liquidity Programs and the Balance Sheet | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/clp.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Current Frequently Asked Questions | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/currentfaqs.xml) | False | ok; reference data, research, speeches or commentary |
-| Federal Reserve Board — Office of Inspector General | US | monetary_operations | [rss](https://oig.federalreserve.gov/feeds/oig.xml) | True | ok |
+| Federal Reserve Board — Office of Inspector General | US | monetary_operations | [rss](https://oig.federalreserve.gov/feeds/oig.xml) | False | invalid_feed_or_network_error |
 | Federal Reserve Board — Regulatory Reform | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/regreform.xml) | True | valid_empty |
 | Federal Reserve Board — Board Meetings | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/boardmeetings.xml) | True | ok |
 | Federal Reserve Board — Reporting Forms | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/reportforms-rss.xml) | True | ok |
@@ -312,8 +312,8 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Communications Commission — Commissioner's Testimonies | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Testimony) | True | ok |
 | Federal Communications Commission — Broadcast Actions | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Broadcast_Action) | True | ok |
 | Federal Communications Commission — Broadcast Applications | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Broadcast_App) | True | ok |
-| Federal Communications Commission — Call Sign Changes | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Callsign_Changes) | False | invalid_feed_or_network_error |
-| Federal Communications Commission — Citations | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Cit) | False | invalid_feed_or_network_error |
+| Federal Communications Commission — Call Sign Changes | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Callsign_Changes) | True | ok |
+| Federal Communications Commission — Citations | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Cit) | True | ok |
 | Federal Communications Commission — Compliance Guides | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Guide) | True | ok |
 | Federal Communications Commission — Court Filings | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Court_Filing) | True | ok |
 | Federal Communications Commission — Court Opinions | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Court_Opinion) | True | ok |
@@ -331,7 +331,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Communications Commission — Studies | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Study) | True | ok |
 | Federal Communications Commission — TV Notices | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/TV_Notices) | True | ok |
 | Federal Communications Commission — Consumer & Governmental Affairs Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/CGB) | True | ok |
-| Federal Communications Commission — Enforcement Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/EB) | True | ok |
+| Federal Communications Commission — Enforcement Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/EB) | True | valid_empty |
 | Federal Communications Commission — International Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/IB) | True | ok |
 | Federal Communications Commission — Media Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/MB) | True | ok |
 | Federal Communications Commission — Public Safety & Homeland Security Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/PSHSB) | True | valid_empty |
@@ -343,7 +343,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Communications Commission — Office of Economics and Analytics | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OEA) | True | ok |
 | Federal Communications Commission — Office of Economics and Analytics - Auctions | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/AU) | True | ok |
 | Federal Communications Commission — Office of Engineering & Technology | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OET) | True | ok |
-| Federal Communications Commission — Office of General Counsel | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OGC) | True | ok |
+| Federal Communications Commission — Office of General Counsel | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OGC) | True | valid_empty |
 | Federal Communications Commission — Office of Inspector General | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OIG) | True | ok |
 | Federal Communications Commission — Office of International Affairs | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OIA) | True | valid_empty |
 | Federal Communications Commission — Office of Legislative Affairs | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OLA) | True | ok |
@@ -366,7 +366,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Department of State — United States Department of State » Feed | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/feed/) | True | valid_empty |
 | Department of State — United States Department of State » Comments Feed | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/comments/feed/) | True | valid_empty |
 | US Citizenship and Immigration Services | US | official_clarification_and_administration | [rss](https://www.uscis.gov/news/rss-feed/59144) | True | ok |
-| US Citizenship and Immigration Services — Content Listing | US | official_clarification_and_administration | [rss](https://www.uscis.gov/news/rss-feed/22984) | True | ok |
+| US Citizenship and Immigration Services — Content Listing | US | official_clarification_and_administration | [rss](https://www.uscis.gov/news/rss-feed/22984) | False | invalid_feed_or_network_error |
 | Federal Maritime Commission | US | transport_permissions | [rss](https://www.fmc.gov/feed/) | True | ok |
 | Federal Housing Finance Agency | US | financial_enforcement | [html_index](https://www.fhfa.gov/news/news-release) | True | ok |
 | Grants.gov | US | grant_opportunities_not_awards | [rss](https://www.grants.gov/custom/spoExit.jsp?p=rss/GG_OppModByAgency.xml) | False | invalid_feed_or_network_error |
@@ -377,6 +377,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | California Office of Administrative Law — OAL » Feed | US-CA | regulation | [rss](https://oal.ca.gov/feed/) | True | ok |
 | European Commission press and decisions | EU | executive_and_regulatory | [rss](https://ec.europa.eu/commission/presscorner/api/rss?language=en) | True | ok |
 | Council of the European Union | EU | sanctions_and_legislation | [rss](https://www.consilium.europa.eu/en/rss/pressreleases.ashx) | True | ok |
+| Court of Justice of the European Union | EU | judicial_decisions | [rss](https://curia.europa.eu/site/rss.jsp?lang=en&secondLang=fr) | True | ok |
 | Court of Justice of the European Union — Български / BG | EU | judicial_decisions | [rss](https://curia.europa.eu/site/jcms/qua1_6621/bg/rss) | False | invalid_feed_or_network_error |
 | Court of Justice of the European Union — Español / ES | EU | judicial_decisions | [rss](https://curia.europa.eu/site/jcms/qua1_6621/es/rss) | False | invalid_feed_or_network_error |
 | Court of Justice of the European Union — Čeština / CS | EU | judicial_decisions | [rss](https://curia.europa.eu/site/jcms/qua1_6621/cs/rss) | False | invalid_feed_or_network_error |
@@ -509,6 +510,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Hong Kong Government Information Services | HK | executive_and_administrative | [rss](https://www.info.gov.hk/gia/rss/general_en.xml) | True | ok |
 | Hong Kong Securities and Futures Commission | HK | financial_enforcement | [rss](https://www.sfc.hk/en/RSS-Feeds/Press-releases) | True | ok |
 | Health Sciences Authority Singapore — Health Sciences Authority — Announcements | SG | product_permissions_and_safety | [rss](https://www.hsa.gov.sg/announcements/rss.xml) | True | ok |
+| India Press Information Bureau (official-site news mirror) | IN | executive_and_administrative | [google_news_rss](https://news.google.com/rss/search?q=site%3Apib.gov.in+when%3A14d&hl=en-US&gl=US&ceid=US:en) | True | ok |
 | Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/pressreleases_rss.xml) | True | ok |
 | Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/notifications_rss.xml) | True | ok |
 | Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/speeches_rss.xml) | False | ok; reference data, research, speeches or commentary |
@@ -520,6 +522,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Ministry of Commerce of China announcements and orders | CN | trade_and_export_controls | [html_index](https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/index.html) | False | selector_empty |
 | Bank of Japan | JP | monetary_operations | [rss](https://www.boj.or.jp/en/rss/whatsnew.xml) | True | ok |
 | Japan Ministry of Economy Trade and Industry | JP | trade_and_industry_policy | [html_index](https://www.meti.go.jp/english/press/) | True | ok |
+| Japan Fair Trade Commission (official-site news mirror) | JP | competition_and_enforcement | [google_news_rss](https://news.google.com/rss/search?q=site%3Ajftc.go.jp+when%3A14d&hl=en-US&gl=US&ceid=US:en) | True | ok |
 | Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_008.xml) | True | ok |
 | Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_011.xml) | True | ok |
 | Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_013.xml) | True | ok |
@@ -2674,7 +2677,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Gazette of India | IN | official_publication_page_checked | [source](https://egazette.gov.in/) |
 | Competition Commission of India | IN | official_publication_page_checked | [source](https://www.cci.gov.in/) |
 | State Council of China policies | CN | official_publication_page_checked | [source](https://english.www.gov.cn/policies/) |
-| Ministry of Commerce of China announcements and orders | CN | page_unavailable; verification pending | [source](https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/index.html) |
+| Ministry of Commerce of China announcements and orders | CN | official_publication_page_checked | [source](https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/index.html) |
 | People's Bank of China | CN | official_publication_page_checked | [source](http://www.pbc.gov.cn/en/) |
 | Bank of Japan | JP | official_publication_page_checked | [source](https://www.boj.or.jp/en/) |
 | Japan Ministry of Economy Trade and Industry | JP | official_publication_page_checked | [source](https://www.meti.go.jp/english/press/) |

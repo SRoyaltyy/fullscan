@@ -1,11 +1,11 @@
 [
   {
-    "title": "First Circuit dimisses petitions for review - In re: MCP 191, No. 24-8028",
-    "url": "https://www.fcc.gov/edoc/425930",
-    "native_id": "425930",
+    "title": "In the Matter of Mexico IP Phone LLC",
+    "url": "https://www.fcc.gov/edoc/425921",
+    "native_id": "425921",
     "published_at": null,
     "published_raw": "",
-    "summary": "First Circuit Court of Appeals dismisses petitions in part and hold them in abeyance in part",
+    "summary": "FCC removes the certification of Mexico IP Phone from the Robocall Mitigation Database for intentionally recertifying its RMD certification without the required information and for transmitting high-volume illegal traffic.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -16,12 +16,12 @@
       "family": "telecom_rules_and_licences"
     },
     "primary_source_id": "us-fcc-adabf37abf",
-    "n": 4220,
-    "first_seen": "2026-10-16T16:57:58.207129+00:00",
-    "last_seen": "2026-10-16T16:57:58.207129+00:00",
+    "n": 4246,
+    "first_seen": "2026-10-16T17:11:08.931182+00:00",
+    "last_seen": "2026-10-16T17:11:08.931182+00:00",
     "source_ids": [
-      "us-fcc-782802e621",
-      "us-fcc-adabf37abf"
+      "us-fcc-adabf37abf",
+      "us-fcc-eeb7d739be"
     ]
   }
 ]
