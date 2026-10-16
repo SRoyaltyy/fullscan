@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T16:28:33.126182-04:00",
+  "generated_at": "2026-10-16T16:40:06.330406-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -808,7 +808,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=190",
-          "size": 1427418,
+          "size": 1427416,
           "said": "1d BUY MQ, PDFS, IT, TOST, PRCH, VEEV, ARQT, ETON \u00b7 SELL ROIV, SOC, NEOV, GH, IFRX, APA \u00b7 0.61285",
           "bullets": []
         },
@@ -822,7 +822,7 @@
           "size": 70199,
           "said": "Stock book \u2014 2026-10-16",
           "bullets": [
-            "_Generated 2026-10-16T08:44:51.266687-04:00_",
+            "_Generated 2026-10-16T16:40:02.906431-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -886,7 +886,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=190",
-          "size": 1427418,
+          "size": 1427416,
           "said": "1d BUY MQ, PDFS, IT, TOST, PRCH, VEEV, ARQT, ETON \u00b7 SELL ROIV, SOC, NEOV, GH, IFRX, APA \u00b7 0.61285",
           "bullets": []
         },
@@ -5765,6 +5765,30 @@
       "commit_msg": "auto: land finviz_market_digest_close [2026-10-16]",
       "workflow": "Finviz homepage market digest",
       "run_id": "38962057983",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-16_stock_book.md",
+      "at": "2026-10-16T16:40:34-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-16",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38962522292",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-16_input_health.json",
+      "at": "2026-10-16T16:40:34-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-16",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38962522292",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-16_stock_book.json",
+      "at": "2026-10-16T16:40:34-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-16",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38962522292",
       "manifest": "research/input_freeze/2026-10-16/manifest.json"
     }
   ]
