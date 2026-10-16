@@ -7408,5 +7408,93 @@
     "reason": "missing: plan not sealed before open",
     "recipe": "union_hot_n4_h1__w0",
     "sha256": "4441cadc44a00b5f916f5cfc9a9f5601a68f835c75e45e97dcc507a7eafd1c1a"
+  },
+  {
+    "bar_cutoff": "2026-10-15",
+    "cash_before": 18.41070278877669,
+    "committed_at": "2026-10-16T12:05:11Z",
+    "date": "2026-10-16",
+    "excluded_unexplained_legs": [],
+    "finviz_source": {
+      "commit": "dc9a57f0603ea21c5309144a1a5e992e7271d368",
+      "commit_time": "2026-10-15T20:39:42Z",
+      "file_sha256": "f3362daf1f450696336fe99af4e99af15eca1fc232d6f0f2734aa367ea61384e",
+      "path": "data/snapshots/2026-10-15.csv",
+      "snapshot_date": "2026-10-15",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": false,
+    "kind": "plan",
+    "morning_s": 5.526,
+    "picks": [
+      {
+        "fv_avg_volume": 7223.74,
+        "fv_price": 30.04,
+        "rank": 1,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "XP"
+      },
+      {
+        "fv_avg_volume": 843.46,
+        "fv_price": 2.85,
+        "rank": 2,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "INDP"
+      },
+      {
+        "fv_avg_volume": 8703.19,
+        "fv_price": 1.58,
+        "rank": 3,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "QTEX"
+      },
+      {
+        "fv_avg_volume": 6312.96,
+        "fv_price": 20.44,
+        "rank": 4,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "BBWI"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "hold-expired",
+        "shares": 27,
+        "ticker": "KOD"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 1234,
+        "ticker": "NAUT"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 34,
+        "ticker": "PENG"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 1222,
+        "ticker": "SDEV"
+      }
+    ],
+    "recipe": "union_hot_n4_h1__w0",
+    "s_source": {
+      "blob_sha": "51eb7e1ffbc8b365de0715c340de2b881f144070",
+      "kind": "predict",
+      "path": "01_daily/general/2026-10-16_predict.md",
+      "server_time_utc": "2026-10-16T19:27:27+08:00",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "c38b12490f6899e398d3fcf730fbb255ae3aa1918d1ab976aab0281d55bdc8d4"
   }
 ]
