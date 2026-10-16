@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T06:41:21.241424-04:00",
+  "generated_at": "2026-10-16T06:41:57.501235-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -27,6 +27,10 @@
       "score": 0.5128537234562535
     },
     {
+      "ticker": "PRCH",
+      "score": 0.734307049827778
+    },
+    {
       "ticker": "ASTH",
       "score": 0.5384464496419931
     },
@@ -37,10 +41,6 @@
     {
       "ticker": "MQ",
       "score": 0.8299452647162282
-    },
-    {
-      "ticker": "BAND",
-      "score": 0.7334445684017012
     }
   ],
   "sell_1d": [
@@ -88,24 +88,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-16T06:39:37.414440-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-16_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2218618,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KEYS, FORM, AVPT, MU, SKHY"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KEYS, FORM, AVPT, MU, SKHY"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -378,6 +360,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T06:41:56.670561-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-16_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1451052,
+          "preview": "1d BUY CON, AMN, HITI, SGRY, PRCH, ASTH, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, POWL, EOSE, TE, NNDM, AMSC"
+        },
+        {
+          "path": "data/stock_book/2026-10-16_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-16_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2578,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-16_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12439,
+          "preview": "2026-10-16 BUY CON, AMN, HITI, SGRY, PRCH, ASTH, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, POWL, EOSE, TE, NNDM, AMSC"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12439,
+          "preview": "2026-10-16 BUY CON, AMN, HITI, SGRY, PRCH, ASTH, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, POWL, EOSE, TE, NNDM, AMSC"
+        },
+        {
+          "path": "01_daily/2026-10-16_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 85469,
+          "preview": "# Stock book \u2014 2026-10-16\n_Generated 2026-10-16T06:41:31.340439-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CON, AMN, HITI, SGRY, PRCH, ASTH, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, POWL, EOSE, TE, NNDM, AMSC \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-16 BUY CON, AMN, HITI, SGRY, PRCH, ASTH, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, POWL, EOSE, TE, NNDM, AMSC \u00b7 2026-10-16 BUY CON, AMN, HITI, SGRY, PRCH, ASTH, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, POWL, EOSE, TE, NNDM, AMSC \u00b7 # Stock book \u2014 2026-10-16\n_Generated 2026-10-16T06:41:31.340439-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
