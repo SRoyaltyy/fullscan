@@ -224,7 +224,7 @@
       "latest_close": 158.01,
       "current_return_pct": 3.28,
       "horizon_returns_pct": {},
-      "mfe_pct": 3.52,
+      "mfe_pct": 3.5,
       "mfe_day": "2026-10-16",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-16"
@@ -554,7 +554,7 @@
       "latest_close": 529.05,
       "current_return_pct": 2.27,
       "horizon_returns_pct": {},
-      "mfe_pct": 3.17,
+      "mfe_pct": 3.16,
       "mfe_day": "2026-10-16",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-16"
@@ -1537,14 +1537,14 @@
         "airport_labor_disruption"
       ],
       "entry_date": "2026-10-16",
-      "entry_open": 388.71,
+      "entry_open": 387.877,
       "window_through": "2026-10-16",
       "trading_days_elapsed": 0,
       "complete": false,
       "latest_close": 388.05,
-      "current_return_pct": -0.17,
+      "current_return_pct": 0.04,
       "horizon_returns_pct": {},
-      "mfe_pct": 1.55,
+      "mfe_pct": 1.77,
       "mfe_day": "2026-10-16",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-16"
@@ -2206,7 +2206,7 @@
         "n": 73,
         "wins": 73,
         "win_rate": 100.0,
-        "avg": 1.77
+        "avg": 1.78
       },
       "close_5d": null
     },
