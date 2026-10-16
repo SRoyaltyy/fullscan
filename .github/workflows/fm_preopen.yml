@@ -117,6 +117,19 @@ jobs:
             echo "::error::predict missing: 01_daily/general/${D}_predict.md is not on main; Factor Mine pre-open not sealed"
             exit 1
           fi
+          # 2026-10-16: weather landed 07:17 ET with no general_score, before
+          # the 07:27 predict, and the seal silently became a sit. Refuse loudly.
+          W="01_daily/weather/${D}_weather.json"; P="01_daily/general/${D}_predict.md"
+          if ! git cat-file -e "origin/main:$W" 2>/dev/null; then
+            echo "::error::weather stale: $W is not on main; Factor Mine pre-open not sealed"; exit 1
+          fi
+          if ! git show "origin/main:$W" | python3 -c 'import json,sys; s=(json.load(sys.stdin).get("signals") or {}).get("general_score"); sys.exit(0 if s is not None else 1)'; then
+            echo "::error::weather stale: $W has no general_score (built before the general predict); rebuild weather, then seal"; exit 1
+          fi
+          WT=$(git log -1 --format=%ct origin/main -- "$W"); PT=$(git log -1 --format=%ct origin/main -- "$P")
+          if [ -n "$WT" ] && [ -n "$PT" ] && [ "$WT" -lt "$PT" ]; then
+            echo "::error::weather stale: $W last committed $(date -d @$WT -u +%FT%TZ) before $P ($(date -d @$PT -u +%FT%TZ)); rebuild weather, then seal"; exit 1
+          fi
       - name: Seal (before 09:30 ET)
         if: steps.pick.outputs.go == 'true' && steps.pick.outputs.step == 'seal'
         env:
