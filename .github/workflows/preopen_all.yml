@@ -130,15 +130,17 @@ jobs:
     steps:
       # Gate only needs src/workflow_stages.py and its imports. A full-tree
       # checkout hung 5 min on 2026-10-16 (runs 38872343696, 38872955497).
-      - uses: actions/checkout@v4
+      # Plain git (not the checkout action's sparse input) so the sparse
+      # setting can never leak into the shared ECS workspace contract.
+      - name: Shallow sparse fetch (gate files only)
         timeout-minutes: 8
-        with:
-          fetch-depth: 1
-          filter: blob:none
-          sparse-checkout-cone-mode: false
-          sparse-checkout: |
-            /src/*.py
-            /requirements.txt
+        run: |
+          git init -q .
+          git remote add origin "https://github.com/${{ github.repository }}"
+          git sparse-checkout set --no-cone '/src/*.py' '/requirements.txt'
+          git fetch -q --depth 1 --filter=blob:none origin "${{ github.sha }}"
+          git checkout -q FETCH_HEAD
+          test -f src/workflow_stages.py
       - id: g
         run: |
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
