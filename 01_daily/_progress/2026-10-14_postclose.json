@@ -5,8 +5,8 @@
   "run_id": "38873737239",
   "model": "deepseek",
   "started_at": "2026-10-16T04:33:51-04:00",
-  "updated_at": "2026-10-16T04:34:09-04:00",
-  "heartbeat_at": "2026-10-16T04:34:09-04:00",
+  "updated_at": "2026-10-16T04:34:12-04:00",
+  "heartbeat_at": "2026-10-16T04:34:12-04:00",
   "stages": [
     {
       "name": "outcome",
@@ -65,14 +65,14 @@
     },
     {
       "name": "learn",
-      "state": "pending",
-      "started_at": "",
-      "ended_at": "",
-      "heartbeat_at": "",
-      "done": 0,
-      "total": 1,
+      "state": "skipped",
+      "started_at": "2026-10-16T04:34:12-04:00",
+      "ended_at": "2026-10-16T04:34:12-04:00",
+      "heartbeat_at": "2026-10-16T04:34:12-04:00",
+      "done": 4,
+      "total": 4,
       "model": "deepseek",
-      "error": ""
+      "error": "morning window; morning window; morning window; morning window"
     },
     {
       "name": "captains",
