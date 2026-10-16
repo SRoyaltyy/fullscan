@@ -4995,6 +4995,14 @@
       "workflow": "Post-Close last-closed (ubuntu/DeepSeek sidecar)",
       "run_id": "38821228634",
       "manifest": "research/input_freeze/2026-10-15/manifest.json"
+    },
+    {
+      "path": "data/exports/finviz_2026-10-15.csv",
+      "at": "2026-10-16T01:49:27-04:00",
+      "commit_msg": "auto: land finviz export [2026-10-15]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "38857482937",
+      "manifest": "research/input_freeze/2026-10-15/manifest.json"
     }
   ]
 }
