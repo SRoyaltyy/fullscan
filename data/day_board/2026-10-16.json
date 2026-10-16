@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T06:59:44.254023-04:00",
+  "generated_at": "2026-10-16T07:00:01.301493-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -770,7 +770,7 @@
           "size": 84397,
           "said": "Stock book \u2014 2026-10-16",
           "bullets": [
-            "_Generated 2026-10-16T06:53:41.545896-04:00_",
+            "_Generated 2026-10-16T06:59:56.894302-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
