@@ -1,0 +1,60 @@
+{
+ "workflow": "preopen_all",
+ "date": "2026-10-16",
+ "checked_at": "2026-10-16 06:34 ET",
+ "run_id": "38888029141",
+ "ok": false,
+ "failed": [
+  "xai_token_outlives_run"
+ ],
+ "items": [
+  {
+   "id": "ecs_code_current",
+   "ok": true,
+   "plain": "ecs code stale: code on this ECS checkout (src, scripts, config, .github) must match GitHub main",
+   "detail": "code matches main (HEAD ffda4596, main ffda4596)"
+  },
+  {
+   "id": "runner_is_ecs",
+   "ok": true,
+   "plain": "Pre-Open is not on the ECS box (GitHub's own servers cannot reach Grok)",
+   "detail": "self-hosted runner 'ecs-openclaw'"
+  },
+  {
+   "id": "backend_grok",
+   "ok": true,
+   "plain": "LLM_BACKEND is not grok",
+   "detail": "LLM_BACKEND=grok"
+  },
+  {
+   "id": "gateway_up",
+   "ok": true,
+   "plain": "OpenClaw gateway 127.0.0.1:18789 did not answer within 5s",
+   "detail": "http://127.0.0.1:18789/health -> HTTP 200"
+  },
+  {
+   "id": "xai_token_outlives_run",
+   "ok": false,
+   "plain": "xAI login expires before this run can finish (needs >= 75 min left)",
+   "detail": "could not read xAI expiry: TimeoutExpired"
+  },
+  {
+   "id": "no_unapproved_paid_fallback",
+   "ok": true,
+   "plain": "fallback model is not on the approved free list",
+   "detail": "LLM_FALLBACK_MODEL=(none)"
+  },
+  {
+   "id": "no_twin_preopen",
+   "ok": true,
+   "plain": "another Pre-Open is already running",
+   "detail": "no twin"
+  },
+  {
+   "id": "read_cap_fits",
+   "ok": true,
+   "plain": "OPENCLAW_PREDICT_READ_CAP_S (general predict + news judge) is under 300s",
+   "detail": "OPENCLAW_PREDICT_READ_CAP_S=300, need >= 300"
+  }
+ ]
+}
