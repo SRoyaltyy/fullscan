@@ -1,6 +1,6 @@
 # Primary-origin source catalog
 
-Verified 2026-10-16T17:09:20.895193+00:00. 2150 institution records; 462 enabled publication channels out of 546 checked candidates.
+Verified 2026-10-16T17:12:50.726784+00:00. 2150 institution records; 463 enabled publication channels out of 546 checked candidates.
 
 Institution records include historical/closed bodies and shared portals. This is a maintained coverage catalog, not an exhaustive worldwide directory. Disabled/blocked channels remain visible below.
 
@@ -366,7 +366,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Department of State — United States Department of State » Feed | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/feed/) | True | valid_empty |
 | Department of State — United States Department of State » Comments Feed | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/comments/feed/) | True | valid_empty |
 | US Citizenship and Immigration Services | US | official_clarification_and_administration | [rss](https://www.uscis.gov/news/rss-feed/59144) | True | ok |
-| US Citizenship and Immigration Services — Content Listing | US | official_clarification_and_administration | [rss](https://www.uscis.gov/news/rss-feed/22984) | False | invalid_feed_or_network_error |
+| US Citizenship and Immigration Services — Content Listing | US | official_clarification_and_administration | [rss](https://www.uscis.gov/news/rss-feed/22984) | True | ok |
 | Federal Maritime Commission | US | transport_permissions | [rss](https://www.fmc.gov/feed/) | True | ok |
 | Federal Housing Finance Agency | US | financial_enforcement | [html_index](https://www.fhfa.gov/news/news-release) | True | ok |
 | Grants.gov | US | grant_opportunities_not_awards | [rss](https://www.grants.gov/custom/spoExit.jsp?p=rss/GG_OppModByAgency.xml) | False | invalid_feed_or_network_error |
@@ -2618,7 +2618,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Department of the Interior | US | official_publication_page_checked | [source](https://www.doi.gov/news) |
 | Department of Transportation | US | official_publication_page_checked | [source](https://www.transportation.gov/briefing-room) |
 | Federal Aviation Administration | US | official_publication_page_checked | [source](https://www.faa.gov/newsroom) |
-| National Highway Traffic Safety Administration | US | official_publication_page_checked | [source](https://www.nhtsa.gov/press-releases) |
+| National Highway Traffic Safety Administration | US | page_unavailable; verification pending | [source](https://www.nhtsa.gov/press-releases) |
 | Department of State | US | official_publication_page_checked | [source](https://www.state.gov/press-releases/) |
 | US Citizenship and Immigration Services | US | official_publication_page_checked | [source](https://www.uscis.gov/newsroom/alerts) |
 | Federal Emergency Management Agency | US | official_publication_page_checked | [source](https://www.fema.gov/about/news-multimedia) |
@@ -2665,7 +2665,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Hong Kong Government Gazette | HK | official_publication_page_checked | [source](https://www.gld.gov.hk/egazette/) |
 | Hong Kong Monetary Authority | HK | official_publication_page_checked | [source](https://apidocs.hkma.gov.hk/documentation/press-releases/) |
 | Hong Kong Securities and Futures Commission | HK | official_publication_page_checked | [source](https://www.sfc.hk/en/RSS-Feeds) |
-| Hong Kong Legislative Council | HK | official_publication_page_checked | [source](https://www.legco.gov.hk/english/rss.html) |
+| Hong Kong Legislative Council | HK | page_unavailable; verification pending | [source](https://www.legco.gov.hk/english/rss.html) |
 | Hong Kong Judiciary judgments | HK | official_publication_page_checked | [source](https://www.judiciary.hk/en/judgments_legal_reference/judgments.html) |
 | Monetary Authority of Singapore | SG | official_publication_page_checked | [source](https://www.mas.gov.sg/news) |
 | Singapore Courts judgments | SG | official_publication_page_checked | [source](https://www.judiciary.gov.sg/judgments) |

@@ -1,7 +1,7 @@
 # Primary-origin action documents
 
-Updated 2026-10-16T17:11:08.931182+00:00. 3237 dated documents in the configured 3-day window; 63 newly retained; 1440 repeat observations.
-Source health: 459/462 checked successfully. Collection uses zero LLM calls.
+Updated 2026-10-16T17:15:03.640889+00:00. 3237 dated documents in the configured 3-day window; 0 newly retained; 1283 repeat observations.
+Source health: 458/463 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
@@ -3365,7 +3365,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-govinfo-uscourts-wiwb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-wyb: unchanged; stale_feed_outside_requested_window
 - us-govinfo-uscourts-jpml: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
-- us-white-house-0691096d16: ok; stale_feed_outside_requested_window
+- us-white-house-0691096d16: unchanged; stale_feed_outside_requested_window
 - us-ftc-ebb4359fb7: ok; stale_feed_outside_requested_window
 - us-ftc-69601f2e49: ok; stale_feed_outside_requested_window
 - us-treasury-a69e5b5ef0: ok; stale_feed_outside_requested_window
@@ -3387,27 +3387,30 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fdic-index: unchanged; stale_feed_outside_requested_window
 - us-fincen-index: ok; stale_feed_outside_requested_window
 - us-cftc-fda5c3631d: ok; stale_feed_outside_requested_window
-- us-fda-df70b9f330: ok; stale_feed_outside_requested_window
+- us-fda-df70b9f330: unchanged; stale_feed_outside_requested_window
 - us-fda-1a1096082f: unchanged; stale_feed_outside_requested_window
-- us-fda-2d9c4fc2f9: ok; stale_feed_outside_requested_window
+- us-fda-2d9c4fc2f9: unchanged; stale_feed_outside_requested_window
 - us-fda-8fc09ac0a2: unchanged; stale_feed_outside_requested_window
 - us-fda-3eaddf14de: ok; stale_feed_outside_requested_window
 - us-fda-a25233bfac: unchanged; stale_feed_outside_requested_window
-- us-fda-1ca201e48f: ok; stale_feed_outside_requested_window
+- us-fda-1ca201e48f: unchanged; stale_feed_outside_requested_window
 - us-fda-c7d1d1cd64: ok; stale_feed_outside_requested_window
-- us-fda-d7692535f0: unchanged; stale_feed_outside_requested_window
+- us-fda-d7692535f0: ok; stale_feed_outside_requested_window
 - us-fsis-85c9542fd5: ok; stale_feed_outside_requested_window
 - us-fcc-1ad902e468: unchanged; stale_feed_outside_requested_window
 - us-fcc-ff38ce828f: ok; stale_feed_outside_requested_window
 - us-fcc-198472aaf9: ok; stale_feed_outside_requested_window
-- us-fcc-89097e714e: parse_or_network_error; 
-- us-fcc-9e55083358: parse_or_network_error; 
-- us-fcc-c1b8377d30: parse_or_network_error; 
+- us-fcc-71eeceab27: parse_or_network_error; 
+- us-fcc-543ac3ead4: parse_or_network_error; 
+- us-fcc-364d1b4932: parse_or_network_error; 
+- us-fcc-178b343217: parse_or_network_error; 
+- us-fcc-82b69be738: parse_or_network_error; 
 - us-osha-ba174bf325: ok; stale_feed_outside_requested_window
 - us-osha-7df7a48ccf: ok; stale_feed_outside_requested_window
 - us-nlrb-3db5e72bf9: unchanged; stale_feed_outside_requested_window
 - us-nlrb-c15d588b2d: unchanged; stale_feed_outside_requested_window
 - us-dot-6464bc66ac: ok; stale_feed_outside_requested_window
+- us-uscis-a16e1f9942: ok; stale_feed_outside_requested_window
 - us-fmc-fe8f0538ae: unchanged; stale_feed_outside_requested_window
 - us-fhfa-index: unchanged; stale_feed_outside_requested_window
 - us-ca-oal-c1209cfd66: unchanged; stale_feed_outside_requested_window
@@ -3417,17 +3420,17 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - eu-ecb-af0dbdabee: ok; stale_feed_outside_requested_window
 - eu-ecb-bca2a70864: ok; stale_feed_outside_requested_window
 - eu-ecb-0370c1f1df: ok; stale_feed_outside_requested_window
-- eu-ecb-c12c22cb78: ok; stale_feed_outside_requested_window
+- eu-ecb-c12c22cb78: unchanged; stale_feed_outside_requested_window
 - ca-gazette-821b285be1: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-2d47daa483: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-c2eb48e1fa: unchanged; stale_feed_outside_requested_window
-- ca-boc-4aa19b2183: ok; stale_feed_outside_requested_window
+- ca-boc-4aa19b2183: unchanged; stale_feed_outside_requested_window
 - ca-boc-1f26bb2971: unchanged; stale_feed_outside_requested_window
 - ca-boc-4192a605ae: unchanged; stale_feed_outside_requested_window
 - ca-boc-5cc0603f1f: unchanged; stale_feed_outside_requested_window
 - ca-boc-a61b683fac: unchanged; stale_feed_outside_requested_window
 - ca-boc-161ba50d6e: unchanged; stale_feed_outside_requested_window
-- ca-boc-1c9979e6ac: ok; stale_feed_outside_requested_window
+- ca-boc-1c9979e6ac: unchanged; stale_feed_outside_requested_window
 - ca-boc-b8fa2876ef: unchanged; stale_feed_outside_requested_window
 - ca-boc-b06a91e186: unchanged; stale_feed_outside_requested_window
 - ca-boc-f2811531de: unchanged; stale_feed_outside_requested_window
@@ -3451,7 +3454,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - au-rba-5ba995e001: unchanged; stale_feed_outside_requested_window
 - au-rba-bb9b5c009f: unchanged; stale_feed_outside_requested_window
 - au-accc-index: ok; listing_rendered_via_tier3_reader
-- hk-government-a5249d2406: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
+- hk-government-a5249d2406: unchanged; feed_at_capacity_in_requested_window; snapshots may miss overflow
 - sg-hsa-621a78d387: unchanged; stale_feed_outside_requested_window
 - in-rbi-738b09bded: ok; stale_feed_outside_requested_window
 - in-rbi-6f75cd7f86: ok; stale_feed_outside_requested_window
