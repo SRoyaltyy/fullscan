@@ -52,8 +52,8 @@
         "10d": 5.37,
         "14d": 8.54
       },
-      "mfe_pct": 10.15,
-      "mfe_day": "2026-10-14",
+      "mfe_pct": 10.23,
+      "mfe_day": "2026-10-15",
       "ever_profitable": true,
       "first_profitable_day": "2026-09-25"
     },
@@ -276,7 +276,7 @@
         "10d": 5.44,
         "14d": 9.02
       },
-      "mfe_pct": 11.46,
+      "mfe_pct": 11.52,
       "mfe_day": "2026-10-15",
       "ever_profitable": true,
       "first_profitable_day": "2026-09-25"
@@ -1495,7 +1495,7 @@
         "n": 19,
         "wins": 19,
         "win_rate": 100.0,
-        "avg": 8.89
+        "avg": 8.9
       },
       "close_5d": {
         "n": 19,
