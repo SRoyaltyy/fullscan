@@ -1,13 +1,9 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T07:20:15.646282-04:00",
+  "generated_at": "2026-10-16T08:31:59.440098-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-16_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-10-16_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-16_judge.md` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
     "ok": 7,
     "partial": 1,
@@ -181,9 +177,9 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 6,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -250,22 +246,31 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-10-16_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 33800,
+          "said": "40 events \u00b7 elevated uncertainty \u00b7 The next two weeks are dominated by US mega-cap earnings (NFLX, TSLA, META), the Oct 27-28 FOMC meeting where a hold is priced at ~73%, and",
+          "bullets": [
+            "Executive Order 14434 \u2014 'Super Intelligence' AI Policy Shift",
+            "Executive Order 14435 \u2014 Emergency Diesel Tax Relief",
+            "Final Reciprocal Tariff Rates \u2014 10\u201312.5% on 60 Economies; Canada Raised to 35%",
+            "Section 301 Exclusions Expiry \u2014 November 2026 Deadline"
+          ]
         },
         {
           "key": "judge",
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-16_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 8306,
+          "said": "1. Hawkish Fed/hot inflation lifts October hike odds; Warsh IMF fireside keeps options open \u2014 rates cluster sets SPX beta and rate-sensitive sector direction.",
+          "bullets": [
+            "2. AI selloff hammers hedge funds; CoreWeave debt slump; dollar falls on AI impact \u2014 AI infrastructure risk appetite and deleveraging signal.",
+            "3. Boeing 737 MAX 10 certification halted by FAA over software glitch \u2014 31% of undelivered 737 order book at risk; industrials/Dow drag.",
+            "4. AbbVie FDA approval of JUVMO (tavapadon) for Parkinson's \u2014 first-in-class large-cap pharma catalyst, healthcare sympathy."
+          ]
         },
         {
           "key": "research_json",
@@ -294,22 +299,32 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-10-16_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 70254,
+          "said": "99 ticker actions \u00b7 6 events \u00b7 4515 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "bullets": [
+            "SELL DAL",
+            "SELL UAL",
+            "SELL AAL",
+            "SELL ALK"
+          ]
         },
         {
           "key": "general",
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-16_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11288,
+          "said": "UP 5.526",
+          "bullets": [
+            "bad: Hormuz tanker attacks at wartime high",
+            "bad: France downgrade risk (Moody's Oct 23)",
+            "bad: Mexico downgraded BBB+\u2192BBB",
+            "good: Warsh dovish-leaning (Oct hike odds 27%\u219215%)"
+          ]
         },
         {
           "key": "board",
@@ -484,8 +499,14 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "general UP  5.526",
+      "bullets": [
+        "bad: Hormuz tanker attacks at wartime high",
+        "bad: France downgrade risk (Moody's Oct 23)",
+        "bad: Mexico downgraded BBB+\u2192BBB",
+        "good: Warsh dovish-leaning (Oct hike odds 27%\u219215%)",
+        "good: Korea chip rally KOSPI +2.05%"
+      ]
     },
     {
       "key": "weather",
@@ -580,7 +601,7 @@
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
       "status": "OK",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 1,
@@ -591,11 +612,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-10-16_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 70254,
+          "said": "99 ticker actions \u00b7 6 events \u00b7 4515 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "bullets": [
+            "SELL DAL",
+            "SELL UAL",
+            "SELL AAL",
+            "SELL ALK"
+          ]
         },
         {
           "key": "in_digest",
@@ -624,15 +650,24 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "99 ticker actions \u00b7 6 events \u00b7 4515 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+      "bullets": [
+        "SELL DAL",
+        "SELL UAL",
+        "SELL AAL",
+        "SELL ALK",
+        "SELL RJET",
+        "SELL LUV",
+        "SELL SKYW",
+        "SELL ALGT"
+      ]
     },
     {
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "OK",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
@@ -643,11 +678,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-16_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11288,
+          "said": "UP 5.526",
+          "bullets": [
+            "bad: Hormuz tanker attacks at wartime high",
+            "bad: France downgrade risk (Moody's Oct 23)",
+            "bad: Mexico downgraded BBB+\u2192BBB",
+            "good: Warsh dovish-leaning (Oct hike odds 27%\u219215%)"
+          ]
         },
         {
           "key": "in_board",
@@ -665,11 +705,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-10-16_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 70254,
+          "said": "99 ticker actions \u00b7 6 events \u00b7 4515 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "bullets": [
+            "SELL DAL",
+            "SELL UAL",
+            "SELL AAL",
+            "SELL ALK"
+          ]
         },
         {
           "key": "in_digest",
@@ -691,11 +736,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-16_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 8306,
+          "said": "1. Hawkish Fed/hot inflation lifts October hike odds; Warsh IMF fireside keeps options open \u2014 rates cluster sets SPX beta and rate-sensitive sector direction.",
+          "bullets": [
+            "2. AI selloff hammers hedge funds; CoreWeave debt slump; dollar falls on AI impact \u2014 AI infrastructure risk appetite and deleveraging signal.",
+            "3. Boeing 737 MAX 10 certification halted by FAA over software glitch \u2014 31% of undelivered 737 order book at risk; industrials/Dow drag.",
+            "4. AbbVie FDA approval of JUVMO (tavapadon) for Parkinson's \u2014 first-in-class large-cap pharma catalyst, healthcare sympathy."
+          ]
         },
         {
           "key": "in_weather",
@@ -958,7 +1007,18 @@
         "morning S missing"
       ]
     },
-    "general": {},
+    "general": {
+      "said": "UP  5.526",
+      "bullets": [
+        "bad: Hormuz tanker attacks at wartime high",
+        "bad: France downgrade risk (Moody's Oct 23)",
+        "bad: Mexico downgraded BBB+\u2192BBB",
+        "good: Warsh dovish-leaning (Oct hike odds 27%\u219215%)",
+        "good: Korea chip rally KOSPI +2.05%"
+      ],
+      "score": "5.526",
+      "direction": "up"
+    },
     "sectors": {},
     "news": {},
     "weather": {
@@ -3998,6 +4058,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-16\n_Generated 2026-10-16T11:20:13 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$103,064.62** (after 09:30 $103,064.62 \u00b7 after 16:00 $103,064.62)\n- Prior close **$103,064.62** \u00b7 09:30 **$103,064.62** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$103,064.62**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$103,064.62** \u00b7 2026-10-15 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\":"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T08:31:58.637584-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-16_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 70254,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-16_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 14531,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-16T08:31:58.620008-04:00\nraw=4515 unique_events=6 tickers=99"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-16T08:31:58.620008-04:00\nraw=4515 unique_events=6 tickers=99"
     }
   ],
   "href": {
