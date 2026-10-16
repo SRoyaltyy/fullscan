@@ -41,19 +41,25 @@
     "joining": 12,
     "transitioning": 1
   },
-  "candidate_channels": 466,
-  "enabled_channels": 359,
+  "candidate_channels": 536,
+  "enabled_channels": 444,
   "channel_statuses": {
-    "ok": 371,
-    "valid_empty": 10,
-    "blocked": 12,
-    "invalid_feed_or_network_error": 40,
-    "fetch_failed": 33
+    "ok": 467,
+    "valid_empty": 14,
+    "invalid_feed_or_network_error": 49,
+    "blocked": 3,
+    "selector_empty": 1,
+    "fetch_failed": 2
   },
   "directory_gaps": [
     {
       "institution_id": "us-fdic",
       "url": "https://public.govdelivery.com/topics/USFDIC_26/feed.rss",
+      "status": "external_feed_host_not_approved; not requested"
+    },
+    {
+      "institution_id": "us-fcc",
+      "url": "http://www.youtube.com/rss/user/fccdotgovvideo/videos.rss",
       "status": "external_feed_host_not_approved; not requested"
     }
   ],
@@ -67,5 +73,5 @@
     "us_states": 59,
     "curated_channel_owner": 123
   },
-  "excluded_reference_channels": 34
+  "excluded_reference_channels": 38
 }

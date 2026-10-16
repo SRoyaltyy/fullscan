@@ -1,6 +1,6 @@
 # Primary-origin source catalog
 
-Verified 2026-10-16T16:01:43.818756+00:00. 2150 institution records; 359 enabled publication channels out of 466 checked candidates.
+Verified 2026-10-16T16:04:20.090353+00:00. 2150 institution records; 444 enabled publication channels out of 536 checked candidates.
 
 Institution records include historical/closed bodies and shared portals. This is a maintained coverage catalog, not an exhaustive worldwide directory. Disabled/blocked channels remain visible below.
 
@@ -203,62 +203,71 @@ Institution records include historical/closed bodies and shared portals. This is
 | Congress.gov legislative status | US | legislative_procedure | [rss](https://www.congress.gov/rss/presented-to-president.xml) | True | ok |
 | Supreme Court opinions and orders | US | judicial_decisions | [html_index](https://www.supremecourt.gov/opinions/slipopinion/26) | True | ok |
 | Securities and Exchange Commission | US | enforcement_and_market_rules | [rss](https://www.sec.gov/news/pressreleases.rss) | True | ok |
-| Securities and Exchange Commission | US | enforcement_and_market_rules | [rss](https://www.sec.gov/enforcement-litigation/litigation-releases/rss) | False | blocked |
-| Securities and Exchange Commission | US | enforcement_and_market_rules | [rss](https://www.sec.gov/enforcement-litigation/administrative-proceedings/rss) | False | blocked |
-| Federal Trade Commission | US | competition_and_enforcement | [rss](https://www.ftc.gov/news-events/news/press-releases/rss) | False | blocked |
+| Securities and Exchange Commission | US | enforcement_and_market_rules | [rss](https://www.sec.gov/enforcement-litigation/litigation-releases/rss) | True | ok |
+| Securities and Exchange Commission | US | enforcement_and_market_rules | [rss](https://www.sec.gov/enforcement-litigation/administrative-proceedings/rss) | True | ok |
+| Federal Trade Commission | US | competition_and_enforcement | [rss](https://www.ftc.gov/news-events/news/press-releases/rss) | False | invalid_feed_or_network_error |
+| Federal Trade Commission — Press Releases | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/press-release.xml) | True | ok |
+| Federal Trade Commission — Competition Press Releases | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/press-release-competition.xml) | True | ok |
+| Federal Trade Commission — Consumer Protection Press Releases | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/press-release-consumer-protection.xml) | True | ok |
+| Federal Trade Commission — HSR Early Termination Notices | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/hsr-early-termination-notices.xml) | True | ok |
+| Federal Trade Commission — Consumer Blog | US | competition_and_enforcement | [rss](https://www.consumer.ftc.gov/blog/gd-rss.xml) | False | ok; reference data, research, speeches or commentary |
+| Federal Trade Commission — Business Blog | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/blog-business.xml) | False | ok; reference data, research, speeches or commentary |
+| Federal Trade Commission — Competition Matters Blog | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/blog-competition-matters.xml) | False | ok; reference data, research, speeches or commentary |
+| Federal Trade Commission — Data Spotlight | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/data-spotlight.xml) | True | ok |
+| Federal Trade Commission — Inspector General Releases and Reports | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/oig-reports-press-releases.xml) | True | valid_empty |
 | Department of Justice | US | judicial_and_enforcement | [rss](https://www.justice.gov/news/rss) | True | ok |
 | Department of Justice — RSS Feed | US | judicial_and_enforcement | [rss](https://www.justice.gov/news/rss?m=1) | True | ok |
 | Treasury Office of Foreign Assets Control | US | sanctions_and_access | [html_index](https://ofac.treasury.gov/recent-actions) | True | ok |
 | Department of the Treasury | US | fiscal_and_sanctions | [rss](https://home.treasury.gov/rss.xml) | True | ok |
 | Bureau of Industry and Security | US | export_controls | [html_index](https://www.bis.gov/news-updates/press-releases) | True | ok |
 | United States Trade Representative | US | trade_and_tariffs | [html_index](https://ustr.gov/about-us/policy-offices/press-office/press-releases) | True | ok |
-| United States International Trade Commission | US | trade_and_judicial | [html_index](https://www.usitc.gov/press_room/) | False | invalid_feed_or_network_error |
+| United States International Trade Commission | US | trade_and_judicial | [html_index](https://www.usitc.gov/press_room/) | True | ok |
 | Federal Reserve Board | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_monetary.xml) | True | ok |
 | Federal Reserve Board | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_enforcement.xml) | True | ok |
-| Federal Reserve Board | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_bcreg.xml) | False | fetch_failed |
+| Federal Reserve Board | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_bcreg.xml) | True | ok |
 | Federal Reserve Board — All Press Releases | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_all.xml) | True | ok |
-| Federal Reserve Board — Orders on Banking Applications | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_orders.xml) | False | fetch_failed |
-| Federal Reserve Board — Other Announcements | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_other.xml) | False | fetch_failed |
+| Federal Reserve Board — Orders on Banking Applications | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_orders.xml) | True | ok |
+| Federal Reserve Board — Other Announcements | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/press_other.xml) | True | ok |
 | Federal Reserve Board — All Speeches | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/speeches.xml) | False | ok; reference data, research, speeches or commentary |
 | Federal Reserve Board — All Testimony | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/testimony.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — All Speeches & Testimony | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/speeches_and_testimony.xml) | False | ok; reference data, research, speeches or commentary |
-| Federal Reserve Board — Vice Chair Philip N. Jefferson | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_jefferson.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Vice Chair for Supervision Michelle W. Bowman | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/m_w_Bowman.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Governor Michael S. Barr | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_barr.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Governor Lisa D. Cook | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_cook.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Vice Chair Philip N. Jefferson | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_jefferson.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Vice Chair for Supervision Michelle W. Bowman | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/m_w_Bowman.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Governor Michael S. Barr | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_barr.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Governor Lisa D. Cook | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_cook.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Governor Jerome H. Powell | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_powell.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Governor Christopher J. Waller | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_waller.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Governor Christopher J. Waller | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_waller.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Credit and Liquidity Programs and the Balance Sheet | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/clp.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Current Frequently Asked Questions | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/currentfaqs.xml) | False | fetch_failed; reference data, research, speeches or commentary |
+| Federal Reserve Board — Current Frequently Asked Questions | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/currentfaqs.xml) | False | ok; reference data, research, speeches or commentary |
 | Federal Reserve Board — Office of Inspector General | US | monetary_operations | [rss](https://oig.federalreserve.gov/feeds/oig.xml) | True | ok |
 | Federal Reserve Board — Regulatory Reform | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/regreform.xml) | True | valid_empty |
-| Federal Reserve Board — Board Meetings | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/boardmeetings.xml) | False | fetch_failed |
-| Federal Reserve Board — Reporting Forms | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/reportforms-rss.xml) | False | fetch_failed |
-| Federal Reserve Board — Supervision and Regulation and Consumer Affairs Letters, Supervision Manuals | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/bankinginfo-rss.xml) | False | fetch_failed |
-| Federal Reserve Board — Coronavirus Disease 2019 (COVID-19) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/covid-19.xml) | False | fetch_failed |
+| Federal Reserve Board — Board Meetings | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/boardmeetings.xml) | True | ok |
+| Federal Reserve Board — Reporting Forms | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/reportforms-rss.xml) | True | ok |
+| Federal Reserve Board — Supervision and Regulation and Consumer Affairs Letters, Supervision Manuals | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/bankinginfo-rss.xml) | True | ok |
+| Federal Reserve Board — Coronavirus Disease 2019 (COVID-19) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/covid-19.xml) | True | ok |
 | Federal Reserve Board — All Federal Reserve Board working papers | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/working_papers.xml) | False | ok; reference data, research, speeches or commentary |
 | Federal Reserve Board — Finance and Economics Discussion Series | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/feds.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — International Finance Discussion Papers | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/ifdp.xml) | False | ok; reference data, research, speeches or commentary |
 | Federal Reserve Board — FEDS Notes | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/feds_notes.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — All Data Download announcements | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/datadownload.xml) | False | fetch_failed |
+| Federal Reserve Board — All Data Download announcements | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/datadownload.xml) | False | invalid_feed_or_network_error |
 | Federal Reserve Board — Assets and Liabilities of Commercial Banks in the United State (H.8) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/h8.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Charge-Off and Delinquency Rates | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/chgdel.xml) | True | ok |
-| Federal Reserve Board — Commercial Paper | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/cp.xml) | False | fetch_failed |
-| Federal Reserve Board — Consumer Credit | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/g19.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Factors Affecting Reserve Balances (H.4.1) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/h41.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Finance Companies | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/g20.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Financial Obligations Ratios | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/for.xml) | False | fetch_failed |
-| Federal Reserve Board — Financial Accounts of the United States (Z.1) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/z1.xml) | False | fetch_failed |
-| Federal Reserve Board — Financial Accounts Guide | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/fofguide.xml) | False | fetch_failed |
+| Federal Reserve Board — Commercial Paper | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/cp.xml) | True | ok |
+| Federal Reserve Board — Consumer Credit | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/g19.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Factors Affecting Reserve Balances (H.4.1) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/h41.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Finance Companies | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/g20.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Financial Obligations Ratios | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/for.xml) | True | ok |
+| Federal Reserve Board — Financial Accounts of the United States (Z.1) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/z1.xml) | True | ok |
+| Federal Reserve Board — Financial Accounts Guide | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/fofguide.xml) | True | ok |
 | Federal Reserve Board — Foreign Exchange Rates (G.5/H.10) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/h10.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Industrial Production and Capacity Utilization (G.17) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/g17.xml) | False | invalid_feed_or_network_error |
-| Federal Reserve Board — Policy Rates | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/prates.xml) | False | fetch_failed; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Policy Rates | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/prates.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Selected Interest Rates (H.15) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/h15.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Senior Credit Officer Opinion Survey on Dealer Financing Terms | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/scoos.xml) | False | fetch_failed |
+| Federal Reserve Board — Senior Credit Officer Opinion Survey on Dealer Financing Terms | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/scoos.xml) | True | ok |
 | Federal Reserve Board — Senior Loan Officer Opinion Survey on Bank Lending Practices | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/sloos.xml) | True | ok |
-| Federal Reserve Board — Survey of Terms of Business Lending (E.2) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/e2.xml) | False | fetch_failed |
+| Federal Reserve Board — Survey of Terms of Business Lending (E.2) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/e2.xml) | True | ok |
 | Federal Deposit Insurance Corporation | US | financial_enforcement | [html_index](https://www.fdic.gov/news/press-releases) | True | ok |
-| Office of the Comptroller of the Currency | US | financial_enforcement | [rss](https://www.occ.gov/rss/occ_news.xml) | False | fetch_failed |
+| Office of the Comptroller of the Currency | US | financial_enforcement | [rss](https://www.occ.gov/rss/occ_news.xml) | True | ok |
 | Office of the Comptroller of the Currency | US | financial_enforcement | [rss](https://www.occ.gov/rss/index-rss.html) | False | invalid_feed_or_network_error |
 | Consumer Financial Protection Bureau | US | financial_enforcement | [rss](https://www.consumerfinance.gov/about-us/newsroom/feed/) | True | ok |
 | Financial Crimes Enforcement Network | US | sanctions_and_enforcement | [html_index](https://www.fincen.gov/news/press-releases) | True | ok |
@@ -280,18 +289,79 @@ Institution records include historical/closed bodies and shared portals. This is
 | Food and Drug Administration — What's New: Vaccines, Blood and Biologics | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/biologics/rss.xml) | True | ok |
 | Consumer Product Safety Commission | US | product_safety | [rss](https://www.cpsc.gov/Newsroom/CPSC-RSS-Feed/Recalls-RSS) | True | ok |
 | Consumer Product Safety Commission | US | product_safety | [rss](https://www.cpsc.gov/Newsroom/CPSC-RSS-Feed/News-RSS) | True | ok |
-| Health and Human Services | US | health_administration | [rss](https://www.hhs.gov/rss/news.xml) | False | blocked |
+| USDA Food Safety and Inspection Service — News & Events | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/news-release) | True | ok |
+| USDA Food Safety and Inspection Service — Recalls | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/recalls) | True | ok |
+| USDA Food Safety and Inspection Service — FSIS Directives | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/directives) | True | ok |
+| USDA Food Safety and Inspection Service — FSIS Notices | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/notices) | True | ok |
+| Health and Human Services | US | health_administration | [rss](https://www.hhs.gov/rss/news.xml) | True | ok |
 | Environmental Protection Agency | US | environmental_rules_and_enforcement | [rss](https://www.epa.gov/rss.xml) | True | valid_empty |
-| Federal Communications Commission | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/feed) | False | blocked |
+| Federal Communications Commission | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/feed) | False | invalid_feed_or_network_error |
+| Federal Communications Commission — Wireline Competition Bureau - Industry Analysis Reports | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/bureaus/wcb/iatd/reports-rss-feed.xml) | True | ok |
+| Federal Communications Commission — Federal Communications Commission Record | US | telecom_rules_and_licences | [rss](https://www.govinfo.gov/rss/gpo-fcc.xml) | True | ok |
+| Federal Communications Commission — Blog | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/blog/feed/) | False | ok; reference data, research, speeches or commentary |
+| Federal Communications Commission — Events | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/events/feed/) | True | ok |
+| Federal Communications Commission — Guides | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/guides/feed/) | True | ok |
+| Federal Communications Commission — FCC Recent Releases (Combined) | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss) | True | ok |
+| Federal Communications Commission — Commissioner's Statements | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Statement) | True | ok |
+| Federal Communications Commission — Commissioner's Speeches | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Speech) | False | invalid_feed_or_network_error |
+| Federal Communications Commission — Commissioner's Testimonies | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Testimony) | True | ok |
+| Federal Communications Commission — Broadcast Actions | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Broadcast_Action) | False | invalid_feed_or_network_error |
+| Federal Communications Commission — Broadcast Applications | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Broadcast_App) | False | invalid_feed_or_network_error |
+| Federal Communications Commission — Call Sign Changes | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Callsign_Changes) | True | ok |
+| Federal Communications Commission — Citations | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Cit) | True | ok |
+| Federal Communications Commission — Compliance Guides | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Guide) | False | invalid_feed_or_network_error |
+| Federal Communications Commission — Court Filings | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Court_Filing) | True | ok |
+| Federal Communications Commission — Court Opinions | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Court_Opinion) | True | ok |
+| Federal Communications Commission — Fact Sheets | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Fact_Sheet) | True | ok |
+| Federal Communications Commission — ITFS Notices | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/ITFS_Notices) | True | ok |
+| Federal Communications Commission — Low Power TV Notices | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/LPTV_Notices) | True | ok |
+| Federal Communications Commission — News Releases | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/News_Release) | True | ok |
+| Federal Communications Commission — Notices | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Notice) | False | invalid_feed_or_network_error |
+| Federal Communications Commission — Notices of Apparent Liability | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/NAL) | True | ok |
+| Federal Communications Commission — Orders | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Order) | True | ok |
+| Federal Communications Commission — Public Notices | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Public_Notice) | True | ok |
+| Federal Communications Commission — Radio Cutoffs | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Radio_Cutoffs) | True | ok |
+| Federal Communications Commission — Reports | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Report) | True | ok |
+| Federal Communications Commission — Report & Orders, Notices of Proposed Rulemaking, etc. | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/RO_NPRM) | True | ok |
+| Federal Communications Commission — Studies | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Study) | True | ok |
+| Federal Communications Commission — TV Notices | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/TV_Notices) | True | ok |
+| Federal Communications Commission — Consumer & Governmental Affairs Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/CGB) | True | ok |
+| Federal Communications Commission — Enforcement Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/EB) | False | invalid_feed_or_network_error |
+| Federal Communications Commission — International Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/IB) | False | invalid_feed_or_network_error |
+| Federal Communications Commission — Media Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/MB) | True | ok |
+| Federal Communications Commission — Public Safety & Homeland Security Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/PSHSB) | True | ok |
+| Federal Communications Commission — Space Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/SB) | True | ok |
+| Federal Communications Commission — Wireless Telecommunications Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/WTB) | True | ok |
+| Federal Communications Commission — Wireline Competition Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/WCB) | True | ok |
+| Federal Communications Commission — Office of the Administrative Law Judges | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OALJ) | True | ok |
+| Federal Communications Commission — Office of Communications Business Opportunities | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OCBO) | True | ok |
+| Federal Communications Commission — Office of Economics and Analytics | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OEA) | True | ok |
+| Federal Communications Commission — Office of Economics and Analytics - Auctions | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/AU) | True | ok |
+| Federal Communications Commission — Office of Engineering & Technology | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OET) | True | ok |
+| Federal Communications Commission — Office of General Counsel | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OGC) | True | ok |
+| Federal Communications Commission — Office of Inspector General | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OIG) | True | ok |
+| Federal Communications Commission — Office of International Affairs | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OIA) | True | ok |
+| Federal Communications Commission — Office of Legislative Affairs | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OLA) | True | ok |
+| Federal Communications Commission — Office of Managing Director | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OMD) | True | ok |
+| Federal Communications Commission — Office of Media Relations | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OMR) | False | invalid_feed_or_network_error |
+| Federal Communications Commission — Office of Workplace Diversity | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OWPD) | False | invalid_feed_or_network_error |
 | Federal Energy Regulatory Commission | US | energy_orders_and_rates | [html_index](https://www.ferc.gov/news-events/news/decisions-notices) | False | blocked |
 | Department of Labor | US | labour_enforcement | [rss](https://www.dol.gov/rss/releases.xml) | True | ok |
+| Occupational Safety and Health Administration — Federal Register | US | labour_enforcement | [rss](https://www.osha.gov/laws-regs/federalregisters.xml) | True | ok |
+| Occupational Safety and Health Administration — Interpretations | US | labour_enforcement | [rss](https://www.osha.gov/laws-regs/standardinterpretations.xml) | True | ok |
+| Occupational Safety and Health Administration — Directives | US | labour_enforcement | [rss](https://www.osha.gov/enforcement/directives.xml) | True | ok |
+| Occupational Safety and Health Administration — News Releases | US | labour_enforcement | [rss](https://www.osha.gov/news/newsreleases.xml) | True | ok |
+| Occupational Safety and Health Administration — QuickTakes | US | labour_enforcement | [rss](https://www.osha.gov/sites/default/files/quicktakes.xml) | True | ok |
 | National Labor Relations Board — https://www.nlrb.gov/rss/rssPressReleases.xml | US | labour_decisions | [rss](https://www.nlrb.gov/rss/rssPressReleases.xml) | True | ok |
 | National Labor Relations Board — https://www.nlrb.gov/rss/rssWeeklySummaries.xml | US | labour_decisions | [rss](https://www.nlrb.gov/rss/rssWeeklySummaries.xml) | True | ok |
 | National Labor Relations Board — https://www.nlrb.gov/rss/rssAnnouncements.xml | US | labour_decisions | [rss](https://www.nlrb.gov/rss/rssAnnouncements.xml) | True | ok |
 | Department of the Interior | US | permits_and_resources | [rss](https://www.doi.gov/feeds/content/36980/rss.xml) | True | valid_empty |
-| Department of Transportation | US | transport_permissions | [rss](https://www.transportation.gov/rss.xml) | False | blocked |
-| Department of State | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/press-releases/feed/) | False | blocked |
-| US Citizenship and Immigration Services | US | official_clarification_and_administration | [rss](https://www.uscis.gov/news/rss-feed/59144) | False | blocked |
+| Department of Transportation | US | transport_permissions | [rss](https://www.transportation.gov/rss.xml) | True | ok |
+| Department of State | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/press-releases/feed/) | True | valid_empty |
+| Department of State — United States Department of State » Feed | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/feed/) | True | valid_empty |
+| Department of State — United States Department of State » Comments Feed | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/comments/feed/) | True | valid_empty |
+| US Citizenship and Immigration Services | US | official_clarification_and_administration | [rss](https://www.uscis.gov/news/rss-feed/59144) | True | ok |
+| US Citizenship and Immigration Services — Content Listing | US | official_clarification_and_administration | [rss](https://www.uscis.gov/news/rss-feed/22984) | True | ok |
 | Federal Maritime Commission | US | transport_permissions | [rss](https://www.fmc.gov/feed/) | True | ok |
 | Federal Housing Finance Agency | US | financial_enforcement | [html_index](https://www.fhfa.gov/news/news-release) | True | ok |
 | Grants.gov | US | grant_opportunities_not_awards | [rss](https://www.grants.gov/custom/spoExit.jsp?p=rss/GG_OppModByAgency.xml) | False | invalid_feed_or_network_error |
@@ -373,7 +443,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | European Banking Authority | EU | financial_supervision | [rss](https://www.eba.europa.eu/news-press/news/rss.xml) | True | ok |
 | European Medicines Agency | EU | product_permissions_and_safety | [rss](https://www.ema.europa.eu/en/whats-new.xml) | True | ok |
 | UK legislation | UK | legal_instruments | [rss](https://www.legislation.gov.uk/new/data.feed) | True | ok |
-| UK legislation | UK | legal_instruments | [rss](http://www.legislation.gov.uk/all/data.feed?sort=published) | False | invalid_feed_or_network_error |
+| UK legislation | UK | legal_instruments | [rss](http://www.legislation.gov.uk/all/data.feed?sort=published) | True | ok |
 | UK legislation | UK | legal_instruments | [rss](http://www.legislation.gov.uk/all/data.feed?sort=published&page=2) | True | ok |
 | The National Archives Find Case Law | UK | judicial_decisions | [rss](https://caselaw.nationalarchives.gov.uk/atom.xml) | True | ok |
 | Bank of England | UK | monetary_and_supervisory | [rss](https://www.bankofengland.co.uk/rss/news) | True | ok |
@@ -432,17 +502,17 @@ Institution records include historical/closed bodies and shared portals. This is
 | Hong Kong Government Information Services | HK | executive_and_administrative | [rss](https://www.info.gov.hk/gia/rss/general_en.xml) | False | blocked |
 | Hong Kong Securities and Futures Commission | HK | financial_enforcement | [rss](https://www.sfc.hk/en/RSS-Feeds/Press-releases) | True | ok |
 | Health Sciences Authority Singapore — Health Sciences Authority — Announcements | SG | product_permissions_and_safety | [rss](https://www.hsa.gov.sg/announcements/rss.xml) | True | ok |
-| Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/pressreleases_rss.xml) | False | fetch_failed |
-| Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/notifications_rss.xml) | False | fetch_failed |
-| Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/speeches_rss.xml) | False | fetch_failed; reference data, research, speeches or commentary |
-| Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/tenders_rss.xml) | False | fetch_failed |
-| Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/AnnualReportMain_rss.xml) | False | fetch_failed |
-| Reserve Bank of India — Publications | IN | monetary_and_supervisory | [rss](https://rbi.org.in/Publication_rss.xml) | False | fetch_failed |
+| Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/pressreleases_rss.xml) | True | ok |
+| Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/notifications_rss.xml) | True | ok |
+| Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/speeches_rss.xml) | False | ok; reference data, research, speeches or commentary |
+| Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/tenders_rss.xml) | True | ok |
+| Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/AnnualReportMain_rss.xml) | True | ok |
+| Reserve Bank of India — Publications | IN | monetary_and_supervisory | [rss](https://rbi.org.in/Publication_rss.xml) | True | ok |
 | Securities and Exchange Board of India — https://www.sebi.gov.in/sebirss.xml | IN | financial_enforcement | [rss](https://www.sebi.gov.in/sebirss.xml) | True | ok |
 | State Council of China policies | CN | executive_instruments | [html_index](https://english.www.gov.cn/policies/latestreleases/) | True | ok |
-| Ministry of Commerce of China announcements and orders | CN | trade_and_export_controls | [html_index](https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/index.html) | False | invalid_feed_or_network_error |
+| Ministry of Commerce of China announcements and orders | CN | trade_and_export_controls | [html_index](https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/index.html) | False | selector_empty |
 | Bank of Japan | JP | monetary_operations | [rss](https://www.boj.or.jp/en/rss/whatsnew.xml) | True | ok |
-| Japan Ministry of Economy Trade and Industry | JP | trade_and_industry_policy | [html_index](https://www.meti.go.jp/english/press/) | False | blocked |
+| Japan Ministry of Economy Trade and Industry | JP | trade_and_industry_policy | [html_index](https://www.meti.go.jp/english/press/) | True | ok |
 | Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_008.xml) | True | ok |
 | Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_011.xml) | True | ok |
 | Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_013.xml) | True | ok |
@@ -2507,14 +2577,14 @@ Institution records include historical/closed bodies and shared portals. This is
 | White House presidential actions | US | official_publication_page_checked | [source](https://www.whitehouse.gov/presidential-actions/) |
 | Congress.gov legislative status | US | page_unavailable; verification pending | [source](https://www.congress.gov/rss/) |
 | Supreme Court opinions and orders | US | official_publication_page_checked | [source](https://www.supremecourt.gov/opinions/opinions.aspx) |
-| Securities and Exchange Commission | US | page_unavailable; verification pending | [source](https://www.sec.gov/newsroom/press-releases) |
-| Federal Trade Commission | US | page_unavailable; verification pending | [source](https://www.ftc.gov/news-events/stay-connected/ftc-rss-feeds) |
+| Securities and Exchange Commission | US | official_publication_page_checked | [source](https://www.sec.gov/newsroom/press-releases) |
+| Federal Trade Commission | US | official_publication_page_checked | [source](https://www.ftc.gov/news-events/stay-connected/ftc-rss-feeds) |
 | Department of Justice | US | official_publication_page_checked | [source](https://www.justice.gov/news) |
 | Treasury Office of Foreign Assets Control | US | official_publication_page_checked | [source](https://ofac.treasury.gov/recent-actions) |
 | Department of the Treasury | US | official_publication_page_checked | [source](https://home.treasury.gov/news/press-releases) |
 | Bureau of Industry and Security | US | official_publication_page_checked | [source](https://www.bis.gov/news-updates/press-releases) |
 | United States Trade Representative | US | official_publication_page_checked | [source](https://ustr.gov/about-us/policy-offices/press-office/press-releases) |
-| United States International Trade Commission | US | page_unavailable; verification pending | [source](https://www.usitc.gov/press_room/) |
+| United States International Trade Commission | US | official_publication_page_checked | [source](https://www.usitc.gov/press_room/) |
 | Federal Reserve Board | US | official_publication_page_checked | [source](https://www.federalreserve.gov/feeds/feeds.htm) |
 | Federal Reserve Bank of New York | US | official_publication_page_checked | [source](https://www.newyorkfed.org/rss) |
 | Federal Deposit Insurance Corporation | US | official_publication_page_checked | [source](https://www.fdic.gov/news/press-releases) |
@@ -2524,24 +2594,24 @@ Institution records include historical/closed bodies and shared portals. This is
 | Commodity Futures Trading Commission | US | official_publication_page_checked | [source](https://www.cftc.gov/PressRoom/PressReleases) |
 | Food and Drug Administration | US | official_publication_page_checked | [source](https://www.fda.gov/about-fda/contact-fda/subscribe-podcasts-and-news-feeds) |
 | Consumer Product Safety Commission | US | official_publication_page_checked | [source](https://www.cpsc.gov/Newsroom/CPSC-RSS-Feed) |
-| USDA Food Safety and Inspection Service | US | page_unavailable; verification pending | [source](https://www.fsis.usda.gov/news-events/news-feeds-subscriptions) |
+| USDA Food Safety and Inspection Service | US | official_publication_page_checked | [source](https://www.fsis.usda.gov/news-events/news-feeds-subscriptions) |
 | USDA Animal and Plant Health Inspection Service | US | official_publication_page_checked | [source](https://www.aphis.usda.gov/news) |
-| Health and Human Services | US | page_unavailable; verification pending | [source](https://www.hhs.gov/press-room/index.html) |
+| Health and Human Services | US | official_publication_page_checked | [source](https://www.hhs.gov/press-room/index.html) |
 | Centers for Medicare and Medicaid Services | US | official_publication_page_checked | [source](https://www.cms.gov/about-cms/web-policies-important-links/rss-feeds) |
 | Environmental Protection Agency | US | official_publication_page_checked | [source](https://www.epa.gov/newsreleases) |
-| Federal Communications Commission | US | page_unavailable; verification pending | [source](https://www.fcc.gov/rss) |
+| Federal Communications Commission | US | official_publication_page_checked | [source](https://www.fcc.gov/rss) |
 | Federal Energy Regulatory Commission | US | page_unavailable; verification pending | [source](https://www.ferc.gov/news-events/news/decisions-notices) |
-| Department of Labor | US | page_unavailable; verification pending | [source](https://www.dol.gov/newsroom/releases) |
-| Occupational Safety and Health Administration | US | page_unavailable; verification pending | [source](https://www.osha.gov/rss/) |
+| Department of Labor | US | official_publication_page_checked | [source](https://www.dol.gov/newsroom/releases) |
+| Occupational Safety and Health Administration | US | official_publication_page_checked | [source](https://www.osha.gov/rss/) |
 | National Labor Relations Board | US | official_publication_page_checked | [source](https://www.nlrb.gov/resources/rss-feeds) |
 | Department of Energy | US | official_publication_page_checked | [source](https://www.energy.gov/newsroom) |
 | Department of the Interior | US | official_publication_page_checked | [source](https://www.doi.gov/news) |
 | Department of Transportation | US | page_unavailable; verification pending | [source](https://www.transportation.gov/briefing-room) |
 | Federal Aviation Administration | US | official_publication_page_checked | [source](https://www.faa.gov/newsroom) |
-| National Highway Traffic Safety Administration | US | page_unavailable; verification pending | [source](https://www.nhtsa.gov/press-releases) |
-| Department of State | US | page_unavailable; verification pending | [source](https://www.state.gov/press-releases/) |
-| US Citizenship and Immigration Services | US | page_unavailable; verification pending | [source](https://www.uscis.gov/newsroom/alerts) |
-| Federal Emergency Management Agency | US | page_unavailable; verification pending | [source](https://www.fema.gov/about/news-multimedia) |
+| National Highway Traffic Safety Administration | US | official_publication_page_checked | [source](https://www.nhtsa.gov/press-releases) |
+| Department of State | US | official_publication_page_checked | [source](https://www.state.gov/press-releases/) |
+| US Citizenship and Immigration Services | US | official_publication_page_checked | [source](https://www.uscis.gov/newsroom/alerts) |
+| Federal Emergency Management Agency | US | official_publication_page_checked | [source](https://www.fema.gov/about/news-multimedia) |
 | Federal Maritime Commission | US | official_publication_page_checked | [source](https://www.fmc.gov/news/) |
 | Federal Housing Finance Agency | US | official_publication_page_checked | [source](https://www.fhfa.gov/news) |
 | Grants.gov | US | official_publication_page_checked | [source](https://grants.gov/connect/rss-feeds) |
@@ -2575,33 +2645,33 @@ Institution records include historical/closed bodies and shared portals. This is
 | Australian Federal Register of Legislation | AU | official_publication_page_checked | [source](https://www.legislation.gov.au/) |
 | Reserve Bank of Australia | AU | official_publication_page_checked | [source](https://www.rba.gov.au/rss/) |
 | Australian Securities and Investments Commission | AU | official_publication_page_checked | [source](https://asic.gov.au/newsroom/) |
-| Australian Competition and Consumer Commission | AU | page_unavailable; verification pending | [source](https://www.accc.gov.au/news-centre) |
+| Australian Competition and Consumer Commission | AU | official_publication_page_checked | [source](https://www.accc.gov.au/news-centre) |
 | Australian Prudential Regulation Authority | AU | official_publication_page_checked | [source](https://www.apra.gov.au/news-and-publications) |
 | New Zealand Gazette | NZ | official_publication_page_checked | [source](https://gazette.govt.nz/home/search) |
 | New Zealand Legislation | NZ | page_unavailable; verification pending | [source](https://www.legislation.govt.nz/learn-more/find-and-use-legislation/keep-up-to-date-with-legislation/) |
 | Reserve Bank of New Zealand | NZ | page_unavailable; verification pending | [source](https://www.rbnz.govt.nz/news-and-events/how-we-release-information) |
 | New Zealand Commerce Commission | NZ | official_publication_page_checked | [source](https://comcom.govt.nz/news-and-media) |
 | Hong Kong Government Information Services | HK | official_publication_page_checked | [source](https://www.info.gov.hk/gia/general/today.htm) |
-| Hong Kong Government Gazette | HK | page_unavailable; verification pending | [source](https://www.gld.gov.hk/egazette/) |
-| Hong Kong Monetary Authority | HK | page_unavailable; verification pending | [source](https://apidocs.hkma.gov.hk/documentation/press-releases/) |
+| Hong Kong Government Gazette | HK | official_publication_page_checked | [source](https://www.gld.gov.hk/egazette/) |
+| Hong Kong Monetary Authority | HK | official_publication_page_checked | [source](https://apidocs.hkma.gov.hk/documentation/press-releases/) |
 | Hong Kong Securities and Futures Commission | HK | official_publication_page_checked | [source](https://www.sfc.hk/en/RSS-Feeds) |
 | Hong Kong Legislative Council | HK | page_unavailable; verification pending | [source](https://www.legco.gov.hk/english/rss.html) |
-| Hong Kong Judiciary judgments | HK | page_unavailable; verification pending | [source](https://www.judiciary.hk/en/judgments_legal_reference/judgments.html) |
+| Hong Kong Judiciary judgments | HK | official_publication_page_checked | [source](https://www.judiciary.hk/en/judgments_legal_reference/judgments.html) |
 | Monetary Authority of Singapore | SG | official_publication_page_checked | [source](https://www.mas.gov.sg/news) |
 | Singapore Courts judgments | SG | official_publication_page_checked | [source](https://www.judiciary.gov.sg/judgments) |
 | Competition and Consumer Commission of Singapore | SG | page_unavailable; verification pending | [source](https://www.cccs.gov.sg/media-and-consultation/newsroom) |
 | Health Sciences Authority Singapore | SG | official_publication_page_checked | [source](https://www.hsa.gov.sg/announcements) |
-| India Press Information Bureau | IN | page_unavailable; verification pending | [source](https://www.pib.gov.in/ViewRss.aspx?lang=1&reg=1) |
+| India Press Information Bureau | IN | official_publication_page_checked | [source](https://www.pib.gov.in/ViewRss.aspx?lang=1&reg=1) |
 | Reserve Bank of India | IN | official_publication_page_checked | [source](https://www.rbi.org.in/Scripts/rss.aspx) |
 | Securities and Exchange Board of India | IN | official_publication_page_checked | [source](https://www.sebi.gov.in/rss.html) |
-| Gazette of India | IN | page_unavailable; verification pending | [source](https://egazette.gov.in/) |
+| Gazette of India | IN | official_publication_page_checked | [source](https://egazette.gov.in/) |
 | Competition Commission of India | IN | official_publication_page_checked | [source](https://www.cci.gov.in/) |
 | State Council of China policies | CN | official_publication_page_checked | [source](https://english.www.gov.cn/policies/) |
 | Ministry of Commerce of China announcements and orders | CN | page_unavailable; verification pending | [source](https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/index.html) |
 | People's Bank of China | CN | page_unavailable; verification pending | [source](http://www.pbc.gov.cn/en/) |
 | Bank of Japan | JP | official_publication_page_checked | [source](https://www.boj.or.jp/en/) |
-| Japan Ministry of Economy Trade and Industry | JP | page_unavailable; verification pending | [source](https://www.meti.go.jp/english/press/) |
-| Japan Fair Trade Commission | JP | page_unavailable; verification pending | [source](https://www.jftc.go.jp/en/pressreleases/) |
+| Japan Ministry of Economy Trade and Industry | JP | official_publication_page_checked | [source](https://www.meti.go.jp/english/press/) |
+| Japan Fair Trade Commission | JP | official_publication_page_checked | [source](https://www.jftc.go.jp/en/pressreleases/) |
 | Japan Pharmaceuticals and Medical Devices Agency | JP | official_publication_page_checked | [source](https://www.pmda.go.jp/english/) |
 | Bank of Korea | KR | page_unavailable; verification pending | [source](https://www.bok.or.kr/eng/main/main.do) |
 | Korea Fair Trade Commission | KR | page_unavailable; verification pending | [source](https://www.ftc.go.kr/eng/) |
