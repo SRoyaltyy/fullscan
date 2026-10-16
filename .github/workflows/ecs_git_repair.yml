@@ -83,9 +83,14 @@ jobs:
           say() { echo "$*"; echo "$*" >> "$SUM"; }
           say "### Full-tree restore"
           say "sparse before: $(git -C "$R" config --get core.sparseCheckout || echo unset)"
+          G=(git -C "$R" -c safe.directory="$R")
+          # A killed 'sparse-checkout disable' can leave skip-worktree bits with
+          # sparse off, so checkout succeeds but files are missing. Count them.
+          say "skip-worktree files before: $("${G[@]}" ls-files -t | grep -c '^S' || true)"
           S=$(date +%s)
-          git -C "$R" -c safe.directory="$R" sparse-checkout disable
+          "${G[@]}" sparse-checkout set --no-cone '/*' && "${G[@]}" sparse-checkout disable
           RC=$?
+          say "skip-worktree files after: $("${G[@]}" ls-files -t | grep -c '^S' || true)"
           say "sparse-checkout disable rc=$RC in $(( $(date +%s) - S ))s"
           say "sparse after: $(git -C "$R" config --get core.sparseCheckout || echo unset)"
           S=$(date +%s); git -C "$R" -c safe.directory="$R" status --porcelain -uno >/dev/null 2>&1
