@@ -1,7 +1,7 @@
 # Primary-origin action documents
 
-Updated 2026-10-16T17:15:03.640889+00:00. 3237 dated documents in the configured 3-day window; 0 newly retained; 1283 repeat observations.
-Source health: 458/463 checked successfully. Collection uses zero LLM calls.
+Updated 2026-10-16T17:23:24.584737+00:00. 3239 dated documents in the configured 3-day window; 0 newly retained; 1259 repeat observations.
+Source health: 455/463 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
@@ -2338,6 +2338,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [The Scottish Administration (Offices) Order 2026](http://www.legislation.gov.uk/uksi/2026/1097/made) — UK legislation; 2026-10-16T14:08:30.794449+00:00
 - [The School Teachers’ Pay and Conditions (England) Order 2026](http://www.legislation.gov.uk/uksi/2026/1096/made) — UK legislation; 2026-10-16T14:08:21.025034+00:00
 - [The Tribunal Procedure (Upper Tribunal) (Amendment) Rules 2026](http://www.legislation.gov.uk/uksi/2026/1084/made) — UK legislation; 2026-10-16T14:08:10.917090+00:00
+- [AIIA Marks a Decade of Service with Over 37.74 Lakh Patients Treated Across Its Healthcare Network - Press Information Bureau](https://news.google.com/rss/articles/CBMiY0FVX3lxTE9EQjN1SDN4Z3JQQU85SklHbTY2X2J0M3g2Wmc5S0VKNWpWalY0R0Rla18xZ1FlRm1yR1p6SG1xU3VmazViYTJNSzFpMW5CUlE3X2hDZF96clo1R09rV2xlSGFhMA) — India Press Information Bureau (official-site news mirror); 2026-10-16T14:06:00+00:00
 - [S. Hrg. 119-424 - THE PRESIDENT'S BUDGET REQUEST FOR THE U.S. FOREST SERVICE FOR FISCAL YEAR 2027](https://www.govinfo.gov/app/details/CHRG-119shrg63886) — Congressional Hearings; 2026-10-16T14:04:00+00:00
 - [Human medicines European public assessment report (EPAR): Idefirix, imlifidase, Date of authorisation: 25/08/2020, Revision: 11, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/idefirix) — European Medicines Agency; 2026-10-16T14:02:00+00:00
 - [20262412: Caterpillar Inc.; John Fabick Tractor Company](https://www.ftc.gov/legal-library/browse/early-termination-notices/20262412) — Federal Trade Commission — HSR Early Termination Notices; 2026-10-16T13:47:07+00:00
@@ -2986,6 +2987,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Brussels ETO continues support for Hong Kong films at renowned Sitges International Fantastic Film Festival of Catalonia (with photos)](https://www.info.gov.hk/gia/general/202610/14/P2026101300590.htm) — Hong Kong Government Information Services; 2026-10-14T10:55:00+00:00
 - [LCQ7: Concern about adolescents' addiction to the Internet](https://www.info.gov.hk/gia/general/202610/14/P2026101400568.htm) — Hong Kong Government Information Services; 2026-10-14T10:52:00+00:00
 - [CFS finds excessive Bacillus cereus in sample of bun with fresh meat and preserved vegetable](https://www.info.gov.hk/gia/general/202610/14/P2026101400675.htm) — Hong Kong Government Information Services; 2026-10-14T10:38:36+00:00
+- [Cabinet approves continuation of the National Social Assistance Programme for five years from 2026-27 to 2030-31 - Press Information Bureau](https://news.google.com/rss/articles/CBMiaEFVX3lxTE51OUtTTXdKUzNoV2RGeWFjbGU1bjYwdEdyaXBXb2tDZGpMUTh6eVdzNlNlc0JYQ2l6M0s4azk0QmVFZkZ2ZEU5SGZJQ09oZkNjbWJqTFltU1MxTGtGbjZlQ1lhUl9fVko0) — India Press Information Bureau (official-site news mirror); 2026-10-14T10:36:00+00:00
 - [Cabinet approves continuation of the National Social Assistance Programme for five years from 2026-27 to 2030-31 - Press Information Bureau](https://news.google.com/rss/articles/CBMifEFVX3lxTE5mcTdGNWl4bUs1XzJTSURPelhBMVB2OTliVk1yN2JzSkxLRFhFVmhROTcxUHFTcVpnN1V0eTNSVEdkRzRoVW1ZUVlVZ19tQnNHLWVWVms2c0lJLU4yT2tnaVA5bmdfa2pTSEFITXd2LVpmdlFsTFVfRmE2dHo) — India Press Information Bureau (official-site news mirror); 2026-10-14T10:36:00+00:00
 - [Cabinet approves Productivity Linked Bonus (PLB) for 78 days to Railway Employees - Press Information Bureau](https://news.google.com/rss/articles/CBMie0FVX3lxTE9XczhlelQxdS1ZMHhWUWttVGlteENoWGpxbks3WUFoZFJaekt1X0dXNzZYbjhlWWg0RHlCY2VKVkl5MmIxTXpnajJOSEl4dG9OMS1UQTh4UmlxVTZVOGdVemRDRjNRV1dPUjF0Qy05U0dYa01FbHVRUXVVZw) — India Press Information Bureau (official-site news mirror); 2026-10-14T10:33:00+00:00
 - [Cabinet approves Productivity Linked Bonus (PLB) for 78 days to Railway Employees - Press Information Bureau](https://news.google.com/rss/articles/CBMiaEFVX3lxTFAyN3JCMS1GQlNuRUpFNUFuMW83M3F3ODdJN3dwdkVUVHpqZmtmcDE3WkU2ZDh0TkpESzkxYzJERkFJT0tTY0tjVjJzWi1iQzlVaFVBRFpMWWJFM2NCNFFHdHBXcHA1bzd2) — India Press Information Bureau (official-site news mirror); 2026-10-14T10:33:00+00:00
@@ -3369,7 +3371,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-ftc-ebb4359fb7: ok; stale_feed_outside_requested_window
 - us-ftc-69601f2e49: ok; stale_feed_outside_requested_window
 - us-treasury-a69e5b5ef0: ok; stale_feed_outside_requested_window
-- us-ustr-index: ok; stale_feed_outside_requested_window
+- us-ustr-index: unchanged; stale_feed_outside_requested_window
 - us-fed-a383ca0d09: ok; stale_feed_outside_requested_window
 - us-fed-1401ff4ff2: ok; stale_feed_outside_requested_window
 - us-fed-1555c8e0e5: ok; stale_feed_outside_requested_window
@@ -3391,20 +3393,22 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fda-1a1096082f: unchanged; stale_feed_outside_requested_window
 - us-fda-2d9c4fc2f9: unchanged; stale_feed_outside_requested_window
 - us-fda-8fc09ac0a2: unchanged; stale_feed_outside_requested_window
-- us-fda-3eaddf14de: ok; stale_feed_outside_requested_window
+- us-fda-3eaddf14de: unchanged; stale_feed_outside_requested_window
 - us-fda-a25233bfac: unchanged; stale_feed_outside_requested_window
 - us-fda-1ca201e48f: unchanged; stale_feed_outside_requested_window
-- us-fda-c7d1d1cd64: ok; stale_feed_outside_requested_window
-- us-fda-d7692535f0: ok; stale_feed_outside_requested_window
+- us-fda-c7d1d1cd64: unchanged; stale_feed_outside_requested_window
+- us-fda-d7692535f0: unchanged; stale_feed_outside_requested_window
 - us-fsis-85c9542fd5: ok; stale_feed_outside_requested_window
 - us-fcc-1ad902e468: unchanged; stale_feed_outside_requested_window
 - us-fcc-ff38ce828f: ok; stale_feed_outside_requested_window
 - us-fcc-198472aaf9: ok; stale_feed_outside_requested_window
-- us-fcc-71eeceab27: parse_or_network_error; 
-- us-fcc-543ac3ead4: parse_or_network_error; 
-- us-fcc-364d1b4932: parse_or_network_error; 
-- us-fcc-178b343217: parse_or_network_error; 
-- us-fcc-82b69be738: parse_or_network_error; 
+- us-fcc-adabf37abf: parse_or_network_error; 
+- us-fcc-ba4344681a: parse_or_network_error; 
+- us-fcc-9e55083358: parse_or_network_error; 
+- us-fcc-42ae0f427c: parse_or_network_error; 
+- us-fcc-6fc68e3362: parse_or_network_error; 
+- us-fcc-6d83f4c2ee: parse_or_network_error; 
+- us-ferc-index: selector_empty; HTML selector matched no publication links; not healthy zero activity
 - us-osha-ba174bf325: ok; stale_feed_outside_requested_window
 - us-osha-7df7a48ccf: ok; stale_feed_outside_requested_window
 - us-nlrb-3db5e72bf9: unchanged; stale_feed_outside_requested_window
@@ -3418,8 +3422,8 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - eu-ecb-fb5fd59aed: ok; stale_feed_outside_requested_window
 - eu-ecb-b84350c252: ok; stale_feed_outside_requested_window
 - eu-ecb-af0dbdabee: ok; stale_feed_outside_requested_window
-- eu-ecb-bca2a70864: ok; stale_feed_outside_requested_window
-- eu-ecb-0370c1f1df: ok; stale_feed_outside_requested_window
+- eu-ecb-bca2a70864: unchanged; stale_feed_outside_requested_window
+- eu-ecb-0370c1f1df: unchanged; stale_feed_outside_requested_window
 - eu-ecb-c12c22cb78: unchanged; stale_feed_outside_requested_window
 - ca-gazette-821b285be1: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-2d47daa483: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
@@ -3453,8 +3457,8 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - au-rba-9e35f5f8d1: unchanged; stale_feed_outside_requested_window
 - au-rba-5ba995e001: unchanged; stale_feed_outside_requested_window
 - au-rba-bb9b5c009f: unchanged; stale_feed_outside_requested_window
-- au-accc-index: ok; listing_rendered_via_tier3_reader
-- hk-government-a5249d2406: unchanged; feed_at_capacity_in_requested_window; snapshots may miss overflow
+- au-accc-index: selector_empty; HTML selector matched no publication links; not healthy zero activity
+- hk-government-a5249d2406: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
 - sg-hsa-621a78d387: unchanged; stale_feed_outside_requested_window
 - in-rbi-738b09bded: ok; stale_feed_outside_requested_window
 - in-rbi-6f75cd7f86: ok; stale_feed_outside_requested_window

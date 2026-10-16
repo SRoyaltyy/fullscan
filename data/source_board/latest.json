@@ -1,0 +1,66 @@
+{
+ "date": "2026-10-16",
+ "generated_at": "2026-10-16T17:24:55.496946+00:00",
+ "catalog": {
+  "generated_at": "2026-10-16T17:12:50.726784+00:00",
+  "channels": 546,
+  "enabled": 463,
+  "verified_ok": 443,
+  "by_adapter": {
+   "federal_register": 1,
+   "hkma_press": 1,
+   "govuk_search": 18,
+   "rss": 427,
+   "html_index": 13,
+   "google_news_rss": 3
+  },
+  "by_jurisdiction": {
+   "US": 309,
+   "EU": 46,
+   "CA": 34,
+   "UK": 25,
+   "AU": 10,
+   "JP": 9,
+   "IN": 7,
+   "INT": 5,
+   "DE": 4,
+   "HK": 3,
+   "CH": 2,
+   "US-CA": 1,
+   "NZ": 1,
+   "SG": 1,
+   "CN": 1,
+   "TW": 1,
+   "PH": 1,
+   "ZA": 1,
+   "SE": 1,
+   "NO": 1
+  }
+ },
+ "collect": {
+  "generated_at": "2026-10-16T17:23:24.584737+00:00",
+  "enabled_sources": 463,
+  "sources_ok": 455,
+  "sources_failed": 8,
+  "coverage_status": "degraded",
+  "counts": {
+   "observed": 4167,
+   "old": 2908,
+   "future": 0,
+   "undated": 309,
+   "new": 0,
+   "duplicates": 1259
+  },
+  "current_dated_documents": 3239
+ },
+ "new_today": {
+  "count": 0,
+  "by_source": {}
+ },
+ "n_failures": 8,
+ "dates": [
+  "2026-10-16"
+ ],
+ "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-10-16.json",
+ "pages": "https://sroyaltyy.github.io/fullscan/dashboard/source-board/"
+}
