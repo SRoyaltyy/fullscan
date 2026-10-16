@@ -1,6 +1,6 @@
 # Stock book — 2026-10-16
 
-_Generated 2026-10-16T16:40:02.906431-04:00_
+_Generated 2026-10-16T16:51:35.444534-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -196,7 +196,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | News judge | **found** | s_news ticker tilts |
 | Finviz daily digest | **found** | s_news company headlines |
 | General predict | **found** | s_general × beta |
-| Sector LLM essays | **missing / not in ranker** | s_sector (0 if essays missing) |
+| Sector LLM essays | **found** | s_sector (0 if essays missing) |
 | AB checklist + P01–P04 | **found** | s_ab |
 | Peer RS | **found** | s_peer |
 | Ticker checklist (rebound) | **found** | rebound_floor (dated file, else latest — can be stale) |
@@ -206,7 +206,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Catalyst overlays | **missing / not in ranker** | not in ranker — separate chart workflow |
 | Insider / politician flow | **missing / not in ranker** | no daily file in repo |
 | Industry predict | **found** | not scored (ad-hoc only) |
-| Learnings / mutable policy | **missing / not in ranker** | next predict prompt, not a ticker score |
+| Learnings / mutable policy | **found** | next predict prompt, not a ticker score |
 
 ### Sector LLM bias (1d) — 0 / empty means that essay was not run today
 

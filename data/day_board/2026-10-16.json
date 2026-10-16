@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T16:40:06.330406-04:00",
+  "generated_at": "2026-10-16T16:51:37.115010-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -182,7 +182,7 @@
       "inputs_ready": true,
       "n_req_ok": 6,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 14,
       "files": [
         {
@@ -334,11 +334,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-16/_board.json",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -502,13 +507,18 @@
           "bullets": []
         }
       ],
-      "said": "general UP  5.526",
+      "said": "general UP  5.526 \u00b7 sectors 0 up / 0 down / 0 flat",
       "bullets": [
         "bad: Hormuz tanker attacks at wartime high",
         "bad: France downgrade risk (Moody's Oct 23)",
         "bad: Mexico downgraded BBB+\u2192BBB",
         "good: Warsh dovish-leaning (Oct hike odds 27%\u219215%)",
-        "good: Korea chip rally KOSPI +2.05%"
+        "good: Korea chip rally KOSPI +2.05%",
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -674,7 +684,7 @@
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
-      "n_opt": 4,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_general",
@@ -696,12 +706,17 @@
           "key": "in_board",
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-16/_board.json",
-          "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -808,7 +823,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=190",
-          "size": 1427416,
+          "size": 1427414,
           "said": "1d BUY MQ, PDFS, IT, TOST, PRCH, VEEV, ARQT, ETON \u00b7 SELL ROIV, SOC, NEOV, GH, IFRX, APA \u00b7 0.61285",
           "bullets": []
         },
@@ -819,10 +834,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 70199,
+          "size": 70163,
           "said": "Stock book \u2014 2026-10-16",
           "bullets": [
-            "_Generated 2026-10-16T16:40:02.906431-04:00_",
+            "_Generated 2026-10-16T16:51:35.444534-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -886,7 +901,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=190",
-          "size": 1427416,
+          "size": 1427414,
           "said": "1d BUY MQ, PDFS, IT, TOST, PRCH, VEEV, ARQT, ETON \u00b7 SELL ROIV, SOC, NEOV, GH, IFRX, APA \u00b7 0.61285",
           "bullets": []
         },
@@ -1069,7 +1084,22 @@
       "score": "5.526",
       "direction": "up"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {},
     "weather": {
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
@@ -5789,6 +5819,30 @@
       "commit_msg": "auto: strategy tickets 2026-10-16",
       "workflow": "Publish strategy tickets",
       "run_id": "38962522292",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-16_stock_book.md",
+      "at": "2026-10-16T16:51:57-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-16",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38963345546",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-16_input_health.json",
+      "at": "2026-10-16T16:51:57-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-16",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38963345546",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-16_stock_book.json",
+      "at": "2026-10-16T16:51:57-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-16",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38963345546",
       "manifest": "research/input_freeze/2026-10-16/manifest.json"
     }
   ]
