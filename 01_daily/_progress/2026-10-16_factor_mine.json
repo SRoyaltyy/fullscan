@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "workflow": "factor_mine",
+  "date": "2026-10-16",
+  "run_id": "38872917753",
+  "model": "",
+  "started_at": "2026-10-16T04:34:22-04:00",
+  "updated_at": "2026-10-16T04:34:32-04:00",
+  "heartbeat_at": "2026-10-16T04:34:32-04:00",
+  "stages": [
+    {
+      "name": "land_closed",
+      "state": "ok",
+      "started_at": "2026-10-16T04:34:22-04:00",
+      "ended_at": "2026-10-16T04:34:32-04:00",
+      "heartbeat_at": "2026-10-16T04:34:22-04:00",
+      "done": 1,
+      "total": 1,
+      "model": "",
+      "error": ""
+    }
+  ]
+}
