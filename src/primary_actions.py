@@ -97,17 +97,28 @@ def get(url,headers=None,timeout=20):
     if host in KEYED_API_HOSTS and not keyed_request_url(request_url):raise ValueError('Keyed API requires its HTTPS origin on port 443')
     key=data_gov_api_key()
     extra={'X-Api-Key':key} if keyed_request_url(request_url) and key else {}
-    request=urllib.request.Request(request_url,headers={'User-Agent':USER_AGENT,'Accept':'application/vnd.api+json, application/json, application/atom+xml, application/rss+xml, text/html;q=0.8',**(headers or {}),**extra})
-    audit_request(request)
-    try:
-        with urllib.request.build_opener(OfficialRedirects()).open(request,timeout=timeout) as response:
-            body=response.read(MAX_BYTES+1)
-            if len(body)>MAX_BYTES:raise ValueError('Response exceeds public-document metadata size limit')
-            return response.status,body,dict(response.headers),response.url
-    except urllib.error.HTTPError as exc:
-        try:body=exc.read(65536)
-        finally:exc.close()
-        return exc.code,body,dict(exc.headers),request_url
+    for attempt in range(2):
+        accept='application/rss+xml, application/atom+xml, application/xml, text/xml;q=0.9, */*;q=0.8' if attempt else 'application/vnd.api+json, application/json, application/atom+xml, application/rss+xml, text/html;q=0.8'
+        cache_headers=(headers or {}) if not attempt else {}
+        request=urllib.request.Request(request_url,headers={'User-Agent':USER_AGENT,'Accept':accept,**cache_headers,**extra})
+        audit_request(request)
+        try:
+            with urllib.request.build_opener(OfficialRedirects()).open(request,timeout=timeout) as response:
+                body=response.read(MAX_BYTES+1)
+                if len(body)>MAX_BYTES:raise ValueError('Response exceeds public-document metadata size limit')
+                return response.status,body,dict(response.headers),response.url
+        except urllib.error.HTTPError as exc:
+            try:body=exc.read(65536)
+            finally:exc.close()
+            if exc.code==406 and attempt==0 and host=='www.federalreserve.gov' and urllib.parse.urlsplit(request_url).path.startswith('/feeds/'):
+                time.sleep(1);continue
+            return exc.code,body,dict(exc.headers),request_url
+
+def validate_source_ids(sources):
+    seen=set()
+    for source in sources:
+        if source['id'] in seen:raise ValueError('Duplicate source ID: '+source['id'])
+        seen.add(source['id'])
 
 def api_error(body):
     # Persist only known codes, never arbitrary server messages which may echo a key.
@@ -437,6 +448,7 @@ def atomic_json(path,data):
     path=pathlib.Path(path);path.parent.mkdir(parents=True,exist_ok=True);temp=path.with_suffix(path.suffix+'.tmp');temp.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');temp.replace(path)
 
 def collect(catalog,ledger,output,lookback_days=3,workers=8,fetch=get,asof=None):
+    validate_source_ids(catalog['sources'])
     ledger.changed_ids.clear();asof=asof or now();start=asof-timedelta(days=lookback_days);sources=[s for s in catalog['sources'] if s.get('enabled')];health=[];fresh_ids=[];counts={'observed':0,'old':0,'future':0,'undated':0,'new':0,'duplicates':0};locks={}
     for s in sources:locks.setdefault(urllib.parse.urlsplit(s['url']).hostname,threading.Semaphore(2))
     states={s['id']:ledger.state(s['id']) for s in sources}

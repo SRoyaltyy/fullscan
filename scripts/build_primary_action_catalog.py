@@ -5,7 +5,7 @@ Unverified/blocked endpoints remain visible and disabled, never padded into cove
 """
 import argparse,concurrent.futures,hashlib,json,pathlib,re,threading,urllib.parse
 from collections import Counter
-from src.primary_actions import VERSION,Links,get,feed_rows,index_rows,now,iso,atomic_json,fetch_source,HTTP_AUDIT,allowed_public_source,data_gov_api_key,KEYED_ADAPTERS
+from src.primary_actions import VERSION,Links,get,feed_rows,index_rows,now,iso,atomic_json,fetch_source,HTTP_AUDIT,allowed_public_source,data_gov_api_key,KEYED_ADAPTERS,validate_source_ids
 from datetime import timedelta
 
 DIRECTORIES={
@@ -40,6 +40,7 @@ def verification_result(source,rows,state,stamp):
 
 def build(root):
  seeds=json.loads((root/'config/primary_action_seeds.json').read_text(encoding='utf-8'))['sources']
+ declared_types={u:s['document_type'] for s in seeds if s.get('document_type') for u in s.get('feed_urls',[])}
  institutions=[];sources=[];evidence=[];gaps=[];stamp=iso(now())
  def evidence_row(url,body):evidence.append({'url':url,'verified_at':stamp,'sha256':hashlib.sha256(body).hexdigest(),'bytes':len(body)})
  body,_=read_url(DIRECTORIES['us_agencies']);evidence_row(DIRECTORIES['us_agencies'],body)
@@ -50,7 +51,7 @@ def build(root):
  sources.append({'id':'us-openfda-drugs','name':'openFDA Drugs@FDA approvals','jurisdiction':'US','family':'product_permissions_and_safety','document_type':'fda_approval','url':'https://api.fda.gov/drug/drugsfda.json','adapter':'openfda_approvals','discovery_url':'https://open.fda.gov/apis/drug/drugsfda/','candidate_origin':'documented_official_api'})
  sources.append({'id':'us-congress-bills','name':'Congress.gov bill actions','jurisdiction':'US','family':'legislative_procedure','url':'https://api.congress.gov/v3/bill','adapter':'congress_bills','discovery_url':'https://api.congress.gov/','candidate_origin':'documented_official_api; api.data.gov key'})
  sources.append({'id':'us-regulations-documents','name':'Regulations.gov posted documents','jurisdiction':'US','family':'rules_notices_and_presidential_documents','url':'https://api.regulations.gov/v4/documents','adapter':'regulations_documents','discovery_url':'https://open.gsa.gov/api/regulationsgov/','candidate_origin':'documented_official_api; api.data.gov key'})
- sources.append({'id':'us-govinfo-plaw','name':'GovInfo public laws','jurisdiction':'US','family':'legislative_and_presidential_documents','document_type':'public_law','url':'https://api.govinfo.gov/collections/PLAW','adapter':'govinfo_packages','discovery_url':'https://api.govinfo.gov/docs/','candidate_origin':'documented_official_api; api.data.gov key'})
+ sources.append({'id':'us-govinfo-plaw-api','name':'GovInfo public laws','jurisdiction':'US','family':'legislative_and_presidential_documents','document_type':'public_law','url':'https://api.govinfo.gov/collections/PLAW','adapter':'govinfo_packages','discovery_url':'https://api.govinfo.gov/docs/','candidate_origin':'documented_official_api; api.data.gov key'})
  sources.append({'id':'us-treasury-auctions','name':'TreasuryDirect announced auctions','jurisdiction':'US','family':'fiscal_operations','document_type':'treasury_auction','url':'https://www.treasurydirect.gov/TA_WS/securities/announced?format=json','adapter':'treasury_announced','discovery_url':'https://www.treasurydirect.gov/webapis/webapisindex.htm','candidate_origin':'documented_official_api'})
  sources.append({'id':'hk-hkma-public-press','name':'Hong Kong Monetary Authority official press releases','jurisdiction':'HK','family':'monetary_and_supervisory','url':'https://api.hkma.gov.hk/public/press-releases','adapter':'hkma_press','discovery_url':'https://apidocs.hkma.gov.hk/documentation/press-releases/','candidate_origin':'documented_official_api; descending dates, client-side window and offset pagination'})
  body,_=read_url(DIRECTORIES['uk_organisations']);evidence_row(DIRECTORIES['uk_organisations'],body);first=json.loads(body)
@@ -107,10 +108,11 @@ def build(root):
     if not url.startswith(('https://','http://')) or url in candidate_urls:continue
     if not allowed_public_source(url):
      gaps.append({'institution_id':seed['id'],'url':url,'status':'external_feed_host_not_approved; not requested'});continue
-    candidate_urls.add(url);sources.append({'id':seed['id']+'-'+hashlib.sha256(url.encode()).hexdigest()[:10],'name':seed['name']+(' — '+title if title else ''),'jurisdiction':seed['jurisdiction'],'family':seed['family'],'url':url,'adapter':'rss','document_type':seed.get('document_type','official_announcement'),'discovery_url':seed['discovery_url'],'candidate_origin':'official_page_feed_link' if any(u==url for u,_ in found) else 'proposed_seed_url_requires_live_check','saturation_limit':100})
+    candidate_urls.add(url);sources.append({'id':seed['id']+'-'+hashlib.sha256(url.encode()).hexdigest()[:10],'name':seed['name']+(' — '+title if title else ''),'jurisdiction':seed['jurisdiction'],'family':seed['family'],'url':url,'adapter':'rss','document_type':declared_types.get(url,seed.get('document_type','official_announcement')),'discovery_url':seed['discovery_url'],'candidate_origin':'official_page_feed_link' if any(u==url for u,_ in found) else 'proposed_seed_url_requires_live_check','saturation_limit':100})
    if seed.get('index_url'):
     url=seed['index_url']
     sources.append({'id':seed['id']+'-index','name':seed['name'],'jurisdiction':seed['jurisdiction'],'family':seed['family'],'url':url,'adapter':'html_index','document_type':seed.get('document_type','official_announcement'),'link_pattern':seed['link_pattern'],'discovery_url':seed['discovery_url'],'candidate_origin':'specific_publication_link_selector'})
+ validate_source_ids(sources)
  locks={}
  for s in sources:locks.setdefault(urllib.parse.urlsplit(s['url']).hostname,threading.Semaphore(2))
  def verify(source):

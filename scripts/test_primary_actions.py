@@ -337,6 +337,56 @@ class PrimaryActionsTests(unittest.TestCase):
     self.assertNotIn('secret-value',(output/'report.json').read_text())
    finally:ledger.close()
 
+ def test_fed_plain_406_retries_once_with_rss_accept_and_audits_each_attempt(self):
+  import io,urllib.error
+  captured=[]
+  class Resp:
+   status=200;headers={};url='https://www.federalreserve.gov/feeds/press_orders.xml'
+   def read(self,n):return RSS
+   def __enter__(self):return self
+   def __exit__(self,*args):return False
+  def open_request(request,**kw):
+   captured.append(dict(request.header_items()))
+   if len(captured)==1:raise urllib.error.HTTPError(request.full_url,406,'Not Acceptable',{},io.BytesIO(b'Not Acceptable'))
+   return Resp()
+  HTTP_AUDIT.clear()
+  with patch('urllib.request.build_opener') as opener,patch('src.primary_actions.time.sleep') as delay:
+   opener.return_value.open.side_effect=open_request
+   status,body,headers,url=get(Resp.url)
+  self.assertEqual(status,200);self.assertEqual(len(captured),2);self.assertTrue(captured[1]['Accept'].startswith('application/rss+xml'))
+  self.assertEqual(len(HTTP_AUDIT),2);self.assertTrue(all(public_get_audit_ok(r) for r in HTTP_AUDIT));delay.assert_called_once_with(1)
+  with patch('urllib.request.build_opener') as opener,patch('src.primary_actions.time.sleep'):
+   opener.return_value.open.side_effect=lambda req,**kw:(_ for _ in ()).throw(urllib.error.HTTPError(req.full_url,406,'Not Acceptable',{},io.BytesIO(b'no')))
+   status,_,_,_=get(Resp.url);self.assertEqual(status,406);self.assertEqual(opener.return_value.open.call_count,2)
+
+ def test_duplicate_source_ids_fail_before_collection(self):
+  with tempfile.TemporaryDirectory() as d:
+   ledger=Ledger(pathlib.Path(d)/'ledger.db')
+   try:
+    with self.assertRaisesRegex(ValueError,'Duplicate source ID'):
+     collect({'sources':[SOURCE,SOURCE|{'adapter':'congress_bills'}]},ledger,pathlib.Path(d)/'out',fetch=lambda *a,**kw:self.fail('Network must not be called'),asof=ASOF)
+   finally:ledger.close()
+
+ def test_catalog_keeps_govinfo_api_and_rss_ids_distinct_and_explicit_feed_types(self):
+  import build_primary_action_catalog as builder
+  seeds=[{'id':'us-fed','name':'Federal Reserve Board','jurisdiction':'US','family':'monetary','discovery_url':'https://www.federalreserve.gov/feeds/feeds.htm'}, {'id':'us-fed-speeches','name':'Federal Reserve speeches','jurisdiction':'US','family':'official_statements','document_type':'official_statement','discovery_url':'https://www.federalreserve.gov/feeds/feeds.htm','feed_urls':['https://www.federalreserve.gov/feeds/speeches.xml']}]
+  def read_url(url):
+   if url==builder.DIRECTORIES['us_agencies']:return b'[]',url
+   if url==builder.DIRECTORIES['uk_organisations']:return b'{"pages":1,"total":0,"results":[]}',url
+   if url==builder.DIRECTORIES['us_court_feeds']:return b'<a href="https://www.govinfo.gov/rss/plaw.xml">Public Laws</a>',url
+   return b'<html></html>',url
+  def get_page(url,**kw):return 200,b'<link rel="alternate" type="application/rss+xml" href="https://www.federalreserve.gov/feeds/speeches.xml">',{},url
+  with tempfile.TemporaryDirectory() as d:
+   root=pathlib.Path(d)
+   for name,text in [('config/primary_action_seeds.json',json.dumps({'sources':seeds})),('src/primary_actions.py','core'),('scripts/build_primary_action_catalog.py','builder')]:
+    path=root/name;path.parent.mkdir(parents=True,exist_ok=True);path.write_text(text)
+   with patch.object(builder,'read_url',side_effect=read_url),patch.object(builder,'get',side_effect=get_page),patch.object(builder,'fetch_source',return_value=([],{'status':'valid_empty','requests':1})):
+    builder.build(root)
+   catalog=json.loads((root/'config/primary_action_sources.json').read_text());sources=catalog['sources'];ids=[s['id'] for s in sources]
+   self.assertEqual(len(ids),len(set(ids)));self.assertIn('us-govinfo-plaw-api',ids);self.assertIn('us-govinfo-plaw',ids)
+   speech=next(s for s in sources if s['url'].endswith('/speeches.xml'))
+   self.assertEqual(speech['document_type'],'official_statement');self.assertTrue(speech['enabled'])
+
  def test_public_inspection_rule_is_not_a_published_final_rule(self):
   metadata=source_metadata(SOURCE|{'adapter':'public_inspection'},{'document_type':'Rule'})
   self.assertEqual(metadata['document_stage'],'public_inspection_pending_publication')
