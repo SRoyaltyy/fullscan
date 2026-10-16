@@ -110,7 +110,7 @@ finalize() {
     --found "$FOUND_JSON" || echo "[paper-backstop] WARN: could not write $out"
   echo "[paper-backstop] wrote $out action=$ACTION result=$RESULT late=$LATE"
   if [ -x "$ROOT/scripts/safe_git_push.sh" ] || [ -f "$ROOT/scripts/safe_git_push.sh" ]; then
-    bash "$ROOT/scripts/safe_git_push.sh" \
+    timeout 120 bash "$ROOT/scripts/safe_git_push.sh" \
       "auto: paper backstop ${DAY}" \
       "data/paper_open/${DAY}_backstop.json" \
       "data/paper_open/${DAY}_submit.json" \
@@ -141,10 +141,20 @@ fi
 
 TMP="$(mktemp -d)"
 
-if ! git fetch origin main; then
+# 2026-10-16: host git fetch hung with no timeout (unit allows 7200s), so
+# the 09:12 backstop left no record. Bound it; the EXIT trap (finalize)
+# commits a blocked record with the reason.
+FETCH_RC=0
+timeout 60 git fetch origin main || FETCH_RC=$?
+if [ "$FETCH_RC" -ne 0 ]; then
   ACTION="refused"
   RESULT="fetch_failed"
-  NOTE="git fetch origin main failed"
+  if [ "$FETCH_RC" -eq 124 ]; then
+    NOTE="git fetch origin main timed out after 60s"
+  else
+    NOTE="git fetch origin main failed (rc=$FETCH_RC)"
+  fi
+  echo "[paper-backstop] BLOCKED: $NOTE"
   exit 1
 fi
 
