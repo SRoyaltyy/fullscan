@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-16",
+  "generated_at": "2026-10-16T04:18:22.004335-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-10-16",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks set for a slightly higher open with bank earnings, economic data, and options expiration in focus",
+  "raw_text": "- S&P 500 futures (@ES) rise roughly 0.11%, Dow Jones futures (@YM) climb about 0.15%, Nasdaq 100 futures (@NQ) are roughly unchanged, and Russell 2000 futures (@ER2) gain about 0.18% ahead of the open\n- Financials including Travelers (TRV), Truist (TFC), M&T Bank (MTB), Citizens Financial (CFG), and Regions Financial (RF) are scheduled to report earnings before the bell\n- US import prices data are due at 8:30 AM ET, followed by industrial production at 9:15 AM ET\n- Monthly options expiration is expected to be a potential intraday volatility catalyst\n- Asian equity markets traded mixed overnight with the Nikkei (@NKD) advancing, while European markets were directionally uneven\n- Oil futures (@CL) declined in overnight trading as gold (@GC) prices ticked higher\n- Tech sector pressures from prior sessions appear to be easing modestly in pre-market trade, with few specific large-cap movers highlighted so far",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) rise roughly **0.11%**, **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) climb about **0.15%**, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) are roughly unchanged, and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) gain about **0.18%** ahead of the open\n- **Financials** including Travelers ([TRV](https://finviz.com/quote?t=TRV)), Truist ([TFC](https://finviz.com/quote?t=TFC)), M&T Bank ([MTB](https://finviz.com/quote?t=MTB)), Citizens Financial ([CFG](https://finviz.com/quote?t=CFG)), and Regions Financial ([RF](https://finviz.com/quote?t=RF)) are scheduled to report **earnings before the bell**\n- **US import prices** data are due at **8:30 AM ET**, followed by **industrial production** at **9:15 AM ET**\n- **Monthly options expiration** is expected to be a potential **intraday volatility catalyst**\n- **Asian equity markets** traded mixed overnight with the **Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD)) advancing, while **European markets** were directionally uneven\n- **Oil futures** ([@CL](https://finviz.com/futures_charts?t=CL)) declined in overnight trading as **gold** ([@GC](https://finviz.com/futures_charts?t=GC)) prices ticked higher\n- **Tech sector pressures** from prior sessions appear to be **easing modestly** in pre-market trade, with few specific large-cap movers highlighted so far",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "TRV",
+    "TFC",
+    "MTB",
+    "CFG",
+    "RF"
+  ],
+  "named_leaders": [
+    "TRV",
+    "TFC",
+    "MTB",
+    "CFG",
+    "RF"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "TRV",
+      "TFC",
+      "MTB",
+      "CFG",
+      "RF"
+    ],
+    "text": "Financials including Travelers (TRV), Truist (TFC), M&T Bank (MTB), Citizens Financial (CFG), and Regions Financial (RF) are scheduled to report earnings before the bell"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 310731,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-16T04:06:58.94",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}
