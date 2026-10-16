@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "title": "First Circuit dimisses petitions for review - In re: MCP 191, No. 24-8028",
+    "url": "https://www.fcc.gov/edoc/425930",
+    "native_id": "425930",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "First Circuit Court of Appeals dismisses petitions in part and hold them in abeyance in part",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — FCC Recent Releases (Combined)",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-adabf37abf",
+    "n": 4220,
+    "first_seen": "2026-10-16T16:57:58.207129+00:00",
+    "last_seen": "2026-10-16T16:57:58.207129+00:00",
+    "source_ids": [
+      "us-fcc-782802e621",
+      "us-fcc-adabf37abf"
+    ]
+  }
+]

@@ -1,7 +1,7 @@
 # Primary-origin action documents
 
-Updated 2026-10-16T16:54:25.266926+00:00. 3154 dated documents in the configured 3-day window; 13 newly retained; 1341 repeat observations.
-Source health: 458/459 checked successfully. Collection uses zero LLM calls.
+Updated 2026-10-16T16:57:58.207129+00:00. 3176 dated documents in the configured 3-day window; 2 newly retained; 1307 repeat observations.
+Source health: 455/458 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
@@ -2311,9 +2311,12 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [RBI approves amalgamation of Indian branches of Emirates NBD Bank P.J.S.C. with RBL Bank Limited](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63820) — Reserve Bank of India; 2026-10-16T17:05:00+00:00
 - [Minutes of Pre-Bid Meeting - Design, Supply, Installation, Testing and Commissioning (DSITC) of 2X20 KVA UPS System in N+1 Parallel Redundant Mode along with Comprehensive AMC for RBI Archives, CAB Pune](https://www.rbi.org.in/scripts/BS_ViewTenders.aspx?id=25991) — Reserve Bank of India; 2026-10-16T17:00:00+00:00
 - [Reserve Bank of India – Bulletin Weekly Statistical Supplement – Extract](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63819) — Reserve Bank of India; 2026-10-16T17:00:00+00:00
+- [Real Food for Real Heroes: Secretary Kennedy Welcomes Lou Ferrigno, Dean Cain, and Kyle Reyes to The Real Food Show](https://www.hhs.gov/press-room/secretary-kennedy-lou-ferrigno-dean-cain-real-food-show.html) — Health and Human Services; 2026-10-16T16:45:00+00:00
 - [Corrigendum/Addendum - Providing Architectural and Engineering Consultancy Services for Construction of a) Office Complex of Reserve Bank of India at Nelapadu, Amaravati, Andhra Pradesh, and b) Officers’ & Staff Residential Complex of Reserve Bank of India at Inavolu, Amaravati, Andhra Pradesh (EPC Basis)](https://www.rbi.org.in/scripts/BS_ViewTenders.aspx?id=25990) — Reserve Bank of India; 2026-10-16T16:30:00+00:00
 - [Certificates of Authorisation issued by the Reserve Bank of India under the Payment and Settlement Systems Act, 2007 for Setting up and Operating Payment System in India](https://www.rbi.org.in/scripts/AnnualReportPublications.aspx?Id=12043) — Reserve Bank of India — Publications; 2026-10-16T16:05:00+00:00
 - [Minutes of the Pre-Bid Meeting - Renovation of Flats (A-3 and A-8) at RBI Officer's Quarter`s, Ultadanga, Kolkata](https://www.rbi.org.in/scripts/BS_ViewTenders.aspx?id=25989) — Reserve Bank of India; 2026-10-16T16:00:00+00:00
+- [Counterfeit Versions of Eye Drops Found in Several States](http://www.fda.gov/drugs/counterfeit-medicine/counterfeit-versions-eye-drops-found-several-states) — Food and Drug Administration — What's New: Drugs; 2026-10-16T15:49:17+00:00
+- [What You Should Know about Eye Drops](http://www.fda.gov/drugs/buying-using-medicine-safely/what-you-should-know-about-eye-drops) — Food and Drug Administration — What's New: Drugs; 2026-10-16T15:48:46+00:00
 - [Cancellation of Tender - Renovation Of Officers’ Lounge and Dining Room (Phase 1) at The Reserve Bank Staff College, Chennai](https://www.rbi.org.in/scripts/BS_ViewTenders.aspx?id=25988) — Reserve Bank of India; 2026-10-16T15:45:00+00:00
 - [S. Hrg. 119-432 - BLOWING THE WHISTLE: INSIDE THE GRIFT THAT KEEPS GIVING](https://www.govinfo.gov/app/details/CHRG-119shrg63971) — Congressional Hearings; 2026-10-16T15:37:00+00:00
 - [S. Hrg. 119-109 - OPEN HEARING: THE 2025 ANNUAL THREAT ASSESSMENT OF THE U.S. INTELLIGENCE COMMUNITY](https://www.govinfo.gov/app/details/CHRG-119shrg60885) — Congressional Hearings; 2026-10-16T15:32:00+00:00
@@ -2321,10 +2324,8 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Nova Biomedical StatStrip ketone test strips: risk of disruption to blood ketone testing due to quality-control failures and supply interruption DSI/2026/013](https://www.gov.uk/drug-device-alerts/nova-biomedical-statstrip-ketone-test-strips-risk-of-disruption-to-blood-ketone-testing-due-to-quality-control-failures-and-supply-interruption-dsi-slash-2026-slash-013) — Medicines and Healthcare products Regulatory Agency; 2026-10-16T15:29:11+00:00
 - [Hong Kong Customs special operation combats processing workshops and storages of suspected counterfeit hard disks (with photo)](https://www.info.gov.hk/gia/general/202610/16/P2026101600452.htm) — Hong Kong Government Information Services; 2026-10-16T15:19:17+00:00
 - [eSubmitter Application History](http://www.fda.gov/industry/fda-esubmitter/esubmitter-application-history) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-16T15:10:31+00:00
-- [What You Should Know about Eye Drops](http://www.fda.gov/drugs/buying-using-medicine-safely/what-you-should-know-about-eye-drops) — Food and Drug Administration — What's New: Drugs; 2026-10-16T15:05:42+00:00
 - [Human medicines European public assessment report (EPAR): Padcev, enfortumab vedotin, Date of authorisation: 13/04/2022, Revision: 11, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/padcev) — European Medicines Agency; 2026-10-16T15:05:00+00:00
 - [Counterfeit Medicine](http://www.fda.gov/drugs/buying-using-medicine-safely/counterfeit-medicine) — Food and Drug Administration — What's New: Drugs; 2026-10-16T15:02:57+00:00
-- [Counterfeit Versions of Eye Drops Found in Several States](http://www.fda.gov/drugs/counterfeit-medicine/counterfeit-versions-eye-drops-found-several-states) — Food and Drug Administration — What's New: Drugs; 2026-10-16T15:01:18+00:00
 - [Government Stock - Full Auction Results](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63818) — Reserve Bank of India; 2026-10-16T15:00:00+00:00
 - [2027 PhD Fellowship Programme](https://www.bis.org/vacancy/jr100516) — Bank for International Settlements — View feed; 2026-10-16T15:00:00+00:00
 - [Federal Reserve Board announces termination of enforcement actions with Gardner Bancshares, Inc. and Small Business Bank](https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261016a.htm) — Federal Reserve Board; 2026-10-16T15:00:00+00:00
@@ -2656,6 +2657,15 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Commission launches RAISE pledging initiative to boost AI support for researchers across Europe](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2175) — European Commission press and decisions; 2026-10-15T12:03:07+00:00
 - [FTC Sends More than $9.8 Million to Consumers Harmed by Walmart’s Failure to Stop Scammers that Used its Wire Transfer Services to Take Millions from Customers](https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-sends-more-98-million-consumers-harmed-walmarts-failure-stop-scammers-used-its-wire-transfer) — Federal Trade Commission — Press Releases; 2026-10-15T12:00:00+00:00
 - [FTC Sues Ticket Broker Over Unlawful Tactics Used to Buy Millions of Tickets to Popular Live Events](https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-sues-ticket-broker-over-unlawful-tactics-used-buy-millions-tickets-popular-live-events) — Federal Trade Commission — Press Releases; 2026-10-15T12:00:00+00:00
+- [Florida Man Pleads Guilty to Illegal Opioid Distribution Conspiracy](https://www.justice.gov/opa/pr/florida-man-pleads-guilty-illegal-opioid-distribution-conspiracy) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [DOJ, ATF, Law Enforcement Partners Conclude Operation Show Me Justice](https://www.justice.gov/opa/pr/doj-atf-law-enforcement-partners-conclude-operation-show-me-justice) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [Illegal Alien from Mexico Sentenced for International Conspiracy to Smuggle Aliens from Canada into United States](https://www.justice.gov/opa/pr/illegal-alien-mexico-sentenced-international-conspiracy-smuggle-aliens-canada-united-states) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [Owner of Health Care Software Company Sentenced to 19 Years in Prison for $1B Medicare Fraud](https://www.justice.gov/opa/pr/owner-health-care-software-company-sentenced-19-years-prison-1b-medicare-fraud) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [Justice Department, Law Enforcement Partners Announce Results of 8-Week Law Enforcement Surge Focused on Violent Crime Reduction](https://www.justice.gov/opa/video/justice-department-law-enforcement-partners-announce-results-8-week-law-enforcement-surge) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [San Diego Man Pleads Guilty to Tax Evasion](https://www.justice.gov/opa/pr/san-diego-man-pleads-guilty-tax-evasion) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [Justice Department Sues State of California over Voter List](https://www.justice.gov/opa/pr/justice-department-sues-state-california-over-voter-list) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [Justice Department Files Complaints Against the Cities of St. Paul and Portland Challenging Mask Ban and Identification Requirements for Federal Officers](https://www.justice.gov/opa/pr/justice-department-files-complaints-against-cities-st-paul-and-portland-challenging-mask-ban) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
+- [Deputy Assistant Attorney General Stephanie A. Greco Delivers Remarks at the 2026 Antitrust Tech Summit](https://www.justice.gov/opa/speech/deputy-assistant-attorney-general-stephanie-greco-delivers-remarks-2026-antitrust-tech) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
 - [Retired Boca Raton Attorney Pleads Guilty to Attempting to Obtain Child Sexual Abuse Material](https://www.justice.gov/usao-sdfl/pr/retired-boca-raton-attorney-pleads-guilty-attempting-obtain-child-sexual-abuse) — Department of Justice; 2026-10-15T12:00:00+00:00
 - [Disgraced Former FBI Agent Sentenced in Second Federal Prosecution](https://www.justice.gov/usao-edmi/pr/disgraced-former-fbi-agent-sentenced-second-federal-prosecution) — Department of Justice; 2026-10-15T12:00:00+00:00
 - [Maryland Father and Son Indicted on Dog Fighting, Breeding, and Transportation Charges After Law Enforcement Seizes 44 Dogs](https://www.justice.gov/usao-md/pr/maryland-father-and-son-indicted-dog-fighting-breeding-and-transportation-charges-after) — Department of Justice; 2026-10-15T12:00:00+00:00
@@ -2898,6 +2908,18 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Speech by Executive Vice-President Fitto at High Level Session “A Cohesion Policy for a Competitive Union”](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2163) — European Commission press and decisions; 2026-10-14T12:19:03+00:00
 - [28 more nomination forms for Election Committee Subsector Ordinary Elections received today](https://www.info.gov.hk/gia/general/202610/14/P2026101400725.htm) — Hong Kong Government Information Services; 2026-10-14T12:16:49+00:00
 - [Crown Office](https://www.thegazette.co.uk/notice/5230581) — The Gazette official public record; 2026-10-14T12:00:13+00:00
+- [Maine Tax Preparer Pleads Guilty to Filing False Returns for Clients](https://www.justice.gov/opa/pr/maine-tax-preparer-pleads-guilty-filing-false-returns-clients) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Florida Man Sentenced to Prison for Tax Refund Fraud](https://www.justice.gov/opa/pr/florida-man-sentenced-prison-tax-refund-fraud) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Texas Tax Preparer Sentenced to Prison as Part of False Tax Return Scheme](https://www.justice.gov/opa/pr/texas-tax-preparer-sentenced-prison-part-false-tax-return-scheme) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Minneapolis Father and Son Plead Guilty to $9 Million Fraud Conspiracy](https://www.justice.gov/opa/pr/minneapolis-father-and-son-plead-guilty-9-million-fraud-conspiracy) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [New Jersey Brothers Plead Guilty to Stealing More Than $2.6 Million, Collectively, in Tax Refunds](https://www.justice.gov/opa/pr/new-jersey-brothers-plead-guilty-stealing-more-26-million-collectively-tax-refunds) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Texas Residents Charged with Promoting Illegal Tax Shelter](https://www.justice.gov/opa/pr/texas-residents-charged-promoting-illegal-tax-shelter) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Mississippi Man Convicted by Federal Jury of Participating in a Criminal Conspiracy to Distribute Child Sexual Abuse Material](https://www.justice.gov/opa/pr/mississippi-man-convicted-federal-jury-participating-criminal-conspiracy-distribute-child) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [DOJ’s Fraud Division, IRS, and IRS-CI Expose More than $490M in Tax Fraud in National Tax Enforcement Surge](https://www.justice.gov/opa/pr/dojs-fraud-division-irs-and-irs-ci-expose-more-490m-tax-fraud-national-tax-enforcement-surge) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Kansas Business Owner Sent to Prison for Employment Tax Crimes](https://www.justice.gov/opa/pr/kansas-business-owner-sent-prison-employment-tax-crimes) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Justice Department Announces Significant Charges from National Tax Fraud Enforcement Surge](https://www.justice.gov/opa/video/justice-department-announces-significant-charges-national-tax-fraud-enforcement-surge) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Justice Department Opens Investigation of Pennsauken, New Jersey’s Allegedly Unconstitutional Permit Delays](https://www.justice.gov/opa/pr/justice-department-opens-investigation-pennsauken-new-jerseys-allegedly-unconstitutional) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
+- [Mexican Citizens Charged in a Fraudulent Tax Scheme](https://www.justice.gov/opa/pr/mexican-citizens-charged-fraudulent-tax-scheme) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
 - [Women's health](https://www.ema.europa.eu/en/human-regulatory-overview/research-development/womens-health) — European Medicines Agency; 2026-10-14T11:59:00+00:00
 - [NE66 3RQ, Robert Thompson, David Thompson, Kathryn Thompson and Bethan Thompson: environmental permit application advertisement - EPR/KP3326MQ/A002](https://www.gov.uk/government/publications/ne66-3rq-robert-thompson-david-thompson-kathryn-thompson-and-bethan-thompson-environmental-permit-application-advertisement-eprkp3326mqa002) — Environment Agency; 2026-10-14T11:36:46+00:00
 - [NE22 7FJ, JDR Cable Systems Limited: environmental permit application advertisement - EPR/NP3025MA/A001](https://www.gov.uk/government/publications/ne22-7fj-jdr-cable-systems-limited-environmental-permit-application-advertisement-eprnp3025maa001) — Environment Agency; 2026-10-14T11:35:07+00:00
@@ -3283,13 +3305,13 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-govinfo-uscourts-wyb: unchanged; stale_feed_outside_requested_window
 - us-govinfo-uscourts-jpml: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-white-house-0691096d16: unchanged; stale_feed_outside_requested_window
-- us-ftc-ebb4359fb7: ok; stale_feed_outside_requested_window
 - us-ftc-69601f2e49: ok; stale_feed_outside_requested_window
 - us-treasury-a69e5b5ef0: ok; stale_feed_outside_requested_window
 - us-ustr-index: ok; stale_feed_outside_requested_window
 - us-fed-a383ca0d09: ok; stale_feed_outside_requested_window
 - us-fed-1401ff4ff2: ok; stale_feed_outside_requested_window
 - us-fed-1555c8e0e5: ok; stale_feed_outside_requested_window
+- us-fed-00a0e0a88a: parse_or_network_error; 
 - us-fed-ba8ad56252: ok; stale_feed_outside_requested_window
 - us-fed-0023b1ebca: ok; stale_feed_outside_requested_window
 - us-fed-a93c08c457: ok; stale_feed_outside_requested_window
@@ -3304,61 +3326,62 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fdic-index: unchanged; stale_feed_outside_requested_window
 - us-fincen-index: ok; stale_feed_outside_requested_window
 - us-cftc-fda5c3631d: ok; stale_feed_outside_requested_window
-- us-fda-df70b9f330: ok; stale_feed_outside_requested_window
+- us-fda-df70b9f330: unchanged; stale_feed_outside_requested_window
 - us-fda-1a1096082f: unchanged; stale_feed_outside_requested_window
-- us-fda-2d9c4fc2f9: unchanged; stale_feed_outside_requested_window
-- us-fda-8fc09ac0a2: unchanged; stale_feed_outside_requested_window
+- us-fda-2d9c4fc2f9: ok; stale_feed_outside_requested_window
+- us-fda-8fc09ac0a2: ok; stale_feed_outside_requested_window
 - us-fda-3eaddf14de: unchanged; stale_feed_outside_requested_window
 - us-fda-a25233bfac: unchanged; stale_feed_outside_requested_window
 - us-fda-1ca201e48f: unchanged; stale_feed_outside_requested_window
 - us-fda-c7d1d1cd64: unchanged; stale_feed_outside_requested_window
-- us-fda-d7692535f0: ok; stale_feed_outside_requested_window
+- us-fda-d7692535f0: unchanged; stale_feed_outside_requested_window
 - us-fsis-85c9542fd5: ok; stale_feed_outside_requested_window
 - us-fcc-1ad902e468: unchanged; stale_feed_outside_requested_window
 - us-fcc-ff38ce828f: ok; stale_feed_outside_requested_window
 - us-fcc-198472aaf9: ok; stale_feed_outside_requested_window
-- us-fcc-364d1b4932: parse_or_network_error; 
+- us-fcc-2cc766d8f6: parse_or_network_error; 
+- us-fcc-032d1c9bf4: parse_or_network_error; 
 - us-osha-ba174bf325: ok; stale_feed_outside_requested_window
 - us-osha-7df7a48ccf: ok; stale_feed_outside_requested_window
-- us-nlrb-3db5e72bf9: ok; stale_feed_outside_requested_window
-- us-nlrb-c15d588b2d: ok; stale_feed_outside_requested_window
+- us-nlrb-3db5e72bf9: unchanged; stale_feed_outside_requested_window
+- us-nlrb-c15d588b2d: unchanged; stale_feed_outside_requested_window
 - us-dot-6464bc66ac: ok; stale_feed_outside_requested_window
 - us-uscis-a16e1f9942: ok; stale_feed_outside_requested_window
 - us-fmc-fe8f0538ae: unchanged; stale_feed_outside_requested_window
-- us-fhfa-index: unchanged; stale_feed_outside_requested_window
+- us-fhfa-index: ok; stale_feed_outside_requested_window
 - us-ca-oal-c1209cfd66: unchanged; stale_feed_outside_requested_window
 - eu-ecb-f4cd34bf25: unchanged; stale_feed_outside_requested_window
 - eu-ecb-fb5fd59aed: ok; stale_feed_outside_requested_window
 - eu-ecb-b84350c252: ok; stale_feed_outside_requested_window
 - eu-ecb-af0dbdabee: ok; stale_feed_outside_requested_window
-- eu-ecb-bca2a70864: ok; stale_feed_outside_requested_window
+- eu-ecb-bca2a70864: unchanged; stale_feed_outside_requested_window
 - eu-ecb-0370c1f1df: ok; stale_feed_outside_requested_window
-- eu-ecb-c12c22cb78: ok; stale_feed_outside_requested_window
+- eu-ecb-c12c22cb78: unchanged; stale_feed_outside_requested_window
 - ca-gazette-821b285be1: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-2d47daa483: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-c2eb48e1fa: unchanged; stale_feed_outside_requested_window
-- ca-boc-4aa19b2183: ok; stale_feed_outside_requested_window
+- ca-boc-4aa19b2183: unchanged; stale_feed_outside_requested_window
 - ca-boc-1f26bb2971: unchanged; stale_feed_outside_requested_window
-- ca-boc-4192a605ae: ok; stale_feed_outside_requested_window
+- ca-boc-4192a605ae: unchanged; stale_feed_outside_requested_window
 - ca-boc-5cc0603f1f: unchanged; stale_feed_outside_requested_window
 - ca-boc-a61b683fac: ok; stale_feed_outside_requested_window
-- ca-boc-161ba50d6e: ok; stale_feed_outside_requested_window
-- ca-boc-1c9979e6ac: unchanged; stale_feed_outside_requested_window
+- ca-boc-161ba50d6e: unchanged; stale_feed_outside_requested_window
+- ca-boc-1c9979e6ac: ok; stale_feed_outside_requested_window
 - ca-boc-b8fa2876ef: ok; stale_feed_outside_requested_window
-- ca-boc-b06a91e186: ok; stale_feed_outside_requested_window
-- ca-boc-f2811531de: ok; stale_feed_outside_requested_window
-- ca-boc-71c82276e6: ok; stale_feed_outside_requested_window
+- ca-boc-b06a91e186: unchanged; stale_feed_outside_requested_window
+- ca-boc-f2811531de: unchanged; stale_feed_outside_requested_window
+- ca-boc-71c82276e6: unchanged; stale_feed_outside_requested_window
 - ca-boc-c1617c3a5b: ok; stale_feed_outside_requested_window
 - ca-boc-ddf593b208: ok; stale_feed_outside_requested_window
-- ca-boc-affce837d4: ok; stale_feed_outside_requested_window
+- ca-boc-affce837d4: unchanged; stale_feed_outside_requested_window
 - ca-boc-e24c58f2d0: ok; stale_feed_outside_requested_window
 - ca-boc-9308ff5fe4: ok; stale_feed_outside_requested_window
 - ca-boc-9f75c25657: ok; stale_feed_outside_requested_window
-- ca-boc-cffefa81f7: unchanged; stale_feed_outside_requested_window
+- ca-boc-cffefa81f7: ok; stale_feed_outside_requested_window
 - ca-boc-762f78f374: ok; stale_feed_outside_requested_window
-- ca-boc-49364b93d8: ok; stale_feed_outside_requested_window
-- ca-boc-903390d96d: ok; stale_feed_outside_requested_window
-- ca-boc-1da610df86: ok; stale_feed_outside_requested_window
+- ca-boc-49364b93d8: unchanged; stale_feed_outside_requested_window
+- ca-boc-903390d96d: unchanged; stale_feed_outside_requested_window
+- ca-boc-1da610df86: unchanged; stale_feed_outside_requested_window
 - ca-boc-63e377340d: ok; stale_feed_outside_requested_window
 - au-rba-75f3866f45: unchanged; stale_feed_outside_requested_window
 - au-rba-4c2add8718: unchanged; stale_feed_outside_requested_window
