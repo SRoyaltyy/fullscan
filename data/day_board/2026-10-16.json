@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T05:42:59.560605-04:00",
+  "generated_at": "2026-10-16T05:48:29.632818-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -9,8 +9,8 @@
     "MISSING News judge MD `01_daily/news/2026-10-16_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 6,
-    "partial": 1,
+    "ok": 5,
+    "partial": 2,
     "fail": 1,
     "n": 8
   },
@@ -519,8 +519,8 @@
           "path": "01_daily/weather/2026-10-16_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9278 vix=falling yields=flat",
-          "size": 9278,
+          "reason": "sectors=11 bytes=9279 vix=falling yields=flat",
+          "size": 9279,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
@@ -631,9 +631,9 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 4,
+      "n_req_ok": 3,
       "n_req": 4,
       "n_opt_ok": 3,
       "n_opt": 4,
@@ -703,8 +703,8 @@
           "path": "01_daily/weather/2026-10-16_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9278 vix=falling yields=flat",
-          "size": 9278,
+          "reason": "sectors=11 bytes=9279 vix=falling yields=flat",
+          "size": 9279,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
@@ -733,7 +733,7 @@
           "size": 2218618,
           "said": "205 rows",
           "bullets": [
-            "KEYS, FORM, AVPT, MU, SKHY, APH, SMTC, NVDA"
+            "KEYS, FORM, AVPT, MU, SKHY, NVDA, APH, SMTC"
           ]
         },
         {
@@ -765,14 +765,11 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-10-16_stock_book.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 84162,
-          "said": "Stock book \u2014 2026-10-16",
-          "bullets": [
-            "_Generated 2026-10-16T05:42:56.293006-04:00_",
-            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "green",
@@ -1186,6 +1183,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIVN, HTHT, VFF, SWKS, AUPH \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PFE, HTHT, DHR, LLY, SHO"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T05:48:28.794960-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-16_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9279,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-16_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5011,
+          "preview": "# Weather report \u2014 2026-10-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
