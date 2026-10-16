@@ -1,6 +1,6 @@
 {
  "date": "2026-10-16",
- "generated_at": "2026-10-16T05:46:30.851523-04:00",
+ "generated_at": "2026-10-16T05:48:28.652957-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -14,8 +14,10 @@
   "fed_score": null,
   "dollar_oil_score": null,
   "futures_score": null,
-  "yields": "unknown",
-  "yields_source": "llm_factor_fallback",
+  "yields": "flat",
+  "yields_source": "fred_dgs10",
+  "dgs10_delta_1d": -0.02,
+  "dgs10_current": 5.19,
   "dollar": "soft",
   "dollar_source": "dxy",
   "dxy_pct_1d": -0.29,
@@ -24,7 +26,7 @@
   "vix_delta_1d": -0.45,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": -2.62,
+  "oil_pct_1d": -2.63,
   "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -296,58 +298,58 @@
   },
   "profit": {
    "no": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no yields/risk signals"
-   },
-   "thin": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no yields/risk signals"
+    "why": "risk-unknown, F&G None"
    },
    "yes": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no yields/risk signals"
+    "why": "—"
+   },
+   "thin": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
    }
   },
   "lev": {
-   "low": {
-    "stance": "unknown",
+   "high": {
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no signals"
+    "why": "—"
+   },
+   "low": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
    },
    "mid": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no signals"
-   },
-   "high": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no signals"
+    "why": "—"
    },
    "neg_equity": {
-    "stance": "unknown",
+    "stance": "hostile",
     "confidence": "low",
-    "why": "no signals"
+    "why": "negative equity is distressed in any regime"
    }
   },
   "style": {
    "growth": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no yields/risk signals"
-   },
-   "blend": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no yields/risk signals"
+    "why": "yields flat/unknown"
    },
    "value": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no yields/risk signals"
+    "why": "yields flat/unknown"
+   },
+   "blend": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
    }
   },
   "mom": {

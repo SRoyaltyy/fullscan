@@ -2901,7 +2901,7 @@
   },
   "per_sleeve": {
     "tag": "RESEARCH",
-    "date": "2026-10-15",
+    "date": "2026-10-16",
     "live_sit": true,
     "keep_bar_unchanged": true,
     "n_sit": 1,
@@ -2929,7 +2929,7 @@
             "side": "long",
             "open": null,
             "px": 185.73,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2965,7 +2965,7 @@
             "side": "long",
             "open": null,
             "px": 34.52,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3001,7 +3001,7 @@
             "side": "long",
             "open": null,
             "px": 30.38,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3037,7 +3037,7 @@
             "side": "long",
             "open": null,
             "px": 56.43,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3073,7 +3073,7 @@
             "side": "long",
             "open": null,
             "px": 40.47,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3109,7 +3109,7 @@
             "side": "long",
             "open": null,
             "px": 44.9,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3145,7 +3145,7 @@
             "side": "long",
             "open": null,
             "px": 185.85,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3181,7 +3181,7 @@
             "side": "long",
             "open": null,
             "px": 27.63,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
