@@ -1,13 +1,13 @@
 {
   "mode": "all",
-  "started_et": "2026-10-15T09:45:37.987500-04:00",
+  "started_et": "2026-10-16T00:28:54.979604-04:00",
   "openclaw_version": "OpenClaw 2026.7.1-2 (0790d9f)",
   "paid_key_in_env_stripped": false,
-  "expires_before": "2026-10-15T15:54:31.526000+00:00",
-  "minutes_left_before": 128.6,
-  "expiry_source": "models auth list",
+  "expires_before": null,
+  "minutes_left_before": null,
+  "expiry_source": "unreadable",
   "has_refresh_token": null,
-  "renew": "SKIP: token fresh",
+  "renew": "FAIL: no xAI OAuth profile readable (login missing?)",
   "main_pid": 2359605,
   "pid_comm": "openclaw-gatewa",
   "unit_active": "active",
@@ -16,12 +16,12 @@
   "gateway_token_len": 48,
   "call_pre": {
     "http": 200,
-    "secs": 9.6,
+    "secs": 8.7,
     "answer": "42",
     "ok": true
   },
   "guard": "OK",
-  "ok": true,
-  "exit": 0,
-  "finished_et": "2026-10-15T09:46:06.832434-04:00"
+  "ok": false,
+  "exit": 2,
+  "finished_et": "2026-10-16T00:29:24.072190-04:00"
 }
