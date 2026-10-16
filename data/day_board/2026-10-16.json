@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T15:12:24.570351-04:00",
+  "generated_at": "2026-10-16T16:28:33.126182-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -84,7 +84,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 3,
+      "n_opt_ok": 5,
       "n_opt": 5,
       "files": [
         {
@@ -146,10 +146,10 @@
           "name": "Close answer-key JSON (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-10-16_finviz_market_digest_close.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 8439,
+          "said": "US stocks closed lower as AI trade unwound and Brent crude neared $110, driving rotation into energy following industrial production data \u00b7 leaders CRWV, PLTR, TWLO, NBIS, MU, AMD \u00b7 bad",
           "bullets": []
         },
         {
@@ -157,11 +157,14 @@
           "name": "Close answer-key MD (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-10-16_finviz_market_digest_close.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 4043,
+          "said": "Finviz homepage market digest (close) \u2014 2026-10-16",
+          "bullets": [
+            "Generated:** 2026-10-16T16:28:32.000931-04:00 (America/New_York)",
+            "Source:** `live`"
+          ]
         }
       ],
       "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
@@ -819,7 +822,7 @@
           "size": 70199,
           "said": "Stock book \u2014 2026-10-16",
           "bullets": [
-            "_Generated 2026-10-16T15:12:22.852468-04:00_",
+            "_Generated 2026-10-16T08:44:51.266687-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -1076,24 +1079,6 @@
     }
   },
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-16T06:50:10.727294-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-16_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -4468,6 +4453,31 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T16:28:32.044869-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-16_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 8439,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-10-16_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 4043,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-10-16\n**Generated:** 2026-10-16T16:28:32.000931-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as AI trade unwound and Brent crude neared $110, driving rotation into energy following industrial production data\n**Prior close:** SPX -1.00%  Nasdaq -2.20%  Dow -0.30%\n**SPX:** -1.00%  **Nasdaq:** -2.20%  **Dow:** -0.30%\n**Oil:** Brent crude $110.0 up (rose)\n**CPI/Fed:** 12.0% cut (about 12% on renewed debt and leverage concerns after Morningstar cut)\n**Leaders:** CRWV, PLTR, TWLO, NBIS, MU, AMD, NFLX, TSLA, MTDR, AR, TRV, CFG, TFC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-19\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-16\n**Generated:** 2026-10-16T16:28:32.000931-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as AI trade unwound and Brent crude neared $110, driving rotation into energy following industrial production data\n**Prior close:** SPX -1.00%  Nasdaq -2.20%  Dow -0.30%\n**SPX:** -1.00%  **Nasdaq:** -2.20%  **Dow:** -0.30%\n**Oil:** Brent crude $110.0 up (rose)\n**CPI/Fed:** 12.0% cut (about 12% on renewed debt and leverage concerns after Morningstar cut)\n**Leaders:** CRWV, PLTR, TWLO, NBIS, MU, AMD, NFLX, TSLA, MTDR, AR, TRV, CFG, TFC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-19\n**Clock use:** `next_open`"
     }
   ],
   "href": {
@@ -5747,6 +5757,14 @@
       "commit_msg": "auto: strategy tickets 2026-10-16",
       "workflow": "Publish strategy tickets",
       "run_id": "38951889323",
+      "manifest": "research/input_freeze/2026-10-16/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-16.json",
+      "at": "2026-10-16T16:28:33-04:00",
+      "commit_msg": "auto: land finviz_market_digest_close [2026-10-16]",
+      "workflow": "Finviz homepage market digest",
+      "run_id": "38962057983",
       "manifest": "research/input_freeze/2026-10-16/manifest.json"
     }
   ]
