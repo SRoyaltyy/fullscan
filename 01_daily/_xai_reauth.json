@@ -1,14 +1,11 @@
 {
-  "status": "waiting",
-  "oauth": "FAIL",
+  "status": "ok",
+  "oauth": "OK",
   "pong_ok": null,
-  "reason": "James auto-clicks Allow; not sending the code to Cyrus",
-  "user_code": "43JM-TKTX",
-  "verification_uri": "https://accounts.x.ai/oauth2/device?user_code=43JM-TKTX",
-  "expires_at": "2026-10-16T01:02:03.739610-04:00",
+  "reason": "device login completed",
+  "user_code": null,
+  "verification_uri": "https://accounts.x.ai/oauth2/device",
+  "expires_at": null,
   "source": "xai_device_reauth",
-  "pid": 2407130,
-  "waiter_pid": 2407129,
-  "host": "iZt4nagf215582ts0wf5jcZ",
-  "updated_at": "2026-10-16T00:33:03.742026-04:00"
+  "updated_at": "2026-10-16T00:35:44.676074-04:00"
 }
