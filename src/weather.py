@@ -640,6 +640,13 @@ def write_outputs(date_str: str, sig: dict, stances: dict,
         "gates": gates,
         "data_gaps": gaps,
     }
+    # 2026-10-16: weather landed at 07:17 ET before the 07:27 predict, had no
+    # general_score, and Factor Mine sealed a sit. Mark it incomplete so the
+    # book gate (skip_if_good.check_label_weather) rebuilds it once the
+    # general predict is on disk.
+    if sig.get("general_score") is None:
+        payload["incomplete"] = True
+        payload["incomplete_reason"] = "no general_score (general predict not on disk when weather ran)"
     js = OUT_DIR / f"{date_str}_weather.json"
     js.write_text(json.dumps(payload, indent=1, ensure_ascii=False), encoding="utf-8")
 

@@ -104,6 +104,22 @@ jobs:
           echo "ET_HM=$ET_HM event=${{ github.event_name }} force=$FORCE"
           # Push AND workflow_run (Pre-Open gated success) must not rank
           # a hollow book at 01:00. Only an explicit dispatch may run early.
+          # 2026-10-16: cancelled Pre-Opens fired this via workflow_run and
+          # landed weather + book before the predict existed. A workflow_run
+          # only builds when that Pre-Open succeeded or today's predict is on main.
+          if [ "${{ github.event_name }}" = "workflow_run" ] \
+             && [ "${{ github.event.workflow_run.conclusion }}" != "success" ]; then
+            D=$(TZ=America/New_York date +%F)
+            CODE=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 \
+              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              "https://api.github.com/repos/${{ github.repository }}/contents/01_daily/general/${D}_predict.md?ref=main" || echo 000)
+            if [ "$CODE" != "200" ]; then
+              echo "Pre-Open ${{ github.event.workflow_run.conclusion }} and no ${D} predict on main (HTTP $CODE) — no book/weather"
+              echo "go=no" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Pre-Open ${{ github.event.workflow_run.conclusion }} but ${D} predict is on main — build"
+          fi
           if [ "$ET_HM" -lt 535 ] && [ "$FORCE" != "true" ] \
              && [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
             echo "before 05:35 ET — ${{ github.event_name }} is not a book. 06:10 schedule + 05:40 scrape own the clock."
