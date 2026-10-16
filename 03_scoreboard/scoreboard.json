@@ -33303,18 +33303,119 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": 6.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7745.32,
+      "actual_close": 7659.44,
+      "actual_pct_change": -1.09,
+      "actual_direction": "down",
+      "actual_magnitude_band": "notable",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 1.0,
+          "status": "miss"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "miss"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/10/16/stock-market-midday-oct-16-tech-stocks-slide-as-investors-rotate-into-defensive-sectors/",
+          "date_accessed": "2026-10-16",
+          "summary": "Midday tape already showed the split (Dow green, Nasdaq red) that the close later made more severe.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/10/16/stock-market-midday-oct-16-tech-stocks-slide-as-investors-rotate-into-defensive-sectors/",
+          "date_accessed": "2026-10-16",
+          "summary": "The neo-cloud credit scare was live in the cash session, not just a premarket footnote.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/16/feds-warsh-says-ai-development-path-will-be-very-bumpy-.html",
+          "date_accessed": "2026-10-16",
+          "summary": "The speech was a non-signal that lowered October hike odds overnight without giving cash-session cover to AI stocks.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/16/feds-warsh-says-ai-development-path-will-be-very-bumpy-.html",
+          "date_accessed": "2026-10-16",
+          "summary": "Policy-relief was real in rates space and did not prevent a Nasdaq trend-down.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/16/oil-price-today-iran-strait-hormuz-ukraine-russia.html",
+          "date_accessed": "2026-10-16",
+          "summary": "Oil confirmed a supply-risk bid during US hours, the opposite of the morning “WTI offered” tape.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/16/oil-price-today-iran-strait-hormuz-ukraine-russia.html",
+          "date_accessed": "2026-10-16",
+          "summary": "Structural oil tightness remained in force and was available to re-price when the morning dip reversed.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/16/wall-streets-fear-gauge-is-ripping-traders-see-it-going-even-higher.html",
+          "date_accessed": "2026-10-16",
+          "summary": "Cross-asset fingerprint of the primary driver was a vol spike coincident with neo-cloud/Nasdaq, not a broad HY event.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://seekingalpha.com/news/4653956-wall-street-fear-gauge-vix-surges-to-over-four-month-high",
+          "date_accessed": "2026-10-16",
+          "summary": "A contested, poorly sourced overlay on the vol spike; keep it off the primary-driver seat until confirmed.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://en.yna.co.kr/view/AEN20261016006451320",
+          "date_accessed": "2026-10-16",
+          "summary": "Overnight Asia strength that the morning model treated as a tailwind was a local bounce the US semiconductor tape did not follow.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -33344,7 +33445,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 1.276,
-      "overlay_score": 4.25
+      "overlay_score": 4.25,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "AI-infrastructure credit unwind (CoreWeave/neo-cloud + semis) that Nasdaq priced from the open",
+      "key_interaction": "Warsh/Asia policy-relief was offset then dominated by an already-live AI-credit dump plus an intraday oil reversal the morning tape did not have",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes",
+      "outlier_watch": "Dow only −0.34% with an early +0.78% spike vs NDX −2.15% trend-down; KOSPI +2.05% vs US chips lower; HY OAS quiet vs CoreWeave distressed; Indonesia −11% local shock"
     }
   ]
 }
