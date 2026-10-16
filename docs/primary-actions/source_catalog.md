@@ -1,6 +1,6 @@
 # Primary-origin source catalog
 
-Verified 2026-10-16T16:41:24.552200+00:00. 2150 institution records; 457 enabled publication channels out of 543 checked candidates.
+Verified 2026-10-16T16:51:57.953543+00:00. 2150 institution records; 459 enabled publication channels out of 542 checked candidates.
 
 Institution records include historical/closed bodies and shared portals. This is a maintained coverage catalog, not an exhaustive worldwide directory. Disabled/blocked channels remain visible below.
 
@@ -221,7 +221,6 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Trade Commission — Data Spotlight | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/data-spotlight.xml) | True | ok |
 | Federal Trade Commission — Inspector General Releases and Reports | US | competition_and_enforcement | [rss](https://www.ftc.gov/feeds/oig-reports-press-releases.xml) | True | valid_empty |
 | Department of Justice | US | judicial_and_enforcement | [rss](https://www.justice.gov/news/rss) | True | ok |
-| Department of Justice — RSS Feed | US | judicial_and_enforcement | [rss](https://www.justice.gov/news/rss?m=1) | True | ok |
 | Treasury Office of Foreign Assets Control | US | sanctions_and_access | [html_index](https://ofac.treasury.gov/recent-actions) | True | ok |
 | Department of the Treasury | US | fiscal_and_sanctions | [rss](https://home.treasury.gov/rss.xml) | True | ok |
 | Bureau of Industry and Security | US | export_controls | [html_index](https://www.bis.gov/news-updates/press-releases) | True | ok |
@@ -326,12 +325,12 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Communications Commission — Orders | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Order) | True | ok |
 | Federal Communications Commission — Public Notices | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Public_Notice) | True | ok |
 | Federal Communications Commission — Radio Cutoffs | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Radio_Cutoffs) | True | ok |
-| Federal Communications Commission — Reports | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Report) | False | invalid_feed_or_network_error |
+| Federal Communications Commission — Reports | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Report) | True | ok |
 | Federal Communications Commission — Report & Orders, Notices of Proposed Rulemaking, etc. | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/RO_NPRM) | True | ok |
 | Federal Communications Commission — Studies | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Study) | True | ok |
 | Federal Communications Commission — TV Notices | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/TV_Notices) | True | ok |
 | Federal Communications Commission — Consumer & Governmental Affairs Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/CGB) | True | ok |
-| Federal Communications Commission — Enforcement Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/EB) | False | invalid_feed_or_network_error |
+| Federal Communications Commission — Enforcement Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/EB) | True | ok |
 | Federal Communications Commission — International Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/IB) | True | ok |
 | Federal Communications Commission — Media Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/MB) | True | ok |
 | Federal Communications Commission — Public Safety & Homeland Security Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/PSHSB) | True | valid_empty |
@@ -502,7 +501,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Reserve Bank of Australia — Research Discussion Papers | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-rdp.xml) | False | ok; reference data, research, speeches or commentary |
 | Reserve Bank of Australia — Freedom of Information | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-foi.xml) | True | ok |
 | Reserve Bank of Australia — Changes to Statistical Tables | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-changes-to-tables.xml) | True | ok |
-| Australian Competition and Consumer Commission | AU | competition_and_enforcement | [html_index](https://www.accc.gov.au/news-centre) | False | selector_empty |
+| Australian Competition and Consumer Commission | AU | competition_and_enforcement | [html_index](https://www.accc.gov.au/news-centre) | True | ok |
 | Australian Prudential Regulation Authority | AU | financial_supervision | [rss](https://www.apra.gov.au/rss.xml) | True | ok |
 | Australian Prudential Regulation Authority — Sitemap | AU | financial_supervision | [rss](https://www.apra.gov.au/sitemap.xml) | False | invalid_feed_or_network_error |
 | Reserve Bank of New Zealand (official-site news mirror) | NZ | monetary_operations | [google_news_rss](https://news.google.com/rss/search?q=site%3Arbnz.govt.nz+when%3A14d&hl=en-NZ&gl=NZ&ceid=NZ:en) | True | ok |

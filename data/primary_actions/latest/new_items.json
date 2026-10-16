@@ -1,74 +1,314 @@
 [
   {
-    "title": "Congress.gov Notifications Help the Library of Congress Enhance the Congress.gov User Experience",
-    "url": "https://content.govdelivery.com/accounts/USLOC/bulletins/42f03ff",
-    "native_id": "70190079",
-    "published_at": "2026-10-13T19:05:31+00:00",
-    "published_raw": "Tue, 13 Oct 2026 14:05:31 -0500",
-    "summary": "If you are interested in participating in Congress.gov user research to help the Library of Congress enhance the Congress.gov user experience, email user-research-info@loc.gov . Indicate whether you are a government employee in the email. Thank you.",
+    "title": "Kmart in court over safety concerns with cosmetic nail glue and button battery products The ACCC has commenced Federal Court action against Kmart Australia Ltd, a subsidiary of Wesfarmers (ASX: WES), alleging it breached the Australian Consumer Law by selling millions of units of cosmetic nail glue without adequate warnings and thousands of units of button battery products which did not comply with mandatory standards.",
+    "url": "https://www.accc.gov.au/media-release/kmart-in-court-over-safety-concerns-with-cosmetic-nail-glue-and-button-battery-products",
+    "native_id": "https://www.accc.gov.au/media-release/kmart-in-court-over-safety-concerns-with-cosmetic-nail-glue-and-button-battery-products",
+    "published_at": "2026-10-15T00:00:00+00:00",
+    "published_raw": "2026-10-15T00:00:00+00:00",
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congress.gov legislative status — Get RSS",
-      "jurisdiction": "US",
-      "family": "legislative_procedure"
+      "issuer": "Australian Competition and Consumer Commission",
+      "jurisdiction": "AU",
+      "family": "competition_and_enforcement"
     },
-    "primary_source_id": "us-congress-1214972404",
-    "n": 4203,
-    "first_seen": "2026-10-16T16:44:23.021605+00:00",
-    "last_seen": "2026-10-16T16:44:23.021605+00:00",
+    "primary_source_id": "au-accc-index",
+    "n": 4206,
+    "first_seen": "2026-10-16T16:54:25.266926+00:00",
+    "last_seen": "2026-10-16T16:54:25.266926+00:00",
     "source_ids": [
-      "us-congress-1214972404"
+      "au-accc-index"
     ]
   },
   {
-    "title": "Most-Viewed Bills - Week of October 11, 2026",
-    "url": "https://www.congress.gov/most-viewed-bills",
-    "native_id": "October 11, 2026",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "H.R.6509 [119th] - SAFE Drugs Act of 2025 S.2296 [119th] - National Defense Authorization Act for Fiscal Year 2026 H.R.1 [119th] - An act to provide for reconciliation pursuant to title II of H. Con. Res. 14. H.R.139 [119th] - Sunshine Protection Act of 2025 S.4668 [119th] - Protect College Sports Act of 2026 H.R.5316 [119th] - Drug Shortage Compounding Patient Access Act of 2025 S.3516 [118th] - A bill to impose a fee on certain remittance transfers to fund border security. H.R.5269 [119th] - RESULTS Act H.R.8800 [119th] - National Defense Authorization Act for Fiscal Year 2027 H.R.22 [119th] - SAVE Act",
+    "title": "ACCC seeks views on mobile coverage and services The ACCC is seeking views from Australian consumers and businesses as it launches public consultation for its Mobile Services Inquiry. Consumers, businesses, community organisations and other interested parties can have their say by either completing an online consumer survey or making a submission in response to the ACCC’s discussion paper.",
+    "url": "https://www.accc.gov.au/media-release/accc-seeks-views-on-mobile-coverage-and-services",
+    "native_id": "https://www.accc.gov.au/media-release/accc-seeks-views-on-mobile-coverage-and-services",
+    "published_at": "2026-10-15T00:00:00+00:00",
+    "published_raw": "2026-10-15T00:00:00+00:00",
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congress.gov legislative status — Get RSS",
-      "jurisdiction": "US",
-      "family": "legislative_procedure"
+      "issuer": "Australian Competition and Consumer Commission",
+      "jurisdiction": "AU",
+      "family": "competition_and_enforcement"
     },
-    "primary_source_id": "us-congress-ef86be63e2",
-    "n": 4204,
-    "first_seen": "2026-10-16T16:44:23.021605+00:00",
-    "last_seen": "2026-10-16T16:44:23.021605+00:00",
+    "primary_source_id": "au-accc-index",
+    "n": 4207,
+    "first_seen": "2026-10-16T16:54:25.266926+00:00",
+    "last_seen": "2026-10-16T16:54:25.266926+00:00",
     "source_ids": [
-      "us-congress-ef86be63e2"
+      "au-accc-index"
     ]
   },
   {
-    "title": "Broadcast Actions",
-    "url": "https://www.fcc.gov/edoc/369468",
-    "native_id": "369468",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
+    "title": "ACCC alleges major Australian egg producers engaged in cartel and other anti-competitive conduct Australia’s biggest egg supplier Sunny Queen and 11 other egg producers and suppliers are alleged to have breached competition laws by cooperating on production and supply of eggs in Australia, in civil proceedings filed in the Federal Court by the ACCC today.",
+    "url": "https://www.accc.gov.au/media-release/accc-alleges-major-australian-egg-producers-engaged-in-cartel-and-other-anti-competitive-conduct",
+    "native_id": "https://www.accc.gov.au/media-release/accc-alleges-major-australian-egg-producers-engaged-in-cartel-and-other-anti-competitive-conduct",
+    "published_at": "2026-10-15T00:00:00+00:00",
+    "published_raw": "2026-10-15T00:00:00+00:00",
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Broadcast Actions",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
+      "issuer": "Australian Competition and Consumer Commission",
+      "jurisdiction": "AU",
+      "family": "competition_and_enforcement"
     },
-    "primary_source_id": "us-fcc-71eeceab27",
-    "n": 4205,
-    "first_seen": "2026-10-16T16:44:23.021605+00:00",
-    "last_seen": "2026-10-16T16:44:23.021605+00:00",
+    "primary_source_id": "au-accc-index",
+    "n": 4208,
+    "first_seen": "2026-10-16T16:54:25.266926+00:00",
+    "last_seen": "2026-10-16T16:54:25.266926+00:00",
     "source_ids": [
-      "us-fcc-71eeceab27"
+      "au-accc-index"
+    ]
+  },
+  {
+    "title": "More gas contracted under long-term agreements as prices remain stable Gas buyers on Australia’s east coast contracted 51 petajoules (PJ) of gas in the first half of this year for supply in 2027, which is more than double the volume contracted in the first half of last year.",
+    "url": "https://www.accc.gov.au/media-release/more-gas-contracted-under-long-term-agreements-as-prices-remain-stable",
+    "native_id": "https://www.accc.gov.au/media-release/more-gas-contracted-under-long-term-agreements-as-prices-remain-stable",
+    "published_at": "2026-10-15T00:00:00+00:00",
+    "published_raw": "2026-10-15T00:00:00+00:00",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Australian Competition and Consumer Commission",
+      "jurisdiction": "AU",
+      "family": "competition_and_enforcement"
+    },
+    "primary_source_id": "au-accc-index",
+    "n": 4209,
+    "first_seen": "2026-10-16T16:54:25.266926+00:00",
+    "last_seen": "2026-10-16T16:54:25.266926+00:00",
+    "source_ids": [
+      "au-accc-index"
+    ]
+  },
+  {
+    "title": "ACCC seeks views on Armaguard interim pricing measures The ACCC is seeking the views of large and small retailers, banks, and other interested parties on a proposed undertaking from Linfox Armaguard Pty Ltd relating to cash distribution services.",
+    "url": "https://www.accc.gov.au/media-release/accc-seeks-views-on-armaguard-interim-pricing-measures",
+    "native_id": "https://www.accc.gov.au/media-release/accc-seeks-views-on-armaguard-interim-pricing-measures",
+    "published_at": "2026-10-15T00:00:00+00:00",
+    "published_raw": "2026-10-15T00:00:00+00:00",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Australian Competition and Consumer Commission",
+      "jurisdiction": "AU",
+      "family": "competition_and_enforcement"
+    },
+    "primary_source_id": "au-accc-index",
+    "n": 4210,
+    "first_seen": "2026-10-16T16:54:25.266926+00:00",
+    "last_seen": "2026-10-16T16:54:25.266926+00:00",
+    "source_ids": [
+      "au-accc-index"
+    ]
+  },
+  {
+    "title": "Bayswood Timber Wholesalers pays penalty for bushfire-suitable timber claims A Victorian timber wholesaler and importer, Bayswood Timber Wholesalers Pty Ltd, has paid a penalty of $19,800 for making allegedly false or misleading statements about the suitability of its timber to be used in certain building applications in defined bushfire-prone areas.",
+    "url": "https://www.accc.gov.au/media-release/bayswood-timber-wholesalers-pays-penalty-for-bushfire-suitable-timber-claims",
+    "native_id": "https://www.accc.gov.au/media-release/bayswood-timber-wholesalers-pays-penalty-for-bushfire-suitable-timber-claims",
+    "published_at": "2026-10-15T00:00:00+00:00",
+    "published_raw": "2026-10-15T00:00:00+00:00",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Australian Competition and Consumer Commission",
+      "jurisdiction": "AU",
+      "family": "competition_and_enforcement"
+    },
+    "primary_source_id": "au-accc-index",
+    "n": 4211,
+    "first_seen": "2026-10-16T16:54:25.266926+00:00",
+    "last_seen": "2026-10-16T16:54:25.266926+00:00",
+    "source_ids": [
+      "au-accc-index"
+    ]
+  },
+  {
+    "title": "ACCC opposes IAG's proposed acquisition of RAC Insurance The ACCC has decided that Insurance Australia Group Limited (ASX: IAG) (IAG) must not put into effect its proposed acquisition of RAC Insurance (RACI).",
+    "url": "https://www.accc.gov.au/media-release/accc-opposes-iags-proposed-acquisition-of-rac-insurance",
+    "native_id": "https://www.accc.gov.au/media-release/accc-opposes-iags-proposed-acquisition-of-rac-insurance",
+    "published_at": "2026-10-15T00:00:00+00:00",
+    "published_raw": "2026-10-15T00:00:00+00:00",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Australian Competition and Consumer Commission",
+      "jurisdiction": "AU",
+      "family": "competition_and_enforcement"
+    },
+    "primary_source_id": "au-accc-index",
+    "n": 4212,
+    "first_seen": "2026-10-16T16:54:25.266926+00:00",
+    "last_seen": "2026-10-16T16:54:25.266926+00:00",
+    "source_ids": [
+      "au-accc-index"
+    ]
+  },
+  {
+    "title": "digiDirect pays penalties and admits to making misleading strikethrough discount claims Digital Imaging Express Pty Ltd, trading as digiDirect, has paid $99,000 in penalties after the ACCC issued it with five infringement notices for making allegedly misleading discount claims.",
+    "url": "https://www.accc.gov.au/media-release/digidirect-pays-penalties-and-admits-to-making-misleading-strikethrough-discount-claims",
+    "native_id": "https://www.accc.gov.au/media-release/digidirect-pays-penalties-and-admits-to-making-misleading-strikethrough-discount-claims",
+    "published_at": "2026-10-15T00:00:00+00:00",
+    "published_raw": "2026-10-15T00:00:00+00:00",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Australian Competition and Consumer Commission",
+      "jurisdiction": "AU",
+      "family": "competition_and_enforcement"
+    },
+    "primary_source_id": "au-accc-index",
+    "n": 4213,
+    "first_seen": "2026-10-16T16:54:25.266926+00:00",
+    "last_seen": "2026-10-16T16:54:25.266926+00:00",
+    "source_ids": [
+      "au-accc-index"
+    ]
+  },
+  {
+    "title": "Mazda, Kia, and BYD improve access to service and repair information after ACCC investigations Mazda, Kia, and BYD have improved access and reduced the costs for independent repairers to access their service and repair information, following separate ACCC investigations.",
+    "url": "https://www.accc.gov.au/media-release/mazda-kia-and-byd-improve-access-to-service-and-repair-information-after-accc-investigations",
+    "native_id": "https://www.accc.gov.au/media-release/mazda-kia-and-byd-improve-access-to-service-and-repair-information-after-accc-investigations",
+    "published_at": "2026-10-15T00:00:00+00:00",
+    "published_raw": "2026-10-15T00:00:00+00:00",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Australian Competition and Consumer Commission",
+      "jurisdiction": "AU",
+      "family": "competition_and_enforcement"
+    },
+    "primary_source_id": "au-accc-index",
+    "n": 4214,
+    "first_seen": "2026-10-16T16:54:25.266926+00:00",
+    "last_seen": "2026-10-16T16:54:25.266926+00:00",
+    "source_ids": [
+      "au-accc-index"
+    ]
+  },
+  {
+    "title": "The Qantas Group and Virgin Australia report substantial earnings despite increased fuel costs Australia’s two largest airline groups have reported strong financial results despite facing significantly higher jet fuel prices, the ACCC’s latest Domestic Airline Competition in Australia report has found.",
+    "url": "https://www.accc.gov.au/media-release/the-qantas-group-and-virgin-australia-report-substantial-earnings-despite-increased-fuel-costs",
+    "native_id": "https://www.accc.gov.au/media-release/the-qantas-group-and-virgin-australia-report-substantial-earnings-despite-increased-fuel-costs",
+    "published_at": "2026-10-15T00:00:00+00:00",
+    "published_raw": "2026-10-15T00:00:00+00:00",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Australian Competition and Consumer Commission",
+      "jurisdiction": "AU",
+      "family": "competition_and_enforcement"
+    },
+    "primary_source_id": "au-accc-index",
+    "n": 4215,
+    "first_seen": "2026-10-16T16:54:25.266926+00:00",
+    "last_seen": "2026-10-16T16:54:25.266926+00:00",
+    "source_ids": [
+      "au-accc-index"
+    ]
+  },
+  {
+    "title": "Realestate.com.au removes restrictions in contracts with real estate agents after ACCC investigation Real estate agencies and their clients should have more choice and flexibility in their listing options for the sale and rental of Australian properties after the ACCC accepted a court-enforceable undertaking from REA Group Ltd (ASX:REA).",
+    "url": "https://www.accc.gov.au/media-release/realestatecomau-removes-restrictions-in-contracts-with-real-estate-agents-after-accc-investigation",
+    "native_id": "https://www.accc.gov.au/media-release/realestatecomau-removes-restrictions-in-contracts-with-real-estate-agents-after-accc-investigation",
+    "published_at": "2026-10-15T00:00:00+00:00",
+    "published_raw": "2026-10-15T00:00:00+00:00",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Australian Competition and Consumer Commission",
+      "jurisdiction": "AU",
+      "family": "competition_and_enforcement"
+    },
+    "primary_source_id": "au-accc-index",
+    "n": 4216,
+    "first_seen": "2026-10-16T16:54:25.266926+00:00",
+    "last_seen": "2026-10-16T16:54:25.266926+00:00",
+    "source_ids": [
+      "au-accc-index"
+    ]
+  },
+  {
+    "title": "ACCC continues exemption to APRA arrangements for music rights The ACCC has issued a final determination continuing the exemption from certain competition laws for arrangements used by the Australasian Performing Right Association (APRA) to acquire and license performing rights in musical works, subject to conditions.",
+    "url": "https://www.accc.gov.au/media-release/accc-continues-exemption-to-apra-arrangements-for-music-rights",
+    "native_id": "https://www.accc.gov.au/media-release/accc-continues-exemption-to-apra-arrangements-for-music-rights",
+    "published_at": "2026-10-15T00:00:00+00:00",
+    "published_raw": "2026-10-15T00:00:00+00:00",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Australian Competition and Consumer Commission",
+      "jurisdiction": "AU",
+      "family": "competition_and_enforcement"
+    },
+    "primary_source_id": "au-accc-index",
+    "n": 4217,
+    "first_seen": "2026-10-16T16:54:25.266926+00:00",
+    "last_seen": "2026-10-16T16:54:25.266926+00:00",
+    "source_ids": [
+      "au-accc-index"
+    ]
+  },
+  {
+    "title": "Online retailer Neptune Blanket pays penalties for allegedly misleading statements about consumer guarantees Online retailer Dysck Pty Ltd, trading as Neptune Blanket, has paid $59,400 in penalties after the ACCC issued it with three infringement notices for making allegedly misleading statements to two consumers about their rights, and not including mandatory wording in its warranty against defects.",
+    "url": "https://www.accc.gov.au/media-release/online-retailer-neptune-blanket-pays-penalties-for-allegedly-misleading-statements-about-consumer-guarantees",
+    "native_id": "https://www.accc.gov.au/media-release/online-retailer-neptune-blanket-pays-penalties-for-allegedly-misleading-statements-about-consumer-guarantees",
+    "published_at": "2026-10-15T00:00:00+00:00",
+    "published_raw": "2026-10-15T00:00:00+00:00",
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Australian Competition and Consumer Commission",
+      "jurisdiction": "AU",
+      "family": "competition_and_enforcement"
+    },
+    "primary_source_id": "au-accc-index",
+    "n": 4218,
+    "first_seen": "2026-10-16T16:54:25.266926+00:00",
+    "last_seen": "2026-10-16T16:54:25.266926+00:00",
+    "source_ids": [
+      "au-accc-index"
     ]
   }
 ]

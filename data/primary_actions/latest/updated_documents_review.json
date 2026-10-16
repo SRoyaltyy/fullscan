@@ -18,34 +18,9 @@
     "primary_source_id": "us-fcc-86f1b34c46",
     "n": 3972,
     "first_seen": "2026-10-16T16:06:40.552868+00:00",
-    "last_seen": "2026-10-16T16:44:23.021605+00:00",
+    "last_seen": "2026-10-16T16:54:25.266926+00:00",
     "source_ids": [
       "us-fcc-86f1b34c46"
-    ]
-  },
-  {
-    "title": "Mobile Menu Button",
-    "url": "https://www.ferc.gov/news-events/news/decisions-notices",
-    "native_id": "https://www.ferc.gov/news-events/news/decisions-notices",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Energy Regulatory Commission",
-      "jurisdiction": "US",
-      "family": "energy_orders_and_rates"
-    },
-    "primary_source_id": "us-ferc-index",
-    "n": 4170,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:44:23.021605+00:00",
-    "source_ids": [
-      "us-ferc-index",
-      "us-ferc-index"
     ]
   }
 ]

@@ -1,7 +1,7 @@
 # Primary-origin action documents
 
-Updated 2026-10-16T16:44:23.021605+00:00. 3169 dated documents in the configured 3-day window; 3 newly retained; 1309 repeat observations.
-Source health: 452/457 checked successfully. Collection uses zero LLM calls.
+Updated 2026-10-16T16:54:25.266926+00:00. 3154 dated documents in the configured 3-day window; 13 newly retained; 1341 repeat observations.
+Source health: 458/459 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
@@ -2656,15 +2656,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Commission launches RAISE pledging initiative to boost AI support for researchers across Europe](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2175) — European Commission press and decisions; 2026-10-15T12:03:07+00:00
 - [FTC Sends More than $9.8 Million to Consumers Harmed by Walmart’s Failure to Stop Scammers that Used its Wire Transfer Services to Take Millions from Customers](https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-sends-more-98-million-consumers-harmed-walmarts-failure-stop-scammers-used-its-wire-transfer) — Federal Trade Commission — Press Releases; 2026-10-15T12:00:00+00:00
 - [FTC Sues Ticket Broker Over Unlawful Tactics Used to Buy Millions of Tickets to Popular Live Events](https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-sues-ticket-broker-over-unlawful-tactics-used-buy-millions-tickets-popular-live-events) — Federal Trade Commission — Press Releases; 2026-10-15T12:00:00+00:00
-- [Florida Man Pleads Guilty to Illegal Opioid Distribution Conspiracy](https://www.justice.gov/opa/pr/florida-man-pleads-guilty-illegal-opioid-distribution-conspiracy) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
-- [DOJ, ATF, Law Enforcement Partners Conclude Operation Show Me Justice](https://www.justice.gov/opa/pr/doj-atf-law-enforcement-partners-conclude-operation-show-me-justice) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
-- [Illegal Alien from Mexico Sentenced for International Conspiracy to Smuggle Aliens from Canada into United States](https://www.justice.gov/opa/pr/illegal-alien-mexico-sentenced-international-conspiracy-smuggle-aliens-canada-united-states) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
-- [Owner of Health Care Software Company Sentenced to 19 Years in Prison for $1B Medicare Fraud](https://www.justice.gov/opa/pr/owner-health-care-software-company-sentenced-19-years-prison-1b-medicare-fraud) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
-- [Justice Department, Law Enforcement Partners Announce Results of 8-Week Law Enforcement Surge Focused on Violent Crime Reduction](https://www.justice.gov/opa/video/justice-department-law-enforcement-partners-announce-results-8-week-law-enforcement-surge) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
-- [San Diego Man Pleads Guilty to Tax Evasion](https://www.justice.gov/opa/pr/san-diego-man-pleads-guilty-tax-evasion) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
-- [Justice Department Sues State of California over Voter List](https://www.justice.gov/opa/pr/justice-department-sues-state-california-over-voter-list) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
-- [Justice Department Files Complaints Against the Cities of St. Paul and Portland Challenging Mask Ban and Identification Requirements for Federal Officers](https://www.justice.gov/opa/pr/justice-department-files-complaints-against-cities-st-paul-and-portland-challenging-mask-ban) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
-- [Deputy Assistant Attorney General Stephanie A. Greco Delivers Remarks at the 2026 Antitrust Tech Summit](https://www.justice.gov/opa/speech/deputy-assistant-attorney-general-stephanie-greco-delivers-remarks-2026-antitrust-tech) — Department of Justice — RSS Feed; 2026-10-15T12:00:00+00:00
 - [Retired Boca Raton Attorney Pleads Guilty to Attempting to Obtain Child Sexual Abuse Material](https://www.justice.gov/usao-sdfl/pr/retired-boca-raton-attorney-pleads-guilty-attempting-obtain-child-sexual-abuse) — Department of Justice; 2026-10-15T12:00:00+00:00
 - [Disgraced Former FBI Agent Sentenced in Second Federal Prosecution](https://www.justice.gov/usao-edmi/pr/disgraced-former-fbi-agent-sentenced-second-federal-prosecution) — Department of Justice; 2026-10-15T12:00:00+00:00
 - [Maryland Father and Son Indicted on Dog Fighting, Breeding, and Transportation Charges After Law Enforcement Seizes 44 Dogs](https://www.justice.gov/usao-md/pr/maryland-father-and-son-indicted-dog-fighting-breeding-and-transportation-charges-after) — Department of Justice; 2026-10-15T12:00:00+00:00
@@ -2761,6 +2752,19 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Reopening of Fanling Swimming Pool](https://www.info.gov.hk/gia/general/202610/15/P2026101500212.htm) — Hong Kong Government Information Services; 2026-10-15T01:54:47+00:00
 - [Speech by Board Member KOEDA in Kumamoto (Economic Activity, Prices, and Monetary Policy in Japan)](http://www.boj.or.jp/en/about/press/koen_2026/ko261015a.htm) — Bank of Japan; 2026-10-15T01:30:00+00:00
 - [Summary of the "Meeting on Market Operations" (October 2026)](http://www.boj.or.jp/en/paym/market/mkt261015a.pdf) — Bank of Japan; 2026-10-15T01:00:00+00:00
+- [Online retailer Neptune Blanket pays penalties for allegedly misleading statements about consumer guarantees Online retailer Dysck Pty Ltd, trading as Neptune Blanket, has paid $59,400 in penalties after the ACCC issued it with three infringement notices for making allegedly misleading statements to two consumers about their rights, and not including mandatory wording in its warranty against defects.](https://www.accc.gov.au/media-release/online-retailer-neptune-blanket-pays-penalties-for-allegedly-misleading-statements-about-consumer-guarantees) — Australian Competition and Consumer Commission; 2026-10-15T00:00:00+00:00
+- [ACCC continues exemption to APRA arrangements for music rights The ACCC has issued a final determination continuing the exemption from certain competition laws for arrangements used by the Australasian Performing Right Association (APRA) to acquire and license performing rights in musical works, subject to conditions.](https://www.accc.gov.au/media-release/accc-continues-exemption-to-apra-arrangements-for-music-rights) — Australian Competition and Consumer Commission; 2026-10-15T00:00:00+00:00
+- [Realestate.com.au removes restrictions in contracts with real estate agents after ACCC investigation Real estate agencies and their clients should have more choice and flexibility in their listing options for the sale and rental of Australian properties after the ACCC accepted a court-enforceable undertaking from REA Group Ltd (ASX:REA).](https://www.accc.gov.au/media-release/realestatecomau-removes-restrictions-in-contracts-with-real-estate-agents-after-accc-investigation) — Australian Competition and Consumer Commission; 2026-10-15T00:00:00+00:00
+- [The Qantas Group and Virgin Australia report substantial earnings despite increased fuel costs Australia’s two largest airline groups have reported strong financial results despite facing significantly higher jet fuel prices, the ACCC’s latest Domestic Airline Competition in Australia report has found.](https://www.accc.gov.au/media-release/the-qantas-group-and-virgin-australia-report-substantial-earnings-despite-increased-fuel-costs) — Australian Competition and Consumer Commission; 2026-10-15T00:00:00+00:00
+- [Mazda, Kia, and BYD improve access to service and repair information after ACCC investigations Mazda, Kia, and BYD have improved access and reduced the costs for independent repairers to access their service and repair information, following separate ACCC investigations.](https://www.accc.gov.au/media-release/mazda-kia-and-byd-improve-access-to-service-and-repair-information-after-accc-investigations) — Australian Competition and Consumer Commission; 2026-10-15T00:00:00+00:00
+- [digiDirect pays penalties and admits to making misleading strikethrough discount claims Digital Imaging Express Pty Ltd, trading as digiDirect, has paid $99,000 in penalties after the ACCC issued it with five infringement notices for making allegedly misleading discount claims.](https://www.accc.gov.au/media-release/digidirect-pays-penalties-and-admits-to-making-misleading-strikethrough-discount-claims) — Australian Competition and Consumer Commission; 2026-10-15T00:00:00+00:00
+- [ACCC opposes IAG's proposed acquisition of RAC Insurance The ACCC has decided that Insurance Australia Group Limited (ASX: IAG) (IAG) must not put into effect its proposed acquisition of RAC Insurance (RACI).](https://www.accc.gov.au/media-release/accc-opposes-iags-proposed-acquisition-of-rac-insurance) — Australian Competition and Consumer Commission; 2026-10-15T00:00:00+00:00
+- [Bayswood Timber Wholesalers pays penalty for bushfire-suitable timber claims A Victorian timber wholesaler and importer, Bayswood Timber Wholesalers Pty Ltd, has paid a penalty of $19,800 for making allegedly false or misleading statements about the suitability of its timber to be used in certain building applications in defined bushfire-prone areas.](https://www.accc.gov.au/media-release/bayswood-timber-wholesalers-pays-penalty-for-bushfire-suitable-timber-claims) — Australian Competition and Consumer Commission; 2026-10-15T00:00:00+00:00
+- [ACCC seeks views on Armaguard interim pricing measures The ACCC is seeking the views of large and small retailers, banks, and other interested parties on a proposed undertaking from Linfox Armaguard Pty Ltd relating to cash distribution services.](https://www.accc.gov.au/media-release/accc-seeks-views-on-armaguard-interim-pricing-measures) — Australian Competition and Consumer Commission; 2026-10-15T00:00:00+00:00
+- [More gas contracted under long-term agreements as prices remain stable Gas buyers on Australia’s east coast contracted 51 petajoules (PJ) of gas in the first half of this year for supply in 2027, which is more than double the volume contracted in the first half of last year.](https://www.accc.gov.au/media-release/more-gas-contracted-under-long-term-agreements-as-prices-remain-stable) — Australian Competition and Consumer Commission; 2026-10-15T00:00:00+00:00
+- [ACCC alleges major Australian egg producers engaged in cartel and other anti-competitive conduct Australia’s biggest egg supplier Sunny Queen and 11 other egg producers and suppliers are alleged to have breached competition laws by cooperating on production and supply of eggs in Australia, in civil proceedings filed in the Federal Court by the ACCC today.](https://www.accc.gov.au/media-release/accc-alleges-major-australian-egg-producers-engaged-in-cartel-and-other-anti-competitive-conduct) — Australian Competition and Consumer Commission; 2026-10-15T00:00:00+00:00
+- [ACCC seeks views on mobile coverage and services The ACCC is seeking views from Australian consumers and businesses as it launches public consultation for its Mobile Services Inquiry. Consumers, businesses, community organisations and other interested parties can have their say by either completing an online consumer survey or making a submission in response to the ACCC’s discussion paper.](https://www.accc.gov.au/media-release/accc-seeks-views-on-mobile-coverage-and-services) — Australian Competition and Consumer Commission; 2026-10-15T00:00:00+00:00
+- [Kmart in court over safety concerns with cosmetic nail glue and button battery products The ACCC has commenced Federal Court action against Kmart Australia Ltd, a subsidiary of Wesfarmers (ASX: WES), alleging it breached the Australian Consumer Law by selling millions of units of cosmetic nail glue without adequate warnings and thousands of units of button battery products which did not comply with mandatory standards.](https://www.accc.gov.au/media-release/kmart-in-court-over-safety-concerns-with-cosmetic-nail-glue-and-button-battery-products) — Australian Competition and Consumer Commission; 2026-10-15T00:00:00+00:00
 - [FW Aviation (Holdings) 1 Limited v VietJet Aviation Joint Stock Company](https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/2633) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
 - [Nebahat Evyat Işbilen v Selman Turk & Ors](https://caselaw.nationalarchives.gov.uk/ewhc/bp/2026/2635) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
 - [The Secretary of State for the Home Department v MD Shahadat Hossain](https://caselaw.nationalarchives.gov.uk/ewca/civ/2026/1310) — The National Archives Find Case Law; 2026-10-15T00:00:00+00:00
@@ -2894,18 +2898,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Speech by Executive Vice-President Fitto at High Level Session “A Cohesion Policy for a Competitive Union”](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2163) — European Commission press and decisions; 2026-10-14T12:19:03+00:00
 - [28 more nomination forms for Election Committee Subsector Ordinary Elections received today](https://www.info.gov.hk/gia/general/202610/14/P2026101400725.htm) — Hong Kong Government Information Services; 2026-10-14T12:16:49+00:00
 - [Crown Office](https://www.thegazette.co.uk/notice/5230581) — The Gazette official public record; 2026-10-14T12:00:13+00:00
-- [Maine Tax Preparer Pleads Guilty to Filing False Returns for Clients](https://www.justice.gov/opa/pr/maine-tax-preparer-pleads-guilty-filing-false-returns-clients) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Florida Man Sentenced to Prison for Tax Refund Fraud](https://www.justice.gov/opa/pr/florida-man-sentenced-prison-tax-refund-fraud) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Texas Tax Preparer Sentenced to Prison as Part of False Tax Return Scheme](https://www.justice.gov/opa/pr/texas-tax-preparer-sentenced-prison-part-false-tax-return-scheme) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Minneapolis Father and Son Plead Guilty to $9 Million Fraud Conspiracy](https://www.justice.gov/opa/pr/minneapolis-father-and-son-plead-guilty-9-million-fraud-conspiracy) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [New Jersey Brothers Plead Guilty to Stealing More Than $2.6 Million, Collectively, in Tax Refunds](https://www.justice.gov/opa/pr/new-jersey-brothers-plead-guilty-stealing-more-26-million-collectively-tax-refunds) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Texas Residents Charged with Promoting Illegal Tax Shelter](https://www.justice.gov/opa/pr/texas-residents-charged-promoting-illegal-tax-shelter) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Mississippi Man Convicted by Federal Jury of Participating in a Criminal Conspiracy to Distribute Child Sexual Abuse Material](https://www.justice.gov/opa/pr/mississippi-man-convicted-federal-jury-participating-criminal-conspiracy-distribute-child) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [DOJ’s Fraud Division, IRS, and IRS-CI Expose More than $490M in Tax Fraud in National Tax Enforcement Surge](https://www.justice.gov/opa/pr/dojs-fraud-division-irs-and-irs-ci-expose-more-490m-tax-fraud-national-tax-enforcement-surge) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Kansas Business Owner Sent to Prison for Employment Tax Crimes](https://www.justice.gov/opa/pr/kansas-business-owner-sent-prison-employment-tax-crimes) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Justice Department Announces Significant Charges from National Tax Fraud Enforcement Surge](https://www.justice.gov/opa/video/justice-department-announces-significant-charges-national-tax-fraud-enforcement-surge) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Justice Department Opens Investigation of Pennsauken, New Jersey’s Allegedly Unconstitutional Permit Delays](https://www.justice.gov/opa/pr/justice-department-opens-investigation-pennsauken-new-jerseys-allegedly-unconstitutional) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Mexican Citizens Charged in a Fraudulent Tax Scheme](https://www.justice.gov/opa/pr/mexican-citizens-charged-fraudulent-tax-scheme) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
 - [Women's health](https://www.ema.europa.eu/en/human-regulatory-overview/research-development/womens-health) — European Medicines Agency; 2026-10-14T11:59:00+00:00
 - [NE66 3RQ, Robert Thompson, David Thompson, Kathryn Thompson and Bethan Thompson: environmental permit application advertisement - EPR/KP3326MQ/A002](https://www.gov.uk/government/publications/ne66-3rq-robert-thompson-david-thompson-kathryn-thompson-and-bethan-thompson-environmental-permit-application-advertisement-eprkp3326mqa002) — Environment Agency; 2026-10-14T11:36:46+00:00
 - [NE22 7FJ, JDR Cable Systems Limited: environmental permit application advertisement - EPR/NP3025MA/A001](https://www.gov.uk/government/publications/ne22-7fj-jdr-cable-systems-limited-environmental-permit-application-advertisement-eprnp3025maa001) — Environment Agency; 2026-10-14T11:35:07+00:00
@@ -3199,13 +3191,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Patient Listening Session Summaries](http://www.fda.gov/patients/fda-patient-listening-sessions/patient-listening-session-summaries) — Food and Drug Administration — What's New: Drugs; 2026-10-13T17:48:10+00:00
 - [John Arthur Hanratty](https://www.sec.gov/files/litigation/admin/2026/34-106650.pdf) — Securities and Exchange Commission; 2026-10-13T17:45:32+00:00
 - [Product Safety Report: Toddler Ghost Costume sold via Amazon (2609-0106)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-toddler-ghost-costume-sold-via-amazon-2609-0106) — Office for Product Safety and Standards; 2026-10-13T17:01:13+00:00
-- [Product Recall: Mint Velvet Raya Espadrille Wedge Sandals sold by Next (2610-0072)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-mint-velvet-raya-espadrille-wedge-sandals-sold-by-next-2610-0072) — Office for Product Safety and Standards; 2026-10-13T16:53:09+00:00
-- [The Northern Ireland Assembly (Minimum Period) (Amendment) Order 2026](http://www.legislation.gov.uk/uksi/2026/1080/made) — UK legislation; 2026-10-13T16:47:24.520635+00:00
-- [The Employment Appeal Tribunal (Amendment) (No. 2) Rules 2026](http://www.legislation.gov.uk/uksi/2026/1077/made) — UK legislation; 2026-10-13T16:47:14.114154+00:00
-- [The Income-related Benefits (Subsidy to Authorities) Amendment Order 2026](http://www.legislation.gov.uk/uksi/2026/1079/made) — UK legislation; 2026-10-13T16:47:04.305417+00:00
-- [The Licensing Act 2003 (Applications of Potential Strategic Importance to Greater London etc and Consequential Amendment) Regulations 2026](http://www.legislation.gov.uk/uksi/2026/1078/made) — UK legislation; 2026-10-13T16:46:53.135828+00:00
-- [The Local Authorities (Functions and Responsibilities) (England) (Amendment) Regulations 2026](http://www.legislation.gov.uk/uksi/2026/1076/made) — UK legislation; 2026-10-13T16:46:43.117056+00:00
-- [The Global Human Rights and International Humanitarian Law Sanctions Regulations 2026](http://www.legislation.gov.uk/uksi/2026/1071/made) — UK legislation; 2026-10-13T16:46:32.810609+00:00
 
 ## Source failures and coverage warnings
 
@@ -3319,28 +3304,24 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fdic-index: unchanged; stale_feed_outside_requested_window
 - us-fincen-index: ok; stale_feed_outside_requested_window
 - us-cftc-fda5c3631d: ok; stale_feed_outside_requested_window
-- us-fda-df70b9f330: unchanged; stale_feed_outside_requested_window
-- us-fda-1a1096082f: ok; stale_feed_outside_requested_window
+- us-fda-df70b9f330: ok; stale_feed_outside_requested_window
+- us-fda-1a1096082f: unchanged; stale_feed_outside_requested_window
 - us-fda-2d9c4fc2f9: unchanged; stale_feed_outside_requested_window
 - us-fda-8fc09ac0a2: unchanged; stale_feed_outside_requested_window
 - us-fda-3eaddf14de: unchanged; stale_feed_outside_requested_window
 - us-fda-a25233bfac: unchanged; stale_feed_outside_requested_window
 - us-fda-1ca201e48f: unchanged; stale_feed_outside_requested_window
 - us-fda-c7d1d1cd64: unchanged; stale_feed_outside_requested_window
-- us-fda-d7692535f0: unchanged; stale_feed_outside_requested_window
+- us-fda-d7692535f0: ok; stale_feed_outside_requested_window
 - us-fsis-85c9542fd5: ok; stale_feed_outside_requested_window
 - us-fcc-1ad902e468: unchanged; stale_feed_outside_requested_window
 - us-fcc-ff38ce828f: ok; stale_feed_outside_requested_window
 - us-fcc-198472aaf9: ok; stale_feed_outside_requested_window
-- us-fcc-543ac3ead4: parse_or_network_error; 
-- us-fcc-6a41d8cf06: parse_or_network_error; 
-- us-fcc-c1b8377d30: parse_or_network_error; 
-- us-fcc-5b65620b1e: parse_or_network_error; 
-- us-fcc-032d1c9bf4: parse_or_network_error; 
+- us-fcc-364d1b4932: parse_or_network_error; 
 - us-osha-ba174bf325: ok; stale_feed_outside_requested_window
 - us-osha-7df7a48ccf: ok; stale_feed_outside_requested_window
-- us-nlrb-3db5e72bf9: unchanged; stale_feed_outside_requested_window
-- us-nlrb-c15d588b2d: unchanged; stale_feed_outside_requested_window
+- us-nlrb-3db5e72bf9: ok; stale_feed_outside_requested_window
+- us-nlrb-c15d588b2d: ok; stale_feed_outside_requested_window
 - us-dot-6464bc66ac: ok; stale_feed_outside_requested_window
 - us-uscis-a16e1f9942: ok; stale_feed_outside_requested_window
 - us-fmc-fe8f0538ae: unchanged; stale_feed_outside_requested_window
@@ -3356,35 +3337,36 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - ca-gazette-821b285be1: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-2d47daa483: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-c2eb48e1fa: unchanged; stale_feed_outside_requested_window
-- ca-boc-4aa19b2183: unchanged; stale_feed_outside_requested_window
+- ca-boc-4aa19b2183: ok; stale_feed_outside_requested_window
 - ca-boc-1f26bb2971: unchanged; stale_feed_outside_requested_window
-- ca-boc-4192a605ae: unchanged; stale_feed_outside_requested_window
+- ca-boc-4192a605ae: ok; stale_feed_outside_requested_window
 - ca-boc-5cc0603f1f: unchanged; stale_feed_outside_requested_window
-- ca-boc-a61b683fac: unchanged; stale_feed_outside_requested_window
-- ca-boc-161ba50d6e: unchanged; stale_feed_outside_requested_window
+- ca-boc-a61b683fac: ok; stale_feed_outside_requested_window
+- ca-boc-161ba50d6e: ok; stale_feed_outside_requested_window
 - ca-boc-1c9979e6ac: unchanged; stale_feed_outside_requested_window
-- ca-boc-b8fa2876ef: unchanged; stale_feed_outside_requested_window
-- ca-boc-b06a91e186: unchanged; stale_feed_outside_requested_window
-- ca-boc-f2811531de: unchanged; stale_feed_outside_requested_window
-- ca-boc-71c82276e6: unchanged; stale_feed_outside_requested_window
-- ca-boc-c1617c3a5b: unchanged; stale_feed_outside_requested_window
-- ca-boc-ddf593b208: unchanged; stale_feed_outside_requested_window
-- ca-boc-affce837d4: unchanged; stale_feed_outside_requested_window
-- ca-boc-e24c58f2d0: unchanged; stale_feed_outside_requested_window
-- ca-boc-9308ff5fe4: unchanged; stale_feed_outside_requested_window
-- ca-boc-9f75c25657: unchanged; stale_feed_outside_requested_window
+- ca-boc-b8fa2876ef: ok; stale_feed_outside_requested_window
+- ca-boc-b06a91e186: ok; stale_feed_outside_requested_window
+- ca-boc-f2811531de: ok; stale_feed_outside_requested_window
+- ca-boc-71c82276e6: ok; stale_feed_outside_requested_window
+- ca-boc-c1617c3a5b: ok; stale_feed_outside_requested_window
+- ca-boc-ddf593b208: ok; stale_feed_outside_requested_window
+- ca-boc-affce837d4: ok; stale_feed_outside_requested_window
+- ca-boc-e24c58f2d0: ok; stale_feed_outside_requested_window
+- ca-boc-9308ff5fe4: ok; stale_feed_outside_requested_window
+- ca-boc-9f75c25657: ok; stale_feed_outside_requested_window
 - ca-boc-cffefa81f7: unchanged; stale_feed_outside_requested_window
-- ca-boc-762f78f374: unchanged; stale_feed_outside_requested_window
-- ca-boc-49364b93d8: unchanged; stale_feed_outside_requested_window
-- ca-boc-903390d96d: unchanged; stale_feed_outside_requested_window
-- ca-boc-1da610df86: unchanged; stale_feed_outside_requested_window
-- ca-boc-63e377340d: unchanged; stale_feed_outside_requested_window
+- ca-boc-762f78f374: ok; stale_feed_outside_requested_window
+- ca-boc-49364b93d8: ok; stale_feed_outside_requested_window
+- ca-boc-903390d96d: ok; stale_feed_outside_requested_window
+- ca-boc-1da610df86: ok; stale_feed_outside_requested_window
+- ca-boc-63e377340d: ok; stale_feed_outside_requested_window
 - au-rba-75f3866f45: unchanged; stale_feed_outside_requested_window
 - au-rba-4c2add8718: unchanged; stale_feed_outside_requested_window
 - au-rba-fe06b804cb: unchanged; stale_feed_outside_requested_window
 - au-rba-9e35f5f8d1: unchanged; stale_feed_outside_requested_window
 - au-rba-5ba995e001: unchanged; stale_feed_outside_requested_window
 - au-rba-bb9b5c009f: unchanged; stale_feed_outside_requested_window
+- au-accc-index: ok; listing_rendered_via_tier3_reader
 - hk-government-a5249d2406: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
 - sg-hsa-621a78d387: unchanged; stale_feed_outside_requested_window
 - in-rbi-738b09bded: ok; stale_feed_outside_requested_window
