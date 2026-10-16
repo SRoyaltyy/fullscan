@@ -303,6 +303,50 @@ def existing_waiter() -> int | None:
     return pid if pid_alive(pid) else None
 
 
+
+def ensure_openclaw_auth_owned_by_gha() -> None:
+    """Forced reauth on ECS often runs as root with HOME=/home/gha. Chown the
+    auth store so `sudo -u gha openclaw models auth list` can read expiry.
+    """
+    if os.geteuid() != 0:
+        return
+    home = os.environ.get("HOME") or "/home/gha"
+    root = Path(home) / ".openclaw"
+    if not root.is_dir():
+        return
+    user = os.environ.get("FULLSCAN_USER") or "gha"
+    try:
+        import pwd
+        pw = pwd.getpwnam(user)
+        uid, gid = pw.pw_uid, pw.pw_gid
+    except KeyError:
+        return
+    names = {"auth-profiles.json", "oauth.json", "auth.json", "auth-state.json",
+             "openclaw-agent.sqlite"}
+    fixed = 0
+    for path in root.rglob("*"):
+        if not path.is_file():
+            continue
+        if path.name not in names and not (
+            path.suffix in (".json", ".sqlite") and path.name != "openclaw.json"
+        ):
+            continue
+        if path.name == "openclaw.json":
+            continue
+        try:
+            st = path.stat()
+            if st.st_uid == uid and st.st_gid == gid:
+                continue
+            os.chown(path, uid, gid)
+            if st.st_mode & 0o600 != 0o600:
+                path.chmod((st.st_mode & 0o777) | 0o600)
+            fixed += 1
+        except OSError:
+            continue
+    if fixed:
+        print(f"[reauth] chowned {fixed} openclaw auth file(s) to {user}", flush=True)
+
+
 def hostname() -> str:
     try:
         return socket.gethostname()
@@ -528,6 +572,7 @@ def daemon(force: bool) -> int:
     except OSError:
         pass
     if rc == 0:
+        ensure_openclaw_auth_owned_by_gha()
         dump({
             "status": "ok",
             "oauth": "OK",
