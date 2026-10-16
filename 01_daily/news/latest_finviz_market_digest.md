@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-16
 
-**Generated:** 2026-10-16T04:17:35.265184-04:00 (America/New_York)
+**Generated:** 2026-10-16T04:18:22.004335-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US stocks set for a slightly higher open with bank earnings, economic data, and options expiration in focus
 **Prior close:** SPX —  Nasdaq —  Dow —
