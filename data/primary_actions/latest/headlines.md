@@ -1,7 +1,7 @@
 # Primary-origin action documents
 
-Updated 2026-10-16T16:39:29.228247+00:00. 3169 dated documents in the configured 3-day window; 42 newly retained; 1351 repeat observations.
-Source health: 449/454 checked successfully. Collection uses zero LLM calls.
+Updated 2026-10-16T16:44:23.021605+00:00. 3169 dated documents in the configured 3-day window; 3 newly retained; 1309 repeat observations.
+Source health: 452/457 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
@@ -3189,6 +3189,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [David Kushner](https://www.sec.gov/files/litigation/admin/2026/ia-7025.pdf) — Securities and Exchange Commission; 2026-10-13T20:08:10+00:00
 - [Justice Department Moves to Strip Citizenship from 40 Criminals in Largest Single-Period Filing Under the Trump Administration](https://www.uscis.gov/newsroom/news-releases/justice-department-moves-to-strip-citizenship-from-40-criminals-in-largest-single-period-filing) — US Citizenship and Immigration Services; 2026-10-13T20:03:07+00:00
 - [Enlargement: EU opens accession negotiations with Ukraine on internal market, competitiveness and inclusive growth](https://www.consilium.europa.eu/en/press/press-releases/2026/10/13/enlargement-eu-opens-accession-negotiations-with-ukraine-on-internal-market-competitiveness-and-inclusive-growth/) — Council of the European Union; 2026-10-13T19:26:00+00:00
+- [Congress.gov Notifications Help the Library of Congress Enhance the Congress.gov User Experience](https://content.govdelivery.com/accounts/USLOC/bulletins/42f03ff) — Congress.gov legislative status — Get RSS; 2026-10-13T19:05:31+00:00
 - [Enlargement: Albania and EU provisionally close negotiations on enterprise and industrial policy](https://www.consilium.europa.eu/en/press/press-releases/2026/10/13/enlargement-albania-and-eu-provisionally-close-negotiations-on-enterprise-and-industrial-policy/) — Council of the European Union; 2026-10-13T18:35:00+00:00
 - [Philip R. Lane: The AI opportunity for Europe](https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261013~9db9bf4fd6.en.html) — European Central Bank; 2026-10-13T18:30:00+00:00
 - [Pan Pepin Inc. Issues Allergy Alert of Para Bien Al Grano Due to Undeclared Sesame](http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/pan-pepin-inc-issues-allergy-alert-para-bien-al-grano-due-undeclared-sesame) — Food and Drug Administration — Food Allergies; 2026-10-13T18:07:00+00:00
@@ -3205,7 +3206,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [The Licensing Act 2003 (Applications of Potential Strategic Importance to Greater London etc and Consequential Amendment) Regulations 2026](http://www.legislation.gov.uk/uksi/2026/1078/made) — UK legislation; 2026-10-13T16:46:53.135828+00:00
 - [The Local Authorities (Functions and Responsibilities) (England) (Amendment) Regulations 2026](http://www.legislation.gov.uk/uksi/2026/1076/made) — UK legislation; 2026-10-13T16:46:43.117056+00:00
 - [The Global Human Rights and International Humanitarian Law Sanctions Regulations 2026](http://www.legislation.gov.uk/uksi/2026/1071/made) — UK legislation; 2026-10-13T16:46:32.810609+00:00
-- [Product Safety Report: Baby Electric Soothing Palm Sleep Pillow sold via AliExpress (2610-0015)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-baby-electric-soothing-palm-sleep-pillow-sold-via-aliexpress-2610-0015) — Office for Product Safety and Standards; 2026-10-13T16:42:20+00:00
 
 ## Source failures and coverage warnings
 
@@ -3305,7 +3305,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fed-a383ca0d09: ok; stale_feed_outside_requested_window
 - us-fed-1401ff4ff2: ok; stale_feed_outside_requested_window
 - us-fed-1555c8e0e5: ok; stale_feed_outside_requested_window
-- us-fed-00a0e0a88a: ok; stale_feed_outside_requested_window
 - us-fed-ba8ad56252: ok; stale_feed_outside_requested_window
 - us-fed-0023b1ebca: ok; stale_feed_outside_requested_window
 - us-fed-a93c08c457: ok; stale_feed_outside_requested_window
@@ -3317,27 +3316,27 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fed-eea49fa482: ok; stale_feed_outside_requested_window
 - us-fed-8d9ba6faea: ok; stale_feed_outside_requested_window
 - us-fed-0a7a64daa4: ok; stale_feed_outside_requested_window
-- us-fdic-index: ok; stale_feed_outside_requested_window
+- us-fdic-index: unchanged; stale_feed_outside_requested_window
 - us-fincen-index: ok; stale_feed_outside_requested_window
 - us-cftc-fda5c3631d: ok; stale_feed_outside_requested_window
-- us-fda-df70b9f330: ok; stale_feed_outside_requested_window
-- us-fda-1a1096082f: unchanged; stale_feed_outside_requested_window
-- us-fda-2d9c4fc2f9: ok; stale_feed_outside_requested_window
-- us-fda-8fc09ac0a2: ok; stale_feed_outside_requested_window
+- us-fda-df70b9f330: unchanged; stale_feed_outside_requested_window
+- us-fda-1a1096082f: ok; stale_feed_outside_requested_window
+- us-fda-2d9c4fc2f9: unchanged; stale_feed_outside_requested_window
+- us-fda-8fc09ac0a2: unchanged; stale_feed_outside_requested_window
 - us-fda-3eaddf14de: unchanged; stale_feed_outside_requested_window
-- us-fda-a25233bfac: ok; stale_feed_outside_requested_window
-- us-fda-1ca201e48f: ok; stale_feed_outside_requested_window
-- us-fda-c7d1d1cd64: ok; stale_feed_outside_requested_window
-- us-fda-d7692535f0: ok; stale_feed_outside_requested_window
+- us-fda-a25233bfac: unchanged; stale_feed_outside_requested_window
+- us-fda-1ca201e48f: unchanged; stale_feed_outside_requested_window
+- us-fda-c7d1d1cd64: unchanged; stale_feed_outside_requested_window
+- us-fda-d7692535f0: unchanged; stale_feed_outside_requested_window
 - us-fsis-85c9542fd5: ok; stale_feed_outside_requested_window
 - us-fcc-1ad902e468: unchanged; stale_feed_outside_requested_window
 - us-fcc-ff38ce828f: ok; stale_feed_outside_requested_window
 - us-fcc-198472aaf9: ok; stale_feed_outside_requested_window
-- us-fcc-71eeceab27: parse_or_network_error; 
-- us-fcc-b90c7d93ba: parse_or_network_error; 
 - us-fcc-543ac3ead4: parse_or_network_error; 
-- us-fcc-52947fea3b: parse_or_network_error; 
-- us-fcc-72c92fdc9e: parse_or_network_error; 
+- us-fcc-6a41d8cf06: parse_or_network_error; 
+- us-fcc-c1b8377d30: parse_or_network_error; 
+- us-fcc-5b65620b1e: parse_or_network_error; 
+- us-fcc-032d1c9bf4: parse_or_network_error; 
 - us-osha-ba174bf325: ok; stale_feed_outside_requested_window
 - us-osha-7df7a48ccf: ok; stale_feed_outside_requested_window
 - us-nlrb-3db5e72bf9: unchanged; stale_feed_outside_requested_window
@@ -3357,27 +3356,27 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - ca-gazette-821b285be1: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-2d47daa483: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-c2eb48e1fa: unchanged; stale_feed_outside_requested_window
-- ca-boc-4aa19b2183: ok; stale_feed_outside_requested_window
-- ca-boc-1f26bb2971: ok; stale_feed_outside_requested_window
+- ca-boc-4aa19b2183: unchanged; stale_feed_outside_requested_window
+- ca-boc-1f26bb2971: unchanged; stale_feed_outside_requested_window
 - ca-boc-4192a605ae: unchanged; stale_feed_outside_requested_window
 - ca-boc-5cc0603f1f: unchanged; stale_feed_outside_requested_window
 - ca-boc-a61b683fac: unchanged; stale_feed_outside_requested_window
 - ca-boc-161ba50d6e: unchanged; stale_feed_outside_requested_window
 - ca-boc-1c9979e6ac: unchanged; stale_feed_outside_requested_window
-- ca-boc-b8fa2876ef: ok; stale_feed_outside_requested_window
+- ca-boc-b8fa2876ef: unchanged; stale_feed_outside_requested_window
 - ca-boc-b06a91e186: unchanged; stale_feed_outside_requested_window
-- ca-boc-f2811531de: ok; stale_feed_outside_requested_window
-- ca-boc-71c82276e6: ok; stale_feed_outside_requested_window
-- ca-boc-c1617c3a5b: ok; stale_feed_outside_requested_window
-- ca-boc-ddf593b208: ok; stale_feed_outside_requested_window
-- ca-boc-affce837d4: ok; stale_feed_outside_requested_window
-- ca-boc-e24c58f2d0: ok; stale_feed_outside_requested_window
-- ca-boc-9308ff5fe4: ok; stale_feed_outside_requested_window
-- ca-boc-9f75c25657: ok; stale_feed_outside_requested_window
-- ca-boc-cffefa81f7: ok; stale_feed_outside_requested_window
-- ca-boc-762f78f374: ok; stale_feed_outside_requested_window
-- ca-boc-49364b93d8: ok; stale_feed_outside_requested_window
-- ca-boc-903390d96d: ok; stale_feed_outside_requested_window
+- ca-boc-f2811531de: unchanged; stale_feed_outside_requested_window
+- ca-boc-71c82276e6: unchanged; stale_feed_outside_requested_window
+- ca-boc-c1617c3a5b: unchanged; stale_feed_outside_requested_window
+- ca-boc-ddf593b208: unchanged; stale_feed_outside_requested_window
+- ca-boc-affce837d4: unchanged; stale_feed_outside_requested_window
+- ca-boc-e24c58f2d0: unchanged; stale_feed_outside_requested_window
+- ca-boc-9308ff5fe4: unchanged; stale_feed_outside_requested_window
+- ca-boc-9f75c25657: unchanged; stale_feed_outside_requested_window
+- ca-boc-cffefa81f7: unchanged; stale_feed_outside_requested_window
+- ca-boc-762f78f374: unchanged; stale_feed_outside_requested_window
+- ca-boc-49364b93d8: unchanged; stale_feed_outside_requested_window
+- ca-boc-903390d96d: unchanged; stale_feed_outside_requested_window
 - ca-boc-1da610df86: unchanged; stale_feed_outside_requested_window
 - ca-boc-63e377340d: unchanged; stale_feed_outside_requested_window
 - au-rba-75f3866f45: unchanged; stale_feed_outside_requested_window

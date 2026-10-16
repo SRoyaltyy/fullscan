@@ -1,32 +1,32 @@
 [
   {
-    "title": "Commission Vote on Freight Rail Couplers and Parts Thereof from Czech Republic and India",
-    "url": "https://www.usitc.gov/press_room/news_release/2026/er1016_69361.htm",
-    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1016_69361.htm",
+    "title": "Most-Viewed Bills - Week of October 11, 2026",
+    "url": "https://www.congress.gov/most-viewed-bills",
+    "native_id": "October 11, 2026",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": "H.R.6509 [119th] - SAFE Drugs Act of 2025 S.2296 [119th] - National Defense Authorization Act for Fiscal Year 2026 H.R.1 [119th] - An act to provide for reconciliation pursuant to title II of H. Con. Res. 14. H.R.139 [119th] - Sunshine Protection Act of 2025 S.4668 [119th] - Protect College Sports Act of 2026 H.R.5316 [119th] - Drug Shortage Compounding Patient Access Act of 2025 S.3516 [118th] - A bill to impose a fee on certain remittance transfers to fund border security. H.R.5269 [119th] - RESULTS Act H.R.8800 [119th] - National Defense Authorization Act for Fiscal Year 2027 H.R.22 [119th] - SAVE Act",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "United States International Trade Commission",
+      "issuer": "Congress.gov legislative status — Get RSS",
       "jurisdiction": "US",
-      "family": "trade_and_judicial"
+      "family": "legislative_procedure"
     },
-    "primary_source_id": "us-itc-index",
-    "n": 4161,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
+    "primary_source_id": "us-congress-ef86be63e2",
+    "n": 4204,
+    "first_seen": "2026-10-16T16:44:23.021605+00:00",
+    "last_seen": "2026-10-16T16:44:23.021605+00:00",
     "source_ids": [
-      "us-itc-index"
+      "us-congress-ef86be63e2"
     ]
   },
   {
-    "title": "FCC Convenes Meeting of International Partners from Australia, Canada, New Zealand, and the United Kingdom",
-    "url": "https://www.fcc.gov/edoc/425926",
-    "native_id": "425926",
+    "title": "Broadcast Actions",
+    "url": "https://www.fcc.gov/edoc/369468",
+    "native_id": "369468",
     "published_at": null,
     "published_raw": "",
     "summary": ".",
@@ -35,404 +35,16 @@
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — FCC Recent Releases (Combined)",
+      "issuer": "Federal Communications Commission — Broadcast Actions",
       "jurisdiction": "US",
       "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fcc-adabf37abf",
-    "n": 4162,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
+    "primary_source_id": "us-fcc-71eeceab27",
+    "n": 4205,
+    "first_seen": "2026-10-16T16:44:23.021605+00:00",
+    "last_seen": "2026-10-16T16:44:23.021605+00:00",
     "source_ids": [
-      "us-fcc-685c5e7dd2",
-      "us-fcc-adabf37abf"
-    ]
-  },
-  {
-    "title": "Joint Statement from Meeting of International Partners from Australia, Canada, New Zealand, and the United Kingdom",
-    "url": "https://www.fcc.gov/edoc/425928",
-    "native_id": "425928",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — FCC Recent Releases (Combined)",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-adabf37abf",
-    "n": 4163,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
-    "source_ids": [
-      "us-fcc-adabf37abf",
-      "us-fcc-ba4344681a"
-    ]
-  },
-  {
-    "title": "The Public Safety and Homeland Security Bureau Announces Conditional Approval and Exemption of Certain Advanced Robotic Devices and Power Inverters from FCC Covered List",
-    "url": "https://www.fcc.gov/edoc/425899",
-    "native_id": "425899",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — FCC Recent Releases (Combined)",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-adabf37abf",
-    "n": 4164,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
-    "source_ids": [
-      "us-fcc-adabf37abf",
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Trusty ITSO Assembly Remarks",
-    "url": "https://www.fcc.gov/edoc/425560",
-    "native_id": "425560",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "Trusty ITSO Assembly Remarks",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Commissioner's Speeches",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-64964a4064",
-    "n": 4165,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
-    "source_ids": [
-      "us-fcc-64964a4064"
-    ]
-  },
-  {
-    "title": "Broadcast Applications",
-    "url": "https://www.fcc.gov/edoc/369469",
-    "native_id": "369469",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Broadcast Applications",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-1b3777e6de",
-    "n": 4166,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
-    "source_ids": [
-      "us-fcc-1b3777e6de"
-    ]
-  },
-  {
-    "title": "Enforcement Bureau Reminds MVPDs of 2026 FCC Form-396 Deadline",
-    "url": "https://www.fcc.gov/edoc/422360",
-    "native_id": "422360",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "Enforcement Bureau reminds MVPDs to file an FCC Form 396-C",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-60691b9c1e",
-    "n": 4167,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
-    "source_ids": [
-      "us-fcc-60691b9c1e"
-    ]
-  },
-  {
-    "title": "Erratum for the Public Notice DA 23-296 World Radiocommunication Conference-23 Advisory Committee Recommendations in Appendix A",
-    "url": "https://www.fcc.gov/edoc/392553",
-    "native_id": "392553",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — International Bureau",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-2a922aa4bb",
-    "n": 4168,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
-    "source_ids": [
-      "us-fcc-2a922aa4bb"
-    ]
-  },
-  {
-    "title": "Chairman Pai Statement On The Americans With Disabilities Act's 30th Anniversary",
-    "url": "https://www.fcc.gov/edoc/365725",
-    "native_id": "365725",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "FCC Working Actively to Promote Communications Accessibility for all Americans",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Office of Workplace Diversity",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-032d1c9bf4",
-    "n": 4169,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
-    "source_ids": [
-      "us-fcc-032d1c9bf4"
-    ]
-  },
-  {
-    "title": "Mobile Menu Button",
-    "url": "https://www.ferc.gov/news-events/news/decisions-notices",
-    "native_id": "https://www.ferc.gov/news-events/news/decisions-notices",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Energy Regulatory Commission",
-      "jurisdiction": "US",
-      "family": "energy_orders_and_rates"
-    },
-    "primary_source_id": "us-ferc-index",
-    "n": 4170,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
-    "source_ids": [
-      "us-ferc-index",
-      "us-ferc-index"
-    ]
-  },
-  {
-    "title": "News Releases & Headlines",
-    "url": "https://www.ferc.gov/news-events/news/news-releases-headlines",
-    "native_id": "https://www.ferc.gov/news-events/news/news-releases-headlines",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Energy Regulatory Commission",
-      "jurisdiction": "US",
-      "family": "energy_orders_and_rates"
-    },
-    "primary_source_id": "us-ferc-index",
-    "n": 4171,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
-    "source_ids": [
-      "us-ferc-index"
-    ]
-  },
-  {
-    "title": "Decisions and Notices",
-    "url": "https://www.ferc.gov/news-events/news/decisions-notices?new=",
-    "native_id": "https://www.ferc.gov/news-events/news/decisions-notices?new=",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Energy Regulatory Commission",
-      "jurisdiction": "US",
-      "family": "energy_orders_and_rates"
-    },
-    "primary_source_id": "us-ferc-index",
-    "n": 4172,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
-    "source_ids": [
-      "us-ferc-index"
-    ]
-  },
-  {
-    "title": "FERC and NRC Commissioners to Discuss Grid Reliability, Nuclear Power, and Cybersecurity at Joint Meeting",
-    "url": "https://www.ferc.gov/news-events/news/ferc-and-nrc-commissioners-discuss-grid-reliability-nuclear-power-and",
-    "native_id": "https://www.ferc.gov/news-events/news/ferc-and-nrc-commissioners-discuss-grid-reliability-nuclear-power-and",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Energy Regulatory Commission",
-      "jurisdiction": "US",
-      "family": "energy_orders_and_rates"
-    },
-    "primary_source_id": "us-ferc-index",
-    "n": 4173,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
-    "source_ids": [
-      "us-ferc-index"
-    ]
-  },
-  {
-    "title": "FERC Issues Final Notice & Agenda for the Annual Commissioner-led Reliability Technical Conference",
-    "url": "https://www.ferc.gov/news-events/news/ferc-issues-final-notice-agenda-annual-commissioner-led-reliability-technical",
-    "native_id": "https://www.ferc.gov/news-events/news/ferc-issues-final-notice-agenda-annual-commissioner-led-reliability-technical",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Energy Regulatory Commission",
-      "jurisdiction": "US",
-      "family": "energy_orders_and_rates"
-    },
-    "primary_source_id": "us-ferc-index",
-    "n": 4174,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
-    "source_ids": [
-      "us-ferc-index"
-    ]
-  },
-  {
-    "title": "Summaries | October 2026 Commission Meeting",
-    "url": "https://www.ferc.gov/news-events/news/summaries-october-2026-commission-meeting",
-    "native_id": "https://www.ferc.gov/news-events/news/summaries-october-2026-commission-meeting",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Energy Regulatory Commission",
-      "jurisdiction": "US",
-      "family": "energy_orders_and_rates"
-    },
-    "primary_source_id": "us-ferc-index",
-    "n": 4175,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
-    "source_ids": [
-      "us-ferc-index"
-    ]
-  },
-  {
-    "title": "Presentation | Authorizations for Certain Activities at Liquefied Natural Gas Plants",
-    "url": "https://www.ferc.gov/news-events/news/presentation-authorizations-certain-activities-liquefied-natural-gas-plants",
-    "native_id": "https://www.ferc.gov/news-events/news/presentation-authorizations-certain-activities-liquefied-natural-gas-plants",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Energy Regulatory Commission",
-      "jurisdiction": "US",
-      "family": "energy_orders_and_rates"
-    },
-    "primary_source_id": "us-ferc-index",
-    "n": 4176,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
-    "source_ids": [
-      "us-ferc-index"
-    ]
-  },
-  {
-    "title": "FERC Takes Historic Action Launching First LNG Authorization Program",
-    "url": "https://www.ferc.gov/news-events/news/ferc-takes-historic-action-launching-first-lng-authorization-program",
-    "native_id": "https://www.ferc.gov/news-events/news/ferc-takes-historic-action-launching-first-lng-authorization-program",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Energy Regulatory Commission",
-      "jurisdiction": "US",
-      "family": "energy_orders_and_rates"
-    },
-    "primary_source_id": "us-ferc-index",
-    "n": 4177,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
-    "source_ids": [
-      "us-ferc-index"
-    ]
-  },
-  {
-    "title": "FERC Launches NEPA Overhaul to Accelerate Natural Gas Projects",
-    "url": "https://www.ferc.gov/news-events/news/ferc-launches-nepa-overhaul-accelerate-natural-gas-projects",
-    "native_id": "https://www.ferc.gov/news-events/news/ferc-launches-nepa-overhaul-accelerate-natural-gas-projects",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Energy Regulatory Commission",
-      "jurisdiction": "US",
-      "family": "energy_orders_and_rates"
-    },
-    "primary_source_id": "us-ferc-index",
-    "n": 4178,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-16T16:39:29.228247+00:00",
-    "source_ids": [
-      "us-ferc-index"
+      "us-fcc-71eeceab27"
     ]
   }
 ]
