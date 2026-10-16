@@ -217,32 +217,187 @@ def _to_dt(v) -> datetime | None:
         return None
 
 
+def _is_xai_oauth_dict(d: dict) -> bool:
+    """True when this node is (or clearly describes) an xAI OAuth profile."""
+    if not isinstance(d, dict):
+        return False
+    provider = str(d.get("provider") or d.get("Provider") or "").lower()
+    ptype = str(d.get("type") or d.get("method") or d.get("mode") or "").lower()
+    pid = str(d.get("id") or d.get("profileId") or d.get("profile_id") or "").lower()
+    if provider == "xai" and ptype in ("oauth", "device_code", "device-code"):
+        return True
+    if provider == "xai" and ptype and ptype != "api_key":
+        # auth list JSON uses type=oauth; tolerate token-shaped xAI profiles too
+        if any(k in d for k in ("expires", "expiresAt", "expires_at", "expiry", "refresh")):
+            return True
+    if pid.startswith("xai:") and ("oauth" in pid or ptype == "oauth"):
+        return True
+    return False
+
+
+def _expiry_from_dict(d: dict) -> tuple[datetime | None, bool | None]:
+    dt = None
+    for k in ("expires", "expiresAt", "expires_at", "expiry"):
+        dt = _to_dt(d.get(k))
+        if dt:
+            break
+    has_r = None
+    for rk in ("hasRefresh", "hasRefreshToken", "refreshable", "refresh"):
+        if rk in d:
+            has_r = bool(d[rk]) if rk != "refresh" else bool(d.get("refresh"))
+            break
+    return dt, has_r
+
+
+def _parse_auth_list_json(data) -> tuple[datetime | None, bool | None]:
+    """Parse `openclaw models auth list --json` (profiles[] summarized, no tokens)."""
+    if not isinstance(data, dict):
+        return None, None
+    profiles = data.get("profiles")
+    if isinstance(profiles, list):
+        for p in profiles:
+            if isinstance(p, dict) and _is_xai_oauth_dict(p):
+                dt, has_r = _expiry_from_dict(p)
+                if dt:
+                    return dt, has_r
+    if isinstance(profiles, dict):
+        for pid, cred in profiles.items():
+            if not isinstance(cred, dict):
+                continue
+            node = dict(cred)
+            node.setdefault("id", pid)
+            if _is_xai_oauth_dict(node):
+                dt, has_r = _expiry_from_dict(node)
+                if dt:
+                    return dt, has_r
+    return None, None
+
+
+def _xai_oauth_expiry_from_files(root: Path | None = None) -> tuple[datetime | None, str, bool | None]:
+    """Read ~/.openclaw auth-profiles.json directly (works even when CLI runs as gha
+    but the file was written as root after a device login). No token values logged.
+    """
+    root = root or (Path(HOME) / ".openclaw")
+    if not root.is_dir():
+        return None, "unreadable", None
+    candidates: list[Path] = []
+    for name in ("auth-profiles.json", "oauth.json", "auth.json"):
+        candidates.extend(root.rglob(name))
+    # Prefer agent auth-profiles.json over other hits
+    candidates.sort(key=lambda p: (0 if p.name == "auth-profiles.json" else 1,
+                                   0 if "/agents/" in str(p) else 1,
+                                   str(p)))
+    for path in candidates:
+        try:
+            if path.stat().st_size > 2_000_000:
+                continue
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        # Store shapes: {profiles: {id: cred}} or list
+        profiles = data.get("profiles") if isinstance(data, dict) else None
+        nodes: list[dict] = []
+        if isinstance(profiles, dict):
+            for pid, cred in profiles.items():
+                if isinstance(cred, dict):
+                    node = dict(cred)
+                    node.setdefault("id", pid)
+                    nodes.append(node)
+        elif isinstance(profiles, list):
+            nodes.extend(p for p in profiles if isinstance(p, dict))
+        elif isinstance(data, dict) and _is_xai_oauth_dict(data):
+            nodes.append(data)
+        for node in nodes:
+            if not _is_xai_oauth_dict(node):
+                continue
+            dt, has_r = _expiry_from_dict(node)
+            if dt:
+                return dt, f"file:{path.name}", has_r
+    return None, "unreadable", None
+
+
+def ensure_auth_store_owned_by_gha(root: Path | None = None) -> list[str]:
+    """Device login often runs as root on the ECS GH runner with HOME=/home/gha.
+    That leaves auth-profiles.json root-owned; `sudo -u gha openclaw ...` then
+    cannot read the profile (expiry_source=unreadable) even though the gateway
+    already got the token via refreshRunningGatewayAuthState. Fix ownership.
+    """
+    if os.geteuid() != 0:
+        return []
+    root = root or (Path(HOME) / ".openclaw")
+    if not root.is_dir():
+        return []
+    try:
+        import pwd
+        pw = pwd.getpwnam(GHA)
+        uid, gid = pw.pw_uid, pw.pw_gid
+    except KeyError:
+        return []
+    fixed: list[str] = []
+    names = {"auth-profiles.json", "oauth.json", "auth.json", "auth-state.json",
+             "openclaw-agent.sqlite"}
+    for path in root.rglob("*"):
+        if not path.is_file():
+            continue
+        if path.name not in names and path.suffix not in (".json", ".sqlite"):
+            continue
+        if path.name == "openclaw.json":
+            continue
+        try:
+            st = path.stat()
+            if st.st_uid == uid and st.st_gid == gid:
+                continue
+            os.chown(path, uid, gid)
+            # gha must read+write for renew nudge / CLI list
+            mode = st.st_mode & 0o777
+            if mode & 0o600 != 0o600:
+                path.chmod(mode | 0o600)
+            fixed.append(path.name)
+        except OSError:
+            continue
+    return fixed
+
+
 def xai_oauth_expiry() -> tuple[datetime | None, str, bool | None]:
     """Return (expires_utc, source, has_refresh) for the xAI OAuth profile."""
+    # Root-owned auth files after a forced reauth: fix before CLI as gha.
+    fixed = ensure_auth_store_owned_by_gha()
+    if fixed:
+        log(f"chowned auth store files to {GHA}: {', '.join(sorted(set(fixed))[:8])}")
+
     for args in (["openclaw", "models", "auth", "list", "--provider", "xai", "--json"],
                  ["openclaw", "models", "status", "--json"]):
         r = as_gha(args, 60)
+        raw = (r.stdout or "").strip()
+        # Strip a leading banner / spinner junk before the JSON object/array.
+        for start in ("{", "["):
+            i = raw.find(start)
+            if i > 0:
+                raw = raw[i:]
+                break
         try:
-            data = json.loads(r.stdout)
+            data = json.loads(raw)
         except Exception:
             continue
+        dt, has_r = _parse_auth_list_json(data)
+        if dt:
+            return dt, " ".join(args[1:4]), has_r
+        # Walk nested dicts without the old 400-char dump (long JWTs hid "xai"/"oauth").
         for d in _walk(data):
-            blob = json.dumps(d)[:400].lower()
-            if "xai" not in blob or "oauth" not in blob:
+            if not _is_xai_oauth_dict(d):
                 continue
-            for k in ("expires", "expiresAt", "expires_at", "expiry"):
-                dt = _to_dt(d.get(k))
-                if dt:
-                    has_r = None
-                    for rk in ("hasRefresh", "hasRefreshToken", "refreshable"):
-                        if rk in d:
-                            has_r = bool(d[rk])
-                    return dt, " ".join(args[1:4]), has_r
+            dt, has_r = _expiry_from_dict(d)
+            if dt:
+                return dt, " ".join(args[1:4]), has_r
     # Text fallback: "xai:... [xai/oauth; expires 2026-05-18T22:46:23.273Z]"
     r = as_gha(["openclaw", "models", "status"], 60)
     m = re.search(r"xai[^\n]*oauth[^\n]*expires\s+([0-9T:\-.]+Z?)", r.stdout or "", re.I)
     if m:
         return _to_dt(m.group(1)), "models status (text)", None
+    # File fallback: same store the CLI should read, but as this process (often root).
+    dt, src, has_r = _xai_oauth_expiry_from_files()
+    if dt:
+        return dt, src, has_r
     return None, "unreadable", None
 
 
