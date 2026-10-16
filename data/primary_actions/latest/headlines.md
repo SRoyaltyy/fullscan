@@ -1,7 +1,7 @@
 # Primary-origin action documents
 
-Updated 2026-10-16T17:23:24.584737+00:00. 3239 dated documents in the configured 3-day window; 0 newly retained; 1259 repeat observations.
-Source health: 455/463 checked successfully. Collection uses zero LLM calls.
+Updated 2026-10-16T17:26:36.762461+00:00. 3239 dated documents in the configured 3-day window; 0 newly retained; 1392 repeat observations.
+Source health: 457/463 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
@@ -3371,7 +3371,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-ftc-ebb4359fb7: ok; stale_feed_outside_requested_window
 - us-ftc-69601f2e49: ok; stale_feed_outside_requested_window
 - us-treasury-a69e5b5ef0: ok; stale_feed_outside_requested_window
-- us-ustr-index: unchanged; stale_feed_outside_requested_window
+- us-ustr-index: ok; stale_feed_outside_requested_window
 - us-fed-a383ca0d09: ok; stale_feed_outside_requested_window
 - us-fed-1401ff4ff2: ok; stale_feed_outside_requested_window
 - us-fed-1555c8e0e5: ok; stale_feed_outside_requested_window
@@ -3386,28 +3386,26 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fed-eea49fa482: ok; stale_feed_outside_requested_window
 - us-fed-8d9ba6faea: ok; stale_feed_outside_requested_window
 - us-fed-0a7a64daa4: ok; stale_feed_outside_requested_window
-- us-fdic-index: unchanged; stale_feed_outside_requested_window
+- us-fdic-index: ok; stale_feed_outside_requested_window
 - us-fincen-index: ok; stale_feed_outside_requested_window
 - us-cftc-fda5c3631d: ok; stale_feed_outside_requested_window
 - us-fda-df70b9f330: unchanged; stale_feed_outside_requested_window
 - us-fda-1a1096082f: unchanged; stale_feed_outside_requested_window
 - us-fda-2d9c4fc2f9: unchanged; stale_feed_outside_requested_window
 - us-fda-8fc09ac0a2: unchanged; stale_feed_outside_requested_window
-- us-fda-3eaddf14de: unchanged; stale_feed_outside_requested_window
+- us-fda-3eaddf14de: ok; stale_feed_outside_requested_window
 - us-fda-a25233bfac: unchanged; stale_feed_outside_requested_window
 - us-fda-1ca201e48f: unchanged; stale_feed_outside_requested_window
-- us-fda-c7d1d1cd64: unchanged; stale_feed_outside_requested_window
-- us-fda-d7692535f0: unchanged; stale_feed_outside_requested_window
+- us-fda-c7d1d1cd64: ok; stale_feed_outside_requested_window
+- us-fda-d7692535f0: ok; stale_feed_outside_requested_window
 - us-fsis-85c9542fd5: ok; stale_feed_outside_requested_window
 - us-fcc-1ad902e468: unchanged; stale_feed_outside_requested_window
 - us-fcc-ff38ce828f: ok; stale_feed_outside_requested_window
 - us-fcc-198472aaf9: ok; stale_feed_outside_requested_window
-- us-fcc-adabf37abf: parse_or_network_error; 
-- us-fcc-ba4344681a: parse_or_network_error; 
-- us-fcc-9e55083358: parse_or_network_error; 
-- us-fcc-42ae0f427c: parse_or_network_error; 
-- us-fcc-6fc68e3362: parse_or_network_error; 
-- us-fcc-6d83f4c2ee: parse_or_network_error; 
+- us-fcc-89097e714e: parse_or_network_error; 
+- us-fcc-27ab493047: parse_or_network_error; 
+- us-fcc-b90c7d93ba: parse_or_network_error; 
+- us-fcc-52947fea3b: parse_or_network_error; 
 - us-ferc-index: selector_empty; HTML selector matched no publication links; not healthy zero activity
 - us-osha-ba174bf325: ok; stale_feed_outside_requested_window
 - us-osha-7df7a48ccf: ok; stale_feed_outside_requested_window
@@ -3422,9 +3420,9 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - eu-ecb-fb5fd59aed: ok; stale_feed_outside_requested_window
 - eu-ecb-b84350c252: ok; stale_feed_outside_requested_window
 - eu-ecb-af0dbdabee: ok; stale_feed_outside_requested_window
-- eu-ecb-bca2a70864: unchanged; stale_feed_outside_requested_window
-- eu-ecb-0370c1f1df: unchanged; stale_feed_outside_requested_window
-- eu-ecb-c12c22cb78: unchanged; stale_feed_outside_requested_window
+- eu-ecb-bca2a70864: ok; stale_feed_outside_requested_window
+- eu-ecb-0370c1f1df: ok; stale_feed_outside_requested_window
+- eu-ecb-c12c22cb78: ok; stale_feed_outside_requested_window
 - ca-gazette-821b285be1: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-2d47daa483: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-c2eb48e1fa: unchanged; stale_feed_outside_requested_window

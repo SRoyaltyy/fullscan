@@ -1,6 +1,6 @@
 {
  "date": "2026-10-16",
- "generated_at": "2026-10-16T17:24:55.496946+00:00",
+ "generated_at": "2026-10-16T17:28:17.809887+00:00",
  "catalog": {
   "generated_at": "2026-10-16T17:12:50.726784+00:00",
   "channels": 546,
@@ -38,18 +38,18 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-16T17:23:24.584737+00:00",
+  "generated_at": "2026-10-16T17:26:36.762461+00:00",
   "enabled_sources": 463,
-  "sources_ok": 455,
-  "sources_failed": 8,
+  "sources_ok": 457,
+  "sources_failed": 6,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 4167,
-   "old": 2908,
-   "future": 0,
-   "undated": 309,
+   "observed": 4524,
+   "old": 3118,
+   "future": 14,
+   "undated": 317,
    "new": 0,
-   "duplicates": 1259
+   "duplicates": 1392
   },
   "current_dated_documents": 3239
  },
@@ -57,7 +57,7 @@
   "count": 0,
   "by_source": {}
  },
- "n_failures": 8,
+ "n_failures": 6,
  "dates": [
   "2026-10-16"
  ],
