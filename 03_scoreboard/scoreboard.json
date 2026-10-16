@@ -24530,6 +24530,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.48
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-16",
+          "actual_pct": 1.43,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.52
         }
       },
       "lesson_schema_ok": true
@@ -30357,6 +30369,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-10-16",
+          "actual_pct": -0.09,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -31966,6 +31990,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-10-16",
+          "actual_pct": -1.36,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -32526,7 +32562,20 @@
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
       "outlier_watch": "Energy +1.74% and gold down on a Hormuz day; UNH raise vs JNJ -6%; SPX 36 bp range after a 5.46% Kospi crash",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-10-16",
+          "actual_pct": -1.87,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -33359,7 +33408,7 @@
           "status": "miss"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-16_lesson.md",
       "sources_used": [
         {
           "url": "https://www.fool.com/coverage/stock-market-today/2026/10/16/stock-market-midday-oct-16-tech-stocks-slide-as-investors-rotate-into-defensive-sectors/",
@@ -33452,7 +33501,9 @@
       "key_interaction": "Warsh/Asia policy-relief was offset then dominated by an already-live AI-credit dump plus an intraday oil reversal the morning tape did not have",
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
-      "outlier_watch": "Dow only −0.34% with an early +0.78% spike vs NDX −2.15% trend-down; KOSPI +2.05% vs US chips lower; HY OAS quiet vs CoreWeave distressed; Indonesia −11% local shock"
+      "outlier_watch": "Dow only −0.34% with an early +0.78% spike vs NDX −2.15% trend-down; KOSPI +2.05% vs US chips lower; HY OAS quiet vs CoreWeave distressed; Indonesia −11% local shock",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     }
   ]
 }
