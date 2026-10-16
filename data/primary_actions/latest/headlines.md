@@ -1,17 +1,20 @@
 # Primary-origin action documents
 
-Updated 2026-10-16T11:34:38.353462+00:00. 2900 dated documents in the configured 3-day window; 21 newly retained; 1035 repeat observations.
-Source health: 356/359 checked successfully. Collection uses zero LLM calls.
+Updated 2026-10-16T16:03:14.310875+00:00. 2958 dated documents in the configured 3-day window; 147 newly retained; 1268 repeat observations.
+Source health: 354/359 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
 ## consultation_response_published
 
+- [Supported Housing regulation: consultation](https://www.gov.uk/government/consultations/supported-housing-regulation-consultation) — Ministry of Housing, Communities and Local Government; Department for Work and Pensions; 2026-10-16T15:19:58+00:00
 - [Building control: charges, notices and certificates](https://www.gov.uk/government/consultations/building-control-charges-notices-and-certificates) — Ministry of Housing, Communities and Local Government; 2026-10-16T10:51:45+00:00
-- [Revisions to the national standards and statutory guidance for advocacy](https://www.gov.uk/government/consultations/revisions-to-the-national-standards-and-statutory-guidance-for-advocacy) — Department for Education; 2026-10-13T12:45:43+00:00
 
 ## decision_published
 
+- [CAC Outcome: TSSA & Transport for London (TfL)](https://www.gov.uk/government/publications/cac-outcome-tssa-transport-for-london-tfl) — Central Arbitration Committee; 2026-10-16T13:54:44+00:00
+- [CAC Outcome: NEU, NASUWT & Liverpool College](https://www.gov.uk/government/publications/cac-outcome-neu-nasuwt-liverpool-college) — Central Arbitration Committee; 2026-10-16T13:54:09+00:00
+- [Production Screening Directions – 2026](https://www.gov.uk/government/publications/production-screening-directions-2026) — Offshore Petroleum Regulator for Environment and Decommissioning; 2026-10-16T12:32:49+00:00
 - [Fisheries: agreed records of consultations and distribution reports for blue whiting and Norwegian spring spawning herring in the North-East Atlantic for 2027](https://www.gov.uk/government/publications/fisheries-agreed-records-of-consultations-and-distribution-reports-for-blue-whiting-and-norwegian-spring-spawning-herring-in-the-north-east-atlantic-f) — Department for Environment, Food & Rural Affairs; 2026-10-16T10:31:29+00:00
 - [SL5 8BP, Element Six Technologies Ltd: permit surrender issued - EPR/RP3609BU/S002](https://www.gov.uk/government/publications/sl5-8bp-element-six-technologies-ltd-permit-surrender-issued-eprrp3609bus002) — Environment Agency; 2026-10-16T10:15:12+00:00
 - [DY11 7XA, Ringway Infrastructure Services Limited: environmental permit issued - EPR/HP3331JK/V002](https://www.gov.uk/government/publications/dy11-7xa-ringway-infrastructure-services-limited-environmental-permit-issued-eprhp3331jkv002) — Environment Agency; 2026-10-16T09:33:19+00:00
@@ -41,9 +44,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Babergh District Council](https://www.gov.uk/government/publications/babergh-district-council--2) — Regulator of Social Housing; 2026-10-14T08:30:05+00:00
 - [Royal Borough of Kingston upon Thames](https://www.gov.uk/government/publications/royal-borough-of-kingston-upon-thames) — Regulator of Social Housing; 2026-10-14T08:30:00+00:00
 - [CAC Outcome: GMB & Kimal PLC](https://www.gov.uk/government/publications/cac-outcome-gmb-kimal-plc) — Central Arbitration Committee; 2026-10-14T08:24:11+00:00
-- [Teacher misconduct panel outcome: Mr Joseph Amankwah](https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-joseph-amankwah) — Teaching Regulation Agency; 2026-10-13T15:23:11+00:00
-- [Teacher misconduct panel outcome: Mr Shaun Valentine](https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-shaun-valentine) — Teaching Regulation Agency; 2026-10-13T15:11:17+00:00
-- [West Winch Primary School: 13 October 2026](https://www.gov.uk/government/publications/west-winch-primary-school-13-october-2026) — Office of the Schools Adjudicator; 2026-10-13T14:40:03+00:00
 
 ## final_rule_published
 
@@ -85,6 +85,51 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## judicial_decision_published
 
+- [191 Meir Road, Normacot, Stoke-on-Trent, Staffordshire, ST3 7JF : BIR/00GL/F77/2025/0036](https://www.gov.uk/residential-property-tribunal-decisions/191-meir-road-normacot-stoke-on-trent-staffordshire-st3-7jf-bir-slash-00gl-slash-f77-slash-2025-slash-0036) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T15:32:41+00:00
+- [39 Radford Avenue Kidderminster DY10 2ES : BIR/00CR/MNR/2026/0035](https://www.gov.uk/residential-property-tribunal-decisions/39-radford-avenue-kidderminster-dy10-2es-bir-slash-00cr-slash-mnr-slash-2026-slash-0035) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T15:31:30+00:00
+- [21 Cheswardine Lane Norton Shifnal TF11 9EQ : BIR/00GG/F77/2026/0009](https://www.gov.uk/residential-property-tribunal-decisions/21-cheswardine-lane-norton-shifnal-tf11-9eq-bir-slash-00gg-slash-f77-slash-2026-slash-0009) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T15:30:11+00:00
+- [14 Kingfisher, Wilnecote, Tamworth, B77 5NZ: BIR/41UK/OAF/2026/0001, BIR/41UK/OC6/2026/0002](https://www.gov.uk/residential-property-tribunal-decisions/14-kingfisher-wilnecote-tamworth-b77-5nz-bir-slash-41uk-slash-oaf-slash-2026-slash-0001-bir-slash-41uk-slash-oc6-slash-2026-slash-0002) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T15:28:48+00:00
+- [21 Triangle Building, Wolverton Park Road, Wolverton, Milton Keynes, MK12 5FJ: CAM/00MG/MRA/2026/0072](https://www.gov.uk/residential-property-tribunal-decisions/21-triangle-building-wolverton-park-road-wolverton-milton-keynes-mk12-5fj-cam-slash-00mg-slash-mra-slash-2026-slash-0072) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T15:21:03+00:00
+- [Ms L March v West London NHS Trust: 6015390/2024 and others](https://www.gov.uk/employment-tribunal-decisions/ms-l-march-v-west-london-nhs-trust-6015390-slash-2024-and-others) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T14:42:12+00:00
+- [D Perdomo v JD Sports Fashion plc: 2309168/2024 and 2307224/2025](https://www.gov.uk/employment-tribunal-decisions/d-perdomo-v-jd-sports-fashion-plc-2309168-slash-2024-and-2307224-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T14:38:37+00:00
+- [K Roberts v Asda Stores Ltd: 2300390/2026](https://www.gov.uk/employment-tribunal-decisions/k-roberts-v-asda-stores-ltd-2300390-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T14:35:47+00:00
+- [L Gestin v Richmond Sports Podiatry Ltd T/a The Functional Podiatrist: 6032386/2025](https://www.gov.uk/employment-tribunal-decisions/l-gestin-v-richmond-sports-podiatry-ltd-t-slash-a-the-functional-podiatrist-6032386-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T14:31:45+00:00
+- [3 Fusion Way, Darlaston, Wednesbury, WS10 8WB: BIR/00CU/MNR/2025/0728](https://www.gov.uk/residential-property-tribunal-decisions/3-fusion-way-darlaston-wednesbury-ws10-8wb-bir-slash-00cu-slash-mnr-slash-2025-slash-0728) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T14:21:45+00:00
+- [Mrs S M P Buckland v Practice Plus Group Health and Rehabilitation Services Ltd: 1306966/2024](https://www.gov.uk/employment-tribunal-decisions/mrs-s-m-p-buckland-v-practice-plus-group-health-and-rehabilitation-services-ltd-1306966-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T14:08:30+00:00
+- [Mr A S Adeleke v Abbey Uplands Care Home: 6015364/2026](https://www.gov.uk/employment-tribunal-decisions/mr-a-s-adeleke-v-abbey-uplands-care-home-6015364-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T14:04:26+00:00
+- [Flat 2, 44 Lower High St., Wednesbury, WS10 7AQ: BIR/00CS/MRA/2026/0017](https://www.gov.uk/residential-property-tribunal-decisions/flat-2-44-lower-high-st-dot-wednesbury-ws10-7aq-bir-slash-00cs-slash-mra-slash-2026-slash-0017) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T14:02:28+00:00
+- [Mr S Horton v Ecrubox Digital Ltd: 6022510/2024](https://www.gov.uk/employment-tribunal-decisions/mr-s-horton-v-ecrubox-digital-ltd-6022510-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T14:01:29+00:00
+- [18 Halesby Court, 2 Laurel Lane, Halesowen, B63 3DG:BIR/00CR/MNR/2026/0001](https://www.gov.uk/residential-property-tribunal-decisions/18-halesby-court-2-laurel-lane-halesowen-b63-3dg-bir-slash-00cr-slash-mnr-slash-2026-slash-0001) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T14:00:03+00:00
+- [15 Grosvenor Road, Harborne, Birmingham, West Midlands, B17 9AL: BIR/00CN/MRA/2026/0025](https://www.gov.uk/residential-property-tribunal-decisions/15-grosvenor-road-harborne-birmingham-west-midlands-b17-9al-bir-slash-00cn-slash-mra-slash-2026-slash-0025) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T13:59:09+00:00
+- [7 Somery Road, Birmingham, B29 5RY:BIR/00CN/MNR/2026/0159](https://www.gov.uk/residential-property-tribunal-decisions/7-somery-road-birmingham-b29-5ry-bir-slash-00cn-slash-mnr-slash-2026-slash-0159) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T13:58:27+00:00
+- [215 Yardley Fields Road Birmingham B33 8RN: BIR/00CN/MNR/2026/0003](https://www.gov.uk/residential-property-tribunal-decisions/215-yardley-fields-road-birmingham-b33-8rn-bir-slash-00cn-slash-mnr-slash-2026-slash-0003) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T13:57:33+00:00
+- [Flat 2, 3 Anderton Rd., Sparkbrook, Birmingham, B11 1LZ: BIR/00CN/MNR/2026/0002](https://www.gov.uk/residential-property-tribunal-decisions/flat-2-3-anderton-rd-dot-sparkbrook-birmingham-b11-1lz-bir-slash-00cn-slash-mnr-slash-2026-slash-0002) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T13:56:45+00:00
+- [Mr J Barnett v Rainbow Care Solutions Ltd: 6032464/2026](https://www.gov.uk/employment-tribunal-decisions/mr-j-barnett-v-rainbow-care-solutions-ltd-6032464-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T13:50:57+00:00
+- [2 Carter Close, Manchester M34 6AH:MAN/00BT/MNR/2026/0188:Relisted](https://www.gov.uk/residential-property-tribunal-decisions/2-carter-close-manchester-m34-6ah-man-slash-00bt-slash-mnr-slash-2026-slash-0188-relisted) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T13:50:33+00:00
+- [57 Liner House, Royal Wharf, London E16 2SJ: LON/00BB/MRA/2026/0049](https://www.gov.uk/residential-property-tribunal-decisions/57-liner-house-royal-wharf-london-e16-2sj-lon-slash-00bb-slash-mra-slash-2026-slash-0049) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T13:48:23+00:00
+- [Mr D Hardy v D and P Fabrications Ltd: 6003309/2026](https://www.gov.uk/employment-tribunal-decisions/mr-d-hardy-v-d-and-p-fabrications-ltd-6003309-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T13:32:50+00:00
+- [Miss K Bednarowicz v Communisis UK Ltd (in administration) and CUK Realisations Ltd (in administration): 2402101/2024](https://www.gov.uk/employment-tribunal-decisions/miss-k-bednarowicz-v-communisis-uk-ltd-in-administration-and-cuk-realisations-ltd-in-administration-2402101-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T13:22:26+00:00
+- [S Ali and Others v CUK Realisations Ltd (in administration): 1801444/2024 and Others](https://www.gov.uk/employment-tribunal-decisions/s-ali-and-others-v-cuk-realisations-ltd-in-administration-1801444-slash-2024-and-others) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T13:17:45+00:00
+- [Flat 72, Beaufort Park, London NW11 6BX: LON/00AC/LSC/2025/0930](https://www.gov.uk/residential-property-tribunal-decisions/flat-72-beaufort-park-london-nw11-6bx-lon-slash-00ac-slash-lsc-slash-2025-slash-0930) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T13:12:50+00:00
+- [Mr P Benson v The Trampery (Peckham) Ltd and The Trampery Foundation Ltd: 6007747/2025](https://www.gov.uk/employment-tribunal-decisions/mr-p-benson-v-the-trampery-peckham-ltd-and-the-trampery-foundation-ltd-6007747-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T13:05:19+00:00
+- [Mr S Moullef v New Life Balance Ltd: 6013877/2024](https://www.gov.uk/employment-tribunal-decisions/mr-s-moullef-v-new-life-balance-ltd-6013877-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T13:03:19+00:00
+- [Ms R Kaur v Schab Ltd: 6047824/2025](https://www.gov.uk/employment-tribunal-decisions/ms-r-kaur-v-schab-ltd-6047824-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T13:01:36+00:00
+- [Flat 17, 18 Friend St., London EC1V 7NS: LON/00AU/MNR/2026/0375](https://www.gov.uk/residential-property-tribunal-decisions/flat-17-18-friend-st-dot-london-ec1v-7ns-lon-slash-00au-slash-mnr-slash-2026-slash-0375) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T12:55:22+00:00
+- [4 The Bay, 39 Crowstone Avenue, Westcliff On Sea, Essex, SS0 8FQ : CAM/22UM/MNR/2026/0056 Relisted](https://www.gov.uk/residential-property-tribunal-decisions/4-the-bay-39-crowstone-avenue-westcliff-on-sea-essex-ss0-8fq-cam-slash-22um-slash-mnr-slash-2026-slash-0056-relisted) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T12:53:24+00:00
+- [Flat 3, 76 Coniston Road, London, N10 2BN: LON/00AP/MRA/2026/0104](https://www.gov.uk/residential-property-tribunal-decisions/flat-3-76-coniston-road-london-n10-2bn-lon-slash-00ap-slash-mra-slash-2026-slash-0104) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T12:45:11+00:00
+- [148 Forest Road, Mansfield NG18 4BU: BIR/37UF/MNR/2026/0053](https://www.gov.uk/residential-property-tribunal-decisions/148-forest-road-mansfield-ng18-4bu-bir-slash-37uf-slash-mnr-slash-2026-slash-0053) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T12:41:50+00:00
+- [95 Harrison Street, Bloxwich, Walsall, WS3 3HN: BIR/00CU/MNR/2026/0114](https://www.gov.uk/residential-property-tribunal-decisions/95-harrison-street-bloxwich-walsall-ws3-3hn-bir-slash-00cu-slash-mnr-slash-2026-slash-0114) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T12:40:37+00:00
+- [15 Thistle Way, West Bromwich, B71 3PB: BIR/00CS/MNR/2026/0125](https://www.gov.uk/residential-property-tribunal-decisions/15-thistle-way-west-bromwich-b71-3pb-bir-slash-00cs-slash-mnr-slash-2026-slash-0125) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T12:39:13+00:00
+- [Flat 5, 146 Middleton Hall Road, Birmingham, B30 1DN: BIR/00CN/MNR/2026/0111](https://www.gov.uk/residential-property-tribunal-decisions/flat-5-146-middleton-hall-road-birmingham-b30-1dn-bir-slash-00cn-slash-mnr-slash-2026-slash-0111) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-16T12:34:27+00:00
+- [T Hughes v SimplyStay 103 Ltd: 6002083/2026](https://www.gov.uk/employment-tribunal-decisions/t-hughes-v-simplystay-103-ltd-6002083-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T12:08:32+00:00
+- [Ms K Janowska v GXO Logistics UK Ltd: 6038527/2025](https://www.gov.uk/employment-tribunal-decisions/ms-k-janowska-v-gxo-logistics-uk-ltd-6038527-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T12:06:20+00:00
+- [Ms M Purewal v Parravox Ltd (In Voluntary Liquidation): 6005472/2024](https://www.gov.uk/employment-tribunal-decisions/ms-m-purewal-v-parravox-ltd-in-voluntary-liquidation-6005472-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T12:03:23+00:00
+- [Mr A Bocsor v Creative Foods Europe Ltd: 6005758/2024](https://www.gov.uk/employment-tribunal-decisions/mr-a-bocsor-v-creative-foods-europe-ltd-6005758-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T11:58:11+00:00
+- [Mr R Goll v Nottingham City Council: 2601536/2024](https://www.gov.uk/employment-tribunal-decisions/mr-r-goll-v-nottingham-city-council-2601536-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T11:53:51+00:00
+- [Denbighshire County Council v Mr & Mrs AB (SEN): (2026) UKUT 376 (AAC)](https://www.gov.uk/administrative-appeals-tribunal-decisions/denbighshire-county-council-v-mr-and-mrs-ab-sen-2026-ukut-376-aac) — HM Courts & Tribunals Service; Upper Tribunal (Administrative Appeals Chamber); 2026-10-16T11:46:23+00:00
+- [Ms D Williams v DLRC Ltd: 3315226/2023](https://www.gov.uk/employment-tribunal-decisions/ms-d-williams-v-dlrc-ltd-3315226-slash-2023) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T11:44:03+00:00
+- [O Antwi-Buasiako v Kinetic-ID Ltd: 6016720/2026](https://www.gov.uk/employment-tribunal-decisions/o-antwi-buasiako-v-kinetic-id-ltd-6016720-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T11:43:39+00:00
+- [Mr T El-Tawil v AECOM Ltd and Heathrow Airport Ltd: 3312385/2023](https://www.gov.uk/employment-tribunal-decisions/mr-t-el-tawil-v-aecom-ltd-and-heathrow-airport-ltd-3312385-slash-2023) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T11:41:22+00:00
 - [Mrs L Hughes v Accord-UK Ltd and others: 6009124/2025](https://www.gov.uk/employment-tribunal-decisions/mrs-l-hughes-v-accord-uk-ltd-and-others-6009124-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T11:33:52+00:00
 - [L Wright v Hamble Catering Ltd (Creditors voluntary liquidation): 6042972/2025](https://www.gov.uk/employment-tribunal-decisions/l-wright-v-hamble-catering-ltd-creditors-voluntary-liquidation-6042972-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T11:30:51+00:00
 - [Mr W Guedes Martins v Kerry Ingredients (UK) Ltd: 6006154/2025](https://www.gov.uk/employment-tribunal-decisions/mr-w-guedes-martins-v-kerry-ingredients-uk-ltd-6006154-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-16T11:26:55+00:00
@@ -238,19 +283,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Mr A Abushama v Extons Foods Ltd and Proman Supply Chain Ltd: 2400006/2023](https://www.gov.uk/employment-tribunal-decisions/mr-a-abushama-v-extons-foods-ltd-and-proman-supply-chain-ltd-2400006-slash-2023) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-14T08:30:03+00:00
 - [Mr D Meyer v Manchester Airport Group and M Iwanciw: 2409533/2023 and 6003289/2024](https://www.gov.uk/employment-tribunal-decisions/mr-d-meyer-v-manchester-airport-group-and-m-iwanciw-2409533-slash-2023-and-6003289-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-14T08:20:32+00:00
 - [Mrs A Gauthier v Craft Union Pub Company Ltd and LCG Tigers Ltd: 6008867/2026](https://www.gov.uk/employment-tribunal-decisions/mrs-a-gauthier-v-craft-union-pub-company-ltd-and-lcg-tigers-ltd-6008867-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-14T08:18:53+00:00
-- [Apartment 2, Mickleover House, Orchard Street, Derby, DE3 0DF:BIR/00FK/LSC/2026/0017](https://www.gov.uk/residential-property-tribunal-decisions/apartment-2-mickleover-house-orchard-street-derby-de3-0df-bir-slash-00fk-slash-lsc-slash-2026-slash-0017) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-13T16:02:42+00:00
-- [Flat 39, 7 The Coneries,Loughborough,LE11 1DZ : BIR/31UC/HSH/2025/0012](https://www.gov.uk/residential-property-tribunal-decisions/flat-39-7-the-coneries-loughborough-le11-1dz-bir-slash-31uc-slash-hsh-slash-2025-slash-0012) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-13T15:59:11+00:00
-- [1 Brantley Avenue, Finchfield, Wolverhampton, WV3 9AP: BIR/00CW/MNR/2026/0017](https://www.gov.uk/residential-property-tribunal-decisions/1-brantley-avenue-finchfield-wolverhampton-wv3-9ap-bir-slash-00cw-slash-mnr-slash-2026-slash-0017) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-13T15:57:55+00:00
-- [303 Stafford Road, Cannock WS11 4AT : BIR/41UG/F77/2025/0023](https://www.gov.uk/residential-property-tribunal-decisions/303-stafford-road-cannock-ws11-4at-bir-slash-41ug-slash-f77-slash-2025-slash-0023) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-13T15:56:06+00:00
-- [St Paul's Chamber, Caroline Street, Jewellery Quarter, Birmingham, B3 1UP : BIR/00CN/LDC/2026/0013](https://www.gov.uk/residential-property-tribunal-decisions/st-pauls-chamber-caroline-street-jewellery-quarter-birmingham-b3-1up-bir-slash-00cn-slash-ldc-slash-2026-slash-0013) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-13T15:54:35+00:00
-- [St Paul's Chamber, Caroline Street, Jewellery Quarter, Birmingham, B3 1UP : BIR/00CN/LDC/2026/0012](https://www.gov.uk/residential-property-tribunal-decisions/st-pauls-chamber-caroline-street-jewellery-quarter-birmingham-b3-1up-bir-slash-00cn-slash-ldc-slash-2026-slash-0012) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-13T15:52:38+00:00
-- [Middle Cottage Robin Hood Whatstandwell Matlock Derbyshire DE4 5HF: BIR/17UB/MNR/2025/0684](https://www.gov.uk/residential-property-tribunal-decisions/middle-cottage-robin-hood-whatstandwell-matlock-derbyshire-de4-5hf-bir-slash-17ub-slash-mnr-slash-2025-slash-0684) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-13T15:51:09+00:00
-- [Bould Lane Farmhouse, Willey, Shropshire, TF12 5JS: BIR/00GG/F77/2025/0035](https://www.gov.uk/residential-property-tribunal-decisions/bould-lane-farmhouse-willey-shropshire-tf12-5js-bir-slash-00gg-slash-f77-slash-2025-slash-0035) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-13T15:49:41+00:00
-- [3 Frieston Avenue, Fernwood, Newark, Nottingham, NG24 5BB: BIR/37UH/MNR/2025/0752](https://www.gov.uk/residential-property-tribunal-decisions/3-frieston-avenue-fernwood-newark-nottingham-ng24-5bb-bir-slash-37uh-slash-mnr-slash-2025-slash-0752) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-13T15:48:13+00:00
-- [3 Churchill Avenue, Foleshill, Coventry, CV6 5JJ: BIR/00CQ/MNR/2026/0036](https://www.gov.uk/residential-property-tribunal-decisions/3-churchill-avenue-foleshill-coventry-cv6-5jj-bir-slash-00cq-slash-mnr-slash-2026-slash-0036) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-13T15:44:58+00:00
-- [62 Rosefield Road, Smethwick, B67 6DX: BIR/00CS/MNR/2025/0784](https://www.gov.uk/residential-property-tribunal-decisions/62-rosefield-road-smethwick-b67-6dx-bir-slash-00cs-slash-mnr-slash-2025-slash-0784) — HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber); 2026-10-13T15:43:21+00:00
-- [(2026) UKUT 00382 (TCC) VNS WASTE SOLUTIONS LIMITED v THE COMMISSIONERS FOR HIS MAJESTY’S REVENUE AND CUSTOMS](https://www.gov.uk/tax-and-chancery-tribunal-decisions/2026-ukut-00382-tcc-vns-waste-solutions-limited-v-the-commissioners-for-his-majestys-revenue-and-customs) — HM Courts & Tribunals Service; Upper Tribunal (Tax and Chancery Chamber); 2026-10-13T14:17:30+00:00
-- [Mrs B Sritharan v Deloitte LLP and Mr P Gooch: 2201559/2020](https://www.gov.uk/employment-tribunal-decisions/mrs-b-sritharan-v-deloitte-llp-and-mr-p-gooch-2201559-slash-2020) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-13T12:52:03+00:00
 
 ## judicial_opinion_published
 
@@ -2271,8 +2303,82 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 - [Fireside Chat: Michelle Alexopoulos, External Deputy Governor](https://www.bankofcanada.ca/2026/10/fireside-chat-michelle-alexopoulos-external-deputy-governor-october-16-2026/) — Bank of Canada — Upcoming events; 2026-10-16T17:45:13+00:00
 - [Panel: Tiff Macklem, Governor](https://www.bankofcanada.ca/2026/10/panel-tiff-macklem-governor-october-16-2026/) — Bank of Canada — Upcoming events; 2026-10-16T17:37:13+00:00
+- [S. Hrg. 119-432 - BLOWING THE WHISTLE: INSIDE THE GRIFT THAT KEEPS GIVING](https://www.govinfo.gov/app/details/CHRG-119shrg63971) — Congressional Hearings; 2026-10-16T15:37:00+00:00
+- [S. Hrg. 119-109 - OPEN HEARING: THE 2025 ANNUAL THREAT ASSESSMENT OF THE U.S. INTELLIGENCE COMMUNITY](https://www.govinfo.gov/app/details/CHRG-119shrg60885) — Congressional Hearings; 2026-10-16T15:32:00+00:00
+- [S. Hrg. 119-96 - FUELING AMERICA'S MANUFACTURING COMEBACK](https://www.govinfo.gov/app/details/CHRG-119shrg60614) — Congressional Hearings; 2026-10-16T15:32:00+00:00
+- [Nova Biomedical StatStrip ketone test strips: risk of disruption to blood ketone testing due to quality-control failures and supply interruption DSI/2026/013](https://www.gov.uk/drug-device-alerts/nova-biomedical-statstrip-ketone-test-strips-risk-of-disruption-to-blood-ketone-testing-due-to-quality-control-failures-and-supply-interruption-dsi-slash-2026-slash-013) — Medicines and Healthcare products Regulatory Agency; 2026-10-16T15:29:11+00:00
+- [eSubmitter Application History](http://www.fda.gov/industry/fda-esubmitter/esubmitter-application-history) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-16T15:10:31+00:00
+- [What You Should Know about Eye Drops](http://www.fda.gov/drugs/buying-using-medicine-safely/what-you-should-know-about-eye-drops) — Food and Drug Administration — What's New: Drugs; 2026-10-16T15:05:42+00:00
+- [Human medicines European public assessment report (EPAR): Padcev, enfortumab vedotin, Date of authorisation: 13/04/2022, Revision: 11, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/padcev) — European Medicines Agency; 2026-10-16T15:05:00+00:00
+- [Counterfeit Medicine](http://www.fda.gov/drugs/buying-using-medicine-safely/counterfeit-medicine) — Food and Drug Administration — What's New: Drugs; 2026-10-16T15:02:57+00:00
+- [Counterfeit Versions of Eye Drops Found in Several States](http://www.fda.gov/drugs/counterfeit-medicine/counterfeit-versions-eye-drops-found-several-states) — Food and Drug Administration — What's New: Drugs; 2026-10-16T15:01:18+00:00
+- [2027 PhD Fellowship Programme](https://www.bis.org/vacancy/jr100516) — Bank for International Settlements — View feed; 2026-10-16T15:00:00+00:00
+- [Federal Reserve Board announces termination of enforcement actions with Gardner Bancshares, Inc. and Small Business Bank](https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261016a.htm) — Federal Reserve Board; 2026-10-16T15:00:00+00:00
+- [The Scotland Act 1998 (Specification of Functions and Transfer of Property etc.) (Amendment) Order 2026](http://www.legislation.gov.uk/uksi/2026/1095/made) — UK legislation; 2026-10-16T14:59:34.647452+00:00
+- [Field Safety Notices: 27 to 31 January 2025](https://www.gov.uk/drug-device-alerts/field-safety-notices-27-to-31-january-2025) — Medicines and Healthcare products Regulatory Agency; 2026-10-16T14:55:27+00:00
+- [FDA Approves New Nonprescription Eye Drop for Relief of Eye Redness](http://www.fda.gov/drugs/drug-alerts-and-statements/fda-approves-new-nonprescription-eye-drop-relief-eye-redness) — Food and Drug Administration — What's New: Drugs; 2026-10-16T14:18:56+00:00
+- [Impact Economy Advisory Council: Expressions of Interest](https://www.gov.uk/government/publications/impact-economy-advisory-council-expressions-of-interest) — Cabinet Office; 2026-10-16T14:18:54+00:00
+- [Human medicines European public assessment report (EPAR): Cibinqo, abrocitinib, Date of authorisation: 09/12/2021, Revision: 21, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/cibinqo) — European Medicines Agency; 2026-10-16T14:15:00+00:00
+- [S. Hrg. 119-418 - THE ADMINISTRATION'S DEPLOYMENT OF THE NATIONAL GUARD ACROSS THE UNITED STATES](https://www.govinfo.gov/app/details/CHRG-119shrg63842) — Congressional Hearings; 2026-10-16T14:10:00+00:00
+- [The Scottish Administration (Offices) Order 2026](http://www.legislation.gov.uk/uksi/2026/1097/made) — UK legislation; 2026-10-16T14:08:30.794449+00:00
+- [The School Teachers’ Pay and Conditions (England) Order 2026](http://www.legislation.gov.uk/uksi/2026/1096/made) — UK legislation; 2026-10-16T14:08:21.025034+00:00
+- [The Tribunal Procedure (Upper Tribunal) (Amendment) Rules 2026](http://www.legislation.gov.uk/uksi/2026/1084/made) — UK legislation; 2026-10-16T14:08:10.917090+00:00
+- [S. Hrg. 119-424 - THE PRESIDENT'S BUDGET REQUEST FOR THE U.S. FOREST SERVICE FOR FISCAL YEAR 2027](https://www.govinfo.gov/app/details/CHRG-119shrg63886) — Congressional Hearings; 2026-10-16T14:04:00+00:00
+- [Human medicines European public assessment report (EPAR): Idefirix, imlifidase, Date of authorisation: 25/08/2020, Revision: 11, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/idefirix) — European Medicines Agency; 2026-10-16T14:02:00+00:00
+- [Human medicines European public assessment report (EPAR): Plegridy, peginterferon beta-1a, Date of authorisation: 18/07/2014, Revision: 31, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/plegridy) — European Medicines Agency; 2026-10-16T13:47:00+00:00
+- [S. Rept. 119-151](https://www.govinfo.gov/app/details/CRPT-119srpt151) — Congressional Reports; 2026-10-16T13:42:00+00:00
+- [Human medicines European public assessment report (EPAR): HyQvia, human normal immunoglobulin, Date of authorisation: 16/05/2013, Revision: 27, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/hyqvia) — European Medicines Agency; 2026-10-16T13:33:00+00:00
+- [CDER Exclusivity Board](http://www.fda.gov/drugs/development-approval-process-drugs/cder-exclusivity-board) — Food and Drug Administration — What's New: Drugs; 2026-10-16T13:33:00+00:00
+- [Human medicines European public assessment report (EPAR): Ocrevus, ocrelizumab, Date of authorisation: 08/01/2018, Revision: 28, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/ocrevus) — European Medicines Agency; 2026-10-16T13:20:00+00:00
+- [18.4930 ZAR = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-zar.en.html?date=2026-10-16&rate=18.4930) — European Central Bank — South African rand (ZAR); 2026-10-16T13:15:00+00:00
+- [37.602 THB = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-thb.en.html?date=2026-10-16&rate=37.602) — European Central Bank — Thai baht (THB); 2026-10-16T13:15:00+00:00
+- [1.4395 SGD = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-sgd.en.html?date=2026-10-16&rate=1.4395) — European Central Bank — Singapore dollar (SGD); 2026-10-16T13:15:00+00:00
+- [70.858 PHP = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-php.en.html?date=2026-10-16&rate=70.858) — European Central Bank — Philippine peso (PHP); 2026-10-16T13:15:00+00:00
+- [1.9868 NZD = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-nzd.en.html?date=2026-10-16&rate=1.9868) — European Central Bank — New Zealand dollar (NZD); 2026-10-16T13:15:00+00:00
+- [4.5929 MYR = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-myr.en.html?date=2026-10-16&rate=4.5929) — European Central Bank — Malaysian ringgit (MYR); 2026-10-16T13:15:00+00:00
+- [20.6871 MXN = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-mxn.en.html?date=2026-10-16&rate=20.6871) — European Central Bank — Mexican peso (MXN); 2026-10-16T13:15:00+00:00
+- [1499.01 KRW = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-krw.en.html?date=2026-10-16&rate=1499.01) — European Central Bank — South Korean won (KRW); 2026-10-16T13:15:00+00:00
+- [106.8640 INR = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-inr.en.html?date=2026-10-16&rate=106.8640) — European Central Bank — Indian rupee (INR); 2026-10-16T13:15:00+00:00
+- [20290.28 IDR = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-idr.en.html?date=2026-10-16&rate=20290.28) — European Central Bank — Indonesian rupiah (IDR); 2026-10-16T13:15:00+00:00
+- [8.8316 HKD = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-hkd.en.html?date=2026-10-16&rate=8.8316) — European Central Bank — Hong Kong dollar (HKD); 2026-10-16T13:15:00+00:00
+- [7.5240 CNY = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-cny.en.html?date=2026-10-16&rate=7.5240) — European Central Bank — Chinese yuan renminbi (CNY); 2026-10-16T13:15:00+00:00
+- [1.5935 CAD = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-cad.en.html?date=2026-10-16&rate=1.5935) — European Central Bank — Canadian dollar (CAD); 2026-10-16T13:15:00+00:00
+- [5.7197 BRL = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-brl.en.html?date=2026-10-16&rate=5.7197) — European Central Bank — Brasilian real (BRL); 2026-10-16T13:15:00+00:00
+- [1.6171 AUD = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-aud.en.html?date=2026-10-16&rate=1.6171) — European Central Bank — Australian dollar (AUD); 2026-10-16T13:15:00+00:00
+- [55.7328 TRY = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-try.en.html?date=2026-10-16&rate=55.7328) — European Central Bank — Turkish lira (TRY); 2026-10-16T13:15:00+00:00
+- [10.6240 NOK = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-nok.en.html?date=2026-10-16&rate=10.6240) — European Central Bank — Norwegian krone (NOK); 2026-10-16T13:15:00+00:00
+- [136.20 ISK = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-isk.en.html?date=2026-10-16&rate=136.20) — European Central Bank — Icelandic krona (ISK); 2026-10-16T13:15:00+00:00
+- [0.9272 CHF = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-chf.en.html?date=2026-10-16&rate=0.9272) — European Central Bank — Swiss franc (CHF); 2026-10-16T13:15:00+00:00
+- [11.1450 SEK = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-sek.en.html?date=2026-10-16&rate=11.1450) — European Central Bank — Swedish krona (SEK); 2026-10-16T13:15:00+00:00
+- [5.3310 RON = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-ron.en.html?date=2026-10-16&rate=5.3310) — European Central Bank — Romanian leu (RON); 2026-10-16T13:15:00+00:00
+- [4.3700 PLN = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-pln.en.html?date=2026-10-16&rate=4.3700) — European Central Bank — Polish zloty (PLN); 2026-10-16T13:15:00+00:00
+- [363.08 HUF = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-huf.en.html?date=2026-10-16&rate=363.08) — European Central Bank — Hungarian forint (HUF); 2026-10-16T13:15:00+00:00
+- [0.84385 GBP = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-gbp.en.html?date=2026-10-16&rate=0.84385) — European Central Bank — Pound sterling (GBP); 2026-10-16T13:15:00+00:00
+- [7.4748 DKK = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-dkk.en.html?date=2026-10-16&rate=7.4748) — European Central Bank — Danish krone (DKK); 2026-10-16T13:15:00+00:00
+- [24.323 CZK = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-czk.en.html?date=2026-10-16&rate=24.323) — European Central Bank — Czech koruna (CZK); 2026-10-16T13:15:00+00:00
+- [177.82 JPY = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-jpy.en.html?date=2026-10-16&rate=177.82) — European Central Bank — Japanese yen (JPY); 2026-10-16T13:15:00+00:00
+- [1.1253 USD = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-usd.en.html?date=2026-10-16&rate=1.1253) — European Central Bank — US dollar (USD); 2026-10-16T13:15:00+00:00
+- [3.4822 ILS = 1 EUR 2026-10-16 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-ils.en.html?date=2026-10-16&rate=3.4822) — European Central Bank — ILS; 2026-10-16T13:15:00+00:00
+- [Drugs@FDA Data Files](http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files) — Food and Drug Administration — What's New: Drugs; 2026-10-16T13:14:15+00:00
+- [Agenda - Medicine Shortages SPOC Working Party meeting 13-14 October 2026](https://www.ema.europa.eu/system/files/documents/agenda/agenda-medicine-shortages-spoc-working-party-meeting-13-14-october-2026-en_0.pdf) — European Medicines Agency; 2026-10-16T13:10:00+00:00
+- [Human medicines European public assessment report (EPAR): Saphnelo, anifrolumab, Date of authorisation: 14/02/2022, Revision: 12, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/saphnelo) — European Medicines Agency; 2026-10-16T13:00:00+00:00
+- [Timetable: Safety signal - Assessment of responses to request for supplementary information (RSI)](https://www.ema.europa.eu/system/files/documents/other/timetable-safety-signal-en_0.xlsx) — European Medicines Agency; 2026-10-16T12:48:00+00:00
+- [What's New Related to Drugs](http://www.fda.gov/drugs/news-events-human-drugs/whats-new-related-drugs) — Food and Drug Administration — What's New: Drugs; 2026-10-16T12:46:26+00:00
+- [Timetable: Safety signal - Assessment of responses to request for supplementary information (RSI) - ATMP](https://www.ema.europa.eu/system/files/documents/other/timetable-safety-signal-atmp-en_0.xlsx) — European Medicines Agency; 2026-10-16T12:46:00+00:00
+- [Summary of NLRB Decisions for Week of October 5 - 9, 2026](https://www.nlrb.gov/cases-decisions/weekly-summaries-decisions/summary-of-nlrb-decisions-for-week-of-october-5-9-2026) — National Labor Relations Board — https://www.nlrb.gov/rss/rssWeeklySummaries.xml; 2026-10-16T12:43:36+00:00
+- [Human medicines European public assessment report (EPAR): Afstyla, lonoctocog alfa, Date of authorisation: 04/01/2017, Revision: 13, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/afstyla) — European Medicines Agency; 2026-10-16T12:40:00+00:00
+- [Drug Alerts and Statements](http://www.fda.gov/drugs/drug-safety-and-availability/drug-alerts-and-statements) — Food and Drug Administration — What's New: Drugs; 2026-10-16T12:33:45+00:00
+- [CHMP PROM minutes for the meeting on 1 December 2025](https://www.ema.europa.eu/system/files/documents/minutes/prom-minutes-01-december-2025-en.pdf) — European Medicines Agency; 2026-10-16T12:16:30+00:00
+- [Canada’s Cross-Border Carry Trade](https://www.bankofcanada.ca/2026/10/staff-analytical-paper-2026-54/) — Bank of Canada — Research; 2026-10-16T12:10:45+00:00
+- [Conduct of Monetary Policy under Housing Market Imbalances](https://www.bankofcanada.ca/2026/10/staff-analytical-paper-2026-53/) — Bank of Canada — Research; 2026-10-16T12:08:22+00:00
+- [Demand roars, supply whispers: Monetary policy and housing in Canada](https://www.bankofcanada.ca/2026/10/staff-analytical-paper-2026-52/) — Bank of Canada — Research; 2026-10-16T12:06:47+00:00
+- [Auction Timing Under Limited Information: Evidence from Sovereign Bond Auctions](https://www.bankofcanada.ca/2026/10/staff-analytical-paper-2026-51/) — Bank of Canada — Research; 2026-10-16T12:04:40+00:00
+- [Stress in the Press or Stress in the Market: A New Measure of Perceived Financial Stress](https://www.bankofcanada.ca/2026/10/staff-analytical-paper-2026-50/) — Bank of Canada — Research; 2026-10-16T12:02:16+00:00
+- [How Costly Are Cross-Border Payments for Firms?](https://www.bankofcanada.ca/2026/10/staff-analytical-paper-2026-49/) — Bank of Canada — Research; 2026-10-16T12:00:11+00:00
+- [Speech by Executive Vice-President Teresa Ribera at 17th Conference of the Parties to the United Nations Convention on Biological Diversity (COP17)](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2191) — European Commission press and decisions; 2026-10-16T11:40:48+00:00
 - [Human medicines European public assessment report (EPAR): Stelara, ustekinumab, Date of authorisation: 16/01/2009, Revision: 54, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/stelara) — European Medicines Agency; 2026-10-16T11:10:00+00:00
 - [Human medicines European public assessment report (EPAR): Idelvion, albutrepenonacog alfa, Date of authorisation: 11/05/2016, Revision: 14, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/idelvion) — European Medicines Agency; 2026-10-16T11:05:00+00:00
+- [The Bank of Canada releases the third quarter issues of the Business Outlook Survey and the Canadian Survey of Consumer Expectations](https://www.bankofcanada.ca/2026/10/the-bank-of-canada-releases-the-third-quarter-issues-of-the-business-outlook-survey-and-the-canadian-survey-of-consumer-expectations/) — Bank of Canada — Press; 2026-10-16T11:00:48+00:00
 - [Banknote imagery advisory group minutes – 15 July 2026](https://www.bankofengland.co.uk/minutes/2026/july/banknote-advisory-minutes-15-july) — Bank of England; 2026-10-16T11:00:00+00:00
 - [MoU on information sharing in support of non-bank payment service providers access to central bank operated payment systems](https://www.ecb.europa.eu//pub/pdf/other/ecb.2026-10-16_MoU.en.pdf) — European Central Bank — Publications; 2026-10-16T11:00:00+00:00
 - [Human medicines European public assessment report (EPAR): Remicade, infliximab, Date of authorisation: 13/08/1999, Revision: 70, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/remicade) — European Medicines Agency; 2026-10-16T10:58:00+00:00
@@ -2280,6 +2386,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Human medicines European public assessment report (EPAR): Deferasirox Mylan, deferasirox, Date of authorisation: 26/09/2019, Revision: 14, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/deferasirox-mylan) — European Medicines Agency; 2026-10-16T10:24:00+00:00
 - [Carbon Border Adjustment Mechanism: force of law notices and reference document](https://www.gov.uk/government/publications/carbon-border-adjustment-mechanism-force-of-law-notice-and-reference-document) — HM Revenue & Customs; HM Treasury; 2026-10-16T10:14:06+00:00
 - [LN8 5JN, 2 Agriculture Growing Limited: environmental permit variation advertisement - EPR/GP3431MC/V004](https://www.gov.uk/government/publications/ln8-5jn-2-agriculture-growing-limited-environmental-permit-variation-advertisement-eprgp3431mcv004) — Environment Agency; 2026-10-16T10:07:03+00:00
+- [Joachim Nagel: „Deutschland macht sich fit für die Herausforderungen der Zukunft“](https://www.bundesbank.de/de/aufgaben/themen/joachim-nagel-deutschland-macht-sich-fit-fuer-die-herausforderungen-der-zukunft--1012062) — Deutsche Bundesbank — Topics; 2026-10-16T10:00:00+00:00
 - [Overview of (invented) names reviewed in September 2026 by the Name Review Group (NRG) - Adopted at the CHMP meeting of 15 October 2026](https://www.ema.europa.eu/system/files/2026-10-16/Overview%20of%20%28invented%29%20names%20reviewed%20on%2022%20September%202026_en.pdf) — European Medicines Agency; 2026-10-16T10:00:00+00:00
 - [Human medicines European public assessment report (EPAR): Mylotarg, gemtuzumab ozogamicin, Date of authorisation: 19/04/2018, Revision: 13, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/mylotarg) — European Medicines Agency; 2026-10-16T10:00:00+00:00
 - [Meeting highlights from the Committee for Medicinal Products for Human Use (CHMP) 12-15 October 2026](https://www.ema.europa.eu/en/news/meeting-highlights-committee-medicinal-products-human-use-chmp-12-15-october-2026) — European Medicines Agency; 2026-10-16T10:00:00+00:00
@@ -2311,6 +2418,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Fireside chat with Michelle Alexopoulos, External Deputy Governor of the Bank of Canada](https://www.bankofcanada.ca/2026/10/fireside-chat-michelle-alexopoulos-external-deputy-governor-bank-canada-2026-10-16/) — Bank of Canada — Press; 2026-10-16T08:00:31+00:00
 - [BOJ Current Account Balances by Sector (Sept.)](http://www.boj.or.jp/en/statistics/boj/other/cabs/cabs.xlsx) — Bank of Japan; 2026-10-16T08:00:00+00:00
 - [CO2 8HT, Core Fusion Limited: environmental permit application advertisement – EPR/WE6556AA/V005](https://www.gov.uk/government/publications/co2-8ht-core-fusion-limited-environmental-permit-application-advertisement-eprwe6556aav005) — Environment Agency; 2026-10-16T08:00:00+00:00
+- [Invitation to bid – Federal Treasury discount paper (Bubills)](https://www.bundesbank.de/en/press/press-releases/federal-securities/invitation-to-bid-federal-treasury-discount-paper-bubills--1012048) — Deutsche Bundesbank; 2026-10-16T07:30:00+00:00
 - [Human medicines European public assessment report (EPAR): Strimvelis, autologous CD34+ enriched cell fraction that contains CD34+ cells transduced with retroviral vector that encodes for the human ADA cDNA sequence, Date of authorisation: 26/05/2016, Revision: 13, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/strimvelis) — European Medicines Agency; 2026-10-16T07:14:00+00:00
 - [Statement by President von der Leyen with Presidents Zelenskyy and Costa ahead of the European Council meeting of 16 October](https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2181) — European Commission press and decisions; 2026-10-16T06:59:56+00:00
 - [LEISURE VEHICLES SUSSEX LTD](https://www.thegazette.co.uk/notice/5232156) — The Gazette official public record; 2026-10-16T06:50:13+00:00
@@ -2334,6 +2442,19 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Marion Simmonds](https://www.thegazette.co.uk/notice/5231567) — The Gazette official public record; 2026-10-16T01:04:49+00:00
 - [European Council conclusions on competitiveness, the next multiannual financial framework and enlargement and reforms](https://www.consilium.europa.eu/en/press/press-releases/2026/10/16/european-council-conclusions-on-competitiveness-the-next-multiannual-financial-framework-and-enlargement-and-reforms/) — Council of the European Union; 2026-10-16T00:40:00+00:00
 - [Panel with Tiff Macklem, Governor of the Bank of Canada](https://www.bankofcanada.ca/2026/10/panel-tiff-macklem-governor-bank-canada-2016-10-16/) — Bank of Canada — Press; 2026-10-16T00:15:17+00:00
+- [Offshore forwards and exchange rate transmission in emerging markets](https://www.bis.org/publications/working-paper-1383-offshore-forwards-and-exchange-rate-transmission-emerging-markets) — Bank for International Settlements — View feed; 2026-10-16T00:00:00+00:00
+- [Notice of the amendment of the designation of Discovery Insurance Group](https://www.resbank.co.za/en/home/publications/publication-detail-pages/prudential-authority/pa-insurers/pa-post-insurance/act-notices/2026/notice-of-the-amendment-of-the-designation-of-discovery-insurance-group) — South African Reserve Bank; 2026-10-16T00:00:00+00:00
+- [R. v. A.M. - 2026 SCC 33 - 2026-10-16](https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21707/index.do) — Supreme Court of Canada; 2026-10-16T00:00:00+00:00
+- [DG v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.qrndntn2) — The National Archives Find Case Law; 2026-10-16T00:00:00+00:00
+- [FK & Ors v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.vp7z28np) — The National Archives Find Case Law; 2026-10-16T00:00:00+00:00
+- [3Kings Holdings Limited v TCF 1 GP Limited](https://caselaw.nationalarchives.gov.uk/ewhc/bp/2026/2620) — The National Archives Find Case Law; 2026-10-16T00:00:00+00:00
+- [Craig Shingfield v The Registrar of Approved Driving Instructors](https://caselaw.nationalarchives.gov.uk/ukftt/grc/2026/1421) — The National Archives Find Case Law; 2026-10-16T00:00:00+00:00
+- [Victoria Vilciu v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.h8q4vyr2) — The National Archives Find Case Law; 2026-10-16T00:00:00+00:00
+- [Samuel Badzo v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.2vs53hq4) — The National Archives Find Case Law; 2026-10-16T00:00:00+00:00
+- [R v Christopher Hindley](https://caselaw.nationalarchives.gov.uk/ewca/crim/2026/1336) — The National Archives Find Case Law; 2026-10-16T00:00:00+00:00
+- [Shanaz Begum v Registrar of Approved Driving Instructors](https://caselaw.nationalarchives.gov.uk/ukftt/grc/2026/1420) — The National Archives Find Case Law; 2026-10-16T00:00:00+00:00
+- [KT v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.ynt379vg) — The National Archives Find Case Law; 2026-10-16T00:00:00+00:00
+- [Issuance of Amended Venezuela-related General License and Frequently Asked Question](https://ofac.treasury.gov/recent-actions/20261016) — Treasury Office of Foreign Assets Control; 2026-10-16T00:00:00+00:00
 - [EXR, R (on the application of) Secretary of State for the Home Department (No 3)](https://caselaw.nationalarchives.gov.uk/ewhc/admin/2026/2527) — The National Archives Find Case Law; 2026-10-16T00:00:00+00:00
 - [Amber Construction Services Limited v Ilyrian Construction Ltd](https://caselaw.nationalarchives.gov.uk/ewhc/bp/2026/2603) — The National Archives Find Case Law; 2026-10-16T00:00:00+00:00
 - [Stor RB One Ltd v Sripiragash Kanthasamy](https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/2625) — The National Archives Find Case Law; 2026-10-16T00:00:00+00:00
@@ -2345,11 +2466,12 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Exeter City Council v David Macklin & Anor](https://caselaw.nationalarchives.gov.uk/ewhc/bp/2026/2636) — The National Archives Find Case Law; 2026-10-16T00:00:00+00:00
 - [Kelvin Kamga v Registrar of Approved Driving Instructors](https://caselaw.nationalarchives.gov.uk/ukftt/grc/2026/1419) — The National Archives Find Case Law; 2026-10-16T00:00:00+00:00
 - [Life insurance claims and disputes statistics](https://www.apra.gov.au/news-and-publications/life-insurance-claims-and-disputes-statistics) — Australian Prudential Regulation Authority; 2026-10-15T23:15:02+00:00
+- [Correction slip](http://www.legislation.gov.uk/wsi/2026/12/pdfs/wsics_20260012_mi_001.pdf) — UK legislation; 2026-10-15T23:00:00+00:00
 - [STRANG INVESTMENTS (2) LIMITED](https://www.thegazette.co.uk/notice/5232117) — The Gazette official public record; 2026-10-15T22:50:08+00:00
 - [Notices under the Trustee Act 1925](https://www.thegazette.co.uk/notice/5232116) — The Gazette official public record; 2026-10-15T22:50:07+00:00
+- [Contract Award Notice: ECB - PRO-2451404827 - Learning and development in the fields of data, digital and AI skills (708327-2026)](https://www.ecb.europa.eu//ecb/jobsproc/proc/pdf/2026-OJS199-00708327-en.pdf) — European Central Bank — Open procurements, award notices and lists of suppliers; 2026-10-15T22:00:00+00:00
 - [Commission sets out new strategy on combating trafficking in human beings](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2177) — European Commission press and decisions; 2026-10-15T22:00:00+00:00
 - [Other Notices](https://www.thegazette.co.uk/notice/5232113) — The Gazette official public record; 2026-10-15T21:50:08+00:00
-- [What's New Related to Drugs](http://www.fda.gov/drugs/news-events-human-drugs/whats-new-related-drugs) — Food and Drug Administration — What's New: Drugs; 2026-10-15T20:11:46+00:00
 - [Sexual Enhancement and Energy Product Notifications](http://www.fda.gov/drugs/medication-health-fraud-notifications/sexual-enhancement-and-energy-product-notifications) — Food and Drug Administration — What's New: Drugs; 2026-10-15T20:10:17+00:00
 - [10 Day Forecast may be harmful due to hidden ingredients](http://www.fda.gov/drugs/medication-health-fraud-notifications/10-day-forecast-may-be-harmful-due-hidden-ingredients) — Food and Drug Administration — What's New: Drugs; 2026-10-15T20:09:12+00:00
 - [Family Farmstead Dairy Announces Recall of Raw Mild Cheddar Cheese Due to Potential E. coli O157:H7 Contamination](http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/family-farmstead-dairy-announces-recall-raw-mild-cheddar-cheese-due-potential-e-coli-o157h7) — Food and Drug Administration — Food Safety Recalls; 2026-10-15T20:04:00+00:00
@@ -2467,7 +2589,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Former CEO of O.C.-Based Private Equity Fund Sentenced to Nearly 3 Years in Federal Prison for Running $63 Million Promissory Note Scam](https://www.justice.gov/usao-cdca/pr/former-ceo-oc-based-private-equity-fund-sentenced-nearly-3-years-federal-prison) — Department of Justice; 2026-10-15T12:00:00+00:00
 - [Unemployment Insurance Weekly Claims Report](http://www.dol.gov/node/186182) — Department of Labor; 2026-10-15T12:00:00+00:00
 - [Rescheduling of the EU-GCC Summit](https://www.consilium.europa.eu/en/press/press-releases/2026/10/15/postponement-of-the-second-eu-gcc-summit/) — Council of the European Union; 2026-10-15T12:00:00+00:00
-- [S. Rept. 119-151](https://www.govinfo.gov/app/details/CRPT-119srpt151) — Congressional Reports; 2026-10-15T11:57:00+00:00
 - [Senior Infrastructure Architect](https://www.bis.org/vacancy/jr100471) — Bank for International Settlements — View feed; 2026-10-15T11:55:00+00:00
 - [Prudential Standard FSI 6-Liquidity Risk Management for Insurers](https://www.resbank.co.za/en/home/publications/publication-detail-pages/prudential-authority/pa-public-awareness/Communication/2026/prudential-standard-fsi-6-liquidity-risk-management-for-insurers) — South African Reserve Bank; 2026-10-15T11:45:00+00:00
 - [The Air Navigation (Restriction of Flying) (Yorkshire Wildlife Park, South Yorkshire) (Emergency) (Revocation) Regulations 2026](http://www.legislation.gov.uk/uksi/2026/1093/made) — UK legislation; 2026-10-15T11:34:28.549210+00:00
@@ -2548,7 +2669,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Statement by General Partner](https://www.thegazette.co.uk/notice/5231125) — The Gazette official public record; 2026-10-14T17:00:17+00:00
 - [Statement by General Partner](https://www.thegazette.co.uk/notice/5231124) — The Gazette official public record; 2026-10-14T17:00:15+00:00
 - [Dissolution of Partnership](https://www.thegazette.co.uk/notice/5231122) — The Gazette official public record; 2026-10-14T17:00:13+00:00
-- [Drug Alerts and Statements](http://www.fda.gov/drugs/drug-safety-and-availability/drug-alerts-and-statements) — Food and Drug Administration — What's New: Drugs; 2026-10-14T16:24:24+00:00
 - [Commission awards six projects making lasting contributions for Europe's cohesion at REGIOSTARS ceremony *](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2167) — European Commission press and decisions; 2026-10-14T16:10:29+00:00
 - [The Housing (Empty Dwelling Management Orders) (Prescribed Period of Time and Prescribed Requirements) (England) (Amendment) Order 2026](http://www.legislation.gov.uk/uksi/2026/1085/made) — UK legislation; 2026-10-14T16:10:00.359091+00:00
 - [Rare Disease Framework](http://www.fda.gov/industry/fda-rare-disease-innovation-hub/rare-disease-framework) — Food and Drug Administration — What's New: Drugs; 2026-10-14T15:53:13+00:00
@@ -2586,7 +2706,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Compliance Policy Regarding Blood and Blood Component Donation Suitability, Donor Eligibility and Source Plasma Quarantine Hold Requirements](http://www.fda.gov/regulatory-information/search-fda-guidance-documents/compliance-policy-regarding-blood-and-blood-component-donation-suitability-donor-eligibility-and) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-14T13:44:07+00:00
 - [Blood Pressure and Pulse Donor Eligibility Requirements – Compliance Policy](http://www.fda.gov/regulatory-information/search-fda-guidance-documents/blood-pressure-and-pulse-donor-eligibility-requirements-compliance-policy) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-14T13:44:05+00:00
 - [Outcome of written procedures finalised during the period from 04 June 2026 to 22 September 2026](https://www.ema.europa.eu/system/files/documents/other/outcome-written-procedures-finalised-during-4-june-22-sep-2026-en.pdf) — European Medicines Agency; 2026-10-14T13:41:37+00:00
-- [Drugs@FDA Data Files](http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files) — Food and Drug Administration — What's New: Drugs; 2026-10-14T13:40:02+00:00
 - [Human medicines European public assessment report (EPAR): Iasibon, ibandronic acid, Date of authorisation: 21/01/2011, Revision: 14, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/iasibon) — European Medicines Agency; 2026-10-14T13:38:00+00:00
 - [EMA/PE/0000243861](https://www.ema.europa.eu/en/medicines/human/paediatric-investigation-plans/ema-pe-0000243861) — European Medicines Agency; 2026-10-14T13:30:00+00:00
 - [Palestine*: Statement by the High Representative on behalf of the European Union on the postponement of elections](https://www.consilium.europa.eu/en/press/press-releases/2026/10/14/palestinestar-statement-by-the-high-representative-on-behalf-of-the-european-union-on-the-postponement-of-elections/) — Council of the European Union; 2026-10-14T13:30:00+00:00
@@ -2681,6 +2800,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [20260089 (OT,liquidity providing):205.00 mn USD alloted (fixed 4.130000%, 100.000000% allotment at margin)](http://www.ecb.europa.eu/mopo/implement/omo/html/20260089.en.html) — European Central Bank — Recent open market operations and ad hoc ECB communication; 2026-10-14T10:05:37+00:00
 - [20260090 (MRO,liquidity providing):18510.00 mn EUR alloted (fixed 2.650000%, 100.000000% allotment at margin)](http://www.ecb.europa.eu/mopo/implement/omo/html/20260090.en.html) — European Central Bank — Recent open market operations and ad hoc ECB communication; 2026-10-14T10:05:37+00:00
 - [20260091 (OT,liquidity providing):170.10 mn USD alloted (fixed 4.130000%, 100.000000% allotment at margin)](http://www.ecb.europa.eu/mopo/implement/omo/html/20260091.en.html) — European Central Bank — Recent open market operations and ad hoc ECB communication; 2026-10-14T10:05:37+00:00
+- [Reopening of two Federal bonds – Auction result](https://www.bundesbank.de/en/press/press-releases/federal-securities/reopening-of-two-federal-bonds-auction-result-1011726) — Deutsche Bundesbank; 2026-10-14T10:00:00+00:00
 - [Human medicines European public assessment report (EPAR): Pritor, telmisartan, Date of authorisation: 11/12/1998, Revision: 31, Status: Withdrawn](https://www.ema.europa.eu/en/medicines/human/EPAR/pritor) — European Medicines Agency; 2026-10-14T10:00:00+00:00
 - [Regulatory perspectives on herbal medicinal / botanical drug product development: Joint FDA / EMA workshop, Online, European Medicines Agency, Amsterdam, the Netherlands, Broadcast, from 25 September 2026, 10:00 (CEST) to 25 September 2026, 13:00 (CEST)](https://www.ema.europa.eu/en/events/regulatory-perspectives-herbal-medicinal-botanical-drug-product-development-joint-fda-ema-workshop) — European Medicines Agency; 2026-10-14T10:00:00+00:00
 - [Human medicines European public assessment report (EPAR): Spikevax (previously COVID-19 Vaccine Moderna), COVID-19 mRNA vaccine, Date of authorisation: 06/01/2021, Revision: 63, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/spikevax) — European Medicines Agency; 2026-10-14T09:40:00+00:00
@@ -2688,10 +2808,12 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Human medicines European public assessment report (EPAR): Nemluvio, nemolizumab, Date of authorisation: 12/02/2025, Revision: 7, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/nemluvio) — European Medicines Agency; 2026-10-14T09:35:00+00:00
 - [Human medicines European public assessment report (EPAR): mResvia, respiratory syncytial virus mRNA vaccine, Date of authorisation: 22/08/2024, Revision: 11, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/mresvia) — European Medicines Agency; 2026-10-14T09:32:00+00:00
 - [Meeting of the HMA-EMA group focused on AI with industry stakeholders - October 2026, Online, from 5 October 2026, 10:30 (CEST) to 5 October 2026, 12:00 (CEST)](https://www.ema.europa.eu/en/events/meeting-hma-ema-group-focused-ai-industry-stakeholders-october-2026) — European Medicines Agency; 2026-10-14T09:31:55+00:00
+- [Why I believe Europe must stop counting bank capital twice | Guest contribution in The Banker online](https://www.bundesbank.de/en/press/contributions/why-i-believe-europe-must-stop-counting-bank-capital-twice-964890) — Deutsche Bundesbank; 2026-10-14T09:30:00+00:00
 - [Media advisory - Tripartite Social Summit of 14 October 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/10/14/media-advisory-tripartite-social-summit-of-14-october-2026/) — Council of the European Union; 2026-10-14T09:30:00+00:00
 - [Opening remarks by Executive Vice-President Teresa Ribera on the Commission decision to accept commitments by Sanofi](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2161) — European Commission press and decisions; 2026-10-14T09:15:23+00:00
 - [What analysts hear and why it matters for monetary policy](https://www.ecb.europa.eu//pub/pdf/scpwps/ecb.wp3298~06485c09a7.en.pdf) — European Central Bank — Publications; 2026-10-14T09:00:00+00:00
 - [The heterogeneous bank lending channel of monetary policy](https://www.ecb.europa.eu//pub/pdf/scpwps/ecb.wp3299~01776adb36.en.pdf) — European Central Bank — Publications; 2026-10-14T09:00:00+00:00
+- [FX Liquidity providing operation – Allotment | Tender-ID: 20260091 | Reverse transaction | USD](https://www.bundesbank.de/en/tasks/monetary-policy/open-market-operations/outstanding-open-market-operations/fx-liquidity-providing-operation-allotment-1011706) — Deutsche Bundesbank — Outstanding open market operations; 2026-10-14T08:57:54+00:00
 - [EMA/PE/0000245149](https://www.ema.europa.eu/en/medicines/human/paediatric-investigation-plans/ema-pe-0000245149) — European Medicines Agency; 2026-10-14T08:50:27+00:00
 - [EMA/PE/0000241632](https://www.ema.europa.eu/en/medicines/human/paediatric-investigation-plans/ema-pe-0000241632) — European Medicines Agency; 2026-10-14T08:47:22+00:00
 - [EMA/PE/0000245628](https://www.ema.europa.eu/en/medicines/human/paediatric-investigation-plans/ema-pe-0000245628) — European Medicines Agency; 2026-10-14T08:39:07+00:00
@@ -2700,6 +2822,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Notice of monetary penalty and costs recovery: ABRSM](https://www.gov.uk/government/publications/notice-of-monetary-penalty-and-costs-recovery-abrsm) — Ofqual; 2026-10-14T08:30:08+00:00
 - [Notice to exporters 2026/23: expansion of the dual-use open general export licence](https://www.gov.uk/government/publications/notice-to-exporters-202623-expansion-of-the-dual-use-open-general-export-licence) — Department for Business, Innovation, Science and Trade; 2026-10-14T08:30:06+00:00
 - [EMA/PE/0000234649](https://www.ema.europa.eu/en/medicines/human/paediatric-investigation-plans/ema-pe-0000234649) — European Medicines Agency; 2026-10-14T08:26:47+00:00
+- [Announcement of a multi-ISIN auction – Reopening of two Green German Federal securities](https://www.bundesbank.de/en/press/press-releases/federal-securities/announcement-of-a-multi-isin-auction-reopening-of-two-green-german-federal-securities-1011714) — Deutsche Bundesbank; 2026-10-14T08:00:00+00:00
 - [Japanese Government Bonds Held by the Bank of Japan](http://www.boj.or.jp/en/statistics/boj/other/mei/release/2026/mei261009.xlsx) — Bank of Japan; 2026-10-14T08:00:00+00:00
 - [EMEA-003313-PIP02-23](https://www.ema.europa.eu/en/medicines/human/paediatric-investigation-plans/emea-003313-pip02-23) — European Medicines Agency; 2026-10-14T07:51:09+00:00
 - [EMA/PE/0000223258](https://www.ema.europa.eu/en/medicines/human/paediatric-investigation-plans/ema-pe-0000223258) — European Medicines Agency; 2026-10-14T07:48:04+00:00
@@ -2872,76 +2995,11 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Product Safety Report: Baby Electric Soothing Palm Sleep Pillow sold via AliExpress (2610-0015)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-baby-electric-soothing-palm-sleep-pillow-sold-via-aliexpress-2610-0015) — Office for Product Safety and Standards; 2026-10-13T16:42:20+00:00
 - [Currency and Exchanges Manual for Authorised Dealers](https://www.resbank.co.za/en/home/publications/publication-detail-pages/other-publications/2026/currency-and-exchanges-manual-for-authorised-dealers) — South African Reserve Bank; 2026-10-13T16:11:00+00:00
 - [Exchange Control Circulars](https://www.resbank.co.za/en/home/publications/publication-detail-pages/circulars/exchange-control-circulars/2026/exchange-control-circulars0) — South African Reserve Bank; 2026-10-13T16:05:00+00:00
-- [Postapproval Manufacturing Changes to Biosimilar and Interchangeable Biosimilar Products: Questions and Answers](http://www.fda.gov/regulatory-information/search-fda-guidance-documents/postapproval-manufacturing-changes-biosimilar-and-interchangeable-biosimilar-products-questions-and) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-13T15:41:35+00:00
-- [Human medicines European public assessment report (EPAR): Revatio, sildenafil, Date of authorisation: 28/10/2005, Revision: 55, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/revatio) — European Medicines Agency; 2026-10-13T15:33:00+00:00
-- [Human medicines European public assessment report (EPAR): Lyrica, pregabalin, Date of authorisation: 05/07/2004, Revision: 73, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/lyrica) — European Medicines Agency; 2026-10-13T15:31:00+00:00
-- [Human medicines European public assessment report (EPAR): Viagra, sildenafil, Date of authorisation: 13/09/1998, Revision: 52, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/viagra) — European Medicines Agency; 2026-10-13T15:30:30+00:00
-- [Data Scientist / Research Analyst](https://www.bis.org/vacancy/jr100491) — Bank for International Settlements — View feed; 2026-10-13T15:30:01+00:00
-- [Human medicines European public assessment report (EPAR): Olumiant, baricitinib, Date of authorisation: 13/02/2017, Revision: 29, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/olumiant) — European Medicines Agency; 2026-10-13T15:28:08+00:00
-- [Human medicines European public assessment report (EPAR): Jemperli, dostarlimab, Date of authorisation: 21/04/2021, Revision: 18, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/jemperli) — European Medicines Agency; 2026-10-13T15:14:00+00:00
-- [Human medicines European public assessment report (EPAR): Fingolimod Accord, fingolimod, Date of authorisation: 25/06/2020, Revision: 12, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/fingolimod-accord) — European Medicines Agency; 2026-10-13T15:05:00+00:00
-- [Minutes of the Money Market Committee meeting – September 2026](https://www.bankofengland.co.uk/minutes/2026/september/money-markets-committee-minutes-september-2026) — Bank of England; 2026-10-13T15:04:27+00:00
-- [Human medicines European public assessment report (EPAR): Cometriq, cabozantinib, Date of authorisation: 21/03/2014, Revision: 34, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/cometriq) — European Medicines Agency; 2026-10-13T15:03:00+00:00
-- [Human medicines European public assessment report (EPAR): Imfinzi, durvalumab, Date of authorisation: 21/09/2018, Revision: 28, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/imfinzi) — European Medicines Agency; 2026-10-13T15:01:00+00:00
-- [Eurogroup President Pierrakakis attends the Annual Meetings of the IMF and World Bank Group in Bangkok, Thailand](https://www.consilium.europa.eu/en/press/press-releases/2026/10/13/eurogroup-president-pierrakakis-attends-the-annual-meetings-of-the-imf-and-world-bank-group-in-bangkok-thailand/) — Council of the European Union; 2026-10-13T15:00:00+00:00
-- [Product Recall: Oren Kablo CAT7 S/FTP 300m Ethernet Cable (2510-0089)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-oren-kablo-cat7-s-slash-ftp-300m-ethernet-cable-2510-0089) — Office for Product Safety and Standards; 2026-10-13T14:58:35+00:00
-- [Human medicines European public assessment report (EPAR): Rinvoq, upadacitinib, Date of authorisation: 16/12/2019, Revision: 37, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/rinvoq) — European Medicines Agency; 2026-10-13T14:50:00+00:00
-- [Product Recall: Aginode LANmark-OF Micro-Bundle Universal 12x Multimode Cable (2507-0172)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-aginode-lanmark-of-micro-bundle-universal-12x-multimode-cable-2507-0172) — Office for Product Safety and Standards; 2026-10-13T14:48:16+00:00
-- [Product Safety Report: InteDesign Plush Caterpillar Toys sold via Amazon (2609-0224)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-intedesign-plush-caterpillar-toys-sold-via-amazon-2609-0224) — Office for Product Safety and Standards; 2026-10-13T14:36:03+00:00
-- [Opinion on medicine for use outside EU: Mosquirix, RTS,S (Portion of P. falciparum circumsporozoite protein fused with hepatitis B surface antigen (RTS), and combined with hepatitis B surface antigen (S)), Malaria, 23/07/2015 Positive opinion](https://www.ema.europa.eu/en/opinion-medicine-use-outside-EU/human/mosquirix) — European Medicines Agency; 2026-10-13T14:35:00+00:00
-- [Human medicines European public assessment report (EPAR): Bemfola, follitropin alfa, Date of authorisation: 26/03/2014, Revision: 13, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/bemfola) — European Medicines Agency; 2026-10-13T14:18:00+00:00
-- [Product Recall: Mattressman Comforcel Elite and Supreme Mattresses (2609-0226)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-mattressman-comforcel-elite-and-supreme-mattresses-2609-0226) — Office for Product Safety and Standards; 2026-10-13T14:16:47+00:00
-- [Product Safety Report: OOWOLF LED Light sold via Amazon (2609-0221)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-oowolf-led-light-sold-via-amazon-2609-0221) — Office for Product Safety and Standards; 2026-10-13T14:06:33+00:00
-- [OX5 1RA, OXCCU Tech Ltd: environmental permit application advertisement - EPR/UP3622MG/A002](https://www.gov.uk/government/publications/ox5-1ra-oxccu-tech-ltd-environmental-permit-application-advertisement-eprup3622mga002) — Environment Agency; 2026-10-13T13:56:38+00:00
-- [Product Safety Report: Mini Chainsaw, 4L (2609-0234)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-mini-chainsaw-4l-2609-0234) — Office for Product Safety and Standards; 2026-10-13T13:49:36+00:00
-- [Product Safety Report: Eskute C100 Plus Electric Bicycle (2610-0010)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-eskute-c100-plus-electric-bicycle-2610-0010) — Office for Product Safety and Standards; 2026-10-13T13:47:36+00:00
-- [Product Safety Report: AutoJare Multi-Function Cordless Drill (2609-0230)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-autojare-multi-function-cordless-drill-2609-0230) — Office for Product Safety and Standards; 2026-10-13T13:45:28+00:00
-- [Product Safety Report: Frideko Home LED Floor Lamp sold via Amazon (2610-0006)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-frideko-home-led-floor-lamp-sold-via-amazon-2610-0006) — Office for Product Safety and Standards; 2026-10-13T13:42:13+00:00
-- [Agenda - PDCO agenda of the 13-16 October 2026 meeting](https://www.ema.europa.eu/system/files/documents/agenda/draft-pdco-agenda-13-16-october-2026-publication_en.xlsx) — European Medicines Agency; 2026-10-13T13:21:58+00:00
-- [18.4561 ZAR = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-zar.en.html?date=2026-10-13&rate=18.4561) — European Central Bank — South African rand (ZAR); 2026-10-13T13:15:00+00:00
-- [37.580 THB = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-thb.en.html?date=2026-10-13&rate=37.580) — European Central Bank — Thai baht (THB); 2026-10-13T13:15:00+00:00
-- [1.4319 SGD = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-sgd.en.html?date=2026-10-13&rate=1.4319) — European Central Bank — Singapore dollar (SGD); 2026-10-13T13:15:00+00:00
-- [70.225 PHP = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-php.en.html?date=2026-10-13&rate=70.225) — European Central Bank — Philippine peso (PHP); 2026-10-13T13:15:00+00:00
-- [1.9931 NZD = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-nzd.en.html?date=2026-10-13&rate=1.9931) — European Central Bank — New Zealand dollar (NZD); 2026-10-13T13:15:00+00:00
-- [4.5714 MYR = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-myr.en.html?date=2026-10-13&rate=4.5714) — European Central Bank — Malaysian ringgit (MYR); 2026-10-13T13:15:00+00:00
-- [20.5126 MXN = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-mxn.en.html?date=2026-10-13&rate=20.5126) — European Central Bank — Mexican peso (MXN); 2026-10-13T13:15:00+00:00
-- [1500.81 KRW = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-krw.en.html?date=2026-10-13&rate=1500.81) — European Central Bank — South Korean won (KRW); 2026-10-13T13:15:00+00:00
-- [106.6000 INR = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-inr.en.html?date=2026-10-13&rate=106.6000) — European Central Bank — Indian rupee (INR); 2026-10-13T13:15:00+00:00
-- [20004.87 IDR = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-idr.en.html?date=2026-10-13&rate=20004.87) — European Central Bank — Indonesian rupiah (IDR); 2026-10-13T13:15:00+00:00
-- [8.7802 HKD = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-hkd.en.html?date=2026-10-13&rate=8.7802) — European Central Bank — Hong Kong dollar (HKD); 2026-10-13T13:15:00+00:00
-- [7.4890 CNY = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-cny.en.html?date=2026-10-13&rate=7.4890) — European Central Bank — Chinese yuan renminbi (CNY); 2026-10-13T13:15:00+00:00
-- [1.5933 CAD = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-cad.en.html?date=2026-10-13&rate=1.5933) — European Central Bank — Canadian dollar (CAD); 2026-10-13T13:15:00+00:00
-- [5.6125 BRL = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-brl.en.html?date=2026-10-13&rate=5.6125) — European Central Bank — Brasilian real (BRL); 2026-10-13T13:15:00+00:00
-- [1.6033 AUD = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-aud.en.html?date=2026-10-13&rate=1.6033) — European Central Bank — Australian dollar (AUD); 2026-10-13T13:15:00+00:00
-- [55.2325 TRY = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-try.en.html?date=2026-10-13&rate=55.2325) — European Central Bank — Turkish lira (TRY); 2026-10-13T13:15:00+00:00
-- [10.6685 NOK = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-nok.en.html?date=2026-10-13&rate=10.6685) — European Central Bank — Norwegian krone (NOK); 2026-10-13T13:15:00+00:00
-- [136.20 ISK = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-isk.en.html?date=2026-10-13&rate=136.20) — European Central Bank — Icelandic krona (ISK); 2026-10-13T13:15:00+00:00
-- [0.9312 CHF = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-chf.en.html?date=2026-10-13&rate=0.9312) — European Central Bank — Swiss franc (CHF); 2026-10-13T13:15:00+00:00
-- [11.1698 SEK = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-sek.en.html?date=2026-10-13&rate=11.1698) — European Central Bank — Swedish krona (SEK); 2026-10-13T13:15:00+00:00
-- [5.3363 RON = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-ron.en.html?date=2026-10-13&rate=5.3363) — European Central Bank — Romanian leu (RON); 2026-10-13T13:15:00+00:00
-- [4.3768 PLN = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-pln.en.html?date=2026-10-13&rate=4.3768) — European Central Bank — Polish zloty (PLN); 2026-10-13T13:15:00+00:00
-- [364.31 HUF = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-huf.en.html?date=2026-10-13&rate=364.31) — European Central Bank — Hungarian forint (HUF); 2026-10-13T13:15:00+00:00
-- [0.84460 GBP = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-gbp.en.html?date=2026-10-13&rate=0.84460) — European Central Bank — Pound sterling (GBP); 2026-10-13T13:15:00+00:00
-- [7.4753 DKK = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-dkk.en.html?date=2026-10-13&rate=7.4753) — European Central Bank — Danish krone (DKK); 2026-10-13T13:15:00+00:00
-- [24.368 CZK = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-czk.en.html?date=2026-10-13&rate=24.368) — European Central Bank — Czech koruna (CZK); 2026-10-13T13:15:00+00:00
-- [176.91 JPY = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-jpy.en.html?date=2026-10-13&rate=176.91) — European Central Bank — Japanese yen (JPY); 2026-10-13T13:15:00+00:00
-- [1.1188 USD = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-usd.en.html?date=2026-10-13&rate=1.1188) — European Central Bank — US dollar (USD); 2026-10-13T13:15:00+00:00
-- [3.4404 ILS = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-ils.en.html?date=2026-10-13&rate=3.4404) — European Central Bank — ILS; 2026-10-13T13:15:00+00:00
-- [UK/Australia: Agreement on Cooperation and Mutual Administrative Assistance in Customs Matters (CS No.1/2026)](https://www.gov.uk/government/publications/ukaustralia-agreement-on-cooperation-and-mutual-administrative-assistance-in-customs-matters-cs-no12026) — Foreign, Commonwealth & Development Office; 2026-10-13T13:00:01+00:00
-- [UK/Bahrain: Agreement on Cooperation and Mutual Administrative Assistance in Customs Matters (CS No.1/2026)](https://www.gov.uk/government/publications/ukbahrain-agreement-on-cooperation-and-mutual-administrative-assistance-in-customs-matters-cs-no12026) — Foreign, Commonwealth & Development Office; 2026-10-13T13:00:01+00:00
-- [Human medicines European public assessment report (EPAR): Nexium Control, esomeprazole, Date of authorisation: 26/08/2013, Revision: 22, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/nexium-control) — European Medicines Agency; 2026-10-13T12:48:00+00:00
-- [CH64 4BL, Chris Higgins, Graham Matchet, Phil Wynne, Maragret Unsworth, Peter Wheeler, Peter Cletak and Edward Nugent: environmental permit application advertisement - EPR/BP3223UN/A001](https://www.gov.uk/government/publications/ch64-4bl-chris-higgins-graham-matchet-phil-wynne-maragret-unsworth-peter-wheeler-peter-cletak-and-edward-nugent-environmental-permit-application-adver) — Environment Agency; 2026-10-13T12:39:51+00:00
-- [Council approves conclusions on inclusive democratic participation, and societal and community resilience](https://www.consilium.europa.eu/en/press/press-releases/2026/10/13/council-approves-conclusions-on-inclusive-democratic-participation-and-societal-and-community-resilience/) — Council of the European Union; 2026-10-13T12:35:00+00:00
-- [US Labor Department finds 6 New York, New Jersey construction employers exposed workers to safety hazards, assesses combined $648K in penalties](http://www.dol.gov/newsroom/releases/osha/osha20261013) — Department of Labor; 2026-10-13T12:00:00+00:00
-- [Business process description for medical devices](https://www.ema.europa.eu/system/files/documents/other/bpd-h-011-medical-devices-en_0.pdf) — European Medicines Agency; 2026-10-13T11:45:00+00:00
-- [Voluntary data submission (VDS) pilot application form](https://www.ema.europa.eu/system/files/documents/template-form/vds-pilot-application-form_v2-en.docx) — European Medicines Agency; 2026-10-13T11:40:00+00:00
-- [Human medicines European public assessment report (EPAR): Intuniv, guanfacine, Date of authorisation: 17/09/2015, Revision: 15, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/intuniv) — European Medicines Agency; 2026-10-13T11:40:00+00:00
-- [Continuous renal replacement therapy (CRRT): Consider delayed administration of concurrent echinocandins, such as caspofungin, to reduce the risk of adsorption onto new polyacrylonitrile (PAN)-based filter membranes DSI/2026/014](https://www.gov.uk/drug-device-alerts/continuous-renal-replacement-therapy-crrt-consider-delayed-administration-of-concurrent-echinocandins-such-as-caspofungin-to-reduce-the-risk-of-adsorption-onto-new-polyacrylonitrile-pan-based-filter-membranes-dsi-slash-2026-slash-) — Medicines and Healthcare products Regulatory Agency; 2026-10-13T11:38:03+00:00
 
 ## Source failures and coverage warnings
 
 - us-govinfo-bills-enr: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
-- us-govinfo-chrg: unchanged; feed_at_capacity_in_requested_window; snapshots may miss overflow
+- us-govinfo-chrg: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
 - us-govinfo-uscourts-almd: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-akd: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-caed: unchanged; feed_at_capacity_in_requested_window; snapshots may miss overflow
@@ -3029,27 +3087,24 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-govinfo-uscourts-wyb: unchanged; stale_feed_outside_requested_window
 - us-govinfo-uscourts-jpml: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-white-house-0691096d16: unchanged; stale_feed_outside_requested_window
-- us-treasury-a69e5b5ef0: ok; stale_feed_outside_requested_window
+- us-treasury-a69e5b5ef0: parse_or_network_error; 
 - us-ustr-index: ok; stale_feed_outside_requested_window
-- us-fed-7cfba7c4ca: ok; stale_feed_outside_requested_window
-- us-fed-a383ca0d09: ok; stale_feed_outside_requested_window
-- us-fed-ba8ad56252: ok; stale_feed_outside_requested_window
-- us-fed-0023b1ebca: fetch_failed; 
-- us-fed-1549fdd7e4: fetch_failed; 
-- us-fed-8d9ba6faea: ok; stale_feed_outside_requested_window
-- us-fed-0a7a64daa4: fetch_failed; 
+- us-fed-00a0e0a88a: fetch_failed; 
+- us-fed-8e8c6f5fe1: fetch_failed; 
+- us-fed-1d7a0dba2e: fetch_failed; 
+- us-fed-8d9ba6faea: fetch_failed; 
 - us-fdic-index: ok; stale_feed_outside_requested_window
 - us-fincen-index: ok; stale_feed_outside_requested_window
 - us-cftc-fda5c3631d: ok; stale_feed_outside_requested_window
 - us-fda-df70b9f330: ok; stale_feed_outside_requested_window
-- us-fda-1a1096082f: unchanged; stale_feed_outside_requested_window
-- us-fda-2d9c4fc2f9: unchanged; stale_feed_outside_requested_window
-- us-fda-8fc09ac0a2: unchanged; stale_feed_outside_requested_window
-- us-fda-3eaddf14de: ok; stale_feed_outside_requested_window
+- us-fda-1a1096082f: ok; stale_feed_outside_requested_window
+- us-fda-2d9c4fc2f9: ok; stale_feed_outside_requested_window
+- us-fda-8fc09ac0a2: ok; stale_feed_outside_requested_window
+- us-fda-3eaddf14de: unchanged; stale_feed_outside_requested_window
 - us-fda-a25233bfac: ok; stale_feed_outside_requested_window
 - us-fda-1ca201e48f: ok; stale_feed_outside_requested_window
 - us-fda-c7d1d1cd64: ok; stale_feed_outside_requested_window
-- us-fda-d7692535f0: unchanged; stale_feed_outside_requested_window
+- us-fda-d7692535f0: ok; stale_feed_outside_requested_window
 - us-nlrb-3db5e72bf9: ok; stale_feed_outside_requested_window
 - us-nlrb-c15d588b2d: ok; stale_feed_outside_requested_window
 - us-fmc-fe8f0538ae: unchanged; stale_feed_outside_requested_window
@@ -3065,31 +3120,29 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - ca-gazette-821b285be1: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-2d47daa483: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-c2eb48e1fa: unchanged; stale_feed_outside_requested_window
-- ca-boc-4aa19b2183: unchanged; stale_feed_outside_requested_window
-- ca-boc-1f26bb2971: unchanged; stale_feed_outside_requested_window
-- ca-boc-4192a605ae: unchanged; stale_feed_outside_requested_window
-- ca-boc-5cc0603f1f: unchanged; stale_feed_outside_requested_window
-- ca-boc-a61b683fac: unchanged; stale_feed_outside_requested_window
-- ca-boc-161ba50d6e: unchanged; stale_feed_outside_requested_window
-- ca-boc-1c9979e6ac: unchanged; stale_feed_outside_requested_window
-- ca-boc-b8fa2876ef: unchanged; stale_feed_outside_requested_window
-- ca-boc-b06a91e186: unchanged; stale_feed_outside_requested_window
-- ca-boc-f2811531de: unchanged; stale_feed_outside_requested_window
-- ca-boc-71c82276e6: unchanged; stale_feed_outside_requested_window
-- ca-boc-c1617c3a5b: unchanged; stale_feed_outside_requested_window
-- ca-boc-ddf593b208: unchanged; stale_feed_outside_requested_window
-- ca-boc-affce837d4: unchanged; stale_feed_outside_requested_window
-- ca-boc-e24c58f2d0: unchanged; stale_feed_outside_requested_window
-- ca-boc-9308ff5fe4: unchanged; stale_feed_outside_requested_window
-- ca-boc-9f75c25657: unchanged; stale_feed_outside_requested_window
-- ca-boc-cffefa81f7: unchanged; stale_feed_outside_requested_window
-- ca-boc-762f78f374: unchanged; stale_feed_outside_requested_window
-- ca-boc-49364b93d8: unchanged; stale_feed_outside_requested_window
-- ca-boc-7b07e406da: unchanged; stale_feed_outside_requested_window
-- ca-boc-903390d96d: unchanged; stale_feed_outside_requested_window
-- ca-boc-1da610df86: unchanged; stale_feed_outside_requested_window
-- ca-boc-63e377340d: unchanged; stale_feed_outside_requested_window
-- ca-supreme-d329809c56: ok; stale_feed_outside_requested_window
+- ca-boc-4aa19b2183: ok; stale_feed_outside_requested_window
+- ca-boc-1f26bb2971: ok; stale_feed_outside_requested_window
+- ca-boc-4192a605ae: ok; stale_feed_outside_requested_window
+- ca-boc-5cc0603f1f: ok; stale_feed_outside_requested_window
+- ca-boc-a61b683fac: ok; stale_feed_outside_requested_window
+- ca-boc-161ba50d6e: ok; stale_feed_outside_requested_window
+- ca-boc-1c9979e6ac: ok; stale_feed_outside_requested_window
+- ca-boc-b8fa2876ef: ok; stale_feed_outside_requested_window
+- ca-boc-b06a91e186: ok; stale_feed_outside_requested_window
+- ca-boc-f2811531de: ok; stale_feed_outside_requested_window
+- ca-boc-71c82276e6: ok; stale_feed_outside_requested_window
+- ca-boc-c1617c3a5b: ok; stale_feed_outside_requested_window
+- ca-boc-ddf593b208: ok; stale_feed_outside_requested_window
+- ca-boc-affce837d4: ok; stale_feed_outside_requested_window
+- ca-boc-e24c58f2d0: ok; stale_feed_outside_requested_window
+- ca-boc-9308ff5fe4: ok; stale_feed_outside_requested_window
+- ca-boc-9f75c25657: ok; stale_feed_outside_requested_window
+- ca-boc-cffefa81f7: ok; stale_feed_outside_requested_window
+- ca-boc-762f78f374: ok; stale_feed_outside_requested_window
+- ca-boc-49364b93d8: ok; stale_feed_outside_requested_window
+- ca-boc-903390d96d: ok; stale_feed_outside_requested_window
+- ca-boc-1da610df86: ok; stale_feed_outside_requested_window
+- ca-boc-63e377340d: ok; stale_feed_outside_requested_window
 - au-rba-75f3866f45: unchanged; stale_feed_outside_requested_window
 - au-rba-4c2add8718: unchanged; stale_feed_outside_requested_window
 - au-rba-fe06b804cb: unchanged; stale_feed_outside_requested_window

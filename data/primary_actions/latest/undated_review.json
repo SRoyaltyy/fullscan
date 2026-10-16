@@ -1,1 +1,194 @@
-[]
+[
+  {
+    "title": "CPSC Eliminates Unnecessary Fuel Additive Regulations, Saving American Businesses Up to $10.7 Billion",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2027/CPSC-Eliminates-Unnecessary-Fuel-Additive-Regulations-Saving-American-Businesses-Up-to-10-7-Billion",
+    "native_id": "https://www.cpsc.gov/_c9dd9fb2-1c43-4572-9ffb-b5eb68fd3ad4",
+    "published_at": null,
+    "published_raw": "Thu, 10/15/2026 - 12:00",
+    "summary": "WASHINGTON, D.C. – The U.S. Consumer Product Safety Commission (CPSC) today announced a major deregulatory action eliminating unnecessary federal requirements for fuel additives, saving American businesses up to an estimated $10.7 billion over 30 years wh",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3797,
+    "first_seen": "2026-10-16T16:03:14.310875+00:00",
+    "last_seen": "2026-10-16T16:03:14.310875+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "New Q&As available",
+    "url": "https://www.esma.europa.eu/press-news/esma-news/new-qas-available-27",
+    "native_id": "https://www.esma.europa.eu/press-news/esma-news/new-qas-available-27",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "New Q&As available 16 October 2026 CCP Digital Finance and Innovation The European Securities and Markets Authority (ESMA), the EU's securities markets regulator, has published the following question and answer: Crypto-Asset Service Provider (CASP) Use by CASPs of payment accounts provided by non-bank payment service providers for holding clients’ funds (2949) European crowdfunding service providers for business Crowdfunding service providers that charge registration, membership, or other access fees (\"investment club\" crowdfunding platforms) (2950) OTC derivatives, central counterparties and trade repositories (EMIR) - CCPs AAR 85% exemption (2936) AAR thresholds calculation (2937) AAR representativeness obligation (2938) Questions and Answers section",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Securities and Markets Authority",
+      "jurisdiction": "EU",
+      "family": "market_rules_and_enforcement"
+    },
+    "primary_source_id": "eu-esma-73e01d4013",
+    "n": 3830,
+    "first_seen": "2026-10-16T16:03:14.310875+00:00",
+    "last_seen": "2026-10-16T16:03:14.310875+00:00",
+    "source_ids": [
+      "eu-esma-73e01d4013"
+    ]
+  },
+  {
+    "title": "Appeal No. 7113 of 2026 filed by S Srinivas",
+    "url": "https://www.sebi.gov.in/enforcement/orders/oct-2026/appeal-no-7113-of-2026-filed-by-s-srinivas_105312.html",
+    "native_id": "https://www.sebi.gov.in/enforcement/orders/oct-2026/appeal-no-7113-of-2026-filed-by-s-srinivas_105312.html",
+    "published_at": null,
+    "published_raw": "16 Oct, 2026 +0530",
+    "summary": "Appeal No. 7113 of 2026 filed by S Srinivas",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Securities and Exchange Board of India — https://www.sebi.gov.in/sebirss.xml",
+      "jurisdiction": "IN",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "in-sebi-53da9e61f4",
+    "n": 3865,
+    "first_seen": "2026-10-16T16:03:14.310875+00:00",
+    "last_seen": "2026-10-16T16:03:14.310875+00:00",
+    "source_ids": [
+      "in-sebi-53da9e61f4"
+    ]
+  },
+  {
+    "title": "Appeal No. 7110 of 2026 filed by Vikram Aggarwal",
+    "url": "https://www.sebi.gov.in/enforcement/orders/oct-2026/appeal-no-7110-of-2026-filed-by-vikram-aggarwal_105309.html",
+    "native_id": "https://www.sebi.gov.in/enforcement/orders/oct-2026/appeal-no-7110-of-2026-filed-by-vikram-aggarwal_105309.html",
+    "published_at": null,
+    "published_raw": "16 Oct, 2026 +0530",
+    "summary": "Appeal No. 7110 of 2026 filed by Vikram Aggarwal",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Securities and Exchange Board of India — https://www.sebi.gov.in/sebirss.xml",
+      "jurisdiction": "IN",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "in-sebi-53da9e61f4",
+    "n": 3866,
+    "first_seen": "2026-10-16T16:03:14.310875+00:00",
+    "last_seen": "2026-10-16T16:03:14.310875+00:00",
+    "source_ids": [
+      "in-sebi-53da9e61f4"
+    ]
+  },
+  {
+    "title": "Appeal No. 7111 of 2026 filed by BIDISH DAS",
+    "url": "https://www.sebi.gov.in/enforcement/orders/oct-2026/appeal-no-7111-of-2026-filed-by-bidish-das_105307.html",
+    "native_id": "https://www.sebi.gov.in/enforcement/orders/oct-2026/appeal-no-7111-of-2026-filed-by-bidish-das_105307.html",
+    "published_at": null,
+    "published_raw": "16 Oct, 2026 +0530",
+    "summary": "Appeal No. 7111 of 2026 filed by BIDISH DAS",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Securities and Exchange Board of India — https://www.sebi.gov.in/sebirss.xml",
+      "jurisdiction": "IN",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "in-sebi-53da9e61f4",
+    "n": 3867,
+    "first_seen": "2026-10-16T16:03:14.310875+00:00",
+    "last_seen": "2026-10-16T16:03:14.310875+00:00",
+    "source_ids": [
+      "in-sebi-53da9e61f4"
+    ]
+  },
+  {
+    "title": "Appeal No. 7104 of 2026 filed by Sunil Kumar",
+    "url": "https://www.sebi.gov.in/enforcement/orders/oct-2026/appeal-no-7104-of-2026-filed-by-sunil-kumar_105304.html",
+    "native_id": "https://www.sebi.gov.in/enforcement/orders/oct-2026/appeal-no-7104-of-2026-filed-by-sunil-kumar_105304.html",
+    "published_at": null,
+    "published_raw": "16 Oct, 2026 +0530",
+    "summary": "Appeal No. 7104 of 2026 filed by Sunil Kumar",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Securities and Exchange Board of India — https://www.sebi.gov.in/sebirss.xml",
+      "jurisdiction": "IN",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "in-sebi-53da9e61f4",
+    "n": 3868,
+    "first_seen": "2026-10-16T16:03:14.310875+00:00",
+    "last_seen": "2026-10-16T16:03:14.310875+00:00",
+    "source_ids": [
+      "in-sebi-53da9e61f4"
+    ]
+  },
+  {
+    "title": "Appeal No. 7099 of 2026 filed by Vikram Aggarwal",
+    "url": "https://www.sebi.gov.in/enforcement/orders/oct-2026/appeal-no-7099-of-2026-filed-by-vikram-aggarwal_105303.html",
+    "native_id": "https://www.sebi.gov.in/enforcement/orders/oct-2026/appeal-no-7099-of-2026-filed-by-vikram-aggarwal_105303.html",
+    "published_at": null,
+    "published_raw": "16 Oct, 2026 +0530",
+    "summary": "Appeal No. 7099 of 2026 filed by Vikram Aggarwal",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Securities and Exchange Board of India — https://www.sebi.gov.in/sebirss.xml",
+      "jurisdiction": "IN",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "in-sebi-53da9e61f4",
+    "n": 3869,
+    "first_seen": "2026-10-16T16:03:14.310875+00:00",
+    "last_seen": "2026-10-16T16:03:14.310875+00:00",
+    "source_ids": [
+      "in-sebi-53da9e61f4"
+    ]
+  },
+  {
+    "title": "Appeal No. 7097 of 2026 filed by Surendra Champalaji Jain",
+    "url": "https://www.sebi.gov.in/enforcement/orders/oct-2026/appeal-no-7097-of-2026-filed-by-surendra-champalaji-jain_105301.html",
+    "native_id": "https://www.sebi.gov.in/enforcement/orders/oct-2026/appeal-no-7097-of-2026-filed-by-surendra-champalaji-jain_105301.html",
+    "published_at": null,
+    "published_raw": "16 Oct, 2026 +0530",
+    "summary": "Appeal No. 7097 of 2026 filed by Surendra Champalaji Jain",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Securities and Exchange Board of India — https://www.sebi.gov.in/sebirss.xml",
+      "jurisdiction": "IN",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "in-sebi-53da9e61f4",
+    "n": 3870,
+    "first_seen": "2026-10-16T16:03:14.310875+00:00",
+    "last_seen": "2026-10-16T16:03:14.310875+00:00",
+    "source_ids": [
+      "in-sebi-53da9e61f4"
+    ]
+  }
+]

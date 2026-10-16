@@ -1,70 +1,46 @@
 [
   {
-    "n": 3712,
-    "title": "Tender of 10-year HKD HKSAR Institutional Government Bonds through re-opening to be held on Wednesday, 21 October 2026",
-    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/10/20261014-7/",
-    "published_at": "2026-10-14T00:00:00+00:00",
-    "official_issuer": "Hong Kong Monetary Authority",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
+    "n": 3733,
+    "title": "CAC Outcome: TSSA & Transport for London (TfL)",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-tssa-transport-for-london-tfl",
+    "published_at": "2026-10-16T13:54:44+00:00",
+    "official_issuer": "Central Arbitration Committee",
+    "document_type": "decision",
+    "document_stage": "decision_published",
     "source_ids": [
-      "hk-hkma-public-press"
+      "uk-govuk-decision"
     ]
   },
   {
-    "n": 3713,
-    "title": "Tender of 3-year HKD HKSAR Institutional Government Bonds through re-opening to be held on Wednesday, 21 October 2026",
-    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/10/20261014-6/",
-    "published_at": "2026-10-14T00:00:00+00:00",
-    "official_issuer": "Hong Kong Monetary Authority",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
+    "n": 3734,
+    "title": "CAC Outcome: NEU, NASUWT & Liverpool College",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-neu-nasuwt-liverpool-college",
+    "published_at": "2026-10-16T13:54:09+00:00",
+    "official_issuer": "Central Arbitration Committee",
+    "document_type": "decision",
+    "document_stage": "decision_published",
     "source_ids": [
-      "hk-hkma-public-press"
+      "uk-govuk-decision"
     ]
   },
   {
-    "n": 3714,
-    "title": "Analytical Accounts of the Exchange Fund",
-    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/10/20261014-5/",
-    "published_at": "2026-10-14T00:00:00+00:00",
-    "official_issuer": "Hong Kong Monetary Authority",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
+    "n": 3735,
+    "title": "Production Screening Directions – 2026",
+    "url": "https://www.gov.uk/government/publications/production-screening-directions-2026",
+    "published_at": "2026-10-16T12:32:49+00:00",
+    "official_issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
+    "document_type": "decision",
+    "document_stage": "decision_published",
     "source_ids": [
-      "hk-hkma-public-press"
+      "uk-govuk-decision"
     ]
   },
   {
-    "n": 3715,
-    "title": "HKMA welcomes launch of Chongqing-Hong Kong Cross-boundary Data Validation Platform",
-    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/10/20261014-4/",
-    "published_at": "2026-10-14T00:00:00+00:00",
-    "official_issuer": "Hong Kong Monetary Authority",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "hk-hkma-public-press"
-    ]
-  },
-  {
-    "n": 3716,
-    "title": "Hong Kong Academy of Finance’s 2027 intake of the Financial Leaders Programme is open for application",
-    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/10/20261014-3/",
-    "published_at": "2026-10-14T00:00:00+00:00",
-    "official_issuer": "Hong Kong Monetary Authority",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "hk-hkma-public-press"
-    ]
-  },
-  {
-    "n": 3717,
-    "title": "Building control: charges, notices and certificates",
-    "url": "https://www.gov.uk/government/consultations/building-control-charges-notices-and-certificates",
-    "published_at": "2026-10-16T10:51:45+00:00",
-    "official_issuer": "Ministry of Housing, Communities and Local Government",
+    "n": 3736,
+    "title": "Supported Housing regulation: consultation",
+    "url": "https://www.gov.uk/government/consultations/supported-housing-regulation-consultation",
+    "published_at": "2026-10-16T15:19:58+00:00",
+    "official_issuer": "Ministry of Housing, Communities and Local Government; Department for Work and Pensions",
     "document_type": "consultation_outcome",
     "document_stage": "consultation_response_published",
     "source_ids": [
@@ -72,10 +48,10 @@
     ]
   },
   {
-    "n": 3718,
-    "title": "Mrs L Hughes v Accord-UK Ltd and others: 6009124/2025",
-    "url": "https://www.gov.uk/employment-tribunal-decisions/mrs-l-hughes-v-accord-uk-ltd-and-others-6009124-slash-2025",
-    "published_at": "2026-10-16T11:33:52+00:00",
+    "n": 3737,
+    "title": "Ms L March v West London NHS Trust: 6015390/2024 and others",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/ms-l-march-v-west-london-nhs-trust-6015390-slash-2024-and-others",
+    "published_at": "2026-10-16T14:42:12+00:00",
     "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
     "document_type": "employment_tribunal_decision",
     "document_stage": "judicial_decision_published",
@@ -84,10 +60,10 @@
     ]
   },
   {
-    "n": 3719,
-    "title": "L Wright v Hamble Catering Ltd (Creditors voluntary liquidation): 6042972/2025",
-    "url": "https://www.gov.uk/employment-tribunal-decisions/l-wright-v-hamble-catering-ltd-creditors-voluntary-liquidation-6042972-slash-2025",
-    "published_at": "2026-10-16T11:30:51+00:00",
+    "n": 3738,
+    "title": "D Perdomo v JD Sports Fashion plc: 2309168/2024 and 2307224/2025",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/d-perdomo-v-jd-sports-fashion-plc-2309168-slash-2024-and-2307224-slash-2025",
+    "published_at": "2026-10-16T14:38:37+00:00",
     "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
     "document_type": "employment_tribunal_decision",
     "document_stage": "judicial_decision_published",
@@ -96,10 +72,10 @@
     ]
   },
   {
-    "n": 3720,
-    "title": "Mr W Guedes Martins v Kerry Ingredients (UK) Ltd: 6006154/2025",
-    "url": "https://www.gov.uk/employment-tribunal-decisions/mr-w-guedes-martins-v-kerry-ingredients-uk-ltd-6006154-slash-2025",
-    "published_at": "2026-10-16T11:26:55+00:00",
+    "n": 3739,
+    "title": "K Roberts v Asda Stores Ltd: 2300390/2026",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/k-roberts-v-asda-stores-ltd-2300390-slash-2026",
+    "published_at": "2026-10-16T14:35:47+00:00",
     "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
     "document_type": "employment_tribunal_decision",
     "document_stage": "judicial_decision_published",
@@ -108,10 +84,10 @@
     ]
   },
   {
-    "n": 3721,
-    "title": "Mr L Hudson v British Telecommunications plc: 1403037/2025",
-    "url": "https://www.gov.uk/employment-tribunal-decisions/mr-l-hudson-v-british-telecommunications-plc-1403037-slash-2025",
-    "published_at": "2026-10-16T10:51:54+00:00",
+    "n": 3740,
+    "title": "L Gestin v Richmond Sports Podiatry Ltd T/a The Functional Podiatrist: 6032386/2025",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/l-gestin-v-richmond-sports-podiatry-ltd-t-slash-a-the-functional-podiatrist-6032386-slash-2025",
+    "published_at": "2026-10-16T14:31:45+00:00",
     "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
     "document_type": "employment_tribunal_decision",
     "document_stage": "judicial_decision_published",
@@ -120,10 +96,10 @@
     ]
   },
   {
-    "n": 3722,
-    "title": "K Strickland v Coastguard Café Ltd: 1400552/2026",
-    "url": "https://www.gov.uk/employment-tribunal-decisions/k-strickland-v-coastguard-cafe-ltd-1400552-slash-2026",
-    "published_at": "2026-10-16T10:45:41+00:00",
+    "n": 3741,
+    "title": "Mrs S M P Buckland v Practice Plus Group Health and Rehabilitation Services Ltd: 1306966/2024",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/mrs-s-m-p-buckland-v-practice-plus-group-health-and-rehabilitation-services-ltd-1306966-slash-2024",
+    "published_at": "2026-10-16T14:08:30+00:00",
     "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
     "document_type": "employment_tribunal_decision",
     "document_stage": "judicial_decision_published",
@@ -132,22 +108,1055 @@
     ]
   },
   {
-    "n": 3723,
-    "title": "MoU on information sharing in support of non-bank payment service providers access to central bank operated payment systems",
-    "url": "https://www.ecb.europa.eu//pub/pdf/other/ecb.2026-10-16_MoU.en.pdf",
-    "published_at": "2026-10-16T11:00:00+00:00",
-    "official_issuer": "European Central Bank — Publications",
+    "n": 3742,
+    "title": "Mr A S Adeleke v Abbey Uplands Care Home: 6015364/2026",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/mr-a-s-adeleke-v-abbey-uplands-care-home-6015364-slash-2026",
+    "published_at": "2026-10-16T14:04:26+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
+    "document_type": "employment_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-employment_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3743,
+    "title": "Mr S Horton v Ecrubox Digital Ltd: 6022510/2024",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/mr-s-horton-v-ecrubox-digital-ltd-6022510-slash-2024",
+    "published_at": "2026-10-16T14:01:29+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
+    "document_type": "employment_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-employment_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3744,
+    "title": "Mr J Barnett v Rainbow Care Solutions Ltd: 6032464/2026",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/mr-j-barnett-v-rainbow-care-solutions-ltd-6032464-slash-2026",
+    "published_at": "2026-10-16T13:50:57+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
+    "document_type": "employment_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-employment_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3745,
+    "title": "Mr D Hardy v D and P Fabrications Ltd: 6003309/2026",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/mr-d-hardy-v-d-and-p-fabrications-ltd-6003309-slash-2026",
+    "published_at": "2026-10-16T13:32:50+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
+    "document_type": "employment_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-employment_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3746,
+    "title": "Miss K Bednarowicz v Communisis UK Ltd (in administration) and CUK Realisations Ltd (in administration): 2402101/2024",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/miss-k-bednarowicz-v-communisis-uk-ltd-in-administration-and-cuk-realisations-ltd-in-administration-2402101-slash-2024",
+    "published_at": "2026-10-16T13:22:26+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
+    "document_type": "employment_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-employment_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3747,
+    "title": "S Ali and Others v CUK Realisations Ltd (in administration): 1801444/2024 and Others",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/s-ali-and-others-v-cuk-realisations-ltd-in-administration-1801444-slash-2024-and-others",
+    "published_at": "2026-10-16T13:17:45+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
+    "document_type": "employment_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-employment_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3748,
+    "title": "Mr P Benson v The Trampery (Peckham) Ltd and The Trampery Foundation Ltd: 6007747/2025",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/mr-p-benson-v-the-trampery-peckham-ltd-and-the-trampery-foundation-ltd-6007747-slash-2025",
+    "published_at": "2026-10-16T13:05:19+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
+    "document_type": "employment_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-employment_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3749,
+    "title": "Mr S Moullef v New Life Balance Ltd: 6013877/2024",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/mr-s-moullef-v-new-life-balance-ltd-6013877-slash-2024",
+    "published_at": "2026-10-16T13:03:19+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
+    "document_type": "employment_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-employment_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3750,
+    "title": "Ms R Kaur v Schab Ltd: 6047824/2025",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/ms-r-kaur-v-schab-ltd-6047824-slash-2025",
+    "published_at": "2026-10-16T13:01:36+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
+    "document_type": "employment_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-employment_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3751,
+    "title": "T Hughes v SimplyStay 103 Ltd: 6002083/2026",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/t-hughes-v-simplystay-103-ltd-6002083-slash-2026",
+    "published_at": "2026-10-16T12:08:32+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
+    "document_type": "employment_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-employment_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3752,
+    "title": "Ms K Janowska v GXO Logistics UK Ltd: 6038527/2025",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/ms-k-janowska-v-gxo-logistics-uk-ltd-6038527-slash-2025",
+    "published_at": "2026-10-16T12:06:20+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
+    "document_type": "employment_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-employment_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3753,
+    "title": "Ms M Purewal v Parravox Ltd (In Voluntary Liquidation): 6005472/2024",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/ms-m-purewal-v-parravox-ltd-in-voluntary-liquidation-6005472-slash-2024",
+    "published_at": "2026-10-16T12:03:23+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
+    "document_type": "employment_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-employment_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3754,
+    "title": "Mr A Bocsor v Creative Foods Europe Ltd: 6005758/2024",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/mr-a-bocsor-v-creative-foods-europe-ltd-6005758-slash-2024",
+    "published_at": "2026-10-16T11:58:11+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
+    "document_type": "employment_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-employment_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3755,
+    "title": "Mr R Goll v Nottingham City Council: 2601536/2024",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/mr-r-goll-v-nottingham-city-council-2601536-slash-2024",
+    "published_at": "2026-10-16T11:53:51+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
+    "document_type": "employment_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-employment_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3756,
+    "title": "O Antwi-Buasiako v Kinetic-ID Ltd: 6016720/2026",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/o-antwi-buasiako-v-kinetic-id-ltd-6016720-slash-2026",
+    "published_at": "2026-10-16T11:43:39+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
+    "document_type": "employment_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-employment_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3757,
+    "title": "Mr T El-Tawil v AECOM Ltd and Heathrow Airport Ltd: 3312385/2023",
+    "url": "https://www.gov.uk/employment-tribunal-decisions/mr-t-el-tawil-v-aecom-ltd-and-heathrow-airport-ltd-3312385-slash-2023",
+    "published_at": "2026-10-16T11:41:22+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Employment Tribunal",
+    "document_type": "employment_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-employment_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3758,
+    "title": "191 Meir Road, Normacot, Stoke-on-Trent, Staffordshire, ST3 7JF : BIR/00GL/F77/2025/0036",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/191-meir-road-normacot-stoke-on-trent-staffordshire-st3-7jf-bir-slash-00gl-slash-f77-slash-2025-slash-0036",
+    "published_at": "2026-10-16T15:32:41+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3759,
+    "title": "39 Radford Avenue Kidderminster DY10 2ES : BIR/00CR/MNR/2026/0035",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/39-radford-avenue-kidderminster-dy10-2es-bir-slash-00cr-slash-mnr-slash-2026-slash-0035",
+    "published_at": "2026-10-16T15:31:30+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3760,
+    "title": "21 Cheswardine Lane Norton Shifnal TF11 9EQ : BIR/00GG/F77/2026/0009",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/21-cheswardine-lane-norton-shifnal-tf11-9eq-bir-slash-00gg-slash-f77-slash-2026-slash-0009",
+    "published_at": "2026-10-16T15:30:11+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3761,
+    "title": "14 Kingfisher, Wilnecote, Tamworth, B77 5NZ: BIR/41UK/OAF/2026/0001, BIR/41UK/OC6/2026/0002",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/14-kingfisher-wilnecote-tamworth-b77-5nz-bir-slash-41uk-slash-oaf-slash-2026-slash-0001-bir-slash-41uk-slash-oc6-slash-2026-slash-0002",
+    "published_at": "2026-10-16T15:28:48+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3762,
+    "title": "21 Triangle Building, Wolverton Park Road, Wolverton, Milton Keynes, MK12 5FJ: CAM/00MG/MRA/2026/0072",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/21-triangle-building-wolverton-park-road-wolverton-milton-keynes-mk12-5fj-cam-slash-00mg-slash-mra-slash-2026-slash-0072",
+    "published_at": "2026-10-16T15:21:03+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3763,
+    "title": "3 Fusion Way, Darlaston, Wednesbury, WS10 8WB: BIR/00CU/MNR/2025/0728",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/3-fusion-way-darlaston-wednesbury-ws10-8wb-bir-slash-00cu-slash-mnr-slash-2025-slash-0728",
+    "published_at": "2026-10-16T14:21:45+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3764,
+    "title": "Flat 2, 44 Lower High St., Wednesbury, WS10 7AQ: BIR/00CS/MRA/2026/0017",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/flat-2-44-lower-high-st-dot-wednesbury-ws10-7aq-bir-slash-00cs-slash-mra-slash-2026-slash-0017",
+    "published_at": "2026-10-16T14:02:28+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3765,
+    "title": "18 Halesby Court, 2 Laurel Lane, Halesowen, B63 3DG:BIR/00CR/MNR/2026/0001",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/18-halesby-court-2-laurel-lane-halesowen-b63-3dg-bir-slash-00cr-slash-mnr-slash-2026-slash-0001",
+    "published_at": "2026-10-16T14:00:03+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3766,
+    "title": "15 Grosvenor Road, Harborne, Birmingham, West Midlands, B17 9AL: BIR/00CN/MRA/2026/0025",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/15-grosvenor-road-harborne-birmingham-west-midlands-b17-9al-bir-slash-00cn-slash-mra-slash-2026-slash-0025",
+    "published_at": "2026-10-16T13:59:09+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3767,
+    "title": "7 Somery Road, Birmingham, B29 5RY:BIR/00CN/MNR/2026/0159",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/7-somery-road-birmingham-b29-5ry-bir-slash-00cn-slash-mnr-slash-2026-slash-0159",
+    "published_at": "2026-10-16T13:58:27+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3768,
+    "title": "215 Yardley Fields Road Birmingham B33 8RN: BIR/00CN/MNR/2026/0003",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/215-yardley-fields-road-birmingham-b33-8rn-bir-slash-00cn-slash-mnr-slash-2026-slash-0003",
+    "published_at": "2026-10-16T13:57:33+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3769,
+    "title": "Flat 2, 3 Anderton Rd., Sparkbrook, Birmingham, B11 1LZ: BIR/00CN/MNR/2026/0002",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/flat-2-3-anderton-rd-dot-sparkbrook-birmingham-b11-1lz-bir-slash-00cn-slash-mnr-slash-2026-slash-0002",
+    "published_at": "2026-10-16T13:56:45+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3770,
+    "title": "2 Carter Close, Manchester M34 6AH:MAN/00BT/MNR/2026/0188:Relisted",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/2-carter-close-manchester-m34-6ah-man-slash-00bt-slash-mnr-slash-2026-slash-0188-relisted",
+    "published_at": "2026-10-16T13:50:33+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3771,
+    "title": "57 Liner House, Royal Wharf, London E16 2SJ: LON/00BB/MRA/2026/0049",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/57-liner-house-royal-wharf-london-e16-2sj-lon-slash-00bb-slash-mra-slash-2026-slash-0049",
+    "published_at": "2026-10-16T13:48:23+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3772,
+    "title": "Flat 72, Beaufort Park, London NW11 6BX: LON/00AC/LSC/2025/0930",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/flat-72-beaufort-park-london-nw11-6bx-lon-slash-00ac-slash-lsc-slash-2025-slash-0930",
+    "published_at": "2026-10-16T13:12:50+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3773,
+    "title": "Flat 17, 18 Friend St., London EC1V 7NS: LON/00AU/MNR/2026/0375",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/flat-17-18-friend-st-dot-london-ec1v-7ns-lon-slash-00au-slash-mnr-slash-2026-slash-0375",
+    "published_at": "2026-10-16T12:55:22+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3774,
+    "title": "4 The Bay, 39 Crowstone Avenue, Westcliff On Sea, Essex, SS0 8FQ : CAM/22UM/MNR/2026/0056 Relisted",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/4-the-bay-39-crowstone-avenue-westcliff-on-sea-essex-ss0-8fq-cam-slash-22um-slash-mnr-slash-2026-slash-0056-relisted",
+    "published_at": "2026-10-16T12:53:24+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3775,
+    "title": "Flat 3, 76 Coniston Road, London, N10 2BN: LON/00AP/MRA/2026/0104",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/flat-3-76-coniston-road-london-n10-2bn-lon-slash-00ap-slash-mra-slash-2026-slash-0104",
+    "published_at": "2026-10-16T12:45:11+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3776,
+    "title": "148 Forest Road, Mansfield NG18 4BU: BIR/37UF/MNR/2026/0053",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/148-forest-road-mansfield-ng18-4bu-bir-slash-37uf-slash-mnr-slash-2026-slash-0053",
+    "published_at": "2026-10-16T12:41:50+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3777,
+    "title": "95 Harrison Street, Bloxwich, Walsall, WS3 3HN: BIR/00CU/MNR/2026/0114",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/95-harrison-street-bloxwich-walsall-ws3-3hn-bir-slash-00cu-slash-mnr-slash-2026-slash-0114",
+    "published_at": "2026-10-16T12:40:37+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3778,
+    "title": "15 Thistle Way, West Bromwich, B71 3PB: BIR/00CS/MNR/2026/0125",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/15-thistle-way-west-bromwich-b71-3pb-bir-slash-00cs-slash-mnr-slash-2026-slash-0125",
+    "published_at": "2026-10-16T12:39:13+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3779,
+    "title": "Flat 5, 146 Middleton Hall Road, Birmingham, B30 1DN: BIR/00CN/MNR/2026/0111",
+    "url": "https://www.gov.uk/residential-property-tribunal-decisions/flat-5-146-middleton-hall-road-birmingham-b30-1dn-bir-slash-00cn-slash-mnr-slash-2026-slash-0111",
+    "published_at": "2026-10-16T12:34:27+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; First-tier Tribunal (Property Chamber)",
+    "document_type": "residential_property_tribunal_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-residential_property_tribunal_decision"
+    ]
+  },
+  {
+    "n": 3780,
+    "title": "Denbighshire County Council v Mr & Mrs AB (SEN): [2026] UKUT 376 (AAC)",
+    "url": "https://www.gov.uk/administrative-appeals-tribunal-decisions/denbighshire-county-council-v-mr-and-mrs-ab-sen-2026-ukut-376-aac",
+    "published_at": "2026-10-16T11:46:23+00:00",
+    "official_issuer": "HM Courts & Tribunals Service; Upper Tribunal (Administrative Appeals Chamber)",
+    "document_type": "utaac_decision",
+    "document_stage": "judicial_decision_published",
+    "source_ids": [
+      "uk-govuk-utaac_decision"
+    ]
+  },
+  {
+    "n": 3781,
+    "title": "Nova Biomedical StatStrip ketone test strips: risk of disruption to blood ketone testing due to quality-control failures and supply interruption DSI/2026/013",
+    "url": "https://www.gov.uk/drug-device-alerts/nova-biomedical-statstrip-ketone-test-strips-risk-of-disruption-to-blood-ketone-testing-due-to-quality-control-failures-and-supply-interruption-dsi-slash-2026-slash-013",
+    "published_at": "2026-10-16T15:29:11+00:00",
+    "official_issuer": "Medicines and Healthcare products Regulatory Agency",
+    "document_type": "medical_safety_alert",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-govuk-medical_safety_alert"
+    ]
+  },
+  {
+    "n": 3782,
+    "title": "Field Safety Notices: 27 to 31 January 2025",
+    "url": "https://www.gov.uk/drug-device-alerts/field-safety-notices-27-to-31-january-2025",
+    "published_at": "2026-10-16T14:55:27+00:00",
+    "official_issuer": "Medicines and Healthcare products Regulatory Agency",
+    "document_type": "medical_safety_alert",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-govuk-medical_safety_alert"
+    ]
+  },
+  {
+    "n": 3783,
+    "title": "Impact Economy Advisory Council: Expressions of Interest",
+    "url": "https://www.gov.uk/government/publications/impact-economy-advisory-council-expressions-of-interest",
+    "published_at": "2026-10-16T14:18:54+00:00",
+    "official_issuer": "Cabinet Office",
+    "document_type": "notice",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-govuk-notice"
+    ]
+  },
+  {
+    "n": 3784,
+    "title": "S. Hrg. 119-424 - THE PRESIDENT'S BUDGET REQUEST FOR THE U.S. FOREST SERVICE FOR FISCAL YEAR 2027",
+    "url": "https://www.govinfo.gov/app/details/CHRG-119shrg63886",
+    "published_at": "2026-10-16T14:04:00+00:00",
+    "official_issuer": "Congressional Hearings",
+    "document_type": "hearing_record",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-govinfo-chrg"
+    ]
+  },
+  {
+    "n": 3785,
+    "title": "S. Hrg. 119-418 - THE ADMINISTRATION'S DEPLOYMENT OF THE NATIONAL GUARD ACROSS THE UNITED STATES",
+    "url": "https://www.govinfo.gov/app/details/CHRG-119shrg63842",
+    "published_at": "2026-10-16T14:10:00+00:00",
+    "official_issuer": "Congressional Hearings",
+    "document_type": "hearing_record",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-govinfo-chrg"
+    ]
+  },
+  {
+    "n": 3786,
+    "title": "S. Hrg. 119-96 - FUELING AMERICA'S MANUFACTURING COMEBACK",
+    "url": "https://www.govinfo.gov/app/details/CHRG-119shrg60614",
+    "published_at": "2026-10-16T15:32:00+00:00",
+    "official_issuer": "Congressional Hearings",
+    "document_type": "hearing_record",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-govinfo-chrg"
+    ]
+  },
+  {
+    "n": 3787,
+    "title": "S. Hrg. 119-109 - OPEN HEARING: THE 2025 ANNUAL THREAT ASSESSMENT OF THE U.S. INTELLIGENCE COMMUNITY",
+    "url": "https://www.govinfo.gov/app/details/CHRG-119shrg60885",
+    "published_at": "2026-10-16T15:32:00+00:00",
+    "official_issuer": "Congressional Hearings",
+    "document_type": "hearing_record",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-govinfo-chrg"
+    ]
+  },
+  {
+    "n": 3788,
+    "title": "S. Hrg. 119-432 - BLOWING THE WHISTLE: INSIDE THE GRIFT THAT KEEPS GIVING",
+    "url": "https://www.govinfo.gov/app/details/CHRG-119shrg63971",
+    "published_at": "2026-10-16T15:37:00+00:00",
+    "official_issuer": "Congressional Hearings",
+    "document_type": "hearing_record",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-govinfo-chrg"
+    ]
+  },
+  {
+    "n": 3789,
+    "title": "Issuance of Amended Venezuela-related General License and Frequently Asked Question",
+    "url": "https://ofac.treasury.gov/recent-actions/20261016",
+    "published_at": "2026-10-16T00:00:00+00:00",
+    "official_issuer": "Treasury Office of Foreign Assets Control",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "eu-ecb-4f9670887c"
+      "us-ofac-index"
     ]
   },
   {
-    "n": 3724,
-    "title": "Human medicines European public assessment report (EPAR): Stelara, ustekinumab, Date of authorisation: 16/01/2009, Revision: 54, Status: Authorised",
-    "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/stelara",
-    "published_at": "2026-10-16T11:10:00+00:00",
+    "n": 3790,
+    "title": "Federal Reserve Board announces termination of enforcement actions with Gardner Bancshares, Inc. and Small Business Bank",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261016a.htm",
+    "published_at": "2026-10-16T15:00:00+00:00",
+    "official_issuer": "Federal Reserve Board",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fed-7cfba7c4ca",
+      "us-fed-97656cefc7"
+    ]
+  },
+  {
+    "n": 3791,
+    "title": "What You Should Know about Eye Drops",
+    "url": "http://www.fda.gov/drugs/buying-using-medicine-safely/what-you-should-know-about-eye-drops",
+    "published_at": "2026-10-16T15:05:42+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 3792,
+    "title": "Counterfeit Medicine",
+    "url": "http://www.fda.gov/drugs/buying-using-medicine-safely/counterfeit-medicine",
+    "published_at": "2026-10-16T15:02:57+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 3793,
+    "title": "Counterfeit Versions of Eye Drops Found in Several States",
+    "url": "http://www.fda.gov/drugs/counterfeit-medicine/counterfeit-versions-eye-drops-found-several-states",
+    "published_at": "2026-10-16T15:01:18+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 3794,
+    "title": "FDA Approves New Nonprescription Eye Drop for Relief of Eye Redness",
+    "url": "http://www.fda.gov/drugs/drug-alerts-and-statements/fda-approves-new-nonprescription-eye-drop-relief-eye-redness",
+    "published_at": "2026-10-16T14:18:56+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 3795,
+    "title": "CDER Exclusivity Board",
+    "url": "http://www.fda.gov/drugs/development-approval-process-drugs/cder-exclusivity-board",
+    "published_at": "2026-10-16T13:33:00+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Drugs",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "n": 3796,
+    "title": "eSubmitter Application History",
+    "url": "http://www.fda.gov/industry/fda-esubmitter/esubmitter-application-history",
+    "published_at": "2026-10-16T15:10:31+00:00",
+    "official_issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-fda-03f7703006"
+    ]
+  },
+  {
+    "n": 3798,
+    "title": "Summary of NLRB Decisions for Week of October 5 - 9, 2026",
+    "url": "https://www.nlrb.gov/cases-decisions/weekly-summaries-decisions/summary-of-nlrb-decisions-for-week-of-october-5-9-2026",
+    "published_at": "2026-10-16T12:43:36+00:00",
+    "official_issuer": "National Labor Relations Board — https://www.nlrb.gov/rss/rssWeeklySummaries.xml",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-nlrb-7c63020d7d"
+    ]
+  },
+  {
+    "n": 3799,
+    "title": "Speech by Executive Vice-President Teresa Ribera at 17th Conference of the Parties to the United Nations Convention on Biological Diversity (COP17)",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2191",
+    "published_at": "2026-10-16T11:40:48+00:00",
+    "official_issuer": "European Commission press and decisions",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  },
+  {
+    "n": 3800,
+    "title": "Contract Award Notice: ECB - PRO-2451404827 - Learning and development in the fields of data, digital and AI skills (708327-2026)",
+    "url": "https://www.ecb.europa.eu//ecb/jobsproc/proc/pdf/2026-OJS199-00708327-en.pdf",
+    "published_at": "2026-10-15T22:00:00+00:00",
+    "official_issuer": "European Central Bank — Open procurements, award notices and lists of suppliers",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-cafc483f64"
+    ]
+  },
+  {
+    "n": 3801,
+    "title": "3.4822 ILS = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-ils.en.html?date=2026-10-16&rate=3.4822",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — ILS",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-979ffc2de9"
+    ]
+  },
+  {
+    "n": 3802,
+    "title": "1.1253 USD = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-usd.en.html?date=2026-10-16&rate=1.1253",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — US dollar (USD)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-6121eb3020"
+    ]
+  },
+  {
+    "n": 3803,
+    "title": "177.82 JPY = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-jpy.en.html?date=2026-10-16&rate=177.82",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Japanese yen (JPY)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-85c3cc3f5a"
+    ]
+  },
+  {
+    "n": 3804,
+    "title": "24.323 CZK = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-czk.en.html?date=2026-10-16&rate=24.323",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Czech koruna (CZK)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-26502289d9"
+    ]
+  },
+  {
+    "n": 3805,
+    "title": "7.4748 DKK = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-dkk.en.html?date=2026-10-16&rate=7.4748",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Danish krone (DKK)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-8f92068385"
+    ]
+  },
+  {
+    "n": 3806,
+    "title": "0.84385 GBP = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-gbp.en.html?date=2026-10-16&rate=0.84385",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Pound sterling (GBP)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-4d2cc73821"
+    ]
+  },
+  {
+    "n": 3807,
+    "title": "363.08 HUF = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-huf.en.html?date=2026-10-16&rate=363.08",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Hungarian forint (HUF)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-c2f5d63fc9"
+    ]
+  },
+  {
+    "n": 3808,
+    "title": "4.3700 PLN = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-pln.en.html?date=2026-10-16&rate=4.3700",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Polish zloty (PLN)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-30700a4603"
+    ]
+  },
+  {
+    "n": 3809,
+    "title": "5.3310 RON = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-ron.en.html?date=2026-10-16&rate=5.3310",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Romanian leu (RON)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-f26751700f"
+    ]
+  },
+  {
+    "n": 3810,
+    "title": "11.1450 SEK = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-sek.en.html?date=2026-10-16&rate=11.1450",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Swedish krona (SEK)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-4eb0767a7d"
+    ]
+  },
+  {
+    "n": 3811,
+    "title": "0.9272 CHF = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-chf.en.html?date=2026-10-16&rate=0.9272",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Swiss franc (CHF)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-f48045fce4"
+    ]
+  },
+  {
+    "n": 3812,
+    "title": "136.20 ISK = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-isk.en.html?date=2026-10-16&rate=136.20",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Icelandic krona (ISK)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-e7c9b75e80"
+    ]
+  },
+  {
+    "n": 3813,
+    "title": "10.6240 NOK = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-nok.en.html?date=2026-10-16&rate=10.6240",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Norwegian krone (NOK)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-1421b01f8f"
+    ]
+  },
+  {
+    "n": 3814,
+    "title": "55.7328 TRY = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-try.en.html?date=2026-10-16&rate=55.7328",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Turkish lira (TRY)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-f5c7581ef5"
+    ]
+  },
+  {
+    "n": 3815,
+    "title": "1.6171 AUD = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-aud.en.html?date=2026-10-16&rate=1.6171",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Australian dollar (AUD)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-28312ab8d0"
+    ]
+  },
+  {
+    "n": 3816,
+    "title": "5.7197 BRL = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-brl.en.html?date=2026-10-16&rate=5.7197",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Brasilian real (BRL)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-bda14b919b"
+    ]
+  },
+  {
+    "n": 3817,
+    "title": "1.5935 CAD = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-cad.en.html?date=2026-10-16&rate=1.5935",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Canadian dollar (CAD)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-3c063802c7"
+    ]
+  },
+  {
+    "n": 3818,
+    "title": "7.5240 CNY = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-cny.en.html?date=2026-10-16&rate=7.5240",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Chinese yuan renminbi (CNY)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-5dd335b83a"
+    ]
+  },
+  {
+    "n": 3819,
+    "title": "8.8316 HKD = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-hkd.en.html?date=2026-10-16&rate=8.8316",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Hong Kong dollar (HKD)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-7713561ea7"
+    ]
+  },
+  {
+    "n": 3820,
+    "title": "20290.28 IDR = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-idr.en.html?date=2026-10-16&rate=20290.28",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Indonesian rupiah (IDR)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-2b24035e06"
+    ]
+  },
+  {
+    "n": 3821,
+    "title": "106.8640 INR = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-inr.en.html?date=2026-10-16&rate=106.8640",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Indian rupee (INR)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-ec2f3b3dac"
+    ]
+  },
+  {
+    "n": 3822,
+    "title": "1499.01 KRW = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-krw.en.html?date=2026-10-16&rate=1499.01",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — South Korean won (KRW)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-ba01d5df1a"
+    ]
+  },
+  {
+    "n": 3823,
+    "title": "20.6871 MXN = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-mxn.en.html?date=2026-10-16&rate=20.6871",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Mexican peso (MXN)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-4d7de85468"
+    ]
+  },
+  {
+    "n": 3824,
+    "title": "4.5929 MYR = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-myr.en.html?date=2026-10-16&rate=4.5929",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Malaysian ringgit (MYR)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-c2c98aa44f"
+    ]
+  },
+  {
+    "n": 3825,
+    "title": "1.9868 NZD = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-nzd.en.html?date=2026-10-16&rate=1.9868",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — New Zealand dollar (NZD)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-01c16597d0"
+    ]
+  },
+  {
+    "n": 3826,
+    "title": "70.858 PHP = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-php.en.html?date=2026-10-16&rate=70.858",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Philippine peso (PHP)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-fab767a85a"
+    ]
+  },
+  {
+    "n": 3827,
+    "title": "1.4395 SGD = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-sgd.en.html?date=2026-10-16&rate=1.4395",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Singapore dollar (SGD)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-f3641b3969"
+    ]
+  },
+  {
+    "n": 3828,
+    "title": "37.602 THB = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-thb.en.html?date=2026-10-16&rate=37.602",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — Thai baht (THB)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-d7a740fdf6"
+    ]
+  },
+  {
+    "n": 3829,
+    "title": "18.4930 ZAR = 1 EUR 2026-10-16 ECB Reference rate",
+    "url": "http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-zar.en.html?date=2026-10-16&rate=18.4930",
+    "published_at": "2026-10-16T13:15:00+00:00",
+    "official_issuer": "European Central Bank — South African rand (ZAR)",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-cbc45e359d"
+    ]
+  },
+  {
+    "n": 3831,
+    "title": "Human medicines European public assessment report (EPAR): Padcev, enfortumab vedotin, Date of authorisation: 13/04/2022, Revision: 11, Status: Authorised",
+    "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/padcev",
+    "published_at": "2026-10-16T15:05:00+00:00",
     "official_issuer": "European Medicines Agency",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -156,10 +1165,10 @@
     ]
   },
   {
-    "n": 3725,
-    "title": "Human medicines European public assessment report (EPAR): Idelvion, albutrepenonacog alfa, Date of authorisation: 11/05/2016, Revision: 14, Status: Authorised",
-    "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/idelvion",
-    "published_at": "2026-10-16T11:05:00+00:00",
+    "n": 3832,
+    "title": "Human medicines European public assessment report (EPAR): Cibinqo, abrocitinib, Date of authorisation: 09/12/2021, Revision: 21, Status: Authorised",
+    "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/cibinqo",
+    "published_at": "2026-10-16T14:15:00+00:00",
     "official_issuer": "European Medicines Agency",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -168,10 +1177,10 @@
     ]
   },
   {
-    "n": 3726,
-    "title": "Human medicines European public assessment report (EPAR): Remicade, infliximab, Date of authorisation: 13/08/1999, Revision: 70, Status: Authorised",
-    "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/remicade",
-    "published_at": "2026-10-16T10:58:00+00:00",
+    "n": 3833,
+    "title": "Human medicines European public assessment report (EPAR): Idefirix, imlifidase, Date of authorisation: 25/08/2020, Revision: 11, Status: Authorised",
+    "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/idefirix",
+    "published_at": "2026-10-16T14:02:00+00:00",
     "official_issuer": "European Medicines Agency",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
@@ -180,9 +1189,177 @@
     ]
   },
   {
-    "n": 3727,
-    "title": "Fairmead Insurance Limited & Ors, Re",
-    "url": "https://caselaw.nationalarchives.gov.uk/ewhc/bp/2026/2644",
+    "n": 3834,
+    "title": "Human medicines European public assessment report (EPAR): Plegridy, peginterferon beta-1a, Date of authorisation: 18/07/2014, Revision: 31, Status: Authorised",
+    "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/plegridy",
+    "published_at": "2026-10-16T13:47:00+00:00",
+    "official_issuer": "European Medicines Agency",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ema-37acbafcb0"
+    ]
+  },
+  {
+    "n": 3835,
+    "title": "Human medicines European public assessment report (EPAR): HyQvia, human normal immunoglobulin, Date of authorisation: 16/05/2013, Revision: 27, Status: Authorised",
+    "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/hyqvia",
+    "published_at": "2026-10-16T13:33:00+00:00",
+    "official_issuer": "European Medicines Agency",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ema-37acbafcb0"
+    ]
+  },
+  {
+    "n": 3836,
+    "title": "Human medicines European public assessment report (EPAR): Ocrevus, ocrelizumab, Date of authorisation: 08/01/2018, Revision: 28, Status: Authorised",
+    "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/ocrevus",
+    "published_at": "2026-10-16T13:20:00+00:00",
+    "official_issuer": "European Medicines Agency",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ema-37acbafcb0"
+    ]
+  },
+  {
+    "n": 3837,
+    "title": "Agenda - Medicine Shortages SPOC Working Party meeting 13-14 October 2026",
+    "url": "https://www.ema.europa.eu/system/files/documents/agenda/agenda-medicine-shortages-spoc-working-party-meeting-13-14-october-2026-en_0.pdf",
+    "published_at": "2026-10-16T13:10:00+00:00",
+    "official_issuer": "European Medicines Agency",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ema-37acbafcb0"
+    ]
+  },
+  {
+    "n": 3838,
+    "title": "Human medicines European public assessment report (EPAR): Saphnelo, anifrolumab, Date of authorisation: 14/02/2022, Revision: 12, Status: Authorised",
+    "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/saphnelo",
+    "published_at": "2026-10-16T13:00:00+00:00",
+    "official_issuer": "European Medicines Agency",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ema-37acbafcb0"
+    ]
+  },
+  {
+    "n": 3839,
+    "title": "Timetable: Safety signal - Assessment of responses to request for supplementary information (RSI)",
+    "url": "https://www.ema.europa.eu/system/files/documents/other/timetable-safety-signal-en_0.xlsx",
+    "published_at": "2026-10-16T12:48:00+00:00",
+    "official_issuer": "European Medicines Agency",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ema-37acbafcb0"
+    ]
+  },
+  {
+    "n": 3840,
+    "title": "Timetable: Safety signal - Assessment of responses to request for supplementary information (RSI) - ATMP",
+    "url": "https://www.ema.europa.eu/system/files/documents/other/timetable-safety-signal-atmp-en_0.xlsx",
+    "published_at": "2026-10-16T12:46:00+00:00",
+    "official_issuer": "European Medicines Agency",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ema-37acbafcb0"
+    ]
+  },
+  {
+    "n": 3841,
+    "title": "Human medicines European public assessment report (EPAR): Afstyla, lonoctocog alfa, Date of authorisation: 04/01/2017, Revision: 13, Status: Authorised",
+    "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/afstyla",
+    "published_at": "2026-10-16T12:40:00+00:00",
+    "official_issuer": "European Medicines Agency",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ema-37acbafcb0"
+    ]
+  },
+  {
+    "n": 3842,
+    "title": "CHMP PROM minutes for the meeting on 1 December 2025",
+    "url": "https://www.ema.europa.eu/system/files/documents/minutes/prom-minutes-01-december-2025-en.pdf",
+    "published_at": "2026-10-16T12:16:30+00:00",
+    "official_issuer": "European Medicines Agency",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ema-37acbafcb0"
+    ]
+  },
+  {
+    "n": 3843,
+    "title": "The Scotland Act 1998 (Specification of Functions and Transfer of Property etc.) (Amendment) Order 2026",
+    "url": "http://www.legislation.gov.uk/uksi/2026/1095/made",
+    "published_at": "2026-10-16T14:59:34.647452+00:00",
+    "official_issuer": "UK legislation",
+    "document_type": "legislation_document",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-legislation-82947c2f93"
+    ]
+  },
+  {
+    "n": 3844,
+    "title": "The Scottish Administration (Offices) Order 2026",
+    "url": "http://www.legislation.gov.uk/uksi/2026/1097/made",
+    "published_at": "2026-10-16T14:08:30.794449+00:00",
+    "official_issuer": "UK legislation",
+    "document_type": "legislation_document",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-legislation-82947c2f93"
+    ]
+  },
+  {
+    "n": 3845,
+    "title": "The School Teachers’ Pay and Conditions (England) Order 2026",
+    "url": "http://www.legislation.gov.uk/uksi/2026/1096/made",
+    "published_at": "2026-10-16T14:08:21.025034+00:00",
+    "official_issuer": "UK legislation",
+    "document_type": "legislation_document",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-legislation-82947c2f93"
+    ]
+  },
+  {
+    "n": 3846,
+    "title": "The Tribunal Procedure (Upper Tribunal) (Amendment) Rules 2026",
+    "url": "http://www.legislation.gov.uk/uksi/2026/1084/made",
+    "published_at": "2026-10-16T14:08:10.917090+00:00",
+    "official_issuer": "UK legislation",
+    "document_type": "legislation_document",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-legislation-82947c2f93"
+    ]
+  },
+  {
+    "n": 3847,
+    "title": "Correction slip",
+    "url": "http://www.legislation.gov.uk/wsi/2026/12/pdfs/wsics_20260012_mi_001.pdf",
+    "published_at": "2026-10-15T23:00:00+00:00",
+    "official_issuer": "UK legislation",
+    "document_type": "legislation_document",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-legislation-82947c2f93"
+    ]
+  },
+  {
+    "n": 3848,
+    "title": "KT v The Secretary of State for the Home Department",
+    "url": "https://caselaw.nationalarchives.gov.uk/tna.ynt379vg",
     "published_at": "2026-10-16T00:00:00+00:00",
     "official_issuer": "The National Archives Find Case Law",
     "document_type": "official_announcement",
@@ -192,9 +1369,9 @@
     ]
   },
   {
-    "n": 3728,
-    "title": "Stor RB One Ltd v Sripiragash Kanthasamy",
-    "url": "https://caselaw.nationalarchives.gov.uk/ewhc/comm/2026/2625",
+    "n": 3849,
+    "title": "Shanaz Begum v Registrar of Approved Driving Instructors",
+    "url": "https://caselaw.nationalarchives.gov.uk/ukftt/grc/2026/1420",
     "published_at": "2026-10-16T00:00:00+00:00",
     "official_issuer": "The National Archives Find Case Law",
     "document_type": "official_announcement",
@@ -204,9 +1381,9 @@
     ]
   },
   {
-    "n": 3729,
-    "title": "Amber Construction Services Limited v Ilyrian Construction Ltd",
-    "url": "https://caselaw.nationalarchives.gov.uk/ewhc/bp/2026/2603",
+    "n": 3850,
+    "title": "R v Christopher Hindley",
+    "url": "https://caselaw.nationalarchives.gov.uk/ewca/crim/2026/1336",
     "published_at": "2026-10-16T00:00:00+00:00",
     "official_issuer": "The National Archives Find Case Law",
     "document_type": "official_announcement",
@@ -216,9 +1393,9 @@
     ]
   },
   {
-    "n": 3730,
-    "title": "EXR, R (on the application of) Secretary of State for the Home Department (No 3)",
-    "url": "https://caselaw.nationalarchives.gov.uk/ewhc/admin/2026/2527",
+    "n": 3851,
+    "title": "Samuel Badzo v The Secretary of State for the Home Department",
+    "url": "https://caselaw.nationalarchives.gov.uk/tna.2vs53hq4",
     "published_at": "2026-10-16T00:00:00+00:00",
     "official_issuer": "The National Archives Find Case Law",
     "document_type": "official_announcement",
@@ -228,27 +1405,275 @@
     ]
   },
   {
-    "n": 3731,
-    "title": "Banknote imagery advisory group minutes – 15 July 2026",
-    "url": "https://www.bankofengland.co.uk/minutes/2026/july/banknote-advisory-minutes-15-july",
-    "published_at": "2026-10-16T11:00:00+00:00",
-    "official_issuer": "Bank of England",
+    "n": 3852,
+    "title": "Victoria Vilciu v The Secretary of State for the Home Department",
+    "url": "https://caselaw.nationalarchives.gov.uk/tna.h8q4vyr2",
+    "published_at": "2026-10-16T00:00:00+00:00",
+    "official_issuer": "The National Archives Find Case Law",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "uk-boe-4feb372611"
+      "uk-case-law-5170d5905a"
     ]
   },
   {
-    "n": 3732,
-    "title": "SFC welcomes re-appointment of Non-Executive Directors",
-    "url": "https://apps.sfc.hk/edistributionWeb/gateway/EN/news-and-announcements/news/doc?refNo=26PR172",
-    "published_at": "2026-10-16T10:51:59+00:00",
-    "official_issuer": "Hong Kong Securities and Futures Commission",
+    "n": 3853,
+    "title": "Craig Shingfield v The Registrar of Approved Driving Instructors",
+    "url": "https://caselaw.nationalarchives.gov.uk/ukftt/grc/2026/1421",
+    "published_at": "2026-10-16T00:00:00+00:00",
+    "official_issuer": "The National Archives Find Case Law",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "hk-sfc-ce1a9d1743"
+      "uk-case-law-5170d5905a"
+    ]
+  },
+  {
+    "n": 3854,
+    "title": "3Kings Holdings Limited v TCF 1 GP Limited",
+    "url": "https://caselaw.nationalarchives.gov.uk/ewhc/bp/2026/2620",
+    "published_at": "2026-10-16T00:00:00+00:00",
+    "official_issuer": "The National Archives Find Case Law",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-case-law-5170d5905a"
+    ]
+  },
+  {
+    "n": 3855,
+    "title": "FK & Ors v The Secretary of State for the Home Department",
+    "url": "https://caselaw.nationalarchives.gov.uk/tna.vp7z28np",
+    "published_at": "2026-10-16T00:00:00+00:00",
+    "official_issuer": "The National Archives Find Case Law",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-case-law-5170d5905a"
+    ]
+  },
+  {
+    "n": 3856,
+    "title": "DG v The Secretary of State for the Home Department",
+    "url": "https://caselaw.nationalarchives.gov.uk/tna.qrndntn2",
+    "published_at": "2026-10-16T00:00:00+00:00",
+    "official_issuer": "The National Archives Find Case Law",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "uk-case-law-5170d5905a"
+    ]
+  },
+  {
+    "n": 3857,
+    "title": "The Bank of Canada releases the third quarter issues of the Business Outlook Survey and the Canadian Survey of Consumer Expectations",
+    "url": "https://www.bankofcanada.ca/2026/10/the-bank-of-canada-releases-the-third-quarter-issues-of-the-business-outlook-survey-and-the-canadian-survey-of-consumer-expectations/",
+    "published_at": "2026-10-16T11:00:48+00:00",
+    "official_issuer": "Bank of Canada — Press",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "ca-boc-30d6d14378",
+      "ca-boc-a4af151f89"
+    ]
+  },
+  {
+    "n": 3858,
+    "title": "Canada’s Cross-Border Carry Trade",
+    "url": "https://www.bankofcanada.ca/2026/10/staff-analytical-paper-2026-54/",
+    "published_at": "2026-10-16T12:10:45+00:00",
+    "official_issuer": "Bank of Canada — Research",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "ca-boc-7b07e406da",
+      "ca-boc-a5cb9e38c1"
+    ]
+  },
+  {
+    "n": 3859,
+    "title": "Conduct of Monetary Policy under Housing Market Imbalances",
+    "url": "https://www.bankofcanada.ca/2026/10/staff-analytical-paper-2026-53/",
+    "published_at": "2026-10-16T12:08:22+00:00",
+    "official_issuer": "Bank of Canada — Research",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "ca-boc-7b07e406da",
+      "ca-boc-a5cb9e38c1"
+    ]
+  },
+  {
+    "n": 3860,
+    "title": "Demand roars, supply whispers: Monetary policy and housing in Canada",
+    "url": "https://www.bankofcanada.ca/2026/10/staff-analytical-paper-2026-52/",
+    "published_at": "2026-10-16T12:06:47+00:00",
+    "official_issuer": "Bank of Canada — Research",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "ca-boc-7b07e406da",
+      "ca-boc-a5cb9e38c1"
+    ]
+  },
+  {
+    "n": 3861,
+    "title": "Auction Timing Under Limited Information: Evidence from Sovereign Bond Auctions",
+    "url": "https://www.bankofcanada.ca/2026/10/staff-analytical-paper-2026-51/",
+    "published_at": "2026-10-16T12:04:40+00:00",
+    "official_issuer": "Bank of Canada — Research",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "ca-boc-7b07e406da",
+      "ca-boc-a5cb9e38c1"
+    ]
+  },
+  {
+    "n": 3862,
+    "title": "Stress in the Press or Stress in the Market: A New Measure of Perceived Financial Stress",
+    "url": "https://www.bankofcanada.ca/2026/10/staff-analytical-paper-2026-50/",
+    "published_at": "2026-10-16T12:02:16+00:00",
+    "official_issuer": "Bank of Canada — Research",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "ca-boc-7b07e406da",
+      "ca-boc-a5cb9e38c1"
+    ]
+  },
+  {
+    "n": 3863,
+    "title": "How Costly Are Cross-Border Payments for Firms?",
+    "url": "https://www.bankofcanada.ca/2026/10/staff-analytical-paper-2026-49/",
+    "published_at": "2026-10-16T12:00:11+00:00",
+    "official_issuer": "Bank of Canada — Research",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "ca-boc-7b07e406da",
+      "ca-boc-a5cb9e38c1"
+    ]
+  },
+  {
+    "n": 3864,
+    "title": "R. v. A.M. - 2026 SCC 33 - 2026-10-16",
+    "url": "https://decisions.scc-csc.ca/scc-csc/scc-csc/en/item/21707/index.do",
+    "published_at": "2026-10-16T00:00:00+00:00",
+    "official_issuer": "Supreme Court of Canada",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "ca-supreme-d329809c56"
+    ]
+  },
+  {
+    "n": 3871,
+    "title": "Notice of the amendment of the designation of Discovery Insurance Group",
+    "url": "https://www.resbank.co.za/en/home/publications/publication-detail-pages/prudential-authority/pa-insurers/pa-post-insurance/act-notices/2026/notice-of-the-amendment-of-the-designation-of-discovery-insurance-group",
+    "published_at": "2026-10-16T00:00:00+00:00",
+    "official_issuer": "South African Reserve Bank",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "za-sarb-1efee6176d"
+    ]
+  },
+  {
+    "n": 3872,
+    "title": "Invitation to bid – Federal Treasury discount paper (Bubills)",
+    "url": "https://www.bundesbank.de/en/press/press-releases/federal-securities/invitation-to-bid-federal-treasury-discount-paper-bubills--1012048",
+    "published_at": "2026-10-16T07:30:00+00:00",
+    "official_issuer": "Deutsche Bundesbank",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "de-bundesbank-027ac4024f"
+    ]
+  },
+  {
+    "n": 3873,
+    "title": "Reopening of two Federal bonds – Auction result",
+    "url": "https://www.bundesbank.de/en/press/press-releases/federal-securities/reopening-of-two-federal-bonds-auction-result-1011726",
+    "published_at": "2026-10-14T10:00:00+00:00",
+    "official_issuer": "Deutsche Bundesbank",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "de-bundesbank-027ac4024f"
+    ]
+  },
+  {
+    "n": 3874,
+    "title": "Why I believe Europe must stop counting bank capital twice | Guest contribution in The Banker online",
+    "url": "https://www.bundesbank.de/en/press/contributions/why-i-believe-europe-must-stop-counting-bank-capital-twice-964890",
+    "published_at": "2026-10-14T09:30:00+00:00",
+    "official_issuer": "Deutsche Bundesbank",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "de-bundesbank-027ac4024f",
+      "de-bundesbank-617511c682"
+    ]
+  },
+  {
+    "n": 3875,
+    "title": "Announcement of a multi-ISIN auction – Reopening of two Green German Federal securities",
+    "url": "https://www.bundesbank.de/en/press/press-releases/federal-securities/announcement-of-a-multi-isin-auction-reopening-of-two-green-german-federal-securities-1011714",
+    "published_at": "2026-10-14T08:00:00+00:00",
+    "official_issuer": "Deutsche Bundesbank",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "de-bundesbank-027ac4024f"
+    ]
+  },
+  {
+    "n": 3876,
+    "title": "FX Liquidity providing operation – Allotment | Tender-ID: 20260091 | Reverse transaction | USD",
+    "url": "https://www.bundesbank.de/en/tasks/monetary-policy/open-market-operations/outstanding-open-market-operations/fx-liquidity-providing-operation-allotment-1011706",
+    "published_at": "2026-10-14T08:57:54+00:00",
+    "official_issuer": "Deutsche Bundesbank — Outstanding open market operations",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "de-bundesbank-e5b1c4a067"
+    ]
+  },
+  {
+    "n": 3877,
+    "title": "Joachim Nagel: „Deutschland macht sich fit für die Herausforderungen der Zukunft“",
+    "url": "https://www.bundesbank.de/de/aufgaben/themen/joachim-nagel-deutschland-macht-sich-fit-fuer-die-herausforderungen-der-zukunft--1012062",
+    "published_at": "2026-10-16T10:00:00+00:00",
+    "official_issuer": "Deutsche Bundesbank — Topics",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "de-bundesbank-fe89ad3ac9"
+    ]
+  },
+  {
+    "n": 3878,
+    "title": "Offshore forwards and exchange rate transmission in emerging markets",
+    "url": "https://www.bis.org/publications/working-paper-1383-offshore-forwards-and-exchange-rate-transmission-emerging-markets",
+    "published_at": "2026-10-16T00:00:00+00:00",
+    "official_issuer": "Bank for International Settlements — View feed",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "io-bis-25dec42900"
+    ]
+  },
+  {
+    "n": 3879,
+    "title": "2027 PhD Fellowship Programme",
+    "url": "https://www.bis.org/vacancy/jr100516",
+    "published_at": "2026-10-16T15:00:00+00:00",
+    "official_issuer": "Bank for International Settlements — View feed",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "io-bis-a33511bc11"
     ]
   }
 ]
