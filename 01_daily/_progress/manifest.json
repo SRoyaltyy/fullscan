@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16T04:21:44-04:00",
+  "updated_at": "2026-10-16T04:33:51-04:00",
   "runs": [
     {
       "date": "2026-10-15",
@@ -12,12 +12,6 @@
       "workflow": "webull_paper",
       "file": "2026-10-15_webull_paper.json",
       "updated_at": "2026-10-15T12:56:58-04:00"
-    },
-    {
-      "date": "2026-10-14",
-      "workflow": "postclose",
-      "file": "2026-10-14_postclose.json",
-      "updated_at": "2026-10-15T15:24:33-04:00"
     },
     {
       "date": "2026-10-15",
@@ -54,6 +48,12 @@
       "workflow": "finviz_scrape",
       "file": "2026-10-16_finviz_scrape.json",
       "updated_at": "2026-10-16T04:21:44-04:00"
+    },
+    {
+      "date": "2026-10-14",
+      "workflow": "postclose",
+      "file": "2026-10-14_postclose.json",
+      "updated_at": "2026-10-16T04:33:51-04:00"
     }
   ]
 }
