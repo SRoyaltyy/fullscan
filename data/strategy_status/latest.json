@@ -25,6 +25,11 @@
    "OK": 1,
    "SIT": 0
   },
+  "holdup": {
+   "MISSING": 1,
+   "OK": 0,
+   "SIT": 0
+  },
   "paper": {
    "MISSING": 0,
    "OK": 5,
@@ -47,7 +52,7 @@
   }
  },
  "date": "2026-10-16",
- "generated_at": "2026-10-16T17:18:04-04:00",
+ "generated_at": "2026-10-16T18:54:56-04:00",
  "strategies": [
   {
    "buys": [
@@ -5518,6 +5523,15 @@
    ],
    "source": "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl",
    "status": "OK"
+  },
+  {
+   "buys": [],
+   "family": "holdup",
+   "name": "holdup",
+   "note": "log unreadable: [Errno 2] No such file or directory: '/home/runner/work/fullscan/fullscan/research/hot_n4_clean_v4/forward/holdup_log.jsonl'",
+   "sells": [],
+   "source": "research/hot_n4_clean_v4/forward/holdup_log.jsonl",
+   "status": "MISSING"
   },
   {
    "buys": [],
