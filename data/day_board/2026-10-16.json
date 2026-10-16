@@ -1,6 +1,6 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16T07:07:26.811483-04:00",
+  "generated_at": "2026-10-16T07:09:08.938953-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -329,13 +329,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7574,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
+          "size": 7575,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_actions:missing"
+            "news_parse:missing"
           ]
         },
         {
@@ -519,8 +519,8 @@
           "path": "01_daily/weather/2026-10-16_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9278 vix=falling yields=flat",
-          "size": 9278,
+          "reason": "sectors=11 bytes=9279 vix=falling yields=flat",
+          "size": 9279,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
@@ -703,8 +703,8 @@
           "path": "01_daily/weather/2026-10-16_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9278 vix=falling yields=flat",
-          "size": 9278,
+          "reason": "sectors=11 bytes=9279 vix=falling yields=flat",
+          "size": 9279,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
@@ -733,7 +733,7 @@
           "size": 2218618,
           "said": "205 rows",
           "bullets": [
-            "KEYS, FORM, AVPT, MU, SKHY, APH, SMTC, NVDA"
+            "KEYS, FORM, AVPT, MU, SKHY, NVDA, APH, SMTC"
           ]
         },
         {
@@ -3074,6 +3074,31 @@
         }
       ],
       "preview": "raw=3098 usable=242 single=164 \u00b7 Tardy China Stimulus Sets Up Second Quarter of Sub-Target Growth - Bloomberg.com | US 10-year Treasury yield levels not unprecedented, BNY CEO says - Reuters | World Bank's Banga sets goal of quintupling critical minerals financing in five  | Analysis: Why a $2 trillion deficit and 5% Treasury yields are becoming America' | Fed Officials Troubled by Hot Inflation Data as Rate Hike Looms - Investopedia \u00b7 # News Parse v2 \u2014 2026-10-16T07:07:25.476288-04:00\nWindow\u224824h | news_mode=on | raw=3098 | usable=242 | single_name=164 | noise_dropped=2652\nusable polarity={'+': 10, '-': 45, 'mixed': 0, 'neutral': 187}"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-16T07:09:07.680666-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-16_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9279,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-16_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5011,
+          "preview": "# Weather report \u2014 2026-10-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
