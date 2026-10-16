@@ -124,11 +124,23 @@ jobs:
   gate:
     name: Clock gate (merge poke is not a 01:00 packet)
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 12
     outputs:
       go: ${{ steps.g.outputs.go }}
     steps:
-      - uses: actions/checkout@v4
+      # Gate only needs src/workflow_stages.py and its imports. A full-tree
+      # checkout hung 5 min on 2026-10-16 (runs 38872343696, 38872955497).
+      # Plain git (not the checkout action's sparse input) so the sparse
+      # setting can never leak into the shared ECS workspace contract.
+      - name: Shallow sparse fetch (gate files only)
+        timeout-minutes: 8
+        run: |
+          git init -q .
+          git remote add origin "https://github.com/${{ github.repository }}"
+          git sparse-checkout set --no-cone '/src/*.py' '/requirements.txt'
+          git fetch -q --depth 1 --filter=blob:none origin "${{ github.sha }}"
+          git checkout -q FETCH_HEAD
+          test -f src/workflow_stages.py
       - id: g
         run: |
           ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
@@ -396,10 +408,14 @@ jobs:
             echo "no persist lock dir (ubuntu) — continue"
           fi
 
+      # Shallow (explicit) + own timeout so a stalled fetch fails fast.
+      # Full tree kept: Pre-Open reads data dirs and pushes via safe_git_push.
       - uses: actions/checkout@v4
         if: env.skip != 'yes'
+        timeout-minutes: 20
         with:
           clean: false
+          fetch-depth: 1
           persist-credentials: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
