@@ -1,23 +1,27 @@
 {
-  "mode": "renew",
-  "started_et": "2026-10-16T05:31:31.558734-04:00",
+  "mode": "all",
+  "started_et": "2026-10-16T09:36:15.346703-04:00",
   "openclaw_version": "OpenClaw 2026.7.1-2 (0790d9f)",
   "paid_key_in_env_stripped": false,
-  "expires_before": "2026-10-16T10:35:42.665000+00:00",
-  "minutes_left_before": 63.5,
+  "expires_before": "2026-10-16T15:35:49.412000+00:00",
+  "minutes_left_before": 119.5,
   "expiry_source": "sqlite:openclaw-agent.sqlite",
   "has_refresh_token": true,
+  "renew": "SKIP: token fresh",
+  "main_pid": 2410618,
+  "pid_comm": "openclaw-gatewa",
+  "unit_active": "active",
+  "unit_sub": "running",
+  "pid_alive": true,
   "gateway_token_len": 48,
-  "call_renew": {
+  "call_pre": {
     "http": 200,
-    "secs": 9.2,
+    "secs": 11.7,
     "answer": "42",
     "ok": true
   },
-  "expires_after": "2026-10-16T10:35:42.665000+00:00",
-  "minutes_left_after": 62.9,
-  "renew": "FAIL: token dies before 06:30 ET and no auth profile expiry could be nudged \u2014 device login needed",
-  "ok": false,
-  "exit": 2,
-  "finished_et": "2026-10-16T05:32:51.953906-04:00"
+  "guard": "OK",
+  "ok": true,
+  "exit": 0,
+  "finished_et": "2026-10-16T09:36:28.423342-04:00"
 }
