@@ -36,10 +36,30 @@ concurrency:
 jobs:
   install:
     runs-on: [self-hosted, ecs]
+    defaults:
+      run:
+        working-directory: .ecs-sparse/paper-backstop
     timeout-minutes: 15
     steps:
+      - name: Clear stale git index.lock (shared ECS workspace)
+        shell: bash
+        working-directory: ${{ github.workspace }}
+        run: |
+          # A job killed mid-checkout leaves .git/index.lock; the next checkout then hangs.
+          # One ECS runner, so a lock older than 1 minute before checkout is stale.
+          W="${GITHUB_WORKSPACE:-.}"
+          for L in "$W/.git/index.lock" "$W/.git/shallow.lock" "$W/.git/HEAD.lock"; do
+            if [ -n "$(find "$L" -mmin +1 2>/dev/null)" ]; then echo "removing stale $L"; rm -f "$L" || sudo -n rm -f "$L" || true; fi
+          done
+          if [ "$(git -C "$W" config --get core.sparseCheckout 2>/dev/null)" = "true" ]; then
+            echo "::warning::shared ECS workspace is sparse; this checkout re-materializes the full tree"
+          fi
       - uses: actions/checkout@v4
         with:
+          # Own sub-path: the sparse set never touches the shared full-tree
+          # ECS workspace (a sparse workspace makes the next full checkout
+          # re-materialize the whole tree; 2026-10-16 10-min hang).
+          path: .ecs-sparse/paper-backstop
           fetch-depth: 1
           sparse-checkout-cone-mode: false
           sparse-checkout: |
@@ -55,6 +75,3 @@ jobs:
           bash scripts/install_paper_backstop.sh
           echo "---- systemctl list-timers (verify) ----"
           systemctl list-timers --all fullscan-paper-backstop.timer --no-pager
-      - name: Leave a full checkout on the shared ECS workspace
-        if: always()
-        run: git sparse-checkout disable || true

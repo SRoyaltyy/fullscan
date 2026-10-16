@@ -1408,7 +1408,7 @@ def test_postclose_all_clears_leftover_sparse_checkout() -> None:
     postclose_all disables sparse-checkout before reset --hard, then fails
     if requirements.txt is still missing. Every other self-hosted workflow
     that checks out with clean: false does the same. Sparse-checkout jobs
-    that themselves run on ECS clear the setting on the way out.
+    that run on ECS check out into their own .ecs-sparse/ sub-path.
     """
     disable = "git sparse-checkout disable || true"
     probe = "test -f requirements.txt"
@@ -1443,8 +1443,13 @@ def test_postclose_all_clears_leftover_sparse_checkout() -> None:
         text = path.read_text(encoding="utf-8")
         if "sparse-checkout:" not in text or "self-hosted" not in text:
             continue
-        assert "if: always()" in text, path.name
-        assert text.rfind(disable) > text.rfind("sparse-checkout:"), path.name
+        # 2026-10-16: a sparse set on the shared workspace made the next full
+        # checkout re-materialize ~5 GB (10-min hang) and a killed disable left
+        # 26k skip-worktree files. ECS sparse jobs use their own sub-path and
+        # never touch the shared workspace's sparse state.
+        assert "path: .ecs-sparse/" in text, path.name
+        assert "working-directory: .ecs-sparse/" in text, path.name
+        assert disable not in text, path.name
         sparse_on_ecs.append(path.name)
     assert sparse_on_ecs == [
         "install_paper_backstop.yml",

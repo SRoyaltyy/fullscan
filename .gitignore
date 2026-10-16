@@ -15,3 +15,5 @@ data/factor_mine/oppset_clock_b/*.csv
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal
+# ECS sparse sub-checkouts (install jobs); never committed
+.ecs-sparse/
