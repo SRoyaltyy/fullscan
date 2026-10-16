@@ -408,10 +408,14 @@ jobs:
             echo "no persist lock dir (ubuntu) — continue"
           fi
 
+      # Shallow (explicit) + own timeout so a stalled fetch fails fast.
+      # Full tree kept: Pre-Open reads data dirs and pushes via safe_git_push.
       - uses: actions/checkout@v4
         if: env.skip != 'yes'
+        timeout-minutes: 10
         with:
           clean: false
+          fetch-depth: 1
           persist-credentials: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
