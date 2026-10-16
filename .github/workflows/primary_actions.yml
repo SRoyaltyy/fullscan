@@ -26,6 +26,10 @@ jobs:
   collect:
     runs-on: ubuntu-latest
     timeout-minutes: 35
+    env:
+      # Optional edge relay (relay/worker.js): when set, WAF-blocked official sources
+      # fall back to fetching through this Cloudflare Worker. Inert when unset.
+      PRIMARY_ACTION_RELAY_URL: ${{ secrets.PRIMARY_ACTION_RELAY_URL }}
     steps:
       - uses: actions/checkout@v4
         with:
