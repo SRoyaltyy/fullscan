@@ -481,7 +481,10 @@
    "jurisdiction": "EU",
    "family": "judicial_decisions",
    "discovery_url": "https://curia.europa.eu/site/jcms/qua1_6621/en/rss",
-   "notes": "curia.europa.eu returns 403 for all endpoints from datacenter IPs (checked 2026-10-16)."
+   "notes": "The /jcms/qua1_6621/*/rss paths are info pages (HTML); real feed is /site/rss.jsp?lang=en&secondLang=fr (10 items, verified via relay 2026-10-17).",
+   "feed_urls": [
+    "https://curia.europa.eu/site/rss.jsp?lang=en&secondLang=fr"
+   ]
   },
   {
    "id": "eu-competition",
@@ -803,7 +806,8 @@
    "jurisdiction": "IN",
    "family": "executive_and_administrative",
    "discovery_url": "https://www.pib.gov.in/ViewRss.aspx?lang=1&reg=1",
-   "notes": "pib.gov.in returns 403 from datacenter IPs (checked 2026-10-16)."
+   "notes": "ViewRss.aspx now serves an HTML hub (RSS discontinued); discovered via Google News site:pib.gov.in mirror, verified 2026-10-17.",
+   "google_news_url": "https://news.google.com/rss/search?q=site%3Apib.gov.in+when%3A14d&hl=en-US&gl=US&ceid=US:en"
   },
   {
    "id": "in-rbi",
@@ -888,7 +892,8 @@
    "jurisdiction": "JP",
    "family": "competition_and_enforcement",
    "discovery_url": "https://www.jftc.go.jp/en/pressreleases/",
-   "notes": "jftc.go.jp returns 403 from datacenter IPs (checked 2026-10-16)."
+   "notes": "jftc.go.jp listing is fully client-rendered (no feed, no server-side items); discovered via Google News site:jftc.go.jp mirror, verified 2026-10-17.",
+   "google_news_url": "https://news.google.com/rss/search?q=site%3Ajftc.go.jp+when%3A14d&hl=en-US&gl=US&ceid=US:en"
   },
   {
    "id": "jp-pmda",
