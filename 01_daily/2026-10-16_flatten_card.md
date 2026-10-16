@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-10-16
 
-_Generated 2026-10-16T12:51:06 — live `flatten_robust`._
+_Generated 2026-10-16T14:10:37 — live `flatten_robust`._
 
 **S=+5.53; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
@@ -40,11 +40,11 @@ Sized from marked equity **$110,337.65** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | IT | io_core | 88 | $207.31 | $18,243.28 | cash tied |
-| 16:00 ET | TOST | io_core | 570 | $32.22 | $18,365.40 | cash tied |
-| 16:00 ET | TWLO | io_core | 67 | $273.40 | $18,317.80 | cash tied |
-| 16:00 ET | PDFS | io_core | 445 | $41.27 | $18,365.15 | cash tied |
-| 16:00 ET | YOU | io_core | 408 | $45.02 | $18,368.16 | cash tied |
-| 16:00 ET | AVPT | io_core | 1236 | $14.87 | $18,379.32 | cash tied |
+| 16:00 ET | IT | io_core | 88 | $207.52 | $18,261.76 | cash tied |
+| 16:00 ET | TOST | io_core | 567 | $32.42 | $18,382.14 | cash tied |
+| 16:00 ET | TWLO | io_core | 72 | $254.20 | $18,302.40 | cash tied |
+| 16:00 ET | PDFS | io_core | 461 | $39.88 | $18,382.38 | cash tied |
+| 16:00 ET | YOU | io_core | 404 | $45.41 | $18,345.64 | cash tied |
+| 16:00 ET | AVPT | io_core | 1265 | $14.54 | $18,386.77 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
