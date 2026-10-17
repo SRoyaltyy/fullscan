@@ -1,5 +1,62 @@
 [
   {
+    "document_id": "9b26445cd5737b5a28d6f645",
+    "title": "Saudi-led coalition intercepts drones as Egypt weighs sending help",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/2026/10/17/saudi-led-coalition-intercepts-drones-as-egypt-weighs-sending-help?traffic_source=rss",
+    "published_at": "2026-10-17T23:21:57+00:00",
+    "known_at": "2026-10-17T23:21:57+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Saudi-led coalition intercepts drones as Egypt weighs sending help",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-16.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "c56de8d6ff49a51a75148afe",
     "title": "Frontier Communications paying Connecticut $625K after major data leak in 2024 - fox61.com",
     "evidence_file": "documents.json",
@@ -391505,7 +391562,7 @@
     "candidate_classes": [
       "dilution"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "dilution",
@@ -391626,7 +391683,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -392199,7 +392256,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -392263,7 +392320,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -392327,7 +392384,7 @@
     "candidate_classes": [
       "product_harm"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "product_harm",
@@ -392386,7 +392443,7 @@
     "candidate_classes": [
       "input_cost"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "input_cost",
@@ -392445,7 +392502,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -392677,7 +392734,7 @@
     "candidate_classes": [
       "insider_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "insider_flow",
@@ -392832,7 +392889,7 @@
       "corporate_action_mna",
       "insider_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -393299,7 +393356,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -393547,7 +393604,7 @@
     "candidate_classes": [
       "strategic_review"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "strategic_review",
@@ -393611,7 +393668,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -393686,7 +393743,7 @@
     "candidate_classes": [
       "dilution"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "dilution",
@@ -393927,7 +393984,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -394050,7 +394107,7 @@
     "candidate_classes": [
       "access_control"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "access_control",

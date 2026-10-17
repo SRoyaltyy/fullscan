@@ -1,5 +1,28 @@
 [
   {
+    "title": "Saudi-led coalition intercepts drones as Egypt weighs sending help",
+    "url": "https://www.aljazeera.com/news/2026/10/17/saudi-led-coalition-intercepts-drones-as-egypt-weighs-sending-help?traffic_source=rss",
+    "publisher": "",
+    "body": "Forces intercepted and destroyed four drones over Saudi Arabia's Riyadh, Eastern Province and southern region.",
+    "published_at": "2026-10-17T23:21:57+00:00",
+    "published_raw": "Sat, 17 Oct 2026 23:21:57 +0000",
+    "source": "rss_aljazeera_economy",
+    "primary": false,
+    "query_classes": [],
+    "query": "",
+    "id": "9b26445cd5737b5a28d6f645",
+    "first_seen": "2026-10-17T23:38:16.719121+00:00",
+    "observations": [
+      {
+        "source": "rss_aljazeera_economy",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "feed_text",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
+  },
+  {
     "title": "Frontier Communications paying Connecticut $625K after major data leak in 2024 - fox61.com",
     "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPVEM4UmI1ZUg1aU5fTFZXcVJzbFMtX0QzVXJDWm5FUVJ5a3RfeTR5Q2xwYXhWMFA1TkVDZlVIV05mTWhxdTlPcjJTOU42ZGYtZkVRYldNaHRNdE5OZWp2ajJnX2ptdzJqZGlYN2lJNFNnQ05SSHZjMzdMM1RjcFlZNVlkUkdTZmVSeGxuOS1naWppeEJpVzViRWd0R2pLVGhyT291dTFHRHo1UWx0ZHFJRHpoTlB0QWZWS2JoaHZxUGZFMXh2UVMwVTlZNzZEaDVsQTVUTTMxbTdONllRRkJjcVZIdERWVEJIb0hOeHV1R3U1anc?oc=5",
     "publisher": "fox61.com",
@@ -611,7 +634,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Firefighter Dies in Line of Duty After Responding to Bucheon Factory Fire 20 Minutes Before Off-Duty - SBS 뉴스",
@@ -1163,7 +1186,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Texas Marching Classic 2026 Scores: See The Preliminary Results, Finals Schedule - Yahoo Sports",
@@ -1615,7 +1638,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Cost of living protests hit Belgium, Italy, Portugal and France",
@@ -1638,7 +1661,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "China floods global protein markets as subsidies power cheap chicken exports - CHOSUNBIZ - Chosunbiz",
@@ -1688,7 +1711,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "publisher_publication_candidates": [
       "2026-10-17T21:00:13+00:00"
     ],
@@ -1916,7 +1939,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Violent clashes, looting and buildings ablaze as hundreds arrested after France protests",
@@ -1939,7 +1962,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Free app launches for Auracast setup with GN accessories - Liam O'Dell",
@@ -1985,7 +2008,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "NCAA sues DeWine over executive order granting some athletes extra eligibility - WLIO",
@@ -2115,7 +2138,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "SEI Hires LPL Technology Veteran To Lead Its Next Phase of Growth - The Wealth Advisor",
@@ -2161,7 +2184,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Senate Federal Reserve - TelegraphHerald.com",
@@ -2764,7 +2787,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "BSJ launches national campaign to help Jamaican businesses compete and grow - Caribbean National Weekly",
@@ -3072,7 +3095,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "UK Inflation Can Seal the Deal on the BOE’s November Rate Hike - Bloomberg.com",
@@ -3343,7 +3366,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "ECB Eyes December 2026 Rate Hike - Briefs Finance",
@@ -3887,7 +3910,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "‘No Kings’ protesters across SoCal and the nation rally behind voter participation - Los Angeles Times",
@@ -4060,7 +4083,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Looting, blazes and clashes in France amid nationwide protests - The Australian",
@@ -4161,7 +4184,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Protesters clash with police as demonstrations erupt across France",
@@ -4184,7 +4207,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Another interest rate hike may be ahead as Fed battles inflation - KPAX News",
@@ -4615,7 +4638,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Will the EU come to Ukraine’s rescue in war against Russia?",
@@ -4638,7 +4661,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Strategy Index Exclusion Risk Puts $2.8B at Stake - Bitcoin Foundation",
@@ -4934,7 +4957,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Easing sanctions on Russia only helps fund Putin’s killing machine - New York Post",
@@ -5329,7 +5352,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Neto double fires Chelsea past Everton but Martinez head injury mars win - Reuters",
@@ -5402,7 +5425,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Is Apple’s foldable iPhone Duo worth $2,000? See how it stacks up against other foldable phones.",
@@ -5425,7 +5448,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Another interest rate hike may be ahead as Fed battles inflation - KRTV",
@@ -5525,7 +5548,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "USC Launches NCI-Funded Trial of a Blood Test That Looks for Early Breast Cancer Signs Alongside Mammograms - Medical Daily",
@@ -5894,7 +5917,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "New AI Model Spots Crop Diseases With Unusual Accuracy in Complex Fields - Bioengineer.org",
@@ -6920,7 +6943,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Hard Up Garage Launches YouTube Series Saving Paul Walker’s 2 Fast 2 Furious Camaro - EIN News",
@@ -7089,7 +7112,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Trump faces bipartisan backlash over Russia sanctions waiver - Al Jazeera",
@@ -7747,7 +7770,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Panama Finds Room for Faith After Earthquake Leaves Historic Churches in Ruins - LatinAmerican Post",
@@ -7824,7 +7847,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "If a Stock Market Crash Is Coming, History Says This Strategy Can Cut Your Portfolio's Recovery Time in Half - The Motley Fool",
@@ -8736,7 +8759,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Tesla unveils new ‘flying’ car, but consumer rollout likely still years away - The Times of Israel",
@@ -8782,7 +8805,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Egypt’s Sisi seeks authorisation for defence assistance to Saudi Arabia - Al Jazeera",
@@ -9003,7 +9026,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Kenya confirms four more Ebola cases, bringing total to seven",
@@ -9026,7 +9049,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "new fda approved weight loss drugs - www.polskieradio.pl",
@@ -11006,7 +11029,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Real estate stocks surge as rate hike odds decrease (XLRE:NYSEARCA) - Seeking Alpha",
@@ -11498,7 +11521,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "How Investors May Respond To Vita Coco Stock Earnings Expectations Rise - Simply Wall Street",
@@ -12711,7 +12734,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Florida fisher dragged into water and killed by 12ft alligator - The Guardian",
@@ -13014,7 +13037,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "I Just Invested $4,600 Across 3 Top Dividend Stocks. Here’s What I’m Loading Up on Right Now. - Yahoo Finance",
@@ -13571,7 +13594,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Jewish rioters attack European diplomats in West Bank, Belgium demands EU sanctions - Ynetnews",
@@ -14324,7 +14347,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "'Dead money’ for a decade: Why this hedge fund approach may deliver an advantage over bonds - CNBC",
@@ -14890,7 +14913,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Stourbridge rail workers strike as service cancelled today - Stourbridge News",
@@ -16696,7 +16719,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Treasury Yields Hit a 24-Year High This Month. Is Vanguard's High-Dividend ETF Still Worth Buying? - The Motley Fool",
@@ -17777,7 +17800,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "NCAA sues DeWine over eligibility executive order - The Highland County Press",
@@ -20267,7 +20290,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Masimo's smartSET™ FDA Clearance Offers Breakthrough Innovation in Pulse Oximetry to Help Improve Critical Patient Outcomes - PR Newswire",
@@ -20474,7 +20497,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Live updates: Trump and Zelensky relationship rocky over Russia sanctions, Starlink; Obama campaigns in Michigan,… - The Hill",
@@ -20762,7 +20785,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "An earthquake measuring magnitude 3.6 was recorded in Crimea - Mezha.net",
@@ -22349,7 +22372,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Your Android Phone May Soon Warn You Before a Costa Rica Earthquake Hits - The Tico Times",
@@ -22476,7 +22499,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Rising input costs and diesel price hikes: what it means for South African agriculture and food security - African Farming",
@@ -23307,7 +23330,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Goosehead Insurance (GSHD) Stock Looks Overvalued As Earnings Expectations Stay High - Yahoo Finance",
@@ -23880,7 +23903,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Can red light therapy reduce wrinkles? Here's what one study found - USA Today",
@@ -24056,7 +24079,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Oil tanker explodes in Strait of Hormuz as Iran vows waterway remains closed - NewsNation",
@@ -24503,7 +24526,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Wall Street’s record breakouts unravel as investors dump recent winners: Chart of the Day - Yahoo Finance",
@@ -25448,7 +25471,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Open Text (OTEX) Could Be 9% Below Fair Value On Its $1b Refinancing Move - Simply Wall Street",
@@ -28289,7 +28312,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Rare pink diamond goes on display in France 100 years after amateur heist - BBC",
@@ -30292,7 +30315,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "'Well-known' celebrity sues to keep identity secret in sexual assault case - Metro.co.uk",
@@ -30419,7 +30442,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "OMODA & JAECOO Launches Full Lifecycle Carbon Management - GlobeNewswire",
@@ -32282,7 +32305,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Nasdaq 100 Drops 5.5% as AI Debt Risks and Oil Prices Trigger Sell-Off - KuCoin",
@@ -36980,7 +37003,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "France: Police and protesters clash in nationwide protests",
@@ -41729,7 +41752,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "AI debt, municipal bonds offer opportunities amid market volatility: Goldman Sachs - The Economic Times",
@@ -42094,7 +42117,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "IMFC CHAIR AL-JADAAN, ASKED ABOUT WALKOUT BY DELEGATES WHEN RUSSIAN OFFICIAL SPOKE, SAYS ALL MEMBERS SUPPORTED CHAIR'S STATEMENT - CGTN",
@@ -42281,7 +42304,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Nightclubs are disappearing - and it's affecting young people",
@@ -42304,7 +42327,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Loyola-Sacred Heart Girls JV Basketball @ Powell County - MaxPreps",
@@ -44539,7 +44562,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "publisher_publication_candidates": [
       "2026-10-17"
     ],
@@ -46647,7 +46670,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "The dress rehearsal for an AI reckoning - Financial Times",
@@ -46693,7 +46716,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Why have screens replaced socialising?",
@@ -46716,7 +46739,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "The dress rehearsal for an AI reckoning",
@@ -46739,7 +46762,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "The Man City theory of politics",
@@ -46762,7 +46785,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Are we sleepwalking into World War III?",
@@ -46785,7 +46808,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "‘Inflation will make people poor’: Airlines brace for years of pain",
@@ -46808,7 +46831,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "The US President signed an executive order exempting Russia from many sanctions. - Vietnam.vn",
@@ -48913,7 +48936,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "BRC 8-K & SEC Filings - Yahoo! Finance Canada",
@@ -50599,7 +50622,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Trump Signs Order Waiving Russia-Related Sanctions - NTD News",
@@ -52527,7 +52550,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "THFF 8-K & SEC Filings - Yahoo! Finance Canada",
@@ -54291,7 +54314,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Kent Lee and Mark Powell make their case for San Diego's District 6 - Axios",
@@ -56070,7 +56093,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Stocktwits Weekly Spread: What Shaped Treasury Yields And The Dollar This Week - TradingView",
@@ -56256,7 +56279,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Groups seek injunction over Camp East Montana conditions - KTSM 9 News",
@@ -56411,7 +56434,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Norman Powell gets the basket plus the foul - ESPN",
@@ -58716,7 +58739,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Court Injunction Blocks PNP From Taking Charge Of Clarendon Municipal Corporation - Radio Jamaica News Online",
@@ -61321,7 +61344,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Anthropic signs lease for first Canadian data center - Reuters",
@@ -64006,7 +64029,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Trump rallies with top Republicans in critical battleground state of Georgia - AP News",
@@ -64085,7 +64108,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Reddit (RDDT) COO exercises options for 60,000 shares and sells the same number under a trading plan - Stock Titan",
@@ -82495,7 +82518,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "RXRX Stock Soars Pre-Market On Q4 Beat, Recursion CEO Says Company Has ‘Reached An Inflection Point’ - Stocktwits",
@@ -85298,7 +85321,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Watkins Advises Zocdoc on Acquisition of Sohar Health - Latham & Watkins LLP",
@@ -86129,7 +86152,7 @@
       }
     ],
     "extraction_status": "fetch_failed",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "extraction_attempted_at": "2026-10-17T19:51:31.590393+00:00",
     "extraction_attempts": 3,
     "extraction_error": "HTTPError: HTTP Error 403: Forbidden"
@@ -89893,7 +89916,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Judge Resigns Ahead of Case on Banning the Opposition - SOVA",
@@ -91924,7 +91947,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Corporate Bonds Are More Alluring Than Meets the Eye - ETF Database",
@@ -95937,7 +95960,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Form S-1/A REGISTRATION STATEMENT UNDER THE SECURITIES ACTOF 1933 For: 16 October - Investing.com UK",
@@ -97201,7 +97224,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Miracle-Ear and its Foundation Agree to Pay over $6.4 Million to Resolve False Claims Allegations Concerning the Paycheck Protection Program - Department of Justice (.gov)",
@@ -99278,7 +99301,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Insider Selling and Valuation Jitters Hit GDS Holdings - TipRanks",
@@ -99409,7 +99432,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "publisher_publication_candidates": [
       "2026-10-16",
       "2026-10-16T16:00:00+00:00"
@@ -100638,7 +100661,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "NCAA sues Gov. DeWine over college athlete eligibility order - WHIO-TV",
@@ -104062,7 +104085,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-17T21:01:39.169077+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "publisher_publication_candidates": [],
     "publisher_published_at": null,
     "publisher_publication_status": "ambiguous_or_absent",
@@ -106651,7 +106674,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Madrid demands La Liga president resigns after comparing attacks on referees with Nazi propaganda - WSAV-TV",
@@ -106972,7 +106995,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "State Treasury says September revenues rose 22.1%, a rebound from understated Corporation Business Tax collections last year - ROI-NJ",
@@ -108367,7 +108390,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Registration open for bankruptcy bench program - The Florida Bar",
@@ -112702,7 +112725,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "October Rate-Hike Odds Collapse as Warsh Keeps His Cards Close but AI Transition Looms - Yahoo Finance",
@@ -115295,7 +115318,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Nebius Stock: A 50-MW Contract, a Conditional Rotterdam Megaproject, and the Debt Market in Between - ad-hoc-news.de",
@@ -118007,7 +118030,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "publisher_publication_candidates": [
       "2026-10-16T16:11:53-04:00"
     ],
@@ -118196,7 +118219,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "publisher_publication_candidates": [
       "2026-10-16T15:46:06-04:00"
     ],
@@ -118324,7 +118347,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "publisher_publication_candidates": [
       "2026-10-16T16:09:53-04:00"
     ],
@@ -118436,7 +118459,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "publisher_publication_candidates": [
       "2026-10-16T16:02:51-04:00"
     ],
@@ -118495,7 +118518,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "publisher_publication_candidates": [
       "2026-10-16T16:32:14-04:00"
     ],
@@ -118668,7 +118691,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "publisher_publication_candidates": [
       "2026-10-16T15:54:50-04:00"
     ],
@@ -118786,7 +118809,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "publisher_publication_candidates": [
       "2026-10-16T15:45:57-04:00"
     ],
@@ -118850,7 +118873,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "publisher_publication_candidates": [
       "2026-10-16T16:24:26-04:00"
     ],
@@ -118964,7 +118987,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "publisher_publication_candidates": [
       "2026-10-16T16:19:25-04:00"
     ],
@@ -119023,7 +119046,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "publisher_publication_candidates": [
       "2026-10-16T16:27:17-04:00"
     ],
@@ -119055,7 +119078,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "publisher_publication_candidates": [
       "2026-10-16T15:45:29-04:00"
     ],
@@ -120352,7 +120375,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Virginia joins multi-state coalition in filing notice in AI chatbot company’s bankruptcy proceedings - WRIC ABC 8News",
@@ -123504,7 +123527,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "publisher_publication_candidates": [],
     "publisher_published_at": null,
     "publisher_publication_status": "ambiguous_or_absent",
@@ -124947,8 +124970,8 @@
     ],
     "extraction_status": "unsupported_format",
     "last_seen": "2026-10-17T23:09:29.108885+00:00",
-    "extraction_attempted_at": "2026-10-17T17:46:50.026782+00:00",
-    "extraction_attempts": 1,
+    "extraction_attempted_at": "2026-10-17T23:39:10.066989+00:00",
+    "extraction_attempts": 2,
     "extraction_error": ""
   },
   {
@@ -124972,8 +124995,8 @@
     ],
     "extraction_status": "unsupported_format",
     "last_seen": "2026-10-17T23:09:29.108885+00:00",
-    "extraction_attempted_at": "2026-10-17T17:46:51.039019+00:00",
-    "extraction_attempts": 1,
+    "extraction_attempted_at": "2026-10-17T23:39:10.067042+00:00",
+    "extraction_attempts": 2,
     "extraction_error": ""
   },
   {
@@ -124997,8 +125020,8 @@
     ],
     "extraction_status": "unsupported_format",
     "last_seen": "2026-10-17T23:09:29.108885+00:00",
-    "extraction_attempted_at": "2026-10-17T17:46:51.039026+00:00",
-    "extraction_attempts": 1,
+    "extraction_attempted_at": "2026-10-17T23:39:10.067053+00:00",
+    "extraction_attempts": 2,
     "extraction_error": ""
   },
   {
@@ -125022,8 +125045,8 @@
     ],
     "extraction_status": "unsupported_format",
     "last_seen": "2026-10-17T23:09:29.108885+00:00",
-    "extraction_attempted_at": "2026-10-17T17:46:51.039038+00:00",
-    "extraction_attempts": 1,
+    "extraction_attempted_at": "2026-10-17T23:39:10.067060+00:00",
+    "extraction_attempts": 2,
     "extraction_error": ""
   },
   {
@@ -125047,8 +125070,8 @@
     ],
     "extraction_status": "unsupported_format",
     "last_seen": "2026-10-17T23:09:29.108885+00:00",
-    "extraction_attempted_at": "2026-10-17T17:46:51.039044+00:00",
-    "extraction_attempts": 1,
+    "extraction_attempted_at": "2026-10-17T23:39:10.067067+00:00",
+    "extraction_attempts": 2,
     "extraction_error": ""
   },
   {
@@ -125072,8 +125095,8 @@
     ],
     "extraction_status": "unsupported_format",
     "last_seen": "2026-10-17T23:09:29.108885+00:00",
-    "extraction_attempted_at": "2026-10-17T17:46:51.397844+00:00",
-    "extraction_attempts": 1,
+    "extraction_attempted_at": "2026-10-17T23:39:10.067074+00:00",
+    "extraction_attempts": 2,
     "extraction_error": ""
   },
   {
@@ -125097,8 +125120,8 @@
     ],
     "extraction_status": "unsupported_format",
     "last_seen": "2026-10-17T23:09:29.108885+00:00",
-    "extraction_attempted_at": "2026-10-17T17:46:51.397856+00:00",
-    "extraction_attempts": 1,
+    "extraction_attempted_at": "2026-10-17T23:39:10.073301+00:00",
+    "extraction_attempts": 2,
     "extraction_error": ""
   },
   {
@@ -125122,8 +125145,8 @@
     ],
     "extraction_status": "unsupported_format",
     "last_seen": "2026-10-17T23:09:29.108885+00:00",
-    "extraction_attempted_at": "2026-10-17T17:46:51.397863+00:00",
-    "extraction_attempts": 1,
+    "extraction_attempted_at": "2026-10-17T23:39:10.113853+00:00",
+    "extraction_attempts": 2,
     "extraction_error": ""
   },
   {
@@ -125145,8 +125168,11 @@
         "classes": []
       }
     ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "extraction_status": "unsupported_format",
+    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "extraction_attempted_at": "2026-10-17T23:39:10.113883+00:00",
+    "extraction_attempts": 1,
+    "extraction_error": ""
   },
   {
     "title": "Barrett v. United States",
@@ -125167,8 +125193,11 @@
         "classes": []
       }
     ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "extraction_status": "unsupported_format",
+    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "extraction_attempted_at": "2026-10-17T23:39:10.113893+00:00",
+    "extraction_attempts": 1,
+    "extraction_error": ""
   },
   {
     "title": "Treasury and IRS Move to Protect Health Care Benefits for Eligible Americans",
@@ -127729,7 +127758,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "In DOGE’s aftermath, federal health workers bristle at new performance reviews - STAT",
@@ -131949,7 +131978,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "Avanza Bank Holding AB Reports Earnings Results for the Third Quarter and Nine Months Ended September 30, 2026 - www.marketscreener.com",
@@ -134053,7 +134082,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "FTSE 100 Edges Lower as Oil Prices Remain Above $105 Amid Middle East Tensions - Yahoo Finance UK",
@@ -143288,7 +143317,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00"
+    "last_seen": "2026-10-17T23:38:16.719121+00:00"
   },
   {
     "title": "The IPO drought is driving private equity-owned companies to the debt market to pay investors - CNBC",
@@ -154831,7 +154860,7 @@
       }
     ],
     "extraction_status": "fetch_failed",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "extraction_attempted_at": "2026-10-17T21:01:52.111779+00:00",
     "extraction_attempts": 3,
     "extraction_error": "HTTPError: HTTP Error 403: Forbidden"
@@ -154930,7 +154959,7 @@
       }
     ],
     "extraction_status": "fetch_failed",
-    "last_seen": "2026-10-17T23:09:29.108885+00:00",
+    "last_seen": "2026-10-17T23:38:16.719121+00:00",
     "extraction_attempted_at": "2026-10-17T21:01:52.108404+00:00",
     "extraction_attempts": 3,
     "extraction_error": "HTTPError: HTTP Error 403: Forbidden"
