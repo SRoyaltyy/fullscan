@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-10-17T05:39:10.413449+00:00",
-  "official_unauthenticated_gets": 516,
-  "retained_unique_documents": 5177,
+  "checked_at": "2026-10-17T11:49:11.376116+00:00",
+  "official_unauthenticated_gets": 1344,
+  "retained_unique_documents": 5219,
   "sqlite_integrity": "ok",
   "llm_calls": 0,
   "paid_api_calls": 0,
-  "catalog_generated_at": "2026-10-16T17:12:50.726784+00:00",
+  "catalog_generated_at": "2026-10-17T11:45:29.426582+00:00",
   "catalog_refresh_needed": false
 }

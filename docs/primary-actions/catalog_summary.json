@@ -41,45 +41,15 @@
     "joining": 12,
     "transitioning": 1
   },
-  "candidate_channels": 546,
-  "enabled_channels": 463,
+  "candidate_channels": 536,
+  "enabled_channels": 456,
   "channel_statuses": {
-    "ok": 480,
-    "valid_empty": 21,
-    "invalid_feed_or_network_error": 44,
-    "selector_empty": 1
+    "ok": 479,
+    "valid_empty": 14,
+    "invalid_feed_or_network_error": 40,
+    "selector_empty": 3
   },
   "directory_gaps": [
-    {
-      "institution_id": "us-congress",
-      "url": "https://public.govdelivery.com/accounts/USLOC/subscriber/new?topic_id=USLOC_173&origin=https://www.congress.gov/rss/",
-      "status": "external_feed_host_not_approved; not requested"
-    },
-    {
-      "institution_id": "us-congress",
-      "url": "https://public.govdelivery.com/accounts/USLOC/subscriber/new?topic_id=USLOC_90&origin=https://www.congress.gov/rss/",
-      "status": "external_feed_host_not_approved; not requested"
-    },
-    {
-      "institution_id": "us-congress",
-      "url": "https://public.govdelivery.com/accounts/USLOC/subscriber/new?topic_id=USLOC_80&origin=https://www.congress.gov/rss/",
-      "status": "external_feed_host_not_approved; not requested"
-    },
-    {
-      "institution_id": "us-congress",
-      "url": "https://public.govdelivery.com/accounts/USLOC/subscriber/new?topic_id=USLOC_88&origin=https://www.congress.gov/rss/",
-      "status": "external_feed_host_not_approved; not requested"
-    },
-    {
-      "institution_id": "us-congress",
-      "url": "https://public.govdelivery.com/accounts/USLOC/subscriber/new?topic_id=USLOC_73&origin=https://www.congress.gov/rss/",
-      "status": "external_feed_host_not_approved; not requested"
-    },
-    {
-      "institution_id": "us-congress",
-      "url": "https://public.govdelivery.com/accounts/USLOC/subscriber/new?topic_id=USLOC_74&origin=https://www.congress.gov/rss/",
-      "status": "external_feed_host_not_approved; not requested"
-    },
     {
       "institution_id": "us-fdic",
       "url": "https://public.govdelivery.com/topics/USFDIC_26/feed.rss",
@@ -101,5 +71,5 @@
     "us_states": 59,
     "curated_channel_owner": 123
   },
-  "excluded_reference_channels": 38
+  "excluded_reference_channels": 37
 }
