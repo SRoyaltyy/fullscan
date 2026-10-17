@@ -150,10 +150,19 @@ def extract_document(raw: bytes, filename: str, kind: str = '') -> dict:
         try:
             import fitz
             with fitz.open(stream=raw, filetype='pdf') as pdf:
-                texts, empty, ocr_pages = [], [], []
+                texts, empty, ocr_pages, blank_pages = [], [], [], []
                 for i, page in enumerate(pdf):
                     text = page.get_text('text', sort=True)
                     visible = bool(page.get_images() or page.get_drawings())
+                    if not text.strip() and visible:
+                        # A solid background is not unread text. Render the
+                        # entire page in RGB so colored text cannot disappear
+                        # through conversion to grayscale. No cropped sample.
+                        pixmap = page.get_pixmap(matrix=fitz.Matrix(2, 2), colorspace=fitz.csRGB, alpha=False)
+                        pixels = pixmap.samples
+                        if pixels == pixels[:3] * (pixmap.width * pixmap.height):
+                            blank_pages.append(i + 1)
+                            visible = False
                     if not text.strip() and visible and os.environ.get('FILINGS_OCR_ENABLED') == '1':
                         try:
                             text = page.get_text('text', textpage=page.get_textpage_ocr(language='eng', dpi=150, full=True))
@@ -165,6 +174,7 @@ def extract_document(raw: bytes, filename: str, kind: str = '') -> dict:
                 text = '\n\n'.join(f'[Page {i+1}]\n{value}' for i, value in enumerate(texts))
                 return {'status': 'needs_ocr' if empty else 'complete', 'text': text,
                         'pages': len(texts), 'pages_without_text': empty, 'ocr_pages': ocr_pages,
+                        'uniform_blank_pages': blank_pages,
                         'method': 'pymupdf_all_pages'}
         except Exception as exc:
             return {'status': 'extraction_failed', 'error_type': type(exc).__name__, 'text': '', 'method': 'pdf'}

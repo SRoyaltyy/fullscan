@@ -224,6 +224,10 @@ def archive_filing(client, objects, cik, filing):
             raw = gzip.decompress(objects.get(downloaded['source']['key']))
             if sha256(raw) != downloaded['source']['sha256'] or len(raw) != downloaded['source']['byte_count']:
                 raise ValueError('Downloaded original checksum mismatch')
+            if not raw.rstrip().upper().endswith(b'</SEC-DOCUMENT>'):
+                # A saved interrupted response is evidence of the failed
+                # attempt, not a reusable complete filing. Fetch a fresh copy.
+                raw = client.submission(cik, accession)
         else:
             raw = client.submission(cik, accession)
     # Preserve the authoritative original even if a new attachment encoding or

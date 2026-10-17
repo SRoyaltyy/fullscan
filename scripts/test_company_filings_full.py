@@ -53,6 +53,19 @@ class FullFilingTests(unittest.TestCase):
             _,reused=archive_filing(client,objects,'0000000001',FILING)
             self.assertTrue(reused);self.assertEqual(client.calls,1)
 
+    def test_interrupted_source_checkpoint_is_fetched_again_on_resume(self):
+        complete=standard_submission();client=FakeClient(complete[:-30])
+        with tempfile.TemporaryDirectory() as directory:
+            objects=LocalObjects(directory)
+            with self.assertRaisesRegex(ValueError,'terminal marker missing'):
+                archive_filing(client,objects,'0000000001',FILING)
+            client.raw=complete
+            manifest,reused=archive_filing(client,objects,'0000000001',FILING)
+            self.assertFalse(reused)
+            self.assertTrue(manifest['raw_complete'] and manifest['text_complete'])
+            self.assertEqual(client.calls,2)
+            self.assertEqual(read_original(objects,'0000000001',ACCESSION),complete)
+
     def test_no_old_download_or_section_caps(self):
         raw=b'A'*(25_000_000+123)+b'ENTIRE FINAL BYTES'
         response=type('Response',(),{'content':raw,'headers':{'Content-Length':str(len(raw))}})()
@@ -92,6 +105,31 @@ class FullFilingTests(unittest.TestCase):
         extracted=extract_document(raw,'annual.pdf','EX-99.1')
         self.assertEqual(extracted['status'],'complete');self.assertEqual(extracted['pages'],3)
         for i in range(3):self.assertIn(f'PDF page {i+1}',extracted['text'])
+
+    def test_uniform_colored_pdf_pages_are_verified_blank_without_ocr(self):
+        import fitz
+        with fitz.open() as pdf:
+            page=pdf.new_page()
+            page.draw_rect(page.rect,color=None,fill=(0.84,0.82,0.78),width=0)
+            raw=pdf.tobytes()
+        with patch.dict('os.environ',{'FILINGS_OCR_ENABLED':'0'}):
+            result=extract_document(raw,'blank-background.pdf')
+        self.assertEqual(result['status'],'complete')
+        self.assertEqual(result['pages'],1)
+        self.assertEqual(result['uniform_blank_pages'],[1])
+        self.assertEqual(result['pages_without_text'],[])
+
+    def test_nonuniform_pdf_graphic_is_not_treated_as_a_blank_page(self):
+        import fitz
+        with fitz.open() as pdf:
+            page=pdf.new_page()
+            page.draw_rect(fitz.Rect(72,72,200,200),fill=(0,0,0))
+            raw=pdf.tobytes()
+        with patch.dict('os.environ',{'FILINGS_OCR_ENABLED':'0'}):
+            result=extract_document(raw,'graphic.pdf')
+        self.assertEqual(result['status'],'needs_ocr')
+        self.assertEqual(result['uniform_blank_pages'],[])
+        self.assertEqual(result['pages_without_text'],[1])
 
     def test_image_only_exhibit_reads_every_preserved_slide_without_a_page_cap(self):
         raw=submission([('annual.htm','10-K',b'<html><body><img src="page1.png"><img src="page2.png"></body></html>'),
