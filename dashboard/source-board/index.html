@@ -84,9 +84,14 @@
 </div>
 
 <h2>Newly parsed <span id="newDate" class="mut"></span></h2>
-<div class="panel"><h3><span id="newCount" class="mut">…</span><span id="newBySrc"></span></h3>
+<div class="panel"><h3><span id="newCount" class="mut">…</span><span id="newByClass"></span></h3>
   <div style="padding:8px 12px">
+    <div class="sub" style="margin:0 0 6px">Signal first — rule-based classes, zero LLM. <b class="fail">high</b> = market-moving pattern; <b class="part">watch</b> = priority regulator/source worth eyeballing; routine/docket/noise = the firehose below.</div>
     <ol class="news" id="news"></ol>
+    <details id="firehoseWrap" style="display:none;margin-top:8px">
+      <summary class="mut" style="cursor:pointer" id="firehoseSum"></summary>
+      <ol class="news" id="firehose" style="margin-top:8px"></ol>
+    </details>
     <div class="mut" id="newsNote" style="display:none;font-size:12px">Nothing newly retained yet on this day — every document seen was already in the ledger. Fresh items appear as soon as a source publishes something new.</div>
   </div>
 </div>
@@ -128,13 +133,15 @@ function render(board){
     + "  ·  collect " + ((board.collect||{}).generated_at||"").slice(0,19).replace("T"," ");
   const cat = board.catalog||{}, col = board.collect||{}, nt = board.new_today||{};
   const cov = col.coverage_status||"";
+  const clsCount = nt.by_class||{};
+  const nSignal = (clsCount.high||0) + (clsCount.watch||0);
   $("cards").innerHTML = [
     ["Channels enabled", (cat.enabled??"—") + " / " + (cat.channels??"—"), "ok"],
     ["Verified ok", cat.verified_ok??"—", (cat.verified_ok>=cat.enabled*0.9)?"ok":"part"],
     ["Collect OK", (col.sources_ok??"—") + " / " + (col.enabled_sources??"—"), col.sources_failed?"part":"ok"],
     ["Collect failed", col.sources_failed??"—", col.sources_failed?"fail":"ok"],
-    ["New parsed " + (board.date||"").slice(5), nt.count??"—", nt.count?"ok":"mut"],
-    ["Dated docs (3d)", col.current_dated_documents??"—", "mut"],
+    ["Signal today", nSignal, nSignal?"ok":"mut"],
+    ["Noise today", (clsCount.routine||0)+(clsCount.docket||0)+(clsCount.noise||0), "mut"],
     ["Coverage", cov.includes("degraded")?"degraded":"clean", cov.includes("degraded")?"part":"ok"],
   ].map(([k,v,cls]) => `<div class="card">${k}<b class="${cls}">${v}</b></div>`).join("");
   $("catalogMd").href = (board.href||{}).catalog_md || "#";
@@ -149,12 +156,24 @@ function render(board){
 
   $("newDate").textContent = "· " + (board.date||"");
   $("newCount").textContent = nt.count + " new";
-  $("newBySrc").innerHTML = Object.entries(nt.by_source||{}).slice(0,14)
-    .map(([s,n]) => `<span class="chip">${esc(s)} <b>${n}</b></span>`).join("");
+  const clsBadge = {high:'<span class="pill fail">high</span>',
+    watch:'<span class="pill part">watch</span>',
+    routine:'<span class="pill off">routine</span>',
+    docket:'<span class="pill off">docket</span>',
+    noise:'<span class="pill off">noise</span>'};
+  $("newByClass").innerHTML = Object.entries(clsCount)
+    .sort((a,b)=>({high:0,watch:1,routine:2,docket:3,noise:4}[a[0]]??9)-({high:0,watch:1,routine:2,docket:3,noise:4}[b[0]]??9))
+    .map(([c,n]) => `<span class="chip">${clsBadge[c]||esc(c)} <b>${n}</b></span>`).join("");
   const heads = nt.headlines||[];
-  $("news").innerHTML = heads.slice(0,120).map(h => `<li>
+  const signal = heads.filter(h=>h.cls==="high"||h.cls==="watch");
+  const hose = heads.filter(h=>!(h.cls==="high"||h.cls==="watch"));
+  const li = h => `<li>
     <span class="when">${esc((h.published_at||"").slice(0,16).replace("T"," "))}</span>
-    <a href="${esc(h.url)}">${esc(h.title)}</a><span class="src">${esc(h.source)}</span></li>`).join("");
+    ${clsBadge[h.cls]||""} <a href="${esc(h.url)}">${esc(h.title)}</a><span class="src">${esc(h.source)}</span></li>`;
+  $("news").innerHTML = signal.slice(0,120).map(li).join("");
+  $("firehoseWrap").style.display = hose.length ? "" : "none";
+  $("firehoseSum").textContent = "Firehose: " + hose.length + " routine/docket/noise items (showing first 60)";
+  $("firehose").innerHTML = hose.slice(0,60).map(li).join("");
   $("newsNote").style.display = heads.length ? "none" : "";
 
   window._chans = board.channels||[];
