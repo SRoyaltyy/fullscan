@@ -1,6 +1,6 @@
 # Primary-origin action documents
 
-Updated 2026-10-17T13:05:33.483816+00:00. 575 dated documents in the configured 3-day window; 0 newly retained; 559 repeat observations.
+Updated 2026-10-17T14:02:11.101604+00:00. 564 dated documents in the configured 3-day window; 0 newly retained; 583 repeat observations.
 Source health: 123/123 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
@@ -595,17 +595,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [​The EBA classifies USDC as the first significant e-money token in the European Union](https://www.eba.europa.eu/publications-and-media/press-releases/eba-classifies-usdc-first-significant-e-money-token-european-union) — European Banking Authority; 2026-10-14T14:36:49+00:00
 - [SEC Small Business Advisory Committee to Discuss IPO Modernization and Regulation Crowdfunding](https://www.sec.gov/newsroom/press-releases/2026-105-sec-small-business-advisory-committee-discuss-ipo-modernization-regulation-crowdfunding) — Securities and Exchange Commission; 2026-10-14T14:30:47+00:00
 - [What’s New for Biologics](http://www.fda.gov/vaccines-blood-biologics/news-events-biologics/whats-new-biologics) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-14T14:06:29+00:00
-- [Blood Guidances](http://www.fda.gov/vaccines-blood-biologics/biologics-guidances/blood-guidances) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-14T14:02:04+00:00
-- [Recently Issued Guidance Documents](http://www.fda.gov/vaccines-blood-biologics/biologics-guidances/recently-issued-guidance-documents) — Food and Drug Administration — What's New: Drugs; 2026-10-14T13:58:21+00:00
-- [Roster of the Cellular, Tissue and Gene Therapies Advisory Committee](http://www.fda.gov/advisory-committees/cellular-tissue-and-gene-therapies-advisory-committee/roster-cellular-tissue-and-gene-therapies-advisory-committee) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-14T13:49:08+00:00
-- [Roster of the Vaccines and Related Biological Products Advisory Committee](http://www.fda.gov/advisory-committees/vaccines-and-related-biological-products-advisory-committee/roster-vaccines-and-related-biological-products-advisory-committee) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-14T13:48:12+00:00
-- [Trump Administration Delivers Second Year of Savings by Stopping Taxpayer Payments for Duplicate and Deceased Enrollees in Obamacare](https://www.hhs.gov/press-room/cms-stops-obamacare-subsidies-duplicate-deceased-enrollees.html) — Health and Human Services; 2026-10-14T13:45:00+00:00
-- [Compliance Policy Regarding Blood and Blood Component Donation Suitability, Donor Eligibility and Source Plasma Quarantine Hold Requirements](http://www.fda.gov/regulatory-information/search-fda-guidance-documents/compliance-policy-regarding-blood-and-blood-component-donation-suitability-donor-eligibility-and) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-14T13:44:07+00:00
-- [Blood Pressure and Pulse Donor Eligibility Requirements – Compliance Policy](http://www.fda.gov/regulatory-information/search-fda-guidance-documents/blood-pressure-and-pulse-donor-eligibility-requirements-compliance-policy) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-14T13:44:05+00:00
-- [Palestine*: Statement by the High Representative on behalf of the European Union on the postponement of elections](https://www.consilium.europa.eu/en/press/press-releases/2026/10/14/palestinestar-statement-by-the-high-representative-on-behalf-of-the-european-union-on-the-postponement-of-elections/) — Council of the European Union; 2026-10-14T13:30:00+00:00
-- [Help More Providers Prescribe with Confidence](http://www.fda.gov/drugs/prescribe-confidence/help-more-providers-prescribe-confidence) — Food and Drug Administration — What's New: Drugs; 2026-10-14T13:27:13+00:00
-- [Primary Care Providers Can Prescribe with Confidence](http://www.fda.gov/drugs/prescribe-confidence/primary-care-providers-can-prescribe-confidence) — Food and Drug Administration — What's New: Drugs; 2026-10-14T13:18:52+00:00
-- [Commissioners Kubilius and Lahbib strengthen global disaster risk management through space technologies](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2164) — European Commission press and decisions; 2026-10-14T13:14:21+00:00
 
 ## Source failures and coverage warnings
 
@@ -623,15 +612,15 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fed-ba8ad56252: ok; stale_feed_outside_requested_window
 - us-fed-eea49fa482: ok; stale_feed_outside_requested_window
 - us-fed-8d9ba6faea: ok; stale_feed_outside_requested_window
-- us-fdic-index: unchanged; stale_feed_outside_requested_window
+- us-fdic-index: ok; stale_feed_outside_requested_window
 - us-fincen-index: ok; stale_feed_outside_requested_window
 - us-cftc-fda5c3631d: ok; stale_feed_outside_requested_window
-- us-fda-1a1096082f: ok; stale_feed_outside_requested_window
-- us-fda-2d9c4fc2f9: unchanged; stale_feed_outside_requested_window
+- us-fda-1a1096082f: unchanged; stale_feed_outside_requested_window
+- us-fda-2d9c4fc2f9: ok; stale_feed_outside_requested_window
 - us-fda-3eaddf14de: unchanged; stale_feed_outside_requested_window
 - us-fsis-85c9542fd5: ok; stale_feed_outside_requested_window
 - us-fcc-1ad902e468: unchanged; stale_feed_outside_requested_window
-- us-nlrb-3db5e72bf9: unchanged; stale_feed_outside_requested_window
+- us-nlrb-3db5e72bf9: ok; stale_feed_outside_requested_window
 - us-dot-6464bc66ac: ok; stale_feed_outside_requested_window
 - us-fmc-fe8f0538ae: unchanged; stale_feed_outside_requested_window
 - us-fhfa-index: unchanged; stale_feed_outside_requested_window
@@ -640,11 +629,11 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - ca-gazette-2d47daa483: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-boc-4aa19b2183: unchanged; stale_feed_outside_requested_window
 - ca-boc-1f26bb2971: unchanged; stale_feed_outside_requested_window
-- ca-boc-4192a605ae: unchanged; stale_feed_outside_requested_window
+- ca-boc-4192a605ae: ok; stale_feed_outside_requested_window
 - ca-boc-5cc0603f1f: unchanged; stale_feed_outside_requested_window
-- ca-boc-1c9979e6ac: unchanged; stale_feed_outside_requested_window
-- ca-boc-e24c58f2d0: unchanged; stale_feed_outside_requested_window
-- ca-boc-cffefa81f7: unchanged; stale_feed_outside_requested_window
+- ca-boc-1c9979e6ac: ok; stale_feed_outside_requested_window
+- ca-boc-e24c58f2d0: ok; stale_feed_outside_requested_window
+- ca-boc-cffefa81f7: ok; stale_feed_outside_requested_window
 - ca-boc-49364b93d8: unchanged; stale_feed_outside_requested_window
 - au-rba-9e35f5f8d1: unchanged; stale_feed_outside_requested_window
 - au-rba-5ba995e001: unchanged; stale_feed_outside_requested_window
