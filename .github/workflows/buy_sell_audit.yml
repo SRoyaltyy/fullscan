@@ -21,9 +21,15 @@ name: buy-sell day audit
 #     — a newly sealed day. Append it with
 #       python3 -m src.buy_sell_audit --seed
 #       which refuses to rewrite any existing line.
-# MISSING / SKIP lines are gaps or Theme Radar. They do not fail the job.
+# MISSING / SKIP lines are gaps in this repo. They do not fail the job.
 # Equity marks and sit notes are outside the fingerprint.
-# Theme Radar (SRoyaltyy/theme-radar) is not audited here.
+# Theme Radar research shorts are checked by a checkout of
+# SRoyaltyy/theme-radar main (runner temp only; not committed here) and
+#   python research/shadow_log/shadow_log_lock.py audit --json -
+# Exit 0 prints PASS theme_radar_research_shorts. Any other exit prints
+#   DRIFT theme_radar_research_shorts: FAIL ...
+# and fails the job. The checkout is a full clone: that audit exits
+# non-zero when git reports a shallow repository.
 # How to read a red run: docs/buy_sell_audit.md
 
 on:
@@ -70,9 +76,29 @@ jobs:
           python-version: "3.12"
       - name: Fetch main for the append-only baseline check
         run: git fetch --depth=1 --no-tags origin main
+      - name: Buy/sell audit tests
+        run: python3 -m src.test_buy_sell_audit
+      - name: Checkout Theme Radar main
+        run: |
+          set -euo pipefail
+          rm -rf "$RUNNER_TEMP/theme-radar"
+          # Anonymous clone. This repo's GITHUB_TOKEN cannot read theme-radar.
+          # Full history: audit --json exits non-zero on a shallow repository.
+          if ! git \
+            -c credential.helper= \
+            -c http.https://github.com/.extraheader= \
+            clone --branch main \
+            https://github.com/SRoyaltyy/theme-radar.git \
+            "$RUNNER_TEMP/theme-radar"
+          then
+            echo "DRIFT theme_radar_research_shorts: FAIL could not checkout SRoyaltyy/theme-radar main"
+            echo "::error::DRIFT theme_radar_research_shorts: FAIL could not checkout SRoyaltyy/theme-radar main"
+            exit 1
+          fi
       - name: Buy/sell fingerprint audit
         env:
           SESSION_DATE: ${{ github.event.inputs.session_date }}
         run: |
-          python3 -m src.test_buy_sell_audit
-          python3 -m src.buy_sell_audit --check --check-against origin/main ${SESSION_DATE:+--date "$SESSION_DATE"}
+          python3 -m src.buy_sell_audit --check --check-against origin/main \
+            --theme-radar "$RUNNER_TEMP/theme-radar" \
+            ${SESSION_DATE:+--date "$SESSION_DATE"}
