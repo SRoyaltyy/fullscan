@@ -1,0 +1,47 @@
+name: Full company filing archive
+on:
+  push:
+    branches: [cursor/company-filing-parser-9b60]
+    paths:
+      - '.github/workflows/company_filings_full.yml'
+      - 'src/company_filings/full_*.py'
+      - 'scripts/archive_company_filings.py'
+      - 'scripts/test_company_filings_full.py'
+      - 'config/company_filings_archive.json'
+      - 'data/company_filings_universe_2026-10-16.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: company-filings-full-archive
+  cancel-in-progress: false
+jobs:
+  storage:
+    runs-on: ubuntu-latest
+    outputs:
+      configured: ${{ steps.check.outputs.configured }}
+    steps:
+      - id: check
+        name: Check durable storage configuration without exposing values
+        env:
+          R2_ENDPOINT_URL: ${{ secrets.R2_ENDPOINT_URL || vars.R2_ENDPOINT_URL }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET || vars.R2_BUCKET }}
+          PRIMARY_ACTION_RELAY_URL: ${{ secrets.PRIMARY_ACTION_RELAY_URL }}
+        run: |
+          python - <<'PY'
+          import json,os,pathlib
+          names=['R2_ENDPOINT_URL','R2_ACCESS_KEY_ID','R2_SECRET_ACCESS_KEY','R2_BUCKET']
+          configured=all(bool(os.environ.get(k,'').strip()) for k in names)
+          result={'configured':configured,'fields_present':{k:bool(os.environ.get(k,'').strip()) for k in names},'relay_configured':bool(os.environ.get('PRIMARY_ACTION_RELAY_URL','').strip())}
+          pathlib.Path('storage_status.json').write_text(json.dumps(result,indent=2))
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('configured='+str(configured).lower()+'\n')
+          print(json.dumps(result,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: company-filings-full-storage-status
+          path: storage_status.json
+          retention-days: 14
