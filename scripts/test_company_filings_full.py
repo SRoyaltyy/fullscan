@@ -119,6 +119,24 @@ class FullFilingTests(unittest.TestCase):
         self.assertEqual(result['uniform_blank_pages'],[1])
         self.assertEqual(result['pages_without_text'],[])
 
+    def test_background_fill_with_empty_edge_does_not_hide_charts_or_annotations(self):
+        import fitz
+        with fitz.open() as pdf:
+            for i in range(3):
+                page=pdf.new_page()
+                rect=fitz.Rect(0.08,0.14,page.rect.width+0.05,page.rect.height)
+                page.draw_rect(rect,color=None,fill=(0.44,0.45,0.46),width=0)
+                if i==1:page.draw_rect(fitz.Rect(72,72,200,200),fill=(0,0,0))
+                if i==2:page.add_freetext_annot(fitz.Rect(72,72,300,150),'Original visible annotation')
+            raw=pdf.tobytes()
+        with patch.dict('os.environ',{'FILINGS_OCR_ENABLED':'0'}):
+            result=extract_document(raw,'background-and-content.pdf')
+        self.assertEqual(result['pages'],3)
+        self.assertEqual(result['background_only_pages'],[1])
+        self.assertEqual(result['pages_without_text'],[2])
+        self.assertIn('Original visible annotation',result['text'])
+        self.assertEqual(result['status'],'needs_ocr')
+
     def test_nonuniform_pdf_graphic_is_not_treated_as_a_blank_page(self):
         import fitz
         with fitz.open() as pdf:

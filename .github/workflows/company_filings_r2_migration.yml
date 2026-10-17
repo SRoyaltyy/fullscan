@@ -5,7 +5,6 @@ on:
       source_run_id:
         description: Completed and verified full archive run containing all twelve source artifacts
         required: true
-        default: '39035858340'
 permissions:
   contents: read
   actions: read

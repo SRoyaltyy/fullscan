@@ -150,10 +150,11 @@ def extract_document(raw: bytes, filename: str, kind: str = '') -> dict:
         try:
             import fitz
             with fitz.open(stream=raw, filetype='pdf') as pdf:
-                texts, empty, ocr_pages, blank_pages = [], [], [], []
+                texts, empty, ocr_pages, blank_pages, background_pages = [], [], [], [], []
                 for i, page in enumerate(pdf):
                     text = page.get_text('text', sort=True)
-                    visible = bool(page.get_images() or page.get_drawings())
+                    images, drawings = page.get_images(), page.get_drawings()
+                    visible = bool(images or drawings)
                     if not text.strip() and visible:
                         # A solid background is not unread text. Render the
                         # entire page in RGB so colored text cannot disappear
@@ -163,6 +164,17 @@ def extract_document(raw: bytes, filename: str, kind: str = '') -> dict:
                         if pixels == pixels[:3] * (pixmap.width * pixmap.height):
                             blank_pages.append(i + 1)
                             visible = False
+                        elif not images and len(drawings) == 1 and page.first_annot is None:
+                            drawing = drawings[0]
+                            items = drawing.get('items', [])
+                            # Some PDF exports leave a sub-point empty edge
+                            # around a solid background. Verify the complete
+                            # vector inventory rather than discard edge pixels.
+                            if drawing.get('type') == 'f' and drawing.get('fill') is not None and len(items) == 1 and items[0][0] == 're':
+                                rectangle = items[0][1]
+                                if all(abs(a - b) <= 0.25 for a, b in zip(rectangle, page.rect)):
+                                    background_pages.append(i + 1)
+                                    visible = False
                     if not text.strip() and visible and os.environ.get('FILINGS_OCR_ENABLED') == '1':
                         try:
                             text = page.get_text('text', textpage=page.get_textpage_ocr(language='eng', dpi=150, full=True))
@@ -175,6 +187,7 @@ def extract_document(raw: bytes, filename: str, kind: str = '') -> dict:
                 return {'status': 'needs_ocr' if empty else 'complete', 'text': text,
                         'pages': len(texts), 'pages_without_text': empty, 'ocr_pages': ocr_pages,
                         'uniform_blank_pages': blank_pages,
+                        'background_only_pages': background_pages,
                         'method': 'pymupdf_all_pages'}
         except Exception as exc:
             return {'status': 'extraction_failed', 'error_type': type(exc).__name__, 'text': '', 'method': 'pdf'}

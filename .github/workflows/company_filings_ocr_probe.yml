@@ -50,7 +50,7 @@ jobs:
           print(json.dumps({**{k:v for k,v in exhibit.items() if k!='text'},'characters':len(exhibit['text']),'source_sha256':manifest['source']['sha256'],'truncated':manifest['truncated']}))
           assert exhibit['status']=='complete', 'PDF requires a reader repair; complete original preserved'
           PY
-      - name: Diagnose the BORR submission boundary and XPEV PDF pages
+      - name: Diagnose the remaining Enerflex PDF text gap
         if: always()
         run: |
           python - <<'PY'
@@ -59,20 +59,16 @@ jobs:
           from src.company_filings.full_extract import split_submission,file_bytes,extract_document,sha256
           folder=pathlib.Path('data/filings_ocr_probe');folder.mkdir(parents=True,exist_ok=True)
           client=WholeClient(per_sec=0.5)
-          targets=[('0001715497','0001628280-26-055957',None),('0001810997','0001193125-26-160201','d134229dex994.pdf')]
+          targets=[('0001904856','0001193125-26-138281','efxt-ex99_3.pdf')]
           for cik,accession,filename in targets:
-              raw=client.whole_url(archive_url(cik,accession,accession+'.txt'))
-              (folder/(accession+'.txt')).write_bytes(raw)
-              print(json.dumps({'accession':accession,'bytes':len(raw),'sha256':sha256(raw),'tail':raw[-500:].decode('utf-8','replace')}))
-              if not filename:continue
-              files=split_submission(raw);item=next(f for f in files if f['filename']==filename)
-              body=file_bytes(raw,item);(folder/filename).write_bytes(body)
+              body=client.whole_url(archive_url(cik,accession,filename))
+              (folder/filename).write_bytes(body)
               result=extract_document(body,filename)
-              print(json.dumps({'filename':filename,**{k:v for k,v in result.items() if k!='text'},'characters':len(result['text'])}))
+              print(json.dumps({'filename':filename,**{k:v for k,v in result.items() if k!='text'},'characters':len(result['text']),'original_bytes':len(body),'sha256':sha256(body)}))
               (folder/(filename+'.json')).write_text(json.dumps(result))
               with fitz.open(stream=body,filetype='pdf') as pdf:
                   for page in result.get('pages_without_text',[]):
-                      pdf[page-1].get_pixmap().save(folder/('xpev-page-'+str(page)+'.png'))
+                      pdf[page-1].get_pixmap().save(folder/('efxt-page-'+str(page)+'.png'))
           PY
       - uses: actions/upload-artifact@v4
         if: always()
