@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>union_hot_n4_h1__w0 — append-only</title>
+<style>
+ :root{
+  --bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;
+  --fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;
+  --chip:#2a3450; --day:#121826; --gold:#fbbf24;
+ }
+ *{box-sizing:border-box}
+ html,body{margin:0;width:100%;max-width:100%;overflow-x:hidden}
+ body{background:var(--bg);color:var(--fg);font:13px/1.4 -apple-system,Segoe UI,Roboto,sans-serif}
+ .wrap{width:100%;max-width:100%;margin:0 auto;padding:10px 10px 28px}
+ h1{font-size:18px;margin:0 0 2px}
+ .sub{color:var(--mut);font-size:12px;margin:0 0 8px}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(132px,100%),1fr));gap:6px;margin:0 0 10px}
+ .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;cursor:pointer;min-width:0}
+ .card:hover,.card.on{border-color:var(--gold)}
+ .card span{display:block;color:var(--mut);font-size:11px}
+ .card b{display:block;font-size:16px;margin-top:2px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+ .fill-up{background:rgba(74,222,128,.12)}
+ .fill-dn{background:rgba(248,113,113,.12)}
+ .pos{color:var(--pos)}.neg{color:var(--neg)}.mut{color:var(--mut)}.gold{color:var(--gold)}
+ .curve-box{max-width:100%;width:100%;margin:6px 0 12px}
+ canvas{width:100%;max-width:100%;height:560px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+ .legend{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
+ .legend span{cursor:pointer;padding:2px 10px;border-radius:12px;border:1px solid #333;font-size:12px;user-select:none}
+ .legend span.on{background:var(--fg);color:var(--bg)}
+ .tbl-wrap{width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+ table{width:100%;max-width:100%;border-collapse:collapse;margin:6px 0 10px;font-size:12px}
+ th,td{padding:4px 5px;border-bottom:1px solid var(--line2);text-align:right;white-space:normal;overflow-wrap:anywhere}
+ th{color:var(--mut);font-weight:600} td:first-child,th:first-child{text-align:left}
+ td.num,th.num{white-space:nowrap;font-variant-numeric:tabular-nums}
+ h2{font-size:14px;margin:12px 0 6px;color:#aeb9cf}
+ .note{color:var(--dim);font-size:11.5px;margin-top:8px}
+ .bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 8px}
+ .chip{cursor:pointer;padding:7px 12px;border-radius:999px;border:1px solid var(--chip);background:var(--card);color:#aeb9cf;font-size:12px;font-family:ui-monospace,Menlo,Consolas,monospace}
+ .chip.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+ .how{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:16px 0 8px}
+ .how h2{margin:0 0 8px}
+ .how ol{margin:0;padding-left:18px}
+ .how li{margin:0 0 6px}
+ .how code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--gold)}
+ .audit{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 12px}
+ details{margin:14px 0}
+ details>summary{cursor:pointer;color:#aeb9cf;font-size:15px;font-weight:600}
+ td.tick,th.tick{text-align:left;font-family:ui-monospace,Menlo,Consolas,monospace}
+ .day-card{background:var(--day);border:1px solid var(--line);border-radius:10px;padding:7px 8px;margin:0 0 6px}
+ .day-card h4{margin:0 0 5px;font-size:12px;font-weight:650}
+ .hd{display:flex;flex-wrap:wrap;gap:6px 12px;margin:0 0 5px;font-variant-numeric:tabular-nums;color:var(--mut)}
+ .pills{display:flex;flex-wrap:wrap;gap:5px}
+ .pill{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:3px 7px;font:11.5px/1.35 ui-monospace,Menlo,Consolas,monospace;overflow-wrap:anywhere;max-width:100%}
+ .pill.on{outline:2px solid var(--gold)}
+ .pill.buy{border-color:#166534}
+ .pill.sell{border-color:#7f1d1d}
+ .fill-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 8px;margin:0 0 5px}
+ .fill-card.open{background:rgba(251,191,36,.08)}
+ .fill-card.close{background:rgba(148,163,184,.08)}
+ .fill-card .fill-top{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}
+ .fill-card .why{color:var(--mut);font-size:12px;margin-top:3px}
+ .lock{background:var(--card);border:1px solid var(--gold);border-radius:10px;padding:10px 12px;margin:0 0 12px}
+ .lock b{color:var(--gold)}
+ .badge{display:inline-block;margin-left:6px;padding:1px 6px;border-radius:999px;font-size:10px;border:1px solid var(--line);color:var(--mut);vertical-align:1px}
+ .badge.pending{color:var(--gold);border-color:var(--gold)}
+ .badge.filled{color:var(--pos);border-color:#166534}
+ .today-plan{background:#1c1810;border:1px solid var(--gold);border-radius:10px;padding:10px 12px;margin:0 0 12px}
+ .today-plan h2{margin:0 0 6px;color:var(--gold);font-size:14px}
+ .today-plan h3{margin:0 0 6px;font-size:13px;font-family:ui-monospace,Menlo,Consolas,monospace}
+ .lab{color:var(--dim);font-size:11px;margin:4px 0 2px}
+ .skip{color:var(--gold);margin:0 0 10px}
+ .warn{background:rgba(251,191,36,.14);border:1px solid var(--gold);color:var(--gold);border-radius:8px;padding:6px 8px;margin:6px 0 0;font-size:12px}
+ .backfill{margin-top:28px;padding-top:12px;border-top:1px solid var(--line)}
+ .ovcal-wrap{margin:0 0 12px}
+ .ovcal-leg{display:flex;flex-wrap:wrap;gap:8px;color:var(--mut);font-size:11.5px;margin:0 0 8px}
+ .ovcal-leg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+ .ovcal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(176px,1fr));gap:8px}
+ .ovcal-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px}
+ .ovcal-card.on{border-color:var(--gold)}
+ .ovcal-card .nm{font:650 11.5px/1.2 ui-monospace,Menlo,Consolas,monospace;margin:0 0 4px}
+ .ovcal-wk{display:grid;grid-template-columns:repeat(5,1fr);gap:3px}
+ .ovcal-dow{color:var(--dim);font:10px/1.2 ui-sans-serif,system-ui;text-align:center}
+ .ovcal-cell{border-radius:5px;overflow:hidden;background:#121826;border:1px solid #1f2937;min-height:36px;cursor:pointer}
+ .ovcal-cell.empty{opacity:.25;cursor:default}
+ .ovcal-cell .d{display:block;font:700 9px/1.1 ui-monospace,Menlo,Consolas,monospace;text-align:center;color:#e2e8f0}
+ .ovcal-cell .half{min-height:12px;display:flex;align-items:center;justify-content:center;font:700 8px/1 ui-monospace,Menlo,Consolas,monospace;color:#f8fafc}
+ .ovcal-cell.pick{outline:2px solid #fbbf24}
+ .curve-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+ @media (max-width:900px){ .curve-row{grid-template-columns:1fr} }
+ @media (max-width:720px){
+  canvas{height:320px}
+  h1{font-size:16px}
+  .wrap{padding:8px 6px 20px}
+ }
+
+</style></head><body>
+<div class="wrap">
+<h1>union_hot_n4_h1__w0 <span class="mut" id="sessionHead"></span></h1>
+<div class="sub" id="packStamp">One sleeve. The day layout matches the factor-mine book: 09:30 open, then the close. Records are append-only.</div>
+<div class="sub" id="gen">Drawn from log.json. A sealed buy/sell line is not regenerated.</div>
+<div class="sub">Books:
+ <a href="../" style="color:#93c5fd">paper book</a>
+ · <a href="../factor-mine/" style="color:#93c5fd">factor mine</a>
+ · <a href="../day-board/" style="color:#93c5fd">day board</a>
+ · <a href="../strategy-board/" style="color:#93c5fd">all strategies</a>
+ · <a href="#ovCalBox" style="color:#fbbf24">new vs held</a>
+</div>
+<div id="todayPlan"></div>
+<div class="lock">
+ <b>Rules locked. Luck N 22,017. Records are append-only.</b>
+ This is the prereg h1 recipe: min hold stays 1 session. It is not an edit of the holdup log.
+ Session 2026-09-28 uses the frozen Theme Radar record. The 13:05 UTC PLAN run seals it for this book when the workflow is on main before 09:30 ET. A manual dispatch must commit before 13:25 UTC (09:25 ET). It is marked missing only if no plan is committed before 09:30 ET. forward_shadow_v1 is a different study.
+ Picks for day D are sealed before the US open on D. At 13:35 UTC the planned buys and sells are marked filled at the official open when that open is already printed.
+ 13:35 UTC is 09:35 ET during EDT (UTC−4, through 2026-11-01). During EST (from 2026-11-01, UTC−5) the same cron is 08:35 ET, before the 09:30 open, and the run appends nothing if the open is not printed yet.
+ P&amp;L for open positions stays pending until the close bar is saved. The 21:30 UTC fill adds closes and marks and does not repeat a fill already written.
+ A past line is never regenerated. The 31 sessions through 2026-09-25 stay exactly as written and are labeled backfill (built afterwards, not sealed pre-open).
+ Headline figures are live days only. A live day is a plan sealed at 09:05 ET before the open.
+ 2026-09-28 reads theme-radar data/snapshots/2026-09-25.csv. It is shown here once its plan is sealed. It is marked missing only if no sealed plan is committed before 09:30 ET.
+ A later day is a plan, then an open fill, then the close mark. Pending days are planned and not yet filled.
+ Primary cost is the Futubull fee plus 0.5% per side. Fills are that session's official open. No orders are sent.
+ The plan run is 13:05 UTC (9:05 AM EDT, 8:05 AM EST, 9:05 PM HKT). The open-fill run is 13:35 UTC (9:35 AM EDT, 8:35 AM EST, 9:35 PM HKT). The fill run is 21:30 UTC (5:30 PM EDT, 4:30 PM EST, 5:30 AM HKT the next day).
+</div>
+<p id="skip" class="skip" hidden></p>
+<p id="waitingDay" class="skip" hidden>2026-09-28 seals at the 13:05 UTC PLAN run from theme-radar data/snapshots/2026-09-25.csv. Marked missing only if no plan is committed before 09:30 ET.</p>
+<p id="missingDay" class="skip" hidden>2026-09-28 is missing. missing: plan not sealed before open. No sealed pre-open h1 plan was committed before 09:30 ET. forward_shadow_v1 separately records union_hot_n4_h1__w0 for that day, a different study.</p>
+<div class="cards" id="cards"></div>
+<details class="ovcal-wrap" id="ovCalBox" open>
+<summary>New buys vs already held — union_hot_n4_h1__w0</summary>
+<p class="mut">Each day is two stacked bars. <b>Top = already held</b>. <b>Bottom = bought today</b> (09:30 → close). Bright green is a gain, bright red is a loss, grey is flat. Click a day to start the equity curve on that morning.</p>
+<div class="ovcal-leg">
+ <span><i style="background:#16a34a"></i>gain</span>
+ <span><i style="background:#94a3b8"></i>flat</span>
+ <span><i style="background:#dc2626"></i>loss</span>
+ <span>top = held · bottom = new buys</span>
+</div>
+<div id="ovCal"></div>
+</details>
+<div class="bar" id="sleeveBar"></div>
+<details class="curve-box" open>
+<summary id="curveTitle">Equity curve ($10k)</summary>
+<div class="curve-row"><div><canvas id="chart" width="1000" height="560"></canvas>
+<div class="legend" id="legend"></div></div><div id="ovCalSleeve"></div></div>
+</details>
+<h2 id="metricsTitle">Six effectiveness metrics (cash book)</h2>
+<p class="mut">Book % is the sealed $10k sleeve after whole shares, Futubull fees, and the 0.5% per side. The close total is cash plus each lot at that day's close. Click the row to open this sleeve's blotter.</p>
+<div id="holdLive" class="audit" style="margin:0 0 12px">
+ <b id="holdLiveBanner">Close book</b>
+ <div class="mut" id="holdLiveStamp">Open lots marked at the sealed close. The close price is the one that adds up to the book.</div>
+ <div class="tbl-wrap" id="holdLiveBody"><span class="mut">loading close marks…</span></div>
+</div>
+<div class="tbl-wrap"><table id="stats"></table></div>
+<div class="panes">
+<details open>
+<summary>Every held name — 09:30 open vs prior close, then open → close</summary>
+<p class="mut">Each chip is one lot. The close print is the session close. Cash plus those closes is the sealed book.</p>
+<div id="marks"></div>
+</details>
+<details open>
+<summary>Each session — cash and holdings</summary>
+<p class="mut">Leftover cash is yesterday's cash after the fills. The book at 16:00 is that cash plus each remaining lot at the close.</p>
+<div id="state"></div>
+</details>
+</div>
+<details open>
+<summary>Blotter — 09:30 snapshot, buys / sells, 16:00 close</summary>
+<p class="mut" id="blotHint">09:30 OPEN is the overnight mark. CLOSE is each remaining lot at that day's close, next to the sealed book. BUY has no equity label. SELL is green only if that sale locked a gain.</p>
+<div id="blot"></div>
+<div id="skips"></div>
+</details>
+<details open>
+<summary>Start-date sustainability (would it still make money?)</summary>
+<p class="mut">If the book is read from the close of day X through the last sealed close, is it still above the equity it had on the morning of X? Click a day to start the curve there.</p>
+<div id="starts"></div>
+</details>
+<h2>Live closed trades</h2>
+<div class="tbl-wrap">
+ <table>
+  <thead><tr><th>Exit</th><th>Ticker</th><th>Shares</th><th>Entry</th><th>Exit open</th><th>Reason</th><th>P&amp;L</th></tr></thead>
+  <tbody id="closes"></tbody>
+ </table>
+</div>
+<section class="backfill" id="backfill">
+ <h2>backfill (built afterwards, not sealed pre-open)</h2>
+ <p class="sub" id="backfillNote">The 31 sessions 2026-08-13 through 2026-09-25 were built afterwards. They are not in the headline.</p>
+ <div class="cards" id="backfillCards"></div>
+ <div class="curve-box"><canvas id="backfillCurve" width="1000" height="280"></canvas></div>
+ <div id="backfillBlot"></div>
+ <h2>Backfill closed trades</h2>
+ <div class="tbl-wrap">
+  <table>
+   <thead><tr><th>Exit</th><th>Ticker</th><th>Shares</th><th>Entry</th><th>Exit open</th><th>Reason</th><th>P&amp;L</th></tr></thead>
+   <tbody id="backfillCloses"></tbody>
+  </table>
+ </div>
+</section>
+<details class="how">
+<summary>How a recipe is graded</summary>
+<ol>
+ <li><b>One sleeve.</b> <code>union_hot_n4_h1__w0</code>. Min hold is 1 session. Luck N 22,017. This is not a second strategy and it does not edit the factor-mine page.</li>
+ <li><b>Append-only.</b> A new generation may append the next day only. A day that already has a buy/sell line is not overwritten, reordered, or re-picked. Regenerating that day fails and the old line stays.</li>
+ <li><b>Close book.</b> The sealed equity is cash plus each remaining lot at that session's close. The close row shows that close next to the sealed total. The 09:30 open is only on the OPEN row.</li>
+ <li><b>Primary cost</b> is the Futubull fee plus 0.5% per side. Fills are that session's official open. No orders are sent.</li>
+</ol>
+<p class="note">The page is drawn from log.json, the append-only log.</p>
+</details>
+<p class="note" id="fees"></p>
+<p class="note" id="foot"></p>
+</div>
+
+<script>
+const CAPITAL = 10000;
+const BACKFILL_LAST = "2026-09-25";
+const BACKFILL_LABEL = "backfill (built afterwards, not sealed pre-open)";
+function money(n){
+  const v = Number(n);
+  const sign = v < 0 ? "-" : "";
+  return sign + "$" + Math.abs(v).toLocaleString("en-US", {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+function px(n){return Number(n).toLocaleString("en-US", {minimumFractionDigits:2, maximumFractionDigits:4});}
+function pct(n){
+  const v = Number(n) * 100;
+  const sign = v > 0 ? "+" : "";
+  return sign + v.toFixed(2) + "%";
+}
+function cls(n){return Number(n) > 0 ? "pos" : (Number(n) < 0 ? "neg" : "mut");}
+function esc(s){return String(s).replace(/[&<>]/g, ch => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;" }[ch]));}
+
+function draw(sessions, canvasId){
+  const canvas = document.getElementById(canvasId || "curve");
+  const dpr = window.devicePixelRatio || 1;
+  const w = canvas.clientWidth || 1000;
+  const h = canvas.clientHeight || 280;
+  canvas.width = Math.round(w * dpr);
+  canvas.height = Math.round(h * dpr);
+  const ctx = canvas.getContext("2d");
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, w, h);
+  const pad = {l:58, r:12, t:16, b:28};
+  const eq = sessions.map(s => Number(s.equity_primary));
+  const ys = [CAPITAL, ...eq];
+  let lo = Math.min(...ys), hi = Math.max(...ys);
+  if (hi === lo){ hi += 1; lo -= 1; }
+  const span = hi - lo;
+  lo -= span * 0.08; hi += span * 0.08;
+  const X = i => pad.l + (sessions.length < 2 ? (w - pad.l - pad.r) / 2 : i * (w - pad.l - pad.r) / (sessions.length - 1));
+  const Y = v => pad.t + (hi - v) / (hi - lo) * (h - pad.t - pad.b);
+  ctx.strokeStyle = "#262f45";
+  ctx.lineWidth = 1;
+  ctx.fillStyle = "#8b96ab";
+  ctx.font = "11px ui-monospace, Menlo, Consolas, monospace";
+  for (let g = 0; g < 4; g++){
+    const v = lo + (hi - lo) * g / 3;
+    const y = Y(v);
+    ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(w - pad.r, y); ctx.stroke();
+    ctx.fillText(money(v), 4, y + 3);
+  }
+  const base = Y(CAPITAL);
+  ctx.strokeStyle = "#fbbf24";
+  ctx.setLineDash([3, 3]);
+  ctx.beginPath(); ctx.moveTo(pad.l, base); ctx.lineTo(w - pad.r, base); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.strokeStyle = "#4ade80";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  eq.forEach((v, i) => { if (i === 0) ctx.moveTo(X(i), Y(v)); else ctx.lineTo(X(i), Y(v)); });
+  ctx.stroke();
+  ctx.fillStyle = "#dfe6f2";
+  eq.forEach((v, i) => {
+    ctx.beginPath(); ctx.arc(X(i), Y(v), 2.5, 0, Math.PI * 2); ctx.fill();
+  });
+  ctx.fillStyle = "#8b96ab";
+  if (sessions.length){
+    ctx.fillText(sessions[0].date.slice(5), X(0), h - 8);
+    ctx.fillText(sessions[sessions.length - 1].date.slice(5), Math.max(pad.l, X(sessions.length - 1) - 36), h - 8);
+  }
+}
+
+function pills(rows, html, empty){
+  return rows && rows.length ? rows.map(html).join("") : `<span class="pill flat">${empty}</span>`;
+}
+function legPills(legs){
+  return pills(legs, leg =>
+    `<span class="pill">${esc(leg.ticker)} ${esc(leg.leg)} ${esc(leg.bar_date)}</span>`, "none");
+}
+function positionPills(rows, pending){
+  return pills(rows, h => {
+    const pnl = pending ? "P&L pending" : "";
+    return `<span class="pill">${esc(h.ticker)} ${h.shares} from ${esc(h.entry_date)} hold ${h.min_hold}${pnl ? " · " + pnl : ""}</span>`;
+  }, "flat");
+}
+function morningText(view){
+  const plan = view.plan || null;
+  const day = view.book || view.plan || {};
+  const absent = (plan && plan.morning_status === "ABSENT") ? plan
+    : (day.morning_status === "ABSENT" ? day : null);
+  if (absent){
+    const why = absent.morning_reason || (absent.s_source && absent.s_source.reason) || "";
+    return "morning ABSENT" + (why ? ": " + esc(why) : "") + " · S null";
+  }
+  return "S " + (day.morning_s == null ? "null" : day.morning_s);
+}
+function dayCard(view, prevEquity, byClose){
+  if (view.mode === "missing"){
+    return `<article class="day pending">
+      <h3>${esc(view.date)} <span class="badge pending">no picks</span></h3>
+      <div class="hd"><span>${esc(view.reason || "")}</span><span>committed ${esc(view.committed_at || "")}</span></div>
+    </article>`;
+  }
+  if (view.mode === "open"){
+    const day = view.book;
+    const picks = pills(day.buys, b =>
+      `<span class="pill buy">#${b.rank} ${esc(b.ticker)} ${b.shares} @ ${px(b.fill)}</span>`, "no buy");
+    const sells = pills(day.sells, s =>
+      `<span class="pill sell">${esc(s.ticker)} ${s.shares} @ ${px(s.fill)} ${esc(s.reason)}</span>`, "no sell");
+    return `<article class="day open">
+      <h3>${esc(day.date)} <span class="badge pending">filled at the open · P&amp;L pending</span></h3>
+      <div class="hd"><span>cash ${money(day.cash_primary)}</span><span>holdup ${day.holdup_on ? "on" : "off"}</span><span>${morningText(view)}</span><span class="mut">${esc((day.sha256 || "").slice(0, 12))}</span></div>
+      <div class="lab">Buys filled at the official open. P&amp;L stays pending until the close bar is saved.</div>
+      <div class="pills">${picks}</div>
+      <div class="lab">Sells filled at the official open</div>
+      <div class="pills">${sells}</div>
+      <div class="lab">Open positions</div>
+      <div class="pills">${positionPills(day.holdings, true)}</div>
+      ${(day.unfilled || []).length ? `<div class="lab">Not filled at the open</div><div class="pills">${(day.unfilled || []).map(u => `<span class="pill flat">${esc(u.side)} ${esc(u.ticker)} ${esc(u.reason)}</span>`).join("")}</div>` : ""}
+    </article>`;
+  }
+  if (view.mode === "pending"){
+    const day = view.plan;
+    const picks = pills(day.picks, p =>
+      `<span class="pill buy">#${p.rank} ${esc(p.ticker)} ${(p.sources || []).join("+")}</span>`, "no pick");
+    const sells = pills(day.planned_sells, s =>
+      `<span class="pill sell">${esc(s.ticker)} ${s.shares} ${esc(s.reason)}</span>`, "no planned sell");
+    return `<article class="day pending">
+      <h3>${esc(day.date)} <span class="badge pending">pending</span></h3>
+      <div class="hd"><span>planned, not yet filled</span><span>committed ${esc(day.committed_at || "")}</span><span>holdup ${day.holdup_on ? "on" : "off"}</span><span>${morningText(view)}</span><span class="mut">${esc((day.sha256 || "").slice(0, 12))}</span></div>
+      <div class="lab">Ranked picks, sealed before the open. No prices from this session.</div>
+      <div class="pills">${picks}</div>
+      <div class="lab">Planned sells</div>
+      <div class="pills">${sells}</div>
+      <div class="lab">Excluded unexplained legs</div>
+      <div class="pills">${legPills(day.excluded_unexplained_legs)}</div>
+    </article>`;
+  }
+  const day = view.book;
+  const ret = Number(day.equity_primary) / prevEquity - 1;
+  const badge = view.mode === "seeded"
+    ? `<span class="badge seeded">${esc(BACKFILL_LABEL)}</span>`
+    : `<span class="badge filled">filled after the close</span>`;
+  const buys = pills(day.buys, b =>
+    `<span class="pill buy">#${b.rank} ${esc(b.ticker)} ${b.shares} @ ${px(b.fill)} ${(b.sources || []).join("+")}</span>`, "no buy");
+  const sells = pills(day.sells, s =>
+    `<span class="pill sell">${esc(s.ticker)} ${s.shares} @ ${px(s.fill)} ${esc(s.reason)}</span>`, "no sell");
+  const held = positionPills(day.holdings, false);
+  const legs = view.mode === "filled"
+    ? (view.plan.excluded_unexplained_legs || []).concat(day.excluded_on_fill || [])
+    : (day.excluded_unexplained_legs || []);
+  const dayCloses = pills(byClose[day.date], c =>
+    `<span class="pill ${cls(c.pnl_primary)}">${esc(c.ticker)} ${money(c.pnl_primary)}</span>`, "none");
+  const missed = (day.unfilled || []).map(u =>
+    `<span class="pill flat">${esc(u.side)} ${esc(u.ticker)} ${esc(u.reason)}</span>`).join("");
+  return `<article class="day ${view.mode === "seeded" ? "seeded" : "filled"}">
+    <h3>${esc(day.date)} <span class="${cls(ret)}">${pct(ret)}</span>${badge}</h3>
+    <div class="hd">
+      <span>equity ${money(day.equity_primary)}</span>
+      <span>cash ${money(day.cash_primary)}</span>
+      <span>holdup ${day.holdup_on ? "on" : "off"}</span>
+      <span>${morningText(view)}</span>
+      <span class="mut">${esc((day.sha256 || "").slice(0, 12))}</span>
+    </div>
+    <div class="lab">${view.mode === "seeded" ? "Buys — seeded fill at that day's open" : "Buys — filled at that day's open"}</div>
+    <div class="pills">${buys}</div>
+    <div class="lab">Sells</div>
+    <div class="pills">${sells}</div>
+    <div class="lab">Closed-trade P&amp;L, 0.5%/side</div>
+    <div class="pills">${dayCloses}</div>
+    <div class="lab">Holdings after the day</div>
+    <div class="pills">${held}</div>
+    <div class="lab">Excluded unexplained legs</div>
+    <div class="pills">${legPills(legs)}</div>
+    ${missed ? `<div class="lab">Unfilled</div><div class="pills">${missed}</div>` : ""}
+  </article>`;
+}
+
+const SEAL_GIT = {
+  "b129d5505394941231f1e2c61c37949b9bad920fff9c9b09df3b51e6dd7b6951": "5e6a3d04",
+  "68dd183b35ce7783269dd9b4ae699e2518c64f7eb9c953a69acece0675f884b6": "f9c8628a"
+};
+function nthWeekday(year, month, weekday, n){
+  if (n > 0){
+    const d = new Date(Date.UTC(year, month - 1, 1));
+    const wd = (d.getUTCDay() + 6) % 7;
+    d.setUTCDate(1 + ((weekday - wd + 7) % 7) + (n - 1) * 7);
+    return d.toISOString().slice(0, 10);
+  }
+  const d = month === 12 ? new Date(Date.UTC(year + 1, 0, 1)) : new Date(Date.UTC(year, month, 1));
+  d.setUTCDate(d.getUTCDate() - 1);
+  const wd = (d.getUTCDay() + 6) % 7;
+  d.setUTCDate(d.getUTCDate() - ((wd - weekday + 7) % 7));
+  return d.toISOString().slice(0, 10);
+}
+function easterGregorian(year){
+  const a = year % 19;
+  const b = Math.floor(year / 100), c = year % 100;
+  const d = Math.floor(b / 4), e = b % 4;
+  const f = Math.floor((b + 8) / 25);
+  const g = Math.floor((b - f + 1) / 3);
+  const h = (19 * a + b - d - g + 15) % 30;
+  const i = Math.floor(c / 4), k = c % 4;
+  const el = (32 + 2 * e + 2 * i - h - k) % 7;
+  const m = Math.floor((a + 11 * h + 22 * el) / 451);
+  const monthDay = h + el - 7 * m + 114;
+  const month = Math.floor(monthDay / 31);
+  const day = (monthDay % 31) + 1;
+  return year + "-" + String(month).padStart(2, "0") + "-" + String(day).padStart(2, "0");
+}
+function observedNyse(ymd){
+  const d = new Date(ymd + "T00:00:00Z");
+  const wd = d.getUTCDay();
+  if (wd === 6) d.setUTCDate(d.getUTCDate() - 1);
+  else if (wd === 0) d.setUTCDate(d.getUTCDate() + 1);
+  return d.toISOString().slice(0, 10);
+}
+function nyseHoliday(ymd){
+  const year = Number(ymd.slice(0, 4));
+  const easter = easterGregorian(year);
+  const goodFriday = new Date(easter + "T00:00:00Z");
+  goodFriday.setUTCDate(goodFriday.getUTCDate() - 2);
+  const set = new Set([
+    observedNyse(year + "-01-01"),
+    nthWeekday(year, 1, 0, 3),
+    nthWeekday(year, 2, 0, 3),
+    goodFriday.toISOString().slice(0, 10),
+    nthWeekday(year, 5, 0, -1),
+    observedNyse(year + "-06-19"),
+    observedNyse(year + "-07-04"),
+    nthWeekday(year, 9, 0, 1),
+    nthWeekday(year, 11, 3, 4),
+    observedNyse(year + "-12-25")
+  ]);
+  return set.has(ymd);
+}
+function sessionOnOrAfter(ymd){
+  const d = new Date(ymd + "T00:00:00Z");
+  for (let i = 0; i < 14; i++){
+    const iso = d.toISOString().slice(0, 10);
+    const wd = (d.getUTCDay() + 6) % 7;
+    if (wd < 5 && !nyseHoliday(iso)) return iso;
+    d.setUTCDate(d.getUTCDate() + 1);
+  }
+  return ymd;
+}
+function focusSession(now){
+  const ymd = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit"
+  }).format(now);
+  return sessionOnOrAfter(ymd);
+}
+function sealClocks(stamp){
+  if (!stamp) return ["", ""];
+  const d = new Date(stamp);
+  const fmt = zone => new Intl.DateTimeFormat("en-GB", {
+    timeZone: zone, hour: "2-digit", minute: "2-digit", hourCycle: "h23"
+  }).format(d);
+  return [fmt("America/New_York") + " ET", fmt("Asia/Hong_Kong") + " HKT"];
+}
+function morningLine(plan){
+  const score = plan.morning_s == null ? "null" : String(plan.morning_s);
+  if (plan.morning_status === "ABSENT"){
+    const why = plan.morning_reason || (plan.s_source && plan.s_source.reason) || "";
+    return "morning ABSENT · score " + score + (why ? " · " + why : "");
+  }
+  const status = plan.morning_status || (plan.s_source && plan.s_source.status) || "";
+  return status ? ("morning score " + score + " · status " + status) : ("morning score " + score);
+}
+function execFor(rows, day){
+  const buys = {}, sells = {};
+  function take(dest, list){
+    (list || []).forEach(row => {
+      if (row && row.ticker && row.fill != null) dest[row.ticker] = row;
+    });
+  }
+  rows.forEach(row => {
+    if (row.date !== day) return;
+    if (row.kind === "open_fill" || row.kind === "fill"){
+      take(buys, row.buys);
+      take(sells, row.sells);
+    } else if (row.kind === "open_fill_correction" && row.corrected){
+      take(buys, row.corrected.buys);
+      take(sells, row.corrected.sells);
+    } else if (row.kind === "mark"){
+      take(buys, row.added_buys);
+      take(sells, row.added_sells);
+    }
+  });
+  return {buys: buys, sells: sells};
+}
+function todayPlanHtml(rows){
+  const focus = focusSession(new Date());
+  let plan = null;
+  rows.forEach(row => { if (row.kind === "plan" && row.date === focus) plan = row; });
+  if (!plan){
+    return `<section class="today-plan"><h2>Today's plan</h2><p>no plan sealed yet for ${esc(focus)}; plan runs 09:05 ET</p></section>`;
+  }
+  const exe = execFor(rows, focus);
+  const seal = SEAL_GIT[plan.sha256] || String(plan.sha256 || "").slice(0, 12);
+  const clocks = sealClocks(plan.committed_at || "");
+  const hold = plan.holdup_on ? "on" : "off";
+  const sellPills = (plan.planned_sells || []).map(s => {
+    const hit = exe.sells[s.ticker];
+    if (hit) return `<span class="pill sell">${esc(s.ticker)} ${s.shares} ${esc(s.reason)} @ ${px(hit.fill)} filled</span>`;
+    return `<span class="pill sell">${esc(s.ticker)} ${s.shares} ${esc(s.reason)}</span>`;
+  }).join("") || `<span class="pill flat">no planned sell</span>`;
+  const buyPills = (plan.picks || []).map(p => {
+    const src = (p.sources || []).join("/");
+    const srcTxt = src ? " " + esc(src) : "";
+    const hit = exe.buys[p.ticker];
+    if (hit){
+      const shares = hit.shares == null ? "" : " " + hit.shares;
+      return `<span class="pill buy">${esc(p.ticker)}${shares}${srcTxt} @ ${px(hit.fill)} filled</span>`;
+    }
+    return `<span class="pill buy">${esc(p.ticker)}${srcTxt} · fills at 09:35 ET open</span>`;
+  }).join("") || `<span class="pill flat">no planned buy</span>`;
+  const lines = (plan.planned_sells || []).length + (plan.picks || []).length;
+  let priced = 0;
+  (plan.planned_sells || []).forEach(s => { if (exe.sells[s.ticker]) priced++; });
+  (plan.picks || []).forEach(p => { if (exe.buys[p.ticker]) priced++; });
+  const badge = lines && priced === lines
+    ? `<span class="badge filled">filled</span>`
+    : `<span class="badge pending">sealed</span>`;
+  const clock = clocks[0] ? `<span>${esc(clocks[0])}</span><span>${esc(clocks[1])}</span>` : "";
+  return `<section class="today-plan"><h2>Today's plan</h2><h3>${esc(plan.date || focus)} ${badge}</h3><div class="hd"><span>seal commit ${esc(seal)}</span>${clock}<span>${esc(morningLine(plan))}</span><span>holdup 2-day hold ${hold}</span></div><div class="lab">Planned sells</div><div class="pills">${sellPills}</div><div class="lab">Planned buys</div><div class="pills">${buyPills}</div></section>`;
+}
+
+function withCorrections(rows){
+  const latest = {};
+  rows.forEach(row => {
+    if (row.kind === "open_fill_correction" && row.corrected) latest[row.date] = row;
+  });
+  return rows.map(row => {
+    if (row.kind !== "open_fill" || !latest[row.date]) return row;
+    const corr = latest[row.date];
+    return Object.assign({}, corr.corrected, {sha256: corr.sha256});
+  });
+}
+let BARS = {};
+let NOTES = [];
+let curveStart = "";
+function notesFor(date){
+  return (NOTES || []).filter(note => note && (note.date === date || (note.dates || []).indexOf(date) >= 0));
+}
+function dayNotesHtml(date){
+  const rows = notesFor(date);
+  if (!rows.length) return "";
+  return `<div class="warn">${rows.map(note => esc(note.note || "")).join("<br>")}</div>`;
+}
+
+function quote(date, ticker){
+  const day = BARS[date] || {};
+  return day[ticker] || null;
+}
+function numOrNull(value){
+  if (value == null || value === "") return null;
+  const n = Number(value);
+  return Number.isFinite(n) ? n : null;
+}
+function signed(v){
+  if (v == null || !Number.isFinite(Number(v))) return "—";
+  const n = Number(v);
+  return (n >= 0 ? "+" : "") + n.toFixed(2);
+}
+function tone(dollars){
+  if (dollars == null || Math.abs(dollars) < 0.5) return "#94a3b8";
+  return dollars > 0 ? "#16a34a" : "#dc2626";
+}
+function closeBook(day){
+  const holdings = (day && day.holdings) || [];
+  let stock = 0;
+  let missing = 0;
+  const pills = holdings.map(h => {
+    const q = quote(day.date, h.ticker);
+    const close = q ? numOrNull(q.close) : null;
+    if (close == null){
+      missing += 1;
+      return `<span class="pill"><b>${esc(h.ticker)}</b> ×${h.shares} · close missing</span>`;
+    }
+    const dollars = h.shares * close;
+    stock += dollars;
+    return `<span class="pill"><b>${esc(h.ticker)}</b> ×${h.shares} · close ${money(close)} · ${money(dollars)}</span>`;
+  });
+  const cash = Number(day.cash_primary);
+  const equity = Number(day.equity_primary);
+  return {stock, cash, equity, sum: cash + stock, missing, pills: pills.join("")};
+}
+function closeBookHtml(day, bars){
+  const saved = BARS;
+  if (bars) BARS = bars;
+  try {
+  const book = closeBook(day);
+  const held = (day.holdings || []).map(h => `${h.ticker}×${h.shares}`).join(" ") || "—";
+  return `<div class="fill-card close" data-date="${esc(day.date)}">
+    <div class="fill-top"><span class="mut">CLOSE</span> <b>${esc(day.date)} 16:00</b>
+      · held ${esc(held)} · leftover ${money(book.cash)}
+      · book <span class="${cls(book.equity - CAPITAL)}">${money(book.equity)}</span>
+      <span class="mut">cash + closes ${money(book.sum)}</span>
+    </div>
+    <div class="pills">${book.pills || '<span class="mut">flat cash · no lots</span>'}</div>
+    ${dayNotesHtml(day.date)}
+  </div>`;
+  } finally {
+    if (bars) BARS = saved;
+  }
+}
+function openLots(prev){
+  return (prev && prev.holdings) || [];
+}
+function openCash(prev){
+  return prev ? Number(prev.cash_primary) : CAPITAL;
+}
+function lotOpen(date, lot){
+  const q = quote(date, lot.ticker);
+  return q ? numOrNull(q.open) : null;
+}
+function lotPrior(date, lot){
+  const q = quote(date, lot.ticker);
+  return q ? numOrNull(q.prior_close) : null;
+}
+function openBookHtml(day, prev){
+  const lots = openLots(prev);
+  const cash = openCash(prev);
+  let stock = 0;
+  const names = lots.map(lot => {
+    const op = lotOpen(day.date, lot);
+    const prior = lotPrior(day.date, lot);
+    if (op != null) stock += lot.shares * op;
+    const gap = op != null && prior != null ? lot.shares * (op - prior) : null;
+    return `<span class="pill"><b>${esc(lot.ticker)}</b> ×${lot.shares} · prior close ${prior == null ? "—" : money(prior)} → 09:30 ${op == null ? "—" : money(op)} <span class="${cls(gap)}">${signed(gap)}</span></span>`;
+  }).join("");
+  const equity = cash + stock;
+  const held = lots.map(lot => `${lot.ticker}×${lot.shares}`).join(" ") || "—";
+  const yday = prev ? Number(prev.equity_primary) : CAPITAL;
+  return `<div class="fill-card open" data-date="${esc(day.date)}">
+    <div class="fill-top"><span class="gold">OPEN</span> <b>${esc(day.date)} 09:30</b>
+      · held ${esc(held)} · leftover ${money(cash)}
+      · book ${money(equity)}
+      <span class="mut">vs yday ${money(yday)} ${signed(equity - yday)}</span>
+    </div>
+    <div class="pills">${names || '<span class="mut">no holdings</span>'}</div>
+  </div>`;
+}
+function signedMoney(v){
+  if (v == null || !Number.isFinite(Number(v))) return "—";
+  const n = Number(v);
+  return n > 0 ? "+" + money(n) : money(n);
+}
+function sellHtml(row, closeRow){
+  const pnl = closeRow ? Number(closeRow.pnl_primary) : null;
+  const up = pnl != null && pnl > 0;
+  const klass = pnl == null ? "" : (up ? "fill-up" : "fill-dn");
+  return `<div class="fill-card ${klass}">
+    <div class="fill-top">
+      <span class="neg">SELL</span>
+      <b>${esc(row.ticker)}</b>
+      ${esc(row.date || "")} · ${row.shares} sh @ ${row.fill == null ? "—" : money(row.fill)}
+      ${row.fee == null ? "" : " · fee " + money(row.fee)}
+      · P/L <span class="${cls(pnl)}">${signedMoney(pnl)}</span>
+    </div>
+    ${row.reason ? `<div class="why">${esc(row.reason)}</div>` : ""}
+  </div>`;
+}
+function buyHtml(row){
+  const src = (row.sources || []).join("/");
+  return `<div class="fill-card">
+    <div class="fill-top">
+      <span class="pos">BUY</span>
+      <b>${esc(row.ticker)}</b>
+      ${esc(row.date || "")} · ${row.shares} sh @ ${row.fill == null ? "—" : money(row.fill)}
+      ${row.fee == null ? "" : " · fee " + money(row.fee)}
+      · P/L <span class="mut">—</span>
+      ${src ? " · " + esc(src) : ""}
+    </div>
+  </div>`;
+}
+function dayModels(rows){
+  const by = {};
+  function slot(date){ return by[date] || (by[date] = {date: date, buys: [], sells: []}); }
+  rows.forEach(row => {
+    if (row.kind === "session"){
+      const s = slot(row.date);
+      s.book = row;
+      s.buys = row.buys || [];
+      s.sells = row.sells || [];
+    } else if (row.kind === "open_fill" || row.kind === "fill"){
+      const s = slot(row.date);
+      if (!s.book || row.kind === "fill"){
+        if (row.equity_primary != null) s.book = row;
+      }
+      s.buys = row.buys || s.buys;
+      s.sells = row.sells || s.sells;
+      if (row.kind === "fill" && row.equity_primary != null) s.book = row;
+    } else if (row.kind === "mark"){
+      const s = slot(row.date);
+      s.book = row;
+    } else if (row.kind === "plan"){
+      slot(row.date).plan = row;
+    }
+  });
+  return Object.keys(by).sort().map(date => by[date]);
+}
+function blotterHtml(models, closesBy, seed){
+  let prev = seed || null;
+  return models.map(model => {
+    const book = model.book;
+    if (!book || book.equity_primary == null){
+      return "";
+    }
+    const parts = [openBookHtml(book, prev)];
+    (model.sells || []).forEach(row => {
+      const hit = (closesBy[book.date] || []).find(item => item.ticker === row.ticker);
+      parts.push(sellHtml(Object.assign({date: book.date}, row), hit));
+    });
+    (model.buys || []).forEach(row => {
+      parts.push(buyHtml(Object.assign({date: book.date}, row)));
+    });
+    parts.push(closeBookHtml(book));
+    prev = book;
+    return parts.join("");
+  }).join("");
+}
+function marksHtml(models, seed){
+  let prev = seed || null;
+  const html = models.map(model => {
+    const book = model.book;
+    if (!book || book.equity_primary == null) return "";
+    const bought = new Set((model.buys || []).map(row => row.ticker));
+    const sold = new Set((model.sells || []).map(row => row.ticker));
+    const rows = [];
+    openLots(prev).forEach(lot => {
+      const q = quote(book.date, lot.ticker);
+      const op = q ? numOrNull(q.open) : null;
+      const prior = q ? numOrNull(q.prior_close) : null;
+      const still = (book.holdings || []).find(h => h.ticker === lot.ticker);
+      const close = still && q ? numOrNull(q.close) : null;
+      const overnight = op != null && prior != null ? lot.shares * (op - prior) : null;
+      const session = still && close != null && op != null ? still.shares * (close - op) : 0;
+      rows.push(`<span class="pill"><b>${esc(lot.ticker)}</b>${sold.has(lot.ticker) ? " sold" : ""} ×${still ? still.shares : lot.shares}
+        · prior close ${prior == null ? "—" : money(prior)} → 09:30 ${op == null ? "—" : money(op)}
+        <span class="${cls(overnight)}">${signed(overnight)} overnight</span>
+        · close ${close == null ? "—" : money(close)}
+        <span class="${cls(session)}">${signed(session)} session</span></span>`);
+    });
+    (book.holdings || []).forEach(lot => {
+      if ((prev && (prev.holdings || []).some(h => h.ticker === lot.ticker))) return;
+      const q = quote(book.date, lot.ticker);
+      const op = q ? numOrNull(q.open) : null;
+      const close = q ? numOrNull(q.close) : null;
+      const session = close != null && op != null ? lot.shares * (close - op) : null;
+      rows.push(`<span class="pill"><b>${esc(lot.ticker)}</b>${bought.has(lot.ticker) ? " new" : ""} ×${lot.shares}
+        · 09:30 ${op == null ? "—" : money(op)} → close ${close == null ? "—" : money(close)}
+        <span class="${cls(session)}">${signed(session)} session</span></span>`);
+    });
+    prev = book;
+    if (!rows.length){
+      return `<div class="day-card"><h4>${esc(book.date)}</h4><div class="pill mut">flat cash · no lots · overnight $0 · session $0</div>${dayNotesHtml(book.date)}</div>`;
+    }
+    return `<div class="day-card"><h4>${esc(book.date)}</h4><div class="pills">${rows.join("")}</div>${dayNotesHtml(book.date)}</div>`;
+  }).join("");
+  return html || '<div class="mut">No close marks yet.</div>';
+}
+function stateHtml(models, seed){
+  let prev = seed || null;
+  const html = models.map(model => {
+    const book = model.book;
+    if (!book || book.equity_primary == null) return "";
+    const bookPx = closeBook(book);
+    const held = (book.holdings || []).map(h => `${h.ticker}×${h.shares}`).join(" ") || "—";
+    const openHeld = openLots(prev).map(h => `${h.ticker}×${h.shares}`).join(" ") || "—";
+    const bought = (model.buys || []).map(row => row.ticker).join(" · ") || "—";
+    const sold = (model.sells || []).map(row => row.ticker).join(" · ") || "—";
+    const morning = book.morning_s == null ? "—" : book.morning_s;
+    prev = book;
+    return `<div class="day-card">
+      <h4>${esc(book.date)} · S ${esc(morning)} · book ${money(book.equity_primary)} · leftover ${money(book.cash_primary)} · cash + closes ${money(bookPx.sum)}</h4>
+      <div class="pills">
+        <span class="pill">held at open: ${esc(openHeld)}</span>
+        <span class="pill pos">bought: ${esc(bought)}</span>
+        <span class="pill neg">sold: ${esc(sold)}</span>
+        <span class="pill">held at close: ${esc(held)}</span>
+      </div>
+      <div class="pills">${bookPx.pills}</div>
+      ${dayNotesHtml(book.date)}
+    </div>`;
+  }).join("");
+  return html || '<div class="mut">No daily state yet.</div>';
+}
+function cellDollars(book, prev, buys){
+  let held = 0;
+  let fresh = 0;
+  const bought = new Set((buys || []).map(row => row.ticker));
+  (book.holdings || []).forEach(lot => {
+    const q = quote(book.date, lot.ticker);
+    if (!q || q.close == null || q.open == null) return;
+    const session = lot.shares * (Number(q.close) - Number(q.open));
+    if (bought.has(lot.ticker)) fresh += session;
+    else held += session;
+  });
+  (prev && prev.holdings || []).forEach(lot => {
+    if ((book.holdings || []).some(h => h.ticker === lot.ticker)) return;
+    const q = quote(book.date, lot.ticker);
+    if (!q || q.open == null || q.prior_close == null) return;
+    held += lot.shares * (Number(q.open) - Number(q.prior_close));
+  });
+  return {held, fresh};
+}
+function calendarHtml(models, seed){
+  const days = models.filter(model => model.book && model.book.equity_primary != null);
+  if (!days.length) return '<div class="mut">No sessions yet.</div>';
+  let prev = seed || null;
+  let guard = 0;
+  const cells = {};
+  days.forEach(model => {
+    cells[model.date] = cellDollars(model.book, prev, model.buys);
+    prev = model.book;
+  });
+  const first = days[0].date;
+  const last = days[days.length - 1].date;
+  const cursor = new Date(first + "T00:00:00Z");
+  const end = new Date(last + "T00:00:00Z");
+  const startWd = (cursor.getUTCDay() + 6) % 7;
+  cursor.setUTCDate(cursor.getUTCDate() - startWd);
+  let html = '<div class="ovcal-card on"><div class="nm">union_hot_n4_h1__w0</div><div class="ovcal-wk">';
+  ["M","T","W","T","F"].forEach(ch => { html += `<div class="ovcal-dow">${ch}</div>`; });
+  html += "</div>";
+  while (cursor <= end || (cursor.getUTCDay() + 6) % 7 !== 0){
+    if (++guard > 80) break;
+    html += '<div class="ovcal-wk">';
+    for (let i = 0; i < 5; i++){
+      const iso = cursor.toISOString().slice(0, 10);
+      const hit = cells[iso];
+      if (!hit){
+        html += '<div class="ovcal-cell empty"></div>';
+      } else {
+        const on = curveStart === iso ? " pick" : "";
+        html += `<div class="ovcal-cell${on}" data-start="${iso}"><span class="d">${iso.slice(8)}</span>
+          <span class="half" style="background:${tone(hit.held)}">${hit.held ? Math.round(hit.held) : ""}</span>
+          <span class="half" style="background:${tone(hit.fresh)}">${hit.fresh ? Math.round(hit.fresh) : ""}</span></div>`;
+      }
+      cursor.setUTCDate(cursor.getUTCDate() + 1);
+    }
+    html += "</div>";
+    cursor.setUTCDate(cursor.getUTCDate() + 2);
+    if (cursor > end && (cursor.getUTCDay() + 6) % 7 === 0) break;
+  }
+  html += "</div>";
+  return html;
+}
+function wireStarts(root){
+  root.querySelectorAll("[data-start]").forEach(el => {
+    el.onclick = () => {
+      curveStart = el.dataset.start;
+      if (window.__models) paintMine(window.__models, window.__closes || []);
+      const title = document.getElementById("curveTitle");
+      if (title) title.scrollIntoView({block: "nearest"});
+    };
+  });
+}
+function holdLiveHtml(book){
+  if (!book) return '<span class="mut">no close mark yet</span>';
+  const broken = closeBook(book);
+  const rows = (book.holdings || []).map(lot => {
+    const q = quote(book.date, lot.ticker);
+    const close = q ? numOrNull(q.close) : null;
+    const dollars = close == null ? null : lot.shares * close;
+    const vs = close == null || !lot.entry_px ? null : (close / Number(lot.entry_px) - 1);
+    return `<tr><td class="tick">${esc(lot.ticker)}</td><td>LONG</td><td class="num">${lot.shares}</td>
+      <td class="num">${money(lot.entry_px)}</td><td class="num">${close == null ? "—" : money(close)}</td>
+      <td class="num ${cls(vs)}">${vs == null ? "—" : pct(vs)}</td>
+      <td class="num">${dollars == null ? "—" : money(dollars)}</td></tr>`;
+  }).join("");
+  return `<div class="day-card"><h4>${esc(book.date)} · book ${money(book.equity_primary)} · cash + closes ${money(broken.sum)}</h4>
+    <table><tr><th>Ticker</th><th>Side</th><th>Shares</th><th>Entry</th><th>Close</th><th>vs entry</th><th>$ at close</th></tr>${rows}</table>
+    ${dayNotesHtml(book.date)}</div>`;
+}
+function statsHtml(models){
+  const books = models.filter(model => model.book && model.book.equity_primary != null).map(model => model.book);
+  if (!books.length) return "";
+  const last = Number(books[books.length - 1].equity_primary);
+  const bookPct = last / CAPITAL - 1;
+  let up = 0;
+  books.forEach((book, i) => {
+    const prev = i === 0 ? CAPITAL : Number(books[i - 1].equity_primary);
+    if (Number(book.equity_primary) > prev) up += 1;
+  });
+  return `<tr data-sleeve="union_hot_n4_h1__w0" style="cursor:pointer">
+    <td class="tick">union_hot_n4_h1__w0<div class="mut">leftover · list · none</div></td>
+    <td>long</td><td class="num">1</td>
+    <td class="num" id="winCell">—</td>
+    <td class="num ${cls(up / books.length - 0.5)}">${up}/${books.length}</td>
+    <td class="num" id="startCell">—</td>
+    <td class="num ${cls(bookPct)}">${pct(bookPct)}</td>
+    <td class="pos">PASS</td>
+  </tr>`;
+}
+function startsHtml(models){
+  const books = models.filter(model => model.book && model.book.equity_primary != null);
+  if (!books.length) return '<div class="mut">No sealed close yet.</div>';
+  const chips = books.map((model, i) => {
+    const startEq = i === 0 ? CAPITAL : Number(books[i - 1].book.equity_primary);
+    const end = Number(books[books.length - 1].book.equity_primary);
+    const ret = end / startEq - 1;
+    const yes = ret > 0;
+    const on = curveStart === model.date ? "on" : "";
+    return `<span class="pill ${on} ${yes ? "pos" : "neg"}" data-start="${esc(model.date)}" style="cursor:pointer">${esc(model.date.slice(5))} ${yes ? "YES" : "no"} ${pct(ret)}</span>`;
+  }).join("");
+  const yesN = books.filter((model, i) => {
+    const startEq = i === 0 ? CAPITAL : Number(books[i - 1].book.equity_primary);
+    return Number(books[books.length - 1].book.equity_primary) > startEq;
+  }).length;
+  return `<div class="day-card"><h4>union_hot_n4_h1__w0 · ${yesN}/${books.length} YES (sealed closes)</h4><div class="pills">${chips}</div></div>`;
+}
+function lastBook(models){
+  const hit = models.filter(model => model.book && model.book.equity_primary != null).slice(-1)[0];
+  return hit ? hit.book : null;
+}
+function paintMine(models, closeRows){
+  const live = models.filter(model => model.date > BACKFILL_LAST);
+  const back = models.filter(model => model.date <= BACKFILL_LAST);
+  const seed = lastBook(back);
+  const byClose = {};
+  (closeRows || []).forEach(row => { (byClose[row.date] = byClose[row.date] || []).push(row); });
+  const blot = document.getElementById("blot");
+  const marks = document.getElementById("marks");
+  const state = document.getElementById("state");
+  const backBlot = document.getElementById("backfillBlot");
+  if (blot) blot.innerHTML = blotterHtml(live, byClose, seed) || '<div class="mut">No live close yet.</div>';
+  if (marks) marks.innerHTML = marksHtml(live, seed);
+  if (state) state.innerHTML = stateHtml(live, seed);
+  if (backBlot) backBlot.innerHTML = blotterHtml(back, byClose, null);
+  const ov = document.getElementById("ovCal");
+  if (ov) ov.innerHTML = calendarHtml(models);
+  const sleeve = document.getElementById("ovCalSleeve");
+  if (sleeve) sleeve.innerHTML = calendarHtml(live.length ? live : models, seed);
+  const stats = document.getElementById("stats");
+  if (stats){
+    stats.innerHTML = '<tr><th class="tick">Strategy</th><th>Side</th><th>H</th><th>Win%</th><th>$ days</th><th>Starts</th><th>Book%</th><th>Audit</th></tr>' + statsHtml(models);
+    const row = stats.querySelector("tr[data-sleeve]");
+    if (row) row.onclick = () => {
+      const el = document.getElementById("blot");
+      if (el) el.scrollIntoView({block: "nearest"});
+    };
+  }
+  const last = live.filter(model => model.book && model.book.equity_primary != null).slice(-1)[0]
+    || models.filter(model => model.book && model.book.equity_primary != null).slice(-1)[0];
+  const banner = document.getElementById("holdLiveBanner");
+  const body = document.getElementById("holdLiveBody");
+  if (banner) banner.textContent = last ? ("Close book " + last.date) : "Close book";
+  if (body) body.innerHTML = holdLiveHtml(last && last.book);
+  const starts = document.getElementById("starts");
+  if (starts) starts.innerHTML = startsHtml(live.length ? live : models);
+  const legend = document.getElementById("legend");
+  if (legend) legend.innerHTML = '<span class="on">union_hot_n4_h1__w0</span>';
+  const bar = document.getElementById("sleeveBar");
+  if (bar) bar.innerHTML = '<span class="chip on">union_hot_n4_h1__w0</span>';
+  wireStarts(document);
+  const head = document.getElementById("sessionHead");
+  if (head && last) head.textContent = "· session " + last.date;
+}
+function scopedBooks(models){
+  const books = models.filter(model => model.book && model.book.equity_primary != null).map(model => model.book);
+  if (!curveStart) return books;
+  return books.filter(book => book.date >= curveStart);
+}
+
+function render(rows, status){
+  rows = withCorrections(rows);
+  window.__rows = rows;
+  const today = document.getElementById("todayPlan");
+  if (today) today.innerHTML = todayPlanHtml(rows);
+  const sessions = rows.filter(r => r.kind === "session");
+  const plans = rows.filter(r => r.kind === "plan");
+  const fills = rows.filter(r => r.kind === "fill");
+  const opens = rows.filter(r => r.kind === "open_fill");
+  const marks = rows.filter(r => r.kind === "mark");
+  const closes = rows.filter(r => r.kind === "close");
+  const fillBy = {};
+  fills.forEach(row => { fillBy[row.date] = row; });
+  const openBy = {};
+  opens.forEach(row => { openBy[row.date] = row; });
+  const markBy = {};
+  marks.forEach(row => { markBy[row.date] = row; });
+  const curve = sessions.concat(fills).concat(marks).slice().sort((a, b) => a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
+  window.__curve = curve;
+  const models = dayModels(rows);
+  window.__models = models;
+  window.__closes = closes;
+  const backfillBooks = curve.filter(row => row.date <= BACKFILL_LAST && (row.kind === "session" || row.equity_primary != null));
+  const liveBooks = curve.filter(row => row.date > BACKFILL_LAST && row.equity_primary != null);
+  const liveCloses = closes.filter(row => row.date > BACKFILL_LAST);
+  const backfillCloses = closes.filter(row => row.date <= BACKFILL_LAST);
+  const livePlans = plans.filter(row => row.date > BACKFILL_LAST);
+  const backfillEnd = backfillBooks.length ? Number(backfillBooks[backfillBooks.length - 1].equity_primary) : CAPITAL;
+  const liveEq = liveBooks.length ? Number(liveBooks[liveBooks.length - 1].equity_primary) : null;
+  const liveRealised = liveCloses.reduce((sum, row) => sum + Number(row.pnl_primary), 0);
+  const backfillRealised = backfillCloses.reduce((sum, row) => sum + Number(row.pnl_primary), 0);
+  const openN = liveBooks.length ? (liveBooks[liveBooks.length - 1].holdings || []).length : 0;
+  const pendingN = livePlans.filter(row => !fillBy[row.date] && !markBy[row.date]).length;
+  const openPending = livePlans.filter(row => openBy[row.date] && !fillBy[row.date] && !markBy[row.date]).length;
+  const liveReturn = liveEq == null ? "no live session yet" : pct(liveEq / backfillEnd - 1);
+  const cards = [
+    ["Live days", String(liveBooks.length)],
+    ["Live equity", liveEq == null ? "—" : money(liveEq)],
+    ["Live return", liveReturn],
+    ["Live realised", money(liveRealised)],
+    ["Live closed trades", String(liveCloses.length)],
+    ["Open names", String(openN)],
+    ["Pending", String(pendingN)],
+    ["P&L pending", String(openPending)],
+  ];
+  document.getElementById("cards").innerHTML = cards.map(([k, v]) => {
+    const klass = k === "Live return" || k === "Live realised" || k === "Live equity"
+      ? cls(k === "Live equity" ? (liveEq == null ? 0 : liveEq - backfillEnd) : (k === "Live return" ? (liveEq == null ? 0 : liveEq - backfillEnd) : liveRealised))
+      : (k === "Pending" && pendingN ? "gold" : "");
+    return `<div class="card"><span>${esc(k)}</span><b class="${klass}">${esc(v)}</b></div>`;
+  }).join("");
+  document.querySelectorAll("#cards .card").forEach(el => {
+    el.onclick = () => {
+      const title = document.getElementById("curveTitle");
+      if (title) title.scrollIntoView({block: "nearest"});
+    };
+  });
+  const backfillCards = [
+    ["Sessions", String(backfillBooks.length)],
+    ["Equity", backfillBooks.length ? money(backfillEnd) : "—"],
+    ["Since $10,000", backfillBooks.length ? pct(backfillEnd / CAPITAL - 1) : "—"],
+    ["Realised P&L", money(backfillRealised)],
+    ["Closed trades", String(backfillCloses.length)],
+  ];
+  document.getElementById("backfillCards").innerHTML = backfillCards.map(([k, v]) => {
+    const klass = k === "Since $10,000" || k === "Realised P&L" || k === "Equity"
+      ? cls(k === "Realised P&L" ? backfillRealised : backfillEnd - CAPITAL)
+      : "";
+    return `<div class="card"><span>${esc(k)}</span><b class="${klass}">${esc(v)}</b></div>`;
+  }).join("");
+  const shown = scopedBooks(models.filter(model => model.date > BACKFILL_LAST));
+  const shownBack = scopedBooks(models.filter(model => model.date <= BACKFILL_LAST));
+  draw(shown.length ? shown : liveBooks, "chart");
+  draw(shownBack.length ? shownBack : backfillBooks, "backfillCurve");
+  paintMine(models, closes);
+  const wins = liveCloses.filter(row => Number(row.pnl_primary) > 0).length;
+  const winCell = document.getElementById("winCell");
+  if (winCell) winCell.textContent = liveCloses.length ? pct(wins / liveCloses.length) : "—";
+  const startCell = document.getElementById("startCell");
+  if (startCell && liveBooks.length){
+    let yes = 0;
+    liveBooks.forEach((book, i) => {
+      const base = i === 0 ? backfillEnd : Number(liveBooks[i - 1].equity_primary);
+      if (Number(liveBooks[liveBooks.length - 1].equity_primary) > base) yes += 1;
+    });
+    startCell.textContent = yes + "/" + liveBooks.length;
+  }
+  function closeRows(list){
+    return list.slice().reverse().map(c =>
+      `<tr><td>${esc(c.date)}</td><td class="tick">${esc(c.ticker)}</td><td>${c.shares}</td><td>${px(c.entry_px)} ${esc(c.entry_date)}</td><td>${px(c.fill)}</td><td>${esc(c.reason)}</td><td class="${cls(c.pnl_primary)}">${money(c.pnl_primary)}</td></tr>`
+    ).join("") || `<tr><td colspan="7" class="mut">No closed trade yet.</td></tr>`;
+  }
+  document.getElementById("closes").innerHTML = closeRows(liveCloses);
+  document.getElementById("backfillCloses").innerHTML = closeRows(backfillCloses);
+  const note = document.getElementById("backfillNote");
+  if (note) note.textContent = `${BACKFILL_LABEL}. ${backfillBooks.length} sessions, ${backfillCloses.length} closed trades. Not included in the headline.`;
+  const missing = document.getElementById("missingDay");
+  const waiting = document.getElementById("waitingDay");
+  if (missing){
+    const miss = rows.find(row => row.kind === "missing" && row.date === "2026-09-28");
+    const sealed = rows.some(row => row.date === "2026-09-28" && (row.kind === "plan" || row.kind === "session" || row.kind === "fill" || row.kind === "mark"));
+    const pastOpen = Date.now() >= Date.parse("2026-09-28T13:30:00Z");
+    missing.hidden = sealed || !(miss || pastOpen);
+    if (waiting) waiting.hidden = sealed || pastOpen || !!miss;
+  }
+  document.getElementById("foot").textContent =
+    `${sessions.length} backfill sessions, ${livePlans.length} live plans, ${opens.length} open fills, ${fills.length + marks.length} close marks, ${closes.length} close records, ${rows.length} sealed lines. ` +
+    `Picks for day D are sealed before the US open. Open fills are marked at the official open. P&L for open positions stays pending until the close bar is saved. ` +
+    `Headline figures are live days only. ${BACKFILL_LABEL}. 2026-09-28 is marked missing only if no sealed plan is committed before 09:30 ET. ` +
+    `Recipe ${rows[0] ? rows[0].recipe : "union_hot_n4_h1__w0"}. Min hold 1. Luck N 22,017.`;
+  const fees = document.getElementById("fees");
+  if (fees) fees.textContent = "Primary cost is the Futubull fee plus 0.5% per side. The close total uses the session close, not the 09:30 open.";
+  const skip = document.getElementById("skip");
+  if (status && status.latest_skip){
+    skip.hidden = false;
+    skip.textContent = `Next session ${status.date || ""} was not appended: ${status.latest_skip}`;
+  } else if (status && status.note){
+    skip.hidden = false;
+    skip.textContent = status.note;
+  }
+}
+
+function boot(){
+  if (typeof document === "undefined" || !document.getElementById || !document.getElementById("blot")) return;
+  fetch("log.json").then(r => {
+    if (!r.ok) throw new Error("log.json " + r.status);
+    return r.json();
+  }).then(rows => {
+    return fetch("closes.json").then(r => r.ok ? r.json() : {}).catch(() => ({})).then(bars => {
+      BARS = bars || {};
+      return fetch("mark_notes.json").then(r => r.ok ? r.json() : []).catch(() => []).then(notes => {
+        NOTES = Array.isArray(notes) ? notes : [];
+        return fetch("status.json").then(r => r.ok ? r.json() : null).catch(() => null).then(status => render(rows, status));
+      });
+    });
+  }).catch(err => {
+    const blot = document.getElementById("blot");
+    if (blot) blot.textContent = "The log could not be read. " + err;
+  });
+  if (typeof window !== "undefined" && window.addEventListener){
+    window.addEventListener("resize", () => {
+      if (window.__models){
+        const shown = scopedBooks(window.__models.filter(model => model.date > BACKFILL_LAST));
+        const shownBack = scopedBooks(window.__models.filter(model => model.date <= BACKFILL_LAST));
+        draw(shown, "chart");
+        draw(shownBack, "backfillCurve");
+      }
+    });
+  }
+}
+boot();
+
+</script>
+</body></html>

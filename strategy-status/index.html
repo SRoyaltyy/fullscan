@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strategy status — today's open decisions</title>
+<meta http-equiv="refresh" content="120">
+<style>
+ :root{
+  --bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;
+  --fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;
+  --gold:#fbbf24; --day:#121826; --blue:#93c5fd;
+ }
+ *{box-sizing:border-box}
+ html,body{margin:0;background:var(--bg);color:var(--fg);
+   font:14px/1.45 -apple-system,Segoe UI,Roboto,sans-serif}
+ .wrap{max-width:1280px;margin:0 auto;padding:16px 14px 48px}
+ h1{font-size:20px;margin:0 0 4px}
+ h2{font-size:15px;margin:18px 0 8px;color:var(--mut);font-weight:600}
+ .sub{color:var(--mut);font-size:12px;margin:0 0 12px}
+ .sub a{color:var(--blue)}
+ .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}
+ input,select,button{background:var(--card);color:var(--fg);border:1px solid var(--line);
+   border-radius:8px;padding:8px 10px;font:13px/1.3 ui-monospace,Menlo,monospace}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:0 0 14px}
+ .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+ .card b{display:block;font-size:16px;margin-top:2px;font-variant-numeric:tabular-nums}
+ .ok{color:var(--pos)} .fail{color:var(--neg)} .part{color:var(--gold)} .mut{color:var(--mut)} .dim{color:var(--dim)}
+ table{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--card);
+   border:1px solid var(--line);border-radius:10px;overflow:hidden}
+ th,td{padding:6px 10px;border-top:1px solid var(--line2);text-align:left;vertical-align:top}
+ th{color:var(--mut);font-weight:600;background:var(--day);position:sticky;top:0}
+ td.name{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;word-break:break-all}
+ td.tk{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;word-break:break-word}
+ .badge{display:inline-block;padding:1px 8px;border-radius:999px;font-size:11px;font-weight:600;
+   border:1px solid var(--line)}
+ .b-ok{background:rgba(74,222,128,.12);color:var(--pos);border-color:rgba(74,222,128,.4)}
+ .b-sit{background:rgba(251,191,36,.12);color:var(--gold);border-color:rgba(251,191,36,.4)}
+ .b-fail{background:rgba(248,113,113,.12);color:var(--neg);border-color:rgba(248,113,113,.4)}
+ .b-wait{background:rgba(147,197,253,.10);color:var(--blue);border-color:rgba(147,197,253,.35)}
+ .proc{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:0 0 10px;overflow:hidden}
+ .proc h3{margin:0;padding:10px 12px;background:var(--day);font-size:13px;
+   display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;justify-content:space-between}
+ .proc table{border:0;border-radius:0}
+ .note{color:var(--dim);font-size:11.5px;margin-top:14px;max-width:900px}
+ .why{color:var(--dim);font-size:11px}
+ .sh{font-family:ui-monospace,Menlo,monospace;color:var(--neg);font-size:11.5px}
+ .lo{font-family:ui-monospace,Menlo,monospace;color:var(--gold);font-size:11.5px}
+ .xbtn{cursor:pointer;color:var(--blue);font-family:ui-monospace,Menlo,monospace;
+   padding:0 6px;border:1px solid var(--line);border-radius:6px;background:var(--day);user-select:none}
+ .times{font-size:10.5px;line-height:1.5;white-space:nowrap}
+ tr.detail td{background:var(--day);font-size:11.5px}
+ tr.detail ul{margin:4px 0 4px 16px;padding:0;font-family:ui-monospace,Menlo,monospace;font-size:11px}
+ tr.detail code{color:var(--blue)}
+ .kv{color:var(--mut)}
+ .needs{margin-top:6px;border-top:1px dashed var(--line);padding-top:6px}
+ .needs .nt{color:var(--mut);font-size:10.5px;font-weight:700;text-transform:uppercase;
+   letter-spacing:.05em}
+ .needs table{width:auto;margin:2px 0 4px}
+ .needs td{border-top:0;padding:1px 14px 1px 0;font-size:11px}
+</style></head><body><div class="wrap">
+<h1>Strategy status — decisions for today's open</h1>
+<div class="sub">Per-strategy BUY/SELL for the session, straight from the
+ decision ticket on <a href="https://sroyaltyy.github.io/fullscan/dashboard/">.io</a> —
+ polls <code>main</code> so a publish that just landed shows here even if
+ Pages has not rebuilt.
+ · <a href="../day-board/">day board</a>
+ · <a href="../factor-mine/">factor mine</a>
+ · <a href="../h1/">h1</a>
+ · <a href="../hard-red-exceptions/">investigator</a></div>
+<div class="bar">
+  <label>Trading day <input type="date" id="dateSel"></label>
+  <button type="button" id="reload">Reload now</button>
+  <label>Family <select id="famSel"><option value="">all</option></select></label>
+  <label>Sort <select id="sortSel"><option value="perf">top performers</option><option value="name">name</option></select></label>
+  <label>Filter <input type="text" id="flt" size="14" placeholder="name/ticker"></label>
+  <span class="mut" id="stamp">loading…</span>
+</div>
+<h2>All strategies — sealed buys/sells (source of truth)</h2>
+<div class="mut" id="allStamp" style="font-size:12px;margin-bottom:6px"></div>
+<div id="allWrap"></div>
+<h2>Decision ticket</h2>
+<div class="cards" id="cards"></div>
+<div id="ticketWrap"></div>
+<h2>Inputs for this session</h2>
+<div class="mut" id="inStamp" style="font-size:12px;margin-bottom:6px"></div>
+<div id="inputs"></div>
+<p class="note">OK = the landed ticket carries this strategy with status
+ <code>ok</code>. SIT = the decision is made and it is "no new lots"
+ (hard-red score day or a deliberate sit) — list-drop sells may still be
+ shown. Any other status (missing / error / pick_fail / look_stale …)
+ means the decision for that strategy is <b>not</b> final. Times are ET.
+ "Finalized" is the ticket clock; "pushed" is the last commit of the
+ dated ticket on main (GitHub API, best-effort). The dated file locks at
+ 09:30 ET or the paper send; later publishes land in the draft and the
+ evening copy is labelled as such. Input presence is a raw-file
+ 200/404 probe of <code>main</code> — presence, not QC. <b>fin / push</b>
+ under each strategy is the exact finalize and push time (ET, seconds):
+ the ticket publishes all strategies atomically, so per-strategy finalize
+ is the ticket seal clock and per-strategy push is the dated file's last
+ commit on main — identical across rows by design; the quote snapshot
+ time (px) is per-strategy inside the ⊕ panel. Click <b>⊕</b> to expand a
+ strategy: its per-strategy record (px time, panel bake, signal date), the
+ <b>needs</b> panel — every file the strategy reads, with its workflow role,
+ a live OK/MISSING probe of <code>main</code>, the C.10 sha when the file is
+ fingerprinted, and for factor recipes the parsed factor mix (universe,
+ hold sessions, gates; combo members resolved to their sleeve recipes with
+ weights, legend from <code>src/factor_mine_combo.py</code>) — and the
+ <b>exact hashed inputs</b>: every sha256 in the C.10 decision fingerprint,
+ identical ticket-wide, with absence hashed too. The
+ "factor-mine dash updated" card is the last commit that touched
+ <code>dashboard/factor-mine/strategy_tickets.json</code>: the publish
+ pipeline lands dashboard copies in the same push as the tickets.
+ Before the dated ticket for a session lands, every strategy shows
+ <b>NOT FINAL</b> — a previous session's decisions are never substituted.
+ The <b>checks</b> column is the one-row checklist of this strategy's own
+ requirements — the item list differs per strategy: a news-gated factor
+ recipe checks <code>panel · freeze · state · news · judge</code>, an
+ AB-gated one checks <code>ab</code> instead, a stock_book strategy checks
+ all 11 morning files. <b>decision</b> = the buy/sell is finalized (ok/sit
+ in the landed ticket); every other item is one required input probed on
+ <code>main</code> for the date — ✔ green = present, ✘ red = missing,
+ … while probes run. Hover any mark for the full path; the ⊕ needs panel
+ lists the same files with their workflow roles.
+ The ret column and the ★ pins come from
+ <code>data/factor_mine/recipe_scorecard.json</code>: lifetime and
+ last-20-session returns rebuilt daily from the per-recipe paper-trade
+ ledgers (<code>data/factor_mine/ledgers/</code>, $10k start, fees
+ included). "top performers" sort pins the best lifetime recipes at the
+ top; strategies without a ledger (stock_book / paper / excel / flatten)
+ keep alphabetical order below them.</p>
+</div>
+<script>
+const LOCAL = location.hostname === "localhost" || location.hostname === "127.0.0.1"
+  || location.protocol === "file:";
+const RAW = LOCAL
+  ? "../.."
+  : "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main";
+const API = "https://api.github.com/repos/SRoyaltyy/fullscan";
+function $(id){return document.getElementById(id)}
+function etNow(){return new Date(new Date().toLocaleString("en-US",{timeZone:"America/New_York"}))}
+function dstr(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function todayET(){return dstr(etNow())}
+function hhmm(iso){
+  if(!iso) return "—";
+  const d = new Date(iso);
+  if(isNaN(d)) return "—";
+  return d.toLocaleString("en-US",{timeZone:"America/New_York",hour12:false,
+    month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"});
+}
+function hhmmss(iso){
+  if(!iso) return "—";
+  const d = new Date(iso);
+  if(isNaN(d)) return "—";
+  return d.toLocaleString("en-US",{timeZone:"America/New_York",hour12:false,
+    month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit"});
+}
+async function probe(path){
+  try{
+    const r = await fetch(`${RAW}/${path}?t=${Date.now()}`,{cache:"no-store"});
+    if(!r.ok) return {ok:false,status:r.status,text:""};
+    return {ok:true,status:200,text:await r.text()};
+  }catch(e){ return {ok:false,status:0,text:""} }
+}
+async function jprobe(path){
+  const r = await probe(path);
+  if(!r.ok) return {ok:false,status:r.status};
+  try{ return {ok:true,status:200,json:JSON.parse(r.text)} }
+  catch(e){ return {ok:false,status:200,badjson:true} }
+}
+const tickers = rows => (rows||[]).map(r=>{
+  const t = (r&&(r.ticker||r.symbol)||"").toUpperCase();
+  if(!t) return "";
+  const side = (r&&(r.kid_side||r.side)||"").toLowerCase();
+  return side === "short" ? `<span class="sh">${t}</span>` : t;
+}).filter(Boolean).join(", ") || "—";
+function badge(st, sit, hard){
+  if(st === "ok") return `<span class="badge b-ok">OK</span>`;
+  if(st === "sit") return `<span class="badge b-sit">SIT${hard?" 🔻":""}</span>`;
+  const label = String(st||"missing").toUpperCase();
+  return `<span class="badge b-fail">${label}</span>`;
+}
+// ---- performance pinning (data/factor_mine/recipe_scorecard.json) ----
+const TOP_N = 15;
+let SCORECARD = null; // {last_date, recipes: {name: {total_ret_pct, ret_recent_pct, ...}}}
+function perfOf(name){ return (SCORECARD && SCORECARD.recipes) ? SCORECARD.recipes[name] : null }
+function perfCell(p){
+  if(!p) return `<td class="mut">—</td>`;
+  const f = v => (v>=0?"+":"") + Number(v).toFixed(1) + "%";
+  const cls = p.total_ret_pct >= 0 ? "ok" : "fail";
+  const cls20 = p.ret_recent_pct >= 0 ? "ok" : "fail";
+  return `<td style="white-space:nowrap"><span class="${cls}" title="lifetime return, ledger through ${p.last_date}">${f(p.total_ret_pct)}</span> <span class="${cls20} dim" style="font-size:10.5px" title="last 20 sessions">20d ${f(p.ret_recent_pct)}</span></td>`;
+}
+function topSet(){
+  if(!SCORECARD || !SCORECARD.recipes) return new Set();
+  return new Set(Object.entries(SCORECARD.recipes)
+    .sort((a,b) => b[1].total_ret_pct - a[1].total_ret_pct)
+    .slice(0, TOP_N).map(kv => kv[0]));
+}
+// ---- per-strategy input needs -------------------------------------------
+// Grounded in repo sources: src/stock_book_diag.py workflow_specs (roles),
+// src/decision_ready.py (C.10 fingerprint paths), src/factor_mine.py
+// build_recipes (name tokens), src/factor_mine_combo.py combo_specs
+// (letter legend + weights). Unknown tokens render raw, never invented.
+const STOCK_BOOK_FILES = [
+  ["general predict", "01_daily/general/{d}_predict.md", "input"],
+  ["sector board",    "01_daily/sectors/{d}/_board.json", "input"],
+  ["news actions",    "01_daily/news/{d}_actions.json", "input"],
+  ["finviz digest",   "01_daily/news/{d}_finviz_digest.json", "input"],
+  ["news judge",      "01_daily/news/{d}_judge.md", "input"],
+  ["weather",         "01_daily/weather/{d}_weather.json", "input"],
+  ["AB enriched",     "data/ab_checklist/{d}_ab_checklist_enriched.csv", "input"],
+  ["join ranked",     "data/join/{d}_ranked.csv", "required"],
+  ["peer RS",         "data/peers/{d}_peer_rs.csv", "required"],
+  ["stock book",      "data/stock_book/{d}_stock_book.json", "required"],
+  ["book report",     "01_daily/{d}_stock_book.md", "required"],
+];
+const FACTOR_FILES = [
+  ["factor panel",       "data/factor_mine/panel.json", "required"],
+  ["send-inputs freeze", "data/factor_mine/send_inputs/{d}.json", "freeze"],
+];
+const FAMILY_FILES = {
+  stock_book: STOCK_BOOK_FILES,
+  paper: STOCK_BOOK_FILES,
+  excel: [["excel suggestions", "excel_bot/suggestions/suggestions.csv", "required"]],
+  flatten: [["sleeve-merge card", "data/sleeve_merge/today.json", "required"]],
+  factor_mine: FACTOR_FILES,
+  factor_mine_preopen: FACTOR_FILES,
+};
+// combo member letters: src/factor_mine_combo.py combo_specs()
+const COMBO_LETTER = {s:"short_news_r_h3", e:"union_e_fresh_h3", h:"union_hot_n4_h1",
+  n:"union_news_g_h1", j:"union_join_vol_green_h1", f:"flatten_h5",
+  e1:"union_e_fresh_h1", er:"union_earn_react_h3"};
+const COMBO_SPECIAL = {
+  combo_sh_macd_5050_shared: [["short_news_r_macd_h3",50],["union_hot_n4_h1",50]],
+  combo_p2s_5050_shared:     [["union_news_pack_net2_h1",50],["short_news_r_h3",50]],
+  combo_oh_5050_shared:      [["overnight_mega_h1",50],["union_hot_n4_holdup",50]],
+};
+function comboMembers(name){
+  if(COMBO_SPECIAL[name]) return COMBO_SPECIAL[name];
+  const m = /^combo_([a-z0-9]+)_(\d+)(?:_(shared|split))?(?:_(skip|weather))?$/.exec(name);
+  if(!m) return null;
+  const letters = m[1], digits = m[2];
+  const toks = []; let i = 0;
+  while(i < letters.length){
+    const two = letters.slice(i, i + 2);
+    if(COMBO_LETTER[two]){ toks.push(two); i += 2; }
+    else if(COMBO_LETTER[letters[i]]){ toks.push(letters[i]); i += 1; }
+    else return null; // unknown letter — bail, caller shows raw name
+  }
+  let weights = null;
+  if(/^(\d)\1\1$/.test(digits) && toks.length === 3) weights = [33.3, 33.3, 33.4];
+  else if(digits.length === 2 * toks.length)
+    weights = toks.map((_, k) => parseInt(digits.slice(2 * k, 2 * k + 2), 10));
+  if(!weights) return null;
+  return toks.map((t, k) => [COMBO_LETTER[t], weights[k]]);
+}
+const UNIVERSES = ["union","flatten","probable","yday_gainer","ohlc_hot","overnight","short"];
+const GATE_LEGEND = {
+  vol_g:"vol ✅", vol_missing:"vol missing", ab_g:"AB ✅", join_g:"join ✅",
+  join_present:"join present", join_vol_green:"join+vol+green ✅",
+  news_g:"news 🟢", news_present:"news present", news_missing:"news missing",
+  news:"news", news_pack:"packet 🟢", news_head:"headline 🟢",
+  news_or:"packet🟢 OR headline🟢", news_both:"packet🟢 AND headline🟢",
+  catal_present:"catalyst present", blue:"🔵", white:"zero-red",
+  last_green:"last candle green", last_red:"last candle red",
+  candle:"candle capture", cond:"+G−R condition", hot:"hot rank",
+  ret_5:"5-day return", coil_off:"coil-off (5m flat, RVOL 0.7–2.2)",
+  earn_react:"earnings reaction", overnight:"overnight gap",
+  e_fresh:"fresh-E (≤1d)", r_up:"R-flag up", break10:"10-day break",
+  rsi_os:"RSI oversold", macd:"MACD>0", macd_up:"MACD rising",
+  macd_xup:"MACD cross-up", flow_in:"money flow in",
+  n1:"top-1", n4:"top-4", net2:"camera net ≥2", net3:"camera net ≥3",
+  net4:"camera net ≥4", net5:"camera net ≥5", cam71:"cameras +7/−≤1",
+  cam61:"cameras +6/−≤1", cam91:"cameras +9/−1",
+  rw:"rank-weighted sizing", conv:"conviction sizing",
+  mega:"mega gap", missing:"missing", alarm:"🚨 exit", exit_alarm:"🚨 exit alarm",
+  exit:"exit", sizeup:"size-up", time:"time exit", topheavy:"top-heavy",
+  holdup:"hold-up", shared:"shared pile", split:"split pile",
+  skip:"net=skip", weather:"weather net", green:"green",
+  fresh:"fresh", e:"fresh-E flag", r:"R-flag", er:"earn-react",
+  sx:"short-side", lg:"long-side"
+};
+// multi-word gates that an underscore split breaks apart; longest first
+const MULTI_GATES = ["join_vol_green","news_pack","news_head","news_or","news_both",
+  "news_g","news_present","news_missing","e_fresh","r_up","coil_off","macd_up",
+  "macd_xup","flow_in","last_green","last_red","catal_present","join_present",
+  "exit_alarm","vol_missing","vol_g","ab_g","join_g","ret_5","rsi_os","earn_react"];
+function splitGates(s){
+  const toks = s.split("_").filter(Boolean);
+  for(const mt of MULTI_GATES){
+    const parts = mt.split("_");
+    for(let i = 0; i + parts.length <= toks.length; i++){
+      if(parts.every((p, k) => toks[i + k] === p)){ toks.splice(i, parts.length, mt); i = Math.max(i - 2, -1); }
+    }
+  }
+  return toks;
+}
+function parseBaseRecipe(name){
+  if(name.startsWith("combo_")) return null;
+  let rest = name, hold = null;
+  const hh = /_h(\d+)$/.exec(rest);
+  if(hh){ hold = hh[1] + " session" + (hh[1] === "1" ? "" : "s"); rest = rest.slice(0, hh.index); }
+  else if(rest.endsWith("_holdup")){ hold = "hold-up"; rest = rest.slice(0, -7); }
+  const uni = UNIVERSES.find(u => rest === u || rest.startsWith(u + "_")) || null;
+  const gates = uni && rest !== uni ? splitGates(rest.slice(uni.length + 1)) : [];
+  return {universe: uni || rest || "—", hold: hold || "?", gates};
+}
+// gate → the daily file the factor-panel column is baked from
+const GATE_INPUTS = [
+  [["news_g","news_pack","news_head","news_or","news_both","news_present","news_missing","news","catal_present"],
+    ["01_daily/news/{d}_actions.json", "01_daily/news/{d}_judge.md"]],
+  [["ab_g","ab"], ["data/ab_checklist/{d}_ab_checklist_enriched.csv"]],
+  [["join_g","join_present","join_vol_green","join"], ["data/join/{d}_ranked.csv"]],
+  [["weather"], ["01_daily/weather/{d}_weather.json"]],
+];
+function gateInputs(gates){
+  const out = [];
+  for(const [ks, paths] of GATE_INPUTS) if(ks.some(k => gates.includes(k))) out.push(...paths);
+  return out;
+}
+let NEEDS_STATUS = {}; // repo-relative path -> bool, probed once per refresh
+function fileChip(path){
+  const st = NEEDS_STATUS[path];
+  const sha = (TK_FACTS.inputs || {})[path];
+  const stat = st === undefined ? `<span class="dim">probing…</span>`
+    : st ? `<span class="ok">OK</span>` : `<span class="fail">MISSING</span>`;
+  const shaH = sha ? (sha === "absent" ? ` <span class="part" title="hashed as absent">absent@hash</span>`
+      : ` <code title="sha256 in C.10 fingerprint">${String(sha).slice(0,10)}…</code>`) : "";
+  return stat + shaH;
+}
+function needsFor(r, d){
+  const spec = checklistSpec(r.fam, r.name, d);
+  const rows = spec.map(c =>
+    `<tr><td class="kv" style="white-space:nowrap">${c.label}${c.role ? ` <span class="dim">(${c.role})</span>` : ""}</td>` +
+    `<td style="white-space:nowrap">${fileChip(c.path)}</td><td class="name">${c.path}</td></tr>`);
+  let recipeHtml = "";
+  if(r.fam === "factor_mine" || r.fam === "factor_mine_preopen"){
+    const combo = r.name.startsWith("combo_") ? comboMembers(r.name) : null;
+    let gates = [];
+    if(combo){
+      recipeHtml = `<div style="margin-top:2px"><span class="kv">combo mix (src/factor_mine_combo.py):</span> ` +
+        combo.map(([m, w]) => `<code>${m}</code> <b>${w}%</b>`).join(" + ") + `</div>`;
+      for(const pr of combo.map(([m]) => parseBaseRecipe(m)).filter(Boolean)) gates.push(...pr.gates);
+      recipeHtml += `<div><span class="kv">member gates:</span> ${[...new Set(gates)].map(g =>
+          GATE_LEGEND[g] ? `<span title="${g}">${GATE_LEGEND[g]}</span>` : `<code>${g}</code>`).join(", ") || "none"}</div>`;
+    } else {
+      const pr = parseBaseRecipe(r.name);
+      if(pr){
+        gates = pr.gates;
+        recipeHtml = `<div style="margin-top:2px"><span class="kv">recipe parse:</span> universe <code>${pr.universe}</code>` +
+          ` · hold <code>${pr.hold}</code> · gates: ${pr.gates.map(g =>
+            GATE_LEGEND[g] ? `<span title="${g}">${GATE_LEGEND[g]}</span>` : `<code>${g}</code>`).join(", ") || "<span class='dim'>none (baseline list)</span>"}</div>`;
+      }
+    }
+  }
+  if(!spec.length && !recipeHtml) return "";
+  return `<div class="needs"><div class="nt">needs — inputs for this strategy</div>` +
+    (rows.length ? `<table>${rows.join("")}</table>` : "") + recipeHtml + `</div>`;
+}
+// State-file probes for all factor strategies are cached per date and
+// re-probed at most every 4th refresh — 339 tiny GETs per refresh is
+// wasteful when presence for a settled date never changes.
+const STATE_PROBE = {date:null, tick:0, status:{}};
+async function probeStateFiles(d, factorNames){
+  STATE_PROBE.tick++;
+  if(STATE_PROBE.date === d && Object.keys(STATE_PROBE.status).length && STATE_PROBE.tick % 4 !== 0){
+    Object.assign(NEEDS_STATUS, STATE_PROBE.status);
+    return;
+  }
+  const status = {};
+  await Promise.all(factorNames.map(async n => {
+    const p = `data/factor_mine/state/${n}/${d}.json`;
+    status[p] = (await probe(p)).ok;
+  }));
+  STATE_PROBE.date = d; STATE_PROBE.status = status; STATE_PROBE.tick = 0;
+  Object.assign(NEEDS_STATUS, status);
+}
+async function probeNeeds(d, factorNames){
+  const paths = new Set();
+  for(const list of Object.values(FAMILY_FILES)) for(const [, tpl] of list)
+    if(!tpl.includes("{name}")) paths.add(tpl.replace("{d}", d));
+  for(const [, ps] of GATE_INPUTS) for(const p of ps) paths.add(p.replace("{d}", d));
+  await Promise.all([...paths].map(async p => { NEEDS_STATUS[p] = (await probe(p)).ok; }));
+  await probeStateFiles(d, factorNames || []);
+}
+// ---- quick per-row checklist --------------------------------------------
+// The items ARE the strategy's own required inputs — the list differs per
+// strategy (family files + recipe-gate inputs + the recipe's state file),
+// each probed on main for the selected date. decision = the buy/sell is
+// final (ok/sit in the landed ticket). Short labels map to the full path
+// in the hover tooltip; the ⊕ needs panel shows the same list with roles.
+const SHORT_LABELS = {
+  "01_daily/general/{d}_predict.md": "predict",
+  "01_daily/sectors/{d}/_board.json": "board",
+  "01_daily/news/{d}_actions.json": "news",
+  "01_daily/news/{d}_finviz_digest.json": "finviz",
+  "01_daily/news/{d}_judge.md": "judge",
+  "01_daily/weather/{d}_weather.json": "weather",
+  "data/ab_checklist/{d}_ab_checklist_enriched.csv": "ab",
+  "data/join/{d}_ranked.csv": "join",
+  "data/peers/{d}_peer_rs.csv": "peers",
+  "data/stock_book/{d}_stock_book.json": "book",
+  "01_daily/{d}_stock_book.md": "report",
+  "data/factor_mine/panel.json": "panel",
+  "data/factor_mine/send_inputs/{d}.json": "freeze",
+  "data/factor_mine/state/{name}/{d}.json": "state",
+  "excel_bot/suggestions/suggestions.csv": "suggestions",
+  "data/sleeve_merge/today.json": "sleeve",
+};
+function checklistSpec(fam, name, d){
+  const out = []; const seen = new Set();
+  const push = (label, tpl, role) => {
+    const path = tpl.replace("{d}", d).replace("{name}", name);
+    if(seen.has(path)) return; seen.add(path);
+    out.push({label: SHORT_LABELS[tpl] || label, path, role: role || ""});
+  };
+  for(const [label, tpl, role] of (FAMILY_FILES[fam] || [])) push(label, tpl, role);
+  if(fam === "factor_mine" || fam === "factor_mine_preopen"){
+    push("state", "data/factor_mine/state/{name}/{d}.json", "positions");
+    const combo = name.startsWith("combo_") ? comboMembers(name) : null;
+    let gates = [];
+    if(combo){ for(const pr of combo.map(([m]) => parseBaseRecipe(m)).filter(Boolean)) gates.push(...pr.gates); }
+    else { const pr = parseBaseRecipe(name); if(pr) gates = pr.gates; }
+    for(const p of gateInputs(gates)) push("gate input", p, "panel bake");
+  }
+  return out;
+}
+function checksCell(r){
+  const okS  = t => `<span class="ok" title="${t.replace(/"/g,"&quot;")}">✔</span>`;
+  const failS = t => `<span class="fail" title="${t.replace(/"/g,"&quot;")}">✘</span>`;
+  const pend = `<span class="dim" title="presence probe still running">…</span>`;
+  const items = [`decision: ${r.final
+    ? okS("decision finalized — status ok/sit in the landed ticket")
+    : failS("decision NOT final — status is not ok/sit")}`];
+  for(const c of (r.checks || [])){
+    const st = NEEDS_STATUS[c.path];
+    const tip = `${c.path}${c.role ? ` (${c.role})` : ""}`;
+    items.push(`${c.label}: ${st === undefined ? pend : st ? okS(tip) : failS(tip)}`);
+  }
+  return `<span style="font-size:10.5px;line-height:1.7">${items.join(" · ")}</span>`;
+}
+async function loadTicket(d){
+  const chain = [
+    ["sealed", `data/day_board/${d}_strategy_tickets.json`],
+    ["draft",  `data/day_board/${d}_strategy_tickets_draft.json`],
+    ["evening","data/day_board/strategy_tickets.json"],
+  ];
+  for(const [label, path] of chain){
+    const r = await jprobe(path);
+    if(!r.ok || !r.json) continue;
+    // Never substitute a previous session's record for date d: the
+    // undated evening copy only counts once it has ROLLED to date d.
+    // Before that, no ticket for d means no decision for d — full stop.
+    if(r.json.date !== d) continue;
+    return {label, json:r.json, path};
+  }
+  return null;
+}
+// Commit times for the sealed ticket + the factor-mine dashboard copy.
+// The commits API is rate-limited (60/hr anonymous), so refetch at most
+// every 4th refresh (~8 min at the 120s auto-refresh) or on a date change.
+const TIMES = {date:null, pushed:null, dash:null, tick:0};
+async function commitTime(path){
+  try{
+    const r = await fetch(`${API}/commits?path=${encodeURIComponent(path)}&per_page=1`);
+    if(r.ok){ const j = await r.json(); if(j && j.length) return j[0].commit.committer.date; }
+  }catch(e){}
+  return null;
+}
+async function timesFor(d){
+  TIMES.tick++;
+  if(TIMES.date === d && TIMES.tick % 4 !== 0) return TIMES;
+  const [pushed, dash] = await Promise.all([
+    commitTime(`data/day_board/${d}_strategy_tickets.json`),
+    commitTime("dashboard/factor-mine/strategy_tickets.json")]);
+  TIMES.date = d; TIMES.pushed = pushed; TIMES.dash = dash; TIMES.tick = 0;
+  return TIMES;
+}
+// Ticket-wide facts every table row shows: finalized = decision_readiness
+// completed_at (the atomic seal clock), pushed = last commit of the dated
+// ticket on main. Identical for all strategies in a ticket by design.
+let TK_FACTS = {fin:null, push:null, dash:null, fp:null, inputs:{}};
+const EXPANDED = new Set();
+function firstPxAsof(s){
+  const rows = [].concat(s.buy||[], s.sell||[]);
+  for(const r of rows){ if(r && r.px_asof) return r.px_asof; }
+  return null;
+}
+function etCutoff(d){ // 09:30 ET on YYYY-MM-DD d, DST-safe
+  return new Date(new Date(`${d}T09:30:00`).toLocaleString("en-US",{timeZone:"America/New_York"}));
+}
+function renderCards(tk, pushed, d){
+  const cards = [];
+  const add = (label, val, cls) => cards.push(`<div class="card">${label}<b class="${cls}">${val}</b></div>`);
+  if(SCORECARD && SCORECARD.recipes){
+    const best = Object.entries(SCORECARD.recipes).sort((a,b)=>b[1].total_ret_pct-a[1].total_ret_pct)[0];
+    if(best){
+      const v = best[1].total_ret_pct;
+      add(`★ #1 lifetime · ledger through ${SCORECARD.last_date}`,
+          `${best[0]} ${v>=0?"+":""}${Number(v).toFixed(1)}%`, v>=0?"ok":"fail");
+    }
+  } else {
+    add("perf ledger","not published","mut");
+  }
+  if(!tk){
+    add("ticket","not landed","fail");
+    $("cards").innerHTML = cards.join("");
+    return;
+  }
+  const st = tk.json.strategies || {};
+  const names = Object.keys(st);
+  const ok = names.filter(n=>st[n].status==="ok").length;
+  const sit = names.filter(n=>st[n].status==="sit").length;
+  const bad = names.length - ok - sit;
+  add("source", tk.label === "sealed" ? "sealed dated ticket"
+      : tk.label === "draft" ? "draft (dated file locked)" : "evening copy (undated)", tk.label==="sealed"?"ok":"part");
+  add("strategies", names.length, "");
+  add("OK", ok, "ok");
+  add("SIT", sit, sit?"part":"");
+  add("not final", bad, bad?"fail":"");
+  const gen = tk.json.generated_at, comp = (tk.json.decision_readiness||{}).completed_at;
+  add("finalized (ET)", hhmmss(comp || gen), "mut");
+  add("pushed (ET)", pushed ? hhmmss(pushed) : "n/a", "mut");
+  add("factor-mine dash updated (ET)", TK_FACTS.dash ? hhmmss(TK_FACTS.dash) : "n/a",
+      TK_FACTS.dash ? "mut" : "fail");
+  if(pushed){
+    const before = new Date(pushed) < etCutoff(d);
+    add("before 09:30", before ? "YES" : "NO", before ? "ok" : "fail");
+  } else {
+    add("before 09:30", "?", "mut");
+  }
+  $("cards").innerHTML = cards.join("");
+}
+async function renderTicket(tk, d){
+  if(!tk){
+    // No ticket for d: every known strategy is NOT FINAL. Never paint a
+    // previous session's decisions here — list the roster as undecided.
+    let missRows = "";
+    const r = await jprobe("data/day_board/today_strategies.json");
+    if(r.ok && r.json && r.json.date === d && r.json.strategies){
+      missRows = `<table style="margin-top:8px">
+        <tr><th>strategy</th><th>family</th><th>decision</th><th>BUY @ open</th><th>SELL @ open</th><th>why / note</th></tr>` +
+        Object.entries(r.json.strategies).map(([n, s]) => `<tr>
+          <td class="name">${n}</td><td class="mut">${(s&&s.family)||""}</td>
+          <td><span class="badge b-wait">NOT FINAL</span></td>
+          <td class="tk">—</td><td class="tk">—</td>
+          <td class="why">no ticket for ${d} yet — decision not made</td></tr>`).join("") + `</table>`;
+    }
+    $("ticketWrap").innerHTML = `<div class="proc"><h3>No decision ticket for ${d} yet — nothing below is final</h3>
+      <table><tr><td class="mut">The sealed, draft and (rolled) evening ticket files for
+      <b>${d}</b> are all absent from <code>main</code>, so every strategy is
+      <b>NOT FINAL</b> for this session. A previous session's decisions are never
+      shown in their place. Decisions become final only when
+      <code>src.decision_ready</code> says the required inputs are ready (see below)
+      and <code>publish_strategy_tickets</code> seals the dated ticket.</td></tr></table>${missRows}</div>`;
+    return;
+  }
+  const st = tk.json.strategies || {};
+  const fams = [...new Set(Object.values(st).map(s=>s.family||""))].sort();
+  const famSel = $("famSel");
+  if(famSel.options.length !== fams.length + 1){
+    famSel.innerHTML = `<option value="">all</option>` + fams.map(f=>`<option>${f}</option>`).join("");
+  }
+  const famF = famSel.value, txt = ($("flt").value||"").toLowerCase();
+  const sortMode = $("sortSel").value || "perf";
+  const stars = topSet();
+  const rows = [];
+  for(const [name, s] of Object.entries(st)){
+    if(famF && s.family !== famF) continue;
+    const hay = (name + " " + JSON.stringify(s.buy||[]) + " " + JSON.stringify(s.sell||[])).toLowerCase();
+    if(txt && !hay.includes(txt)) continue;
+    const why = s.why || s.note || "";
+    const shortWhy = why.length > 90 ? why.slice(0,90) + "…" : why;
+    const p = perfOf(name);
+    rows.push({name, fam:s.family||"", status:badge(s.status, s.sit, s.hard_red),
+      buy:tickers(s.buy), sell:tickers(s.sell),
+      why, shortWhy, s:s.s, p, pxAsof:firstPxAsof(s), panelBake:s.panel_bake_date, signalDate:s.signal_date,
+      final: s.status === "ok" || s.status === "sit",
+      checks: checklistSpec(s.family||"", name, d),
+      star: stars.has(name) ? ` <span title="top ${TOP_N} lifetime performers" style="color:var(--gold)">★</span>` : ""});
+  }
+  if(sortMode === "perf"){
+    rows.sort((a,b) => ((b.p&&b.p.total_ret_pct) ?? -Infinity) - ((a.p&&a.p.total_ret_pct) ?? -Infinity)
+      || a.name.localeCompare(b.name));
+  } else {
+    rows.sort((a,b) => a.name.localeCompare(b.name));
+  }
+  const detail = r => {
+    if(!EXPANDED.has(r.name)) return "";
+    const inp = Object.entries(TK_FACTS.inputs||{}).map(([rel,dg]) =>
+      `<li><span class="kv">${rel}</span> — ${dg === "absent"
+        ? `<span class="part">absent (hashed as absent)</span>`
+        : `<code title="sha256">${String(dg).slice(0,16)}…</code>`}</li>`).join("");
+    const per = [
+      ["px snapshotted", r.pxAsof ? hhmmss(r.pxAsof) : "—"],
+      ["finalized (ticket seal)", TK_FACTS.fin ? hhmmss(TK_FACTS.fin) : "—"],
+      ["pushed (commit)", TK_FACTS.push ? hhmmss(TK_FACTS.push) : "—"],
+      ["panel bake", r.panelBake || "—"],
+      ["signal date", r.signalDate || "—"],
+    ].map(([k,v]) => `<span class="kv">${k}:</span> ${v}`).join(" · ");
+    return `<tr class="detail" data-for="${r.name}"><td colspan="9"><div>
+      <div>${per}</div>
+      ${needsFor(r, d)}
+      <div style="margin-top:4px"><span class="kv">exact inputs (C.10 fingerprint, ticket-wide):</span>
+        fingerprint <code title="full sha256">${String(TK_FACTS.fp||"").slice(0,16)}…</code>
+        · ${Object.keys(TK_FACTS.inputs||{}).length} hashed files</div>
+      <ul>${inp}</ul>
+      ${r.why ? `<div class="kv">why: ${String(r.why).replace(/</g,"&lt;")}</div>` : ""}
+    </div></td></tr>`;
+  };
+  $("ticketWrap").innerHTML = `<table>
+    <tr><th></th><th>strategy</th><th>family</th><th>ret (lifetime / 20d)</th><th>decision</th><th>checks</th><th>BUY @ open</th><th>SELL @ open</th><th>why / note</th></tr>
+    ${rows.map(r=>`<tr>
+      <td><span class="xbtn" data-x="${r.name}">${EXPANDED.has(r.name) ? "⊖" : "⊕"}</span></td>
+      <td class="name">${r.name}${r.s!=null?` <span class="dim">S=${r.s}</span>`:""}${r.star}
+        <div class="times dim">fin ${TK_FACTS.fin ? hhmmss(TK_FACTS.fin).split(", ")[1] : "—"}<br>push ${TK_FACTS.push ? hhmmss(TK_FACTS.push).split(", ")[1] : "—"}</div></td>
+      <td class="mut">${r.fam}</td>
+      ${perfCell(r.p)}
+      <td>${r.status}</td>
+      <td>${checksCell(r)}</td>
+      <td class="tk">${r.buy}</td>
+      <td class="tk">${r.sell}</td>
+      <td class="why" title="${String(r.why).replace(/"/g,"&quot;")}">${r.shortWhy}</td>
+    </tr>${detail(r)}`).join("") || `<tr><td colspan="9" class="mut">no strategies match the filter</td></tr>`}
+  </table>`;
+  $("ticketWrap").querySelectorAll(".xbtn").forEach(b => {
+    b.onclick = () => {
+      const n = b.getAttribute("data-x");
+      if(EXPANDED.has(n)){ EXPANDED.delete(n); }
+      else {
+        EXPANDED.add(n);
+        const row = rows.find(x => x.name === n);
+        if(row && (row.fam === "factor_mine" || row.fam === "factor_mine_preopen")){
+          const p = `data/factor_mine/state/${n}/${d}.json`;
+          if(NEEDS_STATUS[p] === undefined)
+            probe(p).then(r => { NEEDS_STATUS[p] = r.ok; renderTicket(tk, d); });
+        }
+      }
+      renderTicket(tk, d);
+    };
+  });
+}
+async function renderInputs(d){
+  const groups = [
+    ["morning packet (LLM)", [
+      ["general predict", `01_daily/general/${d}_predict.md`],
+      ["sector board", `01_daily/sectors/${d}/_board.json`],
+      ["news judge", `01_daily/news/${d}_judge.md`],
+      ["news actions", `01_daily/news/${d}_actions.json`],
+      ["finviz digest", `01_daily/news/${d}_finviz_digest.json`],
+    ]],
+    ["ranker (book)", [
+      ["weather", `01_daily/weather/${d}_weather.json`],
+      ["AB enriched", `data/ab_checklist/${d}_ab_checklist_enriched.csv`],
+      ["join ranked", `data/join/${d}_ranked.csv`],
+      ["peer RS", `data/peers/${d}_peer_rs.csv`],
+      ["stock book", `data/stock_book/${d}_stock_book.json`],
+      ["book report", `01_daily/${d}_stock_book.md`],
+    ]],
+    ["factor-mine", [
+      ["send-inputs freeze", `data/factor_mine/send_inputs/${d}.json`],
+    ]],
+    ["excel sleeves", [
+      ["suggestions", "excel_bot/suggestions/suggestions.csv"],
+    ]],
+    ["flatten / sleeve-merge", [
+      ["flatten card", "data/sleeve_merge/today.json"],
+    ]],
+  ];
+  const results = [];
+  await Promise.all(groups.map(async (g, gi) => {
+    const rows = await Promise.all(g[1].map(async ([label, path]) => {
+      const r = await probe(path);
+      return {label, path, ok:r.ok};
+    }));
+    results[gi] = {name:g[0], rows};
+  }));
+  // richer reads for excel + sleeve + factor-mine
+  const sug = await probe("excel_bot/suggestions/suggestions.csv");
+  let sugToday = 0;
+  if(sug.ok){
+    sugToday = sug.text.split(/\r?\n/).slice(1)
+      .filter(l => l.split(",").some(c => c.trim() === d)).length;
+  }
+  const slv = await jprobe("data/sleeve_merge/today.json");
+  const slvToday = slv.ok && slv.json && (slv.json.date === d);
+  const si = await jprobe(`data/factor_mine/send_inputs/${d}.json`);
+  const panel = await jprobe("data/factor_mine/panel.json");
+  let panelToday = false;
+  if(panel.ok && panel.json && panel.json.by_date && (panel.json.by_date[d]||[]).length){
+    panelToday = true;
+  }
+  $("inStamp").textContent =
+    `excel suggestions rows for ${d}: ${sugToday} · sleeve card today: ${slvToday ? "yes" : "no"}` +
+    ` · send-inputs freeze: ${si.ok ? "yes" : "no"} · panel same-day rows: ${panelToday ? "yes" : "no"}`;
+  const html = results.map(g => {
+    const nOk = g.rows.filter(r=>r.ok).length;
+    const cls = nOk === g.rows.length ? "ok" : (nOk === 0 ? "fail" : "part");
+    return `<div class="proc"><h3><span>${g.name}</span><span class="${cls}">${nOk}/${g.rows.length}</span></h3>
+      <table><tr><th>input</th><th>status</th><th>path</th></tr>
+      ${g.rows.map(r=>`<tr><td>${r.label}</td>
+        <td>${r.ok?'<span class="ok">OK</span>':'<span class="fail">MISSING</span>'}</td>
+        <td class="name">${r.path}</td></tr>`).join("")}
+      </table></div>`;
+  }).join("");
+  $("inputs").innerHTML = html;
+}
+async function renderAll(d){
+  const r = await jprobe(`data/strategy_status/${d}.json`);
+  if(!r.ok){ $("allStamp").textContent = `data/strategy_status/${d}.json not published yet — every strategy MISSING`; $("allWrap").innerHTML=""; return; }
+  const doc = r.json, fam = $("famSel").value, q = ($("flt").value||"").toUpperCase();
+  $("allStamp").textContent = `published ${hhmm(doc.generated_at)} ET · ` +
+    Object.entries(doc.counts||{}).map(([f,c])=>`${f}: ${c.OK} OK / ${c.SIT} SIT / ${c.MISSING} MISSING`).join(" · ");
+  const rows = (doc.strategies||[]).filter(x => (!fam || x.family===fam || (fam==="factor_mine" && x.family==="factor_mine_preopen"))
+    && (!q || (x.name+" "+x.buys.join(" ")+" "+x.sells.join(" ")).toUpperCase().includes(q)));
+  const sortMode = $("sortSel").value || "perf";
+  if(sortMode === "perf"){
+    rows.sort((a,b) => ((perfOf(b.name)||{}).total_ret_pct ?? -Infinity)
+      - ((perfOf(a.name)||{}).total_ret_pct ?? -Infinity)
+      || a.name.localeCompare(b.name));
+  } else {
+    rows.sort((a,b) => a.name.localeCompare(b.name));
+  }
+  const stars = topSet();
+  const b = st => st==="OK" ? `<span class="badge b-ok">OK</span>` : st==="SIT" ? `<span class="badge b-sit">SIT</span>` : `<span class="badge b-fail">MISSING</span>`;
+  const tcell = `<div class="times dim">fin ${TK_FACTS.fin ? hhmmss(TK_FACTS.fin).split(", ")[1] : "—"}<br>push ${TK_FACTS.push ? hhmmss(TK_FACTS.push).split(", ")[1] : "—"}</div>`;
+  $("allWrap").innerHTML = `<table><tr><th>strategy</th><th>family</th><th>ret (lifetime / 20d)</th><th>status</th><th>BUY</th><th>SELL</th><th>note</th><th>fin / push (ET)</th></tr>` +
+    rows.map(x=>`<tr><td class="name">${x.name}${stars.has(x.name) ? ` <span title="top ${TOP_N} lifetime performers" style="color:var(--gold)">★</span>` : ""}</td><td>${x.family}</td>${perfCell(perfOf(x.name))}<td>${b(x.status)}</td><td>${x.buys.join(", ")||"—"}</td><td>${x.sells.join(", ")||"—"}</td><td class="mut">${x.note||""}</td><td>${tcell}</td></tr>`).join("") + `</table>`;
+}
+async function refresh(){
+  const d = $("dateSel").value || todayET();
+  $("stamp").textContent = `loading ${d} …`;
+  const sc = await jprobe("data/factor_mine/recipe_scorecard.json");
+  SCORECARD = (sc.ok && sc.json && sc.json.recipes) ? sc.json : null;
+  const [tk, times] = await Promise.all([loadTicket(d), timesFor(d)]);
+  const dr = (tk && tk.json && tk.json.decision_readiness) || {};
+  TK_FACTS = {fin: dr.completed_at || (tk && tk.json.generated_at) || null,
+              push: times.pushed, dash: times.dash,
+              fp: dr.fingerprint || null, inputs: dr.inputs || {}};
+  NEEDS_STATUS = {};
+  const factorNames = tk ? Object.entries(tk.json.strategies||{})
+    .filter(([, s]) => (s.family||"").startsWith("factor_mine")).map(([n]) => n) : [];
+  const needsP = probeNeeds(d, factorNames);
+  renderCards(tk, times.pushed, d);
+  renderTicket(tk, d);
+  renderInputs(d);
+  renderAll(d);
+  await needsP;
+  renderTicket(tk, d); // repaint input chips once the presence probes resolve
+  $("stamp").textContent = `updated ${hhmm(new Date().toISOString())} · ${d} (ET)` +
+    (SCORECARD ? ` · perf ledger through ${SCORECARD.last_date}` : " · perf ledger: not published yet");
+}
+$("dateSel").value = todayET();
+$("reload").onclick = refresh;
+$("dateSel").onchange = refresh;
+$("sortSel").onchange = () => { $("famSel").onchange(); };
+$("famSel").onchange = () => { loadTicket($("dateSel").value||todayET()).then(tk=>renderTicket(tk, $("dateSel").value)); renderAll($("dateSel").value||todayET()); };
+$("flt").oninput = () => { $("famSel").onchange(); renderAll($("dateSel").value||todayET()); };
+refresh();
+</script>
+</body></html>
