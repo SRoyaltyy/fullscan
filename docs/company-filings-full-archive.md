@@ -33,8 +33,15 @@ python scripts/read_company_filings_full.py --ticker RKLB --objects downloaded/o
 python scripts/read_company_filings_full.py --ticker RKLB --objects downloaded/objects --accession ACCESSION --original --output original-submission.txt
 python scripts/read_company_filings_full.py --ticker RKLB --objects downloaded/objects --accession ACCESSION --output all-full-text-and-dates.json
 python scripts/read_company_filings_full.py --ticker RKLB --objects downloaded/objects --accession ACCESSION --filename DOCUMENT.htm --original --output whole-document.htm
+python scripts/read_company_filings_full.py --ticker RKLB --objects downloaded/objects --accession ACCESSION --all-originals --output complete-filing-directory
 ```
 
 The first command lists dates and completeness. The others export the whole original submission, every embedded file's complete text plus metadata, or one entire original file. These commands never request point excerpts. For binaries, use original export; a binary asset's empty text field does not replace its preserved original.
 
+`--all-originals` creates a new directory containing the exact complete submission, the date/checksum manifest, and **every** decoded embedded original under `originals/`. Open the primary HTML file inside that folder so its relative image references resolve to the accompanying original image files. Existing output directories are refused to avoid overwriting earlier exports.
+
 After configuring R2 credentials, migrate each downloaded shard with `python scripts/migrate_company_filings_full.py --objects downloaded/objects`. This copies and verifies complete originals and full text before publishing durable manifests; it never requests SEC files again. It resumes by verifying existing destination objects. The command migrates the filings present in that shard, and does not by itself assert that all 2,032 tickers are complete.
+
+## Research consumers
+
+The original filing is the source of record. Chunking and inference must retain accession, filename, source checksum, filing date and reporting-period date so a claim can be traced back to the complete document. Derived exposure records may use activity, product, customer, place, permission, input and alias as join keys; a later lower-ranked source must not overwrite a filing fact. Do not treat an empty text field for a preserved graphic, spreadsheet or other binary as evidence that it contains no information: read the original or run a separate visual/OCR pass. The text-completeness flag covers textual document views and preserved binary originals; it does not assert that every image has been transcribed or every research inference has been completed.

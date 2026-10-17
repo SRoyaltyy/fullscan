@@ -5,6 +5,7 @@ import argparse,json,pathlib,sys
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from src.company_filings.full_archive import LocalObjects,R2Objects,PREFIX,read_filing,read_original
+from src.company_filings.full_extract import _filename,file_bytes
 
 
 def main():
@@ -14,7 +15,9 @@ def main():
     p.add_argument('--objects',type=pathlib.Path,default=ROOT/'data/company_filings_full/objects')
     p.add_argument('--r2',action='store_true')
     p.add_argument('--accession');p.add_argument('--filename')
-    p.add_argument('--original',action='store_true',help='Export exact original bytes instead of the full text view')
+    mode=p.add_mutually_exclusive_group()
+    mode.add_argument('--original',action='store_true',help='Export original submission/file bytes instead of the full text view')
+    mode.add_argument('--all-originals',action='store_true',help='Export every embedded file, the complete submission, and dates to a new directory')
     p.add_argument('--output',type=pathlib.Path)
     args=p.parse_args()
     cik=str(args.cik or '').zfill(10)
@@ -31,6 +34,19 @@ def main():
         print(json.dumps({'cik':cik,'tickers':company['tickers'],'filings':rows,'failures':company['failures']},indent=2))
         return
     if not args.output:p.error('Export requires --output; a whole filing may be hundreds of MB')
+    if args.all_originals:
+        if args.filename:p.error('--all-originals cannot be combined with --filename')
+        manifest=objects.maybe_json(f'{PREFIX}/{cik}/{args.accession}/manifest.json')
+        if not manifest:p.error('Accession is not present in this object store/shard')
+        raw=read_original(objects,cik,args.accession)
+        args.output.mkdir(parents=True,exist_ok=False)
+        documents=args.output/'originals';documents.mkdir()
+        for item in manifest['files']:
+            (documents/_filename(item['filename'])).write_bytes(file_bytes(raw,item))
+        (args.output/'complete-submission.txt').write_bytes(raw)
+        (args.output/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
+        print(json.dumps({'cik':cik,'accession':args.accession,'output':str(args.output),'embedded_files':len(manifest['files']),'whole_document':True}))
+        return
     if args.original:
         data=read_original(objects,cik,args.accession,args.filename)
     else:

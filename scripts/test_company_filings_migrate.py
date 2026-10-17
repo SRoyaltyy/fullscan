@@ -9,6 +9,20 @@ class DurableObjects(LocalObjects):durable=True
 
 
 class MigrateTests(unittest.TestCase):
+    def test_reader_exports_entire_filing_directory_with_dates_and_all_attachments(self):
+        import contextlib,io
+        from scripts.read_company_filings_full import main
+        with tempfile.TemporaryDirectory() as d:
+            source=LocalObjects(pathlib.Path(d)/'objects');client=FakeClient()
+            manifest,_=archive_filing(client,source,'0000000001',FILING)
+            output=pathlib.Path(d)/'export'
+            argv=['read_company_filings_full.py','--cik','1','--objects',str(source.root),'--accession',ACCESSION,'--all-originals','--output',str(output)]
+            with patch('sys.argv',argv),contextlib.redirect_stdout(io.StringIO()):main()
+            self.assertEqual((output/'complete-submission.txt').read_bytes(),client.raw)
+            self.assertEqual(json.loads((output/'manifest.json').read_text())['filing_date'],FILING['filing_date'])
+            for item in manifest['files']:
+                self.assertEqual((output/'originals'/item['filename']).read_bytes(),read_original(source,'0000000001',ACCESSION,item['filename']))
+
     def test_whole_original_and_dates_survive_migration_and_resume(self):
         with tempfile.TemporaryDirectory() as a,tempfile.TemporaryDirectory() as b:
             source=LocalObjects(a);destination=DurableObjects(b);client=FakeClient()
