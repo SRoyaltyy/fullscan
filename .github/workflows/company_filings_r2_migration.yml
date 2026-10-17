@@ -1,0 +1,142 @@
+name: Migrate full filing archive to R2
+on:
+  workflow_dispatch:
+    inputs:
+      source_run_id:
+        description: Completed and verified full archive run containing all twelve source artifacts
+        required: true
+        default: '39035858340'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: company-filings-full-archive
+  cancel-in-progress: false
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      SOURCE_RUN_ID: ${{ inputs.source_run_id }}
+      R2_ENDPOINT_URL: ${{ secrets.R2_ENDPOINT_URL || vars.R2_ENDPOINT_URL }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET || vars.R2_BUCKET }}
+    steps:
+      - name: Require existing R2 settings and a verified complete source run
+        run: |
+          python - <<'PY'
+          import os
+          assert os.environ['SOURCE_RUN_ID'].isdigit(), 'Source run must be numeric'
+          required=['R2_ENDPOINT_URL','R2_ACCESS_KEY_ID','R2_SECRET_ACCESS_KEY','R2_BUCKET']
+          missing=[k for k in required if not os.environ.get(k,'').strip()]
+          if missing:raise SystemExit('Missing repository Actions settings: '+', '.join(missing))
+          PY
+          gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${SOURCE_RUN_ID}/artifacts?per_page=100" > source-artifacts.json
+          gh run download "$SOURCE_RUN_ID" -n company-filings-full-completeness -D source-check
+          python - <<'PY'
+          import json,pathlib
+          report=json.loads(pathlib.Path('source-check/company_filings_full_report.json').read_text())
+          assert report['complete'] and report['storage_publication_checked'], 'Source run is not fully verified'
+          artifacts=json.loads(pathlib.Path('source-artifacts.json').read_text())['artifacts']
+          for shard in range(12):
+              name='company-filings-full-shard-'+str(shard)
+              assert any(a['name']==name and not a['expired'] and a['size_in_bytes']>0 for a in artifacts), 'Missing source artifact: '+name
+          print('Verified source run: '+str(report['covered_tickers'])+' tickers, '+str(report['raw_complete_filings'])+' whole filings')
+          PY
+  migrate:
+    needs: inventory
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    env:
+      GH_TOKEN: ${{ github.token }}
+      SOURCE_RUN_ID: ${{ inputs.source_run_id }}
+      SHARD: ${{ matrix.shard }}
+      R2_ENDPOINT_URL: ${{ secrets.R2_ENDPOINT_URL || vars.R2_ENDPOINT_URL }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET || vars.R2_BUCKET }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/company_filings/
+            /scripts/migrate_company_filings_full.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests lxml PyMuPDF boto3
+      - name: Restore complete archived originals without any SEC requests
+        run: gh run download "$SOURCE_RUN_ID" -n "company-filings-full-shard-$SHARD" -D source
+      - name: Copy, verify and publish durable filing and company manifests
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          from scripts.migrate_company_filings_full import migrate
+          from src.company_filings.full_archive import LocalObjects,R2Objects,PREFIX
+          source=LocalObjects('source/objects');destination=R2Objects()
+          result=migrate(source,destination)
+          report=json.loads(pathlib.Path('source/report.json').read_text())
+          for i,company in enumerate(report['companies']):
+              stored=destination.maybe_json(PREFIX+'/'+company['cik']+'/company.json')
+              expected={**company,'durable':True}
+              assert stored==expected, 'Stored company inventory differs: '+company['cik']
+              report['companies'][i]=stored
+          report['durable']=True
+          pathlib.Path('report.json').write_text(json.dumps(report,indent=2)+'\n')
+          pathlib.Path('migration.json').write_text(json.dumps(result,indent=2)+'\n')
+          print(json.dumps(result,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: company-filings-r2-report-${{ matrix.shard }}
+          retention-days: 90
+          if-no-files-found: error
+          path: |
+            report.json
+            migration.json
+  verify:
+    needs: [inventory, migrate]
+    if: always() && needs.inventory.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/verify_company_filings_full.py
+            /data/company_filings_universe_2026-10-16.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: company-filings-r2-report-*
+          path: migration-reports
+      - name: Require complete durable coverage and reproduce the dates index
+        run: |
+          python scripts/verify_company_filings_full.py --reports migration-reports
+          python - <<'PY'
+          import json,pathlib
+          result=json.loads(pathlib.Path('data/company_filings_full_report.json').read_text())
+          assert result['complete'] and result['durable'], 'R2 migration is incomplete'
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: company-filings-r2-completeness
+          retention-days: 90
+          path: |
+            data/company_filings_full_report.json
+            data/company_filings_full_dates.csv
