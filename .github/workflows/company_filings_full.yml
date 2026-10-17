@@ -73,6 +73,7 @@ jobs:
             /scripts/archive_company_filings.py
             /scripts/test_company_filings.py
             /scripts/test_company_filings_full.py
+            /scripts/verify_company_filings_full.py
             /config/company_filings_archive.json
             /data/company_filings_universe_2026-10-16.json
       - uses: actions/setup-python@v5
