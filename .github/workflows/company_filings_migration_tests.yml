@@ -8,8 +8,10 @@ on:
       - 'scripts/read_company_filings_full.py'
       - 'scripts/test_company_filings_migrate.py'
       - 'src/company_filings/full_*.py'
+      - 'src/company_filings/page_reviews.json'
   pull_request:
     paths:
+      - 'src/company_filings/page_reviews.json'
       - 'scripts/migrate_company_filings_full.py'
       - 'scripts/test_company_filings_migrate.py'
 permissions:

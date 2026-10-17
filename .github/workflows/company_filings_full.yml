@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/company_filings_full.yml'
       - 'src/company_filings/full_*.py'
+      - 'src/company_filings/page_reviews.json'
       - 'scripts/archive_company_filings.py'
       - 'scripts/test_company_filings_full.py'
       - 'scripts/verify_company_filings_full.py'
