@@ -2,9 +2,10 @@
 import tempfile
 import textwrap
 import unittest
+import urllib.parse
 from pathlib import Path
 
-from src.company_filings.edgar import blocked_reason
+from src.company_filings.edgar import blocked_reason, relay_target
 from src.company_filings.extract import html_to_text, sections_for, source_points
 from src.company_filings.select import fingerprint, priority, select_filings
 from src.company_filings.store import Store
@@ -72,6 +73,17 @@ def _filing_html() -> str:
         <p>The company has a major customer concentration in United States government agencies for space systems.</p>
         </body></html>
     """)
+
+
+class RelayTests(unittest.TestCase):
+    def test_gov_urls_go_through_the_worker_and_other_hosts_do_not(self):
+        relay = "https://fullscan-primary-relay.example.workers.dev"
+        sec = "https://data.sec.gov/submissions/CIK0001819994.json"
+        routed = relay_target(relay, sec)
+        self.assertTrue(routed.startswith(relay + "/?url="))
+        self.assertIn("data.sec.gov", urllib.parse.unquote(routed.split("url=", 1)[1]))
+        self.assertEqual(relay_target(relay, "https://example.com/10k"), "https://example.com/10k")
+        self.assertEqual(relay_target("", sec), sec)
 
 
 class BlockTests(unittest.TestCase):

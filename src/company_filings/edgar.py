@@ -8,6 +8,7 @@ from __future__ import annotations
 import os
 import threading
 import time
+import urllib.parse
 
 import requests
 
@@ -47,26 +48,48 @@ class RateLimiter:
             time.sleep(delay)
 
 
+def relay_target(relay_url: str, url: str) -> str:
+    """Fetch a .gov document through the official-source worker when one is configured.
+
+    The worker allowlist is the same host policy as the primary-action scanner.
+    A non-.gov URL is left alone so the relay cannot be pointed at other sites.
+    """
+    relay_url = (relay_url or "").strip().rstrip("/")
+    if not relay_url:
+        return url
+    host = (urllib.parse.urlsplit(url).hostname or "").lower()
+    if not host.endswith(".gov"):
+        return url
+    return relay_url + "/?url=" + urllib.parse.quote(url, safe="")
+
+
 class Client:
-    def __init__(self, identity: str | None = None, per_sec: float = 8.0):
+    def __init__(self, identity: str | None = None, per_sec: float = 8.0, relay_url: str | None = None):
         self.identity = identity or os.environ.get("EDGAR_IDENTITY") or DEFAULT_IDENTITY
+        self.relay_url = (relay_url if relay_url is not None else os.environ.get("PRIMARY_ACTION_RELAY_URL") or "").strip().rstrip("/")
         self.limiter = RateLimiter(per_sec)
-        self._net = threading.Lock()
+        self._local = threading.local()
         self._cool_lock = threading.Lock()
         self._cool_until = 0.0
-        self.session = requests.Session()
-        self.session.headers.update({
-            "User-Agent": self.identity,
-            "Accept-Encoding": "gzip, deflate",
-        })
+
+    def _session(self) -> requests.Session:
+        session = getattr(self._local, "session", None)
+        if session is None:
+            session = requests.Session()
+            session.headers.update({
+                "User-Agent": self.identity,
+                "Accept-Encoding": "gzip, deflate",
+            })
+            self._local.session = session
+        return session
 
     def _get(self, url: str) -> requests.Response:
         last: Exception | None = None
+        target = relay_target(self.relay_url, url)
         for attempt in range(4):
             self.limiter.wait()
             try:
-                with self._net:
-                    response = self.session.get(url, timeout=60)
+                response = self._session().get(target, timeout=120)
             except requests.RequestException as exc:
                 last = exc
                 time.sleep(1.5 * (attempt + 1))

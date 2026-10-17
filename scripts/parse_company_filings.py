@@ -3,6 +3,8 @@
 
 The corpus is a local SQLite file under data/company_filings/. It is not
 committed. Re-running skips a company whose selected filings have not changed.
+When PRIMARY_ACTION_RELAY_URL is set, SEC requests go through that Cloudflare
+worker instead of the caller's network.
 
     python scripts/parse_company_filings.py --ticker RKLB
     python scripts/parse_company_filings.py --universe --workers 3
@@ -68,13 +70,16 @@ def main() -> int:
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--db", default=str(ROOT / "data" / "company_filings" / "filings.sqlite"))
     parser.add_argument("--force", action="store_true", help="Reparse even when the filing set is unchanged")
+    parser.add_argument("--per-sec", type=float, default=5.0, help="Request pace. Stay under SEC's 10/second.")
+    parser.add_argument("--relay-url", default="", help="Cloudflare worker origin. Defaults to PRIMARY_ACTION_RELAY_URL.")
     args = parser.parse_args()
     if not args.ticker and not args.universe:
         parser.error("pass --ticker or --universe")
 
     db_path = Path(args.db)
     store = Store(db_path)
-    client = Client(per_sec=5)
+    client = Client(per_sec=args.per_sec, relay_url=args.relay_url or None)
+    print("relay: on" if client.relay_url else "relay: off", flush=True)
     try:
         loaded = _companies(args, client)
     except EdgarBlocked as exc:
