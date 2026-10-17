@@ -36,6 +36,28 @@ CHAINS: dict[str, dict[str, list[str]]] = {
     },
     "pulp": {
         "producer": ["Paper & Paper Products"],
+        "packaging": ["Packaging & Containers"],
+    },
+    "banks": {
+        "diversified": ["Banks - Diversified"],
+        "regional": ["Banks - Regional"],
+    },
+    "semis": {
+        "designer": ["Semiconductors"],
+        "equipment": ["Semiconductor Equipment & Materials"],
+    },
+    "pharma": {
+        "large_cap": ["Drug Manufacturers - General"],
+        "specialty": ["Drug Manufacturers - Specialty & Generic"],
+        "biotech": ["Biotechnology"],
+    },
+    "insurance": {
+        "property": ["Insurance - Property & Casualty"],
+        "life": ["Insurance - Life"],
+        "broker": ["Insurance Brokers"],
+    },
+    "defense": {
+        "prime": ["Aerospace & Defense"],
     },
 }
 
