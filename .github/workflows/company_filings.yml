@@ -9,6 +9,7 @@ on:
     branches: [cursor/company-filing-parser-9b60]
     paths:
       - src/company_filings/**
+      - '!src/company_filings/full_*.py'
       - scripts/parse_company_filings.py
       - scripts/test_company_filings.py
       - scripts/explain_filings.py
@@ -25,6 +26,7 @@ concurrency:
 
 jobs:
   probe:
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[full-archive]')
     runs-on: ubuntu-latest
     timeout-minutes: 25
     env:

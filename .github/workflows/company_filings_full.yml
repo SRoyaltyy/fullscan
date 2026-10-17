@@ -1,5 +1,7 @@
 name: Full company filing archive
 on:
+  schedule:
+    - cron: '45 21 * * 1-5'
   push:
     branches: [cursor/company-filing-parser-9b60]
     paths:
@@ -7,6 +9,7 @@ on:
       - 'src/company_filings/full_*.py'
       - 'scripts/archive_company_filings.py'
       - 'scripts/test_company_filings_full.py'
+      - 'scripts/verify_company_filings_full.py'
       - 'config/company_filings_archive.json'
       - 'data/company_filings_universe_2026-10-16.json'
   workflow_dispatch:
@@ -45,3 +48,149 @@ jobs:
           name: company-filings-full-storage-status
           path: storage_status.json
           retention-days: 14
+  probe:
+    needs: storage
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    outputs:
+      mode: ${{ steps.mode.outputs.mode }}
+    env:
+      PRIMARY_ACTION_RELAY_URL: ${{ secrets.PRIMARY_ACTION_RELAY_URL }}
+      EDGAR_IDENTITY: Fullscan filing parser research@sroyaltyy.github.io
+      R2_ENDPOINT_URL: ${{ secrets.R2_ENDPOINT_URL || vars.R2_ENDPOINT_URL }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET || vars.R2_BUCKET }}
+      FILINGS_OCR_ENABLED: '1'
+      TESSDATA_PREFIX: /usr/share/tesseract-ocr/5/tessdata
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/company_filings/
+            /scripts/archive_company_filings.py
+            /scripts/test_company_filings.py
+            /scripts/test_company_filings_full.py
+            /config/company_filings_archive.json
+            /data/company_filings_universe_2026-10-16.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests lxml PyMuPDF boto3
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr
+      - name: Uncapped original, full-text, exhibit, dates, checksum and resume tests
+        run: python -m unittest scripts.test_company_filings_full scripts.test_company_filings -q
+      - id: mode
+        name: Read archive mode
+        run: |
+          python - <<'PY'
+          import json,os
+          mode=json.load(open('config/company_filings_archive.json'))['mode']
+          assert mode in ('probe','full')
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('mode='+mode+'\n')
+          PY
+      - name: Full-document probes including previously defective issuers
+        run: |
+          python scripts/archive_company_filings.py --ticker SUZ --ticker TIGO --ticker CALM --ticker NVO --ticker ASML --ticker RKLB --workers 2 --per-sec 1.5 --output data/company_filings_full_probe
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: company-filings-full-probe
+          retention-days: 90
+          path: data/company_filings_full_probe/
+  archive:
+    needs: [storage, probe]
+    if: needs.probe.outputs.mode == 'full'
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    env:
+      PRIMARY_ACTION_RELAY_URL: ${{ secrets.PRIMARY_ACTION_RELAY_URL }}
+      EDGAR_IDENTITY: Fullscan filing parser research@sroyaltyy.github.io
+      R2_ENDPOINT_URL: ${{ secrets.R2_ENDPOINT_URL || vars.R2_ENDPOINT_URL }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET || vars.R2_BUCKET }}
+      FILINGS_OCR_ENABLED: '1'
+      TESSDATA_PREFIX: /usr/share/tesseract-ocr/5/tessdata
+      SHARD: ${{ matrix.shard }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/company_filings/
+            /scripts/archive_company_filings.py
+            /data/company_filings_universe_2026-10-16.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests lxml PyMuPDF boto3
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr
+      - name: Restore this shard's full originals and manifest
+        if: needs.storage.outputs.configured != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NAME="company-filings-full-shard-$SHARD"
+          gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts?name=$NAME&per_page=100" > /tmp/whole-artifacts.json
+          python - <<'PY'
+          import json,os,pathlib
+          branch=os.environ['GITHUB_REF_NAME']
+          rows=[r for r in json.load(open('/tmp/whole-artifacts.json'))['artifacts'] if not r.get('expired') and r.get('workflow_run',{}).get('head_branch')==branch]
+          if not rows and branch=='main':rows=[r for r in json.load(open('/tmp/whole-artifacts.json'))['artifacts'] if not r.get('expired') and r.get('workflow_run',{}).get('head_branch')=='cursor/company-filing-parser-9b60']
+          if rows:pathlib.Path('/tmp/whole-restore-run').write_text(str(max(rows,key=lambda r:r['created_at'])['workflow_run']['id']))
+          PY
+          if [ -f /tmp/whole-restore-run ]; then gh run download "$(cat /tmp/whole-restore-run)" -n "$NAME" -D data/company_filings_full; fi
+      - name: Archive every selected submission in full
+        run: python scripts/archive_company_filings.py --shards 12 --shard "$SHARD" --workers 2 --per-sec 1.5 --output data/company_filings_full
+      - name: Preserve complete originals and explicit partial progress
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: company-filings-full-shard-${{ matrix.shard }}
+          retention-days: 90
+          if-no-files-found: error
+          compression-level: 0
+          path: data/company_filings_full/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: company-filings-full-report-${{ matrix.shard }}
+          retention-days: 90
+          if-no-files-found: error
+          path: data/company_filings_full/report.json
+  verify:
+    needs: [probe, archive]
+    if: always() && needs.probe.outputs.mode == 'full'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/verify_company_filings_full.py
+            /data/company_filings_universe_2026-10-16.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: company-filings-full-report-*
+          path: shard_reports
+      - name: Verify all expected tickers, filings and full documents
+        run: python scripts/verify_company_filings_full.py --reports shard_reports
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: company-filings-full-completeness
+          retention-days: 90
+          path: data/company_filings_full_report.json
