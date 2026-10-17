@@ -24,7 +24,7 @@ sys.path.insert(0, str(ROOT))
 from src.company_filings.edgar import Client, EdgarBlocked
 from src.company_filings.run import db_over_budget, parse_company
 from src.company_filings.store import Store
-from src.company_filings.universe import attach_ciks, group_by_cik, latest_export, load_universe
+from src.company_filings.universe import attach_ciks, group_by_cik, latest_export, load_universe, recover_ciks
 
 
 def _companies(args, client: Client) -> list[dict]:
@@ -94,6 +94,10 @@ def main() -> int:
         companies, missing = loaded
     else:
         companies = loaded
+    recovered, missing = recover_ciks(missing, store.known_cik)
+    if recovered:
+        print(f"recovered {len(recovered)} tickers from an earlier CIK", flush=True)
+        companies.extend(recovered)
     for row in missing:
         store.mark({**row, "cik": "", "tickers": [row["ticker"]]}, "no_cik", "not in SEC company_tickers")
 

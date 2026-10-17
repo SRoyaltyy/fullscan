@@ -84,6 +84,9 @@ class Store:
         self.conn = sqlite3.connect(str(path), check_same_thread=False)
         self.conn.execute("PRAGMA journal_mode=WAL")
         self.conn.executescript(SCHEMA)
+        columns = {row[1] for row in self.conn.execute("PRAGMA table_info(companies)")}
+        if "extractor" not in columns:
+            self.conn.execute("ALTER TABLE companies ADD COLUMN extractor TEXT")
 
     def close(self) -> None:
         self.conn.close()
@@ -97,6 +100,53 @@ class Store:
         if row and row[1] == "ok":
             return row[0]
         return None
+
+    def known_cik(self, ticker: str) -> str:
+        """CIK from an earlier parse. The SEC ticker file sometimes drops a symbol for a day."""
+        with self._lock:
+            row = self.conn.execute(
+                "SELECT cik FROM companies WHERE ticker = ? AND cik != ''",
+                (ticker,),
+            ).fetchone()
+        return row[0] if row else ""
+
+    def extractor(self, ticker: str) -> str:
+        with self._lock:
+            row = self.conn.execute(
+                "SELECT extractor FROM companies WHERE ticker = ?",
+                (ticker,),
+            ).fetchone()
+        return row[0] or "" if row else ""
+
+    def base_is_thin(self, ticker: str, forms: tuple[str, ...], minimum_chars: int = 500) -> bool:
+        """True when the annual report's longest section is a contents line.
+
+        An amendment or an 8-K can be long while the 10-K extract is still the
+        contents page, so the annual report is checked on its own.
+        """
+        annual = self._longest_section(ticker, ("10-K", "20-F", "40-F"))
+        if annual is None:
+            annual = self._longest_section(ticker, forms)
+        if annual is None:
+            return False
+        return annual < minimum_chars
+
+    def _longest_section(self, ticker: str, forms: tuple[str, ...]) -> int | None:
+        if not forms:
+            return None
+        marks = ",".join("?" for _ in forms)
+        with self._lock:
+            row = self.conn.execute(
+                f"""SELECT MAX(s.n_chars)
+                    FROM sections s
+                    JOIN documents d ON d.accession = s.accession
+                    JOIN companies c ON c.cik = d.cik
+                    WHERE c.ticker = ? AND d.form IN ({marks})""",
+                (ticker, *forms),
+            ).fetchone()
+        if row is None or row[0] is None:
+            return None
+        return int(row[0])
 
     def replace_company(self, company: dict, docs: list[dict]) -> None:
         """docs: accession, form, filing_date, report_date, items, url, sha256,
@@ -161,18 +211,20 @@ class Store:
                     self.conn.execute(
                         """INSERT INTO companies
                            (ticker, cik, name, sector, industry, market_cap_m, status, error, fingerprint,
-                            n_docs, n_points, stored_bytes, parsed_at)
-                           VALUES (?, ?, ?, ?, ?, ?, 'ok', '', ?, ?, ?, ?, ?)
+                            n_docs, n_points, stored_bytes, parsed_at, extractor)
+                           VALUES (?, ?, ?, ?, ?, ?, 'ok', '', ?, ?, ?, ?, ?, ?)
                            ON CONFLICT(ticker) DO UPDATE SET
                              cik=excluded.cik, name=excluded.name, sector=excluded.sector,
                              industry=excluded.industry, market_cap_m=excluded.market_cap_m,
                              status='ok', error='', fingerprint=excluded.fingerprint,
                              n_docs=excluded.n_docs, n_points=excluded.n_points,
-                             stored_bytes=excluded.stored_bytes, parsed_at=excluded.parsed_at""",
+                             stored_bytes=excluded.stored_bytes, parsed_at=excluded.parsed_at,
+                             extractor=excluded.extractor""",
                         (
                             ticker, cik, company.get("name") or "", company.get("sector") or "",
                             company.get("industry") or "", company.get("market_cap_m") or 0,
                             company.get("fingerprint") or "", len(docs), n_points, stored, _now(),
+                            company.get("extractor") or "",
                         ),
                     )
                 self.conn.commit()

@@ -125,6 +125,22 @@ def attach_ciks(
     return matched, missing
 
 
+def recover_ciks(missing: list[dict], known_cik) -> tuple[list[dict], list[dict]]:
+    """Keep a ticker the SEC file omitted when an earlier parse already stored its CIK."""
+    recovered: list[dict] = []
+    still: list[dict] = []
+    for row in missing:
+        cik = known_cik(row["ticker"]) or ""
+        if not cik:
+            still.append(row)
+            continue
+        found = dict(row)
+        found["cik"] = str(cik).zfill(10) if str(cik).isdigit() else str(cik)
+        found["tickers"] = [row["ticker"]]
+        recovered.append(found)
+    return recovered, still
+
+
 def group_by_cik(rows: list[dict]) -> list[dict]:
     """One parse per CIK. Dual-class tickers share the filing."""
     grouped: dict[str, dict] = {}

@@ -124,8 +124,12 @@ class Client:
             time.sleep(delay)
 
     def ticker_records(self) -> dict[str, dict]:
-        """Ticker to CIK and the SEC title. The title is how a Y-suffix ADR is matched."""
-        payload = self._get(TICKERS).json()
+        """Ticker to CIK and the SEC title. The title is how a Y-suffix ADR is matched.
+
+        The hour stamp keeps a relay cache from serving a ticker file that dropped
+        a symbol and then listed it again.
+        """
+        payload = self._get(TICKERS + "?fullscan=" + str(int(time.time()) // 3600)).json()
         out: dict[str, dict] = {}
         for entry in payload.values():
             ticker = str(entry.get("ticker") or "").upper()

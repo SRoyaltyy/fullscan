@@ -9,7 +9,7 @@ from src.company_filings.edgar import blocked_reason, relay_target
 from src.company_filings.extract import html_to_text, sections_for, source_points
 from src.company_filings.select import canonical_form, fingerprint, priority, select_filings
 from src.company_filings.store import Store
-from src.company_filings.universe import attach_ciks, group_by_cik, load_universe
+from src.company_filings.universe import attach_ciks, group_by_cik, load_universe, recover_ciks
 
 
 ANNUAL = {
@@ -251,6 +251,43 @@ class ExtractTests(unittest.TestCase):
             self.assertIn("Electron", quoted + sections["1"])
             self.assertGreaterEqual(len(quoted), 80)
 
+    def test_part_heading_beats_the_contents_line(self):
+        raw = textwrap.dedent("""\
+            <html><body>
+            <p>Item 1.</p>
+            <p>Business</p>
+            <p>1</p>
+            <p>Item 1A.</p>
+            <p>Risk Factors</p>
+            <p>8</p>
+            <h2>Part I. Item 1. Business</h2>
+            <p>The company operates the Electron launch vehicle from Wallops, Virginia and sells those launches to civil customers worldwide.</p>
+            <h2>Part I. Item 1A. Risk Factors</h2>
+            <p>A range closure at Wallops would delay Electron missions and the revenue that depends on them for the rest of the year.</p>
+            </body></html>
+        """).encode()
+        text = html_to_text(raw)
+        sections, status = sections_for("10-K", text)
+        self.assertEqual(status, "items")
+        self.assertIn("Electron", sections["1"])
+        self.assertIn("Wallops", sections["1a"])
+        self.assertGreater(len(sections["1"]), 80)
+
+    def test_wrapped_heading_keeps_the_business_section(self):
+        raw = textwrap.dedent("""\
+            <html><body>
+            <p>Item 4. INFORMATION ON THE COMPANY</p>
+            <p>A. History and Development of the Company 11 B. Business Overview 13</p>
+            <p>Item 4. Information</p>
+            <p>on the Company</p>
+            <p>The company operates a digital bank in Brazil and Mexico, and this description is the business section rather than the contents line.</p>
+            </body></html>
+        """).encode()
+        sections, status = sections_for("20-F", html_to_text(raw))
+        self.assertEqual(status, "items")
+        self.assertIn("digital bank", sections["business"])
+        self.assertNotIn("Business Overview 13", sections["business"])
+
     def test_numeric_table_is_not_prose(self):
         raw = (
             b"<html><body><p>Item 1. Business</p><p>"
@@ -330,6 +367,13 @@ class UniverseTests(unittest.TestCase):
         self.assertEqual([row["ticker"] for row in matched], ["CSAN"])
         self.assertEqual(matched[0]["cik"], "0001430162")
         self.assertEqual([row["ticker"] for row in missing], ["GOLD"])
+
+    def test_a_dropped_ticker_keeps_the_cik_already_stored(self):
+        missing = [{"ticker": "QRVO", "name": "Qorvo, Inc.", "market_cap_m": 100}]
+        recovered, still = recover_ciks(missing, lambda ticker: "0001604778" if ticker == "QRVO" else "")
+        self.assertEqual(still, [])
+        self.assertEqual(recovered[0]["cik"], "0001604778")
+        self.assertEqual(recovered[0]["tickers"], ["QRVO"])
 
 
 if __name__ == "__main__":

@@ -10,7 +10,7 @@ import gzip
 from pathlib import Path
 
 from .edgar import Client, EdgarBlocked, EdgarError, archive_url, exhibit_rows
-from .extract import EXHIBIT_CAP, _cap, html_to_text, sections_for, source_points
+from .extract import EXTRACTOR_VERSION, EXHIBIT_CAP, _cap, html_to_text, sections_for, source_points
 from .select import (
     ANNUAL_AMENDMENTS,
     ANNUAL_FORMS,
@@ -139,7 +139,12 @@ def parse_company(company: dict, client: Client, store: Store, force: bool = Fal
         return "no_filing"
     digest = fingerprint(chosen)
     if not force and store.fingerprint(ticker) == digest:
-        return "skip"
+        # A contents-page extract is stored under the same accession list. Read it
+        # again once after the splitter learns the "Part I. Item 1" header.
+        narrative_forms = tuple(STRONG_FORMS | QUARTERLY_FORMS | FOREIGN_FORMS)
+        already = store.extractor(ticker) == EXTRACTOR_VERSION
+        if already or not store.base_is_thin(ticker, narrative_forms):
+            return "skip"
     chosen.sort(key=priority)
     selected_forms = {filing["form"] for filing in chosen}
     if selected_forms & STRONG_FORMS:
@@ -189,7 +194,7 @@ def parse_company(company: dict, client: Client, store: Store, force: bool = Fal
     if not docs or not (kept_forms & required):
         store.mark(company, "error", "filings selected but the annual report could not be read")
         return "error"
-    company = {**company, "fingerprint": digest}
+    company = {**company, "fingerprint": digest, "extractor": EXTRACTOR_VERSION}
     store.replace_company(company, docs)
     return "ok"
 

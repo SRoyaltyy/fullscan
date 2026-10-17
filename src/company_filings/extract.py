@@ -21,14 +21,19 @@ SECTION_CAP = 350_000
 EXHIBIT_CAP = 60_000
 BODY_CAP = 180_000
 MIN_POINT_CHARS = 80
+# Bump when section splitting changes, so a stored contents page is read again.
+EXTRACTOR_VERSION = "2"
 
 _BLOCK = frozenset({
     "p", "div", "tr", "h1", "h2", "h3", "h4", "li", "br", "section",
     "table", "caption", "dt", "dd", "blockquote",
 })
 _DROP_LOCAL = frozenset({"script", "style", "noscript", "svg"})
+# "Part I. Item 1. Business" is the body header in a lot of filings. The
+# contents page is a bare "Item 1." on its own line.
 _ITEM_RE = re.compile(
-    r"(?im)^[ \t]*item[ \t]+(\d{1,2}\.\d{2}|\d{1,2}[a-c]?)[ \t]*[.\-—:]*[ \t]*([^\n]{0,140})"
+    r"(?im)^[ \t]*(?:part[ \t]+(?:i{1,3}|[1-4])[ \t]*[.\-—:]*[ \t]*)?"
+    r"item[ \t]+(\d{1,2}\.\d{2}|\d{1,2}[a-c]?)[ \t]*[.\-—:]*[ \t]*([^\n]{0,140})"
 )
 _PART_RE = re.compile(r"(?im)^[ \t]*part[ \t]+(i{1,3}|1|2)\b")
 _NOTES_RE = re.compile(
@@ -121,11 +126,11 @@ def _annual_sections(text: str) -> dict[str, str]:
     for header, nxt in _spans(headers):
         item = header["item"].lower()
         if item in ANNUAL_ITEMS:
-            sections[item] = text[header["content"]:nxt]
+            _keep_longest(sections, item, text[header["content"]:nxt])
         elif item == "8":
             notes = _notes(text[header["content"]:nxt])
             if notes:
-                sections["notes"] = notes
+                _keep_longest(sections, "notes", notes)
     if sections:
         return sections
     return _title_sections(text)
@@ -138,11 +143,11 @@ def _quarter_sections(text: str) -> dict[str, str]:
         key = f"{header['part']}-{header['item'].lower()}"
         body = text[header["content"]:nxt]
         if key in QUARTER_ITEMS:
-            sections[key] = body
+            _keep_longest(sections, key, body)
         elif key == "1-1":
             notes = _notes(body)
             if notes:
-                sections["notes"] = notes
+                _keep_longest(sections, "notes", notes)
     if sections:
         return sections
     return _title_sections(text)
@@ -156,7 +161,7 @@ def _current_sections(text: str) -> dict[str, str]:
     sections: dict[str, str] = {}
     for header, nxt in _spans(headers):
         if header["item"] in CURRENT_ITEMS:
-            sections[header["item"]] = text[header["content"]:nxt]
+            _keep_longest(sections, header["item"], text[header["content"]:nxt])
     return sections
 
 
@@ -166,9 +171,12 @@ def _title_sections(text: str) -> dict[str, str]:
     for header, nxt in _spans(headers):
         title = header.get("title") or ""
         body = text[header["content"]:nxt]
+        # The rest of a wrapped heading ("Information" / "on the Company") is the
+        # start of the body. Match the rule against both.
+        heading = re.sub(r"\s+", " ", f"{title} {body[:120]}")
         for name, pattern in _TITLE_RULES:
-            if pattern.search(title) and name not in sections and len(body) > 80:
-                sections[name] = body
+            if pattern.search(heading) and len(body) > 80:
+                _keep_longest(sections, name, body)
                 break
     return sections
 
@@ -242,6 +250,12 @@ def _toc_spans(text: str, headers: list[dict]) -> list[tuple[int, int]]:
             cluster = [header]
     close(cluster)
     return spans
+
+
+def _keep_longest(sections: dict[str, str], key: str, body: str) -> None:
+    """The contents page and the body both carry the same item number. Keep the body."""
+    if len(body) > len(sections.get(key, "")):
+        sections[key] = body
 
 
 def _spans(headers: list[dict]) -> list[tuple[dict, int]]:
