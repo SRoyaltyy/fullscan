@@ -218,7 +218,23 @@ def archive_filing(client, objects, cik, filing):
         if previous.get('text_complete'): return previous, True
         raw = gzip.decompress(objects.get(previous['source']['key']))
     else:
-        raw = client.submission(cik, accession)
+        download_key = f'{PREFIX}/{cik}/{accession}/download.json'
+        downloaded = objects.maybe_json(download_key)
+        if downloaded:
+            raw = gzip.decompress(objects.get(downloaded['source']['key']))
+            if sha256(raw) != downloaded['source']['sha256'] or len(raw) != downloaded['source']['byte_count']:
+                raise ValueError('Downloaded original checksum mismatch')
+        else:
+            raw = client.submission(cik, accession)
+    # Preserve the authoritative original even if a new attachment encoding or
+    # document format defeats the derived reader. This is not a completion flag.
+    raw_sha = sha256(raw)
+    raw_key = f'{PREFIX}/{cik}/{accession}/source/{raw_sha}.sgml.gz'
+    source_storage = objects.put(raw_key, gzip.compress(raw, mtime=0))
+    objects.put(f'{PREFIX}/{cik}/{accession}/download.json', json_bytes({
+        'filing': filing, 'retrieved_at': timestamp(),
+        'source': {'key': raw_key, 'sha256': raw_sha, 'byte_count': len(raw)},
+        'source_url': archive_url(cik, accession, accession + '.txt')}))
     files = split_submission(raw)
     primary = PurePosixPath(filing.get('primary') or '').name
     if not primary or primary not in {item['filename'] for item in files}:
@@ -229,9 +245,6 @@ def archive_filing(client, objects, cik, filing):
         texts[document['filename']] = text
         document.update(text_status=text['status'], text_characters=len(text['text']),
                         text_sha256=sha256(text['text'].encode('utf-8')))
-    raw_sha = sha256(raw)
-    raw_key = f'{PREFIX}/{cik}/{accession}/source/{raw_sha}.sgml.gz'
-    source_storage = objects.put(raw_key, gzip.compress(raw, mtime=0))
     texts_raw = json_bytes(texts)
     text_sha = sha256(texts_raw)
     text_key = f'{PREFIX}/{cik}/{accession}/text/{EXTRACTOR_VERSION}/{text_sha}.json.gz'
@@ -281,7 +294,8 @@ def archive_company(company, client, objects):
         except Exception as exc:
             result['failures'].append({'accession': filing['accession'], 'form': filing['form'],
                 'filing_date': filing.get('filing_date'), 'source_url': archive_url(cik, filing['accession'], filing['accession'] + '.txt'),
-                'error_type': type(exc).__name__})
+                'error_type': type(exc).__name__,
+                'error_detail': str(exc)[:500] if isinstance(exc, ValueError) else None})
             if isinstance(exc, EdgarBlocked): break
         result['raw_complete'] = bool(chosen) and result['raw_complete_filings'] == len(chosen) and not result['failures']
         result['text_complete'] = result['raw_complete'] and result['text_complete_filings'] == len(chosen)

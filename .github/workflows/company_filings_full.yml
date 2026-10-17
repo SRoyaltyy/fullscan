@@ -93,6 +93,18 @@ jobs:
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('mode='+mode+'\n')
           PY
       - name: Full-document probes including previously defective issuers
+        # Keep originals across parser fixes, including files not yet readable.
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts?name=company-filings-full-probe&per_page=100" > /tmp/probe-artifacts.json
+          python - <<'PY'
+          import json,os,pathlib
+          rows=[r for r in json.load(open('/tmp/probe-artifacts.json'))['artifacts'] if not r.get('expired') and r.get('workflow_run',{}).get('head_branch')==os.environ['GITHUB_REF_NAME']]
+          if rows:pathlib.Path('/tmp/probe-restore-run').write_text(str(max(rows,key=lambda r:r['created_at'])['workflow_run']['id']))
+          PY
+          if [ -f /tmp/probe-restore-run ]; then gh run download "$(cat /tmp/probe-restore-run)" -n company-filings-full-probe -D data/company_filings_full_probe; fi
+      - name: Archive full-document probes
         run: |
           python scripts/archive_company_filings.py --ticker SUZ --ticker TIGO --ticker CALM --ticker NVO --ticker ASML --ticker RKLB --workers 2 --per-sec 1.5 --output data/company_filings_full_probe
       - uses: actions/upload-artifact@v4

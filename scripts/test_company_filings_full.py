@@ -102,6 +102,17 @@ class FullFilingTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'Primary document absent'):
                 archive_filing(FakeClient(),LocalObjects(d),'0000000001',dict(FILING,primary='missing.htm'))
 
+    def test_failed_reader_preserves_original_and_resume_uses_it(self):
+        with tempfile.TemporaryDirectory() as d:
+            objects=LocalObjects(d);client=FakeClient()
+            with patch('src.company_filings.full_archive.split_submission',side_effect=ValueError('new format')):
+                with self.assertRaisesRegex(ValueError,'new format'):archive_filing(client,objects,'0000000001',FILING)
+            downloaded=objects.maybe_json(f'company-filings/full-v1/0000000001/{ACCESSION}/download.json')
+            self.assertEqual(gzip.decompress(objects.get(downloaded['source']['key'])),client.raw)
+            self.assertIsNone(objects.maybe_json(f'company-filings/full-v1/0000000001/{ACCESSION}/manifest.json'))
+            manifest,_=archive_filing(client,objects,'0000000001',FILING)
+            self.assertTrue(manifest['text_complete']);self.assertEqual(client.calls,1)
+
     def test_resume_detects_corrupt_original(self):
         with tempfile.TemporaryDirectory() as d:
             objects=LocalObjects(d);manifest,_=archive_filing(FakeClient(),objects,'0000000001',FILING)
