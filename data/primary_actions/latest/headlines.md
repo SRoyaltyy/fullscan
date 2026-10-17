@@ -1,6 +1,6 @@
 # Primary-origin action documents
 
-Updated 2026-10-17T14:02:11.101604+00:00. 564 dated documents in the configured 3-day window; 0 newly retained; 583 repeat observations.
+Updated 2026-10-17T16:27:35.668522+00:00. 552 dated documents in the configured 3-day window; 0 newly retained; 577 repeat observations.
 Source health: 123/123 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
@@ -583,23 +583,12 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [HHS Issues Final Demand to Medical Organizations to Answer for Sex-Rejecting Procedures for Minors](https://www.hhs.gov/press-room/hhs-demands-answers-medical-organizations-sex-rejecting-procedures-minors.html) — Health and Human Services; 2026-10-14T17:48:05+00:00
 - [H. Rept. 119-1](https://www.govinfo.gov/app/details/CRPT-119hrpt1) — Congressional Reports; 2026-10-14T17:19:00+00:00
 - [HHS Declares Public Health Emergencies for Florida, Alabama following Hurricane Isaias](https://www.hhs.gov/press-room/hhs-declares-public-health-emergencies-florida-alabama-hurricane-isaias.html) — Health and Human Services; 2026-10-14T16:30:00+00:00
-- [Commission awards six projects making lasting contributions for Europe's cohesion at REGIOSTARS ceremony *](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2167) — European Commission press and decisions; 2026-10-14T16:10:29+00:00
-- [Comptroller Gould Discusses Findings of Debanking Report](https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-91.html) — Office of the Comptroller of the Currency; 2026-10-14T16:00:00+00:00
-- [Rare Disease Framework](http://www.fda.gov/industry/fda-rare-disease-innovation-hub/rare-disease-framework) — Food and Drug Administration — What's New: Drugs; 2026-10-14T15:53:13+00:00
-- [FDA Launches the Rare Disease Framework Initiative to Develop a Holistic, Fit-For-Purpose Framework for Rare Disease Drug Development](http://www.fda.gov/news-events/press-announcements/fda-launches-rare-disease-framework-initiative-develop-holistic-fit-purpose-framework-rare-disease) — Food and Drug Administration — Press Releases; 2026-10-14T15:50:52+00:00
-- [Par Health Issues Voluntary Nationwide Recall of Argatroban Injection Due to the Presence of Particulate Matter](http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/par-health-issues-voluntary-nationwide-recall-argatroban-injection-due-presence-particulate-matter) — Food and Drug Administration — What's New: Drugs; 2026-10-14T15:26:03+00:00
-- [Oncology (Cancer)/Hematologic Malignancies Approval Notifications](http://www.fda.gov/drugs/resources-information-approved-drugs/oncology-cancerhematologic-malignancies-approval-notifications) — Food and Drug Administration — What's New: Drugs; 2026-10-14T15:16:29+00:00
-- [FDA approves an expanded indication for nogapendekin alfa inbakicept-pmln for BCG-unresponsive non-muscle invasive bladder cancer](http://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-expanded-indication-nogapendekin-alfa-inbakicept-pmln-bcg-unresponsive-non-muscle) — Food and Drug Administration — What's New: Drugs; 2026-10-14T15:15:50+00:00
-- [FDA Approves First Treatment for Certain People With BCG-Unresponsive Bladder Cancer](http://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-certain-people-bcg-unresponsive-bladder-cancer) — Food and Drug Administration — Press Releases; 2026-10-14T15:14:51+00:00
-- [FDA Launches the Rare Disease Framework Initiative to Develop a Holistic, Fit-For-Purpose Framework for Rare Disease Drug Development](https://www.hhs.gov/press-room/fda-launches-rare-disease-framework-drug-development.html) — Health and Human Services; 2026-10-14T15:08:20+00:00
-- [​The EBA classifies USDC as the first significant e-money token in the European Union](https://www.eba.europa.eu/publications-and-media/press-releases/eba-classifies-usdc-first-significant-e-money-token-european-union) — European Banking Authority; 2026-10-14T14:36:49+00:00
-- [SEC Small Business Advisory Committee to Discuss IPO Modernization and Regulation Crowdfunding](https://www.sec.gov/newsroom/press-releases/2026-105-sec-small-business-advisory-committee-discuss-ipo-modernization-regulation-crowdfunding) — Securities and Exchange Commission; 2026-10-14T14:30:47+00:00
-- [What’s New for Biologics](http://www.fda.gov/vaccines-blood-biologics/news-events-biologics/whats-new-biologics) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-14T14:06:29+00:00
 
 ## Source failures and coverage warnings
 
 - hk-hkma-public-press: ok; stale_feed_outside_requested_window
 - us-govinfo-bills-enr: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
+- us-sec-8940dd7737: ok; stale_feed_outside_requested_window
 - us-sec-2476f14c28: ok; stale_feed_outside_requested_window
 - us-ftc-ebb4359fb7: ok; stale_feed_outside_requested_window
 - us-ftc-69601f2e49: ok; stale_feed_outside_requested_window
@@ -613,11 +602,12 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fed-eea49fa482: ok; stale_feed_outside_requested_window
 - us-fed-8d9ba6faea: ok; stale_feed_outside_requested_window
 - us-fdic-index: ok; stale_feed_outside_requested_window
+- us-occ-6f63126133: ok; stale_feed_outside_requested_window
 - us-fincen-index: ok; stale_feed_outside_requested_window
 - us-cftc-fda5c3631d: ok; stale_feed_outside_requested_window
-- us-fda-1a1096082f: unchanged; stale_feed_outside_requested_window
-- us-fda-2d9c4fc2f9: ok; stale_feed_outside_requested_window
-- us-fda-3eaddf14de: unchanged; stale_feed_outside_requested_window
+- us-fda-1a1096082f: ok; stale_feed_outside_requested_window
+- us-fda-2d9c4fc2f9: unchanged; stale_feed_outside_requested_window
+- us-fda-3eaddf14de: ok; stale_feed_outside_requested_window
 - us-fsis-85c9542fd5: ok; stale_feed_outside_requested_window
 - us-fcc-1ad902e468: unchanged; stale_feed_outside_requested_window
 - us-nlrb-3db5e72bf9: ok; stale_feed_outside_requested_window
@@ -626,14 +616,15 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fhfa-index: unchanged; stale_feed_outside_requested_window
 - us-ca-oal-c1209cfd66: unchanged; stale_feed_outside_requested_window
 - eu-ecb-fb5fd59aed: ok; stale_feed_outside_requested_window
+- eu-eba-60bdc59843: ok; stale_feed_outside_requested_window
 - ca-gazette-2d47daa483: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-boc-4aa19b2183: unchanged; stale_feed_outside_requested_window
 - ca-boc-1f26bb2971: unchanged; stale_feed_outside_requested_window
-- ca-boc-4192a605ae: ok; stale_feed_outside_requested_window
+- ca-boc-4192a605ae: unchanged; stale_feed_outside_requested_window
 - ca-boc-5cc0603f1f: unchanged; stale_feed_outside_requested_window
-- ca-boc-1c9979e6ac: ok; stale_feed_outside_requested_window
-- ca-boc-e24c58f2d0: ok; stale_feed_outside_requested_window
-- ca-boc-cffefa81f7: ok; stale_feed_outside_requested_window
+- ca-boc-1c9979e6ac: unchanged; stale_feed_outside_requested_window
+- ca-boc-e24c58f2d0: unchanged; stale_feed_outside_requested_window
+- ca-boc-cffefa81f7: unchanged; stale_feed_outside_requested_window
 - ca-boc-49364b93d8: unchanged; stale_feed_outside_requested_window
 - au-rba-9e35f5f8d1: unchanged; stale_feed_outside_requested_window
 - au-rba-5ba995e001: unchanged; stale_feed_outside_requested_window

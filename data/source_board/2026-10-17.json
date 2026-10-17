@@ -1,6 +1,6 @@
 {
  "date": "2026-10-17",
- "generated_at": "2026-10-17T14:02:32.283747+00:00",
+ "generated_at": "2026-10-17T16:27:58.465043+00:00",
  "catalog": {
   "generated_at": "2026-10-17T13:03:20.405263+00:00",
   "channels": 365,
@@ -34,20 +34,20 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-17T14:02:11.101604+00:00",
+  "generated_at": "2026-10-17T16:27:35.668522+00:00",
   "enabled_sources": 123,
   "sources_ok": 123,
   "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1750,
-   "old": 1166,
-   "future": 1,
+   "observed": 1670,
+   "old": 1093,
+   "future": 0,
    "undated": 227,
    "new": 0,
-   "duplicates": 583
+   "duplicates": 577
   },
-  "current_dated_documents": 564
+  "current_dated_documents": 552
  },
  "failures": [],
  "channels": [
@@ -1689,19 +1689,9 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "SEC Small Business Advisory Committee to Discuss IPO Modernization and Regulation Crowdfunding",
-      "url": "https://www.sec.gov/newsroom/press-releases/2026-105-sec-small-business-advisory-committee-discuss-ipo-modernization-regulation-crowdfunding",
-      "published_at": "2026-10-14T14:30:47+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -4055,19 +4045,9 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Comptroller Gould Discusses Findings of Debanking Report",
-      "url": "https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-91.html",
-      "published_at": "2026-10-14T16:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -4475,28 +4455,9 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "FDA Approves First Treatment for Certain People With BCG-Unresponsive Bladder Cancer",
-      "url": "http://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-certain-people-bcg-unresponsive-bladder-cancer",
-      "published_at": "2026-10-14T15:14:51+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "FDA Launches the Rare Disease Framework Initiative to Develop a Holistic, Fit-For-Purpose Framework for Rare Disease Drug Development",
-      "url": "http://www.fda.gov/news-events/press-announcements/fda-launches-rare-disease-framework-initiative-develop-holistic-fit-purpose-framework-rare-disease",
-      "published_at": "2026-10-14T15:50:52+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -4573,7 +4534,7 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 33,
+    "window": 27,
     "by_class": {},
     "items": [
      {
@@ -4616,42 +4577,6 @@
       "title": "Advancing Generic Drug Development: Leveraging Model-Integrated Evidence (MIE) in the Development & Approval of Generic Drugs - 08/27/2026",
       "url": "http://www.fda.gov/drugs/news-events-human-drugs/advancing-generic-drug-development-leveraging-model-integrated-evidence-mie-development-approval",
       "published_at": "2026-10-15T13:41:53+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Par Health Issues Voluntary Nationwide Recall of Argatroban Injection Due to the Presence of Particulate Matter",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/par-health-issues-voluntary-nationwide-recall-argatroban-injection-due-presence-particulate-matter",
-      "published_at": "2026-10-14T15:26:03+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Oncology (Cancer)/Hematologic Malignancies Approval Notifications",
-      "url": "http://www.fda.gov/drugs/resources-information-approved-drugs/oncology-cancerhematologic-malignancies-approval-notifications",
-      "published_at": "2026-10-14T15:16:29+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "FDA approves an expanded indication for nogapendekin alfa inbakicept-pmln for BCG-unresponsive non-muscle invasive bladder cancer",
-      "url": "http://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-expanded-indication-nogapendekin-alfa-inbakicept-pmln-bcg-unresponsive-non-muscle",
-      "published_at": "2026-10-14T15:15:50+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "FDA Approves First Treatment for Certain People With BCG-Unresponsive Bladder Cancer",
-      "url": "http://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-certain-people-bcg-unresponsive-bladder-cancer",
-      "published_at": "2026-10-14T15:14:51+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -4845,6 +4770,15 @@
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "watch"
+     },
+     {
+      "title": "FDA Rare Disease Innovation Hub",
+      "url": "http://www.fda.gov/industry/medical-products-rare-diseases-and-conditions/fda-rare-disease-innovation-hub",
+      "published_at": "2026-10-14T19:45:24+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "watch"
      }
     ]
    }
@@ -4869,7 +4803,7 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 16,
+    "window": 13,
     "by_class": {},
     "items": [
      {
@@ -4984,33 +4918,6 @@
       "title": "Clinical Investigator Inspection List T-Z",
       "url": "http://www.fda.gov/vaccines-blood-biologics/compliance-actions-biologics/clinical-investigator-inspection-list-t-z",
       "published_at": "2026-10-14T18:00:04+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Rare Disease Framework",
-      "url": "http://www.fda.gov/industry/fda-rare-disease-innovation-hub/rare-disease-framework",
-      "published_at": "2026-10-14T15:53:13+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "FDA Launches the Rare Disease Framework Initiative to Develop a Holistic, Fit-For-Purpose Framework for Rare Disease Drug Development",
-      "url": "http://www.fda.gov/news-events/press-announcements/fda-launches-rare-disease-framework-initiative-develop-holistic-fit-purpose-framework-rare-disease",
-      "published_at": "2026-10-14T15:50:52+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "What’s New for Biologics",
-      "url": "http://www.fda.gov/vaccines-blood-biologics/news-events-biologics/whats-new-biologics",
-      "published_at": "2026-10-14T14:06:29+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -5191,7 +5098,7 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 5,
+    "window": 4,
     "by_class": {},
     "items": [
      {
@@ -5225,15 +5132,6 @@
       "title": "HHS Declares Public Health Emergencies for Florida, Alabama following Hurricane Isaias",
       "url": "https://www.hhs.gov/press-room/hhs-declares-public-health-emergencies-florida-alabama-hurricane-isaias.html",
       "published_at": "2026-10-14T16:30:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "FDA Launches the Rare Disease Framework Initiative to Develop a Holistic, Fit-For-Purpose Framework for Rare Disease Drug Development",
-      "url": "https://www.hhs.gov/press-room/fda-launches-rare-disease-framework-drug-development.html",
-      "published_at": "2026-10-14T15:08:20+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -7189,7 +7087,7 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 18,
+    "window": 17,
     "by_class": {},
     "items": [
      {
@@ -7340,15 +7238,6 @@
       "title": "Commissioner Roswall's speech at the Inaugural Convening of the Women Public Sector Climate Leaders Network",
       "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2168",
       "published_at": "2026-10-14T20:24:59+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Commission awards six projects making lasting contributions for Europe's cohesion at REGIOSTARS ceremony *",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2167",
-      "published_at": "2026-10-14T16:10:29+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -9266,19 +9155,9 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "​The EBA classifies USDC as the first significant e-money token in the European Union",
-      "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-classifies-usdc-first-significant-e-money-token-european-union",
-      "published_at": "2026-10-14T14:36:49+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     }
-    ]
+    "items": []
    }
   },
   {
