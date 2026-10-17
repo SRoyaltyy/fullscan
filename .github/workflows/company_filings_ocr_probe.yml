@@ -32,20 +32,23 @@ jobs:
           python-version: '3.12'
       - run: pip install -q requests lxml PyMuPDF
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr
-      - name: Archive Euronet originals and read the entire image-only exhibit
-        run: python scripts/archive_company_filings.py --ticker EEFT --workers 1 --per-sec 1 --storage local --output data/filings_ocr_probe
-      - name: Confirm every one of the 75 slide images was read
+      - name: Inspect the newly reported Franco-Nevada PDF text gap
+        continue-on-error: true
+        run: python scripts/archive_company_filings.py --ticker FNV --workers 1 --per-sec 1 --storage local --output data/filings_ocr_probe
+      - name: Report every unreadable PDF page and preserve the exact PDF
         run: |
           python - <<'PY'
-          import json
-          from src.company_filings.full_archive import LocalObjects,read_filing
-          manifest,texts=read_filing(LocalObjects('data/filings_ocr_probe/objects'),'0001029199','0001554855-26-001090')
-          exhibit=texts['ex991_1.htm']
-          assert manifest['raw_complete'] and manifest['text_complete']
-          assert len(exhibit['images'])==75
-          assert all(p['status']=='complete' for p in exhibit['images'])
-          assert sum(p['characters'] for p in exhibit['images'])>1000
-          print(json.dumps({'slides':len(exhibit['images']),'ocr_characters':sum(p['characters'] for p in exhibit['images']),'source_sha256':manifest['source']['sha256'],'truncated':manifest['truncated']}))
+          import json,pathlib
+          from src.company_filings.full_archive import LocalObjects,read_filing,read_original
+          objects=LocalObjects('data/filings_ocr_probe/objects')
+          cik,accession,filename='0001456346','0001104659-26-032144','fnv-20251231xex99d1.pdf'
+          manifest,texts=read_filing(objects,cik,accession)
+          exhibit=texts[filename]
+          assert manifest['raw_complete'] and not manifest['truncated']
+          pathlib.Path('data/filings_ocr_probe/'+filename).write_bytes(read_original(objects,cik,accession,filename))
+          pathlib.Path('data/filings_ocr_probe/pdf-text.json').write_text(json.dumps(exhibit))
+          print(json.dumps({**{k:v for k,v in exhibit.items() if k!='text'},'characters':len(exhibit['text']),'source_sha256':manifest['source']['sha256'],'truncated':manifest['truncated']}))
+          assert exhibit['status']=='complete', 'PDF requires a reader repair; complete original preserved'
           PY
       - uses: actions/upload-artifact@v4
         if: always()
