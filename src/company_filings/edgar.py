@@ -141,9 +141,12 @@ class Client:
     def document(self, cik: str, accession: str, filename: str) -> bytes:
         url = archive_url(cik, accession, filename)
         response = self._get(url)
-        if len(response.content) > MAX_DOCUMENT_BYTES:
-            raise EdgarError(f"document exceeds {MAX_DOCUMENT_BYTES} bytes: {url}")
-        return response.content
+        # The business description is at the front. A 20-F with inline exhibits can
+        # be far larger than this; keep the front instead of dropping the company.
+        raw = response.content
+        if len(raw) > MAX_DOCUMENT_BYTES:
+            raw = raw[:MAX_DOCUMENT_BYTES]
+        return raw
 
     def index(self, cik: str, accession: str) -> dict:
         url = archive_url(cik, accession, "index.json")

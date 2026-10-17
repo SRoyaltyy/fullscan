@@ -38,6 +38,7 @@ jobs:
             /src
             /scripts/parse_company_filings.py
             /scripts/test_company_filings.py
+            /scripts/explain_filings.py
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -48,8 +49,11 @@ jobs:
         run: test -n "$PRIMARY_ACTION_RELAY_URL"
       - name: Parse one filing through the relay
         run: python scripts/parse_company_filings.py --ticker RKLB --workers 1 --per-sec 2 --db data/company_filings/probe.sqlite
+      - name: Explain tickers the universe run did not store
+        run: python scripts/explain_filings.py
 
   parse:
+    if: false
     needs: probe
     runs-on: ubuntu-latest
     timeout-minutes: 360
