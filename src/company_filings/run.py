@@ -14,6 +14,7 @@ from .extract import EXHIBIT_CAP, _cap, html_to_text, sections_for, source_point
 from .select import (
     ANNUAL_AMENDMENTS,
     ANNUAL_FORMS,
+    FOREIGN_FORMS,
     FUND_ANNUAL_AMENDMENTS,
     FUND_ANNUAL_FORMS,
     QUARTERLY_FORMS,
@@ -141,14 +142,19 @@ def parse_company(company: dict, client: Client, store: Store, force: bool = Fal
         return "skip"
     chosen.sort(key=priority)
     selected_forms = {filing["form"] for filing in chosen}
-    quarter_is_base = not (selected_forms & STRONG_FORMS)
+    if selected_forms & STRONG_FORMS:
+        required = STRONG_FORMS
+    elif selected_forms & QUARTERLY_FORMS:
+        required = QUARTERLY_FORMS
+    else:
+        required = FOREIGN_FORMS
     docs = []
     other_bytes = 0
     for filing in chosen:
         if not filing.get("primary") or not filing.get("accession"):
             continue
         form = filing["form"]
-        protected = form in STRONG_FORMS or (quarter_is_base and form in QUARTERLY_FORMS)
+        protected = form in required
         try:
             raw = client.document(cik, filing["accession"], filing["primary"])
         except EdgarBlocked:
@@ -180,7 +186,6 @@ def parse_company(company: dict, client: Client, store: Store, force: bool = Fal
         if not protected:
             other_bytes += size
     kept_forms = {doc["form"] for doc in docs}
-    required = QUARTERLY_FORMS if quarter_is_base else STRONG_FORMS
     if not docs or not (kept_forms & required):
         store.mark(company, "error", "filings selected but the annual report could not be read")
         return "error"

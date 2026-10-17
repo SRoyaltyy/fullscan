@@ -16,9 +16,13 @@ ANNUAL_AMENDMENTS = frozenset({"10-K/A", "20-F/A", "40-F/A"})
 QUARTERLY_FORMS = frozenset({"10-Q", "10-Q/A"})
 # S-1 and F-1 are the US and foreign IPO filings. F-10 is the Canadian
 # long-form prospectus. 10-12B is the spinoff registration. N-2 is the
-# closed-end fund registration.
-REGISTRATION_FORMS = frozenset({"S-1", "F-1", "F-10", "10-12B", "N-2"})
-REGISTRATION_AMENDMENTS = frozenset({"S-1/A", "F-1/A", "F-10/A", "10-12B/A", "N-2/A"})
+# closed-end fund registration. S-4 and F-4 are the merger registrations
+# that carry the business description when a company has no annual yet.
+REGISTRATION_FORMS = frozenset({"S-1", "F-1", "F-10", "10-12B", "N-2", "S-4", "F-4"})
+REGISTRATION_AMENDMENTS = frozenset({"S-1/A", "F-1/A", "F-10/A", "10-12B/A", "N-2/A", "S-4/A", "F-4/A"})
+# A foreign issuer that has not filed an annual report yet reports through 6-Ks.
+FOREIGN_FORMS = frozenset({"6-K", "6-K/A"})
+FOREIGN_CAP = 8
 # Shareholder reports stand in for the annual report of a registered fund.
 FUND_ANNUAL_FORMS = frozenset({"N-CSR", "N-CSRS"})
 FUND_ANNUAL_AMENDMENTS = frozenset({"N-CSR/A", "N-CSRS/A"})
@@ -79,6 +83,8 @@ def canonical_form(form: str) -> str:
             mapped = "10-K"
         elif base.startswith("10-QT"):
             mapped = "10-Q"
+        elif base.startswith("8-K"):
+            mapped = "8-K"
         else:
             return text
     if amendment:
@@ -178,7 +184,11 @@ def select_filings(rows: list[dict]) -> list[dict]:
         return _with_later_reports(
             ordered, [fund], fund.get("filing_date") or "", fund.get("report_date") or "", FUND_ANNUAL_AMENDMENTS,
         )
-    return _registration_or_quarters(ordered)
+    chosen = _registration_or_quarters(ordered)
+    if chosen:
+        return chosen
+    foreign = [row for row in ordered if row.get("form") in FOREIGN_FORMS]
+    return foreign[:FOREIGN_CAP]
 
 
 def _registration_or_quarters(ordered: list[dict]) -> list[dict]:
@@ -228,7 +238,12 @@ def fingerprint(rows: list[dict]) -> str:
 
 
 def needs_exhibits(filing: dict) -> bool:
-    """Earnings releases and material agreements live in exhibits, not the 8-K shell."""
+    """Earnings releases and material agreements live in exhibits, not the cover page.
+
+    A 6-K is usually a cover sheet. The press release is an EX-99 exhibit.
+    """
+    if filing.get("form") in FOREIGN_FORMS:
+        return True
     if filing.get("form") not in CURRENT_FORMS:
         return False
     items = parse_items(filing.get("items") or "")

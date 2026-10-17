@@ -166,6 +166,56 @@ class SelectTests(unittest.TestCase):
         self.assertEqual([row["accession"] for row in chosen], [report["accession"]])
         self.assertEqual(chosen[0]["form"], "N-CSRS")
 
+    def test_merger_registration_keeps_the_combination_report(self):
+        registration = dict(ANNUAL, form="S-4", accession="0001-26-000080", filing_date="2026-06-12")
+        amendment = dict(registration, form="S-4/A", accession="0001-26-000081", filing_date="2026-07-07")
+        combination = {
+            "form": "8-K12B", "accession": "0001-26-000082", "filing_date": "2026-08-24",
+            "report_date": "", "primary": "k.htm", "description": "8-K12B", "items": "1.01,2.01,9.01",
+        }
+        officer = dict(OFFICER, filing_date="2026-08-28", accession="0001-26-000084")
+        foreign = {
+            "form": "6-K", "accession": "0001-26-000083", "filing_date": "2026-09-01",
+            "report_date": "", "primary": "k.htm", "description": "6-K", "items": "",
+        }
+        with_annual = select_filings([registration, amendment, combination, officer, foreign, ANNUAL])
+        annual_forms = {row["accession"]: row["form"] for row in with_annual}
+        self.assertIn(ANNUAL["accession"], annual_forms)
+        self.assertNotIn(registration["accession"], annual_forms)
+        self.assertNotIn(foreign["accession"], annual_forms)
+        self.assertEqual(annual_forms[combination["accession"]], "8-K")
+        chosen = select_filings([registration, amendment, combination, officer, foreign])
+        forms = {row["accession"]: row["form"] for row in chosen}
+        self.assertEqual(forms[registration["accession"]], "S-4")
+        self.assertEqual(forms[amendment["accession"]], "S-4/A")
+        self.assertEqual(forms[combination["accession"]], "8-K")
+        self.assertNotIn(officer["accession"], forms)
+        self.assertNotIn(foreign["accession"], forms)
+
+    def test_six_k_is_kept_only_when_the_issuer_has_nothing_else(self):
+        reports = []
+        for month in range(1, 10):
+            reports.append({
+                "form": "6-K",
+                "accession": f"0001-26-00010{month}",
+                "filing_date": f"2026-{month:02d}-15",
+                "report_date": "",
+                "primary": "k.htm",
+                "description": "6-K",
+                "items": "",
+            })
+        exhibit_only = {
+            "form": "8-K12B", "accession": "0001-26-000199", "filing_date": "2026-07-20",
+            "report_date": "", "primary": "k.htm", "description": "8-K12B", "items": "9.01",
+        }
+        chosen = select_filings(reports + [exhibit_only])
+        accessions = {row["accession"] for row in chosen}
+        self.assertEqual(len(chosen), 8)
+        self.assertNotIn(reports[0]["accession"], accessions)
+        self.assertIn(reports[-1]["accession"], accessions)
+        self.assertNotIn(exhibit_only["accession"], accessions)
+        self.assertTrue(all(row["form"] == "6-K" for row in chosen))
+
     def test_fund_registration_when_there_is_no_report(self):
         registration = dict(ANNUAL, form="N-2", accession="0001-26-000070", filing_date="2026-01-15")
         amendment = dict(registration, form="N-2/A", accession="0001-26-000071", filing_date="2026-02-01")
