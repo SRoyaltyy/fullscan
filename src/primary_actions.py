@@ -245,14 +245,23 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
             if adapter=='html_index' and not rows:
                 # A 200 page with zero selector matches is usually a JS-shell (client-rendered
                 # listing) served to a bot-grade client; the edge relay cannot fix that. Render
-                # once through the tier-3 headless reader before declaring the selector empty.
-                try:
-                    rendered=jina_get(url,timeout=20)
-                    if rendered and rendered[0]==200:
-                        rendered_rows=index_rows(rendered[1],source)
-                        if rendered_rows:
-                            rows=rendered_rows;warnings.append('listing_rendered_via_tier3_reader');response_headers=rendered[2];resolved=rendered[3]
-                except Exception:pass
+                # through the tier-3 headless reader (one retry — the free reader tier is
+                # rate-limited and heavy JS pages sometimes need a second pass) before
+                # declaring the selector empty.
+                for attempt in range(2):
+                    try:
+                        rendered=jina_get(url,timeout=20)
+                        if rendered and rendered[0]==200:
+                            rendered_rows=index_rows(rendered[1],source)
+                            if rendered_rows:
+                                rows=rendered_rows;warnings.append('listing_rendered_via_tier3_reader');response_headers=rendered[2];resolved=rendered[3]
+                                break
+                            warnings.append('tier3_reader_zero_matches')
+                        else:
+                            warnings.append('tier3_reader_status_'+(str(rendered[0]) if rendered else 'error'))
+                    except Exception as exc:
+                        warnings.append('tier3_reader_error:'+type(exc).__name__)
+                    if attempt==0:time.sleep(20)
             dates=[date(r.get('published_at')) for r in rows if date(r.get('published_at'))]
             if adapter=='rss' and len(rows)>=source.get('saturation_limit',100) and dates and min(dates)>=start:warnings.append('feed_at_capacity_in_requested_window; snapshots may miss overflow')
             url=None
