@@ -1,5 +1,2285 @@
 [
   {
+    "title": "16-021 - USA v. Thompson et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ared-4_16-cr-00021/context",
+    "native_id": "USCOURTS-ared-4_16-cr-00021",
+    "published_at": "2026-10-17T00:27:05+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:27:05 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Arkansas",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ared",
+    "n": 574,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ared"
+    ]
+  },
+  {
+    "title": "26-11448 - Tillery et al v. Samsung Electronics America, Inc.",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-11448/context",
+    "native_id": "USCOURTS-cand-3_26-cv-11448",
+    "published_at": "2026-10-16T20:47:28+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:47:28 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Northern District of California",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-cand",
+    "n": 629,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-cand"
+    ]
+  },
+  {
+    "title": "23-3084 - In re: Uber Technologies, Inc., Passenger Sexual Assault Litigation",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-cand-3_23-md-03084/context",
+    "native_id": "USCOURTS-cand-3_23-md-03084",
+    "published_at": "2026-10-16T21:14:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 21:14:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Northern District of California",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-cand",
+    "n": 653,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-cand"
+    ]
+  },
+  {
+    "title": "15-1191 - Mason v. State of Delaware (J.P. Court) et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ded-1_15-cv-01191/context",
+    "native_id": "USCOURTS-ded-1_15-cv-01191",
+    "published_at": "2026-10-17T00:41:07+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:41:07 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Delaware",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ded",
+    "n": 758,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ded"
+    ]
+  },
+  {
+    "title": "25-2136 - Scott Dillion v. Dow Chemical Company et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-02136/context",
+    "native_id": "USCOURTS-laed-2_25-cv-02136",
+    "published_at": "2026-10-16T20:24:04+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:24:04 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 837,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "17-044 - USA v. Shawley",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_17-cr-00044/context",
+    "native_id": "USCOURTS-laed-2_17-cr-00044",
+    "published_at": "2026-10-16T20:24:03+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:24:03 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 838,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "26-721 - Merchants Bonding Company Mutual v. Marsh Buggies, Inc. et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00721/context",
+    "native_id": "USCOURTS-laed-2_26-cv-00721",
+    "published_at": "2026-10-16T20:24:03+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:24:03 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 839,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "24-2773 - Apollo Holding Company, LLC et al v. Cliff Roe, et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cv-02773/context",
+    "native_id": "USCOURTS-laed-2_24-cv-02773",
+    "published_at": "2026-10-16T20:29:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:29:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 840,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "25-2577 - Moore v. Steiner et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-02577/context",
+    "native_id": "USCOURTS-laed-2_25-cv-02577",
+    "published_at": "2026-10-16T20:26:01+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:26:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 841,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "26-2156 - Kerbow et al v. Washington Parish School Board et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-02156/context",
+    "native_id": "USCOURTS-laed-2_26-cv-02156",
+    "published_at": "2026-10-16T20:26:01+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:26:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 842,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "23-197 - USA v. Howard",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_23-cr-00197/context",
+    "native_id": "USCOURTS-laed-2_23-cr-00197",
+    "published_at": "2026-10-16T20:24:04+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:24:04 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 843,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "24-012 - USA v. STUKES, ET AL.",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cr-00012/context",
+    "native_id": "USCOURTS-laed-2_24-cr-00012",
+    "published_at": "2026-10-16T20:24:04+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:24:04 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 844,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "21-084 - USA v. Brown, et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_21-cr-00084/context",
+    "native_id": "USCOURTS-laed-2_21-cr-00084",
+    "published_at": "2026-10-16T20:26:01+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:26:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 845,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "22-802 - Koran v. BP Exploration & Production, Inc. et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_22-cv-00802/context",
+    "native_id": "USCOURTS-laed-2_22-cv-00802",
+    "published_at": "2026-10-16T20:28:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:28:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 846,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "26-103 - USA v. Joseph",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cr-00103/context",
+    "native_id": "USCOURTS-laed-2_26-cr-00103",
+    "published_at": "2026-10-16T20:24:04+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:24:04 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 847,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "26-1846 - Pierce v. Rooms To Go Louisiana Corp. et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-01846/context",
+    "native_id": "USCOURTS-laed-2_26-cv-01846",
+    "published_at": "2026-10-16T20:28:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:28:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 848,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "25-2042 - Price v. Evolve Bancorp Inc. et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-02042/context",
+    "native_id": "USCOURTS-laed-2_25-cv-02042",
+    "published_at": "2026-10-16T20:28:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:28:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 849,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "26-694 - Crossland v. Bickham et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00694/context",
+    "native_id": "USCOURTS-laed-2_26-cv-00694",
+    "published_at": "2026-10-16T20:28:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:28:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 850,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "25-1156 - Hamilton v. Mastec North America, Inc., et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-01156/context",
+    "native_id": "USCOURTS-laed-2_25-cv-01156",
+    "published_at": "2026-10-16T20:28:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:28:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 851,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "16-063 - USA v. Pizarro et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_16-cr-00063/context",
+    "native_id": "USCOURTS-laed-2_16-cr-00063",
+    "published_at": "2026-10-16T20:28:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:28:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 852,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "23-931 - BlueTeam Roofing, LLC v. Vincent Piazza, Jr. and Sons Seafood, Inc.",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_23-cv-00931/context",
+    "native_id": "USCOURTS-laed-2_23-cv-00931",
+    "published_at": "2026-10-16T20:24:04+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:24:04 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 853,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "17-104 - USA v. Wells et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_17-cr-00104/context",
+    "native_id": "USCOURTS-laed-2_17-cr-00104",
+    "published_at": "2026-10-16T20:24:04+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:24:04 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 854,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "23-7144 - Joiner v. Lewis et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_23-cv-07144/context",
+    "native_id": "USCOURTS-laed-2_23-cv-07144",
+    "published_at": "2026-10-16T20:26:01+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:26:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 855,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "26-434 - Lightfoot et al v. Progressive Direct Insurance Company et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00434/context",
+    "native_id": "USCOURTS-laed-2_26-cv-00434",
+    "published_at": "2026-10-16T20:24:04+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:24:04 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 856,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "25-1248 - Sherrod et al v. Nexion Health at Marrero, Inc., et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-01248/context",
+    "native_id": "USCOURTS-laed-2_25-cv-01248",
+    "published_at": "2026-10-16T20:26:01+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:26:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 857,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "24-2759 - Shorts et al v. St. Charles Parish Sheriff's Office et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cv-02759/context",
+    "native_id": "USCOURTS-laed-2_24-cv-02759",
+    "published_at": "2026-10-16T20:26:01+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:26:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 858,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "13-1101 - Starters - Direct Purchaser Actions",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-mied-2_13-cv-01101/context",
+    "native_id": "USCOURTS-mied-2_13-cv-01101",
+    "published_at": "2026-10-16T21:46:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 21:46:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Michigan",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-mied",
+    "n": 885,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-mied"
+    ]
+  },
+  {
+    "title": "92-81127 - United States of America v. Brown et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-mied-2_92-cr-81127/context",
+    "native_id": "USCOURTS-mied-2_92-cr-81127",
+    "published_at": "2026-10-16T22:45:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:45:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Michigan",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-mied",
+    "n": 886,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-mied"
+    ]
+  },
+  {
+    "title": "04-3226 - Campbell v. Clarke",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-4_04-cv-03226/context",
+    "native_id": "USCOURTS-ned-4_04-cv-03226",
+    "published_at": "2026-10-16T22:18:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:18:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Nebraska",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ned",
+    "n": 923,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ned"
+    ]
+  },
+  {
+    "title": "09-3112 - USA v. Avalos Banderas",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-4_09-cr-03112/context",
+    "native_id": "USCOURTS-ned-4_09-cr-03112",
+    "published_at": "2026-10-16T22:38:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:38:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Nebraska",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ned",
+    "n": 924,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ned"
+    ]
+  },
+  {
+    "title": "12-3101 - USA v. Mitchell",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-4_12-cr-03101/context",
+    "native_id": "USCOURTS-ned-4_12-cr-03101",
+    "published_at": "2026-10-16T22:48:12+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:48:12 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Nebraska",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ned",
+    "n": 925,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ned"
+    ]
+  },
+  {
+    "title": "12-335 - USA v. Walker",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-8_12-cr-00335/context",
+    "native_id": "USCOURTS-ned-8_12-cr-00335",
+    "published_at": "2026-10-16T22:41:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:41:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Nebraska",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ned",
+    "n": 926,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ned"
+    ]
+  },
+  {
+    "title": "02-3220 - USA v. Lamb",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-4_02-cr-03220/context",
+    "native_id": "USCOURTS-ned-4_02-cr-03220",
+    "published_at": "2026-10-16T22:42:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:42:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Nebraska",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ned",
+    "n": 927,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ned"
+    ]
+  },
+  {
+    "title": "12-3057 - USA v. Brown et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-4_12-cr-03057/context",
+    "native_id": "USCOURTS-ned-4_12-cr-03057",
+    "published_at": "2026-10-16T22:50:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:50:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Nebraska",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ned",
+    "n": 928,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ned"
+    ]
+  },
+  {
+    "title": "10-357 - USA v. Nieto",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-8_10-cr-00357/context",
+    "native_id": "USCOURTS-ned-8_10-cr-00357",
+    "published_at": "2026-10-16T22:50:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:50:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Nebraska",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ned",
+    "n": 929,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ned"
+    ]
+  },
+  {
+    "title": "11-287 - USA v. Johnson et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-8_11-cr-00287/context",
+    "native_id": "USCOURTS-ned-8_11-cr-00287",
+    "published_at": "2026-10-16T22:42:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:42:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Nebraska",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ned",
+    "n": 930,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ned"
+    ]
+  },
+  {
+    "title": "12-388 - USA v. Hoge",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-8_12-cr-00388/context",
+    "native_id": "USCOURTS-ned-8_12-cr-00388",
+    "published_at": "2026-10-16T22:38:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:38:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Nebraska",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ned",
+    "n": 931,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ned"
+    ]
+  },
+  {
+    "title": "04-331 - USA v. Buckley",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-8_04-cr-00331/context",
+    "native_id": "USCOURTS-ned-8_04-cr-00331",
+    "published_at": "2026-10-16T22:51:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:51:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Nebraska",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ned",
+    "n": 932,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ned"
+    ]
+  },
+  {
+    "title": "02-220 - USA v. Stricklin et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-8_02-cr-00220/context",
+    "native_id": "USCOURTS-ned-8_02-cr-00220",
+    "published_at": "2026-10-16T22:48:12+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:48:12 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Nebraska",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ned",
+    "n": 933,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ned"
+    ]
+  },
+  {
+    "title": "12-355 - USA v. Mata-Soto",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-8_12-cr-00355/context",
+    "native_id": "USCOURTS-ned-8_12-cr-00355",
+    "published_at": "2026-10-16T22:45:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:45:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Nebraska",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ned",
+    "n": 934,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ned"
+    ]
+  },
+  {
+    "title": "07-3001 - USA v. Baldwin",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-4_07-cr-03001/context",
+    "native_id": "USCOURTS-ned-4_07-cr-03001",
+    "published_at": "2026-10-16T22:40:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:40:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Nebraska",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ned",
+    "n": 935,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ned"
+    ]
+  },
+  {
+    "title": "10-091 - USA v. Hernandez-Lopez et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-8_10-cr-00091/context",
+    "native_id": "USCOURTS-ned-8_10-cr-00091",
+    "published_at": "2026-10-16T22:48:12+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:48:12 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Nebraska",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ned",
+    "n": 936,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ned"
+    ]
+  },
+  {
+    "title": "08-3067 - USA v. Zierke",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-4_08-cr-03067/context",
+    "native_id": "USCOURTS-ned-4_08-cr-03067",
+    "published_at": "2026-10-16T22:48:12+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:48:12 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Nebraska",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ned",
+    "n": 937,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ned"
+    ]
+  },
+  {
+    "title": "13-088 - USA v. Avalos et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-ned-8_13-cr-00088/context",
+    "native_id": "USCOURTS-ned-8_13-cr-00088",
+    "published_at": "2026-10-16T22:48:12+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:48:12 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Nebraska",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-ned",
+    "n": 938,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-ned"
+    ]
+  },
+  {
+    "title": "25-051 - USA v. Hicks, et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-tned-3_25-cr-00051/context",
+    "native_id": "USCOURTS-tned-3_25-cr-00051",
+    "published_at": "2026-10-16T22:51:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:51:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Tennessee",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-tned",
+    "n": 1091,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-tned"
+    ]
+  },
+  {
+    "title": "22-2671 - First Horizon Corporation et al v. Pinnacle Financial Partners",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-tnwd-2_22-cv-02671/context",
+    "native_id": "USCOURTS-tnwd-2_22-cv-02671",
+    "published_at": "2026-10-16T22:32:08+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:32:08 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Western District of Tennessee",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-tnwd",
+    "n": 1098,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-tnwd"
+    ]
+  },
+  {
+    "title": "25-5013 - Case Name in Social Security Case - Unavailable",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05013/context",
+    "native_id": "USCOURTS-waed-4_25-cv-05013",
+    "published_at": "2026-10-17T00:10:02+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:10:02 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Washington",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-waed",
+    "n": 1201,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-waed"
+    ]
+  },
+  {
+    "title": "25-2087 - USA v. Cruz",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cr-02087/context",
+    "native_id": "USCOURTS-waed-1_25-cr-02087",
+    "published_at": "2026-10-17T00:37:07+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:37:07 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Washington",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-waed",
+    "n": 1205,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-waed"
+    ]
+  },
+  {
+    "title": "25-3070 - Schier v. Anderton et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cv-03070/context",
+    "native_id": "USCOURTS-waed-1_25-cv-03070",
+    "published_at": "2026-10-17T01:13:00+00:00",
+    "published_raw": "Sat, 17 Oct 2026 01:13:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Washington",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-waed",
+    "n": 1226,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-waed"
+    ]
+  },
+  {
+    "title": "25-6020 - USA v. Atkinson",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cr-06020/context",
+    "native_id": "USCOURTS-waed-4_25-cr-06020",
+    "published_at": "2026-10-17T01:18:01+00:00",
+    "published_raw": "Sat, 17 Oct 2026 01:18:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Washington",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-waed",
+    "n": 1227,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-waed"
+    ]
+  },
+  {
+    "title": "25-090 - USA v. Judge",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00090/context",
+    "native_id": "USCOURTS-waed-2_25-cr-00090",
+    "published_at": "2026-10-17T01:00:00+00:00",
+    "published_raw": "Sat, 17 Oct 2026 01:00:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Washington",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-waed",
+    "n": 1240,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-waed"
+    ]
+  },
+  {
+    "title": "25-102 - USA v. Howard",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00102/context",
+    "native_id": "USCOURTS-waed-2_25-cr-00102",
+    "published_at": "2026-10-17T01:18:01+00:00",
+    "published_raw": "Sat, 17 Oct 2026 01:18:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Washington",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-waed",
+    "n": 1241,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-waed"
+    ]
+  },
+  {
+    "title": "25-123 - USA v. Marsh",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00123/context",
+    "native_id": "USCOURTS-waed-2_25-cr-00123",
+    "published_at": "2026-10-17T00:51:05+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:51:05 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Washington",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-waed",
+    "n": 1247,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-waed"
+    ]
+  },
+  {
+    "title": "24-056 - Adams et al v. Okanogan County Public Hospital District No 3",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-waed-2_24-cv-00056/context",
+    "native_id": "USCOURTS-waed-2_24-cv-00056",
+    "published_at": "2026-10-17T00:10:01+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:10:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Washington",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-waed",
+    "n": 1248,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-waed"
+    ]
+  },
+  {
+    "title": "25-5029 - Angulo et al v. Providence Health & Services Washington et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05029/context",
+    "native_id": "USCOURTS-waed-4_25-cv-05029",
+    "published_at": "2026-10-17T00:10:02+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:10:02 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Washington",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-waed",
+    "n": 1255,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-waed"
+    ]
+  },
+  {
+    "title": "25-314 - Love v. State of Washington et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00314/context",
+    "native_id": "USCOURTS-waed-2_25-cv-00314",
+    "published_at": "2026-10-17T00:54:05+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:54:05 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Washington",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-waed",
+    "n": 1265,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-waed"
+    ]
+  },
+  {
+    "title": "25-198 - Case Name in Social Security Case - Unavailable",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00198/context",
+    "native_id": "USCOURTS-waed-2_25-cv-00198",
+    "published_at": "2026-10-17T00:48:21+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:48:21 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Washington",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-waed",
+    "n": 1266,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-waed"
+    ]
+  },
+  {
+    "title": "24-048 - Walker v. State Farm Fire and Casualty Company",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-waed-2_24-cv-00048/context",
+    "native_id": "USCOURTS-waed-2_24-cv-00048",
+    "published_at": "2026-10-17T00:10:01+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:10:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Washington",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-waed",
+    "n": 1273,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-waed"
+    ]
+  },
+  {
+    "title": "14-021 - USA v. Gaither et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-waed-2_14-cr-00021/context",
+    "native_id": "USCOURTS-waed-2_14-cr-00021",
+    "published_at": "2026-10-17T00:10:02+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:10:02 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Washington",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-waed",
+    "n": 1295,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-waed"
+    ]
+  },
+  {
+    "title": "23-40523 - The Roman Catholic Bishop of Oakland",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-canb-4_23-bk-40523/context",
+    "native_id": "USCOURTS-canb-4_23-bk-40523",
+    "published_at": "2026-10-16T20:26:01+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:26:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bankruptcy Court Northern District of California",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-canb",
+    "n": 1358,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-canb"
+    ]
+  },
+  {
+    "title": "26-088 - USA v. Balli et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-alsd-1_26-cr-00088/context",
+    "native_id": "USCOURTS-alsd-1_26-cr-00088",
+    "published_at": "2026-10-16T21:46:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 21:46:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Southern District of Alabama",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-alsd",
+    "n": 2486,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-alsd"
+    ]
+  },
+  {
+    "title": "08-1360 - MUHAMMAD HUSAYN v. GATES",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-dcd-1_08-cv-01360/context",
+    "native_id": "USCOURTS-dcd-1_08-cv-01360",
+    "published_at": "2026-10-16T22:43:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:43:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Columbia",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-dcd",
+    "n": 2750,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-dcd"
+    ]
+  },
+  {
+    "title": "26-21982 - Ozimo v. Hon. Laura Shearon Cruz et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-flsd-1_26-cv-21982/context",
+    "native_id": "USCOURTS-flsd-1_26-cv-21982",
+    "published_at": "2026-10-17T00:57:00+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:57:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Southern District of Florida",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-flsd",
+    "n": 2751,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-flsd"
+    ]
+  },
+  {
+    "title": "26-61490 - Darby v. Broward Shereiff Dept et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-flsd-0_26-cv-61490/context",
+    "native_id": "USCOURTS-flsd-0_26-cv-61490",
+    "published_at": "2026-10-17T00:45:10+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:45:10 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Southern District of Florida",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-flsd",
+    "n": 2753,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-flsd"
+    ]
+  },
+  {
+    "title": "26-25868 - THE GALLEON GUILD LTD v. The Partnerships, Unincorporated Associations Identified on Schedule A",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-flsd-1_26-cv-25868/context",
+    "native_id": "USCOURTS-flsd-1_26-cv-25868",
+    "published_at": "2026-10-17T00:54:05+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:54:05 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Southern District of Florida",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-flsd",
+    "n": 2754,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-flsd"
+    ]
+  },
+  {
+    "title": "25-22212 - Melkonian v. United States of America",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-flsd-1_25-cv-22212/context",
+    "native_id": "USCOURTS-flsd-1_25-cv-22212",
+    "published_at": "2026-10-17T00:13:14+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:13:14 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Southern District of Florida",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-flsd",
+    "n": 2755,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-flsd"
+    ]
+  },
+  {
+    "title": "26-80651 - Case Name in Social Security Case - Unavailable",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-flsd-9_26-cv-80651/context",
+    "native_id": "USCOURTS-flsd-9_26-cv-80651",
+    "published_at": "2026-10-17T01:12:00+00:00",
+    "published_raw": "Sat, 17 Oct 2026 01:12:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Southern District of Florida",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-flsd",
+    "n": 2757,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-flsd"
+    ]
+  },
+  {
+    "title": "26-23645 - DOT Fund LLC v. Balbina and Family Corp. et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-flsd-1_26-cv-23645/context",
+    "native_id": "USCOURTS-flsd-1_26-cv-23645",
+    "published_at": "2026-10-17T00:54:05+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:54:05 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Southern District of Florida",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-flsd",
+    "n": 2758,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-flsd"
+    ]
+  },
+  {
+    "title": "26-61562 - Dryden v. Bain et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-flsd-0_26-cv-61562/context",
+    "native_id": "USCOURTS-flsd-0_26-cv-61562",
+    "published_at": "2026-10-17T01:02:00+00:00",
+    "published_raw": "Sat, 17 Oct 2026 01:02:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Southern District of Florida",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-flsd",
+    "n": 2760,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-flsd"
+    ]
+  },
+  {
+    "title": "26-20389 - Evans v. Church of Scientology International et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-flsd-1_26-cv-20389/context",
+    "native_id": "USCOURTS-flsd-1_26-cv-20389",
+    "published_at": "2026-10-17T00:49:06+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:49:06 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Southern District of Florida",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-flsd",
+    "n": 2762,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-flsd"
+    ]
+  },
+  {
+    "title": "25-14356 - Spilker v. Indian River Memorial Hospital Inc.",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-flsd-2_25-cv-14356/context",
+    "native_id": "USCOURTS-flsd-2_25-cv-14356",
+    "published_at": "2026-10-17T01:11:00+00:00",
+    "published_raw": "Sat, 17 Oct 2026 01:11:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Southern District of Florida",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-flsd",
+    "n": 2763,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-flsd"
+    ]
+  },
+  {
+    "title": "24-22531 - Global Approach, Inc. v. Scottsdale Insurance Company",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-flsd-1_24-cv-22531/context",
+    "native_id": "USCOURTS-flsd-1_24-cv-22531",
+    "published_at": "2026-10-17T00:33:31+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:33:31 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Southern District of Florida",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-flsd",
+    "n": 2764,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-flsd"
+    ]
+  },
+  {
+    "title": "24-132 - USA v. Gage, Jr. et al.",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cr-00132/context",
+    "native_id": "USCOURTS-laed-2_24-cr-00132",
+    "published_at": "2026-10-16T20:28:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:28:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 2807,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "26-369 - Felton v. CLB Investments LLC et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00369/context",
+    "native_id": "USCOURTS-laed-2_26-cv-00369",
+    "published_at": "2026-10-16T20:26:01+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:26:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 2808,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "26-322 - LeBeau v. All Chemical Transport Corp. et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00322/context",
+    "native_id": "USCOURTS-laed-2_26-cv-00322",
+    "published_at": "2026-10-16T20:26:01+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:26:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 2809,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "26-588 - Torrent Gulf Coast III, LLC v. Gulf Oceanic Marine Contractors, Inc. et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00588/context",
+    "native_id": "USCOURTS-laed-2_26-cv-00588",
+    "published_at": "2026-10-16T20:26:01+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:26:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 2810,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "26-107 - USA v. Grant",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cr-00107/context",
+    "native_id": "USCOURTS-laed-2_26-cr-00107",
+    "published_at": "2026-10-16T20:24:04+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:24:04 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 2811,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "26-1111 - Ross v. Dagate et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-01111/context",
+    "native_id": "USCOURTS-laed-2_26-cv-01111",
+    "published_at": "2026-10-16T20:28:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:28:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 2812,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "25-1394 - Edmond v. Venture Global LNG, Inc. et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-01394/context",
+    "native_id": "USCOURTS-laed-2_25-cv-01394",
+    "published_at": "2026-10-16T20:26:01+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:26:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 2813,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "22-1271 - Hutchinson-Harper, et al v. Jefferson Parish School Board, et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_22-cv-01271/context",
+    "native_id": "USCOURTS-laed-2_22-cv-01271",
+    "published_at": "2026-10-16T20:24:04+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:24:04 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 2814,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "26-1599 - Ambo v. Van Halen et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-01599/context",
+    "native_id": "USCOURTS-laed-2_26-cv-01599",
+    "published_at": "2026-10-16T20:24:04+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:24:04 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 2815,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "24-714 - Wilson v. City of Bogalusa et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cv-00714/context",
+    "native_id": "USCOURTS-laed-2_24-cv-00714",
+    "published_at": "2026-10-16T20:26:01+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:26:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 2816,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "25-2458 - Young v. St. John the Baptist Sheriff's Office et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-02458/context",
+    "native_id": "USCOURTS-laed-2_25-cv-02458",
+    "published_at": "2026-10-16T20:24:04+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:24:04 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 2817,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "25-2040 - United States of America v. Paige et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-02040/context",
+    "native_id": "USCOURTS-laed-2_25-cv-02040",
+    "published_at": "2026-10-16T20:24:04+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:24:04 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Louisiana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-laed",
+    "n": 2818,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-laed"
+    ]
+  },
+  {
+    "title": "24-3126 - In Re: Snowflake, Inc., Data Security Breach Litigation",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-mtd-2_24-md-03126/context",
+    "native_id": "USCOURTS-mtd-2_24-md-03126",
+    "published_at": "2026-10-16T20:56:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 20:56:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Montana",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-mtd",
+    "n": 2864,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-mtd"
+    ]
+  },
+  {
+    "title": "26-2589 - Dailey v. United States Attorney's Office et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-nmd-1_26-cv-02589/context",
+    "native_id": "USCOURTS-nmd-1_26-cv-02589",
+    "published_at": "2026-10-17T00:46:08+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:46:08 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of New Mexico",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-nmd",
+    "n": 2885,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-nmd"
+    ]
+  },
+  {
+    "title": "22-011 - The Government of the Lao People's Democratic Republic v. Baldwin et al",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-nmid-1_22-cv-00011/context",
+    "native_id": "USCOURTS-nmid-1_22-cv-00011",
+    "published_at": "2026-10-17T01:16:00+00:00",
+    "published_raw": "Sat, 17 Oct 2026 01:16:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court District of Northern Mariana Islands",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-nmid",
+    "n": 2920,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-nmid"
+    ]
+  },
+  {
+    "title": "26-145 - Eady v. American Tow & Recovery, LLC",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-tned-1_26-cv-00145/context",
+    "native_id": "USCOURTS-tned-1_26-cv-00145",
+    "published_at": "2026-10-16T22:38:00+00:00",
+    "published_raw": "Fri, 16 Oct 2026 22:38:00 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Tennessee",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-tned",
+    "n": 3015,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-tned"
+    ]
+  },
+  {
+    "title": "16-6004 - USA v. Speelman",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-waed-4_16-cr-06004/context",
+    "native_id": "USCOURTS-waed-4_16-cr-06004",
+    "published_at": "2026-10-17T01:18:01+00:00",
+    "published_raw": "Sat, 17 Oct 2026 01:18:01 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "District Court Eastern District of Washington",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-waed",
+    "n": 3149,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-waed"
+    ]
+  },
+  {
+    "title": "1:24-cv-00174 - GameChange Solar Corp. v. United States",
+    "url": "https://www.govinfo.gov/app/details/USCOURTS-cit-1_24-cv-00174/context",
+    "native_id": "USCOURTS-cit-1_24-cv-00174",
+    "published_at": "2026-10-17T00:42:04+00:00",
+    "published_raw": "Sat, 17 Oct 2026 00:42:04 +0000",
+    "summary": "Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "court_opinion",
+      "document_stage": "judicial_opinion_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "United States Court of International Trade",
+      "jurisdiction": "US",
+      "family": "judicial_decisions"
+    },
+    "primary_source_id": "us-govinfo-uscourts-cit",
+    "n": 3263,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-govinfo-uscourts-cit"
+    ]
+  },
+  {
+    "title": "Que no lo dejen colgado esta temporada festiva con regalos inseguros: Compre de fuentes confiables",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Dont-Be-Left-Out-in-the-Cold-This-Holiday-Season-with-Unsafe-Presents-Buy-from-Trusted-Sources",
+    "native_id": "https://www.cpsc.gov/_6d039050-7fba-4cdf-8361-f7db2f5e3963",
+    "published_at": null,
+    "published_raw": "Tue, 12/09/2025 - 12:00",
+    "summary": "La CPSC les recuerda a los consumidores comprar de manera segura esta temporada festiva",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3537,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "Ponga la seguridad en el menú para unas felices fiestas: la Comisión de Seguridad de Productos del Consumidor ofrece consejos para cocinar con seguridad",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
+    "native_id": "https://www.cpsc.gov/_59de4207-4ace-44ca-ace0-3cde0cfb8ddb",
+    "published_at": null,
+    "published_raw": "Wed, 11/19/2025 - 12:00",
+    "summary": "WASHINGTON, D.C. – A medida que las familias de todo Estados Unidos se preparan para reunirse en Acción de Gracias, la Comisión de Seguridad de Productos del Consumidor de Estados Unidos (CPSC, por sus siglas en inglés) emite un recordatorio urgente: la",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3538,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "La CPSC aprueba nueva norma federal de seguridad para las bolas de gel con el fin de reducir el riesgo de lesiones y muerte niños pequeños",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Water-Beads-to-Reduce-the-Risk-of-Injury-and-Death-to-Young-Children",
+    "native_id": "https://www.cpsc.gov/_51cc46a0-5dc1-4f70-8cc1-c6b5b0f0a782",
+    "published_at": null,
+    "published_raw": "Thu, 08/21/2025 - 12:00",
+    "summary": "WASHINGTON D. C. – La Comisión de Seguridad de Productos del Consumidor (CPSC, por sus iniciales en inglés) aprobó una norma de seguridad de productos de consumo para juguetes tipo bolas de gel, lo que refleja el compromiso constante de la entidad con la",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3539,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "CPSC Approves New Federal Safety Standard for Neck Floats to Prevent Infant Deaths and Serious Injuries",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Neck-Floats-to-Prevent-Infant-Deaths-and-Serious-Injuries",
+    "native_id": "https://www.cpsc.gov/_4014aab3-f30e-41aa-ad48-dd7587119b4c",
+    "published_at": null,
+    "published_raw": "Thu, 08/21/2025 - 12:00",
+    "summary": "The U.S. Consumer Product Safety Commission (CPSC) has approved a consumer product safety standard to improve the safety of neck floats, an aquatic toy intended for use by children up to and including four years of age.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3540,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "CPSC Withdraws Rules That Are Outdated, Fail to Advance Safety; New Leadership Focuses on Hazards That Pose Real Risks",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2025/CPSC-Withdraws-Rules-That-Are-Outdated-Fail-to-Advance-Safety-New-Leadership-Focuses-on-Hazards-That-Pose-Real-Risks",
+    "native_id": "https://www.cpsc.gov/_ff913f8e-db56-4208-ba2f-a2582d4d76f7",
+    "published_at": null,
+    "published_raw": "Wed, 08/20/2025 - 12:00",
+    "summary": "The U.S. Consumer Product Safety Commission (CPSC) today announced it will withdraw several existing and pending rulemakings that no longer align with agency priorities, and which fail to advance safety.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3541,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
     "title": "Telephone Penetration Report",
     "url": "http://www.fcc.gov/wcb/iatd/recent.html",
     "native_id": "http://www.fcc.gov/wcb/iatd/recent.html",
@@ -18,7 +2298,7 @@
     "primary_source_id": "us-fcc-86f1b34c46",
     "n": 3972,
     "first_seen": "2026-10-16T16:06:40.552868+00:00",
-    "last_seen": "2026-10-16T17:26:36.762461+00:00",
+    "last_seen": "2026-10-17T05:37:40.086992+00:00",
     "source_ids": [
       "us-fcc-86f1b34c46"
     ]

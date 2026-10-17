@@ -1,7 +1,7 @@
 # Primary-origin action documents
 
-Updated 2026-10-16T17:26:36.762461+00:00. 3239 dated documents in the configured 3-day window; 0 newly retained; 1392 repeat observations.
-Source health: 457/463 checked successfully. Collection uses zero LLM calls.
+Updated 2026-10-17T05:37:40.086992+00:00. 3738 dated documents in the configured 3-day window; 891 newly retained; 2558 repeat observations.
+Source health: 461/463 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
@@ -72,16 +72,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Standard Instrument Approach Procedures, and Takeoff Minimums and Obstacle Departure Procedures; Miscellaneous Amendments](https://www.federalregister.gov/documents/2026/10/15/2026-21096/standard-instrument-approach-procedures-and-takeoff-minimums-and-obstacle-departure-procedures) — Transportation Department; Federal Aviation Administration; 2026-10-15T00:00:00+00:00
 - [Family and Medical Leave Act](https://www.federalregister.gov/documents/2026/10/15/2026-21104/family-and-medical-leave-act) — Personnel Management Office; 2026-10-15T00:00:00+00:00
 - [Fisheries of the Exclusive Economic Zone off Alaska; Pacific Ocean Perch in the Central Regulatory Area of the Gulf of Alaska](https://www.federalregister.gov/documents/2026/10/15/2026-21106/fisheries-of-the-exclusive-economic-zone-off-alaska-pacific-ocean-perch-in-the-central-regulatory) — Commerce Department; National Oceanic and Atmospheric Administration; 2026-10-15T00:00:00+00:00
-- [Removal of Automatic Extensions for Certain Employment Authorization Documents](https://www.federalregister.gov/documents/2026/10/14/2026-20955/removal-of-automatic-extensions-for-certain-employment-authorization-documents) — Homeland Security Department; 2026-10-14T00:00:00+00:00
-- [Removing 30-Day Refugee Termination Notice](https://www.federalregister.gov/documents/2026/10/14/2026-20956/removing-30-day-refugee-termination-notice) — Homeland Security Department; 2026-10-14T00:00:00+00:00
-- [Amendment of Boundaries for Restricted Areas R-5301, R-5302B, and R-5302C; NC](https://www.federalregister.gov/documents/2026/10/14/2026-20974/amendment-of-boundaries-for-restricted-areas-r-5301-r-5302b-and-r-5302c-nc) — Transportation Department; Federal Aviation Administration; 2026-10-14T00:00:00+00:00
-- [Food Additives Permitted in Feed and Drinking Water of Animals; Chromium Propionate](https://www.federalregister.gov/documents/2026/10/14/2026-20979/food-additives-permitted-in-feed-and-drinking-water-of-animals-chromium-propionate) — Health and Human Services Department; Food and Drug Administration; 2026-10-14T00:00:00+00:00
-- [Extending the Reporting Deadline Under the Greenhouse Gas Reporting Rule for Reporting Year 2025 to March 10, 2027](https://www.federalregister.gov/documents/2026/10/14/2026-20982/extending-the-reporting-deadline-under-the-greenhouse-gas-reporting-rule-for-reporting-year-2025-to) — Environmental Protection Agency; 2026-10-14T00:00:00+00:00
-- [Amendment of Domestic Very High Frequency Omnidirectional Range (VOR) Federal Airways V-16, V-35, V-37, V-53, V-133, V-136, V-143, V-259, V-310, V-364, V-409, V-415, V-454, and V-605; Eastern United States](https://www.federalregister.gov/documents/2026/10/14/2026-20987/amendment-of-domestic-very-high-frequency-omnidirectional-range-vor-federal-airways-v-16-v-35-v-37) — Transportation Department; Federal Aviation Administration; 2026-10-14T00:00:00+00:00
-- [Airworthiness Directives; Bombardier, Inc., Airplanes](https://www.federalregister.gov/documents/2026/10/14/2026-21010/airworthiness-directives-bombardier-inc-airplanes) — Transportation Department; Federal Aviation Administration; 2026-10-14T00:00:00+00:00
-- [Allocation of Assets in Single-Employer Plans; Interest Assumptions for Valuing Benefits](https://www.federalregister.gov/documents/2026/10/14/2026-21019/allocation-of-assets-in-single-employer-plans-interest-assumptions-for-valuing-benefits) — Pension Benefit Guaranty Corporation; 2026-10-14T00:00:00+00:00
-- [Imposition and Collection of Civil Penalties for Certain Immigration-Related Violations](https://www.federalregister.gov/documents/2026/10/14/2026-21024/imposition-and-collection-of-civil-penalties-for-certain-immigration-related-violations) — Homeland Security Department; Justice Department; Executive Office for Immigration Review; 2026-10-14T00:00:00+00:00
-- [AP1000 Design Certification Renewal](https://www.federalregister.gov/documents/2026/10/14/2026-21030/ap1000-design-certification-renewal) — Nuclear Regulatory Commission; 2026-10-14T00:00:00+00:00
 
 ## judicial_decision_published
 
@@ -286,6 +276,895 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## judicial_opinion_published
 
+- [18-2081 - (PC) Mays v. County of Sacramento](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cv-02081/context) — District Court Eastern District of California; 2026-10-17T03:00:00+00:00
+- [19-129 - USA v. Ward et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_19-cr-00129/context) — District Court Eastern District of California; 2026-10-17T02:58:03+00:00
+- [19-1806 - (PC) Rood v. Lockwood et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_19-cv-01806/context) — District Court Eastern District of California; 2026-10-17T02:56:00+00:00
+- [19-153 - USA v. Picchi et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_19-cr-00153/context) — District Court Eastern District of California; 2026-10-17T02:56:00+00:00
+- [19-007 - USA v. Ochoa Ruiz](https://www.govinfo.gov/app/details/USCOURTS-caed-1_19-cr-00007/context) — District Court Eastern District of California; 2026-10-17T02:54:00+00:00
+- [19-1058 - (PC) Williams v. Adams et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_19-cv-01058/context) — District Court Eastern District of California; 2026-10-17T02:53:01+00:00
+- [19-520 - Sugarman v. IRZ Consulting, LLC, et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_19-cv-00520/context) — District Court Eastern District of California; 2026-10-17T02:53:01+00:00
+- [18-246 - USA v. Cortez-Rocha et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_18-cr-00246/context) — District Court Eastern District of California; 2026-10-17T02:52:00+00:00
+- [18-257 - USA v. Lakhani et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cr-00257/context) — District Court Eastern District of California; 2026-10-17T02:50:00+00:00
+- [18-270 - USA v. Bartucci](https://www.govinfo.gov/app/details/USCOURTS-caed-1_18-cr-00270/context) — District Court Eastern District of California; 2026-10-17T02:50:00+00:00
+- [18-808 - USA v. Real Property located at 4343 North Forty, Lincoln, CA](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cv-00808/context) — District Court Eastern District of California; 2026-10-17T02:48:01+00:00
+- [18-076 - USA v. Trapps et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_18-cr-00076/context) — District Court Eastern District of California; 2026-10-17T02:48:01+00:00
+- [18-171 - USA v. Sanchez-Cruz et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cr-00171/context) — District Court Eastern District of California; 2026-10-17T02:46:01+00:00
+- [18-264 - USA v. Mouton](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cr-00264/context) — District Court Eastern District of California; 2026-10-17T02:46:01+00:00
+- [19-141 - USA v. Marshall](https://www.govinfo.gov/app/details/USCOURTS-caed-1_19-cr-00141/context) — District Court Eastern District of California; 2026-10-17T02:46:01+00:00
+- [18-044 - USA v. Do](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cr-00044/context) — District Court Eastern District of California; 2026-10-17T02:46:01+00:00
+- [19-1105 - Jerry Cox v. Mariposa County et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_19-cv-01105/context) — District Court Eastern District of California; 2026-10-17T02:44:01+00:00
+- [18-1375 - (DP) Tobin v. Davis](https://www.govinfo.gov/app/details/USCOURTS-caed-1_18-cv-01375/context) — District Court Eastern District of California; 2026-10-17T02:44:01+00:00
+- [19-275 - (PC) Reed v. Fox et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_19-cv-00275/context) — District Court Eastern District of California; 2026-10-17T02:42:01+00:00
+- [19-104 - USA v. Perez et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_19-cr-00104/context) — District Court Eastern District of California; 2026-10-17T02:42:01+00:00
+- [18-2671 - (PC) Bivins v. Rodriguez et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cv-02671/context) — District Court Eastern District of California; 2026-10-17T02:42:01+00:00
+- [19-354 - (PC) Sanchez v. Deochoa et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_19-cv-00354/context) — District Court Eastern District of California; 2026-10-17T02:41:00+00:00
+- [18-246 - (PC) Barbour v. United States of America](https://www.govinfo.gov/app/details/USCOURTS-caed-1_18-cv-00246/context) — District Court Eastern District of California; 2026-10-17T02:41:00+00:00
+- [18-092 - USA v. Reyes Castillo et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_18-cr-00092/context) — District Court Eastern District of California; 2026-10-17T02:40:00+00:00
+- [19-002 - USA v. Ramirez et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_19-cr-00002/context) — District Court Eastern District of California; 2026-10-17T02:38:01+00:00
+- [13-227 - USA v. Zazueta et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_13-cr-00227/context) — District Court Eastern District of California; 2026-10-17T02:38:01+00:00
+- [19-294 - (HC) Belyew v. Parker](https://www.govinfo.gov/app/details/USCOURTS-caed-2_19-cv-00294/context) — District Court Eastern District of California; 2026-10-17T02:38:01+00:00
+- [19-482 - Bernal v. Sacramento County Sheriff Dept., et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_19-cv-00482/context) — District Court Eastern District of California; 2026-10-17T02:38:01+00:00
+- [19-227 - (PC) Carthen v. Scott et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_19-cv-00227/context) — District Court Eastern District of California; 2026-10-17T02:33:02+00:00
+- [18-252 - USA vs Head](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cr-00252/context) — District Court Eastern District of California; 2026-10-17T02:33:02+00:00
+- [18-3049 - (PS) Peccia v. CDCR](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cv-03049/context) — District Court Eastern District of California; 2026-10-17T02:33:02+00:00
+- [18-812 - USA v. Real Property located at 2205 Meadowview Road, Sacramento, et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cv-00812/context) — District Court Eastern District of California; 2026-10-17T02:33:02+00:00
+- [19-1362 - (PC) Hackworth v. Arevalos](https://www.govinfo.gov/app/details/USCOURTS-caed-1_19-cv-01362/context) — District Court Eastern District of California; 2026-10-17T02:33:02+00:00
+- [07-248 - USA v. Diaz et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_07-cr-00248/context) — District Court Eastern District of California; 2026-10-17T02:33:02+00:00
+- [18-1488 - Lucas, et al. v. County of Fresno, et al.](https://www.govinfo.gov/app/details/USCOURTS-caed-1_18-cv-01488/context) — District Court Eastern District of California; 2026-10-17T02:31:03+00:00
+- [18-1681 - Verduzco v. Con Agra Foods Packaged Foods, LLC](https://www.govinfo.gov/app/details/USCOURTS-caed-1_18-cv-01681/context) — District Court Eastern District of California; 2026-10-17T02:31:03+00:00
+- [18-751 - USA v. Real Property located at 8804 Sailfish Bay, Sacramento, CA](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cv-00751/context) — District Court Eastern District of California; 2026-10-17T02:31:03+00:00
+- [19-270 - Roe #1 et al v. United States et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_19-cv-00270/context) — District Court Eastern District of California; 2026-10-17T02:31:03+00:00
+- [19-155 - USA v. Broadbent](https://www.govinfo.gov/app/details/USCOURTS-caed-2_19-cr-00155/context) — District Court Eastern District of California; 2026-10-17T02:30:01+00:00
+- [19-035 - USA v. Benson et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_19-cr-00035/context) — District Court Eastern District of California; 2026-10-17T02:30:01+00:00
+- [18-240 - USA v. Goulding](https://www.govinfo.gov/app/details/USCOURTS-caed-1_18-cr-00240/context) — District Court Eastern District of California; 2026-10-17T02:29:00+00:00
+- [18-747 - USA v. Real Property located at 8911 Highway 49](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cv-00747/context) — District Court Eastern District of California; 2026-10-17T02:24:00+00:00
+- [19-053 - USA v. Morita](https://www.govinfo.gov/app/details/USCOURTS-caed-2_19-cr-00053/context) — District Court Eastern District of California; 2026-10-17T02:24:00+00:00
+- [18-070 - USA v. Delacruz](https://www.govinfo.gov/app/details/USCOURTS-caed-1_18-cr-00070/context) — District Court Eastern District of California; 2026-10-17T02:22:02+00:00
+- [18-745 - USA v. Real Property located at 9789 Fall Valley, Sacramento, CA, Sacramento County, APN: 122-0740-067-0000 et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cv-00745/context) — District Court Eastern District of California; 2026-10-17T02:22:02+00:00
+- [18-1687 - (PS) Franken v. Wormuth](https://www.govinfo.gov/app/details/USCOURTS-caed-1_18-cv-01687/context) — District Court Eastern District of California; 2026-10-17T02:22:02+00:00
+- [19-013 - USA v. Pearson](https://www.govinfo.gov/app/details/USCOURTS-caed-1_19-cr-00013/context) — District Court Eastern District of California; 2026-10-17T02:21:03+00:00
+- [18-220 - USA v. Sanchez et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_18-cr-00220/context) — District Court Eastern District of California; 2026-10-17T02:21:03+00:00
+- [19-065 - USA v. Garcia](https://www.govinfo.gov/app/details/USCOURTS-caed-1_19-cr-00065/context) — District Court Eastern District of California; 2026-10-17T02:21:03+00:00
+- [18-079 - USA v. Smith et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_18-cr-00079/context) — District Court Eastern District of California; 2026-10-17T02:21:03+00:00
+- [18-3089 - (PC) Hill v. Rios et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cv-03089/context) — District Court Eastern District of California; 2026-10-17T02:21:03+00:00
+- [19-001 - (PS) Renfro v. Anderson, et al.](https://www.govinfo.gov/app/details/USCOURTS-caed-2_19-cv-00001/context) — District Court Eastern District of California; 2026-10-17T02:21:03+00:00
+- [18-132 - USA vs Gould](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cr-00132/context) — District Court Eastern District of California; 2026-10-17T02:21:03+00:00
+- [18-2333 - Fear v. United States of America](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cv-02333/context) — District Court Eastern District of California; 2026-10-17T02:20:00+00:00
+- [19-1294 - Colbert v. City of Merced et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_19-cv-01294/context) — District Court Eastern District of California; 2026-10-17T02:20:00+00:00
+- [17-234 - USA v. Villa et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_17-cr-00234/context) — District Court Eastern District of California; 2026-10-17T02:20:00+00:00
+- [19-163 - USA v. Warren](https://www.govinfo.gov/app/details/USCOURTS-caed-2_19-cr-00163/context) — District Court Eastern District of California; 2026-10-17T02:20:00+00:00
+- [07-120 - USA v. Wackerman et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_07-cr-00120/context) — District Court Eastern District of California; 2026-10-17T02:19:00+00:00
+- [88-1658 - Natural Resources Defense Council, Inc, et al v. Houston, et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_88-cv-01658/context) — District Court Eastern District of California; 2026-10-17T02:17:00+00:00
+- [11-119 - USA v. Hanrahan et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_11-cr-00119/context) — District Court Eastern District of California; 2026-10-17T02:17:00+00:00
+- [18-060 - USA v. Cortez](https://www.govinfo.gov/app/details/USCOURTS-caed-1_18-cr-00060/context) — District Court Eastern District of California; 2026-10-17T02:14:02+00:00
+- [18-2885 - Raymond Investment Corporation v. Stockton Unified School District](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cv-02885/context) — District Court Eastern District of California; 2026-10-17T02:14:02+00:00
+- [17-169 - USA v. Yang et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_17-cr-00169/context) — District Court Eastern District of California; 2026-10-17T02:14:02+00:00
+- [18-537 - (HC) Shorter v. Montgomery et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cv-00537/context) — District Court Eastern District of California; 2026-10-17T02:13:00+00:00
+- [03-529 - USA v. Powell](https://www.govinfo.gov/app/details/USCOURTS-caed-2_03-cr-00529/context) — District Court Eastern District of California; 2026-10-17T02:11:01+00:00
+- [18-001 - USA v. Acosta Alvarez et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cr-00001/context) — District Court Eastern District of California; 2026-10-17T02:11:01+00:00
+- [97-2167 - (HC) (DP) Jones v. Broomfield](https://www.govinfo.gov/app/details/USCOURTS-caed-2_97-cv-02167/context) — District Court Eastern District of California; 2026-10-17T02:11:01+00:00
+- [17-209 - USA v. Flucas](https://www.govinfo.gov/app/details/USCOURTS-caed-2_17-cr-00209/context) — District Court Eastern District of California; 2026-10-17T02:11:01+00:00
+- [26-6917 - (HC) Palma Corrales v. Warden, Central Valley Annex](https://www.govinfo.gov/app/details/USCOURTS-caed-1_26-cv-06917/context) — District Court Eastern District of California; 2026-10-17T02:11:01+00:00
+- [15-272 - USA v. Kasperian et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_15-cr-00272/context) — District Court Eastern District of California; 2026-10-17T02:09:00+00:00
+- [17-232 - USA v. Magallon et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_17-cr-00232/context) — District Court Eastern District of California; 2026-10-17T02:07:00+00:00
+- [26-6729 - (HC) Dieujuste v. Chestnut](https://www.govinfo.gov/app/details/USCOURTS-caed-1_26-cv-06729/context) — District Court Eastern District of California; 2026-10-17T02:07:00+00:00
+- [26-7073 - (HC) Guerrero Aguilar v. Chestnut](https://www.govinfo.gov/app/details/USCOURTS-caed-1_26-cv-07073/context) — District Court Eastern District of California; 2026-10-17T02:07:00+00:00
+- [26-690 - USA vs Howebyrne](https://www.govinfo.gov/app/details/USCOURTS-caed-6_26-po-00690/context) — District Court Eastern District of California; 2026-10-17T02:07:00+00:00
+- [11-223 - (DP) Danks v. Martel](https://www.govinfo.gov/app/details/USCOURTS-caed-1_11-cv-00223/context) — District Court Eastern District of California; 2026-10-17T02:07:00+00:00
+- [15-045 - USA v. Karan et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_15-cr-00045/context) — District Court Eastern District of California; 2026-10-17T02:07:00+00:00
+- [26-7203 - (HC) Abin-Diaz v. Warden, Central Valley Annex](https://www.govinfo.gov/app/details/USCOURTS-caed-1_26-cv-07203/context) — District Court Eastern District of California; 2026-10-17T02:05:00+00:00
+- [18-024 - USA v. Robins et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cr-00024/context) — District Court Eastern District of California; 2026-10-17T02:05:00+00:00
+- [26-561 - USA vs Feng](https://www.govinfo.gov/app/details/USCOURTS-caed-6_26-po-00561/context) — District Court Eastern District of California; 2026-10-17T02:04:00+00:00
+- [15-165 - (PC) Spears v. El Dorado County, et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_15-cv-00165/context) — District Court Eastern District of California; 2026-10-17T02:03:00+00:00
+- [06-705 - (DP) Cornwell v. Ylst](https://www.govinfo.gov/app/details/USCOURTS-caed-2_06-cv-00705/context) — District Court Eastern District of California; 2026-10-17T02:02:00+00:00
+- [26-6855 - (HC) Diaz Daza v. Warden, California City Immigration Processing Center](https://www.govinfo.gov/app/details/USCOURTS-caed-1_26-cv-06855/context) — District Court Eastern District of California; 2026-10-17T02:02:00+00:00
+- [14-010 - USA v. Jaycox](https://www.govinfo.gov/app/details/USCOURTS-caed-2_14-cr-00010/context) — District Court Eastern District of California; 2026-10-17T02:01:00+00:00
+- [17-2085 - Apple Hill Growers v. El Dorado Orchards, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_17-cv-02085/context) — District Court Eastern District of California; 2026-10-17T02:00:00+00:00
+- [26-6876 - (HC) Perez-Lucas v. Andrews](https://www.govinfo.gov/app/details/USCOURTS-caed-1_26-cv-06876/context) — District Court Eastern District of California; 2026-10-17T02:00:00+00:00
+- [26-6866 - (SS) Andersen v. Commissioner of Social Security](https://www.govinfo.gov/app/details/USCOURTS-caed-1_26-cv-06866/context) — District Court Eastern District of California; 2026-10-17T02:00:00+00:00
+- [26-170 - USA v. Lopez Felix et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_26-cr-00170/context) — District Court Eastern District of California; 2026-10-17T02:00:00+00:00
+- [18-022 - USA v. Solomon](https://www.govinfo.gov/app/details/USCOURTS-caed-2_18-cr-00022/context) — District Court Eastern District of California; 2026-10-17T01:59:00+00:00
+- [16-217 - USA v. Kartan et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_16-cr-00217/context) — District Court Eastern District of California; 2026-10-17T01:59:00+00:00
+- [26-6739 - (HC) Serrato Padilla v. Warden of Golden State Annex](https://www.govinfo.gov/app/details/USCOURTS-caed-1_26-cv-06739/context) — District Court Eastern District of California; 2026-10-17T01:59:00+00:00
+- [16-1540 - (PC) Williams v. Baker et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_16-cv-01540/context) — District Court Eastern District of California; 2026-10-17T01:58:00+00:00
+- [26-6871 - (PC) Hamilton v. Mosley et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_26-cv-06871/context) — District Court Eastern District of California; 2026-10-17T01:58:00+00:00
+- [26-150 - USA v. Perez Sigala](https://www.govinfo.gov/app/details/USCOURTS-caed-2_26-cr-00150/context) — District Court Eastern District of California; 2026-10-17T01:57:00+00:00
+- [17-198 - USA v. Montano et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_17-cr-00198/context) — District Court Eastern District of California; 2026-10-17T01:57:00+00:00
+- [26-141 - USA v. Cox](https://www.govinfo.gov/app/details/USCOURTS-caed-2_26-mj-00141/context) — District Court Eastern District of California; 2026-10-17T01:54:00+00:00
+- [26-7574 - (HC) Abubakar Salih v. Chestnut et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_26-cv-07574/context) — District Court Eastern District of California; 2026-10-17T01:54:00+00:00
+- [16-818 - Friends of the River v. National Marine Fisheries Service et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_16-cv-00818/context) — District Court Eastern District of California; 2026-10-17T01:53:00+00:00
+- [26-7476 - (HC) Kumar v. Andrews et al](https://www.govinfo.gov/app/details/USCOURTS-caed-1_26-cv-07476/context) — District Court Eastern District of California; 2026-10-17T01:53:00+00:00
+- [10-424 - USA v. Warren et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_10-cr-00424/context) — District Court Eastern District of California; 2026-10-17T01:53:00+00:00
+- [26-6987 - (HC) Rakesh v. Warden, Golden State Annex Detention Facility](https://www.govinfo.gov/app/details/USCOURTS-caed-1_26-cv-06987/context) — District Court Eastern District of California; 2026-10-17T01:53:00+00:00
+- [25-5075 - Murry v. Lang et al](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05075/context) — District Court Eastern District of Washington; 2026-10-17T01:18:02+00:00
+- [25-353 - Thomson v. State of Washington et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00353/context) — District Court Eastern District of Washington; 2026-10-17T01:18:02+00:00
+- [17-092 - USA v. Flores](https://www.govinfo.gov/app/details/USCOURTS-waed-2_17-cr-00092/context) — District Court Eastern District of Washington; 2026-10-17T01:18:02+00:00
+- [26-2987 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-pamd-3_26-cv-02987/context) — District Court Middle District of Pennsylvania; 2026-10-17T01:18:02+00:00
+- [25-266 - Snyder v. Ownsby](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00266/context) — District Court Eastern District of Washington; 2026-10-17T01:18:01+00:00
+- [25-227 - Allah v. Mason](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00227/context) — District Court Eastern District of Washington; 2026-10-17T01:18:01+00:00
+- [17-091 - USA v. Richmond](https://www.govinfo.gov/app/details/USCOURTS-waed-2_17-cr-00091/context) — District Court Eastern District of Washington; 2026-10-17T01:18:01+00:00
+- [25-5056 - Ramirez v. Reid et al](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05056/context) — District Court Eastern District of Washington; 2026-10-17T01:18:01+00:00
+- [25-3092 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cv-03092/context) — District Court Eastern District of Washington; 2026-10-17T01:18:01+00:00
+- [16-2006 - USA v. Cervantes et al](https://www.govinfo.gov/app/details/USCOURTS-waed-1_16-cr-02006/context) — District Court Eastern District of Washington; 2026-10-17T01:18:01+00:00
+- [26-2131 - USA v. Berrios-Echeverria](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02131/context) — District Court Western District of Texas; 2026-10-17T01:18:01+00:00
+- [26-2090 - USA v. Cajas-Garces](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02090/context) — District Court Western District of Texas; 2026-10-17T01:18:01+00:00
+- [16-6004 - USA v. Speelman](https://www.govinfo.gov/app/details/USCOURTS-waed-4_16-cr-06004/context) — District Court Eastern District of Washington; 2026-10-17T01:18:01+00:00
+- [25-102 - USA v. Howard](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00102/context) — District Court Eastern District of Washington; 2026-10-17T01:18:01+00:00
+- [25-6020 - USA v. Atkinson](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cr-06020/context) — District Court Eastern District of Washington; 2026-10-17T01:18:01+00:00
+- [26-1350 - USA v. ROJAS ESTRADA](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01350/context) — District Court Western District of Texas; 2026-10-17T01:17:00+00:00
+- [26-2497 - USA v. Lorenzo- Lopez](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02497/context) — District Court Western District of Texas; 2026-10-17T01:17:00+00:00
+- [26-1275 - USA v. Vela et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01275/context) — District Court Western District of Texas; 2026-10-17T01:17:00+00:00
+- [25-1347 - Conway et al v. RealPage, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-tnmd-3_25-cv-01347/context) — District Court Middle District of Tennessee; 2026-10-17T01:17:00+00:00
+- [20-368 - USA v. Epern](https://www.govinfo.gov/app/details/USCOURTS-ncwd-3_20-cr-00368/context) — District Court Western District of North Carolina; 2026-10-17T01:17:00+00:00
+- [24-1000 - Sanderson v. Commissioner of Social Security](https://www.govinfo.gov/app/details/USCOURTS-nynd-5_24-cv-01000/context) — District Court Northern District of New York; 2026-10-17T01:17:00+00:00
+- [26-2705 - Valero v. Unknown Party](https://www.govinfo.gov/app/details/USCOURTS-miwd-1_26-cv-02705/context) — District Court Western District of Michigan; 2026-10-17T01:17:00+00:00
+- [25-1419 - Travis v. Caseyville IL et al](https://www.govinfo.gov/app/details/USCOURTS-ilsd-3_25-cv-01419/context) — District Court Southern District of Illinois; 2026-10-17T01:17:00+00:00
+- [26-469 - Hoesly, Brian v. Commissioner of Social Security](https://www.govinfo.gov/app/details/USCOURTS-wiwd-3_26-cv-00469/context) — District Court Western District of Wisconsin; 2026-10-17T01:16:00+00:00
+- [16-204 - USA v. Contreras](https://www.govinfo.gov/app/details/USCOURTS-waed-2_16-cr-00204/context) — District Court Eastern District of Washington; 2026-10-17T01:16:00+00:00
+- [25-149 - Paschall v. Andrade et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00149/context) — District Court Eastern District of Washington; 2026-10-17T01:16:00+00:00
+- [26-2334 - USA v. Chi-Perez](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cr-02334/context) — District Court Western District of Texas; 2026-10-17T01:16:00+00:00
+- [26-2531 - Idrissa v. Putra et al](https://www.govinfo.gov/app/details/USCOURTS-miwd-1_26-cv-02531/context) — District Court Western District of Michigan; 2026-10-17T01:16:00+00:00
+- [22-011 - The Government of the Lao People's Democratic Republic v. Baldwin et al](https://www.govinfo.gov/app/details/USCOURTS-nmid-1_22-cv-00011/context) — District Court District of Northern Mariana Islands; 2026-10-17T01:16:00+00:00
+- [25-073 - USA v. Carter](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00073/context) — District Court Eastern District of Washington; 2026-10-17T01:14:00+00:00
+- [25-239 - McCormack v. John Doe et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00239/context) — District Court Eastern District of Washington; 2026-10-17T01:14:00+00:00
+- [26-2284 - USA v. Diaz-Pineda](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02284/context) — District Court Western District of Texas; 2026-10-17T01:14:00+00:00
+- [26-1207 - USA v. Hidalgo-Mendoza](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01207/context) — District Court Western District of Texas; 2026-10-17T01:14:00+00:00
+- [23-332 - Cherry et al v. RealPage Inc et al](https://www.govinfo.gov/app/details/USCOURTS-tnmd-3_23-cv-00332/context) — District Court Middle District of Tennessee; 2026-10-17T01:14:00+00:00
+- [23-413 - White v. RealPage, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-tnmd-3_23-cv-00413/context) — District Court Middle District of Tennessee; 2026-10-17T01:14:00+00:00
+- [26-429 - United States of America v. Reyes et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cr-00429/context) — District Court Western District of Oklahoma; 2026-10-17T01:14:00+00:00
+- [26-2337 - Kang v. Gantt et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-02337/context) — District Court Western District of Oklahoma; 2026-10-17T01:14:00+00:00
+- [26-1208 - Bermudez Fleire v. Warden](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-01208/context) — District Court Western District of Oklahoma; 2026-10-17T01:14:00+00:00
+- [26-001 - USA v. Fletcher et al](https://www.govinfo.gov/app/details/USCOURTS-miwd-2_26-cr-00001/context) — District Court Western District of Michigan; 2026-10-17T01:14:00+00:00
+- [25-089 - USA v. Lopez](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00089/context) — District Court Eastern District of Washington; 2026-10-17T01:13:00+00:00
+- [25-220 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00220/context) — District Court Eastern District of Washington; 2026-10-17T01:13:00+00:00
+- [26-2324 - USA v. Guillen-Fuentes](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02324/context) — District Court Western District of Texas; 2026-10-17T01:13:00+00:00
+- [26-2206 - USA v. Diaz-Bahena](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02206/context) — District Court Western District of Texas; 2026-10-17T01:13:00+00:00
+- [23-552 - Goldman v. RealPage, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-tnmd-3_23-cv-00552/context) — District Court Middle District of Tennessee; 2026-10-17T01:13:00+00:00
+- [26-820 - Rand v. Department of Housing and Urban Development](https://www.govinfo.gov/app/details/USCOURTS-ord-3_26-cv-00820/context) — District Court District of Oregon; 2026-10-17T01:13:00+00:00
+- [26-2220 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-nywd-1_26-cv-02220/context) — District Court Western District of New York; 2026-10-17T01:13:00+00:00
+- [23-1441 - UFCW Local One Health Care Fund et al v. Greene Great American, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-nynd-6_23-cv-01441/context) — District Court Northern District of New York; 2026-10-17T01:13:00+00:00
+- [18-134 - Marcantoni v. Sodd et al](https://www.govinfo.gov/app/details/USCOURTS-mdd-8_18-cv-00134/context) — District Court District of Maryland; 2026-10-17T01:13:00+00:00
+- [25-3070 - Schier v. Anderton et al](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cv-03070/context) — District Court Eastern District of Washington; 2026-10-17T01:13:00+00:00
+- [25-2086 - USA v. Alvarez-Acevedo](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cr-02086/context) — District Court Eastern District of Washington; 2026-10-17T01:12:00+00:00
+- [25-113 - USA v. Stuckart et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00113/context) — District Court Eastern District of Washington; 2026-10-17T01:12:00+00:00
+- [17-023 - USA v. Tofsrud et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_17-cr-00023/context) — District Court Eastern District of Washington; 2026-10-17T01:12:00+00:00
+- [26-2522 - Bellorin Fernandez v. De Anda-Ybarra et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-02522/context) — District Court Western District of Texas; 2026-10-17T01:12:00+00:00
+- [26-148 - USA v. Juan](https://www.govinfo.gov/app/details/USCOURTS-tnmd-3_26-cr-00148/context) — District Court Middle District of Tennessee; 2026-10-17T01:12:00+00:00
+- [26-775 - MEDINA HURTADO v. FIELD OFFICE DIRECTOR et al](https://www.govinfo.gov/app/details/USCOURTS-pawd-3_26-cv-00775/context) — District Court Western District of Pennsylvania; 2026-10-17T01:12:00+00:00
+- [26-1471 - Hernandez Casallas v. Jones et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-01471/context) — District Court Western District of Oklahoma; 2026-10-17T01:12:00+00:00
+- [25-114 - Payton v. Roe et al](https://www.govinfo.gov/app/details/USCOURTS-ohsd-2_25-cv-00114/context) — District Court Southern District of Ohio; 2026-10-17T01:12:00+00:00
+- [25-2235 - Colony Insurance Company v. Shane Garst et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_25-cv-02235/context) — District Court Southern District of California; 2026-10-17T01:12:00+00:00
+- [26-5541 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-05541/context) — District Court Southern District of California; 2026-10-17T01:12:00+00:00
+- [26-80651 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-flsd-9_26-cv-80651/context) — District Court Southern District of Florida; 2026-10-17T01:12:00+00:00
+- [17-6012 - USA v. Ordaz](https://www.govinfo.gov/app/details/USCOURTS-waed-4_17-cr-06012/context) — District Court Eastern District of Washington; 2026-10-17T01:11:00+00:00
+- [16-2079 - USA v. Woolem et al](https://www.govinfo.gov/app/details/USCOURTS-waed-1_16-cr-02079/context) — District Court Eastern District of Washington; 2026-10-17T01:11:00+00:00
+- [21-1345 - USA v. Ibarra et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_21-cr-01345/context) — District Court Western District of Texas; 2026-10-17T01:11:00+00:00
+- [26-763 - USA v. TORRES-Barrientos](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-00763/context) — District Court Western District of Texas; 2026-10-17T01:11:00+00:00
+- [26-2334 - USA v. Romero-Velasquez](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02334/context) — District Court Western District of Texas; 2026-10-17T01:11:00+00:00
+- [25-14356 - Spilker v. Indian River Memorial Hospital Inc.](https://www.govinfo.gov/app/details/USCOURTS-flsd-2_25-cv-14356/context) — District Court Southern District of Florida; 2026-10-17T01:11:00+00:00
+- [25-293 - Welch v. FNU LNU](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00293/context) — District Court Eastern District of Washington; 2026-10-17T01:10:00+00:00
+- [16-2009 - USA v. OCampo](https://www.govinfo.gov/app/details/USCOURTS-waed-1_16-cr-02009/context) — District Court Eastern District of Washington; 2026-10-17T01:10:00+00:00
+- [26-1403 - Onate v. Gantt et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-01403/context) — District Court Western District of Oklahoma; 2026-10-17T01:10:00+00:00
+- [26-5696 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-05696/context) — District Court Southern District of California; 2026-10-17T01:10:00+00:00
+- [24-076 - USA v. Sealed](https://www.govinfo.gov/app/details/USCOURTS-txwd-5_24-cr-00076/context) — District Court Western District of Texas; 2026-10-17T01:09:00+00:00
+- [17-254 - United States of America v. Outley](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_17-cr-00254/context) — District Court Western District of Oklahoma; 2026-10-17T01:09:00+00:00
+- [26-1495 - Sahak v. Warden Diamondback Correctional Facility et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-01495/context) — District Court Western District of Oklahoma; 2026-10-17T01:09:00+00:00
+- [26-3330 - MMP Capital LLC v. Dupont Smiles Family & Cosmetic Dentistry PLLC et al](https://www.govinfo.gov/app/details/USCOURTS-nyed-2_26-cv-03330/context) — District Court Eastern District of New York; 2026-10-17T01:09:00+00:00
+- [23-313 - United States Of America v. Stratics Networks Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_23-cv-00313/context) — District Court Southern District of California; 2026-10-17T01:09:00+00:00
+- [25-093 - USA v. Cazares-Calletano](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00093/context) — District Court Eastern District of Washington; 2026-10-17T01:08:00+00:00
+- [25-169 - Niederquell v. Dosanjh Enterprises Inc](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00169/context) — District Court Eastern District of Washington; 2026-10-17T01:08:00+00:00
+- [26-1674 - USA v. Garza et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01674/context) — District Court Western District of Texas; 2026-10-17T01:08:00+00:00
+- [26-975 - Bogan v. Moore](https://www.govinfo.gov/app/details/USCOURTS-ilsd-3_26-cv-00975/context) — District Court Southern District of Illinois; 2026-10-17T01:08:00+00:00
+- [25-2083 - USA v. Vazquez-Placido](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cr-02083/context) — District Court Eastern District of Washington; 2026-10-17T01:07:00+00:00
+- [26-398 - Weber et al v. Air Transport International, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-ohsd-2_26-cv-00398/context) — District Court Southern District of Ohio; 2026-10-17T01:07:00+00:00
+- [26-630 - Bennett v. Acting N.Y.S. Division of Parole et al](https://www.govinfo.gov/app/details/USCOURTS-nynd-1_26-cv-00630/context) — District Court Northern District of New York; 2026-10-17T01:07:00+00:00
+- [26-1024 - State of Maryland v. Venturella et al](https://www.govinfo.gov/app/details/USCOURTS-mdd-1_26-cv-01024/context) — District Court District of Maryland; 2026-10-17T01:07:00+00:00
+- [26-5698 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-05698/context) — District Court Southern District of California; 2026-10-17T01:07:00+00:00
+- [25-5059 - Johnston v. Alabama et al](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05059/context) — District Court Eastern District of Washington; 2026-10-17T01:06:00+00:00
+- [25-211 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00211/context) — District Court Eastern District of Washington; 2026-10-17T01:06:00+00:00
+- [25-213 - Harper v. NaphCare Inc et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00213/context) — District Court Eastern District of Washington; 2026-10-17T01:06:00+00:00
+- [25-153 - Smith v. Adams et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00153/context) — District Court Eastern District of Washington; 2026-10-17T01:06:00+00:00
+- [26-1237 - USA v. Olguin-Martinez](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01237/context) — District Court Western District of Texas; 2026-10-17T01:06:00+00:00
+- [26-1811 - USA v. Castillo-Umanzor](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01811/context) — District Court Western District of Texas; 2026-10-17T01:06:00+00:00
+- [26-821 - Rand v. Department of Veterans Affairs](https://www.govinfo.gov/app/details/USCOURTS-ord-3_26-cv-00821/context) — District Court District of Oregon; 2026-10-17T01:06:00+00:00
+- [26-970 - Dadi Sani v. Figueroa et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-00970/context) — District Court Western District of Oklahoma; 2026-10-17T01:06:00+00:00
+- [19-010 - USA v. WHEELER](https://www.govinfo.gov/app/details/USCOURTS-insd-2_19-cr-00010/context) — District Court Southern District of Indiana; 2026-10-17T01:06:00+00:00
+- [26-881 - Newbern v. Hughes et al](https://www.govinfo.gov/app/details/USCOURTS-ilsd-3_26-cv-00881/context) — District Court Southern District of Illinois; 2026-10-17T01:06:00+00:00
+- [26-1111 - USA v. Rodriguez](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01111/context) — District Court Western District of Texas; 2026-10-17T01:04:06+00:00
+- [26-619 - USA v. Delfin, Jr. et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-00619/context) — District Court Western District of Texas; 2026-10-17T01:04:05+00:00
+- [26-2522 - USA v. Caballero Lopez](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02522/context) — District Court Western District of Texas; 2026-10-17T01:04:05+00:00
+- [26-1239 - Tejada Barrios v. Warden Diamondback Correctional Facility](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-01239/context) — District Court Western District of Oklahoma; 2026-10-17T01:04:05+00:00
+- [26-1689 - Hernandez v. Figueroa et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-01689/context) — District Court Western District of Oklahoma; 2026-10-17T01:04:05+00:00
+- [26-5572 - Whitfield v. John Jay University Criminal Justice Administration](https://www.govinfo.gov/app/details/USCOURTS-nyed-1_26-cv-05572/context) — District Court Eastern District of New York; 2026-10-17T01:04:05+00:00
+- [26-3244 - Dorsey v. United States of America et al](https://www.govinfo.gov/app/details/USCOURTS-ksd-5_26-cv-03244/context) — District Court District of Kansas; 2026-10-17T01:04:05+00:00
+- [16-2442 - Alegre et al v. Contreras et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_16-cv-02442/context) — District Court Southern District of California; 2026-10-17T01:04:05+00:00
+- [26-1032 - House, Nicholas v. Hammel, Katrina et al](https://www.govinfo.gov/app/details/USCOURTS-wiwd-3_26-cv-01032/context) — District Court Western District of Wisconsin; 2026-10-17T01:03:03+00:00
+- [25-088 - USA v. Grisby](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00088/context) — District Court Eastern District of Washington; 2026-10-17T01:03:03+00:00
+- [16-6046 - USA v. Elvira et al](https://www.govinfo.gov/app/details/USCOURTS-waed-4_16-cr-06046/context) — District Court Eastern District of Washington; 2026-10-17T01:03:03+00:00
+- [26-1197 - USA v. Rodriguez et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01197/context) — District Court Western District of Texas; 2026-10-17T01:03:03+00:00
+- [26-2209 - USA v. Fuentes-Castro](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02209/context) — District Court Western District of Texas; 2026-10-17T01:03:03+00:00
+- [26-2195 - USA v. Velazquez-Garcia](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02195/context) — District Court Western District of Texas; 2026-10-17T01:03:03+00:00
+- [26-1990 - USA v. Lorenzo-Hernandez](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01990/context) — District Court Western District of Texas; 2026-10-17T01:03:03+00:00
+- [26-2030 - Ruiz et al v. US Immigration and Customs Enforcement et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-02030/context) — District Court Western District of Oklahoma; 2026-10-17T01:03:03+00:00
+- [26-1793 - Pendergrass v. Rowe et al](https://www.govinfo.gov/app/details/USCOURTS-mdd-1_26-cv-01793/context) — District Court District of Maryland; 2026-10-17T01:03:03+00:00
+- [25-3112 - Martin v. Meredith](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cv-03112/context) — District Court Eastern District of Washington; 2026-10-17T01:03:02+00:00
+- [25-1723 - Cohn v. Doe, 1-10 et al](https://www.govinfo.gov/app/details/USCOURTS-nynd-1_25-cv-01723/context) — District Court Northern District of New York; 2026-10-17T01:03:02+00:00
+- [16-074 - USA v. Swallow](https://www.govinfo.gov/app/details/USCOURTS-waed-2_16-cr-00074/context) — District Court Eastern District of Washington; 2026-10-17T01:02:00+00:00
+- [26-361 - Fulwiler et al v. Liberty Mutual Group, Inc.](https://www.govinfo.gov/app/details/USCOURTS-ohsd-3_26-cv-00361/context) — District Court Southern District of Ohio; 2026-10-17T01:02:00+00:00
+- [26-4029 - USA v. Angel Ruiz](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-04029/context) — District Court Southern District of California; 2026-10-17T01:02:00+00:00
+- [26-61562 - Dryden v. Bain et al](https://www.govinfo.gov/app/details/USCOURTS-flsd-0_26-cv-61562/context) — District Court Southern District of Florida; 2026-10-17T01:02:00+00:00
+- [25-209 - Orthodox Church in America et al v. Ferguson et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00209/context) — District Court Eastern District of Washington; 2026-10-17T01:01:00+00:00
+- [22-020 - Adams v. Louisiana Department of Corrections et al](https://www.govinfo.gov/app/details/USCOURTS-lamd-3_22-cv-00020/context) — District Court Middle District of Louisiana; 2026-10-17T01:01:00+00:00
+- [25-5061 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05061/context) — District Court Eastern District of Washington; 2026-10-17T01:00:00+00:00
+- [17-2019 - USA v. Lomakema](https://www.govinfo.gov/app/details/USCOURTS-waed-1_17-cr-02019/context) — District Court Eastern District of Washington; 2026-10-17T01:00:00+00:00
+- [25-074 - USA v. Castagna](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00074/context) — District Court Eastern District of Washington; 2026-10-17T01:00:00+00:00
+- [26-2227 - USA v. Perez-Lopez](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02227/context) — District Court Western District of Texas; 2026-10-17T01:00:00+00:00
+- [26-2133 - USA v. Buenrostro-Ramirez](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02133/context) — District Court Western District of Texas; 2026-10-17T01:00:00+00:00
+- [26-2530 - Criollo-Criollo v. McGregor et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-02530/context) — District Court Western District of Texas; 2026-10-17T01:00:00+00:00
+- [26-1818 - GUTIERREZ v. MULLIN, et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-01818/context) — District Court Western District of Texas; 2026-10-17T01:00:00+00:00
+- [25-002 - Perez v. Bihembo, et al.](https://www.govinfo.gov/app/details/USCOURTS-tnmd-3_25-cv-00002/context) — District Court Middle District of Tennessee; 2026-10-17T01:00:00+00:00
+- [24-900 - BHATTACHARYA v. UNIVERSITY OF PITTSBURGH-OF THE COMMONWEALTH SYSTEM OF HIGHER EDUCATION](https://www.govinfo.gov/app/details/USCOURTS-pawd-2_24-cv-00900/context) — District Court Western District of Pennsylvania; 2026-10-17T01:00:00+00:00
+- [25-1375 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-pamd-3_25-cv-01375/context) — District Court Middle District of Pennsylvania; 2026-10-17T01:00:00+00:00
+- [26-2165 - Arellano-Uruena v. Johnson et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-02165/context) — District Court Western District of Oklahoma; 2026-10-17T01:00:00+00:00
+- [26-2436 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-nmd-1_26-cv-02436/context) — District Court District of New Mexico; 2026-10-17T01:00:00+00:00
+- [25-090 - USA v. Judge](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00090/context) — District Court Eastern District of Washington; 2026-10-17T01:00:00+00:00
+- [26-1031 - Taylor, Craig v. Weinman, Robert et al](https://www.govinfo.gov/app/details/USCOURTS-wiwd-3_26-cv-01031/context) — District Court Western District of Wisconsin; 2026-10-17T00:59:00+00:00
+- [25-221 - Schaal v. IAT Insurance Group Inc et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00221/context) — District Court Eastern District of Washington; 2026-10-17T00:59:00+00:00
+- [25-5081 - Penaloza v. Department of Corrections](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05081/context) — District Court Eastern District of Washington; 2026-10-17T00:59:00+00:00
+- [25-282 - Stadtmueller v. United States of America](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00282/context) — District Court Eastern District of Washington; 2026-10-17T00:59:00+00:00
+- [26-2112 - USA v. Figueroa-Llanos](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02112/context) — District Court Western District of Texas; 2026-10-17T00:59:00+00:00
+- [26-1422 - USA v. Silva-Labrador](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01422/context) — District Court Western District of Texas; 2026-10-17T00:59:00+00:00
+- [25-158 - Ramey v. Jones et al](https://www.govinfo.gov/app/details/USCOURTS-txed-5_25-cv-00158/context) — District Court Eastern District of Texas; 2026-10-17T00:59:00+00:00
+- [26-25968 - Albion Brand Foundry Ltd. v. The Partnerships, Unincorporated Associations Identified on Schedule A](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_26-cv-25968/context) — District Court Southern District of Florida; 2026-10-17T00:59:00+00:00
+- [26-4031 - USA v. Lopez Lopez](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-04031/context) — District Court Southern District of California; 2026-10-17T00:59:00+00:00
+- [25-3609 - Anderson et al v. American Airlines, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_25-cv-03609/context) — District Court Southern District of California; 2026-10-17T00:59:00+00:00
+- [26-5767 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-05767/context) — District Court Southern District of California; 2026-10-17T00:59:00+00:00
+- [25-099 - USA v. Smith](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00099/context) — District Court Eastern District of Washington; 2026-10-17T00:58:00+00:00
+- [25-080 - USA v. Hargraves](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00080/context) — District Court Eastern District of Washington; 2026-10-17T00:58:00+00:00
+- [25-108 - USA v. Ruiz-Rodriguez](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00108/context) — District Court Eastern District of Washington; 2026-10-17T00:58:00+00:00
+- [26-1863 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-nmd-2_26-cv-01863/context) — District Court District of New Mexico; 2026-10-17T00:58:00+00:00
+- [26-4027 - USA v. Lara-Buenrostro](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-04027/context) — District Court Southern District of California; 2026-10-17T00:58:00+00:00
+- [25-106 - USA v. Nordlund](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00106/context) — District Court Eastern District of Washington; 2026-10-17T00:57:00+00:00
+- [25-207 - NCMIC Insurance Company v. Wellwood et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00207/context) — District Court Eastern District of Washington; 2026-10-17T00:57:00+00:00
+- [25-168 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00168/context) — District Court Eastern District of Washington; 2026-10-17T00:57:00+00:00
+- [25-1246 - Rodriguez-Canas v. Warden, Noble Correctional Institution](https://www.govinfo.gov/app/details/USCOURTS-ohsd-2_25-cv-01246/context) — District Court Southern District of Ohio; 2026-10-17T00:57:00+00:00
+- [26-21982 - Ozimo v. Hon. Laura Shearon Cruz et al](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_26-cv-21982/context) — District Court Southern District of Florida; 2026-10-17T00:57:00+00:00
+- [25-116 - USA v. Iraheta-Mercado](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00116/context) — District Court Eastern District of Washington; 2026-10-17T00:55:24+00:00
+- [25-154 - Langworthy v. Merritt et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00154/context) — District Court Eastern District of Washington; 2026-10-17T00:55:24+00:00
+- [25-3100 - Buck v. Washines et al](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cv-03100/context) — District Court Eastern District of Washington; 2026-10-17T00:55:24+00:00
+- [25-295 - Goss v. Safeco Insurance Company of America](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00295/context) — District Court Eastern District of Washington; 2026-10-17T00:55:24+00:00
+- [25-3065 - Rojas v. International Paper Company](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cv-03065/context) — District Court Eastern District of Washington; 2026-10-17T00:55:24+00:00
+- [25-3083 - Crawford v. Masters et al](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cv-03083/context) — District Court Eastern District of Washington; 2026-10-17T00:55:24+00:00
+- [22-637 - USA v. Sealed](https://www.govinfo.gov/app/details/USCOURTS-txwd-5_22-cr-00637/context) — District Court Western District of Texas; 2026-10-17T00:55:24+00:00
+- [26-2126 - USA v. Tambini-Ames](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02126/context) — District Court Western District of Texas; 2026-10-17T00:55:24+00:00
+- [26-2102 - Morillo v. Warden Diamondback Correctional Facility et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-02102/context) — District Court Western District of Oklahoma; 2026-10-17T00:55:24+00:00
+- [24-572 - Andrus v. City of Cincinnati Police Department et al](https://www.govinfo.gov/app/details/USCOURTS-ohsd-1_24-cv-00572/context) — District Court Southern District of Ohio; 2026-10-17T00:55:24+00:00
+- [26-1835 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-nywd-1_26-cv-01835/context) — District Court Western District of New York; 2026-10-17T00:55:24+00:00
+- [25-1796 - HARVARD v. WINGARD](https://www.govinfo.gov/app/details/USCOURTS-pawd-2_25-cv-01796/context) — District Court Western District of Pennsylvania; 2026-10-17T00:55:23+00:00
+- [24-822 - Imani v. McArdle et al](https://www.govinfo.gov/app/details/USCOURTS-wiwd-3_24-cv-00822/context) — District Court Western District of Wisconsin; 2026-10-17T00:54:06+00:00
+- [25-2059 - USA v. Godoy-Gomez](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cr-02059/context) — District Court Eastern District of Washington; 2026-10-17T00:54:06+00:00
+- [25-2080 - USA v. Mata-Prida](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cr-02080/context) — District Court Eastern District of Washington; 2026-10-17T00:54:06+00:00
+- [24-588 - King v. Waco Police Department et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-6_24-cv-00588/context) — District Court Western District of Texas; 2026-10-17T00:54:06+00:00
+- [26-2659 - Rivero Ladera v. Unknown Party et al](https://www.govinfo.gov/app/details/USCOURTS-miwd-1_26-cv-02659/context) — District Court Western District of Michigan; 2026-10-17T00:54:06+00:00
+- [26-2716 - Cisse v. Putra et al](https://www.govinfo.gov/app/details/USCOURTS-miwd-1_26-cv-02716/context) — District Court Western District of Michigan; 2026-10-17T00:54:06+00:00
+- [25-2071 - USA v. Mongtomery, et al](https://www.govinfo.gov/app/details/USCOURTS-iand-6_25-cr-02071/context) — District Court Northern District of Iowa; 2026-10-17T00:54:06+00:00
+- [25-130 - United States of America v. Perrote, Christopher](https://www.govinfo.gov/app/details/USCOURTS-wiwd-3_25-cr-00130/context) — District Court Western District of Wisconsin; 2026-10-17T00:54:05+00:00
+- [25-242 - Kerr v. Moore et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00242/context) — District Court Eastern District of Washington; 2026-10-17T00:54:05+00:00
+- [25-5072 - Guzman et al v. Atomic Operations LLC](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05072/context) — District Court Eastern District of Washington; 2026-10-17T00:54:05+00:00
+- [24-146 - Sedigas v. State of Texas](https://www.govinfo.gov/app/details/USCOURTS-txwd-6_24-cv-00146/context) — District Court Western District of Texas; 2026-10-17T00:54:05+00:00
+- [24-1388 - Church v. Grajeda et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-5_24-cv-01388/context) — District Court Western District of Texas; 2026-10-17T00:54:05+00:00
+- [26-2180 - USA v. Contreras-Trejo](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02180/context) — District Court Western District of Texas; 2026-10-17T00:54:05+00:00
+- [26-224 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-txed-9_26-cv-00224/context) — District Court Eastern District of Texas; 2026-10-17T00:54:05+00:00
+- [24-1295 - VALLIN v. PNC INVESTMENTS, LLC et al](https://www.govinfo.gov/app/details/USCOURTS-pawd-2_24-cv-01295/context) — District Court Western District of Pennsylvania; 2026-10-17T00:54:05+00:00
+- [22-3799 - C.C. v. Wyndham Hotels & Resorts, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-ohsd-2_22-cv-03799/context) — District Court Southern District of Ohio; 2026-10-17T00:54:05+00:00
+- [26-101 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-ohsd-3_26-cv-00101/context) — District Court Southern District of Ohio; 2026-10-17T00:54:05+00:00
+- [20-091 - J.M. v. Sessions et al](https://www.govinfo.gov/app/details/USCOURTS-nynd-1_20-cv-00091/context) — District Court Northern District of New York; 2026-10-17T00:54:05+00:00
+- [25-4084 - United States of America v. City of New York et al](https://www.govinfo.gov/app/details/USCOURTS-nyed-1_25-cv-04084/context) — District Court Eastern District of New York; 2026-10-17T00:54:05+00:00
+- [26-1119 - IMA Financial Group, Inc. et al. v. Bryan et al.](https://www.govinfo.gov/app/details/USCOURTS-ksd-6_26-cv-01119/context) — District Court District of Kansas; 2026-10-17T00:54:05+00:00
+- [26-1001 - USA v. Howell](https://www.govinfo.gov/app/details/USCOURTS-iand-2_26-cr-01001/context) — District Court Northern District of Iowa; 2026-10-17T00:54:05+00:00
+- [26-5860 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-05860/context) — District Court Southern District of California; 2026-10-17T00:54:05+00:00
+- [26-23645 - DOT Fund LLC v. Balbina and Family Corp. et al](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_26-cv-23645/context) — District Court Southern District of Florida; 2026-10-17T00:54:05+00:00
+- [26-25868 - THE GALLEON GUILD LTD v. The Partnerships, Unincorporated Associations Identified on Schedule A](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_26-cv-25868/context) — District Court Southern District of Florida; 2026-10-17T00:54:05+00:00
+- [25-314 - Love v. State of Washington et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00314/context) — District Court Eastern District of Washington; 2026-10-17T00:54:05+00:00
+- [1:24-cv-00079 - CS Wind Malaysia Sdn. Bhd. et al v. United States](https://www.govinfo.gov/app/details/USCOURTS-cit-1_24-cv-00079/context) — United States Court of International Trade; 2026-10-17T00:53:00+00:00
+- [25-3081 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cv-03081/context) — District Court Eastern District of Washington; 2026-10-17T00:53:00+00:00
+- [25-201 - Fields v. McCroskey et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00201/context) — District Court Eastern District of Washington; 2026-10-17T00:53:00+00:00
+- [26-1665 - Durruthy Villa v. Field Office Director](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-01665/context) — District Court Western District of Texas; 2026-10-17T00:53:00+00:00
+- [26-1351 - USA v. Sanchez-Guzman et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01351/context) — District Court Western District of Texas; 2026-10-17T00:53:00+00:00
+- [26-012 - USA v. NIES](https://www.govinfo.gov/app/details/USCOURTS-pawd-1_26-cr-00012/context) — District Court Western District of Pennsylvania; 2026-10-17T00:53:00+00:00
+- [25-1939 - Colbert v. Capital One Bank (USA), N.A. et al](https://www.govinfo.gov/app/details/USCOURTS-pamd-1_25-cv-01939/context) — District Court Middle District of Pennsylvania; 2026-10-17T00:53:00+00:00
+- [26-1995 - Melo-Rojas v. Mullin](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-01995/context) — District Court Western District of Oklahoma; 2026-10-17T00:53:00+00:00
+- [26-2073 - De La Cruz Vaca v. Venturella et al](https://www.govinfo.gov/app/details/USCOURTS-nynd-9_26-cv-02073/context) — District Court Northern District of New York; 2026-10-17T00:53:00+00:00
+- [25-2367 - Berry et al v. Petri et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_25-cv-02367/context) — District Court Southern District of California; 2026-10-17T00:53:00+00:00
+- [26-3057 - USA v. Arce Jr. et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-03057/context) — District Court Southern District of California; 2026-10-17T00:53:00+00:00
+- [25-263 - Parker v. Ghidotti et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00263/context) — District Court Eastern District of Washington; 2026-10-17T00:51:05+00:00
+- [26-2376 - USA v. Martinez-Licona](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02376/context) — District Court Western District of Texas; 2026-10-17T00:51:05+00:00
+- [25-1010 - Automotive Lift Institute, Inc. v. Dami Co., LLC](https://www.govinfo.gov/app/details/USCOURTS-nynd-5_25-cv-01010/context) — District Court Northern District of New York; 2026-10-17T00:51:05+00:00
+- [25-123 - USA v. Marsh](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00123/context) — District Court Eastern District of Washington; 2026-10-17T00:51:05+00:00
+- [26-1669 - Aragoza Lopez v. Warden](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-01669/context) — District Court Western District of Texas; 2026-10-17T00:51:04+00:00
+- [26-485 - USA v. Islas-Mateo](https://www.govinfo.gov/app/details/USCOURTS-txwd-5_26-cr-00485/context) — District Court Western District of Texas; 2026-10-17T00:51:04+00:00
+- [26-720 - Wang v. Lanphear](https://www.govinfo.gov/app/details/USCOURTS-rid-1_26-cv-00720/context) — District Court District of Rhode Island; 2026-10-17T00:51:04+00:00
+- [21-490 - Davis v. City of Providence through its Treasurer James Lombardi et al](https://www.govinfo.gov/app/details/USCOURTS-rid-1_21-cv-00490/context) — District Court District of Rhode Island; 2026-10-17T00:51:04+00:00
+- [26-2921 - Wadkins-Roberts v. Commissioner of Social Security Administration et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-02921/context) — District Court Western District of Oklahoma; 2026-10-17T00:51:04+00:00
+- [26-2475 - Olivera Arreaga v. Unknown Party](https://www.govinfo.gov/app/details/USCOURTS-miwd-1_26-cv-02475/context) — District Court Western District of Michigan; 2026-10-17T00:51:04+00:00
+- [26-4003 - USA v. Nasario](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-04003/context) — District Court Southern District of California; 2026-10-17T00:51:04+00:00
+- [26-4030 - USA v. Quijano-Chavez](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-04030/context) — District Court Southern District of California; 2026-10-17T00:51:04+00:00
+- [26-1989 - USA v. Cordova-Segovia](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01989/context) — District Court Western District of Texas; 2026-10-17T00:50:17+00:00
+- [26-419 - USA v. Euceda-Bonilla](https://www.govinfo.gov/app/details/USCOURTS-txwd-5_26-cr-00419/context) — District Court Western District of Texas; 2026-10-17T00:50:17+00:00
+- [26-2017 - USA v. Gomez-Arroyo](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02017/context) — District Court Western District of Texas; 2026-10-17T00:50:17+00:00
+- [23-229 - USA v. SEALED](https://www.govinfo.gov/app/details/USCOURTS-txed-4_23-cr-00229/context) — District Court Eastern District of Texas; 2026-10-17T00:50:17+00:00
+- [26-2473 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-pamd-3_26-cv-02473/context) — District Court Middle District of Pennsylvania; 2026-10-17T00:50:17+00:00
+- [25-1605 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-pamd-1_25-cv-01605/context) — District Court Middle District of Pennsylvania; 2026-10-17T00:50:17+00:00
+- [26-1970 - LALA-CASTRO v. ODDO et al](https://www.govinfo.gov/app/details/USCOURTS-pawd-3_26-cv-01970/context) — District Court Western District of Pennsylvania; 2026-10-17T00:49:07+00:00
+- [25-2063 - USA v. Umtuch](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cr-02063/context) — District Court Eastern District of Washington; 2026-10-17T00:49:06+00:00
+- [26-2571 - USA v. Mendez-Alvarado](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02571/context) — District Court Western District of Texas; 2026-10-17T00:49:06+00:00
+- [26-20389 - Evans v. Church of Scientology International et al](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_26-cv-20389/context) — District Court Southern District of Florida; 2026-10-17T00:49:06+00:00
+- [25-206 - Morley v. Naphcare Medical Department](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00206/context) — District Court Eastern District of Washington; 2026-10-17T00:48:21+00:00
+- [26-2307 - USA v. Ramirez-Milian](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02307/context) — District Court Western District of Texas; 2026-10-17T00:48:21+00:00
+- [26-1878 - Balbuena-Torres v. Garcia et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-01878/context) — District Court Western District of Texas; 2026-10-17T00:48:21+00:00
+- [26-1948 - USA v. Lopez-Solis](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01948/context) — District Court Western District of Texas; 2026-10-17T00:48:21+00:00
+- [25-101 - USA v. Stevens et al](https://www.govinfo.gov/app/details/USCOURTS-txed-6_25-cr-00101/context) — District Court Eastern District of Texas; 2026-10-17T00:48:21+00:00
+- [26-1853 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-pamd-1_26-cv-01853/context) — District Court Middle District of Pennsylvania; 2026-10-17T00:48:21+00:00
+- [25-954 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-ord-1_25-cv-00954/context) — District Court District of Oregon; 2026-10-17T00:48:21+00:00
+- [16-328 - USA v. Case, et al](https://www.govinfo.gov/app/details/USCOURTS-ord-6_16-cv-00328/context) — District Court District of Oregon; 2026-10-17T00:48:21+00:00
+- [26-1744 - Morales-Loaiza v. Director of Diamondback Correctional Facility](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-01744/context) — District Court Western District of Oklahoma; 2026-10-17T00:48:21+00:00
+- [25-198 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00198/context) — District Court Eastern District of Washington; 2026-10-17T00:48:21+00:00
+- [17-039 - USA v. De Jesus et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_17-cr-00039/context) — District Court Eastern District of Washington; 2026-10-17T00:47:25+00:00
+- [25-896 - Hunt v. United States of America et al](https://www.govinfo.gov/app/details/USCOURTS-utd-2_25-cv-00896/context) — District Court District of Utah; 2026-10-17T00:47:25+00:00
+- [26-1481 - Siddiqui v. Sodexo-Healthcare **Transferred to the Northern District of Georgia - Atlanta Division**](https://www.govinfo.gov/app/details/USCOURTS-txed-4_26-cv-01481/context) — District Court Eastern District of Texas; 2026-10-17T00:47:25+00:00
+- [24-353 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-ord-3_24-cv-00353/context) — District Court District of Oregon; 2026-10-17T00:47:25+00:00
+- [26-4037 - USA v. Marra](https://www.govinfo.gov/app/details/USCOURTS-iand-5_26-cr-04037/context) — District Court Northern District of Iowa; 2026-10-17T00:47:25+00:00
+- [26-2026 - USA v. Alicea-Castillo](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02026/context) — District Court Western District of Texas; 2026-10-17T00:47:24+00:00
+- [26-3253 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-nmd-2_26-cv-03253/context) — District Court District of New Mexico; 2026-10-17T00:47:24+00:00
+- [26-3089 - Mike v. Lovelace Women's Hospital](https://www.govinfo.gov/app/details/USCOURTS-nmd-1_26-cv-03089/context) — District Court District of New Mexico; 2026-10-17T00:46:08+00:00
+- [25-2520 - Cipres v. The Home Depot et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_25-cv-02520/context) — District Court Southern District of California; 2026-10-17T00:46:08+00:00
+- [26-2589 - Dailey v. United States Attorney's Office et al](https://www.govinfo.gov/app/details/USCOURTS-nmd-1_26-cv-02589/context) — District Court District of New Mexico; 2026-10-17T00:46:08+00:00
+- [26-2441 - Roque Humberto Garcia-Garcia v. David Venturella et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-02441/context) — District Court Western District of Texas; 2026-10-17T00:46:07+00:00
+- [26-5327 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-nyed-1_26-cv-05327/context) — District Court Eastern District of New York; 2026-10-17T00:46:07+00:00
+- [26-1679 - USA v. Oppelt](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01679/context) — District Court Western District of Texas; 2026-10-17T00:45:11+00:00
+- [26-055 - USA v. Flores](https://www.govinfo.gov/app/details/USCOURTS-txed-1_26-cr-00055/context) — District Court Eastern District of Texas; 2026-10-17T00:45:11+00:00
+- [25-14867 - Ivy Tran Pham Ngo](https://www.govinfo.gov/app/details/USCOURTS-cob-1_25-bk-14867/context) — Bankruptcy Court District of Colorado; 2026-10-17T00:45:10+00:00
+- [25-5074 - Palmer v. Fulton et al](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05074/context) — District Court Eastern District of Washington; 2026-10-17T00:45:10+00:00
+- [17-075 - USA v. Flores](https://www.govinfo.gov/app/details/USCOURTS-waed-2_17-cr-00075/context) — District Court Eastern District of Washington; 2026-10-17T00:45:10+00:00
+- [26-1799 - Santoya Acosta v. De Anda-Ybarra et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-01799/context) — District Court Western District of Texas; 2026-10-17T00:45:10+00:00
+- [26-2430 - USA v. Flores-Martinez](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02430/context) — District Court Western District of Texas; 2026-10-17T00:45:10+00:00
+- [26-2111 - USA v. Euceda-Hernandez](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02111/context) — District Court Western District of Texas; 2026-10-17T00:45:10+00:00
+- [26-1869 - Nicolle v. Davis](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-01869/context) — District Court Western District of Oklahoma; 2026-10-17T00:45:10+00:00
+- [26-864 - Bell v. Mahilo et al](https://www.govinfo.gov/app/details/USCOURTS-ohsd-1_26-cv-00864/context) — District Court Southern District of Ohio; 2026-10-17T00:45:10+00:00
+- [24-8471 - Mercante v. Tarzia](https://www.govinfo.gov/app/details/USCOURTS-nyed-1_24-cv-08471/context) — District Court Eastern District of New York; 2026-10-17T00:45:10+00:00
+- [26-61490 - Darby v. Broward Shereiff Dept et al](https://www.govinfo.gov/app/details/USCOURTS-flsd-0_26-cv-61490/context) — District Court Southern District of Florida; 2026-10-17T00:45:10+00:00
+- [25-245 - Shevchenko v. Atlas Pro Construction LLC et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00245/context) — District Court Eastern District of Washington; 2026-10-17T00:45:09+00:00
+- [26-2902 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-pamd-3_26-cv-02902/context) — District Court Middle District of Pennsylvania; 2026-10-17T00:45:09+00:00
+- [25-177 - USA v. Petrie](https://www.govinfo.gov/app/details/USCOURTS-nynd-5_25-cr-00177/context) — District Court Northern District of New York; 2026-10-17T00:45:09+00:00
+- [25-3751 - Hernandez v. L'Oreal USA S/D, Inc.](https://www.govinfo.gov/app/details/USCOURTS-mdd-8_25-cv-03751/context) — District Court District of Maryland; 2026-10-17T00:45:09+00:00
+- [25-3063 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cv-03063/context) — District Court Eastern District of Washington; 2026-10-17T00:44:00+00:00
+- [26-1710 - USA v. Esteban-Reyes](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01710/context) — District Court Western District of Texas; 2026-10-17T00:44:00+00:00
+- [26-1823 - USA v. Dolmo-Fuentes](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01823/context) — District Court Western District of Texas; 2026-10-17T00:44:00+00:00
+- [26-40003 - USA v. Toole et al](https://www.govinfo.gov/app/details/USCOURTS-ksd-5_26-cr-40003/context) — District Court District of Kansas; 2026-10-17T00:44:00+00:00
+- [26-4784 - Polite v. A.O. Reed & Co., LLC. et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-04784/context) — District Court Southern District of California; 2026-10-17T00:44:00+00:00
+- [25-2058 - USA v. Alvarado-Munoz](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cr-02058/context) — District Court Eastern District of Washington; 2026-10-17T00:42:04+00:00
+- [26-2332 - USA v. Garcia-Cordero](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cr-02332/context) — District Court Western District of Texas; 2026-10-17T00:42:04+00:00
+- [25-976 - Tufano v. Fenix Internet LLC](https://www.govinfo.gov/app/details/USCOURTS-pamd-3_25-cv-00976/context) — District Court Middle District of Pennsylvania; 2026-10-17T00:42:04+00:00
+- [26-2158 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-nywd-1_26-cv-02158/context) — District Court Western District of New York; 2026-10-17T00:42:04+00:00
+- [25-1000 - Butcavage v. County of Oswego et al](https://www.govinfo.gov/app/details/USCOURTS-nynd-9_25-cv-01000/context) — District Court Northern District of New York; 2026-10-17T00:42:04+00:00
+- [26-019 - USA v. McGhghy, et al](https://www.govinfo.gov/app/details/USCOURTS-iand-1_26-cr-00019/context) — District Court Northern District of Iowa; 2026-10-17T00:42:04+00:00
+- [26-978 - Mitchell v. Hunter et al](https://www.govinfo.gov/app/details/USCOURTS-ilsd-3_26-cv-00978/context) — District Court Southern District of Illinois; 2026-10-17T00:42:04+00:00
+- [26-3558 - In re: The Roman Catholic Bishop of San Diego](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-03558/context) — District Court Southern District of California; 2026-10-17T00:42:04+00:00
+- [1:24-cv-00174 - GameChange Solar Corp. v. United States](https://www.govinfo.gov/app/details/USCOURTS-cit-1_24-cv-00174/context) — United States Court of International Trade; 2026-10-17T00:42:04+00:00
+- [25-3132 - Martin v. Judge Rodriguez-True et al](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cv-03132/context) — District Court Eastern District of Washington; 2026-10-17T00:41:07+00:00
+- [25-6024 - USA v. Diaz](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cr-06024/context) — District Court Eastern District of Washington; 2026-10-17T00:41:07+00:00
+- [26-2277 - USA v. Betancourth-Ortez](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02277/context) — District Court Western District of Texas; 2026-10-17T00:41:07+00:00
+- [26-487 - USA v. Lopez-Avila](https://www.govinfo.gov/app/details/USCOURTS-txwd-5_26-cr-00487/context) — District Court Western District of Texas; 2026-10-17T00:41:07+00:00
+- [26-121 - Garcia v. KBBH et al](https://www.govinfo.gov/app/details/USCOURTS-ord-1_26-cv-00121/context) — District Court District of Oregon; 2026-10-17T00:41:07+00:00
+- [26-2466 - Lin v. Blanche et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-02466/context) — District Court Western District of Oklahoma; 2026-10-17T00:41:07+00:00
+- [26-2685 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-nmd-1_26-cv-02685/context) — District Court District of New Mexico; 2026-10-17T00:41:07+00:00
+- [15-1191 - Mason v. State of Delaware (J.P. Court) et al](https://www.govinfo.gov/app/details/USCOURTS-ded-1_15-cv-01191/context) — District Court District of Delaware; 2026-10-17T00:41:07+00:00
+- [25-5095 - Valencia v. New U Women's Clinic and Aesthetics PLLC](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05095/context) — District Court Eastern District of Washington; 2026-10-17T00:40:06+00:00
+- [25-3062 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cv-03062/context) — District Court Eastern District of Washington; 2026-10-17T00:40:06+00:00
+- [26-1579 - GUZMAN RIVERA v. LYONS et al](https://www.govinfo.gov/app/details/USCOURTS-pawd-3_26-cv-01579/context) — District Court Western District of Pennsylvania; 2026-10-17T00:40:06+00:00
+- [26-190 - Rouse v. Warren County Jail et al](https://www.govinfo.gov/app/details/USCOURTS-ohsd-1_26-cv-00190/context) — District Court Southern District of Ohio; 2026-10-17T00:40:06+00:00
+- [26-477 - Herbert v. Warden, Belmont Correctional Institution](https://www.govinfo.gov/app/details/USCOURTS-ohsd-2_26-cv-00477/context) — District Court Southern District of Ohio; 2026-10-17T00:40:06+00:00
+- [25-2739 - USA v. Moralez](https://www.govinfo.gov/app/details/USCOURTS-nmd-1_25-cr-02739/context) — District Court District of New Mexico; 2026-10-17T00:40:06+00:00
+- [26-2717 - Cruz Barrera v. Putra et al](https://www.govinfo.gov/app/details/USCOURTS-miwd-1_26-cv-02717/context) — District Court Western District of Michigan; 2026-10-17T00:40:06+00:00
+- [26-044 - USA v. Grayer](https://www.govinfo.gov/app/details/USCOURTS-lamd-3_26-cr-00044/context) — District Court Middle District of Louisiana; 2026-10-17T00:40:06+00:00
+- [25-061 - USA v. Caldwell](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-po-00061/context) — District Court Eastern District of Washington; 2026-10-17T00:39:07+00:00
+- [26-2515 - USA v. Panzo-Tzompaxtle](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02515/context) — District Court Western District of Texas; 2026-10-17T00:39:07+00:00
+- [26-1625 - Mora-Lopez v. De Anda-Ybarra et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-01625/context) — District Court Western District of Texas; 2026-10-17T00:39:07+00:00
+- [26-460 - USA v. Ortiz-Quirino](https://www.govinfo.gov/app/details/USCOURTS-txwd-1_26-cr-00460/context) — District Court Western District of Texas; 2026-10-17T00:39:07+00:00
+- [26-461 - USA v. De Jesus-Dircio](https://www.govinfo.gov/app/details/USCOURTS-txwd-1_26-cr-00461/context) — District Court Western District of Texas; 2026-10-17T00:39:07+00:00
+- [26-1679 - Almeida Campos v. Department of Homeland Security](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-01679/context) — District Court Western District of Texas; 2026-10-17T00:39:06+00:00
+- [26-2157 - USA v. Sandres-Quiroz](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02157/context) — District Court Western District of Texas; 2026-10-17T00:39:06+00:00
+- [25-1173 - Bennett v. Akshar et al](https://www.govinfo.gov/app/details/USCOURTS-nynd-9_25-cv-01173/context) — District Court Northern District of New York; 2026-10-17T00:39:06+00:00
+- [25-112 - USA v. Prestwood](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00112/context) — District Court Eastern District of Washington; 2026-10-17T00:38:06+00:00
+- [25-193 - Jones v. Smith et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00193/context) — District Court Eastern District of Washington; 2026-10-17T00:38:06+00:00
+- [26-2121 - Aquino Diaz v. Blanche et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-02121/context) — District Court Western District of Texas; 2026-10-17T00:38:06+00:00
+- [26-2046 - USA v. Ochoa-Cervantes](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02046/context) — District Court Western District of Texas; 2026-10-17T00:38:06+00:00
+- [26-6037 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-nyed-1_26-cv-06037/context) — District Court Eastern District of New York; 2026-10-17T00:38:06+00:00
+- [25-652 - Faster Than Prime et al v. Mad Dog LLC et al](https://www.govinfo.gov/app/details/USCOURTS-mdd-1_25-cv-00652/context) — District Court District of Maryland; 2026-10-17T00:38:06+00:00
+- [26-4026 - USA v. Barreto](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-04026/context) — District Court Southern District of California; 2026-10-17T00:38:06+00:00
+- [25-019 - In Re: Water Street Capital Inc](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-mc-00019/context) — District Court Eastern District of Washington; 2026-10-17T00:37:07+00:00
+- [26-1991 - USA v. Ramirez-Pesina](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-01991/context) — District Court Western District of Texas; 2026-10-17T00:37:07+00:00
+- [26-3341 - Francischetti et al v. Unison Agreement Corporation et al](https://www.govinfo.gov/app/details/USCOURTS-mdd-1_26-cv-03341/context) — District Court District of Maryland; 2026-10-17T00:37:07+00:00
+- [25-2087 - USA v. Cruz](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cr-02087/context) — District Court Eastern District of Washington; 2026-10-17T00:37:07+00:00
+- [26-2162 - USA v. Betancurth-Zuniga](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02162/context) — District Court Western District of Texas; 2026-10-17T00:36:20+00:00
+- [26-2274 - USA v. Murillo-Raudales](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02274/context) — District Court Western District of Texas; 2026-10-17T00:36:20+00:00
+- [26-1966 - Contreras Garcia v. De And A-Ybarra et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-01966/context) — District Court Western District of Texas; 2026-10-17T00:36:20+00:00
+- [24-094 - Narragansett Pier Railroad Company, Inc. v. Town of Narragansett](https://www.govinfo.gov/app/details/USCOURTS-rid-1_24-cv-00094/context) — District Court District of Rhode Island; 2026-10-17T00:36:20+00:00
+- [25-3109 - Kapp v. McDaniel](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cv-03109/context) — District Court Eastern District of Washington; 2026-10-17T00:35:22+00:00
+- [26-473 - USA v. Ariciaga-Cuautencos](https://www.govinfo.gov/app/details/USCOURTS-txwd-5_26-cr-00473/context) — District Court Western District of Texas; 2026-10-17T00:35:22+00:00
+- [26-1489 - Chavez Carbajal v. Blanche et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-01489/context) — District Court Western District of Texas; 2026-10-17T00:35:22+00:00
+- [24-229 - ADVANTAGECARE REHABILITATION, LLC v. WILEY MISSION et al](https://www.govinfo.gov/app/details/USCOURTS-pawd-2_24-cv-00229/context) — District Court Western District of Pennsylvania; 2026-10-17T00:35:22+00:00
+- [25-1318 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-pamd-1_25-cv-01318/context) — District Court Middle District of Pennsylvania; 2026-10-17T00:34:07+00:00
+- [26-215 - Mitchell v. Commissioner of Social Security](https://www.govinfo.gov/app/details/USCOURTS-nynd-1_26-cv-00215/context) — District Court Northern District of New York; 2026-10-17T00:34:07+00:00
+- [26-5457 - Whitfield v. New York State Division of Corporation](https://www.govinfo.gov/app/details/USCOURTS-nyed-1_26-cv-05457/context) — District Court Eastern District of New York; 2026-10-17T00:34:07+00:00
+- [25-094 - USA v. Hill](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00094/context) — District Court Eastern District of Washington; 2026-10-17T00:33:31+00:00
+- [19-3867 - Suriel v. Port Authority of New York And New Jersey et al](https://www.govinfo.gov/app/details/USCOURTS-nyed-1_19-cv-03867/context) — District Court Eastern District of New York; 2026-10-17T00:33:31+00:00
+- [26-6358 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-nyed-1_26-cv-06358/context) — District Court Eastern District of New York; 2026-10-17T00:33:31+00:00
+- [26-1106 - Philadelphia Indemnity Insurance Company v. Oldfields School, Inc.](https://www.govinfo.gov/app/details/USCOURTS-mdd-1_26-cv-01106/context) — District Court District of Maryland; 2026-10-17T00:33:31+00:00
+- [26-2320 - USA v. Ruiz](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-02320/context) — District Court Southern District of California; 2026-10-17T00:33:31+00:00
+- [26-3118 - Sarkisova v. Martinez et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-03118/context) — District Court Southern District of California; 2026-10-17T00:33:31+00:00
+- [24-22531 - Global Approach, Inc. v. Scottsdale Insurance Company](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_24-cv-22531/context) — District Court Southern District of Florida; 2026-10-17T00:33:31+00:00
+- [26-2097 - Bohorquez Lopez v. Department of Homeland Security](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-02097/context) — District Court Western District of Texas; 2026-10-17T00:32:07+00:00
+- [26-2694 - Nadal Ortiz v. Unknown Party et al](https://www.govinfo.gov/app/details/USCOURTS-miwd-1_26-cv-02694/context) — District Court Western District of Michigan; 2026-10-17T00:32:07+00:00
+- [26-5029 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-05029/context) — District Court Southern District of California; 2026-10-17T00:32:07+00:00
+- [26-2268 - Malabed v. Government Employees Insurance Company et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-02268/context) — District Court Southern District of California; 2026-10-17T00:32:07+00:00
+- [26-3792 - USA v. Merced-Cervantes et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-03792/context) — District Court Southern District of California; 2026-10-17T00:32:07+00:00
+- [25-80772 - Brent S Jackson](https://www.govinfo.gov/app/details/USCOURTS-neb-8_25-bk-80772/context) — Bankruptcy Court District of Nebraska; 2026-10-17T00:31:09+00:00
+- [25-2085 - USA v. Hernandez-Mendez](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cr-02085/context) — District Court Eastern District of Washington; 2026-10-17T00:31:09+00:00
+- [26-2141 - USA v. Gomez-Rojas](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02141/context) — District Court Western District of Texas; 2026-10-17T00:31:09+00:00
+- [26-118 - Tablada v. Rocket Mortgage, LLC et al](https://www.govinfo.gov/app/details/USCOURTS-rid-1_26-cv-00118/context) — District Court District of Rhode Island; 2026-10-17T00:31:09+00:00
+- [25-2840 - Stultz v. California Department of Correction and Rehabilitations et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_25-cv-02840/context) — District Court Southern District of California; 2026-10-17T00:31:09+00:00
+- [26-4028 - USA v. Reyes Perez](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-04028/context) — District Court Southern District of California; 2026-10-17T00:31:09+00:00
+- [24-1447 - Alvarado-Hernandez, et al v. Blanche](https://www.govinfo.gov/app/details/USCOURTS-ca1-24-01447/context) — Court of Appeals for the First Circuit; 2026-10-17T00:29:05+00:00
+- [25-354 - Murphy et al v. Chavez et al](https://www.govinfo.gov/app/details/USCOURTS-nmd-1_25-cv-00354/context) — District Court District of New Mexico; 2026-10-17T00:29:05+00:00
+- [25-3682 - Jones v. Regents of the University of California](https://www.govinfo.gov/app/details/USCOURTS-casd-3_25-cv-03682/context) — District Court Southern District of California; 2026-10-17T00:29:05+00:00
+- [26-2011 - USA v. Mancia-Santana](https://www.govinfo.gov/app/details/USCOURTS-txwd-2_26-cr-02011/context) — District Court Western District of Texas; 2026-10-17T00:28:07+00:00
+- [25-984 - Thayres v. Guardian Real Estate Services et al](https://www.govinfo.gov/app/details/USCOURTS-ord-3_25-cv-00984/context) — District Court District of Oregon; 2026-10-17T00:28:07+00:00
+- [26-2624 - Tinoco-Escobar v. Unknown Party et al](https://www.govinfo.gov/app/details/USCOURTS-miwd-1_26-cv-02624/context) — District Court Western District of Michigan; 2026-10-17T00:28:07+00:00
+- [25-138 - USA v. Haley](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00138/context) — District Court Eastern District of Washington; 2026-10-17T00:27:05+00:00
+- [26-3374 - Dorsey v. Montgomery](https://www.govinfo.gov/app/details/USCOURTS-ksd-5_26-cv-03374/context) — District Court District of Kansas; 2026-10-17T00:27:05+00:00
+- [16-021 - USA v. Thompson et al](https://www.govinfo.gov/app/details/USCOURTS-ared-4_16-cr-00021/context) — District Court Eastern District of Arkansas; 2026-10-17T00:27:05+00:00
+- [25-3451 - House v. Portalus LLC et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_25-cv-03451/context) — District Court Southern District of California; 2026-10-17T00:26:06+00:00
+- [26-011 - Haynie v. Camping World RV Sales LLC](https://www.govinfo.gov/app/details/USCOURTS-azd-4_26-cv-00011/context) — District Court District of Arizona; 2026-10-17T00:24:08+00:00
+- [26-3894 - Dupont Smiles Family & Cosmetic Dentistry PLLC et al v. BTL Industries, Inc., et al](https://www.govinfo.gov/app/details/USCOURTS-nyed-2_26-cv-03894/context) — District Court Eastern District of New York; 2026-10-17T00:22:10+00:00
+- [25-2647 - Complot v. American Honda Finance Corporation et al](https://www.govinfo.gov/app/details/USCOURTS-azd-2_25-cv-02647/context) — District Court District of Arizona; 2026-10-17T00:22:10+00:00
+- [26-1917 - United States v. Stacen Botts](https://www.govinfo.gov/app/details/USCOURTS-ca8-26-01917/context) — Court of Appeals for the Eighth Circuit; 2026-10-17T00:20:12+00:00
+- [26-3983 - USA v. Leyva-Castro](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-03983/context) — District Court Southern District of California; 2026-10-17T00:20:12+00:00
+- [26-2678 - Silva Diaz v. Raycraft et al](https://www.govinfo.gov/app/details/USCOURTS-miwd-1_26-cv-02678/context) — District Court Western District of Michigan; 2026-10-17T00:19:10+00:00
+- [25-2170 - Mooneyham v. Granite City et al](https://www.govinfo.gov/app/details/USCOURTS-ilsd-3_25-cv-02170/context) — District Court Southern District of Illinois; 2026-10-17T00:19:09+00:00
+- [25-2271 - Thaler v. Mesa, City of et al](https://www.govinfo.gov/app/details/USCOURTS-azd-2_25-cv-02271/context) — District Court District of Arizona; 2026-10-17T00:19:09+00:00
+- [26-2604 - Gueye v. Raycraft](https://www.govinfo.gov/app/details/USCOURTS-miwd-1_26-cv-02604/context) — District Court Western District of Michigan; 2026-10-17T00:18:20+00:00
+- [26-5857 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-05857/context) — District Court Southern District of California; 2026-10-17T00:18:20+00:00
+- [26-4593 - Alexander v. Palmer et al](https://www.govinfo.gov/app/details/USCOURTS-azd-2_26-cv-04593/context) — District Court District of Arizona; 2026-10-17T00:18:20+00:00
+- [26-184 - USA v. Le et al](https://www.govinfo.gov/app/details/USCOURTS-txed-4_26-cr-00184/context) — District Court Eastern District of Texas; 2026-10-17T00:17:01+00:00
+- [26-028 - USA v. Portillo-Diaz](https://www.govinfo.gov/app/details/USCOURTS-txed-9_26-cr-00028/context) — District Court Eastern District of Texas; 2026-10-17T00:17:01+00:00
+- [25-1510 - Garcia v. Commissioner of Social Security Administration et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_25-cv-01510/context) — District Court Western District of Oklahoma; 2026-10-17T00:17:01+00:00
+- [14-012 - USA v. KRAMER](https://www.govinfo.gov/app/details/USCOURTS-insd-2_14-cr-00012/context) — District Court Southern District of Indiana; 2026-10-17T00:17:01+00:00
+- [25-81407 - Barket v. Dixon](https://www.govinfo.gov/app/details/USCOURTS-flsd-9_25-cv-81407/context) — District Court Southern District of Florida; 2026-10-17T00:17:01+00:00
+- [26-1375 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-ca8-26-01375/context) — Court of Appeals for the Eighth Circuit; 2026-10-17T00:15:35+00:00
+- [26-2768 - Loor Fierro v. Putra et al](https://www.govinfo.gov/app/details/USCOURTS-miwd-1_26-cv-02768/context) — District Court Western District of Michigan; 2026-10-17T00:15:35+00:00
+- [26-5589 - Strike 3 Holdings, LLC v. John Doe subscriber assigned IP address 70.95.145.139](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-05589/context) — District Court Southern District of California; 2026-10-17T00:15:35+00:00
+- [24-1337 - Gagne et al v. Mesa, City of et al](https://www.govinfo.gov/app/details/USCOURTS-azd-2_24-cv-01337/context) — District Court District of Arizona; 2026-10-17T00:15:35+00:00
+- [26-703 - Wayf Digital Sp. z o.o. v. Government Employees Insurance Company](https://www.govinfo.gov/app/details/USCOURTS-azd-2_26-cv-00703/context) — District Court District of Arizona; 2026-10-17T00:15:35+00:00
+- [26-2263 - United States v. John German, Jr.](https://www.govinfo.gov/app/details/USCOURTS-ca8-26-02263/context) — Court of Appeals for the Eighth Circuit; 2026-10-17T00:13:14+00:00
+- [25-22212 - Melkonian v. United States of America](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_25-cv-22212/context) — District Court Southern District of Florida; 2026-10-17T00:13:14+00:00
+- [26-1848 - Stacie Whitney v. American Airlines](https://www.govinfo.gov/app/details/USCOURTS-ca8-26-01848/context) — Court of Appeals for the Eighth Circuit; 2026-10-17T00:12:09+00:00
+- [26-1187 - US v. Vizcaino Vizcaino](https://www.govinfo.gov/app/details/USCOURTS-ca1-26-01187/context) — Court of Appeals for the First Circuit; 2026-10-17T00:12:09+00:00
+- [26-2939 - Harris v. Foothills Capital Solutions LLC et al](https://www.govinfo.gov/app/details/USCOURTS-azd-2_26-cv-02939/context) — District Court District of Arizona; 2026-10-17T00:12:09+00:00
+- [26-667 - Arizona Physicians IPA Incorporated v. IAS Arizona PLLC](https://www.govinfo.gov/app/details/USCOURTS-azd-2_26-cv-00667/context) — District Court District of Arizona; 2026-10-17T00:12:09+00:00
+- [25-2985 - Shang Hai Ai Mu Bo Zhi Neng Ke Ji You Xian Gong Si et al v. NOCO Company](https://www.govinfo.gov/app/details/USCOURTS-azd-2_25-cv-02985/context) — District Court District of Arizona; 2026-10-17T00:11:06+00:00
+- [26-2089 - Troconis-Colmenares v. Blanche et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-02089/context) — District Court Western District of Texas; 2026-10-17T00:11:05+00:00
+- [26-1806 - Haider v. Lopez et al](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-01806/context) — District Court Western District of Texas; 2026-10-17T00:11:05+00:00
+- [26-2721 - Murcia Moran v. Unknown Party #1](https://www.govinfo.gov/app/details/USCOURTS-miwd-1_26-cv-02721/context) — District Court Western District of Michigan; 2026-10-17T00:11:05+00:00
+- [26-1205 - United States v. Kirby Truesdell](https://www.govinfo.gov/app/details/USCOURTS-ca8-26-01205/context) — Court of Appeals for the Eighth Circuit; 2026-10-17T00:10:02+00:00
+- [14-134 - USA v. Valdovinos et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_14-cr-00134/context) — District Court Eastern District of Washington; 2026-10-17T00:10:02+00:00
+- [23-6003 - USA v. Solorio-Bejar](https://www.govinfo.gov/app/details/USCOURTS-waed-4_23-cr-06003/context) — District Court Eastern District of Washington; 2026-10-17T00:10:02+00:00
+- [24-5168 - Martin v. Schneider et al](https://www.govinfo.gov/app/details/USCOURTS-waed-4_24-cv-05168/context) — District Court Eastern District of Washington; 2026-10-17T00:10:02+00:00
+- [25-6012 - USA v. Atkinson et al](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cr-06012/context) — District Court Eastern District of Washington; 2026-10-17T00:10:02+00:00
+- [26-019 - USA v. Donjuan-Perez](https://www.govinfo.gov/app/details/USCOURTS-txed-9_26-cr-00019/context) — District Court Eastern District of Texas; 2026-10-17T00:10:02+00:00
+- [26-320 - USA v. Requejo-Garcia](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cr-00320/context) — District Court Western District of Oklahoma; 2026-10-17T00:10:02+00:00
+- [25-863 - Tyler v. John Doe 1 (Turner) et al](https://www.govinfo.gov/app/details/USCOURTS-ohsd-2_25-cv-00863/context) — District Court Southern District of Ohio; 2026-10-17T00:10:02+00:00
+- [26-2026 - Family of Care Real Estate Holding Co., Inc. et al v. Chapman Property LLC](https://www.govinfo.gov/app/details/USCOURTS-mdd-8_26-cv-02026/context) — District Court District of Maryland; 2026-10-17T00:10:02+00:00
+- [14-021 - USA v. Gaither et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_14-cr-00021/context) — District Court Eastern District of Washington; 2026-10-17T00:10:02+00:00
+- [25-5029 - Angulo et al v. Providence Health & Services Washington et al](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05029/context) — District Court Eastern District of Washington; 2026-10-17T00:10:02+00:00
+- [25-5013 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05013/context) — District Court Eastern District of Washington; 2026-10-17T00:10:02+00:00
+- [25-010 - USA v. Tonasket](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00010/context) — District Court Eastern District of Washington; 2026-10-17T00:10:01+00:00
+- [25-5050 - Humphreys v. No Named Defendant](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05050/context) — District Court Eastern District of Washington; 2026-10-17T00:10:01+00:00
+- [25-059 - Valdez et al v. Travelers Home and Marine Insurance Company](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00059/context) — District Court Eastern District of Washington; 2026-10-17T00:10:01+00:00
+- [24-048 - Walker v. State Farm Fire and Casualty Company](https://www.govinfo.gov/app/details/USCOURTS-waed-2_24-cv-00048/context) — District Court Eastern District of Washington; 2026-10-17T00:10:01+00:00
+- [24-056 - Adams et al v. Okanogan County Public Hospital District No 3](https://www.govinfo.gov/app/details/USCOURTS-waed-2_24-cv-00056/context) — District Court Eastern District of Washington; 2026-10-17T00:10:01+00:00
+- [26-078 - USA v. Torres-Rivas](https://www.govinfo.gov/app/details/USCOURTS-txnd-2_26-cr-00078/context) — District Court Northern District of Texas; 2026-10-16T22:54:00+00:00
+- [26-1095 - Forehand v. Nextaff of Jackson, Tennessee, LLC et al](https://www.govinfo.gov/app/details/USCOURTS-tnwd-1_26-cv-01095/context) — District Court Western District of Tennessee; 2026-10-16T22:54:00+00:00
+- [26-060 - USA v. Brinkley et al](https://www.govinfo.gov/app/details/USCOURTS-tned-2_26-cr-00060/context) — District Court Eastern District of Tennessee; 2026-10-16T22:54:00+00:00
+- [26-7307 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-paed-2_26-cv-07307/context) — District Court Eastern District of Pennsylvania; 2026-10-16T22:54:00+00:00
+- [24-167 - USA v. HOLLOWAY,et al.](https://www.govinfo.gov/app/details/USCOURTS-paed-2_24-cr-00167/context) — District Court Eastern District of Pennsylvania; 2026-10-16T22:54:00+00:00
+- [25-710 - Forrester v. Smith](https://www.govinfo.gov/app/details/USCOURTS-ohnd-5_25-cv-00710/context) — District Court Northern District of Ohio; 2026-10-16T22:54:00+00:00
+- [26-1938 - Ndiaye v. Sullivan et al.](https://www.govinfo.gov/app/details/USCOURTS-ohnd-3_26-cv-01938/context) — District Court Northern District of Ohio; 2026-10-16T22:54:00+00:00
+- [25-051 - USA v. Hicks, et al](https://www.govinfo.gov/app/details/USCOURTS-tned-3_25-cr-00051/context) — District Court Eastern District of Tennessee; 2026-10-16T22:51:00+00:00
+- [04-331 - USA v. Buckley](https://www.govinfo.gov/app/details/USCOURTS-ned-8_04-cr-00331/context) — District Court District of Nebraska; 2026-10-16T22:51:00+00:00
+- [26-2750 - Hunter v. Data Mortgage Inc et al](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_26-cv-02750/context) — District Court Northern District of Texas; 2026-10-16T22:50:00+00:00
+- [10-357 - USA v. Nieto](https://www.govinfo.gov/app/details/USCOURTS-ned-8_10-cr-00357/context) — District Court District of Nebraska; 2026-10-16T22:50:00+00:00
+- [12-3057 - USA v. Brown et al](https://www.govinfo.gov/app/details/USCOURTS-ned-4_12-cr-03057/context) — District Court District of Nebraska; 2026-10-16T22:50:00+00:00
+- [26-3343 - Aode v. Bullock](https://www.govinfo.gov/app/details/USCOURTS-tnwd-2_26-cv-03343/context) — District Court Western District of Tennessee; 2026-10-16T22:48:12+00:00
+- [24-071 - USA v. Wilcox et al](https://www.govinfo.gov/app/details/USCOURTS-tned-3_24-cr-00071/context) — District Court Eastern District of Tennessee; 2026-10-16T22:48:12+00:00
+- [25-029 - USA v. Harris et al](https://www.govinfo.gov/app/details/USCOURTS-tned-1_25-cr-00029/context) — District Court Eastern District of Tennessee; 2026-10-16T22:48:12+00:00
+- [26-298 - USA v. Stokley](https://www.govinfo.gov/app/details/USCOURTS-ohnd-1_26-cr-00298/context) — District Court Northern District of Ohio; 2026-10-16T22:48:12+00:00
+- [13-088 - USA v. Avalos et al](https://www.govinfo.gov/app/details/USCOURTS-ned-8_13-cr-00088/context) — District Court District of Nebraska; 2026-10-16T22:48:12+00:00
+- [08-3067 - USA v. Zierke](https://www.govinfo.gov/app/details/USCOURTS-ned-4_08-cr-03067/context) — District Court District of Nebraska; 2026-10-16T22:48:12+00:00
+- [10-091 - USA v. Hernandez-Lopez et al](https://www.govinfo.gov/app/details/USCOURTS-ned-8_10-cr-00091/context) — District Court District of Nebraska; 2026-10-16T22:48:12+00:00
+- [02-220 - USA v. Stricklin et al](https://www.govinfo.gov/app/details/USCOURTS-ned-8_02-cr-00220/context) — District Court District of Nebraska; 2026-10-16T22:48:12+00:00
+- [12-3101 - USA v. Mitchell](https://www.govinfo.gov/app/details/USCOURTS-ned-4_12-cr-03101/context) — District Court District of Nebraska; 2026-10-16T22:48:12+00:00
+- [25-139 - Hernandez v. USA](https://www.govinfo.gov/app/details/USCOURTS-txnd-2_25-cv-00139/context) — District Court Northern District of Texas; 2026-10-16T22:47:00+00:00
+- [22-315 - VERTEX, INC. v. AVALARA, INC. et al](https://www.govinfo.gov/app/details/USCOURTS-paed-2_22-cv-00315/context) — District Court Eastern District of Pennsylvania; 2026-10-16T22:47:00+00:00
+- [26-092 - USA v. Villanueva-Campos](https://www.govinfo.gov/app/details/USCOURTS-txnd-2_26-cr-00092/context) — District Court Northern District of Texas; 2026-10-16T22:45:00+00:00
+- [22-794 - Legacy Exploration, LLC v. Optimum Energy Partners LLC et al](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_22-cv-00794/context) — District Court Northern District of Texas; 2026-10-16T22:45:00+00:00
+- [23-2593 - Watt et al v. FedEx Corporation et al](https://www.govinfo.gov/app/details/USCOURTS-tnwd-2_23-cv-02593/context) — District Court Western District of Tennessee; 2026-10-16T22:45:00+00:00
+- [26-028 - McCord v. Johnson et al](https://www.govinfo.gov/app/details/USCOURTS-tned-4_26-cv-00028/context) — District Court Eastern District of Tennessee; 2026-10-16T22:45:00+00:00
+- [26-7439 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-paed-2_26-cv-07439/context) — District Court Eastern District of Pennsylvania; 2026-10-16T22:45:00+00:00
+- [17-30022 - USA v. Gonzalez](https://www.govinfo.gov/app/details/USCOURTS-mad-3_17-cr-30022/context) — District Court District of Massachusetts; 2026-10-16T22:45:00+00:00
+- [12-355 - USA v. Mata-Soto](https://www.govinfo.gov/app/details/USCOURTS-ned-8_12-cr-00355/context) — District Court District of Nebraska; 2026-10-16T22:45:00+00:00
+- [92-81127 - United States of America v. Brown et al](https://www.govinfo.gov/app/details/USCOURTS-mied-2_92-cr-81127/context) — District Court Eastern District of Michigan; 2026-10-16T22:45:00+00:00
+- [26-296 - Gulbas v. Noem et al](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_26-cv-00296/context) — District Court Northern District of Texas; 2026-10-16T22:43:00+00:00
+- [26-093 - USA v. Tovar-Tovar](https://www.govinfo.gov/app/details/USCOURTS-txnd-2_26-cr-00093/context) — District Court Northern District of Texas; 2026-10-16T22:43:00+00:00
+- [26-2962 - Hansen et al v. Air Line Pilots Association International](https://www.govinfo.gov/app/details/USCOURTS-tnwd-2_26-cv-02962/context) — District Court Western District of Tennessee; 2026-10-16T22:43:00+00:00
+- [26-5097 - ARMOND v. FALLS TOWNSHIP, PENNSYLVANIA](https://www.govinfo.gov/app/details/USCOURTS-paed-2_26-cv-05097/context) — District Court Eastern District of Pennsylvania; 2026-10-16T22:43:00+00:00
+- [23-11966 - MacAulay v. BI 40 LLC et al](https://www.govinfo.gov/app/details/USCOURTS-mad-1_23-cv-11966/context) — District Court District of Massachusetts; 2026-10-16T22:43:00+00:00
+- [26-10050 - USA v. Lara-Martinez](https://www.govinfo.gov/app/details/USCOURTS-mad-1_26-cr-10050/context) — District Court District of Massachusetts; 2026-10-16T22:43:00+00:00
+- [24-038 - USA v. MCCLARIN, et al.](https://www.govinfo.gov/app/details/USCOURTS-gamd-7_24-cr-00038/context) — District Court Middle District of Georgia; 2026-10-16T22:43:00+00:00
+- [08-1360 - MUHAMMAD HUSAYN v. GATES](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_08-cv-01360/context) — District Court District of Columbia; 2026-10-16T22:43:00+00:00
+- [26-891 - Neill v. Commissioner of Social Security](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_26-cv-00891/context) — District Court Northern District of Texas; 2026-10-16T22:42:00+00:00
+- [26-037 - USA v. Montes](https://www.govinfo.gov/app/details/USCOURTS-txnd-2_26-cr-00037/context) — District Court Northern District of Texas; 2026-10-16T22:42:00+00:00
+- [22-1313 - Medical Mutual of Ohio v. AXA Assistance USA, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-ohnd-1_22-cv-01313/context) — District Court Northern District of Ohio; 2026-10-16T22:42:00+00:00
+- [11-287 - USA v. Johnson et al](https://www.govinfo.gov/app/details/USCOURTS-ned-8_11-cr-00287/context) — District Court District of Nebraska; 2026-10-16T22:42:00+00:00
+- [02-3220 - USA v. Lamb](https://www.govinfo.gov/app/details/USCOURTS-ned-4_02-cr-03220/context) — District Court District of Nebraska; 2026-10-16T22:42:00+00:00
+- [26-169 - Jackson v. Unknown Defendants](https://www.govinfo.gov/app/details/USCOURTS-txnd-2_26-cv-00169/context) — District Court Northern District of Texas; 2026-10-16T22:41:00+00:00
+- [26-5234 - SHANK v. JUSHI HOLDINGS INC et al](https://www.govinfo.gov/app/details/USCOURTS-paed-2_26-cv-05234/context) — District Court Eastern District of Pennsylvania; 2026-10-16T22:41:00+00:00
+- [25-2549 - Dahms v. Commissioner of Social Security](https://www.govinfo.gov/app/details/USCOURTS-ohnd-3_25-cv-02549/context) — District Court Northern District of Ohio; 2026-10-16T22:41:00+00:00
+- [24-014 - ROSS v. MCCORMACK et al](https://www.govinfo.gov/app/details/USCOURTS-med-1_24-cv-00014/context) — District Court District of Maine; 2026-10-16T22:41:00+00:00
+- [12-335 - USA v. Walker](https://www.govinfo.gov/app/details/USCOURTS-ned-8_12-cr-00335/context) — District Court District of Nebraska; 2026-10-16T22:41:00+00:00
+- [25-1313 - Moseti v. Mary Kay](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_25-cv-01313/context) — District Court Northern District of Texas; 2026-10-16T22:40:00+00:00
+- [25-129 - Palacios v. Potter County Detention Facility, et al](https://www.govinfo.gov/app/details/USCOURTS-txnd-2_25-cv-00129/context) — District Court Northern District of Texas; 2026-10-16T22:40:00+00:00
+- [25-140 - Holcomb v. Office of Attorney General State of Texas](https://www.govinfo.gov/app/details/USCOURTS-txnd-2_25-cv-00140/context) — District Court Northern District of Texas; 2026-10-16T22:40:00+00:00
+- [25-1103 - Acuity, A Mutual Insurance Company v. Hoosier Creek Hospitality, LLC](https://www.govinfo.gov/app/details/USCOURTS-tnwd-1_25-cv-01103/context) — District Court Western District of Tennessee; 2026-10-16T22:40:00+00:00
+- [26-443 - Bushong v. Monroe County, Tennessee et al](https://www.govinfo.gov/app/details/USCOURTS-tned-3_26-cv-00443/context) — District Court Eastern District of Tennessee; 2026-10-16T22:40:00+00:00
+- [25-563 - Sofsky v. Aubrey's, Inc.](https://www.govinfo.gov/app/details/USCOURTS-tned-3_25-cv-00563/context) — District Court Eastern District of Tennessee; 2026-10-16T22:40:00+00:00
+- [25-038 - Farm Credit Mid-America, PCA v. Uncle Nearest, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-tned-4_25-cv-00038/context) — District Court Eastern District of Tennessee; 2026-10-16T22:40:00+00:00
+- [26-7466 - TAYLOR v. U.S. MEDICAL STAFFING](https://www.govinfo.gov/app/details/USCOURTS-paed-2_26-cv-07466/context) — District Court Eastern District of Pennsylvania; 2026-10-16T22:40:00+00:00
+- [26-630 - Willis v. YMCA of Findlay, Ohio, et al.](https://www.govinfo.gov/app/details/USCOURTS-ohnd-3_26-cv-00630/context) — District Court Northern District of Ohio; 2026-10-16T22:40:00+00:00
+- [25-049 - Watts v. Bon Secours Mercy Health et al.](https://www.govinfo.gov/app/details/USCOURTS-ohnd-4_25-cv-00049/context) — District Court Northern District of Ohio; 2026-10-16T22:40:00+00:00
+- [25-027 - UNITED STATES OF AMERICA v. FOGG et al](https://www.govinfo.gov/app/details/USCOURTS-gamd-5_25-cr-00027/context) — District Court Middle District of Georgia; 2026-10-16T22:40:00+00:00
+- [07-3001 - USA v. Baldwin](https://www.govinfo.gov/app/details/USCOURTS-ned-4_07-cr-03001/context) — District Court District of Nebraska; 2026-10-16T22:40:00+00:00
+- [26-067 - USA v. Calderon-Olivera](https://www.govinfo.gov/app/details/USCOURTS-txnd-2_26-cr-00067/context) — District Court Northern District of Texas; 2026-10-16T22:39:00+00:00
+- [26-255 - Bolden v. Nolan County D.A. et al](https://www.govinfo.gov/app/details/USCOURTS-txnd-1_26-cv-00255/context) — District Court Northern District of Texas; 2026-10-16T22:38:00+00:00
+- [20-2557 - Nelson v. Fitz](https://www.govinfo.gov/app/details/USCOURTS-tnwd-2_20-cv-02557/context) — District Court Western District of Tennessee; 2026-10-16T22:38:00+00:00
+- [26-1270 - Bivins v. Meta Platforms, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-tnwd-1_26-cv-01270/context) — District Court Western District of Tennessee; 2026-10-16T22:38:00+00:00
+- [26-145 - Eady v. American Tow & Recovery, LLC](https://www.govinfo.gov/app/details/USCOURTS-tned-1_26-cv-00145/context) — District Court Eastern District of Tennessee; 2026-10-16T22:38:00+00:00
+- [12-388 - USA v. Hoge](https://www.govinfo.gov/app/details/USCOURTS-ned-8_12-cr-00388/context) — District Court District of Nebraska; 2026-10-16T22:38:00+00:00
+- [09-3112 - USA v. Avalos Banderas](https://www.govinfo.gov/app/details/USCOURTS-ned-4_09-cr-03112/context) — District Court District of Nebraska; 2026-10-16T22:38:00+00:00
+- [25-568 - USA v. Pellett](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_25-cr-00568/context) — District Court Northern District of Texas; 2026-10-16T22:37:00+00:00
+- [26-417 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-tned-3_26-cv-00417/context) — District Court Eastern District of Tennessee; 2026-10-16T22:37:00+00:00
+- [26-2711 - MURRAY v. UNITED STATES OF AMERICA et al](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_26-cv-02711/context) — District Court District of Columbia; 2026-10-16T22:37:00+00:00
+- [26-125 - Sichanthavong v. Scholl](https://www.govinfo.gov/app/details/USCOURTS-txnd-2_26-cv-00125/context) — District Court Northern District of Texas; 2026-10-16T22:35:05+00:00
+- [26-3138 - Nelson et al v. Air Line Pilots Association](https://www.govinfo.gov/app/details/USCOURTS-tnwd-2_26-cv-03138/context) — District Court Western District of Tennessee; 2026-10-16T22:35:05+00:00
+- [26-099 - USA v. SMITH](https://www.govinfo.gov/app/details/USCOURTS-paed-2_26-cr-00099/context) — District Court Eastern District of Pennsylvania; 2026-10-16T22:35:05+00:00
+- [26-1165 - Brown v. KeyBank National Association](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_26-cv-01165/context) — District Court Northern District of Texas; 2026-10-16T22:34:04+00:00
+- [26-1548 - Briggs v. City of Irving et al](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_26-cv-01548/context) — District Court Northern District of Texas; 2026-10-16T22:34:04+00:00
+- [26-366 - George v. Director, TDCJ-CID](https://www.govinfo.gov/app/details/USCOURTS-txnd-4_26-cv-00366/context) — District Court Northern District of Texas; 2026-10-16T22:34:04+00:00
+- [25-3598 - MOONEY v. AINSWORTH, INC. et al](https://www.govinfo.gov/app/details/USCOURTS-paed-5_25-cv-03598/context) — District Court Eastern District of Pennsylvania; 2026-10-16T22:34:04+00:00
+- [24-5473 - BOXLEY v. Wellpath, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-paed-2_24-cv-05473/context) — District Court Eastern District of Pennsylvania; 2026-10-16T22:34:04+00:00
+- [26-360 - JOHN v. PORTLAND HOUSING](https://www.govinfo.gov/app/details/USCOURTS-med-2_26-cv-00360/context) — District Court District of Maine; 2026-10-16T22:34:04+00:00
+- [26-056 - BRITAIN AUTO GROUP LLC v. CASEY JACKSON et al](https://www.govinfo.gov/app/details/USCOURTS-gamd-3_26-cv-00056/context) — District Court Middle District of Georgia; 2026-10-16T22:34:04+00:00
+- [26-1222 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-gamd-4_26-cv-01222/context) — District Court Middle District of Georgia; 2026-10-16T22:34:04+00:00
+- [20-024 - DOE v. BOY SCOUTS OF AMERICA INC et al](https://www.govinfo.gov/app/details/USCOURTS-gamd-3_20-cv-00024/context) — District Court Middle District of Georgia; 2026-10-16T22:34:04+00:00
+- [25-4866 - STATON v. COMMONWEALTH OF PENNSYLVANIA et al](https://www.govinfo.gov/app/details/USCOURTS-paed-2_25-cv-04866/context) — District Court Eastern District of Pennsylvania; 2026-10-16T22:32:09+00:00
+- [26-2362 - Radford v. LNU (3:26-cv-2362)](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_26-cv-02362/context) — District Court Northern District of Texas; 2026-10-16T22:32:08+00:00
+- [26-5019 - FATA v. LEHIGH COUNTY et al](https://www.govinfo.gov/app/details/USCOURTS-paed-5_26-cv-05019/context) — District Court Eastern District of Pennsylvania; 2026-10-16T22:32:08+00:00
+- [23-2015 - SERIES 15-09-321 v. Progressive Corporation, et al.](https://www.govinfo.gov/app/details/USCOURTS-ohnd-1_23-cv-02015/context) — District Court Northern District of Ohio; 2026-10-16T22:32:08+00:00
+- [23-11998 - Carter v. BI 40 LLC et al](https://www.govinfo.gov/app/details/USCOURTS-mad-1_23-cv-11998/context) — District Court District of Massachusetts; 2026-10-16T22:32:08+00:00
+- [22-2671 - First Horizon Corporation et al v. Pinnacle Financial Partners](https://www.govinfo.gov/app/details/USCOURTS-tnwd-2_22-cv-02671/context) — District Court Western District of Tennessee; 2026-10-16T22:32:08+00:00
+- [26-440 - USA v. Jaramillo-Pedraza](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_26-cr-00440/context) — District Court Northern District of Texas; 2026-10-16T22:31:00+00:00
+- [26-933 - Condappa v. Field Office Director, Detroit Field Office, U.S. Immigration and Customs Enforcement](https://www.govinfo.gov/app/details/USCOURTS-ohnd-3_26-cv-00933/context) — District Court Northern District of Ohio; 2026-10-16T22:31:00+00:00
+- [23-11997 - Taylor v. BI 40 LLC et al](https://www.govinfo.gov/app/details/USCOURTS-mad-1_23-cv-11997/context) — District Court District of Massachusetts; 2026-10-16T22:31:00+00:00
+- [24-460 - COSBY v. NEWREZ LLC et al](https://www.govinfo.gov/app/details/USCOURTS-gamd-5_24-cv-00460/context) — District Court Middle District of Georgia; 2026-10-16T22:31:00+00:00
+- [20-025 - DOE v. BOY SCOUTS OF AMERICA INC et al](https://www.govinfo.gov/app/details/USCOURTS-gamd-3_20-cv-00025/context) — District Court Middle District of Georgia; 2026-10-16T22:31:00+00:00
+- [26-054 - USA v. Roddy](https://www.govinfo.gov/app/details/USCOURTS-txnd-2_26-cr-00054/context) — District Court Northern District of Texas; 2026-10-16T22:30:00+00:00
+- [20-026 - DOE v. BOY SCOUTS OF AMERICA INC et al](https://www.govinfo.gov/app/details/USCOURTS-gamd-3_20-cv-00026/context) — District Court Middle District of Georgia; 2026-10-16T22:29:00+00:00
+- [26-2346 - SKROBANOVIC v. UNITED STATES OF AMERICA](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_26-cv-02346/context) — District Court District of Columbia; 2026-10-16T22:26:04+00:00
+- [25-1263 - Barr v. City of Humboldt et al](https://www.govinfo.gov/app/details/USCOURTS-tnwd-1_25-cv-01263/context) — District Court Western District of Tennessee; 2026-10-16T22:25:00+00:00
+- [26-510 - ROSADO v. TRUMP et al](https://www.govinfo.gov/app/details/USCOURTS-med-1_26-cv-00510/context) — District Court District of Maine; 2026-10-16T22:25:00+00:00
+- [26-547 - USA v. Saldana-Rivas](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_26-cr-00547/context) — District Court Northern District of Texas; 2026-10-16T22:23:02+00:00
+- [26-415 - Brown v. USA](https://www.govinfo.gov/app/details/USCOURTS-tned-3_26-cv-00415/context) — District Court Eastern District of Tennessee; 2026-10-16T22:23:02+00:00
+- [26-044 - UNITED STATES OF AMERICA v. WHITE](https://www.govinfo.gov/app/details/USCOURTS-gamd-4_26-mj-00044/context) — District Court Middle District of Georgia; 2026-10-16T22:22:00+00:00
+- [26-2323 - BRENNAN v. BLANCHE et al](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_26-cv-02323/context) — District Court District of Columbia; 2026-10-16T22:22:00+00:00
+- [26-447 - Jackson-Lewis v. Trump et al](https://www.govinfo.gov/app/details/USCOURTS-hid-1_26-cv-00447/context) — District Court District of Hawaii; 2026-10-16T22:20:00+00:00
+- [24-015 - UNITED STATES OF AMERICA v. REID](https://www.govinfo.gov/app/details/USCOURTS-gamd-7_24-cr-00015/context) — District Court Middle District of Georgia; 2026-10-16T22:18:00+00:00
+- [04-3226 - Campbell v. Clarke](https://www.govinfo.gov/app/details/USCOURTS-ned-4_04-cv-03226/context) — District Court District of Nebraska; 2026-10-16T22:18:00+00:00
+- [26-6108 - Emrit v. Carpenter, et al](https://www.govinfo.gov/app/details/USCOURTS-ca10-26-06108/context) — Court of Appeals for the Tenth Circuit; 2026-10-16T22:16:00+00:00
+- [26-017 - UNITED STATES OF AMERICA v. HERNANDEZ-SANCHEZ](https://www.govinfo.gov/app/details/USCOURTS-gamd-5_26-cr-00017/context) — District Court Middle District of Georgia; 2026-10-16T22:16:00+00:00
+- [26-1229 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-gamd-4_26-cv-01229/context) — District Court Middle District of Georgia; 2026-10-16T22:10:42+00:00
+- [13-161 - USA v. Middleton et al](https://www.govinfo.gov/app/details/USCOURTS-alsd-1_13-cr-00161/context) — District Court Southern District of Alabama; 2026-10-16T22:10:42+00:00
+- [26-067 - Mitchell v. Frontline Express Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-alsd-2_26-cv-00067/context) — District Court Southern District of Alabama; 2026-10-16T22:10:42+00:00
+- [23-12642 - Durling v. BI 40 LLC et al](https://www.govinfo.gov/app/details/USCOURTS-mad-1_23-cv-12642/context) — District Court District of Massachusetts; 2026-10-16T22:08:01+00:00
+- [20-023 - DOE v. BOY SCOUTS OF AMERICA INC et al](https://www.govinfo.gov/app/details/USCOURTS-gamd-3_20-cv-00023/context) — District Court Middle District of Georgia; 2026-10-16T22:08:01+00:00
+- [26-1674 - VAHIDA v. NAMDAR et al](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_26-cv-01674/context) — District Court District of Columbia; 2026-10-16T22:08:01+00:00
+- [26-3381 - ERMIAS et al v. U.S. GENERAL SERVICES ADMINISTRATION](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_26-cv-03381/context) — District Court District of Columbia; 2026-10-16T22:08:00+00:00
+- [25-2150 - Lillie Coley v. Supreme Court of New Jersey, et al](https://www.govinfo.gov/app/details/USCOURTS-ca3-25-02150/context) — Court of Appeals for the Third Circuit; 2026-10-16T22:06:00+00:00
+- [26-14255 - Bispo Esteves v. Wesling et al](https://www.govinfo.gov/app/details/USCOURTS-mad-1_26-cv-14255/context) — District Court District of Massachusetts; 2026-10-16T22:03:00+00:00
+- [23-12652 - Trokey v. BI 40 LLC et al](https://www.govinfo.gov/app/details/USCOURTS-mad-1_23-cv-12652/context) — District Court District of Massachusetts; 2026-10-16T22:01:00+00:00
+- [26-3199 - In re: Steele](https://www.govinfo.gov/app/details/USCOURTS-ca10-26-03199/context) — Court of Appeals for the Tenth Circuit; 2026-10-16T21:59:09+00:00
+- [25-2929 - David Moss, et al v. Jeanne E. Moss, et al](https://www.govinfo.gov/app/details/USCOURTS-ca3-25-02929/context) — Court of Appeals for the Third Circuit; 2026-10-16T21:57:00+00:00
+- [24-800 - SAN GABRIEL VALLEY MEDICAL CENTER et al v. BECERRA](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_24-cv-00800/context) — District Court District of Columbia; 2026-10-16T21:56:00+00:00
+- [26-3150 - United States v. Rodriguez](https://www.govinfo.gov/app/details/USCOURTS-ca10-26-03150/context) — Court of Appeals for the Tenth Circuit; 2026-10-16T21:53:01+00:00
+- [25-2060 - Sylvester Tuohy, et al v. New Jersey Division of Taxation](https://www.govinfo.gov/app/details/USCOURTS-ca3-25-02060/context) — Court of Appeals for the Third Circuit; 2026-10-16T21:53:01+00:00
+- [26-1187 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-gamd-4_26-cv-01187/context) — District Court Middle District of Georgia; 2026-10-16T21:53:01+00:00
+- [20-021 - MCARTHUR v. BOY SCOUTS OF AMERICA INC et al](https://www.govinfo.gov/app/details/USCOURTS-gamd-3_20-cv-00021/context) — District Court Middle District of Georgia; 2026-10-16T21:53:01+00:00
+- [24-461 - MCCONNELL v. ADAMS et al](https://www.govinfo.gov/app/details/USCOURTS-gamd-5_24-cv-00461/context) — District Court Middle District of Georgia; 2026-10-16T21:53:01+00:00
+- [26-1839 - HALEY v. TAYLOR et al](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_26-cv-01839/context) — District Court District of Columbia; 2026-10-16T21:53:01+00:00
+- [26-3198 - Strobel v. United States, et al](https://www.govinfo.gov/app/details/USCOURTS-ca10-26-03198/context) — Court of Appeals for the Tenth Circuit; 2026-10-16T21:51:15+00:00
+- [25-1358 - Wigfall-Campbell v. Community Loan Servicing](https://www.govinfo.gov/app/details/USCOURTS-ca10-25-01358/context) — Court of Appeals for the Tenth Circuit; 2026-10-16T21:51:15+00:00
+- [25-1836 - Myron Crisdon v. North Gate 1 Apartments, et al](https://www.govinfo.gov/app/details/USCOURTS-ca3-25-01836/context) — Court of Appeals for the Third Circuit; 2026-10-16T21:51:15+00:00
+- [26-1030 - Ronald Emrit, et al v. Kim Kardashian, et al](https://www.govinfo.gov/app/details/USCOURTS-ca3-26-01030/context) — Court of Appeals for the Third Circuit; 2026-10-16T21:51:15+00:00
+- [26-1627 - HUANG v. USCIS IMMIGRATION INVESTOR PROGRAM OFFICE](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_26-cv-01627/context) — District Court District of Columbia; 2026-10-16T21:51:15+00:00
+- [25-6175 - Williams v. Tinsley](https://www.govinfo.gov/app/details/USCOURTS-ca10-25-06175/context) — Court of Appeals for the Tenth Circuit; 2026-10-16T21:49:01+00:00
+- [25-1410 - George Arsenis, et al v. Blue Foundry Bancorp](https://www.govinfo.gov/app/details/USCOURTS-ca3-25-01410/context) — Court of Appeals for the Third Circuit; 2026-10-16T21:49:01+00:00
+- [26-227 - Hawaii Carpenters Trust Funds et al v. WSC Corporation et al](https://www.govinfo.gov/app/details/USCOURTS-hid-1_26-cv-00227/context) — District Court District of Hawaii; 2026-10-16T21:49:01+00:00
+- [26-850 - BERROCAL v. GOOGLE et al](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_26-cv-00850/context) — District Court District of Columbia; 2026-10-16T21:49:01+00:00
+- [26-007 - Williams v. State Of Alabama et al](https://www.govinfo.gov/app/details/USCOURTS-alsd-1_26-mc-00007/context) — District Court Southern District of Alabama; 2026-10-16T21:47:00+00:00
+- [20-022 - DOE v. BOY SCOUTS OF AMERICA INC et al](https://www.govinfo.gov/app/details/USCOURTS-gamd-3_20-cv-00022/context) — District Court Middle District of Georgia; 2026-10-16T21:46:00+00:00
+- [26-3417 - JAVIDPANAH v. RUBIO et al](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_26-cv-03417/context) — District Court District of Columbia; 2026-10-16T21:46:00+00:00
+- [26-088 - USA v. Balli et al](https://www.govinfo.gov/app/details/USCOURTS-alsd-1_26-cr-00088/context) — District Court Southern District of Alabama; 2026-10-16T21:46:00+00:00
+- [13-1101 - Starters - Direct Purchaser Actions](https://www.govinfo.gov/app/details/USCOURTS-mied-2_13-cv-01101/context) — District Court Eastern District of Michigan; 2026-10-16T21:46:00+00:00
+- [26-1422 - SITA v. U.S. DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT et al](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_26-cv-01422/context) — District Court District of Columbia; 2026-10-16T21:45:00+00:00
+- [26-435 - Standfield v. State of Alabama et al](https://www.govinfo.gov/app/details/USCOURTS-alnd-3_26-cv-00435/context) — District Court Northern District of Alabama; 2026-10-16T21:45:00+00:00
+- [26-11504 - Fischman v. Boston Children Hospital](https://www.govinfo.gov/app/details/USCOURTS-mad-1_26-cv-11504/context) — District Court District of Massachusetts; 2026-10-16T21:44:00+00:00
+- [26-090 - WILLIAMS v. UNITED STATES OF AMERICA](https://www.govinfo.gov/app/details/USCOURTS-gamd-5_26-cv-00090/context) — District Court Middle District of Georgia; 2026-10-16T21:41:00+00:00
+- [21-748 - USA v. Farris](https://www.govinfo.gov/app/details/USCOURTS-ohnd-4_21-cr-00748/context) — District Court Northern District of Ohio; 2026-10-16T21:38:02+00:00
+- [26-142 - SINDERSINE v. ALLSTATE INSURANCE COMPANY](https://www.govinfo.gov/app/details/USCOURTS-gamd-1_26-cv-00142/context) — District Court Middle District of Georgia; 2026-10-16T21:37:00+00:00
+- [26-132 - McKeithen v. Hoover, AL, City of et al](https://www.govinfo.gov/app/details/USCOURTS-alnd-2_26-cv-00132/context) — District Court Northern District of Alabama; 2026-10-16T21:36:00+00:00
+- [26-10185 - Brian David Cloutier](https://www.govinfo.gov/app/details/USCOURTS-meb-1_26-bk-10185/context) — Bankruptcy Court District of Maine; 2026-10-16T21:32:00+00:00
+- [26-105 - USA v. Morgan-Benitez](https://www.govinfo.gov/app/details/USCOURTS-alsd-1_26-cr-00105/context) — District Court Southern District of Alabama; 2026-10-16T21:32:00+00:00
+- [25-2470 - Snyder v. Commissioner of Social Security](https://www.govinfo.gov/app/details/USCOURTS-ohnd-1_25-cv-02470/context) — District Court Northern District of Ohio; 2026-10-16T21:29:00+00:00
+- [23-11967 - Tehan v. BI 40 LLC et al](https://www.govinfo.gov/app/details/USCOURTS-mad-1_23-cv-11967/context) — District Court District of Massachusetts; 2026-10-16T21:29:00+00:00
+- [23-3084 - In re: Uber Technologies, Inc., Passenger Sexual Assault Litigation](https://www.govinfo.gov/app/details/USCOURTS-cand-3_23-md-03084/context) — District Court Northern District of California; 2026-10-16T21:14:00+00:00
+- [23-3417 - Kadrey et al v. Meta Platforms, Inc.](https://www.govinfo.gov/app/details/USCOURTS-cand-3_23-cv-03417/context) — District Court Northern District of California; 2026-10-16T20:56:00+00:00
+- [24-3126 - In Re: Snowflake, Inc., Data Security Breach Litigation](https://www.govinfo.gov/app/details/USCOURTS-mtd-2_24-md-03126/context) — District Court District of Montana; 2026-10-16T20:56:00+00:00
+- [26-340 - Boone v. Bisignano](https://www.govinfo.gov/app/details/USCOURTS-txsd-3_26-cv-00340/context) — District Court Southern District of Texas; 2026-10-16T20:54:04+00:00
+- [23-7182 - TOWNSHIP OF HOWELL, MONMOUTH COUNTY, NEW JERSEY v. AXON ENTERPRISE, INC. et al](https://www.govinfo.gov/app/details/USCOURTS-njd-3_23-cv-07182/context) — District Court District of New Jersey; 2026-10-16T20:54:04+00:00
+- [25-3788 - Huang v. Noem et al](https://www.govinfo.gov/app/details/USCOURTS-cod-1_25-cv-03788/context) — District Court District of Colorado; 2026-10-16T20:54:04+00:00
+- [22-5815 - LeGrand et al v. Abbott Laboratories](https://www.govinfo.gov/app/details/USCOURTS-cand-3_22-cv-05815/context) — District Court Northern District of California; 2026-10-16T20:54:04+00:00
+- [26-220 - Scheiman v. Edward Don & Company, LLC et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-00220/context) — District Court Northern District of California; 2026-10-16T20:54:04+00:00
+- [23-80023 - Pristine Jewelers NY, Inc. v. Broner et al](https://www.govinfo.gov/app/details/USCOURTS-cand-5_23-mc-80023/context) — District Court Northern District of California; 2026-10-16T20:54:04+00:00
+- [25-12005 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-njd-3_25-cv-12005/context) — District Court District of New Jersey; 2026-10-16T20:54:03+00:00
+- [18-010 - USA v. Arkinson et al](https://www.govinfo.gov/app/details/USCOURTS-mtd-6_18-cr-00010/context) — District Court District of Montana; 2026-10-16T20:54:03+00:00
+- [26-11037 - Hampton v. City Of San Jose](https://www.govinfo.gov/app/details/USCOURTS-cand-5_26-cv-11037/context) — District Court Northern District of California; 2026-10-16T20:54:03+00:00
+- [22-312 - McKinney v. Corsair Gaming, Inc.](https://www.govinfo.gov/app/details/USCOURTS-cand-4_22-cv-00312/context) — District Court Northern District of California; 2026-10-16T20:54:03+00:00
+- [26-027 - Wells Fargo Vendor Financial Services, LLC v. Lone Star Land Works, LLC et al](https://www.govinfo.gov/app/details/USCOURTS-txsd-3_26-cv-00027/context) — District Court Southern District of Texas; 2026-10-16T20:52:06+00:00
+- [22-7514 - ROYZENSHTEYN et al v. ONYX ENTERPRISES CANADA INC. et al](https://www.govinfo.gov/app/details/USCOURTS-njd-3_22-cv-07514/context) — District Court District of New Jersey; 2026-10-16T20:52:06+00:00
+- [20-5761 - In re Google Play Consumer Antitrust Litigation](https://www.govinfo.gov/app/details/USCOURTS-cand-3_20-cv-05761/context) — District Court Northern District of California; 2026-10-16T20:52:06+00:00
+- [1:25-vv-01662 - LAMBERT v. SECRETARY OF HEALTH AND HUMAN SERVICES](https://www.govinfo.gov/app/details/USCOURTS-cofc-1_25-vv-01662/context) — United States Court of Federal Claims; 2026-10-16T20:52:05+00:00
+- [26-253 - Zavala Leiva v. Mullin et al](https://www.govinfo.gov/app/details/USCOURTS-vtd-2_26-cv-00253/context) — District Court District of Vermont; 2026-10-16T20:52:05+00:00
+- [24-360 - GS Holistic, LLC v. AAR Management LLC et al](https://www.govinfo.gov/app/details/USCOURTS-txsd-3_24-cv-00360/context) — District Court Southern District of Texas; 2026-10-16T20:52:05+00:00
+- [26-6406 - Valdespino Gonzalez v. Tate](https://www.govinfo.gov/app/details/USCOURTS-txsd-4_26-cv-06406/context) — District Court Southern District of Texas; 2026-10-16T20:52:05+00:00
+- [17-032 - USA v. Yellow Owl](https://www.govinfo.gov/app/details/USCOURTS-mtd-4_17-cr-00032/context) — District Court District of Montana; 2026-10-16T20:52:05+00:00
+- [26-572 - Poiles v. Allen et al](https://www.govinfo.gov/app/details/USCOURTS-kywd-4_26-cv-00572/context) — District Court Western District of Kentucky; 2026-10-16T20:52:05+00:00
+- [22-256 - USA v. Klimenka](https://www.govinfo.gov/app/details/USCOURTS-cand-3_22-cr-00256/context) — District Court Northern District of California; 2026-10-16T20:52:05+00:00
+- [26-80264 - Glover v. Wells Fargo Bank N.A et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-mc-80264/context) — District Court Northern District of California; 2026-10-16T20:52:05+00:00
+- [26-11079 - City and County of San Francisco et al v. Kwan](https://www.govinfo.gov/app/details/USCOURTS-cand-4_26-cv-11079/context) — District Court Northern District of California; 2026-10-16T20:52:05+00:00
+- [19-5749 - Kensington Apartment Properties, LLC v. Loanvest IX, L.P. et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_19-cv-05749/context) — District Court Northern District of California; 2026-10-16T20:52:05+00:00
+- [26-11283 - Favela Pacheco et al v. Blanche et al](https://www.govinfo.gov/app/details/USCOURTS-cand-4_26-cv-11283/context) — District Court Northern District of California; 2026-10-16T20:52:05+00:00
+- [26-5230 - Murdock v. Meta Platforms, Inc.](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-05230/context) — District Court Northern District of California; 2026-10-16T20:52:05+00:00
+- [25-3839 - Anderson v. Ameritas Investment Company, LLC](https://www.govinfo.gov/app/details/USCOURTS-cand-3_25-cv-03839/context) — District Court Northern District of California; 2026-10-16T20:52:05+00:00
+- [25-3477 - Federal Trade Commission v. Uber Technologies, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-cand-4_25-cv-03477/context) — District Court Northern District of California; 2026-10-16T20:52:05+00:00
+- [1:23-vv-01557 - WASHULESKI v. SECRETARY OF HEALTH AND HUMAN SERVICES](https://www.govinfo.gov/app/details/USCOURTS-cofc-1_23-vv-01557/context) — United States Court of Federal Claims; 2026-10-16T20:50:10+00:00
+- [25-5019 - USA v. Rose Rhear](https://www.govinfo.gov/app/details/USCOURTS-ca6-25-05019/context) — Court of Appeals for the Sixth Circuit; 2026-10-16T20:50:10+00:00
+- [26-3261 - Lengua v. Field Office Director et al](https://www.govinfo.gov/app/details/USCOURTS-txsd-4_26-cv-03261/context) — District Court Southern District of Texas; 2026-10-16T20:50:10+00:00
+- [26-8764 - Collins v. Guerrero](https://www.govinfo.gov/app/details/USCOURTS-txsd-4_26-cv-08764/context) — District Court Southern District of Texas; 2026-10-16T20:50:10+00:00
+- [25-202 - RAMSEY v. HUGHES et al](https://www.govinfo.gov/app/details/USCOURTS-flnd-3_25-cv-00202/context) — District Court Northern District of Florida; 2026-10-16T20:50:10+00:00
+- [26-10008 - Johnson v. Bettencourt](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-10008/context) — District Court Northern District of California; 2026-10-16T20:50:10+00:00
+- [26-6638 - Jung v. Discover Bank](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-06638/context) — District Court Northern District of California; 2026-10-16T20:50:10+00:00
+- [20-6449 - Rosado v. Social Security Administration](https://www.govinfo.gov/app/details/USCOURTS-cand-5_20-cv-06449/context) — District Court Northern District of California; 2026-10-16T20:50:10+00:00
+- [22-429 - USA v. Barnes](https://www.govinfo.gov/app/details/USCOURTS-cand-3_22-cr-00429/context) — District Court Northern District of California; 2026-10-16T20:50:10+00:00
+- [25-2601 - NETGEAR, Inc. v. Choice Electronics Inc.](https://www.govinfo.gov/app/details/USCOURTS-cand-3_25-cv-02601/context) — District Court Northern District of California; 2026-10-16T20:50:10+00:00
+- [26-1009 - Powell v. City and County of San Francisco et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-01009/context) — District Court Northern District of California; 2026-10-16T20:50:10+00:00
+- [26-11441 - Unknown Party v. Uber Technologies Incorporated et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-11441/context) — District Court Northern District of California; 2026-10-16T20:50:10+00:00
+- [26-170 - Liu v. Apple Inc et al](https://www.govinfo.gov/app/details/USCOURTS-cand-4_26-cv-00170/context) — District Court Northern District of California; 2026-10-16T20:50:10+00:00
+- [25-3691 - Firsov v. Scandinavian Airlines of North America, Inc.](https://www.govinfo.gov/app/details/USCOURTS-cand-3_25-cv-03691/context) — District Court Northern District of California; 2026-10-16T20:50:10+00:00
+- [1:22-vv-00503 - WARD v. SECRETARY OF HEALTH AND HUMAN SERVICES](https://www.govinfo.gov/app/details/USCOURTS-cofc-1_22-vv-00503/context) — United States Court of Federal Claims; 2026-10-16T20:50:09+00:00
+- [1:24-vv-00379 - WHITTEMIRE v. SECRETARY OF HEALTH AND HUMAN SERVICES](https://www.govinfo.gov/app/details/USCOURTS-cofc-1_24-vv-00379/context) — United States Court of Federal Claims; 2026-10-16T20:50:09+00:00
+- [26-5293 - USA v. Dalonta Crudup](https://www.govinfo.gov/app/details/USCOURTS-ca6-26-05293/context) — Court of Appeals for the Sixth Circuit; 2026-10-16T20:50:09+00:00
+- [26-053 - USA v. Guardipee](https://www.govinfo.gov/app/details/USCOURTS-mtd-1_26-cr-00053/context) — District Court District of Montana; 2026-10-16T20:50:09+00:00
+- [26-3099 - USA v. Crosby](https://www.govinfo.gov/app/details/USCOURTS-mowd-6_26-cr-03099/context) — District Court Western District of Missouri; 2026-10-16T20:50:09+00:00
+- [21-083 - USA v. Joseph](https://www.govinfo.gov/app/details/USCOURTS-cod-1_21-cr-00083/context) — District Court District of Colorado; 2026-10-16T20:50:09+00:00
+- [26-2424 - Ferguson v. Bank of America, N.A.](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-02424/context) — District Court Northern District of California; 2026-10-16T20:50:09+00:00
+- [25-5396 - Bluestone Investment Inc. et al v. Hu et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_25-cv-05396/context) — District Court Northern District of California; 2026-10-16T20:50:09+00:00
+- [26-8063 - Price v. Libardi](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-08063/context) — District Court Northern District of California; 2026-10-16T20:50:09+00:00
+- [26-2257 - Johnson v. San Bruno County Jail et al](https://www.govinfo.gov/app/details/USCOURTS-cand-4_26-cv-02257/context) — District Court Northern District of California; 2026-10-16T20:50:09+00:00
+- [25-6047 - China Cinda Asset Management Co. Ltd., (Jiangxi Branch) v. Peng et al](https://www.govinfo.gov/app/details/USCOURTS-cand-4_25-cv-06047/context) — District Court Northern District of California; 2026-10-16T20:50:09+00:00
+- [25-2784 - Holmes v. Coffey, MD et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_25-cv-02784/context) — District Court Northern District of California; 2026-10-16T20:50:09+00:00
+- [22-1113 - Tudor v. State Farm General Insurance Company](https://www.govinfo.gov/app/details/USCOURTS-cand-3_22-cv-01113/context) — District Court Northern District of California; 2026-10-16T20:50:09+00:00
+- [26-7770 - Strike 3 Holdings, LLC v. John Doe subscriber assigned IP address 71.204.190.109](https://www.govinfo.gov/app/details/USCOURTS-cand-4_26-cv-07770/context) — District Court Northern District of California; 2026-10-16T20:50:09+00:00
+- [24-4241 - Gold Club SF, LLC v. United States Small Business Administration et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_24-cv-04241/context) — District Court Northern District of California; 2026-10-16T20:50:09+00:00
+- [26-11122 - Strike 3 Holdings, LLC v. John Doe subscriber assigned IP address 23.120.35.152](https://www.govinfo.gov/app/details/USCOURTS-cand-4_26-cv-11122/context) — District Court Northern District of California; 2026-10-16T20:50:09+00:00
+- [23-5507 - Turner-Gray v. Avis Budget Group Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_23-cv-05507/context) — District Court Northern District of California; 2026-10-16T20:50:09+00:00
+- [26-71190 - USA v. Pavelescu](https://www.govinfo.gov/app/details/USCOURTS-cand-4_26-mj-71190/context) — District Court Northern District of California; 2026-10-16T20:50:09+00:00
+- [23-3873 - National Foam, Inc. v. Zurich American Insurance Company](https://www.govinfo.gov/app/details/USCOURTS-cand-3_23-cv-03873/context) — District Court Northern District of California; 2026-10-16T20:50:09+00:00
+- [26-381 - Santana v. Seismic Coffee Roasters LLC, et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-00381/context) — District Court Northern District of California; 2026-10-16T20:50:09+00:00
+- [26-11105 - Strike 3 Holdings, LLC v. John Doe subscriber assigned IP address 24.6.51.29](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-11105/context) — District Court Northern District of California; 2026-10-16T20:50:09+00:00
+- [26-10365 - Anderson v. Emergence Software Technologies, Inc.](https://www.govinfo.gov/app/details/USCOURTS-cand-4_26-cv-10365/context) — District Court Northern District of California; 2026-10-16T20:50:09+00:00
+- [1:21-vv-00805 - FARO v. SECRETARY OF HEALTH AND HUMAN SERVICES](https://www.govinfo.gov/app/details/USCOURTS-cofc-1_21-vv-00805/context) — United States Court of Federal Claims; 2026-10-16T20:50:08+00:00
+- [1:24-vv-00009 - JEFFERS v. SECRETARY OF HEALTH AND HUMAN SERVICES](https://www.govinfo.gov/app/details/USCOURTS-cofc-1_24-vv-00009/context) — United States Court of Federal Claims; 2026-10-16T20:50:08+00:00
+- [1:23-vv-00564 - KEEL-MANN v. SECRETARY OF HEALTH AND HUMAN SERVICES](https://www.govinfo.gov/app/details/USCOURTS-cofc-1_23-vv-00564/context) — United States Court of Federal Claims; 2026-10-16T20:50:08+00:00
+- [1:24-vv-00752 - OMWEGA v. SECRETARY OF HEALTH AND HUMAN SERVICES](https://www.govinfo.gov/app/details/USCOURTS-cofc-1_24-vv-00752/context) — United States Court of Federal Claims; 2026-10-16T20:50:08+00:00
+- [25-2482 - Technical Arts Group LLC et al v. Abe V. Systems Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-njb-2_25-ap-02482/context) — Bankruptcy Court District of New Jersey; 2026-10-16T20:50:08+00:00
+- [26-3001 - Baichao Li v. Todd Blanche](https://www.govinfo.gov/app/details/USCOURTS-ca6-26-03001/context) — Court of Appeals for the Sixth Circuit; 2026-10-16T20:50:08+00:00
+- [26-230 - Olivero Nava et al v. Warden of Port Isabel Service Processing Center et al](https://www.govinfo.gov/app/details/USCOURTS-txsd-1_26-cv-00230/context) — District Court Southern District of Texas; 2026-10-16T20:50:08+00:00
+- [26-974 - Fornesa v. Auto Club Indeminity Company et al Plaintiff is not to file any motions until after motion to dismiss is ruled on.](https://www.govinfo.gov/app/details/USCOURTS-txsd-4_26-cv-00974/context) — District Court Southern District of Texas; 2026-10-16T20:50:08+00:00
+- [26-952 - SOUMPHONPHAKDY v. SHIELDS et al](https://www.govinfo.gov/app/details/USCOURTS-njd-1_26-cv-00952/context) — District Court District of New Jersey; 2026-10-16T20:50:08+00:00
+- [25-788 - USA v. DERIVAL](https://www.govinfo.gov/app/details/USCOURTS-njd-2_25-cr-00788/context) — District Court District of New Jersey; 2026-10-16T20:50:08+00:00
+- [18-2045 - Lego A/S et al v. Zuru Inc.](https://www.govinfo.gov/app/details/USCOURTS-ctd-3_18-cv-02045/context) — District Court District of Connecticut; 2026-10-16T20:50:08+00:00
+- [26-977 - Actian Corporation v. Leica Geosystems, Inc.](https://www.govinfo.gov/app/details/USCOURTS-cand-5_26-cv-00977/context) — District Court Northern District of California; 2026-10-16T20:50:08+00:00
+- [26-5248 - Wilson v. Alameda County et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-05248/context) — District Court Northern District of California; 2026-10-16T20:50:08+00:00
+- [26-11104 - Strike 3 Holdings, LLC v. John Doe subscriber assigned IP address 24.130.100.4](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-11104/context) — District Court Northern District of California; 2026-10-16T20:50:08+00:00
+- [26-11509 - Bulk Peptide Supply LLC v. Turc](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-11509/context) — District Court Northern District of California; 2026-10-16T20:50:08+00:00
+- [26-8148 - Whyte v. Robinson et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-08148/context) — District Court Northern District of California; 2026-10-16T20:50:08+00:00
+- [26-6847 - Cordova Diaz et al v. Mullin et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-06847/context) — District Court Northern District of California; 2026-10-16T20:50:08+00:00
+- [25-1608 - Paula Bailey, et al v. MDOC, et al](https://www.govinfo.gov/app/details/USCOURTS-ca6-25-01608/context) — Court of Appeals for the Sixth Circuit; 2026-10-16T20:50:07+00:00
+- [25-4039 - USA v. Dennis Martinez-Cacho](https://www.govinfo.gov/app/details/USCOURTS-ca6-25-04039/context) — Court of Appeals for the Sixth Circuit; 2026-10-16T20:50:07+00:00
+- [25-5305 - Despaigne v. Thompson, et al](https://www.govinfo.gov/app/details/USCOURTS-txsd-4_25-cv-05305/context) — District Court Southern District of Texas; 2026-10-16T20:50:07+00:00
+- [25-17997 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-njd-3_25-cv-17997/context) — District Court District of New Jersey; 2026-10-16T20:50:07+00:00
+- [26-9636 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-njd-1_26-cv-09636/context) — District Court District of New Jersey; 2026-10-16T20:50:07+00:00
+- [23-638 - USA v. NEUMAN](https://www.govinfo.gov/app/details/USCOURTS-njd-3_23-cr-00638/context) — District Court District of New Jersey; 2026-10-16T20:50:07+00:00
+- [26-4879 - HAUSER-MERKLIN v. VALLEY HEALTH SYSTEM, INC.,](https://www.govinfo.gov/app/details/USCOURTS-njd-2_26-cv-04879/context) — District Court District of New Jersey; 2026-10-16T20:50:07+00:00
+- [25-13626 - ISAACS v. NOVARTIS PHARMACEUTICALS CORPORATION](https://www.govinfo.gov/app/details/USCOURTS-njd-3_25-cv-13626/context) — District Court District of New Jersey; 2026-10-16T20:50:07+00:00
+- [26-5456 - NUNEZ v. SOUTH AMBOY CITY BOARD OF EDUCATION](https://www.govinfo.gov/app/details/USCOURTS-njd-3_26-cv-05456/context) — District Court District of New Jersey; 2026-10-16T20:50:07+00:00
+- [23-920 - USA v. RODRIGUEZ](https://www.govinfo.gov/app/details/USCOURTS-njd-3_23-cr-00920/context) — District Court District of New Jersey; 2026-10-16T20:50:07+00:00
+- [26-12061 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-njd-1_26-cv-12061/context) — District Court District of New Jersey; 2026-10-16T20:50:07+00:00
+- [25-3321 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-mowd-6_25-cv-03321/context) — District Court Western District of Missouri; 2026-10-16T20:50:07+00:00
+- [26-2596 - Howard v. Unknow Central Intelligence Agency Officer Officer et al](https://www.govinfo.gov/app/details/USCOURTS-cand-4_26-cv-02596/context) — District Court Northern District of California; 2026-10-16T20:50:07+00:00
+- [25-9322 - Sierra Club v. United States DOGE Service et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_25-cv-09322/context) — District Court Northern District of California; 2026-10-16T20:50:07+00:00
+- [26-8254 - ROOTS COMMUNITY HEALTH CENTER v. ACRISURE WEST INSURANCE SERVICES, LLC](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-08254/context) — District Court Northern District of California; 2026-10-16T20:50:07+00:00
+- [26-7321 - Olson v. Albertsons Companies, Inc.](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-07321/context) — District Court Northern District of California; 2026-10-16T20:50:07+00:00
+- [26-6838 - Doe et al v. County of San Mateo et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-06838/context) — District Court Northern District of California; 2026-10-16T20:50:07+00:00
+- [26-80293 - Qualcomm Incorporated v. Glover](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-mc-80293/context) — District Court Northern District of California; 2026-10-16T20:50:07+00:00
+- [1:22-vv-00428 - JARANILLA et al v. SECRETARY OF HEALTH AND HUMAN SERVICES](https://www.govinfo.gov/app/details/USCOURTS-cofc-1_22-vv-00428/context) — United States Court of Federal Claims; 2026-10-16T20:47:28+00:00
+- [24-11144 - iSun, Inc.](https://www.govinfo.gov/app/details/USCOURTS-deb-1_24-bk-11144/context) — Bankruptcy Court District of Delaware; 2026-10-16T20:47:28+00:00
+- [25-3966 - Gerson Rosales-Camaja v. Todd Blanche](https://www.govinfo.gov/app/details/USCOURTS-ca6-25-03966/context) — Court of Appeals for the Sixth Circuit; 2026-10-16T20:47:28+00:00
+- [25-2167 - Michigan 32, LLC, et al v. Travelers Insurance Company, et al](https://www.govinfo.gov/app/details/USCOURTS-ca6-25-02167/context) — Court of Appeals for the Sixth Circuit; 2026-10-16T20:47:28+00:00
+- [25-5703 - Axis Dynamics, et al v. Knox County, TN, et al](https://www.govinfo.gov/app/details/USCOURTS-ca6-25-05703/context) — Court of Appeals for the Sixth Circuit; 2026-10-16T20:47:28+00:00
+- [26-146 - Kiyedi v. Cerna et al](https://www.govinfo.gov/app/details/USCOURTS-txsd-1_26-cv-00146/context) — District Court Southern District of Texas; 2026-10-16T20:47:28+00:00
+- [25-4404 - Lawton v. Commissioner Of Social Security](https://www.govinfo.gov/app/details/USCOURTS-txsd-4_25-cv-04404/context) — District Court Southern District of Texas; 2026-10-16T20:47:28+00:00
+- [26-675 - Greene v. Inglewood One Stop](https://www.govinfo.gov/app/details/USCOURTS-txsd-1_26-cv-00675/context) — District Court Southern District of Texas; 2026-10-16T20:47:28+00:00
+- [25-554 - ELIZABETH BOARD OF EDUCATION v. B. et al](https://www.govinfo.gov/app/details/USCOURTS-njd-2_25-cv-00554/context) — District Court District of New Jersey; 2026-10-16T20:47:28+00:00
+- [25-103 - USA v. Spadt](https://www.govinfo.gov/app/details/USCOURTS-mtd-4_25-cr-00103/context) — District Court District of Montana; 2026-10-16T20:47:28+00:00
+- [26-7139 - Akther v. Hayes](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-07139/context) — District Court Northern District of California; 2026-10-16T20:47:28+00:00
+- [25-5883 - Kimber v. United States of America](https://www.govinfo.gov/app/details/USCOURTS-cand-5_25-cv-05883/context) — District Court Northern District of California; 2026-10-16T20:47:28+00:00
+- [25-7588 - Innovative Sports Management, Inc. v. Lizcano et al](https://www.govinfo.gov/app/details/USCOURTS-cand-5_25-cv-07588/context) — District Court Northern District of California; 2026-10-16T20:47:28+00:00
+- [26-2960 - Operating Engineers Health and Welfare Trust Fund et al v. Rhino Engineering, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-cand-4_26-cv-02960/context) — District Court Northern District of California; 2026-10-16T20:47:28+00:00
+- [26-8044 - Hurley et al v. 2121 Sacramento Street Owner, L.P. et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-08044/context) — District Court Northern District of California; 2026-10-16T20:47:28+00:00
+- [24-7288 - Sierra Club, Inc. et al v. Exxon Mobil Corporation et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_24-cv-07288/context) — District Court Northern District of California; 2026-10-16T20:47:28+00:00
+- [25-2805 - Scheidt v. Ford Motor Company](https://www.govinfo.gov/app/details/USCOURTS-cand-5_25-cv-02805/context) — District Court Northern District of California; 2026-10-16T20:47:28+00:00
+- [26-11536 - Ozuno v. Albarran et al](https://www.govinfo.gov/app/details/USCOURTS-cand-5_26-cv-11536/context) — District Court Northern District of California; 2026-10-16T20:47:28+00:00
+- [26-11448 - Tillery et al v. Samsung Electronics America, Inc.](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-11448/context) — District Court Northern District of California; 2026-10-16T20:47:28+00:00
+- [1:22-vv-00792 - DE LEON v. SECRETARY OF HEALTH AND HUMAN SERVICES](https://www.govinfo.gov/app/details/USCOURTS-cofc-1_22-vv-00792/context) — United States Court of Federal Claims; 2026-10-16T20:47:27+00:00
+- [1:25-vv-02069 - MARX v. SECRETARY OF HEALTH AND HUMAN SERVICES](https://www.govinfo.gov/app/details/USCOURTS-cofc-1_25-vv-02069/context) — United States Court of Federal Claims; 2026-10-16T20:47:27+00:00
+- [26-9014 - Costello v. Pitts](https://www.govinfo.gov/app/details/USCOURTS-ianb-2_26-ap-09014/context) — Bankruptcy Court Northern District of Iowa; 2026-10-16T20:47:27+00:00
+- [26-3235 - USA v. Tony Johnson](https://www.govinfo.gov/app/details/USCOURTS-ca6-26-03235/context) — Court of Appeals for the Sixth Circuit; 2026-10-16T20:47:27+00:00
+- [24-2042 - USA v. Irfan Gill](https://www.govinfo.gov/app/details/USCOURTS-ca6-24-02042/context) — Court of Appeals for the Sixth Circuit; 2026-10-16T20:47:27+00:00
+- [23-4025 - IN RE APPLICATION OF RH2 PARTICIPAES SOCIETRIAS LTDA UNDER 28 U.S.C. § 1782](https://www.govinfo.gov/app/details/USCOURTS-njd-3_23-cv-04025/context) — District Court District of New Jersey; 2026-10-16T20:47:27+00:00
+- [26-12783 - BOOKER et al v. ALLEN et al](https://www.govinfo.gov/app/details/USCOURTS-njd-2_26-cv-12783/context) — District Court District of New Jersey; 2026-10-16T20:47:27+00:00
+- [26-12428 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-njd-1_26-cv-12428/context) — District Court District of New Jersey; 2026-10-16T20:47:27+00:00
+- [26-3643 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-mowd-6_26-cv-03643/context) — District Court Western District of Missouri; 2026-10-16T20:47:27+00:00
+- [25-3241 - Donis v. Hansen et al](https://www.govinfo.gov/app/details/USCOURTS-cod-1_25-cv-03241/context) — District Court District of Colorado; 2026-10-16T20:47:27+00:00
+- [24-6835 - Vallejo et al v. The Neil Jones Food Company](https://www.govinfo.gov/app/details/USCOURTS-cand-5_24-cv-06835/context) — District Court Northern District of California; 2026-10-16T20:47:27+00:00
+- [26-8716 - Price v. Wiedman et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-08716/context) — District Court Northern District of California; 2026-10-16T20:47:27+00:00
+- [26-11309 - Navarro Aguilar v. Albarran et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-11309/context) — District Court Northern District of California; 2026-10-16T20:47:27+00:00
+- [26-11844 - Center For Biological Diversity v. Zeldin et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-11844/context) — District Court Northern District of California; 2026-10-16T20:47:27+00:00
+- [26-11887 - Moshogiannis v. 2580 Casa Real LP](https://www.govinfo.gov/app/details/USCOURTS-cand-5_26-cv-11887/context) — District Court Northern District of California; 2026-10-16T20:47:27+00:00
+- [26-2640 - Mullin v. County of San Mateo Private Defender Program (PDP) Administrators](https://www.govinfo.gov/app/details/USCOURTS-cand-4_26-cv-02640/context) — District Court Northern District of California; 2026-10-16T20:47:27+00:00
+- [26-7452 - Zhang v. Edlow et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-07452/context) — District Court Northern District of California; 2026-10-16T20:47:27+00:00
+- [26-10908 - Abarca v. Thornton et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-10908/context) — District Court Northern District of California; 2026-10-16T20:47:27+00:00
+- [26-3240 - Hussain v. Yemeni Consulate of San Francisco et al](https://www.govinfo.gov/app/details/USCOURTS-cand-4_26-cv-03240/context) — District Court Northern District of California; 2026-10-16T20:47:27+00:00
+- [26-235 - Barreto v. State of Alaska et al](https://www.govinfo.gov/app/details/USCOURTS-akd-3_26-cv-00235/context) — District Court District of Alaska; 2026-10-16T20:47:27+00:00
+- [25-069 - USA v. Bom](https://www.govinfo.gov/app/details/USCOURTS-akd-3_25-cr-00069/context) — District Court District of Alaska; 2026-10-16T20:47:26+00:00
+- [25-1866 - Northfield Insurance Company v. Michigan 32, LLC](https://www.govinfo.gov/app/details/USCOURTS-ca6-25-01866/context) — Court of Appeals for the Sixth Circuit; 2026-10-16T20:41:00+00:00
+- [26-3734 - Parrado-Mora v. United States of America](https://www.govinfo.gov/app/details/USCOURTS-mnd-0_26-cv-03734/context) — District Court District of Minnesota; 2026-10-16T20:29:00+00:00
+- [24-2773 - Apollo Holding Company, LLC et al v. Cliff Roe, et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cv-02773/context) — District Court Eastern District of Louisiana; 2026-10-16T20:29:00+00:00
+- [25-60535 - Consumers' Research v. FCC](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-60535/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:28:00+00:00
+- [26-30021 - Seacor Marine v. GOL](https://www.govinfo.gov/app/details/USCOURTS-ca5-26-30021/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:28:00+00:00
+- [26-10221 - USA v. O'Connor](https://www.govinfo.gov/app/details/USCOURTS-ca5-26-10221/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:28:00+00:00
+- [12-091 - New London Tobacco Market, Inc. et al v. Kentucky Fuel Corporation et al](https://www.govinfo.gov/app/details/USCOURTS-kyed-6_12-cv-00091/context) — District Court Eastern District of Kentucky; 2026-10-16T20:28:00+00:00
+- [26-1111 - Ross v. Dagate et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-01111/context) — District Court Eastern District of Louisiana; 2026-10-16T20:28:00+00:00
+- [24-132 - USA v. Gage, Jr. et al.](https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cr-00132/context) — District Court Eastern District of Louisiana; 2026-10-16T20:28:00+00:00
+- [16-063 - USA v. Pizarro et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_16-cr-00063/context) — District Court Eastern District of Louisiana; 2026-10-16T20:28:00+00:00
+- [25-1156 - Hamilton v. Mastec North America, Inc., et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-01156/context) — District Court Eastern District of Louisiana; 2026-10-16T20:28:00+00:00
+- [26-694 - Crossland v. Bickham et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00694/context) — District Court Eastern District of Louisiana; 2026-10-16T20:28:00+00:00
+- [25-2042 - Price v. Evolve Bancorp Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-02042/context) — District Court Eastern District of Louisiana; 2026-10-16T20:28:00+00:00
+- [26-1846 - Pierce v. Rooms To Go Louisiana Corp. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-01846/context) — District Court Eastern District of Louisiana; 2026-10-16T20:28:00+00:00
+- [22-802 - Koran v. BP Exploration & Production, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_22-cv-00802/context) — District Court Eastern District of Louisiana; 2026-10-16T20:28:00+00:00
+- [23-2890 - Eric D. Holmes v. Ron Neal](https://www.govinfo.gov/app/details/USCOURTS-ca7-23-02890/context) — Court of Appeals for the Seventh Circuit; 2026-10-16T20:26:01+00:00
+- [26-10251 - USA v. Britt](https://www.govinfo.gov/app/details/USCOURTS-ca5-26-10251/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:26:01+00:00
+- [25-60565 - Gorbunov v. Blanche](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-60565/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:26:01+00:00
+- [25-50962 - Percelle v. Freedom Mortgage](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-50962/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:26:01+00:00
+- [25-40464 - Martinez v. Hidalgo County](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-40464/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:26:01+00:00
+- [25-11387 - USA v. Jimison](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-11387/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:26:01+00:00
+- [20-231 - USA v. Mathias et al](https://www.govinfo.gov/app/details/USCOURTS-mnd-0_20-cr-00231/context) — District Court District of Minnesota; 2026-10-16T20:26:01+00:00
+- [19-2723 - Commonwealth of Puerto Rico v. Agri Stats, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-mnd-0_19-cv-02723/context) — District Court District of Minnesota; 2026-10-16T20:26:01+00:00
+- [26-1497 - Watkins v. Olympic Steel](https://www.govinfo.gov/app/details/USCOURTS-mnd-0_26-cv-01497/context) — District Court District of Minnesota; 2026-10-16T20:26:01+00:00
+- [20-232 - USA v. Rahm et al](https://www.govinfo.gov/app/details/USCOURTS-mnd-0_20-cr-00232/context) — District Court District of Minnesota; 2026-10-16T20:26:01+00:00
+- [24-253 - USA v. Lewis](https://www.govinfo.gov/app/details/USCOURTS-mnd-0_24-cr-00253/context) — District Court District of Minnesota; 2026-10-16T20:26:01+00:00
+- [26-144 - Cox et al v. The Boone County School Board et al](https://www.govinfo.gov/app/details/USCOURTS-kyed-2_26-cv-00144/context) — District Court Eastern District of Kentucky; 2026-10-16T20:26:01+00:00
+- [24-714 - Wilson v. City of Bogalusa et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cv-00714/context) — District Court Eastern District of Louisiana; 2026-10-16T20:26:01+00:00
+- [25-1394 - Edmond v. Venture Global LNG, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-01394/context) — District Court Eastern District of Louisiana; 2026-10-16T20:26:01+00:00
+- [26-588 - Torrent Gulf Coast III, LLC v. Gulf Oceanic Marine Contractors, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00588/context) — District Court Eastern District of Louisiana; 2026-10-16T20:26:01+00:00
+- [26-322 - LeBeau v. All Chemical Transport Corp. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00322/context) — District Court Eastern District of Louisiana; 2026-10-16T20:26:01+00:00
+- [26-369 - Felton v. CLB Investments LLC et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00369/context) — District Court Eastern District of Louisiana; 2026-10-16T20:26:01+00:00
+- [23-40523 - The Roman Catholic Bishop of Oakland](https://www.govinfo.gov/app/details/USCOURTS-canb-4_23-bk-40523/context) — Bankruptcy Court Northern District of California; 2026-10-16T20:26:01+00:00
+- [24-2759 - Shorts et al v. St. Charles Parish Sheriff's Office et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cv-02759/context) — District Court Eastern District of Louisiana; 2026-10-16T20:26:01+00:00
+- [25-1248 - Sherrod et al v. Nexion Health at Marrero, Inc., et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-01248/context) — District Court Eastern District of Louisiana; 2026-10-16T20:26:01+00:00
+- [23-7144 - Joiner v. Lewis et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_23-cv-07144/context) — District Court Eastern District of Louisiana; 2026-10-16T20:26:01+00:00
+- [21-084 - USA v. Brown, et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_21-cr-00084/context) — District Court Eastern District of Louisiana; 2026-10-16T20:26:01+00:00
+- [26-2156 - Kerbow et al v. Washington Parish School Board et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-02156/context) — District Court Eastern District of Louisiana; 2026-10-16T20:26:01+00:00
+- [25-2577 - Moore v. Steiner et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-02577/context) — District Court Eastern District of Louisiana; 2026-10-16T20:26:01+00:00
+- [26-10553 - Sedrick Moore v. Jason Pearson](https://www.govinfo.gov/app/details/USCOURTS-ca11-26-10553/context) — Court of Appeals for the Eleventh Circuit; 2026-10-16T20:24:04+00:00
+- [08-1734 - John Malone, Jr. v. Reliastar Life Insur, et al](https://www.govinfo.gov/app/details/USCOURTS-ca7-08-01734/context) — Court of Appeals for the Seventh Circuit; 2026-10-16T20:24:04+00:00
+- [25-60098 - Elite Brothers, L.L.C. v. FDA](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-60098/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:24:04+00:00
+- [25-30542 - Norcave Properties v. IRS](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-30542/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:24:04+00:00
+- [26-403 - Henry v. Shell USA, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00403/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:04+00:00
+- [25-1982 - Stephens v. Day et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-01982/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:04+00:00
+- [25-2040 - United States of America v. Paige et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-02040/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:04+00:00
+- [25-2458 - Young v. St. John the Baptist Sheriff's Office et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-02458/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:04+00:00
+- [26-1599 - Ambo v. Van Halen et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-01599/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:04+00:00
+- [22-1271 - Hutchinson-Harper, et al v. Jefferson Parish School Board, et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_22-cv-01271/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:04+00:00
+- [26-107 - USA v. Grant](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cr-00107/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:04+00:00
+- [26-434 - Lightfoot et al v. Progressive Direct Insurance Company et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00434/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:04+00:00
+- [17-104 - USA v. Wells et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_17-cr-00104/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:04+00:00
+- [23-931 - BlueTeam Roofing, LLC v. Vincent Piazza, Jr. and Sons Seafood, Inc.](https://www.govinfo.gov/app/details/USCOURTS-laed-2_23-cv-00931/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:04+00:00
+- [26-103 - USA v. Joseph](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cr-00103/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:04+00:00
+- [24-012 - USA v. STUKES, ET AL.](https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cr-00012/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:04+00:00
+- [23-197 - USA v. Howard](https://www.govinfo.gov/app/details/USCOURTS-laed-2_23-cr-00197/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:04+00:00
+- [25-2136 - Scott Dillion v. Dow Chemical Company et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-02136/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:04+00:00
+- [26-80307 - Crystal Hope Varner](https://www.govinfo.gov/app/details/USCOURTS-ilcb-1_26-bk-80307/context) — Bankruptcy Court Central District of Illinois; 2026-10-16T20:24:03+00:00
+- [26-5109 - Sivokonev Igorevich v. New York State Government, et al](https://www.govinfo.gov/app/details/USCOURTS-caDC-26-05109/context) — Court of Appeals for the District of Columbia Circuit; 2026-10-16T20:24:03+00:00
+- [25-12436 - NetChoice v. Attorney General, State of Georgia](https://www.govinfo.gov/app/details/USCOURTS-ca11-25-12436/context) — Court of Appeals for the Eleventh Circuit; 2026-10-16T20:24:03+00:00
+- [25-11504 - Oasis Capital, LLC v. Nason, Yeager, Gerson, Harris & Fumero, P.A., et al](https://www.govinfo.gov/app/details/USCOURTS-ca11-25-11504/context) — Court of Appeals for the Eleventh Circuit; 2026-10-16T20:24:03+00:00
+- [23-1814 - USA V. LE](https://www.govinfo.gov/app/details/USCOURTS-ca9-23-1814/context) — Court of Appeals for the Ninth Circuit; 2026-10-16T20:24:03+00:00
+- [08-2377 - John Malone, Jr. v. Reliastar Life Insur, et al](https://www.govinfo.gov/app/details/USCOURTS-ca7-08-02377/context) — Court of Appeals for the Seventh Circuit; 2026-10-16T20:24:03+00:00
+- [25-10758 - Outsourcing Facilities Association v. FDA](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-10758/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:24:03+00:00
+- [24-60332 - Vertigo Vapor, L.L.C. v. FDA](https://www.govinfo.gov/app/details/USCOURTS-ca5-24-60332/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:24:03+00:00
+- [26-20337 - In re: Paula Goodhart](https://www.govinfo.gov/app/details/USCOURTS-ca5-26-20337/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:24:03+00:00
+- [25-50661 - Natl Infusion Center v. Kennedy](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-50661/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:24:03+00:00
+- [26-10032 - USA v. Vazquez](https://www.govinfo.gov/app/details/USCOURTS-ca5-26-10032/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:24:03+00:00
+- [24-60272 - NicQuid, L.L.C. v. FDA](https://www.govinfo.gov/app/details/USCOURTS-ca5-24-60272/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:24:03+00:00
+- [25-60369 - American Vapor Company, L.L.C. v. FDA](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-60369/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:24:03+00:00
+- [24-60628 - Vapermate, L.L.C. v. FDA](https://www.govinfo.gov/app/details/USCOURTS-ca5-24-60628/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:24:03+00:00
+- [24-60424 - Lead by Sales, L.L.C. v. FDA](https://www.govinfo.gov/app/details/USCOURTS-ca5-24-60424/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:24:03+00:00
+- [25-10600 - Outsourcing Facilities v. FDA](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-10600/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:24:03+00:00
+- [26-2249 - In re: Latoshia Reeves](https://www.govinfo.gov/app/details/USCOURTS-ca4-26-02249/context) — Court of Appeals for the Fourth Circuit; 2026-10-16T20:24:03+00:00
+- [25-2107 - Arlington School Board v. Linda McMahon](https://www.govinfo.gov/app/details/USCOURTS-ca4-25-02107/context) — Court of Appeals for the Fourth Circuit; 2026-10-16T20:24:03+00:00
+- [26-4169 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-mnd-0_26-cv-04169/context) — District Court District of Minnesota; 2026-10-16T20:24:03+00:00
+- [26-1403 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-mnd-0_26-cv-01403/context) — District Court District of Minnesota; 2026-10-16T20:24:03+00:00
+- [26-1272 - Bullock v. United Site Services of Mississippi, LLC et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-01272/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:03+00:00
+- [25-2550 - Sears v. Slidell City et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-02550/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:03+00:00
+- [24-040 - USA v. Smith](https://www.govinfo.gov/app/details/USCOURTS-akd-3_24-cr-00040/context) — District Court District of Alaska; 2026-10-16T20:24:03+00:00
+- [26-721 - Merchants Bonding Company Mutual v. Marsh Buggies, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00721/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:03+00:00
+- [17-044 - USA v. Shawley](https://www.govinfo.gov/app/details/USCOURTS-laed-2_17-cr-00044/context) — District Court Eastern District of Louisiana; 2026-10-16T20:24:03+00:00
+- [25-14205 - Richard Rigsbee v. Social Security Administration, Commissioner](https://www.govinfo.gov/app/details/USCOURTS-ca11-25-14205/context) — Court of Appeals for the Eleventh Circuit; 2026-10-16T20:24:02+00:00
+- [25-40272 - USA v. Luna](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-40272/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:24:02+00:00
+- [24-6957 - Demmerick Brown v. David Robinson](https://www.govinfo.gov/app/details/USCOURTS-ca4-24-06957/context) — Court of Appeals for the Fourth Circuit; 2026-10-16T20:24:02+00:00
+- [25-13323 - USA v. Juan Diez](https://www.govinfo.gov/app/details/USCOURTS-ca11-25-13323/context) — Court of Appeals for the Eleventh Circuit; 2026-10-16T20:23:00+00:00
+- [26-12564 - Andrew Moore, II v. Commissioner, Social Security Administration, et al](https://www.govinfo.gov/app/details/USCOURTS-ca11-26-12564/context) — Court of Appeals for the Eleventh Circuit; 2026-10-16T20:23:00+00:00
+- [25-12590 - USA v. Christopher Grant](https://www.govinfo.gov/app/details/USCOURTS-ca11-25-12590/context) — Court of Appeals for the Eleventh Circuit; 2026-10-16T20:23:00+00:00
+- [25-10534 - W.M.M. v. Trump](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-10534/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:23:00+00:00
+- [25-50534 - USA v. Day](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-50534/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:23:00+00:00
+- [24-60304 - Breeze Smoke, L.L.C. v. FDA](https://www.govinfo.gov/app/details/USCOURTS-ca5-24-60304/context) — Court of Appeals for the Fifth Circuit; 2026-10-16T20:23:00+00:00
+- [25-2087 - Fairfax County School Board v. Linda McMahon](https://www.govinfo.gov/app/details/USCOURTS-ca4-25-02087/context) — Court of Appeals for the Fourth Circuit; 2026-10-16T20:23:00+00:00
+- [25-3769 - Sledge v. Warden, FCI Waseca](https://www.govinfo.gov/app/details/USCOURTS-mnd-0_25-cv-03769/context) — District Court District of Minnesota; 2026-10-16T20:23:00+00:00
+- [26-12959 - Amar Gueye v. Hillsborough Transit Authority, et al](https://www.govinfo.gov/app/details/USCOURTS-ca11-26-12959/context) — Court of Appeals for the Eleventh Circuit; 2026-10-16T20:22:00+00:00
+- [25-13167 - Alfredo Bless v. Secretary, Florida Department of Corrections, et al](https://www.govinfo.gov/app/details/USCOURTS-ca11-25-13167/context) — Court of Appeals for the Eleventh Circuit; 2026-10-16T20:22:00+00:00
+- [26-10269 - Reginald Bulls v. Chris Connolly](https://www.govinfo.gov/app/details/USCOURTS-ca11-26-10269/context) — Court of Appeals for the Eleventh Circuit; 2026-10-16T20:22:00+00:00
+- [25-12730 - USA v. Vincent Robusto](https://www.govinfo.gov/app/details/USCOURTS-ca11-25-12730/context) — Court of Appeals for the Eleventh Circuit; 2026-10-16T20:22:00+00:00
+- [25-4469 - US v. Jesse Owens](https://www.govinfo.gov/app/details/USCOURTS-ca4-25-04469/context) — Court of Appeals for the Fourth Circuit; 2026-10-16T20:22:00+00:00
+- [26-6330 - US v. Zakaryia Abdin](https://www.govinfo.gov/app/details/USCOURTS-ca4-26-06330/context) — Court of Appeals for the Fourth Circuit; 2026-10-16T20:22:00+00:00
 - [09-179 - USA v. Vassallo](https://www.govinfo.gov/app/details/USCOURTS-caed-2_09-cr-00179/context) — District Court Eastern District of California; 2026-10-16T06:13:00+00:00
 - [13-084 - USA v. Singh et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_13-cr-00084/context) — District Court Eastern District of California; 2026-10-16T06:12:00+00:00
 - [09-450 - USA v. Goulding et al](https://www.govinfo.gov/app/details/USCOURTS-caed-2_09-cr-00450/context) — District Court Eastern District of California; 2026-10-16T06:09:01+00:00
@@ -464,7 +1343,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [26-2236 - USA v. Banegas-Sevilla](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cr-02236/context) — District Court Western District of Texas; 2026-10-16T02:06:00+00:00
 - [26-112 - Thomas C. v. Bisignano](https://www.govinfo.gov/app/details/USCOURTS-rid-1_26-cv-00112/context) — District Court District of Rhode Island; 2026-10-16T02:06:00+00:00
 - [25-441 - Wolfe et al v. Miami East Local School District Board of Education](https://www.govinfo.gov/app/details/USCOURTS-ohsd-3_25-cv-00441/context) — District Court Southern District of Ohio; 2026-10-16T02:06:00+00:00
-- [24-22531 - Global Approach, Inc. v. Scottsdale Insurance Company](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_24-cv-22531/context) — District Court Southern District of Florida; 2026-10-16T02:06:00+00:00
 - [26-5533 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-05533/context) — District Court Southern District of California; 2026-10-16T02:06:00+00:00
 - [26-4894 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-04894/context) — District Court Southern District of California; 2026-10-16T02:06:00+00:00
 - [24-2076 - USA v. Bustos et al](https://www.govinfo.gov/app/details/USCOURTS-waed-1_24-cr-02076/context) — District Court Eastern District of Washington; 2026-10-16T02:05:00+00:00
@@ -488,7 +1366,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [24-1237 - McDaniel v. Rural King Holdings, LLP et al](https://www.govinfo.gov/app/details/USCOURTS-pamd-1_24-cv-01237/context) — District Court Middle District of Pennsylvania; 2026-10-16T02:03:12+00:00
 - [26-2323 - Sonu v. Figueroa et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-02323/context) — District Court Western District of Oklahoma; 2026-10-16T02:03:12+00:00
 - [25-795 - Jackson v. Warden, Pickaway Correctional Institution](https://www.govinfo.gov/app/details/USCOURTS-ohsd-2_25-cv-00795/context) — District Court Southern District of Ohio; 2026-10-16T02:03:12+00:00
-- [26-2589 - Dailey v. United States Attorney's Office et al](https://www.govinfo.gov/app/details/USCOURTS-nmd-1_26-cv-02589/context) — District Court District of New Mexico; 2026-10-16T02:03:12+00:00
 - [25-422 - Ramos Sanchez v. US Department of Homeland Security, Secretary et al](https://www.govinfo.gov/app/details/USCOURTS-nhd-1_25-cv-00422/context) — District Court District of New Hampshire; 2026-10-16T02:03:12+00:00
 - [26-2314 - Miller v. County of San Diego et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-02314/context) — District Court Southern District of California; 2026-10-16T02:03:12+00:00
 - [26-3995 - USA v. Ponce-Silva](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-03995/context) — District Court Southern District of California; 2026-10-16T02:03:12+00:00
@@ -503,7 +1380,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [24-5126 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-4_24-cv-05126/context) — District Court Eastern District of Washington; 2026-10-16T02:00:32+00:00
 - [26-2265 - USA v. Valenzuela-Puente](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cr-02265/context) — District Court Western District of Texas; 2026-10-16T02:00:32+00:00
 - [26-2270 - USA v. Rodriguez-Gomez](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cr-02270/context) — District Court Western District of Texas; 2026-10-16T02:00:32+00:00
-- [22-011 - The Government of the Lao People's Democratic Republic v. Baldwin et al](https://www.govinfo.gov/app/details/USCOURTS-nmid-1_22-cv-00011/context) — District Court District of Northern Mariana Islands; 2026-10-16T02:00:32+00:00
 - [26-248 - Lewis v. Maryland Department of Transportation, Maryland Transit Administration et al](https://www.govinfo.gov/app/details/USCOURTS-mdd-8_26-cv-00248/context) — District Court District of Maryland; 2026-10-16T02:00:32+00:00
 - [26-045 - USA v. Freerksen](https://www.govinfo.gov/app/details/USCOURTS-iand-1_26-cr-00045/context) — District Court Northern District of Iowa; 2026-10-16T02:00:32+00:00
 - [26-5800 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-05800/context) — District Court Southern District of California; 2026-10-16T02:00:32+00:00
@@ -523,24 +1399,20 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [26-3354 - Gatlin v. Borgerstock et al](https://www.govinfo.gov/app/details/USCOURTS-ksd-5_26-cv-03354/context) — District Court District of Kansas; 2026-10-16T01:59:07+00:00
 - [19-1944 - J.O.P., et al v. U.S. Department of Homeland Security, et al](https://www.govinfo.gov/app/details/USCOURTS-mdd-8_19-cv-01944/context) — District Court District of Maryland; 2026-10-16T01:58:09+00:00
 - [24-5108 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-4_24-cv-05108/context) — District Court Eastern District of Washington; 2026-10-16T01:58:08+00:00
-- [16-6004 - USA v. Speelman](https://www.govinfo.gov/app/details/USCOURTS-waed-4_16-cr-06004/context) — District Court Eastern District of Washington; 2026-10-16T01:58:08+00:00
 - [24-119 - USA v. Lopez-Beltran](https://www.govinfo.gov/app/details/USCOURTS-waed-2_24-cr-00119/context) — District Court Eastern District of Washington; 2026-10-16T01:58:08+00:00
 - [26-1294 - Flores v. Mullin et al](https://www.govinfo.gov/app/details/USCOURTS-tnmd-3_26-cv-01294/context) — District Court Middle District of Tennessee; 2026-10-16T01:58:08+00:00
 - [23-1804 - CONLEY-REIFER v. MAJOR JEFFREY KENGERSKI et al](https://www.govinfo.gov/app/details/USCOURTS-pawd-2_23-cv-01804/context) — District Court Western District of Pennsylvania; 2026-10-16T01:58:08+00:00
 - [26-1463 - Levine v. Travelers Property Casualty Insurance Company](https://www.govinfo.gov/app/details/USCOURTS-pamd-1_26-cv-01463/context) — District Court Middle District of Pennsylvania; 2026-10-16T01:58:08+00:00
 - [26-1524 - Aghaei-Moghanloo v. Warden of Diamondback Correctional Facility et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-01524/context) — District Court Western District of Oklahoma; 2026-10-16T01:58:08+00:00
 - [26-354 - Cobb v. Southern Poverty Law Center, Inc et al](https://www.govinfo.gov/app/details/USCOURTS-ndd-1_26-cv-00354/context) — District Court District of North Dakota; 2026-10-16T01:58:08+00:00
-- [25-14356 - Spilker v. Indian River Memorial Hospital Inc.](https://www.govinfo.gov/app/details/USCOURTS-flsd-2_25-cv-14356/context) — District Court Southern District of Florida; 2026-10-16T01:58:08+00:00
 - [26-2259 - Gaston v. Birch Family Services](https://www.govinfo.gov/app/details/USCOURTS-nyed-1_26-cv-02259/context) — District Court Eastern District of New York; 2026-10-16T01:58:08+00:00
 - [26-14357 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-flsd-2_26-cv-14357/context) — District Court Southern District of Florida; 2026-10-16T01:58:08+00:00
-- [15-1191 - Mason v. State of Delaware (J.P. Court) et al](https://www.govinfo.gov/app/details/USCOURTS-ded-1_15-cv-01191/context) — District Court District of Delaware; 2026-10-16T01:58:08+00:00
 - [24-3159 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-1_24-cv-03159/context) — District Court Eastern District of Washington; 2026-10-16T01:57:00+00:00
 - [24-372 - Pond v. Spokane County, Washington](https://www.govinfo.gov/app/details/USCOURTS-waed-2_24-cv-00372/context) — District Court Eastern District of Washington; 2026-10-16T01:57:00+00:00
 - [26-1099 - Friends of the Ruidosa Church et al v. Mullin etal](https://www.govinfo.gov/app/details/USCOURTS-txwd-3_26-cv-01099/context) — District Court Western District of Texas; 2026-10-16T01:57:00+00:00
 - [25-709 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-ohsd-2_25-cv-00709/context) — District Court Southern District of Ohio; 2026-10-16T01:57:00+00:00
 - [26-145 - Scott v. Warden, London Correctional Institution et al](https://www.govinfo.gov/app/details/USCOURTS-ohsd-3_26-cv-00145/context) — District Court Southern District of Ohio; 2026-10-16T01:57:00+00:00
 - [24-065 - Gilliland v. Venepally et al](https://www.govinfo.gov/app/details/USCOURTS-nmd-2_24-cv-00065/context) — District Court District of New Mexico; 2026-10-16T01:57:00+00:00
-- [26-20389 - Evans v. Church of Scientology International et al](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_26-cv-20389/context) — District Court Southern District of Florida; 2026-10-16T01:57:00+00:00
 - [26-24961 - In the Matter of South Beach Watersports, LLC.](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_26-cv-24961/context) — District Court Southern District of Florida; 2026-10-16T01:57:00+00:00
 - [26-286 - Guney v. Butler County Jail](https://www.govinfo.gov/app/details/USCOURTS-ohsd-1_26-cv-00286/context) — District Court Southern District of Ohio; 2026-10-16T01:57:00+00:00
 - [24-2070 - USA v. Alvarez-Acevedo](https://www.govinfo.gov/app/details/USCOURTS-waed-1_24-cr-02070/context) — District Court Eastern District of Washington; 2026-10-16T01:56:00+00:00
@@ -555,7 +1427,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [26-3166 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-nmd-1_26-cv-03166/context) — District Court District of New Mexico; 2026-10-16T01:56:00+00:00
 - [26-3043 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-nmd-1_26-cv-03043/context) — District Court District of New Mexico; 2026-10-16T01:56:00+00:00
 - [26-2669 - Ortiz Baquedano v. Putra et al](https://www.govinfo.gov/app/details/USCOURTS-miwd-1_26-cv-02669/context) — District Court Western District of Michigan; 2026-10-16T01:56:00+00:00
-- [26-61562 - Dryden v. Bain et al](https://www.govinfo.gov/app/details/USCOURTS-flsd-0_26-cv-61562/context) — District Court Southern District of Florida; 2026-10-16T01:56:00+00:00
 - [26-5489 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-05489/context) — District Court Southern District of California; 2026-10-16T01:56:00+00:00
 - [26-3997 - USA v. Reyes-Valencia](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-03997/context) — District Court Southern District of California; 2026-10-16T01:56:00+00:00
 - [24-23330 - Jean v. The City of North Miami Beach et al](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_24-cv-23330/context) — District Court Southern District of Florida; 2026-10-16T01:56:00+00:00
@@ -605,7 +1476,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [26-274 - Buchanan v. Skin Win Dermatology P.C.](https://www.govinfo.gov/app/details/USCOURTS-ndd-1_26-cv-00274/context) — District Court District of North Dakota; 2026-10-16T01:50:17+00:00
 - [26-3272 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-nmd-2_26-cv-03272/context) — District Court District of New Mexico; 2026-10-16T01:50:17+00:00
 - [25-2511 - Miller v. CST Industries, Inc.](https://www.govinfo.gov/app/details/USCOURTS-ksd-2_25-cv-02511/context) — District Court District of Kansas; 2026-10-16T01:50:17+00:00
-- [26-23645 - DOT Fund LLC v. Balbina and Family Corp. et al](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_26-cv-23645/context) — District Court Southern District of Florida; 2026-10-16T01:50:17+00:00
 - [26-3144 - USA v. Diaz Quiroz](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-03144/context) — District Court Southern District of California; 2026-10-16T01:50:17+00:00
 - [25-194 - Huck et al v. Bureau of Land Management et al](https://www.govinfo.gov/app/details/USCOURTS-utd-2_25-cv-00194/context) — District Court District of Utah; 2026-10-16T01:48:03+00:00
 - [24-376 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-2_24-cv-00376/context) — District Court Eastern District of Washington; 2026-10-16T01:48:02+00:00
@@ -644,7 +1514,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [20-2663 - Zubko-Valva et al v. The County of Suffolk et al](https://www.govinfo.gov/app/details/USCOURTS-nyed-2_20-cv-02663/context) — District Court Eastern District of New York; 2026-10-16T01:45:35+00:00
 - [25-1052 - Baldwin, III v. Morrissey et al](https://www.govinfo.gov/app/details/USCOURTS-nmd-1_25-cv-01052/context) — District Court District of New Mexico; 2026-10-16T01:45:35+00:00
 - [25-863 - Goodman v. Midland Mortgage](https://www.govinfo.gov/app/details/USCOURTS-lamd-3_25-cv-00863/context) — District Court Middle District of Louisiana; 2026-10-16T01:45:35+00:00
-- [26-80651 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-flsd-9_26-cv-80651/context) — District Court Southern District of Florida; 2026-10-16T01:45:35+00:00
 - [26-2111 - Desrosiers v. Dr. Mildred Garcia et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-02111/context) — District Court Southern District of California; 2026-10-16T01:45:35+00:00
 - [26-5754 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-05754/context) — District Court Southern District of California; 2026-10-16T01:45:35+00:00
 - [26-1802 - USA v. Galarza](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-01802/context) — District Court Southern District of California; 2026-10-16T01:45:35+00:00
@@ -673,7 +1542,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [25-004 - FUNARO et al v. STATE FARM FIRE AND CASUALTY COMPANY et al](https://www.govinfo.gov/app/details/USCOURTS-pawd-2_25-cv-00004/context) — District Court Western District of Pennsylvania; 2026-10-16T01:42:39+00:00
 - [24-1581 - SELLARI v. BISIGNANO](https://www.govinfo.gov/app/details/USCOURTS-pawd-2_24-cv-01581/context) — District Court Western District of Pennsylvania; 2026-10-16T01:42:39+00:00
 - [26-4900 - Dorado v. City of San Diego et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-04900/context) — District Court Southern District of California; 2026-10-16T01:42:39+00:00
-- [1:24-cv-00174 - GameChange Solar Corp. v. United States](https://www.govinfo.gov/app/details/USCOURTS-cit-1_24-cv-00174/context) — United States Court of International Trade; 2026-10-16T01:42:38+00:00
 - [24-5125 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-4_24-cv-05125/context) — District Court Eastern District of Washington; 2026-10-16T01:42:38+00:00
 - [24-5137 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-4_24-cv-05137/context) — District Court Eastern District of Washington; 2026-10-16T01:42:38+00:00
 - [26-2040 - Cardenas Limon et al v. Planet Home Lending, LLC](https://www.govinfo.gov/app/details/USCOURTS-ord-3_26-cv-02040/context) — District Court District of Oregon; 2026-10-16T01:42:38+00:00
@@ -687,7 +1555,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [24-5141 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-4_24-cv-05141/context) — District Court Eastern District of Washington; 2026-10-16T01:41:00+00:00
 - [26-1210 - Salazar Gutierrez v. United States District Court](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-01210/context) — District Court Western District of Oklahoma; 2026-10-16T01:41:00+00:00
 - [26-240 - USA v. Lunger](https://www.govinfo.gov/app/details/USCOURTS-nynd-3_26-mj-00240/context) — District Court Northern District of New York; 2026-10-16T01:41:00+00:00
-- [25-22212 - Melkonian v. United States of America](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_25-cv-22212/context) — District Court Southern District of Florida; 2026-10-16T01:41:00+00:00
 - [26-4002 - USA v. Silva-Nunez](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-04002/context) — District Court Southern District of California; 2026-10-16T01:41:00+00:00
 - [26-4319 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-04319/context) — District Court Southern District of California; 2026-10-16T01:41:00+00:00
 - [24-310 - United States of America v. Hibbard et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_24-cv-00310/context) — District Court Eastern District of Washington; 2026-10-16T01:40:00+00:00
@@ -697,8 +1564,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [26-2622 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-pamd-1_26-cv-02622/context) — District Court Middle District of Pennsylvania; 2026-10-16T01:40:00+00:00
 - [26-1733 - Singh v. Mullin et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-01733/context) — District Court Western District of Oklahoma; 2026-10-16T01:40:00+00:00
 - [26-242 - USA v. Baker, II](https://www.govinfo.gov/app/details/USCOURTS-nynd-3_26-mj-00242/context) — District Court Northern District of New York; 2026-10-16T01:40:00+00:00
-- [26-25868 - THE GALLEON GUILD LTD v. The Partnerships, Unincorporated Associations Identified on Schedule A](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_26-cv-25868/context) — District Court Southern District of Florida; 2026-10-16T01:40:00+00:00
-- [26-61490 - Darby v. Broward Shereiff Dept et al](https://www.govinfo.gov/app/details/USCOURTS-flsd-0_26-cv-61490/context) — District Court Southern District of Florida; 2026-10-16T01:40:00+00:00
 - [26-25540 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_26-cv-25540/context) — District Court Southern District of Florida; 2026-10-16T01:40:00+00:00
 - [24-5140 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-4_24-cv-05140/context) — District Court Eastern District of Washington; 2026-10-16T01:39:00+00:00
 - [24-6029 - USA v. Bradshaw](https://www.govinfo.gov/app/details/USCOURTS-waed-4_24-cr-06029/context) — District Court Eastern District of Washington; 2026-10-16T01:39:00+00:00
@@ -733,7 +1598,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [25-3023 - Burton v. Shopify Payments (USA) Inc.](https://www.govinfo.gov/app/details/USCOURTS-mdd-8_25-cv-03023/context) — District Court District of Maryland; 2026-10-16T01:36:00+00:00
 - [26-030 - McIntosh v. Taylor et al](https://www.govinfo.gov/app/details/USCOURTS-ilsd-3_26-cv-00030/context) — District Court Southern District of Illinois; 2026-10-16T01:36:00+00:00
 - [26-23987 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_26-cv-23987/context) — District Court Southern District of Florida; 2026-10-16T01:36:00+00:00
-- [26-21982 - Ozimo v. Hon. Laura Shearon Cruz et al](https://www.govinfo.gov/app/details/USCOURTS-flsd-1_26-cv-21982/context) — District Court Southern District of Florida; 2026-10-16T01:36:00+00:00
 - [26-4001 - USA v. Hilario Mejia](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cr-04001/context) — District Court Southern District of California; 2026-10-16T01:36:00+00:00
 - [25-1255 - JOHNSON v. MACFARLANE et al](https://www.govinfo.gov/app/details/USCOURTS-pawd-2_25-cv-01255/context) — District Court Western District of Pennsylvania; 2026-10-16T01:34:11+00:00
 - [26-2377 - Pozo Villar v. Martinez](https://www.govinfo.gov/app/details/USCOURTS-pamd-3_26-cv-02377/context) — District Court Middle District of Pennsylvania; 2026-10-16T01:34:11+00:00
@@ -748,7 +1612,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [26-1801 - Matias v. Mullin et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-01801/context) — District Court Western District of Oklahoma; 2026-10-16T01:32:08+00:00
 - [26-2361 - Mejia-Olvera v. Gantt et al](https://www.govinfo.gov/app/details/USCOURTS-okwd-5_26-cv-02361/context) — District Court Western District of Oklahoma; 2026-10-16T01:32:08+00:00
 - [26-302 - USA v. Patel](https://www.govinfo.gov/app/details/USCOURTS-nynd-8_26-cr-00302/context) — District Court Northern District of New York; 2026-10-16T01:32:08+00:00
-- [16-021 - USA v. Thompson et al](https://www.govinfo.gov/app/details/USCOURTS-ared-4_16-cr-00021/context) — District Court Eastern District of Arkansas; 2026-10-16T01:32:08+00:00
 - [26-756 - Herrera v. Reed's, Inc.](https://www.govinfo.gov/app/details/USCOURTS-casd-3_26-cv-00756/context) — District Court Southern District of California; 2026-10-16T01:31:10+00:00
 - [24-3729 - Dragomir v. Nationwide Mutual Insurance Company et al](https://www.govinfo.gov/app/details/USCOURTS-azd-2_24-cv-03729/context) — District Court District of Arizona; 2026-10-16T01:31:10+00:00
 - [26-5026 - Bustos-Cazo v. Mullin et al](https://www.govinfo.gov/app/details/USCOURTS-azd-2_26-cv-05026/context) — District Court District of Arizona; 2026-10-16T01:31:09+00:00
@@ -779,40 +1642,22 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [20-6015 - USA v. Campos](https://www.govinfo.gov/app/details/USCOURTS-waed-4_20-cr-06015/context) — District Court Eastern District of Washington; 2026-10-16T01:25:00+00:00
 - [24-181 - Schreven v. State Farm Fire and Casualty Company](https://www.govinfo.gov/app/details/USCOURTS-waed-2_24-cv-00181/context) — District Court Eastern District of Washington; 2026-10-16T01:23:00+00:00
 - [21-079 - USA v. Villalobos](https://www.govinfo.gov/app/details/USCOURTS-waed-2_21-cr-00079/context) — District Court Eastern District of Washington; 2026-10-16T01:23:00+00:00
-- [04-331 - USA v. Buckley](https://www.govinfo.gov/app/details/USCOURTS-ned-8_04-cr-00331/context) — District Court District of Nebraska; 2026-10-16T00:28:00+00:00
-- [11-287 - USA v. Johnson et al](https://www.govinfo.gov/app/details/USCOURTS-ned-8_11-cr-00287/context) — District Court District of Nebraska; 2026-10-16T00:28:00+00:00
-- [13-088 - USA v. Avalos et al](https://www.govinfo.gov/app/details/USCOURTS-ned-8_13-cr-00088/context) — District Court District of Nebraska; 2026-10-16T00:26:00+00:00
-- [08-3067 - USA v. Zierke](https://www.govinfo.gov/app/details/USCOURTS-ned-4_08-cr-03067/context) — District Court District of Nebraska; 2026-10-16T00:26:00+00:00
 - [26-292 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-gamd-7_26-cv-00292/context) — District Court Middle District of Georgia; 2026-10-16T00:24:00+00:00
-- [12-335 - USA v. Walker](https://www.govinfo.gov/app/details/USCOURTS-ned-8_12-cr-00335/context) — District Court District of Nebraska; 2026-10-16T00:23:01+00:00
-- [07-3001 - USA v. Baldwin](https://www.govinfo.gov/app/details/USCOURTS-ned-4_07-cr-03001/context) — District Court District of Nebraska; 2026-10-16T00:23:00+00:00
-- [12-3057 - USA v. Brown et al](https://www.govinfo.gov/app/details/USCOURTS-ned-4_12-cr-03057/context) — District Court District of Nebraska; 2026-10-16T00:23:00+00:00
 - [26-2666 - Guerrero-Lozano v. R.S. Hanline & Company, Inc.](https://www.govinfo.gov/app/details/USCOURTS-ohnd-1_26-cv-02666/context) — District Court Northern District of Ohio; 2026-10-16T00:22:00+00:00
 - [25-1162 - MCCALL v. NEMOURS CHILDREN'S HOSPITAL](https://www.govinfo.gov/app/details/USCOURTS-paed-2_25-cv-01162/context) — District Court Eastern District of Pennsylvania; 2026-10-16T00:21:00+00:00
-- [02-220 - USA v. Stricklin et al](https://www.govinfo.gov/app/details/USCOURTS-ned-8_02-cr-00220/context) — District Court District of Nebraska; 2026-10-16T00:21:00+00:00
-- [09-3112 - USA v. Avalos Banderas](https://www.govinfo.gov/app/details/USCOURTS-ned-4_09-cr-03112/context) — District Court District of Nebraska; 2026-10-16T00:21:00+00:00
 - [24-12781 - Fabery v. National Association of Government Employees](https://www.govinfo.gov/app/details/USCOURTS-mad-1_24-cv-12781/context) — District Court District of Massachusetts; 2026-10-16T00:20:00+00:00
 - [26-328 - FITZGERALD v. BAUGHER et al](https://www.govinfo.gov/app/details/USCOURTS-gamd-5_26-cv-00328/context) — District Court Middle District of Georgia; 2026-10-16T00:20:00+00:00
 - [26-200 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-gamd-7_26-cv-00200/context) — District Court Middle District of Georgia; 2026-10-16T00:20:00+00:00
-- [10-091 - USA v. Hernandez-Lopez et al](https://www.govinfo.gov/app/details/USCOURTS-ned-8_10-cr-00091/context) — District Court District of Nebraska; 2026-10-16T00:20:00+00:00
-- [12-388 - USA v. Hoge](https://www.govinfo.gov/app/details/USCOURTS-ned-8_12-cr-00388/context) — District Court District of Nebraska; 2026-10-16T00:20:00+00:00
 - [26-1793 - Delta Beverages Inc. et al. v. Canepa et al.](https://www.govinfo.gov/app/details/USCOURTS-ohnd-3_26-cv-01793/context) — District Court Northern District of Ohio; 2026-10-16T00:19:00+00:00
 - [24-11508 - John & Jane, LLC v. Isabel](https://www.govinfo.gov/app/details/USCOURTS-mad-1_24-cv-11508/context) — District Court District of Massachusetts; 2026-10-16T00:19:00+00:00
 - [26-152 - PARKER v. FEDEX CORPORATION](https://www.govinfo.gov/app/details/USCOURTS-gamd-5_26-cv-00152/context) — District Court Middle District of Georgia; 2026-10-16T00:19:00+00:00
-- [92-81127 - United States of America v. Brown et al](https://www.govinfo.gov/app/details/USCOURTS-mied-2_92-cr-81127/context) — District Court Eastern District of Michigan; 2026-10-16T00:19:00+00:00
 - [26-3039 - Watson v. Carr, et al](https://www.govinfo.gov/app/details/USCOURTS-ca10-26-03039/context) — Court of Appeals for the Tenth Circuit; 2026-10-16T00:17:09+00:00
-- [26-145 - Eady v. American Tow & Recovery, LLC](https://www.govinfo.gov/app/details/USCOURTS-tned-1_26-cv-00145/context) — District Court Eastern District of Tennessee; 2026-10-16T00:17:09+00:00
 - [25-3637 - NORFOLK SOUTHERN RAILWAY COMPANY v. HIGHWAY MATERIALS, LLC et al](https://www.govinfo.gov/app/details/USCOURTS-paed-2_25-cv-03637/context) — District Court Eastern District of Pennsylvania; 2026-10-16T00:17:09+00:00
-- [12-355 - USA v. Mata-Soto](https://www.govinfo.gov/app/details/USCOURTS-ned-8_12-cr-00355/context) — District Court District of Nebraska; 2026-10-16T00:17:09+00:00
-- [08-1360 - MUHAMMAD HUSAYN v. GATES](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_08-cv-01360/context) — District Court District of Columbia; 2026-10-16T00:16:02+00:00
 - [24-2086 - Sophia Parker Studios, Inc. v. Temperley et al.](https://www.govinfo.gov/app/details/USCOURTS-ohnd-1_24-cv-02086/context) — District Court Northern District of Ohio; 2026-10-16T00:14:25+00:00
 - [26-3109 - Arguijo-Cruz v. Bullock](https://www.govinfo.gov/app/details/USCOURTS-tnwd-2_26-cv-03109/context) — District Court Western District of Tennessee; 2026-10-16T00:14:24+00:00
-- [02-3220 - USA v. Lamb](https://www.govinfo.gov/app/details/USCOURTS-ned-4_02-cr-03220/context) — District Court District of Nebraska; 2026-10-16T00:14:24+00:00
 - [25-3007 - Abhijit Bagal v. Rutgers University, et al](https://www.govinfo.gov/app/details/USCOURTS-ca3-25-03007/context) — Court of Appeals for the Third Circuit; 2026-10-16T00:13:00+00:00
 - [26-7628 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-paed-2_26-cv-07628/context) — District Court Eastern District of Pennsylvania; 2026-10-16T00:13:00+00:00
 - [25-1734 - Francis v. State of Ohio](https://www.govinfo.gov/app/details/USCOURTS-ohnd-4_25-cv-01734/context) — District Court Northern District of Ohio; 2026-10-16T00:13:00+00:00
-- [10-357 - USA v. Nieto](https://www.govinfo.gov/app/details/USCOURTS-ned-8_10-cr-00357/context) — District Court District of Nebraska; 2026-10-16T00:13:00+00:00
-- [12-3101 - USA v. Mitchell](https://www.govinfo.gov/app/details/USCOURTS-ned-4_12-cr-03101/context) — District Court District of Nebraska; 2026-10-16T00:13:00+00:00
 - [26-3096 - Tilaguy-Rodriguez v. Bullock](https://www.govinfo.gov/app/details/USCOURTS-tnwd-2_26-cv-03096/context) — District Court Western District of Tennessee; 2026-10-16T00:12:00+00:00
 - [26-460 - ALBERT v. AMAZON.COM SERVICES LLC et al](https://www.govinfo.gov/app/details/USCOURTS-med-1_26-cv-00460/context) — District Court District of Maine; 2026-10-16T00:12:00+00:00
 - [15-4965 - JOHNSON v. NICKELSON et al](https://www.govinfo.gov/app/details/USCOURTS-paed-2_15-cv-04965/context) — District Court Eastern District of Pennsylvania; 2026-10-16T00:11:01+00:00
@@ -841,7 +1686,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [25-1409 - TAX ANALYSTS v. INTERNAL REVENUE SERVICE](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_25-cv-01409/context) — District Court District of Columbia; 2026-10-16T00:06:15+00:00
 - [25-2415 - HAFLER v. BORZANO et al](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_25-cv-02415/context) — District Court District of Columbia; 2026-10-16T00:06:15+00:00
 - [25-399 - Kimbrough v. Pilot Catastrophe Services, Inc.](https://www.govinfo.gov/app/details/USCOURTS-alsd-1_25-cv-00399/context) — District Court Southern District of Alabama; 2026-10-16T00:06:15+00:00
-- [04-3226 - Campbell v. Clarke](https://www.govinfo.gov/app/details/USCOURTS-ned-4_04-cv-03226/context) — District Court District of Nebraska; 2026-10-16T00:06:15+00:00
 - [26-3056 - Munoz-Castro v. Bullock et al](https://www.govinfo.gov/app/details/USCOURTS-tnwd-2_26-cv-03056/context) — District Court Western District of Tennessee; 2026-10-16T00:06:14+00:00
 - [23-292 - Skydiving School, Inc. v. Sky-Med, Inc.](https://www.govinfo.gov/app/details/USCOURTS-hid-1_23-cv-00292/context) — District Court District of Hawaii; 2026-10-16T00:04:02+00:00
 - [26-017 - UNITED STATES OF AMERICA v. KINZEL](https://www.govinfo.gov/app/details/USCOURTS-gamd-4_26-mj-00017/context) — District Court Middle District of Georgia; 2026-10-16T00:04:02+00:00
@@ -870,7 +1714,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [25-2006 - Lisa Debar v. FirstEnergy Corp, et al](https://www.govinfo.gov/app/details/USCOURTS-ca3-25-02006/context) — Court of Appeals for the Third Circuit; 2026-10-15T23:55:00+00:00
 - [24-365 - ARNOLD v. MACON-BIBB COUNTY GEORGIA](https://www.govinfo.gov/app/details/USCOURTS-gamd-5_24-cv-00365/context) — District Court Middle District of Georgia; 2026-10-15T23:53:14+00:00
 - [25-395 - Hancock Whitney Bank v. American Rental & Entertainment, LLC et al](https://www.govinfo.gov/app/details/USCOURTS-alsd-1_25-cv-00395/context) — District Court Southern District of Alabama; 2026-10-15T23:53:14+00:00
-- [13-1101 - Starters - Direct Purchaser Actions](https://www.govinfo.gov/app/details/USCOURTS-mied-2_13-cv-01101/context) — District Court Eastern District of Michigan; 2026-10-15T23:53:14+00:00
 - [26-9576 - Banegas Lobo v. Blanche](https://www.govinfo.gov/app/details/USCOURTS-ca10-26-09576/context) — Court of Appeals for the Tenth Circuit; 2026-10-15T23:53:13+00:00
 - [25-2588 - Rachel Alintoff v. State of New Jersey, et al](https://www.govinfo.gov/app/details/USCOURTS-ca3-25-02588/context) — Court of Appeals for the Third Circuit; 2026-10-15T23:53:13+00:00
 - [24-113 - USA v. Maxie, et al.](https://www.govinfo.gov/app/details/USCOURTS-alsd-1_24-cr-00113/context) — District Court Southern District of Alabama; 2026-10-15T23:53:13+00:00
@@ -878,7 +1721,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [25-3138 - VoteAmerica, et al v. Schwab, et al](https://www.govinfo.gov/app/details/USCOURTS-ca10-25-03138/context) — Court of Appeals for the Tenth Circuit; 2026-10-15T23:51:29+00:00
 - [26-1124 - Michael Robinson v. Sample News Group LLC, et al](https://www.govinfo.gov/app/details/USCOURTS-ca3-26-01124/context) — Court of Appeals for the Third Circuit; 2026-10-15T23:51:29+00:00
 - [26-40159 - Caceres v. Department of Developmental Services](https://www.govinfo.gov/app/details/USCOURTS-mad-4_26-cv-40159/context) — District Court District of Massachusetts; 2026-10-15T23:51:29+00:00
-- [26-088 - USA v. Balli et al](https://www.govinfo.gov/app/details/USCOURTS-alsd-1_26-cr-00088/context) — District Court Southern District of Alabama; 2026-10-15T23:51:28+00:00
 - [24-1309 - USSEC v. Reven Holdings, et al](https://www.govinfo.gov/app/details/USCOURTS-ca10-24-01309/context) — Court of Appeals for the Tenth Circuit; 2026-10-15T23:50:57+00:00
 - [19-261 - USA v. Moore](https://www.govinfo.gov/app/details/USCOURTS-alsd-1_19-cr-00261/context) — District Court Southern District of Alabama; 2026-10-15T23:50:57+00:00
 - [26-9571 - Nkurunziza v. Blanche](https://www.govinfo.gov/app/details/USCOURTS-ca10-26-09571/context) — Court of Appeals for the Tenth Circuit; 2026-10-15T23:50:56+00:00
@@ -904,7 +1746,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [26-002 - SAMPSON v. WILLIAMS et al](https://www.govinfo.gov/app/details/USCOURTS-gamd-3_26-cv-00002/context) — District Court Middle District of Georgia; 2026-10-15T23:40:00+00:00
 - [25-238 - USA v. Hickenbottom](https://www.govinfo.gov/app/details/USCOURTS-alsd-1_25-cr-00238/context) — District Court Southern District of Alabama; 2026-10-15T23:40:00+00:00
 - [26-218 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-gamd-7_26-cv-00218/context) — District Court Middle District of Georgia; 2026-10-15T23:39:00+00:00
-- [24-3126 - In Re: Snowflake, Inc., Data Security Breach Litigation](https://www.govinfo.gov/app/details/USCOURTS-mtd-2_24-md-03126/context) — District Court District of Montana; 2026-10-15T22:03:13+00:00
 - [1:23-vv-01731 - MANNING v. SECRETARY OF HEALTH AND HUMAN SERVICES](https://www.govinfo.gov/app/details/USCOURTS-cofc-1_23-vv-01731/context) — United States Court of Federal Claims; 2026-10-15T21:59:00+00:00
 - [26-71185 - USA v. LNU](https://www.govinfo.gov/app/details/USCOURTS-cand-4_26-mj-71185/context) — District Court Northern District of California; 2026-10-15T21:59:00+00:00
 - [25-9851 - Z.F. v. Beech-Nut Nutrition Company et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_25-cv-09851/context) — District Court Northern District of California; 2026-10-15T21:59:00+00:00
@@ -1042,64 +1883,39 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [24-9190 - N.J. v. JERSEY CITY BOARD OF EDUCATION](https://www.govinfo.gov/app/details/USCOURTS-njd-2_24-cv-09190/context) — District Court District of New Jersey; 2026-10-15T21:10:19+00:00
 - [25-22211 - Lillie Marie Coley](https://www.govinfo.gov/app/details/USCOURTS-njb-1_25-bk-22211/context) — Bankruptcy Court District of New Jersey; 2026-10-15T21:10:18+00:00
 - [26-50171 - Ortega v. Stern Rock](https://www.govinfo.gov/app/details/USCOURTS-ca5-26-50171/context) — Court of Appeals for the Fifth Circuit; 2026-10-15T21:10:18+00:00
-- [25-2042 - Price v. Evolve Bancorp Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-02042/context) — District Court Eastern District of Louisiana; 2026-10-15T21:10:18+00:00
-- [26-2156 - Kerbow et al v. Washington Parish School Board et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-02156/context) — District Court Eastern District of Louisiana; 2026-10-15T21:10:18+00:00
 - [20-2229 - USA v. Sherman Williams](https://www.govinfo.gov/app/details/USCOURTS-ca7-20-02229/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T21:10:17+00:00
 - [06-087 - USA v. Champion et al](https://www.govinfo.gov/app/details/USCOURTS-mnd-0_06-cr-00087/context) — District Court District of Minnesota; 2026-10-15T21:10:17+00:00
 - [20-2115 - USA v. Raevaughn Rogers](https://www.govinfo.gov/app/details/USCOURTS-ca7-20-02115/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T21:10:16+00:00
 - [26-158 - Duve v. Forrest et al](https://www.govinfo.gov/app/details/USCOURTS-txsd-3_26-cv-00158/context) — District Court Southern District of Texas; 2026-10-15T21:10:16+00:00
-- [25-2040 - United States of America v. Paige et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-02040/context) — District Court Eastern District of Louisiana; 2026-10-15T21:10:16+00:00
-- [26-434 - Lightfoot et al v. Progressive Direct Insurance Company et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00434/context) — District Court Eastern District of Louisiana; 2026-10-15T21:10:16+00:00
-- [23-7144 - Joiner v. Lewis et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_23-cv-07144/context) — District Court Eastern District of Louisiana; 2026-10-15T21:10:16+00:00
-- [17-104 - USA v. Wells et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_17-cr-00104/context) — District Court Eastern District of Louisiana; 2026-10-15T21:10:16+00:00
-- [23-931 - BlueTeam Roofing, LLC v. Vincent Piazza, Jr. and Sons Seafood, Inc.](https://www.govinfo.gov/app/details/USCOURTS-laed-2_23-cv-00931/context) — District Court Eastern District of Louisiana; 2026-10-15T21:10:16+00:00
-- [26-721 - Merchants Bonding Company Mutual v. Marsh Buggies, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00721/context) — District Court Eastern District of Louisiana; 2026-10-15T21:10:16+00:00
 - [23-152 - USA v. Martinez-Martinez et al](https://www.govinfo.gov/app/details/USCOURTS-prd-3_23-cr-00152/context) — District Court District of Puerto Rico; 2026-10-15T21:10:15+00:00
 - [21-14144 - GREEN v. WARREN et al](https://www.govinfo.gov/app/details/USCOURTS-njd-1_21-cv-14144/context) — District Court District of New Jersey; 2026-10-15T21:10:15+00:00
-- [25-2458 - Young v. St. John the Baptist Sheriff's Office et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-02458/context) — District Court Eastern District of Louisiana; 2026-10-15T21:10:15+00:00
 - [26-057 - Bekzada v. Fields et al](https://www.govinfo.gov/app/details/USCOURTS-kyed-2_26-cv-00057/context) — District Court Eastern District of Kentucky; 2026-10-15T21:10:15+00:00
 - [26-4888 - Reza Arciniega v. Baltazar et al](https://www.govinfo.gov/app/details/USCOURTS-cod-1_26-cv-04888/context) — District Court District of Colorado; 2026-10-15T21:10:15+00:00
 - [20-2086 - USA v. Torieuanno White](https://www.govinfo.gov/app/details/USCOURTS-ca7-20-02086/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T21:10:14+00:00
 - [25-047 - Nexpera LLC v. Sage Enviro Tech Ltd. et al.](https://www.govinfo.gov/app/details/USCOURTS-txsd-2_25-cv-00047/context) — District Court Southern District of Texas; 2026-10-15T21:10:14+00:00
 - [26-023 - USA v. Bynon, Jr.](https://www.govinfo.gov/app/details/USCOURTS-txsd-4_26-cr-00023/context) — District Court Southern District of Texas; 2026-10-15T21:10:14+00:00
 - [22-281 - Blevins-Clark v. Beacon Communities, LLC et al](https://www.govinfo.gov/app/details/USCOURTS-kyed-5_22-cv-00281/context) — District Court Eastern District of Kentucky; 2026-10-15T21:10:14+00:00
-- [26-694 - Crossland v. Bickham et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00694/context) — District Court Eastern District of Louisiana; 2026-10-15T21:10:14+00:00
-- [24-714 - Wilson v. City of Bogalusa et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cv-00714/context) — District Court Eastern District of Louisiana; 2026-10-15T21:10:13+00:00
-- [26-1599 - Ambo v. Van Halen et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-01599/context) — District Court Eastern District of Louisiana; 2026-10-15T21:10:13+00:00
 - [20-2049 - USA v. Eugene Haywood](https://www.govinfo.gov/app/details/USCOURTS-ca7-20-02049/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T21:10:12+00:00
-- [24-2773 - Apollo Holding Company, LLC et al v. Cliff Roe, et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cv-02773/context) — District Court Eastern District of Louisiana; 2026-10-15T21:10:12+00:00
 - [26-1724 - Johnson v. City of Humble Precinct 4 et al](https://www.govinfo.gov/app/details/USCOURTS-txsd-4_26-cv-01724/context) — District Court Southern District of Texas; 2026-10-15T21:10:11+00:00
 - [26-6699 - Plummer et al v. Consumer Portfolio Services, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-txsd-4_26-cv-06699/context) — District Court Southern District of Texas; 2026-10-15T20:57:04+00:00
 - [23-1256 - Gonzalez-Carpio v. Bracha & Success Enterprise LLC. et al](https://www.govinfo.gov/app/details/USCOURTS-prd-3_23-cv-01256/context) — District Court District of Puerto Rico; 2026-10-15T20:57:04+00:00
 - [26-4202 - Semprun Paz v. Baltazar](https://www.govinfo.gov/app/details/USCOURTS-cod-1_26-cv-04202/context) — District Court District of Colorado; 2026-10-15T20:57:04+00:00
-- [16-063 - USA v. Pizarro et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_16-cr-00063/context) — District Court Eastern District of Louisiana; 2026-10-15T20:57:04+00:00
-- [22-802 - Koran v. BP Exploration & Production, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_22-cv-00802/context) — District Court Eastern District of Louisiana; 2026-10-15T20:57:04+00:00
-- [25-2577 - Moore v. Steiner et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-02577/context) — District Court Eastern District of Louisiana; 2026-10-15T20:57:04+00:00
 - [26-2158 - Brett Kimberlin v. USA](https://www.govinfo.gov/app/details/USCOURTS-ca7-26-02158/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T20:57:03+00:00
 - [20-2100 - USA v. Lance Washington](https://www.govinfo.gov/app/details/USCOURTS-ca7-20-02100/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T20:57:03+00:00
 - [20-2208 - USA v. Mytrez Flora](https://www.govinfo.gov/app/details/USCOURTS-ca7-20-02208/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T20:57:03+00:00
-- [22-1271 - Hutchinson-Harper, et al v. Jefferson Parish School Board, et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_22-cv-01271/context) — District Court Eastern District of Louisiana; 2026-10-15T20:57:03+00:00
-- [25-1394 - Edmond v. Venture Global LNG, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-01394/context) — District Court Eastern District of Louisiana; 2026-10-15T20:57:03+00:00
 - [25-072 - Drus v. Microsoft Corporation](https://www.govinfo.gov/app/details/USCOURTS-kyed-0_25-cv-00072/context) — District Court Eastern District of Kentucky; 2026-10-15T20:57:03+00:00
 - [25-1266 - Goode v. Connecticut Department of Correction et al](https://www.govinfo.gov/app/details/USCOURTS-ctd-3_25-cv-01266/context) — District Court District of Connecticut; 2026-10-15T20:57:03+00:00
-- [21-084 - USA v. Brown, et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_21-cr-00084/context) — District Court Eastern District of Louisiana; 2026-10-15T20:57:03+00:00
-- [24-012 - USA v. STUKES, ET AL.](https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cr-00012/context) — District Court Eastern District of Louisiana; 2026-10-15T20:57:03+00:00
 - [20-2116 - USA v. Jahlin Wilson](https://www.govinfo.gov/app/details/USCOURTS-ca7-20-02116/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T20:57:02+00:00
-- [26-1111 - Ross v. Dagate et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-01111/context) — District Court Eastern District of Louisiana; 2026-10-15T20:57:02+00:00
 - [25-711 - Frie v. Davis et al](https://www.govinfo.gov/app/details/USCOURTS-cod-1_25-cv-00711/context) — District Court District of Colorado; 2026-10-15T20:57:02+00:00
 - [26-4568 - Cruz v. Warden](https://www.govinfo.gov/app/details/USCOURTS-cod-1_26-cv-04568/context) — District Court District of Colorado; 2026-10-15T20:57:02+00:00
-- [24-2759 - Shorts et al v. St. Charles Parish Sheriff's Office et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cv-02759/context) — District Court Eastern District of Louisiana; 2026-10-15T20:57:02+00:00
-- [25-2136 - Scott Dillion v. Dow Chemical Company et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-02136/context) — District Court Eastern District of Louisiana; 2026-10-15T20:57:02+00:00
 - [26-3854 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-mnd-0_26-cv-03854/context) — District Court District of Minnesota; 2026-10-15T20:57:01+00:00
 - [25-2409 - Kapphahn et al v. Bridgecrest Acceptance Corporation et al](https://www.govinfo.gov/app/details/USCOURTS-mnd-0_25-cv-02409/context) — District Court District of Minnesota; 2026-10-15T20:57:01+00:00
-- [25-1248 - Sherrod et al v. Nexion Health at Marrero, Inc., et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-01248/context) — District Court Eastern District of Louisiana; 2026-10-15T20:57:01+00:00
 - [26-5116 - Valero-Jorge v. Baltasar](https://www.govinfo.gov/app/details/USCOURTS-cod-1_26-cv-05116/context) — District Court District of Colorado; 2026-10-15T20:57:00+00:00
 - [26-117 - Schroeder v. Heart of the Rockies Regional Medical Center et al](https://www.govinfo.gov/app/details/USCOURTS-cod-1_26-cv-00117/context) — District Court District of Colorado; 2026-10-15T20:57:00+00:00
 - [20-2133 - USA v. Kenwan Crowe](https://www.govinfo.gov/app/details/USCOURTS-ca7-20-02133/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T20:46:39+00:00
 - [26-401 - USA v. Maldonado-Rivera et al](https://www.govinfo.gov/app/details/USCOURTS-prd-3_26-cr-00401/context) — District Court District of Puerto Rico; 2026-10-15T20:46:39+00:00
 - [26-1014 - USA v. Gomez-Fernandez](https://www.govinfo.gov/app/details/USCOURTS-prd-3_26-mj-01014/context) — District Court District of Puerto Rico; 2026-10-15T20:46:39+00:00
 - [26-9441 - LUCAS v. TOWNSHIP OF JEFFERSON et al](https://www.govinfo.gov/app/details/USCOURTS-njd-2_26-cv-09441/context) — District Court District of New Jersey; 2026-10-15T20:46:39+00:00
-- [26-107 - USA v. Grant](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cr-00107/context) — District Court Eastern District of Louisiana; 2026-10-15T20:46:39+00:00
 - [20-2048 - USA v. Kentrevion Watkins](https://www.govinfo.gov/app/details/USCOURTS-ca7-20-02048/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T20:46:38+00:00
 - [26-3729 - Cahuec-Canahui v. Warden, Denver Contract Detention Facility](https://www.govinfo.gov/app/details/USCOURTS-cod-1_26-cv-03729/context) — District Court District of Colorado; 2026-10-15T20:46:38+00:00
 - [25-3440 - Kasino et al v. Barrow Shaver Resources Company, LLC et al](https://www.govinfo.gov/app/details/USCOURTS-txsb-4_25-ap-03440/context) — Bankruptcy Court Southern District of Texas; 2026-10-15T20:36:24+00:00
@@ -1109,13 +1925,8 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [25-15490 - MINAYA v. WARDEN, FCI FORT DIX](https://www.govinfo.gov/app/details/USCOURTS-njd-1_25-cv-15490/context) — District Court District of New Jersey; 2026-10-15T20:36:24+00:00
 - [25-17141 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-njd-1_25-cv-17141/context) — District Court District of New Jersey; 2026-10-15T20:36:24+00:00
 - [23-120 - USA v. Funchess et al](https://www.govinfo.gov/app/details/USCOURTS-mnd-0_23-cr-00120/context) — District Court District of Minnesota; 2026-10-15T20:36:24+00:00
-- [25-1156 - Hamilton v. Mastec North America, Inc., et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-01156/context) — District Court Eastern District of Louisiana; 2026-10-15T20:36:24+00:00
-- [23-197 - USA v. Howard](https://www.govinfo.gov/app/details/USCOURTS-laed-2_23-cr-00197/context) — District Court Eastern District of Louisiana; 2026-10-15T20:36:24+00:00
 - [26-404 - USA v. Lizardi-Guadalupe](https://www.govinfo.gov/app/details/USCOURTS-prd-3_26-cr-00404/context) — District Court District of Puerto Rico; 2026-10-15T20:36:23+00:00
 - [26-994 - USA v. Durie](https://www.govinfo.gov/app/details/USCOURTS-prd-3_26-mj-00994/context) — District Court District of Puerto Rico; 2026-10-15T20:36:23+00:00
-- [26-588 - Torrent Gulf Coast III, LLC v. Gulf Oceanic Marine Contractors, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00588/context) — District Court Eastern District of Louisiana; 2026-10-15T20:36:23+00:00
-- [26-103 - USA v. Joseph](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cr-00103/context) — District Court Eastern District of Louisiana; 2026-10-15T20:36:23+00:00
-- [17-044 - USA v. Shawley](https://www.govinfo.gov/app/details/USCOURTS-laed-2_17-cr-00044/context) — District Court Eastern District of Louisiana; 2026-10-15T20:36:23+00:00
 - [25-2923 - United States of America v. 1165 Norton Street, St. Paul, MN et al](https://www.govinfo.gov/app/details/USCOURTS-mnd-0_25-cv-02923/context) — District Court District of Minnesota; 2026-10-15T20:36:22+00:00
 - [26-3120 - United States of America v. Minnesota Department of Children, Youth, and Families et al](https://www.govinfo.gov/app/details/USCOURTS-mnd-0_26-cv-03120/context) — District Court District of Minnesota; 2026-10-15T20:36:22+00:00
 - [26-926 - USA V. STATE OF CALIFORNIA, ET AL.](https://www.govinfo.gov/app/details/USCOURTS-ca9-26-926/context) — Court of Appeals for the Ninth Circuit; 2026-10-15T20:32:16+00:00
@@ -1128,8 +1939,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [20-2088 - USA v. Ezra Johnson](https://www.govinfo.gov/app/details/USCOURTS-ca7-20-02088/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T20:32:15+00:00
 - [25-2348 - Willie Jones v. Milwaukee County, et al](https://www.govinfo.gov/app/details/USCOURTS-ca7-25-02348/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T20:32:15+00:00
 - [26-30014 - Lau v. Thrifty Liquor](https://www.govinfo.gov/app/details/USCOURTS-ca5-26-30014/context) — Court of Appeals for the Fifth Circuit; 2026-10-15T20:32:15+00:00
-- [26-322 - LeBeau v. All Chemical Transport Corp. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00322/context) — District Court Eastern District of Louisiana; 2026-10-15T20:32:15+00:00
-- [26-369 - Felton v. CLB Investments LLC et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-00369/context) — District Court Eastern District of Louisiana; 2026-10-15T20:32:15+00:00
 - [25-2139 - USA v. Steven Stathas, Jr.](https://www.govinfo.gov/app/details/USCOURTS-ca7-25-02139/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T20:32:15+00:00
 - [25-5016 - Ray v. Reynolds](https://www.govinfo.gov/app/details/USCOURTS-tneb-2_25-ap-05016/context) — Bankruptcy Court Eastern District of Tennessee; 2026-10-15T20:32:14+00:00
 - [20-2080 - USA v. Keith Gregory](https://www.govinfo.gov/app/details/USCOURTS-ca7-20-02080/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T20:32:14+00:00
@@ -1140,9 +1949,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [26-3065 - Ruslan Guryanov v. Todd Blanche](https://www.govinfo.gov/app/details/USCOURTS-ca6-26-03065/context) — Court of Appeals for the Sixth Circuit; 2026-10-15T20:32:14+00:00
 - [25-50315 - Hogan v. FCI, La Tuna Case Mgr](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-50315/context) — Court of Appeals for the Fifth Circuit; 2026-10-15T20:32:14+00:00
 - [25-16362 - SIMS v. TRANSUNION LLC](https://www.govinfo.gov/app/details/USCOURTS-njd-1_25-cv-16362/context) — District Court District of New Jersey; 2026-10-15T20:32:14+00:00
-- [24-132 - USA v. Gage, Jr. et al.](https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cr-00132/context) — District Court Eastern District of Louisiana; 2026-10-15T20:32:14+00:00
 - [26-4684 - Lopez Dionicio v. Warden, Denver Contract Detention Facility](https://www.govinfo.gov/app/details/USCOURTS-cod-1_26-cv-04684/context) — District Court District of Colorado; 2026-10-15T20:32:14+00:00
-- [26-1846 - Pierce v. Rooms To Go Louisiana Corp. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-01846/context) — District Court Eastern District of Louisiana; 2026-10-15T20:32:14+00:00
 - [25-3291 - USA v. Jerald Hoskins](https://www.govinfo.gov/app/details/USCOURTS-ca7-25-03291/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T20:32:13+00:00
 - [22-3043 - Estate of Ceaser Stinson, et al v. Joel Streicher](https://www.govinfo.gov/app/details/USCOURTS-ca7-22-03043/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T20:32:13+00:00
 - [26-1033 - Eric Mapes v. CVS Health, Inc., et al](https://www.govinfo.gov/app/details/USCOURTS-ca7-26-01033/context) — Court of Appeals for the Seventh Circuit; 2026-10-15T20:32:13+00:00
@@ -1461,7 +2268,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [26-549 - Gans v. Commissioner of Social Security Administration](https://www.govinfo.gov/app/details/USCOURTS-azd-2_26-cv-00549/context) — District Court District of Arizona; 2026-10-14T22:33:02+00:00
 - [26-459 - Doe v. International Motors LLC](https://www.govinfo.gov/app/details/USCOURTS-azd-4_26-cv-00459/context) — District Court District of Arizona; 2026-10-14T22:33:02+00:00
 - [26-461 - Chorn v. United States Postal Service](https://www.govinfo.gov/app/details/USCOURTS-azd-4_26-cv-00461/context) — District Court District of Arizona; 2026-10-14T22:33:02+00:00
-- [14-021 - USA v. Gaither et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_14-cr-00021/context) — District Court Eastern District of Washington; 2026-10-14T22:32:00+00:00
 - [25-2238 - Alawieh v. Mullin, et al](https://www.govinfo.gov/app/details/USCOURTS-ca1-25-02238/context) — Court of Appeals for the First Circuit; 2026-10-14T22:29:00+00:00
 - [06-035 - USA v. Dickerson et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_06-cr-00035/context) — District Court Eastern District of Washington; 2026-10-14T22:29:00+00:00
 - [04-015 - USA v. Cedano](https://www.govinfo.gov/app/details/USCOURTS-waed-2_04-cr-00015/context) — District Court Eastern District of Washington; 2026-10-14T22:29:00+00:00
@@ -1491,15 +2297,12 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [25-020 - USA v. Sulak](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00020/context) — District Court Eastern District of Washington; 2026-10-14T22:25:00+00:00
 - [24-5146 - Brown v. Morgan et al](https://www.govinfo.gov/app/details/USCOURTS-waed-4_24-cv-05146/context) — District Court Eastern District of Washington; 2026-10-14T22:25:00+00:00
 - [24-050 - USA v. Timentwa](https://www.govinfo.gov/app/details/USCOURTS-waed-2_24-cr-00050/context) — District Court Eastern District of Washington; 2026-10-14T22:25:00+00:00
-- [24-048 - Walker v. State Farm Fire and Casualty Company](https://www.govinfo.gov/app/details/USCOURTS-waed-2_24-cv-00048/context) — District Court Eastern District of Washington; 2026-10-14T22:25:00+00:00
 - [23-2009 - USA v. McCloud-Bell](https://www.govinfo.gov/app/details/USCOURTS-waed-1_23-cr-02009/context) — District Court Eastern District of Washington; 2026-10-14T22:24:00+00:00
 - [23-2026 - USA v. Franklin](https://www.govinfo.gov/app/details/USCOURTS-waed-1_23-cr-02026/context) — District Court Eastern District of Washington; 2026-10-14T22:24:00+00:00
 - [23-2031 - USA v. Howard](https://www.govinfo.gov/app/details/USCOURTS-waed-1_23-cr-02031/context) — District Court Eastern District of Washington; 2026-10-14T22:24:00+00:00
 - [25-141 - Winterer v. Solicitor General of the United States](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00141/context) — District Court Eastern District of Washington; 2026-10-14T22:24:00+00:00
 - [98-178 - USA v. Cutchie](https://www.govinfo.gov/app/details/USCOURTS-waed-2_98-cr-00178/context) — District Court Eastern District of Washington; 2026-10-14T22:24:00+00:00
 - [24-394 - Diaz v. Red Robin International Inc](https://www.govinfo.gov/app/details/USCOURTS-waed-2_24-cv-00394/context) — District Court Eastern District of Washington; 2026-10-14T22:24:00+00:00
-- [25-198 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00198/context) — District Court Eastern District of Washington; 2026-10-14T22:24:00+00:00
-- [25-314 - Love v. State of Washington et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00314/context) — District Court Eastern District of Washington; 2026-10-14T22:24:00+00:00
 - [25-5025 - Goold et al v. Dreyer et al](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05025/context) — District Court Eastern District of Washington; 2026-10-14T22:24:00+00:00
 - [23-112 - USA v. Betts](https://www.govinfo.gov/app/details/USCOURTS-waed-2_23-cr-00112/context) — District Court Eastern District of Washington; 2026-10-14T22:24:00+00:00
 - [23-106 - West v. BNSF Railway Co](https://www.govinfo.gov/app/details/USCOURTS-waed-2_23-cv-00106/context) — District Court Eastern District of Washington; 2026-10-14T22:24:00+00:00
@@ -1509,22 +2312,17 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [25-075 - USA v. Demaine, et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00075/context) — District Court Eastern District of Washington; 2026-10-14T22:23:00+00:00
 - [24-5009 - Washington-Idaho Laborers-Employers Pension Trust Fund et al v. Mr Asphalt & Sons LLC](https://www.govinfo.gov/app/details/USCOURTS-waed-4_24-cv-05009/context) — District Court Eastern District of Washington; 2026-10-14T22:23:00+00:00
 - [15-6010 - USA v. Defendants et al](https://www.govinfo.gov/app/details/USCOURTS-waed-4_15-cr-06010/context) — District Court Eastern District of Washington; 2026-10-14T22:23:00+00:00
-- [25-5029 - Angulo et al v. Providence Health & Services Washington et al](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05029/context) — District Court Eastern District of Washington; 2026-10-14T22:22:00+00:00
 - [25-007 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00007/context) — District Court Eastern District of Washington; 2026-10-14T22:22:00+00:00
 - [14-057 - USA v. Briseno-Medina et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_14-cr-00057/context) — District Court Eastern District of Washington; 2026-10-14T22:22:00+00:00
 - [23-2037 - USA v. Badillo et al](https://www.govinfo.gov/app/details/USCOURTS-waed-1_23-cr-02037/context) — District Court Eastern District of Washington; 2026-10-14T22:21:00+00:00
 - [25-2011 - USA v. Coy et al](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cr-02011/context) — District Court Eastern District of Washington; 2026-10-14T22:21:00+00:00
 - [25-102 - Simms v. Hathaway et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00102/context) — District Court Eastern District of Washington; 2026-10-14T22:21:00+00:00
 - [25-104 - Elkharwily v. First Interstate Bank et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00104/context) — District Court Eastern District of Washington; 2026-10-14T22:21:00+00:00
-- [24-056 - Adams et al v. Okanogan County Public Hospital District No 3](https://www.govinfo.gov/app/details/USCOURTS-waed-2_24-cv-00056/context) — District Court Eastern District of Washington; 2026-10-14T22:21:00+00:00
-- [25-123 - USA v. Marsh](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00123/context) — District Court Eastern District of Washington; 2026-10-14T22:21:00+00:00
 - [23-6016 - USA v. Espindola](https://www.govinfo.gov/app/details/USCOURTS-waed-4_23-cr-06016/context) — District Court Eastern District of Washington; 2026-10-14T22:20:00+00:00
 - [25-2015 - USA v. Vargas](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cr-02015/context) — District Court Eastern District of Washington; 2026-10-14T22:20:00+00:00
 - [24-5163 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-4_24-cv-05163/context) — District Court Eastern District of Washington; 2026-10-14T22:20:00+00:00
 - [24-051 - USA v. Frank](https://www.govinfo.gov/app/details/USCOURTS-waed-2_24-cr-00051/context) — District Court Eastern District of Washington; 2026-10-14T22:20:00+00:00
 - [24-004 - USA v. Wallo et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_24-cr-00004/context) — District Court Eastern District of Washington; 2026-10-14T22:20:00+00:00
-- [25-102 - USA v. Howard](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00102/context) — District Court Eastern District of Washington; 2026-10-14T22:20:00+00:00
-- [25-090 - USA v. Judge](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00090/context) — District Court Eastern District of Washington; 2026-10-14T22:20:00+00:00
 - [25-072 - Williams v. United States Air Force et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cv-00072/context) — District Court Eastern District of Washington; 2026-10-14T22:20:00+00:00
 - [25-023 - USA v. Quade](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00023/context) — District Court Eastern District of Washington; 2026-10-14T22:20:00+00:00
 - [23-3205 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-1_23-cv-03205/context) — District Court Eastern District of Washington; 2026-10-14T22:18:01+00:00
@@ -1537,8 +2335,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [24-005 - Alsaedi v. Rockwood Service Company et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_24-cv-00005/context) — District Court Eastern District of Washington; 2026-10-14T22:18:01+00:00
 - [24-3200 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-1_24-cv-03200/context) — District Court Eastern District of Washington; 2026-10-14T22:18:01+00:00
 - [25-007 - USA v. Wiles](https://www.govinfo.gov/app/details/USCOURTS-waed-2_25-cr-00007/context) — District Court Eastern District of Washington; 2026-10-14T22:18:01+00:00
-- [25-6020 - USA v. Atkinson](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cr-06020/context) — District Court Eastern District of Washington; 2026-10-14T22:18:01+00:00
-- [25-3070 - Schier v. Anderton et al](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cv-03070/context) — District Court Eastern District of Washington; 2026-10-14T22:18:01+00:00
 - [14-041 - USA v. Werle](https://www.govinfo.gov/app/details/USCOURTS-waed-2_14-cr-00041/context) — District Court Eastern District of Washington; 2026-10-14T22:18:01+00:00
 - [24-5145 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-4_24-cv-05145/context) — District Court Eastern District of Washington; 2026-10-14T22:18:01+00:00
 - [25-3031 - Logsdon v. Progressive Commercial Casualty Company et al.](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cv-03031/context) — District Court Eastern District of Washington; 2026-10-14T22:18:01+00:00
@@ -1559,11 +2355,9 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [25-3058 - Kapp v. Washington State Department of Veterans Affairs](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cv-03058/context) — District Court Eastern District of Washington; 2026-10-14T22:16:00+00:00
 - [23-026 - Kinnune v. State of Washington et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_23-cv-00026/context) — District Court Eastern District of Washington; 2026-10-14T22:16:00+00:00
 - [23-3173 - McShane v. Sanofi US Services Inc et al](https://www.govinfo.gov/app/details/USCOURTS-waed-1_23-cv-03173/context) — District Court Eastern District of Washington; 2026-10-14T22:16:00+00:00
-- [25-2087 - USA v. Cruz](https://www.govinfo.gov/app/details/USCOURTS-waed-1_25-cr-02087/context) — District Court Eastern District of Washington; 2026-10-14T22:15:00+00:00
 - [23-287 - Calvin v. Suckow et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_23-cv-00287/context) — District Court Eastern District of Washington; 2026-10-14T22:15:00+00:00
 - [23-189 - United States of America v. Bernert Barge Lines Inc et al](https://www.govinfo.gov/app/details/USCOURTS-waed-2_23-cv-00189/context) — District Court Eastern District of Washington; 2026-10-14T22:15:00+00:00
 - [25-5016 - Montgomery Investments LLC v. The Travelers Indemnity Company of America](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05016/context) — District Court Eastern District of Washington; 2026-10-14T22:15:00+00:00
-- [25-5013 - Case Name in Social Security Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-waed-4_25-cv-05013/context) — District Court Eastern District of Washington; 2026-10-14T22:15:00+00:00
 - [25-2617 - Bordages v. T-Mobile Corporation et al](https://www.govinfo.gov/app/details/USCOURTS-tnwd-2_25-cv-02617/context) — District Court Western District of Tennessee; 2026-10-14T21:42:11+00:00
 - [17-10105 - USA v. Lopez et al.](https://www.govinfo.gov/app/details/USCOURTS-tnwd-1_17-cr-10105/context) — District Court Western District of Tennessee; 2026-10-14T21:42:11+00:00
 - [23-2069 - U.A. 614 Health & Welfare Fund et al v. Roy Blackwell Enterprises, Inc.](https://www.govinfo.gov/app/details/USCOURTS-tnwd-2_23-cv-02069/context) — District Court Western District of Tennessee; 2026-10-14T21:42:11+00:00
@@ -1602,7 +2396,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [26-1269 - Case Name in Immigration Case - Unavailable](https://www.govinfo.gov/app/details/USCOURTS-gamd-4_26-cv-01269/context) — District Court Middle District of Georgia; 2026-10-14T21:27:01+00:00
 - [26-072 - UNITED STATES OF AMERICA v. BRYANT et al](https://www.govinfo.gov/app/details/USCOURTS-gamd-5_26-mj-00072/context) — District Court Middle District of Georgia; 2026-10-14T21:27:01+00:00
 - [25-2717 - Bordages v. United States Department of Justice et al](https://www.govinfo.gov/app/details/USCOURTS-tnwd-2_25-cv-02717/context) — District Court Western District of Tennessee; 2026-10-14T21:27:00+00:00
-- [25-051 - USA v. Hicks, et al](https://www.govinfo.gov/app/details/USCOURTS-tned-3_25-cr-00051/context) — District Court Eastern District of Tennessee; 2026-10-14T21:27:00+00:00
 - [25-13822 - Baker v. Commonwealth of Massachusetts et al](https://www.govinfo.gov/app/details/USCOURTS-mad-1_25-cv-13822/context) — District Court District of Massachusetts; 2026-10-14T21:27:00+00:00
 - [26-3163 - Alarjani v. Bullock](https://www.govinfo.gov/app/details/USCOURTS-tnwd-2_26-cv-03163/context) — District Court Western District of Tennessee; 2026-10-14T21:26:00+00:00
 - [26-2781 - Johnson v. ASTRAZENECA PHARMACEUTICALS LP et al](https://www.govinfo.gov/app/details/USCOURTS-tnwd-2_26-cv-02781/context) — District Court Western District of Tennessee; 2026-10-14T21:26:00+00:00
@@ -1699,7 +2492,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [25-10579 - VirtaMove, Corp. v. Amazon.com, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-cand-5_25-cv-10579/context) — District Court Northern District of California; 2026-10-14T21:01:02+00:00
 - [26-3783 - Lewis v. Moralez et al](https://www.govinfo.gov/app/details/USCOURTS-cand-4_26-cv-03783/context) — District Court Northern District of California; 2026-10-14T21:01:02+00:00
 - [25-8736 - Doe NLG (JH) 2 v. Uber Technologies Inc et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_25-cv-08736/context) — District Court Northern District of California; 2026-10-14T21:01:02+00:00
-- [23-3084 - In re: Uber Technologies, Inc., Passenger Sexual Assault Litigation](https://www.govinfo.gov/app/details/USCOURTS-cand-3_23-md-03084/context) — District Court Northern District of California; 2026-10-14T20:54:00+00:00
 - [26-70438 - USA v. Nguyen](https://www.govinfo.gov/app/details/USCOURTS-cand-5_26-mj-70438/context) — District Court Northern District of California; 2026-10-14T20:53:00+00:00
 - [25-8633 - Doe NLG 2 (TB) v. Uber Technologies Inc et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_25-cv-08633/context) — District Court Northern District of California; 2026-10-14T20:53:00+00:00
 - [25-9180 - Doe NLG (A.B.)](https://www.govinfo.gov/app/details/USCOURTS-cand-3_25-cv-09180/context) — District Court Northern District of California; 2026-10-14T20:53:00+00:00
@@ -1728,7 +2520,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [25-8985 - JLG 180 v. Uber Technologies, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_25-cv-08985/context) — District Court Northern District of California; 2026-10-14T20:51:47+00:00
 - [1:25-vv-00889 - DAY v. SECRETARY OF HEALTH AND HUMAN SERVICES](https://www.govinfo.gov/app/details/USCOURTS-cofc-1_25-vv-00889/context) — United States Court of Federal Claims; 2026-10-14T20:51:46+00:00
 - [26-4962 - DOTSON v. BLANCHARD et al](https://www.govinfo.gov/app/details/USCOURTS-flnd-3_26-cv-04962/context) — District Court Northern District of Florida; 2026-10-14T20:51:46+00:00
-- [26-11448 - Tillery et al v. Samsung Electronics America, Inc.](https://www.govinfo.gov/app/details/USCOURTS-cand-3_26-cv-11448/context) — District Court Northern District of California; 2026-10-14T20:51:46+00:00
 - [25-8451 - E.M. v. Uber Technologies Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_25-cv-08451/context) — District Court Northern District of California; 2026-10-14T20:51:46+00:00
 - [25-7976 - Doe NLG (RK) v. Uber Technologies Inc et al](https://www.govinfo.gov/app/details/USCOURTS-cand-3_25-cv-07976/context) — District Court Northern District of California; 2026-10-14T20:51:46+00:00
 - [25-10132 - Rosa Coplon Jewish Home and Infirmary](https://www.govinfo.gov/app/details/USCOURTS-nywb-1_25-bk-10132/context) — Bankruptcy Court Western District of New York; 2026-10-14T20:48:33+00:00
@@ -1868,46 +2659,23 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [26-1808 - Graham v. Warden, JHCC Tommy Sharp et al](https://www.govinfo.gov/app/details/USCOURTS-nywd-1_26-cv-01808/context) — District Court Western District of New York; 2026-10-14T12:25:00+00:00
 - [22-959 - SB1708 Realty LLC v. Allen et al](https://www.govinfo.gov/app/details/USCOURTS-nyed-1_22-cv-00959/context) — District Court Eastern District of New York; 2026-10-14T12:25:00+00:00
 - [25-2212 - CROUCH v. BOWSER et al](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_25-cv-02212/context) — District Court District of Columbia; 2026-10-14T12:25:00+00:00
-- [18-2763 - Evans Hotel, LLC et al v. Unite Here! Local 30 et al](https://www.govinfo.gov/app/details/USCOURTS-casd-3_18-cv-02763/context) — District Court Southern District of California; 2026-10-13T21:47:01+00:00
-- [26-352 - USA v. Pantoja-Canada](https://www.govinfo.gov/app/details/USCOURTS-txnd-4_26-cr-00352/context) — District Court Northern District of Texas; 2026-10-13T21:41:00+00:00
-- [24-058 - Swanson v. Citizens National Bank](https://www.govinfo.gov/app/details/USCOURTS-txnd-6_24-cv-00058/context) — District Court Northern District of Texas; 2026-10-13T21:35:01+00:00
-- [26-2713 - Brown v. Fitness International LLC](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_26-cv-02713/context) — District Court Northern District of Texas; 2026-10-13T21:35:01+00:00
-- [26-350 - USA v. Garcia](https://www.govinfo.gov/app/details/USCOURTS-txnd-4_26-cr-00350/context) — District Court Northern District of Texas; 2026-10-13T21:35:01+00:00
-- [24-1387 - Price v. White et al](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_24-cv-01387/context) — District Court Northern District of Texas; 2026-10-13T21:34:00+00:00
-- [26-266 - USA v. Nava](https://www.govinfo.gov/app/details/USCOURTS-txnd-4_26-cr-00266/context) — District Court Northern District of Texas; 2026-10-13T21:34:00+00:00
-- [26-354 - USA v. Alvarez-Frias](https://www.govinfo.gov/app/details/USCOURTS-txnd-4_26-cr-00354/context) — District Court Northern District of Texas; 2026-10-13T21:32:01+00:00
-- [26-348 - USA v. Ventura](https://www.govinfo.gov/app/details/USCOURTS-txnd-4_26-cr-00348/context) — District Court Northern District of Texas; 2026-10-13T21:32:01+00:00
-- [26-351 - USA v. Serrato-Martinez](https://www.govinfo.gov/app/details/USCOURTS-txnd-4_26-cr-00351/context) — District Court Northern District of Texas; 2026-10-13T21:32:01+00:00
-- [26-370 - USA v. Medina](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_26-cr-00370/context) — District Court Northern District of Texas; 2026-10-13T21:32:01+00:00
-- [25-261 - USA v. Powell](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_25-cr-00261/context) — District Court Northern District of Texas; 2026-10-13T21:32:01+00:00
-- [24-004 - Wagner v. Hess Corporation et al](https://www.govinfo.gov/app/details/USCOURTS-txnd-6_24-cv-00004/context) — District Court Northern District of Texas; 2026-10-13T21:31:02+00:00
-- [26-349 - USA v. Hernandez](https://www.govinfo.gov/app/details/USCOURTS-txnd-4_26-cr-00349/context) — District Court Northern District of Texas; 2026-10-13T21:31:02+00:00
-- [26-1595 - Vance et al v. Texas Comptroller](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_26-cv-01595/context) — District Court Northern District of Texas; 2026-10-13T21:31:02+00:00
-- [26-1280 - Urdaneta Simanca v. Warden Prairieland Detention Center et al](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_26-cv-01280/context) — District Court Northern District of Texas; 2026-10-13T21:31:02+00:00
-- [23-1219 - Dugan et al v. Reservoir Restaurant Inc](https://www.govinfo.gov/app/details/USCOURTS-txnd-4_23-cv-01219/context) — District Court Northern District of Texas; 2026-10-13T21:31:02+00:00
-- [23-2692 - US Bank National Association v. Micheaux et al](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_23-cv-02692/context) — District Court Northern District of Texas; 2026-10-13T21:31:02+00:00
-- [26-347 - USA v. Flores-Serna](https://www.govinfo.gov/app/details/USCOURTS-txnd-4_26-cr-00347/context) — District Court Northern District of Texas; 2026-10-13T21:31:02+00:00
-- [26-353 - USA v. Cubas-Meza](https://www.govinfo.gov/app/details/USCOURTS-txnd-4_26-cr-00353/context) — District Court Northern District of Texas; 2026-10-13T21:31:02+00:00
-- [26-292 - USA v. Lopez](https://www.govinfo.gov/app/details/USCOURTS-txnd-4_26-cr-00292/context) — District Court Northern District of Texas; 2026-10-13T21:30:00+00:00
-- [26-544 - USA v. Alvarado-Morel](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_26-cr-00544/context) — District Court Northern District of Texas; 2026-10-13T21:27:00+00:00
-- [26-375 - USA v. Ramos-Salazar](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_26-cr-00375/context) — District Court Northern District of Texas; 2026-10-13T21:23:00+00:00
-- [26-545 - USA v. Rubi](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_26-cr-00545/context) — District Court Northern District of Texas; 2026-10-13T21:23:00+00:00
-- [25-438 - USA v. Berry](https://www.govinfo.gov/app/details/USCOURTS-txnd-3_25-cr-00438/context) — District Court Northern District of Texas; 2026-10-13T21:21:00+00:00
-- [25-1447 - Seals et al v. GulfMark Americas, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-01447/context) — District Court Eastern District of Louisiana; 2026-10-13T20:24:00+00:00
-- [25-179 - Hearn v. Attorney General of the United States](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-00179/context) — District Court Eastern District of Louisiana; 2026-10-13T20:24:00+00:00
-- [25-266 - Malaco, Inc. v. Norman et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_25-cv-00266/context) — District Court Eastern District of Louisiana; 2026-10-13T20:24:00+00:00
-- [24-2118 - Jones v. Airbnb Payments, Inc. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cv-02118/context) — District Court Eastern District of Louisiana; 2026-10-13T20:24:00+00:00
-- [24-518 - Nguyen et al v. JP Morgan Chase, N.A. et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_24-cv-00518/context) — District Court Eastern District of Louisiana; 2026-10-13T20:24:00+00:00
-- [23-40523 - The Roman Catholic Bishop of Oakland](https://www.govinfo.gov/app/details/USCOURTS-canb-4_23-bk-40523/context) — Bankruptcy Court Northern District of California; 2026-10-13T20:22:03+00:00
-- [26-1536 - Patton v. Day et al](https://www.govinfo.gov/app/details/USCOURTS-laed-2_26-cv-01536/context) — District Court Eastern District of Louisiana; 2026-10-13T20:22:03+00:00
 
 ## law_published
 
+- [Public Law 119 - 121 - American Music Tourism Act of 2025](https://www.govinfo.gov/app/details/PLAW-119publ121) — Public and Private Laws; 2026-10-16T18:45:00+00:00
 - [Public Law 119 - 36 - Homebuyers Privacy Protection Act](https://www.govinfo.gov/app/details/PLAW-119publ36) — Public and Private Laws; 2026-10-15T14:31:00+00:00
 - [Public Law 119 - 120 - Billion Dollar Boondoggle Act of 2025](https://www.govinfo.gov/app/details/PLAW-119publ120) — Public and Private Laws; 2026-10-15T12:16:00+00:00
 
 ## legislative_document_published
 
+- [S. 5690 (IS) - Renewing the Dream Act](https://www.govinfo.gov/app/details/BILLS-119s5690is) — Congressional Bills; 2026-10-17T02:58:03+00:00
+- [S. Res. 951 (IS) - Designating September 2026 as "National Infant Mortality Awareness Month", raising awareness of infant mortality, and increasing efforts to reduce infant mortality.](https://www.govinfo.gov/app/details/BILLS-119sres951is) — Congressional Bills; 2026-10-17T02:58:02+00:00
+- [S. 5688 (IS) - Acquired Lands Revenue Modernization Act](https://www.govinfo.gov/app/details/BILLS-119s5688is) — Congressional Bills; 2026-10-17T02:58:02+00:00
+- [S. Res. 950 (IS) - Designating the week of September 14 through September 18, 2026, as "National Clean Energy Week".](https://www.govinfo.gov/app/details/BILLS-119sres950is) — Congressional Bills; 2026-10-17T02:58:02+00:00
+- [S.J. Res. 221 (IS) - Providing for congressional disapproval of the agreement for civilian nuclear cooperation between the United States and the Kingdom of Saudi Arabia pursuant to section 123 of the Atomic Energy Act of 1954.](https://www.govinfo.gov/app/details/BILLS-119sjres221is) — Congressional Bills; 2026-10-17T02:58:02+00:00
+- [S. 5683 (IS) - Best Practices for Military Family Child Care Homes Act](https://www.govinfo.gov/app/details/BILLS-119s5683is) — Congressional Bills; 2026-10-17T02:58:02+00:00
+- [S. 5684 (IS) - No Cash for Incompetent and Malicious Contractors Act](https://www.govinfo.gov/app/details/BILLS-119s5684is) — Congressional Bills; 2026-10-17T02:58:02+00:00
+- [S. 5686 (IS) - No Public Executions in America Act](https://www.govinfo.gov/app/details/BILLS-119s5686is) — Congressional Bills; 2026-10-17T02:58:02+00:00
 - [H.R. 10816 (IH) - Department of Defense Renaming Integrity and Ethics Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10816ih) — Congressional Bills; 2026-10-16T09:53:00+00:00
 - [H.R. 10821 (IH) - To amend the Federal Deposit Insurance Act to make changes to the Standard Maximum Deposit Insurance Amount, and for other purposes.](https://www.govinfo.gov/app/details/BILLS-119hr10821ih) — Congressional Bills; 2026-10-16T09:53:00+00:00
 - [H.R. 10810 (IH) - National Patient Safety Board Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10810ih) — Congressional Bills; 2026-10-16T09:53:00+00:00
@@ -1939,41 +2707,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [H.R. 10773 (IH) - Religious Education Liberty Assurance Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10773ih) — Congressional Bills; 2026-10-14T06:48:00+00:00
 - [H.R. 10786 (IH) - Civic Literacy in Higher Education Act](https://www.govinfo.gov/app/details/BILLS-119hr10786ih) — Congressional Bills; 2026-10-14T06:48:00+00:00
 - [H.R. 10779 (IH) - To designate the facility of the United States Postal Service located at 1905 Route 112 in Medford, New York, as the "Gunnery Sergeant Ruben Santos Post Office Building".](https://www.govinfo.gov/app/details/BILLS-119hr10779ih) — Congressional Bills; 2026-10-14T06:48:00+00:00
-- [H.R. 10776 (IH) - To amend the Marine Mammal Protection Act of 1972 to change certain requirements regarding certain allowed take of marine mammals, and for other purposes.](https://www.govinfo.gov/app/details/BILLS-119hr10776ih) — Congressional Bills; 2026-10-14T04:28:02+00:00
-- [H.R. 10778 (IH) - To amend the Internal Revenue Code of 1986 to establish a credit to incentivize the use of certain low-emission anesthetic gases by health care facilities, and for other purposes.](https://www.govinfo.gov/app/details/BILLS-119hr10778ih) — Congressional Bills; 2026-10-14T04:28:02+00:00
-- [H.R. 10757 (IH) - To provide for a limitation on contributions to the United Nations.](https://www.govinfo.gov/app/details/BILLS-119hr10757ih) — Congressional Bills; 2026-10-14T04:28:02+00:00
-- [H.R. 10775 (IH) - Bots Research Act](https://www.govinfo.gov/app/details/BILLS-119hr10775ih) — Congressional Bills; 2026-10-14T04:28:02+00:00
-- [H.R. 10774 (IH) - Strengthening Welfare in Marine Settings Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10774ih) — Congressional Bills; 2026-10-14T04:28:02+00:00
-- [H.R. 10777 (IH) - National Coordination Center and Commercial Cyber Capabilities Codification Act](https://www.govinfo.gov/app/details/BILLS-119hr10777ih) — Congressional Bills; 2026-10-14T04:28:01+00:00
-- [H.R. 10789 (IH) - Protecting Florida's Offshore Military Readiness Act](https://www.govinfo.gov/app/details/BILLS-119hr10789ih) — Congressional Bills; 2026-10-14T04:03:00+00:00
-- [H.R. 10498 (IH) - Illegal War Refund Act](https://www.govinfo.gov/app/details/BILLS-119hr10498ih) — Congressional Bills; 2026-10-14T04:03:00+00:00
-- [H.R. 10782 (IH) - Clean School Bus Reauthorization Act](https://www.govinfo.gov/app/details/BILLS-119hr10782ih) — Congressional Bills; 2026-10-14T04:02:01+00:00
-- [H.R. 10808 (IH) - Savings for Tomorrow’s Opportunities, Raising Kids Act](https://www.govinfo.gov/app/details/BILLS-119hr10808ih) — Congressional Bills; 2026-10-14T04:02:00+00:00
-- [H.R. 10790 (IH) - Chemical Safety Board Accountability Act](https://www.govinfo.gov/app/details/BILLS-119hr10790ih) — Congressional Bills; 2026-10-14T04:02:00+00:00
-- [H.R. 10238 (RH) - Cybersecurity for Small Businesses Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10238rh) — Congressional Bills; 2026-10-14T04:02:00+00:00
-- [H.R. 10807 (IH) - Get the Flock Out of Our Communities Act](https://www.govinfo.gov/app/details/BILLS-119hr10807ih) — Congressional Bills; 2026-10-14T04:02:00+00:00
-- [H.R. 10781 (IH) - National American History and Founders Month Act](https://www.govinfo.gov/app/details/BILLS-119hr10781ih) — Congressional Bills; 2026-10-14T04:02:00+00:00
-- [H.R. 10783 (IH) - Speak Your Truth Act](https://www.govinfo.gov/app/details/BILLS-119hr10783ih) — Congressional Bills; 2026-10-14T04:02:00+00:00
-- [H.R. 10785 (IH) - SCORE for Small Business Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10785ih) — Congressional Bills; 2026-10-14T04:02:00+00:00
-- [H.R. 10809 (IH) - Make Data Centers Pay Act](https://www.govinfo.gov/app/details/BILLS-119hr10809ih) — Congressional Bills; 2026-10-14T04:02:00+00:00
-- [H.R. 10791 (IH) - Italian Heroes and Heritage Act](https://www.govinfo.gov/app/details/BILLS-119hr10791ih) — Congressional Bills; 2026-10-14T04:02:00+00:00
-- [H.R. 10772 (IH) - Frontline Innovation Act](https://www.govinfo.gov/app/details/BILLS-119hr10772ih) — Congressional Bills; 2026-10-14T04:02:00+00:00
-- [H.R. 10513 (IH) - Faith-Based Affordable Housing Predevelopment Fund Act](https://www.govinfo.gov/app/details/BILLS-119hr10513ih) — Congressional Bills; 2026-10-14T04:02:00+00:00
-- [H.R. 10805 (IH) - Don’t Block LGBTQ Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10805ih) — Congressional Bills; 2026-10-14T04:02:00+00:00
-- [H.R. 10795 (IH) - Sudan Investing in Minerals, Partnership, Agriculture, Commerce, and Trade Act](https://www.govinfo.gov/app/details/BILLS-119hr10795ih) — Congressional Bills; 2026-10-14T04:02:00+00:00
-- [H.R. 10771 (IH) - Emergency Preparedness in Higher Education Act](https://www.govinfo.gov/app/details/BILLS-119hr10771ih) — Congressional Bills; 2026-10-14T04:02:00+00:00
-- [H.R. 10769 (IH) - Solar Use Network Act](https://www.govinfo.gov/app/details/BILLS-119hr10769ih) — Congressional Bills; 2026-10-14T04:02:00+00:00
-- [H.R. 10792 (IH) - FTC Whistleblower Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10792ih) — Congressional Bills; 2026-10-14T04:02:00+00:00
-- [H.R. 10796 (IH) - United States-Israel Defense Technology Cooperation Act](https://www.govinfo.gov/app/details/BILLS-119hr10796ih) — Congressional Bills; 2026-10-14T03:48:00+00:00
-- [H.R. 10797 (IH) - Aerial Transport and High Consequence Infectious Diseases Act](https://www.govinfo.gov/app/details/BILLS-119hr10797ih) — Congressional Bills; 2026-10-14T03:48:00+00:00
-- [H.R. 10793 (IH) - To modify the authority of Department of Defense for installation support services and intergovernmental support agreements, and for other purposes.](https://www.govinfo.gov/app/details/BILLS-119hr10793ih) — Congressional Bills; 2026-10-14T03:48:00+00:00
-- [S. 5592 (IS) - American Promise Mortgage Act](https://www.govinfo.gov/app/details/BILLS-119s5592is) — Congressional Bills; 2026-10-14T03:48:00+00:00
-- [H. Res. 1624 (IH) - Recognizing the 110th anniversary of the Nation’s First Presidential library, the Rutherford B. Hayes Presidential Library & Museums.](https://www.govinfo.gov/app/details/BILLS-119hres1624ih) — Congressional Bills; 2026-10-14T03:48:00+00:00
-- [H.R. 10794 (IH) - Improving Access to WIC Act](https://www.govinfo.gov/app/details/BILLS-119hr10794ih) — Congressional Bills; 2026-10-14T03:46:02+00:00
-- [S. 5590 (IS) - Electric Grid Supply Chain Security Act](https://www.govinfo.gov/app/details/BILLS-119s5590is) — Congressional Bills; 2026-10-14T03:46:02+00:00
-- [H.R. 9234 (IH) - Careworker Visa Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr9234ih) — Congressional Bills; 2026-10-14T03:46:01+00:00
-- [H.R. 10804 (IH) - Utility Accountability Act](https://www.govinfo.gov/app/details/BILLS-119hr10804ih) — Congressional Bills; 2026-10-14T03:46:01+00:00
-- [S. 5588 (IS) - Ecological Restoration Project Permitting Act of 2026](https://www.govinfo.gov/app/details/BILLS-119s5588is) — Congressional Bills; 2026-10-14T03:46:01+00:00
 
 ## notice_published
 
@@ -2089,7 +2822,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Center for Scientific Review; Notice of Closed Meetings](https://www.federalregister.gov/documents/2026/10/16/2026-21233/center-for-scientific-review-notice-of-closed-meetings) — Health and Human Services Department; National Institutes of Health; 2026-10-16T00:00:00+00:00
 - [Center for Scientific Review; Notice of Closed Meetings](https://www.federalregister.gov/documents/2026/10/16/2026-21234/center-for-scientific-review-notice-of-closed-meetings) — Health and Human Services Department; National Institutes of Health; 2026-10-16T00:00:00+00:00
 - [National Cancer Institute; Amended Notice of Meeting](https://www.federalregister.gov/documents/2026/10/16/2026-21235/national-cancer-institute-amended-notice-of-meeting) — Health and Human Services Department; National Institutes of Health; 2026-10-16T00:00:00+00:00
-- [Notice of Availability of an Environmental Assessment for Exterior Improvements to the Eisenhower Executive Office Building and Request for Consulting Parties](https://www.federalregister.gov/documents/2026/10/16/2026-21236/notice-of-availability-of-an-environmental-assessment-for-exterior-improvements-to-the-eisenhower) — OFFICE OF ADMINISTRATION, EXECUTIVE OFFICE OF THE PRESIDENT; 2026-10-16T00:00:00+00:00
+- [Notice of Availability of an Environmental Assessment for Exterior Improvements to the Eisenhower Executive Office Building and Request for Consulting Parties](https://www.federalregister.gov/documents/2026/10/16/2026-21236/notice-of-availability-of-an-environmental-assessment-for-exterior-improvements-to-the-eisenhower) — Administration Office, Executive Office of the President; 2026-10-16T00:00:00+00:00
 - [Proposed Collection; Comment Request](https://www.federalregister.gov/documents/2026/10/15/2026-21025/proposed-collection-comment-request) — Defense Department; Navy Department; 2026-10-15T00:00:00+00:00
 - [Submission for OMB Review; Comment Request](https://www.federalregister.gov/documents/2026/10/15/2026-21026/submission-for-omb-review-comment-request) — Defense Department; Office of the Secretary; 2026-10-15T00:00:00+00:00
 - [Request for Nominations for Voting Members on a Public Advisory Committee; Tobacco Products Scientific Advisory Committee (TPSAC)](https://www.federalregister.gov/documents/2026/10/15/2026-21027/request-for-nominations-for-voting-members-on-a-public-advisory-committee-tobacco-products) — Health and Human Services Department; Food and Drug Administration; 2026-10-15T00:00:00+00:00
@@ -2145,113 +2878,19 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Presidential Declaration of a Major Disaster for Public Assistance Only for the State of Wisconsin](https://www.federalregister.gov/documents/2026/10/15/2026-21101/presidential-declaration-of-a-major-disaster-for-public-assistance-only-for-the-state-of-wisconsin) — Small Business Administration; 2026-10-15T00:00:00+00:00
 - [Presidential Declaration of a Major Disaster for Public Assistance Only for the PUEBLO OF ZUNI](https://www.federalregister.gov/documents/2026/10/15/2026-21102/presidential-declaration-of-a-major-disaster-for-public-assistance-only-for-the-pueblo-of-zuni) — Small Business Administration; 2026-10-15T00:00:00+00:00
 - [Administrative Declaration of a Disaster for the State of Indiana](https://www.federalregister.gov/documents/2026/10/15/2026-21103/administrative-declaration-of-a-disaster-for-the-state-of-indiana) — Small Business Administration; 2026-10-15T00:00:00+00:00
-- [Division of Program Coordination, Planning, and Strategic Initiatives, Office of the Director Notice of Proposed Reorganization](https://www.federalregister.gov/documents/2026/10/14/2026-20891/division-of-program-coordination-planning-and-strategic-initiatives-office-of-the-director-notice-of) — Health and Human Services Department; National Institutes of Health; 2026-10-14T00:00:00+00:00
-- [Manual for Courts-Martial; Proposed Amendments](https://www.federalregister.gov/documents/2026/10/14/2026-20893/manual-for-courts-martial-proposed-amendments) — Defense Department; Office of the Secretary; 2026-10-14T00:00:00+00:00
-- [United States-Mexico-Canada Agreement (USMCA), Article 10.12; Binational Panel Review: Notice of Panel Decision](https://www.federalregister.gov/documents/2026/10/14/2026-20894/united-states-mexico-canada-agreement-usmca-article-1012-binational-panel-review-notice-of-panel) — Commerce Department; International Trade Administration; 2026-10-14T00:00:00+00:00
-- [Indian Gaming; Approval by Operation of Law of the Stillaguamish Tribe and State of Washington Gaming Compact](https://www.federalregister.gov/documents/2026/10/14/2026-20896/indian-gaming-approval-by-operation-of-law-of-the-stillaguamish-tribe-and-state-of-washington-gaming) — Interior Department; Indian Affairs Bureau; 2026-10-14T00:00:00+00:00
-- [Certain Corrosion-Resistant Steel Products From Taiwan: Preliminary Results and Rescission, in Part, of Antidumping Duty Administrative Review; 2024-2025](https://www.federalregister.gov/documents/2026/10/14/2026-20897/certain-corrosion-resistant-steel-products-from-taiwan-preliminary-results-and-rescission-in-part-of) — Commerce Department; International Trade Administration; 2026-10-14T00:00:00+00:00
-- [Certain Steel Nails From Malaysia: Preliminary Results and Rescission, in Part, of Antidumping Duty Administrative Review; 2024-2025](https://www.federalregister.gov/documents/2026/10/14/2026-20898/certain-steel-nails-from-malaysia-preliminary-results-and-rescission-in-part-of-antidumping-duty) — Commerce Department; International Trade Administration; 2026-10-14T00:00:00+00:00
-- [Xanthan Gum From the People's Republic of China: Preliminary Results and Rescission, in Part, of Antidumping Duty Administrative Review; 2024-2025](https://www.federalregister.gov/documents/2026/10/14/2026-20899/xanthan-gum-from-the-peoples-republic-of-china-preliminary-results-and-rescission-in-part-of) — Commerce Department; International Trade Administration; 2026-10-14T00:00:00+00:00
-- [Fatty Acids From Indonesia and Malaysia; Scheduling of the Final Phase of Countervailing Duty and Antidumping Duty Investigations](https://www.federalregister.gov/documents/2026/10/14/2026-20903/fatty-acids-from-indonesia-and-malaysia-scheduling-of-the-final-phase-of-countervailing-duty-and) — International Trade Commission; 2026-10-14T00:00:00+00:00
-- [Common Alloy Aluminum Sheet From Bahrain, Brazil, Croatia, Egypt, Germany, India, Indonesia, Italy, Oman, Romania, Serbia, Slovenia, South Africa, Spain, Taiwan, and Turkey; Scheduling of Full Five-Year Reviews](https://www.federalregister.gov/documents/2026/10/14/2026-20904/common-alloy-aluminum-sheet-from-bahrain-brazil-croatia-egypt-germany-india-indonesia-italy-oman) — International Trade Commission; 2026-10-14T00:00:00+00:00
-- [Agency Forms Undergoing Paperwork Reduction Act Review](https://www.federalregister.gov/documents/2026/10/14/2026-20905/agency-forms-undergoing-paperwork-reduction-act-review) — Health and Human Services Department; Centers for Disease Control and Prevention; 2026-10-14T00:00:00+00:00
-- [Agency Forms Undergoing Paperwork Reduction Act Review](https://www.federalregister.gov/documents/2026/10/14/2026-20906/agency-forms-undergoing-paperwork-reduction-act-review) — Health and Human Services Department; Centers for Disease Control and Prevention; 2026-10-14T00:00:00+00:00
-- [Veterans and Community Oversight and Engagement Board, Notice of Meeting](https://www.federalregister.gov/documents/2026/10/14/2026-20907/veterans-and-community-oversight-and-engagement-board-notice-of-meeting) — Veterans Affairs Department; 2026-10-14T00:00:00+00:00
-- [Changes in Flood Hazard Determinations](https://www.federalregister.gov/documents/2026/10/14/2026-20908/changes-in-flood-hazard-determinations) — Homeland Security Department; Federal Emergency Management Agency; 2026-10-14T00:00:00+00:00
-- [Changes in Flood Hazard Determinations](https://www.federalregister.gov/documents/2026/10/14/2026-20909/changes-in-flood-hazard-determinations) — Homeland Security Department; Federal Emergency Management Agency; 2026-10-14T00:00:00+00:00
-- [Proposed Flood Hazard Determinations](https://www.federalregister.gov/documents/2026/10/14/2026-20910/proposed-flood-hazard-determinations) — Homeland Security Department; Federal Emergency Management Agency; 2026-10-14T00:00:00+00:00
-- [Proposed Flood Hazard Determinations](https://www.federalregister.gov/documents/2026/10/14/2026-20911/proposed-flood-hazard-determinations) — Homeland Security Department; Federal Emergency Management Agency; 2026-10-14T00:00:00+00:00
-- [Proposed Flood Hazard Determinations](https://www.federalregister.gov/documents/2026/10/14/2026-20912/proposed-flood-hazard-determinations) — Homeland Security Department; Federal Emergency Management Agency; 2026-10-14T00:00:00+00:00
-- [Proposed Flood Hazard Determinations](https://www.federalregister.gov/documents/2026/10/14/2026-20913/proposed-flood-hazard-determinations) — Homeland Security Department; Federal Emergency Management Agency; 2026-10-14T00:00:00+00:00
-- [Proposed Flood Hazard Determinations](https://www.federalregister.gov/documents/2026/10/14/2026-20914/proposed-flood-hazard-determinations) — Homeland Security Department; Federal Emergency Management Agency; 2026-10-14T00:00:00+00:00
-- [Final Flood Hazard Determinations](https://www.federalregister.gov/documents/2026/10/14/2026-20915/final-flood-hazard-determinations) — Homeland Security Department; Federal Emergency Management Agency; 2026-10-14T00:00:00+00:00
-- [Final Flood Hazard Determinations](https://www.federalregister.gov/documents/2026/10/14/2026-20916/final-flood-hazard-determinations) — Homeland Security Department; Federal Emergency Management Agency; 2026-10-14T00:00:00+00:00
-- [Final Flood Hazard Determinations](https://www.federalregister.gov/documents/2026/10/14/2026-20917/final-flood-hazard-determinations) — Homeland Security Department; Federal Emergency Management Agency; 2026-10-14T00:00:00+00:00
-- [Non-Refillable Steel Cylinders From China; Determinations](https://www.federalregister.gov/documents/2026/10/14/2026-20918/non-refillable-steel-cylinders-from-china-determinations) — International Trade Commission; 2026-10-14T00:00:00+00:00
-- [Proposed Data Collection Submitted for Public Comment and Recommendations](https://www.federalregister.gov/documents/2026/10/14/2026-20919/proposed-data-collection-submitted-for-public-comment-and-recommendations) — Health and Human Services Department; Centers for Disease Control and Prevention; 2026-10-14T00:00:00+00:00
-- [Boltless Steel Shelving Units Prepackaged for Sale From the People's Republic of China: Continuation of Antidumping Duty Order and Countervailing Duty Order](https://www.federalregister.gov/documents/2026/10/14/2026-20920/boltless-steel-shelving-units-prepackaged-for-sale-from-the-peoples-republic-of-china-continuation) — Commerce Department; International Trade Administration; 2026-10-14T00:00:00+00:00
-- [Self-Regulatory Organizations; Texas Stock Exchange LLC; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Implement a Restricted Stock Units Incentive Program](https://www.federalregister.gov/documents/2026/10/14/2026-20921/self-regulatory-organizations-texas-stock-exchange-llc-notice-of-filing-and-immediate-effectiveness) — Securities and Exchange Commission; 2026-10-14T00:00:00+00:00
-- [Self-Regulatory Organizations; Texas Stock Exchange LLC; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Adopt a Shared Listings Program on the Exchange](https://www.federalregister.gov/documents/2026/10/14/2026-20922/self-regulatory-organizations-texas-stock-exchange-llc-notice-of-filing-and-immediate-effectiveness) — Securities and Exchange Commission; 2026-10-14T00:00:00+00:00
-- [Self-Regulatory Organizations; Texas Stock Exchange LLC; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend the TXSE Fee Schedule To Modify the Transaction Fee Applicable to Securities Priced at or Above $1.00 That Remove Displayed Liquidity From the TXSE Book](https://www.federalregister.gov/documents/2026/10/14/2026-20923/self-regulatory-organizations-texas-stock-exchange-llc-notice-of-filing-and-immediate-effectiveness) — Securities and Exchange Commission; 2026-10-14T00:00:00+00:00
-- [Self-Regulatory Organizations; Cboe BZX Exchange, Inc.; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend its Fee Schedule by Introducing Step-Up Tier 1](https://www.federalregister.gov/documents/2026/10/14/2026-20924/self-regulatory-organizations-cboe-bzx-exchange-inc-notice-of-filing-and-immediate-effectiveness-of) — Securities and Exchange Commission; 2026-10-14T00:00:00+00:00
-- [Request for Information for 2028 Department of Defense (DoD) State Priorities Impacting Service Members and Their Families](https://www.federalregister.gov/documents/2026/10/14/2026-20925/request-for-information-for-2028-department-of-defense-dod-state-priorities-impacting-service) — Defense Department; Office of the Secretary; 2026-10-14T00:00:00+00:00
-- [Proposed Flood Hazard Determinations](https://www.federalregister.gov/documents/2026/10/14/2026-20926/proposed-flood-hazard-determinations) — Homeland Security Department; Federal Emergency Management Agency; 2026-10-14T00:00:00+00:00
-- [Presidential Declaration of a Major Disaster for Public Assistance Only for the State of Hawaii](https://www.federalregister.gov/documents/2026/10/14/2026-20927/presidential-declaration-of-a-major-disaster-for-public-assistance-only-for-the-state-of-hawaii) — Small Business Administration; 2026-10-14T00:00:00+00:00
-- [Presidential Declaration of a Major Disaster for the State of West Virginia](https://www.federalregister.gov/documents/2026/10/14/2026-20928/presidential-declaration-of-a-major-disaster-for-the-state-of-west-virginia) — Small Business Administration; 2026-10-14T00:00:00+00:00
-- [Presidential Declaration of a Major Disaster for Public Assistance Only for the State of West Virginia](https://www.federalregister.gov/documents/2026/10/14/2026-20929/presidential-declaration-of-a-major-disaster-for-public-assistance-only-for-the-state-of-west) — Small Business Administration; 2026-10-14T00:00:00+00:00
-- [Presidential Declaration of a Major Disaster for Public Assistance Only for the State of Hawaii](https://www.federalregister.gov/documents/2026/10/14/2026-20931/presidential-declaration-of-a-major-disaster-for-public-assistance-only-for-the-state-of-hawaii) — Small Business Administration; 2026-10-14T00:00:00+00:00
-- [Notice of Receipt of Complaint; Solicitation of Comments Relating to the Public Interest](https://www.federalregister.gov/documents/2026/10/14/2026-20932/notice-of-receipt-of-complaint-solicitation-of-comments-relating-to-the-public-interest) — International Trade Commission; 2026-10-14T00:00:00+00:00
-- [Application for Final Commitment for a Long-Term Loan or Financial Guarantee in Excess of $100 Million: AP300185XX](https://www.federalregister.gov/documents/2026/10/14/2026-20933/application-for-final-commitment-for-a-long-term-loan-or-financial-guarantee-in-excess-of-100) — Export-Import Bank; 2026-10-14T00:00:00+00:00
-- [Certain Hot-Rolled Steel Flat Products From Japan: Final Results of Antidumping Duty Administrative Review; 2023-2024](https://www.federalregister.gov/documents/2026/10/14/2026-20934/certain-hot-rolled-steel-flat-products-from-japan-final-results-of-antidumping-duty-administrative) — Commerce Department; International Trade Administration; 2026-10-14T00:00:00+00:00
-- [Certain Paper Shopping Bags From the Socialist Republic of Vietnam: Preliminary Results of Antidumping Duty Administrative Review; and Recission of Administrative Review, in Part; 2024-2025](https://www.federalregister.gov/documents/2026/10/14/2026-20935/certain-paper-shopping-bags-from-the-socialist-republic-of-vietnam-preliminary-results-of) — Commerce Department; International Trade Administration; 2026-10-14T00:00:00+00:00
-- [RTW Biotech Growth Fund and RTW Investments, LP](https://www.federalregister.gov/documents/2026/10/14/2026-20936/rtw-biotech-growth-fund-and-rtw-investments-lp) — Securities and Exchange Commission; 2026-10-14T00:00:00+00:00
-- [Katherine Curtis, N.P.; Decision and Order](https://www.federalregister.gov/documents/2026/10/14/2026-20937/katherine-curtis-np-decision-and-order) — Justice Department; Drug Enforcement Administration; 2026-10-14T00:00:00+00:00
-- [Guidance to U.S. Customs and Border Protection Regarding the Assessment of “U.S. Content” for Purposes of Implementing Tariffs Pursuant to Clause (2)(D) of Proclamation 11032 of June 1, 2026](https://www.federalregister.gov/documents/2026/10/14/2026-20938/guidance-to-us-customs-and-border-protection-regarding-the-assessment-of-us-content-for-purposes-of) — Commerce Department; Industry and Security Bureau; 2026-10-14T00:00:00+00:00
-- [Kootenai National Forest; Montana; Kootenai National Forest Over-Snow Motorized Use Travel Plan; Withdrawal](https://www.federalregister.gov/documents/2026/10/14/2026-20939/kootenai-national-forest-montana-kootenai-national-forest-over-snow-motorized-use-travel-plan) — Agriculture Department; Forest Service; 2026-10-14T00:00:00+00:00
-- [Polyethylene Terephthalate Film, Sheet, and Strip From India: Preliminary Results of Countervailing Duty Administrative Review, and Rescission, in Part; 2024](https://www.federalregister.gov/documents/2026/10/14/2026-20940/polyethylene-terephthalate-film-sheet-and-strip-from-india-preliminary-results-of-countervailing) — Commerce Department; International Trade Administration; 2026-10-14T00:00:00+00:00
-- [Privacy Act of 1974; Matching Program](https://www.federalregister.gov/documents/2026/10/14/2026-20944/privacy-act-of-1974-matching-program) — Defense Department; Office of the Secretary; 2026-10-14T00:00:00+00:00
-- [Privacy Act of 1974; Matching Program](https://www.federalregister.gov/documents/2026/10/14/2026-20945/privacy-act-of-1974-matching-program) — Defense Department; Office of the Secretary; 2026-10-14T00:00:00+00:00
-- [Privacy Act of 1974; Matching Program](https://www.federalregister.gov/documents/2026/10/14/2026-20946/privacy-act-of-1974-matching-program) — Defense Department; Office of the Secretary; 2026-10-14T00:00:00+00:00
-- [Privacy Act of 1974; Matching Program](https://www.federalregister.gov/documents/2026/10/14/2026-20947/privacy-act-of-1974-matching-program) — Defense Department; Office of the Secretary; 2026-10-14T00:00:00+00:00
-- [Privacy Act of 1974; Matching Program](https://www.federalregister.gov/documents/2026/10/14/2026-20948/privacy-act-of-1974-matching-program) — Defense Department; Office of the Secretary; 2026-10-14T00:00:00+00:00
-- [Privacy Act of 1974; Matching Program](https://www.federalregister.gov/documents/2026/10/14/2026-20949/privacy-act-of-1974-matching-program) — Defense Department; Office of the Secretary; 2026-10-14T00:00:00+00:00
-- [Privacy Act of 1974; Matching Program](https://www.federalregister.gov/documents/2026/10/14/2026-20950/privacy-act-of-1974-matching-program) — Defense Department; Office of the Secretary; 2026-10-14T00:00:00+00:00
-- [Privacy Act of 1974; Matching Program](https://www.federalregister.gov/documents/2026/10/14/2026-20951/privacy-act-of-1974-matching-program) — Defense Department; Office of the Secretary; 2026-10-14T00:00:00+00:00
-- [Privacy Act of 1974; Matching Program](https://www.federalregister.gov/documents/2026/10/14/2026-20952/privacy-act-of-1974-matching-program) — Defense Department; Office of the Secretary; 2026-10-14T00:00:00+00:00
-- [Notice of Federal Advisory Committee Meeting; Manufactured Housing Consensus Committee (MHCC)](https://www.federalregister.gov/documents/2026/10/14/2026-20953/notice-of-federal-advisory-committee-meeting-manufactured-housing-consensus-committee-mhcc) — Housing and Urban Development Department; 2026-10-14T00:00:00+00:00
-- [Biweekly Notice; Applications and Amendments to Facility Operating Licenses and Combined Licenses Involving No Significant Hazards Considerations](https://www.federalregister.gov/documents/2026/10/14/2026-20954/biweekly-notice-applications-and-amendments-to-facility-operating-licenses-and-combined-licenses) — Nuclear Regulatory Commission; 2026-10-14T00:00:00+00:00
-- [Combined Notice of Filings #1](https://www.federalregister.gov/documents/2026/10/14/2026-20957/combined-notice-of-filings-1) — Energy Department; Federal Energy Regulatory Commission; 2026-10-14T00:00:00+00:00
-- [Combined Notice of Filings](https://www.federalregister.gov/documents/2026/10/14/2026-20959/combined-notice-of-filings) — Energy Department; Federal Energy Regulatory Commission; 2026-10-14T00:00:00+00:00
-- [Health Center Program Performance Period Extensions; Correction](https://www.federalregister.gov/documents/2026/10/14/2026-20960/health-center-program-performance-period-extensions-correction) — Health and Human Services Department; Health Resources and Services Administration; 2026-10-14T00:00:00+00:00
-- [Ball Horticultural Company: Determination of Nonregulated Status for Red Flower Petals African Marigold (Tagetes erecta) Event pBALL123-022-BE113 3](https://www.federalregister.gov/documents/2026/10/14/2026-20961/ball-horticultural-company-determination-of-nonregulated-status-for-red-flower-petals-african) — Agriculture Department; Animal and Plant Health Inspection Service; 2026-10-14T00:00:00+00:00
-- [Agency Information Collection Activities; Comment Request on Application for United States Residency Certification](https://www.federalregister.gov/documents/2026/10/14/2026-20962/agency-information-collection-activities-comment-request-on-application-for-united-states-residency) — Treasury Department; Internal Revenue Service; 2026-10-14T00:00:00+00:00
-- [Notice of Intent To Prepare a Programmatic Environmental Impact Statement (PEIS), Open Public Scoping Period, and Hold Public Scoping Meetings on the Proposed SpaceX Starship-Super Heavy Launch and Landing Operations at the Boca Chica Launch Site at Starbase, Texas and Expansion of Starship Landing and Expenditure Locations](https://www.federalregister.gov/documents/2026/10/14/2026-20963/notice-of-intent-to-prepare-a-programmatic-environmental-impact-statement-peis-open-public-scoping) — Transportation Department; Federal Aviation Administration; 2026-10-14T00:00:00+00:00
-- [Council Coordination Committee Meeting](https://www.federalregister.gov/documents/2026/10/14/2026-20965/council-coordination-committee-meeting) — Commerce Department; National Oceanic and Atmospheric Administration; 2026-10-14T00:00:00+00:00
-- [Agency Information Collection Activities; Comment Request for Qualifying Advanced Energy Project Credit-Notice 2023-18](https://www.federalregister.gov/documents/2026/10/14/2026-20966/agency-information-collection-activities-comment-request-for-qualifying-advanced-energy-project) — Treasury Department; Internal Revenue Service; 2026-10-14T00:00:00+00:00
-- [Presidential Declaration of a Major Disaster for Public Assistance Only for the State of Oklahoma](https://www.federalregister.gov/documents/2026/10/14/2026-20967/presidential-declaration-of-a-major-disaster-for-public-assistance-only-for-the-state-of-oklahoma) — Small Business Administration; 2026-10-14T00:00:00+00:00
-- [Presidential Declaration of a Major Disaster for the Pueblo of Zuni](https://www.federalregister.gov/documents/2026/10/14/2026-20968/presidential-declaration-of-a-major-disaster-for-the-pueblo-of-zuni) — Small Business Administration; 2026-10-14T00:00:00+00:00
-- [Agency Information Collection Activities; Proposed Collection; Comment Request; Extension](https://www.federalregister.gov/documents/2026/10/14/2026-20970/agency-information-collection-activities-proposed-collection-comment-request-extension) — Federal Trade Commission; 2026-10-14T00:00:00+00:00
-- [Agency Information Collection Activities; Proposed Collection; Comment Request; Extension](https://www.federalregister.gov/documents/2026/10/14/2026-20971/agency-information-collection-activities-proposed-collection-comment-request-extension) — Federal Trade Commission; 2026-10-14T00:00:00+00:00
-- [Reporting and Recordkeeping Requirements Under Office of Management and Budget Review](https://www.federalregister.gov/documents/2026/10/14/2026-20973/reporting-and-recordkeeping-requirements-under-office-of-management-and-budget-review) — Small Business Administration; 2026-10-14T00:00:00+00:00
-- [Agency Information Collection Activities; Comment Request; IHE Considerations Around Program Closure: How External Pressures and Internal Policies Shape Decision Making](https://www.federalregister.gov/documents/2026/10/14/2026-20975/agency-information-collection-activities-comment-request-ihe-considerations-around-program-closure) — Education Department; 2026-10-14T00:00:00+00:00
-- [Agency Information Collection Activities: Proposed Collection Renewal; Comment Request](https://www.federalregister.gov/documents/2026/10/14/2026-20976/agency-information-collection-activities-proposed-collection-renewal-comment-request) — Federal Deposit Insurance Corporation; 2026-10-14T00:00:00+00:00
-- [Presidential Declaration of a Major Disaster for the State of Wisconsin](https://www.federalregister.gov/documents/2026/10/14/2026-20977/presidential-declaration-of-a-major-disaster-for-the-state-of-wisconsin) — Small Business Administration; 2026-10-14T00:00:00+00:00
-- [Presidential Declaration of a Major Disaster for Public Assistance Only for the Territory of Guam](https://www.federalregister.gov/documents/2026/10/14/2026-20978/presidential-declaration-of-a-major-disaster-for-public-assistance-only-for-the-territory-of-guam) — Small Business Administration; 2026-10-14T00:00:00+00:00
-- [Agency Information Collection Activities; Submission for Office of Management and Budget Review; Comment Request; Infant Formula Requirements](https://www.federalregister.gov/documents/2026/10/14/2026-20980/agency-information-collection-activities-submission-for-office-of-management-and-budget-review) — Health and Human Services Department; Food and Drug Administration; 2026-10-14T00:00:00+00:00
-- [Agency Information Collection Activities; Submission for Office of Management and Budget Review; Comment Request; Voluntary National Retail Food Regulatory Program Standards](https://www.federalregister.gov/documents/2026/10/14/2026-20981/agency-information-collection-activities-submission-for-office-of-management-and-budget-review) — Health and Human Services Department; Food and Drug Administration; 2026-10-14T00:00:00+00:00
-- [Presidential Declaration of a Major Disaster for the Territory of GUAM](https://www.federalregister.gov/documents/2026/10/14/2026-20983/presidential-declaration-of-a-major-disaster-for-the-territory-of-guam) — Small Business Administration; 2026-10-14T00:00:00+00:00
-- [Request for Public Comment: 60-Day Notice for Proposed Information Collection: Indian Health Service Purchased/Referred Care Proof of Residency](https://www.federalregister.gov/documents/2026/10/14/2026-20984/request-for-public-comment-60-day-notice-for-proposed-information-collection-indian-health-service) — Health and Human Services Department; Indian Health Service; 2026-10-14T00:00:00+00:00
-- [Submission for OMB Review; Comment Request](https://www.federalregister.gov/documents/2026/10/14/2026-20985/submission-for-omb-review-comment-request) — Agriculture Department; 2026-10-14T00:00:00+00:00
-- [Records Schedules; Availability and Request for Comments](https://www.federalregister.gov/documents/2026/10/14/2026-20986/records-schedules-availability-and-request-for-comments) — National Archives and Records Administration; 2026-10-14T00:00:00+00:00
-- [Linear Hydraulic Cylinders From Canada, China, India, Mexico, and South Korea, Determinations](https://www.federalregister.gov/documents/2026/10/14/2026-20988/linear-hydraulic-cylinders-from-canada-china-india-mexico-and-south-korea-determinations) — International Trade Commission; 2026-10-14T00:00:00+00:00
-- [Advisory Committee; Cellular, Tissue, and Gene Therapies Advisory Committee; Renewal](https://www.federalregister.gov/documents/2026/10/14/2026-20989/advisory-committee-cellular-tissue-and-gene-therapies-advisory-committee-renewal) — Health and Human Services Department; Food and Drug Administration; 2026-10-14T00:00:00+00:00
-- [Agency Information Collection Activities; Submission for Office of Management and Budget Review; Comment Request; Requirements for Cosmetic Products](https://www.federalregister.gov/documents/2026/10/14/2026-20990/agency-information-collection-activities-submission-for-office-of-management-and-budget-review) — Health and Human Services Department; Food and Drug Administration; 2026-10-14T00:00:00+00:00
-- [Proposed Agency Information Collection Activities; Comment Request](https://www.federalregister.gov/documents/2026/10/14/2026-20991/proposed-agency-information-collection-activities-comment-request) — Transportation Department; Federal Railroad Administration; 2026-10-14T00:00:00+00:00
-- [Deepwater Horizon Natural Resource Damage Assessment Louisiana Trustee Implementation Group Final Phase 2 Restoration Plan/Environmental Assessment #8.1: East Orleans Landbridge Restoration Project and Raccoon Island Restoration Project and Finding of No Significant Impact](https://www.federalregister.gov/documents/2026/10/14/2026-20992/deepwater-horizon-natural-resource-damage-assessment-louisiana-trustee-implementation-group-final) — Commerce Department; National Oceanic and Atmospheric Administration; 2026-10-14T00:00:00+00:00
-- [Certain Vertical Power Delivery Systems, Components Thereof, and Computing Systems Containing the Same; Notice of Institution of Investigation](https://www.federalregister.gov/documents/2026/10/14/2026-20993/certain-vertical-power-delivery-systems-components-thereof-and-computing-systems-containing-the-same) — International Trade Commission; 2026-10-14T00:00:00+00:00
-- [Notice of OFAC Sanctions Action](https://www.federalregister.gov/documents/2026/10/14/2026-20994/notice-of-ofac-sanctions-action) — Treasury Department; Foreign Assets Control Office; 2026-10-14T00:00:00+00:00
-- [Proposed Agency Information Collection Activities; Comment Request](https://www.federalregister.gov/documents/2026/10/14/2026-20995/proposed-agency-information-collection-activities-comment-request) — Transportation Department; Federal Railroad Administration; 2026-10-14T00:00:00+00:00
-- [City of Aspen; Notice of Scoping Period Requesting Comments on Environmental Issues for the Proposed Maroon Creek Hydroelectric Project](https://www.federalregister.gov/documents/2026/10/14/2026-20996/city-of-aspen-notice-of-scoping-period-requesting-comments-on-environmental-issues-for-the-proposed) — Energy Department; Federal Energy Regulatory Commission; 2026-10-14T00:00:00+00:00
-- [ECOsponsible, LLC; Notice of Termination of License (Major Project) by Implied Surrender and Soliciting Comments, Protests, and Motions To Intervene](https://www.federalregister.gov/documents/2026/10/14/2026-20997/ecosponsible-llc-notice-of-termination-of-license-major-project-by-implied-surrender-and-soliciting) — Energy Department; Federal Energy Regulatory Commission; 2026-10-14T00:00:00+00:00
-- [Sunshine Act Meeting Notice](https://www.federalregister.gov/documents/2026/10/14/2026-20998/sunshine-act-meeting-notice) — Energy Department; Federal Energy Regulatory Commission; 2026-10-14T00:00:00+00:00
-- [Public Service Company of Colorado; Notice of Availability of Environmental Assessment](https://www.federalregister.gov/documents/2026/10/14/2026-20999/public-service-company-of-colorado-notice-of-availability-of-environmental-assessment) — Energy Department; Federal Energy Regulatory Commission; 2026-10-14T00:00:00+00:00
-- [Statement of Delegation of Authority](https://www.federalregister.gov/documents/2026/10/14/2026-21001/statement-of-delegation-of-authority) — Health and Human Services Department; Centers for Medicare & Medicaid Services; 2026-10-14T00:00:00+00:00
-- [Agency Information Collection Activities; Comment Request; Submission to the Office of Management and Budget for Review and Approval; AmeriCorps VISTA Criminal History Acknowledgement Form](https://www.federalregister.gov/documents/2026/10/14/2026-21002/agency-information-collection-activities-comment-request-submission-to-the-office-of-management-and) — Corporation for National and Community Service; 2026-10-14T00:00:00+00:00
-- [Notice of Lodging of Proposed Fourth Amended Consent Decree Under the Clean Water Act](https://www.federalregister.gov/documents/2026/10/14/2026-21003/notice-of-lodging-of-proposed-fourth-amended-consent-decree-under-the-clean-water-act) — Justice Department; 2026-10-14T00:00:00+00:00
-- [Information Collection Requests; Disaster Assistance-General; Critical Customer Data](https://www.federalregister.gov/documents/2026/10/14/2026-21007/information-collection-requests-disaster-assistance-general-critical-customer-data) — Agriculture Department; Farm Service Agency; 2026-10-14T00:00:00+00:00
-- [60-Day Notice of Proposed Information Collection: Congregate Housing Services Program (CHSP)](https://www.federalregister.gov/documents/2026/10/14/2026-21011/60-day-notice-of-proposed-information-collection-congregate-housing-services-program-chsp) — Housing and Urban Development Department; 2026-10-14T00:00:00+00:00
-- [New England Fishery Management Council; Public Meeting](https://www.federalregister.gov/documents/2026/10/14/2026-21013/new-england-fishery-management-council-public-meeting) — Commerce Department; National Oceanic and Atmospheric Administration; 2026-10-14T00:00:00+00:00
-- [Mid-Atlantic Fishery Management Council (MAFMC); Public Meeting](https://www.federalregister.gov/documents/2026/10/14/2026-21014/mid-atlantic-fishery-management-council-mafmc-public-meeting) — Commerce Department; National Oceanic and Atmospheric Administration; 2026-10-14T00:00:00+00:00
-- [Mid-Atlantic Fishery Management Council (MAFMC); Public Meeting](https://www.federalregister.gov/documents/2026/10/14/2026-21015/mid-atlantic-fishery-management-council-mafmc-public-meeting) — Commerce Department; National Oceanic and Atmospheric Administration; 2026-10-14T00:00:00+00:00
-- [Fisheries of the Caribbean; Southeast Data, Assessment, and Review; Public Meeting](https://www.federalregister.gov/documents/2026/10/14/2026-21016/fisheries-of-the-caribbean-southeast-data-assessment-and-review-public-meeting) — Commerce Department; National Oceanic and Atmospheric Administration; 2026-10-14T00:00:00+00:00
-- [Fisheries of the South Atlantic; Southeast Data, Assessment, and Review; Public Meeting](https://www.federalregister.gov/documents/2026/10/14/2026-21017/fisheries-of-the-south-atlantic-southeast-data-assessment-and-review-public-meeting) — Commerce Department; National Oceanic and Atmospheric Administration; 2026-10-14T00:00:00+00:00
-- [New England Fishery Management Council; Public Meeting](https://www.federalregister.gov/documents/2026/10/14/2026-21018/new-england-fishery-management-council-public-meeting) — Commerce Department; National Oceanic and Atmospheric Administration; 2026-10-14T00:00:00+00:00
-- [New Postal Products](https://www.federalregister.gov/documents/2026/10/14/2026-21020/new-postal-products) — Postal Regulatory Commission; 2026-10-14T00:00:00+00:00
-- [Center for Scientific Review; Notice of Closed Meetings](https://www.federalregister.gov/documents/2026/10/14/2026-21021/center-for-scientific-review-notice-of-closed-meetings) — Health and Human Services Department; National Institutes of Health; 2026-10-14T00:00:00+00:00
-- [Center For Scientific Review; Notice of Closed Meetings](https://www.federalregister.gov/documents/2026/10/14/2026-21022/center-for-scientific-review-notice-of-closed-meetings) — Health and Human Services Department; National Institutes of Health; 2026-10-14T00:00:00+00:00
 
 ## presidential_document_published
 
+- [DCPD-202600618 - Remarks During a Telerally for Virginia Republican Congressional Candidates Representatives Robert J. Wittman, Jennifer Kiggans, and John McGuire](https://www.govinfo.gov/app/details/DCPD-202600618) — Compilation of Presidential Documents; 2026-10-16T20:17:00+00:00
+- [DCPD-202600617 - Executive Order 14430-Restoring American Saltwater Angling and Recreation](https://www.govinfo.gov/app/details/DCPD-202600617) — Compilation of Presidential Documents; 2026-10-16T20:16:00+00:00
+- [DCPD-202600616 - Executive Order 14429-Reinvigorating America's Hunting Heritage](https://www.govinfo.gov/app/details/DCPD-202600616) — Compilation of Presidential Documents; 2026-10-16T20:16:00+00:00
+- [DCPD-202600615 - Message on National Hispanic Heritage Month](https://www.govinfo.gov/app/details/DCPD-202600615) — Compilation of Presidential Documents; 2026-10-16T20:16:00+00:00
+- [DCPD-202600613 - Memorandum on Restoring Reciprocity in Government Procurement](https://www.govinfo.gov/app/details/DCPD-202600613) — Compilation of Presidential Documents; 2026-10-16T20:15:00+00:00
+- [DCPD-202600612 - Executive Order 14428-Providing Meaningful Water Quality Improvements Through Collaboration and Oversight of Federal Support](https://www.govinfo.gov/app/details/DCPD-202600612) — Compilation of Presidential Documents; 2026-10-16T20:15:00+00:00
+- [DCPD-202600608 - Remarks in an Exchange With Reporters Aboard Air Force One En Route to Joint Base Andrews, Maryland](https://www.govinfo.gov/app/details/DCPD-202600608) — Compilation of Presidential Documents; 2026-10-16T20:13:00+00:00
+- [DCPD-202600605 - Remarks in an Exchange With Reporters at the Trump International Golf Links and Hotel Doonbeg in Doonbeg, Ireland](https://www.govinfo.gov/app/details/DCPD-202600605) — Compilation of Presidential Documents; 2026-10-16T20:13:00+00:00
+- [DCPD-202500992 - Remarks in a Cabinet Meeting and an Exchange With Reporters](https://www.govinfo.gov/app/details/DCPD-202500992) — Compilation of Presidential Documents; 2026-10-16T20:12:00+00:00
+- [DCPD-202500778 - Remarks on Signing the Guiding and Establishing National Innovation for U.S. Stablecoins (GENIUS) Act](https://www.govinfo.gov/app/details/DCPD-202500778) — Compilation of Presidential Documents; 2026-10-16T20:12:00+00:00
 - [DCPD-2026DIGEST - Digest of Other White House Announcements](https://www.govinfo.gov/app/details/DCPD-2026DIGEST) — Compilation of Presidential Documents; 2026-10-15T19:49:00+00:00
 - [DCPD-202600102 - Remarks to United States Servicemembers and Military Families at Fort Bragg, North Carolina](https://www.govinfo.gov/app/details/DCPD-202600102) — Compilation of Presidential Documents; 2026-10-15T19:49:00+00:00
 - [DCPD-202600611 - Proclamation 11068-National POW/MIA Recognition Day, 2026](https://www.govinfo.gov/app/details/DCPD-202600611) — Compilation of Presidential Documents; 2026-10-15T19:49:00+00:00
@@ -2266,10 +2905,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [DCPD-202600604 - Remarks at the 2026 Amgen Irish Open Trophy Ceremony in Doonbeg, Ireland](https://www.govinfo.gov/app/details/DCPD-202600604) — Compilation of Presidential Documents; 2026-10-14T20:40:00+00:00
 - [DCPD-202600603 - Remarks in an Exchange With Reporters During the Amgen Irish Open in Doonbeg, Ireland](https://www.govinfo.gov/app/details/DCPD-202600603) — Compilation of Presidential Documents; 2026-10-14T20:40:00+00:00
 - [DCPD-202600591 - Remarks on Signing the Hershel 'Woody' Williams National Medal of Honor Monument Location Act in Arlington, Texas](https://www.govinfo.gov/app/details/DCPD-202600591) — Compilation of Presidential Documents; 2026-10-14T20:40:00+00:00
-- [Establishment of a Committee of Inquiry To Investigate Allegations of False Statements by Lisa DeNell Cook](https://www.federalregister.gov/documents/2026/10/14/2026-21061/establishment-of-a-committee-of-inquiry-to-investigate-allegations-of-false-statements-by-lisa) — Executive Office of the President; 2026-10-14T00:00:00+00:00
-- [DCPD-202600599 - Remarks in an Exchange With Reporters Following a Visit With President Catherine Connolly of Ireland in Dublin, Ireland](https://www.govinfo.gov/app/details/DCPD-202600599) — Compilation of Presidential Documents; 2026-10-13T20:31:00+00:00
-- [DCPD-202600601 - Remarks to United States Embassy Personnel and Business Leaders in Dublin, Ireland](https://www.govinfo.gov/app/details/DCPD-202600601) — Compilation of Presidential Documents; 2026-10-13T20:31:00+00:00
-- [DCPD-202500807 - Remarks on Signing the VA Home Loan Program Reform Act and an Exchange With Reporters](https://www.govinfo.gov/app/details/DCPD-202500807) — Compilation of Presidential Documents; 2026-10-13T18:49:00+00:00
 
 ## proposal_published
 
@@ -2287,20 +2922,27 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Powers of Federal Credit Unions](https://www.federalregister.gov/documents/2026/10/15/2026-21088/powers-of-federal-credit-unions) — National Credit Union Administration; 2026-10-15T00:00:00+00:00
 - [Central Liquidity Facility](https://www.federalregister.gov/documents/2026/10/15/2026-21089/central-liquidity-facility) — National Credit Union Administration; 2026-10-15T00:00:00+00:00
 - [Airworthiness Directives; Airbus Helicopters Deutschland GmbH (AHD) Helicopters](https://www.federalregister.gov/documents/2026/10/15/2026-21123/airworthiness-directives-airbus-helicopters-deutschland-gmbh-ahd-helicopters) — Transportation Department; Federal Aviation Administration; 2026-10-15T00:00:00+00:00
-- [Airworthiness Directives; Leonardo S.p.A. Helicopters](https://www.federalregister.gov/documents/2026/10/14/2026-20930/airworthiness-directives-leonardo-spa-helicopters) — Transportation Department; Federal Aviation Administration; 2026-10-14T00:00:00+00:00
-- [Removing Deference to Prior USCIS Determinations of Eligibility](https://www.federalregister.gov/documents/2026/10/14/2026-20941/removing-deference-to-prior-uscis-determinations-of-eligibility) — Homeland Security Department; 2026-10-14T00:00:00+00:00
-- [Schedules of Controlled Substances: Temporary Placement of MGM-15 and MGM-16 in Schedule I](https://www.federalregister.gov/documents/2026/10/14/2026-20942/schedules-of-controlled-substances-temporary-placement-of-mgm-15-and-mgm-16-in-schedule-i) — Justice Department; Drug Enforcement Administration; 2026-10-14T00:00:00+00:00
-- [Schedules of Controlled Substances: Temporary Placement of 7- Hydroxymitragynine and Mitragynine Pseudoindoxyl Above a Specified Threshold in Schedule I](https://www.federalregister.gov/documents/2026/10/14/2026-20943/schedules-of-controlled-substances-temporary-placement-of-7--hydroxymitragynine-and-mitragynine) — Justice Department; Drug Enforcement Administration; 2026-10-14T00:00:00+00:00
-- [Trichloroethylene (TCE); Regulation Under the Toxic Substances Control Act (TSCA); Compliance Date Extensions](https://www.federalregister.gov/documents/2026/10/14/2026-20964/trichloroethylene-tce-regulation-under-the-toxic-substances-control-act-tsca-compliance-date) — Environmental Protection Agency; 2026-10-14T00:00:00+00:00
-- [Periodic Reporting](https://www.federalregister.gov/documents/2026/10/14/2026-21000/periodic-reporting) — Postal Regulatory Commission; 2026-10-14T00:00:00+00:00
-- [Further Reducing Bureaucracy and Burden From the Administration for Native Americans](https://www.federalregister.gov/documents/2026/10/14/2026-21004/further-reducing-bureaucracy-and-burden-from-the-administration-for-native-americans) — Health and Human Services Department; Children and Families Administration; 2026-10-14T00:00:00+00:00
-- [Airworthiness Directives; Baykar Piaggio Aerospace S.p.A. (Type Certificate Previously Held by Piaggio Aviation S.p.A.) Airplanes](https://www.federalregister.gov/documents/2026/10/14/2026-21008/airworthiness-directives-baykar-piaggio-aerospace-spa-type-certificate-previously-held-by-piaggio) — Transportation Department; Federal Aviation Administration; 2026-10-14T00:00:00+00:00
-- [Airworthiness Directives; The Boeing Company Airplanes](https://www.federalregister.gov/documents/2026/10/14/2026-21009/airworthiness-directives-the-boeing-company-airplanes) — Transportation Department; Federal Aviation Administration; 2026-10-14T00:00:00+00:00
-- [Airworthiness Directives; Leonardo S.p.a. Helicopters](https://www.federalregister.gov/documents/2026/10/14/2026-21012/airworthiness-directives-leonardo-spa-helicopters) — Transportation Department; Federal Aviation Administration; 2026-10-14T00:00:00+00:00
-- [AP1000 Design Certification Renewal](https://www.federalregister.gov/documents/2026/10/14/2026-21031/ap1000-design-certification-renewal) — Nuclear Regulatory Commission; 2026-10-14T00:00:00+00:00
 
 ## requires_semantic_review
 
+- [Canada Gazette - Part I, October 17, 2026, volume 160, number 42](https://gazette.gc.ca/rp-pr/p1/2026/2026-10-17/html/index-eng.html) — Canada Gazette — Canada Gazette PI RSS Feed; 2026-10-17T19:00:00+00:00
+- [Minutes of Pre-Bid Meeting - Addition, Alteration and Extension of Existing Crèche, 1st floor, Annexe Building, RBI Lucknow (Limited Tender)](https://www.rbi.org.in/scripts/BS_ViewTenders.aspx?id=25994) — Reserve Bank of India; 2026-10-17T09:00:00+00:00
+- [Corrigendum - Annual Maintenance Contract for Horticulture and Gardening work in Bank’ Residential Premises at Aliganj Staff Quarters and Laplace Quarters, Lucknow](https://www.rbi.org.in/scripts/BS_ViewTenders.aspx?id=25995) — Reserve Bank of India; 2026-10-17T09:00:00+00:00
+- [FS meets with Thai Deputy Prime Minister and senior executives of multinational financial institution in Bangkok (with photos/video)](https://www.info.gov.hk/gia/general/202610/17/P2026101700322.htm) — Hong Kong Government Information Services; 2026-10-17T05:12:00+00:00
+- [Christine Lagarde: IMFC Statement](https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html) — European Central Bank; 2026-10-17T05:00:00+00:00
+- [Special announcement on fire at Stonecutters Island](https://www.info.gov.hk/gia/general/202610/17/P2026101700281.htm) — Hong Kong Government Information Services; 2026-10-17T03:14:11+00:00
+- [Hospital Authority Family Medicine Outpatient Services arrangements on public holiday on day following Chung Yeung Festival](https://www.info.gov.hk/gia/general/202610/17/P2026101600416.htm) — Hong Kong Government Information Services; 2026-10-17T03:00:00+00:00
+- [Red flags hoisted at some beaches](https://www.info.gov.hk/gia/general/202610/17/P2026101700189.htm) — Hong Kong Government Information Services; 2026-10-17T01:56:09+00:00
+- [Yellow fire danger warning](https://www.info.gov.hk/gia/general/202610/17/P2026101700207.htm) — Hong Kong Government Information Services; 2026-10-17T01:46:16+00:00
+- [Implementing the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026](https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/) — White House presidential actions; 2026-10-17T00:34:24+00:00
+- [Territory-wide flag day today](https://www.info.gov.hk/gia/general/202610/17/P2026101500247.htm) — Hong Kong Government Information Services; 2026-10-16T22:00:00+00:00
+- [Weekly schedule of President António Costa](https://www.consilium.europa.eu/en/press/press-releases/2026/10/16/weekly-schedule-of-president-antonio-costa/) — Council of the European Union; 2026-10-16T20:30:00+00:00
+- [Remarks by President António Costa at the press conference following the European Council meeting of 15-16 October 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/10/16/remarks-by-president-antonio-costa-at-the-press-conference-following-the-european-council-meeting-of-15-16-october-2026/) — Council of the European Union; 2026-10-16T20:13:00+00:00
+- [European Council conclusions, 15 and 16 October 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/10/16/european-council-conclusions-15-and-16-october-2026/) — Council of the European Union; 2026-10-16T20:10:00+00:00
+- [Expedited IND Rolling Submission Process and Program Structure](http://www.fda.gov/industry/fda-expedited-investigational-new-drug-ind-pilot-program/expedited-ind-rolling-submission-process-and-program-structure) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-16T19:28:27+00:00
+- [Expedited Investigational New Drug Pilot Program - Application Instructions](http://www.fda.gov/industry/fda-expedited-investigational-new-drug-ind-pilot-program/expedited-investigational-new-drug-pilot-program-application-instructions) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-16T19:28:14+00:00
+- [FDA Expedited Investigational New Drug (IND) Pilot Program](http://www.fda.gov/industry/fda-actions-accelerate-and-modernize-early-and-late-stage-clinical-development/fda-expedited-investigational-new-drug-ind-pilot-program) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-16T19:25:16+00:00
+- [October 16, 2026 update](https://www.federalreserve.gov/apps/reportingforms/recentupdates) — Federal Reserve Board — Reporting Forms; 2026-10-16T19:00:00+00:00
 - [Premature redemption under Sovereign Gold Bond (SGB) Scheme - Redemption Price for premature redemption of SGB 2020-21 Series VII due on October 19, 2026 (October 20, 2026, being a holiday)](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63822) — Reserve Bank of India; 2026-10-16T18:30:00+00:00
 - [Media advisory - Employment, Social Policy, Health and Consumer Affairs (Employment and social policy) Council of 19 October 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/10/16/media-advisory-employment-social-policy-health-and-consumer-affairs-employment-and-social-policy-council-of-19-october-2026/) — Council of the European Union; 2026-10-16T18:10:00+00:00
 - [Renovation Of Officers’ Lounge and Dining Room (Phase 1) at the Reserve Bank Staff College, Chennai](https://www.rbi.org.in/scripts/BS_ViewTenders.aspx?id=25993) — Reserve Bank of India; 2026-10-16T18:00:00+00:00
@@ -2338,9 +2980,13 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [The Scottish Administration (Offices) Order 2026](http://www.legislation.gov.uk/uksi/2026/1097/made) — UK legislation; 2026-10-16T14:08:30.794449+00:00
 - [The School Teachers’ Pay and Conditions (England) Order 2026](http://www.legislation.gov.uk/uksi/2026/1096/made) — UK legislation; 2026-10-16T14:08:21.025034+00:00
 - [The Tribunal Procedure (Upper Tribunal) (Amendment) Rules 2026](http://www.legislation.gov.uk/uksi/2026/1084/made) — UK legislation; 2026-10-16T14:08:10.917090+00:00
+- [Artificial Intelligence and Financial Tail Risks](https://www.bankofcanada.ca/2026/10/staff-working-paper-2026-40/) — Bank of Canada — Research; 2026-10-16T14:06:47+00:00
 - [AIIA Marks a Decade of Service with Over 37.74 Lakh Patients Treated Across Its Healthcare Network - Press Information Bureau](https://news.google.com/rss/articles/CBMiY0FVX3lxTE9EQjN1SDN4Z3JQQU85SklHbTY2X2J0M3g2Wmc5S0VKNWpWalY0R0Rla18xZ1FlRm1yR1p6SG1xU3VmazViYTJNSzFpMW5CUlE3X2hDZF96clo1R09rV2xlSGFhMA) — India Press Information Bureau (official-site news mirror); 2026-10-16T14:06:00+00:00
+- [Beyond "Looking Through": Monetary Policy Responses and Communication Under Supply-Driven Inflation](https://www.bankofcanada.ca/2026/10/staff-working-paper-2026-39/) — Bank of Canada — Research; 2026-10-16T14:04:26+00:00
 - [S. Hrg. 119-424 - THE PRESIDENT'S BUDGET REQUEST FOR THE U.S. FOREST SERVICE FOR FISCAL YEAR 2027](https://www.govinfo.gov/app/details/CHRG-119shrg63886) — Congressional Hearings; 2026-10-16T14:04:00+00:00
+- [The Distributional Consequences of Commodity Booms](https://www.bankofcanada.ca/2026/10/staff-working-paper-2026-38/) — Bank of Canada — Research; 2026-10-16T14:02:39+00:00
 - [Human medicines European public assessment report (EPAR): Idefirix, imlifidase, Date of authorisation: 25/08/2020, Revision: 11, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/idefirix) — European Medicines Agency; 2026-10-16T14:02:00+00:00
+- [Offshoring and Voting Patterns in the US](https://www.bankofcanada.ca/2026/10/staff-working-paper-2026-37/) — Bank of Canada — Research; 2026-10-16T14:00:30+00:00
 - [20262412: Caterpillar Inc.; John Fabick Tractor Company](https://www.ftc.gov/legal-library/browse/early-termination-notices/20262412) — Federal Trade Commission — HSR Early Termination Notices; 2026-10-16T13:47:07+00:00
 - [20262409: WEG Parent, LLC; SP-AI Holdings, LP](https://www.ftc.gov/legal-library/browse/early-termination-notices/20262409) — Federal Trade Commission — HSR Early Termination Notices; 2026-10-16T13:47:07+00:00
 - [20262383: Main Capital IX Cooperatief U.A.; Washington Master Seller LLC](https://www.ftc.gov/legal-library/browse/early-termination-notices/20262383) — Federal Trade Commission — HSR Early Termination Notices; 2026-10-16T13:47:05+00:00
@@ -2403,6 +3049,35 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Auction Timing Under Limited Information: Evidence from Sovereign Bond Auctions](https://www.bankofcanada.ca/2026/10/staff-analytical-paper-2026-51/) — Bank of Canada — Research; 2026-10-16T12:04:40+00:00
 - [Stress in the Press or Stress in the Market: A New Measure of Perceived Financial Stress](https://www.bankofcanada.ca/2026/10/staff-analytical-paper-2026-50/) — Bank of Canada — Research; 2026-10-16T12:02:16+00:00
 - [How Costly Are Cross-Border Payments for Firms?](https://www.bankofcanada.ca/2026/10/staff-analytical-paper-2026-49/) — Bank of Canada — Research; 2026-10-16T12:00:11+00:00
+- [US Department of Labor awards $81.5M in grants to support industry-driven job training programs in rural communities](http://www.dol.gov/newsroom/releases/eta/eta20261016) — Department of Labor; 2026-10-16T12:00:00+00:00
+- [Justice Department Announces Charges Involving 16 Aliens for Illegal Voting](https://www.justice.gov/opa/pr/justice-department-announces-charges-involving-16-aliens-illegal-voting) — Department of Justice — RSS Feed; 2026-10-16T12:00:00+00:00
+- [U.S Departments of Justice and Labor Secure Settlement with Cloudera, Enforce Two-Year PERM Debarment & Back Pay Following Discrimination Against U.S. Workers](https://www.justice.gov/opa/pr/us-departments-justice-and-labor-secure-settlement-cloudera-enforce-two-year-perm-debarment) — Department of Justice — RSS Feed; 2026-10-16T12:00:00+00:00
+- [AG Blanche, USMS Director Host Roundtable on Local Impact of Memphis Safe Task Force](https://www.justice.gov/opa/video/ag-blanche-usms-director-host-roundtable-local-impact-memphis-safe-task-force) — Department of Justice — RSS Feed; 2026-10-16T12:00:00+00:00
+- [Northern Nevada Man Indicted for Federal Child Sexual Abuse Material Crimes](https://www.justice.gov/usao-nv/pr/northern-nevada-man-indicted-federal-child-sexual-abuse-material-crimes) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Brazilian Man Sentenced to 12 Years in Prison for Managerial Role in Conspiracy to Launder Tens of Millions of Dollars in Illicit Cash Proceeds](https://www.justice.gov/opa/pr/brazilian-man-sentenced-12-years-prison-managerial-role-conspiracy-launder-tens-millions) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Jacksonville Man Sentenced to Ten Years in Prison for Drug Offenses](https://www.justice.gov/usao-mdfl/pr/jacksonville-man-sentenced-ten-years-prison-drug-offenses) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Illegal Alien Sentenced to 13 Years in Prison for 2025 Armed Carjacking, Attempted Carjacking in Philadelphia](https://www.justice.gov/usao-edpa/pr/illegal-alien-sentenced-13-years-prison-2025-armed-carjacking-attempted-carjacking) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Illegal Alien from Brazil Sentenced for Illegally Reentering the US After Prior Removal](https://www.justice.gov/usao-me/pr/illegal-alien-brazil-sentenced-illegally-reentering-us-after-prior-removal) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Grand jury indicts Wichita man for trafficking methamphetamine](https://www.justice.gov/usao-ks/pr/grand-jury-indicts-wichita-man-trafficking-methamphetamine-0) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Brazilian Man Sentenced to 12 Years in Prison for Managerial Role in Conspiracy to Launder Tens of Millions of Dollars in Illicit Cash Proceeds](https://www.justice.gov/usao-sdfl/pr/brazilian-man-sentenced-12-years-prison-managerial-role-conspiracy-launder-tens) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Evansville Tax Preparer Lands in Federal Prison for $965,000 COVID 19 Tax Credit Fraud](https://www.justice.gov/usao-sdin/pr/evansville-tax-preparer-lands-federal-prison-965000-covid-19-tax-credit-fraud) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Tucson Man Sentenced to 20 Years in Prison for Child Exploitation Crimes](https://www.justice.gov/usao-az/pr/tucson-man-sentenced-20-years-prison-child-exploitation-crimes) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Federal Detainees to Be Relocated to Detention Facilities in Mecklenburg County; Partnership Between the U.S. Attorney’s Office, U.S. Marshals Service, and Mecklenburg County Sheriff’s Office Brings Federal Resources to North Carolina](https://www.justice.gov/usao-wdnc/pr/federal-detainees-be-relocated-detention-facilities-mecklenburg-county-partnership) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Waipahu Women Sentenced to Two Years in Prison for Pandemic and Tax Fraud While Earning Millions from an Unlicensed Construction Business](https://www.justice.gov/usao-hi/pr/waipahu-women-sentenced-two-years-prison-pandemic-and-tax-fraud-while-earning-millions) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Five Non-Citizens Arrested for Voter Fraud Across the Northern District](https://www.justice.gov/usao-ndny/pr/five-non-citizens-arrested-voter-fraud-across-northern-district) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Texas residents charged with promoting Illegal tax shelter](https://www.justice.gov/usao-ndtx/pr/texas-residents-charged-promoting-illegal-tax-shelter) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Oahu Girls’ Wrestling Coach Indicted for Production, Distribution, Receipt, and Possession of Child Pornography and Child Sex Trafficking](https://www.justice.gov/usao-hi/pr/oahu-girls-wrestling-coach-indicted-production-distribution-receipt-and-possession-child) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Twice-Deported Illegal Alien from Mexico Arrested on Federal Complaint Charging Him with Possessing 360 Kilograms of Cocaine](https://www.justice.gov/usao-cdca/pr/twice-deported-illegal-alien-mexico-arrested-federal-complaint-charging-him-possessing) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Convicted Drug Dealer Charged with Trafficking Methamphetamine While Armed with Firearm, Extended Magazine, and Drum Magazine](https://www.justice.gov/usao-hi/pr/convicted-drug-dealer-charged-trafficking-methamphetamine-while-armed-firearm-extended) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Jamaican Fraudster Extradited To Michigan Sentenced To Prison For His Role In Nationwide Fraud Scheme](https://www.justice.gov/usao-wdmi/pr/2026_1016_Stewart_Sentencing_PR) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Two Plead Guilty to Unemployment Insurance Benefits Fraud Conspiracy](https://www.justice.gov/usao-edca/pr/two-plead-guilty-unemployment-insurance-benefits-fraud-conspiracy) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Scotland County Man Convicted on Drug and Firearm Charges](https://www.justice.gov/usao-mdnc/pr/scotland-county-man-convicted-drug-and-firearm-charges) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [North Fort Myers Man Pleads Guilty to Illegally Possessing a Gun and Drug Offenses](https://www.justice.gov/usao-mdfl/pr/north-fort-myers-man-pleads-guilty-illegally-possessing-gun-and-drug-offenses) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Missouri Sex Offender Admits Possessing Child Sexual Abuse Material](https://www.justice.gov/usao-edmo/pr/missouri-sex-offender-admits-possessing-child-sexual-abuse-material) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Floridian sentenced to federal prison, ordered to pay $2.8M in restitution for money laundering scheme in the Eastern District of Texas](https://www.justice.gov/usao-edtx/pr/floridian-sentenced-federal-prison-ordered-pay-28m-restitution-money-laundering-scheme) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Two Florida defendants sentenced to prison for nearly $900,000 health care scam](https://www.justice.gov/usao-ks/pr/two-florida-defendants-sentenced-prison-nearly-900000-health-care-scam) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Leader of Lubbock Bandidos Motorcycle Club sentenced to federal prison for meth distribution](https://www.justice.gov/usao-ndtx/pr/leader-lubbock-bandidos-motorcycle-club-sentenced-federal-prison-meth-distribution) — Department of Justice; 2026-10-16T12:00:00+00:00
+- [Three People Charged in Conspiracy to Commit Sex Trafficking of Minors and Related Charges](https://www.justice.gov/opa/pr/three-people-charged-conspiracy-commit-sex-trafficking-minors-and-related-charges) — Department of Justice; 2026-10-16T12:00:00+00:00
 - [Fort Thompson Woman Sentenced to 5 Years in Federal Prison for Assault Resulting in Serious Bodily Injury](https://www.justice.gov/usao-sd/pr/fort-thompson-woman-sentenced-5-years-federal-prison-assault-resulting-serious-bodily) — Department of Justice; 2026-10-16T12:00:00+00:00
 - [Mexican National Charged with Possession with Intent to Distribute Cocaine and Methamphetamine in Lafayette](https://www.justice.gov/usao-wdla/pr/mexican-national-charged-possession-intent-distribute-cocaine-and-methamphetamine) — Department of Justice; 2026-10-16T12:00:00+00:00
 - [St. Louis County Man Admits Using Fraudulent Deed Filings to Steal At Least 14 Properties](https://www.justice.gov/usao-edmo/pr/st-louis-county-man-admits-using-fraudulent-deed-filings-steal-least-14-properties) — Department of Justice; 2026-10-16T12:00:00+00:00
@@ -2439,7 +3114,10 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [NEIL JOHN FRENCH](https://www.thegazette.co.uk/notice/5230632) — The Gazette official public record; 2026-10-16T11:30:08+00:00
 - [Five more nomination forms for Election Committee Subsector Ordinary Elections received today](https://www.info.gov.hk/gia/general/202610/16/P2026101600619.htm) — Hong Kong Government Information Services; 2026-10-16T11:30:00+00:00
 - [AHMED TOURS & TRAVELS LIMITED](https://www.thegazette.co.uk/notice/5232293) — The Gazette official public record; 2026-10-16T11:20:15+00:00
+- [Ministry of Youth Affairs and Sports issues operational guidelines for revised Scheme of Assistance to National Sports Federations (NSFs) - Press Information Bureau](https://news.google.com/rss/articles/CBMiY0FVX3lxTE13NVd2VklLVGlyYkt6RGlwYldvVlY3ZGt6NFdCaVVFT0dWdzZGRUpfbkJreXNuaWFCUlhqbzFaR2JRcWw1Y2hOd3BkM1lMUFhjdnBqQjBVRmN3NEhIaGJVNnVkZw) — India Press Information Bureau (official-site news mirror); 2026-10-16T11:20:00+00:00
+- [Statement by President von der Leyen at the joint press conference with President Costa following the meeting of the European Council of October 2026](https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2190) — European Commission press and decisions; 2026-10-16T11:15:55+00:00
 - [14th India-Mongolia Joint Working Group meeting reaffirms commitment to strengthening bilateral defence partnership - Press Information Bureau](https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZS1QbzZkRDFGVmhNUDJSZmJ1TllwRVVFWnl6Wmhwc3Y2bDNlZ1FVdlNwWjRFS18tQjR0U1VOR0hTc2I0R21LRUFnMzNfNGRlcHhXbmlXM0dyemp6a19CbmlIMA) — India Press Information Bureau (official-site news mirror); 2026-10-16T11:12:00+00:00
+- [| PIB - Press Information Bureau](https://news.google.com/rss/articles/CBMic0FVX3lxTE5NeHpwa2drcXYwenZCTWppTHhURHFaRDQ2eGpMLVFPT3RmaGZlaUJaU2NVRmY2eHNsQXNHTG1GZERxNzc5Vnc4V3QtWi1iQmszUzIxVmowZkc4MTY0cU15Wmd5WHhKNHQ0X19zQUg3S0dvYWs) — India Press Information Bureau (official-site news mirror); 2026-10-16T11:11:00+00:00
 - [REVOLUTIONS WS LTD](https://www.thegazette.co.uk/notice/5229971) — The Gazette official public record; 2026-10-16T11:10:22+00:00
 - [JACK DEMPSIE'S LTD](https://www.thegazette.co.uk/notice/5229970) — The Gazette official public record; 2026-10-16T11:10:21+00:00
 - [ULTIMATE BEAUTY SUPPLIES LIMITED](https://www.thegazette.co.uk/notice/5229969) — The Gazette official public record; 2026-10-16T11:10:19+00:00
@@ -2496,6 +3174,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Secretary for Health meets Director-General of Beijing Municipal Administration of Traditional Chinese Medicine (with photos)](https://www.info.gov.hk/gia/general/202610/16/P2026101600302.htm) — Hong Kong Government Information Services; 2026-10-16T09:08:00+00:00
 - [Appointment of non-permanent judge from another common law jurisdiction of Court of Final Appeal](https://www.info.gov.hk/gia/general/202610/16/P2026101600437.htm) — Hong Kong Government Information Services; 2026-10-16T09:05:00+00:00
 - [Ayush Innovation Sees Eightfold Rise in Patent Filings - Press Information Bureau](https://news.google.com/rss/articles/CBMia0FVX3lxTE9iRlUtalJ4dnM3QmdlZFpDQlFhNnFsNTc2QnBvY0pZWVBsbFQzQS1JeWVlcEUzR2Nob3NEWmw5UjgtVWNXemFEcjR6ZVdpWnlJVFNrZldVM3ZtOXJVTnhGdkFoeHA3aVBHa0lZ) — India Press Information Bureau (official-site news mirror); 2026-10-16T09:03:00+00:00
+- [BHASHINI and IISc Bangaluru : Text-to-Speech Model for Sourashtra Language - Press Information Bureau](https://news.google.com/rss/articles/CBMifEFVX3lxTE05WWVoWFJnOWEzRkdYZGwyWmhoTTVtZ2YydE81VXpYMlpRcllzbmRacnRJX3hvZzVFZkV3Mi1YbHBzSGgxSG1UbHVHMHRjQjFyOGZMM3dsNFdIRFlWbWp6eXNVVDE0VzVtazZNX0Rkak5BZzRQdFJBazlsU0M) — India Press Information Bureau (official-site news mirror); 2026-10-16T09:02:00+00:00
 - [Green Gas Support Scheme (GGSS): open to applications](https://www.gov.uk/government/publications/green-gas-support-scheme-ggss) — Department for Energy Security and Net Zero; Department for Business, Energy & Industrial Strategy; 2026-10-16T09:00:01+00:00
 - [Green Gas Support Scheme: budget management](https://www.gov.uk/government/publications/green-gas-support-scheme-budget-management) — Department for Energy Security and Net Zero; 2026-10-16T09:00:01+00:00
 - [Money Market Operations as on October 15, 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63815) — Reserve Bank of India; 2026-10-16T09:00:00+00:00
@@ -2608,6 +3287,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Panel: Carolyn Rogers, Senior Deputy Governor](https://www.bankofcanada.ca/2026/10/panel-carolyn-rogers-senior-deputy-governor-october-15-2026/) — Bank of Canada — Upcoming events; 2026-10-15T17:28:24+00:00
 - [Housing Authority highly concerned about serious deficiencies in lift replacement works at two estates under Tenants Purchase Scheme](https://www.info.gov.hk/gia/general/202610/16/P2026101600011.htm) — Hong Kong Government Information Services; 2026-10-15T16:28:00+00:00
 - [EMSD's inspections reveal serious deficiencies in lift replacement works undertaken by registered lift contractor at two estates](https://www.info.gov.hk/gia/general/202610/16/P2026101500836.htm) — Hong Kong Government Information Services; 2026-10-15T16:02:22+00:00
+- [Telephone Number of Regional Branch Offices of PIB - Press Information Bureau](https://news.google.com/rss/articles/CBMingFBVV95cUxQWDNXRk9ZdV9tVVJVMnFZTExRZzlyRTg0UUgwS0dFekJhMW5Hc2o4VExkUUJxQWRkUDRMMHlUSmlPam5XX0szc2dZdFpTWTgwa2oyU0pEeE96UExJalNjUDFqR2dVSV81eXctQWsyNXFYdE1hOVhwQTNTU2pQSVVQYVFGaGF0Yl80V0JsalVaSHFfUFU4SUtDSmxHOC1yUQ) — India Press Information Bureau (official-site news mirror); 2026-10-15T15:56:00+00:00
 - [CABINET DECISIONS 2025 - Press Information Bureau](https://news.google.com/rss/articles/CBMicEFVX3lxTE8wNmZiMW00SkhEWTdxUzBram5ILXlOa1AwUWxiSGRXM2xEU3E3Wkg4Tk9qczRGYktidlZKQS1SR0xjYnk4ejNYankyTHFMa19yV0pGUEJTTnByRl83M0dJei1wM1NUZGZrQWJ5aUtKWmg) — India Press Information Bureau (official-site news mirror); 2026-10-15T15:56:00+00:00
 - [Union Minister of Culture and Tourism Shri Gajendra Singh Shekhawat Inaugurates ‘TAKSHANAM’, An Exhibition Bringing Together 150 Artists and Over 250 Sculptures at NGMA - Press Information Bureau](https://news.google.com/rss/articles/CBMiaEFVX3lxTE1OZjBDZlFWa3Znem1hNm5xTGNJREVKNlY3V0hxSDN3eFhNWWtJZDJfemI4MHN5ODNDWUJpbTlRVmxMbWQ4MnpmTW1NUk1ITzhyck5GcjlCeGUxMnZHdzR1XzJfeEVNclZt) — India Press Information Bureau (official-site news mirror); 2026-10-15T15:54:00+00:00
 - [The Building (Local Authority Charges and Amendments Relating to Charging) (England) Regulations 2026](http://www.legislation.gov.uk/uksi/2026/1094/made) — UK legislation; 2026-10-15T15:39:14.723842+00:00
@@ -2615,8 +3295,10 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Serial No. 118-69 - SAFEGUARDING MAIN STREET: COMBATING FRAUD AND EXPLOITATION IN OUR CAPITAL MARKETS](https://www.govinfo.gov/app/details/CHRG-118hhrg64154) — Congressional Hearings; 2026-10-15T15:24:00+00:00
 - [FDA Rare Disease Framework Initiative Public Meeting - 10/28/2026](http://www.fda.gov/news-events/fda-meetings-conferences-and-workshops/fda-rare-disease-framework-initiative-public-meeting-10282026) — Food and Drug Administration — What's New: Drugs; 2026-10-15T15:20:55+00:00
 - [HA appeals to public for a patient requiring urgent liver transplant](https://www.info.gov.hk/gia/general/202610/15/P2026101500817.htm) — Hong Kong Government Information Services; 2026-10-15T15:16:00+00:00
+- [મદદ - Press Information Bureau](https://news.google.com/rss/articles/CBMibEFVX3lxTE9xa0NrQ05rVjlhZzFBNWRMbW1JWXFFOEpQTGJJeEQ1OGRBMVZzNXdjWUQ5b1RkdzRPcHFpWDZreVhVRVRyemhlbVQwMnQwSG9zVU1rZ21IXzdzNDg1YkVVWG5sX24xckRQdGhlMA) — India Press Information Bureau (official-site news mirror); 2026-10-15T15:15:00+00:00
 - [India’s Ramsar Site tally reaches 103 with addition of Sukhna Wetland (Chandigarh) and Sauj Jheel (UP) - Press Information Bureau](https://news.google.com/rss/articles/CBMifkFVX3lxTFBta05USWVfcUdVZXV1d0xfREZ2NXFSb1Y1VXBBck1CNDBtMFRnaEt0MUJYQWNKSUg2ZDVRT0pma1VZRl9ZSlVFdWMyaWVXRHdhOGhmUzY5R0xpb1ZLRWVrN201dFNIZXhUal9FWTRSeFRSSThpaWNab1ZBbGIwUQ) — India Press Information Bureau (official-site news mirror); 2026-10-15T15:11:00+00:00
 - [Serial No. 119-61 - THE ROLE OF SELF-REGULATORY ORGANIZATIONS IN U.S. MARKETS: EXAMINING FINRA AND THE MSRB](https://www.govinfo.gov/app/details/CHRG-119hhrg63968) — Congressional Hearings; 2026-10-15T15:00:00+00:00
+- [| PIB - Press Information Bureau](https://news.google.com/rss/articles/CBMickFVX3lxTE04M243WVpCRnd4a1FSUlJjaVN2dndTMGhTWlNqWXZEakhGZGFFODBhTUZ3dVNDX1hiNVo1MEZuTnV6ZlI5NlQ0TXRiTnpnQllBcVl2MGJDTHd4elFjTkN6bERRaVR5NlpZZFFFXzNBbXJBQQ) — India Press Information Bureau (official-site news mirror); 2026-10-15T14:59:00+00:00
 - [S. Hrg. 119-363 - HEARING ON THE NOMINATIONS OF HO NIEH TO BE A MEMBER OF THE NUCLEAR REGULATORY COMMISSION AND DOUGLAS TROUTMAN TO BE ASSISTANT ADMINISTRATOR FOR TOXIC SUBSTANCES OF THE ENVIRONMENTAL PROTECTION AGENCY](https://www.govinfo.gov/app/details/CHRG-119shrg63414) — Congressional Hearings; 2026-10-15T14:52:00+00:00
 - [The Welfare Food (Amendment) (England and Wales) Regulations 2026](http://www.legislation.gov.uk/uksi/2026/1092/made) — UK legislation; 2026-10-15T14:38:34.398741+00:00
 - [The First-tier Tribunal and Upper Tribunal (Chambers) (Amendment No. 2) Order 2026](http://www.legislation.gov.uk/uksi/2026/1083/made) — UK legislation; 2026-10-15T14:38:23.983722+00:00
@@ -3087,220 +3769,32 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [LCQ14: Illegal parking and illegal activities in Wan Chai District](https://www.info.gov.hk/gia/general/202610/14/P2026101400357.htm) — Hong Kong Government Information Services; 2026-10-14T06:45:00+00:00
 - [Legislative amendments to confer default mediator-appointing power on Hong Kong Mediation Accreditation Association Limited](https://www.info.gov.hk/gia/general/202610/14/P2026101400305.htm) — Hong Kong Government Information Services; 2026-10-14T06:40:00+00:00
 - [LCQ2: Celebration activities for 30th anniversary of Hong Kong's return to the motherland](https://www.info.gov.hk/gia/general/202610/14/P2026101400343.htm) — Hong Kong Government Information Services; 2026-10-14T06:33:00+00:00
+- [Press Release - Press Information Bureau](https://news.google.com/rss/articles/CBMifkFVX3lxTE5VZjByZGpzY1FHeWZLS0YyXzNFQWN4aWdVd1NERlJONlFtVHNjdjYySFBFcF9UX3FPTVRWbFpTQkRqMHdwRlpsQVdUYU1ET3Q2QkdhRVY4Z3hIZDVRb3VyN0pUYVFjdjFHSFAydWZpbFpHWGlJY3JRM2pzUURKUQ) — India Press Information Bureau (official-site news mirror); 2026-10-14T06:30:00+00:00
 - [LCQ12: Silver Bond issued in 2026](https://www.info.gov.hk/gia/general/202610/14/P2026101400253.htm) — Hong Kong Government Information Services; 2026-10-14T06:27:00+00:00
 - [Postal services to Nepal subject to delays](https://www.info.gov.hk/gia/general/202610/14/P2026101400444.htm) — Hong Kong Government Information Services; 2026-10-14T06:15:00+00:00
 - [LCQ5: Supporting development of intelligent computing industry](https://www.info.gov.hk/gia/general/202610/14/P2026101400415.htm) — Hong Kong Government Information Services; 2026-10-14T06:08:00+00:00
 - [Assessment Committee supports nine applications under Pilot Innovation and Technology Accelerator Scheme](https://www.info.gov.hk/gia/general/202610/14/P2026100700328.htm) — Hong Kong Government Information Services; 2026-10-14T06:00:00+00:00
 - [FS concludes visit to Nanjing (with photos/video)](https://www.info.gov.hk/gia/general/202610/14/P2026101400398.htm) — Hong Kong Government Information Services; 2026-10-14T05:46:00+00:00
-- [LCQ4: Combating illegal online gambling activities](https://www.info.gov.hk/gia/general/202610/14/P2026101400376.htm) — Hong Kong Government Information Services; 2026-10-14T05:35:00+00:00
-- [LCQ3: Review of taxi service arrangements](https://www.info.gov.hk/gia/general/202610/14/P2026101400365.htm) — Hong Kong Government Information Services; 2026-10-14T05:25:00+00:00
-- [LCQ8: Rodent prevention and control](https://www.info.gov.hk/gia/general/202610/14/P2026101400325.htm) — Hong Kong Government Information Services; 2026-10-14T05:00:00+00:00
-- [115年乙類第4期（2年期）中央政府建設公債開標結果](https://www.cbc.gov.tw/tw/cp-302-193026-bb27d-1.html) — Central Bank of the Republic of China Taiwan — 訂閱電子報; 2026-10-14T04:40:00+00:00
-- [LCQ1: Foreign domestic helpers](https://www.info.gov.hk/gia/general/202610/14/P2026101400341.htm) — Hong Kong Government Information Services; 2026-10-14T04:33:48+00:00
-- [LCQ20: Strengthening promotion of vocational and professional education and training](https://www.info.gov.hk/gia/general/202610/14/P2026101400287.htm) — Hong Kong Government Information Services; 2026-10-14T04:33:00+00:00
-- [LCQ19: Providing support to centenarians](https://www.info.gov.hk/gia/general/202610/14/P2026101400298.htm) — Hong Kong Government Information Services; 2026-10-14T04:26:00+00:00
-- [LCQ15: Impact of oil price fluctuations on public ferry services](https://www.info.gov.hk/gia/general/202610/14/P2026101400237.htm) — Hong Kong Government Information Services; 2026-10-14T04:20:00+00:00
-- [LCQ11: Enhancing waterborne transport services and ancillary facilities](https://www.info.gov.hk/gia/general/202610/14/P2026101400198.htm) — Hong Kong Government Information Services; 2026-10-14T04:10:11+00:00
-- [Hong Kong Academy of Finance's 2027 intake of Financial Leaders Programme is open for application](https://www.info.gov.hk/gia/general/202610/14/P2026101300387.htm) — Hong Kong Government Information Services; 2026-10-14T04:00:00+00:00
-- [LCQ22: MTR Fare Savers](https://www.info.gov.hk/gia/general/202610/14/P2026101400227.htm) — Hong Kong Government Information Services; 2026-10-14T04:00:00+00:00
-- [Employer sanctioned for violating requirements under Enhanced Supplementary Labour Scheme](https://www.info.gov.hk/gia/general/202610/14/P2026101400301.htm) — Hong Kong Government Information Services; 2026-10-14T04:00:00+00:00
-- [CFPB Announces New Initiative to Address OCC-Uncovered Debanking by Large Banks](https://www.consumerfinance.gov/about-us/newsroom/cfpb-announces-new-initiative-to-address-occ-uncovered-debanking-by-large-banks/) — Consumer Financial Protection Bureau; 2026-10-14T04:00:00+00:00
-- [Keynote speech by PSITI at LSCM Logistics Summit 2026 (English only) (with photo)](https://www.info.gov.hk/gia/general/202610/14/P2026101400272.htm) — Hong Kong Government Information Services; 2026-10-14T03:45:00+00:00
-- [LCQ9: Licensing and regulatory regime for massage establishments](https://www.info.gov.hk/gia/general/202610/14/P2026101400297.htm) — Hong Kong Government Information Services; 2026-10-14T03:45:00+00:00
-- [LCQ10: Nuisance behaviour of passengers on public transport](https://www.info.gov.hk/gia/general/202610/14/P2026101400267.htm) — Hong Kong Government Information Services; 2026-10-14T03:42:30+00:00
-- [Speech by SITI at HKU Innovation Week 2026 (English only) (with photo)](https://www.info.gov.hk/gia/general/202610/14/P2026101400310.htm) — Hong Kong Government Information Services; 2026-10-14T03:35:00+00:00
-- [Patent Journal special notices: 7169](https://www.gov.uk/government/publications/patent-journal-special-notices-7169) — Intellectual Property Office; 2026-10-14T03:30:04+00:00
-- [Speech by DCS at LSCM Logistics Summit 2026 (English only) (with photos)](https://www.info.gov.hk/gia/general/202610/14/P2026101400317.htm) — Hong Kong Government Information Services; 2026-10-14T03:18:00+00:00
-- [LCQ16: Universal Accessibility Programme](https://www.info.gov.hk/gia/general/202610/14/P2026101400199.htm) — Hong Kong Government Information Services; 2026-10-14T03:15:00+00:00
-- [Three property owners fined nearly $320,000 in total for persistently not complying with removal orders](https://www.info.gov.hk/gia/general/202610/14/P2026101400230.htm) — Hong Kong Government Information Services; 2026-10-14T03:10:00+00:00
-- [(SHINSA)Information on biosimilars is updated](https://www.pmda.go.jp/english/review-services/reviews/0005.html) — Japan Pharmaceuticals and Medical Devices Agency; 2026-10-14T03:00:00+00:00
-- [(SHINSA)English Translation of Review Report: Tecentriq (Partial Change Approval)](https://www.pmda.go.jp/english/review-services/reviews/approved-information/drugs/0001.html) — Japan Pharmaceuticals and Medical Devices Agency; 2026-10-14T03:00:00+00:00
-- [(SHINSA)SaMD page updated (English translation of “Review Points for Medical Devices Utilizing Generative AI (Draft)” published, consultation schedule updated)](https://www.pmda.go.jp/english/review-services/reviews/0009.html) — Japan Pharmaceuticals and Medical Devices Agency; 2026-10-14T03:00:00+00:00
-- [FSTB welcomes inaugural issuance of "sidecar" insurance-linked securities in Hong Kong](https://www.info.gov.hk/gia/general/202610/14/P2026101300441.htm) — Hong Kong Government Information Services; 2026-10-14T03:00:00+00:00
-- [Red flags hoisted at Stanley Main Beach and Clear Water Bay Second Beach](https://www.info.gov.hk/gia/general/202610/14/P2026101400281.htm) — Hong Kong Government Information Services; 2026-10-14T03:00:00+00:00
-- [Appointment of Chief Risk Officer](https://www.rba.gov.au/media-releases/2026/mr-26-29.html) — Reserve Bank of Australia; 2026-10-14T03:00:00+00:00
-- [Speech by SCED at HKGCC Silver Economy Summit (English only)](https://www.info.gov.hk/gia/general/202610/14/P2026101400271.htm) — Hong Kong Government Information Services; 2026-10-14T02:31:00+00:00
-- [Fireside Chat with Tiff Macklem, Governor of the Bank of Canada](https://www.bankofcanada.ca/2026/10/fireside-chat-with-tiff-macklem-governor-of-the-bank-of-canada-2026-10-14/) — Bank of Canada — Press; 2026-10-14T02:05:41+00:00
-- [The Water Resources (Control of Agricultural Pollution) (Wales) (Amendment) Regulations 2026 / Rheoliadau Adnoddau Dŵr (Rheoli Llygredd Amaethyddol) (Cymru) (Diwygio) 2026](http://www.legislation.gov.uk/wsi/2026/121/made) — UK legislation; 2026-10-14T02:03:57.458741+00:00
-- [Special traffic arrangements for race meeting in Happy Valley](https://www.info.gov.hk/gia/general/202610/14/P2026101400218.htm) — Hong Kong Government Information Services; 2026-10-14T01:20:30+00:00
-- [Red flags hoisted at Shek O Beach and Silverstrand Beach](https://www.info.gov.hk/gia/general/202610/14/P2026101400213.htm) — Hong Kong Government Information Services; 2026-10-14T01:20:00+00:00
-- [Reserve Bank to start NZ Government April 2027 bond repurchases - Reserve Bank of New Zealand](https://news.google.com/rss/articles/CBMigwJBVV95cUxOZURpU1I0b3ZRdzFHNGRlN2t4eVRuSFYzMV9VWjVhUTVVNmE4TktBdmU3LVdVRnBVVXVJMjNwM0VfZzlfalFPYnRyVFBKSlFUOXJPenZQZnJqQlV5N3FvTVY3ZFdWT2ZpVzF4N1I1RlVWWVowdU5LZHNqMUV5Um01LUpxSWdPcDR3YlN6RklzZ0I4bGZWZmNzSTZfTm9jMjdHZTFtS0hCRHdrVU5sdlBwRUlZTmpWYWNDUlJ1R3BhQWZXZkhhSU9vRzJUbVJJaXdMVTVEMnN4TWptRk96a1l2SjhRRlZFbWVnQ2RrekxfT0pCSlpJUzdSUHBGOFZRb2pRcE9r) — Reserve Bank of New Zealand (official-site news mirror); 2026-10-14T01:11:46+00:00
-- [Bank of Japan Accounts (October 10)](http://www.boj.or.jp/en/statistics/boj/other/acmai/release/2026/ac261010.htm) — Bank of Japan; 2026-10-14T01:00:00+00:00
-- [Hong Kong Academy of Finance’s 2027 intake of the Financial Leaders Programme is open for application](https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/10/20261014-3/) — Hong Kong Monetary Authority; 2026-10-14T00:00:00+00:00
-- [HKMA welcomes launch of Chongqing-Hong Kong Cross-boundary Data Validation Platform](https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/10/20261014-4/) — Hong Kong Monetary Authority; 2026-10-14T00:00:00+00:00
-- [Analytical Accounts of the Exchange Fund](https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/10/20261014-5/) — Hong Kong Monetary Authority; 2026-10-14T00:00:00+00:00
-- [Tender of 3-year HKD HKSAR Institutional Government Bonds through re-opening to be held on Wednesday, 21 October 2026](https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/10/20261014-6/) — Hong Kong Monetary Authority; 2026-10-14T00:00:00+00:00
-- [Tender of 10-year HKD HKSAR Institutional Government Bonds through re-opening to be held on Wednesday, 21 October 2026](https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/10/20261014-7/) — Hong Kong Monetary Authority; 2026-10-14T00:00:00+00:00
-- [MM v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.c3pxs7w7) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [Josoemag Services Limited v The Commissioners for HMRC](https://caselaw.nationalarchives.gov.uk/ukut/tcc/2026/394) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [Venezuela-related Designation Removal](https://ofac.treasury.gov/recent-actions/20261014) — Treasury Office of Foreign Assets Control; 2026-10-14T00:00:00+00:00
-- [Closing remarks - Conference on the Main Findings of Portugal's Financial Sector Assessment Program](https://www.bis.org/speeches/20261014-closing-remarks-conference-main-findings-portugals-financial-sector-assessment-program) — Bank for International Settlements — View feed; 2026-10-14T00:00:00+00:00
-- [From the periphery to the core: financial health and central banks’ mandates](https://www.bis.org/speeches/20261013-periphery-core-financial-health-and-central-banks-mandates) — Bank for International Settlements — View feed; 2026-10-14T00:00:00+00:00
-- [Money and the architecture of trust](https://www.bis.org/publications/paper-175-money-and-architecture-trust) — Bank for International Settlements — View feed; 2026-10-14T00:00:00+00:00
-- [Global standard-setting bodies publish final report on guidance for FMIs on general business risks and general business losses](https://www.bis.org/media-releases/20261014-global-standard-setting-bodies-publish-final-report-guidance-fmis-general-business-risks-and) — Bank for International Settlements — View feed; 2026-10-14T00:00:00+00:00
-- [Iqra Tanveer v The Entry Clearance Officer](https://caselaw.nationalarchives.gov.uk/tna.bqy7rjn3) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [Y (Iraq) v The Secretary of State for The Home Department](https://caselaw.nationalarchives.gov.uk/tna.m2kq5zxz) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [AH v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.vp7wg8np) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [KGT & Ors v The Secretary of State for The Home Department](https://caselaw.nationalarchives.gov.uk/ewhc/admin/2026/2583) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [Z (Iran) v The Secretary of State for The Home Department](https://caselaw.nationalarchives.gov.uk/tna.zhbtdxcn) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [ASA v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.h8qp7yr2) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [Esmail Hamza Midego v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.kshcnbcn) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [Bromford Housing Association Ltd v Lasharna Robinson](https://caselaw.nationalarchives.gov.uk/ewcc/2026/61) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [PR v The Secretary of State for The Home Department](https://caselaw.nationalarchives.gov.uk/tna.wbx9pdbh) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [AT v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.ynt5n9vg) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [Peter David Hall v Secretary of State for the Environment Food and Rural Affairs](https://caselaw.nationalarchives.gov.uk/ewhc/admin/2026/2623) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [Gulbahar Begg v Emma Wood & Ors](https://caselaw.nationalarchives.gov.uk/ewhc/bp/2026/2622) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [LC v The Secretary of State for The Home Department](https://caselaw.nationalarchives.gov.uk/tna.s7842qn4) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [SS v The Secretary of State for The Home Department](https://caselaw.nationalarchives.gov.uk/tna.vp7wk8np) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [KE v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.n46mkcx9) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
-- [Frank Elderson: Ensuring resilience in the face of uncertainty](https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261014~e4ca33588e.en.html) — European Central Bank; 2026-10-14T00:00:00+00:00
-- [FCC v. Brown](https://www.supremecourt.gov/opinions/26pdf/26a476_k537.pdf) — Supreme Court opinions and orders; 2026-10-14T00:00:00+00:00
-- [Money Stock (Sept.)](http://www.boj.or.jp/en/statistics/money/ms/ms2609.pdf) — Bank of Japan; 2026-10-13T23:50:00+00:00
-- [APRA Annual Reports archive](https://www.apra.gov.au/news-and-publications/apra-annual-reports-archive) — Australian Prudential Regulation Authority; 2026-10-13T23:00:00+00:00
-- [Authorised deposit-taking institutions' points of presence statistics](https://www.apra.gov.au/news-and-publications/authorised-deposit-taking-institutions-points-presence-statistics) — Australian Prudential Regulation Authority; 2026-10-13T23:00:00+00:00
-- [Correction Slip](http://www.legislation.gov.uk/uksi/2026/689/pdfs/uksics_20260689_en_001.pdf) — UK legislation; 2026-10-13T23:00:00+00:00
-- [Correction Slip](http://www.legislation.gov.uk/uksi/2026/960/pdfs/uksics_20260960_en_001.pdf) — UK legislation; 2026-10-13T23:00:00+00:00
-- [Center for Drug Evaluation and Research Organization Chart](http://www.fda.gov/about-fda/fda-organization-charts/center-drug-evaluation-and-research-organization-chart) — Food and Drug Administration — What's New: Drugs; 2026-10-13T22:43:04+00:00
-- [Contract Change Notice: ECB - Information Campaigns, Strategy, Communication, Insights and Design (710182-2026)](https://www.ecb.europa.eu//ecb/jobsproc/proc/pdf/ecb.procurContractChangeNotice-2026-OJS199-00710182.en.pdf) — European Central Bank — Open procurements, award notices and lists of suppliers; 2026-10-13T22:00:00+00:00
-- [Enlargement: EU and Moldova start negotiations on internal market, competitiveness and inclusive growth](https://www.consilium.europa.eu/en/press/press-releases/2026/10/13/enlargement-eu-and-moldova-start-negotiations-on-internal-market-competitiveness-and-inclusive-growth/) — Council of the European Union; 2026-10-13T21:22:00+00:00
-- [Matthew Brown and Matthew Brown Companies, LLC](https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26673) — Securities and Exchange Commission; 2026-10-13T21:21:15+00:00
-- [House Hearing, 110th Congress - U.S.-RUSSIA RELATIONS IN THE AFTERMATH OF THE GEORGIA CRISIS](https://www.govinfo.gov/app/details/CHRG-110hhrg44278) — Congressional Hearings; 2026-10-13T21:18:00+00:00
-- [House Hearing, 111th Congress - YEMEN ON THE BRINK: IMPLICATIONS FOR U.S. POLICY](https://www.govinfo.gov/app/details/CHRG-111hhrg54939) — Congressional Hearings; 2026-10-13T21:18:00+00:00
-- [House Hearing, 110th Congress - WAR POWERS FOR THE 21ST CENTURY: THE EXECUTIVE BRANCH PERSPECTIVE](https://www.govinfo.gov/app/details/CHRG-110hhrg41989) — Congressional Hearings; 2026-10-13T21:18:00+00:00
-- [House Hearing, 110th Congress - WAR POWERS FOR THE 21ST CENTURY: THE CONGRESSIONAL PERSPECTIVE](https://www.govinfo.gov/app/details/CHRG-110hhrg41232) — Congressional Hearings; 2026-10-13T21:18:00+00:00
-- [House Hearing, 111th Congress - WOMEN AS AGENTS OF CHANGE: ADVANCING THE ROLE OF WOMEN IN POLITICS AND CIVIL SOCIETY](https://www.govinfo.gov/app/details/CHRG-111hhrg56887) — Congressional Hearings; 2026-10-13T21:18:00+00:00
-- [House Hearing, 110th Congress - TRADE, FOREIGN POLICY AND THE AMERICAN WORKER](https://www.govinfo.gov/app/details/CHRG-110hhrg34484) — Congressional Hearings; 2026-10-13T21:18:00+00:00
-- [House Hearing, 110th Congress - U.S.-JAPAN RELATIONS: AN OVERVIEW](https://www.govinfo.gov/app/details/CHRG-110hhrg42907) — Congressional Hearings; 2026-10-13T21:18:00+00:00
-- [House Hearing, 111th Congress - U.S. STRATEGY IN AFGHANISTAN](https://www.govinfo.gov/app/details/CHRG-111hhrg53829) — Congressional Hearings; 2026-10-13T21:18:00+00:00
-- [House Hearing, 110th Congress - THE OUTLOOK FOR THE INDEPENDENCE OF KOSOVA](https://www.govinfo.gov/app/details/CHRG-110hhrg34713) — Congressional Hearings; 2026-10-13T21:18:00+00:00
-- [House Hearing, 110th Congress - U.S. ASSISTANCE TO THE MIDDLE EAST: OLD TOOLS FOR NEW TASKS?](https://www.govinfo.gov/app/details/CHRG-110hhrg42296) — Congressional Hearings; 2026-10-13T21:18:00+00:00
-- [House Hearing, 110th Congress - THE POLITICAL SITUATION IN LEBANON](https://www.govinfo.gov/app/details/CHRG-110hhrg34714) — Congressional Hearings; 2026-10-13T21:18:00+00:00
-- [House Hearing, 111th Congress - U.S. POLICY TOWARD THE AMERICAS IN 2010 AND BEYOND](https://www.govinfo.gov/app/details/CHRG-111hhrg55397) — Congressional Hearings; 2026-10-13T21:18:00+00:00
-- [House Hearing, 111th Congress - U.S. INVESTMENTS IN HIV/AIDS: OPPORTUNITIES AND CHALLENGES AHEAD](https://www.govinfo.gov/app/details/CHRG-111hhrg55398) — Congressional Hearings; 2026-10-13T21:18:00+00:00
-- [House Hearing, 111th Congress - THE UNITED STATES AND TURKEY: A MODEL PARTNERSHIP](https://www.govinfo.gov/app/details/CHRG-111hhrg49711) — Congressional Hearings; 2026-10-13T21:18:00+00:00
-- [House Hearing, 111th Congress - ZIMBABWE: OPPORTUNITIES FOR A NEW WAY FORWARD](https://www.govinfo.gov/app/details/CHRG-111hhrg49549) — Congressional Hearings; 2026-10-13T21:16:02+00:00
-- [House Hearing, 110th Congress - WORLD REFUGEE DAY: ADDRESSING THE NEEDS OF AFRICAN REFUGEES](https://www.govinfo.gov/app/details/CHRG-110hhrg36208) — Congressional Hearings; 2026-10-13T21:16:02+00:00
-- [House Hearing, 110th Congress - WITH CASTRO STEPPING DOWN, WHAT IS NEXT FOR CUBA AND THE WESTERN HEMISPHERE?](https://www.govinfo.gov/app/details/CHRG-110hhrg41062) — Congressional Hearings; 2026-10-13T21:16:02+00:00
-- [House Hearing, 110th Congress - WAR POWERS FOR THE 21ST CENTURY: THE CONSTITUTIONAL PERSPECTIVE](https://www.govinfo.gov/app/details/CHRG-110hhrg41756) — Congressional Hearings; 2026-10-13T21:16:02+00:00
-- [House Hearing, 110th Congress - VIOLENCE IN CENTRAL AMERICA](https://www.govinfo.gov/app/details/CHRG-110hhrg36422) — Congressional Hearings; 2026-10-13T21:16:02+00:00
-- [House Hearing, 110th Congress - VULTURE FUNDS AND THE THREAT TO DEBT RELIEF IN AFRICA: A CALL TO ACTION AT THE G-8 AND BEYOND](https://www.govinfo.gov/app/details/CHRG-110hhrg35672) — Congressional Hearings; 2026-10-13T21:16:02+00:00
-- [House Hearing, 110th Congress - VENEZUELA: LOOKING AHEAD](https://www.govinfo.gov/app/details/CHRG-110hhrg43520) — Congressional Hearings; 2026-10-13T21:16:02+00:00
-- [House Hearing, 110th Congress - UPDATE ON THE SITUATION IN LEBANON](https://www.govinfo.gov/app/details/CHRG-110hhrg43838) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 110th Congress - UNITED NATIONS PEACEKEEPING OPERATIONS: AN UNDERFUNDED INTERNATIONAL MANDATE - THE ROLE OF THE UNITED STATES](https://www.govinfo.gov/app/details/CHRG-110hhrg41673) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 111th Congress - UPDATE ON LEBANON](https://www.govinfo.gov/app/details/CHRG-111hhrg48330) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 110th Congress - U.S.-TURKISH RELATIONS AND THE CHALLENGES AHEAD](https://www.govinfo.gov/app/details/CHRG-110hhrg34040) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 111th Congress - UNITED NATIONS CHAPTER VII MANDATES AND THE U.S.-IRAQ BILATERAL AGREEMENT](https://www.govinfo.gov/app/details/CHRG-111hhrg52289) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 110th Congress - U.S.-PAKISTAN RELATIONS: ASSASSINATION, INSTABILITY AND THE FUTURE OF U.S. POLICY](https://www.govinfo.gov/app/details/CHRG-110hhrg40224) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 110th Congress - U.S.-GREECE RELATIONS AND REGIONAL ISSUES](https://www.govinfo.gov/app/details/CHRG-110hhrg38937) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 110th Congress - U.S.-COLOMBIA RELATIONS HEARING BEFORE THE SUBCOMMITTEE ON THE WESTERN HEMISPHERE OF THE COMMITTEE ON FOREIGN AFFAIRS HOUSE OF REPRESENTATIVES ONE HUNDRED TENTH CONGRESS FIRST SESSION](https://www.govinfo.gov/app/details/CHRG-110hhrg35031) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 111th Congress - U.S.-BOLIVIA RELATIONS: LOOKING AHEAD](https://www.govinfo.gov/app/details/CHRG-111hhrg47827) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 110th Congress - U.S. SECURITY ASSISTANCE TO MEXICO](https://www.govinfo.gov/app/details/CHRG-110hhrg38543) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 111th Congress - U.S. STRATEGY FOR AFGHANISTAN: ACHIEVING PEACE AND STABILITY IN THE GRAVEYARD OF EMPIRES](https://www.govinfo.gov/app/details/CHRG-111hhrg48441) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 110th Congress - U.S. RE-ENGAGEMENT IN THE GLOBAL EFFORT TO FIGHT CLIMATE CHANGE](https://www.govinfo.gov/app/details/CHRG-110hhrg35427) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 110th Congress - U.S. POLICY TOWARD IRAN](https://www.govinfo.gov/app/details/CHRG-110hhrg43353) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 111th Congress - U.S. POLICY TOWARD LATIN AMERICA IN 2009 AND BEYOND](https://www.govinfo.gov/app/details/CHRG-111hhrg47233) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 110th Congress - U.S. POLICY CHALLENGES IN NORTH AFRICA](https://www.govinfo.gov/app/details/CHRG-110hhrg35873) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 111th Congress - U.S. POLICY TOWARD BURMA](https://www.govinfo.gov/app/details/CHRG-111hhrg52984) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 110th Congress - U.S. OBLIGATIONS UNDER THE MERIDA INITIATIVE](https://www.govinfo.gov/app/details/CHRG-110hhrg40659) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 111th Congress - U.S. LEADERSHIP IN THE INTERNATIONAL WHALING COMMISSION AND H.R. 2455, THE INTERNATIONAL WHALE CONSERVATION AND PROTECTION ACT OF 2009](https://www.govinfo.gov/app/details/CHRG-111hhrg56336) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 110th Congress - U.S. FOREIGN POLICY IN PAKISTAN: IMPLICATIONS FOR REGIONAL SECURITY, STABILITY, AND DEVELOPMENT](https://www.govinfo.gov/app/details/CHRG-110hhrg42295) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 111th Congress - U.S. FOREIGN ECONOMIC POLICY IN THE GLOBAL CRISIS](https://www.govinfo.gov/app/details/CHRG-111hhrg48001) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 110th Congress - U.S. EXPORT PROMOTION STRATEGY](https://www.govinfo.gov/app/details/CHRG-110hhrg41990) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 111th Congress - U.S. EFFORTS TO COMBAT ARMS TRAFFICKING TO MEXICO: REPORT FROM THE GOVERNMENT ACCOUNTABILITY OFFICE (GAO)](https://www.govinfo.gov/app/details/CHRG-111hhrg50508) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 110th Congress - U.S.-BRAZIL RELATIONS](https://www.govinfo.gov/app/details/CHRG-110hhrg37910) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 110th Congress - U.S. ASSISTANCE TO SOUTH ASIA: IS THERE A STRATEGY TO GO WITH ALL THAT MONEY?](https://www.govinfo.gov/app/details/CHRG-110hhrg42422) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 111th Congress - U.S. ASSISTANCE TO AFRICA: A CALL FOR FOREIGN AID REFORM](https://www.govinfo.gov/app/details/CHRG-111hhrg48842) — Congressional Hearings; 2026-10-13T21:16:01+00:00
-- [House Hearing, 110th Congress - U.S. POLICY AND THE ROAD TO DAMASCUS: WHO'S CONVERTING WHOM?](https://www.govinfo.gov/app/details/CHRG-110hhrg41991) — Congressional Hearings; 2026-10-13T21:15:02+00:00
-- [House Hearing, 110th Congress - U.N. SECURITY COUNCIL RESOLUTION 1325: RECOGNIZING WOMEN'S VITAL ROLES IN ACHIEVING PEACE AND SECURITY](https://www.govinfo.gov/app/details/CHRG-110hhrg42424) — Congressional Hearings; 2026-10-13T21:15:02+00:00
-- [House Hearing, 111th Congress - TURKEY'S NEW FOREIGN POLICY DIRECTION: IMPLICATIONS FOR U.S.-TURKISH RELATIONS](https://www.govinfo.gov/app/details/CHRG-111hhrg57688) — Congressional Hearings; 2026-10-13T21:15:02+00:00
-- [House Hearing, 111th Congress - TRANSATLANTIC SECURITY IN THE 21ST CENTURY: DO NEW THREATS REQUIRE NEW APPROACHES?](https://www.govinfo.gov/app/details/CHRG-111hhrg55514) — Congressional Hearings; 2026-10-13T21:15:02+00:00
-- [House Hearing, 110th Congress - TIBET: STATUS OF THE SINO-TIBETAN DIALOGUE](https://www.govinfo.gov/app/details/CHRG-110hhrg34036) — Congressional Hearings; 2026-10-13T21:15:02+00:00
-- [House Hearing, 110th Congress - THE U.S.-ISRAEL-EGYPT TRILATERAL RELATIONSHIP: SHORING UP THE FOUNDATION OF REGIONAL PEACE](https://www.govinfo.gov/app/details/CHRG-110hhrg42479) — Congressional Hearings; 2026-10-13T21:15:02+00:00
-- [House Hearing, 111th Congress - THE UIGHURS: A HISTORY OF PERSECUTION](https://www.govinfo.gov/app/details/CHRG-111hhrg50294) — Congressional Hearings; 2026-10-13T21:15:02+00:00
-- [House Hearing, 111th Congress - THE SUMMIT OF THE AMERICAS: A NEW BEGINNING FOR U.S. POLICY IN THE REGION?](https://www.govinfo.gov/app/details/CHRG-111hhrg48000) — Congressional Hearings; 2026-10-13T21:15:02+00:00
-- [House Hearing, 111th Congress - THE STATE OF POLITICAL AND RELIGIOUS FREEDOM IN THE MIDDLE EAST](https://www.govinfo.gov/app/details/CHRG-111hhrg53674) — Congressional Hearings; 2026-10-13T21:15:02+00:00
-- [House Hearing, 110th Congress - THE RISE OF SOVEREIGN WEALTH FUNDS: IMPACTS ON U.S. FOREIGN POLICY AND ECONOMIC INTERESTS](https://www.govinfo.gov/app/details/CHRG-110hhrg42480) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 111th Congress - THE SOUTH PACIFIC TUNA TREATY: NEXT STEPS FOR RENEWAL](https://www.govinfo.gov/app/details/CHRG-111hhrg48442) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - THE REAUTHORIZATION OF OPIC](https://www.govinfo.gov/app/details/CHRG-110hhrg35674) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 111th Congress - THE RESET BUTTON HAS BEEN PUSHED: KICKING OFF A NEW ERA IN U.S.-RUSSIAN RELATIONS](https://www.govinfo.gov/app/details/CHRG-111hhrg51655) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - THE PRESIDENT'S PLAN FOR AIDS RELIEF: IS IT FULFILLING THE NUTRITION AND FOOD SECURITY NEEDS OF PEOPLE LIVING WITH HIV/AIDS?](https://www.govinfo.gov/app/details/CHRG-110hhrg38187) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - THE PROPOSED U.S. SECURITY COMMITMENT TO IRAQ: WHAT WILL BE IN IT AND SHOULD IT BE ATREATY?](https://www.govinfo.gov/app/details/CHRG-110hhrg40341) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - THE POLITICAL CRISIS IN KENYA: A CALL FOR JUSTICE AND PEACEFUL RESOLUTION](https://www.govinfo.gov/app/details/CHRG-110hhrg40658) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - THE NOVEMBER 26 DECLARATION OF PRINCIPLES: IMPLICATIONS FOR U.N. RESOLUTIONS ON IRAQ AND FOR CONGRESSIONAL OVERSIGHT](https://www.govinfo.gov/app/details/CHRG-110hhrg40660) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - THE NEW CHALLENGE: CHINA IN THE WESTERN HEMISPHERE](https://www.govinfo.gov/app/details/CHRG-110hhrg42905) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - THE MILLENNIUM CHALLENGE CORPORATION IN AFRICA: PROMISE VERSUS PROGRESS](https://www.govinfo.gov/app/details/CHRG-110hhrg36426) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - THE MEXICO CITY POLICY/GLOBAL GAG RULE: ITS IMPACT ON FAMILY PLANNING AND REPRODUCTIVE HEALTH](https://www.govinfo.gov/app/details/CHRG-110hhrg38605) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - THE AMERICAN RED CROSS GOVERNANCE REFORM](https://www.govinfo.gov/app/details/CHRG-110hhrg34038) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - THE BALKANS AFTER THE INDEPENDENCE OF KOSOVO AND ON THE EVE OF NATO ENLARGEMENT](https://www.govinfo.gov/app/details/CHRG-110hhrg41230) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 111th Congress - THE GOOGLE PREDICAMENT: TRANSFORMING U.S. CYBERSPACE POLICY TO ADVANCE DEMOCRACY, SECURITY, AND TRADE](https://www.govinfo.gov/app/details/CHRG-111hhrg55395) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - SOUTH AMERICA AND THE UNITED STATES: HOW TO FIX A BROKEN RELATIONSHIP](https://www.govinfo.gov/app/details/CHRG-110hhrg36205) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - PROTECTING THE HUMAN RIGHTS OF COMFORT WOMEN](https://www.govinfo.gov/app/details/CHRG-110hhrg33317) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - POSSIBLE EXTENSION OF THE U.N. MANDATE FOR IRAQ: OPTIONS](https://www.govinfo.gov/app/details/CHRG-110hhrg43716) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - PUBLIC DIPLOMACY IN THE MIDDLE EAST AND SOUTH ASIA: IS THE MESSAGE GETTING THROUGH?](https://www.govinfo.gov/app/details/CHRG-110hhrg35428) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - POLLING DATA ON EUROPEAN OPINION OF AMERICAN POLICIES, VALUES AND PEOPLE](https://www.govinfo.gov/app/details/CHRG-110hhrg34243) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - OPENING UP OF THE BAD AROLSEN HOLOCAUST ARCHIVES IN GERMANY](https://www.govinfo.gov/app/details/CHRG-110hhrg34481) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - NIGERIA AT A CROSSROADS: ELECTIONS, LEGITIMACY AND A WAY FORWARD](https://www.govinfo.gov/app/details/CHRG-110hhrg35872) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - NORTH KOREAN HUMAN RIGHTS: AN UPDATE](https://www.govinfo.gov/app/details/CHRG-110hhrg33621) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 111th Congress - NUCLEAR COOPERATION WITH THE UNITED ARAB EMIRATES: REVIEW OF THE PROPOSED U.S.-UAE AGREEMENT](https://www.govinfo.gov/app/details/CHRG-111hhrg50914) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - MORE THAN JUST THE 123 AGREEMENT: THE FUTURE OF U.S.-INDO RELATIONS](https://www.govinfo.gov/app/details/CHRG-110hhrg43120) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 111th Congress - NATIONAL STRATEGY FOR COUNTERING BIOLOGICAL THREATS: DIPLOMACY AND INTERNATIONAL PROGRAMS](https://www.govinfo.gov/app/details/CHRG-111hhrg55516) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - MORE THAN JUST ENRICHMENT: IRAN'S STRATEGIC ASPIRATIONS AND THE FUTURE OF THE MIDDLE EAST](https://www.govinfo.gov/app/details/CHRG-110hhrg42799) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - IRAQ: IS THE ESCALATION WORKING?](https://www.govinfo.gov/app/details/CHRG-110hhrg36423) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - HIGHER EDUCATION IN AFRICA: MAKING THE LINK BETWEEN INTELLECTUAL CAPITAL AND REGIONAL DEVELOPMENT](https://www.govinfo.gov/app/details/CHRG-110hhrg42294) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 111th Congress - IRAN: RECENT DEVELOPMENTS AND IMPLICATIONS FOR U.S. POLICY](https://www.govinfo.gov/app/details/CHRG-111hhrg51254) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - ETHIOPIA AND THE STATE OF DEMOCRACY EFFECTS ON HUMAN RIGHTS AND HUMANITARIAN CONDITIONS IN THE OGADEN AND SOMALIA](https://www.govinfo.gov/app/details/CHRG-110hhrg38139) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - FOREIGN ASSISTANCE IN THE AMERICAS](https://www.govinfo.gov/app/details/CHRG-110hhrg44527) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - EFFORTS TO DEAL WITH AMERICA'S IMAGE ABROAD: ARE THEY WORKING?](https://www.govinfo.gov/app/details/CHRG-110hhrg35034) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 111th Congress - GUNS, DRUGS AND VIOLENCE: THE MERIDA INITIATIVE AND THE CHALLENGE IN MEXICO](https://www.govinfo.gov/app/details/CHRG-111hhrg48140) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - DIPLOMATIC ASSURANCES AND RENDITION TO TORTURE: THE PERSPECTIVE OF THE STATE DEPARTMENT'S LEGAL ADVISER](https://www.govinfo.gov/app/details/CHRG-110hhrg42903) — Congressional Hearings; 2026-10-13T21:15:01+00:00
-- [House Hearing, 110th Congress - DEFEATING AL-QAEDA'S AIR FORCE: PAKISTAN'S F-16 PROGRAM IN THE FIGHT AGAINST TERRORISM](https://www.govinfo.gov/app/details/CHRG-110hhrg44526) — Congressional Hearings; 2026-10-13T21:15:00+00:00
-- [House Hearing, 110th Congress - CRISIS IN BURMA: CAN THE U.S. BRING ABOUT A PEACEFUL RESOLUTION?](https://www.govinfo.gov/app/details/CHRG-110hhrg38333) — Congressional Hearings; 2026-10-13T21:15:00+00:00
-- [House Hearing, 110th Congress - BRIEFING ON IRAQ AND HEARING ON THE INTERNATIONAL RELATIONS BUDGET FOR FISCAL YEAR 2008](https://www.govinfo.gov/app/details/CHRG-110hhrg32236) — Congressional Hearings; 2026-10-13T21:15:00+00:00
-- [House Hearing, 111th Congress - COPENHAGEN AND BEYOND: IS THERE A SUCCESSOR TO THE KYOTO PROTOCOL?](https://www.govinfo.gov/app/details/CHRG-111hhrg53303) — Congressional Hearings; 2026-10-13T21:15:00+00:00
-- [House Hearing, 110th Congress - CHILD SURVIVAL: THE UNFINISHED AGENDA TO REDUCE GLOBAL CHILD MORTALITY](https://www.govinfo.gov/app/details/CHRG-110hhrg41233) — Congressional Hearings; 2026-10-13T21:15:00+00:00
-- [House Hearing, 111th Congress - BUILDING CAPACITY TO PROTECT U.S. NATIONAL SECURITY: THE FISCAL YEAR 2010 INTERNATIONAL AFFAIRS BUDGET](https://www.govinfo.gov/app/details/CHRG-111hhrg49710) — Congressional Hearings; 2026-10-13T21:15:00+00:00
-- [In Their Own Words: Health Care Providers](http://www.fda.gov/drugs/prescribe-confidence/their-own-words-health-care-providers) — Food and Drug Administration — What's New: Drugs; 2026-10-13T20:48:27+00:00
-- [Prescribe with Confidence](http://www.fda.gov/drugs/drug-safety-and-availability/prescribe-confidence) — Food and Drug Administration — What's New: Drugs; 2026-10-13T20:48:23+00:00
-- [Qualification of novel methodologies for medicine development: CHMP qualification opinions](https://www.ema.europa.eu/en/human-regulatory-overview/research-development/scientific-advice-protocol-assistance/qualification-novel-methodologies-medicine-development/qualification-novel-methodologies-medicine-development-chmp-qualification-opinions) — European Medicines Agency; 2026-10-13T20:25:42+00:00
-- [Qualification of novel methodologies for medicine development: Letters of support](https://www.ema.europa.eu/en/human-regulatory-overview/research-development/scientific-advice-protocol-assistance/qualification-novel-methodologies-medicine-development/qualification-novel-methodologies-medicine-development-letters-support) — European Medicines Agency; 2026-10-13T20:20:00+00:00
-- [OCC Imposes $750 Million Assessment Against Bank of America for Deficient BSA/AML Compliance](https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-89.html) — Office of the Comptroller of the Currency; 2026-10-13T20:15:00+00:00
-- [David Kushner](https://www.sec.gov/files/litigation/admin/2026/ia-7025.pdf) — Securities and Exchange Commission; 2026-10-13T20:08:10+00:00
-- [Justice Department Moves to Strip Citizenship from 40 Criminals in Largest Single-Period Filing Under the Trump Administration](https://www.uscis.gov/newsroom/news-releases/justice-department-moves-to-strip-citizenship-from-40-criminals-in-largest-single-period-filing) — US Citizenship and Immigration Services; 2026-10-13T20:03:07+00:00
-- [Enlargement: EU opens accession negotiations with Ukraine on internal market, competitiveness and inclusive growth](https://www.consilium.europa.eu/en/press/press-releases/2026/10/13/enlargement-eu-opens-accession-negotiations-with-ukraine-on-internal-market-competitiveness-and-inclusive-growth/) — Council of the European Union; 2026-10-13T19:26:00+00:00
-- [Congress.gov Notifications Help the Library of Congress Enhance the Congress.gov User Experience](https://content.govdelivery.com/accounts/USLOC/bulletins/42f03ff) — Congress.gov legislative status — Get RSS; 2026-10-13T19:05:31+00:00
-- [Enlargement: Albania and EU provisionally close negotiations on enterprise and industrial policy](https://www.consilium.europa.eu/en/press/press-releases/2026/10/13/enlargement-albania-and-eu-provisionally-close-negotiations-on-enterprise-and-industrial-policy/) — Council of the European Union; 2026-10-13T18:35:00+00:00
-- [Philip R. Lane: The AI opportunity for Europe](https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261013~9db9bf4fd6.en.html) — European Central Bank; 2026-10-13T18:30:00+00:00
-- [Pan Pepin Inc. Issues Allergy Alert of Para Bien Al Grano Due to Undeclared Sesame](http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/pan-pepin-inc-issues-allergy-alert-para-bien-al-grano-due-undeclared-sesame) — Food and Drug Administration — Food Allergies; 2026-10-13T18:07:00+00:00
-- [Pan Pepín Inc. Emite Alerta por Alérgenos en el Producto Parabien al Grano Debido a la Presencia de Sésamo No Declarado](http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/pan-pepin-inc-emite-alerta-por-alergenos-en-el-producto-parabien-al-grano-debido-la-presencia-de) — Food and Drug Administration — Food Allergies; 2026-10-13T18:00:00+00:00
-- [Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026](https://www.federalreserve.gov/newsevents/pressreleases/monetary20261013a.htm) — Federal Reserve Board; 2026-10-13T18:00:00+00:00
-- [Registered Outsourcing Facilities](http://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities) — Food and Drug Administration — What's New: Drugs; 2026-10-13T17:59:48+00:00
-- [Patient Listening Session Summaries](http://www.fda.gov/patients/fda-patient-listening-sessions/patient-listening-session-summaries) — Food and Drug Administration — What's New: Drugs; 2026-10-13T17:48:10+00:00
-- [John Arthur Hanratty](https://www.sec.gov/files/litigation/admin/2026/34-106650.pdf) — Securities and Exchange Commission; 2026-10-13T17:45:32+00:00
 
 ## Source failures and coverage warnings
 
+- hk-hkma-public-press: ok; stale_feed_outside_requested_window
 - us-govinfo-bills-enr: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-chrg: unchanged; feed_at_capacity_in_requested_window; snapshots may miss overflow
 - us-govinfo-uscourts-almd: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
-- us-govinfo-uscourts-akd: unchanged; feed_at_capacity; daily snapshots may miss overflow
-- us-govinfo-uscourts-caed: unchanged; feed_at_capacity_in_requested_window; snapshots may miss overflow
-- us-govinfo-uscourts-cand: unchanged; feed_at_capacity_in_requested_window; snapshots may miss overflow
-- us-govinfo-uscourts-casd: unchanged; feed_at_capacity_in_requested_window; snapshots may miss overflow
-- us-govinfo-uscourts-flnd: unchanged; feed_at_capacity; daily snapshots may miss overflow
+- us-govinfo-uscourts-caed: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
+- us-govinfo-uscourts-cand: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
+- us-govinfo-uscourts-casd: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
 - us-govinfo-uscourts-gand: unchanged; stale_feed_outside_requested_window
 - us-govinfo-uscourts-idd: unchanged; stale_feed_outside_requested_window
 - us-govinfo-uscourts-ilnd: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
-- us-govinfo-uscourts-insd: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-moed: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-sdd: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
-- us-govinfo-uscourts-vtd: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
-- us-govinfo-uscourts-waed: unchanged; feed_at_capacity_in_requested_window; snapshots may miss overflow
+- us-govinfo-uscourts-txwd: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
+- us-govinfo-uscourts-waed: ok; feed_at_capacity_in_requested_window; snapshots may miss overflow
 - us-govinfo-uscourts-wvnd: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-wyd: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
-- us-govinfo-uscourts-ca1: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-govinfo-uscourts-ca2: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
-- us-govinfo-uscourts-ca8: unchanged; feed_at_capacity; daily snapshots may miss overflow
-- us-govinfo-uscourts-cadc: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-almb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-alnb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-alsb: unchanged; stale_feed_outside_requested_window
@@ -3310,24 +3804,19 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-govinfo-uscourts-azb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-caeb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-cacb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
-- us-govinfo-uscourts-cob: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-dcb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-ctb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
-- us-govinfo-uscourts-deb: unchanged; stale_feed_outside_requested_window
 - us-govinfo-uscourts-flsb: unchanged; stale_feed_outside_requested_window
 - us-govinfo-uscourts-flmb: unchanged; stale_feed_outside_requested_window
 - us-govinfo-uscourts-ganb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-gamb: unchanged; stale_feed_outside_requested_window
 - us-govinfo-uscourts-hib: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-ilsb: unchanged; stale_feed_outside_requested_window
-- us-govinfo-uscourts-ilcb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-insb: unchanged; stale_feed_outside_requested_window
-- us-govinfo-uscourts-ianb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-kyeb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-laeb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-lawb: unchanged; stale_feed_outside_requested_window
 - us-govinfo-uscourts-lamb: unchanged; stale_feed_outside_requested_window
-- us-govinfo-uscourts-meb: unchanged; stale_feed_outside_requested_window
 - us-govinfo-uscourts-mdb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-miwb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-mnb: unchanged; stale_feed_outside_requested_window
@@ -3367,16 +3856,17 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-govinfo-uscourts-wiwb: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-wyb: unchanged; stale_feed_outside_requested_window
 - us-govinfo-uscourts-jpml: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
-- us-white-house-0691096d16: unchanged; stale_feed_outside_requested_window
+- us-congress-1214972404: ok; stale_feed_outside_requested_window
+- us-sec-2476f14c28: ok; stale_feed_outside_requested_window
 - us-ftc-ebb4359fb7: ok; stale_feed_outside_requested_window
 - us-ftc-69601f2e49: ok; stale_feed_outside_requested_window
 - us-treasury-a69e5b5ef0: ok; stale_feed_outside_requested_window
 - us-ustr-index: ok; stale_feed_outside_requested_window
+- us-fed-a12cd46677: ok; stale_feed_outside_requested_window
 - us-fed-a383ca0d09: ok; stale_feed_outside_requested_window
 - us-fed-1401ff4ff2: ok; stale_feed_outside_requested_window
 - us-fed-1555c8e0e5: ok; stale_feed_outside_requested_window
 - us-fed-ba8ad56252: ok; stale_feed_outside_requested_window
-- us-fed-0023b1ebca: ok; stale_feed_outside_requested_window
 - us-fed-a93c08c457: ok; stale_feed_outside_requested_window
 - us-fed-1d7a0dba2e: ok; stale_feed_outside_requested_window
 - us-fed-95066bc761: ok; stale_feed_outside_requested_window
@@ -3389,12 +3879,13 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fdic-index: ok; stale_feed_outside_requested_window
 - us-fincen-index: ok; stale_feed_outside_requested_window
 - us-cftc-fda5c3631d: ok; stale_feed_outside_requested_window
-- us-fda-df70b9f330: unchanged; stale_feed_outside_requested_window
-- us-fda-1a1096082f: unchanged; stale_feed_outside_requested_window
-- us-fda-2d9c4fc2f9: unchanged; stale_feed_outside_requested_window
-- us-fda-8fc09ac0a2: unchanged; stale_feed_outside_requested_window
+- us-fda-df70b9f330: ok; stale_feed_outside_requested_window
+- us-fda-1a1096082f: ok; stale_feed_outside_requested_window
+- us-fda-2d9c4fc2f9: ok; stale_feed_outside_requested_window
+- us-fda-8fc09ac0a2: ok; stale_feed_outside_requested_window
 - us-fda-3eaddf14de: ok; stale_feed_outside_requested_window
-- us-fda-a25233bfac: unchanged; stale_feed_outside_requested_window
+- us-fda-b2623da30a: ok; stale_feed_outside_requested_window
+- us-fda-a25233bfac: ok; stale_feed_outside_requested_window
 - us-fda-1ca201e48f: unchanged; stale_feed_outside_requested_window
 - us-fda-c7d1d1cd64: ok; stale_feed_outside_requested_window
 - us-fda-d7692535f0: ok; stale_feed_outside_requested_window
@@ -3402,20 +3893,16 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fcc-1ad902e468: unchanged; stale_feed_outside_requested_window
 - us-fcc-ff38ce828f: ok; stale_feed_outside_requested_window
 - us-fcc-198472aaf9: ok; stale_feed_outside_requested_window
-- us-fcc-89097e714e: parse_or_network_error; 
-- us-fcc-27ab493047: parse_or_network_error; 
-- us-fcc-b90c7d93ba: parse_or_network_error; 
-- us-fcc-52947fea3b: parse_or_network_error; 
 - us-ferc-index: selector_empty; HTML selector matched no publication links; not healthy zero activity
 - us-osha-ba174bf325: ok; stale_feed_outside_requested_window
 - us-osha-7df7a48ccf: ok; stale_feed_outside_requested_window
-- us-nlrb-3db5e72bf9: unchanged; stale_feed_outside_requested_window
-- us-nlrb-c15d588b2d: unchanged; stale_feed_outside_requested_window
+- us-nlrb-3db5e72bf9: ok; stale_feed_outside_requested_window
+- us-nlrb-c15d588b2d: ok; stale_feed_outside_requested_window
 - us-dot-6464bc66ac: ok; stale_feed_outside_requested_window
 - us-uscis-a16e1f9942: ok; stale_feed_outside_requested_window
-- us-fmc-fe8f0538ae: unchanged; stale_feed_outside_requested_window
-- us-fhfa-index: unchanged; stale_feed_outside_requested_window
-- us-ca-oal-c1209cfd66: unchanged; stale_feed_outside_requested_window
+- us-fmc-fe8f0538ae: ok; stale_feed_outside_requested_window
+- us-fhfa-index: ok; stale_feed_outside_requested_window
+- us-ca-oal-c1209cfd66: ok; stale_feed_outside_requested_window
 - eu-ecb-f4cd34bf25: unchanged; stale_feed_outside_requested_window
 - eu-ecb-fb5fd59aed: ok; stale_feed_outside_requested_window
 - eu-ecb-b84350c252: ok; stale_feed_outside_requested_window
@@ -3423,32 +3910,31 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - eu-ecb-bca2a70864: ok; stale_feed_outside_requested_window
 - eu-ecb-0370c1f1df: ok; stale_feed_outside_requested_window
 - eu-ecb-c12c22cb78: ok; stale_feed_outside_requested_window
-- ca-gazette-821b285be1: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-2d47daa483: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-c2eb48e1fa: unchanged; stale_feed_outside_requested_window
-- ca-boc-4aa19b2183: unchanged; stale_feed_outside_requested_window
-- ca-boc-1f26bb2971: unchanged; stale_feed_outside_requested_window
-- ca-boc-4192a605ae: unchanged; stale_feed_outside_requested_window
-- ca-boc-5cc0603f1f: unchanged; stale_feed_outside_requested_window
-- ca-boc-a61b683fac: unchanged; stale_feed_outside_requested_window
-- ca-boc-161ba50d6e: unchanged; stale_feed_outside_requested_window
-- ca-boc-1c9979e6ac: unchanged; stale_feed_outside_requested_window
-- ca-boc-b8fa2876ef: unchanged; stale_feed_outside_requested_window
-- ca-boc-b06a91e186: unchanged; stale_feed_outside_requested_window
-- ca-boc-f2811531de: unchanged; stale_feed_outside_requested_window
-- ca-boc-71c82276e6: unchanged; stale_feed_outside_requested_window
-- ca-boc-c1617c3a5b: unchanged; stale_feed_outside_requested_window
-- ca-boc-ddf593b208: unchanged; stale_feed_outside_requested_window
-- ca-boc-affce837d4: unchanged; stale_feed_outside_requested_window
-- ca-boc-e24c58f2d0: unchanged; stale_feed_outside_requested_window
-- ca-boc-9308ff5fe4: unchanged; stale_feed_outside_requested_window
-- ca-boc-9f75c25657: unchanged; stale_feed_outside_requested_window
-- ca-boc-cffefa81f7: unchanged; stale_feed_outside_requested_window
-- ca-boc-762f78f374: unchanged; stale_feed_outside_requested_window
-- ca-boc-49364b93d8: unchanged; stale_feed_outside_requested_window
-- ca-boc-903390d96d: unchanged; stale_feed_outside_requested_window
-- ca-boc-1da610df86: unchanged; stale_feed_outside_requested_window
-- ca-boc-63e377340d: unchanged; stale_feed_outside_requested_window
+- ca-boc-4aa19b2183: ok; stale_feed_outside_requested_window
+- ca-boc-1f26bb2971: ok; stale_feed_outside_requested_window
+- ca-boc-4192a605ae: ok; stale_feed_outside_requested_window
+- ca-boc-5cc0603f1f: ok; stale_feed_outside_requested_window
+- ca-boc-a61b683fac: ok; stale_feed_outside_requested_window
+- ca-boc-161ba50d6e: ok; stale_feed_outside_requested_window
+- ca-boc-1c9979e6ac: ok; stale_feed_outside_requested_window
+- ca-boc-b8fa2876ef: ok; stale_feed_outside_requested_window
+- ca-boc-b06a91e186: ok; stale_feed_outside_requested_window
+- ca-boc-f2811531de: ok; stale_feed_outside_requested_window
+- ca-boc-71c82276e6: ok; stale_feed_outside_requested_window
+- ca-boc-c1617c3a5b: ok; stale_feed_outside_requested_window
+- ca-boc-ddf593b208: ok; stale_feed_outside_requested_window
+- ca-boc-affce837d4: ok; stale_feed_outside_requested_window
+- ca-boc-e24c58f2d0: ok; stale_feed_outside_requested_window
+- ca-boc-9308ff5fe4: ok; stale_feed_outside_requested_window
+- ca-boc-9f75c25657: ok; stale_feed_outside_requested_window
+- ca-boc-cffefa81f7: ok; stale_feed_outside_requested_window
+- ca-boc-762f78f374: ok; stale_feed_outside_requested_window
+- ca-boc-49364b93d8: ok; stale_feed_outside_requested_window
+- ca-boc-903390d96d: ok; stale_feed_outside_requested_window
+- ca-boc-1da610df86: ok; stale_feed_outside_requested_window
+- ca-boc-63e377340d: ok; stale_feed_outside_requested_window
 - au-rba-75f3866f45: unchanged; stale_feed_outside_requested_window
 - au-rba-4c2add8718: unchanged; stale_feed_outside_requested_window
 - au-rba-fe06b804cb: unchanged; stale_feed_outside_requested_window
@@ -3466,3 +3952,5 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - ch-snb-4a868c4407: ok; stale_feed_outside_requested_window
 - se-riksbank-8ea6f8481e: ok; stale_feed_outside_requested_window
 - no-norges-5079edc79e: ok; stale_feed_outside_requested_window
+- io-bis-b3dfd5b7aa: ok; stale_feed_outside_requested_window
+- io-bis-140216a5b6: ok; stale_feed_outside_requested_window
