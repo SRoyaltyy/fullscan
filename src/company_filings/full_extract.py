@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import binascii
 import hashlib
+import json
 import os
 import re
 import subprocess
@@ -21,6 +22,11 @@ from lxml import html as lhtml
 EXTRACTOR_VERSION = 'full-document-1'
 _DOCUMENT = re.compile(rb'(?ms)^<DOCUMENT>[ \t]*\r?\n(.*?)^</DOCUMENT>[ \t]*\r?$', re.I)
 _NON_TEXT = {'.gif', '.jpg', '.jpeg', '.png', '.bmp', '.ico', '.zip', '.xls', '.xlsx', '.ppt', '.pptx'}
+_PAGE_REVIEWS = json.loads(Path(__file__).with_name('page_reviews.json').read_text(encoding='utf-8'))
+if _PAGE_REVIEWS['schema_version'] != 1:
+    raise ValueError('Unsupported PDF page review schema')
+_REVIEWED_VISUAL_PAGES = {(r['document_sha256'], r['page_count'], r['page']): r
+                        for r in _PAGE_REVIEWS['reviews'] if r['classification'] == 'visual_only'}
 
 
 def sha256(raw: bytes) -> str:
@@ -150,11 +156,16 @@ def extract_document(raw: bytes, filename: str, kind: str = '') -> dict:
         try:
             import fitz
             with fitz.open(stream=raw, filetype='pdf') as pdf:
-                texts, empty, ocr_pages, blank_pages, background_pages = [], [], [], [], []
+                texts, empty, ocr_pages, blank_pages, background_pages, reviewed_pages = [], [], [], [], [], []
+                document_sha = sha256(raw)
                 for i, page in enumerate(pdf):
                     text = page.get_text('text', sort=True)
                     images, drawings = page.get_images(), page.get_drawings()
                     visible = bool(images or drawings)
+                    review = _REVIEWED_VISUAL_PAGES.get((document_sha, len(pdf), i + 1))
+                    if not text.strip() and visible and review:
+                        reviewed_pages.append({'page': i + 1, **review})
+                        visible = False
                     if not text.strip() and visible:
                         # A solid background is not unread text. Render the
                         # entire page in RGB so colored text cannot disappear
@@ -188,6 +199,7 @@ def extract_document(raw: bytes, filename: str, kind: str = '') -> dict:
                         'pages': len(texts), 'pages_without_text': empty, 'ocr_pages': ocr_pages,
                         'uniform_blank_pages': blank_pages,
                         'background_only_pages': background_pages,
+                        'reviewed_visual_pages': reviewed_pages,
                         'method': 'pymupdf_all_pages'}
         except Exception as exc:
             return {'status': 'extraction_failed', 'error_type': type(exc).__name__, 'text': '', 'method': 'pdf'}

@@ -137,6 +137,22 @@ class FullFilingTests(unittest.TestCase):
         self.assertIn('Original visible annotation',result['text'])
         self.assertEqual(result['status'],'needs_ocr')
 
+    def test_visual_page_review_requires_the_exact_document_hash_and_page(self):
+        import fitz
+        from src.company_filings.full_extract import sha256
+        with fitz.open() as pdf:
+            for _ in range(2):pdf.new_page().draw_rect(fitz.Rect(72,72,200,200),fill=(0,0,0))
+            raw=pdf.tobytes()
+        review={'classification':'visual_only','reason':'Reviewed graphic without text'}
+        with patch.dict('src.company_filings.full_extract._REVIEWED_VISUAL_PAGES',{(sha256(raw),2,1):review},clear=True),patch.dict('os.environ',{'FILINGS_OCR_ENABLED':'0'}):
+            result=extract_document(raw,'reviewed.pdf')
+            changed=extract_document(raw+b'\n% Different original bytes\n','changed.pdf')
+        self.assertEqual(result['pages'],2)
+        self.assertEqual([r['page'] for r in result['reviewed_visual_pages']],[1])
+        self.assertEqual(result['pages_without_text'],[2])
+        self.assertEqual(changed['reviewed_visual_pages'],[])
+        self.assertEqual(changed['pages_without_text'],[1,2])
+
     def test_nonuniform_pdf_graphic_is_not_treated_as_a_blank_page(self):
         import fitz
         with fitz.open() as pdf:

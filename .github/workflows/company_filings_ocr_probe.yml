@@ -50,25 +50,27 @@ jobs:
           print(json.dumps({**{k:v for k,v in exhibit.items() if k!='text'},'characters':len(exhibit['text']),'source_sha256':manifest['source']['sha256'],'truncated':manifest['truncated']}))
           assert exhibit['status']=='complete', 'PDF requires a reader repair; complete original preserved'
           PY
-      - name: Diagnose the remaining Enerflex PDF text gap
+      - name: Confirm the reviewed graphic-only page matches the exact SEC original
         if: always()
         run: |
           python - <<'PY'
           import json,pathlib,fitz
           from src.company_filings.full_archive import WholeClient,archive_url
-          from src.company_filings.full_extract import split_submission,file_bytes,extract_document,sha256
+          from src.company_filings.full_extract import _REVIEWED_VISUAL_PAGES,sha256
           folder=pathlib.Path('data/filings_ocr_probe');folder.mkdir(parents=True,exist_ok=True)
           client=WholeClient(per_sec=0.5)
           targets=[('0001904856','0001193125-26-138281','efxt-ex99_3.pdf')]
           for cik,accession,filename in targets:
               body=client.whole_url(archive_url(cik,accession,filename))
               (folder/filename).write_bytes(body)
-              result=extract_document(body,filename)
-              print(json.dumps({'filename':filename,**{k:v for k,v in result.items() if k!='text'},'characters':len(result['text']),'original_bytes':len(body),'sha256':sha256(body)}))
-              (folder/(filename+'.json')).write_text(json.dumps(result))
               with fitz.open(stream=body,filetype='pdf') as pdf:
-                  for page in result.get('pages_without_text',[]):
-                      pdf[page-1].get_pixmap().save(folder/('efxt-page-'+str(page)+'.png'))
+                  review=_REVIEWED_VISUAL_PAGES[(sha256(body),len(pdf),152)]
+                  assert review['classification']=='visual_only'
+                  assert len(pdf)==152 and not pdf[151].get_text().strip()
+                  result={'filename':filename,'original_bytes':len(body),'sha256':sha256(body),'review':review,'whole_original_preserved':True}
+                  print(json.dumps(result))
+                  (folder/(filename+'.json')).write_text(json.dumps(result))
+                  pdf[151].get_pixmap().save(folder/'efxt-page-152.png')
           PY
       - uses: actions/upload-artifact@v4
         if: always()

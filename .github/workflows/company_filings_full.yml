@@ -18,7 +18,9 @@ permissions:
   actions: read
 concurrency:
   group: company-filings-full-archive
-  cancel-in-progress: false
+  # Ordinary changes preserve an active acquisition. An explicit repair commit
+  # may supersede a pass only after its complete base originals are published.
+  cancel-in-progress: ${{ github.event_name == 'push' && contains(github.event.head_commit.message, '[full-archive-repair]') }}
 jobs:
   storage:
     runs-on: ubuntu-latest
