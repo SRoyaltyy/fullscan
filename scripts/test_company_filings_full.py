@@ -168,5 +168,18 @@ class FullFilingTests(unittest.TestCase):
         report['processed_issuers']=2;report['expected_issuers']=2
         result=verify(universe,[report],1);self.assertFalse(result['complete']);self.assertEqual(result['missing_tickers'],[])
 
+    def test_aggregate_checks_actual_accessions_even_if_all_flags_are_green(self):
+        from scripts.verify_company_filings_full import verify
+        company={'cik':'1','tickers':['A'],'raw_complete':True,'text_complete':True,'expected_filings':1,
+                 'raw_complete_filings':1,'text_complete_filings':1,'inventory':{'expected_accessions':['required']},
+                 'filings':[{'accession':'wrong','raw_complete':True,'text_complete':True,'filing_date':'2026-01-01'}]}
+        report={'shard':0,'shards':1,'universe_snapshot':'2026-10-16','unprocessed_ciks':[],
+                'processed_issuers':1,'expected_issuers':1,'durable':False,'expected_filings':1,'raw_complete_filings':1,
+                'text_complete_filings':1,'files':1,'original_bytes':100,'cached_filings':0,'llm_calls':0,'companies':[company]}
+        universe={'snapshot_date':'2026-10-16','companies':[{'ticker':'A','cik':'1'}]}
+        self.assertFalse(verify(universe,[report],1)['complete'])
+        company['filings'][0]['accession']='required'
+        self.assertTrue(verify(universe,[report],1)['complete'])
+
 
 if __name__=='__main__':unittest.main()

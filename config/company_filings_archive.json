@@ -1,5 +1,5 @@
 {
-  "mode": "probe",
+  "mode": "full",
   "universe_snapshot": "2026-10-16",
   "shards": 12,
   "probe_tickers": ["SUZ", "TIGO", "CALM", "NVO", "ASML", "RKLB"],

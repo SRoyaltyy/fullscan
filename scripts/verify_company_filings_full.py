@@ -4,7 +4,7 @@ import argparse,json,pathlib
 
 def verify(universe,reports,shards=12):
     expected={r['ticker']:r['cik'] for r in universe['companies']}
-    seen_shards=set();seen_tickers={};companies=[];errors=[]
+    seen_shards=set();seen_tickers={};seen_ciks=set();companies=[];errors=[]
     for report in reports:
         shard=report['shard']
         if shard in seen_shards:errors.append('duplicate_shard:'+str(shard))
@@ -15,11 +15,22 @@ def verify(universe,reports,shards=12):
         if report['processed_issuers']!=report['expected_issuers']:errors.append('issuer_count_mismatch_in_shard:'+str(shard))
         for company in report['companies']:
             companies.append(company)
+            if company['cik'] in seen_ciks:errors.append('duplicate_issuer:'+company['cik'])
+            seen_ciks.add(company['cik'])
             for ticker in company['tickers']:
                 if ticker in seen_tickers:errors.append('duplicate_ticker:'+ticker)
                 seen_tickers[ticker]=company['cik']
             if not company.get('raw_complete'):errors.append('originals_incomplete:'+company['cik'])
             if not company.get('text_complete'):errors.append('text_incomplete:'+company['cik'])
+            filings=company.get('filings',[])
+            actual=[r['accession'] for r in filings]
+            selected=(company.get('inventory') or {}).get('expected_accessions',[])
+            if not selected or len(actual)!=len(set(actual)) or set(actual)!=set(selected) or len(actual)!=company.get('expected_filings'):
+                errors.append('filing_inventory_mismatch:'+company['cik'])
+            if company.get('failures') or any(not r.get('raw_complete') or not r.get('text_complete') or not r.get('filing_date') for r in filings):
+                errors.append('filing_incomplete_or_undated:'+company['cik'])
+        for name in ('expected_filings','raw_complete_filings','text_complete_filings'):
+            if report[name]!=sum(c.get(name,0) for c in report['companies']):errors.append('inconsistent_count:'+str(shard)+':'+name)
     if seen_shards!=set(range(shards)):errors.append('missing_shard_reports')
     missing=sorted(set(expected)-set(seen_tickers));extra=sorted(set(seen_tickers)-set(expected))
     wrong=[t for t in expected if t in seen_tickers and expected[t]!=seen_tickers[t]]
