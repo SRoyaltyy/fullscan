@@ -42,8 +42,11 @@ jobs:
           pathlib.Path('storage_status.json').write_text(json.dumps(result,indent=2))
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('configured='+str(configured).lower()+'\n')
           print(json.dumps(result,indent=2))
+          if os.environ.get('GITHUB_EVENT_NAME')=='schedule' and not configured:
+              raise SystemExit('Scheduled full refresh requires durable R2 storage; configure the four R2 Actions settings first.')
           PY
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: company-filings-full-storage-status
           path: storage_status.json
@@ -206,7 +209,11 @@ jobs:
           pattern: company-filings-full-report-*
           path: shard_reports
       - name: Verify all expected tickers, filings and full documents
-        run: python scripts/verify_company_filings_full.py --reports shard_reports
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts?per_page=100" > published-artifacts.json
+          python scripts/verify_company_filings_full.py --reports shard_reports --published-artifacts published-artifacts.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -93,6 +93,23 @@ class FullFilingTests(unittest.TestCase):
         self.assertEqual(extracted['status'],'complete');self.assertEqual(extracted['pages'],3)
         for i in range(3):self.assertIn(f'PDF page {i+1}',extracted['text'])
 
+    def test_image_only_exhibit_reads_every_preserved_slide_without_a_page_cap(self):
+        raw=submission([('annual.htm','10-K',b'<html><body><img src="page1.png"><img src="page2.png"></body></html>'),
+                        ('page1.png','GRAPHIC',b'first image original'),('page2.png','GRAPHIC',b'last image original')])
+        def ocr(body):return {'status':'complete','text':body.decode()+' ALL THE WORDS INCLUDING THE END'}
+        with tempfile.TemporaryDirectory() as d,patch('src.company_filings.full_extract.image_text',side_effect=ocr) as mocked:
+            objects=LocalObjects(d);manifest,_=archive_filing(FakeClient(raw),objects,'0000000001',FILING)
+            self.assertTrue(manifest['text_complete']);self.assertEqual(mocked.call_count,2)
+            _,texts=read_filing(objects,'0000000001',ACCESSION)
+            self.assertEqual(len(texts['annual.htm']['images']),2)
+            self.assertIn('last image original ALL THE WORDS INCLUDING THE END',texts['annual.htm']['text'])
+
+    def test_missing_slide_or_failed_ocr_remains_incomplete(self):
+        raw=submission([('annual.htm','10-K',b'<html><img src="absent.png"></html>')])
+        with tempfile.TemporaryDirectory() as d:
+            manifest,_=archive_filing(FakeClient(raw),LocalObjects(d),'0000000001',FILING)
+            self.assertTrue(manifest['raw_complete']);self.assertFalse(manifest['text_complete'])
+
     def test_uuencoded_nonzero_unused_padding_does_not_discard_payload(self):
         original=b'XY'
         encoded=b'begin 644 logo.png\n'+binascii.b2a_uu(original).rstrip(b'\n')+b'X\n`\nend\n'
@@ -180,6 +197,8 @@ class FullFilingTests(unittest.TestCase):
         self.assertFalse(verify(universe,[report],1)['complete'])
         company['filings'][0]['accession']='required'
         self.assertTrue(verify(universe,[report],1)['complete'])
+        self.assertFalse(verify(universe,[report],1,[])['complete'])
+        self.assertTrue(verify(universe,[report],1,[{'name':'company-filings-full-shard-0','size_in_bytes':100,'expired':False}])['complete'])
 
 
 if __name__=='__main__':unittest.main()

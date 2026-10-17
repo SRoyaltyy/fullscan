@@ -10,6 +10,10 @@ import binascii
 import hashlib
 import os
 import re
+import subprocess
+import tempfile
+import urllib.parse
+from pathlib import Path
 from pathlib import PurePosixPath
 
 from lxml import html as lhtml
@@ -179,3 +183,42 @@ def extract_document(raw: bytes, filename: str, kind: str = '') -> dict:
         return {'status': 'complete' if text.strip() else 'extraction_failed', 'text': text, 'method': method}
     except Exception as exc:
         return {'status': 'extraction_failed', 'error_type': type(exc).__name__, 'text': '', 'method': 'html'}
+
+
+def image_text(raw: bytes) -> dict:
+    """OCR a whole original image; originals remain authoritative."""
+    if os.environ.get('FILINGS_OCR_ENABLED') != '1':
+        return {'status':'needs_ocr','text':'','error_type':'OCRNotEnabled'}
+    try:
+        with tempfile.TemporaryDirectory(prefix='filing-image-') as directory:
+            path=Path(directory)/'image.bin';path.write_bytes(raw)
+            environment=dict(os.environ);environment.setdefault('OMP_THREAD_LIMIT','1')
+            result=subprocess.run(['tesseract',str(path),'stdout','-l',os.environ.get('FILINGS_OCR_LANGUAGES','eng'),'--psm','3'],
+                stdout=subprocess.PIPE,stderr=subprocess.PIPE,check=False,timeout=180,env=environment)
+            if result.returncode:return {'status':'needs_ocr','text':'','error_type':'TesseractFailed'}
+            return {'status':'complete','text':result.stdout.decode('utf-8','replace')}
+    except Exception as exc:
+        return {'status':'needs_ocr','text':'','error_type':type(exc).__name__}
+
+
+def ocr_image_only_html(body: bytes, original: bytes, files: list[dict]) -> dict | None:
+    """Read every embedded slide when an HTML exhibit consists only of images."""
+    try:document=lhtml.fromstring(body,parser=lhtml.HTMLParser(recover=True,huge_tree=True))
+    except Exception:return None
+    references=[node.get('src') for node in document.iter('img') if node.get('src')]
+    if not references:return None
+    indexed={item['filename']:item for item in files};pages=[];parts=[]
+    for ordinal,reference in enumerate(references,1):
+        url=urllib.parse.urlsplit(reference)
+        name=PurePosixPath(urllib.parse.unquote(url.path)).name
+        if url.scheme or url.netloc or name not in indexed:
+            pages.append({'ordinal':ordinal,'reference':reference,'status':'needs_ocr','error_type':'ImageNotEmbedded'})
+            continue
+        item=indexed[name];result=image_text(file_bytes(original,item))
+        pages.append({'ordinal':ordinal,'filename':name,'sha256':item['sha256'],
+                      'status':result['status'],'characters':len(result['text']),
+                      'error_type':result.get('error_type')})
+        parts.append(f'[Image {ordinal}: {name}]\n'+result['text'])
+    return {'status':'complete' if all(p['status']=='complete' for p in pages) else 'needs_ocr',
+            'text':'\n\n'.join(parts),'images':pages,'method':'tesseract_every_image_in_image_only_html',
+            'ocr_language':os.environ.get('FILINGS_OCR_LANGUAGES','eng')}

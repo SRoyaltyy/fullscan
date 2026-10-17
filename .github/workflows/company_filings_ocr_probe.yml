@@ -1,0 +1,62 @@
+name: Complete image-only filing exhibit probe
+on:
+  push:
+    branches: [cursor/company-filing-parser-9b60]
+    paths: ['.github/workflows/company_filings_ocr_probe.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: company-filings-ocr-probe
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      PRIMARY_ACTION_RELAY_URL: ${{ secrets.PRIMARY_ACTION_RELAY_URL }}
+      EDGAR_IDENTITY: Fullscan filing parser research@sroyaltyy.github.io
+      FILINGS_OCR_ENABLED: '1'
+      TESSDATA_PREFIX: /usr/share/tesseract-ocr/5/tessdata
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/company_filings/
+            /scripts/archive_company_filings.py
+            /data/company_filings_universe_2026-10-16.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests lxml PyMuPDF
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr
+      - name: Archive Euronet originals and read the entire image-only exhibit
+        run: python scripts/archive_company_filings.py --ticker EEFT --workers 1 --per-sec 1 --storage local --output data/filings_ocr_probe
+      - name: Confirm every one of the 75 slide images was read
+        run: |
+          python - <<'PY'
+          import json
+          from src.company_filings.full_archive import LocalObjects,read_filing
+          manifest,texts=read_filing(LocalObjects('data/filings_ocr_probe/objects'),'0001029199','0001554855-26-001090')
+          exhibit=texts['ex991_1.htm']
+          assert manifest['raw_complete'] and manifest['text_complete']
+          assert len(exhibit['images'])==75
+          assert all(p['status']=='complete' for p in exhibit['images'])
+          assert sum(p['characters'] for p in exhibit['images'])>1000
+          print(json.dumps({'slides':len(exhibit['images']),'ocr_characters':sum(p['characters'] for p in exhibit['images']),'source_sha256':manifest['source']['sha256'],'truncated':manifest['truncated']}))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: company-filings-image-only-probe
+          path: data/filings_ocr_probe/
+          retention-days: 90
+          compression-level: 0
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: company-filings-image-only-probe-report
+          path: data/filings_ocr_probe/report.json
+          retention-days: 90

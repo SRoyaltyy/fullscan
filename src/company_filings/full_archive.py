@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
 
 from .edgar import Client, archive_url, blocked_reason, EdgarBlocked
-from .full_extract import EXTRACTOR_VERSION, extract_document, file_bytes, sha256, split_submission
+from .full_extract import EXTRACTOR_VERSION, extract_document, file_bytes, ocr_image_only_html, sha256, split_submission
 from .select import (ANNUAL_FORMS, ANNUAL_AMENDMENTS, FUND_ANNUAL_FORMS,
                      FUND_ANNUAL_AMENDMENTS, REGISTRATION_FORMS,
                      REGISTRATION_AMENDMENTS, QUARTERLY_FORMS, CURRENT_FORMS,
@@ -241,7 +241,11 @@ def archive_filing(client, objects, cik, filing):
         raise ValueError('Primary document absent from complete submission')
     texts = {}
     for document in files:
-        text = extract_document(file_bytes(raw, document), document['filename'], document['type'])
+        body = file_bytes(raw, document)
+        text = extract_document(body, document['filename'], document['type'])
+        if text['status']=='extraction_failed' and not text['text']:
+            visual = ocr_image_only_html(body,raw,files)
+            if visual:text=visual
         texts[document['filename']] = text
         document.update(text_status=text['status'], text_characters=len(text['text']),
                         text_sha256=sha256(text['text'].encode('utf-8')))

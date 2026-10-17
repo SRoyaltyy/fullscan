@@ -2,7 +2,7 @@
 """Verify all shard reports against the pinned issuer/ticker inventory."""
 import argparse,json,pathlib
 
-def verify(universe,reports,shards=12):
+def verify(universe,reports,shards=12,published_artifacts=None):
     expected={r['ticker']:r['cik'] for r in universe['companies']}
     seen_shards=set();seen_tickers={};seen_ciks=set();companies=[];errors=[]
     for report in reports:
@@ -13,6 +13,10 @@ def verify(universe,reports,shards=12):
         if report['universe_snapshot']!=universe['snapshot_date']:errors.append('universe_snapshot_mismatch')
         if report['unprocessed_ciks']:errors.append('unprocessed_ciks_in_shard:'+str(shard))
         if report['processed_issuers']!=report['expected_issuers']:errors.append('issuer_count_mismatch_in_shard:'+str(shard))
+        if not report['durable'] and published_artifacts is not None:
+            name='company-filings-full-shard-'+str(shard)
+            if not any(a.get('name')==name and not a.get('expired') and a.get('size_in_bytes',0)>0 for a in published_artifacts):
+                errors.append('original_artifact_not_published:'+str(shard))
         for company in report['companies']:
             companies.append(company)
             if company['cik'] in seen_ciks:errors.append('duplicate_issuer:'+company['cik'])
@@ -36,6 +40,7 @@ def verify(universe,reports,shards=12):
     wrong=[t for t in expected if t in seen_tickers and expected[t]!=seen_tickers[t]]
     if missing or extra or wrong:errors.append('ticker_membership_mismatch')
     return {'complete':not errors,'durable':bool(reports) and all(r['durable'] for r in reports),
+        'storage_publication_checked':published_artifacts is not None,
         'universe_snapshot':universe['snapshot_date'],'expected_tickers':len(expected),
         'covered_tickers':len(seen_tickers),'expected_issuers':len(set(expected.values())),
         'covered_issuers':len({c['cik'] for c in companies}),'expected_filings':sum(r['expected_filings'] for r in reports),
@@ -49,8 +54,10 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--reports',type=pathlib.Path,required=True)
     p.add_argument('--universe',type=pathlib.Path,default=pathlib.Path('data/company_filings_universe_2026-10-16.json'))
     p.add_argument('--output',type=pathlib.Path,default=pathlib.Path('data/company_filings_full_report.json'));p.add_argument('--shards',type=int,default=12)
+    p.add_argument('--published-artifacts',type=pathlib.Path,help='Current run artifact inventory; required by the Actions publication check')
     args=p.parse_args();reports=[json.loads(f.read_text()) for f in args.reports.rglob('report.json')]
-    result=verify(json.loads(args.universe.read_text()),reports,args.shards)
+    publications=json.loads(args.published_artifacts.read_text())['artifacts'] if args.published_artifacts else None
+    result=verify(json.loads(args.universe.read_text()),reports,args.shards,publications)
     args.output.parent.mkdir(parents=True,exist_ok=True);args.output.write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps({k:v for k,v in result.items() if k!='companies'},indent=2))
     return 0 if result['complete'] else 1
