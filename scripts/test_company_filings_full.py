@@ -110,6 +110,12 @@ class FullFilingTests(unittest.TestCase):
             manifest,_=archive_filing(FakeClient(raw),LocalObjects(d),'0000000001',FILING)
             self.assertTrue(manifest['raw_complete']);self.assertFalse(manifest['text_complete'])
 
+    def test_html_reader_error_cannot_be_replaced_by_only_its_images(self):
+        raw=submission([('annual.htm','10-K',b'<html><p>Native filing terms must survive.</p><img src="page.png"></html>'),('page.png','GRAPHIC',b'image')])
+        with tempfile.TemporaryDirectory() as d,patch('src.company_filings.full_extract.full_html_text',side_effect=ValueError('reader failure')),patch('src.company_filings.full_extract.image_text') as ocr:
+            manifest,_=archive_filing(FakeClient(raw),LocalObjects(d),'0000000001',FILING)
+            self.assertFalse(manifest['text_complete']);ocr.assert_not_called()
+
     def test_uuencoded_nonzero_unused_padding_does_not_discard_payload(self):
         original=b'XY'
         encoded=b'begin 644 logo.png\n'+binascii.b2a_uu(original).rstrip(b'\n')+b'X\n`\nend\n'

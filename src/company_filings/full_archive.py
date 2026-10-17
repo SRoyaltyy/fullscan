@@ -243,7 +243,7 @@ def archive_filing(client, objects, cik, filing):
     for document in files:
         body = file_bytes(raw, document)
         text = extract_document(body, document['filename'], document['type'])
-        if text['status']=='extraction_failed' and not text['text']:
+        if text['status']=='extraction_failed' and not text['text'] and text.get('method')=='whole_visible_html_including_tables':
             visual = ocr_image_only_html(body,raw,files)
             if visual:text=visual
         texts[document['filename']] = text
