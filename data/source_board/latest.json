@@ -1,70 +1,60 @@
 {
  "date": "2026-10-17",
- "generated_at": "2026-10-17T12:52:39.162286+00:00",
+ "generated_at": "2026-10-17T13:05:53.264736+00:00",
  "catalog": {
-  "generated_at": "2026-10-17T12:48:37.422317+00:00",
-  "channels": 541,
-  "enabled": 458,
-  "verified_ok": 445,
+  "generated_at": "2026-10-17T13:03:20.405263+00:00",
+  "channels": 365,
+  "enabled": 123,
+  "verified_ok": 116,
   "by_adapter": {
    "federal_register": 1,
    "hkma_press": 1,
-   "govuk_search": 18,
-   "rss": 424,
+   "govuk_search": 9,
+   "rss": 99,
    "html_index": 11,
-   "google_news_rss": 3
+   "google_news_rss": 2
   },
   "by_jurisdiction": {
-   "US": 305,
-   "EU": 46,
-   "CA": 34,
-   "UK": 25,
-   "AU": 9,
-   "JP": 9,
-   "IN": 7,
-   "INT": 5,
+   "US": 71,
+   "UK": 11,
+   "CA": 11,
+   "EU": 7,
    "DE": 4,
-   "HK": 3,
+   "AU": 3,
+   "JP": 3,
+   "INT": 3,
+   "IN": 2,
    "CH": 2,
+   "HK": 1,
    "US-CA": 1,
    "NZ": 1,
-   "SG": 1,
    "CN": 1,
-   "TW": 1,
-   "PH": 1,
-   "ZA": 1,
    "SE": 1,
    "NO": 1
   }
  },
  "collect": {
-  "generated_at": "2026-10-17T12:51:21.988058+00:00",
-  "enabled_sources": 458,
-  "sources_ok": 457,
-  "sources_failed": 1,
+  "generated_at": "2026-10-17T13:05:33.483816+00:00",
+  "enabled_sources": 123,
+  "sources_ok": 123,
+  "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 4743,
-   "old": 3523,
-   "future": 12,
-   "undated": 372,
-   "new": 2,
-   "duplicates": 1206
+   "observed": 1563,
+   "old": 1004,
+   "future": 0,
+   "undated": 207,
+   "new": 0,
+   "duplicates": 559
   },
-  "current_dated_documents": 3578
+  "current_dated_documents": 575
  },
  "new_today": {
-  "count": 2,
-  "by_source": {
-   "eu-council-9d9e9444da": 1,
-   "ca-boc-30d6d14378": 1
-  },
-  "by_class": {
-   "routine": 1,
-   "watch": 1
-  }
+  "count": 0,
+  "by_source": {},
+  "by_class": {}
  },
- "n_failures": 1,
+ "n_failures": 0,
  "dates": [
   "2026-10-17"
  ],

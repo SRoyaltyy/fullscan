@@ -1,6 +1,6 @@
 # Primary-origin source catalog
 
-Verified 2026-10-17T12:48:37.422317+00:00. 2150 institution records; 458 enabled publication channels out of 541 checked candidates.
+Verified 2026-10-17T13:03:20.405263+00:00. 1985 institution records; 123 enabled publication channels out of 365 checked candidates.
 
 Institution records include historical/closed bodies and shared portals. This is a maintained coverage catalog, not an exhaustive worldwide directory. Disabled/blocked channels remain visible below.
 
@@ -13,192 +13,16 @@ Institution records include historical/closed bodies and shared portals. This is
 | GOV.UK statutory instrument | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
 | GOV.UK consultation outcome | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
 | GOV.UK government response | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
-| GOV.UK employment tribunal decision | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
-| GOV.UK employment appeal tribunal decision | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
-| GOV.UK residential property tribunal decision | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
-| GOV.UK tax tribunal decision | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
-| GOV.UK utaac decision | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
-| GOV.UK traffic commissioner regulatory decision | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
-| GOV.UK asylum support decision | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
 | GOV.UK medical safety alert | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
 | GOV.UK drug safety update | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
 | GOV.UK product safety alert report recall | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
 | GOV.UK international treaty | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
-| GOV.UK written statement | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
-| GOV.UK farming grant | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | False | valid_empty; funding guidance/opportunity listing; not an award decision |
-| GOV.UK business finance support scheme | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | False | ok; funding guidance/opportunity listing; not an award decision |
-| GOV.UK notice | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
 | Congressional Bills | US | legislative_and_presidential_documents | [rss](https://www.govinfo.gov/rss/bills.xml) | True | ok |
 | Congressional Bills (Enrolled) | US | legislative_and_presidential_documents | [rss](https://www.govinfo.gov/rss/bills-enr.xml) | True | ok |
 | Public and Private Laws | US | legislative_and_presidential_documents | [rss](https://www.govinfo.gov/rss/plaw.xml) | True | ok |
 | Compilation of Presidential Documents | US | legislative_and_presidential_documents | [rss](https://www.govinfo.gov/rss/dcpd.xml) | True | ok |
-| Congressional Hearings | US | legislative_and_presidential_documents | [rss](https://www.govinfo.gov/rss/chrg.xml) | True | ok |
+| Congressional Hearings | US | legislative_and_presidential_documents | [rss](https://www.govinfo.gov/rss/chrg.xml) | False | ok; congressional_record_floor_proceedings |
 | Congressional Reports | US | legislative_and_presidential_documents | [rss](https://www.govinfo.gov/rss/crpt.xml) | True | ok |
-| District Court Northern District of Alabama | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-alnd.xml) | True | ok |
-| District Court Southern District of Alabama | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-alsd.xml) | True | ok |
-| District Court Middle District of Alabama | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-almd.xml) | True | ok |
-| District Court District of Alaska | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-akd.xml) | True | ok |
-| District Court District of Arizona | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-azd.xml) | True | ok |
-| District Court Eastern District of Arkansas | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ared.xml) | True | ok |
-| District Court Eastern District of California | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-caed.xml) | True | ok |
-| District Court Northern District of California | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-cand.xml) | True | ok |
-| District Court Southern District of California | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-casd.xml) | True | ok |
-| District Court District of Colorado | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-cod.xml) | True | ok |
-| District Court District of Connecticut | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ctd.xml) | True | ok |
-| District Court District of Columbia | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-dcd.xml) | True | ok |
-| District Court District of Delaware | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ded.xml) | True | ok |
-| District Court Southern District of Florida | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-flsd.xml) | True | ok |
-| District Court Northern District of Florida | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-flnd.xml) | True | ok |
-| District Court Middle District of Georgia | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-gamd.xml) | True | ok |
-| District Court Northern District of Georgia | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-gand.xml) | True | ok |
-| District Court District of Guam | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-gud.xml) | True | ok |
-| District Court District of Hawaii | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-hid.xml) | True | ok |
-| District Court District of Idaho | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-idd.xml) | True | ok |
-| District Court Northern District of Illinois | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ilnd.xml) | True | ok |
-| District Court Southern District of Illinois | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ilsd.xml) | True | ok |
-| District Court Southern District of Indiana | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-insd.xml) | True | ok |
-| District Court Northern District of Iowa | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-iand.xml) | True | ok |
-| District Court District of Kansas | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ksd.xml) | True | ok |
-| District Court Eastern District of Kentucky | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-kyed.xml) | True | ok |
-| District Court Western District of Kentucky | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-kywd.xml) | True | ok |
-| District Court Eastern District of Louisiana | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-laed.xml) | True | ok |
-| District Court Middle District of Louisiana | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-lamd.xml) | True | ok |
-| District Court District of Maine | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-med.xml) | True | ok |
-| District Court District of Maryland | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-mdd.xml) | True | ok |
-| District Court District of Massachusetts | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-mad.xml) | True | ok |
-| District Court Eastern District of Michigan | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-mied.xml) | True | ok |
-| District Court Western District of Michigan | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-miwd.xml) | True | ok |
-| District Court District of Minnesota | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-mnd.xml) | True | ok |
-| District Court Eastern District of Missouri | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-moed.xml) | True | ok |
-| District Court Western District of Missouri | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-mowd.xml) | True | ok |
-| District Court District of Montana | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-mtd.xml) | True | ok |
-| District Court District of Nebraska | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ned.xml) | True | ok |
-| District Court District of New Hampshire | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-nhd.xml) | True | ok |
-| District Court District of New Jersey | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-njd.xml) | True | ok |
-| District Court District of New Mexico | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-nmd.xml) | True | ok |
-| District Court Eastern District of New York | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-nyed.xml) | True | ok |
-| District Court Northern District of New York | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-nynd.xml) | True | ok |
-| District Court Western District of New York | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-nywd.xml) | True | ok |
-| District Court Middle District of North Carolina | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ncmd.xml) | True | ok |
-| District Court Western District of North Carolina | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ncwd.xml) | True | ok |
-| District Court District of North Dakota | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ndd.xml) | True | ok |
-| District Court District of Northern Mariana Islands | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-nmid.xml) | True | ok |
-| District Court Northern District of Ohio | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ohnd.xml) | True | ok |
-| District Court Southern District of Ohio | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ohsd.xml) | True | ok |
-| District Court Eastern District of Oklahoma | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-oked.xml) | True | ok |
-| District Court Western District of Oklahoma | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-okwd.xml) | True | ok |
-| District Court District of Oregon | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ord.xml) | True | ok |
-| District Court Eastern District of Pennsylvania | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-paed.xml) | True | ok |
-| District Court Middle District of Pennsylvania | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-pamd.xml) | True | ok |
-| District Court Western District of Pennsylvania | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-pawd.xml) | True | ok |
-| District Court District of Puerto Rico | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-prd.xml) | True | ok |
-| District Court District of Rhode Island | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-rid.xml) | True | ok |
-| District Court District of South Dakota | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-sdd.xml) | True | ok |
-| District Court Eastern District of Tennessee | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-tned.xml) | True | ok |
-| District Court Western District of Tennessee | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-tnwd.xml) | True | ok |
-| District Court Middle District of Tennessee | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-tnmd.xml) | True | ok |
-| District Court Eastern District of Texas | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-txed.xml) | True | ok |
-| District Court Northern District of Texas | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-txnd.xml) | True | ok |
-| District Court Southern District of Texas | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-txsd.xml) | True | ok |
-| District Court Western District of Texas | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-txwd.xml) | True | ok |
-| District Court District of Utah | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-utd.xml) | True | ok |
-| District Court of the Virgin Islands | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-vid.xml) | True | ok |
-| District Court District of Vermont | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-vtd.xml) | True | ok |
-| District Court Eastern District of Washington | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-waed.xml) | True | ok |
-| District Court Western District of Wisconsin | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-wiwd.xml) | True | ok |
-| District Court Northern District of West Virginia | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-wvnd.xml) | True | ok |
-| District Court District of Wyoming | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-wyd.xml) | True | ok |
-| Court of Appeals for the First Circuit | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ca1.xml) | True | ok |
-| Court of Appeals for the Second Circuit | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ca2.xml) | True | ok |
-| Court of Appeals for the Third Circuit | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ca3.xml) | True | ok |
-| Court of Appeals for the Fourth Circuit | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ca4.xml) | True | ok |
-| Court of Appeals for the Fifth Circuit | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ca5.xml) | True | ok |
-| Court of Appeals for the Sixth Circuit | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ca6.xml) | True | ok |
-| Court of Appeals for the Seventh Circuit | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ca7.xml) | True | ok |
-| Court of Appeals for the Eighth Circuit | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ca8.xml) | True | ok |
-| Court of Appeals for the Ninth Circuit | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ca9.xml) | True | ok |
-| Court of Appeals for the Tenth Circuit | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ca10.xml) | True | ok |
-| Court of Appeals for the Eleventh Circuit | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ca11.xml) | True | ok |
-| Court of Appeals for the District of Columbia Circuit | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-cadc.xml) | True | ok |
-| Court of Appeals for the Federal Circuit | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ca13.xml) | True | ok |
-| Bankruptcy Court Middle District of Alabama | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-almb.xml) | True | ok |
-| Bankruptcy Court Northern District of Alabama | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-alnb.xml) | True | ok |
-| Bankruptcy Court Southern District of Alabama | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-alsb.xml) | True | ok |
-| Bankruptcy Court District of Alaska | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-akb.xml) | True | ok |
-| Bankruptcy Court Eastern District of Arkansas | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-areb.xml) | True | ok |
-| Bankruptcy Court Western District of Arkansas | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-arwb.xml) | True | ok |
-| Bankruptcy Court District of Arizona | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-azb.xml) | True | ok |
-| Bankruptcy Court Eastern District of California | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-caeb.xml) | True | ok |
-| Bankruptcy Court Northern District of California | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-canb.xml) | True | ok |
-| Bankruptcy Court Central District of California | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-cacb.xml) | True | ok |
-| Bankruptcy Court District of Colorado | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-cob.xml) | True | ok |
-| Bankruptcy Court District of Columbia | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-dcb.xml) | True | ok |
-| Bankruptcy Court District of Connecticut | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ctb.xml) | True | ok |
-| Bankruptcy Court District of Delaware | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-deb.xml) | True | ok |
-| Bankruptcy Court Southern District of Florida | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-flsb.xml) | True | ok |
-| Bankruptcy Court Middle District of Florida | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-flmb.xml) | True | ok |
-| Bankruptcy Court Northern District of Georgia | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ganb.xml) | True | ok |
-| Bankruptcy Court Middle District of Georgia | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-gamb.xml) | True | ok |
-| Bankruptcy Court District of Hawaii | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-hib.xml) | True | ok |
-| Bankruptcy Court Northern District of Illinois | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ilnb.xml) | True | ok |
-| Bankruptcy Court Southern District of Illinois | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ilsb.xml) | True | ok |
-| Bankruptcy Court Central District of Illinois | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ilcb.xml) | True | ok |
-| Bankruptcy Court Southern District of Indiana | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-insb.xml) | True | ok |
-| Bankruptcy Court Northern District of Iowa | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ianb.xml) | True | ok |
-| Bankruptcy Court Eastern District of Kentucky | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-kyeb.xml) | True | ok |
-| Bankruptcy Court Western District of Kentucky | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-kywb.xml) | True | ok |
-| Bankruptcy Court Eastern District of Louisiana | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-laeb.xml) | True | ok |
-| Bankruptcy Court Western District of Louisiana | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-lawb.xml) | True | ok |
-| Bankruptcy Court Middle District of Louisiana | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-lamb.xml) | True | ok |
-| Bankruptcy Court District of Maine | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-meb.xml) | True | ok |
-| Bankruptcy Court District of Maryland | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-mdb.xml) | True | ok |
-| Bankruptcy Court District of Massachusetts | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-mab.xml) | True | ok |
-| Bankruptcy Court Western District of Michigan | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-miwb.xml) | True | ok |
-| Bankruptcy Court District of Minnesota | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-mnb.xml) | True | ok |
-| Bankruptcy Court Northern District of Mississippi | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-msnb.xml) | True | ok |
-| Bankruptcy Court Eastern District of Missouri | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-moeb.xml) | True | ok |
-| Bankruptcy Court Western District of Missouri | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-mowb.xml) | True | ok |
-| Bankruptcy Court District of Montana | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-mtb.xml) | True | ok |
-| Bankruptcy Court District of Nebraska | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-neb.xml) | True | ok |
-| Bankruptcy Court District of Nevada | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-nvb.xml) | True | ok |
-| Bankruptcy Court District of New Hampshire | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-nhb.xml) | True | ok |
-| Bankruptcy Court District of New Jersey | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-njb.xml) | True | ok |
-| Bankruptcy Court District of New Mexico | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-nmb.xml) | True | ok |
-| Bankruptcy Court Eastern District of New York | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-nyeb.xml) | True | ok |
-| Bankruptcy Court Northern District of New York | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-nynb.xml) | True | ok |
-| Bankruptcy Court Southern District of New York | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-nysb.xml) | True | ok |
-| Bankruptcy Court Western District of New York | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-nywb.xml) | True | ok |
-| Bankruptcy Court Eastern District of North Carolina | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-nceb.xml) | True | ok |
-| Bankruptcy Court Western District of North Carolina | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ncwb.xml) | True | ok |
-| Bankruptcy Court District of North Dakota | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ndb.xml) | True | ok |
-| Bankruptcy Court Northern District of Ohio | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ohnb.xml) | True | ok |
-| Bankruptcy Court Southern District of Ohio | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-ohsb.xml) | True | ok |
-| Bankruptcy Court Eastern District of Oklahoma | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-okeb.xml) | True | ok |
-| Bankruptcy Court Northern District of Oklahoma | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-oknb.xml) | True | ok |
-| Bankruptcy Court Western District of Oklahoma | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-okwb.xml) | True | ok |
-| Bankruptcy Court District of Oregon | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-orb.xml) | True | ok |
-| Bankruptcy Court Eastern District of Pennsylvania | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-paeb.xml) | True | ok |
-| Bankruptcy Court Middle District of Pennsylvania | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-pamb.xml) | True | ok |
-| Bankruptcy Court Western District of Pennsylvania | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-pawb.xml) | True | ok |
-| Bankruptcy Court District of Peurto Rico | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-prb.xml) | True | ok |
-| Bankruptcy Court District of Rhode Island | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-rib.xml) | True | ok |
-| Bankruptcy Court District of South Carolina | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-scb.xml) | True | ok |
-| Bankruptcy Court District of South Dakota | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-sdb.xml) | True | ok |
-| Bankruptcy Court Eastern District of Tennessee | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-tneb.xml) | True | ok |
-| Bankruptcy Court Middle District of Tennessee | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-tnmb.xml) | True | ok |
-| Bankruptcy Court Southern District of Texas | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-txsb.xml) | True | ok |
-| Bankruptcy Court Western District of Texas | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-txwb.xml) | True | ok |
-| Bankruptcy Court Western District of Virginia | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-vawb.xml) | True | ok |
-| Bankruptcy Court District of the Virgin Islands | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-vib.xml) | True | ok |
-| Bankruptcy Court Eastern District of Washington | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-waeb.xml) | True | ok |
-| Bankruptcy Court Western District of Washington | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-wawb.xml) | True | ok |
-| Bankruptcy Court Northern District of West Virginia | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-wvnb.xml) | True | ok |
-| Bankruptcy Court Eastern District of Wisconsin | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-wieb.xml) | True | ok |
-| Bankruptcy Court Western District of Wisconsin | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-wiwb.xml) | True | ok |
-| Bankruptcy Court District of Wyoming | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-wyb.xml) | True | ok |
-| Judicial Panel on Multidistrict Litigation | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-jpml.xml) | True | ok |
-| United States Court of International Trade | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-cit.xml) | True | ok |
-| United States Court of Federal Claims | US | judicial_decisions | [rss](https://www.govinfo.gov/rss/uscourts-cofc.xml) | True | ok |
 | White House presidential actions | US | executive_instruments | [rss](https://www.whitehouse.gov/presidential-actions/feed/) | True | ok |
 | Congress.gov legislative status | US | legislative_procedure | [rss](https://www.congress.gov/rss/presented-to-president.xml) | True | ok |
 | Supreme Court opinions and orders | US | judicial_decisions | [html_index](https://www.supremecourt.gov/opinions/slipopinion/26) | True | ok |
@@ -238,34 +62,34 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Reserve Board — Governor Jerome H. Powell | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_powell.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Governor Christopher J. Waller | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_waller.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Credit and Liquidity Programs and the Balance Sheet | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/clp.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Current Frequently Asked Questions | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/currentfaqs.xml) | False | ok; reference data, research, speeches or commentary |
-| Federal Reserve Board — Office of Inspector General | US | monetary_operations | [rss](https://oig.federalreserve.gov/feeds/oig.xml) | True | ok |
+| Federal Reserve Board — Current Frequently Asked Questions | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/currentfaqs.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Office of Inspector General | US | monetary_operations | [rss](https://oig.federalreserve.gov/feeds/oig.xml) | False | invalid_feed_or_network_error |
 | Federal Reserve Board — Regulatory Reform | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/regreform.xml) | True | valid_empty |
 | Federal Reserve Board — Board Meetings | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/boardmeetings.xml) | True | ok |
-| Federal Reserve Board — Reporting Forms | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/reportforms-rss.xml) | True | ok |
-| Federal Reserve Board — Supervision and Regulation and Consumer Affairs Letters, Supervision Manuals | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/bankinginfo-rss.xml) | True | ok |
-| Federal Reserve Board — Coronavirus Disease 2019 (COVID-19) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/covid-19.xml) | True | ok |
-| Federal Reserve Board — All Federal Reserve Board working papers | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/working_papers.xml) | False | ok; reference data, research, speeches or commentary |
+| Federal Reserve Board — Reporting Forms | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/reportforms-rss.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Supervision and Regulation and Consumer Affairs Letters, Supervision Manuals | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/bankinginfo-rss.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Coronavirus Disease 2019 (COVID-19) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/covid-19.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — All Federal Reserve Board working papers | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/working_papers.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Finance and Economics Discussion Series | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/feds.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — International Finance Discussion Papers | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/ifdp.xml) | False | ok; reference data, research, speeches or commentary |
+| Federal Reserve Board — International Finance Discussion Papers | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/ifdp.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — FEDS Notes | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/feds_notes.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — All Data Download announcements | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/datadownload.xml) | False | invalid_feed_or_network_error |
 | Federal Reserve Board — Assets and Liabilities of Commercial Banks in the United State (H.8) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/h8.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Charge-Off and Delinquency Rates | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/chgdel.xml) | True | ok |
-| Federal Reserve Board — Commercial Paper | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/cp.xml) | True | ok |
+| Federal Reserve Board — Charge-Off and Delinquency Rates | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/chgdel.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Commercial Paper | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/cp.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Consumer Credit | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/g19.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Factors Affecting Reserve Balances (H.4.1) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/h41.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Finance Companies | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/g20.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Financial Obligations Ratios | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/for.xml) | True | ok |
-| Federal Reserve Board — Financial Accounts of the United States (Z.1) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/z1.xml) | True | ok |
-| Federal Reserve Board — Financial Accounts Guide | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/fofguide.xml) | True | ok |
+| Federal Reserve Board — Financial Obligations Ratios | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/for.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Financial Accounts of the United States (Z.1) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/z1.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
+| Federal Reserve Board — Financial Accounts Guide | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/fofguide.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Foreign Exchange Rates (G.5/H.10) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/h10.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Industrial Production and Capacity Utilization (G.17) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/g17.xml) | False | invalid_feed_or_network_error |
 | Federal Reserve Board — Policy Rates | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/prates.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Selected Interest Rates (H.15) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/h15.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Senior Credit Officer Opinion Survey on Dealer Financing Terms | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/scoos.xml) | True | ok |
 | Federal Reserve Board — Senior Loan Officer Opinion Survey on Bank Lending Practices | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/sloos.xml) | True | ok |
-| Federal Reserve Board — Survey of Terms of Business Lending (E.2) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/e2.xml) | True | ok |
+| Federal Reserve Board — Survey of Terms of Business Lending (E.2) | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/e2.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Deposit Insurance Corporation | US | financial_enforcement | [html_index](https://www.fdic.gov/news/press-releases) | True | ok |
 | Office of the Comptroller of the Currency | US | financial_enforcement | [rss](https://www.occ.gov/rss/occ_news.xml) | True | ok |
 | Office of the Comptroller of the Currency | US | financial_enforcement | [rss](https://www.occ.gov/rss/index-rss.html) | False | invalid_feed_or_network_error |
@@ -273,95 +97,95 @@ Institution records include historical/closed bodies and shared portals. This is
 | Financial Crimes Enforcement Network | US | sanctions_and_enforcement | [html_index](https://www.fincen.gov/news/press-releases) | True | ok |
 | Commodity Futures Trading Commission | US | financial_enforcement | [rss](https://www.cftc.gov/RSS/RSSGP/rssgp.xml) | True | ok |
 | Commodity Futures Trading Commission | US | financial_enforcement | [rss](https://www.cftc.gov/RSS/index.htm) | False | invalid_feed_or_network_error |
-| Food and Drug Administration — Consumer Health Information Updates | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/consumers/rss.xml) | True | ok |
+| Food and Drug Administration — Consumer Health Information Updates | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/consumers/rss.xml) | False | ok; FDA consumer or podcast feed; regulatory feeds remain enabled |
 | Food and Drug Administration — Criminal Investigations Press Releases | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/oci-press-releases/rss.xml) | True | ok |
 | Food and Drug Administration — Drug Information Soundcast in Clinical Oncology (D.I.S.C.O.) | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/disco/rss.xml) | True | ok |
-| Food and Drug Administration — Drug Safety Podcasts | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/drug-safety-podcast/rss.xml) | True | ok |
+| Food and Drug Administration — Drug Safety Podcasts | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/drug-safety-podcast/rss.xml) | False | ok; FDA consumer or podcast feed; regulatory feeds remain enabled |
 | Food and Drug Administration — FDA Outbreaks | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/fda-outbreaks/rss.xml) | True | ok |
-| Food and Drug Administration — Food Allergies | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/food-allergies/rss.xml) | True | ok |
+| Food and Drug Administration — Food Allergies | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/food-allergies/rss.xml) | False | ok; FDA consumer or podcast feed; regulatory feeds remain enabled |
 | Food and Drug Administration — Food Safety Recalls | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/food-safety-recalls/rss.xml) | True | ok |
-| Food and Drug Administration — Health Fraud | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/health-fraud/rss.xml) | True | ok |
-| Food and Drug Administration — Office of Regulatory Affairs (ORA) FOIA Electronic Reading Room | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/ora-foia-electronic-reading-room/rss.xml) | True | ok |
+| Food and Drug Administration — Health Fraud | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/health-fraud/rss.xml) | False | ok; FDA consumer or podcast feed; regulatory feeds remain enabled |
+| Food and Drug Administration — Office of Regulatory Affairs (ORA) FOIA Electronic Reading Room | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/ora-foia-electronic-reading-room/rss.xml) | False | ok; FDA consumer or podcast feed; regulatory feeds remain enabled |
 | Food and Drug Administration — Press Releases | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml) | True | ok |
-| Food and Drug Administration — Q&A with FDA | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/rss-podcast-QA-FDA/rss.xml) | True | ok |
-| Food and Drug Administration — Tainted Products That are Marketed as Dietary Supplements | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/tainted-dietary-supplements/rss.xml) | True | ok |
+| Food and Drug Administration — Q&A with FDA | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/rss-podcast-QA-FDA/rss.xml) | False | ok; FDA consumer or podcast feed; regulatory feeds remain enabled |
+| Food and Drug Administration — Tainted Products That are Marketed as Dietary Supplements | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/tainted-dietary-supplements/rss.xml) | False | ok; FDA consumer or podcast feed; regulatory feeds remain enabled |
 | Food and Drug Administration — What's New: Drugs | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/drugs/rss.xml) | True | ok |
 | Food and Drug Administration — What's New: Vaccines, Blood and Biologics | US | product_permissions_and_safety | [rss](https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/biologics/rss.xml) | True | ok |
 | Consumer Product Safety Commission | US | product_safety | [rss](https://www.cpsc.gov/Newsroom/CPSC-RSS-Feed/Recalls-RSS) | True | ok |
 | Consumer Product Safety Commission | US | product_safety | [rss](https://www.cpsc.gov/Newsroom/CPSC-RSS-Feed/News-RSS) | True | ok |
 | USDA Food Safety and Inspection Service — News & Events | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/news-release) | True | ok |
 | USDA Food Safety and Inspection Service — Recalls | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/recalls) | True | ok |
-| USDA Food Safety and Inspection Service — FSIS Directives | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/directives) | True | ok |
-| USDA Food Safety and Inspection Service — FSIS Notices | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/notices) | True | ok |
+| USDA Food Safety and Inspection Service — FSIS Directives | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/directives) | False | ok; FSIS internal directives; recalls and news remain enabled |
+| USDA Food Safety and Inspection Service — FSIS Notices | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/notices) | False | ok; FSIS internal directives; recalls and news remain enabled |
 | Health and Human Services | US | health_administration | [rss](https://www.hhs.gov/rss/news.xml) | True | ok |
 | Environmental Protection Agency | US | environmental_rules_and_enforcement | [rss](https://www.epa.gov/rss.xml) | True | valid_empty |
 | Federal Communications Commission | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/feed) | False | invalid_feed_or_network_error |
-| Federal Communications Commission — Wireline Competition Bureau - Industry Analysis Reports | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/bureaus/wcb/iatd/reports-rss-feed.xml) | True | ok |
+| Federal Communications Commission — Wireline Competition Bureau - Industry Analysis Reports | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/bureaus/wcb/iatd/reports-rss-feed.xml) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Federal Communications Commission Record | US | telecom_rules_and_licences | [rss](https://www.govinfo.gov/rss/gpo-fcc.xml) | True | ok |
 | Federal Communications Commission — Blog | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/blog/feed/) | False | ok; reference data, research, speeches or commentary |
-| Federal Communications Commission — Events | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/events/feed/) | True | ok |
-| Federal Communications Commission — Guides | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/guides/feed/) | True | ok |
-| Federal Communications Commission — FCC Recent Releases (Combined) | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss) | True | ok |
-| Federal Communications Commission — Commissioner's Statements | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Statement) | True | ok |
-| Federal Communications Commission — Commissioner's Speeches | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Speech) | True | ok |
-| Federal Communications Commission — Commissioner's Testimonies | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Testimony) | True | ok |
-| Federal Communications Commission — Broadcast Actions | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Broadcast_Action) | True | ok |
-| Federal Communications Commission — Broadcast Applications | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Broadcast_App) | True | ok |
-| Federal Communications Commission — Call Sign Changes | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Callsign_Changes) | True | ok |
-| Federal Communications Commission — Citations | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Cit) | True | ok |
-| Federal Communications Commission — Compliance Guides | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Guide) | True | ok |
-| Federal Communications Commission — Court Filings | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Court_Filing) | True | ok |
-| Federal Communications Commission — Court Opinions | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Court_Opinion) | True | ok |
-| Federal Communications Commission — Fact Sheets | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Fact_Sheet) | True | ok |
-| Federal Communications Commission — ITFS Notices | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/ITFS_Notices) | True | ok |
-| Federal Communications Commission — Low Power TV Notices | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/LPTV_Notices) | True | ok |
+| Federal Communications Commission — Events | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/events/feed/) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Guides | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/guides/feed/) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — FCC Recent Releases (Combined) | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Commissioner's Statements | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Statement) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Commissioner's Speeches | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Speech) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Commissioner's Testimonies | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Testimony) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Broadcast Actions | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Broadcast_Action) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Broadcast Applications | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Broadcast_App) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Call Sign Changes | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Callsign_Changes) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Citations | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Cit) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Compliance Guides | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Guide) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Court Filings | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Court_Filing) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Court Opinions | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Court_Opinion) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Fact Sheets | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Fact_Sheet) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — ITFS Notices | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/ITFS_Notices) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Low Power TV Notices | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/LPTV_Notices) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — News Releases | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/News_Release) | True | ok |
 | Federal Communications Commission — Notices | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Notice) | True | ok |
 | Federal Communications Commission — Notices of Apparent Liability | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/NAL) | True | ok |
 | Federal Communications Commission — Orders | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Order) | True | ok |
 | Federal Communications Commission — Public Notices | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Public_Notice) | True | ok |
-| Federal Communications Commission — Radio Cutoffs | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Radio_Cutoffs) | True | ok |
-| Federal Communications Commission — Reports | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Report) | True | ok |
+| Federal Communications Commission — Radio Cutoffs | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Radio_Cutoffs) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Reports | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Report) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Report & Orders, Notices of Proposed Rulemaking, etc. | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/RO_NPRM) | True | ok |
-| Federal Communications Commission — Studies | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Study) | True | ok |
-| Federal Communications Commission — TV Notices | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/TV_Notices) | True | ok |
-| Federal Communications Commission — Consumer & Governmental Affairs Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/CGB) | True | ok |
+| Federal Communications Commission — Studies | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Study) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — TV Notices | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/TV_Notices) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Consumer & Governmental Affairs Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/CGB) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Enforcement Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/EB) | True | ok |
-| Federal Communications Commission — International Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/IB) | True | ok |
-| Federal Communications Commission — Media Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/MB) | True | ok |
-| Federal Communications Commission — Public Safety & Homeland Security Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/PSHSB) | True | ok |
-| Federal Communications Commission — Space Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/SB) | True | ok |
-| Federal Communications Commission — Wireless Telecommunications Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/WTB) | True | ok |
-| Federal Communications Commission — Wireline Competition Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/WCB) | True | ok |
-| Federal Communications Commission — Office of the Administrative Law Judges | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OALJ) | True | ok |
-| Federal Communications Commission — Office of Communications Business Opportunities | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OCBO) | True | ok |
-| Federal Communications Commission — Office of Economics and Analytics | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OEA) | True | ok |
-| Federal Communications Commission — Office of Economics and Analytics - Auctions | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/AU) | True | ok |
-| Federal Communications Commission — Office of Engineering & Technology | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OET) | True | ok |
-| Federal Communications Commission — Office of General Counsel | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OGC) | True | ok |
-| Federal Communications Commission — Office of Inspector General | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OIG) | True | ok |
-| Federal Communications Commission — Office of International Affairs | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OIA) | True | ok |
-| Federal Communications Commission — Office of Legislative Affairs | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OLA) | True | ok |
-| Federal Communications Commission — Office of Managing Director | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OMD) | True | ok |
-| Federal Communications Commission — Office of Media Relations | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OMR) | True | ok |
-| Federal Communications Commission — Office of Workplace Diversity | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OWPD) | True | ok |
+| Federal Communications Commission — International Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/IB) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Media Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/MB) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Public Safety & Homeland Security Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/PSHSB) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Space Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/SB) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Wireless Telecommunications Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/WTB) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Wireline Competition Bureau | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/WCB) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Office of the Administrative Law Judges | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OALJ) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Office of Communications Business Opportunities | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OCBO) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Office of Economics and Analytics | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OEA) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Office of Economics and Analytics - Auctions | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/AU) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Office of Engineering & Technology | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OET) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Office of General Counsel | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OGC) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Office of Inspector General | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OIG) | False | invalid_feed_or_network_error |
+| Federal Communications Commission — Office of International Affairs | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OIA) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Office of Legislative Affairs | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OLA) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Office of Managing Director | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OMD) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Office of Media Relations | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OMR) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
+| Federal Communications Commission — Office of Workplace Diversity | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OWPD) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Energy Regulatory Commission | US | energy_orders_and_rates | [html_index](https://www.ferc.gov/news-events/news/decisions-notices) | False | selector_empty |
 | Department of Labor | US | labour_enforcement | [rss](https://www.dol.gov/rss/releases.xml) | True | ok |
 | Occupational Safety and Health Administration — Federal Register | US | labour_enforcement | [rss](https://www.osha.gov/laws-regs/federalregisters.xml) | True | ok |
-| Occupational Safety and Health Administration — Interpretations | US | labour_enforcement | [rss](https://www.osha.gov/laws-regs/standardinterpretations.xml) | True | ok |
-| Occupational Safety and Health Administration — Directives | US | labour_enforcement | [rss](https://www.osha.gov/enforcement/directives.xml) | True | ok |
+| Occupational Safety and Health Administration — Interpretations | US | labour_enforcement | [rss](https://www.osha.gov/laws-regs/standardinterpretations.xml) | False | ok; OSHA interpretation or admin feed; rules and enforcement news remain enabled |
+| Occupational Safety and Health Administration — Directives | US | labour_enforcement | [rss](https://www.osha.gov/enforcement/directives.xml) | False | ok; OSHA interpretation or admin feed; rules and enforcement news remain enabled |
 | Occupational Safety and Health Administration — News Releases | US | labour_enforcement | [rss](https://www.osha.gov/news/newsreleases.xml) | True | ok |
-| Occupational Safety and Health Administration — QuickTakes | US | labour_enforcement | [rss](https://www.osha.gov/sites/default/files/quicktakes.xml) | True | ok |
+| Occupational Safety and Health Administration — QuickTakes | US | labour_enforcement | [rss](https://www.osha.gov/sites/default/files/quicktakes.xml) | False | ok; OSHA interpretation or admin feed; rules and enforcement news remain enabled |
 | National Labor Relations Board — https://www.nlrb.gov/rss/rssPressReleases.xml | US | labour_decisions | [rss](https://www.nlrb.gov/rss/rssPressReleases.xml) | True | ok |
 | National Labor Relations Board — https://www.nlrb.gov/rss/rssWeeklySummaries.xml | US | labour_decisions | [rss](https://www.nlrb.gov/rss/rssWeeklySummaries.xml) | True | ok |
-| National Labor Relations Board — https://www.nlrb.gov/rss/rssAnnouncements.xml | US | labour_decisions | [rss](https://www.nlrb.gov/rss/rssAnnouncements.xml) | True | ok |
-| Department of the Interior | US | permits_and_resources | [rss](https://www.doi.gov/feeds/content/36980/rss.xml) | True | valid_empty |
+| National Labor Relations Board — https://www.nlrb.gov/rss/rssAnnouncements.xml | US | labour_decisions | [rss](https://www.nlrb.gov/rss/rssAnnouncements.xml) | False | ok; NLRB procedural announcements; decisions remain enabled |
+| Department of the Interior | US | permits_and_resources | [rss](https://www.doi.gov/feeds/content/36980/rss.xml) | False | valid_empty; agency_output_not_us_market_actionable |
 | Department of Transportation | US | transport_permissions | [rss](https://www.transportation.gov/rss.xml) | True | ok |
 | Department of State | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/press-releases/feed/) | True | valid_empty |
-| Department of State — United States Department of State » Feed | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/feed/) | True | valid_empty |
-| Department of State — United States Department of State » Comments Feed | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/comments/feed/) | True | valid_empty |
-| US Citizenship and Immigration Services | US | official_clarification_and_administration | [rss](https://www.uscis.gov/news/rss-feed/59144) | True | ok |
-| US Citizenship and Immigration Services — Content Listing | US | official_clarification_and_administration | [rss](https://www.uscis.gov/news/rss-feed/22984) | True | ok |
+| Department of State — United States Department of State » Feed | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/feed/) | False | valid_empty; State Department catch-all or comments feed; press releases remain enabled |
+| Department of State — United States Department of State » Comments Feed | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/comments/feed/) | False | valid_empty; State Department catch-all or comments feed; press releases remain enabled |
+| US Citizenship and Immigration Services | US | official_clarification_and_administration | [rss](https://www.uscis.gov/news/rss-feed/59144) | False | ok; agency_output_not_us_market_actionable |
+| US Citizenship and Immigration Services — Content Listing | US | official_clarification_and_administration | [rss](https://www.uscis.gov/news/rss-feed/22984) | False | ok; agency_output_not_us_market_actionable |
 | Federal Maritime Commission | US | transport_permissions | [rss](https://www.fmc.gov/feed/) | True | ok |
 | Federal Housing Finance Agency | US | financial_enforcement | [html_index](https://www.fhfa.gov/news/news-release) | True | ok |
 | Grants.gov | US | grant_opportunities_not_awards | [rss](https://www.grants.gov/custom/spoExit.jsp?p=rss/GG_OppModByAgency.xml) | False | invalid_feed_or_network_error |
@@ -398,136 +222,136 @@ Institution records include historical/closed bodies and shared portals. This is
 | Court of Justice of the European Union — Suomi / FI | EU | judicial_decisions | [rss](https://curia.europa.eu/site/jcms/qua1_6621/fi/rss) | False | invalid_feed_or_network_error |
 | Court of Justice of the European Union — Svenska / SV | EU | judicial_decisions | [rss](https://curia.europa.eu/site/jcms/qua1_6621/sv/rss) | False | invalid_feed_or_network_error |
 | European Central Bank | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/press.html) | True | ok |
-| European Central Bank — TIPS Consultative Group documentation | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/tipsmeetdocs.rss) | True | ok |
+| European Central Bank — TIPS Consultative Group documentation | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/tipsmeetdocs.rss) | False | ok; ECB reference data or research; press releases remain enabled |
 | European Central Bank — Blog posts | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/blog.html) | False | ok; reference data, research, speeches or commentary |
 | European Central Bank — Statistical press releases | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/statpress.html) | True | ok |
-| European Central Bank — Publications | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/pub.html) | True | ok |
+| European Central Bank — Publications | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/pub.html) | False | ok; ECB reference data or research; press releases remain enabled |
 | European Central Bank — Working Papers, in pdf format | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/wppub.html) | False | ok; reference data, research, speeches or commentary |
-| European Central Bank — Recent open market operations and ad hoc ECB communication | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/operations.html) | True | ok |
-| European Central Bank — Open procurements, award notices and lists of suppliers | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/procurements.html) | True | ok |
-| European Central Bank — Euro area yield curve | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/yc.html) | True | ok |
-| European Central Bank — Research bulletin | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/rbu.html) | True | ok |
-| European Central Bank — ILS | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-ils.html) | True | ok |
-| European Central Bank — US dollar (USD) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-usd.html) | True | ok |
-| European Central Bank — Japanese yen (JPY) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-jpy.html) | True | ok |
-| European Central Bank — Bulgarian lev (BGN) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-bgn.html) | True | ok |
-| European Central Bank — Czech koruna (CZK) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-czk.html) | True | ok |
-| European Central Bank — Danish krone (DKK) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-dkk.html) | True | ok |
-| European Central Bank — Estonian kroon (EEK) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-eek.html) | True | ok |
-| European Central Bank — Pound sterling (GBP) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-gbp.html) | True | ok |
-| European Central Bank — Hungarian forint (HUF) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-huf.html) | True | ok |
-| European Central Bank — Polish zloty (PLN) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-pln.html) | True | ok |
-| European Central Bank — Romanian leu (RON) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-ron.html) | True | ok |
-| European Central Bank — Swedish krona (SEK) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-sek.html) | True | ok |
-| European Central Bank — Swiss franc (CHF) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-chf.html) | True | ok |
-| European Central Bank — Icelandic krona (ISK) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-isk.html) | True | ok |
-| European Central Bank — Norwegian krone (NOK) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-nok.html) | True | ok |
-| European Central Bank — Russian rouble (RUB) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-rub.html) | True | ok |
-| European Central Bank — Turkish lira (TRY) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-try.html) | True | ok |
-| European Central Bank — Australian dollar (AUD) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-aud.html) | True | ok |
-| European Central Bank — Brasilian real (BRL) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-brl.html) | True | ok |
-| European Central Bank — Canadian dollar (CAD) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-cad.html) | True | ok |
-| European Central Bank — Chinese yuan renminbi (CNY) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-cny.html) | True | ok |
-| European Central Bank — Hong Kong dollar (HKD) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-hkd.html) | True | ok |
-| European Central Bank — Indonesian rupiah (IDR) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-idr.html) | True | ok |
-| European Central Bank — Indian rupee (INR) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-inr.html) | True | ok |
-| European Central Bank — South Korean won (KRW) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-krw.html) | True | ok |
-| European Central Bank — Mexican peso (MXN) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-mxn.html) | True | ok |
-| European Central Bank — Malaysian ringgit (MYR) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-myr.html) | True | ok |
-| European Central Bank — New Zealand dollar (NZD) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-nzd.html) | True | ok |
-| European Central Bank — Philippine peso (PHP) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-php.html) | True | ok |
-| European Central Bank — Singapore dollar (SGD) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-sgd.html) | True | ok |
-| European Central Bank — Thai baht (THB) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-thb.html) | True | ok |
-| European Central Bank — South African rand (ZAR) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-zar.html) | True | ok |
+| European Central Bank — Recent open market operations and ad hoc ECB communication | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/operations.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Open procurements, award notices and lists of suppliers | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/procurements.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Euro area yield curve | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/yc.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Research bulletin | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/rbu.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — ILS | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-ils.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — US dollar (USD) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-usd.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Japanese yen (JPY) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-jpy.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Bulgarian lev (BGN) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-bgn.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Czech koruna (CZK) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-czk.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Danish krone (DKK) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-dkk.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Estonian kroon (EEK) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-eek.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Pound sterling (GBP) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-gbp.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Hungarian forint (HUF) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-huf.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Polish zloty (PLN) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-pln.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Romanian leu (RON) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-ron.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Swedish krona (SEK) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-sek.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Swiss franc (CHF) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-chf.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Icelandic krona (ISK) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-isk.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Norwegian krone (NOK) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-nok.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Russian rouble (RUB) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-rub.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Turkish lira (TRY) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-try.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Australian dollar (AUD) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-aud.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Brasilian real (BRL) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-brl.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Canadian dollar (CAD) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-cad.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Chinese yuan renminbi (CNY) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-cny.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Hong Kong dollar (HKD) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-hkd.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Indonesian rupiah (IDR) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-idr.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Indian rupee (INR) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-inr.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — South Korean won (KRW) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-krw.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Mexican peso (MXN) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-mxn.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Malaysian ringgit (MYR) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-myr.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — New Zealand dollar (NZD) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-nzd.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Philippine peso (PHP) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-php.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Singapore dollar (SGD) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-sgd.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — Thai baht (THB) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-thb.html) | False | ok; ECB reference data or research; press releases remain enabled |
+| European Central Bank — South African rand (ZAR) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-zar.html) | False | ok; ECB reference data or research; press releases remain enabled |
 | European Central Bank | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss) | False | invalid_feed_or_network_error |
 | European Securities and Markets Authority | EU | market_rules_and_enforcement | [rss](https://www.esma.europa.eu/rss.xml) | True | ok |
 | European Banking Authority | EU | financial_supervision | [rss](https://www.eba.europa.eu/news-press/news/rss.xml) | True | ok |
-| European Medicines Agency | EU | product_permissions_and_safety | [rss](https://www.ema.europa.eu/en/whats-new.xml) | True | ok |
-| UK legislation | UK | legal_instruments | [rss](https://www.legislation.gov.uk/new/data.feed) | True | ok |
-| UK legislation | UK | legal_instruments | [rss](http://www.legislation.gov.uk/all/data.feed?sort=published) | True | ok |
-| UK legislation | UK | legal_instruments | [rss](http://www.legislation.gov.uk/all/data.feed?sort=published&page=2) | True | ok |
-| The National Archives Find Case Law | UK | judicial_decisions | [rss](https://caselaw.nationalarchives.gov.uk/atom.xml) | True | ok |
+| European Medicines Agency | EU | product_permissions_and_safety | [rss](https://www.ema.europa.eu/en/whats-new.xml) | False | ok; agency_output_not_us_market_actionable |
+| UK legislation | UK | legal_instruments | [rss](https://www.legislation.gov.uk/new/data.feed) | False | ok; agency_output_not_us_market_actionable |
+| UK legislation | UK | legal_instruments | [rss](http://www.legislation.gov.uk/all/data.feed?sort=published) | False | ok; agency_output_not_us_market_actionable |
+| UK legislation | UK | legal_instruments | [rss](http://www.legislation.gov.uk/all/data.feed?sort=published&page=2) | False | ok; agency_output_not_us_market_actionable |
+| The National Archives Find Case Law | UK | judicial_decisions | [rss](https://caselaw.nationalarchives.gov.uk/atom.xml) | False | ok; agency_output_not_us_market_actionable |
 | Bank of England | UK | monetary_and_supervisory | [rss](https://www.bankofengland.co.uk/rss/news) | True | ok |
 | Bank of England — RSS feeds | UK | monetary_and_supervisory | [rss](https://www.bankofengland.co.uk/rss) | False | invalid_feed_or_network_error |
 | Financial Conduct Authority | UK | financial_enforcement | [rss](https://www.fca.org.uk/news/rss.xml) | True | ok |
-| The Gazette official public record | UK | insolvency_and_public_notices | [rss](https://www.thegazette.co.uk/all-notices/notice/data.feed) | True | ok |
-| Canada Gazette — Canada Gazette PI RSS Feed | CA | legal_instruments | [rss](https://gazette.gc.ca/rss/p1-eng.xml) | True | ok |
+| The Gazette official public record | UK | insolvency_and_public_notices | [rss](https://www.thegazette.co.uk/all-notices/notice/data.feed) | False | ok; agency_output_not_us_market_actionable |
+| Canada Gazette — Canada Gazette PI RSS Feed | CA | legal_instruments | [rss](https://gazette.gc.ca/rss/p1-eng.xml) | False | ok; Canada Gazette notices; regulations (Part II) remain enabled |
 | Canada Gazette — Canada Gazette PII RSS Feed | CA | legal_instruments | [rss](https://gazette.gc.ca/rss/p2-eng.xml) | True | ok |
-| Canada Gazette — Canada Gazette PIII RSS Feed | CA | legal_instruments | [rss](https://www.gazette.gc.ca/rss/en-ls-eng.xml) | True | ok |
+| Canada Gazette — Canada Gazette PIII RSS Feed | CA | legal_instruments | [rss](https://www.gazette.gc.ca/rss/en-ls-eng.xml) | False | ok; Canada Gazette notices; regulations (Part II) remain enabled |
 | Bank of Canada | CA | monetary_operations | [rss](https://www.bankofcanada.ca/press/press-releases/feed/) | True | ok |
-| Bank of Canada — Subscribe to  | CA | monetary_operations | [rss](https://www.bankofcanada.ca/feed/?content_type=sparks-at-bank-article&post_type[0]=post&post_type[1]=page) | True | ok |
+| Bank of Canada — Subscribe to  | CA | monetary_operations | [rss](https://www.bankofcanada.ca/feed/?content_type=sparks-at-bank-article&post_type[0]=post&post_type[1]=page) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
 | Bank of Canada — Subscribe to Regulatory news | CA | monetary_operations | [rss](https://www.bankofcanada.ca/feed/?content_type=regulatory-news&post_type[0]=post&post_type[1]=page) | True | ok |
 | Bank of Canada — Press | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/press/feed/) | True | ok |
 | Bank of Canada — Announcements | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/announcements/feed/) | True | ok |
 | Bank of Canada — Market notices | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/notices/feed/) | True | ok |
-| Bank of Canada — Media activities | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/selected-interviews/feed/) | True | ok |
-| Bank of Canada — Media advisories | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/media-advisories/feed/) | True | ok |
-| Bank of Canada — News | CA | monetary_operations | [rss](https://www.bankofcanada.ca/utility/news/feed/) | True | ok |
+| Bank of Canada — Media activities | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/selected-interviews/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
+| Bank of Canada — Media advisories | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/media-advisories/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
+| Bank of Canada — News | CA | monetary_operations | [rss](https://www.bankofcanada.ca/utility/news/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
 | Bank of Canada — Press releases | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/press-releases/feed/) | True | ok |
 | Bank of Canada — Speeches and appearances | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/speeches/feed/) | False | ok; reference data, research, speeches or commentary |
-| Bank of Canada — Upcoming events | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/upcoming-events/feed/) | True | ok |
-| Bank of Canada — Webcasts | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/webcasts/feed/) | True | ok |
-| Bank of Canada — Publications | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/publications/feed/) | True | ok |
-| Bank of Canada — Annual Report | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/annual-report/feed/) | True | ok |
-| Bank of Canada — Business Outlook Survey | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/bos/feed/) | True | ok |
-| Bank of Canada — Canadian Survey of Consumer Expectations | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/canadian-survey-of-consumer-expectations/feed/) | True | ok |
-| Bank of Canada — Disclosure of Climate-Related Risks | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/disclosure-climate-related-risks/feed/) | True | ok |
-| Bank of Canada — The Economy, Plain and Simple | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/EPS/feed/) | True | ok |
+| Bank of Canada — Upcoming events | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/upcoming-events/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
+| Bank of Canada — Webcasts | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/webcasts/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
+| Bank of Canada — Publications | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/publications/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
+| Bank of Canada — Annual Report | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/annual-report/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
+| Bank of Canada — Business Outlook Survey | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/bos/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
+| Bank of Canada — Canadian Survey of Consumer Expectations | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/canadian-survey-of-consumer-expectations/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
+| Bank of Canada — Disclosure of Climate-Related Risks | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/disclosure-climate-related-risks/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
+| Bank of Canada — The Economy, Plain and Simple | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/EPS/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
 | Bank of Canada — Financial Stability Report | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/fsr/feed/) | True | ok |
-| Bank of Canada — Financial System Survey | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/financial-system-survey/feed/) | True | ok |
-| Bank of Canada — Market Participants Survey | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/market-participants-survey/feed/) | True | ok |
+| Bank of Canada — Financial System Survey | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/financial-system-survey/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
+| Bank of Canada — Market Participants Survey | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/market-participants-survey/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
 | Bank of Canada — Monetary Policy Report | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/mpr/feed/) | True | ok |
-| Bank of Canada — Quarterly Financial Report | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/quarterly-financial-report/feed/) | True | ok |
+| Bank of Canada — Quarterly Financial Report | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/quarterly-financial-report/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
 | Bank of Canada — Summary of deliberations | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/summary-of-deliberations/feed/) | True | ok |
 | Bank of Canada — Research | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/research,boc-review-article,fsr-article/feed/) | True | ok |
-| Bank of Canada — Sparks at Bank articles | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/sparks-at-bank-article/feed/) | True | ok |
-| Bank of Canada — Staff analytical papers | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/staff-analytical-paper/feed/) | True | ok |
-| Bank of Canada — Staff analytical notes | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/staff-analytical-notes/feed/) | True | ok |
+| Bank of Canada — Sparks at Bank articles | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/sparks-at-bank-article/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
+| Bank of Canada — Staff analytical papers | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/staff-analytical-paper/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
+| Bank of Canada — Staff analytical notes | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/staff-analytical-notes/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
 | Bank of Canada — Staff discussion papers | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/discussion-papers/feed/) | False | ok; reference data, research, speeches or commentary |
 | Bank of Canada — Staff working papers | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/working-papers/feed/) | False | ok; reference data, research, speeches or commentary |
-| Bank of Canada — Technical reports | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/technical-reports/feed/) | True | ok |
-| Bank of Canada — Other | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/other/feed/) | True | ok |
-| Supreme Court of Canada | CA | judicial_decisions | [rss](https://decisions.scc-csc.ca/scc-csc/scc-csc/en/rss.do) | True | ok |
+| Bank of Canada — Technical reports | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/technical-reports/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
+| Bank of Canada — Other | CA | monetary_operations | [rss](https://www.bankofcanada.ca/content_type/other/feed/) | False | ok; BoC research, webcast or admin feed; policy outputs remain enabled |
+| Supreme Court of Canada | CA | judicial_decisions | [rss](https://decisions.scc-csc.ca/scc-csc/scc-csc/en/rss.do) | False | ok; agency_output_not_us_market_actionable |
 | Reserve Bank of Australia | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-media-releases.xml) | True | ok |
 | Reserve Bank of Australia — Daily Exchange Rates | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-exchange-rates.xml) | False | ok; reference data, research, speeches or commentary |
-| Reserve Bank of Australia — Speeches | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-speeches.xml) | True | ok |
-| Reserve Bank of Australia — Speeches Webcast | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-speeches-webcast.xml) | True | ok |
-| Reserve Bank of Australia — Bulletin | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-bulletin.xml) | True | ok |
+| Reserve Bank of Australia — Speeches | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-speeches.xml) | False | ok; RBA reference data or admin feed; policy outputs remain enabled |
+| Reserve Bank of Australia — Speeches Webcast | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-speeches-webcast.xml) | False | ok; RBA reference data or admin feed; policy outputs remain enabled |
+| Reserve Bank of Australia — Bulletin | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-bulletin.xml) | False | ok; RBA reference data or admin feed; policy outputs remain enabled |
 | Reserve Bank of Australia — Financial Stability Review | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-fsr.xml) | True | ok |
 | Reserve Bank of Australia — Statement on Monetary Policy | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-smp.xml) | True | ok |
 | Reserve Bank of Australia — Research Discussion Papers | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-rdp.xml) | False | ok; reference data, research, speeches or commentary |
-| Reserve Bank of Australia — Freedom of Information | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-foi.xml) | True | ok |
-| Reserve Bank of Australia — Changes to Statistical Tables | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-changes-to-tables.xml) | True | ok |
+| Reserve Bank of Australia — Freedom of Information | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-foi.xml) | False | ok; RBA reference data or admin feed; policy outputs remain enabled |
+| Reserve Bank of Australia — Changes to Statistical Tables | AU | monetary_operations | [rss](https://www.rba.gov.au/rss/rss-cb-changes-to-tables.xml) | False | ok; RBA reference data or admin feed; policy outputs remain enabled |
 | Australian Competition and Consumer Commission | AU | competition_and_enforcement | [html_index](https://www.accc.gov.au/news-centre) | False | selector_empty |
-| Australian Prudential Regulation Authority | AU | financial_supervision | [rss](https://www.apra.gov.au/rss.xml) | True | ok |
+| Australian Prudential Regulation Authority | AU | financial_supervision | [rss](https://www.apra.gov.au/rss.xml) | False | ok; agency_output_not_us_market_actionable |
 | Australian Prudential Regulation Authority — Sitemap | AU | financial_supervision | [rss](https://www.apra.gov.au/sitemap.xml) | False | invalid_feed_or_network_error |
 | Reserve Bank of New Zealand (official-site news mirror) | NZ | monetary_operations | [google_news_rss](https://news.google.com/rss/search?q=site%3Arbnz.govt.nz+when%3A14d&hl=en-NZ&gl=NZ&ceid=NZ:en) | True | ok |
-| Hong Kong Government Information Services | HK | executive_and_administrative | [rss](https://www.info.gov.hk/gia/rss/general_en.xml) | True | ok |
-| Hong Kong Securities and Futures Commission | HK | financial_enforcement | [rss](https://www.sfc.hk/en/RSS-Feeds/Press-releases) | True | ok |
-| Health Sciences Authority Singapore — Health Sciences Authority — Announcements | SG | product_permissions_and_safety | [rss](https://www.hsa.gov.sg/announcements/rss.xml) | True | ok |
-| India Press Information Bureau (official-site news mirror) | IN | executive_and_administrative | [google_news_rss](https://news.google.com/rss/search?q=site%3Apib.gov.in+when%3A14d&hl=en-US&gl=US&ceid=US:en) | True | ok |
+| Hong Kong Government Information Services | HK | executive_and_administrative | [rss](https://www.info.gov.hk/gia/rss/general_en.xml) | False | ok; agency_output_not_us_market_actionable |
+| Hong Kong Securities and Futures Commission | HK | financial_enforcement | [rss](https://www.sfc.hk/en/RSS-Feeds/Press-releases) | False | ok; agency_output_not_us_market_actionable |
+| Health Sciences Authority Singapore — Health Sciences Authority — Announcements | SG | product_permissions_and_safety | [rss](https://www.hsa.gov.sg/announcements/rss.xml) | False | ok; agency_output_not_us_market_actionable |
+| India Press Information Bureau (official-site news mirror) | IN | executive_and_administrative | [google_news_rss](https://news.google.com/rss/search?q=site%3Apib.gov.in+when%3A14d&hl=en-US&gl=US&ceid=US:en) | False | ok; agency_output_not_us_market_actionable |
 | Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/pressreleases_rss.xml) | True | ok |
 | Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/notifications_rss.xml) | True | ok |
 | Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/speeches_rss.xml) | False | ok; reference data, research, speeches or commentary |
-| Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/tenders_rss.xml) | True | ok |
-| Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/AnnualReportMain_rss.xml) | True | ok |
-| Reserve Bank of India — Publications | IN | monetary_and_supervisory | [rss](https://rbi.org.in/Publication_rss.xml) | True | ok |
-| Securities and Exchange Board of India — https://www.sebi.gov.in/sebirss.xml | IN | financial_enforcement | [rss](https://www.sebi.gov.in/sebirss.xml) | True | ok |
+| Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/tenders_rss.xml) | False | ok; RBI admin or speech feed; policy outputs remain enabled |
+| Reserve Bank of India | IN | monetary_and_supervisory | [rss](https://rbi.org.in/AnnualReportMain_rss.xml) | False | ok; RBI admin or speech feed; policy outputs remain enabled |
+| Reserve Bank of India — Publications | IN | monetary_and_supervisory | [rss](https://rbi.org.in/Publication_rss.xml) | False | ok; RBI admin or speech feed; policy outputs remain enabled |
+| Securities and Exchange Board of India — https://www.sebi.gov.in/sebirss.xml | IN | financial_enforcement | [rss](https://www.sebi.gov.in/sebirss.xml) | False | ok; agency_output_not_us_market_actionable |
 | State Council of China policies | CN | executive_instruments | [html_index](https://english.www.gov.cn/policies/latestreleases/) | True | ok |
 | Ministry of Commerce of China announcements and orders | CN | trade_and_export_controls | [html_index](https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/index.html) | False | invalid_feed_or_network_error |
 | Bank of Japan | JP | monetary_operations | [rss](https://www.boj.or.jp/en/rss/whatsnew.xml) | True | ok |
 | Japan Ministry of Economy Trade and Industry | JP | trade_and_industry_policy | [html_index](https://www.meti.go.jp/english/press/) | True | ok |
 | Japan Fair Trade Commission (official-site news mirror) | JP | competition_and_enforcement | [google_news_rss](https://news.google.com/rss/search?q=site%3Ajftc.go.jp+when%3A14d&hl=en-US&gl=US&ceid=US:en) | True | ok |
-| Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_008.xml) | True | ok |
-| Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_011.xml) | True | ok |
-| Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_013.xml) | True | ok |
-| Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_014.xml) | True | valid_empty |
-| Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_012.xml) | True | ok |
-| Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_009.xml) | True | ok |
-| Central Bank of the Republic of China Taiwan — 訂閱電子報 | TW | monetary_operations | [rss](https://www.cbc.gov.tw/tw/rss-302-1.xml) | True | ok |
-| Bangko Sentral ng Pilipinas | PH | monetary_operations | [rss](https://www.bsp.gov.ph/_layouts/15/listfeed.aspx?List=9b0a2117-49d8-4e96-80ba-8651a0e3e17a&View=be72ff0e-7b72-4309-8c5f-e502d9d324a9) | True | ok |
+| Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_008.xml) | False | ok; agency_output_not_us_market_actionable |
+| Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_011.xml) | False | ok; agency_output_not_us_market_actionable |
+| Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_013.xml) | False | ok; agency_output_not_us_market_actionable |
+| Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_014.xml) | False | valid_empty; agency_output_not_us_market_actionable |
+| Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_012.xml) | False | ok; agency_output_not_us_market_actionable |
+| Japan Pharmaceuticals and Medical Devices Agency | JP | product_permissions_and_safety | [rss](https://www.pmda.go.jp/rss_009.xml) | False | ok; agency_output_not_us_market_actionable |
+| Central Bank of the Republic of China Taiwan — 訂閱電子報 | TW | monetary_operations | [rss](https://www.cbc.gov.tw/tw/rss-302-1.xml) | False | ok; agency_output_not_us_market_actionable |
+| Bangko Sentral ng Pilipinas | PH | monetary_operations | [rss](https://www.bsp.gov.ph/_layouts/15/listfeed.aspx?List=9b0a2117-49d8-4e96-80ba-8651a0e3e17a&View=be72ff0e-7b72-4309-8c5f-e502d9d324a9) | False | ok; agency_output_not_us_market_actionable |
 | Philippines Official Gazette executive issuances | PH | executive_instruments | [rss](https://officialgazette.gov.ph/section/executive-issuances/feed/) | False | invalid_feed_or_network_error |
-| South African Reserve Bank | ZA | monetary_operations | [rss](https://www.resbank.co.za/bin/sarb/solr/publications/rss) | True | ok |
+| South African Reserve Bank | ZA | monetary_operations | [rss](https://www.resbank.co.za/bin/sarb/solr/publications/rss) | False | ok; agency_output_not_us_market_actionable |
 | Swiss National Bank | CH | monetary_operations | [rss](https://www.snb.ch/public/rss/en/pressrel) | True | ok |
 | Swiss National Bank | CH | monetary_operations | [rss](https://www.snb.ch/public/en/rss/news) | True | ok |
 | Sveriges Riksbank | SE | monetary_operations | [rss](https://www.riksbank.se/en-gb/rss/press-releases/) | True | ok |
@@ -542,8 +366,8 @@ Institution records include historical/closed bodies and shared portals. This is
 | World Trade Organization disputes and decisions | INT | trade_and_dispute_decisions | [rss](https://www.wto.org/library/rss/latest_news_e.xml) | False | invalid_feed_or_network_error |
 | World Trade Organization disputes and decisions | INT | trade_and_dispute_decisions | [rss](https://www.wto.org/library/rss/podcasts_e.xml) | False | invalid_feed_or_network_error |
 | Bank for International Settlements — View feed | INT | supervisory_standards | [rss](https://www.bis.org/doclist/all_pressrels.rss) | True | ok |
-| Bank for International Settlements — View feed | INT | supervisory_standards | [rss](https://www.bis.org/doclist/bis_fsi_publs.rss) | True | ok |
-| Bank for International Settlements — View feed | INT | supervisory_standards | [rss](https://www.bis.org/doclist/vacancies.rss) | True | ok |
+| Bank for International Settlements — View feed | INT | supervisory_standards | [rss](https://www.bis.org/doclist/bis_fsi_publs.rss) | False | ok; BIS vacancies or research publications |
+| Bank for International Settlements — View feed | INT | supervisory_standards | [rss](https://www.bis.org/doclist/vacancies.rss) | False | ok; BIS vacancies or research publications |
 | Bank for International Settlements — View feed | INT | supervisory_standards | [rss](https://www.bis.org/doclist/mgmtspeeches.rss) | True | ok |
 | Bank for International Settlements — View feed | INT | supervisory_standards | [rss](https://www.bis.org/doclist/cbspeeches.rss) | True | ok |
 | Supreme Court orders of the Court | US | judicial_decisions | [html_index](https://www.supremecourt.gov/orders/ordersofthecourt) | True | ok |
@@ -2292,171 +2116,6 @@ Institution records include historical/closed bodies and shared portals. This is
 | Youth Justice Agency of Northern Ireland | UK | exempt | [source](https://www.gov.uk/government/organisations/youth-justice-agency-of-northern-ireland) |
 | Youth Justice Board for England and Wales | UK | live | [source](https://www.gov.uk/government/organisations/youth-justice-board-for-england-and-wales) |
 | Zahid Mubarek Inquiry | UK | closed | [source](https://www.gov.uk/government/organisations/zahid-mubarek-inquiry) |
-| District Court Northern District of Alabama | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-alnd.xml) |
-| District Court Southern District of Alabama | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-alsd.xml) |
-| District Court Middle District of Alabama | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-almd.xml) |
-| District Court District of Alaska | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-akd.xml) |
-| District Court District of Arizona | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-azd.xml) |
-| District Court Eastern District of Arkansas | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ared.xml) |
-| District Court Eastern District of California | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-caed.xml) |
-| District Court Northern District of California | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-cand.xml) |
-| District Court Southern District of California | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-casd.xml) |
-| District Court District of Colorado | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-cod.xml) |
-| District Court District of Connecticut | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ctd.xml) |
-| District Court District of Columbia | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-dcd.xml) |
-| District Court District of Delaware | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ded.xml) |
-| District Court Southern District of Florida | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-flsd.xml) |
-| District Court Northern District of Florida | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-flnd.xml) |
-| District Court Middle District of Georgia | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-gamd.xml) |
-| District Court Northern District of Georgia | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-gand.xml) |
-| District Court District of Guam | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-gud.xml) |
-| District Court District of Hawaii | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-hid.xml) |
-| District Court District of Idaho | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-idd.xml) |
-| District Court Northern District of Illinois | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ilnd.xml) |
-| District Court Southern District of Illinois | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ilsd.xml) |
-| District Court Southern District of Indiana | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-insd.xml) |
-| District Court Northern District of Iowa | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-iand.xml) |
-| District Court District of Kansas | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ksd.xml) |
-| District Court Eastern District of Kentucky | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-kyed.xml) |
-| District Court Western District of Kentucky | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-kywd.xml) |
-| District Court Eastern District of Louisiana | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-laed.xml) |
-| District Court Middle District of Louisiana | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-lamd.xml) |
-| District Court District of Maine | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-med.xml) |
-| District Court District of Maryland | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-mdd.xml) |
-| District Court District of Massachusetts | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-mad.xml) |
-| District Court Eastern District of Michigan | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-mied.xml) |
-| District Court Western District of Michigan | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-miwd.xml) |
-| District Court District of Minnesota | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-mnd.xml) |
-| District Court Eastern District of Missouri | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-moed.xml) |
-| District Court Western District of Missouri | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-mowd.xml) |
-| District Court District of Montana | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-mtd.xml) |
-| District Court District of Nebraska | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ned.xml) |
-| District Court District of New Hampshire | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-nhd.xml) |
-| District Court District of New Jersey | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-njd.xml) |
-| District Court District of New Mexico | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-nmd.xml) |
-| District Court Eastern District of New York | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-nyed.xml) |
-| District Court Northern District of New York | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-nynd.xml) |
-| District Court Western District of New York | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-nywd.xml) |
-| District Court Middle District of North Carolina | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ncmd.xml) |
-| District Court Western District of North Carolina | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ncwd.xml) |
-| District Court District of North Dakota | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ndd.xml) |
-| District Court District of Northern Mariana Islands | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-nmid.xml) |
-| District Court Northern District of Ohio | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ohnd.xml) |
-| District Court Southern District of Ohio | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ohsd.xml) |
-| District Court Eastern District of Oklahoma | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-oked.xml) |
-| District Court Western District of Oklahoma | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-okwd.xml) |
-| District Court District of Oregon | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ord.xml) |
-| District Court Eastern District of Pennsylvania | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-paed.xml) |
-| District Court Middle District of Pennsylvania | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-pamd.xml) |
-| District Court Western District of Pennsylvania | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-pawd.xml) |
-| District Court District of Puerto Rico | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-prd.xml) |
-| District Court District of Rhode Island | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-rid.xml) |
-| District Court District of South Dakota | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-sdd.xml) |
-| District Court Eastern District of Tennessee | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-tned.xml) |
-| District Court Western District of Tennessee | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-tnwd.xml) |
-| District Court Middle District of Tennessee | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-tnmd.xml) |
-| District Court Eastern District of Texas | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-txed.xml) |
-| District Court Northern District of Texas | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-txnd.xml) |
-| District Court Southern District of Texas | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-txsd.xml) |
-| District Court Western District of Texas | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-txwd.xml) |
-| District Court District of Utah | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-utd.xml) |
-| District Court of the Virgin Islands | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-vid.xml) |
-| District Court District of Vermont | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-vtd.xml) |
-| District Court Eastern District of Washington | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-waed.xml) |
-| District Court Western District of Wisconsin | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-wiwd.xml) |
-| District Court Northern District of West Virginia | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-wvnd.xml) |
-| District Court District of Wyoming | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-wyd.xml) |
-| Court of Appeals for the First Circuit | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ca1.xml) |
-| Court of Appeals for the Second Circuit | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ca2.xml) |
-| Court of Appeals for the Third Circuit | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ca3.xml) |
-| Court of Appeals for the Fourth Circuit | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ca4.xml) |
-| Court of Appeals for the Fifth Circuit | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ca5.xml) |
-| Court of Appeals for the Sixth Circuit | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ca6.xml) |
-| Court of Appeals for the Seventh Circuit | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ca7.xml) |
-| Court of Appeals for the Eighth Circuit | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ca8.xml) |
-| Court of Appeals for the Ninth Circuit | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ca9.xml) |
-| Court of Appeals for the Tenth Circuit | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ca10.xml) |
-| Court of Appeals for the Eleventh Circuit | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ca11.xml) |
-| Court of Appeals for the District of Columbia Circuit | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-cadc.xml) |
-| Court of Appeals for the Federal Circuit | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ca13.xml) |
-| Bankruptcy Court Middle District of Alabama | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-almb.xml) |
-| Bankruptcy Court Northern District of Alabama | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-alnb.xml) |
-| Bankruptcy Court Southern District of Alabama | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-alsb.xml) |
-| Bankruptcy Court District of Alaska | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-akb.xml) |
-| Bankruptcy Court Eastern District of Arkansas | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-areb.xml) |
-| Bankruptcy Court Western District of Arkansas | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-arwb.xml) |
-| Bankruptcy Court District of Arizona | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-azb.xml) |
-| Bankruptcy Court Eastern District of California | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-caeb.xml) |
-| Bankruptcy Court Northern District of California | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-canb.xml) |
-| Bankruptcy Court Central District of California | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-cacb.xml) |
-| Bankruptcy Court District of Colorado | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-cob.xml) |
-| Bankruptcy Court District of Columbia | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-dcb.xml) |
-| Bankruptcy Court District of Connecticut | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ctb.xml) |
-| Bankruptcy Court District of Delaware | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-deb.xml) |
-| Bankruptcy Court Southern District of Florida | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-flsb.xml) |
-| Bankruptcy Court Middle District of Florida | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-flmb.xml) |
-| Bankruptcy Court Northern District of Georgia | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ganb.xml) |
-| Bankruptcy Court Middle District of Georgia | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-gamb.xml) |
-| Bankruptcy Court District of Hawaii | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-hib.xml) |
-| Bankruptcy Court Northern District of Illinois | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ilnb.xml) |
-| Bankruptcy Court Southern District of Illinois | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ilsb.xml) |
-| Bankruptcy Court Central District of Illinois | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ilcb.xml) |
-| Bankruptcy Court Southern District of Indiana | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-insb.xml) |
-| Bankruptcy Court Northern District of Iowa | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ianb.xml) |
-| Bankruptcy Court Eastern District of Kentucky | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-kyeb.xml) |
-| Bankruptcy Court Western District of Kentucky | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-kywb.xml) |
-| Bankruptcy Court Eastern District of Louisiana | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-laeb.xml) |
-| Bankruptcy Court Western District of Louisiana | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-lawb.xml) |
-| Bankruptcy Court Middle District of Louisiana | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-lamb.xml) |
-| Bankruptcy Court District of Maine | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-meb.xml) |
-| Bankruptcy Court District of Maryland | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-mdb.xml) |
-| Bankruptcy Court District of Massachusetts | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-mab.xml) |
-| Bankruptcy Court Western District of Michigan | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-miwb.xml) |
-| Bankruptcy Court District of Minnesota | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-mnb.xml) |
-| Bankruptcy Court Northern District of Mississippi | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-msnb.xml) |
-| Bankruptcy Court Eastern District of Missouri | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-moeb.xml) |
-| Bankruptcy Court Western District of Missouri | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-mowb.xml) |
-| Bankruptcy Court District of Montana | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-mtb.xml) |
-| Bankruptcy Court District of Nebraska | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-neb.xml) |
-| Bankruptcy Court District of Nevada | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-nvb.xml) |
-| Bankruptcy Court District of New Hampshire | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-nhb.xml) |
-| Bankruptcy Court District of New Jersey | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-njb.xml) |
-| Bankruptcy Court District of New Mexico | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-nmb.xml) |
-| Bankruptcy Court Eastern District of New York | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-nyeb.xml) |
-| Bankruptcy Court Northern District of New York | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-nynb.xml) |
-| Bankruptcy Court Southern District of New York | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-nysb.xml) |
-| Bankruptcy Court Western District of New York | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-nywb.xml) |
-| Bankruptcy Court Eastern District of North Carolina | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-nceb.xml) |
-| Bankruptcy Court Western District of North Carolina | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ncwb.xml) |
-| Bankruptcy Court District of North Dakota | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ndb.xml) |
-| Bankruptcy Court Northern District of Ohio | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ohnb.xml) |
-| Bankruptcy Court Southern District of Ohio | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-ohsb.xml) |
-| Bankruptcy Court Eastern District of Oklahoma | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-okeb.xml) |
-| Bankruptcy Court Northern District of Oklahoma | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-oknb.xml) |
-| Bankruptcy Court Western District of Oklahoma | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-okwb.xml) |
-| Bankruptcy Court District of Oregon | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-orb.xml) |
-| Bankruptcy Court Eastern District of Pennsylvania | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-paeb.xml) |
-| Bankruptcy Court Middle District of Pennsylvania | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-pamb.xml) |
-| Bankruptcy Court Western District of Pennsylvania | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-pawb.xml) |
-| Bankruptcy Court District of Peurto Rico | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-prb.xml) |
-| Bankruptcy Court District of Rhode Island | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-rib.xml) |
-| Bankruptcy Court District of South Carolina | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-scb.xml) |
-| Bankruptcy Court District of South Dakota | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-sdb.xml) |
-| Bankruptcy Court Eastern District of Tennessee | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-tneb.xml) |
-| Bankruptcy Court Middle District of Tennessee | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-tnmb.xml) |
-| Bankruptcy Court Southern District of Texas | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-txsb.xml) |
-| Bankruptcy Court Western District of Texas | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-txwb.xml) |
-| Bankruptcy Court Western District of Virginia | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-vawb.xml) |
-| Bankruptcy Court District of the Virgin Islands | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-vib.xml) |
-| Bankruptcy Court Eastern District of Washington | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-waeb.xml) |
-| Bankruptcy Court Western District of Washington | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-wawb.xml) |
-| Bankruptcy Court Northern District of West Virginia | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-wvnb.xml) |
-| Bankruptcy Court Eastern District of Wisconsin | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-wieb.xml) |
-| Bankruptcy Court Western District of Wisconsin | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-wiwb.xml) |
-| Bankruptcy Court District of Wyoming | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-wyb.xml) |
-| Judicial Panel on Multidistrict Litigation | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-jpml.xml) |
-| United States Court of International Trade | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-cit.xml) |
-| United States Court of Federal Claims | US | selected court participating in GovInfo; not all courts | [source](https://www.govinfo.gov/rss/uscourts-cofc.xml) |
 | Bank of Algeria | INT | directory_identity_only; publication channel requires verification | [source](https://www.bank-of-algeria.dz/) |
 | Central Bank of Argentina | INT | directory_identity_only; publication channel requires verification | [source](https://www.bcra.gob.ar/en/) |
 | Reserve Bank of Australia | INT | directory_identity_only; publication channel requires verification | [source](https://www.rba.gov.au/) |
@@ -2660,7 +2319,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Hong Kong Government Gazette | HK | official_publication_page_checked | [source](https://www.gld.gov.hk/egazette/) |
 | Hong Kong Monetary Authority | HK | official_publication_page_checked | [source](https://apidocs.hkma.gov.hk/documentation/press-releases/) |
 | Hong Kong Securities and Futures Commission | HK | official_publication_page_checked | [source](https://www.sfc.hk/en/RSS-Feeds) |
-| Hong Kong Legislative Council | HK | official_publication_page_checked | [source](https://www.legco.gov.hk/english/rss.html) |
+| Hong Kong Legislative Council | HK | page_unavailable; verification pending | [source](https://www.legco.gov.hk/english/rss.html) |
 | Hong Kong Judiciary judgments | HK | official_publication_page_checked | [source](https://www.judiciary.hk/en/judgments_legal_reference/judgments.html) |
 | Monetary Authority of Singapore | SG | official_publication_page_checked | [source](https://www.mas.gov.sg/news) |
 | Singapore Courts judgments | SG | official_publication_page_checked | [source](https://www.judiciary.gov.sg/judgments) |
