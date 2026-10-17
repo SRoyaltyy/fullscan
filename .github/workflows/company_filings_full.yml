@@ -106,13 +106,19 @@ jobs:
           if [ -f /tmp/probe-restore-run ]; then gh run download "$(cat /tmp/probe-restore-run)" -n company-filings-full-probe -D data/company_filings_full_probe; fi
       - name: Archive full-document probes
         run: |
-          python scripts/archive_company_filings.py --ticker SUZ --ticker TIGO --ticker CALM --ticker NVO --ticker ASML --ticker RKLB --workers 2 --per-sec 1.5 --output data/company_filings_full_probe
+          python scripts/archive_company_filings.py --ticker SUZ --ticker TIGO --ticker CALM --ticker NVO --ticker ASML --ticker RKLB --workers 2 --per-sec 1.5 --verify-binary-samples --output data/company_filings_full_probe
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: company-filings-full-probe
           retention-days: 90
           path: data/company_filings_full_probe/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: company-filings-full-probe-report
+          retention-days: 90
+          path: data/company_filings_full_probe/report.json
   archive:
     needs: [storage, probe]
     if: needs.probe.outputs.mode == 'full'

@@ -53,7 +53,20 @@ def decode_payload(body: bytes) -> tuple[bytes, str]:
                 break
             if line in (b'', b'`', b' '):
                 continue
-            decoded.extend(binascii.a2b_uu(line))
+            try:
+                value = binascii.a2b_uu(line)
+            except binascii.Error:
+                # Some SEC encoders leave nonzero padding bits/characters after
+                # the declared byte count. Decode exactly that count, as the
+                # CPython uu reader does, without losing any declared payload.
+                declared = (line[0] - 32) & 63
+                required = 1 + (declared * 4 + 2) // 3
+                if len(line) < required:
+                    raise ValueError('Truncated uuencoded attachment line')
+                value = binascii.a2b_uu(line[:required])
+                if len(value) != declared:
+                    raise ValueError('Invalid uuencoded attachment byte count')
+            decoded.extend(value)
         return bytes(decoded), 'uuencoded'
     return candidate, 'plain'
 

@@ -14,7 +14,8 @@ import threading
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from src.company_filings.full_archive import (ARCHIVE_VERSION, LocalObjects, R2Objects,
-    WholeClient, archive_company, filing_inventory, json_bytes, r2_configured, timestamp)
+    WholeClient, archive_company, filing_inventory, json_bytes, r2_configured, timestamp,
+    read_original, archive_url)
 
 
 def main():
@@ -28,6 +29,7 @@ def main():
     p.add_argument('--per-sec', type=float, default=1.5)
     p.add_argument('--storage', choices=['auto','local','r2'], default='auto')
     p.add_argument('--inventory-only', action='store_true')
+    p.add_argument('--verify-binary-samples', action='store_true', help='Independently compare up to three embedded assets per issuer with their individual SEC URLs')
     args = p.parse_args()
     if not (0 <= args.shard < args.shards) or not (0 < args.per_sec <= 8): p.error('Invalid shard or request pace')
     universe = json.loads(args.universe.read_text(encoding='utf-8'))
@@ -70,7 +72,23 @@ def main():
                 filings, inventory = filing_inventory(client, company['cik'])
                 return {**company, 'inventory': inventory, 'expected_filings': len(filings), 'filings': filings,
                         'inventory_complete': bool(filings), 'raw_complete': False, 'text_complete': False}
-            return archive_company(company, client, objects)
+            result=archive_company(company, client, objects)
+            if args.verify_binary_samples:
+                candidates=[]
+                for filing in result['filings']:
+                    manifest=objects.maybe_json(filing['manifest_key'])
+                    candidates.extend((manifest,item) for item in manifest['files'] if item['encoding']=='uuencoded')
+                samples=[candidates[i] for i in sorted({0,len(candidates)//2,len(candidates)-1})] if candidates else []
+                checks=[]
+                for manifest,item in samples:
+                    original=client.whole_url(archive_url(company['cik'],manifest['accession'],item['filename']))
+                    equal=original==read_original(objects,company['cik'],manifest['accession'],item['filename'])
+                    checks.append({'accession':manifest['accession'],'filename':item['filename'],'matches_individual_sec_file':equal})
+                    if not equal:
+                        result['raw_complete']=False;result['text_complete']=False
+                        result['failures'].append({'error_type':'DecodedAssetMismatch','accession':manifest['accession'],'filename':item['filename']})
+                result['independent_binary_checks']=checks
+            return result
         except Exception as exc: return {**company,'raw_complete':False,'text_complete':False,'failures':[{'error_type':type(exc).__name__}]}
     report()
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:

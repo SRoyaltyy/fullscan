@@ -93,6 +93,13 @@ class FullFilingTests(unittest.TestCase):
         self.assertEqual(extracted['status'],'complete');self.assertEqual(extracted['pages'],3)
         for i in range(3):self.assertIn(f'PDF page {i+1}',extracted['text'])
 
+    def test_uuencoded_nonzero_unused_padding_does_not_discard_payload(self):
+        original=b'XY'
+        encoded=b'begin 644 logo.png\n'+binascii.b2a_uu(original).rstrip(b'\n')+b'X\n`\nend\n'
+        with self.assertRaises(binascii.Error):binascii.a2b_uu(encoded.splitlines()[1])
+        raw=submission([('logo.png','GRAPHIC',encoded)])
+        self.assertEqual(file_bytes(raw,split_submission(raw)[0]),original)
+
     def test_missing_pdf_text_is_not_reported_complete(self):
         with patch('src.company_filings.full_extract.full_html_text',return_value=''):
             self.assertEqual(extract_document(b'<html><body>x</body></html>','x.htm')['status'],'extraction_failed')
