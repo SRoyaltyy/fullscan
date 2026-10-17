@@ -291,6 +291,10 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
                 if next_start<blob.get('total',0) and blob['results']:
                     query=dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query));query['start']=next_start;url=source['url']+'?'+urllib.parse.urlencode(query)
                 else:url=None
+    if source.get('title_include'):
+        rows=[r for r in rows if re.search(source['title_include'],r.get('title') or '',re.I)]
+    if source.get('title_exclude'):
+        rows=[r for r in rows if not re.search(source['title_exclude'],r.get('title') or '',re.I)]
     dates=[date(r.get('published_at')) for r in rows if date(r.get('published_at'))]
     latest=max(dates) if dates else None
     health={'status':'ok' if rows else 'valid_empty','http_status':status,'requests':pages,'fetched_rows':len(rows),'latest_published_at':iso(latest) if latest else None,'warnings':warnings,'etag':response_headers.get('ETag') or response_headers.get('Etag'),'last_modified':response_headers.get('Last-Modified'),'response_sha256':first_hash}
