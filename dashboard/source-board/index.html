@@ -96,9 +96,18 @@
   </div>
 </div>
 
+<h2>Parsed today <span id="ptDate" class="mut"></span></h2>
+<div class="panel"><h3><span id="ptCount" class="mut">…</span><span id="ptByClass"></span></h3>
+  <div style="padding:8px 12px">
+    <div class="sub" style="margin:0 0 6px">Every document the pipeline parsed with today's date, across all sources — deduped by URL, signal first. Expand any channel below to see exactly what that source yielded.</div>
+    <ol class="news" id="parsedToday"></ol>
+    <div class="mut" id="ptNote" style="display:none;font-size:12px">Nothing dated today yet in the 3-day collection window.</div>
+  </div>
+</div>
+
 <h2>All channels <span class="mut" id="chanCount"></span></h2>
 <div class="panel"><div class="scroll"><table>
-<thead><tr><th>Channel</th><th>Jur.</th><th>Adapter</th><th>Status</th><th>HTTP</th><th>Rows</th><th>Sample / warnings</th></tr></thead>
+<thead><tr><th>Channel</th><th>Jur.</th><th>Adapter</th><th>Status</th><th>HTTP</th><th>Rows</th><th>Parsed today / window</th><th>Sample / warnings / items</th></tr></thead>
 <tbody id="chans"></tbody></table></div></div>
 
 <p class="note">ok = parsed with rows. valid_empty = healthy feed, no items in window.
@@ -142,6 +151,7 @@ function render(board){
     ["Collect failed", col.sources_failed??"—", col.sources_failed?"fail":"ok"],
     ["Signal today", nSignal, nSignal?"ok":"mut"],
     ["Noise today", (clsCount.routine||0)+(clsCount.docket||0)+(clsCount.noise||0), "mut"],
+    ["Parsed today", (board.parsed_today||{}).count??"—", (board.parsed_today||{}).count?"ok":"mut"],
     ["Coverage", cov.includes("degraded")?"degraded":"clean", cov.includes("degraded")?"part":"ok"],
   ].map(([k,v,cls]) => `<div class="card">${k}<b class="${cls}">${v}</b></div>`).join("");
   $("catalogMd").href = (board.href||{}).catalog_md || "#";
@@ -176,6 +186,20 @@ function render(board){
   $("firehose").innerHTML = hose.slice(0,60).map(li).join("");
   $("newsNote").style.display = heads.length ? "none" : "";
 
+  const pt = board.parsed_today||{};
+  $("ptDate").textContent = "· " + (board.date||"");
+  $("ptCount").textContent = (pt.count??0) + " parsed";
+  $("ptByClass").innerHTML = Object.entries(pt.by_class||{})
+    .sort((a,b)=>({high:0,watch:1,routine:2,docket:3,noise:4}[a[0]]??9)-({high:0,watch:1,routine:2,docket:3,noise:4}[b[0]]??9))
+    .map(([c,n]) => `<span class="chip">${clsBadge[c]||esc(c)} <b>${n}</b></span>`).join("");
+  const pti = pt.items||[];
+  const pli = h => `<li>
+    <span class="when">${esc((h.published_at||"").slice(0,16).replace("T"," "))}</span>
+    ${clsBadge[h.cls]||""} <a href="${esc(h.url)}">${esc(h.title)}</a><span class="src">${esc(h.source)}</span>
+    ${h.new?'<span class="pill part">new</span>':''}</li>`;
+  $("parsedToday").innerHTML = pti.slice(0,200).map(pli).join("");
+  $("ptNote").style.display = pti.length ? "none" : "";
+
   window._chans = board.channels||[];
   fillAdapterSel(window._chans);
   renderChans();
@@ -199,9 +223,13 @@ function renderChans(){
   });
   $("chanCount").textContent = "· " + rows.length + " shown";
   $("chans").innerHTML = rows.map(c=>{
+    const p = c.parsed||{};
     const extra = (c.sample||[]).map(s=>`<div class="sample">${esc(s)}</div>`).join("")
       + (c.warnings||[]).map(w=>`<div class="warn">⚠ ${esc(w)}</div>`).join("")
-      + (c.exception?`<div class="warn">${esc(c.exception)}</div>`:"");
+      + (c.exception?`<div class="warn">${esc(c.exception)}</div>`:"")
+      + ((p.items&&p.items.length)?`<details style="margin-top:4px"><summary class="mut" style="cursor:pointer">show ${p.items.length} parsed item${p.items.length>1?"s":""}</summary><ol class="news" style="margin:6px 0 0">`
+        + p.items.map(it=>`<li><span class="when">${esc((it.published_at||"").slice(0,16).replace("T"," "))}</span>${clsBadge[it.cls]||""} <a href="${esc(it.url)}">${esc(it.title)}</a>${it.new?' <span class="pill part">new</span>':''}<div class="sample">${esc(it.document_type||"")}${it.stage?" · "+esc(it.stage):""}</div></li>`).join("")
+        + "</ol></details>":"");
     return `<tr>
       <td><b>${esc(c.id)}</b><div class="sample">${esc(c.name)}</div>
         <a class="sample" style="color:var(--link)" href="${esc(c.url)}">${esc((c.url||"").replace(/^https:\/\//,"").slice(0,72))}</a></td>
@@ -210,6 +238,7 @@ function renderChans(){
       <td>${pill(c.status, c.enabled)}</td>
       <td class="mono">${esc(c.http_status??"")}</td>
       <td class="mono">${esc(c.rows??"")}</td>
+      <td class="mono">${p.today??0} / ${p.window??0}</td>
       <td>${extra}</td></tr>`;
   }).join("");
 }
