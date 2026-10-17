@@ -15,7 +15,17 @@ DIRECTORIES={
  'central_banks':'https://www.bis.org/about/organisation/members',
  'us_states':'https://www.usa.gov/state-governments'
 }
-UK_TYPES=['decision','regulation','statutory_instrument','consultation_outcome','government_response','employment_tribunal_decision','employment_appeal_tribunal_decision','residential_property_tribunal_decision','tax_tribunal_decision','utaac_decision','traffic_commissioner_regulatory_decision','asylum_support_decision','medical_safety_alert','drug_safety_update','product_safety_alert_report_recall','international_treaty','written_statement','farming_grant','business_finance_support_scheme','notice']
+UK_TYPES=['decision','regulation','statutory_instrument','consultation_outcome','government_response','medical_safety_alert','drug_safety_update','product_safety_alert_report_recall','international_treaty']
+
+# Agencies whose entire output is not actionable for US equity trading. Feeds are
+# still verified for the catalog but never collected daily.
+NON_US_MARKET_AGENCIES=(
+ 'hk-government','hk-sfc','hk-gazette','hk-legco','hk-judiciary','in-pib','in-sebi','in-gazette',
+ 'sg-hsa','sg-courts','sg-cccs','ph-gazette','ph-bsp','tw-cbc','za-sarb','au-apra','au-asic',
+ 'au-legislation','nz-gazette','nz-legislation','nz-commerce','jp-pmda','eu-ema','eu-law',
+ 'uk-gazette','uk-case-law','uk-legislation','ca-supreme','us-uscis','us-doi','us-grants',
+ 'us-fema','us-sam','us-regulations',
+)
 
 def read_url(url):
  status,body,headers,resolved=get(url)
@@ -24,10 +34,33 @@ def read_url(url):
 
 def channel_scope(source):
  # Retain verification in the catalog, but do not collect reference-only feeds daily.
- label=(source['url']+' '+source['name']).lower()
+ label=(source['url']+' '+source['name']).lower();sid=source['id']
  if source.get('document_type') in ('farming_grant','business_finance_support_scheme'):return 'funding guidance/opportunity listing; not an award decision'
- if 'federalreserve.gov/feeds/' in label and re.search(r'/feeds/(?:s_t_|m_w_|feds(?:_|\.)|clp\.|g\d|h\d|prates\.|testimony\.)',label):return 'Fed research, speeches/testimony or reference data; policy releases remain enabled'
+ if any(sid==a or sid.startswith(a+'-') for a in NON_US_MARKET_AGENCIES):return 'agency_output_not_us_market_actionable'
+ if 'govinfo.gov/rss/uscourts-' in label:return 'us_district_court_docket_feed; individual proceedings are not market signal'
+ if sid.startswith('us-govinfo-chrg'):return 'congressional_record_floor_proceedings'
+ # GovInfo bills feed is restricted to House bills (H.R.) at collection time via
+ # title_include; the Senate mirror adds no extra channel here.
+ if 'federalreserve.gov/feeds/' in label and re.search(r'/feeds/(?:s_t_|m_w_|feds(?:_|\.)|clp\.|g\d|h\d|prates\.|testimony\.|e2\.|datadownload|fofguide|reportforms|bankinginfo|currentfaqs|covid|oig\.|ifdp|working|chgdel|cp\.|for\.|z1\.)',label):return 'Fed research, speeches/testimony or reference data; policy releases remain enabled'
  if any(x in label for x in ('exchange rate','exchangerate','exchange_rate','eurofxref','reference rate','research paper','working paper','discussion paper','statistical release','currentfaqs','/speeches','press_speeches','/research/','/blog','/podcast')):return 'reference data, research, speeches or commentary'
+ if sid.startswith('eu-ecb-') and re.search(r'/rss/(?:fxref|pub|wppub|blog|operations|procurements|yc|rbu|tipsmeetdocs)',label):return 'ECB reference data or research; press releases remain enabled'
+ if sid.startswith('eu-court-') and '/jcms/' in label and '/en/rss' not in label:return 'duplicate non-English court feed'
+ if sid.startswith('ca-boc-') and not re.search(r'press|regulatory-news|announcements|notices|speeches|mpr|fsr|summary-of-deliberations',label):return 'BoC research, webcast or admin feed; policy outputs remain enabled'
+ if sid.startswith('au-rba-') and not re.search(r'media-releases|/speeches\.|fsr|smp',label):return 'RBA reference data or admin feed; policy outputs remain enabled'
+ if sid.startswith('in-rbi-') and not re.search(r'pressreleases|notifications',label):return 'RBI admin or speech feed; policy outputs remain enabled'
+ if sid.startswith('us-fcc-') and not re.search(r'fcc\.gov/feed|gpo-fcc|doctypes/(nal|order|news_release|public_notice|notice|ro_nprm)|bureaus/eb',label):return 'FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled'
+ if sid.startswith('us-fda-') and re.search(r'consumers/rss|drug-safety-podcast|food-allergies|health-fraud|ora-foia|rss-podcast|tainted',label):return 'FDA consumer or podcast feed; regulatory feeds remain enabled'
+ if sid.startswith('us-fsis-') and re.search(r'/directives|/notices',label):return 'FSIS internal directives; recalls and news remain enabled'
+ if sid.startswith('us-osha-') and re.search(r'standardinterpretations|/directives|quicktakes',label):return 'OSHA interpretation or admin feed; rules and enforcement news remain enabled'
+ if sid.startswith('us-state-') and re.search(r'state\.gov/feed|comments/feed',label):return 'State Department catch-all or comments feed; press releases remain enabled'
+ if sid.startswith('us-nlrb-') and 'announcements' in label:return 'NLRB procedural announcements; decisions remain enabled'
+ if sid.startswith('us-occ-') and 'index-rss' in label:return 'OCC catch-all index; news feed remains enabled'
+ if sid.startswith('us-cftc-') and 'rss/index' in label:return 'CFTC catch-all index; press feed remains enabled'
+ if sid.startswith('no-norges-') and re.search(r'/rss/$',source['url']):return 'duplicate Norges Bank aggregate feed'
+ if sid.startswith('ca-gazette-') and 'p2-eng' not in label:return 'Canada Gazette notices; regulations (Part II) remain enabled'
+ if sid.startswith('io-bis-') and re.search(r'vacancies|fsi_publs',label):return 'BIS vacancies or research publications'
+ if sid.startswith('io-wto-') and 'podcast' in label:return 'WTO podcast feed'
+ if sid.startswith('us-congress-') and 'blogs.loc.gov' in label:return 'law librarian blog; congress.gov feeds remain enabled'
  return None
 
 def build(root):
@@ -58,10 +91,12 @@ def build(root):
   url=urllib.parse.urljoin(resolved,href);match=re.search(r'/rss/([a-z0-9-]+)\.xml$',url)
   if not match or url in seen:continue
   code=match[1]
-  if code not in selected and not code.startswith('uscourts-'):continue
-  seen.add(url);court=code.startswith('uscourts-');ident='us-govinfo-'+code
-  sources.append({'id':ident,'name':title or code,'jurisdiction':'US','family':'judicial_decisions' if court else 'legislative_and_presidential_documents','document_type':'court_opinion' if court else selected[code],'url':url,'adapter':'rss','discovery_url':DIRECTORIES['us_court_feeds'],'candidate_origin':'official_directory_link','saturation_limit':100})
-  if court:institutions.append({'id':ident,'name':title or code,'jurisdiction':'US','website':url,'official_directory_url':DIRECTORIES['us_court_feeds'],'status':'selected court participating in GovInfo; not all courts','shared_publication_source_ids':[ident]})
+  if code not in selected:continue
+  seen.add(url);ident='us-govinfo-'+code
+  # District-court docket feeds (uscourts-*) are deliberately not catalogued:
+  # individual filings/proceedings are not US-market signal. Supreme Court slip
+  # opinions are covered by the us-supreme-court seed instead.
+  sources.append({'id':ident,'name':title or code,'jurisdiction':'US','family':'legislative_and_presidential_documents','document_type':selected[code],'url':url,'adapter':'rss','discovery_url':DIRECTORIES['us_court_feeds'],'candidate_origin':'official_directory_link','saturation_limit':100,'title_include':r'^H\.R\.' if code=='bills' else None})
  # Central-bank and state directories add institution identities, not speculative feed URLs.
  for group in ('central_banks','us_states'):
   try:
