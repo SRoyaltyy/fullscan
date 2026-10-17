@@ -219,4 +219,6 @@ jobs:
         with:
           name: company-filings-full-completeness
           retention-days: 90
-          path: data/company_filings_full_report.json
+          path: |
+            data/company_filings_full_report.json
+            data/company_filings_full_dates.csv

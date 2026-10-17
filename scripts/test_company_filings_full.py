@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 from src.company_filings.full_extract import extract_document, file_bytes, full_html_text, split_submission
 from src.company_filings.full_archive import (LocalObjects, WholeClient, archive_filing,
-    archive_company, columnar_rows, read_filing, read_original, select_whole_filings)
+    archive_company, columnar_rows, filing_inventory, read_filing, read_original, select_whole_filings)
 
 ACCESSION='0000000001-26-000001'
 FILING={'accession':ACCESSION,'form':'10-K','native_form':'10-K','filing_date':'2026-02-20','report_date':'2025-12-31','primary':'annual.htm'}
@@ -161,6 +161,15 @@ class FullFilingTests(unittest.TestCase):
         self.assertEqual(rows[0]['native_form'],'40FR12B');self.assertEqual(rows[0]['form'],'40-F')
         self.assertEqual(rows[0]['accepted_at_raw'],'2026-02-20T12:00:00Z')
 
+    def test_recent_amendment_does_not_hide_original_annual_in_submission_history(self):
+        def block(form,accession,date):
+            return {'form':[form],'accessionNumber':[accession],'filingDate':[date],'reportDate':['2025-12-31'],'primaryDocument':['annual.htm']}
+        class HistoryClient:
+            def submissions(self,cik):return {'filings':{'recent':block('10-K/A','amendment','2026-06-01'),'files':[{'name':'history.json'}]}}
+            def submissions_file(self,name):return block('10-K','original','2026-02-20')
+        chosen,_=filing_inventory(HistoryClient(),'1')
+        self.assertEqual([r['accession'] for r in chosen],['original','amendment'])
+
     def test_company_does_not_hide_a_missing_selected_filing(self):
         company={'cik':'0000000001','tickers':['A','A-A']}
         inventory=([FILING,dict(FILING,accession='0000000001-26-000002')],{'expected_accessions':[ACCESSION,'0000000001-26-000002']})
@@ -205,6 +214,19 @@ class FullFilingTests(unittest.TestCase):
         self.assertTrue(verify(universe,[report],1)['complete'])
         self.assertFalse(verify(universe,[report],1,[])['complete'])
         self.assertTrue(verify(universe,[report],1,[{'name':'company-filings-full-shard-0','size_in_bytes':100,'expired':False}])['complete'])
+
+    def test_dates_index_keeps_each_filing_and_both_dual_class_tickers(self):
+        import csv
+        from scripts.verify_company_filings_full import write_dates_index
+        company={'cik':'0000000001','tickers':['Z-B','Z-A'],'durable':False,'filings':[
+            {'accession':'second','form':'10-Q','filing_date':'2026-05-01','report_date':'2026-03-31'},
+            {'accession':'first','form':'10-K','filing_date':'2026-02-01','report_date':'2025-12-31','accepted_at_raw':'2026-02-01T13:00:00Z'}]}
+        with tempfile.TemporaryDirectory() as d:
+            path=pathlib.Path(d)/'dates.csv';write_dates_index([company],path)
+            with path.open(newline='') as source:rows=list(csv.DictReader(source))
+            self.assertEqual([r['accession'] for r in rows],['first','second'])
+            self.assertEqual(rows[0]['tickers'],'Z-A;Z-B');self.assertEqual(rows[1]['report_date'],'2026-03-31')
+            self.assertEqual(rows[0]['accepted_at_raw'],'2026-02-01T13:00:00Z')
 
 
 if __name__=='__main__':unittest.main()

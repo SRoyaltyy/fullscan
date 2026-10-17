@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
 """Verify all shard reports against the pinned issuer/ticker inventory."""
-import argparse,json,pathlib
+import argparse,csv,json,pathlib
+
+
+def write_dates_index(companies,path):
+    fields=['cik','tickers','accession','form','filing_date','report_date','accepted_at_raw','source_url','source_sha256','source_bytes','manifest_key','raw_complete','text_complete','durable']
+    path.parent.mkdir(parents=True,exist_ok=True)
+    with path.open('w',encoding='utf-8',newline='') as out:
+        writer=csv.DictWriter(out,fieldnames=fields);writer.writeheader()
+        for company in sorted(companies,key=lambda c:c['cik']):
+            for filing in sorted(company.get('filings',[]),key=lambda f:(f.get('filing_date',''),f['accession'])):
+                writer.writerow({**{k:filing.get(k) for k in fields},'cik':company['cik'],
+                                 'tickers':';'.join(sorted(company['tickers'])),'durable':company.get('durable',False)})
 
 def verify(universe,reports,shards=12,published_artifacts=None):
     expected={r['ticker']:r['cik'] for r in universe['companies']}
@@ -55,10 +66,12 @@ def main():
     p.add_argument('--universe',type=pathlib.Path,default=pathlib.Path('data/company_filings_universe_2026-10-16.json'))
     p.add_argument('--output',type=pathlib.Path,default=pathlib.Path('data/company_filings_full_report.json'));p.add_argument('--shards',type=int,default=12)
     p.add_argument('--published-artifacts',type=pathlib.Path,help='Current run artifact inventory; required by the Actions publication check')
+    p.add_argument('--dates-output',type=pathlib.Path,default=pathlib.Path('data/company_filings_full_dates.csv'))
     args=p.parse_args();reports=[json.loads(f.read_text()) for f in args.reports.rglob('report.json')]
     publications=json.loads(args.published_artifacts.read_text())['artifacts'] if args.published_artifacts else None
     result=verify(json.loads(args.universe.read_text()),reports,args.shards,publications)
     args.output.parent.mkdir(parents=True,exist_ok=True);args.output.write_text(json.dumps(result,indent=2)+'\n')
+    write_dates_index(result['companies'],args.dates_output)
     print(json.dumps({k:v for k,v in result.items() if k!='companies'},indent=2))
     return 0 if result['complete'] else 1
 

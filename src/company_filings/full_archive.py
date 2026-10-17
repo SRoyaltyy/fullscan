@@ -172,14 +172,14 @@ def filing_inventory(client, cik):
     payload = client.submissions(cik)
     rows = columnar_rows((payload.get('filings') or {}).get('recent') or {})
     histories = []
-    if not any(row['form'] in ANNUAL_FORMS | ANNUAL_AMENDMENTS for row in rows):
+    if not any(row['form'] in ANNUAL_FORMS for row in rows):
         for history in (payload.get('filings') or {}).get('files') or []:
             name = history.get('name')
             if not name: continue
             block = client.submissions_file(name)
             histories.append({'name': name, 'sha256': sha256(json_bytes(block))})
             rows.extend(columnar_rows(block if block.get('form') else (block.get('filings') or {}).get('recent') or {}))
-            if any(row['form'] in ANNUAL_FORMS | ANNUAL_AMENDMENTS for row in rows): break
+            if any(row['form'] in ANNUAL_FORMS for row in rows): break
     chosen, reason = select_whole_filings(rows)
     return chosen, {'retrieved_at': timestamp(), 'selection': reason, 'submissions_sha256': sha256(json_bytes(payload)),
                     'submission_history_files': histories, 'issuer_name': payload.get('name'),
@@ -293,6 +293,8 @@ def archive_company(company, client, objects):
             result['cached_filings'] += int(reused)
             result['filings'].append({'accession': filing['accession'], 'form': filing['form'],
                 'filing_date': manifest['filing_date'], 'report_date': manifest['report_date'],
+                'accepted_at_raw': manifest['accepted_at_raw'], 'source_url': manifest['source_url'],
+                'source_sha256': manifest['source']['sha256'], 'source_bytes': manifest['source']['byte_count'],
                 'manifest_key': _manifest_key(cik, filing['accession']), 'raw_complete': manifest['raw_complete'],
                 'text_complete': manifest['text_complete'], 'text_failures': manifest['text_failures']})
         except Exception as exc:
