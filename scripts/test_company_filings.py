@@ -288,6 +288,16 @@ class ExtractTests(unittest.TestCase):
         self.assertIn("digital bank", sections["business"])
         self.assertNotIn("Business Overview 13", sections["business"])
 
+    def test_contents_lines_do_not_hide_the_rest_of_the_document(self):
+        prose = "The company designs semiconductors in Santa Clara and sells them worldwide. " * 30
+        raw = (
+            "<html><body><p>" + prose + "</p>"
+            "<p>Item 1.</p><p>Business 1</p><p>Item 1A.</p><p>Risk Factors 8</p></body></html>"
+        ).encode()
+        sections, status = sections_for("10-K", html_to_text(raw))
+        self.assertEqual(status, "unsplit")
+        self.assertIn("Santa Clara", sections["body"])
+
     def test_numeric_table_is_not_prose(self):
         raw = (
             b"<html><body><p>Item 1. Business</p><p>"

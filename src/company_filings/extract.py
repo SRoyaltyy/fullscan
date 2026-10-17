@@ -22,7 +22,7 @@ EXHIBIT_CAP = 60_000
 BODY_CAP = 180_000
 MIN_POINT_CHARS = 80
 # Bump when section splitting changes, so a stored contents page is read again.
-EXTRACTOR_VERSION = "2"
+EXTRACTOR_VERSION = "3"
 
 _BLOCK = frozenset({
     "p", "div", "tr", "h1", "h2", "h3", "h4", "li", "br", "section",
@@ -84,6 +84,13 @@ def sections_for(form: str, text: str) -> tuple[dict[str, str], str]:
         found = _annual_sections(text)
     else:
         found = _title_sections(text)
+    longest = max((len(value) for value in found.values()), default=0)
+    # A contents page can satisfy the item rules while the narrative sits outside
+    # those headers. Keep the document text when the item slices are only page numbers.
+    if longest < 500:
+        body = _cap(text, BODY_CAP)
+        if len(body) > longest + 1500:
+            return {"body": body}, "unsplit"
     if not found:
         body = _cap(text, BODY_CAP)
         if not body:
@@ -332,7 +339,8 @@ def _cap(text: str, limit: int) -> str:
 
 
 def _collapse(text: str) -> str:
-    text = text.replace("\xa0", " ").replace("\r", "\n")
+    text = re.sub(r"[\xa0\u1680\u2000-\u200a\u202f\u205f\u3000]", " ", text)
+    text = text.replace("\r", "\n")
     text = re.sub(r"[ \t]+\n", "\n", text)
     text = re.sub(r"[ \t]{2,}", " ", text)
     text = re.sub(r"\n{3,}", "\n\n", text)
