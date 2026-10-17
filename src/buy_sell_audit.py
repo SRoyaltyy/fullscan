@@ -5,8 +5,11 @@ prices, and would-have-bought lines are not hashed. A baseline row is the
 first seal for that strategy and day and is never rewritten. A day with no
 sealed buy/sell stays missing; this module does not backfill one.
 
-Theme Radar research shorts live in SRoyaltyy/theme-radar. This repo does
-not audit them.
+Theme Radar research shorts live in SRoyaltyy/theme-radar. The daily
+workflow checks that repo out (it is not vendored here) and runs
+``research/shadow_log/shadow_log_lock.py audit --json -``. Exit 0 with
+strategy ``theme_radar_research_shorts`` is PASS. Any other exit fails
+this audit. This module does not seal or rewrite theme-radar rows.
 
 The strategy set is the one ``strategy_status_publish`` reads (tickets,
 pre-open seals, h1 plans, holdup plans, excel lock, webull sim), limited
@@ -16,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -26,15 +30,127 @@ from src.past_day_lock import sha256_text
 
 ROOT = Path(__file__).resolve().parents[1]
 BASELINES = Path("data/buy_sell_audit/baselines.jsonl")
-SKIP_THEME = (
-    "SKIP theme_radar: Theme Radar owns its own audit "
-    "(SRoyaltyy/theme-radar); not checked in this repo"
-)
+# Hook command, run with cwd = a theme-radar checkout:
+#   python research/shadow_log/shadow_log_lock.py audit --json -
+THEME_STRATEGY = "theme_radar_research_shorts"
+THEME_AUDIT_ARGV = ("research/shadow_log/shadow_log_lock.py", "audit", "--json", "-")
 
 
 class AuditError(SystemExit):
     def __init__(self, message: str):
         super().__init__(message)
+
+
+def _one_line(text: object) -> str:
+    return " ".join(str(text).split())
+
+
+def _theme_json(stdout: str):
+    text = stdout.strip()
+    if not text:
+        return None
+    try:
+        obj = json.loads(text)
+    except ValueError:
+        return None
+    return obj if isinstance(obj, dict) else None
+
+
+def theme_passes(returncode: int, report) -> bool:
+    """Exit 0 and strategy ``theme_radar_research_shorts`` with ok true."""
+    return (
+        returncode == 0
+        and isinstance(report, dict)
+        and report.get("strategy") == THEME_STRATEGY
+        and report.get("ok") is True
+    )
+
+
+def theme_fail_line(returncode: int, report, detail: str = "") -> str:
+    """One job-log line. Starts with DRIFT and contains FAIL."""
+    parts = [f"FAIL exit {returncode}"]
+    if isinstance(report, dict):
+        got = report.get("strategy")
+        if got != THEME_STRATEGY:
+            parts.append(f"strategy={got!r}")
+        if report.get("ok") is not True:
+            parts.append("ok is not true")
+        dates = report.get("drift_dates") or []
+        if isinstance(dates, list) and dates:
+            shown = ",".join(str(item) for item in dates[:12])
+            extra = len(dates) - 12
+            if extra > 0:
+                shown += f",+{extra}"
+            parts.append(f"drift_dates={shown}")
+        summary = report.get("summary") if isinstance(report.get("summary"), dict) else {}
+        if summary:
+            parts.append(
+                f"drifts={summary.get('drifts', 0)} "
+                f"missing_seals={summary.get('missing_seals', 0)}"
+            )
+        blocked = report.get("blocked")
+        if blocked:
+            parts.append(f"blocked={_one_line(blocked)}")
+    if detail:
+        parts.append(_one_line(detail))
+    return f"DRIFT {THEME_STRATEGY}: " + " ".join(parts)
+
+
+def _theme_context(stderr: str) -> list[str]:
+    lines = []
+    for raw in stderr.splitlines():
+        if not raw.strip():
+            continue
+        lines.append("theme-radar: " + _one_line(raw))
+        if len(lines) >= 40:
+            lines.append("theme-radar: ...")
+            break
+    return lines
+
+
+def _theme_runner(checkout: Path) -> tuple[int, str, str]:
+    script = checkout / THEME_AUDIT_ARGV[0]
+    if not checkout.is_dir() or not script.is_file():
+        return 127, "", f"missing {script}"
+    env = {
+        key: value for key, value in os.environ.items()
+        if key not in {"GH_TOKEN", "GITHUB_TOKEN", "GH_ENTERPRISE_TOKEN"}
+    }
+    try:
+        proc = subprocess.run(
+            [sys.executable, *THEME_AUDIT_ARGV],
+            cwd=checkout, capture_output=True, text=True,
+            timeout=300, check=False, env=env,
+        )
+    except subprocess.TimeoutExpired:
+        return 124, "", "audit timed out"
+    except OSError as exc:
+        return 127, "", str(exc)
+    return proc.returncode, proc.stdout or "", proc.stderr or ""
+
+
+def run_theme_radar_audit(checkout: Path) -> list[str]:
+    """Run theme-radar's audit in ``checkout``. Does not clone.
+
+    A missing checkout, a non-zero exit, unreadable JSON, or any strategy
+    other than ``theme_radar_research_shorts`` is a DRIFT/FAIL line.
+    """
+    code, stdout, stderr = _theme_runner(Path(checkout))
+    report = _theme_json(stdout)
+    notes = _theme_context(stderr)
+    if theme_passes(code, report):
+        notes.append(f"PASS {THEME_STRATEGY}")
+        return notes
+    detail = ""
+    if report is None:
+        if stderr.strip() and code in (124, 127):
+            detail = stderr.strip()
+        elif stdout.strip():
+            detail = "stdout was not audit JSON"
+        else:
+            detail = "no audit JSON"
+    notes.append(theme_fail_line(code, report, detail))
+    return notes
 
 
 @dataclass(frozen=True)
@@ -168,6 +284,8 @@ def _excel_row(root: Path, day: str) -> dict:
 
 
 def _take(row: dict, seals: list[Seal], missing: list[str]) -> None:
+    # Status-board theme_radar rows are not this fingerprint. Research shorts
+    # are checked by run_theme_radar_audit.
     if row.get("family") == "theme_radar" or str(row.get("name") or "").startswith("theme_radar:"):
         return
     if row.get("status") not in ("OK", "SIT"):
@@ -217,11 +335,10 @@ def _webull_seals(root: Path, locked: list[dict], missing: list[str]) -> list[Se
 def collect(root: Path) -> tuple[list[Seal], list[str]]:
     """Sealed buy/sell rows, plus SKIP/MISSING/DRIFT notes that are not seals."""
     root = Path(root)
-    notes = [SKIP_THEME]
-    notes.append(
+    notes = [
         "SKIP flatten card equity: 01_daily/*_flatten_card.md marks stay "
-        "outside the fingerprint; flatten_robust buy/sell is the sealed ticket"
-    )
+        "outside the fingerprint; flatten_robust buy/sell is the sealed ticket",
+    ]
     seals: list[Seal] = []
     locked = _lock_rows(root)
     ticket_days = sorted({
@@ -503,10 +620,17 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--date", default="", help="Printed focus day; every sealed day is still checked")
     parser.add_argument("--root", default=str(ROOT))
     parser.add_argument("--baselines", default="")
+    parser.add_argument(
+        "--theme-radar", default="",
+        help="Existing SRoyaltyy/theme-radar checkout. Runs audit --json - there. "
+             "Does not clone. Non-zero fails this audit.",
+    )
     args = parser.parse_args(argv)
     root = Path(args.root)
     path = Path(args.baselines) if args.baselines else root / BASELINES
     seals, notes = collect(root)
+    if args.theme_radar:
+        notes.extend(run_theme_radar_audit(Path(args.theme_radar)))
     drifts = [note for note in notes if note.startswith("DRIFT ")]
     for note in notes:
         if not note.startswith("DRIFT "):
@@ -542,7 +666,8 @@ def main(argv: list[str] | None = None) -> int:
     )
     if drifts or news:
         print("RED: a past buy/sell fingerprint moved, a sealed row vanished, "
-              "or a sealed day has no first-seal baseline. "
+              "a sealed day has no first-seal baseline, "
+              "or theme_radar_research_shorts failed. "
               "See docs/buy_sell_audit.md.")
         return 1
     print("PASS")
