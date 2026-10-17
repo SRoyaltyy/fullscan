@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -24,7 +25,66 @@ CATALOG = ROOT / "config" / "primary_action_sources.json"
 LATEST_DIR = ROOT / "data" / "primary_actions" / "latest"
 PAGES_URL = "https://sroyaltyy.github.io/fullscan/dashboard/source-board/"
 RAW_BASE = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main"
-MAX_HEADLINES = 300
+MAX_HEADLINES = 400
+
+# Trading-relevance classes (rule-based, zero LLM — same pipeline philosophy).
+# The pipeline intentionally collects EVERY primary publication; the board's job
+# is to separate what can move a market from the administrative firehose.
+HIGH_PAT = re.compile(
+    r"penalt|\bfine[sd]?\b|cartel|antitrust|monopol|merger|acquisition|takeover|"
+    r"authori[sz]ation|opposes?|prohibit|sanction|embargo|recall\b|enforcement|"
+    r"cease[- ]and[- ]desist|consent (order|decree)|rate decision|monetary policy|"
+    r"cuts? (its )?(policy )?rate|raises? (its )?(policy )?rate|rate (hike|cut)|"
+    r"indict|guilty|settle|settlement|class action|insider trading|securities fraud|"
+    r"fraud|bankrupt|liquidat|delist|blocking|veto|approv|clear(ed|s)? (the )?(merger|takeover)|"
+    r"prosecut|convict|forfeit", re.I)
+NOISE_PAT = re.compile(
+    r"corrigendum|minutes of|pre-bid|invitation for bid|\btender\b|advertisement|"
+    r"vacanc|recruitment|internship|\badvert\b|maintenance contract|horticultur|"
+    r"gardening|housekeeping|backgrounder|press release\s*$|list of (officers|members)|"
+    r"schedule of|timetable", re.I)
+PRIORITY_PREFIXES = (
+    "us-ftc", "us-fcc", "us-ferc", "us-dot-", "us-hhs", "us-fda", "us-sec",
+    "us-doj", "us-cftc", "us-state", "us-osha", "us-fsis", "us-nhtsa",
+    "jp-jftc", "jp-meti", "in-pib", "in-rbi", "in-sebi", "in-cci",
+    "nz-rbnz", "au-accc", "au-asx", "eu-court", "de-bundesbank",
+    "hk-hkma", "uk-fca", "uk-boe", "uk-pra", "sg-mas", "ch-snb",
+)
+SIGNAL_FAMILIES = {
+    "monetary_operations", "monetary_and_supervisory", "competition_and_enforcement",
+    "energy_orders_and_rates", "transport_permissions", "product_permissions_and_safety",
+    "judicial_and_enforcement", "insolvency_and_public_notices",
+}
+
+
+# DOJ general-crime press releases (sex offences, drugs, firearms) are not
+# market signal even though words like "convicted" match HIGH_PAT; require a
+# white-collar/financial keyword before a DOJ item can be "high".
+DOJ_CRIME_PAT = re.compile(
+    r"sex offend|child|pornograph|fentanyl|heroin|meth|drug traffick|cocaine|"
+    r"firearm|\bgun\b|gang|murder|homicide|assault|robber|kidnap|"
+    r"human traffick|immigration|reentry|deport", re.I)
+DOJ_FIN_PAT = re.compile(
+    r"fraud|antitrust|securit|insider|briber|corrupt|FCPA|price.fix|cartel|"
+    r"embezzl|money launder|tax evas|kickback|bid.rigg|bankrupt|"
+    r"health care|cryptocurrency|virtual currency|sanction", re.I)
+
+
+def classify(headline: dict, family: str) -> str:
+    title = headline.get("title") or ""
+    src = headline.get("source") or ""
+    if NOISE_PAT.search(title):
+        return "noise"
+    if src.startswith("us-doj") and DOJ_CRIME_PAT.search(title) \
+            and not DOJ_FIN_PAT.search(title):
+        return "docket"
+    if HIGH_PAT.search(title):
+        return "high"
+    if src.startswith("us-govinfo-uscourts"):
+        return "docket"
+    if src.startswith(PRIORITY_PREFIXES) or family in SIGNAL_FAMILIES:
+        return "watch"
+    return "routine"
 
 
 def _load_json(path: Path, default):
@@ -83,17 +143,30 @@ def build(date: str = "") -> dict:
 
     headlines = []
     by_source = Counter()
+    by_class = Counter()
+    fam_by_id = {c.get("id") or "": c.get("family") or "" for c in channels}
     for r in new_items or []:
         src = r.get("primary_source_id") or "unknown"
         by_source[src] += 1
-        headlines.append({
+        h = {
             "title": r.get("title") or "",
             "url": r.get("url") or "",
             "published_at": r.get("published_at") or "",
             "source": src,
             "issuer": (r.get("source_metadata") or {}).get("issuer") or "",
-        })
-    headlines.sort(key=lambda r: r["published_at"] or "", reverse=True)
+            "cls": classify({"title": r.get("title") or "", "source": src},
+                            fam_by_id.get(src) or ""),
+        }
+        by_class[h["cls"]] += 1
+        headlines.append(h)
+
+    def _ts(s: str) -> float:
+        try:
+            return datetime.fromisoformat(s.replace("Z", "+00:00")).timestamp()
+        except (ValueError, AttributeError):
+            return 0.0
+    order = {"high": 0, "watch": 1, "routine": 2, "docket": 3, "noise": 4}
+    headlines.sort(key=lambda r: (order.get(r["cls"], 9), -_ts(r["published_at"])))
 
     counts = report.get("counts") or {}
     board_date = date or _date_of(str(report.get("generated_at") or ""))
@@ -122,6 +195,7 @@ def build(date: str = "") -> dict:
         "new_today": {
             "count": len(headlines),
             "by_source": dict(by_source.most_common()),
+            "by_class": dict(by_class),
             "headlines": headlines[:MAX_HEADLINES],
         },
         "href": {
@@ -152,6 +226,10 @@ def _merge_prev(board: dict, prev: dict) -> dict:
     for h in extra:
         bs[h.get("source") or "unknown"] += 1
     nt["by_source"] = dict(bs.most_common())
+    bc = Counter(nt.get("by_class") or {})
+    for h in extra:
+        bc[h.get("cls") or "routine"] += 1
+    nt["by_class"] = dict(bc)
     nt["count"] = len(heads)
     merged["new_today"] = nt
     return merged
@@ -181,7 +259,8 @@ def write_json(board: dict) -> list[Path]:
         "catalog": board.get("catalog") or {},
         "collect": board.get("collect") or {},
         "new_today": {"count": (board.get("new_today") or {}).get("count", 0),
-                      "by_source": (board.get("new_today") or {}).get("by_source") or {}},
+                      "by_source": (board.get("new_today") or {}).get("by_source") or {},
+                      "by_class": (board.get("new_today") or {}).get("by_class") or {}},
         "n_failures": len(board.get("failures") or []),
         "dates": _latest_dates(date),
         "href": f"{RAW_BASE}/data/source_board/{date}.json",
