@@ -1,21 +1,21 @@
 {
  "date": "2026-10-17",
- "generated_at": "2026-10-17T12:26:48.064336+00:00",
+ "generated_at": "2026-10-17T12:52:39.162286+00:00",
  "catalog": {
-  "generated_at": "2026-10-17T11:45:29.426582+00:00",
-  "channels": 536,
-  "enabled": 456,
-  "verified_ok": 443,
+  "generated_at": "2026-10-17T12:48:37.422317+00:00",
+  "channels": 541,
+  "enabled": 458,
+  "verified_ok": 445,
   "by_adapter": {
    "federal_register": 1,
    "hkma_press": 1,
    "govuk_search": 18,
-   "rss": 422,
+   "rss": 424,
    "html_index": 11,
    "google_news_rss": 3
   },
   "by_jurisdiction": {
-   "US": 303,
+   "US": 305,
    "EU": 46,
    "CA": 34,
    "UK": 25,
@@ -38,28 +38,28 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-17T12:25:59.940473+00:00",
-  "enabled_sources": 456,
-  "sources_ok": 455,
+  "generated_at": "2026-10-17T12:51:21.988058+00:00",
+  "enabled_sources": 458,
+  "sources_ok": 457,
   "sources_failed": 1,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 4245,
-   "old": 3128,
-   "future": 0,
-   "undated": 351,
+   "observed": 4743,
+   "old": 3523,
+   "future": 12,
+   "undated": 372,
    "new": 2,
-   "duplicates": 1115
+   "duplicates": 1206
   },
-  "current_dated_documents": 3577
+  "current_dated_documents": 3578
  },
  "failures": [
   {
-   "source_id": "hk-hkma-public-press",
+   "source_id": "us-fed-00a0e0a88a",
    "status": "parse_or_network_error",
    "http_status": null,
    "warnings": [],
-   "exception": "TimeoutError"
+   "exception": "ParseError"
   }
  ],
  "channels": [
@@ -80,7 +80,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "hk-hkma-public-press",
@@ -101,7 +101,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-decision",
@@ -113,14 +113,14 @@
    "url": "https://www.gov.uk/api/search.json",
    "status": "ok",
    "http_status": 200,
-   "rows": 22,
+   "rows": 21,
    "sample": [
     "CAC Outcome: TSSA & Transport for London (TfL)",
     "CAC Outcome: NEU, NASUWT & Liverpool College"
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-regulation",
@@ -139,7 +139,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-statutory_instrument",
@@ -155,7 +155,7 @@
    "sample": [],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-consultation_outcome",
@@ -174,7 +174,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-government_response",
@@ -190,7 +190,7 @@
    "sample": [],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-employment_tribunal_decision",
@@ -202,14 +202,14 @@
    "url": "https://www.gov.uk/api/search.json",
    "status": "ok",
    "http_status": 200,
-   "rows": 120,
+   "rows": 118,
    "sample": [
     "Ms L March v West London NHS Trust: 6015390/2024 and others",
     "D Perdomo v JD Sports Fashion plc: 2309168/2024 and 2307224/2025"
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-employment_appeal_tribunal_decision",
@@ -227,7 +227,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-residential_property_tribunal_decision",
@@ -246,7 +246,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-tax_tribunal_decision",
@@ -264,7 +264,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-utaac_decision",
@@ -283,7 +283,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-traffic_commissioner_regulatory_decision",
@@ -299,7 +299,7 @@
    "sample": [],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-asylum_support_decision",
@@ -315,7 +315,7 @@
    "sample": [],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-medical_safety_alert",
@@ -334,7 +334,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-drug_safety_update",
@@ -352,7 +352,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-product_safety_alert_report_recall",
@@ -370,7 +370,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-international_treaty",
@@ -386,7 +386,7 @@
    "sample": [],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-written_statement",
@@ -404,7 +404,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-farming_grant",
@@ -420,7 +420,7 @@
    "sample": [],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-business_finance_support_scheme",
@@ -439,7 +439,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-govuk-notice",
@@ -458,7 +458,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-bills",
@@ -477,7 +477,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-bills-enr",
@@ -498,7 +498,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-plaw",
@@ -517,7 +517,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-dcpd",
@@ -536,7 +536,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-chrg",
@@ -555,7 +555,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-crpt",
@@ -574,7 +574,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-alnd",
@@ -593,7 +593,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-alsd",
@@ -612,7 +612,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-almd",
@@ -633,7 +633,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-akd",
@@ -652,7 +652,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-azd",
@@ -671,7 +671,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ared",
@@ -690,7 +690,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-caed",
@@ -711,7 +711,7 @@
     "feed_at_capacity_in_requested_window; snapshots may miss overflow"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-cand",
@@ -732,7 +732,7 @@
     "feed_at_capacity_in_requested_window; snapshots may miss overflow"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-casd",
@@ -753,7 +753,7 @@
     "feed_at_capacity_in_requested_window; snapshots may miss overflow"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-cod",
@@ -772,7 +772,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ctd",
@@ -791,7 +791,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-dcd",
@@ -810,7 +810,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ded",
@@ -829,7 +829,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-flsd",
@@ -848,7 +848,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-flnd",
@@ -867,7 +867,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-gamd",
@@ -886,7 +886,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-gand",
@@ -907,7 +907,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-gud",
@@ -926,7 +926,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-hid",
@@ -945,7 +945,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-idd",
@@ -966,7 +966,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ilnd",
@@ -987,7 +987,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ilsd",
@@ -1006,7 +1006,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-insd",
@@ -1025,7 +1025,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-iand",
@@ -1044,7 +1044,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ksd",
@@ -1063,7 +1063,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-kyed",
@@ -1082,7 +1082,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-kywd",
@@ -1101,7 +1101,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-laed",
@@ -1120,7 +1120,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-lamd",
@@ -1139,7 +1139,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-med",
@@ -1158,7 +1158,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-mdd",
@@ -1177,7 +1177,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-mad",
@@ -1196,7 +1196,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-mied",
@@ -1215,7 +1215,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-miwd",
@@ -1234,7 +1234,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-mnd",
@@ -1253,7 +1253,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-moed",
@@ -1274,7 +1274,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-mowd",
@@ -1293,7 +1293,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-mtd",
@@ -1312,7 +1312,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ned",
@@ -1331,7 +1331,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-nhd",
@@ -1350,7 +1350,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-njd",
@@ -1369,7 +1369,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-nmd",
@@ -1388,7 +1388,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-nyed",
@@ -1407,7 +1407,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-nynd",
@@ -1426,7 +1426,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-nywd",
@@ -1445,7 +1445,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ncmd",
@@ -1464,7 +1464,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ncwd",
@@ -1483,7 +1483,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ndd",
@@ -1502,7 +1502,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-nmid",
@@ -1521,7 +1521,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ohnd",
@@ -1540,7 +1540,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ohsd",
@@ -1559,7 +1559,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-oked",
@@ -1578,7 +1578,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-okwd",
@@ -1597,7 +1597,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ord",
@@ -1616,7 +1616,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-paed",
@@ -1635,7 +1635,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-pamd",
@@ -1654,7 +1654,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-pawd",
@@ -1673,7 +1673,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-prd",
@@ -1692,7 +1692,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-rid",
@@ -1711,7 +1711,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-sdd",
@@ -1732,7 +1732,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-tned",
@@ -1751,7 +1751,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-tnwd",
@@ -1770,7 +1770,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-tnmd",
@@ -1789,7 +1789,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-txed",
@@ -1808,7 +1808,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-txnd",
@@ -1827,7 +1827,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-txsd",
@@ -1846,7 +1846,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-txwd",
@@ -1867,7 +1867,7 @@
     "feed_at_capacity_in_requested_window; snapshots may miss overflow"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-utd",
@@ -1886,7 +1886,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-vid",
@@ -1905,7 +1905,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-vtd",
@@ -1924,7 +1924,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-waed",
@@ -1945,7 +1945,7 @@
     "feed_at_capacity_in_requested_window; snapshots may miss overflow"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-wiwd",
@@ -1964,7 +1964,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-wvnd",
@@ -1985,7 +1985,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-wyd",
@@ -2006,7 +2006,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ca1",
@@ -2025,7 +2025,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ca2",
@@ -2046,7 +2046,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ca3",
@@ -2065,7 +2065,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ca4",
@@ -2084,7 +2084,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ca5",
@@ -2103,7 +2103,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ca6",
@@ -2122,7 +2122,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ca7",
@@ -2141,7 +2141,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ca8",
@@ -2160,7 +2160,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ca9",
@@ -2179,7 +2179,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ca10",
@@ -2198,7 +2198,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ca11",
@@ -2217,7 +2217,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-cadc",
@@ -2236,7 +2236,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ca13",
@@ -2255,7 +2255,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-almb",
@@ -2276,7 +2276,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-alnb",
@@ -2297,7 +2297,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-alsb",
@@ -2318,7 +2318,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-akb",
@@ -2339,7 +2339,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-areb",
@@ -2360,7 +2360,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-arwb",
@@ -2381,7 +2381,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-azb",
@@ -2402,7 +2402,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-caeb",
@@ -2423,7 +2423,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-canb",
@@ -2442,7 +2442,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-cacb",
@@ -2463,7 +2463,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-cob",
@@ -2482,7 +2482,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-dcb",
@@ -2503,7 +2503,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ctb",
@@ -2524,7 +2524,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-deb",
@@ -2543,7 +2543,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-flsb",
@@ -2564,7 +2564,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-flmb",
@@ -2585,7 +2585,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ganb",
@@ -2606,7 +2606,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-gamb",
@@ -2627,7 +2627,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-hib",
@@ -2648,7 +2648,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ilnb",
@@ -2667,7 +2667,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ilsb",
@@ -2688,7 +2688,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ilcb",
@@ -2707,7 +2707,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-insb",
@@ -2728,7 +2728,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ianb",
@@ -2747,7 +2747,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-kyeb",
@@ -2768,7 +2768,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-kywb",
@@ -2787,7 +2787,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-laeb",
@@ -2808,7 +2808,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-lawb",
@@ -2829,7 +2829,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-lamb",
@@ -2850,7 +2850,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-meb",
@@ -2869,7 +2869,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-mdb",
@@ -2890,7 +2890,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-mab",
@@ -2909,7 +2909,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-miwb",
@@ -2930,7 +2930,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-mnb",
@@ -2951,7 +2951,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-msnb",
@@ -2972,7 +2972,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-moeb",
@@ -2993,7 +2993,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-mowb",
@@ -3014,7 +3014,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-mtb",
@@ -3035,7 +3035,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-neb",
@@ -3054,7 +3054,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-nvb",
@@ -3075,7 +3075,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-nhb",
@@ -3096,7 +3096,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-njb",
@@ -3115,7 +3115,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-nmb",
@@ -3134,7 +3134,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-nyeb",
@@ -3155,7 +3155,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-nynb",
@@ -3176,7 +3176,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-nysb",
@@ -3195,7 +3195,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-nywb",
@@ -3214,7 +3214,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-nceb",
@@ -3235,7 +3235,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ncwb",
@@ -3256,7 +3256,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ndb",
@@ -3275,7 +3275,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ohnb",
@@ -3296,7 +3296,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-ohsb",
@@ -3317,7 +3317,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-okeb",
@@ -3338,7 +3338,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-oknb",
@@ -3359,7 +3359,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-okwb",
@@ -3380,7 +3380,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-orb",
@@ -3401,7 +3401,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-paeb",
@@ -3422,7 +3422,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-pamb",
@@ -3443,7 +3443,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-pawb",
@@ -3464,7 +3464,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-prb",
@@ -3485,7 +3485,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-rib",
@@ -3506,7 +3506,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-scb",
@@ -3527,7 +3527,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-sdb",
@@ -3548,7 +3548,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-tneb",
@@ -3567,7 +3567,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-tnmb",
@@ -3588,7 +3588,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-txsb",
@@ -3607,7 +3607,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-txwb",
@@ -3628,7 +3628,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-vawb",
@@ -3649,7 +3649,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-vib",
@@ -3670,7 +3670,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-waeb",
@@ -3691,7 +3691,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-wawb",
@@ -3712,7 +3712,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-wvnb",
@@ -3733,7 +3733,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-wieb",
@@ -3754,7 +3754,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-wiwb",
@@ -3775,7 +3775,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-wyb",
@@ -3796,7 +3796,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-jpml",
@@ -3817,7 +3817,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-cit",
@@ -3836,7 +3836,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-govinfo-uscourts-cofc",
@@ -3855,7 +3855,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-white-house-0691096d16",
@@ -3874,7 +3874,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-congress-76128ee9ff",
@@ -3893,7 +3893,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-supreme-court-index",
@@ -3913,7 +3913,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-sec-8940dd7737",
@@ -3932,7 +3932,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-sec-2476f14c28",
@@ -3953,7 +3953,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-sec-18c0a4ef1b",
@@ -3972,7 +3972,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-ftc-215e85fe7a",
@@ -3988,7 +3988,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-ftc-58b0383166",
@@ -4007,7 +4007,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-ftc-ebb4359fb7",
@@ -4028,7 +4028,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-ftc-62f72b4a5d",
@@ -4047,7 +4047,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-ftc-df73e297e1",
@@ -4061,12 +4061,12 @@
    "http_status": 200,
    "rows": 20,
    "sample": [
-    "20262376: EQT X (No.1) EUR SCSp; Thunderbolt Cayman Limited",
-    "20262409: WEG Parent, LLC; SP-AI Holdings, LP"
+    "20262366: Victory Capital Holdings, Inc.; GC Ferry Parent, L.P.",
+    "20262383: Main Capital IX Cooperatief U.A.; Washington Master Seller LLC"
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-ftc-bba965d451",
@@ -4085,7 +4085,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-ftc-231f8b7a06",
@@ -4099,14 +4099,14 @@
    "http_status": 200,
    "rows": 10,
    "sample": [
-    "When BOGO is a no-go",
-    "Game over: FTC challenges Sony’s claims for PlayStation Vita and tweets by Deutsch LA"
+    "It’s a fact: No changes to FTC “Lighting Facts” requirements",
+    "Can you support your claims about Privacy Shield, CBPR participation?"
    ],
    "warnings": [
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-ftc-eb00b45983",
@@ -4120,14 +4120,14 @@
    "http_status": 200,
    "rows": 10,
    "sample": [
-    "Vertical mergers, yesterday and today",
-    "HSR threshold adjustments and reportability for 2020"
+    "Interlocking Mindfulness",
+    "MMA Reports: No tricks or treats—just facts"
    ],
    "warnings": [
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-ftc-69601f2e49",
@@ -4148,7 +4148,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-ftc-0bebed9338",
@@ -4164,7 +4164,7 @@
    "sample": [],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-doj-b3d27e1dc3",
@@ -4183,7 +4183,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-doj-e05071794d",
@@ -4202,7 +4202,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-ofac-index",
@@ -4221,7 +4221,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-treasury-a69e5b5ef0",
@@ -4242,7 +4242,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-bis-index",
@@ -4261,7 +4261,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-ustr-index",
@@ -4282,7 +4282,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-itc-index",
@@ -4301,7 +4301,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-a12cd46677",
@@ -4322,7 +4322,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-7cfba7c4ca",
@@ -4341,7 +4341,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-a383ca0d09",
@@ -4362,7 +4362,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-97656cefc7",
@@ -4381,7 +4381,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-1401ff4ff2",
@@ -4402,7 +4402,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-1555c8e0e5",
@@ -4423,7 +4423,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-26e23fdd1e",
@@ -4442,7 +4442,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-e2ce260ae2",
@@ -4463,7 +4463,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-ac74d95d1d",
@@ -4482,7 +4482,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-4a7a32a890",
@@ -4503,7 +4503,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-f882a1672b",
@@ -4522,7 +4522,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-4670d321e6",
@@ -4543,7 +4543,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-e802a028ac",
@@ -4564,7 +4564,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-ee4be941fa",
@@ -4585,7 +4585,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-33d27b479f",
@@ -4606,7 +4606,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-eaf08177c6",
@@ -4627,7 +4627,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-be1dd8be57",
@@ -4646,7 +4646,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-00a0e0a88a",
@@ -4654,15 +4654,20 @@
    "jurisdiction": "US",
    "family": "monetary_operations",
    "adapter": "rss",
-   "enabled": false,
+   "enabled": true,
    "url": "https://oig.federalreserve.gov/feeds/oig.xml",
-   "status": "invalid_feed_or_network_error",
-   "http_status": null,
-   "rows": null,
-   "sample": [],
-   "warnings": [],
-   "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "status": "ok",
+   "http_status": 200,
+   "rows": 15,
+   "sample": [
+    "Ongoing Work Update",
+    "​CFPB: Hardware Assets at Former Regional Offices May Not Be Appropriately Secured"
+   ],
+   "warnings": [
+    "stale_feed_outside_requested_window"
+   ],
+   "exception": "",
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-8e8c6f5fe1",
@@ -4678,7 +4683,7 @@
    "sample": [],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-ba8ad56252",
@@ -4699,7 +4704,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-0023b1ebca",
@@ -4718,7 +4723,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-1549fdd7e4",
@@ -4737,7 +4742,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-a93c08c457",
@@ -4758,7 +4763,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-3245ef68c0",
@@ -4777,7 +4782,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-6b4f3c67e0",
@@ -4796,7 +4801,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-2b07697ff4",
@@ -4817,7 +4822,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-d2e162c557",
@@ -4836,7 +4841,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-a846f068de",
@@ -4852,7 +4857,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-c3030e34e5",
@@ -4873,7 +4878,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-1d7a0dba2e",
@@ -4894,7 +4899,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-95066bc761",
@@ -4915,7 +4920,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-9e5dd70c57",
@@ -4936,7 +4941,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-54af05612c",
@@ -4957,7 +4962,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-f2d30d7b89",
@@ -4978,7 +4983,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-b9c811c1fd",
@@ -4999,7 +5004,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-ec604ccde0",
@@ -5020,7 +5025,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-910310a6e3",
@@ -5041,7 +5046,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-a798b7ecc0",
@@ -5062,7 +5067,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-7e64fb29c8",
@@ -5078,7 +5083,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-300afd9530",
@@ -5099,7 +5104,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-05c3eae44a",
@@ -5120,7 +5125,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-eea49fa482",
@@ -5141,7 +5146,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-8d9ba6faea",
@@ -5162,7 +5167,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fed-0a7a64daa4",
@@ -5183,7 +5188,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fdic-index",
@@ -5204,7 +5209,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-occ-6f63126133",
@@ -5223,7 +5228,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-occ-817aa94321",
@@ -5239,7 +5244,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-cfpb-8e157aee85",
@@ -5260,7 +5265,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fincen-index",
@@ -5281,7 +5286,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-cftc-fda5c3631d",
@@ -5302,7 +5307,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-cftc-ae3eccf358",
@@ -5318,7 +5323,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fda-df70b9f330",
@@ -5339,7 +5344,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fda-1a1096082f",
@@ -5360,7 +5365,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fda-2d9c4fc2f9",
@@ -5381,7 +5386,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fda-8fc09ac0a2",
@@ -5402,7 +5407,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fda-3eaddf14de",
@@ -5423,7 +5428,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fda-b2623da30a",
@@ -5444,7 +5449,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fda-2cdcdcca63",
@@ -5463,7 +5468,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fda-a25233bfac",
@@ -5484,7 +5489,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fda-1ca201e48f",
@@ -5505,7 +5510,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fda-00e9311ef2",
@@ -5524,7 +5529,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fda-c7d1d1cd64",
@@ -5545,7 +5550,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fda-d7692535f0",
@@ -5566,7 +5571,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fda-5696b24295",
@@ -5585,7 +5590,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fda-03f7703006",
@@ -5599,12 +5604,12 @@
    "http_status": 200,
    "rows": 20,
    "sample": [
-    "Expedited IND Rolling Submission Process and Program Structure",
-    "Expedited Investigational New Drug Pilot Program - Application Instructions"
+    "eSubmitter Application History",
+    "Drugs@FDA Data Files"
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-cpsc-99343b5112",
@@ -5623,7 +5628,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-cpsc-08fe06e2e6",
@@ -5642,7 +5647,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fsis-2f49ece915",
@@ -5661,7 +5666,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fsis-85c9542fd5",
@@ -5682,7 +5687,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fsis-3809510616",
@@ -5701,7 +5706,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fsis-7286fece64",
@@ -5720,7 +5725,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-hhs-6f995a5754",
@@ -5739,7 +5744,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-epa-172ef7885f",
@@ -5755,7 +5760,7 @@
    "sample": [],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-cc160d8862",
@@ -5771,7 +5776,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-86f1b34c46",
@@ -5790,7 +5795,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-1ad902e468",
@@ -5811,7 +5816,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-87ed985036",
@@ -5830,7 +5835,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-ff38ce828f",
@@ -5851,7 +5856,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-198472aaf9",
@@ -5872,7 +5877,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-adabf37abf",
@@ -5891,7 +5896,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-ba4344681a",
@@ -5909,7 +5914,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-64964a4064",
@@ -5927,7 +5932,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-89097e714e",
@@ -5945,7 +5950,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-71eeceab27",
@@ -5963,7 +5968,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-1b3777e6de",
@@ -5981,7 +5986,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-ecb8f61902",
@@ -5999,7 +6004,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-ac50faa58a",
@@ -6017,7 +6022,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-508813fafa",
@@ -6025,15 +6030,17 @@
    "jurisdiction": "US",
    "family": "telecom_rules_and_licences",
    "adapter": "rss",
-   "enabled": false,
+   "enabled": true,
    "url": "https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Guide",
-   "status": "invalid_feed_or_network_error",
-   "http_status": null,
-   "rows": null,
-   "sample": [],
+   "status": "ok",
+   "http_status": 200,
+   "rows": 1,
+   "sample": [
+    "Establishing the Digital Opportunity Data Collection; Modernizing the FCC Form 477 Data Program; Delete, Delete, Delete"
+   ],
    "warnings": [],
-   "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "exception": "",
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-9e55083358",
@@ -6051,7 +6058,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-782802e621",
@@ -6070,7 +6077,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-81ea06147f",
@@ -6089,7 +6096,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-f7dddc2aa1",
@@ -6107,7 +6114,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-cc374e90be",
@@ -6125,7 +6132,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-685c5e7dd2",
@@ -6144,7 +6151,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-60691b9c1e",
@@ -6162,7 +6169,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-3f3ed2ec7c",
@@ -6180,7 +6187,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-eeb7d739be",
@@ -6198,7 +6205,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-e95ecda3bb",
@@ -6217,7 +6224,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-27ab493047",
@@ -6236,7 +6243,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-fc2712a4fe",
@@ -6254,7 +6261,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-4a3d31d959",
@@ -6272,7 +6279,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-b90c7d93ba",
@@ -6290,7 +6297,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-543ac3ead4",
@@ -6309,7 +6316,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-52947fea3b",
@@ -6327,7 +6334,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-364d1b4932",
@@ -6346,7 +6353,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-2a922aa4bb",
@@ -6364,7 +6371,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-178b343217",
@@ -6383,7 +6390,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-82b69be738",
@@ -6401,7 +6408,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-3af4a97ba0",
@@ -6420,7 +6427,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-b0b0ac6a38",
@@ -6439,7 +6446,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-42ae0f427c",
@@ -6457,7 +6464,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-2cc766d8f6",
@@ -6475,7 +6482,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-7e0e1bd74f",
@@ -6493,7 +6500,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-72c92fdc9e",
@@ -6511,7 +6518,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-ea80186ddb",
@@ -6529,7 +6536,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-f6b64ff84d",
@@ -6547,7 +6554,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-6a41d8cf06",
@@ -6566,7 +6573,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-c1b8377d30",
@@ -6584,7 +6591,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-6fc68e3362",
@@ -6603,7 +6610,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-54c5f2b4dc",
@@ -6621,7 +6628,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-6d83f4c2ee",
@@ -6639,7 +6646,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-5b65620b1e",
@@ -6658,7 +6665,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fcc-032d1c9bf4",
@@ -6676,7 +6683,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-ferc-index",
@@ -6696,7 +6703,7 @@
     "HTML selector matched no publication links; not healthy zero activity"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-dol-99f477805a",
@@ -6715,7 +6722,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-osha-d8e445af0b",
@@ -6734,7 +6741,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-osha-ba174bf325",
@@ -6755,7 +6762,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-osha-7df7a48ccf",
@@ -6776,7 +6783,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-osha-21c4745f76",
@@ -6795,7 +6802,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-osha-d41a85b7e1",
@@ -6814,7 +6821,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-nlrb-3db5e72bf9",
@@ -6835,7 +6842,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-nlrb-7c63020d7d",
@@ -6854,7 +6861,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-nlrb-c15d588b2d",
@@ -6875,7 +6882,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-doi-e17afc920f",
@@ -6891,7 +6898,7 @@
    "sample": [],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-dot-6464bc66ac",
@@ -6912,7 +6919,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-state-20e0a30e7d",
@@ -6928,7 +6935,7 @@
    "sample": [],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-state-6bed3ae7e9",
@@ -6944,7 +6951,7 @@
    "sample": [],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-state-53b14fb2e2",
@@ -6960,7 +6967,7 @@
    "sample": [],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-uscis-7a4629919e",
@@ -6979,7 +6986,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-uscis-a16e1f9942",
@@ -7000,7 +7007,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fmc-fe8f0538ae",
@@ -7021,7 +7028,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-fhfa-index",
@@ -7042,7 +7049,87 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
+  },
+  {
+   "id": "us-grants-d01ee494e7",
+   "name": "Grants.gov",
+   "jurisdiction": "US",
+   "family": "grant_opportunities_not_awards",
+   "adapter": "rss",
+   "enabled": false,
+   "url": "https://www.grants.gov/custom/spoExit.jsp?p=rss/GG_OppModByAgency.xml",
+   "status": "invalid_feed_or_network_error",
+   "http_status": null,
+   "rows": null,
+   "sample": [],
+   "warnings": [],
+   "exception": "ParseError",
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
+  },
+  {
+   "id": "us-grants-1008f39e21",
+   "name": "Grants.gov",
+   "jurisdiction": "US",
+   "family": "grant_opportunities_not_awards",
+   "adapter": "rss",
+   "enabled": false,
+   "url": "https://www.grants.gov/rss/GG_OppModByCategory.xml",
+   "status": "invalid_feed_or_network_error",
+   "http_status": null,
+   "rows": null,
+   "sample": [],
+   "warnings": [],
+   "exception": "ParseError",
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
+  },
+  {
+   "id": "us-grants-8f4db4acb8",
+   "name": "Grants.gov",
+   "jurisdiction": "US",
+   "family": "grant_opportunities_not_awards",
+   "adapter": "rss",
+   "enabled": false,
+   "url": "https://www.grants.gov/rss/GG_NewOppByAgency.xml",
+   "status": "invalid_feed_or_network_error",
+   "http_status": null,
+   "rows": null,
+   "sample": [],
+   "warnings": [],
+   "exception": "ParseError",
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
+  },
+  {
+   "id": "us-grants-c38f24cbdc",
+   "name": "Grants.gov",
+   "jurisdiction": "US",
+   "family": "grant_opportunities_not_awards",
+   "adapter": "rss",
+   "enabled": false,
+   "url": "https://www.grants.gov/rss/GG_NewOppByCategory.xml",
+   "status": "invalid_feed_or_network_error",
+   "http_status": null,
+   "rows": null,
+   "sample": [],
+   "warnings": [],
+   "exception": "ParseError",
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
+  },
+  {
+   "id": "us-grants-dc5bac271b",
+   "name": "Grants.gov",
+   "jurisdiction": "US",
+   "family": "grant_opportunities_not_awards",
+   "adapter": "rss",
+   "enabled": false,
+   "url": "https://www.grants.gov/rss/GG_OppModByAgency.xml",
+   "status": "invalid_feed_or_network_error",
+   "http_status": null,
+   "rows": null,
+   "sample": [],
+   "warnings": [],
+   "exception": "ParseError",
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-ca-oal-c1209cfd66",
@@ -7063,7 +7150,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-commission-07d4f58ccf",
@@ -7082,7 +7169,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-council-9d9e9444da",
@@ -7096,12 +7183,12 @@
    "http_status": 200,
    "rows": 20,
    "sample": [
-    "Weekly schedule of President António Costa",
-    "Remarks by President António Costa at the press conference following the European Council meeting of 15-16 October 2026"
+    "Forward look: 19 October - 1 November 2026",
+    "Weekly schedule of President António Costa"
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-1433471e58",
@@ -7120,7 +7207,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-5d86d4a068",
@@ -7136,7 +7223,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-6ecb39554e",
@@ -7152,7 +7239,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-0c5d60abe1",
@@ -7168,7 +7255,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-61ca85a9da",
@@ -7184,7 +7271,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-f29738c695",
@@ -7200,7 +7287,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-c93fa0d375",
@@ -7216,7 +7303,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-61fe59a5b0",
@@ -7232,7 +7319,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-92f7b42e69",
@@ -7248,7 +7335,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-802462b502",
@@ -7264,7 +7351,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-fa9910e95e",
@@ -7280,7 +7367,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-bb3343582e",
@@ -7296,7 +7383,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-7150a14cfe",
@@ -7312,7 +7399,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-31c3f89f5a",
@@ -7328,7 +7415,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-9df29cb06c",
@@ -7344,7 +7431,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-6cbd0f8c86",
@@ -7360,7 +7447,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-d493bdcc92",
@@ -7376,7 +7463,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-75f09ee566",
@@ -7392,7 +7479,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-217902977d",
@@ -7408,7 +7495,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-2618064891",
@@ -7424,7 +7511,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-9a242e51c8",
@@ -7440,7 +7527,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-c69faf1b80",
@@ -7456,7 +7543,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-05974aba36",
@@ -7472,7 +7559,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-3b95c06a70",
@@ -7488,7 +7575,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-court-d428b47046",
@@ -7504,7 +7591,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-991c113079",
@@ -7523,7 +7610,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-f4cd34bf25",
@@ -7544,7 +7631,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-a87cd8b112",
@@ -7565,7 +7652,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-fb5fd59aed",
@@ -7586,7 +7673,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-4f9670887c",
@@ -7605,7 +7692,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-e07ed659b0",
@@ -7624,7 +7711,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-ee5cd69b23",
@@ -7645,7 +7732,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-cafc483f64",
@@ -7664,7 +7751,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-b84350c252",
@@ -7685,7 +7772,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-af0dbdabee",
@@ -7706,7 +7793,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-979ffc2de9",
@@ -7725,7 +7812,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-6121eb3020",
@@ -7744,7 +7831,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-85c3cc3f5a",
@@ -7763,7 +7850,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-bca2a70864",
@@ -7784,7 +7871,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-26502289d9",
@@ -7803,7 +7890,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-8f92068385",
@@ -7822,7 +7909,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-0370c1f1df",
@@ -7843,7 +7930,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-4d2cc73821",
@@ -7862,7 +7949,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-c2f5d63fc9",
@@ -7881,7 +7968,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-30700a4603",
@@ -7900,7 +7987,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-f26751700f",
@@ -7919,7 +8006,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-4eb0767a7d",
@@ -7938,7 +8025,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-f48045fce4",
@@ -7957,7 +8044,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-e7c9b75e80",
@@ -7976,7 +8063,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-1421b01f8f",
@@ -7995,7 +8082,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-c12c22cb78",
@@ -8016,7 +8103,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-f5c7581ef5",
@@ -8035,7 +8122,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-28312ab8d0",
@@ -8054,7 +8141,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-bda14b919b",
@@ -8073,7 +8160,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-3c063802c7",
@@ -8092,7 +8179,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-5dd335b83a",
@@ -8111,7 +8198,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-7713561ea7",
@@ -8130,7 +8217,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-2b24035e06",
@@ -8149,7 +8236,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-ec2f3b3dac",
@@ -8168,7 +8255,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-ba01d5df1a",
@@ -8187,7 +8274,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-4d7de85468",
@@ -8206,7 +8293,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-c2c98aa44f",
@@ -8225,7 +8312,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-01c16597d0",
@@ -8244,7 +8331,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-fab767a85a",
@@ -8263,7 +8350,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-f3641b3969",
@@ -8282,7 +8369,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-d7a740fdf6",
@@ -8301,7 +8388,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-cbc45e359d",
@@ -8320,7 +8407,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ecb-31c99c93ed",
@@ -8336,7 +8423,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-esma-73e01d4013",
@@ -8355,7 +8442,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-eba-60bdc59843",
@@ -8374,7 +8461,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "eu-ema-37acbafcb0",
@@ -8393,7 +8480,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-legislation-82947c2f93",
@@ -8412,7 +8499,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-legislation-e981891c4a",
@@ -8431,7 +8518,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-legislation-98297ee773",
@@ -8450,7 +8537,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-case-law-5170d5905a",
@@ -8469,7 +8556,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-boe-4feb372611",
@@ -8488,7 +8575,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-boe-96de0332ee",
@@ -8504,7 +8591,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-fca-7b9977ec8e",
@@ -8523,7 +8610,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "uk-gazette-e5d0497ccf",
@@ -8542,7 +8629,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-gazette-821b285be1",
@@ -8561,7 +8648,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-gazette-2d47daa483",
@@ -8582,7 +8669,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-gazette-c2eb48e1fa",
@@ -8603,7 +8690,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-4aa19b2183",
@@ -8623,7 +8710,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-4ad6189e69",
@@ -8642,7 +8729,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-1f26bb2971",
@@ -8663,7 +8750,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-30d6d14378",
@@ -8678,11 +8765,11 @@
    "rows": 10,
    "sample": [
     "The Bank of Canada releases the third quarter issues of the Business Outlook Survey and the Canadian Survey of Consumer Expectations",
-    "Fireside chat with Michelle Alexopoulos, External Deputy Governor of the Bank of Canada"
+    "Media roundtable with Governor Macklem"
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-4192a605ae",
@@ -8703,7 +8790,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-5cc0603f1f",
@@ -8724,7 +8811,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-a61b683fac",
@@ -8745,7 +8832,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-a4af151f89",
@@ -8760,11 +8847,11 @@
    "rows": 10,
    "sample": [
     "The Bank of Canada releases the third quarter issues of the Business Outlook Survey and the Canadian Survey of Consumer Expectations",
-    "Fireside chat with Michelle Alexopoulos, External Deputy Governor of the Bank of Canada"
+    "Media roundtable with Governor Macklem"
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-161ba50d6e",
@@ -8785,7 +8872,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-1c9979e6ac",
@@ -8806,7 +8893,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-982fa565a2",
@@ -8827,7 +8914,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-885caa439d",
@@ -8841,12 +8928,12 @@
    "http_status": 200,
    "rows": 10,
    "sample": [
-    "Panel: Tiff Macklem, Governor",
-    "Fireside Chat: Michelle Alexopoulos, External Deputy Governor"
+    "Release: Business Outlook Survey and Canadian Survey of Consumer Expectations",
+    "Interest Rate Announcement and Monetary Policy Report"
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-b8fa2876ef",
@@ -8867,7 +8954,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-b06a91e186",
@@ -8888,7 +8975,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-f2811531de",
@@ -8909,7 +8996,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-71c82276e6",
@@ -8930,7 +9017,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-c1617c3a5b",
@@ -8951,7 +9038,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-ddf593b208",
@@ -8972,7 +9059,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-affce837d4",
@@ -8993,7 +9080,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-e24c58f2d0",
@@ -9014,7 +9101,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-9308ff5fe4",
@@ -9035,7 +9122,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-9f75c25657",
@@ -9056,7 +9143,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-cffefa81f7",
@@ -9077,7 +9164,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-762f78f374",
@@ -9098,7 +9185,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-49364b93d8",
@@ -9119,7 +9206,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-a5cb9e38c1",
@@ -9138,7 +9225,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-2fbc8b5053",
@@ -9157,7 +9244,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-7b07e406da",
@@ -9176,7 +9263,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-903390d96d",
@@ -9197,7 +9284,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-d6ce892bea",
@@ -9218,7 +9305,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-c693168bf2",
@@ -9237,7 +9324,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-1da610df86",
@@ -9258,7 +9345,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-boc-63e377340d",
@@ -9278,7 +9365,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ca-supreme-d329809c56",
@@ -9297,7 +9384,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "au-rba-c3677bbece",
@@ -9317,7 +9404,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "au-rba-9e45cb137d",
@@ -9336,7 +9423,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "au-rba-75f3866f45",
@@ -9356,7 +9443,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "au-rba-4c2add8718",
@@ -9376,7 +9463,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "au-rba-fe06b804cb",
@@ -9397,7 +9484,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "au-rba-9e35f5f8d1",
@@ -9417,7 +9504,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "au-rba-5ba995e001",
@@ -9437,7 +9524,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "au-rba-16dd106eab",
@@ -9457,7 +9544,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "au-rba-5469539a63",
@@ -9476,7 +9563,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "au-rba-bb9b5c009f",
@@ -9496,7 +9583,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "au-accc-index",
@@ -9516,7 +9603,7 @@
     "HTML selector matched no publication links; not healthy zero activity"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "au-apra-ea582a56a3",
@@ -9535,7 +9622,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "au-apra-0f4c877176",
@@ -9551,7 +9638,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ValueError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "nz-rbnz-gnews",
@@ -9570,7 +9657,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "hk-government-a5249d2406",
@@ -9589,7 +9676,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "hk-sfc-ce1a9d1743",
@@ -9608,7 +9695,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "sg-hsa-621a78d387",
@@ -9629,7 +9716,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "in-pib-gnews",
@@ -9648,7 +9735,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "in-rbi-cc71120b98",
@@ -9667,7 +9754,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "in-rbi-738b09bded",
@@ -9688,7 +9775,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "in-rbi-4773637408",
@@ -9709,7 +9796,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "in-rbi-a45021c19a",
@@ -9728,7 +9815,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "in-rbi-6f75cd7f86",
@@ -9749,7 +9836,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "in-rbi-2ef248e836",
@@ -9768,7 +9855,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "in-sebi-53da9e61f4",
@@ -9787,7 +9874,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "cn-state-council-index",
@@ -9806,7 +9893,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "cn-commerce-index",
@@ -9816,17 +9903,13 @@
    "adapter": "html_index",
    "enabled": false,
    "url": "https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/index.html",
-   "status": "selector_empty",
-   "http_status": 200,
-   "rows": 0,
+   "status": "invalid_feed_or_network_error",
+   "http_status": null,
+   "rows": null,
    "sample": [],
-   "warnings": [
-    "tier3_reader_zero_matches",
-    "tier3_reader_zero_matches",
-    "HTML selector matched no publication links; not healthy zero activity"
-   ],
-   "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "warnings": [],
+   "exception": "URLError",
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "jp-boj-d488538690",
@@ -9845,7 +9928,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "jp-meti-index",
@@ -9864,7 +9947,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "jp-jftc-gnews",
@@ -9885,7 +9968,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "jp-pmda-de5193505d",
@@ -9906,7 +9989,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "jp-pmda-30debcd0a9",
@@ -9927,7 +10010,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "jp-pmda-f78c81268a",
@@ -9948,7 +10031,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "jp-pmda-70bfdab0f6",
@@ -9964,7 +10047,7 @@
    "sample": [],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "jp-pmda-ba69b0656f",
@@ -9985,7 +10068,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "jp-pmda-c845d5b3de",
@@ -10006,7 +10089,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "tw-cbc-e26aeb3901",
@@ -10025,7 +10108,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ph-bsp-1c59787fbd",
@@ -10046,7 +10129,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ph-gazette-877866839d",
@@ -10062,7 +10145,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "za-sarb-1efee6176d",
@@ -10081,7 +10164,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ch-snb-4a868c4407",
@@ -10102,7 +10185,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "ch-snb-b0f42db828",
@@ -10121,7 +10204,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "se-riksbank-8ea6f8481e",
@@ -10142,7 +10225,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "no-norges-5079edc79e",
@@ -10163,7 +10246,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "no-norges-9e9de12e72",
@@ -10179,7 +10262,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "de-bundesbank-027ac4024f",
@@ -10198,7 +10281,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "de-bundesbank-79adbc3078",
@@ -10219,7 +10302,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "de-bundesbank-e5b1c4a067",
@@ -10240,7 +10323,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "de-bundesbank-617511c682",
@@ -10259,7 +10342,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "de-bundesbank-fe89ad3ac9",
@@ -10278,7 +10361,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "de-bundesbank-49939a8033",
@@ -10294,7 +10377,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "io-wto-497f28e20d",
@@ -10310,7 +10393,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "io-wto-7324abb370",
@@ -10326,7 +10409,7 @@
    "sample": [],
    "warnings": [],
    "exception": "ParseError",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "io-bis-8d1fbea6ca",
@@ -10345,7 +10428,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "io-bis-25dec42900",
@@ -10364,7 +10447,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "io-bis-a33511bc11",
@@ -10383,7 +10466,7 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "io-bis-b3dfd5b7aa",
@@ -10404,7 +10487,7 @@
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "io-bis-140216a5b6",
@@ -10419,13 +10502,13 @@
    "rows": 50,
    "sample": [
     "Closing remarks - Conference on the Main Findings of Portugal's Financial Sector Assessment Program",
-    "Cross-border payments as a necessity for Africa's resilience and economic transformation"
+    "Why is the last mile of disinflation taking so long?"
    ],
    "warnings": [
     "stale_feed_outside_requested_window"
    ],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   },
   {
    "id": "us-supreme-court-orders-index",
@@ -10444,35 +10527,35 @@
    ],
    "warnings": [],
    "exception": "",
-   "checked_at": "2026-10-17T11:45:29.426582+00:00"
+   "checked_at": "2026-10-17T12:48:37.422317+00:00"
   }
  ],
  "new_today": {
   "count": 2,
   "by_source": {
-   "us-fda-2cdcdcca63": 1,
-   "in-pib-gnews": 1
+   "eu-council-9d9e9444da": 1,
+   "ca-boc-30d6d14378": 1
   },
   "by_class": {
-   "high": 1,
+   "routine": 1,
    "watch": 1
   },
   "headlines": [
    {
-    "title": "Family Farmstead Dairy Announces Recall of Raw Mild Cheddar Cheese Due to Potential E. coli O26:H11 and O45:H2 Contamination",
-    "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/family-farmstead-dairy-announces-recall-raw-mild-cheddar-cheese-due-potential-e-coli-o26h11-and",
-    "published_at": "2026-10-15T20:04:00+00:00",
-    "source": "us-fda-2cdcdcca63",
-    "issuer": "Food and Drug Administration — Food Safety Recalls",
-    "cls": "high"
+    "title": "Media roundtable with Governor Macklem",
+    "url": "https://www.bankofcanada.ca/2026/10/media-roundtable-governor-macklem-2026-10-17/",
+    "published_at": "2026-10-17T09:00:36+00:00",
+    "source": "ca-boc-30d6d14378",
+    "issuer": "Bank of Canada — Press",
+    "cls": "watch"
    },
    {
-    "title": "Ministry of Mines and Its Field Offices Actively Participated in Swachhata Hi Seva Campaign 2026 - Press Information Bureau",
-    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBIZHRrQ0gyM283X3JVRVcyNXJqcXJCcklqeHNacWFWSUE3ZGhGMWZFQUU1TGI2Q0NvOGoyMUtqTzRSV2J0cnlWWFBsdkJYend2ZVYzWUs5ZTFNdk9GbmhIR2JUZGV5T1NXbTdR",
-    "published_at": "2026-10-17T11:45:00+00:00",
-    "source": "in-pib-gnews",
-    "issuer": "India Press Information Bureau (official-site news mirror)",
-    "cls": "watch"
+    "title": "Forward look: 19 October - 1 November 2026",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/17/forward-look-2026/",
+    "published_at": "2026-10-17T14:20:00+00:00",
+    "source": "eu-council-9d9e9444da",
+    "issuer": "Council of the European Union",
+    "cls": "routine"
    }
   ]
  },

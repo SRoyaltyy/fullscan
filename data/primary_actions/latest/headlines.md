@@ -1,7 +1,7 @@
 # Primary-origin action documents
 
-Updated 2026-10-17T12:25:59.940473+00:00. 3577 dated documents in the configured 3-day window; 2 newly retained; 1115 repeat observations.
-Source health: 455/456 checked successfully. Collection uses zero LLM calls.
+Updated 2026-10-17T12:51:21.988058+00:00. 3578 dated documents in the configured 3-day window; 2 newly retained; 1206 repeat observations.
+Source health: 457/458 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
@@ -2869,6 +2869,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 ## requires_semantic_review
 
 - [Canada Gazette - Part I, October 17, 2026, volume 160, number 42](https://gazette.gc.ca/rp-pr/p1/2026/2026-10-17/html/index-eng.html) — Canada Gazette — Canada Gazette PI RSS Feed; 2026-10-17T19:00:00+00:00
+- [Forward look: 19 October - 1 November 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/10/17/forward-look-2026/) — Council of the European Union; 2026-10-17T14:20:00+00:00
 - [Purchase of Ready-Built Flats/ Residential Complex at Dehradun for the Residential Accommodation Requirements of RBI Dehradun](https://www.rbi.org.in/scripts/BS_ViewTenders.aspx?id=25996) — Reserve Bank of India; 2026-10-17T13:15:00+00:00
 - [Ashley Humphries](https://www.thegazette.co.uk/notice/5231607) — The Gazette official public record; 2026-10-17T12:40:07+00:00
 - [Marc LIDDELL](https://www.thegazette.co.uk/notice/5231461) — The Gazette official public record; 2026-10-17T12:30:08+00:00
@@ -2876,6 +2877,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [S. Hrg. 118-438 - FAA'S OVERSIGHT OF BOEING'S BROKEN SAFETY CULTURE](https://www.govinfo.gov/app/details/CHRG-118shrg57033) — Congressional Hearings; 2026-10-17T10:52:00+00:00
 - [A Journey Towards Recovery and Emotional Well-being - Press Information Bureau](https://news.google.com/rss/articles/CBMie0FVX3lxTE1oVW5ISEtpSTdKWlVtdlowZzVTTmNKSlEwTDh4MEVjWmR0WFVZVTY2cXpUNXdvNXFCYTNkXzdyRkdwYmRYdW96OUg2ZllxaDNfWDZKVHdjMVZoczNFRWw4RnZPN0l4WmN0Wm1tVHlHNmpaTVdSR2diTlRJcw) — India Press Information Bureau (official-site news mirror); 2026-10-17T10:25:00+00:00
 - [Serial No. 118-93 - LEGISLATIVE HEARING](https://www.govinfo.gov/app/details/CHRG-118hhrg58137) — Congressional Hearings; 2026-10-17T10:18:00+00:00
+- [Media roundtable with Governor Macklem](https://www.bankofcanada.ca/2026/10/media-roundtable-governor-macklem-2026-10-17/) — Bank of Canada — Press; 2026-10-17T09:00:36+00:00
 - [Minutes of Pre-Bid Meeting - Addition, Alteration and Extension of Existing Crèche, 1st floor, Annexe Building, RBI Lucknow (Limited Tender)](https://www.rbi.org.in/scripts/BS_ViewTenders.aspx?id=25994) — Reserve Bank of India; 2026-10-17T09:00:00+00:00
 - [Corrigendum - Annual Maintenance Contract for Horticulture and Gardening work in Bank’ Residential Premises at Aliganj Staff Quarters and Laplace Quarters, Lucknow](https://www.rbi.org.in/scripts/BS_ViewTenders.aspx?id=25995) — Reserve Bank of India; 2026-10-17T09:00:00+00:00
 - [Secretary for Health attends World Conference on Traditional Medicine 2026 in Beijing (with photos)](https://www.info.gov.hk/gia/general/202610/17/P2026101600456.htm) — Hong Kong Government Information Services; 2026-10-17T08:30:00+00:00
@@ -3613,11 +3615,10 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Hong Kong Customs takes territory-wide law enforcement actions against illicit cigarette selling points (with photos)](https://www.info.gov.hk/gia/general/202610/14/P2026101400625.htm) — Hong Kong Government Information Services; 2026-10-14T13:00:00+00:00
 - [Human medicines European public assessment report (EPAR): Humira, adalimumab, Date of authorisation: 08/09/2003, Revision: 99, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/humira) — European Medicines Agency; 2026-10-14T12:58:08+00:00
 - [EMA/PE/0000245064](https://www.ema.europa.eu/en/medicines/human/paediatric-investigation-plans/ema-pe-0000245064) — European Medicines Agency; 2026-10-14T12:53:42+00:00
-- [HKETO Berlin promotes Hong Kong's biotech advantages at 26th Annual Biotech in Europe Forum (with photos)](https://www.info.gov.hk/gia/general/202610/14/P2026101400735.htm) — Hong Kong Government Information Services; 2026-10-14T12:50:00+00:00
 
 ## Source failures and coverage warnings
 
-- hk-hkma-public-press: parse_or_network_error; 
+- hk-hkma-public-press: ok; stale_feed_outside_requested_window
 - us-govinfo-bills-enr: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-almd: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-caed: unchanged; feed_at_capacity_in_requested_window; snapshots may miss overflow
@@ -3703,6 +3704,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fed-a383ca0d09: ok; stale_feed_outside_requested_window
 - us-fed-1401ff4ff2: ok; stale_feed_outside_requested_window
 - us-fed-1555c8e0e5: ok; stale_feed_outside_requested_window
+- us-fed-00a0e0a88a: parse_or_network_error; 
 - us-fed-ba8ad56252: ok; stale_feed_outside_requested_window
 - us-fed-a93c08c457: ok; stale_feed_outside_requested_window
 - us-fed-1d7a0dba2e: ok; stale_feed_outside_requested_window
@@ -3713,27 +3715,27 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fed-eea49fa482: ok; stale_feed_outside_requested_window
 - us-fed-8d9ba6faea: ok; stale_feed_outside_requested_window
 - us-fed-0a7a64daa4: ok; stale_feed_outside_requested_window
-- us-fdic-index: ok; stale_feed_outside_requested_window
+- us-fdic-index: unchanged; stale_feed_outside_requested_window
 - us-fincen-index: ok; stale_feed_outside_requested_window
 - us-cftc-fda5c3631d: ok; stale_feed_outside_requested_window
 - us-fda-df70b9f330: unchanged; stale_feed_outside_requested_window
-- us-fda-1a1096082f: ok; stale_feed_outside_requested_window
-- us-fda-2d9c4fc2f9: unchanged; stale_feed_outside_requested_window
-- us-fda-8fc09ac0a2: unchanged; stale_feed_outside_requested_window
-- us-fda-3eaddf14de: unchanged; stale_feed_outside_requested_window
-- us-fda-b2623da30a: unchanged; stale_feed_outside_requested_window
+- us-fda-1a1096082f: unchanged; stale_feed_outside_requested_window
+- us-fda-2d9c4fc2f9: ok; stale_feed_outside_requested_window
+- us-fda-8fc09ac0a2: ok; stale_feed_outside_requested_window
+- us-fda-3eaddf14de: ok; stale_feed_outside_requested_window
+- us-fda-b2623da30a: ok; stale_feed_outside_requested_window
 - us-fda-a25233bfac: ok; stale_feed_outside_requested_window
 - us-fda-1ca201e48f: ok; stale_feed_outside_requested_window
-- us-fda-c7d1d1cd64: ok; stale_feed_outside_requested_window
-- us-fda-d7692535f0: unchanged; stale_feed_outside_requested_window
+- us-fda-c7d1d1cd64: unchanged; stale_feed_outside_requested_window
+- us-fda-d7692535f0: ok; stale_feed_outside_requested_window
 - us-fsis-85c9542fd5: ok; stale_feed_outside_requested_window
 - us-fcc-1ad902e468: unchanged; stale_feed_outside_requested_window
 - us-fcc-ff38ce828f: ok; stale_feed_outside_requested_window
 - us-fcc-198472aaf9: ok; stale_feed_outside_requested_window
 - us-osha-ba174bf325: ok; stale_feed_outside_requested_window
 - us-osha-7df7a48ccf: ok; stale_feed_outside_requested_window
-- us-nlrb-3db5e72bf9: ok; stale_feed_outside_requested_window
-- us-nlrb-c15d588b2d: unchanged; stale_feed_outside_requested_window
+- us-nlrb-3db5e72bf9: unchanged; stale_feed_outside_requested_window
+- us-nlrb-c15d588b2d: ok; stale_feed_outside_requested_window
 - us-dot-6464bc66ac: ok; stale_feed_outside_requested_window
 - us-uscis-a16e1f9942: ok; stale_feed_outside_requested_window
 - us-fmc-fe8f0538ae: unchanged; stale_feed_outside_requested_window
@@ -3749,29 +3751,29 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - eu-ecb-c12c22cb78: ok; stale_feed_outside_requested_window
 - ca-gazette-2d47daa483: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - ca-gazette-c2eb48e1fa: unchanged; stale_feed_outside_requested_window
-- ca-boc-4aa19b2183: unchanged; stale_feed_outside_requested_window
+- ca-boc-4aa19b2183: ok; stale_feed_outside_requested_window
 - ca-boc-1f26bb2971: ok; stale_feed_outside_requested_window
-- ca-boc-4192a605ae: unchanged; stale_feed_outside_requested_window
+- ca-boc-4192a605ae: ok; stale_feed_outside_requested_window
 - ca-boc-5cc0603f1f: ok; stale_feed_outside_requested_window
-- ca-boc-a61b683fac: unchanged; stale_feed_outside_requested_window
-- ca-boc-161ba50d6e: unchanged; stale_feed_outside_requested_window
-- ca-boc-1c9979e6ac: unchanged; stale_feed_outside_requested_window
-- ca-boc-b8fa2876ef: unchanged; stale_feed_outside_requested_window
-- ca-boc-b06a91e186: unchanged; stale_feed_outside_requested_window
-- ca-boc-f2811531de: unchanged; stale_feed_outside_requested_window
-- ca-boc-71c82276e6: unchanged; stale_feed_outside_requested_window
-- ca-boc-c1617c3a5b: unchanged; stale_feed_outside_requested_window
-- ca-boc-ddf593b208: unchanged; stale_feed_outside_requested_window
-- ca-boc-affce837d4: unchanged; stale_feed_outside_requested_window
-- ca-boc-e24c58f2d0: unchanged; stale_feed_outside_requested_window
-- ca-boc-9308ff5fe4: unchanged; stale_feed_outside_requested_window
-- ca-boc-9f75c25657: unchanged; stale_feed_outside_requested_window
+- ca-boc-a61b683fac: ok; stale_feed_outside_requested_window
+- ca-boc-161ba50d6e: ok; stale_feed_outside_requested_window
+- ca-boc-1c9979e6ac: ok; stale_feed_outside_requested_window
+- ca-boc-b8fa2876ef: ok; stale_feed_outside_requested_window
+- ca-boc-b06a91e186: ok; stale_feed_outside_requested_window
+- ca-boc-f2811531de: ok; stale_feed_outside_requested_window
+- ca-boc-71c82276e6: ok; stale_feed_outside_requested_window
+- ca-boc-c1617c3a5b: ok; stale_feed_outside_requested_window
+- ca-boc-ddf593b208: ok; stale_feed_outside_requested_window
+- ca-boc-affce837d4: ok; stale_feed_outside_requested_window
+- ca-boc-e24c58f2d0: ok; stale_feed_outside_requested_window
+- ca-boc-9308ff5fe4: ok; stale_feed_outside_requested_window
+- ca-boc-9f75c25657: ok; stale_feed_outside_requested_window
 - ca-boc-cffefa81f7: ok; stale_feed_outside_requested_window
-- ca-boc-762f78f374: unchanged; stale_feed_outside_requested_window
-- ca-boc-49364b93d8: unchanged; stale_feed_outside_requested_window
-- ca-boc-903390d96d: unchanged; stale_feed_outside_requested_window
-- ca-boc-1da610df86: unchanged; stale_feed_outside_requested_window
-- ca-boc-63e377340d: unchanged; stale_feed_outside_requested_window
+- ca-boc-762f78f374: ok; stale_feed_outside_requested_window
+- ca-boc-49364b93d8: ok; stale_feed_outside_requested_window
+- ca-boc-903390d96d: ok; stale_feed_outside_requested_window
+- ca-boc-1da610df86: ok; stale_feed_outside_requested_window
+- ca-boc-63e377340d: ok; stale_feed_outside_requested_window
 - au-rba-75f3866f45: unchanged; stale_feed_outside_requested_window
 - au-rba-4c2add8718: unchanged; stale_feed_outside_requested_window
 - au-rba-fe06b804cb: unchanged; stale_feed_outside_requested_window

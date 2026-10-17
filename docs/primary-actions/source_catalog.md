@@ -1,6 +1,6 @@
 # Primary-origin source catalog
 
-Verified 2026-10-17T11:45:29.426582+00:00. 2150 institution records; 456 enabled publication channels out of 536 checked candidates.
+Verified 2026-10-17T12:48:37.422317+00:00. 2150 institution records; 458 enabled publication channels out of 541 checked candidates.
 
 Institution records include historical/closed bodies and shared portals. This is a maintained coverage catalog, not an exhaustive worldwide directory. Disabled/blocked channels remain visible below.
 
@@ -239,7 +239,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Reserve Board — Governor Christopher J. Waller | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_waller.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Credit and Liquidity Programs and the Balance Sheet | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/clp.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Current Frequently Asked Questions | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/currentfaqs.xml) | False | ok; reference data, research, speeches or commentary |
-| Federal Reserve Board — Office of Inspector General | US | monetary_operations | [rss](https://oig.federalreserve.gov/feeds/oig.xml) | False | invalid_feed_or_network_error |
+| Federal Reserve Board — Office of Inspector General | US | monetary_operations | [rss](https://oig.federalreserve.gov/feeds/oig.xml) | True | ok |
 | Federal Reserve Board — Regulatory Reform | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/regreform.xml) | True | valid_empty |
 | Federal Reserve Board — Board Meetings | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/boardmeetings.xml) | True | ok |
 | Federal Reserve Board — Reporting Forms | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/reportforms-rss.xml) | True | ok |
@@ -309,7 +309,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Communications Commission — Broadcast Applications | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Broadcast_App) | True | ok |
 | Federal Communications Commission — Call Sign Changes | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Callsign_Changes) | True | ok |
 | Federal Communications Commission — Citations | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Cit) | True | ok |
-| Federal Communications Commission — Compliance Guides | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Guide) | False | invalid_feed_or_network_error |
+| Federal Communications Commission — Compliance Guides | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Guide) | True | ok |
 | Federal Communications Commission — Court Filings | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Court_Filing) | True | ok |
 | Federal Communications Commission — Court Opinions | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Court_Opinion) | True | ok |
 | Federal Communications Commission — Fact Sheets | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/docTypes/Fact_Sheet) | True | ok |
@@ -364,6 +364,11 @@ Institution records include historical/closed bodies and shared portals. This is
 | US Citizenship and Immigration Services — Content Listing | US | official_clarification_and_administration | [rss](https://www.uscis.gov/news/rss-feed/22984) | True | ok |
 | Federal Maritime Commission | US | transport_permissions | [rss](https://www.fmc.gov/feed/) | True | ok |
 | Federal Housing Finance Agency | US | financial_enforcement | [html_index](https://www.fhfa.gov/news/news-release) | True | ok |
+| Grants.gov | US | grant_opportunities_not_awards | [rss](https://www.grants.gov/custom/spoExit.jsp?p=rss/GG_OppModByAgency.xml) | False | invalid_feed_or_network_error |
+| Grants.gov | US | grant_opportunities_not_awards | [rss](https://www.grants.gov/rss/GG_OppModByCategory.xml) | False | invalid_feed_or_network_error |
+| Grants.gov | US | grant_opportunities_not_awards | [rss](https://www.grants.gov/rss/GG_NewOppByAgency.xml) | False | invalid_feed_or_network_error |
+| Grants.gov | US | grant_opportunities_not_awards | [rss](https://www.grants.gov/rss/GG_NewOppByCategory.xml) | False | invalid_feed_or_network_error |
+| Grants.gov | US | grant_opportunities_not_awards | [rss](https://www.grants.gov/rss/GG_OppModByAgency.xml) | False | invalid_feed_or_network_error |
 | California Office of Administrative Law — OAL » Feed | US-CA | regulation | [rss](https://oal.ca.gov/feed/) | True | ok |
 | European Commission press and decisions | EU | executive_and_regulatory | [rss](https://ec.europa.eu/commission/presscorner/api/rss?language=en) | True | ok |
 | Council of the European Union | EU | sanctions_and_legislation | [rss](https://www.consilium.europa.eu/en/rss/pressreleases.ashx) | True | ok |
@@ -509,7 +514,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Reserve Bank of India — Publications | IN | monetary_and_supervisory | [rss](https://rbi.org.in/Publication_rss.xml) | True | ok |
 | Securities and Exchange Board of India — https://www.sebi.gov.in/sebirss.xml | IN | financial_enforcement | [rss](https://www.sebi.gov.in/sebirss.xml) | True | ok |
 | State Council of China policies | CN | executive_instruments | [html_index](https://english.www.gov.cn/policies/latestreleases/) | True | ok |
-| Ministry of Commerce of China announcements and orders | CN | trade_and_export_controls | [html_index](https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/index.html) | False | selector_empty |
+| Ministry of Commerce of China announcements and orders | CN | trade_and_export_controls | [html_index](https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/index.html) | False | invalid_feed_or_network_error |
 | Bank of Japan | JP | monetary_operations | [rss](https://www.boj.or.jp/en/rss/whatsnew.xml) | True | ok |
 | Japan Ministry of Economy Trade and Industry | JP | trade_and_industry_policy | [html_index](https://www.meti.go.jp/english/press/) | True | ok |
 | Japan Fair Trade Commission (official-site news mirror) | JP | competition_and_enforcement | [google_news_rss](https://news.google.com/rss/search?q=site%3Ajftc.go.jp+when%3A14d&hl=en-US&gl=US&ceid=US:en) | True | ok |
@@ -2614,7 +2619,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Emergency Management Agency | US | official_publication_page_checked | [source](https://www.fema.gov/about/news-multimedia) |
 | Federal Maritime Commission | US | official_publication_page_checked | [source](https://www.fmc.gov/news/) |
 | Federal Housing Finance Agency | US | official_publication_page_checked | [source](https://www.fhfa.gov/news) |
-| Grants.gov | US | page_unavailable; verification pending | [source](https://grants.gov/connect/rss-feeds) |
+| Grants.gov | US | official_publication_page_checked | [source](https://grants.gov/connect/rss-feeds) |
 | SAM.gov contracting opportunities | US | official_publication_page_checked | [source](https://open.gsa.gov/api/get-opportunities-public-api/) |
 | Regulations.gov dockets | US | official_publication_page_checked | [source](https://open.gsa.gov/api/regulationsgov/) |
 | California Office of Administrative Law | US-CA | official_publication_page_checked | [source](https://oal.ca.gov/california_regulatory_notice_online/) |

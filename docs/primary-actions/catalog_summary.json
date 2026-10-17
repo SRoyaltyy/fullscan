@@ -41,13 +41,13 @@
     "joining": 12,
     "transitioning": 1
   },
-  "candidate_channels": 536,
-  "enabled_channels": 456,
+  "candidate_channels": 541,
+  "enabled_channels": 458,
   "channel_statuses": {
-    "ok": 479,
+    "ok": 481,
     "valid_empty": 14,
-    "invalid_feed_or_network_error": 40,
-    "selector_empty": 3
+    "invalid_feed_or_network_error": 44,
+    "selector_empty": 2
   },
   "directory_gaps": [
     {
