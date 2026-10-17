@@ -59,3 +59,17 @@ PDF pages with no native text are rendered in full RGB at twice the page's nativ
 `src/company_filings/page_reviews.json` records visually checked pages that contain graphics without text. Reviews apply only to the exact decoded PDF SHA256, page count and page number; they cannot transfer to a modified filing. The reader records the review and evidence in `reviewed_visual_pages`, retains the whole page and does not invent a transcript. Unreviewed image-only pages still need OCR. Enerflex's final decorative back cover is the first review: its entire 152-page PDF was processed, and the rendered final page contains only an abstract background and geometric logo.
 
 Normal pushes do not cancel an active archive run. A commit explicitly tagged `[full-archive-repair]` can supersede a known incomplete verification pass after all base originals are safely published. Restored source objects and per-filing checkpoints remain reusable.
+
+## Finding the verified release
+
+The verified full run is [39053884472](https://github.com/SRoyaltyy/fullscan/actions/runs/39053884472), on code commit `2f78489458e7592b06c5b626c43ba54990ca70f9`. All twelve source batches and the consolidated verifier passed. Coverage is 2,032 tickers / 2,026 issuers, 23,635 complete selected submissions and text views, and 845,848 embedded files. Original selected submissions total 121,966,778,134 bytes before compression. There are no missing or mismatched tickers, incomplete filings or verification errors. All 56 filing/reader/migration tests passed in Actions.
+
+The `company-filings-full-completeness` artifact (ID `12109396961`) contains both `company_filings_full_report.json` and `company_filings_full_dates.csv`. Its 23,635 date-index rows were checked individually against the filing records, including ticker associations, filing/report/acceptance dates, source URL, original SHA256, byte count, manifest key and completeness flags. Every filing date and acceptance value is present; SEC leaves the reporting-period date blank for 150 filings, which remain blank. Storage is published 90-day Actions artifacts with `durable=false`; R2 has not been configured or live-tested.
+
+`data/company_filings_full_release.json` is the small checked release pointer. It records the canonical run, compatible reader commit, coverage counts, all twelve original-source artifact IDs and digests, expiration times, and the dates/completeness artifact. Use that pointer rather than an older chat message or a failed diagnostic run. Corpus objects remain outside git.
+
+The pinned universe uses market capitalization of at least $80 million, average volume of at least 500,000 shares, and ATR of at least 2.5% of price. It excludes ETFs, closed-end debt/equity/foreign funds and shell companies. The snapshot and ticker-to-CIK associations are fixed by the committed universe inventory.
+
+After the R2 migration workflow is merged to the default branch, add the four repository Actions settings and run it with the release pointer's `verified_run_id`. It refuses an incomplete or expired source run. Its `complete=true` and `durable=true` result is the evidence of a completed permanent transfer; merely adding settings or merging this PR does not migrate existing files.
+
+After a successful permanent transfer, update the release pointer to reference the new durable completeness report. Keep the original verified source checksums and the initial artifact provenance.
