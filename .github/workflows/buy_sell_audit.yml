@@ -1,0 +1,78 @@
+name: buy-sell day audit
+
+# Every trading day, fingerprint sealed buy/sell lists (names, sides,
+# sizes, dates) for live fullscan strategies and fail if a past day moved
+# versus its first-seal baseline.
+#
+# Cron is after the US cash close and the Deploy dashboard window
+# (deploy-dashboard follows Stock Book / tickets / Factor mine).
+# workflow_dispatch session_date is printed as a focus day; every sealed
+# day is still checked.
+#
+# RED means a line starting with DRIFT or NEW:
+#   DRIFT <family> <name> <date>: buy/sell fingerprint moved
+#     — that strategy's sealed buys/sells are not the first seal.
+#       The baseline file is not updated. Do not edit the sealed record
+#       to make the job green.
+#   DRIFT strategy_tickets <date>: sealed file hash moved
+#     — data/day_board/<date>_strategy_tickets.json no longer matches
+#       data/past_day_lock.
+#   NEW <family> <name> <date>: no first-seal baseline
+#     — a newly sealed day. Append it with
+#       python3 -m src.buy_sell_audit --seed
+#       which refuses to rewrite any existing line.
+# MISSING / SKIP lines are gaps or Theme Radar. They do not fail the job.
+# Equity marks and sit notes are outside the fingerprint.
+# Theme Radar (SRoyaltyy/theme-radar) is not audited here.
+# How to read a red run: docs/buy_sell_audit.md
+
+on:
+  schedule:
+    - cron: "30 23 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      session_date:
+        description: "YYYY-MM-DD focus day (empty = all sealed days; all are still checked)"
+        required: false
+        default: ""
+  pull_request:
+    paths:
+      - "src/buy_sell_audit.py"
+      - "src/test_buy_sell_audit.py"
+      - ".github/workflows/buy_sell_audit.yml"
+      - "docs/buy_sell_audit.md"
+      - "data/buy_sell_audit/**"
+      - "data/strategy_status/**"
+      - "data/day_board/**"
+      - "data/past_day_lock/**"
+      - "data/webull_sim/days.jsonl"
+      - "data/factor_mine/preopen/seals/**"
+      - "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl"
+      - "research/hot_n4_clean_v4/forward/holdup_log.jsonl"
+      - "excel_bot/freeze_manifest.json"
+      - "dashboard/h1/log.json"
+      - "dashboard/holdup/log.json"
+      - "dashboard/factor-mine/preopen.json"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch main for the append-only baseline check
+        run: git fetch --depth=1 --no-tags origin main
+      - name: Buy/sell fingerprint audit
+        env:
+          SESSION_DATE: ${{ github.event.inputs.session_date }}
+        run: |
+          python3 -m src.test_buy_sell_audit
+          python3 -m src.buy_sell_audit --check --check-against origin/main ${SESSION_DATE:+--date "$SESSION_DATE"}
