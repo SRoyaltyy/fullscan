@@ -5,8 +5,8 @@
   "run_id": "39002687885",
   "model": "",
   "started_at": "2026-10-17T00:38:07-04:00",
-  "updated_at": "2026-10-17T00:38:07-04:00",
-  "heartbeat_at": "2026-10-17T00:38:07-04:00",
+  "updated_at": "2026-10-17T00:38:28-04:00",
+  "heartbeat_at": "2026-10-17T00:38:28-04:00",
   "stages": [
     {
       "name": "renew",
@@ -32,11 +32,11 @@
     },
     {
       "name": "all",
-      "state": "running",
+      "state": "ok",
       "started_at": "2026-10-17T00:38:07-04:00",
-      "ended_at": "",
+      "ended_at": "2026-10-17T00:38:28-04:00",
       "heartbeat_at": "2026-10-17T00:38:07-04:00",
-      "done": 0,
+      "done": 1,
       "total": 1,
       "model": "",
       "error": ""
