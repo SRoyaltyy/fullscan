@@ -7,6 +7,41 @@ on:
 permissions:
   contents: read
 jobs:
+  relay_health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Read one SEC inventory and one whole submission to check current relay health
+        env:
+          PRIMARY_ACTION_RELAY_URL: ${{ secrets.PRIMARY_ACTION_RELAY_URL }}
+        run: |
+          python - <<'PY'
+          import hashlib,json,os,pathlib,time,urllib.request,urllib.parse,urllib.error
+          relay=os.environ.get('PRIMARY_ACTION_RELAY_URL','').strip().rstrip('/')
+          results=[]
+          sources=[('inventory','https://data.sec.gov/submissions/CIK0001819994.json'),('whole_submission','https://www.sec.gov/Archives/edgar/data/16160/000156276226000113/0001562762-26-000113.txt')]
+          for kind,url in sources:
+              started=time.monotonic();entry={'kind':kind,'source_url':url}
+              if not relay:entry['error_type']='RelayNotConfigured';results.append(entry);continue
+              request=urllib.request.Request(relay+'/?url='+urllib.parse.quote(url,safe=''),headers={'User-Agent':'Fullscan filing parser research@sroyaltyy.github.io'})
+              try:
+                  with urllib.request.urlopen(request,timeout=45) as response:raw=response.read();entry['http_status']=response.status
+                  entry.update(bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest())
+                  entry['valid']=bool(json.loads(raw).get('filings')) if kind=='inventory' else raw.rstrip().upper().endswith(b'</SEC-DOCUMENT>')
+              except urllib.error.HTTPError as exc:entry.update(http_status=exc.code,error_type='HTTPError',valid=False)
+              except Exception as exc:entry.update(error_type=type(exc).__name__,valid=False)
+              entry['seconds']=round(time.monotonic()-started,3);results.append(entry)
+              time.sleep(2)
+          pathlib.Path('relay_health.json').write_text(json.dumps(results,indent=2))
+          print(json.dumps(results,indent=2))
+          if not all(r.get('valid') for r in results):raise SystemExit(1)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: company-filings-relay-health
+          path: relay_health.json
+          retention-days: 14
   access:
     runs-on: ubuntu-latest
     timeout-minutes: 5
