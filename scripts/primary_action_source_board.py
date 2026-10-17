@@ -26,6 +26,8 @@ LATEST_DIR = ROOT / "data" / "primary_actions" / "latest"
 PAGES_URL = "https://sroyaltyy.github.io/fullscan/dashboard/source-board/"
 RAW_BASE = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main"
 MAX_HEADLINES = 400
+MAX_PARSED_PER_SOURCE = 30
+MAX_PARSED_TODAY = 500
 
 # Trading-relevance classes (rule-based, zero LLM — same pipeline philosophy).
 # The pipeline intentionally collects EVERY primary publication; the board's job
@@ -106,6 +108,7 @@ def build(date: str = "") -> dict:
     catalog = _load_json(CATALOG, {})
     report = _load_json(LATEST_DIR / "report.json", {})
     new_items = _load_json(LATEST_DIR / "new_items.json", [])
+    current_docs = _load_json(LATEST_DIR / "current_documents.json", [])
 
     channels = []
     for s in catalog.get("sources") or []:
@@ -170,6 +173,67 @@ def build(date: str = "") -> dict:
 
     counts = report.get("counts") or {}
     board_date = date or _date_of(str(report.get("generated_at") or ""))
+
+    # --- What exactly was parsed, per source -------------------------
+    # current_documents.json = every dated document in the collect window,
+    # already deduped. Attach each document to every catalog channel that
+    # observed it, so each row shows precisely what that source yielded.
+    chan_ids = {c["id"] for c in channels}
+    parsed_by_src: dict[str, list[dict]] = {cid: [] for cid in chan_ids}
+    for doc in current_docs or []:
+        meta = doc.get("source_metadata") or {}
+        item = {
+            "title": doc.get("title") or "",
+            "url": doc.get("url") or "",
+            "published_at": doc.get("published_at") or "",
+            "document_type": meta.get("document_type") or "",
+            "stage": meta.get("document_stage") or "",
+            "new": bool(doc.get("first_seen") and _date_of(str(doc.get("first_seen"))) == board_date),
+        }
+        item["cls"] = classify({"title": item["title"],
+                                "source": doc.get("primary_source_id") or ""},
+                               fam_by_id.get(doc.get("primary_source_id") or "") or "")
+        for sid in doc.get("source_ids") or []:
+            if sid in parsed_by_src:
+                parsed_by_src[sid].append(item)
+
+    for c in channels:
+        items = parsed_by_src.get(c["id"]) or []
+        today = [it for it in items if (it.get("published_at") or "")[:10] == board_date]
+        items.sort(key=lambda r: (order.get(r["cls"], 9), -_ts(r.get("published_at") or "")))
+        c["parsed"] = {
+            "today": len(today),
+            "window": len(items),
+            "by_class": dict(Counter(it["cls"] for it in today)),
+            "items": items[:MAX_PARSED_PER_SOURCE],
+        }
+
+    parsed_today_items = []
+    pt_by_src: Counter = Counter()
+    pt_by_cls: Counter = Counter()
+    for c in channels:
+        for it in (c["parsed"].get("items") or []):
+            if (it.get("published_at") or "")[:10] == board_date:
+                parsed_today_items.append(dict(it, source=c["id"]))
+                pt_by_src[c["id"]] += 1
+                pt_by_cls[it["cls"]] += 1
+    # a document observed by several channels appears once per channel above;
+    # dedupe the global list by URL keeping the highest-class copy
+    best: dict[str, dict] = {}
+    for it in parsed_today_items:
+        key = it.get("url") or it.get("title") or ""
+        if key not in best or order.get(it["cls"], 9) < order.get(best[key]["cls"], 9):
+            best[key] = it
+    parsed_today_items = sorted(best.values(),
+                                key=lambda r: (order.get(r["cls"], 9), -_ts(r.get("published_at") or "")))
+    pt_by_src = Counter({k: v for k, v in pt_by_src.items()})
+    parsed_today = {
+        "count": len(parsed_today_items),
+        "by_source": dict(pt_by_src.most_common()),
+        "by_class": dict(pt_by_cls),
+        "items": parsed_today_items[:MAX_PARSED_TODAY],
+    }
+
     return {
         "date": board_date,
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -192,6 +256,7 @@ def build(date: str = "") -> dict:
         },
         "failures": failures,
         "channels": channels,
+        "parsed_today": parsed_today,
         "new_today": {
             "count": len(headlines),
             "by_source": dict(by_source.most_common()),
@@ -261,6 +326,8 @@ def write_json(board: dict) -> list[Path]:
         "new_today": {"count": (board.get("new_today") or {}).get("count", 0),
                       "by_source": (board.get("new_today") or {}).get("by_source") or {},
                       "by_class": (board.get("new_today") or {}).get("by_class") or {}},
+        "parsed_today": {"count": (board.get("parsed_today") or {}).get("count", 0),
+                         "by_class": (board.get("parsed_today") or {}).get("by_class") or {}},
         "n_failures": len(board.get("failures") or []),
         "dates": _latest_dates(date),
         "href": f"{RAW_BASE}/data/source_board/{date}.json",
