@@ -17,8 +17,10 @@ export default {
     if (!allowed(t.hostname)) return new Response('target host is not an approved official source', { status: 403 });
 
     const headers = {
-      'User-Agent': 'FullscanPrimaryActionScanner/1.0 (+https://github.com/SRoyaltyy/fullscan; public documents; no article-body crawling)',
-      'Accept': 'application/json, application/atom+xml, application/rss+xml, text/html;q=0.8',
+      // SEC fair access wants a contact email in the agent string. Other official
+      // hosts accept the same declared identity.
+      'User-Agent': 'Fullscan filing parser research@sroyaltyy.github.io',
+      'Accept': 'application/json, application/atom+xml, application/rss+xml, text/html;q=0.8, */*;q=0.5',
     };
     for (const h of ['if-none-match', 'if-modified-since']) {
       if (request.headers.has(h)) headers[h] = request.headers.get(h);

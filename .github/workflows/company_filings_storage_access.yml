@@ -1,0 +1,80 @@
+name: Filing archive storage access check
+on:
+  push:
+    branches: [cursor/company-filing-parser-9b60]
+    paths: ['.github/workflows/company_filings_storage_access.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  relay_health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Read one SEC inventory and one whole submission to check current relay health
+        env:
+          PRIMARY_ACTION_RELAY_URL: ${{ secrets.PRIMARY_ACTION_RELAY_URL }}
+        run: |
+          python - <<'PY'
+          import hashlib,json,os,pathlib,time,urllib.request,urllib.parse,urllib.error
+          relay=os.environ.get('PRIMARY_ACTION_RELAY_URL','').strip().rstrip('/')
+          results=[]
+          sources=[('inventory','https://data.sec.gov/submissions/CIK0001819994.json'),('whole_submission','https://www.sec.gov/Archives/edgar/data/16160/000156276226000113/0001562762-26-000113.txt')]
+          for kind,url in sources:
+              started=time.monotonic();entry={'kind':kind,'source_url':url}
+              if not relay:entry['error_type']='RelayNotConfigured';results.append(entry);continue
+              request=urllib.request.Request(relay+'/?url='+urllib.parse.quote(url,safe=''),headers={'User-Agent':'Fullscan filing parser research@sroyaltyy.github.io'})
+              try:
+                  with urllib.request.urlopen(request,timeout=45) as response:raw=response.read();entry['http_status']=response.status
+                  entry.update(bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest())
+                  entry['valid']=bool(json.loads(raw).get('filings')) if kind=='inventory' else raw.rstrip().upper().endswith(b'</SEC-DOCUMENT>')
+              except urllib.error.HTTPError as exc:entry.update(http_status=exc.code,error_type='HTTPError',valid=False)
+              except Exception as exc:entry.update(error_type=type(exc).__name__,valid=False)
+              entry['seconds']=round(time.monotonic()-started,3);results.append(entry)
+              time.sleep(2)
+          pathlib.Path('relay_health.json').write_text(json.dumps(results,indent=2))
+          print(json.dumps(results,indent=2))
+          if not all(r.get('valid') for r in results):raise SystemExit(1)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: company-filings-relay-health
+          path: relay_health.json
+          retention-days: 14
+  access:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check existing documented Cloudflare deployment credential without revealing it
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID || vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          python - <<'PY'
+          import json,os,pathlib,urllib.request,urllib.error
+          token=os.environ.get('CLOUDFLARE_API_TOKEN','').strip()
+          account=os.environ.get('CLOUDFLARE_ACCOUNT_ID','').strip()
+          result={'documented_cloudflare_token_present':bool(token),'account_id_present':bool(account),'objects_written':0,'resources_created':0}
+          if token:
+              request=urllib.request.Request('https://api.cloudflare.com/client/v4/user/tokens/verify',headers={'Authorization':'Bearer '+token})
+              try:
+                  with urllib.request.urlopen(request,timeout=30) as response:data=json.load(response)
+                  result['token_active']=bool(data.get('success') and data.get('result',{}).get('status')=='active')
+              except urllib.error.HTTPError as exc:result['verification_http_status']=exc.code
+              if account:
+                  request=urllib.request.Request('https://api.cloudflare.com/client/v4/accounts/'+account+'/r2/buckets',headers={'Authorization':'Bearer '+token})
+                  try:
+                      with urllib.request.urlopen(request,timeout=30) as response:data=json.load(response)
+                      result['r2_buckets_readable']=bool(data.get('success'))
+                      result['r2_bucket_count']=len(data.get('result',{}).get('buckets',[]))
+                  except urllib.error.HTTPError as exc:result['r2_http_status']=exc.code
+          pathlib.Path('storage_access.json').write_text(json.dumps(result,indent=2))
+          print(json.dumps(result,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: company-filings-storage-access
+          path: storage_access.json
+          retention-days: 14
