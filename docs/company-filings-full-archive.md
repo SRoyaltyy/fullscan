@@ -36,3 +36,5 @@ python scripts/read_company_filings_full.py --ticker RKLB --objects downloaded/o
 ```
 
 The first command lists dates and completeness. The others export the whole original submission, every embedded file's complete text plus metadata, or one entire original file. These commands never request point excerpts. For binaries, use original export; a binary asset's empty text field does not replace its preserved original.
+
+After configuring R2 credentials, migrate each downloaded shard with `python scripts/migrate_company_filings_full.py --objects downloaded/objects`. This copies and verifies complete originals and full text before publishing durable manifests; it never requests SEC files again. It resumes by verifying existing destination objects. The command migrates the filings present in that shard, and does not by itself assert that all 2,032 tickers are complete.
