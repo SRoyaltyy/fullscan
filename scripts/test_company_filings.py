@@ -7,9 +7,9 @@ from pathlib import Path
 
 from src.company_filings.edgar import blocked_reason, relay_target
 from src.company_filings.extract import html_to_text, sections_for, source_points
-from src.company_filings.select import fingerprint, priority, select_filings
+from src.company_filings.select import canonical_form, fingerprint, priority, select_filings
 from src.company_filings.store import Store
-from src.company_filings.universe import group_by_cik, load_universe
+from src.company_filings.universe import attach_ciks, group_by_cik, load_universe
 
 
 ANNUAL = {
@@ -123,6 +123,58 @@ class SelectTests(unittest.TestCase):
     def test_fingerprint_ignores_order(self):
         self.assertEqual(fingerprint([ANNUAL, NEW_Q]), fingerprint([NEW_Q, ANNUAL]))
 
+    def test_40fr_registration_is_the_annual(self):
+        canadian = dict(ANNUAL, form="40FR12B", accession="0001-26-000040")
+        later_q = dict(NEW_Q, filing_date="2026-08-01", accession="0001-26-000041")
+        current = {
+            "form": "6-K", "accession": "0001-26-000042", "filing_date": "2026-09-01",
+            "report_date": "", "primary": "k.htm", "description": "", "items": "",
+        }
+        chosen = select_filings([canadian, later_q, current])
+        forms = {row["accession"]: row["form"] for row in chosen}
+        self.assertEqual(forms[canadian["accession"]], "40-F")
+        self.assertIn(later_q["accession"], forms)
+        self.assertNotIn(current["accession"], forms)
+        self.assertEqual(canonical_form("20FR12G/A"), "20-F/A")
+        self.assertEqual(canonical_form("6-K"), "6-K")
+
+    def test_canadian_prospectus_when_there_is_no_annual(self):
+        prospectus = dict(ANNUAL, form="F-10", accession="0001-25-000010", filing_date="2025-06-01")
+        amendment = dict(prospectus, form="F-10/A", accession="0001-25-000011", filing_date="2025-07-01")
+        chosen = select_filings([prospectus, amendment])
+        self.assertEqual(
+            {row["accession"] for row in chosen},
+            {prospectus["accession"], amendment["accession"]},
+        )
+
+    def test_spinoff_keeps_the_registration_and_the_quarter(self):
+        registration = dict(ANNUAL, form="10-12B/A", accession="0001-26-000050", filing_date="2026-03-01")
+        quarter = dict(NEW_Q, filing_date="2026-05-08", accession="0001-26-000051")
+        agreement = dict(AGREEMENT, filing_date="2026-06-02")
+        chosen = select_filings([registration, quarter, agreement, OFFICER])
+        forms = {row["accession"]: row["form"] for row in chosen}
+        self.assertEqual(forms[registration["accession"]], "10-12B/A")
+        accessions = set(forms)
+        self.assertIn(quarter["accession"], accessions)
+        self.assertIn(agreement["accession"], accessions)
+        self.assertNotIn(OFFICER["accession"], accessions)
+
+    def test_fund_report_beats_the_registration(self):
+        report = dict(ANNUAL, form="N-CSRS", accession="0001-26-000060")
+        registration = dict(ANNUAL, form="N-2/A", accession="0001-26-000061", filing_date="2026-01-15")
+        chosen = select_filings([report, registration])
+        self.assertEqual([row["accession"] for row in chosen], [report["accession"]])
+        self.assertEqual(chosen[0]["form"], "N-CSRS")
+
+    def test_fund_registration_when_there_is_no_report(self):
+        registration = dict(ANNUAL, form="N-2", accession="0001-26-000070", filing_date="2026-01-15")
+        amendment = dict(registration, form="N-2/A", accession="0001-26-000071", filing_date="2026-02-01")
+        chosen = select_filings([registration, amendment])
+        self.assertEqual(
+            {row["accession"] for row in chosen},
+            {registration["accession"], amendment["accession"]},
+        )
+
 
 class ExtractTests(unittest.TestCase):
     def test_sections_skip_the_contents_and_the_statement_table(self):
@@ -216,6 +268,18 @@ class UniverseTests(unittest.TestCase):
         by_cik = {row["cik"]: row for row in grouped}
         self.assertEqual(by_cik["0001"]["ticker"], "GOOG")
         self.assertCountEqual(by_cik["0001"]["tickers"], ["GOOG", "GOOGL"])
+
+    def test_y_suffix_adr_matches_only_when_the_name_overlaps(self):
+        rows = [
+            {"ticker": "CSAN", "name": "Cosan S.A ADR", "market_cap_m": 100},
+            {"ticker": "GOLD", "name": "Gold Fields Ltd", "market_cap_m": 80},
+        ]
+        mapping = {"CSANY": "1430162", "GOLDY": "999"}
+        titles = {"CSANY": "COSAN S.A.", "GOLDY": "Golden Enterprises Inc"}
+        matched, missing = attach_ciks(rows, mapping, titles)
+        self.assertEqual([row["ticker"] for row in matched], ["CSAN"])
+        self.assertEqual(matched[0]["cik"], "0001430162")
+        self.assertEqual([row["ticker"] for row in missing], ["GOLD"])
 
 
 if __name__ == "__main__":

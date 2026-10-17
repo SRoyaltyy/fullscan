@@ -14,10 +14,14 @@ from .extract import EXHIBIT_CAP, _cap, html_to_text, sections_for, source_point
 from .select import (
     ANNUAL_AMENDMENTS,
     ANNUAL_FORMS,
+    FUND_ANNUAL_AMENDMENTS,
+    FUND_ANNUAL_FORMS,
+    QUARTERLY_FORMS,
     REGISTRATION_AMENDMENTS,
     REGISTRATION_FORMS,
     filings_from_columnar,
     fingerprint,
+    is_annual_form,
     needs_exhibits,
     priority,
     select_filings,
@@ -27,6 +31,11 @@ from .store import Store, sha256
 # Gzipped prose for 10-Qs, 8-Ks, and the one exhibit we keep. The annual
 # report is extra and is always stored. ~2,000 companies at this cap is
 # about 1 GB plus the annual reports, which is the storage budget.
+STRONG_FORMS = (
+    ANNUAL_FORMS | ANNUAL_AMENDMENTS
+    | REGISTRATION_FORMS | REGISTRATION_AMENDMENTS
+    | FUND_ANNUAL_FORMS | FUND_ANNUAL_AMENDMENTS
+)
 OTHER_BUDGET_BYTES = 500_000
 EX99_MAX_BYTES = 1_500_000
 EX10_MAX_BYTES = 1_000_000
@@ -47,7 +56,7 @@ def _load_rows(client: Client, payload: dict) -> list[dict]:
     rows: list[dict] = []
     for block in _columnar_blocks(payload):
         rows.extend(filings_from_columnar(block))
-    if any(row["form"] in {"10-K", "20-F", "40-F", "S-1", "F-1"} for row in rows):
+    if any(is_annual_form(row["form"]) for row in rows):
         return rows
     for extra in (payload.get("filings") or {}).get("files") or []:
         name = extra.get("name") or ""
@@ -58,7 +67,7 @@ def _load_rows(client: Client, payload: dict) -> list[dict]:
         except EdgarError:
             continue
         rows.extend(filings_from_columnar(more if more.get("form") else (more.get("filings") or {}).get("recent") or {}))
-        if any(row["form"] in {"10-K", "20-F", "40-F"} for row in rows):
+        if any(is_annual_form(row["form"]) for row in rows):
             break
     return rows
 
@@ -125,19 +134,21 @@ def parse_company(company: dict, client: Client, store: Store, force: bool = Fal
     rows = _load_rows(client, payload)
     chosen = select_filings(rows)
     if not chosen:
-        store.mark(company, "no_filing", "no 10-K, 20-F, 40-F, or S-1")
+        store.mark(company, "no_filing", "no annual report, fund report, registration, or 10-Q")
         return "no_filing"
     digest = fingerprint(chosen)
     if not force and store.fingerprint(ticker) == digest:
         return "skip"
     chosen.sort(key=priority)
+    selected_forms = {filing["form"] for filing in chosen}
+    quarter_is_base = not (selected_forms & STRONG_FORMS)
     docs = []
     other_bytes = 0
     for filing in chosen:
         if not filing.get("primary") or not filing.get("accession"):
             continue
         form = filing["form"]
-        annual = form in ANNUAL_FORMS | ANNUAL_AMENDMENTS | REGISTRATION_FORMS | REGISTRATION_AMENDMENTS
+        protected = form in STRONG_FORMS or (quarter_is_base and form in QUARTERLY_FORMS)
         try:
             raw = client.document(cik, filing["accession"], filing["primary"])
         except EdgarBlocked:
@@ -150,7 +161,7 @@ def parse_company(company: dict, client: Client, store: Store, force: bool = Fal
         if not sections:
             continue
         size = sum(_gzip_len(value) for value in sections.values())
-        if not annual and other_bytes + size > OTHER_BUDGET_BYTES:
+        if not protected and other_bytes + size > OTHER_BUDGET_BYTES:
             continue
         points = {item: [(point.ordinal, point.start, point.end) for point in source_points(value)] for item, value in sections.items()}
         docs.append({
@@ -166,11 +177,11 @@ def parse_company(company: dict, client: Client, store: Store, force: bool = Fal
             "points": points,
             "exhibits": exhibits,
         })
-        if not annual:
+        if not protected:
             other_bytes += size
     kept_forms = {doc["form"] for doc in docs}
-    base_forms = ANNUAL_FORMS | REGISTRATION_FORMS | ANNUAL_AMENDMENTS | REGISTRATION_AMENDMENTS
-    if not docs or not (kept_forms & base_forms):
+    required = QUARTERLY_FORMS if quarter_is_base else STRONG_FORMS
+    if not docs or not (kept_forms & required):
         store.mark(company, "error", "filings selected but the annual report could not be read")
         return "error"
     company = {**company, "fingerprint": digest}

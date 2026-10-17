@@ -49,7 +49,10 @@ def _companies(args, client: Client) -> list[dict]:
         return rows
     export = Path(args.export) if args.export else latest_export(ROOT / "data" / "exports")
     universe = load_universe(export)
-    matched, missing = attach_ciks(universe, client.ticker_map())
+    records = client.ticker_records()
+    mapping = {ticker: record["cik"] for ticker, record in records.items()}
+    titles = {ticker: record["title"] for ticker, record in records.items()}
+    matched, missing = attach_ciks(universe, mapping, titles)
     print(
         f"universe {export.name}: {len(universe)} pass filters, "
         f"{len(matched)} have a CIK, {len(missing)} do not",

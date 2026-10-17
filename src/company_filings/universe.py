@@ -8,6 +8,7 @@ have no operating business for a filing to describe.
 from __future__ import annotations
 
 import csv
+import re
 from pathlib import Path
 
 MIN_MARKET_CAP_M = 80.0
@@ -20,6 +21,14 @@ DROP_INDUSTRIES = frozenset({
     "Closed-End Fund - Equity",
     "Closed-End Fund - Foreign",
     "Shell Companies",
+})
+
+# Words that show up in both a Finviz name and an unrelated SEC title.
+_GENERIC_NAME = frozenset({
+    "inc", "incorporated", "corp", "corporation", "ltd", "limited", "plc", "llc",
+    "company", "companies", "group", "holdings", "holding", "class", "common",
+    "stock", "shares", "adr", "ads", "the", "and", "for", "trust", "fund",
+    "international", "global",
 })
 
 
@@ -70,16 +79,43 @@ def load_universe(path: Path) -> list[dict]:
     return kept
 
 
-def attach_ciks(rows: list[dict], ticker_to_cik: dict[str, str]) -> tuple[list[dict], list[dict]]:
+def _significant_tokens(name: str) -> set[str]:
+    words = re.findall(r"[A-Za-z]{4,}", name or "")
+    return {word.lower() for word in words if word.lower() not in _GENERIC_NAME}
+
+
+def _same_issuer(company_name: str, sec_title: str) -> bool:
+    left = _significant_tokens(company_name)
+    right = _significant_tokens(sec_title)
+    return bool(left and right and (left & right))
+
+
+def attach_ciks(
+    rows: list[dict],
+    ticker_to_cik: dict[str, str],
+    titles: dict[str, str] | None = None,
+) -> tuple[list[dict], list[dict]]:
     """Split rows into those with a CIK and those the SEC ticker file does not list.
 
     Finviz writes class shares with a hyphen. EDGAR sometimes uses a dot.
+    A Y-suffix ADR (CSAN on Finviz, CSANY at the SEC) is used only when the
+    company name and the SEC title share a distinctive word.
     """
+    titles = titles or {}
     matched: list[dict] = []
     missing: list[dict] = []
     for row in rows:
         ticker = row["ticker"]
-        cik = ticker_to_cik.get(ticker) or ticker_to_cik.get(ticker.replace("-", ".")) or ticker_to_cik.get(ticker.replace(".", "-"))
+        cik = (
+            ticker_to_cik.get(ticker)
+            or ticker_to_cik.get(ticker.replace("-", "."))
+            or ticker_to_cik.get(ticker.replace(".", "-"))
+        )
+        if not cik:
+            alt = ticker + "Y"
+            alt_cik = ticker_to_cik.get(alt)
+            if alt_cik and _same_issuer(row.get("name") or "", titles.get(alt) or ""):
+                cik = alt_cik
         if not cik:
             missing.append(row)
             continue

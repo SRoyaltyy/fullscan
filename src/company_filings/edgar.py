@@ -123,14 +123,22 @@ class Client:
         if delay > 0:
             time.sleep(delay)
 
-    def ticker_map(self) -> dict[str, str]:
+    def ticker_records(self) -> dict[str, dict]:
+        """Ticker to CIK and the SEC title. The title is how a Y-suffix ADR is matched."""
         payload = self._get(TICKERS).json()
-        out: dict[str, str] = {}
+        out: dict[str, dict] = {}
         for entry in payload.values():
             ticker = str(entry.get("ticker") or "").upper()
-            if ticker:
-                out[ticker] = str(entry.get("cik_str") or "")
+            if not ticker:
+                continue
+            out[ticker] = {
+                "cik": str(entry.get("cik_str") or ""),
+                "title": str(entry.get("title") or ""),
+            }
         return out
+
+    def ticker_map(self) -> dict[str, str]:
+        return {ticker: record["cik"] for ticker, record in self.ticker_records().items()}
 
     def submissions(self, cik: str) -> dict:
         return self._get(SUBMISSIONS.format(cik=str(cik).zfill(10))).json()
