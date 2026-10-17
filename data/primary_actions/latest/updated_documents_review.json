@@ -1,29 +1,5 @@
 [
   {
-    "title": "Counterfeit Versions of Eye Drops Found in Several States",
-    "url": "http://www.fda.gov/drugs/counterfeit-medicine/counterfeit-versions-eye-drops-found-several-states",
-    "native_id": "http://www.fda.gov/drugs/counterfeit-medicine/counterfeit-versions-eye-drops-found-several-states",
-    "published_at": "2026-10-16T20:07:20+00:00",
-    "published_raw": "Fri, 16 Oct 2026 16:07:20 EDT",
-    "summary": "Counterfeit versions of over-the-counter eye drops have been found in Florida and Georgia in stores serving primarily Spanish-speaking customers. These products also may be in Louisiana, Mississippi, North Carolina and potentially other states.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 3793,
-    "first_seen": "2026-10-16T16:03:14.310875+00:00",
-    "last_seen": "2026-10-17T11:48:15.567792+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
     "title": "Telephone Penetration Report",
     "url": "http://www.fcc.gov/wcb/iatd/recent.html",
     "native_id": "http://www.fcc.gov/wcb/iatd/recent.html",
@@ -42,33 +18,9 @@
     "primary_source_id": "us-fcc-86f1b34c46",
     "n": 3972,
     "first_seen": "2026-10-16T16:06:40.552868+00:00",
-    "last_seen": "2026-10-17T11:48:15.567792+00:00",
+    "last_seen": "2026-10-17T12:25:59.940473+00:00",
     "source_ids": [
       "us-fcc-86f1b34c46"
-    ]
-  },
-  {
-    "title": "Freight Rail Couplers and Parts Thereof from Czech Republic and India Injure U.S. Industry, Says USITC",
-    "url": "https://www.usitc.gov/press_room/news_release/2026/er1016_69361.htm",
-    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1016_69361.htm",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "United States International Trade Commission",
-      "jurisdiction": "US",
-      "family": "trade_and_judicial"
-    },
-    "primary_source_id": "us-itc-index",
-    "n": 4161,
-    "first_seen": "2026-10-16T16:39:29.228247+00:00",
-    "last_seen": "2026-10-17T11:48:15.567792+00:00",
-    "source_ids": [
-      "us-itc-index"
     ]
   }
 ]

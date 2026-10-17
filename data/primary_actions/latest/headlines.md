@@ -1,7 +1,7 @@
 # Primary-origin action documents
 
-Updated 2026-10-17T11:48:15.567792+00:00. 3604 dated documents in the configured 3-day window; 42 newly retained; 1258 repeat observations.
-Source health: 456/456 checked successfully. Collection uses zero LLM calls.
+Updated 2026-10-17T12:25:59.940473+00:00. 3577 dated documents in the configured 3-day window; 2 newly retained; 1115 repeat observations.
+Source health: 455/456 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
@@ -33,7 +33,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [CAC Outcome: Prospect & Nokia](https://www.gov.uk/government/publications/cac-outcome-prospect-nokia) — Central Arbitration Committee; 2026-10-15T09:02:10+00:00
 - [Hexagon Housing Association Limited](https://www.gov.uk/government/publications/regulatory-judgement-hexagon-housing-association-limited) — Regulator of Social Housing; 2026-10-15T08:30:03+00:00
 - [Concept Housing Association CIC](https://www.gov.uk/government/publications/regulatory-judgement-concept-housing-association-cic) — Regulator of Social Housing; 2026-10-15T08:30:01+00:00
-- [Orphan registered medicinal products](https://www.gov.uk/government/publications/orphan-registered-medicinal-products) — Medicines and Healthcare products Regulatory Agency; 2026-10-14T11:57:40+00:00
 
 ## final_rule_published
 
@@ -229,8 +228,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [J Reid v Premier Marine East Anglia Ltd, John Phillips & Co Ltd: 3302004/2025](https://www.gov.uk/employment-tribunal-decisions/j-reid-v-premier-marine-east-anglia-ltd-john-phillips-and-co-ltd-3302004-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-14T14:48:25+00:00
 - [M Longshaw v Brocket Hall (Holding) Ltd: 3311328/2024](https://www.gov.uk/employment-tribunal-decisions/m-longshaw-v-brocket-hall-holding-ltd-3311328-slash-2024) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-14T14:47:08+00:00
 - [(2026) UKUT 00394 (TCC) Josoemag Services Limited v HM Revenue and Customs](https://www.gov.uk/tax-and-chancery-tribunal-decisions/2026-ukut-00394-tcc-josoemag-services-limited-v-hm-revenue-and-customs) — HM Courts & Tribunals Service; Upper Tribunal (Tax and Chancery Chamber); 2026-10-14T14:42:34+00:00
-- [J Glendenning v Unipart Group Ltd: 2600076/2025](https://www.gov.uk/employment-tribunal-decisions/j-glendenning-v-unipart-group-ltd-2600076-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-14T12:25:04+00:00
-- [Mrs M Williams v Foxwood Academy: 6017157/2025](https://www.gov.uk/employment-tribunal-decisions/mrs-m-williams-v-foxwood-academy-6017157-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-14T12:24:23+00:00
 
 ## judicial_opinion_published
 
@@ -2608,15 +2605,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [25-1280 - Jenyfer Fajardo-Rivas v. Todd Blanche](https://www.govinfo.gov/app/details/USCOURTS-ca4-25-01280/context) — Court of Appeals for the Fourth Circuit; 2026-10-14T20:22:00+00:00
 - [26-069 - Taylor v. Schmidt et al](https://www.govinfo.gov/app/details/USCOURTS-akd-3_26-cv-00069/context) — District Court District of Alaska; 2026-10-14T20:22:00+00:00
 - [26-11293 - Theodore Sabir v. Joy Sabir](https://www.govinfo.gov/app/details/USCOURTS-ca11-26-11293/context) — Court of Appeals for the Eleventh Circuit; 2026-10-14T20:21:00+00:00
-- [25-30558 - USA v. Peacock](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-30558/context) — Court of Appeals for the Fifth Circuit; 2026-10-14T12:25:00+00:00
-- [26-10455 - Ratcliff v. Old American](https://www.govinfo.gov/app/details/USCOURTS-ca5-26-10455/context) — Court of Appeals for the Fifth Circuit; 2026-10-14T12:25:00+00:00
-- [25-11363 - USA v. Malik](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-11363/context) — Court of Appeals for the Fifth Circuit; 2026-10-14T12:25:00+00:00
-- [25-30528 - USA v. Tekippe](https://www.govinfo.gov/app/details/USCOURTS-ca5-25-30528/context) — Court of Appeals for the Fifth Circuit; 2026-10-14T12:25:00+00:00
-- [25-5063 - Haase v. Rivas-Molloy et al](https://www.govinfo.gov/app/details/USCOURTS-txsd-4_25-cv-05063/context) — District Court Southern District of Texas; 2026-10-14T12:25:00+00:00
-- [24-1388 - Rodriguez Rodriguez v. Arizmendi et al](https://www.govinfo.gov/app/details/USCOURTS-prd-3_24-cv-01388/context) — District Court District of Puerto Rico; 2026-10-14T12:25:00+00:00
-- [26-1808 - Graham v. Warden, JHCC Tommy Sharp et al](https://www.govinfo.gov/app/details/USCOURTS-nywd-1_26-cv-01808/context) — District Court Western District of New York; 2026-10-14T12:25:00+00:00
-- [22-959 - SB1708 Realty LLC v. Allen et al](https://www.govinfo.gov/app/details/USCOURTS-nyed-1_22-cv-00959/context) — District Court Eastern District of New York; 2026-10-14T12:25:00+00:00
-- [25-2212 - CROUCH v. BOWSER et al](https://www.govinfo.gov/app/details/USCOURTS-dcd-1_25-cv-02212/context) — District Court District of Columbia; 2026-10-14T12:25:00+00:00
 
 ## law_published
 
@@ -2884,6 +2872,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Purchase of Ready-Built Flats/ Residential Complex at Dehradun for the Residential Accommodation Requirements of RBI Dehradun](https://www.rbi.org.in/scripts/BS_ViewTenders.aspx?id=25996) — Reserve Bank of India; 2026-10-17T13:15:00+00:00
 - [Ashley Humphries](https://www.thegazette.co.uk/notice/5231607) — The Gazette official public record; 2026-10-17T12:40:07+00:00
 - [Marc LIDDELL](https://www.thegazette.co.uk/notice/5231461) — The Gazette official public record; 2026-10-17T12:30:08+00:00
+- [Ministry of Mines and Its Field Offices Actively Participated in Swachhata Hi Seva Campaign 2026 - Press Information Bureau](https://news.google.com/rss/articles/CBMia0FVX3lxTFBIZHRrQ0gyM283X3JVRVcyNXJqcXJCcklqeHNacWFWSUE3ZGhGMWZFQUU1TGI2Q0NvOGoyMUtqTzRSV2J0cnlWWFBsdkJYend2ZVYzWUs5ZTFNdk9GbmhIR2JUZGV5T1NXbTdR) — India Press Information Bureau (official-site news mirror); 2026-10-17T11:45:00+00:00
 - [S. Hrg. 118-438 - FAA'S OVERSIGHT OF BOEING'S BROKEN SAFETY CULTURE](https://www.govinfo.gov/app/details/CHRG-118shrg57033) — Congressional Hearings; 2026-10-17T10:52:00+00:00
 - [A Journey Towards Recovery and Emotional Well-being - Press Information Bureau](https://news.google.com/rss/articles/CBMie0FVX3lxTE1oVW5ISEtpSTdKWlVtdlowZzVTTmNKSlEwTDh4MEVjWmR0WFVZVTY2cXpUNXdvNXFCYTNkXzdyRkdwYmRYdW96OUg2ZllxaDNfWDZKVHdjMVZoczNFRWw4RnZPN0l4WmN0Wm1tVHlHNmpaTVdSR2diTlRJcw) — India Press Information Bureau (official-site news mirror); 2026-10-17T10:25:00+00:00
 - [Serial No. 118-93 - LEGISLATIVE HEARING](https://www.govinfo.gov/app/details/CHRG-118hhrg58137) — Congressional Hearings; 2026-10-17T10:18:00+00:00
@@ -3270,6 +3259,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Michael D. Williams](https://www.sec.gov/files/litigation/admin/2026/ia-7027.pdf) — Securities and Exchange Commission; 2026-10-15T20:22:18+00:00
 - [Sexual Enhancement and Energy Product Notifications](http://www.fda.gov/drugs/medication-health-fraud-notifications/sexual-enhancement-and-energy-product-notifications) — Food and Drug Administration — What's New: Drugs; 2026-10-15T20:10:17+00:00
 - [10 Day Forecast may be harmful due to hidden ingredients](http://www.fda.gov/drugs/medication-health-fraud-notifications/10-day-forecast-may-be-harmful-due-hidden-ingredients) — Food and Drug Administration — What's New: Drugs; 2026-10-15T20:09:12+00:00
+- [Family Farmstead Dairy Announces Recall of Raw Mild Cheddar Cheese Due to Potential E. coli O26:H11 and O45:H2 Contamination](http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/family-farmstead-dairy-announces-recall-raw-mild-cheddar-cheese-due-potential-e-coli-o26h11-and) — Food and Drug Administration — Food Safety Recalls; 2026-10-15T20:04:00+00:00
 - [Family Farmstead Dairy Announces Recall of Raw Mild Cheddar Cheese Due to Potential E. coli O157:H7 Contamination](http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/family-farmstead-dairy-announces-recall-raw-mild-cheddar-cheese-due-potential-e-coli-o157h7) — Food and Drug Administration — Food Safety Recalls; 2026-10-15T20:04:00+00:00
 - [Tai Mo Shan Limited](https://www.sec.gov/files/litigation/admin/2026/34-106674.pdf) — Securities and Exchange Commission; 2026-10-15T20:00:47+00:00
 - [Raymond Lawrence Lent (Dba the Putney Financial Group and Registered Investment Advisors)](https://www.sec.gov/files/litigation/admin/2026/34-106673.pdf) — Securities and Exchange Commission; 2026-10-15T19:34:05+00:00
@@ -3624,27 +3614,10 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Human medicines European public assessment report (EPAR): Humira, adalimumab, Date of authorisation: 08/09/2003, Revision: 99, Status: Authorised](https://www.ema.europa.eu/en/medicines/human/EPAR/humira) — European Medicines Agency; 2026-10-14T12:58:08+00:00
 - [EMA/PE/0000245064](https://www.ema.europa.eu/en/medicines/human/paediatric-investigation-plans/ema-pe-0000245064) — European Medicines Agency; 2026-10-14T12:53:42+00:00
 - [HKETO Berlin promotes Hong Kong's biotech advantages at 26th Annual Biotech in Europe Forum (with photos)](https://www.info.gov.hk/gia/general/202610/14/P2026101400735.htm) — Hong Kong Government Information Services; 2026-10-14T12:50:00+00:00
-- [Integrated Transport and Logistics Authority (ITLA) - pib.gov.in](https://news.google.com/rss/articles/CBMimgFBVV95cUxNTVZnd1ZUX2ZSeDJvWTFHdVBtZC0zaHp2THJLOVBQTzdVbzUzSVdEMk5ZaXJOZW1HRFJjNjJFR2lrRkNCcG9RMEVJdE1BZ01yazBtSERDRFNjcUxHWjZIblo3OHd6dUVCUFFHV3JUY0hTMGlQQ3llWkYxYmZFa2pXVmdMbWVuSExXWnVuWXc2amtiQUxJYW0ybnVR) — India Press Information Bureau (official-site news mirror); 2026-10-14T12:21:56+00:00
-- [Speech by Executive Vice-President Fitto at High Level Session “A Cohesion Policy for a Competitive Union”](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2163) — European Commission press and decisions; 2026-10-14T12:19:03+00:00
-- [28 more nomination forms for Election Committee Subsector Ordinary Elections received today](https://www.info.gov.hk/gia/general/202610/14/P2026101400725.htm) — Hong Kong Government Information Services; 2026-10-14T12:16:49+00:00
-- [Crown Office](https://www.thegazette.co.uk/notice/5230581) — The Gazette official public record; 2026-10-14T12:00:13+00:00
-- [Maine Tax Preparer Pleads Guilty to Filing False Returns for Clients](https://www.justice.gov/opa/pr/maine-tax-preparer-pleads-guilty-filing-false-returns-clients) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Florida Man Sentenced to Prison for Tax Refund Fraud](https://www.justice.gov/opa/pr/florida-man-sentenced-prison-tax-refund-fraud) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Texas Tax Preparer Sentenced to Prison as Part of False Tax Return Scheme](https://www.justice.gov/opa/pr/texas-tax-preparer-sentenced-prison-part-false-tax-return-scheme) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Minneapolis Father and Son Plead Guilty to $9 Million Fraud Conspiracy](https://www.justice.gov/opa/pr/minneapolis-father-and-son-plead-guilty-9-million-fraud-conspiracy) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [New Jersey Brothers Plead Guilty to Stealing More Than $2.6 Million, Collectively, in Tax Refunds](https://www.justice.gov/opa/pr/new-jersey-brothers-plead-guilty-stealing-more-26-million-collectively-tax-refunds) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Texas Residents Charged with Promoting Illegal Tax Shelter](https://www.justice.gov/opa/pr/texas-residents-charged-promoting-illegal-tax-shelter) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Mississippi Man Convicted by Federal Jury of Participating in a Criminal Conspiracy to Distribute Child Sexual Abuse Material](https://www.justice.gov/opa/pr/mississippi-man-convicted-federal-jury-participating-criminal-conspiracy-distribute-child) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [DOJ’s Fraud Division, IRS, and IRS-CI Expose More than $490M in Tax Fraud in National Tax Enforcement Surge](https://www.justice.gov/opa/pr/dojs-fraud-division-irs-and-irs-ci-expose-more-490m-tax-fraud-national-tax-enforcement-surge) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Kansas Business Owner Sent to Prison for Employment Tax Crimes](https://www.justice.gov/opa/pr/kansas-business-owner-sent-prison-employment-tax-crimes) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Justice Department Announces Significant Charges from National Tax Fraud Enforcement Surge](https://www.justice.gov/opa/video/justice-department-announces-significant-charges-national-tax-fraud-enforcement-surge) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Justice Department Opens Investigation of Pennsauken, New Jersey’s Allegedly Unconstitutional Permit Delays](https://www.justice.gov/opa/pr/justice-department-opens-investigation-pennsauken-new-jerseys-allegedly-unconstitutional) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Mexican Citizens Charged in a Fraudulent Tax Scheme](https://www.justice.gov/opa/pr/mexican-citizens-charged-fraudulent-tax-scheme) — Department of Justice — RSS Feed; 2026-10-14T12:00:00+00:00
-- [Women's health](https://www.ema.europa.eu/en/human-regulatory-overview/research-development/womens-health) — European Medicines Agency; 2026-10-14T11:59:00+00:00
 
 ## Source failures and coverage warnings
 
-- hk-hkma-public-press: ok; stale_feed_outside_requested_window
+- hk-hkma-public-press: parse_or_network_error; 
 - us-govinfo-bills-enr: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-almd: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-caed: unchanged; feed_at_capacity_in_requested_window; snapshots may miss overflow
@@ -3743,13 +3716,13 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fdic-index: ok; stale_feed_outside_requested_window
 - us-fincen-index: ok; stale_feed_outside_requested_window
 - us-cftc-fda5c3631d: ok; stale_feed_outside_requested_window
-- us-fda-df70b9f330: ok; stale_feed_outside_requested_window
+- us-fda-df70b9f330: unchanged; stale_feed_outside_requested_window
 - us-fda-1a1096082f: ok; stale_feed_outside_requested_window
-- us-fda-2d9c4fc2f9: ok; stale_feed_outside_requested_window
+- us-fda-2d9c4fc2f9: unchanged; stale_feed_outside_requested_window
 - us-fda-8fc09ac0a2: unchanged; stale_feed_outside_requested_window
-- us-fda-3eaddf14de: ok; stale_feed_outside_requested_window
-- us-fda-b2623da30a: ok; stale_feed_outside_requested_window
-- us-fda-a25233bfac: unchanged; stale_feed_outside_requested_window
+- us-fda-3eaddf14de: unchanged; stale_feed_outside_requested_window
+- us-fda-b2623da30a: unchanged; stale_feed_outside_requested_window
+- us-fda-a25233bfac: ok; stale_feed_outside_requested_window
 - us-fda-1ca201e48f: ok; stale_feed_outside_requested_window
 - us-fda-c7d1d1cd64: ok; stale_feed_outside_requested_window
 - us-fda-d7692535f0: unchanged; stale_feed_outside_requested_window
@@ -3760,7 +3733,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-osha-ba174bf325: ok; stale_feed_outside_requested_window
 - us-osha-7df7a48ccf: ok; stale_feed_outside_requested_window
 - us-nlrb-3db5e72bf9: ok; stale_feed_outside_requested_window
-- us-nlrb-c15d588b2d: ok; stale_feed_outside_requested_window
+- us-nlrb-c15d588b2d: unchanged; stale_feed_outside_requested_window
 - us-dot-6464bc66ac: ok; stale_feed_outside_requested_window
 - us-uscis-a16e1f9942: ok; stale_feed_outside_requested_window
 - us-fmc-fe8f0538ae: unchanged; stale_feed_outside_requested_window
@@ -3793,7 +3766,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - ca-boc-e24c58f2d0: unchanged; stale_feed_outside_requested_window
 - ca-boc-9308ff5fe4: unchanged; stale_feed_outside_requested_window
 - ca-boc-9f75c25657: unchanged; stale_feed_outside_requested_window
-- ca-boc-cffefa81f7: unchanged; stale_feed_outside_requested_window
+- ca-boc-cffefa81f7: ok; stale_feed_outside_requested_window
 - ca-boc-762f78f374: unchanged; stale_feed_outside_requested_window
 - ca-boc-49364b93d8: unchanged; stale_feed_outside_requested_window
 - ca-boc-903390d96d: unchanged; stale_feed_outside_requested_window

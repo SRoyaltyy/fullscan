@@ -1,6 +1,6 @@
 {
  "date": "2026-10-17",
- "generated_at": "2026-10-17T11:49:11.481851+00:00",
+ "generated_at": "2026-10-17T12:26:48.064336+00:00",
  "catalog": {
   "generated_at": "2026-10-17T11:45:29.426582+00:00",
   "channels": 536,
@@ -38,36 +38,33 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-17T11:48:15.567792+00:00",
+  "generated_at": "2026-10-17T12:25:59.940473+00:00",
   "enabled_sources": 456,
-  "sources_ok": 456,
-  "sources_failed": 0,
+  "sources_ok": 455,
+  "sources_failed": 1,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 4815,
-   "old": 3501,
-   "future": 14,
-   "undated": 391,
-   "new": 42,
-   "duplicates": 1258
+   "observed": 4245,
+   "old": 3128,
+   "future": 0,
+   "undated": 351,
+   "new": 2,
+   "duplicates": 1115
   },
-  "current_dated_documents": 3604
+  "current_dated_documents": 3577
  },
  "new_today": {
-  "count": 42,
+  "count": 2,
   "by_source": {
-   "us-doj-b3d27e1dc3": 11,
-   "uk-gazette-e5d0497ccf": 10,
-   "us-fda-5696b24295": 7,
-   "in-pib-gnews": 7,
-   "us-govinfo-chrg": 2,
-   "hk-government-a5249d2406": 2,
-   "in-rbi-a45021c19a": 1,
-   "de-bundesbank-027ac4024f": 1,
-   "de-bundesbank-617511c682": 1
+   "us-fda-2cdcdcca63": 1,
+   "in-pib-gnews": 1
+  },
+  "by_class": {
+   "high": 1,
+   "watch": 1
   }
  },
- "n_failures": 0,
+ "n_failures": 1,
  "dates": [
   "2026-10-17"
  ],

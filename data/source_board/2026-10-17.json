@@ -1,6 +1,6 @@
 {
  "date": "2026-10-17",
- "generated_at": "2026-10-17T11:49:11.481851+00:00",
+ "generated_at": "2026-10-17T12:26:48.064336+00:00",
  "catalog": {
   "generated_at": "2026-10-17T11:45:29.426582+00:00",
   "channels": 536,
@@ -38,22 +38,30 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-17T11:48:15.567792+00:00",
+  "generated_at": "2026-10-17T12:25:59.940473+00:00",
   "enabled_sources": 456,
-  "sources_ok": 456,
-  "sources_failed": 0,
+  "sources_ok": 455,
+  "sources_failed": 1,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 4815,
-   "old": 3501,
-   "future": 14,
-   "undated": 391,
-   "new": 42,
-   "duplicates": 1258
+   "observed": 4245,
+   "old": 3128,
+   "future": 0,
+   "undated": 351,
+   "new": 2,
+   "duplicates": 1115
   },
-  "current_dated_documents": 3604
+  "current_dated_documents": 3577
  },
- "failures": [],
+ "failures": [
+  {
+   "source_id": "hk-hkma-public-press",
+   "status": "parse_or_network_error",
+   "http_status": null,
+   "warnings": [],
+   "exception": "TimeoutError"
+  }
+ ],
  "channels": [
   {
    "id": "us-federal-register",
@@ -10440,312 +10448,31 @@
   }
  ],
  "new_today": {
-  "count": 42,
+  "count": 2,
   "by_source": {
-   "us-doj-b3d27e1dc3": 11,
-   "uk-gazette-e5d0497ccf": 10,
-   "us-fda-5696b24295": 7,
-   "in-pib-gnews": 7,
-   "us-govinfo-chrg": 2,
-   "hk-government-a5249d2406": 2,
-   "in-rbi-a45021c19a": 1,
-   "de-bundesbank-027ac4024f": 1,
-   "de-bundesbank-617511c682": 1
+   "us-fda-2cdcdcca63": 1,
+   "in-pib-gnews": 1
+  },
+  "by_class": {
+   "high": 1,
+   "watch": 1
   },
   "headlines": [
    {
-    "title": "Purchase of Ready-Built Flats/ Residential Complex at Dehradun for the Residential Accommodation Requirements of RBI Dehradun",
-    "url": "https://www.rbi.org.in/scripts/BS_ViewTenders.aspx?id=25996",
-    "published_at": "2026-10-17T13:15:00+00:00",
-    "source": "in-rbi-a45021c19a",
-    "issuer": "Reserve Bank of India"
+    "title": "Family Farmstead Dairy Announces Recall of Raw Mild Cheddar Cheese Due to Potential E. coli O26:H11 and O45:H2 Contamination",
+    "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/family-farmstead-dairy-announces-recall-raw-mild-cheddar-cheese-due-potential-e-coli-o26h11-and",
+    "published_at": "2026-10-15T20:04:00+00:00",
+    "source": "us-fda-2cdcdcca63",
+    "issuer": "Food and Drug Administration — Food Safety Recalls",
+    "cls": "high"
    },
    {
-    "title": "Ashley Humphries",
-    "url": "https://www.thegazette.co.uk/notice/5231607",
-    "published_at": "2026-10-17T12:40:07+00:00",
-    "source": "uk-gazette-e5d0497ccf",
-    "issuer": "The Gazette official public record"
-   },
-   {
-    "title": "Marc LIDDELL",
-    "url": "https://www.thegazette.co.uk/notice/5231461",
-    "published_at": "2026-10-17T12:30:08+00:00",
-    "source": "uk-gazette-e5d0497ccf",
-    "issuer": "The Gazette official public record"
-   },
-   {
-    "title": "S. Hrg. 118-438 - FAA'S OVERSIGHT OF BOEING'S BROKEN SAFETY CULTURE",
-    "url": "https://www.govinfo.gov/app/details/CHRG-118shrg57033",
-    "published_at": "2026-10-17T10:52:00+00:00",
-    "source": "us-govinfo-chrg",
-    "issuer": "Congressional Hearings"
-   },
-   {
-    "title": "A Journey Towards Recovery and Emotional Well-being - Press Information Bureau",
-    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1oVW5ISEtpSTdKWlVtdlowZzVTTmNKSlEwTDh4MEVjWmR0WFVZVTY2cXpUNXdvNXFCYTNkXzdyRkdwYmRYdW96OUg2ZllxaDNfWDZKVHdjMVZoczNFRWw4RnZPN0l4WmN0Wm1tVHlHNmpaTVdSR2diTlRJcw",
-    "published_at": "2026-10-17T10:25:00+00:00",
+    "title": "Ministry of Mines and Its Field Offices Actively Participated in Swachhata Hi Seva Campaign 2026 - Press Information Bureau",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBIZHRrQ0gyM283X3JVRVcyNXJqcXJCcklqeHNacWFWSUE3ZGhGMWZFQUU1TGI2Q0NvOGoyMUtqTzRSV2J0cnlWWFBsdkJYend2ZVYzWUs5ZTFNdk9GbmhIR2JUZGV5T1NXbTdR",
+    "published_at": "2026-10-17T11:45:00+00:00",
     "source": "in-pib-gnews",
-    "issuer": "India Press Information Bureau (official-site news mirror)"
-   },
-   {
-    "title": "Serial No. 118-93 - LEGISLATIVE HEARING",
-    "url": "https://www.govinfo.gov/app/details/CHRG-118hhrg58137",
-    "published_at": "2026-10-17T10:18:00+00:00",
-    "source": "us-govinfo-chrg",
-    "issuer": "Congressional Hearings"
-   },
-   {
-    "title": "Secretary for Health attends World Conference on Traditional Medicine 2026 in Beijing (with photos)",
-    "url": "https://www.info.gov.hk/gia/general/202610/17/P2026101600456.htm",
-    "published_at": "2026-10-17T08:30:00+00:00",
-    "source": "hk-government-a5249d2406",
-    "issuer": "Hong Kong Government Information Services"
-   },
-   {
-    "title": "Remarks on the panel topic “Paths to prosperity: Forging growth, trade and investment between Europe and Asia” | DZ Bank Lunch Reception",
-    "url": "https://www.bundesbank.de/en/press/speeches/remarks-on-the-panel-topic-paths-to-prosperity-forging-growth-trade-and-investment-between-europe-and-asia--964898",
-    "published_at": "2026-10-17T06:45:00+00:00",
-    "source": "de-bundesbank-027ac4024f",
-    "issuer": "Deutsche Bundesbank"
-   },
-   {
-    "title": "Anmerkungen zum Thema der Podiumsdiskussion „Wege zum Wohlstand: Förderung von Wachstum, Handel und Investitionen zwischen Europa und Asien“ | DZ Bank, Mittagsempfang",
-    "url": "https://www.bundesbank.de/de/presse/reden/anmerkungen-zum-thema-der-podiumsdiskussion-wege-zum-wohlstand-foerderung-von-wachstum-handel-und-investitionen-zwischen-europa-und-asien--964894",
-    "published_at": "2026-10-17T06:45:00+00:00",
-    "source": "de-bundesbank-617511c682",
-    "issuer": "Deutsche Bundesbank — Speeches, Interview and Contributions"
-   },
-   {
-    "title": "Red flag hoisted at Clear Water Bay Second Beach",
-    "url": "https://www.info.gov.hk/gia/general/202610/17/P2026101700409.htm",
-    "published_at": "2026-10-17T06:36:19+00:00",
-    "source": "hk-government-a5249d2406",
-    "issuer": "Hong Kong Government Information Services"
-   },
-   {
-    "title": "Connecting Kashmir: Building the Infrastructure for Growth - Press Information Bureau",
-    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9ObTlnMG91aUhpNkJOc0ZRZl9Edy1jWVlBT1FUZW9DY0FqbWF4TU5UMGg4MzdkMU5oZndxVm8tX09iMXgzelVhdXlLd09qRWVUNVNnS2hvYXRmUzVqMUVVdFVQTl90ZWlOYV9R",
-    "published_at": "2026-10-17T05:51:00+00:00",
-    "source": "in-pib-gnews",
-    "issuer": "India Press Information Bureau (official-site news mirror)"
-   },
-   {
-    "title": "Lorna Bell",
-    "url": "https://www.thegazette.co.uk/notice/5231226",
-    "published_at": "2026-10-17T01:00:17+00:00",
-    "source": "uk-gazette-e5d0497ccf",
-    "issuer": "The Gazette official public record"
-   },
-   {
-    "title": "Norman Heathcote",
-    "url": "https://www.thegazette.co.uk/notice/5231225",
-    "published_at": "2026-10-17T01:00:15+00:00",
-    "source": "uk-gazette-e5d0497ccf",
-    "issuer": "The Gazette official public record"
-   },
-   {
-    "title": "Untitled Letters",
-    "url": "http://www.fda.gov/drugs/warning-letters-and-notice-violation-letters-pharmaceutical-companies/untitled-letters",
-    "published_at": "2026-10-16T19:00:38+00:00",
-    "source": "us-fda-5696b24295",
-    "issuer": "Food and Drug Administration — What's New: Drugs"
-   },
-   {
-    "title": "Sunscreen: How to Help Protect Your Skin from the Sun",
-    "url": "http://www.fda.gov/drugs/understanding-over-counter-medicines/sunscreen-how-help-protect-your-skin-sun",
-    "published_at": "2026-10-16T18:37:30+00:00",
-    "source": "us-fda-5696b24295",
-    "issuer": "Food and Drug Administration — What's New: Drugs"
-   },
-   {
-    "title": "Regulatory Pharmaceutical Fellowship Program",
-    "url": "http://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/regulatory-pharmaceutical-fellowship-program",
-    "published_at": "2026-10-16T18:13:54+00:00",
-    "source": "us-fda-5696b24295",
-    "issuer": "Food and Drug Administration — What's New: Drugs"
-   },
-   {
-    "title": "Verified Clinical Benefit | Cancer Accelerated Approvals",
-    "url": "http://www.fda.gov/drugs/resources-information-approved-drugs/verified-clinical-benefit-cancer-accelerated-approvals",
-    "published_at": "2026-10-16T17:54:21+00:00",
-    "source": "us-fda-5696b24295",
-    "issuer": "Food and Drug Administration — What's New: Drugs"
-   },
-   {
-    "title": "Road Traffic Acts",
-    "url": "https://www.thegazette.co.uk/notice/5232829",
-    "published_at": "2026-10-16T17:40:23+00:00",
-    "source": "uk-gazette-e5d0497ccf",
-    "issuer": "The Gazette official public record"
-   },
-   {
-    "title": "Road Traffic Acts",
-    "url": "https://www.thegazette.co.uk/notice/5232828",
-    "published_at": "2026-10-16T17:40:22+00:00",
-    "source": "uk-gazette-e5d0497ccf",
-    "issuer": "The Gazette official public record"
-   },
-   {
-    "title": "Road Traffic Acts",
-    "url": "https://www.thegazette.co.uk/notice/5232827",
-    "published_at": "2026-10-16T17:40:21+00:00",
-    "source": "uk-gazette-e5d0497ccf",
-    "issuer": "The Gazette official public record"
-   },
-   {
-    "title": "Road Traffic Acts",
-    "url": "https://www.thegazette.co.uk/notice/5232826",
-    "published_at": "2026-10-16T17:40:19+00:00",
-    "source": "uk-gazette-e5d0497ccf",
-    "issuer": "The Gazette official public record"
-   },
-   {
-    "title": "Office of Generic Drugs | Offices and Divisions",
-    "url": "http://www.fda.gov/about-fda/cder-offices-and-divisions/office-generic-drugs-offices-and-divisions",
-    "published_at": "2026-10-16T17:28:59+00:00",
-    "source": "us-fda-5696b24295",
-    "issuer": "Food and Drug Administration — What's New: Drugs"
-   },
-   {
-    "title": "Other | Cancer Accelerated Approvals",
-    "url": "http://www.fda.gov/drugs/resources-information-approved-drugs/other-cancer-accelerated-approvals",
-    "published_at": "2026-10-16T17:26:37+00:00",
-    "source": "us-fda-5696b24295",
-    "issuer": "Food and Drug Administration — What's New: Drugs"
-   },
-   {
-    "title": "Ongoing | Cancer Accelerated Approvals",
-    "url": "http://www.fda.gov/drugs/resources-information-approved-drugs/ongoing-cancer-accelerated-approvals",
-    "published_at": "2026-10-16T17:24:49+00:00",
-    "source": "us-fda-5696b24295",
-    "issuer": "Food and Drug Administration — What's New: Drugs"
-   },
-   {
-    "title": "INDIAN NAVY COMMISSIONS INS SAMARTHAK, THE FIRST INDIGENOUS MULTI-PURPOSE VESSEL - Press Information Bureau",
-    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1UTEZ2ZVhlMWEzMlFRZ29HaWg0b1hiOGxXX1gxMHJfM2VzMV9zTlJhczk3TU5oa2VRaWlVcllsSHpFSEhESHdQT1kxWktUbkZBcjFCdWpja1FWMzhYSFZpMFJKZw",
-    "published_at": "2026-10-16T15:39:00+00:00",
-    "source": "in-pib-gnews",
-    "issuer": "India Press Information Bureau (official-site news mirror)"
-   },
-   {
-    "title": "LIEUTENANCY OF CUMBRIA",
-    "url": "https://www.thegazette.co.uk/notice/5232196",
-    "published_at": "2026-10-16T12:04:24+00:00",
-    "source": "uk-gazette-e5d0497ccf",
-    "issuer": "The Gazette official public record"
-   },
-   {
-    "title": "Crown Office",
-    "url": "https://www.thegazette.co.uk/notice/5232195",
-    "published_at": "2026-10-16T12:04:22+00:00",
-    "source": "uk-gazette-e5d0497ccf",
-    "issuer": "The Gazette official public record"
-   },
-   {
-    "title": "U.S. Attorney’s Office Filed 111 Border-Related Cases This Week",
-    "url": "https://www.justice.gov/usao-sdca/pr/us-attorneys-office-filed-111-border-related-cases-week-2",
-    "published_at": "2026-10-16T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice"
-   },
-   {
-    "title": "District of Arizona Charges 279 Individuals for Immigration-Related Criminal Conduct this Week",
-    "url": "https://www.justice.gov/usao-az/pr/district-arizona-charges-279-individuals-immigration-related-criminal-conduct-week-0",
-    "published_at": "2026-10-16T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice"
-   },
-   {
-    "title": "Las Vegas Man Charged with Blackmailing Child into Producing Child Pornography",
-    "url": "https://www.justice.gov/usao-hi/pr/las-vegas-man-charged-blackmailing-child-producing-child-pornography",
-    "published_at": "2026-10-16T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice"
-   },
-   {
-    "title": "Waimanalo Man Sentenced to Ten Years in Prison for Distributing Methamphetamine",
-    "url": "https://www.justice.gov/usao-hi/pr/waimanalo-man-sentenced-ten-years-prison-distributing-methamphetamine",
-    "published_at": "2026-10-16T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice"
-   },
-   {
-    "title": "Orleans Parish Resident Sentenced for Drug Trafficking Offense",
-    "url": "https://www.justice.gov/usao-edla/pr/orleans-parish-resident-sentenced-drug-trafficking-offense",
-    "published_at": "2026-10-16T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice"
-   },
-   {
-    "title": "Oahu Man Sentenced to 22 Years in Prison for Producing Child Pornography",
-    "url": "https://www.justice.gov/usao-hi/pr/oahu-man-sentenced-22-years-prison-producing-child-pornography",
-    "published_at": "2026-10-16T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice"
-   },
-   {
-    "title": "Father and Daughter Admit Roles in Conspiracy to Violate Clean Air Act",
-    "url": "https://www.justice.gov/usao-sdca/pr/father-and-daughter-admit-roles-conspiracy-violate-clean-air-act",
-    "published_at": "2026-10-16T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice"
-   },
-   {
-    "title": "Prior Convicted Orleans Parish Sex Offender Sentenced for Possession of Child Sex Abuse Materials",
-    "url": "https://www.justice.gov/usao-edla/pr/prior-convicted-orleans-parish-sex-offender-sentenced-possession-child-sex-abuse",
-    "published_at": "2026-10-16T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice"
-   },
-   {
-    "title": "Bronx man going to prison for bank fraud conspiracy and ID theft",
-    "url": "https://www.justice.gov/usao-wdny/pr/bronx-man-going-prison-bank-fraud-conspiracy-and-id-theft-0",
-    "published_at": "2026-10-16T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice"
-   },
-   {
-    "title": "Java Center man pleads guilty to possession of child pornography",
-    "url": "https://www.justice.gov/usao-wdny/pr/java-center-man-pleads-guilty-possession-child-pornography",
-    "published_at": "2026-10-16T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice"
-   },
-   {
-    "title": "Depew man sentenced for entering secure area at the Buffalo Niagara International Airport",
-    "url": "https://www.justice.gov/usao-wdny/pr/depew-man-sentenced-entering-secure-area-buffalo-niagara-international-airport",
-    "published_at": "2026-10-16T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice"
-   },
-   {
-    "title": "Ministry of Mines Showcases Sustainable Best Practices during the First Fortnight of Special Campaign 6 - Press Information Bureau",
-    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9uUUxuUXhWMWJrdy04R0FKZERUVHBFMmQzMFI4Zjdhd3c4amlFMjdrWmFZbWFwRXltdFJNVjllLWxJSjNKYVVDRll6dHpSOVo4YWhZa2lCX25KTl9SdXJBYlFQZmNVQkFSWFRTY1MzaDZWQVBzcXc",
-    "published_at": "2026-10-16T11:48:00+00:00",
-    "source": "in-pib-gnews",
-    "issuer": "India Press Information Bureau (official-site news mirror)"
-   },
-   {
-    "title": "Climate history finds monsoon fluctuation footprints from sediment transport to farming adaptations - Press Information Bureau",
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9fOFNZN2Z1Z2RPSi1Rcmx6aWcyeWZTcEFST1pUdDRvcUROZGJESWw2NTQ1dTNBdkRldlJxdjJERGhWZGFhb3IxVUR4NzI5T2w5UG5UTjFOMC15dFdESmphRWlnWWJfZm9yTTVtZmhRNFZfWHZBNlJ5U29sU3VYQQ",
-    "published_at": "2026-10-16T10:12:00+00:00",
-    "source": "in-pib-gnews",
-    "issuer": "India Press Information Bureau (official-site news mirror)"
-   },
-   {
-    "title": "Ayush Innovation Sees Eightfold Rise in Patent Filings - Press Information Bureau",
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9mNGREenpZUWFPQjNFUHBWRWxRYTBWZVFjeERZLUo1WlB0SUhUT0xNR2FLamg2a3h6OUJYWmc1RHdrbUJXZElXcXo4RFo0MWh5N1Fvb0lGcDJxRjBWelNZRmtzNW4tbDNmdmt4RGJOOXlSdEEzcXBTcVR3QkY4dw",
-    "published_at": "2026-10-16T09:03:00+00:00",
-    "source": "in-pib-gnews",
-    "issuer": "India Press Information Bureau (official-site news mirror)"
-   },
-   {
-    "title": "First-Ever Kanda Express to Reach Agartala to Strengthen Onion Availability in the North-East - Press Information Bureau",
-    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9xZGNmd1Rtdm03RXhCaXFFQUtVN2JjaWFXTTlHZFZBU0tUWkJCQ0hNR0FfbWxNZUVjenZKZmJzRW9JMFNTdUg2X1VrSkxxeFhVejZ6LW1EeDJoWmdHbzlnQkFPVDB6MS1EejYtZVo0dUdtV1ZQYmpCaEt1LVFxUQ",
-    "published_at": "2026-10-16T07:53:00+00:00",
-    "source": "in-pib-gnews",
-    "issuer": "India Press Information Bureau (official-site news mirror)"
+    "issuer": "India Press Information Bureau (official-site news mirror)",
+    "cls": "watch"
    }
   ]
  },
