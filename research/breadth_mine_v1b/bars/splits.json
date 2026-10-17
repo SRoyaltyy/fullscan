@@ -1,0 +1,947 @@
+[
+  {
+    "date": "2026-07-06",
+    "split": 0.06666667,
+    "ticker": "ABTC"
+  },
+  {
+    "date": "2026-03-05",
+    "split": 0.16666667,
+    "ticker": "AEHL"
+  },
+  {
+    "date": "2026-08-10",
+    "split": 0.0625,
+    "ticker": "AEHL"
+  },
+  {
+    "date": "2026-03-31",
+    "split": 0.04,
+    "ticker": "AGL"
+  },
+  {
+    "date": "2026-06-12",
+    "split": 0.16666667,
+    "ticker": "AIFA"
+  },
+  {
+    "date": "2026-06-16",
+    "split": 0.05,
+    "ticker": "AIFU"
+  },
+  {
+    "date": "2026-04-06",
+    "split": 0.05,
+    "ticker": "AIIO"
+  },
+  {
+    "date": "2026-04-27",
+    "split": 0.05,
+    "ticker": "AIOS"
+  },
+  {
+    "date": "2026-05-11",
+    "split": 0.05,
+    "ticker": "AIXI"
+  },
+  {
+    "date": "2026-09-08",
+    "split": 0.14285714,
+    "ticker": "AIXI"
+  },
+  {
+    "date": "2026-04-13",
+    "split": 0.222,
+    "ticker": "AKAN"
+  },
+  {
+    "date": "2026-07-01",
+    "split": 0.05,
+    "ticker": "ALIT"
+  },
+  {
+    "date": "2026-09-09",
+    "split": 0.02,
+    "ticker": "ALP"
+  },
+  {
+    "date": "2026-06-24",
+    "split": 0.04761905,
+    "ticker": "AMIX"
+  },
+  {
+    "date": "2026-07-27",
+    "split": 0.125,
+    "ticker": "AMZE"
+  },
+  {
+    "date": "2026-04-20",
+    "split": 1.5,
+    "ticker": "ANAB"
+  },
+  {
+    "date": "2026-09-03",
+    "split": 2.0,
+    "ticker": "APH"
+  },
+  {
+    "date": "2026-03-10",
+    "split": 3.0,
+    "ticker": "APLX"
+  },
+  {
+    "date": "2026-06-15",
+    "split": 1.253,
+    "ticker": "ATRO"
+  },
+  {
+    "date": "2026-04-01",
+    "split": 0.129,
+    "ticker": "AUUD"
+  },
+  {
+    "date": "2026-08-17",
+    "split": 2.793,
+    "ticker": "AVB"
+  },
+  {
+    "date": "2026-08-24",
+    "split": 0.1,
+    "ticker": "AXTU"
+  },
+  {
+    "date": "2026-09-22",
+    "split": 0.25,
+    "ticker": "AXTX"
+  },
+  {
+    "date": "2026-03-23",
+    "split": 0.1,
+    "ticker": "AZI"
+  },
+  {
+    "date": "2026-06-03",
+    "split": 0.1,
+    "ticker": "BEZ"
+  },
+  {
+    "date": "2026-08-24",
+    "split": 0.06666667,
+    "ticker": "BIAF"
+  },
+  {
+    "date": "2026-07-13",
+    "split": 0.1,
+    "ticker": "BIYA"
+  },
+  {
+    "date": "2026-04-06",
+    "split": 25.0,
+    "ticker": "BKNG"
+  },
+  {
+    "date": "2026-05-05",
+    "split": 0.05,
+    "ticker": "BMNG"
+  },
+  {
+    "date": "2026-07-13",
+    "split": 0.1,
+    "ticker": "BMNU"
+  },
+  {
+    "date": "2026-06-22",
+    "split": 0.16666667,
+    "ticker": "BOXL"
+  },
+  {
+    "date": "2026-08-24",
+    "split": 0.1,
+    "ticker": "BRCC"
+  },
+  {
+    "date": "2026-04-15",
+    "split": 0.2,
+    "ticker": "BRNX"
+  },
+  {
+    "date": "2026-08-13",
+    "split": 0.16666667,
+    "ticker": "BRNX"
+  },
+  {
+    "date": "2026-08-14",
+    "split": 0.03333333,
+    "ticker": "BYND"
+  },
+  {
+    "date": "2026-07-21",
+    "split": 0.1,
+    "ticker": "CANG"
+  },
+  {
+    "date": "2026-08-24",
+    "split": 0.1,
+    "ticker": "CCUP"
+  },
+  {
+    "date": "2026-06-08",
+    "split": 0.1,
+    "ticker": "CDLX"
+  },
+  {
+    "date": "2026-06-01",
+    "split": 0.04,
+    "ticker": "CDTG"
+  },
+  {
+    "date": "2026-04-27",
+    "split": 0.14285714,
+    "ticker": "CISS"
+  },
+  {
+    "date": "2026-08-19",
+    "split": 0.025,
+    "ticker": "CISS"
+  },
+  {
+    "date": "2026-05-05",
+    "split": 0.1,
+    "ticker": "CRCG"
+  },
+  {
+    "date": "2026-07-02",
+    "split": 4.0,
+    "ticker": "CRWD"
+  },
+  {
+    "date": "2026-07-31",
+    "split": 0.03333333,
+    "ticker": "CSAI"
+  },
+  {
+    "date": "2026-05-08",
+    "split": 5.0,
+    "ticker": "CVNA"
+  },
+  {
+    "date": "2026-08-18",
+    "split": 0.02,
+    "ticker": "CXAI"
+  },
+  {
+    "date": "2026-06-01",
+    "split": 0.04,
+    "ticker": "DAIC"
+  },
+  {
+    "date": "2026-07-20",
+    "split": 0.008,
+    "ticker": "DFNS"
+  },
+  {
+    "date": "2026-04-28",
+    "split": 0.125,
+    "ticker": "DGNX"
+  },
+  {
+    "date": "2026-06-26",
+    "split": 8.0,
+    "ticker": "DLLL"
+  },
+  {
+    "date": "2026-04-20",
+    "split": 0.0625,
+    "ticker": "EHGO"
+  },
+  {
+    "date": "2026-03-30",
+    "split": 0.04,
+    "ticker": "EJH"
+  },
+  {
+    "date": "2026-03-12",
+    "split": 0.0125,
+    "ticker": "ELPW"
+  },
+  {
+    "date": "2026-08-10",
+    "split": 0.02222222,
+    "ticker": "ELPW"
+  },
+  {
+    "date": "2026-06-23",
+    "split": 0.25,
+    "ticker": "FCUV"
+  },
+  {
+    "date": "2026-06-01",
+    "split": 1.241,
+    "ticker": "FDX"
+  },
+  {
+    "date": "2026-09-01",
+    "split": 0.08333333,
+    "ticker": "FEED"
+  },
+  {
+    "date": "2026-06-08",
+    "split": 0.05,
+    "ticker": "FEMY"
+  },
+  {
+    "date": "2026-07-24",
+    "split": 0.00666667,
+    "ticker": "FFAI"
+  },
+  {
+    "date": "2026-09-01",
+    "split": 0.01,
+    "ticker": "FGL"
+  },
+  {
+    "date": "2026-08-28",
+    "split": 0.05,
+    "ticker": "FTRK"
+  },
+  {
+    "date": "2026-03-24",
+    "split": 0.08333333,
+    "ticker": "FUBO"
+  },
+  {
+    "date": "2026-09-11",
+    "split": 0.05,
+    "ticker": "GAUZ"
+  },
+  {
+    "date": "2026-07-10",
+    "split": 0.1,
+    "ticker": "GIPR"
+  },
+  {
+    "date": "2026-07-10",
+    "split": 0.25,
+    "ticker": "GORO"
+  },
+  {
+    "date": "2026-08-24",
+    "split": 0.02,
+    "ticker": "GRML"
+  },
+  {
+    "date": "2026-05-21",
+    "split": 0.0078125,
+    "ticker": "HAO"
+  },
+  {
+    "date": "2026-08-14",
+    "split": 0.05,
+    "ticker": "HAO"
+  },
+  {
+    "date": "2026-08-31",
+    "split": 0.02857143,
+    "ticker": "HCWC"
+  },
+  {
+    "date": "2026-04-06",
+    "split": 0.02,
+    "ticker": "HKIT"
+  },
+  {
+    "date": "2026-05-29",
+    "split": 0.33333333,
+    "ticker": "HKIT"
+  },
+  {
+    "date": "2026-07-06",
+    "split": 0.04,
+    "ticker": "HKIT"
+  },
+  {
+    "date": "2026-06-29",
+    "split": 0.9535,
+    "ticker": "HON"
+  },
+  {
+    "date": "2026-06-23",
+    "split": 0.1,
+    "ticker": "ILLR"
+  },
+  {
+    "date": "2026-08-27",
+    "split": 0.03333333,
+    "ticker": "IMCC"
+  },
+  {
+    "date": "2026-05-04",
+    "split": 0.05,
+    "ticker": "INHD"
+  },
+  {
+    "date": "2026-03-19",
+    "split": 0.33333333,
+    "ticker": "IONX"
+  },
+  {
+    "date": "2026-04-23",
+    "split": 0.05,
+    "ticker": "IPST"
+  },
+  {
+    "date": "2026-05-22",
+    "split": 0.125,
+    "ticker": "IPW"
+  },
+  {
+    "date": "2026-08-07",
+    "split": 0.11111111,
+    "ticker": "IPW"
+  },
+  {
+    "date": "2026-03-20",
+    "split": 0.25,
+    "ticker": "IRE"
+  },
+  {
+    "date": "2026-04-13",
+    "split": 0.05,
+    "ticker": "JEM"
+  },
+  {
+    "date": "2026-07-14",
+    "split": 0.08333333,
+    "ticker": "JEM"
+  },
+  {
+    "date": "2026-08-07",
+    "split": 0.01333333,
+    "ticker": "JUNS"
+  },
+  {
+    "date": "2026-07-06",
+    "split": 0.03333333,
+    "ticker": "JZ"
+  },
+  {
+    "date": "2026-03-10",
+    "split": 0.02,
+    "ticker": "KIDZ"
+  },
+  {
+    "date": "2026-06-08",
+    "split": 0.1,
+    "ticker": "KIDZ"
+  },
+  {
+    "date": "2026-08-13",
+    "split": 0.06666667,
+    "ticker": "KIDZ"
+  },
+  {
+    "date": "2026-06-12",
+    "split": 10.0,
+    "ticker": "KLAC"
+  },
+  {
+    "date": "2026-04-22",
+    "split": 0.2,
+    "ticker": "KUST"
+  },
+  {
+    "date": "2026-03-27",
+    "split": 0.01,
+    "ticker": "LBGJ"
+  },
+  {
+    "date": "2026-08-03",
+    "split": 0.005,
+    "ticker": "LBGJ"
+  },
+  {
+    "date": "2026-09-01",
+    "split": 0.008,
+    "ticker": "LGCL"
+  },
+  {
+    "date": "2026-06-22",
+    "split": 0.0625,
+    "ticker": "LHSW"
+  },
+  {
+    "date": "2026-08-21",
+    "split": 0.02,
+    "ticker": "LIMN"
+  },
+  {
+    "date": "2026-09-22",
+    "split": 0.25,
+    "ticker": "LITZ"
+  },
+  {
+    "date": "2026-05-22",
+    "split": 0.05,
+    "ticker": "LZMH"
+  },
+  {
+    "date": "2026-03-16",
+    "split": 0.04,
+    "ticker": "MASK"
+  },
+  {
+    "date": "2026-09-08",
+    "split": 0.025,
+    "ticker": "MGN"
+  },
+  {
+    "date": "2026-09-17",
+    "split": 0.03333333,
+    "ticker": "MGN"
+  },
+  {
+    "date": "2026-08-11",
+    "split": 0.125,
+    "ticker": "MSGY"
+  },
+  {
+    "date": "2026-08-24",
+    "split": 0.1,
+    "ticker": "MSTU"
+  },
+  {
+    "date": "2026-03-19",
+    "split": 0.1,
+    "ticker": "MSTX"
+  },
+  {
+    "date": "2026-08-03",
+    "split": 0.06666667,
+    "ticker": "MVIS"
+  },
+  {
+    "date": "2026-06-26",
+    "split": 3.0,
+    "ticker": "MVLL"
+  },
+  {
+    "date": "2026-06-25",
+    "split": 0.04,
+    "ticker": "NAMI"
+  },
+  {
+    "date": "2026-06-03",
+    "split": 0.1,
+    "ticker": "NBIZ"
+  },
+  {
+    "date": "2026-07-21",
+    "split": 0.33333333,
+    "ticker": "NBIZ"
+  },
+  {
+    "date": "2026-09-22",
+    "split": 0.25,
+    "ticker": "NBIZ"
+  },
+  {
+    "date": "2026-07-07",
+    "split": 0.03333333,
+    "ticker": "NCRA"
+  },
+  {
+    "date": "2026-06-03",
+    "split": 3.0,
+    "ticker": "NEBX"
+  },
+  {
+    "date": "2026-09-14",
+    "split": 0.02,
+    "ticker": "NFE"
+  },
+  {
+    "date": "2026-08-19",
+    "split": 0.06666667,
+    "ticker": "NRDY"
+  },
+  {
+    "date": "2026-08-10",
+    "split": 0.01,
+    "ticker": "NXTT"
+  },
+  {
+    "date": "2026-07-31",
+    "split": 0.1,
+    "ticker": "OFAL"
+  },
+  {
+    "date": "2026-08-31",
+    "split": 0.02,
+    "ticker": "OMH"
+  },
+  {
+    "date": "2026-03-25",
+    "split": 0.2,
+    "ticker": "ONCO"
+  },
+  {
+    "date": "2026-05-21",
+    "split": 0.1,
+    "ticker": "ONCO"
+  },
+  {
+    "date": "2026-08-10",
+    "split": 0.02,
+    "ticker": "ONFO"
+  },
+  {
+    "date": "2026-03-31",
+    "split": 0.08333333,
+    "ticker": "PAVS"
+  },
+  {
+    "date": "2026-06-29",
+    "split": 0.01,
+    "ticker": "PAVS"
+  },
+  {
+    "date": "2026-07-07",
+    "split": 0.04,
+    "ticker": "PFSA"
+  },
+  {
+    "date": "2026-08-17",
+    "split": 0.25,
+    "ticker": "PFSA"
+  },
+  {
+    "date": "2026-03-24",
+    "split": 4.0,
+    "ticker": "PIPR"
+  },
+  {
+    "date": "2026-08-03",
+    "split": 0.02,
+    "ticker": "PMI"
+  },
+  {
+    "date": "2026-05-18",
+    "split": 0.04,
+    "ticker": "PPCB"
+  },
+  {
+    "date": "2026-05-26",
+    "split": 0.1,
+    "ticker": "PRTS"
+  },
+  {
+    "date": "2026-07-13",
+    "split": 0.04,
+    "ticker": "PWCM"
+  },
+  {
+    "date": "2026-09-22",
+    "split": 0.25,
+    "ticker": "QBTX"
+  },
+  {
+    "date": "2026-03-23",
+    "split": 0.33333333,
+    "ticker": "QBTZ"
+  },
+  {
+    "date": "2026-09-10",
+    "split": 0.2,
+    "ticker": "QBTZ"
+  },
+  {
+    "date": "2026-08-18",
+    "split": 0.005,
+    "ticker": "RCON"
+  },
+  {
+    "date": "2026-08-25",
+    "split": 0.1,
+    "ticker": "REAX"
+  },
+  {
+    "date": "2026-08-04",
+    "split": 1.437,
+    "ticker": "REZI"
+  },
+  {
+    "date": "2026-03-19",
+    "split": 0.25,
+    "ticker": "RGTX"
+  },
+  {
+    "date": "2026-09-10",
+    "split": 0.2,
+    "ticker": "RGTZ"
+  },
+  {
+    "date": "2026-07-01",
+    "split": 0.1,
+    "ticker": "RMTI"
+  },
+  {
+    "date": "2026-09-01",
+    "split": 1.5,
+    "ticker": "RUSHA"
+  },
+  {
+    "date": "2026-05-13",
+    "split": 1.01,
+    "ticker": "SCCO"
+  },
+  {
+    "date": "2026-08-11",
+    "split": 1.012,
+    "ticker": "SCCO"
+  },
+  {
+    "date": "2026-05-27",
+    "split": 0.05,
+    "ticker": "SDOT"
+  },
+  {
+    "date": "2026-08-03",
+    "split": 0.14285714,
+    "ticker": "SEGG"
+  },
+  {
+    "date": "2026-05-01",
+    "split": 0.05,
+    "ticker": "SMCL"
+  },
+  {
+    "date": "2026-06-26",
+    "split": 3.0,
+    "ticker": "SMCL"
+  },
+  {
+    "date": "2026-03-19",
+    "split": 0.5,
+    "ticker": "SMCX"
+  },
+  {
+    "date": "2026-08-21",
+    "split": 0.02,
+    "ticker": "SMTK"
+  },
+  {
+    "date": "2026-03-10",
+    "split": 0.33333333,
+    "ticker": "SMU"
+  },
+  {
+    "date": "2026-09-22",
+    "split": 0.25,
+    "ticker": "SMU"
+  },
+  {
+    "date": "2026-07-21",
+    "split": 0.1,
+    "ticker": "SNDQ"
+  },
+  {
+    "date": "2026-06-08",
+    "split": 3.0,
+    "ticker": "SNDU"
+  },
+  {
+    "date": "2026-03-23",
+    "split": 1.5,
+    "ticker": "SNEX"
+  },
+  {
+    "date": "2026-07-20",
+    "split": 1.5,
+    "ticker": "SNEX"
+  },
+  {
+    "date": "2026-07-01",
+    "split": 1.057,
+    "ticker": "SPGI"
+  },
+  {
+    "date": "2026-07-07",
+    "split": 0.2,
+    "ticker": "SVC"
+  },
+  {
+    "date": "2026-08-10",
+    "split": 0.0125,
+    "ticker": "SXTC"
+  },
+  {
+    "date": "2026-09-04",
+    "split": 0.02,
+    "ticker": "TANH"
+  },
+  {
+    "date": "2026-04-24",
+    "split": 0.03333333,
+    "ticker": "TDTH"
+  },
+  {
+    "date": "2026-05-26",
+    "split": 0.33333333,
+    "ticker": "TJGC"
+  },
+  {
+    "date": "2026-09-08",
+    "split": 0.125,
+    "ticker": "TNMG"
+  },
+  {
+    "date": "2026-08-10",
+    "split": 0.02857143,
+    "ticker": "TNON"
+  },
+  {
+    "date": "2026-03-27",
+    "split": 0.1,
+    "ticker": "TRUG"
+  },
+  {
+    "date": "2026-08-24",
+    "split": 0.1,
+    "ticker": "TTDU"
+  },
+  {
+    "date": "2026-08-31",
+    "split": 0.04,
+    "ticker": "VBIO"
+  },
+  {
+    "date": "2026-05-04",
+    "split": 0.02702703,
+    "ticker": "VEEE"
+  },
+  {
+    "date": "2026-04-21",
+    "split": 8.0,
+    "ticker": "VGT"
+  },
+  {
+    "date": "2026-04-28",
+    "split": 0.05,
+    "ticker": "VNRX"
+  },
+  {
+    "date": "2026-09-22",
+    "split": 0.05,
+    "ticker": "VWAV"
+  },
+  {
+    "date": "2026-03-06",
+    "split": 0.02,
+    "ticker": "WCT"
+  },
+  {
+    "date": "2026-09-08",
+    "split": 0.2,
+    "ticker": "WCT"
+  },
+  {
+    "date": "2026-08-03",
+    "split": 0.01,
+    "ticker": "WETO"
+  },
+  {
+    "date": "2026-04-13",
+    "split": 0.2,
+    "ticker": "WFF"
+  },
+  {
+    "date": "2026-03-11",
+    "split": 0.33333333,
+    "ticker": "WLDS"
+  },
+  {
+    "date": "2026-06-22",
+    "split": 0.33333333,
+    "ticker": "WLDS"
+  },
+  {
+    "date": "2026-04-06",
+    "split": 0.01,
+    "ticker": "WNW"
+  },
+  {
+    "date": "2026-06-18",
+    "split": 0.01,
+    "ticker": "WOK"
+  },
+  {
+    "date": "2026-06-04",
+    "split": 0.1,
+    "ticker": "WXM"
+  },
+  {
+    "date": "2026-06-02",
+    "split": 0.25,
+    "ticker": "WYHG"
+  },
+  {
+    "date": "2026-08-21",
+    "split": 0.05,
+    "ticker": "XCH"
+  },
+  {
+    "date": "2026-07-21",
+    "split": 0.08333333,
+    "ticker": "XPON"
+  },
+  {
+    "date": "2026-07-30",
+    "split": 0.2,
+    "ticker": "YAAS"
+  },
+  {
+    "date": "2026-05-18",
+    "split": 0.06666667,
+    "ticker": "YMT"
+  },
+  {
+    "date": "2026-08-27",
+    "split": 0.0625,
+    "ticker": "YMT"
+  },
+  {
+    "date": "2026-07-14",
+    "split": 0.1,
+    "ticker": "YXT"
+  },
+  {
+    "date": "2026-05-18",
+    "split": 0.025,
+    "ticker": "YYAI"
+  },
+  {
+    "date": "2026-08-17",
+    "split": 0.05,
+    "ticker": "YYAI"
+  },
+  {
+    "date": "2026-03-02",
+    "split": 0.125,
+    "ticker": "ZCMD"
+  },
+  {
+    "date": "2026-06-08",
+    "split": 0.03225806,
+    "ticker": "ZCMD"
+  },
+  {
+    "date": "2026-06-29",
+    "split": 0.33333333,
+    "ticker": "ZCMD"
+  },
+  {
+    "date": "2026-03-16",
+    "split": 0.05,
+    "ticker": "ZJYL"
+  }
+]
