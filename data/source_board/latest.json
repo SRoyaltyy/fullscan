@@ -1,6 +1,6 @@
 {
- "date": "2026-10-17",
- "generated_at": "2026-10-17T16:27:58.465043+00:00",
+ "date": "2026-10-18",
+ "generated_at": "2026-10-18T05:57:06.982513+00:00",
  "catalog": {
   "generated_at": "2026-10-17T13:03:20.405263+00:00",
   "channels": 365,
@@ -34,38 +34,40 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-17T16:27:35.668522+00:00",
+  "generated_at": "2026-10-18T05:56:44.826096+00:00",
   "enabled_sources": 123,
   "sources_ok": 123,
   "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1670,
-   "old": 1093,
-   "future": 0,
-   "undated": 227,
-   "new": 0,
-   "duplicates": 577
+   "observed": 1758,
+   "old": 1219,
+   "future": 1,
+   "undated": 257,
+   "new": 3,
+   "duplicates": 535
   },
-  "current_dated_documents": 552
+  "current_dated_documents": 442
  },
  "new_today": {
-  "count": 0,
-  "by_source": {},
-  "by_class": {}
+  "count": 3,
+  "by_source": {
+   "us-fda-2cdcdcca63": 1,
+   "us-fsis-85c9542fd5": 1,
+   "nz-rbnz-gnews": 1
+  },
+  "by_class": {
+   "watch": 3
+  }
  },
  "parsed_today": {
-  "count": 14,
-  "by_class": {
-   "high": 2,
-   "routine": 8,
-   "watch": 6
-  }
+  "count": 0,
+  "by_class": {}
  },
  "n_failures": 0,
  "dates": [
-  "2026-10-17"
+  "2026-10-18"
  ],
- "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-10-17.json",
+ "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-10-18.json",
  "pages": "https://sroyaltyy.github.io/fullscan/dashboard/source-board/"
 }
