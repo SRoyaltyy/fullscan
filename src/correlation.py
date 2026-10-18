@@ -29,6 +29,7 @@ from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 
 from .filing_parts import divide_profile
+from .places import place_names
 
 _WORD = re.compile(r"[a-z0-9]+")
 _TITLE = re.compile(
@@ -98,7 +99,7 @@ def inflection(word: str) -> str:
 def _keep_token(token: str) -> bool:
     if token in _ACRONYM_OK:
         return True
-    if token in _STOP or len(token) < 3:
+    if token in _STOP or token in _LIGHT or len(token) < 3:
         return False
     if token.isdigit():
         return False
@@ -106,7 +107,18 @@ def _keep_token(token: str) -> bool:
 
 
 _SECTION = re.compile(r"(?i)\bsec(?:tion)?\.?\s+\d+[a-z]?\b")
-_PUBLISHER = re.compile(r"\s+[-|\u2013|\u2014]\s+\S.{0,50}$")
+_PUBLISHER = re.compile(r"\s+[-|\u2013|\u2014]\s+\S.{0,80}$")
+_PLACES = place_names()
+# Participles and light verbs. "showing up" is not a topic. Months are dates.
+_LIGHT = frozenset("""
+showing show showing going went gone getting get making make taking
+take coming come looking look seeing see saying said trying tried
+using used doing pay paying putting put keeping kept letting let
+helping helped starting started continuing asking asked according
+based compared reported reporting announced announce announces
+january february march april may june july august september october
+november december
+""".split())
 # "plans to launch a venue" is a verb. "1,000 launches" is a noun and is kept.
 _VERB_USE = re.compile(
     r"\b(?:plan(?:s|ned)?|agree(?:s|d)?|expect(?:s|ed)?|intend(?:s|ed)?|"
@@ -115,12 +127,57 @@ _VERB_USE = re.compile(
 )
 
 
+def _drop_repeated_title(text: str) -> str:
+    """A stored body often repeats the headline, which would count it twice."""
+    lines = (text or "").splitlines()
+    if len(lines) < 2:
+        return text or ""
+    title = _PUBLISHER.sub("", lines[0]).strip()
+    if len(title) < 20:
+        return text
+    rest = "\n".join(lines[1:])
+    rest = re.sub(re.escape(title), " ", rest, count=1, flags=re.I)
+    return lines[0] + "\n" + rest
+
+
+def strip_sources(text: str) -> str:
+    """Remove the outlet on a headline, including the copy that lost its dash.
+
+    ``IPO - Renaissance Capital`` names the source. The stored body often
+    repeats that line as ``IPO Renaissance Capital``. The phrase found after
+    the dash is deleted everywhere in the document.
+    """
+    text = _drop_repeated_title(text or "")
+    lines = text.splitlines() or [text]
+    publishers: list[str] = []
+    cleaned: list[str] = []
+    for line in lines:
+        while True:
+            match = _PUBLISHER.search(line)
+            if not match:
+                break
+            chunk = match.group()
+            name = re.split(r"[-|\u2013|\u2014]", chunk, maxsplit=1)[-1].strip()
+            if len(name) >= 3:
+                publishers.append(name)
+            line = line[:match.start()]
+        cleaned.append(line)
+    text = "\n".join(cleaned)
+    for name in publishers:
+        text = re.sub(re.escape(name), " ", text, flags=re.I)
+    return text
+
+
+def strip_places(text: str) -> str:
+    for name in _PLACES:
+        text = re.sub(rf"\b{re.escape(name)}\b", " ", text, flags=re.I)
+    return text
+
+
 def clean_surface(text: str) -> str:
-    lines = (text or "").splitlines() or [text or ""]
-    if lines:
-        lines[0] = _PUBLISHER.sub("", lines[0])
-        text = "\n".join(lines)
-    text = _SECTION.sub(" ", text or "")
+    text = strip_sources(text or "")
+    text = strip_places(text)
+    text = _SECTION.sub(" ", text)
     text = _TITLE.sub(" ", text)
     text = _FOUNDED.sub(" ", text)
     text = _HQ.sub(" ", text)
@@ -164,6 +221,7 @@ def _verb_tokens(text: str) -> set[str]:
 
 def prepare(text: str) -> Prepared:
     """Bundles, absorption, and title removal for one document."""
+    text = clean_surface(text)
     heading = _heading_lines(text)
     verbs = _verb_tokens(text)
     # None is a break, so a bundle cannot form across a stopword or a title.
@@ -172,7 +230,7 @@ def prepare(text: str) -> Prepared:
     current: list[str] = []
     for line in (text or "").splitlines() or [text or ""]:
         is_heading = line.strip() in heading
-        cleaned = clean_surface(line).lower()
+        cleaned = line.lower()
         for piece in _SENTENCE.split(cleaned):
             if current:
                 sentences.append(current)
@@ -195,6 +253,8 @@ def prepare(text: str) -> Prepared:
     uni: Counter[str] = Counter()
     bi: Counter[tuple[str, str]] = Counter()
     tri: Counter[tuple[str, str, str]] = Counter()
+    bi_raw: Counter[tuple[str, str]] = Counter()
+    tri_raw: Counter[tuple[str, str, str]] = Counter()
     partner_hits: Counter[tuple[str, str]] = Counter()
     kept = 0
     for index, item in enumerate(stream):
@@ -202,20 +262,28 @@ def prepare(text: str) -> Prepared:
             continue
         token, is_heading = item
         kept += 1
+        # The title counts more, but one title mention is not a repeated phrase.
         weight = 3 if is_heading else 1
         uni[token] += weight
         prev = stream[index - 1] if index else None
         if prev is not None:
-            bi[(prev[0], token)] += weight
+            pair = (prev[0], token)
+            bi[pair] += weight
+            bi_raw[pair] += 1
             partner_hits[(token, prev[0])] += 1
             partner_hits[(prev[0], token)] += 1
         if prev is not None and index >= 2 and stream[index - 2] is not None:
-            tri[(stream[index - 2][0], prev[0], token)] += weight
+            triple = (stream[index - 2][0], prev[0], token)
+            tri[triple] += weight
+            tri_raw[triple] += 1
 
     bundles: dict[str, float] = {}
-    for gram, count in list(bi.items()) + list(tri.items()):
-        if count >= 2:
-            bundles[" ".join(gram)] = float(count)
+    for gram, raw in bi_raw.items():
+        if raw >= 2:
+            bundles[" ".join(gram)] = float(bi[gram])
+    for gram, raw in tri_raw.items():
+        if raw >= 2:
+            bundles[" ".join(gram)] = float(tri[gram])
 
     # A word is absorbed when one neighbor sits beside at least three quarters
     # of its occurrences. ``transportation`` beside ``space`` qualifies.
@@ -465,16 +533,25 @@ def link_articles(
     *,
     z_min: float = 2.5,
     batch_z_min: float = 2.0,
+    reference: list[dict] | None = None,
 ) -> list[dict]:
     """Score every article. Both gates must clear ``z_min`` inside the article.
 
     On a batch of at least eight articles, a pair must also clear
     ``batch_z_min`` against that stock's and that industry's other scores.
+
+    ``reference`` is the control corpus for keyness. A handful of articles
+    must not be their own control: a verb that appears once would look rare.
+    Pass the day's news. When omitted, the articles being scored are the control.
     """
     prepared = [prepare(str(article.get("text") or "")) for article in articles]
+    if reference is None:
+        ref_docs = prepared
+    else:
+        ref_docs = [prepare(str(item.get("text") or "")) for item in reference]
     background: Counter[str] = Counter()
     background_tokens = 0
-    for doc in prepared:
+    for doc in ref_docs:
         background.update(doc.terms)
         background_tokens += doc.tokens
     queries: list[dict[str, float]] = []

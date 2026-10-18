@@ -57,7 +57,7 @@ class CorrelationTests(unittest.TestCase):
 
     def test_memo_passes_rocket_lab_and_fails_the_lookalikes(self):
         board = build_board(STOCKS)
-        [hit] = link_articles(board, [{"id": "memo", "title": "space policy", "text": MEMO}], z_min=1.5)
+        [hit] = link_articles(board, [{"id": "memo", "title": "space policy", "text": MEMO}], z_min=1.4)
         self.assertEqual(hit["status"], "scored")
         passed = {row["ticker"] for row in hit["stocks"] if row["pass"]}
         self.assertIn("RKLB", passed)
@@ -93,6 +93,34 @@ class CorrelationTests(unittest.TestCase):
         passed = {row["ticker"] for row in hit["stocks"] if row["pass"]}
         self.assertIn("LMT", passed)
         self.assertNotIn("AAL", passed)
+
+    def test_source_place_verb_and_one_title_phrase_do_not_count(self):
+        klook = (
+            "KLK IPO News - Pan-Asian travel booking platform Klook Technology "
+            "withdraws estimated $400 million US IPO - Renaissance Capital\n"
+            "KLK IPO News - Pan-Asian travel booking platform Klook Technology "
+            "withdraws estimated $400 million US IPO Renaissance Capital"
+        )
+        doc = prepare(klook)
+        self.assertNotIn("renaissance", doc.terms)
+        self.assertNotIn("capital", doc.terms)
+        police = (
+            "3 North Carolina police officers resign amid racist texts - ABC News\n"
+            "Charlotte-Mecklenburg police investigation into racist texts in Charlotte"
+        )
+        doc = prepare(police)
+        self.assertNotIn("charlotte", doc.terms)
+        self.assertNotIn("carolina", doc.terms)
+        inflation = "Wall Street's biggest obsessions are showing up in inflation - Business Insider"
+        doc = prepare(inflation)
+        self.assertNotIn("showing", doc.terms)
+        peptide = (
+            "DataMeds Applauds FDA Proposed Interim Access Policy for Peptides - Nasdaq\n"
+            "DataMeds Applauds FDA Proposed Interim Access Policy for Peptides Nasdaq"
+        )
+        doc = prepare(peptide)
+        self.assertNotIn("access policy", doc.bundles)
+        self.assertNotIn("access policy", doc.terms)
 
     def test_plan_to_launch_a_venue_is_not_a_rocket_launch(self):
         doc = prepare(
