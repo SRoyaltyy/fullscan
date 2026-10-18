@@ -6443,3 +6443,5 @@
 {"date":"2026-10-16","kind":"day","name":"yday_gainer_h1_webull_sim","record":"webull_sim","sha256":"034109fd0a55d1d92cc878194d10b68ea95b625d14c8264b64fef367f534b71b"}
 {"date":"2026-10-16","kind":"day","name":"yday_gainer_h3_webull_sim","record":"webull_sim","sha256":"73ea6a0c0a292342adac60feb4ab47b1e8a638464c3eac9eaf3cc8b8a1128837"}
 {"date":"2026-10-16","kind":"day","name":"yday_gainer_h5_webull_sim","record":"webull_sim","sha256":"ad7925b31d25982e29b05e1abc0725e3e91958244f5718520b431cd81b37c333"}
+{"date":"2026-10-18","kind":"day","name":"","record":"strategy_tickets","sha256":"b38c8a2d21fe31c822c806a95454a73936a24eecfc063d8d80cfb43a90cfd4fe"}
+{"date":"2026-10-16","kind":"day","name":"","record":"flatten_robust","sha256":"ee0d0b4f9ed6557b7ede9718d6e5d4b985d77f089cc083ed7d554d4f1d5fc43c"}
