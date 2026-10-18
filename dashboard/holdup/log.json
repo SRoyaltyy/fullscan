@@ -4940,5 +4940,21 @@
     "reason": "missing: plan not sealed before open",
     "recipe": "union_hot_n4_holdup__w0",
     "sha256": "62a7a58d50dd9f5628f0390d0011ec5c2b373d586231723ccf565122e1077387"
+  },
+  {
+    "committed_at": "2026-10-18T13:45:58Z",
+    "date": "2026-10-15",
+    "kind": "missing",
+    "reason": "missing: plan not sealed before open",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "70cb9f30d852e30a9542ba18670f9b6eebb745c6138497da9fc4d6f6c8c40e01"
+  },
+  {
+    "committed_at": "2026-10-18T13:45:58Z",
+    "date": "2026-10-16",
+    "kind": "missing",
+    "reason": "missing: plan not sealed before open",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "a36802b48a1b4e4df933c5513c11b9f3a45bfe1f398af87a8a1a653be1799306"
   }
 ]
