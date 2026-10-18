@@ -28,6 +28,8 @@ import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 
+from .filing_parts import divide_profile
+
 _WORD = re.compile(r"[a-z0-9]+")
 _TITLE = re.compile(
     r"\b(?:acting\s+|deputy\s+|assistant\s+)?"
@@ -265,6 +267,7 @@ class Stock:
     terms: set[str]
     alias: str
     doc_len: int
+    partners: list[dict] = field(default_factory=list)
 
 
 @dataclass
@@ -299,10 +302,11 @@ def build_board(rows: list[dict]) -> Board:
         industry = str(row.get("industry") or "").strip()
         if not ticker or not industry or industry.lower() in {"nan", "none"}:
             continue
+        filing_core, partners = divide_profile(str(row.get("filing") or ""))
         text = " ".join(
             part for part in (
                 str(row.get("description") or ""),
-                str(row.get("filing") or ""),
+                filing_core,
             ) if part.strip()
         )
         terms = stock_terms(text, str(row.get("name") or ""))
@@ -316,6 +320,7 @@ def build_board(rows: list[dict]) -> Board:
             terms=terms,
             alias=_alias(str(row.get("name") or "")),
             doc_len=max(1, sum(1 for term in terms if " " not in term)),
+            partners=partners,
         ))
     n = max(len(stocks), 1)
     df: Counter[str] = Counter()
@@ -430,6 +435,21 @@ def _mean_std(values: list[float]) -> tuple[float, float]:
     return mean, math.sqrt(var)
 
 
+def _dependencies(board: Board, text: str) -> list[dict]:
+    found = []
+    for stock in board.stocks:
+        for partner in stock.partners:
+            if re.search(rf"\b{re.escape(partner['name'])}\b", text or "", re.I):
+                found.append({
+                    "ticker": stock.ticker,
+                    "name": stock.name,
+                    "role": partner["role"],
+                    "partner": partner["name"],
+                    "section": partner.get("section") or "",
+                })
+    return found
+
+
 def name_hit(stock: Stock, text: str) -> bool:
     # One-letter tickers match initials inside "U.S." and are not names.
     if len(stock.ticker) >= 2 and re.search(rf"\b{re.escape(stock.ticker)}\b", text or ""):
@@ -484,6 +504,7 @@ def link_articles(
                 "absorbed": doc.absorbed[:12],
                 "industries": [],
                 "stocks": [],
+                "dependencies": _dependencies(board, text),
             })
             continue
         ind_scores = _industry_scores(query, board, doc.sentences)
@@ -573,6 +594,7 @@ def link_articles(
             "absorbed": doc.absorbed[:12],
             "industries": [row for row in industries if row["pass"] or row["z"] > 0][:8],
             "stocks": [row for row in stocks_out if row["pass"] or row["name_hit"] or row["desc_z"] >= z_min][:24],
+            "dependencies": _dependencies(board, text),
             "_sparse": sparse,
             "_ind": {row["industry"]: row["score"] for row in industries},
         })

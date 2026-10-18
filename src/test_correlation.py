@@ -3,8 +3,9 @@ import unittest
 
 from collections import Counter
 
-from src.correlation import _apply_keyness, build_board, link_articles, prepare
+from src.correlation import _apply_keyness, build_board, link_articles, prepare, stock_terms
 from src.filing_business import item1_business
+from src.filing_parts import divide_profile
 
 MEMO = """
 THE NATIONAL SPACE TRANSPORTATION POLICY
@@ -135,6 +136,37 @@ class CorrelationTests(unittest.TestCase):
             tokens += doc.tokens
         query = _apply_keyness(docs[0], background - Counter(docs[0].terms), tokens - docs[0].tokens)
         self.assertNotIn("step down", query)
+
+    def test_partner_names_leave_the_core_and_keep_a_role(self):
+        text = """
+Overview
+Playboy products are apparel, beauty, and grooming.
+
+Playboy Products & Services
+collaborations with strategic partners in the nightlife and online gaming industries, including DraftKings, Fire Brands, Ainsworth and Sandbox.
+
+Our Competition
+DraftKings is discussed here as a rival and must not be reread as the business.
+"""
+        core, partners = divide_profile(text)
+        self.assertNotIn("DraftKings", core)
+        self.assertIn("apparel", core.lower())
+        roles = {(row["role"], row["name"]) for row in partners}
+        self.assertIn(("collaborator", "DraftKings"), roles)
+        terms = stock_terms(core, "Playboy Inc")
+        self.assertNotIn("draftking", terms)
+
+    def test_a_technology_customer_is_not_a_collaborator(self):
+        text = """
+Wagering Services
+We also provide technology services to third parties, including FanDuel and DraftKings, and we earn commissions from white label products.
+"""
+        core, partners = divide_profile(text)
+        self.assertNotIn("DraftKings", core)
+        self.assertIn("commissions", core)
+        roles = {(row["role"], row["name"]) for row in partners}
+        self.assertIn(("customer", "DraftKings"), roles)
+        self.assertIn(("customer", "FanDuel"), roles)
 
     def test_item1_skips_the_table_of_contents(self):
         text = (
