@@ -1,6 +1,6 @@
 {
   "date": "2026-10-18",
-  "generated_at": "2026-10-18T09:47:20.862966-04:00",
+  "generated_at": "2026-10-18T09:50:25.329781-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -10,8 +10,8 @@
     "MISSING News judge MD `01_daily/news/2026-10-18_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 2,
-    "partial": 2,
+    "ok": 4,
+    "partial": 0,
     "fail": 4,
     "n": 8
   },
@@ -595,11 +595,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 4,
       "files": [
         {
@@ -715,10 +715,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-18_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1432792,
+          "said": "1d BUY CXW, BTG, TFPM, GEO, MDA, OR, SENS, LOAR \u00b7 SELL EOSE, TMC, LWLG, ASPI, INDI, VNET",
           "bullets": []
         },
         {
@@ -726,21 +726,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-10-18_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 78150,
+          "said": "Stock book \u2014 2026-10-18",
+          "bullets": [
+            "_Generated 2026-10-18T09:49:37.540722-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-10-18_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -762,10 +765,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-10-18 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-18)",
           "size": 10510589,
-          "said": "session 2026-10-18 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-10-18)",
           "bullets": []
         }
       ],
@@ -778,9 +781,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -790,10 +793,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-18_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1432792,
+          "said": "1d BUY CXW, BTG, TFPM, GEO, MDA, OR, SENS, LOAR \u00b7 SELL EOSE, TMC, LWLG, ASPI, INDI, VNET",
           "bullets": []
         },
         {
@@ -801,10 +804,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-10-18 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-18)",
           "size": 10510589,
-          "said": "session 2026-10-18 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-10-18)",
           "bullets": []
         },
         {
@@ -840,8 +843,74 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "CXW",
+        "score": 0.7234686656630793
+      },
+      {
+        "ticker": "BTG",
+        "score": 0.5401898594951581
+      },
+      {
+        "ticker": "TFPM",
+        "score": 0.5339046065297901
+      },
+      {
+        "ticker": "GEO",
+        "score": 0.6267258911472608
+      },
+      {
+        "ticker": "MDA",
+        "score": 0.4595407600331406
+      },
+      {
+        "ticker": "OR",
+        "score": 0.532296796518648
+      },
+      {
+        "ticker": "SENS",
+        "score": 0.5926820678138001
+      },
+      {
+        "ticker": "LOAR",
+        "score": 0.4980865147671113
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "EOSE",
+        "score": -0.27435151783368794
+      },
+      {
+        "ticker": "TMC",
+        "score": -0.3718775676081663
+      },
+      {
+        "ticker": "LWLG",
+        "score": -0.3549238275126209
+      },
+      {
+        "ticker": "ASPI",
+        "score": -0.395237419941393
+      },
+      {
+        "ticker": "INDI",
+        "score": -0.30264049847654356
+      },
+      {
+        "ticker": "VNET",
+        "score": -0.372474526625953
+      },
+      {
+        "ticker": "TE",
+        "score": -0.29088822339044407
+      },
+      {
+        "ticker": "SMR",
+        "score": -0.22658508929214977
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {},
@@ -983,6 +1052,59 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, AME, EPAM, AUPH, ELV \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, AME, DHR, ASML, TEL"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-18T09:50:24.561922-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-18_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1432792,
+          "preview": "1d BUY CXW, BTG, TFPM, GEO, MDA, OR, SENS, LOAR \u00b7 SELL EOSE, TMC, LWLG, ASPI, INDI, VNET, TE, SMR"
+        },
+        {
+          "path": "data/stock_book/2026-10-18_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-18_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2573,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-18_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12400,
+          "preview": "2026-10-18 BUY CXW, BTG, TFPM, GEO, MDA, OR, SENS, LOAR \u00b7 SELL EOSE, TMC, LWLG, ASPI, INDI, VNET, TE, SMR"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12400,
+          "preview": "2026-10-18 BUY CXW, BTG, TFPM, GEO, MDA, OR, SENS, LOAR \u00b7 SELL EOSE, TMC, LWLG, ASPI, INDI, VNET, TE, SMR"
+        },
+        {
+          "path": "01_daily/2026-10-18_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 79141,
+          "preview": "# Stock book \u2014 2026-10-18\n_Generated 2026-10-18T09:49:37.540722-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CXW, BTG, TFPM, GEO, MDA, OR, SENS, LOAR \u00b7 SELL EOSE, TMC, LWLG, ASPI, INDI, VNET, TE, SMR \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-18 BUY CXW, BTG, TFPM, GEO, MDA, OR, SENS, LOAR \u00b7 SELL EOSE, TMC, LWLG, ASPI, INDI, VNET, TE, SMR \u00b7 2026-10-18 BUY CXW, BTG, TFPM, GEO, MDA, OR, SENS, LOAR \u00b7 SELL EOSE, TMC, LWLG, ASPI, INDI, VNET, TE, SMR \u00b7 # Stock book \u2014 2026-10-18\n_Generated 2026-10-18T09:49:37.540722-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
