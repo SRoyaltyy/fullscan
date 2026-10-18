@@ -1,38 +1,26 @@
 [
   {
-    "n": 5224,
-    "title": "Lidl US Recalls Gelatelli Coffee & Vanilla Gelato Due to Possible Health Risk",
-    "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/lidl-us-recalls-gelatelli-coffee-vanilla-gelato-due-possible-health-risk",
-    "published_at": "2026-10-16T04:00:00+00:00",
-    "official_issuer": "Food and Drug Administration — Food Safety Recalls",
+    "n": 5227,
+    "title": "Commission statement on the protests in Albania",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2194",
+    "published_at": "2026-10-18T15:31:57+00:00",
+    "official_issuer": "European Commission press and decisions",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-fda-2cdcdcca63"
+      "eu-commission-07d4f58ccf"
     ]
   },
   {
-    "n": 5225,
-    "title": "Kayem Foods Inc. Recalls Meat and Poultry Products Due to Possible Temperature Abuse",
-    "url": "http://www.fsis.usda.gov/recalls-alerts/kayem-foods-inc--recalls-meat-and-poultry-products-due-possible-temperature-abuse",
-    "published_at": "2026-10-17T12:00:00+00:00",
-    "official_issuer": "USDA Food Safety and Inspection Service — Recalls",
+    "n": 5228,
+    "title": "Remarks by Commissioner Brunner at an event on the occasion of the 75th anniversary of the Europa-Institut at Saarland University",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2192",
+    "published_at": "2026-10-15T22:00:00+00:00",
+    "official_issuer": "European Commission press and decisions",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",
     "source_ids": [
-      "us-fsis-85c9542fd5"
-    ]
-  },
-  {
-    "n": 5226,
-    "title": "Upcoming speaking engagements for October 2026 - Reserve Bank of New Zealand",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPa0hpYWpGSDgtRmpFbTJJRjRaUVUtaXNKVEluNVdpY2F2amRnRGhIQzFBYl8wMEhydE9yazVGSGw3b3M0UTk3X1Q0RWJQSjZLejB3dDdxOVgwZmNqMnJkc3YxQlg5QUpxMXplYnpaeWFGOWpNcTJoUG5HN3JzbHNKRHc3ZWJfVUFzVGoyOVk5MV9nRmNacm9VMnk5S2FNQ2c",
-    "published_at": "2026-10-15T07:00:00+00:00",
-    "official_issuer": "Reserve Bank of New Zealand (official-site news mirror)",
-    "document_type": "official_announcement",
-    "document_stage": "requires_semantic_review",
-    "source_ids": [
-      "nz-rbnz-gnews"
+      "eu-commission-07d4f58ccf"
     ]
   }
 ]

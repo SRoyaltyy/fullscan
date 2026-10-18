@@ -1,6 +1,6 @@
 {
  "date": "2026-10-18",
- "generated_at": "2026-10-18T05:57:06.982513+00:00",
+ "generated_at": "2026-10-18T16:34:22.879589+00:00",
  "catalog": {
   "generated_at": "2026-10-17T13:03:20.405263+00:00",
   "channels": 365,
@@ -34,35 +34,36 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-18T05:56:44.826096+00:00",
+  "generated_at": "2026-10-18T16:34:02.375917+00:00",
   "enabled_sources": 123,
   "sources_ok": 123,
   "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1758,
-   "old": 1219,
-   "future": 1,
-   "undated": 257,
-   "new": 3,
-   "duplicates": 535
+   "observed": 1809,
+   "old": 1244,
+   "future": 0,
+   "undated": 317,
+   "new": 2,
+   "duplicates": 563
   },
-  "current_dated_documents": 442
+  "current_dated_documents": 362
  },
  "new_today": {
-  "count": 3,
+  "count": 2,
   "by_source": {
-   "us-fda-2cdcdcca63": 1,
-   "us-fsis-85c9542fd5": 1,
-   "nz-rbnz-gnews": 1
+   "eu-commission-07d4f58ccf": 2
   },
   "by_class": {
-   "watch": 3
+   "routine": 2
   }
  },
  "parsed_today": {
-  "count": 0,
-  "by_class": {}
+  "count": 5,
+  "by_class": {
+   "watch": 4,
+   "routine": 1
+  }
  },
  "n_failures": 0,
  "dates": [

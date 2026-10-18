@@ -1,6 +1,6 @@
 {
  "date": "2026-10-18",
- "generated_at": "2026-10-18T05:57:06.982513+00:00",
+ "generated_at": "2026-10-18T16:34:22.879589+00:00",
  "catalog": {
   "generated_at": "2026-10-17T13:03:20.405263+00:00",
   "channels": 365,
@@ -34,20 +34,20 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-18T05:56:44.826096+00:00",
+  "generated_at": "2026-10-18T16:34:02.375917+00:00",
   "enabled_sources": 123,
   "sources_ok": 123,
   "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1758,
-   "old": 1219,
-   "future": 1,
-   "undated": 257,
-   "new": 3,
-   "duplicates": 535
+   "observed": 1809,
+   "old": 1244,
+   "future": 0,
+   "undated": 317,
+   "new": 2,
+   "duplicates": 563
   },
-  "current_dated_documents": 442
+  "current_dated_documents": 362
  },
  "failures": [],
  "channels": [
@@ -394,7 +394,7 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 21,
+    "window": 12,
     "by_class": {},
     "items": [
      {
@@ -500,87 +500,6 @@
       "title": "LS12 3AL, Oates Environmental Limited: environmental permit issued - EPR/YP3832WS/V006",
       "url": "https://www.gov.uk/government/publications/ls12-3al-oates-environmental-limited-environmental-permit-issued-epryp3832wsv006",
       "published_at": "2026-10-15T16:55:33+00:00",
-      "document_type": "decision",
-      "stage": "decision_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "CAC Outcome: UNISON, Unite the Union & AMG Scot Ltd",
-      "url": "https://www.gov.uk/government/publications/cac-outcome-unison-unite-the-union-amg-scot-ltd",
-      "published_at": "2026-10-15T15:32:44+00:00",
-      "document_type": "decision",
-      "stage": "decision_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Suspended and revoked licences and registrations for manufacturers and wholesalers of medicines and ingredients",
-      "url": "https://www.gov.uk/government/publications/suspended-licences-for-manufacturers-and-wholesalers-of-medicines",
-      "published_at": "2026-10-15T11:52:47+00:00",
-      "document_type": "decision",
-      "stage": "decision_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Company Names Tribunal undefended decisions and orders",
-      "url": "https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders",
-      "published_at": "2026-10-15T11:07:14+00:00",
-      "document_type": "decision",
-      "stage": "decision_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Company Names Tribunal decision: DPI World Shipping Services Limited",
-      "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-dpi-world-shipping-services-limited",
-      "published_at": "2026-10-15T11:06:44+00:00",
-      "document_type": "decision",
-      "stage": "decision_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Company Names Tribunal decision: Dola AI International UK Group Limited",
-      "url": "https://www.gov.uk/government/publications/company-names-tribunal-decision-dola-ai-international-uk-group-limited",
-      "published_at": "2026-10-15T11:02:47+00:00",
-      "document_type": "decision",
-      "stage": "decision_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "NG32 3HR, Stonegate Agriculture Limited: environmental permit issued - EPR/YP3124MU/A001",
-      "url": "https://www.gov.uk/government/publications/ng32-3hr-stonegate-agriculture-limited-environmental-permit-issued-epryp3124mua001",
-      "published_at": "2026-10-15T11:01:45+00:00",
-      "document_type": "decision",
-      "stage": "decision_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "CAC Outcome: Prospect & Nokia",
-      "url": "https://www.gov.uk/government/publications/cac-outcome-prospect-nokia",
-      "published_at": "2026-10-15T09:02:10+00:00",
-      "document_type": "decision",
-      "stage": "decision_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Hexagon Housing Association Limited",
-      "url": "https://www.gov.uk/government/publications/regulatory-judgement-hexagon-housing-association-limited",
-      "published_at": "2026-10-15T08:30:03+00:00",
-      "document_type": "decision",
-      "stage": "decision_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Concept Housing Association CIC",
-      "url": "https://www.gov.uk/government/publications/regulatory-judgement-concept-housing-association-cic",
-      "published_at": "2026-10-15T08:30:01+00:00",
       "document_type": "decision",
       "stage": "decision_published",
       "new": false,
@@ -793,19 +712,9 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Antidepressants: new safety measures for all patients to improve communication of the risk of suicidal thoughts and behaviours and persistent sexual dysfunction",
-      "url": "https://www.gov.uk/drug-safety-update/antidepressants-new-safety-measures-for-all-patients-to-improve-communication-of-the-risk-of-suicidal-thoughts-and-behaviours-and-persistent-sexual-dysfunction",
-      "published_at": "2026-10-15T08:30:08+00:00",
-      "document_type": "drug_safety_update",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -884,7 +793,7 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 34,
+    "window": 33,
     "by_class": {},
     "items": [
      {
@@ -1207,31 +1116,13 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 3,
+    "window": 1,
     "by_class": {},
     "items": [
      {
       "title": "Public Law 119 - 121 - American Music Tourism Act of 2025",
       "url": "https://www.govinfo.gov/app/details/PLAW-119publ121",
       "published_at": "2026-10-16T18:45:00+00:00",
-      "document_type": "public_law",
-      "stage": "law_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Public Law 119 - 36 - Homebuyers Privacy Protection Act",
-      "url": "https://www.govinfo.gov/app/details/PLAW-119publ36",
-      "published_at": "2026-10-15T14:31:00+00:00",
-      "document_type": "public_law",
-      "stage": "law_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Public Law 119 - 120 - Billion Dollar Boondoggle Act of 2025",
-      "url": "https://www.govinfo.gov/app/details/PLAW-119publ120",
-      "published_at": "2026-10-15T12:16:00+00:00",
       "document_type": "public_law",
       "stage": "law_published",
       "new": false,
@@ -1260,7 +1151,7 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 19,
+    "window": 18,
     "by_class": {},
     "items": [
      {
@@ -1424,15 +1315,6 @@
       "stage": "presidential_document_published",
       "new": false,
       "cls": "routine"
-     },
-     {
-      "title": "DCPD-202500895 - Remarks on Signing the Homebuyers Privacy Protection Act and Executive Orders and Announcing the 2026 Group of Twenty (G-20) Nations Summit in Miami, Florida, and an Exchange With Reporters",
-      "url": "https://www.govinfo.gov/app/details/DCPD-202500895",
-      "published_at": "2026-10-15T14:26:00+00:00",
-      "document_type": "presidential_document",
-      "stage": "presidential_document_published",
-      "new": false,
-      "cls": "routine"
      }
     ]
    }
@@ -1482,31 +1364,13 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 3,
+    "window": 1,
     "by_class": {},
     "items": [
      {
       "title": "S. Rept. 119-151",
       "url": "https://www.govinfo.gov/app/details/CRPT-119srpt151",
       "published_at": "2026-10-16T13:42:00+00:00",
-      "document_type": "committee_report",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "H. Rept. 119-841",
-      "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt841",
-      "published_at": "2026-10-15T08:28:00+00:00",
-      "document_type": "committee_report",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "H. Rept. 119-834",
-      "url": "https://www.govinfo.gov/app/details/CRPT-119hrpt834",
-      "published_at": "2026-10-15T08:26:00+00:00",
       "document_type": "committee_report",
       "stage": "requires_semantic_review",
       "new": false,
@@ -1748,28 +1612,9 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "FTC Sends More than $9.8 Million to Consumers Harmed by Walmart’s Failure to Stop Scammers that Used its Wire Transfer Services to Take Millions from Customers",
-      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-sends-more-98-million-consumers-harmed-walmarts-failure-stop-scammers-used-its-wire-transfer",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "FTC Sues Ticket Broker Over Unlawful Tactics Used to Buy Millions of Tickets to Popular Live Events",
-      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-sues-ticket-broker-over-unlawful-tactics-used-buy-millions-tickets-popular-live-events",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -1819,28 +1664,9 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "FTC Sends More than $9.8 Million to Consumers Harmed by Walmart’s Failure to Stop Scammers that Used its Wire Transfer Services to Take Millions from Customers",
-      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-sends-more-98-million-consumers-harmed-walmarts-failure-stop-scammers-used-its-wire-transfer",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "FTC Sues Ticket Broker Over Unlawful Tactics Used to Buy Millions of Tickets to Popular Live Events",
-      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-sues-ticket-broker-over-unlawful-tactics-used-buy-millions-tickets-popular-live-events",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -1863,7 +1689,7 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 12,
+    "window": 7,
     "by_class": {},
     "items": [
      {
@@ -1924,51 +1750,6 @@
       "title": "20262366: Victory Capital Holdings, Inc.; GC Ferry Parent, L.P.",
       "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262366",
       "published_at": "2026-10-16T13:47:02+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "20262329: Xin Jin; Daniel Chiu",
-      "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262329",
-      "published_at": "2026-10-15T14:21:35+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "20262349: Bain Capital Double Impact Fund III, L.P.; Rentokil Initial plc",
-      "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262349",
-      "published_at": "2026-10-15T14:21:35+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "20262334: InMed Pharmaceuticals Inc; Mentari Therapeutics, Inc.",
-      "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262334",
-      "published_at": "2026-10-15T14:21:35+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "20262317: Credit Union 1; Gulf Coast Federal Credit Union",
-      "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262317",
-      "published_at": "2026-10-15T14:21:34+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "20262277: Platinum Equity Capital QIQ Partners International VI; Nestle S.A.",
-      "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262277",
-      "published_at": "2026-10-15T14:21:34+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -2125,7 +1906,7 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 86,
+    "window": 61,
     "by_class": {},
     "items": [
      {
@@ -2273,105 +2054,6 @@
       "cls": "high"
      },
      {
-      "title": "Disgraced Former FBI Agent Sentenced in Second Federal Prosecution",
-      "url": "https://www.justice.gov/usao-edmi/pr/disgraced-former-fbi-agent-sentenced-second-federal-prosecution",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Maryland Father and Son Indicted on Dog Fighting, Breeding, and Transportation Charges After Law Enforcement Seizes 44 Dogs",
-      "url": "https://www.justice.gov/usao-md/pr/maryland-father-and-son-indicted-dog-fighting-breeding-and-transportation-charges-after",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Former Postal Employee Sentenced to 20 Months in Prison for Fraud in Connection with Unemployment Insurance Benefits",
-      "url": "https://www.justice.gov/usao-edmi/pr/former-postal-employee-sentenced-20-months-prison-fraud-connection-unemployment",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "The Eastern District of Michigan Joins DOJ Fraud Division, IRS, and IRS-CI in National Tax Enforcement Surge Exposing Two Defendants Involved in Tax Fraud",
-      "url": "https://www.justice.gov/usao-edmi/pr/eastern-district-michigan-joins-doj-fraud-division-irs-and-irs-ci-national-tax",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "National Fraud Enforcement Division and the Department of Health and Human Services Announce Self-Disclosure Protocol for Criminal Health Care Fraud",
-      "url": "https://www.justice.gov/opa/pr/national-fraud-enforcement-division-and-department-health-and-human-services-announce-self",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Russian National Arrested and Extradited to New York on Charges of Evading Sanctions on Russia",
-      "url": "https://www.justice.gov/usao-ndny/pr/russian-national-arrested-and-extradited-new-york-charges-evading-sanctions-russia",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Lee’s Summit Man Pleads Guilty to Defrauding Millions of Dollars from Investors Through Ponzi Scheme",
-      "url": "https://www.justice.gov/usao-wdmo/pr/lees-summit-man-pleads-guilty-defrauding-millions-dollars-investors-through-ponzi",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "United States Attorney’s Office for the Southern District of Alabama Joins DOJ Fraud Division, IRS, and IRS-CI in National Tax Enforcement Surge Exposing over $490 Million in Tax Fraud",
-      "url": "https://www.justice.gov/usao-sdal/pr/united-states-attorneys-office-southern-district-alabama-joins-doj-fraud-division-irs",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Founder And Former Ceo Of 777 Partners Pleads Guilty To $500 Million Fraud Scheme",
-      "url": "https://www.justice.gov/usao-sdny/pr/founder-and-former-ceo-777-partners-pleads-guilty-500-million-fraud-scheme",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Staffing Business Owner and Son Indicted for Employment Tax and Wire Fraud Schemes",
-      "url": "https://www.justice.gov/opa/pr/staffing-business-owner-and-son-indicted-employment-tax-and-wire-fraud-schemes",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Russian National Arrested and Extradited to New York on Charges of Evading Sanctions on Russia",
-      "url": "https://www.justice.gov/opa/pr/russian-national-arrested-and-extradited-new-york-charges-evading-sanctions-russia",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
       "title": "Depew man sentenced for entering secure area at the Buffalo Niagara International Airport",
       "url": "https://www.justice.gov/usao-wdny/pr/depew-man-sentenced-entering-secure-area-buffalo-niagara-international-airport",
       "published_at": "2026-10-16T12:00:00+00:00",
@@ -2392,6 +2074,105 @@
      {
       "title": "U.S. Attorney’s Office Filed 111 Border-Related Cases This Week",
       "url": "https://www.justice.gov/usao-sdca/pr/us-attorneys-office-filed-111-border-related-cases-week-2",
+      "published_at": "2026-10-16T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "watch"
+     },
+     {
+      "title": "Brazilian Man Sentenced to 12 Years in Prison for Managerial Role in Conspiracy to Launder Tens of Millions of Dollars in Illicit Cash Proceeds",
+      "url": "https://www.justice.gov/opa/pr/brazilian-man-sentenced-12-years-prison-managerial-role-conspiracy-launder-tens-millions",
+      "published_at": "2026-10-16T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "watch"
+     },
+     {
+      "title": "Jacksonville Man Sentenced to Ten Years in Prison for Drug Offenses",
+      "url": "https://www.justice.gov/usao-mdfl/pr/jacksonville-man-sentenced-ten-years-prison-drug-offenses",
+      "published_at": "2026-10-16T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "watch"
+     },
+     {
+      "title": "Illegal Alien Sentenced to 13 Years in Prison for 2025 Armed Carjacking, Attempted Carjacking in Philadelphia",
+      "url": "https://www.justice.gov/usao-edpa/pr/illegal-alien-sentenced-13-years-prison-2025-armed-carjacking-attempted-carjacking",
+      "published_at": "2026-10-16T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "watch"
+     },
+     {
+      "title": "Illegal Alien from Brazil Sentenced for Illegally Reentering the US After Prior Removal",
+      "url": "https://www.justice.gov/usao-me/pr/illegal-alien-brazil-sentenced-illegally-reentering-us-after-prior-removal",
+      "published_at": "2026-10-16T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "watch"
+     },
+     {
+      "title": "Brazilian Man Sentenced to 12 Years in Prison for Managerial Role in Conspiracy to Launder Tens of Millions of Dollars in Illicit Cash Proceeds",
+      "url": "https://www.justice.gov/usao-sdfl/pr/brazilian-man-sentenced-12-years-prison-managerial-role-conspiracy-launder-tens",
+      "published_at": "2026-10-16T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "watch"
+     },
+     {
+      "title": "Federal Detainees to Be Relocated to Detention Facilities in Mecklenburg County; Partnership Between the U.S. Attorney’s Office, U.S. Marshals Service, and Mecklenburg County Sheriff’s Office Brings Federal Resources to North Carolina",
+      "url": "https://www.justice.gov/usao-wdnc/pr/federal-detainees-be-relocated-detention-facilities-mecklenburg-county-partnership",
+      "published_at": "2026-10-16T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "watch"
+     },
+     {
+      "title": "Texas residents charged with promoting Illegal tax shelter",
+      "url": "https://www.justice.gov/usao-ndtx/pr/texas-residents-charged-promoting-illegal-tax-shelter",
+      "published_at": "2026-10-16T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "watch"
+     },
+     {
+      "title": "Floridian sentenced to federal prison, ordered to pay $2.8M in restitution for money laundering scheme in the Eastern District of Texas",
+      "url": "https://www.justice.gov/usao-edtx/pr/floridian-sentenced-federal-prison-ordered-pay-28m-restitution-money-laundering-scheme",
+      "published_at": "2026-10-16T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "watch"
+     },
+     {
+      "title": "Two Florida defendants sentenced to prison for nearly $900,000 health care scam",
+      "url": "https://www.justice.gov/usao-ks/pr/two-florida-defendants-sentenced-prison-nearly-900000-health-care-scam",
+      "published_at": "2026-10-16T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "watch"
+     },
+     {
+      "title": "Three People Charged in Conspiracy to Commit Sex Trafficking of Minors and Related Charges",
+      "url": "https://www.justice.gov/opa/pr/three-people-charged-conspiracy-commit-sex-trafficking-minors-and-related-charges",
+      "published_at": "2026-10-16T12:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "watch"
+     },
+     {
+      "title": "Georgia Inmates Sentenced in Police‑Impersonation Jury‑Duty Call Scheme",
+      "url": "https://www.justice.gov/usao-mdga/pr/georgia-inmates-sentenced-police-impersonation-jury-duty-call-scheme",
       "published_at": "2026-10-16T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
@@ -2421,7 +2202,7 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 19,
+    "window": 6,
     "by_class": {},
     "items": [
      {
@@ -2437,87 +2218,6 @@
       "title": "Justice Department Reaches Settlement Agreement with City of Lexington, Mississippi, Regarding Lexington Police Department’s Unlawful Police Practices",
       "url": "https://www.justice.gov/opa/pr/justice-department-reaches-settlement-agreement-city-lexington-mississippi-regarding",
       "published_at": "2026-10-16T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Florida Man Pleads Guilty to Illegal Opioid Distribution Conspiracy",
-      "url": "https://www.justice.gov/opa/pr/florida-man-pleads-guilty-illegal-opioid-distribution-conspiracy",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "DOJ, ATF, Law Enforcement Partners Conclude Operation Show Me Justice",
-      "url": "https://www.justice.gov/opa/pr/doj-atf-law-enforcement-partners-conclude-operation-show-me-justice",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Owner of Health Care Software Company Sentenced to 19 Years in Prison for $1B Medicare Fraud",
-      "url": "https://www.justice.gov/opa/pr/owner-health-care-software-company-sentenced-19-years-prison-1b-medicare-fraud",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Justice Department, Law Enforcement Partners Announce Results of 8-Week Law Enforcement Surge Focused on Violent Crime Reduction",
-      "url": "https://www.justice.gov/opa/video/justice-department-law-enforcement-partners-announce-results-8-week-law-enforcement-surge",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "San Diego Man Pleads Guilty to Tax Evasion",
-      "url": "https://www.justice.gov/opa/pr/san-diego-man-pleads-guilty-tax-evasion",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Deputy Assistant Attorney General Stephanie A. Greco Delivers Remarks at the 2026 Antitrust Tech Summit",
-      "url": "https://www.justice.gov/opa/speech/deputy-assistant-attorney-general-stephanie-greco-delivers-remarks-2026-antitrust-tech",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "National Fraud Enforcement Division and the Department of Health and Human Services Announce Self-Disclosure Protocol for Criminal Health Care Fraud",
-      "url": "https://www.justice.gov/opa/pr/national-fraud-enforcement-division-and-department-health-and-human-services-announce-self",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Staffing Business Owner and Son Indicted for Employment Tax and Wire Fraud Schemes",
-      "url": "https://www.justice.gov/opa/pr/staffing-business-owner-and-son-indicted-employment-tax-and-wire-fraud-schemes",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Russian National Arrested and Extradited to New York on Charges of Evading Sanctions on Russia",
-      "url": "https://www.justice.gov/opa/pr/russian-national-arrested-and-extradited-new-york-charges-evading-sanctions-russia",
-      "published_at": "2026-10-15T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -2554,42 +2254,6 @@
       "title": "Three People Charged in Conspiracy to Commit Sex Trafficking of Minors and Related Charges",
       "url": "https://www.justice.gov/opa/pr/three-people-charged-conspiracy-commit-sex-trafficking-minors-and-related-charges",
       "published_at": "2026-10-16T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Illegal Alien from Mexico Sentenced for International Conspiracy to Smuggle Aliens from Canada into United States",
-      "url": "https://www.justice.gov/opa/pr/illegal-alien-mexico-sentenced-international-conspiracy-smuggle-aliens-canada-united-states",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Justice Department Sues State of California over Voter List",
-      "url": "https://www.justice.gov/opa/pr/justice-department-sues-state-california-over-voter-list",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Justice Department Files Complaints Against the Cities of St. Paul and Portland Challenging Mask Ban and Identification Requirements for Federal Officers",
-      "url": "https://www.justice.gov/opa/pr/justice-department-files-complaints-against-cities-st-paul-and-portland-challenging-mask-ban",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Justice Department Files Complaint Against California Ticket Broker for Using Unlawful Tactics to Purchase Millions of Tickets to Popular Live Events",
-      "url": "https://www.justice.gov/opa/pr/justice-department-files-complaint-against-california-ticket-broker-using-unlawful-tactics",
-      "published_at": "2026-10-15T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -4447,9 +4111,11 @@
    "exception": "",
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
-    "today": 0,
-    "window": 26,
-    "by_class": {},
+    "today": 4,
+    "window": 23,
+    "by_class": {
+     "watch": 4
+    },
     "items": [
      {
       "title": "Verified Clinical Benefit | Cancer Accelerated Approvals",
@@ -4488,18 +4154,36 @@
       "cls": "high"
      },
      {
-      "title": "Advancing Generic Drug Development: Leveraging Model-Integrated Evidence (MIE) in the Development & Approval of Generic Drugs - 08/27/2026",
-      "url": "http://www.fda.gov/drugs/news-events-human-drugs/advancing-generic-drug-development-leveraging-model-integrated-evidence-mie-development-approval",
-      "published_at": "2026-10-15T13:41:53+00:00",
+      "title": "Navigating the FDA Bayesian Draft Guidance: Design, Analysis, and Review Considerations - 10/14/2026",
+      "url": "http://www.fda.gov/drugs/news-events-human-drugs/navigating-fda-bayesian-draft-guidance-design-analysis-and-review-considerations-10142026",
+      "published_at": "2026-10-18T12:49:24+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "high"
+      "cls": "watch"
+     },
+     {
+      "title": "GDUFA Paid Facilities List",
+      "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list",
+      "published_at": "2026-10-18T12:45:14+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "watch"
+     },
+     {
+      "title": "What You Should Know about Eye Drops",
+      "url": "http://www.fda.gov/drugs/buying-using-medicine-safely/what-you-should-know-about-eye-drops",
+      "published_at": "2026-10-18T12:31:47+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "watch"
      },
      {
       "title": "Counterfeit Versions of Eye Drops Found in Several States",
       "url": "http://www.fda.gov/drugs/counterfeit-medicine/counterfeit-versions-eye-drops-found-several-states",
-      "published_at": "2026-10-16T20:07:20+00:00",
+      "published_at": "2026-10-18T12:16:13+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -4569,15 +4253,6 @@
       "cls": "watch"
      },
      {
-      "title": "What You Should Know about Eye Drops",
-      "url": "http://www.fda.gov/drugs/buying-using-medicine-safely/what-you-should-know-about-eye-drops",
-      "published_at": "2026-10-16T15:48:46+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
       "title": "Counterfeit Medicine",
       "url": "http://www.fda.gov/drugs/buying-using-medicine-safely/counterfeit-medicine",
       "published_at": "2026-10-16T15:02:57+00:00",
@@ -4641,45 +4316,9 @@
       "cls": "watch"
      },
      {
-      "title": "GDUFA Paid Facilities List",
-      "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list",
-      "published_at": "2026-10-15T18:29:47+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Navigating the FDA Bayesian Draft Guidance: Design, Analysis, and Review Considerations - 10/14/2026",
-      "url": "http://www.fda.gov/drugs/news-events-human-drugs/navigating-fda-bayesian-draft-guidance-design-analysis-and-review-considerations-10142026",
-      "published_at": "2026-10-15T17:56:49+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
       "title": "CDER Small Business & Industry Assistance (SBIA)",
       "url": "http://www.fda.gov/drugs/development-approval-process-drugs/cder-small-business-industry-assistance-sbia",
       "published_at": "2026-10-15T17:56:44+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "FDA Rare Disease Framework Initiative Public Meeting - 10/28/2026",
-      "url": "http://www.fda.gov/news-events/fda-meetings-conferences-and-workshops/fda-rare-disease-framework-initiative-public-meeting-10282026",
-      "published_at": "2026-10-15T15:20:55+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Advancing Generic Drug Development: Modernizing Bioequivalence Approaches for Topical & Transdermal Products - 09/10/2026",
-      "url": "http://www.fda.gov/drugs/news-events-human-drugs/advancing-generic-drug-development-modernizing-bioequivalence-approaches-topical-transdermal",
-      "published_at": "2026-10-15T13:41:49+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -4708,7 +4347,7 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 6,
+    "window": 5,
     "by_class": {},
     "items": [
      {
@@ -4751,15 +4390,6 @@
       "title": "Drugs@FDA Data Files",
       "url": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
       "published_at": "2026-10-16T13:14:15+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "FAYUVI",
-      "url": "http://www.fda.gov/vaccines-blood-biologics/fayuvi",
-      "published_at": "2026-10-15T12:23:29+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -6254,22 +5884,13 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 1,
     "by_class": {},
     "items": [
      {
       "title": "US Department of Labor awards $81.5M in grants to support industry-driven job training programs in rural communities",
       "url": "http://www.dol.gov/newsroom/releases/eta/eta20261016",
       "published_at": "2026-10-16T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Unemployment Insurance Weekly Claims Report",
-      "url": "http://www.dol.gov/node/186182",
-      "published_at": "2026-10-15T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -6902,10 +6523,21 @@
    "exception": "",
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
-    "today": 0,
-    "window": 15,
-    "by_class": {},
+    "today": 1,
+    "window": 10,
+    "by_class": {
+     "routine": 1
+    },
     "items": [
+     {
+      "title": "Commission statement on the protests in Albania",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2194",
+      "published_at": "2026-10-18T15:31:57+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": true,
+      "cls": "routine"
+     },
      {
       "title": "Speech by Executive Vice-President Teresa Ribera at 17th Conference of the Parties to the United Nations Convention on Biological Diversity (COP17)",
       "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2191",
@@ -6970,72 +6602,18 @@
       "cls": "routine"
      },
      {
-      "title": "Commission sets out new strategy on combating trafficking in human beings",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2177",
+      "title": "Remarks by Commissioner Brunner at an event on the occasion of the 75th anniversary of the Europa-Institut at Saarland University",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2192",
       "published_at": "2026-10-15T22:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
-      "new": false,
+      "new": true,
       "cls": "routine"
      },
      {
-      "title": "Speech by Commissioner Albuquerque (by video message) for the Malta's Financial Wellbeing Conference 2026: From Access to Trust",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2176",
-      "published_at": "2026-10-15T12:59:53+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Commission launches RAISE pledging initiative to boost AI support for researchers across Europe",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2175",
-      "published_at": "2026-10-15T12:03:07+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Commissioner Roswall's keynote address at the 12th Congress of European Farmers",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2173",
-      "published_at": "2026-10-15T10:44:35+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Rescheduling of the EU-GCC Summit",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2172",
-      "published_at": "2026-10-15T10:31:50+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Speech by Commissioner Lahbib at the International Conference on the Protection of Aid Workers",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2171",
-      "published_at": "2026-10-15T08:29:41+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Daily News 15 / 10 / 2026",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2170",
-      "published_at": "2026-10-15T08:19:59+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Steady progress on the One Europe, One Market roadmap",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/jp_26_2169",
-      "published_at": "2026-10-15T06:36:43+00:00",
+      "title": "Commission sets out new strategy on combating trafficking in human beings",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2177",
+      "published_at": "2026-10-15T22:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -7064,7 +6642,7 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 12,
+    "window": 9,
     "by_class": {},
     "items": [
      {
@@ -7140,33 +6718,6 @@
       "cls": "routine"
      },
      {
-      "title": "Press briefing - Employment, Social Policy, Health and Consumer Affairs Council (Employment and social policy) of 19 October 2026",
-      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/15/press-briefing-employment-social-policy-health-and-consumer-affairs-council-employment-and-social-policy-of-19-october-2026/",
-      "published_at": "2026-10-15T12:40:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Rescheduling of the EU-GCC Summit",
-      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/15/postponement-of-the-second-eu-gcc-summit/",
-      "published_at": "2026-10-15T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Steady progress on the 'One Europe, One Market' Roadmap",
-      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/15/steady-progress-of-the-one-europe-one-market-roadmap/",
-      "published_at": "2026-10-15T11:20:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
       "title": "Weekly schedule of President António Costa",
       "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/16/weekly-schedule-of-president-antonio-costa/",
       "published_at": "2026-10-16T20:30:00+00:00",
@@ -7198,55 +6749,9 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 5,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "150/2026 : 15 October 2026 - Judgment of the Court in Case C-521/25",
-      "url": "https://curia.europa.eu/site/jcms/p1_1000088594",
-      "published_at": "2026-10-15T08:21:59+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "151/2026 : 15 October 2026 - Opinion of the Advocate General at the Court Andrea Biondi in Case C-627/24 P",
-      "url": "https://curia.europa.eu/site/jcms/p1_1000088593",
-      "published_at": "2026-10-15T08:21:59+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "147/2026 : 15 October 2026 - Judgment of the Court in Case C-70/25",
-      "url": "https://curia.europa.eu/site/jcms/p1_1000088570",
-      "published_at": "2026-10-15T07:50:03+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "148/2026 : 15 October 2026 - Judgment of the Court in Case C-275/25",
-      "url": "https://curia.europa.eu/site/jcms/p1_1000088569",
-      "published_at": "2026-10-15T07:50:03+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "149/2026 : 15 October 2026 - Judgment of the Court in Case C-857/24",
-      "url": "https://curia.europa.eu/site/jcms/p1_1000088568",
-      "published_at": "2026-10-15T07:50:02+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -9072,7 +8577,7 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 3,
+    "window": 1,
     "by_class": {},
     "items": [
      {
@@ -9083,24 +8588,6 @@
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "watch"
-     },
-     {
-      "title": "David Roberts CV and questionnaire for the Treasury Select Committee",
-      "url": "https://www.bankofengland.co.uk/news/2026/october/david-roberts-tsc-reappointment",
-      "published_at": "2026-10-15T09:52:41+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Minutes of the SONIA Stakeholder Advisory Group - 25 September 2026",
-      "url": "https://www.bankofengland.co.uk/minutes/2026/september/sonia-stakeholder-advisory-group-25-september-2026",
-      "published_at": "2026-10-15T08:27:59+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "noise"
      }
     ]
    }
@@ -9302,19 +8789,9 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Forecasting oil prices: What works best and when",
-      "url": "https://www.bankofcanada.ca/2026/10/sparks-at-bank-article-2026-24/",
-      "published_at": "2026-10-15T10:30:44+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -9368,18 +8845,18 @@
     "by_class": {},
     "items": [
      {
-      "title": "Media roundtable with Governor Macklem",
-      "url": "https://www.bankofcanada.ca/2026/10/media-roundtable-governor-macklem-2026-10-17/",
-      "published_at": "2026-10-17T09:00:36+00:00",
+      "title": "The Bank of Canada releases the third quarter issues of the Business Outlook Survey and the Canadian Survey of Consumer Expectations",
+      "url": "https://www.bankofcanada.ca/2026/10/the-bank-of-canada-releases-the-third-quarter-issues-of-the-business-outlook-survey-and-the-canadian-survey-of-consumer-expectations/",
+      "published_at": "2026-10-19T11:00:48+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "watch"
      },
      {
-      "title": "The Bank of Canada releases the third quarter issues of the Business Outlook Survey and the Canadian Survey of Consumer Expectations",
-      "url": "https://www.bankofcanada.ca/2026/10/the-bank-of-canada-releases-the-third-quarter-issues-of-the-business-outlook-survey-and-the-canadian-survey-of-consumer-expectations/",
-      "published_at": "2026-10-16T11:00:48+00:00",
+      "title": "Media roundtable with Governor Macklem",
+      "url": "https://www.bankofcanada.ca/2026/10/media-roundtable-governor-macklem-2026-10-17/",
+      "published_at": "2026-10-17T09:00:36+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -9511,18 +8988,18 @@
     "by_class": {},
     "items": [
      {
-      "title": "Media roundtable with Governor Macklem",
-      "url": "https://www.bankofcanada.ca/2026/10/media-roundtable-governor-macklem-2026-10-17/",
-      "published_at": "2026-10-17T09:00:36+00:00",
+      "title": "The Bank of Canada releases the third quarter issues of the Business Outlook Survey and the Canadian Survey of Consumer Expectations",
+      "url": "https://www.bankofcanada.ca/2026/10/the-bank-of-canada-releases-the-third-quarter-issues-of-the-business-outlook-survey-and-the-canadian-survey-of-consumer-expectations/",
+      "published_at": "2026-10-19T11:00:48+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "watch"
      },
      {
-      "title": "The Bank of Canada releases the third quarter issues of the Business Outlook Survey and the Canadian Survey of Consumer Expectations",
-      "url": "https://www.bankofcanada.ca/2026/10/the-bank-of-canada-releases-the-third-quarter-issues-of-the-business-outlook-survey-and-the-canadian-survey-of-consumer-expectations/",
-      "published_at": "2026-10-16T11:00:48+00:00",
+      "title": "Media roundtable with Governor Macklem",
+      "url": "https://www.bankofcanada.ca/2026/10/media-roundtable-governor-macklem-2026-10-17/",
+      "published_at": "2026-10-17T09:00:36+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -10026,7 +9503,7 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 11,
+    "window": 10,
     "by_class": {},
     "items": [
      {
@@ -10118,15 +9595,6 @@
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "watch"
-     },
-     {
-      "title": "Forecasting oil prices: What works best and when",
-      "url": "https://www.bankofcanada.ca/2026/10/sparks-at-bank-article-2026-24/",
-      "published_at": "2026-10-15T10:30:44+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
      }
     ]
    }
@@ -10151,19 +9619,9 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Forecasting oil prices: What works best and when",
-      "url": "https://www.bankofcanada.ca/2026/10/sparks-at-bank-article-2026-24/",
-      "published_at": "2026-10-15T10:30:44+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -10755,19 +10213,9 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Upcoming speaking engagements for October 2026 - Reserve Bank of New Zealand",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPa0hpYWpGSDgtRmpFbTJJRjRaUVUtaXNKVEluNVdpY2F2amRnRGhIQzFBYl8wMEhydE9yazVGSGw3b3M0UTk3X1Q0RWJQSjZLejB3dDdxOVgwZmNqMnJkc3YxQlg5QUpxMXplYnpaeWFGOWpNcTJoUG5HN3JzbHNKRHc3ZWJfVUFzVGoyOVk5MV9nRmNacm9VMnk5S2FNQ2c",
-      "published_at": "2026-10-15T07:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": true,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -11581,19 +11029,9 @@
    "checked_at": "2026-10-17T13:03:20.405263+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "2026-10-15 - Petra Tschudin: Current economic developments and the SNB's monetary policy",
-      "url": "https://www.snb.ch/en/publications/communication/speeches/2026/ref_20261015_gpe",
-      "published_at": "2026-10-15T10:30:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -12081,45 +11519,92 @@
   }
  ],
  "parsed_today": {
-  "count": 0,
-  "by_source": {},
-  "by_class": {},
-  "items": []
- },
- "new_today": {
-  "count": 3,
+  "count": 5,
   "by_source": {
-   "us-fda-2cdcdcca63": 1,
-   "us-fsis-85c9542fd5": 1,
-   "nz-rbnz-gnews": 1
+   "us-fda-5696b24295": 4,
+   "eu-commission-07d4f58ccf": 1
   },
   "by_class": {
-   "watch": 3
+   "watch": 4,
+   "routine": 1
+  },
+  "items": [
+   {
+    "title": "Navigating the FDA Bayesian Draft Guidance: Design, Analysis, and Review Considerations - 10/14/2026",
+    "url": "http://www.fda.gov/drugs/news-events-human-drugs/navigating-fda-bayesian-draft-guidance-design-analysis-and-review-considerations-10142026",
+    "published_at": "2026-10-18T12:49:24+00:00",
+    "document_type": "official_announcement",
+    "stage": "requires_semantic_review",
+    "new": false,
+    "cls": "watch",
+    "source": "us-fda-5696b24295"
+   },
+   {
+    "title": "GDUFA Paid Facilities List",
+    "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list",
+    "published_at": "2026-10-18T12:45:14+00:00",
+    "document_type": "official_announcement",
+    "stage": "requires_semantic_review",
+    "new": false,
+    "cls": "watch",
+    "source": "us-fda-5696b24295"
+   },
+   {
+    "title": "What You Should Know about Eye Drops",
+    "url": "http://www.fda.gov/drugs/buying-using-medicine-safely/what-you-should-know-about-eye-drops",
+    "published_at": "2026-10-18T12:31:47+00:00",
+    "document_type": "official_announcement",
+    "stage": "requires_semantic_review",
+    "new": false,
+    "cls": "watch",
+    "source": "us-fda-5696b24295"
+   },
+   {
+    "title": "Counterfeit Versions of Eye Drops Found in Several States",
+    "url": "http://www.fda.gov/drugs/counterfeit-medicine/counterfeit-versions-eye-drops-found-several-states",
+    "published_at": "2026-10-18T12:16:13+00:00",
+    "document_type": "official_announcement",
+    "stage": "requires_semantic_review",
+    "new": false,
+    "cls": "watch",
+    "source": "us-fda-5696b24295"
+   },
+   {
+    "title": "Commission statement on the protests in Albania",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2194",
+    "published_at": "2026-10-18T15:31:57+00:00",
+    "document_type": "official_announcement",
+    "stage": "requires_semantic_review",
+    "new": true,
+    "cls": "routine",
+    "source": "eu-commission-07d4f58ccf"
+   }
+  ]
+ },
+ "new_today": {
+  "count": 2,
+  "by_source": {
+   "eu-commission-07d4f58ccf": 2
+  },
+  "by_class": {
+   "routine": 2
   },
   "headlines": [
    {
-    "title": "Kayem Foods Inc. Recalls Meat and Poultry Products Due to Possible Temperature Abuse",
-    "url": "http://www.fsis.usda.gov/recalls-alerts/kayem-foods-inc--recalls-meat-and-poultry-products-due-possible-temperature-abuse",
-    "published_at": "2026-10-17T12:00:00+00:00",
-    "source": "us-fsis-85c9542fd5",
-    "issuer": "USDA Food Safety and Inspection Service — Recalls",
-    "cls": "watch"
+    "title": "Commission statement on the protests in Albania",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2194",
+    "published_at": "2026-10-18T15:31:57+00:00",
+    "source": "eu-commission-07d4f58ccf",
+    "issuer": "European Commission press and decisions",
+    "cls": "routine"
    },
    {
-    "title": "Lidl US Recalls Gelatelli Coffee & Vanilla Gelato Due to Possible Health Risk",
-    "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/lidl-us-recalls-gelatelli-coffee-vanilla-gelato-due-possible-health-risk",
-    "published_at": "2026-10-16T04:00:00+00:00",
-    "source": "us-fda-2cdcdcca63",
-    "issuer": "Food and Drug Administration — Food Safety Recalls",
-    "cls": "watch"
-   },
-   {
-    "title": "Upcoming speaking engagements for October 2026 - Reserve Bank of New Zealand",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPa0hpYWpGSDgtRmpFbTJJRjRaUVUtaXNKVEluNVdpY2F2amRnRGhIQzFBYl8wMEhydE9yazVGSGw3b3M0UTk3X1Q0RWJQSjZLejB3dDdxOVgwZmNqMnJkc3YxQlg5QUpxMXplYnpaeWFGOWpNcTJoUG5HN3JzbHNKRHc3ZWJfVUFzVGoyOVk5MV9nRmNacm9VMnk5S2FNQ2c",
-    "published_at": "2026-10-15T07:00:00+00:00",
-    "source": "nz-rbnz-gnews",
-    "issuer": "Reserve Bank of New Zealand (official-site news mirror)",
-    "cls": "watch"
+    "title": "Remarks by Commissioner Brunner at an event on the occasion of the 75th anniversary of the Europa-Institut at Saarland University",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2192",
+    "published_at": "2026-10-15T22:00:00+00:00",
+    "source": "eu-commission-07d4f58ccf",
+    "issuer": "European Commission press and decisions",
+    "cls": "routine"
    }
   ]
  },

@@ -1,1 +1,243 @@
-[]
+[
+  {
+    "title": "GDUFA Paid Facilities List",
+    "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list",
+    "native_id": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list",
+    "published_at": "2026-10-18T12:45:14+00:00",
+    "published_raw": "Sun, 18 Oct 2026 08:45:14 EDT",
+    "summary": "This list contains GDUFA facility payments received by the Agency. Data are extract from the User Fee System and GDUFA Facility User Fee Coversheets. The following table explains the terms used in the list:",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1388,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-18T16:34:02.375917+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Navigating the FDA Bayesian Draft Guidance: Design, Analysis, and Review Considerations - 10/14/2026",
+    "url": "http://www.fda.gov/drugs/news-events-human-drugs/navigating-fda-bayesian-draft-guidance-design-analysis-and-review-considerations-10142026",
+    "native_id": "http://www.fda.gov/drugs/news-events-human-drugs/navigating-fda-bayesian-draft-guidance-design-analysis-and-review-considerations-10142026",
+    "published_at": "2026-10-18T12:49:24+00:00",
+    "published_raw": "Sun, 18 Oct 2026 08:49:24 EDT",
+    "summary": "Clinical trial, regulatory science and regulatory affairs professionals working on clinical trials and studies where Bayesian approaches may be used or potentially beneficial should attend this event.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 3278,
+    "first_seen": "2026-10-16T05:53:15.995133+00:00",
+    "last_seen": "2026-10-18T16:34:02.375917+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Que no lo dejen colgado esta temporada festiva con regalos inseguros: Compre de fuentes confiables",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Dont-Be-Left-Out-in-the-Cold-This-Holiday-Season-with-Unsafe-Presents-Buy-from-Trusted-Sources",
+    "native_id": "https://www.cpsc.gov/_6d039050-7fba-4cdf-8361-f7db2f5e3963",
+    "published_at": null,
+    "published_raw": "Tue, 12/09/2025 - 12:00",
+    "summary": "La CPSC les recuerda a los consumidores comprar de manera segura esta temporada festiva",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3537,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-18T16:34:02.375917+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "Ponga la seguridad en el menú para unas felices fiestas: la Comisión de Seguridad de Productos del Consumidor ofrece consejos para cocinar con seguridad",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
+    "native_id": "https://www.cpsc.gov/_59de4207-4ace-44ca-ace0-3cde0cfb8ddb",
+    "published_at": null,
+    "published_raw": "Wed, 11/19/2025 - 12:00",
+    "summary": "WASHINGTON, D.C. – A medida que las familias de todo Estados Unidos se preparan para reunirse en Acción de Gracias, la Comisión de Seguridad de Productos del Consumidor de Estados Unidos (CPSC, por sus siglas en inglés) emite un recordatorio urgente: la",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3538,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-18T16:34:02.375917+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "La CPSC aprueba nueva norma federal de seguridad para las bolas de gel con el fin de reducir el riesgo de lesiones y muerte niños pequeños",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Water-Beads-to-Reduce-the-Risk-of-Injury-and-Death-to-Young-Children",
+    "native_id": "https://www.cpsc.gov/_51cc46a0-5dc1-4f70-8cc1-c6b5b0f0a782",
+    "published_at": null,
+    "published_raw": "Thu, 08/21/2025 - 12:00",
+    "summary": "WASHINGTON D. C. – La Comisión de Seguridad de Productos del Consumidor (CPSC, por sus iniciales en inglés) aprobó una norma de seguridad de productos de consumo para juguetes tipo bolas de gel, lo que refleja el compromiso constante de la entidad con la",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3539,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-18T16:34:02.375917+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "CPSC Approves New Federal Safety Standard for Neck Floats to Prevent Infant Deaths and Serious Injuries",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Neck-Floats-to-Prevent-Infant-Deaths-and-Serious-Injuries",
+    "native_id": "https://www.cpsc.gov/_4014aab3-f30e-41aa-ad48-dd7587119b4c",
+    "published_at": null,
+    "published_raw": "Thu, 08/21/2025 - 12:00",
+    "summary": "The U.S. Consumer Product Safety Commission (CPSC) has approved a consumer product safety standard to improve the safety of neck floats, an aquatic toy intended for use by children up to and including four years of age.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3540,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-18T16:34:02.375917+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "CPSC Withdraws Rules That Are Outdated, Fail to Advance Safety; New Leadership Focuses on Hazards That Pose Real Risks",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2025/CPSC-Withdraws-Rules-That-Are-Outdated-Fail-to-Advance-Safety-New-Leadership-Focuses-on-Hazards-That-Pose-Real-Risks",
+    "native_id": "https://www.cpsc.gov/_ff913f8e-db56-4208-ba2f-a2582d4d76f7",
+    "published_at": null,
+    "published_raw": "Wed, 08/20/2025 - 12:00",
+    "summary": "The U.S. Consumer Product Safety Commission (CPSC) today announced it will withdraw several existing and pending rulemakings that no longer align with agency priorities, and which fail to advance safety.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3541,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-18T16:34:02.375917+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "What You Should Know about Eye Drops",
+    "url": "http://www.fda.gov/drugs/buying-using-medicine-safely/what-you-should-know-about-eye-drops",
+    "native_id": "http://www.fda.gov/drugs/buying-using-medicine-safely/what-you-should-know-about-eye-drops",
+    "published_at": "2026-10-18T12:31:47+00:00",
+    "published_raw": "Sun, 18 Oct 2026 08:31:47 EDT",
+    "summary": "Ophthalmic drug products, such as eye drops, pose a heightened risk of harm to users because drugs applied to the eyes bypass some of the body’s natural defenses. Any drug used in the eyes must be sterile to reduce the risk of infection. Eye drops are available by prescription or sold as OTCs.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 3791,
+    "first_seen": "2026-10-16T16:03:14.310875+00:00",
+    "last_seen": "2026-10-18T16:34:02.375917+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Counterfeit Versions of Eye Drops Found in Several States",
+    "url": "http://www.fda.gov/drugs/counterfeit-medicine/counterfeit-versions-eye-drops-found-several-states",
+    "native_id": "http://www.fda.gov/drugs/counterfeit-medicine/counterfeit-versions-eye-drops-found-several-states",
+    "published_at": "2026-10-18T12:16:13+00:00",
+    "published_raw": "Sun, 18 Oct 2026 08:16:13 EDT",
+    "summary": "Counterfeit versions of over-the-counter eye drops have been found in Florida and Georgia in stores serving primarily Spanish-speaking customers. These products also may be in Louisiana, Mississippi, North Carolina and potentially other states.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 3793,
+    "first_seen": "2026-10-16T16:03:14.310875+00:00",
+    "last_seen": "2026-10-18T16:34:02.375917+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "The Bank of Canada releases the third quarter issues of the Business Outlook Survey and the Canadian Survey of Consumer Expectations",
+    "url": "https://www.bankofcanada.ca/2026/10/the-bank-of-canada-releases-the-third-quarter-issues-of-the-business-outlook-survey-and-the-canadian-survey-of-consumer-expectations/",
+    "native_id": "https://www.bankofcanada.ca/2026/10/the-bank-of-canada-releases-the-third-quarter-issues-of-the-business-outlook-survey-and-the-canadian-survey-of-consumer-expectations/",
+    "published_at": "2026-10-19T11:00:48+00:00",
+    "published_raw": "2026-10-19T11:00:48+00:00",
+    "summary": "On Monday, October 19, 2026, the Bank of Canada will release the third quarter issues of the Business Outlook Survey and the Canadian Survey of Consumer Expectations.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Bank of Canada — Press",
+      "jurisdiction": "CA",
+      "family": "monetary_operations"
+    },
+    "primary_source_id": "ca-boc-30d6d14378",
+    "n": 3857,
+    "first_seen": "2026-10-16T16:03:14.310875+00:00",
+    "last_seen": "2026-10-18T16:34:02.375917+00:00",
+    "source_ids": [
+      "ca-boc-30d6d14378",
+      "ca-boc-a4af151f89"
+    ]
+  }
+]
