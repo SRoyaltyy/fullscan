@@ -342,7 +342,7 @@ jobs:
     needs: gate
     if: ${{ needs.gate.outputs.go == 'yes' }}
     runs-on: ${{ (github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
-    timeout-minutes: 7
+    timeout-minutes: 25
     env:
       HOME: ${{ (github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
       FULLSCAN_HOME: ${{ (github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
@@ -356,7 +356,8 @@ jobs:
       FULLSCAN_PUSH_TOKEN: ${{ secrets.FULLSCAN_PUSH_TOKEN }}
     steps:
       # Reuse the runner's warm workspace (clean: false) so only the delta
-      # is fetched; its own 5 min cap. 10-16 06:49: clean checkout of the
+      # is fetched. 2026-10-18: cap 5 -> 20 min (job 7 -> 25); a full re-fetch
+      # took 8m53s on the 10-18 canary. ecs_warmup.yml refreshes it ~02:30 ET. 10-16 06:49: clean checkout of the
       # 6.9 GB tree overran the old 2 min job cap. No sparse on ECS.
       - name: Clear stale git index.lock (shared ECS workspace)
         shell: bash
@@ -370,8 +371,29 @@ jobs:
           if [ "$(git -C "$W" config --get core.sparseCheckout 2>/dev/null)" = "true" ]; then
             echo "::warning::shared ECS workspace is sparse; this checkout re-materializes the full tree"
           fi
+          # 2026-10-18: keep the warm workspace warm. safe_git_push.sh pins origin
+          # to a token URL; checkout then sees a "different" repo, deletes the
+          # 6.9 GB workspace and re-clones (10-16 22:40, 10-17 04:28/05:24: 8-13
+          # min). A bare-SHA checkout also leaves no origin/main, so the next
+          # depth-1 fetch has no common commit and re-downloads the whole tree
+          # (10-18 canary 8m53s). Plain URL + an origin/main hint keep it a delta.
+          if [ -d "$W/.git" ]; then
+            GH_TMP_HOME="$(mktemp -d)"
+            printf '[safe]\n\tdirectory = %s\n' "$(cd "$W" && pwd)" > "$GH_TMP_HOME/.gitconfig"
+            g() { HOME="$GH_TMP_HOME" git -C "$W" "$@"; }
+            U="$(g config --get remote.origin.url 2>/dev/null || true)"
+            if [ -n "$U" ] && [ "$U" != "https://github.com/${GITHUB_REPOSITORY}" ]; then
+              echo "origin URL was not the plain checkout URL; resetting so checkout keeps the warm tree"
+              g remote set-url origin "https://github.com/${GITHUB_REPOSITORY}" || echo "::warning::could not reset origin URL"
+            fi
+            if ! g rev-parse -q --verify refs/remotes/origin/main >/dev/null 2>&1; then
+              echo "no origin/main ref; pointing it at HEAD so the shallow fetch negotiates a delta"
+              g update-ref refs/remotes/origin/main HEAD 2>/dev/null || echo "::warning::could not seed origin/main"
+            fi
+            rm -rf "$GH_TMP_HOME"
+          fi
       - uses: actions/checkout@v4
-        timeout-minutes: 5
+        timeout-minutes: 20
         with:
           ref: main
           fetch-depth: 1
@@ -442,6 +464,27 @@ jobs:
           done
           if [ "$(git -C "$W" config --get core.sparseCheckout 2>/dev/null)" = "true" ]; then
             echo "::warning::shared ECS workspace is sparse; this checkout re-materializes the full tree"
+          fi
+          # 2026-10-18: keep the warm workspace warm. safe_git_push.sh pins origin
+          # to a token URL; checkout then sees a "different" repo, deletes the
+          # 6.9 GB workspace and re-clones (10-16 22:40, 10-17 04:28/05:24: 8-13
+          # min). A bare-SHA checkout also leaves no origin/main, so the next
+          # depth-1 fetch has no common commit and re-downloads the whole tree
+          # (10-18 canary 8m53s). Plain URL + an origin/main hint keep it a delta.
+          if [ -d "$W/.git" ]; then
+            GH_TMP_HOME="$(mktemp -d)"
+            printf '[safe]\n\tdirectory = %s\n' "$(cd "$W" && pwd)" > "$GH_TMP_HOME/.gitconfig"
+            g() { HOME="$GH_TMP_HOME" git -C "$W" "$@"; }
+            U="$(g config --get remote.origin.url 2>/dev/null || true)"
+            if [ -n "$U" ] && [ "$U" != "https://github.com/${GITHUB_REPOSITORY}" ]; then
+              echo "origin URL was not the plain checkout URL; resetting so checkout keeps the warm tree"
+              g remote set-url origin "https://github.com/${GITHUB_REPOSITORY}" || echo "::warning::could not reset origin URL"
+            fi
+            if ! g rev-parse -q --verify refs/remotes/origin/main >/dev/null 2>&1; then
+              echo "no origin/main ref; pointing it at HEAD so the shallow fetch negotiates a delta"
+              g update-ref refs/remotes/origin/main HEAD 2>/dev/null || echo "::warning::could not seed origin/main"
+            fi
+            rm -rf "$GH_TMP_HOME"
           fi
       - uses: actions/checkout@v4
         if: env.skip != 'yes'
