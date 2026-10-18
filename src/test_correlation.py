@@ -93,6 +93,15 @@ class CorrelationTests(unittest.TestCase):
         self.assertIn("LMT", passed)
         self.assertNotIn("AAL", passed)
 
+    def test_plan_to_launch_a_venue_is_not_a_rocket_launch(self):
+        doc = prepare(
+            "OKX and ICE plan to launch a trading venue for tokenized stocks. "
+            "The crypto exchange will trade those stocks around the clock."
+        )
+        self.assertNotIn("launch", doc.terms)
+        noun = prepare("Commercial launches and reentries doubled. Further launches and reentries are scheduled from the spaceport.")
+        self.assertIn("launch", noun.terms)
+
     def test_names_and_series_are_not_stemmed(self):
         doc = prepare("Lockheed Martin launches spacecraft. The world series is not a launch.")
         self.assertIn("lockheed", doc.terms)

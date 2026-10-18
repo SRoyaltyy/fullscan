@@ -105,6 +105,12 @@ def _keep_token(token: str) -> bool:
 
 _SECTION = re.compile(r"(?i)\bsec(?:tion)?\.?\s+\d+[a-z]?\b")
 _PUBLISHER = re.compile(r"\s+[-|\u2013|\u2014]\s+\S.{0,50}$")
+# "plans to launch a venue" is a verb. "1,000 launches" is a noun and is kept.
+_VERB_USE = re.compile(
+    r"\b(?:plan(?:s|ned)?|agree(?:s|d)?|expect(?:s|ed)?|intend(?:s|ed)?|"
+    r"seek(?:s|ing)?|propose(?:s|d)?|will|would)\s+(?:to\s+)?([a-z]{3,})",
+    re.I,
+)
 
 
 def clean_surface(text: str) -> str:
@@ -126,6 +132,9 @@ class Prepared:
     absorbed: list[str]
     tokens: int
     heading: list[str] = field(default_factory=list)
+    # Content words that share a sentence. An industry vote from one word
+    # needs another word in the same sentence from that same industry.
+    sentences: list[list[str]] = field(default_factory=list)
 
     @property
     def known(self) -> bool:
@@ -146,20 +155,40 @@ def _heading_lines(text: str) -> set[str]:
     return chosen
 
 
+def _verb_tokens(text: str) -> set[str]:
+    """Surface words used as verbs, such as launch in ``plans to launch``."""
+    return {match.group(1).lower() for match in _VERB_USE.finditer(clean_surface(text).lower())}
+
+
 def prepare(text: str) -> Prepared:
     """Bundles, absorption, and title removal for one document."""
     heading = _heading_lines(text)
+    verbs = _verb_tokens(text)
     # None is a break, so a bundle cannot form across a stopword or a title.
     stream: list[tuple[str, bool] | None] = []
+    sentences: list[list[str]] = []
+    current: list[str] = []
     for line in (text or "").splitlines() or [text or ""]:
         is_heading = line.strip() in heading
         cleaned = clean_surface(line).lower()
-        for raw in _WORD.findall(cleaned):
-            token = inflection(raw)
-            if _keep_token(token):
-                stream.append((token, is_heading))
-            else:
-                stream.append(None)
+        for piece in _SENTENCE.split(cleaned):
+            if current:
+                sentences.append(current)
+                current = []
+            for raw in _WORD.findall(piece):
+                token = inflection(raw)
+                # Drop the verb in "plan to launch", not the noun in "1,000 launches".
+                if raw in verbs:
+                    stream.append(None)
+                    continue
+                if _keep_token(token):
+                    stream.append((token, is_heading))
+                    current.append(token)
+                else:
+                    stream.append(None)
+        if current:
+            sentences.append(current)
+            current = []
 
     uni: Counter[str] = Counter()
     bi: Counter[tuple[str, str]] = Counter()
@@ -210,6 +239,7 @@ def prepare(text: str) -> Prepared:
         absorbed=sorted(absorbed_set),
         tokens=kept,
         heading=sorted(heading)[:8],
+        sentences=[sentence for sentence in sentences if sentence],
     )
 
 
@@ -354,13 +384,35 @@ def bm25(query: dict[str, float], stock: Stock, board: Board) -> float:
     return score
 
 
-def _industry_scores(query: dict[str, float], board: Board) -> dict[str, float]:
+def _industry_confirmed(term: str, industry: str, sentences: list[list[str]], board: Board) -> bool:
+    """A bare word votes for an industry only when the same sentence has another word from it.
+
+    ``launch`` beside ``spacecraft`` votes aerospace. ``launch`` beside
+    ``trading venue`` does not.
+    """
+    if " " in term:
+        return True
+    for sentence in sentences:
+        if term not in sentence:
+            continue
+        for other in sentence:
+            if other != term and board.industry_of_term.get(other) == industry:
+                return True
+    return False
+
+
+def _industry_scores(query: dict[str, float], board: Board, sentences: list[list[str]]) -> dict[str, float]:
     scores: Counter[str] = Counter()
     for term, importance in query.items():
         industry = board.industry_of_term.get(term)
         if not industry:
             continue
-        scores[industry] += importance * board.weight.get(term, 0.15)
+        circle = board.weight.get(term) or 0.0
+        if circle < 0.35:
+            continue
+        if not _industry_confirmed(term, industry, sentences, board):
+            continue
+        scores[industry] += importance * circle
     return dict(scores)
 
 
@@ -379,7 +431,8 @@ def _mean_std(values: list[float]) -> tuple[float, float]:
 
 
 def name_hit(stock: Stock, text: str) -> bool:
-    if re.search(rf"\b{re.escape(stock.ticker)}\b", text or ""):
+    # One-letter tickers match initials inside "U.S." and are not names.
+    if len(stock.ticker) >= 2 and re.search(rf"\b{re.escape(stock.ticker)}\b", text or ""):
         return True
     if stock.alias and re.search(rf"\b{re.escape(stock.alias)}\b", (text or "").lower()):
         return True
@@ -433,7 +486,7 @@ def link_articles(
                 "stocks": [],
             })
             continue
-        ind_scores = _industry_scores(query, board)
+        ind_scores = _industry_scores(query, board, doc.sentences)
         every_industry = {stock.industry for stock in board.stocks}
         ind_mean, ind_std = _mean_std([ind_scores.get(name, 0.0) for name in every_industry])
         industries = []
@@ -491,7 +544,25 @@ def link_articles(
             row["desc_z"] = round(_z(row["desc_score"], desc_mean, desc_std), 3)
             row["desc_pass"] = row["desc_z"] >= z_min and bool(row["terms"])
             row["pass"] = row["desc_pass"] and row["ind_pass"]
-        stocks_out.sort(key=lambda row: (-int(row["pass"]), -row["desc_z"], -row["desc_score"]))
+        seen = {row["ticker"] for row in stocks_out}
+        for stock in board.stocks:
+            if stock.ticker in seen or not name_hit(stock, text):
+                continue
+            stocks_out.append({
+                "ticker": stock.ticker,
+                "name": stock.name,
+                "industry": stock.industry,
+                "sector": stock.sector,
+                "desc_score": 0.0,
+                "bm25": 0.0,
+                "terms": [],
+                "name_hit": True,
+                "ind_pass": stock.industry in passing_industries,
+                "desc_z": 0.0,
+                "desc_pass": False,
+                "pass": False,
+            })
+        stocks_out.sort(key=lambda row: (-int(row["pass"]), -int(row["name_hit"]), -row["desc_z"], -row["desc_score"]))
         raw.append({
             "id": article.get("id"),
             "title": article.get("title") or "",
@@ -501,7 +572,7 @@ def link_articles(
             "bundles": doc.bundles[:12],
             "absorbed": doc.absorbed[:12],
             "industries": [row for row in industries if row["pass"] or row["z"] > 0][:8],
-            "stocks": [row for row in stocks_out if row["pass"] or row["desc_z"] >= z_min][:12],
+            "stocks": [row for row in stocks_out if row["pass"] or row["name_hit"] or row["desc_z"] >= z_min][:24],
             "_sparse": sparse,
             "_ind": {row["industry"]: row["score"] for row in industries},
         })
