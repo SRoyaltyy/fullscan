@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T12:46:55.451155-04:00",
+  "generated_at": "2026-10-19T12:47:04.917792-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -802,10 +802,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2250114,
-          "said": "203 rows",
+          "size": 2251219,
+          "said": "212 rows",
           "bullets": [
-            "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, WAY"
+            "FTK, CMBT, TEN, INSW, PBR-A, EXE, PBR, DVN"
           ]
         },
         {
@@ -883,9 +883,9 @@
           "bullets": []
         }
       ],
-      "said": "203 rows",
+      "said": "212 rows",
       "bullets": [
-        "HALO, ONC, LLY, HRMY, ETON"
+        "FTK, CMBT, TEN, INSW, PBR-A"
       ]
     },
     {
@@ -2415,6 +2415,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-19\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-19T12:47:03.931273-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-19_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2251219,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FTK, CMBT, TEN, INSW, PBR-A"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FTK, CMBT, TEN, INSW, PBR-A"
     }
   ],
   "href": {
@@ -2436,6 +2454,22 @@
       "path": "data/day_board/2026-10-19.json",
       "at": "2026-10-19T12:46:56-04:00",
       "commit_msg": "auto: land weather [2026-10-19]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39287142647",
+      "manifest": "research/input_freeze/2026-10-19/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-19.json",
+      "at": "2026-10-19T12:47:05-04:00",
+      "commit_msg": "auto: land join [2026-10-19]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39287142647",
+      "manifest": "research/input_freeze/2026-10-19/manifest.json"
+    },
+    {
+      "path": "data/join/2026-10-19_ranked.csv",
+      "at": "2026-10-19T12:47:05-04:00",
+      "commit_msg": "auto: land join [2026-10-19]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "39287142647",
       "manifest": "research/input_freeze/2026-10-19/manifest.json"
