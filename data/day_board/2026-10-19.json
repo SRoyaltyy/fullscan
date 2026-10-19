@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T16:27:50.770428-04:00",
+  "generated_at": "2026-10-19T16:41:42.352901-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -828,7 +828,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=210",
-          "size": 1525493,
+          "size": 1525577,
           "said": "1d BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC \u00b7 0.49724999999999997",
           "bullets": []
         },
@@ -839,10 +839,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 84093,
+          "size": 84134,
           "said": "Stock book \u2014 2026-10-19",
           "bullets": [
-            "_Generated 2026-10-19T07:32:03.698206-04:00_",
+            "_Generated 2026-10-19T16:41:38.870575-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -906,7 +906,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=210",
-          "size": 1525493,
+          "size": 1525577,
           "said": "1d BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC \u00b7 0.49724999999999997",
           "bullets": []
         },
@@ -4161,6 +4161,30 @@
       "commit_msg": "auto: land finviz_market_digest_close [2026-10-19]",
       "workflow": "Finviz homepage market digest",
       "run_id": "39319018061",
+      "manifest": "research/input_freeze/2026-10-19/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-19_stock_book.md",
+      "at": "2026-10-19T16:42:10-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-19",
+      "workflow": "Publish strategy tickets",
+      "run_id": "39319540069",
+      "manifest": "research/input_freeze/2026-10-19/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-19_input_health.json",
+      "at": "2026-10-19T16:42:10-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-19",
+      "workflow": "Publish strategy tickets",
+      "run_id": "39319540069",
+      "manifest": "research/input_freeze/2026-10-19/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-19_stock_book.json",
+      "at": "2026-10-19T16:42:10-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-19",
+      "workflow": "Publish strategy tickets",
+      "run_id": "39319540069",
       "manifest": "research/input_freeze/2026-10-19/manifest.json"
     }
   ]
