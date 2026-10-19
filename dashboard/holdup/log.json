@@ -5043,5 +5043,142 @@
       "status": "BEFORE_1330"
     },
     "sha256": "cbbb76bcd75c1703334cd4fa03e08d30a4557e5367638dd8b8a12706a440ce3c"
+  },
+  {
+    "buys": [
+      {
+        "fee": 2.2,
+        "fill": 30.179899,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 70888,
+        "rank": 1,
+        "shares": 70,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "XP"
+      },
+      {
+        "fee": 18.0342,
+        "fill": 1.5,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 88325,
+        "rank": 2,
+        "shares": 1398,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "QTEX"
+      },
+      {
+        "fee": 2.122,
+        "fill": 47.82,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 26622,
+        "rank": 3,
+        "shares": 44,
+        "sources": [
+          "yday_mover"
+        ],
+        "ticker": "BSP"
+      },
+      {
+        "fee": 5.3664,
+        "fill": 5.069,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 5671,
+        "rank": 4,
+        "shares": 416,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "BYRN"
+      }
+    ],
+    "cash_primary": 14.642895371511258,
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-19",
+    "excluded_on_fill": [],
+    "holdings": [
+      {
+        "cost_primary": 2116.7223999999997,
+        "entry_date": "2026-10-19",
+        "entry_px": 47.82,
+        "last_px": 47.82,
+        "min_hold": 2,
+        "peak_px": 47.82,
+        "shares": 44,
+        "ticker": "BSP"
+      },
+      {
+        "cost_primary": 2124.61392,
+        "entry_date": "2026-10-19",
+        "entry_px": 5.069,
+        "last_px": 5.069,
+        "min_hold": 2,
+        "peak_px": 5.069,
+        "shares": 416,
+        "ticker": "BYRN"
+      },
+      {
+        "cost_primary": 2125.5191999999997,
+        "entry_date": "2026-10-19",
+        "entry_px": 1.5,
+        "last_px": 1.5,
+        "min_hold": 2,
+        "peak_px": 1.5,
+        "shares": 1398,
+        "ticker": "QTEX"
+      },
+      {
+        "cost_primary": 2125.3558946499993,
+        "entry_date": "2026-10-19",
+        "entry_px": 30.179899,
+        "last_px": 30.179899,
+        "min_hold": 2,
+        "peak_px": 30.179899,
+        "shares": 70,
+        "ticker": "XP"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "open_fill",
+    "morning_s": 2.125,
+    "open_source": "yahoo_split_adjusted_daily_open",
+    "plan_sha256": "cbbb76bcd75c1703334cd4fa03e08d30a4557e5367638dd8b8a12706a440ce3c",
+    "pnl_status": "pending",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fee": 5.9295,
+        "fill": 2.92,
+        "reason": "hold-expired",
+        "shares": 453,
+        "ticker": "FEAM"
+      },
+      {
+        "fee": 3.4856,
+        "fill": 2.86,
+        "reason": "hold-expired",
+        "shares": 266,
+        "ticker": "SHMD"
+      },
+      {
+        "fee": 13.3772,
+        "fill": 0.8986,
+        "reason": "hold-expired",
+        "shares": 1100,
+        "ticker": "SRFM"
+      },
+      {
+        "fee": 6.8383,
+        "fill": 10.58,
+        "reason": "hold-expired",
+        "shares": 520,
+        "ticker": "USDE"
+      }
+    ],
+    "sha256": "1fc55dc9b8927d5afd3ee14bdf4edf1ffb733191e4b2b1ac8c8a9caf538ec324",
+    "unfilled": []
   }
 ]
