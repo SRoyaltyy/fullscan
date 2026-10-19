@@ -41,7 +41,7 @@ RELATION_CUES = {
     'competitor': re.compile(r'\b(?:competitors?|compete\w*\s+with|competition from|unlike)\b', re.I),
     'partner': re.compile(r'\b(?:partners?|collaborat\w*|licens\w*\s+from)\b', re.I),
 }
-OWN = re.compile(r'\b(?:our|we|its|company)\b.{0,90}\b(?:develop\w*|manufactur\w*|market\w*|sell\w*|commercializ\w*|produce\w*|own\w*|launch\w*)\b', re.I)
+OWN = re.compile(r'\b(?:our|we|its|company|it)\b.{0,90}\b(?:develop\w*|manufactur\w*|market\w*|sell\w*|offer\w*|design\w*|commercializ\w*|produce\w*|own\w*|launch\w*)\b', re.I)
 PROPER = re.compile(r'\b(?:[A-Z][A-Za-z0-9-]*)(?:\s+(?:[A-Z][A-Za-z0-9-]*)){0,4}\b')
 BRAND = re.compile(r'\b(?:[A-Z][A-Za-z0-9-]+(?:\s+[A-Z][A-Z0-9-]{1,})+|[A-Z][a-z0-9]+[A-Z][A-Za-z0-9-]*|[A-Z][A-Z0-9-]{2,})\b')
 BRAND_DENY = frozenset('FDA SEC CEO CFO COO CTO GAAP US USA UK EU AI API GPU CPU NASA NYSE NASDAQ ITEM PART NOT THE AND FOR OUR INC LLC LTD CORP'.lower().split())
@@ -162,6 +162,19 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
         if initial == 'machine_data':
             continue
         for kind, heading, body in split_sections(text, initial):
+            # A short business paragraph can explain one operation across
+            # several sentences. Keep that contiguous source as a witness;
+            # never join sections, dates, or counterparty relationships.
+            if kind in ('business','update'):
+                for paragraph in re.split(r'\n\s*\n', body):
+                    sentences = _sentences(paragraph)
+                    counterparties = [(t,n) for t,n in catalog.find(paragraph) if t != ticker]
+                    if 1 < len(sentences) and len(tokens(paragraph,stop=False)) <= 100 and not (counterparties and any(rx.search(paragraph) for rx in RELATION_CUES.values())):
+                        content = profile_terms(paragraph)
+                        ix = _fact(out,'business','',paragraph,source,heading)
+                        for term in content:
+                            if len(out.evidence[term]) < 4:
+                                out.evidence[term].append(ix)
             if kind == 'subsidiary':
                 for line in body.splitlines():
                     match = re.search(r'\b([A-Z][A-Za-z0-9& .-]{1,90}?\s+(?:Corporation|Corp\.?|Inc\.?|Incorporated|LLC|Limited|Ltd\.?|GmbH|B\.V\.))\b',line)
@@ -198,7 +211,13 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
                             out.evidence[term].append(ix)
                 if kind in ('risk','financial','supplier') or re.search(r'\b(?:depend\w* on|rely\w* on|require|consume|raw materials?|input costs?|sensitive to|exposed to)\b',sentence,re.I):
                     _fact(out, 'financial_exposure' if kind == 'financial' else 'material_exposure', '', sentence, source, heading)
-                if local_kind in ('business','update') and not re.search(r'\b(?:no longer|ceased|divested|discontinued|formerly|sold our)\b',sentence,re.I) and (OWN.search(sentence) or re.search(r'\b(?:our products?|product portfolio|pipeline|marketed products?)\b', heading, re.I)):
+                if local_kind in ('business','update') and not re.search(r'\b(?:no longer|ceased|divested|discontinued|formerly|sold our)\b',sentence,re.I) and (OWN.search(sentence) or re.search(r'\b(?:our products?|product portfolio|pipeline|marketed products?)\b', heading, re.I) or re.search(r'\b(?:our|its) products?(?: and services?)? include\b',sentence,re.I)):
+                    product_list=re.search(r'\b(?:our|its) products?(?: and services?)? include\s+(.+?)(?:\.|$)',sentence,re.I)
+                    if product_list:
+                        for item in re.split(r',|\band\b',product_list.group(1)):
+                            value=re.sub(r'\s+products?$','',item.strip())
+                            if re.fullmatch(r'(?:[a-z]?[A-Z][A-Za-z0-9-]*)(?:\s+[A-Z][A-Za-z0-9-]*){0,2}',value):
+                                _fact(out,'owned_product',value,sentence,source,heading)
                     for m in BRAND.finditer(sentence):
                         value = m.group().strip()
                         if len(value) < 3 or value.lower() in BRAND_DENY or value.lower() in (out.name.lower(), ticker.lower()):
@@ -267,7 +286,7 @@ def index_profiles(profiles: dict[str, Profile]) -> EvidenceBoard:
     exposures = defaultdict(lambda: defaultdict(list))
     dependencies = defaultdict(list)
     relation_terms = {}
-    for ticker, p in profiles.items():
+    for ticker, p in sorted(profiles.items()):
         from .correlation import _alias
         legal_words=_alias(p.name).split()
         corporate_alias=re.compile(r'\b'+r'[\W_]+'.join(map(re.escape,legal_words))+r'\s*(?:(?:Inc|Corp|Corporation|Ltd|Limited|Co)\.?\s*)?\(\s*["\u201c]([^"\u201d\n]{3,60})["\u201d]',re.I) if legal_words else None
@@ -323,6 +342,6 @@ def index_profiles(profiles: dict[str, Profile]) -> EvidenceBoard:
             and (count / len(members)) > ((df[term]-count) / max(n-len(members),1)) + 0.05
             and (count >= 2 or len(members) <= 3)
         }
-    fingerprint = hashlib.sha256('\n'.join(t+':'+','.join(s['sha256'] for s in p.sources) for t,p in profiles.items()).encode()).hexdigest()
+    fingerprint = hashlib.sha256('\n'.join(t+':'+','.join(s['sha256'] for s in p.sources) for t,p in sorted(profiles.items())).encode()).hexdigest()
     return EvidenceBoard(profiles,dict(postings),df,characteristic,dict(industries),dict(ids),dict(scope),fingerprint,
                          dict(exposures),dict(dependencies))

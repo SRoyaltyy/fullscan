@@ -1,6 +1,6 @@
 # Deterministic relevance coverage matrix
 
-This is a versioned failure model, not a claim that every possible sentence or world fact is covered. Runtime decisions use no LLM. A passing test establishes its stated behavior, not global accuracy. Partial geographic inventories and historical ownership state remain explicit limitations.
+Version CM-2. This is a failure model, not a claim that every sentence or world fact is covered. Runtime decisions use no LLM. Tests establish their stated behavior. Global geography, historical ownership and general grammar remain partial.
 
 | Category | Evidence required | Decision rule | Positive example | Confusing negative | Missing evidence | Coverage |
 |---|---|---|---|---|---|---|
@@ -17,7 +17,7 @@ This is a versioned failure model, not a claim that every possible sentence or w
 |VERB_NOUN|Local passage context|A verb occurrence cannot delete a noun elsewhere|plan to launch a website; rocket launch capacity expands|launch alone implies aerospace|Require corroborating business terms|implemented|
 |PUBLISHER_ATTRIBUTION|Publisher catalog and raw case-preserving identities|Publisher tokens cannot create name hits|$POST raises earnings guidance|Washington Post reports local crime|No entity link|implemented|
 |ENTITY_COLLISION|Company identity plus financial/business context|Do not equate a foreign exchange symbol or agency with a US company|NYSE:ICE earnings|ICE arrests; Kosy (KOS) in Vietnam|Inspection or no name hit|implemented_with_known_exchange_guards|
-|SHORT_NAME|Full alias, legal marker, or supporting business terms|A multiword company's first word is not a unique identity by itself|Ascendis and its TransCon therapy|Schneider guidance on data centers implies Schneider National|Inspection until disambiguated|implemented|
+|SHORT_NAME|Unique raw company prefix plus a local event; dictionary words need corporate or financial grammar|Preserve punctuation and ADR identity; reject place prefixes, foreign qualifiers, compound suffixes, and blank-check shorthand|Taiwan Semiconductor results; PG&E shutoff; Arm stock|New Jersey man; National Bank Of Hungary; Character.AI|Inspection or no entity link|implemented|
 |OWNED_PRODUCT|Ownership passage in the stock source plus article event|Use the complete product identifier and unique evidenced owner|VOXZOGO event to BMRN|VOXZOGO silently becomes an ASND product|Inspection if ownership ambiguous|implemented|
 |PRODUCT_COMPONENT|Complete brand phrase|Do not turn each acronym inside a product name into an owned brand|TransCon CNP|CNP alone treated as the owned branded product|Candidate only|implemented|
 |SUBSIDIARY|Exhibit 21 or explicit subsidiary ownership statement|A subsidiary event can reach its evidenced parent|LinkedIn layoffs to MSFT|A partner's product treated as an owned subsidiary|Inspection if owner not established|implemented|
@@ -43,6 +43,10 @@ This is a versioned failure model, not a claim that every possible sentence or w
 |SOURCE_COMPLETENESS|Archive manifest, expected filing count, text checksums|Fail strict mode on incomplete/missing/corrupt text; label legacy caches incomplete|Complete PR642 text views|Capped SQLite cache presented as the full archive|Stop strict ingestion and report missing sources|implemented|
 |VALIDATION_DISTRIBUTION|Positive/negative and per-category metrics|Report precision, recall, exact-set accuracy and coverage; no all-negative certification|At least 20 positive cases and diverse examples|100 irrelevant articles return unknown|No relevance bar claim|implemented|
 |UNCLASSIFIED_FAILURE|An observed mismatch outside this matrix|Record a new category and lock a case before changing the implementation|New observed error with a reproducible case|Silently patch an individual word|Block a claimed comprehensive release|process_gate|
+|BODY_PROVENANCE|Publisher-body provenance rather than text length|Extended text is an unverified sampling stratum; export primary headlines separately|Headline-only mode excludes related-story bundle|Forty words of concatenated search headlines called a genuine body|Disclose unverified provenance|partial_upstream_provenance|
+|BUSINESS_PARAGRAPH|Contiguous short business paragraph in one source and section|Allow two rare anchors across a paragraph of at most 100 tokens; retain all original sentence facts|Launch services and spacecraft explained in adjacent sentences|Business and risk sections joined as evidence|Require a single valid witness|implemented|
+|UNKNOWN_EVENT_TARGET|Identified company/product or broad business constraint|An isolated unnamed incident cannot pass every business selling that class of object|Sourced company event or launch infrastructure policy|Anonymous retail-store arson passes apparel retailers|Tier-3 context or no supported link|implemented_local_scope|
+|RAW_PRODUCT_IDENTITY|Raw brand surface and a valid ownership predicate|Normalize plural brands only through the known product inventory; distinguish case and company-name constituents|Macs versus MAC cosmetics|AML treatment target or IPO service becomes owned product|No product pass without ownership proof|implemented|
+|OFFLINE_RUNTIME|Pinned local resources and isolated interpreter|Evaluator disables site packages, DNS, and socket connections before importing application code|python -I -S scripts/offline_evidence_checks.py|Runtime calls an external inference or telemetry endpoint|Fail rather than fetch at scan time|implemented|
 
 Machine-readable rules and test references: `eval/coverage-matrix.json`.
-

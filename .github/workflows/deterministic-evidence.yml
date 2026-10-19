@@ -36,9 +36,16 @@ jobs:
           --out validation-inputs --seed 19019 --budget 200
       - name: Equal-input Finviz-only frozen-corpus comparison
         run: |
-          python -m src.eval_correlation --engine legacy --cases eval/cases.jsonl --descriptions excel_bot/data/finviz_with_descriptions.csv --out validation-inputs/legacy-frozen.json --changelog "Existing public corpus and Finviz-only equal inputs; not archive or holdout certification"
-          python -m src.eval_correlation --engine evidence --cases eval/cases.jsonl --descriptions excel_bot/data/finviz_with_descriptions.csv --out validation-inputs/evidence-frozen.json --changelog "Existing public corpus and Finviz-only equal inputs; not archive or holdout certification"
+          python -I -S scripts/offline_evidence_checks.py --engine legacy --cases eval/cases.jsonl --descriptions excel_bot/data/finviz_with_descriptions.csv --out validation-inputs/legacy-frozen.json --changelog "Existing public corpus and Finviz-only equal inputs; isolated Python with sockets denied"
+          python -I -S scripts/offline_evidence_checks.py --engine evidence --cases eval/cases.jsonl --descriptions excel_bot/data/finviz_with_descriptions.csv --out validation-inputs/evidence-frozen.json --changelog "Existing public corpus and Finviz-only equal inputs; isolated Python with sockets denied"
           python scripts/summarize_evidence_checks.py validation-inputs/legacy-frozen.json validation-inputs/evidence-frozen.json
+      - name: Export separate unseen headline inputs
+        run: >-
+          python scripts/export_validation_inputs.py
+          --news data/news_intake/2026-10-17/documents.json
+          --descriptions excel_bot/data/finviz_with_descriptions.csv
+          --out validation-inputs/fresh --seed 19020 --budget 200
+          --exclude-sample validation-inputs/news-sample.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -373,7 +373,7 @@ def run_in_process(cases: list[dict], args: argparse.Namespace) -> dict[str, dic
 def main() -> None:
     parser = argparse.ArgumentParser(description="Evaluate correlation output against the frozen corpus")
     parser.add_argument("--cases", type=Path, required=True)
-    parser.add_argument("--engine", choices=("evidence", "legacy"), default="evidence")
+    parser.add_argument("--engine", choices=("evidence", "legacy"), default="legacy")
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--links", type=Path, default=None,
                         help="Existing program output JSON instead of running in-process")
@@ -422,6 +422,7 @@ def main() -> None:
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
     print(json.dumps(payload["summary"], indent=2))
+    print('STRICT_METRICS='+json.dumps({k:v for k,v in payload['strict_metrics'].items() if k!='details'},ensure_ascii=True))
     print(f"WROTE={args.out}")
 
 

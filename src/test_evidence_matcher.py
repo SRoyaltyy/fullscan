@@ -46,6 +46,101 @@ class EvidenceTests(unittest.TestCase):
   self.assertNotIn('AAL',{r['ticker'] for r in hit['stocks'] if r['pass']})
   self.assertTrue(next(r for r in hit['stocks'] if r['ticker']=='RKLB')['evidence'][0]['stock_evidence']['passage'])
 
+ def test_business_paragraph_supports_cross_sentence_operation(self):
+  self.assertIn('RKLB',self.passed('Spacecraft launches and orbital launches continue.'))
+
+ def test_business_context_does_not_join_sections_or_counterparties(self):
+  for filing in ('Business\nWe manufacture spacecraft.\n\nRisk Factors\nLaunch disruptions affect suppliers.',
+                 'Business\nWe manufacture spacecraft. Our competitor Rocket Lab provides launch services.'):
+   b=build_board([{'ticker':'TEST','name':'Example Hardware','industry':'Aerospace','filing':filing},STOCKS[0]],engine='evidence')
+   hit=link_articles(b,[{'id':'x','text':'Spacecraft launches expand.'}])[0]
+   self.assertNotIn('TEST',{r['ticker'] for r in hit['stocks'] if r['pass']})
+
+ def test_unknown_local_incident_does_not_spread_to_product_industry(self):
+  b=build_board([{'ticker':'SHOP','name':'Example Apparel','industry':'Retail','description':'We operate retail stores and sell clothing.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'A man faces arson charges after a retail store fire.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_multiword_prefix_adr_and_short_dictionary_company(self):
+  b=build_board([{'ticker':'TSM','name':'Taiwan Semiconductor Manufacturing ADR','industry':'Semiconductors'},
+                 {'ticker':'ARM','name':'Arm Holdings Plc ADR','industry':'Semiconductors'},
+                 {'ticker':'PCG','name':'PG&E Corp','industry':'Utilities'}],engine='evidence')
+  for text,ticker in [('Taiwan Semiconductor posts quarterly results.','TSM'),('Arm stock falls after a jury verdict.','ARM'),('PG&E power shutoff expands.','PCG')]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{ticker})
+
+ def test_compound_name_is_not_its_last_word_ticker(self):
+  b=build_board([{'ticker':'AI','name':'C3.ai Inc','industry':'Software'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Character.AI bankruptcy proceedings continue.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_foreign_qualifier_is_not_shorter_domestic_bank_name(self):
+  b=build_board([{'ticker':'NBHC','name':'National Bank Holdings Inc','industry':'Banks'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'National Bank Of Hungary prepares to cut rates.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_blank_check_first_word_is_not_operating_company(self):
+  b=build_board([{'ticker':'OTAI','name':'Starlink AI Acquisition Corp','industry':'Shell Companies','description':'Starlink AI is a blank check company.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Starlink suffers a network outage.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_explicit_product_list_supports_case_sensitive_plural_brand(self):
+  b=build_board([{'ticker':'ORCH','name':'Orchard Devices','industry':'Computers','description':'Its products and services include eReader, Mini, and devices.'}],engine='evidence')
+  for text,expected in [('Firmware launch supports Minis.',{'ORCH'}),('A mini software launch is scheduled.',set())]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},expected)
+
+ def test_disease_after_development_predicate_is_not_owned_product(self):
+  b=build_board([{'ticker':'BIOX','name':'Example Biotech','industry':'Biotechnology','description':'Its product ABC-123 is developed for the treatment of AML and MDS.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'A bank faces fines for AML violations.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_place_prefix_does_not_name_company(self):
+  b=build_board([{'ticker':'NJR','name':'New Jersey Resources Corp','industry':'Utilities'},
+                {'ticker':'NYT','name':'New York Times Co','industry':'Publishing'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'New Jersey man faces arson charges after a New York City fire.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_compound_suffix_does_not_name_another_company(self):
+  b=build_board([{'ticker':'PCG','name':'PG&E Corp','industry':'Utilities'},
+                {'ticker':'EPOW','name':'E Power Inc','industry':'Utilities'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'PG&E power shutoff expands.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'PCG'})
+
+ def test_product_inside_company_name_and_undefined_acronym_do_not_pass(self):
+  b=build_board([{'ticker':'QBTS','name':'D-Wave Quantum','industry':'Computers'},
+                {'ticker':'CHKP','name':'Example Security','industry':'Software','description':'Its products include Quantum, CloudGuard, and tools.'},
+                {'ticker':'ADV','name':'Example Advisory','industry':'Finance','description':'It offers IPO sponsorship services.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'D-Wave Quantum (QBTS) reports revenue ahead of its IPO.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'QBTS'})
+
+ def test_brand_plural_and_raw_case_resolve_distinct_owners(self):
+  b=build_board([{'ticker':'TECH','name':'Example Devices','industry':'Computers','description':'Its products include iPhone, Mac, and tools.'},
+                {'ticker':'BEAUTY','name':'Example Beauty','industry':'Cosmetics','description':'Its products include MAC and skincare.'}],engine='evidence')
+  for text in ('iPhones sink in a cargo accident.','A software launch supports Macs.'):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'TECH'})
+
+ def test_legal_caption_keeps_event_when_sentence_split_after_v(self):
+  b=build_board([{'ticker':'FSCO','name':'FS Credit Opportunities Corp','industry':'Funds'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'FS Credit Opportunities Corp. v. Example Capital Ltd.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'FSCO'})
+
+ def test_headline_mode_excludes_related_headline_bundle(self):
+  from src.link_correlation import load_articles
+  with tempfile.TemporaryDirectory(dir=Path.cwd()) as tmp:
+   p=Path(tmp)/'news.json'
+   p.write_text(json.dumps([{'id':'x','title':'Local police investigate theft.','body':'Apple raises earnings guidance.'}]),encoding='utf-8')
+   articles=load_articles(p,0,headline_only=True)
+   self.assertNotIn('Apple',articles[0]['text'])
+   self.assertIn('Apple',load_articles(p,0)[0]['text'])
+
+ def test_dictionary_company_short_name_in_coordinated_financial_subject(self):
+  b=build_board([{'ticker':'MU','name':'Micron Technology Inc','industry':'Semiconductors'},
+                {'ticker':'AMD','name':'Advanced Micro Devices Inc','industry':'Semiconductors'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Micron and AMD shares are falling.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'MU','AMD'})
+
  def test_batch_permutation_and_repetition_do_not_change_decision(self):
   articles=[{'id':str(i),'text':MEMO} for i in range(9)]
   alone=self.passed(MEMO)
@@ -219,6 +314,12 @@ class EvidenceTests(unittest.TestCase):
   b=build_board(rows,engine='evidence')
   h=link_articles(b,[{'id':'x','text':'Elon Musk announces expanded rocket and spacecraft production.'}])[0]
   self.assertIn('ORB',{r['ticker'] for r in h['stocks'] if r['pass']})
+
+ def test_cross_process_repeatability(self):
+  import os,subprocess,sys
+  code="from src.correlation import build_board,link_articles; from src.test_evidence_matcher import EXTRA; import json; print(json.dumps(link_articles(build_board(EXTRA,engine='evidence'),[{'id':'x','text':'FDA approves VOXZOGO for children with achondroplasia.'}],engine='evidence'),sort_keys=True))"
+  outputs=[subprocess.check_output([sys.executable,'-c',code],env={**os.environ,'PYTHONHASHSEED':seed}) for seed in ('1','27')]
+  self.assertEqual(outputs[0],outputs[1])
 
  def test_event_product_class_is_distinct_from_disease_indication(self):
   from src.evidence_matcher import _event_object

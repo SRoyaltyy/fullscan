@@ -1,5 +1,5 @@
 {
-  "version": "CM-1",
+  "version": "CM-2",
   "categories": [
     {
       "id": "INPUT_EMPTY",
@@ -133,12 +133,12 @@
     },
     {
       "id": "SHORT_NAME",
-      "evidence_required": "Full alias, legal marker, or supporting business terms",
-      "decision_rule": "A multiword company's first word is not a unique identity by itself",
-      "positive_example": "Ascendis and its TransCon therapy",
-      "confusing_negative": "Schneider guidance on data centers implies Schneider National",
-      "when_missing": "Inspection until disambiguated",
-      "regression_test": "test_company_earnings_pass_even_without_industry_jargon",
+      "evidence_required": "Unique raw company prefix plus a local event; dictionary words need corporate or financial grammar",
+      "decision_rule": "Preserve punctuation and ADR identity; reject place prefixes, foreign qualifiers, compound suffixes, and blank-check shorthand",
+      "positive_example": "Taiwan Semiconductor results; PG&E shutoff; Arm stock",
+      "confusing_negative": "New Jersey man; National Bank Of Hungary; Character.AI",
+      "when_missing": "Inspection or no entity link",
+      "regression_test": "test_multiword_prefix_adr_and_short_dictionary_company",
       "status": "implemented"
     },
     {
@@ -390,6 +390,56 @@
       "when_missing": "Block a claimed comprehensive release",
       "regression_test": "test_partial_assertions_are_not_accuracy_evidence",
       "status": "process_gate"
+    },
+    {
+      "id": "BODY_PROVENANCE",
+      "evidence_required": "Publisher-body provenance rather than text length",
+      "decision_rule": "Extended text is an unverified sampling stratum; export primary headlines separately",
+      "positive_example": "Headline-only mode excludes related-story bundle",
+      "confusing_negative": "Forty words of concatenated search headlines called a genuine body",
+      "when_missing": "Disclose unverified provenance",
+      "regression_test": "test_headline_mode_excludes_related_headline_bundle",
+      "status": "partial_upstream_provenance"
+    },
+    {
+      "id": "BUSINESS_PARAGRAPH",
+      "evidence_required": "Contiguous short business paragraph in one source and section",
+      "decision_rule": "Allow two rare anchors across a paragraph of at most 100 tokens; retain all original sentence facts",
+      "positive_example": "Launch services and spacecraft explained in adjacent sentences",
+      "confusing_negative": "Business and risk sections joined as evidence",
+      "when_missing": "Require a single valid witness",
+      "regression_test": "test_business_context_does_not_join_sections_or_counterparties",
+      "status": "implemented"
+    },
+    {
+      "id": "UNKNOWN_EVENT_TARGET",
+      "evidence_required": "Identified company/product or broad business constraint",
+      "decision_rule": "An isolated unnamed incident cannot pass every business selling that class of object",
+      "positive_example": "Sourced company event or launch infrastructure policy",
+      "confusing_negative": "Anonymous retail-store arson passes apparel retailers",
+      "when_missing": "Tier-3 context or no supported link",
+      "regression_test": "test_unknown_local_incident_does_not_spread_to_product_industry",
+      "status": "implemented_local_scope"
+    },
+    {
+      "id": "RAW_PRODUCT_IDENTITY",
+      "evidence_required": "Raw brand surface and a valid ownership predicate",
+      "decision_rule": "Normalize plural brands only through the known product inventory; distinguish case and company-name constituents",
+      "positive_example": "Macs versus MAC cosmetics",
+      "confusing_negative": "AML treatment target or IPO service becomes owned product",
+      "when_missing": "No product pass without ownership proof",
+      "regression_test": "test_brand_plural_and_raw_case_resolve_distinct_owners",
+      "status": "implemented"
+    },
+    {
+      "id": "OFFLINE_RUNTIME",
+      "evidence_required": "Pinned local resources and isolated interpreter",
+      "decision_rule": "Evaluator disables site packages, DNS, and socket connections before importing application code",
+      "positive_example": "python -I -S scripts/offline_evidence_checks.py",
+      "confusing_negative": "Runtime calls an external inference or telemetry endpoint",
+      "when_missing": "Fail rather than fetch at scan time",
+      "regression_test": "scripts/offline_evidence_checks.py",
+      "status": "implemented"
     }
   ]
 }

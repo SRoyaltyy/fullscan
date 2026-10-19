@@ -374,6 +374,7 @@ class Board:
 
 
 def _alias(name: str) -> str:
+    name = re.sub(r'\s+(?:ADR|ADS)\s*$','',name or '',flags=re.I)
     name = re.sub(r"\s*/[A-Z]{2}/\s*$", "", name or "")
     name = re.sub(r'\s+(?:A/S|S\.?A\.?|N\.?V\.?|S\.?p\.?A\.?|AG|SE)\s*$','',name,flags=re.I)
     cleaned = re.sub(
@@ -384,7 +385,7 @@ def _alias(name: str) -> str:
     )
     cleaned = re.sub(r"[^A-Za-z0-9 ]", " ", cleaned)
     cleaned = re.sub(r"\s+", " ", cleaned).strip().lower()
-    if len(cleaned) < 4:
+    if len(cleaned) < 3:
         return ""
     return cleaned
 

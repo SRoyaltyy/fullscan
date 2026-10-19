@@ -40,6 +40,11 @@ embedding-service, or network calls during scanning.
 Company-specific events need company identity plus a local event; product
 events need sourced ownership plus the local event. Unnamed business exposure
 needs distinct business anchors supported together in a stock-source passage.
+Short business paragraphs can supply that witness across sentences without
+joining sections, dates or counterparty relations. Industry vocabulary does
+not veto a supported niche business. An unnamed local incident does not pass
+every company selling the object involved; broad policy or business activity
+must be present for the unnamed business route.
 People/acronyms are inspection signals until business context corroborates
 them. Generic industry words such as drug/readout cannot pass an arbitrary
 subset of an industry. Places alone do not pass companies. A dependency can
@@ -75,6 +80,24 @@ python -m src.link_correlation --engine evidence --filings /path/to/objects \
 For a paired legacy baseline, pass `--engine legacy`. It preserves the former
 scorer for comparison and remains the production default. The v2 pass decision is independent
 of batch order, duplicate articles, and batch-relative z scores.
+
+For primary-headline evaluation, pass `--headline-only` to the scan CLI.
+Scanner text labeled as a body may instead concatenate related headlines.
+The sample exporter calls longer text an unverified extended-text stratum,
+exports primary headlines separately, and can exclude development headlines.
+Length is never proof of a genuine publisher body.
+
+To verify evaluation with site packages, DNS and socket connections disabled:
+
+```sh
+python -I -S scripts/offline_evidence_checks.py --engine evidence \
+  --cases eval/cases.jsonl --descriptions /path/to/finviz.csv \
+  --out /path/to/results.json
+```
+
+Rebuild profile caches after changing stock extraction. A cache preserves the
+facts extracted at build time; a newer matcher cannot recover a missing brand
+or paragraph context from a cache that omitted it.
 
 ## Measurement and release bar
 

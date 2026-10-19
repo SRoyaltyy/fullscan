@@ -76,13 +76,13 @@ def load_stocks(descriptions: Path, universe: Path | None, sectors: Path | None,
     return stocks
 
 
-def load_articles(path: Path, limit: int) -> list[dict]:
+def load_articles(path: Path, limit: int, *, headline_only: bool = False) -> list[dict]:
     payload = json.loads(path.read_text(encoding="utf-8"))
     rows = payload if isinstance(payload, list) else payload.get("documents") or payload.get("rows") or []
     articles = []
     for row in rows:
         title = str(row.get("title") or "")
-        body = str(row.get("body") or row.get("text") or "")
+        body = '' if headline_only else str(row.get("body") or row.get("text") or "")
         text = (title + "\n" + body).strip()
         if not text:
             continue
@@ -138,6 +138,7 @@ def main() -> None:
     parser.add_argument("--engine", choices=("evidence", "legacy"), default="legacy")
     parser.add_argument("--profile-cache", type=Path, help="Precompiled stock-evidence JSONL gzip; skips repeated profile parsing")
     parser.add_argument("--news", type=Path, default=ROOT / "data/news_intake/2026-10-17/documents.json")
+    parser.add_argument("--headline-only", action="store_true", help="Score primary headlines; exclude body and related-headline bundles")
     parser.add_argument("--fixture", type=Path, default=None, help="Extra article text scored against the same board")
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--out", type=Path, default=ROOT / "dashboard/news-dir/correlation/latest.json")
@@ -159,7 +160,7 @@ def main() -> None:
         stocks = [{"ticker":p.ticker,"name":p.name,"industry":p.industry,"sector":p.sector} for p in evidence.profiles.values()]
         board = build_board(stocks,engine="evidence")
         board.evidence_board = evidence
-        articles = load_articles(args.news,args.limit)
+        articles = load_articles(args.news,args.limit,headline_only=args.headline_only)
         if args.fixture and args.fixture.is_file():
             articles.insert(0,{"id":"fixture","title":args.fixture.stem,"text":args.fixture.read_text(encoding="utf-8")})
         names=NameIndex(catalog_from_csv(args.descriptions)) if args.descriptions and args.descriptions.is_file() else None
@@ -196,7 +197,7 @@ def main() -> None:
     profiles = profiles_from_csv(args.descriptions)
     print(f"BOARD={board.n} INDUSTRY_TERMS={len(board.industry_of_term)}")
 
-    articles = load_articles(args.news, args.limit)
+    articles = load_articles(args.news, args.limit, headline_only=args.headline_only)
     if args.fixture and args.fixture.is_file():
         articles.insert(0, {
             "id": "fixture",
