@@ -144,6 +144,7 @@ def test_dry_run_on_sealed_2026_10_16_plan_never_submits(tmp_path, monkeypatch):
     """Real sealed 10-16 h1 plan + the real ready ticket, up to just before submit."""
     from src import paper_open as po, webull_exec as we
     monkeypatch.setenv('PAPER_OPEN_CHECK_REMOTE', '0')
+    monkeypatch.setattr(we, 'write_last', lambda *a, **k: None)
     api = _NoSubmitAPI()
     api.host = we.PAPER_HOST
     rc = po.submit_ready(submit=False, clock=lambda: at(8, 50), api=api,
