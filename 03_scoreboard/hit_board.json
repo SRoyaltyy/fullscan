@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T19:01:15.994012-04:00",
+  "generated_at": "2026-10-19T16:50:21.802568-04:00",
   "dates": [
     "2026-07-31",
     "2026-08-02",
@@ -63,17 +63,18 @@
     "2026-10-13",
     "2026-10-14",
     "2026-10-15",
-    "2026-10-16"
+    "2026-10-16",
+    "2026-10-19"
   ],
   "general": {
     "overall": {
-      "n_graded": 45,
-      "n_predicts": 48,
-      "dir_hits": 24,
-      "dir_hit_pct": 53.333333333333336,
-      "mag_hits": 22,
-      "mag_n": 45,
-      "mag_hit_pct": 48.888888888888886,
+      "n_graded": 46,
+      "n_predicts": 49,
+      "dir_hits": 25,
+      "dir_hit_pct": 54.34782608695652,
+      "mag_hits": 23,
+      "mag_n": 46,
+      "mag_hit_pct": 50.0,
       "n_pipeline_blank": 15,
       "pipeline_blank_dates": [
         "2026-08-02",
@@ -100,13 +101,13 @@
       ]
     },
     "legacy_all_graded": {
-      "n_graded": 48,
-      "n_predicts": 48,
-      "dir_hits": 24,
-      "dir_hit_pct": 50.0,
-      "mag_hits": 22,
-      "mag_n": 48,
-      "mag_hit_pct": 45.833333333333336,
+      "n_graded": 49,
+      "n_predicts": 49,
+      "dir_hits": 25,
+      "dir_hit_pct": 51.02040816326531,
+      "mag_hits": 23,
+      "mag_n": 49,
+      "mag_hit_pct": 46.93877551020408,
       "n_pipeline_blank": 15,
       "pipeline_blank_dates": [
         "2026-08-02",
@@ -825,6 +826,17 @@
         "actual_direction": "down",
         "direction_hit": false,
         "magnitude_hit": false
+      },
+      {
+        "date": "2026-10-19",
+        "has_predict": true,
+        "predicted_direction": "up",
+        "predicted_magnitude_band": "mild",
+        "total_score": 2.125,
+        "actual_pct_change": 0.41,
+        "actual_direction": "up",
+        "direction_hit": true,
+        "magnitude_hit": true
       }
     ]
   },
@@ -1783,6 +1795,21 @@
       },
       {
         "date": "2026-10-16",
+        "n_graded": 0,
+        "n_predicts": 0,
+        "dir_hits": 0,
+        "dir_hit_pct": null,
+        "mag_hits": 0,
+        "mag_n": 0,
+        "mag_hit_pct": null,
+        "n_pipeline_blank": 0,
+        "pipeline_blank_dates": [],
+        "n_auto_miss_no_predict": 0,
+        "auto_miss_dates": [],
+        "n_sectors": 0
+      },
+      {
+        "date": "2026-10-19",
         "n_graded": 0,
         "n_predicts": 0,
         "dir_hits": 0,
@@ -6218,6 +6245,74 @@
         }
       },
       "2026-10-16": {
+        "Basic Materials": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Communication Services": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Consumer Cyclical": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Consumer Defensive": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Energy": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Financial": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Healthcare": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Industrials": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Real Estate": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Technology": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Utilities": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        }
+      },
+      "2026-10-19": {
         "Basic Materials": {
           "dir": null,
           "hit": null,
