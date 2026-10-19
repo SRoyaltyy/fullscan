@@ -24,7 +24,7 @@ def score_links(cases: list[dict], hits: dict[str,dict], *, minimum: float = 0.9
         expected = case.get('expected') or {}
         # Partial bug assertions remain useful regressions, but cannot certify
         # accuracy over an unknown complete expected answer.
-        if not expected or not case.get('truth_complete',False):
+        if not expected or not case.get('truth_complete',False) or case.get('adjudication_required'):
             counts['excluded_partial_or_unlabeled'] += 1
             continue
         hit = hits.get(str(case['id']))

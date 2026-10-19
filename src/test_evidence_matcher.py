@@ -141,6 +141,12 @@ class EvidenceTests(unittest.TestCase):
   hit=link_articles(b,[{'id':'x','text':'Micron and AMD shares are falling.'}])[0]
   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'MU','AMD'})
 
+ def test_unresolved_annotation_cannot_enter_accuracy_denominator(self):
+  case={'id':'x','truth_complete':True,'adjudication_required':True,'expected':{'topical_passes':[]}}
+  metric=score_links([case],{'x':{'stocks':[]}})
+  self.assertIsNone(metric['exact_set_accuracy'])
+  self.assertEqual(metric['counts']['excluded_partial_or_unlabeled'],1)
+
  def test_batch_permutation_and_repetition_do_not_change_decision(self):
   articles=[{'id':str(i),'text':MEMO} for i in range(9)]
   alone=self.passed(MEMO)

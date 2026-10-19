@@ -88,26 +88,25 @@ def compare_case(case: dict, hit: dict | None) -> dict:
     unexpected: dict[str, list] = {"passes": [], "name_hits": [], "dependencies": []}
     kind = case.get("kind") or "regression"
 
-    if not expected:
+    if not expected or case.get('adjudication_required'):
         return {
             "case_id": case.get("id"), "kind": kind, "case_type": case.get("case_type"),
             "verdict": "UNLABELED", "failure_classes": [], "notes": ["no expectations yet"],
             "program_status": (hit or {}).get("status"), "missing": missing, "unexpected": unexpected,
         }
 
-    text = (case.get("text") or "").strip()
-    # Short text is only un-scorable when the case needs a body to be judged.
-    # A case whose expectation is "unknown" (thin-markets-moved is 14 characters)
-    # is legitimately short: the program must still see it and say unknown.
+    text = ((case.get('title') or '') + '\n' + (case.get("text") or "")).strip()
+    # Headlines are valid positive inputs. Never hide a missed company event
+    # by excluding it merely because it has fewer than forty characters.
     needs_body = (
         expected.get("status") == "scored"
         or bool(expected.get("topical_passes"))
         or bool(expected.get("name_hits"))
         or bool(expected.get("allowed_second_order"))
     )
-    if len(text) < 40 and not case.get("text_ref") and needs_body:
+    if not text and not case.get("text_ref") and needs_body:
         classes.append("NO_TEXT")
-        notes.append("case text is empty/short and text_ref is unset; paste full text")
+        notes.append("case title/text is empty and text_ref is unset")
 
     if hit is None:
         classes.append("FALSE_UNKNOWN")

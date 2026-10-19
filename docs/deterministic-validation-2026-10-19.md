@@ -9,37 +9,48 @@ The full exported Finviz input has 5,962 rows and 5,961 distinct tickers.
 On the unchanged 25-case repository corpus, legacy passes 12/19 regressions
 and 2/3 targets. The final local candidate passes 19/19 regressions and 3/3
 targets; three cases remain unlabeled. These partial assertions are excluded
-from strict accuracy denominators. The final local suite passes 117 tests,
+from strict accuracy denominators. The final local suite passes 120 tests,
 including repeatability across independent processes.
 
-Hosted commit dfb7fdb passed 100 tests and 19/19 regressions, with 2/3 targets
-before the business-paragraph repair. CI reruns the candidate and both
+Hosted commit 2a2f975 passed 117 tests, 19/19 regressions and all 3 targets.
+CI reruns the candidate and both
 equal-input evaluations in isolated Python with site packages, DNS and socket
 connections disabled. Dictionary bootstrap is a separate one-time build.
 
 ## Scanner headline development checkpoint
 
 The seed-19019 export selected 200 primary headlines from 10,825 normalized
-titles. Assistant annotations were frozen before inspecting matcher outputs:
-160 provisional complete sets, including 31 positive headlines and 37 expected
-links. Forty uncertain ownership, off-universe and broad policy/commodity cases
-are explicitly excluded. Labels remain human_checked:false.
+titles. Initial assistant labels were frozen before output inspection. A later
+audit found an outdated assumption: SpaceX is included as SPCX in the supplied
+universe, so three Starlink headlines had been incorrectly labeled negative.
+Starlink's own [legal notice](https://www.starlink.com/legal/documents/DOC-1158-18408-72)
+confirms its SpaceX ownership. Version 2 corrects those positives and marks two
+entertainment-ownership cases and an unnamed satellite-network case unresolved.
+Original labels/results are retained. The earlier 160/160 version-1 score is
+an obsolete annotation checkpoint, not an accuracy estimate.
+
+Version 2 contains 157 provisional complete sets: 34 positive headlines and
+40 expected links. Forty-three uncertain cases are explicitly excluded.
+Labels remain human_checked:false, and all negative/ownership judgments still
+need independent review.
 
 | Checkpoint | Exact sets | Precision | Recall | False links | Missed links |
 |---|---:|---:|---:|---:|---:|
-| First candidate on frozen labels | 119/160 (74.4%) | 2.5% | 27.0% | 393 | 27 |
-| Adapted final candidate, unchanged labels | 160/160 (100%) | 100% | 100% | 0 | 0 |
+| Legacy, audited labels | 123/157 (78.3%) | undefined (no passes) | 0% | 0 | 40 |
+| Adapted candidate, audited labels | 154/157 (98.1%) | 100% | 92.5% | 0 | 3 |
 
-The final 95% Wilson intervals are 97.7-100% for exact sets and 90.6-100% for
-precision and recall. There are 129 negatives; one thin negative abstention
-remains in the denominator. This subset meets the numerical sample bar but
-has been used for development. It does not validate the forty excluded cases
-or the production distribution. No label was changed to obtain the higher
-score. Benchmark article files are not included in this PR; the published
-changes contain code and aggregate findings.
+The final 95% Wilson intervals are 94.5-99.4% for exact sets, 90.6-100% for
+precision and 80.1-97.4% for recall. There are 123 negatives. The subset meets
+the numerical point-estimate bar but was used for development. It does not
+validate excluded cases or the production distribution. The label audit reduced
+the score and exposed three real source/alias misses. Benchmark article files
+are not included in this PR; published changes contain code and aggregate findings.
 
-Frozen-label SHA256:
+Original version-1 label SHA256 (superseded):
 af7984c6f34bf95c1d564cd6dc88d9fde1481ab7f92f857a155cf3b62de025a2
+
+Audited version-2 label SHA256:
+32c913a0558e2cf8868f8aecc5a91f2b5a1c66ffbb9ea3558fa0151648f3587b
 
 Original 200-input export SHA256:
 002dec67617acffbe555704a59fbc3a3ff398f7bdf2335813e5e2ebad5e04a52
@@ -81,10 +92,22 @@ competitive-exposure label remains unresolved.
 
 ## Remaining release work
 
+The first untouched-headline run at engine commit 2a2f975 **fails the target**.
+Of 200 titles, 158 have provisional complete labels (34 positives, 40 links)
+and 42 are unresolved. Exact sets are 128/158 (81.0%); there are 17 TP,
+43 FP and 23 FN, giving 28.3% precision and 42.5% recall. Five outputs abstain.
+Known related-story cases are flagged separately: the provisional novel-story
+subset is 113/136 exact, with 16 TP, 42 FP and 15 FN. It also fails.
+This sample has not been used to tune the engine at this checkpoint. Its label
+SHA256 is 24558bccbb7dea6b46fcef9297d367cde72376c2f0fb67317db48fe65887b0b1.
+These results invalidate any suggestion that the adapted development score
+generalizes to new headlines. Alias attribution, noun/verb event scope and
+missing stock-side corporate/product identities remain serious gaps.
+
 CI exports a separate seed-19020 sample excluding all 200 development headlines.
 It contains no labels or program outputs. Related stories may still overlap and
 must be grouped before an independent holdout claim. Freeze labels and score it
-without tuning on the result. Adjudicate the forty uncertain cases, especially
+without tuning on the result. Adjudicate the uncertain cases, especially
 unnamed policy exposure, and evaluate complete dated production stock sources.
 Report exact sets, precision, recall, abstention and per-category coverage.
 Historical ownership, geography and general grammar remain partial. Do not merge
