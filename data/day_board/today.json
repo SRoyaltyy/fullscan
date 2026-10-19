@@ -1,16 +1,138 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T05:45:45.344394-04:00",
+  "generated_at": "2026-10-19T05:49:13.062821-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "CDNA",
+      "score": 0.8337797636157818
+    },
+    {
+      "ticker": "VEEV",
+      "score": 0.440722832336436
+    },
+    {
+      "ticker": "SN",
+      "score": 0.407997786723631
+    },
+    {
+      "ticker": "BLFS",
+      "score": 0.7855905743942335
+    },
+    {
+      "ticker": "ILMN",
+      "score": 0.41337572363644054
+    },
+    {
+      "ticker": "PRCH",
+      "score": 0.8070181406744832
+    },
+    {
+      "ticker": "SHOO",
+      "score": 0.7176451412456195
+    },
+    {
+      "ticker": "CBRL",
+      "score": 0.7582374174986715
+    },
+    {
+      "ticker": "FIGS",
+      "score": 0.6825156330781941
+    },
+    {
+      "ticker": "AVPT",
+      "score": 0.6750450194399089
+    },
+    {
+      "ticker": "TRU",
+      "score": 0.44103282054223053
+    },
+    {
+      "ticker": "LAUR",
+      "score": 0.5871377898646308
+    },
+    {
+      "ticker": "PAYS",
+      "score": 0.55885938284836
+    },
+    {
+      "ticker": "RELY",
+      "score": 0.5269368508018937
+    },
+    {
+      "ticker": "ABX",
+      "score": 0.4888540105672492
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "ARE",
+      "score": -0.4535167536703368
+    },
+    {
+      "ticker": "NEOV",
+      "score": -0.3688463541888366
+    },
+    {
+      "ticker": "VSAT",
+      "score": -0.36583046682770615
+    },
+    {
+      "ticker": "BAK",
+      "score": -0.36423588642979243
+    },
+    {
+      "ticker": "ROIV",
+      "score": -0.3640062589448013
+    },
+    {
+      "ticker": "SOC",
+      "score": -0.36106174176073086
+    },
+    {
+      "ticker": "INTC",
+      "score": -0.35111493616685563
+    },
+    {
+      "ticker": "ALK",
+      "score": -0.3496324992694038
+    },
+    {
+      "ticker": "CMTG",
+      "score": -0.3346687981987808
+    },
+    {
+      "ticker": "PCT",
+      "score": -0.33013589552335393
+    },
+    {
+      "ticker": "VNET",
+      "score": -0.32173219462411756
+    },
+    {
+      "ticker": "NN",
+      "score": -0.3178030595806984
+    },
+    {
+      "ticker": "PRM",
+      "score": -0.3091681085988022
+    },
+    {
+      "ticker": "ACDC",
+      "score": -0.3008972285169427
+    },
+    {
+      "ticker": "BIDU",
+      "score": -0.2983713104248488
+    }
+  ],
   "flatten": {},
   "general": {
     "said": "UP  2.125",
@@ -41,31 +163,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz",
-      "title": "Finviz universe export",
-      "date": "2026-10-19",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-19T04:54:56.776665-04:00",
-      "files": [
-        {
-          "path": "data/exports/finviz_2026-10-19.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11030866,
-          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11538639,
-          "preview": "11765 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
-        }
-      ],
-      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11765 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -233,6 +330,59 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, AME, EPAM, ELV, SWKS \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, AME, DHR, SHO, ATRC"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-19T05:49:12.203011-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-19_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1528183,
+          "preview": "1d BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC, INTC, ALK"
+        },
+        {
+          "path": "data/stock_book/2026-10-19_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2645,
+          "preview": "green 172 \u00b7 ETON, ARQT, CORT, WAY, INCY, VEEV, AMN, CDNA, SIBN, BIIB"
+        },
+        {
+          "path": "data/stock_book/2026-10-19_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2484,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-19_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13814,
+          "preview": "2026-10-19 BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC, INTC, ALK"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13814,
+          "preview": "2026-10-19 BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC, INTC, ALK"
+        },
+        {
+          "path": "01_daily/2026-10-19_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84975,
+          "preview": "# Stock book \u2014 2026-10-19\n_Generated 2026-10-19T05:45:56.257083-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC, INTC, ALK \u00b7 green 172 \u00b7 ETON, ARQT, CORT, WAY, INCY, VEEV, AMN, CDNA, SIBN, BIIB \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-19 BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC, INTC, ALK \u00b7 2026-10-19 BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC, INTC, ALK \u00b7 # Stock book \u2014 2026-10-19\n_Generated 2026-10-19T05:45:56.257083-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
