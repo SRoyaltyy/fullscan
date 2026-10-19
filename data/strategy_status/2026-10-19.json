@@ -26,8 +26,8 @@
    "SIT": 0
   },
   "holdup": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "paper": {
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-10-19",
- "generated_at": "2026-10-19T17:02:56-04:00",
+ "generated_at": "2026-10-19T17:08:47-04:00",
  "strategies": [
   {
    "buys": [
@@ -5431,13 +5431,23 @@
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "XP",
+    "QTEX",
+    "BSP",
+    "BYRN"
+   ],
    "family": "holdup",
    "name": "holdup",
-   "note": "log unreadable: [Errno 2] No such file or directory: '/home/runner/work/fullscan/fullscan/research/hot_n4_clean_v4/forward/holdup_log.jsonl'",
-   "sells": [],
+   "note": "sealed 2026-10-19T12:18:56Z",
+   "sells": [
+    "FEAM 453",
+    "SHMD 266",
+    "SRFM 1100",
+    "USDE 520"
+   ],
    "source": "research/hot_n4_clean_v4/forward/holdup_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
