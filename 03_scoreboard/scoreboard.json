@@ -25175,6 +25175,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-19",
+          "actual_pct": 0.69,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.48
         }
       },
       "lesson_schema_ok": true
@@ -31002,6 +31014,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.52
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-10-19",
+          "actual_pct": -0.41,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
         }
       },
       "lesson_schema_ok": true
@@ -33132,7 +33156,20 @@
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
       "outlier_watch": "Dow -0.09% and Apple +0.5% to a first $5T close vs NDX -1.88%; 10Y closed lower after >5.32% spike — stocks sold after the bond scare mean-reverted",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-10-19",
+          "actual_pct": -0.37,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "flat",
+          "confidence": 0.45
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -33581,7 +33618,7 @@
           "status": "hit"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-19_lesson.md",
       "sources_used": [
         {
           "url": "https://english.news.cn/20261020/ec2381b74b4d43c2824f5d2291a9c832/c.html",
@@ -33662,7 +33699,9 @@
       "key_interaction": "AI/tech bid amplified by upgrades was offset by rising UST yields, NAHB/housing, and 7/11 sectors red — net SPX +0.41% masked a fade-from-highs tape",
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
-      "outlier_watch": "Dow −0.07% and 7 of 11 sectors red with 10Y yields UP while NDX held +1.11%"
+      "outlier_watch": "Dow −0.07% and 7 of 11 sectors red with 10Y yields UP while NDX held +1.11%",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     }
   ]
 }
