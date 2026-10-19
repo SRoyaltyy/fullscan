@@ -63,7 +63,11 @@ jobs:
           FORWARD_BOOK: h1
           HOLDUP_GIT_REF: origin/main
           HOLDUP_MODE: fill
-        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/h1_fill_missing.py research/hot_n4_clean_v4/forward/forward.py
+        # h1_not_sent.py runs forward.py unchanged, except when no Webull
+        # order went out (no sent share lock, paper status submit false):
+        # then it appends an add-only fill_missing note and exits 0, so one
+        # missed send day never blocks the next seal (10-09, 10-13, 10-16).
+        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/h1_fill_missing.py research/hot_n4_clean_v4/forward/h1_not_sent.py
       - name: Refresh the h1 close display
         id: closes
         if: success()
@@ -84,6 +88,7 @@ jobs:
             research/hot_n4_clean_v4/forward_h1/PRICE_LEDGER.jsonl
             research/hot_n4_clean_v4/forward_h1/price_revisions.jsonl
             research/hot_n4_clean_v4/forward_h1/mark_notes.jsonl
+            research/hot_n4_clean_v4/forward_h1/fill_missing_notes.jsonl
             dashboard/h1/log.json
             dashboard/h1/status.json
             dashboard/h1/closes.json
