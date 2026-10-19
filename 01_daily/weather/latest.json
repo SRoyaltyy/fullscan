@@ -1,6 +1,6 @@
 {
  "date": "2026-10-19",
- "generated_at": "2026-10-19T12:55:21.437504-04:00",
+ "generated_at": "2026-10-19T13:03:27.352658-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -21,15 +21,15 @@
   "yields_source": "fred_dgs10",
   "dgs10_delta_1d": -0.09,
   "dgs10_current": 5.1,
-  "dollar": "flat",
+  "dollar": "strong",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.14,
-  "vix_ratio": 0.932,
+  "dxy_pct_1d": 0.15,
+  "vix_ratio": 0.931,
   "vix_spot": 18.12,
   "vix_delta_1d": -1.87,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": -2.87,
+  "oil_pct_1d": -2.65,
   "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -180,14 +180,14 @@
   },
   "size": {
    "micro": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "risk-mixed, dollar flat [general predict + factors]"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors]"
    },
    "small": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "risk-mixed, dollar flat [general predict + factors]"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors]"
    },
    "large": {
     "stance": "neutral",
@@ -222,9 +222,9 @@
     "why": "risk-mixed [general predict]"
    },
    "rut": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "risk-mixed, dollar flat [general predict + factors]"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors]"
    },
    "none": {
     "stance": "neutral",
