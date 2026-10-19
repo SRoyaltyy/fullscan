@@ -2901,7 +2901,7 @@
   },
   "per_sleeve": {
     "tag": "RESEARCH",
-    "date": "2026-10-18",
+    "date": "2026-10-19",
     "live_sit": true,
     "keep_bar_unchanged": true,
     "n_sit": 1,
@@ -2921,15 +2921,15 @@
         "sit": true,
         "hard_red": false,
         "side": "long",
-        "s": 5.526,
+        "s": 2.125,
         "short_only": [],
         "dip_scoop": [
           {
-            "ticker": "IT",
+            "ticker": "PRMB",
             "side": "long",
             "open": null,
-            "px": 185.73,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 22.45,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2961,11 +2961,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "TOST",
+            "ticker": "SMMT",
             "side": "long",
             "open": null,
-            "px": 30.38,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 19.17,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2997,11 +2997,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "TWLO",
+            "ticker": "TMUS",
             "side": "long",
             "open": null,
-            "px": 287.79,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 166.2,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3033,11 +3033,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "PDFS",
+            "ticker": "TRU",
             "side": "long",
             "open": null,
-            "px": 56.43,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 70.19,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3069,11 +3069,47 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "YOU",
+            "ticker": "WSM",
             "side": "long",
             "open": null,
-            "px": 40.47,
-            "px_src": "session_export+elite_live_skipped",
+            "px": 231.03,
+            "px_src": "session_export",
+            "low": null,
+            "scoops": {
+              "0.5": {
+                "kind": "no_open",
+                "x": 0.5,
+                "fill": null
+              },
+              "1.0": {
+                "kind": "no_open",
+                "x": 1.0,
+                "fill": null
+              },
+              "1.5": {
+                "kind": "no_open",
+                "x": 1.5,
+                "fill": null
+              },
+              "2.0": {
+                "kind": "no_open",
+                "x": 2.0,
+                "fill": null
+              },
+              "3.0": {
+                "kind": "no_open",
+                "x": 3.0,
+                "fill": null
+              }
+            },
+            "tag": "RESEARCH"
+          },
+          {
+            "ticker": "CNK",
+            "side": "long",
+            "open": null,
+            "px": 38.38,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3109,7 +3145,43 @@
             "side": "long",
             "open": null,
             "px": 13.67,
-            "px_src": "session_export+elite_live_skipped",
+            "px_src": "session_export",
+            "low": null,
+            "scoops": {
+              "0.5": {
+                "kind": "no_open",
+                "x": 0.5,
+                "fill": null
+              },
+              "1.0": {
+                "kind": "no_open",
+                "x": 1.0,
+                "fill": null
+              },
+              "1.5": {
+                "kind": "no_open",
+                "x": 1.5,
+                "fill": null
+              },
+              "2.0": {
+                "kind": "no_open",
+                "x": 2.0,
+                "fill": null
+              },
+              "3.0": {
+                "kind": "no_open",
+                "x": 3.0,
+                "fill": null
+              }
+            },
+            "tag": "RESEARCH"
+          },
+          {
+            "ticker": "WLY",
+            "side": "long",
+            "open": null,
+            "px": 47.61,
+            "px_src": "session_export",
             "low": null,
             "scoops": {
               "0.5": {

@@ -6445,3 +6445,7 @@
 {"date":"2026-10-16","kind":"day","name":"yday_gainer_h5_webull_sim","record":"webull_sim","sha256":"ad7925b31d25982e29b05e1abc0725e3e91958244f5718520b431cd81b37c333"}
 {"date":"2026-10-18","kind":"day","name":"","record":"strategy_tickets","sha256":"b38c8a2d21fe31c822c806a95454a73936a24eecfc063d8d80cfb43a90cfd4fe"}
 {"date":"2026-10-16","kind":"day","name":"","record":"flatten_robust","sha256":"ee0d0b4f9ed6557b7ede9718d6e5d4b985d77f089cc083ed7d554d4f1d5fc43c"}
+{"date":"2026-10-16","kind":"day","name":"","record":"paper_equity","sha256":"906045df63dfc9a01130f784cf8aae1615d9bcc218ca5f3568481c58e3271535"}
+{"date":"2026-10-16","kind":"day","name":"","record":"paper_trades","sha256":"eb87369b6bad066fb7842de6709e45a6f728313ce6fecd22c8b9bf2ed0393037"}
+{"date":"2026-10-16","kind":"day","name":"","record":"paper_skipped","sha256":"98815c1165c97e120feb216bef1c1b0b6647ce5b7528413def72cf04f38a12dd"}
+{"date":"2026-10-18","kind":"day","name":"","record":"flatten_robust","sha256":"88f4bfd5993cfb364a654f8052e71321e4a0e3a1d247789e8a6abc59e3cb4a36"}
