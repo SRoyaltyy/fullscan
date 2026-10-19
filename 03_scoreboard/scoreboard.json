@@ -33525,18 +33525,107 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": 0.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7702.77,
+      "actual_close": 7690.73,
+      "actual_pct_change": 0.41,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://english.news.cn/20261020/ec2381b74b4d43c2824f5d2291a9c832/c.html",
+          "date_accessed": "2026-10-19",
+          "summary": "Official-style close confirms Channel 1 numbers and the narrow growth-vs-defensive split.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/10/19/stock-market-midday-oct-19-tech-stocks-rebound-as-ai-confidence-returns/",
+          "date_accessed": "2026-10-19",
+          "summary": "Pins the SPX path as an open/midday spike that later reversed, and shows yields rising — not falling — during the bounce.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/10/19/stock-market-midday-oct-19-tech-stocks-rebound-as-ai-confidence-returns/",
+          "date_accessed": "2026-10-19",
+          "summary": "Identifies the same-morning upgrade cluster and the housing print as the two live micro catalysts inside the sector split.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/19/china-economy-grows-faster-than-forecast-after-ai-boom-boosted-exports",
+          "date_accessed": "2026-10-19",
+          "summary": "Confirms the overnight data beat the morning used, and that it was an export/AI story with weak China internals.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.nahb.org/news-and-economics/press-releases/2026/10/builder-sentiment-falls-on-rising-rates",
+          "date_accessed": "2026-10-19",
+          "summary": "Same-day hard sentiment miss that maps onto XLRE/XLU weakness and the SPX fade, not the NDX high.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/19/france-hit-by-debt-sell-off-as-protests-unnerve-investors",
+          "date_accessed": "2026-10-19",
+          "summary": "Documents the Europe-red overlay the morning scored, and why US breadth/Dow never confirmed the Nasdaq bid.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/19/strait-of-hormuz-spilt-cargo-iran-attacks-container-ships",
+          "date_accessed": "2026-10-19",
+          "summary": "Keeps Hormuz in background: continuation risk, oil still elevated, IRGC tanker-fire claim unverified — consistent with offered oil rather than a new supply shock.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -33566,7 +33655,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 1.625,
-      "overlay_score": 0.5
+      "overlay_score": 0.5,
+      "ops_fail": false,
+      "path_shape": "reversal down (intraday spike faded, closed near low)",
+      "primary_driver": "Nasdaq/AI-semiconductor dip-buy after Friday’s AI-credit rout, juiced by same-morning GS/JPM/MS upgrades",
+      "key_interaction": "AI/tech bid amplified by upgrades was offset by rising UST yields, NAHB/housing, and 7/11 sectors red — net SPX +0.41% masked a fade-from-highs tape",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes",
+      "outlier_watch": "Dow −0.07% and 7 of 11 sectors red with 10Y yields UP while NDX held +1.11%"
     }
   ]
 }
