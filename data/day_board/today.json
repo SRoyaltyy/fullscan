@@ -1,11 +1,11 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T05:59:24.666865-04:00",
+  "generated_at": "2026-10-19T07:32:07.184411-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
-    "ok": 6,
-    "partial": 1,
+    "ok": 7,
+    "partial": 0,
     "fail": 1,
     "n": 8
   },

@@ -1,6 +1,6 @@
 # Stock book — 2026-10-19
 
-_Generated 2026-10-19T05:56:18.865433-04:00_
+_Generated 2026-10-19T07:32:03.698206-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -31,9 +31,9 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 ## All-green BUY / SELL
 
 - Mode: **green_pile** · SELL **core_weights_ex_green**
-- Pile: **152** liquid all-green names (need ≥ 8) of 2035
+- Pile: **148** liquid all-green names (need ≥ 8) of 2035
 - Core fired: join=yes, AB=yes, peer=yes
-- pile 152 ≥ 8 liquid all-green names — BUY 15 from the pile by green_rank (no opp); SELL is core weights on the non-green remainder
+- pile 148 ≥ 8 liquid all-green names — BUY 15 from the pile by green_rank (no opp); SELL is core weights on the non-green remainder
 
 ## Decision lattice — gate → route → rank
 

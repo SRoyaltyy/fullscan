@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T05:56:14.720420-04:00",
+  "generated_at": "2026-10-19T07:31:59.447335-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -33,9 +33,9 @@
     {
       "name": "news_judge",
       "family": "news",
-      "status": "missing",
+      "status": "ok",
       "n": null,
-      "detail": "LLM ticker tilts absent"
+      "detail": ""
     },
     {
       "name": "finviz_digest",
@@ -68,9 +68,9 @@
     {
       "name": "events",
       "family": "addon",
-      "status": "degraded",
+      "status": "ok",
       "n": null,
-      "detail": "QC fail: zero_events"
+      "detail": "35 events, scan_date=2026-10-19"
     },
     {
       "name": "map_heat",
@@ -103,7 +103,7 @@
   ],
   "family_status": {
     "join": "ok",
-    "news": "missing",
+    "news": "ok",
     "ab": "ok",
     "peer": "ok",
     "heat": "ok",
@@ -112,7 +112,7 @@
   },
   "families_present": {
     "join": true,
-    "news": false,
+    "news": true,
     "ab": true,
     "peer": true,
     "heat": true,
