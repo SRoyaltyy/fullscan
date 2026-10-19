@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T04:53:44.238091-04:00",
+  "generated_at": "2026-10-19T04:54:57.881556-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -547,19 +547,17 @@
           "path": "01_daily/weather/2026-10-19_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9440 vix=calm yields=falling",
-          "size": 9440,
+          "reason": "sectors=11 bytes=9543 vix=calm yields=falling",
+          "size": 9543,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
-            "events bull 8 / bear 10"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
           ]
         }
       ],
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
-        "events bull 8 / bear 10"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
       ]
     },
     {
@@ -756,12 +754,11 @@
           "path": "01_daily/weather/2026-10-19_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9440 vix=calm yields=falling",
-          "size": 9440,
+          "reason": "sectors=11 bytes=9543 vix=calm yields=falling",
+          "size": 9543,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
-            "events bull 8 / bear 10"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
           ]
         },
         {
@@ -782,8 +779,8 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2241494,
-          "said": "204 rows",
+          "size": 2250114,
+          "said": "203 rows",
           "bullets": [
             "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, CORT"
           ]
@@ -858,7 +855,7 @@
           "bullets": []
         }
       ],
-      "said": "204 rows",
+      "said": "203 rows",
       "bullets": [
         "HALO, ONC, LLY, HRMY, ETON"
       ]
@@ -964,8 +961,7 @@
     "weather": {
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
-        "events bull 8 / bear 10"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
       ]
     }
   },
@@ -1489,6 +1485,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-19\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-10-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-19T04:54:56.776665-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-10-19.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11538639,
+          "preview": "11765 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        }
+      ],
+      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11765 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
     }
   ],
   "href": {
