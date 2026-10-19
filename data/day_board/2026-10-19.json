@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T12:47:10.815250-04:00",
+  "generated_at": "2026-10-19T12:47:46.305039-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -827,9 +827,9 @@
           "path": "data/stock_book/2026-10-19_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=210",
-          "size": 1525493,
-          "said": "1d BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC \u00b7 0.49724999999999997",
+          "reason": "horizons=5 names=225",
+          "size": 1536862,
+          "said": "1d BUY SN, CBRL, PRCH, CAKE, SHOO, VEEV, CDNA, ARQT \u00b7 SELL ROIV, ARE, BNTX, GH, VSAT, IFRX \u00b7 0.49724999999999997",
           "bullets": []
         },
         {
@@ -839,10 +839,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 84093,
+          "size": 93708,
           "said": "Stock book \u2014 2026-10-19",
           "bullets": [
-            "_Generated 2026-10-19T07:32:03.698206-04:00_",
+            "_Generated 2026-10-19T12:47:20.448326-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -853,8 +853,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2550,
-          "said": "164 green \u00b7 ETON, ARQT, WAY, CORT, INCY, VEEV, AMN, CDNA, SIBN, EXEL",
+          "size": 2461,
+          "said": "157 green \u00b7 GLBE, SHOO, VCTR, WT, FIGS, SN, JXN, PRCH, HNI, SIG",
           "bullets": []
         },
         {
@@ -905,9 +905,9 @@
           "path": "data/stock_book/2026-10-19_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=210",
-          "size": 1525493,
-          "said": "1d BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC \u00b7 0.49724999999999997",
+          "reason": "horizons=5 names=225",
+          "size": 1536862,
+          "said": "1d BUY SN, CBRL, PRCH, CAKE, SHOO, VEEV, CDNA, ARQT \u00b7 SELL ROIV, ARE, BNTX, GH, VSAT, IFRX \u00b7 0.49724999999999997",
           "bullets": []
         },
         {
@@ -956,126 +956,126 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "CDNA",
-        "score": 0.8337797636157818
-      },
-      {
-        "ticker": "VEEV",
-        "score": 0.440722832336436
-      },
-      {
         "ticker": "SN",
-        "score": 0.407997786723631
-      },
-      {
-        "ticker": "BLFS",
-        "score": 0.7855905743942335
-      },
-      {
-        "ticker": "ILMN",
-        "score": 0.41337572363644054
-      },
-      {
-        "ticker": "PRCH",
-        "score": 0.8070181406744832
-      },
-      {
-        "ticker": "SHOO",
-        "score": 0.7176451412456195
+        "score": 0.41228679187551304
       },
       {
         "ticker": "CBRL",
-        "score": 0.7582374174986715
+        "score": 0.7930149516214733
+      },
+      {
+        "ticker": "PRCH",
+        "score": 0.8139089838637334
       },
       {
         "ticker": "CAKE",
-        "score": 0.7182463477506182
+        "score": 0.7343391747123458
+      },
+      {
+        "ticker": "SHOO",
+        "score": 0.718469176249944
+      },
+      {
+        "ticker": "VEEV",
+        "score": 0.3971163682837808
+      },
+      {
+        "ticker": "CDNA",
+        "score": 0.7686832551465634
+      },
+      {
+        "ticker": "ARQT",
+        "score": 0.7312184229079193
       },
       {
         "ticker": "AVPT",
-        "score": 0.6750450194399089
+        "score": 0.704045007987252
       },
       {
-        "ticker": "TRU",
-        "score": 0.44103282054223053
+        "ticker": "ETON",
+        "score": 0.6685105381974901
       },
       {
-        "ticker": "JXN",
-        "score": 0.5213734503919559
+        "ticker": "MQ",
+        "score": 0.6785934514970269
       },
       {
         "ticker": "LAUR",
-        "score": 0.5871377898646308
+        "score": 0.6286215797636239
       },
       {
-        "ticker": "RELY",
-        "score": 0.5591741948914406
+        "ticker": "TOST",
+        "score": 0.49641516135462216
       },
       {
-        "ticker": "ABX",
-        "score": 0.4888540105672492
+        "ticker": "TRU",
+        "score": 0.4653185622540826
+      },
+      {
+        "ticker": "JXN",
+        "score": 0.5275313855121289
       }
     ],
     "sell_1d": [
+      {
+        "ticker": "ROIV",
+        "score": -0.608162066163344
+      },
       {
         "ticker": "ARE",
         "score": -0.4535167536703368
       },
       {
-        "ticker": "NEOV",
-        "score": -0.3688463541888366
+        "ticker": "BNTX",
+        "score": -0.39722771321675465
+      },
+      {
+        "ticker": "GH",
+        "score": -0.3893571838598999
       },
       {
         "ticker": "VSAT",
-        "score": -0.36583046682770615
+        "score": -0.3658195935912882
+      },
+      {
+        "ticker": "IFRX",
+        "score": -0.3625876678727329
+      },
+      {
+        "ticker": "TYRA",
+        "score": -0.3614819951721589
+      },
+      {
+        "ticker": "WVE",
+        "score": -0.3591598801806976
       },
       {
         "ticker": "BAK",
-        "score": -0.36423588642979243
-      },
-      {
-        "ticker": "ROIV",
-        "score": -0.3640062589448013
-      },
-      {
-        "ticker": "SOC",
-        "score": -0.36106174176073086
-      },
-      {
-        "ticker": "INTC",
-        "score": -0.35111493616685563
+        "score": -0.35576791589037027
       },
       {
         "ticker": "ALK",
         "score": -0.3496324992694038
       },
       {
-        "ticker": "PAL",
-        "score": -0.3264255006325073
+        "ticker": "AXSM",
+        "score": -0.34928581604075715
       },
       {
-        "ticker": "VNET",
-        "score": -0.32173219462411756
+        "ticker": "NEOV",
+        "score": -0.34477378969227834
       },
       {
-        "ticker": "PCT",
-        "score": -0.32137323354022956
+        "ticker": "CGEM",
+        "score": -0.34452285768580143
       },
       {
-        "ticker": "CMTG",
-        "score": -0.3210852097833349
+        "ticker": "PYXS",
+        "score": -0.33517794375666854
       },
       {
-        "ticker": "NN",
-        "score": -0.3178030595806984
-      },
-      {
-        "ticker": "PRM",
-        "score": -0.3091681085988022
-      },
-      {
-        "ticker": "HPP",
-        "score": -0.30465111471884604
+        "ticker": "LXRX",
+        "score": -0.33435198917289227
       }
     ],
     "flatten": {
@@ -2451,6 +2451,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-19T12:47:45.309558-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-19_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1536862,
+          "preview": "1d BUY SN, CBRL, PRCH, CAKE, SHOO, VEEV, CDNA, ARQT \u00b7 SELL ROIV, ARE, BNTX, GH, VSAT, IFRX, TYRA, WVE"
+        },
+        {
+          "path": "data/stock_book/2026-10-19_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2461,
+          "preview": "green 157 \u00b7 GLBE, SHOO, VCTR, WT, FIGS, SN, JXN, PRCH, HNI, SIG"
+        },
+        {
+          "path": "data/stock_book/2026-10-19_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2455,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-19_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13815,
+          "preview": "2026-10-19 BUY SN, CBRL, PRCH, CAKE, SHOO, VEEV, CDNA, ARQT \u00b7 SELL ROIV, ARE, BNTX, GH, VSAT, IFRX, TYRA, WVE"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13815,
+          "preview": "2026-10-19 BUY SN, CBRL, PRCH, CAKE, SHOO, VEEV, CDNA, ARQT \u00b7 SELL ROIV, ARE, BNTX, GH, VSAT, IFRX, TYRA, WVE"
+        },
+        {
+          "path": "01_daily/2026-10-19_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 94904,
+          "preview": "# Stock book \u2014 2026-10-19\n_Generated 2026-10-19T12:47:20.448326-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY SN, CBRL, PRCH, CAKE, SHOO, VEEV, CDNA, ARQT \u00b7 SELL ROIV, ARE, BNTX, GH, VSAT, IFRX, TYRA, WVE \u00b7 green 157 \u00b7 GLBE, SHOO, VCTR, WT, FIGS, SN, JXN, PRCH, HNI, SIG \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-19 BUY SN, CBRL, PRCH, CAKE, SHOO, VEEV, CDNA, ARQT \u00b7 SELL ROIV, ARE, BNTX, GH, VSAT, IFRX, TYRA, WVE \u00b7 2026-10-19 BUY SN, CBRL, PRCH, CAKE, SHOO, VEEV, CDNA, ARQT \u00b7 SELL ROIV, ARE, BNTX, GH, VSAT, IFRX, TYRA, WVE \u00b7 # Stock book \u2014 2026-10-19\n_Generated 2026-10-19T12:47:20.448326-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -2496,6 +2549,54 @@
       "path": "data/day_board/2026-10-19.json",
       "at": "2026-10-19T12:47:11-04:00",
       "commit_msg": "auto: land peer_rs [2026-10-19]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39287142647",
+      "manifest": "research/input_freeze/2026-10-19/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-19_stock_book.md",
+      "at": "2026-10-19T12:47:46-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-19]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39287142647",
+      "manifest": "research/input_freeze/2026-10-19/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-19.json",
+      "at": "2026-10-19T12:47:46-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-19]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39287142647",
+      "manifest": "research/input_freeze/2026-10-19/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-19_green.json",
+      "at": "2026-10-19T12:47:46-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-19]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39287142647",
+      "manifest": "research/input_freeze/2026-10-19/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-19_input_health.json",
+      "at": "2026-10-19T12:47:46-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-19]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39287142647",
+      "manifest": "research/input_freeze/2026-10-19/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-19_stock_book.json",
+      "at": "2026-10-19T12:47:46-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-19]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39287142647",
+      "manifest": "research/input_freeze/2026-10-19/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-19_suggestions.json",
+      "at": "2026-10-19T12:47:46-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-19]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "39287142647",
       "manifest": "research/input_freeze/2026-10-19/manifest.json"
