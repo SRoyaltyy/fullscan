@@ -1,67 +1,69 @@
-# News Judge — 2026-10-16
+# News Judge — 2026-10-19
 
 ### IMPORTANT NEWS (my ranking)
-1. Hawkish Fed/hot inflation lifts October hike odds; Warsh IMF fireside keeps options open — rates cluster sets SPX beta and rate-sensitive sector direction.  
-2. AI selloff hammers hedge funds; CoreWeave debt slump; dollar falls on AI impact — AI infrastructure risk appetite and deleveraging signal.  
-3. Boeing 737 MAX 10 certification halted by FAA over software glitch — 31% of undelivered 737 order book at risk; industrials/Dow drag.  
-4. AbbVie FDA approval of JUVMO (tavapadon) for Parkinson's — first-in-class large-cap pharma catalyst, healthcare sympathy.  
-5. Amgen positive Phase 3 dazodalibep data in Sjögren's; Jefferies raises PT — confirms healthcare pipeline catalyst.  
-6. APH drops 6.5% on Fabrinet earnings weakness and rising yields — tech hardware/AI supply-chain earnings warning.  
-7. $2T deficit and 5% Treasury yields; 10Y yield levels in focus — rates regime overhang for equity multiples.  
-8. UK competition regulator targets Microsoft business software grip — software/regulatory overhang for MSFT/IGV.
-
-RULES_APPLIED: a-voting-fed-member-chair-or-governor-has-a-same-calendar-da; scheduled-same-session-fed-chair-fomc-keynote-is-the-unresol. Warsh same-day IMF fireside is unresolved policy binary; keep B3=0 until it prints and do not emit signed direction from the Fed binary alone.
+1. **Big Tech earnings loom with AI jitters and VIX spike; FOMC collision** — dominant index-risk theme for SPX/QQQ and crowded AI/Mag7 baskets. Provisional channel: risk.
+2. **Brent crude holds near $110 on Mideast and Ukraine conflicts** — oil >$100 keeps inflation/rates risk alive and pressures SPX beta while supporting energy. Provisional channel: risk.
+3. **Hawkish Fed comments lift October hike bets; spot gold drops >$100** — direct rates/discount-rate signal for equity multiples. Provisional channel: rates.
+4. **Boeing 737 MAX 10 certification halted by FAA over software glitch** — large industrials/supplier-chain and sector-sentiment item; 31% of undelivered 737 book at risk. Provisional channel: sector_policy.
+5. **China Q3 GDP +4.5% beat; home-price slump eases** — global demand/commodity and China-exposed basket signal, but foreign-weak-link relevance. Provisional channel: sector_fundamental.
+6. **Microsoft pulls out of UK data center deal with Nscale** — AI-infrastructure/neocloud capex signal with sector force beyond single-name MSFT. Provisional channel: sector_fundamental.
+7. **Nvidia Vera chiplet reversal; neocloud shakeout risk** — AI semis leadership and crowded-basket risk. Provisional channel: sector_fundamental.
 
 ### STEP 1 — FRAMEWORK SCORE
-1. Hawkish Fed/hot inflation + Warsh — keep; us_relevance high; channel rates; geography us_domestic/global_priced; severity regime; horizon 1d-1w; action_object spx; detail SPX beta/rate-sensitive sectors; polarity hawkish; confidence 0.85.  
-2. AI selloff/CoreWeave/dollar — keep; us_relevance high; channel risk; geography global_priced; severity session; horizon 1d-1w; action_object basket; detail AI infrastructure/QQQ; polarity bearish; confidence 0.82.  
-3. Boeing FAA halt — keep; us_relevance high; channel sector_fundamental; geography us_domestic; severity session; horizon 1d-1w; action_object single_name; detail BA; polarity bearish; confidence 0.78.  
-4. AbbVie JUVMO approval — keep; us_relevance medium; channel sector_fundamental; geography us_domestic; severity session; horizon 1d-1w; action_object basket; detail Healthcare/XLV; polarity bullish; confidence 0.76.  
-5. Amgen Phase 3 — keep; us_relevance medium; channel sector_fundamental; geography us_domestic; severity session; horizon 1d-1w; action_object basket; detail Healthcare/XLV; polarity bullish; confidence 0.75.  
-6. APH drop — conditional; us_relevance medium; channel sector_fundamental; geography us_domestic; severity session; horizon 1d-1w; action_object single_name; detail APH; polarity bearish; confidence 0.70.  
-7. $2T deficit/5% yields — conditional; us_relevance high; channel rates; geography us_domestic; severity regime; horizon 1w-1m; action_object spx; detail SPX beta; polarity context; confidence 0.70.  
-8. UK regulator/Microsoft — conditional; us_relevance medium; channel sector_policy; geography foreign_weak_link; severity session; horizon 1w; action_object sector_etf; detail IGV/MSFT; polarity bearish; confidence 0.65.
+1. Big Tech/FOMC/VIX — keep; us_relevance high; channel risk; geography us_domestic; severity regime; horizon 1d-1w; object spx:SPX/QQQ beta; pol mixed; conf 0.80.
+2. Brent near $110 — keep; us_relevance high via inflation/rates; channel risk; geography global_priced; severity regime; horizon 1d-1w; object sector_etf:XLE and SPX beta; pol mixed; conf 0.80.
+3. Hawkish Fed/gold — keep; us_relevance high; channel rates; geography us_domestic; severity session; horizon 1d-1w; object spx:SPX duration/multiple; pol hawkish; conf 0.78.
+4. BA MAX 10 — conditional; us_relevance high sector; channel sector_policy; geography us_domestic; severity session; horizon 1d-1w; object sector_etf:ITA/BA; pol bearish; conf 0.74.
+5. China GDP — conditional; us_relevance medium; channel sector_fundamental; geography foreign_weak_link; severity session; horizon 1d-1w; object basket:China-exposed/commodities; pol bullish; conf 0.66.
+6. MSFT/Nscale — conditional; us_relevance medium; channel sector_fundamental; geography us_supply_chain; severity session; horizon 1d-1w; object basket:AI infrastructure/neocloud; pol mixed; conf 0.64.
+7. Nvidia chiplet/neocloud — conditional; us_relevance high semis; channel sector_fundamental; geography global_priced; severity session; horizon 1d-1w; object sector_etf:SMH/AI semis; pol mixed; conf 0.62.
 
 ### STEP 2 — INTERACTIONS
-AMGN Phase 3 + ABBV FDA approval → Healthcare basket sympathy, not only single names; AI selloff/CoreWeave debt + APH Fabrinet weakness + rising yields → tech/AI hardware risk cluster; hawkish Fed/hot inflation + Warsh same-day binary + gold drop → one rates cluster, cap direction until Warsh prints; dollar weakness + AI selloff → mixed for multinationals but risk-off for crowded AI basket.
+- AI earnings + FOMC + Brent >$100: treat as a rates/risk cluster; cap SPX beta and do not buy software on dovish-rate hope alone.
+- Microsoft Nscale exit + neocloud shakeout: AI infrastructure mixed; do not double-count AI capex as bullish.
+- Hawkish Fed/gold -$100 vs silver hike-bet decrease: rates signal conflict; prefer yields/FOMC path over metals.
 
 ### STEP 3 — RECLASSIFY AUDIT
-RESCUED_FROM_NOISE: AI selloff hammers hedge funds; CoreWeave's slump spotlights debt burden; CoreWeave shares/bonds weekly losses; Dollar heads for weekly fall on AI selloff impact; Indian Clean Power Firms Brace for Data-Center Demand Surge.  
-DROPPED_FROM_USABLE: Powell obituaries/volleyball/Lake Powell/Powell Industries options; CVBA breakfast; US 10-year Treasury yield levels not unprecedented; World Bank critical minerals financing; most topic_fed false positives.
+Rescued from noise: AI selloff/Mag7 earnings turning-point item, option-trader VIX surge item, China growth/home-price item. Dropped from usable: Powell name-match noise cluster, Nextdc Melbourne data-center delay, and the conflicting silver Fed-hike-bets item.
+
+RULES_APPLIED: none — no same-day CPI/NFP/FOMC binary or fresh kinetic oil increment is confirmed in the input; FOMC/pre-FOMC silence is treated as a rates theme only.
 
 ### STEP 4 — B1 / SECTOR INJECT
-NEWS_JUDGE: n=8 rescued=5  
-MACRO rates: [hawkish] hot inflation + hike odds; Warsh IMF fireside unresolved, keep B3=0 until print (regime/1d-1w)  
-MACRO risk: [bearish] AI selloff/CoreWeave debt/dollar weakness pressures QQQ/AI infra (session/1d-1w)  
-SECTOR Healthcare: [bullish] ABBV FDA approval + AMGN Phase 3 sympathy (XLV/basket)  
-SECTOR Industrials: [bearish] BA 737 MAX 10 FAA halt risks order book (BA/XLI)  
-SECTOR Technology: [bearish] APH drop on Fabrinet weakness + rising yields (XLK/AI hardware)  
-SECTOR Software: [bearish] UK regulator targets Microsoft software grip (IGV/MSFT)  
-INTERACTION: AMGN+ABBV healthcare sympathy; AI selloff+APH+CoreWeave = tech/AI risk cluster; Fed/Warsh rates cluster caps direction  
-WATCH: Warsh unresolved; if B6 flat, do not emit signed direction from Fed binary
+NEWS_JUDGE: n=7 rescued=3
+MACRO rates: [hawkish] Hawkish Fed comments lift Oct hike bets; gold -$100 (session/1d-1w)
+MACRO risk: [mixed] Big Tech earnings + FOMC collide; AI jitters lift VIX (regime/1d-1w)
+MACRO risk: [bearish] Brent near $110 on Mideast/Ukraine keeps oil/inflation risk elevated (regime/1d-1w)
+SECTOR energy: [bullish] Oil >$100 supports XLE but pressures SPX beta (XLE/SPX)
+SECTOR industrials: [bearish] FAA halts 737 MAX 10 certification; 31% undelivered 737 book at risk (ITA/BA)
+SECTOR AI infra: [mixed] Microsoft exits UK Nscale data-center deal; neocloud shakeout risk (AI infra basket)
+SECTOR semis: [mixed] Nvidia chiplet reversal/neocloud shakeout risk (SMH/AI semis)
+MACRO global: [bullish] China Q3 GDP 4.5% beat/home-price slump eases (China-exposed basket)
+INTERACTION: AI earnings + FOMC + oil >$100 = do not buy software on dovish hope; energy hedge but SPX beta capped
+WATCH: Fed hike-odds signals conflict (gold vs silver); FOMC/pre-FOMC silence can dominate
 
 NEWS_PARSE_BEGIN
-IMPORTANT_COUNT: 8
+IMPORTANT_COUNT: 7
 TOP_ITEMS:
-- Hawkish Fed/hot inflation lifts October hike odds; Warsh IMF fireside keeps options open | keep=keep | channel=rates | severity=regime | horizon=1d-1w | object=spx:SPX beta/rate-sensitive sectors | pol=hawkish | conf=0.85
-- AI selloff hammers hedge funds; CoreWeave debt slump; dollar falls on AI impact | keep=keep | channel=risk | severity=session | horizon=1d-1w | object=basket:AI infrastructure/QQQ | pol=bearish | conf=0.82
-- Boeing 737 MAX 10 certification halted by FAA over software glitch | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=single_name:BA | pol=bearish | conf=0.78
-- AbbVie FDA approval of JUVMO (tavapadon) for Parkinson's | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=basket:Healthcare/XLV | pol=bullish | conf=0.76
-- Amgen positive Phase 3 dazodalibep data in Sjogren's; Jefferies raises PT | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=basket:Healthcare/XLV | pol=bullish | conf=0.75
-- APH drops 6.5% on Fabrinet earnings weakness and rising yields | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=single_name:APH | pol=bearish | conf=0.70
-- $2T deficit and 5% Treasury yields; 10Y yield levels in focus | keep=conditional | channel=rates | severity=regime | horizon=1w-1m | object=spx:SPX beta | pol=context | conf=0.70
-- UK competition regulator targets Microsoft business software grip | keep=conditional | channel=sector_policy | severity=session | horizon=1w | object=sector_etf:IGV/MSFT | pol=bearish | conf=0.65
-INTERACTIONS: AMGN Phase 3 + ABBV FDA approval -> Healthcare basket sympathy; AI selloff/CoreWeave debt + APH Fabrinet weakness + rising yields -> tech/AI hardware risk cluster; hawkish Fed/hot inflation + Warsh same-day binary + gold drop -> one rates cluster, cap direction until Warsh prints; dollar weakness + AI selloff -> mixed for multinationals but risk-off for crowded AI basket
-RESCUED_FROM_NOISE: AI selloff hammers hedge funds; CoreWeave's slump spotlights debt burden; CoreWeave shares/bonds weekly losses; Dollar heads for weekly fall on AI selloff impact; Indian Clean Power Firms Brace for Data-Center Demand Surge
-DROPPED_FROM_USABLE: Powell obituaries/volleyball/Lake Powell/Powell Industries options; CVBA breakfast; US 10-year Treasury yield levels not unprecedented; World Bank critical minerals financing; most topic_fed false positives
+- Big Tech earnings loom with AI jitters and VIX spike; FOMC collision | keep=keep | channel=risk | severity=regime | horizon=1d-1w | object=spx:SPX/QQQ beta | pol=mixed | conf=0.80
+- Brent crude holds near $110 on Mideast and Ukraine conflicts | keep=keep | channel=risk | severity=regime | horizon=1d-1w | object=sector_etf:XLE and SPX beta | pol=mixed | conf=0.80
+- Hawkish Fed comments lift October hike bets; spot gold drops >$100 | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=spx:SPX duration/multiple | pol=hawkish | conf=0.78
+- Boeing 737 MAX 10 certification halted by FAA over software glitch | keep=conditional | channel=sector_policy | severity=session | horizon=1d-1w | object=sector_etf:ITA/BA | pol=bearish | conf=0.74
+- China Q3 GDP +4.5% beat; home-price slump eases | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=basket:China-exposed/commodities | pol=bullish | conf=0.66
+- Microsoft pulls out of UK data center deal with Nscale | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=basket:AI infrastructure/neocloud | pol=mixed | conf=0.64
+- Nvidia Vera chiplet reversal; neocloud shakeout risk | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:SMH/AI semis | pol=mixed | conf=0.62
+INTERACTIONS: AI earnings+FOMC+oil>$100 = rates/risk cluster, cap SPX beta; Microsoft Nscale exit+neocloud shakeout = AI infra mixed, do not double-count AI capex; hawkish Fed/gold vs silver hike-bet decrease = rates signal conflict
+RESCUED_FROM_NOISE: AI Selloff Nears Turning Point as Mag 7 Earnings Loom; Option Traders Brace for Volatility Surge as AI Jitters Jolt Market; China's Growth Rebounds While Home-Price Slump Eases
+DROPPED_FROM_USABLE: Powell name-match noise cluster (sports/film/obituary/local events); Nextdc Flags Earnings Risk on Melbourne Data Center Power Delay; Silver Price Forecast Fed rate hike bets decrease
 B1_INJECT:
-NEWS_JUDGE: n=8 rescued=5
-MACRO rates: [hawkish] hot inflation + hike odds; Warsh IMF fireside unresolved, keep B3=0 until print (regime/1d-1w)
-MACRO risk: [bearish] AI selloff/CoreWeave debt/dollar weakness pressures QQQ/AI infra (session/1d-1w)
-SECTOR Healthcare: [bullish] ABBV FDA approval + AMGN Phase 3 sympathy (XLV/basket)
-SECTOR Industrials: [bearish] BA 737 MAX 10 FAA halt risks order book (BA/XLI)
-SECTOR Technology: [bearish] APH drop on Fabrinet weakness + rising yields (XLK/AI hardware)
-SECTOR Software: [bearish] UK regulator targets Microsoft software grip (IGV/MSFT)
-INTERACTION: AMGN+ABBV healthcare sympathy; AI selloff+APH+CoreWeave = tech/AI risk cluster; Fed/Warsh rates cluster caps direction
-WATCH: Warsh unresolved; if B6 flat, do not emit signed direction from Fed binary
+NEWS_JUDGE: n=7 rescued=3
+MACRO rates: [hawkish] Hawkish Fed comments lift Oct hike bets; gold -$100 (session/1d-1w)
+MACRO risk: [mixed] Big Tech earnings + FOMC collide; AI jitters lift VIX (regime/1d-1w)
+MACRO risk: [bearish] Brent near $110 on Mideast/Ukraine keeps oil/inflation risk elevated (regime/1d-1w)
+SECTOR energy: [bullish] Oil >$100 supports XLE but pressures SPX beta (XLE/SPX)
+SECTOR industrials: [bearish] FAA halts 737 MAX 10 certification; 31% undelivered 737 book at risk (ITA/BA)
+SECTOR AI infra: [mixed] Microsoft exits UK Nscale data-center deal; neocloud shakeout risk (AI infra basket)
+SECTOR semis: [mixed] Nvidia chiplet reversal/neocloud shakeout risk (SMH/AI semis)
+MACRO global: [bullish] China Q3 GDP 4.5% beat/home-price slump eases (China-exposed basket)
+INTERACTION: AI earnings + FOMC + oil >$100 = do not buy software on dovish hope; energy hedge but SPX beta capped
+WATCH: Fed hike-odds signals conflict (gold vs silver); FOMC/pre-FOMC silence can dominate
 NEWS_PARSE_END
