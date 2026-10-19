@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-8.40%** ($9,160) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 202 · skips 209 · realized $-2117.42.
+Cash book **-9.83%** ($9,017) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 205 · skips 209 · realized $-2117.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -366,6 +366,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $49.53 | ▲ close $9,164.85 vs 09:30 $9,125.23 (session +40.26) | 16:00 close · cash $49.53 · equity $9,164.85 vs 09:30 $9,125.23 (+39.62; session marks +40.26) · 2 name(s) marked open→close (per-name table). CNK×116 09:30 $38.44 → close $38.52 +9.28; HLP×1549 09:30 $2.98 → close $3.00 +30.98 | — |
 | 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $49.53 | ▼ 09:30 equity $9,089.31 vs yday $9,164.85 (-75.54) | 09:30 open · cash $49.53 (unchanged overnight, no fees) · equity $9,089.31 vs prior close $9,164.85 (-75.54) · 2 name(s) re-marked at the open (per-name table). CNK×116 yday $38.52 → 09:30 $38.67 +17.40; HLP×1549 yday $3.00 → 09:30 $2.94 -92.94 | — |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $49.53 | ▲ close $9,160.21 vs 09:30 $9,089.31 (session +70.90) | 16:00 close · cash $49.53 · equity $9,160.21 vs 09:30 $9,089.31 (+70.90; session marks +70.90) · 2 name(s) marked open→close (per-name table). CNK×116 09:30 $38.67 → close $38.48 -22.04; HLP×1549 09:30 $2.94 → close $3.00 +92.94 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $49.53 | ▲ 09:30 equity $9,207.84 vs yday $9,160.21 (+47.63) | 09:30 open · cash $49.53 (unchanged overnight, no fees) · equity $9,207.84 vs prior close $9,160.21 (+47.63) · 2 name(s) re-marked at the open (per-name table). CNK×116 yday $38.48 → 09:30 $38.49 +1.16; HLP×1549 yday $3.00 → 09:30 $3.03 +46.47 | — |
+| 2026-10-19 09:30 ET | **SELL** | `CNK` | 116 | $38.49 | $2.39 | $+66.03 | $4,511.98 | ▲ +66.03 after sell → book $9,205.45; vs 09:30 mark -2.39 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `HLP` | 1549 | $3.03 | $20.28 | $+254.05 | $9,185.17 | ▲ +254.05 after sell → book $9,185.17; vs 09:30 mark -20.28 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **BUY** | `EGG` | 1807 | $5.07 | $23.31 | — | $0.37 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; 🔵; ret5=+21.8; leftover $9185.17 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.37 | ▼ close $9,017.30 vs 09:30 $9,207.84 (session -144.56) | 16:00 close · cash $0.37 · equity $9,017.30 vs 09:30 $9,207.84 (-190.54; session marks -144.56) · 1 name(s) marked open→close (per-name table). EGG×1807 09:30 $5.07 → close $4.99 -144.56 | — |
 
 ## Not taken
 

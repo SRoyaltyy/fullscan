@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 WF = ROOT / ".github" / "workflows"
-SCRIPTS = ("forward.py", "prices.py", "h1_closes.py", "h1_seal_gate.py")
+SCRIPTS = ("forward.py", "prices.py", "h1_closes.py", "h1_seal_gate.py", "h1_not_sent.py")
 _RUN = re.compile(r"python3\s+((?:\S+/)?h1_fill_missing\.py\s+)?research/hot_n4_clean_v4/forward/(\w+\.py)")
 
 

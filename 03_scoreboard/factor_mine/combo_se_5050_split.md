@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · split short_news_r_h3/union_e_fresh_h3 w=0.5,0.5 net=priority
 
-Cash book **-13.23%** ($8,677) · signal-only (no cash/fees) was —. Starts YES **21/30**. Fills 300 · skips 315 · realized $+2068.42.
+Cash book **-14.10%** ($8,590) · signal-only (no cash/fees) was —. Starts YES **21/30**. Fills 305 · skips 315 · realized $+2068.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,858.00.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $12,659.22.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -525,6 +525,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,635.89 | ▲ close $4,582.15 vs 09:30 $4,496.85 (session +87.51) | 16:00 close · cash $9,635.89 · equity $4,582.15 vs 09:30 $4,496.85 (+85.30; session marks +87.51) · 4 name(s) marked open→close (per-name table). AA×57 09:30 $41.65 → close $41.45 +11.40; MOH×1 09:30 $214.05 → close $207.36 +6.69; NOG×13 09:30 $26.05 → close $27.16 -14.43; RBLX×43 09:30 $51.50 → close $49.55 +83.85 | — |
 | 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,423.60 | ▼ 09:30 equity $4,496.85 vs yday $4,572.41 (-75.56) | 09:30 open · cash $7,423.60 (unchanged overnight, no fees) · equity $4,496.85 vs prior close $4,572.41 (-75.56) · 3 name(s) re-marked at the open (per-name table). AA×57 yday $40.42 → 09:30 $41.65 -70.11; MOH×1 yday $212.50 → 09:30 $214.05 -1.55; NOG×13 yday $25.75 → 09:30 $26.05 -3.90 | — |
 | 2026-10-16 09:30 ET | **SHORT** | `RBLX` | 43 | $51.50 | $2.21 | — | $9,635.89 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+12.3; leftover $2248.43 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,426.53 | ▼ close $4,508.34 vs 09:30 $4,525.71 (session -15.38) | 16:00 close · cash $9,426.53 · equity $4,508.34 vs 09:30 $4,525.71 (-17.37; session marks -15.38) · 3 name(s) marked open→close (per-name table). AA×57 09:30 $41.79 → close $41.67 +6.84; NOG×13 09:30 $27.00 → close $27.75 -9.75; RBLX×43 09:30 $50.46 → close $50.75 -12.47 | — |
+| 2026-10-19 09:30 ET | **COVER** | `MOH` | 1 | $207.37 | $1.99 | $-1.23 | $9,426.53 | ▼ -1.23 after sell → book $4,523.72; vs 09:30 mark -1.99 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,635.89 | ▼ 09:30 equity $4,525.71 vs yday $4,582.15 (-56.44) | 09:30 open · cash $9,635.89 (unchanged overnight, no fees) · equity $4,525.71 vs prior close $4,582.15 (-56.44) · 4 name(s) re-marked at the open (per-name table). AA×57 yday $41.45 → 09:30 $41.79 -19.38; MOH×1 yday $207.36 → 09:30 $207.37 -0.01; NOG×13 yday $27.16 → 09:30 $27.00 +2.08; RBLX×43 yday $49.55 → 09:30 $50.46 -39.13 | — |
+| 2026-10-19 09:30 ET | **SELL** | `BAC` | 16 | $51.24 | $2.06 | $+18.46 | $1,039.89 | ▲ +18.46 after sell → book $4,096.09; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `FAST` | 16 | $51.37 | $2.06 | $+57.74 | $1,859.75 | ▲ +57.74 after sell → book $4,094.03; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `MS` | 4 | $181.54 | $2.02 | $+0.34 | $2,583.89 | ▲ +0.34 after sell → book $4,092.01; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `PGR` | 3 | $216.94 | $2.02 | $+25.89 | $3,232.69 | ▲ +25.89 after sell → book $4,089.99; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
 
 ## Not taken
 

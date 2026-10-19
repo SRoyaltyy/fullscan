@@ -308,6 +308,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **SELL** | `JBHT` | 7 | $228.00 | $2.03 | $-38.55 | $5,691.76 | ▼ -38.55 after sell → book $7,535.41; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 09:30 ET | **SELL** | `WSE` | 153 | $12.05 | $2.49 | $-14.12 | $7,532.92 | ▼ -14.12 after sell → book $7,532.92; vs 09:30 mark -2.49 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,532.92 | ▲ close $7,532.92 vs 09:30 $7,541.68 (session +0.00) | 16:00 close · cash $7,532.92 · no lots left · equity $7,532.92. | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,532.92 | ▲ 09:30 equity $7,532.92 vs yday $7,532.92 (+0.00) | 09:30 open · cash $7,532.92 · no holdings · equity $7,532.92 vs prior close $7,532.92 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,532.92 | ▲ close $7,532.92 vs 09:30 $7,532.92 (session +0.00) | 16:00 close · cash $7,532.92 · no lots left · equity $7,532.92. | — |
 
 ## Not taken
 

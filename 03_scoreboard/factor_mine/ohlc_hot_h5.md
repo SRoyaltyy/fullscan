@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-16.57%** ($8,343) · signal-only (no cash/fees) was +88.18%. Starts YES **4/30**. Fills 256 · skips 429 · realized $-1050.25.
+Cash book **-16.44%** ($8,356) · signal-only (no cash/fees) was +88.18%. Starts YES **4/30**. Fills 257 · skips 429 · realized $-1050.25.
 
 ## How this sleeve decides (like you are 10)
 
@@ -416,6 +416,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **BUY** | `INTA` | 24 | $43.99 | $2.06 | — | $1,196.33 | — | baseline list, no extra gate; list ohlc_hot; ret5=+12.9; leftover $1058.44 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 09:30 ET | **BUY** | `REAL` | 100 | $10.54 | $2.29 | — | $140.04 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+9.6; leftover $1058.44 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $140.04 | ▼ close $8,342.75 vs 09:30 $8,502.64 (session -119.37) | 16:00 close · cash $140.04 · equity $8,342.75 vs 09:30 $8,502.64 (-159.89; session marks -119.37) · 10 name(s) marked open→close (per-name table). ENGS×1 09:30 $3.72 → close $3.75 +0.03; QSI×6 09:30 $1.33 → close $1.12 -1.26; TRU×14 09:30 $74.90 → close $74.08 -11.48; BBWI×51 09:30 $20.45 → close $20.14 -15.81; BLMN×106 09:30 $9.90 → close $9.95 +4.77; VFC×61 09:30 $17.32 → close $16.85 -28.67; LW×19 09:30 $54.48 → close $53.59 -16.91; EL×9 09:30 $107.50 → close $104.54 -26.64; INTA×24 09:30 $43.99 → close $43.64 -8.40; REAL×100 09:30 $10.54 → close $10.39 -15.00 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $140.04 | ▼ 09:30 equity $8,310.30 vs yday $8,342.75 (-32.45) | 09:30 open · cash $140.04 (unchanged overnight, no fees) · equity $8,310.30 vs prior close $8,342.75 (-32.45) · 10 name(s) re-marked at the open (per-name table). BBWI×51 yday $20.14 → 09:30 $20.00 -7.14; BLMN×106 yday $9.95 → 09:30 $10.05 +10.60; EL×9 yday $104.54 → 09:30 $104.68 +1.26; ENGS×1 yday $3.75 → 09:30 $3.77 +0.02; INTA×24 yday $43.64 → 09:30 $43.51 -3.12; LW×19 yday $53.59 → 09:30 $52.87 -13.68; QSI×6 yday $1.12 → 09:30 $1.15 +0.15; REAL×100 yday $10.39 → 09:30 $10.38 -1.00; TRU×14 yday $74.08 → 09:30 $73.12 -13.44; VFC×61 yday $16.85 → 09:30 $16.75 -6.10 | — |
+| 2026-10-19 09:30 ET | **BUY** | `WIT` | 9 | $1.92 | $0.20 | — | $122.56 | — | baseline list, no extra gate; list ohlc_hot; ret5=+14.7; leftover $17.50 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $122.56 | ▲ close $8,356.33 vs 09:30 $8,310.30 (session +46.23) | 16:00 close · cash $122.56 · equity $8,356.33 vs 09:30 $8,310.30 (+46.03; session marks +46.23) · 11 name(s) marked open→close (per-name table). BBWI×51 09:30 $20.00 → close $19.84 -8.16; BLMN×106 09:30 $10.05 → close $9.95 -10.60; EL×9 09:30 $104.68 → close $105.78 +9.90; ENGS×1 09:30 $3.77 → close $3.76 -0.01; INTA×24 09:30 $43.51 → close $44.29 +18.72; LW×19 09:30 $52.87 → close $53.44 +10.83; QSI×6 09:30 $1.15 → close $1.09 -0.33; REAL×100 09:30 $10.38 → close $10.40 +2.00; TRU×14 09:30 $73.12 → close $73.12 +0.00; VFC×61 09:30 $16.75 → close $17.14 +23.79; WIT×9 09:30 $1.92 → close $1.93 +0.09 | — |
 
 ## Not taken
 

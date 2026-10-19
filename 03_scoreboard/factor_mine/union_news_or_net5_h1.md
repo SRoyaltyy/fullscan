@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 5
 
-Cash book **-28.76%** ($7,124) · signal-only (no cash/fees) was -10.75%. Starts YES **1/30**. Fills 130 · skips 18 · realized $-1136.92.
+Cash book **-28.73%** ($7,127) · signal-only (no cash/fees) was -10.75%. Starts YES **1/30**. Fills 131 · skips 18 · realized $-1136.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -296,6 +296,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,123.65 | ▲ close $7,123.65 vs 09:30 $7,123.65 (session +0.00) | 16:00 close · cash $7,123.65 · no lots left · equity $7,123.65. | — |
 | 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,123.65 | ▲ 09:30 equity $7,123.65 vs yday $7,123.65 (+0.00) | 09:30 open · cash $7,123.65 · no holdings · equity $7,123.65 vs prior close $7,123.65 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,123.65 | ▲ close $7,123.65 vs 09:30 $7,123.65 (session +0.00) | 16:00 close · cash $7,123.65 · no lots left · equity $7,123.65. | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,123.65 | ▲ 09:30 equity $7,123.65 vs yday $7,123.65 (+0.00) | 09:30 open · cash $7,123.65 · no holdings · equity $7,123.65 vs prior close $7,123.65 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-19 09:30 ET | **BUY** | `EOG` | 45 | $157.52 | $2.12 | — | $33.12 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+7.3; leftover $7123.65 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.12 | ▲ close $7,127.37 vs 09:30 $7,123.65 (session +5.85) | 16:00 close · cash $33.12 · equity $7,127.37 vs 09:30 $7,123.65 (+3.72; session marks +5.85) · 1 name(s) marked open→close (per-name table). EOG×45 09:30 $157.52 → close $157.65 +5.85 | — |
 
 ## Not taken
 

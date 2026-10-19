@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 59.13,
+      "shares": 46,
+      "side": "BUY",
+      "ticker": "BTI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 31.26,
+      "shares": 87,
+      "side": "BUY",
+      "ticker": "WMG"
+    },
+    {
+      "fill_rule": "open",
+      "price": 157.52,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "EOG"
+    },
+    {
+      "fill_rule": "open",
+      "price": 77.39,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "SU"
+    }
+  ],
+  "cash": 85.49,
+  "date": "2026-10-19",
+  "equity": 10901.13,
+  "fees": 18.8194,
+  "fills": [
+    {
+      "fees": 2.439,
+      "fill_rule": "open",
+      "pnl": -65.58,
+      "price": 20.0,
+      "shares": 135,
+      "side": "SELL",
+      "ticker": "BBWI"
+    },
+    {
+      "fees": 2.2114,
+      "fill_rule": "open",
+      "pnl": -34.63,
+      "price": 43.51,
+      "shares": 63,
+      "side": "SELL",
+      "ticker": "INTA"
+    },
+    {
+      "fees": 2.1958,
+      "fill_rule": "open",
+      "pnl": -54.82,
+      "price": 47.02,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "PACS"
+    },
+    {
+      "fees": 3.4582,
+      "fill_rule": "open",
+      "pnl": -48.93,
+      "price": 10.38,
+      "shares": 263,
+      "side": "SELL",
+      "ticker": "REAL"
+    },
+    {
+      "fees": 2.128,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 59.13,
+      "shares": 46,
+      "side": "BUY",
+      "ticker": "BTI"
+    },
+    {
+      "fees": 2.251,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 31.26,
+      "shares": 87,
+      "side": "BUY",
+      "ticker": "WMG"
+    },
+    {
+      "fees": 2.041,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 157.52,
+      "shares": 17,
+      "side": "BUY",
+      "ticker": "EOG"
+    },
+    {
+      "fees": 2.095,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 77.39,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "SU"
+    }
+  ],
+  "holdings": [
+    "BTI",
+    "EOG",
+    "SU",
+    "WMG"
+  ],
+  "mean": -0.4803,
+  "n_trades_today": 8,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 20.0,
+      "shares": 135,
+      "side": "SELL",
+      "ticker": "BBWI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 43.51,
+      "shares": 63,
+      "side": "SELL",
+      "ticker": "INTA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 47.02,
+      "shares": 58,
+      "side": "SELL",
+      "ticker": "PACS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 10.38,
+      "shares": 263,
+      "side": "SELL",
+      "ticker": "REAL"
+    }
+  ],
+  "state": {
+    "after": "2026-10-19",
+    "cash": 85.49,
+    "pos": {
+      "BTI": {
+        "close_px": 58.51,
+        "cost": 2722.108,
+        "entry_date": "2026-10-19",
+        "entry_px": 59.13,
+        "fee_in": 2.128,
+        "last_px": 59.13,
+        "min_hold": 1,
+        "notional": 2719.98,
+        "peak_px": 59.13,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; ret5=+8.1; leftover $2730.02",
+        "shares": 46,
+        "ticker": "BTI"
+      },
+      "EOG": {
+        "close_px": 157.65,
+        "cost": 2679.8810000000003,
+        "entry_date": "2026-10-19",
+        "entry_px": 157.52,
+        "fee_in": 2.041,
+        "last_px": 157.52,
+        "min_hold": 1,
+        "notional": 2677.84,
+        "peak_px": 157.52,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+7.3; leftover $2730.02",
+        "shares": 17,
+        "ticker": "EOG"
+      },
+      "SU": {
+        "close_px": 78.39,
+        "cost": 2710.745,
+        "entry_date": "2026-10-19",
+        "entry_px": 77.39,
+        "fee_in": 2.095,
+        "last_px": 77.39,
+        "min_hold": 1,
+        "notional": 2708.65,
+        "peak_px": 77.39,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+8.1; leftover $2730.02",
+        "shares": 35,
+        "ticker": "SU"
+      },
+      "WMG": {
+        "close_px": 31.04,
+        "cost": 2721.8710000000005,
+        "entry_date": "2026-10-19",
+        "entry_px": 31.26,
+        "fee_in": 2.251,
+        "last_px": 31.26,
+        "min_hold": 1,
+        "notional": 2719.6200000000003,
+        "peak_px": 31.26,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list ohlc_hot; ret5=+9.3; leftover $2730.02",
+        "shares": 87,
+        "ticker": "WMG"
+      }
+    },
+    "yday_equity": 10901.13
+  }
+}

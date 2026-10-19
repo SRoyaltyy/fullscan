@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+1.61%** ($10,161) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 228 · skips 96 · realized $+54.59.
+Cash book **+0.73%** ($10,073) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 235 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -390,6 +390,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **COVER** | `TLSA` | 617 | $1.08 | $7.96 | $-28.39 | $11,034.26 | ▼ -28.39 after sell → book $10,162.91; vs 09:30 mark -7.96 | dropped from list after 2 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 09:30 ET | **COVER** | `USB` | 15 | $58.09 | $2.04 | $-33.36 | $10,160.88 | ▼ -33.36 after sell → book $10,160.88; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,160.88 | ▲ close $10,160.88 vs 09:30 $10,185.18 (session +0.00) | 16:00 close · cash $10,160.88 · no lots left · equity $10,160.88. | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,160.88 | ▲ 09:30 equity $10,160.88 vs yday $10,160.88 (+0.00) | 09:30 open · cash $10,160.88 · no holdings · equity $10,160.88 vs prior close $10,160.88 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-19 09:30 ET | **SHORT** | `CDNA` | 9 | $65.00 | $2.05 | — | $10,743.83 | — | alarm; gate alarm=True; list flatten; ret5=+0.5; leftover $635.05 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **SHORT** | `PRMB` | 33 | $19.22 | $2.13 | — | $11,375.96 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=+2.3; leftover $635.05 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **SHORT** | `BRO` | 9 | $68.44 | $2.05 | — | $11,989.87 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+10.4; leftover $635.05 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **SHORT** | `VET` | 48 | $13.17 | $2.17 | — | $12,619.86 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+11.2; leftover $635.05 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **SHORT** | `VIST` | 8 | $72.05 | $2.05 | — | $13,194.21 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+8.6; leftover $635.05 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **SHORT** | `NOG` | 23 | $27.00 | $2.10 | — | $13,813.11 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+9.7; leftover $635.05 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 judge🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **SHORT** | `BP` | 12 | $49.45 | $2.06 | — | $14,404.45 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+8.6; leftover $635.05 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,404.45 | ▼ close $10,073.47 vs 09:30 $10,160.88 (session -72.80) | 16:00 close · cash $14,404.45 · equity $10,073.47 vs 09:30 $10,160.88 (-87.41; session marks -72.80) · 7 name(s) marked open→close (per-name table). CDNA×9 09:30 $65.00 → close $67.08 -18.72; PRMB×33 09:30 $19.22 → close $19.79 -18.81; BRO×9 09:30 $68.44 → close $69.22 -7.02; VET×48 09:30 $13.17 → close $13.60 -20.64; VIST×8 09:30 $72.05 → close $70.86 +9.52; NOG×23 09:30 $27.00 → close $27.75 -17.25; BP×12 09:30 $49.45 → close $49.44 +0.12 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off, no 🚨
 
-Cash book **-22.85%** ($7,715) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 385 · skips 105 · realized $-1593.31.
+Cash book **-22.78%** ($7,722) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 393 · skips 105 · realized $-1593.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -552,6 +552,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **BUY** | `AVPT` | 74 | $15.03 | $2.21 | — | $1,153.00 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ret5=+3.2; leftover $1125.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 09:30 ET | **BUY** | `AMX` | 49 | $22.62 | $2.14 | — | $42.49 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+1.3; leftover $1125.86 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $42.49 | ▼ close $7,715.20 vs 09:30 $7,832.40 (session -104.56) | 16:00 close · cash $42.49 · equity $7,715.20 vs 09:30 $7,832.40 (-117.20; session marks -104.56) · 8 name(s) marked open→close (per-name table). EPR×17 09:30 $55.26 → close $55.71 +7.65; IT×4 09:30 $209.00 → close $205.35 -14.60; ITW×3 09:30 $273.23 → close $272.28 -2.85; POOL×5 09:30 $170.06 → close $172.57 +12.55; YOU×22 09:30 $45.60 → close $43.93 -36.74; TOST×34 09:30 $32.59 → close $31.62 -32.98; AVPT×74 09:30 $15.03 → close $14.33 -51.80; AMX×49 09:30 $22.62 → close $22.91 +14.21 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $42.49 | ▼ 09:30 equity $7,694.20 vs yday $7,715.20 (-21.00) | 09:30 open · cash $42.49 (unchanged overnight, no fees) · equity $7,694.20 vs prior close $7,715.20 (-21.00) · 8 name(s) re-marked at the open (per-name table). AMX×49 yday $22.91 → 09:30 $22.84 -3.43; AVPT×74 yday $14.33 → 09:30 $14.35 +1.11; EPR×17 yday $55.71 → 09:30 $55.28 -7.31; IT×4 yday $205.35 → 09:30 $202.41 -11.76; ITW×3 yday $272.28 → 09:30 $271.48 -2.40; POOL×5 yday $172.57 → 09:30 $171.48 -5.45; TOST×34 yday $31.62 → 09:30 $31.83 +7.14; YOU×22 yday $43.93 → 09:30 $43.98 +1.10 | — |
+| 2026-10-19 09:30 ET | **SELL** | `AVPT` | 74 | $14.35 | $2.23 | $-55.14 | $1,101.79 | ▼ -55.14 after sell → book $7,691.97; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `IT` | 4 | $202.41 | $2.02 | $+9.22 | $1,909.40 | ▲ +9.22 after sell → book $7,689.94; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `TOST` | 34 | $31.83 | $2.11 | $-30.04 | $2,989.51 | ▼ -30.04 after sell → book $7,687.83; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `YOU` | 22 | $43.98 | $2.08 | $-13.37 | $3,955.00 | ▼ -13.37 after sell → book $7,685.76; vs 09:30 mark -2.07 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **BUY** | `VEEV` | 3 | $310.33 | $2.00 | — | $3,022.01 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+4.8; leftover $988.75 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-19 09:30 ET | **BUY** | `ARQT` | 33 | $29.41 | $2.09 | — | $2,049.39 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ret5=+8.4; leftover $988.75 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-19 09:30 ET | **BUY** | `PACS` | 21 | $47.02 | $2.05 | — | $1,059.91 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+8.3; leftover $988.75 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `TBBB` | 17 | $58.00 | $2.04 | — | $71.87 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+3.8; leftover $988.75 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $71.87 | ▲ close $7,722.41 vs 09:30 $7,694.20 (session +44.84) | 16:00 close · cash $71.87 · equity $7,722.41 vs 09:30 $7,694.20 (+28.21; session marks +44.84) · 8 name(s) marked open→close (per-name table). AMX×49 09:30 $22.84 → close $22.83 -0.49; EPR×17 09:30 $55.28 → close $54.28 -17.00; ITW×3 09:30 $271.48 → close $270.17 -3.93; POOL×5 09:30 $171.48 → close $168.07 -17.05; VEEV×3 09:30 $310.33 → close $316.80 +19.41; ARQT×33 09:30 $29.41 → close $31.89 +81.84; PACS×21 09:30 $47.02 → close $45.85 -24.57; TBBB×17 09:30 $58.00 → close $58.39 +6.63 | — |
 
 ## Not taken
 

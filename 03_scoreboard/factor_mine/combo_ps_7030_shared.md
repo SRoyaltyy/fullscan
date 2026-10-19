@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_pack_h1/short_news_r_h3 w=0.7,0.3 net=priority
 
-Cash book **-2.47%** ($9,753) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 239 · skips 146 · realized $+1121.47.
+Cash book **-3.61%** ($9,639) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 246 · skips 146 · realized $+1121.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $5,792.69.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $257.51.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -404,6 +404,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **BUY** | `JBHT` | 29 | $228.00 | $2.08 | — | $2,910.96 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list earn_react; 🔵; ret5=+3.0; combo leftover $6667.52; owner union_news_pack_h1 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 09:30 ET | **SHORT** | `RBLX` | 56 | $51.50 | $2.27 | — | $5,792.69 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+12.3; combo leftover $2910.96; owner short_news_r_h3 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,792.69 | ▲ close $9,753.02 vs 09:30 $9,580.16 (session +185.40) | 16:00 close · cash $5,792.69 · equity $9,753.02 vs 09:30 $9,580.16 (+172.86; session marks +185.40) · 6 name(s) marked open→close (per-name table). AA×62 09:30 $41.65 → close $41.45 +12.40; AMX×199 09:30 $22.62 → close $22.91 +57.71; MOH×4 09:30 $214.05 → close $207.36 +26.76; NOG×39 09:30 $26.05 → close $27.16 -43.29; JBHT×29 09:30 $228.00 → close $228.78 +22.62; RBLX×56 09:30 $51.50 → close $49.55 +109.20 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,792.69 | ▼ 09:30 equity $9,630.33 vs yday $9,753.02 (-122.69) | 09:30 open · cash $5,792.69 (unchanged overnight, no fees) · equity $9,630.33 vs prior close $9,753.02 (-122.69) | — |
+| 2026-10-19 09:30 ET | **SELL** | `JBHT` | 29 | $227.30 | $2.14 | $-24.52 | $12,382.25 | ▼ -24.52 after sell → book $9,628.19; vs 09:30 mark -2.14 | union_news_pack_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **COVER** | `MOH` | 4 | $207.37 | $2.00 | $+7.07 | $11,550.77 | ▲ +7.07 after sell → book $9,626.19; vs 09:30 mark -2.00 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **BUY** | `EOG` | 14 | $157.52 | $2.03 | — | $9,343.46 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+7.3; combo leftover $2310.15; owner union_news_pack_h1 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `COP` | 15 | $145.73 | $2.04 | — | $7,155.47 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+9.3; combo leftover $2310.15; owner union_news_pack_h1 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `RELX` | 59 | $38.96 | $2.17 | — | $4,854.66 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+8.1; combo leftover $2310.15; owner union_news_pack_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `CHRD` | 15 | $152.81 | $2.04 | — | $2,560.55 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+9.2; combo leftover $2310.15; owner union_news_pack_h1 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `CNQ` | 43 | $53.51 | $2.12 | — | $257.51 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+8.4; combo leftover $2310.15; owner union_news_pack_h1 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $257.51 | ▲ close $9,638.70 vs 09:30 $9,630.33 (session +22.89) | 16:00 close · cash $257.51 · equity $9,638.70 vs 09:30 $9,630.33 (+8.37; session marks +22.89) · 9 name(s) marked open→close (per-name table). AA×62 09:30 $41.79 → close $41.67 +7.44; AMX×199 09:30 $22.84 → close $22.83 -1.99; NOG×39 09:30 $27.00 → close $27.75 -29.25; RBLX×56 09:30 $50.46 → close $50.75 -16.24; EOG×14 09:30 $157.52 → close $157.65 +1.82; COP×15 09:30 $145.73 → close $145.24 -7.35; RELX×59 09:30 $38.96 → close $39.25 +17.11; CHRD×15 09:30 $152.81 → close $154.48 +25.12; CNQ×43 09:30 $53.51 → close $54.12 +26.23 | — |
 
 ## Not taken
 

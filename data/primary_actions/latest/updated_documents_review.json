@@ -1,1 +1,291 @@
-[]
+[
+  {
+    "title": "Oncology (Cancer)/Hematologic Malignancies Approval Notifications",
+    "url": "http://www.fda.gov/drugs/resources-information-approved-drugs/oncology-cancerhematologic-malignancies-approval-notifications",
+    "native_id": "http://www.fda.gov/drugs/resources-information-approved-drugs/oncology-cancerhematologic-malignancies-approval-notifications",
+    "published_at": "2026-10-19T17:58:50+00:00",
+    "published_raw": "Mon, 19 Oct 2026 13:58:50 EDT",
+    "summary": "FDA does not issue approval announcements for every approval or drug label update that occurs in oncology and hematology. Please refer to Drugs@FDA for the latest approvals and prescribing information for specific products.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1395,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Drugs@FDA Data Files",
+    "url": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+    "native_id": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+    "published_at": "2026-10-19T16:48:30+00:00",
+    "published_raw": "Mon, 19 Oct 2026 12:48:30 EDT",
+    "summary": "Drugs@FDA Downloadable Data File in ZIP format, Data Definitions, and Entity Relationship Diagram (ERD)",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1398,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "What’s New for Biologics",
+    "url": "http://www.fda.gov/vaccines-blood-biologics/news-events-biologics/whats-new-biologics",
+    "native_id": "http://www.fda.gov/vaccines-blood-biologics/news-events-biologics/whats-new-biologics",
+    "published_at": "2026-10-19T13:42:43+00:00",
+    "published_raw": "Mon, 19 Oct 2026 09:42:43 EDT",
+    "summary": "Latest news from the Center for Biologics Evaluation and Research",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 1413,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "us-fda-03f7703006"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 36 - Homebuyers Privacy Protection Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ36",
+    "native_id": "PLAW-119publ36",
+    "published_at": "2026-10-19T15:57:00+00:00",
+    "published_raw": "Mon, 19 Oct 2026 15:57:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 2250,
+    "first_seen": "2026-10-15T17:47:31.406388+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Don’t Be Left Out in the Cold This Holiday Season with Unsafe Presents: Buy from Trusted Sources",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Dont-Be-Left-Out-in-the-Cold-This-Holiday-Season-with-Unsafe-Presents-Buy-from-Trusted-Sources",
+    "native_id": "https://www.cpsc.gov/_6d039050-7fba-4cdf-8361-f7db2f5e3963",
+    "published_at": null,
+    "published_raw": "Tue, 12/09/2025 - 12:00",
+    "summary": "CPSC Reminds Consumers to Shop Safely This Holiday Season",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3537,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "Put Safety on the Menu: Consumer Product Safety Commission Offers Safe Cooking Tips for a Joyful Holiday Season",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
+    "native_id": "https://www.cpsc.gov/_59de4207-4ace-44ca-ace0-3cde0cfb8ddb",
+    "published_at": null,
+    "published_raw": "Wed, 11/19/2025 - 12:00",
+    "summary": "WASHINGTON, D.C. – As families across America prepare to gather for Thanksgiving, the U.S. Consumer Product Safety Commission (CPSC) is issuing an urgent reminder that the holiday season marks the most dangerous time of year for cooking-related fires and",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3538,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "La CPSC aprueba nueva norma federal de seguridad para las bolas de gel con el fin de reducir el riesgo de lesiones y muerte niños pequeños",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Water-Beads-to-Reduce-the-Risk-of-Injury-and-Death-to-Young-Children",
+    "native_id": "https://www.cpsc.gov/_51cc46a0-5dc1-4f70-8cc1-c6b5b0f0a782",
+    "published_at": null,
+    "published_raw": "Thu, 08/21/2025 - 12:00",
+    "summary": "WASHINGTON D. C. – La Comisión de Seguridad de Productos del Consumidor (CPSC, por sus iniciales en inglés) aprobó una norma de seguridad de productos de consumo para juguetes tipo bolas de gel, lo que refleja el compromiso constante de la entidad con la",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3539,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "La CPSC aprueba nueva norma federal de seguridad para flotadores de cuello con el fin de prevenir muertes de bebés y lesiones graves",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Neck-Floats-to-Prevent-Infant-Deaths-and-Serious-Injuries",
+    "native_id": "https://www.cpsc.gov/_4014aab3-f30e-41aa-ad48-dd7587119b4c",
+    "published_at": null,
+    "published_raw": "Thu, 08/21/2025 - 12:00",
+    "summary": "La Comisión de Seguridad de Productos del Consumidor de EE. UU. (CPSC) aprobó una norma de seguridad de productos de consumo para mejorar la seguridad de los flotadores de cuello, un juguete acuático destinado a niños de hasta cuatro años de edad.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3540,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "La CPSC Retira Normas Desactualizadas, Que No Contribuyen a Un Avance en la Seguridad; El Nuevo Liderazgo Se Enfoca en Peligros Que Representan Riesgos Reales",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/La-CPSC-Retira-Normas-Desactualizadas-Que-No-Contribuyen-a-Un-Avance-en-la-Seguridad-El-Nuevo-Liderazgo-Se-Enfoca-en-Peligros-Que-Representan-Riesgos-Reales",
+    "native_id": "https://www.cpsc.gov/_ff913f8e-db56-4208-ba2f-a2582d4d76f7",
+    "published_at": null,
+    "published_raw": "Wed, 08/20/2025 - 12:00",
+    "summary": "La Comisión de Seguridad de Productos del Consumidor (CPSC) anunció hoy que retirará varias normas vigentes y proyectos de reglamentación que ya no concuerdan con las prioridades de la entidad y que no contribuyen a mejorar la seguridad.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3541,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "Office of Generic Drugs | Offices and Divisions",
+    "url": "http://www.fda.gov/about-fda/cder-offices-and-divisions/office-generic-drugs-offices-and-divisions",
+    "native_id": "http://www.fda.gov/about-fda/cder-offices-and-divisions/office-generic-drugs-offices-and-divisions",
+    "published_at": "2026-10-19T12:55:14+00:00",
+    "published_raw": "Mon, 19 Oct 2026 08:55:14 EDT",
+    "summary": "Generic Drugs Offices and Divisions",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 5195,
+    "first_seen": "2026-10-17T11:48:15.567792+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Ongoing | Cancer Accelerated Approvals",
+    "url": "http://www.fda.gov/drugs/resources-information-approved-drugs/ongoing-cancer-accelerated-approvals",
+    "native_id": "http://www.fda.gov/drugs/resources-information-approved-drugs/ongoing-cancer-accelerated-approvals",
+    "published_at": "2026-10-19T18:17:08+00:00",
+    "published_raw": "Mon, 19 Oct 2026 14:17:08 EDT",
+    "summary": "This listing includes accelerated approvals (AAs) for malignant hematology and oncology indications that have postmarketing requirement(s) for ongoing clinical trial(s) to verify clinical benefit.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "jurisdiction": "US",
+      "family": "product_permissions_and_safety"
+    },
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 5197,
+    "first_seen": "2026-10-17T11:48:15.567792+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "us-fda-5696b24295"
+    ]
+  },
+  {
+    "title": "Money Market Operations as on October 17, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63826",
+    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63826",
+    "published_at": "2026-10-19T11:05:00+00:00",
+    "published_raw": "Mon, 19 Oct 2026 11:05:00",
+    "summary": "(Amount in ₹ crore, Rate in Per cent) MONEY MARKETS @ --> Money Markets @ Volume (One Leg) Weighted Average Rate Range A. Overnight Segment (I+II+III+IV) 16,971.16 5.61 3.50-5.95 I. Call Money 1,069.65 5.28 4.55-5.90 II. Triparty Repo 14,983.20 5.71 5.50-5.95 III. Market Repo 918.31 4.42 3.50-5.65 IV. Repo in Corporate Bond 0.00 - - B. Term Segment I. Notice Money ** 22.70 5.21 5.10-5.21 II. Term Money @@ 0.00 - - III. Triparty Repo 0.00 - - IV. Market Repo 0.00 - - V. Repo in Corporate Bond 0.00 - - RBI OPERATIONS @ --> RBI OPERATIONS @ --> RBI Operations @ Auction Date Tenor (Days) Maturity Date Amount Current Rate / Cut off Rate C. Liquidity Adjustment Facility (LAF), Marginal Standing Facility (MSF) & Standing Deposit Facility (SDF) I. Today's Operations 1. Fixed Rate 2. Variable Rate & (a) Repo Operation (b) Reverse Repo Operation 3. MSF # Sat, 17/10/2026 1 Sun, 18/10/2026 6,414.00 5.75 Sat, 17/10/2026 2 Mon, 19/10/2026 177.00 5.75 4. SDF Δ# Sat, 17/10/2026 1 Sun, 18/10/2026 1,40,986.00 5.25 Sat, 17/10/2026 2 Mon, 19/10/2026 2,292.00 5.25 5. Net liquidity injected from today's operations [injection (+)/absorption (-)]* -1,36,687.00 II. Outstanding Operations 1. Fixed Rate 2. V",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Reserve Bank of India",
+      "jurisdiction": "IN",
+      "family": "monetary_and_supervisory"
+    },
+    "primary_source_id": "in-rbi-cc71120b98",
+    "n": 5380,
+    "first_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "in-rbi-cc71120b98"
+    ]
+  }
+]

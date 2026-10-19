@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **-17.68%** ($8,232) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 415 · skips 100 · realized $-529.03.
+Cash book **-18.36%** ($8,163) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 429 · skips 100 · realized $-529.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -579,6 +579,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **BUY** | `DGX` | 4 | $239.67 | $2.00 | — | $1,340.24 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_mover; 🔵; ret5=+3.6; leftover $1078.48 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 09:30 ET | **BUY** | `BBWI` | 52 | $20.45 | $2.15 | — | $274.69 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+15.4; leftover $1078.48 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $274.69 | ▼ close $8,231.95 vs 09:30 $8,386.01 (session -122.74) | 16:00 close · cash $274.69 · equity $8,231.95 vs 09:30 $8,386.01 (-154.06; session marks -122.74) · 8 name(s) marked open→close (per-name table). ITW×3 09:30 $273.23 → close $272.28 -2.85; IT×5 09:30 $209.00 → close $205.35 -18.25; TOST×33 09:30 $32.59 → close $31.62 -32.01; YOU×23 09:30 $45.60 → close $43.93 -38.41; POOL×6 09:30 $170.06 → close $172.57 +15.06; TRU×14 09:30 $74.90 → close $74.08 -11.48; DGX×4 09:30 $239.67 → close $235.00 -18.68; BBWI×52 09:30 $20.45 → close $20.14 -16.12 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $274.69 | ▼ 09:30 equity $8,193.27 vs yday $8,231.95 (-38.68) | 09:30 open · cash $274.69 (unchanged overnight, no fees) · equity $8,193.27 vs prior close $8,231.95 (-38.68) · 8 name(s) re-marked at the open (per-name table). BBWI×52 yday $20.14 → 09:30 $20.00 -7.28; DGX×4 yday $235.00 → 09:30 $234.40 -2.40; IT×5 yday $205.35 → 09:30 $202.41 -14.70; ITW×3 yday $272.28 → 09:30 $271.48 -2.40; POOL×6 yday $172.57 → 09:30 $171.48 -6.54; TOST×33 yday $31.62 → 09:30 $31.83 +6.93; TRU×14 yday $74.08 → 09:30 $73.12 -13.44; YOU×23 yday $43.93 → 09:30 $43.98 +1.15 | — |
+| 2026-10-19 09:30 ET | **SELL** | `BBWI` | 52 | $20.00 | $2.17 | $-27.71 | $1,312.52 | ▼ -27.71 after sell → book $8,191.10; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `DGX` | 4 | $234.40 | $2.02 | $-25.10 | $2,248.10 | ▼ -25.10 after sell → book $8,189.08; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **SELL** | `IT` | 5 | $202.41 | $2.02 | $-36.98 | $3,258.13 | ▼ -36.98 after sell → book $8,187.06; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `ITW` | 3 | $271.48 | $2.02 | $-7.05 | $4,070.55 | ▼ -7.05 after sell → book $8,185.04; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **SELL** | `TOST` | 33 | $31.83 | $2.11 | $-29.28 | $5,118.83 | ▼ -29.28 after sell → book $8,182.93; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `TRU` | 14 | $73.12 | $2.05 | $-29.00 | $6,140.46 | ▼ -29.00 after sell → book $8,180.88; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-19 09:30 ET | **SELL** | `YOU` | 23 | $43.98 | $2.08 | $-41.40 | $7,149.92 | ▼ -41.40 after sell → book $8,178.80; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **BUY** | `AMX` | 44 | $22.84 | $2.12 | — | $6,142.84 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer; ret5=+7.5; leftover $1021.42 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `TBBB` | 17 | $58.00 | $2.04 | — | $5,154.79 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer; ret5=+3.8; leftover $1021.42 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `BTI` | 17 | $59.13 | $2.04 | — | $4,147.54 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+8.1; leftover $1021.42 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `WMG` | 32 | $31.26 | $2.09 | — | $3,145.14 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+9.3; leftover $1021.42 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `ACN` | 4 | $228.48 | $2.00 | — | $2,229.22 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+10.7; leftover $1021.42 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `COP` | 7 | $145.73 | $2.01 | — | $1,207.09 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+9.3; leftover $1021.42 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `WIT` | 531 | $1.92 | $6.85 | — | $180.73 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+14.7; leftover $1021.42 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $180.73 | ▲ close $8,163.48 vs 09:30 $8,193.27 (session +3.83) | 16:00 close · cash $180.73 · equity $8,163.48 vs 09:30 $8,193.27 (-29.79; session marks +3.83) · 8 name(s) marked open→close (per-name table). POOL×6 09:30 $171.48 → close $168.07 -20.46; AMX×44 09:30 $22.84 → close $22.83 -0.44; TBBB×17 09:30 $58.00 → close $58.39 +6.63; BTI×17 09:30 $59.13 → close $58.51 -10.54; WMG×32 09:30 $31.26 → close $31.04 -7.04; ACN×4 09:30 $228.48 → close $236.93 +33.80; COP×7 09:30 $145.73 → close $145.24 -3.43; WIT×531 09:30 $1.92 → close $1.93 +5.31 | — |
 
 ## Not taken
 

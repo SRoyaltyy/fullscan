@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_join_vol_green_h1/union_earn_react_h3 w=0.5,0.5 net=priority
 
-Cash book **-10.81%** ($8,919) · signal-only (no cash/fees) was —. Starts YES **22/30**. Fills 487 · skips 286 · realized $+2954.01.
+Cash book **-10.48%** ($8,952) · signal-only (no cash/fees) was —. Starts YES **22/30**. Fills 492 · skips 286 · realized $+2954.01.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $188.10.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,816.33.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -652,6 +652,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **BUY** | `RF` | 1 | $27.89 | $0.28 | — | $212.45 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=+0.9; combo leftover $34.37; owner union_earn_react_h3 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-16 09:30 ET | **BUY** | `WSE` | 2 | $12.05 | $0.25 | — | $188.10 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=+3.6; combo leftover $34.37; owner union_earn_react_h3 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $188.10 | ▼ close $8,918.58 vs 09:30 $8,944.47 (session -25.36) | 16:00 close · cash $188.10 · equity $8,918.58 vs 09:30 $8,944.47 (-25.89; session marks -25.36) · 9 name(s) marked open→close (per-name table). ASML×1 09:30 $1659.01 → close $1641.52 -17.49; BAC×34 09:30 $52.14 → close $51.23 -30.94; ERIC×4 09:30 $10.57 → close $10.55 -0.08; FAST×36 09:30 $50.77 → close $51.02 +9.00; FHN×2 09:30 $23.02 → close $22.88 -0.28; MS×9 09:30 $182.68 → close $180.57 -18.99; PGR×8 09:30 $213.99 → close $218.49 +36.00; RF×1 09:30 $27.89 → close $27.45 -0.44; WSE×2 09:30 $12.05 → close $10.98 -2.14 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $188.10 | ▲ 09:30 equity $8,963.40 vs yday $8,918.58 (+44.82) | 09:30 open · cash $188.10 (unchanged overnight, no fees) · equity $8,963.40 vs prior close $8,918.58 (+44.82) | — |
+| 2026-10-19 09:30 ET | **SELL** | `ASML` | 1 | $1677.70 | $2.02 | $-3.11 | $1,863.78 | ▼ -3.11 after sell → book $8,961.38; vs 09:30 mark -2.02 | union_earn_react_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `BAC` | 34 | $51.24 | $2.12 | $+43.73 | $3,603.83 | ▲ +43.73 after sell → book $8,959.27; vs 09:30 mark -2.11 | union_earn_react_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `FAST` | 36 | $51.37 | $2.12 | $+134.92 | $5,451.02 | ▲ +134.92 after sell → book $8,957.14; vs 09:30 mark -2.13 | union_earn_react_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `MS` | 9 | $181.54 | $2.04 | $+5.75 | $7,082.84 | ▲ +5.75 after sell → book $8,955.10; vs 09:30 mark -2.04 | union_earn_react_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `PGR` | 8 | $216.94 | $2.04 | $+75.71 | $8,816.33 | ▲ +75.71 after sell → book $8,953.07; vs 09:30 mark -2.03 | union_earn_react_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,816.33 | ▼ close $8,952.25 vs 09:30 $8,963.40 (session -0.82) | 16:00 close · cash $8,816.33 · equity $8,952.25 vs 09:30 $8,963.40 (-11.15; session marks -0.82) · 4 name(s) marked open→close (per-name table). ERIC×4 09:30 $10.42 → close $10.34 -0.32; FHN×2 09:30 $22.88 → close $22.73 -0.30; RF×1 09:30 $27.40 → close $27.20 -0.20; WSE×2 09:30 $10.95 → close $10.95 +0.00 | — |
 
 ## Not taken
 

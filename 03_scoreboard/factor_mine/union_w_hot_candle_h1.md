@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+13.72%** ($11,372) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 401 · skips 97 · realized $+14.68.
+Cash book **+13.65%** ($11,365) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 415 · skips 97 · realized $+14.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -564,6 +564,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **BUY** | `OXSQ` | 1071 | $1.35 | $13.82 | — | $1,555.15 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+9.4; leftover $1445.86 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-16 09:30 ET | **BUY** | `NAVN` | 57 | $25.20 | $2.16 | — | $116.59 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+9.2; leftover $1445.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $116.59 | ▼ close $11,372.13 vs 09:30 $11,572.19 (session -159.38) | 16:00 close · cash $116.59 · equity $11,372.13 vs 09:30 $11,572.19 (-200.06; session marks -159.38) · 8 name(s) marked open→close (per-name table). BBWI×72 09:30 $20.45 → close $20.14 -22.32; CHWY×66 09:30 $21.34 → close $20.97 -24.42; TRU×19 09:30 $74.90 → close $74.08 -15.58; BLMN×145 09:30 $9.90 → close $9.95 +6.52; EL×13 09:30 $107.50 → close $104.54 -38.48; ELF×12 09:30 $116.25 → close $113.54 -32.52; OXSQ×1071 09:30 $1.35 → close $1.31 -42.84; NAVN×57 09:30 $25.20 → close $25.38 +10.26 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $116.59 | ▲ 09:30 equity $11,382.41 vs yday $11,372.13 (+10.28) | 09:30 open · cash $116.59 (unchanged overnight, no fees) · equity $11,382.41 vs prior close $11,372.13 (+10.28) · 8 name(s) re-marked at the open (per-name table). BBWI×72 yday $20.14 → 09:30 $20.00 -10.08; BLMN×145 yday $9.95 → 09:30 $10.05 +14.50; CHWY×66 yday $20.97 → 09:30 $20.80 -11.22; EL×13 yday $104.54 → 09:30 $104.68 +1.82; ELF×12 yday $113.54 → 09:30 $114.27 +8.76; NAVN×57 yday $25.38 → 09:30 $25.72 +19.38; OXSQ×1071 yday $1.31 → 09:30 $1.31 +5.35; TRU×19 yday $74.08 → 09:30 $73.12 -18.24 | — |
+| 2026-10-19 09:30 ET | **SELL** | `BBWI` | 72 | $20.00 | $2.23 | $+53.88 | $1,554.36 | ▲ +53.88 after sell → book $11,380.18; vs 09:30 mark -2.23 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `BLMN` | 145 | $10.05 | $2.46 | $+16.14 | $3,009.15 | ▲ +16.14 after sell → book $11,377.71; vs 09:30 mark -2.47 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `CHWY` | 66 | $20.80 | $2.21 | $-17.60 | $4,379.74 | ▼ -17.60 after sell → book $11,375.50; vs 09:30 mark -2.21 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `EL` | 13 | $104.68 | $2.05 | $-40.74 | $5,738.53 | ▼ -40.74 after sell → book $11,373.45; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `ELF` | 12 | $114.27 | $2.05 | $-27.83 | $7,107.72 | ▼ -27.83 after sell → book $11,371.41; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `OXSQ` | 1071 | $1.31 | $14.01 | $-65.31 | $8,502.08 | ▼ -65.31 after sell → book $11,357.40; vs 09:30 mark -14.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `TRU` | 19 | $73.12 | $2.07 | $-37.94 | $9,889.29 | ▼ -37.94 after sell → book $11,355.33; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-19 09:30 ET | **BUY** | `WMG` | 45 | $31.26 | $2.12 | — | $8,480.47 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+9.3; leftover $1412.76 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `BR` | 8 | $173.69 | $2.01 | — | $7,088.94 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+5.8; leftover $1412.76 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `OTIS` | 19 | $71.11 | $2.05 | — | $5,735.80 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+8.2; leftover $1412.76 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `HONA` | 8 | $169.10 | $2.01 | — | $4,380.98 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+6.4; leftover $1412.76 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `ACN` | 6 | $228.48 | $2.01 | — | $3,008.10 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+10.7; leftover $1412.76 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `SU` | 18 | $77.39 | $2.04 | — | $1,613.03 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+8.1; leftover $1412.76 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `WM` | 6 | $224.54 | $2.01 | — | $263.78 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+8.6; leftover $1412.76 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $263.78 | ▲ close $11,365.47 vs 09:30 $11,382.41 (session +24.40) | 16:00 close · cash $263.78 · equity $11,365.47 vs 09:30 $11,382.41 (-16.94; session marks +24.40) · 8 name(s) marked open→close (per-name table). NAVN×57 09:30 $25.72 → close $25.67 -2.85; WMG×45 09:30 $31.26 → close $31.04 -9.90; BR×8 09:30 $173.69 → close $175.12 +11.44; OTIS×19 09:30 $71.11 → close $71.04 -1.33; HONA×8 09:30 $169.10 → close $162.49 -52.88; ACN×6 09:30 $228.48 → close $236.93 +50.70; SU×18 09:30 $77.39 → close $78.39 +18.00; WM×6 09:30 $224.54 → close $226.41 +11.22 | — |
 
 ## Not taken
 

@@ -112,6 +112,27 @@
           "s": null,
           "sells": [],
           "sit": true
+        },
+        {
+          "buys": [
+            "BTI",
+            "WMG",
+            "COP",
+            "VET"
+          ],
+          "date": "2026-10-19",
+          "equity": 9207.29,
+          "mean": 0.2067,
+          "picks": [
+            "BTI",
+            "WMG",
+            "COP",
+            "VET"
+          ],
+          "reasons": [],
+          "s": 2.125,
+          "sells": [],
+          "sit": false
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -222,6 +243,27 @@
           "s": null,
           "sells": [],
           "sit": true
+        },
+        {
+          "buys": [
+            "BTI",
+            "WMG",
+            "COP",
+            "VET"
+          ],
+          "date": "2026-10-19",
+          "equity": 9207.29,
+          "mean": 0.2067,
+          "picks": [
+            "BTI",
+            "WMG",
+            "COP",
+            "VET"
+          ],
+          "reasons": [],
+          "s": 2.125,
+          "sells": [],
+          "sit": false
         }
       ],
       "label": "starts 10-08 open, no past days",

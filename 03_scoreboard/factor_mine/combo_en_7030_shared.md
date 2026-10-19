@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_news_g_h1 w=0.7,0.3 net=priority
 
-Cash book **-16.80%** ($8,320) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 411 · skips 302 · realized $+3022.82.
+Cash book **-17.09%** ($8,291) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 421 · skips 302 · realized $+3022.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $83.25.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $221.79.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -576,6 +576,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **BUY** | `Z` | 5 | $31.32 | $1.58 | — | $200.66 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+7.9; combo leftover $180.21; owner union_news_g_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 09:30 ET | **BUY** | `ELF` | 1 | $116.25 | $1.17 | — | $83.25 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+9.6; combo leftover $180.21; owner union_news_g_h1 | join🟢 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $83.25 | ▼ close $8,320.43 vs 09:30 $8,424.29 (session -89.46) | 16:00 close · cash $83.25 · equity $8,320.43 vs 09:30 $8,424.29 (-103.86; session marks -89.46) · 19 name(s) marked open→close (per-name table). AMX×26 09:30 $22.62 → close $22.91 +7.54; BAC×23 09:30 $52.14 → close $51.23 -20.93; ERIC×4 09:30 $10.57 → close $10.55 -0.08; FAST×24 09:30 $50.77 → close $51.02 +6.00; FHN×2 09:30 $23.02 → close $22.88 -0.28; ITW×2 09:30 $273.23 → close $272.28 -1.90; MS×6 09:30 $182.68 → close $180.57 -12.66; NVTS×56 09:30 $8.98 → close $8.34 -35.73; PGR×5 09:30 $213.99 → close $218.49 +22.50; SG×56 09:30 $10.58 → close $10.04 -30.24; TBBB×10 09:30 $57.00 → close $57.68 +6.80; AA×2 09:30 $41.65 → close $41.45 -0.40; CFG×1 09:30 $64.50 → close $63.36 -1.14; IBKR×1 09:30 $86.27 → close $82.69 -3.58; RF×3 09:30 $27.89 → close $27.45 -1.32; WSE×7 09:30 $12.05 → close $10.98 -7.49; GLND×54 09:30 $3.33 → close $3.12 -11.34; Z×5 09:30 $31.32 → close $30.82 -2.50; ELF×1 09:30 $116.25 → close $113.54 -2.71 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $83.25 | ▲ 09:30 equity $8,345.92 vs yday $8,320.43 (+25.49) | 09:30 open · cash $83.25 (unchanged overnight, no fees) · equity $8,345.92 vs prior close $8,320.43 (+25.49) | — |
+| 2026-10-19 09:30 ET | **SELL** | `BAC` | 23 | $51.24 | $2.08 | $+28.29 | $1,259.69 | ▲ +28.29 after sell → book $8,343.84; vs 09:30 mark -2.08 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `ELF` | 1 | $114.27 | $1.17 | $-4.31 | $1,372.80 | ▼ -4.31 after sell → book $8,342.68; vs 09:30 mark -1.16 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `FAST` | 24 | $51.37 | $2.08 | $+88.62 | $2,603.59 | ▲ +88.62 after sell → book $8,340.59; vs 09:30 mark -2.09 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `MS` | 6 | $181.54 | $2.03 | $+2.50 | $3,690.81 | ▲ +2.50 after sell → book $8,338.57; vs 09:30 mark -2.02 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `PGR` | 5 | $216.94 | $2.02 | $+45.82 | $4,773.48 | ▲ +45.82 after sell → book $8,336.54; vs 09:30 mark -2.03 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `SG` | 56 | $10.01 | $2.18 | $-3.78 | $5,331.86 | ▼ -3.78 after sell → book $8,334.36; vs 09:30 mark -2.18 | union_news_g_h1: dropped from list after 3 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `Z` | 5 | $30.60 | $1.56 | $-6.75 | $5,483.30 | ▼ -6.75 after sell → book $8,332.80; vs 09:30 mark -1.56 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **BUY** | `BTI` | 30 | $59.13 | $2.08 | — | $3,707.32 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+8.1; combo leftover $1827.77; owner union_news_g_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `COP` | 12 | $145.73 | $2.03 | — | $1,956.53 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+9.3; combo leftover $1827.77; owner union_news_g_h1 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `EOG` | 11 | $157.52 | $2.02 | — | $221.79 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+7.3; combo leftover $1827.77; owner union_news_g_h1 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $221.79 | ▼ close $8,290.82 vs 09:30 $8,345.92 (session -35.85) | 16:00 close · cash $221.79 · equity $8,290.82 vs 09:30 $8,345.92 (-55.10; session marks -35.85) · 15 name(s) marked open→close (per-name table). AA×2 09:30 $41.79 → close $41.67 -0.24; AMX×26 09:30 $22.84 → close $22.83 -0.26; CFG×1 09:30 $62.96 → close $62.76 -0.20; ERIC×4 09:30 $10.42 → close $10.34 -0.32; FHN×2 09:30 $22.88 → close $22.73 -0.30; GLND×54 09:30 $3.00 → close $3.02 +1.08; IBKR×1 09:30 $82.83 → close $81.35 -1.48; ITW×2 09:30 $271.48 → close $270.17 -2.62; NVTS×56 09:30 $8.84 → close $8.63 -11.76; RF×3 09:30 $27.40 → close $27.20 -0.60; TBBB×10 09:30 $58.00 → close $58.39 +3.90; WSE×7 09:30 $10.95 → close $10.95 +0.00; BTI×30 09:30 $59.13 → close $58.51 -18.60; COP×12 09:30 $145.73 → close $145.24 -5.88; EOG×11 09:30 $157.52 → close $157.65 +1.43 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 neg catalyst + weakness + failed recovery
 
-Cash book **+5.00%** ($10,500) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 232 · skips 270 · realized $-967.53.
+Cash book **+4.70%** ($10,470) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 232 · skips 270 · realized $-967.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -394,6 +394,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,054.09 | ▼ close $10,637.81 vs 09:30 $10,733.95 (session -87.10) | 16:00 close · cash $16,054.09 · equity $10,637.81 vs 09:30 $10,733.95 (-96.14; session marks -87.10) · 1 name(s) marked open→close (per-name table). AA×134 09:30 $39.77 → close $40.42 -87.10 | — |
 | 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,054.09 | ▼ 09:30 equity $10,472.99 vs yday $10,637.81 (-164.82) | 09:30 open · cash $16,054.09 (unchanged overnight, no fees) · equity $10,472.99 vs prior close $10,637.81 (-164.82) · 1 name(s) re-marked at the open (per-name table). AA×134 yday $40.42 → 09:30 $41.65 -164.82 | — |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,054.09 | ▲ close $10,499.79 vs 09:30 $10,472.99 (session +26.80) | 16:00 close · cash $16,054.09 · equity $10,499.79 vs 09:30 $10,472.99 (+26.80; session marks +26.80) · 1 name(s) marked open→close (per-name table). AA×134 09:30 $41.65 → close $41.45 +26.80 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,054.09 | ▼ 09:30 equity $10,454.23 vs yday $10,499.79 (-45.56) | 09:30 open · cash $16,054.09 (unchanged overnight, no fees) · equity $10,454.23 vs prior close $10,499.79 (-45.56) · 1 name(s) re-marked at the open (per-name table). AA×134 yday $41.45 → 09:30 $41.79 -45.56 | — |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,054.09 | ▲ close $10,470.31 vs 09:30 $10,454.23 (session +16.08) | 16:00 close · cash $16,054.09 · equity $10,470.31 vs 09:30 $10,454.23 (+16.08; session marks +16.08) · 1 name(s) marked open→close (per-name table). AA×134 09:30 $41.79 → close $41.67 +16.08 | — |
 
 ## Not taken
 

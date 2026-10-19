@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #5 extreme ext + fade/fail-break as a short
 
-Cash book **-3.87%** ($9,613) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 270 · skips 219 · realized $-964.15.
+Cash book **-4.12%** ($9,588) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 270 · skips 219 · realized $-964.15.
 
 ## How this sleeve decides (like you are 10)
 
@@ -432,6 +432,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,559.33 | ▼ 09:30 equity $9,657.33 vs yday $9,740.75 (-83.42) | 09:30 open · cash $14,559.33 (unchanged overnight, no fees) · equity $9,657.33 vs prior close $9,740.75 (-83.42) · 1 name(s) re-marked at the open (per-name table). TBBB×86 yday $56.03 → 09:30 $57.00 -83.42 | — |
 | 2026-10-16 09:30 ET | **SHORT** | `ITW` | 17 | $273.23 | $2.22 | — | $19,202.02 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list yday_gainer; ret5=+2.4; leftover $4828.66 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,202.02 | ▼ close $9,612.78 vs 09:30 $9,657.33 (session -42.33) | 16:00 close · cash $19,202.02 · equity $9,612.78 vs 09:30 $9,657.33 (-44.55; session marks -42.33) · 2 name(s) marked open→close (per-name table). TBBB×86 09:30 $57.00 → close $57.68 -58.48; ITW×17 09:30 $273.23 → close $272.28 +16.15 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $19,202.02 | ▼ 09:30 equity $9,598.86 vs yday $9,612.78 (-13.92) | 09:30 open · cash $19,202.02 (unchanged overnight, no fees) · equity $9,598.86 vs prior close $9,612.78 (-13.92) · 2 name(s) re-marked at the open (per-name table). ITW×17 yday $272.28 → 09:30 $271.48 +13.60; TBBB×86 yday $57.68 → 09:30 $58.00 -27.52 | — |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,202.02 | ▼ close $9,587.59 vs 09:30 $9,598.86 (session -11.27) | 16:00 close · cash $19,202.02 · equity $9,587.59 vs 09:30 $9,598.86 (-11.27; session marks -11.27) · 2 name(s) marked open→close (per-name table). ITW×17 09:30 $271.48 → close $270.17 +22.27; TBBB×86 09:30 $58.00 → close $58.39 -33.54 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · news🔴
 
-Cash book **-7.21%** ($9,279) · signal-only (no cash/fees) was -1.35%. Starts YES **0/30**. Fills 139 · skips 118 · realized $+417.93.
+Cash book **-8.69%** ($9,131) · signal-only (no cash/fees) was -1.35%. Starts YES **0/30**. Fills 140 · skips 118 · realized $+417.93.
 
 ## How this sleeve decides (like you are 10)
 
@@ -301,6 +301,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,288.11 | ▼ 09:30 equity $9,095.61 vs yday $9,251.97 (-156.36) | 09:30 open · cash $15,288.11 (unchanged overnight, no fees) · equity $9,095.61 vs prior close $9,251.97 (-156.36) · 3 name(s) re-marked at the open (per-name table). AA×117 yday $40.42 → 09:30 $41.65 -143.91; MOH×3 yday $212.50 → 09:30 $214.05 -4.65; NOG×26 yday $25.75 → 09:30 $26.05 -7.80 | — |
 | 2026-10-16 09:30 ET | **SHORT** | `RBLX` | 88 | $51.50 | $2.43 | — | $19,817.68 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+12.3; leftover $4547.81 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,817.68 | ▲ close $9,279.39 vs 09:30 $9,095.61 (session +186.21) | 16:00 close · cash $19,817.68 · equity $9,279.39 vs 09:30 $9,095.61 (+183.78; session marks +186.21) · 4 name(s) marked open→close (per-name table). AA×117 09:30 $41.65 → close $41.45 +23.40; MOH×3 09:30 $214.05 → close $207.36 +20.07; NOG×26 09:30 $26.05 → close $27.16 -28.86; RBLX×88 09:30 $51.50 → close $49.55 +171.60 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $19,817.68 | ▼ 09:30 equity $9,163.66 vs yday $9,279.39 (-115.73) | 09:30 open · cash $19,817.68 (unchanged overnight, no fees) · equity $9,163.66 vs prior close $9,279.39 (-115.73) · 4 name(s) re-marked at the open (per-name table). AA×117 yday $41.45 → 09:30 $41.79 -39.78; MOH×3 yday $207.36 → 09:30 $207.37 -0.03; NOG×26 yday $27.16 → 09:30 $27.00 +4.16; RBLX×88 yday $49.55 → 09:30 $50.46 -80.08 | — |
+| 2026-10-19 09:30 ET | **COVER** | `MOH` | 3 | $207.37 | $2.00 | $+4.30 | $19,193.57 | ▲ +4.30 after sell → book $9,161.66; vs 09:30 mark -2.00 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,193.57 | ▼ close $9,130.68 vs 09:30 $9,163.66 (session -30.98) | 16:00 close · cash $19,193.57 · equity $9,130.68 vs 09:30 $9,163.66 (-32.98; session marks -30.98) · 3 name(s) marked open→close (per-name table). AA×117 09:30 $41.79 → close $41.67 +14.04; NOG×26 09:30 $27.00 → close $27.75 -19.50; RBLX×88 09:30 $50.46 → close $50.75 -25.52 | — |
 
 ## Not taken
 

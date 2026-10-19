@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-7.61%** ($9,239) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 381 · skips 94 · realized $-657.32.
+Cash book **-7.65%** ($9,235) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 391 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -544,6 +544,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **BUY** | `WM` | 5 | $224.78 | $2.00 | — | $1,946.24 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+6.7; leftover $1174.98 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 09:30 ET | **BUY** | `VEEV` | 3 | $319.95 | $2.00 | — | $984.39 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+9.9; leftover $1174.98 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $984.39 | ▼ close $9,238.56 vs 09:30 $9,343.71 (session -81.01) | 16:00 close · cash $984.39 · equity $9,238.56 vs 09:30 $9,343.71 (-105.15; session marks -81.01) · 8 name(s) marked open→close (per-name table). CRS×3 09:30 $380.56 → close $377.09 -10.41; JBHT×5 09:30 $228.00 → close $228.78 +3.90; INTU×3 09:30 $332.34 → close $325.15 -21.57; UNH×2 09:30 $410.35 → close $401.43 -17.84; EFX×7 09:30 $161.77 → close $161.25 -3.64; PAYC×4 09:30 $254.91 → close $251.64 -13.08; WM×5 09:30 $224.78 → close $226.86 +10.40; VEEV×3 09:30 $319.95 → close $310.36 -28.77 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $984.39 | ▼ 09:30 equity $9,198.31 vs yday $9,238.56 (-40.25) | 09:30 open · cash $984.39 (unchanged overnight, no fees) · equity $9,198.31 vs prior close $9,238.56 (-40.25) · 8 name(s) re-marked at the open (per-name table). CRS×3 yday $377.09 → 09:30 $381.30 +12.63; EFX×7 yday $161.25 → 09:30 $159.08 -15.19; INTU×3 yday $325.15 → 09:30 $322.63 -7.56; JBHT×5 yday $228.78 → 09:30 $227.30 -7.40; PAYC×4 yday $251.64 → 09:30 $249.75 -7.56; UNH×2 yday $401.43 → 09:30 $399.69 -3.48; VEEV×3 yday $310.36 → 09:30 $310.33 -0.09; WM×5 yday $226.86 → 09:30 $224.54 -11.60 | — |
+| 2026-10-19 09:30 ET | **SELL** | `EFX` | 7 | $159.08 | $2.03 | $-22.87 | $2,095.92 | ▼ -22.87 after sell → book $9,196.28; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `INTU` | 3 | $322.63 | $2.02 | $-33.15 | $3,061.79 | ▼ -33.15 after sell → book $9,194.26; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `JBHT` | 5 | $227.30 | $2.02 | $-32.18 | $4,196.27 | ▼ -32.18 after sell → book $9,192.24; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `PAYC` | 4 | $249.75 | $2.02 | $-24.66 | $5,193.24 | ▼ -24.66 after sell → book $9,190.21; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `UNH` | 2 | $399.69 | $2.02 | $-25.33 | $5,990.61 | ▼ -25.33 after sell → book $9,188.20; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **BUY** | `LMT` | 2 | $540.97 | $2.00 | — | $4,906.67 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+8.3; leftover $1198.12 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `ACN` | 5 | $228.48 | $2.00 | — | $3,762.27 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+10.7; leftover $1198.12 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `ALL` | 4 | $245.91 | $2.00 | — | $2,776.62 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+8.0; leftover $1198.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `POOL` | 6 | $171.48 | $2.01 | — | $1,745.74 | — | rank by macd_hist; rank macd_hist; list yday_gainer; 🔵; ret5=+8.2; leftover $1198.12 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `COP` | 8 | $145.73 | $2.01 | — | $577.88 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+9.3; leftover $1198.12 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $577.88 | ▲ close $9,234.71 vs 09:30 $9,198.31 (session +56.54) | 16:00 close · cash $577.88 · equity $9,234.71 vs 09:30 $9,198.31 (+36.40; session marks +56.54) · 8 name(s) marked open→close (per-name table). CRS×3 09:30 $381.30 → close $378.51 -8.37; VEEV×3 09:30 $310.33 → close $316.80 +19.41; WM×5 09:30 $224.54 → close $226.41 +9.35; LMT×2 09:30 $540.97 → close $548.23 +14.52; ACN×5 09:30 $228.48 → close $236.93 +42.25; ALL×4 09:30 $245.91 → close $246.85 +3.76; POOL×6 09:30 $171.48 → close $168.07 -20.46; COP×8 09:30 $145.73 → close $145.24 -3.92 | — |
 
 ## Not taken
 

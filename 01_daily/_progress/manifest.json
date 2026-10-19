@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19T10:17:42-04:00",
+  "updated_at": "2026-10-19T17:11:33-04:00",
   "runs": [
     {
       "date": "2026-10-15",
@@ -123,21 +123,45 @@
     },
     {
       "date": "2026-10-19",
+      "workflow": "oauth_guard",
+      "file": "2026-10-19_oauth_guard.json",
+      "updated_at": "2026-10-19T11:51:18-04:00"
+    },
+    {
+      "date": "2026-10-19",
+      "workflow": "webull_paper",
+      "file": "2026-10-19_webull_paper.json",
+      "updated_at": "2026-10-19T14:49:09-04:00"
+    },
+    {
+      "date": "2026-10-19",
+      "workflow": "webull_sim",
+      "file": "2026-10-19_webull_sim.json",
+      "updated_at": "2026-10-19T16:08:08-04:00"
+    },
+    {
+      "date": "2026-10-19",
+      "workflow": "homepage_digest",
+      "file": "2026-10-19_homepage_digest.json",
+      "updated_at": "2026-10-19T16:28:03-04:00"
+    },
+    {
+      "date": "2026-10-19",
+      "workflow": "postclose",
+      "file": "2026-10-19_postclose.json",
+      "updated_at": "2026-10-19T16:38:42-04:00"
+    },
+    {
+      "date": "2026-10-19",
       "workflow": "factor_mine",
       "file": "2026-10-19_factor_mine.json",
-      "updated_at": "2026-10-19T06:18:54-04:00"
+      "updated_at": "2026-10-19T17:06:21-04:00"
     },
     {
       "date": "2026-10-19",
       "workflow": "fm_preopen",
       "file": "2026-10-19_fm_preopen.json",
-      "updated_at": "2026-10-19T09:11:48-04:00"
-    },
-    {
-      "date": "2026-10-19",
-      "workflow": "oauth_guard",
-      "file": "2026-10-19_oauth_guard.json",
-      "updated_at": "2026-10-19T10:17:42-04:00"
+      "updated_at": "2026-10-19T17:11:33-04:00"
     }
   ]
 }
