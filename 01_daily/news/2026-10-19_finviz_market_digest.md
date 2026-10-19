@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-19
 
-**Generated:** 2026-10-19T04:17:35.533686-04:00 (America/New_York)
+**Generated:** 2026-10-19T04:17:51.466372-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to a higher open as tech and AI-related names stabilize ahead of earnings and housing data
 **Prior close:** SPX —  Nasdaq —  Dow —
