@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19T14:49:09-04:00",
+  "updated_at": "2026-10-19T15:33:06-04:00",
   "runs": [
     {
       "date": "2026-10-15",
@@ -144,6 +144,12 @@
       "workflow": "webull_paper",
       "file": "2026-10-19_webull_paper.json",
       "updated_at": "2026-10-19T14:49:09-04:00"
+    },
+    {
+      "date": "2026-10-19",
+      "workflow": "webull_sim",
+      "file": "2026-10-19_webull_sim.json",
+      "updated_at": "2026-10-19T15:33:06-04:00"
     }
   ]
 }
