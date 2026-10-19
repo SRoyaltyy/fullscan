@@ -33,7 +33,7 @@ Status legend: **SOLVED** (countermeasure in the scorer today) ·
 |---|---|---|---|---|
 | B1 | Industry-crossing homonyms | space (aerospace/office), cell, bank, charge, delta | industry gate + same-sentence context vote — the core design | **MITIGATED** |
 | B2 | Metonymy | "Washington announced…", "Detroit", "Hollywood", "the Street" | metonym→industry gazetteer; agency names handled by the office-title rule | **OPEN** |
-| B3 | Proper noun vs ticker collision | Washington Post/POST; Apple, Delta, Tesla (person), Mercury | word-ticker table + publisher/org gazetteer + tiered syntax match | **OPEN** (target cases seeded) |
+| B3 | Proper noun vs ticker collision | Washington Post/POST; Apple, Delta, Tesla (person), Mercury | word-ticker table + publisher/org gazetteer + tiered syntax match | **MITIGATED** — publishers masked, dictionary-word aliases need a capital or `$TICKER`; person/place metonymy is still B2 |
 | B4 | Finance slang & figurative language | "RKLB to the moon", "dead cat bounce", "rocket" (up 20%) | the cruelest category for a lexical system: slang literally points at the wrong industries. Keyness vs the day + sentence-context gate blunt it; a finance-PMI outlier stoplist is the real fix | **OPEN** |
 | B5 | Brand stylization & tokenization | eBay, iPhone, L'Oréal, "24/7" | tokenization rules + diacritic/hyphen folding | **OPEN** |
 
@@ -69,6 +69,7 @@ Status legend: **SOLVED** (countermeasure in the scorer today) ·
 | E4 | Government as counterparty | "NASA awards $500M contract" — the agency is a customer, not a stock | agency gazetteer + typed relation (regulator / major-customer) with second-order semantics | **OPEN** (title-stripping exists; typing doesn't) |
 | E5 | Individuals | "Musk says…", "the CEO of Rocket Lab…" | officer lists from filings' cover/signature pages → person→company map | **OPEN** |
 | E6 | Index & ETF holdings | "S&P 500 adds RKLB" | typed relation index-member; second-order at most | **OPEN** |
+| E7 | Ungated second-order relations | Playboy's filing mentions DraftKings; the article is about gambling, not Playboy | dependency rows carry `order: 2` and surface only when the article's industry vote is the partner's industry | **MITIGATED** |
 
 ## F. Scoring methodology — the math's own weak joints
 
@@ -77,7 +78,7 @@ Status legend: **SOLVED** (countermeasure in the scorer today) ·
 | F1 | Arbitrary thresholds | z≥2.5, batch-z≥2.0, 75% absorption, purity≥0.55, circle floor 0.35 | percentile-of-score vs per-stock random-article background; freeze during a dedicated calibration round against the corpus | **OPEN** |
 | F2 | Coverage punishes single-filing phrases | "steps down" → near-zero weight (documented) | weight floor for name/alias terms; cap coverage's role for multiword phrases | **OPEN** |
 | F3 | Keyness control corpus choice | the day's news kills words trending across the whole sector; a tiny batch judges itself | fixed reference window (e.g. 30 days of news) + min-token guard | **MITIGATED** (day reference supported; window not built) |
-| F4 | Universe screen bias | LMT/RTX/NOC/GD off-board via the ATR screen; ICE off-board | decouple the linking universe from the liquidity screen; off-board name hits (target case seeded) | **OPEN** |
+| F4 | Universe screen bias | LMT/RTX/NOC/GD off-board via the ATR screen; ICE off-board | name hits are looked up on the full description list and marked `off_board`; topical scoring still uses the liquid universe | **MITIGATED** |
 | F5 | Industry granularity | conglomerates (BRK, AMZN) dilute a single industry pocket | segment-level profiles from 10-K segment disclosures | **OPEN** |
 | F6 | Batch-z activates only at 8+ articles | corpus runs don't exercise it | accepted: calibrate batch behavior separately on full days, not on the corpus | **DOCUMENTED** |
 
@@ -86,8 +87,8 @@ Status legend: **SOLVED** (countermeasure in the scorer today) ·
 Ticked items exist in some form today. Everything else is a build task for
 the loop, roughly in payoff order:
 
-- [ ] word-ticker table (English-word tickers → stricter matching)
-- [ ] publisher / organization gazetteer (Washington Post, Renaissance Capital)
+- [x] word-ticker table (English-word tickers → stricter matching; `src/data/english_words.txt`)
+- [x] publisher / organization gazetteer (Washington Post, Renaissance Capital)
 - [ ] US/UK variant pairs + hyphen/diacritic folding
 - [ ] WordNet (synsets + derivational links) or equivalent
 - [ ] acronym table extracted from filings' `("ACRONYM")` first-use pattern

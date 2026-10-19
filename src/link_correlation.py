@@ -14,6 +14,7 @@ from pathlib import Path
 
 from .correlation import build_board, link_articles
 from .filing_business import load_business_texts
+from .names import NameIndex, catalog_from_csv
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -137,6 +138,7 @@ def main() -> None:
     stocks = load_stocks(args.descriptions, args.universe, args.sectors, filings)
     print(f"STOCKS={len(stocks)} WITH_FILING={sum(1 for row in stocks if row.get('filing'))}")
     board = build_board(stocks)
+    names = NameIndex(catalog_from_csv(args.descriptions))
     print(f"BOARD={board.n} INDUSTRY_TERMS={len(board.industry_of_term)}")
 
     articles = load_articles(args.news, args.limit)
@@ -149,7 +151,7 @@ def main() -> None:
             "text": args.fixture.read_text(encoding="utf-8"),
         })
     print(f"ARTICLES={len(articles)}")
-    linked = link_articles(board, articles)
+    linked = link_articles(board, articles, names=names)
     summary = summarize(linked)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     payload = {"summary": summary, "links": linked}

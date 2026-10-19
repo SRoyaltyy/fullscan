@@ -6,6 +6,7 @@ from collections import Counter
 from src.correlation import _apply_keyness, build_board, link_articles, prepare, stock_terms
 from src.filing_business import item1_business
 from src.filing_parts import divide_profile
+from src.names import Name, NameIndex
 
 MEMO = """
 THE NATIONAL SPACE TRANSPORTATION POLICY
@@ -206,6 +207,68 @@ We also provide technology services to third parties, including FanDuel and Draf
         prose = item1_business(text)
         self.assertIn("open access to space", prose.lower())
         self.assertNotIn("Risk Factors 17", prose)
+
+    def test_a_publisher_is_not_a_ticker_and_a_dollar_ticker_is(self):
+        index = NameIndex([
+            Name("POST", "Post Holdings Inc", "post", "Packaged Foods", "Consumer Defensive"),
+            Name("LMT", "Lockheed Martin Corp", "lockheed martin", "Aerospace & Defense", "Industrials"),
+            Name("BKNG", "Booking Holdings Inc", "booking", "Travel Services", "Consumer Cyclical"),
+            Name("DKNG", "DraftKings Inc", "draftkings", "Gambling", "Consumer Cyclical"),
+        ])
+        post = index.mentioned(
+            "Washington Post reporters published an investigation. WASHINGTON POST had the story first."
+        )
+        self.assertNotIn("POST", {row.ticker for row in post})
+        self.assertIn("LMT", {row.ticker for row in index.mentioned("Lockheed Martin declined to comment.")})
+        dollar = index.mentioned("Shares of $POST jumped after the cereal maker raised prices.")
+        self.assertIn("POST", {row.ticker for row in dollar})
+        booking = index.mentioned("Pan-Asian travel booking platform Klook withdraws its IPO.")
+        self.assertNotIn("BKNG", {row.ticker for row in booking})
+        self.assertIn("DKNG", {row.ticker for row in index.mentioned("Investors in DraftKings are watching.")})
+        news = NameIndex([Name("NWS", "News Corp", "news", "Entertainment", "Communication Services")])
+        headline = news.mentioned("KLK IPO News - Pan-Asian travel booking platform Klook Technology withdraws its IPO")
+        self.assertNotIn("NWS", {row.ticker for row in headline})
+        tickers = NameIndex([
+            Name("HOOD", "Robinhood Markets Inc", "robinhood markets"),
+            Name("COIN", "Coinbase Global Inc", "coinbase global"),
+            Name("TSLA", "Tesla Inc", "tesla"),
+        ])
+        named = {row.ticker for row in tickers.mentioned("Tokenized versions of HOOD, COIN and TSLA were mentioned.")}
+        self.assertEqual(named, {"HOOD", "COIN", "TSLA"})
+
+    def test_a_partner_link_is_second_order_and_follows_the_partner_industry(self):
+        stocks = STOCKS + [
+            {"ticker": "DKNG", "name": "DraftKings Inc", "industry": "Gambling", "sector": "Consumer Cyclical",
+             "description": "DraftKings operates an online sportsbook. Customers place sports betting wagers. Gambling and sportsbook markets are the business."},
+            {"ticker": "FLUT", "name": "Flutter Entertainment plc", "industry": "Gambling", "sector": "Consumer Cyclical",
+             "description": "Flutter operates sports betting and online sportsbook brands. Gambling customers wager through the sportsbook."},
+            {"ticker": "PLBY", "name": "Playboy Inc", "industry": "Leisure", "sector": "Consumer Cyclical",
+             "description": "Playboy sells apparel, beauty, and grooming products under lifestyle brands.",
+             "filing": "Overview\nPlayboy products are apparel, beauty, and grooming.\n\nPlayboy Products & Services\ncollaborations with strategic partners in the nightlife and online gaming industries, including DraftKings, Fire Brands, Ainsworth and Sandbox."},
+            {"ticker": "CHDN", "name": "Churchill Downs Inc", "industry": "Gambling", "sector": "Consumer Cyclical",
+             "description": "Churchill Downs operates horse racing and a casino wagering business.",
+             "filing": "Wagering Services\nWe also provide technology services to third parties, including FanDuel and DraftKings, and we earn commissions from white label products."},
+            {"ticker": "XOM", "name": "Exxon Mobil Corp", "industry": "Oil & Gas Integrated", "sector": "Energy",
+             "description": "Exxon Mobil produces crude oil, natural gas, and refined petroleum products."},
+            {"ticker": "PFE", "name": "Pfizer Inc", "industry": "Drug Manufacturers", "sector": "Healthcare",
+             "description": "Pfizer discovers and manufactures pharmaceutical medicines and vaccines."},
+        ]
+        board = build_board(stocks)
+        article = (
+            "Gambling regulators questioned the sportsbook. Sports betting and gambling rules may change. "
+            "DraftKings and the sportsbook industry are waiting on the gambling ruling. "
+            "Sports betting volume at the sportsbook fell. DraftKings shares fell 4%."
+        )
+        [hit] = link_articles(board, [{"id": "gamble", "text": article}])
+        passed = {row["ticker"] for row in hit["stocks"] if row["pass"]}
+        self.assertNotIn("PLBY", passed)
+        self.assertIn("DKNG", {row["ticker"] for row in hit["stocks"] if row["name_hit"]})
+        deps = {(row["ticker"], row["partner"], row["order"]) for row in hit["dependencies"]}
+        self.assertIn(("PLBY", "DraftKings", 2), deps)
+        self.assertIn(("CHDN", "DraftKings", 2), deps)
+        self.assertTrue(all(row["second_order"] for row in hit["dependencies"]))
+        [memo] = link_articles(board, [{"id": "memo", "text": MEMO}])
+        self.assertFalse(any(row["partner"] == "DraftKings" for row in memo["dependencies"]))
 
 
 if __name__ == "__main__":

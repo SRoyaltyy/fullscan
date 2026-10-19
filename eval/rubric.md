@@ -23,10 +23,9 @@ change in the round results — never silently relabel old cases.
 - **Unknown** — the correct output for thin or generic articles. Forcing a
   guess is a failure; returning unknown is not.
 - **Off-board mention** — the article names a company that is not on the
-  liquid universe board (e.g. LMT, RTX under the ATR screen). Desired
-  behavior: reported as an off-board name hit, not silently dropped. (The
-  program does not support this yet; treat as a known gap, not a per-case
-  failure, until the schema grows the field.)
+  liquid universe board (e.g. LMT, RTX under the ATR screen). Reported as a
+  name hit with `off_board: true`. It is not a topical pass. Topical scoring
+  still uses the liquid universe.
 
 ## Case types (the expected distribution of the world)
 

@@ -191,6 +191,9 @@ class Prepared:
     absorbed: list[str]
     tokens: int
     heading: list[str] = field(default_factory=list)
+    # Tokens taken from a heading line. Keyness may not throw these out:
+    # the title is the author's own statement of what the piece is about.
+    anchors: frozenset[str] = field(default_factory=frozenset)
     # Content words that share a sentence. An industry vote from one word
     # needs another word in the same sentence from that same industry.
     sentences: list[list[str]] = field(default_factory=list)
@@ -228,6 +231,7 @@ def prepare(text: str) -> Prepared:
     stream: list[tuple[str, bool] | None] = []
     sentences: list[list[str]] = []
     current: list[str] = []
+    anchors: set[str] = set()
     for line in (text or "").splitlines() or [text or ""]:
         is_heading = line.strip() in heading
         cleaned = line.lower()
@@ -244,6 +248,8 @@ def prepare(text: str) -> Prepared:
                 if _keep_token(token):
                     stream.append((token, is_heading))
                     current.append(token)
+                    if is_heading:
+                        anchors.add(token)
                 else:
                     stream.append(None)
         if current:
@@ -309,6 +315,7 @@ def prepare(text: str) -> Prepared:
         absorbed=sorted(absorbed_set),
         tokens=kept,
         heading=sorted(heading)[:8],
+        anchors=frozenset(anchors),
         sentences=[sentence for sentence in sentences if sentence],
     )
 
@@ -423,12 +430,31 @@ def build_board(rows: list[dict]) -> Board:
     return Board(stocks, weight, industry_of_term, dict(df), avg_len, n, dict(postings))
 
 
-def _apply_keyness(prepared: Prepared, background: Counter[str], background_tokens: int) -> dict[str, float]:
+def _apply_keyness(
+    prepared: Prepared,
+    background: Counter[str],
+    background_tokens: int,
+    sharp: set[str] | None = None,
+) -> dict[str, float]:
     if background_tokens <= 0:
         return dict(prepared.terms)
+    sharp = sharp or set()
     kept: dict[str, float] = {}
     doc_tokens = max(prepared.tokens, 1)
     for term, count in prepared.terms.items():
+        # A sharp industry circle, or a word the headline itself uses, is the
+        # topic even when today's news is also about it. Keyness only drops
+        # words that are ordinary in the news and ordinary across industries.
+        # A one-line blurb has no headline distinct from its body, so it gets
+        # no exemption: otherwise "steps down" would survive its own line.
+        titled = bool(prepared.anchors) and any(
+            part not in prepared.anchors
+            for other in prepared.terms
+            for part in other.split()
+        )
+        if term in sharp or (titled and all(part in prepared.anchors for part in term.split())):
+            kept[term] = float(count)
+            continue
         keyness = (
             math.log((count + 0.5) / (doc_tokens + 0.5))
             - math.log((background[term] + 0.5) / (background_tokens + 0.5))
@@ -461,9 +487,10 @@ def _industry_confirmed(term: str, industry: str, sentences: list[list[str]], bo
     """A bare word votes for an industry only when the same sentence has another word from it.
 
     ``launch`` beside ``spacecraft`` votes aerospace. ``launch`` beside
-    ``trading venue`` does not.
+    ``trading venue`` does not. A very small circle (``spacecraft``) is
+    already unambiguous, so it may vote on its own.
     """
-    if " " in term:
+    if " " in term or board.weight.get(term, 0.0) >= 0.7:
         return True
     for sentence in sentences:
         if term not in sentence:
@@ -503,28 +530,72 @@ def _mean_std(values: list[float]) -> tuple[float, float]:
     return mean, math.sqrt(var)
 
 
-def _dependencies(board: Board, text: str) -> list[dict]:
+def _partner_industry(partner: str, names) -> str:
+    """Industry of the named partner, when that partner is itself a known company."""
+    if names is None or not partner:
+        return ""
+    hits = names.mentioned(partner)
+    folded = partner.lower()
+    for hit in hits:
+        if hit.alias and hit.alias in folded:
+            return hit.industry
+    return hits[0].industry if hits else ""
+
+
+def _dependencies(board: Board, text: str, passing: set[str], names) -> list[dict]:
+    """Partner mentions are second-order, and only when the article is about that partner's industry.
+
+    Playboy lists DraftKings as a collaborator. A gambling article may show
+    that link, marked order 2. A space-policy memo shows nothing, because
+    gambling did not pass.
+    """
     found = []
     for stock in board.stocks:
         for partner in stock.partners:
-            if re.search(rf"\b{re.escape(partner['name'])}\b", text or "", re.I):
-                found.append({
-                    "ticker": stock.ticker,
-                    "name": stock.name,
-                    "role": partner["role"],
-                    "partner": partner["name"],
-                    "section": partner.get("section") or "",
-                })
+            if not re.search(rf"\b{re.escape(partner['name'])}\b", text or "", re.I):
+                continue
+            industry = _partner_industry(partner["name"], names)
+            if not industry or industry not in passing:
+                continue
+            found.append({
+                "ticker": stock.ticker,
+                "name": stock.name,
+                "role": partner["role"],
+                "partner": partner["name"],
+                "section": partner.get("section") or "",
+                "order": 2,
+                "second_order": True,
+                "partner_industry": industry,
+            })
     return found
 
 
-def name_hit(stock: Stock, text: str) -> bool:
-    # One-letter tickers match initials inside "U.S." and are not names.
-    if len(stock.ticker) >= 2 and re.search(rf"\b{re.escape(stock.ticker)}\b", text or ""):
-        return True
-    if stock.alias and re.search(rf"\b{re.escape(stock.alias)}\b", (text or "").lower()):
-        return True
-    return False
+def _name_index(board: Board, names):
+    if names is not None:
+        return names
+    from .names import Name, NameIndex
+    return NameIndex([
+        Name(stock.ticker, stock.name, stock.alias, stock.industry, stock.sector)
+        for stock in board.stocks
+    ])
+
+
+def _name_row(record, *, off_board: bool, passing: set[str]) -> dict:
+    return {
+        "ticker": record.ticker,
+        "name": record.name,
+        "industry": record.industry,
+        "sector": record.sector,
+        "desc_score": 0.0,
+        "bm25": 0.0,
+        "terms": [],
+        "name_hit": True,
+        "off_board": off_board,
+        "ind_pass": bool(record.industry) and record.industry in passing,
+        "desc_z": 0.0,
+        "desc_pass": False,
+        "pass": False,
+    }
 
 
 def link_articles(
@@ -534,6 +605,8 @@ def link_articles(
     z_min: float = 2.5,
     batch_z_min: float = 2.0,
     reference: list[dict] | None = None,
+    names=None,
+    apply_batch: bool = True,
 ) -> list[dict]:
     """Score every article. Both gates must clear ``z_min`` inside the article.
 
@@ -543,7 +616,18 @@ def link_articles(
     ``reference`` is the control corpus for keyness. A handful of articles
     must not be their own control: a verb that appears once would look rare.
     Pass the day's news. When omitted, the articles being scored are the control.
+
+    ``names`` is the alias catalog. Pass the full description list so a company
+    the liquidity screen excluded (Lockheed) can still be a name hit. When
+    omitted, only companies on this board are recognized.
+
+    ``apply_batch`` is the cross-article z gate. The frozen corpus turns it
+    off: that gate needs a real day of news, and a dozen labeled cases are
+    not that day.
     """
+    name_index = _name_index(board, names)
+    on_board = {stock.ticker: stock for stock in board.stocks}
+    sharp = {term for term, weight in board.weight.items() if weight >= 0.35}
     prepared = [prepare(str(article.get("text") or "")) for article in articles]
     if reference is None:
         ref_docs = prepared
@@ -565,23 +649,32 @@ def link_articles(
         if bg_tokens < 30:
             queries.append(dict(doc.terms))
         else:
-            queries.append(_apply_keyness(doc, background - own, bg_tokens))
+            queries.append(_apply_keyness(doc, background - own, bg_tokens, sharp))
 
     raw: list[dict] = []
     for article, doc, query in zip(articles, prepared, queries):
         text = str(article.get("text") or "")
+        mentioned = name_index.mentioned(text)
         if not doc.known or len(query) < 3:
+            # Too thin to score a topic. A name can still be recorded, and a
+            # partner link cannot, because no industry passed.
+            named_rows = [
+                _name_row(record, off_board=record.ticker not in on_board, passing=set())
+                for record in mentioned
+            ]
             raw.append({
                 "id": article.get("id"),
                 "title": article.get("title") or "",
                 "url": article.get("url") or "",
                 "source": article.get("source") or "",
-                "status": "unknown",
+                "status": "scored" if named_rows else "unknown",
                 "bundles": doc.bundles[:12],
                 "absorbed": doc.absorbed[:12],
                 "industries": [],
-                "stocks": [],
-                "dependencies": _dependencies(board, text),
+                "stocks": named_rows,
+                "dependencies": [],
+                "_sparse": {},
+                "_ind": {},
             })
             continue
         ind_scores = _industry_scores(query, board, doc.sentences)
@@ -631,7 +724,8 @@ def link_articles(
                 "desc_score": round(score, 3),
                 "bm25": round(bm25(query, stock, board), 3),
                 "terms": hits,
-                "name_hit": name_hit(stock, text),
+                "name_hit": False,
+                "off_board": False,
                 "ind_pass": stock.industry in passing_industries,
             })
         adjusted = [row["desc_score"] for row in stocks_out]
@@ -643,24 +737,23 @@ def link_articles(
             row["desc_pass"] = row["desc_z"] >= z_min and bool(row["terms"])
             row["pass"] = row["desc_pass"] and row["ind_pass"]
         seen = {row["ticker"] for row in stocks_out}
-        for stock in board.stocks:
-            if stock.ticker in seen or not name_hit(stock, text):
+        for record in mentioned:
+            if record.ticker in seen:
+                for row in stocks_out:
+                    if row["ticker"] == record.ticker:
+                        row["name_hit"] = True
                 continue
-            stocks_out.append({
-                "ticker": stock.ticker,
-                "name": stock.name,
-                "industry": stock.industry,
-                "sector": stock.sector,
-                "desc_score": 0.0,
-                "bm25": 0.0,
-                "terms": [],
-                "name_hit": True,
-                "ind_pass": stock.industry in passing_industries,
-                "desc_z": 0.0,
-                "desc_pass": False,
-                "pass": False,
-            })
+            stocks_out.append(_name_row(
+                record,
+                off_board=record.ticker not in on_board,
+                passing=passing_industries,
+            ))
         stocks_out.sort(key=lambda row: (-int(row["pass"]), -int(row["name_hit"]), -row["desc_z"], -row["desc_score"]))
+        named_rows = [row for row in stocks_out if row["name_hit"]]
+        other_rows = [
+            row for row in stocks_out
+            if not row["name_hit"] and (row["pass"] or row["desc_z"] >= z_min)
+        ]
         raw.append({
             "id": article.get("id"),
             "title": article.get("title") or "",
@@ -670,14 +763,14 @@ def link_articles(
             "bundles": doc.bundles[:12],
             "absorbed": doc.absorbed[:12],
             "industries": [row for row in industries if row["pass"] or row["z"] > 0][:8],
-            "stocks": [row for row in stocks_out if row["pass"] or row["name_hit"] or row["desc_z"] >= z_min][:24],
-            "dependencies": _dependencies(board, text),
+            "stocks": named_rows + other_rows[: max(0, 24 - len(named_rows))],
+            "dependencies": _dependencies(board, text, passing_industries, name_index),
             "_sparse": sparse,
             "_ind": {row["industry"]: row["score"] for row in industries},
         })
 
     scored_n = sum(1 for item in raw if item["status"] == "scored")
-    if scored_n >= 8:
+    if apply_batch and scored_n >= 8:
         sum_t: Counter[str] = Counter()
         sumsq_t: Counter[str] = Counter()
         sum_i: Counter[str] = Counter()
@@ -712,7 +805,9 @@ def link_articles(
                     and row["batch_z"] >= batch_z_min
                     and row["ind_batch_z"] >= batch_z_min
                 )
-                if row["pass"] or row["batch_z"] >= batch_z_min:
+                # A name hit is a fact about the text, not a score. The batch
+                # gate may refuse it a topical pass; it may not delete it.
+                if row["pass"] or row.get("name_hit") or row["batch_z"] >= batch_z_min:
                     kept.append(row)
             kept.sort(key=lambda row: (-int(row["pass"]), -row["batch_z"], -row["desc_z"]))
             item["stocks"] = kept[:12]

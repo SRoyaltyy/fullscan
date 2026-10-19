@@ -270,8 +270,13 @@ def run_in_process(cases: list[dict], args: argparse.Namespace) -> dict[str, dic
         from src.filing_business import load_business_texts
         filings = load_business_texts(args.filings)
 
+    from src.names import NameIndex, catalog_from_csv
+
     stocks = load_stocks(args.descriptions, args.universe, args.sectors, filings)
     board = build_board(stocks)
+    # Names come from the whole description file, not the liquidity screen,
+    # so Lockheed can be a name hit while staying off the topical board.
+    names = NameIndex(catalog_from_csv(args.descriptions))
 
     reference = None
     if args.reference and args.reference.is_file():
@@ -284,8 +289,12 @@ def run_in_process(cases: list[dict], args: argparse.Namespace) -> dict[str, dic
         "source": "eval-corpus",
         "text": case.get("text") or "",
     } for case in cases]
-    hits = link_articles(board, articles, z_min=args.z_min, batch_z_min=args.batch_z_min,
-                         reference=reference)
+    # The corpus is a labeled sample, not a day of news. Batch-z is calibrated
+    # on a real day (problem-taxonomy F6), so it stays off here.
+    hits = link_articles(
+        board, articles, z_min=args.z_min, batch_z_min=args.batch_z_min,
+        reference=reference, names=names, apply_batch=False,
+    )
     return {str(hit.get("id")): hit for hit in hits}
 
 
