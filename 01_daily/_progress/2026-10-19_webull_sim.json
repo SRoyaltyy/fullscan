@@ -5,16 +5,16 @@
   "run_id": "39311381703",
   "model": "",
   "started_at": "2026-10-19T15:33:06-04:00",
-  "updated_at": "2026-10-19T15:35:14-04:00",
-  "heartbeat_at": "2026-10-19T15:35:14-04:00",
+  "updated_at": "2026-10-19T15:35:20-04:00",
+  "heartbeat_at": "2026-10-19T15:35:20-04:00",
   "stages": [
     {
       "name": "rows",
-      "state": "running",
+      "state": "ok",
       "started_at": "2026-10-19T15:33:06-04:00",
-      "ended_at": "",
+      "ended_at": "2026-10-19T15:35:20-04:00",
       "heartbeat_at": "2026-10-19T15:35:14-04:00",
-      "done": 0,
+      "done": 1,
       "total": 1,
       "model": "",
       "error": ""
