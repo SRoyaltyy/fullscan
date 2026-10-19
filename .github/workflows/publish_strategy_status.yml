@@ -48,6 +48,7 @@ jobs:
             data/factor_mine/preopen/seals
             data/webull_sim/days.jsonl
             research/hot_n4_clean_v4/forward_h1/h1_log.jsonl
+            research/hot_n4_clean_v4/forward/holdup_log.jsonl
             data/strategy_status
           sparse-checkout-cone-mode: false
       - uses: actions/setup-python@v5
