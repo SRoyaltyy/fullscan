@@ -1,5 +1,169 @@
 [
   {
+    "title": "Public Law 119 - 119 - Improving Social Security's Service to Victims of Identity Theft Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ119",
+    "native_id": "PLAW-119publ119",
+    "published_at": "2026-10-19T17:24:00+00:00",
+    "published_raw": "Mon, 19 Oct 2026 17:24:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 5409,
+    "first_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 36 - Homebuyers Privacy Protection Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ36",
+    "native_id": "PLAW-119publ36",
+    "published_at": "2026-10-19T15:57:00+00:00",
+    "published_raw": "Mon, 19 Oct 2026 15:57:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 2250,
+    "first_seen": "2026-10-15T17:47:31.406388+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "CAC Outcome: Unite the Union & Kongsberg Maritime Limited",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-unite-the-union-kongsberg-maritime-limited",
+    "native_id": "/government/publications/cac-outcome-unite-the-union-kongsberg-maritime-limited",
+    "published_at": "2026-10-19T13:51:22+00:00",
+    "published_raw": "2026-10-19T13:51:22Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from Unite the Union.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 5385,
+    "first_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Teacher misconduct panel outcome: Mr Christopher Clarkson",
+    "url": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-christopher-clarkson",
+    "native_id": "/government/publications/teacher-misconduct-panel-outcome-mr-christopher-clarkson",
+    "published_at": "2026-10-19T13:20:08+00:00",
+    "published_raw": "2026-10-19T13:20:08Z",
+    "document_type": "decision",
+    "issuer": "Teaching Regulation Agency",
+    "issuer_ids": [
+      "uk-gov:teaching-regulation-agency"
+    ],
+    "summary": "Professional conduct panel outcome, including decision and reasons.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Teaching Regulation Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 5386,
+    "first_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Tackley level crossing: Transport and Works Act order",
+    "url": "https://www.gov.uk/government/publications/network-rail-tackley-level-crossing-transport-and-works-act-order",
+    "native_id": "/government/publications/network-rail-tackley-level-crossing-transport-and-works-act-order",
+    "published_at": "2026-10-19T11:09:12+00:00",
+    "published_raw": "2026-10-19T11:09:12Z",
+    "document_type": "decision",
+    "issuer": "Department for Transport",
+    "issuer_ids": [
+      "uk-gov:department-for-transport"
+    ],
+    "summary": "Approval to use land temporarily and close the Tackley level crossing as part of the Oxford Phase 2A enhancement works.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department for Transport",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 5387,
+    "first_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "YO8 5BJ, Aqua Operations Limited: environmental permit issued - EPR/XP3506LZ/V005",
+    "url": "https://www.gov.uk/government/publications/yo8-5bj-aqua-operations-limited-environmental-permit-issued-eprxp3506lzv005",
+    "native_id": "/government/publications/yo8-5bj-aqua-operations-limited-environmental-permit-issued-eprxp3506lzv005",
+    "published_at": "2026-10-19T08:03:44+00:00",
+    "published_raw": "2026-10-19T08:03:44Z",
+    "document_type": "decision",
+    "issuer": "Environment Agency",
+    "issuer_ids": [
+      "uk-gov:environment-agency"
+    ],
+    "summary": "View the permit issued for Selby Sauces and Pickles Effluent Treatment Plant, Selby under the Industrial Emissions Directive.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Environment Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 5388,
+    "first_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
     "title": "Regulations Regarding Payment of Tax by Commercially Acceptable Means",
     "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21267/regulations-regarding-payment-of-tax-by-commercially-acceptable-means",
     "native_id": "2026-21267",
@@ -25,7 +189,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5349,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -55,7 +219,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5348,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -85,7 +249,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5344,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -116,7 +280,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5338,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -147,7 +311,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5326,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -178,7 +342,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5317,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -209,7 +373,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5314,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -239,7 +403,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5307,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -270,7 +434,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5301,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -300,7 +464,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5300,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -330,7 +494,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5298,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -360,7 +524,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5297,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -390,7 +554,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5293,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -421,7 +585,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5292,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -452,7 +616,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5291,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -483,7 +647,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5286,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -514,7 +678,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5285,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -545,7 +709,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5284,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -576,7 +740,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5271,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -606,7 +770,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5269,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -637,7 +801,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5247,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -667,7 +831,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5242,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -697,7 +861,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5232,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -727,7 +891,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5231,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -757,7 +921,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5230,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -787,7 +951,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5229,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T19:21:25.980956+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1030,291 +1194,6 @@
     "last_seen": "2026-10-17T05:37:40.086992+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 121 - American Music Tourism Act of 2025",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ121",
-    "native_id": "PLAW-119publ121",
-    "published_at": "2026-10-16T18:45:00+00:00",
-    "published_raw": "Fri, 16 Oct 2026 18:45:00 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 4295,
-    "first_seen": "2026-10-17T05:37:40.086992+00:00",
-    "last_seen": "2026-10-17T05:37:40.086992+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "CAC Outcome: TSSA & Transport for London (TfL)",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-tssa-transport-for-london-tfl",
-    "native_id": "/government/publications/cac-outcome-tssa-transport-for-london-tfl",
-    "published_at": "2026-10-16T13:54:44+00:00",
-    "published_raw": "2026-10-16T13:54:44Z",
-    "document_type": "decision",
-    "issuer": "Central Arbitration Committee",
-    "issuer_ids": [
-      "uk-gov:central-arbitration-committee"
-    ],
-    "summary": "Outcome(s) by the Central Arbitration Committee on an application from TSSA.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Central Arbitration Committee",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 3733,
-    "first_seen": "2026-10-16T16:03:14.310875+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "CAC Outcome: NEU, NASUWT & Liverpool College",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-neu-nasuwt-liverpool-college",
-    "native_id": "/government/publications/cac-outcome-neu-nasuwt-liverpool-college",
-    "published_at": "2026-10-16T13:54:09+00:00",
-    "published_raw": "2026-10-16T13:54:09Z",
-    "document_type": "decision",
-    "issuer": "Central Arbitration Committee",
-    "issuer_ids": [
-      "uk-gov:central-arbitration-committee"
-    ],
-    "summary": "Outcome(s) by the Central Arbitration Committee on an application from the NEU & NASUWT.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Central Arbitration Committee",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 3734,
-    "first_seen": "2026-10-16T16:03:14.310875+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Production Screening Directions – 2026",
-    "url": "https://www.gov.uk/government/publications/production-screening-directions-2026",
-    "native_id": "/government/publications/production-screening-directions-2026",
-    "published_at": "2026-10-16T12:32:49+00:00",
-    "published_raw": "2026-10-16T12:32:49Z",
-    "document_type": "decision",
-    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
-    "issuer_ids": [
-      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
-    ],
-    "summary": "Screening Directions",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 3735,
-    "first_seen": "2026-10-16T16:03:14.310875+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Fisheries: agreed records of consultations and distribution reports for blue whiting and Norwegian spring spawning herring in the North-East Atlantic for 2027",
-    "url": "https://www.gov.uk/government/publications/fisheries-agreed-records-of-consultations-and-distribution-reports-for-blue-whiting-and-norwegian-spring-spawning-herring-in-the-north-east-atlantic-f",
-    "native_id": "/government/publications/fisheries-agreed-records-of-consultations-and-distribution-reports-for-blue-whiting-and-norwegian-spring-spawning-herring-in-the-north-east-atlantic-f",
-    "published_at": "2026-10-16T10:31:29+00:00",
-    "published_raw": "2026-10-16T10:31:29Z",
-    "document_type": "decision",
-    "issuer": "Department for Environment, Food & Rural Affairs",
-    "issuer_ids": [
-      "uk-gov:department-for-environment-food-rural-affairs"
-    ],
-    "summary": "Reports from stock distribution working groups and agreed records of annual consultations on the management of Norwegian spring spawning herring and blue whiting in the North-East Atlantic.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Department for Environment, Food & Rural Affairs",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 3300,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "SL5 8BP, Element Six Technologies Ltd: permit surrender issued - EPR/RP3609BU/S002",
-    "url": "https://www.gov.uk/government/publications/sl5-8bp-element-six-technologies-ltd-permit-surrender-issued-eprrp3609bus002",
-    "native_id": "/government/publications/sl5-8bp-element-six-technologies-ltd-permit-surrender-issued-eprrp3609bus002",
-    "published_at": "2026-10-16T10:15:12+00:00",
-    "published_raw": "2026-10-16T10:15:12Z",
-    "document_type": "decision",
-    "issuer": "Environment Agency",
-    "issuer_ids": [
-      "uk-gov:environment-agency"
-    ],
-    "summary": "View the surrender issued for Element Six Technologies Ltd (Ascot), Ascot under the Industrial Emissions Directive.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Environment Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 3301,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "DY11 7XA, Ringway Infrastructure Services Limited: environmental permit issued - EPR/HP3331JK/V002",
-    "url": "https://www.gov.uk/government/publications/dy11-7xa-ringway-infrastructure-services-limited-environmental-permit-issued-eprhp3331jkv002",
-    "native_id": "/government/publications/dy11-7xa-ringway-infrastructure-services-limited-environmental-permit-issued-eprhp3331jkv002",
-    "published_at": "2026-10-16T09:33:19+00:00",
-    "published_raw": "2026-10-16T09:33:19Z",
-    "document_type": "decision",
-    "issuer": "Environment Agency",
-    "issuer_ids": [
-      "uk-gov:environment-agency"
-    ],
-    "summary": "View the permit issued for Stanford Depot, Hartlebury under the Industrial Emissions Directive.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Environment Agency",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 3302,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Deep Drilling Screening Directions – 2026",
-    "url": "https://www.gov.uk/government/publications/deep-drilling-screening-directions-2026",
-    "native_id": "/government/publications/deep-drilling-screening-directions-2026",
-    "published_at": "2026-10-16T09:20:11+00:00",
-    "published_raw": "2026-10-16T09:20:11Z",
-    "document_type": "decision",
-    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
-    "issuer_ids": [
-      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
-    ],
-    "summary": "Screening Directions",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 3303,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Business software and cloud services",
-    "url": "https://www.gov.uk/government/publications/business-software-and-cloud-services",
-    "native_id": "/government/publications/business-software-and-cloud-services",
-    "published_at": "2026-10-16T09:02:57+00:00",
-    "published_raw": "2026-10-16T09:02:57Z",
-    "document_type": "decision",
-    "issuer": "Competition and Markets Authority",
-    "issuer_ids": [
-      "uk-gov:competition-and-markets-authority"
-    ],
-    "summary": "Actions set out by the Competition and Markets Authority (CMA) on business software and cloud services.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Competition and Markets Authority",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 3304,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Copyright Tribunal decisions and orders",
-    "url": "https://www.gov.uk/government/publications/copyright-tribunal-decisions-and-orders",
-    "native_id": "/government/publications/copyright-tribunal-decisions-and-orders",
-    "published_at": "2026-10-16T06:29:24+00:00",
-    "published_raw": "2026-10-16T06:29:24Z",
-    "document_type": "decision",
-    "issuer": "Copyright Tribunal",
-    "issuer_ids": [
-      "uk-gov:copyright-tribunal"
-    ],
-    "summary": "The most recent decisions and orders are available below. Earlier decisions are available from the National Archive. See link at bottom of this page.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Copyright Tribunal",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 3305,
-    "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-19T06:15:03.918025+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
     ]
   }
 ]
