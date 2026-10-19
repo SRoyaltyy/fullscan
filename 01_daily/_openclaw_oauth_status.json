@@ -1,10 +1,10 @@
 {
   "mode": "all",
-  "started_et": "2026-10-19T10:17:30.526932-04:00",
+  "started_et": "2026-10-19T11:51:07.811515-04:00",
   "openclaw_version": "OpenClaw 2026.7.1-2 (0790d9f)",
   "paid_key_in_env_stripped": false,
   "expires_before": "2026-10-19T20:02:47.546000+00:00",
-  "minutes_left_before": 345.3,
+  "minutes_left_before": 251.7,
   "expiry_source": "sqlite:openclaw-agent.sqlite",
   "has_refresh_token": true,
   "renew": "SKIP: token fresh",
@@ -16,12 +16,12 @@
   "gateway_token_len": 48,
   "call_pre": {
     "http": 200,
-    "secs": 10.6,
+    "secs": 10.2,
     "answer": "42",
     "ok": true
   },
   "guard": "OK",
   "ok": true,
   "exit": 0,
-  "finished_et": "2026-10-19T10:17:41.820378-04:00"
+  "finished_et": "2026-10-19T11:51:18.675250-04:00"
 }
