@@ -1,136 +1,136 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T07:32:07.184411-04:00",
-  "overall": "PARTIAL",
+  "generated_at": "2026-10-19T12:47:23.714849-04:00",
+  "overall": "OK",
   "ranker_ready": true,
   "counts": {
-    "ok": 7,
+    "ok": 8,
     "partial": 0,
-    "fail": 1,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [
     {
-      "ticker": "CDNA",
-      "score": 0.8337797636157818
-    },
-    {
-      "ticker": "VEEV",
-      "score": 0.440722832336436
-    },
-    {
       "ticker": "SN",
-      "score": 0.407997786723631
-    },
-    {
-      "ticker": "BLFS",
-      "score": 0.7855905743942335
-    },
-    {
-      "ticker": "ILMN",
-      "score": 0.41337572363644054
-    },
-    {
-      "ticker": "PRCH",
-      "score": 0.8070181406744832
-    },
-    {
-      "ticker": "SHOO",
-      "score": 0.7176451412456195
+      "score": 0.41228679187551304
     },
     {
       "ticker": "CBRL",
-      "score": 0.7582374174986715
+      "score": 0.7930149516214733
+    },
+    {
+      "ticker": "PRCH",
+      "score": 0.8139089838637334
     },
     {
       "ticker": "CAKE",
-      "score": 0.7182463477506182
+      "score": 0.7343391747123458
+    },
+    {
+      "ticker": "SHOO",
+      "score": 0.718469176249944
+    },
+    {
+      "ticker": "VEEV",
+      "score": 0.3971163682837808
+    },
+    {
+      "ticker": "CDNA",
+      "score": 0.7686832551465634
+    },
+    {
+      "ticker": "ARQT",
+      "score": 0.7312184229079193
     },
     {
       "ticker": "AVPT",
-      "score": 0.6750450194399089
+      "score": 0.704045007987252
     },
     {
-      "ticker": "TRU",
-      "score": 0.44103282054223053
+      "ticker": "ETON",
+      "score": 0.6685105381974901
     },
     {
-      "ticker": "JXN",
-      "score": 0.5213734503919559
+      "ticker": "MQ",
+      "score": 0.6785934514970269
     },
     {
       "ticker": "LAUR",
-      "score": 0.5871377898646308
+      "score": 0.6286215797636239
     },
     {
-      "ticker": "RELY",
-      "score": 0.5591741948914406
+      "ticker": "TOST",
+      "score": 0.49641516135462216
     },
     {
-      "ticker": "ABX",
-      "score": 0.4888540105672492
+      "ticker": "TRU",
+      "score": 0.4653185622540826
+    },
+    {
+      "ticker": "JXN",
+      "score": 0.5275313855121289
     }
   ],
   "sell_1d": [
+    {
+      "ticker": "ROIV",
+      "score": -0.608162066163344
+    },
     {
       "ticker": "ARE",
       "score": -0.4535167536703368
     },
     {
-      "ticker": "NEOV",
-      "score": -0.3688463541888366
+      "ticker": "BNTX",
+      "score": -0.39722771321675465
+    },
+    {
+      "ticker": "GH",
+      "score": -0.3893571838598999
     },
     {
       "ticker": "VSAT",
-      "score": -0.36583046682770615
+      "score": -0.3658195935912882
+    },
+    {
+      "ticker": "IFRX",
+      "score": -0.3625876678727329
+    },
+    {
+      "ticker": "TYRA",
+      "score": -0.3614819951721589
+    },
+    {
+      "ticker": "WVE",
+      "score": -0.3591598801806976
     },
     {
       "ticker": "BAK",
-      "score": -0.36423588642979243
-    },
-    {
-      "ticker": "ROIV",
-      "score": -0.3640062589448013
-    },
-    {
-      "ticker": "SOC",
-      "score": -0.36106174176073086
-    },
-    {
-      "ticker": "INTC",
-      "score": -0.35111493616685563
+      "score": -0.35576791589037027
     },
     {
       "ticker": "ALK",
       "score": -0.3496324992694038
     },
     {
-      "ticker": "PAL",
-      "score": -0.3264255006325073
+      "ticker": "AXSM",
+      "score": -0.34928581604075715
     },
     {
-      "ticker": "VNET",
-      "score": -0.32173219462411756
+      "ticker": "NEOV",
+      "score": -0.34477378969227834
     },
     {
-      "ticker": "PCT",
-      "score": -0.32137323354022956
+      "ticker": "CGEM",
+      "score": -0.34452285768580143
     },
     {
-      "ticker": "CMTG",
-      "score": -0.3210852097833349
+      "ticker": "PYXS",
+      "score": -0.33517794375666854
     },
     {
-      "ticker": "NN",
-      "score": -0.3178030595806984
-    },
-    {
-      "ticker": "PRM",
-      "score": -0.3091681085988022
-    },
-    {
-      "ticker": "HPP",
-      "score": -0.30465111471884604
+      "ticker": "LXRX",
+      "score": -0.33435198917289227
     }
   ],
   "flatten": {
@@ -1436,6 +1436,67 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-19\n_Generated 2026-10-19T09:59:22 \u2014 live `flatten_robust`._\n**S=+2.12; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+2.12** (UP) \u00b7 route **io**\n- Cash leftover **$10,071.34** (after 09:30 $7.56 \u00b7 after 16:00 $95,638.90)\n- Prior close **$105,740.21** \u00b7 09:30 **$105,740.21** \u00b7 overnight **$+0.00** \u00b7 session **$-10,101.31** \u00b7 16:00 **$95,638.90**\n- Overnight lots **7** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$10,063.78** \u2264 leftover after sells **$105,702.70** \u00b7 2026-10-18 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59."
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-19T12:46:54.375777-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-19_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9548,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-19_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5145,
+          "preview": "# Weather report \u2014 2026-10-19\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-19\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-19T12:47:03.931273-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-19_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2251219,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FTK, CMBT, TEN, INSW, PBR-A"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FTK, CMBT, TEN, INSW, PBR-A"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-19T12:47:09.822690-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-19_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "source": "publish_live_boards"
