@@ -120,6 +120,8 @@ business corroboration. None of these mechanisms adds a ticker-specific alias.
 Missing brands and stale company descriptions remain source-coverage gaps.
 
 The isolated runner also accepts `--unittest` followed by test modules.
+It accepts `--scan` followed by the production CLI's scan arguments, preserving
+the same network denial while producing unlabeled inference outputs.
 The sample exporter accepts repeated `--exclude-sample` arguments so later
 holdouts can exclude all previously inspected primary headlines.
 
@@ -141,6 +143,10 @@ An individual named company imposing its own restriction does not establish
 a sector-wide policy. Coordinated issuer subjects can share a corporate
 predicate; an exact legal brand takes precedence over a longer company's
 shortened name. Publisher removal uses only the last source suffix.
+
+CI can infer all three exported primary-headline sets from existing public
+repository inputs and store compact ID/pass outputs as artifacts. No private
+annotations are uploaded or exposed. Frozen labels are scored separately.
 
 ## Measurement and release bar
 

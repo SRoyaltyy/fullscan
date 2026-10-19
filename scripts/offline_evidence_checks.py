@@ -26,5 +26,9 @@ if len(sys.argv)>1 and sys.argv[1]=='--unittest':
     del sys.argv[1]
     runpy.run_module('unittest',run_name='__main__')
     raise SystemExit
+if len(sys.argv)>1 and sys.argv[1]=='--scan':
+    del sys.argv[1]
+    runpy.run_module('src.link_correlation',run_name='__main__')
+    raise SystemExit
 sys.argv[0]='src.eval_correlation'
 runpy.run_module('src.eval_correlation',run_name='__main__')

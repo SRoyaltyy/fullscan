@@ -54,6 +54,13 @@ jobs:
           --out validation-inputs/holdout --seed 19021 --budget 200
           --exclude-sample validation-inputs/news-sample.json
           --exclude-sample validation-inputs/fresh/news-sample.json
+      - name: Infer primary headlines using public inputs only
+        run: |
+          python -I -S scripts/offline_evidence_checks.py --scan --engine evidence --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/headline-sample.json --out validation-inputs/evidence-headline-links.json
+          python -I -S scripts/offline_evidence_checks.py --scan --engine evidence --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/fresh/headline-sample.json --out validation-inputs/fresh/evidence-headline-links.json
+          python -I -S scripts/offline_evidence_checks.py --scan --engine evidence --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/holdout/headline-sample.json --out validation-inputs/holdout/evidence-headline-links.json
+          python -I -S scripts/offline_evidence_checks.py --scan --engine legacy --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/holdout/headline-sample.json --out validation-inputs/holdout/legacy-headline-links.json
+          python scripts/compact_headline_links.py validation-inputs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
