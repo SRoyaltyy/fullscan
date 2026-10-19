@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"Sempra SRE news October 2026"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"Sempra SRE Petrobras 20-year LNG supply deal"* → got 6 results (via ddg)
 
-  - Sempra to Report Third-Quarter 2026 Earnings on November 5 - Yahoo Finance (https://news.google.com/rss/articles/CBMingFBVV95cUxPbExjRGdXaHlKQlZkVGhxTjdWemxVNVZGbjNfQWM0RndLbHZvS1A4NmduR0VSN3RaLXdrbmdtcGZtUU1YZW9admViNkppT3YwQ3pkQTdwLVNXd1VCNk9YeUFIVkVCS3N2Zjk1M1ZZRnFpMzhCeGNGTFo5bTJCOFE2OWJ5dE82dkZnZ2QyZnAyQms1TVkyazQtY1NHS3dfZw?oc=5)
+  - Sempra Infrastructure Announces Long-Term LNG Supply ... (https://www.sempra.com/newsroom/press-releases/sempra-infrastructure-announces-long-term-lng-supply-agreement-petrobras)
 
-  - Sempra Energy (SRE) Stock Price, News & Analysis $SRE - MarketBeat (https://news.google.com/rss/articles/CBMiVkFVX3lxTE1HZVU3R1Rua2o1aTZKOURyXzZGTHFfUTR0NFE5VkJXd0M2b3dUV0pGV1NFdE1YNGFfUjhLczdDWEs2SHpldDdVNjJUUzg4SnBCR2h6TWdB?oc=5)
+  - Sempra Infrastructure Announces Long-Term LNG Supply ... (https://www.prnewswire.com/news-releases/sempra-infrastructure-announces-long-term-lng-supply-agreement-with-petrobras-302878157.html)
 
-  - Why Is Sempra (SRE) Getting A Closer Look Today? - Simply Wall Street (https://news.google.com/rss/articles/CBMirAFBVV95cUxNdVd3RU42c1ZKaU5PaHplV0hZTDIyeE83SGJpUHJxbVAyUm1VNFBTYVFONExaNFpSVzVlYllPRXpKNVdlRUhJekNSTXNUUWF4c0NjUlF5YVdlLUFtRTM1eE5fZHRJcFVKZ19wQnVvZUp3V0FjN2hDUXlFUmR6S0lKdHdmMUxoWEtBeGdVUW1LNmUtakZvaEdtWElwZ0FuVXhkTWpURVRYQkhuR2Vt0gGyAUFVX3lxTE1aaG1KVlhSYnF1dXJ5S3pCSXJ3RG9BVEM1YmNBYS1WOVdzMzU4Qm5jQThHVWE1Z2RIeEtaZ0pRS2tWbjFOMEgxREdqSFZXQnRjaDJUSFFEZ2lDQ1AyQ0Z5Yjk1QTFlSEpjWVpqUDRkSWVEQURiUlF5TmlKRTg1eGRTdEVsOVRoRE5sRUNIdTBiSTdwMkUwcWtFc2hxZDBld0pMT1I4THctb2k3dE9lZDJ6UWc?oc=5)
+  - Sempra Locks In Petrobras for 20-Year U.S. LNG Supply Deal (https://finance.yahoo.com/energy/articles/sempra-locks-petrobras-20-u-003328108.html?fr=sycsrp_catchall)
 
-**Step 2 — Research.** The model wanted to know: *"AES Corp news October 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"AES Corp news October 2026"* → got 6 results (via ddg)
 
-  - AES secures EU and New York approvals for Horizon merger, closing still subject to conditions - TradingView (https://news.google.com/rss/articles/CBMi6gFBVV95cUxOSlFaSVZQNzVoTnhRSkh6d2pDUzg0SmpObXVmZEV4d19HbENPZkJ1ZEcyY0tvS2FVUXl4Tl9zMmV2STVaU01ESjdLd2NSMlFrQ1FiNG5xamx2elZ4cW8xVVBuTTJwSF8yelVhcWF3dXVfaXoxb25CT1NmVWFuRjNNUEFyQ25PQlA4VEpfXzVUaU5DNk1MVmRHNHBYWVhMY00xMk5QLVE1d2h2TW9aaS1ZRFAxUXNBaUQwMEU1RndvU3p6NnpqQ2IwTDVEalZqQnhVSHRSdFRiRVloS3ZuUzhLaThTNW55WVR5SWc?oc=5)
+  - AES Corp News Monitoring Service & Press Release Distribution ... (https://energy.einnews.com/news/aes-corp)
 
-  - European Union Approves AES Corp. Sale to Global Infrastructure - GuruFocus (https://news.google.com/rss/articles/CBMi1gFBVV95cUxOcS03bG93bjA2SU9xWmpaXzF3TERyWFNtT3I2Uy0zQUt6emh3TGFKMUtSbTNCaThfa1loOVNtbnVqR0VyTE1yd0NQNWM3WGZoMVdJbVJIYXBWTEdudEJFendNamZBTWhBaEJxeS1rNXIxSHB4Wk8yeTYyaDh3NVhMUFppdlQ5MHN1UkhzTXNqeG5pT0ZaQ2NpUElQeVpXcFM1SDROZDF6SkY2c0NBdGRiRjFpN2FHMnVlOXVtUzVoTjVRU2lIeFFjaU9VdEcxSjdyNDRhSUVn?oc=5)
+  - AES Investors: Resources, Reports, News, Filings & Events (https://www.aes.com/investors)
 
-  - The AES Corporation (AES) Stock Forecasts - Yahoo Finance (https://news.google.com/rss/articles/CBMijAFBVV95cUxNNFYwaG03UFBvSmMzUERCMkVNckhjZkNaMmJwTkRzcXU3eUZIcWVoRkcwOVdzMWRQc1gwTWNKeVctU09obE9PNHpsWHlpa1djbnhYeVFZVllvOVRCTmlxOE42OTgxeTBRZG0xZ1liR21vX2JvYnRZRU1XV0dYa1VPa2ZwNjU5c01ucnBWeA?oc=5)
+  - AES Corporation News - AES Corporation News from EIN News (https://companies.einnews.com/news/aes-corporation-news)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

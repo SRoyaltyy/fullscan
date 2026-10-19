@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"GE Aerospace stock news October 20 2026"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"GE Aerospace stock news October 2026"* → got 6 results (via ddg)
 
-  - Dear GE Aerospace Stock Fans, Mark Your Calendars for October 20 - Barchart.com (https://news.google.com/rss/articles/CBMiqwFBVV95cUxNeGdPTjFGRVFlNmJMcXMzcnpxYktiTTlaS0tyeVF4Qkx4RHJKeDNUX3lqZ1BUb1ducWVyUTQwT3pYUVotdFV1NWk5TWJZZGRqV3VuY1FkZGhrZDdSbTlsZkV1UXZ2bVE2VkpJdElQTUlZRGF1b3V2X2l6cTNTM2I2ZmE4MmV3bmluVVkyRXo3cmdKNzBKVl9PTEprVlJaQzZuUGJ2Sjd6MGxOYlE?oc=5)
+  - GE Aerospace 3rd Quarter 2026 Earnings Webcast (https://www.geaerospace.com/investor-relations/events-reports/ge-aerospace-3rd-quarter-2026-earnings-webcast)
 
-  - GE Aerospace and RTX Earnings Preview: What to Watch as Aerospace and Defense Report - Yahoo Finance (https://news.google.com/rss/articles/CBMinwFBVV95cUxONWZMcTJaemthcFBWemxXcTZOaFc0aDZPcFhnT3pWV2hVSmZTNXVlLTZvd1RPS2N5SkhhZFROM3RWNTZ0a1lTTFNqQ0t2aUVzNExTT3JBMDhYZF9PMTdnU1BrUFhlVHNONmVINS1kSDlTSTlHRVBHSC0xU0xRdTlSWE9Qd3pqaXV5WmhXMFRzR3NEOFdTVUlXZGw1d3k5N1k?oc=5)
+  - GE Aerospace and RTX Earnings Preview: What to Watch as ... (https://247wallst.com/investing/2026/10/19/ge-aerospace-and-rtx-earnings-preview-what-to-watch-as-aerospace-and-defense-report/)
 
-  - GE Aerospace and RTX Earnings Preview: What to Watch as Aerospace and Defense Report - 24/7 Wall St. (https://news.google.com/rss/articles/CBMixgFBVV95cUxNNWFTS3k2cUdGR08tOS1SVkMtVXh5ZkpzaGlBSDlfSjBDZ1FaNlNNZll0blluZ0ZyYXBmLXNkdC1WVW5xUlRMRW1CSFFWcmU5TFlLd3ViT1pnNWwxcDVkNG1LRzJxdXF3Vnhza1JzblV6T3BHb3NlVlVyQ3ZsQ0JvT180V0wtTl9sWGI3SEZEUjhaUnRLNjZQZGttQXRTUGM3ZlVZVmhXbjFmUWZvc09IcWU1UUFEYnFiWmFiemVjUmdtNzUtUWc?oc=5)
+  - GE Aerospace Down 15% in 3 Months: Is This a Buying ... (https://www.zacks.com/stock/news/3003899/ge-aerospace-down-15-in-3-months-is-this-a-buying-opportunity)
 
-**Step 2 — Research.** The model wanted to know: *"RTX Raytheon news October 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"RTX Raytheon news October 2026"* → got 6 results (via gnews_rss)
 
-  - News | Raytheon - RTX (https://www.rtx.com/raytheon/news)
+  - U.S. Army awards Javelin Joint Venture $215 million contract for Lightweight Command Launch Unit production - RTX (https://news.google.com/rss/articles/CBMixgFBVV95cUxNUS1haWxxcHRENElTMHZmQ0RidWZ0cEc4R08ycUtveUZDTnNpMXJ2NlRMN2paVnRBTEJtVmxvX1BvcnFnT1dFZWZIMlhYUkFlbXpPdXNpNDR3YWFWM3UyV2R4RHBQMS1EdV85dW1yYndLRUx3ZTNUS3hxbGZzclZGeGRmcmN4T2xkTWpjMURXNEowNENJS1c5d2VIcnlfQXg5VkpRczgyLUFIU1dHamlITWhGbXV3YnRpWmh3aEJYSmRWcFpqQVE?oc=5)
 
-  - News | RTX's Raytheon completes three successful tests of new ... (https://www.rtx.com/news/news-center/2026/10/12/rtxs-raytheon-completes-three-successful-tests-of-new-coyote-upgrades)
+  - News | RTX's Raytheon selected to modernize U.S. Space Force global early warning radars - RTX (https://news.google.com/rss/articles/CBMixgFBVV95cUxPVXQwa1pJeV9QMW1oOVQteHh4aTF1WTlnNUl5a0taN2t3WnFDWTgtWU9YSE5TaVphd29lNUtJejREMzd5eGVneDRRQ1VORklKMHN0Ymlzc3RqbURwTTVENjByTmFyd2c5WjUxaTZ1X0tWSGJGcHhuejMydmhHU3gwNlVSbmFmQ2dLcHJnbWxaVGRuYXliX1lPQ1dMSXk0YW5Ia1k3TF9yX3VBQW1sYVRKdWVhNFhMZ0t5WmxLRjNVUmt3RnFNX3c?oc=5)
 
-  - Raytheon: Raytheon News Release Archive (https://raytheon.mediaroom.com/index.php?year=2026)
+  - RTX's Raytheon awarded $729 million in counter-drone contracts for U.S., Qatar, and Jordan - RTX (https://news.google.com/rss/articles/CBMiwgFBVV95cUxPOUxiU2kzOWRiU1ZhdEhMRzdYY2ZqYkVEc0U3aG1FSXloVlJNSjltdVp3SnlEcjFycEkySURPWjJWWFRFZ3ZXQ1ZiWmhQWmNHY2lmalNRNXJaZlpvT3JaXzAzWkFYR2VWNERab180aXpBOWhVc1NiX242d25UZ0huS1AyTXpMc1VnM3daUlEtaUczcU9rZDBpVGZ1Y0FzbXNZZWF5ZFdreWxTc0xlOWUyOElVZmlPdmpEbnRvNXlwczRXQQ?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
