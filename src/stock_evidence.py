@@ -15,6 +15,8 @@ from .linguistics import GENERIC, STOP, TOKEN, lemma, terms, tokens
 from .places import CITIES, STATES
 from .aliases import _COUNTRIES
 
+COMPILER_VERSION = 'stock-evidence-2.1'
+
 _LOCATIONS = {p.lower() for p in list(CITIES)+list(STATES)+list(_COUNTRIES)}
 _LOCATION_RX = re.compile(r'\b(?:'+'|'.join(re.escape(p) for p in sorted(_LOCATIONS,key=len,reverse=True))+r')\b',re.I)
 
@@ -45,6 +47,7 @@ OWN = re.compile(r'\b(?:our|we|its|company|it)\b.{0,90}\b(?:develop\w*|manufactu
 PROPER = re.compile(r'\b(?:[A-Z][A-Za-z0-9-]*)(?:\s+(?:[A-Z][A-Za-z0-9-]*)){0,4}\b')
 BRAND = re.compile(r'\b(?:[A-Z][A-Za-z0-9-]+(?:\s+[A-Z][A-Z0-9-]{1,})+|[A-Z][a-z0-9]+[A-Z][A-Za-z0-9-]*|[A-Z][A-Z0-9-]{2,})\b')
 BRAND_DENY = frozenset('FDA SEC CEO CFO COO CTO GAAP US USA UK EU AI API GPU CPU NASA NYSE NASDAQ ITEM PART NOT THE AND FOR OUR INC LLC LTD CORP'.lower().split())
+HISTORY = re.compile(r'\b(?:was|were|is)\s+(?:founded|formed|incorporated|established|headquartered|domiciled)\b|\bformerly known as\b|\bchanged its name\b',re.I)
 
 
 @dataclass
@@ -156,25 +159,55 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
         source = {k:chunk.get(k,'') for k in ('source','form','filing_date','accession','section','complete')}
         source['sha256'] = hashlib.sha256(text.encode()).hexdigest()
         out.sources.append(source)
-        if chunk.get('complete') is False:
-            out.warnings.append('incomplete_source:' + str(chunk.get('accession','')))
         initial = str(chunk.get('kind') or 'business')
         if initial == 'machine_data':
             continue
+        # Only the issuer's own introductory legal name can define these
+        # candidates. Arbitrary proper names elsewhere remain non-identities.
+        from .correlation import _alias
+        legal=_alias(out.name).split()
+        intro=re.match(r'^\s*'+r'[\W_]+'.join(map(re.escape,legal))+r'\b',text,re.I) if legal else None
+        if intro:
+            tail=text[intro.end():intro.end()+180]
+            dba=re.match(r'\s*(?:(?:Corp(?:oration)?|Inc(?:orporated)?|Co|Ltd|Limited)\.?[,\s]*)*[,\s]*(?:doing business as|trading as|d/b/a)\s+([A-Z][A-Za-z0-9-]*(?:\s+[A-Z][A-Za-z0-9-]*){0,3})',tail)
+            if dba:
+                _fact(out,'company_alias',dba.group(1),text[:intro.end()+dba.end()],source,'legal introduction')
+            initials=''.join(w[0] for w in legal if w not in {'and','the','of'}).upper()
+            if re.match(r'\s+Co\.',tail):initials+='C'
+            if 3<=len(initials)<=6 and initials.lower() not in BRAND_DENY:
+                ix=_fact(out,'derived_initialism',initials,text[:intro.end()+min(len(tail),120)],source,'legal introduction')
+                out.facts[ix].confidence='source_derived_candidate'
+        if initial in ('business','update') and (intro or re.search(r'\b(?:we|company)\s+operate\w* through\b',text,re.I)) and re.search(r'\boperates? through\b.{0,160}\bsegments?\b',text,re.I):
+            segments=defaultdict(dict)
+            for sentence in _sentences(text):
+                for m in re.finditer(r'\b(?:The|the|Its|its)\s+([A-Z][A-Za-z0-9-]*(?:\s+[A-Z][A-Za-z0-9-]*){1,3})\s+segment\b',sentence):
+                    segments[m.group(1).split()[0]][m.group(1)]=sentence
+            for brand,owned in segments.items():
+                if len(owned)>=2 and brand.lower() not in BRAND_DENY:
+                    ix=_fact(out,'operating_brand',brand,' '.join(owned.values()),source,'operating segments')
+                    out.facts[ix].confidence='shared_owned_segment_name'
+        if chunk.get('complete') is False:
+            out.warnings.append('incomplete_source:' + str(chunk.get('accession','')))
         for kind, heading, body in split_sections(text, initial):
             # A short business paragraph can explain one operation across
             # several sentences. Keep that contiguous source as a witness;
             # never join sections, dates, or counterparty relationships.
             if kind in ('business','update'):
                 for paragraph in re.split(r'\n\s*\n', body):
-                    sentences = _sentences(paragraph)
-                    counterparties = [(t,n) for t,n in catalog.find(paragraph) if t != ticker]
-                    if 1 < len(sentences) and len(tokens(paragraph,stop=False)) <= 100 and not (counterparties and any(rx.search(paragraph) for rx in RELATION_CUES.values())):
-                        content = profile_terms(paragraph)
-                        ix = _fact(out,'business','',paragraph,source,heading)
-                        for term in content:
-                            if len(out.evidence[term]) < 4:
-                                out.evidence[term].append(ix)
+                    run=[]
+                    for sentence in _sentences(paragraph)+['']:
+                        counterparty=any(t!=ticker for t,n in catalog.find(sentence))
+                        excluded=not sentence or HISTORY.search(sentence) or (counterparty and any(rx.search(sentence) for rx in RELATION_CUES.values()))
+                        if not excluded:
+                            run.append(sentence)
+                            continue
+                        context=' '.join(run)
+                        if len(run)>1 and len(tokens(context,stop=False))<=100:
+                            content=profile_terms(context)
+                            ix=_fact(out,'business','',context,source,heading)
+                            for term in content:
+                                if len(out.evidence[term])<4:out.evidence[term].append(ix)
+                        run=[]
             if kind == 'subsidiary':
                 for line in body.splitlines():
                     match = re.search(r'\b([A-Z][A-Za-z0-9& .-]{1,90}?\s+(?:Corporation|Corp\.?|Inc\.?|Incorporated|LLC|Limited|Ltd\.?|GmbH|B\.V\.))\b',line)
@@ -184,6 +217,9 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
                 if len(sentence) < 10:
                     continue
                 local_kind = kind
+                if kind in ('business','update') and HISTORY.search(sentence):
+                    local_kind='history'
+                    _fact(out,'history','',sentence,source,heading)
                 relation = next((role for role, rx in RELATION_CUES.items() if rx.search(sentence)), None)
                 counterparties = [(t, name) for t, name in catalog.find(sentence) if t != ticker]
                 # A named counterparty is not the company's own operation.
@@ -317,7 +353,7 @@ def index_profiles(profiles: dict[str, Profile]) -> EvidenceBoard:
                 for word in words:
                     exposures[ticker][word].append(i)
                     postings[word].add(ticker)
-            if fact.kind in ('owned_product','person','acronym','subsidiary') and fact.text:
+            if fact.kind in ('owned_product','person','acronym','subsidiary','company_alias','derived_initialism','operating_brand') and fact.text:
                 ids[' '.join(tokens(fact.text,stop=False))].append((ticker,fact.kind,i))
                 if fact.kind == 'person' and len(tokens(fact.text,stop=False)) >= 2:
                     ids[tokens(fact.text,stop=False)[-1]].append((ticker,'person',i))

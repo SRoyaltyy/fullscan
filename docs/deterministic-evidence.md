@@ -99,6 +99,30 @@ Rebuild profile caches after changing stock extraction. A cache preserves the
 facts extracted at build time; a newer matcher cannot recover a missing brand
 or paragraph context from a cache that omitted it.
 
+Compiler `stock-evidence-2.1` rejects caches without its matching version.
+It retains founding dates, former names and headquarters as history rather
+than operating vocabulary. Short business context cannot bridge those facts.
+Calendar words cannot qualify as independent business anchors, and an issuer
+launching a product does not by itself establish an industry-wide activity.
+
+Short issuer names require corporate grammar or discriminating business
+evidence. Identical names, industries and source digests allow the same issuer's
+share classes to resolve together. Maximal issuer spans prevent a shorter
+issuer from matching words contained inside another issuer's full name.
+Exchange qualifiers and quote-directory headings do not establish events at
+the exchange operator or the quoted issuer.
+
+Explicit trading/DBA names must occur in the issuer's own legal introduction.
+Source-derived initials remain candidates requiring case-sensitive article
+identity and independent business/financial corroboration. A shared brand in
+two distinct, explicitly owned operating segments also requires article-side
+business corroboration. None of these mechanisms adds a ticker-specific alias.
+Missing brands and stale company descriptions remain source-coverage gaps.
+
+The isolated runner also accepts `--unittest` followed by test modules.
+The sample exporter accepts repeated `--exclude-sample` arguments so later
+holdouts can exclude all previously inspected primary headlines.
+
 ## Measurement and release bar
 
 `src/link_metrics.py` computes exact-set article accuracy, link precision,

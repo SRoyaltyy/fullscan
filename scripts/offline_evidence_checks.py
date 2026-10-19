@@ -22,5 +22,9 @@ socket.socket = OfflineSocket
 socket.create_connection = denied
 socket.getaddrinfo = denied
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+if len(sys.argv)>1 and sys.argv[1]=='--unittest':
+    del sys.argv[1]
+    runpy.run_module('unittest',run_name='__main__')
+    raise SystemExit
 sys.argv[0]='src.eval_correlation'
 runpy.run_module('src.eval_correlation',run_name='__main__')

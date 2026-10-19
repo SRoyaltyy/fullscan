@@ -147,11 +147,99 @@ class EvidenceTests(unittest.TestCase):
   self.assertIsNone(metric['exact_set_accuracy'])
   self.assertEqual(metric['counts']['excluded_partial_or_unlabeled'],1)
 
+ def test_history_is_retained_but_is_not_operating_vocabulary(self):
+  row={'ticker':'EDU','name':'Example Education','industry':'Education','description':'We provide medical education. The company was founded in March and is headquartered in Nova Lima.'}
+  p=build_profile(row,Catalog([row]))
+  self.assertNotIn('march',p.core);self.assertNotIn('nova',p.core)
+  self.assertTrue(any(f.kind=='history' and 'Nova Lima' in f.passage for f in p.facts))
+
+ def test_calendar_and_launch_verb_do_not_make_industry_exposure(self):
+  b=build_board([{'ticker':'FUND','name':'Example Fund','industry':'Funds','description':'The fund was launched in March. We invest in corporate debt.'},
+                {'ticker':'LAB','name':'Example Research','industry':'Research','description':'We manufacture instruments for universities and research centers.'}],engine='evidence')
+  for text in ('A manufacturer launches a steering wheel in March.','A university launches a religious research center.'):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_exchange_qualification_is_not_exchange_operator_event(self):
+  b=build_board([{'ticker':'NDAQ','name':'Nasdaq Inc','industry':'Exchanges'},
+                {'ticker':'PAYS','name':'Paysign Inc','industry':'Payments'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Paysign (NASDAQ:PAYS) CEO sells shares.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'PAYS'})
+  hit=link_articles(b,[{'id':'x','text':'Tech stocks slump as Nasdaq faces weekly loss.'}])[0]
+  self.assertNotIn('NDAQ',{r['ticker'] for r in hit['stocks'] if r['pass']})
+
+ def test_longer_issuer_name_owns_its_internal_name_words(self):
+  b=build_board([{'ticker':'PNBK','name':'Patriot National Bancorp Inc','industry':'Banks'},
+                {'ticker':'TBBK','name':'Bancorp Inc','industry':'Banks'},
+                {'ticker':'BAC','name':'Bank of America Corp','industry':'Banks'},
+                {'ticker':'AMX','name':'America Movil ADR','industry':'Telecom'}],engine='evidence')
+  for text,ticker in [('Patriot National Bancorp reports earnings.','PNBK'),('Bank of America reports earnings.','BAC')]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{ticker})
+
+ def test_infinitive_post_is_not_cereal_company(self):
+  b=build_board([{'ticker':'POST','name':'Post Holdings Inc','industry':'Food'},
+                {'ticker':'HFWA','name':'Heritage Financial Corp','industry':'Banks'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Heritage Financial expected to Post earnings on Thursday.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'HFWA'})
+
+ def test_quote_directory_is_not_a_reported_company_event(self):
+  self.assertFalse(self.passed('Apple (AAPL) stock price, news, quote and history - Yahoo Finance'))
+
+ def test_financial_disclosure_and_corporate_roles_are_events(self):
+  b=build_board([{'ticker':'TSLA','name':'Tesla Inc','industry':'Auto'},
+                {'ticker':'CNC','name':'Centene Corp','industry':'Health'},
+                {'ticker':'CPRT','name':'Copart Inc','industry':'Auto'}],engine='evidence')
+  for text,ticker in [('Tesla energy executive steps down.','TSLA'),('Form 4 CENTENE CORP Filed by: A Director','CNC'),('Copart completes an acquisition.','CPRT')]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{ticker})
+
  def test_batch_permutation_and_repetition_do_not_change_decision(self):
   articles=[{'id':str(i),'text':MEMO} for i in range(9)]
   alone=self.passed(MEMO)
   for hit in link_articles(self.board,articles):
    self.assertEqual(alone,{r['ticker'] for r in hit['stocks'] if r['pass']})
+
+ def test_short_name_preserves_verified_share_classes(self):
+  rows=[{'ticker':t,'name':'Twin Harbor Industries Inc','industry':'Machinery','description':'Twin Harbor Industries Inc manufactures industrial pumps.'} for t in ('TWA','TWB')]
+  b=build_board(rows,engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Twin invests $300 million in a factory.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'TWA','TWB'})
+
+ def test_ambiguous_short_name_requires_discriminating_operations(self):
+  b=build_board([{'ticker':'AIR','name':'Southwest Airlines Inc','industry':'Airlines','description':'Southwest Airlines operates aircraft flights and a rewards program for flyers.'},
+                {'ticker':'GAS','name':'Southwest Gas Inc','industry':'Utilities','description':'Southwest Gas distributes natural gas to residential heating customers.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Southwest unveils rewards program for flyers.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'AIR'})
+
+ def test_asset_code_does_not_become_short_issuer_identity(self):
+  b=build_board([{'ticker':'TRON','name':'Tron Inc','industry':'Toys'},
+                {'ticker':'TRX','name':'TRX Gold Inc','industry':'Gold','description':'TRX Gold mines gold deposits.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Tron files stock offering to fund TRX purchases.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'TRON'})
+
+ def test_named_acquisition_object_is_related(self):
+  b=build_board([{'ticker':'ACVA','name':'ACV Auctions Inc','industry':'Auto'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Company completes acquisition of Buffalo-based ACV.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'ACVA'})
+
+ def test_dba_must_belong_to_issuer_legal_introduction(self):
+  b=build_board([{'ticker':'OWN','name':'Orbital Devices Corp','industry':'Aerospace','description':'Orbital Devices Corp., doing business as SkyWorks, manufactures satellite antennas.'},
+                {'ticker':'PEER','name':'Example Tools Inc','industry':'Tools','description':'Our competitor Orbital Devices Corp., doing business as SkyWorks, manufactures satellite antennas.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'SkyWorks announces earnings.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'OWN'})
+
+ def test_derived_initialism_requires_source_and_business_corroboration(self):
+  b=build_board([{'ticker':'NSM','name':'Northern Semiconductor Manufacturing ADR','industry':'Chips','description':'Northern Semiconductor Manufacturing Co., Ltd. manufactures semiconductor chips.'}],engine='evidence')
+  for text,want in [('Chip leader NSMC delivers quarterly earnings report.',{'NSM'}),('NSMC delivers quarterly earnings report.',set()),('The agency NSMC announces a rule.',set())]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},want)
+
+ def test_owned_operating_segment_brand_needs_distinct_segments(self):
+  b=build_board([{'ticker':'PARENT','name':'Example Holdings Inc','industry':'Software','description':'Example Holdings Inc operates through two segments. The Bright Services segment provides search tools. The Bright Cloud segment provides computing infrastructure.'},
+                {'ticker':'PEER','name':'Other Holdings Inc','industry':'Software','description':'Other Holdings Inc operates through one segment. The Bright Services segment provides search tools.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Bright launches search tools.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'PARENT'})
 
  def test_company_earnings_pass_even_without_industry_jargon(self):
   self.assertEqual(self.passed('Apple raises quarterly earnings guidance.'),{'AAPL'})
@@ -419,6 +507,15 @@ class ArchiveTests(unittest.TestCase):
    path.write_bytes(gzip.compress((json.dumps({'format':'stock-evidence-1','as_of':'2026-10-19'})+'\n').encode()))
    with self.assertRaisesRegex(ValueError,'later than requested'):
     load_profiles(path,as_of='2026-10-01')
+
+ def test_old_extractor_cache_requires_rebuild(self):
+  import gzip
+  from src.profile_cache import load_profiles
+  with tempfile.TemporaryDirectory(dir=Path.cwd()) as directory:
+   path=Path(directory)/'profiles.gz'
+   path.write_bytes(gzip.compress((json.dumps({'format':'stock-evidence-1','as_of':'2026-10-01'})+'\n').encode()))
+   with self.assertRaisesRegex(ValueError,'rebuild from original sources'):
+    load_profiles(path,as_of='2026-10-19')
 
 
 if __name__=='__main__':unittest.main()

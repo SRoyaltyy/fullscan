@@ -27,7 +27,7 @@ jobs:
           python -m pip install PyYAML==6.0.3
           python -m scripts.bootstrap_semantics
       - name: Run legacy, evidence, and strict measurement regressions
-        run: python -m unittest src.test_correlation src.test_eval_harness src.test_evidence_matcher
+        run: python -I -S scripts/offline_evidence_checks.py --unittest src.test_correlation src.test_eval_harness src.test_evidence_matcher
       - name: Export blind real scanner sample
         run: >-
           python scripts/export_validation_inputs.py
@@ -46,6 +46,14 @@ jobs:
           --descriptions excel_bot/data/finviz_with_descriptions.csv
           --out validation-inputs/fresh --seed 19020 --budget 200
           --exclude-sample validation-inputs/news-sample.json
+      - name: Reserve third unseen headline sample
+        run: >-
+          python scripts/export_validation_inputs.py
+          --news data/news_intake/2026-10-17/documents.json
+          --descriptions excel_bot/data/finviz_with_descriptions.csv
+          --out validation-inputs/holdout --seed 19021 --budget 200
+          --exclude-sample validation-inputs/news-sample.json
+          --exclude-sample validation-inputs/fresh/news-sample.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:

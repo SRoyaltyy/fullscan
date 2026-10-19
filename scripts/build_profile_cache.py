@@ -8,7 +8,7 @@ from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
 from src.filing_evidence import load_section_cache,load_filing_sections
-from src.stock_evidence import Catalog,build_profile
+from src.stock_evidence import COMPILER_VERSION,Catalog,build_profile
 
 _catalog=None
 
@@ -50,7 +50,7 @@ def main():
     metadata=[{k:r.get(k,'') for k in ('ticker','name','industry','sector')} for r in rows]
     temporary=a.out.with_name(a.out.name+'.partial')
     with ProcessPoolExecutor(max_workers=max(1,a.workers),initializer=_init_worker,initargs=(metadata,)) as pool, gzip.open(temporary,'wt',encoding='utf-8') as out:
-        out.write(json.dumps({'format':'stock-evidence-1','coverage':coverage,'as_of':a.as_of})+'\n')
+        out.write(json.dumps({'format':'stock-evidence-1','compiler_version':COMPILER_VERSION,'coverage':coverage,'as_of':a.as_of})+'\n')
         for i,line in enumerate(pool.map(_compile_row,rows,chunksize=2),1):
             out.write(line+'\n')
             if i%50==0:

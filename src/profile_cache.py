@@ -2,7 +2,7 @@
 import gzip
 import json
 from collections import defaultdict
-from .stock_evidence import Fact,Profile,index_profiles
+from .stock_evidence import COMPILER_VERSION,Fact,Profile,index_profiles
 
 
 def load_profiles(path, *, as_of=None, tickers=None, progress=None):
@@ -12,6 +12,8 @@ def load_profiles(path, *, as_of=None, tickers=None, progress=None):
         if meta.get('format')!='stock-evidence-1':raise ValueError('unsupported profile cache')
         if as_of and (not meta.get('as_of') or meta['as_of'] > as_of):
             raise ValueError('profile cache cutoff is absent or later than requested as-of date')
+        if meta.get('compiler_version')!=COMPILER_VERSION:
+            raise ValueError('profile cache compiler is absent or incompatible; rebuild from original sources')
         for line in stream:
             d=json.loads(line)
             if tickers is not None and d['ticker'] not in tickers:

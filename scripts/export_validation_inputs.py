@@ -19,7 +19,7 @@ def main():
  p.add_argument('--out',type=Path,required=True)
  p.add_argument('--budget',type=int,default=200)
  p.add_argument('--seed',type=int,default=19019)
- p.add_argument('--exclude-sample',type=Path,help='Exclude normalized primary headlines already used for development')
+ p.add_argument('--exclude-sample',type=Path,action='append',default=[],help='Repeat to exclude each prior development sample')
  a=p.parse_args();a.out.mkdir(parents=True,exist_ok=True)
  payload=json.loads(a.news.read_text(encoding='utf-8'))
  rows=payload if isinstance(payload,list) else payload.get('documents') or payload.get('rows') or []
@@ -29,7 +29,8 @@ def main():
   if key and key not in unique:unique[key]=row
  excluded=set()
  if a.exclude_sample:
-  excluded={norm(row.get('title','')) for row in json.loads(a.exclude_sample.read_text(encoding='utf-8'))}
+  for sample in a.exclude_sample:
+   excluded.update(norm(row.get('title','')) for row in json.loads(sample.read_text(encoding='utf-8')))
   unique={k:v for k,v in unique.items() if k not in excluded}
  bodies=[];heads=[]
  for row in unique.values():

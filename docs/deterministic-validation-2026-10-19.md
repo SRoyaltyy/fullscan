@@ -9,7 +9,7 @@ The full exported Finviz input has 5,962 rows and 5,961 distinct tickers.
 On the unchanged 25-case repository corpus, legacy passes 12/19 regressions
 and 2/3 targets. The final local candidate passes 19/19 regressions and 3/3
 targets; three cases remain unlabeled. These partial assertions are excluded
-from strict accuracy denominators. The final local suite passes 120 tests,
+from strict accuracy denominators. That local checkpoint passed 120 tests,
 including repeatability across independent processes.
 
 Hosted commit 2a2f975 passed 117 tests, 19/19 regressions and all 3 targets.
@@ -98,17 +98,33 @@ and 42 are unresolved. Exact sets are 128/158 (81.0%); there are 17 TP,
 43 FP and 23 FN, giving 28.3% precision and 42.5% recall. Five outputs abstain.
 Known related-story cases are flagged separately: the provisional novel-story
 subset is 113/136 exact, with 16 TP, 42 FP and 15 FN. It also fails.
-This sample has not been used to tune the engine at this checkpoint. Its label
+This sample had not been used to tune the engine at that checkpoint. Its label
 SHA256 is 24558bccbb7dea6b46fcef9297d367cde72376c2f0fb67317db48fe65887b0b1.
 These results invalidate any suggestion that the adapted development score
 generalizes to new headlines. Alias attribution, noun/verb event scope and
 missing stock-side corporate/product identities remain serious gaps.
 
-CI exports a separate seed-19020 sample excluding all 200 development headlines.
-It contains no labels or program outputs. Related stories may still overlap and
-must be grouped before an independent holdout claim. Freeze labels and score it
-without tuning on the result. Adjudicate the uncertain cases, especially
-unnamed policy exposure, and evaluate complete dated production stock sources.
-Report exact sets, precision, recall, abstention and per-category coverage.
-Historical ownership, geography and general grammar remain partial. Do not merge
-or enable the candidate based on the adapted 160-case score.
+## Follow-up repair checkpoint
+
+The seed-19020 sample is now development data. Its failed first-run result
+above is preserved; it must never be relabeled as an unseen success after repair.
+The next candidate has **135 passing local regression tests**, run with isolated
+Python, site packages disabled, and DNS/socket connections denied. The new
+regressions cover history/calendar leakage, launch verb scope, exchange and
+quote-directory context, nested issuer names, corporate grammar, share classes,
+ambiguous short names, asset codes, sourced DBA/initialisms/operating brands,
+and stale compiler-cache rejection. They establish these behaviors, not broad
+headline accuracy.
+
+Full post-repair metrics are **not available**. Automatic approval review blocked
+retrieval from a local full-universe evaluation session because it reported
+unexpected external telemetry to a Visual Studio endpoint. The checked-in
+runner denies Python networking; no post-repair output file was produced at
+this checkpoint. Do not substitute regression pass counts for missing metrics.
+
+CI reserves a seed-19021 sample excluding primary headlines from both prior
+samples. Related stories may still overlap and must be grouped before an
+independent holdout claim. Freeze labels before inspecting candidate outputs.
+Adjudicate uncertain cases, especially unnamed policy exposure, and evaluate
+complete dated production sources. Historical ownership, geography and general
+grammar remain partial. Do not merge or enable the candidate before validation.

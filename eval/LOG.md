@@ -182,3 +182,20 @@ accordingly)
 
 - **Fresh result at engine 2a2f975:** 128/158 exact sets (81.0%), 17 TP, 43 FP, 23 FN; precision 28.3%, recall 42.5%, five abstentions, 42 unresolved cases excluded. The provisional novel-story subset is 113/136 exact with 16 TP, 42 FP and 15 FN. Both fail the release target. Missing corporate/product identities, exchange/verb attribution, and noun/verb business-event scope require further foundational repair. The adapted development result did not generalize.
 
+# 2026-10-19: Post-fresh-failure mechanism repair
+
+- Retained the first seed-19020 result: 128/158 exact sets, 17 TP, 43 FP,
+  23 FN (28.3% precision, 42.5% recall). It is now development data.
+- Separated issuer history from operating evidence; removed calendar anchors;
+  distinguished launch verbs from broad launch activity; guarded exchange,
+  quote-page, infinitive and nested-name collisions.
+- Resolved identical sourced share classes and operation-qualified short names.
+  Added issuer-introduction DBA names, corroborated source-derived initialisms,
+  and corroborated shared owned-segment brands. No ticker-specific alias patch.
+- Versioned extracted profile caches to require rebuilding after this compiler
+  change. Added a third sample excluding both earlier primary-headline sets.
+- Local isolated/network-denied regression suites: 135 tests, all pass.
+- Post-repair full-universe metrics are unavailable: automatic approval review
+  blocked live-session retrieval for reported external Visual Studio telemetry;
+  no result file was available. Candidate remains opt-in and not release-ready.
+

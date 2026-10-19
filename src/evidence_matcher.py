@@ -8,6 +8,7 @@ from __future__ import annotations
 import math
 import re
 from collections import defaultdict, Counter
+from dataclasses import replace
 
 from .aliases import extract_jurisdictions
 from .linguistics import COMPARISON, DISRUPTION, EVENT, FINANCIAL_EVENT, GENERIC, STOP, input_quality, passages, terms, tokens
@@ -20,6 +21,32 @@ AGENCY_ICE = re.compile(r'\bICE\b.{0,100}\b(?:immigration|deport\w*|arrest\w*|de
 FOREIGN_EXCHANGE = re.compile(r'\b(?:HOSE|HNX|UPCOM|BSE|NSE|ASX|LSE|TSE|HKEX)\s*[:(]|\b(?:Vietnam|Vietnamese|Kosy)\b', re.I)
 SCOPE_EVENT = re.compile(r'\b(?:tariff|sanction|ban|restrict\w*|regulat\w*|policy|permit|price differential|constitutional)\b', re.I)
 EVENT_ONLY = frozenset('recall approve approval reject rejection earnings revenue guidance report result class governor secretary minister senator president spokeswoman spokesman'.split())
+CALENDAR = frozenset('january february march april may june july august september october november december monday tuesday wednesday thursday friday saturday sunday daily weekly monthly annually yesterday today tomorrow q1 q2 q3 q4'.split())
+QUOTE_PAGE = re.compile(r'\bstock price\s*,?\s*news\s*,?\s*quote and history\b|\b8-K\s*&\s*SEC filings\b',re.I)
+
+
+def _identity_text(text: str) -> str:
+    # An exchange qualification and a market-index move are not an event at
+    # the listed exchange operator. Keep raw text for explicit ticker syntax.
+    pattern=r'\b(?:NASDAQ|NYSE|AMEX|OTC)(?=\s*:|[- ]listed\b)|\bNasdaq(?:\s+(?:Composite|100))?(?=\s+(?:faces|falls|rises|gains|loses|heads|slides|slumps|sinks)\b)'
+    return re.sub(pattern,lambda m:' '*len(m.group()),text,flags=re.I)
+
+
+def _corporate_usage(alias: str, text: str) -> bool:
+    pattern=r'\b'+re.escape(alias)+r"(?:['\u2019]s)?\s+(?:(?:quarterly|annual|fiscal|preliminary)\s+)?(?:reports?|reported|announces?|announced|raises?|raised|cuts?|cut|denies|denied|acquires?|acquired|launch\w*|unveil\w*|invest\w*|files?|earnings|revenue|shares|stock|guidance|inc|corp|corporation|ltd|plc|(?:tender|cash)\s+offer|moves?\s+to\s+(?:overturn|appeal|block)|waves?\s+goodbye|(?:[A-Za-z-]+\s+){0,2}(?:executives?|employees|president|CEO|CFO|chief|board)|driver|flying)\b"
+    for m in re.finditer(pattern,text,re.I):
+        if not re.search(r'\b(?:to|will|would|could|should|can|may|must)\s*$',text[max(0,m.start()-20):m.start()],re.I):
+            return True
+    return bool(re.search(r'\b(?:against|sues?|sued|fines?|fined|acquisition of|tender offer for)\s+(?:[A-Za-z-]+\s+)?'+re.escape(alias)+r'\b',text,re.I) or re.search(r'\b'+re.escape(alias)+r'\s+(?:completes?|completed)\s+(?:an?\s+|\$[\d.,]+\s+(?:billion|million)\s+)?acquisition\b',text,re.I))
+
+
+def _issuer_family(board, tickers) -> bool:
+    """Share classes may resolve together only with the same sourced issuer."""
+    signatures=set()
+    for ticker in tickers:
+        p=board.profiles[ticker]
+        signatures.add((p.name.casefold(),p.industry,tuple(sorted(s['sha256'] for s in p.sources))))
+    return len(signatures)==1
 
 
 def _broad_business_event(text: str) -> bool:
@@ -28,11 +55,13 @@ def _broad_business_event(text: str) -> bool:
     # article states a policy, constraint, or change in a business activity.
     if re.search(r'\b(?:FDA|recall\w*|approv\w*|clearance|lawsuit|charg\w*|arson|indict\w*)\b',text,re.I):
         return False
-    return bool(re.search(r'\b(?:policy|legislation|legislative|tariffs?|sanctions?|bans?|restrict\w*|export controls?|regulations?|directives?|shortages?|supply disruptions?|launches|reentries|shipments|production|capacity|demand|input costs?|commodity prices?)\b',text,re.I))
+    broad=bool(re.search(r'\b(?:policy|legislation|legislative|tariffs?|sanctions?|bans?|restrict\w*|export controls?|regulations?|directives?|shortages?|supply disruptions?|shipments|production|capacity|demand|input costs?|commodity prices?)\b',text,re.I))
+    activity_noun=bool(re.search(r'\b(?:launches|reentries)\s+(?:and|of|from|at|are|were|have|continue|doubled?|expand\w*|increas\w*|decreas\w*|rise|fall)\b',text,re.I))
+    return broad or activity_noun
 
 
 def _independent_words(matched: set[str]) -> set[str]:
-    return {word for term in matched for word in term.split() if word not in STOP and word not in GENERIC and word not in EVENT_ONLY}
+    return {word for term in matched for word in term.split() if word not in STOP and word not in GENERIC and word not in EVENT_ONLY and word not in CALENDAR}
 
 
 def _specific_identifier(value: str, fact) -> bool:
@@ -113,7 +142,7 @@ def _is_subject(record, text: str) -> bool:
     if full_name and len(record.alias.split()) == 1 and record.alias.lower() in english_words():
         # A dictionary-word company needs an actual corporate predicate.
         # Merely listing "guidance or strategy" is not Strategy Inc.
-        full_name = bool(re.search(r'\b'+re.escape(record.alias)+r"(?:['\u2019]s)?\s+(?:(?:quarterly|annual|fiscal|preliminary)\s+)?(?:reports?|reported|announces?|announced|raises?|raised|cuts?|cut|denies|denied|acquires?|acquired|launch\w*|employees|president|CEO|driver|flying|earnings|revenue|shares|stock|guidance|inc|corp|corporation|ltd|plc)\b",text,re.I))
+        full_name = _corporate_usage(record.alias,text)
     if record.alias and re.search(r'\b'+name_pattern+r'\s+of\s+[A-Z]',text,re.I) and ' of ' not in record.alias:
         full_name=False
     bare_financial = False
@@ -172,7 +201,7 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
         named = {}
         rows = {}
         industry_evidence = defaultdict(set)
-        roundup = bool(ROUNDUP.search(title or (ps[0].text if ps else '')))
+        roundup = bool(ROUNDUP.search(title or (ps[0].text if ps else '')) or QUOTE_PAGE.search(title or text))
         passage_semantics = {}
         article_date = str(article.get('published_at') or article.get('date') or '')[:10]
 
@@ -217,10 +246,11 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
             event_object=_event_object(passage.text)
             query,semantic_origin,semantic_evidence = expand(literal_query)
             passage_semantics[passage.ordinal] = semantic_evidence
-            mentions = name_index.mentioned(passage.text)
+            identity_text=_identity_text(passage.text)
+            mentions = name_index.mentioned(identity_text)
             matched_prefixes=defaultdict(list)
-            raw_words=re.findall(r'[A-Za-z0-9]+',passage.text)
-            raw_starts=[m.start() for m in re.finditer(r'[A-Za-z0-9]+',passage.text)]
+            raw_words=re.findall(r'[A-Za-z0-9]+',identity_text)
+            raw_starts=[m.start() for m in re.finditer(r'[A-Za-z0-9]+',identity_text)]
             lower_words=[w.lower() for w in raw_words]
             if passage.event:
                 for i in range(len(raw_words)):
@@ -228,35 +258,51 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                     for size in (2,3,4):
                         prefix=tuple(lower_words[i:i+size])
                         records=prefix_names.get(prefix,())
-                        if len(records)!=1 or not raw_words[i][0].isupper():continue
+                        if not records or not _issuer_family(board,[r.ticker for r in records]) or not raw_words[i][0].isupper():continue
                         if ' '.join(prefix) in places and size<len(records[0].alias.split()):continue
                         if i+size<len(lower_words) and lower_words[i+size]=='of' and ' of ' not in records[0].alias:continue
-                        matched_prefixes[records[0].ticker].append(' '.join(prefix))
-                        if records[0] not in mentions:mentions.append(records[0])
+                        for record in records:
+                            matched_prefixes[record.ticker].append(' '.join(prefix))
+                            if record not in mentions:mentions.append(record)
             # Common-word brands (Apple, Booking) and unique short legal
             # names need financial context, not a global capitalization rule.
+            qualified_short=set()
             if passage.event:
-                for word in sorted(set(w.lower() for w in re.findall(r'[A-Za-z0-9]+',passage.text))):
+                for word in sorted(set(w.lower() for w in re.findall(r'[A-Za-z0-9]+',identity_text))):
                     records = short_names.get(word,())
-                    if len(records) == 1 and re.search(r'\b'+re.escape(word)+r"(?:'s)?\b",passage.text,re.I):
-                        p = board.profiles.get(records[0].ticker)
-                        unrelated_name_words=set(tokens(records[0].alias,stop=False))|{w for place in places for w in tokens(place,stop=False)}
+                    if not records:continue
+                    family=_issuer_family(board,[r.ticker for r in records])
+                    for record in records:
+                        p = board.profiles.get(record.ticker)
+                        unrelated_name_words=set(tokens(record.alias,stop=False))|{w for place in places for w in tokens(place,stop=False)}
                         short_evidence=_independent_words(literal_query & p.core)-unrelated_name_words if p else set()
                         industry_support=_independent_words(literal_query & board.industry_terms.get(p.industry,set()))-unrelated_name_words if p else set()
                         business = bool(p and len(short_evidence)>=2 and len(industry_support)>=2)
                         legal = bool(re.search(r'\b'+re.escape(word)+r'\s+(?:company|corp|inc|plc|ltd)\b',passage.text,re.I))
-                        single_legal_word = len(records[0].alias.split()) == 1
+                        discriminating=short_evidence-set().union(*(board.profiles[r.ticker].core for r in records if r.name!=record.name))
+                        if not family and not discriminating:continue
+                        single_legal_word = len(record.alias.split()) == 1
                         common = word in english_words()
-                        predicate = _is_subject(records[0],passage.text)
-                        from dataclasses import replace
-                        short_predicate = _is_subject(replace(records[0],alias=word),passage.text)
+                        predicate = _is_subject(record,passage.text)
+                        short_predicate = _corporate_usage(word,passage.text)
                         proper = any(m.group()[0].isupper() for m in re.finditer(r'\b'+re.escape(word)+r'\b',passage.text,re.I))
                         financial_list_name=proper and bool(re.search(r'\bshares?\s+(?:are\s+)?(?:fall\w*|ris\w*|down|up)\b',passage.text,re.I))
-                        if not (business or legal or (proper and not common) or short_predicate or financial_list_name or (single_legal_word and FINANCIAL_EVENT.search(passage.text) and (not common or predicate))):
+                        if not family and not (business or discriminating):continue
+                        abbreviation=not single_legal_word and len(word)<=5 and bool(re.search(r'\b'+re.escape(word.upper())+r'\b',passage.text))
+                        if abbreviation and not (business or legal or short_predicate or _is_subject(replace(record,alias=''),passage.text)):continue
+                        if not (business or legal or (proper and not common and single_legal_word) or short_predicate or financial_list_name or (single_legal_word and FINANCIAL_EVENT.search(passage.text) and (not common or predicate))):
                             continue
-                        if records[0] not in mentions:
-                            mentions.append(records[0])
+                        qualified_short.add(record.ticker)
+                        if record not in mentions:
+                            mentions.append(record)
             for record in mentions:
+                aliases=[record.alias]+matched_prefixes[record.ticker]
+                first=record.alias.split()[0] if record.alias else ''
+                if first:aliases.append(first)
+                spans=[m.span() for alias in aliases if alias for m in re.finditer(r'\b'+r'[\W_]+'.join(map(re.escape,alias.split()))+r'\b',identity_text,re.I)]
+                longer=[m.span() for other in mentions if other.ticker!=record.ticker and other.alias for m in re.finditer(r'\b'+r'[\W_]+'.join(map(re.escape,other.alias.split()))+r'\b',identity_text,re.I)]
+                if spans and all(any(a<=start and end<=b and b-a>end-start for a,b in longer) for start,end in spans):
+                    continue
                 # Do not retain a proven cross-exchange or agency collision as
                 # a factual name hit, even if it would fail the pass gate.
                 if record.ticker == 'ICE' and AGENCY_ICE.search(passage.text):
@@ -265,10 +311,8 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                     continue
                 named[record.ticker] = record
                 row_for(record.ticker)['name_hit'] = True
-                from dataclasses import replace
                 first = record.alias.split()[0] if record.alias else ''
-                shortened = bool(first and len(short_names.get(first,()))==1 and not _comparison_name(passage.text,first) and record in mentions and
-                    ((first not in english_words() and re.search(r'\b'+re.escape(first)+r'\b',passage.text,re.I)) or _is_subject(replace(record,alias=first),passage.text)))
+                shortened = bool(record.ticker in qualified_short and not _comparison_name(passage.text,first))
                 prefix_subject=any(_is_subject(replace(record,alias=prefix),passage.text) for prefix in matched_prefixes[record.ticker])
                 financial_list=bool(re.search(r'\bshares?\s+(?:are\s+)?(?:fall\w*|ris\w*|down|up)\b',passage.text,re.I) and (re.search(r'\b'+re.escape(record.ticker)+r'\b',passage.text) or (first and len(short_names.get(first,()))==1 and re.search(r'\b'+re.escape(first)+r'\b',passage.text,re.I))))
                 if not roundup and (_is_subject(record,passage.text) or (passage.event and (shortened or financial_list or prefix_subject))):
@@ -301,10 +345,13 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                     continue
                 if kind=='owned_product' and re.fullmatch(r'[A-Z]{2,5}',fact.text) and not re.search(r'[\u00ae\u2122]|["\u201c]'+re.escape(fact.text)+r'["\u201d]|\('+re.escape(fact.text)+r'\)',fact.passage):
                     continue
-                direct_subjects={t for t,r in rows.items() if {'direct_event','company_alias_event'}&set(r['reasons'])}
+                direct_subjects={t for t,r in rows.items() if {'direct_event','company_alias_event','source_identity_event','owned_product_event'}&set(r['reasons'])}
                 if kind=='owned_product' and ticker not in direct_subjects and any(set(key.split()) <= (set(tokens(name_index.by_ticker[t].name,stop=False))|{t.lower()}) for t in direct_subjects if t in name_index.by_ticker):
                     continue
-                if kind=='company_alias' and any(w in english_words() for w in key.split()):
+                if kind=='company_alias' and fact.text and any(w in english_words() for w in key.split()):
+                    if not re.search(r'\b'+re.escape(fact.text)+r'\b',passage.text):continue
+                    if len(key.split())==1 and not _corporate_usage(fact.text,passage.text):continue
+                if kind=='company_alias' and not fact.text and any(w in english_words() for w in key.split()):
                     raw=next((v for v in re.findall(r'["\u201c]([^"\u201d]+)["\u201d]',fact.passage) if ' '.join(tokens(v,stop=False))==key),'')
                     if not raw or not re.search(r'\b'+re.escape(raw)+r'\b',passage.text):
                         continue
@@ -315,11 +362,20 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                 matched = hits.get(ticker,set())
                 extra = _independent_words(matched) - set(key.split())
                 unique_owner = {t for t,k,i in board.identities.get(key,()) if k == kind} == {ticker}
+                owners={t for t,k,i in board.identities.get(key,()) if k==kind}
+                if owners and _issuer_family(board,owners):unique_owner=True
                 if kind=='owned_product':
                     unique_owner={t for t,k,i in board.identities.get(key,()) if k==kind and eligible(board.profiles[t].facts[i]) and re.search(r'\b'+re.escape(board.profiles[t].facts[i].text)+r's?\b',passage.text) and _ownership_evidenced(board.profiles[t].facts[i],board.profiles[t])}=={ticker}
                 if not eligible(p.facts[ix]):
                     continue
-                if kind=='company_alias' and unique_owner and passage.event and not roundup:
+                if kind in ('derived_initialism','operating_brand'):
+                    raw=bool(re.search(r'\b'+re.escape(fact.text)+r'\b',passage.text))
+                    corroboration=_independent_words(literal_query & p.core)-set(tokens(p.name,stop=False))-set(key.split())
+                    if kind=='derived_initialism':
+                        corroboration={w for w in corroboration if board.df[w]<=max(3,0.08*len(board.profiles))}
+                    if unique_owner and raw and corroboration and passage.event and not roundup and (kind=='operating_brand' or FINANCIAL_EVENT.search(passage.text) or re.search(r'\b(?:report|beat.and.raise)\b',passage.text,re.I)):
+                        pass_row(ticker,1,'source_identity_event',passage,{key}|corroboration,fact)
+                elif kind=='company_alias' and unique_owner and passage.event and not roundup:
                     pass_row(ticker,1,'company_alias_event',passage,{key},p.facts[ix])
                 elif kind == 'owned_product' and unique_owner and (_specific_identifier(key,p.facts[ix]) or re.search(r'\b(?:our|its) products?(?: and services?)? include\b',fact.passage,re.I)) and _ownership_evidenced(p.facts[ix],p) and passage.event and not roundup:
                     # Product ownership is a sourced relation; the event is
@@ -332,7 +388,7 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
 
             for ticker,matched in sorted(hits.items()):
                 p = board.profiles[ticker]
-                direct_subjects={t for t,r in rows.items() if {'direct_event','company_alias_event'}&set(r['reasons'])}
+                direct_subjects={t for t,r in rows.items() if {'direct_event','company_alias_event','source_identity_event','owned_product_event'}&set(r['reasons'])}
                 if passage.event and not roundup:
                     candidate_facts = Counter()
                     for word in sorted(_independent_words(query)):
@@ -367,7 +423,7 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                         elif fact.kind in ('material_exposure','financial_exposure','supplier') and re.search(r'\b(?:price\w*|cost\w*|rate\w*|shortage|halt\w*|ban\w*|tariff\w*|disrupt\w*)\b',passage.text,re.I):
                             pass_row(ticker,2,'documented_exposure',passage,shared,fact)
                 core_hits = matched & p.core
-                direct_subjects={t for t,r in rows.items() if {'direct_event','company_alias_event'}&set(r['reasons'])}
+                direct_subjects={t for t,r in rows.items() if {'direct_event','company_alias_event','source_identity_event','owned_product_event'}&set(r['reasons'])}
                 if direct_subjects and ticker not in direct_subjects:
                     # A named issuer's financial result is not an unnamed
                     # industry-wide event. Other firms require an evidenced
