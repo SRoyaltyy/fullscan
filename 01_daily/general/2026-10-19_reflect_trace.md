@@ -2,8 +2,8 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (74,810 characters of input). Model: `deepseek-chat`. Web search is disabled for this stage; the model works only from the documents it was given.
+**Step 0 — Setup.** Loaded 74,810 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Search was disabled for this stage; the model worked only from the documents it was given.
 
 
 
-**Step 1 — Done researching.** The model stopped searching and wrote its full analysis (8,171 characters).
+**Step 1 — Done.** The agent returned its full analysis (289 characters).
