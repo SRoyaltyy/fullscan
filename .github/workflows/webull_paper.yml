@@ -62,10 +62,41 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
+      # Shallow sparse checkout (pattern of #620). A full fetch-depth 1
+      # checkout of this repo took 9-12 min; with the 09:25 ET seal gate a
+      # late start could miss the window. List exactly what this job reads.
+      # src/test_webull_paper_sparse.py checks every module and file the
+      # sender gate, seal gate, paper_open send path and the land touch is
+      # inside this list. Add a path there AND here when the job needs it.
       - uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /requirements.txt
+            /src/
+            /collectors/
+            /db/
+            /gemini_catcher.py
+            /scripts/safe_git_push.sh
+            /00_grounding/
+            /research/hot_n4_clean_v4/forward_h1/
+            /data/day_board/
+            /data/paper_open/
+            /data/sleeve_merge/
+            /data/factor_mine/strategy_tickets.json
+            /dashboard/factor-mine/
+            /01_daily/_progress/
+      - name: Sparse tree has the send path
+        run: |
+          set -euo pipefail
+          for f in src/webull_seal_gate.py src/paper_open.py src/webull_exec.py src/h1_sealed_exec.py \
+                   src/workflow_progress.py scripts/safe_git_push.sh \
+                   research/hot_n4_clean_v4/forward_h1/h1_log.jsonl; do
+            test -f "$f" || { echo "::error::sparse checkout is missing $f"; exit 1; }
+          done
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
