@@ -5,9 +5,9 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** OFF (general predict up score +2.1, conf 0.585)
-- **Yields:** falling (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** falling | **VIX:** calm (ratio 0.91 via vix/vix3m) spot 18.67
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.61
-- **High-impact events:** 0 bullish vs 0 bearish
+- **Yields:** falling (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.93 via vix/vix3m) spot 18.08
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.02
+- **High-impact events:** 1 bullish vs 4 bearish
 - ⚠️ **Data gaps:** risk tilted off by news_judge
 
 ## Sectors
@@ -18,12 +18,12 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 | sector:Communication Services | 🌧️ hostile | medium | finviz sector median week -2.75% [tape] |
 | sector:Consumer Cyclical | ⛅ neutral | medium | finviz sector median week -1.38% [tape] |
 | sector:Consumer Defensive | 🌧️ hostile | medium | finviz sector median week -1.62% [tape] |
-| sector:Energy | 🌧️ hostile | medium | finviz sector median week -2.50% [tape] |
+| sector:Energy | 🌤️ favorable | medium | news_judge SECTOR Energy [bullish] |
 | sector:Financial | ⛅ neutral | medium | finviz sector median week -1.40% [tape] |
-| sector:Healthcare | 🌤️ favorable | medium | news_judge SECTOR Healthcare [bullish] |
+| sector:Healthcare | 🌧️ hostile | medium | finviz sector median week -2.99% [tape] |
 | sector:Industrials | 🌧️ hostile | medium | news_judge SECTOR Industrials [bearish] |
 | sector:Real Estate | 🌧️ hostile | medium | finviz sector median week -2.49% [tape] |
-| sector:Technology | 🌧️ hostile | medium | news_judge SECTOR Technology [bearish] |
+| sector:Technology | 🌧️ hostile | medium | finviz sector median week -2.62% [tape] |
 | sector:Utilities | 🌧️ hostile | medium | finviz sector median week -3.43% [tape] |
 
 ## Size
@@ -40,8 +40,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| beta:high | ⛅ neutral | low | risk-mixed, VIX calm |
-| beta:low | ⛅ neutral | low | risk-mixed, VIX calm |
+| beta:high | ⛅ neutral | low | risk-mixed, VIX falling |
+| beta:low | ⛅ neutral | low | risk-mixed, VIX falling |
 | beta:mid | ⛅ neutral | low | beta-neutral zone |
 
 ## Short interest (multiplier, not direction)
