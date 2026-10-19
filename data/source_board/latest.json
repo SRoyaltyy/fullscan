@@ -1,6 +1,6 @@
 {
- "date": "2026-10-18",
- "generated_at": "2026-10-18T16:34:22.879589+00:00",
+ "date": "2026-10-19",
+ "generated_at": "2026-10-19T06:15:27.777375+00:00",
  "catalog": {
   "generated_at": "2026-10-17T13:03:20.405263+00:00",
   "channels": 365,
@@ -34,41 +34,49 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-18T16:34:02.375917+00:00",
+  "generated_at": "2026-10-19T06:15:03.918025+00:00",
   "enabled_sources": 123,
-  "sources_ok": 123,
-  "sources_failed": 0,
+  "sources_ok": 110,
+  "sources_failed": 13,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1809,
-   "old": 1244,
-   "future": 0,
-   "undated": 317,
-   "new": 2,
-   "duplicates": 563
+   "observed": 1520,
+   "old": 1012,
+   "future": 14,
+   "undated": 248,
+   "new": 156,
+   "duplicates": 338
   },
-  "current_dated_documents": 362
+  "current_dated_documents": 344
  },
  "new_today": {
-  "count": 2,
+  "count": 156,
   "by_source": {
-   "eu-commission-07d4f58ccf": 2
+   "us-federal-register": 146,
+   "in-rbi-cc71120b98": 5,
+   "nz-rbnz-gnews": 2,
+   "us-doj-e05071794d": 1,
+   "eu-ecb-991c113079": 1,
+   "jp-meti-index": 1
   },
   "by_class": {
-   "routine": 2
+   "routine": 131,
+   "high": 16,
+   "watch": 9
   }
  },
  "parsed_today": {
-  "count": 5,
+  "count": 38,
   "by_class": {
-   "watch": 4,
-   "routine": 1
+   "high": 15,
+   "routine": 15,
+   "watch": 9
   }
  },
- "n_failures": 0,
+ "n_failures": 13,
  "dates": [
-  "2026-10-18"
+  "2026-10-19"
  ],
- "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-10-18.json",
+ "href": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/source_board/2026-10-19.json",
  "pages": "https://sroyaltyy.github.io/fullscan/dashboard/source-board/"
 }

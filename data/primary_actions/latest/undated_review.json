@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "title": "Cabinet Approves Bills for the Act on the Rationalization of the Use of Designated Waterways to Ensure the Stable Transportation of Crude Oil and Petroleum Products, the Act on Special Measures for Ensuring the Performance of Specified Cargo Insurance Contracts and Specified Ship Insurance Contracts, and the Act Partially Amending the Act on Japan Organization for Metals and Energy Security",
+    "url": "https://www.meti.go.jp/english/press/2026/10/20261013001.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261013001.html",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
+    },
+    "primary_source_id": "jp-meti-index",
+    "n": 5384,
+    "first_seen": "2026-10-19T06:15:03.918025+00:00",
+    "last_seen": "2026-10-19T06:15:03.918025+00:00",
+    "source_ids": [
+      "jp-meti-index"
+    ]
+  }
+]
