@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T13:04:41.773906-04:00",
+  "generated_at": "2026-10-19T13:19:31.704027-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -11,133 +11,133 @@
   },
   "buy_1d": [
     {
-      "ticker": "SN",
-      "score": 0.41228679187551304
-    },
-    {
-      "ticker": "PRCH",
-      "score": 0.809961517091091
-    },
-    {
-      "ticker": "CAKE",
-      "score": 0.7366295182597078
+      "ticker": "CDNA",
+      "score": 0.8337797636157818
     },
     {
       "ticker": "VEEV",
-      "score": 0.4094810360542421
+      "score": 0.440722832336436
     },
     {
-      "ticker": "CDNA",
-      "score": 0.7863622581414995
+      "ticker": "SN",
+      "score": 0.407997786723631
     },
     {
-      "ticker": "CBRL",
-      "score": 0.7616208160132458
+      "ticker": "BLFS",
+      "score": 0.7855905743942335
+    },
+    {
+      "ticker": "ILMN",
+      "score": 0.41337572363644054
+    },
+    {
+      "ticker": "PRCH",
+      "score": 0.8070181406744832
     },
     {
       "ticker": "SHOO",
-      "score": 0.718469176249944
+      "score": 0.7176451412456195
     },
     {
-      "ticker": "ARQT",
-      "score": 0.738820548129989
+      "ticker": "CBRL",
+      "score": 0.7582374174986715
+    },
+    {
+      "ticker": "CAKE",
+      "score": 0.7182463477506182
     },
     {
       "ticker": "AVPT",
-      "score": 0.7104233330886554
+      "score": 0.6750450194399089
     },
     {
-      "ticker": "WAY",
-      "score": 0.6352612320737259
+      "ticker": "TRU",
+      "score": 0.44103282054223053
     },
     {
-      "ticker": "TOST",
-      "score": 0.5193116777486168
+      "ticker": "JXN",
+      "score": 0.5213734503919559
     },
     {
       "ticker": "LAUR",
-      "score": 0.6437426974133778
+      "score": 0.5871377898646308
     },
     {
       "ticker": "RELY",
-      "score": 0.6171683478734928
+      "score": 0.5591741948914406
     },
     {
-      "ticker": "IT",
-      "score": 0.4890042002043752
-    },
-    {
-      "ticker": "CHEF",
-      "score": 0.6495075942001175
+      "ticker": "ABX",
+      "score": 0.4888540105672492
     }
   ],
   "sell_1d": [
-    {
-      "ticker": "ROIV",
-      "score": -0.5996475241526488
-    },
     {
       "ticker": "ARE",
       "score": -0.4535167536703368
     },
     {
-      "ticker": "BNTX",
-      "score": -0.39390910195692475
-    },
-    {
-      "ticker": "IFRX",
-      "score": -0.3665660014667371
-    },
-    {
-      "ticker": "TYRA",
-      "score": -0.36500733575850913
-    },
-    {
-      "ticker": "WVE",
-      "score": -0.36428455827724976
+      "ticker": "NEOV",
+      "score": -0.3688463541888366
     },
     {
       "ticker": "VSAT",
-      "score": -0.3606072891094811
-    },
-    {
-      "ticker": "GH",
-      "score": -0.35984282078686436
+      "score": -0.36583046682770615
     },
     {
       "ticker": "BAK",
-      "score": -0.3581140399672197
+      "score": -0.36423588642979243
     },
     {
-      "ticker": "CGEM",
-      "score": -0.35734791374379177
+      "ticker": "ROIV",
+      "score": -0.3640062589448013
     },
     {
-      "ticker": "NEOV",
-      "score": -0.3513536011290247
+      "ticker": "SOC",
+      "score": -0.36106174176073086
+    },
+    {
+      "ticker": "INTC",
+      "score": -0.35111493616685563
     },
     {
       "ticker": "ALK",
       "score": -0.3496324992694038
     },
     {
-      "ticker": "PYXS",
-      "score": -0.34228086180589795
+      "ticker": "PAL",
+      "score": -0.3264255006325073
     },
     {
-      "ticker": "AXSM",
-      "score": -0.3397133354355836
+      "ticker": "VNET",
+      "score": -0.32173219462411756
     },
     {
-      "ticker": "LXRX",
-      "score": -0.33637956531217167
+      "ticker": "PCT",
+      "score": -0.32137323354022956
+    },
+    {
+      "ticker": "CMTG",
+      "score": -0.3210852097833349
+    },
+    {
+      "ticker": "NN",
+      "score": -0.3178030595806984
+    },
+    {
+      "ticker": "PRM",
+      "score": -0.3091681085988022
+    },
+    {
+      "ticker": "HPP",
+      "score": -0.30465111471884604
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $10,071.34",
+    "said": "0 priced buys \u00b7 cash $20,579.81",
     "bullets": [
       "0 priced buys",
-      "cash $10,071.34"
+      "cash $20,579.81"
     ]
   },
   "general": {
