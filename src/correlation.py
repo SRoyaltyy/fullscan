@@ -28,6 +28,7 @@ import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 
+from .aliases import Alias, AliasIndex, alias_terms, extract_aliases, extract_jurisdictions
 from .filing_parts import divide_profile
 from .places import place_names
 from .spelling import spelling
@@ -114,6 +115,7 @@ _PLACES = place_names()
 # Participles and light verbs. "showing up" is not a topic. Months are dates.
 _LIGHT = frozenset("""
 showing show showing going went gone getting get making make taking
+estimated estimate estimation approximately withdraws withdraw withdrawn
 take coming come looking look seeing see saying said trying tried
 using used doing pay paying putting put keeping kept letting let
 helping helped starting started continuing asking asked according
@@ -246,7 +248,7 @@ def prepare(text: str) -> Prepared:
                 # True synonyms then fold, so "quick" and "fast" are one term.
                 token = canonical(inflection(spelling(raw)))
                 # Drop the verb in "plan to launch", not the noun in "1,000 launches".
-                if raw in verbs:
+                if raw in verbs or raw in _LIGHT:
                     stream.append(None)
                     continue
                 if _keep_token(token):
@@ -347,6 +349,8 @@ class Stock:
     alias: str
     doc_len: int
     partners: list[dict] = field(default_factory=list)
+    aliases: list[Alias] = field(default_factory=list)
+    jurisdictions: set[str] = field(default_factory=set)
 
 
 @dataclass
@@ -362,6 +366,9 @@ class Board:
     # A word most of a large industry uses is an industry vote, not a stock vote.
     coverage: dict[str, float] = field(default_factory=dict)
     industry_size: dict[str, int] = field(default_factory=dict)
+    # L2-normalized characteristic terms of each industry. High-coverage
+    # words live here so they can vote for the industry, not for every member.
+    centroids: dict[str, dict[str, float]] = field(default_factory=dict)
 
 
 def _alias(name: str) -> str:
@@ -386,13 +393,12 @@ def build_board(rows: list[dict]) -> Board:
         if not ticker or not industry or industry.lower() in {"nan", "none"}:
             continue
         filing_core, partners = divide_profile(str(row.get("filing") or ""))
-        text = " ".join(
-            part for part in (
-                str(row.get("description") or ""),
-                filing_core,
-            ) if part.strip()
-        )
-        terms = stock_terms(text, str(row.get("name") or ""))
+        description = str(row.get("description") or "")
+        text = " ".join(part for part in (description, filing_core) if part.strip())
+        company = str(row.get("name") or "")
+        terms = stock_terms(text, company)
+        aliases = extract_aliases(ticker, company, text)
+        jurisdictions = extract_jurisdictions(text)
         if len(terms) < 4:
             continue
         stocks.append(Stock(
@@ -404,6 +410,8 @@ def build_board(rows: list[dict]) -> Board:
             alias=_alias(str(row.get("name") or "")),
             doc_len=max(1, sum(1 for term in terms if " " not in term)),
             partners=partners,
+            aliases=aliases,
+            jurisdictions=jurisdictions,
         ))
     n = max(len(stocks), 1)
     df: Counter[str] = Counter()
@@ -437,10 +445,58 @@ def build_board(rows: list[dict]) -> Board:
     for index, stock in enumerate(stocks):
         for term in stock.terms:
             postings[term].append(index)
+    centroids = _centroids(stocks, dict(df), n)
     return Board(
         stocks, weight, industry_of_term, dict(df), avg_len, n, dict(postings),
-        coverage_of, dict(industry_size),
+        coverage_of, dict(industry_size), centroids,
     )
+
+
+def _centroids(stocks: list[Stock], df: dict[str, int], n: int) -> dict[str, dict[str, float]]:
+    """Characteristic term vector of each industry, L2-normalized.
+
+    A word counts when a real share of the industry says it and it is not a
+    word of the whole market. ``fuel`` is characteristic of refiners. ``company``
+    is characteristic of nobody.
+    """
+    by_industry: dict[str, list[Stock]] = defaultdict(list)
+    for stock in stocks:
+        by_industry[stock.industry].append(stock)
+    vectors: dict[str, dict[str, float]] = {}
+    for industry, members in by_industry.items():
+        size = len(members)
+        if size < 2:
+            continue
+        counts: Counter[str] = Counter()
+        for stock in members:
+            counts.update(stock.terms)
+        raw: dict[str, float] = {}
+        for term, count in counts.items():
+            coverage = count / size
+            if coverage < 0.2:
+                continue
+            # Characteristic of this industry, not of the whole market.
+            outside = max(df.get(term, 0) - count, 0) / max(n - size, 1)
+            if coverage <= outside + 0.05:
+                continue
+            raw[term] = coverage
+        norm = math.sqrt(sum(value * value for value in raw.values())) or 1.0
+        vectors[industry] = {term: value / norm for term, value in raw.items()}
+    return vectors
+
+
+def _cosine(query: dict[str, float], centroid: dict[str, float]) -> float:
+    if not query or not centroid:
+        return 0.0
+    # One shared word is not an industry. Booking is not Travel Services.
+    # Fuel plus gasoline is.
+    if sum(1 for term in query if term in centroid) < 2:
+        return 0.0
+    dot = sum(weight * centroid.get(term, 0.0) for term, weight in query.items())
+    norm = math.sqrt(sum(weight * weight for weight in query.values()))
+    if norm <= 0:
+        return 0.0
+    return dot / norm
 
 
 def _apply_keyness(
@@ -526,6 +582,13 @@ def _industry_scores(query: dict[str, float], board: Board, sentences: list[list
         if not _industry_confirmed(term, industry, sentences, board):
             continue
         scores[industry] += importance * circle
+    # The centroid is the industry's own voice. It can pass the industry gate
+    # when the article sounds like that industry, without handing the same
+    # shared words to every member stock.
+    for industry, centroid in board.centroids.items():
+        similarity = _cosine(query, centroid)
+        if similarity > 0:
+            scores[industry] += similarity * 8.0
     return dict(scores)
 
 
@@ -611,6 +674,93 @@ def _name_row(record, *, off_board: bool, passing: set[str]) -> dict:
     }
 
 
+def _aliases_by_ticker(index: AliasIndex) -> dict[str, list]:
+    grouped: dict[str, list] = defaultdict(list)
+    for bucket in index.by_word.values():
+        for alias in bucket:
+            grouped[alias.ticker].append(alias)
+    for bucket in index.by_first.values():
+        for _parts, alias in bucket:
+            grouped[alias.ticker].append(alias)
+    return grouped
+
+
+def _alias_layer(board: Board, profiles: list[dict] | None):
+    """Alias graph and jurisdictions. Profiles add companies the liquidity screen dropped."""
+    aliases = [alias for stock in board.stocks for alias in stock.aliases]
+    jurisdictions = {stock.ticker: set(stock.jurisdictions) for stock in board.stocks}
+    meta = {
+        stock.ticker: {
+            "name": stock.name, "industry": stock.industry, "sector": stock.sector, "off_board": False,
+        }
+        for stock in board.stocks
+    }
+    for row in profiles or []:
+        ticker = str(row.get("ticker") or "").upper().strip()
+        if not ticker:
+            continue
+        description = str(row.get("description") or "")
+        name = str(row.get("name") or "")
+        if ticker not in meta:
+            aliases.extend(extract_aliases(ticker, name, description))
+            jurisdictions[ticker] = extract_jurisdictions(description)
+            meta[ticker] = {
+                "name": name,
+                "industry": str(row.get("industry") or ""),
+                "sector": str(row.get("sector") or ""),
+                "off_board": True,
+            }
+        else:
+            # The board profile already includes this description. Keep filing aliases.
+            jurisdictions.setdefault(ticker, set()).update(extract_jurisdictions(description))
+    return AliasIndex(aliases), jurisdictions, meta
+
+
+def _scoped_tickers(article_places: set[str], jurisdictions: dict[str, set[str]], limit: int = 50) -> list[str]:
+    if not article_places:
+        return []
+    matched = [
+        ticker for ticker, places in jurisdictions.items()
+        if places and (places & article_places)
+    ]
+    matched.sort()
+    return matched[:limit]
+
+
+def _mark(rows: list[dict], meta: dict, ticker: str, *, alias_hit: bool = False,
+         jurisdiction_hit: bool = False, passing: set[str]) -> None:
+    """Record an alias or jurisdiction inspection. Neither flag is a pass."""
+    for row in rows:
+        if row["ticker"] != ticker:
+            continue
+        if alias_hit:
+            row["alias_hit"] = True
+        if jurisdiction_hit:
+            row["jurisdiction_hit"] = True
+        return
+    info = meta.get(ticker)
+    if info is None:
+        return
+    industry = info.get("industry", "")
+    rows.append({
+        "ticker": ticker,
+        "name": info.get("name", ""),
+        "industry": industry,
+        "sector": info.get("sector", ""),
+        "desc_score": 0.0,
+        "bm25": 0.0,
+        "terms": [],
+        "name_hit": False,
+        "alias_hit": alias_hit,
+        "jurisdiction_hit": jurisdiction_hit,
+        "off_board": bool(info.get("off_board")),
+        "ind_pass": bool(industry) and industry in passing,
+        "desc_z": 0.0,
+        "desc_pass": False,
+        "pass": False,
+    })
+
+
 def link_articles(
     board: Board,
     articles: list[dict],
@@ -619,6 +769,7 @@ def link_articles(
     batch_z_min: float = 2.0,
     reference: list[dict] | None = None,
     names=None,
+    profiles: list[dict] | None = None,
     apply_batch: bool = True,
 ) -> list[dict]:
     """Score every article. Both gates must clear ``z_min`` inside the article.
@@ -639,6 +790,8 @@ def link_articles(
     not that day.
     """
     name_index = _name_index(board, names)
+    alias_index, jurisdictions, meta = _alias_layer(board, profiles)
+    alias_only = {ticker: alias_terms(group) for ticker, group in _aliases_by_ticker(alias_index).items()}
     on_board = {stock.ticker: stock for stock in board.stocks}
     sharp = {term for term, weight in board.weight.items() if weight >= 0.35}
     prepared = [prepare(str(article.get("text") or "")) for article in articles]
@@ -675,6 +828,12 @@ def link_articles(
                 _name_row(record, off_board=record.ticker not in on_board, passing=set())
                 for record in mentioned
             ]
+            article_places = extract_jurisdictions(text)
+            for mention in alias_index.mentioned(text):
+                _mark(named_rows, meta, mention.ticker, alias_hit=True, passing=set())
+            scoped = _scoped_tickers(article_places, jurisdictions)
+            for ticker in scoped:
+                _mark(named_rows, meta, ticker, jurisdiction_hit=True, passing=set())
             raw.append({
                 "id": article.get("id"),
                 "title": article.get("title") or "",
@@ -685,6 +844,7 @@ def link_articles(
                 "absorbed": doc.absorbed[:12],
                 "industries": [],
                 "stocks": named_rows,
+                "scoped": scoped,
                 "dependencies": [],
                 "_sparse": {},
                 "_ind": {},
@@ -722,7 +882,9 @@ def link_articles(
             # drug/trial/fda sit in most of biotechnology. They may vote for
             # the industry. They must not make every biotech an outlier.
             home = board.industry_of_term.get(term, "")
-            if board.industry_size.get(home, 0) >= 12 and board.coverage.get(term, 0) >= 0.45:
+            # booking is said by a large minority of travel companies, not 45%.
+            # It may vote for the industry. It may not pass every one of them.
+            if board.industry_size.get(home, 0) >= 8 and board.coverage.get(term, 0) >= 0.30:
                 continue
             gained = importance * circle
             for index in board.postings.get(term, ()):
@@ -758,6 +920,19 @@ def link_articles(
             row["desc_z"] = round(_z(row["desc_score"], desc_mean, desc_std), 3)
             row["desc_pass"] = row["desc_z"] >= z_min and bool(row["terms"])
             row["pass"] = row["desc_pass"] and row["ind_pass"]
+            row["alias_hit"] = False
+            row["jurisdiction_hit"] = False
+            # The alias itself is not corroboration. Musk alone is not a pass.
+            owned = alias_only.get(row["ticker"], set())
+            if row["terms"] and owned and set(row["terms"]) <= owned:
+                row["desc_pass"] = False
+                row["pass"] = False
+        article_places = extract_jurisdictions(text)
+        for mention in alias_index.mentioned(text):
+            _mark(stocks_out, meta, mention.ticker, alias_hit=True, passing=passing_industries)
+        scoped = _scoped_tickers(article_places, jurisdictions)
+        for ticker in scoped:
+            _mark(stocks_out, meta, ticker, jurisdiction_hit=True, passing=passing_industries)
         seen = {row["ticker"] for row in stocks_out}
         for record in mentioned:
             if record.ticker in seen:
@@ -770,11 +945,21 @@ def link_articles(
                 off_board=record.ticker not in on_board,
                 passing=passing_industries,
             ))
-        stocks_out.sort(key=lambda row: (-int(row["pass"]), -int(row["name_hit"]), -row["desc_z"], -row["desc_score"]))
-        named_rows = [row for row in stocks_out if row["name_hit"]]
+        stocks_out.sort(key=lambda row: (
+            -int(row["pass"]),
+            -int(row.get("name_hit") or row.get("alias_hit")),
+            -int(row.get("jurisdiction_hit") or False),
+            -row["desc_z"],
+            -row["desc_score"],
+        ))
+        special = {
+            row["ticker"] for row in stocks_out
+            if row.get("name_hit") or row.get("alias_hit") or row.get("jurisdiction_hit")
+        }
+        special_rows = [row for row in stocks_out if row["ticker"] in special]
         other_rows = [
             row for row in stocks_out
-            if not row["name_hit"] and (row["pass"] or row["desc_z"] >= z_min)
+            if row["ticker"] not in special and (row["pass"] or row["desc_z"] >= z_min)
         ]
         raw.append({
             "id": article.get("id"),
@@ -785,7 +970,8 @@ def link_articles(
             "bundles": doc.bundles[:12],
             "absorbed": doc.absorbed[:12],
             "industries": [row for row in industries if row["pass"] or row["z"] > 0][:8],
-            "stocks": named_rows + other_rows[: max(0, 24 - len(named_rows))],
+            "stocks": special_rows[:24] + other_rows[: max(0, 24 - len(special_rows[:24]))],
+            "scoped": scoped,
             "dependencies": _dependencies(board, text, passing_industries, name_index),
             "_sparse": sparse,
             "_ind": {row["industry"]: row["score"] for row in industries},

@@ -401,6 +401,100 @@ We also provide technology services to third parties, including FanDuel and Draf
         self.assertIn("CHPT", passed)
         self.assertNotIn("JPM", passed)
 
+    def test_an_alias_is_not_a_pass_until_something_else_corroborates(self):
+        stocks = [
+            {"ticker": "SPCX", "name": "Space Exploration Technologies Corp", "industry": "Aerospace & Defense", "sector": "Industrials",
+             "description": "Space Exploration Technologies Corp., doing business as SpaceX, builds rockets and spacecraft and provides launch services. The company was founded by Elon Reeve Musk in 2002 and is headquartered in Starbase, TX."},
+            {"ticker": "JPM", "name": "JPMorgan Chase & Co.", "industry": "Banks - Diversified", "sector": "Financial",
+             "description": "JPMorgan Chase takes deposits and makes loans through consumer banking."},
+            {"ticker": "NKE", "name": "Nike Inc", "industry": "Footwear & Accessories", "sector": "Consumer Cyclical",
+             "description": "Nike designs athletic footwear and apparel for sports."},
+            {"ticker": "KO", "name": "Coca-Cola Co", "industry": "Beverages - Non-Alcoholic", "sector": "Consumer Defensive",
+             "description": "Coca-Cola manufactures sparkling beverages and juice drinks."},
+            {"ticker": "PFE", "name": "Pfizer Inc", "industry": "Drug Manufacturers", "sector": "Healthcare",
+             "description": "Pfizer discovers and manufactures pharmaceutical medicines and vaccines."},
+            {"ticker": "XOM", "name": "Exxon Mobil Corp", "industry": "Oil & Gas Integrated", "sector": "Energy",
+             "description": "Exxon Mobil produces crude oil and natural gas."},
+            {"ticker": "CAT", "name": "Caterpillar Inc", "industry": "Farm & Heavy Construction Machinery", "sector": "Industrials",
+             "description": "Caterpillar makes construction machinery, mining trucks, and diesel engines."},
+            {"ticker": "T", "name": "AT&T Inc", "industry": "Telecom Services", "sector": "Communication Services",
+             "description": "AT&T provides wireless service, broadband, and telephone connections."},
+            {"ticker": "UNP", "name": "Union Pacific Corp", "industry": "Railroads", "sector": "Industrials",
+             "description": "Union Pacific operates a railroad freight network hauling industrial goods."},
+            {"ticker": "HD", "name": "Home Depot Inc", "industry": "Home Improvement Retail", "sector": "Consumer Cyclical",
+             "description": "Home Depot sells building materials, tools, and home improvement goods."},
+        ]
+        board = build_board(stocks)
+        [alone] = link_articles(board, [{"id": "hat", "text": "Elon Musk commented on a hat at a party and left early without discussing any business at all."}])
+        spcx = next(row for row in alone["stocks"] if row["ticker"] == "SPCX")
+        self.assertTrue(spcx["alias_hit"])
+        self.assertFalse(spcx["pass"])
+        [corroborated] = link_articles(board, [{"id": "launch", "text": "Elon Musk said the firm will build more rockets and spacecraft and expand launch services for commercial customers. Rockets and spacecraft remain the business. Launch services are booked for the year."}])
+        passed = {row["ticker"] for row in corroborated["stocks"] if row["pass"]}
+        self.assertIn("SPCX", passed)
+
+    def test_a_place_scopes_a_company_and_does_not_pass_by_itself(self):
+        stocks = [
+            {"ticker": "DUK", "name": "Duke Energy Corp", "industry": "Utilities - Regulated Electric", "sector": "Utilities",
+             "description": "Duke Energy conducts regulated electric utilities in the Carolinas, Florida and the Midwest. It is headquartered in Charlotte, NC."},
+            {"ticker": "JPM", "name": "JPMorgan Chase & Co.", "industry": "Banks - Diversified", "sector": "Financial",
+             "description": "JPMorgan Chase takes deposits and makes loans through consumer banking in New York."},
+            {"ticker": "NKE", "name": "Nike Inc", "industry": "Footwear & Accessories", "sector": "Consumer Cyclical",
+             "description": "Nike designs athletic footwear and apparel for sports."},
+            {"ticker": "KO", "name": "Coca-Cola Co", "industry": "Beverages - Non-Alcoholic", "sector": "Consumer Defensive",
+             "description": "Coca-Cola manufactures sparkling beverages and juice drinks."},
+        ]
+        board = build_board(stocks)
+        [festival] = link_articles(board, [{"id": "fair", "text": "A weekend festival in North Carolina drew crowds to Charlotte. North Carolina hosts the festival every year and Charlotte closes its streets for it."}])
+        duk = next(row for row in festival["stocks"] if row["ticker"] == "DUK")
+        self.assertTrue(duk["jurisdiction_hit"])
+        self.assertFalse(duk["pass"])
+        self.assertNotIn("JPM", {row["ticker"] for row in festival["stocks"] if row["pass"]})
+
+    def test_fuel_votes_for_refiners_and_not_for_every_refiner(self):
+        refiners = []
+        for index in range(12):
+            refiners.append({
+                "ticker": f"R{index:02d}",
+                "name": f"Refiner {index} Inc",
+                "industry": "Oil & Gas Refining & Marketing",
+                "sector": "Energy",
+                "description": "The company refines crude into fuel. Fuel production includes gasoline and diesel. The fuel business is refining.",
+            })
+        shippers = []
+        for index in range(8):
+            shippers.append({
+                "ticker": f"S{index:02d}",
+                "name": f"Shipper {index} Inc",
+                "industry": "Marine Shipping",
+                "sector": "Energy",
+                "description": "The company owns tankers. Tankers carry cargo across the ocean. The tanker fleet is the business.",
+            })
+        others = [
+            {"ticker": "JPM", "name": "JPMorgan Chase & Co.", "industry": "Banks - Diversified", "sector": "Financial",
+             "description": "JPMorgan Chase takes deposits and makes loans through consumer banking."},
+            {"ticker": "PFE", "name": "Pfizer Inc", "industry": "Drug Manufacturers", "sector": "Healthcare",
+             "description": "Pfizer discovers and manufactures pharmaceutical medicines and vaccines."},
+            {"ticker": "NKE", "name": "Nike Inc", "industry": "Footwear & Accessories", "sector": "Consumer Cyclical",
+             "description": "Nike designs athletic footwear and apparel for sports."},
+            {"ticker": "KO", "name": "Coca-Cola Co", "industry": "Beverages - Non-Alcoholic", "sector": "Consumer Defensive",
+             "description": "Coca-Cola manufactures sparkling beverages and juice drinks."},
+            {"ticker": "T", "name": "AT&T Inc", "industry": "Telecom Services", "sector": "Communication Services",
+             "description": "AT&T provides wireless service, broadband, and telephone connections."},
+            {"ticker": "HD", "name": "Home Depot Inc", "industry": "Home Improvement Retail", "sector": "Consumer Cyclical",
+             "description": "Home Depot sells building materials, tools, and home improvement goods."},
+        ]
+        board = build_board(refiners + shippers + others)
+        text = (
+            "The fuel oil market is tight. Fuel buyers are paying more for gasoline and diesel. "
+            "Fuel production is constrained. Gasoline and diesel fuel remain scarce."
+        )
+        [hit] = link_articles(board, [{"id": "fuel", "text": text}])
+        passed_industries = {row["industry"] for row in hit["industries"] if row["pass"]}
+        self.assertIn("Oil & Gas Refining & Marketing", passed_industries)
+        self.assertNotIn("Marine Shipping", passed_industries)
+        self.assertEqual({row["ticker"] for row in hit["stocks"] if row["pass"]}, set())
+
 
 if __name__ == "__main__":
     unittest.main()

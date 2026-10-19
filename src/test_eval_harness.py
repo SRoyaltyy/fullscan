@@ -137,6 +137,15 @@ class CompareCaseTests(unittest.TestCase):
         self.assertEqual(out["verdict"], "SKIP")
         self.assertIn("NO_TEXT", out["failure_classes"])
 
+    def test_short_text_with_unknown_expectation_is_scorable(self):
+        # thin-markets-moved is 14 characters and expects unknown. It must
+        # count, not SKIP on the 40-character floor.
+        case = {"id": "thin-markets-moved", "kind": "regression", "text": "Markets moved.",
+                "expected": {"status": "unknown"}}
+        out = compare_case(case, _hit(status="unknown"))
+        self.assertEqual(out["verdict"], "PASS")
+        self.assertNotIn("NO_TEXT", out["failure_classes"])
+
     def test_missing_hit_row_is_false_unknown(self):
         case = {"id": "c", "kind": "regression", "text": "x" * 60,
                 "expected": {"status": "scored"}}

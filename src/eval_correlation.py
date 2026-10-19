@@ -96,7 +96,16 @@ def compare_case(case: dict, hit: dict | None) -> dict:
         }
 
     text = (case.get("text") or "").strip()
-    if len(text) < 40 and not case.get("text_ref"):
+    # Short text is only un-scorable when the case needs a body to be judged.
+    # A case whose expectation is "unknown" (thin-markets-moved is 14 characters)
+    # is legitimately short: the program must still see it and say unknown.
+    needs_body = (
+        expected.get("status") == "scored"
+        or bool(expected.get("topical_passes"))
+        or bool(expected.get("name_hits"))
+        or bool(expected.get("allowed_second_order"))
+    )
+    if len(text) < 40 and not case.get("text_ref") and needs_body:
         classes.append("NO_TEXT")
         notes.append("case text is empty/short and text_ref is unset; paste full text")
 
@@ -165,6 +174,31 @@ def compare_case(case: dict, hit: dict | None) -> dict:
             if row and row.get("name_hit"):
                 classes.append("ALIAS_FP")
                 unexpected["name_hits"].append(ticker)
+
+        # alias graph and jurisdiction scope ----------------------------------
+        for ticker in expected.get("alias_hits") or []:
+            row = _stock_row(hit, ticker)
+            if not (row and row.get("alias_hit")):
+                classes.append("MISSING_NAME")
+                missing["name_hits"].append(ticker)
+        scoped_tickers = {str(ticker).upper() for ticker in (hit.get("scoped") or [])}
+        for ticker in expected.get("scoped") or []:
+            row = _stock_row(hit, ticker)
+            if ticker.upper() in scoped_tickers or (row and row.get("jurisdiction_hit")):
+                continue
+            classes.append("FALSE_UNKNOWN")
+            notes.append(f"{ticker} was not scoped to a jurisdiction named in the article")
+        passed_industries = {
+            row.get("industry") for row in (hit.get("industries") or []) if row.get("pass")
+        }
+        for industry in expected.get("industries_pass") or []:
+            if industry not in passed_industries:
+                classes.append("GATE_MISS")
+                notes.append(f"industry {industry} did not pass")
+        for industry in expected.get("industries_must_not") or []:
+            if industry in passed_industries:
+                classes.append("SENSE_CROSS")
+                notes.append(f"industry {industry} passed")
 
         # dependencies ---------------------------------------------------------
         allowed = {(a.get("ticker", "").upper(), (a.get("partner") or "").lower())
@@ -270,13 +304,15 @@ def run_in_process(cases: list[dict], args: argparse.Namespace) -> dict[str, dic
         from src.filing_business import load_business_texts
         filings = load_business_texts(args.filings)
 
+    from src.aliases import profiles_from_csv
     from src.names import NameIndex, catalog_from_csv
 
     stocks = load_stocks(args.descriptions, args.universe, args.sectors, filings)
     board = build_board(stocks)
-    # Names come from the whole description file, not the liquidity screen,
-    # so Lockheed can be a name hit while staying off the topical board.
+    # Names, aliases, and jurisdictions come from the whole description file,
+    # not the liquidity screen, so an off-board company can still be inspected.
     names = NameIndex(catalog_from_csv(args.descriptions))
+    profiles = profiles_from_csv(args.descriptions)
 
     reference = None
     if args.reference and args.reference.is_file():
@@ -293,7 +329,7 @@ def run_in_process(cases: list[dict], args: argparse.Namespace) -> dict[str, dic
     # on a real day (problem-taxonomy F6), so it stays off here.
     hits = link_articles(
         board, articles, z_min=args.z_min, batch_z_min=args.batch_z_min,
-        reference=reference, names=names, apply_batch=False,
+        reference=reference, names=names, profiles=profiles, apply_batch=False,
     )
     return {str(hit.get("id")): hit for hit in hits}
 
