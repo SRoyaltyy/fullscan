@@ -1,0 +1,131 @@
+{
+  "date": "2026-10-19",
+  "generated_at": "2026-10-19T16:27:49.883724-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-20",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-20) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed higher as tech and chip names rebounded on AI optimism while oil eased on Trump’s Russia sanctions waiver ahead of housing data and major tech earnings",
+  "raw_text": "- The S&P 500 ($SPX) closed at 7,691, up 0.41%, while the Nasdaq Composite ($COMP) gained about 1.1%, the Nasdaq 100 ($NDX) rose about 1.2%, the Russell 2000 (IWM) added about 0.3%, and the Dow Jones Industrial Average ($DJI) slipped about 0.07%.\n- A basket of 60 chip-related stocks added nearly $250 billion in market value, with Micron Technology (MU) up 3.1% and Sandisk (SNDK) advancing 5.8% on improving memory sentiment.\n- Intel (INTC) rose about 2.4% after Tesla (TSLA) selected its forthcoming 14A process as the first major external customer and JPMorgan (JPM) upgraded the stock citing improved execution, while Western Digital (WDC), Nvidia (NVDA), and AMD (AMD) also contributed to the semiconductor rebound.\n- Nine of 11 S&P 500 ($SPX) sectors closed higher, with real estate and consumer defensive sectors lagging the broader market.\n- Amazon.com (AMZN) gained about 5% after agreeing to fund and buy power from a 960 MW Indiana small modular reactor project, with Morgan Stanley (MS) also naming the stock a top pick on AI and AWS-driven growth.\n- CoreWeave (CRWV) slipped slightly even after a Goldman Sachs (GS) upgrade to buy from neutral following last week’s sell-off.\n- Cleveland-Cliffs (CLF) jumped about 16% after beating Q3 EBITDA guidance and reporting adjusted EPS of $0.28, with results boosted by higher steel prices, improving volumes, and better-than-guided unit costs; Steel Dynamics (STLD) is scheduled to report after the close.\n- Wintrust Financial (WTFC), Zions Bancorporation (ZION), and other banks are scheduled to release Q3 results after the close, with no immediate after-hours stock reactions exceeding 2%.\n- Oil (@CL) prices eased after President Trump waived some Russia sanctions impacting the energy market.\n- The NAHB Housing Market Index came in weaker at 29 versus 32 expected as investors looked ahead to Tuesday’s housing data and earnings from Netflix (NFLX) on Tuesday and Meta Platforms (META) and Tesla (TSLA) on Wednesday.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) closed at **7,691, up 0.41%**, while the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) gained about **1.1%**, the **Nasdaq 100** ([$NDX](https://finviz.com/index/NDX?p=d)) rose about **1.2%**, the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) added about **0.3%**, and the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) slipped about **0.07%**.\n- A basket of **60 chip-related stocks** added nearly **$250 billion** in market value, with **Micron Technology** ([MU](https://finviz.com/quote?t=MU)) up **3.1%** and **Sandisk** ([SNDK](https://finviz.com/quote?t=SNDK)) advancing **5.8%** on improving memory sentiment.\n- **Intel** ([INTC](https://finviz.com/quote?t=INTC)) rose about **2.4%** after **Tesla** ([TSLA](https://finviz.com/quote?t=TSLA)) selected its forthcoming **14A process** as the first major external customer and **JPMorgan** ([JPM](https://finviz.com/quote?t=JPM)) upgraded the stock citing improved execution, while **Western Digital** ([WDC](https://finviz.com/quote?t=WDC)), **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)), and **AMD** ([AMD](https://finviz.com/quote?t=AMD)) also contributed to the **semiconductor rebound**.\n- **Nine of 11** S&P 500 ([$SPX](https://finviz.com/index/SPX?p=d)) sectors **closed higher**, with **real estate and consumer defensive sectors lagging** the broader market.\n- **Amazon.com** ([AMZN](https://finviz.com/quote?t=AMZN)) gained about **5%** after agreeing to fund and buy power from a **960 MW Indiana small modular reactor project**, with **Morgan Stanley** ([MS](https://finviz.com/quote?t=MS)) also naming the stock a **top pick on AI and AWS-driven growth**.\n- **CoreWeave** ([CRWV](https://finviz.com/quote?t=CRWV)) **slipped slightly** even after a **Goldman Sachs** ([GS](https://finviz.com/quote?t=GS)) upgrade to **buy from neutral** following last week’s sell-off.\n- **Cleveland-Cliffs** ([CLF](https://finviz.com/quote?t=CLF)) **jumped about 16%** after beating **Q3 EBITDA guidance** and reporting **adjusted EPS of $0.28**, with results boosted by **higher steel prices**, improving volumes, and better-than-guided unit costs; **Steel Dynamics** ([STLD](https://finviz.com/quote?t=STLD)) is scheduled to report **after the close**.\n- **Wintrust Financial** ([WTFC](https://finviz.com/quote?t=WTFC)), **Zions Bancorporation** ([ZION](https://finviz.com/quote?t=ZION)), and other banks are scheduled to release **Q3 results after the close**, with no immediate after-hours stock reactions exceeding **2%**.\n- **Oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices **eased** after **President Trump** waived some **Russia sanctions** impacting the energy market.\n- The **NAHB Housing Market Index** came in weaker at **29 versus 32 expected** as investors looked ahead to Tuesday’s housing data and earnings from **Netflix** ([NFLX](https://finviz.com/quote?t=NFLX)) on **Tuesday** and **Meta Platforms** ([META](https://finviz.com/quote?t=META)) and **Tesla** ([TSLA](https://finviz.com/quote?t=TSLA)) on **Wednesday**.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 1.1,
+      "verb": "gained"
+    },
+    {
+      "name": "Nasdaq",
+      "code": "COMP",
+      "change_pct": 1.2,
+      "verb": "rose"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": 0.3,
+      "verb": "added"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -0.07,
+      "verb": "slipped"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "MU",
+    "SNDK",
+    "INTC",
+    "TSLA",
+    "JPM",
+    "WDC",
+    "NVDA",
+    "AMD",
+    "AMZN",
+    "MS",
+    "CRWV",
+    "GS",
+    "CLF",
+    "STLD",
+    "WTFC",
+    "ZION",
+    "NFLX",
+    "META"
+  ],
+  "named_leaders": [
+    "MU",
+    "SNDK",
+    "INTC",
+    "TSLA",
+    "JPM",
+    "WDC",
+    "NVDA",
+    "AMD",
+    "AMZN",
+    "MS",
+    "CRWV",
+    "GS",
+    "CLF",
+    "STLD",
+    "WTFC",
+    "ZION",
+    "NFLX",
+    "META"
+  ],
+  "calendar": [
+    "The NAHB Housing Market Index came in weaker at 29 versus 32 expected as investors looked ahead to Tuesday’s housing data and earnings from Netflix (NFLX) on Tuesday and Meta Platforms (META) and Tesla (TSLA) on Wednesday."
+  ],
+  "prior_close": {
+    "spx": 1.1,
+    "nasdaq": 1.2,
+    "dow": -0.07
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": true,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "The NAHB Housing Market Index came in weaker at 29 versus 32 expected as investors looked ahead to Tuesday’s housing data and earnings from Netflix (NFLX) on Tuesday and Meta Platforms (META) and Tesla (TSLA) on Wednesday."
+    ],
+    "text": "The NAHB Housing Market Index came in weaker at 29 versus 32 expected as investors looked ahead to Tuesday’s housing data and earnings from Netflix (NFLX) on Tuesday and Meta Platforms (META) and Tesla (TSLA) on Wednesday."
+  },
+  "earnings_slate": {
+    "tickers": [
+      "NFLX",
+      "META",
+      "TSLA"
+    ],
+    "text": "The NAHB Housing Market Index came in weaker at 29 versus 32 expected as investors looked ahead to Tuesday’s housing data and earnings from Netflix (NFLX) on Tuesday and Meta Platforms (META) and Tesla (TSLA) on Wednesday."
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 312182,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-19T16:08:55.56",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
