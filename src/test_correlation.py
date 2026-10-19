@@ -235,6 +235,52 @@ We also provide technology services to third parties, including FanDuel and Draf
         ])
         named = {row.ticker for row in tickers.mentioned("Tokenized versions of HOOD, COIN and TSLA were mentioned.")}
         self.assertEqual(named, {"HOOD", "COIN", "TSLA"})
+        wires = NameIndex([
+            Name("AP", "Ampco Pittsburgh Corp", "ampco pittsburgh"),
+            Name("SAN", "Banco Santander SA ADR", "banco santander"),
+            Name("IRS", "Irsa Inversiones Y Representaciones SA ADR", "irsa"),
+            Name("MD", "Pediatrix Medical Group Inc", "pediatrix"),
+            Name("MRNA", "Moderna Inc", "moderna"),
+            Name("BA", "Boeing Co", "boeing"),
+            Name("LMT", "Lockheed Martin Corp", "lockheed martin"),
+        ])
+        self.assertNotIn("AP", {row.ticker for row in wires.mentioned("Brush fires spark in Southern California - AP News")})
+        self.assertNotIn("SAN", {row.ticker for row in wires.mentioned("SAN JUAN, Puerto Rico – the attorney announced the task force.")})
+        self.assertNotIn("IRS", {row.ticker for row in wires.mentioned("The IRS Criminal Investigation unit joined the DEA and HHS-OIG.")})
+        self.assertNotIn("MD", {row.ticker for row in wires.mentioned("Strata Minerals MD Peter Woods will speak.")})
+        self.assertIn("MRNA", {row.ticker for row in wires.mentioned("Moderna's next test is the supply chain.")})
+        listed = {row.ticker for row in wires.mentioned("The effort names BA, LMT and RTX.")}
+        self.assertIn("BA", listed)
+        self.assertIn("LMT", listed)
+
+    def test_a_word_the_whole_industry_uses_does_not_pass_every_stock(self):
+        stocks = []
+        for index in range(12):
+            stocks.append({
+                "ticker": f"B{index:02d}",
+                "name": f"Biotech {index} Inc",
+                "industry": "Biotechnology",
+                "sector": "Healthcare",
+                "description": "The pipeline is a kinase program. Kinase research continues. The kinase candidate advanced.",
+            })
+        stocks += [
+            {"ticker": "JPM", "name": "JPMorgan Chase & Co.", "industry": "Banks - Diversified", "sector": "Financial",
+             "description": "JPMorgan Chase takes deposits and makes loans through consumer banking."},
+            {"ticker": "XOM", "name": "Exxon Mobil Corp", "industry": "Oil & Gas Integrated", "sector": "Energy",
+             "description": "Exxon Mobil produces crude oil and natural gas."},
+            {"ticker": "NKE", "name": "Nike Inc", "industry": "Footwear & Accessories", "sector": "Consumer Cyclical",
+             "description": "Nike designs athletic footwear and apparel for sports."},
+            {"ticker": "KO", "name": "Coca-Cola Co", "industry": "Beverages - Non-Alcoholic", "sector": "Consumer Defensive",
+             "description": "Coca-Cola manufactures sparkling beverages and juice drinks."},
+        ]
+        board = build_board(stocks)
+        text = (
+            "The kinase candidate advanced. Kinase research expanded the kinase program. "
+            "Another kinase study read out. The kinase program remains the focus."
+        )
+        [hit] = link_articles(board, [{"id": "kinase", "text": text}])
+        passed = {row["ticker"] for row in hit["stocks"] if row["pass"]}
+        self.assertEqual(passed, set())
 
     def test_a_partner_link_is_second_order_and_follows_the_partner_industry(self):
         stocks = STOCKS + [
@@ -269,6 +315,91 @@ We also provide technology services to third parties, including FanDuel and Draf
         self.assertTrue(all(row["second_order"] for row in hit["dependencies"]))
         [memo] = link_articles(board, [{"id": "memo", "text": MEMO}])
         self.assertFalse(any(row["partner"] == "DraftKings" for row in memo["dependencies"]))
+
+    def test_uk_spelling_and_true_synonyms_fold_to_one_term(self):
+        defence = prepare("The Pentagon asked defence firms to accelerate weapons production.")
+        self.assertIn("defense", defence.terms)
+        self.assertNotIn("defence", defence.terms)
+        self.assertIn("color", prepare("The colour of the casing.").terms)
+        self.assertNotIn("hor", prepare("Results are due within the hour.").terms)
+        self.assertNotIn("promize", prepare("The company made a promise to customers.").terms)
+        organised = prepare("The firm organised a production review and organised it again.")
+        organized = prepare("The firm organized a production review and organized it again.")
+        self.assertEqual(set(organised.terms), set(organized.terms))
+        self.assertIn("fast", prepare("A quick charging network.").terms)
+        self.assertIn("attorney", prepare("The lawyer filed the suit.").terms)
+        self.assertIn("attorney", prepare("The attorney filed the suit.").terms)
+
+    def test_defence_article_matches_a_defense_description(self):
+        stocks = [
+            {"ticker": "BA", "name": "Boeing Co", "industry": "Aerospace & Defense", "sector": "Industrials",
+             "description": "Boeing designs defense aircraft and missiles. Defense customers buy military aircraft, missiles, and weapons systems."},
+            {"ticker": "JPM", "name": "JPMorgan Chase & Co.", "industry": "Banks - Diversified", "sector": "Financial",
+             "description": "JPMorgan Chase takes deposits, makes loans, and operates consumer banking and investment banking businesses."},
+            {"ticker": "AAL", "name": "American Airlines Group Inc.", "industry": "Airlines", "sector": "Industrials",
+             "description": "American Airlines offers air transportation for passengers and cargo across a network of routes."},
+            {"ticker": "PFE", "name": "Pfizer Inc", "industry": "Drug Manufacturers", "sector": "Healthcare",
+             "description": "Pfizer discovers and manufactures pharmaceutical medicines and vaccines."},
+            {"ticker": "XOM", "name": "Exxon Mobil Corp", "industry": "Oil & Gas Integrated", "sector": "Energy",
+             "description": "Exxon Mobil produces crude oil, natural gas, and refined petroleum products."},
+            {"ticker": "NKE", "name": "Nike Inc", "industry": "Footwear & Accessories", "sector": "Consumer Cyclical",
+             "description": "Nike designs and sells athletic footwear, apparel, and sporting equipment."},
+            {"ticker": "KO", "name": "Coca-Cola Co", "industry": "Beverages - Non-Alcoholic", "sector": "Consumer Defensive",
+             "description": "Coca-Cola manufactures sparkling beverages and juice drinks sold through bottlers."},
+            {"ticker": "T", "name": "AT&T Inc", "industry": "Telecom Services", "sector": "Communication Services",
+             "description": "AT&T provides wireless service, broadband, and telephone connections to consumers."},
+            {"ticker": "CAT", "name": "Caterpillar Inc", "industry": "Farm & Heavy Construction Machinery", "sector": "Industrials",
+             "description": "Caterpillar makes construction machinery, mining trucks, and diesel engines."},
+            {"ticker": "UNP", "name": "Union Pacific Corp", "industry": "Railroads", "sector": "Industrials",
+             "description": "Union Pacific operates a railroad freight network hauling industrial goods."},
+        ]
+        board = build_board(stocks)
+        text = (
+            "The Pentagon has asked defence firms to accelerate weapons production. "
+            "Defence contractors are adding missile and aircraft capacity. "
+            "Weapons production for defence aircraft is being pulled forward. "
+            "Defence aircraft schedules and missile output are the subject of the request."
+        )
+        [hit] = link_articles(board, [{"id": "defence", "text": text}])
+        passed = {row["ticker"] for row in hit["stocks"] if row["pass"]}
+        self.assertIn("BA", passed)
+        self.assertNotIn("AAL", passed)
+        self.assertNotIn("JPM", passed)
+
+    def test_quick_matches_a_fast_description(self):
+        stocks = [
+            {"ticker": "CHPT", "name": "ChargePoint Holdings Inc", "industry": "Specialty Retail", "sector": "Consumer Cyclical",
+             "description": "ChargePoint operates a fast charging network. The fast charging stations serve electric vehicles. Fast charging is the product."},
+            {"ticker": "JPM", "name": "JPMorgan Chase & Co.", "industry": "Banks - Diversified", "sector": "Financial",
+             "description": "JPMorgan Chase takes deposits, makes loans, and operates consumer banking and investment banking businesses."},
+            {"ticker": "AAL", "name": "American Airlines Group Inc.", "industry": "Airlines", "sector": "Industrials",
+             "description": "American Airlines offers air transportation for passengers and cargo across a network of routes."},
+            {"ticker": "PFE", "name": "Pfizer Inc", "industry": "Drug Manufacturers", "sector": "Healthcare",
+             "description": "Pfizer discovers and manufactures pharmaceutical medicines and vaccines."},
+            {"ticker": "XOM", "name": "Exxon Mobil Corp", "industry": "Oil & Gas Integrated", "sector": "Energy",
+             "description": "Exxon Mobil produces crude oil, natural gas, and refined petroleum products."},
+            {"ticker": "NKE", "name": "Nike Inc", "industry": "Footwear & Accessories", "sector": "Consumer Cyclical",
+             "description": "Nike designs and sells athletic footwear, apparel, and sporting equipment."},
+            {"ticker": "KO", "name": "Coca-Cola Co", "industry": "Beverages - Non-Alcoholic", "sector": "Consumer Defensive",
+             "description": "Coca-Cola manufactures sparkling beverages and juice drinks sold through bottlers."},
+            {"ticker": "T", "name": "AT&T Inc", "industry": "Telecom Services", "sector": "Communication Services",
+             "description": "AT&T provides wireless service, broadband, and telephone connections to consumers."},
+            {"ticker": "CAT", "name": "Caterpillar Inc", "industry": "Farm & Heavy Construction Machinery", "sector": "Industrials",
+             "description": "Caterpillar makes construction machinery, mining trucks, and diesel engines."},
+            {"ticker": "UNP", "name": "Union Pacific Corp", "industry": "Railroads", "sector": "Industrials",
+             "description": "Union Pacific operates a railroad freight network hauling industrial goods."},
+        ]
+        board = build_board(stocks)
+        text = (
+            "Drivers gained a quick charging network along the highway. "
+            "Quick charging stations opened in three states. "
+            "The quick charging network is aimed at electric vehicles. "
+            "Quick charging became the busiest part of the stop."
+        )
+        [hit] = link_articles(board, [{"id": "quick", "text": text}])
+        passed = {row["ticker"] for row in hit["stocks"] if row["pass"]}
+        self.assertIn("CHPT", passed)
+        self.assertNotIn("JPM", passed)
 
 
 if __name__ == "__main__":

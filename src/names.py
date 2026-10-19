@@ -39,7 +39,21 @@ PUBLISHERS = (
     "barrons",
     "reuters",
     "bloomberg",
+    "ap news",
+    "associated press",
 )
+
+# Bare all-caps abbreviations of government bodies. $IRS still matches.
+# ICE is left out: it is also Intercontinental Exchange.
+AGENCIES = frozenset("""
+irs dea fbi cia hhs fda cdc nih doj dol hud sba ssa usda atf dhs
+sec va oig uspis usps usda hud
+""".split())
+
+# MD before a person's name is a title. $MD still matches.
+TITLES = frozenset("md ceo cfo coo cto cao vp".split())
+
+_SOURCE_TAIL = re.compile(r"\s+[-|\u2013|\u2014]\s+\S.{0,80}$")
 
 _TICKER_SYNTAX = re.compile(
     r"(?:\$|(?:NYSE|NASDAQ|NASD|AMEX|NYSEAMERICAN)\s*:\s*)([A-Za-z]{1,5})\b"
@@ -102,21 +116,35 @@ class NameIndex:
             if record:
                 found[record.ticker] = record
 
+        tokens = [(match.group(0), match.start()) for match in _TOKEN.finditer(text)]
+        lowered = [_possessive(token).lower() for token, _start in tokens]
         for match in _CAPS_TICKER.finditer(text):
             if match.start() in masked:
                 continue
+            ticker = match.group(1)
+            if ticker.lower() in AGENCIES:
+                continue
+            # IRS-CI is one code, not the tickers IRS and CI.
+            before = text[match.start() - 1] if match.start() else ""
+            after = text[match.end():match.end() + 1]
+            if before == "-" or after == "-":
+                continue
+            if ticker.lower() in TITLES:
+                # "MD Peter" is a title. "BA, LMT" is a ticker list.
+                nxt = _next_word(text, match.end())
+                if nxt and nxt[0].isupper() and not nxt.isupper():
+                    continue
             # All caps is how a headline writes a ticker, including word-tickers
             # (HOOD, COIN). The publisher mask is what keeps WASHINGTON POST
             # from becoming the cereal company.
-            record = self.by_ticker.get(match.group(1))
+            record = self.by_ticker.get(ticker)
             if record:
                 found[record.ticker] = record
 
-        tokens = [(match.group(0), match.start()) for match in _TOKEN.finditer(text)]
-        lowered = [token.lower() for token, _start in tokens]
         for index, (surface, start) in enumerate(tokens):
             if start in masked:
                 continue
+            surface = _possessive(surface)
             word = lowered[index]
             for record in self.by_word.get(word, ()):
                 if record.ticker in found:
@@ -164,8 +192,27 @@ def _camel(surface: str) -> bool:
     return any(char.isupper() for char in surface[1:]) and any(char.islower() for char in surface)
 
 
+def _possessive(token: str) -> str:
+    """Moderna's and Moderna’s are Moderna."""
+    for mark in ("'s", "\u2019s"):
+        if len(token) > len(mark) + 1 and token.endswith(mark):
+            return token[: -len(mark)]
+    return token
+
+
+def _next_word(text: str, end: int) -> str:
+    match = _TOKEN.search(text, end)
+    return match.group(0) if match else ""
+
+
+@lru_cache(maxsize=1)
+def _place_phrases() -> frozenset[str]:
+    from .places import place_names
+    return frozenset(place.lower() for place in place_names())
+
+
 def _masked_token_starts(text: str) -> set[int]:
-    """Character offsets of tokens that sit inside a publisher name."""
+    """Offsets of tokens inside a publisher, a trailing source, a place, or a dateline."""
     lowered = text.lower()
     spans: list[tuple[int, int]] = []
     for phrase in PUBLISHERS:
@@ -176,10 +223,30 @@ def _masked_token_starts(text: str) -> set[int]:
                 break
             spans.append((found, found + len(phrase)))
             start = found + len(phrase)
+    offset = 0
+    for line in text.splitlines(keepends=True):
+        match = _SOURCE_TAIL.search(line.rstrip("\r\n"))
+        if match:
+            spans.append((offset + match.start(), offset + match.end()))
+        offset += len(line)
+    # SAN JUAN, Puerto Rico is a dateline. BA, LMT is a ticker list: one word, then a comma.
+    for match in re.finditer(r"\b(?:[A-Z]{2,}\s+){1,3}[A-Z]{2,},", text):
+        spans.append((match.start(), match.end()))
+    places = _place_phrases()
+    tokens = list(_TOKEN.finditer(text))
+    words = [match.group(0).lower() for match in tokens]
+    for index, word in enumerate(words):
+        for width in (3, 2):
+            if index + width > len(words):
+                continue
+            phrase = " ".join(words[index:index + width])
+            if phrase in places:
+                spans.append((tokens[index].start(), tokens[index + width - 1].end()))
+                break
     if not spans:
         return set()
     masked = set()
-    for match in _TOKEN.finditer(text):
+    for match in tokens:
         begin = match.start()
         if any(span_start <= begin < span_end for span_start, span_end in spans):
             masked.add(begin)

@@ -19,10 +19,10 @@ Status legend: **SOLVED** (countermeasure in the scorer today) ·
 
 | # | problem | example | countermeasure | status |
 |---|---|---|---|---|
-| A1 | US/UK spelling variants | defence/defense, licence/license, aluminium | variant-normalization table applied at prepare() | **OPEN** (observed: Pentagon article) |
+| A1 | US/UK spelling variants | defence/defense, licence/license, aluminium | variant-normalization table applied at prepare() (`src/spelling.py`) | **SOLVED** |
 | A2 | Inflections | launches/launch | inflection folding (Lockheed-safe) | **SOLVED** |
-| A3 | Derivational families | administer/administration/administrator | keep distinct; add discounted WordNet derivational links (~0.5 credit) | **OPEN** |
-| A4 | Synonyms with zero lexical overlap | fast/quick; reentry/splashdown; lawyer/attorney; lender/bank | WordNet synsets (discounted) → offline embedding neighbor table, same-industry paths only | **OPEN** — this is the sanctioned embeddings residual layer |
+| A3 | Derivational families | administer/administration/administrator | kept as distinct words; a short family list credits the sibling at 0.45 on the description only (`src/synonyms.py`) | **MITIGATED** — not a full derivational lexicon |
+| A4 | Synonyms with zero lexical overlap | fast/quick; reentry/splashdown; lawyer/attorney; lender/bank | true synonyms fold to one token (`fast`/`quick`, `lawyer`/`attorney`); near pairs credit at 0.45 without casting an industry vote; homonyms are not grouped | **MITIGATED** — the embeddings residual (open-vocabulary neighbors) is still open |
 | A5 | Abbreviations & institutional aliases | "the Fed" vs Federal Reserve; FAA, NATO, SEC | acronym table extracted free from filings' first-use pattern: `Federal Aviation Administration ("FAA")` | **OPEN** — filings hand this to us |
 | A6 | Register mismatch press ↔ filings | "stocks" ↔ "equity securities"; "fired" ↔ "terminated" | corpus PMI between filings vocabulary and news vocabulary; feeds the same machinery as A4 | **OPEN** |
 | A7 | Numbers, dates, units | "$1.5B" ↔ "1.5 billion"; "Q3" ↔ "third quarter"; 24/7 | normalize units and quarter forms at prepare() | **OPEN** |
@@ -66,7 +66,7 @@ Status legend: **SOLVED** (countermeasure in the scorer today) ·
 | E1 | Relation typing beyond three roles | regulator, parent, subsidiary, JV, shareholder, auditor, landlord, index provider | extend the relation graph from a cue-word table; **subsidiaries are the biggest miss** (an article about Google Cloud is about GOOGL) | **OPEN** (3 roles today) |
 | E2 | Subsidiary ↔ parent | "LinkedIn cuts staff" → MSFT | Exhibit 21 (subsidiary exhibit) is structured and free; plus Item 1 "we own X%" sentences | **OPEN** — highest-value free resource in this table |
 | E3 | Private companies | SpaceX, OpenAI, Cargill — major news drivers with no filing | private-name registry built from public filers' relation edges + a hand-seeded list | **OPEN** (the SPCX false hit is this gap in the wild) |
-| E4 | Government as counterparty | "NASA awards $500M contract" — the agency is a customer, not a stock | agency gazetteer + typed relation (regulator / major-customer) with second-order semantics | **OPEN** (title-stripping exists; typing doesn't) |
+| E4 | Government as counterparty | "NASA awards $500M contract" — the agency is a customer, not a stock | bare agency abbreviations (IRS, FDA, DEA, HHS, FBI) are not tickers; `$TICKER` still matches. Typed customer/regulator relations are not built | **MITIGATED** |
 | E5 | Individuals | "Musk says…", "the CEO of Rocket Lab…" | officer lists from filings' cover/signature pages → person→company map | **OPEN** |
 | E6 | Index & ETF holdings | "S&P 500 adds RKLB" | typed relation index-member; second-order at most | **OPEN** |
 | E7 | Ungated second-order relations | Playboy's filing mentions DraftKings; the article is about gambling, not Playboy | dependency rows carry `order: 2` and surface only when the article's industry vote is the partner's industry | **MITIGATED** |
@@ -76,6 +76,7 @@ Status legend: **SOLVED** (countermeasure in the scorer today) ·
 | # | problem | example | countermeasure | status |
 |---|---|---|---|---|
 | F1 | Arbitrary thresholds | z≥2.5, batch-z≥2.0, 75% absorption, purity≥0.55, circle floor 0.35 | percentile-of-score vs per-stock random-article background; freeze during a dedicated calibration round against the corpus | **OPEN** |
+| F7 | An industry word passes every stock in it | "drug" / "trial" / "fda" make a dozen biotechs pass one headline | description score ignores a term used by at least 45% of a large industry. A stricter within-industry z was tried and taken back: it also failed the space memo and the defence match, because those stocks were not outliers inside aerospace | **MITIGATED** — "drug" still passes a subset of biotechs (case `bhvn-not-every-biotech`) |
 | F2 | Coverage punishes single-filing phrases | "steps down" → near-zero weight (documented) | weight floor for name/alias terms; cap coverage's role for multiword phrases | **OPEN** |
 | F3 | Keyness control corpus choice | the day's news kills words trending across the whole sector; a tiny batch judges itself | fixed reference window (e.g. 30 days of news) + min-token guard | **MITIGATED** (day reference supported; window not built) |
 | F4 | Universe screen bias | LMT/RTX/NOC/GD off-board via the ATR screen; ICE off-board | name hits are looked up on the full description list and marked `off_board`; topical scoring still uses the liquid universe | **MITIGATED** |
@@ -89,7 +90,7 @@ the loop, roughly in payoff order:
 
 - [x] word-ticker table (English-word tickers → stricter matching; `src/data/english_words.txt`)
 - [x] publisher / organization gazetteer (Washington Post, Renaissance Capital)
-- [ ] US/UK variant pairs + hyphen/diacritic folding
+- [x] US/UK variant pairs (`src/spelling.py`); hyphen/diacritic folding still open (B5)
 - [ ] WordNet (synsets + derivational links) or equivalent
 - [ ] acronym table extracted from filings' `("ACRONYM")` first-use pattern
 - [ ] finance-slang stoplist from filings↔news PMI outliers (B4)

@@ -30,6 +30,8 @@ from dataclasses import dataclass, field
 
 from .filing_parts import divide_profile
 from .places import place_names
+from .spelling import spelling
+from .synonyms import canonical, with_near
 
 _WORD = re.compile(r"[a-z0-9]+")
 _TITLE = re.compile(
@@ -240,7 +242,9 @@ def prepare(text: str) -> Prepared:
                 sentences.append(current)
                 current = []
             for raw in _WORD.findall(piece):
-                token = inflection(raw)
+                # Spelling first, so "organised" inflects like "organized".
+                # True synonyms then fold, so "quick" and "fast" are one term.
+                token = canonical(inflection(spelling(raw)))
                 # Drop the verb in "plan to launch", not the noun in "1,000 launches".
                 if raw in verbs:
                     stream.append(None)
@@ -354,6 +358,10 @@ class Board:
     avg_len: float
     n: int
     postings: dict[str, list[int]] = field(default_factory=dict)
+    # How much of its top industry says the term, and how big that industry is.
+    # A word most of a large industry uses is an industry vote, not a stock vote.
+    coverage: dict[str, float] = field(default_factory=dict)
+    industry_size: dict[str, int] = field(default_factory=dict)
 
 
 def _alias(name: str) -> str:
@@ -405,6 +413,7 @@ def build_board(rows: list[dict]) -> Board:
         df.update(stock.terms)
         by_industry[stock.industry].update(stock.terms)
     weight: dict[str, float] = {}
+    coverage_of: dict[str, float] = {}
     industry_of_term: dict[str, str] = {}
     for term, count in df.items():
         idf = math.log((n + 1) / (count + 1)) + 1.0
@@ -420,6 +429,7 @@ def build_board(rows: list[dict]) -> Board:
         purity = top_count / count
         coverage = top_count / industry_size[top_industry]
         weight[term] = idf * purity * coverage
+        coverage_of[term] = coverage
         if purity >= 0.55 and (top_count >= 3 or coverage >= 0.25):
             industry_of_term[term] = top_industry
     avg_len = sum(stock.doc_len for stock in stocks) / n
@@ -427,7 +437,10 @@ def build_board(rows: list[dict]) -> Board:
     for index, stock in enumerate(stocks):
         for term in stock.terms:
             postings[term].append(index)
-    return Board(stocks, weight, industry_of_term, dict(df), avg_len, n, dict(postings))
+    return Board(
+        stocks, weight, industry_of_term, dict(df), avg_len, n, dict(postings),
+        coverage_of, dict(industry_size),
+    )
 
 
 def _apply_keyness(
@@ -677,6 +690,10 @@ def link_articles(
                 "_ind": {},
             })
             continue
+        # Near words (reentry/splashdown, administer/administration) can lift a
+        # description. They do not cast the industry vote: that stays on the
+        # article's own words, so a cousin term cannot open a new industry.
+        desc_query = with_near(query, board.industry_of_term)
         ind_scores = _industry_scores(query, board, doc.sentences)
         every_industry = {stock.industry for stock in board.stocks}
         ind_mean, ind_std = _mean_std([ind_scores.get(name, 0.0) for name in every_industry])
@@ -695,12 +712,17 @@ def link_articles(
             })
         totals = [0.0] * len(board.stocks)
         hit_terms: list[list[tuple[float, str]]] = [[] for _ in board.stocks]
-        for term, importance in query.items():
+        for term, importance in desc_query.items():
             circle = board.weight.get(term)
             # A phrase that lives in one filing covers too little of its
             # industry to be a circle. Those weights sit near zero and would
             # otherwise look like a perfect match on a short headline.
             if not circle or circle < 0.35:
+                continue
+            # drug/trial/fda sit in most of biotechnology. They may vote for
+            # the industry. They must not make every biotech an outlier.
+            home = board.industry_of_term.get(term, "")
+            if board.industry_size.get(home, 0) >= 12 and board.coverage.get(term, 0) >= 0.45:
                 continue
             gained = importance * circle
             for index in board.postings.get(term, ()):
