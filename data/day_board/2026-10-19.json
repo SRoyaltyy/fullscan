@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T12:56:27.350686-04:00",
+  "generated_at": "2026-10-19T13:03:28.646582-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -555,8 +555,8 @@
           "path": "01_daily/weather/2026-10-19_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9549 vix=falling yields=falling",
-          "size": 9549,
+          "reason": "sectors=11 bytes=9698 vix=falling yields=falling",
+          "size": 9698,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -774,8 +774,8 @@
           "path": "01_daily/weather/2026-10-19_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9549 vix=falling yields=falling",
-          "size": 9549,
+          "reason": "sectors=11 bytes=9698 vix=falling yields=falling",
+          "size": 9698,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -802,10 +802,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2251219,
-          "said": "212 rows",
+          "size": 2250114,
+          "said": "203 rows",
           "bullets": [
-            "FTK, CMBT, TEN, PBR-A, INSW, EXE, PBR, DVN"
+            "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, WAY"
           ]
         },
         {
@@ -827,9 +827,9 @@
           "path": "data/stock_book/2026-10-19_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=225",
-          "size": 1536862,
-          "said": "1d BUY SN, CBRL, PRCH, CAKE, SHOO, VEEV, CDNA, ARQT \u00b7 SELL ROIV, ARE, BNTX, GH, VSAT, IFRX \u00b7 0.49724999999999997",
+          "reason": "horizons=5 names=210",
+          "size": 1525493,
+          "said": "1d BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC \u00b7 0.49724999999999997",
           "bullets": []
         },
         {
@@ -839,10 +839,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 93708,
+          "size": 84093,
           "said": "Stock book \u2014 2026-10-19",
           "bullets": [
-            "_Generated 2026-10-19T12:55:47.723675-04:00_",
+            "_Generated 2026-10-19T07:32:03.698206-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -853,8 +853,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2461,
-          "said": "157 green \u00b7 GLBE, SHOO, VCTR, WT, FIGS, SN, JXN, PRCH, HNI, SIG",
+          "size": 2550,
+          "said": "164 green \u00b7 ETON, ARQT, WAY, CORT, INCY, VEEV, AMN, CDNA, SIBN, EXEL",
           "bullets": []
         },
         {
@@ -883,9 +883,9 @@
           "bullets": []
         }
       ],
-      "said": "212 rows",
+      "said": "203 rows",
       "bullets": [
-        "FTK, CMBT, TEN, PBR-A, INSW"
+        "HALO, ONC, LLY, HRMY, ETON"
       ]
     },
     {
@@ -905,9 +905,9 @@
           "path": "data/stock_book/2026-10-19_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=225",
-          "size": 1536862,
-          "said": "1d BUY SN, CBRL, PRCH, CAKE, SHOO, VEEV, CDNA, ARQT \u00b7 SELL ROIV, ARE, BNTX, GH, VSAT, IFRX \u00b7 0.49724999999999997",
+          "reason": "horizons=5 names=210",
+          "size": 1525493,
+          "said": "1d BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC \u00b7 0.49724999999999997",
           "bullets": []
         },
         {
@@ -956,126 +956,126 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "SN",
-        "score": 0.41228679187551304
-      },
-      {
-        "ticker": "CBRL",
-        "score": 0.7930149516214733
-      },
-      {
-        "ticker": "PRCH",
-        "score": 0.8139089838637334
-      },
-      {
-        "ticker": "CAKE",
-        "score": 0.7343391747123458
-      },
-      {
-        "ticker": "SHOO",
-        "score": 0.718469176249944
+        "ticker": "CDNA",
+        "score": 0.8337797636157818
       },
       {
         "ticker": "VEEV",
-        "score": 0.3971163682837808
+        "score": 0.440722832336436
       },
       {
-        "ticker": "CDNA",
-        "score": 0.7686832551465634
+        "ticker": "SN",
+        "score": 0.407997786723631
       },
       {
-        "ticker": "ARQT",
-        "score": 0.7312184229079193
+        "ticker": "BLFS",
+        "score": 0.7855905743942335
+      },
+      {
+        "ticker": "ILMN",
+        "score": 0.41337572363644054
+      },
+      {
+        "ticker": "PRCH",
+        "score": 0.8070181406744832
+      },
+      {
+        "ticker": "SHOO",
+        "score": 0.7176451412456195
+      },
+      {
+        "ticker": "CBRL",
+        "score": 0.7582374174986715
+      },
+      {
+        "ticker": "CAKE",
+        "score": 0.7182463477506182
       },
       {
         "ticker": "AVPT",
-        "score": 0.704045007987252
-      },
-      {
-        "ticker": "ETON",
-        "score": 0.6685105381974901
-      },
-      {
-        "ticker": "MQ",
-        "score": 0.6785934514970269
-      },
-      {
-        "ticker": "LAUR",
-        "score": 0.6286215797636239
-      },
-      {
-        "ticker": "TOST",
-        "score": 0.49641516135462216
+        "score": 0.6750450194399089
       },
       {
         "ticker": "TRU",
-        "score": 0.4653185622540826
+        "score": 0.44103282054223053
       },
       {
         "ticker": "JXN",
-        "score": 0.5275313855121289
+        "score": 0.5213734503919559
+      },
+      {
+        "ticker": "LAUR",
+        "score": 0.5871377898646308
+      },
+      {
+        "ticker": "RELY",
+        "score": 0.5591741948914406
+      },
+      {
+        "ticker": "ABX",
+        "score": 0.4888540105672492
       }
     ],
     "sell_1d": [
-      {
-        "ticker": "ROIV",
-        "score": -0.608162066163344
-      },
       {
         "ticker": "ARE",
         "score": -0.4535167536703368
       },
       {
-        "ticker": "BNTX",
-        "score": -0.39722771321675465
-      },
-      {
-        "ticker": "GH",
-        "score": -0.3893571838598999
+        "ticker": "NEOV",
+        "score": -0.3688463541888366
       },
       {
         "ticker": "VSAT",
-        "score": -0.3658195935912882
-      },
-      {
-        "ticker": "IFRX",
-        "score": -0.3625876678727329
-      },
-      {
-        "ticker": "TYRA",
-        "score": -0.3614819951721589
-      },
-      {
-        "ticker": "WVE",
-        "score": -0.3591598801806976
+        "score": -0.36583046682770615
       },
       {
         "ticker": "BAK",
-        "score": -0.35576791589037027
+        "score": -0.36423588642979243
+      },
+      {
+        "ticker": "ROIV",
+        "score": -0.3640062589448013
+      },
+      {
+        "ticker": "SOC",
+        "score": -0.36106174176073086
+      },
+      {
+        "ticker": "INTC",
+        "score": -0.35111493616685563
       },
       {
         "ticker": "ALK",
         "score": -0.3496324992694038
       },
       {
-        "ticker": "AXSM",
-        "score": -0.34928581604075715
+        "ticker": "PAL",
+        "score": -0.3264255006325073
       },
       {
-        "ticker": "NEOV",
-        "score": -0.34477378969227834
+        "ticker": "VNET",
+        "score": -0.32173219462411756
       },
       {
-        "ticker": "CGEM",
-        "score": -0.34452285768580143
+        "ticker": "PCT",
+        "score": -0.32137323354022956
       },
       {
-        "ticker": "PYXS",
-        "score": -0.33517794375666854
+        "ticker": "CMTG",
+        "score": -0.3210852097833349
       },
       {
-        "ticker": "LXRX",
-        "score": -0.33435198917289227
+        "ticker": "NN",
+        "score": -0.3178030595806984
+      },
+      {
+        "ticker": "PRM",
+        "score": -0.3091681085988022
+      },
+      {
+        "ticker": "HPP",
+        "score": -0.30465111471884604
       }
     ],
     "flatten": {
@@ -2900,6 +2900,31 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-19T13:03:27.477974-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-19_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9698,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-19_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5253,
+          "preview": "# Weather report \u2014 2026-10-19\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-19\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
@@ -3235,6 +3260,22 @@
       "commit_msg": "auto: stock book leftover sweep",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "39288588604",
+      "manifest": "research/input_freeze/2026-10-19/manifest.json"
+    },
+    {
+      "path": "01_daily/weather/2026-10-19_weather.json",
+      "at": "2026-10-19T13:03:29-04:00",
+      "commit_msg": "auto: land weather [2026-10-19]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "39290067184",
+      "manifest": "research/input_freeze/2026-10-19/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-19.json",
+      "at": "2026-10-19T13:03:29-04:00",
+      "commit_msg": "auto: land weather [2026-10-19]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "39290067184",
       "manifest": "research/input_freeze/2026-10-19/manifest.json"
     }
   ]
