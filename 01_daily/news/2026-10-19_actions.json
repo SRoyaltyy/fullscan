@@ -2696,5 +2696,7 @@
     "XLK": -4.0,
     "MSFT": -5.5,
     "AMGN": 1.5
-  }
+  },
+  "catalyst_tickers": 0,
+  "catalyst_date": "2026-10-19"
 }
