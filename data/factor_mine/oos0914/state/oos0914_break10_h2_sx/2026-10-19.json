@@ -1,0 +1,84 @@
+{
+  "buys": [],
+  "cash": 87.73,
+  "date": "2026-10-19",
+  "equity": 9223.51,
+  "fees": 0.1235,
+  "fills": [
+    {
+      "fees": 0.1235,
+      "fill_rule": "open",
+      "pnl": 0.35,
+      "price": 10.05,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "BLMN"
+    }
+  ],
+  "holdings": [
+    "BBWI",
+    "TRU",
+    "VFC"
+  ],
+  "mean": -0.3542,
+  "n_trades_today": 1,
+  "recipe": "oos0914_break10_h2_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 10.05,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "BLMN"
+    }
+  ],
+  "state": {
+    "after": "2026-10-19",
+    "cash": 87.73,
+    "pos": {
+      "BBWI": {
+        "close_px": 19.84000015258789,
+        "cost": 3131.299,
+        "entry_date": "2026-10-16",
+        "entry_px": 20.45,
+        "fee_in": 2.449,
+        "last_px": 20.0,
+        "min_hold": 2,
+        "notional": 3128.85,
+        "peak_px": 20.45,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+15.4; leftover $3139.86",
+        "shares": 153,
+        "ticker": "BBWI"
+      },
+      "TRU": {
+        "close_px": 73.12,
+        "cost": 3073.013,
+        "entry_date": "2026-10-16",
+        "entry_px": 74.9,
+        "fee_in": 2.113,
+        "last_px": 73.12,
+        "min_hold": 2,
+        "notional": 3070.9,
+        "peak_px": 74.9,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+14.8; leftover $3139.86",
+        "shares": 41,
+        "ticker": "TRU"
+      },
+      "VFC": {
+        "close_px": 17.139999389648438,
+        "cost": 3137.453,
+        "entry_date": "2026-10-16",
+        "entry_px": 17.32,
+        "fee_in": 2.533,
+        "last_px": 16.75,
+        "min_hold": 2,
+        "notional": 3134.92,
+        "peak_px": 17.32,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+17.0; leftover $3139.86",
+        "shares": 181,
+        "ticker": "VFC"
+      }
+    },
+    "yday_equity": 9223.51
+  }
+}

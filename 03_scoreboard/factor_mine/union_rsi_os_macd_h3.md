@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+21.10%** ($12,110) · signal-only (no cash/fees) was +8.48%. Starts YES **1/30**. Fills 21 · skips 9 · realized $-574.52.
+Cash book **+20.46%** ($12,046) · signal-only (no cash/fees) was +8.48%. Starts YES **1/30**. Fills 22 · skips 9 · realized $-574.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -187,6 +187,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **BUY** | `EFX` | 2 | $161.77 | $2.00 | — | $1,236.29 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; ret5=+10.8; leftover $450.40 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 09:30 ET | **BUY** | `INTU` | 1 | $332.34 | $1.99 | — | $901.96 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; 🔵; ret5=+8.7; leftover $450.40 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 judge🔴 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $901.96 | ▼ close $12,110.31 vs 09:30 $12,165.60 (session -45.29) | 16:00 close · cash $901.96 · equity $12,110.31 vs 09:30 $12,165.60 (-55.29; session marks -45.29) · 9 name(s) marked open→close (per-name table). FIS×66 09:30 $36.42 → close $36.01 -27.06; JBHT×10 09:30 $228.00 → close $228.78 +7.80; LW×44 09:30 $54.48 → close $53.59 -39.16; PNC×11 09:30 $216.58 → close $217.39 +8.91; DGX×1 09:30 $239.67 → close $235.00 -4.67; PLNT×9 09:30 $49.48 → close $50.92 +12.96; WM×2 09:30 $224.78 → close $226.86 +4.16; EFX×2 09:30 $161.77 → close $161.25 -1.04; INTU×1 09:30 $332.34 → close $325.15 -7.19 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $901.96 | ▼ 09:30 equity $12,034.59 vs yday $12,110.31 (-75.72) | 09:30 open · cash $901.96 (unchanged overnight, no fees) · equity $12,034.59 vs prior close $12,110.31 (-75.72) · 9 name(s) re-marked at the open (per-name table). DGX×1 yday $235.00 → 09:30 $234.40 -0.60; EFX×2 yday $161.25 → 09:30 $159.08 -4.34; FIS×66 yday $36.01 → 09:30 $35.74 -17.82; INTU×1 yday $325.15 → 09:30 $322.63 -2.52; JBHT×10 yday $228.78 → 09:30 $227.30 -14.80; LW×44 yday $53.59 → 09:30 $52.87 -31.68; PLNT×9 yday $50.92 → 09:30 $51.08 +1.44; PNC×11 yday $217.39 → 09:30 $217.32 -0.77; WM×2 yday $226.86 → 09:30 $224.54 -4.64 | — |
+| 2026-10-19 09:30 ET | **BUY** | `ALL` | 3 | $245.91 | $2.00 | — | $162.23 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; ret5=+8.0; leftover $901.96 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $162.23 | ▲ close $12,046.13 vs 09:30 $12,034.59 (session +13.54) | 16:00 close · cash $162.23 · equity $12,046.13 vs 09:30 $12,034.59 (+11.54; session marks +13.54) · 10 name(s) marked open→close (per-name table). DGX×1 09:30 $234.40 → close $234.91 +0.51; EFX×2 09:30 $159.08 → close $158.57 -1.02; FIS×66 09:30 $35.74 → close $35.98 +15.84; INTU×1 09:30 $322.63 → close $325.62 +2.99; JBHT×10 09:30 $227.30 → close $223.25 -40.50; LW×44 09:30 $52.87 → close $53.44 +25.08; PLNT×9 09:30 $51.08 → close $52.89 +16.29; PNC×11 09:30 $217.32 → close $216.21 -12.21; WM×2 09:30 $224.54 → close $226.41 +3.74; ALL×3 09:30 $245.91 → close $246.85 +2.82 | — |
 
 ## Not taken
 

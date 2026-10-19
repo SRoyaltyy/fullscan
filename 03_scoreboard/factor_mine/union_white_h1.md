@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ white, no 🚨
 
-Cash book **-13.79%** ($8,621) · signal-only (no cash/fees) was -8.86%. Starts YES **3/30**. Fills 254 · skips 0 · realized $-116.79.
+Cash book **-9.99%** ($9,001) · signal-only (no cash/fees) was -8.86%. Starts YES **3/30**. Fills 255 · skips 0 · realized $-116.79.
 
 ## How this sleeve decides (like you are 10)
 
@@ -418,3 +418,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,620.83 | ▲ close $8,620.83 vs 09:30 $8,620.83 (session +0.00) | 16:00 close · cash $8,620.83 · no lots left · equity $8,620.83. | — |
 | 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,620.83 | ▲ 09:30 equity $8,620.83 vs yday $8,620.83 (+0.00) | 09:30 open · cash $8,620.83 · no holdings · equity $8,620.83 vs prior close $8,620.83 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,620.83 | ▲ close $8,620.83 vs 09:30 $8,620.83 (session +0.00) | 16:00 close · cash $8,620.83 · no lots left · equity $8,620.83. | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,620.83 | ▲ 09:30 equity $8,620.83 vs yday $8,620.83 (+0.00) | 09:30 open · cash $8,620.83 · no holdings · equity $8,620.83 vs prior close $8,620.83 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-19 09:30 ET | **BUY** | `SMMT` | 578 | $14.90 | $7.46 | — | $1.17 | — | union ∩ white, no 🚨; gate zero_red=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-16.8; leftover $8620.83 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.17 | ▲ close $9,000.63 vs 09:30 $8,620.83 (session +387.26) | 16:00 close · cash $1.17 · equity $9,000.63 vs 09:30 $8,620.83 (+379.80; session marks +387.26) · 1 name(s) marked open→close (per-name table). SMMT×578 09:30 $14.90 → close $15.57 +387.26 | — |

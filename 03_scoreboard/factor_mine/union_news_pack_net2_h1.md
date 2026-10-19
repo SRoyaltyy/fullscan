@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **-0.47%** ($9,953) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 87 · skips 28 · realized $+1837.87.
+Cash book **-0.53%** ($9,947) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 91 · skips 28 · realized $+1837.87.
 
 ## How this sleeve decides (like you are 10)
 
@@ -253,6 +253,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **SELL** | `COP` | 11 | $142.69 | $2.05 | $-7.48 | $3,302.18 | ▼ -7.48 after sell → book $9,891.92; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-16 09:30 ET | **SELL** | `RELX` | 42 | $39.49 | $2.14 | $+58.95 | $4,958.62 | ▲ +58.95 after sell → book $9,889.78; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,958.62 | ▲ close $9,953.00 vs 09:30 $9,896.00 (session +63.22) | 16:00 close · cash $4,958.62 · equity $9,953.00 vs 09:30 $9,896.00 (+57.00; session marks +63.22) · 1 name(s) marked open→close (per-name table). AMX×218 09:30 $22.62 → close $22.91 +63.22 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,958.62 | ▼ 09:30 equity $9,937.74 vs yday $9,953.00 (-15.26) | 09:30 open · cash $4,958.62 (unchanged overnight, no fees) · equity $9,937.74 vs prior close $9,953.00 (-15.26) · 1 name(s) re-marked at the open (per-name table). AMX×218 yday $22.91 → 09:30 $22.84 -15.26 | — |
+| 2026-10-19 09:30 ET | **BUY** | `EOG` | 7 | $157.52 | $2.01 | — | $3,853.97 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+7.3; leftover $1239.65 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `COP` | 8 | $145.73 | $2.01 | — | $2,686.12 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+9.3; leftover $1239.65 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `RELX` | 31 | $38.96 | $2.08 | — | $1,476.27 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+8.1; leftover $1239.65 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `CHRD` | 8 | $152.81 | $2.01 | — | $251.82 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+9.2; leftover $1239.65 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $251.82 | ▲ close $9,946.82 vs 09:30 $9,937.74 (session +17.20) | 16:00 close · cash $251.82 · equity $9,946.82 vs 09:30 $9,937.74 (+9.08; session marks +17.20) · 5 name(s) marked open→close (per-name table). AMX×218 09:30 $22.84 → close $22.83 -2.18; EOG×7 09:30 $157.52 → close $157.65 +0.91; COP×8 09:30 $145.73 → close $145.24 -3.92; RELX×31 09:30 $38.96 → close $39.25 +8.99; CHRD×8 09:30 $152.81 → close $154.48 +13.40 | — |
 
 ## Not taken
 

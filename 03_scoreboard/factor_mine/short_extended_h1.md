@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-2.62%** ($9,738) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 361 · skips 88 · realized $-1484.16.
+Cash book **-1.34%** ($9,866) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 366 · skips 88 · realized $-1484.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -523,6 +523,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **SHORT** | `BLMN` | 119 | $9.90 | $2.41 | — | $15,597.20 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+17.1; leftover $1186.29 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 09:30 ET | **SHORT** | `VFC` | 68 | $17.32 | $2.25 | — | $16,772.71 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+17.0; leftover $1186.29 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,772.71 | ▲ close $9,737.98 vs 09:30 $9,492.36 (session +256.92) | 16:00 close · cash $16,772.71 · equity $9,737.98 vs 09:30 $9,492.36 (+245.62; session marks +256.92) · 5 name(s) marked open→close (per-name table). GLND×773 09:30 $3.33 → close $3.12 +162.33; KLRA×100 09:30 $11.75 → close $11.25 +50.00; BBWI×58 09:30 $20.45 → close $20.14 +17.98; BLMN×119 09:30 $9.90 → close $9.95 -5.35; VFC×68 09:30 $17.32 → close $16.85 +31.96 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,772.71 | ▲ 09:30 equity $9,825.76 vs yday $9,737.98 (+87.78) | 09:30 open · cash $16,772.71 (unchanged overnight, no fees) · equity $9,825.76 vs prior close $9,737.98 (+87.78) · 5 name(s) re-marked at the open (per-name table). BBWI×58 yday $20.14 → 09:30 $20.00 +8.12; BLMN×119 yday $9.95 → 09:30 $10.05 -11.90; GLND×773 yday $3.12 → 09:30 $3.00 +92.76; KLRA×100 yday $11.25 → 09:30 $11.33 -8.00; VFC×68 yday $16.85 → 09:30 $16.75 +6.80 | — |
+| 2026-10-19 09:30 ET | **COVER** | `BBWI` | 58 | $20.00 | $2.16 | $+21.72 | $15,610.55 | ▲ +21.72 after sell → book $9,823.60; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **COVER** | `BLMN` | 119 | $10.05 | $2.35 | $-22.01 | $14,412.25 | ▼ -22.01 after sell → book $9,821.25; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **COVER** | `KLRA` | 100 | $11.33 | $2.29 | $+37.36 | $13,276.96 | ▲ +37.36 after sell → book $9,818.96; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **COVER** | `VFC` | 68 | $16.75 | $2.19 | $+34.32 | $12,135.76 | ▲ +34.32 after sell → book $9,816.76; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SHORT** | `EGG` | 968 | $5.07 | $12.82 | — | $17,030.70 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+21.8; leftover $4908.38 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,030.70 | ▲ close $9,865.92 vs 09:30 $9,825.76 (session +61.98) | 16:00 close · cash $17,030.70 · equity $9,865.92 vs 09:30 $9,825.76 (+40.16; session marks +61.98) · 2 name(s) marked open→close (per-name table). GLND×773 09:30 $3.00 → close $3.02 -15.46; EGG×968 09:30 $5.07 → close $4.99 +77.44 | — |
 
 ## Not taken
 

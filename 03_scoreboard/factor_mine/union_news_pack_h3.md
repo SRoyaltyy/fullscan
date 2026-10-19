@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **-7.38%** ($9,262) · signal-only (no cash/fees) was -16.54%. Starts YES **11/30**. Fills 53 · skips 85 · realized $-1342.35.
+Cash book **-7.43%** ($9,257) · signal-only (no cash/fees) was -16.54%. Starts YES **11/30**. Fills 59 · skips 85 · realized $-1342.35.
 
 ## How this sleeve decides (like you are 10)
 
@@ -218,6 +218,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.97 | ▲ close $9,205.42 vs 09:30 $9,079.51 (session +125.91) | 16:00 close · cash $5.97 · equity $9,205.42 vs 09:30 $9,079.51 (+125.91; session marks +125.91) · 2 name(s) marked open→close (per-name table). AMX×205 09:30 $21.92 → close $22.43 +104.55; BAC×89 09:30 $51.46 → close $51.70 +21.36 | — |
 | 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.97 | ▲ 09:30 equity $9,283.53 vs yday $9,205.42 (+78.11) | 09:30 open · cash $5.97 (unchanged overnight, no fees) · equity $9,283.53 vs prior close $9,205.42 (+78.11) · 2 name(s) re-marked at the open (per-name table). AMX×205 yday $22.43 → 09:30 $22.62 +38.95; BAC×89 yday $51.70 → 09:30 $52.14 +39.16 | — |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.97 | ▼ close $9,261.99 vs 09:30 $9,283.53 (session -21.54) | 16:00 close · cash $5.97 · equity $9,261.99 vs 09:30 $9,283.53 (-21.54; session marks -21.54) · 2 name(s) marked open→close (per-name table). AMX×205 09:30 $22.62 → close $22.91 +59.45; BAC×89 09:30 $52.14 → close $51.23 -80.99 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.97 | ▼ 09:30 equity $9,248.53 vs yday $9,261.99 (-13.46) | 09:30 open · cash $5.97 (unchanged overnight, no fees) · equity $9,248.53 vs prior close $9,261.99 (-13.46) · 2 name(s) re-marked at the open (per-name table). AMX×205 yday $22.91 → 09:30 $22.84 -14.35; BAC×89 yday $51.23 → 09:30 $51.24 +0.89 | — |
+| 2026-10-19 09:30 ET | **SELL** | `BAC` | 89 | $51.24 | $2.31 | $+120.92 | $4,564.02 | ▲ +120.92 after sell → book $9,246.22; vs 09:30 mark -2.31 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **BUY** | `EOG` | 5 | $157.52 | $2.00 | — | $3,774.42 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+7.3; leftover $912.80 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `COP` | 6 | $145.73 | $2.01 | — | $2,898.03 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+9.3; leftover $912.80 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `RELX` | 23 | $38.96 | $2.06 | — | $1,999.89 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+8.1; leftover $912.80 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `CHRD` | 5 | $152.81 | $2.00 | — | $1,233.86 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+9.2; leftover $912.80 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `CNQ` | 17 | $53.51 | $2.04 | — | $322.15 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+8.4; leftover $912.80 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $322.15 | ▲ close $9,257.18 vs 09:30 $9,248.53 (session +21.07) | 16:00 close · cash $322.15 · equity $9,257.18 vs 09:30 $9,248.53 (+8.65; session marks +21.07) · 6 name(s) marked open→close (per-name table). AMX×205 09:30 $22.84 → close $22.83 -2.05; EOG×5 09:30 $157.52 → close $157.65 +0.65; COP×6 09:30 $145.73 → close $145.24 -2.94; RELX×23 09:30 $38.96 → close $39.25 +6.67; CHRD×5 09:30 $152.81 → close $154.48 +8.37; CNQ×17 09:30 $53.51 → close $54.12 +10.37 | — |
 
 ## Not taken
 

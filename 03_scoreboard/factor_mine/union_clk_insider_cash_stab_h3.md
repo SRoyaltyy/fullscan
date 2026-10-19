@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data)
 
-Cash book **-7.88%** ($9,212) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 8 · skips 7 · realized $-603.63.
+Cash book **-8.60%** ($9,140) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 8 · skips 7 · realized $-603.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -174,6 +174,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.92 | ▼ close $9,088.78 vs 09:30 $9,163.67 (session -69.93) | 16:00 close · cash $27.92 · equity $9,088.78 vs 09:30 $9,163.67 (-74.89; session marks -69.93) · 2 name(s) marked open→close (per-name table). FIS×125 09:30 $36.40 → close $36.13 -33.75; PBR-A×201 09:30 $22.79 → close $22.61 -36.18 | — |
 | 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $27.92 | ▲ 09:30 equity $9,195.38 vs yday $9,088.78 (+106.60) | 09:30 open · cash $27.92 (unchanged overnight, no fees) · equity $9,195.38 vs prior close $9,088.78 (+106.60) · 2 name(s) re-marked at the open (per-name table). FIS×125 yday $36.13 → 09:30 $36.42 +36.25; PBR-A×201 yday $22.61 → 09:30 $22.96 +70.35 | — |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.92 | ▲ close $9,212.47 vs 09:30 $9,195.38 (session +17.09) | 16:00 close · cash $27.92 · equity $9,212.47 vs 09:30 $9,195.38 (+17.09; session marks +17.09) · 2 name(s) marked open→close (per-name table). FIS×125 09:30 $36.42 → close $36.01 -51.25; PBR-A×201 09:30 $22.96 → close $23.30 +68.34 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $27.92 | ▼ 09:30 equity $9,162.64 vs yday $9,212.47 (-49.83) | 09:30 open · cash $27.92 (unchanged overnight, no fees) · equity $9,162.64 vs prior close $9,212.47 (-49.83) · 2 name(s) re-marked at the open (per-name table). FIS×125 yday $36.01 → 09:30 $35.74 -33.75; PBR-A×201 yday $23.30 → 09:30 $23.22 -16.08 | — |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.92 | ▼ close $9,140.38 vs 09:30 $9,162.64 (session -22.26) | 16:00 close · cash $27.92 · equity $9,140.38 vs 09:30 $9,162.64 (-22.26; session marks -22.26) · 2 name(s) marked open→close (per-name table). FIS×125 09:30 $35.74 → close $35.98 +30.00; PBR-A×201 09:30 $23.22 → close $22.96 -52.26 | — |
 
 ## Not taken
 

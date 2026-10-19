@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+16.04%** ($11,604) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 408 · skips 96 · realized $-9.27.
+Cash book **+16.80%** ($11,681) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 420 · skips 96 · realized $-9.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -571,6 +571,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **BUY** | `UNH` | 3 | $410.35 | $2.00 | — | $2,027.17 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+9.6; leftover $1484.76 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 09:30 ET | **BUY** | `PAYC` | 5 | $254.91 | $2.00 | — | $750.61 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+10.0; leftover $1484.76 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $750.61 | ▼ close $11,604.32 vs 09:30 $11,902.18 (session -261.71) | 16:00 close · cash $750.61 · equity $11,604.32 vs 09:30 $11,902.18 (-297.86; session marks -261.71) · 8 name(s) marked open→close (per-name table). DOCU×19 09:30 $78.27 → close $74.65 -68.78; TRU×19 09:30 $74.90 → close $74.08 -15.58; VEEV×4 09:30 $319.95 → close $310.36 -38.36; PACS×31 09:30 $47.89 → close $46.91 -30.38; VFC×85 09:30 $17.32 → close $16.85 -39.95; IT×7 09:30 $209.00 → close $205.35 -25.55; UNH×3 09:30 $410.35 → close $401.43 -26.76; PAYC×5 09:30 $254.91 → close $251.64 -16.35 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $750.61 | ▼ 09:30 equity $11,543.34 vs yday $11,604.32 (-60.98) | 09:30 open · cash $750.61 (unchanged overnight, no fees) · equity $11,543.34 vs prior close $11,604.32 (-60.98) · 8 name(s) re-marked at the open (per-name table). DOCU×19 yday $74.65 → 09:30 $74.53 -2.28; IT×7 yday $205.35 → 09:30 $202.41 -20.58; PACS×31 yday $46.91 → 09:30 $47.02 +3.41; PAYC×5 yday $251.64 → 09:30 $249.75 -9.45; TRU×19 yday $74.08 → 09:30 $73.12 -18.24; UNH×3 yday $401.43 → 09:30 $399.69 -5.22; VEEV×4 yday $310.36 → 09:30 $310.33 -0.12; VFC×85 yday $16.85 → 09:30 $16.75 -8.50 | — |
+| 2026-10-19 09:30 ET | **SELL** | `DOCU` | 19 | $74.53 | $2.07 | $-17.80 | $2,164.61 | ▼ -17.80 after sell → book $11,541.27; vs 09:30 mark -2.07 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `IT` | 7 | $202.41 | $2.03 | $-50.17 | $3,579.45 | ▼ -50.17 after sell → book $11,539.24; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `PACS` | 31 | $47.02 | $2.10 | $-31.16 | $5,034.96 | ▼ -31.16 after sell → book $11,537.13; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **SELL** | `PAYC` | 5 | $249.75 | $2.02 | $-29.83 | $6,281.69 | ▼ -29.83 after sell → book $11,535.11; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `UNH` | 3 | $399.69 | $2.02 | $-36.00 | $7,478.74 | ▼ -36.00 after sell → book $11,533.09; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `VFC` | 85 | $16.75 | $2.27 | $-52.97 | $8,900.22 | ▼ -52.97 after sell → book $11,530.82; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **BUY** | `EOG` | 9 | $157.52 | $2.02 | — | $7,480.52 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+7.3; leftover $1483.37 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `COP` | 10 | $145.73 | $2.02 | — | $6,021.20 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+9.3; leftover $1483.37 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `ALL` | 6 | $245.91 | $2.01 | — | $4,543.74 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+8.0; leftover $1483.37 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `ARQT` | 50 | $29.41 | $2.14 | — | $3,071.10 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ret5=+8.4; leftover $1483.37 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-19 09:30 ET | **BUY** | `AMX` | 64 | $22.84 | $2.18 | — | $1,607.15 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer; ret5=+7.5; leftover $1483.37 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `RELX` | 38 | $38.96 | $2.10 | — | $124.57 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+8.1; leftover $1483.37 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $124.57 | ▲ close $11,680.52 vs 09:30 $11,543.34 (session +162.17) | 16:00 close · cash $124.57 · equity $11,680.52 vs 09:30 $11,543.34 (+137.18; session marks +162.17) · 8 name(s) marked open→close (per-name table). TRU×19 09:30 $73.12 → close $73.12 +0.00; VEEV×4 09:30 $310.33 → close $316.80 +25.88; EOG×9 09:30 $157.52 → close $157.65 +1.17; COP×10 09:30 $145.73 → close $145.24 -4.90; ALL×6 09:30 $245.91 → close $246.85 +5.64; ARQT×50 09:30 $29.41 → close $31.89 +124.00; AMX×64 09:30 $22.84 → close $22.83 -0.64; RELX×38 09:30 $38.96 → close $39.25 +11.02 | — |
 
 ## Not taken
 

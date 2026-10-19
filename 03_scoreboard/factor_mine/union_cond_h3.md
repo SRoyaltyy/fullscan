@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-10.28%** ($8,972) · signal-only (no cash/fees) was -15.16%. Starts YES **0/30**. Fills 290 · skips 307 · realized $-613.92.
+Cash book **-8.18%** ($9,183) · signal-only (no cash/fees) was -15.16%. Starts YES **0/30**. Fills 301 · skips 307 · realized $-613.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -453,6 +453,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **SELL** | `NAUT` | 11 | $2.17 | $0.29 | $-0.51 | $147.50 | ▼ -0.51 after sell → book $9,160.86; vs 09:30 mark -0.29 | dropped from list after 4 sess (min 3) | — |
 | 2026-10-16 09:30 ET | **BUY** | `AVPT` | 1 | $15.03 | $0.15 | — | $132.31 | — | rank by cond; rank cond; list flatten; ret5=+3.2; leftover $24.58 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $132.31 | ▼ close $8,971.62 vs 09:30 $9,161.15 (session -189.08) | 16:00 close · cash $132.31 · equity $8,971.62 vs 09:30 $9,161.15 (-189.52; session marks -189.08) · 11 name(s) marked open→close (per-name table). AMX×50 09:30 $22.62 → close $22.91 +14.50; BAC×21 09:30 $52.14 → close $51.23 -19.11; CNK×28 09:30 $38.67 → close $38.48 -5.32; FIS×1 09:30 $36.42 → close $36.01 -0.41; KLRA×102 09:30 $11.75 → close $11.25 -51.00; KURA×3 09:30 $9.68 → close $9.08 -1.80; PINS×48 09:30 $22.80 → close $21.91 -42.72; SMMT×70 09:30 $15.39 → close $14.63 -53.20; TRU×16 09:30 $74.90 → close $74.08 -13.12; WLY×20 09:30 $53.53 → close $52.72 -16.20; AVPT×1 09:30 $15.03 → close $14.33 -0.70 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $132.31 | ▲ 09:30 equity $8,983.32 vs yday $8,971.62 (+11.70) | 09:30 open · cash $132.31 (unchanged overnight, no fees) · equity $8,983.32 vs prior close $8,971.62 (+11.70) · 11 name(s) re-marked at the open (per-name table). AMX×50 yday $22.91 → 09:30 $22.84 -3.50; AVPT×1 yday $14.33 → 09:30 $14.35 +0.02; BAC×21 yday $51.23 → 09:30 $51.24 +0.21; CNK×28 yday $38.48 → 09:30 $38.49 +0.28; FIS×1 yday $36.01 → 09:30 $35.74 -0.27; KLRA×102 yday $11.25 → 09:30 $11.33 +8.16; KURA×3 yday $9.08 → 09:30 $9.17 +0.27; PINS×48 yday $21.91 → 09:30 $21.96 +2.40; SMMT×70 yday $14.63 → 09:30 $14.90 +18.90; TRU×16 yday $74.08 → 09:30 $73.12 -15.36; WLY×20 yday $52.72 → 09:30 $52.75 +0.60 | — |
+| 2026-10-19 09:30 ET | **SELL** | `AMX` | 50 | $22.84 | $2.16 | $+56.70 | $1,272.15 | ▲ +56.70 after sell → book $8,981.17; vs 09:30 mark -2.15 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **SELL** | `BAC` | 21 | $51.24 | $2.07 | $+25.48 | $2,346.12 | ▲ +25.48 after sell → book $8,979.09; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `CNK` | 28 | $38.49 | $2.09 | $+12.91 | $3,421.74 | ▲ +12.91 after sell → book $8,977.00; vs 09:30 mark -2.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `KLRA` | 102 | $11.33 | $2.32 | $+65.76 | $4,575.08 | ▲ +65.76 after sell → book $8,974.68; vs 09:30 mark -2.32 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **SELL** | `PINS` | 48 | $21.96 | $2.15 | $-17.25 | $5,627.01 | ▼ -17.25 after sell → book $8,972.52; vs 09:30 mark -2.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `WLY` | 20 | $52.75 | $2.07 | $+5.08 | $6,679.94 | ▲ +5.08 after sell → book $8,970.45; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **BUY** | `ARQT` | 37 | $29.41 | $2.10 | — | $5,589.67 | — | rank by cond; rank cond; list flatten; ret5=+8.4; leftover $1113.32 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-19 09:30 ET | **BUY** | `VEEV` | 3 | $310.33 | $2.00 | — | $4,656.68 | — | rank by cond; rank cond; list flatten; 🔵; ret5=+4.8; leftover $1113.32 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-19 09:30 ET | **BUY** | `EOG` | 7 | $157.52 | $2.01 | — | $3,552.03 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ret5=+7.3; leftover $1113.32 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `COP` | 7 | $145.73 | $2.01 | — | $2,529.90 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ret5=+9.3; leftover $1113.32 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `ACRS` | 339 | $3.28 | $4.37 | — | $1,413.61 | — | rank by cond; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=-14.4; leftover $1113.32 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,413.61 | ▲ close $9,182.51 vs 09:30 $8,983.32 (session +224.55) | 16:00 close · cash $1,413.61 · equity $9,182.51 vs 09:30 $8,983.32 (+199.19; session marks +224.55) · 10 name(s) marked open→close (per-name table). AVPT×1 09:30 $14.35 → close $14.74 +0.39; FIS×1 09:30 $35.74 → close $35.98 +0.24; KURA×3 09:30 $9.17 → close $9.36 +0.57; SMMT×70 09:30 $14.90 → close $15.57 +46.90; TRU×16 09:30 $73.12 → close $73.12 +0.00; ARQT×37 09:30 $29.41 → close $31.89 +91.76; VEEV×3 09:30 $310.33 → close $316.80 +19.41; EOG×7 09:30 $157.52 → close $157.65 +0.91; COP×7 09:30 $145.73 → close $145.24 -3.43; ACRS×339 09:30 $3.28 → close $3.48 +67.80 | — |
 
 ## Not taken
 

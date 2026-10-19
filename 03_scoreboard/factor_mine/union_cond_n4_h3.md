@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-15.10%** ($8,490) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 133 · skips 159 · realized $-515.67.
+Cash book **-12.51%** ($8,749) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 141 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -296,6 +296,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $45.51 | ▲ close $8,761.20 vs 09:30 $8,382.56 (session +378.65) | 16:00 close · cash $45.51 · equity $8,761.20 vs 09:30 $8,382.56 (+378.64; session marks +378.65) · 4 name(s) marked open→close (per-name table). CNK×55 09:30 $38.44 → close $38.52 +4.40; KLRA×198 09:30 $10.55 → close $11.71 +229.68; PINS×95 09:30 $21.59 → close $22.71 +105.93; SMMT×138 09:30 $15.09 → close $15.37 +38.64 | — |
 | 2026-10-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $45.51 | ▲ 09:30 equity $8,788.68 vs yday $8,761.20 (+27.48) | 09:30 open · cash $45.51 (unchanged overnight, no fees) · equity $8,788.68 vs prior close $8,761.20 (+27.48) · 4 name(s) re-marked at the open (per-name table). CNK×55 yday $38.52 → 09:30 $38.67 +8.25; KLRA×198 yday $11.71 → 09:30 $11.75 +7.92; PINS×95 yday $22.71 → 09:30 $22.80 +8.55; SMMT×138 yday $15.37 → 09:30 $15.39 +2.76 | — |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $45.51 | ▼ close $8,489.80 vs 09:30 $8,788.68 (session -298.88) | 16:00 close · cash $45.51 · equity $8,489.80 vs 09:30 $8,788.68 (-298.88; session marks -298.88) · 4 name(s) marked open→close (per-name table). CNK×55 09:30 $38.67 → close $38.48 -10.45; KLRA×198 09:30 $11.75 → close $11.25 -99.00; PINS×95 09:30 $22.80 → close $21.91 -84.55; SMMT×138 09:30 $15.39 → close $14.63 -104.88 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $45.51 | ▲ 09:30 equity $8,548.20 vs yday $8,489.80 (+58.40) | 09:30 open · cash $45.51 (unchanged overnight, no fees) · equity $8,548.20 vs prior close $8,489.80 (+58.40) · 4 name(s) re-marked at the open (per-name table). CNK×55 yday $38.48 → 09:30 $38.49 +0.55; KLRA×198 yday $11.25 → 09:30 $11.33 +15.84; PINS×95 yday $21.91 → 09:30 $21.96 +4.75; SMMT×138 yday $14.63 → 09:30 $14.90 +37.26 | — |
+| 2026-10-19 09:30 ET | **SELL** | `CNK` | 55 | $38.49 | $2.18 | $+29.21 | $2,160.28 | ▲ +29.21 after sell → book $8,546.02; vs 09:30 mark -2.18 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `KLRA` | 198 | $11.33 | $2.63 | $+131.40 | $4,400.98 | ▲ +131.40 after sell → book $8,543.38; vs 09:30 mark -2.64 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **SELL** | `PINS` | 95 | $21.96 | $2.31 | $-30.23 | $6,484.88 | ▼ -30.23 after sell → book $8,541.08; vs 09:30 mark -2.30 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `SMMT` | 138 | $14.90 | $2.44 | $-58.67 | $8,538.63 | ▼ -58.67 after sell → book $8,538.63; vs 09:30 mark -2.45 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `ARQT` | 72 | $29.41 | $2.21 | — | $6,418.91 | — | top 4 by cond; rank cond; list flatten; ret5=+8.4; leftover $2134.66 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-19 09:30 ET | **BUY** | `TRU` | 29 | $73.12 | $2.08 | — | $4,296.35 | — | top 4 by cond; rank cond; list yday_gainer; ret5=+13.1; leftover $2134.66 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-19 09:30 ET | **BUY** | `VEEV` | 6 | $310.33 | $2.01 | — | $2,432.36 | — | top 4 by cond; rank cond; list flatten; 🔵; ret5=+4.8; leftover $2134.66 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-19 09:30 ET | **BUY** | `EOG` | 13 | $157.52 | $2.03 | — | $382.57 | — | top 4 by cond; rank cond; list ohlc_hot; 🔵; ret5=+7.3; leftover $2134.66 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $382.57 | ▲ close $8,749.38 vs 09:30 $8,548.20 (session +219.07) | 16:00 close · cash $382.57 · equity $8,749.38 vs 09:30 $8,548.20 (+201.18; session marks +219.07) · 4 name(s) marked open→close (per-name table). ARQT×72 09:30 $29.41 → close $31.89 +178.56; TRU×29 09:30 $73.12 → close $73.12 +0.00; VEEV×6 09:30 $310.33 → close $316.80 +38.82; EOG×13 09:30 $157.52 → close $157.65 +1.69 | — |
 
 ## Not taken
 

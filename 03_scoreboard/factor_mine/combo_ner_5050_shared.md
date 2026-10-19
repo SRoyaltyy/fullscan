@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_g_h1/union_earn_react_h3 w=0.5,0.5 net=priority
 
-Cash book **-26.57%** ($7,343) · signal-only (no cash/fees) was —. Starts YES **6/30**. Fills 417 · skips 304 · realized $+1785.21.
+Cash book **-26.85%** ($7,315) · signal-only (no cash/fees) was —. Starts YES **6/30**. Fills 427 · skips 304 · realized $+1785.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $59.01.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $197.52.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -582,6 +582,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **BUY** | `Z` | 9 | $31.32 | $2.02 | — | $293.51 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+7.9; combo leftover $289.79; owner union_news_g_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 09:30 ET | **BUY** | `ELF` | 2 | $116.25 | $2.00 | — | $59.01 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+9.6; combo leftover $289.79; owner union_news_g_h1 | join🟢 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $59.01 | ▼ close $7,343.24 vs 09:30 $7,471.50 (session -111.68) | 16:00 close · cash $59.01 · equity $7,343.24 vs 09:30 $7,471.50 (-128.26; session marks -111.68) · 19 name(s) marked open→close (per-name table). AMX×31 09:30 $22.62 → close $22.91 +8.99; BAC×15 09:30 $52.14 → close $51.23 -13.65; ERIC×4 09:30 $10.57 → close $10.55 -0.08; FAST×15 09:30 $50.77 → close $51.02 +3.75; FHN×2 09:30 $23.02 → close $22.88 -0.28; ITW×2 09:30 $273.23 → close $272.28 -1.90; MS×4 09:30 $182.68 → close $180.57 -8.44; NVTS×67 09:30 $8.98 → close $8.34 -42.75; PGR×3 09:30 $213.99 → close $218.49 +13.50; SG×67 09:30 $10.58 → close $10.04 -36.18; TBBB×11 09:30 $57.00 → close $57.68 +7.48; AA×2 09:30 $41.65 → close $41.45 -0.40; CFG×1 09:30 $64.50 → close $63.36 -1.14; IBKR×1 09:30 $86.27 → close $82.69 -3.58; RF×3 09:30 $27.89 → close $27.45 -1.32; WSE×7 09:30 $12.05 → close $10.98 -7.49; GLND×87 09:30 $3.33 → close $3.12 -18.27; Z×9 09:30 $31.32 → close $30.82 -4.50; ELF×2 09:30 $116.25 → close $113.54 -5.42 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $59.01 | ▲ 09:30 equity $7,367.69 vs yday $7,343.24 (+24.45) | 09:30 open · cash $59.01 (unchanged overnight, no fees) · equity $7,367.69 vs prior close $7,343.24 (+24.45) | — |
+| 2026-10-19 09:30 ET | **SELL** | `BAC` | 15 | $51.24 | $2.06 | $+17.06 | $825.56 | ▲ +17.06 after sell → book $7,365.63; vs 09:30 mark -2.06 | union_earn_react_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `ELF` | 2 | $114.27 | $2.02 | $-7.97 | $1,052.08 | ▼ -7.97 after sell → book $7,363.62; vs 09:30 mark -2.01 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `FAST` | 15 | $51.37 | $2.06 | $+53.88 | $1,820.57 | ▲ +53.88 after sell → book $7,361.56; vs 09:30 mark -2.06 | union_earn_react_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `MS` | 4 | $181.54 | $2.02 | $+0.34 | $2,544.71 | ▲ +0.34 after sell → book $7,359.54; vs 09:30 mark -2.02 | union_earn_react_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `PGR` | 3 | $216.94 | $2.02 | $+25.89 | $3,193.51 | ▲ +25.89 after sell → book $7,357.52; vs 09:30 mark -2.02 | union_earn_react_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-19 09:30 ET | **SELL** | `SG` | 67 | $10.01 | $2.21 | $-3.73 | $3,861.97 | ▼ -3.73 after sell → book $7,355.31; vs 09:30 mark -2.21 | union_news_g_h1: dropped from list after 3 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `Z` | 9 | $30.60 | $2.04 | $-10.53 | $4,135.33 | ▼ -10.53 after sell → book $7,353.27; vs 09:30 mark -2.04 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **BUY** | `BTI` | 23 | $59.13 | $2.06 | — | $2,773.28 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+8.1; combo leftover $1378.44; owner union_news_g_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `COP` | 9 | $145.73 | $2.02 | — | $1,459.70 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+9.3; combo leftover $1378.44; owner union_news_g_h1 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `EOG` | 8 | $157.52 | $2.01 | — | $197.52 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+7.3; combo leftover $1378.44; owner union_news_g_h1 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $197.52 | ▼ close $7,315.44 vs 09:30 $7,367.69 (session -31.74) | 16:00 close · cash $197.52 · equity $7,315.44 vs 09:30 $7,367.69 (-52.25; session marks -31.74) · 15 name(s) marked open→close (per-name table). AA×2 09:30 $41.79 → close $41.67 -0.24; AMX×31 09:30 $22.84 → close $22.83 -0.31; CFG×1 09:30 $62.96 → close $62.76 -0.20; ERIC×4 09:30 $10.42 → close $10.34 -0.32; FHN×2 09:30 $22.88 → close $22.73 -0.30; GLND×87 09:30 $3.00 → close $3.02 +1.74; IBKR×1 09:30 $82.83 → close $81.35 -1.48; ITW×2 09:30 $271.48 → close $270.17 -2.62; NVTS×67 09:30 $8.84 → close $8.63 -14.07; RF×3 09:30 $27.40 → close $27.20 -0.60; TBBB×11 09:30 $58.00 → close $58.39 +4.29; WSE×7 09:30 $10.95 → close $10.95 +0.00; BTI×23 09:30 $59.13 → close $58.51 -14.26; COP×9 09:30 $145.73 → close $145.24 -4.41; EOG×8 09:30 $157.52 → close $157.65 +1.04 | — |
 
 ## Not taken
 

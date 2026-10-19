@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-24.95%** ($7,505) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 374 · skips 93 · realized $-1456.67.
+Cash book **-25.37%** ($7,463) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 390 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -534,6 +534,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 09:30 ET | **BUY** | `INTA` | 22 | $43.99 | $2.06 | — | $1,058.38 | — | baseline list, no extra gate; list ohlc_hot; ret5=+12.9; leftover $972.32 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-16 09:30 ET | **BUY** | `REAL` | 92 | $10.54 | $2.27 | — | $86.43 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+9.6; leftover $972.32 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $86.43 | ▼ close $7,505.18 vs 09:30 $7,646.49 (session -108.93) | 16:00 close · cash $86.43 · equity $7,505.18 vs 09:30 $7,646.49 (-141.31; session marks -108.93) · 8 name(s) marked open→close (per-name table). BLMN×93 09:30 $9.90 → close $9.95 +4.18; LW×16 09:30 $54.48 → close $53.59 -14.24; TRU×12 09:30 $74.90 → close $74.08 -9.84; BBWI×47 09:30 $20.45 → close $20.14 -14.57; VFC×56 09:30 $17.32 → close $16.85 -26.32; EL×9 09:30 $107.50 → close $104.54 -26.64; INTA×22 09:30 $43.99 → close $43.64 -7.70; REAL×92 09:30 $10.54 → close $10.39 -13.80 | — |
+| 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $86.43 | ▼ 09:30 equity $7,476.74 vs yday $7,505.18 (-28.44) | 09:30 open · cash $86.43 (unchanged overnight, no fees) · equity $7,476.74 vs prior close $7,505.18 (-28.44) · 8 name(s) re-marked at the open (per-name table). BBWI×47 yday $20.14 → 09:30 $20.00 -6.58; BLMN×93 yday $9.95 → 09:30 $10.05 +9.30; EL×9 yday $104.54 → 09:30 $104.68 +1.26; INTA×22 yday $43.64 → 09:30 $43.51 -2.86; LW×16 yday $53.59 → 09:30 $52.87 -11.52; REAL×92 yday $10.39 → 09:30 $10.38 -0.92; TRU×12 yday $74.08 → 09:30 $73.12 -11.52; VFC×56 yday $16.85 → 09:30 $16.75 -5.60 | — |
+| 2026-10-19 09:30 ET | **SELL** | `BBWI` | 47 | $20.00 | $2.15 | $-25.43 | $1,024.28 | ▼ -25.43 after sell → book $7,474.59; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `BLMN` | 93 | $10.05 | $2.29 | $+48.45 | $1,956.63 | ▲ +48.45 after sell → book $7,472.29; vs 09:30 mark -2.30 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `EL` | 9 | $104.68 | $2.04 | $-29.43 | $2,896.72 | ▼ -29.43 after sell → book $7,470.26; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `INTA` | 22 | $43.51 | $2.08 | $-14.69 | $3,851.86 | ▼ -14.69 after sell → book $7,468.18; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `LW` | 16 | $52.87 | $2.06 | $-18.82 | $4,695.72 | ▼ -18.82 after sell → book $7,466.12; vs 09:30 mark -2.06 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `REAL` | 92 | $10.38 | $2.29 | $-19.28 | $5,648.39 | ▼ -19.28 after sell → book $7,463.83; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **SELL** | `TRU` | 12 | $73.12 | $2.05 | $-25.43 | $6,523.79 | ▼ -25.43 after sell → book $7,461.79; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-19 09:30 ET | **SELL** | `VFC` | 56 | $16.75 | $2.18 | $-36.26 | $7,459.61 | ▼ -36.26 after sell → book $7,459.61; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-19 09:30 ET | **BUY** | `BTI` | 15 | $59.13 | $2.04 | — | $6,570.62 | — | baseline list, no extra gate; list ohlc_hot; ret5=+8.1; leftover $932.45 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `WMG` | 29 | $31.26 | $2.08 | — | $5,662.01 | — | baseline list, no extra gate; list ohlc_hot; ret5=+9.3; leftover $932.45 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `ACN` | 4 | $228.48 | $2.00 | — | $4,746.08 | — | baseline list, no extra gate; list ohlc_hot; ret5=+10.7; leftover $932.45 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `COP` | 6 | $145.73 | $2.01 | — | $3,869.70 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+9.3; leftover $932.45 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `WIT` | 485 | $1.92 | $6.26 | — | $2,932.24 | — | baseline list, no extra gate; list ohlc_hot; ret5=+14.7; leftover $932.45 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `DEO` | 9 | $93.94 | $2.02 | — | $2,084.76 | — | baseline list, no extra gate; list ohlc_hot; ret5=+11.1; leftover $932.45 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `NAVN` | 36 | $25.72 | $2.10 | — | $1,156.74 | — | baseline list, no extra gate; list ohlc_hot; ret5=+7.4; leftover $932.45 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 09:30 ET | **BUY** | `BRO` | 13 | $68.44 | $2.03 | — | $265.00 | — | baseline list, no extra gate; list ohlc_hot; ret5=+10.4; leftover $932.45 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $265.00 | ▲ close $7,463.41 vs 09:30 $7,476.74 (session +24.32) | 16:00 close · cash $265.00 · equity $7,463.41 vs 09:30 $7,476.74 (-13.33; session marks +24.32) · 8 name(s) marked open→close (per-name table). BTI×15 09:30 $59.13 → close $58.51 -9.30; WMG×29 09:30 $31.26 → close $31.04 -6.38; ACN×4 09:30 $228.48 → close $236.93 +33.80; COP×6 09:30 $145.73 → close $145.24 -2.94; WIT×485 09:30 $1.92 → close $1.93 +4.85; DEO×9 09:30 $93.94 → close $93.49 -4.05; NAVN×36 09:30 $25.72 → close $25.67 -1.80; BRO×13 09:30 $68.44 → close $69.22 +10.14 | — |
 
 ## Not taken
 
