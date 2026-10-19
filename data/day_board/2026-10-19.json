@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T04:48:57.399135-04:00",
+  "generated_at": "2026-10-19T04:53:16.500299-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -182,7 +182,7 @@
       "inputs_ready": true,
       "n_req_ok": 3,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 14,
       "files": [
         {
@@ -325,11 +325,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-19/_board.json",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6393,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -338,7 +343,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7574,
+          "size": 8443,
           "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 15 fail",
           "bullets": [
             "events:zero_events",
@@ -491,13 +496,18 @@
           "bullets": []
         }
       ],
-      "said": "general UP  2.125",
+      "said": "general UP  2.125 \u00b7 sectors 0 up / 0 down / 0 flat",
       "bullets": [
         "bad: Europe composite -0.99% partial",
         "bad: leftover Hormuz attacks",
         "bad: AI-credit unwind T+1",
         "good: China Q3 GDP 4.5% beat",
-        "good: NQ +1.13% dip-buy"
+        "good: NQ +1.13% dip-buy",
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -659,7 +669,7 @@
       "n_req_ok": 1,
       "n_req": 4,
       "n_opt_ok": 1,
-      "n_opt": 4,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_general",
@@ -681,12 +691,17 @@
           "key": "in_board",
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-19/_board.json",
-          "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 6393,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -924,7 +939,22 @@
       "score": "2.125",
       "direction": "up"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {},
     "weather": {
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
@@ -1411,6 +1441,24 @@
         }
       ],
       "preview": "# Premarket Prediction \u2014 2026-10-19\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.125 (uncertainty multiplier \u00d71.0) | confidence 0.585\n>\n> **Good news vs bad news:** good +1.75 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - China Q3 GDP 4.5% beat\n> - NQ +1.13% dip-buy\n> - WTI offered -4.3%\n> - 1w 10Y -18bp\n> - Kospi +1.76%\n>\n> **Bad news driving this:**\n> - Europe composite -0.99% partial\n> - leftover Hormuz attacks\n> - AI-credit unwind T+1\n> - 1m 10Y still +10bp\n> - Tesla/Meta unsigned Wed\n>\n> **market uncertainty: **elevated** | VIX 18.56 | policy-uncertainty index 149.21 (1d -107.59)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Europe session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> - \ud83d\udfe2 Bond yiel"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-10-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-19T04:53:15.592735-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-19/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6393,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
     }
   ],
   "href": {
