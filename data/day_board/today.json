@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T05:56:08.800002-04:00",
+  "generated_at": "2026-10-19T05:56:45.511989-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -43,8 +43,8 @@
       "score": 0.7582374174986715
     },
     {
-      "ticker": "FIGS",
-      "score": 0.6825156330781941
+      "ticker": "CAKE",
+      "score": 0.7182463477506182
     },
     {
       "ticker": "AVPT",
@@ -55,16 +55,16 @@
       "score": 0.44103282054223053
     },
     {
+      "ticker": "JXN",
+      "score": 0.5213734503919559
+    },
+    {
       "ticker": "LAUR",
       "score": 0.5871377898646308
     },
     {
-      "ticker": "PAYS",
-      "score": 0.55885938284836
-    },
-    {
       "ticker": "RELY",
-      "score": 0.5269368508018937
+      "score": 0.5591741948914406
     },
     {
       "ticker": "ABX",
@@ -105,16 +105,20 @@
       "score": -0.3496324992694038
     },
     {
-      "ticker": "CMTG",
-      "score": -0.3346687981987808
-    },
-    {
-      "ticker": "PCT",
-      "score": -0.33013589552335393
+      "ticker": "PAL",
+      "score": -0.3264255006325073
     },
     {
       "ticker": "VNET",
       "score": -0.32173219462411756
+    },
+    {
+      "ticker": "PCT",
+      "score": -0.32137323354022956
+    },
+    {
+      "ticker": "CMTG",
+      "score": -0.3210852097833349
     },
     {
       "ticker": "NN",
@@ -125,12 +129,8 @@
       "score": -0.3091681085988022
     },
     {
-      "ticker": "ACDC",
-      "score": -0.3008972285169427
-    },
-    {
-      "ticker": "BIDU",
-      "score": -0.2983713104248488
+      "ticker": "HPP",
+      "score": -0.30465111471884604
     }
   ],
   "flatten": {
@@ -169,31 +169,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-10-19",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-19T05:45:44.537224-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-10-19_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7572616,
-          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, AME, EPAM, ELV, SWKS"
-        },
-        {
-          "path": "data/ab_checklist/2026-10-19_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8363397,
-          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, AME, DHR, SHO, ATRC"
-        }
-      ],
-      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, AME, EPAM, ELV, SWKS \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, AME, DHR, SHO, ATRC"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -501,6 +476,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-19T05:56:44.448231-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-19_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1524861,
+          "preview": "1d BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC, INTC, ALK"
+        },
+        {
+          "path": "data/stock_book/2026-10-19_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2595,
+          "preview": "green 168 \u00b7 ETON, ARQT, WAY, CORT, INCY, VEEV, AMN, CDNA, SIBN, EXEL"
+        },
+        {
+          "path": "data/stock_book/2026-10-19_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2484,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-19_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13802,
+          "preview": "2026-10-19 BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC, INTC, ALK"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13802,
+          "preview": "2026-10-19 BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC, INTC, ALK"
+        },
+        {
+          "path": "01_daily/2026-10-19_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 85250,
+          "preview": "# Stock book \u2014 2026-10-19\n_Generated 2026-10-19T05:56:18.865433-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC, INTC, ALK \u00b7 green 168 \u00b7 ETON, ARQT, WAY, CORT, INCY, VEEV, AMN, CDNA, SIBN, EXEL \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-19 BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC, INTC, ALK \u00b7 2026-10-19 BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC, INTC, ALK \u00b7 # Stock book \u2014 2026-10-19\n_Generated 2026-10-19T05:56:18.865433-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
