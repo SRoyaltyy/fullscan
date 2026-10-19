@@ -37,6 +37,10 @@ def section_views(text: str, form: str, filename: str = '') -> list[dict]:
     if form in ('8-K','6-K'):
         # Current filings are event updates, not rewritten business identity.
         return [{'section':filename or form,'kind':'update','text':text}]
+    if form in ('S-1','F-1','S-4','F-4'):
+        # Registration statements supply the business source for new issuers.
+        # The profile compiler routes their named business/risk headings.
+        return [{'section':filename or form,'kind':'business','text':text}]
     matches = list(re.finditer(r'(?im)^\s*(?:PART\s+[IVX]+\s*[-.:]?\s*)?(ITEM\s+(\d+[A-Z]?))\s*[.:-]?\s*([^\n]{0,140})',text))
     if not matches:
         # 40-F often incorporates its AIF. Attached readable reports remain
@@ -161,6 +165,8 @@ def load_section_cache(path: Path, *, as_of: str | None = None, exclude_accessio
                 kind = {'1-2':'update','2-1a':'risk'}.get(section)
             elif form in ('8-K','6-K'):
                 kind = 'update' if section not in ('notes','body') else None
+            elif form in ('S-1','F-1','S-4','F-4'):
+                kind = 'business'
             if kind is None:
                 continue
             text = gzip.decompress(item['text_gz']).decode('utf-8',errors='replace')

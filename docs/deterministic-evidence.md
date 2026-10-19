@@ -99,7 +99,7 @@ Rebuild profile caches after changing stock extraction. A cache preserves the
 facts extracted at build time; a newer matcher cannot recover a missing brand
 or paragraph context from a cache that omitted it.
 
-Compiler `stock-evidence-2.1` rejects caches without its matching version.
+Compiler `stock-evidence-2.2` rejects caches without its matching version.
 It retains founding dates, former names and headquarters as history rather
 than operating vocabulary. Short business context cannot bridge those facts.
 Calendar words cannot qualify as independent business anchors, and an issuer
@@ -122,6 +122,25 @@ Missing brands and stale company descriptions remain source-coverage gaps.
 The isolated runner also accepts `--unittest` followed by test modules.
 The sample exporter accepts repeated `--exclude-sample` arguments so later
 holdouts can exclude all previously inspected primary headlines.
+
+Registration statements (S-1/F-1 and amendments, plus S-4/F-4) now supply
+business evidence for new issuers. Their risk and business headings remain
+separate. The historical importer retains these statements and continues to
+report incomplete source coverage. With both `--section-cache` and
+`--descriptions`, the cache builder keeps the full description universe and
+adds every available dated filing section rather than dropping stocks that
+have no historical filing record.
+
+Corporate nickname definitions retain every quoted alias in the legal
+parenthesis, excluding generic registrant pronouns. An explicit glossary
+definition such as a named network that "refers to our" network supplies owned
+product evidence. This does not turn an incidental named competitor into an
+owned product.
+
+An individual named company imposing its own restriction does not establish
+a sector-wide policy. Coordinated issuer subjects can share a corporate
+predicate; an exact legal brand takes precedence over a longer company's
+shortened name. Publisher removal uses only the last source suffix.
 
 ## Measurement and release bar
 

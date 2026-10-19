@@ -199,3 +199,21 @@ accordingly)
   blocked live-session retrieval for reported external Visual Studio telemetry;
   no result file was available. Candidate remains opt-in and not release-ready.
 
+## 2026-10-20 HKT - Candidate2.2 and third-sample freeze
+
+- Hosted805f8ced:135 tests and existing19/19 regressions plus3/3 targets pass.
+- Candidate2.2:142 local tests pass. Separates a named actor's own restriction
+  from sector-wide policy, resolves coordinated issuer subjects and exact legal
+  brands, keeps the last publisher suffix, and retains all quoted issuer aliases.
+- Source compiler2.2 adds registration statements and explicit issuer-glossary
+  ownership definitions. Rebuild combines the complete5961-ticker Finviz universe
+  with every available historical section; historical completeness stays false.
+- Completed development output recovered via first-party file access after
+  live-session retrieval was blocked. Seed19020 Finviz-only:153/158 exact,
+  35TP0FP5FN, precision100%,recall87.5%. No unseen-success claim.
+- Candidate code frozen before seed19021 labels and output. Labels frozen at
+  139 complete cases,37 positives,41 expected links;61 unresolved excluded.
+  Known related stories flagged;29 provisional novel positive cases remain.
+  Label SHA256:52aa30c933780652f898f62f352e8cb40bfbfea2b0e818126b8668c8b34689ac.
+  Third-sample outputs are not inspected at this code checkpoint.
+

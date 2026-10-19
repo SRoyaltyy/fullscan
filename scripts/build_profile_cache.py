@@ -41,6 +41,12 @@ def main():
     started=time.perf_counter()
     if a.section_cache:
         rows,coverage=load_section_cache(a.section_cache,as_of=a.as_of,progress=lambda x:print(json.dumps(x),flush=True))
+        if a.descriptions:
+            from src.link_correlation import load_stocks
+            sections={r['ticker']:r['filing_sections'] for r in rows}
+            rows=load_stocks(a.descriptions,None,None,sections)
+            coverage['description_universe']=len(rows)
+            coverage['with_filing_sources']=sum(bool(r['filing_sections']) for r in rows)
     else:
         if not (a.objects and a.descriptions):p.error('provide --section-cache or --objects and --descriptions')
         from src.link_correlation import load_stocks

@@ -128,3 +128,32 @@ independent holdout claim. Freeze labels before inspecting candidate outputs.
 Adjudicate uncertain cases, especially unnamed policy exposure, and evaluate
 complete dated production sources. Historical ownership, geography and general
 grammar remain partial. Do not merge or enable the candidate before validation.
+
+## Candidate 2.2 - 2026-10-20 HKT
+
+Hosted run 39281473188 at commit 805f8ced passed 135 tests, all 19 existing
+regressions and all three target assertions. The next candidate passes 142
+local tests. It repairs the single-company/sector-policy distinction, joint
+issuer subjects, exact-brand precedence, issuer nickname definitions, and
+publisher-tail handling. Source compiler 2.2 includes registration statements
+and explicit owned-network glossary definitions. The full historical cache
+is being rebuilt; it remains incomplete historical data.
+
+The earlier local evaluation produced a file despite blocked live-session
+retrieval. Reading the completed output through the first-party file route
+resolved access to the metrics. On the now-adapted seed19020 labels, candidate
+2.2's Finviz-only checkpoint is **153/158 exact sets (96.8%), 35 TP, zero FP,
+five FN; precision 100%, recall 87.5%**. All 124 labeled negatives are exact.
+Four cases abstain. The recall interval is approximately 73.9-94.5%; this is
+development evidence and still below the requested recall target. A preceding
+repair checkpoint scored149/158 exact,30TP75FP10FN; its75FP all came from one
+bank-specific restriction being mistaken for a sector-wide policy.
+
+Candidate 2.2 code was frozen before inspecting outputs on seed19021. Labels
+were then frozen:139 provisional complete sets,37 positive cases,41 expected
+links;61 uncertain cases excluded. Known story overlaps are flagged, leaving
+29 provisional novel-story positives. Label SHA256:
+52aa30c933780652f898f62f352e8cb40bfbfea2b0e818126b8668c8b34689ac.
+No candidate output from that sample has been inspected at this checkpoint.
+Labels are assistant-authored, not independently human-validated. The 90%
+production bar remains unproven.

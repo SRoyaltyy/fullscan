@@ -15,7 +15,7 @@ from .linguistics import GENERIC, STOP, TOKEN, lemma, terms, tokens
 from .places import CITIES, STATES
 from .aliases import _COUNTRIES
 
-COMPILER_VERSION = 'stock-evidence-2.1'
+COMPILER_VERSION = 'stock-evidence-2.2'
 
 _LOCATIONS = {p.lower() for p in list(CITIES)+list(STATES)+list(_COUNTRIES)}
 _LOCATION_RX = re.compile(r'\b(?:'+'|'.join(re.escape(p) for p in sorted(_LOCATIONS,key=len,reverse=True))+r')\b',re.I)
@@ -245,6 +245,12 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
                     for term in content:
                         if len(out.evidence[term]) < 4:
                             out.evidence[term].append(ix)
+                    # An issuer's glossary can explicitly define a named
+                    # service/network as its own without a manufacturing verb.
+                    for m in re.finditer(r'["\u201c]([^"\u201d\n]{3,60})["\u201d]\s+refers? to our\b',sentence):
+                        value=m.group(1).strip()
+                        if any(w not in STOP|GENERIC for w in tokens(value)):
+                            _fact(out,'owned_product',value,sentence,source,heading)
                 if kind in ('risk','financial','supplier') or re.search(r'\b(?:depend\w* on|rely\w* on|require|consume|raw materials?|input costs?|sensitive to|exposed to)\b',sentence,re.I):
                     _fact(out, 'financial_exposure' if kind == 'financial' else 'material_exposure', '', sentence, source, heading)
                 if local_kind in ('business','update') and not re.search(r'\b(?:no longer|ceased|divested|discontinued|formerly|sold our)\b',sentence,re.I) and (OWN.search(sentence) or re.search(r'\b(?:our products?|product portfolio|pipeline|marketed products?)\b', heading, re.I) or re.search(r'\b(?:our|its) products?(?: and services?)? include\b',sentence,re.I)):
@@ -325,7 +331,7 @@ def index_profiles(profiles: dict[str, Profile]) -> EvidenceBoard:
     for ticker, p in sorted(profiles.items()):
         from .correlation import _alias
         legal_words=_alias(p.name).split()
-        corporate_alias=re.compile(r'\b'+r'[\W_]+'.join(map(re.escape,legal_words))+r'\s*(?:(?:Inc|Corp|Corporation|Ltd|Limited|Co)\.?\s*)?\(\s*["\u201c]([^"\u201d\n]{3,60})["\u201d]',re.I) if legal_words else None
+        corporate_alias=re.compile(r'\b'+r'[\W_]+'.join(map(re.escape,legal_words))+r'\s*,?\s*(?:(?:Inc|Corp|Corporation|Ltd|Limited|Co)\.?\s*)?\(([^)\n]{3,200})\)',re.I) if legal_words else None
         # Rarity must account for incidental risk/relationship vocabulary too;
         # a term common in everyone's risks is not a company-specific anchor.
         all_terms=set(p.core)
@@ -338,9 +344,10 @@ def index_profiles(profiles: dict[str, Profile]) -> EvidenceBoard:
         for i, fact in enumerate(p.facts):
             if corporate_alias and '(' in fact.passage:
                 for match in corporate_alias.finditer(fact.passage):
-                    value=' '.join(tokens(match.group(1),stop=False))
-                    if value and any(w not in STOP|GENERIC for w in value.split()) and value not in {'parent','registrant','issuer','company'}:
-                        ids[value].append((ticker,'company_alias',i))
+                    for raw in re.findall(r'["\u201c]([^"\u201d]{2,60})["\u201d]',match.group(1)):
+                        value=' '.join(tokens(raw,stop=False))
+                        if value and any(w not in STOP|GENERIC for w in value.split()) and value not in {'parent','registrant','issuer','company'}:
+                            ids[value].append((ticker,'company_alias',i))
             if fact.kind in ('supplier','customer','partner','competitor') and fact.target_ticker:
                 dependencies[fact.target_ticker].append((ticker,i))
             if fact.kind in ('competitor','supplier','material_exposure','financial_exposure'):

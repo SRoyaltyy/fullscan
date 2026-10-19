@@ -33,6 +33,7 @@ def _identity_text(text: str) -> str:
 
 
 def _corporate_usage(alias: str, text: str) -> bool:
+    if re.search(r'\b'+re.escape(alias)+r"['\u2019]s\s+\$[\d.,]+\s+(?:tender|cash)\s+offer\b",text,re.I):return True
     pattern=r'\b'+re.escape(alias)+r"(?:['\u2019]s)?\s+(?:(?:quarterly|annual|fiscal|preliminary)\s+)?(?:reports?|reported|announces?|announced|raises?|raised|cuts?|cut|denies|denied|acquires?|acquired|launch\w*|unveil\w*|invest\w*|files?|earnings|revenue|shares|stock|guidance|inc|corp|corporation|ltd|plc|(?:tender|cash)\s+offer|moves?\s+to\s+(?:overturn|appeal|block)|waves?\s+goodbye|(?:[A-Za-z-]+\s+){0,2}(?:executives?|employees|president|CEO|CFO|chief|board)|driver|flying)\b"
     for m in re.finditer(pattern,text,re.I):
         if not re.search(r'\b(?:to|will|would|could|should|can|may|must)\s*$',text[max(0,m.start()-20):m.start()],re.I):
@@ -55,8 +56,13 @@ def _broad_business_event(text: str) -> bool:
     # article states a policy, constraint, or change in a business activity.
     if re.search(r'\b(?:FDA|recall\w*|approv\w*|clearance|lawsuit|charg\w*|arson|indict\w*)\b',text,re.I):
         return False
-    broad=bool(re.search(r'\b(?:policy|legislation|legislative|tariffs?|sanctions?|bans?|restrict\w*|export controls?|regulations?|directives?|shortages?|supply disruptions?|shipments|production|capacity|demand|input costs?|commodity prices?)\b',text,re.I))
     activity_noun=bool(re.search(r'\b(?:launches|reentries)\s+(?:and|of|from|at|are|were|have|continue|doubled?|expand\w*|increas\w*|decreas\w*|rise|fall)\b',text,re.I))
+    actor=re.match(r"\s*([A-Z][A-Za-z0-9&'-]*(?:\s+(?:[A-Z][A-Za-z0-9&'-]*|of|the)){0,4})\s+(?:becomes?|plans?|announces?|launches?|restricts?|bans?|halts?|will\s+(?:restrict|ban|halt))\b",text)
+    if actor and not activity_noun and not re.search(r'\b(?:government|congress|senate|house|department|ministry|commission|regulators?|legislature|council|court|president|administration|FDA|EPA|FCC|FTC|SEC)\b',actor.group(1),re.I):
+        # One named actor changing its own rules is not evidence of a rule
+        # affecting every company with overlapping business vocabulary.
+        return False
+    broad=bool(re.search(r'\b(?:policy|legislation|legislative|tariffs?|sanctions?|bans?|restrict\w*|export controls?|regulations?|directives?|shortages?|supply disruptions?|shipments|production|capacity|demand|input costs?|commodity prices?)\b',text,re.I))
     return broad or activity_noun
 
 
@@ -75,6 +81,7 @@ def _ownership_evidenced(fact, profile) -> bool:
     from .stock_evidence import OWN
     match=re.search(re.escape(fact.text),fact.passage,re.I)
     if not match:return False
+    if re.search(r'["\u201c]'+re.escape(fact.text)+r'["\u201d]\s+refers? to our\b',fact.passage):return True
     prefix=fact.passage[max(0,match.start()-180):match.start()]
     if re.search(r'\b(?:(?:our|its) products?(?: and services?)? (?:include|are)|our product portfolio (?:includes|comprises))\b',prefix,re.I):return True
     ownership=list(OWN.finditer(prefix))
@@ -124,6 +131,7 @@ def _comparison_name(text: str, alias: str) -> bool:
         return False
     prefix = text[max(0,match.start()-50):match.start()]
     local_prefix = re.split(r'[,;.!?]', prefix)[-1]
+    if re.match(r'.{0,45}\b(?:built|made|developed|launched)\b.{0,35}\b(?:years?|decades?|centuries) ago\b',text[match.end():],re.I):return True
     return bool(COMPARISON.search(local_prefix) or re.search(r'\b(?:according to|reported by|reports? from|formerly|previously|historically)\s*$',local_prefix,re.I))
 
 
@@ -248,6 +256,25 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
             passage_semantics[passage.ordinal] = semantic_evidence
             identity_text=_identity_text(passage.text)
             mentions = name_index.mentioned(identity_text)
+            for m in re.finditer(r'(?:\$|(?:NYSE|NASDAQ|AMEX)\s*:\s*)([A-Za-z]{1,5})\b',passage.text,re.I):
+                explicit_record=name_index.by_ticker.get(m.group(1).upper())
+                if explicit_record and explicit_record not in mentions:mentions.append(explicit_record)
+            coordinated=set()
+            coordination=re.match(r'^(.+?)\s+(unveil\w*|announc\w*|report\w*|launch\w*|rais\w*|cut\w*|invest\w*)\b',identity_text,re.I)
+            if coordination:
+                subjects=[s.strip() for s in re.split(r',\s*|\s+and\s+',coordination.group(1)) if s.strip()]
+                resolved=[]
+                for subject in subjects:
+                    group=short_names.get(subject.lower(),())
+                    exact=[r for r in group if r.alias==subject.lower()]
+                    if exact:group=exact
+                    if not group or not _issuer_family(board,[r.ticker for r in group]):break
+                    resolved.extend(group)
+                else:
+                    if len(subjects)>=2:
+                        coordinated={r.ticker for r in resolved}
+                        for record in resolved:
+                            if record not in mentions:mentions.append(record)
             matched_prefixes=defaultdict(list)
             raw_words=re.findall(r'[A-Za-z0-9]+',identity_text)
             raw_starts=[m.start() for m in re.finditer(r'[A-Za-z0-9]+',identity_text)]
@@ -280,14 +307,15 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                         business = bool(p and len(short_evidence)>=2 and len(industry_support)>=2)
                         legal = bool(re.search(r'\b'+re.escape(word)+r'\s+(?:company|corp|inc|plc|ltd)\b',passage.text,re.I))
                         discriminating=short_evidence-set().union(*(board.profiles[r.ticker].core for r in records if r.name!=record.name))
-                        if not family and not discriminating:continue
+                        exact_alias=record.alias==word and _is_subject(record,passage.text)
+                        if not family and not (discriminating or exact_alias):continue
                         single_legal_word = len(record.alias.split()) == 1
                         common = word in english_words()
                         predicate = _is_subject(record,passage.text)
                         short_predicate = _corporate_usage(word,passage.text)
                         proper = any(m.group()[0].isupper() for m in re.finditer(r'\b'+re.escape(word)+r'\b',passage.text,re.I))
                         financial_list_name=proper and bool(re.search(r'\bshares?\s+(?:are\s+)?(?:fall\w*|ris\w*|down|up)\b',passage.text,re.I))
-                        if not family and not (business or discriminating):continue
+                        if not family and not (business or discriminating or exact_alias):continue
                         abbreviation=not single_legal_word and len(word)<=5 and bool(re.search(r'\b'+re.escape(word.upper())+r'\b',passage.text))
                         if abbreviation and not (business or legal or short_predicate or _is_subject(replace(record,alias=''),passage.text)):continue
                         if not (business or legal or (proper and not common and single_legal_word) or short_predicate or financial_list_name or (single_legal_word and FINANCIAL_EVENT.search(passage.text) and (not common or predicate))):
@@ -315,7 +343,7 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                 shortened = bool(record.ticker in qualified_short and not _comparison_name(passage.text,first))
                 prefix_subject=any(_is_subject(replace(record,alias=prefix),passage.text) for prefix in matched_prefixes[record.ticker])
                 financial_list=bool(re.search(r'\bshares?\s+(?:are\s+)?(?:fall\w*|ris\w*|down|up)\b',passage.text,re.I) and (re.search(r'\b'+re.escape(record.ticker)+r'\b',passage.text) or (first and len(short_names.get(first,()))==1 and re.search(r'\b'+re.escape(first)+r'\b',passage.text,re.I))))
-                if not roundup and (_is_subject(record,passage.text) or (passage.event and (shortened or financial_list or prefix_subject))):
+                if not roundup and (_is_subject(record,passage.text) or (passage.event and (shortened or financial_list or prefix_subject or record.ticker in coordinated))):
                     pass_row(record.ticker,1,'direct_event',passage)
 
             hits = defaultdict(set)

@@ -61,6 +61,40 @@ class EvidenceTests(unittest.TestCase):
   hit=link_articles(b,[{'id':'x','text':'A man faces arson charges after a retail store fire.'}])[0]
   self.assertFalse(any(r['pass'] for r in hit['stocks']))
 
+ def test_one_named_bank_rule_does_not_become_sector_policy(self):
+  b=build_board([{'ticker':'BANK','name':'Example Financial Inc','industry':'Banks','description':'We offer bank accounts and provide access to accounts through online agents.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'ZedBank becomes latest bank to restrict agents from accessing accounts.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_exact_legal_brand_outranks_longer_short_name(self):
+  b=build_board([{'ticker':'AAPL','name':'Apple Inc','industry':'Devices'},
+                {'ticker':'APLE','name':'Apple Hospitality REIT Inc','industry':'Hotels'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Apple moves to overturn a patent verdict.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'AAPL'})
+
+ def test_coordinated_issuer_subjects_share_corporate_predicate(self):
+  b=build_board([{'ticker':'N','name':'Nvidia Corp','industry':'Chips'},
+                {'ticker':'M','name':'Meta Platforms Inc','industry':'Software'},
+                {'ticker':'A','name':'Apple Inc','industry':'Devices'},
+                {'ticker':'H','name':'Apple Hospitality REIT Inc','industry':'Hotels'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Nvidia, Meta and Apple unveil new models.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'N','M','A'})
+
+ def test_only_last_publisher_suffix_is_removed(self):
+  p=passages('Strategy stock diverges from bitcoin - Strategy (NASDAQ:MSTR) - Publisher','Strategy stock diverges from bitcoin - Strategy (NASDAQ:MSTR) - Publisher')
+  self.assertIn('NASDAQ:MSTR',p[0].text)
+
+ def test_alias_definition_keeps_all_quoted_issuer_names(self):
+  b=build_board([{'ticker':'AIR','name':'Southwest Airlines Co','industry':'Airlines','filing':'Southwest Airlines Co. (the "Company" or "Southwest") operates passenger aircraft.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Southwest unveils new perks.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'AIR'})
+
+ def test_glossary_explicitly_defines_owned_network(self):
+  b=build_board([{'ticker':'OWN','name':'Example Aerospace Inc','industry':'Aerospace','filing':'"SkyWeb" refers to our global satellite constellation and broadband network.'},
+                {'ticker':'PEER','name':'Other Aerospace Inc','industry':'Aerospace','filing':'"SkyWeb" refers to a competitor satellite network.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'SkyWeb faces new restrictions.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'OWN'})
+
  def test_multiword_prefix_adr_and_short_dictionary_company(self):
   b=build_board([{'ticker':'TSM','name':'Taiwan Semiconductor Manufacturing ADR','industry':'Semiconductors'},
                  {'ticker':'ARM','name':'Arm Holdings Plc ADR','industry':'Semiconductors'},
@@ -483,6 +517,9 @@ class MeasurementTests(unittest.TestCase):
 
 
 class ArchiveTests(unittest.TestCase):
+ def test_registration_statements_retain_business_source(self):
+  for form in ('S-1','S-1/A','F-1','F-1/A'):
+   self.assertEqual(section_views('Our network provides satellite broadband.',form)[0]['kind'],'business')
  def test_20f_business_and_officers(self):
   text='ITEM 4. Information on the Company\n'+('We manufacture launch vehicles. '*30)+'\nITEM 6. Directors\n'+('Jane Doe is chief executive. '*10)
   v=section_views(text,'20-F')

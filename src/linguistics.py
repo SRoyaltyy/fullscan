@@ -119,7 +119,7 @@ def passages(text: str, title: str = '') -> list[Passage]:
     lines = [line.strip() for line in raw.splitlines() if line.strip()]
     result = []
     seen = set()
-    source_tail=re.search(r'\s+-\s+([^\n]{2,80})$',title or '')
+    source_tail=re.search(r'\s+-\s+([^\n]{2,80})$',' - '+title.rsplit(' - ',1)[1]) if ' - ' in title else None
     publisher=source_tail.group(1).strip() if source_tail and not EVENT.search(source_tail.group(1)) else ''
     for line_index, line in enumerate(lines):
         line=re.split(r'#{2,}\s*(?:Updated|Topics|Related|Share)\b',line,flags=re.I)[0].strip()
