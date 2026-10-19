@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19T05:40:08-04:00",
+  "updated_at": "2026-10-19T05:44:09-04:00",
   "runs": [
     {
       "date": "2026-10-15",
@@ -132,6 +132,12 @@
       "workflow": "factor_mine",
       "file": "2026-10-19_factor_mine.json",
       "updated_at": "2026-10-19T05:40:08-04:00"
+    },
+    {
+      "date": "2026-10-19",
+      "workflow": "fm_preopen",
+      "file": "2026-10-19_fm_preopen.json",
+      "updated_at": "2026-10-19T05:44:09-04:00"
     }
   ]
 }
