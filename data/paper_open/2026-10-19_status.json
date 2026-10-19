@@ -1,6 +1,7 @@
 {
   "date": "2026-10-19",
-  "status": "blocked",
-  "error": "no sealed h1 plan for 2026-10-19; refusing; not rebuilding HOT4",
-  "standing": true
+  "status": "missed_deadline",
+  "observed_at": "2026-10-19T12:59:08.905062-04:00",
+  "submit": false,
+  "standing": false
 }
