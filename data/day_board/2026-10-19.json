@@ -1,15 +1,13 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T05:59:24.666865-04:00",
-  "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING News judge MD `01_daily/news/2026-10-19_judge.md` \u2014 missing"
-  ],
+  "generated_at": "2026-10-19T12:46:55.451155-04:00",
+  "overall": "OK",
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
-    "ok": 6,
-    "partial": 1,
-    "fail": 1,
+    "ok": 8,
+    "partial": 0,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -177,9 +175,9 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 7,
+      "n_req_ok": 9,
       "n_req": 9,
       "n_opt_ok": 3,
       "n_opt": 14,
@@ -248,22 +246,31 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-10-19_events.json",
           "role": "required",
-          "status": "FAIL",
-          "reason": "empty/truncated (zero_events)",
-          "size": 212,
-          "said": "empty/truncated (zero_events) \u00b7 0 events",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 24225,
+          "said": "35 events \u00b7 elevated uncertainty \u00b7 Markets enter the last two weeks of October with a hawkish Fed on hold, elevated oil prices from Middle East tensions, and a heavy mega-cap",
+          "bullets": [
+            "US government shutdown ends after 43 days",
+            "US final reciprocal tariff list; Canada raised to 35%",
+            "SEC proposes crypto asset custody rules",
+            "FTC secures Corteva pesticide antitrust settlement"
+          ]
         },
         {
           "key": "judge",
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-19_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 7652,
+          "said": "1. **Big Tech earnings loom with AI jitters and VIX spike; FOMC collision** \u2014 dominant index-risk theme for SPX/QQQ and crowded AI/Mag7 baskets. Provisional cha",
+          "bullets": [
+            "2. **Brent crude holds near $110 on Mideast and Ukraine conflicts** \u2014 oil >$100 keeps inflation/rates risk alive and pressures SPX beta while supporting energy. Provisional channel: risk.",
+            "3. **Hawkish Fed comments lift October hike bets; spot gold drops >$100** \u2014 direct rates/discount-rate signal for equity multiples. Provisional channel: rates.",
+            "4. **Boeing 737 MAX 10 certification halted by FAA over software glitch** \u2014 large industrials/supplier-chain and sector-sentiment item; 31% of undelivered 737 book at risk. Provisional channel: sector_policy."
+          ]
         },
         {
           "key": "research_json",
@@ -548,17 +555,19 @@
           "path": "01_daily/weather/2026-10-19_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9543 vix=calm yields=falling",
-          "size": 9543,
+          "reason": "sectors=11 bytes=9548 vix=falling yields=falling",
+          "size": 9548,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "events bull 1 / bear 4"
           ]
         }
       ],
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "events bull 1 / bear 4"
       ]
     },
     {
@@ -608,11 +617,11 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -651,16 +660,11 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-10-19_dossiers.json",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "zero usable dossiers (n=8)",
-          "size": 2414,
-          "said": "zero usable dossiers (n=8) \u00b7 0/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 AAPL, GOOGL, GOOG, MSFT, AMZN, META, TSLA, AMD",
-          "bullets": [
-            "AAPL: OpenClaw and DeepSeek both returned empty for CATALYST STEP2 AAPL",
-            "GOOGL: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 GOOGL",
-            "GOOG: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 GOOG",
-            "MSFT: OpenClaw and DeepSeek both returned empty for CATALYST STEP2 MSFT"
-          ]
+          "status": "OK",
+          "reason": "usable=6/6",
+          "size": 21215,
+          "said": "6/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 AAPL, GOOGL, GOOG, MSFT, AMZN, META, TSLA, AMD",
+          "bullets": []
         }
       ],
       "said": "106 ticker actions \u00b7 7 events \u00b7 4815 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
@@ -680,7 +684,7 @@
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "OK",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
@@ -754,11 +758,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-19_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 7652,
+          "said": "1. **Big Tech earnings loom with AI jitters and VIX spike; FOMC collision** \u2014 dominant index-risk theme for SPX/QQQ and crowded AI/Mag7 baskets. Provisional cha",
+          "bullets": [
+            "2. **Brent crude holds near $110 on Mideast and Ukraine conflicts** \u2014 oil >$100 keeps inflation/rates risk alive and pressures SPX beta while supporting energy. Provisional channel: risk.",
+            "3. **Hawkish Fed comments lift October hike bets; spot gold drops >$100** \u2014 direct rates/discount-rate signal for equity multiples. Provisional channel: rates.",
+            "4. **Boeing 737 MAX 10 certification halted by FAA over software glitch** \u2014 large industrials/supplier-chain and sector-sentiment item; 31% of undelivered 737 book at risk. Provisional channel: sector_policy."
+          ]
         },
         {
           "key": "in_weather",
@@ -766,11 +774,12 @@
           "path": "01_daily/weather/2026-10-19_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9543 vix=calm yields=falling",
-          "size": 9543,
+          "reason": "sectors=11 bytes=9548 vix=falling yields=falling",
+          "size": 9548,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "events bull 1 / bear 4"
           ]
         },
         {
@@ -819,7 +828,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=210",
-          "size": 1524861,
+          "size": 1525493,
           "said": "1d BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC \u00b7 0.49724999999999997",
           "bullets": []
         },
@@ -833,7 +842,7 @@
           "size": 84093,
           "said": "Stock book \u2014 2026-10-19",
           "bullets": [
-            "_Generated 2026-10-19T05:56:18.865433-04:00_",
+            "_Generated 2026-10-19T07:32:03.698206-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -844,8 +853,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2595,
-          "said": "168 green \u00b7 ETON, ARQT, WAY, CORT, INCY, VEEV, AMN, CDNA, SIBN, EXEL",
+          "size": 2550,
+          "said": "164 green \u00b7 ETON, ARQT, WAY, CORT, INCY, VEEV, AMN, CDNA, SIBN, EXEL",
           "bullets": []
         },
         {
@@ -897,7 +906,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=210",
-          "size": 1524861,
+          "size": 1525493,
           "said": "1d BUY CDNA, VEEV, SN, BLFS, ILMN, PRCH, SHOO, CBRL \u00b7 SELL ARE, NEOV, VSAT, BAK, ROIV, SOC \u00b7 0.49724999999999997",
           "bullets": []
         },
@@ -1108,7 +1117,8 @@
     "weather": {
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "events bull 1 / bear 4"
       ]
     }
   },
@@ -2380,6 +2390,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-19\n_Generated 2026-10-19T09:59:22 \u2014 live `flatten_robust`._\n**S=+2.12; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+2.12** (UP) \u00b7 route **io**\n- Cash leftover **$10,071.34** (after 09:30 $7.56 \u00b7 after 16:00 $95,638.90)\n- Prior close **$105,740.21** \u00b7 09:30 **$105,740.21** \u00b7 overnight **$+0.00** \u00b7 session **$-10,101.31** \u00b7 16:00 **$95,638.90**\n- Overnight lots **7** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$10,063.78** \u2264 leftover after sells **$105,702.70** \u00b7 2026-10-18 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59."
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-19T12:46:54.375777-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-19_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9548,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-19_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5145,
+          "preview": "# Weather report \u2014 2026-10-19\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-19\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
@@ -2387,5 +2422,23 @@
     "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",
     "factor_mine": "https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/",
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
-  }
+  },
+  "frozen_write_skips": [
+    {
+      "path": "01_daily/weather/2026-10-19_weather.json",
+      "at": "2026-10-19T12:46:56-04:00",
+      "commit_msg": "auto: land weather [2026-10-19]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39287142647",
+      "manifest": "research/input_freeze/2026-10-19/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-19.json",
+      "at": "2026-10-19T12:46:56-04:00",
+      "commit_msg": "auto: land weather [2026-10-19]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39287142647",
+      "manifest": "research/input_freeze/2026-10-19/manifest.json"
+    }
+  ]
 }
