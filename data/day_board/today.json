@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T05:45:03.516511-04:00",
+  "generated_at": "2026-10-19T05:45:11.754850-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -41,24 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-10-19",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-19T04:48:56.480833-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-10-19_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 12102,
-          "preview": "# Premarket Prediction \u2014 2026-10-19\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.125 (uncertainty multiplier \u00d71.0) | confidence 0.585\n>\n> **Good news vs bad news:** good +1.75 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - China Q3 GDP 4.5% beat\n> - NQ +1.13% dip-buy\n> - WTI offered -4.3%\n> - 1w 10Y -18bp\n> - Kospi +1.76%\n>\n> **Bad news driving this:**\n> - Europe composite -0.99% partial\n> - leftover Hormuz attacks\n> - AI-credit unwind T+1\n> - 1m 10Y still +10bp\n> - Tesla/Meta unsigned Wed\n>\n> **market uncertainty: **elevated** | VIX 18.56 | policy-uncertainty index 149.21 (1d -107.59)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Europe session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> - \ud83d\udfe2 Bond yiel"
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-10-19\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.125 (uncertainty multiplier \u00d71.0) | confidence 0.585\n>\n> **Good news vs bad news:** good +1.75 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - China Q3 GDP 4.5% beat\n> - NQ +1.13% dip-buy\n> - WTI offered -4.3%\n> - 1w 10Y -18bp\n> - Kospi +1.76%\n>\n> **Bad news driving this:**\n> - Europe composite -0.99% partial\n> - leftover Hormuz attacks\n> - AI-credit unwind T+1\n> - 1m 10Y still +10bp\n> - Tesla/Meta unsigned Wed\n>\n> **market uncertainty: **elevated** | VIX 18.56 | policy-uncertainty index 149.21 (1d -107.59)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Europe session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> - \ud83d\udfe2 Bond yiel"
-    },
     {
       "key": "sector_board",
       "title": "Sector board",
@@ -233,6 +215,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-19\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-19T05:45:11.381598-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-19_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2250114,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
