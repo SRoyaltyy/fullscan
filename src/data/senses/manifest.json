@@ -1,0 +1,239 @@
+{
+  "upstream": "https://github.com/globalwordnet/english-wordnet",
+  "license": "CC-BY-4.0; see wordnet.LICENSE",
+  "files": [
+    {
+      "file": "noun.act.json.gz",
+      "source": "noun.act.yaml",
+      "source_sha256": "c5ea061734ae4687ca1505e32e75f61936ec84c2a05eaa751f451702c8699291",
+      "sha256": "b62f814e5afa4bf64b1d42e1148bc212166bd1dc50b44230b18a61d055ae98d1",
+      "stored_sha256": "04ec11c5cf5efbd55b972c0d8220c009512908f500cb8ba6cd89f694a6937fe9",
+      "senses": 6567
+    },
+    {
+      "file": "noun.artifact.json.gz",
+      "source": "noun.artifact.yaml",
+      "source_sha256": "29873f01b589096f73d48d73f4e6877ffc6f633e8b025a3806eb1f60a95a6cae",
+      "sha256": "1a72b10a46a0bcf72fc2889862ece853102fa3978242a6b21880951c9d1663bd",
+      "stored_sha256": "78889b9d64f283324ac1a7eb5622505a965979650f221a05e4cd75faa0a1a7a6",
+      "senses": 11986
+    },
+    {
+      "file": "noun.attribute.json.gz",
+      "source": "noun.attribute.yaml",
+      "source_sha256": "d827a1494144bc96ef6e973cac0b2ccc8980d1a192622c44fa46ed08f4db6157",
+      "sha256": "936f595dd4dec93d879d7e7d0301236fef539538e6b2ac844f40695d1b7a478a",
+      "stored_sha256": "9822ad1206082874b6b908b61df02cef1bfdc46b24e4c33b8d09c8d43666f6e4",
+      "senses": 3329
+    },
+    {
+      "file": "noun.body.json.gz",
+      "source": "noun.body.yaml",
+      "source_sha256": "0d55c9384b12b1b102630a8dbf53c4aded7d4109fe6fe9058f11aa3c75d3b3d7",
+      "sha256": "0ef4666f4c6a4dcba54dec58a56e7899721cebdd549c7324796715280aa3bc80",
+      "stored_sha256": "f0caa4d26cf84c5ed23b3abfa288edd71e8e90495c5cf4dadaed44e75a614eae",
+      "senses": 2037
+    },
+    {
+      "file": "noun.cognition.json.gz",
+      "source": "noun.cognition.yaml",
+      "source_sha256": "eed8353e69e0a9073d2b3a2918119c94bff04e878d4af15e375cefd0f606d9a6",
+      "sha256": "7435c97136e3054ccaf728585efca8e2a3957f8fada060d31c46e5bce0ecfde6",
+      "stored_sha256": "ebf8c85830b2d409739ca2b1cc3ed6cf6e324feedf3efa25e65204cc32cfb3c9",
+      "senses": 3153
+    },
+    {
+      "file": "noun.communication.json.gz",
+      "source": "noun.communication.yaml",
+      "source_sha256": "7053932585a7e05d38a2b04139e17800bca7fed8049e1e9f3f8e478a2734c23e",
+      "sha256": "448b8be7bf5016092f32f6740d2b71699ab0394f91b7eca45836b092907057ef",
+      "stored_sha256": "90c9f754755ef366aff0abf53755f137302dadfaa5d413751eeb9d57d9cd7498",
+      "senses": 5718
+    },
+    {
+      "file": "noun.event.json.gz",
+      "source": "noun.event.yaml",
+      "source_sha256": "c56af56ed053eebaa915332a163b7eafd4f78a4bb653b6a855b90aaddf239ea3",
+      "sha256": "34365e43b36c70a08c488ab5130e0878383712980a9a8489b235080ceddced49",
+      "stored_sha256": "ba10a0f7fa051c3d6708b62a370d9c597bdaeedbfdb5cac4910e44d73faa1783",
+      "senses": 1078
+    },
+    {
+      "file": "noun.food.json.gz",
+      "source": "noun.food.yaml",
+      "source_sha256": "e374e23600a13cbfe76c6ea583186bfe80995f4e3502c9aaf0f90ab007b891b7",
+      "sha256": "b1daebc6946ed7c19232003a53ba26987b77794457c16b8f91e9d009d716272f",
+      "stored_sha256": "185fc0bb69d155baed1c2c0360ccfe67cb46616bdda51f1ffb39559dbe48ad9f",
+      "senses": 2670
+    },
+    {
+      "file": "noun.group.json.gz",
+      "source": "noun.group.yaml",
+      "source_sha256": "4c5052b8dd31f1924f46899e8789d6fa916637d1451113c39ccded95c9d80a4e",
+      "sha256": "2c4afa2f95942e9103166794959b3499128cca9528a269377a24e13ff50a8a9c",
+      "stored_sha256": "3ab90521c2c265664eb8cae2a952b7417811a10ae09363393f8b003e0bfbbf8d",
+      "senses": 2578
+    },
+    {
+      "file": "noun.location.json.gz",
+      "source": "noun.location.yaml",
+      "source_sha256": "0ece490f18f3669715723e7608ec0e30b6852945938f84b03b1d5ed1dbd88562",
+      "sha256": "a32af7b13106bfe0a8ce27ba2b119bef5e3f05b2fee89c80fc25a36b1c9214f3",
+      "stored_sha256": "74195d4cc1c781043f10f186a58e51f1d5398d3a83c471f001e9b1d3b00782e8",
+      "senses": 875
+    },
+    {
+      "file": "noun.object.json.gz",
+      "source": "noun.object.yaml",
+      "source_sha256": "52351adcad28a13686080448a6d232148bb6f399426b0b9c9734aee12e8affd8",
+      "sha256": "306a1dd6968c9c34a2743a73092582d141428aa52772cda262c31458e3cb2fcb",
+      "stored_sha256": "4476d8217b6e61a07ba7334cf62e0023003a479dbc325789c10b1cfe2dc130cf",
+      "senses": 809
+    },
+    {
+      "file": "noun.phenomenon.json.gz",
+      "source": "noun.phenomenon.yaml",
+      "source_sha256": "9cf0fce44885a8a4382424b5068dc9e9c867fa5d88296233a5322360630f80d3",
+      "sha256": "00f1715fbad4aecd55d11805f1b65e3194250c5759830f83b6294d892ad1cba1",
+      "stored_sha256": "375ea2f64e39df2b97a3087431efe00bf3f9bd66ebdd84b071ac54b89d8cd121",
+      "senses": 653
+    },
+    {
+      "file": "noun.possession.json.gz",
+      "source": "noun.possession.yaml",
+      "source_sha256": "45bddb173490da62d868572ee1bc077f7f86b943d83fbadfd472aac4df8ebd1e",
+      "sha256": "55c2f2fc32fb5887c4c3c7faed36e5faaba7074104975fb6a3d6976a29220125",
+      "stored_sha256": "fae2ba4e3590a956a88d4bdba3a058893b5efc4fd6b9efd1c4afc2773339ac11",
+      "senses": 1119
+    },
+    {
+      "file": "noun.process.json.gz",
+      "source": "noun.process.yaml",
+      "source_sha256": "fb9458286c21cf28fd1db2ce06cbba8124e9eb6e6504ae5d1ebadd5da1ed9271",
+      "sha256": "a2151fda03c0677afd367ef2e2cc40c1ffdd4aaf7312baa476868db04d51b4cf",
+      "stored_sha256": "a9b0bd1b63eb646c15fda6a634bf742e5b29e7986bef10c337a159e087985760",
+      "senses": 799
+    },
+    {
+      "file": "noun.quantity.json.gz",
+      "source": "noun.quantity.yaml",
+      "source_sha256": "7ee10508243f6b88938a638064d2baa341b2944dc72ddafac2417ff04eb23c29",
+      "sha256": "1588fadc707fa7758b6bb4714d8830e96e951caa0589a88fddddb0699d1ab8fe",
+      "stored_sha256": "0dda110d7409c2ac56ab32a2df0d19f8cc2f46d0d1cb734e1cf10903a1783baa",
+      "senses": 1340
+    },
+    {
+      "file": "noun.relation.json.gz",
+      "source": "noun.relation.yaml",
+      "source_sha256": "4be123e8ef3a971ca5eb76e3a3b1e62c2b53b5c269d7d74817b74450c7e4df24",
+      "sha256": "b4b8d05cbacfe0aa707d8149b8e6db21d5a74e5003bea9117617661d916ac13c",
+      "stored_sha256": "6b6016b339810b723e4c8d125840919f03c534673c828d8fdd8f53e2c3b150fa",
+      "senses": 455
+    },
+    {
+      "file": "noun.state.json.gz",
+      "source": "noun.state.yaml",
+      "source_sha256": "3cb8cebbf3f812229c085d3f61608c3cca4e97a5c69e9bebb9c3e546a8411312",
+      "sha256": "b36780bd0cf909d48f1b44f53e80fdbcc969ca4b8451c5dd5372e448e3b4ed98",
+      "stored_sha256": "68efc36c47ecf6161423b7995d7129844dc4dad7edd48b48dc5618cb92343104",
+      "senses": 3594
+    },
+    {
+      "file": "noun.substance.json.gz",
+      "source": "noun.substance.yaml",
+      "source_sha256": "5b7e47570a15012e7a43430a56a218a1ac7be81913bb094143a39b40387ed62f",
+      "sha256": "ed1da7aadff3b46737dc0e45cbae822ee706c149634e90b491b6b7aacf1f88ea",
+      "stored_sha256": "5263fa31165c657bd3768794294a9df5f376cc214e0ea7d5e86ce438e7abadfd",
+      "senses": 3143
+    },
+    {
+      "file": "noun.time.json.gz",
+      "source": "noun.time.yaml",
+      "source_sha256": "d1bba4e668251c117cd0a9d82e32b74f26d0cb46075ab6f3a4a5b177138570bc",
+      "sha256": "c498a2fd1c601e24d30e9fd6ffff8bf39fd03868f838dab446b25d48186fd8bb",
+      "stored_sha256": "02c0214853ce78d1fb0964facd03b57efdc2b5ada713d68df521e1cfb78201b2",
+      "senses": 994
+    },
+    {
+      "file": "verb.change.json.gz",
+      "source": "verb.change.yaml",
+      "source_sha256": "126bb92adc1be69c4cf33e9ac1a5a492f6785971d23c527f5d8e0db51a980702",
+      "sha256": "c363a75d728bec2cc7148639eb47bb20274f0f396e9c93f82d99cab48fd875d7",
+      "stored_sha256": "c9e1da5d2b2dea7235865f95743464b372223c79915b1cdc2ec97a7aef8cd278",
+      "senses": 2389
+    },
+    {
+      "file": "verb.cognition.json.gz",
+      "source": "verb.cognition.yaml",
+      "source_sha256": "f8908eedf07920a8489aa2462ce2ec7a83c0ecff1fb48f4456aec100f8c97d37",
+      "sha256": "bdefd0b33e93df1d9fcc5bbb5a9cc9cef307343f910b534393c8f89149bb9784",
+      "stored_sha256": "8b3e4c000eea3b3117506c415aba4e1a23b77faaed9f5b16865ff07d8a00ac2e",
+      "senses": 696
+    },
+    {
+      "file": "verb.communication.json.gz",
+      "source": "verb.communication.yaml",
+      "source_sha256": "04a1531082705497ab51316d54dec360273ea896b195dfd2143b99d08d327541",
+      "sha256": "bd4f820bbb40a0a34a47e8dfa6129a6c7dd52474a97da67321473f8cc572ffc1",
+      "stored_sha256": "3aadad8cfe432c6607cb2621ec00f3cfaa693b9cd6318a834be0dcd460470483",
+      "senses": 1565
+    },
+    {
+      "file": "verb.competition.json.gz",
+      "source": "verb.competition.yaml",
+      "source_sha256": "3bdd97919eddbcf4493999d46b981fe4be088beb3a06e49fd1f95de82f91d824",
+      "sha256": "830bc8cb88022684beb529972b7dda024f68b93e6e53740e50fe0a84a1911acb",
+      "stored_sha256": "3d70a757441a078083fd9bc8056d52d16dc622dc46ecff1d5d39ab15e3f514c8",
+      "senses": 460
+    },
+    {
+      "file": "verb.contact.json.gz",
+      "source": "verb.contact.yaml",
+      "source_sha256": "379ce11e6877c4c87adc1219bc41cf1bb0d31fb5b64fdb294b1b48140b858041",
+      "sha256": "fbf32e18c6e0bb4a042012452a8fa6c1057110eb47e644fa30e915676af99f74",
+      "stored_sha256": "2941514daf1a2008f66c2ce84f36730b2d284d85c0dad3f7ff4a7ae825d3cfed",
+      "senses": 2203
+    },
+    {
+      "file": "verb.creation.json.gz",
+      "source": "verb.creation.yaml",
+      "source_sha256": "50824d97ffdcecae07f9269f6422f3b781d3a97fb28ec668da0a4a8865dbcd56",
+      "sha256": "3712475a46b8d019bbd629cf1a9bb6532da53a5aa0595acb062e9085723e0816",
+      "stored_sha256": "b3bcb11b5e710d653a853a0772fc6f7764b30a29936da5dd5e516e4d79604fd5",
+      "senses": 697
+    },
+    {
+      "file": "verb.motion.json.gz",
+      "source": "verb.motion.yaml",
+      "source_sha256": "29f0859977bede750239f911afb356885b50597afe9e161e2fc3f584ad86f095",
+      "sha256": "53ca78eac96d7b403f14852a2e008d40875c8c68b1264c9a07f2aa66a76dd509",
+      "stored_sha256": "78d2e2f3dcbada086f663f18fca4f72834a3a3c457584ca074cb222ce7a2f3ad",
+      "senses": 1410
+    },
+    {
+      "file": "verb.possession.json.gz",
+      "source": "verb.possession.yaml",
+      "source_sha256": "8a614afadc3f2f8ca7fa62447e60a583e901fbf54caf6c96c3d43e7d5ea2a861",
+      "sha256": "ffcab79a7ad01b895fbbd7a7302ea80fab4c00a8ab944ac16aad0d0215762267",
+      "stored_sha256": "6af4de0bd0d13c3beaed49e6c91debb95031869b2aa1e3d6a3e3ce3487826776",
+      "senses": 847
+    },
+    {
+      "file": "verb.social.json.gz",
+      "source": "verb.social.yaml",
+      "source_sha256": "d0bc7620c30305592d0f8cf77e4119ab1cf12fcee93f4269341df017acdb4895",
+      "sha256": "afddcdb72bed02d38630d4883e0041c6319350386c0bed841e7f7950c416b493",
+      "stored_sha256": "51ab5cf610b871ea38cf0cbd923af4d870173a57621df51710ec52d99ee650bd",
+      "senses": 1112
+    },
+    {
+      "file": "verb.stative.json.gz",
+      "source": "verb.stative.yaml",
+      "source_sha256": "04a7c3cc3f4d3b1585b11fa00c6574f4162063328f5f652b867e3a48ff35d346",
+      "sha256": "9c9d9356ad23d01f1966adaeb0b8b891d4a696437711dfeb369dc4bf0a6f468d",
+      "stored_sha256": "a46fdda0034fbc55fe26ff28ffeff121595feb6b036999fa34cc9782eac2009b",
+      "senses": 758
+    }
+  ],
+  "senses": 65034
+}

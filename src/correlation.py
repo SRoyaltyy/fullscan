@@ -369,9 +369,13 @@ class Board:
     # L2-normalized characteristic terms of each industry. High-coverage
     # words live here so they can vote for the industry, not for every member.
     centroids: dict[str, dict[str, float]] = field(default_factory=dict)
+    source_rows: list[dict] = field(default_factory=list)
+    evidence_board: object = None
 
 
 def _alias(name: str) -> str:
+    name = re.sub(r"\s*/[A-Z]{2}/\s*$", "", name or "")
+    name = re.sub(r'\s+(?:A/S|S\.?A\.?|N\.?V\.?|S\.?p\.?A\.?|AG|SE)\s*$','',name,flags=re.I)
     cleaned = re.sub(
         r"\b(incorporated|inc|corp|corporation|ltd|limited|plc|co|company|group|holdings|holding)\b",
         " ",
@@ -385,14 +389,23 @@ def _alias(name: str) -> str:
     return cleaned
 
 
-def build_board(rows: list[dict]) -> Board:
+def build_board(rows: list[dict], *, engine: str = "legacy") -> Board:
+    if engine == "evidence":
+        # The evidence path does not need to build the old z-score matrices.
+        stocks = [Stock(str(r['ticker']).upper(),str(r.get('name','')),str(r.get('industry','')),
+                        str(r.get('sector','')),set(),_alias(str(r.get('name',''))),1)
+                  for r in rows if r.get('ticker')]
+        return Board(stocks,{}, {}, {},1.0,max(len(stocks),1),source_rows=rows)
     stocks: list[Stock] = []
     for row in rows:
         ticker = str(row.get("ticker") or "").upper().strip()
         industry = str(row.get("industry") or "").strip()
         if not ticker or not industry or industry.lower() in {"nan", "none"}:
             continue
-        filing_core, partners = divide_profile(str(row.get("filing") or ""))
+        filing_text = str(row.get("filing") or "")
+        if not filing_text and row.get("filing_sections"):
+            filing_text = "\n".join(c.get("text","") for c in row["filing_sections"] if c.get("kind")=="business")
+        filing_core, partners = divide_profile(filing_text)
         description = str(row.get("description") or "")
         text = " ".join(part for part in (description, filing_core) if part.strip())
         company = str(row.get("name") or "")
@@ -448,7 +461,7 @@ def build_board(rows: list[dict]) -> Board:
     centroids = _centroids(stocks, dict(df), n)
     return Board(
         stocks, weight, industry_of_term, dict(df), avg_len, n, dict(postings),
-        coverage_of, dict(industry_size), centroids,
+        coverage_of, dict(industry_size), centroids, rows,
     )
 
 
@@ -761,7 +774,7 @@ def _mark(rows: list[dict], meta: dict, ticker: str, *, alias_hit: bool = False,
     })
 
 
-def link_articles(
+def link_articles_legacy(
     board: Board,
     articles: list[dict],
     *,
@@ -1024,3 +1037,18 @@ def link_articles(
         item.pop("_sparse", None)
         item.pop("_ind", None)
     return raw
+
+
+def link_articles(board, articles, *, engine="legacy", **kwargs):
+    """Use one production decision path in CLI, tests, and the evaluator.
+
+    The legacy engine is retained for paired baseline measurements. Batch
+    z-scores are diagnostic legacy behavior, never evidence-v2 pass gates.
+    """
+    if engine == "legacy":
+        return link_articles_legacy(board, articles, **kwargs)
+    if engine != "evidence":
+        raise ValueError(f"unknown engine: {engine}")
+    from .evidence_matcher import link_evidence
+    return link_evidence(board, articles, **kwargs)
+

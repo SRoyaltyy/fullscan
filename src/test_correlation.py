@@ -3,7 +3,7 @@ import unittest
 
 from collections import Counter
 
-from src.correlation import _apply_keyness, build_board, link_articles, prepare, stock_terms
+from src.correlation import _apply_keyness, build_board, link_articles_legacy as link_articles, prepare, stock_terms
 from src.filing_business import item1_business
 from src.filing_parts import divide_profile
 from src.names import Name, NameIndex
@@ -498,3 +498,4 @@ We also provide technology services to third parties, including FanDuel and Draf
 
 if __name__ == "__main__":
     unittest.main()
+

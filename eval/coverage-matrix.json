@@ -1,0 +1,395 @@
+{
+  "version": "CM-1",
+  "categories": [
+    {
+      "id": "INPUT_EMPTY",
+      "evidence_required": "Article text or a meaningful headline",
+      "decision_rule": "Return insufficient_text; count a missed positive as a failure",
+      "positive_example": "$AAPL raises guidance.",
+      "confusing_negative": "Markets moved.",
+      "when_missing": "Abstain; retain input-quality reason",
+      "regression_test": "test_short_positive_is_not_forced_unknown",
+      "status": "implemented"
+    },
+    {
+      "id": "INPUT_DUPLICATED",
+      "evidence_required": "Distinct title/body passages",
+      "decision_rule": "Deduplicate passages before extracting evidence",
+      "positive_example": "Headline followed by independent reporting",
+      "confusing_negative": "Headline pasted twice as its body",
+      "when_missing": "Use headline evidence only",
+      "regression_test": "test_batch_permutation_and_repetition_do_not_change_decision",
+      "status": "implemented"
+    },
+    {
+      "id": "INPUT_TRUNCATED",
+      "evidence_required": "Complete scanner body and complete source views",
+      "decision_rule": "Do not apply character caps; expose upstream missing data",
+      "positive_example": "Relevant event after character 20,000",
+      "confusing_negative": "An excerpt falsely labeled complete",
+      "when_missing": "Mark incomplete; fail strict archive mode",
+      "regression_test": "test_no_twenty_thousand_character_cap",
+      "status": "implemented"
+    },
+    {
+      "id": "SPELLING",
+      "evidence_required": "Pinned spelling and lemma resources",
+      "decision_rule": "Normalize spelling consistently on both sides",
+      "positive_example": "defence / defense",
+      "confusing_negative": "hour / our",
+      "when_missing": "Keep unrecognized words unchanged",
+      "regression_test": "test_dictionary_inflections",
+      "status": "implemented"
+    },
+    {
+      "id": "INFLECTION",
+      "evidence_required": "spaCy English lemma lookup plus dictionary fallback",
+      "decision_rule": "Map inflections to lemmas, preserving the surface in source evidence",
+      "positive_example": "acquired / acquire",
+      "confusing_negative": "Lockheed / lockh",
+      "when_missing": "Keep unknown forms distinct",
+      "regression_test": "test_dictionary_inflections",
+      "status": "implemented"
+    },
+    {
+      "id": "DERIVATION",
+      "evidence_required": "Explicit contextual lexical relation",
+      "decision_rule": "Do not collapse different derivatives into identity",
+      "positive_example": "administer associated with administration in a supporting context",
+      "confusing_negative": "administrator treated as the same object as administration",
+      "when_missing": "No unsupported credit",
+      "regression_test": "test_derivatives_remain_distinct",
+      "status": "conservative"
+    },
+    {
+      "id": "WORD_SENSE",
+      "evidence_required": "WordNet sense gloss plus article context",
+      "decision_rule": "Select one strictly best-supported sense; synonyms alone cannot create multiple independent anchors",
+      "positive_example": "river water and bank",
+      "confusing_negative": "bank branch and riverbank",
+      "when_missing": "Keep literal term; abstain if ambiguous",
+      "regression_test": "test_wordnet_pack_available",
+      "status": "implemented"
+    },
+    {
+      "id": "ORTHOGRAPHIC_NEIGHBOR",
+      "evidence_required": "Dictionary identity or explicit semantic relation",
+      "decision_rule": "No spelling-distance expansion",
+      "positive_example": "frog / amphibian in a matching sense",
+      "confusing_negative": "frogman automatically treated as frog",
+      "when_missing": "No relationship inferred",
+      "regression_test": "test_derivatives_remain_distinct",
+      "status": "implemented"
+    },
+    {
+      "id": "PHRASE_BOUNDARY",
+      "evidence_required": "Contiguous tokens in the same sentence",
+      "decision_rule": "Keep phrases; never join across punctuation or stopword boundaries",
+      "positive_example": "space transportation",
+      "confusing_negative": "rocket. Gasoline",
+      "when_missing": "Fall back to individual terms",
+      "regression_test": "test_phrase_boundaries",
+      "status": "implemented"
+    },
+    {
+      "id": "LOCAL_CONTEXT",
+      "evidence_required": "Two locally supported business anchors",
+      "decision_rule": "Match evidence per passage, not a mixed article-wide bag",
+      "positive_example": "rocket launch expands",
+      "confusing_negative": "office space; school launches a program",
+      "when_missing": "Sector context or no supported stock link",
+      "regression_test": "test_mixed_passages_cannot_combine_into_a_stock_link",
+      "status": "implemented"
+    },
+    {
+      "id": "VERB_NOUN",
+      "evidence_required": "Local passage context",
+      "decision_rule": "A verb occurrence cannot delete a noun elsewhere",
+      "positive_example": "plan to launch a website; rocket launch capacity expands",
+      "confusing_negative": "launch alone implies aerospace",
+      "when_missing": "Require corroborating business terms",
+      "regression_test": "test_verb_usage_does_not_delete_other_noun_occurrences",
+      "status": "implemented"
+    },
+    {
+      "id": "PUBLISHER_ATTRIBUTION",
+      "evidence_required": "Publisher catalog and raw case-preserving identities",
+      "decision_rule": "Publisher tokens cannot create name hits",
+      "positive_example": "$POST raises earnings guidance",
+      "confusing_negative": "Washington Post reports local crime",
+      "when_missing": "No entity link",
+      "regression_test": "test_publisher_is_not_a_company_event",
+      "status": "implemented"
+    },
+    {
+      "id": "ENTITY_COLLISION",
+      "evidence_required": "Company identity plus financial/business context",
+      "decision_rule": "Do not equate a foreign exchange symbol or agency with a US company",
+      "positive_example": "NYSE:ICE earnings",
+      "confusing_negative": "ICE arrests; Kosy (KOS) in Vietnam",
+      "when_missing": "Inspection or no name hit",
+      "regression_test": "test_foreign_ticker_collision_not_name_hit",
+      "status": "implemented_with_known_exchange_guards"
+    },
+    {
+      "id": "SHORT_NAME",
+      "evidence_required": "Full alias, legal marker, or supporting business terms",
+      "decision_rule": "A multiword company's first word is not a unique identity by itself",
+      "positive_example": "Ascendis and its TransCon therapy",
+      "confusing_negative": "Schneider guidance on data centers implies Schneider National",
+      "when_missing": "Inspection until disambiguated",
+      "regression_test": "test_company_earnings_pass_even_without_industry_jargon",
+      "status": "implemented"
+    },
+    {
+      "id": "OWNED_PRODUCT",
+      "evidence_required": "Ownership passage in the stock source plus article event",
+      "decision_rule": "Use the complete product identifier and unique evidenced owner",
+      "positive_example": "VOXZOGO event to BMRN",
+      "confusing_negative": "VOXZOGO silently becomes an ASND product",
+      "when_missing": "Inspection if ownership ambiguous",
+      "regression_test": "test_owned_drug_event_resolves_biomarin_not_ascendis_alias",
+      "status": "implemented"
+    },
+    {
+      "id": "PRODUCT_COMPONENT",
+      "evidence_required": "Complete brand phrase",
+      "decision_rule": "Do not turn each acronym inside a product name into an owned brand",
+      "positive_example": "TransCon CNP",
+      "confusing_negative": "CNP alone treated as the owned branded product",
+      "when_missing": "Candidate only",
+      "regression_test": "test_product_components_are_not_owned_brands",
+      "status": "implemented"
+    },
+    {
+      "id": "SUBSIDIARY",
+      "evidence_required": "Exhibit 21 or explicit subsidiary ownership statement",
+      "decision_rule": "A subsidiary event can reach its evidenced parent",
+      "positive_example": "LinkedIn layoffs to MSFT",
+      "confusing_negative": "A partner's product treated as an owned subsidiary",
+      "when_missing": "Inspection if owner not established",
+      "regression_test": "test_named_subsidiary_event_reaches_parent",
+      "status": "implemented"
+    },
+    {
+      "id": "PERSON_ALIAS",
+      "evidence_required": "Named person in filings plus separate business evidence",
+      "decision_rule": "People trigger inspection; require corroborating business anchors",
+      "positive_example": "Musk and spacecraft launch context",
+      "confusing_negative": "Musk mentioned without a company event",
+      "when_missing": "Inspection only",
+      "regression_test": "test_person_or_alias_without_event_does_not_pass",
+      "status": "implemented"
+    },
+    {
+      "id": "ACRONYM_ALIAS",
+      "evidence_required": "Local first-use definition",
+      "decision_rule": "Store a typed acronym; it does not bypass relevance evidence",
+      "positive_example": "Defined platform acronym in a business event",
+      "confusing_negative": "FDA inferred to be a listed company's ticker",
+      "when_missing": "Inspection only",
+      "regression_test": "test_person_or_alias_without_event_does_not_pass",
+      "status": "implemented"
+    },
+    {
+      "id": "RELATION_ROLE",
+      "evidence_required": "Source section and relationship cue",
+      "decision_rule": "Keep customers, suppliers, partners and competitors out of owned core identity",
+      "positive_example": "Our supplier is Microsoft",
+      "confusing_negative": "Microsoft mention turns supplier's whole business into software",
+      "when_missing": "Preserve typed relation, no direct pass",
+      "regression_test": "test_partners_do_not_enter_core",
+      "status": "implemented"
+    },
+    {
+      "id": "COMPETITOR_EXPOSURE",
+      "evidence_required": "Explicit competition evidence, shared business exposure and a specific competitive event",
+      "decision_rule": "Competition may be material; do not confuse it with product ownership",
+      "positive_example": "A rival achondroplasia drug approval",
+      "confusing_negative": "Any competitor name anywhere passes",
+      "when_missing": "Inspection when material event not established",
+      "regression_test": "test_competition_section_is_routed_not_deleted",
+      "status": "implemented"
+    },
+    {
+      "id": "DEPENDENCY_MATERIALITY",
+      "evidence_required": "Explicit sole/critical dependency plus actual disruptive event",
+      "decision_rule": "Material supply events can pass as tier 2; ordinary partner mentions remain tier 4",
+      "positive_example": "Sole supplier halts production",
+      "confusing_negative": "Partner merely mentioned in a gambling article",
+      "when_missing": "Second-order record only",
+      "regression_test": "test_partners_do_not_enter_core",
+      "status": "implemented"
+    },
+    {
+      "id": "GEOGRAPHIC_SCOPE",
+      "evidence_required": "Named place and dated operating exposure",
+      "decision_rule": "Place is a scope/inspection signal, never sufficient evidence",
+      "positive_example": "Rule affecting an evidenced operating jurisdiction",
+      "confusing_negative": "Charlotte police implies Duke Energy",
+      "when_missing": "Inspection; do not infer operational exposure from an absent source",
+      "regression_test": "test_place_alone_is_inspection",
+      "status": "partial_geographic_inventory"
+    },
+    {
+      "id": "EVENT_SCOPE",
+      "evidence_required": "Action and matching business exposure in the same passage",
+      "decision_rule": "Do not combine unrelated clauses to meet the pass threshold",
+      "positive_example": "Launch infrastructure policy and launch-services business",
+      "confusing_negative": "A transport office title implies an airline event",
+      "when_missing": "No supported link",
+      "regression_test": "test_mixed_passages_cannot_combine_into_a_stock_link",
+      "status": "implemented_local_scope"
+    },
+    {
+      "id": "NEGATION",
+      "evidence_required": "Company is the actor or patient of a reported event",
+      "decision_rule": "A denial or rejection remains related; polarity is separate",
+      "positive_example": "Microsoft denies acquisition report",
+      "confusing_negative": "Drop a company merely because event is negated",
+      "when_missing": "Retain relatedness evidence",
+      "regression_test": "test_negated_company_event_is_still_related",
+      "status": "implemented"
+    },
+    {
+      "id": "COMPARISON",
+      "evidence_required": "Local comparison/attribution cue",
+      "decision_rule": "A comparison name is not automatically the subject of the event",
+      "positive_example": "Company's own earnings report",
+      "confusing_negative": "Unlike Microsoft, university raises tuition",
+      "when_missing": "Mention only",
+      "regression_test": "test_comparison_is_not_a_direct_event_for_compared_company",
+      "status": "implemented_local_guards"
+    },
+    {
+      "id": "TEMPORAL_SOURCE",
+      "evidence_required": "Filing dates and explicit as-of cutoff",
+      "decision_rule": "Exclude future filings and reject future-dated source evidence",
+      "positive_example": "October event supported by September filing",
+      "confusing_negative": "October filing explains a July article in a backtest",
+      "when_missing": "Fail/abstain when dated proof is unavailable",
+      "regression_test": "test_current_reports_are_updates",
+      "status": "implemented_filing_dates"
+    },
+    {
+      "id": "OWNERSHIP_CHANGE",
+      "evidence_required": "Dated acquisition/divestiture state",
+      "decision_rule": "Do not infer current product ownership from a historical statement",
+      "positive_example": "Current owned product",
+      "confusing_negative": "Previously divested business remains an owned alias",
+      "when_missing": "Require current ownership proof",
+      "regression_test": "test_owned_drug_event_resolves_biomarin_not_ascendis_alias",
+      "status": "partial_historical_state"
+    },
+    {
+      "id": "INDUSTRY_VS_STOCK",
+      "evidence_required": "Separate company and industry vocabularies",
+      "decision_rule": "Industry terms support sector context; specific stock links need separate evidence",
+      "positive_example": "Specific therapy event",
+      "confusing_negative": "drug/readout passes eight unrelated biotechs",
+      "when_missing": "Tier-3 industry context",
+      "regression_test": "test_generic_biotech_terms_do_not_pass_others",
+      "status": "implemented"
+    },
+    {
+      "id": "RARE_IDENTIFIER",
+      "evidence_required": "A unique product/business term with provenance",
+      "decision_rule": "Do not penalize an identifier for appearing in few industry members",
+      "positive_example": "VOXZOGO in a large biotech industry",
+      "confusing_negative": "Discard it because industry coverage is low",
+      "when_missing": "Keep as candidate/owned evidence",
+      "regression_test": "test_rare_owned_term_survives_large_industry",
+      "status": "implemented"
+    },
+    {
+      "id": "EVIDENCE_DOUBLE_COUNT",
+      "evidence_required": "Source-term identity across phrases/synonyms",
+      "decision_rule": "One underlying word cannot become three independent confirmations",
+      "positive_example": "Two distinct business anchors",
+      "confusing_negative": "drug + drug synonym + same word in industry gate",
+      "when_missing": "Insufficient corroboration",
+      "regression_test": "test_generic_biotech_terms_do_not_pass_others",
+      "status": "implemented"
+    },
+    {
+      "id": "BATCH_INSTABILITY",
+      "evidence_required": "Pair-specific evidence independent of comparison pool",
+      "decision_rule": "The same article/company pair must retain its decision under batch duplication/order changes",
+      "positive_example": "One or nine copies of the space memo",
+      "confusing_negative": "Crowded news day suppresses every pass",
+      "when_missing": "No batch-relative veto",
+      "regression_test": "test_batch_permutation_and_repetition_do_not_change_decision",
+      "status": "implemented"
+    },
+    {
+      "id": "OUTPUT_TRUNCATION",
+      "evidence_required": "Complete returned relevance set",
+      "decision_rule": "Do not cut passes to a display top-12/top-24 limit",
+      "positive_example": "All evidenced affected stocks returned",
+      "confusing_negative": "Valid link removed by UI row cap",
+      "when_missing": "Separate presentation limits from decision output",
+      "regression_test": "test_extra_unlisted_pass_fails_complete_truth",
+      "status": "implemented"
+    },
+    {
+      "id": "EXTRA_FALSE_LINK",
+      "evidence_required": "Complete expected ticker set",
+      "decision_rule": "Every unexpected pass is a false positive",
+      "positive_example": "Exactly the labeled set",
+      "confusing_negative": "Expected RKLB plus unrelated AAL accepted",
+      "when_missing": "Fail the case",
+      "regression_test": "test_extra_unlisted_pass_fails_complete_truth",
+      "status": "implemented"
+    },
+    {
+      "id": "FALSE_UNKNOWN",
+      "evidence_required": "A labeled positive case",
+      "decision_rule": "Unknown on a positive is a missed link, never a successful safe answer",
+      "positive_example": "Thin but explicit earnings headline",
+      "confusing_negative": "Abstain on every meaningful article",
+      "when_missing": "Count false negative and abstention",
+      "regression_test": "test_unknown_positive_is_false_negative",
+      "status": "implemented"
+    },
+    {
+      "id": "PARTIAL_LABEL",
+      "evidence_required": "Explicit truth_complete and label provenance",
+      "decision_rule": "Partial regression assertions cannot certify accuracy",
+      "positive_example": "Complete independently reviewed expected set",
+      "confusing_negative": "Negative-only bug assertion reported as overall accuracy",
+      "when_missing": "Exclude and disclose denominator",
+      "regression_test": "test_partial_assertions_are_not_accuracy_evidence",
+      "status": "implemented"
+    },
+    {
+      "id": "SOURCE_COMPLETENESS",
+      "evidence_required": "Archive manifest, expected filing count, text checksums",
+      "decision_rule": "Fail strict mode on incomplete/missing/corrupt text; label legacy caches incomplete",
+      "positive_example": "Complete PR642 text views",
+      "confusing_negative": "Capped SQLite cache presented as the full archive",
+      "when_missing": "Stop strict ingestion and report missing sources",
+      "regression_test": "test_no_twenty_thousand_character_cap",
+      "status": "implemented"
+    },
+    {
+      "id": "VALIDATION_DISTRIBUTION",
+      "evidence_required": "Positive/negative and per-category metrics",
+      "decision_rule": "Report precision, recall, exact-set accuracy and coverage; no all-negative certification",
+      "positive_example": "At least 20 positive cases and diverse examples",
+      "confusing_negative": "100 irrelevant articles return unknown",
+      "when_missing": "No relevance bar claim",
+      "regression_test": "test_no_predictions_or_all_negative_cannot_reach_bar",
+      "status": "implemented"
+    },
+    {
+      "id": "UNCLASSIFIED_FAILURE",
+      "evidence_required": "An observed mismatch outside this matrix",
+      "decision_rule": "Record a new category and lock a case before changing the implementation",
+      "positive_example": "New observed error with a reproducible case",
+      "confusing_negative": "Silently patch an individual word",
+      "when_missing": "Block a claimed comprehensive release",
+      "regression_test": "test_partial_assertions_are_not_accuracy_evidence",
+      "status": "process_gate"
+    }
+  ]
+}

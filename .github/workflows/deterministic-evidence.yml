@@ -1,0 +1,46 @@
+name: Deterministic evidence checks
+on:
+  pull_request:
+    branches: [main, cursor/article-stock-correlation-9f4c]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/
+            /scripts/
+            /eval/
+            /excel_bot/data/finviz_with_descriptions.csv
+            /data/news_intake/2026-10-17/documents.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build pinned public dictionary resources
+        run: |
+          python -m pip install PyYAML==6.0.3
+          python -m scripts.bootstrap_semantics
+      - name: Run legacy, evidence, and strict measurement regressions
+        run: python -m unittest src.test_correlation src.test_eval_harness src.test_evidence_matcher
+      - name: Export blind real scanner sample
+        run: >-
+          python scripts/export_validation_inputs.py
+          --news data/news_intake/2026-10-17/documents.json
+          --descriptions excel_bot/data/finviz_with_descriptions.csv
+          --out validation-inputs --seed 19019 --budget 200
+      - name: Equal-input Finviz-only frozen-corpus comparison
+        run: |
+          python -m src.eval_correlation --engine legacy --cases eval/cases.jsonl --descriptions excel_bot/data/finviz_with_descriptions.csv --out validation-inputs/legacy-frozen.json --changelog "Existing public corpus and Finviz-only equal inputs; not archive or holdout certification"
+          python -m src.eval_correlation --engine evidence --cases eval/cases.jsonl --descriptions excel_bot/data/finviz_with_descriptions.csv --out validation-inputs/evidence-frozen.json --changelog "Existing public corpus and Finviz-only equal inputs; not archive or holdout certification"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deterministic-validation-inputs
+          path: validation-inputs/
+          retention-days: 30

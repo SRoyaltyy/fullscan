@@ -231,6 +231,9 @@ def _masked_token_starts(text: str) -> set[int]:
         offset += len(line)
     # SAN JUAN, Puerto Rico is a dateline. BA, LMT is a ticker list: one word, then a comma.
     for match in re.finditer(r"\b(?:[A-Z]{2,}\s+){1,3}[A-Z]{2,},", text):
+        # Uppercase SEC legal names are not location datelines.
+        if re.match(r'\s*(?:INC|CORP|CORPORATION|CO|LLC|LTD|LIMITED)\b',text[match.end():],re.I):
+            continue
         spans.append((match.start(), match.end()))
     places = _place_phrases()
     tokens = list(_TOKEN.finditer(text))
@@ -251,3 +254,4 @@ def _masked_token_starts(text: str) -> set[int]:
         if any(span_start <= begin < span_end for span_start, span_end in spans):
             masked.add(begin)
     return masked
+
