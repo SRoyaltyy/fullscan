@@ -1,0 +1,300 @@
+{
+  "ticker": "AAPL",
+  "analysis_date": "2026-10-19",
+  "current_price": "343.46",
+  "net_signal": "Strong Bullish",
+  "conviction": 40,
+  "catalyst_stack": "On April 30, 2026 Apple posted a record March-quarter beat and authorized a $100 billion buyback, then printed another June-quarter beat on July 30 with $109.4 billion of revenue. The September 9 Surprise and Shine event launched iPhone 18 Pro/Pro Max and the $1,999 foldable Duo, and Duo pre-orders opened October 16 into reportedly strong demand even after Nikkei said Pro component orders were cut at least 15% on October 9. Leadership passed from Cook to Ternus on September 1 as planned, X/SpaceXAI dropped Apple from an antitrust case on September 14, and on October 14 a judge signaled likely injunctive relief versus OpenAI. Offsetting that, a September 25 jury awarded Taction $5.72 billion on haptic patents, Ternus called the memory-chip shortage an absolute crisis on October 15, and Jefferies/KeyBanc remain structurally bearish under a $343 tape.",
+  "key_assumption": "Duo demand and Services mix offset iPhone 18 Pro order cuts and memory-cost inflation, and the Taction verdict is stayed or cut on appeal rather than paid at face value before the next print.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 9,
+      "event_ids": [
+        4,
+        10,
+        11,
+        13,
+        19,
+        26
+      ],
+      "event_date": "2026-09-09",
+      "evidence_excerpt": "Apple announced the iPhone 18 Pro and iPhone 18 Pro Max on September 9, 2026",
+      "source_urls": [
+        "https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/",
+        "https://www.theverge.com/tech/991203/iphone-duo-foldable-news-specs-price-release-date"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 9,
+      "event_ids": [
+        12,
+        22
+      ],
+      "event_date": "2026-09-14",
+      "evidence_excerpt": "X Corp and SpaceXAI filed a motion to voluntarily dismiss their claims against Apple with prejudice",
+      "source_urls": [
+        "https://www.macrumors.com/2026/09/14/spacexai-drops-apple-lawsuit/",
+        "https://9to5mac.com/2026/09/14/x-and-spacexai-move-to-drop-apple-from-antitrust-lawsuit-keep-claims-against-openai/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "event_ids": [
+        2,
+        6
+      ],
+      "event_date": "2026-07-30",
+      "evidence_excerpt": "The Company posted quarterly revenue of $109.4 billion, up 16 percent year over year.",
+      "source_urls": [
+        "https://www.apple.com/newsroom/2026/07/apple-reports-third-quarter-results/",
+        "https://9to5mac.com/2026/07/30/apple-reports-q3-2026-earnings-109-4-billion-in-revenue-up-16/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Share repurchase program/increased dividend",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-04-30",
+      "evidence_excerpt": "Apple authorizes up to 100b share buyback boosts dividend from 0-26 to 0-27 per share",
+      "source_urls": [
+        "https://www.benzinga.com/news/26/04/52198140/apple-authorizes-up-to-100b-share-buyback-boosts-dividend-from-0-26-to-0-27-per-share",
+        "https://www.cnbc.com/video/2026/04/30/apple-posts-margin-beat-authorizes-100-billion-buyback.html"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "MISS",
+      "base_weight": 6,
+      "adjusted_weight": 0,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-10-19",
+      "evidence_excerpt": "J.P. Morgan Drops Sharp Take on Magnificent 7 Stocks",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/stocks/articles/j-p-morgan-drops-sharp-080910133.html"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        18,
+        20
+      ],
+      "event_date": "2026-10-12",
+      "evidence_excerpt": "JPMorgan analyst Samik Chatterjee raised his price target on Apple (AAPL) to $360 (from $340)",
+      "source_urls": [
+        "https://9to5mac.com/2026/10/12/apple-gets-a-360-price-target-from-jp-morgan-despite-iphone-demand-concerns/",
+        "https://econotimes.com/JPMorgan-Raises-Apple-Price-Target-to-360-as-Long-Term-View-Firms-1755792"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Positive personnel change (new CEO, CFO, board members)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 4,
+      "adjusted_weight": 3,
+      "event_ids": [
+        1,
+        9
+      ],
+      "event_date": "2026-04-20",
+      "evidence_excerpt": "Tim Cook will become executive chairman of Apple\u2019s board of directors and John Ternus",
+      "source_urls": [
+        "https://www.apple.com/newsroom/2026/04/tim-cook-to-become-apple-executive-chairman-john-ternus-to-become-apple-ceo/",
+        "https://www.reuters.com/technology/john-ternus-become-apple-ceo-tim-cook-become-executive-chairman-2026-04-20/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Patent litigation loss/IP theft",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 7,
+      "event_ids": [
+        15
+      ],
+      "event_date": "2026-09-25",
+      "evidence_excerpt": "a federal jury in the U.S. District Court for the Southern District of California awarded Taction Technology approximately $5.72 billion",
+      "source_urls": [
+        "https://www.reuters.com/legal/litigation/us-jury-says-apple-owes-record-57-billion-haptic-technology-patent-case-2026-09-26/",
+        "https://patentlitigator.com/analysis/taction-v-apple-haptics-verdict/"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Unfavorable commodity price move (higher input costs)",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 7,
+      "event_ids": [
+        23
+      ],
+      "event_date": "2026-10-15",
+      "evidence_excerpt": "John Ternus ... publicly described the situation as an \u201cabsolute crisis\u201d or \u201cclear crisis\u201d in an October 15, 2026, Time magazine interview.",
+      "source_urls": [
+        "https://www.asiae.co.kr/en/article/2026101604415445602",
+        "https://www.chosun.com/english/industry-en/2026/10/16/DZYIGYS5EFDFTGFVNLEDHPKFZU/"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Capacity underutilization/overexpansion write-down",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        17
+      ],
+      "event_date": "2026-10-09",
+      "evidence_excerpt": "apple-cuts-iphone-18-pro-orders-due-soft-demand-nikkei-asia-reports",
+      "source_urls": [
+        "https://www.reuters.com/business/retail-consumer/apple-cuts-iphone-18-pro-orders-due-soft-demand-nikkei-asia-reports-2026-10-09/"
+      ],
+      "confidence": 82
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        8,
+        24
+      ],
+      "event_date": "2026-08-10",
+      "evidence_excerpt": "Jefferies downgrades Apple stock cites all-glass iPhone cancellation rumor",
+      "source_urls": [
+        "https://9to5mac.com/2026/08/10/jefferies-downgrades-apple-stock-cites-all-glass-iphone-cancellation-rumor/",
+        "https://www.bloomberg.com/news/articles/2026-08-10/apple-cut-at-jefferies-on-iphone-worries-as-sell-ratings-pile-up"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "event_date": "2026-10-15",
+      "evidence_excerpt": "Meta and Apple revealed a new collaboration Thursday that will enable developers to easily run Meta's new open-weight AI model",
+      "source_urls": [
+        "https://www.cnbc.com/2026/10/15/apple-meta-partner-ai.html"
+      ],
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "event_date": "2026-09-09",
+      "evidence_excerpt": "Apple today introduced its first foldable device, named the iPhone Duo, at its Surprise and Shine event held in Cupertino.",
+      "source_urls": [
+        "https://techcrunch.com/2026/09/09/apple-unveils-its-first-foldable-the-iphone-duo/"
+      ],
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 9,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "event_date": "2026-04-30",
+      "evidence_excerpt": "The Company posted quarterly revenue of $111.2 billion, up 17 percent year over year.",
+      "source_urls": [
+        "https://www.apple.com/newsroom/2026/04/apple-reports-second-quarter-results/"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "workforce reductions",
+      "type": "negative",
+      "event_date": "2026-08-25",
+      "evidence_excerpt": "Apple revealed plans to eliminate a combined 147 jobs at three different South Bay locations, including its headquarters",
+      "source_urls": [
+        "https://www.mercurynews.com/2026/08/25/apple-jobs-tech-economy-layoff-iphone-cupertino-sunnyvale-web-ai/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "lawsuits",
+      "type": "negative",
+      "event_date": "2026-05-05",
+      "evidence_excerpt": "Apple will pay $250 million to settle a class action lawsuit accusing it of false advertising and unfair competition",
+      "source_urls": [
+        "https://www.macrumors.com/2026/05/05/apple-class-action-siri-lawsuit-settlement/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "insider selling",
+      "type": "negative",
+      "event_date": "2026-10-02",
+      "evidence_excerpt": "Tim Cook sold 191,753 Apple shares on October 2, following the settlement of 374,541 restricted stock units (RSUs) on October 1.",
+      "source_urls": [
+        "https://9to5mac.com/2026/10/06/tim-cook-sold-nearly-63-9-million-in-apple-shares-this-month/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-19",
+  "cutoff_date": null,
+  "role": "earnings"
+}

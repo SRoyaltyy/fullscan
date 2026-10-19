@@ -1,0 +1,203 @@
+{
+  "ticker": "AMZN",
+  "analysis_date": "2026-10-19",
+  "current_price": "253.00",
+  "net_signal": "Neutral",
+  "conviction": 13,
+  "catalyst_stack": "On 30 Jul 2026 Amazon reported $200.6B Q2 sales and 37% AWS growth and raised 2026 capex to about $220B, framing an AI capacity build rather than a demand miss. On 8 Sep 2026 it locked a multi-generational Qualcomm custom-silicon and optical partnership with purchase-linked warrants, after U.S. HSR clearance of the Globalstar deal on 17 Jul. Street support still rose into October (Rosenblatt to $360 on 30 Sep; Tigress to $385 on 6 Oct) even as Wells Fargo and Cantor cut targets on 12 Oct. Offsetting that, the FTC and 22 states sued over an alleged ads surcharge on 31 Aug, a judge on 9 Oct kept the March 2027 monopolization trial on calendar, and 2 Oct reports said Amazon may move about $8B of Nvidia chips into an off-balance-sheet SPV.",
+  "key_assumption": "AWS/AI demand stays high enough to absorb ~$220B of 2026 capex, and FTC/state cases end in fines or conduct remedies rather than a breakup or a lasting ads-revenue shock.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        2,
+        4
+      ],
+      "event_date": "2026-07-30",
+      "evidence_excerpt": "on July 30, 2026, with total net sales of $200.6 billion (often cited as $200.61 billion",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/amzn-20260630xex991.htm",
+        "https://ir.aboutamazon.com/files/doc_earnings/2026/q2/earnings-result/AMZN-Q2-2026-Earnings-Release.pdf"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Capacity expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-07-30",
+      "evidence_excerpt": "raised its full-year 2026 capital expenditure (capex) guidance to approximately $220 billion",
+      "source_urls": [
+        "https://www.marketscreener.com/news/amazon-com-inc-provides-earnings-guidance-for-the-third-quarter-of-2026-ce7f50dbd88fff21",
+        "https://www.cnbc.com/2026/07/30/amazon-amzn-q2-earnings-report-2026.html"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 4,
+      "event_ids": [
+        8,
+        11
+      ],
+      "event_date": "2026-09-08",
+      "evidence_excerpt": "Qualcomm has issued a stock warrant that will enable Amazon to buy up to 25 million shares worth $4 billion.",
+      "source_urls": [
+        "https://www.qualcomm.com/news/releases/2026/09/qualcomm-announces-multi-generational-product-collaboration-with",
+        "https://www.reuters.com/technology/qualcomm-amazon-develop-custom-chips-ai-data-centers-2026-09-08/"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        7,
+        12,
+        17
+      ],
+      "event_date": "2026-10-06",
+      "evidence_excerpt": "Tigress Financial (Oct 6, 2026): Maintained Buy; raised PT significantly from $315 to $385.",
+      "source_urls": [
+        "https://www.defenseworld.net/2026/10/08/analysts-weekly-ratings-changes-for-amazon-com-amzn.html"
+      ],
+      "confidence": 78
+    },
+    {
+      "taxonomy": "Regulatory approval",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-07-17",
+      "evidence_excerpt": "The waiting period expired on July 17, 2026, without a second request or challenge from the DOJ/FTC.",
+      "source_urls": [
+        "https://kalkine.com/corporate-actions/merger-acquisitionma/globalstar-nasdaqgsat-clears-us-antitrust-hurdle-in-pending-amazon-deal",
+        "https://www.mlex.com/mlex/articles/2508528/amazon-globalstar-us-antitrust-waiting-period-expired-july-17"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Adverse litigation/antitrust",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "event_ids": [
+        6,
+        20
+      ],
+      "event_date": "2026-08-31",
+      "evidence_excerpt": "FTC and 22 state attorneys general, filed a lawsuit against Amazon",
+      "source_urls": [
+        "https://www.ftc.gov/news-events/news/press-releases/2026/08/ftc-states-sue-amazon-over-secret-ad-surcharge-scheme",
+        "https://www.nytimes.com/2026/08/31/technology/ftc-amazon-lawsuit-ad-prices.html"
+      ],
+      "confidence": 91
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        22
+      ],
+      "event_date": "2026-10-12",
+      "evidence_excerpt": "Wells Fargo (Oct 12, 2026): Maintained Overweight; lowered PT from $338 to $329.",
+      "source_urls": [
+        "https://www.pricetargets.com/NASDAQ/AMZN/"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Accumulation of debt/toxic assets",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        14
+      ],
+      "event_date": "2026-10-02",
+      "evidence_excerpt": "Amazon\u2019s plan would see it transfer about $8 billion worth of chips to the SPV.",
+      "source_urls": [
+        "https://siliconangle.com/2026/10/02/report-amazon-to-offload-8b-worth-of-ai-chips-lease-them-back/",
+        "https://www.reuters.com/business/retail-consumer/amazon-seeks-offload-8-billion-nvidia-chips-investors-ft-reports-2026-10-02/"
+      ],
+      "confidence": 84
+    },
+    {
+      "taxonomy": "workforce reductions",
+      "type": "negative",
+      "event_date": "2026-10-07",
+      "evidence_excerpt": "Fewer than 1,000 employees were affected in total, according to a person familiar with the matter.",
+      "source_urls": [
+        "https://www.businessinsider.com/amazon-layoffs-hit-hundreds-of-employees-across-multiple-teams-2026-10"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "regulatory actions",
+      "type": "negative",
+      "event_date": "2026-06-25",
+      "evidence_excerpt": "The Commission has informed Amazon and Microsoft of its preliminary view that they should be designated as gatekeepers under the Digital Markets Act (DMA), for their cloud computing services",
+      "source_urls": [
+        "https://digital-strategy.ec.europa.eu/en/news/commission-reaches-preliminary-position-amazons-and-microsofts-market-leading-cloud-services-should",
+        "https://digital-markets-act.ec.europa.eu/commission-reaches-preliminary-position-amazons-and-microsofts-market-leading-cloud-services-should-2026-06-25_en"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Adverse litigation/antitrust",
+      "type": "negative",
+      "event_date": "2026-10-09",
+      "evidence_excerpt": "A Washington federal judge refused Friday to delay the Federal Trade Commission antitrust trial accusing Amazon.com Inc. of creating an artificial pricing floor",
+      "source_urls": [
+        "https://www.law360.com/articles/2536532/amazon-can-t-push-back-ftc-antitrust-trial"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-19",
+  "cutoff_date": null,
+  "role": "earnings"
+}
