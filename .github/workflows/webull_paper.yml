@@ -26,9 +26,22 @@ name: Webull paper (OpenAPI sandbox)
 # This job must not twin-submit: it uses --owner actions (no-ops if
 # owner≠actions) and paper_open journal + stable client_order_id.
 # Do not add another delayed cron.
+# 2026-10-19 retry chain (src/webull_seal_gate.py). 10-09..10-16 the seal
+# run fired before the ticket was ready, failed closed, and nothing ran
+# again before 09:25 (10-13: the seal run itself ended "failure" so the
+# success-only workflow_run never fired). Now every sender trigger
+# (h1 forward completion of ANY conclusion, a successful ticket publish,
+# and a */10 cron 07:00-09:25 ET as the skipped-trigger fallback) goes
+# through one gate: session day, before 09:25, sealed h1 plan for today
+# on main, no submit journal and no locked status. A run that passes
+# waits in-job (polling main every 2 min) for the ticket to be ready,
+# refreshes main, re-checks the gate, then runs the unchanged seal send.
+# All senders share ONE concurrency group, so only one waits/sends at a
+# time; the next queued run sees the journal and stops. Dispatch never
+# sends.
 on:
   schedule:
-    - cron: '7 12,13 * * 1-5'
+    - cron: '*/10 11-14 * * 1-5'
   workflow_run:
     workflows: ["h1 append-only forward", "Publish strategy tickets"]
     types: [completed]
@@ -37,11 +50,15 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: ${{ github.event_name == 'workflow_run' && 'webull-paper-seal' || 'webull-paper' }}
+  group: ${{ github.event_name == 'workflow_dispatch' && 'webull-paper' || 'webull-paper-seal' }}
   cancel-in-progress: false
 jobs:
   paper:
-    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.head_branch == 'main' &&
+       (github.event.workflow_run.conclusion == 'success' ||
+        github.event.workflow_run.name == 'h1 append-only forward'))
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
@@ -52,83 +69,75 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install before preflight and clock wait
+      - name: Sender gate
+        id: gate
+        env:
+          SEAL_EVENT: ${{ github.event_name }}
+          WR_NAME: ${{ github.event.workflow_run.name }}
+        run: |
+          set -euo pipefail
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          echo "bell=false" >> "$GITHUB_OUTPUT"
+          if [ "$SEAL_EVENT" = "workflow_dispatch" ]; then
+            echo "manual dispatch is not a sender"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if [ "$SEAL_EVENT" = "workflow_run" ] && [ "$WR_NAME" = "h1 append-only forward" ] && [ "$ET_HM" -ge 930 ] && [ "$ET_HM" -lt 1600 ]; then
+            # Late seal: keep the bell path, which records missed_deadline and places nothing.
+            echo "bell=true" >> "$GITHUB_OUTPUT"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          python3 -m src.webull_seal_gate check
+      - name: Wait for ready ticket (until 09:25 ET)
+        id: wait
+        if: steps.gate.outputs.go == 'true'
+        run: python3 -m src.webull_seal_gate wait --interval 120
+      - name: Report a sealed day with no ready ticket by 09:25
+        if: steps.gate.outputs.go == 'true' && steps.wait.outputs.go != 'true'
+        env:
+          WHY: ${{ steps.wait.outputs.why }}
+        run: echo "::error::sealed h1 day but no send — $WHY (fail closed, nothing placed)"
+      - name: Refresh main and re-check gate
+        id: final
+        if: steps.wait.outputs.go == 'true'
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin main
+          git reset --hard origin/main
+          python3 -m src.webull_seal_gate check
+      - name: Install client
+        if: steps.final.outputs.go == 'true' || steps.gate.outputs.bell == 'true'
         run: pip install webull-openapi-python-sdk pandas numpy pyarrow yfinance requests
-      - name: Preflight, arm and release sandbox batch at 09:30 ET
+      - name: Seal send (standing sandbox batch) or late bell record
+        id: send
+        if: steps.final.outputs.go == 'true' || steps.gate.outputs.bell == 'true'
         env:
           WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
           WEBULL_APP_SECRET: ${{ secrets.WEBULL_APP_SECRET }}
           WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
-          WANT_SUBMIT: ${{ github.event_name == 'workflow_run' }}
-          SEAL_EVENT: ${{ github.event_name }}
-          WR_NAME: ${{ github.event.workflow_run.name }}
-          PAPER_OPEN_SENDER: ${{ github.event_name == 'workflow_run' && 'seal' || 'none' }}
+          PAPER_OPEN_SENDER: seal
+          BELL: ${{ steps.gate.outputs.bell }}
         run: |
           set -euo pipefail
-          # Cron and manual dispatch are not senders. Leave the day's
-          # paper_open record untouched.
           DATE=$(TZ=America/New_York date +%F)
-          if [ "$SEAL_EVENT" != "workflow_run" ]; then
-            echo "not the h1 seal; no paper submit and no paper_open write"
-            python3 -m src.workflow_progress touch --workflow webull_paper --date "$DATE" --stage preflight --state skipped --error "not the h1 seal" || true
-            exit 0
-          fi
-          if [ "${WR_NAME:-}" = "Publish strategy tickets" ]; then
-            # Readiness retry: only a missed-because-not-ready seal send.
-            ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
-            if [ "$ET_HM" -ge 925 ]; then echo "ticket retry: past 09:25 ET; not a sender"; exit 0; fi
-            if ! python3 - "$DATE" <<'PY'
-          import json, sys
-          d = sys.argv[1]
-          ok = False
-          for line in open('research/hot_n4_clean_v4/forward_h1/h1_log.jsonl'):
-              try:
-                  r = json.loads(line)
-              except ValueError:
-                  continue
-              if r.get('kind') == 'plan' and r.get('date') == d:
-                  ok = True
-          sys.exit(0 if ok else 1)
-          PY
-            then echo "ticket retry: no sealed h1 plan for $DATE on main; not a sender"; exit 0; fi
-            if [ -f "data/paper_open/${DATE}_submit.json" ]; then
-              echo "ticket retry: submit journal already exists for $DATE; nothing to retry"; exit 0
-            fi
-            if python3 -c "import sys,json;from src.paper_open import read_status,status_locked;sys.exit(0 if status_locked(read_status('data/paper_open/${DATE}_status.json')) else 1)"; then
-              echo "ticket retry: $DATE status already locked; nothing to retry"; exit 0
-            fi
-            echo "ticket retry: sealed h1 present, no attempt yet, before 09:25 — seal path"
-          fi
           python3 -m src.workflow_progress beat --workflow webull_paper --date "$DATE" --stages preflight --stage preflight >> /tmp/progress_beat.log 2>&1 &
           echo $! > /tmp/progress_beat.pid
           trap 'kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true' EXIT
-          # WEBULL_ACCOUNT_ID may be absent. paper_open discovers it from
-          # the sandbox account list when APP_KEY and APP_SECRET are set.
-          ARGS=()
-          if [ "$WANT_SUBMIT" = true ]; then ARGS+=(--submit); fi
-          # Seal run only. Standing orders before the open fill at the
-          # open. At or after 09:30, do not pass --ready: run() writes
-          # missed_deadline instead of buying the print.
-          if [ "$SEAL_EVENT" = "workflow_run" ]; then
-            ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
-            if [ "$ET_HM" -lt 930 ]; then
-              ARGS+=(--ready)
-              echo "seal trigger before 09:30 ET — standing sandbox batch"
-            else
-              echo "seal trigger at or after 09:30 ET — bell path, missed_deadline if late"
-            fi
+          if [ "$BELL" = true ]; then
+            echo "seal at or after 09:30 ET — bell path, missed_deadline, no order"
+            python -m src.paper_open --owner actions --submit
+          else
+            echo "gate passed, ticket ready, before 09:25 ET — standing sandbox batch"
+            python -m src.paper_open --owner actions --submit --ready
           fi
-          python -m src.paper_open --owner actions "${ARGS[@]}"
           python3 -m src.workflow_progress touch --workflow webull_paper --date "$DATE" --stage preflight --state ok || true
       - name: Preserve preflight, submission and acknowledgment evidence
-        if: always()
+        if: always() && steps.send.conclusion != 'skipped'
         uses: actions/upload-artifact@v4
         with:
           name: paper-open-evidence
           path: data/paper_open/
           if-no-files-found: warn
       - name: Land outcome, including failed attempts
-        if: always()
+        if: always() && steps.send.conclusion != 'skipped'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

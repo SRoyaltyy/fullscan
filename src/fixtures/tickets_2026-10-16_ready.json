@@ -1,0 +1,117 @@
+{
+ "date": "2026-10-16",
+ "decision_readiness": {
+  "blockers": [],
+  "completed_at": "2026-10-16T08:45:14.003383-04:00",
+  "date": "2026-10-16",
+  "fingerprint": "c5c171499789b8c85768ebdba17e953834f03944d55c1c9daff1e31090f9317c",
+  "inputs": {
+   "01_daily/general/2026-10-16_predict.md": "7b2adfb851a6d2228d6476c89cdb216a2b71d0ea9da53d1b952504279c5aeece",
+   "01_daily/news/2026-10-16_actions.json": "b0bf1b9ba9903d641ae5bc46eb06b4b2311587eec76b68e564c55ccf2300fcd3",
+   "01_daily/news/2026-10-16_finviz_digest.json": "d4dbc18a00a49a37447f8de0b9b4b0c88cf8179806a45e262160f923de9aef56",
+   "01_daily/news/2026-10-16_judge.md": "e26fbc5097a22ad975c4d92419e6760c83b0e08e5813c9cb0592d808ac2c0b65",
+   "01_daily/weather/2026-10-16_weather.json": "d6a826d98c3a31e32a41ce1901868001378afb78fc63d24e6ef479bcc56b013a",
+   "data/ab_checklist/2026-10-16_ab_checklist_enriched.csv": "420ada3166706c63d5ede947eadea82d9b927bcdca82e8d119799e4bd9f3dd3e",
+   "data/factor_mine/panel.json": "aff30e4d668ce99aa91a8635435020e345e455eac15e5ad8ab036eb082901d77",
+   "data/join/2026-10-16_ranked.csv": "daed9e37540780ac1726755de6250116d2a796bdf49116c11e54727aca1a5936",
+   "data/peers/2026-10-16_peer_rs.csv": "ddfb7334677cd9faeca962d70765b32d2761a81b9eb437bd02384acd0fa85445",
+   "data/sleeve_merge/today.json": "5a147e3da404bcf2bd04e7bdecab46ffe0dc930bdcbf6b02f5f5b74b9a0cea6b",
+   "excel_bot/suggestions/suggestions.csv": "2e871ee992c9a1917cb87e188cdd37dad4d532ff94f58e11ec2a12eefbdd1071"
+  },
+  "ready": true
+ },
+ "look": {
+  "stale": false
+ },
+ "strategies": {
+  "union_hot_n4_h1": {
+   "buy": [
+    {
+     "predict": "UP",
+     "px": 16.15,
+     "px_asof": "2026-10-16T08:45:13.106470-04:00",
+     "px_src": "session_export",
+     "side": "long",
+     "src": "ohlc_hot",
+     "ticker": "BBWI"
+    },
+    {
+     "predict": "UP",
+     "px": 8.02,
+     "px_asof": "2026-10-16T08:45:13.106470-04:00",
+     "px_src": "session_export",
+     "side": "long",
+     "src": "ohlc_hot",
+     "ticker": "BLMN"
+    },
+    {
+     "predict": "UP",
+     "px": 14.38,
+     "px_asof": "2026-10-16T08:45:13.106470-04:00",
+     "px_src": "session_export",
+     "side": "long",
+     "src": "ohlc_hot",
+     "ticker": "VFC"
+    },
+    {
+     "predict": "UP",
+     "px": 70.19,
+     "px_asof": "2026-10-16T08:45:13.106470-04:00",
+     "px_src": "session_export",
+     "side": "long",
+     "src": "yday_gainer,ohlc_hot",
+     "ticker": "TRU"
+    }
+   ],
+   "buy_n": 4,
+   "clock_legal_for": "2026-10-16",
+   "clock_use": "session_open",
+   "date": "2026-10-16",
+   "family": "factor_mine",
+   "methodology": "factor_mine_recipe",
+   "name": "union_hot_n4_h1",
+   "note": "factor-mine cash-start recipe (pick_day on the session panel); sells are the continuous $10k book list-drop after min-hold; Clock-B/oppset do not widen the Webull HOT4 wire \u00b7 look look",
+   "panel_bake_date": "2026-10-15",
+   "picker": "pick_day",
+   "s": 5.526,
+   "sell": [
+    {
+     "kid_side": "long",
+     "predict": "UP",
+     "px": 43.18,
+     "px_asof": "2026-10-16T08:45:13.106470-04:00",
+     "px_src": "session_export",
+     "side": "long",
+     "src": "list-drop",
+     "ticker": "LW"
+    },
+    {
+     "kid_side": "long",
+     "predict": "UP",
+     "px": 69.03,
+     "px_asof": "2026-10-16T08:45:13.106470-04:00",
+     "px_src": "session_export",
+     "side": "long",
+     "src": "list-drop",
+     "ticker": "ETSY"
+    },
+    {
+     "kid_side": "long",
+     "predict": "UP",
+     "px": 18.58,
+     "px_asof": "2026-10-16T08:45:13.106470-04:00",
+     "px_src": "session_export",
+     "side": "long",
+     "src": "list-drop",
+     "ticker": "CHWY"
+    }
+   ],
+   "sell_n": 3,
+   "session_open": "2026-10-16",
+   "side": "long",
+   "sit": false,
+   "status": "ok",
+   "wire": "factor_mine_recipe"
+  }
+ }
+}
