@@ -1,6 +1,6 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T04:35:33.858297-04:00",
+  "generated_at": "2026-10-19T04:37:34.891310-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -182,7 +182,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -240,10 +240,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-10-19_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 3458863,
+          "said": "3458863B on disk",
           "bullets": []
         },
         {
@@ -330,13 +330,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7575,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7574,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -1249,6 +1249,41 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-19",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-19T04:37:04.833474-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-19T04:37:34.012222-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-19_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 3458863,
+          "preview": "raw=4823 usable=348 single=234 \u00b7 China Reveals Advanced Nuclear Sub Was Used to Test-Fire Missile - Bloomberg.com | CPI Test Set to Make or Break New Zealand Dollar\u2019s Losing Run - Bloomberg.com | AI Earnings and FOMC Collide as VIX Spikes - Moomoo | Nextdc Flags Earnings Risk on Melbourne Data Center Power Delay - Bloomberg.com | Brent Crude Holds Near $110 on Mideast and Ukraine Conflicts - Bloomberg.com"
+        },
+        {
+          "path": "01_daily/news/2026-10-19_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 12049,
+          "preview": "# News Parse v2 \u2014 2026-10-19T04:37:33.202068-04:00\nWindow\u224848h | news_mode=on | raw=4823 | usable=348 | single_name=234 | noise_dropped=4029\nusable polarity={'+': 10, '-': 57, 'mixed': 2, 'neutral': 279}"
+        }
+      ],
+      "preview": "raw=4823 usable=348 single=234 \u00b7 China Reveals Advanced Nuclear Sub Was Used to Test-Fire Missile - Bloomberg.com | CPI Test Set to Make or Break New Zealand Dollar\u2019s Losing Run - Bloomberg.com | AI Earnings and FOMC Collide as VIX Spikes - Moomoo | Nextdc Flags Earnings Risk on Melbourne Data Center Power Delay - Bloomberg.com | Brent Crude Holds Near $110 on Mideast and Ukraine Conflicts - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-10-19T04:37:33.202068-04:00\nWindow\u224848h | news_mode=on | raw=4823 | usable=348 | single_name=234 | noise_dropped=4029\nusable polarity={'+': 10, '-': 57, 'mixed': 2, 'neutral': 279}"
     }
   ],
   "href": {
