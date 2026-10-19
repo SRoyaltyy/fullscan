@@ -1,8 +1,8 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T04:21:57.316028-04:00",
+  "generated_at": "2026-10-19T04:22:36.211258-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-10-19.csv",
+  "export": "finviz_2026-10-18.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8935,7 +8935,7 @@
   ],
   "ticker_news": [
     {
-      "time": "2 min",
+      "time": "3 min",
       "title": "Monday's Economic and Earnings Calendar",
       "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-bounce-back-teach-earnings-third-quarter/card/monday-s-economic-and-earnings-calendar-se7fOQrlmQ3q5eCysMKY?mod=mw_FV",
       "source": "MarketWatch",
@@ -8948,7 +8948,7 @@
       ]
     },
     {
-      "time": "3 min",
+      "time": "4 min",
       "title": "SpaceX throttled Starlink in Ukraine. Neither Trump nor Elon Musk wants to own the decision.",
       "url": "https://finance.yahoo.com/technology/article/spacex-throttled-starlink-in-ukraine-neither-trump-nor-elon-musk-wants-to-own-the-decision-223411010.html",
       "source": "Yahoo Finance",
@@ -8966,7 +8966,7 @@
       ]
     },
     {
-      "time": "21 min",
+      "time": "22 min",
       "title": "MARA Sends $82.8 Million in Bitcoin to Exchanges During a Shaky October",
       "url": "https://finance.yahoo.com/markets/crypto/articles/mara-sends-82-8-million-080024073.html",
       "source": "BeInCrypto",
@@ -8976,7 +8976,7 @@
       ]
     },
     {
-      "time": "21 min",
+      "time": "22 min",
       "title": "AbbVie Presents Data for ABBV-466, a Novel Dual-Targeting Therapy Demonstrating Higher Endoscopic Remission Rates Than Either Anti-IL-23 or Anti-a4\u00df7 Monotherapy in Moderate to Severe Crohn's Disease",
       "url": "/news/403756/abbvie-presents-data-for-abbv-466-a-novel-dual-targeting-therapy-demonstrating-higher-endoscopic-remission-rates-than-either-anti-il-23-or-anti-a47-monotherapy-in-moderate-to-severe-crohns-disease",
       "source": "PR Newswire",
@@ -8985,7 +8985,7 @@
       ]
     },
     {
-      "time": "21 min",
+      "time": "22 min",
       "title": "Niu Technologies to Report Third Quarter 2026 Financial Results on Nov 16, 2026",
       "url": "/news/403757/niu-technologies-to-report-third-quarter-2026-financial-results-on-nov-16-2026",
       "source": "GlobeNewswire",
@@ -8994,7 +8994,7 @@
       ]
     },
     {
-      "time": "27 min",
+      "time": "28 min",
       "title": "Weblink International secures AvePoint agency rights to expand AI governance",
       "url": "https://www.digitimes.com/news/a20261019PD242/weblink-acer-governance-subsidiary-data.html",
       "source": "DigiTimes",
@@ -9003,7 +9003,7 @@
       ]
     },
     {
-      "time": "29 min",
+      "time": "30 min",
       "title": "Chip Investors, Watch Out: Chinas CXMT Plunges Despite Record Forecast After Samsungs Post-Outlook Slide",
       "url": "https://finance.yahoo.com/markets/stocks/articles/chip-investors-watch-china-cxmt-075218932.html",
       "source": "Stocktwits",
@@ -9013,7 +9013,7 @@
       ]
     },
     {
-      "time": "31 min",
+      "time": "32 min",
       "title": "Kaplan Fox Encourages Unicycive Therapeutics, Inc. (UNCY) Investors Seeking Recovery to Contact the Firm Before November 2, 2026",
       "url": "https://www.newsfilecorp.com/release/319642/Kaplan-Fox-Encourages-Unicycive-Therapeutics-Inc.-UNCY-Investors-Seeking-Recovery-to-Contact-the-Firm-Before-November-2-2026",
       "source": "Newsfile",
@@ -9044,7 +9044,7 @@
       ]
     },
     {
-      "time": "36 min",
+      "time": "37 min",
       "title": "Kaplan Fox & Kilsheimer LLP Encourages Beta Bionics, Inc. (BBNX) Investors With Losses to Seek Appointment as Lead Plaintiff Before November 3, 2026",
       "url": "https://www.newsfilecorp.com/release/319641/Kaplan-Fox-Kilsheimer-LLP-Encourages-Beta-Bionics-Inc.-BBNX-Investors-With-Losses-to-Seek-Appointment-as-Lead-Plaintiff-Before-November-3-2026",
       "source": "Newsfile",
@@ -9053,7 +9053,7 @@
       ]
     },
     {
-      "time": "38 min",
+      "time": "39 min",
       "title": "Elon Musk points to China's 2028 DRAM supply surge to challenge Samsung, SK Hynix pricing power",
       "url": "https://www.digitimes.com/news/a20261019VL210/elon-musk-dram-tesla-2028-samsung.html",
       "source": "DigiTimes",
@@ -9063,7 +9063,7 @@
       ]
     },
     {
-      "time": "43 min",
+      "time": "44 min",
       "title": "ACM Research bets on panel-level packaging and overseas growth as adoption risks persist",
       "url": "https://www.digitimes.com/news/a20261019PD231/acm-packaging-equipment-adoption-growth.html",
       "source": "DigiTimes",
@@ -9072,7 +9072,7 @@
       ]
     },
     {
-      "time": "44 min",
+      "time": "45 min",
       "title": "Asian tech stocks mixed after Wall St losses, eyes on earnings",
       "url": "https://finance.yahoo.com/markets/world-indices/articles/asian-stocks-start-week-back-024700529.html",
       "source": "AFP",
@@ -9105,7 +9105,7 @@
       ]
     },
     {
-      "time": "46 min",
+      "time": "47 min",
       "title": "Kaplan Fox Urges Investors of AppLovin Corporation (APP) to Seek a Leadership Role Before November 16, 2026",
       "url": "https://www.newsfilecorp.com/release/319639/Kaplan-Fox-Urges-Investors-of-AppLovin-Corporation-APP-to-Seek-a-Leadership-Role-Before-November-16-2026",
       "source": "Newsfile",
@@ -10705,5 +10705,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 184,
   "earnings_window_count": 680,
-  "overlay_at": "2026-10-19T04:21:57.316028-04:00"
+  "overlay_at": "2026-10-19T04:22:36.211258-04:00"
 }

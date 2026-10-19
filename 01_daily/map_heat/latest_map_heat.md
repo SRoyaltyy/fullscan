@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-19
 
-Export `finviz_2026-10-19.csv` · 11616 names · generated 2026-10-19T04:21:57.316028-04:00
+Export `finviz_2026-10-18.csv` · 11616 names · generated 2026-10-19T04:22:36.211258-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -280,24 +280,24 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 2 min **ZION,CLF,FITB,AGNC,CCK** Monday's Economic and Earnings Calendar (MarketWatch)
-- 3 min **SPCX** SpaceX throttled Starlink in Ukraine. Neither Trump nor Elon Musk wants to own the decision. (Yahoo Finance)
+- 3 min **ZION,CLF,FITB,AGNC,CCK** Monday's Economic and Earnings Calendar (MarketWatch)
+- 4 min **SPCX** SpaceX throttled Starlink in Ukraine. Neither Trump nor Elon Musk wants to own the decision. (Yahoo Finance)
 - 8 min **AAPL** UK regulator set to push Apple to open iPhone payment technology  report (Electronic Payments)
-- 21 min **GLXY,MARA** MARA Sends $82.8 Million in Bitcoin to Exchanges During a Shaky October (BeInCrypto)
-- 21 min **ABBV** AbbVie Presents Data for ABBV-466, a Novel Dual-Targeting Therapy Demonstrating Higher Endoscopic Remission Rates Than Either Anti-IL-23 or Anti-a4ß7 Monotherapy in Moderate to Severe Crohn's Disease (PR Newswire)
-- 21 min **NIU** Niu Technologies to Report Third Quarter 2026 Financial Results on Nov 16, 2026 (GlobeNewswire)
-- 27 min **AVPT** Weblink International secures AvePoint agency rights to expand AI governance (DigiTimes)
-- 29 min **SNDK,WDC** Chip Investors, Watch Out: Chinas CXMT Plunges Despite Record Forecast After Samsungs Post-Outlook Slide (Stocktwits)
-- 31 min **UNCY** Kaplan Fox Encourages Unicycive Therapeutics, Inc. (UNCY) Investors Seeking Recovery to Contact the Firm Before November 2, 2026 (Newsfile)
+- 22 min **GLXY,MARA** MARA Sends $82.8 Million in Bitcoin to Exchanges During a Shaky October (BeInCrypto)
+- 22 min **ABBV** AbbVie Presents Data for ABBV-466, a Novel Dual-Targeting Therapy Demonstrating Higher Endoscopic Remission Rates Than Either Anti-IL-23 or Anti-a4ß7 Monotherapy in Moderate to Severe Crohn's Disease (PR Newswire)
+- 22 min **NIU** Niu Technologies to Report Third Quarter 2026 Financial Results on Nov 16, 2026 (GlobeNewswire)
+- 28 min **AVPT** Weblink International secures AvePoint agency rights to expand AI governance (DigiTimes)
+- 30 min **SNDK,WDC** Chip Investors, Watch Out: Chinas CXMT Plunges Despite Record Forecast After Samsungs Post-Outlook Slide (Stocktwits)
+- 32 min **UNCY** Kaplan Fox Encourages Unicycive Therapeutics, Inc. (UNCY) Investors Seeking Recovery to Contact the Firm Before November 2, 2026 (Newsfile)
 - 32 min **XLY,QQQ,VFC,XLP,SPY** Stocktwits Retail Therapy: Staples Defy Market Rout In Best Week Since February  Cracker Barrel, Signet And VF Steal The Show (Stocktwits)
 - 36 min **MSCI** 'Panic' selling hits Indonesian markets on MSCI expulsion threat (Reuters)
-- 36 min **BBNX** Kaplan Fox & Kilsheimer LLP Encourages Beta Bionics, Inc. (BBNX) Investors With Losses to Seek Appointment as Lead Plaintiff Before November 3, 2026 (Newsfile)
-- 38 min **SKHY,TSLA** Elon Musk points to China's 2028 DRAM supply surge to challenge Samsung, SK Hynix pricing power (DigiTimes)
-- 43 min **ACMR** ACM Research bets on panel-level packaging and overseas growth as adoption risks persist (DigiTimes)
-- 44 min **CRWV,NVDA** Asian tech stocks mixed after Wall St losses, eyes on earnings (AFP)
+- 37 min **BBNX** Kaplan Fox & Kilsheimer LLP Encourages Beta Bionics, Inc. (BBNX) Investors With Losses to Seek Appointment as Lead Plaintiff Before November 3, 2026 (Newsfile)
+- 39 min **SKHY,TSLA** Elon Musk points to China's 2028 DRAM supply surge to challenge Samsung, SK Hynix pricing power (DigiTimes)
+- 44 min **ACMR** ACM Research bets on panel-level packaging and overseas growth as adoption risks persist (DigiTimes)
+- 45 min **CRWV,NVDA** Asian tech stocks mixed after Wall St losses, eyes on earnings (AFP)
 - 45 min **ZION,CLF,FITB,META,AGNC** Stock Market Today: Dow, S&P 500 and Nasdaq set to bounce back ahead of crucial week of tech earnings (MarketWatch)
 - 45 min **META,TSLA** Nasdaq to climb 350 points as tech stocks rebound (MarketWatch)
-- 46 min **APP** Kaplan Fox Urges Investors of AppLovin Corporation (APP) to Seek a Leadership Role Before November 16, 2026 (Newsfile)
+- 47 min **APP** Kaplan Fox Urges Investors of AppLovin Corporation (APP) to Seek a Leadership Role Before November 16, 2026 (Newsfile)
 - 56 min **BAC** These two stocks are BofAs preferred picks among European SMID chipmakers (Investing.com)
 - 1 hour **SPCX,TSLA** TSLA, SPCX Eye Green Open: Gary Black Predicts $420 SpaceX Buyout Of Tesla  Sees Announcement In Next Few Weeks (Stocktwits)
 - 1 hour **RCAT** Steyr Motors stock surges 20% premarket on Red Cat tender offer (Investing.com)
