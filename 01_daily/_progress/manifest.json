@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19T19:11:13-04:00",
+  "updated_at": "2026-10-19T19:37:54-04:00",
   "runs": [
     {
       "date": "2026-10-15",
@@ -156,6 +156,12 @@
       "workflow": "pipeline_health",
       "file": "2026-10-19_pipeline_health.json",
       "updated_at": "2026-10-19T19:11:13-04:00"
+    },
+    {
+      "date": "2026-10-19",
+      "workflow": "homepage_digest",
+      "file": "2026-10-19_homepage_digest.json",
+      "updated_at": "2026-10-19T19:37:54-04:00"
     }
   ]
 }
