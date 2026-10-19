@@ -19,27 +19,27 @@
 | Ticker | enr | base | ctx | rs_w | beat% | ind_med_w | sector | board | label |
 |--------|----:|-----:|----:|-----:|------:|----------:|--------|-------|-------|
 | ARHS | +18 | +17 | +1 | +2.0 | 62% | -0.5 | Consumer Cyclical | — | LEAD,peers↑,ind↓ |
+| ICLR | +17 | +14 | +3 | +2.2 | 100% | +2.5 | Healthcare | — | LEAD,peers↑,ind↑ |
 | AME | +17 | +16 | +1 | +1.5 | 70% | -0.2 | Industrials | — | LEAD,peers↑,ind↓ |
 | DHR | +16 | +13 | +3 | +2.1 | 67% | +2.5 | Healthcare | — | LEAD,peers↑,ind↑ |
-| SHO | +15 | +12 | +3 | +0.5 | 50% | +1.6 | Real Estate | — | LEAD,peers↑,ind↑ |
-| ATRC | +15 | +14 | +1 | +0.8 | 60% | +0.8 | Healthcare | — | LEAD,peers↓,ind↑ |
-| ASML | +15 | +12 | +3 | +2.5 | 90% | +1.5 | Technology | — | LEAD,peers↑,ind↑ |
-| TEL | +15 | +12 | +3 | +0.2 | 56% | +0.8 | Technology | — | LEAD,peers↑,ind↑ |
-| DG | +15 | +12 | +3 | +0.8 | 50% | +2.0 | Consumer Defensive | — | LEAD,peers↑,ind↑ |
-| AUPH | +15 | +16 | -1 | -2.0 | 33% | -5.4 | Healthcare | — | LAG,peers↑,ind↓ |
-| EMBC | +15 | +14 | +1 | +13.9 | 100% | +0.8 | Healthcare | — | LEAD,peers↓,ind↑ |
-| EPAM | +15 | +16 | -1 | +1.0 | 62% | -4.3 | Technology | — | LEAD,peers↓,ind↓ |
+| TEL | +16 | +13 | +3 | +0.2 | 56% | +0.8 | Technology | — | LEAD,peers↑,ind↑ |
 | SWKS | +15 | +16 | -1 | -3.1 | 11% | -1.3 | Technology | — | LAG,peers↑,ind↓ |
-| CXT | +15 | +14 | +1 | +1.7 | 80% | -1.4 | Industrials | — | LEAD,peers↑,ind↓ |
-| CP | +14 | +13 | +1 | -0.3 | 30% | +0.0 | Industrials | — | LAG,peers↑,ind↑ |
-| YPF | +14 | +15 | -1 | -3.4 | 0% | -0.3 | Energy | — | LAG,peers↑,ind↓ |
-| AMRX | +14 | +13 | +1 | +2.4 | 89% | -0.7 | Healthcare | — | LEAD,peers↑,ind↓ |
-| RGEN | +14 | +11 | +3 | +4.7 | 80% | +0.8 | Healthcare | — | LEAD,peers↑,ind↑ |
-| CDNA | +14 | +11 | +3 | +11.2 | 100% | +2.5 | Healthcare | — | LEAD,peers↑,ind↑ |
-| BIIB | +14 | +11 | +3 | +3.4 | 100% | +0.2 | Healthcare | — | LEAD,peers↑,ind↑ |
-| HLT | +14 | +11 | +3 | +0.7 | 56% | +2.4 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
-| HCA | +14 | +13 | +1 | +0.2 | 57% | -2.6 | Healthcare | — | LEAD,peers↑,ind↓ |
-| SHOO | +14 | +11 | +3 | +4.0 | 86% | +1.1 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
-| BJ | +14 | +11 | +3 | +3.9 | 88% | +2.0 | Consumer Defensive | — | LEAD,peers↑,ind↑ |
-| TME | +14 | +15 | -1 | +2.5 | 80% | -4.0 | Communication Serv | — | LEAD,peers↓,ind↓ |
+| SHO | +15 | +12 | +3 | +0.5 | 50% | +1.6 | Real Estate | — | LEAD,peers↑,ind↑ |
+| ASML | +15 | +12 | +3 | +2.5 | 90% | +1.5 | Technology | — | LEAD,peers↑,ind↑ |
+| MMSI | +15 | +14 | +1 | +3.1 | 89% | +0.8 | Healthcare | — | LEAD,peers↓,ind↑ |
+| EPAM | +15 | +16 | -1 | +1.0 | 62% | -4.3 | Technology | — | LEAD,peers↓,ind↓ |
+| TTC | +15 | +15 | +0 | +4.0 | 80% | +0.0 | Industrials | — | LEAD,peers↓ |
 | DRH | +14 | +11 | +3 | +0.9 | 70% | +1.6 | Real Estate | — | LEAD,peers↑,ind↑ |
+| WAT | +14 | +11 | +3 | +1.7 | 75% | +2.5 | Healthcare | — | LEAD,peers↑,ind↑ |
+| CDNA | +14 | +11 | +3 | +11.2 | 100% | +2.5 | Healthcare | — | LEAD,peers↑,ind↑ |
+| HLT | +14 | +11 | +3 | +0.7 | 56% | +2.4 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
+| TME | +14 | +15 | -1 | +2.5 | 80% | -4.0 | Communication Serv | — | LEAD,peers↓,ind↓ |
+| RPRX | +14 | +15 | -1 | -0.6 | 50% | -5.4 | Healthcare | — | LAG,peers↑,ind↓ |
+| AMRX | +14 | +13 | +1 | +2.4 | 89% | -0.7 | Healthcare | — | LEAD,peers↑,ind↓ |
+| SHOO | +14 | +11 | +3 | +4.0 | 86% | +1.1 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
+| HLNE | +14 | +15 | -1 | +0.2 | 50% | -2.4 | Financial | — | LEAD,peers↓,ind↓ |
+| VNT | +14 | +15 | -1 | -2.1 | 20% | -0.3 | Technology | — | LAG,peers↑,ind↓ |
+| MDLN | +13 | +12 | +1 | — | — | +0.8 | Healthcare | — | ind↑ |
+| IMO | +13 | +14 | -1 | -3.9 | 0% | -0.3 | Energy | — | LAG,peers↑,ind↓ |
+| ROST | +13 | +10 | +3 | +1.0 | 56% | +1.1 | Consumer Cyclical | — | LEAD,peers↑,ind↑ |
+| TKR | +13 | +11 | +2 | +1.5 | 60% | +0.0 | Industrials | — | LEAD,peers↑ |
