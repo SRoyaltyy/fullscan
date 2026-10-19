@@ -5,8 +5,8 @@
   "run_id": "39221339978",
   "model": "glm-5.3-flash",
   "started_at": "2026-10-19T04:34:08-04:00",
-  "updated_at": "2026-10-19T04:53:06-04:00",
-  "heartbeat_at": "2026-10-19T04:53:06-04:00",
+  "updated_at": "2026-10-19T04:53:25-04:00",
+  "heartbeat_at": "2026-10-19T04:53:25-04:00",
   "stages": [
     {
       "name": "prep",
@@ -65,10 +65,10 @@
     },
     {
       "name": "map_heat",
-      "state": "pending",
-      "started_at": "",
+      "state": "running",
+      "started_at": "2026-10-19T04:53:25-04:00",
       "ended_at": "",
-      "heartbeat_at": "",
+      "heartbeat_at": "2026-10-19T04:53:25-04:00",
       "done": 0,
       "total": 1,
       "model": "glm-5.3-flash",
