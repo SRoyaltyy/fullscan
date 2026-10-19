@@ -1,29 +1,29 @@
 {
   "version": "free-intake-v2",
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T00:03:02.226235+00:00",
-  "window_start": "2026-10-16T23:57:34.651823+00:00",
-  "window_end": "2026-10-18T23:57:34.651823+00:00",
-  "collection_profile": "deep",
-  "document_count": 5042,
-  "incoming_observations": 4926,
-  "candidate_count": 1065,
-  "review_count": 3977,
-  "dated_count": 3991,
-  "today_hk_count": 749,
+  "generated_at": "2026-10-19T00:18:30.482144+00:00",
+  "window_start": "2026-10-17T00:14:50.202073+00:00",
+  "window_end": "2026-10-19T00:14:50.202073+00:00",
+  "collection_profile": "quick",
+  "document_count": 5118,
+  "incoming_observations": 1288,
+  "candidate_count": 1070,
+  "review_count": 4048,
+  "dated_count": 4045,
+  "today_hk_count": 786,
   "class_counts": {
-    "access_control": 225,
-    "corporate_action_mna": 216,
-    "gate": 193,
-    "listing_flow": 152,
+    "access_control": 226,
+    "corporate_action_mna": 217,
+    "gate": 195,
+    "listing_flow": 153,
     "tax_fiscal": 134,
     "cat_weather": 122,
     "key_person": 119,
     "regime_state": 114,
     "subsidy": 108,
-    "blast_cyber": 100,
+    "blast_cyber": 101,
     "blast_legal": 99,
-    "print_vs_priced": 94,
+    "print_vs_priced": 95,
     "capital_return": 88,
     "corporate_action_spinoff": 72,
     "dilution": 63,
@@ -31,10 +31,10 @@
     "factor_impulse": 60,
     "labor_stop": 49,
     "credit_funding": 38,
-    "insider_flow": 37,
-    "product_harm": 32,
+    "insider_flow": 38,
+    "product_harm": 33,
     "blast_ops": 32,
-    "statement_public": 27,
+    "statement_public": 29,
     "preannounce": 22,
     "trial_readout": 21,
     "capacity": 21,
@@ -45,7 +45,7 @@
     "standard_mandate": 10,
     "market_structure": 9,
     "integrity": 6,
-    "activist_campaign": 5,
+    "activist_campaign": 6,
     "inventory_print": 5,
     "ip_ruling": 4,
     "regime_break": 4,
@@ -61,79 +61,77 @@
     "channel_stock": 1
   },
   "extraction": {
-    "unsupported_format": 23,
-    "page_text": 15,
-    "fetch_failed": 2,
-    "google_link_unresolved": 4840,
-    "pending": 110,
+    "page_text": 10,
+    "google_link_unresolved": 4913,
+    "pending": 103,
     "extraction_dead_letter": 35
   },
   "source_count": 123,
-  "polled_sources": 123,
+  "polled_sources": 54,
   "coverage_status": "degraded",
-  "unique_headline_count": 4525,
+  "unique_headline_count": 4594,
   "theme_counts": {
-    "AI models, products and infrastructure": 321,
-    "Energy, commodities and shipping": 239,
-    "Acquisitions and business restructurings": 215,
+    "AI models, products and infrastructure": 326,
+    "Energy, commodities and shipping": 242,
+    "Acquisitions and business restructurings": 216,
     "Courts, regulation and investigations": 194,
     "Central banks, inflation and rates": 166,
-    "Personnel and governance": 162,
-    "Government, legislation and trade": 155,
-    "Operational, cyber and labour disruptions": 153,
-    "Drug approvals and clinical trials": 151,
+    "Personnel and governance": 163,
+    "Government, legislation and trade": 157,
+    "Operational, cyber and labour disruptions": 154,
+    "Drug approvals and clinical trials": 153,
+    "Earnings and guidance": 149,
     "Capital returns and financing": 149,
-    "Earnings and guidance": 148,
-    "Semiconductors and hardware": 76,
+    "Semiconductors and hardware": 80,
     "Contracts, orders and capacity": 72
   },
   "source_issues": [
-    "rss_yahoo_finance",
-    "rss_ap_business",
-    "official_bls",
-    "rss_ap_topnews",
-    "official_ftc",
+    "lane_gate",
+    "lane_tax_fiscal",
+    "lane_subsidy",
     "lane_breakup_remedy",
     "lane_policy_personnel",
-    "lane_gate",
-    "lane_subsidy",
-    "lane_corporate_action_spinoff",
-    "lane_capital_return",
-    "lane_dilution",
-    "lane_sovereign_credit",
-    "lane_tax_fiscal",
-    "lane_distress_restruct",
-    "lane_factor_impulse",
     "lane_print_vs_priced",
+    "lane_factor_impulse",
     "lane_corporate_action_mna",
-    "topic_technology",
+    "lane_corporate_action_spinoff",
+    "lane_dilution",
+    "lane_capital_return",
+    "lane_distress_restruct",
     "lane_key_person",
-    "topic_products",
-    "topic_business",
-    "topic_fed",
-    "topic_fda",
-    "lane_cat_weather",
-    "lane_blast_cyber",
-    "lane_listing_flow",
-    "official_commerce",
+    "lane_sovereign_credit",
     "lane_blast_legal",
-    "topic_government",
+    "lane_blast_cyber",
+    "lane_cat_weather",
+    "lane_listing_flow",
     "lane_regime_state",
-    "sec_8-K",
+    "publisher_reuters",
+    "publisher_bloomberg",
+    "official_commerce",
+    "official_doj_search",
+    "official_court_search",
+    "rss_yahoo_finance",
+    "rss_ap_business",
+    "rss_ap_topnews",
+    "official_bls",
+    "topic_products",
+    "topic_technology",
+    "topic_business",
+    "topic_fda",
+    "topic_fed",
+    "official_ftc",
+    "topic_government",
     "topic_judgments",
     "topic_central_banks",
-    "sec_6-K",
-    "publisher_reuters",
-    "sec_4",
     "topic_geopolitics",
+    "sec_8-K",
+    "sec_6-K",
+    "sec_4",
     "sec_SC_13D",
-    "publisher_bloomberg",
     "sec_SCHEDULE_13D",
     "sec_S-1",
     "sec_S-3",
-    "sec_SC_TO-T",
-    "official_doj_search",
-    "official_court_search"
+    "sec_SC_TO-T"
   ],
   "paid_api_calls": 0,
   "llm_calls": 0,
@@ -143,7 +141,20 @@
     {
       "source": "company_aws_blog",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.683851+00:00",
+      "checked_at": "2026-10-19T00:14:51.076127+00:00",
+      "status": "ok",
+      "fetched": 20,
+      "in_window": 0,
+      "undated": 0,
+      "saturated": false,
+      "requests": 1,
+      "classes": [],
+      "duration_seconds": 0.19
+    },
+    {
+      "source": "company_google_blog",
+      "kind": "feed",
+      "checked_at": "2026-10-19T00:14:51.041407+00:00",
       "status": "ok",
       "fetched": 20,
       "in_window": 0,
@@ -154,22 +165,9 @@
       "duration_seconds": 0.23
     },
     {
-      "source": "company_google_blog",
-      "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.647165+00:00",
-      "status": "ok",
-      "fetched": 20,
-      "in_window": 0,
-      "undated": 0,
-      "saturated": false,
-      "requests": 1,
-      "classes": [],
-      "duration_seconds": 0.22
-    },
-    {
       "source": "company_microsoft_blog",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.609883+00:00",
+      "checked_at": "2026-10-19T00:14:51.034103+00:00",
       "status": "ok",
       "fetched": 10,
       "in_window": 0,
@@ -177,12 +175,12 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.22
+      "duration_seconds": 0.18
     },
     {
       "source": "company_nvidia_blog",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.607018+00:00",
+      "checked_at": "2026-10-19T00:14:51.026535+00:00",
       "status": "ok",
       "fetched": 18,
       "in_window": 1,
@@ -190,12 +188,12 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.2
+      "duration_seconds": 0.33
     },
     {
       "source": "company_openai_blog",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.660766+00:00",
+      "checked_at": "2026-10-19T00:14:51.047428+00:00",
       "status": "ok",
       "fetched": 1299,
       "in_window": 0,
@@ -203,7 +201,7 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.21
+      "duration_seconds": 0.15
     },
     {
       "source": "exchange_search",
@@ -218,7 +216,8 @@
       "classes": [
         "listing_flow"
       ],
-      "duration_seconds": 0.32
+      "duration_seconds": 0.32,
+      "scheduled_status": "not_due"
     },
     {
       "source": "index_search",
@@ -233,7 +232,8 @@
       "classes": [
         "flow_index"
       ],
-      "duration_seconds": 0.49
+      "duration_seconds": 0.49,
+      "scheduled_status": "not_due"
     },
     {
       "source": "issuer_ir_search",
@@ -246,7 +246,8 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.4
+      "duration_seconds": 0.4,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_access_control",
@@ -261,7 +262,8 @@
       "classes": [
         "access_control"
       ],
-      "duration_seconds": 1.5
+      "duration_seconds": 1.5,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_activist_campaign",
@@ -276,7 +278,8 @@
       "classes": [
         "activist_campaign"
       ],
-      "duration_seconds": 0.34
+      "duration_seconds": 0.34,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_blast_cyber",
@@ -297,7 +300,8 @@
         "cyberattack",
         "cyber attack"
       ],
-      "duration_seconds": 3.62
+      "duration_seconds": 3.62,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_blast_legal",
@@ -319,7 +323,8 @@
         "damages awarded",
         "court judgment"
       ],
-      "duration_seconds": 4.25
+      "duration_seconds": 4.25,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_blast_ops",
@@ -334,7 +339,8 @@
       "classes": [
         "blast_ops"
       ],
-      "duration_seconds": 0.5
+      "duration_seconds": 0.5,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_breakup_remedy",
@@ -349,7 +355,8 @@
       "classes": [
         "breakup_remedy"
       ],
-      "duration_seconds": 0.29
+      "duration_seconds": 0.29,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_capacity",
@@ -364,7 +371,8 @@
       "classes": [
         "capacity"
       ],
-      "duration_seconds": 0.42
+      "duration_seconds": 0.42,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_capital_return",
@@ -385,7 +393,8 @@
         "special dividend",
         "increases dividend"
       ],
-      "duration_seconds": 3.42
+      "duration_seconds": 3.42,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_cat_weather",
@@ -406,7 +415,8 @@
         "flood shuts",
         "wildfire evacuation"
       ],
-      "duration_seconds": 3.17
+      "duration_seconds": 3.17,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_channel_stock",
@@ -421,7 +431,8 @@
       "classes": [
         "channel_stock"
       ],
-      "duration_seconds": 0.36
+      "duration_seconds": 0.36,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_corporate_action_mna",
@@ -444,7 +455,8 @@
         "merger agreement",
         "tender offer"
       ],
-      "duration_seconds": 4.66
+      "duration_seconds": 4.66,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_corporate_action_spinoff",
@@ -465,7 +477,8 @@
         "spin off",
         "separates business"
       ],
-      "duration_seconds": 3.46
+      "duration_seconds": 3.46,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_credit_funding",
@@ -486,7 +499,8 @@
         "debt financing",
         "refinancing"
       ],
-      "duration_seconds": 3.3
+      "duration_seconds": 3.3,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_deal_review",
@@ -501,7 +515,8 @@
       "classes": [
         "deal_review"
       ],
-      "duration_seconds": 0.33
+      "duration_seconds": 0.33,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_demand",
@@ -516,7 +531,8 @@
       "classes": [
         "demand"
       ],
-      "duration_seconds": 0.39
+      "duration_seconds": 0.39,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_dilution",
@@ -538,7 +554,8 @@
         "share issuance",
         "registered direct offering"
       ],
-      "duration_seconds": 3.79
+      "duration_seconds": 3.79,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_distress_restruct",
@@ -559,7 +576,8 @@
         "debt restructuring",
         "defaults on"
       ],
-      "duration_seconds": 3.76
+      "duration_seconds": 3.76,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_factor_impulse",
@@ -581,7 +599,8 @@
         "payrolls",
         "inflation data"
       ],
-      "duration_seconds": 4.23
+      "duration_seconds": 4.23,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_flow_forced_liq",
@@ -596,7 +615,8 @@
       "classes": [
         "flow_forced_liq"
       ],
-      "duration_seconds": 0.42
+      "duration_seconds": 0.42,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_flow_index",
@@ -611,7 +631,8 @@
       "classes": [
         "flow_index"
       ],
-      "duration_seconds": 0.35
+      "duration_seconds": 0.35,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_flow_mechanical",
@@ -626,7 +647,8 @@
       "classes": [
         "flow_mechanical"
       ],
-      "duration_seconds": 0.27
+      "duration_seconds": 0.27,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_fx_translation",
@@ -641,7 +663,8 @@
       "classes": [
         "fx_translation"
       ],
-      "duration_seconds": 0.23
+      "duration_seconds": 0.23,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_gate",
@@ -664,7 +687,8 @@
         "complete response letter",
         "marketing authorization"
       ],
-      "duration_seconds": 4.05
+      "duration_seconds": 4.05,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_guidance",
@@ -679,7 +703,8 @@
       "classes": [
         "guidance"
       ],
-      "duration_seconds": 0.37
+      "duration_seconds": 0.37,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_input_cost",
@@ -694,7 +719,8 @@
       "classes": [
         "input_cost"
       ],
-      "duration_seconds": 0.42
+      "duration_seconds": 0.42,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_insider_flow",
@@ -709,7 +735,8 @@
       "classes": [
         "insider_flow"
       ],
-      "duration_seconds": 1.55
+      "duration_seconds": 1.55,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_integrity",
@@ -724,7 +751,8 @@
       "classes": [
         "integrity"
       ],
-      "duration_seconds": 0.34
+      "duration_seconds": 0.34,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_inventory_print",
@@ -739,7 +767,8 @@
       "classes": [
         "inventory_print"
       ],
-      "duration_seconds": 0.4
+      "duration_seconds": 0.4,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_ip_ruling",
@@ -754,7 +783,8 @@
       "classes": [
         "ip_ruling"
       ],
-      "duration_seconds": 0.32
+      "duration_seconds": 0.32,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_key_person",
@@ -779,7 +809,8 @@
         "named chairman",
         "board appointment"
       ],
-      "duration_seconds": 5.33
+      "duration_seconds": 5.33,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_labor_organize",
@@ -794,7 +825,8 @@
       "classes": [
         "labor_organize"
       ],
-      "duration_seconds": 0.4
+      "duration_seconds": 0.4,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_labor_stop",
@@ -809,7 +841,8 @@
       "classes": [
         "labor_stop"
       ],
-      "duration_seconds": 2.45
+      "duration_seconds": 2.45,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_listing_flow",
@@ -831,7 +864,8 @@
         "trading suspension",
         "direct listing"
       ],
-      "duration_seconds": 3.47
+      "duration_seconds": 3.47,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_lockup_expiry",
@@ -846,7 +880,8 @@
       "classes": [
         "lockup_expiry"
       ],
-      "duration_seconds": 0.31
+      "duration_seconds": 0.31,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_market_structure",
@@ -861,7 +896,8 @@
       "classes": [
         "market_structure"
       ],
-      "duration_seconds": 0.42
+      "duration_seconds": 0.42,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_peer_spill",
@@ -876,7 +912,8 @@
       "classes": [
         "peer_spill"
       ],
-      "duration_seconds": 0.28
+      "duration_seconds": 0.28,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_policy_personnel",
@@ -891,7 +928,8 @@
       "classes": [
         "policy_personnel"
       ],
-      "duration_seconds": 0.25
+      "duration_seconds": 0.25,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_preannounce",
@@ -906,7 +944,8 @@
       "classes": [
         "preannounce"
       ],
-      "duration_seconds": 0.39
+      "duration_seconds": 0.39,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_price_cap",
@@ -921,7 +960,8 @@
       "classes": [
         "price_cap"
       ],
-      "duration_seconds": 0.42
+      "duration_seconds": 0.42,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_print_vs_priced",
@@ -945,7 +985,8 @@
         "jobs report",
         "GDP report"
       ],
-      "duration_seconds": 4.73
+      "duration_seconds": 4.73,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_product_harm",
@@ -960,7 +1001,8 @@
       "classes": [
         "product_harm"
       ],
-      "duration_seconds": 0.39
+      "duration_seconds": 0.39,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_regime_break",
@@ -975,7 +1017,8 @@
       "classes": [
         "regime_break"
       ],
-      "duration_seconds": 0.42
+      "duration_seconds": 0.42,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_regime_state",
@@ -996,7 +1039,8 @@
         "oil prices",
         "market volatility"
       ],
-      "duration_seconds": 3.58
+      "duration_seconds": 3.58,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_regulatory_probe",
@@ -1011,7 +1055,8 @@
       "classes": [
         "regulatory_probe"
       ],
-      "duration_seconds": 0.36
+      "duration_seconds": 0.36,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_reserve_revision",
@@ -1026,7 +1071,8 @@
       "classes": [
         "reserve_revision"
       ],
-      "duration_seconds": 0.42
+      "duration_seconds": 0.42,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_rumor",
@@ -1041,7 +1087,8 @@
       "classes": [
         "rumor"
       ],
-      "duration_seconds": 0.27
+      "duration_seconds": 0.27,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_sanction_lift",
@@ -1056,7 +1103,8 @@
       "classes": [
         "sanction_lift"
       ],
-      "duration_seconds": 0.37
+      "duration_seconds": 0.37,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_sovereign_credit",
@@ -1071,7 +1119,8 @@
       "classes": [
         "sovereign_credit"
       ],
-      "duration_seconds": 0.23
+      "duration_seconds": 0.23,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_standard_mandate",
@@ -1086,7 +1135,8 @@
       "classes": [
         "standard_mandate"
       ],
-      "duration_seconds": 0.43
+      "duration_seconds": 0.43,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_statement_public",
@@ -1101,7 +1151,8 @@
       "classes": [
         "statement_public"
       ],
-      "duration_seconds": 0.46
+      "duration_seconds": 0.46,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_strategic_review",
@@ -1116,7 +1167,8 @@
       "classes": [
         "strategic_review"
       ],
-      "duration_seconds": 0.43
+      "duration_seconds": 0.43,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_subsidy",
@@ -1137,7 +1189,8 @@
         "subsidies",
         "tax credit awarded"
       ],
-      "duration_seconds": 3.76
+      "duration_seconds": 3.76,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_tax_fiscal",
@@ -1159,7 +1212,8 @@
         "fiscal package",
         "executive order"
       ],
-      "duration_seconds": 4.37
+      "duration_seconds": 4.37,
+      "scheduled_status": "not_due"
     },
     {
       "source": "lane_trial_readout",
@@ -1174,12 +1228,13 @@
       "classes": [
         "trial_readout"
       ],
-      "duration_seconds": 0.42
+      "duration_seconds": 0.42,
+      "scheduled_status": "not_due"
     },
     {
       "source": "official_bea",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.388543+00:00",
+      "checked_at": "2026-10-19T00:14:50.856657+00:00",
       "status": "ok",
       "fetched": 48,
       "in_window": 0,
@@ -1187,12 +1242,12 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.26
+      "duration_seconds": 0.24
     },
     {
       "source": "official_bls",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.385589+00:00",
+      "checked_at": "2026-10-19T00:14:50.832570+00:00",
       "status": "fallback_search",
       "fetched": 0,
       "in_window": 6,
@@ -1203,12 +1258,12 @@
       "error": "HTTPError: HTTP Error 403: Forbidden",
       "fallback_query": "site:bls.gov (release OR employment OR inflation)",
       "fallback_count": 6,
-      "duration_seconds": 0.42
+      "duration_seconds": 0.59
     },
     {
       "source": "official_boe",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.455674+00:00",
+      "checked_at": "2026-10-19T00:14:50.904560+00:00",
       "status": "ok",
       "fetched": 50,
       "in_window": 0,
@@ -1216,7 +1271,7 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.58
+      "duration_seconds": 0.45
     },
     {
       "source": "official_commerce",
@@ -1232,7 +1287,8 @@
       "error": "HTTPError: HTTP Error 403: Forbidden",
       "fallback_query": "site:commerce.gov/news/press-releases",
       "fallback_count": 0,
-      "duration_seconds": 0.4
+      "duration_seconds": 0.4,
+      "scheduled_status": "not_due"
     },
     {
       "source": "official_congress_search",
@@ -1247,7 +1303,8 @@
       "classes": [
         "tax_fiscal"
       ],
-      "duration_seconds": 0.37
+      "duration_seconds": 0.37,
+      "scheduled_status": "not_due"
     },
     {
       "source": "official_court_search",
@@ -1263,12 +1320,13 @@
         "blast_legal",
         "ip_ruling"
       ],
-      "duration_seconds": 1.78
+      "duration_seconds": 1.78,
+      "scheduled_status": "not_due"
     },
     {
       "source": "official_doj",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.557493+00:00",
+      "checked_at": "2026-10-19T00:14:50.923588+00:00",
       "status": "ok",
       "fetched": 25,
       "in_window": 0,
@@ -1276,7 +1334,7 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.15
+      "duration_seconds": 0.12
     },
     {
       "source": "official_doj_search",
@@ -1292,12 +1350,13 @@
         "blast_legal",
         "regulatory_probe"
       ],
-      "duration_seconds": 1.38
+      "duration_seconds": 1.38,
+      "scheduled_status": "not_due"
     },
     {
       "source": "official_ecb",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.425668+00:00",
+      "checked_at": "2026-10-19T00:14:50.862553+00:00",
       "status": "ok",
       "fetched": 15,
       "in_window": 1,
@@ -1305,7 +1364,7 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.85
+      "duration_seconds": 0.56
     },
     {
       "source": "official_fda_releases",
@@ -1318,14 +1377,15 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.16
+      "duration_seconds": 0.16,
+      "scheduled_status": "not_due"
     },
     {
       "source": "official_fda_search",
       "kind": "search",
-      "checked_at": "2026-10-18T23:57:45.207640+00:00",
+      "checked_at": "2026-10-19T00:14:51.858297+00:00",
       "status": "ok",
-      "fetched": 57,
+      "fetched": 30,
       "in_window": 6,
       "undated": 0,
       "saturated": false,
@@ -1334,12 +1394,12 @@
         "gate",
         "product_harm"
       ],
-      "duration_seconds": 0.31
+      "duration_seconds": 0.38
     },
     {
       "source": "official_fed_releases",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.279604+00:00",
+      "checked_at": "2026-10-19T00:14:50.789325+00:00",
       "status": "ok",
       "fetched": 20,
       "in_window": 0,
@@ -1347,14 +1407,14 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.11
+      "duration_seconds": 0.07
     },
     {
       "source": "official_fed_search",
       "kind": "search",
-      "checked_at": "2026-10-18T23:57:45.258747+00:00",
+      "checked_at": "2026-10-19T00:14:51.880120+00:00",
       "status": "ok",
-      "fetched": 22,
+      "fetched": 20,
       "in_window": 2,
       "undated": 0,
       "saturated": false,
@@ -1363,12 +1423,12 @@
         "statement_public",
         "factor_impulse"
       ],
-      "duration_seconds": 0.31
+      "duration_seconds": 0.25
     },
     {
       "source": "official_fed_speeches",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.373470+00:00",
+      "checked_at": "2026-10-19T00:14:50.806574+00:00",
       "status": "ok",
       "fetched": 15,
       "in_window": 0,
@@ -1376,7 +1436,7 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.15
+      "duration_seconds": 0.1
     },
     {
       "source": "official_federal_register",
@@ -1389,23 +1449,24 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.18
+      "duration_seconds": 0.18,
+      "scheduled_status": "not_due"
     },
     {
       "source": "official_ftc",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.523723+00:00",
+      "checked_at": "2026-10-19T00:14:50.905389+00:00",
       "status": "fallback_search",
       "fetched": 0,
-      "in_window": 1,
+      "in_window": 2,
       "undated": 0,
       "saturated": false,
       "requests": 2,
       "classes": [],
       "error": "HTTPError: HTTP Error 403: Forbidden",
       "fallback_query": "site:ftc.gov (merger OR order OR complaint)",
-      "fallback_count": 1,
-      "duration_seconds": 0.49
+      "fallback_count": 2,
+      "duration_seconds": 0.92
     },
     {
       "source": "official_ftc_search",
@@ -1421,7 +1482,8 @@
         "deal_review",
         "regulatory_probe"
       ],
-      "duration_seconds": 0.13
+      "duration_seconds": 0.13,
+      "scheduled_status": "not_due"
     },
     {
       "source": "official_scotus",
@@ -1434,7 +1496,8 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.18
+      "duration_seconds": 0.18,
+      "scheduled_status": "not_due"
     },
     {
       "source": "official_treasury",
@@ -1447,7 +1510,8 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 9.17
+      "duration_seconds": 9.17,
+      "scheduled_status": "not_due"
     },
     {
       "source": "publisher_associated_press",
@@ -1460,7 +1524,8 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.42
+      "duration_seconds": 0.42,
+      "scheduled_status": "not_due"
     },
     {
       "source": "publisher_bloomberg",
@@ -1473,7 +1538,8 @@
       "saturated": true,
       "requests": 3,
       "classes": [],
-      "duration_seconds": 1.7
+      "duration_seconds": 1.7,
+      "scheduled_status": "not_due"
     },
     {
       "source": "publisher_reuters",
@@ -1486,12 +1552,13 @@
       "saturated": true,
       "requests": 3,
       "classes": [],
-      "duration_seconds": 1.68
+      "duration_seconds": 1.68,
+      "scheduled_status": "not_due"
     },
     {
       "source": "rss_aljazeera_economy",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:34.724259+00:00",
+      "checked_at": "2026-10-19T00:14:50.252486+00:00",
       "status": "ok",
       "fetched": 25,
       "in_window": 25,
@@ -1499,44 +1566,44 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.39
+      "duration_seconds": 0.21
     },
     {
       "source": "rss_ap_business",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:34.715054+00:00",
+      "checked_at": "2026-10-19T00:14:50.247009+00:00",
       "status": "fallback_search",
       "fetched": 0,
-      "in_window": 52,
+      "in_window": 72,
       "undated": 0,
       "saturated": true,
       "requests": 2,
       "classes": [],
       "error": "HTTPError: HTTP Error 403: Forbidden",
       "fallback_query": "site:apnews.com (business OR companies OR markets)",
-      "fallback_count": 52,
-      "duration_seconds": 0.97
+      "fallback_count": 72,
+      "duration_seconds": 0.79
     },
     {
       "source": "rss_ap_topnews",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:34.714577+00:00",
+      "checked_at": "2026-10-19T00:14:50.246513+00:00",
       "status": "fallback_search",
       "fetched": 0,
-      "in_window": 22,
+      "in_window": 67,
       "undated": 0,
       "saturated": true,
       "requests": 2,
       "classes": [],
       "error": "HTTPError: HTTP Error 403: Forbidden",
       "fallback_query": "site:apnews.com (government OR technology OR economy)",
-      "fallback_count": 22,
-      "duration_seconds": 1.12
+      "fallback_count": 67,
+      "duration_seconds": 0.83
     },
     {
       "source": "rss_bbc_business",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:34.721833+00:00",
+      "checked_at": "2026-10-19T00:14:50.251911+00:00",
       "status": "ok",
       "fetched": 41,
       "in_window": 15,
@@ -1544,25 +1611,25 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.43
+      "duration_seconds": 0.33
     },
     {
       "source": "rss_bbc_world",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:34.721272+00:00",
+      "checked_at": "2026-10-19T00:14:50.251510+00:00",
       "status": "ok",
-      "fetched": 29,
-      "in_window": 24,
+      "fetched": 30,
+      "in_window": 25,
       "undated": 0,
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.31
+      "duration_seconds": 0.22
     },
     {
       "source": "rss_cnbc_economy",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:34.712083+00:00",
+      "checked_at": "2026-10-19T00:14:50.241245+00:00",
       "status": "ok",
       "fetched": 30,
       "in_window": 1,
@@ -1570,12 +1637,12 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.31
+      "duration_seconds": 0.68
     },
     {
       "source": "rss_cnbc_finance",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:34.712792+00:00",
+      "checked_at": "2026-10-19T00:14:50.241805+00:00",
       "status": "ok",
       "fetched": 30,
       "in_window": 2,
@@ -1583,12 +1650,12 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.71
+      "duration_seconds": 0.28
     },
     {
       "source": "rss_dw_business",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:34.727778+00:00",
+      "checked_at": "2026-10-19T00:14:50.261878+00:00",
       "status": "ok",
       "fetched": 20,
       "in_window": 0,
@@ -1596,12 +1663,12 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.55
+      "duration_seconds": 0.6
     },
     {
       "source": "rss_dw_world",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:34.727276+00:00",
+      "checked_at": "2026-10-19T00:14:50.261496+00:00",
       "status": "ok",
       "fetched": 11,
       "in_window": 8,
@@ -1609,12 +1676,12 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.25
+      "duration_seconds": 0.32
     },
     {
       "source": "rss_ft_world",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:34.975547+00:00",
+      "checked_at": "2026-10-19T00:14:50.462700+00:00",
       "status": "ok",
       "fetched": 11,
       "in_window": 11,
@@ -1622,12 +1689,12 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.63
+      "duration_seconds": 0.33
     },
     {
       "source": "rss_google_business",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.017889+00:00",
+      "checked_at": "2026-10-19T00:14:50.473197+00:00",
       "status": "ok",
       "fetched": 70,
       "in_window": 70,
@@ -1635,12 +1702,12 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.36
+      "duration_seconds": 0.33
     },
     {
       "source": "rss_google_commodities",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.032434+00:00",
+      "checked_at": "2026-10-19T00:14:50.529863+00:00",
       "status": "ok",
       "fetched": 100,
       "in_window": 2,
@@ -1648,12 +1715,12 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.63
+      "duration_seconds": 0.55
     },
     {
       "source": "rss_google_geopolitics",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.040707+00:00",
+      "checked_at": "2026-10-19T00:14:50.530540+00:00",
       "status": "ok",
       "fetched": 100,
       "in_window": 0,
@@ -1661,51 +1728,51 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.52
+      "duration_seconds": 0.5
     },
     {
       "source": "rss_google_macro",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.027144+00:00",
+      "checked_at": "2026-10-19T00:14:50.525391+00:00",
       "status": "ok",
       "fetched": 100,
-      "in_window": 8,
+      "in_window": 9,
       "undated": 0,
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.7
+      "duration_seconds": 0.5
     },
     {
       "source": "rss_google_markets",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.023958+00:00",
+      "checked_at": "2026-10-19T00:14:50.523047+00:00",
       "status": "ok",
       "fetched": 100,
-      "in_window": 86,
+      "in_window": 85,
       "undated": 0,
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.58
+      "duration_seconds": 0.6
     },
     {
       "source": "rss_google_us",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.155586+00:00",
+      "checked_at": "2026-10-19T00:14:50.586021+00:00",
       "status": "ok",
-      "fetched": 57,
-      "in_window": 57,
+      "fetched": 53,
+      "in_window": 53,
       "undated": 0,
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.23
+      "duration_seconds": 0.25
     },
     {
       "source": "rss_google_world",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:35.117736+00:00",
+      "checked_at": "2026-10-19T00:14:50.583992+00:00",
       "status": "ok",
       "fetched": 70,
       "in_window": 69,
@@ -1713,12 +1780,12 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.34
+      "duration_seconds": 0.32
     },
     {
       "source": "rss_marketwatch_pulse",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:34.713309+00:00",
+      "checked_at": "2026-10-19T00:14:50.242099+00:00",
       "status": "ok",
       "fetched": 30,
       "in_window": 0,
@@ -1726,12 +1793,12 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.31
+      "duration_seconds": 0.29
     },
     {
       "source": "rss_marketwatch_top",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:34.714160+00:00",
+      "checked_at": "2026-10-19T00:14:50.242740+00:00",
       "status": "ok",
       "fetched": 10,
       "in_window": 10,
@@ -1739,12 +1806,12 @@
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.31
+      "duration_seconds": 0.29
     },
     {
       "source": "rss_yahoo_finance",
       "kind": "feed",
-      "checked_at": "2026-10-18T23:57:34.728339+00:00",
+      "checked_at": "2026-10-19T00:14:50.265580+00:00",
       "status": "failed",
       "fetched": 0,
       "in_window": 0,
@@ -1753,12 +1820,12 @@
       "requests": 1,
       "classes": [],
       "error": "HTTPError: HTTP Error 404: Not Found",
-      "duration_seconds": 0.31
+      "duration_seconds": 0.26
     },
     {
       "source": "sec_4",
       "kind": "sec",
-      "checked_at": "2026-10-18T23:57:44.490035+00:00",
+      "checked_at": "2026-10-19T00:14:51.716997+00:00",
       "status": "fallback_search",
       "fetched": 0,
       "in_window": 5,
@@ -1769,12 +1836,76 @@
       "error": "HTTPError: HTTP Error 403: Forbidden",
       "fallback_query": "\"Form 4\" (insider OR filed OR filing)",
       "fallback_count": 5,
-      "duration_seconds": 0.8
+      "duration_seconds": 1.03
     },
     {
       "source": "sec_6-K",
       "kind": "sec",
-      "checked_at": "2026-10-18T23:57:44.275699+00:00",
+      "checked_at": "2026-10-19T00:14:51.700690+00:00",
+      "status": "fallback_search",
+      "fetched": 0,
+      "in_window": 8,
+      "undated": 0,
+      "saturated": false,
+      "requests": 2,
+      "classes": [],
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "fallback_query": "\"6-K\" (filed OR filing OR announces)",
+      "fallback_count": 8,
+      "duration_seconds": 0.82
+    },
+    {
+      "source": "sec_8-K",
+      "kind": "sec",
+      "checked_at": "2026-10-19T00:14:51.665467+00:00",
+      "status": "fallback_search",
+      "fetched": 0,
+      "in_window": 48,
+      "undated": 0,
+      "saturated": false,
+      "requests": 2,
+      "classes": [],
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "fallback_query": "\"8-K\" (filed OR filing OR announces)",
+      "fallback_count": 48,
+      "duration_seconds": 0.59
+    },
+    {
+      "source": "sec_S-1",
+      "kind": "sec",
+      "checked_at": "2026-10-19T00:14:51.797872+00:00",
+      "status": "fallback_search",
+      "fetched": 0,
+      "in_window": 27,
+      "undated": 0,
+      "saturated": false,
+      "requests": 2,
+      "classes": [],
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "fallback_query": "\"S-1\" (IPO OR registration OR filed)",
+      "fallback_count": 27,
+      "duration_seconds": 1.77
+    },
+    {
+      "source": "sec_S-3",
+      "kind": "sec",
+      "checked_at": "2026-10-19T00:14:51.826744+00:00",
+      "status": "fallback_search",
+      "fetched": 0,
+      "in_window": 8,
+      "undated": 0,
+      "saturated": false,
+      "requests": 2,
+      "classes": [],
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "fallback_query": "\"S-3\" (registration OR offering OR filed)",
+      "fallback_count": 8,
+      "duration_seconds": 1.89
+    },
+    {
+      "source": "sec_SCHEDULE_13D",
+      "kind": "sec",
+      "checked_at": "2026-10-19T00:14:51.765805+00:00",
       "status": "fallback_search",
       "fetched": 0,
       "in_window": 1,
@@ -1783,78 +1914,30 @@
       "requests": 2,
       "classes": [],
       "error": "HTTPError: HTTP Error 403: Forbidden",
-      "fallback_query": "\"6-K\" (filed OR filing OR announces)",
-      "fallback_count": 1,
-      "duration_seconds": 0.79
-    },
-    {
-      "source": "sec_8-K",
-      "kind": "sec",
-      "checked_at": "2026-10-18T23:57:44.224106+00:00",
-      "status": "fallback_search",
-      "fetched": 0,
-      "in_window": 39,
-      "undated": 0,
-      "saturated": true,
-      "requests": 2,
-      "classes": [],
-      "error": "HTTPError: HTTP Error 403: Forbidden",
-      "fallback_query": "\"8-K\" (filed OR filing OR announces)",
-      "fallback_count": 39,
-      "duration_seconds": 0.66
-    },
-    {
-      "source": "sec_S-1",
-      "kind": "sec",
-      "checked_at": "2026-10-18T23:57:44.786466+00:00",
-      "status": "fallback_search",
-      "fetched": 0,
-      "in_window": 17,
-      "undated": 0,
-      "saturated": false,
-      "requests": 2,
-      "classes": [],
-      "error": "HTTPError: HTTP Error 403: Forbidden",
-      "fallback_query": "\"S-1\" (IPO OR registration OR filed)",
-      "fallback_count": 17,
-      "duration_seconds": 1.2
-    },
-    {
-      "source": "sec_S-3",
-      "kind": "sec",
-      "checked_at": "2026-10-18T23:57:44.882935+00:00",
-      "status": "fallback_search",
-      "fetched": 0,
-      "in_window": 5,
-      "undated": 0,
-      "saturated": false,
-      "requests": 2,
-      "classes": [],
-      "error": "HTTPError: HTTP Error 403: Forbidden",
-      "fallback_query": "\"S-3\" (registration OR offering OR filed)",
-      "fallback_count": 5,
-      "duration_seconds": 1.32
-    },
-    {
-      "source": "sec_SCHEDULE_13D",
-      "kind": "sec",
-      "checked_at": "2026-10-18T23:57:44.696956+00:00",
-      "status": "failed",
-      "fetched": 0,
-      "in_window": 0,
-      "undated": 0,
-      "saturated": false,
-      "requests": 2,
-      "classes": [],
-      "error": "HTTPError: HTTP Error 403: Forbidden",
       "fallback_query": "\"Schedule 13D\" (stake OR filed OR activist)",
-      "fallback_count": 0,
-      "duration_seconds": 0.92
+      "fallback_count": 1,
+      "duration_seconds": 1.34
     },
     {
       "source": "sec_SC_13D",
       "kind": "sec",
-      "checked_at": "2026-10-18T23:57:44.666098+00:00",
+      "checked_at": "2026-10-19T00:14:51.763823+00:00",
+      "status": "fallback_search",
+      "fetched": 0,
+      "in_window": 4,
+      "undated": 0,
+      "saturated": false,
+      "requests": 2,
+      "classes": [],
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "fallback_query": "\"13D\" (stake OR filed OR activist)",
+      "fallback_count": 4,
+      "duration_seconds": 1.08
+    },
+    {
+      "source": "sec_SC_TO-T",
+      "kind": "sec",
+      "checked_at": "2026-10-19T00:14:51.828129+00:00",
       "status": "fallback_search",
       "fetched": 0,
       "in_window": 3,
@@ -1863,58 +1946,42 @@
       "requests": 2,
       "classes": [],
       "error": "HTTPError: HTTP Error 403: Forbidden",
-      "fallback_query": "\"13D\" (stake OR filed OR activist)",
-      "fallback_count": 3,
-      "duration_seconds": 0.73
-    },
-    {
-      "source": "sec_SC_TO-T",
-      "kind": "sec",
-      "checked_at": "2026-10-18T23:57:44.939357+00:00",
-      "status": "fallback_search",
-      "fetched": 0,
-      "in_window": 1,
-      "undated": 0,
-      "saturated": false,
-      "requests": 2,
-      "classes": [],
-      "error": "HTTPError: HTTP Error 403: Forbidden",
       "fallback_query": "\"tender offer\" (SEC OR filed OR filing)",
-      "fallback_count": 1,
-      "duration_seconds": 1.55
+      "fallback_count": 3,
+      "duration_seconds": 2.02
     },
     {
       "source": "topic_business",
       "kind": "search",
-      "checked_at": "2026-10-18T23:57:41.435925+00:00",
+      "checked_at": "2026-10-19T00:14:51.081431+00:00",
       "status": "partial_saturated",
-      "fetched": 200,
-      "in_window": 70,
+      "fetched": 100,
+      "in_window": 46,
       "undated": 0,
       "saturated": true,
-      "requests": 3,
+      "requests": 1,
       "classes": [],
-      "duration_seconds": 1.95
+      "duration_seconds": 0.64
     },
     {
       "source": "topic_central_banks",
       "kind": "search",
-      "checked_at": "2026-10-18T23:57:43.388388+00:00",
+      "checked_at": "2026-10-19T00:14:51.421105+00:00",
       "status": "partial_saturated",
-      "fetched": 200,
-      "in_window": 74,
+      "fetched": 100,
+      "in_window": 48,
       "undated": 0,
       "saturated": true,
-      "requests": 3,
+      "requests": 1,
       "classes": [],
-      "duration_seconds": 1.64
+      "duration_seconds": 0.61
     },
     {
       "source": "topic_corporate_announcements",
       "kind": "search",
-      "checked_at": "2026-10-18T23:57:43.364888+00:00",
+      "checked_at": "2026-10-19T00:14:51.357597+00:00",
       "status": "ok",
-      "fetched": 60,
+      "fetched": 30,
       "in_window": 8,
       "undated": 0,
       "saturated": false,
@@ -1925,106 +1992,106 @@
     {
       "source": "topic_fda",
       "kind": "search",
-      "checked_at": "2026-10-18T23:57:41.640183+00:00",
+      "checked_at": "2026-10-19T00:14:51.200894+00:00",
       "status": "partial_saturated",
-      "fetched": 200,
-      "in_window": 81,
+      "fetched": 100,
+      "in_window": 53,
       "undated": 0,
       "saturated": true,
-      "requests": 3,
+      "requests": 1,
       "classes": [],
-      "duration_seconds": 1.94
+      "duration_seconds": 0.56
     },
     {
       "source": "topic_fed",
       "kind": "search",
-      "checked_at": "2026-10-18T23:57:41.684406+00:00",
+      "checked_at": "2026-10-19T00:14:51.214277+00:00",
       "status": "partial_saturated",
-      "fetched": 200,
-      "in_window": 94,
+      "fetched": 100,
+      "in_window": 67,
       "undated": 0,
       "saturated": true,
-      "requests": 3,
+      "requests": 1,
       "classes": [],
-      "duration_seconds": 1.74
+      "duration_seconds": 0.61
     },
     {
       "source": "topic_geopolitics",
       "kind": "search",
-      "checked_at": "2026-10-18T23:57:43.428286+00:00",
+      "checked_at": "2026-10-19T00:14:51.421732+00:00",
       "status": "partial_saturated",
-      "fetched": 200,
-      "in_window": 175,
+      "fetched": 100,
+      "in_window": 97,
       "undated": 0,
       "saturated": true,
-      "requests": 3,
+      "requests": 1,
       "classes": [],
-      "duration_seconds": 1.88
+      "duration_seconds": 0.62
     },
     {
       "source": "topic_government",
       "kind": "search",
-      "checked_at": "2026-10-18T23:57:42.997909+00:00",
+      "checked_at": "2026-10-19T00:14:51.266880+00:00",
       "status": "partial_saturated",
-      "fetched": 200,
-      "in_window": 106,
+      "fetched": 100,
+      "in_window": 71,
       "undated": 0,
       "saturated": true,
-      "requests": 3,
+      "requests": 1,
       "classes": [],
-      "duration_seconds": 1.7
+      "duration_seconds": 0.59
     },
     {
       "source": "topic_judgments",
       "kind": "search",
-      "checked_at": "2026-10-18T23:57:43.189143+00:00",
+      "checked_at": "2026-10-19T00:14:51.356607+00:00",
       "status": "partial_saturated",
-      "fetched": 200,
-      "in_window": 38,
+      "fetched": 100,
+      "in_window": 25,
       "undated": 0,
       "saturated": true,
-      "requests": 3,
+      "requests": 1,
       "classes": [],
-      "duration_seconds": 1.75
+      "duration_seconds": 0.52
     },
     {
       "source": "topic_legislation",
       "kind": "search",
-      "checked_at": "2026-10-18T23:57:43.180012+00:00",
+      "checked_at": "2026-10-19T00:14:51.268837+00:00",
       "status": "ok",
-      "fetched": 68,
-      "in_window": 29,
+      "fetched": 47,
+      "in_window": 30,
       "undated": 0,
       "saturated": false,
       "requests": 1,
       "classes": [],
-      "duration_seconds": 0.49
+      "duration_seconds": 0.5
     },
     {
       "source": "topic_products",
       "kind": "search",
-      "checked_at": "2026-10-18T23:57:41.562368+00:00",
+      "checked_at": "2026-10-19T00:14:51.124380+00:00",
       "status": "partial_saturated",
-      "fetched": 200,
-      "in_window": 142,
+      "fetched": 100,
+      "in_window": 100,
       "undated": 0,
       "saturated": true,
-      "requests": 3,
+      "requests": 1,
       "classes": [],
-      "duration_seconds": 1.8
+      "duration_seconds": 0.54
     },
     {
       "source": "topic_technology",
       "kind": "search",
-      "checked_at": "2026-10-18T23:57:41.462861+00:00",
+      "checked_at": "2026-10-19T00:14:51.101466+00:00",
       "status": "partial_saturated",
-      "fetched": 200,
-      "in_window": 139,
+      "fetched": 100,
+      "in_window": 97,
       "undated": 0,
       "saturated": true,
-      "requests": 3,
+      "requests": 1,
       "classes": [],
-      "duration_seconds": 1.72
+      "duration_seconds": 0.6
     }
   ]
 }
