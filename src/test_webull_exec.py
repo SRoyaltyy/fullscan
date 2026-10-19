@@ -867,14 +867,14 @@ def test_empty_account_id_is_discovered_and_not_printed(tmp_path=None) -> None:
 def test_yml_warms_before_bell_and_has_one_automatic_sender() -> None:
     root = Path(__file__).resolve().parent.parent
     yml = (root / ".github/workflows/webull_paper.yml").read_text()
-    assert "7 12,13" in yml
+    assert "cron: '*/10 11-14 * * 1-5'" in yml
     assert "src.paper_open" in yml
     assert "--owner actions" in yml
     # --ready is the seal trigger only, and only before 09:30 ET.
     assert "h1 append-only forward" in yml
     assert "workflow_run:" in yml
-    assert "-lt 930" in yml
-    assert yml.index("[ \"$SEAL_EVENT\" = \"workflow_run\" ]") < yml.index("ARGS+=(--ready)")
+    assert "-ge 930" in yml
+    assert yml.index("webull_seal_gate check") < yml.rindex("--submit --ready")
     assert "  push:" not in yml
     assert "src.webull_exec" not in (root / ".github/workflows/open_0930.yml").read_text()
     pub = (root / ".github/workflows/publish_strategy_tickets.yml").read_text()
@@ -885,10 +885,9 @@ def test_yml_warms_before_bell_and_has_one_automatic_sender() -> None:
     assert "data/paper_open/" not in pub
     assert "webull_last.json" not in pub
     assert "PAPER_OPEN_SENDER" in yml
-    assert "github.event_name == 'workflow_run'" in yml
-    assert "github.event_name == 'schedule'" not in yml
+    assert "github.event_name == 'workflow_dispatch'" in yml
     assert "inputs.submit" not in yml
-    assert "not the h1 seal; no paper submit and no paper_open write" in yml
+    assert "manual dispatch is not a sender" in yml
     owner = (root / "00_grounding" / "paper_open_owner.json").read_text()
     assert '"owner": "actions"' in owner
 

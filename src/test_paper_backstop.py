@@ -161,16 +161,17 @@ def test_workflow_and_timer_contract() -> None:
     installer = (ROOT / "scripts" / "install_paper_backstop.sh").read_text(encoding="utf-8")
     assert h1.startswith("name: h1 append-only forward\n")
     assert 'workflows: ["h1 append-only forward", "Publish strategy tickets"]' in paper
-    # Ticket-publish wake is a readiness retry only: sealed h1, pre-09:25, no prior attempt.
-    assert 'if [ "$ET_HM" -ge 925 ]; then echo "ticket retry: past 09:25 ET; not a sender"; exit 0; fi' in paper
-    assert "no sealed h1 plan for $DATE on main; not a sender" in paper
-    assert 'data/paper_open/${DATE}_submit.json' in paper
-    assert "types: [completed]" in paper
-    assert "branches: [main]" in paper
+    # 2026-10-19 retry chain: one gate (src.webull_seal_gate) for every sender trigger.
+    assert "python3 -m src.webull_seal_gate check" in paper
+    assert "python3 -m src.webull_seal_gate wait" in paper
+    assert paper.index("webull_seal_gate wait") < paper.index("git reset --hard origin/main") < paper.rindex("--submit --ready")
+    assert "steps.final.outputs.go == 'true'" in paper
     assert "github.event.workflow_run.conclusion == 'success'" in paper
     assert "github.event.workflow_run.head_branch == 'main'" in paper
     assert "webull-paper-seal" in paper
-    assert "-lt 930" in paper
+    assert "cron: '*/10 11-14 * * 1-5'" in paper
+    assert "manual dispatch is not a sender" in paper
+    assert "-ge 930" in paper
     assert "OnCalendar=Mon..Fri *-*-* 09:12:00 America/New_York" in timer
     assert "Persistent=false" in timer
     assert "Unit=fullscan-paper-backstop.service" in timer

@@ -149,37 +149,30 @@ def test_h1_seal_starts_webull_paper() -> None:
     h1 = (WF / "h1_forward.yml").read_text(encoding="utf-8")
     assert h1.startswith("name: h1 append-only forward\n")
     assert 'workflows: ["h1 append-only forward", "Publish strategy tickets"]' in paper
-    # Ticket-publish wake is a readiness retry only: sealed h1, pre-09:25, no prior attempt.
-    assert 'if [ "$ET_HM" -ge 925 ]; then echo "ticket retry: past 09:25 ET; not a sender"; exit 0; fi' in paper
-    assert "no sealed h1 plan for $DATE on main; not a sender" in paper
-    assert 'data/paper_open/${DATE}_submit.json' in paper
-    assert "types: [completed]" in paper
-    assert "branches: [main]" in paper
+    # 2026-10-19 retry chain: one gate (src.webull_seal_gate) for every sender trigger.
+    assert "python3 -m src.webull_seal_gate check" in paper
+    assert "python3 -m src.webull_seal_gate wait" in paper
+    assert paper.index("webull_seal_gate wait") < paper.index("git reset --hard origin/main") < paper.rindex("--submit --ready")
+    assert "steps.final.outputs.go == 'true'" in paper
     assert "github.event.workflow_run.conclusion == 'success'" in paper
     assert "github.event.workflow_run.head_branch == 'main'" in paper
     assert "webull-paper-seal" in paper
-    # Standing send only before the open. The cron path does not pass --ready.
-    assert "[ \"$SEAL_EVENT\" = \"workflow_run\" ]" in paper
-    assert "ET_HM" in paper
-    assert "-lt 930" in paper
-    assert paper.index("workflow_run") < paper.index("ARGS+=(--ready)")
-    assert "cron: '7 12,13 * * 1-5'" in paper
+    assert "cron: '*/10 11-14 * * 1-5'" in paper
+    assert "manual dispatch is not a sender" in paper
+    assert "-ge 930" in paper
     assert "--owner actions" in paper
     assert "api.webull.com" not in paper
 
 
 def test_webull_backup_schedule_is_clock_gated() -> None:
     yml = (WF / "webull_paper.yml").read_text()
-    assert "cron: '7 12,13 * * 1-5'" in yml
+    assert "cron: '*/10 11-14 * * 1-5'" in yml
     assert 'src.paper_open' in yml
     assert yml.index('pip install') < yml.index('python -m src.paper_open')
-    assert "github.event_name == 'schedule'" not in yml
     assert "inputs.submit" not in yml
     assert "PAPER_OPEN_SENDER" in yml
-    assert 'not the h1 seal; no paper submit and no paper_open write' in yml
-    assert yml.index('SEAL_EVENT" != "workflow_run"') < yml.index("python -m src.paper_open")
-    assert "webull-paper" in yml
-    assert "webull-paper-seal" in yml
+    # The cron is a sender only through the gate (sealed h1, pre-09:25, no attempt).
+    assert yml.index('webull_seal_gate check') < yml.index("python -m src.paper_open")
 
 
 def test_tickets_install_requests() -> None:
