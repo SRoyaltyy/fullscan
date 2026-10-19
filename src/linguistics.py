@@ -101,6 +101,39 @@ FINANCIAL_EVENT = re.compile(r'\b(?:earnings|revenue|profit|guidance|shares|stoc
 EVENT = re.compile(r'(?:'+EVENT.pattern+r'|\b(?:unveil\w*|complet\w*|acquisition|tender offer|disclos\w*|files?|filed|form\s+4|waves?\s+goodbye|doubl\w*|diverg\w*|plung\w*)\b)',re.I)
 EVENT = re.compile(r'(?:'+EVENT.pattern+r'|\b(?:unveil\w*|complet\w*|acquisition|tender\s+offer|deal|disclos\w*|files?|form\s+4|waves?\s+goodbye)\b|\bstocks?\b.{0,45}\b(?:double\w*|diverg\w*|plung\w*|fall\w*|ris\w*|gain\w*|los\w*|down|up)\b)',re.I)
 COMPARISON = re.compile(r'\b(?:unlike|compared (?:with|to)|similar to|such as|for example|like)\b', re.I)
+
+
+@lru_cache(maxsize=1)
+def verb_lemmas() -> frozenset[str]:
+    """Local dictionary POS inventory, not a learned model or an API call."""
+    from .semantic_lookup import load_senses
+    index,_=load_senses()
+    return frozenset(word for word,senses in index.items() if ' ' not in word and any(s[3]=='v' for s in senses))
+
+
+@lru_cache(maxsize=1)
+def verb_only_lemmas() -> frozenset[str]:
+    from .semantic_lookup import load_senses
+    index,_=load_senses()
+    return frozenset(word for word,senses in index.items() if ' ' not in word and any(s[3]=='v' for s in senses) and not any(s[3]=='n' for s in senses))
+
+
+@lru_cache(maxsize=10000)
+def has_event(text: str) -> bool:
+    # Headlines express events through ordinary verbs, not just a small
+    # financial trigger list. Identity and materiality are separate gates.
+    if EVENT.search(text):return True
+    words=[m.group() for m in TOKEN.finditer(text)]
+    for i,raw in enumerate(words):
+        base=lemma(raw)
+        if base not in verb_lemmas():continue
+        previous=words[i-1].lower() if i else ''
+        if previous in {'a','an','the'}:continue
+        if base in verb_only_lemmas():return True
+        if raw.lower()!=base and (raw.lower().endswith(('s','ed','ing')) or raw.lower() in IRREGULAR):return True
+        if previous in {'to','will','would','could','should','can','may','must'}:return True
+        if i and words[i-1].lower().endswith('s') and lemma(words[i-1])!=words[i-1].lower():return True
+    return False
 DISRUPTION = re.compile(r'\b(?:sole|single[- ]source|exclusive|critical|material)\b.*\b(?:halt\w*|shutdown|shortage|disrupt\w*|outage|bankrupt\w*|ban\w*|recall\w*)\b|\b(?:halt\w*|shutdown|shortage|disrupt\w*|outage|bankrupt\w*)\b', re.I)
 
 
@@ -134,7 +167,7 @@ def passages(text: str, title: str = '') -> list[Passage]:
             if not key or key in seen:
                 continue
             seen.add(key)
-            result.append(Passage(piece, frozenset(terms(piece)), len(result), line_index == 0, bool(EVENT.search(piece))))
+            result.append(Passage(piece, frozenset(terms(piece)), len(result), line_index == 0, has_event(piece)))
     return result
 
 

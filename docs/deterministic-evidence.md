@@ -99,7 +99,7 @@ Rebuild profile caches after changing stock extraction. A cache preserves the
 facts extracted at build time; a newer matcher cannot recover a missing brand
 or paragraph context from a cache that omitted it.
 
-Compiler `stock-evidence-2.2` rejects caches without its matching version.
+Compiler `stock-evidence-2.3` rejects caches without its matching version.
 It retains founding dates, former names and headquarters as history rather
 than operating vocabulary. Short business context cannot bridge those facts.
 Calendar words cannot qualify as independent business anchors, and an issuer
@@ -147,6 +147,26 @@ shortened name. Publisher removal uses only the last source suffix.
 CI can infer all three exported primary-headline sets from existing public
 repository inputs and store compact ID/pass outputs as artifacts. No private
 annotations are uploaded or exposed. Frozen labels are scored separately.
+
+Candidate2.3 uses the pinned dictionary's verb POS inventory and grammatical
+inflection cues to identify ordinary headline predicates. Ambiguous noun/verb
+forms need inflection or a local grammatical cue; attributive words after a
+determiner are excluded. This supplements explicit event nouns and does not
+relax issuer identity or business-exposure requirements. Common-word company
+names still require corporate usage, case/financial context and public-role
+guards. Explicit article-side industry types can veto incompatible short names.
+Exact concatenation of all legal-name tokens is allowed; spelling neighbors
+and arbitrary substrings remain distinct.
+
+`scripts/materialize_filing_texts.py` is a build-time reader of the existing
+PR642 artifacts. It uses checked HTTP byte ranges to copy company/filing
+manifests and complete text objects, verifies stored and decoded text digests,
+and leaves originals in their archive. GitHub authorization is used only on
+the GitHub API; it is not forwarded to signed storage URLs. No content-length
+or document-count cap is applied to selected issuers. Repeated `--ticker`
+selects an explicit diagnostic scope; omitting it reads every issuer in a shard.
+Hosted LUV/SPCX probes verify full text/date ingestion, not whole-universe
+relevance accuracy. Their source artifacts are from verified run39053884472.
 
 ## Measurement and release bar
 

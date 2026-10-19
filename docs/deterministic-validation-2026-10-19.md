@@ -157,3 +157,34 @@ links;61 uncertain cases excluded. Known story overlaps are flagged, leaving
 No candidate output from that sample has been inspected at this checkpoint.
 Labels are assistant-authored, not independently human-validated. The 90%
 production bar remains unproven.
+
+## Candidate2.2 unseen result and regression tradeoffs
+
+Hosted run39286561182 at e8352267 completed142 tests and all existing corpus
+assertions. Frozen candidate source was unchanged. On seed19021, candidate2.2
+scored **112/139 exact sets (80.6%),16TP5FP25FN; precision76.2%,recall39.0%**.
+Only15/37 positive cases were exact. The provisional novel-story subset was
+105/128 exact,10TP4FP22FN. Legacy on identical inputs was100/139 exact,
+0TP36FP41FN. Sixty-one uncertain cases were excluded; this does not establish
+accuracy on their policy/ownership categories.
+
+The original audited development set also regressed from154/157 exact at the
+older engine to149/157 exact (33TP1FP7FN). Candidate2.2 therefore improved the
+adapted second set while losing earlier cases and failing the third sample.
+All results and original annotations are retained. Do not claim generalization
+or enable the candidate. Seed19021 is now development data for the next round.
+
+Candidate2.3 replaces the narrow event-verb bottleneck with local dictionary
+POS/inflection cues, normalizes exact legal-token concatenations, and tightens
+generic-segment, public-officer, geographic-short-name, quote-page and industry
+type guards. The current local suites pass157 tests including seven source
+transport tests. CI will measure all three prior samples and reserve seed19022,
+excluding600 prior primary headlines, for a new blind test. No seed19022 titles
+or outputs have been inspected at this checkpoint.
+
+The complete PR642 archive is available in12 published Actions artifacts:
+23,635 filings for2,032 tickers. The old section cache must not be confused
+with this complete pinned archive, or with the wider5,961-ticker Finviz universe.
+A selective verified text reader and two full-issuer ingestion probes are added
+to make the complete text available to preprocessing without transferring every
+binary original. Full-source relevance accuracy remains unmeasured.

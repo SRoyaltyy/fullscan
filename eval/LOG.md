@@ -217,3 +217,20 @@ accordingly)
   Label SHA256:52aa30c933780652f898f62f352e8cb40bfbfea2b0e818126b8668c8b34689ac.
   Third-sample outputs are not inspected at this code checkpoint.
 
+## 2026-10-20 HKT - Candidate2.2 fails third sample;2.3 mechanism repair
+
+- Hosted e8352267/39286561182:142 tests pass; existing19 regressions and3 targets pass.
+- First seed19021 result:112/139 exact,16TP5FP25FN, precision76.2%,recall39.0%.
+  Novel-story subset105/128 exact,10TP4FP22FN. Same-input legacy100/139 exact,
+  0TP36FP41FN.61 unresolved excluded. Labels remain provisional/assistant-authored.
+- Regression tradeoff:original audited set149/157 exact,33TP1FP7FN, below the older
+  154/157 checkpoint. Seed19020 remains153/158,35TP0FP5FN. Preserve all results.
+- Seed19021 is now development data. Candidate2.3 adds dictionary POS/inflection
+  predicate recognition, exact joined legal tokens, and stronger public-role,
+  geographic, industry-type, directory and generic-segment guards. No ticker patch.
+- Current local regression/source-reader suites:157 tests. Fourth sample seed19022
+  will exclude all600 prior primary headlines; no fourth-sample output inspected.
+- Added build-only selective ZIP text materialization from the complete PR642
+  archive, with byte-range validation, text hashes, path checks and credentials
+  confined to GitHub API. Two issuer probes are diagnostics, not broad accuracy.
+

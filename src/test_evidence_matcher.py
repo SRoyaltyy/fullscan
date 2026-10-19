@@ -61,6 +61,47 @@ class EvidenceTests(unittest.TestCase):
   hit=link_articles(b,[{'id':'x','text':'A man faces arson charges after a retail store fire.'}])[0]
   self.assertFalse(any(r['pass'] for r in hit['stocks']))
 
+ def test_dictionary_predicates_cover_ordinary_company_headlines(self):
+  b=build_board([{'ticker':'XR','name':'Example Devices Corp','industry':'Devices'}],engine='evidence')
+  for text in ('Example Devices collaborates on a new design.','Example Devices names a new executive.','Example Devices receives a stock grant.','Example Devices shares jump.'):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'XR'},text)
+
+ def test_joining_legal_tokens_is_identity_not_a_spelling_neighbor(self):
+  b=build_board([{'ticker':'OIL','name':'Exxon Mobil Corp','industry':'Oil'},
+                {'ticker':'NEIGHBOR','name':'Exxon Mobile Corp','industry':'Phones'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'ExxonMobil signals higher earnings.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'OIL'})
+
+ def test_public_officer_is_not_a_common_word_company(self):
+  b=build_board([{'ticker':'CITY','name':'City Holding Co','industry':'Banks'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'The city police chief resigns.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_geographic_fragment_is_not_a_company_short_name(self):
+  b=build_board([{'ticker':'GOOS','name':'Canada Goose Holdings Inc','industry':'Apparel'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Air Canada launches flights to a new city.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_generic_segment_prefixes_are_not_operating_brands(self):
+  b=build_board([{'ticker':'TEST','name':'Example Financial Inc','industry':'Banking','description':'Example Financial operates through two segments. The Commercial Lending segment offers loans. The Commercial Property segment offers real estate financing.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Top green hydrogen companies: commercial production capacity and investments.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_explicit_industry_type_vetoes_incompatible_short_name(self):
+  b=build_board([{'ticker':'SHOP','name':'Citi Trends Inc','industry':'Retail Apparel'},
+                {'ticker':'BANK','name':'Example Financial Inc','industry':'Banks Regional'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Citi becomes latest bank to restrict account access.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_ampersand_quote_directory_does_not_create_event(self):
+  self.assertFalse(self.passed('Apple (AAPL) stock price, news, quote & history - Yahoo Finance'))
+
+ def test_lowercase_style_preserves_unique_owned_brand(self):
+  b=build_board([{'ticker':'OWN','name':'Example Medicines Inc','industry':'Biotech','description':'We manufacture Zepbound for obesity.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'fda approves zepbound for obesity.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'OWN'})
+
  def test_one_named_bank_rule_does_not_become_sector_policy(self):
   b=build_board([{'ticker':'BANK','name':'Example Financial Inc','industry':'Banks','description':'We offer bank accounts and provide access to accounts through online agents.'}],engine='evidence')
   hit=link_articles(b,[{'id':'x','text':'ZedBank becomes latest bank to restrict agents from accessing accounts.'}])[0]

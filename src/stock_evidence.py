@@ -6,6 +6,7 @@ never becomes an owned product merely because it appeared in a filing.
 from __future__ import annotations
 
 import hashlib
+import json
 import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
@@ -15,7 +16,7 @@ from .linguistics import GENERIC, STOP, TOKEN, lemma, terms, tokens
 from .places import CITIES, STATES
 from .aliases import _COUNTRIES
 
-COMPILER_VERSION = 'stock-evidence-2.2'
+COMPILER_VERSION = 'stock-evidence-2.3'
 
 _LOCATIONS = {p.lower() for p in list(CITIES)+list(STATES)+list(_COUNTRIES)}
 _LOCATION_RX = re.compile(r'\b(?:'+'|'.join(re.escape(p) for p in sorted(_LOCATIONS,key=len,reverse=True))+r')\b',re.I)
@@ -45,7 +46,7 @@ RELATION_CUES = {
 }
 OWN = re.compile(r'\b(?:our|we|its|company|it)\b.{0,90}\b(?:develop\w*|manufactur\w*|market\w*|sell\w*|offer\w*|design\w*|commercializ\w*|produce\w*|own\w*|launch\w*)\b', re.I)
 PROPER = re.compile(r'\b(?:[A-Z][A-Za-z0-9-]*)(?:\s+(?:[A-Z][A-Za-z0-9-]*)){0,4}\b')
-BRAND = re.compile(r'\b(?:[A-Z][A-Za-z0-9-]+(?:\s+[A-Z][A-Z0-9-]{1,})+|[A-Z][a-z0-9]+[A-Z][A-Za-z0-9-]*|[A-Z][A-Z0-9-]{2,})\b')
+BRAND = re.compile(r'\b(?:[A-Z][A-Za-z0-9-]+(?:\s+[A-Z][A-Z0-9-]{1,})+|[A-Z][a-z0-9]+[A-Z][A-Za-z0-9-]*|[A-Z][A-Z0-9-]{2,}|[A-Z][a-z][A-Za-z0-9-]{2,})\b')
 BRAND_DENY = frozenset('FDA SEC CEO CFO COO CTO GAAP US USA UK EU AI API GPU CPU NASA NYSE NASDAQ ITEM PART NOT THE AND FOR OUR INC LLC LTD CORP'.lower().split())
 HISTORY = re.compile(r'\b(?:was|were|is)\s+(?:founded|formed|incorporated|established|headquartered|domiciled)\b|\bformerly known as\b|\bchanged its name\b',re.I)
 
@@ -142,6 +143,13 @@ def profile_terms(text: str) -> set[str]:
 def build_profile(row: dict, catalog: Catalog) -> Profile:
     ticker = row['ticker'].upper()
     out = Profile(ticker, row.get('name',''), row.get('industry',''), row.get('sector',''))
+    catalog_source={'source':'company_catalog','sha256':hashlib.sha256(json.dumps([out.name,out.industry,out.sector]).encode()).hexdigest()}
+    out.sources.append(catalog_source)
+    from .correlation import _alias
+    legal_words=_alias(out.name).split()
+    if len(legal_words)>1:
+        ix=_fact(out,'company_alias',''.join(legal_words),out.name,catalog_source,'legal name token concatenation')
+        out.facts[ix].confidence='exact_legal_tokens'
     chunks = list(row.get('filing_sections') or [])
     description = str(row.get('description') or '')
     if description:
@@ -183,7 +191,7 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
                 for m in re.finditer(r'\b(?:The|the|Its|its)\s+([A-Z][A-Za-z0-9-]*(?:\s+[A-Z][A-Za-z0-9-]*){1,3})\s+segment\b',sentence):
                     segments[m.group(1).split()[0]][m.group(1)]=sentence
             for brand,owned in segments.items():
-                if len(owned)>=2 and brand.lower() not in BRAND_DENY:
+                if len(owned)>=2 and brand.lower() not in BRAND_DENY|STOP|GENERIC:
                     ix=_fact(out,'operating_brand',brand,' '.join(owned.values()),source,'operating segments')
                     out.facts[ix].confidence='shared_owned_segment_name'
         if chunk.get('complete') is False:
@@ -263,6 +271,8 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
                     for m in BRAND.finditer(sentence):
                         value = m.group().strip()
                         if len(value) < 3 or value.lower() in BRAND_DENY or value.lower() in (out.name.lower(), ticker.lower()):
+                            continue
+                        if value.lower() in STOP|GENERIC or value.lower() in locations_in(value):
                             continue
                         if not any(tok not in STOP for tok in tokens(value)):
                             continue
