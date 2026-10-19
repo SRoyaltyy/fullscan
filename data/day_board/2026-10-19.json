@@ -1,16 +1,15 @@
 {
   "date": "2026-10-19",
-  "generated_at": "2026-10-19T05:45:21.960850-04:00",
+  "generated_at": "2026-10-19T05:45:45.344394-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING News judge MD `01_daily/news/2026-10-19_judge.md` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-10-19_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-10-19_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -566,11 +565,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -578,26 +577,32 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-10-19_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 7572616,
+          "said": "27 rows",
+          "bullets": [
+            "ARHS, AME, EPAM, ELV, SWKS, AUPH, YPF, TME"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-19_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8363397,
+          "said": "25 rows",
+          "bullets": [
+            "ARHS, AME, DHR, SHO, ATRC, ASML, TEL, DG"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "ARHS, AME, DHR, SHO, ATRC"
+      ]
     },
     {
       "key": "catalyst",
@@ -773,11 +778,13 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-19_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8363397,
+          "said": "25 rows",
+          "bullets": [
+            "ARHS, AME, DHR, SHO, ATRC, ASML, TEL, DG"
+          ]
         },
         {
           "key": "join",
@@ -1662,6 +1669,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-19",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-19T05:45:44.537224-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-19_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7572616,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, AME, EPAM, ELV, SWKS"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-19_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8363397,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, AME, DHR, SHO, ATRC"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, AME, EPAM, ELV, SWKS \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, AME, DHR, SHO, ATRC"
     }
   ],
   "href": {
