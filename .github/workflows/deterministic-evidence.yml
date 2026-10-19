@@ -38,6 +38,7 @@ jobs:
         run: |
           python -m src.eval_correlation --engine legacy --cases eval/cases.jsonl --descriptions excel_bot/data/finviz_with_descriptions.csv --out validation-inputs/legacy-frozen.json --changelog "Existing public corpus and Finviz-only equal inputs; not archive or holdout certification"
           python -m src.eval_correlation --engine evidence --cases eval/cases.jsonl --descriptions excel_bot/data/finviz_with_descriptions.csv --out validation-inputs/evidence-frozen.json --changelog "Existing public corpus and Finviz-only equal inputs; not archive or holdout certification"
+          python scripts/summarize_evidence_checks.py validation-inputs/legacy-frozen.json validation-inputs/evidence-frozen.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:

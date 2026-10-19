@@ -215,7 +215,7 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
                 for m in re.finditer(r'\b(?:treatment of|treat(?:ing|s)?|indicated for)\s+([a-z][a-z -]{3,65})(?=[,.();]|$)', sentence, re.I):
                     _fact(out, 'indication', m.group(1).strip(), sentence, source, heading)
                 if kind == 'people' or re.search(r'\bfounded by\b', sentence, re.I):
-                    for m in re.finditer(r'\b([A-Z][a-z]+(?:\s+[A-Z]\.)?\s+[A-Z][a-z]+)\b', sentence):
+                    for m in re.finditer(r'\b([A-Z][a-z]+(?:\s+(?:[A-Z]\.|[A-Z][a-z]+)){1,3})\b', sentence):
                         if any(word in m.group().lower() for word in ('united states','chief executive','board director')):
                             continue
                         _fact(out, 'person', m.group(), sentence, source, heading)

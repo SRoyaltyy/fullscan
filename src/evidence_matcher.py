@@ -241,21 +241,25 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                        if w.lower() not in english_words() and w.lower() not in {'nasdaq','nyse','usfda'}}
             for ticker,kind,ix,key in identity_hits:
                 p = board.profiles[ticker]
+                fact=p.facts[ix]
+                if kind=='acronym':
+                    continue
+                if kind=='person' and (not _valid_person(fact) or not re.search(r'\b'+re.escape(fact.text.split()[-1])+r'\b',passage.text)):
+                    continue
+                if kind=='owned_product' and any(w in english_words() for w in key.split()) and not re.search(r'\b'+re.escape(fact.text)+r'\b',passage.text):
+                    continue
+                if kind=='company_alias' and any(w in english_words() for w in key.split()):
+                    raw=next((v for v in re.findall(r'["\u201c]([^"\u201d]+)["\u201d]',fact.passage) if ' '.join(tokens(v,stop=False))==key),'')
+                    if not raw or not re.search(r'\b'+re.escape(raw)+r'\b',passage.text):
+                        continue
+                    if len(key.split())==1 and not FINANCIAL_EVENT.search(passage.text):
+                        continue
                 row = row_for(ticker)
                 row['alias_hit'] = True
                 matched = hits.get(ticker,set())
                 extra = _independent_words(matched) - set(key.split())
                 unique_owner = {t for t,k,i in board.identities.get(key,()) if k == kind} == {ticker}
                 if not eligible(p.facts[ix]):
-                    continue
-                if kind=='person' and (not _valid_person(p.facts[ix]) or not re.search(r'\b'+re.escape(p.facts[ix].text.split()[-1])+r'\b',passage.text)):
-                    continue
-                if kind=='acronym':
-                    # A filing-defined law, regulator or disease abbreviation
-                    # is not a corporate identity. Keep it for inspection;
-                    # business exposure must establish its own source route.
-                    continue
-                if kind=='owned_product' and any(w in english_words() for w in key.split()) and not re.search(r'\b'+re.escape(p.facts[ix].text)+r'\b',passage.text):
                     continue
                 if kind=='company_alias' and unique_owner and passage.event and not roundup:
                     pass_row(ticker,1,'company_alias_event',passage,{key},p.facts[ix])
@@ -270,7 +274,7 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
 
             for ticker,matched in hits.items():
                 p = board.profiles[ticker]
-                direct_subjects={t for t,r in rows.items() if 'direct_event' in r['reasons']}
+                direct_subjects={t for t,r in rows.items() if {'direct_event','company_alias_event'}&set(r['reasons'])}
                 if passage.event and not roundup:
                     candidate_facts = Counter()
                     for word in _independent_words(query):
@@ -305,7 +309,7 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                         elif fact.kind in ('material_exposure','financial_exposure','supplier') and re.search(r'\b(?:price\w*|cost\w*|rate\w*|shortage|halt\w*|ban\w*|tariff\w*|disrupt\w*)\b',passage.text,re.I):
                             pass_row(ticker,2,'documented_exposure',passage,shared,fact)
                 core_hits = matched & p.core
-                direct_subjects={t for t,r in rows.items() if 'direct_event' in r['reasons']}
+                direct_subjects={t for t,r in rows.items() if {'direct_event','company_alias_event'}&set(r['reasons'])}
                 if direct_subjects and ticker not in direct_subjects:
                     # A named issuer's financial result is not an unnamed
                     # industry-wide event. Other firms require an evidenced

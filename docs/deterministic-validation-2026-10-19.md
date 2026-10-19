@@ -52,6 +52,20 @@ Published results distinguish warm scan time from cold profile-loading time.
 
 ## Remaining release work
 
+Hosted CI at commit `75ad063` passed all 98 tests and rebuilt all pinned public
+dictionary resources successfully. On identical Finviz-only inputs and the
+existing 25-case corpus, legacy passed 12/19 regression cases and evidence-v2
+passed 17/19; both achieved 2/3 target cases, with 3 cases unlabeled. These are
+partial regression assertions, not complete-set accuracy. The hosted export
+contains 200 deduplicated, unlabeled inputs, including 100 with substantial
+bodies, sampled from 10,825 unique documents. This is the next validation set.
+
+Subsequent local changes add raw-shape guards for corporate aliases and preserve
+surname aliases in multi-part personal names; the local suite now has 100 tests.
+The workflow also prints diagnostic case IDs and missing/extra fields without
+publishing article bodies, so failed checks can be inspected independently of
+artifact transfer.
+
 Run the same complete stock universe and current production sources in both
 engines. Freeze complete labels on fresh, deduplicated articles with meaningful
 positive cases across direct identity, owned products, competitors, suppliers,

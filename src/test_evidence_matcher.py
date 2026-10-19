@@ -207,6 +207,19 @@ class EvidenceTests(unittest.TestCase):
   h=link_articles(b,[{'id':'x','text':'BrandX announces earnings guidance.'}])[0]
   self.assertIn('BRDX',{r['ticker'] for r in h['stocks'] if r['pass']})
 
+ def test_common_corporate_short_name_does_not_match_plural_noun(self):
+  b=build_board([{'ticker':'OILX','name':'Range Resources Corp','industry':'Oil & Gas','filing':
+    'Range Resources Corp ("Range") develops natural gas wells.'}],engine='evidence')
+  h=link_articles(b,[{'id':'x','text':'Space launch ranges expand capacity.'}])[0]
+  self.assertFalse(any(r['pass'] or r['alias_hit'] for r in h['stocks'] if r['ticker']=='OILX'))
+
+ def test_middle_name_preserves_surname_alias(self):
+  rows=[{'ticker':'ORB','name':'Example Orbital','industry':'Aerospace','description':
+    'We manufacture rockets and spacecraft. The company was founded by Elon Reeve Musk in 2002.'}]
+  b=build_board(rows,engine='evidence')
+  h=link_articles(b,[{'id':'x','text':'Elon Musk announces expanded rocket and spacecraft production.'}])[0]
+  self.assertIn('ORB',{r['ticker'] for r in h['stocks'] if r['pass']})
+
  def test_event_product_class_is_distinct_from_disease_indication(self):
   from src.evidence_matcher import _event_object
   self.assertEqual(_event_object('FDA approves first heart valve designed to grow with kids.'),'heart valve')
