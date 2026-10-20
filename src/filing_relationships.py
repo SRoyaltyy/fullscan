@@ -125,7 +125,7 @@ def _status(token, sentence):
         return 'negated'
     if re.search(r'\b(?:no longer|previously|formerly|ceased|terminated|discontinued)\b', sentence.text, re.I):
         return 'historical'
-    if any(c.lemma_ in ('may', 'might', 'could', 'would') for c in token.children) or re.search(r'\bif\b', sentence.text, re.I):
+    if any(c.lemma_ in ('may', 'might', 'could', 'would', 'will') for c in token.children) or re.search(r'\bif\b', sentence.text, re.I):
         return 'potential'
     return 'asserted'
 
@@ -254,7 +254,7 @@ def extract_sections(sections, *, ticker, name, nlp):
     sources, facts, stats = [], {}, Counter()
     for section in sections:
         raw = str(section.get('text') or '')
-        metadata = {k: section.get(k, '') for k in ('source', 'form', 'filing_date', 'accession', 'section', 'document', 'kind')}
+        metadata = {k: section.get(k, '') for k in ('source', 'form', 'filing_date', 'accession', 'section', 'document', 'kind', 'url')}
         metadata['sha256'] = hashlib.sha256(raw.encode()).hexdigest()
         metadata['characters'] = len(raw)
         metadata['id'] = hashlib.sha256(repr(sorted(metadata.items())).encode()).hexdigest()

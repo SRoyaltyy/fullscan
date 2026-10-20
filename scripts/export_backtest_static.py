@@ -5,6 +5,7 @@ No SEC fetch, LLM, or network operation occurs while scoring.
 """
 from __future__ import annotations
 import argparse
+import gzip
 import hashlib
 import json
 import os
@@ -20,10 +21,10 @@ _BOARD = _NAMES = _SNAPSHOT = None
 _INPUT_MODE = 'headline'
 
 
-def _init_worker(descriptions, sectors, universe, identity_filings, as_of, input_mode, snapshot):
+def _init_worker(descriptions, sectors, universe, identity_filings, as_of, input_mode, snapshot, filing_profiles=None):
     global _BOARD, _NAMES, _INPUT_MODE, _SNAPSHOT
     _BOARD, _NAMES = open_program(descriptions, sectors, universe,
-                                 identity_filings=identity_filings, as_of=as_of)
+                                 identity_filings=identity_filings, as_of=as_of, filing_profiles=filing_profiles)
     if snapshot_metadata(_BOARD, input_mode)['snapshot_id'] != snapshot['engine_snapshot_id']:
         raise ValueError('scoring inputs changed after snapshot freeze')
     _INPUT_MODE, _SNAPSHOT = input_mode, snapshot
@@ -91,6 +92,7 @@ def main(argv=None):
     p.add_argument('--sectors', type=Path)
     p.add_argument('--universe', type=Path)
     p.add_argument('--identity-filings', type=Path)
+    p.add_argument('--filing-profiles', type=Path)
     p.add_argument('--as-of')
     p.add_argument('--input-mode', choices=('headline', 'full-text'), default='headline')
     p.add_argument('--limit', type=int, default=0)
@@ -102,10 +104,10 @@ def main(argv=None):
     a = p.parse_args(argv)
     if min(a.workers, a.shard_size, a.text_limit) < 1 or min(a.limit, a.offset) < 0:
         p.error('workers/shard-size/text-limit must be positive; limit/offset nonnegative')
-    if a.identity_filings and not a.as_of:
-        p.error('--identity-filings requires --as-of')
+    if (a.identity_filings or a.filing_profiles) and not a.as_of:
+        p.error('--identity-filings/--filing-profiles requires --as-of')
     board, names = open_program(a.descriptions, a.sectors, a.universe,
-                                identity_filings=a.identity_filings, as_of=a.as_of)
+                                identity_filings=a.identity_filings, as_of=a.as_of, filing_profiles=a.filing_profiles)
     snapshot = snapshot_metadata(board, a.input_mode)
     snapshot['engine_snapshot_id'] = snapshot.pop('snapshot_id')
     snapshot['source_revision'] = os.environ.get('SCANNER_SOURCE_SHA') or os.environ.get('GITHUB_SHA') or ''
@@ -131,7 +133,7 @@ def main(argv=None):
         shards = [todo[i:i + a.shard_size] for i in range(0, len(todo), a.shard_size)]
         with futures.ProcessPoolExecutor(max_workers=a.workers, initializer=_init_worker,
                 initargs=(a.descriptions, a.sectors, a.universe, a.identity_filings,
-                          a.as_of, a.input_mode, snapshot)) as pool, \
+                          a.as_of, a.input_mode, snapshot, a.filing_profiles)) as pool, \
                 (a.out_dir / 'results.jsonl').open('a', encoding='utf-8') as out:
             for shard in pool.map(_score_shard, shards):
                 for row in shard:
@@ -142,7 +144,22 @@ def main(argv=None):
     elif not (a.out_dir / 'results.jsonl').exists():
         (a.out_dir / 'results.jsonl').touch()
     display = export_articles([select_input(by_id[str(r['id'])], a.input_mode) for r in rows], a.text_limit)
-    profiles = {ticker: profile_view(profile) for ticker, profile in board.evidence_board.profiles.items()}
+    # Lazy per-ticker assets keep page loading practical without deleting any
+    # facts, quotations or source records from the exported scoring profiles.
+    profiles = {}
+    asset_root = a.out_dir/'scoring-profiles'
+    asset_root.mkdir(exist_ok=True)
+    for ticker, profile in board.evidence_board.profiles.items():
+        full = profile_view(profile)
+        raw = gzip.compress(json.dumps(full, ensure_ascii=False, sort_keys=True).encode(), mtime=0)
+        path = 'scoring-profiles/'+hashlib.sha256(ticker.encode()).hexdigest()+'.json.gz'
+        (a.out_dir/path).write_bytes(raw)
+        profiles[ticker] = {key: full[key] for key in ('name','industry','sector','source','enriched','used_for_scoring')}
+        profiles[ticker].update(profile_path=path, profile_sha256=hashlib.sha256(raw).hexdigest(),
+                               fact_counts={kind: len(entries) for kind, entries in full['facts'].items()})
+    if a.filing_profiles:
+        import shutil
+        shutil.copytree(a.filing_profiles, a.out_dir/'filing-profiles', dirs_exist_ok=True)
     index = {}
     for row in rows:
         for stock in row['passes']:
@@ -158,4 +175,5 @@ def main(argv=None):
 
 if __name__ == '__main__':
     raise SystemExit(main())
+
 

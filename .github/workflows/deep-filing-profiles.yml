@@ -31,7 +31,7 @@ env:
 jobs:
   controls:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
         with:
@@ -39,16 +39,36 @@ jobs:
           sparse-checkout: |
             src
             scripts
+            requirements-filing-parser.txt
+            excel_bot/data/finviz_with_descriptions.csv
+          sparse-checkout-cone-mode: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Install prebuilt grammar dependencies from PyPI, no package build scripts
         run: >-
           python -m pip install --only-binary=:all: --index-url https://pypi.org/simple
-          spacy==3.8.11
-          https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+          -r requirements-filing-parser.txt
       - name: Grammar, provenance, uncertainty, direction and offline controls
         run: python -m unittest src.test_filing_relationships -v
+      - name: Read all ten archived Backblaze filings for a real source check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          python scripts/materialize_filing_texts.py --repository "$GITHUB_REPOSITORY"
+          --artifact-id 12109086101 --ticker BLZE --as-of 2026-10-20 --out real-source
+      - name: Compile real Backblaze relationships
+        run: >-
+          python -u -m scripts.build_filing_profiles --objects real-source/objects
+          --as-of 2026-10-20 --descriptions excel_bot/data/finviz_with_descriptions.csv --out real-profiles
+      - name: Audit exact real-source quotations and report extraction coverage
+        run: python -m scripts.audit_filing_profiles --profiles real-profiles --objects real-source/objects
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deep-filing-real-source-check
+          path: real-profiles/
+          retention-days: 30
   compile:
     needs: controls
     if: github.event_name != 'pull_request'
@@ -68,6 +88,7 @@ jobs:
             scripts
             data/company_filings_full_release.json
             excel_bot/data/finviz_with_descriptions.csv
+            requirements-filing-parser.txt
           sparse-checkout-cone-mode: false
       - uses: actions/setup-python@v5
         with:
@@ -75,8 +96,7 @@ jobs:
       - name: Install prebuilt, pinned grammar engine
         run: >-
           python -m pip install --only-binary=:all: --index-url https://pypi.org/simple
-          spacy==3.8.11
-          https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+          -r requirements-filing-parser.txt
       - name: Resolve the verified full archive shard
         env:
           SOURCE_SHARD: ${{ matrix.shard }}

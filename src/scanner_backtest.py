@@ -46,7 +46,8 @@ def public_article(article: dict) -> dict:
 
 
 def open_program(descriptions: Path, sectors: Path | None, universe: Path | None,
-                 *, identity_filings: Path | None = None, as_of: str | None = None):
+                 *, identity_filings: Path | None = None, as_of: str | None = None,
+                 filing_profiles: Path | None = None):
     """Load the same description board the evidence CLI scores, then compile it."""
     stocks = load_stocks(descriptions, universe, sectors, {})
     coverage = {"scope": "description_only", "covered_tickers": [],
@@ -75,6 +76,13 @@ def open_program(descriptions: Path, sectors: Path | None, universe: Path | None
                     'full_business_coverage': False}
     board = build_board(stocks, engine=ENGINE)
     board.evidence_board = compile_board(board.source_rows)
+    if filing_profiles is not None:
+        if not as_of:
+            raise ValueError('--filing-profiles requires an explicit --as-of date')
+        from .deep_profile_store import attach_profiles
+        from .stock_evidence import Catalog
+        board.evidence_board, coverage = attach_profiles(board.evidence_board, filing_profiles,
+                                                       as_of=as_of, catalog=Catalog(board.source_rows))
     board.filing_coverage = coverage
     names = NameIndex(catalog_from_csv(descriptions)) if descriptions.is_file() else None
     return board, names
@@ -104,7 +112,7 @@ def load_test_articles(path: Path) -> list[dict]:
 def snapshot_metadata(board, input_mode: str = 'headline') -> dict:
     """Bind cached results to source code, lexical resources and compiled inputs."""
     root = Path(__file__).resolve().parents[1]
-    source_names = ('correlation', 'evidence_matcher', 'stock_evidence', 'filing_evidence',
+    source_names = ('correlation', 'evidence_matcher', 'stock_evidence', 'filing_evidence', 'deep_profile_store',
                     'names', 'aliases', 'linguistics', 'semantic_lookup', 'synonyms',
                     'places', 'spelling', 'profile_cache', 'link_correlation', 'scanner_backtest')
     paths = [root / 'src' / (name + '.py') for name in source_names]
@@ -133,13 +141,12 @@ def profile_view(profile) -> dict:
     facts = {}
     for fact in profile.facts:
         entries = facts.setdefault(fact.kind, [])
-        if len(entries) < 40:
-            entries.append({**fact.record(), 'passage': fact.passage[:1200],
-                            'display_truncated': len(fact.passage) > 1200, 'term': fact.text})
+        entries.append({**fact.record(), 'term': fact.text})
     return {'name': profile.name, 'industry': profile.industry, 'sector': profile.sector,
             'source': 'scoring_board', 'enriched': any(s.get('filing_date') for s in profile.sources),
             'warnings': list(profile.warnings), 'facts': facts, 'sources': profile.sources,
-            'display_limits': {'facts_per_kind': 40, 'passage_characters': 1200},
+            'deep_profile': getattr(profile, 'deep_profile', None),
+            'display_limits': {'facts_per_kind': None, 'passage_characters': None},
             'used_for_scoring': True}
 
 
@@ -194,7 +201,7 @@ def run_article(board, article: dict, *, names=None, input_mode='headline', snap
 
 
 class Gate:
-    def __init__(self, articles: list[dict], *, input_mode='headline', identity_filings=None, as_of=None):
+    def __init__(self, articles: list[dict], *, input_mode='headline', identity_filings=None, as_of=None, filing_profiles=None):
         self.articles = list(articles)
         self.by_id: dict[str, dict] = {}
         for article in self.articles:
@@ -207,6 +214,7 @@ class Gate:
         self.ready = False
         self.input_mode = input_mode
         self.identity_filings = identity_filings
+        self.filing_profiles = filing_profiles
         self.as_of = as_of
         self.snapshot = {}
         self._rng = random.Random()
@@ -246,7 +254,7 @@ class Gate:
     def load(self, descriptions: Path, sectors: Path | None, universe: Path | None) -> None:
         try:
             board, names = open_program(descriptions, sectors, universe,
-                                        identity_filings=self.identity_filings, as_of=self.as_of)
+                                        identity_filings=self.identity_filings, as_of=self.as_of, filing_profiles=self.filing_profiles)
             snapshot = snapshot_metadata(board, self.input_mode)
         except Exception as exc:
             self.error = f"{type(exc).__name__}: {exc}"
@@ -353,13 +361,14 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--news", type=Path, default=ROOT / "data/news_intake/2026-10-17/documents.json")
     parser.add_argument('--input-mode', choices=('headline', 'full-text'), default='headline')
     parser.add_argument('--identity-filings', type=Path, help='materialized PR642 objects directory')
+    parser.add_argument('--filing-profiles', type=Path, help='complete precompiled deep filing profile directory')
     parser.add_argument('--as-of', help='required ISO date cutoff for filing identities')
     args = parser.parse_args(argv)
-    if args.identity_filings and not args.as_of:
-        parser.error('--identity-filings requires --as-of')
+    if (args.identity_filings or args.filing_profiles) and not args.as_of:
+        parser.error('--identity-filings/--filing-profiles requires --as-of')
     articles = load_test_articles(args.news)
     gate = Gate(articles, input_mode=args.input_mode,
-                identity_filings=args.identity_filings, as_of=args.as_of)
+                identity_filings=args.identity_filings, as_of=args.as_of, filing_profiles=args.filing_profiles)
     sectors = args.sectors if args.sectors.is_file() else None
     gate.load_async(args.descriptions, sectors, args.universe if args.universe else None)
     httpd = serve(gate, args.host, args.port)
@@ -373,4 +382,5 @@ def main(argv: list[str] | None = None) -> None:
 
 if __name__ == "__main__":
     main()
+
 
