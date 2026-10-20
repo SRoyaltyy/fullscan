@@ -117,3 +117,15 @@ the loop, roughly in payoff order:
 5. Case flipped to `kind: regression` once SOLVED, so it can never reopen
    silently — this is the direct answer to "the AI sometimes reopens old
    problems."
+
+## Candidate2.4 evidence identity controls
+
+The B3/B5 alias controls now preserve complete product-list items and legal
+domain roots; generic legal phrases and common short fragments require issuer
+proof. E1 ownership distinguishes resale brands and categories; C7 attributes
+listing notices and brokerage target revisions to their proper roles. Fund
+research criteria are typed investment methodology, not operating exposure.
+Synthetic cases: `eval/evidence-identity-cases.jsonl`; richer source fixtures
+remain in `src/test_evidence_matcher.py`. Status remains MITIGATED pending
+unseen validation. Historical sample labels are unchanged.
+

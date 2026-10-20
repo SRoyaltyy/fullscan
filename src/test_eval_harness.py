@@ -137,6 +137,18 @@ class CompareCaseTests(unittest.TestCase):
         self.assertEqual(out["verdict"], "SKIP")
         self.assertIn("NO_TEXT", out["failure_classes"])
 
+    def test_missing_positive_headline_is_failure_not_skip(self):
+        for fields in ({'title':'Apple raises guidance.'},{'text':'$AAPL earnings.'}):
+            case={'id':'c','kind':'regression','expected':{'topical_passes':['AAPL']},**fields}
+            out=compare_case(case,_hit(status='unknown'))
+            self.assertEqual(out['verdict'],'FAIL')
+            self.assertIn('FALSE_UNKNOWN',out['failure_classes'])
+            self.assertNotIn('NO_TEXT',out['failure_classes'])
+
+    def test_unresolved_annotation_is_not_scored_as_negative(self):
+        case={'id':'c','title':'Unresolved ownership event.','adjudication_required':True,'expected':{'topical_passes':[]}}
+        self.assertEqual(compare_case(case,_hit())['verdict'],'UNLABELED')
+
     def test_short_text_with_unknown_expectation_is_scorable(self):
         # thin-markets-moved is 14 characters and expects unknown. It must
         # count, not SKIP on the 40-character floor.
@@ -226,3 +238,4 @@ class SamplerTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

@@ -30,7 +30,7 @@ import json
 from collections import Counter
 from pathlib import Path
 
-TAXONOMY_VERSION = "FT-1"
+TAXONOMY_VERSION = "FT-2"
 
 FAILURE_CLASSES = {
     "ALIAS_FP": "common word / publication / org name treated as a ticker or alias",
@@ -88,26 +88,25 @@ def compare_case(case: dict, hit: dict | None) -> dict:
     unexpected: dict[str, list] = {"passes": [], "name_hits": [], "dependencies": []}
     kind = case.get("kind") or "regression"
 
-    if not expected:
+    if not expected or case.get('adjudication_required'):
         return {
             "case_id": case.get("id"), "kind": kind, "case_type": case.get("case_type"),
             "verdict": "UNLABELED", "failure_classes": [], "notes": ["no expectations yet"],
             "program_status": (hit or {}).get("status"), "missing": missing, "unexpected": unexpected,
         }
 
-    text = (case.get("text") or "").strip()
-    # Short text is only un-scorable when the case needs a body to be judged.
-    # A case whose expectation is "unknown" (thin-markets-moved is 14 characters)
-    # is legitimately short: the program must still see it and say unknown.
+    text = ((case.get('title') or '') + '\n' + (case.get("text") or "")).strip()
+    # Headlines are valid positive inputs. Never hide a missed company event
+    # by excluding it merely because it has fewer than forty characters.
     needs_body = (
         expected.get("status") == "scored"
         or bool(expected.get("topical_passes"))
         or bool(expected.get("name_hits"))
         or bool(expected.get("allowed_second_order"))
     )
-    if len(text) < 40 and not case.get("text_ref") and needs_body:
+    if not text and not case.get("text_ref") and needs_body:
         classes.append("NO_TEXT")
-        notes.append("case text is empty/short and text_ref is unset; paste full text")
+        notes.append("case title/text is empty and text_ref is unset")
 
     if hit is None:
         classes.append("FALSE_UNKNOWN")
@@ -116,6 +115,18 @@ def compare_case(case: dict, hit: dict | None) -> dict:
         rows = hit.get("stocks") or []
         passing = [r for r in rows if r.get("pass")]
         named = [r for r in rows if r.get("name_hit")]
+        # A complete label is an exact set, including every extra false link.
+        # Existing partial bug assertions stay usable but cannot certify accuracy.
+        if case.get("truth_complete") or expected.get("exact_topical"):
+            truth = {str(t).upper() for t in expected.get("topical_passes", [])}
+            actual = {str(r.get("ticker", "")).upper() for r in passing}
+            extra = sorted(actual - truth)
+            if extra:
+                classes.append("FALSE_PASS")
+                unexpected["passes"].extend(extra)
+        for row in rows:
+            if not isinstance(row.get("ticker"), str) or type(row.get("pass")) is not bool:
+                classes.append("SCHEMA_DRIFT")
 
         # status ------------------------------------------------------------
         want_status = expected.get("status")
@@ -297,18 +308,41 @@ def run_in_process(cases: list[dict], args: argparse.Namespace) -> dict[str, dic
     from src.correlation import build_board, link_articles  # lazy: needs repo + inputs
     from src.link_correlation import load_articles, load_stocks
 
+    if getattr(args,'profile_cache',None):
+        if getattr(args,'engine','evidence')!='evidence':
+            raise ValueError('--profile-cache supports only the evidence engine')
+        from src.profile_cache import load_profiles
+        from src.link_correlation import _rows
+        wanted=None
+        if getattr(args,'universe',None):
+            wanted={t.upper() for row in _rows(args.universe) for t in str(row.get('tickers') or row.get('ticker') or '').split()}
+        evidence,_ = load_profiles(args.profile_cache,as_of=getattr(args,'as_of',None),tickers=wanted)
+        stocks=[{'ticker':p.ticker,'name':p.name,'industry':p.industry,'sector':p.sector} for p in evidence.profiles.values()]
+        board=build_board(stocks,engine='evidence');board.evidence_board=evidence
+        articles=[{'id':c['id'],'title':c.get('title',''),'text':c.get('text',''),
+                   'published_at':c.get('published_at') or c.get('date','')} for c in cases]
+        from src.names import NameIndex,catalog_from_csv
+        names=NameIndex(catalog_from_csv(args.descriptions)) if getattr(args,'descriptions',None) and args.descriptions.is_file() else None
+        return {str(h['id']):h for h in link_articles(board,articles,engine='evidence',names=names)}
+
     filings: dict[str, str] = {}
     if args.filings and args.filings.is_file() and args.filings.suffix == ".json":
         filings = {str(k).upper(): v for k, v in json.loads(args.filings.read_text()).items()}
     elif args.filings and args.filings.is_dir():
-        from src.filing_business import load_business_texts
-        filings = load_business_texts(args.filings)
+        from src.filing_evidence import load_filing_sections
+        filings, _ = load_filing_sections(args.filings,as_of=getattr(args,"as_of",None))
 
     from src.aliases import profiles_from_csv
     from src.names import NameIndex, catalog_from_csv
 
     stocks = load_stocks(args.descriptions, args.universe, args.sectors, filings)
-    board = build_board(stocks)
+    if getattr(args,"section_cache",None):
+        from src.filing_evidence import load_section_cache
+        cached,_ = load_section_cache(args.section_cache,as_of=getattr(args,"as_of",None))
+        sections={r["ticker"]:r["filing_sections"] for r in cached}
+        for row in stocks:
+            row["filing_sections"]=sections.get(row["ticker"],[])
+    board = build_board(stocks,engine=getattr(args,"engine","evidence"))
     # Names, aliases, and jurisdictions come from the whole description file,
     # not the liquidity screen, so an off-board company can still be inspected.
     names = NameIndex(catalog_from_csv(args.descriptions))
@@ -324,12 +358,13 @@ def run_in_process(cases: list[dict], args: argparse.Namespace) -> dict[str, dic
         "url": case.get("source_url") or "",
         "source": "eval-corpus",
         "text": case.get("text") or "",
+        "published_at": case.get("published_at") or case.get("date") or "",
     } for case in cases]
-    # The corpus is a labeled sample, not a day of news. Batch-z is calibrated
-    # on a real day (problem-taxonomy F6), so it stays off here.
+    # Use the production path and defaults, including the legacy batch gate
+    # when requesting the legacy comparison engine.
     hits = link_articles(
         board, articles, z_min=args.z_min, batch_z_min=args.batch_z_min,
-        reference=reference, names=names, profiles=profiles, apply_batch=False,
+        reference=reference, names=names, profiles=profiles, engine=getattr(args,"engine","evidence"),
     )
     return {str(hit.get("id")): hit for hit in hits}
 
@@ -337,6 +372,7 @@ def run_in_process(cases: list[dict], args: argparse.Namespace) -> dict[str, dic
 def main() -> None:
     parser = argparse.ArgumentParser(description="Evaluate correlation output against the frozen corpus")
     parser.add_argument("--cases", type=Path, required=True)
+    parser.add_argument("--engine", choices=("evidence", "legacy"), default="legacy")
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--links", type=Path, default=None,
                         help="Existing program output JSON instead of running in-process")
@@ -344,6 +380,9 @@ def main() -> None:
     parser.add_argument("--universe", type=Path, default=None)
     parser.add_argument("--sectors", type=Path, default=None)
     parser.add_argument("--filings", type=Path, default=None)
+    parser.add_argument("--section-cache", type=Path, default=None)
+    parser.add_argument("--profile-cache", type=Path, default=None)
+    parser.add_argument("--as-of", default=None)
     parser.add_argument("--reference", type=Path, default=None,
                         help="documents.json used as the keyness control corpus")
     parser.add_argument("--z-min", type=float, default=2.5)
@@ -357,7 +396,7 @@ def main() -> None:
         hits_by_id = run_against_links(cases, args.links)
         config = {"links": str(args.links)}
     else:
-        if not args.descriptions:
+        if not args.descriptions and not args.profile_cache:
             raise SystemExit("in-process run needs --descriptions (or use --links)")
         hits_by_id = run_in_process(cases, args)
         config = {
@@ -365,6 +404,7 @@ def main() -> None:
             "sectors": str(args.sectors or ""), "filings": str(args.filings or ""),
             "reference": str(args.reference or ""), "z_min": args.z_min,
             "batch_z_min": args.batch_z_min,
+            "engine":args.engine,"profile_cache":str(args.profile_cache or ''),"as_of":args.as_of,
         }
 
     results = [compare_case(case, hits_by_id.get(str(case.get("id")))) for case in cases]
@@ -376,11 +416,15 @@ def main() -> None:
         "summary": summarize(results),
         "cases": results,
     }
+    from .link_metrics import score_links
+    payload["strict_metrics"] = score_links(cases, hits_by_id)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
     print(json.dumps(payload["summary"], indent=2))
+    print('STRICT_METRICS='+json.dumps({k:v for k,v in payload['strict_metrics'].items() if k!='details'},ensure_ascii=True))
     print(f"WROTE={args.out}")
 
 
 if __name__ == "__main__":
     main()
+
