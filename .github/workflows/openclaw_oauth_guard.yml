@@ -63,12 +63,12 @@ jobs:
       # no stale token origin URL and no missing origin/main (#644 issue).
       - name: Remove leftover guard checkout
         shell: bash
-        run: rm -rf "${GITHUB_WORKSPACE}/_oauth_guard_ws" || sudo -n rm -rf "${GITHUB_WORKSPACE}/_oauth_guard_ws" || true
+        run: rm -rf "${GITHUB_WORKSPACE}/.ecs-sparse/oauth-guard" || sudo -n rm -rf "${GITHUB_WORKSPACE}/.ecs-sparse/oauth-guard" || true
       - uses: actions/checkout@v4
         timeout-minutes: 5
         with:
           ref: main
-          path: _oauth_guard_ws
+          path: .ecs-sparse/oauth-guard
           fetch-depth: 1
           filter: blob:none
           sparse-checkout-cone-mode: false
@@ -84,7 +84,7 @@ jobs:
             /01_daily/_openclaw_oauth_status.json
             /01_daily/_progress/
       - name: Sparse tree has the guard path
-        working-directory: _oauth_guard_ws
+        working-directory: .ecs-sparse/oauth-guard
         run: |
           miss=0
           for f in scripts/openclaw_oauth_guard.py scripts/enable_openclaw_chat.sh \
@@ -96,7 +96,7 @@ jobs:
           done
           exit $miss
       - name: Install / refresh ECS timer (fullscan-openclaw-oauth.timer)
-        working-directory: _oauth_guard_ws
+        working-directory: .ecs-sparse/oauth-guard
         run: sudo -n bash scripts/install_openclaw_oauth_timer.sh
       - name: Last ECS timer result (red if it failed)
         run: |
@@ -106,7 +106,7 @@ jobs:
           python3 -c 'import json,sys; d=json.load(open(sys.argv[1])); sys.exit(0 if d.get("ok") else "last ECS OAuth/guard run FAILED: %s %s" % (d.get("renew"), d.get("guard")))' "$f" \
             || echo "::warning::previous ECS timer run failed; this run re-checks"
       - name: Renew xAI OAuth + guard gateway (fails red)
-        working-directory: _oauth_guard_ws
+        working-directory: .ecs-sparse/oauth-guard
         env:
           FULLSCAN_HOME: /home/gha
         run: |
@@ -119,7 +119,7 @@ jobs:
             python3 scripts/openclaw_oauth_guard.py "$MODE"
           python3 -m src.workflow_progress touch --workflow oauth_guard --date "$DATE" --stage "$MODE" --state ok || true
       - name: Publish OAuth status (no tokens)
-        working-directory: _oauth_guard_ws
+        working-directory: .ecs-sparse/oauth-guard
         if: always()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -156,4 +156,4 @@ jobs:
             || echo "[oauth-guard] status push failed — local file still on the box"
       - name: Remove guard checkout
         if: always()
-        run: rm -rf "${GITHUB_WORKSPACE}/_oauth_guard_ws" || sudo -n rm -rf "${GITHUB_WORKSPACE}/_oauth_guard_ws" || true
+        run: rm -rf "${GITHUB_WORKSPACE}/.ecs-sparse/oauth-guard" || sudo -n rm -rf "${GITHUB_WORKSPACE}/.ecs-sparse/oauth-guard" || true
