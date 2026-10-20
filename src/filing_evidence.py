@@ -69,7 +69,7 @@ def section_views(text: str, form: str, filename: str = '') -> list[dict]:
     return views
 
 
-def load_filing_sections(objects: Path, *, as_of: str | None = None, strict: bool = False) -> tuple[dict,dict]:
+def load_filing_sections(objects: Path, *, as_of: str | None = None, strict: bool = False, ciks=None) -> tuple[dict,dict]:
     objects = Path(objects).resolve()
     root = objects / 'company-filings' / 'full-v1'
     if not root.is_dir():
@@ -78,6 +78,8 @@ def load_filing_sections(objects: Path, *, as_of: str | None = None, strict: boo
     report = {'source':'PR642-full-text','companies':0,'filings':0,'documents':0,'characters':0,'errors':[],
               'as_of':as_of,'full_source_archive':True}
     for company_path in sorted(root.glob('*/company.json')):
+        if ciks is not None and company_path.parent.name not in ciks:
+            continue
         company = _json(company_path)
         chunks = []
         filings = sorted(company.get('filings') or [],key=lambda r:(str(r.get('filing_date','')),str(r.get('accession',''))))
@@ -125,7 +127,8 @@ def load_filing_sections(objects: Path, *, as_of: str | None = None, strict: boo
                     report['characters'] += len(text)
                     for section in section_views(text,str(filing.get('form') or manifest.get('form') or ''),filename):
                         section.update({'source':'PR642','filing_date':date,'accession':accession,'form':filing.get('form',''),
-                            'document':filename,'complete':True})
+                            'document':filename,'complete':True,
+                            'url':f'https://www.sec.gov/Archives/edgar/data/{int(company["cik"])}/{accession.replace("-", "")}/{filename}'})
                         chunks.append(section)
             except (OSError,ValueError,KeyError,TypeError) as exc:
                 report['errors'].append({'cik':company.get('cik'),'accession':accession,'error':str(exc)})
@@ -184,3 +187,4 @@ def load_section_cache(path: Path, *, as_of: str | None = None, exclude_accessio
     c.close()
     return rows,{'source':'legacy-section-cache','companies':len(rows),'characters':chars,'as_of':as_of,
         'complete':False,'full_source_archive':False,'warning':'Selected/capped historical sections; not full PR642 coverage'}
+

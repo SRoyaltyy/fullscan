@@ -1,0 +1,150 @@
+name: Deep SEC filing profiles
+on:
+  pull_request:
+    paths:
+      - 'src/filing_relationships.py'
+      - 'src/test_filing_relationships.py'
+      - 'src/deep_profile_store.py'
+      - 'scripts/build_filing_profiles.py'
+      - '.github/workflows/deep-filing-profiles.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'src/filing_relationships.py'
+      - 'src/test_filing_relationships.py'
+      - 'src/deep_profile_store.py'
+      - 'scripts/build_filing_profiles.py'
+      - 'data/company_filings_full_release.json'
+      - '.github/workflows/deep-filing-profiles.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: deep-filing-profiles-${{ github.ref }}
+  cancel-in-progress: true
+env:
+  PIP_CONFIG_FILE: /dev/null
+  PIP_DISABLE_PIP_VERSION_CHECK: '1'
+  DO_NOT_TRACK: '1'
+  HF_HUB_DISABLE_TELEMETRY: '1'
+jobs:
+  controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            src
+            scripts
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install prebuilt grammar dependencies from PyPI, no package build scripts
+        run: >-
+          python -m pip install --only-binary=:all: --index-url https://pypi.org/simple
+          spacy==3.8.11
+          https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+      - name: Grammar, provenance, uncertainty, direction and offline controls
+        run: python -m unittest src.test_filing_relationships -v
+  compile:
+    needs: controls
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      max-parallel: 4
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            src
+            scripts
+            data/company_filings_full_release.json
+            excel_bot/data/finviz_with_descriptions.csv
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install prebuilt, pinned grammar engine
+        run: >-
+          python -m pip install --only-binary=:all: --index-url https://pypi.org/simple
+          spacy==3.8.11
+          https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+      - name: Resolve the verified full archive shard
+        env:
+          SOURCE_SHARD: ${{ matrix.shard }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          release = json.loads(Path('data/company_filings_full_release.json').read_text())
+          for shard in release['source_artifacts']:
+              if int(shard['shard']) == int(os.environ['SOURCE_SHARD']):
+                  with open(os.environ['GITHUB_ENV'], 'a') as stream:
+                      stream.write('SOURCE_ARTIFACT='+str(shard['id'])+'\n')
+                  break
+          else: raise SystemExit('Source shard is absent from verified release')
+          PY
+      - uses: actions/cache@v4
+        with:
+          path: full-text-source
+          key: whole-filing-texts-${{ env.SOURCE_ARTIFACT }}
+      - name: Materialize EVERY issuer and filing in this source shard
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ ! -f full-text-source/text-materialization-report.json ]; then
+            python scripts/materialize_filing_texts.py --repository "$GITHUB_REPOSITORY" --artifact-id "$SOURCE_ARTIFACT" --out full-text-source
+          fi
+      - name: Set the explicit filing cutoff
+        run: echo "FILING_AS_OF=$(date -u +%F)" >> "$GITHUB_ENV"
+      - uses: actions/cache@v4
+        with:
+          path: compiled-profiles
+          key: deep-profiles-${{ matrix.shard }}-${{ github.sha }}
+          restore-keys: deep-profiles-${{ matrix.shard }}-
+      - name: Compile all dated full-text sources, with per-issuer checkpoints
+        run: >-
+          python -u -m scripts.build_filing_profiles --objects full-text-source/objects
+          --as-of "$FILING_AS_OF" --descriptions excel_bot/data/finviz_with_descriptions.csv
+          --out compiled-profiles
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deep-filing-profiles-${{ matrix.shard }}
+          path: compiled-profiles/
+          retention-days: 90
+  combine:
+    needs: compile
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            src
+            scripts
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: deep-filing-profiles-*
+          path: shards
+      - name: Require complete archived issuer and filing coverage
+        run: >-
+          python -m scripts.build_filing_profiles --merge shards --out filing-profiles
+          --expected-companies 2026 --expected-filings 23635
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deep-filing-profiles-complete
+          path: filing-profiles/
+          retention-days: 90
