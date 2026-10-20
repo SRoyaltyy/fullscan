@@ -268,6 +268,11 @@ def main(argv=None) -> int:
                         help="always-enrich these extra tickers (e.g. proof-of-concept names)")
     args = parser.parse_args(argv)
 
+    meta_path = OUT_DIR / 'meta.json'
+    if meta_path.is_file() and json.loads(meta_path.read_text(encoding='utf-8')).get('snapshot'):
+        parser.error('Versioned snapshots must export profiles through export_backtest_static; '
+                     'separate EDGAR display enrichment would replace the scoring-board profiles')
+
     started = time.time()
     index = load_pass_tickers()
     for extra in args.also:
@@ -338,3 +343,4 @@ def main(argv=None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

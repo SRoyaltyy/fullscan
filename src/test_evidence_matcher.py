@@ -30,6 +30,190 @@ EXTRA = [
 
 
 class EvidenceTests(unittest.TestCase):
+ def test_common_glossary_word_needs_a_brand_role_in_the_headline(self):
+  b=build_board([{'ticker':'OWN','name':'Example Social Inc','industry':'Software','filing_sections':[{'kind':'identity_source','text':'"Family" refers to our ZedChat and ZedPhoto products.'}]}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Police charge a man after an attack on his Family.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_dictionary_non_noun_legal_prefix_has_own_corporate_predicate(self):
+  b=build_board([{'ticker':'M','name':'Meta Platforms Inc','industry':'Software'}],engine='evidence')
+  for text in ('Meta may use new terms to reduce licensing fees.', 'Meta employees said accounts were restricted.'):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'M'},text)
+
+ def test_adjective_and_all_caps_agency_are_not_unqualified_legal_prefixes(self):
+  b=build_board([{'ticker':'COAS','name':'Coastal Bank Corp','industry':'Banks'},
+                {'ticker':'CENT','name':'ECB Bancorp Inc','industry':'Banks'}],engine='evidence')
+  for text in ('Coastal homes burn as winds fuel fires.', 'ECB workers announce new inflation guidelines.'):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertFalse(any(r['pass'] for r in hit['stocks']),text)
+
+ def test_industry_typed_short_name_in_court_object_role(self):
+  b=build_board([{'ticker':'ZBF','name':'ZBF Financial Corp','industry':'Banks Regional'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Court affirms judgment for ZBF Bank in a trust dispute.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'ZBF'})
+
+ def test_nominal_insider_sale_with_bound_issuer_symbol(self):
+  b=build_board([{'ticker':'TEN','name':'Example Energy Navigation Ltd','industry':'Shipping'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Example Energy Navigation (TEN) Insider Sale: Chief Executive.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'TEN'})
+
+ def test_issuer_operating_brand_list_is_not_a_retail_resale_list(self):
+  rows=[{'ticker':'OWN','name':'Example Commerce Inc','industry':'Retail','description':'Example Commerce, Inc. engages in retail services under brands that include Zedshop, Zedshop Eats, and Farzed.'},
+        {'ticker':'SHOP','name':'Example Stores Inc','industry':'Retail','description':'It sells third-party brands including Farzed under brands that include Farzed.'}]
+  b=build_board(rows,engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Farzed launches a new luxury marketplace.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'OWN'})
+  # Competing explicit ownership witnesses require abstention.
+  rows[1]['description']='It provides retail services under brands that include Farzed.'
+  b=build_board(rows,engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Farzed launches a new luxury marketplace.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_named_actor_infinitive_does_not_spread_capacity_to_peers(self):
+  b=build_board([{'ticker':'PEER','name':'Example Chemistry Inc','industry':'Chemicals','description':'We produce fragrance ingredients and expand manufacturing production capacity.'}],engine='evidence')
+  for text in ('Zedchem to Expand Fragrance Ingredient Production Capacity.',
+               'Zedchem will expand fragrance ingredient production capacity.',
+               'Zedchem Expands Fragrance Ingredient Production Capacity.'):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertFalse(any(r['pass'] for r in hit['stocks']),text)
+
+ def test_named_government_rule_retains_industry_route(self):
+  b=build_board([{'ticker':'PEER','name':'Example Chemistry Inc','industry':'Chemicals','description':'We manufacture fragrance ingredients in France.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Government to Restrict Fragrance Ingredient Production in France.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'PEER'})
+
+ def test_title_case_industry_activity_is_not_a_named_actor(self):
+  b=build_board(STOCKS,engine='evidence')
+  for text in ('Space launch ranges expand capacity.', 'Space Launch Ranges Expand Capacity.'):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertIn('RKLB',{r['ticker'] for r in hit['stocks'] if r['pass']},text)
+
+ def test_two_country_names_are_scope_not_operating_evidence(self):
+  from src.stock_evidence import locations_in
+  self.assertTrue({'azerbaijan','turkey'}<=locations_in('Azerbaijan and Turkey'))
+  b=build_board([{'ticker':'TEL','name':'Example Telecom Inc','industry':'Telecom','description':'We operate mobile networks in Azerbaijan and Turkey.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Azerbaijan and Turkey ban ceremonial hats in public schools.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_delisting_exchange_and_possessive_noun_are_not_issuers(self):
+  b=build_board([{'ticker':'EXCH','name':'Nasdaq Inc','industry':'Exchanges'},
+                 {'ticker':'DATA','name':'Data Holdings Inc','industry':'Software'}],engine='evidence')
+  for text in ('Zedtech Receives Nasdaq Delisting Warning.',
+               "Zedcloud's Data Centers Expand Production Capacity."):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertFalse(any(r['pass'] for r in hit['stocks']),text)
+
+ def test_advisor_role_and_former_employer_apply_to_sourced_aliases(self):
+  b=build_board([{'ticker':'ADVR','name':'Zedcore Inc','industry':'Investment Banking'},
+                {'ticker':'OLD','name':'Zedney Holdings Inc','industry':'Media','description':'The company operates through the following segments: Zedney Entertainment and Zedney Parks.'}],engine='evidence')
+  for text in ('Zednet Engages Zedcore Amid Refinancing.',
+               'Formerly Zedney executive launches a new firm.'):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertFalse(any(r['pass'] for r in hit['stocks']),text)
+
+ def test_generic_segment_word_in_legal_name_is_not_a_brand_alone(self):
+  row={'ticker':'HEAL','name':'Example Health Inc','industry':'Healthcare','description':'Example Health operates through the following segments: Health Services and Health Benefits. The Health Services segment provides clinics. The Health Benefits segment offers insurance.'}
+  b=build_board([row],engine='evidence')
+  for text in ['One Health Clinic opens a produce stand.',"A debate over the mayor's Health Fuels New Questions."]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertFalse(any(r['pass'] for r in hit['stocks']),text)
+
+ def test_product_list_does_not_make_ordinary_prepositional_search_a_brand(self):
+  row={'ticker':'OWN','name':'Example Holdings Inc','industry':'Software','description':'Example Holdings operates through the following segments: Zedgle Services and Zedgle Cloud. The Zedgle Services segment includes products and services, such as Search, Zedroid, and Zedgle Maps.'}
+  b=build_board([row],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'A Phone Was Seized Before Search of a Home.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_partial_legal_prefix_cannot_use_full_proper_phrase_exception(self):
+  b=build_board([{'ticker':'ENE','name':'New Era Energy Inc','industry':'Energy'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'A streaming company cuts costs for a New Era at its platform.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_owned_segments_with_the_prefixed_legal_introduction(self):
+  row={'ticker':'DISX','name':'Walt Zedney Co','industry':'Entertainment','description':'The Walt Zedney Co. operates through the following business segments: Zedney Entertainment, Sports, and Zedney Parks.'}
+  b=build_board([row],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Zedney to Pay $10 Million for New Employees.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'DISX'})
+
+ def test_legal_suffix_and_initials_stay_attached_to_headline_event(self):
+  rows=[{'ticker':'PINX','name':'Zedboard Inc','industry':'Software'},
+        {'ticker':'LOGX','name':'A.B. Zed Transport Services Inc','industry':'Transport'}]
+  b=build_board(rows,engine='evidence')
+  for text,want in [('Zedboard, Inc. Enters into a Revolving Credit Facility.',{'PINX'}),
+                    ('A.B. Zed Raises Freight Prices as Costs Rise.',{'LOGX'})]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},want)
+
+ def test_masks_apply_to_short_names_and_government_codes(self):
+  rows=[{'ticker':'GOVX','name':'FTC Solar Inc','industry':'Solar'},
+        {'ticker':'CI','name':'Example Insurance Inc','industry':'Insurance'},
+        {'ticker':'PLACE','name':'San Juan Basin Trust','industry':'Energy'},
+        {'ticker':'MYX','name':'Myers Industries Inc','industry':'Manufacturing'}]
+  b=build_board(rows,engine='evidence')
+  for text in ['FTC probes an AI company after a complaint.',
+               'SAN JUAN, Puerto Rico — IRS-CI announces a money laundering investigation.',
+               'North Fort Myers Man Pleads Guilty to Firearms Offenses.']:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertFalse(any(r['pass'] or r['name_hit'] for r in hit['stocks']),text)
+
+ def test_analyst_ratings_and_exchange_listing_actions_are_roles(self):
+  b=build_board([{'ticker':'BROK','name':'Zed Research Corp','industry':'Finance'},
+                {'ticker':'NDAQ','name':'Nasdaq Inc','industry':'Exchange'},
+                {'ticker':'ISS','name':'Zedworks Inc','industry':'Software'}],engine='evidence')
+  for text,want in [('Zed Research Maintains Zedworks Buy Rating after Earnings.',{'ISS'}),
+                    ('Nasdaq approves a reverse split for Zedworks (NASDAQ:ISS).',{'ISS'}),
+                    ('Zed Research reports quarterly earnings.',{'BROK'})]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},want,text)
+
+ def test_bare_acronym_requires_own_financial_predicate_not_purchase_object(self):
+  b=build_board([{'ticker':'HWX','name':'Harlow Ware Enterprise Inc','industry':'Hardware'},
+                {'ticker':'ZRX','name':'ZRX Minerals Corp','industry':'Mining'}],engine='evidence')
+  for text,want in [('HWX Delivers Quarterly Results And Raises Guidance.',{'HWX'}),
+                    ('The treasury company files an offering to buy more ZRX.',set())]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},want,text)
+
+ def test_common_owned_words_are_not_substrings_of_other_proper_compounds(self):
+  rows=[{'ticker':'FAM','name':'Example Social Inc','industry':'Software','filing_sections':[{
+      'kind':'identity_source','text':'"Family" refers to our ZedChat and ZedPhoto products.'}]},
+        {'ticker':'QNET','name':'Example Security Inc','industry':'Security','description':'Its products include Quantum, ZedGuard, and tools.'}]
+  b=build_board(rows,engine='evidence')
+  for text in ['A hospital acquires Zedville Family Practice.',
+               "A university's Quantum Computer achieved a major breakthrough."]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertFalse(any(r['pass'] for r in hit['stocks']),text)
+
+ def test_owned_segment_product_list_resolves_same_issuer_share_classes(self):
+  desc='Example Holdings Inc operates through the following segments: Zedgle Services, Zedgle Cloud, and Other Bets. The Zedgle Services segment includes products and services, such as Zedroid, Zedgle Maps, and Zedgle Play.'
+  b=build_board([{'ticker':t,'name':'Example Holdings Inc','industry':'Software','description':desc} for t in ('CLASSA','CLASSB')],engine='evidence')
+  for text in ['Zedroid launches new earthquake alerts.',"Zedgle's Quantum Computer achieves a breakthrough."]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'CLASSA','CLASSB'},text)
+
+ def test_segment_prefix_uses_whole_shared_phrase_and_excludes_geography(self):
+  rows=[{'ticker':'WORK','name':'Example Machines Inc','industry':'Machinery','description':'Example Machines operates through the following segments: Work Truck Attachments and Work Truck Solutions. The Work Truck Attachments segment manufactures snow controls. The Work Truck Solutions segment makes ice removal machinery.'},
+        {'ticker':'TEL','name':'Example Telecom Inc','industry':'Telecom','description':'Example Telecom operates through the following segments: Mexico Wireless, Mexico Fixed, and Brazil.'}]
+  b=build_board(rows,engine='evidence')
+  for text in ['A browser update adds Work Controls.', 'Mexico arrests a suspect on drug charges.']:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertFalse(any(r['pass'] for r in hit['stocks']),text)
+  self.assertFalse(any(f.kind=='operating_brand' and f.text in {'Work','Mexico'} for p in b.evidence_board.profiles.values() for f in p.facts))
+
+ def test_owned_properties_do_not_make_third_party_operators_products(self):
+  b=build_board([{'ticker':'PROP','name':'Example Properties Inc','industry':'Hotels','description':'It owns lodging properties operated by ZedHotel and ZedResorts.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'ZedHotel launches a new booking service.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_different_issuer_widget_does_not_replace_primary_headline_subject(self):
+  rows=[{'ticker':'WORKS','name':'Zedworks Inc','industry':'Software'},
+        {'ticker':'OTHER','name':'Othertech Inc','industry':'Software'}]
+  b=build_board(rows,engine='evidence')
+  title='Zedworks to Pay $12 Million for New Employees - Othertech (NASDAQ:OTHER), Othertech (NAS - Publisher'
+  hit=link_articles(b,[{'id':'x','title':title,'text':title}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'WORKS'})
+
  def test_product_list_internal_conjunction_is_not_a_brand_boundary(self):
   row={'ticker':'N','name':'Example Software Inc','industry':'Software','description':'Its products include Remote Monitoring and Management, Backup and Data Protection, and ZedConsole.'}
   p=build_profile(row,Catalog([row]))
@@ -602,6 +786,13 @@ class EvidenceTests(unittest.TestCase):
   import os,subprocess,sys
   code="from src.correlation import build_board,link_articles; from src.test_evidence_matcher import EXTRA; import json; print(json.dumps(link_articles(build_board(EXTRA,engine='evidence'),[{'id':'x','text':'FDA approves VOXZOGO for children with achondroplasia.'}],engine='evidence'),sort_keys=True))"
   outputs=[subprocess.check_output([sys.executable,'-c',code],env={**os.environ,'PYTHONHASHSEED':seed}) for seed in ('1','27')]
+  self.assertEqual(outputs[0],outputs[1])
+
+ def test_owned_segment_compilation_is_hash_seed_independent(self):
+  import os,subprocess,sys
+  row={'ticker':'P','name':'Example Holdings Inc','industry':'Software','description':'Example Holdings operates through the following segments: Zedgle Services, Other, and Zedgle Cloud. The Zedgle Services segment includes products and services, such as Zedroid, Zedgle Maps, and Zedgle Play.'}
+  code="from src.correlation import build_board,link_articles; import json; row="+repr(row)+"; print(json.dumps(link_articles(build_board([row],engine='evidence'),[{'id':'x','text':'Zedroid launches new alerts.'}],engine='evidence'),sort_keys=True))"
+  outputs=[subprocess.check_output([sys.executable,'-c',code],env={**os.environ,'PYTHONHASHSEED':seed}) for seed in ('3','31')]
   self.assertEqual(outputs[0],outputs[1])
 
  def test_event_product_class_is_distinct_from_disease_indication(self):

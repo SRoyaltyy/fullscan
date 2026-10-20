@@ -1,181 +1,159 @@
-"""Export static backtest artifacts for the GitHub Pages scanner-backtest page.
+"""Export provenance-bound scanner results and the exact profiles used to score them.
 
-GitHub Pages cannot run the evidence engine, so this script scores the whole
-news intake offline through the same production path the local server page
-uses — ``link_articles(..., engine="evidence")`` — and writes two committed
-artifacts:
-
-- ``dashboard/scanner-backtest/results.jsonl`` — one line per article with the
-  full match result. This is the permanent trial-and-error log: every match
-  anyone sees is a reproducible record tied to an engine version.
-- ``dashboard/scanner-backtest/articles.json`` — display-sized article records
-  (text truncated to ``--text-limit`` chars). The match ran on full text
-  offline; the page only needs enough text to read the story.
-
-Batching note: ``link_articles`` has a fixed per-call preparation cost, so each
-worker scores its whole shard through ONE call. Same function, same engine,
-same decision path — just amortized overhead.
-
-Runs are resumable: existing article ids in ``results.jsonl`` are skipped, so
-a long export can be chunked across invocations (``--offset``/``--limit``)
-or interrupted and restarted.
-
-Usage:
-    python -m scripts.export_backtest_static                 # full intake
-    python -m scripts.export_backtest_static --limit 500     # smoke test
-    python -m scripts.export_backtest_static --workers 8     # parallelism
+Headline-only is default. Use a new --out-dir for changed code, inputs, or filings.
+No SEC fetch, LLM, or network operation occurs while scoring.
 """
 from __future__ import annotations
-
 import argparse
+import hashlib
 import json
-import os
 import time
 from pathlib import Path
-
 from src.correlation import link_articles
-from src.link_correlation import ROOT, load_articles
-from src.scanner_backtest import ENGINE, open_program, present
+from src.link_correlation import ROOT
+from src.scanner_backtest import (ENGINE, load_test_articles, open_program, present,
+                                  profile_view, select_input, snapshot_metadata)
 
-OUT_DIR = ROOT / "dashboard" / "scanner-backtest"
-RESULTS = OUT_DIR / "results.jsonl"
-ARTICLES = OUT_DIR / "articles.json"
-
-_BOARD = None
-_NAMES = None
+OUT_DIR = ROOT / 'dashboard/scanner-backtest'
+_BOARD = _NAMES = _SNAPSHOT = None
+_INPUT_MODE = 'headline'
 
 
-def _init_worker():
-    """Build the board once per worker process; it is read-only while scoring."""
-    global _BOARD, _NAMES
-    descriptions = ROOT / "excel_bot" / "data" / "finviz_with_descriptions.csv"
-    sectors = ROOT / "data" / "finviz" / "latest.csv"
-    if not sectors.is_file():
-        sectors = None
-    _BOARD, _NAMES = open_program(descriptions, sectors, None)
+def _init_worker(descriptions, sectors, universe, identity_filings, as_of, input_mode, snapshot):
+    global _BOARD, _NAMES, _INPUT_MODE, _SNAPSHOT
+    _BOARD, _NAMES = open_program(descriptions, sectors, universe,
+                                 identity_filings=identity_filings, as_of=as_of)
+    if snapshot_metadata(_BOARD, input_mode)['snapshot_id'] != snapshot['engine_snapshot_id']:
+        raise ValueError('scoring inputs changed after snapshot freeze')
+    _INPUT_MODE, _SNAPSHOT = input_mode, snapshot
 
 
-def _score_shard(shard: list[dict]) -> list[dict]:
-    """Score a shard in one link_articles call; results come back in order."""
-    linked = link_articles(_BOARD, shard, names=_NAMES, engine=ENGINE)
+def _score_shard(shard):
+    selected = [select_input(article, _INPUT_MODE) for article in shard]
+    linked = link_articles(_BOARD, selected, names=_NAMES, engine=ENGINE)
+    if len(linked) != len(selected):
+        raise ValueError('engine returned an incomplete shard')
     results = []
-    for article, item in zip(shard, linked):
+    for article, item in zip(selected, linked):
         row = present(item)
-        row["id"] = article.get("id")
+        row.update(id=article['id'], input_mode=_INPUT_MODE,
+                   input_sha256=hashlib.sha256(article['text'].encode()).hexdigest(),
+                   snapshot_id=_SNAPSHOT['snapshot_id'])
         results.append(row)
     return results
 
 
-def export_articles(articles: list[dict], text_limit: int) -> list[dict]:
-    """Display-sized article records, keyed for the static page."""
-    records = []
-    for article in articles:
-        text = str(article.get("text") or "")
-        records.append({
-            "id": article.get("id"),
-            "title": article.get("title") or "",
-            "url": article.get("url") or "",
-            "source": article.get("source") or "",
-            "published_at": str(article.get("published_at") or ""),
-            "text": text[:text_limit],
-            "truncated": len(text) > text_limit,
-            "full_text": bool(article.get("full_text")),
-        })
-    return records
+def export_articles(articles, text_limit):
+    return [{**{k: a.get(k, '') for k in ('id', 'title', 'url', 'source', 'published_at')},
+             'text': str(a.get('text') or '')[:text_limit],
+             'truncated': len(str(a.get('text') or '')) > text_limit,
+             'full_text': a.get('input_mode') == 'full-text',
+             'input_mode': a.get('input_mode', 'headline')}
+            for a in articles]
 
 
-def load_done_ids(path: Path) -> set[str]:
-    done: set[str] = set()
-    if path.is_file():
-        with path.open(encoding="utf-8") as handle:
-            for line in handle:
-                line = line.strip()
-                if not line:
-                    continue
-                try:
-                    done.add(str(json.loads(line).get("id")))
-                except json.JSONDecodeError:
-                    continue
-    return done
+def read_results(path, snapshot_id):
+    if not path.is_file():
+        return []
+    rows, seen = [], set()
+    for line in path.read_text(encoding='utf-8').splitlines():
+        if not line.strip():
+            continue
+        row = json.loads(line)
+        if row.get('snapshot_id') != snapshot_id:
+            raise ValueError('unversioned or incompatible result cache; use a new --out-dir')
+        key = str(row['id'])
+        if key in seen:
+            raise ValueError('duplicate article id in result cache')
+        seen.add(key)
+        rows.append(row)
+    return rows
 
 
-def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--news", type=Path, default=ROOT / "data" / "news_intake" / "2026-10-17" / "documents.json")
-    parser.add_argument("--limit", type=int, default=0, help="score at most N not-yet-done articles")
-    parser.add_argument("--offset", type=int, default=0, help="skip the first N intake articles")
-    parser.add_argument("--workers", type=int, default=max(1, (os.cpu_count() or 2) - 2))
-    parser.add_argument("--shard-size", type=int, default=400, help="articles per link_articles batch call")
-    parser.add_argument("--text-limit", type=int, default=3000)
-    parser.add_argument("--out-dir", type=Path, default=OUT_DIR)
-    args = parser.parse_args(argv)
+def validate_resume(out_dir, snapshot):
+    meta_path = out_dir / 'meta.json'
+    existing = any((out_dir / name).is_file() for name in
+                   ('results.jsonl', 'articles.json', 'profiles.json', 'ticker-index.json'))
+    if existing and not meta_path.is_file():
+        raise ValueError('unversioned artifacts; use a new --out-dir')
+    if meta_path.is_file():
+        meta = json.loads(meta_path.read_text(encoding='utf-8'))
+        if meta.get('snapshot', {}).get('snapshot_id') != snapshot['snapshot_id']:
+            raise ValueError('snapshot mismatch; use a new --out-dir')
+    return read_results(out_dir / 'results.jsonl', snapshot['snapshot_id'])
 
-    out_dir = args.out_dir
-    out_dir.mkdir(parents=True, exist_ok=True)
-    results_path = out_dir / RESULTS.name
-    articles_path = out_dir / ARTICLES.name
 
+def main(argv=None):
+    p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    p.add_argument('--news', type=Path, default=ROOT / 'data/news_intake/2026-10-17/documents.json')
+    p.add_argument('--descriptions', type=Path, default=ROOT / 'excel_bot/data/finviz_with_descriptions.csv')
+    p.add_argument('--sectors', type=Path)
+    p.add_argument('--universe', type=Path)
+    p.add_argument('--identity-filings', type=Path)
+    p.add_argument('--as-of')
+    p.add_argument('--input-mode', choices=('headline', 'full-text'), default='headline')
+    p.add_argument('--limit', type=int, default=0)
+    p.add_argument('--offset', type=int, default=0)
+    p.add_argument('--workers', type=int, default=2)
+    p.add_argument('--shard-size', type=int, default=100)
+    p.add_argument('--text-limit', type=int, default=3000)
+    p.add_argument('--out-dir', type=Path, default=OUT_DIR)
+    a = p.parse_args(argv)
+    if min(a.workers, a.shard_size, a.text_limit) < 1 or min(a.limit, a.offset) < 0:
+        p.error('workers/shard-size/text-limit must be positive; limit/offset nonnegative')
+    if a.identity_filings and not a.as_of:
+        p.error('--identity-filings requires --as-of')
+    board, names = open_program(a.descriptions, a.sectors, a.universe,
+                                identity_filings=a.identity_filings, as_of=a.as_of)
+    snapshot = snapshot_metadata(board, a.input_mode)
+    snapshot['engine_snapshot_id'] = snapshot.pop('snapshot_id')
+    snapshot['news_sha256'] = hashlib.sha256(a.news.read_bytes()).hexdigest()
+    snapshot['snapshot_id'] = hashlib.sha256(json.dumps(snapshot, sort_keys=True).encode()).hexdigest()
+    rows = validate_resume(a.out_dir, snapshot)
+    articles = load_test_articles(a.news)
+    by_id = {str(article['id']): article for article in articles}
+    if len(by_id) != len(articles):
+        raise ValueError('duplicate article ids in input')
+    done = {str(row['id']) for row in rows}
+    if done - by_id.keys():
+        raise ValueError('cached article absent from intake')
+    todo = [article for article in articles[a.offset:] if str(article['id']) not in done]
+    if a.limit:
+        todo = todo[:a.limit]
+    a.out_dir.mkdir(parents=True, exist_ok=True)
+    meta = {'engine': ENGINE, 'intake': a.news.parent.name, 'snapshot': snapshot}
+    (a.out_dir / 'meta.json').write_text(json.dumps(meta, indent=2) + '\n', encoding='utf-8')
     started = time.time()
-    articles = load_articles(args.news, 0)
-    if args.offset:
-        articles = articles[args.offset:]
-    print(f"intake: {len(articles)} articles (engine={ENGINE})")
-
-    done = load_done_ids(results_path)
-    todo = [a for a in articles if str(a.get("id")) not in done]
-    if args.limit:
-        todo = todo[: args.limit]
-    print(f"done: {len(done)}  todo: {len(todo)}  workers: {args.workers}")
-
     if todo:
-        # Warm the article display artifact for the scored slice; subsequent
-        # runs merge by id so chunked exports accumulate.
-        display = export_articles(todo, args.text_limit)
-        if articles_path.is_file():
-            existing = {str(r.get("id")): r for r in json.loads(articles_path.read_text(encoding="utf-8"))}
-        else:
-            existing = {}
-        for record in display:
-            existing[str(record["id"])] = record
-        articles_path.write_text(json.dumps(list(existing.values()), ensure_ascii=False), encoding="utf-8")
-
-        shards = [todo[i:i + args.shard_size] for i in range(0, len(todo), args.shard_size)]
         import concurrent.futures as futures
-
-        scored = 0
-        with results_path.open("a", encoding="utf-8") as out, \
-                futures.ProcessPoolExecutor(max_workers=args.workers, initializer=_init_worker) as pool:
-            for shard_results in pool.map(_score_shard, shards):
-                for row in shard_results:
-                    out.write(json.dumps(row, ensure_ascii=False) + "\n")
-                scored += len(shard_results)
+        shards = [todo[i:i + a.shard_size] for i in range(0, len(todo), a.shard_size)]
+        with futures.ProcessPoolExecutor(max_workers=a.workers, initializer=_init_worker,
+                initargs=(a.descriptions, a.sectors, a.universe, a.identity_filings,
+                          a.as_of, a.input_mode, snapshot)) as pool, \
+                (a.out_dir / 'results.jsonl').open('a', encoding='utf-8') as out:
+            for shard in pool.map(_score_shard, shards):
+                for row in shard:
+                    out.write(json.dumps(row, ensure_ascii=False) + '\n')
                 out.flush()
-                rate = scored / (time.time() - started)
-                remaining = (len(todo) - scored) / max(rate, 0.01)
-                print(f"scored {scored}/{len(todo)}  {rate:.1f}/s  eta {remaining/60:.1f} min", flush=True)
-
-    total = len(load_done_ids(results_path))
-    with_passes = 0
-    with results_path.open(encoding="utf-8") as handle:
-        for line in handle:
-            try:
-                if json.loads(line).get("pass_count"):
-                    with_passes += 1
-            except json.JSONDecodeError:
-                continue
-    meta = {
-        "engine": ENGINE,
-        "intake": args.news.parent.name,
-        "articles": total,
-        "articles_with_passes": with_passes,
-        "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-    }
-    (out_dir / "meta.json").write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
-    print(f"results.jsonl: {total} articles ({with_passes} with passes)  ({time.time() - started:.0f}s total)")
-    if articles_path.is_file():
-        print(f"articles.json: {len(json.loads(articles_path.read_text(encoding='utf-8')))} records")
+                rows.extend(shard)
+                print(f'scored {len(rows)} articles ({time.time() - started:.0f}s)', flush=True)
+    elif not (a.out_dir / 'results.jsonl').exists():
+        (a.out_dir / 'results.jsonl').touch()
+    display = export_articles([select_input(by_id[str(r['id'])], a.input_mode) for r in rows], a.text_limit)
+    profiles = {ticker: profile_view(profile) for ticker, profile in board.evidence_board.profiles.items()}
+    index = {}
+    for row in rows:
+        for stock in row['passes']:
+            index.setdefault(stock['ticker'], []).append({'id': row['id'], 'decision': row['decision'],
+                'tier': stock['tier'], 'reasons': stock['reasons']})
+    for name, payload in [('articles.json', display), ('profiles.json', profiles), ('ticker-index.json', index)]:
+        (a.out_dir / name).write_text(json.dumps(payload, ensure_ascii=False), encoding='utf-8')
+    meta.update(articles=len(rows), articles_with_passes=sum(bool(r['pass_count']) for r in rows),
+                generated_at=time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()))
+    (a.out_dir / 'meta.json').write_text(json.dumps(meta, indent=2) + '\n', encoding='utf-8')
     return 0
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     raise SystemExit(main())
+
