@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T15:37:28.430563-04:00",
+  "generated_at": "2026-10-20T16:48:50.742320-04:00",
   "dates": [
     "2026-07-31",
     "2026-08-02",
@@ -69,13 +69,13 @@
   ],
   "general": {
     "overall": {
-      "n_graded": 46,
+      "n_graded": 47,
       "n_predicts": 50,
       "dir_hits": 25,
-      "dir_hit_pct": 54.34782608695652,
+      "dir_hit_pct": 53.191489361702125,
       "mag_hits": 23,
-      "mag_n": 46,
-      "mag_hit_pct": 50.0,
+      "mag_n": 47,
+      "mag_hit_pct": 48.93617021276596,
       "n_pipeline_blank": 15,
       "pipeline_blank_dates": [
         "2026-08-02",
@@ -102,13 +102,13 @@
       ]
     },
     "legacy_all_graded": {
-      "n_graded": 49,
+      "n_graded": 50,
       "n_predicts": 50,
       "dir_hits": 25,
-      "dir_hit_pct": 51.02040816326531,
+      "dir_hit_pct": 50.0,
       "mag_hits": 23,
-      "mag_n": 49,
-      "mag_hit_pct": 46.93877551020408,
+      "mag_n": 50,
+      "mag_hit_pct": 46.0,
       "n_pipeline_blank": 15,
       "pipeline_blank_dates": [
         "2026-08-02",
@@ -845,10 +845,10 @@
         "predicted_direction": "down",
         "predicted_magnitude_band": "mild",
         "total_score": -8.071,
-        "actual_pct_change": null,
-        "actual_direction": null,
-        "direction_hit": null,
-        "magnitude_hit": null
+        "actual_pct_change": 0.28,
+        "actual_direction": "up",
+        "direction_hit": false,
+        "magnitude_hit": false
       }
     ]
   },

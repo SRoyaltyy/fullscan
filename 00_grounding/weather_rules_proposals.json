@@ -1,7 +1,7 @@
 {
-  "updated": "2026-10-20T15:37:33.235274-04:00",
+  "updated": "2026-10-20T16:48:54.817296-04:00",
   "window_n": 15,
-  "direction_acc": 0.4666666666666667,
+  "direction_acc": 0.4,
   "notes": [
     "General accuracy <50%: propose wider neutral band on risk thresholds."
   ],
