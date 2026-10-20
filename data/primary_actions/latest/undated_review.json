@@ -1,8 +1,8 @@
 [
   {
-    "title": "Pleadings",
-    "url": "https://www.fcc.gov/edoc/425955",
-    "native_id": "425955",
+    "title": "Wireline Competition Bureau Reauthorizes Enhanced Alternative Connect America Cost Model Support for TDS Telecommunications, LLC In New Hampshire",
+    "url": "https://www.fcc.gov/edoc/425966",
+    "native_id": "425966",
     "published_at": null,
     "published_raw": "",
     "summary": ".",
@@ -16,155 +16,59 @@
       "family": "telecom_rules_and_licences"
     },
     "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 5437,
-    "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "n": 5516,
+    "first_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Domestic 214 Application Granted For the Transfer of Control of Accipiter Communications, Inc. and Wyyerd Connect, LLC to Wildflower Parent, L.P.",
-    "url": "https://www.fcc.gov/edoc/425957",
-    "native_id": "425957",
+    "title": "Consultation Committee on the Japan-U.S. Strategic Investment Initiative",
+    "url": "https://www.meti.go.jp/english/press/2026/10/20261020001.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261020001.html",
     "published_at": null,
-    "published_raw": "",
-    "summary": ".",
+    "published_raw": null,
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
     },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 5438,
-    "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "primary_source_id": "jp-meti-index",
+    "n": 5521,
+    "first_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
-      "us-fcc-e95ecda3bb"
+      "jp-meti-index"
     ]
   },
   {
-    "title": "Actions",
-    "url": "https://www.fcc.gov/edoc/425954",
-    "native_id": "425954",
+    "title": "The Eighth International Conference on Carbon Recycling 2026 Held",
+    "url": "https://www.meti.go.jp/english/press/2026/10/20261009001.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261009001.html",
     "published_at": null,
-    "published_raw": "",
-    "summary": ".",
+    "published_raw": null,
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
     },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 5439,
-    "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "primary_source_id": "jp-meti-index",
+    "n": 5522,
+    "first_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Applications",
-    "url": "https://www.fcc.gov/edoc/425953",
-    "native_id": "425953",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 5440,
-    "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "PSHSB Announces Region 39 (Tennessee) RPCs to Hold 700 MHZ and 800 MHZ Meetings",
-    "url": "https://www.fcc.gov/edoc/425967",
-    "native_id": "425967",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "Announces Region 39 (Tennessee) RPC Meeting for 700 MHZ and 800 MHZ Meetings",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 5441,
-    "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "PSHSB Announces Region 15 (Iowa) RPCs to Hold 700 MHZ and 800 MHZ Meetings",
-    "url": "https://www.fcc.gov/edoc/425969",
-    "native_id": "425969",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "Announces Region 15 (Iowa) RPC Meeting for 700 MHZ and 800 MHZ",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 5442,
-    "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Building the future of finance in the age of AI",
-    "url": "https://www.fca.org.uk/news/speeches/building-future-finance-age-ai",
-    "native_id": "176766",
-    "published_at": null,
-    "published_raw": "Monday, October 19, 2026 - 09:05",
-    "summary": "Jessica Rusu, FCA chief data, information and intelligence officerat Bloomberg's UK Policy Series. The Mills ReviewThat is why we commissioned the Mills Review, published in July, focused on how AI could reshape retail financial services by 2030.Some developments we anticipated are already emerging, including the transition towards agentic finance, such as the launch of Meta’s Muse.Our response to the review is not to consult, study and report progress.Our focus is testing, assurance, monitoring and surveillance: directly with industry to understand how AI systems are being deployed.Whilst the Review focused on retail, the AI shift does not stop at the retail boundary.Across wholesale markets too, AI is accelerating how firms analyse, trade, monitor and make decisions.We are embedding 6 of the 7 recommendations into live work immediately. Our innovation services such as the AI Lab give us direct insight into what firms are building from agent-led payments and fraud detection to consumer support.On frontier AI security, we are working directly with banks to understand how frontier models are changing cyber defence, identifying and linking vulnerabilities and assisting with triaging,",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Conduct Authority",
-      "jurisdiction": "UK",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 5463,
-    "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
-    "source_ids": [
-      "uk-fca-7b9977ec8e"
+      "jp-meti-index"
     ]
   }
 ]

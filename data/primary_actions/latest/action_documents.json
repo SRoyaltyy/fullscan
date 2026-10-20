@@ -1,5 +1,125 @@
 [
   {
+    "title": "DCPD-202600619 - Remarks at a Rose Garden Club Dinner",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600619",
+    "native_id": "DCPD-202600619",
+    "published_at": "2026-10-19T20:34:00+00:00",
+    "published_raw": "Mon, 19 Oct 2026 20:34:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 5494,
+    "first_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600622 - Proclamation 11069-Restriction on Entry of Certain Nonimmigrant Workers",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600622",
+    "native_id": "DCPD-202600622",
+    "published_at": "2026-10-19T20:34:00+00:00",
+    "published_raw": "Mon, 19 Oct 2026 20:34:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 5493,
+    "first_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600621 - Message on the 79th Birthday of the United States Air Force",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600621",
+    "native_id": "DCPD-202600621",
+    "published_at": "2026-10-19T20:34:00+00:00",
+    "published_raw": "Mon, 19 Oct 2026 20:34:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 5492,
+    "first_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600623 - Executive Order 14431-Enhancing Program Integrity and Interagency Coordination in the Administration of the H-1B Nonimmigrant Visa Program",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600623",
+    "native_id": "DCPD-202600623",
+    "published_at": "2026-10-19T20:34:00+00:00",
+    "published_raw": "Mon, 19 Oct 2026 20:34:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 5491,
+    "first_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
+    "title": "DCPD-202600624 - Message on the Observance of Yom Kippur",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202600624",
+    "native_id": "DCPD-202600624",
+    "published_at": "2026-10-19T20:34:00+00:00",
+    "published_raw": "Mon, 19 Oct 2026 20:34:00 +0000",
+    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "presidential_document",
+      "document_stage": "presidential_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Compilation of Presidential Documents",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-dcpd",
+    "n": 5490,
+    "first_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "source_ids": [
+      "us-govinfo-dcpd"
+    ]
+  },
+  {
     "title": "Public Law 119 - 119 - Improving Social Security's Service to Victims of Identity Theft Act",
     "url": "https://www.govinfo.gov/app/details/PLAW-119publ119",
     "native_id": "PLAW-119publ119",
@@ -71,7 +191,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5385,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -100,7 +220,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5386,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -129,7 +249,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5387,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -158,7 +278,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5388,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -189,7 +309,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5349,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -219,7 +339,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5348,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -249,7 +369,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5344,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -280,7 +400,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5338,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -311,7 +431,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5326,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -342,7 +462,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5317,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -373,7 +493,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5314,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -403,7 +523,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5307,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -434,7 +554,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5301,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -464,7 +584,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5300,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -494,7 +614,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5298,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -524,7 +644,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5297,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -554,7 +674,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5293,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -585,7 +705,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5292,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -616,7 +736,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5291,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -647,7 +767,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5286,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -678,7 +798,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5285,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -709,7 +829,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5284,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -740,7 +860,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5271,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -770,7 +890,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5269,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -801,7 +921,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5247,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -831,7 +951,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5242,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -861,7 +981,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5232,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -891,7 +1011,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5231,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -921,7 +1041,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5230,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -951,249 +1071,9 @@
     "primary_source_id": "us-federal-register",
     "n": 5229,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-19T19:21:25.980956+00:00",
+    "last_seen": "2026-10-20T06:03:48.509691+00:00",
     "source_ids": [
       "us-federal-register"
-    ]
-  },
-  {
-    "title": "DCPD-202600618 - Remarks During a Telerally for Virginia Republican Congressional Candidates Representatives Robert J. Wittman, Jennifer Kiggans, and John McGuire",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600618",
-    "native_id": "DCPD-202600618",
-    "published_at": "2026-10-16T20:17:00+00:00",
-    "published_raw": "Fri, 16 Oct 2026 20:17:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 4305,
-    "first_seen": "2026-10-17T05:37:40.086992+00:00",
-    "last_seen": "2026-10-17T05:37:40.086992+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600617 - Executive Order 14430-Restoring American Saltwater Angling and Recreation",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600617",
-    "native_id": "DCPD-202600617",
-    "published_at": "2026-10-16T20:16:00+00:00",
-    "published_raw": "Fri, 16 Oct 2026 20:16:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 4304,
-    "first_seen": "2026-10-17T05:37:40.086992+00:00",
-    "last_seen": "2026-10-17T05:37:40.086992+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600616 - Executive Order 14429-Reinvigorating America's Hunting Heritage",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600616",
-    "native_id": "DCPD-202600616",
-    "published_at": "2026-10-16T20:16:00+00:00",
-    "published_raw": "Fri, 16 Oct 2026 20:16:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 4303,
-    "first_seen": "2026-10-17T05:37:40.086992+00:00",
-    "last_seen": "2026-10-17T05:37:40.086992+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600615 - Message on National Hispanic Heritage Month",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600615",
-    "native_id": "DCPD-202600615",
-    "published_at": "2026-10-16T20:16:00+00:00",
-    "published_raw": "Fri, 16 Oct 2026 20:16:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 4302,
-    "first_seen": "2026-10-17T05:37:40.086992+00:00",
-    "last_seen": "2026-10-17T05:37:40.086992+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600613 - Memorandum on Restoring Reciprocity in Government Procurement",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600613",
-    "native_id": "DCPD-202600613",
-    "published_at": "2026-10-16T20:15:00+00:00",
-    "published_raw": "Fri, 16 Oct 2026 20:15:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 4301,
-    "first_seen": "2026-10-17T05:37:40.086992+00:00",
-    "last_seen": "2026-10-17T05:37:40.086992+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600612 - Executive Order 14428-Providing Meaningful Water Quality Improvements Through Collaboration and Oversight of Federal Support",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600612",
-    "native_id": "DCPD-202600612",
-    "published_at": "2026-10-16T20:15:00+00:00",
-    "published_raw": "Fri, 16 Oct 2026 20:15:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 4300,
-    "first_seen": "2026-10-17T05:37:40.086992+00:00",
-    "last_seen": "2026-10-17T05:37:40.086992+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600608 - Remarks in an Exchange With Reporters Aboard Air Force One En Route to Joint Base Andrews, Maryland",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600608",
-    "native_id": "DCPD-202600608",
-    "published_at": "2026-10-16T20:13:00+00:00",
-    "published_raw": "Fri, 16 Oct 2026 20:13:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 4299,
-    "first_seen": "2026-10-17T05:37:40.086992+00:00",
-    "last_seen": "2026-10-17T05:37:40.086992+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600605 - Remarks in an Exchange With Reporters at the Trump International Golf Links and Hotel Doonbeg in Doonbeg, Ireland",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600605",
-    "native_id": "DCPD-202600605",
-    "published_at": "2026-10-16T20:13:00+00:00",
-    "published_raw": "Fri, 16 Oct 2026 20:13:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 4298,
-    "first_seen": "2026-10-17T05:37:40.086992+00:00",
-    "last_seen": "2026-10-17T05:37:40.086992+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202500992 - Remarks in a Cabinet Meeting and an Exchange With Reporters",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202500992",
-    "native_id": "DCPD-202500992",
-    "published_at": "2026-10-16T20:12:00+00:00",
-    "published_raw": "Fri, 16 Oct 2026 20:12:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 4297,
-    "first_seen": "2026-10-17T05:37:40.086992+00:00",
-    "last_seen": "2026-10-17T05:37:40.086992+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202500778 - Remarks on Signing the Guiding and Establishing National Innovation for U.S. Stablecoins (GENIUS) Act",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202500778",
-    "native_id": "DCPD-202500778",
-    "published_at": "2026-10-16T20:12:00+00:00",
-    "published_raw": "Fri, 16 Oct 2026 20:12:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 4296,
-    "first_seen": "2026-10-17T05:37:40.086992+00:00",
-    "last_seen": "2026-10-17T05:37:40.086992+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
     ]
   }
 ]
