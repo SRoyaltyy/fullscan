@@ -79,11 +79,11 @@
       "full_business_coverage": false
     },
     "engine_snapshot_id": "acc4d9143925771f98ec62c2ed68a4b0716ac256abfa991fe757fc3f1b571792",
-    "source_revision": "75d69a00562699932a8201ddbf1d08e71b410952",
+    "source_revision": "e5576f595bc4e7a89eccd8afa6f5ae0d567767d2",
     "news_sha256": "c178bcd3b7265f9de3d1186beee0ee1199c1aa28526da27133e8cd245a8630eb",
-    "snapshot_id": "83e44ec154c610fd360ae12f6a40c4b1dbf06da54dc3001f1b97834ecef2a907"
+    "snapshot_id": "6bbaf184cc4bff58768ab95d15cde290554d70f87af168e98d40bfddb1fe60c1"
   },
   "articles": 11255,
   "articles_with_passes": 2585,
-  "generated_at": "2026-10-20T11:29:43Z"
+  "generated_at": "2026-10-20T11:43:40Z"
 }
