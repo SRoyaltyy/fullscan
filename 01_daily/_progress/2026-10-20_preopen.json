@@ -5,15 +5,15 @@
   "run_id": "39396666465",
   "model": "glm-5.3-flash",
   "started_at": "2026-10-20T04:57:42-04:00",
-  "updated_at": "2026-10-20T04:58:11-04:00",
-  "heartbeat_at": "2026-10-20T04:58:11-04:00",
+  "updated_at": "2026-10-20T04:59:42-04:00",
+  "heartbeat_at": "2026-10-20T04:59:42-04:00",
   "stages": [
     {
       "name": "prep",
       "state": "running",
       "started_at": "2026-10-20T04:58:11-04:00",
       "ended_at": "",
-      "heartbeat_at": "2026-10-20T04:58:11-04:00",
+      "heartbeat_at": "2026-10-20T04:59:42-04:00",
       "done": 0,
       "total": 1,
       "model": "glm-5.3-flash",
