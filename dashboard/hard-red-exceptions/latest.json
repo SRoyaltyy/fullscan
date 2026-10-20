@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generated_at": "2026-10-19T17:24:28.860779-04:00",
+  "generated_at": "2026-10-19T20:27:40.318193-04:00",
   "from_date": "2026-08-13",
   "to_date": "2026-10-19",
   "n_days": 47,
@@ -74158,7 +74158,7 @@
           ],
           "h1": 13.28,
           "h3": 22.97,
-          "h5": 22.4,
+          "h5": null,
           "side": "long",
           "why": [
             "Weather S=None. Not a sit morning \u2014 still ranked.",
@@ -74178,7 +74178,7 @@
           "h1_date": "2026-10-13",
           "h3_px": 19.54,
           "h3_date": "2026-10-15",
-          "h5_px": 19.45,
+          "h5_px": null,
           "h5_date": "2026-10-19"
         },
         {
@@ -81885,7 +81885,7 @@
             "gen good",
             "sector bad"
           ],
-          "h1": 4.09,
+          "h1": null,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -81903,7 +81903,7 @@
             "Tape RSI 39 \u00b7 MACD hist -1.1273",
             "Side lean: short \u00b7 idio -3"
           ],
-          "h1_px": 57.49,
+          "h1_px": null,
           "h1_date": "2026-10-19",
           "h3_px": null,
           "h3_date": null,
