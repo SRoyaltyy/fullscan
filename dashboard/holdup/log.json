@@ -5291,5 +5291,13 @@
     "sha256": "4d572de5afa3e7ab2db29da15bbb4dd3d5e420d45c0eee0338e4d0d5189189fd",
     "shares": 520,
     "ticker": "USDE"
+  },
+  {
+    "committed_at": "2026-10-20T17:06:55Z",
+    "date": "2026-10-20",
+    "kind": "missing",
+    "reason": "missing: plan not sealed before open",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "653c984203433be0b17fded0dbb701821bdfddd6e7a1eafbe87708fc4794688d"
   }
 ]
