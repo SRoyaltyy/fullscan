@@ -6,9 +6,9 @@
    "SIT": 0
   },
   "factor_mine": {
-   "MISSING": 341,
-   "OK": 0,
-   "SIT": 0
+   "MISSING": 0,
+   "OK": 257,
+   "SIT": 84
   },
   "factor_mine_preopen": {
    "MISSING": 2,
@@ -16,8 +16,8 @@
    "SIT": 0
   },
   "flatten_robust": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "h1": {
@@ -31,8 +31,13 @@
    "SIT": 0
   },
   "paper": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 5,
+   "SIT": 0
+  },
+  "stock_book": {
+   "MISSING": 0,
+   "OK": 5,
    "SIT": 0
   },
   "theme_radar": {
@@ -47,3094 +52,5604 @@
   }
  },
  "date": "2026-10-20",
- "generated_at": "2026-10-20T06:42:18-04:00",
+ "generated_at": "2026-10-20T06:52:03-04:00",
  "strategies": [
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "GE",
+    "GM"
+   ],
    "family": "factor_mine",
    "name": "coil_h3_exit_alarm",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_e1er_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "combo_e1s_7030_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_ee1_3070_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_ee1_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_ee1_7030_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_eer_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "combo_ef_3070_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "combo_ef_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "combo_ef_7030_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_eh_3070_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_eh_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_eh_7030_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "AMX",
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "combo_ehs_601525_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "AMX",
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "combo_ehs_702010_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_ej_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "ITW",
+    "AMX",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "combo_en_3070_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "ITW",
+    "AMX",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "combo_en_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "ITW",
+    "AMX",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "combo_en_7030_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "combo_ers_7030_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "combo_es_8020_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "combo_es_9010_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_fe1_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_fe_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_fer_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "combo_fes_403030_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS",
+    "LMT",
+    "SYF",
+    "NOC",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_fh_7030_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS",
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_fse_333_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "NOC",
+    "AMX",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_he1_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "NOC",
+    "AMX",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_her_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "NOC",
+    "AMX",
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "combo_hf_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "NOC",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_hj_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "NOC",
+    "AMX",
+    "ITW",
+    "GE",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "combo_hn_3070_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "NOC",
+    "AMX",
+    "ITW",
+    "GE",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "combo_hn_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "NOC",
+    "AMX",
+    "ITW",
+    "GE",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "combo_hn_7030_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_je1_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_jer_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "combo_jf_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_jse_333_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW",
+    "AMX",
+    "GE",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_ne1_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW",
+    "AMX",
+    "GE",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_ner_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW",
+    "AMX",
+    "GE",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND",
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "combo_nf_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW",
+    "AMX",
+    "GE",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "combo_nj_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW",
+    "AMX",
+    "GE",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND",
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_nse_333_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "COF",
+    "NFLX",
+    "LMT",
+    "SYF",
+    "NOC",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_oh_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX",
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "combo_p2s_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX",
+    "GE",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "combo_ps_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX",
+    "GE",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "combo_ps_7030_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_se1_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_se_3070_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_se_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_se_5050_skip",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_se_5050_split",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_se_5050_weather",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_se_7030_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_333_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_333_skip",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_333_split",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_333_weather",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_403525_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_404020_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_451540_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_502525_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_502525_split",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_601525_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "combo_ser_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "combo_sf_3070_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "combo_sf_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "combo_sf_7030_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "SYF",
+    "NOC",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_sh_3070_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "SYF",
+    "NOC",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_sh_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "SYF",
+    "NOC",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_sh_7030_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "LMT",
+    "SYF",
+    "NOC",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "combo_sh_macd_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "combo_sj_3070_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "combo_sj_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "combo_sj_7030_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "ITW",
+    "AMX",
+    "GE",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "combo_sn_3070_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "ITW",
+    "AMX",
+    "GE",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "combo_sn_5050_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "ITW",
+    "AMX",
+    "GE",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "combo_sn_7030_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX",
+    "ITW",
+    "AMX",
+    "GE",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "combo_snj_333_shared",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3_cut",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3_half",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3_rankw",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3_sboost",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3_sizeup",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3_time",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3_topheavy",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3_trail",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_cut",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_half",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_rankw",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_s8",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_sboost",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_sizeup",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_time",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_topheavy",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_trail",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_cut",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_half",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_rankw",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_sboost",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_sizeup",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_time",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_topheavy",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_trail",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_vol_g_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_white_yday_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "LOGI",
+    "NOG",
+    "OVV",
+    "KRP",
+    "CNQ",
+    "PR",
+    "MNST",
+    "TTAN"
+   ],
    "family": "factor_mine",
    "name": "ohlc_hot_coil_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LOGI",
+    "NOG",
+    "OVV",
+    "KRP",
+    "ADMA",
+    "CNQ",
+    "PR",
+    "MNST"
+   ],
    "family": "factor_mine",
    "name": "ohlc_hot_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LOGI",
+    "NOG",
+    "OVV",
+    "KRP",
+    "ADMA",
+    "CNQ",
+    "PR",
+    "MNST"
+   ],
    "family": "factor_mine",
    "name": "ohlc_hot_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LOGI",
+    "NOG",
+    "OVV",
+    "KRP",
+    "ADMA",
+    "CNQ",
+    "PR",
+    "MNST"
+   ],
    "family": "factor_mine",
    "name": "ohlc_hot_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "oppset_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "ISRG",
+    "COF",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "overnight_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ISRG",
+    "COF",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "overnight_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ISRG",
+    "COF",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "overnight_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "overnight_mega_green_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "COF",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "overnight_mega_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "COF",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "overnight_mega_h2",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "PRMB",
+    "NVTS",
+    "AIP",
+    "SMMT",
+    "EPR",
+    "PDFS",
+    "CXW",
+    "ACRS"
+   ],
    "family": "factor_mine",
    "name": "probable_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "PRMB",
+    "NVTS",
+    "AIP",
+    "SMMT",
+    "EPR",
+    "PDFS",
+    "CXW",
+    "ACRS"
+   ],
    "family": "factor_mine",
    "name": "probable_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "PRMB",
+    "NVTS",
+    "AIP",
+    "SMMT",
+    "EPR",
+    "PDFS",
+    "CXW",
+    "ACRS"
+   ],
    "family": "factor_mine",
    "name": "probable_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "PRMB"
+   ],
    "family": "factor_mine",
    "name": "probable_probable_ok_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "PRMB"
+   ],
    "family": "factor_mine",
    "name": "probable_probable_ok_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ISRG",
+    "KLRA",
+    "DGX",
+    "ADMA",
+    "VEEV",
+    "ARQT",
+    "PACS",
+    "SMMT"
+   ],
    "family": "factor_mine",
    "name": "short_alarm_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ISRG",
+    "KLRA",
+    "DGX",
+    "ADMA",
+    "VEEV",
+    "ARQT",
+    "PACS",
+    "SMMT"
+   ],
    "family": "factor_mine",
    "name": "short_alarm_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB"
+   ],
    "family": "factor_mine",
    "name": "short_clk_ext_veto_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "short_clk_ext_veto_opp_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "short_clk_neg_weak_fail_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "short_clk_neg_weak_fail_opp_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "ARQT",
+    "EGG",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "short_extended_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ARQT",
+    "EGG",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "short_extended_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOC",
+    "ITW",
+    "AMX",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "short_last_red_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOC",
+    "ITW",
+    "AMX",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "short_last_red_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NVTS",
+    "AIP",
+    "ILMN",
+    "CDNA",
+    "BLFS",
+    "SMMT",
+    "PDFS",
+    "CXW"
+   ],
    "family": "factor_mine",
    "name": "short_macd_dn_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NVTS",
+    "AIP",
+    "ILMN",
+    "CDNA",
+    "BLFS",
+    "SMMT",
+    "PDFS",
+    "CXW"
+   ],
    "family": "factor_mine",
    "name": "short_macd_dn_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "HALO"
+   ],
    "family": "factor_mine",
    "name": "short_news_head_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "short_news_or_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "PEP",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "short_news_pack_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "short_news_r_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "short_news_r_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOG",
+    "PEP",
+    "HALO",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "short_news_r_macd_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "short_r_down_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "short_r_down_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW",
+    "TBBB",
+    "ILMN",
+    "CDNA",
+    "BLFS",
+    "EPR",
+    "EGG",
+    "MX"
+   ],
    "family": "factor_mine",
    "name": "short_rsi_ob_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW",
+    "TBBB",
+    "ILMN",
+    "CDNA",
+    "BLFS",
+    "EPR",
+    "EGG",
+    "MX"
+   ],
    "family": "factor_mine",
    "name": "short_rsi_ob_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_ab_g_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_ab_g_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_blue_coil_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_blue_coil_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_blue_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_blue_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_blue_vol_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_blue_vol_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "LOGI",
+    "NOG",
+    "OVV",
+    "KRP",
+    "CNQ",
+    "PR",
+    "MNST",
+    "TTAN"
+   ],
    "family": "factor_mine",
    "name": "union_break10_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LOGI",
+    "NOG",
+    "OVV",
+    "KRP",
+    "CNQ",
+    "PR",
+    "MNST",
+    "TTAN"
+   ],
    "family": "factor_mine",
    "name": "union_break10_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "DBRG",
+    "PRMB",
+    "JLHL",
+    "FRSH",
+    "LOGI"
+   ],
    "family": "factor_mine",
    "name": "union_candle_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "DBRG",
+    "PRMB",
+    "JLHL",
+    "FRSH",
+    "LOGI"
+   ],
    "family": "factor_mine",
    "name": "union_candle_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "GE",
+    "ITW",
+    "DBRG",
+    "AMX",
+    "ALLY"
+   ],
    "family": "factor_mine",
    "name": "union_candle_score_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "GE",
+    "ITW",
+    "DBRG",
+    "AMX",
+    "ALLY"
+   ],
    "family": "factor_mine",
    "name": "union_candle_score_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_catal_present_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_catal_present_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_earn_guide_react_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "SYF"
+   ],
    "family": "factor_mine",
    "name": "union_clk_flow_coil_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SYF",
+    "LMT",
+    "NOC",
+    "MSCI",
+    "AMX",
+    "ALLY",
+    "GM",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_clk_fresh_cat_coil_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_fresh_cat_coil_opp_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_hold_vs_sector_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_hold_vs_sector_opp_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "OXY"
+   ],
    "family": "factor_mine",
    "name": "union_clk_insider_cash_stab_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "NOC",
+    "DBRG",
+    "LOGI",
+    "NOG",
+    "OVV",
+    "KRP"
+   ],
    "family": "factor_mine",
    "name": "union_clk_mom_break_peer_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_mom_break_peer_opp_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX",
+    "DBRG",
+    "ITW",
+    "PR"
+   ],
    "family": "factor_mine",
    "name": "union_clk_nr7_mom_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_nr7_mom_opp_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_r_up_coil_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "DBRG",
+    "PRMB",
+    "LOGI",
+    "OVV",
+    "KRP",
+    "CNQ"
+   ],
    "family": "factor_mine",
    "name": "union_coil_green_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "DBRG",
+    "PRMB",
+    "LOGI",
+    "OVV",
+    "KRP",
+    "CNQ"
+   ],
    "family": "factor_mine",
    "name": "union_coil_green_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "AMX",
+    "DBRG",
+    "GE",
+    "GM",
+    "HAL"
+   ],
    "family": "factor_mine",
    "name": "union_coil_off_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "AMX",
+    "DBRG",
+    "GE",
+    "GM",
+    "HAL"
+   ],
    "family": "factor_mine",
    "name": "union_coil_off_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "AMX",
+    "DBRG",
+    "GE",
+    "GM",
+    "HAL"
+   ],
    "family": "factor_mine",
    "name": "union_coil_off_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SYF",
+    "LMT",
+    "NOC",
+    "MSCI",
+    "AMX",
+    "ALLY",
+    "GM",
+    "DBRG"
+   ],
    "family": "factor_mine",
    "name": "union_cond_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SYF",
+    "LMT",
+    "NOC",
+    "MSCI",
+    "AMX",
+    "ALLY",
+    "GM",
+    "DBRG"
+   ],
    "family": "factor_mine",
    "name": "union_cond_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SYF",
+    "LMT",
+    "NOC",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "union_cond_n4_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "union_e_fresh_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "union_e_fresh_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF"
+   ],
    "family": "factor_mine",
    "name": "union_e_green_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF"
+   ],
    "family": "factor_mine",
    "name": "union_e_green_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "union_earn_react_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "union_earn_react_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SYF",
+    "MSCI",
+    "ENGS"
+   ],
    "family": "factor_mine",
    "name": "union_flow_in_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SYF",
+    "MSCI",
+    "ENGS"
+   ],
    "family": "factor_mine",
    "name": "union_flow_in_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SYF",
+    "MSCI",
+    "ENGS"
+   ],
    "family": "factor_mine",
    "name": "union_flow_in_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_flow_in_white_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_flow_in_white_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h1_cut",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h1_half",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h1_rankw",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h1_sboost",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h1_sizeup",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h1_time",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h1_topheavy",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h1_trail",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h3_cut",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h3_exit_alarm",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h3_exit_news_r",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "DBRG",
+    "PRMB",
+    "JLHL",
+    "FRSH",
+    "LOGI",
+    "NOG"
+   ],
    "family": "factor_mine",
    "name": "union_h3_exit_red",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h3_half",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h3_rankw",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h3_sboost",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h3_sizeup",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h3_time",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h3_topheavy",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h3_trail",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h5_cut",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h5_exit_alarm",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h5_half",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h5_rankw",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h5_sboost",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h5_sizeup",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h5_time",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h5_topheavy",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_h5_trail",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "NOC",
+    "AMX",
+    "MSCI",
+    "HAL",
+    "DBRG",
+    "GE",
+    "GM",
+    "ALLY",
+    "ITW",
+    "LOGI"
+   ],
    "family": "factor_mine",
    "name": "union_hot_n12_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VET",
+    "PLNT",
+    "ACN",
+    "BROS"
+   ],
    "family": "factor_mine",
    "name": "union_hot_n4_h1",
-   "note": "no sealed ticket",
-   "sells": [],
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; list-drop exits still sell",
+   "sells": [
+    "BTI",
+    "WMG",
+    "COP"
+   ],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_hot_n4_h1_preopen",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "VET",
+    "PLNT",
+    "ACN",
+    "BROS"
+   ],
    "family": "factor_mine",
    "name": "union_hot_n4_holdup",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_hot_n4_holdup_preopen",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "NOC",
+    "AMX",
+    "MSCI",
+    "HAL",
+    "DBRG",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_hot_score_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "NOC",
+    "AMX",
+    "MSCI",
+    "HAL",
+    "DBRG",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_hot_score_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SYF",
+    "DBRG",
+    "ALLY",
+    "GM",
+    "MSCI",
+    "FRSH",
+    "ILMN",
+    "CDNA"
+   ],
    "family": "factor_mine",
    "name": "union_join_g_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SYF",
+    "DBRG",
+    "ALLY",
+    "GM",
+    "MSCI",
+    "FRSH",
+    "ILMN",
+    "CDNA"
+   ],
    "family": "factor_mine",
    "name": "union_join_g_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_join_present_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_join_present_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_join_vol_green_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_join_vol_green_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "DBRG",
+    "PRMB",
+    "JLHL",
+    "FRSH",
+    "LOGI",
+    "NOG"
+   ],
    "family": "factor_mine",
    "name": "union_last_green_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "DBRG",
+    "PRMB",
+    "JLHL",
+    "FRSH",
+    "LOGI",
+    "NOG"
+   ],
    "family": "factor_mine",
    "name": "union_last_green_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "SYF",
+    "DBRG",
+    "PRMB",
+    "JLHL",
+    "FRSH",
+    "LOGI",
+    "NOG"
+   ],
    "family": "factor_mine",
    "name": "union_last_green_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOC",
+    "ITW",
+    "AMX",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "union_last_red_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOC",
+    "ITW",
+    "AMX",
+    "ALLY",
+    "GE",
+    "GM",
+    "HAL",
+    "MSCI"
+   ],
    "family": "factor_mine",
    "name": "union_last_red_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "MSCI",
+    "GE",
+    "ITW",
+    "GM",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "union_macd_hist_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "MSCI",
+    "GE",
+    "ITW",
+    "GM",
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "union_macd_hist_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_macd_up_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_macd_up_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_macd_xup_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_macd_xup_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_both_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_both_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam61_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam61_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam71_conv_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam71_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam71_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam71_n2_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam91_n1_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX",
+    "GE",
+    "ITW",
+    "AIP",
+    "CNQ",
+    "NVTS",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "union_news_g_cond_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX",
+    "GE",
+    "ITW",
+    "AIP",
+    "CNQ",
+    "NVTS",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "union_news_g_cond_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX",
+    "GE",
+    "ITW",
+    "AIP"
+   ],
    "family": "factor_mine",
    "name": "union_news_g_conv_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX",
+    "GE",
+    "ITW",
+    "AIP"
+   ],
    "family": "factor_mine",
    "name": "union_news_g_conv_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW",
+    "AMX",
+    "GE",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "union_news_g_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW",
+    "AMX",
+    "GE",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "union_news_g_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW",
+    "AMX",
+    "GE",
+    "NVTS",
+    "AIP",
+    "CNQ",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "union_news_g_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW",
+    "NVTS",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "union_news_head_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW",
+    "NVTS",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "union_news_head_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_missing_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_missing_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX",
+    "GE",
+    "ITW",
+    "AIP",
+    "CNQ",
+    "NVTS",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "union_news_or_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX",
+    "GE",
+    "ITW",
+    "AIP",
+    "CNQ",
+    "NVTS",
+    "OXY",
+    "GLND"
+   ],
    "family": "factor_mine",
    "name": "union_news_or_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "union_news_or_net2_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "union_news_or_net2_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "union_news_or_net3_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "union_news_or_net3_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net4_conv_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net4_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net4_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net4_rw_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net5_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net5_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX",
+    "GE",
+    "AIP",
+    "CNQ",
+    "OXY"
+   ],
    "family": "factor_mine",
    "name": "union_news_pack_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX",
+    "GE",
+    "AIP",
+    "CNQ",
+    "OXY"
+   ],
    "family": "factor_mine",
    "name": "union_news_pack_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "union_news_pack_net2_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "union_news_pack_net2_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "union_news_pack_net3_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX"
+   ],
    "family": "factor_mine",
    "name": "union_news_pack_net3_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_news_present_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "ITW",
+    "AMX",
+    "DBRG",
+    "ALLY",
+    "GE"
+   ],
    "family": "factor_mine",
    "name": "union_news_present_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_vol_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_vol_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_oppset_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "COF",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "union_overnight_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "COF",
+    "NFLX"
+   ],
    "family": "factor_mine",
    "name": "union_overnight_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_r_up_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_r_up_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "AMX",
+    "ITW",
+    "HAL",
+    "GE",
+    "GM"
+   ],
    "family": "factor_mine",
    "name": "union_ret_5_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "AMX",
+    "ITW",
+    "HAL",
+    "GE",
+    "GM"
+   ],
    "family": "factor_mine",
    "name": "union_ret_5_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOC",
+    "SYF",
+    "LMT",
+    "DBRG",
+    "ALLY",
+    "HAL",
+    "GE",
+    "GM"
+   ],
    "family": "factor_mine",
    "name": "union_rsi_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NOC",
+    "SYF",
+    "LMT",
+    "DBRG",
+    "ALLY",
+    "HAL",
+    "GE",
+    "GM"
+   ],
    "family": "factor_mine",
    "name": "union_rsi_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "DBRG",
+    "ALLY",
+    "PEP",
+    "RTO",
+    "PLNT",
+    "BROS"
+   ],
    "family": "factor_mine",
    "name": "union_rsi_os_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "DBRG",
+    "ALLY",
+    "PEP",
+    "RTO",
+    "PLNT",
+    "BROS"
+   ],
    "family": "factor_mine",
    "name": "union_rsi_os_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "DBRG",
+    "ALLY",
+    "PEP",
+    "RTO",
+    "PLNT",
+    "BROS"
+   ],
    "family": "factor_mine",
    "name": "union_rsi_os_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "DBRG",
+    "ALLY",
+    "RTO",
+    "PLNT",
+    "BROS"
+   ],
    "family": "factor_mine",
    "name": "union_rsi_os_macd_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "DBRG",
+    "ALLY",
+    "RTO",
+    "PLNT",
+    "BROS"
+   ],
    "family": "factor_mine",
    "name": "union_rsi_os_macd_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_ab_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_ab_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "EGG"
+   ],
    "family": "factor_mine",
    "name": "union_vol_g_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "EGG"
+   ],
    "family": "factor_mine",
    "name": "union_vol_g_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "EGG"
+   ],
    "family": "factor_mine",
    "name": "union_vol_g_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_green_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_green_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_missing_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_missing_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "GE",
+    "ITW",
+    "DBRG",
+    "AMX",
+    "ALLY"
+   ],
    "family": "factor_mine",
    "name": "union_w_hot_candle_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "LMT",
+    "NOC",
+    "SYF",
+    "GE",
+    "ITW",
+    "DBRG",
+    "AMX",
+    "ALLY"
+   ],
    "family": "factor_mine",
    "name": "union_w_hot_candle_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SYF",
+    "LMT",
+    "NOC",
+    "MSCI",
+    "AMX",
+    "ALLY",
+    "GM",
+    "HAL"
+   ],
    "family": "factor_mine",
    "name": "union_w_hot_cond_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SYF",
+    "LMT",
+    "NOC",
+    "MSCI",
+    "AMX",
+    "ALLY",
+    "GM",
+    "HAL"
+   ],
    "family": "factor_mine",
    "name": "union_w_hot_cond_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_any_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_any_h2",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_any_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_any_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h2",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h5_s12",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_coil_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_coil_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_yday_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_yday_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW",
+    "AMX",
+    "PRMB",
+    "NVTS",
+    "AIP",
+    "KLRA",
+    "SMMT",
+    "EPR"
+   ],
    "family": "factor_mine",
    "name": "yday_gainer_h1",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW",
+    "AMX",
+    "PRMB",
+    "NVTS",
+    "AIP",
+    "KLRA",
+    "SMMT",
+    "EPR"
+   ],
    "family": "factor_mine",
    "name": "yday_gainer_h3",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW",
+    "AMX",
+    "PRMB",
+    "NVTS",
+    "AIP",
+    "KLRA",
+    "SMMT",
+    "EPR"
+   ],
    "family": "factor_mine",
    "name": "yday_gainer_h5",
-   "note": "no sealed ticket",
+   "note": "hard-red S\u2264\u22123 \u2014 no new lots; names are would-buy",
    "sells": [],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SGRY"
+   ],
+   "family": "stock_book",
+   "name": "stock_book_1d",
+   "note": "weighted ranker horizon",
+   "sells": [
+    "NEOV",
+    "OKLO",
+    "FCEL",
+    "EOSE",
+    "NRGV",
+    "ENVX",
+    "INDI",
+    "TE",
+    "SKYX",
+    "NNDM"
+   ],
+   "source": "data/day_board/2026-10-20_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "SGRY"
+   ],
+   "family": "paper",
+   "name": "1d_top",
+   "note": "paper sleeve = same ranker list",
+   "sells": [
+    "NEOV",
+    "OKLO",
+    "FCEL",
+    "EOSE",
+    "NRGV",
+    "ENVX",
+    "INDI",
+    "TE",
+    "SKYX",
+    "NNDM"
+   ],
+   "source": "data/day_board/2026-10-20_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "SGRY"
+   ],
+   "family": "stock_book",
+   "name": "stock_book_3d",
+   "note": "weighted ranker horizon",
+   "sells": [
+    "VSAT",
+    "ROIV",
+    "AIRS",
+    "GH",
+    "PCT",
+    "NRXP",
+    "BAK",
+    "INTC",
+    "RBLX",
+    "AUR",
+    "TMC",
+    "LFMD",
+    "SOC",
+    "PRM",
+    "EOSE"
+   ],
+   "source": "data/day_board/2026-10-20_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "SGRY"
+   ],
+   "family": "paper",
+   "name": "3d_top",
+   "note": "paper sleeve = same ranker list",
+   "sells": [
+    "VSAT",
+    "ROIV",
+    "AIRS",
+    "GH",
+    "PCT",
+    "NRXP",
+    "BAK",
+    "INTC",
+    "RBLX",
+    "AUR",
+    "TMC",
+    "LFMD",
+    "SOC",
+    "PRM",
+    "EOSE"
+   ],
+   "source": "data/day_board/2026-10-20_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "SGRY"
+   ],
+   "family": "stock_book",
+   "name": "stock_book_1w",
+   "note": "weighted ranker horizon",
+   "sells": [
+    "AIRS",
+    "VSAT",
+    "PCT",
+    "BAK",
+    "NRXP",
+    "ROIV",
+    "TMC",
+    "GH",
+    "SOC",
+    "RBLX",
+    "LFMD",
+    "PRM",
+    "EOSE",
+    "WVE",
+    "ACDC"
+   ],
+   "source": "data/day_board/2026-10-20_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "SGRY"
+   ],
+   "family": "paper",
+   "name": "1w_top",
+   "note": "paper sleeve = same ranker list",
+   "sells": [
+    "AIRS",
+    "VSAT",
+    "PCT",
+    "BAK",
+    "NRXP",
+    "ROIV",
+    "TMC",
+    "GH",
+    "SOC",
+    "RBLX",
+    "LFMD",
+    "PRM",
+    "EOSE",
+    "WVE",
+    "ACDC"
+   ],
+   "source": "data/day_board/2026-10-20_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "SGRY"
+   ],
+   "family": "stock_book",
+   "name": "stock_book_2w",
+   "note": "weighted ranker horizon",
+   "sells": [
+    "AIRS",
+    "SOC",
+    "VSAT",
+    "PCT",
+    "WVE",
+    "BAK",
+    "CGEM",
+    "NRXP",
+    "ROIV",
+    "TMC",
+    "RBLX",
+    "PRM",
+    "CMTG",
+    "LFMD",
+    "EOSE"
+   ],
+   "source": "data/day_board/2026-10-20_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "SGRY"
+   ],
+   "family": "paper",
+   "name": "2w_top",
+   "note": "paper sleeve = same ranker list",
+   "sells": [
+    "AIRS",
+    "SOC",
+    "VSAT",
+    "PCT",
+    "WVE",
+    "BAK",
+    "CGEM",
+    "NRXP",
+    "ROIV",
+    "TMC",
+    "RBLX",
+    "PRM",
+    "CMTG",
+    "LFMD",
+    "EOSE"
+   ],
+   "source": "data/day_board/2026-10-20_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "SGRY"
+   ],
+   "family": "stock_book",
+   "name": "stock_book_1m",
+   "note": "weighted ranker horizon",
+   "sells": [
+    "SOC",
+    "WVE",
+    "CGEM",
+    "AIRS",
+    "PCT",
+    "VSAT",
+    "CMTG",
+    "NEOV",
+    "BAK",
+    "VNET",
+    "TMC",
+    "NRXP",
+    "AXSM",
+    "MLYS",
+    "ROIV"
+   ],
+   "source": "data/day_board/2026-10-20_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "SGRY"
+   ],
+   "family": "paper",
+   "name": "1m_top",
+   "note": "paper sleeve = same ranker list",
+   "sells": [
+    "SOC",
+    "WVE",
+    "CGEM",
+    "AIRS",
+    "PCT",
+    "VSAT",
+    "CMTG",
+    "NEOV",
+    "BAK",
+    "VNET",
+    "TMC",
+    "NRXP",
+    "AXSM",
+    "MLYS",
+    "ROIV"
+   ],
+   "source": "data/day_board/2026-10-20_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "VEEV",
+    "ILMN",
+    "CDNA",
+    "ARQT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "flatten_robust",
    "name": "flatten_robust",
-   "note": "no sealed ticket",
-   "sells": [],
+   "note": "live flatten_robust card",
+   "sells": [
+    "TMUS",
+    "TRU",
+    "WSM",
+    "CNK",
+    "AVPT",
+    "WLY"
+   ],
    "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
-  },
-  {
-   "buys": [],
-   "family": "paper",
-   "name": "paper",
-   "note": "no sealed ticket",
-   "sells": [],
-   "source": "data/day_board/2026-10-20_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
