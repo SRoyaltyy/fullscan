@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scanner backtest</title>
+<style>
+:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9;--good:#4ade80;--warn:#fbbf24}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,sans-serif}
+main{max-width:920px;margin:auto;padding:20px 16px 48px}
+h1{margin:0 0 6px;font-size:28px}
+.muted{color:var(--muted)}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0}
+button{background:#1d4ed8;color:white;border:0;border-radius:10px;padding:10px 16px;font:600 15px system-ui;cursor:pointer}
+button.secondary{background:#243049}
+button:disabled{opacity:.45;cursor:wait}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:12px 0}
+.article{white-space:pre-wrap;max-height:320px;overflow:auto;margin:10px 0 0}
+a{color:#93c5fd}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:8px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600}
+.pass{color:var(--good);font-weight:700}
+.quote{color:var(--muted);font-size:13px;margin:4px 0 0}
+.empty{color:var(--warn)}
+.badge{display:inline-block;background:#243049;border-radius:6px;padding:2px 8px;font-size:12px;color:var(--muted);margin-left:8px}
+</style>
+</head>
+<body>
+<main>
+<h1>Scanner backtest</h1>
+<p class="muted" id="status">Loading…</p>
+<div class="row">
+  <button type="button" id="another" class="secondary" disabled>Another article</button>
+  <button type="button" id="test" disabled>Test</button>
+  <span class="badge" id="drawno"></span>
+</div>
+<article class="card" id="article">
+  <h2 id="title">Fetching an article…</h2>
+  <p class="muted" id="meta"></p>
+  <div class="article" id="body"></div>
+</article>
+<section class="card" id="results" hidden>
+  <h2>Match results</h2>
+  <p id="decision"></p>
+  <div id="matches"></div>
+</section>
+</main>
+<script>
+// Two modes, one scoring path.
+//  - live: served by `python -m src.scanner_backtest`; /api/* scores on demand.
+//  - static: GitHub Pages; matches are precomputed offline by
+//    scripts/export_backtest_static.py through the same engine="evidence"
+//    path, committed as results.jsonl, and "Test" is a lookup by article id.
+// Random draws use a seeded PRNG so every article is referable by number.
+let mode = null;           // "live" | "static"
+let current = null;
+let staticArticles = [];   // [{id,title,...}]
+let staticResults = new Map();
+let staticMeta = null;
+let rngState = null;       // {seed, n}
+const DEFAULT_SEED = 1722;
+
+function text(id, value) {
+  document.getElementById(id).textContent = value;
+}
+
+// mulberry32: tiny deterministic PRNG so draws are reproducible and
+// referable ("article #4821") for the accuracy loop.
+function mulberry32(seed) {
+  let a = seed >>> 0;
+  return function () {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function drawIndex() {
+  if (mode === "static" && staticArticles.length) {
+    if (rngState === null) rngState = {seed: DEFAULT_SEED, n: 0, rand: mulberry32(DEFAULT_SEED)};
+    rngState.n += 1;
+    return Math.floor(rngState.rand() * staticArticles.length);
+  }
+  return -1;
+}
+
+function showDrawNo(index) {
+  document.getElementById("drawno").textContent =
+    index >= 0 && rngState ? `draw #${rngState.n} · article #${index} · seed ${rngState.seed}` : "";
+}
+
+function renderArticle(article) {
+  current = article;
+  text("title", article.title || "(untitled)");
+  const bits = [article.source, article.published_at].filter(Boolean);
+  const meta = document.getElementById("meta");
+  meta.textContent = "";
+  if (bits.length) meta.append(bits.join(" · "));
+  if (article.url) {
+    if (bits.length) meta.append(" · ");
+    const link = document.createElement("a");
+    link.href = article.url;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    link.textContent = article.url;
+    meta.append(link);
+  }
+  if (article.truncated) {
+    if (meta.textContent) meta.append(" · ");
+    const t = document.createElement("span");
+    t.textContent = "display text truncated; match ran on full text";
+    meta.append(t);
+  }
+  text("body", article.text || "");
+  document.getElementById("results").hidden = true;
+}
+
+async function loadArticle() {
+  const button = document.getElementById("another");
+  button.disabled = true;
+  try {
+    if (mode === "static") {
+      const index = drawIndex();
+      const article = staticArticles[index];
+      if (!article) throw new Error("article pool is empty");
+      showDrawNo(index);
+      renderArticle(article);
+    } else {
+      const response = await fetch("/api/article");
+      const article = await response.json();
+      if (!response.ok) throw new Error(article.error || "could not fetch an article");
+      renderArticle(article);
+    }
+  } catch (err) {
+    text("title", "Could not fetch an article");
+    text("body", err.message);
+  } finally {
+    button.disabled = false;
+  }
+}
+
+function renderMatches(result) {
+  const box = document.getElementById("results");
+  box.hidden = false;
+  const decision = document.getElementById("decision");
+  decision.textContent = `${result.decision || "scored"} · ${result.engine || "evidence"} · ${result.pass_count} pass${result.pass_count === 1 ? "" : "es"}`;
+  const matches = document.getElementById("matches");
+  matches.textContent = "";
+  if (!result.passes || !result.passes.length) {
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = "No stock passed.";
+    matches.append(p);
+    return;
+  }
+  const table = document.createElement("table");
+  const head = document.createElement("tr");
+  for (const label of ["Ticker", "Company", "Industry", "Tier", "Why"]) {
+    const th = document.createElement("th");
+    th.textContent = label;
+    head.append(th);
+  }
+  const thead = document.createElement("thead");
+  thead.append(head);
+  table.append(thead);
+  const body = document.createElement("tbody");
+  for (const row of result.passes) {
+    const tr = document.createElement("tr");
+    const cells = [
+      row.ticker,
+      row.name,
+      row.industry,
+      row.tier == null ? "" : String(row.tier),
+      (row.reasons || []).join(", "),
+    ];
+    cells.forEach((value, index) => {
+      const td = document.createElement("td");
+      td.textContent = value || "";
+      if (index === 0) td.className = "pass";
+      tr.append(td);
+    });
+    body.append(tr);
+    const evidence = (row.evidence || [])[0];
+    if (evidence && evidence.passage) {
+      const quote = document.createElement("tr");
+      const td = document.createElement("td");
+      td.colSpan = 5;
+      const p = document.createElement("p");
+      p.className = "quote";
+      const terms = (evidence.terms || []).join(", ");
+      p.textContent = (evidence.channel ? evidence.channel + " — " : "") + evidence.passage + (terms ? " [" + terms + "]" : "");
+      td.append(p);
+      quote.append(td);
+      body.append(quote);
+    }
+  }
+  table.append(body);
+  matches.append(table);
+}
+
+async function runTest() {
+  if (!current || !current.id) return;
+  const button = document.getElementById("test");
+  button.disabled = true;
+  button.textContent = "Running…";
+  try {
+    if (mode === "static") {
+      const result = staticResults.get(String(current.id));
+      if (!result) throw new Error("no precomputed result for this article id");
+      renderMatches(result);
+    } else {
+      const response = await fetch("/api/test", {
+        method: "POST",
+        headers: {"content-type": "application/json"},
+        body: JSON.stringify({id: current.id}),
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || "test failed");
+      renderMatches(result);
+    }
+  } catch (err) {
+    const box = document.getElementById("results");
+    box.hidden = false;
+    text("decision", err.message);
+    document.getElementById("matches").textContent = "";
+  } finally {
+    button.disabled = false;
+    button.textContent = "Test";
+  }
+}
+
+async function loadStatic() {
+  const [metaRes, artsRes, resultsRes] = await Promise.all([
+    fetch("./meta.json"),
+    fetch("./articles.json"),
+    fetch("./results.jsonl"),
+  ]);
+  if (!artsRes.ok || !resultsRes.ok) throw new Error("static artifacts missing");
+  staticMeta = metaRes.ok ? await metaRes.json() : {};
+  staticArticles = await artsRes.json();
+  const raw = await resultsRes.text();
+  for (const line of raw.split("\n")) {
+    const trimmed = line.trim();
+    if (!trimmed) continue;
+    const row = JSON.parse(trimmed);
+    staticResults.set(String(row.id), row);
+  }
+  if (!staticArticles.length) throw new Error("static article pool is empty");
+  const m = staticMeta || {};
+  text("status",
+    `precomputed · engine=${m.engine || "evidence"} · ${staticArticles.length} articles` +
+    (m.generated_at ? ` · run ${m.generated_at}` : "") +
+    (m.articles_with_passes != null ? ` · ${m.articles_with_passes} with passes` : ""));
+  mode = "static";
+  document.getElementById("another").disabled = false;
+  document.getElementById("test").disabled = false;
+}
+
+async function poll() {
+  try {
+    const status = await fetch("/api/status").then((r) => r.json());
+    const line = document.getElementById("status");
+    if (status.error) {
+      line.textContent = status.error;
+      return;
+    }
+    if (status.ready) {
+      mode = "live";
+      line.textContent = `live · evidence engine · ${status.stocks} stocks · ${status.articles} articles`;
+      document.getElementById("another").disabled = false;
+      document.getElementById("test").disabled = false;
+      return;
+    }
+    line.textContent = `Loading the stock board… ${status.articles} articles ready`;
+  } catch (err) {
+    // No local server: this is the GitHub Pages static build.
+    try {
+      await loadStatic();
+      return;
+    } catch (staticErr) {
+      text("status", `no live server and no static artifacts (${staticErr.message})`);
+      return;
+    }
+  }
+  setTimeout(poll, 500);
+}
+
+document.getElementById("another").addEventListener("click", loadArticle);
+document.getElementById("test").addEventListener("click", runTest);
+poll().then(() => loadArticle());
+</script>
+</body>
+</html>
