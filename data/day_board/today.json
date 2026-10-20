@@ -1,6 +1,6 @@
 {
   "date": "2026-10-20",
-  "generated_at": "2026-10-20T05:04:19.813133-04:00",
+  "generated_at": "2026-10-20T05:09:22.809408-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,49 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-10-20",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-20T04:35:37.941087-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-10-20_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1122996,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-20",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-20T04:57:42.767542-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-20_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97015,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-20_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11851,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-20\n_Generated 2026-10-20T04:28:09.054728-04:00 \u00b7 export=data/exports/finviz_2026-10-20.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-20\n_Generated 2026-10-20T04:28:09.054728-04:00 \u00b7 export=data/exports/finviz_2026-10-20.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -200,6 +157,41 @@
         }
       ],
       "preview": "raw=8402 usable=549 single=372 \u00b7 Hassett Says CPI Data Shows Inflation Needs \u2018Some Work\u2019 - Bloomberg.com | China Reveals Advanced Nuclear Sub Was Used to Test-Fire Missile - Bloomberg | Nextdc Flags Earnings Risk on Melbourne Data Center Power Delay - Bloomberg | AI Earnings and FOMC Collide as VIX Spikes - Moomoo | Mavericks Waive Toronto Native Dwight Powell Before Roster Deadline - RG.org \u00b7 # News Parse v2 \u2014 2026-10-20T05:03:59.108766-04:00\nWindow\u224848h | news_mode=on | raw=8402 | usable=549 | single_name=372 | noise_dropped=7234\nusable polarity={'+': 10, '-': 68, 'mixed': 0, 'neutral': 471}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-10-20",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-20T05:09:08.928966-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-10-20",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-10-20T05:09:21.037426-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-10-20_events.json",
+          "ok": false,
+          "reason": "zero_events",
+          "size": 212,
+          "preview": "0 events \u00b7 "
+        },
+        {
+          "path": "01_daily/events/2026-10-20_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 205,
+          "preview": "# Event Scan \u2014 2026-10-20 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
+        }
+      ],
+      "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-20 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

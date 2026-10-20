@@ -1,6 +1,6 @@
 {
   "date": "2026-10-20",
-  "generated_at": "2026-10-20T05:04:19.813133-04:00",
+  "generated_at": "2026-10-20T05:09:22.809408-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -250,10 +250,10 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-10-20_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "FAIL",
+          "reason": "empty/truncated (zero_events)",
+          "size": 212,
+          "said": "empty/truncated (zero_events) \u00b7 0 events",
           "bullets": []
         },
         {
@@ -329,11 +329,11 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7574,
+          "size": 7580,
           "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
-            "events:missing",
+            "events:zero_events",
             "news_judge:missing",
             "news_actions:missing"
           ]
@@ -1292,6 +1292,41 @@
         }
       ],
       "preview": "raw=8402 usable=549 single=372 \u00b7 Hassett Says CPI Data Shows Inflation Needs \u2018Some Work\u2019 - Bloomberg.com | China Reveals Advanced Nuclear Sub Was Used to Test-Fire Missile - Bloomberg | Nextdc Flags Earnings Risk on Melbourne Data Center Power Delay - Bloomberg | AI Earnings and FOMC Collide as VIX Spikes - Moomoo | Mavericks Waive Toronto Native Dwight Powell Before Roster Deadline - RG.org \u00b7 # News Parse v2 \u2014 2026-10-20T05:03:59.108766-04:00\nWindow\u224848h | news_mode=on | raw=8402 | usable=549 | single_name=372 | noise_dropped=7234\nusable polarity={'+': 10, '-': 68, 'mixed': 0, 'neutral': 471}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-10-20",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-20T05:09:08.928966-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-10-20",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-10-20T05:09:21.037426-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-10-20_events.json",
+          "ok": false,
+          "reason": "zero_events",
+          "size": 212,
+          "preview": "0 events \u00b7 "
+        },
+        {
+          "path": "01_daily/events/2026-10-20_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 205,
+          "preview": "# Event Scan \u2014 2026-10-20 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
+        }
+      ],
+      "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-20 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
     }
   ],
   "href": {
