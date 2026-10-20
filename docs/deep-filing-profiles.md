@@ -26,6 +26,10 @@ text does not retain original HTML DOM paragraphs: nonempty text lines define
 review paragraphs, with blank separators retained. These exact spans reconstruct
 every section without gaps or overlap. Original visual paragraph boundaries
 cannot be claimed from this archive representation.
+Machine-readable attachments have no narrative paragraph semantics: each is
+retained in full as one classified inventory block rather than manufacturing a
+paragraph for every XML/JSON source line. Coverage reports distinguish these
+inventory blocks from the prose review blocks.
 
 Each paragraph has full text, a hash, source offsets, multiple topic labels,
 exact rule witnesses, reported currency/percentage/scale mentions, a review

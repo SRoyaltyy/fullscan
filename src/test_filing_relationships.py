@@ -41,6 +41,8 @@ class FullTextControls(unittest.TestCase):
         self.assertEqual(money['extraction_status'], 'unresolved')
         self.assertTrue(any(p['kind'] == 'heading' for p in graph['paragraphs']))
         self.assertTrue(any(p['kind'] == 'machine_data' for p in graph['paragraphs']))
+        self.assertEqual(graph['coverage']['machine_inventory_blocks'], 1)
+        self.assertEqual(next(p['text'] for p in graph['paragraphs'] if p['kind'] == 'machine_data'), machine)
         self.assertEqual(validate_paragraph_coverage(graph), len(graph['paragraphs']))
 
     def test_repeated_identical_sections_have_distinct_source_and_paragraph_ids(self):

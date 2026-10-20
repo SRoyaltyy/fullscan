@@ -465,9 +465,12 @@ def extract_sections(sections, *, ticker, name, nlp):
         sources.append(metadata)
         stats['source_sections'] += 1
         stats['characters_read'] += len(raw)
+        # XML/JSON source lines are not narrative paragraphs. Keep each whole
+        # machine section as one classified inventory block, with its full text.
+        spans = [(0, len(raw))] if raw and section.get('kind') == 'machine_data' else paragraph_spans(raw)
         source_paragraphs = [classify_paragraph(raw[start:end], source_id=metadata['id'],
             start=start, end=end, machine=section.get('kind') == 'machine_data')
-            for start, end in paragraph_spans(raw)]
+            for start, end in spans]
         paragraphs.extend(source_paragraphs)
         starts = [p['start'] for p in source_paragraphs]
         if section.get('kind') == 'machine_data':
@@ -537,11 +540,13 @@ def extract_sections(sections, *, ticker, name, nlp):
             'coverage': {**dict(stats), 'all_source_sections_read': True,
                          'all_prose_scanned': True, 'all_prose_dependency_analyzed': True,
                          'all_paragraphs_classified': True, 'paragraphs': len(paragraphs),
+                         'machine_inventory_blocks': sum(p['kind'] == 'machine_data' for p in paragraphs),
+                         'prose_review_blocks': sum(p['kind'] != 'machine_data' for p in paragraphs),
                          'paragraph_labels': dict(Counter(label for p in paragraphs for label in p['labels'])),
                          'paragraph_outcomes': dict(Counter(p['extraction_status'] for p in paragraphs)),
                          'paragraph_priorities': dict(Counter(p['importance']['priority'] for p in paragraphs)),
                          'paragraphs_requiring_review': sum(p['review_required'] for p in paragraphs),
-                         'paragraph_boundary_policy': 'archive nonempty text lines; blank separators retained; original DOM boundaries unavailable',
+                         'paragraph_boundary_policy': 'archive nonempty prose text lines; blank separators retained; whole machine attachments are inventory blocks; original DOM boundaries unavailable',
                          'extraction_complete': False,
                          'strategy': 'every prose window dependency-parsed; every source block classified and retained; unknown relations may remain',
                          'facts': len(ordered), 'predicates': dict(Counter(f['predicate'] for f in ordered)),

@@ -488,7 +488,7 @@ function appendPaged(container, entries, render, pageSize = 100) {
 function renderParagraphs(container, graph) {
   const paragraphs = graph.paragraphs || [];
   const title = document.createElement("h3");
-  title.textContent = `Every filing paragraph (${paragraphs.length.toLocaleString()})`;
+  title.textContent = `Every filing paragraph and attachment block (${paragraphs.length.toLocaleString()})`;
   const note = document.createElement("p");
   const outcomes = Object.entries(graph.coverage.paragraph_outcomes || {}).map(([k,v]) => `${k.replaceAll("_", " ")}: ${v.toLocaleString()}`).join(" · ");
   note.textContent = `${outcomes}. Review priority is a rule-based aid, not a materiality verdict. Every prose passage is grammar analyzed; unknown topics remain flagged. Paragraph boundaries follow archived text lines, which may differ from the original page layout.`;
