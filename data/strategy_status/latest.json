@@ -37,9 +37,8 @@
   },
   "theme_radar": {
    "MISSING": 0,
-   "OK": 0,
-   "SIT": 0,
-   "WAIT": 3
+   "OK": 3,
+   "SIT": 0
   },
   "webull_sim": {
    "MISSING": 361,
@@ -48,7 +47,7 @@
   }
  },
  "date": "2026-10-20",
- "generated_at": "2026-10-20T04:50:35-04:00",
+ "generated_at": "2026-10-20T05:38:44-04:00",
  "strategies": [
   {
    "buys": [],
@@ -6688,34 +6687,94 @@
    "buys": [],
    "family": "theme_radar",
    "name": "theme_radar:fpe_delta_t3_earn_today_3d",
-   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). no plan file yet (due ~05:20 ET, MISSING at 09:00 ET)",
+   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). plan built 05:21 ET; 55 short(s) at the open",
    "research_only": true,
    "sells": [],
-   "shorts": [],
+   "shorts": [
+    "ALLY",
+    "ALV",
+    "ARGX",
+    "AXP",
+    "BAH",
+    "BKU",
+    "CCK",
+    "CIVB",
+    "CMCSA",
+    "CME",
+    "COF",
+    "DGX",
+    "DOV",
+    "DOW",
+    "EGP",
+    "EWBC",
+    "FAF",
+    "FBP",
+    "FCCO",
+    "FITB",
+    "GE",
+    "GSBC",
+    "HAL",
+    "HBAN",
+    "HON",
+    "HWC",
+    "IBM",
+    "INFY",
+    "ISRG",
+    "KEY",
+    "KRC",
+    "LMT",
+    "MEDP",
+    "MOH",
+    "MSCI",
+    "NEM",
+    "NOC",
+    "NTRS",
+    "OFG",
+    "OII",
+    "ONB",
+    "PG",
+    "PHM",
+    "PINE",
+    "PKG",
+    "PNFP",
+    "SAP",
+    "SON",
+    "SYF",
+    "T",
+    "UNP",
+    "WFRD",
+    "WH",
+    "WRB",
+    "ZION"
+   ],
    "source": "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/main/research/shadow_log/plans/plan_2026-10-20.csv",
-   "status": "WAIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "theme_radar",
    "name": "theme_radar:fresh_dcp_t1_ep_ge03_2d",
-   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). no plan file yet (due ~05:20 ET, MISSING at 09:00 ET)",
+   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). plan built 05:21 ET; 1 short(s) at the open",
    "research_only": true,
    "sells": [],
-   "shorts": [],
+   "shorts": [
+    "KOPN"
+   ],
    "source": "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/main/research/shadow_log/plans/plan_2026-10-20.csv",
-   "status": "WAIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "theme_radar",
    "name": "theme_radar:fresh_dcp_t1_avoid_ah_3d",
-   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). no plan file yet (due ~05:20 ET, MISSING at 09:00 ET)",
+   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). plan built 05:21 ET; 1 short(s) at the open",
    "research_only": true,
    "sells": [],
-   "shorts": [],
+   "shorts": [
+    "KOPN"
+   ],
    "source": "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/main/research/shadow_log/plans/plan_2026-10-20.csv",
-   "status": "WAIT"
+   "status": "OK"
   }
  ]
 }
