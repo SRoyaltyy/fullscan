@@ -9,6 +9,7 @@ from pathlib import Path
 from src.correlation import build_board
 from src.scanner_backtest import ENGINE, PAGE, Gate, dispatch, draw_article, present, run_article
 from src.scanner_backtest import open_program, profile_view, select_input, snapshot_metadata, load_test_articles
+from src.stock_evidence import COMPILER_VERSION
 
 
 class DrawTests(unittest.TestCase):
@@ -268,7 +269,7 @@ class IntegrationTests(GateTests):
         one = snapshot_metadata(board)
         self.assertEqual(one, snapshot_metadata(board))
         self.assertNotEqual(one['snapshot_id'], snapshot_metadata(board, 'full-text')['snapshot_id'])
-        self.assertEqual(one['compiler_version'], 'stock-evidence-2.7')
+        self.assertEqual(one['compiler_version'], COMPILER_VERSION)
         self.assertIn('src/data/territories.json', one['source_hashes'])
 
     def test_bad_json_types_are_rejected(self):
