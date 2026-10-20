@@ -373,8 +373,8 @@
       }
     }
   },
-  "version": 104,
-  "updated": "2026-10-19T19:51:40-04:00",
+  "version": 105,
+  "updated": "2026-10-20T15:37:33-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -383,25 +383,6 @@
     "bonus_mult": 1.25
   },
   "history": [
-    {
-      "at": "2026-10-01T18:06:42-04:00",
-      "changes": [
-        "general.B0_ASIA: 0.5 -> 1.0 (n=20, hit=0.55)",
-        "general.B3_FEDPATH: 0.0 -> 0.5 (n=31, hit=0.452)",
-        "Basic Materials.S2_BREADTH: 0.5 -> 1.0 (n=16, hit=0.562)",
-        "Basic Materials.S3_FLOWS_POSITIONING: 1.0 -> 1.25 (n=12, hit=0.667)",
-        "Communication Services.S0_SHARED_MACRO: 1.0 -> 0.5 (n=17, hit=0.529)",
-        "Communication Services.S1_SECTOR_FACTORS: 1.0 -> 0.5 (n=13, hit=0.538)",
-        "Communication Services.S4_ETF_TAPE: 0.5 -> 0.0 (n=14, hit=0.429)",
-        "Consumer Cyclical.S2_BREADTH: 1.25 -> 1.0 (n=13, hit=0.615)",
-        "Consumer Cyclical.S4_ETF_TAPE: 1.25 -> 1.0 (n=14, hit=0.643)",
-        "Energy.S2_BREADTH: 1.25 -> 1.0 (n=19, hit=0.632)",
-        "Financial.S1_SECTOR_FACTORS: 0.5 -> 0.0 (n=16, hit=0.438)",
-        "Financial.S2_BREADTH: 1.0 -> 0.5 (n=17, hit=0.529)",
-        "Real Estate.S0_SHARED_MACRO: 1.0 -> 1.25 (n=15, hit=0.667)",
-        "Real Estate.S4_ETF_TAPE: 1.0 -> 1.25 (n=20, hit=0.65)"
-      ]
-    },
     {
       "at": "2026-10-02T16:14:42-04:00",
       "changes": [
@@ -763,6 +744,12 @@
     },
     {
       "at": "2026-10-19T19:51:40-04:00",
+      "changes": [
+        "hold"
+      ]
+    },
+    {
+      "at": "2026-10-20T15:37:33-04:00",
       "changes": [
         "hold"
       ]
