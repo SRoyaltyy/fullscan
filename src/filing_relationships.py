@@ -105,11 +105,15 @@ def _subjects(token):
 
 def _issuer(token, name):
     value = _phrase(token).lower()
-    if token.lower_ in ISSUER or any(c.dep_ == 'poss' and c.lower_ in ISSUER for c in token.children):
+    if token.lower_ in ISSUER or (token.lemma_ in ('operation', 'business', 'organization') and _owned(token)):
         return True
     clean = re.sub(r'\b(?:incorporated|corporation|inc|corp|ltd|limited|plc|the|company)\b|[^a-z0-9 ]', ' ', name.lower())
     clean = ' '.join(clean.split())
     return bool(clean and (value == clean or value.startswith(clean+' ')))
+
+
+def _owned(token):
+    return any(c.dep_ == 'poss' and c.lower_ in ISSUER for c in token.children)
 
 
 def _named_in(token):
@@ -162,6 +166,8 @@ def extract_doc(doc, *, ticker, name, source, offset=0):
             word = token.lemma_.lower()
             subjects = _subjects(token)
             own = any(_issuer(s, name) for s in subjects)
+            if word in ('regulate','subject','comply','approve','authorize','supply','provide','manufacture'):
+                own = own or any(_owned(s) and s.lemma_ not in ('customer','client','supplier','partner','competitor') for s in subjects)
             objects = _objects(token)
             if own and word in ('purchase', 'buy', 'procure', 'source', 'import', 'obtain'):
                 inputs = [o for obj in objects for o in _coordinated(obj)]
@@ -181,6 +187,10 @@ def extract_doc(doc, *, ticker, name, source, offset=0):
                             emit('depends_on', entity, token, value_type='organization',
                                  qualifiers={'dependency': argument})
             if own and word in ('manufacture', 'produce', 'offer', 'provide', 'develop', 'design', 'market', 'sell', 'commercialize', 'distribute', 'supply'):
+                if any(s.dep_ == 'nsubjpass' for s in subjects):
+                    for supplier in _preps(token, {'by'}):
+                        emit('buys_from', supplier, token, value_type='organization',
+                             qualifiers={'inputs': [_phrase(s) for s in subjects if s.lower_ not in ISSUER]})
                 for obj in objects:
                     for item in _coordinated(obj):
                         emit('offers', item, token, qualifiers={'activity': word})
@@ -214,6 +224,14 @@ def extract_doc(doc, *, ticker, name, source, offset=0):
             # Supplier/customer/competitor appositions: "Toshiba Corp., one of
             # our hard drive suppliers". The owner is part of the same noun tree.
             if word in ('supplier', 'customer', 'client', 'competitor', 'partner', 'subsidiary'):
+                relation = {'supplier': 'buys_from', 'customer': 'sells_to', 'client': 'sells_to',
+                            'competitor': 'competes_with', 'partner': 'partners_with',
+                            'subsidiary': 'owns_subsidiary'}[word]
+                if _owned(token) and token.dep_ in ('nsubj', 'nsubjpass') and token.head.lemma_ in ('include', 'be', 'comprise'):
+                    for obj in _objects(token.head):
+                        for entity in _coordinated(obj):
+                            emit(relation, entity, token.head, value_type='organization',
+                                 qualifiers={'description': _phrase(token)})
                 holder = token
                 for _ in range(3):
                     if any(t.dep_ == 'poss' and t.lower_ in ISSUER for t in holder.subtree):
@@ -226,9 +244,6 @@ def extract_doc(doc, *, ticker, name, source, offset=0):
                     # A whole sentence subtree would mix unrelated roles.
                     if anchor.pos_ not in ('VERB', 'AUX'):
                         candidates = [e for e in _named_in(anchor) if not any(_issuer(t, name) for t in e)]
-                        relation = {'supplier': 'buys_from', 'customer': 'sells_to', 'client': 'sells_to',
-                                    'competitor': 'competes_with', 'partner': 'partners_with',
-                                    'subsidiary': 'owns_subsidiary'}[word]
                         for entity in candidates:
                             emit(relation, entity, token, value_type='organization',
                                  qualifiers={'description': _phrase(token)})
@@ -248,6 +263,14 @@ def extract_doc(doc, *, ticker, name, source, offset=0):
             for match in MACRO.finditer(sent.text):
                 trigger = next((t for t in sent if t.idx <= sent.start_char+match.start() < t.idx+len(t)), sent.root)
                 emit('risk_mentions', match.group(), trigger, confidence='explicit_risk_mention')
+                if trigger.dep_ in ('nsubj', 'nsubjpass') and trigger.head.lemma_ in ('affect','increase','raise','reduce','disrupt','harm','impact'):
+                    affected = [o for o in _objects(trigger.head) if _issuer(o, name) or _owned(o)]
+                    if affected:
+                        targets = _preps(trigger, {'on','against','for'})
+                        emit('exposed_to', match.group(), trigger.head,
+                             qualifiers={'targets': [_phrase(o) for o in targets],
+                                         'geographies': sorted({e.text for o in targets for e in _named_in(o) if e.label_ == 'GPE'}),
+                                         'impact': trigger.head.lemma_, 'affected': [_phrase(o) for o in affected]})
         if issuer_sentence and re.search(r'\b(?:patent|proprietary|differentiat|advantage|unlike)\w*\b', sent.text, re.I):
             # Preserve the actual claim; do not turn marketing language into
             # an independently established economic moat.
@@ -257,6 +280,9 @@ def extract_doc(doc, *, ticker, name, source, offset=0):
 
 def extract_sections(sections, *, ticker, name, nlp):
     sources, facts, stats = [], {}, Counter()
+    from spacy.pipeline import Sentencizer
+    segment = Sentencizer()
+    parse_cache = {}
     for section in sections:
         raw = str(section.get('text') or '')
         metadata = {k: section.get(k, '') for k in ('source', 'form', 'filing_date', 'accession', 'section', 'document', 'kind', 'url')}
@@ -273,21 +299,57 @@ def extract_sections(sections, *, ticker, name, nlp):
         for offset, text in windows(raw):
             stats['prose_characters_scanned'] += len(text)
             stats['windows_scanned'] += 1
-            if TRIGGERS.search(text):
-                work.append((text, offset))
-            else:
+            if not TRIGGERS.search(text):
                 stats['windows_without_relation_cues'] += 1
-        for doc, offset in nlp.pipe(work, as_tuples=True, batch_size=8):
+                continue
+            # Fast tokenization and sentence boundaries scan the whole window.
+            # The expensive grammar model sees cue-bearing sentences with one
+            # preceding sentence for context; no source text is discarded.
+            sentences = list(segment(nlp.make_doc(text)).sents)
+            selected = set()
+            for i, sentence in enumerate(sentences):
+                if TRIGGERS.search(sentence.text):
+                    selected.add(i)
+                    if i:
+                        selected.add(i-1)
+            runs = []
+            for i in sorted(selected):
+                if runs and i == runs[-1][-1] + 1:
+                    runs[-1].append(i)
+                else:
+                    runs.append([i])
+            for run in runs:
+                start, end = sentences[run[0]].start_char, sentences[run[-1]].end_char
+                value = text[start:end]
+                work.append((value, offset+start))
+        pending = []
+        extracted = []
+        for value, offset in work:
+            key = (hashlib.sha256(value.encode()).hexdigest(), section.get('kind'))
+            if key in parse_cache:
+                stats['reused_dependency_windows'] += 1
+                extracted.extend((f, offset) for f in parse_cache[key])
+            else:
+                pending.append((value, (offset, key)))
+        for doc, (offset, key) in nlp.pipe(pending, as_tuples=True, batch_size=8):
             stats['prose_characters_dependency_parsed'] += len(doc.text)
-            for fact in extract_doc(doc, ticker=ticker, name=name, source=metadata, offset=offset):
-                # Exact same claims/passages across periods share storage;
-                # every source/date and evidence span is still retained.
-                evidence = fact.pop('evidence')
-                key = hashlib.sha256(repr(sorted(fact.items())).encode()+evidence['quote'].encode()).hexdigest()
-                if key not in facts:
-                    facts[key] = {**fact, 'id': key, 'evidence': []}
-                if evidence not in facts[key]['evidence']:
-                    facts[key]['evidence'].append(evidence)
+            records = extract_doc(doc, ticker=ticker, name=name, source=metadata, offset=0)
+            parse_cache[key] = records
+            extracted.extend((f, offset) for f in records)
+        for template, offset in extracted:
+            fact = dict(template)
+            original = fact.pop('evidence')
+            evidence = {**original, 'start': original['start']+offset,
+                        'end': original['end']+offset, 'source_id': metadata['id']}
+            if raw[evidence['start']:evidence['end']] != evidence['quote']:
+                raise ValueError('extracted evidence is not an exact source span')
+            # Exact same claims/passages across periods share storage;
+            # every source/date and evidence span is still retained.
+            key = hashlib.sha256(repr(sorted(fact.items())).encode()+evidence['quote'].encode()).hexdigest()
+            if key not in facts:
+                facts[key] = {**fact, 'id': key, 'evidence': []}
+            if evidence not in facts[key]['evidence']:
+                facts[key]['evidence'].append(evidence)
     ordered = [facts[key] for key in sorted(facts)]
     return {'schema': VERSION, 'ticker': ticker, 'name': name,
             'parser': {'spacy': SPACY_VERSION, 'model': MODEL, 'model_version': MODEL_VERSION},

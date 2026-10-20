@@ -11,6 +11,7 @@ KINDS = {'buys_from': 'supplier', 'sells_to': 'customer', 'uses_input': 'input',
          'licenses': 'license', 'offers': 'offering', 'subject_to': 'regulatory_exposure',
          'regulated_by': 'regulatory_exposure', 'approval_from': 'regulatory_exposure',
          'risk_mentions': 'policy_exposure', 'differentiation_claim': 'differentiation_claim',
+         'exposed_to': 'material_exposure',
          'operates_in': 'geography', 'owns_subsidiary': 'subsidiary',
          'acquires': 'acquisition', 'divests': 'divestiture'}
 

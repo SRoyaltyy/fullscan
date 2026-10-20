@@ -1,5 +1,6 @@
 """Check every extracted quote against verified full filing text, not AI examples."""
 import argparse
+import hashlib
 import json
 from collections import Counter
 from pathlib import Path
@@ -14,14 +15,14 @@ def audit(profiles, objects):
         graph = read_profile(root, entry)
         data, report = load_filing_sections(Path(objects), as_of=graph['as_of'], strict=True, ciks={entry['cik']})
         sections = data[graph['tickers'][0]]
-        texts = {(s['accession'], s['document'], s['section']): s['text'] for s in sections}
+        texts = {(s['accession'], s['document'], s['section'], hashlib.sha256(s['text'].encode()).hexdigest()): s['text'] for s in sections}
         sources = {s['id']: s for s in graph['sources']}
         if graph['coverage']['characters_read'] != report['characters']:
             raise ValueError('not all available characters were read')
         for fact in graph['facts']:
             for ev in fact['evidence']:
                 source = sources[ev['source_id']]
-                text = texts[(source['accession'], source['document'], source['section'])]
+                text = texts[(source['accession'], source['document'], source['section'], source['sha256'])]
                 if text[ev['start']:ev['end']] != ev['quote']:
                     raise ValueError('evidence does not exactly match the filing: '+fact['id'])
                 checked += 1

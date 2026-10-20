@@ -51,6 +51,16 @@ class RelationshipControls(unittest.TestCase):
         result = self.parse('Apex Corporation purchases processors from Nvidia. We sell backup software.')
         self.assertFalse(self.claims(result, 'buys_from'), result)
 
+    def test_our_customers_are_not_the_issuer(self):
+        result = self.parse('Our customers purchase processors from Nvidia. We offer accounting software.')
+        self.assertFalse(self.claims(result, 'buys_from'), result)
+
+    def test_passive_supplier_and_explicit_supplier_list(self):
+        result = self.parse('Our hard drives are supplied by Toshiba. Our suppliers include Western Digital and Toshiba.')
+        suppliers = self.claims(result, 'buys_from')
+        self.assertTrue(any('Toshiba' in f['object'] for f in suppliers), result)
+        self.assertTrue(any('Western Digital' in f['object'] for f in suppliers), result)
+
     def test_long_dependency_phrase_is_retained(self):
         result = self.parse('We rely on geographically distributed third-party data center colocation facilities.')
         self.assertTrue(any('colocation facilities' in f['object'] for f in self.claims(result, 'depends_on')), result)
