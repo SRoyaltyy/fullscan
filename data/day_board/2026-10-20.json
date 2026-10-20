@@ -2525,6 +2525,46 @@
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "39444584629",
       "manifest": "research/input_freeze/2026-10-20/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-10-20_intake.md",
+      "at": "2026-10-20T11:48:44-04:00",
+      "commit_msg": "auto: free news intake [skip ci]",
+      "workflow": "Free news intake",
+      "run_id": "39448032734",
+      "manifest": "research/input_freeze/2026-10-20/manifest.json"
+    },
+    {
+      "path": "data/news_intake/2026-10-20/headline_groups.json",
+      "at": "2026-10-20T11:48:44-04:00",
+      "commit_msg": "auto: free news intake [skip ci]",
+      "workflow": "Free news intake",
+      "run_id": "39448032734",
+      "manifest": "research/input_freeze/2026-10-20/manifest.json"
+    },
+    {
+      "path": "data/news_intake/2026-10-20/lane_queue.json",
+      "at": "2026-10-20T11:48:44-04:00",
+      "commit_msg": "auto: free news intake [skip ci]",
+      "workflow": "Free news intake",
+      "run_id": "39448032734",
+      "manifest": "research/input_freeze/2026-10-20/manifest.json"
+    },
+    {
+      "path": "data/news_intake/2026-10-20/parsed.json",
+      "at": "2026-10-20T11:48:44-04:00",
+      "commit_msg": "auto: free news intake [skip ci]",
+      "workflow": "Free news intake",
+      "run_id": "39448032734",
+      "manifest": "research/input_freeze/2026-10-20/manifest.json"
+    },
+    {
+      "path": "data/news_intake/2026-10-20/review_queue.json",
+      "at": "2026-10-20T11:48:44-04:00",
+      "commit_msg": "auto: free news intake [skip ci]",
+      "workflow": "Free news intake",
+      "run_id": "39448032734",
+      "manifest": "research/input_freeze/2026-10-20/manifest.json"
     }
   ]
 }
