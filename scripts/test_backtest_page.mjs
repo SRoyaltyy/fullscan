@@ -11,7 +11,7 @@ const elements = new Map();
 function element() {
   return {textContent: '', hidden: false, disabled: false, children: [],
     append(...children) { this.children.push(...children); },
-    addEventListener() {}, scrollIntoView() {}, remove() {}, setAttribute() {}, replaceChildren(...children) {this.children = children;}};
+    listeners: {}, addEventListener(name, fn) {this.listeners[name] = fn;}, scrollIntoView() {}, remove() {}, setAttribute() {}, replaceChildren(...children) {this.children = children;}};
 }
 const document = {
   getElementById(id) { if (!elements.has(id)) elements.set(id, element()); return elements.get(id); },
@@ -41,4 +41,30 @@ assert.equal(decoded.facts[0].object, 'Example Supplier');
 await assert.rejects(vm.runInContext('loadPackedProfile("../outside.json.gz", profileHash)', context), /Invalid profile asset path/);
 await assert.rejects(vm.runInContext('loadPackedProfile("scoring-profiles/aa.json.gz", "wrong")', context), /does not match/);
 console.log('Compressed profile loading verifies hashes and rejects unsafe paths and mismatched snapshots.');
+context.paragraphBox = element();
+context.testGraph = {facts: [], sources: [{id:'s', form:'10-K', filing_date:'2026-01-01'}],
+  coverage:{paragraph_outcomes:{unresolved:101}}, paragraphs:Array.from({length:101}, (_,i) => ({
+    id:String(i), source_id:'s', start:i, end:i+1, text:`Paragraph ${i} <script>unsafe</script>`,
+    labels:['unresolved_topic'], extraction_status:'unresolved', review_required:true,
+    importance:{priority:'review', reasons:['No topic rule matched']}, relationship_ids:[], signals:[], classification_evidence:[]
+  }))};
+vm.runInContext('renderParagraphs(paragraphBox, testGraph)', context);
+const box = context.paragraphBox;
+assert.match(box.children[0].textContent, /101/);
+const paragraphList = box.children.at(-1);
+assert.match(paragraphList.children[0].textContent, /101 of 101/);
+const more = paragraphList.children.find(e => e.textContent.startsWith('Show more'));
+assert.ok(more, 'All paragraphs must remain reachable through pagination');
+more.listeners.click();
+const detailRows = paragraphList.children.filter(e => e.children?.[0]?.textContent.startsWith('[review]'));
+assert.equal(detailRows.length, 101);
+assert.equal(detailRows.at(-1).children[3].textContent, 'Paragraph 100 <script>unsafe</script>');
+box.children[2].value = 'Paragraph 100';
+box.children[2].listeners.input();
+assert.match(paragraphList.children[0].textContent, /1 of 101/);
+box.children[2].value = '';
+box.children[5].value = 'high';
+box.children[5].listeners.change();
+assert.match(paragraphList.children[0].textContent, /0 of 101/);
+console.log('Every paragraph is reachable, searchable, filterable, and rendered as safe full text.');
 

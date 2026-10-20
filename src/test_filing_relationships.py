@@ -2,12 +2,88 @@ import hashlib
 import json
 import socket
 import unittest
+from types import SimpleNamespace
 from unittest.mock import patch
 
-from .filing_relationships import extract_sections, load_parser, windows
+from .filing_relationships import extract_sections, load_parser, windows, paragraph_spans, validate_paragraph_coverage
 
 
 class FullTextControls(unittest.TestCase):
+    def blank_graph(self, sections):
+        seen = []
+        def pipe(pending, **kwargs):
+            for text, context in pending:
+                seen.append(text)
+                yield SimpleNamespace(text=text), context
+        with patch('src.filing_relationships.extract_doc', return_value=[]):
+            result = extract_sections(sections, ticker='TEST', name='Example', nlp=SimpleNamespace(pipe=pipe))
+        return result, seen
+
+    def test_paragraph_partition_preserves_unicode_blank_lines_and_long_blocks(self):
+        for text in ('', '  \n\t', '\n αβ €12 million\r\n\r\nA wrapped line.\nLast', 'unusual ' * 18000):
+            spans = paragraph_spans(text)
+            self.assertEqual(''.join(text[a:b] for a,b in spans), text)
+            self.assertEqual(sum(b-a for a,b in spans), len(text))
+
+    def test_cue_free_prose_and_every_structural_block_are_retained(self):
+        prose = '\nITEM 1 BUSINESS\n\nZebras wander peacefully.\nRevenue increased to $12 million, or 25%.\n'
+        machine = '<xml>12345</xml>\n<value>9</value>'
+        graph, seen = self.blank_graph([{'text': prose, 'kind': 'business'}, {'text': machine, 'kind': 'machine_data'}])
+        self.assertEqual(''.join(seen), prose)
+        self.assertEqual(graph['coverage']['prose_characters_analyzed'], len(prose))
+        self.assertEqual(''.join(p['text'] for p in graph['paragraphs']), prose+machine)
+        unknown = next(p for p in graph['paragraphs'] if 'Zebras' in p['text'])
+        self.assertEqual(unknown['labels'], ['unresolved_topic'])
+        self.assertTrue(unknown['review_required'])
+        money = next(p for p in graph['paragraphs'] if 'Revenue' in p['text'])
+        self.assertIn('financial_performance', money['labels'])
+        self.assertEqual([s['quote'] for s in money['signals']], ['$12 million', '25%'])
+        self.assertEqual(money['extraction_status'], 'unresolved')
+        self.assertTrue(any(p['kind'] == 'heading' for p in graph['paragraphs']))
+        self.assertTrue(any(p['kind'] == 'machine_data' for p in graph['paragraphs']))
+        self.assertEqual(graph['coverage']['machine_inventory_blocks'], 1)
+        self.assertEqual(next(p['text'] for p in graph['paragraphs'] if p['kind'] == 'machine_data'), machine)
+        self.assertEqual(validate_paragraph_coverage(graph), len(graph['paragraphs']))
+
+    def test_repeated_identical_sections_have_distinct_source_and_paragraph_ids(self):
+        graph, _ = self.blank_graph([{'text': 'Unfamiliar words.', 'kind': 'business'}]*2)
+        self.assertEqual(len({p['id'] for p in graph['paragraphs']}), 2)
+        self.assertEqual(graph['coverage']['prose_characters_analyzed'], 34)
+        self.assertEqual(graph['coverage']['reused_dependency_windows'], 1)
+
+    def test_missing_paragraph_fails_even_when_complete_flag_is_true(self):
+        graph, _ = self.blank_graph([{'text': 'First block.\nSecond block.', 'kind': 'business'}])
+        graph['paragraphs'].pop()
+        with self.assertRaisesRegex(ValueError, 'reconstruct'):
+            validate_paragraph_coverage(graph)
+
+    def test_missing_whole_source_cannot_hide_behind_old_complete_counters(self):
+        graph, _ = self.blank_graph([{'text': 'First source.', 'kind': 'business'},
+                                    {'text': '<machine>42</machine>', 'kind': 'machine_data'}])
+        graph['sources'].pop()
+        graph['paragraphs'].pop()
+        graph['coverage']['paragraphs'] = 1
+        with self.assertRaisesRegex(ValueError, 'source inventory'):
+            validate_paragraph_coverage(graph)
+
+    def test_altered_text_or_classification_witness_fails(self):
+        graph, _ = self.blank_graph([{'text': 'Our revenue rose 25%.', 'kind': 'business'}])
+        graph['paragraphs'][0]['classification_evidence'][0]['quote'] = 'invented'
+        with self.assertRaisesRegex(ValueError, 'witness'):
+            validate_paragraph_coverage(graph)
+        graph['paragraphs'][0]['text'] = 'x'*len(graph['paragraphs'][0]['text'])
+        with self.assertRaisesRegex(ValueError, 'checksum'):
+            validate_paragraph_coverage(graph)
+
+    def test_relationship_must_be_linked_to_every_overlapping_paragraph(self):
+        graph, _ = self.blank_graph([{'text': 'First block.\nSecond block.', 'kind': 'business'}])
+        source = graph['sources'][0]['id']
+        graph['facts'] = [{'id': 'claim', 'evidence': [{'source_id': source, 'start': 0, 'end': len('First block.\nSecond block.'),
+                                                       'quote': 'First block.\nSecond block.'}]}]
+        graph['paragraphs'][0]['relationship_ids'] = ['claim']
+        with self.assertRaisesRegex(ValueError, 'missing from paragraph'):
+            validate_paragraph_coverage(graph)
+
     def test_windows_cover_whole_document_without_loss_or_overlap(self):
         raw = ('A lengthy paragraph.\n\n'+('unusual text ' * 2000)) * 3
         chunks = list(windows(raw, 1000))

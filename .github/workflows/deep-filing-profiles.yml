@@ -3,19 +3,24 @@ on:
   pull_request:
     paths:
       - 'src/filing_relationships.py'
+      - 'src/filing_evidence.py'
       - 'src/test_filing_relationships.py'
       - 'src/deep_profile_store.py'
       - 'scripts/build_filing_profiles.py'
       - 'scripts/audit_filing_profiles.py'
+      - 'scripts/materialize_filing_texts.py'
       - 'requirements-filing-parser.txt'
       - '.github/workflows/deep-filing-profiles.yml'
   push:
     branches: [main]
     paths:
       - 'src/filing_relationships.py'
+      - 'src/filing_evidence.py'
       - 'src/test_filing_relationships.py'
       - 'src/deep_profile_store.py'
       - 'scripts/build_filing_profiles.py'
+      - 'scripts/audit_filing_profiles.py'
+      - 'scripts/materialize_filing_texts.py'
       - 'data/company_filings_full_release.json'
       - 'requirements-filing-parser.txt'
       - '.github/workflows/deep-filing-profiles.yml'
