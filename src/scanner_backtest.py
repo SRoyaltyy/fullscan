@@ -120,7 +120,7 @@ def snapshot_metadata(board, input_mode: str = 'headline') -> dict:
     data = root / 'src/data'
     paths += [data / name for name in ('english_words.txt', 'lemma_lookup.json.gz', 'territories.json')]
     paths += sorted((data / 'senses').glob('*.json*'))
-    hashes = {str(p.relative_to(root)): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
+    hashes = {p.relative_to(root).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
     evidence = getattr(board, 'evidence_board', None)
     # The older profile fingerprint hashes passage text only. Also bind dates,
     # accessions, issuer labels and industry assignments used by this board.

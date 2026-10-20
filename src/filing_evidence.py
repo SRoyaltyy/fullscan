@@ -128,6 +128,7 @@ def load_filing_sections(objects: Path, *, as_of: str | None = None, strict: boo
                     for section in section_views(text,str(filing.get('form') or manifest.get('form') or ''),filename):
                         section.update({'source':'PR642','filing_date':date,'accession':accession,'form':filing.get('form',''),
                             'document':filename,'complete':True,
+                            'accepted_at':filing.get('accepted_at_raw',''), 'report_date':filing.get('report_date',''),
                             'url':f'https://www.sec.gov/Archives/edgar/data/{int(company["cik"])}/{accession.replace("-", "")}/{filename}'})
                         chunks.append(section)
             except (OSError,ValueError,KeyError,TypeError) as exc:

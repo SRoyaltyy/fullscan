@@ -131,16 +131,28 @@ def main(argv=None):
     if todo:
         import concurrent.futures as futures
         shards = [todo[i:i + a.shard_size] for i in range(0, len(todo), a.shard_size)]
-        with futures.ProcessPoolExecutor(max_workers=a.workers, initializer=_init_worker,
-                initargs=(a.descriptions, a.sectors, a.universe, a.identity_filings,
-                          a.as_of, a.input_mode, snapshot, a.filing_profiles)) as pool, \
-                (a.out_dir / 'results.jsonl').open('a', encoding='utf-8') as out:
-            for shard in pool.map(_score_shard, shards):
-                for row in shard:
-                    out.write(json.dumps(row, ensure_ascii=False) + '\n')
-                out.flush()
-                rows.extend(shard)
-                print(f'scored {len(rows)} articles ({time.time() - started:.0f}s)', flush=True)
+        if a.workers == 1:
+            global _BOARD, _NAMES, _INPUT_MODE, _SNAPSHOT
+            _BOARD, _NAMES, _INPUT_MODE, _SNAPSHOT = board, names, a.input_mode, snapshot
+            with (a.out_dir/'results.jsonl').open('a', encoding='utf-8') as out:
+                for batch in shards:
+                    shard = _score_shard(batch)
+                    for row in shard:
+                        out.write(json.dumps(row, ensure_ascii=False)+'\n')
+                    out.flush()
+                    rows.extend(shard)
+                    print(f'scored {len(rows)} articles ({time.time()-started:.0f}s)', flush=True)
+        else:
+            with futures.ProcessPoolExecutor(max_workers=a.workers, initializer=_init_worker,
+                    initargs=(a.descriptions, a.sectors, a.universe, a.identity_filings,
+                              a.as_of, a.input_mode, snapshot, a.filing_profiles)) as pool, \
+                    (a.out_dir / 'results.jsonl').open('a', encoding='utf-8') as out:
+                for shard in pool.map(_score_shard, shards):
+                    for row in shard:
+                        out.write(json.dumps(row, ensure_ascii=False) + '\n')
+                    out.flush()
+                    rows.extend(shard)
+                    print(f'scored {len(rows)} articles ({time.time() - started:.0f}s)', flush=True)
     elif not (a.out_dir / 'results.jsonl').exists():
         (a.out_dir / 'results.jsonl').touch()
     display = export_articles([select_input(by_id[str(r['id'])], a.input_mode) for r in rows], a.text_limit)

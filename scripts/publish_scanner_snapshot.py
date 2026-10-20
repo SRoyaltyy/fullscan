@@ -10,11 +10,14 @@ import json
 import os
 import subprocess
 import tempfile
+from concurrent.futures import ThreadPoolExecutor
 import urllib.request
 from pathlib import Path
 
 ARTIFACTS = ('articles.json', 'results.jsonl', 'profiles.json', 'ticker-index.json', 'meta.json')
 INPUT_PATHS = ('src/correlation.py', 'src/evidence_matcher.py', 'src/stock_evidence.py',
+    'src/filing_relationships.py', 'src/deep_profile_store.py', 'requirements-filing-parser.txt',
+    'scripts/build_filing_profiles.py', 'data/company_filings_full_release.json',
     'src/filing_evidence.py', 'src/filing_business.py', 'src/filing_parts.py',
     'src/names.py', 'src/aliases.py', 'src/linguistics.py', 'src/semantic_lookup.py',
     'src/synonyms.py', 'src/places.py', 'src/spelling.py', 'src/profile_cache.py',
@@ -24,6 +27,17 @@ INPUT_PATHS = ('src/correlation.py', 'src/evidence_matcher.py', 'src/stock_evide
     'scripts/build_semantic_resources.py', '.github/workflows/scanner-backtest-publish.yml',
     'dashboard/scanner-backtest/index.html',
     'excel_bot/data/finviz_with_descriptions.csv', 'data/news_intake/2026-10-17/documents.json')
+
+
+def artifact_names(directory):
+    names = list(ARTIFACTS)
+    for folder in ('scoring-profiles', 'filing-profiles'):
+        for path in sorted((directory/folder).rglob('*')):
+            if path.is_file():
+                if path.is_symlink() or not path.resolve().is_relative_to(directory.resolve()):
+                    raise ValueError('profile asset escapes snapshot directory')
+                names.append(path.relative_to(directory).as_posix())
+    return names
 
 
 def git(*args, env=None):
@@ -46,16 +60,17 @@ def github_api(method, endpoint, payload=None):
 def publish_api(directory, source_sha, repository):
     validate(directory, source_sha)
     endpoint = 'repos/'+repository
-    blobs = []
-    for name in ARTIFACTS:
+    def upload(name):
         raw = (directory/name).read_bytes()
         print('Preparing '+name+': '+str(len(raw))+' bytes', flush=True)
         if len(raw) >= 100_000_000:
             raise ValueError('snapshot file exceeds GitHub file limit: '+name)
         blob = github_api('POST', endpoint+'/git/blobs',
                           {'content': base64.b64encode(raw).decode(), 'encoding': 'base64'})
-        blobs.append({'path': 'dashboard/scanner-backtest/'+name,
-                      'mode': '100644', 'type': 'blob', 'sha': blob['sha']})
+        return {'path': 'dashboard/scanner-backtest/'+name,
+                'mode': '100644', 'type': 'blob', 'sha': blob['sha']}
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        blobs = list(pool.map(upload, artifact_names(directory)))
     for attempt in range(3):
         ref = github_api('GET', endpoint+'/git/ref/heads/main')
         upstream = ref['object']['sha']
@@ -107,8 +122,23 @@ def validate(directory, source_sha):
     if not profiles or not all(p.get('used_for_scoring') for p in profiles.values()):
         raise ValueError('profiles are not the actual scoring board')
     coverage = snapshot.get('filing_coverage') or {}
-    if coverage.get('scope') != 'dated_identity_overlay' or not coverage.get('complete') or coverage.get('errors'):
+    if coverage.get('scope') not in ('dated_identity_overlay', 'deep_filing_relationships') or not coverage.get('complete') or coverage.get('errors'):
         raise ValueError('dated filing identity source was not verified')
+    for profile in profiles.values():
+        if profile.get('profile_path'):
+            path = (directory/profile['profile_path']).resolve()
+            if not path.is_relative_to(directory.resolve()):
+                raise ValueError('unsafe scoring profile path')
+            import hashlib
+            if hashlib.sha256(path.read_bytes()).hexdigest() != profile['profile_sha256']:
+                raise ValueError('scoring profile checksum mismatch')
+    if coverage.get('scope') == 'deep_filing_relationships':
+        from src.deep_profile_store import read_index, read_profile
+        root, index, fingerprint = read_index(directory/'filing-profiles')
+        if fingerprint != coverage['profile_index_sha256']:
+            raise ValueError('deep profile set does not match scoring snapshot')
+        for entry in {e['path']: e for e in index['profiles'].values()}.values():
+            read_profile(root, entry)
     json.loads((directory/'ticker-index.json').read_text())
     return meta
 
@@ -130,7 +160,7 @@ def publish(directory, source_sha):
                    'GIT_COMMITTER_NAME': 'Scanner snapshot publisher',
                    'GIT_COMMITTER_EMAIL': 'bot@users.noreply.github.com'}
             git('read-tree', upstream, env=env)
-            for name in ARTIFACTS:
+            for name in artifact_names(directory):
                 blob = git('hash-object', '-w', str(directory/name))
                 git('update-index', '--add', '--cacheinfo', '100644', blob,
                     'dashboard/scanner-backtest/'+name, env=env)
@@ -164,3 +194,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

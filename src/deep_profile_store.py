@@ -76,6 +76,8 @@ def attach_profiles(board, directory, *, as_of, catalog):
                                 'coverage': graph['coverage'], 'as_of': graph['as_of']}
         for claim, evidence, source in latest_claims(graph, as_of):
             kind = KINDS.get(claim['predicate'], 'filing_relationship')
+            if kind == 'regulatory_exposure' and claim['object_type'] not in ('agency', 'law'):
+                kind = 'exposure'
             # Preserve uncertain/latest negative claims on the board for
             # inspection without indexing them as current identities/exposures.
             active = claim['status'] == 'asserted'

@@ -69,6 +69,20 @@ class RelationshipControls(unittest.TestCase):
         result = self.parse('We purchase equipment from Amazon Web Services.')
         self.assertFalse(self.claims(result, 'competes_with'), result)
 
+    def test_supplier_apposition_with_one_of_is_extracted(self):
+        result = self.parse('In September 2023, Toshiba Corp., one of our hard drive suppliers, announced a new factory.')
+        self.assertTrue(any('Toshiba' in f['object'] for f in self.claims(result, 'buys_from')), result)
+
+    def test_copular_negation_and_modal_are_not_positive_assertions(self):
+        for text, status in [('Our operations are not directly subject to foreign currency risk.', 'negated'),
+                             ('We may be subject to stockholder activism.', 'potential')]:
+            facts = self.claims(self.parse(text), 'subject_to')
+            self.assertTrue(facts, text)
+            self.assertEqual({f['status'] for f in facts}, {status})
+
+    def test_generic_a_company_is_not_automatically_the_filing_issuer(self):
+        self.assertFalse(self.claims(self.parse('A company may be subject to the GDPR.'), 'subject_to'))
+
     def test_negated_and_historical_and_potential_relationships_are_labelled(self):
         for text, status in [('We do not rely on Toshiba.', 'negated'),
                              ('We previously relied on Toshiba.', 'historical'),

@@ -36,7 +36,7 @@ jobs:
         run: >-
           python -I -S scripts/offline_evidence_checks.py --unittest
           src.test_correlation src.test_eval_harness src.test_evidence_matcher
-          src.test_scanner_backtest scripts.test_materialize_filing_texts
+          src.test_scanner_backtest src.test_deep_profile_store scripts.test_materialize_filing_texts
           scripts.test_scan_validation_batches scripts.test_export_backtest_static
           scripts.test_publish_scanner_snapshot
       - name: Export synthetic headline snapshot with sockets disabled
@@ -73,3 +73,4 @@ jobs:
           name: scanner-backtest-synthetic-smoke
           path: ${{ runner.temp }}/scanner-backtest-smoke/
           retention-days: 7
+

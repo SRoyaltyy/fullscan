@@ -105,7 +105,8 @@ def _subjects(token):
 
 def _issuer(token, name):
     value = _phrase(token).lower()
-    if token.lower_ in ISSUER or (token.lemma_ in ('operation', 'business', 'organization') and _owned(token)):
+    definite_company = token.lower_ in ('company', 'registrant', 'issuer') and any(c.lower_ == 'the' or (c.dep_ == 'poss' and c.lower_ in ISSUER) for c in token.children)
+    if token.lower_ in ('we', 'us', 'our', 'ours') or definite_company or (token.lemma_ in ('operation', 'business', 'organization') and _owned(token)):
         return True
     clean = re.sub(r'\b(?:incorporated|corporation|inc|corp|ltd|limited|plc|the|company)\b|[^a-z0-9 ]', ' ', name.lower())
     clean = ' '.join(clean.split())
@@ -125,11 +126,14 @@ def _named_in(token):
 
 def _status(token, sentence):
     # Clause-local negation: never turn "do not rely" into a current supplier.
-    if any(c.dep_ == 'neg' for c in token.children):
+    chain = [token]
+    while chain[-1].dep_ in ('acomp', 'attr', 'oprd', 'xcomp') and chain[-1].head != chain[-1]:
+        chain.append(chain[-1].head)
+    if any(c.dep_ == 'neg' for part in chain for c in part.children):
         return 'negated'
     if re.search(r'\b(?:no longer|previously|formerly|ceased|terminated|discontinued)\b', sentence.text, re.I):
         return 'historical'
-    if any(c.lemma_ in ('may', 'might', 'could', 'would', 'will') for c in token.children) or re.search(r'\bif\b', sentence.text, re.I):
+    if any(c.lemma_ in ('may', 'might', 'could', 'would', 'will') for part in chain for c in part.children) or re.search(r'\bif\b', sentence.text, re.I):
         return 'potential'
     return 'asserted'
 
@@ -232,6 +236,21 @@ def extract_doc(doc, *, ticker, name, source, offset=0):
                         for entity in _coordinated(obj):
                             emit(relation, entity, token.head, value_type='organization',
                                  qualifiers={'description': _phrase(token)})
+                if _owned(token):
+                    # X, one of our suppliers, announced... is an apposition
+                    # even though "supplier" is below the "one of" phrase.
+                    for ancestor in token.ancestors:
+                        if ancestor.dep_ == 'appos' and ancestor.head.pos_ in ('NOUN', 'PROPN'):
+                            for entity in _named_in(ancestor.head):
+                                if entity.label_ == 'ORG':
+                                    emit(relation, entity, token, value_type='organization', qualifiers={'description': _phrase(token)})
+                            break
+                        if ancestor.dep_ in ('attr', 'acomp') and ancestor.head.lemma_ == 'be':
+                            for subject in _subjects(ancestor.head):
+                                for entity in _named_in(subject):
+                                    if entity.label_ == 'ORG':
+                                        emit(relation, entity, token, value_type='organization', qualifiers={'description': _phrase(token)})
+                            break
                 holder = token
                 for _ in range(3):
                     if any(t.dep_ == 'poss' and t.lower_ in ISSUER for t in holder.subtree):
@@ -285,7 +304,7 @@ def extract_sections(sections, *, ticker, name, nlp):
     parse_cache = {}
     for section in sections:
         raw = str(section.get('text') or '')
-        metadata = {k: section.get(k, '') for k in ('source', 'form', 'filing_date', 'accession', 'section', 'document', 'kind', 'url')}
+        metadata = {k: section.get(k, '') for k in ('source', 'form', 'filing_date', 'accepted_at', 'report_date', 'accession', 'section', 'document', 'kind', 'url')}
         metadata['sha256'] = hashlib.sha256(raw.encode()).hexdigest()
         metadata['characters'] = len(raw)
         metadata['id'] = hashlib.sha256(repr(sorted(metadata.items())).encode()).hexdigest()
