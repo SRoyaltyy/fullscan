@@ -1,0 +1,192 @@
+name: Deterministic evidence checks
+on:
+  pull_request:
+    branches: [main, cursor/article-stock-correlation-9f4c]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tests:
+    needs: full_text_reader
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/
+            /scripts/
+            /eval/
+            /excel_bot/data/finviz_with_descriptions.csv
+            /data/news_intake/2026-10-17/documents.json
+            /dashboard/scanner-backtest/
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build pinned public dictionary resources
+        run: |
+          python -m pip install PyYAML==6.0.3
+          python -m scripts.bootstrap_semantics
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: full-filing-text-probe-*
+          path: validation-filing-texts
+          merge-multiple: true
+      - name: Run legacy, evidence, and strict measurement regressions
+        run: python -I -S scripts/offline_evidence_checks.py --unittest src.test_correlation src.test_eval_harness src.test_evidence_matcher src.test_scanner_backtest scripts.test_materialize_filing_texts scripts.test_scan_validation_batches
+      - name: Export blind real scanner sample
+        run: >-
+          python scripts/export_validation_inputs.py
+          --news data/news_intake/2026-10-17/documents.json
+          --descriptions excel_bot/data/finviz_with_descriptions.csv
+          --out validation-inputs --seed 19019 --budget 200
+      - name: Equal-input Finviz-only frozen-corpus comparison
+        run: |
+          python -I -S scripts/offline_evidence_checks.py --engine legacy --cases eval/cases.jsonl --descriptions excel_bot/data/finviz_with_descriptions.csv --out validation-inputs/legacy-frozen.json --changelog "Existing public corpus and Finviz-only equal inputs; isolated Python with sockets denied"
+          python -I -S scripts/offline_evidence_checks.py --engine evidence --cases eval/cases.jsonl --descriptions excel_bot/data/finviz_with_descriptions.csv --out validation-inputs/evidence-frozen.json --changelog "Existing public corpus and Finviz-only equal inputs; isolated Python with sockets denied"
+          python scripts/summarize_evidence_checks.py validation-inputs/legacy-frozen.json validation-inputs/evidence-frozen.json
+          python -I -S scripts/offline_evidence_checks.py --engine evidence --cases eval/evidence-identity-cases.jsonl --descriptions excel_bot/data/finviz_with_descriptions.csv --out validation-inputs/evidence-identity-corpus.json --changelog "Synthetic identity regressions; same public catalog; sockets denied"
+          python scripts/summarize_evidence_checks.py validation-inputs/evidence-identity-corpus.json
+      - name: Export separate unseen headline inputs
+        run: >-
+          python scripts/export_validation_inputs.py
+          --news data/news_intake/2026-10-17/documents.json
+          --descriptions excel_bot/data/finviz_with_descriptions.csv
+          --out validation-inputs/fresh --seed 19020 --budget 200
+          --exclude-sample validation-inputs/news-sample.json
+      - name: Reserve third unseen headline sample
+        run: >-
+          python scripts/export_validation_inputs.py
+          --news data/news_intake/2026-10-17/documents.json
+          --descriptions excel_bot/data/finviz_with_descriptions.csv
+          --out validation-inputs/holdout --seed 19021 --budget 200
+          --exclude-sample validation-inputs/news-sample.json
+          --exclude-sample validation-inputs/fresh/news-sample.json
+      - name: Reserve fourth unseen headline sample
+        run: >-
+          python scripts/export_validation_inputs.py
+          --news data/news_intake/2026-10-17/documents.json
+          --descriptions excel_bot/data/finviz_with_descriptions.csv
+          --out validation-inputs/holdout4 --seed 19022 --budget 200
+          --exclude-sample validation-inputs/news-sample.json
+          --exclude-sample validation-inputs/fresh/news-sample.json
+          --exclude-sample validation-inputs/holdout/news-sample.json
+      - name: Reserve fifth unseen headline sample
+        run: >-
+          python scripts/export_validation_inputs.py
+          --news data/news_intake/2026-10-17/documents.json
+          --descriptions excel_bot/data/finviz_with_descriptions.csv
+          --out validation-inputs/holdout5 --seed 19023 --budget 200
+          --exclude-sample validation-inputs/news-sample.json
+          --exclude-sample validation-inputs/fresh/news-sample.json
+          --exclude-sample validation-inputs/holdout/news-sample.json
+          --exclude-sample validation-inputs/holdout4/news-sample.json
+      - name: Reserve sixth unseen headline sample
+        run: >-
+          python scripts/export_validation_inputs.py
+          --news data/news_intake/2026-10-17/documents.json
+          --descriptions excel_bot/data/finviz_with_descriptions.csv
+          --out validation-inputs/holdout6 --seed 19024 --budget 200
+          --exclude-sample validation-inputs/news-sample.json
+          --exclude-sample validation-inputs/fresh/news-sample.json
+          --exclude-sample validation-inputs/holdout/news-sample.json
+          --exclude-sample validation-inputs/holdout4/news-sample.json
+          --exclude-sample validation-inputs/holdout5/news-sample.json
+      - name: Reserve seventh unseen headline sample
+        run: >-
+          python scripts/export_validation_inputs.py
+          --news data/news_intake/2026-10-17/documents.json
+          --descriptions excel_bot/data/finviz_with_descriptions.csv
+          --out validation-inputs/holdout7 --seed 19025 --budget 200
+          --exclude-sample validation-inputs/news-sample.json
+          --exclude-sample validation-inputs/fresh/news-sample.json
+          --exclude-sample validation-inputs/holdout/news-sample.json
+          --exclude-sample validation-inputs/holdout4/news-sample.json
+          --exclude-sample validation-inputs/holdout5/news-sample.json
+          --exclude-sample validation-inputs/holdout6/news-sample.json
+      - name: Reserve eighth unseen headline sample
+        run: >-
+          python scripts/export_validation_inputs.py
+          --news data/news_intake/2026-10-17/documents.json
+          --descriptions excel_bot/data/finviz_with_descriptions.csv
+          --out validation-inputs/holdout8 --seed 19026 --budget 200
+          --exclude-sample validation-inputs/news-sample.json
+          --exclude-sample validation-inputs/fresh/news-sample.json
+          --exclude-sample validation-inputs/holdout/news-sample.json
+          --exclude-sample validation-inputs/holdout4/news-sample.json
+          --exclude-sample validation-inputs/holdout5/news-sample.json
+          --exclude-sample validation-inputs/holdout6/news-sample.json
+          --exclude-sample validation-inputs/holdout7/news-sample.json
+      - name: Infer primary headlines using public inputs only
+        run: |
+          python -I -S scripts/offline_evidence_checks.py --validation-batches --root validation-inputs --descriptions excel_bot/data/finviz_with_descriptions.csv --identity-filings validation-filing-texts/objects
+          python scripts/compact_headline_links.py validation-inputs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deterministic-validation-inputs
+          path: validation-inputs/
+          retention-days: 30
+  full_text_reader:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      actions: read
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        include:
+          - ticker: LUV
+            artifact: 12109470523
+          - ticker: SPCX
+            artifact: 12109515304
+          - ticker: LLY
+            artifact: 12109515304
+          - ticker: FUN
+            artifact: 12109470523
+          - ticker: META
+            artifact: 12108763000
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            src
+            scripts
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/cache@v4
+        id: text_cache
+        with:
+          path: full-text-source
+          key: filing-text-probe-v1-${{ matrix.artifact }}-${{ matrix.ticker }}
+      - name: Materialize verified complete text from existing filing archive
+        if: steps.text_cache.outputs.cache-hit != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_ARTIFACT: ${{ matrix.artifact }}
+          SOURCE_TICKER: ${{ matrix.ticker }}
+        run: >-
+          python scripts/materialize_filing_texts.py
+          --repository "$GITHUB_REPOSITORY" --artifact-id "$SOURCE_ARTIFACT"
+          --ticker "$SOURCE_TICKER" --as-of 2026-10-19 --out full-text-source
+      - name: Verify every available full text and dated filing for probe issuer
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from src.filing_evidence import load_filing_sections
+          sources,report=load_filing_sections(Path('full-text-source/objects'),as_of='2026-10-19',strict=True)
+          Path('full-text-source/reader-report.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps(report))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: full-filing-text-probe-${{ matrix.ticker }}
+          path: full-text-source/
+          retention-days: 30

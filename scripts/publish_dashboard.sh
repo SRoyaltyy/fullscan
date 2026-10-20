@@ -29,7 +29,7 @@ fi
 # holdup and h1 are root aliases (/holdup/ /h1/) as well as dashboard/
 # folders. Every force-push, including free-news-intake, copies both
 # from this checkout onto gh-pages.
-SUBS="boring-winners ticker-lookback gainer-lookback flatten-lookback mover-lookback sleeve-combine sleeve-merge mover-paper book-paper paper-book strategy-board factor-mine day-board down-day-mine hard-red-exceptions day-movers excel-cam news-intake webull-sim holdup h1"
+SUBS="boring-winners ticker-lookback gainer-lookback flatten-lookback mover-lookback sleeve-combine sleeve-merge mover-paper book-paper paper-book strategy-board factor-mine day-board down-day-mine hard-red-exceptions day-movers excel-cam news-intake webull-sim holdup h1 scanner-backtest"
 
 TMP=$(mktemp -d)
 trap 'rm -rf "$TMP"' EXIT

@@ -1,0 +1,102 @@
+"""Land only a verified scanner snapshot on main; preserve concurrent writers.
+
+Uses a temporary Git index and a fast-forward push. Refuses to publish if the
+parser, intake, catalog, or page has changed since the scoring checkout.
+No force push, secret extraction, trading writes, or deployment-gate override.
+"""
+import argparse
+import json
+import os
+import subprocess
+import tempfile
+from pathlib import Path
+
+ARTIFACTS = ('articles.json', 'results.jsonl', 'profiles.json', 'ticker-index.json', 'meta.json')
+INPUT_PATHS = ('src/correlation.py', 'src/evidence_matcher.py', 'src/stock_evidence.py',
+    'src/filing_evidence.py', 'src/filing_business.py', 'src/filing_parts.py',
+    'src/names.py', 'src/aliases.py', 'src/linguistics.py', 'src/semantic_lookup.py',
+    'src/synonyms.py', 'src/places.py', 'src/spelling.py', 'src/profile_cache.py',
+    'src/link_correlation.py', 'src/scanner_backtest.py', 'src/data',
+    'scripts/export_backtest_static.py', 'scripts/publish_scanner_snapshot.py',
+    'scripts/materialize_filing_texts.py', 'scripts/bootstrap_semantics.py',
+    'scripts/build_semantic_resources.py', '.github/workflows/scanner-backtest-publish.yml',
+    'dashboard/scanner-backtest/index.html',
+    'excel_bot/data/finviz_with_descriptions.csv', 'data/news_intake/2026-10-17/documents.json')
+
+
+def git(*args, env=None):
+    return subprocess.check_output(['git', *args], text=True, env=env).strip()
+
+
+def validate(directory, source_sha):
+    meta = json.loads((directory/'meta.json').read_text())
+    snapshot = meta.get('snapshot') or {}
+    if snapshot.get('source_revision') != source_sha or not snapshot.get('snapshot_id'):
+        raise ValueError('snapshot does not identify the scoring commit')
+    if snapshot.get('input_mode') != 'headline':
+        raise ValueError('the public parser gate requires headline-only input')
+    rows = [json.loads(line) for line in (directory/'results.jsonl').read_text().splitlines() if line.strip()]
+    ids = [str(row['id']) for row in rows]
+    articles = json.loads((directory/'articles.json').read_text())
+    if not rows or len(ids) != len(set(ids)) or len(ids) != meta.get('articles'):
+        raise ValueError('missing, duplicate, or inconsistent results')
+    if len(articles) != len(ids) or {str(a['id']) for a in articles} != set(ids):
+        raise ValueError('display articles do not match scored results')
+    if any(row.get('snapshot_id') != snapshot['snapshot_id'] for row in rows):
+        raise ValueError('mixed result snapshots')
+    profiles = json.loads((directory/'profiles.json').read_text())
+    if not profiles or not all(p.get('used_for_scoring') for p in profiles.values()):
+        raise ValueError('profiles are not the actual scoring board')
+    coverage = snapshot.get('filing_coverage') or {}
+    if coverage.get('scope') != 'dated_identity_overlay' or not coverage.get('complete') or coverage.get('errors'):
+        raise ValueError('dated filing identity source was not verified')
+    json.loads((directory/'ticker-index.json').read_text())
+    return meta
+
+
+def publish(directory, source_sha):
+    directory = directory.resolve()
+    validate(directory, source_sha)
+    # Each attempt starts at current main, not an old checkout's tree.
+    for attempt in range(3):
+        git('fetch', '--depth=1', 'origin', 'main')
+        upstream = git('rev-parse', 'FETCH_HEAD')
+        changes = git('diff', '--name-only', source_sha, upstream, '--', *INPUT_PATHS)
+        if changes:
+            raise ValueError('parser inputs changed during scoring; newer refresh must run: '+changes)
+        with tempfile.TemporaryDirectory(prefix='scanner-index-') as temp:
+            env = {**os.environ, 'GIT_INDEX_FILE': str(Path(temp)/'index'),
+                   'GIT_AUTHOR_NAME': 'Scanner snapshot publisher',
+                   'GIT_AUTHOR_EMAIL': 'bot@users.noreply.github.com',
+                   'GIT_COMMITTER_NAME': 'Scanner snapshot publisher',
+                   'GIT_COMMITTER_EMAIL': 'bot@users.noreply.github.com'}
+            git('read-tree', upstream, env=env)
+            for name in ARTIFACTS:
+                blob = git('hash-object', '-w', str(directory/name))
+                git('update-index', '--add', '--cacheinfo', '100644', blob,
+                    'dashboard/scanner-backtest/'+name, env=env)
+            tree = git('write-tree', env=env)
+            if tree == git('rev-parse', upstream+'^{tree}'):
+                return upstream
+            commit = git('commit-tree', tree, '-p', upstream, '-m',
+                         'Publish scanner snapshot for '+source_sha[:12], env=env)
+        result = subprocess.run(['git', 'push', 'origin', commit+':refs/heads/main'], capture_output=True, text=True)
+        if result.returncode == 0:
+            return commit
+        # Only concurrent non-fast-forward moves may be retried. Auth and
+        # protected-branch failures stop here, rather than trying another path.
+        if not any(reason in result.stderr for reason in ('fetch first', 'non-fast-forward')):
+            raise RuntimeError('snapshot push failed; inspect GitHub permissions/protection')
+    raise RuntimeError('main kept moving; snapshot was not published')
+
+
+def main():
+    p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    p.add_argument('--directory', type=Path, required=True)
+    p.add_argument('--source-sha', required=True)
+    a = p.parse_args()
+    print(json.dumps({'source_sha': a.source_sha, 'published_commit': publish(a.directory, a.source_sha)}))
+
+
+if __name__ == '__main__':
+    main()
