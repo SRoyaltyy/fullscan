@@ -443,6 +443,8 @@ def validate_paragraph_coverage(graph, texts=None):
             if not covered or any(fact_id not in p['relationship_ids'] for p in covered):
                 raise ValueError('relationship is missing from paragraph review')
     coverage = graph['coverage']
+    if coverage.get('characters_read') != sum(s['characters'] for s in sources.values()) or coverage.get('source_sections') != len(sources):
+        raise ValueError('paragraph source inventory is incomplete')
     if not coverage.get('all_paragraphs_classified') or coverage.get('paragraphs') != len(ids):
         raise ValueError('paragraph coverage is incomplete')
     prose = sum(s['characters'] for s in sources.values() if s.get('kind') != 'machine_data')

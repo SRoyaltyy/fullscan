@@ -72,12 +72,20 @@ def build(objects, out, *, as_of, descriptions=None, nlp=None):
             old = json.loads(gzip.decompress(target.read_bytes()))
             if old.get('source_fingerprint') == fingerprint:
                 profile = old
-        if profile is None:
+        fresh = profile is None
+        if fresh:
             profile = extract_sections(parts, ticker=ticker, name=name, nlp=nlp)
             profile.update(cik=path.parent.name, tickers=tickers, source_fingerprint=fingerprint, compiler_sha256=compiler_hash,
                            as_of=as_of, archive_coverage=report)
+        source_key = lambda s: (s['accession'], s['document'], s['section'], s.get('sha256') or hashlib.sha256(s['text'].encode()).hexdigest())
+        if Counter(source_key(s) for s in parts) != Counter(source_key(s) for s in profile['sources']):
+            raise ValueError('paragraph source inventory differs from the verified archive')
+        originals = {source_key(s): s['text'] for s in parts}
+        validate_paragraph_coverage(profile, {s['id']: originals[source_key(s)] for s in profile['sources']})
+        if profile['coverage']['characters_read'] != report['characters']:
+            raise ValueError('paragraph coverage does not account for all archived characters')
+        if fresh:
             atomic_json(target, profile, compressed=True)
-        validate_paragraph_coverage(profile)
         digest = hashlib.sha256(target.read_bytes()).hexdigest()
         for alias in tickers:
             entries[alias] = {'path': target.relative_to(out).as_posix(), 'sha256': digest,

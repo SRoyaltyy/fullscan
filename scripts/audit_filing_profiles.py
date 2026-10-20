@@ -18,6 +18,10 @@ def audit(profiles, objects):
         sections = data[graph['tickers'][0]]
         texts = {(s['accession'], s['document'], s['section'], hashlib.sha256(s['text'].encode()).hexdigest()): s['text'] for s in sections}
         sources = {s['id']: s for s in graph['sources']}
+        expected_sources = Counter((s['accession'], s['document'], s['section'], hashlib.sha256(s['text'].encode()).hexdigest()) for s in sections)
+        actual_sources = Counter((s['accession'], s['document'], s['section'], s['sha256']) for s in graph['sources'])
+        if actual_sources != expected_sources:
+            raise ValueError('source section inventory does not match the complete verified archive')
         if graph['coverage']['characters_read'] != report['characters']:
             raise ValueError('not all available characters were read')
         verified_texts = {s['id']: texts[(s['accession'], s['document'], s['section'], s['sha256'])] for s in graph['sources']}

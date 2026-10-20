@@ -25,6 +25,7 @@ class DeepProfileControls(unittest.TestCase):
         return {'schema': VERSION, 'ticker': 'TEST', 'tickers': ['TEST'],
                 'sources': [source], 'facts': [fact], 'as_of': '2026-10-20', 'paragraphs': [paragraph],
                 'coverage': {'facts': 1, 'paragraphs': 1, 'all_paragraphs_classified': True,
+                             'source_sections': 1, 'characters_read': len(text),
                              'all_prose_dependency_analyzed': True, 'prose_characters_analyzed': len(text)}}
 
     def fixture(self, root, graph=None):

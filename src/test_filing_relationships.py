@@ -57,6 +57,15 @@ class FullTextControls(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'reconstruct'):
             validate_paragraph_coverage(graph)
 
+    def test_missing_whole_source_cannot_hide_behind_old_complete_counters(self):
+        graph, _ = self.blank_graph([{'text': 'First source.', 'kind': 'business'},
+                                    {'text': '<machine>42</machine>', 'kind': 'machine_data'}])
+        graph['sources'].pop()
+        graph['paragraphs'].pop()
+        graph['coverage']['paragraphs'] = 1
+        with self.assertRaisesRegex(ValueError, 'source inventory'):
+            validate_paragraph_coverage(graph)
+
     def test_altered_text_or_classification_witness_fails(self):
         graph, _ = self.blank_graph([{'text': 'Our revenue rose 25%.', 'kind': 'business'}])
         graph['paragraphs'][0]['classification_evidence'][0]['quote'] = 'invented'
