@@ -499,7 +499,7 @@ async function showTickerProfile(rawTicker) {
   }
   meta.textContent = bits.join(" · ");
   meta.append(" ", srcBadge);
-  (prof.warnings || []).forEach((w) => {
+  [...new Set(prof.warnings || [])].forEach((w) => {
     const p = document.createElement("p");
     p.className = "empty";
     p.textContent = "⚠ " + w;
