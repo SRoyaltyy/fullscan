@@ -1,8 +1,8 @@
 {
   "date": "2026-10-20",
-  "generated_at": "2026-10-20T04:30:25.444696-04:00",
+  "generated_at": "2026-10-20T04:33:20.057193-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-10-19.csv",
+  "export": "finviz_2026-10-20.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8935,7 +8935,34 @@
   ],
   "ticker_news": [
     {
-      "time": "11 min",
+      "time": "3 min",
+      "title": "Alvotech Receives FDA Approval for New SIMLANDI Manufacturing Process That More Than Doubles Output Per Batch",
+      "url": "/news/404312/alvotech-receives-fda-approval-for-new-simlandi-manufacturing-process-that-more-than-doubles-output-per-batch",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "ALVO"
+      ]
+    },
+    {
+      "time": "3 min",
+      "title": "Hesai Group to Report Third Quarter 2026 Financial Results on Tuesday, November 10, 2026",
+      "url": "/news/404313/hesai-group-to-report-third-quarter-2026-financial-results-on-tuesday-november-10-2026",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "HSAI"
+      ]
+    },
+    {
+      "time": "13 min",
+      "title": "Tech firms bear brunt of selling as stocks drop",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/tech-firms-bear-brunt-selling-025048690.html",
+      "source": "AFP",
+      "tickers": [
+        "SKHY"
+      ]
+    },
+    {
+      "time": "14 min",
       "title": "Early Uber Investor Jason Calacanis Predicts Waymo Could Buy Lucid Or Rivian  Calls Its Chinese-Car Optics Really Bad",
       "url": "https://finance.yahoo.com/markets/stocks/articles/early-uber-investor-jason-calacanis-081820227.html",
       "source": "Stocktwits",
@@ -8943,21 +8970,22 @@
         "UBER",
         "RIVN",
         "LCID",
-        "GOOGL",
+        "GOOG",
         "TSLA"
       ]
     },
     {
-      "time": "12 min",
+      "time": "15 min",
       "title": "GM Q3 earnings preview: 'Core' franchise likely doing well with guidance in focus",
       "url": "https://finance.yahoo.com/markets/stocks/article/gm-q3-earnings-preview-core-franchise-likely-doing-well-with-guidance-in-focus-181340801.html",
       "source": "Yahoo Finance",
       "tickers": [
-        "STLA"
+        "STLA",
+        "F"
       ]
     },
     {
-      "time": "17 min",
+      "time": "20 min",
       "title": "It's a rough housing market, and Goldman Sachs expects it to get worse",
       "url": "https://www.marketwatch.com/story/its-a-rough-housing-market-and-goldman-sachs-expects-it-to-get-worse-be2c5aac?mod=mw_FV",
       "source": "MarketWatch",
@@ -8967,7 +8995,7 @@
       ]
     },
     {
-      "time": "26 min",
+      "time": "28 min",
       "title": "SOXX, SOXL Retreat To Red Premarket, But Retail Is 'Extremely Bullish' Ahead Of Tech Earnings",
       "url": "https://finance.yahoo.com/markets/stocks/articles/soxx-soxl-retreat-red-premarket-080414573.html",
       "source": "Stocktwits",
@@ -8980,7 +9008,7 @@
       ]
     },
     {
-      "time": "28 min",
+      "time": "30 min",
       "title": "SpaceX Earnings Should Be a Roller Coaster for the Stock",
       "url": "https://www.barrons.com/livecoverage/spacex-earnings-stock-price?mod=bar_FV",
       "source": "Barrons.com",
@@ -8989,7 +9017,7 @@
       ]
     },
     {
-      "time": "28 min",
+      "time": "31 min",
       "title": "SpaceX Earnings: How the Stock Might React",
       "url": "https://www.barrons.com/livecoverage/spacex-earnings-stock-price/card/spacex-earnings-how-the-stock-might-react-WLCkpRQH4jwIljTB09SP?mod=bar_FV",
       "source": "Barrons.com",
@@ -8998,7 +9026,7 @@
       ]
     },
     {
-      "time": "28 min",
+      "time": "31 min",
       "title": "Watch These Key SpaceX Numbers",
       "url": "https://www.barrons.com/livecoverage/spacex-earnings-stock-price/card/watch-these-key-spacex-numbers-wbICBj6ydjP89xRcO1ed?mod=bar_FV",
       "source": "Barrons.com",
@@ -9007,7 +9035,7 @@
       ]
     },
     {
-      "time": "29 min",
+      "time": "32 min",
       "title": "The Earnings Bar That SpaceX Needs to Clear",
       "url": "https://www.barrons.com/livecoverage/spacex-earnings-stock-price/card/the-earnings-bar-that-spacex-needs-to-clear-rMXg1P1lpvPz6TxDt5ek?mod=bar_FV",
       "source": "Barrons.com",
@@ -9016,19 +9044,19 @@
       ]
     },
     {
-      "time": "29 min",
+      "time": "32 min",
       "title": "United Airlines Earnings Land Next. Only 1 Thing Can Save the Sector's Stocks.",
       "url": "https://www.barrons.com/articles/united-airlines-earnings-stock-price-14f9d6d2?mod=bar_FV",
       "source": "Barrons.com",
       "tickers": [
         "ALK",
         "UAL",
-        "AAL",
-        "LUV"
+        "LUV",
+        "AAL"
       ]
     },
     {
-      "time": "29 min",
+      "time": "32 min",
       "title": "What Wall Street Thinks Ahead of the Results",
       "url": "https://www.barrons.com/livecoverage/spacex-earnings-stock-price/card/what-wall-street-thinks-ahead-of-the-results-Mqm4if10ANSvzR36LOdp?mod=bar_FV",
       "source": "Barrons.com",
@@ -9037,7 +9065,7 @@
       ]
     },
     {
-      "time": "30 min",
+      "time": "33 min",
       "title": "Ingenico Selects Cognizant as Global Strategic Technology Partner",
       "url": "/news/404309/ingenico-selects-cognizant-as-global-strategic-technology-partner",
       "source": "PR Newswire",
@@ -9046,7 +9074,7 @@
       ]
     },
     {
-      "time": "30 min",
+      "time": "33 min",
       "title": "ARK Invest Bets One Business Can Lift Tesla Stock to $4,400",
       "url": "https://finance.yahoo.com/markets/stocks/articles/ark-invest-bets-one-business-080000144.html",
       "source": "BeInCrypto",
@@ -9055,7 +9083,7 @@
       ]
     },
     {
-      "time": "30 min",
+      "time": "33 min",
       "title": "August Breaks UK Credit Card Record as Balances Soar",
       "url": "https://www.businesswire.com/news/home/20261020683218/en/",
       "source": "Business Wire",
@@ -9064,7 +9092,7 @@
       ]
     },
     {
-      "time": "44 min",
+      "time": "47 min",
       "title": "JJ Lin, Tia Ray & Lil Ghost Take the Formula 1 Singapore Grand Prix Stage With Support From TME",
       "url": "/news/404308/jj-lin-tia-ray-lil-ghost-take-the-formula-1-singapore-grand-prix-stage-with-support-from-tme",
       "source": "PR Newswire",
@@ -9073,7 +9101,7 @@
       ]
     },
     {
-      "time": "45 min",
+      "time": "48 min",
       "title": "Kaplan Fox Encourages Innventure, Inc. (INV) Investors with Significant Losses to Contact the Firm Before October 27, 2026",
       "url": "https://www.newsfilecorp.com/release/319813/Kaplan-Fox-Encourages-Innventure-Inc.-INV-Investors-with-Significant-Losses-to-Contact-the-Firm-Before-October-27-2026",
       "source": "Newsfile",
@@ -9082,7 +9110,7 @@
       ]
     },
     {
-      "time": "50 min",
+      "time": "53 min",
       "title": "France's riot damage doubles: How will businesses pay for the destruction?",
       "url": "https://finance.yahoo.com/economy/policy/articles/frances-riot-damage-doubles-pay-033242522.html",
       "source": "Euronews",
@@ -9091,21 +9119,12 @@
       ]
     },
     {
-      "time": "54 min",
+      "time": "57 min",
       "title": "UAL Stock In Focus: Retail Bullish Ahead Of Earnings, Asks CEO Scott Kirby To 'Donate All His Wealth' After Inheritance Tax Comment",
       "url": "https://finance.yahoo.com/markets/stocks/articles/ual-stock-focus-retail-bullish-073609429.html",
       "source": "Stocktwits",
       "tickers": [
         "UAL"
-      ]
-    },
-    {
-      "time": "55 min",
-      "title": "Tech firms bear brunt of selling as stocks drop",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/tech-firms-bear-brunt-selling-025048690.html",
-      "source": "AFP",
-      "tickers": [
-        "SKHY"
       ]
     },
     {
@@ -9124,9 +9143,9 @@
       "source": "Stocktwits",
       "tickers": [
         "SPCX",
-        "GOOGL",
+        "GOOG",
         "TSLA",
-        "GOOG"
+        "GOOGL"
       ]
     },
     {
@@ -9361,10 +9380,10 @@
       "url": "https://finance.yahoo.com/markets/world-indices/articles/asian-shares-tumble-oil-rises-021045839.html",
       "source": "Reuters",
       "tickers": [
-        "TXN",
         "LRCX",
-        "META",
-        "TSLA"
+        "TXN",
+        "TSLA",
+        "META"
       ]
     },
     {
@@ -9419,8 +9438,8 @@
       "source": "Stocktwits",
       "tickers": [
         "MPC",
-        "CVX",
-        "XOM"
+        "XOM",
+        "CVX"
       ]
     },
     {
@@ -9790,25 +9809,6 @@
       "source": "Barrons.com",
       "tickers": [
         "PHM"
-      ]
-    },
-    {
-      "time": "Oct-19",
-      "title": "US banks want to block AI agents from moving your money. Well, at least thats one good move.",
-      "url": "https://finance.yahoo.com/technology/ai/articles/us-banks-want-block-ai-234712805.html",
-      "source": "Digital Trends",
-      "tickers": [
-        "SCHW",
-        "JPM"
-      ]
-    },
-    {
-      "time": "Oct-19",
-      "title": "Whirlpool Corporation Welcomes Karin Risi to Board of Directors",
-      "url": "/news/404293/whirlpool-corporation-welcomes-karin-risi-to-board-of-directors",
-      "source": "PR Newswire",
-      "tickers": [
-        "WHR"
       ]
     }
   ],
@@ -10799,5 +10799,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 195,
   "earnings_window_count": 737,
-  "overlay_at": "2026-10-20T04:30:25.444696-04:00"
+  "overlay_at": "2026-10-20T04:33:20.057193-04:00"
 }

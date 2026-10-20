@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-20
 
-Export `finviz_2026-10-19.csv` · 11616 names · generated 2026-10-20T04:30:25.444696-04:00
+Export `finviz_2026-10-20.csv` · 11616 names · generated 2026-10-20T04:33:20.057193-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 11 min **UBER,RIVN,LCID,GOOGL,TSLA** Early Uber Investor Jason Calacanis Predicts Waymo Could Buy Lucid Or Rivian  Calls Its Chinese-Car Optics Really Bad (Stocktwits)
-- 12 min **STLA** GM Q3 earnings preview: 'Core' franchise likely doing well with guidance in focus (Yahoo Finance)
-- 17 min **GS,XHB** It's a rough housing market, and Goldman Sachs expects it to get worse (MarketWatch)
-- 26 min **SOXL,BE,SOXX,HON,IBM** SOXX, SOXL Retreat To Red Premarket, But Retail Is 'Extremely Bullish' Ahead Of Tech Earnings (Stocktwits)
-- 28 min **SPCX** SpaceX Earnings Should Be a Roller Coaster for the Stock (Barrons.com)
-- 28 min **SPCX** SpaceX Earnings: How the Stock Might React (Barrons.com)
-- 28 min **SPCX** Watch These Key SpaceX Numbers (Barrons.com)
-- 29 min **SPCX** The Earnings Bar That SpaceX Needs to Clear (Barrons.com)
-- 29 min **ALK,UAL,AAL,LUV** United Airlines Earnings Land Next. Only 1 Thing Can Save the Sector's Stocks. (Barrons.com)
-- 29 min **SPCX** What Wall Street Thinks Ahead of the Results (Barrons.com)
-- 30 min **CTSH** Ingenico Selects Cognizant as Global Strategic Technology Partner (PR Newswire)
-- 30 min **TSLA** ARK Invest Bets One Business Can Lift Tesla Stock to $4,400 (BeInCrypto)
-- 30 min **FICO** August Breaks UK Credit Card Record as Balances Soar (Business Wire)
-- 44 min **TME** JJ Lin, Tia Ray & Lil Ghost Take the Formula 1 Singapore Grand Prix Stage With Support From TME (PR Newswire)
-- 45 min **INV** Kaplan Fox Encourages Innventure, Inc. (INV) Investors with Significant Losses to Contact the Firm Before October 27, 2026 (Newsfile)
-- 50 min **CAN** France's riot damage doubles: How will businesses pay for the destruction? (Euronews)
-- 54 min **UAL** UAL Stock In Focus: Retail Bullish Ahead Of Earnings, Asks CEO Scott Kirby To 'Donate All His Wealth' After Inheritance Tax Comment (Stocktwits)
-- 55 min **SKHY** Tech firms bear brunt of selling as stocks drop (AFP)
+- 3 min **ALVO** Alvotech Receives FDA Approval for New SIMLANDI Manufacturing Process That More Than Doubles Output Per Batch (GlobeNewswire)
+- 3 min **HSAI** Hesai Group to Report Third Quarter 2026 Financial Results on Tuesday, November 10, 2026 (GlobeNewswire)
+- 13 min **SKHY** Tech firms bear brunt of selling as stocks drop (AFP)
+- 14 min **UBER,RIVN,LCID,GOOG,TSLA** Early Uber Investor Jason Calacanis Predicts Waymo Could Buy Lucid Or Rivian  Calls Its Chinese-Car Optics Really Bad (Stocktwits)
+- 15 min **STLA,F** GM Q3 earnings preview: 'Core' franchise likely doing well with guidance in focus (Yahoo Finance)
+- 20 min **GS,XHB** It's a rough housing market, and Goldman Sachs expects it to get worse (MarketWatch)
+- 28 min **SOXL,BE,SOXX,HON,IBM** SOXX, SOXL Retreat To Red Premarket, But Retail Is 'Extremely Bullish' Ahead Of Tech Earnings (Stocktwits)
+- 30 min **SPCX** SpaceX Earnings Should Be a Roller Coaster for the Stock (Barrons.com)
+- 31 min **SPCX** SpaceX Earnings: How the Stock Might React (Barrons.com)
+- 31 min **SPCX** Watch These Key SpaceX Numbers (Barrons.com)
+- 32 min **SPCX** The Earnings Bar That SpaceX Needs to Clear (Barrons.com)
+- 32 min **ALK,UAL,LUV,AAL** United Airlines Earnings Land Next. Only 1 Thing Can Save the Sector's Stocks. (Barrons.com)
+- 32 min **SPCX** What Wall Street Thinks Ahead of the Results (Barrons.com)
+- 33 min **CTSH** Ingenico Selects Cognizant as Global Strategic Technology Partner (PR Newswire)
+- 33 min **TSLA** ARK Invest Bets One Business Can Lift Tesla Stock to $4,400 (BeInCrypto)
+- 33 min **FICO** August Breaks UK Credit Card Record as Balances Soar (Business Wire)
+- 47 min **TME** JJ Lin, Tia Ray & Lil Ghost Take the Formula 1 Singapore Grand Prix Stage With Support From TME (PR Newswire)
+- 48 min **INV** Kaplan Fox Encourages Innventure, Inc. (INV) Investors with Significant Losses to Contact the Firm Before October 27, 2026 (Newsfile)
+- 53 min **CAN** France's riot damage doubles: How will businesses pay for the destruction? (Euronews)
+- 57 min **UAL** UAL Stock In Focus: Retail Bullish Ahead Of Earnings, Asks CEO Scott Kirby To 'Donate All His Wealth' After Inheritance Tax Comment (Stocktwits)
 - 1 hour **DB** UK unemployment falls as payrolls stabilise; Deutsche Bank sees November rate hike (Proactive)
-- 1 hour **SPCX,GOOGL,TSLA,GOOG** SpaceX Faces Earnings Test Today: RBC Flags Over 50% Upside As Tesla Merger Buzz Builds, S&P Flags AI Financing Risks (Stocktwits)
+- 1 hour **SPCX,GOOG,TSLA,GOOGL** SpaceX Faces Earnings Test Today: RBC Flags Over 50% Upside As Tesla Merger Buzz Builds, S&P Flags AI Financing Risks (Stocktwits)
 - 1 hour **BMY** Investors Are Turning Cautious on Big Pharma as Earnings Season Unfolds (The Wall Street Journal)
 - 1 hour **JPM** JPMorgan Bitcoin Forecast Gives BTC a Major Edge Over US Stocks (Cryptonews)
 - 1 hour **AKAM,NET** Blackwall quadruples valuation to $2.2B as websites wrangle an increasingly crowded internet (TechCrunch)
-- 1 hour **CDNS** Socionext Expands Agentic AI to Advanced, Large-Scale SoC Physical Design (Business Wire)
-- 1 hour **AZN** Ambrose Healthcare fortifies rare disease pipeline on AM-Pharma takeover (Pharmaceutical Technology)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
