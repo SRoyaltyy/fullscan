@@ -1,0 +1,236 @@
+{
+  "seed": 20261019,
+  "news": "data/news_intake/2026-10-17/documents.json",
+  "articles": [
+    {
+      "id": "r4-01",
+      "title": "Class 2 Device Recall PERMAHAND\" Silk Suture - U.S. Food and Drug Administration (.gov)",
+      "status": "unknown",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-02",
+      "title": "Brush fires spark in Southern California - AP News",
+      "status": "unknown",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-03",
+      "title": "Major Company Announces Plans To Move Corporate Office To Norwalk - Patch",
+      "status": "unknown",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-04",
+      "title": "NCAA Sues Ohio Governor Over Fifth-Year Eligibility Order - Front Office Sports",
+      "status": "unknown",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-05",
+      "title": "Tebra Data Breach Lawsuit Investigation - Claim Depot",
+      "status": "unknown",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-06",
+      "title": "\u2018Frisco King\u2019 Preview: Start Date for \u2018Tulsa King\u2019 Spin-off Revealed With Video Teaser - Taste of Country",
+      "status": "unknown",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-07",
+      "title": "U.S. Attorney\u2019s Office for the District of Puerto Rico Announces Creation of the Interagency Fraud Enforcement Task Force",
+      "status": "scored",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-08",
+      "title": "Strata Minerals MD Peter Woods to Update on Zelica Gold Project at Sharewise Webinar on 19 October 2026 - Kalkine Media",
+      "status": "unknown",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-09",
+      "title": "Katie Zacharia Steps Down as White House Press Secretary, Praises Trump in Farewell Message - GreekReporter.com",
+      "status": "unknown",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-10",
+      "title": "Schneider Hikes Guidance Again on Soaring Data-Center Demand - Bloomberg.com",
+      "status": "unknown",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-11",
+      "title": "BHVN Stock On Track For Best Day In Over 2 Months After SK Biopharmaceuticals Licenses Epilepsy Drug: Retail Now Awaits Obesity Trial Readout - Stocktwits",
+      "status": "scored",
+      "industries": [
+        "Biotechnology"
+      ],
+      "passes": [
+        {
+          "ticker": "GENB",
+          "terms": [
+            "drug"
+          ]
+        },
+        {
+          "ticker": "ASND",
+          "terms": [
+            "drug"
+          ]
+        },
+        {
+          "ticker": "AVTX",
+          "terms": [
+            "drug",
+            "readout"
+          ]
+        },
+        {
+          "ticker": "RVMD",
+          "terms": [
+            "drug",
+            "readout"
+          ]
+        },
+        {
+          "ticker": "KOD",
+          "terms": [
+            "drug",
+            "readout"
+          ]
+        },
+        {
+          "ticker": "XENE",
+          "terms": [
+            "drug",
+            "readout"
+          ]
+        },
+        {
+          "ticker": "VSTM",
+          "terms": [
+            "drug",
+            "readout"
+          ]
+        },
+        {
+          "ticker": "INSM",
+          "terms": [
+            "drug",
+            "readout"
+          ]
+        }
+      ],
+      "name_hits": [
+        "BHVN"
+      ]
+    },
+    {
+      "id": "r4-12",
+      "title": "Hudson River Museum acquires Maya Lin sculpture - See Great Art",
+      "status": "unknown",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-13",
+      "title": "The Great ShakeOut Earthquake Drill: How to participate from home - WYFF",
+      "status": "unknown",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-14",
+      "title": "Eastham, Bender Partner on Value-Add Acquisition in Twin Cities Metro - Multifamily & Affordable Housing Business",
+      "status": "unknown",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-15",
+      "title": "Shafaq News..US crude inventories drop 8.6 million barrels - \u0634\u0641\u0642 \u0646\u064a\u0648\u0632",
+      "status": "unknown",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-16",
+      "title": "Pardeesville Cruise Night Association announces Spinoff Cruise winners - The Standard-Speaker",
+      "status": "unknown",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-17",
+      "title": "Stride4ward launches digital platform pilot for individuals with intellectual disabilities - QNS.com",
+      "status": "unknown",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-18",
+      "title": "Moderna's Next Test Isn't the Index Seat \u2014 It's Whether the Science and the Supply Chain Deliver - ad-hoc-news.de",
+      "status": "scored",
+      "industries": [],
+      "passes": [],
+      "name_hits": [
+        "MRNA"
+      ]
+    },
+    {
+      "id": "r4-19",
+      "title": "INDIANA SCHOOL DISTRICT CONTINUES TO DEAL WITH FALLOUT OF CYBERATTACK - WCCS AM1160 & 101.1FM",
+      "status": "unknown",
+      "industries": [],
+      "passes": [],
+      "name_hits": []
+    },
+    {
+      "id": "r4-20",
+      "title": "FDA approves first heart valve designed to grow with kids born with congenital heart disease - WPXI",
+      "status": "scored",
+      "industries": [
+        "Biotechnology"
+      ],
+      "passes": [
+        {
+          "ticker": "CYTK",
+          "terms": [
+            "valve"
+          ]
+        }
+      ],
+      "name_hits": []
+    }
+  ]
+}

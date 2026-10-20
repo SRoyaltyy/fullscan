@@ -44,6 +44,8 @@ summary{cursor:pointer;color:#93c5fd}
 <main>
 <h1>Scanner backtest</h1>
 <p class="muted" id="status">Loading…</p>
+<p class="muted" id="snapshot">Checking scoring snapshot…</p>
+<p class="muted">Experimental classifier, not a validated accuracy result. The static page looks up an offline run; only live mode reruns Python. Filing identities cover only the issuers listed for that run.</p>
 <div class="row">
   <button type="button" id="another" class="secondary" disabled>Another article</button>
   <button type="button" id="test" disabled>Test</button>
@@ -68,7 +70,7 @@ summary{cursor:pointer;color:#93c5fd}
 </section>
 <section class="card" id="spacy" hidden>
   <h2>spaCy analysis <span class="badge" id="spacy-cluster"></span></h2>
-  <p class="muted">Dependency parsing (who did what to whom) + named entities + K-Means theme cluster. Deterministic: spaCy model and cluster seed are pinned.</p>
+  <p class="muted">Exploratory dependency parsing and theme clusters, separate from the evidence engine's pass decisions. Historical parses may include article bodies.</p>
   <div id="spacy-body"></div>
 </section>
 <section class="card" id="profile" hidden>
@@ -102,6 +104,21 @@ const DEFAULT_SEED = 1722;
 
 function text(id, value) {
   document.getElementById(id).textContent = value;
+}
+
+function renderSnapshot(snapshot) {
+  if (!snapshot || !snapshot.snapshot_id) {
+    text("snapshot", "Historical cache: engine/source fingerprints and scored input mode were not recorded. SEC-enriched display profiles may differ from the scoring board. Not the latest candidate.");
+    return;
+  }
+  const coverage = snapshot.filing_coverage || {};
+  const tickers = coverage.covered_tickers || [];
+  text("snapshot", `${snapshot.compiler_version} · input=${snapshot.input_mode} · snapshot ${snapshot.snapshot_id.slice(0, 16)}` +
+    (snapshot.source_revision ? ` · parser commit ${snapshot.source_revision.slice(0, 12)}` : "") +
+    ` · filing identities: ${tickers.length}/${coverage.catalog_tickers || "?"} tickers` +
+    (coverage.as_of ? ` · cutoff ${coverage.as_of}` : "") +
+    (tickers.length ? ` · ${tickers.join(", ")}` : " · description-only") +
+    " · full filing-business coverage: not established");
 }
 
 // mulberry32: tiny deterministic PRNG so draws are reproducible and
@@ -149,11 +166,14 @@ function renderArticle(article) {
   if (article.truncated) {
     if (meta.textContent) meta.append(" · ");
     const t = document.createElement("span");
-    t.textContent = "display text truncated; match ran on full text";
+    t.textContent = "display truncated; scoring used the complete declared input";
     meta.append(t);
   }
   const badge = document.getElementById("textbadge");
-  if (article.full_text) {
+  if (article.input_mode === "headline") {
+    badge.textContent = "scored input: primary headline only";
+    badge.className = "badge headline";
+  } else if (article.full_text || article.input_mode === "full-text") {
     badge.textContent = "full text";
     badge.className = "badge full";
   } else {
@@ -193,7 +213,7 @@ function renderMatches(result) {
   const box = document.getElementById("results");
   box.hidden = false;
   const decision = document.getElementById("decision");
-  decision.textContent = `${result.decision || "scored"} · ${result.engine || "evidence"} · ${result.pass_count} pass${result.pass_count === 1 ? "" : "es"}`;
+  decision.textContent = `${result.decision || "scored"} · ${result.engine || "evidence"} · ${result.input_mode || "historical input mode unrecorded"} · ${result.pass_count} pass${result.pass_count === 1 ? "" : "es"}`;
   const matches = document.getElementById("matches");
   matches.textContent = "";
   if (!result.passes || !result.passes.length) {
@@ -246,6 +266,13 @@ function renderMatches(result) {
       const terms = (evidence.terms || []).join(", ");
       p.textContent = (evidence.channel ? evidence.channel + " — " : "") + evidence.passage + (terms ? " [" + terms + "]" : "");
       td.append(p);
+      const witness = evidence.stock_evidence || {};
+      if (witness.passage) {
+        const source = document.createElement("p");
+        source.className = "quote";
+        source.textContent = `Company witness: ${witness.source || ""} · ${witness.filing_date || "undated description"} · ${witness.accession || ""} · ${witness.section || ""} — ${witness.passage}`;
+        td.append(source);
+      }
       quote.append(td);
       body.append(quote);
     }
@@ -263,6 +290,8 @@ async function runTest() {
     if (mode === "static") {
       const result = staticResults.get(String(current.id));
       if (!result) throw new Error("no precomputed result for this article id");
+      if (staticMeta.snapshot && result.snapshot_id !== staticMeta.snapshot.snapshot_id)
+        throw new Error("Cached result does not match this snapshot; regenerate artifacts.");
       renderMatches(result);
     } else {
       const response = await fetch("/api/test", {
@@ -315,6 +344,7 @@ async function loadStatic() {
   spacyClusters = clusterRes.ok ? (await clusterRes.json()).clusters || {} : {};
   if (!staticArticles.length) throw new Error("static article pool is empty");
   const m = staticMeta || {};
+  renderSnapshot(m.snapshot);
   const fullN = staticArticles.filter((a) => a.full_text).length;
   text("status",
     `precomputed · engine=${m.engine || "evidence"} · ${staticArticles.length} articles` +
@@ -331,7 +361,7 @@ async function loadStatic() {
 function renderSpacy(id) {
   const box = document.getElementById("spacy");
   const row = spacyResults.get(String(id));
-  if (!row) { box.hidden = true; return; }
+  if (!row || (staticMeta && staticMeta.snapshot)) { box.hidden = true; return; }
   box.hidden = false;
   const clusterInfo = row.cluster != null ? spacyClusters[String(row.cluster)] : null;
   text("spacy-cluster", clusterInfo
@@ -416,10 +446,25 @@ const KIND_LABELS = {
 async function showTickerProfile(rawTicker) {
   const ticker = String(rawTicker || "").trim().toUpperCase();
   if (!ticker) return;
-  if (!(await loadProfiles())) return;
+  if (mode !== "live" && !(await loadProfiles())) return;
   const box = document.getElementById("profile");
   box.hidden = false;
-  const prof = staticProfiles[ticker];
+  let prof;
+  if (mode === "live") {
+    try {
+      const response = await fetch(`/api/profile?ticker=${encodeURIComponent(ticker)}`);
+      const payload = await response.json();
+      if (!response.ok) throw new Error(payload.error || "profile failed");
+      prof = payload;
+    } catch (err) {
+      text("profile-title", ticker);
+      text("profile-meta", err.message);
+      for (const id of ["profile-warnings", "profile-facts", "profile-filing", "profile-links"]) text(id, "");
+      return;
+    }
+  } else {
+    prof = staticProfiles[ticker];
+  }
   const title = document.getElementById("profile-title");
   const meta = document.getElementById("profile-meta");
   const warnings = document.getElementById("profile-warnings");
@@ -438,9 +483,12 @@ async function showTickerProfile(rawTicker) {
   title.textContent = `${ticker} — ${prof.name || "(no name)"}`;
   const bits = [prof.industry, prof.sector].filter(Boolean);
   const srcBadge = document.createElement("span");
-  if (prof.enriched) {
+  if (prof.used_for_scoring) {
     srcBadge.className = "badge source-edgar";
-    srcBadge.textContent = `SEC EDGAR ${prof.filing ? prof.filing.form : "10-K"} · ${prof.filing ? prof.filing.filing_date : ""} · filing-derived`;
+    srcBadge.textContent = prof.enriched ? "Actual scoring board · dated filing identity overlay" : "Actual scoring board · description only";
+  } else if (prof.enriched) {
+    srcBadge.className = "badge source-edgar";
+    srcBadge.textContent = `Historical SEC-enriched display · NOT verified as scoring input`;
   } else {
     srcBadge.className = "badge headline";
     srcBadge.textContent = "Finviz description only (no filing parsed)";
@@ -464,10 +512,23 @@ async function showTickerProfile(rawTicker) {
       const span = document.createElement("span");
       span.className = "factterm";
       span.textContent = e.term;
-      if (e.passage) span.title = e.passage + (e.confidence ? `  [${e.confidence}]` : "");
+      if (e.passage) span.title = [e.passage, e.display_truncated ? "display excerpt; full source retained" : "", e.filing_date, e.accession, e.confidence].filter(Boolean).join(" · ");
       group.append(span);
     }
     factsBox.append(group);
+  }
+  if (prof.sources && prof.sources.length) {
+    const det = document.createElement("details");
+    const sum = document.createElement("summary");
+    sum.textContent = `Scoring source sections (${prof.sources.length}); source archive retains whole documents`;
+    det.append(sum);
+    for (const source of prof.sources.slice(0, 100)) {
+      const p = document.createElement("p");
+      p.className = "quote";
+      p.textContent = [source.source, source.form, source.filing_date, source.accession, source.section, source.sha256].filter(Boolean).join(" · ");
+      det.append(p);
+    }
+    filingBox.append(det);
   }
   if (prof.filing && prof.filing.items) {
     for (const [label, text] of Object.entries(prof.filing.items)) {
@@ -481,7 +542,7 @@ async function showTickerProfile(rawTicker) {
       filingBox.append(det);
     }
   }
-  const links = (tickerIndex && tickerIndex[ticker]) || [];
+  const links = mode === "static" && tickerIndex ? tickerIndex[ticker] || [] : [];
   const h = document.createElement("h3");
   h.className = "factgroup";
   h.textContent = `Intake articles linked to ${ticker} (${links.length})`;
@@ -511,8 +572,10 @@ async function poll() {
     if (status.ready) {
       mode = "live";
       line.textContent = `live · evidence engine · ${status.stocks} stocks · ${status.articles} articles`;
+      renderSnapshot(status.snapshot);
       document.getElementById("another").disabled = false;
       document.getElementById("test").disabled = false;
+      document.getElementById("analyze").disabled = false;
       return;
     }
     line.textContent = `Loading the stock board… ${status.articles} articles ready`;
@@ -541,3 +604,4 @@ poll().then(() => loadArticle());
 </script>
 </body>
 </html>
+

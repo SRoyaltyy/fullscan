@@ -1,0 +1,273 @@
+{
+  "taxonomy": "FT-1",
+  "generated": "2026-10-19T05:16:47",
+  "config": {
+    "descriptions": "excel_bot/data/finviz_with_descriptions.csv",
+    "universe": "/tmp/filings/completeness/company_filings_full_dates.csv",
+    "sectors": "",
+    "filings": "/tmp/filings/business.json",
+    "reference": "data/news_intake/2026-10-17/documents.json",
+    "z_min": 2.5,
+    "batch_z_min": 2.0
+  },
+  "changelog": "E7 second-order gate and B3 alias guard. Headline title-case (IPO News) is not a company. A small circle such as spacecraft may vote for its industry alone. Charlotte case labels.version 2: unknown, per the rubric, once places and the publisher are gone. dkng case labels.version 2 allows the CHDN customer row. Corpus scored without batch-z.",
+  "summary": {
+    "cases": 13,
+    "verdicts": {
+      "PASS": 7,
+      "SKIP": 1,
+      "TARGET_ACHIEVED": 2,
+      "UNLABELED": 3
+    },
+    "failure_classes": {},
+    "regression_pass_rate": 1.0,
+    "targets_achieved": "2/2",
+    "unlabeled": 3
+  },
+  "cases": [
+    {
+      "case_id": "memo-space-policy",
+      "kind": "regression",
+      "case_type": "related_unnamed",
+      "verdict": "PASS",
+      "failure_classes": [],
+      "notes": [],
+      "program_status": "scored",
+      "missing": {
+        "topical_passes": [],
+        "name_hits": []
+      },
+      "unexpected": {
+        "passes": [],
+        "name_hits": [],
+        "dependencies": []
+      }
+    },
+    {
+      "case_id": "thin-markets-moved",
+      "kind": "regression",
+      "case_type": "thin_unknown",
+      "verdict": "SKIP",
+      "failure_classes": [
+        "NO_TEXT"
+      ],
+      "notes": [
+        "case text is empty/short and text_ref is unset; paste full text"
+      ],
+      "program_status": "unknown",
+      "missing": {
+        "topical_passes": [],
+        "name_hits": []
+      },
+      "unexpected": {
+        "passes": [],
+        "name_hits": [],
+        "dependencies": []
+      }
+    },
+    {
+      "case_id": "klook-ipo-publisher",
+      "kind": "regression",
+      "case_type": "alias_trap",
+      "verdict": "PASS",
+      "failure_classes": [],
+      "notes": [],
+      "program_status": "scored",
+      "missing": {
+        "topical_passes": [],
+        "name_hits": []
+      },
+      "unexpected": {
+        "passes": [],
+        "name_hits": [],
+        "dependencies": []
+      }
+    },
+    {
+      "case_id": "charlotte-police-place",
+      "kind": "regression",
+      "case_type": "alias_trap",
+      "verdict": "PASS",
+      "failure_classes": [],
+      "notes": [],
+      "program_status": "unknown",
+      "missing": {
+        "topical_passes": [],
+        "name_hits": []
+      },
+      "unexpected": {
+        "passes": [],
+        "name_hits": [],
+        "dependencies": []
+      }
+    },
+    {
+      "case_id": "office-space-homonym",
+      "kind": "regression",
+      "case_type": "homonym_trap",
+      "verdict": "PASS",
+      "failure_classes": [],
+      "notes": [],
+      "program_status": "scored",
+      "missing": {
+        "topical_passes": [],
+        "name_hits": []
+      },
+      "unexpected": {
+        "passes": [],
+        "name_hits": [],
+        "dependencies": []
+      }
+    },
+    {
+      "case_id": "washington-post-alias-trap",
+      "kind": "regression",
+      "case_type": "alias_trap",
+      "verdict": "PASS",
+      "failure_classes": [],
+      "notes": [],
+      "program_status": "scored",
+      "missing": {
+        "topical_passes": [],
+        "name_hits": []
+      },
+      "unexpected": {
+        "passes": [],
+        "name_hits": [],
+        "dependencies": []
+      }
+    },
+    {
+      "case_id": "post-dollar-ticker",
+      "kind": "regression",
+      "case_type": "named_company",
+      "verdict": "PASS",
+      "failure_classes": [],
+      "notes": [],
+      "program_status": "scored",
+      "missing": {
+        "topical_passes": [],
+        "name_hits": []
+      },
+      "unexpected": {
+        "passes": [],
+        "name_hits": [],
+        "dependencies": []
+      }
+    },
+    {
+      "case_id": "dkng-second-order-gating",
+      "kind": "target",
+      "case_type": "second_order",
+      "verdict": "TARGET_ACHIEVED",
+      "failure_classes": [],
+      "notes": [],
+      "program_status": "scored",
+      "missing": {
+        "topical_passes": [],
+        "name_hits": []
+      },
+      "unexpected": {
+        "passes": [],
+        "name_hits": [],
+        "dependencies": []
+      }
+    },
+    {
+      "case_id": "defence-spelling-thin",
+      "kind": "regression",
+      "case_type": "related_unnamed",
+      "verdict": "PASS",
+      "failure_classes": [],
+      "notes": [],
+      "program_status": "scored",
+      "missing": {
+        "topical_passes": [],
+        "name_hits": []
+      },
+      "unexpected": {
+        "passes": [],
+        "name_hits": [],
+        "dependencies": []
+      }
+    },
+    {
+      "case_id": "launches-inflection",
+      "kind": "target",
+      "case_type": "related_unnamed",
+      "verdict": "TARGET_ACHIEVED",
+      "failure_classes": [],
+      "notes": [],
+      "program_status": "scored",
+      "missing": {
+        "topical_passes": [],
+        "name_hits": []
+      },
+      "unexpected": {
+        "passes": [],
+        "name_hits": [],
+        "dependencies": []
+      }
+    },
+    {
+      "case_id": "okx-ice-tokenized",
+      "kind": "regression",
+      "case_type": "named_company",
+      "verdict": "UNLABELED",
+      "failure_classes": [],
+      "notes": [
+        "no expectations yet"
+      ],
+      "program_status": "scored",
+      "missing": {
+        "topical_passes": [],
+        "name_hits": []
+      },
+      "unexpected": {
+        "passes": [],
+        "name_hits": [],
+        "dependencies": []
+      }
+    },
+    {
+      "case_id": "pentagon-defence-firms",
+      "kind": "regression",
+      "case_type": "off_board_name",
+      "verdict": "UNLABELED",
+      "failure_classes": [],
+      "notes": [
+        "no expectations yet"
+      ],
+      "program_status": "scored",
+      "missing": {
+        "topical_passes": [],
+        "name_hits": []
+      },
+      "unexpected": {
+        "passes": [],
+        "name_hits": [],
+        "dependencies": []
+      }
+    },
+    {
+      "case_id": "barrons-prediction-markets",
+      "kind": "regression",
+      "case_type": "second_order",
+      "verdict": "UNLABELED",
+      "failure_classes": [],
+      "notes": [
+        "no expectations yet"
+      ],
+      "program_status": "scored",
+      "missing": {
+        "topical_passes": [],
+        "name_hits": []
+      },
+      "unexpected": {
+        "passes": [],
+        "name_hits": [],
+        "dependencies": []
+      }
+    }
+  ]
+}
