@@ -744,7 +744,7 @@
       "latest_close": 19.76,
       "current_return_pct": 6.01,
       "horizon_returns_pct": {},
-      "mfe_pct": 6.6,
+      "mfe_pct": 6.76,
       "mfe_day": "2026-10-20",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-20"
@@ -1692,7 +1692,7 @@
         "n": 58,
         "wins": 58,
         "win_rate": 100.0,
-        "avg": 2.31
+        "avg": 2.32
       },
       "close_5d": null
     },
