@@ -80,6 +80,8 @@ jobs:
             /scripts/systemd/fullscan-openclaw-oauth.timer
             /scripts/safe_git_push.sh
             /src/__init__.py
+            /src/jev_hop0_overlay.py
+            /src/jev_bits.py
             /src/workflow_progress.py
             /01_daily/_openclaw_oauth_status.json
             /01_daily/_progress/
@@ -91,7 +93,8 @@ jobs:
                    scripts/install_openclaw_oauth_timer.sh \
                    scripts/systemd/fullscan-openclaw-oauth.service \
                    scripts/systemd/fullscan-openclaw-oauth.timer \
-                   scripts/safe_git_push.sh src/__init__.py src/workflow_progress.py; do
+                   scripts/safe_git_push.sh src/__init__.py src/workflow_progress.py \
+                   src/jev_hop0_overlay.py src/jev_bits.py; do
             test -f "$f" || { echo "::error::sparse checkout missing $f"; miss=1; }
           done
           exit $miss
