@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "reviews": [
+    {
+      "document_sha256": "53c3c72b839301055fe9f8051cfd9db7de4da7f0a9d05621ed240f245a4863ec",
+      "page_count": 152,
+      "page": 152,
+      "classification": "visual_only",
+      "reason": "Decorative back cover: abstract blue background and a white geometric logo, with no letters or numbers. The complete original page remains authoritative.",
+      "reviewer": "Codex visual inspection of the complete rendered page",
+      "reviewed_on": "2026-10-17",
+      "evidence_run_id": 39052590820,
+      "evidence_artifact_id": 12108835733,
+      "evidence_filename": "efxt-page-152.png",
+      "original_filename": "efxt-ex99_3.pdf"
+    }
+  ]
+}

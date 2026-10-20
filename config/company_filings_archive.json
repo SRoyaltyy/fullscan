@@ -1,0 +1,9 @@
+{
+  "mode": "full",
+  "universe_snapshot": "2026-10-16",
+  "shards": 12,
+  "probe_tickers": ["SUZ", "TIGO", "CALM", "NVO", "ASML", "RKLB"],
+  "coverage": "Latest annual report (or defined registration/fund/quarterly fallback), same-period amendments, and every later 10-Q, 8-K and 6-K, each as its entire SEC submission with every embedded document and exhibit.",
+  "original_bytes_are_authoritative": true,
+  "allow_truncation": false
+}

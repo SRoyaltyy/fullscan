@@ -1,0 +1,87 @@
+name: Complete image-only filing exhibit probe
+on:
+  push:
+    branches: [cursor/company-filing-parser-9b60]
+    paths: ['.github/workflows/company_filings_ocr_probe.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: company-filings-ocr-probe
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      PRIMARY_ACTION_RELAY_URL: ${{ secrets.PRIMARY_ACTION_RELAY_URL }}
+      EDGAR_IDENTITY: Fullscan filing parser research@sroyaltyy.github.io
+      FILINGS_OCR_ENABLED: '1'
+      TESSDATA_PREFIX: /usr/share/tesseract-ocr/5/tessdata
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/company_filings/
+            /scripts/archive_company_filings.py
+            /data/company_filings_universe_2026-10-16.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests lxml PyMuPDF
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr
+      - name: Inspect the newly reported Franco-Nevada PDF text gap
+        continue-on-error: true
+        run: python scripts/archive_company_filings.py --ticker FNV --workers 1 --per-sec 1 --storage local --output data/filings_ocr_probe
+      - name: Report every unreadable PDF page and preserve the exact PDF
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          from src.company_filings.full_archive import LocalObjects,read_filing,read_original
+          objects=LocalObjects('data/filings_ocr_probe/objects')
+          cik,accession,filename='0001456346','0001104659-26-032144','fnv-20251231xex99d1.pdf'
+          manifest,texts=read_filing(objects,cik,accession)
+          exhibit=texts[filename]
+          assert manifest['raw_complete'] and not manifest['truncated']
+          pathlib.Path('data/filings_ocr_probe/'+filename).write_bytes(read_original(objects,cik,accession,filename))
+          pathlib.Path('data/filings_ocr_probe/pdf-text.json').write_text(json.dumps(exhibit))
+          print(json.dumps({**{k:v for k,v in exhibit.items() if k!='text'},'characters':len(exhibit['text']),'source_sha256':manifest['source']['sha256'],'truncated':manifest['truncated']}))
+          assert exhibit['status']=='complete', 'PDF requires a reader repair; complete original preserved'
+          PY
+      - name: Confirm the reviewed graphic-only page matches the exact SEC original
+        if: always()
+        run: |
+          python - <<'PY'
+          import json,pathlib,fitz
+          from src.company_filings.full_archive import WholeClient,archive_url
+          from src.company_filings.full_extract import _REVIEWED_VISUAL_PAGES,sha256
+          folder=pathlib.Path('data/filings_ocr_probe');folder.mkdir(parents=True,exist_ok=True)
+          client=WholeClient(per_sec=0.5)
+          targets=[('0001904856','0001193125-26-138281','efxt-ex99_3.pdf')]
+          for cik,accession,filename in targets:
+              body=client.whole_url(archive_url(cik,accession,filename))
+              (folder/filename).write_bytes(body)
+              with fitz.open(stream=body,filetype='pdf') as pdf:
+                  review=_REVIEWED_VISUAL_PAGES[(sha256(body),len(pdf),152)]
+                  assert review['classification']=='visual_only'
+                  assert len(pdf)==152 and not pdf[151].get_text().strip()
+                  result={'filename':filename,'original_bytes':len(body),'sha256':sha256(body),'review':review,'whole_original_preserved':True}
+                  print(json.dumps(result))
+                  (folder/(filename+'.json')).write_text(json.dumps(result))
+                  pdf[151].get_pixmap().save(folder/'efxt-page-152.png')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: company-filings-image-only-probe
+          path: data/filings_ocr_probe/
+          retention-days: 90
+          compression-level: 0
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: company-filings-image-only-probe-report
+          path: data/filings_ocr_probe/report.json
+          retention-days: 90

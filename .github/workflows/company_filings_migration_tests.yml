@@ -1,0 +1,40 @@
+name: Full filing archive reader and migration tests
+on:
+  push:
+    branches: [cursor/company-filing-parser-9b60]
+    paths:
+      - '.github/workflows/company_filings_migration_tests.yml'
+      - 'scripts/migrate_company_filings_full.py'
+      - 'scripts/read_company_filings_full.py'
+      - 'scripts/test_company_filings_migrate.py'
+      - 'src/company_filings/full_*.py'
+      - 'src/company_filings/page_reviews.json'
+  pull_request:
+    paths:
+      - 'src/company_filings/page_reviews.json'
+      - 'scripts/migrate_company_filings_full.py'
+      - 'scripts/test_company_filings_migrate.py'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/company_filings/
+            /scripts/migrate_company_filings_full.py
+            /scripts/read_company_filings_full.py
+            /scripts/test_company_filings_migrate.py
+            /scripts/test_company_filings_full.py
+            /scripts/test_company_filings.py
+            /scripts/verify_company_filings_full.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests lxml PyMuPDF
+      - run: python -m unittest scripts.test_company_filings_migrate scripts.test_company_filings_full scripts.test_company_filings -q

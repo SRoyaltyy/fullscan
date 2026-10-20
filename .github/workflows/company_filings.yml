@@ -1,0 +1,109 @@
+name: Company filing parse
+
+# EDGAR blocks GitHub-hosted runners. PRIMARY_ACTION_RELAY_URL is the same
+# Cloudflare worker the official-source scanner uses. The corpus is an artifact,
+# not a git commit.
+on:
+  workflow_dispatch:
+  push:
+    branches: [cursor/company-filing-parser-9b60]
+    paths:
+      - src/company_filings/**
+      - '!src/company_filings/full_*.py'
+      - scripts/parse_company_filings.py
+      - scripts/test_company_filings.py
+      - scripts/explain_filings.py
+      - .github/workflows/company_filings.yml
+      - relay/worker.js
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: company-filing-parse
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[full-archive]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      PRIMARY_ACTION_RELAY_URL: ${{ secrets.PRIMARY_ACTION_RELAY_URL }}
+      EDGAR_IDENTITY: Fullscan filing parser research@sroyaltyy.github.io
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src
+            /scripts/parse_company_filings.py
+            /scripts/test_company_filings.py
+            /scripts/explain_filings.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests lxml
+      - name: Parser tests
+        run: python -m unittest scripts.test_company_filings
+      - name: Relay must be configured
+        run: test -n "$PRIMARY_ACTION_RELAY_URL"
+      - name: Parse one filing through the relay
+        run: python scripts/parse_company_filings.py --ticker RKLB --workers 1 --per-sec 2 --db data/company_filings/probe.sqlite
+      - name: Explain tickers the universe run did not store
+        run: python scripts/explain_filings.py
+
+  parse:
+    needs: probe
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      PRIMARY_ACTION_RELAY_URL: ${{ secrets.PRIMARY_ACTION_RELAY_URL }}
+      EDGAR_IDENTITY: Fullscan filing parser research@sroyaltyy.github.io
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src
+            /scripts/parse_company_filings.py
+            /data/exports
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q requests lxml
+      - name: Restore an earlier corpus so a rerun continues
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p data/company_filings
+          gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts?name=company-filings-corpus&per_page=20" > /tmp/arts.json
+          python - << 'PY'
+          import json
+          arts = [a for a in json.load(open("/tmp/arts.json")).get("artifacts") or [] if not a.get("expired")]
+          if not arts:
+              print("no prior corpus")
+              raise SystemExit(0)
+          arts.sort(key=lambda a: a.get("created_at") or "", reverse=True)
+          chosen = arts[0]
+          print("restore", chosen["created_at"], "bytes", chosen.get("size_in_bytes"))
+          open("/tmp/restore_run", "w").write(str(chosen["workflow_run"]["id"]))
+          PY
+          if [ -s /tmp/restore_run ]; then
+            gh run download "$(cat /tmp/restore_run)" -n company-filings-corpus -D data/company_filings || true
+          fi
+      - name: Parse every stock that passes the liquidity gate
+        timeout-minutes: 330
+        run: python scripts/parse_company_filings.py --universe --workers 6 --per-sec 6
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: company-filings-corpus
+          retention-days: 90
+          if-no-files-found: error
+          path: |
+            data/company_filings/

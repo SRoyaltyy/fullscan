@@ -1,0 +1,304 @@
+import binascii
+import gzip
+import json
+import os
+import pathlib
+import tempfile
+import unittest
+from unittest.mock import patch
+
+from src.company_filings.full_extract import extract_document, file_bytes, full_html_text, split_submission
+from src.company_filings.full_archive import (LocalObjects, WholeClient, archive_filing,
+    archive_company, columnar_rows, filing_inventory, read_filing, read_original, select_whole_filings)
+
+ACCESSION='0000000001-26-000001'
+FILING={'accession':ACCESSION,'form':'10-K','native_form':'10-K','filing_date':'2026-02-20','report_date':'2025-12-31','primary':'annual.htm'}
+
+
+def submission(documents):
+    chunks=[b'<SEC-DOCUMENT>\n<SEC-HEADER>\n<ACCEPTANCE-DATETIME>20260220121500\n</SEC-HEADER>\n']
+    for i,(name,kind,raw) in enumerate(documents):
+        chunks.extend([b'<DOCUMENT>\n',f'<TYPE>{kind}\n<SEQUENCE>{i+1}\n<FILENAME>{name}\n<DESCRIPTION>Full document\n<TEXT>\n'.encode(),raw,b'\n</TEXT>\n</DOCUMENT>\n'])
+    chunks.append(b'</SEC-DOCUMENT>\n')
+    return b''.join(chunks)
+
+
+def standard_submission():
+    return submission([('annual.htm','10-K',b'<html><body><p>Business START narrative.</p><table><tr><th>Revenue</th><td>123456789</td></tr></table><p>FINAL ORIGINAL PARAGRAPH.</p></body></html>'),
+                       ('ex991.htm','EX-99.1',b'<html><body>Complete earnings release INCLUDING THE END.</body></html>'),
+                       ('ex101.htm','EX-10.1',b'<html><body>Every provision of the material agreement.</body></html>')])
+
+
+class FakeClient:
+    def __init__(self, raw=None):self.raw=raw or standard_submission();self.calls=0
+    def submission(self,cik,accession):self.calls+=1;return self.raw
+
+
+class FullFilingTests(unittest.TestCase):
+    def test_all_attachments_and_final_paragraph_round_trip(self):
+        raw=standard_submission();files=split_submission(raw)
+        self.assertEqual([r['type'] for r in files],['10-K','EX-99.1','EX-10.1'])
+        self.assertIn(b'FINAL ORIGINAL PARAGRAPH',file_bytes(raw,files[0]))
+        with tempfile.TemporaryDirectory() as d:
+            objects=LocalObjects(pathlib.Path(d));client=FakeClient(raw)
+            manifest,reused=archive_filing(client,objects,'0000000001',FILING)
+            self.assertFalse(reused);self.assertTrue(manifest['raw_complete']);self.assertTrue(manifest['text_complete'])
+            self.assertEqual(manifest['filing_date'],'2026-02-20');self.assertEqual(manifest['report_date'],'2025-12-31')
+            self.assertEqual(manifest['accepted_at_raw'],'20260220121500');self.assertFalse(manifest['truncated'])
+            self.assertEqual(read_original(objects,'0000000001',ACCESSION),raw)
+            self.assertEqual(read_original(objects,'0000000001',ACCESSION,'ex991.htm'),file_bytes(raw,files[1]))
+            _,texts=read_filing(objects,'0000000001',ACCESSION)
+            self.assertIn('123456789',texts['annual.htm']['text']);self.assertIn('FINAL ORIGINAL PARAGRAPH',texts['annual.htm']['text'])
+            self.assertIn('INCLUDING THE END',texts['ex991.htm']['text'])
+            _,reused=archive_filing(client,objects,'0000000001',FILING)
+            self.assertTrue(reused);self.assertEqual(client.calls,1)
+
+    def test_interrupted_source_checkpoint_is_fetched_again_on_resume(self):
+        complete=standard_submission();client=FakeClient(complete[:-30])
+        with tempfile.TemporaryDirectory() as directory:
+            objects=LocalObjects(directory)
+            with self.assertRaisesRegex(ValueError,'terminal marker missing'):
+                archive_filing(client,objects,'0000000001',FILING)
+            client.raw=complete
+            manifest,reused=archive_filing(client,objects,'0000000001',FILING)
+            self.assertFalse(reused)
+            self.assertTrue(manifest['raw_complete'] and manifest['text_complete'])
+            self.assertEqual(client.calls,2)
+            self.assertEqual(read_original(objects,'0000000001',ACCESSION),complete)
+
+    def test_no_old_download_or_section_caps(self):
+        raw=b'A'*(25_000_000+123)+b'ENTIRE FINAL BYTES'
+        response=type('Response',(),{'content':raw,'headers':{'Content-Length':str(len(raw))}})()
+        client=WholeClient(per_sec=1)
+        with patch.object(client,'_get',return_value=response):self.assertEqual(client.whole_url('https://www.sec.gov/x'),raw)
+        text='BEGIN '+('actual words '*40000)+' FULL END'
+        result=extract_document(('<html><body><p>'+text+'</p></body></html>').encode(),'large.htm')
+        self.assertGreater(len(result['text']),350000);self.assertTrue(result['text'].endswith('FULL END'))
+
+    def test_incomplete_responses_and_submissions_fail(self):
+        client=WholeClient(per_sec=1)
+        response=type('Response',(),{'content':b'short','headers':{'Content-Length':'100'}})()
+        with patch.object(client,'_get',return_value=response):
+            with self.assertRaisesRegex(ValueError,'Incomplete HTTP'):client.whole_url('https://www.sec.gov/x')
+        for raw in (standard_submission()[:-30],b'<html>Not the source</html>',standard_submission().replace(b'</DOCUMENT>',b'</BROKEN>',1)):
+            with self.assertRaises(ValueError):split_submission(raw)
+
+    def test_tables_and_inline_xbrl_visible_values_are_preserved(self):
+        raw=b'<html><body><ix:header><ix:hidden>HIDDEN METADATA</ix:hidden></ix:header><p>Revenue</p><table><tr><td>Brazil</td><td>100000</td><td>42%</td></tr></table><p><ix:nonfraction>1234</ix:nonfraction> final.</p></body></html>'
+        text=full_html_text(raw)
+        for needle in ('Brazil','100000','42%','1234','final.'):self.assertIn(needle,text)
+        self.assertNotIn('HIDDEN METADATA',text)
+
+    def test_uuencoded_pdf_or_binary_is_preserved_without_pdf_size_skip(self):
+        original=b'\x89PNG\r\n'+bytes(range(256))*3
+        encoded=b'begin 644 logo.png\n'+b''.join(binascii.b2a_uu(original[i:i+45]) for i in range(0,len(original),45))+b'`\nend\n'
+        raw=submission([('logo.png','GRAPHIC',encoded)])
+        files=split_submission(raw)
+        self.assertEqual(file_bytes(raw,files[0]),original)
+        self.assertEqual(extract_document(original,'logo.png','GRAPHIC')['status'],'binary_original_preserved')
+
+    def test_pdf_every_page_and_dates_not_inferred(self):
+        import fitz
+        with fitz.open() as pdf:
+            for i in range(3):pdf.new_page().insert_text((72,72),f'Complete original PDF page {i+1}')
+            raw=pdf.tobytes()
+        extracted=extract_document(raw,'annual.pdf','EX-99.1')
+        self.assertEqual(extracted['status'],'complete');self.assertEqual(extracted['pages'],3)
+        for i in range(3):self.assertIn(f'PDF page {i+1}',extracted['text'])
+
+    def test_uniform_colored_pdf_pages_are_verified_blank_without_ocr(self):
+        import fitz
+        with fitz.open() as pdf:
+            page=pdf.new_page()
+            page.draw_rect(page.rect,color=None,fill=(0.84,0.82,0.78),width=0)
+            raw=pdf.tobytes()
+        with patch.dict('os.environ',{'FILINGS_OCR_ENABLED':'0'}):
+            result=extract_document(raw,'blank-background.pdf')
+        self.assertEqual(result['status'],'complete')
+        self.assertEqual(result['pages'],1)
+        self.assertEqual(result['uniform_blank_pages'],[1])
+        self.assertEqual(result['pages_without_text'],[])
+
+    def test_background_fill_with_empty_edge_does_not_hide_charts_or_annotations(self):
+        import fitz
+        with fitz.open() as pdf:
+            for i in range(3):
+                page=pdf.new_page()
+                rect=fitz.Rect(0.08,0.14,page.rect.width+0.05,page.rect.height)
+                page.draw_rect(rect,color=None,fill=(0.44,0.45,0.46),width=0)
+                if i==1:page.draw_rect(fitz.Rect(72,72,200,200),fill=(0,0,0))
+                if i==2:page.add_freetext_annot(fitz.Rect(72,72,300,150),'Original visible annotation')
+            raw=pdf.tobytes()
+        with patch.dict('os.environ',{'FILINGS_OCR_ENABLED':'0'}):
+            result=extract_document(raw,'background-and-content.pdf')
+        self.assertEqual(result['pages'],3)
+        self.assertEqual(result['background_only_pages'],[1])
+        self.assertEqual(result['pages_without_text'],[2])
+        self.assertIn('Original visible annotation',result['text'])
+        self.assertEqual(result['status'],'needs_ocr')
+
+    def test_visual_page_review_requires_the_exact_document_hash_and_page(self):
+        import fitz
+        from src.company_filings.full_extract import sha256
+        with fitz.open() as pdf:
+            for _ in range(2):pdf.new_page().draw_rect(fitz.Rect(72,72,200,200),fill=(0,0,0))
+            raw=pdf.tobytes()
+        review={'classification':'visual_only','reason':'Reviewed graphic without text'}
+        with patch.dict('src.company_filings.full_extract._REVIEWED_VISUAL_PAGES',{(sha256(raw),2,1):review},clear=True),patch.dict('os.environ',{'FILINGS_OCR_ENABLED':'0'}):
+            result=extract_document(raw,'reviewed.pdf')
+            changed=extract_document(raw+b'\n% Different original bytes\n','changed.pdf')
+        self.assertEqual(result['pages'],2)
+        self.assertEqual([r['page'] for r in result['reviewed_visual_pages']],[1])
+        self.assertEqual(result['pages_without_text'],[2])
+        self.assertEqual(changed['reviewed_visual_pages'],[])
+        self.assertEqual(changed['pages_without_text'],[1,2])
+
+    def test_nonuniform_pdf_graphic_is_not_treated_as_a_blank_page(self):
+        import fitz
+        with fitz.open() as pdf:
+            page=pdf.new_page()
+            page.draw_rect(fitz.Rect(72,72,200,200),fill=(0,0,0))
+            raw=pdf.tobytes()
+        with patch.dict('os.environ',{'FILINGS_OCR_ENABLED':'0'}):
+            result=extract_document(raw,'graphic.pdf')
+        self.assertEqual(result['status'],'needs_ocr')
+        self.assertEqual(result['uniform_blank_pages'],[])
+        self.assertEqual(result['pages_without_text'],[1])
+
+    def test_image_only_exhibit_reads_every_preserved_slide_without_a_page_cap(self):
+        raw=submission([('annual.htm','10-K',b'<html><body><img src="page1.png"><img src="page2.png"></body></html>'),
+                        ('page1.png','GRAPHIC',b'first image original'),('page2.png','GRAPHIC',b'last image original')])
+        def ocr(body):return {'status':'complete','text':body.decode()+' ALL THE WORDS INCLUDING THE END'}
+        with tempfile.TemporaryDirectory() as d,patch('src.company_filings.full_extract.image_text',side_effect=ocr) as mocked:
+            objects=LocalObjects(d);manifest,_=archive_filing(FakeClient(raw),objects,'0000000001',FILING)
+            self.assertTrue(manifest['text_complete']);self.assertEqual(mocked.call_count,2)
+            _,texts=read_filing(objects,'0000000001',ACCESSION)
+            self.assertEqual(len(texts['annual.htm']['images']),2)
+            self.assertIn('last image original ALL THE WORDS INCLUDING THE END',texts['annual.htm']['text'])
+
+    def test_missing_slide_or_failed_ocr_remains_incomplete(self):
+        raw=submission([('annual.htm','10-K',b'<html><img src="absent.png"></html>')])
+        with tempfile.TemporaryDirectory() as d:
+            manifest,_=archive_filing(FakeClient(raw),LocalObjects(d),'0000000001',FILING)
+            self.assertTrue(manifest['raw_complete']);self.assertFalse(manifest['text_complete'])
+
+    def test_html_reader_error_cannot_be_replaced_by_only_its_images(self):
+        raw=submission([('annual.htm','10-K',b'<html><p>Native filing terms must survive.</p><img src="page.png"></html>'),('page.png','GRAPHIC',b'image')])
+        with tempfile.TemporaryDirectory() as d,patch('src.company_filings.full_extract.full_html_text',side_effect=ValueError('reader failure')),patch('src.company_filings.full_extract.image_text') as ocr:
+            manifest,_=archive_filing(FakeClient(raw),LocalObjects(d),'0000000001',FILING)
+            self.assertFalse(manifest['text_complete']);ocr.assert_not_called()
+
+    def test_uuencoded_nonzero_unused_padding_does_not_discard_payload(self):
+        original=b'XY'
+        encoded=b'begin 644 logo.png\n'+binascii.b2a_uu(original).rstrip(b'\n')+b'X\n`\nend\n'
+        with self.assertRaises(binascii.Error):binascii.a2b_uu(encoded.splitlines()[1])
+        raw=submission([('logo.png','GRAPHIC',encoded)])
+        self.assertEqual(file_bytes(raw,split_submission(raw)[0]),original)
+
+    def test_missing_pdf_text_is_not_reported_complete(self):
+        with patch('src.company_filings.full_extract.full_html_text',return_value=''):
+            self.assertEqual(extract_document(b'<html><body>x</body></html>','x.htm')['status'],'extraction_failed')
+
+    def test_missing_primary_fails_instead_of_marking_ok(self):
+        with tempfile.TemporaryDirectory() as d:
+            with self.assertRaisesRegex(ValueError,'Primary document absent'):
+                archive_filing(FakeClient(),LocalObjects(d),'0000000001',dict(FILING,primary='missing.htm'))
+
+    def test_failed_reader_preserves_original_and_resume_uses_it(self):
+        with tempfile.TemporaryDirectory() as d:
+            objects=LocalObjects(d);client=FakeClient()
+            with patch('src.company_filings.full_archive.split_submission',side_effect=ValueError('new format')):
+                with self.assertRaisesRegex(ValueError,'new format'):archive_filing(client,objects,'0000000001',FILING)
+            downloaded=objects.maybe_json(f'company-filings/full-v1/0000000001/{ACCESSION}/download.json')
+            self.assertEqual(gzip.decompress(objects.get(downloaded['source']['key'])),client.raw)
+            self.assertIsNone(objects.maybe_json(f'company-filings/full-v1/0000000001/{ACCESSION}/manifest.json'))
+            manifest,_=archive_filing(client,objects,'0000000001',FILING)
+            self.assertTrue(manifest['text_complete']);self.assertEqual(client.calls,1)
+
+    def test_resume_detects_corrupt_original(self):
+        with tempfile.TemporaryDirectory() as d:
+            objects=LocalObjects(d);manifest,_=archive_filing(FakeClient(),objects,'0000000001',FILING)
+            objects.put(manifest['source']['key'],gzip.compress(b'corrupted'))
+            with self.assertRaisesRegex(ValueError,'checksum'):archive_filing(FakeClient(),objects,'0000000001',FILING)
+
+    def test_every_later_8k_6k_and_quarter_is_selected_without_item_or_count_gate(self):
+        rows=[FILING]
+        for i in range(12):rows.append(dict(FILING,form='6-K',accession=f'foreign{i}',filing_date='2026-03-01'))
+        rows.extend([dict(FILING,form='8-K',accession='other-item',items='8.01',filing_date='2026-04-01'),dict(FILING,form='10-Q',accession='quarter',filing_date='2026-05-01'),dict(FILING,form='10-K/A',accession='amend',filing_date='2026-05-01')])
+        chosen,reason=select_whole_filings(rows)
+        self.assertEqual(reason,'annual');self.assertEqual(len(chosen),16)
+
+    def test_native_form_and_acceptance_are_retained(self):
+        rows=columnar_rows({'form':['40FR12B'],'accessionNumber':[ACCESSION],'filingDate':['2026-02-20'],'reportDate':['2025-12-31'],'acceptanceDateTime':['2026-02-20T12:00:00Z'],'primaryDocument':['x.htm']})
+        self.assertEqual(rows[0]['native_form'],'40FR12B');self.assertEqual(rows[0]['form'],'40-F')
+        self.assertEqual(rows[0]['accepted_at_raw'],'2026-02-20T12:00:00Z')
+
+    def test_recent_amendment_does_not_hide_original_annual_in_submission_history(self):
+        def block(form,accession,date):
+            return {'form':[form],'accessionNumber':[accession],'filingDate':[date],'reportDate':['2025-12-31'],'primaryDocument':['annual.htm']}
+        class HistoryClient:
+            def submissions(self,cik):return {'filings':{'recent':block('10-K/A','amendment','2026-06-01'),'files':[{'name':'history.json'}]}}
+            def submissions_file(self,name):return block('10-K','original','2026-02-20')
+        chosen,_=filing_inventory(HistoryClient(),'1')
+        self.assertEqual([r['accession'] for r in chosen],['original','amendment'])
+
+    def test_company_does_not_hide_a_missing_selected_filing(self):
+        company={'cik':'0000000001','tickers':['A','A-A']}
+        inventory=([FILING,dict(FILING,accession='0000000001-26-000002')],{'expected_accessions':[ACCESSION,'0000000001-26-000002']})
+        class FailingClient(FakeClient):
+            def submission(self,cik,accession):
+                if accession.endswith('000002'):raise IOError('missing file')
+                return super().submission(cik,accession)
+        with tempfile.TemporaryDirectory() as d,patch('src.company_filings.full_archive.filing_inventory',return_value=inventory):
+            result=archive_company(company,FailingClient(),LocalObjects(d))
+            self.assertFalse(result['raw_complete']);self.assertEqual(result['raw_complete_filings'],1)
+            self.assertEqual(len(result['failures']),1);self.assertEqual(result['expected_filings'],2)
+
+    def test_unsafe_keys_and_filenames_rejected(self):
+        with tempfile.TemporaryDirectory() as d:
+            with self.assertRaises(ValueError):LocalObjects(d).put('../escape',b'x')
+        with self.assertRaises(ValueError):split_submission(standard_submission().replace(b'annual.htm',b'../annual.htm'))
+
+    def test_aggregate_rejects_green_counts_with_missing_ticker_or_filing(self):
+        from scripts.verify_company_filings_full import verify
+        universe={'snapshot_date':'2026-10-16','companies':[{'ticker':'A','cik':'0000000001'},{'ticker':'B','cik':'0000000002'}]}
+        report={'shard':0,'shards':1,'universe_snapshot':'2026-10-16','unprocessed_ciks':[],
+            'processed_issuers':1,'expected_issuers':1,'durable':False,'expected_filings':1,'raw_complete_filings':1,
+            'text_complete_filings':1,'files':1,'original_bytes':100,'cached_filings':0,'llm_calls':0,
+            'companies':[{'cik':'0000000001','tickers':['A'],'raw_complete':True,'text_complete':True}]}
+        result=verify(universe,[report],1)
+        self.assertFalse(result['complete']);self.assertEqual(result['missing_tickers'],['B'])
+        report['companies'].append({'cik':'0000000002','tickers':['B'],'raw_complete':False,'text_complete':False})
+        report['processed_issuers']=2;report['expected_issuers']=2
+        result=verify(universe,[report],1);self.assertFalse(result['complete']);self.assertEqual(result['missing_tickers'],[])
+
+    def test_aggregate_checks_actual_accessions_even_if_all_flags_are_green(self):
+        from scripts.verify_company_filings_full import verify
+        company={'cik':'1','tickers':['A'],'raw_complete':True,'text_complete':True,'expected_filings':1,
+                 'raw_complete_filings':1,'text_complete_filings':1,'inventory':{'expected_accessions':['required']},
+                 'filings':[{'accession':'wrong','raw_complete':True,'text_complete':True,'filing_date':'2026-01-01'}]}
+        report={'shard':0,'shards':1,'universe_snapshot':'2026-10-16','unprocessed_ciks':[],
+                'processed_issuers':1,'expected_issuers':1,'durable':False,'expected_filings':1,'raw_complete_filings':1,
+                'text_complete_filings':1,'files':1,'original_bytes':100,'cached_filings':0,'llm_calls':0,'companies':[company]}
+        universe={'snapshot_date':'2026-10-16','companies':[{'ticker':'A','cik':'1'}]}
+        self.assertFalse(verify(universe,[report],1)['complete'])
+        company['filings'][0]['accession']='required'
+        self.assertTrue(verify(universe,[report],1)['complete'])
+        self.assertFalse(verify(universe,[report],1,[])['complete'])
+        self.assertTrue(verify(universe,[report],1,[{'name':'company-filings-full-shard-0','size_in_bytes':100,'expired':False}])['complete'])
+
+    def test_dates_index_keeps_each_filing_and_both_dual_class_tickers(self):
+        import csv
+        from scripts.verify_company_filings_full import write_dates_index
+        company={'cik':'0000000001','tickers':['Z-B','Z-A'],'durable':False,'filings':[
+            {'accession':'second','form':'10-Q','filing_date':'2026-05-01','report_date':'2026-03-31'},
+            {'accession':'first','form':'10-K','filing_date':'2026-02-01','report_date':'2025-12-31','accepted_at_raw':'2026-02-01T13:00:00Z'}]}
+        with tempfile.TemporaryDirectory() as d:
+            path=pathlib.Path(d)/'dates.csv';write_dates_index([company],path)
+            with path.open(newline='') as source:rows=list(csv.DictReader(source))
+            self.assertEqual([r['accession'] for r in rows],['first','second'])
+            self.assertEqual(rows[0]['tickers'],'Z-A;Z-B');self.assertEqual(rows[1]['report_date'],'2026-03-31')
+            self.assertEqual(rows[0]['accepted_at_raw'],'2026-02-01T13:00:00Z')
+
+
+if __name__=='__main__':unittest.main()
