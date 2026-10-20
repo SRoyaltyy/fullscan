@@ -1,0 +1,9 @@
+{"strategy": "updown_v3_preopen", "cutoff_et": "09:25",
+ "sources": [
+  {"name": "daily OHLCV bars (2018-01-02..2026-10-19; /workspace/updown/bars_all.parquet + yfinance top-up 2026-10-06..10-19)", "used_in_model": true, "day_offset": -1, "latest_time_et": "16:00",
+   "note": "Features for day N use bars dated N-1 and earlier only; universe = price >= $5 and top 1500 by 20-day dollar volume, both as of N-1."},
+  {"name": "pre-open Finviz scrape (finviz_preopen_scrape)", "used_in_model": false, "day_offset": 0, "latest_time_et": "09:20",
+   "note": "Only ~32 sessions of history (2026-08-13..) on hand: too short to walk-forward honestly. Excluded; candidate for v3b once history allows."},
+  {"name": "daily general predict / news-judge files", "used_in_model": false, "day_offset": 0, "latest_time_et": "09:20",
+   "note": "Market-level, a few months of history and several missing/stub days and provider changes. Excluded: too short to fit and grade honestly."}
+ ]}
