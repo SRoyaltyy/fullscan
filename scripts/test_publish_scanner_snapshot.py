@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 from scripts.publish_scanner_snapshot import validate, publish, publish_api, ARTIFACTS
+from scripts.publish_scanner_snapshot import artifact_names
 
 
 class SnapshotPublishTests(unittest.TestCase):
@@ -58,6 +59,23 @@ class SnapshotPublishTests(unittest.TestCase):
             root = Path(directory)
             self.fixture(root)
             self.assertEqual(validate(root, 'source')['articles'], 1)
+
+    def test_lazy_profile_assets_are_included_and_their_hashes_are_checked(self):
+        import hashlib
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root)
+            asset = root/'scoring-profiles/example.json.gz'
+            asset.parent.mkdir()
+            asset.write_bytes(b'profile bytes')
+            entry = {'used_for_scoring': True, 'profile_path': 'scoring-profiles/example.json.gz',
+                     'profile_sha256': hashlib.sha256(asset.read_bytes()).hexdigest()}
+            (root/'profiles.json').write_text(json.dumps({'OWN': entry}))
+            self.assertIn(entry['profile_path'], artifact_names(root))
+            validate(root, 'source')
+            asset.write_bytes(b'wrong profile')
+            with self.assertRaisesRegex(ValueError, 'checksum'):
+                validate(root, 'source')
 
     def test_different_commit_and_missing_filing_coverage_fail(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -112,3 +130,4 @@ class SnapshotPublishTests(unittest.TestCase):
 
 if __name__=='__main__':
     unittest.main()
+

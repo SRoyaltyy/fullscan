@@ -22,6 +22,9 @@ def read_index(directory):
     index = json.loads(raw)
     if not index.get('complete') or index.get('schema') != 'filing-relationships-1.0':
         raise ValueError('incomplete or unsupported deep filing profile set')
+    from .filing_relationships import compiler_fingerprint
+    if index.get('compiler_sha256') != compiler_fingerprint():
+        raise ValueError('deep filing profiles were built by a different compiler; rebuild them')
     return root, index, hashlib.sha256(raw).hexdigest()
 
 
@@ -102,6 +105,7 @@ def attach_profiles(board, directory, *, as_of, catalog):
         loaded.append(ticker)
     rebuilt = index_profiles(board.profiles)
     return rebuilt, {'scope': 'deep_filing_relationships', 'complete': True,
+        'compiler_version': index['schema'],
         'source_coverage_complete': True, 'extraction_complete': False,
         'full_business_coverage': False, 'errors': [], 'as_of': as_of,
         'covered_tickers': loaded, 'archive_tickers': len(index['profiles']),

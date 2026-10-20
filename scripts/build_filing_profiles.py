@@ -16,7 +16,7 @@ from pathlib import Path
 from datetime import date
 
 from src.filing_evidence import load_filing_sections
-from src.filing_relationships import VERSION, SPACY_VERSION, MODEL_VERSION, extract_sections, load_parser
+from src.filing_relationships import VERSION, SPACY_VERSION, MODEL_VERSION, extract_sections, load_parser, compiler_fingerprint
 
 
 def encoded(payload):
@@ -51,7 +51,7 @@ def build(objects, out, *, as_of, descriptions=None, nlp=None):
         raise ValueError('no full filing manifests')
     rows = catalog(descriptions)
     nlp = nlp or load_parser()
-    compiler_hash = hashlib.sha256((Path(__file__).parents[1]/'src/filing_relationships.py').read_bytes()).hexdigest()
+    compiler_hash = compiler_fingerprint()
     entries, totals = {}, Counter()
     for position, path in enumerate(companies, 1):
         company = json.loads(path.read_text())

@@ -6,6 +6,8 @@ on:
       - 'src/test_filing_relationships.py'
       - 'src/deep_profile_store.py'
       - 'scripts/build_filing_profiles.py'
+      - 'scripts/audit_filing_profiles.py'
+      - 'requirements-filing-parser.txt'
       - '.github/workflows/deep-filing-profiles.yml'
   push:
     branches: [main]
@@ -15,6 +17,7 @@ on:
       - 'src/deep_profile_store.py'
       - 'scripts/build_filing_profiles.py'
       - 'data/company_filings_full_release.json'
+      - 'requirements-filing-parser.txt'
       - '.github/workflows/deep-filing-profiles.yml'
   workflow_dispatch:
 permissions:
@@ -32,6 +35,11 @@ jobs:
   controls:
     runs-on: ubuntu-latest
     timeout-minutes: 40
+    outputs:
+      shards: ${{ steps.release.outputs.shards }}
+      issuers: ${{ steps.release.outputs.issuers }}
+      filings: ${{ steps.release.outputs.filings }}
+      asof: ${{ steps.release.outputs.asof }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -41,10 +49,26 @@ jobs:
             scripts
             requirements-filing-parser.txt
             excel_bot/data/finviz_with_descriptions.csv
+            data/company_filings_full_release.json
           sparse-checkout-cone-mode: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Resolve every shard in the verified archive release
+        id: release
+        run: |
+          python - <<'PY'
+          import json, os
+          from datetime import datetime, timezone
+          from pathlib import Path
+          release = json.loads(Path('data/company_filings_full_release.json').read_text())
+          assert release['complete']
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as stream:
+              stream.write('shards='+json.dumps([{'shard': s['shard']} for s in release['source_artifacts']])+'\n')
+              stream.write('issuers='+str(release['coverage']['expected_issuers'])+'\n')
+              stream.write('filings='+str(release['coverage']['expected_filings'])+'\n')
+              stream.write('asof='+datetime.now(timezone.utc).date().isoformat()+'\n')
+          PY
       - name: Install prebuilt grammar dependencies from PyPI, no package build scripts
         run: >-
           python -m pip install --only-binary=:all: --index-url https://pypi.org/simple
@@ -78,7 +102,7 @@ jobs:
       max-parallel: 4
       fail-fast: false
       matrix:
-        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        include: ${{ fromJSON(needs.controls.outputs.shards) }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -124,7 +148,7 @@ jobs:
             python scripts/materialize_filing_texts.py --repository "$GITHUB_REPOSITORY" --artifact-id "$SOURCE_ARTIFACT" --out full-text-source
           fi
       - name: Set the explicit filing cutoff
-        run: echo "FILING_AS_OF=$(date -u +%F)" >> "$GITHUB_ENV"
+        run: echo "FILING_AS_OF=${{ needs.controls.outputs.asof }}" >> "$GITHUB_ENV"
       - uses: actions/cache@v4
         with:
           path: compiled-profiles
@@ -142,7 +166,7 @@ jobs:
           path: compiled-profiles/
           retention-days: 90
   combine:
-    needs: compile
+    needs: [controls, compile]
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -162,7 +186,7 @@ jobs:
       - name: Require complete archived issuer and filing coverage
         run: >-
           python -m scripts.build_filing_profiles --merge shards --out filing-profiles
-          --expected-companies 2026 --expected-filings 23635
+          --expected-companies ${{ needs.controls.outputs.issuers }} --expected-filings ${{ needs.controls.outputs.filings }}
       - uses: actions/upload-artifact@v4
         with:
           name: deep-filing-profiles-complete

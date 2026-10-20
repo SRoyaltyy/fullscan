@@ -82,6 +82,7 @@ jobs:
             src
             scripts
             eval
+            requirements-filing-parser.txt
             dashboard/scanner-backtest
             excel_bot/data/finviz_with_descriptions.csv
             data/news_intake/2026-10-17/documents.json
@@ -105,7 +106,8 @@ jobs:
           import hashlib, json, os
           from pathlib import Path
           index = json.loads(Path('filing-profiles/index.json').read_text())
-          expected = hashlib.sha256(Path('src/filing_relationships.py').read_bytes()).hexdigest()
+          from src.filing_relationships import compiler_fingerprint
+          expected = compiler_fingerprint()
           assert index['complete'] and index['compiler_sha256'] == expected, 'Current parser profiles are still compiling; refusing an older set'
           with open(os.environ['GITHUB_ENV'], 'a') as stream:
               stream.write('FILING_AS_OF='+index['as_of']+'\n')

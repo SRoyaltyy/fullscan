@@ -112,11 +112,12 @@ def load_test_articles(path: Path) -> list[dict]:
 def snapshot_metadata(board, input_mode: str = 'headline') -> dict:
     """Bind cached results to source code, lexical resources and compiled inputs."""
     root = Path(__file__).resolve().parents[1]
-    source_names = ('correlation', 'evidence_matcher', 'stock_evidence', 'filing_evidence', 'deep_profile_store',
+    source_names = ('correlation', 'evidence_matcher', 'stock_evidence', 'filing_evidence', 'deep_profile_store', 'filing_relationships',
                     'names', 'aliases', 'linguistics', 'semantic_lookup', 'synonyms',
                     'places', 'spelling', 'profile_cache', 'link_correlation', 'scanner_backtest')
     paths = [root / 'src' / (name + '.py') for name in source_names]
     paths += [root / 'scripts/export_backtest_static.py']
+    paths += [root / 'requirements-filing-parser.txt']
     data = root / 'src/data'
     paths += [data / name for name in ('english_words.txt', 'lemma_lookup.json.gz', 'territories.json')]
     paths += sorted((data / 'senses').glob('*.json*'))

@@ -113,12 +113,14 @@ function renderSnapshot(snapshot) {
   }
   const coverage = snapshot.filing_coverage || {};
   const tickers = coverage.covered_tickers || [];
+  const deep = coverage.scope === "deep_filing_relationships";
   text("snapshot", `${snapshot.compiler_version} · input=${snapshot.input_mode} · snapshot ${snapshot.snapshot_id.slice(0, 16)}` +
     (snapshot.source_revision ? ` · parser commit ${snapshot.source_revision.slice(0, 12)}` : "") +
-    ` · filing identities: ${tickers.length}/${coverage.catalog_tickers || "?"} tickers` +
+    ` · ${deep ? "SEC relationships" : "filing identities"}: ${tickers.length}/${coverage.catalog_tickers || "?"} tickers` +
+    (deep ? ` · ${coverage.filings.toLocaleString()} filings · ${coverage.companies.toLocaleString()} issuers` : "") +
     (coverage.as_of ? ` · cutoff ${coverage.as_of}` : "") +
-    (tickers.length ? ` · ${tickers.join(", ")}` : " · description-only") +
-    " · full filing-business coverage: not established");
+    (tickers.length && tickers.length <= 10 ? ` · ${tickers.join(", ")}` : tickers.length ? "" : " · description-only") +
+    (deep ? " · missing relationships remain unknown" : " · full filing-business coverage: not established"));
 }
 
 // mulberry32: tiny deterministic PRNG so draws are reproducible and
@@ -532,7 +534,9 @@ function renderFilingGraph(container, graph) {
   draw();
 }
 
+let activeProfileRequest = 0;
 async function showTickerProfile(rawTicker) {
+  const request = ++activeProfileRequest;
   const ticker = String(rawTicker || "").trim().toUpperCase();
   if (!ticker) return;
   if (mode !== "live" && !(await loadProfiles())) return;
@@ -543,9 +547,11 @@ async function showTickerProfile(rawTicker) {
     try {
       const response = await fetch(`/api/profile?ticker=${encodeURIComponent(ticker)}`);
       const payload = await response.json();
+      if (request !== activeProfileRequest) return;
       if (!response.ok) throw new Error(payload.error || "profile failed");
       prof = payload;
     } catch (err) {
+      if (request !== activeProfileRequest) return;
       text("profile-title", ticker);
       text("profile-meta", err.message);
       for (const id of ["profile-warnings", "profile-facts", "profile-filing", "profile-links"]) text(id, "");
@@ -556,7 +562,9 @@ async function showTickerProfile(rawTicker) {
     if (prof && prof.profile_path) {
       try {
         prof = await loadPackedProfile(prof.profile_path, prof.profile_sha256);
+        if (request !== activeProfileRequest) return;
       } catch (err) {
+        if (request !== activeProfileRequest) return;
         text("profile-meta", err.message);
         return;
       }
@@ -608,7 +616,7 @@ async function showTickerProfile(rawTicker) {
     appendPaged(group, entries, e => {
       const span = document.createElement("span");
       span.className = "factterm";
-      span.textContent = e.term;
+      span.textContent = e.term || e.text || e.passage;
       if (e.passage) span.title = [e.passage, e.display_truncated ? "display excerpt; full source retained" : "", e.filing_date, e.accession, e.confidence].filter(Boolean).join(" · ");
       return span;
     });
@@ -630,8 +638,10 @@ async function showTickerProfile(rawTicker) {
   if (prof.deep_profile && mode === "static") {
     try {
       const graph = await loadPackedProfile(prof.deep_profile.path, prof.deep_profile.sha256);
+      if (request !== activeProfileRequest) return;
       renderFilingGraph(filingBox, graph);
     } catch (err) {
+      if (request !== activeProfileRequest) return;
       const error = document.createElement("p");
       error.textContent = err.message;
       filingBox.append(error);

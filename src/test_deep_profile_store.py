@@ -29,6 +29,8 @@ class DeepProfileControls(unittest.TestCase):
         entry = {'path': 'issuers/0000000001.json.gz', 'sha256': hashlib.sha256(raw).hexdigest(), 'cik': '0000000001'}
         index = {'schema': graph['schema'], 'complete': True, 'as_of': graph['as_of'],
                  'profiles': {'TEST': entry}, 'totals': {'companies': 1, 'filings': 1, 'documents': 1, 'characters': 43}}
+        from .filing_relationships import compiler_fingerprint
+        index['compiler_sha256'] = compiler_fingerprint()
         (root/'index.json').write_text(json.dumps(index))
         return entry
 

@@ -9,11 +9,23 @@ from __future__ import annotations
 import hashlib
 import re
 from collections import Counter
+from pathlib import Path
 
 VERSION = 'filing-relationships-1.0'
 SPACY_VERSION = '3.8.11'
 MODEL = 'en_core_web_sm'
 MODEL_VERSION = '3.8.0'
+
+
+def compiler_fingerprint():
+    root = Path(__file__).resolve().parents[1]
+    paths = ('src/filing_relationships.py', 'src/filing_evidence.py',
+             'scripts/build_filing_profiles.py', 'requirements-filing-parser.txt')
+    digest = hashlib.sha256()
+    for name in paths:
+        digest.update(name.encode()+b'\0'+(root/name).read_bytes()+b'\0')
+    return digest.hexdigest()
+
 TRIGGERS = re.compile(r'\b(?:suppl\w*|purchas\w*|procur\w*|sourc\w*|import\w*|export\w*|rely|relies|relied|depend\w*|manufactur\w*|produc\w*|provid\w*|offer\w*|develop\w*|market\w*|distribut\w*|sell\w*|sold|buy|buys|bought|compet\w*|partner\w*|collaborat\w*|licens\w*|regulat\w*|subject\w*|compl\w*|approv\w*|authoriz\w*|patent\w*|proprietary|differentiat\w*|tariff\w*|sanction\w*|inflation|interest\s+rates?|foreign\s+exchange|currenc\w*|export\s+controls?|privacy|litigat\w*|lawsuit\w*|shortage\w*|disrupt\w*|restrict\w*|facilit\w*|operat\w*|subsidiar\w*|acquir\w*|divest\w*|customer\w*|client\w*|raw\s+materials?|cost\w*|risk\w*|revenue\w*)\b', re.I)
 MACRO = re.compile(r'\b(?:tariffs?|sanctions?|inflation|interest\s+rates?|foreign\s+exchange|exchange\s+rates?|export\s+controls?|trade\s+restrictions?|supply\s+chain\s+disruptions?|shortages?)\b', re.I)
 LAW = re.compile(r'\b(?:[A-Z][\w-]*[ \t]+){0,10}(?:Act|Regulation|Code|Directive|Law)(?:[ \t]+of[ \t]+\d{4})?\b|\b(?:GDPR|CCPA|CPRA|HIPAA|SOX|ITAR|EAR|FCPA|REACH)\b')
@@ -32,6 +44,7 @@ GENERIC = {'it', 'they', 'them', 'this', 'that', 'these', 'those', 'one', 'other
 
 def load_parser():
     import spacy
+    spacy.util.fix_random_seed(0)
     if spacy.__version__ != SPACY_VERSION:
         raise ValueError('expected spaCy '+SPACY_VERSION)
     nlp = spacy.load(MODEL)

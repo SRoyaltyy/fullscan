@@ -22,6 +22,7 @@ jobs:
             src
             scripts
             eval
+            requirements-filing-parser.txt
             dashboard/scanner-backtest
             excel_bot/data/finviz_with_descriptions.csv
           sparse-checkout-cone-mode: false
