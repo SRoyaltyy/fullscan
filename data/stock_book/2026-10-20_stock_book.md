@@ -1,6 +1,6 @@
 # Stock book — 2026-10-20
 
-_Generated 2026-10-20T11:06:20.076838-04:00_
+_Generated 2026-10-20T14:06:14.660226-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -61,8 +61,8 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 | 8 | **IMAX** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Entertainment +2.5% d1 / +2.0% 1w / -1.5% vs parent | BLOCK BUY — HARD_RED: no company / child-outperform / lookback clock; v2 domain alarm / market=HARD_RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
 | 9 | **BJ** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Discount Stores +1.8% d1 / +0.8% 1w / +0.3% vs parent | BLOCK BUY — HARD_RED: no company / child-outperform / lookback clock; v2 domain alarm / market=HARD_RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
 | 10 | **BB** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — HARD_RED: no company / child-outperform / lookback clock; parent sector RED; v2 domain alarm / market=HARD_RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 11 | **PRMB** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Beverages - Non-Alcoholic +1.1% d1 / +0.3% 1w / -0.2% vs parent | BLOCK BUY — HARD_RED: no company / child-outperform / lookback clock; v2 domain alarm / market=HARD_RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 12 | **TWLO** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — HARD_RED: no company / child-outperform / lookback clock; parent sector RED; v2 domain alarm / market=HARD_RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 11 | **TWLO** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — HARD_RED: no company / child-outperform / lookback clock; parent sector RED; v2 domain alarm / market=HARD_RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 12 | **PRMB** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Beverages - Non-Alcoholic +1.1% d1 / +0.3% 1w / -0.2% vs parent | BLOCK BUY — HARD_RED: no company / child-outperform / lookback clock; v2 domain alarm / market=HARD_RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
 | 13 | **WLY** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Publishing +3.8% d1 / +2.5% 1w / -1.0% vs parent | BLOCK BUY — HARD_RED: no company / child-outperform / lookback clock; v2 domain alarm / market=HARD_RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
 | 14 | **ATHM** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Internet Content & Information +3.0% d1 / +4.2% 1w / +0.8% vs parent | BLOCK BUY — HARD_RED: no company / child-outperform / lookback clock; v2 domain alarm / market=HARD_RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
 | 15 | **COP** | 🔴🟡🟡🟡🟢🟢 | blocked | basket/action net=+7.36; context only, not a company catalyst; Oil & Gas E&P -0.1% d1 / +1.5% 1w / +0.5% vs parent | BLOCK BUY — HARD_RED: no company / child-outperform / lookback clock; v2 domain alarm / market=HARD_RED; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.40); setup=GREEN; flow=GREEN |
