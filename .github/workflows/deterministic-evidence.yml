@@ -20,6 +20,7 @@ jobs:
             /eval/
             /excel_bot/data/finviz_with_descriptions.csv
             /data/news_intake/2026-10-17/documents.json
+            /dashboard/scanner-backtest/
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -33,7 +34,7 @@ jobs:
           path: validation-filing-texts
           merge-multiple: true
       - name: Run legacy, evidence, and strict measurement regressions
-        run: python -I -S scripts/offline_evidence_checks.py --unittest src.test_correlation src.test_eval_harness src.test_evidence_matcher scripts.test_materialize_filing_texts scripts.test_scan_validation_batches
+        run: python -I -S scripts/offline_evidence_checks.py --unittest src.test_correlation src.test_eval_harness src.test_evidence_matcher src.test_scanner_backtest scripts.test_materialize_filing_texts scripts.test_scan_validation_batches
       - name: Export blind real scanner sample
         run: >-
           python scripts/export_validation_inputs.py

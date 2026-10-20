@@ -94,6 +94,7 @@ def load_articles(path: Path, limit: int, *, headline_only: bool = False) -> lis
             "text": text,
             "published_at": row.get("published_at") or row.get("published") or "",
             "extraction_status": row.get("extraction_status") or "unknown",
+            "full_text": bool(row.get("full_text")),
         })
         if limit and len(articles) >= limit:
             break
