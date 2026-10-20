@@ -16,7 +16,7 @@ from .linguistics import GENERIC, STOP, TOKEN, lemma, terms, tokens
 from .places import CITIES, STATES
 from .aliases import _COUNTRIES
 
-COMPILER_VERSION = 'stock-evidence-2.5'
+COMPILER_VERSION = 'stock-evidence-2.6'
 
 _LOCATIONS = {p.lower() for p in list(CITIES)+list(STATES)+list(_COUNTRIES)}
 _LOCATION_RX = re.compile(r'\b(?:'+'|'.join(re.escape(p) for p in sorted(_LOCATIONS,key=len,reverse=True))+r')\b',re.I)
@@ -127,8 +127,8 @@ def split_sections(text: str, initial: str = 'business'):
 
 
 def _sentences(text: str):
-    # Avoid splitting Inc./Corp./U.S. and numeric decimals.
-    return [s.strip() for s in re.split(r'(?<=[.!?])\s+(?=[A-Z][a-z]|We\b|Our\b|The\b)|\n\s*\n', text) if s.strip()]
+    from .linguistics import sentence_parts
+    return sentence_parts(text)
 
 
 def profile_terms(text: str) -> set[str]:
@@ -179,7 +179,7 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
         # candidates. Arbitrary proper names elsewhere remain non-identities.
         from .correlation import _alias
         legal=_alias(out.name).split()
-        intro=re.match(r'^\s*'+r'[\W_]+'.join(map(re.escape,legal))+r'\b',text,re.I) if legal else None
+        intro=re.match(r'^\s*(?:The\s+)?'+r'[\W_]+'.join(map(re.escape,legal))+r'\b',text,re.I) if legal else None
         if intro:
             tail=text[intro.end():intro.end()+180]
             dba=re.match(r'\s*(?:(?:Corp(?:oration)?|Inc(?:orporated)?|Co|Ltd|Limited)\.?[,\s]*)*[,\s]*(?:doing business as|trading as|d/b/a)\s+([A-Z][A-Za-z0-9-]*(?:\s+[A-Z][A-Za-z0-9-]*){0,3})',tail)
@@ -190,15 +190,49 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
             if 3<=len(initials)<=6 and initials.lower() not in BRAND_DENY:
                 ix=_fact(out,'derived_initialism',initials,text[:intro.end()+min(len(tail),120)],source,'legal introduction')
                 out.facts[ix].confidence='source_derived_candidate'
+        owned_segments=set()
+        segment_list=re.search(r'\boperates? through\s+(?:the\s+)?(?:following\s+)?(?:business\s+)?segments?\s*:\s*([^.!?]+)',text,re.I)
+        if initial in ('business','update') and segment_list and (intro or re.search(r'\b(?:we|company|it)\s+operate\w* through\b',text,re.I)):
+            from .names import english_words
+            for item in re.split(r',\s*|\s+and\s+',segment_list.group(1)):
+                name=re.sub(r'\s+(?:Division|Segment)$','',re.sub(r'^and\s+','',item.strip()))
+                if re.fullmatch(r'[A-Z][A-Za-z0-9-]*(?:\s+[A-Z][A-Za-z0-9-]*){0,4}',name):
+                    owned_segments.add(name)
+                    if any(w.lower() not in english_words() and w.lower() not in BRAND_DENY|STOP|GENERIC for w in name.split()):
+                        ix=_fact(out,'operating_brand',name,segment_list.group(),source,'explicit owned segment')
+                        out.facts[ix].confidence='explicit_owned_segment'
         if initial in ('business','update') and (intro or re.search(r'\b(?:we|company)\s+operate\w* through\b',text,re.I)) and re.search(r'\boperates? through\b.{0,160}\bsegments?\b',text,re.I):
             segments=defaultdict(dict)
+            for name in sorted(owned_segments):
+                if len(name.split())>1:
+                    segments[name.split()[0]][name]=segment_list.group()
             for sentence in _sentences(text):
                 for m in re.finditer(r'\b(?:The|the|Its|its)\s+([A-Z][A-Za-z0-9-]*(?:\s+[A-Z][A-Za-z0-9-]*){1,3})\s+segment\b',sentence):
                     segments[m.group(1).split()[0]][m.group(1)]=sentence
-            for brand,owned in segments.items():
-                if len(owned)>=2 and brand.lower() not in BRAND_DENY|STOP|GENERIC:
+            for brand,owned in sorted(segments.items()):
+                if len(owned)>=2 and brand.lower() not in BRAND_DENY|STOP|GENERIC and not locations_in(brand):
+                    common=list(next(iter(owned)).split())
+                    for segment in sorted(owned):
+                        common=common[:next((i for i,(a,b) in enumerate(zip(common,segment.split())) if a!=b),min(len(common),len(segment.split())))]
+                    brand=' '.join(common)
+                    if not brand:continue
                     ix=_fact(out,'operating_brand',brand,' '.join(owned.values()),source,'operating segments')
-                    out.facts[ix].confidence='shared_owned_segment_name'
+                    out.facts[ix].confidence='legal_segment_brand' if brand.lower() in legal else 'shared_owned_segment_name'
+        # Products in a specifically named owned segment inherit ownership;
+        # a generic list elsewhere in a report does not.
+        for segment in sorted(owned_segments):
+            pattern=r'\bThe\s+'+re.escape(segment)+r'\s+segment\s+includes?\s+products?(?:\s+and\s+services?)?\s*,?\s*(?:such as|including)\s+([^.!?]+)'
+            for listing in re.finditer(pattern,text):
+                if RESALE.search(listing.group()):continue
+                for item in re.split(r',\s*|\s+and\s+',listing.group(1)):
+                    value=re.sub(r'^and\s+','',item.strip())
+                    if re.fullmatch(r'[a-z]?[A-Z][A-Za-z0-9-]*(?:\s+[A-Z][A-Za-z0-9-]*){0,3}',value) and any(w not in STOP|GENERIC for w in tokens(value)):
+                        ix=_fact(out,'owned_product',value,listing.group(),source,'explicit owned segment products')
+                        out.facts[ix].confidence='explicit_owned_segment_list'
+        for brand_fact in out.facts:
+            if brand_fact.kind!='operating_brand':continue
+            members={f.text for f in out.facts if f.kind=='owned_product' and f.confidence=='explicit_owned_segment_list' and f.text.startswith(brand_fact.text+' ')}
+            if len(members)>=2:brand_fact.confidence='segment_product_family'
         if initial=='identity_source':
             # A cheap, explicit identity overlay can read every full filing
             # without pretending that its business/exposure model was rebuilt.

@@ -47,7 +47,7 @@ PUBLISHERS = (
 # ICE is left out: it is also Intercontinental Exchange.
 AGENCIES = frozenset("""
 irs dea fbi cia hhs fda cdc nih doj dol hud sba ssa usda atf dhs
-sec va oig uspis usps usda hud
+sec va oig uspis usps usda hud ftc fcc epa
 """.split())
 
 # MD before a person's name is a title. $MD still matches.

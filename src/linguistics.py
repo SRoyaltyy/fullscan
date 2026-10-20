@@ -23,6 +23,7 @@ GENERIC = frozenset('''market financial growth develop development system system
 IRREGULAR = {'children':'child','men':'man','women':'woman','people':'person','indices':'index','analyses':'analysis','crises':'crisis','bought':'buy','sold':'sell','built':'build','won':'win','rose':'rise','fell':'fall','grew':'grow','sought':'seek','made':'make','took':'take','ran':'run','held':'hold','paid':'pay','laid':'lay','lost':'lose','feet':'foot','teeth':'tooth'}
 PROTECTED = frozenset('analysis crisis basis diagnosis diabetes news series species gas goods earnings logistics operations communications economics physics semiconductor aerospace'.split())
 IRREGULAR.update({'said':'say','found':'find','brought':'bring','gave':'give','sent':'send','set':'set','left':'leave','led':'lead'})
+IRREGULAR.update({'is':'be','are':'be','was':'be','were':'be'})
 
 
 @lru_cache(maxsize=1)
@@ -124,6 +125,7 @@ def has_event(text: str) -> bool:
     # Headlines express events through ordinary verbs, not just a small
     # financial trigger list. Identity and materiality are separate gates.
     if EVENT.search(text):return True
+    if re.search(r'\b(?:is|are|was|were)\s+(?:in|under|at)\s+',text,re.I):return True
     words=[m.group() for m in TOKEN.finditer(text)]
     for i,raw in enumerate(words):
         base=lemma(raw)
@@ -147,6 +149,20 @@ class Passage:
     event: bool
 
 
+def sentence_parts(text: str) -> list[str]:
+    """Preserve legal abbreviations and initials inside a sentence."""
+    start=0
+    out=[]
+    for boundary in re.finditer(r'(?<=[.!?])\s+(?=[A-Z0-9])|;\s*|\n\s*\n',text):
+        prefix=text[:boundary.start()]
+        if re.search(r'\b(?:Inc|Corp|Co|Ltd|Dr|Mr|Mrs|Ms|Jr|Sr)\.$|\b(?:[A-Z]\.)+$',prefix):
+            continue
+        out.append(text[start:boundary.start()].strip())
+        start=boundary.end()
+    out.append(text[start:].strip())
+    return [piece for piece in out if piece]
+
+
 def passages(text: str, title: str = '') -> list[Passage]:
     """Keep clauses separate, including a switch of topic after a semicolon."""
     raw = unicodedata.normalize('NFKC', text or '').replace('’', "'")
@@ -157,13 +173,22 @@ def passages(text: str, title: str = '') -> list[Passage]:
     publisher=source_tail.group(1).strip() if source_tail and not EVENT.search(source_tail.group(1)) else ''
     for line_index, line in enumerate(lines):
         line=re.split(r'#{2,}\s*(?:Updated|Topics|Related|Share)\b',line,flags=re.I)[0].strip()
+        # Publisher related-ticker widgets follow the primary headline. Their
+        # exchange-qualified symbols are metadata, not headline participants.
+        widget=re.search(r'\s+[-–—|]\s+([^\n|–—]{1,100})\((?:NASDAQ|NYSE|AMEX)\s*:',line,flags=re.I)
+        if widget:
+            label=widget.group(1).strip().casefold()
+            # Repeating the primary subject is a legitimate headline tag;
+            # introducing a different related issuer is publisher furniture.
+            if not re.search(r'\b'+re.escape(label)+r'\b',line[:widget.start()],re.I):
+                line=line[:widget.start()].strip()
         if publisher:
             line=re.sub(r'(?:\s+-)?\s+'+re.escape(publisher)+r'\s*$','',line,flags=re.I)
         # A publisher tail is recognized by the existing catalog, not by every dash.
         from .names import PUBLISHERS
         for source in PUBLISHERS:
             line = re.sub(r'\s+[-–—|]\s*' + re.escape(source) + r'(?:\.com)?\s*$', '', line, flags=re.I)
-        for piece in re.split(r'(?<=[.!?])\s+(?=[A-Z0-9])|;\s*', line):
+        for piece in sentence_parts(line):
             key = re.sub(r'\W+', ' ', piece).lower().strip()
             if not key or key in seen:
                 continue

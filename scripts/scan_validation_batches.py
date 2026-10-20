@@ -19,7 +19,7 @@ def main():
  p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--descriptions',type=Path,required=True);p.add_argument('--identity-filings',type=Path);p.add_argument('--as-of',default='2026-10-19');a=p.parse_args()
  stocks=load_stocks(a.descriptions,None,None,{})
  names=NameIndex(catalog_from_csv(a.descriptions));profiles=profiles_from_csv(a.descriptions)
- batches=[(a.root/sub,load_articles(a.root/sub/'headline-sample.json',0,headline_only=True)) for sub in ('','fresh','holdout','holdout4','holdout5','holdout6') if (a.root/sub/'headline-sample.json').exists()]
+ batches=[(a.root/sub,load_articles(a.root/sub/'headline-sample.json',0,headline_only=True)) for sub in ('','fresh','holdout','holdout4','holdout5','holdout6','holdout7') if (a.root/sub/'headline-sample.json').exists()]
  for engine in ('evidence','legacy'):
   board=build_board(stocks,engine=engine)
   for directory,articles in batches:write_batch(board,articles,directory/(engine+'-headline-links.json'),engine,names,profiles)
