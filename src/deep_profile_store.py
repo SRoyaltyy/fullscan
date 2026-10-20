@@ -20,9 +20,9 @@ def read_index(directory):
     root = Path(directory).resolve()
     raw = (root/'index.json').read_bytes()
     index = json.loads(raw)
-    if not index.get('complete') or index.get('schema') != 'filing-relationships-1.0':
+    from .filing_relationships import VERSION, compiler_fingerprint
+    if not index.get('complete') or index.get('schema') != VERSION:
         raise ValueError('incomplete or unsupported deep filing profile set')
-    from .filing_relationships import compiler_fingerprint
     if index.get('compiler_sha256') != compiler_fingerprint():
         raise ValueError('deep filing profiles were built by a different compiler; rebuild them')
     return root, index, hashlib.sha256(raw).hexdigest()
@@ -35,7 +35,10 @@ def read_profile(root, entry):
     raw = path.read_bytes()
     if hashlib.sha256(raw).hexdigest() != entry['sha256']:
         raise ValueError('deep filing profile checksum mismatch')
-    return json.loads(gzip.decompress(raw))
+    graph = json.loads(gzip.decompress(raw))
+    from .filing_relationships import validate_paragraph_coverage
+    validate_paragraph_coverage(graph)
+    return graph
 
 
 def latest_claims(graph, as_of):
@@ -107,6 +110,7 @@ def attach_profiles(board, directory, *, as_of, catalog):
     return rebuilt, {'scope': 'deep_filing_relationships', 'complete': True,
         'compiler_version': index['schema'],
         'source_coverage_complete': True, 'extraction_complete': False,
+        'all_paragraphs_classified': True, 'all_prose_dependency_analyzed': True,
         'full_business_coverage': False, 'errors': [], 'as_of': as_of,
         'covered_tickers': loaded, 'archive_tickers': len(index['profiles']),
         'catalog_tickers': len(board.profiles), 'archive_tickers_outside_catalog': missing,

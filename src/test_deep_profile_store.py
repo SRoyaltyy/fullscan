@@ -11,15 +11,21 @@ from .scanner_backtest import profile_view
 
 class DeepProfileControls(unittest.TestCase):
     def graph(self):
+        from .filing_relationships import VERSION, classify_paragraph
+        text = 'We purchase hard drives from Apex Corporation.'
         source = {'id': 'annual', 'source': 'SEC', 'filing_date': '2026-01-01',
-                  'accession': 'annual', 'section': 'Item 1', 'document': 'annual.htm', 'sha256': 'sourcehash'}
+                  'accession': 'annual', 'section': 'Item 1', 'document': 'annual.htm',
+                  'characters': len(text), 'sha256': hashlib.sha256(text.encode()).hexdigest()}
         fact = {'id': 'claim', 'subject': 'TEST', 'predicate': 'buys_from', 'object': 'Apex Corporation',
                 'object_type': 'organization', 'status': 'asserted', 'confidence': 'syntax',
                 'qualifiers': {'inputs': ['hard drives']},
-                'evidence': [{'source_id': 'annual', 'start': 0, 'end': 43,
-                              'quote': 'We purchase hard drives from Apex Corporation.'}]}
-        return {'schema': 'filing-relationships-1.0', 'ticker': 'TEST', 'tickers': ['TEST'],
-                'sources': [source], 'facts': [fact], 'as_of': '2026-10-20', 'coverage': {'facts': 1}}
+                'evidence': [{'source_id': 'annual', 'start': 0, 'end': len(text), 'quote': text}]}
+        paragraph = classify_paragraph(text, source_id='annual', start=0, end=len(text))
+        paragraph.update(relationship_ids=['claim'], extraction_status='relationships_extracted')
+        return {'schema': VERSION, 'ticker': 'TEST', 'tickers': ['TEST'],
+                'sources': [source], 'facts': [fact], 'as_of': '2026-10-20', 'paragraphs': [paragraph],
+                'coverage': {'facts': 1, 'paragraphs': 1, 'all_paragraphs_classified': True,
+                             'all_prose_dependency_analyzed': True, 'prose_characters_analyzed': len(text)}}
 
     def fixture(self, root, graph=None):
         graph = graph or self.graph()

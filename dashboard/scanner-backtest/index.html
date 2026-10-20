@@ -485,7 +485,94 @@ function appendPaged(container, entries, render, pageSize = 100) {
   next();
 }
 
+function renderParagraphs(container, graph) {
+  const paragraphs = graph.paragraphs || [];
+  const title = document.createElement("h3");
+  title.textContent = `Every filing paragraph (${paragraphs.length.toLocaleString()})`;
+  const note = document.createElement("p");
+  const outcomes = Object.entries(graph.coverage.paragraph_outcomes || {}).map(([k,v]) => `${k.replaceAll("_", " ")}: ${v.toLocaleString()}`).join(" · ");
+  note.textContent = `${outcomes}. Review priority is a rule-based aid, not a materiality verdict. Every prose passage is grammar analyzed; unknown topics remain flagged. Paragraph boundaries follow archived text lines, which may differ from the original page layout.`;
+  const query = document.createElement("input");
+  query.value = "";
+  query.placeholder = "Search every paragraph, filing or topic";
+  query.setAttribute("aria-label", "Search all filing paragraphs");
+  function choose(label, values) {
+    const select = document.createElement("select");
+    select.setAttribute("aria-label", label);
+    for (const [value, name] of [["", label], ...values.map(v => [v, v.replaceAll("_", " ")])]) {
+      const option = document.createElement("option");
+      option.value = value; option.textContent = name; select.append(option);
+    }
+    select.value = "";
+    return select;
+  }
+  const topics = choose("All topics", [...new Set(paragraphs.flatMap(p => p.labels))].sort());
+  const status = choose("All outcomes", [...new Set(paragraphs.map(p => p.extraction_status))].sort());
+  const priority = choose("All priorities", ["high", "normal", "review", "administrative"]);
+  const review = choose("All review states", ["requires_review"]);
+  const list = document.createElement("div");
+  const sources = new Map(graph.sources.map(s => [s.id, s]));
+  const facts = new Map(graph.facts.map(f => [f.id, f]));
+  function draw() {
+    list.replaceChildren();
+    const q = query.value.trim().toLowerCase();
+    const selected = paragraphs.filter(p => (!topics.value || p.labels.includes(topics.value)) &&
+      (!status.value || p.extraction_status === status.value) &&
+      (!priority.value || p.importance.priority === priority.value) &&
+      (!review.value || p.review_required) &&
+      (!q || [p.text, ...p.labels, ...Object.values(sources.get(p.source_id) || {})].join(" ").toLowerCase().includes(q)));
+    const count = document.createElement("p");
+    count.textContent = `${selected.length.toLocaleString()} of ${paragraphs.length.toLocaleString()} paragraphs match`;
+    list.append(count);
+    appendPaged(list, selected, p => {
+      const detail = document.createElement("details");
+      const summary = document.createElement("summary");
+      summary.textContent = `[${p.importance.priority}] ${p.labels.join(", ")} · ${p.extraction_status.replaceAll("_", " ")} · ${p.text.trim().slice(0,160)}`;
+      const source = sources.get(p.source_id) || {};
+      const origin = document.createElement("p");
+      origin.textContent = [source.form, source.filing_date, source.accession, source.document, source.section, `characters ${p.start}–${p.end}`].filter(Boolean).join(" · ");
+      const why = document.createElement("p");
+      why.textContent = p.importance.reasons.join(" · ")+(p.review_required ? " · Review required" : "");
+      const text = document.createElement("div");
+      text.className = "article"; text.style = "white-space:pre-wrap";
+      text.textContent = p.text;
+      detail.append(summary, origin, why, text);
+      if (p.classification_evidence.length) {
+        const labels = document.createElement("details");
+        const labelTitle = document.createElement("summary");
+        labelTitle.textContent = "Why these topics matched";
+        const witnesses = document.createElement("p");
+        witnesses.textContent = p.classification_evidence.map(e => `${e.label}: ${e.quote} (${e.start}–${e.end})`).join("; ");
+        labels.append(labelTitle, witnesses); detail.append(labels);
+      }
+      if (p.signals.length) {
+        const quantities = document.createElement("p");
+        quantities.textContent = "Reported quantities (context required): "+p.signals.map(s => s.quote).join("; ");
+        detail.append(quantities);
+      }
+      for (const id of p.relationship_ids) {
+        const f = facts.get(id);
+        if (!f) continue;
+        const claim = document.createElement("p");
+        claim.textContent = `${f.subject} → ${f.predicate.replaceAll("_", " ")} → ${f.object} [${f.status}]`;
+        detail.append(claim);
+      }
+      if (source.url && /^https:\/\/www\.sec\.gov\/Archives\//.test(source.url)) {
+        const link = document.createElement("a");
+        link.href = source.url; link.target = "_blank"; link.rel = "noopener noreferrer";
+        link.textContent = "Read SEC source"; detail.append(link);
+      }
+      return detail;
+    });
+  }
+  query.addEventListener("input", draw);
+  for (const select of [topics, status, priority, review]) select.addEventListener("change", draw);
+  container.append(title, note, query, topics, status, priority, review, list);
+  draw();
+}
+
 function renderFilingGraph(container, graph) {
+  renderParagraphs(container, graph);
   const title = document.createElement("h3");
   title.textContent = `All filing relationships (${graph.facts.length.toLocaleString()})`;
   const note = document.createElement("p");

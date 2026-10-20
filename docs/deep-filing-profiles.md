@@ -12,12 +12,31 @@ without archive coverage stay explicitly description-only.
 `src/filing_relationships.py` uses pinned local spaCy dependency parsing,
 generic issuer/argument rules, and a general agency dictionary. Supplier and
 competitor roles are determined by their clauses, not by a hardcoded role for a
-company name or an embedding cluster. Every prose section is scanned for
-relationship cues; bounded sentence windows control grammar-model memory.
+company name or an embedding cluster. Every prose character receives dependency
+analysis, including passages with no familiar relation cues; bounded windows
+control grammar-model memory. No keyword gate excludes prose from parsing.
 Identical parsing windows can share work, and identical claims can share
 storage, while retaining all dated source references. There is no filing,
 document, text-length, or retained-fact cap. Machine-readable attachments remain
 in the verified source inventory and are not passed off as narrative prose.
+
+Version 1.1 also retains and classifies every paragraph, including headings,
+tables, boilerplate, machine attachments and unresolved topics. The archived
+text does not retain original HTML DOM paragraphs: nonempty text lines define
+review paragraphs, with blank separators retained. These exact spans reconstruct
+every section without gaps or overlap. Original visual paragraph boundaries
+cannot be claimed from this archive representation.
+
+Each paragraph has full text, a hash, source offsets, multiple topic labels,
+exact rule witnesses, reported currency/percentage/scale mentions, a review
+priority with reasons, an extraction outcome and links to every overlapping
+relationship. Quantities are mentions, not normalized financial metrics. Topic
+keywords describe discussion, not an asserted issuer relationship. High priority
+flags materiality/disruption language or selected explicit relationships; normal
+priority is not a judgment that a passage is economically unimportant. Unmatched
+topics, tables/machine data, and business language without a resolved relationship
+are explicitly flagged for review. This is exhaustive accounting of text, not a
+claim that deterministic rules understand every possible financial fact.
 
 The graph records suppliers and purchased inputs, operational dependencies,
 offerings, customers, competitors, partners, licenses, agencies/laws/approvals,
@@ -70,6 +89,8 @@ The page exports the exact scoring profiles as individually compressed,
 hash-verified assets and also exposes every original graph claim and source.
 UI pagination changes only how many records are rendered at once. It does not
 discard facts, shorten stored quotes or restrict the full downloadable profile.
+Every paragraph can be searched and filtered by topic, outcome, priority and
+review status. The complete paragraph text and its source remain available.
 
 The publication workflow waits for a complete compatible main-branch graph
 artifact, scores the full fixed headline intake, retains and publishes all page
@@ -86,6 +107,9 @@ repeatability, complete text windows, hashes, date cutoffs, contradictory claims
 and uncapped profile export. The real-file audit reconstructs every supporting
 quote from the verified archived source using its content hash; repeated SEC
 headings cannot select a different section by accident.
+Build, shard merge and publication readers also reject paragraph gaps, altered
+text or witnesses, incomplete grammar coverage, and missing relationship links.
+The real-source audit reconstructs every paragraph against the verified archive.
 
 These controls are not a precision/recall certification. A real-file audit that
 quotes match their sources does not prove that every extracted relationship is

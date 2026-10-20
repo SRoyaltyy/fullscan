@@ -16,7 +16,7 @@ from pathlib import Path
 from datetime import date
 
 from src.filing_evidence import load_filing_sections
-from src.filing_relationships import VERSION, SPACY_VERSION, MODEL_VERSION, extract_sections, load_parser, compiler_fingerprint
+from src.filing_relationships import VERSION, SPACY_VERSION, MODEL_VERSION, extract_sections, load_parser, compiler_fingerprint, validate_paragraph_coverage
 
 
 def encoded(payload):
@@ -77,14 +77,19 @@ def build(objects, out, *, as_of, descriptions=None, nlp=None):
             profile.update(cik=path.parent.name, tickers=tickers, source_fingerprint=fingerprint, compiler_sha256=compiler_hash,
                            as_of=as_of, archive_coverage=report)
             atomic_json(target, profile, compressed=True)
+        validate_paragraph_coverage(profile)
         digest = hashlib.sha256(target.read_bytes()).hexdigest()
         for alias in tickers:
             entries[alias] = {'path': target.relative_to(out).as_posix(), 'sha256': digest,
-                             'cik': path.parent.name, 'facts': len(profile['facts']), 'name': name}
+                             'cik': path.parent.name, 'facts': len(profile['facts']),
+                             'paragraphs': len(profile['paragraphs']), 'name': name}
         totals.update({key: report[key] for key in ('companies', 'filings', 'documents', 'characters')})
         totals['facts'] += len(profile['facts'])
+        totals['paragraphs'] += len(profile['paragraphs'])
+        totals['paragraphs_requiring_review'] += profile['coverage']['paragraphs_requiring_review']
         print(json.dumps({'issuer': position, 'of': len(companies), 'tickers': tickers,
-                          'filings': report['filings'], 'facts': len(profile['facts'])}), flush=True)
+                          'filings': report['filings'], 'facts': len(profile['facts']),
+                          'paragraphs': len(profile['paragraphs']), 'paragraph_outcomes': profile['coverage']['paragraph_outcomes']}), flush=True)
         # A checkpoint remains useful if the next issuer fails. Never mark an
         # incomplete shard complete, and never publish it as full coverage.
         atomic_json(out/'index.json', {'schema': VERSION, 'as_of': as_of, 'complete': False,
@@ -126,6 +131,7 @@ def merge(shards, out, *, expected_companies=None, expected_filings=None):
             src = path.parent/entry['path']
             if hashlib.sha256(src.read_bytes()).hexdigest() != entry['sha256']:
                 raise ValueError('profile hash mismatch')
+            validate_paragraph_coverage(json.loads(gzip.decompress(src.read_bytes())))
             dst = out/entry['path']
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(src, dst)

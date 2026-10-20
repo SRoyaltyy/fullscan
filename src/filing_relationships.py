@@ -11,7 +11,7 @@ import re
 from collections import Counter
 from pathlib import Path
 
-VERSION = 'filing-relationships-1.0'
+VERSION = 'filing-relationships-1.1'
 SPACY_VERSION = '3.8.11'
 MODEL = 'en_core_web_sm'
 MODEL_VERSION = '3.8.0'
@@ -310,20 +310,166 @@ def extract_doc(doc, *, ticker, name, source, offset=0):
     return facts
 
 
+# Topic matches describe what a paragraph discusses, never assert a relationship.
+# Keep the exact matching spans so a reviewer can see why a label was assigned.
+TOPICS = {key: re.compile(r'\b(?:'+pattern+r')\b', re.I) for key, pattern in {
+    'products_services': r'products?|services?|software|platforms?|solutions?|offerings?|manufactur\w*|produc\w*',
+    'supply_chain_inputs': r'suppli\w*|supply\s+chain|purchas\w*|procur\w*|raw\s+materials?|components?|inventory|inventories|outsourc\w*',
+    'operating_dependencies': r'depend\w*|rely|relies|relied|reliance|critical|essential',
+    'customers_demand': r'customers?|clients?|consumers?|demand|backlog|subscribers?|orders?',
+    'competition': r'compet\w*|market\s+share|pricing\s+pressure|rivals?',
+    'partners_licenses': r'partners?|partnerships?|collaborat\w*|licens\w*|joint\s+ventures?',
+    'regulation_legal': r'regulat\w*|laws?|legal|compliance|comply|litigat\w*|lawsuits?|approvals?|permits?|GDPR|FDA|FTC|SEC|sanctions?|export\s+controls?',
+    'macro_policy': r'tariffs?|sanctions?|inflation|interest\s+rates?|foreign\s+exchange|exchange\s+rates?|export\s+controls?|trade\s+restrictions?|recession|geopolit\w*',
+    'financial_performance': r'revenue\w*|sales|costs?|expenses?|profits?|loss(?:es)?|earnings|margins?|income|impairment|EBITDA|cash\s+flows?',
+    'liquidity_capital': r'liquidity|debt|borrow\w*|credit\s+facilit\w*|covenants?|dividends?|repurchas\w*|capital\s+expenditures?|cash\s+equivalents?|financing|securities|shares?|dilution',
+    'ownership_transactions': r'subsidiar\w*|acqui\w*|merger\w*|divest\w*|dispos\w*|beneficial\s+owner\w*|equity\s+interest\w*',
+    'people_governance': r'employees?|workforce|personnel|executives?|directors?|board\s+of|compensation|governance|audit\s+committee|internal\s+controls?',
+    'geography_facilities': r'geograph\w*|countries|country|regions?|facilit\w*|factories|factory|warehouses?|properties|headquarters|locations?',
+    'technology_ip': r'patents?|proprietary|intellectual\s+property|research|development|technolog\w*|trademarks?|copyright\w*',
+    'risks_uncertainty': r'risks?|uncertain\w*|disrupt\w*|shortages?|cyber\w*|breach\w*|adverse\w*|materially|going\s+concern|default\w*',
+    'accounting_tax': r'accounting|GAAP|IFRS|tax\w*|depreciation|amortization|fair\s+value|recognition|consolidated\s+statements?',
+    'filing_administration': r'commission\s+file|registrant|form\s+(?:10-K|10-Q|8-K|20-F|6-K)|table\s+of\s+contents|signatures?|exhibit\s+index|check\s+mark',
+    'forward_looking': r'forward[- ]looking|safe\s+harbor|actual\s+results\s+may|undue\s+reliance',
+}.items()}
+MATERIAL = re.compile(r'\b(?:material(?:ly)?|significant(?:ly)?|substantial(?:ly)?|sole[- ]source|single[- ]source|concentration|going\s+concern|default|bankruptcy|restatement|impairment|termination|shortage|breach)\b', re.I)
+QUANTITY = re.compile(r'(?<!\w)(?:[$€£¥]\s*-?\d[\d,]*(?:\.\d+)?(?:\s*(?:billion|million|thousand|trillion))?|\d[\d,]*(?:\.\d+)?\s*(?:%|percent\b|billion\b|million\b|thousand\b))', re.I)
+
+
+def paragraph_spans(raw):
+    """Archive text blocks separated by line breaks; exact, lossless partition.
+
+    The archive does not retain HTML DOM paragraph IDs. A nonempty text line is
+    therefore a review paragraph; blank separators belong to its predecessor.
+    Leading whitespace belongs to the first block. No length or count limit.
+    """
+    starts = [m.start() for m in re.finditer(r'(?m)^[^\S\r\n]*[^\s]', raw)]
+    if not starts:
+        return [(0, len(raw))] if raw else []
+    starts[0] = 0
+    return list(zip(starts, starts[1:]+[len(raw)]))
+
+
+def classify_paragraph(text, *, source_id, start, end, machine=False):
+    paragraph = {'id': hashlib.sha256(f'{source_id}:{start}:{end}'.encode()).hexdigest(),
+                 'source_id': source_id, 'start': start, 'end': end, 'text': text,
+                 'sha256': hashlib.sha256(text.encode()).hexdigest(), 'relationship_ids': []}
+    clean = text.strip()
+    if machine:
+        kind = 'machine_data'
+    elif not clean:
+        kind = 'whitespace'
+    elif len(clean) < 180 and (re.match(r'^(?:PART\s+[IVX]+|ITEM\s+\d+[A-Z]?)\b', clean, re.I)
+                              or (len(clean.split()) <= 14 and clean.isupper())):
+        kind = 'heading'
+    elif clean and sum(c.isdigit() for c in clean)/len(clean) > .35:
+        kind = 'numeric_or_table'
+    else:
+        kind = 'prose'
+    matches = []
+    if not machine:
+        for label, rule in TOPICS.items():
+            matches.extend({'label': label, 'quote': m.group(), 'start': start+m.start(),
+                            'end': start+m.end(), 'rule': 'topic_keyword_v1'} for m in rule.finditer(text))
+    labels = sorted({m['label'] for m in matches}) or [kind if kind != 'prose' else 'unresolved_topic']
+    signals = [] if machine else [
+        {'kind': 'reported_quantity', 'quote': m.group(), 'start': start+m.start(), 'end': start+m.end()}
+        for m in QUANTITY.finditer(text)]
+    material = [] if machine else [m.group() for m in MATERIAL.finditer(text)]
+    reasons = []
+    if material:
+        reasons.append('Materiality or disruption language: '+', '.join(sorted(set(material))))
+    if signals:
+        reasons.append('Contains reported quantities; units and economic meaning require context')
+    priority = 'high' if material else 'review' if 'unresolved_topic' in labels else 'normal'
+    if kind in ('machine_data', 'numeric_or_table', 'whitespace', 'heading'):
+        priority = 'review' if kind in ('machine_data', 'numeric_or_table') else 'administrative'
+        reasons.append('Structural classification: '+kind)
+    if not reasons:
+        reasons.append('Topic rules matched' if matches else 'No topic rule matched; human review required')
+    paragraph.update(kind=kind, labels=labels, classification_evidence=matches, signals=signals,
+                     importance={'priority': priority, 'reasons': reasons, 'method': 'review_priority_rules_v1'},
+                     analysis='machine_inventory' if machine else 'full_prose_dependency_parse',
+                     extraction_status='non_narrative' if kind in ('machine_data', 'whitespace', 'heading')
+                     else 'no_explicit_relationship' if matches else 'unresolved',
+                     review_required=kind in ('machine_data', 'numeric_or_table') or not matches)
+    return paragraph
+
+
+def validate_paragraph_coverage(graph, texts=None):
+    """Fail closed on missing text, labels, source spans or relationship links."""
+    from collections import defaultdict
+    by_source = defaultdict(list)
+    facts = {f['id']: f for f in graph['facts']}
+    ids = set()
+    for paragraph in graph.get('paragraphs', []):
+        if paragraph['id'] in ids:
+            raise ValueError('duplicate paragraph id')
+        ids.add(paragraph['id'])
+        by_source[paragraph['source_id']].append(paragraph)
+    sources = {s['id']: s for s in graph['sources']}
+    if set(by_source)-set(sources):
+        raise ValueError('paragraph has unknown source')
+    reconstructed = {}
+    for source_id, source in sources.items():
+        cursor, pieces = 0, []
+        for p in sorted(by_source[source_id], key=lambda p: p['start']):
+            if p['start'] != cursor or p['end'] <= cursor or p['end']-p['start'] != len(p['text']):
+                raise ValueError('paragraph coverage gap, overlap or invalid span')
+            if hashlib.sha256(p['text'].encode()).hexdigest() != p['sha256']:
+                raise ValueError('paragraph checksum mismatch')
+            if not p['labels'] or not p['importance']['reasons'] or not p['extraction_status']:
+                raise ValueError('paragraph classification is missing')
+            for item in p['classification_evidence']+p['signals']:
+                if not (p['start'] <= item['start'] < item['end'] <= p['end']) or p['text'][item['start']-p['start']:item['end']-p['start']] != item['quote']:
+                    raise ValueError('paragraph classification witness mismatch')
+            for fact_id in p['relationship_ids']:
+                if fact_id not in facts or not any(e['source_id'] == source_id and e['start'] < p['end'] and e['end'] > p['start'] for e in facts[fact_id]['evidence']):
+                    raise ValueError('paragraph relationship link mismatch')
+            pieces.append(p['text'])
+            cursor = p['end']
+        text = ''.join(pieces)
+        reconstructed[source_id] = text
+        if cursor != source['characters'] or hashlib.sha256(text.encode()).hexdigest() != source['sha256']:
+            raise ValueError('paragraphs do not reconstruct the full source')
+        if texts is not None and text != texts[source_id]:
+            raise ValueError('paragraphs do not match verified archive text')
+    # Every fact span must be reachable from each overlapping paragraph.
+    for fact_id, fact in facts.items():
+        for ev in fact['evidence']:
+            if ev['source_id'] not in reconstructed or not (0 <= ev['start'] < ev['end'] <= len(reconstructed[ev['source_id']])) or reconstructed[ev['source_id']][ev['start']:ev['end']] != ev['quote']:
+                raise ValueError('relationship quote does not match retained paragraphs')
+            covered = [p for p in by_source[ev['source_id']] if ev['start'] < p['end'] and ev['end'] > p['start']]
+            if not covered or any(fact_id not in p['relationship_ids'] for p in covered):
+                raise ValueError('relationship is missing from paragraph review')
+    coverage = graph['coverage']
+    if not coverage.get('all_paragraphs_classified') or coverage.get('paragraphs') != len(ids):
+        raise ValueError('paragraph coverage is incomplete')
+    prose = sum(s['characters'] for s in sources.values() if s.get('kind') != 'machine_data')
+    if not coverage.get('all_prose_dependency_analyzed') or coverage.get('prose_characters_analyzed', 0) != prose:
+        raise ValueError('paragraph prose analysis is incomplete')
+    return len(ids)
+
+
 def extract_sections(sections, *, ticker, name, nlp):
-    sources, facts, stats = [], {}, Counter()
-    from spacy.pipeline import Sentencizer
-    segment = Sentencizer()
+    from bisect import bisect_right
+    sources, paragraphs, facts, stats = [], [], {}, Counter()
     parse_cache = {}
     for section in sections:
         raw = str(section.get('text') or '')
         metadata = {k: section.get(k, '') for k in ('source', 'form', 'filing_date', 'accepted_at', 'report_date', 'accession', 'section', 'document', 'kind', 'url')}
         metadata['sha256'] = hashlib.sha256(raw.encode()).hexdigest()
         metadata['characters'] = len(raw)
+        metadata['section_ordinal'] = len(sources)
         metadata['id'] = hashlib.sha256(repr(sorted(metadata.items())).encode()).hexdigest()
         sources.append(metadata)
         stats['source_sections'] += 1
         stats['characters_read'] += len(raw)
+        source_paragraphs = [classify_paragraph(raw[start:end], source_id=metadata['id'],
+            start=start, end=end, machine=section.get('kind') == 'machine_data')
+            for start, end in paragraph_spans(raw)]
+        paragraphs.extend(source_paragraphs)
+        starts = [p['start'] for p in source_paragraphs]
         if section.get('kind') == 'machine_data':
             stats['machine_characters'] += len(raw)
             continue
@@ -333,38 +479,22 @@ def extract_sections(sections, *, ticker, name, nlp):
             stats['windows_scanned'] += 1
             if not TRIGGERS.search(text):
                 stats['windows_without_relation_cues'] += 1
-                continue
-            # Fast tokenization and sentence boundaries scan the whole window.
-            # The expensive grammar model sees cue-bearing sentences with one
-            # preceding sentence for context; no source text is discarded.
-            sentences = list(segment(nlp.make_doc(text)).sents)
-            selected = set()
-            for i, sentence in enumerate(sentences):
-                if TRIGGERS.search(sentence.text):
-                    selected.add(i)
-                    if i:
-                        selected.add(i-1)
-            runs = []
-            for i in sorted(selected):
-                if runs and i == runs[-1][-1] + 1:
-                    runs[-1].append(i)
-                else:
-                    runs.append([i])
-            for run in runs:
-                start, end = sentences[run[0]].start_char, sentences[run[-1]].end_char
-                value = text[start:end]
-                work.append((value, offset+start))
+            # Every prose character reaches the grammar model, including unknown
+            # topics. Identical windows reuse their exact previous analysis.
+            work.append((text, offset))
         pending = []
         extracted = []
         for value, offset in work:
             key = (hashlib.sha256(value.encode()).hexdigest(), section.get('kind'))
             if key in parse_cache:
                 stats['reused_dependency_windows'] += 1
+                stats['prose_characters_analyzed'] += len(value)
                 extracted.extend((f, offset) for f in parse_cache[key])
             else:
                 pending.append((value, (offset, key)))
         for doc, (offset, key) in nlp.pipe(pending, as_tuples=True, batch_size=8):
             stats['prose_characters_dependency_parsed'] += len(doc.text)
+            stats['prose_characters_analyzed'] += len(doc.text)
             records = extract_doc(doc, ticker=ticker, name=name, source=metadata, offset=0)
             parse_cache[key] = records
             extracted.extend((f, offset) for f in records)
@@ -382,12 +512,39 @@ def extract_sections(sections, *, ticker, name, nlp):
                 facts[key] = {**fact, 'id': key, 'evidence': []}
             if evidence not in facts[key]['evidence']:
                 facts[key]['evidence'].append(evidence)
+            i = max(0, bisect_right(starts, evidence['start'])-1)
+            while i < len(source_paragraphs) and source_paragraphs[i]['start'] < evidence['end']:
+                paragraph = source_paragraphs[i]
+                if key not in paragraph['relationship_ids']:
+                    paragraph['relationship_ids'].append(key)
+                paragraph['extraction_status'] = 'relationships_extracted'
+                i += 1
     ordered = [facts[key] for key in sorted(facts)]
-    return {'schema': VERSION, 'ticker': ticker, 'name': name,
+    if stats['prose_characters_analyzed'] != stats['characters_read']-stats['machine_characters']:
+        raise ValueError('grammar parser did not analyze all prose')
+    for p in paragraphs:
+        if p['relationship_ids']:
+            p['importance']['reasons'].append('Contains explicit extracted relationships')
+            if any(facts[k]['predicate'] in ('buys_from', 'depends_on', 'competes_with', 'exposed_to', 'acquires', 'divests') for k in p['relationship_ids']):
+                p['importance']['priority'] = 'high'
+        elif p['kind'] == 'prose' and TRIGGERS.search(p['text']):
+            p['extraction_status'] = 'unresolved'
+            p['review_required'] = True
+            p['importance']['reasons'].append('Relationship or business language found, but no explicit relationship resolved')
+    graph = {'schema': VERSION, 'ticker': ticker, 'name': name,
             'parser': {'spacy': SPACY_VERSION, 'model': MODEL, 'model_version': MODEL_VERSION},
-            'facts': ordered, 'sources': sources,
+            'facts': ordered, 'sources': sources, 'paragraphs': paragraphs,
             'coverage': {**dict(stats), 'all_source_sections_read': True,
-                         'all_prose_scanned': True, 'extraction_complete': False,
-                         'strategy': 'all-prose cue scan, bounded dependency windows; explicit rules, unknown relations may remain',
+                         'all_prose_scanned': True, 'all_prose_dependency_analyzed': True,
+                         'all_paragraphs_classified': True, 'paragraphs': len(paragraphs),
+                         'paragraph_labels': dict(Counter(label for p in paragraphs for label in p['labels'])),
+                         'paragraph_outcomes': dict(Counter(p['extraction_status'] for p in paragraphs)),
+                         'paragraph_priorities': dict(Counter(p['importance']['priority'] for p in paragraphs)),
+                         'paragraphs_requiring_review': sum(p['review_required'] for p in paragraphs),
+                         'paragraph_boundary_policy': 'archive nonempty text lines; blank separators retained; original DOM boundaries unavailable',
+                         'extraction_complete': False,
+                         'strategy': 'every prose window dependency-parsed; every source block classified and retained; unknown relations may remain',
                          'facts': len(ordered), 'predicates': dict(Counter(f['predicate'] for f in ordered)),
                          'statuses': dict(Counter(f['status'] for f in ordered))}}
+    validate_paragraph_coverage(graph)
+    return graph
