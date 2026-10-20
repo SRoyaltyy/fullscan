@@ -188,3 +188,23 @@ with this complete pinned archive, or with the wider5,961-ticker Finviz universe
 A selective verified text reader and two full-issuer ingestion probes are added
 to make the complete text available to preprocessing without transferring every
 binary original. Full-source relevance accuracy remains unmeasured.
+## Candidate2.3 fourth test and candidate2.4
+
+The fourth unseen sample failed:123/154 exact sets (79.9%),34 true links,
+21 false links and21 missed links; precision/recall61.8%.46 unresolved cases
+were excluded. Legacy scored102/154,0TP29FP55FN on identical inputs. The
+novel-story subset was105/126 exact,21TP17FP12FN. Labels are provisional,
+assistant-authored, and were frozen before inspecting predictions.
+
+All four samples now serve as development controls. Candidate2.4 preserves
+whole product identities, separates distributed brands from ownership, and
+requires better identity proof for generic name fragments. It also repairs
+source-domain names, bound tickers, dictionary predicates and attribution
+roles.168 offline tests pass; nine synthetic corpus cases record these bugs.
+Seed19023 excludes800 previous primary headlines and remains unseen at this
+freeze. No source/output from it has been inspected, and no90% claim is made.
+
+Verified source probes read25 complete filings,544 views and29,148,431 text
+characters across LUV/SPCX with no reader errors. This validates two issuers
+only; full-universe historical relevance remains unmeasured.
+

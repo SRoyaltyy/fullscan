@@ -30,6 +30,79 @@ EXTRA = [
 
 
 class EvidenceTests(unittest.TestCase):
+ def test_broker_price_target_attribution_keeps_only_target(self):
+  b=build_board([{'ticker':'B','name':'Zedbank Corp','industry':'Banking'}, {'ticker':'T','name':'Vexgen Biotech Inc','industry':'Biotech'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Zedbank raises Vexgen Biotech price target on new data.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'T'})
+
+ def test_listing_notice_is_not_an_exchange_operator_event(self):
+  b=build_board([{'ticker':'NDAQ','name':'Nasdaq Inc','industry':'Exchange'}, {'ticker':'TEST','name':'Vexgen Inc','industry':'Biotech'}],engine='evidence')
+  for text,want in [('Vexgen receives Nasdaq Minimum Bid Price Deficiency Notice.',{'TEST'}),('Nasdaq reports record quarterly revenue.',{'NDAQ'})]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},want)
+
+ def test_source_initialism_can_report_its_own_profit_without_jargon(self):
+  b=build_board([{'ticker':'N','name':'Northern Semiconductor Manufacturing ADR','industry':'Chips','description':'Northern Semiconductor Manufacturing Co., Ltd. manufactures semiconductor chips.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'NSMC posts record profit for a sixth quarter.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'N'})
+
+ def test_fund_research_method_is_not_operating_material_exposure(self):
+  row={'ticker':'FUND','name':'Example Equity Fund','industry':'Fund','description':'It employs fundamental analysis focusing on overall growth prospects, labor costs, and raw material costs to create its portfolio.'}
+  p=build_profile(row,Catalog([row]))
+  self.assertTrue(any(f.kind=='investment_methodology' for f in p.facts))
+  self.assertFalse(any(f.kind=='material_exposure' for f in p.facts))
+
+ def test_distinctive_segment_brand_has_corporate_subject_evidence(self):
+  b=build_board([{'ticker':'P','name':'Example Holdings Inc','industry':'Software','description':'Example Holdings Inc operates through two segments. The Zedgle Services segment provides search tools. The Zedgle Cloud segment provides infrastructure.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Zedgle breaks a quantum computing bottleneck.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'P'})
+
+ def test_product_list_preserves_compounds_and_rejects_categories(self):
+  rows=[{'ticker':'SENSOR','name':'Vexcom Inc','industry':'Devices','description':'Its products include Vexcom G6, Vexcom Share, and Vexcom Hold.'},
+        {'ticker':'SOFT','name':'Example Software Inc','industry':'Software','description':'Its products include Artificial Intelligence (AI) and Machine Learning (ML) software.'},
+        {'ticker':'NET','name':'Example Networks Inc','industry':'Networking','description':'Its products include the following categories: Collaboration, Networking, and Security.'}]
+  b=build_board(rows,engine='evidence')
+  for text,want in [('Share prices rise after earnings.',set()),('Hold investor conference next week.',set()),('Artificial learning software launches.',set()),('Collaboration expands in schools.',set()),('Vexcom Share launches a new feature.',{'SENSOR'})]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},want,text)
+  for p in b.evidence_board.profiles.values():
+   self.assertFalse(any(f.kind=='owned_product' and f.text in {'Share','Hold','Artificial','Learning','Collaboration'} for f in p.facts))
+
+ def test_retail_brands_are_not_owned_products(self):
+  rows=[{'ticker':'SHOP','name':'Example Retail Inc','industry':'Retail','description':'It sells brands including ZedCola and ZedSnacks.'},
+        {'ticker':'DRUG','name':'Example Pharma Inc','industry':'Biotech','description':'We market VOXZOGO (vosoritide) for genetic disorders.'}]
+  b=build_board(rows,engine='evidence')
+  for text,want in [('ZedCola announces a new beverage deal.',set()),('FDA approves VOXZOGO.',{'DRUG'})]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},want)
+
+ def test_common_first_name_fragments_need_full_name_or_bound_ticker(self):
+  rows=[{'ticker':'STOCK','name':'Stock Yards Bancorp Inc','industry':'Banking'},
+        {'ticker':'OPEN','name':'Open Text Corp','industry':'Software'},
+        {'ticker':'TRUMP','name':'Trump Media Corp','industry':'Media'},
+        {'ticker':'FERMI','name':'Fermi Inc','industry':'Energy'}]
+  b=build_board(rows,engine='evidence')
+  for text,want in [('United Rentals Stock earnings rise.',set()),('Open learning expands access.',set()),('President Trump announces tariffs.',set()),('Fermi (FERMI) shares rise.',{'FERMI'}),('Stock Yards Bancorp reports earnings.',{'STOCK'})]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},want,text)
+
+ def test_generic_legal_phrase_needs_corporate_usage(self):
+  b=build_board([{'ticker':'QC','name':'Quantum Computing Inc','industry':'Computers'}],engine='evidence')
+  for text,want in [('Scientists discuss quantum computing at a new conference.',set()),('Quantum Computing stock rises on earnings.',{'QC'})]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},want)
+
+ def test_legal_domain_and_hyphen_are_exact_source_identities(self):
+  b=build_board([{'ticker':'SHOP','name':'Zedshop.com Inc','industry':'Retail'}, {'ticker':'COLA','name':'Zed Cola Co','industry':'Beverages'}],engine='evidence')
+  for text,want in [('Zedshop launches a new store.',{'SHOP'}),('Zed-Cola announces a new deal.',{'COLA'})]:
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},want)
+
+ def test_lowercase_of_complement_does_not_extend_company_name(self):
+  b=build_board([{'ticker':'LIVE','name':'Live Nation Entertainment Inc','industry':'Entertainment'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Court clears Live Nation of negligence charges.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'LIVE'})
+
  @classmethod
  def setUpClass(cls):
   cls.board=build_board(STOCKS+EXTRA)

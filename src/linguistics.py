@@ -22,6 +22,7 @@ STOP = frozenset('''a an the and or but of to in on at by for from with as is ar
 GENERIC = frozenset('''market financial growth develop development system systems technology technologies solution solutions industry industries management operations investment investor investors report reports announce announced announcement update agreement event trial drug readout study studies research commercial customer customers supplier suppliers platform global international portfolio information leading result results support national american canadian british federal state north south east west united states administration secretary administrator'''.split())
 IRREGULAR = {'children':'child','men':'man','women':'woman','people':'person','indices':'index','analyses':'analysis','crises':'crisis','bought':'buy','sold':'sell','built':'build','won':'win','rose':'rise','fell':'fall','grew':'grow','sought':'seek','made':'make','took':'take','ran':'run','held':'hold','paid':'pay','laid':'lay','lost':'lose','feet':'foot','teeth':'tooth'}
 PROTECTED = frozenset('analysis crisis basis diagnosis diabetes news series species gas goods earnings logistics operations communications economics physics semiconductor aerospace'.split())
+IRREGULAR.update({'said':'say','found':'find','brought':'bring','gave':'give','sent':'send','set':'set','left':'leave','led':'lead'})
 
 
 @lru_cache(maxsize=1)

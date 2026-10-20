@@ -39,6 +39,8 @@ jobs:
           python -I -S scripts/offline_evidence_checks.py --engine legacy --cases eval/cases.jsonl --descriptions excel_bot/data/finviz_with_descriptions.csv --out validation-inputs/legacy-frozen.json --changelog "Existing public corpus and Finviz-only equal inputs; isolated Python with sockets denied"
           python -I -S scripts/offline_evidence_checks.py --engine evidence --cases eval/cases.jsonl --descriptions excel_bot/data/finviz_with_descriptions.csv --out validation-inputs/evidence-frozen.json --changelog "Existing public corpus and Finviz-only equal inputs; isolated Python with sockets denied"
           python scripts/summarize_evidence_checks.py validation-inputs/legacy-frozen.json validation-inputs/evidence-frozen.json
+          python -I -S scripts/offline_evidence_checks.py --engine evidence --cases eval/evidence-identity-cases.jsonl --descriptions excel_bot/data/finviz_with_descriptions.csv --out validation-inputs/evidence-identity-corpus.json --changelog "Synthetic identity regressions; same public catalog; sockets denied"
+          python scripts/summarize_evidence_checks.py validation-inputs/evidence-identity-corpus.json
       - name: Export separate unseen headline inputs
         run: >-
           python scripts/export_validation_inputs.py
@@ -63,6 +65,16 @@ jobs:
           --exclude-sample validation-inputs/news-sample.json
           --exclude-sample validation-inputs/fresh/news-sample.json
           --exclude-sample validation-inputs/holdout/news-sample.json
+      - name: Reserve fifth unseen headline sample
+        run: >-
+          python scripts/export_validation_inputs.py
+          --news data/news_intake/2026-10-17/documents.json
+          --descriptions excel_bot/data/finviz_with_descriptions.csv
+          --out validation-inputs/holdout5 --seed 19023 --budget 200
+          --exclude-sample validation-inputs/news-sample.json
+          --exclude-sample validation-inputs/fresh/news-sample.json
+          --exclude-sample validation-inputs/holdout/news-sample.json
+          --exclude-sample validation-inputs/holdout4/news-sample.json
       - name: Infer primary headlines using public inputs only
         run: |
           python -I -S scripts/offline_evidence_checks.py --scan --engine evidence --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/headline-sample.json --out validation-inputs/evidence-headline-links.json
@@ -71,6 +83,8 @@ jobs:
           python -I -S scripts/offline_evidence_checks.py --scan --engine legacy --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/holdout/headline-sample.json --out validation-inputs/holdout/legacy-headline-links.json
           python -I -S scripts/offline_evidence_checks.py --scan --engine evidence --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/holdout4/headline-sample.json --out validation-inputs/holdout4/evidence-headline-links.json
           python -I -S scripts/offline_evidence_checks.py --scan --engine legacy --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/holdout4/headline-sample.json --out validation-inputs/holdout4/legacy-headline-links.json
+          python -I -S scripts/offline_evidence_checks.py --scan --engine evidence --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/holdout5/headline-sample.json --out validation-inputs/holdout5/evidence-headline-links.json
+          python -I -S scripts/offline_evidence_checks.py --scan --engine legacy --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/holdout5/headline-sample.json --out validation-inputs/holdout5/legacy-headline-links.json
           python scripts/compact_headline_links.py validation-inputs
       - uses: actions/upload-artifact@v4
         if: always()

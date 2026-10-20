@@ -234,3 +234,20 @@ accordingly)
   archive, with byte-range validation, text hashes, path checks and credentials
   confined to GitHub API. Two issuer probes are diagnostics, not broad accuracy.
 
+## 2026-10-20 - Candidate2.3 fourth-sample failure and2.4 repair
+
+- Seed19022 first result:123/154 exact (79.9%),34TP21FP21FN; precision and
+  recall61.8%.46 unresolved excluded;29 novel positive cases. Legacy102/154,
+  0TP29FP55FN. All labels remain provisional and assistant-authored.
+- Candidate2.3 regressed original131/157 (35TP25FP5FN), second137/158
+  (35TP18FP5FN), third125/139 (35TP9FP6FN). No90% success claim.
+- Candidate2.4 repairs whole product-list boundaries, resale-vs-ownership,
+  generic-name ambiguity, bound ticker syntax, source-domain spelling,
+  listing/broker roles and investment-methodology exposure. Failure classes:
+  ALIAS_FP (B3/B5), RELATION_LEAK (E1/C7), MISSING_NAME (A5/B5).
+-168 offline tests pass. Added nine synthetic identity corpus cases and
+  preserved all real-sample labels. All four seen samples are development.
+  Reserve seed19023 excluding800 prior titles; freeze labels before outputs.
+- Complete-text probes succeeded for25 filings/544 views/29,148,431 characters
+  across LUV andSPCX. This is two-issuer source verification, not broad accuracy.
+

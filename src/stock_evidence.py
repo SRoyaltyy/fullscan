@@ -16,7 +16,7 @@ from .linguistics import GENERIC, STOP, TOKEN, lemma, terms, tokens
 from .places import CITIES, STATES
 from .aliases import _COUNTRIES
 
-COMPILER_VERSION = 'stock-evidence-2.3'
+COMPILER_VERSION = 'stock-evidence-2.4'
 
 _LOCATIONS = {p.lower() for p in list(CITIES)+list(STATES)+list(_COUNTRIES)}
 _LOCATION_RX = re.compile(r'\b(?:'+'|'.join(re.escape(p) for p in sorted(_LOCATIONS,key=len,reverse=True))+r')\b',re.I)
@@ -46,7 +46,8 @@ RELATION_CUES = {
 }
 OWN = re.compile(r'\b(?:our|we|its|company|it)\b.{0,90}\b(?:develop\w*|manufactur\w*|market\w*|sell\w*|offer\w*|design\w*|commercializ\w*|produce\w*|own\w*|launch\w*)\b', re.I)
 PROPER = re.compile(r'\b(?:[A-Z][A-Za-z0-9-]*)(?:\s+(?:[A-Z][A-Za-z0-9-]*)){0,4}\b')
-BRAND = re.compile(r'\b(?:[A-Z][A-Za-z0-9-]+(?:\s+[A-Z][A-Z0-9-]{1,})+|[A-Z][a-z0-9]+[A-Z][A-Za-z0-9-]*|[A-Z][A-Z0-9-]{2,}|[A-Z][a-z][A-Za-z0-9-]{2,})\b')
+BRAND = re.compile(r'\b(?:[a-z]?[A-Z][A-Za-z0-9-]*)(?:\s+[A-Z][A-Za-z0-9-]*){0,4}\b')
+RESALE = re.compile(r'\b(?:sell\w*|retail\w*|distribut\w*|resell\w*|carr(?:y|ies))\s+(?:(?:third[- ]party|national|other|well[- ]known)\s+)?brands?\b|\b(?:third[- ]party|national)\s+brands?\b',re.I)
 BRAND_DENY = frozenset('FDA SEC CEO CFO COO CTO GAAP US USA UK EU AI API GPU CPU NASA NYSE NASDAQ ITEM PART NOT THE AND FOR OUR INC LLC LTD CORP'.lower().split())
 HISTORY = re.compile(r'\b(?:was|were|is)\s+(?:founded|formed|incorporated|established|headquartered|domiciled)\b|\bformerly known as\b|\bchanged its name\b',re.I)
 
@@ -147,6 +148,10 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
     out.sources.append(catalog_source)
     from .correlation import _alias
     legal_words=_alias(out.name).split()
+    domain=re.search(r'\b([A-Za-z][A-Za-z0-9-]+)\.(?:com|net|org)\b',out.name,re.I)
+    if domain:
+        ix=_fact(out,'company_alias',domain.group(1),out.name,catalog_source,'legal domain name')
+        out.facts[ix].confidence='legal_domain_root'
     if len(legal_words)>1:
         ix=_fact(out,'company_alias',''.join(legal_words),out.name,catalog_source,'legal name token concatenation')
         out.facts[ix].confidence='exact_legal_tokens'
@@ -228,6 +233,9 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
                 if kind in ('business','update') and HISTORY.search(sentence):
                     local_kind='history'
                     _fact(out,'history','',sentence,source,heading)
+                if kind in ('business','update') and re.search(r'\b(?:fundamental|technical) analysis\b',sentence,re.I) and re.search(r'\bportfolio\b',sentence,re.I):
+                    local_kind='investment_methodology'
+                    _fact(out,local_kind,'',sentence,source,heading)
                 relation = next((role for role, rx in RELATION_CUES.items() if rx.search(sentence)), None)
                 counterparties = [(t, name) for t, name in catalog.find(sentence) if t != ticker]
                 # A named counterparty is not the company's own operation.
@@ -259,16 +267,24 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
                         value=m.group(1).strip()
                         if any(w not in STOP|GENERIC for w in tokens(value)):
                             _fact(out,'owned_product',value,sentence,source,heading)
-                if kind in ('risk','financial','supplier') or re.search(r'\b(?:depend\w* on|rely\w* on|require|consume|raw materials?|input costs?|sensitive to|exposed to)\b',sentence,re.I):
+                if local_kind!='investment_methodology' and (kind in ('risk','financial','supplier') or re.search(r'\b(?:depend\w* on|rely\w* on|require|consume|raw materials?|input costs?|sensitive to|exposed to)\b',sentence,re.I)):
                     _fact(out, 'financial_exposure' if kind == 'financial' else 'material_exposure', '', sentence, source, heading)
                 if local_kind in ('business','update') and not re.search(r'\b(?:no longer|ceased|divested|discontinued|formerly|sold our)\b',sentence,re.I) and (OWN.search(sentence) or re.search(r'\b(?:our products?|product portfolio|pipeline|marketed products?)\b', heading, re.I) or re.search(r'\b(?:our|its) products?(?: and services?)? include\b',sentence,re.I)):
                     product_list=re.search(r'\b(?:our|its) products?(?: and services?)? include\s+(.+?)(?:\.|$)',sentence,re.I)
+                    resale=bool(RESALE.search(sentence))
                     if product_list:
+                        from .names import english_words
+                        categories=bool(re.match(r'(?:the\s+)?following\s+categories?\b|categories?\b|types?\b',product_list.group(1),re.I))
                         for item in re.split(r',|\band\b',product_list.group(1)):
-                            value=re.sub(r'\s+products?$','',item.strip())
+                            value=re.sub(r'\s+products?$','',item.strip().replace('®','').replace('™',''))
                             if re.fullmatch(r'(?:[a-z]?[A-Z][A-Za-z0-9-]*)(?:\s+[A-Z][A-Za-z0-9-]*){0,2}',value):
-                                _fact(out,'owned_product',value,sentence,source,heading)
+                                generic_phrase=len(value.split())>1 and all(w.lower() in english_words() for w in value.split())
+                                role='distributed_brand' if resale else 'product_category' if categories or generic_phrase else 'owned_product'
+                                _fact(out,role,value,sentence,source,heading)
                     for m in BRAND.finditer(sentence):
+                        # Preserve list-item boundaries; interior words are
+                        # never independent brands (Dexcom Share -> Share).
+                        if product_list and m.start()>=product_list.start(1):continue
                         value = m.group().strip()
                         if len(value) < 3 or value.lower() in BRAND_DENY or value.lower() in (out.name.lower(), ticker.lower()):
                             continue
@@ -277,7 +293,7 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
                         if not any(tok not in STOP for tok in tokens(value)):
                             continue
                         # Ownership requires a first-person development/sales statement.
-                        _fact(out, 'owned_product', value, sentence, source, heading)
+                        _fact(out, 'distributed_brand' if resale else 'owned_product', value, sentence, source, heading)
                     # Pharmaceuticals often use a single capitalized brand plus generic name.
                     for m in re.finditer(r'\b([A-Z][A-Za-z0-9-]{3,})\s*\(([a-z][a-z0-9-]{3,})\)', sentence):
                         for value in m.groups():
