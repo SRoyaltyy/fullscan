@@ -85,5 +85,5 @@ Updated: 2026-10-19. Calls are graded at T+h trading days using the scoreboard's
 | 2026-08-26 | sector:Industrials | 1m | flat/mild | -6.47% (down/notable) | ❌ | ❌ |
 | 2026-08-26 | sector:Financial | 1m | flat/mild | -5.90% (down/notable) | ❌ | ❌ |
 
-*249 calls still maturing (T+h close not recorded yet).*
+*253 calls still maturing (T+h close not recorded yet).*
 
