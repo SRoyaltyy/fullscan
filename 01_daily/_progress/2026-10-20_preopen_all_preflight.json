@@ -1,18 +1,16 @@
 {
  "workflow": "preopen_all",
  "date": "2026-10-20",
- "checked_at": "2026-10-20 04:40 ET",
- "run_id": "39392653949",
- "ok": false,
- "failed": [
-  "ecs_code_current"
- ],
+ "checked_at": "2026-10-20 04:53 ET",
+ "run_id": "39396666465",
+ "ok": true,
+ "failed": [],
  "items": [
   {
    "id": "ecs_code_current",
-   "ok": false,
+   "ok": true,
    "plain": "ecs code stale: code on this ECS checkout (src, scripts, config, .github) must match GitHub main",
-   "detail": "ecs code stale: HEAD 422ec395 vs main ce0e2325 differ in 1 code file(s): .github/workflows/openclaw_oauth_guard.yml"
+   "detail": "code matches main (HEAD b93e5472, main b93e5472)"
   },
   {
    "id": "runner_is_ecs",
@@ -36,7 +34,7 @@
    "id": "xai_token_outlives_run",
    "ok": true,
    "plain": "xAI login expires before this run can finish (needs >= 75 min left)",
-   "detail": "119 min left"
+   "detail": "106 min left"
   },
   {
    "id": "no_unapproved_paid_fallback",
