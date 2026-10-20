@@ -1,14 +1,14 @@
-# Weather report — 2026-10-19
+# Weather report — 2026-10-20
 
 Is today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade.
 
 ## Snapshot
 
-- **Risk state:** OFF (general predict up score +2.1, conf 0.585)
-- **Yields:** falling (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.94 via vix/vix3m) spot 18.27
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.07
+- **Risk state:** UNKNOWN
+- **Yields:** flat (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** falling | **VIX:** calm (ratio 0.95 via vix/vix3m) spot 18.54
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.18
 - **High-impact events:** 1 bullish vs 4 bearish
-- ⚠️ **Data gaps:** risk tilted off by news_judge
+- ⚠️ **Data gaps:** general predict run, general predict factor scoreboard
 
 ## Sectors
 
@@ -30,34 +30,34 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| size:micro | 🌧️ hostile | medium | strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors] |
-| size:small | 🌧️ hostile | medium | strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors] |
-| size:large | ⛅ neutral | low | risk-mixed [general predict] |
-| size:mega | ⛅ neutral | low | risk-mixed [general predict] |
-| size:mid | ⛅ neutral | low | no dedicated mid-cap signal in v1 |
+| size:micro | ❔ unknown | low | no general predict |
+| size:small | ❔ unknown | low | no general predict |
+| size:mid | ❔ unknown | low | no general predict |
+| size:large | ❔ unknown | low | no general predict |
+| size:mega | ❔ unknown | low | no general predict |
 
 ## Beta & volatility
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| beta:high | ⛅ neutral | low | risk-mixed, VIX falling |
-| beta:low | ⛅ neutral | low | risk-mixed, VIX falling |
+| beta:high | ⛅ neutral | low | risk-unknown, VIX calm |
+| beta:low | ⛅ neutral | low | risk-unknown, VIX calm |
 | beta:mid | ⛅ neutral | low | beta-neutral zone |
 
 ## Short interest (multiplier, not direction)
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| short:high | ⛅ neutral | low | mixed tape — squeeze/stress unresolved |
-| short:extreme | ⛅ neutral | low | mixed tape — squeeze/stress unresolved |
-| short:low | ⛅ neutral | low | low short is not a tailwind by itself |
-| short:mid | ⛅ neutral | low | no strong crowding signal |
+| short:low | ❔ unknown | low | no general predict |
+| short:mid | ❔ unknown | low | no general predict |
+| short:high | ❔ unknown | low | no general predict |
+| short:extreme | ❔ unknown | low | no general predict |
 
 ## Profitability & style
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| profit:no | ⛅ neutral | low | risk-mixed, F&G None |
+| profit:no | ⛅ neutral | low | risk-unknown, F&G None |
 | profit:yes | ⛅ neutral | low | — |
 | profit:thin | ⛅ neutral | low | — |
 
@@ -65,8 +65,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | 🌤️ favorable | medium | yields falling — duration/growth re-rates [factor: Bond yields] |
-| style:value | ⛅ neutral | low | value lags duration rallies |
+| style:growth | ⛅ neutral | low | yields flat/unknown |
+| style:value | ⛅ neutral | low | yields flat/unknown |
 | style:blend | ⛅ neutral | low | — |
 
 ## Leverage
@@ -82,35 +82,35 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| mom:uptrend | ⛅ neutral | low | mixed tape |
-| mom:downtrend | ⛅ neutral | low | — |
-| mom:mixed | ⛅ neutral | low | — |
+| mom:uptrend | ❔ unknown | low | no general predict |
+| mom:downtrend | ❔ unknown | low | no general predict |
+| mom:mixed | ❔ unknown | low | no general predict |
 
 ## Extension state
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| ext:washed | ⛅ neutral | low | mixed tape |
-| ext:extended | ⛅ neutral | low | extension tolerated while tape is firm |
-| ext:extreme | ⛅ neutral | low | extension tolerated while tape is firm |
-| ext:neutral | ⛅ neutral | low | — |
+| ext:extreme | ❔ unknown | low | no general predict |
+| ext:extended | ❔ unknown | low | no general predict |
+| ext:washed | ❔ unknown | low | no general predict |
+| ext:neutral | ❔ unknown | low | no general predict |
 
 ## 52-week zone
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| range:deep_low | ⛅ neutral | low | mixed tape |
-| range:top | ⛅ neutral | low | — |
-| range:breakout | ⛅ neutral | low | — |
-| range:low | ⛅ neutral | low | — |
-| range:mid | ⛅ neutral | low | — |
-| range:high | ⛅ neutral | low | — |
+| range:deep_low | ❔ unknown | low | no general predict |
+| range:low | ❔ unknown | low | no general predict |
+| range:mid | ❔ unknown | low | no general predict |
+| range:high | ❔ unknown | low | no general predict |
+| range:top | ❔ unknown | low | no general predict |
+| range:breakout | ❔ unknown | low | no general predict |
 
 ## Geography
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| geo:US | ⛅ neutral | low | mirrors general risk-mixed [general predict] |
+| geo:US | ❔ unknown | low | mirrors general risk-unknown [general predict] |
 | geo:ADR-China | ⛅ neutral | low | no high-impact China event flagged |
 
 ## Gates (always-on cautions)
@@ -120,8 +120,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 - **liq:low** — thin dollar volume — gaps on news, hard to exit; down-rank
 - **rvol:hot** — abnormal participation — moves are 'real' but confirm direction first
 - **ext:extreme + risk-off** — parabolic names into a hostile tape = veto longs
-- **elevated_short_caution** — True
+- **elevated_short_caution** — False
 - **earnings_proximity** — True
 - **veto_earn_today** — True
-- **veto_extreme_risk_off** — True
+- **veto_extreme_risk_off** — False
 
