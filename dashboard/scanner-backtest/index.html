@@ -315,15 +315,18 @@ async function runTest() {
 }
 
 async function loadStatic() {
-  const [metaRes, artsRes, resultsRes, spacyRes, clusterRes] = await Promise.all([
-    fetch("./meta.json"),
-    fetch("./articles.json"),
-    fetch("./results.jsonl"),
-    fetch("./spacy.jsonl"),
-    fetch("./spacy-clusters.json"),
+  const metaRes = await fetch("./meta.json?refresh=" + Date.now(), {cache: "no-store"});
+  staticMeta = metaRes.ok ? await metaRes.json() : {};
+  const version = (staticMeta.snapshot || {}).snapshot_id || staticMeta.generated_at || "historical";
+  const query = "?snapshot=" + encodeURIComponent(version);
+  const [artsRes, resultsRes] = await Promise.all([
+    fetch("./articles.json" + query),
+    fetch("./results.jsonl" + query),
+  ]);
+  const [spacyRes, clusterRes] = staticMeta.snapshot ? [{ok: false}, {ok: false}] : await Promise.all([
+    fetch("./spacy.jsonl" + query), fetch("./spacy-clusters.json" + query),
   ]);
   if (!artsRes.ok || !resultsRes.ok) throw new Error("static artifacts missing");
-  staticMeta = metaRes.ok ? await metaRes.json() : {};
   staticArticles = await artsRes.json();
   const raw = await resultsRes.text();
   for (const line of raw.split("\n")) {
@@ -395,9 +398,10 @@ async function loadProfiles() {
   if (staticProfiles) return true;
   const hint = document.getElementById("ticker-hint");
   hint.textContent = "loading stock profiles…";
+  const query = staticMeta && staticMeta.snapshot ? "?snapshot=" + encodeURIComponent(staticMeta.snapshot.snapshot_id) : "";
   const [pRes, iRes] = await Promise.all([
-    fetch("./profiles.json"),
-    fetch("./ticker-index.json"),
+    fetch("./profiles.json" + query),
+    fetch("./ticker-index.json" + query),
   ]);
   if (!pRes.ok || !iRes.ok) {
     hint.textContent = "profile artifacts missing";
