@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "workflow": "webull_sim",
+  "date": "2026-10-20",
+  "run_id": "39471906428",
+  "model": "",
+  "started_at": "2026-10-20T14:12:42-04:00",
+  "updated_at": "2026-10-20T14:12:42-04:00",
+  "heartbeat_at": "2026-10-20T14:12:42-04:00",
+  "stages": [
+    {
+      "name": "rows",
+      "state": "running",
+      "started_at": "2026-10-20T14:12:42-04:00",
+      "ended_at": "",
+      "heartbeat_at": "2026-10-20T14:12:42-04:00",
+      "done": 0,
+      "total": 1,
+      "model": "",
+      "error": ""
+    }
+  ]
+}
