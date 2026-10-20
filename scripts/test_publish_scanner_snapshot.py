@@ -5,10 +5,42 @@ import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
-from scripts.publish_scanner_snapshot import validate, publish, ARTIFACTS
+from scripts.publish_scanner_snapshot import validate, publish, publish_api, ARTIFACTS
 
 
 class SnapshotPublishTests(unittest.TestCase):
+    def test_api_publisher_updates_only_five_paths_without_force(self):
+        calls=[]
+        def api(method,path,payload=None):
+            calls.append((method,path,payload))
+            if '/git/blobs' in path: return {'sha':'blob'}
+            if '/compare/' in path: return {'files':[{'filename':'unrelated.txt'}]}
+            if method=='GET' and '/git/ref/' in path: return {'object':{'sha':'current'}}
+            if method=='GET' and '/git/commits/' in path:return {'tree':{'sha':'tree'}}
+            if '/git/trees' in path:return {'sha':'new-tree'}
+            if method=='POST' and '/git/commits' in path:return {'sha':'new-commit'}
+            if method=='PATCH':return {'object':{'sha':'new-commit'}}
+            raise AssertionError((method,path))
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);self.fixture(root)
+            with patch('scripts.publish_scanner_snapshot.github_api',side_effect=api):
+                self.assertEqual(publish_api(root,'source','owner/repo'),'new-commit')
+        tree=next(payload for method,path,payload in calls if method=='POST' and '/git/trees' in path)
+        self.assertEqual({row['path'] for row in tree['tree']},{'dashboard/scanner-backtest/'+n for n in ARTIFACTS})
+        self.assertEqual(calls[-1][2],{'sha':'new-commit','force':False})
+
+    def test_api_publisher_refuses_changed_parser(self):
+        def api(method,path,payload=None):
+            if '/git/blobs' in path:return {'sha':'blob'}
+            if '/git/ref/' in path:return {'object':{'sha':'current'}}
+            if '/compare/' in path:return {'files':[{'filename':'src/evidence_matcher.py'}]}
+            raise AssertionError('unexpected write after changed-source check')
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);self.fixture(root)
+            with patch('scripts.publish_scanner_snapshot.github_api',side_effect=api):
+                with self.assertRaisesRegex(ValueError,'inputs changed'):
+                    publish_api(root,'source','owner/repo')
+
     def fixture(self, root, source='source'):
         root.mkdir(exist_ok=True)
         snapshot = {'snapshot_id': 'snapshot', 'source_revision': source, 'input_mode': 'headline',

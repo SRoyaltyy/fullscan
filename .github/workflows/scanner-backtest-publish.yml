@@ -33,7 +33,7 @@ permissions:
   actions: read
 concurrency:
   group: scanner-backtest-refresh
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   filings:
     runs-on: ubuntu-latest
@@ -124,17 +124,21 @@ jobs:
           python -I -S scripts/offline_evidence_checks.py --backtest-export
           --identity-filings filing-objects --as-of 2026-10-19
           --workers 2 --shard-size 200 --out-dir generated-scanner
-      - name: Verify and retain the snapshot on main without touching other files
-        env:
-          SCANNER_SOURCE_SHA: ${{ github.sha }}
-        run: |
-          python scripts/publish_scanner_snapshot.py --directory generated-scanner --source-sha "$SCANNER_SOURCE_SHA"
-          cp dashboard/scanner-backtest/index.html generated-scanner/index.html
+      - name: Stage the complete page before publication
+        run: cp dashboard/scanner-backtest/index.html generated-scanner/index.html
       - uses: actions/upload-artifact@v4
         with:
           name: scanner-test-page
           path: generated-scanner/
           retention-days: 30
+      - name: Verify and retain the snapshot on main without touching other files
+        timeout-minutes: 10
+        env:
+          SCANNER_SOURCE_SHA: ${{ github.sha }}
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          python -u scripts/publish_scanner_snapshot.py --directory generated-scanner
+          --source-sha "$SCANNER_SOURCE_SHA" --github-api --repository "$GITHUB_REPOSITORY"
   publish:
     needs: build
     runs-on: ubuntu-latest

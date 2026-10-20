@@ -5,10 +5,12 @@ parser, intake, catalog, or page has changed since the scoring checkout.
 No force push, secret extraction, trading writes, or deployment-gate override.
 """
 import argparse
+import base64
 import json
 import os
 import subprocess
 import tempfile
+import urllib.request
 from pathlib import Path
 
 ARTIFACTS = ('articles.json', 'results.jsonl', 'profiles.json', 'ticker-index.json', 'meta.json')
@@ -25,7 +27,64 @@ INPUT_PATHS = ('src/correlation.py', 'src/evidence_matcher.py', 'src/stock_evide
 
 
 def git(*args, env=None):
-    return subprocess.check_output(['git', *args], text=True, env=env).strip()
+    return subprocess.check_output(['git', *args], text=True, env=env, timeout=90).strip()
+
+
+def github_api(method, endpoint, payload=None):
+    token = os.environ.get('GH_TOKEN') or os.environ.get('GITHUB_TOKEN')
+    if not token:
+        raise RuntimeError('configured GitHub workflow token is required')
+    request = urllib.request.Request('https://api.github.com/'+endpoint,
+        data=json.dumps(payload).encode() if payload is not None else None,
+        method=method, headers={'Authorization': 'Bearer '+token,
+            'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28',
+            'Content-Type': 'application/json', 'User-Agent': 'Fullscan-scanner-page'})
+    with urllib.request.urlopen(request, timeout=90) as response:
+        return json.load(response)
+
+
+def publish_api(directory, source_sha, repository):
+    validate(directory, source_sha)
+    endpoint = 'repos/'+repository
+    blobs = []
+    for name in ARTIFACTS:
+        raw = (directory/name).read_bytes()
+        print('Preparing '+name+': '+str(len(raw))+' bytes', flush=True)
+        if len(raw) >= 100_000_000:
+            raise ValueError('snapshot file exceeds GitHub file limit: '+name)
+        blob = github_api('POST', endpoint+'/git/blobs',
+                          {'content': base64.b64encode(raw).decode(), 'encoding': 'base64'})
+        blobs.append({'path': 'dashboard/scanner-backtest/'+name,
+                      'mode': '100644', 'type': 'blob', 'sha': blob['sha']})
+    for attempt in range(3):
+        ref = github_api('GET', endpoint+'/git/ref/heads/main')
+        upstream = ref['object']['sha']
+        compare = github_api('GET', endpoint+'/compare/'+source_sha+'...'+upstream)
+        files = compare.get('files') or []
+        if len(files) >= 300:
+            raise ValueError('change comparison is capped; rebuild from the current source')
+        changed = [f['filename'] for f in files if any(
+            f['filename'] == path or f['filename'].startswith(path+'/') for path in INPUT_PATHS)]
+        if changed:
+            raise ValueError('parser inputs changed during scoring: '+','.join(changed))
+        commit = github_api('GET', endpoint+'/git/commits/'+upstream)
+        tree = github_api('POST', endpoint+'/git/trees',
+                          {'base_tree': commit['tree']['sha'], 'tree': blobs})
+        new = github_api('POST', endpoint+'/git/commits',
+                         {'message': 'Publish scanner snapshot for '+source_sha[:12],
+                          'tree': tree['sha'], 'parents': [upstream]})
+        try:
+            github_api('PATCH', endpoint+'/git/refs/heads/main', {'sha': new['sha'], 'force': False})
+            return new['sha']
+        except urllib.error.HTTPError as exc:
+            # Never retry an auth/protection failure. A changed ref alone is
+            # a safe reason to retry the same five-file transaction.
+            if exc.code not in (409, 422):
+                raise
+            latest = github_api('GET', endpoint+'/git/ref/heads/main')['object']['sha']
+            if latest == upstream:
+                raise
+    raise RuntimeError('main kept moving; snapshot was not published')
 
 
 def validate(directory, source_sha):
@@ -80,7 +139,7 @@ def publish(directory, source_sha):
                 return upstream
             commit = git('commit-tree', tree, '-p', upstream, '-m',
                          'Publish scanner snapshot for '+source_sha[:12], env=env)
-        result = subprocess.run(['git', 'push', 'origin', commit+':refs/heads/main'], capture_output=True, text=True)
+        result = subprocess.run(['git', 'push', 'origin', commit+':refs/heads/main'], capture_output=True, text=True, timeout=120)
         if result.returncode == 0:
             return commit
         # Only concurrent non-fast-forward moves may be retried. Auth and
@@ -94,8 +153,13 @@ def main():
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     p.add_argument('--directory', type=Path, required=True)
     p.add_argument('--source-sha', required=True)
+    p.add_argument('--github-api', action='store_true')
+    p.add_argument('--repository', default=os.environ.get('GITHUB_REPOSITORY', ''))
     a = p.parse_args()
-    print(json.dumps({'source_sha': a.source_sha, 'published_commit': publish(a.directory, a.source_sha)}))
+    if a.github_api and not a.repository:
+        p.error('--github-api requires --repository')
+    commit = publish_api(a.directory, a.source_sha, a.repository) if a.github_api else publish(a.directory, a.source_sha)
+    print(json.dumps({'source_sha': a.source_sha, 'published_commit': commit}))
 
 
 if __name__ == '__main__':
