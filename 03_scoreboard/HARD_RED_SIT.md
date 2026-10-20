@@ -26,13 +26,270 @@ Clock split: (A) short-only is a pre-open policy call — shorts fire at the clo
 
 ## RESEARCH per sleeve (paper, not a wire)
 
-**2026-10-19** — `1` sit sleeves with looked names / `1` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
+**2026-10-20** — `258` sit sleeves with looked names / `342` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
 
 Per-sleeve paper counterfactuals on looked names. Live sit stays default. KEEP bar unchanged. (A) short-only fires the short kid at the 09:30 open. (B) dip-scoop longs wait for open−X% (session low / Elite live). Close does not trigger.
 
 | Sleeve | Side | (A) short-only @ open | (B) dip-scoop X% |
 |---|---|---|---|
 | `flatten_robust` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss; TMUS miss; TRU miss; WSM miss; CNK miss; AVPT miss; WLY miss |
+| `union_h1` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h3` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h5` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `flatten_h1` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h3` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h5` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `probable_h1` | long | — | PRMB miss; NVTS miss; AIP miss; SMMT miss; EPR miss; PDFS miss; CXW miss; ACRS miss |
+| `probable_h3` | long | — | PRMB miss; NVTS miss; AIP miss; SMMT miss; EPR miss; PDFS miss; CXW miss; ACRS miss |
+| `probable_h5` | long | — | PRMB miss; NVTS miss; AIP miss; SMMT miss; EPR miss; PDFS miss; CXW miss; ACRS miss |
+| `yday_gainer_h1` | long | — | ITW miss; AMX miss; PRMB miss; NVTS miss; AIP miss; KLRA miss; SMMT miss; EPR miss |
+| `yday_gainer_h3` | long | — | ITW miss; AMX miss; PRMB miss; NVTS miss; AIP miss; KLRA miss; SMMT miss; EPR miss |
+| `yday_gainer_h5` | long | — | ITW miss; AMX miss; PRMB miss; NVTS miss; AIP miss; KLRA miss; SMMT miss; EPR miss |
+| `ohlc_hot_h1` | long | — | LOGI miss; NOG miss; OVV miss; KRP miss; ADMA miss; CNQ miss; PR miss; MNST miss |
+| `ohlc_hot_h3` | long | — | LOGI miss; NOG miss; OVV miss; KRP miss; ADMA miss; CNQ miss; PR miss; MNST miss |
+| `ohlc_hot_h5` | long | — | LOGI miss; NOG miss; OVV miss; KRP miss; ADMA miss; CNQ miss; PR miss; MNST miss |
+| `overnight_h1` | long | — | ISRG miss; COF miss; NFLX miss |
+| `overnight_h3` | long | — | ISRG miss; COF miss; NFLX miss |
+| `overnight_h5` | long | — | ISRG miss; COF miss; NFLX miss |
+| `union_vol_g_h1` | long | — | EGG miss |
+| `union_vol_g_h3` | long | — | EGG miss |
+| `union_ab_g_h1` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_ab_g_h3` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_join_g_h1` | long | — | SYF miss; DBRG miss; ALLY miss; GM miss; MSCI miss; FRSH miss; ILMN miss; CDNA miss |
+| `union_join_g_h3` | long | — | SYF miss; DBRG miss; ALLY miss; GM miss; MSCI miss; FRSH miss; ILMN miss; CDNA miss |
+| `union_join_present_h1` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_join_present_h3` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_news_g_h1` | long | — | ITW miss; AMX miss; GE miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss |
+| `union_news_g_h3` | long | — | ITW miss; AMX miss; GE miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss |
+| `union_news_present_h1` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_news_present_h3` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_last_green_h1` | long | — | LMT miss; SYF miss; DBRG miss; PRMB miss; JLHL miss; FRSH miss; LOGI miss; NOG miss |
+| `union_last_green_h3` | long | — | LMT miss; SYF miss; DBRG miss; PRMB miss; JLHL miss; FRSH miss; LOGI miss; NOG miss |
+| `union_last_red_h1` | long | — | NOC miss; ITW miss; AMX miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `union_last_red_h3` | long | — | NOC miss; ITW miss; AMX miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `union_candle_h1` | long | — | LMT miss; NOC miss; SYF miss; DBRG miss; PRMB miss; JLHL miss; FRSH miss; LOGI miss |
+| `union_candle_h3` | long | — | LMT miss; NOC miss; SYF miss; DBRG miss; PRMB miss; JLHL miss; FRSH miss; LOGI miss |
+| `union_coil_off_h1` | long | — | LMT miss; NOC miss; SYF miss; AMX miss; DBRG miss; GE miss; GM miss; HAL miss |
+| `union_coil_off_h3` | long | — | LMT miss; NOC miss; SYF miss; AMX miss; DBRG miss; GE miss; GM miss; HAL miss |
+| `union_earn_react_h1` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `union_earn_react_h3` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `union_overnight_h1` | long | — | COF miss; NFLX miss |
+| `union_overnight_h3` | long | — | COF miss; NFLX miss |
+| `union_e_fresh_h1` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `union_e_fresh_h3` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `union_break10_h1` | long | — | LOGI miss; NOG miss; OVV miss; KRP miss; CNQ miss; PR miss; MNST miss; TTAN miss |
+| `union_break10_h3` | long | — | LOGI miss; NOG miss; OVV miss; KRP miss; CNQ miss; PR miss; MNST miss; TTAN miss |
+| `union_rsi_os_h1` | long | — | DBRG miss; ALLY miss; PEP miss; RTO miss; PLNT miss; BROS miss |
+| `union_rsi_os_h3` | long | — | DBRG miss; ALLY miss; PEP miss; RTO miss; PLNT miss; BROS miss |
+| `union_macd_up_h1` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_macd_up_h3` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_flow_in_h1` | long | — | SYF miss; MSCI miss; ENGS miss |
+| `union_flow_in_h3` | long | — | SYF miss; MSCI miss; ENGS miss |
+| `union_vol_g_h5` | long | — | EGG miss |
+| `union_coil_off_h5` | long | — | LMT miss; NOC miss; SYF miss; AMX miss; DBRG miss; GE miss; GM miss; HAL miss |
+| `union_last_green_h5` | long | — | LMT miss; SYF miss; DBRG miss; PRMB miss; JLHL miss; FRSH miss; LOGI miss; NOG miss |
+| `union_news_g_h5` | long | — | ITW miss; AMX miss; GE miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss |
+| `union_rsi_os_h5` | long | — | DBRG miss; ALLY miss; PEP miss; RTO miss; PLNT miss; BROS miss |
+| `union_flow_in_h5` | long | — | SYF miss; MSCI miss; ENGS miss |
+| `union_news_pack_h1` | long | — | AMX miss; GE miss; AIP miss; CNQ miss; OXY miss |
+| `union_news_head_h1` | long | — | ITW miss; NVTS miss; GLND miss |
+| `union_news_or_h1` | long | — | AMX miss; GE miss; ITW miss; AIP miss; CNQ miss; NVTS miss; OXY miss; GLND miss |
+| `union_news_g_cond_h1` | long | — | AMX miss; GE miss; ITW miss; AIP miss; CNQ miss; NVTS miss; OXY miss; GLND miss |
+| `union_news_or_net2_h1` | long | — | AMX miss |
+| `union_news_or_net3_h1` | long | — | AMX miss |
+| `union_news_pack_net3_h1` | long | — | AMX miss |
+| `union_news_pack_net2_h1` | long | — | AMX miss |
+| `union_news_pack_h3` | long | — | AMX miss; GE miss; AIP miss; CNQ miss; OXY miss |
+| `union_news_head_h3` | long | — | ITW miss; NVTS miss; GLND miss |
+| `union_news_or_h3` | long | — | AMX miss; GE miss; ITW miss; AIP miss; CNQ miss; NVTS miss; OXY miss; GLND miss |
+| `union_news_g_cond_h3` | long | — | AMX miss; GE miss; ITW miss; AIP miss; CNQ miss; NVTS miss; OXY miss; GLND miss |
+| `union_news_or_net2_h3` | long | — | AMX miss |
+| `union_news_or_net3_h3` | long | — | AMX miss |
+| `union_news_pack_net3_h3` | long | — | AMX miss |
+| `union_news_pack_net2_h3` | long | — | AMX miss |
+| `union_news_g_conv_h1` | long | — | AMX miss; GE miss; ITW miss; AIP miss |
+| `union_news_g_conv_h3` | long | — | AMX miss; GE miss; ITW miss; AIP miss |
+| `short_news_pack_h3` | short | PEP @—; NFLX @— | — |
+| `short_news_head_h3` | short | NOG @—; HALO @— | — |
+| `short_news_or_h3` | short | NOG @—; PEP @—; HALO @—; NFLX @— | — |
+| `union_e_green_h1` | long | — | LMT miss; SYF miss |
+| `union_e_green_h3` | long | — | LMT miss; SYF miss |
+| `probable_probable_ok_h1` | long | — | PRMB miss |
+| `probable_probable_ok_h3` | long | — | PRMB miss |
+| `union_coil_green_h1` | long | — | LMT miss; SYF miss; DBRG miss; PRMB miss; LOGI miss; OVV miss; KRP miss; CNQ miss |
+| `union_coil_green_h3` | long | — | LMT miss; SYF miss; DBRG miss; PRMB miss; LOGI miss; OVV miss; KRP miss; CNQ miss |
+| `union_rsi_os_macd_h1` | long | — | DBRG miss; ALLY miss; RTO miss; PLNT miss; BROS miss |
+| `union_rsi_os_macd_h3` | long | — | DBRG miss; ALLY miss; RTO miss; PLNT miss; BROS miss |
+| `ohlc_hot_coil_h1` | long | — | LOGI miss; NOG miss; OVV miss; KRP miss; CNQ miss; PR miss; MNST miss; TTAN miss |
+| `union_hot_score_h1` | long | — | LMT miss; SYF miss; NOC miss; AMX miss; MSCI miss; HAL miss; DBRG miss; GE miss |
+| `union_hot_score_h3` | long | — | LMT miss; SYF miss; NOC miss; AMX miss; MSCI miss; HAL miss; DBRG miss; GE miss |
+| `union_candle_score_h1` | long | — | LMT miss; NOC miss; SYF miss; GE miss; ITW miss; DBRG miss; AMX miss; ALLY miss |
+| `union_candle_score_h3` | long | — | LMT miss; NOC miss; SYF miss; GE miss; ITW miss; DBRG miss; AMX miss; ALLY miss |
+| `union_ret_5_h1` | long | — | LMT miss; NOC miss; SYF miss; AMX miss; ITW miss; HAL miss; GE miss; GM miss |
+| `union_ret_5_h3` | long | — | LMT miss; NOC miss; SYF miss; AMX miss; ITW miss; HAL miss; GE miss; GM miss |
+| `union_cond_h1` | long | — | SYF miss; LMT miss; NOC miss; MSCI miss; AMX miss; ALLY miss; GM miss; DBRG miss |
+| `union_cond_h3` | long | — | SYF miss; LMT miss; NOC miss; MSCI miss; AMX miss; ALLY miss; GM miss; DBRG miss |
+| `union_w_hot_cond_h1` | long | — | SYF miss; LMT miss; NOC miss; MSCI miss; AMX miss; ALLY miss; GM miss; HAL miss |
+| `union_w_hot_cond_h3` | long | — | SYF miss; LMT miss; NOC miss; MSCI miss; AMX miss; ALLY miss; GM miss; HAL miss |
+| `union_w_hot_candle_h1` | long | — | LMT miss; NOC miss; SYF miss; GE miss; ITW miss; DBRG miss; AMX miss; ALLY miss |
+| `union_w_hot_candle_h3` | long | — | LMT miss; NOC miss; SYF miss; GE miss; ITW miss; DBRG miss; AMX miss; ALLY miss |
+| `union_rsi_h1` | long | — | NOC miss; SYF miss; LMT miss; DBRG miss; ALLY miss; HAL miss; GE miss; GM miss |
+| `union_rsi_h3` | long | — | NOC miss; SYF miss; LMT miss; DBRG miss; ALLY miss; HAL miss; GE miss; GM miss |
+| `union_macd_hist_h1` | long | — | LMT miss; NOC miss; SYF miss; MSCI miss; GE miss; ITW miss; GM miss; AMX miss |
+| `union_macd_hist_h3` | long | — | LMT miss; NOC miss; SYF miss; MSCI miss; GE miss; ITW miss; GM miss; AMX miss |
+| `union_hot_n4_h1` | long | — | VET miss; PLNT miss; ACN miss; BROS miss; BTI miss; WMG miss; COP miss |
+| `union_hot_n4_holdup` | long | — | VET miss; PLNT miss; ACN miss; BROS miss |
+| `overnight_mega_h1` | long | — | COF miss; NFLX miss |
+| `overnight_mega_h2` | long | — | COF miss; NFLX miss |
+| `overnight_mega_green_h1` | long | — | NFLX miss |
+| `union_hot_n12_h1` | long | — | LMT miss; SYF miss; NOC miss; AMX miss; MSCI miss; HAL miss; DBRG miss; GE miss; GM miss; ALLY miss; ITW miss; LOGI miss |
+| `union_cond_n4_h3` | long | — | SYF miss; LMT miss; NOC miss; MSCI miss |
+| `union_h3_exit_alarm` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h5_exit_alarm` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h3_exit_red` | long | — | LMT miss; SYF miss; DBRG miss; PRMB miss; JLHL miss; FRSH miss; LOGI miss; NOG miss |
+| `union_h3_exit_news_r` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `coil_h3_exit_alarm` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; GE miss; GM miss |
+| `short_alarm_h1` | short | ISRG @—; KLRA @—; DGX @—; ADMA @—; VEEV @—; ARQT @—; PACS @—; SMMT @— | — |
+| `short_alarm_h3` | short | ISRG @—; KLRA @—; DGX @—; ADMA @—; VEEV @—; ARQT @—; PACS @—; SMMT @— | — |
+| `short_news_r_h1` | short | NOG @—; PEP @—; HALO @—; NFLX @— | — |
+| `short_news_r_h3` | short | NOG @—; PEP @—; HALO @—; NFLX @— | — |
+| `short_extended_h1` | short | ARQT @—; EGG @—; GLND @— | — |
+| `short_extended_h3` | short | ARQT @—; EGG @—; GLND @— | — |
+| `short_last_red_h1` | short | NOC @—; ITW @—; AMX @—; ALLY @—; GE @—; GM @—; HAL @—; MSCI @— | — |
+| `short_last_red_h3` | short | NOC @—; ITW @—; AMX @—; ALLY @—; GE @—; GM @—; HAL @—; MSCI @— | — |
+| `short_rsi_ob_h1` | short | ITW @—; TBBB @—; ILMN @—; CDNA @—; BLFS @—; EPR @—; EGG @—; MX @— | — |
+| `short_rsi_ob_h3` | short | ITW @—; TBBB @—; ILMN @—; CDNA @—; BLFS @—; EPR @—; EGG @—; MX @— | — |
+| `short_macd_dn_h1` | short | NVTS @—; AIP @—; ILMN @—; CDNA @—; BLFS @—; SMMT @—; PDFS @—; CXW @— | — |
+| `short_macd_dn_h3` | short | NVTS @—; AIP @—; ILMN @—; CDNA @—; BLFS @—; SMMT @—; PDFS @—; CXW @— | — |
+| `short_news_r_macd_h3` | short | NOG @—; PEP @—; HALO @—; NFLX @— | — |
+| `flatten_h5_rankw` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h5_topheavy` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h5_half` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h5_time` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h5_cut` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h5_trail` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h5_sboost` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h5_sizeup` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h3_rankw` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h3_topheavy` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h3_half` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h3_time` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h3_cut` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h3_trail` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h3_sboost` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `flatten_h3_sizeup` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `union_h5_rankw` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h5_topheavy` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h5_half` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h5_time` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h5_cut` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h5_trail` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h5_sboost` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h5_sizeup` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h3_rankw` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h3_topheavy` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h3_half` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h3_time` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h3_cut` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h3_trail` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h3_sboost` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h3_sizeup` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h1_rankw` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h1_topheavy` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h1_half` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h1_time` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h1_cut` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h1_trail` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h1_sboost` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_h1_sizeup` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `flatten_h5_s8` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `union_clk_mom_break_peer_h1` | long | — | LMT miss; SYF miss; NOC miss; DBRG miss; LOGI miss; NOG miss; OVV miss; KRP miss |
+| `union_clk_fresh_cat_coil_h1` | long | — | SYF miss; LMT miss; NOC miss; MSCI miss; AMX miss; ALLY miss; GM miss; GE miss |
+| `short_clk_ext_veto_h3` | short | TBBB @— | — |
+| `union_clk_insider_cash_stab_h3` | long | — | OXY miss |
+| `union_clk_flow_coil_h1` | long | — | SYF miss |
+| `union_clk_nr7_mom_h1` | long | — | AMX miss; DBRG miss; ITW miss; PR miss |
+| `combo_seh_333_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; AMX miss |
+| `combo_seh_333_split` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; AMX miss |
+| `combo_seh_502525_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; AMX miss |
+| `combo_seh_502525_split` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; AMX miss |
+| `combo_seh_404020_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; AMX miss |
+| `combo_seh_403525_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; AMX miss |
+| `combo_seh_451540_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; AMX miss |
+| `combo_seh_601525_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; AMX miss |
+| `combo_se_5050_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_se_7030_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_eh_5050_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; AMX miss |
+| `combo_sh_5050_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; SYF miss; NOC miss; AMX miss |
+| `combo_sh_macd_5050_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; SYF miss; NOC miss; AMX miss |
+| `combo_se_5050_skip` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_seh_333_skip` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; AMX miss |
+| `combo_seh_333_weather` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; AMX miss |
+| `combo_se_5050_weather` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_se_5050_split` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_es_8020_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_es_9010_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_ehs_702010_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; AMX miss |
+| `combo_ehs_601525_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; AMX miss |
+| `combo_ps_5050_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | AMX miss; GE miss; AIP miss; CNQ miss; OXY miss |
+| `combo_ps_7030_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | AMX miss; GE miss; AIP miss; CNQ miss; OXY miss |
+| `combo_p2s_5050_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | AMX miss |
+| `combo_oh_5050_shared` | long | — | COF miss; NFLX miss; LMT miss; SYF miss; NOC miss; AMX miss |
+| `combo_sn_5050_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | ITW miss; AMX miss; GE miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss |
+| `combo_sj_5050_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | — |
+| `combo_sf_5050_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `combo_snj_333_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | ITW miss; AMX miss; GE miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss |
+| `combo_nse_333_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | ITW miss; AMX miss; GE miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss; LMT miss; NOC miss; SYF miss; ALLY miss; GM miss; HAL miss; MSCI miss |
+| `combo_jse_333_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_fse_333_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss; LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_e1s_7030_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_ers_7030_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_eh_7030_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; AMX miss |
+| `combo_fh_7030_shared` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss; LMT miss; SYF miss; NOC miss; AMX miss |
+| `combo_fe_5050_shared` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss; LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_fes_403030_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss; LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_se1_5050_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_ser_5050_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_en_5050_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; ITW miss; AMX miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss |
+| `combo_ej_5050_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_ef_5050_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `combo_ee1_5050_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_eer_5050_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_hn_5050_shared` | long | — | LMT miss; SYF miss; NOC miss; AMX miss; ITW miss; GE miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss |
+| `combo_hj_5050_shared` | long | — | LMT miss; SYF miss; NOC miss; AMX miss |
+| `combo_hf_5050_shared` | long | — | LMT miss; SYF miss; NOC miss; AMX miss; VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `combo_he1_5050_shared` | long | — | LMT miss; SYF miss; NOC miss; AMX miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_her_5050_shared` | long | — | LMT miss; SYF miss; NOC miss; AMX miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_nj_5050_shared` | long | — | ITW miss; AMX miss; GE miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss |
+| `combo_nf_5050_shared` | long | — | ITW miss; AMX miss; GE miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss; VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `combo_ne1_5050_shared` | long | — | ITW miss; AMX miss; GE miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss; LMT miss; NOC miss; SYF miss; ALLY miss; GM miss; HAL miss; MSCI miss |
+| `combo_ner_5050_shared` | long | — | ITW miss; AMX miss; GE miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss; LMT miss; NOC miss; SYF miss; ALLY miss; GM miss; HAL miss; MSCI miss |
+| `combo_jf_5050_shared` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `combo_je1_5050_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_jer_5050_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_fe1_5050_shared` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss; LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_fer_5050_shared` | long | — | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss; LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_e1er_5050_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_se_3070_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_sh_7030_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; SYF miss; NOC miss; AMX miss |
+| `combo_sh_3070_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | LMT miss; SYF miss; NOC miss; AMX miss |
+| `combo_eh_3070_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; AMX miss |
+| `combo_sn_7030_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | ITW miss; AMX miss; GE miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss |
+| `combo_sn_3070_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | ITW miss; AMX miss; GE miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss |
+| `combo_sj_7030_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | — |
+| `combo_sj_3070_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | — |
+| `combo_sf_7030_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `combo_sf_3070_shared` | mixed | NOG @—; PEP @—; HALO @—; NFLX @— | VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `combo_en_7030_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; ITW miss; AMX miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss |
+| `combo_en_3070_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; ITW miss; AMX miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss |
+| `combo_ef_7030_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `combo_ef_3070_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss; VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss; BLFS miss |
+| `combo_hn_7030_shared` | long | — | LMT miss; SYF miss; NOC miss; AMX miss; ITW miss; GE miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss |
+| `combo_hn_3070_shared` | long | — | LMT miss; SYF miss; NOC miss; AMX miss; ITW miss; GE miss; NVTS miss; AIP miss; CNQ miss; OXY miss; GLND miss |
+| `combo_ee1_7030_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `combo_ee1_3070_shared` | long | — | LMT miss; NOC miss; SYF miss; ALLY miss; GE miss; GM miss; HAL miss; MSCI miss |
+| `union_hot_n4_holdup_preopen` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
+| `union_hot_n4_h1_preopen` | long | — | LMT miss; NOC miss; SYF miss; ITW miss; AMX miss; DBRG miss; ALLY miss; GE miss |
 
 Scoop trigger = official open + session low (Elite live only when the low has not printed). Close / last / Theme Radar never trigger. #236 KILL of global short-only / dip-scoop stands — this table is display/paper only.
 
