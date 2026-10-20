@@ -98,7 +98,7 @@ def _coordinated(token):
 
 def _subjects(token):
     subjects = [c for c in token.children if c.dep_ in ('nsubj', 'nsubjpass', 'csubj')]
-    if not subjects and token.dep_ in ('conj', 'xcomp') and token.head != token:
+    if not subjects and token.dep_ in ('conj', 'xcomp', 'acomp', 'attr', 'oprd') and token.head != token:
         return _subjects(token.head)
     return subjects
 
@@ -137,12 +137,17 @@ def extract_doc(doc, *, ticker, name, source, offset=0):
     def emit(predicate, obj, trigger, *, subject=None, value_type='concept', qualifiers=None, confidence='syntax'):
         value = obj.text if hasattr(obj, 'label_') else _phrase(obj) if hasattr(obj, 'dep_') else str(obj)
         value = value.strip()
+        if value_type == 'concept':
+            if value in AGENCIES or value in AGENCIES.values():
+                value_type = 'agency'
+            elif LAW.fullmatch(value):
+                value_type = 'law'
         if not value or value.lower() in ISSUER | GENERIC or not re.search(r'[A-Za-z]', value):
             return
         sentence = trigger.sent
         status = _status(trigger, sentence)
         actor = subject or ticker
-        signature = (predicate, actor, value, status, sentence.start_char)
+        signature = (predicate, actor, value, value_type, status, sentence.start_char)
         if signature in seen:
             return
         seen.add(signature)
