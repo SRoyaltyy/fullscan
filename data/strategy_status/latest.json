@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-10-20",
- "generated_at": "2026-10-20T12:10:49-04:00",
+ "generated_at": "2026-10-20T13:48:41-04:00",
  "strategies": [
   {
    "buys": [
@@ -5845,7 +5845,7 @@
    "buys": [],
    "family": "holdup",
    "name": "holdup",
-   "note": "no sealed plan row",
+   "note": "missing: plan not sealed before open",
    "sells": [],
    "source": "research/hot_n4_clean_v4/forward/holdup_log.jsonl",
    "status": "MISSING"
