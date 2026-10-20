@@ -1,7 +1,5 @@
 {
   "date": "2026-10-20",
-  "latest_skip": null,
-  "pending": "2026-10-20",
-  "phase": "plan",
+  "latest_skip": "sent share lock BYRN 503 at open 5.15 costs 2609.89095 and book cash is 51.45415907377719; refusing to resize",
   "recipe": "union_hot_n4_h1__w0"
 }
