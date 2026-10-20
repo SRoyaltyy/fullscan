@@ -34,5 +34,9 @@ if len(sys.argv)>1 and sys.argv[1]=='--validation-batches':
     del sys.argv[1]
     runpy.run_module('scripts.scan_validation_batches',run_name='__main__')
     raise SystemExit
+if len(sys.argv)>1 and sys.argv[1]=='--backtest-export':
+    del sys.argv[1]
+    from scripts.export_backtest_static import main
+    raise SystemExit(main())
 sys.argv[0]='src.eval_correlation'
 runpy.run_module('src.eval_correlation',run_name='__main__')

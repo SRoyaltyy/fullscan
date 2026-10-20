@@ -2,10 +2,13 @@
 import json
 import random
 import unittest
+import tempfile
+from unittest.mock import patch
 from pathlib import Path
 
 from src.correlation import build_board
 from src.scanner_backtest import ENGINE, PAGE, Gate, dispatch, draw_article, present, run_article
+from src.scanner_backtest import open_program, profile_view, select_input, snapshot_metadata, load_test_articles
 
 
 class DrawTests(unittest.TestCase):
@@ -198,5 +201,92 @@ class StaticArtifactTests(unittest.TestCase):
         self.assertEqual(ENGINE, "evidence")
 
 
+class IntegrationTests(GateTests):
+    def test_headline_default_does_not_classify_the_body(self):
+        board = self.board()
+        article = {'id': 'body-only', 'title': 'Weather stays calm', 'text': 'Apple shares rise'}
+        self.assertEqual(run_article(board, article)['pass_count'], 0)
+        self.assertIn('AAPL', {r['ticker'] for r in run_article(board, article, input_mode='full-text')['passes']})
+
+    def test_article_preview_shows_scored_input_mode(self):
+        article = {'id': 'x', 'title': 'Weather stays calm', 'text': 'Apple shares rise'}
+        status, view, _ = dispatch(Gate([article]), 'GET', '/api/article')
+        self.assertEqual(status, 200)
+        self.assertEqual(view['text'], article['title'])
+        self.assertEqual(view['input_mode'], 'headline')
+
+    def test_full_primary_headline_is_not_display_title_truncation(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'articles.json'
+            title = 'Headline ' + 'long ' * 70
+            path.write_text(json.dumps([{'id': 'x', 'title': title, 'body': 'not scored'}]))
+            selected = select_input(load_test_articles(path)[0])
+            self.assertEqual(selected['text'], title)
+
+    def test_profile_api_reads_the_actual_scoring_board(self):
+        gate = Gate([])
+        gate.board, gate.ready = self.board(), True
+        from src.stock_evidence import compile_board
+        gate.board.evidence_board = compile_board(gate.board.source_rows)
+        status, profile, _ = dispatch(gate, 'GET', '/api/profile?ticker=aapl')
+        self.assertEqual(status, 200)
+        self.assertTrue(profile['used_for_scoring'])
+        self.assertEqual(profile['sources'], gate.board.evidence_board.profiles['AAPL'].sources)
+        self.assertEqual(dispatch(gate, 'GET', '/api/profile?ticker=missing')[0], 404)
+
+    def test_filing_overlay_requires_explicit_cutoff(self):
+        with patch('src.scanner_backtest.load_stocks', return_value=self.board().source_rows):
+            with self.assertRaisesRegex(ValueError, 'as-of'):
+                open_program(Path('/absent'), None, None, identity_filings=Path('/unused'))
+
+    def test_filing_overlay_is_strict_dated_and_not_full_business(self):
+        sections = {'AAPL': [
+            {'text': '"SkyWeb" refers to our satellite network.', 'kind': 'business',
+             'filing_date': '2026-01-02', 'accession': 'test-accession', 'source': 'PR642'},
+            {'text': '"FakeXml" refers to our software.', 'kind': 'machine_data'}]}
+        with patch('src.scanner_backtest.load_stocks', return_value=self.board().source_rows), \
+             patch('src.scanner_backtest.load_filing_sections', return_value=(sections, {'complete': True})) as reader:
+            board, _ = open_program(Path('/absent'), None, None,
+                                    identity_filings=Path('/objects'), as_of='2026-10-19')
+        reader.assert_called_once_with(Path('/objects'), as_of='2026-10-19', strict=True)
+        self.assertEqual(board.filing_coverage['covered_tickers'], ['AAPL'])
+        self.assertFalse(board.filing_coverage['full_business_coverage'])
+        facts = profile_view(board.evidence_board.profiles['AAPL'])['facts']
+        self.assertTrue(any(e['term'] == 'SkyWeb' and e.get('accession') == 'test-accession'
+                            for group in facts.values() for e in group))
+        self.assertFalse(any(e['term'] == 'FakeXml' for group in facts.values() for e in group))
+
+    def test_present_retains_company_filing_witness(self):
+        witness = {'filing_date': '2026-01-02', 'accession': 'test', 'passage': 'complete witness'}
+        result = present({'stocks': [{'pass': True, 'ticker': 'OWN', 'evidence': [{'stock_evidence': witness}]}]})
+        self.assertEqual(result['passes'][0]['evidence'][0]['stock_evidence'], witness)
+
+    def test_snapshot_is_deterministic_and_input_mode_specific(self):
+        from src.stock_evidence import compile_board
+        board = self.board()
+        board.evidence_board = compile_board(board.source_rows)
+        one = snapshot_metadata(board)
+        self.assertEqual(one, snapshot_metadata(board))
+        self.assertNotEqual(one['snapshot_id'], snapshot_metadata(board, 'full-text')['snapshot_id'])
+        self.assertEqual(one['compiler_version'], 'stock-evidence-2.7')
+        self.assertIn('src/data/territories.json', one['source_hashes'])
+
+    def test_bad_json_types_are_rejected(self):
+        for body in (b'[]', b'null', b'"value"', b'\xff'):
+            self.assertEqual(dispatch(Gate([]), 'POST', '/api/test', body)[0], 400)
+
+    def test_snapshot_also_binds_dates_and_industry_not_only_passage_text(self):
+        from src.stock_evidence import compile_board
+        board = self.board()
+        board.evidence_board = compile_board(board.source_rows)
+        before = snapshot_metadata(board)['snapshot_id']
+        board.evidence_board.profiles['AAPL'].sources[0]['filing_date'] = '2026-01-02'
+        after_date = snapshot_metadata(board)['snapshot_id']
+        self.assertNotEqual(before, after_date)
+        board.evidence_board.profiles['AAPL'].industry = 'Different Industry'
+        self.assertNotEqual(after_date, snapshot_metadata(board)['snapshot_id'])
+
+
 if __name__ == "__main__":
     unittest.main()
+

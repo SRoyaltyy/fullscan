@@ -1,0 +1,74 @@
+name: Scanner backtest integration
+on:
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'scripts/**'
+      - 'eval/**'
+      - 'dashboard/scanner-backtest/**'
+      - '.github/workflows/scanner-backtest-integration.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            src
+            scripts
+            eval
+            dashboard/scanner-backtest
+            excel_bot/data/finviz_with_descriptions.csv
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Bootstrap pinned dictionaries, separately from scanning
+        run: |
+          python -m pip install PyYAML==6.0.3
+          python -m scripts.bootstrap_semantics
+      - name: Offline regressions and integration controls
+        run: >-
+          python -I -S scripts/offline_evidence_checks.py --unittest
+          src.test_correlation src.test_eval_harness src.test_evidence_matcher
+          src.test_scanner_backtest scripts.test_materialize_filing_texts
+          scripts.test_scan_validation_batches scripts.test_export_backtest_static
+      - name: Export synthetic headline snapshot with sockets disabled
+        run: >-
+          python -I -S scripts/offline_evidence_checks.py --backtest-export
+          --news eval/scanner-backtest-smoke.json --workers 1
+          --out-dir "$RUNNER_TEMP/scanner-backtest-smoke"
+      - name: Confirm headline-only results and exact-board profiles
+        env:
+          SMOKE_DIR: ${{ runner.temp }}/scanner-backtest-smoke
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          root = Path(os.environ['SMOKE_DIR'])
+          rows = {r['id']: r for r in map(json.loads, (root/'results.jsonl').read_text().splitlines())}
+          assert len(rows) == 3
+          assert 'AAPL' in {s['ticker'] for s in rows['synthetic-apple']['passes']}
+          assert rows['synthetic-body-only']['pass_count'] == 0
+          meta = json.loads((root/'meta.json').read_text())
+          assert meta['snapshot']['input_mode'] == 'headline'
+          assert all(r['snapshot_id'] == meta['snapshot']['snapshot_id'] for r in rows.values())
+          profiles = json.loads((root/'profiles.json').read_text())
+          assert profiles['AAPL']['used_for_scoring']
+          print('Synthetic headline export and exact-board profiles verified; not an accuracy benchmark.')
+          PY
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check page JavaScript and snapshot states
+        run: node scripts/test_backtest_page.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: scanner-backtest-synthetic-smoke
+          path: ${{ runner.temp }}/scanner-backtest-smoke/
+          retention-days: 7
