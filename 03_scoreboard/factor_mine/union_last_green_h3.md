@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_green, no 🚨
 
-Cash book **-23.02%** ($7,697) · signal-only (no cash/fees) was +37.42%. Starts YES **3/30**. Fills 281 · skips 312 · realized $-335.16.
+Cash book **-22.98%** ($7,702) · signal-only (no cash/fees) was +37.42%. Starts YES **3/30**. Fills 282 · skips 312 · realized $-335.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -447,6 +447,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `WMG` | 30 | $31.26 | $2.08 | — | $1,124.84 | — | union ∩ last_green, no 🚨; gate last_green=True; list ohlc_hot; ret5=+9.3; leftover $938.32 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `ACN` | 4 | $228.48 | $2.00 | — | $208.91 | — | union ∩ last_green, no 🚨; gate last_green=True; list ohlc_hot; ret5=+10.7; leftover $938.32 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $208.91 | ▼ close $7,697.47 vs 09:30 $7,751.93 (session -25.37) | 16:00 close · cash $208.91 · equity $7,697.47 vs 09:30 $7,751.93 (-54.46; session marks -25.37) · 11 name(s) marked open→close (per-name table). AVPT×1 09:30 $14.35 → close $14.74 +0.39; EGG×221 09:30 $5.07 → close $4.99 -17.68; PRMB×1 09:30 $19.22 → close $19.79 +0.57; SMMT×1 09:30 $14.90 → close $15.57 +0.67; EPR×16 09:30 $55.28 → close $54.28 -16.00; POOL×5 09:30 $171.48 → close $168.07 -17.05; AMX×41 09:30 $22.84 → close $22.83 -0.41; TBBB×16 09:30 $58.00 → close $58.39 +6.24; BTI×15 09:30 $59.13 → close $58.51 -9.30; WMG×30 09:30 $31.26 → close $31.04 -6.60; ACN×4 09:30 $228.48 → close $236.93 +33.80 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $208.91 | ▼ 09:30 equity $7,682.34 vs yday $7,697.47 (-15.13) | 09:30 open · cash $208.91 (unchanged overnight, no fees) · equity $7,682.34 vs prior close $7,697.47 (-15.13) · 11 name(s) re-marked at the open (per-name table). ACN×4 yday $236.93 → 09:30 $238.00 +4.28; AMX×41 yday $22.83 → 09:30 $22.93 +4.10; AVPT×1 yday $14.74 → 09:30 $14.80 +0.06; BTI×15 yday $58.51 → 09:30 $58.94 +6.38; EGG×221 yday $4.99 → 09:30 $4.80 -41.99; EPR×16 yday $54.28 → 09:30 $54.56 +4.48; POOL×5 yday $168.07 → 09:30 $168.23 +0.80; PRMB×1 yday $19.79 → 09:30 $19.77 -0.02; SMMT×1 yday $15.57 → 09:30 $15.50 -0.07; TBBB×16 yday $58.39 → 09:30 $58.65 +4.16; WMG×30 yday $31.04 → 09:30 $31.13 +2.70 | — |
+| 2026-10-20 09:30 ET | **SELL** | `EGG` | 221 | $4.80 | $2.90 | $+95.91 | $1,266.81 | ▲ +95.91 after sell → book $7,679.45; vs 09:30 mark -2.89 | dropped from list after 4 sess (min 3) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,266.81 | ▲ close $7,702.45 vs 09:30 $7,682.34 (session +23.00) | 16:00 close · cash $1,266.81 · equity $7,702.45 vs 09:30 $7,682.34 (+20.11; session marks +23.00) · 10 name(s) marked open→close (per-name table). ACN×4 09:30 $238.00 → close $239.12 +4.48; AMX×41 09:30 $22.93 → close $22.90 -1.23; AVPT×1 09:30 $14.80 → close $15.23 +0.43; BTI×15 09:30 $58.94 → close $59.11 +2.62; EPR×16 09:30 $54.56 → close $55.37 +12.96; POOL×5 09:30 $168.23 → close $171.71 +17.40; PRMB×1 09:30 $19.77 → close $20.00 +0.23; SMMT×1 09:30 $15.50 → close $16.09 +0.59; TBBB×16 09:30 $58.65 → close $57.37 -20.48; WMG×30 09:30 $31.13 → close $31.33 +6.00 | — |
 
 ## Not taken
 

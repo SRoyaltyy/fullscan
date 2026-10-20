@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `yday_gainer` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-27.21%** ($7,279) · signal-only (no cash/fees) was +49.33%. Starts YES **2/30**. Fills 277 · skips 312 · realized $-869.27.
+Cash book **-26.01%** ($7,399) · signal-only (no cash/fees) was +49.33%. Starts YES **2/30**. Fills 277 · skips 312 · realized $-869.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -439,6 +439,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.85 | ▲ 09:30 equity $7,288.95 vs yday $7,191.40 (+97.55) | 09:30 open · cash $2.85 (unchanged overnight, no fees) · equity $7,288.95 vs prior close $7,191.40 (+97.55) · 9 name(s) re-marked at the open (per-name table). ACRS×26 yday $3.28 → 09:30 $3.28 +0.00; AIP×45 yday $18.76 → 09:30 $19.38 +27.90; CXW×27 yday $30.67 → 09:30 $31.06 +10.53; EPR×17 yday $55.71 → 09:30 $55.28 -7.31; NVTS×94 yday $8.34 → 09:30 $8.84 +47.00; PDFS×20 yday $39.22 → 09:30 $41.29 +41.40; PRMB×50 yday $19.72 → 09:30 $19.22 -25.00; SMMT×61 yday $14.63 → 09:30 $14.90 +16.47; TRU×14 yday $74.08 → 09:30 $73.12 -13.44 | — |
 | 2026-10-19 09:30 ET | **SELL** | `TRU` | 14 | $73.12 | $2.05 | $+89.72 | $1,024.48 | ▲ +89.72 after sell → book $7,286.90; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,024.48 | ▼ close $7,278.51 vs 09:30 $7,288.95 (session -8.39) | 16:00 close · cash $1,024.48 · equity $7,278.51 vs 09:30 $7,288.95 (-10.44; session marks -8.39) · 8 name(s) marked open→close (per-name table). ACRS×26 09:30 $3.28 → close $3.48 +5.20; AIP×45 09:30 $19.38 → close $19.08 -13.50; CXW×27 09:30 $31.06 → close $29.90 -31.32; EPR×17 09:30 $55.28 → close $54.28 -17.00; NVTS×94 09:30 $8.84 → close $8.63 -19.74; PDFS×20 09:30 $41.29 → close $41.22 -1.40; PRMB×50 09:30 $19.22 → close $19.79 +28.50; SMMT×61 09:30 $14.90 → close $15.57 +40.87 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,024.48 | ▼ 09:30 equity $7,216.46 vs yday $7,278.51 (-62.05) | 09:30 open · cash $1,024.48 (unchanged overnight, no fees) · equity $7,216.46 vs prior close $7,278.51 (-62.05) · 8 name(s) re-marked at the open (per-name table). ACRS×26 yday $3.48 → 09:30 $3.37 -2.86; AIP×45 yday $19.08 → 09:30 $18.64 -19.80; CXW×27 yday $29.90 → 09:30 $29.96 +1.62; EPR×17 yday $54.28 → 09:30 $54.56 +4.76; NVTS×94 yday $8.63 → 09:30 $8.38 -23.50; PDFS×20 yday $41.22 → 09:30 $40.37 -17.00; PRMB×50 yday $19.79 → 09:30 $19.77 -1.00; SMMT×61 yday $15.57 → 09:30 $15.50 -4.27 | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,024.48 | ▲ close $7,398.82 vs 09:30 $7,216.46 (session +182.36) | 16:00 close · cash $1,024.48 · equity $7,398.82 vs 09:30 $7,216.46 (+182.36; session marks +182.36) · 8 name(s) marked open→close (per-name table). ACRS×26 09:30 $3.37 → close $3.77 +10.40; AIP×45 09:30 $18.64 → close $19.76 +50.40; CXW×27 09:30 $29.96 → close $30.34 +10.26; EPR×17 09:30 $54.56 → close $55.37 +13.77; NVTS×94 09:30 $8.38 → close $8.74 +33.84; PDFS×20 09:30 $40.37 → close $41.18 +16.20; PRMB×50 09:30 $19.77 → close $20.00 +11.50; SMMT×61 09:30 $15.50 → close $16.09 +35.99 | — |
 
 ## Not taken
 

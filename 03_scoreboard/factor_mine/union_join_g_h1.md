@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ join_g, no 🚨
 
-Cash book **-14.92%** ($8,508) · signal-only (no cash/fees) was -3.42%. Starts YES **0/30**. Fills 427 · skips 104 · realized $-96.65.
+Cash book **-15.28%** ($8,472) · signal-only (no cash/fees) was -3.42%. Starts YES **0/30**. Fills 434 · skips 104 · realized $-96.65.
 
 ## How this sleeve decides (like you are 10)
 
@@ -593,6 +593,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `ACRS` | 317 | $3.28 | $4.09 | — | $2,447.85 | — | union ∩ join_g, no 🚨; gate join=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-14.4; leftover $1041.46 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `KURA` | 113 | $9.17 | $2.33 | — | $1,409.31 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer,yday_mover; 🔵; ret5=-14.3; leftover $1041.46 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,409.31 | ▲ close $8,507.71 vs 09:30 $8,348.81 (session +192.76) | 16:00 close · cash $1,409.31 · equity $8,507.71 vs 09:30 $8,348.81 (+158.90; session marks +192.76) · 7 name(s) marked open→close (per-name table). VEEV×3 09:30 $310.33 → close $316.80 +19.41; ILMN×3 09:30 $268.93 → close $262.66 -18.81; ARQT×35 09:30 $29.41 → close $31.89 +86.80; PACS×22 09:30 $47.02 → close $45.85 -25.74; SMMT×69 09:30 $14.90 → close $15.57 +46.23; ACRS×317 09:30 $3.28 → close $3.48 +63.40; KURA×113 09:30 $9.17 → close $9.36 +21.47 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,409.31 | ▼ 09:30 equity $8,489.05 vs yday $8,507.71 (-18.66) | 09:30 open · cash $1,409.31 (unchanged overnight, no fees) · equity $8,489.05 vs prior close $8,507.71 (-18.66) · 7 name(s) re-marked at the open (per-name table). ACRS×317 yday $3.48 → 09:30 $3.37 -34.87; ARQT×35 yday $31.89 → 09:30 $31.89 +0.00; ILMN×3 yday $262.66 → 09:30 $264.13 +4.41; KURA×113 yday $9.36 → 09:30 $9.45 +10.17; PACS×22 yday $45.85 → 09:30 $45.98 +2.86; SMMT×69 yday $15.57 → 09:30 $15.50 -4.83; VEEV×3 yday $316.80 → 09:30 $318.00 +3.60 | — |
+| 2026-10-20 09:30 ET | **SELL** | `ACRS` | 317 | $3.37 | $4.15 | $+20.29 | $2,473.45 | ▲ +20.29 after sell → book $8,484.90; vs 09:30 mark -4.15 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `ARQT` | 35 | $31.89 | $2.12 | $+82.59 | $3,587.48 | ▲ +82.59 after sell → book $8,482.78; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `ILMN` | 3 | $264.13 | $2.02 | $-18.42 | $4,377.85 | ▼ -18.42 after sell → book $8,480.76; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `KURA` | 113 | $9.45 | $2.36 | $+26.95 | $5,443.35 | ▲ +26.95 after sell → book $8,478.41; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `PACS` | 22 | $45.98 | $2.08 | $-27.01 | $6,452.83 | ▼ -27.01 after sell → book $8,476.33; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `SMMT` | 69 | $15.50 | $2.22 | $+36.98 | $7,520.11 | ▲ +36.98 after sell → book $8,474.11; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `VEEV` | 3 | $318.00 | $2.02 | $+18.99 | $8,472.09 | ▲ +18.99 after sell → book $8,472.09; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,472.09 | ▲ close $8,472.09 vs 09:30 $8,489.05 (session +0.00) | 16:00 close · cash $8,472.09 · no lots left · equity $8,472.09. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+19.66%** ($11,966) · signal-only (no cash/fees) was +337.30%. Starts YES **29/30**. Fills 313 · skips 286 · realized $+834.44.
+Cash book **+21.69%** ($12,169) · signal-only (no cash/fees) was +337.30%. Starts YES **29/30**. Fills 320 · skips 286 · realized $+834.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -478,6 +478,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `AMX` | 78 | $22.84 | $2.22 | — | $1,957.40 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer; ret5=+7.5; leftover $1793.21 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `VEEV` | 5 | $310.33 | $2.00 | — | $403.74 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; 🔵; ret5=+4.8; leftover $1793.21 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $403.74 | ▲ close $11,965.91 vs 09:30 $11,742.03 (session +249.08) | 16:00 close · cash $403.74 · equity $11,965.91 vs 09:30 $11,742.03 (+223.88; session marks +249.08) · 15 name(s) marked open→close (per-name table). ACHC×5 09:30 $30.16 → close $30.18 +0.10; COP×1 09:30 $145.73 → close $145.24 -0.49; DOCU×2 09:30 $74.53 → close $76.66 +4.26; LW×3 09:30 $52.87 → close $53.44 +1.71; MDT×1 09:30 $93.80 → close $92.77 -1.03; NAUT×91 09:30 $2.03 → close $2.63 +54.60; PACS×1 09:30 $47.02 → close $45.85 -1.17; RELX×4 09:30 $38.96 → close $39.25 +1.16; TRU×22 09:30 $73.12 → close $73.12 +0.00; VFC×4 09:30 $16.75 → close $17.14 +1.56; EOG×11 09:30 $157.52 → close $157.65 +1.43; ALL×7 09:30 $245.91 → close $246.85 +6.58; ARQT×60 09:30 $29.41 → close $31.89 +148.80; AMX×78 09:30 $22.84 → close $22.83 -0.78; VEEV×5 09:30 $310.33 → close $316.80 +32.35 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $403.74 | ▲ 09:30 equity $12,084.67 vs yday $11,965.91 (+118.76) | 09:30 open · cash $403.74 (unchanged overnight, no fees) · equity $12,084.67 vs prior close $11,965.91 (+118.76) · 15 name(s) re-marked at the open (per-name table). ACHC×5 yday $30.18 → 09:30 $30.25 +0.35; ALL×7 yday $246.85 → 09:30 $250.00 +22.05; AMX×78 yday $22.83 → 09:30 $22.93 +7.80; ARQT×60 yday $31.89 → 09:30 $31.89 +0.00; COP×1 yday $145.24 → 09:30 $147.15 +1.91; DOCU×2 yday $76.66 → 09:30 $77.21 +1.10; EOG×11 yday $157.65 → 09:30 $159.86 +24.31; LW×3 yday $53.44 → 09:30 $53.94 +1.50; MDT×1 yday $92.77 → 09:30 $93.53 +0.76; NAUT×91 yday $2.63 → 09:30 $2.62 -1.36; PACS×1 yday $45.85 → 09:30 $45.98 +0.13; RELX×4 yday $39.25 → 09:30 $39.08 -0.70; TRU×22 yday $73.12 → 09:30 $75.62 +55.00; VEEV×5 yday $316.80 → 09:30 $318.00 +6.00; VFC×4 yday $17.14 → 09:30 $17.12 -0.08 | — |
+| 2026-10-20 09:30 ET | **SELL** | `ACHC` | 5 | $30.25 | $1.55 | $-10.25 | $553.44 | ▼ -10.25 after sell → book $12,083.12; vs 09:30 mark -1.55 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 1 | $147.15 | $1.49 | $+1.22 | $699.10 | ▲ +1.22 after sell → book $12,081.63; vs 09:30 mark -1.49 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `DOCU` | 2 | $77.21 | $1.57 | $+0.84 | $851.95 | ▲ +0.84 after sell → book $12,080.06; vs 09:30 mark -1.57 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `LW` | 3 | $53.94 | $1.65 | $-2.82 | $1,012.12 | ▼ -2.82 after sell → book $12,078.41; vs 09:30 mark -1.65 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `MDT` | 1 | $93.53 | $0.96 | $-3.39 | $1,104.69 | ▼ -3.39 after sell → book $12,077.45; vs 09:30 mark -0.96 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `NAUT` | 91 | $2.62 | $2.29 | $+45.15 | $1,340.36 | ▲ +45.15 after sell → book $12,075.16; vs 09:30 mark -2.29 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `RELX` | 4 | $39.08 | $1.59 | $+1.23 | $1,495.07 | ▲ +1.23 after sell → book $12,073.57; vs 09:30 mark -1.59 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,495.07 | ▲ close $12,168.82 vs 09:30 $12,084.67 (session +95.25) | 16:00 close · cash $1,495.07 · equity $12,168.82 vs 09:30 $12,084.67 (+84.15; session marks +95.25) · 8 name(s) marked open→close (per-name table). ALL×7 09:30 $250.00 → close $249.91 -0.63; AMX×78 09:30 $22.93 → close $22.90 -2.34; ARQT×60 09:30 $31.89 → close $32.82 +55.80; EOG×11 09:30 $159.86 → close $157.91 -21.45; PACS×1 09:30 $45.98 → close $47.72 +1.74; TRU×22 09:30 $75.62 → close $78.23 +57.42; VEEV×5 09:30 $318.00 → close $318.67 +3.35; VFC×4 09:30 $17.12 → close $17.46 +1.36 | — |
 
 ## Not taken
 

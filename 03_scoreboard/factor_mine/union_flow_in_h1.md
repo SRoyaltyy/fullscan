@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **+10.08%** ($11,008) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 116 · skips 27 · realized $+766.09.
+Cash book **+9.74%** ($10,974) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 118 · skips 27 · realized $+766.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -282,6 +282,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `PRIM` | 73 | $75.36 | $2.21 | — | $5,526.54 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list yday_gainer,yday_mover; 🔵; ret5=-12.4; leftover $5515.02 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `BR` | 31 | $173.69 | $2.08 | — | $140.07 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; ret5=+5.8; leftover $5515.02 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $140.07 | ▼ close $11,008.02 vs 09:30 $11,038.54 (session -17.72) | 16:00 close · cash $140.07 · equity $11,008.02 vs 09:30 $11,038.54 (-30.52; session marks -17.72) · 2 name(s) marked open→close (per-name table). PRIM×73 09:30 $75.36 → close $74.51 -62.05; BR×31 09:30 $173.69 → close $175.12 +44.33 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $140.07 | ▼ 09:30 equity $10,978.69 vs yday $11,008.02 (-29.33) | 09:30 open · cash $140.07 (unchanged overnight, no fees) · equity $10,978.69 vs prior close $11,008.02 (-29.33) · 2 name(s) re-marked at the open (per-name table). BR×31 yday $175.12 → 09:30 $177.40 +70.68; PRIM×73 yday $74.51 → 09:30 $73.14 -100.01 | — |
+| 2026-10-20 09:30 ET | **SELL** | `BR` | 31 | $177.40 | $2.14 | $+110.79 | $5,637.33 | ▲ +110.79 after sell → book $10,976.55; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `PRIM` | 73 | $73.14 | $2.26 | $-166.53 | $10,974.29 | ▼ -166.53 after sell → book $10,974.29; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,974.29 | ▲ close $10,974.29 vs 09:30 $10,978.69 (session +0.00) | 16:00 close · cash $10,974.29 · no lots left · equity $10,974.29. | — |
 
 ## Not taken
 

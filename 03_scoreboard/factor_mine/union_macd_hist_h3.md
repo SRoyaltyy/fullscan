@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-15.58%** ($8,442) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 272 · skips 257 · realized $-743.63.
+Cash book **-14.82%** ($8,518) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 276 · skips 257 · realized $-743.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -437,6 +437,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `VEEV` | 3 | $310.33 | $2.00 | — | $2,152.84 | — | rank by macd_hist; rank macd_hist; list flatten; 🔵; ret5=+4.8; leftover $1071.75 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-19 09:30 ET | **BUY** | `POOL` | 6 | $171.48 | $2.01 | — | $1,121.95 | — | rank by macd_hist; rank macd_hist; list yday_gainer; 🔵; ret5=+8.2; leftover $1071.75 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,121.95 | ▲ close $8,442.28 vs 09:30 $8,428.36 (session +38.12) | 16:00 close · cash $1,121.95 · equity $8,442.28 vs 09:30 $8,428.36 (+13.92; session marks +38.12) · 12 name(s) marked open→close (per-name table). CAH×1 09:30 $252.04 → close $252.65 +0.61; COP×2 09:30 $145.73 → close $145.24 -0.98; CRS×2 09:30 $381.30 → close $378.51 -5.58; EFX×1 09:30 $159.08 → close $158.57 -0.51; JBHT×1 09:30 $227.30 → close $223.25 -4.05; PSX×1 09:30 $293.17 → close $290.55 -2.62; LMT×1 09:30 $540.97 → close $548.23 +7.26; ACN×4 09:30 $228.48 → close $236.93 +33.80; ALL×4 09:30 $245.91 → close $246.85 +3.76; WM×4 09:30 $224.54 → close $226.41 +7.48; VEEV×3 09:30 $310.33 → close $316.80 +19.41; POOL×6 09:30 $171.48 → close $168.07 -20.46 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,121.95 | ▲ 09:30 equity $8,480.26 vs yday $8,442.28 (+37.98) | 09:30 open · cash $1,121.95 (unchanged overnight, no fees) · equity $8,480.26 vs prior close $8,442.28 (+37.98) · 12 name(s) re-marked at the open (per-name table). ACN×4 yday $236.93 → 09:30 $238.00 +4.28; ALL×4 yday $246.85 → 09:30 $250.00 +12.60; CAH×1 yday $252.65 → 09:30 $255.00 +2.35; COP×2 yday $145.24 → 09:30 $147.15 +3.82; CRS×2 yday $378.51 → 09:30 $372.13 -12.76; EFX×1 yday $158.57 → 09:30 $166.11 +7.54; JBHT×1 yday $223.25 → 09:30 $223.41 +0.16; LMT×1 yday $548.23 → 09:30 $553.00 +4.77; POOL×6 yday $168.07 → 09:30 $168.23 +0.96; PSX×1 yday $290.55 → 09:30 $291.65 +1.10; VEEV×3 yday $316.80 → 09:30 $318.00 +3.60; WM×4 yday $226.41 → 09:30 $228.80 +9.56 | — |
+| 2026-10-20 09:30 ET | **SELL** | `CAH` | 1 | $255.00 | $2.01 | $-1.01 | $1,374.94 | ▼ -1.01 after sell → book $8,478.25; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 2 | $147.15 | $2.02 | $+4.29 | $1,667.22 | ▲ +4.29 after sell → book $8,476.23; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `JBHT` | 1 | $223.41 | $2.01 | $-13.53 | $1,888.62 | ▼ -13.53 after sell → book $8,474.22; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `PSX` | 1 | $291.65 | $2.01 | $-7.35 | $2,178.26 | ▼ -7.35 after sell → book $8,472.20; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,178.26 | ▲ close $8,517.88 vs 09:30 $8,480.26 (session +45.67) | 16:00 close · cash $2,178.26 · equity $8,517.88 vs 09:30 $8,480.26 (+37.61; session marks +45.67) · 8 name(s) marked open→close (per-name table). ACN×4 09:30 $238.00 → close $239.12 +4.48; ALL×4 09:30 $250.00 → close $249.91 -0.36; CRS×2 09:30 $372.13 → close $372.53 +0.80; EFX×1 09:30 $166.11 → close $176.54 +10.43; LMT×1 09:30 $553.00 → close $548.71 -4.29; POOL×6 09:30 $168.23 → close $171.71 +20.88; VEEV×3 09:30 $318.00 → close $318.67 +2.01; WM×4 09:30 $228.80 → close $231.73 +11.72 | — |
 
 ## Not taken
 

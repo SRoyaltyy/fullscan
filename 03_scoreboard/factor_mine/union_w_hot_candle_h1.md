@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+13.65%** ($11,365) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 415 · skips 97 · realized $+14.68.
+Cash book **+14.26%** ($11,426) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 422 · skips 97 · realized $+14.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -580,6 +580,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `SU` | 18 | $77.39 | $2.04 | — | $1,613.03 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+8.1; leftover $1412.76 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `WM` | 6 | $224.54 | $2.01 | — | $263.78 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+8.6; leftover $1412.76 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $263.78 | ▲ close $11,365.47 vs 09:30 $11,382.41 (session +24.40) | 16:00 close · cash $263.78 · equity $11,365.47 vs 09:30 $11,382.41 (-16.94; session marks +24.40) · 8 name(s) marked open→close (per-name table). NAVN×57 09:30 $25.72 → close $25.67 -2.85; WMG×45 09:30 $31.26 → close $31.04 -9.90; BR×8 09:30 $173.69 → close $175.12 +11.44; OTIS×19 09:30 $71.11 → close $71.04 -1.33; HONA×8 09:30 $169.10 → close $162.49 -52.88; ACN×6 09:30 $228.48 → close $236.93 +50.70; SU×18 09:30 $77.39 → close $78.39 +18.00; WM×6 09:30 $224.54 → close $226.41 +11.22 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $263.78 | ▲ 09:30 equity $11,434.20 vs yday $11,365.47 (+68.73) | 09:30 open · cash $263.78 (unchanged overnight, no fees) · equity $11,434.20 vs prior close $11,365.47 (+68.73) · 8 name(s) re-marked at the open (per-name table). ACN×6 yday $236.93 → 09:30 $238.00 +6.42; BR×8 yday $175.12 → 09:30 $177.40 +18.24; HONA×8 yday $162.49 → 09:30 $162.75 +2.08; NAVN×57 yday $25.67 → 09:30 $25.67 +0.00; OTIS×19 yday $71.04 → 09:30 $71.42 +7.22; SU×18 yday $78.39 → 09:30 $79.30 +16.38; WM×6 yday $226.41 → 09:30 $228.80 +14.34; WMG×45 yday $31.04 → 09:30 $31.13 +4.05 | — |
+| 2026-10-20 09:30 ET | **SELL** | `BR` | 8 | $177.40 | $2.04 | $+25.63 | $1,680.94 | ▲ +25.63 after sell → book $11,432.16; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `HONA` | 8 | $162.75 | $2.03 | $-54.85 | $2,980.91 | ▼ -54.85 after sell → book $11,430.13; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `NAVN` | 57 | $25.67 | $2.18 | $+22.45 | $4,441.92 | ▲ +22.45 after sell → book $11,427.95; vs 09:30 mark -2.18 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `OTIS` | 19 | $71.42 | $2.07 | $+1.78 | $5,796.83 | ▲ +1.78 after sell → book $11,425.88; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `SU` | 18 | $79.30 | $2.07 | $+30.27 | $7,222.16 | ▲ +30.27 after sell → book $11,423.81; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `WM` | 6 | $228.80 | $2.03 | $+21.52 | $8,592.94 | ▲ +21.52 after sell → book $11,421.79; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `WMG` | 45 | $31.13 | $2.15 | $-10.12 | $9,991.64 | ▼ -10.12 after sell → book $11,419.64; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,991.64 | ▲ close $11,426.36 vs 09:30 $11,434.20 (session +6.72) | 16:00 close · cash $9,991.64 · equity $11,426.36 vs 09:30 $11,434.20 (-7.84; session marks +6.72) · 1 name(s) marked open→close (per-name table). ACN×6 09:30 $238.00 → close $239.12 +6.72 | — |
 
 ## Not taken
 

@@ -416,6 +416,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **SELL** | `QSI` | 5 | $1.15 | $0.09 | $-1.83 | $7,386.67 | ▼ -1.83 after sell → book $7,435.83; vs 09:30 mark -0.10 | dropped from list after 5 sess (min 5) | — |
 | 2026-10-19 09:30 ET | **SELL** | `RXRX` | 1 | $3.53 | $0.06 | $-0.88 | $7,390.14 | ▼ -0.88 after sell → book $7,435.77; vs 09:30 mark -0.06 | dropped from list after 5 sess (min 5) | — |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,390.14 | ▼ close $7,435.05 vs 09:30 $7,436.02 (session -0.72) | 16:00 close · cash $7,390.14 · equity $7,435.05 vs 09:30 $7,436.02 (-0.97; session marks -0.72) · 1 name(s) marked open→close (per-name table). EGG×9 09:30 $5.07 → close $4.99 -0.72 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,390.14 | ▼ 09:30 equity $7,433.34 vs yday $7,435.05 (-1.71) | 09:30 open · cash $7,390.14 (unchanged overnight, no fees) · equity $7,433.34 vs prior close $7,435.05 (-1.71) · 1 name(s) re-marked at the open (per-name table). EGG×9 yday $4.99 → 09:30 $4.80 -1.71 | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,390.14 | ▲ close $7,435.14 vs 09:30 $7,433.34 (session +1.80) | 16:00 close · cash $7,390.14 · equity $7,435.14 vs 09:30 $7,433.34 (+1.80; session marks +1.80) · 1 name(s) marked open→close (per-name table). EGG×9 09:30 $4.80 → close $5.00 +1.80 | — |
 
 ## Not taken
 

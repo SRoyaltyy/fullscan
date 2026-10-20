@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ e_fresh, no 🚨
 
-Cash book **-16.77%** ($8,323) · signal-only (no cash/fees) was +7.74%. Starts YES **29/30**. Fills 169 · skips 198 · realized $+4004.41.
+Cash book **-16.89%** ($8,311) · signal-only (no cash/fees) was +7.74%. Starts YES **29/30**. Fills 176 · skips 198 · realized $+4004.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -336,6 +336,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **SELL** | `MS` | 9 | $181.54 | $2.04 | $+5.75 | $5,301.91 | ▲ +5.75 after sell → book $8,339.31; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-19 09:30 ET | **SELL** | `PGR` | 7 | $216.94 | $2.03 | $+65.75 | $6,818.46 | ▲ +65.75 after sell → book $8,337.28; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,818.46 | ▼ close $8,322.99 vs 09:30 $8,345.58 (session -14.29) | 16:00 close · cash $6,818.46 · equity $8,322.99 vs 09:30 $8,345.58 (-22.59; session marks -14.29) · 10 name(s) marked open→close (per-name table). AA×1 09:30 $41.79 → close $41.67 -0.12; BNY×1 09:30 $143.00 → close $142.44 -0.56; CMC×3 09:30 $65.79 → close $64.54 -3.75; ERIC×24 09:30 $10.42 → close $10.34 -1.92; FHN×11 09:30 $22.88 → close $22.73 -1.65; PLD×1 09:30 $124.83 → close $124.09 -0.74; PNC×1 09:30 $217.32 → close $216.21 -1.11; RF×2 09:30 $27.40 → close $27.20 -0.40; SCHW×2 09:30 $91.60 → close $89.58 -4.04; WSE×5 09:30 $10.95 → close $10.95 +0.00 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,818.46 | ▼ 09:30 equity $8,321.66 vs yday $8,322.99 (-1.33) | 09:30 open · cash $6,818.46 (unchanged overnight, no fees) · equity $8,321.66 vs prior close $8,322.99 (-1.33) · 10 name(s) re-marked at the open (per-name table). AA×1 yday $41.67 → 09:30 $40.72 -0.95; BNY×1 yday $142.44 → 09:30 $142.05 -0.39; CMC×3 yday $64.54 → 09:30 $63.49 -3.15; ERIC×24 yday $10.34 → 09:30 $10.38 +0.96; FHN×11 yday $22.73 → 09:30 $22.76 +0.33; PLD×1 yday $124.09 → 09:30 $124.85 +0.76; PNC×1 yday $216.21 → 09:30 $217.13 +0.92; RF×2 yday $27.20 → 09:30 $27.25 +0.10; SCHW×2 yday $89.58 → 09:30 $89.60 +0.04; WSE×5 yday $10.95 → 09:30 $10.96 +0.05 | — |
+| 2026-10-20 09:30 ET | **SELL** | `BNY` | 1 | $142.05 | $1.44 | $-0.60 | $6,959.07 | ▼ -0.60 after sell → book $8,320.22; vs 09:30 mark -1.44 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `CMC` | 3 | $63.49 | $1.93 | $-21.60 | $7,147.60 | ▼ -21.60 after sell → book $8,318.28; vs 09:30 mark -1.94 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `ERIC` | 24 | $10.38 | $2.08 | $-10.60 | $7,394.64 | ▼ -10.60 after sell → book $8,316.20; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `FHN` | 11 | $22.76 | $2.04 | $+0.55 | $7,642.96 | ▲ +0.55 after sell → book $8,314.16; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `PLD` | 1 | $124.85 | $1.27 | $-9.78 | $7,766.54 | ▼ -9.78 after sell → book $8,312.89; vs 09:30 mark -1.27 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `PNC` | 1 | $217.13 | $2.01 | $+4.63 | $7,981.65 | ▲ +4.63 after sell → book $8,310.87; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `SCHW` | 2 | $89.60 | $1.82 | $-11.28 | $8,159.04 | ▼ -11.28 after sell → book $8,309.06; vs 09:30 mark -1.81 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,159.04 | ▲ close $8,310.58 vs 09:30 $8,321.66 (session +1.52) | 16:00 close · cash $8,159.04 · equity $8,310.58 vs 09:30 $8,321.66 (-11.08; session marks +1.52) · 3 name(s) marked open→close (per-name table). AA×1 09:30 $40.72 → close $40.79 +0.07; RF×2 09:30 $27.25 → close $27.85 +1.20; WSE×5 09:30 $10.96 → close $11.01 +0.25 | — |
 
 ## Not taken
 

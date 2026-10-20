@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #10 NR7 + moderate momentum
 
-Cash book **-2.53%** ($9,747) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 81 · skips 16 · realized $+1589.64.
+Cash book **-2.22%** ($9,778) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 83 · skips 16 · realized $+1589.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -249,6 +249,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `AMX` | 143 | $22.84 | $2.42 | — | $3,269.54 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list yday_gainer; ret5=+7.5; leftover $3268.03 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `EPR` | 59 | $55.28 | $2.17 | — | $5.85 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.8; leftover $3268.03 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.85 | ▼ close $9,746.76 vs 09:30 $9,808.48 (session -50.45) | 16:00 close · cash $5.85 · equity $9,746.76 vs 09:30 $9,808.48 (-61.72; session marks -50.45) · 3 name(s) marked open→close (per-name table). KDP×95 09:30 $34.35 → close $34.46 +9.98; AMX×143 09:30 $22.84 → close $22.83 -1.43; EPR×59 09:30 $55.28 → close $54.28 -59.00 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.85 | ▲ 09:30 equity $9,787.08 vs yday $9,746.76 (+40.32) | 09:30 open · cash $5.85 (unchanged overnight, no fees) · equity $9,787.08 vs prior close $9,746.76 (+40.32) · 3 name(s) re-marked at the open (per-name table). AMX×143 yday $22.83 → 09:30 $22.93 +14.30; EPR×59 yday $54.28 → 09:30 $54.56 +16.52; KDP×95 yday $34.46 → 09:30 $34.56 +9.50 | — |
+| 2026-10-20 09:30 ET | **SELL** | `EPR` | 59 | $54.56 | $2.20 | $-46.85 | $3,222.69 | ▼ -46.85 after sell → book $9,784.88; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `KDP` | 95 | $34.56 | $2.32 | $+14.88 | $6,503.57 | ▲ +14.88 after sell → book $9,782.56; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,503.57 | ▼ close $9,778.27 vs 09:30 $9,787.08 (session -4.29) | 16:00 close · cash $6,503.57 · equity $9,778.27 vs 09:30 $9,787.08 (-8.81; session marks -4.29) · 1 name(s) marked open→close (per-name table). AMX×143 09:30 $22.93 → close $22.90 -4.29 | — |
 
 ## Not taken
 

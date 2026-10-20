@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ join_g, no 🚨
 
-Cash book **-18.96%** ($8,104) · signal-only (no cash/fees) was +0.61%. Starts YES **2/30**. Fills 306 · skips 306 · realized $-674.41.
+Cash book **-17.73%** ($8,227) · signal-only (no cash/fees) was +0.61%. Starts YES **2/30**. Fills 312 · skips 306 · realized $-674.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -472,6 +472,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `ARQT` | 47 | $29.41 | $2.13 | — | $2,969.17 | — | union ∩ join_g, no 🚨; gate join=good; list flatten; ret5=+8.4; leftover $1388.71 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-19 09:30 ET | **BUY** | `PACS` | 29 | $47.02 | $2.08 | — | $1,603.52 | — | union ∩ join_g, no 🚨; gate join=good; list flatten; 🔵; ret5=+8.3; leftover $1388.71 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,603.52 | ▲ close $8,103.74 vs 09:30 $8,003.96 (session +122.67) | 16:00 close · cash $1,603.52 · equity $8,103.74 vs 09:30 $8,003.96 (+99.78; session marks +122.67) · 10 name(s) marked open→close (per-name table). ACRS×8 09:30 $3.28 → close $3.48 +1.60; AURA×4 09:30 $6.13 → close $6.29 +0.64; KURA×2 09:30 $9.17 → close $9.36 +0.38; NBP×21 09:30 $1.27 → close $1.30 +0.63; RCKT×12 09:30 $2.18 → close $2.24 +0.72; SMMT×62 09:30 $14.90 → close $15.57 +41.54; VEEV×4 09:30 $310.33 → close $316.80 +25.88; ILMN×5 09:30 $268.93 → close $262.66 -31.35; ARQT×47 09:30 $29.41 → close $31.89 +116.56; PACS×29 09:30 $47.02 → close $45.85 -33.93 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,603.52 | ▲ 09:30 equity $8,114.74 vs yday $8,103.74 (+11.00) | 09:30 open · cash $1,603.52 (unchanged overnight, no fees) · equity $8,114.74 vs prior close $8,103.74 (+11.00) · 10 name(s) re-marked at the open (per-name table). ACRS×8 yday $3.48 → 09:30 $3.37 -0.88; ARQT×47 yday $31.89 → 09:30 $31.89 +0.00; AURA×4 yday $6.29 → 09:30 $6.32 +0.12; ILMN×5 yday $262.66 → 09:30 $264.13 +7.35; KURA×2 yday $9.36 → 09:30 $9.45 +0.18; NBP×21 yday $1.30 → 09:30 $1.30 +0.00; PACS×29 yday $45.85 → 09:30 $45.98 +3.77; RCKT×12 yday $2.24 → 09:30 $2.24 +0.00; SMMT×62 yday $15.57 → 09:30 $15.50 -4.34; VEEV×4 yday $316.80 → 09:30 $318.00 +4.80 | — |
+| 2026-10-20 09:30 ET | **SELL** | `ACRS` | 8 | $3.37 | $0.31 | $-1.01 | $1,630.17 | ▼ -1.01 after sell → book $8,114.43; vs 09:30 mark -0.31 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `AURA` | 4 | $6.32 | $0.28 | $-0.19 | $1,655.16 | ▼ -0.19 after sell → book $8,114.14; vs 09:30 mark -0.29 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `KURA` | 2 | $9.45 | $0.21 | $-0.75 | $1,673.85 | ▼ -0.75 after sell → book $8,113.93; vs 09:30 mark -0.21 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `NBP` | 21 | $1.30 | $0.36 | $-0.48 | $1,700.79 | ▼ -0.48 after sell → book $8,113.57; vs 09:30 mark -0.36 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `RCKT` | 12 | $2.24 | $0.32 | $-0.39 | $1,727.35 | ▼ -0.39 after sell → book $8,113.25; vs 09:30 mark -0.32 | dropped from list after 3 sess (min 3) | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `SMMT` | 62 | $15.50 | $2.20 | $+8.65 | $2,686.15 | ▲ +8.65 after sell → book $8,111.05; vs 09:30 mark -2.20 | dropped from list after 4 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,686.15 | ▲ close $8,226.90 vs 09:30 $8,114.74 (session +115.85) | 16:00 close · cash $2,686.15 · equity $8,226.90 vs 09:30 $8,114.74 (+112.16; session marks +115.85) · 4 name(s) marked open→close (per-name table). ARQT×47 09:30 $31.89 → close $32.82 +43.71; ILMN×5 09:30 $264.13 → close $267.93 +19.00; PACS×29 09:30 $45.98 → close $47.72 +50.46; VEEV×4 09:30 $318.00 → close $318.67 +2.68 | — |
 
 ## Not taken
 

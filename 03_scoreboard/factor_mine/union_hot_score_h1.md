@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · rank by hot_score
 
-Cash book **+15.22%** ($11,522) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 410 · skips 90 · realized $+477.92.
+Cash book **+15.84%** ($11,584) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 417 · skips 90 · realized $+477.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -575,6 +575,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `NAVN` | 56 | $25.72 | $2.16 | — | $1,674.66 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+7.4; leftover $1440.71 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `EOG` | 9 | $157.52 | $2.02 | — | $254.96 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+7.3; leftover $1440.71 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $254.96 | ▲ close $11,522.00 vs 09:30 $11,543.43 (session +20.41) | 16:00 close · cash $254.96 · equity $11,522.00 vs 09:30 $11,543.43 (-21.43; session marks +20.41) · 8 name(s) marked open→close (per-name table). BTI×24 09:30 $59.13 → close $58.51 -14.88; WMG×46 09:30 $31.26 → close $31.04 -10.12; ACN×6 09:30 $228.48 → close $236.93 +50.70; COP×9 09:30 $145.73 → close $145.24 -4.41; WIT×750 09:30 $1.92 → close $1.93 +7.50; DEO×15 09:30 $93.94 → close $93.49 -6.75; NAVN×56 09:30 $25.72 → close $25.67 -2.80; EOG×9 09:30 $157.52 → close $157.65 +1.17 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $254.96 | ▲ 09:30 equity $11,599.34 vs yday $11,522.00 (+77.34) | 09:30 open · cash $254.96 (unchanged overnight, no fees) · equity $11,599.34 vs prior close $11,522.00 (+77.34) · 8 name(s) re-marked at the open (per-name table). ACN×6 yday $236.93 → 09:30 $238.00 +6.42; BTI×24 yday $58.51 → 09:30 $58.94 +10.20; COP×9 yday $145.24 → 09:30 $147.15 +17.19; DEO×15 yday $93.49 → 09:30 $93.79 +4.50; EOG×9 yday $157.65 → 09:30 $159.86 +19.89; NAVN×56 yday $25.67 → 09:30 $25.67 +0.00; WIT×750 yday $1.93 → 09:30 $1.95 +15.00; WMG×46 yday $31.04 → 09:30 $31.13 +4.14 | — |
+| 2026-10-20 09:30 ET | **SELL** | `BTI` | 24 | $58.94 | $2.08 | $-8.83 | $1,667.32 | ▼ -8.83 after sell → book $11,597.26; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 9 | $147.15 | $2.04 | $+8.73 | $2,989.63 | ▲ +8.73 after sell → book $11,595.22; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `DEO` | 15 | $93.79 | $2.06 | $-6.34 | $4,394.42 | ▼ -6.34 after sell → book $11,593.16; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `EOG` | 9 | $159.86 | $2.04 | $+17.00 | $5,831.12 | ▲ +17.00 after sell → book $11,591.12; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `NAVN` | 56 | $25.67 | $2.18 | $-7.14 | $7,266.46 | ▼ -7.14 after sell → book $11,588.94; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `WIT` | 750 | $1.95 | $9.81 | $+3.01 | $8,719.15 | ▲ +3.01 after sell → book $11,579.13; vs 09:30 mark -9.81 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `WMG` | 46 | $31.13 | $2.15 | $-10.26 | $10,148.98 | ▼ -10.26 after sell → book $11,576.98; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,148.98 | ▲ close $11,583.70 vs 09:30 $11,599.34 (session +6.72) | 16:00 close · cash $10,148.98 · equity $11,583.70 vs 09:30 $11,599.34 (-15.64; session marks +6.72) · 1 name(s) marked open→close (per-name table). ACN×6 09:30 $238.00 → close $239.12 +6.72 | — |
 
 ## Not taken
 

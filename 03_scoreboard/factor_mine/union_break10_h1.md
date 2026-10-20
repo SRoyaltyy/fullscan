@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **-18.36%** ($8,163) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 429 · skips 100 · realized $-529.03.
+Cash book **-18.23%** ($8,177) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 435 · skips 100 · realized $-529.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -595,6 +595,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `COP` | 7 | $145.73 | $2.01 | — | $1,207.09 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+9.3; leftover $1021.42 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `WIT` | 531 | $1.92 | $6.85 | — | $180.73 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+14.7; leftover $1021.42 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $180.73 | ▲ close $8,163.48 vs 09:30 $8,193.27 (session +3.83) | 16:00 close · cash $180.73 · equity $8,163.48 vs 09:30 $8,193.27 (-29.79; session marks +3.83) · 8 name(s) marked open→close (per-name table). POOL×6 09:30 $171.48 → close $168.07 -20.46; AMX×44 09:30 $22.84 → close $22.83 -0.44; TBBB×17 09:30 $58.00 → close $58.39 +6.63; BTI×17 09:30 $59.13 → close $58.51 -10.54; WMG×32 09:30 $31.26 → close $31.04 -7.04; ACN×4 09:30 $228.48 → close $236.93 +33.80; COP×7 09:30 $145.73 → close $145.24 -3.43; WIT×531 09:30 $1.92 → close $1.93 +5.31 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $180.73 | ▲ 09:30 equity $8,211.64 vs yday $8,163.48 (+48.16) | 09:30 open · cash $180.73 (unchanged overnight, no fees) · equity $8,211.64 vs prior close $8,163.48 (+48.16) · 8 name(s) re-marked at the open (per-name table). ACN×4 yday $236.93 → 09:30 $238.00 +4.28; AMX×44 yday $22.83 → 09:30 $22.93 +4.40; BTI×17 yday $58.51 → 09:30 $58.94 +7.23; COP×7 yday $145.24 → 09:30 $147.15 +13.37; POOL×6 yday $168.07 → 09:30 $168.23 +0.96; TBBB×17 yday $58.39 → 09:30 $58.65 +4.42; WIT×531 yday $1.93 → 09:30 $1.95 +10.62; WMG×32 yday $31.04 → 09:30 $31.13 +2.88 | — |
+| 2026-10-20 09:30 ET | **SELL** | `AMX` | 44 | $22.93 | $2.14 | $-0.30 | $1,187.51 | ▼ -0.30 after sell → book $8,209.49; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `BTI` | 17 | $58.94 | $2.06 | $-7.42 | $2,187.34 | ▼ -7.42 after sell → book $8,207.43; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 7 | $147.15 | $2.03 | $+5.90 | $3,215.36 | ▲ +5.90 after sell → book $8,205.40; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `POOL` | 6 | $168.23 | $2.03 | $-15.02 | $4,222.71 | ▼ -15.02 after sell → book $8,203.37; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `WIT` | 531 | $1.95 | $6.95 | $+2.13 | $5,251.22 | ▲ +2.13 after sell → book $8,196.42; vs 09:30 mark -6.95 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `WMG` | 32 | $31.13 | $2.11 | $-8.35 | $6,245.27 | ▼ -8.35 after sell → book $8,194.32; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,245.27 | ▼ close $8,177.04 vs 09:30 $8,211.64 (session -17.28) | 16:00 close · cash $6,245.27 · equity $8,177.04 vs 09:30 $8,211.64 (-34.60; session marks -17.28) · 2 name(s) marked open→close (per-name table). ACN×4 09:30 $238.00 → close $239.12 +4.48; TBBB×17 09:30 $58.65 → close $57.37 -21.76 | — |
 
 ## Not taken
 

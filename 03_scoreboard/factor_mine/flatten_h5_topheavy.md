@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-14.40%** ($8,560) · signal-only (no cash/fees) was +4.47%. Starts YES **12/30**. Fills 193 · skips 345 · realized $+372.21.
+Cash book **-11.70%** ($8,830) · signal-only (no cash/fees) was +4.47%. Starts YES **12/30**. Fills 193 · skips 345 · realized $+372.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -355,6 +355,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $243.63 | ▲ 09:30 equity $8,408.59 vs yday $8,381.29 (+27.30) | 09:30 open · cash $243.63 (unchanged overnight, no fees) · equity $8,408.59 vs prior close $8,381.29 (+27.30) · 7 name(s) re-marked at the open (per-name table). AVPT×67 yday $14.33 → 09:30 $14.35 +1.01; BLFS×6 yday $38.61 → 09:30 $38.61 +0.00; IT×16 yday $205.35 → 09:30 $202.41 -47.04; PDFS×25 yday $39.22 → 09:30 $41.29 +51.75; TOST×31 yday $31.62 → 09:30 $31.83 +6.51; TWLO×3 yday $244.37 → 09:30 $249.03 +13.98; YOU×22 yday $43.93 → 09:30 $43.98 +1.10 | — |
 | 2026-10-19 09:30 ET | **BUY** | `ARQT` | 1 | $29.41 | $0.30 | — | $213.92 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ret5=+8.4; leftover $36.54 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $213.92 | ▲ close $8,559.85 vs 09:30 $8,408.59 (session +151.55) | 16:00 close · cash $213.92 · equity $8,559.85 vs 09:30 $8,408.59 (+151.26; session marks +151.55) · 8 name(s) marked open→close (per-name table). AVPT×67 09:30 $14.35 → close $14.74 +26.46; BLFS×6 09:30 $38.61 → close $38.61 +0.00; IT×16 09:30 $202.41 → close $207.72 +84.96; PDFS×25 09:30 $41.29 → close $41.22 -1.75; TOST×31 09:30 $31.83 → close $31.45 -11.78; TWLO×3 09:30 $249.03 → close $257.29 +24.78; YOU×22 09:30 $43.98 → close $45.18 +26.40; ARQT×1 09:30 $29.41 → close $31.89 +2.48 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $213.92 | ▲ 09:30 equity $8,593.27 vs yday $8,559.85 (+33.42) | 09:30 open · cash $213.92 (unchanged overnight, no fees) · equity $8,593.27 vs prior close $8,559.85 (+33.42) · 8 name(s) re-marked at the open (per-name table). ARQT×1 yday $31.89 → 09:30 $31.89 +0.00; AVPT×67 yday $14.74 → 09:30 $14.80 +4.02; BLFS×6 yday $38.61 → 09:30 $38.61 +0.00; IT×16 yday $207.72 → 09:30 $210.76 +48.64; PDFS×25 yday $41.22 → 09:30 $40.37 -21.25; TOST×31 yday $31.45 → 09:30 $31.65 +6.20; TWLO×3 yday $257.29 → 09:30 $254.06 -9.69; YOU×22 yday $45.18 → 09:30 $45.43 +5.50 | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $213.92 | ▲ close $8,830.23 vs 09:30 $8,593.27 (session +236.96) | 16:00 close · cash $213.92 · equity $8,830.23 vs 09:30 $8,593.27 (+236.96; session marks +236.96) · 8 name(s) marked open→close (per-name table). ARQT×1 09:30 $31.89 → close $32.82 +0.93; AVPT×67 09:30 $14.80 → close $15.23 +28.81; BLFS×6 09:30 $38.61 → close $38.61 +0.00; IT×16 09:30 $210.76 → close $219.64 +142.08; PDFS×25 09:30 $40.37 → close $41.18 +20.25; TOST×31 09:30 $31.65 → close $32.65 +31.00; TWLO×3 09:30 $254.06 → close $258.69 +13.89; YOU×22 09:30 $45.43 → close $45.43 +0.00 | — |
 
 ## Not taken
 

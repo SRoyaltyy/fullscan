@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-12.51%** ($8,749) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 141 · skips 159 · realized $-515.67.
+Cash book **-10.21%** ($8,979) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 141 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -306,6 +306,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `VEEV` | 6 | $310.33 | $2.01 | — | $2,432.36 | — | top 4 by cond; rank cond; list flatten; 🔵; ret5=+4.8; leftover $2134.66 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-19 09:30 ET | **BUY** | `EOG` | 13 | $157.52 | $2.03 | — | $382.57 | — | top 4 by cond; rank cond; list ohlc_hot; 🔵; ret5=+7.3; leftover $2134.66 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $382.57 | ▲ close $8,749.38 vs 09:30 $8,548.20 (session +219.07) | 16:00 close · cash $382.57 · equity $8,749.38 vs 09:30 $8,548.20 (+201.18; session marks +219.07) · 4 name(s) marked open→close (per-name table). ARQT×72 09:30 $29.41 → close $31.89 +178.56; TRU×29 09:30 $73.12 → close $73.12 +0.00; VEEV×6 09:30 $310.33 → close $316.80 +38.82; EOG×13 09:30 $157.52 → close $157.65 +1.69 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $382.57 | ▲ 09:30 equity $8,857.81 vs yday $8,749.38 (+108.43) | 09:30 open · cash $382.57 (unchanged overnight, no fees) · equity $8,857.81 vs prior close $8,749.38 (+108.43) · 4 name(s) re-marked at the open (per-name table). ARQT×72 yday $31.89 → 09:30 $31.89 +0.00; EOG×13 yday $157.65 → 09:30 $159.86 +28.73; TRU×29 yday $73.12 → 09:30 $75.62 +72.50; VEEV×6 yday $316.80 → 09:30 $318.00 +7.20 | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $382.57 | ▲ close $8,979.13 vs 09:30 $8,857.81 (session +121.32) | 16:00 close · cash $382.57 · equity $8,979.13 vs 09:30 $8,857.81 (+121.32; session marks +121.32) · 4 name(s) marked open→close (per-name table). ARQT×72 09:30 $31.89 → close $32.82 +66.96; EOG×13 09:30 $159.86 → close $157.91 -25.35; TRU×29 09:30 $75.62 → close $78.23 +75.69; VEEV×6 09:30 $318.00 → close $318.67 +4.02 | — |
 
 ## Not taken
 
