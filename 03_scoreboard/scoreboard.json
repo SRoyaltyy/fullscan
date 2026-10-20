@@ -25888,6 +25888,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.52
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-20",
+          "actual_pct": 0.81,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
         }
       },
       "lesson_schema_ok": true
@@ -31647,6 +31659,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.42
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-10-20",
+          "actual_pct": -0.79,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -32598,6 +32622,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-10-20",
+          "actual_pct": -1.19,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -33731,7 +33767,7 @@
       "direction_hit": false,
       "magnitude_hit": false,
       "divergence_flagged": false,
-      "divergence_verdict": null,
+      "divergence_verdict": "none_flagged (narrative flagged divergence but deterministic engine recorded divergence_flagged=False — leading indicators turned out WRONG; Asia/AI-credit/kinetic did not transmit to US cash)",
       "per_factor_breakdown": [
         {
           "factor": "B0_ASIA",
@@ -33779,7 +33815,7 @@
           "status": "neutral"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-20_lesson.md",
       "sources_used": [],
       "horizon_calls": {
         "HORIZON_3D": {
@@ -33817,7 +33853,9 @@
       "key_interaction": null,
       "knowable_at_9am": null,
       "attribution_contested": null,
-      "outlier_watch": null
+      "outlier_watch": null,
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     }
   ]
 }
