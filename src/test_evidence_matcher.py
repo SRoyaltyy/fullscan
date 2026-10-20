@@ -30,6 +30,88 @@ EXTRA = [
 
 
 class EvidenceTests(unittest.TestCase):
+ def test_common_glossary_word_needs_a_brand_role_in_the_headline(self):
+  b=build_board([{'ticker':'OWN','name':'Example Social Inc','industry':'Software','filing_sections':[{'kind':'identity_source','text':'"Family" refers to our ZedChat and ZedPhoto products.'}]}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Police charge a man after an attack on his Family.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_dictionary_non_noun_legal_prefix_has_own_corporate_predicate(self):
+  b=build_board([{'ticker':'M','name':'Meta Platforms Inc','industry':'Software'}],engine='evidence')
+  for text in ('Meta may use new terms to reduce licensing fees.', 'Meta employees said accounts were restricted.'):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'M'},text)
+
+ def test_adjective_and_all_caps_agency_are_not_unqualified_legal_prefixes(self):
+  b=build_board([{'ticker':'COAS','name':'Coastal Bank Corp','industry':'Banks'},
+                {'ticker':'CENT','name':'ECB Bancorp Inc','industry':'Banks'}],engine='evidence')
+  for text in ('Coastal homes burn as winds fuel fires.', 'ECB workers announce new inflation guidelines.'):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertFalse(any(r['pass'] for r in hit['stocks']),text)
+
+ def test_industry_typed_short_name_in_court_object_role(self):
+  b=build_board([{'ticker':'ZBF','name':'ZBF Financial Corp','industry':'Banks Regional'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Court affirms judgment for ZBF Bank in a trust dispute.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'ZBF'})
+
+ def test_nominal_insider_sale_with_bound_issuer_symbol(self):
+  b=build_board([{'ticker':'TEN','name':'Example Energy Navigation Ltd','industry':'Shipping'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Example Energy Navigation (TEN) Insider Sale: Chief Executive.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'TEN'})
+
+ def test_issuer_operating_brand_list_is_not_a_retail_resale_list(self):
+  rows=[{'ticker':'OWN','name':'Example Commerce Inc','industry':'Retail','description':'Example Commerce, Inc. engages in retail services under brands that include Zedshop, Zedshop Eats, and Farzed.'},
+        {'ticker':'SHOP','name':'Example Stores Inc','industry':'Retail','description':'It sells third-party brands including Farzed under brands that include Farzed.'}]
+  b=build_board(rows,engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Farzed launches a new luxury marketplace.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'OWN'})
+  # Competing explicit ownership witnesses require abstention.
+  rows[1]['description']='It provides retail services under brands that include Farzed.'
+  b=build_board(rows,engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Farzed launches a new luxury marketplace.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_named_actor_infinitive_does_not_spread_capacity_to_peers(self):
+  b=build_board([{'ticker':'PEER','name':'Example Chemistry Inc','industry':'Chemicals','description':'We produce fragrance ingredients and expand manufacturing production capacity.'}],engine='evidence')
+  for text in ('Zedchem to Expand Fragrance Ingredient Production Capacity.',
+               'Zedchem will expand fragrance ingredient production capacity.',
+               'Zedchem Expands Fragrance Ingredient Production Capacity.'):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertFalse(any(r['pass'] for r in hit['stocks']),text)
+
+ def test_named_government_rule_retains_industry_route(self):
+  b=build_board([{'ticker':'PEER','name':'Example Chemistry Inc','industry':'Chemicals','description':'We manufacture fragrance ingredients in France.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Government to Restrict Fragrance Ingredient Production in France.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'PEER'})
+
+ def test_title_case_industry_activity_is_not_a_named_actor(self):
+  b=build_board(STOCKS,engine='evidence')
+  for text in ('Space launch ranges expand capacity.', 'Space Launch Ranges Expand Capacity.'):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertIn('RKLB',{r['ticker'] for r in hit['stocks'] if r['pass']},text)
+
+ def test_two_country_names_are_scope_not_operating_evidence(self):
+  from src.stock_evidence import locations_in
+  self.assertTrue({'azerbaijan','turkey'}<=locations_in('Azerbaijan and Turkey'))
+  b=build_board([{'ticker':'TEL','name':'Example Telecom Inc','industry':'Telecom','description':'We operate mobile networks in Azerbaijan and Turkey.'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Azerbaijan and Turkey ban ceremonial hats in public schools.'}])[0]
+  self.assertFalse(any(r['pass'] for r in hit['stocks']))
+
+ def test_delisting_exchange_and_possessive_noun_are_not_issuers(self):
+  b=build_board([{'ticker':'EXCH','name':'Nasdaq Inc','industry':'Exchanges'},
+                 {'ticker':'DATA','name':'Data Holdings Inc','industry':'Software'}],engine='evidence')
+  for text in ('Zedtech Receives Nasdaq Delisting Warning.',
+               "Zedcloud's Data Centers Expand Production Capacity."):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertFalse(any(r['pass'] for r in hit['stocks']),text)
+
+ def test_advisor_role_and_former_employer_apply_to_sourced_aliases(self):
+  b=build_board([{'ticker':'ADVR','name':'Zedcore Inc','industry':'Investment Banking'},
+                {'ticker':'OLD','name':'Zedney Holdings Inc','industry':'Media','description':'The company operates through the following segments: Zedney Entertainment and Zedney Parks.'}],engine='evidence')
+  for text in ('Zednet Engages Zedcore Amid Refinancing.',
+               'Formerly Zedney executive launches a new firm.'):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertFalse(any(r['pass'] for r in hit['stocks']),text)
+
  def test_generic_segment_word_in_legal_name_is_not_a_brand_alone(self):
   row={'ticker':'HEAL','name':'Example Health Inc','industry':'Healthcare','description':'Example Health operates through the following segments: Health Services and Health Benefits. The Health Services segment provides clinics. The Health Benefits segment offers insurance.'}
   b=build_board([row],engine='evidence')

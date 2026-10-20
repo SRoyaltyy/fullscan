@@ -104,6 +104,19 @@ jobs:
           --exclude-sample validation-inputs/holdout4/news-sample.json
           --exclude-sample validation-inputs/holdout5/news-sample.json
           --exclude-sample validation-inputs/holdout6/news-sample.json
+      - name: Reserve eighth unseen headline sample
+        run: >-
+          python scripts/export_validation_inputs.py
+          --news data/news_intake/2026-10-17/documents.json
+          --descriptions excel_bot/data/finviz_with_descriptions.csv
+          --out validation-inputs/holdout8 --seed 19026 --budget 200
+          --exclude-sample validation-inputs/news-sample.json
+          --exclude-sample validation-inputs/fresh/news-sample.json
+          --exclude-sample validation-inputs/holdout/news-sample.json
+          --exclude-sample validation-inputs/holdout4/news-sample.json
+          --exclude-sample validation-inputs/holdout5/news-sample.json
+          --exclude-sample validation-inputs/holdout6/news-sample.json
+          --exclude-sample validation-inputs/holdout7/news-sample.json
       - name: Infer primary headlines using public inputs only
         run: |
           python -I -S scripts/offline_evidence_checks.py --validation-batches --root validation-inputs --descriptions excel_bot/data/finviz_with_descriptions.csv --identity-filings validation-filing-texts/objects

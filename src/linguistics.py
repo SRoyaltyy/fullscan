@@ -124,7 +124,7 @@ def verb_only_lemmas() -> frozenset[str]:
 def has_event(text: str) -> bool:
     # Headlines express events through ordinary verbs, not just a small
     # financial trigger list. Identity and materiality are separate gates.
-    if EVENT.search(text):return True
+    if EVENT.search(text) or re.search(r'\b(?:insider|stock|share)\s+sale\b',text,re.I):return True
     if re.search(r'\b(?:is|are|was|were)\s+(?:in|under|at)\s+',text,re.I):return True
     words=[m.group() for m in TOKEN.finditer(text)]
     for i,raw in enumerate(words):

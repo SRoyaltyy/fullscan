@@ -44,7 +44,7 @@ def _identity_text(text: str) -> str:
     for phrase in PUBLISHERS:
         text=re.sub(r'\b'+re.escape(phrase)+r'\b',lambda m:' '*len(m.group()),text,flags=re.I)
     text=re.sub(r'\b(?:'+ '|'.join(re.escape(x.upper()) for x in AGENCIES)+r')\b',lambda m:' '*len(m.group()),text)
-    text=re.sub(r'\b(?:Nasdaq|NYSE|AMEX)(?=\s+(?:minimum\s+bid|listing|continued\s+listing|deficiency|compliance)\b)',lambda m:' '*len(m.group()),text,flags=re.I)
+    text=re.sub(r'\b(?:Nasdaq|NYSE|AMEX)(?=\s+(?:minimum\s+bid|listing|continued\s+listing|delisting|deficiency|compliance)\b)',lambda m:' '*len(m.group()),text,flags=re.I)
     text=re.sub(r'\b(?:Nasdaq|NYSE|AMEX)(?=\s+(?:approv\w*|grant\w*|notif\w*|allow\w*|accept\w*)\b.{0,100}\b(?:split|listing|compliance|bid|deficiency)\b)',lambda m:' '*len(m.group()),text,flags=re.I)
     return re.sub(pattern,lambda m:' '*len(m.group()),text,flags=re.I)
 
@@ -81,15 +81,19 @@ def _corporate_usage(alias: str, text: str, allow_object: bool = True) -> bool:
     for m in re.finditer(pattern,text,re.I):
         if not re.search(r'\b(?:to|will|would|could|should|can|may|must)\s*$',text[max(0,m.start()-20):m.start()],re.I):
             return True
-    object_roles=r'against|accuses?|accused|clears?|cleared|sues?|sued|fines?|fined'
+    object_roles=r'against|accuses?|accused|clears?|cleared|sues?|sued|fines?|fined|judgment for|verdict for|ruling for'
     if allow_object:object_roles+='|acquisition of|tender offer for'
     return bool(re.search(r'\b(?:'+object_roles+r')\s+(?:[A-Za-z-]+\s+){0,2}'+name+r'\b',text,re.I) or re.search(r'\b'+name+r'\s+(?:completes?|completed)\s+(?:an?\s+|\$[\d.,]+\s+(?:billion|million)\s+)?acquisition\b',text,re.I))
 
 
-def _short_surface(word: str, text: str) -> bool:
+def _short_surface(word: str, text: str, industry: str = '') -> bool:
     """A legal-name fragment cannot be buried in a different proper name."""
     for m in re.finditer(r'\b'+re.escape(word)+r'\b',text,re.I):
         before=text[:m.start()];after=text[m.end():]
+        # A possessive proper-name prefix binds the following noun phrase:
+        # Zedcloud's Data Centers is not a short name for Data Holdings.
+        owned_phrase=re.match(r'\s+([A-Z][A-Za-z]+)\s+([A-Za-z]+)',after)
+        if re.search(r"\b[A-Z][A-Za-z0-9-]*['\u2019]s\s*$",before) and owned_phrase and lemma(owned_phrase.group(1)) not in verb_only_lemmas() and lemma(owned_phrase.group(2)) in verb_lemmas():continue
         previous=re.search(r'([A-Za-z]+)\s*$',before)
         if previous and previous.group(1)[0].isupper():
             p=previous.group(1).lower()
@@ -98,7 +102,8 @@ def _short_surface(word: str, text: str) -> bool:
         following=re.match(r'\s+([A-Z][A-Za-z]+)',after)
         if following:
             raw=following.group(1);w=raw.lower()
-            if w not in {'stock','shares','earnings','revenue','profit','guidance','inc','corp','corporation','ltd','plc','to','will','would','can','could','may','must','also','just','now'} and not (lemma(w) in verb_lemmas() and (lemma(w)!=w or w in verb_only_lemmas())):continue
+            typed_business=lemma(w) in set(tokens(industry)) and _corporate_usage(word,text)
+            if not typed_business and w not in {'stock','shares','earnings','revenue','profit','guidance','inc','corp','corporation','ltd','plc','to','will','would','can','could','may','must','also','just','now'} and not (lemma(w) in verb_lemmas() and (lemma(w)!=w or w in verb_only_lemmas())):continue
         return True
     return False
 
@@ -119,8 +124,23 @@ def _broad_business_event(text: str) -> bool:
     if re.search(r'\b(?:FDA|recall\w*|approv\w*|clearance|lawsuit|charg\w*|arson|indict\w*)\b',text,re.I):
         return False
     activity_noun=bool(re.search(r'\b(?:launches|reentries)\s+(?:and|of|from|at|are|were|have|continue|doubled?|expand\w*|increas\w*|decreas\w*|rise|fall)\b',text,re.I))
-    actor=re.match(r"\s*([A-Z][A-Za-z0-9&'-]*(?:\s+(?:[A-Z][A-Za-z0-9&'-]*|of|the)){0,4})\s+(?:becomes?|plans?|announces?|launches?|restricts?|bans?|halts?|will\s+(?:restrict|ban|halt))\b",text)
-    if actor and not activity_noun and not re.search(r'\b(?:government|congress|senate|house|department|ministry|commission|regulators?|legislature|council|court|president|administration|FDA|EPA|FCC|FTC|SEC)\b',actor.group(1),re.I):
+    # Locate a subject/predicate boundary using the pinned verb inventory,
+    # including headline infinitives and modals. A fixed list of verbs
+    # misses ordinary forms such as "Zedchem to Expand ...".
+    actor=None
+    words=list(TOKEN.finditer(text))
+    for i in range(1,min(7,len(words))):
+        raw=words[i].group();base=lemma(raw)
+        previous=words[i-1].group().lower()
+        finite=base in verb_lemmas() and (base in verb_only_lemmas() or raw.lower() in IRREGULAR or raw.lower()!=base)
+        infinitive=previous in {'to','will','would','could','should','can','may','must'} and base in verb_lemmas()
+        if not (finite or infinitive):continue
+        end=words[i-1].start() if infinitive else words[i].start()
+        subject=text[:end].strip()
+        if re.fullmatch(r"(?:The\s+)?[A-Z][A-Za-z0-9&'-]*(?:\s+(?:[A-Z][A-Za-z0-9&'-]*|of|the)){0,4}",subject):
+            actor=subject
+            break
+    if actor and not activity_noun and not re.search(r'\b(?:government|congress|senate|house|department|ministry|commission|regulators?|legislature|council|court|president|administration|FDA|EPA|FCC|FTC|SEC|policy|legislation|industry|production|capacity|demand|supply|shipments|costs?|prices?|shortages?|launch(?:es)?|reentr(?:y|ies))\b',actor,re.I):
         # One named actor changing its own rules is not evidence of a rule
         # affecting every company with overlapping business vocabulary.
         return False
@@ -143,6 +163,7 @@ def _product_surface(fact,text):
     flags=re.I if text.islower() else 0
     for match in re.finditer(r'\b'+re.escape(fact.text)+r's?\b',text,flags):
         if len(fact.text.split())==1 and fact.text.lower() in english_words():
+            if fact.section=='explicit issuer glossary' and not _corporate_usage(fact.text,text):continue
             if re.match(r'\s+(?:of|for|in|at|by|on|with)\b',text[match.end():],re.I) and not _corporate_usage(fact.text,text):continue
             following=re.match(r'\s+([A-Z][A-Za-z]+)',text[match.end():])
             # Family Practice and Quantum Computer are compound nouns, not
@@ -157,7 +178,7 @@ def _ownership_evidenced(fact, profile) -> bool:
     # league, supplier or regulator beneath it an owned product.
     from .stock_evidence import OWN,RESALE
     if RESALE.search(fact.passage):return False
-    if fact.confidence=='explicit_owned_segment_list':return True
+    if fact.confidence in {'explicit_owned_segment_list','explicit_issuer_brand_list'}:return True
     match=re.search(re.escape(fact.text),fact.passage,re.I)
     if not match:return False
     if re.search(r'["\u201c]'+re.escape(fact.text)+r'["\u201d]\s+refers? to our\b',fact.passage):return True
@@ -214,9 +235,10 @@ def _comparison_name(text: str, alias: str) -> bool:
     if re.match(r'\s*:',text[match.end():]) and re.search(r'\b(?:profitability|price target|rating|overweight|outperform|underweight)\b',text[match.end():],re.I):return True
     prefix = text[max(0,match.start()-50):match.start()]
     local_prefix = re.split(r'[,;.!?]', prefix)[-1]
+    if re.search(r'\b(?:engages?|engaged|hires?|hired|retains?|retained|appoints?|appointed)\s*$',local_prefix,re.I) and re.search(r'\b(?:advis\w*|refinanc\w*|restructur\w*)\b',text,re.I):return True
     if re.match(r'\s+(?:says?|said|reports?|reported|analysts?\s+(?:say|said))\b',text[match.end():],re.I) and re.search(r'[,;]\s*$',prefix):return True
     if re.match(r'.{0,45}\b(?:built|made|developed|launched)\b.{0,35}\b(?:years?|decades?|centuries) ago\b',text[match.end():],re.I):return True
-    return bool(COMPARISON.search(local_prefix) or re.search(r'\b(?:according to|reported by|reports? from|formerly|previously|historically)\s*$',local_prefix,re.I))
+    return bool(COMPARISON.search(local_prefix) or re.search(r'\b(?:according to|reported by|reports? from|former|formerly|previously|historically)\s*$',local_prefix,re.I))
 
 
 def _is_subject(record, text: str, *, partial: bool = False) -> bool:
@@ -418,7 +440,7 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                     if not records:continue
                     family=_issuer_family(board,[r.ticker for r in records])
                     for record in records:
-                        if not _short_surface(word,identity_text):continue
+                        if not _short_surface(word,identity_text,record.industry):continue
                         p = board.profiles.get(record.ticker)
                         definition=re.search(r'\b'+re.escape(word)+r'\s+(?:is|becomes|remains)\s+(.{0,55}?)(?=\b(?:to|that|which|with)\b|[,.;:]|$)',passage.text,re.I)
                         if p and definition:
@@ -434,6 +456,14 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                         if not family and not (discriminating or exact_alias):continue
                         single_legal_word = len(record.alias.split()) == 1
                         common = word in english_words()
+                        dictionary,_=load_senses()
+                        # Dictionary membership alone includes adjectives and
+                        # agency abbreviations. Require an overt modal or a
+                        # corporate personnel role before accepting a common
+                        # legal prefix without ordinary noun senses.
+                        overt_role=bool(re.search(r'\b'+re.escape(word)+r'\s+(?:may|must|will|would|could|should|can|employees|executives|CEO|CFO|staff|workers)\b',identity_text,re.I))
+                        mixed_case=bool(re.search(r'\b'+re.escape(word[:1].upper()+word[1:].lower())+r'\b',identity_text))
+                        distinctive_predicate=overt_role and mixed_case and not any(s[3]=='n' for s in dictionary.get(word,())) and _corporate_usage(word,passage.text)
                         bound_short=_is_subject(replace(record,alias=''),passage.text) or bool(re.search(r'\b'+re.escape(word)+r'\s*\(\s*'+re.escape(record.ticker)+r'\s*\)',passage.text,re.I))
                         sourced_alias=any(t==record.ticker and k=='company_alias' for t,k,ix in board.identities.get(' '.join(tokens(word,stop=False)),()))
                         if common and sourced_alias and not _is_subject(replace(record,alias=word),passage.text):continue
@@ -447,7 +477,7 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                             embedded=previous and previous.group(1)[0].isupper() and not (lemma(previous.group(1)) in verb_lemmas() and previous.group(1).lower()!=lemma(previous.group(1))) and previous.group(1).lower() not in {'of','in','at','by','for','with','against'}
                             if not embedded and occurrence.group()[0].isupper() and re.match(r'\s+(?:stock|shares|earnings|revenue|profit|dividend|(?:will|could|may)\s+\w+\s+\$)\b',after,re.I):financial_short=True
                         acquisition_code=family and bool(re.search(r'\b'+re.escape(word.upper())+r'\b',passage.text)) and _corporate_usage(word,passage.text) and bool(re.search(r'\bacquisition\s+of\b',passage.text,re.I))
-                        if common and not single_legal_word and not (legal or bound_short or sourced_alias or business or (not family and discriminating) or coordinated_financial or shared_classes or acquisition_code or financial_short):continue
+                        if common and not single_legal_word and not (legal or bound_short or sourced_alias or business or (not family and discriminating) or coordinated_financial or shared_classes or acquisition_code or financial_short or distinctive_predicate):continue
                         if not common and word in competing_stems and not (legal or bound_short or sourced_alias or business or _corporate_usage(word,passage.text)):continue
                         predicate = _is_subject(record,passage.text)
                         if common and single_legal_word and not (predicate or record.ticker in coordinated):continue
@@ -510,6 +540,7 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
             for ticker,kind,ix,key in identity_hits:
                 p = board.profiles[ticker]
                 fact=p.facts[ix]
+                if kind in ('company_alias','derived_initialism','operating_brand') and _comparison_name(passage.text,fact.text or key):continue
                 if kind=='acronym':
                     continue
                 if kind=='person' and (not _valid_person(fact) or not re.search(r'\b'+re.escape(fact.text.split()[-1])+r'\b',passage.text)):
@@ -562,7 +593,7 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                         pass_row(ticker,1,'source_identity_event',passage,{key}|corroboration,fact)
                 elif kind=='company_alias' and unique_owner and passage.event and not roundup:
                     pass_row(ticker,1,'company_alias_event',passage,{key},p.facts[ix])
-                elif kind == 'owned_product' and unique_owner and (_specific_identifier(key,p.facts[ix]) or fact.confidence=='explicit_owned_segment_list' or re.search(r'\b(?:our|its) products?(?: and services?)? include\b',fact.passage,re.I)) and _ownership_evidenced(p.facts[ix],p) and passage.event and not roundup:
+                elif kind == 'owned_product' and unique_owner and (_specific_identifier(key,p.facts[ix]) or fact.confidence in {'explicit_owned_segment_list','explicit_issuer_brand_list'} or re.search(r'\b(?:our|its) products?(?: and services?)? include\b',fact.passage,re.I)) and _ownership_evidenced(p.facts[ix],p) and passage.event and not roundup:
                     # Product ownership is a sourced relation; the event is
                     # independently present in the article's same passage.
                     pass_row(ticker,1,'owned_product_event',passage,{key},p.facts[ix])

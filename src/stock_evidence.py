@@ -10,20 +10,49 @@ import json
 import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
+from functools import lru_cache
+from pathlib import Path
 
 from .aliases import extract_jurisdictions
 from .linguistics import GENERIC, STOP, TOKEN, lemma, terms, tokens
 from .places import CITIES, STATES
 from .aliases import _COUNTRIES
 
-COMPILER_VERSION = 'stock-evidence-2.6'
+COMPILER_VERSION = 'stock-evidence-2.7'
 
 _LOCATIONS = {p.lower() for p in list(CITIES)+list(STATES)+list(_COUNTRIES)}
 _LOCATION_RX = re.compile(r'\b(?:'+'|'.join(re.escape(p) for p in sorted(_LOCATIONS,key=len,reverse=True))+r')\b',re.I)
 
 
+@lru_cache(maxsize=100000)
+def _dictionary_locations(text: str) -> frozenset[str]:
+    names=_country_names()
+    words=list(TOKEN.finditer(text))
+    normalized=[lemma(m.group()) for m in words]
+    found=set()
+    for start,word in enumerate(words):
+        if not word.group()[0].isupper():continue
+        for end in range(start+1,min(start+8,len(words))+1):
+            if re.search(r'[.!?;:\n]',text[word.start():words[end-1].end()]):break
+            phrase=' '.join(normalized[start:end])
+            if phrase in names:found.add(phrase)
+    return frozenset(found)
+
+
+@lru_cache(maxsize=1)
+def _country_names() -> frozenset[str]:
+    """Pinned Unicode CLDR territory names; never downloaded at scan time."""
+    raw=(Path(__file__).with_name('data')/'territories.json').read_bytes()
+    if hashlib.sha256(raw).hexdigest()!='158c1d575308f7e46912edbeda435c8fe2ef5dad280798231f3a432e406b1807':
+        raise ValueError('territory resource checksum mismatch')
+    territories=json.loads(raw)['main']['en']['localeDisplayNames']['territories']
+    return frozenset(' '.join(tokens(name,stop=False)) for key,name in territories.items()
+                     if re.fullmatch(r'[A-Z]{2}(?:-alt-(?:short|variant))?',key))
+
+
 def locations_in(text: str) -> set[str]:
     found = {m.group().lower() for m in _LOCATION_RX.finditer(text)}
+    found.update(_dictionary_locations(text))
     if re.search(r'\bcarolinas\b',text,re.I):
         found.update(('north carolina','south carolina','carolinas'))
     return found
@@ -316,6 +345,17 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
                         value=m.group(1).strip()
                         if any(w not in STOP|GENERIC for w in tokens(value)):
                             _fact(out,'owned_product',value,sentence,source,heading)
+                    # An issuer operating "under brands that include ..."
+                    # explicitly identifies its own brands, unlike a retailer
+                    # selling third-party brands. Retain the entire witness.
+                    listing=re.search(r'\bunder\s+(?:(?:our|its|the)\s+)?brands?\s+(?:that\s+include|including|such\s+as)\s+([^.!?]+)',sentence,re.I)
+                    issuer_intro=re.match(r'\s*(?:'+r'[\W_]+'.join(map(re.escape,legal_words))+r'\b|(?:we|it|the company)\b)',sentence,re.I) if legal_words else None
+                    if listing and issuer_intro and not RESALE.search(sentence) and not re.search(r'\b(?:formerly|no longer|divested|ceased|sold our)\b',sentence,re.I):
+                        for item in re.split(r',\s*|\s+and\s+',listing.group(1)):
+                            value=re.sub(r'^and\s+','',item.strip())
+                            if re.fullmatch(r'[a-z]?[A-Z][A-Za-z0-9-]*(?:\s+[A-Z][A-Za-z0-9-]*){0,3}',value):
+                                ix=_fact(out,'owned_product',value,sentence,source,heading)
+                                out.facts[ix].confidence='explicit_issuer_brand_list'
                 if local_kind!='investment_methodology' and (kind in ('risk','financial','supplier') or re.search(r'\b(?:depend\w* on|rely\w* on|require|consume|raw materials?|input costs?|sensitive to|exposed to)\b',sentence,re.I)):
                     _fact(out, 'financial_exposure' if kind == 'financial' else 'material_exposure', '', sentence, source, heading)
                 if local_kind in ('business','update') and not re.search(r'\b(?:no longer|ceased|divested|discontinued|formerly|sold our)\b',sentence,re.I) and (OWN.search(sentence) or re.search(r'\b(?:our products?|product portfolio|pipeline|marketed products?)\b', heading, re.I) or re.search(r'\b(?:our|its) products?(?: and services?)? include\b',sentence,re.I)):
