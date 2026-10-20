@@ -1,6 +1,6 @@
 {
  "date": "2026-10-20",
- "generated_at": "2026-10-20T06:04:09.846863+00:00",
+ "generated_at": "2026-10-20T18:00:34.077513+00:00",
  "catalog": {
   "generated_at": "2026-10-17T13:03:20.405263+00:00",
   "channels": 365,
@@ -34,53 +34,71 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-20T06:03:48.509691+00:00",
+  "generated_at": "2026-10-20T18:00:04.951908+00:00",
   "enabled_sources": 123,
-  "sources_ok": 123,
-  "sources_failed": 0,
+  "sources_ok": 122,
+  "sources_failed": 1,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 2046,
-   "old": 1466,
-   "future": 13,
-   "undated": 270,
-   "new": 35,
-   "duplicates": 532
+   "observed": 2195,
+   "old": 1424,
+   "future": 12,
+   "undated": 317,
+   "new": 190,
+   "duplicates": 569
   },
-  "current_dated_documents": 299
+  "current_dated_documents": 483
  },
  "new_today": {
-  "count": 35,
+  "count": 190,
   "by_source": {
-   "us-doj-b3d27e1dc3": 11,
-   "us-govinfo-dcpd": 5,
-   "us-dol-99f477805a": 4,
-   "us-ftc-58b0383166": 3,
-   "us-govinfo-bills": 2,
-   "us-doj-e05071794d": 2,
-   "jp-meti-index": 2,
-   "us-govinfo-crpt": 1,
-   "us-sec-2476f14c28": 1,
-   "us-ustr-index": 1,
-   "us-fda-03f7703006": 1,
+   "us-federal-register": 82,
+   "uk-govuk-decision": 19,
+   "us-fda-5696b24295": 14,
+   "us-doj-b3d27e1dc3": 13,
+   "eu-commission-07d4f58ccf": 10,
+   "io-bis-140216a5b6": 10,
+   "us-govinfo-crpt": 7,
+   "us-fda-03f7703006": 4,
+   "us-fcc-e95ecda3bb": 4,
+   "us-govinfo-bills": 3,
+   "us-doj-e05071794d": 3,
+   "hk-hkma-public-press": 2,
+   "us-govinfo-plaw": 2,
+   "us-sec-8940dd7737": 2,
+   "us-fda-00e9311ef2": 2,
+   "de-bundesbank-027ac4024f": 2,
+   "uk-govuk-consultation_outcome": 1,
+   "uk-govuk-drug_safety_update": 1,
+   "uk-govuk-product_safety_alert_report_recall": 1,
+   "us-fsis-2f49ece915": 1,
    "us-hhs-6f995a5754": 1,
-   "us-fcc-e95ecda3bb": 1
+   "us-fcc-eeb7d739be": 1,
+   "eu-council-9d9e9444da": 1,
+   "eu-ecb-991c113079": 1,
+   "eu-ecb-fb5fd59aed": 1,
+   "eu-esma-73e01d4013": 1,
+   "de-bundesbank-e5b1c4a067": 1
   },
   "by_class": {
-   "routine": 13,
-   "watch": 12,
-   "high": 5,
+   "routine": 114,
+   "high": 33,
+   "noise": 2,
+   "watch": 36,
    "docket": 5
   }
  },
  "parsed_today": {
-  "count": 4,
+  "count": 130,
   "by_class": {
-   "routine": 3,
-   "watch": 1
+   "high": 34,
+   "watch": 39,
+   "noise": 2,
+   "routine": 55,
+   "docket": 5
   }
  },
- "n_failures": 0,
+ "n_failures": 1,
  "dates": [
   "2026-10-20"
  ],

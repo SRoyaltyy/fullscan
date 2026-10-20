@@ -1,5 +1,106 @@
 [
   {
+    "title": "​​Private Parking Code of Practice​: consultation",
+    "url": "https://www.gov.uk/government/consultations/private-parking-code-of-practice",
+    "native_id": "/government/consultations/private-parking-code-of-practice",
+    "published_at": "2026-10-20T09:53:10+00:00",
+    "published_raw": "2026-10-20T09:53:10Z",
+    "document_type": "consultation_outcome",
+    "issuer": "Ministry of Housing, Communities and Local Government",
+    "issuer_ids": [
+      "uk-gov:ministry-of-housing-communities-local-government"
+    ],
+    "summary": "​​We are seeking views on proposals to raise standards across the private parking industry ahead of preparing a new code of practice.",
+    "source_metadata": {
+      "document_type": "consultation_outcome",
+      "document_stage": "consultation_response_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Ministry of Housing, Communities and Local Government",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-consultation_outcome",
+    "n": 5626,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "uk-govuk-consultation_outcome"
+    ]
+  },
+  {
+    "title": "H.R. 10851 (IH) - Socket Full of Sunshine Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10851ih",
+    "native_id": "BILLS-119hr10851ih",
+    "published_at": "2026-10-20T09:36:01+00:00",
+    "published_raw": "Tue, 20 Oct 2026 09:36:01 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 5631,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10850 (IH) - Standardizing Cancer Recommendations for Earlier Evaluation and Navigation of Screenings Act",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10850ih",
+    "native_id": "BILLS-119hr10850ih",
+    "published_at": "2026-10-20T09:36:01+00:00",
+    "published_raw": "Tue, 20 Oct 2026 09:36:01 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 5630,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "H.R. 10843 (IH) - Visual Artists Copyright Reform Act of 2026",
+    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10843ih",
+    "native_id": "BILLS-119hr10843ih",
+    "published_at": "2026-10-20T09:36:00+00:00",
+    "published_raw": "Tue, 20 Oct 2026 09:36:00 +0000",
+    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "bill",
+      "document_stage": "legislative_document_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congressional Bills",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-bills",
+    "n": 5629,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-govinfo-bills"
+    ]
+  },
+  {
     "title": "H.R. 10847 (IH) - Military Justice Leadership and Independence Act",
     "url": "https://www.govinfo.gov/app/details/BILLS-119hr10847ih",
     "native_id": "BILLS-119hr10847ih",
@@ -18,7 +119,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 5489,
     "first_seen": "2026-10-20T06:03:48.509691+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -42,9 +143,2426 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 5488,
     "first_seen": "2026-10-20T06:03:48.509691+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-govinfo-bills"
+    ]
+  },
+  {
+    "title": "Van-Type Trailers and Subassemblies From China; Determinations",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21382/van-type-trailers-and-subassemblies-from-china-determinations",
+    "native_id": "2026-21382",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "International Trade Commission",
+    "issuer_ids": [
+      "us-fr:262"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21382.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "International Trade Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5604,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Agency Information Collection Activities: Submission to OMB for Review and Approval; Public Comment Request; Health Center Program Forms-OMB No. 0915-0285-Revision",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21385/agency-information-collection-activities-submission-to-omb-for-review-and-approval-public-comment",
+    "native_id": "2026-21385",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Health and Human Services Department; Health Resources and Services Administration",
+    "issuer_ids": [
+      "us-fr:221",
+      "us-fr:222"
+    ],
+    "summary": "In compliance with the Paperwork Reduction Act of 1995, HRSA submitted an Information Collection Request (ICR) to the Office of Management and Budget (OMB) for review and approval. Comments submitted during the first public review of this ICR will be provided to OMB. OMB will accept further comments from the public during the review and approval period. OMB may act on HRSA's ICR only after the 30-day comment period for this notice has closed.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21385.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Health and Human Services Department; Health Resources and Services Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5603,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Notice of Application for Approval of Discontinuance or Modification of a Railroad Signal System",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21386/notice-of-application-for-approval-of-discontinuance-or-modification-of-a-railroad-signal-system",
+    "native_id": "2026-21386",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Transportation Department; Federal Railroad Administration",
+    "issuer_ids": [
+      "us-fr:492",
+      "us-fr:185"
+    ],
+    "summary": "This document provides the public notice that New Jersey Transit Rail Operations, Inc. (NJ Transit) petitioned FRA seeking approval to discontinue or modify a signal system.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21386.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Transportation Department; Federal Railroad Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5602,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Notice of Application for Approval of Discontinuance or Modification of a Railroad Signal System",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21388/notice-of-application-for-approval-of-discontinuance-or-modification-of-a-railroad-signal-system",
+    "native_id": "2026-21388",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Transportation Department; Federal Railroad Administration",
+    "issuer_ids": [
+      "us-fr:492",
+      "us-fr:185"
+    ],
+    "summary": "This document provides the public notice that the Indiana & Ohio Railway Company (IORY) petitioned FRA seeking approval to discontinue or modify a signal system.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21388.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Transportation Department; Federal Railroad Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5601,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Notice of Application for Approval of Discontinuance or Modification of a Railroad Signal System",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21389/notice-of-application-for-approval-of-discontinuance-or-modification-of-a-railroad-signal-system",
+    "native_id": "2026-21389",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Transportation Department; Federal Railroad Administration",
+    "issuer_ids": [
+      "us-fr:492",
+      "us-fr:185"
+    ],
+    "summary": "This document provides the public notice that BNSF Railway Company (BNSF) petitioned FRA seeking approval to modify a signal system by removing fixed derails on a line segment protected by Positive Train Control (PTC).",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21389.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Transportation Department; Federal Railroad Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5600,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Parts and Accessories Necessary for Safe Operation; Application for an Exemption From Grote Industries, LLC",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21390/parts-and-accessories-necessary-for-safe-operation-application-for-an-exemption-from-grote",
+    "native_id": "2026-21390",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Transportation Department; Federal Motor Carrier Safety Administration",
+    "issuer_ids": [
+      "us-fr:492",
+      "us-fr:181"
+    ],
+    "summary": "This notice advises the public of new information that FMCSA believes is relevant to the application from Grote Industries, LLC (Grote) for an exemption from the requirement that exterior lighting devices on commercial motor vehicles (CMVs) be steady-burning. If granted, the exemption would allow motor carriers to operate CMVs equipped with auxiliary warning lamps controlled by Grote's Rear-End Collision Warning (RCW) system. Following publication of the Agency's notice seeking comment, Grote provided additional information to FMCSA staff concerning the design and operation of the RCW system, including the color and activation sequence of the auxiliary warning lamps, the interaction between the RCW and brake-activated warning functions, system operation on combination vehicles, and the operation of the radar detection system. FMCSA is making this supplemental information available in the docket and provides an opportunity for public comment.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21390.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Transportation Department; Federal Motor Carrier Safety Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5599,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Notice of Application for Approval of Discontinuance or Modification of a Railroad Signal System",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21391/notice-of-application-for-approval-of-discontinuance-or-modification-of-a-railroad-signal-system",
+    "native_id": "2026-21391",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Transportation Department; Federal Railroad Administration",
+    "issuer_ids": [
+      "us-fr:492",
+      "us-fr:185"
+    ],
+    "summary": "This document provides the public notice that the Southeastern Pennsylvania Transportation Authority (SEPTA) petitioned FRA seeking approval to discontinue or modify a signal system.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21391.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Transportation Department; Federal Railroad Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5598,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Notice of Open Meeting",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21392/notice-of-open-meeting",
+    "native_id": "2026-21392",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Millennium Challenge Corporation",
+    "issuer_ids": [
+      "us-fr:287"
+    ],
+    "summary": "In accordance with the requirements of the Federal Advisory Committee Act, the Millennium Challenge Corporation (MCC) Advisory Council was established as a discretionary advisory committee on July 14, 2016. Its charter was most recently reestablished on September 30, 2026. The MCC Advisory Council serves MCC solely in an advisory capacity and provides insight regarding innovations in infrastructure, technology, and sustainability; perceived risks and opportunities in MCC partner countries; new financing mechanisms for developing country contexts; and shared value approaches. The MCC Advisory Council provides a platform for systematic engagement with the private sector and other external stakeholders and contributes to MCC's mission--to reduce poverty through sustainable economic growth.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21392.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Millennium Challenge Corporation",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5597,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Self-Regulatory Organizations; Financial Industry Regulatory Authority, Inc.; Order Approving a Proposed Rule Change, as Modified by Partial Amendment No. 1, To Amend FINRA Rule 2210 (Communications With the Public)",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21393/self-regulatory-organizations-financial-industry-regulatory-authority-inc-order-approving-a-proposed",
+    "native_id": "2026-21393",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Securities and Exchange Commission",
+    "issuer_ids": [
+      "us-fr:466"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21393.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Securities and Exchange Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5596,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Determination and Certification With Respect to the Child Soldiers Prevention Act (CPSA) of 2008",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21394/determination-and-certification-with-respect-to-the-child-soldiers-prevention-act-cpsa-of-2008",
+    "native_id": "2026-21394",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "State Department",
+    "issuer_ids": [
+      "us-fr:476"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21394.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "State Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5595,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Center for Scientific Review; Notice of Closed Meetings",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21395/center-for-scientific-review-notice-of-closed-meetings",
+    "native_id": "2026-21395",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Health and Human Services Department; National Institutes of Health",
+    "issuer_ids": [
+      "us-fr:221",
+      "us-fr:353"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21395.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Health and Human Services Department; National Institutes of Health",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5594,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "National Institute of Diabetes and Digestive and Kidney Diseases; Notice of Meeting",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21396/national-institute-of-diabetes-and-digestive-and-kidney-diseases-notice-of-meeting",
+    "native_id": "2026-21396",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Health and Human Services Department; National Institutes of Health",
+    "issuer_ids": [
+      "us-fr:221",
+      "us-fr:353"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21396.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Health and Human Services Department; National Institutes of Health",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5593,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Joint Application Package From the State of Utah to the Surface Transportation Project Delivery Program and Proposed Memorandum of Understanding (MOU) Assigning Environmental Responsibilities to the State",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21397/joint-application-package-from-the-state-of-utah-to-the-surface-transportation-project-delivery",
+    "native_id": "2026-21397",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Transportation Department; Federal Railroad Administration; Federal Transit Administration",
+    "issuer_ids": [
+      "us-fr:492",
+      "us-fr:185",
+      "us-fr:193"
+    ],
+    "summary": "This notice announces that FRA and FTA (Agencies) have received and reviewed an application package from the State of Utah (State), Utah Department of Transportation (UDOT), requesting participation in the Surface Transportation Project Delivery Program (Program). Under the Program, the Agencies may assign, and a State may assume, responsibilities under the National Environmental Policy Act (NEPA), and all or part of the Agencies' responsibilities for environmental review, consultation, or other actions required under any Federal environmental laws except certain statutory exclusions with respect to one or more railroad projects and one or more public transportation projects within the State. The Agencies have determined the application package to be complete and developed a draft Memorandum of Understanding (MOU) with the State outlining how UDOT will implement the Program with the Agencies' oversight. The public is invited to comment on UDOT's request, including its application package and the proposed MOU, which includes the proposed assignments and assumptions of environmental review, consultation, and other activities.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21397.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Transportation Department; Federal Railroad Administration; Federal Transit Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5592,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Notice of OFAC Sanctions Action",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21398/notice-of-ofac-sanctions-action",
+    "native_id": "2026-21398",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Treasury Department; Foreign Assets Control Office",
+    "issuer_ids": [
+      "us-fr:497",
+      "us-fr:203"
+    ],
+    "summary": "The U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) is publishing the names of one or more persons that have been placed on OFAC's Specially Designated Nationals and Blocked Persons List (SDN List) based on OFAC's determination that one or more applicable legal criteria were satisfied. All property and interests in property subject to U.S. jurisdiction of these persons are blocked, and U.S. persons are generally prohibited from engaging in transactions with them.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21398.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Treasury Department; Foreign Assets Control Office",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5591,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Agency Information Collection Activities; Submission for OMB Review; Comment Request; Application for Extension of Time To Furnish Recipient Statements",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21400/agency-information-collection-activities-submission-for-omb-review-comment-request-application-for",
+    "native_id": "2026-21400",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Treasury Department",
+    "issuer_ids": [
+      "us-fr:497"
+    ],
+    "summary": "The Department of the Treasury will submit the following information collection requests to the Office of Management and Budget (OMB) for review and clearance in accordance with the Paperwork Reduction Act of 1995, on or after the date of publication of this notice. The public is invited to submit comments on these requests.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21400.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Treasury Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5590,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "National Cancer Institute; Notice of Partially Closed Meeting",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21401/national-cancer-institute-notice-of-partially-closed-meeting",
+    "native_id": "2026-21401",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Health and Human Services Department; National Institutes of Health",
+    "issuer_ids": [
+      "us-fr:221",
+      "us-fr:353"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21401.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Health and Human Services Department; National Institutes of Health",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5589,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "National Cancer Institute; Notice of Meeting",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21402/national-cancer-institute-notice-of-meeting",
+    "native_id": "2026-21402",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Health and Human Services Department; National Institutes of Health",
+    "issuer_ids": [
+      "us-fr:221",
+      "us-fr:353"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21402.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Health and Human Services Department; National Institutes of Health",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5588,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "National Cancer Institute; Notice of Meeting",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21403/national-cancer-institute-notice-of-meeting",
+    "native_id": "2026-21403",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Health and Human Services Department; National Institutes of Health",
+    "issuer_ids": [
+      "us-fr:221",
+      "us-fr:353"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21403.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Health and Human Services Department; National Institutes of Health",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5587,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Notice of Meeting of Department of Defense Federal Advisory Committee-Defense Policy Board",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21404/notice-of-meeting-of-department-of-defense-federal-advisory-committee-defense-policy-board",
+    "native_id": "2026-21404",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Defense Department; Office of the Secretary",
+    "issuer_ids": [
+      "us-fr:103"
+    ],
+    "summary": "The DoD (referred to herein as \"the Department\", \"Department of War\" or \"DoW\") is publishing this notice to announce the following federal advisory committee meeting of the Defense Policy Board (DPB) will take place.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21404.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Defense Department; Office of the Secretary",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5586,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Accreditation and Approval of SGS North America, Inc. (St. Rose, LA), as a Commercial Gauger and Laboratory",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21405/accreditation-and-approval-of-sgs-north-america-inc-st-rose-la-as-a-commercial-gauger-and-laboratory",
+    "native_id": "2026-21405",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Homeland Security Department; U.S. Customs and Border Protection",
+    "issuer_ids": [
+      "us-fr:227",
+      "us-fr:501"
+    ],
+    "summary": "Notice is hereby given, pursuant to CBP regulations, that SGS North America, Inc. (St. Rose, LA), has been approved to gauge petroleum and certain petroleum products and accredited to test petroleum and certain petroleum products for customs purposes for the next three years as of May 29, 2025.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21405.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Homeland Security Department; U.S. Customs and Border Protection",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5585,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Accreditation and Approval of AmSpec, LLC (La Porte, TX), as a Commercial Gauger and Laboratory",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21406/accreditation-and-approval-of-amspec-llc-la-porte-tx-as-a-commercial-gauger-and-laboratory",
+    "native_id": "2026-21406",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Homeland Security Department; U.S. Customs and Border Protection",
+    "issuer_ids": [
+      "us-fr:227",
+      "us-fr:501"
+    ],
+    "summary": "Notice is hereby given, pursuant to CBP regulations, that AmSpec, LLC (La Porte, TX), has been approved to gauge petroleum and certain petroleum products and accredited to test petroleum and certain petroleum products for customs purposes for the next three years as of July 7, 2026.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21406.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Homeland Security Department; U.S. Customs and Border Protection",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5584,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Accreditation and Approval of SGS North America, Inc. (Carteret, NJ), as a Commercial Gauger and Laboratory",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21407/accreditation-and-approval-of-sgs-north-america-inc-carteret-nj-as-a-commercial-gauger-and",
+    "native_id": "2026-21407",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Homeland Security Department; U.S. Customs and Border Protection",
+    "issuer_ids": [
+      "us-fr:227",
+      "us-fr:501"
+    ],
+    "summary": "Notice is hereby given, pursuant to CBP regulations, that SGS North America, Inc. (Carteret, NJ), has been approved to gauge petroleum and certain petroleum products and accredited to test petroleum and certain petroleum products for customs purposes for the next three years as of September 5, 2025.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21407.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Homeland Security Department; U.S. Customs and Border Protection",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5583,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Accreditation of SGS North America, Inc. (Reserve, LA), as a Commercial Laboratory",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21408/accreditation-of-sgs-north-america-inc-reserve-la-as-a-commercial-laboratory",
+    "native_id": "2026-21408",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Homeland Security Department; U.S. Customs and Border Protection",
+    "issuer_ids": [
+      "us-fr:227",
+      "us-fr:501"
+    ],
+    "summary": "Notice is hereby given, pursuant to CBP regulations, that SGS North America, Inc. (Reserve, LA), has been accredited to test petroleum and certain petroleum products for customs purposes for the next three years as of May 28, 2025.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21408.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Homeland Security Department; U.S. Customs and Border Protection",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5582,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Submission for OMB Review; Comment Request",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21409/submission-for-omb-review-comment-request",
+    "native_id": "2026-21409",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Agriculture Department",
+    "issuer_ids": [
+      "us-fr:12"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21409.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Agriculture Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5581,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Youmna Abdulhadi, M.D.; Decision and Order",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21410/youmna-abdulhadi-md-decision-and-order",
+    "native_id": "2026-21410",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Justice Department; Drug Enforcement Administration",
+    "issuer_ids": [
+      "us-fr:268",
+      "us-fr:116"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21410.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Justice Department; Drug Enforcement Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5580,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Agency Information Collection Activity: VA Pilot Program on Graduate Medical Education and Residency (PPGMER)",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21411/agency-information-collection-activity-va-pilot-program-on-graduate-medical-education-and-residency",
+    "native_id": "2026-21411",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Veterans Affairs Department",
+    "issuer_ids": [
+      "us-fr:520"
+    ],
+    "summary": "Veterans Health Administration (VHA), Department of Veterans Affairs (VA), is announcing an opportunity for public comment on the proposed collection of certain information by the agency. Under the Paperwork Reduction Act (PRA) of 1995, Federal agencies are required to publish a notice in the Federal Register concerning each proposed collection of information, including each proposed extension of a currently approved collection, and allow 60 days for public comment in response to the notice.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21411.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Veterans Affairs Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5579,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Title: Delegation of Authority to the Office of Presidential Appointments",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21412/title-delegation-of-authority-to-the-office-of-presidential-appointments",
+    "native_id": "2026-21412",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "State Department",
+    "issuer_ids": [
+      "us-fr:476"
+    ],
+    "summary": "On August 11, 2026, the Under Secretary of State for Management signed a delegation of authority to the Director and Deputy Director of the Office of Presidential Appointments, as set out below.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21412.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "State Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5578,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Jefferson Burroughs, M.D.; Decision and Order",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21413/jefferson-burroughs-md-decision-and-order",
+    "native_id": "2026-21413",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Justice Department; Drug Enforcement Administration",
+    "issuer_ids": [
+      "us-fr:268",
+      "us-fr:116"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21413.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Justice Department; Drug Enforcement Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5577,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Jan Pijanowski, M.D.; Decision and Order",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21414/jan-pijanowski-md-decision-and-order",
+    "native_id": "2026-21414",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Justice Department; Drug Enforcement Administration",
+    "issuer_ids": [
+      "us-fr:268",
+      "us-fr:116"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21414.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Justice Department; Drug Enforcement Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5576,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Peter Michael Wills, D.D.S.; Decision and Order",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21415/peter-michael-wills-dds-decision-and-order",
+    "native_id": "2026-21415",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Justice Department; Drug Enforcement Administration",
+    "issuer_ids": [
+      "us-fr:268",
+      "us-fr:116"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21415.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Justice Department; Drug Enforcement Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5575,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Agency Forms Undergoing Paperwork Reduction Act Review",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21416/agency-forms-undergoing-paperwork-reduction-act-review",
+    "native_id": "2026-21416",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Health and Human Services Department; Agency for Toxic Substances and Disease Registry",
+    "issuer_ids": [
+      "us-fr:221",
+      "us-fr:7"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21416.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Health and Human Services Department; Agency for Toxic Substances and Disease Registry",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5574,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Agency Forms Undergoing Paperwork Reduction Act Review",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21417/agency-forms-undergoing-paperwork-reduction-act-review",
+    "native_id": "2026-21417",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Health and Human Services Department; Centers for Disease Control and Prevention",
+    "issuer_ids": [
+      "us-fr:221",
+      "us-fr:44"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21417.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Health and Human Services Department; Centers for Disease Control and Prevention",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5573,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Draft Revised Management Plans for the ACE Basin, Elkhorn Slough, and Weeks Bay National Estuarine Research Reserves; Notice of Proposed Boundary Changes",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21418/draft-revised-management-plans-for-the-ace-basin-elkhorn-slough-and-weeks-bay-national-estuarine",
+    "native_id": "2026-21418",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
+    "issuer_ids": [
+      "us-fr:54",
+      "us-fr:361"
+    ],
+    "summary": "The National Oceanic and Atmospheric Administration (NOAA) is soliciting comments from the public regarding a proposed revision of the management plans for the Ashepoo[hyphen]Combahee[hyphen]Edisto Basin (ACE Basin) National Estuarine Research Reserve in South Carolina, Elkhorn Slough National Estuarine Research Reserve in California, and Weeks Bay National Estuarine Research Reserve in Alabama. A management plan provides a framework to guide a reserve's programs, track progress toward meeting its goals, and identify potential opportunities or changes in direction. It is also used to guide programmatic evaluations of a reserve. Management plan revisions are required at least every five years. These draft revised management plans are intended to replace the ACE Basin Research Reserve, Elkhorn Slough Research Reserve, and Weeks Bay Research Reserve management plans, which were approved in 2011, 2007, and 2017, respectively. NOAA is also considering requests to change the boundary of each reserve and is simultaneously soliciting comments from the public on the proposed boundary changes.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21418.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5572,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Takes of Marine Mammals Incidental To Specified Activities; Taking Marine Mammals Incidental to the U.S. Navy's TRF Wharf Interface Repairs Project at U.S. Naval Submarine Base Kings Bay, Georgia",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21419/takes-of-marine-mammals-incidental-to-specified-activities-taking-marine-mammals-incidental-to-the",
+    "native_id": "2026-21419",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
+    "issuer_ids": [
+      "us-fr:54",
+      "us-fr:361"
+    ],
+    "summary": "NMFS has received a request from the U.S. Navy (Navy) for authorization to take marine mammals incidental to construction activities associated with Trident Refit Facility (TRF) wharf interface repairs project at Naval Submarine Base (NSB) Kings Bay, Georgia. Pursuant to the Marine Mammal Protection Act (MMPA), NMFS is requesting comments on its proposal to issue an incidental harassment authorization (IHA) to take marine mammals incidental to the specified activities. NMFS is also requesting comments on a possible one-time, 1-year renewal that could be issued under certain circumstances and if all requirements are met, as described in Request for Public Comments at the end of this notice. NMFS will consider public comments prior to making any final decision on the issuance of the requested MMPA authorization.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21419.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5571,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Medicare Program; Implementation of Sections 6219, 6220, and 6224 of the Consolidated Appropriations Act, 2026",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21420/medicare-program-implementation-of-sections-6219-6220-and-6224-of-the-consolidated-appropriations",
+    "native_id": "2026-21420",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Proposed Rule",
+    "issuer": "Health and Human Services Department; Centers for Medicare & Medicaid Services",
+    "issuer_ids": [
+      "us-fr:221",
+      "us-fr:45"
+    ],
+    "summary": "This proposed rule would implement section 6219 (Adjustments to Medicare Part D Cost-Sharing Reductions for Low-Income Individuals), section 6220 (Requiring Enhanced and Accurate Lists of (REAL) Health Providers Act), and section 6224 (Modernizing and Ensuring Pharmacy Benefit Manager Accountability) of the Consolidated Appropriations Act, 2026.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21420.pdf",
+    "source_metadata": {
+      "document_type": "Proposed Rule",
+      "document_stage": "proposal_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Health and Human Services Department; Centers for Medicare & Medicaid Services",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5570,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "New Postal Products",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21421/new-postal-products",
+    "native_id": "2026-21421",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Postal Regulatory Commission",
+    "issuer_ids": [
+      "us-fr:409"
+    ],
+    "summary": "The Commission is noticing a recent Postal Service filing for the Commission's consideration concerning a negotiated service agreement. This notice informs the public of the filing, invites public comment, and takes other administrative steps.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21421.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Postal Regulatory Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5569,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Notice of OFAC Sanctions Actions",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21423/notice-of-ofac-sanctions-actions",
+    "native_id": "2026-21423",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Treasury Department; Foreign Assets Control Office",
+    "issuer_ids": [
+      "us-fr:497",
+      "us-fr:203"
+    ],
+    "summary": "The U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) is publishing the names of one or more persons whose property and interests in property have been unblocked and who have been removed from the SDN List.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21423.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Treasury Department; Foreign Assets Control Office",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5567,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Application for Authorization To Export Electric Energy; Clear Power LLC",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21424/application-for-authorization-to-export-electric-energy-clear-power-llc",
+    "native_id": "2026-21424",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Energy Department",
+    "issuer_ids": [
+      "us-fr:136"
+    ],
+    "summary": "Clear Power LLC (the Applicant or Clear Power) has applied for authorization to transmit electric energy from the United States to Mexico pursuant to the Federal Power Act.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21424.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Energy Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5566,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Texas LNG Brownsville LLC; Request for Extension of Export Commencement Deadline",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21425/texas-lng-brownsville-llc-request-for-extension-of-export-commencement-deadline",
+    "native_id": "2026-21425",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Energy Department",
+    "issuer_ids": [
+      "us-fr:136"
+    ],
+    "summary": "The Hydrocarbons and Geothermal Energy Office (HGEO) of the Department of Energy (DOE) gives notice (Notice) of receipt of a request (Request), filed on September 28, 2026, by Texas LNG Brownsville LLC (Texas LNG). Texas LNG asks DOE to amend its existing authorization to export domestically produced liquefied natural gas (LNG) to non-free trade agreement countries set forth in DOE/FE Order No. 4489 (as amended)--specifically, to extend its current export commencement deadline. Texas LNG filed the Request under the Natural Gas Act (NGA).",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21425.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Energy Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5565,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "60-Day Notice of Proposed Information Collection: Application for Insurance Benefits",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21426/60-day-notice-of-proposed-information-collection-application-for-insurance-benefits",
+    "native_id": "2026-21426",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Housing and Urban Development Department",
+    "issuer_ids": [
+      "us-fr:228"
+    ],
+    "summary": "HUD is seeking approval from the Office of Management and Budget (OMB) for the information collection described below. In accordance with the Paperwork Reduction Act, HUD is requesting comments from all interested parties on the proposed collection of information. The purpose of this notice is to allow for 60 days of public comment.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21426.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Housing and Urban Development Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5564,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Notice Announcing From Seedlings to Scale and Transformative Research in Special Education Grants Programs",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21427/notice-announcing-from-seedlings-to-scale-and-transformative-research-in-special-education-grants",
+    "native_id": "2026-21427",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Education Department",
+    "issuer_ids": [
+      "us-fr:126"
+    ],
+    "summary": "The Institute of Education Sciences (IES) at the U.S. Department of Education (ED) is soliciting applications for new awards of the Fiscal Year (FY) 2027 From Seedlings to Scale and Transformative Research in Special Education grants programs, Assistance Listing Numbers (ALNs) 84.305J and 84.324T.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21427.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Education Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5563,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Fiscal Year 2026 Senior Executive Service Performance Review Boards",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21429/fiscal-year-2026-senior-executive-service-performance-review-boards",
+    "native_id": "2026-21429",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Homeland Security Department",
+    "issuer_ids": [
+      "us-fr:227"
+    ],
+    "summary": "This notice announces the appointment of members of the Fiscal Year (FY) 2026 Senior Executive Service (SES) Performance Review Boards (PRBs) for the Department of Homeland Security (DHS). The purpose of the PRBs is to make recommendations to the appointing authority (i.e., Agency Head) on the performance of senior executives (career and limited term appointees), including recommendations on performance ratings, performance-based pay adjustments, and performance awards. The PRBs will also make recommendations on the performance of Transportation Security Executive Service, Senior-Level, and Scientific and Professional employees. To make its recommendations, the PRBs will review performance appraisals, initial summary ratings, any response by the employee, and any higher-level official's recommendation.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21429.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Homeland Security Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5562,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Minimum Maturation Temperature for Beef and Ovine Meat From Regions Affected With Foot-and-Mouth Disease",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21433/minimum-maturation-temperature-for-beef-and-ovine-meat-from-regions-affected-with-foot-and-mouth",
+    "native_id": "2026-21433",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Proposed Rule",
+    "issuer": "Agriculture Department; Animal and Plant Health Inspection Service",
+    "issuer_ids": [
+      "us-fr:12",
+      "us-fr:22"
+    ],
+    "summary": "We are proposing to amend the regulations regarding the minimum maturation temperature for fresh (chilled or frozen) boneless beef and ovine meat from certain listed regions or countries affected with foot-and-mouth disease (FMD) from 4 [deg]C to 2 [deg]C. All other existing mitigations for the importation of beef from regions or countries affected with FMD would remain unchanged. This action is needed to align the regulations with the World Organization for Animal Health's standards for FMD minimum maturation temperatures, while continuing to protect the United States against the introduction of FMD.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21433.pdf",
+    "source_metadata": {
+      "document_type": "Proposed Rule",
+      "document_stage": "proposal_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Agriculture Department; Animal and Plant Health Inspection Service",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5561,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Notice of Joint Meeting of the Federal Energy Regulatory Commission and the Nuclear Regulatory Commission",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21434/notice-of-joint-meeting-of-the-federal-energy-regulatory-commission-and-the-nuclear-regulatory",
+    "native_id": "2026-21434",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "issuer_ids": [
+      "us-fr:136",
+      "us-fr:167"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21434.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Energy Department; Federal Energy Regulatory Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5560,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Reliability Technical Conference; Third Supplemental Notice of Commissioner-Led Technical Conference",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21435/reliability-technical-conference-third-supplemental-notice-of-commissioner-led-technical-conference",
+    "native_id": "2026-21435",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "issuer_ids": [
+      "us-fr:136",
+      "us-fr:167"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21435.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Energy Department; Federal Energy Regulatory Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5559,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Uma Lagne Energy Holdings, LLC; Notice of Preliminary Determination of a Qualifying Conduit Hydropower Facility and Soliciting Comments and Motions To Intervene",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21436/uma-lagne-energy-holdings-llc-notice-of-preliminary-determination-of-a-qualifying-conduit-hydropower",
+    "native_id": "2026-21436",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "issuer_ids": [
+      "us-fr:136",
+      "us-fr:167"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21436.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Energy Department; Federal Energy Regulatory Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5558,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Zushi Renewables, LLC; Notice of Preliminary Determination of a Qualifying Conduit Hydropower Facility and Soliciting Comments and Motions To Intervene",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21437/zushi-renewables-llc-notice-of-preliminary-determination-of-a-qualifying-conduit-hydropower-facility",
+    "native_id": "2026-21437",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "issuer_ids": [
+      "us-fr:136",
+      "us-fr:167"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21437.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Energy Department; Federal Energy Regulatory Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5557,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Combined Notice of Filings #1",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21438/combined-notice-of-filings-1",
+    "native_id": "2026-21438",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "issuer_ids": [
+      "us-fr:136",
+      "us-fr:167"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21438.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Energy Department; Federal Energy Regulatory Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5556,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Combined Notice of Filings",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21439/combined-notice-of-filings",
+    "native_id": "2026-21439",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "issuer_ids": [
+      "us-fr:136",
+      "us-fr:167"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21439.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Energy Department; Federal Energy Regulatory Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5555,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Double E Pipeline, LLC; Notice of Application and Establishing Intervention Deadline",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21440/double-e-pipeline-llc-notice-of-application-and-establishing-intervention-deadline",
+    "native_id": "2026-21440",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "issuer_ids": [
+      "us-fr:136",
+      "us-fr:167"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21440.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Energy Department; Federal Energy Regulatory Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5554,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Equitrans, L.P.; Notice of Request Under Blanket Authorization and Establishing Intervention and Protest Deadline",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21441/equitrans-lp-notice-of-request-under-blanket-authorization-and-establishing-intervention-and-protest",
+    "native_id": "2026-21441",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "issuer_ids": [
+      "us-fr:136",
+      "us-fr:167"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21441.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Energy Department; Federal Energy Regulatory Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5553,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Environmental Review of Natural Gas Act Applications; Notice of Availability of Draft Policy Statement on Efficient Environmental Reviews of Natural Gas Project Applications",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21442/environmental-review-of-natural-gas-act-applications-notice-of-availability-of-draft-policy",
+    "native_id": "2026-21442",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "issuer_ids": [
+      "us-fr:136",
+      "us-fr:167"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21442.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Energy Department; Federal Energy Regulatory Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5552,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Authorizations for Certain Activities at Liquefied Natural Gas Plants",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21443/authorizations-for-certain-activities-at-liquefied-natural-gas-plants",
+    "native_id": "2026-21443",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Proposed Rule",
+    "issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "issuer_ids": [
+      "us-fr:136",
+      "us-fr:167"
+    ],
+    "summary": "The Federal Energy Regulatory Commission proposes to revise its regulations to establish procedures for authorizing activities at liquefied natural gas plants without case-specific authorization orders under sections 3 or 7 of the Natural Gas Act.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21443.pdf",
+    "source_metadata": {
+      "document_type": "Proposed Rule",
+      "document_stage": "proposal_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Energy Department; Federal Energy Regulatory Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5551,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Renewal of Agency Information Collections for Comments Request: Proposed Collections",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21444/renewal-of-agency-information-collections-for-comments-request-proposed-collections",
+    "native_id": "2026-21444",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "National Credit Union Administration",
+    "issuer_ids": [
+      "us-fr:335"
+    ],
+    "summary": "The National Credit Union Administration (NCUA) will submit the following information collection requests to the Office of Management and Budget (OMB) for review and clearance in accordance with the Paperwork Reduction Act of 1995, on or after the date of publication of this notice.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21444.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "National Credit Union Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5550,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Notice of OFAC Sanctions Action",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21445/notice-of-ofac-sanctions-action",
+    "native_id": "2026-21445",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Treasury Department; Foreign Assets Control Office",
+    "issuer_ids": [
+      "us-fr:497",
+      "us-fr:203"
+    ],
+    "summary": "The U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) is publishing the names of one or more persons that have been placed on OFAC's Specially Designated Nationals and Blocked Persons List (SDN List) based on OFAC's determination that one or more applicable legal criteria were satisfied. All property and interests in property subject to U.S. jurisdiction of these persons are blocked, and U.S. persons are generally prohibited from engaging in transactions with them.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21445.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Treasury Department; Foreign Assets Control Office",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5549,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Agency Information Collection Activities; Proposed Collection; Comments Requested; Revising a Previously Approved Collection; Special Agent Medical Preplacement-ATF Form 2300.10",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21446/agency-information-collection-activities-proposed-collection-comments-requested-revising-a",
+    "native_id": "2026-21446",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Justice Department",
+    "issuer_ids": [
+      "us-fr:268"
+    ],
+    "summary": "The Department of Justice (DOJ), Bureau of Alcohol, Tobacco, Firearms, and Explosives (ATF), will be submitting the following information collection request (ICR) to the Office of Management and Budget (OMB) for review and approval in accordance with the Paperwork Reduction Act of 1995.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21446.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Justice Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5548,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Notice of Order Regarding Exclusion and Removal of DeepSeek Products From Federal Civilian Executive Branch Information Technology Systems and Procurements",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21447/notice-of-order-regarding-exclusion-and-removal-of-deepseek-products-from-federal-civilian-executive",
+    "native_id": "2026-21447",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Homeland Security Department",
+    "issuer_ids": [
+      "us-fr:227"
+    ],
+    "summary": "The Department of Homeland Security is publishing notice of the Secretary of Homeland Security's issuance of an order (1) excluding information technology products and services developed by Hangzhou DeepSeek Artificial Intelligence Co., Ltd (DeepSeek), to include affiliated entities as defined in applicable regulations, from federal civilian agency procurements; and, (2) removing all DeepSeek and DeepSeek-affiliate products, and third-party products and services developed using DeepSeek implementations, from civilian agency information technology.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21447.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Homeland Security Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5547,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Notice of Petition for Extension of Special Approval",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21448/notice-of-petition-for-extension-of-special-approval",
+    "native_id": "2026-21448",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Transportation Department; Federal Railroad Administration",
+    "issuer_ids": [
+      "us-fr:492",
+      "us-fr:185"
+    ],
+    "summary": "This document provides the public notice that the Maryland Department of Transportation Maryland Transit Administration MARC Train Service (MACZ), petitioned FRA to extend a special approval of an alternate standard for periodic brake equipment maintenance.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21448.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Transportation Department; Federal Railroad Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5546,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Sunshine Act Meetings",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21449/sunshine-act-meetings",
+    "native_id": "2026-21449",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Legal Services Corporation",
+    "issuer_ids": [
+      "us-fr:276"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21449.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Legal Services Corporation",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5545,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "60-Day Notice of Proposed Information Collection: Exhibitors Sought for the Innovative Housing Showcase",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21451/60-day-notice-of-proposed-information-collection-exhibitors-sought-for-the-innovative-housing",
+    "native_id": "2026-21451",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Housing and Urban Development Department",
+    "issuer_ids": [
+      "us-fr:228"
+    ],
+    "summary": "HUD is seeking approval from the Office of Management and Budget (OMB) for the information collection described below. In accordance with the Paperwork Reduction Act, HUD is requesting comment from all interested parties on the proposed collection of information. The purpose of this notice is to allow for 60 days of public comment.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21451.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Housing and Urban Development Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5543,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Certain Linear Hydraulic Cylinders and Parts Thereof From the People's Republic of China, India, and Mexico: Postponement of Preliminary Determinations in the Countervailing Duty Investigations",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21452/certain-linear-hydraulic-cylinders-and-parts-thereof-from-the-peoples-republic-of-china-india-and",
+    "native_id": "2026-21452",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Commerce Department; International Trade Administration",
+    "issuer_ids": [
+      "us-fr:54",
+      "us-fr:261"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21452.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Commerce Department; International Trade Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5542,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "New Dietary Ingredient (NDI) Notifications and Related Issues; Identity and Safety Information About the NDI: Guidance for Industry; Availability",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21453/new-dietary-ingredient-ndi-notifications-and-related-issues-identity-and-safety-information-about",
+    "native_id": "2026-21453",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Health and Human Services Department; Food and Drug Administration",
+    "issuer_ids": [
+      "us-fr:221",
+      "us-fr:199"
+    ],
+    "summary": "The Food and Drug Administration (FDA or we) is announcing the availability of a final guidance for industry entitled \"New Dietary Ingredient (NDI) Notifications and Related Issues; Identity and Safety Information About the NDI: Guidance for Industry.\" The guidance focuses on frequently asked questions about the new dietary ingredient notification (NDIN) submissions. This guidance is intended to help provide recommendations to manufacturers and distributors of NDIs and dietary supplements containing an NDI regarding the identity and safety information that should be included in an NDIN.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21453.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Health and Human Services Department; Food and Drug Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5541,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Agency Information Collection Activity: Application for Assumption Approval and/or Release From Personal Liability to the Government on a Home Loan",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21454/agency-information-collection-activity-application-for-assumption-approval-andor-release-from",
+    "native_id": "2026-21454",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Veterans Affairs Department",
+    "issuer_ids": [
+      "us-fr:520"
+    ],
+    "summary": "In compliance with the Paperwork Reduction Act (PRA) of 1995, this notice announces that the Veterans Benefits Administration, Department of Veterans Affairs, will submit the collection of information abstracted below to the Office of Management and Budget (OMB) for review and comment. The PRA submission describes the nature of the information collection and its expected cost and burden and it includes the actual data collection instrument.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21454.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Veterans Affairs Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5540,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Agency Information Collection Activities; Submission for OMB Review; Comment Request; New Markets Tax Credit Program (NMTC Program) Allocation and Qualified Equity Investment Tracking System (AQEI)",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21455/agency-information-collection-activities-submission-for-omb-review-comment-request-new-markets-tax",
+    "native_id": "2026-21455",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Treasury Department",
+    "issuer_ids": [
+      "us-fr:497"
+    ],
+    "summary": "The Department of the Treasury will submit the following information collection requests to the Office of Management and Budget (OMB) for review and clearance in accordance with the Paperwork Reduction Act of 1995, on or after the date of publication of this notice. The public is invited to submit comments on these requests.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21455.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Treasury Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5539,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Certificate of Alternate Compliance for USS Harrisburg (LPD 30)",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21456/certificate-of-alternate-compliance-for-uss-harrisburg-lpd-30",
+    "native_id": "2026-21456",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Defense Department; Navy Department",
+    "issuer_ids": [
+      "us-fr:103",
+      "us-fr:378"
+    ],
+    "summary": "The U.S. Navy hereby announces that a Certificate of Alternate Compliance has been issued for USS HARRISBURG (LPD 30). Due to the special construction and purpose of this vessel, the Admiralty Counsel of the Navy has determined it is a vessel of the Navy which, due to its special construction and purpose, cannot comply fully with the navigation lights provisions of the International Regulations for Preventing Collisions at Sea, 1972 (72 COLREGS) without interfering with its special function as a naval ship. The intended effect of this notice is to warn mariners in waters where 72 COLREGS apply.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21456.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Defense Department; Navy Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5538,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Dioctyl Terephthalate From Malaysia, Poland, Taiwan, and the Republic of Türkiye: Antidumping Duty Orders; Correction",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21457/dioctyl-terephthalate-from-malaysia-poland-taiwan-and-the-republic-of-trkiye-antidumping-duty-orders",
+    "native_id": "2026-21457",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Commerce Department; International Trade Administration",
+    "issuer_ids": [
+      "us-fr:54",
+      "us-fr:261"
+    ],
+    "summary": "The U.S. Department of Commerce (Commerce) published notice in the Federal Register of May 22, 2025, in which Commerce issued the antidumping duty (AD) orders on dioctyl terephthalate (DOTP) from Malaysia, Poland, Taiwan, and the Republic of T[uuml]rkiye (T[uuml]rkiye). The notice incorrectly stated the dates of the ending of provisional measures and the termination of suspension of liquidation due to the expiration of provisional measures.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21457.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Commerce Department; International Trade Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5537,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Seamless Carbon and Alloy Steel Standard, Line, and Pressure Pipe From Georgia and India; Institution of Antidumping and Countervailing Duty Investigations and Scheduling of Preliminary Phase Investigations",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21458/seamless-carbon-and-alloy-steel-standard-line-and-pressure-pipe-from-georgia-and-india-institution",
+    "native_id": "2026-21458",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "International Trade Commission",
+    "issuer_ids": [
+      "us-fr:262"
+    ],
+    "summary": "The Commission hereby gives notice of the institution of investigations and commencement of preliminary phase antidumping and countervailing duty investigation Nos. 701-TA-810 and 731-TA-1811-1812 (Preliminary) pursuant to the Tariff Act of 1930 to determine whether there is a reasonable indication that an industry in the United States is materially injured or threatened with material injury, or the establishment of an industry in the United States is materially retarded, by reason of imports of seamless carbon and alloy steel standard, line, and pressure pipe from Georgia and India, provided for in subheadings 7304.19.10, 7304.19.50, 7304.31.60, 7304.39.00, 7304.51.50, 7304.59.60, and 7304.59.80 of the Harmonized Tariff Schedule of the United States, that are alleged to be sold in the United States at less than fair value and alleged to be subsidized by the Government of India. Unless the Department of Commerce (\"Commerce\") extends the time for initiation, the Commission must reach a preliminary determination in antidumping and countervailing duty investigations in 45 days, or in this case by November 30, 2026. The Commission's views must be transmitted to Commerce within five bus",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21458.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "International Trade Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5536,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Small Vertical Shaft Engines From China; Determinations",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21459/small-vertical-shaft-engines-from-china-determinations",
+    "native_id": "2026-21459",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "International Trade Commission",
+    "issuer_ids": [
+      "us-fr:262"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21459.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "International Trade Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5535,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "60-Day Notice of Proposed Information Collection: National Contact Point Web Page",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21460/60-day-notice-of-proposed-information-collection-national-contact-point-web-page",
+    "native_id": "2026-21460",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "State Department",
+    "issuer_ids": [
+      "us-fr:476"
+    ],
+    "summary": "The Department of State is seeking Office of Management and Budget (OMB) approval for the information collection described below. In accordance with the Paperwork Reduction Act of 1995, we are requesting comments on this collection from all interested individuals and organizations. The purpose of this notice is to allow 60 days for public comment preceding submission of the collection to OMB.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21460.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "State Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5534,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Agency Information Collection Activities: Comment Request; Grantee Reporting Requirements for the U.S. National Science Foundation Regional Innovation Engines (NSF Engines) Program",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21461/agency-information-collection-activities-comment-request-grantee-reporting-requirements-for-the-us",
+    "native_id": "2026-21461",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "National Science Foundation",
+    "issuer_ids": [
+      "us-fr:366"
+    ],
+    "summary": "The National Science Foundation (NSF) is announcing plans to renew this collection. In accordance with the requirements of the Paperwork Reduction Act of 1995, we are providing an opportunity for public comment on this action. After obtaining and considering public comment, NSF will prepare the submission requesting Office of Management and Budget (OMB) clearance of this collection for no longer than 3 years.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21461.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "National Science Foundation",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5533,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "American Samoa Outer Continental Shelf Pacific Mineral Lease Sale 1",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21462/american-samoa-outer-continental-shelf-pacific-mineral-lease-sale-1",
+    "native_id": "2026-21462",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Interior Department; Ocean Energy Management Bureau",
+    "issuer_ids": [
+      "us-fr:253",
+      "us-fr:575"
+    ],
+    "summary": "The Marine Minerals Administration (MMA) will conduct an auction for lease areas offered in the American Samoa Outer Continental Shelf (OCS) Pacific Mineral Lease Sale 1 (Lease Sale PACM-1), in accordance with the Outer Continental Shelf Lands Act (OCSLA), as amended, and its implementing regulations. The Final Leasing Notice (FLN) package for this lease sale contains information essential to potential bidders, including Information to Lessees and Lease Stipulations.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21462.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Interior Department; Ocean Energy Management Bureau",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5532,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Certificate of Alternate Compliance for USS PATRICK GALLAGHER (DDG 127)",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21463/certificate-of-alternate-compliance-for-uss-patrick-gallagher-ddg-127",
+    "native_id": "2026-21463",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Defense Department; Navy Department",
+    "issuer_ids": [
+      "us-fr:103",
+      "us-fr:378"
+    ],
+    "summary": "The U.S. Navy hereby announces that a Certificate of Alternate Compliance has been issued for USS PATRICK GALLAGHER (DDG 127). Due to the special construction and purpose of this vessel, the Admiralty Counsel of the Navy has determined it is a vessel of the Navy which, due to its special construction and purpose, cannot comply fully with the navigation lights provisions of the International Regulations for Preventing Collisions at Sea, 1972 (72 COLREGS) without interfering with its special function as a naval ship. The intended effect of this notice is to warn mariners in waters where 72 COLREGS apply.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21463.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Defense Department; Navy Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5531,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Proposed Collection; Comment Request",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21464/proposed-collection-comment-request",
+    "native_id": "2026-21464",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Defense Department; Office of the Secretary",
+    "issuer_ids": [
+      "us-fr:103"
+    ],
+    "summary": "In compliance with the Paperwork Reduction Act of 1995, the OUSD(A&S), DoD (referred to herein as \"the Department\", \"Department of War\" or \"DoW\") announces proposed public information collection and seeks public comment on the provisions thereof. Comments are invited on: whether the proposed collection of information is necessary for the proper performance of the functions of the agency, including whether the information shall have practical utility; the accuracy of the agency's estimate of the burden of the proposed information collection; ways to enhance the quality, utility, and clarity of the information to be collected; and ways to minimize the burden of the information collection on respondents, including through the use of automated collection techniques or other forms of information technology.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21464.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Defense Department; Office of the Secretary",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5530,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Submission for OMB Review; Comment Request",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21465/submission-for-omb-review-comment-request",
+    "native_id": "2026-21465",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Defense Department; Office of the Secretary",
+    "issuer_ids": [
+      "us-fr:103"
+    ],
+    "summary": "The DoD (referred to herein as \"the Department\", \"Department of War\" or \"DoW\") has submitted to the Office of Management and Budget (OMB) for clearance the following proposal for collection of information under the provisions of the Paperwork Reduction Act.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21465.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Defense Department; Office of the Secretary",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5529,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Agency Information Collection Activities: Comment Request",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21466/agency-information-collection-activities-comment-request",
+    "native_id": "2026-21466",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "National Science Foundation",
+    "issuer_ids": [
+      "us-fr:366"
+    ],
+    "summary": "The National Science Foundation (NSF) is announcing plans to establish this collection. In accordance with the requirements of the Paperwork Reduction Act of 1995, we are providing opportunity for public to comment on this action. After obtaining and considering public comments, NSF will prepare the submission requesting Office of Management and Budget (OMB) clearance of this collection for no longer than 3 years.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21466.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "National Science Foundation",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5528,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Presidential Declaration of a Major Disaster for Public Assistance Only for the State of New Hampshire",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21467/presidential-declaration-of-a-major-disaster-for-public-assistance-only-for-the-state-of-new",
+    "native_id": "2026-21467",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Small Business Administration",
+    "issuer_ids": [
+      "us-fr:468"
+    ],
+    "summary": "This is notice of the Presidential declaration of a major disaster for Public Assistance Only for the state of New Hampshire (FEMA-4947-DR), dated October 7, 2026. Incident: Severe Storm and Flooding.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21467.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Small Business Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5527,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Agency Information Collection Activity: State Veterans Homes Construction & Acquisition Grant Program (SVHCGP)",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21468/agency-information-collection-activity-state-veterans-homes-construction-and-acquisition-grant",
+    "native_id": "2026-21468",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Veterans Affairs Department",
+    "issuer_ids": [
+      "us-fr:520"
+    ],
+    "summary": "Veterans Health Administration (VHA), Department of Veterans Affairs (VA), is announcing an opportunity for public comment on the proposed collection of certain information by the agency. Under the Paperwork Reduction Act (PRA) of 1995, Federal agencies are required to publish a notice in the Federal Register concerning each proposed collection of information, including each proposed extension of a currently approved collection, and allow 60 days for public comment in response to the notice. DATES: Comments must be received on or before December 21, 2026.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21468.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Veterans Affairs Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5526,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Presidential Declaration of a Major Disaster for Public Assistance Only for the State of Utah",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/2026-21469/presidential-declaration-of-a-major-disaster-for-public-assistance-only-for-the-state-of-utah",
+    "native_id": "2026-21469",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Notice",
+    "issuer": "Small Business Administration",
+    "issuer_ids": [
+      "us-fr:468"
+    ],
+    "summary": "This is notice of the Presidential declaration of a major disaster for Public Assistance Only for the state of Utah (FEMA-4948- DR), dated October 7, 2026. Incident: Cottonwood Fire, Flooding, and Mudslides.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21469.pdf",
+    "source_metadata": {
+      "document_type": "Notice",
+      "document_stage": "notice_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Small Business Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5525,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Interval Fund Modernization; Expansion of Multiple Share Class to Registered Closed-End Management Investment Companies and Business Development Companies",
+    "url": "https://www.federalregister.gov/documents/2026/10/20/C1-2026-20360/interval-fund-modernization-expansion-of-multiple-share-class-to-registered-closed-end-management",
+    "native_id": "C1-2026-20360",
+    "published_at": "2026-10-20T00:00:00+00:00",
+    "published_raw": "2026-10-20",
+    "document_type": "Proposed Rule",
+    "issuer": "Securities and Exchange Commission",
+    "issuer_ids": [
+      "us-fr:466"
+    ],
+    "summary": "",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/C1-2026-20360.pdf",
+    "source_metadata": {
+      "document_type": "Proposed Rule",
+      "document_stage": "proposal_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Securities and Exchange Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 5523,
+    "first_seen": "2026-10-20T18:00:04.951908+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "source_ids": [
+      "us-federal-register"
     ]
   },
   {
@@ -66,7 +2584,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 5408,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -90,7 +2608,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 5407,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -114,7 +2632,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 5406,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -138,7 +2656,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 5405,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -162,7 +2680,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 5404,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -186,7 +2704,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 5403,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -210,7 +2728,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 5402,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -234,7 +2752,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 5401,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -258,7 +2776,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 5400,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -282,7 +2800,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 5399,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -306,7 +2824,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 5398,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -330,7 +2848,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 5397,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -354,7 +2872,7 @@
     "primary_source_id": "us-govinfo-bills",
     "n": 5396,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-govinfo-bills"
     ]
@@ -383,7 +2901,7 @@
     "primary_source_id": "uk-govuk-consultation_outcome",
     "n": 5389,
     "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "uk-govuk-consultation_outcome"
     ]
@@ -414,7 +2932,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5374,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -444,7 +2962,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5373,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -475,7 +2993,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5372,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -506,7 +3024,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5371,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -537,7 +3055,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5370,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -567,7 +3085,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5369,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -597,7 +3115,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5368,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -627,7 +3145,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5367,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -657,7 +3175,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5366,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -688,7 +3206,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5365,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -719,7 +3237,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5364,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -750,7 +3268,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5363,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -780,7 +3298,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5362,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -810,7 +3328,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5361,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -840,7 +3358,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5360,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -870,7 +3388,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5359,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -900,7 +3418,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5358,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -931,7 +3449,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5357,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -961,7 +3479,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5356,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -991,7 +3509,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5355,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1021,7 +3539,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5354,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1051,7 +3569,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5353,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1082,7 +3600,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5352,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1112,7 +3630,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5351,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1143,7 +3661,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5350,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1173,7 +3691,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5347,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1203,7 +3721,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5346,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1234,7 +3752,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5345,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1265,7 +3783,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5343,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1295,7 +3813,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5342,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1325,7 +3843,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5341,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1356,7 +3874,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5340,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1387,7 +3905,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5339,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1418,7 +3936,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5337,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1448,7 +3966,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5336,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1479,7 +3997,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5335,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1510,7 +4028,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5334,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1541,7 +4059,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5333,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1572,7 +4090,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5332,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1603,7 +4121,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5331,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1634,7 +4152,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5330,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1664,7 +4182,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5329,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1694,7 +4212,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5328,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1724,7 +4242,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5327,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1755,7 +4273,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5325,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1786,7 +4304,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5324,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1817,7 +4335,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5323,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1848,7 +4366,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5322,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1879,7 +4397,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5321,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1910,7 +4428,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5320,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1940,7 +4458,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5319,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1971,7 +4489,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5318,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2002,7 +4520,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5316,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2032,7 +4550,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5315,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2062,7 +4580,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5313,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2092,7 +4610,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5312,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2123,7 +4641,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5311,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2154,7 +4672,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5310,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2185,7 +4703,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5309,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2216,7 +4734,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5308,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2247,7 +4765,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5306,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2277,7 +4795,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5305,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2307,7 +4825,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5304,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2337,7 +4855,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5303,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2367,7 +4885,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5302,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2397,7 +4915,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5299,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2427,7 +4945,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5296,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2457,7 +4975,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5295,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2487,7 +5005,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5294,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2518,7 +5036,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5290,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2548,7 +5066,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5289,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2579,7 +5097,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5288,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2610,7 +5128,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5287,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2641,7 +5159,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5283,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2671,7 +5189,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5282,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2701,7 +5219,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5281,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2731,7 +5249,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5280,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2761,7 +5279,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5279,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2791,7 +5309,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5278,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2821,7 +5339,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5277,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2851,7 +5369,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5276,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2881,7 +5399,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5275,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2911,7 +5429,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5274,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2941,7 +5459,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5273,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -2972,7 +5490,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5272,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3002,7 +5520,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5270,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3033,7 +5551,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5268,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3064,7 +5582,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5267,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3095,7 +5613,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5266,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3125,7 +5643,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5265,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3156,7 +5674,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5264,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3187,7 +5705,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5263,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3218,7 +5736,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5262,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3249,7 +5767,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5261,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3280,7 +5798,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5260,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3311,7 +5829,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5259,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3342,7 +5860,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5258,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3373,7 +5891,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5257,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3404,7 +5922,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5256,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3435,7 +5953,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5255,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3466,7 +5984,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5254,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3497,7 +6015,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5253,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3528,7 +6046,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5252,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3559,7 +6077,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5251,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3590,7 +6108,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5250,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3621,7 +6139,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5249,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3652,7 +6170,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5248,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3682,7 +6200,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5246,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3712,7 +6230,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5245,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3742,7 +6260,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5244,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3772,7 +6290,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5243,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3802,7 +6320,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5241,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3832,7 +6350,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5240,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3863,7 +6381,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5239,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3893,7 +6411,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5238,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3923,7 +6441,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5237,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3953,7 +6471,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5236,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -3983,7 +6501,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5235,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4014,7 +6532,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5234,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -4044,7 +6562,7 @@
     "primary_source_id": "us-federal-register",
     "n": 5233,
     "first_seen": "2026-10-19T06:15:03.918025+00:00",
-    "last_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-20T18:00:04.951908+00:00",
     "source_ids": [
       "us-federal-register"
     ]
