@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · OR news + net≥4; 70% leftover if #1 net ≥ 5
 
-Cash book **-35.82%** ($6,418) · signal-only (no cash/fees) was -7.44%. Starts YES **12/30**. Fills 123 · skips 31 · realized $+852.81.
+Cash book **-35.45%** ($6,455) · signal-only (no cash/fees) was -7.44%. Starts YES **12/30**. Fills 125 · skips 31 · realized $+852.81.
 
 ## How this sleeve decides (like you are 10)
 
@@ -291,6 +291,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `EOG` | 9 | $157.52 | $2.02 | — | $688.17 | — | OR news + net≥4; 70% leftover if #1 net ≥ 5; gate cam_net_min=4,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+7.3; leftover $1475.51 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `COP` | 4 | $145.73 | $2.00 | — | $103.25 | — | OR news + net≥4; 70% leftover if #1 net ≥ 5; gate cam_net_min=4,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+9.3; leftover $632.36 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $103.25 | ▼ close $6,417.93 vs 09:30 $6,424.63 (session -2.68) | 16:00 close · cash $103.25 · equity $6,417.93 vs 09:30 $6,424.63 (-6.70; session marks -2.68) · 3 name(s) marked open→close (per-name table). AMX×189 09:30 $22.84 → close $22.83 -1.89; EOG×9 09:30 $157.52 → close $157.65 +1.17; COP×4 09:30 $145.73 → close $145.24 -1.96 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $103.25 | ▲ 09:30 equity $6,464.36 vs yday $6,417.93 (+46.43) | 09:30 open · cash $103.25 (unchanged overnight, no fees) · equity $6,464.36 vs prior close $6,417.93 (+46.43) · 3 name(s) re-marked at the open (per-name table). AMX×189 yday $22.83 → 09:30 $22.93 +18.90; COP×4 yday $145.24 → 09:30 $147.15 +7.64; EOG×9 yday $157.65 → 09:30 $159.86 +19.89 | — |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 4 | $147.15 | $2.02 | $+1.66 | $689.83 | ▲ +1.66 after sell → book $6,462.34; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `EOG` | 9 | $159.86 | $2.04 | $+17.00 | $2,126.53 | ▲ +17.00 after sell → book $6,460.30; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,126.53 | ▼ close $6,454.63 vs 09:30 $6,464.36 (session -5.67) | 16:00 close · cash $2,126.53 · equity $6,454.63 vs 09:30 $6,464.36 (-9.73; session marks -5.67) · 1 name(s) marked open→close (per-name table). AMX×189 09:30 $22.93 → close $22.90 -5.67 | — |
 
 ## Not taken
 

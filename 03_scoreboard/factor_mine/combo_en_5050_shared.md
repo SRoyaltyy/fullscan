@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_news_g_h1 w=0.5,0.5 net=priority
 
-Cash book **-22.56%** ($7,744) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 429 · skips 300 · realized $+2521.08.
+Cash book **-21.96%** ($7,804) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 434 · skips 300 · realized $+2521.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $187.19.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $4,454.95.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -596,6 +596,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `COP` | 9 | $145.73 | $2.02 | — | $1,606.88 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+9.3; combo leftover $1447.22; owner union_news_g_h1 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `EOG` | 9 | $157.52 | $2.02 | — | $187.19 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+7.3; combo leftover $1447.22; owner union_news_g_h1 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $187.19 | ▼ close $7,743.69 vs 09:30 $7,797.12 (session -32.90) | 16:00 close · cash $187.19 · equity $7,743.69 vs 09:30 $7,797.12 (-53.43; session marks -32.90) · 15 name(s) marked open→close (per-name table). AA×2 09:30 $41.79 → close $41.67 -0.24; AMX×33 09:30 $22.84 → close $22.83 -0.33; CFG×1 09:30 $62.96 → close $62.76 -0.20; ERIC×5 09:30 $10.42 → close $10.34 -0.40; FHN×2 09:30 $22.88 → close $22.73 -0.30; GLND×102 09:30 $3.00 → close $3.02 +2.04; IBKR×1 09:30 $82.83 → close $81.35 -1.48; ITW×2 09:30 $271.48 → close $270.17 -2.62; NVTS×73 09:30 $8.84 → close $8.63 -15.33; RF×3 09:30 $27.40 → close $27.20 -0.60; TBBB×12 09:30 $58.00 → close $58.39 +4.68; WSE×8 09:30 $10.95 → close $10.95 +0.00; BTI×24 09:30 $59.13 → close $58.51 -14.88; COP×9 09:30 $145.73 → close $145.24 -4.41; EOG×9 09:30 $157.52 → close $157.65 +1.17 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $187.19 | ▲ 09:30 equity $7,766.54 vs yday $7,743.69 (+22.85) | 09:30 open · cash $187.19 (unchanged overnight, no fees) · equity $7,766.54 vs prior close $7,743.69 (+22.85) | — |
+| 2026-10-20 09:30 ET | **SELL** | `BTI` | 24 | $58.94 | $2.08 | $-8.83 | $1,599.55 | ▼ -8.83 after sell → book $7,764.46; vs 09:30 mark -2.08 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 9 | $147.15 | $2.04 | $+8.73 | $2,921.86 | ▲ +8.73 after sell → book $7,762.42; vs 09:30 mark -2.04 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `EOG` | 9 | $159.86 | $2.04 | $+17.00 | $4,358.56 | ▲ +17.00 after sell → book $7,760.38; vs 09:30 mark -2.04 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `ERIC` | 5 | $10.38 | $0.55 | $-2.45 | $4,409.91 | ▼ -2.45 after sell → book $7,759.83; vs 09:30 mark -0.55 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `FHN` | 2 | $22.76 | $0.48 | $-0.09 | $4,454.95 | ▼ -0.09 after sell → book $7,759.35; vs 09:30 mark -0.48 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,454.95 | ▲ close $7,803.59 vs 09:30 $7,766.54 (session +44.24) | 16:00 close · cash $4,454.95 · equity $7,803.59 vs 09:30 $7,766.54 (+37.05; session marks +44.24) · 10 name(s) marked open→close (per-name table). AA×2 09:30 $40.72 → close $40.79 +0.14; AMX×33 09:30 $22.93 → close $22.90 -0.99; CFG×1 09:30 $62.62 → close $64.22 +1.60; GLND×102 09:30 $2.93 → close $3.10 +17.34; IBKR×1 09:30 $80.50 → close $82.91 +2.41; ITW×2 09:30 $269.66 → close $274.97 +10.62; NVTS×73 09:30 $8.38 → close $8.74 +26.28; RF×3 09:30 $27.25 → close $27.85 +1.80; TBBB×12 09:30 $58.65 → close $57.37 -15.36; WSE×8 09:30 $10.96 → close $11.01 +0.40 | — |
 
 ## Not taken
 

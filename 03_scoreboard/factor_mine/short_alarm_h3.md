@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+2.84%** ($10,284) · signal-only (no cash/fees) was -2.80%. Starts YES **2/30**. Fills 230 · skips 221 · realized $+639.78.
+Cash book **+2.29%** ($10,229) · signal-only (no cash/fees) was -2.80%. Starts YES **2/30**. Fills 235 · skips 221 · realized $+639.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -394,6 +394,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **SHORT** | `NOG` | 24 | $27.00 | $2.10 | — | $19,353.66 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+9.7; leftover $649.65 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 judge🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **SHORT** | `BP` | 13 | $49.45 | $2.07 | — | $19,994.44 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+8.6; leftover $649.65 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,994.44 | ▼ close $10,284.01 vs 09:30 $10,423.94 (session -95.83) | 16:00 close · cash $19,994.44 · equity $10,284.01 vs 09:30 $10,423.94 (-139.93; session marks -95.83) · 13 name(s) marked open→close (per-name table). BF-B×30 09:30 $28.58 → close $28.22 +10.80; GLND×273 09:30 $3.00 → close $3.02 -5.46; KLRA×82 09:30 $11.33 → close $11.43 -8.20; SHOO×19 09:30 $45.41 → close $44.96 +8.55; SMMT×57 09:30 $14.90 → close $15.57 -38.19; USB×15 09:30 $58.48 → close $57.85 +9.45; CDNA×9 09:30 $65.00 → close $67.08 -18.72; PRMB×33 09:30 $19.22 → close $19.79 -18.81; BRO×9 09:30 $68.44 → close $69.22 -7.02; VET×49 09:30 $13.17 → close $13.60 -21.07; VIST×9 09:30 $72.05 → close $70.86 +10.71; NOG×24 09:30 $27.00 → close $27.75 -18.00; BP×13 09:30 $49.45 → close $49.44 +0.13 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $19,994.44 | ▼ 09:30 equity $10,270.43 vs yday $10,284.01 (-13.58) | 09:30 open · cash $19,994.44 (unchanged overnight, no fees) · equity $10,270.43 vs prior close $10,284.01 (-13.58) · 13 name(s) re-marked at the open (per-name table). BF-B×30 yday $28.22 → 09:30 $28.45 -6.90; BP×13 yday $49.44 → 09:30 $49.90 -5.98; BRO×9 yday $69.22 → 09:30 $69.39 -1.53; CDNA×9 yday $67.08 → 09:30 $67.20 -1.08; GLND×273 yday $3.02 → 09:30 $2.93 +24.57; KLRA×82 yday $11.43 → 09:30 $11.43 -0.00; NOG×24 yday $27.75 → 09:30 $28.00 -6.00; PRMB×33 yday $19.79 → 09:30 $19.77 +0.66; SHOO×19 yday $44.96 → 09:30 $45.14 -3.42; SMMT×57 yday $15.57 → 09:30 $15.50 +3.99; USB×15 yday $57.85 → 09:30 $58.05 -3.00; VET×49 yday $13.60 → 09:30 $13.79 -9.31; VIST×9 yday $70.86 → 09:30 $71.48 -5.58 | — |
+| 2026-10-20 09:30 ET | **COVER** | `BF-B` | 30 | $28.45 | $2.08 | $+1.20 | $19,138.86 | ▲ +1.20 after sell → book $10,268.35; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **COVER** | `GLND` | 273 | $2.93 | $3.52 | $+55.67 | $18,335.45 | ▲ +55.67 after sell → book $10,264.83; vs 09:30 mark -3.52 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **COVER** | `KLRA` | 82 | $11.43 | $2.24 | $-76.68 | $17,395.95 | ▼ -76.68 after sell → book $10,262.59; vs 09:30 mark -2.24 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **COVER** | `SHOO` | 19 | $45.14 | $2.05 | $-11.74 | $16,536.25 | ▼ -11.74 after sell → book $10,260.55; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **COVER** | `USB` | 15 | $58.05 | $2.04 | $-32.76 | $15,663.46 | ▼ -32.76 after sell → book $10,258.51; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,663.46 | ▼ close $10,229.37 vs 09:30 $10,270.43 (session -29.14) | 16:00 close · cash $15,663.46 · equity $10,229.37 vs 09:30 $10,270.43 (-41.06; session marks -29.14) · 8 name(s) marked open→close (per-name table). BP×13 09:30 $49.90 → close $49.39 +6.63; BRO×9 09:30 $69.39 → close $70.90 -13.59; CDNA×9 09:30 $67.20 → close $69.20 -18.00; NOG×24 09:30 $28.00 → close $27.54 +11.04; PRMB×33 09:30 $19.77 → close $20.00 -7.59; SMMT×57 09:30 $15.50 → close $16.09 -33.63; VET×49 09:30 $13.79 → close $13.41 +18.62; VIST×9 09:30 $71.48 → close $70.66 +7.38 | — |
 
 ## Not taken
 

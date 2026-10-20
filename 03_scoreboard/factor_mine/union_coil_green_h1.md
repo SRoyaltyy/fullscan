@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-20.20%** ($7,980) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 404 · skips 101 · realized $-768.45.
+Cash book **-20.14%** ($7,986) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 411 · skips 101 · realized $-768.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -575,6 +575,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `NAVN` | 38 | $25.72 | $2.10 | — | $1,166.19 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+7.4; leftover $996.38 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `EOG` | 6 | $157.52 | $2.01 | — | $219.06 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+7.3; leftover $996.38 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $219.06 | ▼ close $7,979.54 vs 09:30 $8,045.63 (session -43.16) | 16:00 close · cash $219.06 · equity $7,979.54 vs 09:30 $8,045.63 (-66.09; session marks -43.16) · 8 name(s) marked open→close (per-name table). AMX×45 09:30 $22.84 → close $22.83 -0.45; POOL×6 09:30 $171.48 → close $168.07 -20.46; EPR×18 09:30 $55.28 → close $54.28 -18.00; TBBB×17 09:30 $58.00 → close $58.39 +6.63; WMG×31 09:30 $31.26 → close $31.04 -6.82; COP×6 09:30 $145.73 → close $145.24 -2.94; NAVN×38 09:30 $25.72 → close $25.67 -1.90; EOG×6 09:30 $157.52 → close $157.65 +0.78 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $219.06 | ▲ 09:30 equity $8,021.97 vs yday $7,979.54 (+42.43) | 09:30 open · cash $219.06 (unchanged overnight, no fees) · equity $8,021.97 vs prior close $7,979.54 (+42.43) · 8 name(s) re-marked at the open (per-name table). AMX×45 yday $22.83 → 09:30 $22.93 +4.50; COP×6 yday $145.24 → 09:30 $147.15 +11.46; EOG×6 yday $157.65 → 09:30 $159.86 +13.26; EPR×18 yday $54.28 → 09:30 $54.56 +5.04; NAVN×38 yday $25.67 → 09:30 $25.67 +0.00; POOL×6 yday $168.07 → 09:30 $168.23 +0.96; TBBB×17 yday $58.39 → 09:30 $58.65 +4.42; WMG×31 yday $31.04 → 09:30 $31.13 +2.79 | — |
+| 2026-10-20 09:30 ET | **SELL** | `AMX` | 45 | $22.93 | $2.15 | $+9.68 | $1,248.76 | ▲ +9.68 after sell → book $8,019.83; vs 09:30 mark -2.14 | dropped from list after 2 sess (min 1) | join🟢 sector🟢 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 6 | $147.15 | $2.03 | $+4.48 | $2,129.64 | ▲ +4.48 after sell → book $8,017.80; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `EOG` | 6 | $159.86 | $2.03 | $+10.00 | $3,086.77 | ▲ +10.00 after sell → book $8,015.77; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `EPR` | 18 | $54.56 | $2.06 | $-17.07 | $4,066.78 | ▼ -17.07 after sell → book $8,013.70; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `NAVN` | 38 | $25.67 | $2.12 | $-6.13 | $5,040.12 | ▼ -6.13 after sell → book $8,011.58; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `POOL` | 6 | $168.23 | $2.03 | $-15.02 | $6,047.47 | ▼ -15.02 after sell → book $8,009.55; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `WMG` | 31 | $31.13 | $2.10 | $-8.22 | $7,010.40 | ▼ -8.22 after sell → book $8,007.45; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,010.40 | ▼ close $7,985.69 vs 09:30 $8,021.97 (session -21.76) | 16:00 close · cash $7,010.40 · equity $7,985.69 vs 09:30 $8,021.97 (-36.28; session marks -21.76) · 1 name(s) marked open→close (per-name table). TBBB×17 09:30 $58.65 → close $57.37 -21.76 | — |
 
 ## Not taken
 

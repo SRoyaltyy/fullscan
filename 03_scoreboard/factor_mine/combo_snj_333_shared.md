@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_news_g_h1/union_join_vol_green_h1 w=0.33,0.33,0.33 net=priority
 
-Cash book **-35.53%** ($6,447) · signal-only (no cash/fees) was —. Starts YES **0/30**. Fills 714 · skips 251 · realized $+228.56.
+Cash book **-34.67%** ($6,533) · signal-only (no cash/fees) was —. Starts YES **0/30**. Fills 718 · skips 251 · realized $+228.56.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $159.76.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,103.77.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -882,6 +882,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `COP` | 21 | $145.73 | $2.05 | — | $3,154.68 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+9.3; combo leftover $3097.99; owner union_news_g_h1 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `EOG` | 19 | $157.52 | $2.05 | — | $159.76 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; 🔵; ret5=+7.3; combo leftover $3097.99; owner union_news_g_h1 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $159.76 | ▼ close $6,446.56 vs 09:30 $6,533.47 (session -72.32) | 16:00 close · cash $159.76 · equity $6,446.56 vs 09:30 $6,533.47 (-86.91; session marks -72.32) · 11 name(s) marked open→close (per-name table). AA×55 09:30 $41.79 → close $41.67 +6.60; AMX×27 09:30 $22.84 → close $22.83 -0.27; GLND×352 09:30 $3.00 → close $3.02 +7.04; ITW×2 09:30 $271.48 → close $270.17 -2.62; NOG×21 09:30 $27.00 → close $27.75 -15.75; NVTS×60 09:30 $8.84 → close $8.63 -12.60; RBLX×64 09:30 $50.46 → close $50.75 -18.56; TBBB×10 09:30 $58.00 → close $58.39 +3.90; BTI×52 09:30 $59.13 → close $58.51 -32.24; COP×21 09:30 $145.73 → close $145.24 -10.29; EOG×19 09:30 $157.52 → close $157.65 +2.47 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $159.76 | ▲ 09:30 equity $6,552.80 vs yday $6,446.56 (+106.24) | 09:30 open · cash $159.76 (unchanged overnight, no fees) · equity $6,552.80 vs prior close $6,446.56 (+106.24) | — |
+| 2026-10-20 09:30 ET | **COVER** | `AA` | 55 | $40.72 | $2.15 | $-56.65 | $-2,081.99 | ▼ -56.65 after sell → book $6,550.65; vs 09:30 mark -2.15 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `BTI` | 52 | $58.94 | $2.18 | $-14.47 | $980.44 | ▼ -14.47 after sell → book $6,548.46; vs 09:30 mark -2.19 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 21 | $147.15 | $2.09 | $+25.68 | $4,068.51 | ▲ +25.68 after sell → book $6,546.38; vs 09:30 mark -2.08 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `EOG` | 19 | $159.86 | $2.08 | $+40.33 | $7,103.77 | ▲ +40.33 after sell → book $6,544.30; vs 09:30 mark -2.08 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,103.77 | ▼ close $6,532.57 vs 09:30 $6,552.80 (session -11.73) | 16:00 close · cash $7,103.77 · equity $6,532.57 vs 09:30 $6,552.80 (-20.23; session marks -11.73) · 7 name(s) marked open→close (per-name table). AMX×27 09:30 $22.93 → close $22.90 -0.81; GLND×352 09:30 $2.93 → close $3.10 +59.84; ITW×2 09:30 $269.66 → close $274.97 +10.62; NOG×21 09:30 $28.00 → close $27.54 +9.66; NVTS×60 09:30 $8.38 → close $8.74 +21.60; RBLX×64 09:30 $50.79 → close $52.35 -99.84; TBBB×10 09:30 $58.65 → close $57.37 -12.80 | — |
 
 ## Not taken
 

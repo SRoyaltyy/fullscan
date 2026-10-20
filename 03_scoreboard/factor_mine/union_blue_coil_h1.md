@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-19.10%** ($8,090) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 383 · skips 79 · realized $-1931.95.
+Cash book **-19.39%** ($8,061) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 390 · skips 79 · realized $-1931.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -551,6 +551,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `PACS` | 21 | $47.02 | $2.05 | — | $2,333.78 | — | combo gate; gate blue=True,ret_5_max=10.0; list flatten; 🔵; ret5=+8.3; leftover $1013.01 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `EPR` | 18 | $55.28 | $2.04 | — | $1,336.70 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.8; leftover $1013.01 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,336.70 | ▲ close $8,089.76 vs 09:30 $8,025.86 (session +82.45) | 16:00 close · cash $1,336.70 · equity $8,089.76 vs 09:30 $8,025.86 (+63.90; session marks +82.45) · 7 name(s) marked open→close (per-name table). ACRS×296 09:30 $3.28 → close $3.48 +59.20; KURA×107 09:30 $9.17 → close $9.36 +20.33; SMMT×67 09:30 $14.90 → close $15.57 +44.89; VEEV×3 09:30 $310.33 → close $316.80 +19.41; ILMN×3 09:30 $268.93 → close $262.66 -18.81; PACS×21 09:30 $47.02 → close $45.85 -24.57; EPR×18 09:30 $55.28 → close $54.28 -18.00 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,336.70 | ▼ 09:30 equity $8,077.92 vs yday $8,089.76 (-11.84) | 09:30 open · cash $1,336.70 (unchanged overnight, no fees) · equity $8,077.92 vs prior close $8,089.76 (-11.84) · 7 name(s) re-marked at the open (per-name table). ACRS×296 yday $3.48 → 09:30 $3.37 -32.56; EPR×18 yday $54.28 → 09:30 $54.56 +5.04; ILMN×3 yday $262.66 → 09:30 $264.13 +4.41; KURA×107 yday $9.36 → 09:30 $9.45 +9.63; PACS×21 yday $45.85 → 09:30 $45.98 +2.73; SMMT×67 yday $15.57 → 09:30 $15.50 -4.69; VEEV×3 yday $316.80 → 09:30 $318.00 +3.60 | — |
+| 2026-10-20 09:30 ET | **SELL** | `ACRS` | 296 | $3.37 | $3.88 | $-49.14 | $2,330.34 | ▼ -49.14 after sell → book $8,074.04; vs 09:30 mark -3.88 | dropped from list after 2 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `EPR` | 18 | $54.56 | $2.06 | $-17.07 | $3,310.36 | ▼ -17.07 after sell → book $8,071.98; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `ILMN` | 3 | $264.13 | $2.02 | $-18.42 | $4,100.73 | ▼ -18.42 after sell → book $8,069.96; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `KURA` | 107 | $9.45 | $2.34 | $-29.26 | $5,109.54 | ▼ -29.26 after sell → book $8,067.62; vs 09:30 mark -2.34 | dropped from list after 2 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `PACS` | 21 | $45.98 | $2.07 | $-25.97 | $6,073.05 | ▼ -25.97 after sell → book $8,065.55; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `SMMT` | 67 | $15.50 | $2.21 | $+2.97 | $7,109.34 | ▲ +2.97 after sell → book $8,063.34; vs 09:30 mark -2.21 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `VEEV` | 3 | $318.00 | $2.02 | $+18.99 | $8,061.32 | ▲ +18.99 after sell → book $8,061.32; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,061.32 | ▲ close $8,061.32 vs 09:30 $8,077.92 (session +0.00) | 16:00 close · cash $8,061.32 · no lots left · equity $8,061.32. | — |
 
 ## Not taken
 

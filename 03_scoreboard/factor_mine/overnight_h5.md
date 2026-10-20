@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-23.85%** ($7,615) · signal-only (no cash/fees) was -37.95%. Starts YES **0/30**. Fills 44 · skips 179 · realized $-881.39.
+Cash book **-23.57%** ($7,643) · signal-only (no cash/fees) was -37.95%. Starts YES **0/30**. Fills 44 · skips 179 · realized $-881.39.
 
 ## How this sleeve decides (like you are 10)
 
@@ -206,6 +206,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $153.33 | ▼ close $7,684.27 vs 09:30 $7,942.44 (session -258.17) | 16:00 close · cash $153.33 · equity $7,684.27 vs 09:30 $7,942.44 (-258.17; session marks -258.17) · 4 name(s) marked open→close (per-name table). AA×49 09:30 $41.65 → close $41.45 -9.80; IBKR×23 09:30 $86.27 → close $82.69 -82.34; JBHT×8 09:30 $228.00 → close $228.78 +6.24; WSE×161 09:30 $12.05 → close $10.98 -172.27 | — |
 | 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $153.33 | ▲ 09:30 equity $7,687.48 vs yday $7,684.27 (+3.21) | 09:30 open · cash $153.33 (unchanged overnight, no fees) · equity $7,687.48 vs prior close $7,684.27 (+3.21) · 4 name(s) re-marked at the open (per-name table). AA×49 yday $41.45 → 09:30 $41.79 +16.66; IBKR×23 yday $82.69 → 09:30 $82.83 +3.22; JBHT×8 yday $228.78 → 09:30 $227.30 -11.84; WSE×161 yday $10.98 → 09:30 $10.95 -4.83 | — |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $153.33 | ▼ close $7,615.16 vs 09:30 $7,687.48 (session -72.32) | 16:00 close · cash $153.33 · equity $7,615.16 vs 09:30 $7,687.48 (-72.32; session marks -72.32) · 4 name(s) marked open→close (per-name table). AA×49 09:30 $41.79 → close $41.67 -5.88; IBKR×23 09:30 $82.83 → close $81.35 -34.04; JBHT×8 09:30 $227.30 → close $223.25 -32.40; WSE×161 09:30 $10.95 → close $10.95 +0.00 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $153.33 | ▼ 09:30 equity $7,551.95 vs yday $7,615.16 (-63.21) | 09:30 open · cash $153.33 (unchanged overnight, no fees) · equity $7,551.95 vs prior close $7,615.16 (-63.21) · 4 name(s) re-marked at the open (per-name table). AA×49 yday $41.67 → 09:30 $40.72 -46.55; IBKR×23 yday $81.35 → 09:30 $80.50 -19.55; JBHT×8 yday $223.25 → 09:30 $223.41 +1.28; WSE×161 yday $10.95 → 09:30 $10.96 +1.61 | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $153.33 | ▲ close $7,642.78 vs 09:30 $7,551.95 (session +90.83) | 16:00 close · cash $153.33 · equity $7,642.78 vs 09:30 $7,551.95 (+90.83; session marks +90.83) · 4 name(s) marked open→close (per-name table). AA×49 09:30 $40.72 → close $40.79 +3.43; IBKR×23 09:30 $80.50 → close $82.91 +55.43; JBHT×8 09:30 $223.41 → close $226.40 +23.92; WSE×161 09:30 $10.96 → close $11.01 +8.05 | — |
 
 ## Not taken
 

@@ -304,6 +304,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **SELL** | `JBHT` | 10 | $227.30 | $2.05 | $-11.07 | $6,792.17 | ▼ -11.07 after sell → book $8,935.07; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-19 09:30 ET | **SELL** | `MTB` | 10 | $214.29 | $2.05 | $-76.07 | $8,933.03 | ▼ -76.07 after sell → book $8,933.03; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,933.03 | ▲ close $8,933.03 vs 09:30 $8,941.34 (session +0.00) | 16:00 close · cash $8,933.03 · no lots left · equity $8,933.03. | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,933.03 | ▲ 09:30 equity $8,933.03 vs yday $8,933.03 (+0.00) | 09:30 open · cash $8,933.03 · no holdings · equity $8,933.03 vs prior close $8,933.03 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,933.03 | ▲ close $8,933.03 vs 09:30 $8,933.03 (session +0.00) | 16:00 close · cash $8,933.03 · no lots left · equity $8,933.03. | — |
 
 ## Not taken
 

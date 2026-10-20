@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data)
 
-Cash book **-8.60%** ($9,140) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 8 · skips 7 · realized $-603.63.
+Cash book **-7.27%** ($9,273) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 10 · skips 7 · realized $-603.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -176,6 +176,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.92 | ▲ close $9,212.47 vs 09:30 $9,195.38 (session +17.09) | 16:00 close · cash $27.92 · equity $9,212.47 vs 09:30 $9,195.38 (+17.09; session marks +17.09) · 2 name(s) marked open→close (per-name table). FIS×125 09:30 $36.42 → close $36.01 -51.25; PBR-A×201 09:30 $22.96 → close $23.30 +68.34 | — |
 | 2026-10-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $27.92 | ▼ 09:30 equity $9,162.64 vs yday $9,212.47 (-49.83) | 09:30 open · cash $27.92 (unchanged overnight, no fees) · equity $9,162.64 vs prior close $9,212.47 (-49.83) · 2 name(s) re-marked at the open (per-name table). FIS×125 yday $36.01 → 09:30 $35.74 -33.75; PBR-A×201 yday $23.30 → 09:30 $23.22 -16.08 | — |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.92 | ▼ close $9,140.38 vs 09:30 $9,162.64 (session -22.26) | 16:00 close · cash $27.92 · equity $9,140.38 vs 09:30 $9,162.64 (-22.26; session marks -22.26) · 2 name(s) marked open→close (per-name table). FIS×125 09:30 $35.74 → close $35.98 +30.00; PBR-A×201 09:30 $23.22 → close $22.96 -52.26 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $27.92 | ▲ 09:30 equity $9,278.01 vs yday $9,140.38 (+137.63) | 09:30 open · cash $27.92 (unchanged overnight, no fees) · equity $9,278.01 vs prior close $9,140.38 (+137.63) · 2 name(s) re-marked at the open (per-name table). FIS×125 yday $35.98 → 09:30 $36.47 +61.25; PBR-A×201 yday $22.96 → 09:30 $23.34 +76.38 | — |
+| 2026-10-20 09:30 ET | **SELL** | `FIS` | 125 | $36.47 | $2.42 | $+3.96 | $4,584.25 | ▲ +3.96 after sell → book $9,275.59; vs 09:30 mark -2.42 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `PBR-A` | 201 | $23.34 | $2.67 | $+105.28 | $9,272.92 | ▲ +105.28 after sell → book $9,272.92; vs 09:30 mark -2.67 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,272.92 | ▲ close $9,272.92 vs 09:30 $9,278.01 (session +0.00) | 16:00 close · cash $9,272.92 · no lots left · equity $9,272.92. | — |
 
 ## Not taken
 

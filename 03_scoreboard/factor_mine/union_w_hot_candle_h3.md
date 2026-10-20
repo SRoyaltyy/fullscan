@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **-3.29%** ($9,671) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 311 · skips 289 · realized $+901.34.
+Cash book **-2.23%** ($9,777) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 314 · skips 289 · realized $+901.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -476,6 +476,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `SU` | 15 | $77.39 | $2.04 | — | $1,497.13 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+8.1; leftover $1193.66 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `WM` | 5 | $224.54 | $2.00 | — | $372.43 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+8.6; leftover $1193.66 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $372.43 | ▲ close $9,671.02 vs 09:30 $9,691.38 (session +15.77) | 16:00 close · cash $372.43 · equity $9,671.02 vs 09:30 $9,691.38 (-20.36; session marks +15.77) · 13 name(s) marked open→close (per-name table). BBWI×1 09:30 $20.00 → close $19.84 -0.16; BLMN×2 09:30 $10.05 → close $9.95 -0.20; CHWY×1 09:30 $20.80 → close $20.53 -0.27; ENGS×10 09:30 $3.77 → close $3.76 -0.10; OXSQ×18 09:30 $1.31 → close $1.28 -0.63; WMG×38 09:30 $31.26 → close $31.04 -8.36; NAVN×46 09:30 $25.72 → close $25.67 -2.30; BR×6 09:30 $173.69 → close $175.12 +8.58; OTIS×16 09:30 $71.11 → close $71.04 -1.12; HONA×7 09:30 $169.10 → close $162.49 -46.27; ACN×5 09:30 $228.48 → close $236.93 +42.25; SU×15 09:30 $77.39 → close $78.39 +15.00; WM×5 09:30 $224.54 → close $226.41 +9.35 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $372.43 | ▲ 09:30 equity $9,727.75 vs yday $9,671.02 (+56.73) | 09:30 open · cash $372.43 (unchanged overnight, no fees) · equity $9,727.75 vs prior close $9,671.02 (+56.73) · 13 name(s) re-marked at the open (per-name table). ACN×5 yday $236.93 → 09:30 $238.00 +5.35; BBWI×1 yday $19.84 → 09:30 $19.84 +0.00; BLMN×2 yday $9.95 → 09:30 $9.99 +0.08; BR×6 yday $175.12 → 09:30 $177.40 +13.68; CHWY×1 yday $20.53 → 09:30 $20.85 +0.32; ENGS×10 yday $3.76 → 09:30 $3.78 +0.20; HONA×7 yday $162.49 → 09:30 $162.75 +1.82; NAVN×46 yday $25.67 → 09:30 $25.67 +0.00; OTIS×16 yday $71.04 → 09:30 $71.42 +6.08; OXSQ×18 yday $1.28 → 09:30 $1.29 +0.18; SU×15 yday $78.39 → 09:30 $79.30 +13.65; WM×5 yday $226.41 → 09:30 $228.80 +11.95; WMG×38 yday $31.04 → 09:30 $31.13 +3.42 | — |
+| 2026-10-20 09:30 ET | **SELL** | `BBWI` | 1 | $19.84 | $0.22 | $+0.23 | $392.05 | ▲ +0.23 after sell → book $9,727.53; vs 09:30 mark -0.22 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `CHWY` | 1 | $20.85 | $0.23 | $-0.59 | $412.67 | ▼ -0.59 after sell → book $9,727.30; vs 09:30 mark -0.23 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `ENGS` | 10 | $3.78 | $0.43 | $+1.99 | $450.04 | ▲ +1.99 after sell → book $9,726.87; vs 09:30 mark -0.43 | dropped from list after 3 sess (min 3) | join🟡 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $450.04 | ▲ close $9,776.57 vs 09:30 $9,727.75 (session +49.70) | 16:00 close · cash $450.04 · equity $9,776.57 vs 09:30 $9,727.75 (+48.82; session marks +49.70) · 10 name(s) marked open→close (per-name table). ACN×5 09:30 $238.00 → close $239.12 +5.60; BLMN×2 09:30 $9.99 → close $10.34 +0.70; BR×6 09:30 $177.40 → close $179.99 +15.54; HONA×7 09:30 $162.75 → close $159.90 -19.95; NAVN×46 09:30 $25.67 → close $26.28 +28.06; OTIS×16 09:30 $71.42 → close $72.07 +10.40; OXSQ×18 09:30 $1.29 → close $1.29 +0.00; SU×15 09:30 $79.30 → close $78.44 -12.90; WM×5 09:30 $228.80 → close $231.73 +14.65; WMG×38 09:30 $31.13 → close $31.33 +7.60 | — |
 
 ## Not taken
 

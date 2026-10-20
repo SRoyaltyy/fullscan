@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **-4.57%** ($9,543) · signal-only (no cash/fees) was +97.62%. Starts YES **29/30**. Fills 296 · skips 293 · realized $+1779.39.
+Cash book **-2.48%** ($9,752) · signal-only (no cash/fees) was +97.62%. Starts YES **29/30**. Fills 299 · skips 293 · realized $+1779.39.
 
 ## How this sleeve decides (like you are 10)
 
@@ -461,6 +461,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `WMG` | 43 | $31.26 | $2.12 | — | $1,641.26 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+9.3; leftover $1355.31 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `COP` | 9 | $145.73 | $2.02 | — | $327.68 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+9.3; leftover $1355.31 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $327.68 | ▲ close $9,543.29 vs 09:30 $9,579.97 (session +7.85) | 16:00 close · cash $327.68 · equity $9,543.29 vs 09:30 $9,579.97 (-36.68; session marks +7.85) · 12 name(s) marked open→close (per-name table). ACI×1 09:30 $13.04 → close $13.14 +0.10; BLMN×2 09:30 $10.05 → close $9.95 -0.20; ENGS×5 09:30 $3.77 → close $3.76 -0.05; GLND×3 09:30 $3.00 → close $3.02 +0.06; SG×1 09:30 $10.01 → close $10.18 +0.17; EGG×267 09:30 $5.07 → close $4.99 -21.36; WIT×705 09:30 $1.92 → close $1.93 +7.05; TRU×18 09:30 $73.12 → close $73.12 +0.00; DEO×14 09:30 $93.94 → close $93.49 -6.30; ACN×5 09:30 $228.48 → close $236.93 +42.25; WMG×43 09:30 $31.26 → close $31.04 -9.46; COP×9 09:30 $145.73 → close $145.24 -4.41 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $327.68 | ▲ 09:30 equity $9,582.38 vs yday $9,543.29 (+39.08) | 09:30 open · cash $327.68 (unchanged overnight, no fees) · equity $9,582.38 vs prior close $9,543.29 (+39.08) · 12 name(s) re-marked at the open (per-name table). ACI×1 yday $13.14 → 09:30 $13.34 +0.20; ACN×5 yday $236.93 → 09:30 $238.00 +5.35; BLMN×2 yday $9.95 → 09:30 $9.99 +0.08; COP×9 yday $145.24 → 09:30 $147.15 +17.19; DEO×14 yday $93.49 → 09:30 $93.79 +4.20; EGG×267 yday $4.99 → 09:30 $4.80 -50.73; ENGS×5 yday $3.76 → 09:30 $3.78 +0.10; GLND×3 yday $3.02 → 09:30 $2.93 -0.27; SG×1 yday $10.18 → 09:30 $10.18 -0.00; TRU×18 yday $73.12 → 09:30 $75.62 +45.00; WIT×705 yday $1.93 → 09:30 $1.95 +14.10; WMG×43 yday $31.04 → 09:30 $31.13 +3.87 | — |
+| 2026-10-20 09:30 ET | **SELL** | `ACI` | 1 | $13.34 | $0.16 | $+0.06 | $340.86 | ▲ +0.06 after sell → book $9,582.22; vs 09:30 mark -0.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `BLMN` | 2 | $9.99 | $0.23 | $+0.60 | $360.62 | ▲ +0.60 after sell → book $9,581.99; vs 09:30 mark -0.23 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `SG` | 1 | $10.18 | $0.12 | $-0.26 | $370.67 | ▼ -0.26 after sell → book $9,581.87; vs 09:30 mark -0.12 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $370.67 | ▲ close $9,751.64 vs 09:30 $9,582.38 (session +169.77) | 16:00 close · cash $370.67 · equity $9,751.64 vs 09:30 $9,582.38 (+169.26; session marks +169.77) · 9 name(s) marked open→close (per-name table). ACN×5 09:30 $238.00 → close $239.12 +5.60; COP×9 09:30 $147.15 → close $145.95 -10.80; DEO×14 09:30 $93.79 → close $93.41 -5.32; EGG×267 09:30 $4.80 → close $5.00 +53.40; ENGS×5 09:30 $3.78 → close $3.84 +0.30; GLND×3 09:30 $2.93 → close $3.10 +0.51; TRU×18 09:30 $75.62 → close $78.23 +46.98; WIT×705 09:30 $1.95 → close $2.05 +70.50; WMG×43 09:30 $31.13 → close $31.33 +8.60 | — |
 
 ## Not taken
 

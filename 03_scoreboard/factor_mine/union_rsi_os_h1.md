@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-31.05%** ($6,895) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 168 · skips 20 · realized $-3180.18.
+Cash book **-30.39%** ($6,961) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 171 · skips 20 · realized $-3180.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -334,6 +334,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **SELL** | `LW` | 32 | $52.87 | $2.11 | $+23.00 | $4,702.30 | ▲ +23.00 after sell → book $6,845.32; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 1) | — |
 | 2026-10-19 09:30 ET | **BUY** | `ALL` | 19 | $245.91 | $2.05 | — | $27.97 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; ret5=+8.0; leftover $4702.30 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.97 | ▲ close $6,895.43 vs 09:30 $6,853.49 (session +52.15) | 16:00 close · cash $27.97 · equity $6,895.43 vs 09:30 $6,853.49 (+41.94; session marks +52.15) · 4 name(s) marked open→close (per-name table). DGX×3 09:30 $234.40 → close $234.91 +1.53; PLNT×15 09:30 $51.08 → close $52.89 +27.15; WM×3 09:30 $224.54 → close $226.41 +5.61; ALL×19 09:30 $245.91 → close $246.85 +17.86 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $27.97 | ▲ 09:30 equity $6,970.52 vs yday $6,895.43 (+75.09) | 09:30 open · cash $27.97 (unchanged overnight, no fees) · equity $6,970.52 vs prior close $6,895.43 (+75.09) · 4 name(s) re-marked at the open (per-name table). ALL×19 yday $246.85 → 09:30 $250.00 +59.85; DGX×3 yday $234.91 → 09:30 $236.00 +3.27; PLNT×15 yday $52.89 → 09:30 $53.21 +4.80; WM×3 yday $226.41 → 09:30 $228.80 +7.17 | — |
+| 2026-10-20 09:30 ET | **SELL** | `ALL` | 19 | $250.00 | $2.10 | $+73.57 | $4,775.88 | ▲ +73.57 after sell → book $6,968.43; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `DGX` | 3 | $236.00 | $2.02 | $-3.57 | $5,481.86 | ▼ -3.57 after sell → book $6,966.41; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `WM` | 3 | $228.80 | $2.02 | $+8.04 | $6,166.24 | ▲ +8.04 after sell → book $6,964.39; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,166.24 | ▼ close $6,960.64 vs 09:30 $6,970.52 (session -3.75) | 16:00 close · cash $6,166.24 · equity $6,960.64 vs 09:30 $6,970.52 (-9.88; session marks -3.75) · 1 name(s) marked open→close (per-name table). PLNT×15 09:30 $53.21 → close $52.96 -3.75 | — |
 
 ## Not taken
 

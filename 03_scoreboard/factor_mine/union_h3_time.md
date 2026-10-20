@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `time` · S-boost `none` · sell at min-hold even if still listed
 
-Cash book **-22.27%** ($7,773) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 299 · skips 296 · realized $-285.30.
+Cash book **-20.73%** ($7,927) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 304 · skips 296 · realized $-285.30.
 
 ## How this sleeve decides (like you are 10)
 
@@ -461,6 +461,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `SMMT` | 62 | $14.90 | $2.18 | — | $2,362.79 | — | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-16.8; leftover $930.18 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `PRMB` | 48 | $19.22 | $2.13 | — | $1,438.10 | — | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover; ret5=+2.3; leftover $930.18 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,438.10 | ▲ close $7,772.59 vs 09:30 $7,656.52 (session +147.34) | 16:00 close · cash $1,438.10 · equity $7,772.59 vs 09:30 $7,656.52 (+116.07; session marks +147.34) · 12 name(s) marked open→close (per-name table). FIS×1 09:30 $35.74 → close $35.98 +0.24; PDFS×1 09:30 $41.29 → close $41.22 -0.07; PRMB×48 09:30 $19.22 → close $19.79 +27.36; SHOO×1 09:30 $45.41 → close $44.96 -0.45; SMMT×62 09:30 $14.90 → close $15.57 +41.54; TOST×1 09:30 $31.83 → close $31.45 -0.38; YOU×1 09:30 $43.98 → close $45.18 +1.20; VEEV×2 09:30 $310.33 → close $316.80 +12.94; ILMN×3 09:30 $268.93 → close $262.66 -18.81; CDNA×14 09:30 $65.00 → close $67.08 +29.12; ARQT×31 09:30 $29.41 → close $31.89 +76.88; PACS×19 09:30 $47.02 → close $45.85 -22.23 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,438.10 | ▲ 09:30 equity $7,778.52 vs yday $7,772.59 (+5.93) | 09:30 open · cash $1,438.10 (unchanged overnight, no fees) · equity $7,778.52 vs prior close $7,772.59 (+5.93) · 12 name(s) re-marked at the open (per-name table). ARQT×31 yday $31.89 → 09:30 $31.89 +0.00; CDNA×14 yday $67.08 → 09:30 $67.20 +1.68; FIS×1 yday $35.98 → 09:30 $36.47 +0.49; ILMN×3 yday $262.66 → 09:30 $264.13 +4.41; PACS×19 yday $45.85 → 09:30 $45.98 +2.47; PDFS×1 yday $41.22 → 09:30 $40.37 -0.85; PRMB×48 yday $19.79 → 09:30 $19.77 -0.96; SHOO×1 yday $44.96 → 09:30 $45.14 +0.18; SMMT×62 yday $15.57 → 09:30 $15.50 -4.34; TOST×1 yday $31.45 → 09:30 $31.65 +0.20; VEEV×2 yday $316.80 → 09:30 $318.00 +2.40; YOU×1 yday $45.18 → 09:30 $45.43 +0.25 | — |
+| 2026-10-20 09:30 ET | **SELL** | `FIS` | 1 | $36.47 | $0.39 | $-0.68 | $1,474.18 | ▼ -0.68 after sell → book $7,778.13; vs 09:30 mark -0.39 | time-stop after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `PDFS` | 1 | $40.37 | $0.43 | $-1.17 | $1,514.13 | ▼ -1.17 after sell → book $7,777.71; vs 09:30 mark -0.42 | time-stop after 3 sess (min 3) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `SHOO` | 1 | $45.14 | $0.47 | $-0.52 | $1,558.79 | ▼ -0.52 after sell → book $7,777.23; vs 09:30 mark -0.48 | time-stop after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `TOST` | 1 | $31.65 | $0.34 | $+1.06 | $1,590.10 | ▲ +1.06 after sell → book $7,776.89; vs 09:30 mark -0.34 | time-stop after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `YOU` | 1 | $45.43 | $0.48 | $+0.11 | $1,635.05 | ▲ +0.11 after sell → book $7,776.41; vs 09:30 mark -0.48 | time-stop after 3 sess (min 3) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,635.05 | ▲ close $7,926.66 vs 09:30 $7,778.52 (session +150.25) | 16:00 close · cash $1,635.05 · equity $7,926.66 vs 09:30 $7,778.52 (+148.14; session marks +150.25) · 7 name(s) marked open→close (per-name table). ARQT×31 09:30 $31.89 → close $32.82 +28.83; CDNA×14 09:30 $67.20 → close $69.20 +28.00; ILMN×3 09:30 $264.13 → close $267.93 +11.40; PACS×19 09:30 $45.98 → close $47.72 +33.06; PRMB×48 09:30 $19.77 → close $20.00 +11.04; SMMT×62 09:30 $15.50 → close $16.09 +36.58; VEEV×2 09:30 $318.00 → close $318.67 +1.34 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · split short_news_r_h3/union_e_fresh_h3/union_hot_n4_h1 w=0.33,0.33,0.33 net=priority
 
-Cash book **-0.37%** ($9,963) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 503 · skips 367 · realized $+2181.46.
+Cash book **-0.23%** ($9,977) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 511 · skips 367 · realized $+2181.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,479.74.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,491.22.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -791,6 +791,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **SELL** | `PGR` | 2 | $216.94 | $2.02 | $+15.93 | $2,095.00 | ▲ +15.93 after sell → book $2,695.71; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-19 09:30 ET | **SELL** | `TRU` | 14 | $73.12 | $2.05 | $-29.00 | $3,274.94 | ▼ -29.00 after sell → book $4,330.19; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-19 09:30 ET | **SELL** | `VFC` | 63 | $16.75 | $2.20 | $-40.29 | $4,327.99 | ▼ -40.29 after sell → book $4,327.99; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,617.37 | ▼ close $2,931.25 vs 09:30 $2,973.35 (session -40.00) | 16:00 close · cash $4,617.37 · equity $2,931.25 vs 09:30 $2,973.35 (-42.10; session marks -40.00) · 2 name(s) marked open→close (per-name table). NOG×8 09:30 $28.00 → close $27.54 +3.68; RBLX×28 09:30 $50.79 → close $52.35 -43.68 | — |
+| 2026-10-20 09:30 ET | **COVER** | `AA` | 37 | $40.72 | $2.10 | $-39.41 | $4,617.37 | ▼ -39.41 after sell → book $2,971.25; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,126.11 | ▲ 09:30 equity $2,973.35 vs yday $2,941.32 (+32.03) | 09:30 open · cash $6,126.11 (unchanged overnight, no fees) · equity $2,973.35 vs prior close $2,941.32 (+32.03) · 3 name(s) re-marked at the open (per-name table). AA×37 yday $41.67 → 09:30 $40.72 +35.15; NOG×8 yday $27.75 → 09:30 $28.00 -2.00; RBLX×28 yday $50.75 → 09:30 $50.79 -1.12 | — |
+| 2026-10-20 09:30 ET | **SELL** | `BTI` | 18 | $58.94 | $2.06 | $-7.62 | $1,317.40 | ▼ -7.62 after sell → book $4,357.87; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `CMC` | 1 | $63.49 | $0.66 | $-7.24 | $2,157.83 | ▼ -7.24 after sell → book $2,688.05; vs 09:30 mark -0.66 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 7 | $147.15 | $2.03 | $+5.90 | $2,345.41 | ▲ +5.90 after sell → book $4,355.84; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `ERIC` | 11 | $10.38 | $1.19 | $-5.36 | $2,270.82 | ▼ -5.36 after sell → book $2,686.86; vs 09:30 mark -1.19 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `FHN` | 5 | $22.76 | $1.17 | $-0.20 | $2,383.44 | ▼ -0.20 after sell → book $2,685.68; vs 09:30 mark -1.18 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `SCHW` | 1 | $89.60 | $0.92 | $-5.65 | $2,472.13 | ▼ -5.65 after sell → book $2,684.77; vs 09:30 mark -0.91 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `WMG` | 34 | $31.13 | $2.11 | $-8.62 | $3,401.72 | ▼ -8.62 after sell → book $4,353.72; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
 
 ## Not taken
 

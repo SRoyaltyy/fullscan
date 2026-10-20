@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · news🔴
 
-Cash book **-8.26%** ($9,174) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 152 · skips 28 · realized $+7.41.
+Cash book **-7.90%** ($9,210) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 152 · skips 28 · realized $+7.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -316,6 +316,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **COVER** | `RBLX` | 89 | $50.46 | $2.26 | $+87.87 | $9,305.65 | ▲ +87.87 after sell → book $9,305.65; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-19 09:30 ET | **SHORT** | `NOG` | 172 | $27.00 | $2.70 | — | $13,946.95 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+9.7; leftover $4652.82 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 judge🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,946.95 | ▼ close $9,173.95 vs 09:30 $9,310.25 (session -129.00) | 16:00 close · cash $13,946.95 · equity $9,173.95 vs 09:30 $9,310.25 (-136.30; session marks -129.00) · 1 name(s) marked open→close (per-name table). NOG×172 09:30 $27.00 → close $27.75 -129.00 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,946.95 | ▼ 09:30 equity $9,130.95 vs yday $9,173.95 (-43.00) | 09:30 open · cash $13,946.95 (unchanged overnight, no fees) · equity $9,130.95 vs prior close $9,173.95 (-43.00) · 1 name(s) re-marked at the open (per-name table). NOG×172 yday $27.75 → 09:30 $28.00 -43.00 | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,946.95 | ▲ close $9,210.07 vs 09:30 $9,130.95 (session +79.12) | 16:00 close · cash $13,946.95 · equity $9,210.07 vs 09:30 $9,130.95 (+79.12; session marks +79.12) · 1 name(s) marked open→close (per-name table). NOG×172 09:30 $28.00 → close $27.54 +79.12 | — |
 
 ## Not taken
 
