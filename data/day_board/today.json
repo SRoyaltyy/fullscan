@@ -1,8 +1,8 @@
 {
   "date": "2026-10-20",
-  "generated_at": "2026-10-20T05:10:09.352494-04:00",
+  "generated_at": "2026-10-20T06:46:26.143819-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
     "ok": 4,
     "partial": 4,
@@ -12,34 +12,20 @@
   "buy_1d": [],
   "sell_1d": [],
   "flatten": {},
-  "general": {},
+  "general": {
+    "said": "DOWN  -8.071",
+    "bullets": [
+      "bad: Fresh Hormuz tanker mines/fires",
+      "bad: Houthi Saudi energy claim",
+      "bad: Kospi -3.7% tech selloff",
+      "good: Warsh dovish, Oct pause 83% priced",
+      "good: China LPR hold expected"
+    ],
+    "score": "-8.071",
+    "direction": "down"
+  },
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-10-20",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-20T04:58:02.295116-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-20_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 387579,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-20_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 42172,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-20\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-20\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "weather",
       "title": "Weather / regime (offline retry)",
@@ -192,6 +178,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-20T05:09:45.854106-04:00\nraw=8396 unique_events=6 tickers=76"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-20T06:46:25.386572-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-20_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10453,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-20_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5908,
+          "preview": "# Weather report \u2014 2026-10-20\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-20\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

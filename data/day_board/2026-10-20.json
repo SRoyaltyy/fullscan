@@ -1,12 +1,9 @@
 {
   "date": "2026-10-20",
-  "generated_at": "2026-10-20T05:10:09.352494-04:00",
+  "generated_at": "2026-10-20T06:46:26.143819-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-20_predict.md` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-20_judge.md` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
     "ok": 4,
     "partial": 4,
@@ -180,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 6,
       "n_req": 9,
       "n_opt_ok": 2,
       "n_opt": 14,
@@ -249,22 +246,31 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-10-20_events.json",
           "role": "required",
-          "status": "FAIL",
-          "reason": "empty/truncated (zero_events)",
-          "size": 212,
-          "said": "empty/truncated (zero_events) \u00b7 0 events",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 23769,
+          "said": "33 events \u00b7 elevated uncertainty \u00b7 Markets enter the last two weeks of October with a dovish Fed on hold, hot September CPI, and a major US-China tariff de-escalation that rem",
+          "bullets": [
+            "US-China framework agreement in Kuala Lumpur; 100% tariff threat removed",
+            "Trump waives Russia energy sanctions; suspends 100% tariffs on India/China",
+            "Fed Chair Warsh dovish remarks; October hike odds fall to ~16%",
+            "US September CPI +0.6% m/m, 3.7% y/y; core 2.6%"
+          ]
         },
         {
           "key": "judge",
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-20_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 8763,
+          "said": "1. **Hawkish Fed comments lift October hike odds; gold drops >$100; CPI still needs \u201csome work\u201d** \u2014 direct rates/risk-appetite repricing; outranks single-name c",
+          "bullets": [
+            "2. **Asian LNG prices jump to highest since 2022 on tanker strikes** \u2014 energy/supply shock with cross-asset risk read-through. *Channel: risk",
+            "3. **Nasdaq 100 has best day in nearly a month as AI rout cools; Big Tech earnings could validate AI** \u2014 key risk-sentiment and index-beta driver. *Channel: sentiment",
+            "4. **Amazon says its AI chips will work with popular coding language, challenging Nvidia** \u2014 semis/AI competitive signal for sector baskets. *Channel: sector_fundamental"
+          ]
         },
         {
           "key": "research_json",
@@ -309,11 +315,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-20_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 14344,
+          "said": "DOWN -8.071",
+          "bullets": [
+            "bad: Fresh Hormuz tanker mines/fires",
+            "bad: Houthi Saudi energy claim",
+            "bad: Kospi -3.7% tech selloff",
+            "good: Warsh dovish, Oct pause 83% priced"
+          ]
         },
         {
           "key": "board",
@@ -488,8 +499,14 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "general DOWN  -8.071",
+      "bullets": [
+        "bad: Fresh Hormuz tanker mines/fires",
+        "bad: Houthi Saudi energy claim",
+        "bad: Kospi -3.7% tech selloff",
+        "good: Warsh dovish, Oct pause 83% priced",
+        "good: China LPR hold expected"
+      ]
     },
     {
       "key": "weather",
@@ -523,19 +540,19 @@
           "path": "01_daily/weather/2026-10-20_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9375 vix=calm yields=flat",
-          "size": 9375,
-          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=10453 vix=calm yields=flat",
+          "size": 10453,
+          "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
-            "events bull 1 / bear 4"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "events bull 8 / bear 3"
           ]
         }
       ],
-      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
-        "events bull 1 / bear 4"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "events bull 8 / bear 3"
       ]
     },
     {
@@ -652,8 +669,8 @@
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 2,
+      "inputs_ready": true,
+      "n_req_ok": 1,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 4,
@@ -663,11 +680,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-20_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 14344,
+          "said": "DOWN -8.071",
+          "bullets": [
+            "bad: Fresh Hormuz tanker mines/fires",
+            "bad: Houthi Saudi energy claim",
+            "bad: Kospi -3.7% tech selloff",
+            "good: Warsh dovish, Oct pause 83% priced"
+          ]
         },
         {
           "key": "in_board",
@@ -716,11 +738,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-20_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 8763,
+          "said": "1. **Hawkish Fed comments lift October hike odds; gold drops >$100; CPI still needs \u201csome work\u201d** \u2014 direct rates/risk-appetite repricing; outranks single-name c",
+          "bullets": [
+            "2. **Asian LNG prices jump to highest since 2022 on tanker strikes** \u2014 energy/supply shock with cross-asset risk read-through. *Channel: risk",
+            "3. **Nasdaq 100 has best day in nearly a month as AI rout cools; Big Tech earnings could validate AI** \u2014 key risk-sentiment and index-beta driver. *Channel: sentiment",
+            "4. **Amazon says its AI chips will work with popular coding language, challenging Nvidia** \u2014 semis/AI competitive signal for sector baskets. *Channel: sector_fundamental"
+          ]
         },
         {
           "key": "in_weather",
@@ -728,12 +754,12 @@
           "path": "01_daily/weather/2026-10-20_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9375 vix=calm yields=flat",
-          "size": 9375,
-          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=10453 vix=calm yields=flat",
+          "size": 10453,
+          "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
-            "events bull 1 / bear 4"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "events bull 8 / bear 3"
           ]
         },
         {
@@ -767,13 +793,11 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-10-20_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5096",
-          "size": 821534,
-          "said": "489 rows",
-          "bullets": [
-            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "book_json",
@@ -908,14 +932,25 @@
     "buy_1d": [],
     "sell_1d": [],
     "flatten": {},
-    "general": {},
+    "general": {
+      "said": "DOWN  -8.071",
+      "bullets": [
+        "bad: Fresh Hormuz tanker mines/fires",
+        "bad: Houthi Saudi energy claim",
+        "bad: Kospi -3.7% tech selloff",
+        "good: Warsh dovish, Oct pause 83% priced",
+        "good: China LPR hold expected"
+      ],
+      "score": "-8.071",
+      "direction": "down"
+    },
     "sectors": {},
     "news": {},
     "weather": {
-      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
-        "events bull 1 / bear 4"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "events bull 8 / bear 3"
       ]
     }
   },
@@ -1375,6 +1410,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-20T05:09:45.854106-04:00\nraw=8396 unique_events=6 tickers=76"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-20T06:46:25.386572-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-20_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10453,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-20_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5908,
+          "preview": "# Weather report \u2014 2026-10-20\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-20\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
