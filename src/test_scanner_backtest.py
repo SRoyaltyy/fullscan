@@ -144,6 +144,59 @@ class GateTests(unittest.TestCase):
         view = present({"stocks": [{"pass": False, "ticker": "XOM"}], "decision": "no_supported_stock_link", "engine": "evidence-v2"})
         self.assertEqual(view["pass_count"], 0)
 
+    def test_page_supports_static_artifact_mode(self):
+        html = PAGE.read_text(encoding="utf-8")
+        self.assertIn("results.jsonl", html)
+        self.assertIn("articles.json", html)
+        self.assertIn("mulberry32", html)  # seeded, referable draws
+
+
+class StaticArtifactTests(unittest.TestCase):
+    """The committed artifacts are the GitHub Pages trial-and-error log."""
+
+    DIR = PAGE.parent
+
+    def _artifacts(self):
+        results = self.DIR / "results.jsonl"
+        articles = self.DIR / "articles.json"
+        if not results.is_file() or not articles.is_file():
+            self.skipTest("static artifacts not committed in this checkout")
+        rows = []
+        with results.open(encoding="utf-8") as handle:
+            for line in handle:
+                line = line.strip()
+                if line:
+                    rows.append(json.loads(line))
+        return rows, json.loads(articles.read_text(encoding="utf-8"))
+
+    def test_artifacts_are_consistent(self):
+        rows, articles = self._artifacts()
+        self.assertTrue(rows, "results.jsonl has no rows")
+        self.assertTrue(articles, "articles.json is empty")
+        result_ids = {str(row.get("id")) for row in rows}
+        article_ids = {str(article.get("id")) for article in articles}
+        self.assertEqual(result_ids, article_ids)
+        for row in rows:
+            self.assertIn("decision", row)
+            self.assertIn("pass_count", row)
+            self.assertIn("passes", row)
+            self.assertTrue(all("ticker" in p for p in row["passes"]))
+
+    def test_meta_matches_artifacts(self):
+        meta_path = self.DIR / "meta.json"
+        rows, articles = self._artifacts()
+        if not meta_path.is_file():
+            self.skipTest("meta.json not committed")
+        meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        self.assertEqual(meta.get("engine"), ENGINE)
+        self.assertEqual(meta.get("articles"), len(rows))
+        self.assertEqual(meta.get("articles"), len(articles))
+
+    def test_export_script_uses_the_evidence_engine(self):
+        from scripts.export_backtest_static import _score_shard
+
+        self.assertEqual(ENGINE, "evidence")
+
 
 if __name__ == "__main__":
     unittest.main()
