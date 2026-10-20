@@ -7,6 +7,8 @@ on:
       - 'src/evidence_matcher.py'
       - 'src/stock_evidence.py'
       - 'src/filing*.py'
+      - 'src/deep_profile_store.py'
+      - 'scripts/build_filing_profiles.py'
       - 'src/names.py'
       - 'src/aliases.py'
       - 'src/linguistics.py'
@@ -27,6 +29,9 @@ on:
       - 'excel_bot/data/finviz_with_descriptions.csv'
       - 'data/news_intake/2026-10-17/documents.json'
       - '.github/workflows/scanner-backtest-publish.yml'
+  workflow_run:
+    workflows: [Deep SEC filing profiles]
+    types: [completed]
   workflow_dispatch:
 permissions:
   contents: read
@@ -35,54 +40,37 @@ concurrency:
   group: scanner-backtest-refresh
   cancel-in-progress: true
 jobs:
-  filings:
+  source:
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.event != 'pull_request')
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    strategy:
-      max-parallel: 2
-      fail-fast: false
-      matrix:
-        include:
-          - {ticker: LUV, artifact: 12109470523}
-          - {ticker: SPCX, artifact: 12109515304}
-          - {ticker: LLY, artifact: 12109515304}
-          - {ticker: FUN, artifact: 12109470523}
-          - {ticker: META, artifact: 12108763000}
+    timeout-minutes: 5
+    outputs:
+      ready: ${{ steps.profiles.outputs.ready }}
+      run: ${{ steps.profiles.outputs.run }}
     steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-          sparse-checkout: |
-            src
-            scripts
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - uses: actions/cache@v4
-        id: texts
-        with:
-          path: full-text-source
-          key: filing-text-probe-v1-${{ matrix.artifact }}-${{ matrix.ticker }}
-      - name: Read verified whole filing texts, not capped sections
-        if: steps.texts.outputs.cache-hit != 'true'
+      - name: Resolve the latest complete archived filing profile set
+        id: profiles
         env:
           GH_TOKEN: ${{ github.token }}
-          SOURCE_ARTIFACT: ${{ matrix.artifact }}
-          SOURCE_TICKER: ${{ matrix.ticker }}
-        run: >-
-          python scripts/materialize_filing_texts.py
-          --repository "$GITHUB_REPOSITORY" --artifact-id "$SOURCE_ARTIFACT"
-          --ticker "$SOURCE_TICKER" --as-of 2026-10-19 --out full-text-source
-      - uses: actions/upload-artifact@v4
-        with:
-          name: page-filing-${{ matrix.ticker }}
-          path: full-text-source/objects/
-          retention-days: 7
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=deep-filing-profiles-complete&per_page=50" > artifacts.json
+          python - <<'PY'
+          import json, os
+          data = json.load(open('artifacts.json'))
+          candidates = [a for a in data['artifacts'] if not a['expired'] and a.get('workflow_run', {}).get('head_branch') == 'main']
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as stream:
+              if candidates:
+                  selected = max(candidates, key=lambda a: a['created_at'])
+                  stream.write('ready=true\nrun='+str(selected['workflow_run']['id'])+'\n')
+              else:
+                  stream.write('ready=false\n')
+                  print('Keep the current page until the complete whole-archive profile set is available.')
+          PY
   build:
-    needs: filings
-    if: github.ref == 'refs/heads/main'
+    needs: source
+    if: needs.source.outputs.ready == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     permissions:
       contents: write
       actions: read
@@ -94,6 +82,7 @@ jobs:
             src
             scripts
             eval
+            requirements-filing-parser.txt
             dashboard/scanner-backtest
             excel_bot/data/finviz_with_descriptions.csv
             data/news_intake/2026-10-17/documents.json
@@ -107,14 +96,27 @@ jobs:
           python -m scripts.bootstrap_semantics
       - uses: actions/download-artifact@v4
         with:
-          pattern: page-filing-*
-          path: filing-objects
-          merge-multiple: true
+          name: deep-filing-profiles-complete
+          path: filing-profiles
+          run-id: ${{ needs.source.outputs.run }}
+          github-token: ${{ github.token }}
+      - name: Require complete profiles from the current extraction source
+        run: |
+          python - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          index = json.loads(Path('filing-profiles/index.json').read_text())
+          from src.filing_relationships import compiler_fingerprint
+          expected = compiler_fingerprint()
+          assert index['complete'] and index['compiler_sha256'] == expected, 'Current parser profiles are still compiling; refusing an older set'
+          with open(os.environ['GITHUB_ENV'], 'a') as stream:
+              stream.write('FILING_AS_OF='+index['as_of']+'\n')
+          PY
       - name: Regressions must pass before replacing the public snapshot
         run: >-
           python -I -S scripts/offline_evidence_checks.py --unittest
           src.test_correlation src.test_eval_harness src.test_evidence_matcher
-          src.test_scanner_backtest scripts.test_materialize_filing_texts
+          src.test_scanner_backtest src.test_deep_profile_store scripts.test_materialize_filing_texts
           scripts.test_scan_validation_batches scripts.test_export_backtest_static
           scripts.test_publish_scanner_snapshot
       - name: Score full intake through the current headline evidence engine
@@ -122,8 +124,8 @@ jobs:
           SCANNER_SOURCE_SHA: ${{ github.sha }}
         run: >-
           python -I -S scripts/offline_evidence_checks.py --backtest-export
-          --identity-filings filing-objects --as-of 2026-10-19
-          --workers 2 --shard-size 200 --out-dir generated-scanner
+          --filing-profiles filing-profiles --as-of "$FILING_AS_OF"
+          --workers 1 --shard-size 200 --out-dir generated-scanner
       - name: Stage the complete page before publication
         run: cp dashboard/scanner-backtest/index.html generated-scanner/index.html
       - uses: actions/upload-artifact@v4
@@ -132,17 +134,17 @@ jobs:
           path: generated-scanner/
           retention-days: 30
       - name: Verify and retain the snapshot on main without touching other files
-        timeout-minutes: 10
+        timeout-minutes: 20
         env:
           SCANNER_SOURCE_SHA: ${{ github.sha }}
           GH_TOKEN: ${{ github.token }}
         run: >-
           python -u scripts/publish_scanner_snapshot.py --directory generated-scanner
-          --source-sha "$SCANNER_SOURCE_SHA" --github-api --repository "$GITHUB_REPOSITORY"
+          --source-sha "$SCANNER_SOURCE_SHA"
   publish:
     needs: build
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     permissions:
       contents: write
       actions: read
@@ -165,10 +167,8 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p dashboard/scanner-backtest scanner-backtest
-          for file in index.html articles.json results.jsonl profiles.json ticker-index.json meta.json; do
-            cp "$SNAPSHOT_DIRECTORY/$file" "dashboard/scanner-backtest/$file"
-            cp "$SNAPSHOT_DIRECTORY/$file" "scanner-backtest/$file"
-          done
+          cp -a "$SNAPSHOT_DIRECTORY/." dashboard/scanner-backtest/
+          printf '%s\n' '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=../dashboard/scanner-backtest/"><a href="../dashboard/scanner-backtest/">Open the SEC parser test page</a>' > scanner-backtest/index.html
           git config user.name 'Scanner page publisher'
           git config user.email 'bot@users.noreply.github.com'
           git add dashboard/scanner-backtest scanner-backtest
@@ -200,3 +200,4 @@ jobs:
               time.sleep(10)
           else: raise SystemExit('Pages did not serve the expected snapshot; publication is not verified')
           PY
+

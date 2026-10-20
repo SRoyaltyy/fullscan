@@ -18,6 +18,7 @@ jobs:
             /src/
             /scripts/
             /eval/
+            /requirements-filing-parser.txt
             /excel_bot/data/finviz_with_descriptions.csv
             /data/news_intake/2026-10-17/documents.json
             /dashboard/scanner-backtest/
@@ -190,3 +191,4 @@ jobs:
           name: full-filing-text-probe-${{ matrix.ticker }}
           path: full-text-source/
           retention-days: 30
+

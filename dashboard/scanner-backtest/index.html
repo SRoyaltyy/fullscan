@@ -113,12 +113,14 @@ function renderSnapshot(snapshot) {
   }
   const coverage = snapshot.filing_coverage || {};
   const tickers = coverage.covered_tickers || [];
+  const deep = coverage.scope === "deep_filing_relationships";
   text("snapshot", `${snapshot.compiler_version} · input=${snapshot.input_mode} · snapshot ${snapshot.snapshot_id.slice(0, 16)}` +
     (snapshot.source_revision ? ` · parser commit ${snapshot.source_revision.slice(0, 12)}` : "") +
-    ` · filing identities: ${tickers.length}/${coverage.catalog_tickers || "?"} tickers` +
+    ` · ${deep ? "SEC relationships" : "filing identities"}: ${tickers.length}/${coverage.catalog_tickers || "?"} tickers` +
+    (deep ? ` · ${coverage.filings.toLocaleString()} filings · ${coverage.companies.toLocaleString()} issuers` : "") +
     (coverage.as_of ? ` · cutoff ${coverage.as_of}` : "") +
-    (tickers.length ? ` · ${tickers.join(", ")}` : " · description-only") +
-    " · full filing-business coverage: not established");
+    (tickers.length && tickers.length <= 10 ? ` · ${tickers.join(", ")}` : tickers.length ? "" : " · description-only") +
+    (deep ? " · missing relationships remain unknown" : " · full filing-business coverage: not established"));
 }
 
 // mulberry32: tiny deterministic PRNG so draws are reproducible and
@@ -445,9 +447,96 @@ const KIND_LABELS = {
   exposure: "Exposures (Item 1A risks)",
   business: "Business description terms",
   history: "History",
+  dependency: "Operational dependencies",
+  offering: "Products and services offered",
+  regulatory_exposure: "Agencies, laws and approvals",
+  policy_exposure: "Policy and macro risk mentions",
+  differentiation_claim: "Company claims about differentiation",
 };
 
+async function loadPackedProfile(path, expectedHash) {
+  if (!/^(scoring-profiles\/[a-f0-9]+|filing-profiles\/issuers\/\d{10})\.json\.gz$/.test(path))
+    throw new Error("Invalid profile asset path");
+  const query = staticMeta.snapshot ? "?snapshot=" + encodeURIComponent(staticMeta.snapshot.snapshot_id) : "";
+  const response = await fetch("./" + path + query);
+  if (!response.ok) throw new Error("Filing profile could not be loaded");
+  const bytes = await response.arrayBuffer();
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  const actual = Array.from(new Uint8Array(digest), n => n.toString(16).padStart(2, "0")).join("");
+  if (actual !== expectedHash) throw new Error("Filing profile does not match this snapshot");
+  const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip"));
+  return JSON.parse(await new Response(stream).text());
+}
+
+function appendPaged(container, entries, render, pageSize = 100) {
+  let position = 0;
+  const more = document.createElement("button");
+  more.type = "button";
+  function next() {
+    more.remove();
+    for (const entry of entries.slice(position, position + pageSize)) container.append(render(entry));
+    position += pageSize;
+    if (position < entries.length) {
+      more.textContent = `Show more (${entries.length - position} remaining)`;
+      container.append(more);
+    }
+  }
+  more.addEventListener("click", next);
+  next();
+}
+
+function renderFilingGraph(container, graph) {
+  const title = document.createElement("h3");
+  title.textContent = `All filing relationships (${graph.facts.length.toLocaleString()})`;
+  const note = document.createElement("p");
+  note.textContent = `${graph.archive_coverage.filings} filings; ${graph.archive_coverage.documents.toLocaleString()} documents; ${graph.coverage.characters_read.toLocaleString()} characters read. Historical, negative and possible claims remain visible. Missing relationships are unknown.`;
+  const filter = document.createElement("input");
+  filter.placeholder = "Search relationships, companies or quoted text";
+  filter.setAttribute("aria-label", "Search all filing relationships");
+  const list = document.createElement("div");
+  const sources = new Map(graph.sources.map(s => [s.id, s]));
+  function draw() {
+    list.replaceChildren();
+    const query = filter.value.trim().toLowerCase();
+    const selected = graph.facts.filter(f => !query || [f.predicate, f.object, f.status, ...f.evidence.map(e => e.quote)].join(" ").toLowerCase().includes(query));
+    const count = document.createElement("p");
+    count.textContent = `${selected.length.toLocaleString()} relationships match`;
+    list.append(count);
+    appendPaged(list, selected, fact => {
+      const detail = document.createElement("details");
+      const summary = document.createElement("summary");
+      summary.textContent = `${fact.subject} → ${fact.predicate.replaceAll("_", " ")} → ${fact.object} [${fact.status}]`;
+      detail.append(summary);
+      const qualifiers = document.createElement("p");
+      qualifiers.textContent = Object.entries(fact.qualifiers || {}).map(([k, v]) => `${k}: ${Array.isArray(v) ? v.join(", ") : v}`).join(" · ");
+      detail.append(qualifiers);
+      appendPaged(detail, fact.evidence, evidence => {
+        const block = document.createElement("div");
+        const source = sources.get(evidence.source_id) || {};
+        const label = document.createElement("p");
+        label.textContent = [source.form, source.filing_date, source.accession, source.document, source.section].filter(Boolean).join(" · ");
+        const quote = document.createElement("blockquote");
+        quote.textContent = evidence.quote;
+        block.append(label, quote);
+        if (source.url && /^https:\/\/www\.sec\.gov\/Archives\//.test(source.url)) {
+          const link = document.createElement("a");
+          link.href = source.url; link.target = "_blank"; link.rel = "noopener noreferrer";
+          link.textContent = "Read SEC source";
+          block.append(link);
+        }
+        return block;
+      });
+      return detail;
+    });
+  }
+  filter.addEventListener("input", draw);
+  container.append(title, note, filter, list);
+  draw();
+}
+
+let activeProfileRequest = 0;
 async function showTickerProfile(rawTicker) {
+  const request = ++activeProfileRequest;
   const ticker = String(rawTicker || "").trim().toUpperCase();
   if (!ticker) return;
   if (mode !== "live" && !(await loadProfiles())) return;
@@ -458,9 +547,11 @@ async function showTickerProfile(rawTicker) {
     try {
       const response = await fetch(`/api/profile?ticker=${encodeURIComponent(ticker)}`);
       const payload = await response.json();
+      if (request !== activeProfileRequest) return;
       if (!response.ok) throw new Error(payload.error || "profile failed");
       prof = payload;
     } catch (err) {
+      if (request !== activeProfileRequest) return;
       text("profile-title", ticker);
       text("profile-meta", err.message);
       for (const id of ["profile-warnings", "profile-facts", "profile-filing", "profile-links"]) text(id, "");
@@ -468,6 +559,16 @@ async function showTickerProfile(rawTicker) {
     }
   } else {
     prof = staticProfiles[ticker];
+    if (prof && prof.profile_path) {
+      try {
+        prof = await loadPackedProfile(prof.profile_path, prof.profile_sha256);
+        if (request !== activeProfileRequest) return;
+      } catch (err) {
+        if (request !== activeProfileRequest) return;
+        text("profile-meta", err.message);
+        return;
+      }
+    }
   }
   const title = document.getElementById("profile-title");
   const meta = document.getElementById("profile-meta");
@@ -489,7 +590,7 @@ async function showTickerProfile(rawTicker) {
   const srcBadge = document.createElement("span");
   if (prof.used_for_scoring) {
     srcBadge.className = "badge source-edgar";
-    srcBadge.textContent = prof.enriched ? "Actual scoring board · dated filing identity overlay" : "Actual scoring board · description only";
+    srcBadge.textContent = prof.deep_profile ? "SEC relationships and scoring profile" : prof.enriched ? "Dated filing identity overlay" : "Description only";
   } else if (prof.enriched) {
     srcBadge.className = "badge source-edgar";
     srcBadge.textContent = `Historical SEC-enriched display · NOT verified as scoring input`;
@@ -512,13 +613,13 @@ async function showTickerProfile(rawTicker) {
     const h = document.createElement("h3");
     h.textContent = `${KIND_LABELS[kind] || kind} (${entries.length})`;
     group.append(h);
-    for (const e of entries.slice(0, 40)) {
+    appendPaged(group, entries, e => {
       const span = document.createElement("span");
       span.className = "factterm";
-      span.textContent = e.term;
+      span.textContent = e.term || e.text || e.passage;
       if (e.passage) span.title = [e.passage, e.display_truncated ? "display excerpt; full source retained" : "", e.filing_date, e.accession, e.confidence].filter(Boolean).join(" · ");
-      group.append(span);
-    }
+      return span;
+    });
     factsBox.append(group);
   }
   if (prof.sources && prof.sources.length) {
@@ -526,13 +627,25 @@ async function showTickerProfile(rawTicker) {
     const sum = document.createElement("summary");
     sum.textContent = `Scoring source sections (${prof.sources.length}); source archive retains whole documents`;
     det.append(sum);
-    for (const source of prof.sources.slice(0, 100)) {
+    appendPaged(det, prof.sources, source => {
       const p = document.createElement("p");
       p.className = "quote";
       p.textContent = [source.source, source.form, source.filing_date, source.accession, source.section, source.sha256].filter(Boolean).join(" · ");
-      det.append(p);
-    }
+      return p;
+    });
     filingBox.append(det);
+  }
+  if (prof.deep_profile && mode === "static") {
+    try {
+      const graph = await loadPackedProfile(prof.deep_profile.path, prof.deep_profile.sha256);
+      if (request !== activeProfileRequest) return;
+      renderFilingGraph(filingBox, graph);
+    } catch (err) {
+      if (request !== activeProfileRequest) return;
+      const error = document.createElement("p");
+      error.textContent = err.message;
+      filingBox.append(error);
+    }
   }
   if (prof.filing && prof.filing.items) {
     for (const [label, text] of Object.entries(prof.filing.items)) {
@@ -608,4 +721,5 @@ poll().then(() => loadArticle());
 </script>
 </body>
 </html>
+
 

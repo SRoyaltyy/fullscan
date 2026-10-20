@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "verified_at_utc": "2026-10-17T17:48:40.075620+00:00",
+  "repository": "SRoyaltyy/fullscan",
+  "pull_request": 642,
+  "universe_snapshot": "2026-10-16",
+  "verified_run_id": 39053884472,
+  "verified_run_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/39053884472",
+  "verified_code_commit": "2f78489458e7592b06c5b626c43ba54990ca70f9",
+  "complete": true,
+  "durable": false,
+  "coverage": {
+    "expected_tickers": 2032,
+    "covered_tickers": 2032,
+    "expected_issuers": 2026,
+    "covered_issuers": 2026,
+    "expected_filings": 23635,
+    "raw_complete_filings": 23635,
+    "text_complete_filings": 23635,
+    "files": 845848,
+    "original_bytes": 121966778134,
+    "llm_calls": 0
+  },
+  "storage": {
+    "backend": "github_actions_artifacts",
+    "retention_days": 90,
+    "source_artifact_bytes": 40991006505,
+    "r2_configured": false,
+    "object_prefix": "company-filings/full-v1",
+    "migration_workflow": ".github/workflows/company_filings_r2_migration.yml"
+  },
+  "dates": {
+    "artifact_id": 12109396961,
+    "artifact_name": "company-filings-full-completeness",
+    "artifact_digest": "sha256:44d01aa7391f4c722d4cf8302f17f84315c5a5d7168aec6c63a8da69d6f84c9c",
+    "file": "company_filings_full_dates.csv",
+    "rows": 23635,
+    "missing_reporting_period_dates": 150,
+    "missing_acceptance_values": 0
+  },
+  "completion_report": {
+    "artifact_id": 12109396961,
+    "file": "company_filings_full_report.json"
+  },
+  "source_artifacts": [
+    {
+      "shard": 0,
+      "id": 12109086101,
+      "name": "company-filings-full-shard-0",
+      "size_in_bytes": 4579401826,
+      "digest": "sha256:1a1c21941109eadd7d715d5a33bed018e2c7bc21457a7c7dfd424d1ed1be2f63",
+      "expires_at": "2027-01-15T17:28:07Z",
+      "run_id": 39053884472
+    },
+    {
+      "shard": 1,
+      "id": 12108613906,
+      "name": "company-filings-full-shard-1",
+      "size_in_bytes": 3322520970,
+      "digest": "sha256:9d75c321aa4f3fe76d5139bfc2f99cd61d97f77e99cddb044694ee190ef9ee46",
+      "expires_at": "2027-01-15T17:28:07Z",
+      "run_id": 39053884472
+    },
+    {
+      "shard": 2,
+      "id": 12108722341,
+      "name": "company-filings-full-shard-2",
+      "size_in_bytes": 3235749305,
+      "digest": "sha256:bcade39434573571d7f1d832e4d2db28f6024963a0f07248769bcd89665925cc",
+      "expires_at": "2027-01-15T17:28:07Z",
+      "run_id": 39053884472
+    },
+    {
+      "shard": 3,
+      "id": 12108852380,
+      "name": "company-filings-full-shard-3",
+      "size_in_bytes": 2704490159,
+      "digest": "sha256:e43c8f8aef1b53b910a1fe728d83ad2c82532219c394bb4c57ee178d5048a686",
+      "expires_at": "2027-01-15T17:28:07Z",
+      "run_id": 39053884472
+    },
+    {
+      "shard": 4,
+      "id": 12109211595,
+      "name": "company-filings-full-shard-4",
+      "size_in_bytes": 2962648926,
+      "digest": "sha256:12077e323cf673239df5d54d104332df9df206a1b0c53d24b972af72ad8892b1",
+      "expires_at": "2027-01-15T17:28:07Z",
+      "run_id": 39053884472
+    },
+    {
+      "shard": 5,
+      "id": 12109470523,
+      "name": "company-filings-full-shard-5",
+      "size_in_bytes": 3296500154,
+      "digest": "sha256:f384a9651f4074e92a9795ec5e58bfb217c861724df9c795e16ee5a707fa3e1a",
+      "expires_at": "2027-01-15T17:28:07Z",
+      "run_id": 39053884472
+    },
+    {
+      "shard": 6,
+      "id": 12108539847,
+      "name": "company-filings-full-shard-6",
+      "size_in_bytes": 3143661198,
+      "digest": "sha256:e304023868871f4fac2c4e368fbfdb848e4da0fc4a5a87df8e22d2ea6eef8dbc",
+      "expires_at": "2027-01-15T17:28:07Z",
+      "run_id": 39053884472
+    },
+    {
+      "shard": 7,
+      "id": 12109515304,
+      "name": "company-filings-full-shard-7",
+      "size_in_bytes": 3210854053,
+      "digest": "sha256:3200eb9f6bff370a979820954d695147c85246cd41e19529f403524bb2149fd6",
+      "expires_at": "2027-01-15T17:28:07Z",
+      "run_id": 39053884472
+    },
+    {
+      "shard": 8,
+      "id": 12109680363,
+      "name": "company-filings-full-shard-8",
+      "size_in_bytes": 3160523739,
+      "digest": "sha256:d0996acbfe830140e98d206cd5572d8e96125b0ab8c75d18f3ecd7b1f2f4251b",
+      "expires_at": "2027-01-15T17:28:07Z",
+      "run_id": 39053884472
+    },
+    {
+      "shard": 9,
+      "id": 12109416338,
+      "name": "company-filings-full-shard-9",
+      "size_in_bytes": 3560562065,
+      "digest": "sha256:11b83712c3830c4983bfec62ffba09604f61b3fe872d6bf90ad5f914fd40557d",
+      "expires_at": "2027-01-15T17:28:07Z",
+      "run_id": 39053884472
+    },
+    {
+      "shard": 10,
+      "id": 12108763000,
+      "name": "company-filings-full-shard-10",
+      "size_in_bytes": 4115839258,
+      "digest": "sha256:e7ea060c01732071cd15429dc7521c3e838ca34a2df628b72e235bcefdcc8a8e",
+      "expires_at": "2027-01-15T17:28:07Z",
+      "run_id": 39053884472
+    },
+    {
+      "shard": 11,
+      "id": 12109501045,
+      "name": "company-filings-full-shard-11",
+      "size_in_bytes": 3698254852,
+      "digest": "sha256:46891ec31c3a5c7e4f1e539d3dbd4df966d53dfbc71e5d2c5a42a38f609b3341",
+      "expires_at": "2027-01-15T17:28:07Z",
+      "run_id": 39053884472
+    }
+  ],
+  "reader": "scripts/read_company_filings_full.py",
+  "specification": "docs/company-filings-full-archive.md",
+  "visual_page_reviews": "src/company_filings/page_reviews.json",
+  "validation": {
+    "unit_tests_passed": 56,
+    "independently_matched_sec_binary_samples": 18,
+    "source_publication_checked": true
+  },
+  "scope": "Latest annual and same-period amendments plus every later 10-Q, 8-K and 6-K; documented fund/registration/quarterly fallback when no annual exists. Exact whole originals and all embedded files. This is not all historical filings since inception."
+}
+
