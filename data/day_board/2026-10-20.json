@@ -1,19 +1,18 @@
 {
   "date": "2026-10-20",
-  "generated_at": "2026-10-20T04:35:38.255407-04:00",
+  "generated_at": "2026-10-20T04:57:43.360929-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-20_predict.md` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-10-20_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-10-20_judge.md` \u2014 missing",
-    "MISSING Weather JSON `01_daily/weather/2026-10-20_weather.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-20_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 2,
-    "partial": 1,
-    "fail": 5,
+    "ok": 3,
+    "partial": 2,
+    "fail": 3,
     "n": 8
   },
   "processes": [
@@ -181,9 +180,9 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -329,11 +328,16 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-10-20_preopen_qc.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 7575,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "bullets": [
+            "general_predict:missing",
+            "events:missing",
+            "news_judge:missing",
+            "news_parse:missing"
+          ]
         },
         {
           "key": "status",
@@ -351,11 +355,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-10-20_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -486,9 +492,9 @@
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -513,15 +519,21 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-10-20_weather.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=9373 vix=calm yields=flat",
+          "size": 9373,
+          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "events bull 1 / bear 4"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "bullets": [
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "events bull 1 / bear 4"
+      ]
     },
     {
       "key": "ab",
@@ -687,11 +699,14 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-10-20_weather.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=9373 vix=calm yields=flat",
+          "size": 9373,
+          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "events bull 1 / bear 4"
+          ]
         },
         {
           "key": "in_ab",
@@ -860,7 +875,13 @@
     "general": {},
     "sectors": {},
     "news": {},
-    "weather": {}
+    "weather": {
+      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "bullets": [
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "events bull 1 / bear 4"
+      ]
+    }
   },
   "lands": [
     {
@@ -1090,6 +1111,31 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-20T04:57:42.767542-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-20_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97015,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-20_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11851,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-20\n_Generated 2026-10-20T04:28:09.054728-04:00 \u00b7 export=data/exports/finviz_2026-10-20.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-20\n_Generated 2026-10-20T04:28:09.054728-04:00 \u00b7 export=data/exports/finviz_2026-10-20.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
     }
   ],
   "href": {
