@@ -46,6 +46,11 @@ th{color:var(--muted);font-weight:600}
   <p id="decision"></p>
   <div id="matches"></div>
 </section>
+<section class="card" id="spacy" hidden>
+  <h2>spaCy analysis <span class="badge" id="spacy-cluster"></span></h2>
+  <p class="muted">Dependency parsing (who did what to whom) + named entities + K-Means theme cluster. Deterministic: spaCy model and cluster seed are pinned.</p>
+  <div id="spacy-body"></div>
+</section>
 </main>
 <script>
 // Two modes, one scoring path.
@@ -58,6 +63,8 @@ let mode = null;           // "live" | "static"
 let current = null;
 let staticArticles = [];   // [{id,title,...}]
 let staticResults = new Map();
+let spacyResults = new Map();
+let spacyClusters = {};
 let staticMeta = null;
 let rngState = null;       // {seed, n}
 const DEFAULT_SEED = 1722;
@@ -116,6 +123,7 @@ function renderArticle(article) {
   }
   text("body", article.text || "");
   document.getElementById("results").hidden = true;
+  if (mode === "static") renderSpacy(article.id);
 }
 
 async function loadArticle() {
@@ -233,10 +241,12 @@ async function runTest() {
 }
 
 async function loadStatic() {
-  const [metaRes, artsRes, resultsRes] = await Promise.all([
+  const [metaRes, artsRes, resultsRes, spacyRes, clusterRes] = await Promise.all([
     fetch("./meta.json"),
     fetch("./articles.json"),
     fetch("./results.jsonl"),
+    fetch("./spacy.jsonl"),
+    fetch("./spacy-clusters.json"),
   ]);
   if (!artsRes.ok || !resultsRes.ok) throw new Error("static artifacts missing");
   staticMeta = metaRes.ok ? await metaRes.json() : {};
@@ -248,15 +258,59 @@ async function loadStatic() {
     const row = JSON.parse(trimmed);
     staticResults.set(String(row.id), row);
   }
+  if (spacyRes.ok) {
+    const sraw = await spacyRes.text();
+    for (const line of sraw.split("\n")) {
+      const trimmed = line.trim();
+      if (!trimmed) continue;
+      const row = JSON.parse(trimmed);
+      spacyResults.set(String(row.id), row);
+    }
+  }
+  spacyClusters = clusterRes.ok ? (await clusterRes.json()).clusters || {} : {};
   if (!staticArticles.length) throw new Error("static article pool is empty");
   const m = staticMeta || {};
   text("status",
     `precomputed · engine=${m.engine || "evidence"} · ${staticArticles.length} articles` +
     (m.generated_at ? ` · run ${m.generated_at}` : "") +
-    (m.articles_with_passes != null ? ` · ${m.articles_with_passes} with passes` : ""));
+    (m.articles_with_passes != null ? ` · ${m.articles_with_passes} with passes` : "") +
+    (spacyResults.size ? ` · spaCy layer: ${spacyResults.size}` : ""));
   mode = "static";
   document.getElementById("another").disabled = false;
   document.getElementById("test").disabled = false;
+}
+
+function renderSpacy(id) {
+  const box = document.getElementById("spacy");
+  const row = spacyResults.get(String(id));
+  if (!row) { box.hidden = true; return; }
+  box.hidden = false;
+  const clusterInfo = row.cluster != null ? spacyClusters[String(row.cluster)] : null;
+  text("spacy-cluster", clusterInfo
+    ? `theme cluster #${row.cluster} · ${clusterInfo.count} articles · ${clusterInfo.label}`
+    : (row.cluster != null ? `theme cluster #${row.cluster}` : ""));
+  const body = document.getElementById("spacy-body");
+  body.textContent = "";
+  const addBlock = (title, items, render) => {
+    if (!items || !items.length) return;
+    const h = document.createElement("p");
+    h.className = "quote";
+    h.textContent = title;
+    body.append(h);
+    const ul = document.createElement("ul");
+    for (const item of items.slice(0, 12)) {
+      const li = document.createElement("li");
+      li.textContent = render(item);
+      ul.append(li);
+    }
+    body.append(ul);
+  };
+  for (const [label, values] of Object.entries(row.entities || {})) {
+    addBlock(label, values, (v) => v);
+  }
+  addBlock("SUBJECT → VERB → OBJECT", row.svos || [], (t) => `${t[0]}  →  ${t[1]}  →  ${t[2]}`);
+  addBlock("subjects", row.subjects || [], (v) => v);
+  addBlock("objects", row.objects || [], (v) => v);
 }
 
 async function poll() {
