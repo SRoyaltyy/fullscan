@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-20
 
-**Generated:** 2026-10-20T04:24:48.460867-04:00 (America/New_York)
+**Generated:** 2026-10-20T04:25:26.004983-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures trade mixed ahead of heavy earnings slate and housing data as Europe weakens on ABB miss
 **Prior close:** SPX —  Nasdaq —  Dow —
