@@ -9,6 +9,7 @@ import math
 import re
 from collections import defaultdict, Counter
 from dataclasses import replace
+from functools import lru_cache
 
 from .aliases import extract_jurisdictions
 from .linguistics import COMPARISON, DISRUPTION, EVENT, FINANCIAL_EVENT, GENERIC, STOP, TOKEN, IRREGULAR, has_event, lemma, verb_lemmas, verb_only_lemmas, input_quality, passages, terms, tokens
@@ -20,20 +21,26 @@ ROUNDUP = re.compile(r'\b(?:market wrap|stocks? to watch|top \d+ stocks?|top\s+[
 AGENCY_ICE = re.compile(r'\bICE\b.{0,100}\b(?:immigration|deport\w*|arrest\w*|detain\w*|enforcement)\b|\b(?:immigration|customs enforcement)\b.{0,100}\bICE\b', re.I)
 FOREIGN_EXCHANGE = re.compile(r'\b(?:HOSE|HNX|UPCOM|BSE|NSE|ASX|LSE|TSE|HKEX)\s*[:(]|\b(?:Vietnam|Vietnamese|Kosy)\b', re.I)
 SCOPE_EVENT = re.compile(r'\b(?:tariff|sanction|ban|restrict\w*|regulat\w*|policy|permit|price differential|constitutional)\b', re.I)
-EVENT_ONLY = frozenset('recall approve approval reject rejection earnings revenue guidance report result class governor secretary minister senator president spokeswoman spokesman'.split())
+EVENT_ONLY = frozenset('recall approve approval reject rejection earnings revenue guidance report result class governor secretary minister senator president spokeswoman spokesman key overall respective range broad focus factor'.split())
 CALENDAR = frozenset('january february march april may june july august september october november december monday tuesday wednesday thursday friday saturday sunday daily weekly monthly annually yesterday today tomorrow q1 q2 q3 q4'.split())
 QUOTE_PAGE = re.compile(r'\bstock price\s*,?\s*news\s*,?\s*quote\s+(?:and|&)\s+history\b|\b8-K\s*&\s*SEC filings\b',re.I)
 
 
+@lru_cache(maxsize=10000)
 def _identity_text(text: str) -> str:
     # An exchange qualification and a market-index move are not an event at
     # the listed exchange operator. Keep raw text for explicit ticker syntax.
     pattern=r'\b(?:NASDAQ|NYSE|AMEX|OTC)(?=\s*:|[- ]listed\b)|\bNasdaq(?:\s+(?:Composite|100))?(?=\s+(?:faces|falls|rises|gains|loses|heads|slides|slumps|sinks)\b)'
     text=re.sub(r'(?<=[A-Za-z])-(?=[A-Za-z])',' ',text)
+    from .names import PUBLISHERS,AGENCIES
+    for phrase in PUBLISHERS:
+        text=re.sub(r'\b'+re.escape(phrase)+r'\b',lambda m:' '*len(m.group()),text,flags=re.I)
+    text=re.sub(r'\b(?:'+ '|'.join(re.escape(x.upper()) for x in AGENCIES)+r')\b',lambda m:' '*len(m.group()),text)
     text=re.sub(r'\b(?:Nasdaq|NYSE|AMEX)(?=\s+(?:minimum\s+bid|listing|continued\s+listing|deficiency|compliance)\b)',lambda m:' '*len(m.group()),text,flags=re.I)
     return re.sub(pattern,lambda m:' '*len(m.group()),text,flags=re.I)
 
 
+@lru_cache(maxsize=10000)
 def _corporate_usage(alias: str, text: str) -> bool:
     text=_identity_text(text)
     name=r'[\W_]+'.join(map(re.escape,alias.split()))
@@ -43,15 +50,20 @@ def _corporate_usage(alias: str, text: str) -> bool:
         if re.search(r'\b(?:to|will|would|could|should|can|may|must)\s*$',before,re.I):continue
         if re.match(r'\s+(?:(?:city|local|county|school)\s+)?(?:police|sheriff|council|senator|governor)\b',after,re.I):return False
         tail=re.sub(r"^['\u2019]s\s+",'',after)
+        tail=re.sub(r'^\s+(?:also|just|recently|reportedly|now)\s+',' ',tail,flags=re.I)
         words=list(TOKEN.finditer(tail))
         if words:
             first=words[0].group();base=lemma(first)
+            if base in verb_lemmas() and re.search(r'(?:,|\band)\s*$',before,re.I):return True
+            if after.startswith(("'s",'\u2019s')) and first.lower().endswith('s') and len(words)>1 and lemma(words[1].group()) in verb_lemmas():return True
             if first.lower()=='to' and len(words)>1 and lemma(words[1].group()) in verb_lemmas():return True
+            if first.lower() in {'will','would','could','should','can','may','must'} and len(words)>1 and lemma(words[1].group()) in verb_lemmas():return True
             if base in verb_lemmas() and (base in verb_only_lemmas() or first.lower() in IRREGULAR or (len(words)>1 and first.lower().endswith(('s','ed','ing')))):return True
             if len(words)>1 and first[0].isupper():
                 second=words[1].group()
                 if lemma(second) in verb_lemmas() and second.lower().endswith(('s','ed','ing')):return True
         if alias.lower() not in english_words() and re.search(r'\b(?:acquir\w*|buy\w*|purchas\w*)\s+(?:[A-Za-z-]+\s+){0,3}$',before,re.I):return True
+        if alias.lower() not in english_words() and after.startswith(("'s",'\u2019s')) and re.search(r'\b(?:approv\w*|recall\w*)\s*$',before,re.I):return True
     if re.search(r'\b'+re.escape(alias)+r"['\u2019]s\s+\$[\d.,]+\s+(?:tender|cash)\s+offer\b",text,re.I):return True
     pattern=r'\b'+name+r"(?:['\u2019]s)?\s+(?:(?:quarterly|annual|fiscal|preliminary)\s+)?(?:reports?|reported|announces?|announced|raises?|raised|cuts?|cut|denies|denied|acquires?|acquired|launch\w*|unveil\w*|invest\w*|files?|earnings|revenue|shares|stock|guidance|inc|corp|corporation|ltd|plc|(?:tender|cash)\s+offer|moves?\s+to\s+(?:overturn|appeal|block)|waves?\s+goodbye|(?:[A-Za-z-]+\s+){0,2}(?:executives?|employees|president|CEO|CFO|chief|board)|driver|flying)\b"
     for m in re.finditer(pattern,text,re.I):
@@ -159,11 +171,13 @@ def _comparison_name(text: str, alias: str) -> bool:
     if re.match(r'\s+(?:raises?|cuts?|lifts?|lowers?)\b.{0,100}\bprice target\b',text[match.end():],re.I):return True
     prefix = text[max(0,match.start()-50):match.start()]
     local_prefix = re.split(r'[,;.!?]', prefix)[-1]
+    if re.match(r'\s+(?:says?|said|reports?|reported|analysts?\s+(?:say|said))\b',text[match.end():],re.I) and re.search(r'[,;]\s*$',prefix):return True
     if re.match(r'.{0,45}\b(?:built|made|developed|launched)\b.{0,35}\b(?:years?|decades?|centuries) ago\b',text[match.end():],re.I):return True
     return bool(COMPARISON.search(local_prefix) or re.search(r'\b(?:according to|reported by|reports? from|formerly|previously|historically)\s*$',local_prefix,re.I))
 
 
 def _is_subject(record, text: str) -> bool:
+    raw_text=text
     text=_identity_text(text)
     if not has_event(text) or _comparison_name(text,record.alias):
         return False
@@ -173,8 +187,10 @@ def _is_subject(record, text: str) -> bool:
         return False
     # A bare all-caps English ticker is not identity unless the passage has
     # a financial context. Explicit exchange/$ syntax remains strong.
-    explicit = bool(re.search(r'(?:\$|(?:NYSE|NASDAQ|AMEX)\s*:\s*)'+re.escape(record.ticker)+r'\b',text,re.I))
+    explicit = bool(re.search(r'(?:\$|(?:NYSE|NASDAQ|AMEX)\s*:\s*)'+re.escape(record.ticker)+r'\b',raw_text,re.I))
     name_pattern = r'[\W_]+' .join(re.escape(word) for word in record.alias.split())
+    # A symbol bound to another issuer is explicit negative identity proof.
+    if name_pattern and re.search(r'\b'+name_pattern+r'\s*\(\s*(?:(?:NYSE|NASDAQ)\s*:\s*)?(?!'+re.escape(record.ticker)+r'\b)[A-Z]{1,6}\s*\)',text):return False
     full_name = bool(name_pattern and any(not m.start() or text[m.start()-1] not in '.&-' for m in re.finditer(r'\b'+name_pattern+r'\b',text,re.I)))
     if full_name and all(w in english_words() for w in record.alias.split()):
         # A dictionary-word company needs an actual corporate predicate.
@@ -182,6 +198,17 @@ def _is_subject(record, text: str) -> bool:
         raw_company=any(m.group()[0].isupper() for m in re.finditer(r'\b'+name_pattern+r'\b',text,re.I))
         lower_financial=text.islower() and bool(re.search(r'\b(?:stock|shares|earnings|revenue|dividend)\b',text))
         full_name = (raw_company or lower_financial) and _corporate_usage(record.alias,text)
+        if len(record.alias.split())>1:
+            senses,_=load_senses()
+            proper_phrase=any(all(w.group()[0].isupper() or w.group().lower() in {'of','the','and'} for w in TOKEN.finditer(m.group())) for m in re.finditer(r'\b'+name_pattern+r'\b',text,re.I))
+            if record.alias not in senses and proper_phrase:full_name=True
+        if len(record.alias.split())==1:
+            for m in re.finditer(r'\b'+name_pattern+r'\b',text,re.I):
+                before=text[:m.start()];after=text[m.end():]
+                if re.search(r'\b(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|many|several|more|fewer)\s*$',before,re.I):full_name=False
+                if re.search(r'\b[A-Z][A-Za-z]+\s*$',before) and not re.search(r'\b(?:at|by|of|for|with|against|sues|acquires|buy|buys)\s*$',before,re.I):full_name=False
+                following=re.match(r'\s+([A-Z][A-Za-z]+)',after)
+                if following and (lemma(following.group(1)) not in verb_lemmas() or lemma(following.group(1))==following.group(1).lower()) and following.group(1).lower() not in {'stock','shares','earnings','revenue','profit','guidance','inc','corp','corporation','ltd','plc','also','just','now'}:full_name=False
     if record.alias and re.search(r'(?i:\b'+name_pattern+r'\s+of\s+)[A-Z]',text) and ' of ' not in record.alias:
         full_name=False
     # A parenthesized symbol is identity only when bound to this name.
@@ -363,12 +390,21 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                         common = word in english_words()
                         bound_short=_is_subject(replace(record,alias=''),passage.text) or bool(re.search(r'\b'+re.escape(word)+r'\s*\(\s*'+re.escape(record.ticker)+r'\s*\)',passage.text,re.I))
                         sourced_alias=any(t==record.ticker and k=='company_alias' for t,k,ix in board.identities.get(' '.join(tokens(word,stop=False)),()))
+                        if common and sourced_alias and not _is_subject(replace(record,alias=word),passage.text):continue
+                        if common and not single_legal_word and ' of ' not in record.alias and re.search(r'(?i:\b'+re.escape(word)+r'\s+of\s+)[A-Z]',passage.text):continue
                         coordinated_financial=bool(re.search(r'\b'+re.escape(word)+r'\s*(?:,|and\b).{0,50}\bshares?\s+(?:are\s+)?(?:fall\w*|ris\w*|down|up)\b',passage.text,re.I))
                         shared_classes=family and len(records)>1 and bool(re.search(r'\b'+re.escape(word)+r'\s+invests?\s+\$',passage.text,re.I))
+                        financial_short=False
+                        for occurrence in re.finditer(r'\b'+re.escape(word)+r'\b',passage.text,re.I):
+                            before=passage.text[:occurrence.start()];after=passage.text[occurrence.end():]
+                            previous=re.search(r'([A-Za-z]+)\s*$',before)
+                            embedded=previous and previous.group(1)[0].isupper() and lemma(previous.group(1)) not in verb_lemmas() and previous.group(1).lower() not in {'of','in','at','by','for','with','against'}
+                            if not embedded and occurrence.group()[0].isupper() and re.match(r'\s+(?:stock|shares|earnings|revenue|profit|dividend|(?:will|could|may)\s+\w+\s+\$)\b',after,re.I):financial_short=True
                         acquisition_code=family and bool(re.search(r'\b'+re.escape(word.upper())+r'\b',passage.text)) and _corporate_usage(word,passage.text) and bool(re.search(r'\bacquisition\s+of\b',passage.text,re.I))
-                        if common and not single_legal_word and not (legal or bound_short or sourced_alias or business or (not family and discriminating) or coordinated_financial or shared_classes or acquisition_code):continue
-                        if not common and word in competing_stems and not (legal or bound_short or sourced_alias or business):continue
+                        if common and not single_legal_word and not (legal or bound_short or sourced_alias or business or (not family and discriminating) or coordinated_financial or shared_classes or acquisition_code or financial_short):continue
+                        if not common and word in competing_stems and not (legal or bound_short or sourced_alias or business or _corporate_usage(word,passage.text)):continue
                         predicate = _is_subject(record,passage.text)
+                        if common and single_legal_word and not (predicate or record.ticker in coordinated):continue
                         short_predicate = _corporate_usage(word,passage.text)
                         proper = any(m.group()[0].isupper() for m in re.finditer(r'\b'+re.escape(word)+r'\b',passage.text,re.I))
                         if common and not proper and not (passage.text.islower() and re.search(r'\b(?:stock|shares|earnings|revenue|dividend)\b',passage.text)):continue
@@ -377,17 +413,20 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                         if word in places and not business and record.alias!=word:continue
                         abbreviation=not single_legal_word and len(word)<=5 and bool(re.search(r'\b'+re.escape(word.upper())+r'\b',passage.text))
                         if abbreviation and not (business or legal or short_predicate or _is_subject(replace(record,alias=''),passage.text)):continue
-                        if not (business or legal or (proper and not common and family) or short_predicate or financial_list_name or (single_legal_word and FINANCIAL_EVENT.search(passage.text) and (not common or predicate))):
+                        if not (business or legal or (proper and not common and family and (single_legal_word or FINANCIAL_EVENT.search(passage.text))) or short_predicate or financial_list_name or (single_legal_word and FINANCIAL_EVENT.search(passage.text) and (not common or predicate))):
                             continue
                         qualified_short.add(record.ticker)
                         if record not in mentions:
                             mentions.append(record)
             for record in mentions:
+                first=record.alias.split()[0] if record.alias else ''
+                if first and re.search(r'(?i:\b'+re.escape(first)+r'\s*\(\s*(?:(?:NYSE|NASDAQ)\s*:\s*)?)(?!'+re.escape(record.ticker)+r'\b)[A-Z]{1,6}\s*\)',passage.text):continue
+                if record.alias==record.ticker.lower() and any(other.ticker!=record.ticker and other.alias and re.search(r'\b'+re.escape(other.alias)+r'\s+'+re.escape(record.ticker)+r'\b',identity_text,re.I) for other in mentions):continue
                 aliases=[record.alias]+matched_prefixes[record.ticker]
                 first=record.alias.split()[0] if record.alias else ''
                 if first:aliases.append(first)
                 spans=[m.span() for alias in aliases if alias for m in re.finditer(r'\b'+r'[\W_]+'.join(map(re.escape,alias.split()))+r'\b',identity_text,re.I)]
-                longer=[m.span() for other in mentions if other.ticker!=record.ticker and other.alias for m in re.finditer(r'\b'+r'[\W_]+'.join(map(re.escape,other.alias.split()))+r'\b',identity_text,re.I)]
+                longer=[m.span() for other in mentions if other.ticker!=record.ticker for alias in [other.alias]+matched_prefixes[other.ticker] if alias for m in re.finditer(r'\b'+r'[\W_]+'.join(map(re.escape,alias.split()))+r'\b',identity_text,re.I)]
                 if spans and all(any(a<=start and end<=b and b-a>end-start for a,b in longer) for start,end in spans):
                     continue
                 # Do not retain a proven cross-exchange or agency collision as
@@ -437,7 +476,7 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                     continue
                 if kind=='company_alias' and fact.text and any(w in english_words() for w in key.split()):
                     if not re.search(r'\b'+re.escape(fact.text)+r'\b',passage.text):continue
-                    if len(key.split())==1 and not _corporate_usage(fact.text,passage.text):continue
+                    if len(key.split())==1 and not _is_subject(replace(name_index.by_ticker[ticker],alias=fact.text.lower()),passage.text):continue
                 if kind=='company_alias' and not fact.text and any(w in english_words() for w in key.split()):
                     raw=next((v for v in re.findall(r'["\u201c]([^"\u201d]+)["\u201d]',fact.passage) if ' '.join(tokens(v,stop=False))==key),'')
                     if not raw or not re.search(r'\b'+re.escape(raw)+r'\b',passage.text):

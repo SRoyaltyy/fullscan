@@ -133,6 +133,7 @@ def main() -> None:
     parser.add_argument("--sectors", type=Path, default=ROOT / "data/finviz/latest.csv")
     parser.add_argument("--filings", type=Path, default=None, help="PR642 objects root, or a ticker->text JSON cache")
     parser.add_argument("--section-cache", type=Path, default=None, help="Explicit fallback to an incomplete legacy SQLite section cache")
+    parser.add_argument("--identity-filings",type=Path,default=None,help="Verified full-text objects for explicit glossary/legal identities only; does not establish full exposure coverage")
     parser.add_argument("--as-of", default=None, help="Only consume filings published on/before YYYY-MM-DD")
     parser.add_argument("--require-complete", action="store_true", help="Fail if the full archive reader reports missing text")
     parser.add_argument("--engine", choices=("evidence", "legacy"), default="legacy")
@@ -143,6 +144,8 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--out", type=Path, default=ROOT / "dashboard/news-dir/correlation/latest.json")
     args = parser.parse_args()
+    if args.identity_filings and (args.engine!='evidence' or args.profile_cache):
+        raise SystemExit('--identity-filings requires uncached evidence compilation')
     if args.require_complete and not args.universe:
         raise SystemExit('--require-complete also needs an explicit --universe to verify company coverage')
     if args.require_complete and (args.section_cache or (args.filings and args.filings.is_file())):
@@ -185,6 +188,11 @@ def main() -> None:
             if missing:raise SystemExit('full archive is missing requested companies: '+','.join(sorted(missing)[:20]))
 
     stocks = load_stocks(args.descriptions, args.universe, args.sectors, filings)
+    if args.identity_filings:
+        identities,identity_coverage=load_filing_sections(args.identity_filings,as_of=args.as_of,strict=True)
+        print('IDENTITY_SOURCE_COVERAGE='+json.dumps(identity_coverage))
+        for row in stocks:
+            row.setdefault('filing_sections',[]).extend({**chunk,'kind':'identity_source'} for chunk in identities.get(row['ticker'],[]))
     if args.section_cache:
         cached, coverage = load_section_cache(args.section_cache, as_of=args.as_of)
         print("FILING_COVERAGE=" + json.dumps(coverage))

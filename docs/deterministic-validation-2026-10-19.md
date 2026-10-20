@@ -208,3 +208,25 @@ Verified source probes read25 complete filings,544 views and29,148,431 text
 characters across LUV/SPCX with no reader errors. This validates two issuers
 only; full-universe historical relevance remains unmeasured.
 
+## Candidate2.4 measured outcome
+
+Hosted39359198453 passed168 tests and9 synthetic identity cases. Existing
+regressions18/19 and targets3/3 passed. Development exact-set results improved
+to147/157,146/158,127/139 and139/154; every set still fails the combined90%
+precision/recall/exact requirement. The fifth sample failed106/131 exact,
+22TP16FP15FN (precision57.9%,recall59.5%);69 unresolved cases were excluded.
+Only17 provisional novel-story positives remained. Legacy97/131,0TP6FP37FN.
+
+The fifth test has a blinding limitation: aggregate predicted ticker counts
+were accidentally displayed before labeling. Per-case outputs were unopened,
+but this is not a fully blind validation. A subsequent catalog audit found
+HDFC Bank ADR HDB, omitted in v1. A separate v2 changes only that label; the
+first labels and result are retained. No production-success claim is justified.
+
+Candidate2.5 adds structural identity controls and retains filing preambles and
+short sections. Its optional dated full-text overlay extracts only explicit
+legal/glossary identities; short-description business/exposure evidence stays
+separate. Source probes expand to LUV,SPCX,LLY,FUN,META, not all5961 stocks.
+Batch inference reuses boards while preserving each sample's batch boundaries.
+Logs omit predictions. Seed19024 will exclude all1000 prior primary headlines.
+

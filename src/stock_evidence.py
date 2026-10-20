@@ -16,7 +16,7 @@ from .linguistics import GENERIC, STOP, TOKEN, lemma, terms, tokens
 from .places import CITIES, STATES
 from .aliases import _COUNTRIES
 
-COMPILER_VERSION = 'stock-evidence-2.4'
+COMPILER_VERSION = 'stock-evidence-2.5'
 
 _LOCATIONS = {p.lower() for p in list(CITIES)+list(STATES)+list(_COUNTRIES)}
 _LOCATION_RX = re.compile(r'\b(?:'+'|'.join(re.escape(p) for p in sorted(_LOCATIONS,key=len,reverse=True))+r')\b',re.I)
@@ -199,6 +199,21 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
                 if len(owned)>=2 and brand.lower() not in BRAND_DENY|STOP|GENERIC:
                     ix=_fact(out,'operating_brand',brand,' '.join(owned.values()),source,'operating segments')
                     out.facts[ix].confidence='shared_owned_segment_name'
+        if initial=='identity_source':
+            # A cheap, explicit identity overlay can read every full filing
+            # without pretending that its business/exposure model was rebuilt.
+            for m in re.finditer(r'["\u201c]([^"\u201d\n]{3,60})["\u201d]\s+refers? to our\b[^\n.!?]*(?:[.!?]|$)',text):
+                value=m.group(1).strip()
+                if any(w not in STOP|GENERIC for w in tokens(value)):
+                    _fact(out,'owned_product',value,m.group(),source,'explicit issuer glossary')
+            legal_definition=re.compile(r'\b'+r'[\W_]+'.join(map(re.escape,legal))+r'\s*,?\s*(?:(?:Inc|Corp|Corporation|Ltd|Limited|Co|Company)\.?\s*)?\([^\n)]{2,200}\)',re.I) if legal else None
+            for definition in legal_definition.finditer(text) if legal_definition else ():
+                passage=definition.group()
+                for value in re.findall(r'["\u201c]([^"\u201d\n]{2,60})["\u201d]',passage):
+                    if any(w not in STOP|GENERIC for w in tokens(value)):
+                        _fact(out,'company_alias',value,passage,source,'issuer legal introduction')
+            out.warnings.append('identity_overlay_only: full business/exposure compilation not claimed')
+            continue
         if chunk.get('complete') is False:
             out.warnings.append('incomplete_source:' + str(chunk.get('accession','')))
         for kind, heading, body in split_sections(text, initial):
@@ -275,7 +290,13 @@ def build_profile(row: dict, catalog: Catalog) -> Profile:
                     if product_list:
                         from .names import english_words
                         categories=bool(re.match(r'(?:the\s+)?following\s+categories?\b|categories?\b|types?\b',product_list.group(1),re.I))
-                        for item in re.split(r',|\band\b',product_list.group(1)):
+                        items=product_list.group(1).split(',')
+                        # Interior conjunctions belong to the product name:
+                        # Remote Monitoring and Management is one item.
+                        tail=items.pop() if items else ''
+                        items.extend(re.split(r'\s+and\s+',tail) if not tail.strip().lower().startswith('and ') else [tail])
+                        for item in items:
+                            item=re.sub(r'^and\s+','',item.strip())
                             value=re.sub(r'\s+products?$','',item.strip().replace('®','').replace('™',''))
                             if re.fullmatch(r'(?:[a-z]?[A-Z][A-Za-z0-9-]*)(?:\s+[A-Z][A-Za-z0-9-]*){0,2}',value):
                                 generic_phrase=len(value.split())>1 and all(w.lower() in english_words() for w in value.split())

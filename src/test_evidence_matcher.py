@@ -30,6 +30,47 @@ EXTRA = [
 
 
 class EvidenceTests(unittest.TestCase):
+ def test_product_list_internal_conjunction_is_not_a_brand_boundary(self):
+  row={'ticker':'N','name':'Example Software Inc','industry':'Software','description':'Its products include Remote Monitoring and Management, Backup and Data Protection, and ZedConsole.'}
+  p=build_profile(row,Catalog([row]))
+  self.assertFalse(any(f.kind=='owned_product' and f.text in {'Management','Protection','Monitoring'} for f in p.facts))
+  self.assertTrue(any(f.kind=='owned_product' and f.text=='ZedConsole' for f in p.facts))
+
+ def test_company_count_nouns_and_publisher_spans_are_not_issuers(self):
+  b=build_board([{'ticker':'P','name':'People Inc','industry':'Media'}, {'ticker':'POST','name':'Post Holdings Inc','industry':'Food'}],engine='evidence')
+  for text in ('Three People Charged in an investigation.','One local restaurant wins a Washington Post ranking.'):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertFalse(any(r['pass'] for r in hit['stocks']),(text,hit['stocks']))
+
+ def test_catalog_symbol_inside_another_issuer_product_is_not_company(self):
+  b=build_board([{'ticker':'NVDA','name':'Nvidia Corp','industry':'Chips'},{'ticker':'RTX','name':'RTX Corp','industry':'Defense'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'NVIDIA RTX Spark launches today.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'NVDA'})
+
+ def test_bound_symbol_vetoes_other_company_with_same_name(self):
+  b=build_board([{'ticker':'LODE','name':'Comstock Inc','industry':'Mining'},{'ticker':'CHCI','name':'Comstock Holding Company Inc','industry':'Housing'}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'Comstock (LODE) shares rise after results.'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'LODE'})
+
+ def test_source_domain_root_does_not_override_longer_proper_name(self):
+  b=build_board([{'ticker':'G','name':'Gold.com Inc','industry':'Gold'}],engine='evidence')
+  for text in ('Soma Gold announces a new loan.','Court enters a decree against Gold Star Distribution Inc.'):
+   hit=link_articles(b,[{'id':'x','text':text}])[0]
+   self.assertFalse(any(r['pass'] for r in hit['stocks']),(text,hit['stocks']))
+
+ def test_verified_filing_overlay_keeps_explicit_ownership_and_dates(self):
+  b=build_board([{'ticker':'OWN','name':'Example Aerospace Inc','industry':'Aerospace','filing_sections':[{'text':'"SkyWeb" refers to our satellite network.','kind':'identity_source','source':'PR642','filing_date':'2026-01-02','complete':True}]}],engine='evidence')
+  hit=link_articles(b,[{'id':'x','text':'SkyWeb faces new restrictions.','published_at':'2026-01-03'}])[0]
+  self.assertEqual({r['ticker'] for r in hit['stocks'] if r['pass']},{'OWN'})
+  p=b.evidence_board.profiles['OWN'];self.assertFalse(p.core)
+  self.assertTrue(any('identity_overlay_only' in w for w in p.warnings))
+
+ def test_filing_views_preserve_preamble_and_short_sections(self):
+  text='Example Corp ("Zed")\nITEM 1. Business\nWe make widgets.\nITEM 1A. Risk Factors\nSupply disruption.'
+  views=section_views(text,'10-K')
+  self.assertEqual(''.join(v['text'] for v in views),text)
+  self.assertEqual(views[0]['kind'],'identity_source')
+
  def test_broker_price_target_attribution_keeps_only_target(self):
   b=build_board([{'ticker':'B','name':'Zedbank Corp','industry':'Banking'}, {'ticker':'T','name':'Vexgen Biotech Inc','industry':'Biotech'}],engine='evidence')
   hit=link_articles(b,[{'id':'x','text':'Zedbank raises Vexgen Biotech price target on new data.'}])[0]

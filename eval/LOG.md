@@ -251,3 +251,22 @@ accordingly)
 - Complete-text probes succeeded for25 filings/544 views/29,148,431 characters
   across LUV andSPCX. This is two-issuer source verification, not broad accuracy.
 
+## 2026-10-20 - Candidate2.4 result and2.5 source-identity repair
+
+- Hosted39359198453 at6fe7f7b0:168 tests and9 new synthetic cases pass.
+  Existing corpus18/19 regressions and3/3 targets; agency-name collision remains.
+- Four development controls:147/157 (34TP4FP6FN),146/158 (32TP4FP8FN),
+  127/139 (32TP4FP9FN),139/154 (40TP5FP15FN). Exact rates exceed90%,
+  but precision/recall do not. All prior labels remain unchanged.
+- Fifth first result:106/131 exact,22TP16FP15FN; precision57.9%,recall59.5%.
+  69 unresolved excluded;17 novel positive cases. Legacy97/131,0TP6FP37FN.
+  Aggregate ticker counts were accidentally displayed in a diagnostic log before
+  labels; per-case outputs were unopened. This was not a fully blind test.
+- A later fixed-catalog audit found HDFC Bank ADR HDB, incorrectly omitted from
+  v1 labels. Separate v2 corrects only this case; original labels/results remain.
+- Candidate2.5 repairs internal list conjunctions, maximal issuer boundaries,
+  conflicting bound symbols, publisher/agency masks and generic business anchors.
+  Filing preambles and short sections are now retained. An optional full-text
+  overlay extracts explicit legal/glossary identities only; it does not claim
+  full business/exposure coverage. The sixth sample excludes1000 prior titles.
+

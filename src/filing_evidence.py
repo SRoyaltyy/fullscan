@@ -47,12 +47,13 @@ def section_views(text: str, form: str, filename: str = '') -> list[dict]:
         # available instead of silently rejecting the entire issuer.
         return [{'section':filename or form,'kind':'business' if form in ('40-F','20-F','10-K') else 'update','text':text}]
     views = []
+    if matches and text[:matches[0].start()].strip():
+        views.append({'section':'preamble','kind':'identity_source','text':text[:matches[0].start()]})
     for i,m in enumerate(matches):
         end = matches[i+1].start() if i+1 < len(matches) else len(text)
         body = text[m.start():end]
-        # A contents entry has no substantive body; do not select it as the report.
-        if len(body.strip()) < 100:
-            continue
+        # Retain short sections too. A heading is not operating evidence,
+        # but dropping its text would break full-document source coverage.
         number = m.group(2).upper()
         label = m.group(0).strip()
         kind = 'financial'

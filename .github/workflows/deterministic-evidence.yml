@@ -7,6 +7,7 @@ permissions:
   contents: read
 jobs:
   tests:
+    needs: full_text_reader
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -26,8 +27,13 @@ jobs:
         run: |
           python -m pip install PyYAML==6.0.3
           python -m scripts.bootstrap_semantics
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: full-filing-text-probe-*
+          path: validation-filing-texts
+          merge-multiple: true
       - name: Run legacy, evidence, and strict measurement regressions
-        run: python -I -S scripts/offline_evidence_checks.py --unittest src.test_correlation src.test_eval_harness src.test_evidence_matcher scripts.test_materialize_filing_texts
+        run: python -I -S scripts/offline_evidence_checks.py --unittest src.test_correlation src.test_eval_harness src.test_evidence_matcher scripts.test_materialize_filing_texts scripts.test_scan_validation_batches
       - name: Export blind real scanner sample
         run: >-
           python scripts/export_validation_inputs.py
@@ -75,16 +81,20 @@ jobs:
           --exclude-sample validation-inputs/fresh/news-sample.json
           --exclude-sample validation-inputs/holdout/news-sample.json
           --exclude-sample validation-inputs/holdout4/news-sample.json
+      - name: Reserve sixth unseen headline sample
+        run: >-
+          python scripts/export_validation_inputs.py
+          --news data/news_intake/2026-10-17/documents.json
+          --descriptions excel_bot/data/finviz_with_descriptions.csv
+          --out validation-inputs/holdout6 --seed 19024 --budget 200
+          --exclude-sample validation-inputs/news-sample.json
+          --exclude-sample validation-inputs/fresh/news-sample.json
+          --exclude-sample validation-inputs/holdout/news-sample.json
+          --exclude-sample validation-inputs/holdout4/news-sample.json
+          --exclude-sample validation-inputs/holdout5/news-sample.json
       - name: Infer primary headlines using public inputs only
         run: |
-          python -I -S scripts/offline_evidence_checks.py --scan --engine evidence --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/headline-sample.json --out validation-inputs/evidence-headline-links.json
-          python -I -S scripts/offline_evidence_checks.py --scan --engine evidence --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/fresh/headline-sample.json --out validation-inputs/fresh/evidence-headline-links.json
-          python -I -S scripts/offline_evidence_checks.py --scan --engine evidence --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/holdout/headline-sample.json --out validation-inputs/holdout/evidence-headline-links.json
-          python -I -S scripts/offline_evidence_checks.py --scan --engine legacy --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/holdout/headline-sample.json --out validation-inputs/holdout/legacy-headline-links.json
-          python -I -S scripts/offline_evidence_checks.py --scan --engine evidence --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/holdout4/headline-sample.json --out validation-inputs/holdout4/evidence-headline-links.json
-          python -I -S scripts/offline_evidence_checks.py --scan --engine legacy --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/holdout4/headline-sample.json --out validation-inputs/holdout4/legacy-headline-links.json
-          python -I -S scripts/offline_evidence_checks.py --scan --engine evidence --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/holdout5/headline-sample.json --out validation-inputs/holdout5/evidence-headline-links.json
-          python -I -S scripts/offline_evidence_checks.py --scan --engine legacy --headline-only --descriptions excel_bot/data/finviz_with_descriptions.csv --news validation-inputs/holdout5/headline-sample.json --out validation-inputs/holdout5/legacy-headline-links.json
+          python -I -S scripts/offline_evidence_checks.py --validation-batches --root validation-inputs --descriptions excel_bot/data/finviz_with_descriptions.csv --identity-filings validation-filing-texts/objects
           python scripts/compact_headline_links.py validation-inputs
       - uses: actions/upload-artifact@v4
         if: always()
@@ -107,6 +117,12 @@ jobs:
             artifact: 12109470523
           - ticker: SPCX
             artifact: 12109515304
+          - ticker: LLY
+            artifact: 12109515304
+          - ticker: FUN
+            artifact: 12109470523
+          - ticker: META
+            artifact: 12108763000
     steps:
       - uses: actions/checkout@v4
         with:

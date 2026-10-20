@@ -4,8 +4,8 @@ from pathlib import Path
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('root',type=Path);a=p.parse_args()
- for sub in ('','fresh','holdout','holdout4','holdout5'):
-  for engine in ('evidence','legacy'):
+ for sub in ('','fresh','holdout','holdout4','holdout5','holdout6'):
+  for engine in ('evidence','legacy','evidence-full-identity'):
    source=a.root/sub/(engine+'-headline-links.json')
    if not source.exists():continue
    payload=json.loads(source.read_text(encoding='utf-8'))
