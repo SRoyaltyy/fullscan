@@ -2,6 +2,9 @@
 
 The sealed book decides the tickets. The sandbox account does not.
 A sell the account does not hold is ``drift-skipped`` and is not sent.
+A sell for more shares than the account holds is sent for the held
+count, min(book, held), and the gap is named in an add-only
+``sell_clamped`` entry on the drift warning. Buys are never resized here.
 This module does not add a catch-up buy or sell, does not reuse another
 day's tickets, and does not fail the rest of the day's sealed list.
 
@@ -39,6 +42,19 @@ def _shares(positions, ticker: str) -> int:
     return n if n > 0 else 0
 
 
+def _book_shares(raw):
+    """Whole positive share count from a sealed ticket, else None."""
+    if isinstance(raw, bool):
+        return None
+    try:
+        f = float(raw)
+    except (TypeError, ValueError):
+        return None
+    if f != f or f < 1 or f != int(f):
+        return None
+    return int(f)
+
+
 def append_drift(record: dict, path: Path | None = None) -> None:
     """Add one JSON line. Never reads the file back to rewrite it."""
     path = Path(path) if path is not None else DRIFT_LOG
@@ -66,6 +82,7 @@ def partition_tickets(tickets, positions, date: str, *, positions_known=True):
     sendable = []
     skipped = []
     foreign = []
+    clamped = []
     on_plan = set()
     for ticket in tickets or []:
         if not isinstance(ticket, dict):
@@ -84,6 +101,21 @@ def partition_tickets(tickets, positions, date: str, *, positions_known=True):
             })
             continue
         on_plan.add(ticker)
+        if side == "SELL":
+            book = _book_shares(ticket.get("shares"))
+            if book is None:
+                # Fail closed: a sealed sell without a whole positive share
+                # count is never guessed at.
+                skipped.append({
+                    "ticker": ticker, "side": "SELL",
+                    "shares": ticket.get("shares"), "date": date,
+                    "status": DRIFT_SKIPPED, "ok": False,
+                    "reason": (
+                        f"drift-skipped: sealed h1 sell {ticker} has no whole "
+                        f"positive share count ({ticket.get('shares')!r}); not sent"
+                    ),
+                })
+                continue
         if positions_known and side == "SELL" and _shares(positions, ticker) < 1:
             skipped.append({
                 "ticker": ticker,
@@ -98,6 +130,19 @@ def partition_tickets(tickets, positions, date: str, *, positions_known=True):
                 ),
             })
             continue
+        if positions_known and side == "SELL":
+            held = _shares(positions, ticker)
+            if 0 < held < book:
+                clamped.append({
+                    "ticker": ticker, "side": "SELL", "date": date,
+                    "book_shares": book, "held_shares": held,
+                    "sent_shares": held, "gap_shares": book - held,
+                    "note": (
+                        f"sealed h1 sell {ticker} {book} but the sandbox holds "
+                        f"{held}; sent min(book, held) = {held}; sealed book unchanged"
+                    ),
+                })
+                ticket = {**ticket, "shares": held, "book_shares": book}
         sendable.append(ticket)
     held_not_on_plan = []
     for ticker in sorted(positions or {}) if positions_known else []:
@@ -111,7 +156,7 @@ def partition_tickets(tickets, positions, date: str, *, positions_known=True):
             "note": "held on the sandbox account; not on today's sealed tickets; no order",
         })
     warning = None
-    if skipped or foreign or held_not_on_plan:
+    if skipped or foreign or held_not_on_plan or clamped:
         warning = {
             "kind": "warning",
             "date": date,
@@ -122,4 +167,6 @@ def partition_tickets(tickets, positions, date: str, *, positions_known=True):
                 "sealed ticket check is not blocked"
             ),
         }
+        if clamped:
+            warning["sell_clamped"] = clamped
     return sendable, skipped, foreign, warning
