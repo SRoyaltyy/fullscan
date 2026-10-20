@@ -1,6 +1,6 @@
 {
   "date": "2026-10-20",
-  "generated_at": "2026-10-20T14:06:56.713920-04:00",
+  "generated_at": "2026-10-20T15:50:59.903809-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -540,8 +540,8 @@
           "path": "01_daily/weather/2026-10-20_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10455 vix=calm yields=flat",
-          "size": 10455,
+          "reason": "sectors=11 bytes=10453 vix=calm yields=flat",
+          "size": 10453,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -754,8 +754,8 @@
           "path": "01_daily/weather/2026-10-20_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10455 vix=calm yields=flat",
-          "size": 10455,
+          "reason": "sectors=11 bytes=10453 vix=calm yields=flat",
+          "size": 10453,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -808,7 +808,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=115",
-          "size": 986840,
+          "size": 986839,
           "said": "1d BUY SGRY \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, ENVX \u00b7 -0.6995499999999999",
           "bullets": []
         },
@@ -822,7 +822,7 @@
           "size": 30023,
           "said": "Stock book \u2014 2026-10-20",
           "bullets": [
-            "_Generated 2026-10-20T14:06:14.660226-04:00_",
+            "_Generated 2026-10-20T15:50:57.774915-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -886,7 +886,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=115",
-          "size": 986840,
+          "size": 986839,
           "said": "1d BUY SGRY \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, ENVX \u00b7 -0.6995499999999999",
           "bullets": []
         },
@@ -2955,6 +2955,30 @@
       "commit_msg": "auto: stock book leftover sweep",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "39470884526",
+      "manifest": "research/input_freeze/2026-10-20/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-20_stock_book.md",
+      "at": "2026-10-20T15:51:24-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-20",
+      "workflow": "Publish strategy tickets",
+      "run_id": "39485085137",
+      "manifest": "research/input_freeze/2026-10-20/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-20_input_health.json",
+      "at": "2026-10-20T15:51:24-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-20",
+      "workflow": "Publish strategy tickets",
+      "run_id": "39485085137",
+      "manifest": "research/input_freeze/2026-10-20/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-20_stock_book.json",
+      "at": "2026-10-20T15:51:24-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-20",
+      "workflow": "Publish strategy tickets",
+      "run_id": "39485085137",
       "manifest": "research/input_freeze/2026-10-20/manifest.json"
     }
   ]
