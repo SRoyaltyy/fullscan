@@ -79,6 +79,7 @@ def export_articles(articles: list[dict], text_limit: int) -> list[dict]:
             "published_at": str(article.get("published_at") or ""),
             "text": text[:text_limit],
             "truncated": len(text) > text_limit,
+            "full_text": bool(article.get("full_text")),
         })
     return records
 

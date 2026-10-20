@@ -3,124 +3,124 @@
  "k": 30,
  "clusters": {
   "0": {
-   "label": "business, hormuz, strait, attacks, journals, wire, liga, madrid",
-   "count": 283
+   "label": "finance, yahoo, stock, earnings, canada, quote, history, price",
+   "count": 428
   },
   "1": {
-   "label": "ended, marketscreener, reports, earnings, results, 30, www, months",
-   "count": 64
+   "label": "ncaa, eligibility, sues, order, executive, ohio, governor, ignore",
+   "count": 129
   },
   "2": {
-   "label": "investing, placement, private, com, closes, announces, tranche, million",
-   "count": 234
+   "label": "marketbeat, insider, selling, sells, shares, nyse, stock, company",
+   "count": 164
   },
   "3": {
-   "label": "breach, data, claim, depot, exposes, million, records, settlement",
-   "count": 136
+   "label": "tax, increase, property, budget, voters, 2027, county, sales",
+   "count": 178
   },
   "4": {
-   "label": "gov, congress, department, justice, 2026, district, federal, 119th",
-   "count": 265
+   "label": "sanctions, trump, russia, new, waives, puts, hold, law",
+   "count": 262
   },
   "5": {
-   "label": "ncaa, eligibility, order, executive, sues, governor, ohio, allowing",
-   "count": 134
+   "label": "technology, engineering, awards, emmy, ai, science, academy, television",
+   "count": 187
   },
   "6": {
-   "label": "appeals, court, united, states, circuit, gov, rules, courts",
-   "count": 181
+   "label": "tradingview, placement, private, announces, million, closes, offering, closing",
+   "count": 420
   },
   "7": {
-   "label": "offering, tender, offer, notes, senior, announces, public, initial",
-   "count": 153
-  },
-  "8": {
-   "label": "oil, prices, crude, east, middle, supply, weekly, gain",
-   "count": 237
-  },
-  "9": {
-   "label": "powell, obituary, home, funeral, tribune, county, legacy, lake",
-   "count": 122
-  },
-  "10": {
-   "label": "fda, approves, weight, loss, approval, approved, drug, businessworld",
-   "count": 290
-  },
-  "11": {
-   "label": "finance, yahoo, stock, earnings, canada, quote, history, price",
-   "count": 416
-  },
-  "12": {
-   "label": "ceo, steps, business, resigns, appointed, board, council, appoints",
-   "count": 87
-  },
-  "13": {
-   "label": "factory, bucheon, chosunbiz, firefighter, injured, cardiac, korea, arrest",
-   "count": 89
-  },
-  "14": {
-   "label": "titan, stock, shares, director, share, units, dividend, plan",
-   "count": 480
-  },
-  "15": {
-   "label": "treasury, yields, secretary, bessent, year, husted, inflows, equity",
-   "count": 170
-  },
-  "16": {
-   "label": "ai, tradingview, new, 2026, technology, court, tax, com",
-   "count": 4362
-  },
-  "17": {
-   "label": "earthquake, magnitude, oct, filed, form, streetinsider, japan, strikes",
-   "count": 259
-  },
-  "18": {
-   "label": "reuters, food, administration, drug, ai, device, says, recall",
-   "count": 300
-  },
-  "19": {
-   "label": "trump, ukraine, white, house, russian, pope, putin, new",
-   "count": 317
-  },
-  "20": {
-   "label": "sanctions, russia, trump, waives, new, tariffs, graham, waiving",
-   "count": 185
-  },
-  "21": {
-   "label": "rate, hike, fed, inflation, warsh, hikes, odds, hot",
-   "count": 236
-  },
-  "22": {
-   "label": "filings, sec, finance, yahoo, canada, buru, frmi, ben",
+   "label": "filings, sec, finance, yahoo, canada, igc, buru, brc",
    "count": 66
   },
-  "23": {
-   "label": "com, bloomberg, marketscreener, watch, www, ai, billion, ipo",
-   "count": 446
+  "8": {
+   "label": "news, new, launches, com, ap, reuters, says, 2026",
+   "count": 4982
   },
-  "24": {
-   "label": "launches, new, program, ai, news, business, platform, university",
-   "count": 368
+  "9": {
+   "label": "bloomberg, com, watch, ai, billion, says, law, markets",
+   "count": 327
   },
-  "25": {
-   "label": "news, ap, hoc, ad, latest, breaking, abc, videos",
-   "count": 805
+  "10": {
+   "label": "gov, district, department, justice, states, united, fraud, federal",
+   "count": 207
   },
-  "26": {
-   "label": "market, volatility, stock, tech, stocks, ai, indonesia, sell",
-   "count": 239
+  "11": {
+   "label": "data, breach, inflation, claim, depot, exposes, records, million",
+   "count": 242
   },
-  "27": {
-   "label": "street, wall, simply, stock, undervalued, worries, weigh, ai",
+  "12": {
+   "label": "appeals, court, circuit, rules, united, states, gov, unconstitutional",
+   "count": 153
+  },
+  "13": {
+   "label": "hoc, ad, news, stock, eur, results, usd, means",
+   "count": 77
+  },
+  "14": {
+   "label": "market, volatility, stock, tech, stocks, sell, indonesia, globe",
+   "count": 243
+  },
+  "15": {
+   "label": "ai, character, bankruptcy, reuters, anthropic, news, launches, new",
+   "count": 372
+  },
+  "16": {
+   "label": "china, acquire, export, controls, ai, proofpoint, technologies, varonis",
+   "count": 234
+  },
+  "17": {
+   "label": "fda, approves, weight, loss, drug, approved, approval, businessworld",
+   "count": 289
+  },
+  "18": {
+   "label": "ended, marketscreener, earnings, reports, results, 30, www, 2026",
+   "count": 64
+  },
+  "19": {
+   "label": "earthquake, magnitude, japan, strikes, kamchatka, shakeout, warning, alert",
+   "count": 215
+  },
+  "20": {
+   "label": "business, steps, journals, news, wire, ceo, house, white",
+   "count": 328
+  },
+  "21": {
+   "label": "factory, bucheon, firefighter, cardiac, injured, arrest, firefighters, chosunbiz",
+   "count": 71
+  },
+  "22": {
+   "label": "street, wall, simply, stock, undervalued, worries, weigh, trade",
    "count": 195
   },
+  "23": {
+   "label": "rate, hike, fed, warsh, inflation, chair, hikes, odds",
+   "count": 277
+  },
+  "24": {
+   "label": "oil, prices, hormuz, strait, crude, iran, east, middle",
+   "count": 309
+  },
+  "25": {
+   "label": "titan, stock, shares, director, share, units, dividend, plan",
+   "count": 487
+  },
+  "26": {
+   "label": "congress, gov, 119th, 2025, act, 2026, text, amdt",
+   "count": 68
+  },
+  "27": {
+   "label": "filed, streetinsider, form, oct, 14, 15, corp, industries",
+   "count": 48
+  },
   "28": {
-   "label": "insider, marketbeat, selling, sells, stock, nyse, shares, nasdaq",
-   "count": 99
+   "label": "investing, com, placement, private, closes, india, form, october",
+   "count": 164
   },
   "29": {
-   "label": "signed, recently, puts, citing, hold, law, national, russia",
-   "count": 37
+   "label": "comparing, la, liga, madrid, demands, referees, propaganda, nazi",
+   "count": 69
   }
  }
 }

@@ -25,6 +25,19 @@ th{color:var(--muted);font-weight:600}
 .quote{color:var(--muted);font-size:13px;margin:4px 0 0}
 .empty{color:var(--warn)}
 .badge{display:inline-block;background:#243049;border-radius:6px;padding:2px 8px;font-size:12px;color:var(--muted);margin-left:8px}
+.badge.full{background:#14532d;color:#bbf7d0}
+.badge.headline{background:#3b2f14;color:#fde68a}
+.badge.source-edgar{background:#1e3a5f;color:#bfdbfe}
+input[type=text]{background:#0f172a;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:10px 14px;font:600 15px system-ui;width:180px;text-transform:uppercase}
+.factgroup{margin:10px 0}
+.factgroup h3{margin:0 0 6px;font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.factterm{display:inline-block;background:#1a2440;border-radius:6px;padding:2px 8px;font-size:13px;margin:2px 4px 2px 0}
+details{margin:8px 0}
+summary{cursor:pointer;color:#93c5fd}
+.linklist li{margin:4px 0;cursor:pointer}
+.linklist li:hover{color:#93c5fd}
+.ticker-hit{color:var(--good);font-weight:700;cursor:pointer}
+.ticker-hit:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -36,9 +49,16 @@ th{color:var(--muted);font-weight:600}
   <button type="button" id="test" disabled>Test</button>
   <span class="badge" id="drawno"></span>
 </div>
+<div class="row">
+  <input type="text" id="ticker" list="tickerlist" placeholder="TICKER e.g. BB" maxlength="8">
+  <datalist id="tickerlist"></datalist>
+  <button type="button" id="analyze" class="secondary" disabled>Analyze ticker</button>
+  <span class="muted" id="ticker-hint">stock-side profile: what the engine knows</span>
+</div>
 <article class="card" id="article">
   <h2 id="title">Fetching an article…</h2>
   <p class="muted" id="meta"></p>
+  <p><span class="badge headline" id="textbadge">headline only</span></p>
   <div class="article" id="body"></div>
 </article>
 <section class="card" id="results" hidden>
@@ -50,6 +70,15 @@ th{color:var(--muted);font-weight:600}
   <h2>spaCy analysis <span class="badge" id="spacy-cluster"></span></h2>
   <p class="muted">Dependency parsing (who did what to whom) + named entities + K-Means theme cluster. Deterministic: spaCy model and cluster seed are pinned.</p>
   <div id="spacy-body"></div>
+</section>
+<section class="card" id="profile" hidden>
+  <h2 id="profile-title">Stock profile</h2>
+  <p class="muted" id="profile-meta"></p>
+  <p id="profile-warnings"></p>
+  <div id="profile-facts"></div>
+  <div id="profile-filing"></div>
+  <h3 class="factgroup">Intake articles linked to this ticker</h3>
+  <ul class="linklist" id="profile-links"></ul>
 </section>
 </main>
 <script>
@@ -67,6 +96,8 @@ let spacyResults = new Map();
 let spacyClusters = {};
 let staticMeta = null;
 let rngState = null;       // {seed, n}
+let staticProfiles = null; // ticker -> profile (lazy)
+let tickerIndex = null;    // ticker -> [{id, decision, tier, reasons}] (lazy)
 const DEFAULT_SEED = 1722;
 
 function text(id, value) {
@@ -120,6 +151,14 @@ function renderArticle(article) {
     const t = document.createElement("span");
     t.textContent = "display text truncated; match ran on full text";
     meta.append(t);
+  }
+  const badge = document.getElementById("textbadge");
+  if (article.full_text) {
+    badge.textContent = "full text";
+    badge.className = "badge full";
+  } else {
+    badge.textContent = "headline only";
+    badge.className = "badge headline";
   }
   text("body", article.text || "");
   document.getElementById("results").hidden = true;
@@ -186,8 +225,14 @@ function renderMatches(result) {
     ];
     cells.forEach((value, index) => {
       const td = document.createElement("td");
-      td.textContent = value || "";
-      if (index === 0) td.className = "pass";
+      if (index === 0) {
+        td.className = "ticker-hit";
+        td.textContent = value || "";
+        td.title = "show stock-side profile";
+        td.addEventListener("click", () => showTickerProfile(row.ticker));
+      } else {
+        td.textContent = value || "";
+      }
       tr.append(td);
     });
     body.append(tr);
@@ -270,14 +315,17 @@ async function loadStatic() {
   spacyClusters = clusterRes.ok ? (await clusterRes.json()).clusters || {} : {};
   if (!staticArticles.length) throw new Error("static article pool is empty");
   const m = staticMeta || {};
+  const fullN = staticArticles.filter((a) => a.full_text).length;
   text("status",
     `precomputed · engine=${m.engine || "evidence"} · ${staticArticles.length} articles` +
     (m.generated_at ? ` · run ${m.generated_at}` : "") +
     (m.articles_with_passes != null ? ` · ${m.articles_with_passes} with passes` : "") +
+    (fullN ? ` · ${fullN} full-text bodies` : "") +
     (spacyResults.size ? ` · spaCy layer: ${spacyResults.size}` : ""));
   mode = "static";
   document.getElementById("another").disabled = false;
   document.getElementById("test").disabled = false;
+  document.getElementById("analyze").disabled = false;
 }
 
 function renderSpacy(id) {
@@ -313,6 +361,145 @@ function renderSpacy(id) {
   addBlock("objects", row.objects || [], (v) => v);
 }
 
+async function loadProfiles() {
+  if (staticProfiles) return true;
+  const hint = document.getElementById("ticker-hint");
+  hint.textContent = "loading stock profiles…";
+  const [pRes, iRes] = await Promise.all([
+    fetch("./profiles.json"),
+    fetch("./ticker-index.json"),
+  ]);
+  if (!pRes.ok || !iRes.ok) {
+    hint.textContent = "profile artifacts missing";
+    return false;
+  }
+  staticProfiles = await pRes.json();
+  tickerIndex = await iRes.json();
+  const list = document.getElementById("tickerlist");
+  for (const t of Object.keys(staticProfiles).sort()) {
+    const opt = document.createElement("option");
+    opt.value = t;
+    list.append(opt);
+  }
+  hint.textContent = `${Object.keys(staticProfiles).length} tickers loaded · type one and press Enter`;
+  return true;
+}
+
+function jumpToArticle(id) {
+  const index = staticArticles.findIndex((a) => String(a.id) === String(id));
+  if (index < 0) return;
+  showDrawNo(index);
+  renderArticle(staticArticles[index]);
+  const result = staticResults.get(String(id));
+  if (result) renderMatches(result);
+  document.getElementById("article").scrollIntoView({behavior: "smooth"});
+}
+
+const KIND_LABELS = {
+  company_alias: "Aliases & names",
+  derived_initialism: "Initialisms",
+  operating_brand: "Operating brands / segments",
+  product: "Products & outputs",
+  service: "Services",
+  input: "Inputs & supplies",
+  supplier: "Suppliers",
+  customer: "Customers",
+  partner: "Partners",
+  competitor: "Competitors",
+  person: "People",
+  jurisdiction: "Jurisdictions",
+  exposure: "Exposures (Item 1A risks)",
+  business: "Business description terms",
+  history: "History",
+};
+
+async function showTickerProfile(rawTicker) {
+  const ticker = String(rawTicker || "").trim().toUpperCase();
+  if (!ticker) return;
+  if (!(await loadProfiles())) return;
+  const box = document.getElementById("profile");
+  box.hidden = false;
+  const prof = staticProfiles[ticker];
+  const title = document.getElementById("profile-title");
+  const meta = document.getElementById("profile-meta");
+  const warnings = document.getElementById("profile-warnings");
+  const factsBox = document.getElementById("profile-facts");
+  const filingBox = document.getElementById("profile-filing");
+  const linksBox = document.getElementById("profile-links");
+  factsBox.textContent = "";
+  filingBox.textContent = "";
+  linksBox.textContent = "";
+  warnings.textContent = "";
+  if (!prof) {
+    title.textContent = `${ticker} — not on the board`;
+    meta.textContent = "no profile; ticker absent from the Finviz description set";
+    return;
+  }
+  title.textContent = `${ticker} — ${prof.name || "(no name)"}`;
+  const bits = [prof.industry, prof.sector].filter(Boolean);
+  const srcBadge = document.createElement("span");
+  if (prof.enriched) {
+    srcBadge.className = "badge source-edgar";
+    srcBadge.textContent = `SEC EDGAR ${prof.filing ? prof.filing.form : "10-K"} · ${prof.filing ? prof.filing.filing_date : ""} · filing-derived`;
+  } else {
+    srcBadge.className = "badge headline";
+    srcBadge.textContent = "Finviz description only (no filing parsed)";
+  }
+  meta.textContent = bits.join(" · ");
+  meta.append(" ", srcBadge);
+  (prof.warnings || []).forEach((w) => {
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = "⚠ " + w;
+    warnings.append(p);
+  });
+  const kinds = Object.entries(prof.facts || {}).sort((a, b) => b[1].length - a[1].length);
+  for (const [kind, entries] of kinds) {
+    const group = document.createElement("div");
+    group.className = "factgroup";
+    const h = document.createElement("h3");
+    h.textContent = `${KIND_LABELS[kind] || kind} (${entries.length})`;
+    group.append(h);
+    for (const e of entries.slice(0, 40)) {
+      const span = document.createElement("span");
+      span.className = "factterm";
+      span.textContent = e.term;
+      if (e.passage) span.title = e.passage + (e.confidence ? `  [${e.confidence}]` : "");
+      group.append(span);
+    }
+    factsBox.append(group);
+  }
+  if (prof.filing && prof.filing.items) {
+    for (const [label, text] of Object.entries(prof.filing.items)) {
+      const det = document.createElement("details");
+      const sum = document.createElement("summary");
+      sum.textContent = `Item ${label} text (first ${text.length.toLocaleString()} chars)`;
+      const pre = document.createElement("div");
+      pre.className = "article";
+      pre.textContent = text;
+      det.append(sum, pre);
+      filingBox.append(det);
+    }
+  }
+  const links = (tickerIndex && tickerIndex[ticker]) || [];
+  const h = document.createElement("h3");
+  h.className = "factgroup";
+  h.textContent = `Intake articles linked to ${ticker} (${links.length})`;
+  linksBox.append(h);
+  const ul = document.createElement("ul");
+  ul.className = "linklist";
+  for (const link of links.slice(0, 50)) {
+    const li = document.createElement("li");
+    const art = staticArticles.find((a) => String(a.id) === String(link.id));
+    li.textContent = (art && art.title ? art.title : link.id).slice(0, 90);
+    li.title = `${link.decision || ""} · tier ${link.tier} · ${(link.reasons || []).join(", ")}`;
+    li.addEventListener("click", () => jumpToArticle(link.id));
+    ul.append(li);
+  }
+  linksBox.append(ul);
+  box.scrollIntoView({behavior: "smooth"});
+}
+
 async function poll() {
   try {
     const status = await fetch("/api/status").then((r) => r.json());
@@ -344,6 +531,12 @@ async function poll() {
 
 document.getElementById("another").addEventListener("click", loadArticle);
 document.getElementById("test").addEventListener("click", runTest);
+document.getElementById("analyze").addEventListener("click", () => {
+  showTickerProfile(document.getElementById("ticker").value);
+});
+document.getElementById("ticker").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") showTickerProfile(document.getElementById("ticker").value);
+});
 poll().then(() => loadArticle());
 </script>
 </body>
