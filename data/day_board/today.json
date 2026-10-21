@@ -1,6 +1,6 @@
 {
   "date": "2026-10-21",
-  "generated_at": "2026-10-21T10:51:01.861534-04:00",
+  "generated_at": "2026-10-21T11:16:25.876087-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,126 +11,126 @@
   },
   "buy_1d": [
     {
-      "ticker": "CDNA",
-      "score": 0.8822083769168356
-    },
-    {
       "ticker": "PRCH",
       "score": 0.8385429209840265
     },
     {
-      "ticker": "BLFS",
-      "score": 0.8221946972488299
-    },
-    {
-      "ticker": "ARQT",
-      "score": 0.7997375823452195
-    },
-    {
       "ticker": "AVPT",
-      "score": 0.784055146709429
+      "score": 0.782834036619781
     },
     {
       "ticker": "CORT",
-      "score": 0.3944581715870077
+      "score": 0.3924106332259807
     },
     {
-      "ticker": "TOST",
-      "score": 0.6236248477968108
+      "ticker": "VEEV",
+      "score": 0.41256815189198504
     },
     {
-      "ticker": "IT",
-      "score": 0.5804636258626622
+      "ticker": "CDNA",
+      "score": 0.8298636020396053
+    },
+    {
+      "ticker": "ARQT",
+      "score": 0.7812704038915628
     },
     {
       "ticker": "NTAP",
-      "score": 0.3903011929446152
-    },
-    {
-      "ticker": "CNK",
-      "score": 0.6956115984655271
+      "score": 0.3672381992469095
     },
     {
       "ticker": "ABX",
-      "score": 0.6385324029579993
+      "score": 0.659986200076544
     },
     {
-      "ticker": "EZPW",
-      "score": 0.5709536188174151
-    },
-    {
-      "ticker": "JXN",
-      "score": 0.5857564998786386
+      "ticker": "TRU",
+      "score": 0.5505929098468964
     },
     {
       "ticker": "LAUR",
-      "score": 0.6048513122260069
+      "score": 0.6437080147216908
     },
     {
-      "ticker": "OLLI",
-      "score": 0.5971189408733557
+      "ticker": "PAYS",
+      "score": 0.6549498116886701
+    },
+    {
+      "ticker": "SONO",
+      "score": 0.7393501502154107
+    },
+    {
+      "ticker": "EZPW",
+      "score": 0.5711134990796938
+    },
+    {
+      "ticker": "CNK",
+      "score": 0.6834163757139815
+    },
+    {
+      "ticker": "IMAX",
+      "score": 0.6413513483471072
     }
   ],
   "sell_1d": [
     {
-      "ticker": "ROIV",
-      "score": -0.4236033412550032
+      "ticker": "INTC",
+      "score": -0.4372885377372172
     },
     {
-      "ticker": "INTC",
-      "score": -0.38689724129800285
+      "ticker": "ROIV",
+      "score": -0.42662620714773924
     },
     {
       "ticker": "TIGO",
-      "score": -0.3534121613187943
+      "score": -0.33885518247447566
     },
     {
       "ticker": "SOC",
-      "score": -0.3377611186665702
-    },
-    {
-      "ticker": "NEOV",
-      "score": -0.3319116089789184
+      "score": -0.33502909303130934
     },
     {
       "ticker": "BIDU",
-      "score": -0.32785660797380006
+      "score": -0.32447956456578003
+    },
+    {
+      "ticker": "NEOV",
+      "score": -0.3184840572779986
     },
     {
       "ticker": "AXSM",
-      "score": -0.3080990189187854
+      "score": -0.3042351395784257
     },
     {
-      "ticker": "SSP",
-      "score": -0.28717727273076415
-    },
-    {
-      "ticker": "CMTG",
-      "score": -0.2827060420781435
-    },
-    {
-      "ticker": "HMY",
-      "score": -0.2797292432808775
-    },
-    {
-      "ticker": "GOGO",
-      "score": -0.27882988787790763
-    },
-    {
-      "ticker": "BAK",
-      "score": -0.2752768543518484
-    },
-    {
-      "ticker": "LYB",
-      "score": -0.2679858469975157
+      "ticker": "AU",
+      "score": -0.2954448040851456
     },
     {
       "ticker": "PCT",
-      "score": -0.26739082415611615
+      "score": -0.28127910956701896
     },
     {
-      "ticker": "NRGV",
-      "score": -0.26678737928496254
+      "ticker": "NRXP",
+      "score": -0.2809218691928413
+    },
+    {
+      "ticker": "AIRS",
+      "score": -0.27826264788858196
+    },
+    {
+      "ticker": "WVE",
+      "score": -0.27624062480205547
+    },
+    {
+      "ticker": "BAK",
+      "score": -0.27450788670502185
+    },
+    {
+      "ticker": "VSAT",
+      "score": -0.2694149929941799
+    },
+    {
+      "ticker": "PUMP",
+      "score": -0.2638495509286929
     }
   ],
   "flatten": {
@@ -155,31 +155,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "paper",
-      "title": "Paper dashboard",
-      "date": "2026-10-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-21T05:45:31.129267-04:00",
-      "files": [
-        {
-          "path": "03_scoreboard/PAPER_TRADING.md",
-          "ok": true,
-          "reason": "",
-          "size": 1837,
-          "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 | "
-        },
-        {
-          "path": "dashboard/index.html",
-          "ok": true,
-          "reason": "",
-          "size": 10510817,
-          "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.merge-hero{display:block;margin:0 0 14px;padding:14px 16px;border-radius:12px;\nbackground:linear-gradient(180deg,#1a2744,#171e2e);border:1px solid #3b4d78;\ncolor:var(--fg);text-decoration:none}\n."
-        }
-      ],
-      "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
-    },
     {
       "key": "flatten",
       "title": "Flatten live card",
@@ -487,6 +462,31 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-21T11:16:24.939485-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-21_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9750,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-21_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5339,
+          "preview": "# Weather report \u2014 2026-10-21\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-21\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
