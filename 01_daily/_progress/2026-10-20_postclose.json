@@ -5,8 +5,8 @@
   "run_id": "39661073117",
   "model": "deepseek",
   "started_at": "2026-10-21T15:32:52-04:00",
-  "updated_at": "2026-10-21T15:34:32-04:00",
-  "heartbeat_at": "2026-10-21T15:34:32-04:00",
+  "updated_at": "2026-10-21T15:34:36-04:00",
+  "heartbeat_at": "2026-10-21T15:34:36-04:00",
   "stages": [
     {
       "name": "outcome",
@@ -65,11 +65,11 @@
     },
     {
       "name": "learn",
-      "state": "running",
+      "state": "ok",
       "started_at": "2026-10-21T15:33:38-04:00",
-      "ended_at": "",
-      "heartbeat_at": "2026-10-21T15:34:32-04:00",
-      "done": 3,
+      "ended_at": "2026-10-21T15:34:36-04:00",
+      "heartbeat_at": "2026-10-21T15:34:36-04:00",
+      "done": 4,
       "total": 4,
       "model": "deepseek",
       "error": ""
