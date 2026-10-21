@@ -1,0 +1,63 @@
+{
+ "workflow": "preopen_all",
+ "date": "2026-10-21",
+ "checked_at": "2026-10-21 04:28 ET",
+ "run_id": "39568288470",
+ "ok": false,
+ "failed": [
+  "runner_is_ecs",
+  "backend_grok",
+  "gateway_up",
+  "xai_token_outlives_run"
+ ],
+ "items": [
+  {
+   "id": "ecs_code_current",
+   "ok": true,
+   "plain": "ecs code stale: code on this ECS checkout (src, scripts, config, .github) must match GitHub main",
+   "detail": "code matches main (HEAD 706f9ae8, main 16bc8c4a)"
+  },
+  {
+   "id": "runner_is_ecs",
+   "ok": false,
+   "plain": "Pre-Open is not on the ECS box (GitHub's own servers cannot reach Grok)",
+   "detail": "runner 'GitHub Actions 1000035849' is GitHub-hosted"
+  },
+  {
+   "id": "backend_grok",
+   "ok": false,
+   "plain": "LLM_BACKEND is not grok",
+   "detail": "LLM_BACKEND=auto"
+  },
+  {
+   "id": "gateway_up",
+   "ok": false,
+   "plain": "OpenClaw gateway 127.0.0.1:18789 did not answer within 5s",
+   "detail": "http://127.0.0.1:18789/health: URLError: <urlopen error [Errno 111] Connection refused>"
+  },
+  {
+   "id": "xai_token_outlives_run",
+   "ok": false,
+   "plain": "xAI login expires before this run can finish (needs >= 75 min left)",
+   "detail": "xAI login has unknown left, need 75"
+  },
+  {
+   "id": "no_unapproved_paid_fallback",
+   "ok": true,
+   "plain": "fallback model is not on the approved free list",
+   "detail": "LLM_FALLBACK_MODEL=(none)"
+  },
+  {
+   "id": "no_twin_preopen",
+   "ok": true,
+   "plain": "another Pre-Open is already running",
+   "detail": "no twin"
+  },
+  {
+   "id": "read_cap_fits",
+   "ok": true,
+   "plain": "OPENCLAW_PREDICT_READ_CAP_S (general predict + news judge) is under 300s",
+   "detail": "OPENCLAW_PREDICT_READ_CAP_S=300, need >= 300"
+  }
+ ]
+}
