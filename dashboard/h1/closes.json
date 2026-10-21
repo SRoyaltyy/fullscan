@@ -1373,5 +1373,47 @@
       "open": 2.47,
       "prior_close": 2.78
     }
+  },
+  "2026-10-21": {
+    "BMBL": {
+      "close": 5.95,
+      "open": 5.95,
+      "prior_close": 5.95
+    },
+    "BRZE": {
+      "close": 45.68,
+      "open": 45.490002,
+      "prior_close": 45.57
+    },
+    "BYRN": {
+      "close": 4.85,
+      "open": 4.905,
+      "prior_close": 4.93
+    },
+    "KOD": {
+      "close": 87.720001,
+      "open": 91.139999,
+      "prior_close": 92.970001
+    },
+    "NAUT": {
+      "close": 2.71,
+      "open": 2.5,
+      "prior_close": 2.55
+    },
+    "PENG": {
+      "close": 58.380001,
+      "open": 57.759998,
+      "prior_close": 56.32
+    },
+    "SDEV": {
+      "close": 1.1,
+      "open": 0.94,
+      "prior_close": 0.83
+    },
+    "TRAX": {
+      "close": 42.77,
+      "open": 41.200001,
+      "prior_close": 41.25
+    }
   }
 }

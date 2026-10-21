@@ -1,5 +1,7 @@
 {
   "date": "2026-10-21",
-  "latest_skip": "price store latest bar is 2026-10-20; 2026-10-21 open is not in the file yet",
+  "latest_skip": null,
+  "pending": null,
+  "phase": "mark",
   "recipe": "union_hot_n4_h1__w0"
 }
