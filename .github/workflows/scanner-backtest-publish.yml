@@ -55,7 +55,15 @@ jobs:
       run: ${{ steps.profiles.outputs.run }}
       artifact: ${{ steps.profiles.outputs.artifact }}
       scope: ${{ steps.profiles.outputs.scope }}
+      profile_assets: ${{ steps.profiles.outputs.profile_assets }}
     steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            src
+            scripts
+            requirements-filing-parser.txt
       - name: Resolve the latest complete archived filing profile set
         id: profiles
         env:
@@ -63,21 +71,7 @@ jobs:
         run: |
           gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=deep-filing-profiles-complete&per_page=50" > artifacts.json
           gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=deep-filing-real-source-check&per_page=50" > samples.json
-          python - <<'PY'
-          import json, os
-          def candidates(path):
-              return [a for a in json.load(open(path))['artifacts'] if not a['expired'] and a.get('workflow_run', {}).get('head_branch') == 'main']
-          full,samples = candidates('artifacts.json'),candidates('samples.json')
-          with open(os.environ['GITHUB_OUTPUT'], 'a') as stream:
-              if full or samples:
-                  selected = max(full or samples, key=lambda a: a['created_at'])
-                  stream.write('ready=true\nrun='+str(selected['workflow_run']['id'])+'\n')
-                  stream.write('artifact='+selected['name']+'\nscope='+('archive_set' if full else 'development_sample')+'\n')
-                  if not full: print('Publish a clearly labelled real-filing development sample while recovery continues. Never label it whole-archive coverage.')
-              else:
-                  stream.write('ready=false\n')
-                  print('Keep the current page until the complete whole-archive profile set is available.')
-          PY
+          python -m scripts.select_parser_profiles --repository "$GITHUB_REPOSITORY" --full artifacts.json --samples samples.json
   build:
     needs: source
     if: needs.source.outputs.ready == 'true'
@@ -151,6 +145,7 @@ jobs:
           src.test_entity_resolution
           scripts.test_scan_validation_batches scripts.test_export_backtest_static
           scripts.test_publish_scanner_snapshot
+          scripts.test_select_parser_profiles
       - name: Parse the exact article headlines with the pinned grammar engine
         run: |
           python -m pip install --only-binary=:all: --index-url https://pypi.org/simple -r requirements-filing-parser.txt
@@ -162,7 +157,7 @@ jobs:
           python -I -S scripts/offline_evidence_checks.py --backtest-export
           --filing-profiles filing-profiles --as-of "$FILING_AS_OF"
           --article-entities article-entities.json
-          --profile-assets keywords
+          --profile-assets "${{ needs.source.outputs.profile_assets }}"
           --dataset-scope "${{ needs.source.outputs.scope }}"
           --profile-archive-url "https://github.com/$GITHUB_REPOSITORY/actions/runs/${{ needs.source.outputs.run }}"
           --profile-base-url "${PROFILE_PUBLIC_BASE_URL:-}"

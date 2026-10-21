@@ -48,12 +48,29 @@ def _score_shard(shard):
 
 
 def export_articles(articles, text_limit):
-    return [{**{k: a.get(k, '') for k in ('id', 'title', 'url', 'source', 'published_at')},
-             'text': str(a.get('text') or '')[:text_limit],
-             'truncated': len(str(a.get('text') or '')) > text_limit,
-             'full_text': a.get('input_mode') == 'full-text',
-             'input_mode': a.get('input_mode', 'headline')}
-            for a in articles]
+    from src.entity_resolution import validate_annotations
+    from src.term_inventory import validate_spans
+    rows=[]
+    for article in articles:
+        value=str(article.get('text') or '')
+        displayed=value if article.get('input_mode')=='headline' else value[:text_limit]
+        row={**{k:article.get(k,'') for k in ('id','title','url','source','published_at')},
+             'text':displayed,'truncated':len(displayed)!=len(value),
+             'full_text':article.get('input_mode')=='full-text','input_mode':article.get('input_mode','headline')}
+        parsed=article.get('entity_annotations')
+        if parsed and not row['truncated']:
+            validate_annotations(value,parsed)
+            validate_spans(parsed.get('noun_phrases',[])+parsed.get('syntax',[]),value)
+            syntax=parsed.get('syntax',[])
+            if any(not 0<=token['head']<len(syntax) for token in syntax):
+                raise ValueError('article dependency head is outside the parsed text')
+            # Full grammar evidence without repeated per-term sentence copies.
+            row['article_parse']={'input_sha256':parsed['input_sha256'],'parser':parsed.get('parser',{}),
+                'mentions':[{k:e[k] for k in ('start','end','label')} for e in parsed.get('mentions',[])],
+                'noun_phrases':[{k:p[k] for k in ('start','end','head')} for p in parsed.get('noun_phrases',[])],
+                'syntax':[{k:t[k] for k in ('start','end','lemma','pos','dependency','head')} for t in syntax]}
+        rows.append(row)
+    return rows
 
 
 def read_results(path, snapshot_id):

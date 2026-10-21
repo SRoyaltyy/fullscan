@@ -27,7 +27,8 @@ on:
       - 'scripts/materialize_filing_texts.py'
       - 'data/company_filings_full_release.json'
       - 'requirements-filing-parser.txt'
-      - '.github/workflows/deep-filing-profiles.yml'
+      # Publication-only workflow edits keep the current full rebuild running.
+      # Parser/source changes above still rebuild; workflow_dispatch is available.
   workflow_dispatch:
 permissions:
   contents: read
@@ -43,6 +44,9 @@ env:
 jobs:
   controls:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write
     timeout-minutes: 40
     outputs:
       shards: ${{ steps.release.outputs.shards }}
@@ -102,6 +106,11 @@ jobs:
           name: deep-filing-real-source-check
           path: real-profiles/
           retention-days: 30
+      - name: Publish the current real-filing sample while all-issuer compilation continues
+        if: success() && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run scanner-backtest-publish.yml --ref main
   compile:
     needs: controls
     if: github.event_name != 'pull_request'
