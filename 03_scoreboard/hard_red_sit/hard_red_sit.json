@@ -2919,17 +2919,17 @@
         "name": "flatten_robust",
         "family": "flatten",
         "sit": true,
-        "hard_red": true,
+        "hard_red": false,
         "side": "long",
-        "s": -8.071,
+        "s": "morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held",
         "short_only": [],
         "dip_scoop": [
           {
-            "ticker": "SGRY",
+            "ticker": "SMMT",
             "side": "long",
             "open": null,
-            "px": 14.69,
-            "px_src": "session_export",
+            "px": 19.17,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2961,11 +2961,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "IT",
+            "ticker": "PRMB",
             "side": "long",
             "open": null,
-            "px": 185.73,
-            "px_src": "session_export",
+            "px": 22.45,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2997,155 +2997,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "FIS",
+            "ticker": "TWLO",
             "side": "long",
             "open": null,
-            "px": 34.52,
-            "px_src": "session_export",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "TOST",
-            "side": "long",
-            "open": null,
-            "px": 30.38,
-            "px_src": "session_export",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "PDFS",
-            "side": "long",
-            "open": null,
-            "px": 56.43,
-            "px_src": "session_export",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "YOU",
-            "side": "long",
-            "open": null,
-            "px": 40.47,
-            "px_src": "session_export",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "SHOO",
-            "side": "long",
-            "open": null,
-            "px": 44.9,
-            "px_src": "session_export",
+            "px": 287.79,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {

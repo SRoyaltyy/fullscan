@@ -5,8 +5,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** ON (general predict up score +4.6, conf 0.686)
-- **Yields:** rising (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** falling | **VIX:** calm (ratio 0.90 via vix/vix3m) spot 17.14
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.25
+- **Yields:** flat (llm_factor_fallback) | **Dollar:** flat (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.89 via vix/vix3m) spot 16.76
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.21
 - **High-impact events:** 10 bullish vs 7 bearish | China: bull
 
 ## Sectors
@@ -39,7 +39,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| beta:high | 🌤️ favorable | medium | risk-on, VIX calm — high beta outperforms [general + channel1] |
+| beta:high | 🌤️ favorable | medium | risk-on, VIX falling — high beta outperforms [general + channel1] |
 | beta:low | ⛅ neutral | low | risk-on — low beta lags rallies |
 | beta:mid | ⛅ neutral | low | beta-neutral zone |
 
@@ -64,16 +64,16 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | 🌧️ hostile | medium | yields rising — long-duration growth de-rates [factor: Bond yields] |
-| style:value | 🌤️ favorable | medium | rising yields/reflation favors value & cyclicals [factor: Bond yields] |
+| style:growth | ⛅ neutral | low | yields flat/unknown |
+| style:value | ⛅ neutral | low | yields flat/unknown |
 | style:blend | ⛅ neutral | low | — |
 
 ## Leverage
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| lev:high | 🌧️ hostile | medium | yields rising — leverage amplifies the downside [factors + general] |
-| lev:low | 🌤️ favorable | low | balance-sheet strength preferred in stress |
+| lev:high | ⛅ neutral | low | — |
+| lev:low | ⛅ neutral | low | — |
 | lev:mid | ⛅ neutral | low | — |
 | lev:neg_equity | 🌧️ hostile | low | negative equity is distressed in any regime |
 
