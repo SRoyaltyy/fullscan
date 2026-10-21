@@ -1,35 +1,36 @@
 [
   {
-    "title": "Constituent Update - October 16, 2026",
-    "url": "http://www.fsis.usda.gov/news-events/news-press-releases/constituent-update-october-16-2026",
-    "native_id": "4fac2831-8aa5-4503-b5b0-985e3b996267",
+    "title": "FCC Removes Convicted Fraudster from USF Programs",
+    "url": "https://www.fcc.gov/edoc/426063",
+    "native_id": "426063",
     "published_at": null,
-    "published_raw": "Tue, 10/20/2026 - 12:00",
-    "summary": "Stakeholder Engagement On October 15, Under Secretary for Food Safety Dr. Mindy Brashears delivered remarks at the Ohio 4-H Foundation's Annual Celebration of Youth to 4-H members, families, volunteers, and",
+    "published_raw": "",
+    "summary": "Long Island-based consultant took kickbacks as part of scheme to defraud E-Rate Program and a COVID-era connectivity program.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "USDA Food Safety and Inspection Service — News & Events",
+      "issuer": "Federal Communications Commission — News Releases",
       "jurisdiction": "US",
-      "family": "product_safety"
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fsis-2f49ece915",
-    "n": 5679,
-    "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 5807,
+    "first_seen": "2026-10-21T06:03:26.053264+00:00",
+    "last_seen": "2026-10-21T06:03:26.053264+00:00",
     "source_ids": [
-      "us-fsis-2f49ece915"
+      "us-fcc-364d1b4932",
+      "us-fcc-685c5e7dd2"
     ]
   },
   {
-    "title": "In the Matter of Application for Consent to Transfer Control of Quintillion Subsea Operations, LLC from Q Gateway Ultimate Holdings LLC to GCI Holdings, LLC, SCL-T/C-20260504-00065, SCL-AMD-20260623-00091",
-    "url": "https://www.fcc.gov/edoc/426026",
-    "native_id": "426026",
+    "title": "Notice of Suspension Issued, Richard Bernstein",
+    "url": "https://www.fcc.gov/edoc/425972",
+    "native_id": "425972",
     "published_at": null,
     "published_raw": "",
-    "summary": "Application filed by GCI and Quintillion for approval to transfer control of a submarine cable landing license from Quintillion to GCI, and also denies the Petition to Deny filed by Alaska Communications Systems Holding, Inc.",
+    "summary": "FCC Enforcement Bureau suspends Richard Bernstein from participating in activities related to E-Rate and other Universal Service Fund programs, and begins debarment proceedings.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -40,17 +41,18 @@
       "family": "telecom_rules_and_licences"
     },
     "primary_source_id": "us-fcc-eeb7d739be",
-    "n": 5681,
-    "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "n": 5808,
+    "first_seen": "2026-10-21T06:03:26.053264+00:00",
+    "last_seen": "2026-10-21T06:03:26.053264+00:00",
     "source_ids": [
+      "us-fcc-364d1b4932",
       "us-fcc-eeb7d739be"
     ]
   },
   {
-    "title": "Pleadings",
-    "url": "https://www.fcc.gov/edoc/426019",
-    "native_id": "426019",
+    "title": "Space Bureau Releases Updated List of Incumbent Earth Stations in the 4.0-4.2 GHz Band in the Contiguous United States",
+    "url": "https://www.fcc.gov/edoc/426062",
+    "native_id": "426062",
     "published_at": null,
     "published_raw": "",
     "summary": ".",
@@ -64,20 +66,20 @@
       "family": "telecom_rules_and_licences"
     },
     "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 5682,
-    "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "n": 5809,
+    "first_seen": "2026-10-21T06:03:26.053264+00:00",
+    "last_seen": "2026-10-21T06:03:26.053264+00:00",
     "source_ids": [
       "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Applications",
-    "url": "https://www.fcc.gov/edoc/426017",
-    "native_id": "426017",
+    "title": "PSHSB Announces Region 20 (District of Columbia, Maryland, and Nothern Counties of Virginia) RPCs to Hold 700 MHZ and 800 MHZ Meetings",
+    "url": "https://www.fcc.gov/edoc/426066",
+    "native_id": "426066",
     "published_at": null,
     "published_raw": "",
-    "summary": ".",
+    "summary": "Announces Region 20 (DC, MD, Northern VA) RPC Meetings for 700 MHZ and 800 MHZ",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -88,83 +90,59 @@
       "family": "telecom_rules_and_licences"
     },
     "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 5683,
-    "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "n": 5810,
+    "first_seen": "2026-10-21T06:03:26.053264+00:00",
+    "last_seen": "2026-10-21T06:03:26.053264+00:00",
     "source_ids": [
       "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Notice Concerning Ex Parte Status of Information Submitted to the Technological Advisory Council",
-    "url": "https://www.fcc.gov/edoc/425959",
-    "native_id": "425959",
+    "title": "State Minister TAKAGI Holds Meeting with Mr. José Luis Daza, Deputy Minister of the Economy of the Argentine Republic",
+    "url": "https://www.meti.go.jp/english/press/2026/10/20261019001.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261019001.html",
     "published_at": null,
-    "published_raw": "",
-    "summary": ".",
+    "published_raw": null,
+    "summary": "",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
+    },
+    "primary_source_id": "jp-meti-index",
+    "n": 5818,
+    "first_seen": "2026-10-21T06:03:26.053264+00:00",
+    "last_seen": "2026-10-21T06:03:26.053264+00:00",
+    "source_ids": [
+      "jp-meti-index"
+    ]
+  },
+  {
+    "title": "Miscellaneous Order",
+    "url": "https://www.supremecourt.gov/orders/courtorders/102026zr_2d9g.pdf",
+    "native_id": "https://www.supremecourt.gov/orders/courtorders/102026zr_2d9g.pdf",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "court_order",
+      "document_stage": "judicial_order_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Supreme Court orders of the Court",
       "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
+      "family": "judicial_decisions"
     },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 5684,
-    "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-10-20T18:00:04.951908+00:00",
+    "primary_source_id": "us-supreme-court-orders-index",
+    "n": 5819,
+    "first_seen": "2026-10-21T06:03:26.053264+00:00",
+    "last_seen": "2026-10-21T06:03:26.053264+00:00",
     "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Actions",
-    "url": "https://www.fcc.gov/edoc/426018",
-    "native_id": "426018",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 5685,
-    "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-10-20T18:00:04.951908+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "ESMA specifies requirements to facilitate safe use of post-trade risk reduction services",
-    "url": "https://www.esma.europa.eu/press-news/esma-news/esma-specifies-requirements-facilitate-safe-use-post-trade-risk-reduction",
-    "native_id": "https://www.esma.europa.eu/press-news/esma-news/esma-specifies-requirements-facilitate-safe-use-post-trade-risk-reduction",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "ESMA specifies requirements to facilitate safe use of post-trade risk reduction services 20 October 2026 Guidelines and Technical standards Post Trading The European Securities and Markets Authority (ESMA), the EU’s financial markets regulator and supervisor, has outlined the conditions that providers and users of post-trade risk reduction (PTRR) services need to meet for certain OTC derivative transactions to be exempt from the clearing obligation under EMIR 3. The new rules, published in its latest final report, also establish safeguards for the provision of these services and the monitoring of the use of the exemption. With these new rules in place, the goal is to facilitate the use of PTRR services and ensure that the exemption is used under the conditions laid down in EMIR 3 and does not lead to the misuse of the clearing obligation. The final report specifies the elements and requirements of PTRR services, including the information to be provided to participants, how exercises are carried out, the controls that providers should have in place, record-keeping and how the exemption will be monitored. PTRR services help market participants manage their derivatives portfolios and ",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Securities and Markets Authority",
-      "jurisdiction": "EU",
-      "family": "market_rules_and_enforcement"
-    },
-    "primary_source_id": "eu-esma-73e01d4013",
-    "n": 5699,
-    "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-10-20T18:00:04.951908+00:00",
-    "source_ids": [
-      "eu-esma-73e01d4013"
+      "us-supreme-court-orders-index"
     ]
   }
 ]
