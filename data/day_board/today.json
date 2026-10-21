@@ -1,45 +1,86 @@
 {
   "date": "2026-10-21",
-  "generated_at": "2026-10-21T05:41:44.776817-04:00",
+  "generated_at": "2026-10-21T05:44:58.521348-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "CON",
+      "score": 0.6555911252979584
+    },
+    {
+      "ticker": "HITI",
+      "score": 0.37569035832016273
+    },
+    {
+      "ticker": "SGRY",
+      "score": 0.6541642603585892
+    },
+    {
+      "ticker": "ASTH",
+      "score": 0.5884464496419931
+    },
+    {
+      "ticker": "NTAP",
+      "score": 0.30930969124712515
+    },
+    {
+      "ticker": "AMN",
+      "score": 0.5475594258208563
+    },
+    {
+      "ticker": "MQ",
+      "score": 0.7410602152300074
+    },
+    {
+      "ticker": "BAND",
+      "score": 0.5716345332861978
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "OKLO",
+      "score": -0.2633800800955093
+    },
+    {
+      "ticker": "NEOV",
+      "score": -0.36507834037884485
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.2232158721196007
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.36307065212053335
+    },
+    {
+      "ticker": "POWL",
+      "score": -0.09618396258356497
+    },
+    {
+      "ticker": "NRGV",
+      "score": -0.3539617817919932
+    },
+    {
+      "ticker": "NNDM",
+      "score": -0.1899797269228264
+    },
+    {
+      "ticker": "INDI",
+      "score": -0.0863739898316828
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-10-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-21T04:23:43.422905-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-21_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 6801,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-10-21_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2906,
-          "preview": "# Finviz homepage market digest \u2014 2026-10-21\n**Generated:** 2026-10-21T04:23:43.400636-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to higher open as tech leads on global earnings optimism and Brent nears $110 ahead of data and heavy earnings slate\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** Brent crude $110.0\n**CPI/Fed:** UK CPI data already released showed higher-than-expected inflation\n**Leaders:** ABT, T, NEE, TMO, DHR, CME, ELV, MCO, TSLA, META, IBM, LRCX\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** ABT, T, NEE, TMO, DHR, CME, ELV, MCO\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-21\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-21\n**Generated:** 2026-10-21T04:23:43.400636-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to higher open as tech leads on global earnings optimism and Brent nears $110 ahead of data and heavy earnings slate\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** Brent crude $110.0\n**CPI/Fed:** UK CPI data already released showed higher-than-expected inflation\n**Leaders:** ABT, T, NEE, TMO, DHR, CME, ELV, MCO, TSLA, META, IBM, LRCX\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** ABT, T, NEE, TMO, DHR, CME, ELV, MCO\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-21\n**Clock use:** `same_morning`"
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -193,6 +234,59 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ELV, AUPH, OXY, TRI, ISRG \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 HAS, TLYS, CDNA, SN, BB"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-21T05:44:57.865027-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-21_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1478157,
+          "preview": "1d BUY CON, HITI, SGRY, ASTH, NTAP, AMN, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, EOSE, POWL, NRGV, NNDM, INDI"
+        },
+        {
+          "path": "data/stock_book/2026-10-21_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-21_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2594,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-21_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12454,
+          "preview": "2026-10-21 BUY CON, HITI, SGRY, ASTH, NTAP, AMN, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, EOSE, POWL, NRGV, NNDM, INDI"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12454,
+          "preview": "2026-10-21 BUY CON, HITI, SGRY, ASTH, NTAP, AMN, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, EOSE, POWL, NRGV, NNDM, INDI"
+        },
+        {
+          "path": "01_daily/2026-10-21_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 85410,
+          "preview": "# Stock book \u2014 2026-10-21\n_Generated 2026-10-21T05:41:55.013470-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CON, HITI, SGRY, ASTH, NTAP, AMN, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, EOSE, POWL, NRGV, NNDM, INDI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-21 BUY CON, HITI, SGRY, ASTH, NTAP, AMN, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, EOSE, POWL, NRGV, NNDM, INDI \u00b7 2026-10-21 BUY CON, HITI, SGRY, ASTH, NTAP, AMN, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, EOSE, POWL, NRGV, NNDM, INDI \u00b7 # Stock book \u2014 2026-10-21\n_Generated 2026-10-21T05:41:55.013470-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
