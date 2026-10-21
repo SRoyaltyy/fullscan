@@ -1,0 +1,44 @@
+name: updown_v4_preopen leak test
+
+# Research-only page. Fails if any updown_v4_preopen feature could use information
+# timestamped at or after 09:25 ET on the prediction day.
+on:
+  pull_request:
+    paths:
+      - "research/updown_v4_preopen/**"
+      - "dashboard/updown-v4/**"
+      - ".github/workflows/updown_v4_preopen.yml"
+  push:
+    branches: [main]
+    paths:
+      - "research/updown_v4_preopen/**"
+      - ".github/workflows/updown_v4_preopen.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  leak-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            research/__init__.py
+            research/updown_v3_preopen
+            research/updown_v4_preopen
+            dashboard/updown-v4
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q pytest pandas numpy scipy scikit-learn hmmlearn
+      - name: Leak test (feature timestamps < 09:25 ET; future bars/CBOE rows cannot move features; HMM filtered + fit before window)
+        run: python -m pytest -q research/updown_v4_preopen/test_leak.py
+      - name: Page data present
+        run: test -s dashboard/updown-v4/index.html && test -s dashboard/updown-v4/data/index.json
+      - name: Append-only locks (locked prediction days unchanged)
+        run: python -m research.updown_v4_preopen.lock check
