@@ -32,7 +32,12 @@ jobs:
           git add dashboard/news-dir/index.json dashboard/news-dir/days.json
           git diff --staged --quiet && exit 0
           git commit -m "news dir: refresh index [skip ci]"
-          git push origin HEAD:main
+          for i in 1 2 3 4 5; do
+            git pull --rebase -X theirs origin main && git push origin HEAD:main && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 5))
+          done
+          echo "::error::news dir push failed after 5 rebase attempts"; exit 1
       - name: Overlay news-dir onto gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
