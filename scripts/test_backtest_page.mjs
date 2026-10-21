@@ -124,6 +124,10 @@ assert.equal(sourceParagraph.children[1].children.map(c=>c.textContent).join('')
 context.inspectDecision({stock:'BLZE',relationship:'input',keyword:'space',assertion:'asserted',term_occurrence_ids:['t1'],evidence_ids:['f']});
 assert.match(reviewList.children[0].textContent,/1 of 2/);
 assert.ok(reviewList.children.some(c=>c.textContent.includes('Trigger: lease')));
+context.inspectDecision({stock:'BLZE',relationship:'issuer',keyword:'BLZE',assertion:'identity',term_occurrence_ids:[],evidence_ids:[]});
+assert.ok(reviewList.children.some(c=>c.textContent.includes('No complete SEC paragraph witness')));
+reviewRoot.children[3].listeners.click();
+assert.match(reviewList.children[0].textContent,/2 of 2/);
 reviewRoot.children[2].value='space';reviewRoot.children[2].listeners.input();
 assert.match(reviewList.children[0].textContent,/2 of 2/);
 console.log('Keyword decisions open exact paragraphs, preserve Unicode spans, expose rule evidence, and keep repeated unresolved occurrences separate.');

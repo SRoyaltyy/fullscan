@@ -869,7 +869,7 @@ function renderTermReview(container, graph) {
     const ids=chosen ? new Set(chosen.term_occurrence_ids || []) : null;
     const rows=terms.filter(t=>(!ids || ids.has(t.id)) && (!q || [t.text,...(t.entity_types || []),...(t.kinds || []),...(t.relationships || []).flatMap(r=>[r.subject,r.predicate,r.object])].join(" ").toLowerCase().includes(q)));
     const count=document.createElement("p"); count.textContent=`${rows.length.toLocaleString()} of ${terms.length.toLocaleString()} term occurrences · each has its own source references`;list.append(count);
-    selection.textContent=chosen ? `Selected decision: ${chosen.stock} → ${chosen.relationship} → ${chosen.keyword} [${chosen.assertion}]. Clear the search to return to every occurrence.` : "All extracted occurrences, including terms with unresolved company relationships.";
+    selection.textContent=chosen ? `Selected decision: ${chosen.stock} → ${chosen.relationship} → ${chosen.keyword} [${chosen.assertion}].` : "All extracted occurrences, including terms with unresolved company relationships.";
     if (chosen) {
       const witnessIds=new Set(chosen.evidence_ids || []), seen=new Set();
       for (const id of witnessIds) {
@@ -881,7 +881,8 @@ function renderTermReview(container, graph) {
           for (const p of paragraphs.values()) if(p.source_id===ev.source_id && p.start<ev.end && p.end>ev.start && !seen.has(p.id)) {list.append(sourceBlock(p,[ev.argument,ev.trigger].filter(Boolean)));seen.add(p.id);}
         }
       }
-      if (!rows.length) {const empty=document.createElement("p");empty.textContent="No spaCy occurrence was linked to this decision. The decision witnesses above remain available for review; an occurrence link is not inferred.";list.append(empty);}
+      if (!seen.size) {const empty=document.createElement("p");empty.textContent="No complete SEC paragraph witness is available for this decision. Check its original quote and source metadata in the keyword record.";list.append(empty);}
+      if (!rows.length) {const empty=document.createElement("p");empty.textContent="No spaCy occurrence was linked to this decision; an occurrence link is not inferred.";list.append(empty);}
     }
     appendPaged(list,rows,term=>{
       const detail=document.createElement("details"), title=document.createElement("summary");
@@ -898,7 +899,9 @@ function renderTermReview(container, graph) {
     });
   }
   query.addEventListener("input",()=>{chosen=null;draw();});
-  root.append(heading,note,query,selection,list);container.append(root);draw();
+  const reset=document.createElement("button");reset.textContent="Show all term occurrences";
+  reset.addEventListener("click",()=>{chosen=null;query.value="";draw();});
+  root.append(heading,note,query,reset,selection,list);container.append(root);draw();
   return row=>{chosen=row;query.value="";draw();root.scrollIntoView({block:"start"});};
 }
 
