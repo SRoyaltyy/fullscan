@@ -20,7 +20,7 @@ ARTIFACTS = ('articles.json', 'results.jsonl', 'profiles.json', 'ticker-index.js
 INPUT_PATHS = ('src/correlation.py', 'src/evidence_matcher.py', 'src/stock_evidence.py',
     'src/stock_keywords.py','src/stock_keyword_store.py',
     'src/entity_resolution.py','src/term_inventory.py','scripts/annotate_article_entities.py',
-    'src/filing_relationships.py', 'src/deep_profile_store.py', 'requirements-filing-parser.txt',
+    'src/filing_relationships.py', 'src/specific_filing_records.py', 'src/deep_profile_store.py', 'requirements-filing-parser.txt',
     'scripts/build_filing_profiles.py', 'data/company_filings_full_release.json',
     'src/filing_evidence.py', 'src/filing_business.py', 'src/filing_parts.py',
     'src/names.py', 'src/aliases.py', 'src/linguistics.py', 'src/semantic_lookup.py',
@@ -192,8 +192,10 @@ def validate(directory, source_sha):
                     raise ValueError('keyword record lost its supporting evidence')
                 detail = payload.get('keyword_coverage') or {}
                 if detail:
-                    if detail['retained_relationships'] != sum(not ref.startswith('paragraph:') for ref in evidence):
+                    if detail['retained_relationships'] != sum(not ref.startswith(('paragraph:','specific:')) for ref in evidence):
                         raise ValueError('keyword evidence retention count mismatch')
+                    if detail.get('specific_disclosure_records',0) != sum(ref.startswith('specific:') for ref in evidence):
+                        raise ValueError('specific disclosure evidence retention count mismatch')
                     keyword_coverage[ticker] = detail
     keyword_index = meta.get('keyword_index')
     if keyword_index:
