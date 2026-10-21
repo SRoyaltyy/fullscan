@@ -4,666 +4,666 @@
     "1d": {
       "buy": [
         {
-          "ticker": "CDNA",
-          "score": 0.882161422224006
-        },
-        {
           "ticker": "PRCH",
           "score": 0.8385429209840265
         },
         {
-          "ticker": "ARQT",
-          "score": 0.803501069804337
-        },
-        {
           "ticker": "AVPT",
-          "score": 0.7840516690367827
+          "score": 0.782834036619781
         },
         {
           "ticker": "CORT",
-          "score": 0.39410657346105527
+          "score": 0.3924106332259807
         },
         {
           "ticker": "VEEV",
-          "score": 0.4155203013477824
+          "score": 0.41256815189198504
+        },
+        {
+          "ticker": "CDNA",
+          "score": 0.8298636020396053
+        },
+        {
+          "ticker": "ARQT",
+          "score": 0.7812704038915628
         },
         {
           "ticker": "NTAP",
-          "score": 0.4075427080620869
-        },
-        {
-          "ticker": "TOST",
-          "score": 0.6228188262679546
-        },
-        {
-          "ticker": "SONO",
-          "score": 0.7824906125325364
+          "score": 0.3672381992469095
         },
         {
           "ticker": "ABX",
-          "score": 0.6503379849939597
+          "score": 0.659986200076544
+        },
+        {
+          "ticker": "TRU",
+          "score": 0.5505929098468964
         },
         {
           "ticker": "LAUR",
-          "score": 0.6475114155561978
+          "score": 0.6437080147216908
         },
         {
-          "ticker": "CHEF",
-          "score": 0.6539637536726695
+          "ticker": "PAYS",
+          "score": 0.6549498116886701
         },
         {
-          "ticker": "CNK",
-          "score": 0.6895255709717837
+          "ticker": "SONO",
+          "score": 0.7393501502154107
         },
         {
           "ticker": "EZPW",
-          "score": 0.5725536941691431
+          "score": 0.5711134990796938
         },
         {
-          "ticker": "JXN",
-          "score": 0.5857564998786386
+          "ticker": "CNK",
+          "score": 0.6834163757139815
+        },
+        {
+          "ticker": "IMAX",
+          "score": 0.6413513483471072
         }
       ],
       "sell": [
         {
+          "ticker": "INTC",
+          "score": -0.4372885377372172
+        },
+        {
           "ticker": "ROIV",
-          "score": -0.43353260151919143
+          "score": -0.42662620714773924
         },
         {
           "ticker": "TIGO",
-          "score": -0.34860411786701295
-        },
-        {
-          "ticker": "NEOV",
-          "score": -0.3410828303615508
-        },
-        {
-          "ticker": "BIDU",
-          "score": -0.32757829068100836
+          "score": -0.33885518247447566
         },
         {
           "ticker": "SOC",
-          "score": -0.32103876205008686
+          "score": -0.33502909303130934
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.32447956456578003
+        },
+        {
+          "ticker": "NEOV",
+          "score": -0.3184840572779986
         },
         {
           "ticker": "AXSM",
-          "score": -0.30329097546700406
+          "score": -0.3042351395784257
         },
         {
           "ticker": "AU",
-          "score": -0.2901213898627446
+          "score": -0.2954448040851456
         },
         {
-          "ticker": "INTC",
-          "score": -0.287962070029236
+          "ticker": "PCT",
+          "score": -0.28127910956701896
         },
         {
-          "ticker": "HMY",
-          "score": -0.285622774236624
+          "ticker": "NRXP",
+          "score": -0.2809218691928413
         },
         {
-          "ticker": "BAK",
-          "score": -0.2826323473447874
+          "ticker": "AIRS",
+          "score": -0.27826264788858196
         },
         {
           "ticker": "WVE",
-          "score": -0.27462222838784256
+          "score": -0.27624062480205547
         },
         {
-          "ticker": "LYB",
-          "score": -0.2718291841405899
+          "ticker": "BAK",
+          "score": -0.27450788670502185
         },
         {
-          "ticker": "IFRX",
-          "score": -0.26966297855806615
+          "ticker": "VSAT",
+          "score": -0.2694149929941799
         },
         {
-          "ticker": "CMTG",
-          "score": -0.26779859461618266
-        },
-        {
-          "ticker": "LXRX",
-          "score": -0.26609823484975137
+          "ticker": "PUMP",
+          "score": -0.2638495509286929
         }
       ]
     },
     "3d": {
       "buy": [
         {
-          "ticker": "CDNA",
-          "score": 0.9478469052955554
-        },
-        {
           "ticker": "PRCH",
           "score": 0.9059462268466214
         },
         {
-          "ticker": "ARQT",
-          "score": 0.8696104898832338
-        },
-        {
           "ticker": "AVPT",
-          "score": 0.852260229573848
+          "score": 0.8505612075966362
         },
         {
           "ticker": "CORT",
-          "score": 0.46410163962075124
+          "score": 0.46173521138576357
         },
         {
           "ticker": "VEEV",
-          "score": 0.4743521214476848
+          "score": 0.4702328431372699
+        },
+        {
+          "ticker": "CDNA",
+          "score": 0.8748732027126709
+        },
+        {
+          "ticker": "ARQT",
+          "score": 0.838590956051456
         },
         {
           "ticker": "NTAP",
-          "score": 0.46787580266125905
-        },
-        {
-          "ticker": "TOST",
-          "score": 0.6789359488175783
-        },
-        {
-          "ticker": "SONO",
-          "score": 0.841931913428928
+          "score": 0.411636953151709
         },
         {
           "ticker": "ABX",
-          "score": 0.7142633747037145
+          "score": 0.7277260004003437
+        },
+        {
+          "ticker": "TRU",
+          "score": 0.6092906920708456
         },
         {
           "ticker": "LAUR",
-          "score": 0.6977621086850005
+          "score": 0.6924550377531302
         },
         {
-          "ticker": "CHEF",
-          "score": 0.705887522757209
+          "ticker": "PAYS",
+          "score": 0.7082511625116596
         },
         {
-          "ticker": "CNK",
-          "score": 0.7258733426398623
+          "ticker": "SONO",
+          "score": 0.7817359194980553
         },
         {
           "ticker": "EZPW",
-          "score": 0.6353991872794031
+          "score": 0.6333896127359854
         },
         {
-          "ticker": "JXN",
-          "score": 0.6366919390306571
+          "ticker": "CNK",
+          "score": 0.7173488841406033
+        },
+        {
+          "ticker": "IMAX",
+          "score": 0.6753496445664144
         }
       ],
       "sell": [
         {
           "ticker": "ROIV",
-          "score": -0.5057403058318071
+          "score": -0.49610347647629244
         },
         {
-          "ticker": "TIGO",
-          "score": -0.4182330839541496
-        },
-        {
-          "ticker": "BIDU",
-          "score": -0.40875916620242575
-        },
-        {
-          "ticker": "NEOV",
-          "score": -0.4037666006381599
+          "ticker": "INTC",
+          "score": -0.4829754800796451
         },
         {
           "ticker": "SOC",
-          "score": -0.3976539831237891
+          "score": -0.4171753751906111
+        },
+        {
+          "ticker": "TIGO",
+          "score": -0.404629918290144
+        },
+        {
+          "ticker": "BIDU",
+          "score": -0.4044353623207118
         },
         {
           "ticker": "AXSM",
-          "score": -0.38340272748745857
+          "score": -0.38472016578246554
         },
         {
-          "ticker": "BAK",
-          "score": -0.3642463035701862
+          "ticker": "PCT",
+          "score": -0.3740940791193361
         },
         {
-          "ticker": "HMY",
-          "score": -0.3561424019725302
+          "ticker": "NEOV",
+          "score": -0.37223342889366845
+        },
+        {
+          "ticker": "AIRS",
+          "score": -0.3585968409491917
         },
         {
           "ticker": "WVE",
-          "score": -0.35236251350946657
+          "score": -0.3546207410641822
+        },
+        {
+          "ticker": "NRXP",
+          "score": -0.35377087034128935
         },
         {
           "ticker": "TMC",
-          "score": -0.35121576117853337
+          "score": -0.35342904629552874
         },
         {
-          "ticker": "LXRX",
-          "score": -0.34418981311433383
+          "ticker": "BAK",
+          "score": -0.3529098468635364
         },
         {
-          "ticker": "CMTG",
-          "score": -0.34231579742747936
-        },
-        {
-          "ticker": "BORR",
-          "score": -0.34116500083513046
+          "ticker": "VSAT",
+          "score": -0.34934926592120397
         },
         {
           "ticker": "PUMP",
-          "score": -0.340982726120443
-        },
-        {
-          "ticker": "LYB",
-          "score": -0.33996741439433525
+          "score": -0.34878610758419193
         }
       ]
     },
     "1w": {
       "buy": [
         {
-          "ticker": "CDNA",
-          "score": 0.9674735583882534
-        },
-        {
           "ticker": "PRCH",
           "score": 0.9227443745891319
         },
         {
-          "ticker": "ARQT",
-          "score": 0.8865832885124236
-        },
-        {
           "ticker": "AVPT",
-          "score": 0.8888910748562271
+          "score": 0.88693354577173
         },
         {
           "ticker": "CORT",
-          "score": 0.5128471603721735
+          "score": 0.5101206788089591
         },
         {
           "ticker": "VEEV",
-          "score": 0.5038552430580178
+          "score": 0.4991092143380075
+        },
+        {
+          "ticker": "CDNA",
+          "score": 0.8833968677242094
+        },
+        {
+          "ticker": "ARQT",
+          "score": 0.8508441159309719
         },
         {
           "ticker": "NTAP",
-          "score": 0.4808959025542948
-        },
-        {
-          "ticker": "TOST",
-          "score": 0.691801557901698
-        },
-        {
-          "ticker": "SONO",
-          "score": 0.8570665649262887
+          "score": 0.4161002818559262
         },
         {
           "ticker": "ABX",
-          "score": 0.7597920805439538
+          "score": 0.775303051978296
+        },
+        {
+          "ticker": "TRU",
+          "score": 0.6214728131802085
         },
         {
           "ticker": "LAUR",
-          "score": 0.729645968102387
+          "score": 0.7235314234749686
         },
         {
-          "ticker": "CHEF",
-          "score": 0.7134013430498571
+          "ticker": "PAYS",
+          "score": 0.7355341166931735
         },
         {
-          "ticker": "CNK",
-          "score": 0.7456884346781322
+          "ticker": "SONO",
+          "score": 0.7877117181553961
         },
         {
           "ticker": "EZPW",
-          "score": 0.6705727479111043
+          "score": 0.668257415520489
         },
         {
-          "ticker": "JXN",
-          "score": 0.6375054094200192
+          "ticker": "CNK",
+          "score": 0.7358669752351688
+        },
+        {
+          "ticker": "IMAX",
+          "score": 0.7037585840704126
         }
       ],
       "sell": [
         {
           "ticker": "ROIV",
-          "score": -0.569186851015584
+          "score": -0.5580837728925367
         },
         {
-          "ticker": "TIGO",
-          "score": -0.478437352485717
-        },
-        {
-          "ticker": "BIDU",
-          "score": -0.473398380760745
-        },
-        {
-          "ticker": "AXSM",
-          "score": -0.4593811090971481
+          "ticker": "INTC",
+          "score": -0.5467704166557174
         },
         {
           "ticker": "SOC",
-          "score": -0.45878811350850396
+          "score": -0.4812796958736652
         },
         {
-          "ticker": "NEOV",
-          "score": -0.45843179110329674
+          "ticker": "PCT",
+          "score": -0.47246606180810075
         },
         {
-          "ticker": "BAK",
-          "score": -0.4566077870236666
+          "ticker": "BIDU",
+          "score": -0.46841670779380257
+        },
+        {
+          "ticker": "TIGO",
+          "score": -0.46276445785240305
+        },
+        {
+          "ticker": "AXSM",
+          "score": -0.4608989963370405
         },
         {
           "ticker": "TMC",
-          "score": -0.4506897875950167
+          "score": -0.453239825232501
         },
         {
-          "ticker": "HMY",
-          "score": -0.4240340639875836
+          "ticker": "AIRS",
+          "score": -0.45071765136831893
+        },
+        {
+          "ticker": "EOSE",
+          "score": -0.44432634865689835
+        },
+        {
+          "ticker": "BAK",
+          "score": -0.44354648233423094
         },
         {
           "ticker": "PRM",
-          "score": -0.41903041426393495
+          "score": -0.4427201563364256
         },
         {
-          "ticker": "BORR",
-          "score": -0.41876283013268945
+          "ticker": "NRXP",
+          "score": -0.4418882073022305
         },
         {
-          "ticker": "LXRX",
-          "score": -0.41764137690655956
+          "ticker": "VSAT",
+          "score": -0.4377480870407187
         },
         {
           "ticker": "PUMP",
-          "score": -0.4162431606950764
-        },
-        {
-          "ticker": "CMTG",
-          "score": -0.4144263682841754
-        },
-        {
-          "ticker": "WVE",
-          "score": -0.4125594005683214
+          "score": -0.4252338308439011
         }
       ]
     },
     "2w": {
       "buy": [
         {
-          "ticker": "CDNA",
-          "score": 0.9643616350928386
-        },
-        {
           "ticker": "PRCH",
           "score": 0.921767185669095
         },
         {
-          "ticker": "ARQT",
-          "score": 0.8846229519320143
-        },
-        {
           "ticker": "AVPT",
-          "score": 0.9047483959287728
+          "score": 0.9025204848522033
         },
         {
           "ticker": "CORT",
-          "score": 0.5419158756792677
+          "score": 0.5388128012356467
         },
         {
           "ticker": "VEEV",
-          "score": 0.5150806413382437
+          "score": 0.5096790715537803
+        },
+        {
+          "ticker": "CDNA",
+          "score": 0.8686719250930237
+        },
+        {
+          "ticker": "ARQT",
+          "score": 0.8439473374074411
         },
         {
           "ticker": "NTAP",
-          "score": 0.47595669408060215
-        },
-        {
-          "ticker": "TOST",
-          "score": 0.683836795386455
-        },
-        {
-          "ticker": "SONO",
-          "score": 0.8508437510573916
+          "score": 0.4022112349656599
         },
         {
           "ticker": "ABX",
-          "score": 0.7854724238265962
+          "score": 0.8031258346191117
+        },
+        {
+          "ticker": "TRU",
+          "score": 0.6156346981447248
         },
         {
           "ticker": "LAUR",
-          "score": 0.749572332311423
+          "score": 0.7426132215572123
         },
         {
-          "ticker": "CHEF",
-          "score": 0.7040786458969874
+          "ticker": "PAYS",
+          "score": 0.743462833420103
         },
         {
-          "ticker": "CNK",
-          "score": 0.7435650479099489
+          "ticker": "SONO",
+          "score": 0.7719093267577148
         },
         {
           "ticker": "EZPW",
-          "score": 0.6986781291741031
+          "score": 0.696042993522815
         },
         {
-          "ticker": "JXN",
-          "score": 0.6295472864274602
+          "ticker": "CNK",
+          "score": 0.7323870079746304
+        },
+        {
+          "ticker": "IMAX",
+          "score": 0.7129293220778973
         }
       ],
       "sell": [
         {
           "ticker": "ROIV",
-          "score": -0.6244408030292907
+          "score": -0.6118041219550434
+        },
+        {
+          "ticker": "INTC",
+          "score": -0.6049803181289698
+        },
+        {
+          "ticker": "PCT",
+          "score": -0.5542291445370939
         },
         {
           "ticker": "TMC",
-          "score": -0.5329842864073644
-        },
-        {
-          "ticker": "TIGO",
-          "score": -0.5328169498831057
-        },
-        {
-          "ticker": "BAK",
-          "score": -0.5320817766450557
-        },
-        {
-          "ticker": "BIDU",
-          "score": -0.5191254642700187
-        },
-        {
-          "ticker": "AXSM",
-          "score": -0.5165091539238947
+          "score": -0.535886545762392
         },
         {
           "ticker": "SOC",
-          "score": -0.5022481723761345
+          "score": -0.5278463848766608
+        },
+        {
+          "ticker": "EOSE",
+          "score": -0.5261263908216618
+        },
+        {
+          "ticker": "AIRS",
+          "score": -0.5253294595910333
         },
         {
           "ticker": "PRM",
-          "score": -0.49784394951587246
+          "score": -0.5248058164849834
         },
         {
-          "ticker": "NEOV",
-          "score": -0.49374959193892826
+          "ticker": "AXSM",
+          "score": -0.5182366980107345
         },
         {
-          "ticker": "BORR",
-          "score": -0.4794772011261517
+          "ticker": "BAK",
+          "score": -0.5172163906732715
         },
         {
-          "ticker": "ACDC",
-          "score": -0.47924010074182394
+          "ticker": "TIGO",
+          "score": -0.5149792503914339
         },
         {
-          "ticker": "HMY",
-          "score": -0.476678368697162
+          "ticker": "BIDU",
+          "score": -0.5134557020831906
         },
         {
           "ticker": "VSAT",
-          "score": -0.4759868751975534
+          "score": -0.513295151800936
         },
         {
-          "ticker": "PUMP",
-          "score": -0.47545979718953163
+          "ticker": "NRXP",
+          "score": -0.5123036555023177
         },
         {
-          "ticker": "LXRX",
-          "score": -0.47403065361628244
+          "ticker": "PLAY",
+          "score": -0.5004150013468943
         }
       ]
     },
     "1m": {
       "buy": [
         {
-          "ticker": "CDNA",
-          "score": 1.0278439469038525
-        },
-        {
           "ticker": "PRCH",
           "score": 0.9822596618476129
         },
         {
-          "ticker": "ARQT",
-          "score": 0.9452683137210061
-        },
-        {
           "ticker": "AVPT",
-          "score": 0.9657207865557418
+          "score": 0.9632087916969612
         },
         {
           "ticker": "CORT",
-          "score": 0.6013701092891084
+          "score": 0.5978713578664114
         },
         {
           "ticker": "VEEV",
-          "score": 0.5683002217415623
+          "score": 0.5622098909062714
+        },
+        {
+          "ticker": "CDNA",
+          "score": 0.9199527199667918
+        },
+        {
+          "ticker": "ARQT",
+          "score": 0.8994060997224096
         },
         {
           "ticker": "NTAP",
-          "score": 0.5322850342278733
-        },
-        {
-          "ticker": "TOST",
-          "score": 0.7399284255368426
-        },
-        {
-          "ticker": "SONO",
-          "score": 0.9093934140460862
+          "score": 0.44913619758740964
         },
         {
           "ticker": "ABX",
-          "score": 0.8413635222762719
+          "score": 0.8612679419890301
+        },
+        {
+          "ticker": "TRU",
+          "score": 0.6710156978542582
         },
         {
           "ticker": "LAUR",
-          "score": 0.790697988833335
+          "score": 0.7828515129932039
         },
         {
-          "ticker": "CHEF",
-          "score": 0.7543630232640528
+          "ticker": "PAYS",
+          "score": 0.7941848506926721
         },
         {
-          "ticker": "CNK",
-          "score": 0.7860438869327617
+          "ticker": "SONO",
+          "score": 0.8203939606536668
         },
         {
           "ticker": "EZPW",
-          "score": 0.7435118947887025
+          "score": 0.7405407496304234
         },
         {
-          "ticker": "JXN",
-          "score": 0.6726668837732833
+          "ticker": "CNK",
+          "score": 0.7734405208720294
+        },
+        {
+          "ticker": "IMAX",
+          "score": 0.7500615865633242
         }
       ],
       "sell": [
         {
           "ticker": "ROIV",
-          "score": -0.6727155635412527
+          "score": -0.6584675631500347
+        },
+        {
+          "ticker": "INTC",
+          "score": -0.6324988817004452
+        },
+        {
+          "ticker": "PCT",
+          "score": -0.6194734972524492
         },
         {
           "ticker": "TMC",
-          "score": -0.5994160886131676
-        },
-        {
-          "ticker": "BAK",
-          "score": -0.5907180120114088
-        },
-        {
-          "ticker": "BIDU",
-          "score": -0.5833127030098607
-        },
-        {
-          "ticker": "AXSM",
-          "score": -0.5782786243961783
-        },
-        {
-          "ticker": "TIGO",
-          "score": -0.5775914759979739
+          "score": -0.6026884187592627
         },
         {
           "ticker": "SOC",
-          "score": -0.5626412298470105
+          "score": -0.5915035030640861
         },
         {
           "ticker": "PRM",
-          "score": -0.5599882896423019
+          "score": -0.5903880986480645
         },
         {
-          "ticker": "NEOV",
-          "score": -0.5470029931507241
+          "ticker": "EOSE",
+          "score": -0.5884670657723206
         },
         {
-          "ticker": "BORR",
-          "score": -0.5431003797571039
+          "ticker": "AIRS",
+          "score": -0.5836903123549728
         },
         {
-          "ticker": "ACDC",
-          "score": -0.5370167028106949
+          "ticker": "AXSM",
+          "score": -0.5802264498323445
         },
         {
-          "ticker": "PUMP",
-          "score": -0.5365396313577069
+          "ticker": "BIDU",
+          "score": -0.5769199822170042
         },
         {
-          "ticker": "LXRX",
-          "score": -0.5331110552492135
+          "ticker": "BAK",
+          "score": -0.5739571217193191
         },
         {
-          "ticker": "TV",
-          "score": -0.5311133573058975
+          "ticker": "VSAT",
+          "score": -0.56762484534251
         },
         {
-          "ticker": "HMY",
-          "score": -0.5296629921635416
+          "ticker": "NRXP",
+          "score": -0.5662543413906774
+        },
+        {
+          "ticker": "PLAY",
+          "score": -0.5638245494151317
+        },
+        {
+          "ticker": "ASPI",
+          "score": -0.5624301382432786
         }
       ]
     }
   },
   "buy_1d": [
-    "CDNA",
     "PRCH",
-    "ARQT",
     "AVPT",
     "CORT",
     "VEEV",
+    "CDNA",
+    "ARQT",
     "NTAP",
-    "TOST",
-    "SONO",
     "ABX",
+    "TRU",
     "LAUR",
-    "CHEF",
-    "CNK",
+    "PAYS",
+    "SONO",
     "EZPW",
-    "JXN"
+    "CNK",
+    "IMAX"
   ],
   "sell_1d": [
+    "INTC",
     "ROIV",
     "TIGO",
-    "NEOV",
-    "BIDU",
     "SOC",
+    "BIDU",
+    "NEOV",
     "AXSM",
     "AU",
-    "INTC",
-    "HMY",
-    "BAK",
+    "PCT",
+    "NRXP",
+    "AIRS",
     "WVE",
-    "LYB",
-    "IFRX",
-    "CMTG",
-    "LXRX"
+    "BAK",
+    "VSAT",
+    "PUMP"
   ]
 }

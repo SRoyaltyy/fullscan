@@ -1,6 +1,6 @@
 {
   "date": "2026-10-21",
-  "generated_at": "2026-10-21T14:11:31.838728-04:00",
+  "generated_at": "2026-10-21T16:42:54.967245-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,126 +11,126 @@
   },
   "buy_1d": [
     {
-      "ticker": "CDNA",
-      "score": 0.882161422224006
-    },
-    {
       "ticker": "PRCH",
       "score": 0.8385429209840265
     },
     {
-      "ticker": "ARQT",
-      "score": 0.803501069804337
-    },
-    {
       "ticker": "AVPT",
-      "score": 0.7840516690367827
+      "score": 0.782834036619781
     },
     {
       "ticker": "CORT",
-      "score": 0.39410657346105527
+      "score": 0.3924106332259807
     },
     {
       "ticker": "VEEV",
-      "score": 0.4155203013477824
+      "score": 0.41256815189198504
+    },
+    {
+      "ticker": "CDNA",
+      "score": 0.8298636020396053
+    },
+    {
+      "ticker": "ARQT",
+      "score": 0.7812704038915628
     },
     {
       "ticker": "NTAP",
-      "score": 0.4075427080620869
-    },
-    {
-      "ticker": "TOST",
-      "score": 0.6228188262679546
-    },
-    {
-      "ticker": "SONO",
-      "score": 0.7824906125325364
+      "score": 0.3672381992469095
     },
     {
       "ticker": "ABX",
-      "score": 0.6503379849939597
+      "score": 0.659986200076544
+    },
+    {
+      "ticker": "TRU",
+      "score": 0.5505929098468964
     },
     {
       "ticker": "LAUR",
-      "score": 0.6475114155561978
+      "score": 0.6437080147216908
     },
     {
-      "ticker": "CHEF",
-      "score": 0.6539637536726695
+      "ticker": "PAYS",
+      "score": 0.6549498116886701
     },
     {
-      "ticker": "CNK",
-      "score": 0.6895255709717837
+      "ticker": "SONO",
+      "score": 0.7393501502154107
     },
     {
       "ticker": "EZPW",
-      "score": 0.5725536941691431
+      "score": 0.5711134990796938
     },
     {
-      "ticker": "JXN",
-      "score": 0.5857564998786386
+      "ticker": "CNK",
+      "score": 0.6834163757139815
+    },
+    {
+      "ticker": "IMAX",
+      "score": 0.6413513483471072
     }
   ],
   "sell_1d": [
     {
+      "ticker": "INTC",
+      "score": -0.4372885377372172
+    },
+    {
       "ticker": "ROIV",
-      "score": -0.43353260151919143
+      "score": -0.42662620714773924
     },
     {
       "ticker": "TIGO",
-      "score": -0.34860411786701295
-    },
-    {
-      "ticker": "NEOV",
-      "score": -0.3410828303615508
-    },
-    {
-      "ticker": "BIDU",
-      "score": -0.32757829068100836
+      "score": -0.33885518247447566
     },
     {
       "ticker": "SOC",
-      "score": -0.32103876205008686
+      "score": -0.33502909303130934
+    },
+    {
+      "ticker": "BIDU",
+      "score": -0.32447956456578003
+    },
+    {
+      "ticker": "NEOV",
+      "score": -0.3184840572779986
     },
     {
       "ticker": "AXSM",
-      "score": -0.30329097546700406
+      "score": -0.3042351395784257
     },
     {
       "ticker": "AU",
-      "score": -0.2901213898627446
+      "score": -0.2954448040851456
     },
     {
-      "ticker": "INTC",
-      "score": -0.287962070029236
+      "ticker": "PCT",
+      "score": -0.28127910956701896
     },
     {
-      "ticker": "HMY",
-      "score": -0.285622774236624
+      "ticker": "NRXP",
+      "score": -0.2809218691928413
     },
     {
-      "ticker": "BAK",
-      "score": -0.2826323473447874
+      "ticker": "AIRS",
+      "score": -0.27826264788858196
     },
     {
       "ticker": "WVE",
-      "score": -0.27462222838784256
+      "score": -0.27624062480205547
     },
     {
-      "ticker": "LYB",
-      "score": -0.2718291841405899
+      "ticker": "BAK",
+      "score": -0.27450788670502185
     },
     {
-      "ticker": "IFRX",
-      "score": -0.26966297855806615
+      "ticker": "VSAT",
+      "score": -0.2694149929941799
     },
     {
-      "ticker": "CMTG",
-      "score": -0.26779859461618266
-    },
-    {
-      "ticker": "LXRX",
-      "score": -0.26609823484975137
+      "ticker": "PUMP",
+      "score": -0.2638495509286929
     }
   ],
   "flatten": {
@@ -1285,6 +1285,225 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-21T14:11:54.939777-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-21_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1514555,
+          "preview": "1d BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC"
+        },
+        {
+          "path": "data/stock_book/2026-10-21_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 1954,
+          "preview": "green 112 \u00b7 PRCH, JXN, VCTR, WT, TRU, EZPW, CG, FNF, ARQT, JEF"
+        },
+        {
+          "path": "data/stock_book/2026-10-21_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2503,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-21_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13850,
+          "preview": "2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13850,
+          "preview": "2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC"
+        },
+        {
+          "path": "01_daily/2026-10-21_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 88342,
+          "preview": "# Stock book \u2014 2026-10-21\n_Generated 2026-10-21T14:11:28.018993-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC \u00b7 green 112 \u00b7 PRCH, JXN, VCTR, WT, TRU, EZPW, CG, FNF, ARQT, JEF \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC \u00b7 2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC \u00b7 # Stock book \u2014 2026-10-21\n_Generated 2026-10-21T14:11:28.018993-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-21T14:12:02.629731-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 22294,
+          "preview": "2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1079,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-21.json",
+          "ok": true,
+          "reason": "",
+          "size": 132761,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-21_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 77098,
+          "preview": "2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 657169,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-21_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 657169,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-10-21.json",
+          "ok": true,
+          "reason": "",
+          "size": 173671,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 887841,
+          "preview": "2026-10-21 BUY PRCH, AVPT, CORT, VEEV, CDNA, ARQT, NTAP, ABX \u00b7 SELL INTC, ROIV, TIGO, SOC, BIDU, NEOV, AXSM, AU"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 657169,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 77098,
+          "preview": "2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 657169,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 657169,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 887841,
+          "preview": "2026-10-21 BUY PRCH, AVPT, CORT, VEEV, CDNA, ARQT, NTAP, ABX \u00b7 SELL INTC, ROIV, TIGO, SOC, BIDU, NEOV, AXSM, AU"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1582,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1582,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-21 BUY PRCH, AVPT, CORT, VEEV, CDNA, ARQT, NTAP, ABX \u00b7 SELL INTC, ROIV, TIGO, SOC, BIDU, NEOV, AXSM, AU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, cl"
+    },
+    {
+      "key": "paper",
+      "title": "Paper dashboard",
+      "date": "2026-10-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-21T14:12:10.199645-04:00",
+      "files": [
+        {
+          "path": "03_scoreboard/PAPER_TRADING.md",
+          "ok": true,
+          "reason": "",
+          "size": 1837,
+          "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 | "
+        },
+        {
+          "path": "dashboard/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 10510817,
+          "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.merge-hero{display:block;margin:0 0 14px;padding:14px 16px;border-radius:12px;\nbackground:linear-gradient(180deg,#1a2744,#171e2e);border:1px solid #3b4d78;\ncolor:var(--fg);text-decoration:none}\n."
+        }
+      ],
+      "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-10-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-21T16:26:50.876665-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-21_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 6751,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-10-21_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3419,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-10-21\n**Generated:** 2026-10-21T16:26:50.850424-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher with Nasdaq leading as AI-driven gains in SpaceX and Super Micro lifted tech while energy eased on heating oil reserve loan plans ahead of Thursday\u2019s data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow +0.28%\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** +0.28%\n**Oil:** \u2014\n**CPI/Fed:** 5.0% cut (around 5% after its Q4 revenue forecast missed estimates and it cut)\n**Leaders:** SPCX, SMCI, NFLX, MMM, AMZN, TSLA, META, LRCX\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** LRCX\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-22\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-21\n**Generated:** 2026-10-21T16:26:50.850424-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher with Nasdaq leading as AI-driven gains in SpaceX and Super Micro lifted tech while energy eased on heating oil reserve loan plans ahead of Thursday\u2019s data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow +0.28%\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** +0.28%\n**Oil:** \u2014\n**CPI/Fed:** 5.0% cut (around 5% after its Q4 revenue forecast missed estimates and it cut)\n**Leaders:** SPCX, SMCI, NFLX, MMM, AMZN, TSLA, META, LRCX\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** LRCX\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-22\n**Clock use:** `next_open`"
     }
   ],
   "source": "publish_live_boards"
