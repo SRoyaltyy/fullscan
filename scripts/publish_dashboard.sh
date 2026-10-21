@@ -11,6 +11,7 @@
 # here: PAGES_OUT_DIR=<dir> publishes a prebuilt tree, and the push
 # retries with backoff instead of giving up after one 8s nap.
 set -uo pipefail
+PUBLISH_SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 
 export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
 export GIT_TERMINAL_PROMPT=0
@@ -91,15 +92,23 @@ for n in $(seq 1 "$ATTEMPTS"); do
   # The saved filing view is published separately and is absent from main.
   # Preserve it from the current remote tree on every retry, then use a lease
   # so a concurrent publisher cannot be silently overwritten.
-  if ! git -C "$TMP" fetch -q --depth=1 --filter=blob:none origin gh-pages; then
+  if ! remote_head=$(git -C "$TMP" ls-remote --heads origin refs/heads/gh-pages); then
     echo "[pages] WARN: cannot read current Pages tree; retaining the published site"
     sleep $((6 * n))
     continue
   fi
-  prior=$(git -C "$TMP" rev-parse FETCH_HEAD)
-  if ! python3 scripts/preserve_completed_parser_view.py --site "$TMP" --ref "$prior"; then
-    echo "[pages] ERROR: cannot preserve completed parser results; retaining the published site"
-    exit 1
+  prior=''
+  if [ -n "$remote_head" ]; then
+    if ! git -C "$TMP" fetch -q --depth=1 --filter=blob:none origin gh-pages; then
+      echo "[pages] WARN: cannot fetch current Pages tree; retaining the published site"
+      sleep $((6 * n))
+      continue
+    fi
+    prior=$(git -C "$TMP" rev-parse FETCH_HEAD)
+    if ! python3 "$PUBLISH_SCRIPT_DIR/preserve_completed_parser_view.py" --site "$TMP" --ref "$prior"; then
+      echo "[pages] ERROR: cannot preserve completed parser results; retaining the published site"
+      exit 1
+    fi
   fi
   git -C "$TMP" add -A
   if ! git -C "$TMP" diff --cached --quiet; then
