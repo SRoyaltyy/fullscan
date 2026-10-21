@@ -33877,18 +33877,119 @@
         "B7_OIL_DOLLAR": -0.5
       },
       "leading_sum": 4.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7736.43,
+      "actual_close": 7757.17,
+      "actual_pct_change": 0.58,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": -0.5,
+          "status": "miss"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.cnbc.com/2026/10/20/stock-market-today-live-updates.html",
+          "date_accessed": "2026-10-21",
+          "summary": "Confirms the exact closing levels and percentage changes for all three major indices, matching Channel 1.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.kitco.com/news/off-the-wire/2026-10-21/nasdaq-leads-wall-street-higher-close-spacex-super-micro-boost-ai",
+          "date_accessed": "2026-10-21",
+          "summary": "The primary attribution — AI-infra earnings beats drove the rally, offset by communications-services weakness.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-10-21-why-super-micro-smci-stock-is-trading-up-today",
+          "date_accessed": "2026-10-21",
+          "summary": "Confirms the magnitude and timing of the SMCI beat — the day's largest single positive surprise.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-21-2026/card/spacex-stock-rallies-tesla-rises-modestly-on-talk-of-merger-7YCAoR8I8ahCnvwshi7G",
+          "date_accessed": "2026-10-21",
+          "summary": "Confirms the SpaceX beat and merger narrative as a second independent positive shock.",
+          "verification": "http_401"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/21/inflation-uk-cpi-interest-rates.html",
+          "date_accessed": "2026-10-21",
+          "summary": "A genuine same-day macro surprise, but UK-domestic with weak US-equity transmission.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5BR2pXa1NRZ192RVh4d3Nmb3VRVkJTeWJSb1lJekVJd3RFNUZEcXdXZGNBX0R2eVBCTjlEVThfOTRoZTF0d01r0gFCQVVfeXFMTWNzRmJuTnViNzFqNGdPYWpwaWF5V2pkUVhlaTRNZ2wzWDdxT3ZicTg1QUJFb3NKNVlCb0hqQkJlbndn",
+          "date_accessed": "2026-10-21",
+          "summary": "The day's key divergence — a live negative catalyst that failed to transmit to its own asset class.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcHhGM2c3VFZ6SjkxU1hNZjBQZ2E5NkJjc2ljSTBNX21kak8zQmxGV3RxREd5NWxRTWYwQWV1RmIyZWdqc0FuSXBoWXBmeGRGdkRHbVRpNTlHaTBGVVpPa3lVSDBKYkpxejd6MkRVRi1qMktCbUpzTTJqTHRIMTdkZlc0bGVIbW9lZkxaSTZRUUtHM0N2ZDJENzBGRnhTQjdaT2c4WEw1cm9vTXdzWkd6OU5KQW4",
+          "date_accessed": "2026-10-21",
+          "summary": "The main offsetting negative — a profit beat overwhelmed by a guide cut.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.riotimesonline.com/global-economy-briefing-october-21-2026/",
+          "date_accessed": "2026-10-21",
+          "summary": "Cross-asset confirmation — vol collapse, softer dollar, and lower yields all consistent with a risk-on, rates-easing session.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.wsj.com/economy/housing/u-s-housing-starts-dropped-again-in-september-808c2f3d",
+          "date_accessed": "2026-10-21",
+          "summary": "A T−1 data miss that, under the bad-news-good regime, became a rates tailwind rather than an equity headwind.",
+          "verification": "http_401"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -33918,7 +34019,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 1.719,
-      "overlay_score": 2.925
+      "overlay_score": 2.925,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": null,
+      "key_interaction": null,
+      "knowable_at_9am": null,
+      "attribution_contested": null,
+      "outlier_watch": null
     }
   ]
 }
