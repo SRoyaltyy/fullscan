@@ -4,6 +4,13 @@ Self-improving US-market direction predictor running on GitHub Actions.
 (Companion to the data collectors in this repo — the prediction pipeline
 reads the `news` and `macro_indicators` tables those collectors maintain.)
 
+**09:30 BUY/SELL operator map (current clocks, skip-if-good, I/O):**
+[`00_grounding/DAILY_0930.md`](00_grounding/DAILY_0930.md).
+The table below is the old predictor-loop sketch. Individual
+`outcome` / `learn_cycle` / `map_heat_postclose` crons are commented
+out; Post-Close ALL + ECS 22:00 own the night pack. Pre-Open ALL has
+**no** GitHub schedule — ECS systemd 05:55 starts it.
+
 ## Daily cycle (Mon–Fri, America/New_York)
 
 | Time | Stage | What happens |
