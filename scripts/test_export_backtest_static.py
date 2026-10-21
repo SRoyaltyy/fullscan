@@ -9,6 +9,24 @@ from scripts import export_backtest_static as export
 
 
 class ExportTests(unittest.TestCase):
+    def test_cached_article_parse_is_complete_and_bound_to_the_scored_headline(self):
+        import hashlib
+        value='DraftKings faces regulations'
+        parsed={'input_sha256':hashlib.sha256(value.encode()).hexdigest(),'parser':{'model':'pinned'},
+            'mentions':[{'start':0,'end':10,'text':'DraftKings','label':'ORG'}],
+            'noun_phrases':[{'start':0,'end':10,'text':'DraftKings','head':0}],
+            'syntax':[{'start':0,'end':10,'text':'DraftKings','lemma':'DraftKings','pos':'PROPN','dependency':'nsubj','head':1},
+                      {'start':11,'end':16,'text':'faces','lemma':'face','pos':'VERB','dependency':'ROOT','head':1},
+                      {'start':17,'end':28,'text':'regulations','lemma':'regulation','pos':'NOUN','dependency':'dobj','head':1}]}
+        article={'id':'one','text':value,'input_mode':'headline','entity_annotations':parsed}
+        result=export.export_articles([article],5)[0]
+        self.assertEqual(result['text'],value)
+        self.assertFalse(result['truncated'])
+        self.assertEqual(len(result['article_parse']['syntax']),3)
+        self.assertEqual(result['article_parse']['input_sha256'],parsed['input_sha256'])
+        parsed['input_sha256']='wrong'
+        with self.assertRaisesRegex(ValueError,'scored text'):export.export_articles([article],5)
+
     def test_compact_export_retains_all_keywords_and_evidence_without_raw_graph_copy(self):
         import gzip,hashlib
         from types import SimpleNamespace

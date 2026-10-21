@@ -29,6 +29,22 @@ assert.match(elements.get('snapshot').textContent, /1\/5961/);
 vm.runInContext('renderArticle({id:"test",title:"headline",text:"headline",input_mode:"headline"})', context);
 assert.match(elements.get('textbadge').textContent, /primary headline only/);
 console.log('Page JavaScript, historical-cache warning, source coverage, and headline state passed.');
+context.grammarArticle={id:'grammar',text:'DraftKings faces rules',input_mode:'headline',article_parse:{
+  input_sha256:'a'.repeat(64),parser:{spacy:'3.8.11',model:'en_core_web_sm',model_version:'3.8.0'},
+  mentions:[{start:0,end:10,label:'ORG'}],noun_phrases:[{start:0,end:10,head:0},{start:17,end:22,head:2}],
+  syntax:[{start:0,end:10,lemma:'DraftKings',pos:'PROPN',dependency:'nsubj',head:1},
+          {start:11,end:16,lemma:'face',pos:'VERB',dependency:'ROOT',head:1},
+          {start:17,end:22,lemma:'rule',pos:'NOUN',dependency:'dobj',head:1}]}};
+vm.runInContext('current=grammarArticle;renderSpacy(current.id)',context);
+assert.equal(elements.get('spacy').hidden,false);
+assert.match(elements.get('spacy-cluster').textContent,/en_core_web_sm/);
+assert.ok(elements.get('spacy-body').children.some(e=>e.textContent==='DraftKings → face → rules'));
+vm.runInContext('staticMeta={snapshot:{filing_coverage:{scope:"deep_filing_relationships",covered_tickers:["BLZE"]}}};selectedTicker="BLZE";lastPairResult={passes:[],keyword_comparison:{matches:[],unresolved_matches:[],rejected_matches:[]}};renderSelectedPair()',context);
+assert.match(elements.get('stock-article-pair').textContent,/SEC-backed stock/);
+assert.match(elements.get('stock-article-pair').textContent,/No aligned keyword evidence/);
+vm.runInContext('selectedTicker="AAPL";renderSelectedPair()',context);
+assert.match(elements.get('stock-article-pair').textContent,/No complete SEC graph/);
+console.log('Cached article grammar and stock/article pair coverage are visible without a stock pass.');
 const packed = gzipSync(JSON.stringify({facts: [{predicate: 'buys_from', object: 'Example Supplier'}]}));
 context.crypto = webcrypto;
 context.Blob = Blob;

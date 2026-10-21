@@ -56,8 +56,12 @@ textarea{width:100%;min-height:110px;background:#0f172a;color:var(--text);border
   <input type="text" id="ticker" list="tickerlist" placeholder="TICKER e.g. BB" maxlength="8">
   <datalist id="tickerlist"></datalist>
   <button type="button" id="analyze" class="secondary" disabled>Analyze ticker</button>
+  <button type="button" id="random-stock" class="secondary" disabled>Random stock</button>
+  <label><input type="checkbox" id="sec-only" checked> SEC-covered stocks only</label>
   <span class="muted" id="ticker-hint">stock-side profile: what the engine knows</span>
 </div>
+<p class="muted" id="stock-pool"></p>
+<p id="stock-article-pair">Choose a stock and test an article to inspect that pair.</p>
 <article class="card" id="article">
   <h2 id="title">Fetching an article…</h2>
   <p class="muted" id="meta"></p>
@@ -72,14 +76,14 @@ textarea{width:100%;min-height:110px;background:#0f172a;color:var(--text);border
 </section>
 <section class="card">
   <h2>Compare any article to stock keywords</h2>
-  <p class="muted">Paste a headline or full article. This finds labelled stock relationships, not bullish/bearish conclusions or automatic stock passes. Custom comparisons use the displayed filing cutoff; dated intake tests exclude future filing evidence.</p>
+  <p class="muted">Custom text uses browser-only matching, without the pinned spaCy parser or article-role analysis. Use the intake article draws to test the full cached Python/spaCy path. Custom comparisons use the displayed filing cutoff; dated intake tests exclude future filing evidence.</p>
   <textarea id="keyword-text" aria-label="Article text to compare" placeholder="Western Digital faces hard-drive supply disruption"></textarea>
   <button type="button" id="compare-keywords">Compare keywords</button>
   <div id="custom-keywords"></div>
 </section>
 <section class="card" id="spacy" hidden>
   <h2>spaCy analysis <span class="badge" id="spacy-cluster"></span></h2>
-  <p class="muted">Exploratory dependency parsing and theme clusters, separate from the evidence engine's pass decisions. Historical parses may include article bodies.</p>
+  <p class="muted" id="spacy-note">Pinned article grammar from the scored text. Context-universe resolution remains unfinished.</p>
   <div id="spacy-body"></div>
 </section>
 <section class="card" id="profile" hidden>
@@ -109,6 +113,7 @@ let staticMeta = null;
 let rngState = null;       // {seed, n}
 let staticProfiles = null; // ticker -> profile (lazy)
 let tickerIndex = null;    // ticker -> [{id, decision, tier, reasons}] (lazy)
+let selectedTicker = "", lastPairResult = null;
 const DEFAULT_SEED = 1722;
 
 function text(id, value) {
@@ -131,6 +136,40 @@ function renderSnapshot(snapshot) {
     (tickers.length && tickers.length <= 10 ? ` · ${tickers.join(", ")}` : tickers.length ? "" : " · description-only") +
     (deep ? " · missing relationships remain unknown" : " · full filing-business coverage: not established") +
     (snapshot.profile_publication?.dataset_scope === "development_sample" ? " · DEVELOPMENT SAMPLE ONLY — whole-archive recovery is still running" : ""));
+  renderStockPool();
+}
+
+function coveredStockPool() {
+  const coverage=staticMeta?.snapshot?.filing_coverage;
+  return coverage?.scope==="deep_filing_relationships" ? coverage.covered_tickers || [] : [];
+}
+
+function renderStockPool() {
+  const covered=coveredStockPool();
+  text("stock-pool",`SEC-covered stock pool: ${covered.length}${covered.length<=10 ? " ("+covered.join(", ")+")" : ""}. Uncheck SEC-only to draw from all catalog stocks; those without filings cannot test full stock-side extraction.`);
+}
+
+function renderSelectedPair() {
+  if (!selectedTicker) return;
+  const covered=coveredStockPool().includes(selectedTicker);
+  const scope=covered ? "SEC-backed stock" : "No complete SEC graph for this stock in this snapshot";
+  if (!lastPairResult) {text("stock-article-pair",`${selectedTicker} · ${scope}. Press Test for the current article.`);return;}
+  const comparison=lastPairResult.keyword_comparison;
+  if (!comparison) {text("stock-article-pair",`${selectedTicker} · ${scope}. This snapshot has no comparable keyword output.`);return;}
+  const hits=(comparison.matches || []).filter(r=>r.stock===selectedTicker);
+  const unresolved=(comparison.unresolved_matches || []).filter(r=>r.stock===selectedTicker).length;
+  const rejected=(comparison.rejected_matches || []).filter(r=>r.stock===selectedTicker).length;
+  const direct=(lastPairResult.passes || []).some(r=>r.ticker===selectedTicker);
+  text("stock-article-pair",`${selectedTicker} × article ${current?.id || ""} · ${scope} · engine pass: ${direct ? "yes" : "no"} · ${hits.length} aligned keyword candidates; ${unresolved} unresolved; ${rejected} rejected.`+(hits.length ? " "+hits.map(r=>`${r.relationship} → ${r.keyword}`).join("; ") : " No aligned keyword evidence for this pair; this does not prove no exposure exists."));
+}
+
+async function randomStock() {
+  if (!(await loadProfiles())) return;
+  const pool=document.getElementById("sec-only").checked ? coveredStockPool().filter(t=>staticProfiles[t]) : Object.keys(staticProfiles);
+  if (!pool.length) {text("stock-pool","No SEC-covered stocks are available in this snapshot.");return;}
+  const ticker=pool[Math.floor(Math.random()*pool.length)];
+  document.getElementById("ticker").value=ticker;
+  await showTickerProfile(ticker);
 }
 
 // mulberry32: tiny deterministic PRNG so draws are reproducible and
@@ -160,6 +199,8 @@ function showDrawNo(index) {
 }
 
 function renderArticle(article) {
+  lastPairResult=null;
+  renderSelectedPair();
   current = article;
   text("title", article.title || "(untitled)");
   const bits = [article.source, article.published_at].filter(Boolean);
@@ -222,6 +263,8 @@ async function loadArticle() {
 }
 
 function renderMatches(result) {
+  lastPairResult=result;
+  renderSelectedPair();
   renderKeywordComparison(document.getElementById("article-keywords"), result.keyword_comparison);
   const box = document.getElementById("results");
   box.hidden = false;
@@ -372,10 +415,42 @@ async function loadStatic() {
   document.getElementById("another").disabled = false;
   document.getElementById("test").disabled = false;
   document.getElementById("analyze").disabled = false;
+  document.getElementById("random-stock").disabled = false;
 }
 
 function renderSpacy(id) {
   const box = document.getElementById("spacy");
+  const parsed=current?.article_parse;
+  if (parsed && String(current.id)===String(id)) {
+    box.hidden=false;
+    const model=parsed.parser || {};
+    text("spacy-cluster",`spaCy ${model.spacy || "unrecorded"} · ${model.model || "unrecorded"} ${model.model_version || ""}`);
+    text("spacy-note",`Exact scored ${current.input_mode || "headline"} · input hash ${parsed.input_sha256.slice(0,16)}. These are parser observations; concept senses and impact relevance remain unresolved.`);
+    const body=document.getElementById("spacy-body");body.replaceChildren();
+    const value=current.text || "", token=parsed.syntax || [], phrase=i=>{
+      const p=parsed.noun_phrases.find(p=>p.head===i) || token[i];
+      return p ? value.slice(p.start,p.end) : "";
+    };
+    function group(label,rows,render) {
+      const title=document.createElement("p");title.textContent=`${label} (${rows.length})`;body.append(title);
+      appendPaged(body,rows,row=>{const p=document.createElement("p");p.textContent=render(row);return p;});
+    }
+    group("Named entities",parsed.mentions,e=>`${value.slice(e.start,e.end)} · ${e.label} · characters ${e.start}–${e.end}`);
+    group("Noun phrases",parsed.noun_phrases,p=>`${value.slice(p.start,p.end)} · characters ${p.start}–${p.end}`);
+    const triples=[];
+    token.forEach((verb,i)=>{
+      if (!["VERB","AUX"].includes(verb.pos)) return;
+      const subjects=token.map((t,j)=>({t,j})).filter(({t})=>t.head===i && ["nsubj","nsubjpass","csubj"].includes(t.dependency));
+      const objects=token.map((t,j)=>({t,j})).filter(({t})=>t.head===i && ["dobj","obj","attr","oprd"].includes(t.dependency));
+      for (const s of subjects) for (const o of objects) triples.push(`${phrase(s.j)} → ${verb.lemma} → ${phrase(o.j)}`);
+    });
+    group("Observed subject → verb → object",triples,x=>x);
+    const detail=document.createElement("details"), summary=document.createElement("summary");
+    summary.textContent=`Full dependency parse (${token.length} tokens)`;detail.append(summary);
+    appendPaged(detail,token,t=>{const p=document.createElement("p");p.textContent=`${value.slice(t.start,t.end)} · ${t.pos} · ${t.dependency} → ${phrase(t.head)}`;return p;});
+    body.append(detail);
+    return;
+  }
   const row = spacyResults.get(String(id));
   if (!row || (staticMeta && staticMeta.snapshot)) { box.hidden = true; return; }
   box.hidden = false;
@@ -895,6 +970,8 @@ async function showTickerProfile(rawTicker) {
   const request = ++activeProfileRequest;
   const ticker = String(rawTicker || "").trim().toUpperCase();
   if (!ticker) return;
+  selectedTicker=ticker;
+  renderSelectedPair();
   if (mode !== "live" && !(await loadProfiles())) return;
   const box = document.getElementById("profile");
   box.hidden = false;
@@ -1089,6 +1166,7 @@ document.getElementById("analyze").addEventListener("click", () => {
 document.getElementById("ticker").addEventListener("keydown", (e) => {
   if (e.key === "Enter") showTickerProfile(document.getElementById("ticker").value);
 });
+document.getElementById("random-stock").addEventListener("click",randomStock);
 poll().then(() => loadArticle());
 </script>
 </body>
