@@ -1,7 +1,7 @@
 {
   "date": "2026-10-21",
   "policy": "flatten_robust",
-  "generated": "2026-10-21T15:24:49",
+  "generated": "2026-10-21T18:12:48",
   "cash": 111312.75,
   "io": [
     {
@@ -12,10 +12,10 @@
       "entry_date": "2026-10-16",
       "last_px": 258.69,
       "yday_px": 258.69,
-      "open_px": 267.74,
-      "overnight": 72.4,
-      "pct": 3.498,
-      "mv": 2141.92,
+      "open_px": 268.515,
+      "overnight": 78.6,
+      "pct": 3.798,
+      "mv": 2148.12,
       "exit_date": "2026-10-21",
       "reason": ""
     }
