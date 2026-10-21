@@ -10,6 +10,32 @@ from scripts.publish_scanner_snapshot import artifact_names
 
 
 class SnapshotPublishTests(unittest.TestCase):
+    def test_sparse_publisher_preserves_unrelated_missing_blobs_without_fetching_them(self):
+        def git(cwd,*args):
+            return subprocess.check_output(['git',*args],cwd=cwd,text=True,stderr=subprocess.DEVNULL).strip()
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);remote=root/'remote.git';work=root/'work';clone=root/'sparse'
+            git(root,'init','--bare',str(remote));git(remote,'config','uploadpack.allowFilter','true')
+            work.mkdir();git(work,'init','-b','main');git(work,'config','user.name','test');git(work,'config','user.email','test@example.test')
+            (work/'unrelated.bin').write_text('unrelated large blob '*10000)
+            git(work,'add','.');git(work,'commit','-m','upstream');source=git(work,'rev-parse','HEAD')
+            git(work,'remote','add','origin',str(remote));git(work,'push','origin','main')
+            git(root,'clone','--filter=blob:none','--no-checkout','--branch','main',remote.as_uri(),str(clone))
+            before=git(clone,'rev-list','--objects','--missing=print','HEAD')
+            self.assertTrue(any(line.startswith('?') for line in before.splitlines()),before)
+            out=root/'snapshot';self.fixture(out,source)
+            old=Path.cwd()
+            try:
+                os.chdir(clone)
+                with patch.dict(os.environ,{'GIT_NO_LAZY_FETCH':'1'}):landed=publish(out,source)
+            finally:os.chdir(old)
+            after=git(clone,'rev-list','--objects','--missing=print',landed)
+            self.assertEqual({line for line in before.splitlines() if line.startswith('?')},
+                             {line for line in after.splitlines() if line.startswith('?')})
+            upstream_blob=git(work,'rev-parse',source+':unrelated.bin')
+            self.assertIn(upstream_blob,git(clone,'ls-tree',landed,'unrelated.bin'))
+            self.assertEqual(git(remote,'rev-parse','main'),landed)
+
     def test_page_can_use_immutable_repository_assets_when_other_site_content_fills_pages(self):
         from scripts.publish_scanner_snapshot import stage_page
         with tempfile.TemporaryDirectory() as directory:
