@@ -2857,6 +2857,70 @@
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "39649627746",
       "manifest": "research/input_freeze/2026-10-21/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-21_stock_book.md",
+      "at": "2026-10-21T14:12:46-04:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "39649627746",
+      "manifest": "research/input_freeze/2026-10-21/manifest.json"
+    },
+    {
+      "path": "01_daily/_channel1/2026-10-21_predict.json",
+      "at": "2026-10-21T14:12:46-04:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "39649627746",
+      "manifest": "research/input_freeze/2026-10-21/manifest.json"
+    },
+    {
+      "path": "01_daily/weather/2026-10-21_weather.json",
+      "at": "2026-10-21T14:12:46-04:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "39649627746",
+      "manifest": "research/input_freeze/2026-10-21/manifest.json"
+    },
+    {
+      "path": "data/join/2026-10-21_ranked.csv",
+      "at": "2026-10-21T14:12:46-04:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "39649627746",
+      "manifest": "research/input_freeze/2026-10-21/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-21_green.json",
+      "at": "2026-10-21T14:12:46-04:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "39649627746",
+      "manifest": "research/input_freeze/2026-10-21/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-21_input_health.json",
+      "at": "2026-10-21T14:12:46-04:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "39649627746",
+      "manifest": "research/input_freeze/2026-10-21/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-21_stock_book.json",
+      "at": "2026-10-21T14:12:46-04:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "39649627746",
+      "manifest": "research/input_freeze/2026-10-21/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-21_suggestions.json",
+      "at": "2026-10-21T14:12:46-04:00",
+      "commit_msg": "auto: stock book leftover sweep",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "39649627746",
+      "manifest": "research/input_freeze/2026-10-21/manifest.json"
     }
   ]
 }
