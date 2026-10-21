@@ -165,14 +165,14 @@
         "hormuz_energy_risk"
       ],
       "entry_date": "2026-10-21",
-      "entry_open": 201.24,
+      "entry_open": 202.36,
       "window_through": "2026-10-21",
       "trading_days_elapsed": 0,
       "complete": false,
       "latest_close": 200.93,
-      "current_return_pct": -0.15,
+      "current_return_pct": -0.71,
       "horizon_returns_pct": {},
-      "mfe_pct": 1.06,
+      "mfe_pct": 0.5,
       "mfe_day": "2026-10-21",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-21"
@@ -319,14 +319,14 @@
         "hormuz_energy_risk"
       ],
       "entry_date": "2026-10-21",
-      "entry_open": 12.2,
+      "entry_open": 12.19,
       "window_through": "2026-10-21",
       "trading_days_elapsed": 0,
       "complete": false,
       "latest_close": 12.235,
-      "current_return_pct": -0.29,
+      "current_return_pct": -0.37,
       "horizon_returns_pct": {},
-      "mfe_pct": 1.5,
+      "mfe_pct": 1.41,
       "mfe_day": "2026-10-21",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-21"
@@ -1639,14 +1639,14 @@
         "ai_chip_demand_spike"
       ],
       "entry_date": "2026-10-21",
-      "entry_open": 1680.53,
+      "entry_open": 1679.76,
       "window_through": "2026-10-21",
       "trading_days_elapsed": 0,
       "complete": false,
       "latest_close": 1676.6899,
-      "current_return_pct": -0.23,
+      "current_return_pct": -0.18,
       "horizon_returns_pct": {},
-      "mfe_pct": 0.43,
+      "mfe_pct": 0.48,
       "mfe_day": "2026-10-21",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-21"
@@ -2551,7 +2551,7 @@
         "n": 70,
         "wins": 70,
         "win_rate": 100.0,
-        "avg": 1.18
+        "avg": 1.17
       },
       "close_5d": null
     },

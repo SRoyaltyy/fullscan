@@ -1,6 +1,6 @@
-# Learnings report — 2026-10-21
+# Learnings report — 2026-10-20
 
-Generated: **2026-10-21T16:38:26.943462-04:00** by `src/learn_cycle.py`.
+Generated: **2026-10-21T19:28:20.399244-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -18,7 +18,7 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Lessons promoted to active | 0 |
 | Lessons retired (efficacy-gated) | 10 |
 | Active lesson files now | 211 |
-| Engine policy version | 109 |
+| Engine policy version | 110 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
@@ -81,7 +81,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 ### `news` — 0 wins, 1 losses
 
 #### LOSS — news
-- **When:** [news] Global 1d close win rate 52.4% (n=3066).
+- **When:** [news] Global 1d close win rate 52.5% (n=3071).
 - **Ask:** Entry timing, side mix, or event taxonomy noise?
 - **Experiment:** [news] Raise min net weight to map a ticker; drop weak edges.
 - **Do instead:** [news] Only emit actions with |net| above a higher floor.
@@ -533,7 +533,7 @@ Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S2_BREADTH: n=173 sign-hit=0.57 → ×1.0
 - S3_FLOWS_POSITIONING: n=122 sign-hit=0.49 → ×0.5
 - S4_ETF_TAPE: n=187 sign-hit=0.58 → ×1.0
-Last change: general.B0_ASIA: 0.5 -> 1.0 (n=27, hit=0.556)
+Last change: hold
 
 Progress vs baselines: `03_scoreboard/IMPROVEMENT_TRACKER.md`.
 
@@ -585,7 +585,7 @@ Progress vs baselines: `03_scoreboard/IMPROVEMENT_TRACKER.md`.
 | File | Role |
 |------|------|
 | `03_scoreboard/LEARNINGS.md` | This digest (latest) |
-| `01_daily/2026-10-21_learnings.md` | Dated copy |
+| `01_daily/2026-10-20_learnings.md` | Dated copy |
 | `00_grounding/mutable_policy.md` | Injected into general + sector predict |
 | `02_lessons/hypotheses/*` | Per-event experiments |
 | `02_lessons/active/*` | Standing rules |
