@@ -1,12 +1,6 @@
 {
-  "updated_at": "2026-10-21T16:27:05-04:00",
+  "updated_at": "2026-10-21T16:34:20-04:00",
   "runs": [
-    {
-      "date": "2026-10-15",
-      "workflow": "supergrok_ping",
-      "file": "2026-10-15_supergrok_ping.json",
-      "updated_at": "2026-10-15T10:13:27-04:00"
-    },
     {
       "date": "2026-10-15",
       "workflow": "webull_paper",
@@ -240,6 +234,12 @@
       "workflow": "homepage_digest",
       "file": "2026-10-21_homepage_digest.json",
       "updated_at": "2026-10-21T16:27:05-04:00"
+    },
+    {
+      "date": "2026-10-21",
+      "workflow": "postclose",
+      "file": "2026-10-21_postclose.json",
+      "updated_at": "2026-10-21T16:34:20-04:00"
     }
   ]
 }
