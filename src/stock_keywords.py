@@ -57,6 +57,13 @@ def compile_keywords(graph, *, as_of, ticker=None):
     ticker = ticker or graph['ticker']
     sources = {s['id']:s for s in graph['sources']}
     evidence, records = {}, {}
+    inventory=graph.get('term_inventory')
+    allowed_sources={s['id'] for s in sources.values() if s.get('filing_date') and s['filing_date']<=as_of}
+    terms=[t for t in (inventory or {}).get('terms',[]) if t['source_id'] in allowed_sources]
+    term_dates={t['id']:sources[t['source_id']]['filing_date'] for t in terms}
+    term_links=defaultdict(list)
+    for term in terms:
+        for link in term['relationships']:term_links[link['relationship_id']].append(term['id'])
     newest = {}
     for fact in graph['facts']:
         key = (fact['predicate'], fact['object'].casefold(), fact['object_type'])
@@ -86,7 +93,8 @@ def compile_keywords(graph, *, as_of, ticker=None):
         if not witnesses:
             continue
         evidence[fact['id']] = {'subject':ticker,'predicate':fact['predicate'],'object':fact['object'],
-            'object_type':fact['object_type'],'assertion':fact['status'], 'witnesses':witnesses}
+            'object_type':fact['object_type'],'assertion':fact['status'], 'witnesses':witnesses,
+            'term_occurrence_ids':sorted(set(term_links[fact['id']]))}
         key = (fact['predicate'],fact['object'].casefold(),fact['object_type'])
         current = newest[key][1] == fact['id']
         role = ROLES.get(fact['predicate'],'unclassified_relationship')
@@ -138,11 +146,18 @@ def compile_keywords(graph, *, as_of, ticker=None):
         row['id'] = hashlib.sha256(json.dumps([key,row['evidence_ids']],sort_keys=True).encode()).hexdigest()
         dates = [w['source']['filing_date'] for ref in row['evidence_ids'] for w in evidence[ref]['witnesses']]
         row['first_filing_date'], row['latest_filing_date'] = min(dates), max(dates)
+        row['term_occurrence_ids']=sorted({ident for ref in row['evidence_ids']
+            for ident in evidence[ref].get('term_occurrence_ids',[])})
+        row['term_occurrence_dates']={ident:term_dates[ident] for ident in row['term_occurrence_ids']}
         rows.append(row)
     return {'schema':SCHEMA,'as_of':as_of,'records':rows,'evidence':evidence,
+        'term_inventory':None if inventory is None else {**inventory,'terms':terms,
+            'windows':[w for w in inventory['windows'] if w['source_id'] in allowed_sources]},
         'coverage':{'raw_relationships':len(graph['facts']),
             'retained_relationships':sum(not k.startswith('paragraph:') for k in evidence),
             'keywords':len(rows),'review_required':sum(r['review_required'] for r in rows),
+            'term_inventory_available':inventory is not None,'term_occurrences':len(terms),
+            'terms_without_resolved_relationship':sum(not t['relationships'] for t in terms),
             'paragraph_coverage':graph.get('coverage',{})}}
 
 
@@ -238,6 +253,8 @@ class KeywordIndex:
 
     def compare(self, text, *, article_date='', entity_annotations=None):
         annotations = validate_annotations(text,entity_annotations)
+        from .term_inventory import validate_article_terms
+        article_terms=validate_article_terms(text,entity_annotations)
         tokens = list(TOKEN.finditer(text or ''))
         words = [lemma(t.group()) for t in tokens]
         hits, named = [], set()
@@ -274,11 +291,21 @@ class KeywordIndex:
             peers=[p for p in self.entity_peers[phrase] if not article_date or p.get('known_from','')<=article_date]
             alignment = decide(source_identity,text,start,end,peers=peers,annotations=annotations)
             candidate = {**row,'identity':source_identity,'alignment':alignment,'article_span':{'start':start,'end':end,'text':text[start:end]}}
+            mentions=[t for t in article_terms if t['start']<=start and t['end']>=end]
+            if mentions:
+                mention=min(mentions,key=lambda t:t['end']-t['start'])
+                candidate['article_capacity']={**mention['capacity'],'context':mention['context']}
+            if row['relationship'] in ENTITY_ROLES-{'issuer'}:
+                candidate['exposure_path']={'stock':row['stock'],'relationship':row['relationship'],
+                    'entity':row['keyword'],'entity_id':source_identity['id'],'order':2,
+                    'core_industry_inferred':False,'context_alignment':'not_assessed','impact':'not_inferred'}
             if article_date:
                 pool=self.profiles[row['stock']].keyword_evidence
                 refs=[ref for ref in row['evidence_ids'] if any(w['source']['filing_date']<=article_date for w in pool[ref]['witnesses'])]
                 dates=[w['source']['filing_date'] for ref in refs for w in pool[ref]['witnesses'] if w['source']['filing_date']<=article_date]
                 candidate.update(evidence_ids=refs,first_filing_date=min(dates),latest_filing_date=max(dates))
+                candidate['term_occurrence_dates']={ident:date for ident,date in row.get('term_occurrence_dates',{}).items() if date<=article_date}
+                candidate['term_occurrence_ids']=sorted(candidate['term_occurrence_dates'])
             if alignment['status'] != 'resolved':
                 (rejected if alignment['status']=='rejected' else unresolved).append(candidate)
                 continue

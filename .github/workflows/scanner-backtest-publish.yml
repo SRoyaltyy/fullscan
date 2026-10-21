@@ -9,6 +9,7 @@ on:
       - 'src/stock_keywords.py'
       - 'src/stock_keyword_store.py'
       - 'src/entity_resolution.py'
+      - 'src/term_inventory.py'
       - 'scripts/annotate_article_entities.py'
       - 'scripts/publish_filing_objects.py'
       - 'src/filing*.py'
