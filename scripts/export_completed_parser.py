@@ -67,9 +67,9 @@ def project(graph):
 
 
 def export(root, out, *, expected_compiler=COMPILER, expected_companies=2026,
-           expected_tickers=2032, expected_facts=754258, viewer_revision=''):
+           expected_tickers=2032, expected_facts=754258, viewer_revision='', read_bytes=None):
     root, out = Path(root).resolve(), Path(out)
-    raw_index = (root/'index.json').read_bytes()
+    raw_index = read_bytes('index.json') if read_bytes else (root/'index.json').read_bytes()
     index = json.loads(raw_index)
     if not index.get('complete') or index['compiler_sha256'] != expected_compiler:
         raise ValueError('not the pinned completed extraction')
@@ -85,7 +85,7 @@ def export(root, out, *, expected_compiler=COMPILER, expected_companies=2026,
             path = (root/entry['path']).resolve()
             if not path.is_relative_to(root) or path.is_symlink():
                 raise ValueError('unsafe archived profile path')
-            raw = path.read_bytes()
+            raw = read_bytes(entry['path']) if read_bytes else path.read_bytes()
             if hashlib.sha256(raw).hexdigest() != entry['sha256']:
                 raise ValueError('archived profile checksum mismatch')
             graph = json.loads(gzip.decompress(raw))
@@ -123,6 +123,63 @@ def export(root, out, *, expected_compiler=COMPILER, expected_companies=2026,
         raise ValueError('complete review exceeds publication budget; no records were truncated')
     (out/'manifest.json').write_bytes(data)
     return manifest
+
+
+def export_saved_zip(out, *, repository='SRoyaltyy/fullscan'):
+    """Read the pinned ZIP directly, repairing missing members from saved shards.
+
+    The source archive is never re-extracted with NLP. A directory preflight
+    runs before a large transfer; each recovered member must match the combined
+    index's original hash in export(). No source failure permits dropping rows.
+    """
+    import contextlib
+    import os
+    import sys
+    import tempfile
+    import time
+    import zipfile
+    sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+    from scripts.materialize_filing_texts import RangeReader, http_fetcher, signed_artifact_url
+    from scripts.resilient_filing_texts import download_zip
+    shard_ids=[12294494078,12296274014,12317308763,12295757333,12293787917,
+        12303678823,12306729150,12306801305,12310477973,12318594086,12321334237,12319619063]
+    with contextlib.ExitStack() as stack:
+        def remote(ident):
+            url=signed_artifact_url(repository,ident)
+            def fetch(start,end):
+                nonlocal url
+                for attempt in range(3):
+                    try:return http_fetcher(url)(start,end)
+                    except RuntimeError:
+                        if attempt==2:raise
+                        time.sleep(2**attempt)
+                        url=signed_artifact_url(repository,ident)
+            reader=stack.enter_context(RangeReader(fetch))
+            return stack.enter_context(zipfile.ZipFile(reader))
+        preflight=remote(ARTIFACT)
+        index=json.loads(preflight.read('index.json'))
+        if not index.get('complete') or index.get('compiler_sha256')!=COMPILER or len(index['profiles'])!=2032 or index['totals']['facts']!=754258:
+            raise ValueError('ZIP directory is not the pinned completed extraction')
+        expected={entry['path'] for entry in index['profiles'].values()}
+        missing=expected-set(preflight.namelist())
+        print(json.dumps({'archive_profiles':len(expected),'missing_zip_members':len(missing)}),flush=True)
+        repairs={}
+        if missing:
+            for ident in shard_ids:
+                archive=remote(ident)
+                found=missing&set(archive.namelist())
+                for name in found:repairs[name]=archive
+                missing-=found
+                if not missing:break
+            if missing:raise ValueError('completed source shards cannot supply '+str(len(missing))+' indexed profiles')
+        with tempfile.TemporaryDirectory(prefix='completed-parser-zip-',dir=Path(out).parent) as temporary:
+            path=download_zip(lambda:signed_artifact_url(repository,ARTIFACT),Path(temporary)/'profiles.zip',
+                expected_sha256='aae0057b4c74187702daf97e541c9fbdc450196d9906b10a7951d250dfc56593')
+            with zipfile.ZipFile(path) as archive:
+                def read(name):
+                    if name in repairs:return repairs[name].read(name)
+                    return archive.read(name)
+                return export('.',out,read_bytes=read,viewer_revision=os.environ.get('GITHUB_SHA',''))
 
 
 def publish_assets(directory):
@@ -168,12 +225,17 @@ def publish_assets(directory):
 if __name__ == '__main__':
     import os
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--profiles',type=Path,required=True)
+    p.add_argument('--profiles',type=Path)
+    p.add_argument('--saved-zip',action='store_true')
     p.add_argument('--out',type=Path,required=True)
     p.add_argument('--publish-assets',action='store_true')
     a=p.parse_args()
     if a.publish_assets:
         print('Retained completed review assets at '+publish_assets(a.out))
+    elif a.saved_zip:
+        result=export_saved_zip(a.out)
+        print(json.dumps(result['published']))
     else:
+        if not a.profiles:p.error('--profiles or --saved-zip is required')
         result=export(a.profiles,a.out,viewer_revision=os.environ.get('GITHUB_SHA',''))
         print(json.dumps(result['published']))

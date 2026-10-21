@@ -1,6 +1,6 @@
 import hashlib
 import unittest
-from scripts.export_completed_parser import project, publish_assets
+from scripts.export_completed_parser import project, publish_assets, export
 
 
 class CompletedReview(unittest.TestCase):
@@ -65,6 +65,21 @@ class CompletedReview(unittest.TestCase):
             self.assertEqual(git('rev-parse',second+'^'),first)
             self.assertEqual(git('show',second+':profiles/0001462056.json.gz'),'second')
             self.assertIn(second,json.loads((data/'manifest.json').read_text())['asset_base_url'])
+
+    def test_zip_members_are_read_without_relying_on_an_unpacked_directory(self):
+        import gzip,io,json,tempfile,zipfile
+        from pathlib import Path
+        graph=self.graph();raw=gzip.compress(json.dumps(graph).encode())
+        name='issuers/0001462056.json.gz'
+        index={'complete':True,'schema':graph['schema'],'compiler_sha256':'old','as_of':graph['as_of'],
+            'totals':{'companies':1,'facts':1},'profiles':{'BLZE':{'path':name,'cik':'0001462056','facts':1,'sha256':hashlib.sha256(raw).hexdigest()}}}
+        data=io.BytesIO()
+        with zipfile.ZipFile(data,'w') as archive:
+            archive.writestr('index.json',json.dumps(index));archive.writestr(name,raw)
+        with tempfile.TemporaryDirectory() as temporary,zipfile.ZipFile(data) as archive:
+            result=export(Path(temporary)/'absent',Path(temporary)/'out',read_bytes=archive.read,
+                expected_compiler='old',expected_companies=1,expected_tickers=1,expected_facts=1)
+            self.assertEqual(result['published']['relationships'],1)
 
 
 if __name__=='__main__':unittest.main()
