@@ -1,6 +1,6 @@
 {
  "date": "2026-10-21",
- "generated_at": "2026-10-21T08:25:46.244732-04:00",
+ "generated_at": "2026-10-21T10:50:09.917187-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,21 +17,23 @@
   "fed_score": 0.0,
   "dollar_oil_score": -0.5,
   "futures_score": 0.0,
-  "yields": "flat",
-  "yields_source": "llm_factor_fallback",
+  "yields": "rising",
+  "yields_source": "fred_dgs10",
+  "dgs10_delta_1d": 0.06,
+  "dgs10_current": 5.15,
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.08,
-  "vix_ratio": 0.912,
-  "vix_spot": 17.32,
-  "vix_delta_1d": 0.01,
+  "dxy_pct_1d": 0.02,
+  "vix_ratio": 0.903,
+  "vix_spot": 17.14,
+  "vix_delta_1d": -0.17,
   "vix_ratio_source": "vix/vix3m",
   "vix": "calm",
-  "oil_pct_1d": -3.34,
+  "oil_pct_1d": -3.81,
   "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": -0.16,
+  "regime_corr": -0.25,
   "sectors": {
    "Basic Materials": {
     "score": -4.97,
@@ -316,14 +318,14 @@
   },
   "lev": {
    "high": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "—"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "yields rising — leverage amplifies the downside [factors + general]"
    },
    "low": {
-    "stance": "neutral",
+    "stance": "favorable",
     "confidence": "low",
-    "why": "—"
+    "why": "balance-sheet strength preferred in stress"
    },
    "mid": {
     "stance": "neutral",
@@ -338,14 +340,14 @@
   },
   "style": {
    "growth": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "yields rising — long-duration growth de-rates [factor: Bond yields]"
    },
    "value": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "rising yields/reflation favors value & cyclicals [factor: Bond yields]"
    },
    "blend": {
     "stance": "neutral",
