@@ -1,80 +1,136 @@
 {
   "date": "2026-10-21",
-  "generated_at": "2026-10-21T05:47:53.229015-04:00",
+  "generated_at": "2026-10-21T08:39:19.859264-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
     "ok": 6,
-    "partial": 1,
-    "fail": 1,
+    "partial": 2,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [
     {
-      "ticker": "CON",
-      "score": 0.6555911252979584
+      "ticker": "PRCH",
+      "score": 0.8385429209840265
     },
     {
-      "ticker": "HITI",
-      "score": 0.37569035832016273
+      "ticker": "AVPT",
+      "score": 0.782834036619781
     },
     {
-      "ticker": "SGRY",
-      "score": 0.6541642603585892
+      "ticker": "CORT",
+      "score": 0.3924106332259807
     },
     {
-      "ticker": "ASTH",
-      "score": 0.5884464496419931
+      "ticker": "VEEV",
+      "score": 0.41256815189198504
+    },
+    {
+      "ticker": "CDNA",
+      "score": 0.8298636020396053
+    },
+    {
+      "ticker": "ARQT",
+      "score": 0.7812704038915628
     },
     {
       "ticker": "NTAP",
-      "score": 0.30930969124712515
+      "score": 0.3672381992469095
     },
     {
-      "ticker": "AMN",
-      "score": 0.5475594258208563
+      "ticker": "ABX",
+      "score": 0.659986200076544
     },
     {
-      "ticker": "MQ",
-      "score": 0.7410602152300074
+      "ticker": "TRU",
+      "score": 0.5505929098468964
     },
     {
-      "ticker": "BAND",
-      "score": 0.5716345332861978
+      "ticker": "LAUR",
+      "score": 0.6437080147216908
+    },
+    {
+      "ticker": "PAYS",
+      "score": 0.6549498116886701
+    },
+    {
+      "ticker": "SONO",
+      "score": 0.7393501502154107
+    },
+    {
+      "ticker": "EZPW",
+      "score": 0.5711134990796938
+    },
+    {
+      "ticker": "CNK",
+      "score": 0.6834163757139815
+    },
+    {
+      "ticker": "IMAX",
+      "score": 0.6413513483471072
     }
   ],
   "sell_1d": [
     {
-      "ticker": "OKLO",
-      "score": -0.2633800800955093
+      "ticker": "INTC",
+      "score": -0.4372885377372172
+    },
+    {
+      "ticker": "ROIV",
+      "score": -0.42662620714773924
+    },
+    {
+      "ticker": "TIGO",
+      "score": -0.33885518247447566
+    },
+    {
+      "ticker": "SOC",
+      "score": -0.33502909303130934
+    },
+    {
+      "ticker": "BIDU",
+      "score": -0.32447956456578003
     },
     {
       "ticker": "NEOV",
-      "score": -0.36507834037884485
+      "score": -0.3184840572779986
     },
     {
-      "ticker": "FCEL",
-      "score": -0.2232158721196007
+      "ticker": "AXSM",
+      "score": -0.3042351395784257
     },
     {
-      "ticker": "EOSE",
-      "score": -0.36307065212053335
+      "ticker": "AU",
+      "score": -0.2954448040851456
     },
     {
-      "ticker": "POWL",
-      "score": -0.09618396258356497
+      "ticker": "PCT",
+      "score": -0.28127910956701896
     },
     {
-      "ticker": "NRGV",
-      "score": -0.3539617817919932
+      "ticker": "NRXP",
+      "score": -0.2809218691928413
     },
     {
-      "ticker": "NNDM",
-      "score": -0.1899797269228264
+      "ticker": "AIRS",
+      "score": -0.27826264788858196
     },
     {
-      "ticker": "INDI",
-      "score": -0.0863739898316828
+      "ticker": "WVE",
+      "score": -0.27624062480205547
+    },
+    {
+      "ticker": "BAK",
+      "score": -0.27450788670502185
+    },
+    {
+      "ticker": "VSAT",
+      "score": -0.2694149929941799
+    },
+    {
+      "ticker": "PUMP",
+      "score": -0.2638495509286929
     }
   ],
   "flatten": {
@@ -85,7 +141,18 @@
       "morning S missing"
     ]
   },
-  "general": {},
+  "general": {
+    "said": "UP  4.644",
+    "bullets": [
+      "bad: Fresh Hormuz mine attacks, Brent >$110",
+      "bad: Cook hawkish inflation warning",
+      "bad: Tesla/Meta AMC binary unsigned",
+      "good: Super Micro revenue beat +13% AH",
+      "good: SpaceX +8%, Tesla merger committee"
+    ],
+    "score": "4.644",
+    "direction": "up"
+  },
   "sectors": {},
   "lands": [
     {

@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-21",
+  "files": [
+    {
+      "bytes": 9311799,
+      "path": "data/factor_mine/panel.json",
+      "sha256": "6fdbd67cbfa7c018d44cd915759ec356ed367314135dde48dcde1a32fcd56a5f"
+    },
+    {
+      "path": "01_daily/general/2026-10-21_predict.md",
+      "sha256": "b225044a3019a81047b26a9bef675e43309879697191110fd2b36c32bf85d411"
+    },
+    {
+      "path": "01_daily/news/2026-10-21_actions.json",
+      "sha256": "5fe50c1011175a121d8a2494ebadf6197ca0e58f88f58895f839adf6413fa23b"
+    },
+    {
+      "path": "01_daily/news/2026-10-21_finviz_digest.json",
+      "sha256": "788dcaa447ae475bc51deeebd76e076ed52ad5d080257f568f295fbb53ebeb09"
+    },
+    {
+      "path": "01_daily/news/2026-10-21_judge.md",
+      "sha256": "959ba1784768e87b038448e67d951ed7a0e10f6d2ff634a6b5413895854a85bb"
+    },
+    {
+      "path": "01_daily/weather/2026-10-21_weather.json",
+      "sha256": "24d5618bc5ccb6ffe01beddefcc9cad3643cefb40f40a226d65bad78dc02725a"
+    },
+    {
+      "path": "data/ab_checklist/2026-10-21_ab_checklist_enriched.csv",
+      "sha256": "5bbfd0884307435d20bdd19667ea74f0ad2b915b53cd41ba24bf6a5e368c9d4c"
+    },
+    {
+      "path": "data/join/2026-10-21_ranked.csv",
+      "sha256": "0707f192c5fd9f67e8020e6c0009df44d7b9998ce184b466fbd4e8f5f2ae9ed8"
+    },
+    {
+      "path": "data/peers/2026-10-21_peer_rs.csv",
+      "sha256": "ddfb7334677cd9faeca962d70765b32d2761a81b9eb437bd02384acd0fa85445"
+    },
+    {
+      "path": "data/sleeve_merge/today.json",
+      "sha256": "e95a7506e8369f7676f1c54196dc116b03698b2d2a3998e556337fa0992d43a6"
+    },
+    {
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "sha256": "ba07b57902f006f6ea3f365be31db2de317b001b843ff0314f45686def3e9cc3"
+    }
+  ],
+  "picks": {
+    "union_hot_n4_h1": [
+      "KLRA",
+      "SGRY",
+      "SRPT",
+      "TNGX"
+    ],
+    "union_hot_n4_holdup": [
+      "KLRA",
+      "SGRY",
+      "SRPT",
+      "TNGX"
+    ]
+  },
+  "prices": [
+    {
+      "px": 11.73,
+      "px_src": "session_export",
+      "ticker": "KLRA"
+    },
+    {
+      "px": 14.69,
+      "px_src": "session_export",
+      "ticker": "SGRY"
+    },
+    {
+      "px": 18.64,
+      "px_src": "session_export",
+      "ticker": "SRPT"
+    },
+    {
+      "px": 24.97,
+      "px_src": "session_export",
+      "ticker": "TNGX"
+    },
+    {
+      "px": 174.92,
+      "px_src": "session_export",
+      "ticker": "ACN"
+    }
+  ],
+  "reason": "",
+  "rows": [],
+  "sha256": "5a45bc44368d3d4e0ad8e81389e2ff4f4126f83a1d98870e78fe0895b116c5b5",
+  "source": "no_same_day_panel"
+}
