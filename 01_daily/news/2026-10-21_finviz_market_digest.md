@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-21
 
-**Generated:** 2026-10-21T04:23:19.749552-04:00 (America/New_York)
+**Generated:** 2026-10-21T04:23:43.400636-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to higher open as tech leads on global earnings optimism and Brent nears $110 ahead of data and heavy earnings slate
 **Prior close:** SPX —  Nasdaq —  Dow —
