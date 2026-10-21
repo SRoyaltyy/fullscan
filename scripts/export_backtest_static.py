@@ -39,7 +39,7 @@ def _score_shard(shard):
     results = []
     for article, item in zip(selected, linked):
         row = present(item)
-        row['keyword_comparison'] = compare_article(_BOARD,article['text'],article_date=str(article.get('published_at') or '')[:10])
+        row['keyword_comparison'] = compare_article(_BOARD,article['text'],article_date=str(article.get('published_at') or '')[:10],entity_annotations=article.get('entity_annotations'))
         row.update(id=article['id'], input_mode=_INPUT_MODE,
                    input_sha256=hashlib.sha256(article['text'].encode()).hexdigest(),
                    snapshot_id=_SNAPSHOT['snapshot_id'])
@@ -94,6 +94,7 @@ def export_profiles(board, out_dir, *, filing_profiles=None, profile_assets='ful
     original archive (and optionally immutable public object storage), not git.
     """
     profiles = {}
+    keyword_index = getattr(board.evidence_board,'keyword_index',None) or KeywordIndex(board.evidence_board.profiles)
     (out_dir/'scoring-profiles').mkdir(exist_ok=True)
     for ticker, profile in board.evidence_board.profiles.items():
         full = profile_view(profile)
@@ -124,7 +125,7 @@ def export_profiles(board, out_dir, *, filing_profiles=None, profile_assets='ful
                 'profiles':{ticker:getattr(p,'keyword_coverage',{}) for ticker,p in board.evidence_board.profiles.items()
                             if getattr(p,'deep_profile',None)}}
             (destination/'publication.json').write_text(json.dumps(receipt,sort_keys=True))
-    payload = KeywordIndex(board.evidence_board.profiles).browser_payload()
+    payload = keyword_index.browser_payload()
     phrases = payload.pop('phrases')
     buckets = {}
     for entry in phrases:
@@ -151,6 +152,7 @@ def main(argv=None):
     p.add_argument('--universe', type=Path)
     p.add_argument('--identity-filings', type=Path)
     p.add_argument('--filing-profiles', type=Path)
+    p.add_argument('--article-entities',type=Path)
     p.add_argument('--profile-assets',choices=('full','keywords'),default='full')
     p.add_argument('--dataset-scope',choices=('archive_set','development_sample'),default='archive_set')
     p.add_argument('--profile-archive-url',default='')
@@ -178,9 +180,16 @@ def main(argv=None):
     snapshot['engine_snapshot_id'] = snapshot.pop('snapshot_id')
     snapshot['source_revision'] = os.environ.get('SCANNER_SOURCE_SHA') or os.environ.get('GITHUB_SHA') or ''
     snapshot['news_sha256'] = hashlib.sha256(a.news.read_bytes()).hexdigest()
+    if a.article_entities:snapshot['article_entities_sha256']=hashlib.sha256(a.article_entities.read_bytes()).hexdigest()
     snapshot['snapshot_id'] = hashlib.sha256(json.dumps(snapshot, sort_keys=True).encode()).hexdigest()
     rows = validate_resume(a.out_dir, snapshot)
     articles = load_test_articles(a.news)
+    if a.article_entities:
+        annotations=json.loads(a.article_entities.read_text())
+        if annotations['news_sha256']!=snapshot['news_sha256'] or annotations['input_mode']!=a.input_mode:
+            raise ValueError('entity parse does not match this news intake and input mode')
+        for row in articles:
+            row['entity_annotations']=annotations['articles'][str(row['id'])]
     by_id = {str(article['id']): article for article in articles}
     if len(by_id) != len(articles):
         raise ValueError('duplicate article ids in input')

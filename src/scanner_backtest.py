@@ -85,6 +85,8 @@ def open_program(descriptions: Path, sectors: Path | None, universe: Path | None
         board.evidence_board, coverage = attach_keyword_profiles(board.evidence_board, filing_profiles,
                                                        as_of=as_of, catalog=Catalog(board.source_rows))
     board.filing_coverage = coverage
+    from .stock_keywords import KeywordIndex
+    board.evidence_board.keyword_index=KeywordIndex(board.evidence_board.profiles)
     names = NameIndex(catalog_from_csv(descriptions)) if descriptions.is_file() else None
     return board, names
 
@@ -114,7 +116,7 @@ def snapshot_metadata(board, input_mode: str = 'headline') -> dict:
     """Bind cached results to source code, lexical resources and compiled inputs."""
     root = Path(__file__).resolve().parents[1]
     source_names = ('correlation', 'evidence_matcher', 'stock_evidence', 'filing_evidence', 'deep_profile_store', 'filing_relationships',
-                    'stock_keywords', 'stock_keyword_store', 'names', 'aliases', 'linguistics', 'semantic_lookup', 'synonyms',
+                    'stock_keywords', 'stock_keyword_store', 'entity_resolution', 'names', 'aliases', 'linguistics', 'semantic_lookup', 'synonyms',
                     'places', 'spelling', 'profile_cache', 'link_correlation', 'scanner_backtest')
     paths = [root / 'src' / (name + '.py') for name in source_names]
     paths += [root / 'scripts/export_backtest_static.py']
@@ -148,7 +150,7 @@ def profile_view(profile) -> dict:
             'source': 'scoring_board', 'enriched': any(s.get('filing_date') for s in profile.sources),
             'warnings': list(profile.warnings), 'facts': facts, 'sources': profile.sources,
             'deep_profile': getattr(profile, 'deep_profile', None),
-            'keyword_schema': 'stock-keywords-1.0',
+            'keyword_schema': 'stock-keywords-1.1',
             'keywords': getattr(profile, 'keyword_records', []),
             'keyword_evidence': getattr(profile, 'keyword_evidence', {}),
             'keyword_coverage': getattr(profile, 'keyword_coverage', {}),
@@ -201,7 +203,7 @@ def run_article(board, article: dict, *, names=None, input_mode='headline', snap
     linked = link_articles(board, [selected], names=names, engine=ENGINE)
     result = present(linked[0])
     from .stock_keywords import compare_article
-    result['keyword_comparison'] = compare_article(board,selected['text'],article_date=str(selected.get('published_at') or '')[:10])
+    result['keyword_comparison'] = compare_article(board,selected['text'],article_date=str(selected.get('published_at') or '')[:10],entity_annotations=selected.get('entity_annotations'))
     result.update({'input_mode': input_mode,
                    'input_sha256': hashlib.sha256(str(selected.get('text') or '').encode()).hexdigest(),
                    'snapshot_id': (snapshot or {}).get('snapshot_id', '')})

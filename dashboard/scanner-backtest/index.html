@@ -512,6 +512,8 @@ function renderKeywordRecords(container, records, evidence = {}) {
       title.textContent = `${row.stock} → ${row.relationship.replaceAll("_"," ")} → ${row.keyword} [${row.assertion || "identity"}${row.review_required ? "; review required" : ""}${row.current_as_of_cutoff ? "; current filing claim" : "; not a current assertion"}]`;
       const flags = document.createElement("p");
       flags.textContent = (row.review_reasons || []).join(" · ")+(row.article_span ? ` · Article: ${row.article_span.text} (${row.article_span.start}–${row.article_span.end})` : "")+` · Filing dates ${row.first_filing_date || "—"} to ${row.latest_filing_date || "—"}`;
+      if (row.identity) flags.textContent += ` · Source ${row.identity.type}: ${row.identity.id}`;
+      if (row.alignment) flags.textContent += ` · Alignment ${row.alignment.status}: ${row.alignment.reasons.join(", ")} · Context support ${row.alignment.context_score}`;
       const qualifiers = document.createElement("p");
       qualifiers.textContent = JSON.stringify(row.qualifiers || {});
       const stock = document.createElement("button");
@@ -522,7 +524,7 @@ function renderKeywordRecords(container, records, evidence = {}) {
       appendPaged(detail,witnesses,w => {
         const block = document.createElement("blockquote");
         const s = w.source || {};
-        block.textContent = [s.form,s.filing_date,s.accession,s.document,s.section,`characters ${w.start}–${w.end}`,w.quote].filter(Boolean).join(" · ");
+        block.textContent = [s.form,s.filing_date,s.accession,s.document,s.section,w.offset_scope === "quote_only" ? "source quote; document offsets unavailable" : `characters ${w.start}–${w.end}`,w.quote].filter(Boolean).join(" · ");
         if (s.url && /^https:\/\/www\.sec\.gov\/Archives\//.test(s.url)) {
           const link = document.createElement("a"); link.href = s.url;
           link.target = "_blank"; link.rel = "noopener noreferrer";
@@ -541,10 +543,17 @@ function renderKeywordComparison(container, comparison) {
   container.replaceChildren();
   const title = document.createElement("h3"); title.textContent = "Stock → relationship → keyword";
   const note = document.createElement("p");
-  note.textContent = comparison ? "Keyword overlap only. A filing claim is not independent verification; inspect its date, assertion and quote." : "Keyword comparison is unavailable in this older snapshot. Waiting for the new parser export.";
+  note.textContent = comparison ? (comparison.alignment_version ? "Entity/concept alignment checked before relevance. Inspect the identity, context reasons, filing date and quote. Uncertain candidates require review." : "Historical keyword-only comparison; entity alignment was not recorded.") : "Keyword comparison is unavailable in this older snapshot. Waiting for the new parser export.";
   container.append(title,note);
   if (!comparison) return;
   renderKeywordRecords(container,comparison.matches || []);
+  for (const [key,label] of [["unresolved_matches","Unresolved identities"],["rejected_matches","Rejected identity matches"]]) {
+    const rows = comparison[key] || [];
+    if (!rows.length) continue;
+    const detail=document.createElement("details"), summary=document.createElement("summary");
+    summary.textContent=`${label} (${rows.length}) — excluded from aligned matches`;
+    detail.append(summary); renderKeywordRecords(detail,rows); container.append(detail);
+  }
   for (const row of comparison.broad_matches || []) {
     const p = document.createElement("p");
     p.textContent = `${row.keyword} → ${row.relationship}: ${row.candidate_stock_count} possible stocks; additional stock context required.`;
@@ -556,17 +565,88 @@ let keywordSearchIndex = null;
 let keywordManifest = null;
 const keywordBuckets = new Map();
 function prepareKeywordIndex(payload) {
-  const first = new Map(), df = new Map();
+  const first = new Map(), df = new Map(), peers = new Map();
   for (const entry of payload.phrases) {
     const initial = entry.phrase[0];
     if (!first.has(initial)) first.set(initial,[]);
     first.get(initial).push(entry);
+    if (entry.row.identity) {
+      const key=entry.phrase.join(" ");
+      if (!peers.has(key)) peers.set(key,[]);
+      peers.get(key).push(entry.row.identity);
+    }
     if (entry.row.relationship !== "issuer") {
       if (!df.has(entry.row.normalized)) df.set(entry.row.normalized,new Set());
       df.get(entry.row.normalized).add(entry.row.stock);
     }
   }
-  return {...payload,first,df};
+  return {...payload,first,df,peers};
+}
+
+function entitySurface(value) {
+  return [...value.matchAll(/[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(m=>m[0].replaceAll("’", "'").toLowerCase()).join(" ");
+}
+
+function entityContextWords(index,text) {
+  const stop=new Set(index.stopwords || []);
+  return new Set([...text.matchAll(/[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(m=>{
+    const raw=m[0].replaceAll("’", "'").toLowerCase().replace(/'s$/,"");
+    return index.normalization[raw] || raw;
+  }).filter(w=>w.length>=3 && !stop.has(w)));
+}
+
+function alignKeywordEntity(index,entity,text,start,end,peers=[]) {
+  if (!entity || !index.identity_policy) return {status:"unresolved",reasons:["entity_metadata_unavailable"],context_score:0};
+  const breaks=[...text.slice(0,start).matchAll(/[!?;\n]|\.(?=\s|$)/g)];
+  const left=breaks.length ? breaks.at(-1).index+breaks.at(-1)[0].length : 0;
+  const right=text.slice(end).search(/[!?;\n]|\.(?=\s|$)/);
+  const context=text.slice(Math.max(left,start-180),Math.min(right<0 ? text.length : end+right,end+180));
+  const actual=text.slice(start,end), raw=entitySurface(actual).replace(/'s$/,""), kind=entity.type;
+  const exact=entity.aliases.includes(raw) || entity.aliases.includes(entitySurface(actual));
+  const words=entityContextWords(index,context), context_score=[...words].filter(w=>entity.source_context_terms.includes(w)).length;
+  const re=pattern=>new RegExp(pattern,"i");
+  const policy=index.identity_policy;
+  const escaped=s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+  const owner=entity.owner_aliases.some(a=>new RegExp(`(^|[^A-Za-z0-9])${escaped(a)}([^A-Za-z0-9]|$)`).test(entitySurface(context)));
+  const competitors=new Set(peers.filter(p=>p.type===kind && (!owner || p.owner===entity.owner)).map(p=>p.id));
+  let status="unresolved", reason="";
+  if (kind==="PERSON") {
+    const prefix=text.slice(Math.max(0,start-70),start), previous=prefix.match(/\b([A-Z][a-z]+)\s*$/);
+    const allowed=new Set([...entity.name.toLowerCase().split(" "),"ceo","cfo","coo","cto","ciso","officer","director","president","founder","chairman","chairwoman","mr","mrs","ms","dr"]);
+    const attachedRole=re(policy.person_before).test(prefix) || re(policy.person_after).test(text.slice(end,end+70));
+    if (!exact) {status="rejected";reason="proper_name_surface_differs";}
+    else if (raw.split(" ").length===1 && previous && !allowed.has(previous[1].toLowerCase())) {status="rejected";reason="different_given_name";}
+    else if ((!attachedRole || entitySurface(actual).endsWith("'s")) && re(policy.company).test(context) && raw.split(" ").length===1) {status="rejected";reason="company_usage_is_not_officer_identity";}
+    else if (raw.split(" ").length===1 && !(owner && attachedRole)) reason="surname_requires_employer_and_person_role";
+    else if (competitors.size>1) reason="multiple_person_identities_require_employer";
+    else {
+      status="resolved";reason=owner ? "person_name_and_affiliation_supported" : "unique_full_person_name";
+    }
+  } else if (["ORG","PRODUCT","GPE","GOV_AGENCY","LAW"].includes(kind)) {
+    if (!exact) {status="rejected";reason="proper_name_surface_differs";}
+    else if (kind==="ORG" && (re(policy.place).test(context) || (re(policy.person).test(context) && !re(policy.company).test(context)))) reason="organization_usage_not_established";
+    else if (competitors.size>1) reason="alias_has_multiple_entity_identities";
+    else if (kind==="ORG" && !entity.registered_organization && !owner) reason="unregistered_name_requires_stock_or_typed_context";
+    else if (["PRODUCT","GPE"].includes(kind) && !owner) reason="type_or_owner_context_required";
+    else if (kind==="ORG" && ["apple","amazon","orange","target","shell","gap","meta"].includes(raw) && !re(policy.company).test(context)) reason="common_name_requires_organization_context";
+    else {status="resolved";reason="typed_name_and_scope_supported";}
+  } else {
+    const actualWords=entityContextWords(index,actual), candidates=[];
+    for (const sense of entity.senses) {
+      if (sense.positive) {
+        if (re(sense.negative).test(context)) continue;
+        candidates.push({id:sense.id,score:re(sense.positive).test(context) ? 2 : 0});
+      } else candidates.push({id:sense.id,score:[...words].filter(w=>!actualWords.has(w) && sense.terms.includes(w)).length});
+    }
+    candidates.sort((a,b)=>b.score-a.score || b.id.localeCompare(a.id));
+    let selected=null;
+    if (candidates.length===1 && (!entity.senses[0]?.positive || candidates[0].score>=2)) selected=candidates[0].id;
+    else if (candidates.length && candidates[0].score>=2 && (candidates.length===1 || candidates[0].score>candidates[1].score)) selected=candidates[0].id;
+    if (entity.sense && selected===entity.sense) {status="resolved";reason="same_contextual_concept_sense";}
+    else if (selected && entity.sense) {status="rejected";reason="different_concept_sense";}
+    else reason="concept_sense_not_established_on_both_sides";
+  }
+  return {status,reasons:[reason],stock_entity_id:entity.id,article_entity_id:status==="resolved" ? entity.id : null,source_type:kind,article_types:[],context_score};
 }
 
 function compareKeywordText(index, text) {
@@ -575,25 +655,36 @@ function compareKeywordText(index, text) {
     const word = t[0].toLowerCase().replaceAll("’", "'").replace(/'s$/, "");
     return index.normalization[word] || word;
   });
-  const hits = [], named = new Set(), seen = new Set(), broad = new Map(), matches = [];
+  const hits = [], named = new Set(), seen = new Set(), broad = new Map(), matches = [], unresolved_matches=[],rejected_matches=[];
   for (let i = 0; i < words.length; i++) {
     for (const {phrase,row} of index.first.get(words[i]) || []) {
       const end = i+phrase.length;
       if (end > words.length || phrase.some((w,j) => w !== words[i+j]) || /[.!?;:\n]/.test(text.slice(tokens[i].index+tokens[i][0].length,tokens[end-1].index))) continue;
-      if (row.relationship === "issuer") named.add(row.stock);
-      else hits.push({row,start:tokens[i].index,end:tokens[end-1].index+tokens[end-1][0].length});
+      const start=tokens[i].index, finish=tokens[end-1].index+tokens[end-1][0].length;
+      if (row.relationship === "issuer") {
+        if (alignKeywordEntity(index,row.identity,text,start,finish).status==="resolved") named.add(row.stock);
+      } else hits.push({row,phrase,start,end:finish});
     }
   }
   const entityRoles = new Set(["issuer","supplier","customer","competitor","partner","subsidiary","regulator","approval_authority","acquisition_target","divestiture_target"]);
-  for (const {row,start,end} of hits) {
+  const grouped=new Map(), longest=[];
+  for (const hit of hits) {if (!grouped.has(hit.row.id)) grouped.set(hit.row.id,[]); grouped.get(hit.row.id).push(hit);}
+  for (const group of grouped.values()) {
+    let previousEnd=-1;
+    for (const hit of group.sort((a,b)=>a.start-b.start || b.end-a.end)) {if (hit.end<=previousEnd) continue;longest.push(hit);previousEnd=hit.end;}
+  }
+  for (const {row,phrase,start,end} of longest) {
     const key = `${row.id}:${start}:${end}`;
     if (seen.has(key)) continue; seen.add(key);
+    const alignment=alignKeywordEntity(index,row.identity,text,start,end,index.peers.get(phrase.join(" ")) || []);
+    const candidate={...row,alignment,article_span:{start:[...text.slice(0,start)].length,end:[...text.slice(0,end)].length,text:text.slice(start,end)}};
+    if (alignment.status!=="resolved") {(alignment.status==="rejected" ? rejected_matches : unresolved_matches).push(candidate);continue;}
     const count = (index.df.get(row.normalized) || new Set()).size;
     if (count >= Math.max(8,Math.ceil(index.catalog_tickers*.05)) && !entityRoles.has(row.relationship) && !named.has(row.stock)) {
       broad.set(`${row.normalized}:${row.relationship}`,{keyword:row.keyword,relationship:row.relationship,candidate_stock_count:count});
-    } else matches.push({...row,article_span:{start:[...text.slice(0,start)].length,end:[...text.slice(0,end)].length,text:text.slice(start,end)},decision:"keyword_overlap_only"});
+    } else matches.push({...candidate,decision:"identity_aligned_candidate"});
   }
-  return {matches,broad_matches:[...broad.values()],stock_passes_changed:false};
+  return {matches,broad_matches:[...broad.values()],unresolved_matches,rejected_matches,alignment_version:index.alignment_version,stock_passes_changed:false};
 }
 
 async function compareCustomKeywords() {

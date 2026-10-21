@@ -76,9 +76,12 @@ import json,sys
 sys.path.insert(0,sys.argv[1])
 from src.test_stock_keywords import graph,profile
 from src.stock_keywords import compile_keywords,KeywordIndex
+from src.test_entity_resolution import fixture,CASES
 index=KeywordIndex({'BLZE':profile(compile_keywords(graph(),as_of='2026-04-01'))})
 texts=['Western Digital faces hard-drive disruption','Stripe disruption; Backblaze shares fall','Western. Digital shares rise','unrelated article','HARD DRIVES and Western Digital','📉 Western Digital hard drives']
-print(json.dumps({'payload':index.browser_payload(),'cases':[{'text':t,'result':index.compare(t)} for t in texts]}))
+collision=KeywordIndex(fixture())
+print(json.dumps({'payload':index.browser_payload(),'cases':[{'text':t,'result':index.compare(t)} for t in texts],
+ 'collisions':{'payload':collision.browser_payload(),'cases':[{'text':t,'result':collision.compare(t)} for t,_,_ in CASES]}}))
 `,new URL('..',import.meta.url).pathname],{encoding:'utf8',maxBuffer:10_000_000});
 assert.equal(parity.status,0,parity.stderr);
 const fixture = JSON.parse(parity.stdout);
@@ -92,6 +95,18 @@ for (const test of fixture.cases) {
   assert.equal(JSON.stringify(signature(actual)),JSON.stringify(signature(test.result)),test.text);
   assert.equal(actual.stock_passes_changed,false);
 }
+context.collisionPayload=fixture.collisions.payload;
+vm.runInContext('keywordSearchIndex=prepareKeywordIndex(collisionPayload)',context);
+const identitySignature=result=>['matches','unresolved_matches','rejected_matches'].map(key=>[
+  key,(result[key] || []).map(r=>[r.id,r.alignment.status,r.alignment.stock_entity_id,r.alignment.article_entity_id,
+    r.alignment.source_type,r.alignment.context_score,r.alignment.reasons,r.article_span.text]).sort((a,b)=>JSON.stringify(a).localeCompare(JSON.stringify(b)))
+]);
+for (const test of fixture.collisions.cases) {
+  context.parityText=test.text;
+  const actual=vm.runInContext('compareKeywordText(keywordSearchIndex,parityText)',context);
+  assert.equal(JSON.stringify(identitySignature(actual)),JSON.stringify(identitySignature(test.result)),test.text);
+}
+console.log('Person/company, same-surname, employer scope, and contextual concept sense decisions agree in Python and browser.');
 context.keywordBox = element();
 context.keywordRows = fixture.payload.phrases.filter(p => p.row.relationship !== 'issuer').map(p => p.row);
 vm.runInContext('renderKeywordRecords(keywordBox,keywordRows)',context);
