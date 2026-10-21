@@ -1,6 +1,6 @@
 {
   "date": "2026-10-21",
-  "generated_at": "2026-10-21T14:11:56.136093-04:00",
+  "generated_at": "2026-10-21T14:12:03.852265-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -2276,6 +2276,122 @@
         }
       ],
       "preview": "1d BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC \u00b7 green 112 \u00b7 PRCH, JXN, VCTR, WT, TRU, EZPW, CG, FNF, ARQT, JEF \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC \u00b7 2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC \u00b7 # Stock book \u2014 2026-10-21\n_Generated 2026-10-21T14:11:28.018993-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-21T14:12:02.629731-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 22294,
+          "preview": "2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1079,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-21.json",
+          "ok": true,
+          "reason": "",
+          "size": 132761,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-21_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 77098,
+          "preview": "2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 657169,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-21_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 657169,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-10-21.json",
+          "ok": true,
+          "reason": "",
+          "size": 173671,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 887841,
+          "preview": "2026-10-21 BUY PRCH, AVPT, CORT, VEEV, CDNA, ARQT, NTAP, ABX \u00b7 SELL INTC, ROIV, TIGO, SOC, BIDU, NEOV, AXSM, AU"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 657169,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 77098,
+          "preview": "2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 657169,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 657169,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 887841,
+          "preview": "2026-10-21 BUY PRCH, AVPT, CORT, VEEV, CDNA, ARQT, NTAP, ABX \u00b7 SELL INTC, ROIV, TIGO, SOC, BIDU, NEOV, AXSM, AU"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1582,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1582,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-21 BUY PRCH, AVPT, CORT, VEEV, CDNA, ARQT, NTAP, ABX \u00b7 SELL INTC, ROIV, TIGO, SOC, BIDU, NEOV, AXSM, AU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-21 BUY CDNA, PRCH, ARQT, AVPT, CORT, VEEV, NTAP, TOST \u00b7 SELL ROIV, TIGO, NEOV, BIDU, SOC, AXSM, AU, INTC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, cl"
     }
   ],
   "href": {
@@ -2697,6 +2813,14 @@
       "path": "data/stock_book/2026-10-21_suggestions.json",
       "at": "2026-10-21T14:11:56-04:00",
       "commit_msg": "auto: land stock_book [2026-10-21]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "39649627746",
+      "manifest": "research/input_freeze/2026-10-21/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-21.json",
+      "at": "2026-10-21T14:12:04-04:00",
+      "commit_msg": "auto: land live_boards [2026-10-21]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "39649627746",
       "manifest": "research/input_freeze/2026-10-21/manifest.json"
