@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: "40 21 * * 1-5"
   workflow_dispatch:
+    inputs:
+      probe:
+        description: "1 = endpoint discovery only, no commit"
+        default: "0"
 permissions:
   contents: write
 concurrency:
@@ -24,6 +28,14 @@ jobs:
         run: |
           hm=$(TZ=America/New_York date +%H%M)
           if [ "$hm" -ge 0300 ] && [ "$hm" -lt 0940 ]; then echo "in freeze, skip"; echo "SKIP=1" >> $GITHUB_ENV; fi
+      - name: Probe (discovery only)
+        if: inputs.probe == '1'
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+        run: |
+          python scripts/snapshots/finviz_elite_probe.py
+          echo "SKIP=1" >> $GITHUB_ENV
       - name: Capture
         if: env.SKIP != '1'
         env:
