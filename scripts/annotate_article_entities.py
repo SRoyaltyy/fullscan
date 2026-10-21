@@ -12,13 +12,24 @@ from src.scanner_backtest import load_test_articles, select_input
 
 
 def annotate(doc,text):
+    if doc.text != text:
+        raise ValueError('parser document differs from the selected article text')
     mentions=[]
     for entity in doc.ents:
         head=entity.root.head
         mentions.append({'start':entity.start_char,'end':entity.end_char,'text':entity.text,'label':entity.label_,
             'dependency':entity.root.dep_,'governing_lemma':head.lemma_,
             'sentence_span':{'start':entity.sent.start_char,'end':entity.sent.end_char}})
-    return {'input_sha256':hashlib.sha256(text.encode()).hexdigest(),'mentions':mentions,
+    # Keep the grammar itself for contextual resolution, including concepts
+    # that NER does not recognize. These are observations, not identity claims.
+    noun_phrases=[{'start':chunk.start_char,'end':chunk.end_char,'text':chunk.text,
+                   'head':chunk.root.i} for chunk in doc.noun_chunks]
+    syntax=[{'start':token.idx,'end':token.idx+len(token.text),'text':token.text,
+             'lemma':token.lemma_,'pos':token.pos_,'dependency':token.dep_,
+             'head':token.head.i} for token in doc]
+    return {'schema':'article-linguistics-2',
+            'input_sha256':hashlib.sha256(text.encode()).hexdigest(),'mentions':mentions,
+            'noun_phrases':noun_phrases,'syntax':syntax,
             'parser':{'spacy':SPACY_VERSION,'model':MODEL,'model_version':MODEL_VERSION}}
 
 

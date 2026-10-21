@@ -75,6 +75,21 @@ class EntityResolutionControls(unittest.TestCase):
             validate_annotations('McDonalds',{'input_sha256':hashlib.sha256(b'McDonalds').hexdigest(),
                 'mentions':[{'start':0,'end':4,'text':'John','label':'PERSON'}]})
 
+    def test_whole_organization_name_precedes_alias_overlap(self):
+        index=KeywordIndex(fixture())
+        for name,accepted in [('Apple',True),('Apple Inc.',True),("Apple's",True),
+                              ('Apple Bank',False),('Green Apple Restaurants',False),
+                              ('Apple Records',False),('Pineapple Apple Labs',False)]:
+            text=name+' reports computer hardware earnings for Acme Industries'
+            annotation={'input_sha256':hashlib.sha256(text.encode()).hexdigest(),
+                        'mentions':[{'start':0,'end':len(name),'text':name,'label':'ORG'}]}
+            result=index.compare(text,entity_annotations=annotation)
+            hits=[r for r in result['matches'] if r['relationship']=='supplier']
+            self.assertEqual(bool(hits),accepted,(name,result))
+            if not accepted:
+                self.assertTrue(any('different_complete_organization_name' in r['alignment']['reasons']
+                                    for r in result['rejected_matches']))
+
     def test_two_officers_with_same_surname_require_more_than_employer(self):
         profiles=fixture();p=profiles['ACME'];other=dict(next(r for r in p.keyword_records if r['relationship']=='officer'))
         other.update(id='other-person',keyword='Jane McDonald',normalized='jane mcdonald',object_type='PERSON',relationship='officer')

@@ -8,7 +8,7 @@ import json
 import re
 from .linguistics import lemma, STOP
 
-VERSION = 'entity-alignment-1.0'
+VERSION = 'entity-alignment-1.1'
 WORD = re.compile(r"[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*")
 SUFFIX = re.compile(r'(?:[, ]+(?:incorporated|corporation|company|limited|holdings|corp|inc|ltd|plc|llc)\.?)+$',re.I)
 TYPES = {'person':'PERSON','PERSON':'PERSON','organization':'ORG','company':'ORG','ORG':'ORG',
@@ -109,7 +109,8 @@ def decide(entity, text, start, end, *, peers=(), annotations=()):
     if raw.endswith("'s"):raw=raw[:-2]
     forms = entity['aliases']
     exact = raw in forms or surface(actual) in forms
-    labels = {TYPES.get(a['label'],a['label']) for a in annotations if a['start']<=start and a['end']>=end}
+    enclosing = [a for a in annotations if a['start']<=start and a['end']>=end]
+    labels = {TYPES.get(a['label'],a['label']) for a in enclosing}
     kind = entity['type']
     reasons=[]
     status='unresolved'
@@ -119,6 +120,18 @@ def decide(entity, text, start, end, *, peers=(), annotations=()):
         return {'status':'rejected','reasons':['article_entity_type_conflict'],
                 'stock_entity_id':entity['id'],'article_entity_id':None,
                 'source_type':kind,'article_types':sorted(labels),'context_score':context_score}
+    # A compatible NER type cannot turn a substring of a different complete
+    # organization name into an identity. Allow legal suffixes and possessives,
+    # but require the *whole* parsed name to be one of the source aliases.
+    if kind in ('ORG','GOV_AGENCY'):
+        for mention in enclosing:
+            if TYPES.get(mention['label'],mention['label']) not in ('ORG','GOV_AGENCY'):
+                continue
+            full_name = re.sub(r"['’]s$",'',mention['text'],flags=re.I)
+            if not set(aliases(full_name,kind)) & set(forms):
+                return {'status':'rejected','reasons':['different_complete_organization_name'],
+                        'stock_entity_id':entity['id'],'article_entity_id':None,
+                        'source_type':kind,'article_types':sorted(labels),'context_score':context_score}
     owner = any(re.search(r'(?<![A-Za-z0-9])'+re.escape(a)+r'(?![A-Za-z0-9])',surface(context)) for a in entity['owner_aliases'])
     competitors = {p['id'] for p in peers if p['type']==kind and (not owner or p['owner']==entity['owner'])}
     if kind=='PERSON':
