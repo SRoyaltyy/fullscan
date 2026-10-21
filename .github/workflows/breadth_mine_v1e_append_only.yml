@@ -1,0 +1,32 @@
+name: breadth_mine_v1e append-only
+
+on:
+  pull_request:
+    paths:
+      - "research/breadth_mine_v1e/**"
+      - "src/breadth_mine_v1e_append.py"
+      - "src/breadth_mine_v1e_score.py"
+      - "src/breadth_mine_v1e_bars.py"
+      - "src/breadth_mine_v1e_protocol.py"
+      - "src/test_breadth_mine_v1e.py"
+      - "src/test_breadth_mine_v1e_append.py"
+      - ".github/workflows/breadth_mine_v1e_append_only.yml"
+
+jobs:
+  append-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install bar dependencies
+        run: pip install pandas numpy pyarrow
+      - name: Append-only, fingerprint, and split gate
+        run: |
+          python3 -m src.breadth_mine_v1e_append --check-against origin/main
+          python3 -m src.test_breadth_mine_v1e_append
+          python3 -m src.test_breadth_mine_v1e
+          python3 -c "from src.breadth_mine_v1e_bars import assert_split_consistent; assert_split_consistent()"
