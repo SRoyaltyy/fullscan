@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-20",
+  "generated_at": "2026-10-20T16:22:22.121470-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-21",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-21) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed higher as value and healthcare rotation followed earnings beats while oil and Treasury yields eased amid weak housing data",
+  "raw_text": "- The Dow Jones Industrial Average ($DJI) rose about 530 points to 52,496, the S&P 500 ($SPX) gained roughly 0.3% to 7,713, and the Nasdaq Composite ($COMP) was little changed at 26,425, with roughly three-quarters of S&P 500 ($SPX) names advancing and the Russell 2000 (IWM) up about 1.7%.\n- Healthcare hit a record high as Eli Lilly (LLY) climbed about 3.6% after RBC reiterated it as the preferred pharma stock with a $1,500 price target, and UnitedHealth (UNH), Merck (MRK), Amgen (AMGN), Pfizer (PFE), and Johnson & Johnson (JNJ) each advanced more than 2%.\n- 3M (MMM) gained roughly 6% after beating earnings estimates, raising its full-year forecast, and expanding a data-center partnership with Amazon (AMZN) via a warrant deal.\n- Boeing (BA) slipped about 0.5% after the Federal Aviation Administration certified its 737 MAX-10 jet.\n- General Motors (GM) fell about 6.8% despite a Q3 earnings beat and a $20 billion buyback announcement as commodity inflation and input-cost headwinds pressured the stock.\n- Steel Dynamics (STLD) declined after missing quarterly profit estimates.\n- Energy underperformed as Brent crude (@QA) slipped 1.2% to $108.23 per barrel, giving back part of a recent run to a five-month high amid Mideast tensions and diplomatic efforts.\n- The 10-year Treasury yield eased 4 basis points to 5.10% while pending home sales dropped 7.3% in September.\n- After the close, Netflix (NFLX) reported Q3 results that beat revenue estimates, with shares down about 5% in extended-hours trading.\n- SpaceX (SPCX) also reported Q3 results after the bell, beating revenue estimates, with shares off about 0.9% in early after-hours trading.",
+  "raw_summary_md": "- The **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) **rose about 530 points to 52,496**, the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **gained roughly 0.3% to 7,713**, and the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) was little changed at **26,425**, with roughly **three-quarters** of **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) names advancing and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) **up about 1.7%**.\n- **Healthcare hit a record high** as **Eli Lilly** ([LLY](https://finviz.com/quote?t=LLY)) **climbed about 3.6%** after RBC reiterated it as the preferred pharma stock with a **$1,500 price target**, and **UnitedHealth** ([UNH](https://finviz.com/quote?t=UNH)), **Merck** ([MRK](https://finviz.com/quote?t=MRK)), **Amgen** ([AMGN](https://finviz.com/quote?t=AMGN)), **Pfizer** ([PFE](https://finviz.com/quote?t=PFE)), and **Johnson & Johnson** ([JNJ](https://finviz.com/quote?t=JNJ)) each advanced **more than 2%**.\n- **3M** ([MMM](https://finviz.com/quote?t=MMM)) **gained roughly 6%** after **beating earnings estimates**, **raising its full-year forecast**, and **expanding a data-center partnership with Amazon** ([AMZN](https://finviz.com/quote?t=AMZN)) via a warrant deal.\n- **Boeing** ([BA](https://finviz.com/quote?t=BA)) **slipped about 0.5%** after the **Federal Aviation Administration certified its 737 MAX-10 jet**.\n- **General Motors** ([GM](https://finviz.com/quote?t=GM)) **fell about 6.8%** despite a **Q3 earnings beat** and a **$20 billion buyback announcement** as **commodity inflation and input-cost headwinds** pressured the stock.\n- **Steel Dynamics** ([STLD](https://finviz.com/quote?t=STLD)) **declined** after **missing quarterly profit estimates**.\n- **Energy underperformed** as **Brent crude** ([@QA](https://finviz.com/futures_charts?t=QA)) **slipped 1.2% to $108.23 per barrel**, giving back part of a recent run to a **five-month high amid Mideast tensions and diplomatic efforts**.\n- The **10-year Treasury yield** **eased 4 basis points to 5.10%** while **pending home sales dropped 7.3% in September**.\n- After the close, **Netflix** ([NFLX](https://finviz.com/quote?t=NFLX)) reported **Q3 results that beat revenue estimates**, with shares **down about 5% in extended-hours trading**.\n- **SpaceX** ([SPCX](https://finviz.com/quote?t=SPCX)) also reported **Q3 results after the bell, beating revenue estimates**, with shares **off about 0.9% in early after-hours trading**.",
+  "index_moves": [
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 0.3,
+      "verb": "gained"
+    }
+  ],
+  "oil": {
+    "name": "Brent crude",
+    "price": 108.23,
+    "verb": null,
+    "direction": null
+  },
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "LLY",
+    "UNH",
+    "MRK",
+    "AMGN",
+    "PFE",
+    "JNJ",
+    "MMM",
+    "AMZN",
+    "BA",
+    "GM",
+    "STLD",
+    "NFLX",
+    "SPCX"
+  ],
+  "named_leaders": [
+    "LLY",
+    "UNH",
+    "MRK",
+    "AMGN",
+    "PFE",
+    "JNJ",
+    "MMM",
+    "AMZN",
+    "BA",
+    "GM",
+    "STLD",
+    "NFLX",
+    "SPCX"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": 0.3
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": true,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "The 10-year Treasury yield eased 4 basis points to 5.10% while pending home sales dropped 7.3% in September."
+    ],
+    "text": "The 10-year Treasury yield eased 4 basis points to 5.10% while pending home sales dropped 7.3% in September."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 313255,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-20T16:07:41.44",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}

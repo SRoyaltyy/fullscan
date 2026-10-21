@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-21",
+  "generated_at": "2026-10-21T04:23:43.400636-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-10-21",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point to higher open as tech leads on global earnings optimism and Brent nears $110 ahead of data and heavy earnings slate",
+  "raw_text": "- S&P 500 Futures (@ES) +0.23%, Dow Jones Futures (@YM) +0.04%, Nasdaq 100 Futures (@NQ) +0.71%, and Russell 2000 Futures (@ER2) -0.10% indicate a modestly higher US open led by technology\n- Asian equities advanced overnight with Japan’s Nikkei (@NKD) up over 1% and MSCI Asia-Pacific ex-Japan gaining 1.5% on improved earnings sentiment\n- European futures edged higher as risk appetite stabilized following recent technology sector volatility\n- Brent crude (@QA) climbed to around $110 per barrel, extending the recent upswing in energy prices\n- A heavy pre-market earnings slate features Abbott Laboratories (ABT), AT&T (T), NextEra Energy (NEE), Thermo Fisher Scientific (TMO), Philip Morris (PM), Danaher (DHR), CME Group (CME), Elevance Health (ELV), and Moody's (MCO)\n- After the close, earnings are due from Tesla (TSLA), Meta Platforms (META), IBM (IBM), and Lam Research (LRCX)\n- US economic data today include MBA mortgage applications at 7:00 AM ET and EIA crude oil inventories at 10:30 AM ET, while UK CPI data already released showed higher-than-expected inflation\n- Tesla (TSLA) gains about 2% pre-market after forming independent director committees to explore a merger, while Lam Research (LRCX) rises about 2.6% ahead of after-close earnings and Danaher (DHR) slips about 1.1%",
+  "raw_summary_md": "- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) +0.23%, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) +0.04%, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) **+0.71%**, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) -0.10% indicate a **modestly higher US open led by technology**\n- **Asian equities** advanced overnight with **Japan’s Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD)) **up over 1%** and **MSCI Asia-Pacific ex-Japan** gaining **1.5%** on improved earnings sentiment\n- **European futures edged higher** as risk appetite stabilized following recent **technology sector volatility**\n- **Brent crude** ([@QA](https://finviz.com/futures_charts?t=QA)) climbed to around **$110 per barrel**, extending the **recent upswing in energy prices**\n- A **heavy pre-market earnings slate** features **Abbott Laboratories** ([ABT](https://finviz.com/quote?t=ABT)), **AT&T** ([T](https://finviz.com/quote?t=T)), NextEra Energy ([NEE](https://finviz.com/quote?t=NEE)), Thermo Fisher Scientific ([TMO](https://finviz.com/quote?t=TMO)), Philip Morris ([PM](https://finviz.com/quote?t=PM)), Danaher ([DHR](https://finviz.com/quote?t=DHR)), CME Group ([CME](https://finviz.com/quote?t=CME)), Elevance Health ([ELV](https://finviz.com/quote?t=ELV)), and Moody's ([MCO](https://finviz.com/quote?t=MCO))\n- After the close, earnings are due from **Tesla** ([TSLA](https://finviz.com/quote?t=TSLA)), **Meta Platforms** ([META](https://finviz.com/quote?t=META)), **IBM** ([IBM](https://finviz.com/quote?t=IBM)), and **Lam Research** ([LRCX](https://finviz.com/quote?t=LRCX))\n- **US economic data today** include **MBA mortgage applications at 7:00 AM ET** and **EIA crude oil inventories at 10:30 AM ET**, while **UK CPI** data already released showed **higher-than-expected inflation**\n- **Tesla** ([TSLA](https://finviz.com/quote?t=TSLA)) gains about **2% pre-market** after forming independent director committees to explore a merger, while **Lam Research** ([LRCX](https://finviz.com/quote?t=LRCX)) rises about **2.6%** ahead of after-close earnings and **Danaher** ([DHR](https://finviz.com/quote?t=DHR)) slips about **1.1%**",
+  "index_moves": [],
+  "oil": {
+    "name": "Brent crude",
+    "price": 110.0,
+    "verb": null,
+    "direction": null
+  },
+  "cpi": {
+    "text": "UK CPI data already released showed higher-than-expected inflation",
+    "hotter": false
+  },
+  "fed_odds": null,
+  "named_tickers": [
+    "ABT",
+    "T",
+    "NEE",
+    "TMO",
+    "DHR",
+    "CME",
+    "ELV",
+    "MCO",
+    "TSLA",
+    "META",
+    "IBM",
+    "LRCX"
+  ],
+  "named_leaders": [
+    "ABT",
+    "T",
+    "NEE",
+    "TMO",
+    "DHR",
+    "CME",
+    "ELV",
+    "MCO",
+    "TSLA",
+    "META",
+    "IBM",
+    "LRCX"
+  ],
+  "calendar": [
+    "A heavy pre-market earnings slate features Abbott Laboratories (ABT), AT&T (T), NextEra Energy (NEE), Thermo Fisher Scientific (TMO), Philip Morris (PM), Danaher (DHR), CME Group (CME), Elevance Health (ELV), and Moody's (MCO)",
+    "US economic data today include MBA mortgage applications at 7:00 AM ET and EIA crude oil inventories at 10:30 AM ET, while UK CPI data already released showed higher-than-expected inflation"
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": {
+      "text": "UK CPI data already released showed higher-than-expected inflation",
+      "hotter": false
+    },
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "ABT",
+      "T",
+      "NEE",
+      "TMO",
+      "DHR",
+      "CME",
+      "ELV",
+      "MCO"
+    ],
+    "text": "A heavy pre-market earnings slate features Abbott Laboratories (ABT), AT&T (T), NextEra Energy (NEE), Thermo Fisher Scientific (TMO), Philip Morris (PM), Danaher (DHR), CME Group (CME), Elevance Health (ELV), and Moody's (MCO)"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 313649,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-21T04:07:23.84",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
