@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-1.34%** ($9,866) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 366 · skips 88 · realized $-1484.16.
+Cash book **-2.06%** ($9,794) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 366 · skips 88 · realized $-1484.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -530,6 +530,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **COVER** | `VFC` | 68 | $16.75 | $2.19 | $+34.32 | $12,135.76 | ▲ +34.32 after sell → book $9,816.76; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-19 09:30 ET | **SHORT** | `EGG` | 968 | $5.07 | $12.82 | — | $17,030.70 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+21.8; leftover $4908.38 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,030.70 | ▲ close $9,865.92 vs 09:30 $9,825.76 (session +61.98) | 16:00 close · cash $17,030.70 · equity $9,865.92 vs 09:30 $9,825.76 (+40.16; session marks +61.98) · 2 name(s) marked open→close (per-name table). GLND×773 09:30 $3.00 → close $3.02 -15.46; EGG×968 09:30 $5.07 → close $4.99 +77.44 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17,030.70 | ▲ 09:30 equity $10,119.41 vs yday $9,865.92 (+253.49) | 09:30 open · cash $17,030.70 (unchanged overnight, no fees) · equity $10,119.41 vs prior close $9,865.92 (+253.49) · 2 name(s) re-marked at the open (per-name table). EGG×968 yday $4.99 → 09:30 $4.80 +183.92; GLND×773 yday $3.02 → 09:30 $2.93 +69.57 | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,030.70 | ▼ close $9,794.40 vs 09:30 $10,119.41 (session -325.01) | 16:00 close · cash $17,030.70 · equity $9,794.40 vs 09:30 $10,119.41 (-325.01; session marks -325.01) · 2 name(s) marked open→close (per-name table). EGG×968 09:30 $4.80 → close $5.00 -193.60; GLND×773 09:30 $2.93 → close $3.10 -131.41 | — |
 
 ## Not taken
 

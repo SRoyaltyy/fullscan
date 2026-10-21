@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-9.70%** ($9,030) · signal-only (no cash/fees) was -18.73%. Starts YES **20/30**. Fills 84 · skips 104 · realized $-87.73.
+Cash book **-9.80%** ($9,020) · signal-only (no cash/fees) was -18.73%. Starts YES **20/30**. Fills 88 · skips 104 · realized $-87.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -252,6 +252,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **SELL** | `ASML` | 2 | $1677.70 | $2.03 | $-2.23 | $3,460.99 | ▼ -2.23 after sell → book $9,046.57; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-19 09:30 ET | **SELL** | `PGR` | 21 | $216.94 | $2.10 | $+205.22 | $8,014.63 | ▲ +205.22 after sell → book $9,044.47; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,014.63 | ▼ close $9,030.50 vs 09:30 $9,048.60 (session -13.97) | 16:00 close · cash $8,014.63 · equity $9,030.50 vs 09:30 $9,048.60 (-18.10; session marks -13.97) · 4 name(s) marked open→close (per-name table). CMC×4 09:30 $65.79 → close $64.54 -5.00; FHN×12 09:30 $22.88 → close $22.73 -1.80; PNC×1 09:30 $217.32 → close $216.21 -1.11; SCHW×3 09:30 $91.60 → close $89.58 -6.06 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,014.63 | ▼ 09:30 equity $9,027.64 vs yday $9,030.50 (-2.86) | 09:30 open · cash $8,014.63 (unchanged overnight, no fees) · equity $9,027.64 vs prior close $9,030.50 (-2.86) · 4 name(s) re-marked at the open (per-name table). CMC×4 yday $64.54 → 09:30 $63.49 -4.20; FHN×12 yday $22.73 → 09:30 $22.76 +0.36; PNC×1 yday $216.21 → 09:30 $217.13 +0.92; SCHW×3 yday $89.58 → 09:30 $89.60 +0.06 | — |
+| 2026-10-20 09:30 ET | **SELL** | `CMC` | 4 | $63.49 | $2.02 | $-27.58 | $8,266.57 | ▼ -27.58 after sell → book $9,025.62; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `FHN` | 12 | $22.76 | $2.05 | $+0.97 | $8,537.64 | ▲ +0.97 after sell → book $9,023.57; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `PNC` | 1 | $217.13 | $2.01 | $+4.63 | $8,752.76 | ▲ +4.63 after sell → book $9,021.56; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `SCHW` | 3 | $89.60 | $2.02 | $-15.40 | $9,019.54 | ▼ -15.40 after sell → book $9,019.54; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,019.54 | ▲ close $9,019.54 vs 09:30 $9,027.64 (session +0.00) | 16:00 close · cash $9,019.54 · no lots left · equity $9,019.54. | — |
 
 ## Not taken
 

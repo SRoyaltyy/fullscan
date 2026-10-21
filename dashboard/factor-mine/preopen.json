@@ -133,6 +133,24 @@
           "s": 2.125,
           "sells": [],
           "sit": false
+        },
+        {
+          "buys": [],
+          "date": "2026-10-20",
+          "equity": 9282.73,
+          "mean": 0.8194,
+          "picks": [],
+          "reasons": [
+            "seal not committed before 09:30 ET: never committed"
+          ],
+          "s": null,
+          "sells": [
+            "BTI",
+            "COP",
+            "VET",
+            "WMG"
+          ],
+          "sit": true
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -264,6 +282,19 @@
           "s": 2.125,
           "sells": [],
           "sit": false
+        },
+        {
+          "buys": [],
+          "date": "2026-10-20",
+          "equity": 9228.85,
+          "mean": 0.2342,
+          "picks": [],
+          "reasons": [
+            "seal not committed before 09:30 ET: never committed"
+          ],
+          "s": null,
+          "sells": [],
+          "sit": true
         }
       ],
       "label": "starts 10-08 open, no past days",

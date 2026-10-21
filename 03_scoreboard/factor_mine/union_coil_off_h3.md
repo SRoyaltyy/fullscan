@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off, no 🚨
 
-Cash book **-29.30%** ($7,070) · signal-only (no cash/fees) was -24.98%. Starts YES **1/30**. Fills 300 · skips 306 · realized $-1766.84.
+Cash book **-28.21%** ($7,179) · signal-only (no cash/fees) was -24.98%. Starts YES **1/30**. Fills 304 · skips 306 · realized $-1766.84.
 
 ## How this sleeve decides (like you are 10)
 
@@ -469,6 +469,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `PACS` | 23 | $47.02 | $2.06 | — | $1,271.42 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+8.3; leftover $1087.20 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `ITW` | 4 | $271.48 | $2.00 | — | $183.50 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; 🔵; ret5=+3.1; leftover $1087.20 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $183.50 | ▲ close $7,069.64 vs 09:30 $7,013.62 (session +74.83) | 16:00 close · cash $183.50 · equity $7,069.64 vs 09:30 $7,013.62 (+56.02; session marks +74.83) · 13 name(s) marked open→close (per-name table). AMX×3 09:30 $22.84 → close $22.83 -0.03; AVPT×5 09:30 $14.35 → close $14.74 +1.97; EPR×3 09:30 $55.28 → close $54.28 -3.00; FIS×5 09:30 $35.74 → close $35.98 +1.20; IT×1 09:30 $202.41 → close $207.72 +5.31; POOL×5 09:30 $171.48 → close $168.07 -17.05; TBBB×15 09:30 $58.00 → close $58.39 +5.85; TOST×2 09:30 $31.83 → close $31.45 -0.76; YOU×4 09:30 $43.98 → close $45.18 +4.80; VEEV×3 09:30 $310.33 → close $316.80 +19.41; ARQT×36 09:30 $29.41 → close $31.89 +89.28; PACS×23 09:30 $47.02 → close $45.85 -26.91; ITW×4 09:30 $271.48 → close $270.17 -5.24 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $183.50 | ▲ 09:30 equity $7,087.22 vs yday $7,069.64 (+17.58) | 09:30 open · cash $183.50 (unchanged overnight, no fees) · equity $7,087.22 vs prior close $7,069.64 (+17.58) · 13 name(s) re-marked at the open (per-name table). AMX×3 yday $22.83 → 09:30 $22.93 +0.30; ARQT×36 yday $31.89 → 09:30 $31.89 +0.00; AVPT×5 yday $14.74 → 09:30 $14.80 +0.30; EPR×3 yday $54.28 → 09:30 $54.56 +0.84; FIS×5 yday $35.98 → 09:30 $36.47 +2.45; IT×1 yday $207.72 → 09:30 $210.76 +3.04; ITW×4 yday $270.17 → 09:30 $269.66 -2.04; PACS×23 yday $45.85 → 09:30 $45.98 +2.99; POOL×5 yday $168.07 → 09:30 $168.23 +0.80; TBBB×15 yday $58.39 → 09:30 $58.65 +3.90; TOST×2 yday $31.45 → 09:30 $31.65 +0.40; VEEV×3 yday $316.80 → 09:30 $318.00 +3.60; YOU×4 yday $45.18 → 09:30 $45.43 +1.00 | — |
+| 2026-10-20 09:30 ET | **SELL** | `EPR` | 3 | $54.56 | $1.67 | $-6.37 | $345.51 | ▼ -6.37 after sell → book $7,085.55; vs 09:30 mark -1.67 | dropped from list after 3 sess (min 3) | join🟡 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `FIS` | 5 | $36.47 | $1.86 | $-3.34 | $526.01 | ▼ -3.34 after sell → book $7,083.70; vs 09:30 mark -1.85 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `IT` | 1 | $210.76 | $2.01 | $+7.66 | $734.75 | ▲ +7.66 after sell → book $7,081.68; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `YOU` | 4 | $45.43 | $1.85 | $+0.48 | $914.62 | ▲ +0.48 after sell → book $7,079.83; vs 09:30 mark -1.85 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $914.62 | ▲ close $7,178.84 vs 09:30 $7,087.22 (session +99.01) | 16:00 close · cash $914.62 · equity $7,178.84 vs 09:30 $7,087.22 (+91.62; session marks +99.01) · 9 name(s) marked open→close (per-name table). AMX×3 09:30 $22.93 → close $22.90 -0.09; ARQT×36 09:30 $31.89 → close $32.82 +33.48; AVPT×5 09:30 $14.80 → close $15.23 +2.15; ITW×4 09:30 $269.66 → close $274.97 +21.24; PACS×23 09:30 $45.98 → close $47.72 +40.02; POOL×5 09:30 $168.23 → close $171.71 +17.40; TBBB×15 09:30 $58.65 → close $57.37 -19.20; TOST×2 09:30 $31.65 → close $32.65 +2.00; VEEV×3 09:30 $318.00 → close $318.67 +2.01 | — |
 
 ## Not taken
 

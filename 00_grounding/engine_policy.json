@@ -1,18 +1,18 @@
 {
   "general": {
     "B0_ASIA": {
-      "n": 25,
-      "hit": 0.56,
-      "mult": 1.0
+      "n": 26,
+      "hit": 0.538,
+      "mult": 0.5
     },
     "B0_EUROPE": {
-      "n": 17,
-      "hit": 0.706,
+      "n": 18,
+      "hit": 0.667,
       "mult": 1.25
     },
     "B1_CATALYSTS": {
-      "n": 30,
-      "hit": 0.733,
+      "n": 31,
+      "hit": 0.71,
       "mult": 1.25
     },
     "B2_BONDS": {
@@ -31,8 +31,8 @@
       "mult": 0.5
     },
     "B5_SENTIMENT": {
-      "n": 22,
-      "hit": 0.318,
+      "n": 23,
+      "hit": 0.304,
       "mult": 0.0
     },
     "B6_FUTURES": {
@@ -373,8 +373,8 @@
       }
     }
   },
-  "version": 105,
-  "updated": "2026-10-20T15:37:33-04:00",
+  "version": 107,
+  "updated": "2026-10-20T19:25:46-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -383,21 +383,6 @@
     "bonus_mult": 1.25
   },
   "history": [
-    {
-      "at": "2026-10-02T16:14:42-04:00",
-      "changes": [
-        "Basic Materials.S2_BREADTH: 1.0 -> 0.5 (n=17, hit=0.529)",
-        "Basic Materials.S3_FLOWS_POSITIONING: 1.25 -> 1.0 (n=13, hit=0.615)",
-        "Energy.S0_SHARED_MACRO: 1.0 -> 0.5 (n=15, hit=0.533)",
-        "Real Estate.S4_ETF_TAPE: 1.25 -> 1.0 (n=21, hit=0.619)"
-      ]
-    },
-    {
-      "at": "2026-10-05T16:48:50-04:00",
-      "changes": [
-        "hold"
-      ]
-    },
     {
       "at": "2026-10-05T18:10:52-04:00",
       "changes": [
@@ -750,6 +735,18 @@
     },
     {
       "at": "2026-10-20T15:37:33-04:00",
+      "changes": [
+        "hold"
+      ]
+    },
+    {
+      "at": "2026-10-20T16:48:54-04:00",
+      "changes": [
+        "general.B0_ASIA: 1.0 -> 0.5 (n=26, hit=0.538)"
+      ]
+    },
+    {
+      "at": "2026-10-20T19:25:46-04:00",
       "changes": [
         "hold"
       ]

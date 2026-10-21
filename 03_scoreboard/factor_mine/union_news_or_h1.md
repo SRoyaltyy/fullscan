@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢
 
-Cash book **-35.05%** ($6,495) · signal-only (no cash/fees) was +9.53%. Starts YES **0/30**. Fills 302 · skips 79 · realized $-327.36.
+Cash book **-35.25%** ($6,475) · signal-only (no cash/fees) was +9.53%. Starts YES **0/30**. Fills 307 · skips 79 · realized $-327.36.
 
 ## How this sleeve decides (like you are 10)
 
@@ -469,6 +469,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `CNQ` | 14 | $53.51 | $2.03 | — | $978.92 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+8.4; leftover $799.60 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `GLND` | 266 | $3.00 | $3.43 | — | $177.48 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list yday_mover; 🔵; ret5=+24.3; leftover $799.60 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $177.48 | ▲ close $6,495.33 vs 09:30 $6,490.24 (session +31.31) | 16:00 close · cash $177.48 · equity $6,495.33 vs 09:30 $6,490.24 (+5.09; session marks +31.31) · 8 name(s) marked open→close (per-name table). AMX×38 09:30 $22.84 → close $22.83 -0.38; TBBB×14 09:30 $58.00 → close $58.39 +5.46; EOG×5 09:30 $157.52 → close $157.65 +0.65; COP×5 09:30 $145.73 → close $145.24 -2.45; RELX×20 09:30 $38.96 → close $39.25 +5.80; CHRD×5 09:30 $152.81 → close $154.48 +8.37; CNQ×14 09:30 $53.51 → close $54.12 +8.54; GLND×266 09:30 $3.00 → close $3.02 +5.32 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $177.48 | ▲ 09:30 equity $6,517.40 vs yday $6,495.33 (+22.07) | 09:30 open · cash $177.48 (unchanged overnight, no fees) · equity $6,517.40 vs prior close $6,495.33 (+22.07) · 8 name(s) re-marked at the open (per-name table). AMX×38 yday $22.83 → 09:30 $22.93 +3.80; CHRD×5 yday $154.48 → 09:30 $156.31 +9.15; CNQ×14 yday $54.12 → 09:30 $55.00 +12.32; COP×5 yday $145.24 → 09:30 $147.15 +9.55; EOG×5 yday $157.65 → 09:30 $159.86 +11.05; GLND×266 yday $3.02 → 09:30 $2.93 -23.94; RELX×20 yday $39.25 → 09:30 $39.08 -3.50; TBBB×14 yday $58.39 → 09:30 $58.65 +3.64 | — |
+| 2026-10-20 09:30 ET | **SELL** | `CHRD` | 5 | $156.31 | $2.02 | $+13.49 | $957.00 | ▲ +13.49 after sell → book $6,515.38; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 5 | $147.15 | $2.02 | $+3.07 | $1,690.73 | ▲ +3.07 after sell → book $6,513.35; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `EOG` | 5 | $159.86 | $2.02 | $+7.67 | $2,488.01 | ▲ +7.67 after sell → book $6,511.33; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `GLND` | 266 | $2.93 | $3.49 | $-25.54 | $3,263.90 | ▼ -25.54 after sell → book $6,507.84; vs 09:30 mark -3.49 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `RELX` | 20 | $39.08 | $2.07 | $-1.82 | $4,043.33 | ▼ -1.82 after sell → book $6,505.77; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,043.33 | ▼ close $6,475.23 vs 09:30 $6,517.40 (session -30.54) | 16:00 close · cash $4,043.33 · equity $6,475.23 vs 09:30 $6,517.40 (-42.17; session marks -30.54) · 3 name(s) marked open→close (per-name table). AMX×38 09:30 $22.93 → close $22.90 -1.14; CNQ×14 09:30 $55.00 → close $54.18 -11.48; TBBB×14 09:30 $58.65 → close $57.37 -17.92 | — |
 
 ## Not taken
 

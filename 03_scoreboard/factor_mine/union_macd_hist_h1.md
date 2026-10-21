@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-7.65%** ($9,235) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 391 · skips 94 · realized $-657.32.
+Cash book **-7.14%** ($9,286) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 395 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -556,6 +556,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `POOL` | 6 | $171.48 | $2.01 | — | $1,745.74 | — | rank by macd_hist; rank macd_hist; list yday_gainer; 🔵; ret5=+8.2; leftover $1198.12 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `COP` | 8 | $145.73 | $2.01 | — | $577.88 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+9.3; leftover $1198.12 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $577.88 | ▲ close $9,234.71 vs 09:30 $9,198.31 (session +56.54) | 16:00 close · cash $577.88 · equity $9,234.71 vs 09:30 $9,198.31 (+36.40; session marks +56.54) · 8 name(s) marked open→close (per-name table). CRS×3 09:30 $381.30 → close $378.51 -8.37; VEEV×3 09:30 $310.33 → close $316.80 +19.41; WM×5 09:30 $224.54 → close $226.41 +9.35; LMT×2 09:30 $540.97 → close $548.23 +14.52; ACN×5 09:30 $228.48 → close $236.93 +42.25; ALL×4 09:30 $245.91 → close $246.85 +3.76; POOL×6 09:30 $171.48 → close $168.07 -20.46; COP×8 09:30 $145.73 → close $145.24 -3.92 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $577.88 | ▲ 09:30 equity $9,274.85 vs yday $9,234.71 (+40.14) | 09:30 open · cash $577.88 (unchanged overnight, no fees) · equity $9,274.85 vs prior close $9,234.71 (+40.14) · 8 name(s) re-marked at the open (per-name table). ACN×5 yday $236.93 → 09:30 $238.00 +5.35; ALL×4 yday $246.85 → 09:30 $250.00 +12.60; COP×8 yday $145.24 → 09:30 $147.15 +15.28; CRS×3 yday $378.51 → 09:30 $372.13 -19.14; LMT×2 yday $548.23 → 09:30 $553.00 +9.54; POOL×6 yday $168.07 → 09:30 $168.23 +0.96; VEEV×3 yday $316.80 → 09:30 $318.00 +3.60; WM×5 yday $226.41 → 09:30 $228.80 +11.95 | — |
+| 2026-10-20 09:30 ET | **SELL** | `ALL` | 4 | $250.00 | $2.02 | $+12.34 | $1,575.86 | ▲ +12.34 after sell → book $9,272.83; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 8 | $147.15 | $2.03 | $+7.31 | $2,751.02 | ▲ +7.31 after sell → book $9,270.79; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `VEEV` | 3 | $318.00 | $2.02 | $-9.87 | $3,703.01 | ▼ -9.87 after sell → book $9,268.77; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `WM` | 5 | $228.80 | $2.02 | $+16.07 | $4,844.98 | ▲ +16.07 after sell → book $9,266.75; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,844.98 | ▲ close $9,285.85 vs 09:30 $9,274.85 (session +19.10) | 16:00 close · cash $4,844.98 · equity $9,285.85 vs 09:30 $9,274.85 (+11.00; session marks +19.10) · 4 name(s) marked open→close (per-name table). ACN×5 09:30 $238.00 → close $239.12 +5.60; CRS×3 09:30 $372.13 → close $372.53 +1.20; LMT×2 09:30 $553.00 → close $548.71 -8.58; POOL×6 09:30 $168.23 → close $171.71 +20.88 | — |
 
 ## Not taken
 

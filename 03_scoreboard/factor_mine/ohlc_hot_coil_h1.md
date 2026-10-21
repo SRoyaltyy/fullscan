@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-23.62%** ($7,638) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 283 · skips 74 · realized $-1849.08.
+Cash book **-23.22%** ($7,678) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 290 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -451,6 +451,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `CHRD` | 6 | $152.81 | $2.01 | — | $1,129.94 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+9.2; leftover $953.28 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `OVV` | 13 | $69.01 | $2.03 | — | $230.78 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+8.5; leftover $953.28 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $230.78 | ▲ close $7,637.61 vs 09:30 $7,650.32 (session +27.67) | 16:00 close · cash $230.78 · equity $7,637.61 vs 09:30 $7,650.32 (-12.71; session marks +27.67) · 8 name(s) marked open→close (per-name table). WMG×30 09:30 $31.26 → close $31.04 -6.60; COP×6 09:30 $145.73 → close $145.24 -2.94; NAVN×37 09:30 $25.72 → close $25.67 -1.85; EOG×6 09:30 $157.52 → close $157.65 +0.78; KDP×27 09:30 $34.35 → close $34.46 +2.84; SU×12 09:30 $77.39 → close $78.39 +12.00; CHRD×6 09:30 $152.81 → close $154.48 +10.05; OVV×13 09:30 $69.01 → close $70.04 +13.39 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $230.78 | ▲ 09:30 equity $7,701.46 vs yday $7,637.61 (+63.85) | 09:30 open · cash $230.78 (unchanged overnight, no fees) · equity $7,701.46 vs prior close $7,637.61 (+63.85) · 8 name(s) re-marked at the open (per-name table). CHRD×6 yday $154.48 → 09:30 $156.31 +10.98; COP×6 yday $145.24 → 09:30 $147.15 +11.46; EOG×6 yday $157.65 → 09:30 $159.86 +13.26; KDP×27 yday $34.46 → 09:30 $34.56 +2.70; NAVN×37 yday $25.67 → 09:30 $25.67 +0.00; OVV×13 yday $70.04 → 09:30 $70.95 +11.83; SU×12 yday $78.39 → 09:30 $79.30 +10.92; WMG×30 yday $31.04 → 09:30 $31.13 +2.70 | — |
+| 2026-10-20 09:30 ET | **SELL** | `CHRD` | 6 | $156.31 | $2.03 | $+16.99 | $1,166.61 | ▲ +16.99 after sell → book $7,699.43; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 6 | $147.15 | $2.03 | $+4.48 | $2,047.48 | ▲ +4.48 after sell → book $7,697.40; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `EOG` | 6 | $159.86 | $2.03 | $+10.00 | $3,004.62 | ▲ +10.00 after sell → book $7,695.38; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `KDP` | 27 | $34.56 | $2.09 | $+1.37 | $3,935.64 | ▲ +1.37 after sell → book $7,693.28; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `NAVN` | 37 | $25.67 | $2.12 | $-6.07 | $4,883.31 | ▼ -6.07 after sell → book $7,691.16; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `SU` | 12 | $79.30 | $2.05 | $+18.85 | $5,832.87 | ▲ +18.85 after sell → book $7,689.12; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `WMG` | 30 | $31.13 | $2.10 | $-8.08 | $6,764.67 | ▼ -8.08 after sell → book $7,687.02; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,764.67 | ▼ close $7,678.44 vs 09:30 $7,701.46 (session -8.58) | 16:00 close · cash $6,764.67 · equity $7,678.44 vs 09:30 $7,701.46 (-23.02; session marks -8.58) · 1 name(s) marked open→close (per-name table). OVV×13 09:30 $70.95 → close $70.29 -8.58 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-22.15%** ($7,785) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 212 · skips 214 · realized $-900.04.
+Cash book **-20.91%** ($7,909) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 213 · skips 214 · realized $-900.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -374,6 +374,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `ARQT` | 30 | $29.41 | $2.08 | — | $2,223.71 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ret5=+8.4; leftover $907.07 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-19 09:30 ET | **BUY** | `PACS` | 19 | $47.02 | $2.05 | — | $1,328.28 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+8.3; leftover $907.07 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,328.28 | ▲ close $7,785.20 vs 09:30 $7,688.48 (session +119.38) | 16:00 close · cash $1,328.28 · equity $7,785.20 vs 09:30 $7,688.48 (+96.72; session marks +119.38) · 8 name(s) marked open→close (per-name table). PDFS×1 09:30 $41.29 → close $41.22 -0.07; TOST×1 09:30 $31.83 → close $31.45 -0.38; YOU×1 09:30 $43.98 → close $45.18 +1.20; VEEV×9 09:30 $310.33 → close $316.80 +58.23; ILMN×3 09:30 $268.93 → close $262.66 -18.81; CDNA×13 09:30 $65.00 → close $67.08 +27.04; ARQT×30 09:30 $29.41 → close $31.89 +74.40; PACS×19 09:30 $47.02 → close $45.85 -22.23 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,328.28 | ▲ 09:30 equity $7,804.04 vs yday $7,785.20 (+18.84) | 09:30 open · cash $1,328.28 (unchanged overnight, no fees) · equity $7,804.04 vs prior close $7,785.20 (+18.84) · 8 name(s) re-marked at the open (per-name table). ARQT×30 yday $31.89 → 09:30 $31.89 +0.00; CDNA×13 yday $67.08 → 09:30 $67.20 +1.56; ILMN×3 yday $262.66 → 09:30 $264.13 +4.41; PACS×19 yday $45.85 → 09:30 $45.98 +2.47; PDFS×1 yday $41.22 → 09:30 $40.37 -0.85; TOST×1 yday $31.45 → 09:30 $31.65 +0.20; VEEV×9 yday $316.80 → 09:30 $318.00 +10.80; YOU×1 yday $45.18 → 09:30 $45.43 +0.25 | — |
+| 2026-10-20 09:30 ET | **SELL** | `TOST` | 1 | $31.65 | $0.34 | $+1.06 | $1,359.59 | ▲ +1.06 after sell → book $7,803.70; vs 09:30 mark -0.34 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,359.59 | ▲ close $7,908.90 vs 09:30 $7,804.04 (session +105.20) | 16:00 close · cash $1,359.59 · equity $7,908.90 vs 09:30 $7,804.04 (+104.86; session marks +105.20) · 7 name(s) marked open→close (per-name table). ARQT×30 09:30 $31.89 → close $32.82 +27.90; CDNA×13 09:30 $67.20 → close $69.20 +26.00; ILMN×3 09:30 $264.13 → close $267.93 +11.40; PACS×19 09:30 $45.98 → close $47.72 +33.06; PDFS×1 09:30 $40.37 → close $41.18 +0.81; VEEV×9 09:30 $318.00 → close $318.67 +6.03; YOU×1 09:30 $45.43 → close $45.43 +0.00 | — |
 
 ## Not taken
 

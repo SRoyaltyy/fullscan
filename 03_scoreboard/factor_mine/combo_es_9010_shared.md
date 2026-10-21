@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/short_news_r_h3 w=0.9,0.1 net=priority
 
-Cash book **-10.40%** ($8,960) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 321 · skips 319 · realized $+4040.10.
+Cash book **-10.32%** ($8,968) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 326 · skips 319 · realized $+4040.10.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,778.49.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,553.05.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -488,6 +488,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **SELL** | `MS` | 10 | $181.54 | $2.04 | $+6.84 | $7,828.07 | ▲ +6.84 after sell → book $8,991.14; vs 09:30 mark -2.05 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-10-19 09:30 ET | **SELL** | `PGR` | 9 | $216.94 | $2.04 | $+85.67 | $9,778.49 | ▲ +85.67 after sell → book $8,989.10; vs 09:30 mark -2.04 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,778.49 | ▼ close $8,959.71 vs 09:30 $9,001.46 (session -29.39) | 16:00 close · cash $9,778.49 · equity $8,959.71 vs 09:30 $9,001.46 (-41.75; session marks -29.39) · 11 name(s) marked open→close (per-name table). AA×15 09:30 $41.79 → close $41.67 +1.80; CFG×2 09:30 $62.96 → close $62.76 -0.40; CMC×1 09:30 $65.79 → close $64.54 -1.25; ERIC×12 09:30 $10.42 → close $10.34 -0.96; FHN×5 09:30 $22.88 → close $22.73 -0.75; IBKR×2 09:30 $82.83 → close $81.35 -2.96; NOG×25 09:30 $27.00 → close $27.75 -18.75; RBLX×10 09:30 $50.46 → close $50.75 -2.90; RF×6 09:30 $27.40 → close $27.20 -1.20; SCHW×1 09:30 $91.60 → close $89.58 -2.02; WSE×15 09:30 $10.95 → close $10.95 +0.00 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,778.49 | ▲ 09:30 equity $8,965.38 vs yday $8,959.71 (+5.67) | 09:30 open · cash $9,778.49 (unchanged overnight, no fees) · equity $8,965.38 vs prior close $8,959.71 (+5.67) | — |
+| 2026-10-20 09:30 ET | **COVER** | `AA` | 15 | $40.72 | $2.04 | $-18.36 | $9,165.66 | ▼ -18.36 after sell → book $8,963.35; vs 09:30 mark -2.03 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `CMC` | 1 | $63.49 | $0.66 | $-7.24 | $9,228.49 | ▼ -7.24 after sell → book $8,962.69; vs 09:30 mark -0.66 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `ERIC` | 12 | $10.38 | $1.30 | $-5.84 | $9,351.75 | ▼ -5.84 after sell → book $8,961.39; vs 09:30 mark -1.30 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `FHN` | 5 | $22.76 | $1.17 | $-0.20 | $9,464.37 | ▼ -0.20 after sell → book $8,960.21; vs 09:30 mark -1.18 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `SCHW` | 1 | $89.60 | $0.92 | $-5.65 | $9,553.05 | ▼ -5.65 after sell → book $8,959.29; vs 09:30 mark -0.92 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,553.05 | ▲ close $8,967.56 vs 09:30 $8,965.38 (session +8.27) | 16:00 close · cash $9,553.05 · equity $8,967.56 vs 09:30 $8,965.38 (+2.18; session marks +8.27) · 6 name(s) marked open→close (per-name table). CFG×2 09:30 $62.62 → close $64.22 +3.20; IBKR×2 09:30 $80.50 → close $82.91 +4.82; NOG×25 09:30 $28.00 → close $27.54 +11.50; RBLX×10 09:30 $50.79 → close $52.35 -15.60; RF×6 09:30 $27.25 → close $27.85 +3.60; WSE×15 09:30 $10.96 → close $11.01 +0.75 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **+0.31%** ($10,031) · signal-only (no cash/fees) was +6.91%. Starts YES **21/30**. Fills 104 · skips 29 · realized $+1396.12.
+Cash book **+0.71%** ($10,071) · signal-only (no cash/fees) was +6.91%. Starts YES **21/30**. Fills 108 · skips 29 · realized $+1396.12.
 
 ## How this sleeve decides (like you are 10)
 
@@ -271,6 +271,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `CHRD` | 6 | $152.81 | $2.01 | — | $1,274.41 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+9.2; leftover $998.57 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `CNQ` | 18 | $53.51 | $2.04 | — | $309.19 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+8.4; leftover $998.57 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $309.19 | ▲ close $10,031.42 vs 09:30 $10,019.73 (session +23.92) | 16:00 close · cash $309.19 · equity $10,031.42 vs 09:30 $10,019.73 (+11.69; session marks +23.92) · 6 name(s) marked open→close (per-name table). AMX×220 09:30 $22.84 → close $22.83 -2.20; EOG×6 09:30 $157.52 → close $157.65 +0.78; COP×6 09:30 $145.73 → close $145.24 -2.94; RELX×25 09:30 $38.96 → close $39.25 +7.25; CHRD×6 09:30 $152.81 → close $154.48 +10.05; CNQ×18 09:30 $53.51 → close $54.12 +10.98 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $309.19 | ▲ 09:30 equity $10,100.59 vs yday $10,031.42 (+69.17) | 09:30 open · cash $309.19 (unchanged overnight, no fees) · equity $10,100.59 vs prior close $10,031.42 (+69.17) · 6 name(s) re-marked at the open (per-name table). AMX×220 yday $22.83 → 09:30 $22.93 +22.00; CHRD×6 yday $154.48 → 09:30 $156.31 +10.98; CNQ×18 yday $54.12 → 09:30 $55.00 +15.84; COP×6 yday $145.24 → 09:30 $147.15 +11.46; EOG×6 yday $157.65 → 09:30 $159.86 +13.26; RELX×25 yday $39.25 → 09:30 $39.08 -4.37 | — |
+| 2026-10-20 09:30 ET | **SELL** | `CHRD` | 6 | $156.31 | $2.03 | $+16.99 | $1,245.02 | ▲ +16.99 after sell → book $10,098.56; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 6 | $147.15 | $2.03 | $+4.48 | $2,125.89 | ▲ +4.48 after sell → book $10,096.53; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `EOG` | 6 | $159.86 | $2.03 | $+10.00 | $3,083.03 | ▲ +10.00 after sell → book $10,094.50; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `RELX` | 25 | $39.08 | $2.08 | $-1.27 | $4,057.82 | ▼ -1.27 after sell → book $10,092.42; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,057.82 | ▼ close $10,071.06 vs 09:30 $10,100.59 (session -21.36) | 16:00 close · cash $4,057.82 · equity $10,071.06 vs 09:30 $10,100.59 (-29.53; session marks -21.36) · 2 name(s) marked open→close (per-name table). AMX×220 09:30 $22.93 → close $22.90 -6.60; CNQ×18 09:30 $55.00 → close $54.18 -14.76 | — |
 
 ## Not taken
 

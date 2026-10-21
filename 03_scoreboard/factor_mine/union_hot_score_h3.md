@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · rank by hot_score
 
-Cash book **+2.03%** ($10,203) · signal-only (no cash/fees) was +392.57%. Starts YES **29/30**. Fills 299 · skips 265 · realized $+1176.18.
+Cash book **+3.54%** ($10,354) · signal-only (no cash/fees) was +392.57%. Starts YES **29/30**. Fills 303 · skips 265 · realized $+1176.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -464,6 +464,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `NAVN` | 49 | $25.72 | $2.14 | — | $1,569.49 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+7.4; leftover $1267.43 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `EOG` | 8 | $157.52 | $2.01 | — | $307.32 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+7.3; leftover $1267.43 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $307.32 | ▲ close $10,202.84 vs 09:30 $10,227.67 (session +20.55) | 16:00 close · cash $307.32 · equity $10,202.84 vs 09:30 $10,227.67 (-24.83; session marks +20.55) · 13 name(s) marked open→close (per-name table). BLMN×1 09:30 $10.05 → close $9.95 -0.10; ENGS×5 09:30 $3.77 → close $3.76 -0.05; MNSO×1 09:30 $10.22 → close $10.25 +0.03; NAUT×8 09:30 $2.03 → close $2.63 +4.80; REAL×1 09:30 $10.38 → close $10.40 +0.02; BTI×21 09:30 $59.13 → close $58.51 -13.02; WMG×40 09:30 $31.26 → close $31.04 -8.80; ACN×5 09:30 $228.48 → close $236.93 +42.25; COP×8 09:30 $145.73 → close $145.24 -3.92; WIT×660 09:30 $1.92 → close $1.93 +6.60; DEO×13 09:30 $93.94 → close $93.49 -5.85; NAVN×49 09:30 $25.72 → close $25.67 -2.45; EOG×8 09:30 $157.52 → close $157.65 +1.04 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $307.32 | ▲ 09:30 equity $10,270.82 vs yday $10,202.84 (+67.98) | 09:30 open · cash $307.32 (unchanged overnight, no fees) · equity $10,270.82 vs prior close $10,202.84 (+67.98) · 13 name(s) re-marked at the open (per-name table). ACN×5 yday $236.93 → 09:30 $238.00 +5.35; BLMN×1 yday $9.95 → 09:30 $9.99 +0.04; BTI×21 yday $58.51 → 09:30 $58.94 +8.93; COP×8 yday $145.24 → 09:30 $147.15 +15.28; DEO×13 yday $93.49 → 09:30 $93.79 +3.90; ENGS×5 yday $3.76 → 09:30 $3.78 +0.10; EOG×8 yday $157.65 → 09:30 $159.86 +17.68; MNSO×1 yday $10.25 → 09:30 $10.20 -0.05; NAUT×8 yday $2.63 → 09:30 $2.62 -0.12; NAVN×49 yday $25.67 → 09:30 $25.67 +0.00; REAL×1 yday $10.40 → 09:30 $10.48 +0.08; WIT×660 yday $1.93 → 09:30 $1.95 +13.20; WMG×40 yday $31.04 → 09:30 $31.13 +3.60 | — |
+| 2026-10-20 09:30 ET | **SELL** | `BLMN` | 1 | $9.99 | $0.12 | $+0.29 | $317.19 | ▲ +0.29 after sell → book $10,270.70; vs 09:30 mark -0.12 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `ENGS` | 5 | $3.78 | $0.22 | $+0.99 | $335.86 | ▲ +0.99 after sell → book $10,270.48; vs 09:30 mark -0.22 | dropped from list after 3 sess (min 3) | join🟡 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `MNSO` | 1 | $10.20 | $0.12 | $-0.44 | $345.94 | ▼ -0.44 after sell → book $10,270.35; vs 09:30 mark -0.13 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `NAUT` | 8 | $2.62 | $0.25 | $+3.92 | $366.60 | ▲ +3.92 after sell → book $10,270.10; vs 09:30 mark -0.25 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $366.60 | ▲ close $10,353.60 vs 09:30 $10,270.82 (session +83.50) | 16:00 close · cash $366.60 · equity $10,353.60 vs 09:30 $10,270.82 (+82.78; session marks +83.50) · 9 name(s) marked open→close (per-name table). ACN×5 09:30 $238.00 → close $239.12 +5.60; BTI×21 09:30 $58.94 → close $59.11 +3.67; COP×8 09:30 $147.15 → close $145.95 -9.60; DEO×13 09:30 $93.79 → close $93.41 -4.94; EOG×8 09:30 $159.86 → close $157.91 -15.60; NAVN×49 09:30 $25.67 → close $26.28 +29.89; REAL×1 09:30 $10.48 → close $10.96 +0.48; WIT×660 09:30 $1.95 → close $2.05 +66.00; WMG×40 09:30 $31.13 → close $31.33 +8.00 | — |
 
 ## Not taken
 

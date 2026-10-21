@@ -1,6 +1,6 @@
 # HIT Board — general + sectors (all dates)
 
-Generated: **2026-10-20T15:37:28.430563-04:00**
+Generated: **2026-10-20T19:25:41.679111-04:00**
 
 Source: `03_scoreboard/scoreboard.json`.
 
@@ -10,14 +10,14 @@ Source: `03_scoreboard/scoreboard.json`.
 
 | Book | Direction HIT% | hits / graded | Mag HIT% | n mag |
 |------|----------------|---------------|----------|-------|
-| **General (SPX-style)** | **54.3%** | 25/46 | 50.0% | 46 |
+| **General (SPX-style)** | **53.2%** | 25/47 | 48.9% | 47 |
 | **All sector calls** | **43.2%** | 145/336 | 35.7% | 336 |
 
 ### Pipeline blanks (general) — excluded from HIT%
 
 - No `predicted_direction`: **2026-08-02, 2026-08-08, 2026-08-09, 2026-08-15, 2026-08-16, 2026-08-22, 2026-08-25, 2026-08-27, 2026-08-29, 2026-08-30, 2026-09-30, 2026-10-06, 2026-10-07, 2026-10-12, 2026-10-15** (n=15)
 - Of those, legacy scoreboard still marked direction_hit=false: **2026-08-02, 2026-08-08, 2026-08-09** — ops failure, not model error
-- If blanks were counted as MISS (old method): **51.0%** (25/49)
+- If blanks were counted as MISS (old method): **50.0%** (25/50)
 
 ## General market — by date
 
@@ -87,7 +87,7 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-10-15 | — | — | — | 0.33 | up | NO_PRED | NO_PRED |
 | 2026-10-16 | up | mild | 5.526 | -1.09 | down | MISS | MISS |
 | 2026-10-19 | up | mild | 2.125 | 0.41 | up | HIT | HIT |
-| 2026-10-20 | down | mild | -8.071 | — | — | — | — |
+| 2026-10-20 | down | mild | -8.071 | 0.28 | up | MISS | MISS |
 
 ## Sectors — HIT% by date (model calls only)
 

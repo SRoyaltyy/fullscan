@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #2 fresh catalyst + limited extension (research; not KEEP)
 
-Cash book **-21.78%** ($7,822) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 346 · skips 106 · realized $-137.13.
+Cash book **-21.53%** ($7,847) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 352 · skips 106 · realized $-137.13.
 
 ## How this sleeve decides (like you are 10)
 
@@ -514,6 +514,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `ITW` | 3 | $271.48 | $2.00 | — | $1,326.27 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_gainer; 🔵; ret5=+3.1; leftover $969.63 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `NVTS` | 109 | $8.84 | $2.32 | — | $360.39 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer,yday_mover; ret5=-22.6; leftover $969.63 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $360.39 | ▼ close $7,822.13 vs 09:30 $7,852.38 (session -1.45) | 16:00 close · cash $360.39 · equity $7,822.13 vs 09:30 $7,852.38 (-30.25; session marks -1.45) · 8 name(s) marked open→close (per-name table). AMX×46 09:30 $22.84 → close $22.83 -0.46; EOG×6 09:30 $157.52 → close $157.65 +0.78; COP×6 09:30 $145.73 → close $145.24 -2.94; RELX×24 09:30 $38.96 → close $39.25 +6.96; CHRD×6 09:30 $152.81 → close $154.48 +10.05; CNQ×18 09:30 $53.51 → close $54.12 +10.98; ITW×3 09:30 $271.48 → close $270.17 -3.93; NVTS×109 09:30 $8.84 → close $8.63 -22.89 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $360.39 | ▲ 09:30 equity $7,845.29 vs yday $7,822.13 (+23.16) | 09:30 open · cash $360.39 (unchanged overnight, no fees) · equity $7,845.29 vs prior close $7,822.13 (+23.16) · 8 name(s) re-marked at the open (per-name table). AMX×46 yday $22.83 → 09:30 $22.93 +4.60; CHRD×6 yday $154.48 → 09:30 $156.31 +10.98; CNQ×18 yday $54.12 → 09:30 $55.00 +15.84; COP×6 yday $145.24 → 09:30 $147.15 +11.46; EOG×6 yday $157.65 → 09:30 $159.86 +13.26; ITW×3 yday $270.17 → 09:30 $269.66 -1.53; NVTS×109 yday $8.63 → 09:30 $8.38 -27.25; RELX×24 yday $39.25 → 09:30 $39.08 -4.20 | — |
+| 2026-10-20 09:30 ET | **SELL** | `CHRD` | 6 | $156.31 | $2.03 | $+16.99 | $1,296.22 | ▲ +16.99 after sell → book $7,843.26; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `CNQ` | 18 | $55.00 | $2.06 | $+22.71 | $2,284.16 | ▲ +22.71 after sell → book $7,841.20; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 6 | $147.15 | $2.03 | $+4.48 | $3,165.03 | ▲ +4.48 after sell → book $7,839.17; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `EOG` | 6 | $159.86 | $2.03 | $+10.00 | $4,122.16 | ▲ +10.00 after sell → book $7,837.14; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `NVTS` | 109 | $8.38 | $2.35 | $-54.80 | $5,033.24 | ▼ -54.80 after sell → book $7,834.80; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `RELX` | 24 | $39.08 | $2.08 | $-1.38 | $5,968.95 | ▼ -1.38 after sell → book $7,832.71; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,968.95 | ▲ close $7,847.26 vs 09:30 $7,845.29 (session +14.55) | 16:00 close · cash $5,968.95 · equity $7,847.26 vs 09:30 $7,845.29 (+1.97; session marks +14.55) · 2 name(s) marked open→close (per-name table). AMX×46 09:30 $22.93 → close $22.90 -1.38; ITW×3 09:30 $269.66 → close $274.97 +15.93 | — |
 
 ## Not taken
 

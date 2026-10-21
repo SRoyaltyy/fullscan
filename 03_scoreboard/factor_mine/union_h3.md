@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-22.00%** ($7,800) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 292 · skips 294 · realized $-475.74.
+Cash book **-20.43%** ($7,957) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 296 · skips 294 · realized $-475.74.
 
 ## How this sleeve decides (like you are 10)
 
@@ -454,6 +454,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `ARQT` | 31 | $29.41 | $2.08 | — | $2,020.21 | — | baseline list, no extra gate; list flatten; ret5=+8.4; leftover $931.30 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-19 09:30 ET | **BUY** | `PACS` | 19 | $47.02 | $2.05 | — | $1,124.79 | — | baseline list, no extra gate; list flatten; 🔵; ret5=+8.3; leftover $931.30 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,124.79 | ▲ close $7,800.09 vs 09:30 $7,668.41 (session +154.28) | 16:00 close · cash $1,124.79 · equity $7,800.09 vs 09:30 $7,668.41 (+131.68; session marks +154.28) · 12 name(s) marked open→close (per-name table). FIS×1 09:30 $35.74 → close $35.98 +0.24; PDFS×1 09:30 $41.29 → close $41.22 -0.07; PRMB×50 09:30 $19.22 → close $19.79 +28.50; SHOO×1 09:30 $45.41 → close $44.96 -0.45; SMMT×61 09:30 $14.90 → close $15.57 +40.87; TOST×1 09:30 $31.83 → close $31.45 -0.38; YOU×1 09:30 $43.98 → close $45.18 +1.20; VEEV×3 09:30 $310.33 → close $316.80 +19.41; ILMN×3 09:30 $268.93 → close $262.66 -18.81; CDNA×14 09:30 $65.00 → close $67.08 +29.12; ARQT×31 09:30 $29.41 → close $31.89 +76.88; PACS×19 09:30 $47.02 → close $45.85 -22.23 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,124.79 | ▲ 09:30 equity $7,807.25 vs yday $7,800.09 (+7.16) | 09:30 open · cash $1,124.79 (unchanged overnight, no fees) · equity $7,807.25 vs prior close $7,800.09 (+7.16) · 12 name(s) re-marked at the open (per-name table). ARQT×31 yday $31.89 → 09:30 $31.89 +0.00; CDNA×14 yday $67.08 → 09:30 $67.20 +1.68; FIS×1 yday $35.98 → 09:30 $36.47 +0.49; ILMN×3 yday $262.66 → 09:30 $264.13 +4.41; PACS×19 yday $45.85 → 09:30 $45.98 +2.47; PDFS×1 yday $41.22 → 09:30 $40.37 -0.85; PRMB×50 yday $19.79 → 09:30 $19.77 -1.00; SHOO×1 yday $44.96 → 09:30 $45.14 +0.18; SMMT×61 yday $15.57 → 09:30 $15.50 -4.27; TOST×1 yday $31.45 → 09:30 $31.65 +0.20; VEEV×3 yday $316.80 → 09:30 $318.00 +3.60; YOU×1 yday $45.18 → 09:30 $45.43 +0.25 | — |
+| 2026-10-20 09:30 ET | **SELL** | `FIS` | 1 | $36.47 | $0.39 | $-0.68 | $1,160.87 | ▼ -0.68 after sell → book $7,806.86; vs 09:30 mark -0.39 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `SHOO` | 1 | $45.14 | $0.47 | $-0.52 | $1,205.54 | ▼ -0.52 after sell → book $7,806.39; vs 09:30 mark -0.47 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `TOST` | 1 | $31.65 | $0.34 | $+1.06 | $1,236.85 | ▲ +1.06 after sell → book $7,806.05; vs 09:30 mark -0.34 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `YOU` | 1 | $45.43 | $0.48 | $+0.11 | $1,281.80 | ▲ +0.11 after sell → book $7,805.57; vs 09:30 mark -0.48 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,281.80 | ▲ close $7,957.17 vs 09:30 $7,807.25 (session +151.60) | 16:00 close · cash $1,281.80 · equity $7,957.17 vs 09:30 $7,807.25 (+149.92; session marks +151.60) · 8 name(s) marked open→close (per-name table). ARQT×31 09:30 $31.89 → close $32.82 +28.83; CDNA×14 09:30 $67.20 → close $69.20 +28.00; ILMN×3 09:30 $264.13 → close $267.93 +11.40; PACS×19 09:30 $45.98 → close $47.72 +33.06; PDFS×1 09:30 $40.37 → close $41.18 +0.81; PRMB×50 09:30 $19.77 → close $20.00 +11.50; SMMT×61 09:30 $15.50 → close $16.09 +35.99; VEEV×3 09:30 $318.00 → close $318.67 +2.01 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢
 
-Cash book **-37.19%** ($6,281) · signal-only (no cash/fees) was +179.67%. Starts YES **1/30**. Fills 238 · skips 244 · realized $-1770.27.
+Cash book **-37.63%** ($6,237) · signal-only (no cash/fees) was +179.67%. Starts YES **1/30**. Fills 242 · skips 244 · realized $-1770.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -405,6 +405,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `CHRD` | 7 | $152.81 | $2.01 | — | $1,234.72 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+9.2; leftover $1137.00 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `CNQ` | 21 | $53.51 | $2.05 | — | $108.95 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+8.4; leftover $1137.00 | join🟡 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $108.95 | ▲ close $6,281.31 vs 09:30 $6,262.95 (session +33.00) | 16:00 close · cash $108.95 · equity $6,281.31 vs 09:30 $6,262.95 (+18.36; session marks +33.00) · 11 name(s) marked open→close (per-name table). AMX×36 09:30 $22.84 → close $22.83 -0.36; BNY×1 09:30 $143.00 → close $142.44 -0.56; COP×1 09:30 $145.73 → close $145.24 -0.49; GLND×192 09:30 $3.00 → close $3.02 +3.84; NVTS×10 09:30 $8.84 → close $8.63 -2.10; RELX×5 09:30 $38.96 → close $39.25 +1.45; TBBB×14 09:30 $58.00 → close $58.39 +5.46; Z×2 09:30 $30.60 → close $30.76 +0.32; EOG×7 09:30 $157.52 → close $157.65 +0.91; CHRD×7 09:30 $152.81 → close $154.48 +11.72; CNQ×21 09:30 $53.51 → close $54.12 +12.81 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $108.95 | ▲ 09:30 equity $6,316.44 vs yday $6,281.31 (+35.12) | 09:30 open · cash $108.95 (unchanged overnight, no fees) · equity $6,316.44 vs prior close $6,281.31 (+35.12) · 11 name(s) re-marked at the open (per-name table). AMX×36 yday $22.83 → 09:30 $22.93 +3.60; BNY×1 yday $142.44 → 09:30 $142.05 -0.39; CHRD×7 yday $154.48 → 09:30 $156.31 +12.81; CNQ×21 yday $54.12 → 09:30 $55.00 +18.48; COP×1 yday $145.24 → 09:30 $147.15 +1.91; EOG×7 yday $157.65 → 09:30 $159.86 +15.47; GLND×192 yday $3.02 → 09:30 $2.93 -17.28; NVTS×10 yday $8.63 → 09:30 $8.38 -2.50; RELX×5 yday $39.25 → 09:30 $39.08 -0.87; TBBB×14 yday $58.39 → 09:30 $58.65 +3.64; Z×2 yday $30.76 → 09:30 $30.89 +0.26 | — |
+| 2026-10-20 09:30 ET | **SELL** | `BNY` | 1 | $142.05 | $1.44 | $-0.60 | $249.56 | ▼ -0.60 after sell → book $6,314.99; vs 09:30 mark -1.45 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 1 | $147.15 | $1.49 | $+1.22 | $395.21 | ▲ +1.22 after sell → book $6,313.50; vs 09:30 mark -1.49 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 09:30 ET | **SELL** | `GLND` | 192 | $2.93 | $2.61 | $-236.53 | $955.16 | ▼ -236.53 after sell → book $6,310.89; vs 09:30 mark -2.61 | dropped from list after 4 sess (min 3) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `RELX` | 5 | $39.08 | $1.99 | $+1.55 | $1,148.55 | ▲ +1.55 after sell → book $6,308.90; vs 09:30 mark -1.99 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,148.55 | ▼ close $6,236.70 vs 09:30 $6,316.44 (session -72.20) | 16:00 close · cash $1,148.55 · equity $6,236.70 vs 09:30 $6,316.44 (-79.74; session marks -72.20) · 7 name(s) marked open→close (per-name table). AMX×36 09:30 $22.93 → close $22.90 -1.08; CHRD×7 09:30 $156.31 → close $152.22 -28.63; CNQ×21 09:30 $55.00 → close $54.18 -17.22; EOG×7 09:30 $159.86 → close $157.91 -13.65; NVTS×10 09:30 $8.38 → close $8.74 +3.60; TBBB×14 09:30 $58.65 → close $57.37 -17.92; Z×2 09:30 $30.89 → close $32.24 +2.70 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #1 mom+breakout+peer/sector (research; not KEEP)
 
-Cash book **-12.96%** ($8,704) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 383 · skips 96 · realized $-120.43.
+Cash book **-12.37%** ($8,763) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 390 · skips 96 · realized $-120.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -551,6 +551,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `LMT` | 2 | $540.97 | $2.00 | — | $1,521.42 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+8.3; leftover $1082.44 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `BR` | 6 | $173.69 | $2.01 | — | $477.27 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+5.8; leftover $1082.44 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $477.27 | ▲ close $8,703.85 vs 09:30 $8,684.58 (session +60.49) | 16:00 close · cash $477.27 · equity $8,703.85 vs 09:30 $8,684.58 (+19.27; session marks +60.49) · 8 name(s) marked open→close (per-name table). COP×7 09:30 $145.73 → close $145.24 -3.43; EOG×6 09:30 $157.52 → close $157.65 +0.78; SU×13 09:30 $77.39 → close $78.39 +13.00; OVV×15 09:30 $69.01 → close $70.04 +15.45; RELX×27 09:30 $38.96 → close $39.25 +7.83; ALL×4 09:30 $245.91 → close $246.85 +3.76; LMT×2 09:30 $540.97 → close $548.23 +14.52; BR×6 09:30 $173.69 → close $175.12 +8.58 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $477.27 | ▲ 09:30 equity $8,787.06 vs yday $8,703.85 (+83.20) | 09:30 open · cash $477.27 (unchanged overnight, no fees) · equity $8,787.06 vs prior close $8,703.85 (+83.20) · 8 name(s) re-marked at the open (per-name table). ALL×4 yday $246.85 → 09:30 $250.00 +12.60; BR×6 yday $175.12 → 09:30 $177.40 +13.68; COP×7 yday $145.24 → 09:30 $147.15 +13.37; EOG×6 yday $157.65 → 09:30 $159.86 +13.26; LMT×2 yday $548.23 → 09:30 $553.00 +9.54; OVV×15 yday $70.04 → 09:30 $70.95 +13.65; RELX×27 yday $39.25 → 09:30 $39.08 -4.72; SU×13 yday $78.39 → 09:30 $79.30 +11.83 | — |
+| 2026-10-20 09:30 ET | **SELL** | `ALL` | 4 | $250.00 | $2.02 | $+12.34 | $1,475.25 | ▲ +12.34 after sell → book $8,785.03; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `BR` | 6 | $177.40 | $2.03 | $+18.22 | $2,537.62 | ▲ +18.22 after sell → book $8,783.01; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 7 | $147.15 | $2.03 | $+5.90 | $3,565.64 | ▲ +5.90 after sell → book $8,780.97; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `EOG` | 6 | $159.86 | $2.03 | $+10.00 | $4,522.77 | ▲ +10.00 after sell → book $8,778.95; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `LMT` | 2 | $553.00 | $2.02 | $+20.05 | $5,626.76 | ▲ +20.05 after sell → book $8,776.93; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟡 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `RELX` | 27 | $39.08 | $2.09 | $-1.06 | $6,679.69 | ▼ -1.06 after sell → book $8,774.84; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `SU` | 13 | $79.30 | $2.05 | $+20.75 | $7,708.54 | ▲ +20.75 after sell → book $8,772.79; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,708.54 | ▼ close $8,762.89 vs 09:30 $8,787.06 (session -9.90) | 16:00 close · cash $7,708.54 · equity $8,762.89 vs 09:30 $8,787.06 (-24.17; session marks -9.90) · 1 name(s) marked open→close (per-name table). OVV×15 09:30 $70.95 → close $70.29 -9.90 | — |
 
 ## Not taken
 

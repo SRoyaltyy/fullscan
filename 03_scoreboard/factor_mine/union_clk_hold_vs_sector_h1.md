@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-11.95%** ($8,805) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 316 · skips 96 · realized $+387.41.
+Cash book **-11.03%** ($8,897) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 323 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -484,6 +484,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 09:30 ET | **BUY** | `OVV` | 18 | $69.01 | $2.04 | — | $1,548.59 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+8.5; leftover $1251.83 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 09:30 ET | **BUY** | `EQNR` | 27 | $46.24 | $2.07 | — | $298.04 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+9.2; leftover $1251.83 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $298.04 | ▲ close $8,805.12 vs 09:30 $8,780.74 (session +56.53) | 16:00 close · cash $298.04 · equity $8,805.12 vs 09:30 $8,780.74 (+24.38; session marks +56.53) · 7 name(s) marked open→close (per-name table). EOG×7 09:30 $157.52 → close $157.65 +0.91; COP×8 09:30 $145.73 → close $145.24 -3.92; CHRD×8 09:30 $152.81 → close $154.48 +13.40; SU×16 09:30 $77.39 → close $78.39 +16.00; CNQ×23 09:30 $53.51 → close $54.12 +14.03; OVV×18 09:30 $69.01 → close $70.04 +18.54; EQNR×27 09:30 $46.24 → close $46.15 -2.43 | — |
+| 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $298.04 | ▲ 09:30 equity $8,911.68 vs yday $8,805.12 (+106.56) | 09:30 open · cash $298.04 (unchanged overnight, no fees) · equity $8,911.68 vs prior close $8,805.12 (+106.56) · 7 name(s) re-marked at the open (per-name table). CHRD×8 yday $154.48 → 09:30 $156.31 +14.64; CNQ×23 yday $54.12 → 09:30 $55.00 +20.24; COP×8 yday $145.24 → 09:30 $147.15 +15.28; EOG×7 yday $157.65 → 09:30 $159.86 +15.47; EQNR×27 yday $46.15 → 09:30 $46.52 +9.99; OVV×18 yday $70.04 → 09:30 $70.95 +16.38; SU×16 yday $78.39 → 09:30 $79.30 +14.56 | — |
+| 2026-10-20 09:30 ET | **SELL** | `CHRD` | 8 | $156.31 | $2.03 | $+23.99 | $1,546.49 | ▲ +23.99 after sell → book $8,909.65; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `CNQ` | 23 | $55.00 | $2.08 | $+30.13 | $2,809.41 | ▲ +30.13 after sell → book $8,907.57; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `COP` | 8 | $147.15 | $2.03 | $+7.31 | $3,984.57 | ▲ +7.31 after sell → book $8,905.53; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `EOG` | 7 | $159.86 | $2.03 | $+12.34 | $5,101.56 | ▲ +12.34 after sell → book $8,903.50; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `EQNR` | 27 | $46.52 | $2.09 | $+3.40 | $6,355.51 | ▲ +3.40 after sell → book $8,901.41; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 09:30 ET | **SELL** | `OVV` | 18 | $70.95 | $2.06 | $+30.81 | $7,630.55 | ▲ +30.81 after sell → book $8,899.35; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-20 09:30 ET | **SELL** | `SU` | 16 | $79.30 | $2.06 | $+26.46 | $8,897.29 | ▲ +26.46 after sell → book $8,897.29; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,897.29 | ▲ close $8,897.29 vs 09:30 $8,911.68 (session +0.00) | 16:00 close · cash $8,897.29 · no lots left · equity $8,897.29. | — |
 
 ## Not taken
 

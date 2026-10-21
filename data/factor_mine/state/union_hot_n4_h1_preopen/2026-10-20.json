@@ -1,0 +1,94 @@
+{
+  "buys": [],
+  "cash": 9282.73,
+  "date": "2026-10-20",
+  "equity": 9282.73,
+  "fees": 8.994,
+  "fills": [
+    {
+      "fees": 2.1319,
+      "fill_rule": "open",
+      "pnl": -11.65,
+      "price": 58.935,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "BTI"
+    },
+    {
+      "fees": 2.0627,
+      "fill_rule": "open",
+      "pnl": 17.2,
+      "price": 147.15,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "COP"
+    },
+    {
+      "fees": 2.5601,
+      "fill_rule": "open",
+      "pnl": 102.81,
+      "price": 13.79,
+      "shares": 174,
+      "side": "SELL",
+      "ticker": "VET"
+    },
+    {
+      "fees": 2.2393,
+      "fill_rule": "open",
+      "pnl": -13.94,
+      "price": 31.13,
+      "shares": 73,
+      "side": "SELL",
+      "ticker": "WMG"
+    }
+  ],
+  "holdings": [],
+  "label": "starts 10-08 open, no past days",
+  "mean": 0.8194,
+  "n_trades_today": 4,
+  "parent": "union_hot_n4_h1",
+  "picks": [],
+  "reasons": [
+    "seal not committed before 09:30 ET: never committed"
+  ],
+  "recipe": "union_hot_n4_h1_preopen",
+  "s": null,
+  "seal_sha256": null,
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 58.935,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "BTI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 147.15,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "COP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 13.79,
+      "shares": 174,
+      "side": "SELL",
+      "ticker": "VET"
+    },
+    {
+      "fill_rule": "open",
+      "price": 31.13,
+      "shares": 73,
+      "side": "SELL",
+      "ticker": "WMG"
+    }
+  ],
+  "sit": true,
+  "state": {
+    "after": "2026-10-20",
+    "cash": 9282.73,
+    "pos": {},
+    "yday_equity": 9282.73
+  }
+}
