@@ -33,6 +33,20 @@ class CompletedReview(unittest.TestCase):
                 else:graph['paragraphs'][0]['text']='altered'
                 with self.assertRaises(ValueError):project(graph)
 
+    def test_named_law_without_an_old_relationship_is_recovered_from_full_archive(self):
+        graph=self.graph();text='We comply with the Alpha Privacy Act.'
+        graph['sources'].append({'id':'legal','kind':'risk','filing_date':'2026-01-01'})
+        graph['paragraphs'].append({'id':'legal-paragraph','source_id':'legal','start':0,'end':len(text),
+            'text':text,'sha256':hashlib.sha256(text.encode()).hexdigest(),'labels':['regulation_legal']})
+        out=project(graph)
+        self.assertEqual(len(out['facts']),len(graph['facts']))
+        self.assertIn('legal-paragraph',{p['id'] for p in out['paragraphs']})
+        self.assertIn('legal',{s['id'] for s in out['sources']})
+        self.assertEqual(out['review_counts']['relationship_witness_paragraphs'],1)
+        law=next(r for r in out['specific_records']['records'] if r['category']=='law')
+        self.assertEqual(law['entity'],'Alpha Privacy Act')
+        self.assertEqual(law['paragraph_id'],'legal-paragraph')
+
     def test_witness_crossing_paragraphs_keeps_both(self):
         graph=self.graph();p=graph['paragraphs'][0];cut=14
         def part(start,end,ident):

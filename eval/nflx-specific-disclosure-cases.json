@@ -1,0 +1,112 @@
+{
+  "note": "Primary-source development cases, not held-out validation. Saved archive text is verbatim; the additional AVMSD paragraph uses whitespace-normalized HTML text.",
+  "cases": [
+    {
+      "text": "We are a U.S.-based multinational company subject to tax in multiple U.S. and foreign tax jurisdictions. Significant judgment is required in determining our global provision for income taxes, deferred taxes and other tax liabilities and receivables, and in evaluating our tax positions and other tax attributes on a worldwide basis. We are subject to the periodic examination of our domestic and foreign tax returns by the Internal Revenue Service, state, local, and foreign tax authorities, some of whom are challenging our tax positions. We regularly assess the likelihood of adverse outcomes from these examinations in determining the adequacy of our provision for income taxes and other tax liabilities. We consider many factors when evaluating and estimating our tax positions and tax benefits, which may require periodic adjustments and may not accurately forecast actual tax audit outcomes. If the ultimate determination of income and other tax liabilities differ from the amounts recorded or accrued, our business, financial condition or results of operations may be adversely impacted.\n\n",
+      "source": {
+        "accepted_at": "2026-01-23T21:06:33.000Z",
+        "accession": "0001065280-26-000034",
+        "characters": 75233,
+        "document": "nflx-20251231.htm",
+        "filing_date": "2026-01-23",
+        "form": "10-K",
+        "id": "5c011c8e3796beab5a21ea4c7029cb8d853112cb5668c3c0b6399f1e557b9d29",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "Item 1A.Risk Factors",
+        "section_ordinal": 128,
+        "sha256": "e17c1cab06b4a722017bd2bedfdd7bee1039e5af3a7e9513aabf12d36498ae4a",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm"
+      }
+    },
+    {
+      "text": "In the ordinary course of business and in particular in connection with content acquisition, merchandising our service to our members and our advertising offering, we collect and utilize information supplied by our members and third parties, which may include personal information and other data. We are subject to laws, rules and regulations relating to privacy and the collection, use and security of personal information, including but not limited to Regulation (EU) 2016/679 (also known as the General Data Protection Regulation or “GDPR”) and the California Privacy Rights Act (“CPRA”). Any actual or perceived failure to comply with the GDPR, the California Consumer Privacy Act/CPRA, other data privacy laws or regulations, or related contractual or other obligations, or any perceived privacy rights violation, have and could in the future lead to investigations, claims, and proceedings by governmental entities and private parties, which to date have not been material but may result in significant damages for contract breach, and other significant costs, penalties, and other liabilities, as well as harm to our reputation and market position.\n\n",
+      "source": {
+        "accepted_at": "2026-01-23T21:06:33.000Z",
+        "accession": "0001065280-26-000034",
+        "characters": 75233,
+        "document": "nflx-20251231.htm",
+        "filing_date": "2026-01-23",
+        "form": "10-K",
+        "id": "5c011c8e3796beab5a21ea4c7029cb8d853112cb5668c3c0b6399f1e557b9d29",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "Item 1A.Risk Factors",
+        "section_ordinal": 128,
+        "sha256": "e17c1cab06b4a722017bd2bedfdd7bee1039e5af3a7e9513aabf12d36498ae4a",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm"
+      }
+    },
+    {
+      "text": "The adoption or modification of laws or regulations relating to the internet or other areas of our business could limit or otherwise adversely affect the manner in which we currently conduct our business. As our service and others like us gain traction in international markets, governments are increasingly looking to introduce new or extend legacy regulations to these services, in particular those related to broadcast media and tax. For example, European law enables individual member states to impose levies and other financial obligations on media operators that provide services in their jurisdiction. Several European Union (EU) Member States have and others may, over time, impose financial and regulatory obligations on us. In addition, the continued growth and development of the market for online commerce may lead to more stringent consumer protection laws, which may impose additional burdens on us. Rules governing new technological developments, including generative AI, are nascent and rapidly evolving such that the impact on areas related to our business remains uncertain. If we are required to comply with new regulations or legislation or new interpretations of existing regulations or legislation, this compliance could cause us to incur additional expenses or alter our business model. Additionally, ongoing enforcement of the Digital Markets Act in the EU and similar regulations in other territories, such as Japan, could change how we and other app developers interact with digital gatekeepers, such as Apple and Google, although we are not in scope of these regulations.\n\n",
+      "source": {
+        "accepted_at": "2026-01-23T21:06:33.000Z",
+        "accession": "0001065280-26-000034",
+        "characters": 75233,
+        "document": "nflx-20251231.htm",
+        "filing_date": "2026-01-23",
+        "form": "10-K",
+        "id": "5c011c8e3796beab5a21ea4c7029cb8d853112cb5668c3c0b6399f1e557b9d29",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "Item 1A.Risk Factors",
+        "section_ordinal": 128,
+        "sha256": "e17c1cab06b4a722017bd2bedfdd7bee1039e5af3a7e9513aabf12d36498ae4a",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm"
+      }
+    },
+    {
+      "text": "From time to time, in the normal course of its operations, the Company is subject to litigation matters and claims, including claims relating to employee relations, business practices and patent infringement. Litigation can be expensive and disruptive to normal business operations. Moreover, the results of complex legal proceedings are difficult to predict and the Company's view of these matters may change in the future as the litigation and events related thereto unfold. The Company expenses legal fees as incurred. The Company records a provision for contingent losses when it is both probable that a liability has been incurred and the amount of the loss can be reasonably estimated. An unfavorable outcome to any legal matter, if material, could have an adverse effect on the Company's operations or its financial position, liquidity or results of operations.\n\n",
+      "source": {
+        "accepted_at": "2026-04-17T20:02:05.000Z",
+        "accession": "0001065280-26-000138",
+        "characters": 5689,
+        "document": "R17.htm",
+        "filing_date": "2026-04-17",
+        "form": "10-Q",
+        "id": "bc0ed873ff83e3e3e6c858181765cee17226939846511971ce7119a80a783907",
+        "kind": "update",
+        "report_date": "2026-03-31",
+        "section": "R17.htm",
+        "section_ordinal": 188,
+        "sha256": "33e6db60ff18f51f0cb6bc31e049b5e6f5e19ef08be36788104e746ecf72d5d0",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000138/R17.htm"
+      }
+    },
+    {
+      "text": "•compliance with laws such as the Foreign Corrupt Practices Act, UK Bribery Act and other anti-corruption laws, export controls and economic sanctions, and local laws prohibiting corrupt payments to government officials;\n\n",
+      "source": {
+        "accepted_at": "2026-01-23T21:06:33.000Z",
+        "accession": "0001065280-26-000034",
+        "characters": 75233,
+        "document": "nflx-20251231.htm",
+        "filing_date": "2026-01-23",
+        "form": "10-K",
+        "id": "5c011c8e3796beab5a21ea4c7029cb8d853112cb5668c3c0b6399f1e557b9d29",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "Item 1A.Risk Factors",
+        "section_ordinal": 128,
+        "sha256": "e17c1cab06b4a722017bd2bedfdd7bee1039e5af3a7e9513aabf12d36498ae4a",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm"
+      }
+    },
+    {
+      "text": "•implementation of regulations designed to stimulate the local production of film and TV series in order to promote and preserve local culture and economic activity, including local content quotas, investment obligations, and levies to support local film funds. For example, the EU revised its Audio Visual Media Services Directive in 2018 to require that European works comprise at least thirty percent (30%) of media service providers’ catalogs, and to require prominence of those works, and certain EU Member States have imposed additional investment obligations and levies.",
+      "source": {
+        "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+        "document": "nflx-20251231.htm",
+        "form": "10-K",
+        "accession": "0001065280-26-000034",
+        "filing_date": "2026-01-23",
+        "kind": "risk",
+        "section": "Item 1A"
+      }
+    }
+  ]
+}

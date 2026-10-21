@@ -4,6 +4,7 @@ on:
     paths:
       - 'src/filing_relationships.py'
       - 'src/term_inventory.py'
+      - 'src/specific_filing_records.py'
       - 'src/test_term_inventory.py'
       - 'src/filing_evidence.py'
       - 'src/test_filing_relationships.py'
@@ -18,6 +19,7 @@ on:
     paths:
       - 'src/filing_relationships.py'
       - 'src/term_inventory.py'
+      - 'src/specific_filing_records.py'
       - 'src/test_term_inventory.py'
       - 'src/filing_evidence.py'
       - 'src/test_filing_relationships.py'

@@ -6,6 +6,8 @@ on:
       - '.github/workflows/publish-completed-parser.yml'
       - 'scripts/export_completed_parser.py'
       - 'scripts/test_export_completed_parser.py'
+      - 'src/specific_filing_records.py'
+      - 'src/test_specific_filing_records.py'
       - 'dashboard/scanner-backtest/completed/index.html'
   workflow_dispatch:
   workflow_run:
@@ -28,13 +30,16 @@ jobs:
             scripts/test_export_completed_parser.py
             scripts/materialize_filing_texts.py
             scripts/resilient_filing_texts.py
+            src/specific_filing_records.py
+            src/test_specific_filing_records.py
+            eval/nflx-specific-disclosure-cases.json
             dashboard/scanner-backtest/completed/index.html
           sparse-checkout-cone-mode: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Check exact quotation, paragraph and Unicode projection
-        run: python -m unittest scripts.test_export_completed_parser -v
+        run: python -m unittest scripts.test_export_completed_parser src.test_specific_filing_records -v
       - name: Package existing decisions without SEC downloads or spaCy
         env:
           GH_TOKEN: ${{ github.token }}
@@ -80,18 +85,20 @@ jobs:
           python - <<'PY'
           import json,os,shutil
           from pathlib import Path
-          target=Path('dashboard/scanner-backtest/completed')
+          targets=[Path(p)/'completed' for p in ('dashboard/scanner-backtest','scanner-backtest')]
+          target=targets[0]
           incoming=Path(os.environ['INCOMING'])
           if os.environ['BUILD_RESULT']=='success':
               manifest=json.loads((incoming/'manifest.json').read_text())
               assert manifest['complete'] and manifest['published']['tickers']==2032 and manifest['published']['relationships']==754258
-              outside=sum(p.stat().st_size for p in Path('.').rglob('*') if p.is_file() and '.git' not in p.parts and not p.is_relative_to(target))
+              outside=sum(p.stat().st_size for p in Path('.').rglob('*') if p.is_file() and '.git' not in p.parts and not any(p.is_relative_to(t) for t in targets))
               names=('index.html','manifest.json')
-              size=sum((incoming/name).stat().st_size for name in names)
-              assert outside+size<950_000_000, 'Complete saved review exceeds Pages budget; retain previous site'
-              if target.exists():shutil.rmtree(target)
-              target.mkdir(parents=True)
-              for name in names:shutil.copyfile(incoming/name,target/name)
+              size=sum((incoming/name).stat().st_size for name in names)*len(targets)
+              assert outside+size<1_073_741_824, 'Complete saved review exceeds Pages budget; retain previous site'
+              for target in targets:
+                  target.mkdir(parents=True,exist_ok=True)
+                  for name in names:shutil.copyfile(incoming/name,target/name)
+              target=targets[0]
           if not (target/'manifest.json').is_file():
               print('Completed view has not finished its initial publication; preserving the current page')
           else:
@@ -106,6 +113,9 @@ jobs:
           git config user.email 'bot@users.noreply.github.com'
           if [ -d dashboard/scanner-backtest/completed ]; then
             git add dashboard/scanner-backtest/completed
+          fi
+          if [ -d scanner-backtest/completed ]; then
+            git add scanner-backtest/completed
           fi
           git add dashboard/scanner-backtest/index.html
           if ! git diff --cached --quiet; then

@@ -10,6 +10,8 @@ import gzip
 import hashlib
 import json
 from pathlib import Path
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 
 COMPILER = '7953265b88372033f99c4f22f4d722f901fc8b7a0399a6547f7fecacbd377abc'
 ARTIFACT = 12321883294
@@ -22,6 +24,7 @@ def encoded(value):
 
 def project(graph):
     """Keep every decision, every witness, and every overlapping full paragraph."""
+    from src.specific_filing_records import details,validate_details
     by_source = defaultdict(list)
     for p in graph['paragraphs']:
         by_source[p['source_id']].append(p)
@@ -54,6 +57,16 @@ def project(graph):
             raise ValueError('decision has no witness')
         fact['evidence'] = witnesses
         facts.append(fact)
+    witness_paragraph_count=len(selected)
+    refined=details(graph)
+    validate_details(graph,refined)
+    detail_paragraphs={r['paragraph_id'] for r in refined['records']}
+    for p in graph['paragraphs']:
+        if p['id'] in detail_paragraphs:
+            if hashlib.sha256(p['text'].encode()).hexdigest()!=p['sha256']:
+                raise ValueError('detail paragraph hash mismatch')
+            selected[p['id']]={k:p[k] for k in ('id','source_id','start','end','text','sha256','labels')}
+            source_ids.add(p['source_id'])
     sources = [s for s in graph['sources'] if s['id'] in source_ids]
     if {s['id'] for s in sources} != source_ids:
         raise ValueError('decision source metadata missing')
@@ -61,13 +74,17 @@ def project(graph):
         'tickers':graph['tickers'],'name':graph['name'],'as_of':graph['as_of'],
         'extraction_schema':graph['schema'],'compiler_sha256':graph['compiler_sha256'],
         'parser':graph['parser'],'coverage':graph['coverage'],
-        'review_scope':'all recorded relationships and their complete witness paragraphs',
+        'review_scope':'all saved relationships plus literal specific disclosures scanned across every archived paragraph',
+        'specific_records':refined,
+        'review_counts':{'relationship_witness_paragraphs':witness_paragraph_count,
+                         'review_paragraphs':len(selected)},
         'term_inventory_available':'term_inventory' in graph,
         'facts':facts,'paragraphs':list(selected.values()),'sources':sources}
 
 
 def export(root, out, *, expected_compiler=COMPILER, expected_companies=2026,
            expected_tickers=2032, expected_facts=754258, viewer_revision='', read_bytes=None):
+    from src.specific_filing_records import VERSION as DETAILS_VERSION
     root, out = Path(root).resolve(), Path(out)
     raw_index = read_bytes('index.json') if read_bytes else (root/'index.json').read_bytes()
     index = json.loads(raw_index)
@@ -77,6 +94,7 @@ def export(root, out, *, expected_compiler=COMPILER, expected_companies=2026,
         raise ValueError('completed archive coverage mismatch')
     (out/'profiles').mkdir(parents=True,exist_ok=True)
     profiles, processed, facts, paragraph_count, total_bytes = {}, {}, 0, 0, 0
+    specific_count=review_paragraph_count=0
     for ticker, entry in sorted(index['profiles'].items()):
         cik = str(entry['cik'])
         if not cik.isdigit() or len(cik) != 10:
@@ -100,20 +118,23 @@ def export(root, out, *, expected_compiler=COMPILER, expected_companies=2026,
             processed[cik] = {'path':filename,'sha256':hashlib.sha256(packed).hexdigest(),
                 'name':graph['name'],'facts':len(graph['facts']),'cik':cik}
             facts += len(graph['facts'])
-            paragraph_count += len(payload['paragraphs'])
+            paragraph_count += payload['review_counts']['relationship_witness_paragraphs']
+            review_paragraph_count += len(payload['paragraphs'])
+            specific_count += len(payload['specific_records']['records'])
             total_bytes += len(packed)
             print(json.dumps({'issuers_exported':len(processed),'of':expected_companies,'review_bytes':total_bytes}),flush=True)
             del payload, graph, raw, packed
         profiles[ticker] = processed[cik]
     if len(processed) != expected_companies or facts != expected_facts:
         raise ValueError('publication omitted completed issuers or relationships')
-    manifest = {'schema':'completed-parser-review-1','complete':True,
+    manifest = {'schema':'completed-parser-review-1','complete':True,'detail_extractor':DETAILS_VERSION,
         'artifact_id':ARTIFACT,'source_run_id':RUN,'compiler_sha256':expected_compiler,
         'extraction_schema':index['schema'],'as_of':index['as_of'],
         'source_index_sha256':hashlib.sha256(raw_index).hexdigest(),
         'viewer_revision':viewer_revision,'profiles':profiles,'archive_totals':index['totals'],
         'published':{'issuers':len(processed),'tickers':len(profiles),'relationships':facts,
-            'decision_paragraphs':paragraph_count,'profile_bytes':total_bytes},
+            'decision_paragraphs':paragraph_count,'review_paragraphs':review_paragraph_count,
+            'specific_disclosure_records':specific_count,'profile_bytes':total_bytes},
         'limitations':['Saved extraction, not a rerun with the latest parser.',
             'Every recorded relationship and its full witness paragraphs are retained; this view does not copy unrelated or machine-data paragraphs.',
             'The newer exhaustive noun/entity occurrence inventory is not available in this extraction.',
