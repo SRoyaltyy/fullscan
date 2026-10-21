@@ -80,6 +80,8 @@ jobs:
     if: needs.source.outputs.ready == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 90
+    outputs:
+      commit: ${{ steps.retain.outputs.commit }}
     permissions:
       contents: write
       actions: read
@@ -164,20 +166,29 @@ jobs:
           print('Compact snapshot bytes:',validate_budget(Path('generated-scanner')))
           PY
       - name: Stage the complete page before publication
-        run: cp dashboard/scanner-backtest/index.html generated-scanner/index.html
+        run: |
+          cp dashboard/scanner-backtest/index.html generated-scanner/index.html
+          cp scripts/publish_scanner_snapshot.py generated-scanner/publication-helper.py
       - uses: actions/upload-artifact@v4
         with:
           name: scanner-test-page
           path: generated-scanner/
           retention-days: 30
       - name: Verify and retain the snapshot on main without touching other files
+        id: retain
         timeout-minutes: 20
         env:
           SCANNER_SOURCE_SHA: ${{ github.sha }}
           GH_TOKEN: ${{ github.token }}
-        run: >-
-          python -u scripts/publish_scanner_snapshot.py --directory generated-scanner
-          --source-sha "$SCANNER_SOURCE_SHA"
+        run: |
+          python -u scripts/publish_scanner_snapshot.py --directory generated-scanner --source-sha "$SCANNER_SOURCE_SHA" > publication-result.json
+          python - <<'PY'
+          import json,os
+          result=json.load(open('publication-result.json'))
+          with open(os.environ['GITHUB_OUTPUT'],'a') as stream:
+              stream.write('commit='+result['published_commit']+'\n')
+          print('Retained scanner snapshot '+result['published_commit'])
+          PY
   publish:
     needs: build
     runs-on: ubuntu-latest
@@ -201,21 +212,21 @@ jobs:
       - name: Update only the parser test page and its root alias
         env:
           SNAPSHOT_DIRECTORY: ${{ runner.temp }}/scanner-test-page
+          SNAPSHOT_COMMIT: ${{ needs.build.outputs.commit }}
         run: |
           set -euo pipefail
           mkdir -p dashboard/scanner-backtest scanner-backtest
+          git rm -r --ignore-unmatch dashboard/scanner-backtest/scoring-profiles dashboard/scanner-backtest/filing-profiles dashboard/scanner-backtest/keyword-index
           python - <<'PY'
           from pathlib import Path
-          import os
+          import os,runpy
           source=Path(os.environ['SNAPSHOT_DIRECTORY'])
           outside=sum(p.stat().st_size for p in Path('.').rglob('*') if p.is_file()
               and '.git' not in p.parts and not p.is_relative_to(Path('dashboard/scanner-backtest'))
               and not p.is_relative_to(Path('scanner-backtest')))
-          incoming=sum(p.stat().st_size for p in source.rglob('*') if p.is_file())
-          assert outside+incoming < 950_000_000, 'Whole published site exceeds safe Pages budget'
+          stage=runpy.run_path(str(source/'publication-helper.py'))['stage_page']
+          print(stage(source,Path('dashboard/scanner-backtest'),snapshot_commit=os.environ['SNAPSHOT_COMMIT'],outside_bytes=outside))
           PY
-          git rm -r --ignore-unmatch dashboard/scanner-backtest/scoring-profiles dashboard/scanner-backtest/filing-profiles
-          cp -a "$SNAPSHOT_DIRECTORY/." dashboard/scanner-backtest/
           printf '%s\n' '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=../dashboard/scanner-backtest/"><a href="../dashboard/scanner-backtest/">Open the SEC parser test page</a>' > scanner-backtest/index.html
           git config user.name 'Scanner page publisher'
           git config user.email 'bot@users.noreply.github.com'

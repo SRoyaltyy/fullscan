@@ -10,6 +10,24 @@ from scripts.publish_scanner_snapshot import artifact_names
 
 
 class SnapshotPublishTests(unittest.TestCase):
+    def test_page_can_use_immutable_repository_assets_when_other_site_content_fills_pages(self):
+        from scripts.publish_scanner_snapshot import stage_page
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);source=root/'snapshot';self.fixture(source)
+            (source/'index.html').write_text('page')
+            asset=source/'scoring-profiles/aa.json.gz';asset.parent.mkdir();asset.write_bytes(b'x'*1000)
+            commit='a'*40
+            total=sum((source/name).stat().st_size for name in (*ARTIFACTS,'index.html'))
+            result=stage_page(source,root/'page',snapshot_commit=commit,outside_bytes=0,site_limit=total+10)
+            self.assertTrue(result['external_assets'])
+            self.assertFalse((root/'page/scoring-profiles').exists())
+            meta=json.loads((root/'page/meta.json').read_text())
+            self.assertIn('/'+commit+'/',meta['asset_base_url'])
+            self.assertEqual((source/'scoring-profiles/aa.json.gz').stat().st_size,1000)
+            result=stage_page(source,root/'local',snapshot_commit=commit,outside_bytes=0)
+            self.assertFalse(result['external_assets'])
+            self.assertTrue((root/'local/scoring-profiles/aa.json.gz').is_file())
+
     def test_budget_failure_prevents_publication_without_truncating(self):
         from scripts.publish_scanner_snapshot import validate_budget
         with tempfile.TemporaryDirectory() as directory:

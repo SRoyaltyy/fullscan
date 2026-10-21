@@ -100,4 +100,31 @@ vm.runInContext('renderMatches({decision:"no_pass",pass_count:0,passes:[],keywor
 assert.match(elements.get('article-keywords').children[0].textContent,/relationship/);
 console.log('Python/browser keyword matching parity, exact offsets, direction labels, and no-pass visibility passed.');
 
+const assets = new Map(), buckets = {};
+for (const entry of fixture.payload.phrases) {
+  const key = (entry.phrase[0].charCodeAt(0)%16).toString(16);
+  (buckets[key] ||= []).push(entry);
+}
+const manifest = {...fixture.payload,buckets:{}}; delete manifest.phrases;
+for (const [key,rows] of Object.entries(buckets)) {
+  const bytes = gzipSync(JSON.stringify(rows)), path = `keyword-index/${key}.json.gz`;
+  const sha256 = Buffer.from(await webcrypto.subtle.digest('SHA-256',bytes)).toString('hex');
+  assets.set('./'+path,bytes); manifest.buckets[key] = {path,sha256};
+}
+const manifestBytes = gzipSync(JSON.stringify(manifest));
+assets.set('./keyword-index.json.gz',manifestBytes);
+context.manifestHash = Buffer.from(await webcrypto.subtle.digest('SHA-256',manifestBytes)).toString('hex');
+const requested = [];
+context.fetch = async url => {requested.push(url.split('?')[0]); const bytes=assets.get(url.split('?')[0]); return bytes ? new Response(bytes) : new Response('missing',{status:404});};
+vm.runInContext('mode="static"; staticMeta={snapshot:{snapshot_id:"test"},keyword_index:{path:"keyword-index.json.gz",sha256:manifestHash}}; keywordManifest=null;',context);
+document.getElementById('keyword-text').value = 'Western Digital';
+await vm.runInContext('compareCustomKeywords()',context);
+assert.ok(requested.includes('./keyword-index/7.json.gz'));
+assert.ok(!requested.includes('./keyword-index/8.json.gz'),'Load only relevant keyword buckets');
+document.getElementById('keyword-text').value = 'hard-drives';
+await vm.runInContext('compareCustomKeywords()',context);
+assert.ok(requested.includes('./keyword-index/8.json.gz'));
+assert.equal(elements.get('compare-keywords').disabled,false);
+console.log('Custom article comparisons load and verify keyword buckets as needed.');
+
 

@@ -36,7 +36,7 @@ def artifact_names(directory):
     names = list(ARTIFACTS)
     if (directory/'keyword-index.json.gz').is_file():
         names.append('keyword-index.json.gz')
-    for folder in ('scoring-profiles', 'filing-profiles'):
+    for folder in ('scoring-profiles', 'filing-profiles','keyword-index'):
         for path in sorted((directory/folder).rglob('*')):
             if path.is_file():
                 if path.is_symlink() or not path.resolve().is_relative_to(directory.resolve()):
@@ -59,6 +59,30 @@ def validate_budget(directory, *, total_limit=850_000_000, file_limit=99_000_000
     if total >= total_limit:
         raise ValueError('snapshot exceeds safe Pages budget; retain previous page and use object storage')
     return total
+
+
+def stage_page(source, destination, *, snapshot_commit, outside_bytes, site_limit=950_000_000):
+    """Use immutable repository assets if the complete page exceeds Pages space."""
+    import re,shutil
+    if not re.fullmatch(r'[a-f0-9]{40}',snapshot_commit):
+        raise ValueError('immutable snapshot commit is required')
+    names = artifact_names(source)+['index.html']
+    incoming = sum((source/name).stat().st_size for name in names)
+    external = outside_bytes+incoming >= site_limit
+    if external:
+        names = list(ARTIFACTS)+['index.html']
+    if outside_bytes+sum((source/name).stat().st_size for name in names) >= site_limit:
+        raise ValueError('page bootstrap exceeds safe Pages budget')
+    for name in names:
+        target = destination/name
+        target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(source/name,target)
+    meta_path = destination/'meta.json'
+    meta = json.loads(meta_path.read_text())
+    if external:
+        meta['asset_base_url'] = 'https://raw.githubusercontent.com/SRoyaltyy/fullscan/'+snapshot_commit+'/dashboard/scanner-backtest/'
+    meta_path.write_text(json.dumps(meta,indent=2)+'\n')
+    return {'external_assets':external,'snapshot_commit':snapshot_commit}
 
 
 def git(*args, env=None):
@@ -171,6 +195,13 @@ def validate(directory, source_sha):
         import hashlib
         if keyword_index['path'] != 'keyword-index.json.gz' or hashlib.sha256((directory/keyword_index['path']).read_bytes()).hexdigest() != keyword_index['sha256']:
             raise ValueError('keyword index checksum mismatch')
+        import gzip
+        manifest=json.loads(gzip.decompress((directory/keyword_index['path']).read_bytes()))
+        for bucket,entry in manifest.get('buckets',{}).items():
+            if entry['path'] != 'keyword-index/'+bucket+'.json.gz' or bucket not in '0123456789abcdef':
+                raise ValueError('unsafe keyword index bucket')
+            if hashlib.sha256((directory/entry['path']).read_bytes()).hexdigest() != entry['sha256']:
+                raise ValueError('keyword index bucket checksum mismatch')
     if coverage.get('scope') == 'deep_filing_relationships':
         from src.deep_profile_store import read_index, read_profile
         root, index, fingerprint = read_index(directory/'filing-profiles')
@@ -211,7 +242,8 @@ def publish(directory, source_sha):
             git('read-tree', upstream, env=env)
             current_assets = set(artifact_names(directory))
             old = git('ls-tree','-r','--name-only',upstream,'--',
-                'dashboard/scanner-backtest/scoring-profiles','dashboard/scanner-backtest/filing-profiles')
+                'dashboard/scanner-backtest/scoring-profiles','dashboard/scanner-backtest/filing-profiles',
+                'dashboard/scanner-backtest/keyword-index')
             for path in old.splitlines():
                 relative = path.removeprefix('dashboard/scanner-backtest/')
                 if relative not in current_assets:

@@ -125,10 +125,22 @@ def export_profiles(board, out_dir, *, filing_profiles=None, profile_assets='ful
                             if getattr(p,'deep_profile',None)}}
             (destination/'publication.json').write_text(json.dumps(receipt,sort_keys=True))
     payload = KeywordIndex(board.evidence_board.profiles).browser_payload()
+    phrases = payload.pop('phrases')
+    buckets = {}
+    for entry in phrases:
+        bucket = format(ord(entry['phrase'][0][0]) % 16,'x')
+        buckets.setdefault(bucket,[]).append(entry)
+    (out_dir/'keyword-index').mkdir(exist_ok=True)
+    payload['buckets'] = {}
+    for bucket, entries in sorted(buckets.items()):
+        packed = gzip.compress(json.dumps(entries,ensure_ascii=False,separators=(',',':')).encode(),mtime=0)
+        path = 'keyword-index/'+bucket+'.json.gz'
+        (out_dir/path).write_bytes(packed)
+        payload['buckets'][bucket] = {'path':path,'sha256':hashlib.sha256(packed).hexdigest()}
     raw = gzip.compress(json.dumps(payload,ensure_ascii=False,separators=(',',':')).encode(),mtime=0)
     (out_dir/'keyword-index.json.gz').write_bytes(raw)
     return profiles, {'path':'keyword-index.json.gz','sha256':hashlib.sha256(raw).hexdigest(),
-                      'schema':SCHEMA,'phrases':len(payload['phrases'])}
+                      'schema':SCHEMA,'phrases':len(phrases)}
 
 
 def main(argv=None):

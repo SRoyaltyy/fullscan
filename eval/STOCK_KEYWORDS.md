@@ -54,6 +54,13 @@ A receipt binds candidate counts to the original hashed index. Missing evidence,
 missing covered tickers, checksum mismatch, or excessive publication size fails
 the build and retains the old page; there is no silent truncation.
 
+The search index is split into hashed buckets, loaded only for words appearing
+in the pasted article. If the rest of the published site leaves insufficient
+Pages space, the page loads these compact assets from the exact repository
+snapshot commit at `raw.githubusercontent.com`; SHA-256 checks still apply.
+The complete compact assets remain committed and archived. Page bootstrap files
+remain on Pages. This avoids requiring a new storage account to test keywords.
+
 Until recovery completes, a real Backblaze development sample may be published.
 It is explicitly labelled `development_sample`, never whole-archive coverage.
 The complete recovery workflow automatically triggers a full-set refresh.

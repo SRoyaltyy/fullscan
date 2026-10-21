@@ -466,10 +466,13 @@ const KIND_LABELS = {
 };
 
 async function loadPackedProfile(path, expectedHash) {
-  if (!/^(scoring-profiles\/[a-f0-9]+|filing-profiles\/issuers\/\d{10}|keyword-index)\.json\.gz$/.test(path))
+  if (!/^(scoring-profiles\/[a-f0-9]+|filing-profiles\/issuers\/\d{10}|keyword-index(?:\/[a-f0-9])?)\.json\.gz$/.test(path))
     throw new Error("Invalid profile asset path");
   const query = staticMeta.snapshot ? "?snapshot=" + encodeURIComponent(staticMeta.snapshot.snapshot_id) : "";
-  const response = await fetch("./" + path + query);
+  const base = staticMeta.asset_base_url || "./";
+  if (base !== "./" && !/^https:\/\/raw\.githubusercontent\.com\/SRoyaltyy\/fullscan\/[a-f0-9]{40}\/dashboard\/scanner-backtest\/$/.test(base))
+    throw new Error("Invalid keyword asset origin");
+  const response = await fetch(base + path + query,{credentials:"omit"});
   if (!response.ok) throw new Error("Filing profile could not be loaded");
   const bytes = await response.arrayBuffer();
   return decodePackedBytes(bytes,expectedHash);
@@ -550,6 +553,8 @@ function renderKeywordComparison(container, comparison) {
 }
 
 let keywordSearchIndex = null;
+let keywordManifest = null;
+const keywordBuckets = new Map();
 function prepareKeywordIndex(payload) {
   const first = new Map(), df = new Map();
   for (const entry of payload.phrases) {
@@ -604,7 +609,19 @@ async function compareCustomKeywords() {
     } else {
       const asset = staticMeta && staticMeta.keyword_index;
       if (!asset) throw new Error("The current published snapshot has no keyword index yet.");
-      if (!keywordSearchIndex) keywordSearchIndex = prepareKeywordIndex(await loadPackedProfile(asset.path,asset.sha256));
+      if (!keywordManifest) keywordManifest = await loadPackedProfile(asset.path,asset.sha256);
+      const wanted = new Set([...article.matchAll(/[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(t => {
+        const raw = t[0].toLowerCase().replaceAll("’", "'").replace(/'s$/, "");
+        const word = keywordManifest.normalization[raw] || raw;
+        return (word.charCodeAt(0)%16).toString(16);
+      }));
+      await Promise.all([...wanted].map(async bucket => {
+        if (!keywordBuckets.has(bucket) && keywordManifest.buckets[bucket]) {
+          const entry = keywordManifest.buckets[bucket];
+          keywordBuckets.set(bucket,await loadPackedProfile(entry.path,entry.sha256));
+        }
+      }));
+      keywordSearchIndex = prepareKeywordIndex({...keywordManifest,phrases:[...keywordBuckets.values()].flat()});
       result = compareKeywordText(keywordSearchIndex,article);
     }
     renderKeywordComparison(box,result);
