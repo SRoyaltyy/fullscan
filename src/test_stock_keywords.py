@@ -5,10 +5,10 @@ from .stock_keywords import compile_keywords, KeywordIndex, quality_issues, norm
 
 def graph(facts=None):
     def claim(ident, predicate, value, date='2026-01-01', status='asserted', quote=None, qualifiers=None):
-        return {'id':ident,'subject':'BLZE','predicate':predicate,'object':value,'object_type':'company',
+        return {'id':ident,'subject':'BLZE','predicate':predicate,'object':value,'object_type':'organization' if predicate in ('buys_from','depends_on') else 'concept',
             'status':status,'qualifiers':qualifiers or {},'confidence':'explicit',
             'evidence':[{'source_id':date,'start':0,'end':len(quote or value),'quote':quote or value}]}
-    return {'ticker':'BLZE','facts':facts or [claim('s','buys_from','Western Digital',qualifiers={'description':'hard drive suppliers'}),
+    return {'ticker':'BLZE','facts':facts or [claim('s','buys_from','Western Digital',quote='Western Digital is one of our hard drive suppliers.',qualifiers={'description':'hard drive suppliers'}),
         claim('d','depends_on','Stripe'), claim('n','depends_on','Stripe','2026-03-01','negated')],
         'sources':[{'id':date,'filing_date':date,'accession':'accession','section':'Item 1','document':'doc.htm'}
                    for date in ('2026-01-01','2026-03-01')], 'paragraphs':[], 'coverage':{}, 'claim':claim}
@@ -33,9 +33,9 @@ class KeywordTests(unittest.TestCase):
         index = KeywordIndex({'BLZE':profile(bundle)})
         before = index.compare('Stripe disruption',article_date='2025-12-01')
         self.assertEqual(before['matches'],[])
-        january = index.compare('Stripe disruption',article_date='2026-02-01')['matches']
+        january = index.compare('Backblaze reports Stripe disruption',article_date='2026-02-01')['matches']
         self.assertTrue(any(r['usable_for_scoring'] for r in january))
-        april = index.compare('Stripe disruption',article_date='2026-04-01')['matches']
+        april = index.compare('Backblaze reports Stripe disruption',article_date='2026-04-01')['matches']
         self.assertFalse(any(r['usable_for_scoring'] for r in april))
         self.assertFalse(index.compare('Stripe')['stock_passes_changed'])
 
@@ -103,7 +103,7 @@ class KeywordTests(unittest.TestCase):
             before = (root/entry['path']).read_bytes()
             board,coverage = attach_keyword_profiles(index_profiles({'TEST':Profile('TEST','Example','','')}),
                 root,as_of='2026-10-20',catalog=Catalog([]))
-            self.assertEqual(coverage['keyword_schema'],'stock-keywords-1.0')
+            self.assertEqual(coverage['keyword_schema'],'stock-keywords-1.1')
             p = board.profiles['TEST']
             self.assertEqual(p.keyword_coverage['retained_relationships'],1)
             self.assertTrue(any(r['relationship']=='supplier' for r in p.keyword_records))
@@ -114,7 +114,7 @@ class KeywordTests(unittest.TestCase):
         from .scanner_backtest import dispatch
         bundle = compile_keywords(graph(),as_of='2026-04-01')
         gate = SimpleNamespace(ready=True,board=SimpleNamespace(profiles={'BLZE':profile(bundle)}))
-        status,result,_ = dispatch(gate,'POST','/api/keywords',json.dumps({'text':'Western Digital supply disruption'}).encode())
+        status,result,_ = dispatch(gate,'POST','/api/keywords',json.dumps({'text':'Backblaze reports Western Digital supply disruption'}).encode())
         self.assertEqual(status,200)
         self.assertTrue(any(r['stock']=='BLZE' and r['relationship']=='supplier' for r in result['matches']))
         self.assertFalse(result['stock_passes_changed'])

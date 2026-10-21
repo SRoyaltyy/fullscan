@@ -1,6 +1,6 @@
 # Stock keyword output contract
 
-`stock-keywords-1.0` projects existing exhaustive filing graphs into short,
+`stock-keywords-1.1` projects existing exhaustive filing graphs into short,
 directional records: `stock -> relationship -> keyword`. It does not change the
 grammar compiler, invalidate completed shards, or silently discard raw claims.
 
@@ -16,6 +16,8 @@ Examples from the archived Backblaze graph:
 Every record includes assertion state, first/latest filing dates, current-claim
 status, review reasons, qualifiers and evidence IDs. Evidence includes the whole
 supporting quote, source date, accession, document, section and character offsets.
+Legacy dated officer facts carry quote-only evidence with explicitly unavailable
+document offsets; they are not assigned fabricated document positions or tenure.
 The financial range normalizer only joins values within a fully matched
 `23% to 25%, raised from 19% to 21%` construction. It never infers a reporting
 period from unrelated table cells. Different supplier/metric contexts remain
@@ -28,12 +30,47 @@ Filing assertions are not independently verified present-day business facts.
 
 ## Article comparison
 
+Both sides use `entity-alignment-1.0`. Word normalization retrieves candidates;
+it does not establish identity. Each stock keyword retains its source entity
+type, identity scope, aliases, concept sense, affiliation, and supporting quote.
+An article candidate must pass the same type/name/scope or concept-sense gate
+before entering `matches`. Contradictions enter `rejected_matches`; insufficient
+evidence enters `unresolved_matches`. Both remain inspectable with reasons.
+
+| Filing identity | Article mention | Decision |
+|---|---|---|
+| PERSON: John McDonald, officer of Acme | Acme Industries CEO McDonald resigns | Aligned within the filing profile. |
+| PERSON: John McDonald | McDonald's reports restaurant earnings | Reject the officer link. |
+| PERSON: John McDonald | McDonald resigns | Unresolved surname. |
+| CONCEPT: semiconductor chip | Potato chips snack prices rise | No aligned concept. |
+
+These examples are synthetic controls, not SEC assertions. Catalog companies
+can use `org:TICKER`; other proper names have typed, issuer-scoped identities.
+Those local IDs are not independently verified global identifiers. A unique
+full person name is unique only within the loaded registry. Same-surname
+collisions require more evidence; a bare surname needs an attached person role
+and the issuer in the same local context. Current officer tenure still requires
+review even when a mention's identity aligns.
+
+Stored headline publication first parses the exact selected text with the same
+pinned spaCy/model versions used for filing grammar. Input hashes, entity spans,
+labels, dependencies and sentence offsets accompany the parse. NER is evidence,
+not an identity registry. Type conflicts reject links before context scoring.
+The custom browser comparison uses the shared deterministic gate and abstains
+where it lacks typed evidence; it does not run spaCy in JavaScript. The older
+person-based stock-pass route also uses the person identity gate.
+
+Context support scores are diagnostic overlap counts, not probabilities or a
+replacement K-score formula. Relevance scores cannot override identity/type
+conflicts. No claim of perfect disambiguation or measured semantic accuracy is
+made without a labelled evaluation set.
+
 Python: `compare_article(board, text, article_date='YYYY-MM-DD')`.
 Live API: `POST /api/keywords` with `{"text":"...","article_date":"2026-10-17"}`.
 The date is optional; without it the current displayed filing cutoff is used.
 
 The static page also accepts pasted headlines or full articles and uses the same
-pinned normalization forms. Matches retain the stock-side relationship and exact
+pinned normalization forms and exported identity rules. Matches retain the stock-side relationship and exact
 article offsets. Punctuation boundaries cannot manufacture a multiword match.
 Dated offline intake comparisons exclude future evidence and recalculate latest
 assertion state. Custom browser comparisons are explicitly current-cutoff

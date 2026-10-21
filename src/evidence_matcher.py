@@ -545,6 +545,9 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                     continue
                 if kind=='person' and (not _valid_person(fact) or not re.search(r'\b'+re.escape(fact.text.split()[-1])+r'\b',passage.text)):
                     continue
+                if kind=='person':
+                    from .entity_resolution import person_fact_alignment
+                    if not person_fact_alignment(board,p,fact,passage.text,key):continue
                 if kind=='person' and key in english_words() and not re.search(r'\b'+re.escape(fact.text.split()[0])+r'\s+(?:[A-Za-z]+\.?\s+){0,2}'+re.escape(fact.text.split()[-1])+r'\b',identity_text):continue
                 if kind=='owned_product' and not _product_surface(fact,passage.text):
                     continue
@@ -753,3 +756,4 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
             'engine':'evidence-v2','profile_fingerprint':board.source_fingerprint,'semantic_resources':load_senses()[1],
             'profile_coverage':{'companies':len(board.profiles),'with_warnings':sum(bool(p.warnings) for p in board.profiles.values())}})
     return output
+

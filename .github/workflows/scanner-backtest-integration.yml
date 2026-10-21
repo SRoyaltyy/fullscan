@@ -39,6 +39,7 @@ jobs:
           src.test_correlation src.test_eval_harness src.test_evidence_matcher
           src.test_scanner_backtest src.test_deep_profile_store scripts.test_materialize_filing_texts
           src.test_stock_keywords scripts.test_publish_filing_objects
+          src.test_entity_resolution
           scripts.test_scan_validation_batches scripts.test_export_backtest_static
           scripts.test_publish_scanner_snapshot
       - name: Export synthetic headline snapshot with sockets disabled
@@ -75,5 +76,27 @@ jobs:
           name: scanner-backtest-synthetic-smoke
           path: ${{ runner.temp }}/scanner-backtest-smoke/
           retention-days: 7
+  typed_grammar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            src
+            scripts
+            requirements-filing-parser.txt
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install the same pinned grammar model used for filings
+        run: |
+          python -m pip install --only-binary=:all: --index-url https://pypi.org/simple -r requirements-filing-parser.txt
+          python -m pip install PyYAML==6.0.3
+          python -m scripts.bootstrap_semantics
+      - name: Verify actual NER spans and identity decisions together
+        run: python -m unittest src.test_entity_resolution_spacy -v
 
 

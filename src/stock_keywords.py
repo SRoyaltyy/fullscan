@@ -10,11 +10,12 @@ import math
 import re
 
 from .linguistics import lemma
+from .entity_resolution import VERSION as ALIGNMENT_VERSION, POLICY, STOP, aliases, identity, decide, validate_annotations
 
 # Hyphens separate words, but offsets always refer to the unmodified article.
 TOKEN = re.compile(r"[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*")
 
-SCHEMA = 'stock-keywords-1.0'
+SCHEMA = 'stock-keywords-1.1'
 ROLES = {'buys_from':'supplier', 'sells_to':'customer', 'uses_input':'input',
     'depends_on':'dependency', 'competes_with':'competitor', 'partners_with':'partner',
     'licenses':'license', 'offers':'product_or_service', 'subject_to':'exposure',
@@ -22,6 +23,7 @@ ROLES = {'buys_from':'supplier', 'sells_to':'customer', 'uses_input':'input',
     'risk_mentions':'risk', 'exposed_to':'exposure', 'operates_in':'operating_geography',
     'owns_subsidiary':'subsidiary', 'acquires':'acquisition_target',
     'divests':'divestiture_target', 'differentiation_claim':'differentiation_claim'}
+ROLES['has_officer']='officer'
 ENTITY_ROLES = {'issuer','supplier','customer','competitor','partner','subsidiary',
                 'regulator','approval_authority','acquisition_target','divestiture_target'}
 LEGAL_SUFFIX = re.compile(r'(?:[, ]+(?:incorporated|corporation|company|limited|holdings|corp|inc|ltd|plc|llc)\.?)+$',re.I)
@@ -65,18 +67,18 @@ def compile_keywords(graph, *, as_of, ticker=None):
                 if key not in newest or order > newest[key][0]:
                     newest[key] = (order, fact['id'])
 
-    def add(keyword, role, predicate, state, reference, *, qualifiers=None, issues=(), current=False):
+    def add(keyword, role, predicate, state, reference, *, qualifiers=None, issues=(), current=False, object_type='concept'):
         words = normalized_words(keyword)
         context = json.dumps(qualifiers or {}, sort_keys=True, separators=(',',':'))
-        identity = (ticker, words, role, predicate, state, tuple(issues), current, context)
-        if identity not in records:
-            records[identity] = {'stock':ticker,'keyword':keyword,'normalized':' '.join(words),
+        record_key = (ticker, words, role, predicate, state, tuple(issues), current, context,object_type)
+        if record_key not in records:
+            records[record_key] = {'stock':ticker,'keyword':keyword,'normalized':' '.join(words),'object_type':object_type,
                 'relationship':role,'predicate':predicate,'assertion':state,
                 'current_as_of_cutoff':current,'review_required':bool(issues),
                 'review_reasons':list(issues),'usable_for_scoring':current and state == 'asserted' and not issues,
                 'evidence_ids':[], 'qualifiers':qualifiers or {}, 'context_key':context}
-        if reference not in records[identity]['evidence_ids']:
-            records[identity]['evidence_ids'].append(reference)
+        if reference not in records[record_key]['evidence_ids']:
+            records[record_key]['evidence_ids'].append(reference)
 
     for fact in graph['facts']:
         witnesses = [{**ev,'source':sources[ev['source_id']]} for ev in fact['evidence']
@@ -100,7 +102,7 @@ def compile_keywords(graph, *, as_of, ticker=None):
                 values = ['unresolved '+role.replace('_',' ')]
                 issues = sorted(set(issues+['object_requires_phrase_resolution']))
         for value in values:
-            add(value,role,fact['predicate'],fact['status'],fact['id'],qualifiers=fact.get('qualifiers'),issues=issues,current=current)
+            add(value,role,fact['predicate'],fact['status'],fact['id'],qualifiers=fact.get('qualifiers'),issues=issues,current=current,object_type=fact['object_type'])
         if fact['predicate'] == 'buys_from':
             inputs = list((fact.get('qualifiers') or {}).get('inputs') or [])
             description = (fact.get('qualifiers') or {}).get('description','')
@@ -153,22 +155,56 @@ class KeywordIndex:
         self.profiles = profiles
         self.related = defaultdict(list)
         self.by_phrase = defaultdict(list)
+        self.organizations = defaultdict(set)
+        self.entity_peers = defaultdict(list)
+        for ticker,profile in profiles.items():
+            for form in aliases(profile.name,'ORG'):
+                self.organizations[form].add(ticker)
         for ticker, profile in sorted(profiles.items()):
+            # Dated, explicitly evidenced officers use person identities rather
+            # than inheriting the company's name/plural normalization rules.
+            if not hasattr(profile,'keyword_records'):profile.keyword_records=[]
+            if not hasattr(profile,'keyword_evidence'):profile.keyword_evidence={}
+            from .evidence_matcher import _valid_person
+            for fact in getattr(profile,'facts',[]):
+                if fact.kind!='person' or not fact.filing_date or not _valid_person(fact):continue
+                reference='paragraph:person:'+hashlib.sha256((ticker+fact.text+fact.filing_date+fact.passage).encode()).hexdigest()
+                if reference in profile.keyword_evidence:continue
+                profile.keyword_evidence[reference]={'subject':ticker,'predicate':'has_officer','object':fact.text,'object_type':'PERSON','assertion':'asserted',
+                    'witnesses':[{'source_id':fact.accession,'start':None,'end':None,'offset_scope':'quote_only','quote':fact.passage,
+                                  'source':{'filing_date':fact.filing_date,'accession':fact.accession,'section':fact.section,'source':fact.source}}]}
+                profile.keyword_records.append({'id':reference,'stock':ticker,'keyword':fact.text,'normalized':' '.join(normalized_words(fact.text)),
+                    'relationship':'officer','predicate':'has_officer','object_type':'PERSON','assertion':'asserted',
+                    'current_as_of_cutoff':False,'review_required':True,'review_reasons':['officer_tenure_requires_review'],
+                    'usable_for_scoring':False,'qualifiers':{},'context_key':'{}','evidence_ids':[reference],
+                    'first_filing_date':fact.filing_date,'latest_filing_date':fact.filing_date})
+            if getattr(profile,'keyword_coverage',None):
+                profile.keyword_coverage['keywords']=len(profile.keyword_records)
+                profile.keyword_coverage['review_required']=sum(r['review_required'] for r in profile.keyword_records)
             names = [profile.name, LEGAL_SUFFIX.sub('',profile.name).strip()]
             for name in set(names):
                 words = normalized_words(name)
                 if words:
-                    self.first[words[0]].append((words,{'stock':ticker,'relationship':'issuer','keyword':name,'id':'issuer:'+ticker,'evidence_ids':[]}))
+                    issuer={'stock':ticker,'relationship':'issuer','object_type':'ORG','keyword':name,'id':'issuer:'+ticker,'evidence_ids':[]}
+                    issuer['identity']=identity(issuer,profile,self.organizations)
+                    self.first[words[0]].append((words,issuer))
             for row in getattr(profile,'keyword_records',[]):
+                row['identity'] = identity(row,profile,self.organizations)
+                row['identity']['known_from']=row['first_filing_date']
                 words = tuple(row['normalized'].split())
                 if words:
                     self.first[words[0]].append((words,row))
+                    for alias in row['identity']['aliases']:
+                        alternate=normalized_words(alias)
+                        if alternate and alternate!=words:self.first[alternate[0]].append((alternate,row))
+                        if alternate:self.entity_peers[alternate].append(row['identity'])
                     short = normalized_words(LEGAL_SUFFIX.sub('',row['keyword']))
                     if short and short != words and row['relationship'] in ENTITY_ROLES:
                         self.first[short[0]].append((short,row))
                     self.df[words].add(ticker)
                     self.by_phrase[words].append(row)
                     self.related[(ticker,row['relationship'],row['normalized'],row['predicate'],row.get('context_key',''))].append(row)
+                    self.entity_peers[words].append(row['identity'])
 
     def browser_payload(self):
         """Compact retrieval index; quotations stay in hash-bound stock assets.
@@ -184,6 +220,11 @@ class KeywordIndex:
             for phrase, row in entries:
                 phrases.append({'phrase':list(phrase), 'row':row})
                 vocabulary.update(phrase)
+                if row.get('identity'):
+                    vocabulary.update(row['identity']['source_context_terms'])
+                    for sense in row['identity']['senses']:vocabulary.update(sense.get('terms',[]))
+                    for alias in row['identity']['aliases']:
+                        raw_words.update(t.group().lower() for t in TOKEN.finditer(alias))
                 raw_words.update(t.group().lower() for t in TOKEN.finditer(row['keyword']))
         forms = set(_lookup()) | set(IRREGULAR) | set(english_words()) | raw_words | vocabulary
         normalization = {}
@@ -192,9 +233,11 @@ class KeywordIndex:
             if base in vocabulary and base != form:
                 normalization[form] = base
         return {'schema':SCHEMA, 'catalog_tickers':self.count, 'phrases':phrases,
-                'normalization':normalization, 'comparison':'current profile cutoff; keyword overlap only'}
+                'normalization':normalization,'alignment_version':ALIGNMENT_VERSION,'identity_policy':POLICY,
+                'stopwords':sorted(STOP), 'comparison':'typed identity and sense alignment; unresolved candidates abstain'}
 
-    def compare(self, text, *, article_date=''):
+    def compare(self, text, *, article_date='', entity_annotations=None):
+        annotations = validate_annotations(text,entity_annotations)
         tokens = list(TOKEN.finditer(text or ''))
         words = [lemma(t.group()) for t in tokens]
         hits, named = [], set()
@@ -204,11 +247,21 @@ class KeywordIndex:
                 if tuple(words[i:end]) != phrase or re.search(r'[.!?;:\n]',text[tokens[i].end():tokens[end-1].start()]):
                     continue
                 if row['relationship'] == 'issuer':
-                    named.add(row['stock'])
+                    if decide(row['identity'],text,tokens[i].start(),tokens[end-1].end(),annotations=annotations)['status']=='resolved':named.add(row['stock'])
                 else:
                     hits.append((phrase,row,tokens[i].start(),tokens[end-1].end()))
-        matches, broad, seen = [], {}, set()
+        matches, broad, seen, unresolved, rejected = [], {}, set(), [], []
         date_counts = {}
+        # A full name and its contained surname are one mention. Preserve
+        # distinct claims/contexts, while preferring the longest same-row span.
+        grouped=defaultdict(list)
+        for hit in hits:grouped[hit[1]['id']].append(hit)
+        hits=[]
+        for group in grouped.values():
+            previous_end=-1
+            for hit in sorted(group,key=lambda h:(h[2],-h[3])):
+                if hit[3]<=previous_end:continue
+                hits.append(hit);previous_end=hit[3]
         for phrase,row,start,end in hits:
             if article_date and row['first_filing_date'] > article_date:
                 continue
@@ -217,6 +270,18 @@ class KeywordIndex:
                 continue
             seen.add(key)
             canonical = tuple(row['normalized'].split())
+            source_identity=identity(row,self.profiles[row['stock']],self.organizations,as_of=article_date) if article_date else row['identity']
+            peers=[p for p in self.entity_peers[phrase] if not article_date or p.get('known_from','')<=article_date]
+            alignment = decide(source_identity,text,start,end,peers=peers,annotations=annotations)
+            candidate = {**row,'identity':source_identity,'alignment':alignment,'article_span':{'start':start,'end':end,'text':text[start:end]}}
+            if article_date:
+                pool=self.profiles[row['stock']].keyword_evidence
+                refs=[ref for ref in row['evidence_ids'] if any(w['source']['filing_date']<=article_date for w in pool[ref]['witnesses'])]
+                dates=[w['source']['filing_date'] for ref in refs for w in pool[ref]['witnesses'] if w['source']['filing_date']<=article_date]
+                candidate.update(evidence_ids=refs,first_filing_date=min(dates),latest_filing_date=max(dates))
+            if alignment['status'] != 'resolved':
+                (rejected if alignment['status']=='rejected' else unresolved).append(candidate)
+                continue
             if canonical not in date_counts:
                 date_counts[canonical] = len({r['stock'] for r in self.by_phrase[canonical]
                     if not article_date or r['first_filing_date'] <= article_date})
@@ -234,15 +299,16 @@ class KeywordIndex:
                     for other in self.related[(row['stock'],row['relationship'],row['normalized'],row['predicate'],row.get('context_key',''))]
                     for ref in other['evidence_ids'] for w in pool[ref]['witnesses'] if w['source']['filing_date'] <= article_date]
                 current = bool(choices) and max(choices)[2] in row['evidence_ids']
-            matches.append({**row,'current_as_of_cutoff':current,
+            matches.append({**candidate,'current_as_of_cutoff':current,
                             'usable_for_scoring':current and row['assertion']=='asserted' and not row['review_required'],
                             'article_span':{'start':start,'end':end,'text':text[start:end]},
-                            'decision':'keyword_overlap_only','article_date':article_date})
+                            'decision':'identity_aligned_candidate','article_date':article_date})
         return {'schema':SCHEMA,'matches':matches,'broad_matches':list(broad.values()),
+                'unresolved_matches':unresolved,'rejected_matches':rejected,'alignment_version':ALIGNMENT_VERSION,
                 'stock_passes_changed':False}
 
 
-def compare_article(board, text, *, article_date=''):
+def compare_article(board, text, *, article_date='',entity_annotations=None):
     evidence_board = getattr(board,'evidence_board',board)
     if evidence_board is None:  # empty/synthetic engine controls
         return {'schema':SCHEMA,'matches':[],'broad_matches':[],'stock_passes_changed':False}
@@ -250,7 +316,7 @@ def compare_article(board, text, *, article_date=''):
     if index is None:
         index = KeywordIndex(evidence_board.profiles)
         evidence_board.keyword_index = index
-    result = index.compare(text,article_date=article_date)
+    result = index.compare(text,article_date=article_date,entity_annotations=entity_annotations)
     # Materialized witnesses also make look-ahead checks possible. A later filing
     # may be inspectable but cannot support a historical article's comparison.
     if article_date:

@@ -8,6 +8,8 @@ on:
       - 'src/stock_evidence.py'
       - 'src/stock_keywords.py'
       - 'src/stock_keyword_store.py'
+      - 'src/entity_resolution.py'
+      - 'scripts/annotate_article_entities.py'
       - 'scripts/publish_filing_objects.py'
       - 'src/filing*.py'
       - 'src/deep_profile_store.py'
@@ -145,14 +147,20 @@ jobs:
           src.test_correlation src.test_eval_harness src.test_evidence_matcher
           src.test_scanner_backtest src.test_deep_profile_store scripts.test_materialize_filing_texts
           src.test_stock_keywords scripts.test_publish_filing_objects
+          src.test_entity_resolution
           scripts.test_scan_validation_batches scripts.test_export_backtest_static
           scripts.test_publish_scanner_snapshot
+      - name: Parse the exact article headlines with the pinned grammar engine
+        run: |
+          python -m pip install --only-binary=:all: --index-url https://pypi.org/simple -r requirements-filing-parser.txt
+          python -m scripts.annotate_article_entities --news data/news_intake/2026-10-17/documents.json --out article-entities.json
       - name: Score full intake through the current headline evidence engine
         env:
           SCANNER_SOURCE_SHA: ${{ github.sha }}
         run: >-
           python -I -S scripts/offline_evidence_checks.py --backtest-export
           --filing-profiles filing-profiles --as-of "$FILING_AS_OF"
+          --article-entities article-entities.json
           --profile-assets keywords
           --dataset-scope "${{ needs.source.outputs.scope }}"
           --profile-archive-url "https://github.com/$GITHUB_REPOSITORY/actions/runs/${{ needs.source.outputs.run }}"
