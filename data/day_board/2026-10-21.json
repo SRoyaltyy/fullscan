@@ -1,6 +1,6 @@
 {
   "date": "2026-10-21",
-  "generated_at": "2026-10-21T11:16:25.876087-04:00",
+  "generated_at": "2026-10-21T11:16:35.713580-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -786,10 +786,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2222840,
-          "said": "220 rows",
+          "size": 2266619,
+          "said": "212 rows",
           "bullets": [
-            "GLBE, SHOO, HLNE, VCTR, WT, HOOD, AAMI, ANF"
+            "HOOD, AAMI, PRCH, HAPN, VSXY, SHOO, HLNE, KKR"
           ]
         },
         {
@@ -867,9 +867,9 @@
           "bullets": []
         }
       ],
-      "said": "220 rows",
+      "said": "212 rows",
       "bullets": [
-        "GLBE, SHOO, HLNE, VCTR, WT"
+        "HOOD, AAMI, PRCH, HAPN, VSXY"
       ]
     },
     {
@@ -1933,6 +1933,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-21\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-21T11:16:34.866794-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-21_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2266619,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HOOD, AAMI, PRCH, HAPN, VSXY"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HOOD, AAMI, PRCH, HAPN, VSXY"
     }
   ],
   "href": {
@@ -2114,6 +2132,22 @@
       "path": "data/day_board/2026-10-21.json",
       "at": "2026-10-21T11:16:26-04:00",
       "commit_msg": "auto: land weather [2026-10-21]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "39623517001",
+      "manifest": "research/input_freeze/2026-10-21/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-21.json",
+      "at": "2026-10-21T11:16:36-04:00",
+      "commit_msg": "auto: land join [2026-10-21]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "39623517001",
+      "manifest": "research/input_freeze/2026-10-21/manifest.json"
+    },
+    {
+      "path": "data/join/2026-10-21_ranked.csv",
+      "at": "2026-10-21T11:16:36-04:00",
+      "commit_msg": "auto: land join [2026-10-21]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "39623517001",
       "manifest": "research/input_freeze/2026-10-21/manifest.json"
