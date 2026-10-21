@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generated_at": "2026-10-20T19:46:12.388787-04:00",
+  "generated_at": "2026-10-21T04:57:00.808603-04:00",
   "from_date": "2026-08-13",
   "to_date": "2026-10-20",
   "n_days": 48,
@@ -2014,7 +2014,7 @@
           "Side lean: long \u00b7 idio +18"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-21",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2125,7 +2125,7 @@
           "Side lean: long \u00b7 idio +18"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-21",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2236,7 +2236,7 @@
           "Side lean: long \u00b7 idio +14"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-21",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2347,7 +2347,7 @@
           "Side lean: long \u00b7 idio +12"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-21",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2463,7 +2463,7 @@
           "Side lean: long \u00b7 idio +12"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-21",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2574,7 +2574,7 @@
           "Side lean: long \u00b7 idio +12"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-21",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2679,7 +2679,7 @@
           "Side lean: long \u00b7 idio +12"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-21",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2795,7 +2795,7 @@
           "Side lean: long \u00b7 idio +11"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-21",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2907,7 +2907,7 @@
           "Side lean: short \u00b7 idio -19"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-21",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3012,7 +3012,7 @@
           "Side lean: short \u00b7 idio -10"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-21",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3127,7 +3127,7 @@
           "Side lean: short \u00b7 idio -10"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-21",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3222,7 +3222,7 @@
           "Side lean: short \u00b7 idio -9"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-21",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3324,7 +3324,7 @@
           "Side lean: short \u00b7 idio -9"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-21",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3419,7 +3419,7 @@
           "Side lean: short \u00b7 idio -8"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-21",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3524,7 +3524,7 @@
           "Side lean: short \u00b7 idio -8"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-21",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3629,7 +3629,7 @@
           "Side lean: short \u00b7 idio -8"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-21",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -77526,7 +77526,7 @@
           "h3_px": 50.39,
           "h3_date": "2026-10-19",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-21"
         },
         {
           "ticker": "CNK",
@@ -77631,7 +77631,7 @@
           "h3_px": 39.0,
           "h3_date": "2026-10-19",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-21"
         },
         {
           "ticker": "TRU",
@@ -77737,7 +77737,7 @@
           "h3_px": 73.12,
           "h3_date": "2026-10-19",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-21"
         },
         {
           "ticker": "WLY",
@@ -77842,7 +77842,7 @@
           "h3_px": 51.78,
           "h3_date": "2026-10-19",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-21"
         },
         {
           "ticker": "PINS",
@@ -77942,7 +77942,7 @@
           "h3_px": 22.34,
           "h3_date": "2026-10-19",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-21"
         },
         {
           "ticker": "ECO",
@@ -78047,7 +78047,7 @@
           "h3_px": 88.98,
           "h3_date": "2026-10-19",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-21"
         },
         {
           "ticker": "ASML",
@@ -78157,7 +78157,7 @@
           "h3_px": 1647.12,
           "h3_date": "2026-10-19",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-21"
         },
         {
           "ticker": "TMUS",
@@ -78257,7 +78257,7 @@
           "h3_px": 156.09,
           "h3_date": "2026-10-19",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-21"
         }
       ],
       "shorts": [
@@ -78369,7 +78369,7 @@
           "h3_px": 27.75,
           "h3_date": "2026-10-19",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-21"
         },
         {
           "ticker": "ACI",
@@ -78469,7 +78469,7 @@
           "h3_px": 13.14,
           "h3_date": "2026-10-19",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-21"
         },
         {
           "ticker": "ANGI",
@@ -78569,7 +78569,7 @@
           "h3_px": 6.26,
           "h3_date": "2026-10-19",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-21"
         },
         {
           "ticker": "ENHA",
@@ -78669,7 +78669,7 @@
           "h3_px": 1.17,
           "h3_date": "2026-10-19",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-21"
         },
         {
           "ticker": "AIP",
@@ -78771,7 +78771,7 @@
           "h3_px": 19.08,
           "h3_date": "2026-10-19",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-21"
         },
         {
           "ticker": "FAST",
@@ -78865,7 +78865,7 @@
           "h3_px": 51.02,
           "h3_date": "2026-10-19",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-21"
         },
         {
           "ticker": "MX",
@@ -78966,7 +78966,7 @@
           "h3_px": 2.56,
           "h3_date": "2026-10-19",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-21"
         },
         {
           "ticker": "JLHL",
@@ -79060,7 +79060,7 @@
           "h3_px": 4.7,
           "h3_date": "2026-10-19",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-21"
         }
       ],
       "n_long_ok": 20,
@@ -80837,7 +80837,7 @@
           "h1_px": 73.12,
           "h1_date": "2026-10-19",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-21",
           "h5_px": null,
           "h5_date": null
         },
@@ -80942,7 +80942,7 @@
           "h1_px": 316.8,
           "h1_date": "2026-10-19",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-21",
           "h5_px": null,
           "h5_date": null
         },
@@ -81047,7 +81047,7 @@
           "h1_px": 45.18,
           "h1_date": "2026-10-19",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-21",
           "h5_px": null,
           "h5_date": null
         },
@@ -81158,7 +81158,7 @@
           "h1_px": 62.76,
           "h1_date": "2026-10-19",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-21",
           "h5_px": null,
           "h5_date": null
         },
@@ -81258,7 +81258,7 @@
           "h1_px": 207.72,
           "h1_date": "2026-10-19",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-21",
           "h5_px": null,
           "h5_date": null
         },
@@ -81363,7 +81363,7 @@
           "h1_px": 14.74,
           "h1_date": "2026-10-19",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-21",
           "h5_px": null,
           "h5_date": null
         },
@@ -81468,7 +81468,7 @@
           "h1_px": 31.45,
           "h1_date": "2026-10-19",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-21",
           "h5_px": null,
           "h5_date": null
         },
@@ -81571,7 +81571,7 @@
           "h1_px": 41.22,
           "h1_date": "2026-10-19",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-21",
           "h5_px": null,
           "h5_date": null
         }
@@ -81688,7 +81688,7 @@
           "h1_px": 41.67,
           "h1_date": "2026-10-19",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-21",
           "h5_px": null,
           "h5_date": null
         },
@@ -81777,7 +81777,7 @@
           "h1_px": 4.7,
           "h1_date": "2026-10-19",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-21",
           "h5_px": null,
           "h5_date": null
         },
@@ -81877,7 +81877,7 @@
           "h1_px": 6.26,
           "h1_date": "2026-10-19",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-21",
           "h5_px": null,
           "h5_date": null
         },
@@ -81971,7 +81971,7 @@
           "h1_px": 1.17,
           "h1_date": "2026-10-19",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-21",
           "h5_px": null,
           "h5_date": null
         },
@@ -82072,7 +82072,7 @@
           "h1_px": 57.49,
           "h1_date": "2026-10-19",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-21",
           "h5_px": null,
           "h5_date": null
         }
@@ -83827,7 +83827,7 @@
             "Side lean: long \u00b7 idio +18"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-21",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -83938,7 +83938,7 @@
             "Side lean: long \u00b7 idio +18"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-21",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -84049,7 +84049,7 @@
             "Side lean: long \u00b7 idio +14"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-21",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -84160,7 +84160,7 @@
             "Side lean: long \u00b7 idio +12"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-21",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -84276,7 +84276,7 @@
             "Side lean: long \u00b7 idio +12"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-21",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -84387,7 +84387,7 @@
             "Side lean: long \u00b7 idio +12"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-21",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -84492,7 +84492,7 @@
             "Side lean: long \u00b7 idio +12"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-21",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -84608,7 +84608,7 @@
             "Side lean: long \u00b7 idio +11"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-21",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -84720,7 +84720,7 @@
             "Side lean: short \u00b7 idio -19"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-21",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -84825,7 +84825,7 @@
             "Side lean: short \u00b7 idio -10"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-21",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -84940,7 +84940,7 @@
             "Side lean: short \u00b7 idio -10"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-21",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -85035,7 +85035,7 @@
             "Side lean: short \u00b7 idio -9"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-21",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -85137,7 +85137,7 @@
             "Side lean: short \u00b7 idio -9"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-21",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -85232,7 +85232,7 @@
             "Side lean: short \u00b7 idio -8"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-21",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -85337,7 +85337,7 @@
             "Side lean: short \u00b7 idio -8"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-21",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -85442,7 +85442,7 @@
             "Side lean: short \u00b7 idio -8"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-21",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
