@@ -1,0 +1,46 @@
+name: swing_confluence_v1 + updown_v5 leak test
+
+# Research only. Fails if any swing_confluence_v1 / updown_v5_preopen input could use information
+# public at or after 09:25 ET on the prediction day.
+on:
+  pull_request:
+    paths:
+      - "research/swing_confluence_v1/**"
+      - "research/updown_v5_preopen/**"
+      - ".github/workflows/swing_confluence_v1.yml"
+  push:
+    branches: [main]
+    paths:
+      - "research/swing_confluence_v1/**"
+      - "research/updown_v5_preopen/**"
+      - ".github/workflows/swing_confluence_v1.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  leak-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            research/__init__.py
+            research/updown_v3_preopen
+            research/updown_v4_preopen
+            research/swing_confluence_v1
+            research/updown_v5_preopen
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q pytest pandas numpy scipy scikit-learn hmmlearn pyarrow
+      - name: v4 leak test (unchanged, re-run as the shared base)
+        run: python -m pytest -q research/updown_v4_preopen/test_leak.py
+      - name: swing_confluence_v1 + updown_v5 leak tests
+        run: python -m pytest -q research/swing_confluence_v1/test_leak.py research/updown_v5_preopen/test_leak.py
+      - name: Results present
+        run: test -s research/swing_confluence_v1/results.json && test -s research/updown_v5_preopen/backtest.json
