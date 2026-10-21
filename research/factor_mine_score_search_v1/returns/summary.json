@@ -1,0 +1,908 @@
+{
+  "best": "flow_earn",
+  "fingerprint": "c03d665afb3873767263ef6e33bb95106ffb3f7fbe8b2adf7b06e80747fc0d31",
+  "formulas": [
+    {
+      "forward_clean": -0.09786625205066195,
+      "forward_yahoo": -0.09872315322286244,
+      "id": "flow_earn",
+      "inputs": "flow=1, earn=1",
+      "tune_clean": 0.04558825278466531
+    },
+    {
+      "forward_clean": -0.009658908554286713,
+      "forward_yahoo": -0.009829810557716331,
+      "id": "only_macd",
+      "inputs": "macd=1",
+      "tune_clean": 0.04344117127902347
+    },
+    {
+      "forward_clean": -0.08912380754841347,
+      "forward_yahoo": -0.08193691447804996,
+      "id": "only_flow",
+      "inputs": "flow=1",
+      "tune_clean": 0.0023182810596020418
+    },
+    {
+      "forward_clean": -0.060600860496172713,
+      "forward_yahoo": -0.06033960493312903,
+      "id": "drop_yday",
+      "inputs": "cam=1, rsi=1, macd=1, flow=1, earn=1",
+      "tune_clean": 5.552868608194039e-05
+    },
+    {
+      "forward_clean": -0.02288614177738657,
+      "forward_yahoo": -0.022516529510397176,
+      "id": "cam_macd",
+      "inputs": "cam=1, macd=1",
+      "tune_clean": -0.001751590110257643
+    },
+    {
+      "forward_clean": -0.10290523057037478,
+      "forward_yahoo": -0.10367743730712435,
+      "id": "board_list",
+      "inputs": "board_list=1",
+      "tune_clean": -0.022281630935554724
+    },
+    {
+      "forward_clean": -0.07573429841604085,
+      "forward_yahoo": -0.07361690421620866,
+      "id": "drop_flow",
+      "inputs": "cam=1, yday=1, rsi=1, macd=1, earn=1",
+      "tune_clean": -0.02656976603315671
+    },
+    {
+      "forward_clean": -0.05134099593369031,
+      "forward_yahoo": -0.05406614738523622,
+      "id": "cap_yday_10",
+      "inputs": "cam=1, yday=1, rsi=1, macd=1, flow=1, earn=1, cap_yday=10",
+      "tune_clean": -0.028153277697391694
+    },
+    {
+      "forward_clean": -0.0963539264661815,
+      "forward_yahoo": -0.09634336887173023,
+      "id": "only_earn",
+      "inputs": "earn=1",
+      "tune_clean": -0.03446548366471295
+    },
+    {
+      "forward_clean": -0.051148621403672045,
+      "forward_yahoo": -0.050871460060336125,
+      "id": "w2_macd",
+      "inputs": "cam=1, yday=1, rsi=1, macd=2, flow=1, earn=1",
+      "tune_clean": -0.03804410349616986
+    },
+    {
+      "forward_clean": -0.1022362148435918,
+      "forward_yahoo": -0.09828077136641052,
+      "id": "yday_macd",
+      "inputs": "yday=1, macd=1",
+      "tune_clean": -0.04125730419433593
+    },
+    {
+      "forward_clean": -0.08267006828606856,
+      "forward_yahoo": -0.07280626689862275,
+      "id": "drop_cam",
+      "inputs": "yday=1, rsi=1, macd=1, flow=1, earn=1",
+      "tune_clean": -0.047494760745747766
+    },
+    {
+      "forward_clean": -0.08638235151281988,
+      "forward_yahoo": -0.06957828103634474,
+      "id": "rsi_macd",
+      "inputs": "rsi=1, macd=1",
+      "tune_clean": -0.057815760524104566
+    },
+    {
+      "forward_clean": -0.0554501296424356,
+      "forward_yahoo": -0.05501821475537113,
+      "id": "cap_yday_20",
+      "inputs": "cam=1, yday=1, rsi=1, macd=1, flow=1, earn=1, cap_yday=20",
+      "tune_clean": -0.05912117378455476
+    },
+    {
+      "forward_clean": -0.09766805231521943,
+      "forward_yahoo": -0.09828841911104254,
+      "id": "cap_yday_10_macd_0_5",
+      "inputs": "cam=1, yday=1, rsi=1, macd=1, flow=1, earn=1, cap_yday=10, cap_macd=0.5",
+      "tune_clean": -0.06802853241504692
+    },
+    {
+      "forward_clean": -0.1164679627600645,
+      "forward_yahoo": -0.11356231563678028,
+      "id": "w2_yday",
+      "inputs": "cam=1, yday=2, rsi=1, macd=1, flow=1, earn=1",
+      "tune_clean": -0.07068163872702289
+    },
+    {
+      "forward_clean": -0.10547178819882257,
+      "forward_yahoo": -0.10895273332847351,
+      "id": "cam_earn",
+      "inputs": "cam=1, earn=1",
+      "tune_clean": -0.07127288458888048
+    },
+    {
+      "forward_clean": -0.05081207074172415,
+      "forward_yahoo": -0.053769257966116236,
+      "id": "drop_rsi",
+      "inputs": "cam=1, yday=1, macd=1, flow=1, earn=1",
+      "tune_clean": -0.07783890652641907
+    },
+    {
+      "forward_clean": -0.08103809145255418,
+      "forward_yahoo": -0.0810002805307342,
+      "id": "all_equal",
+      "inputs": "cam=1, yday=1, rsi=1, macd=1, flow=1, earn=1",
+      "tune_clean": -0.08304468811988223
+    },
+    {
+      "forward_clean": -0.18084693974973887,
+      "forward_yahoo": -0.17773483288161573,
+      "id": "only_yday",
+      "inputs": "yday=1",
+      "tune_clean": -0.08932557769804676
+    }
+  ],
+  "n_grid": 34,
+  "recurrence": {
+    "board_list": {
+      "forward_positive": 0,
+      "top10": 1,
+      "top20": 1,
+      "tune_positive": 0
+    },
+    "cam": {
+      "forward_positive": 0,
+      "top10": 5,
+      "top20": 11,
+      "tune_positive": 1
+    },
+    "cap_macd": {
+      "forward_positive": 0,
+      "top10": 0,
+      "top20": 1,
+      "tune_positive": 0
+    },
+    "cap_yday": {
+      "forward_positive": 0,
+      "top10": 1,
+      "top20": 3,
+      "tune_positive": 0
+    },
+    "earn": {
+      "forward_positive": 0,
+      "top10": 6,
+      "top20": 13,
+      "tune_positive": 2
+    },
+    "flow": {
+      "forward_positive": 0,
+      "top10": 5,
+      "top20": 11,
+      "tune_positive": 3
+    },
+    "macd": {
+      "forward_positive": 0,
+      "top10": 6,
+      "top20": 14,
+      "tune_positive": 2
+    },
+    "rsi": {
+      "forward_positive": 0,
+      "top10": 4,
+      "top20": 10,
+      "tune_positive": 1
+    },
+    "rsi_mode": {
+      "forward_positive": 0,
+      "top10": 0,
+      "top20": 0,
+      "tune_positive": 0
+    },
+    "yday": {
+      "forward_positive": 0,
+      "top10": 3,
+      "top20": 11,
+      "tune_positive": 0
+    }
+  },
+  "top10": [
+    "flow_earn",
+    "only_macd",
+    "only_flow",
+    "drop_yday",
+    "cam_macd",
+    "board_list",
+    "drop_flow",
+    "cap_yday_10",
+    "only_earn",
+    "w2_macd"
+  ],
+  "top20": [
+    "flow_earn",
+    "only_macd",
+    "only_flow",
+    "drop_yday",
+    "cam_macd",
+    "board_list",
+    "drop_flow",
+    "cap_yday_10",
+    "only_earn",
+    "w2_macd",
+    "yday_macd",
+    "drop_cam",
+    "rsi_macd",
+    "cap_yday_20",
+    "cap_yday_10_macd_0_5",
+    "w2_yday",
+    "cam_earn",
+    "drop_rsi",
+    "all_equal",
+    "only_yday"
+  ],
+  "versions": {
+    "clean": {
+      "forward": {
+        "best": {
+          "2": {
+            "closed_mean": 14.0,
+            "compound_15_mean": -0.09298621906030002,
+            "compound_mean": -0.11136707978772742,
+            "days_entered_mean": 7.0,
+            "down_mean": 6.0,
+            "entries_mean": 14.0,
+            "ex_best_mean": -0.11862283752804093,
+            "flat_mean": 3.0,
+            "n": 1,
+            "positive_share": 0.0,
+            "too_few": 1,
+            "up_mean": 1.0,
+            "win_rate_mean": 0.07142857142857142
+          },
+          "4": {
+            "closed_mean": 28.0,
+            "compound_15_mean": -0.07589160433289344,
+            "compound_mean": -0.09882833731362006,
+            "days_entered_mean": 7.0,
+            "down_mean": 6.0,
+            "entries_mean": 28.0,
+            "ex_best_mean": -0.10868848216303528,
+            "flat_mean": 3.0,
+            "n": 1,
+            "positive_share": 0.0,
+            "too_few": 1,
+            "up_mean": 1.0,
+            "win_rate_mean": 0.10714285714285714
+          },
+          "8": {
+            "closed_mean": 46.0,
+            "compound_15_mean": -0.06019312474561611,
+            "compound_mean": -0.08340333905063835,
+            "days_entered_mean": 7.0,
+            "down_mean": 6.0,
+            "entries_mean": 46.0,
+            "ex_best_mean": -0.09091843457936732,
+            "flat_mean": 3.0,
+            "n": 1,
+            "positive_share": 0.0,
+            "too_few": 0,
+            "up_mean": 1.0,
+            "win_rate_mean": 0.2608695652173913
+          }
+        },
+        "dropped_77": {
+          "dropped_pnl": 0.0,
+          "share_of_sum": -0.0,
+          "total_pnl": -46166.80607807151
+        },
+        "iwm": {
+          "compound": -0.023277385842441767,
+          "down": 6,
+          "flat": 0,
+          "missing": [],
+          "n_marked": 10,
+          "up": 4
+        },
+        "random4": {
+          "compound_mean": -0.0991099718180614,
+          "compound_median": -0.10045233970146311,
+          "n": 1000
+        },
+        "top10": {
+          "2": {
+            "closed_mean": 14.0,
+            "compound_15_mean": -0.025719642428894584,
+            "compound_mean": -0.036012976499837326,
+            "days_entered_mean": 7.0,
+            "down_mean": 5.1,
+            "entries_mean": 14.0,
+            "ex_best_mean": -0.05753656575770649,
+            "flat_mean": 3.0,
+            "n": 10,
+            "positive_share": 0.4,
+            "too_few": 10,
+            "up_mean": 1.9,
+            "win_rate_mean": 0.2
+          },
+          "4": {
+            "closed_mean": 28.0,
+            "compound_15_mean": -0.055537950760408294,
+            "compound_mean": -0.07239902072270818,
+            "days_entered_mean": 7.0,
+            "down_mean": 5.5,
+            "entries_mean": 28.0,
+            "ex_best_mean": -0.08348288035140888,
+            "flat_mean": 3.0,
+            "n": 10,
+            "positive_share": 0.0,
+            "too_few": 10,
+            "up_mean": 1.5,
+            "win_rate_mean": 0.18571428571428572
+          },
+          "8": {
+            "closed_mean": 44.2,
+            "compound_15_mean": -0.06723867494767903,
+            "compound_mean": -0.08887371574251876,
+            "days_entered_mean": 7.0,
+            "down_mean": 6.3,
+            "entries_mean": 44.2,
+            "ex_best_mean": -0.09720136061231434,
+            "flat_mean": 3.0,
+            "n": 10,
+            "positive_share": 0.0,
+            "too_few": 0,
+            "up_mean": 0.7,
+            "win_rate_mean": 0.2660262891809909
+          }
+        },
+        "top20": {
+          "2": {
+            "closed_mean": 14.0,
+            "compound_15_mean": -0.04897264736412606,
+            "compound_mean": -0.059175321860381346,
+            "days_entered_mean": 7.0,
+            "down_mean": 5.1,
+            "entries_mean": 14.0,
+            "ex_best_mean": -0.0817973331395405,
+            "flat_mean": 3.0,
+            "n": 20,
+            "positive_share": 0.3,
+            "too_few": 20,
+            "up_mean": 1.9,
+            "win_rate_mean": 0.20714285714285713
+          },
+          "4": {
+            "closed_mean": 28.0,
+            "compound_15_mean": -0.06732625844935569,
+            "compound_mean": -0.08457013040090684,
+            "days_entered_mean": 7.0,
+            "down_mean": 5.6,
+            "entries_mean": 28.0,
+            "ex_best_mean": -0.09516286750144294,
+            "flat_mean": 3.0,
+            "n": 20,
+            "positive_share": 0.0,
+            "too_few": 20,
+            "up_mean": 1.4,
+            "win_rate_mean": 0.2017857142857143
+          },
+          "8": {
+            "closed_mean": 43.95,
+            "compound_15_mean": -0.07725707458564401,
+            "compound_mean": -0.09875395464669987,
+            "days_entered_mean": 7.0,
+            "down_mean": 6.2,
+            "entries_mean": 43.95,
+            "ex_best_mean": -0.10603293726389755,
+            "flat_mean": 3.0,
+            "n": 20,
+            "positive_share": 0.0,
+            "too_few": 0,
+            "up_mean": 0.8,
+            "win_rate_mean": 0.25675728467690045
+          }
+        }
+      },
+      "tune": {
+        "best": {
+          "2": {
+            "closed_mean": 22.0,
+            "compound_15_mean": 0.1923647935525894,
+            "compound_mean": 0.1652886035430532,
+            "days_entered_mean": 11.0,
+            "down_mean": 3.0,
+            "entries_mean": 22.0,
+            "ex_best_mean": 0.04173903242686672,
+            "flat_mean": 10.0,
+            "n": 1,
+            "positive_share": 1.0,
+            "too_few": 1,
+            "up_mean": 8.0,
+            "win_rate_mean": 0.5
+          },
+          "4": {
+            "closed_mean": 44.0,
+            "compound_15_mean": 0.06767795975481028,
+            "compound_mean": 0.024900906262931732,
+            "days_entered_mean": 11.0,
+            "down_mean": 5.0,
+            "entries_mean": 44.0,
+            "ex_best_mean": -0.031607897353127634,
+            "flat_mean": 10.0,
+            "n": 1,
+            "positive_share": 1.0,
+            "too_few": 0,
+            "up_mean": 6.0,
+            "win_rate_mean": 0.5
+          },
+          "8": {
+            "closed_mean": 88.0,
+            "compound_15_mean": 0.0010063090975664934,
+            "compound_mean": -0.053424751451988994,
+            "days_entered_mean": 11.0,
+            "down_mean": 5.0,
+            "entries_mean": 88.0,
+            "ex_best_mean": -0.08071579228036407,
+            "flat_mean": 10.0,
+            "n": 1,
+            "positive_share": 0.0,
+            "too_few": 0,
+            "up_mean": 6.0,
+            "win_rate_mean": 0.4318181818181818
+          }
+        },
+        "dropped_77": {
+          "dropped_pnl": 0.0,
+          "share_of_sum": -0.0,
+          "total_pnl": -21772.315363557333
+        },
+        "iwm": {
+          "compound": -0.04868858046874969,
+          "down": 12,
+          "flat": 0,
+          "missing": [],
+          "n_marked": 21,
+          "up": 9
+        },
+        "random4": {
+          "compound_mean": -0.03737640255176208,
+          "compound_median": -0.04546282398983931,
+          "n": 1000
+        },
+        "top10": {
+          "2": {
+            "closed_mean": 22.0,
+            "compound_15_mean": 0.056880583964612895,
+            "compound_mean": 0.033098543158139225,
+            "days_entered_mean": 11.0,
+            "down_mean": 5.3,
+            "entries_mean": 22.0,
+            "ex_best_mean": -0.024223517436992338,
+            "flat_mean": 10.0,
+            "n": 10,
+            "positive_share": 0.6,
+            "too_few": 10,
+            "up_mean": 5.7,
+            "win_rate_mean": 0.4727272727272728
+          },
+          "4": {
+            "closed_mean": 44.0,
+            "compound_15_mean": 0.02098647529179167,
+            "compound_mean": -0.012106232838048703,
+            "days_entered_mean": 11.0,
+            "down_mean": 5.9,
+            "entries_mean": 44.0,
+            "ex_best_mean": -0.049923824545479535,
+            "flat_mean": 10.0,
+            "n": 10,
+            "positive_share": 0.4,
+            "too_few": 0,
+            "up_mean": 5.1,
+            "win_rate_mean": 0.4704545454545454
+          },
+          "8": {
+            "closed_mean": 87.4,
+            "compound_15_mean": 0.011014203647927578,
+            "compound_mean": -0.03895109575845177,
+            "days_entered_mean": 11.0,
+            "down_mean": 5.7,
+            "entries_mean": 87.4,
+            "ex_best_mean": -0.06197582581108951,
+            "flat_mean": 10.0,
+            "n": 10,
+            "positive_share": 0.1,
+            "too_few": 0,
+            "up_mean": 5.3,
+            "win_rate_mean": 0.46462904911180775
+          }
+        },
+        "top20": {
+          "2": {
+            "closed_mean": 22.0,
+            "compound_15_mean": -0.006898608974773385,
+            "compound_mean": -0.03246877957774981,
+            "days_entered_mean": 11.0,
+            "down_mean": 6.05,
+            "entries_mean": 22.0,
+            "ex_best_mean": -0.08309001315574993,
+            "flat_mean": 10.0,
+            "n": 20,
+            "positive_share": 0.3,
+            "too_few": 20,
+            "up_mean": 4.95,
+            "win_rate_mean": 0.44545454545454544
+          },
+          "4": {
+            "closed_mean": 44.0,
+            "compound_15_mean": 0.010223283004645162,
+            "compound_mean": -0.026639880855255964,
+            "days_entered_mean": 11.0,
+            "down_mean": 5.65,
+            "entries_mean": 44.0,
+            "ex_best_mean": -0.06127783362967174,
+            "flat_mean": 10.0,
+            "n": 20,
+            "positive_share": 0.2,
+            "too_few": 0,
+            "up_mean": 5.35,
+            "win_rate_mean": 0.4647727272727272
+          },
+          "8": {
+            "closed_mean": 87.25,
+            "compound_15_mean": 0.002482422021691133,
+            "compound_mean": -0.049752916384781055,
+            "days_entered_mean": 11.0,
+            "down_mean": 6.0,
+            "entries_mean": 87.25,
+            "ex_best_mean": -0.07254635555921622,
+            "flat_mean": 10.0,
+            "n": 20,
+            "positive_share": 0.05,
+            "too_few": 0,
+            "up_mean": 5.0,
+            "win_rate_mean": 0.4607823928944619
+          }
+        }
+      }
+    },
+    "yahoo": {
+      "forward": {
+        "best": {
+          "2": {
+            "closed_mean": 14.0,
+            "compound_15_mean": -0.09271154011637928,
+            "compound_mean": -0.11186941877779555,
+            "days_entered_mean": 7.0,
+            "down_mean": 6.0,
+            "entries_mean": 14.0,
+            "ex_best_mean": -0.11879187621783338,
+            "flat_mean": 3.0,
+            "n": 1,
+            "positive_share": 0.0,
+            "too_few": 1,
+            "up_mean": 1.0,
+            "win_rate_mean": 0.07142857142857142
+          },
+          "4": {
+            "closed_mean": 28.0,
+            "compound_15_mean": -0.07720753165200012,
+            "compound_mean": -0.0988449153739207,
+            "days_entered_mean": 7.0,
+            "down_mean": 6.0,
+            "entries_mean": 28.0,
+            "ex_best_mean": -0.10868474734324196,
+            "flat_mean": 3.0,
+            "n": 1,
+            "positive_share": 0.0,
+            "too_few": 1,
+            "up_mean": 1.0,
+            "win_rate_mean": 0.10714285714285714
+          },
+          "8": {
+            "closed_mean": 46.0,
+            "compound_15_mean": -0.06013884289727334,
+            "compound_mean": -0.08545512551687107,
+            "days_entered_mean": 7.0,
+            "down_mean": 6.0,
+            "entries_mean": 46.0,
+            "ex_best_mean": -0.0915239823888927,
+            "flat_mean": 3.0,
+            "n": 1,
+            "positive_share": 0.0,
+            "too_few": 0,
+            "up_mean": 1.0,
+            "win_rate_mean": 0.2608695652173913
+          }
+        },
+        "dropped_77": {
+          "dropped_pnl": -45.96528756408691,
+          "share_of_sum": 0.0010240772602999485,
+          "total_pnl": -44884.58961643562
+        },
+        "iwm": {
+          "compound": null,
+          "down": 0,
+          "flat": 0,
+          "missing": [
+            "2026-09-14",
+            "2026-09-15",
+            "2026-09-16",
+            "2026-09-17",
+            "2026-09-18",
+            "2026-09-21",
+            "2026-09-22",
+            "2026-09-23",
+            "2026-09-24",
+            "2026-09-25"
+          ],
+          "n_marked": 0,
+          "up": 0
+        },
+        "random4": {
+          "compound_mean": -0.09500145074008995,
+          "compound_median": -0.0972342574050099,
+          "n": 1000
+        },
+        "top10": {
+          "2": {
+            "closed_mean": 14.0,
+            "compound_15_mean": -0.024872043866519523,
+            "compound_mean": -0.036416611219074455,
+            "days_entered_mean": 7.0,
+            "down_mean": 5.1,
+            "entries_mean": 14.0,
+            "ex_best_mean": -0.05789819784590468,
+            "flat_mean": 3.0,
+            "n": 10,
+            "positive_share": 0.4,
+            "too_few": 10,
+            "up_mean": 1.9,
+            "win_rate_mean": 0.2
+          },
+          "4": {
+            "closed_mean": 28.0,
+            "compound_15_mean": -0.05469784245244996,
+            "compound_mean": -0.07139400154442073,
+            "days_entered_mean": 7.0,
+            "down_mean": 5.5,
+            "entries_mean": 28.0,
+            "ex_best_mean": -0.08230134523622464,
+            "flat_mean": 3.0,
+            "n": 10,
+            "positive_share": 0.0,
+            "too_few": 10,
+            "up_mean": 1.5,
+            "win_rate_mean": 0.18571428571428572
+          },
+          "8": {
+            "closed_mean": 44.2,
+            "compound_15_mean": -0.0653096948690893,
+            "compound_mean": -0.08776578639934197,
+            "days_entered_mean": 7.0,
+            "down_mean": 6.2,
+            "entries_mean": 44.2,
+            "ex_best_mean": -0.0958519249939888,
+            "flat_mean": 3.0,
+            "n": 10,
+            "positive_share": 0.0,
+            "too_few": 0,
+            "up_mean": 0.8,
+            "win_rate_mean": 0.2660262891809909
+          }
+        },
+        "top20": {
+          "2": {
+            "closed_mean": 14.0,
+            "compound_15_mean": -0.047772636893227624,
+            "compound_mean": -0.058052308255076415,
+            "days_entered_mean": 7.0,
+            "down_mean": 5.1,
+            "entries_mean": 14.0,
+            "ex_best_mean": -0.0807153660747949,
+            "flat_mean": 3.0,
+            "n": 20,
+            "positive_share": 0.3,
+            "too_few": 20,
+            "up_mean": 1.9,
+            "win_rate_mean": 0.20714285714285713
+          },
+          "4": {
+            "closed_mean": 28.0,
+            "compound_15_mean": -0.06539066918985662,
+            "compound_mean": -0.08248090714306747,
+            "days_entered_mean": 7.0,
+            "down_mean": 5.6,
+            "entries_mean": 28.0,
+            "ex_best_mean": -0.0929324220627368,
+            "flat_mean": 3.0,
+            "n": 20,
+            "positive_share": 0.0,
+            "too_few": 20,
+            "up_mean": 1.4,
+            "win_rate_mean": 0.2017857142857143
+          },
+          "8": {
+            "closed_mean": 43.95,
+            "compound_15_mean": -0.07417249403932816,
+            "compound_mean": -0.09660369021000144,
+            "days_entered_mean": 7.0,
+            "down_mean": 6.2,
+            "entries_mean": 43.95,
+            "ex_best_mean": -0.10419254845000658,
+            "flat_mean": 3.0,
+            "n": 20,
+            "positive_share": 0.0,
+            "too_few": 0,
+            "up_mean": 0.8,
+            "win_rate_mean": 0.25792007537457484
+          }
+        }
+      },
+      "tune": {
+        "best": {
+          "2": {
+            "closed_mean": 22.0,
+            "compound_15_mean": -0.04032874208328796,
+            "compound_mean": -0.05413675117539063,
+            "days_entered_mean": 11.0,
+            "down_mean": 4.0,
+            "entries_mean": 22.0,
+            "ex_best_mean": -0.10462038329738088,
+            "flat_mean": 10.0,
+            "n": 1,
+            "positive_share": 0.0,
+            "too_few": 1,
+            "up_mean": 7.0,
+            "win_rate_mean": 0.4090909090909091
+          },
+          "4": {
+            "closed_mean": 44.0,
+            "compound_15_mean": 0.03243113411302212,
+            "compound_mean": -0.011301258550589388,
+            "days_entered_mean": 11.0,
+            "down_mean": 5.0,
+            "entries_mean": 44.0,
+            "ex_best_mean": -0.06734534919572421,
+            "flat_mean": 10.0,
+            "n": 1,
+            "positive_share": 0.0,
+            "too_few": 0,
+            "up_mean": 6.0,
+            "win_rate_mean": 0.5
+          },
+          "8": {
+            "closed_mean": 88.0,
+            "compound_15_mean": -0.019284972371695908,
+            "compound_mean": -0.07101983335183504,
+            "days_entered_mean": 11.0,
+            "down_mean": 6.0,
+            "entries_mean": 88.0,
+            "ex_best_mean": -0.09813564222326698,
+            "flat_mean": 10.0,
+            "n": 1,
+            "positive_share": 0.0,
+            "too_few": 0,
+            "up_mean": 5.0,
+            "win_rate_mean": 0.42045454545454547
+          }
+        },
+        "dropped_77": {
+          "dropped_pnl": -3498.931182818031,
+          "share_of_sum": 0.14607393560523924,
+          "total_pnl": -23953.152000188424
+        },
+        "iwm": {
+          "compound": -0.03019258437499983,
+          "down": 10,
+          "flat": 0,
+          "missing": [
+            "2026-09-09",
+            "2026-09-10",
+            "2026-09-11"
+          ],
+          "n_marked": 18,
+          "up": 8
+        },
+        "random4": {
+          "compound_mean": -0.045871452209076666,
+          "compound_median": -0.042900847597458214,
+          "n": 1000
+        },
+        "top10": {
+          "2": {
+            "closed_mean": 22.0,
+            "compound_15_mean": 0.025416961409271067,
+            "compound_mean": 0.003454189018360565,
+            "days_entered_mean": 11.0,
+            "down_mean": 5.4,
+            "entries_mean": 22.0,
+            "ex_best_mean": -0.046617729057654364,
+            "flat_mean": 10.0,
+            "n": 10,
+            "positive_share": 0.5,
+            "too_few": 10,
+            "up_mean": 5.6,
+            "win_rate_mean": 0.4590909090909091
+          },
+          "4": {
+            "closed_mean": 44.0,
+            "compound_15_mean": 0.003996417399805707,
+            "compound_mean": -0.027394122016638777,
+            "days_entered_mean": 11.0,
+            "down_mean": 5.8,
+            "entries_mean": 44.0,
+            "ex_best_mean": -0.06229521952967968,
+            "flat_mean": 10.0,
+            "n": 10,
+            "positive_share": 0.4,
+            "too_few": 0,
+            "up_mean": 5.2,
+            "win_rate_mean": 0.4545454545454546
+          },
+          "8": {
+            "closed_mean": 87.4,
+            "compound_15_mean": -0.0002997505950943391,
+            "compound_mean": -0.04921599572234249,
+            "days_entered_mean": 11.0,
+            "down_mean": 5.9,
+            "entries_mean": 87.4,
+            "ex_best_mean": -0.0710057805396456,
+            "flat_mean": 10.0,
+            "n": 10,
+            "positive_share": 0.1,
+            "too_few": 0,
+            "up_mean": 5.1,
+            "win_rate_mean": 0.46351880877742946
+          }
+        },
+        "top20": {
+          "2": {
+            "closed_mean": 22.0,
+            "compound_15_mean": -0.008365701583182289,
+            "compound_mean": -0.03217226841382093,
+            "days_entered_mean": 11.0,
+            "down_mean": 6.05,
+            "entries_mean": 22.0,
+            "ex_best_mean": -0.08271842226639987,
+            "flat_mean": 10.0,
+            "n": 20,
+            "positive_share": 0.35,
+            "too_few": 20,
+            "up_mean": 4.95,
+            "win_rate_mean": 0.43863636363636366
+          },
+          "4": {
+            "closed_mean": 44.0,
+            "compound_15_mean": 9.915521508875313e-05,
+            "compound_mean": -0.03468898369020083,
+            "days_entered_mean": 11.0,
+            "down_mean": 5.5,
+            "entries_mean": 44.0,
+            "ex_best_mean": -0.07144624722033124,
+            "flat_mean": 10.0,
+            "n": 20,
+            "positive_share": 0.35,
+            "too_few": 0,
+            "up_mean": 5.5,
+            "win_rate_mean": 0.44886363636363635
+          },
+          "8": {
+            "closed_mean": 87.25,
+            "compound_15_mean": -0.0019689605583449233,
+            "compound_mean": -0.05290450789692058,
+            "days_entered_mean": 11.0,
+            "down_mean": 5.85,
+            "entries_mean": 87.25,
+            "ex_best_mean": -0.07449671099502869,
+            "flat_mean": 10.0,
+            "n": 20,
+            "positive_share": 0.05,
+            "too_few": 0,
+            "up_mean": 5.15,
+            "win_rate_mean": 0.4608019853709509
+          }
+        }
+      }
+    }
+  }
+}
