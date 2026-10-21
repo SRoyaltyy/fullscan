@@ -15,7 +15,11 @@ class FullTextControls(unittest.TestCase):
             for text, context in pending:
                 seen.append(text)
                 yield SimpleNamespace(text=text), context
-        with patch('src.filing_relationships.extract_doc', return_value=[]):
+        def syntax_stub(doc):
+            return {'terms':[],'syntax':[{'start':0,'end':len(doc.text),'text':doc.text,
+                'lemma':'','pos':'X','dependency':'ROOT','head_start':0,'head_end':len(doc.text)}] if doc.text else []}
+        with patch('src.filing_relationships.extract_doc', return_value=[]), \
+             patch('src.filing_relationships.parse_terms',side_effect=syntax_stub):
             result = extract_sections(sections, ticker='TEST', name='Example', nlp=SimpleNamespace(pipe=pipe))
         return result, seen
 

@@ -68,6 +68,19 @@ box.children[5].value = 'high';
 box.children[5].listeners.change();
 assert.match(paragraphList.children[0].textContent, /0 of 101/);
 console.log('Every paragraph is reachable, searchable, filterable, and rendered as safe full text.');
+context.termBox=element();
+context.termGraph={...context.testGraph,paragraphs:[{...context.testGraph.paragraphs[0],term_ids:Array.from({length:101},(_,i)=>String(i))}],
+  term_inventory:{terms:Array.from({length:101},(_,i)=>({id:String(i),text:`term ${i} <script>`,start:i,end:i+1,
+    entity_types:[],kinds:['noun_token'],relationships:[],context:{noun_phrase:{text:'office space'}},
+    capacity:{dependency:'dobj',governor:{text:'lease'}}}))}};
+vm.runInContext('renderParagraphs(termBox,termGraph)',context);
+const termParagraph=context.termBox.children.at(-1).children.find(e=>e.children?.[0]?.textContent.startsWith('[review]'));
+const termInventory=termParagraph.children.find(e=>e.children?.[0]?.textContent.startsWith('Entities and terminology'));
+assert.ok(termInventory);
+termInventory.children.find(e=>e.textContent.startsWith('Show more')).listeners.click();
+assert.equal(termInventory.children.filter(e=>e.textContent.startsWith('term ')).length,101);
+assert.ok(termInventory.children.some(e=>e.textContent.startsWith('term 100 <script>')));
+console.log('All term occurrences remain reachable with their phrase context and unresolved relationships.');
 
 // Both paths must match the same normalized phrase, direction, status and exact
 // article offsets. Python exports relevant dictionary forms to the browser.

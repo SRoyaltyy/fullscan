@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 ARTIFACTS = ('articles.json', 'results.jsonl', 'profiles.json', 'ticker-index.json', 'meta.json')
 INPUT_PATHS = ('src/correlation.py', 'src/evidence_matcher.py', 'src/stock_evidence.py',
     'src/stock_keywords.py','src/stock_keyword_store.py',
-    'src/entity_resolution.py','scripts/annotate_article_entities.py',
+    'src/entity_resolution.py','src/term_inventory.py','scripts/annotate_article_entities.py',
     'src/filing_relationships.py', 'src/deep_profile_store.py', 'requirements-filing-parser.txt',
     'scripts/build_filing_profiles.py', 'data/company_filings_full_release.json',
     'src/filing_evidence.py', 'src/filing_business.py', 'src/filing_parts.py',

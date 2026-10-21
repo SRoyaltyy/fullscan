@@ -94,9 +94,11 @@ def build(objects, out, *, as_of, descriptions=None, nlp=None):
         totals.update({key: report[key] for key in ('companies', 'filings', 'documents', 'characters')})
         totals['facts'] += len(profile['facts'])
         totals['paragraphs'] += len(profile['paragraphs'])
+        totals['term_occurrences'] += profile['coverage'].get('term_occurrences',0)
         totals['paragraphs_requiring_review'] += profile['coverage']['paragraphs_requiring_review']
         print(json.dumps({'issuer': position, 'of': len(companies), 'tickers': tickers,
                           'filings': report['filings'], 'facts': len(profile['facts']),
+                          'term_occurrences':profile['coverage'].get('term_occurrences',0),
                           'paragraphs': len(profile['paragraphs']), 'paragraph_outcomes': profile['coverage']['paragraph_outcomes']}), flush=True)
         # A checkpoint remains useful if the next issuer fails. Never mark an
         # incomplete shard complete, and never publish it as full coverage.

@@ -514,6 +514,8 @@ function renderKeywordRecords(container, records, evidence = {}) {
       flags.textContent = (row.review_reasons || []).join(" · ")+(row.article_span ? ` · Article: ${row.article_span.text} (${row.article_span.start}–${row.article_span.end})` : "")+` · Filing dates ${row.first_filing_date || "—"} to ${row.latest_filing_date || "—"}`;
       if (row.identity) flags.textContent += ` · Source ${row.identity.type}: ${row.identity.id}`;
       if (row.alignment) flags.textContent += ` · Alignment ${row.alignment.status}: ${row.alignment.reasons.join(", ")} · Context support ${row.alignment.context_score}`;
+      if (row.article_capacity) flags.textContent += ` · Article role: ${row.article_capacity.dependency}; ${row.article_capacity.governor.text} → ${row.article_capacity.objects.map(o=>o.text).join(", ")}${row.article_capacity.negated ? " (negated)" : ""}`;
+      if (row.exposure_path) flags.textContent += ` · Indirect path through ${row.keyword}; article-context relevance and financial impact remain unassessed`;
       const qualifiers = document.createElement("p");
       qualifiers.textContent = JSON.stringify(row.qualifiers || {});
       const stock = document.createElement("button");
@@ -678,6 +680,7 @@ function compareKeywordText(index, text) {
     if (seen.has(key)) continue; seen.add(key);
     const alignment=alignKeywordEntity(index,row.identity,text,start,end,index.peers.get(phrase.join(" ")) || []);
     const candidate={...row,alignment,article_span:{start:[...text.slice(0,start)].length,end:[...text.slice(0,end)].length,text:text.slice(start,end)}};
+    if (entityRoles.has(row.relationship) && row.relationship!=="issuer") candidate.exposure_path={stock:row.stock,relationship:row.relationship,entity:row.keyword,entity_id:row.identity.id,order:2,core_industry_inferred:false,context_alignment:"not_assessed",impact:"not_inferred"};
     if (alignment.status!=="resolved") {(alignment.status==="rejected" ? rejected_matches : unresolved_matches).push(candidate);continue;}
     const count = (index.df.get(row.normalized) || new Set()).size;
     if (count >= Math.max(8,Math.ceil(index.catalog_tickers*.05)) && !entityRoles.has(row.relationship) && !named.has(row.stock)) {
@@ -740,6 +743,7 @@ function appendPaged(container, entries, render, pageSize = 100) {
 
 function renderParagraphs(container, graph) {
   const paragraphs = graph.paragraphs || [];
+  const terms = new Map((graph.term_inventory?.terms || []).map(t=>[t.id,t]));
   const title = document.createElement("h3");
   title.textContent = `Every filing paragraph and attachment block (${paragraphs.length.toLocaleString()})`;
   const note = document.createElement("p");
@@ -790,6 +794,18 @@ function renderParagraphs(container, graph) {
       text.className = "article"; text.style = "white-space:pre-wrap";
       text.textContent = p.text;
       detail.append(summary, origin, why, text);
+      if (graph.term_inventory) {
+        const inventory=document.createElement("details"), label=document.createElement("summary");
+        label.textContent=`Entities and terminology (${(p.term_ids || []).length})`;
+        inventory.append(label);
+        appendPaged(inventory,(p.term_ids || []).map(id=>terms.get(id)).filter(Boolean),term=>{
+          const entry=document.createElement("p");
+          const relationships=term.relationships.map(r=>`${r.subject} → ${r.predicate} → ${r.object} [${r.assertion}]`).join("; ") || "Company relationship unresolved";
+          entry.textContent=`${term.text} (${term.start}–${term.end}) · ${term.entity_types.join(", ") || term.kinds.join(", ")} · Phrase: ${term.context.noun_phrase.text} · ${term.capacity.dependency}: ${term.capacity.governor.text} · ${relationships} · Concept sense unresolved`;
+          return entry;
+        });
+        detail.append(inventory);
+      }
       if (p.classification_evidence.length) {
         const labels = document.createElement("details");
         const labelTitle = document.createElement("summary");

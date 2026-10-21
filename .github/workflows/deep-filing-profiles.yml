@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - 'src/filing_relationships.py'
+      - 'src/term_inventory.py'
+      - 'src/test_term_inventory.py'
       - 'src/filing_evidence.py'
       - 'src/test_filing_relationships.py'
       - 'src/deep_profile_store.py'
@@ -15,6 +17,8 @@ on:
     branches: [main]
     paths:
       - 'src/filing_relationships.py'
+      - 'src/term_inventory.py'
+      - 'src/test_term_inventory.py'
       - 'src/filing_evidence.py'
       - 'src/test_filing_relationships.py'
       - 'src/deep_profile_store.py'
@@ -79,7 +83,7 @@ jobs:
           python -m pip install --only-binary=:all: --index-url https://pypi.org/simple
           -r requirements-filing-parser.txt
       - name: Grammar, provenance, uncertainty, direction and offline controls
-        run: python -m unittest src.test_filing_relationships -v
+        run: python -m unittest src.test_filing_relationships src.test_term_inventory -v
       - name: Read all ten archived Backblaze filings for a real source check
         env:
           GH_TOKEN: ${{ github.token }}

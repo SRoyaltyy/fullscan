@@ -10,6 +10,7 @@ import hashlib
 import re
 from collections import Counter
 from pathlib import Path
+from .term_inventory import parse_terms, bind_window, relocate, validate_inventory
 
 VERSION = 'filing-relationships-1.1'
 SPACY_VERSION = '3.8.11'
@@ -19,7 +20,7 @@ MODEL_VERSION = '3.8.0'
 
 def compiler_fingerprint():
     root = Path(__file__).resolve().parents[1]
-    paths = ('src/filing_relationships.py', 'src/filing_evidence.py',
+    paths = ('src/filing_relationships.py', 'src/filing_evidence.py', 'src/term_inventory.py',
              'scripts/build_filing_profiles.py', 'requirements-filing-parser.txt')
     digest = hashlib.sha256()
     for name in paths:
@@ -78,7 +79,7 @@ def windows(text, size=16000):
         start = end
 
 
-def _phrase(token):
+def _phrase_indices(token):
     """A noun phrase, excluding relative clauses and unrelated predicates."""
     allowed = {'compound', 'amod', 'nummod', 'poss', 'det', 'flat', 'name', 'case', 'quantmod'}
     selected = {token.i}
@@ -89,8 +90,27 @@ def _phrase(token):
             if child.dep_ in allowed:
                 selected.add(child.i)
                 todo.append(child)
-    words = [token.doc[i].text for i in sorted(selected)]
-    return re.sub(r'^(?:the|a|an|our|their)\s+', '', ' '.join(words), flags=re.I).strip(' ,;:')
+    return sorted(selected)
+
+
+def _phrase(token):
+    selected=_phrase_indices(token)
+    # Preserve contractions/possessives and punctuation exactly as written.
+    value=''.join(token.doc[i].text_with_ws for i in selected).strip()
+    return re.sub(r'^(?:the|a|an|our|their)\s+', '',value,flags=re.I).strip(' ,;:')
+
+
+def _argument_span(obj,offset):
+    if hasattr(obj,'start_char'):
+        return {'start':offset+obj.start_char,'end':offset+obj.end_char,'text':obj.text}
+    if hasattr(obj,'dep_'):
+        selected=_phrase_indices(obj)
+        raw=obj.doc[selected[0]:selected[-1]+1]
+        value=_phrase(obj)
+        if value not in raw.text:return None
+        start=raw.start_char+raw.text.index(value)
+        return {'start':offset+start,'end':offset+start+len(value),'text':value}
+    return None
 
 
 def _objects(token):
@@ -176,7 +196,9 @@ def extract_doc(doc, *, ticker, name, source, offset=0):
                       'object_type': value_type, 'status': status, 'confidence': confidence,
                       'rule': VERSION+':'+predicate, 'qualifiers': qualifiers or {},
                       'evidence': {'quote': sentence.text, 'start': offset+sentence.start_char,
-                                   'end': offset+sentence.end_char, 'source_id': source['id']}})
+                                   'end': offset+sentence.end_char, 'source_id': source['id'],
+                                   'argument':_argument_span(obj,offset),
+                                   'trigger':{'start':offset+trigger.idx,'end':offset+trigger.idx+len(trigger.text),'text':trigger.text}}})
 
     for sent in doc.sents:
         for token in sent:
@@ -450,12 +472,16 @@ def validate_paragraph_coverage(graph, texts=None):
     prose = sum(s['characters'] for s in sources.values() if s.get('kind') != 'machine_data')
     if not coverage.get('all_prose_dependency_analyzed') or coverage.get('prose_characters_analyzed', 0) != prose:
         raise ValueError('paragraph prose analysis is incomplete')
+    if coverage.get('all_term_candidates_retained') and 'term_inventory' not in graph:
+        raise ValueError('term inventory is missing')
+    validate_inventory(graph)
     return len(ids)
 
 
 def extract_sections(sections, *, ticker, name, nlp):
     from bisect import bisect_right
     sources, paragraphs, facts, stats = [], [], {}, Counter()
+    linguistic_windows,term_rows=[],[]
     parse_cache = {}
     for section in sections:
         raw = str(section.get('text') or '')
@@ -474,6 +500,7 @@ def extract_sections(sections, *, ticker, name, nlp):
             start=start, end=end, machine=section.get('kind') == 'machine_data')
             for start, end in spans]
         paragraphs.extend(source_paragraphs)
+        for p in source_paragraphs:p['term_ids']=[]
         starts = [p['start'] for p in source_paragraphs]
         if section.get('kind') == 'machine_data':
             stats['machine_characters'] += len(raw)
@@ -489,25 +516,30 @@ def extract_sections(sections, *, ticker, name, nlp):
             work.append((text, offset))
         pending = []
         extracted = []
+        analyzed=[]
         for value, offset in work:
             key = (hashlib.sha256(value.encode()).hexdigest(), section.get('kind'))
             if key in parse_cache:
                 stats['reused_dependency_windows'] += 1
                 stats['prose_characters_analyzed'] += len(value)
-                extracted.extend((f, offset) for f in parse_cache[key])
+                records,parsed=parse_cache[key]
+                extracted.extend((f, offset) for f in records)
+                analyzed.append((parsed,offset,value))
             else:
                 pending.append((value, (offset, key)))
         for doc, (offset, key) in nlp.pipe(pending, as_tuples=True, batch_size=8):
             stats['prose_characters_dependency_parsed'] += len(doc.text)
             stats['prose_characters_analyzed'] += len(doc.text)
             records = extract_doc(doc, ticker=ticker, name=name, source=metadata, offset=0)
-            parse_cache[key] = records
+            parsed=parse_terms(doc)
+            parse_cache[key] = (records,parsed)
+            analyzed.append((parsed,offset,doc.text))
             extracted.extend((f, offset) for f in records)
+        source_fact_ids=set()
         for template, offset in extracted:
             fact = dict(template)
             original = fact.pop('evidence')
-            evidence = {**original, 'start': original['start']+offset,
-                        'end': original['end']+offset, 'source_id': metadata['id']}
+            evidence = {**relocate(original,offset), 'source_id': metadata['id']}
             if raw[evidence['start']:evidence['end']] != evidence['quote']:
                 raise ValueError('extracted evidence is not an exact source span')
             # Exact same claims/passages across periods share storage;
@@ -515,6 +547,7 @@ def extract_sections(sections, *, ticker, name, nlp):
             key = hashlib.sha256(repr(sorted(fact.items())).encode()+evidence['quote'].encode()).hexdigest()
             if key not in facts:
                 facts[key] = {**fact, 'id': key, 'evidence': []}
+            source_fact_ids.add(key)
             if evidence not in facts[key]['evidence']:
                 facts[key]['evidence'].append(evidence)
             i = max(0, bisect_right(starts, evidence['start'])-1)
@@ -524,6 +557,14 @@ def extract_sections(sections, *, ticker, name, nlp):
                     paragraph['relationship_ids'].append(key)
                 paragraph['extraction_status'] = 'relationships_extracted'
                 i += 1
+        by_id={p['id']:p for p in source_paragraphs}
+        for parsed,offset,text in sorted(analyzed,key=lambda row:row[1]):
+            window,rows=bind_window(parsed,source_id=metadata['id'],offset=offset,text=text,
+                paragraphs=source_paragraphs,facts=[facts[k] for k in sorted(source_fact_ids)])
+            linguistic_windows.append(window)
+            term_rows.extend(rows)
+            for row in rows:
+                for ident in row['paragraph_ids']:by_id[ident]['term_ids'].append(row['id'])
     ordered = [facts[key] for key in sorted(facts)]
     if stats['prose_characters_analyzed'] != stats['characters_read']-stats['machine_characters']:
         raise ValueError('grammar parser did not analyze all prose')
@@ -539,9 +580,14 @@ def extract_sections(sections, *, ticker, name, nlp):
     graph = {'schema': VERSION, 'ticker': ticker, 'name': name,
             'parser': {'spacy': SPACY_VERSION, 'model': MODEL, 'model_version': MODEL_VERSION},
             'facts': ordered, 'sources': sources, 'paragraphs': paragraphs,
+            'term_inventory':{'schema':'term-inventory-1','terms':term_rows,'windows':linguistic_windows,
+                'candidate_policy':'every spaCy named entity, noun chunk and NOUN/PROPN token; semantic recall is unverified',
+                'sense_resolution_complete':False},
             'coverage': {**dict(stats), 'all_source_sections_read': True,
                          'all_prose_scanned': True, 'all_prose_dependency_analyzed': True,
                          'all_paragraphs_classified': True, 'paragraphs': len(paragraphs),
+                         'all_term_candidates_retained':True,'term_occurrences':len(term_rows),
+                         'terms_with_argument_links':sum(bool(r['relationships']) for r in term_rows),
                          'machine_inventory_blocks': sum(p['kind'] == 'machine_data' for p in paragraphs),
                          'prose_review_blocks': sum(p['kind'] != 'machine_data' for p in paragraphs),
                          'paragraph_labels': dict(Counter(label for p in paragraphs for label in p['labels'])),
