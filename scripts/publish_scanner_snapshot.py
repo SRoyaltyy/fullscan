@@ -25,7 +25,7 @@ INPUT_PATHS = ('src/correlation.py', 'src/evidence_matcher.py', 'src/stock_evide
     'src/names.py', 'src/aliases.py', 'src/linguistics.py', 'src/semantic_lookup.py',
     'src/synonyms.py', 'src/places.py', 'src/spelling.py', 'src/profile_cache.py',
     'src/link_correlation.py', 'src/scanner_backtest.py', 'src/data',
-    'scripts/export_backtest_static.py', 'scripts/publish_scanner_snapshot.py',
+    'scripts/export_backtest_static.py',
     'scripts/materialize_filing_texts.py', 'scripts/bootstrap_semantics.py',
     'scripts/build_semantic_resources.py', '.github/workflows/scanner-backtest-publish.yml',
     'dashboard/scanner-backtest/index.html',
@@ -87,6 +87,10 @@ def stage_page(source, destination, *, snapshot_commit, outside_bytes, site_limi
 
 def git(*args, env=None):
     return subprocess.check_output(['git', *args], text=True, env=env, timeout=90).strip()
+
+
+def git_input(args, payload, *, env=None):
+    return subprocess.check_output(['git',*args],input=payload,text=True,env=env,timeout=90).strip()
 
 
 def github_api(method, endpoint, payload=None):
@@ -240,19 +244,29 @@ def publish(directory, source_sha):
                    'GIT_COMMITTER_NAME': 'Scanner snapshot publisher',
                    'GIT_COMMITTER_EMAIL': 'bot@users.noreply.github.com'}
             git('read-tree', upstream, env=env)
-            current_assets = set(artifact_names(directory))
+            names = artifact_names(directory)
+            current_assets = set(names)
+            updates = []
             old = git('ls-tree','-r','--name-only',upstream,'--',
                 'dashboard/scanner-backtest/scoring-profiles','dashboard/scanner-backtest/filing-profiles',
                 'dashboard/scanner-backtest/keyword-index')
             for path in old.splitlines():
                 relative = path.removeprefix('dashboard/scanner-backtest/')
                 if relative not in current_assets:
-                    git('update-index','--force-remove',path,env=env)
-            for name in artifact_names(directory):
-                blob = git('hash-object', '-w', str(directory/name))
-                git('update-index', '--add', '--cacheinfo', '100644', blob,
-                    'dashboard/scanner-backtest/'+name, env=env)
-            tree = git('write-tree', env=env)
+                    updates.append('0 '+'0'*40+'\t'+path+'\0')
+            paths = [str(directory/name) for name in names]
+            if any('\n' in path or '\r' in path or path.startswith('"') for path in paths):
+                raise ValueError('unsupported asset filename')
+            blobs = git_input(('hash-object','-w','--stdin-paths'),'\n'.join(paths)+'\n').splitlines()
+            if len(blobs) != len(names):
+                raise ValueError('asset hashing returned an incomplete batch')
+            for name,blob in zip(names,blobs):
+                updates.append('100644 '+blob+'\tdashboard/scanner-backtest/'+name+'\0')
+            git_input(('update-index','-z','--index-info'),''.join(updates),env=env)
+            # Every new asset was hashed and written above. Existing untouched
+            # blobs belong to the verified upstream tree; sparse clones need
+            # not download them again just to reproduce their unchanged refs.
+            tree = git('write-tree','--missing-ok',env=env)
             if tree == git('rev-parse', upstream+'^{tree}'):
                 return upstream
             commit = git('commit-tree', tree, '-p', upstream, '-m',
