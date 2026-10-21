@@ -289,6 +289,100 @@ def test_preopen_baseline_source_heat_date_is_prior_session():
         assert base.status == "OK", base.detail
 
 
+def _oos_report() -> Report:
+    return Report(job="postclose", date="2026-09-28",
+                  source_date="2026-09-28", target_date="2026-09-29",
+                  book_date="2026-09-28")
+
+
+def _write_oos(root: Path, state_days: list[str], ledger_days: list[str]) -> None:
+    recipe = root / "data" / "factor_mine" / "oos0914" / "state" / "oos0914_break10_h1_sx"
+    ledgers = root / "data" / "factor_mine" / "oos0914" / "ledgers"
+    recipe.mkdir(parents=True, exist_ok=True)
+    ledgers.mkdir(parents=True, exist_ok=True)
+    for day in state_days:
+        (recipe / f"{day}.json").write_text("{}\n", encoding="utf-8")
+    for day in ledger_days:
+        (ledgers / f"{day}.json").write_text("{}\n", encoding="utf-8")
+        # A sidecar must not count as a ledger day.
+        (ledgers / f"{day}.json.sha256").write_text("abc\n", encoding="utf-8")
+
+
+def test_oos0914_state_ahead_of_ledger_warns():
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        _write_oos(root, ["2026-09-25", "2026-09-28"], ["2026-09-14", "2026-09-25"])
+        # A later sha256 with no json must not close the gap.
+        ledgers = root / "data" / "factor_mine" / "oos0914" / "ledgers"
+        (ledgers / "2026-09-28.json.sha256").write_text("dead\n", encoding="utf-8")
+        with _with_root(root):
+            report = _oos_report()
+            ph.check_oos0914(report)
+        check = report.checks[-1]
+        assert check.step == "oos0914.append"
+        assert check.status == "WARN"
+        assert check.required is False
+        assert "2026-09-28" in check.name
+        assert "OOS0914_APPEND_FAILED 2026-09-28" in check.detail
+        assert "ledger 2026-09-25" in check.detail
+        assert report.ok
+        assert report.n_fail == 0
+        assert report.n_warn == 1
+        assert not _should_heal(check)
+        assert _workflow_for_step(check.step) is None
+        text = ph.render(report)
+        assert "**WARNING**" in text
+        assert "OOS0914_APPEND_FAILED 2026-09-28" in text
+        assert "| WARN | OOS0914 append failed 2026-09-28 |" in text
+
+
+def test_oos0914_aligned_dates_stay_ok():
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        _write_oos(root, ["2026-09-25", "2026-09-28"], ["2026-09-25", "2026-09-28"])
+        with _with_root(root):
+            report = _oos_report()
+            ph.check_oos0914(report)
+        check = report.checks[-1]
+        assert check.status == "OK"
+        assert check.required is False
+        assert "2026-09-28" in check.detail
+        assert "OOS0914_APPEND_FAILED" not in check.detail
+        assert report.n_warn == 0
+        assert "**WARNING**" not in ph.render(report)
+
+
+def test_oos0914_missing_ledger_names_the_state_date():
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        _write_oos(root, ["2026-09-28"], [])
+        with _with_root(root):
+            report = _oos_report()
+            ph.check_oos0914(report)
+        check = report.checks[-1]
+        assert check.status == "WARN"
+        assert "2026-09-28" in check.detail
+        assert "ledger none" in check.detail
+
+
+def test_current_tree_warns_on_2026_09_28_until_ledger_lands():
+    """2026-09-28 state is ahead of the ledger until PR #401 merges that day."""
+    state_root = ph.ROOT / "data" / "factor_mine" / "oos0914" / "state"
+    ledger_day = ph.ROOT / "data" / "factor_mine" / "oos0914" / "ledgers" / "2026-09-28.json"
+    have_state = state_root.is_dir() and any(state_root.glob("*/2026-09-28.json"))
+    report = _oos_report()
+    ph.check_oos0914(report)
+    check = next(c for c in report.checks if c.step == "oos0914.append")
+    if have_state and not ledger_day.is_file():
+        assert check.status == "WARN"
+        assert check.required is False
+        assert "2026-09-28" in check.detail
+        assert "OOS0914_APPEND_FAILED 2026-09-28" in ph.render(report)
+        assert report.ok
+    else:
+        assert check.status == "OK"
+
+
 def test_reauth_payload_fail_is_needs_reauth():
     r = Report(job="postclose", date="2026-08-28",
                source_date="2026-08-27", target_date="2026-08-28")
