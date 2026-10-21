@@ -1,36 +1,11 @@
 [
   {
-    "title": "FCC Removes Convicted Fraudster from USF Programs",
-    "url": "https://www.fcc.gov/edoc/426063",
-    "native_id": "426063",
+    "title": "Petition of Carolina West Wireless, Inc. for Relinquishment of its Eligible Telecommunictions Carrier Designation",
+    "url": "https://www.fcc.gov/edoc/426068",
+    "native_id": "426068",
     "published_at": null,
     "published_raw": "",
-    "summary": "Long Island-based consultant took kickbacks as part of scheme to defraud E-Rate Program and a COVID-era connectivity program.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — News Releases",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-685c5e7dd2",
-    "n": 5807,
-    "first_seen": "2026-10-21T06:03:26.053264+00:00",
-    "last_seen": "2026-10-21T06:03:26.053264+00:00",
-    "source_ids": [
-      "us-fcc-364d1b4932",
-      "us-fcc-685c5e7dd2"
-    ]
-  },
-  {
-    "title": "Notice of Suspension Issued, Richard Bernstein",
-    "url": "https://www.fcc.gov/edoc/425972",
-    "native_id": "425972",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "FCC Enforcement Bureau suspends Richard Bernstein from participating in activities related to E-Rate and other Universal Service Fund programs, and begins debarment proceedings.",
+    "summary": "TAPD approves Carolina West Wireless, Inc. request to relinquish High-Cost and Lifeline ETC Designations in North Carolina.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -41,90 +16,89 @@
       "family": "telecom_rules_and_licences"
     },
     "primary_source_id": "us-fcc-eeb7d739be",
-    "n": 5808,
-    "first_seen": "2026-10-21T06:03:26.053264+00:00",
-    "last_seen": "2026-10-21T06:03:26.053264+00:00",
+    "n": 5874,
+    "first_seen": "2026-10-21T18:05:07.789957+00:00",
+    "last_seen": "2026-10-21T18:05:07.789957+00:00",
     "source_ids": [
-      "us-fcc-364d1b4932",
       "us-fcc-eeb7d739be"
     ]
   },
   {
-    "title": "Space Bureau Releases Updated List of Incumbent Earth Stations in the 4.0-4.2 GHz Band in the Contiguous United States",
-    "url": "https://www.fcc.gov/edoc/426062",
-    "native_id": "426062",
+    "title": "Application of Starlink Spectrum Holdings, LLC, Tristar License Group, LLC, and TLG Unpaired Holdings, LLC For Consent to Transfer Control of Licenses",
+    "url": "https://www.fcc.gov/edoc/426095",
+    "native_id": "426095",
     "published_at": null,
     "published_raw": "",
-    "summary": ".",
+    "summary": "Order granting the SpaceX-Tristar transfer of control application.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
+      "issuer": "Federal Communications Commission — Orders",
       "jurisdiction": "US",
       "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 5809,
-    "first_seen": "2026-10-21T06:03:26.053264+00:00",
-    "last_seen": "2026-10-21T06:03:26.053264+00:00",
+    "primary_source_id": "us-fcc-eeb7d739be",
+    "n": 5875,
+    "first_seen": "2026-10-21T18:05:07.789957+00:00",
+    "last_seen": "2026-10-21T18:05:07.789957+00:00",
     "source_ids": [
-      "us-fcc-e95ecda3bb"
+      "us-fcc-eeb7d739be"
     ]
   },
   {
-    "title": "PSHSB Announces Region 20 (District of Columbia, Maryland, and Nothern Counties of Virginia) RPCs to Hold 700 MHZ and 800 MHZ Meetings",
-    "url": "https://www.fcc.gov/edoc/426066",
-    "native_id": "426066",
+    "title": "Reshaping regulation, deliberately",
+    "url": "https://www.fca.org.uk/news/speeches/reshaping-regulation-deliberately",
+    "native_id": "176781",
     "published_at": null,
-    "published_raw": "",
-    "summary": "Announces Region 20 (DC, MD, Northern VA) RPC Meetings for 700 MHZ and 800 MHZ",
+    "published_raw": "Wednesday, October 21, 2026 - 13:07",
+    "summary": "Speech by Sarah Pritchard, deputy chief executive, at Investment Association Annual Dinner 2026. Reform: more than writing rulesIn this sector, we’re just past peak rule making. The scale of change has been significant – and deliberate.But we’re not done yet.We want to see growth that benefits consumers, supports competitiveness and spurs innovation.Building a stronger retail investment culture takes more than piecemeal rule writing.It takes a strategic approach. One that starts with giving consumers the support they need to make informed financial decisions.And understand both the risks of acting – and the costs of not acting.In that vein, we have reformed our advice and guidance rules.We’ve introduced targeted support.And we’ve moved away from prescriptive disclosures, and placed greater emphasis on outcomes through the Consumer Duty.We want to further support innovation and give firms the confidence to offer more forms of simplified advice at lower cost to consumers.So we’ll soon publish updated rules, alongside case studies we’ve developed with the Financial Ombudsman Service.We’re already seeing real progress.Just 6 months in, more than a dozen firms are already authorised to ",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
+      "issuer": "Financial Conduct Authority",
+      "jurisdiction": "UK",
+      "family": "financial_enforcement"
     },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 5810,
-    "first_seen": "2026-10-21T06:03:26.053264+00:00",
-    "last_seen": "2026-10-21T06:03:26.053264+00:00",
+    "primary_source_id": "uk-fca-7b9977ec8e",
+    "n": 5890,
+    "first_seen": "2026-10-21T18:05:07.789957+00:00",
+    "last_seen": "2026-10-21T18:05:07.789957+00:00",
     "source_ids": [
-      "us-fcc-e95ecda3bb"
+      "uk-fca-7b9977ec8e"
     ]
   },
   {
-    "title": "State Minister TAKAGI Holds Meeting with Mr. José Luis Daza, Deputy Minister of the Economy of the Argentine Republic",
-    "url": "https://www.meti.go.jp/english/press/2026/10/20261019001.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261019001.html",
+    "title": "Former chief executive banned after misconduct led to £4m losses in high-risk investments",
+    "url": "https://www.fca.org.uk/news/press-releases/former-chief-executive-banned-after-misconduct-led-4m-losses-high-risk-investments",
+    "native_id": "174206",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "Wednesday, October 21, 2026 - 10:34",
+    "summary": "The FCA has banned Jeffrey Dawkins, the former chief executive of Vector Wealth Ltd, after he dishonestly acted as a front for a disqualified director using the company to sell high-risk bonds. Mr Dawkins has also been fined nearly £270,000.In 2019, Mr Dawkins sold Vector Wealth to a disqualified director who described himself as CEO and wanted to use Vector Wealth’s FCA-authorised status to sell mini-bonds.Mr Dawkins told the FCA he was still in charge, but the new “CEO” was really running the firm. This deception allowed the disqualified director to promote mini-bonds using the legitimacy of the firm to make them appear safer than they were.The disqualified director and Kadir Kanizi, a former senior manager at Vector Wealth, promoted the bonds but investors were not properly warned about the risks.Investors put in £105,000 on average, with one investing £1.1 million. Before seeing the marketing material, they had to confirm they were high net worth or sophisticated investors. Investors are expected to lose about £4 million.The FCA has banned Mr Kanizi from senior management roles. He was fined for failing to make sure consumers were properly warned about the risks.Therese Chamber",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
+      "issuer": "Financial Conduct Authority",
+      "jurisdiction": "UK",
+      "family": "financial_enforcement"
     },
-    "primary_source_id": "jp-meti-index",
-    "n": 5818,
-    "first_seen": "2026-10-21T06:03:26.053264+00:00",
-    "last_seen": "2026-10-21T06:03:26.053264+00:00",
+    "primary_source_id": "uk-fca-7b9977ec8e",
+    "n": 5891,
+    "first_seen": "2026-10-21T18:05:07.789957+00:00",
+    "last_seen": "2026-10-21T18:05:07.789957+00:00",
     "source_ids": [
-      "jp-meti-index"
+      "uk-fca-7b9977ec8e"
     ]
   },
   {
     "title": "Miscellaneous Order",
-    "url": "https://www.supremecourt.gov/orders/courtorders/102026zr_2d9g.pdf",
-    "native_id": "https://www.supremecourt.gov/orders/courtorders/102026zr_2d9g.pdf",
+    "url": "https://www.supremecourt.gov/orders/courtorders/102126zr_5i36.pdf",
+    "native_id": "https://www.supremecourt.gov/orders/courtorders/102126zr_5i36.pdf",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -138,9 +112,9 @@
       "family": "judicial_decisions"
     },
     "primary_source_id": "us-supreme-court-orders-index",
-    "n": 5819,
-    "first_seen": "2026-10-21T06:03:26.053264+00:00",
-    "last_seen": "2026-10-21T06:03:26.053264+00:00",
+    "n": 5915,
+    "first_seen": "2026-10-21T18:05:07.789957+00:00",
+    "last_seen": "2026-10-21T18:05:07.789957+00:00",
     "source_ids": [
       "us-supreme-court-orders-index"
     ]
