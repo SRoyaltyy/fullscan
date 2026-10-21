@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       probe:
-        description: "1 = endpoint discovery only, no commit"
+        description: "1 = endpoint discovery, 2 = small extras dry run (artifact only); no commit"
         default: "0"
 permissions:
   contents: write
@@ -17,7 +17,7 @@ concurrency:
 jobs:
   snap:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 130
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -36,6 +36,20 @@ jobs:
         run: |
           python scripts/snapshots/finviz_elite_probe.py
           echo "SKIP=1" >> $GITHUB_ENV
+      - name: Extras dry run (artifact only)
+        if: inputs.probe == '2'
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_GAP_SEC: "1.2"
+        run: |
+          python scripts/snapshots/finviz_elite_extra.py --top 12 --small 12 --budget-min 10
+          echo "SKIP=1" >> $GITHUB_ENV
+      - uses: actions/upload-artifact@v4
+        if: inputs.probe == '2'
+        with:
+          name: elite-extras-dry
+          path: data/snapshots/finviz_elite
       - name: Capture
         if: env.SKIP != '1'
         env:
@@ -44,6 +58,16 @@ jobs:
           FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
           FULLSCAN_DB_OPTIONAL: "1"
         run: python scripts/snapshots/daily_snapshots.py --finviz --yahoo --top 300 --expiries 4
+      - name: Capture Finviz Elite extras (fail-soft)
+        if: env.SKIP != '1'
+        continue-on-error: true
+        timeout-minutes: 85
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_GAP_SEC: "1.2"
+          FULLSCAN_DB_OPTIONAL: "1"
+        run: python scripts/snapshots/finviz_elite_extra.py --top 300 --small 150 --max-dte 60 --budget-min 75
       - name: Commit (data/snapshots only, add-only)
         if: env.SKIP != '1'
         run: |
@@ -51,7 +75,7 @@ jobs:
           git add data/snapshots
           if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
           if git diff --cached --name-status | grep -v '^A'; then echo "non-add change refused"; exit 1; fi
-          git commit -m "snapshots: $(date -u +%F) finviz+yahoo options [add-only]"
+          git commit -m "snapshots: $(date -u +%F) finviz+yahoo options+elite extras [add-only]"
           for i in 1 2 3 4 5; do
             git fetch -q origin main && git rebase -q origin/main || { git rebase --abort; exit 1; }
             git push origin HEAD:main && exit 0; sleep $((i*5))
