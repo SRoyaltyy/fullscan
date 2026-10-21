@@ -83,6 +83,39 @@ class KeywordTests(unittest.TestCase):
         hits=index.compare('Backblaze discusses Regulation (EU) 2024/1689.')
         self.assertFalse(hits['matches'] or hits['unresolved_matches'])
 
+    def test_explicit_alias_connects_old_short_claim_and_new_complete_name(self):
+        g=self.disclosure_graph()
+        old=g['claim']('old-gdpr','subject_to','GDPR');old['object_type']='law';g['facts']=[old]
+        bundle=compile_keywords(g,as_of='2026-04-01')
+        result=KeywordIndex({'BLZE':profile(bundle)}).compare('Backblaze discusses GDPR compliance.')
+        self.assertFalse(result['unresolved_matches'])
+        self.assertEqual({r['alignment']['stock_entity_id'] for r in result['matches']},{'law:BLZE:regulation eu 2016/679'})
+        self.assertTrue(any(r['relationship']=='disclosed_law' for r in result['matches']))
+
+    def test_later_alias_definition_is_not_backdated_to_old_claim(self):
+        g=self.disclosure_graph();g['paragraphs'][0]['source_id']='2026-03-01'
+        from .specific_filing_records import details
+        g['specific_records']=details(g)
+        old=g['claim']('old-gdpr','subject_to','GDPR');old['object_type']='law';g['facts']=[old]
+        bundle=compile_keywords(g,as_of='2026-04-01')
+        row=next(r for r in bundle['records'] if r['keyword']=='GDPR')
+        self.assertNotIn('source_declared_identity',row)
+        result=KeywordIndex({'BLZE':profile(bundle)}).compare('Backblaze discusses General Data Protection Regulation.',article_date='2026-02-01')
+        self.assertFalse(result['matches'] or result['unresolved_matches'])
+
+    def test_one_acronym_for_two_named_laws_remains_ambiguous(self):
+        import hashlib
+        from .specific_filing_records import details
+        g=self.disclosure_graph();text='We are subject to the Alpha Privacy Regulation (DPA) and Beta Privacy Act (DPA).'
+        g['paragraphs'][0].update(text=text,end=len(text),sha256=hashlib.sha256(text.encode()).hexdigest())
+        g['specific_records']=details(g)
+        old=g['claim']('old-dpa','subject_to','DPA');old['object_type']='law';g['facts']=[old]
+        bundle=compile_keywords(g,as_of='2026-04-01')
+        self.assertNotIn('source_declared_identity',next(r for r in bundle['records'] if r['keyword']=='DPA'))
+        result=KeywordIndex({'BLZE':profile(bundle)}).compare('Backblaze discusses DPA compliance.')
+        self.assertFalse(result['matches'])
+        self.assertTrue(result['unresolved_matches'])
+
     def test_generic_background_is_retained_for_review_without_an_identity_upgrade(self):
         g=graph();g['facts']=[g['claim']('generic','subject_to','litigation matters')]
         row=compile_keywords(g,as_of='2026-04-01')['records'][0]

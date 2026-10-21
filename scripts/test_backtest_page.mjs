@@ -154,7 +154,9 @@ from src.test_entity_resolution import fixture,CASES
 index=KeywordIndex({'BLZE':profile(compile_keywords(graph(),as_of='2026-04-01'))})
 texts=['Western Digital faces hard-drive disruption','Stripe disruption; Backblaze shares fall','Western. Digital shares rise','unrelated article','HARD DRIVES and Western Digital','📉 Western Digital hard drives']
 collision=KeywordIndex(fixture())
-laws=KeywordIndex({'BLZE':profile(compile_keywords(KeywordTests().disclosure_graph(),as_of='2026-04-01'))})
+legal_graph=KeywordTests().disclosure_graph()
+legacy=legal_graph['claim']('old-gdpr','subject_to','GDPR');legacy['object_type']='law';legal_graph['facts']=[legacy]
+laws=KeywordIndex({'BLZE':profile(compile_keywords(legal_graph,as_of='2026-04-01'))})
 law_texts=['Backblaze discusses GDPR.','Backblaze discusses Regulation (EU) 2016/679.','Backblaze discusses Regulation (EU) 2024/1689.','Backblaze discusses the Digital Markets Act.']
 print(json.dumps({'payload':index.browser_payload(),'cases':[{'text':t,'result':index.compare(t)} for t in texts],
  'collisions':{'payload':collision.browser_payload(),'cases':[{'text':t,'result':collision.compare(t)} for t,_,_ in CASES]},
@@ -190,7 +192,7 @@ for (const test of fixture.laws.cases) {
   context.parityText=test.text;
   const actual=vm.runInContext('compareKeywordText(keywordSearchIndex,parityText)',context);
   assert.equal(JSON.stringify(identitySignature(actual)),JSON.stringify(identitySignature(test.result)),test.text);
-  assert.ok(actual.matches.every(r=>!r.usable_for_scoring));
+  assert.ok(actual.matches.filter(r=>r.relationship.startsWith('disclosed_')).every(r=>!r.usable_for_scoring));
 }
 console.log('Disclosed law aliases, numeric instrument identifiers, explicit exclusions, and review-only decisions agree in Python and browser.');
 context.keywordBox = element();
