@@ -67,7 +67,7 @@ jobs:
           FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
           FINVIZ_GAP_SEC: "1.2"
           FULLSCAN_DB_OPTIONAL: "1"
-        run: python scripts/snapshots/finviz_elite_extra.py --top 300 --small 150 --max-dte 60 --budget-min 75
+        run: python scripts/snapshots/finviz_elite_extra.py --top 300 --small 150 --max-dte 30 --budget-min 75
       - name: Commit (data/snapshots only, add-only)
         if: env.SKIP != '1'
         run: |

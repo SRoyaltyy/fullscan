@@ -95,7 +95,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--top", type=int, default=300)
     ap.add_argument("--small", type=int, default=150)
-    ap.add_argument("--max-dte", type=int, default=60)
+    ap.add_argument("--max-dte", type=int, default=30)
     ap.add_argument("--budget-min", type=float, default=75)
     a = ap.parse_args()
     t0 = time.time(); man = {"date": TODAY, "started": now_utc(), "counts": {}, "fails": {}}
@@ -183,8 +183,9 @@ def main() -> None:
                         r = fs.get(sess, [f"/quote.ashx?t={t}&ty=di"], timeout=60)
                         h = r.text if r is not None else ""
                         i = h.find('id="dilution'); i = i if i >= 0 else h.find("Dilution")
-                        rec = {"captured_at_utc": now_utc(), "ticker": t, "json": json_scripts(h),
-                               "tables": [tb for tb in all_tables(h) if len(tb) < 400][:20]}
+                        js = json_scripts(h)
+                        rec = {"captured_at_utc": now_utc(), "ticker": t, "json": js,
+                               "tables": [] if js else [tb for tb in all_tables(h) if len(tb) < 400][:20]}
                         if not rec["json"] and not rec["tables"]: fails.append(t)
                         f.write(json.dumps(rec) + "\n"); n += 1
                     except Exception: fails.append(t)
