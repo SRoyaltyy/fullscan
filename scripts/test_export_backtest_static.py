@@ -9,6 +9,42 @@ from scripts import export_backtest_static as export
 
 
 class ExportTests(unittest.TestCase):
+    def test_compact_export_retains_all_keywords_and_evidence_without_raw_graph_copy(self):
+        import gzip,hashlib
+        from types import SimpleNamespace
+        from src.test_deep_profile_store import DeepProfileControls
+        from src.stock_evidence import Profile,Catalog,index_profiles
+        from src.stock_keyword_store import attach_keyword_profiles
+        from scripts.publish_scanner_snapshot import validate
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);source=root/'source';source.mkdir();out=root/'out';out.mkdir()
+            DeepProfileControls().fixture(source)
+            index=json.loads((source/'index.json').read_text());index['profiles']['TEST']['facts']=1
+            (source/'index.json').write_text(json.dumps(index))
+            board,coverage=attach_keyword_profiles(index_profiles({'TEST':Profile('TEST','Example','','')}),source,
+                as_of='2026-10-20',catalog=Catalog([]))
+            original=dict(board.profiles['TEST'].deep_profile)
+            profiles,keyword_index=export.export_profiles(SimpleNamespace(evidence_board=board),out,
+                filing_profiles=source,profile_assets='keywords',archive_url='https://github.com/SRoyaltyy/fullscan/actions/runs/1')
+            payload=json.loads(gzip.decompress((out/profiles['TEST']['profile_path']).read_bytes()))
+            self.assertEqual(payload['keyword_coverage']['retained_relationships'],1)
+            self.assertEqual(len(payload['keyword_evidence']),1)
+            self.assertFalse((out/'filing-profiles/issuers').exists())
+            self.assertNotIn('path',payload['deep_profile'])
+            self.assertEqual(board.profiles['TEST'].deep_profile,original)
+            snapshot={'snapshot_id':'snapshot','source_revision':'source','input_mode':'headline',
+                'filing_coverage':coverage,'profile_publication':{'mode':'keywords'}}
+            for name,payload in {'profiles.json':profiles,'articles.json':[{'id':'one'}],
+                    'ticker-index.json':{},'meta.json':{'articles':1,'snapshot':snapshot,'keyword_index':keyword_index},
+                    'results.jsonl':{'id':'one','snapshot_id':'snapshot'}}.items():
+                (out/name).write_text(json.dumps(payload))
+            validate(out,'source')
+            receipt=json.loads((out/'filing-profiles/publication.json').read_text())
+            receipt['profiles']['TEST']['retained_relationships']=0
+            (out/'filing-profiles/publication.json').write_text(json.dumps(receipt))
+            with self.assertRaisesRegex(ValueError,'receipt'):
+                validate(out,'source')
+
     def test_isolated_export_multiprocessing_and_resume_end_to_end(self):
         from src.link_correlation import ROOT
         with tempfile.TemporaryDirectory() as directory:
@@ -95,3 +131,4 @@ class ExportTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

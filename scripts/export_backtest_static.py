@@ -12,6 +12,7 @@ import os
 import time
 from pathlib import Path
 from src.correlation import link_articles
+from src.stock_keywords import SCHEMA, KeywordIndex, compare_article
 from src.link_correlation import ROOT
 from src.scanner_backtest import (ENGINE, load_test_articles, open_program, present,
                                   profile_view, select_input, snapshot_metadata)
@@ -38,6 +39,7 @@ def _score_shard(shard):
     results = []
     for article, item in zip(selected, linked):
         row = present(item)
+        row['keyword_comparison'] = compare_article(_BOARD,article['text'],article_date=str(article.get('published_at') or '')[:10])
         row.update(id=article['id'], input_mode=_INPUT_MODE,
                    input_sha256=hashlib.sha256(article['text'].encode()).hexdigest(),
                    snapshot_id=_SNAPSHOT['snapshot_id'])
@@ -85,6 +87,62 @@ def validate_resume(out_dir, snapshot):
     return read_results(out_dir / 'results.jsonl', snapshot['snapshot_id'])
 
 
+def export_profiles(board, out_dir, *, filing_profiles=None, profile_assets='full', archive_url='', profile_base_url=''):
+    """Publish every keyword/witness, without copying the multi-GB raw archive.
+
+    Compact mode retains an index-bound receipt; whole paragraphs remain in the
+    original archive (and optionally immutable public object storage), not git.
+    """
+    profiles = {}
+    (out_dir/'scoring-profiles').mkdir(exist_ok=True)
+    for ticker, profile in board.evidence_board.profiles.items():
+        full = profile_view(profile)
+        if full.get('deep_profile') and profile_assets == 'keywords':
+            deep = dict(full['deep_profile'])
+            full['deep_profile'] = deep
+            deep['archive_url'] = archive_url
+            deep['paragraphs_in_page'] = False
+            if profile_base_url:
+                deep['external_url'] = profile_base_url.rstrip('/')+'/'+deep['path'].removeprefix('filing-profiles/')
+            deep.pop('path',None)
+        raw = gzip.compress(json.dumps(full, ensure_ascii=False, sort_keys=True).encode(), mtime=0)
+        path = 'scoring-profiles/'+hashlib.sha256(ticker.encode()).hexdigest()+'.json.gz'
+        (out_dir/path).write_bytes(raw)
+        profiles[ticker] = {key: full[key] for key in ('name','industry','sector','source','enriched','used_for_scoring')}
+        profiles[ticker].update(profile_path=path,profile_sha256=hashlib.sha256(raw).hexdigest(),
+            fact_counts={kind:len(entries) for kind,entries in full['facts'].items()})
+    if filing_profiles:
+        import shutil
+        destination = out_dir/'filing-profiles'
+        if profile_assets == 'full':
+            shutil.copytree(filing_profiles,destination,dirs_exist_ok=True)
+        else:
+            destination.mkdir(exist_ok=True)
+            shutil.copyfile(filing_profiles/'index.json',destination/'index.json')
+            receipt = {'schema':SCHEMA, 'mode':'keywords', 'archive_url':archive_url,
+                'profile_index_sha256':hashlib.sha256((destination/'index.json').read_bytes()).hexdigest(),
+                'profiles':{ticker:getattr(p,'keyword_coverage',{}) for ticker,p in board.evidence_board.profiles.items()
+                            if getattr(p,'deep_profile',None)}}
+            (destination/'publication.json').write_text(json.dumps(receipt,sort_keys=True))
+    payload = KeywordIndex(board.evidence_board.profiles).browser_payload()
+    phrases = payload.pop('phrases')
+    buckets = {}
+    for entry in phrases:
+        bucket = format(ord(entry['phrase'][0][0]) % 16,'x')
+        buckets.setdefault(bucket,[]).append(entry)
+    (out_dir/'keyword-index').mkdir(exist_ok=True)
+    payload['buckets'] = {}
+    for bucket, entries in sorted(buckets.items()):
+        packed = gzip.compress(json.dumps(entries,ensure_ascii=False,separators=(',',':')).encode(),mtime=0)
+        path = 'keyword-index/'+bucket+'.json.gz'
+        (out_dir/path).write_bytes(packed)
+        payload['buckets'][bucket] = {'path':path,'sha256':hashlib.sha256(packed).hexdigest()}
+    raw = gzip.compress(json.dumps(payload,ensure_ascii=False,separators=(',',':')).encode(),mtime=0)
+    (out_dir/'keyword-index.json.gz').write_bytes(raw)
+    return profiles, {'path':'keyword-index.json.gz','sha256':hashlib.sha256(raw).hexdigest(),
+                      'schema':SCHEMA,'phrases':len(phrases)}
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     p.add_argument('--news', type=Path, default=ROOT / 'data/news_intake/2026-10-17/documents.json')
@@ -93,6 +151,10 @@ def main(argv=None):
     p.add_argument('--universe', type=Path)
     p.add_argument('--identity-filings', type=Path)
     p.add_argument('--filing-profiles', type=Path)
+    p.add_argument('--profile-assets',choices=('full','keywords'),default='full')
+    p.add_argument('--dataset-scope',choices=('archive_set','development_sample'),default='archive_set')
+    p.add_argument('--profile-archive-url',default='')
+    p.add_argument('--profile-base-url',default='')
     p.add_argument('--as-of')
     p.add_argument('--input-mode', choices=('headline', 'full-text'), default='headline')
     p.add_argument('--limit', type=int, default=0)
@@ -109,6 +171,10 @@ def main(argv=None):
     board, names = open_program(a.descriptions, a.sectors, a.universe,
                                 identity_filings=a.identity_filings, as_of=a.as_of, filing_profiles=a.filing_profiles)
     snapshot = snapshot_metadata(board, a.input_mode)
+    snapshot['profile_publication'] = {'mode':a.profile_assets,'dataset_scope':a.dataset_scope,
+                                       'whole_archive_complete':a.dataset_scope != 'development_sample',
+                                       'archive_url':a.profile_archive_url,
+                                       'base_url':a.profile_base_url}
     snapshot['engine_snapshot_id'] = snapshot.pop('snapshot_id')
     snapshot['source_revision'] = os.environ.get('SCANNER_SOURCE_SHA') or os.environ.get('GITHUB_SHA') or ''
     snapshot['news_sha256'] = hashlib.sha256(a.news.read_bytes()).hexdigest()
@@ -158,20 +224,8 @@ def main(argv=None):
     display = export_articles([select_input(by_id[str(r['id'])], a.input_mode) for r in rows], a.text_limit)
     # Lazy per-ticker assets keep page loading practical without deleting any
     # facts, quotations or source records from the exported scoring profiles.
-    profiles = {}
-    asset_root = a.out_dir/'scoring-profiles'
-    asset_root.mkdir(exist_ok=True)
-    for ticker, profile in board.evidence_board.profiles.items():
-        full = profile_view(profile)
-        raw = gzip.compress(json.dumps(full, ensure_ascii=False, sort_keys=True).encode(), mtime=0)
-        path = 'scoring-profiles/'+hashlib.sha256(ticker.encode()).hexdigest()+'.json.gz'
-        (a.out_dir/path).write_bytes(raw)
-        profiles[ticker] = {key: full[key] for key in ('name','industry','sector','source','enriched','used_for_scoring')}
-        profiles[ticker].update(profile_path=path, profile_sha256=hashlib.sha256(raw).hexdigest(),
-                               fact_counts={kind: len(entries) for kind, entries in full['facts'].items()})
-    if a.filing_profiles:
-        import shutil
-        shutil.copytree(a.filing_profiles, a.out_dir/'filing-profiles', dirs_exist_ok=True)
+    profiles, keyword_index = export_profiles(board,a.out_dir,filing_profiles=a.filing_profiles,
+        profile_assets=a.profile_assets,archive_url=a.profile_archive_url,profile_base_url=a.profile_base_url)
     index = {}
     for row in rows:
         for stock in row['passes']:
@@ -180,6 +234,7 @@ def main(argv=None):
     for name, payload in [('articles.json', display), ('profiles.json', profiles), ('ticker-index.json', index)]:
         (a.out_dir / name).write_text(json.dumps(payload, ensure_ascii=False), encoding='utf-8')
     meta.update(articles=len(rows), articles_with_passes=sum(bool(r['pass_count']) for r in rows),
+                keyword_index=keyword_index,
                 generated_at=time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()))
     (a.out_dir / 'meta.json').write_text(json.dumps(meta, indent=2) + '\n', encoding='utf-8')
     return 0
@@ -187,5 +242,6 @@ def main(argv=None):
 
 if __name__ == '__main__':
     raise SystemExit(main())
+
 
 

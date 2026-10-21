@@ -18,6 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 ARTIFACTS = ('articles.json', 'results.jsonl', 'profiles.json', 'ticker-index.json', 'meta.json')
 INPUT_PATHS = ('src/correlation.py', 'src/evidence_matcher.py', 'src/stock_evidence.py',
+    'src/stock_keywords.py','src/stock_keyword_store.py',
     'src/filing_relationships.py', 'src/deep_profile_store.py', 'requirements-filing-parser.txt',
     'scripts/build_filing_profiles.py', 'data/company_filings_full_release.json',
     'src/filing_evidence.py', 'src/filing_business.py', 'src/filing_parts.py',
@@ -33,13 +34,55 @@ INPUT_PATHS = ('src/correlation.py', 'src/evidence_matcher.py', 'src/stock_evide
 
 def artifact_names(directory):
     names = list(ARTIFACTS)
-    for folder in ('scoring-profiles', 'filing-profiles'):
+    if (directory/'keyword-index.json.gz').is_file():
+        names.append('keyword-index.json.gz')
+    for folder in ('scoring-profiles', 'filing-profiles','keyword-index'):
         for path in sorted((directory/folder).rglob('*')):
             if path.is_file():
                 if path.is_symlink() or not path.resolve().is_relative_to(directory.resolve()):
                     raise ValueError('profile asset escapes snapshot directory')
                 names.append(path.relative_to(directory).as_posix())
     return names
+
+
+def validate_budget(directory, *, total_limit=850_000_000, file_limit=99_000_000):
+    """Leave space for the rest of the published site. Never truncate to fit."""
+    total = 0
+    for name in artifact_names(directory):
+        path = directory/name
+        if path.is_symlink():
+            raise ValueError('snapshot asset is a symlink')
+        size = path.stat().st_size
+        if size >= file_limit:
+            raise ValueError('snapshot file exceeds safe publication budget: '+name)
+        total += size
+    if total >= total_limit:
+        raise ValueError('snapshot exceeds safe Pages budget; retain previous page and use object storage')
+    return total
+
+
+def stage_page(source, destination, *, snapshot_commit, outside_bytes, site_limit=950_000_000):
+    """Use immutable repository assets if the complete page exceeds Pages space."""
+    import re,shutil
+    if not re.fullmatch(r'[a-f0-9]{40}',snapshot_commit):
+        raise ValueError('immutable snapshot commit is required')
+    names = artifact_names(source)+['index.html']
+    incoming = sum((source/name).stat().st_size for name in names)
+    external = outside_bytes+incoming >= site_limit
+    if external:
+        names = list(ARTIFACTS)+['index.html']
+    if outside_bytes+sum((source/name).stat().st_size for name in names) >= site_limit:
+        raise ValueError('page bootstrap exceeds safe Pages budget')
+    for name in names:
+        target = destination/name
+        target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(source/name,target)
+    meta_path = destination/'meta.json'
+    meta = json.loads(meta_path.read_text())
+    if external:
+        meta['asset_base_url'] = 'https://raw.githubusercontent.com/SRoyaltyy/fullscan/'+snapshot_commit+'/dashboard/scanner-backtest/'
+    meta_path.write_text(json.dumps(meta,indent=2)+'\n')
+    return {'external_assets':external,'snapshot_commit':snapshot_commit}
 
 
 def git(*args, env=None):
@@ -105,6 +148,7 @@ def publish_api(directory, source_sha, repository):
 
 
 def validate(directory, source_sha):
+    validate_budget(directory)
     meta = json.loads((directory/'meta.json').read_text())
     snapshot = meta.get('snapshot') or {}
     if snapshot.get('source_revision') != source_sha or not snapshot.get('snapshot_id'):
@@ -126,7 +170,8 @@ def validate(directory, source_sha):
     coverage = snapshot.get('filing_coverage') or {}
     if coverage.get('scope') not in ('dated_identity_overlay', 'deep_filing_relationships') or not coverage.get('complete') or coverage.get('errors'):
         raise ValueError('dated filing identity source was not verified')
-    for profile in profiles.values():
+    keyword_coverage = {}
+    for ticker, profile in profiles.items():
         if profile.get('profile_path'):
             path = (directory/profile['profile_path']).resolve()
             if not path.is_relative_to(directory.resolve()):
@@ -134,13 +179,46 @@ def validate(directory, source_sha):
             import hashlib
             if hashlib.sha256(path.read_bytes()).hexdigest() != profile['profile_sha256']:
                 raise ValueError('scoring profile checksum mismatch')
+            if snapshot.get('profile_publication',{}).get('mode') == 'keywords':
+                import gzip
+                payload = json.loads(gzip.decompress(path.read_bytes()))
+                records, evidence = payload.get('keywords',[]),payload.get('keyword_evidence',{})
+                if any(ref not in evidence for row in records for ref in row['evidence_ids']):
+                    raise ValueError('keyword record lost its supporting evidence')
+                detail = payload.get('keyword_coverage') or {}
+                if detail:
+                    if detail['retained_relationships'] != sum(not ref.startswith('paragraph:') for ref in evidence):
+                        raise ValueError('keyword evidence retention count mismatch')
+                    keyword_coverage[ticker] = detail
+    keyword_index = meta.get('keyword_index')
+    if keyword_index:
+        import hashlib
+        if keyword_index['path'] != 'keyword-index.json.gz' or hashlib.sha256((directory/keyword_index['path']).read_bytes()).hexdigest() != keyword_index['sha256']:
+            raise ValueError('keyword index checksum mismatch')
+        import gzip
+        manifest=json.loads(gzip.decompress((directory/keyword_index['path']).read_bytes()))
+        for bucket,entry in manifest.get('buckets',{}).items():
+            if entry['path'] != 'keyword-index/'+bucket+'.json.gz' or bucket not in '0123456789abcdef':
+                raise ValueError('unsafe keyword index bucket')
+            if hashlib.sha256((directory/entry['path']).read_bytes()).hexdigest() != entry['sha256']:
+                raise ValueError('keyword index bucket checksum mismatch')
     if coverage.get('scope') == 'deep_filing_relationships':
         from src.deep_profile_store import read_index, read_profile
         root, index, fingerprint = read_index(directory/'filing-profiles')
         if fingerprint != coverage['profile_index_sha256']:
             raise ValueError('deep profile set does not match scoring snapshot')
-        for entry in {e['path']: e for e in index['profiles'].values()}.values():
-            read_profile(root, entry)
+        if snapshot.get('profile_publication',{}).get('mode') == 'keywords':
+            receipt = json.loads((root/'publication.json').read_text())
+            if receipt.get('mode') != 'keywords' or receipt.get('profile_index_sha256') != fingerprint or receipt.get('profiles') != keyword_coverage:
+                raise ValueError('keyword publication receipt does not match scoring profiles')
+            if set(keyword_coverage) != set(coverage['covered_tickers']):
+                raise ValueError('keyword publication omitted covered tickers')
+            for ticker,detail in keyword_coverage.items():
+                if detail['retained_relationships'] != index['profiles'][ticker]['facts']:
+                    raise ValueError('keyword publication lost archived relationship candidates')
+        else:
+            for entry in {e['path']: e for e in index['profiles'].values()}.values():
+                read_profile(root, entry)
     json.loads((directory/'ticker-index.json').read_text())
     return meta
 
@@ -162,6 +240,14 @@ def publish(directory, source_sha):
                    'GIT_COMMITTER_NAME': 'Scanner snapshot publisher',
                    'GIT_COMMITTER_EMAIL': 'bot@users.noreply.github.com'}
             git('read-tree', upstream, env=env)
+            current_assets = set(artifact_names(directory))
+            old = git('ls-tree','-r','--name-only',upstream,'--',
+                'dashboard/scanner-backtest/scoring-profiles','dashboard/scanner-backtest/filing-profiles',
+                'dashboard/scanner-backtest/keyword-index')
+            for path in old.splitlines():
+                relative = path.removeprefix('dashboard/scanner-backtest/')
+                if relative not in current_assets:
+                    git('update-index','--force-remove',path,env=env)
             for name in artifact_names(directory):
                 blob = git('hash-object', '-w', str(directory/name))
                 git('update-index', '--add', '--cacheinfo', '100644', blob,
@@ -196,4 +282,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 

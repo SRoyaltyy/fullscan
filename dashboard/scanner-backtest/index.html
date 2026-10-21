@@ -38,6 +38,7 @@ summary{cursor:pointer;color:#93c5fd}
 .linklist li:hover{color:#93c5fd}
 .ticker-hit{color:var(--good);font-weight:700;cursor:pointer}
 .ticker-hit:hover{text-decoration:underline}
+textarea{width:100%;min-height:110px;background:#0f172a;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:10px;font:15px system-ui}
 </style>
 </head>
 <body>
@@ -67,6 +68,14 @@ summary{cursor:pointer;color:#93c5fd}
   <h2>Match results</h2>
   <p id="decision"></p>
   <div id="matches"></div>
+  <div id="article-keywords"></div>
+</section>
+<section class="card">
+  <h2>Compare any article to stock keywords</h2>
+  <p class="muted">Paste a headline or full article. This finds labelled stock relationships, not bullish/bearish conclusions or automatic stock passes. Custom comparisons use the displayed filing cutoff; dated intake tests exclude future filing evidence.</p>
+  <textarea id="keyword-text" aria-label="Article text to compare" placeholder="Western Digital faces hard-drive supply disruption"></textarea>
+  <button type="button" id="compare-keywords">Compare keywords</button>
+  <div id="custom-keywords"></div>
 </section>
 <section class="card" id="spacy" hidden>
   <h2>spaCy analysis <span class="badge" id="spacy-cluster"></span></h2>
@@ -120,7 +129,8 @@ function renderSnapshot(snapshot) {
     (deep ? ` · ${coverage.filings.toLocaleString()} filings · ${coverage.companies.toLocaleString()} issuers` : "") +
     (coverage.as_of ? ` · cutoff ${coverage.as_of}` : "") +
     (tickers.length && tickers.length <= 10 ? ` · ${tickers.join(", ")}` : tickers.length ? "" : " · description-only") +
-    (deep ? " · missing relationships remain unknown" : " · full filing-business coverage: not established"));
+    (deep ? " · missing relationships remain unknown" : " · full filing-business coverage: not established") +
+    (snapshot.profile_publication?.dataset_scope === "development_sample" ? " · DEVELOPMENT SAMPLE ONLY — whole-archive recovery is still running" : ""));
 }
 
 // mulberry32: tiny deterministic PRNG so draws are reproducible and
@@ -212,6 +222,7 @@ async function loadArticle() {
 }
 
 function renderMatches(result) {
+  renderKeywordComparison(document.getElementById("article-keywords"), result.keyword_comparison);
   const box = document.getElementById("results");
   box.hidden = false;
   const decision = document.getElementById("decision");
@@ -455,18 +466,169 @@ const KIND_LABELS = {
 };
 
 async function loadPackedProfile(path, expectedHash) {
-  if (!/^(scoring-profiles\/[a-f0-9]+|filing-profiles\/issuers\/\d{10})\.json\.gz$/.test(path))
+  if (!/^(scoring-profiles\/[a-f0-9]+|filing-profiles\/issuers\/\d{10}|keyword-index(?:\/[a-f0-9])?)\.json\.gz$/.test(path))
     throw new Error("Invalid profile asset path");
   const query = staticMeta.snapshot ? "?snapshot=" + encodeURIComponent(staticMeta.snapshot.snapshot_id) : "";
-  const response = await fetch("./" + path + query);
+  const base = staticMeta.asset_base_url || "./";
+  if (base !== "./" && !/^https:\/\/raw\.githubusercontent\.com\/SRoyaltyy\/fullscan\/[a-f0-9]{40}\/dashboard\/scanner-backtest\/$/.test(base))
+    throw new Error("Invalid keyword asset origin");
+  const response = await fetch(base + path + query,{credentials:"omit"});
   if (!response.ok) throw new Error("Filing profile could not be loaded");
   const bytes = await response.arrayBuffer();
+  return decodePackedBytes(bytes,expectedHash);
+}
+
+async function loadExternalGraph(url, expectedHash) {
+  const base = staticMeta.snapshot?.profile_publication?.base_url || "";
+  if (!base.startsWith("https://") || !url.startsWith(base.replace(/\/$/,"")+"/")) throw new Error("Untrusted external profile location");
+  const response = await fetch(url,{credentials:"omit"});
+  if (!response.ok) throw new Error("External archive unavailable; keyword evidence is still accessible above");
+  return decodePackedBytes(await response.arrayBuffer(),expectedHash);
+}
+
+async function decodePackedBytes(bytes, expectedHash) {
   const digest = await crypto.subtle.digest("SHA-256", bytes);
   const actual = Array.from(new Uint8Array(digest), n => n.toString(16).padStart(2, "0")).join("");
   if (actual !== expectedHash) throw new Error("Filing profile does not match this snapshot");
   const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip"));
   return JSON.parse(await new Response(stream).text());
 }
+
+function renderKeywordRecords(container, records, evidence = {}) {
+  const query = document.createElement("input");
+  query.placeholder = "Search keyword, stock or relationship";
+  query.setAttribute("aria-label", "Search stock keyword records");
+  const list = document.createElement("div");
+  function draw() {
+    list.replaceChildren();
+    const q = (query.value || "").trim().toLowerCase();
+    const rows = records.filter(r => !q || [r.stock,r.keyword,r.relationship,r.assertion,...(r.review_reasons || [])].join(" ").toLowerCase().includes(q));
+    const count = document.createElement("p");
+    count.textContent = `${rows.length.toLocaleString()} of ${records.length.toLocaleString()} keyword records · all remain searchable`;
+    list.append(count);
+    appendPaged(list, rows, row => {
+      const detail = document.createElement("details");
+      const title = document.createElement("summary");
+      title.textContent = `${row.stock} → ${row.relationship.replaceAll("_"," ")} → ${row.keyword} [${row.assertion || "identity"}${row.review_required ? "; review required" : ""}${row.current_as_of_cutoff ? "; current filing claim" : "; not a current assertion"}]`;
+      const flags = document.createElement("p");
+      flags.textContent = (row.review_reasons || []).join(" · ")+(row.article_span ? ` · Article: ${row.article_span.text} (${row.article_span.start}–${row.article_span.end})` : "")+` · Filing dates ${row.first_filing_date || "—"} to ${row.latest_filing_date || "—"}`;
+      const qualifiers = document.createElement("p");
+      qualifiers.textContent = JSON.stringify(row.qualifiers || {});
+      const stock = document.createElement("button");
+      stock.textContent = `Inspect ${row.stock} and its filing evidence`;
+      stock.addEventListener("click", () => showTickerProfile(row.stock));
+      detail.append(title, flags, qualifiers, stock);
+      const witnesses = (row.evidence_ids || []).flatMap(id => (evidence[id] || {}).witnesses || []);
+      appendPaged(detail,witnesses,w => {
+        const block = document.createElement("blockquote");
+        const s = w.source || {};
+        block.textContent = [s.form,s.filing_date,s.accession,s.document,s.section,`characters ${w.start}–${w.end}`,w.quote].filter(Boolean).join(" · ");
+        if (s.url && /^https:\/\/www\.sec\.gov\/Archives\//.test(s.url)) {
+          const link = document.createElement("a"); link.href = s.url;
+          link.target = "_blank"; link.rel = "noopener noreferrer";
+          link.textContent = " SEC source"; block.append(link);
+        }
+        return block;
+      });
+      return detail;
+    });
+  }
+  query.addEventListener("input",draw);
+  container.append(query,list); draw();
+}
+
+function renderKeywordComparison(container, comparison) {
+  container.replaceChildren();
+  const title = document.createElement("h3"); title.textContent = "Stock → relationship → keyword";
+  const note = document.createElement("p");
+  note.textContent = comparison ? "Keyword overlap only. A filing claim is not independent verification; inspect its date, assertion and quote." : "Keyword comparison is unavailable in this older snapshot. Waiting for the new parser export.";
+  container.append(title,note);
+  if (!comparison) return;
+  renderKeywordRecords(container,comparison.matches || []);
+  for (const row of comparison.broad_matches || []) {
+    const p = document.createElement("p");
+    p.textContent = `${row.keyword} → ${row.relationship}: ${row.candidate_stock_count} possible stocks; additional stock context required.`;
+    container.append(p);
+  }
+}
+
+let keywordSearchIndex = null;
+let keywordManifest = null;
+const keywordBuckets = new Map();
+function prepareKeywordIndex(payload) {
+  const first = new Map(), df = new Map();
+  for (const entry of payload.phrases) {
+    const initial = entry.phrase[0];
+    if (!first.has(initial)) first.set(initial,[]);
+    first.get(initial).push(entry);
+    if (entry.row.relationship !== "issuer") {
+      if (!df.has(entry.row.normalized)) df.set(entry.row.normalized,new Set());
+      df.get(entry.row.normalized).add(entry.row.stock);
+    }
+  }
+  return {...payload,first,df};
+}
+
+function compareKeywordText(index, text) {
+  const tokens = [...text.matchAll(/[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)];
+  const words = tokens.map(t => {
+    const word = t[0].toLowerCase().replaceAll("’", "'").replace(/'s$/, "");
+    return index.normalization[word] || word;
+  });
+  const hits = [], named = new Set(), seen = new Set(), broad = new Map(), matches = [];
+  for (let i = 0; i < words.length; i++) {
+    for (const {phrase,row} of index.first.get(words[i]) || []) {
+      const end = i+phrase.length;
+      if (end > words.length || phrase.some((w,j) => w !== words[i+j]) || /[.!?;:\n]/.test(text.slice(tokens[i].index+tokens[i][0].length,tokens[end-1].index))) continue;
+      if (row.relationship === "issuer") named.add(row.stock);
+      else hits.push({row,start:tokens[i].index,end:tokens[end-1].index+tokens[end-1][0].length});
+    }
+  }
+  const entityRoles = new Set(["issuer","supplier","customer","competitor","partner","subsidiary","regulator","approval_authority","acquisition_target","divestiture_target"]);
+  for (const {row,start,end} of hits) {
+    const key = `${row.id}:${start}:${end}`;
+    if (seen.has(key)) continue; seen.add(key);
+    const count = (index.df.get(row.normalized) || new Set()).size;
+    if (count >= Math.max(8,Math.ceil(index.catalog_tickers*.05)) && !entityRoles.has(row.relationship) && !named.has(row.stock)) {
+      broad.set(`${row.normalized}:${row.relationship}`,{keyword:row.keyword,relationship:row.relationship,candidate_stock_count:count});
+    } else matches.push({...row,article_span:{start:[...text.slice(0,start)].length,end:[...text.slice(0,end)].length,text:text.slice(start,end)},decision:"keyword_overlap_only"});
+  }
+  return {matches,broad_matches:[...broad.values()],stock_passes_changed:false};
+}
+
+async function compareCustomKeywords() {
+  const button = document.getElementById("compare-keywords"), box = document.getElementById("custom-keywords");
+  const article = document.getElementById("keyword-text").value || "";
+  if (!article.trim()) { box.textContent = "Paste a headline or article first."; return; }
+  button.disabled = true; box.textContent = "Loading the keyword index…";
+  try {
+    let result;
+    if (mode === "live") {
+      const response = await fetch("/api/keywords",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({text:article})});
+      result = await response.json(); if (!response.ok) throw new Error(result.error);
+    } else {
+      const asset = staticMeta && staticMeta.keyword_index;
+      if (!asset) throw new Error("The current published snapshot has no keyword index yet.");
+      if (!keywordManifest) keywordManifest = await loadPackedProfile(asset.path,asset.sha256);
+      const wanted = new Set([...article.matchAll(/[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(t => {
+        const raw = t[0].toLowerCase().replaceAll("’", "'").replace(/'s$/, "");
+        const word = keywordManifest.normalization[raw] || raw;
+        return (word.charCodeAt(0)%16).toString(16);
+      }));
+      await Promise.all([...wanted].map(async bucket => {
+        if (!keywordBuckets.has(bucket) && keywordManifest.buckets[bucket]) {
+          const entry = keywordManifest.buckets[bucket];
+          keywordBuckets.set(bucket,await loadPackedProfile(entry.path,entry.sha256));
+        }
+      }));
+      keywordSearchIndex = prepareKeywordIndex({...keywordManifest,phrases:[...keywordBuckets.values()].flat()});
+      result = compareKeywordText(keywordSearchIndex,article);
+    }
+    renderKeywordComparison(box,result);
+  } catch (err) { box.textContent = err.message; }
+  finally { button.disabled = false; }
+}
+document.getElementById("compare-keywords").addEventListener("click",compareCustomKeywords);
 
 function appendPaged(container, entries, render, pageSize = 100) {
   let position = 0;
@@ -673,6 +835,11 @@ async function showTickerProfile(rawTicker) {
     return;
   }
   title.textContent = `${ticker} — ${prof.name || "(no name)"}`;
+  if (prof.keyword_schema) {
+    const heading = document.createElement("h3"); heading.textContent = `Labelled stock keywords (${(prof.keywords || []).length})`;
+    factsBox.append(heading);
+    renderKeywordRecords(factsBox,prof.keywords || [],prof.keyword_evidence || {});
+  }
   const bits = [prof.industry, prof.sector].filter(Boolean);
   const srcBadge = document.createElement("span");
   if (prof.used_for_scoring) {
@@ -722,9 +889,20 @@ async function showTickerProfile(rawTicker) {
     });
     filingBox.append(det);
   }
-  if (prof.deep_profile && mode === "static") {
+  if (prof.deep_profile && !prof.deep_profile.path && !prof.deep_profile.external_url) {
+    const note = document.createElement("p");
+    note.textContent = "All extracted keyword candidates and their quotes are above. Whole documents and exhaustive paragraph classifications remain in the full parser archive, not this compact page.";
+    filingBox.append(note);
+    if (/^https:\/\/github\.com\/SRoyaltyy\/fullscan\/actions\/runs\/\d+$/.test(prof.deep_profile.archive_url || "")) {
+      const link = document.createElement("a"); link.href = prof.deep_profile.archive_url;
+      link.textContent = "Open full parser archive (GitHub sign-in may be required; artifacts have retention limits)"; filingBox.append(link);
+    }
+  }
+  if (prof.deep_profile && (prof.deep_profile.path || prof.deep_profile.external_url) && mode === "static") {
     try {
-      const graph = await loadPackedProfile(prof.deep_profile.path, prof.deep_profile.sha256);
+      const graph = prof.deep_profile.external_url
+        ? await loadExternalGraph(prof.deep_profile.external_url,prof.deep_profile.sha256)
+        : await loadPackedProfile(prof.deep_profile.path, prof.deep_profile.sha256);
       if (request !== activeProfileRequest) return;
       renderFilingGraph(filingBox, graph);
     } catch (err) {
@@ -808,5 +986,6 @@ poll().then(() => loadArticle());
 </script>
 </body>
 </html>
+
 
 
