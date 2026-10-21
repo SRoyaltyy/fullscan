@@ -1,8 +1,8 @@
 {
   "date": "2026-10-21",
-  "generated_at": "2026-10-21T04:28:25.593997-04:00",
+  "generated_at": "2026-10-21T04:28:48.460619-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-10-21.csv",
+  "export": "finviz_2026-10-20.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8975,7 +8975,7 @@
       ]
     },
     {
-      "time": "13 min",
+      "time": "14 min",
       "title": "Asian stocks rally as tech firms enjoy bounce ahead of key earnings",
       "url": "https://finance.yahoo.com/markets/world-indices/articles/asian-stocks-rally-tech-firms-025217752.html",
       "source": "AFP",
@@ -9159,8 +9159,8 @@
       "url": "https://finance.yahoo.com/markets/crypto/articles/revolut-outage-hits-crypto-access-071419863.html",
       "source": "Cryptonews",
       "tickers": [
-        "GOOG",
-        "GOOGL"
+        "GOOGL",
+        "GOOG"
       ]
     },
     {
@@ -9278,7 +9278,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Samsung, SK Hynix upgrade China plants to make advanced memory chips - Reuters",
       "url": "https://finance.yahoo.com/technology/articles/samsung-sk-hynix-upgrade-china-062823309.html",
       "source": "Investing.com",
@@ -9295,8 +9295,8 @@
         "NVDA",
         "MSFT",
         "AAPL",
-        "GOOG",
-        "GOOGL"
+        "GOOGL",
+        "GOOG"
       ]
     },
     {
@@ -9378,8 +9378,8 @@
       "url": "https://www.digitimes.com/news/a20261021VL210/google-ai-software-security-legal-usa-beijing.html",
       "source": "DigiTimes",
       "tickers": [
-        "GOOG",
-        "GOOGL"
+        "GOOGL",
+        "GOOG"
       ]
     },
     {
@@ -10737,5 +10737,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 204,
   "earnings_window_count": 739,
-  "overlay_at": "2026-10-21T04:28:25.593997-04:00"
+  "overlay_at": "2026-10-21T04:28:48.460619-04:00"
 }

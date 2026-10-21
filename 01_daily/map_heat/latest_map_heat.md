@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-21
 
-Export `finviz_2026-10-21.csv` · 11616 names · generated 2026-10-21T04:28:25.593997-04:00
+Export `finviz_2026-10-20.csv` · 11616 names · generated 2026-10-21T04:28:48.460619-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -284,7 +284,7 @@ COLD (1w):
 - 11 min **CDRO** Codere Online rolls out 99 Royale in Mexico in partnership with G Games (GlobeNewswire)
 - 12 min **SPCX** SpaceX earnings Live: SpaceX beats on earnings, capex comes in less than expected (Yahoo Finance)
 - 13 min **ORCL,MSFT,IBM,AMZN,GOOG** IBM Has a Chance to Rewrite Its Narrative. Can Earnings Spark a Comeback? (Barrons.com)
-- 13 min **SPCX,SKHY** Asian stocks rally as tech firms enjoy bounce ahead of key earnings (AFP)
+- 14 min **SPCX,SKHY** Asian stocks rally as tech firms enjoy bounce ahead of key earnings (AFP)
 - 19 min **NFLX,MORN** NFLX Stock Slips More Than 6% Premarket: Morningstar Sees 'Best Buying Opportunity' For Netflix Amid Negative Sentiment (Stocktwits)
 - 22 min **SMCI,SPCX,TSLA,KNSA,SN** Dow Jones Futures: SpaceX, Supermicro Revive AI Stocks; Tesla, Meta On Deck (Investor's Business Daily)
 - 23 min **WMT** VusionGroup shares jump 14% to 15-week high as Q3 sales surge (Investing.com)
@@ -302,7 +302,7 @@ COLD (1w):
 - 1 hour **ADBE,KVYO,CRM,BRZE,CCC** CRM Stock In Focus: Jefferies Says Salesforces Braze Deal Could Spark More Software Takeovers (Stocktwits)
 - 1 hour **SPY** Stock Market: Will S&P 500 Open Up or Down Today? (Benzinga Prediction Markets)
 - 1 hour **LINC** Kaplan Fox Encourages Lincoln Educational Services Corporation (LINC) Investors Seeking Recovery to Contact the Firm Before November 10, 2026 (Newsfile)
-- 1 hour **GOOG,GOOGL** Revolut Outage Hits Crypto Access as Google Cloud Failure Disrupts Banking Services (Cryptonews)
+- 1 hour **GOOGL,GOOG** Revolut Outage Hits Crypto Access as Google Cloud Failure Disrupts Banking Services (Cryptonews)
 - 1 hour **SPCX,BE,VLO,NEE** Stocktwits Midweek Energy Roundup: Brent Crosses $110 A Barrel, Musks Comments On Power For AI, Key Earnings Check (Stocktwits)
 - 1 hour **PZZA** Kaplan Fox Encourages Papa John's International, Inc. (PZZA) Investors Seeking Recovery to Contact the Firm Before November 2, 2026 (Newsfile)
 
