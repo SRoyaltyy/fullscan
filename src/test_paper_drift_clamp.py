@@ -56,10 +56,18 @@ def test_other_day_ticket_still_refused():
     assert send == [] and foreign[0]["ticker"] == "PENG"
 
 
-def test_unknown_positions_do_not_clamp():
+def test_unknown_positions_fail_closed_for_sells():
     t = _t("SELL", "PENG", 34)
-    send, _, _, warn = pd_.partition_tickets([t], {}, D, positions_known=False)
-    assert send == [t] and warn is None
+    send, skip, _, warn = pd_.partition_tickets([t], {}, D, positions_known=False)
+    assert send == [] and skip[0]["ticker"] == "PENG"
+    assert skip[0]["status"] == pd_.DRIFT_SKIPPED and "fail closed" in skip[0]["reason"]
+    assert warn is not None
+
+
+def test_unknown_positions_buys_still_sent():
+    t = _t("BUY", "BYRN", 503)
+    send, skip, _, _ = pd_.partition_tickets([t], {}, D, positions_known=False)
+    assert send == [t] and skip == []
 
 
 def test_note_is_append_only(tmp_path):

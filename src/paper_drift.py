@@ -76,8 +76,8 @@ def partition_tickets(tickets, positions, date: str, *, positions_known=True):
     sandbox account does not hold is not sent. Buys are unchanged.
     Holdings that are not on today's list are named on the warning and
     are not turned into orders. When the snapshot could not be read,
-    ``positions_known`` is false: sells are not skipped and the day is
-    not blocked.
+    ``positions_known`` is false: sells fail closed (drift-skipped, not
+    sent at the book qty); buys are unchanged and the day is not blocked.
     """
     sendable = []
     skipped = []
@@ -116,6 +116,18 @@ def partition_tickets(tickets, positions, date: str, *, positions_known=True):
                     ),
                 })
                 continue
+        if not positions_known and side == "SELL":
+            # Fail closed: without a sandbox position read, a sell is not
+            # sent at the book qty (it could exceed what is held).
+            skipped.append({
+                "ticker": ticker, "side": "SELL", "shares": book, "date": date,
+                "status": DRIFT_SKIPPED, "ok": False,
+                "reason": (
+                    f"drift-skipped: sandbox position read failed; sealed h1 "
+                    f"sell {ticker} {book} not sent (fail closed)"
+                ),
+            })
+            continue
         if positions_known and side == "SELL" and _shares(positions, ticker) < 1:
             skipped.append({
                 "ticker": ticker,
