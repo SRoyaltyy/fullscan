@@ -5,8 +5,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** ON (general predict up score +4.6, conf 0.686)
-- **Yields:** flat (llm_factor_fallback) | **Dollar:** flat (dxy) | **Oil:** falling | **VIX:** calm (ratio 0.91 via vix/vix3m) spot 17.32
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.16
+- **Yields:** rising (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** falling | **VIX:** calm (ratio 0.90 via vix/vix3m) spot 17.14
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.25
 - **High-impact events:** 10 bullish vs 7 bearish | China: bull
 
 ## Sectors
@@ -64,16 +64,16 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | ⛅ neutral | low | yields flat/unknown |
-| style:value | ⛅ neutral | low | yields flat/unknown |
+| style:growth | 🌧️ hostile | medium | yields rising — long-duration growth de-rates [factor: Bond yields] |
+| style:value | 🌤️ favorable | medium | rising yields/reflation favors value & cyclicals [factor: Bond yields] |
 | style:blend | ⛅ neutral | low | — |
 
 ## Leverage
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| lev:high | ⛅ neutral | low | — |
-| lev:low | ⛅ neutral | low | — |
+| lev:high | 🌧️ hostile | medium | yields rising — leverage amplifies the downside [factors + general] |
+| lev:low | 🌤️ favorable | low | balance-sheet strength preferred in stress |
 | lev:mid | ⛅ neutral | low | — |
 | lev:neg_equity | 🌧️ hostile | low | negative equity is distressed in any regime |
 
