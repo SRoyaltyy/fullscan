@@ -21,7 +21,9 @@ Buy share counts:
   the new-buy set, or this refuses.
 * When the fill is not sealed yet (the pre-open send), shares are the
   book's sizing on the new-buy names only: ``cash_before`` plus
-  estimated sell proceeds at the prior lot's ``last_px``, equal-split
+  estimated sell proceeds at the prior lot's ``last_px`` (from
+  FRESH_SELL_FROM: the fresh pre-open price, capped at ``last_px``, and
+  fail closed when none exists), equal-split
   leftover, price = ``fv_price``, 0.5% slip, 1% ADV cap, Futubull fees.
   Session D's open is not read. Carry names are left out of the split.
 
@@ -46,6 +48,12 @@ FEES_PATH = ROOT / "00_grounding" / "futubull_fees.json"
 SLIP_PRIMARY = 0.005
 LIQ_CAP_FRAC = 0.01
 ADV_SHARE_SCALE = 1000
+
+# From this session on, the pre-open send prices held sells at a fresh
+# pre-open price (never above the stale book mark) and fails closed when
+# a sell has no fresh price. Earlier sessions keep the old last_px rule.
+FRESH_SELL_FROM = "2026-10-21"
+PREOPEN_PX_DIR = ROOT / "data" / "paper_open"
 
 _STATE_KINDS = frozenset({"session", "fill", "open_fill", "mark"})
 
@@ -260,7 +268,48 @@ def _held_lots(prior: dict) -> dict:
     return held
 
 
-def _plan_sells(plan: dict, held: dict, fees: dict, date: str) -> tuple[list[dict], float, set[str]]:
+def load_preopen_prices(date: str, *, root: Path | None = None) -> dict[str, float] | None:
+    """Fresh pre-open sell prices for ``date`` from ``{date}_preopen_px.json``.
+
+    Shape: ``{"date": D, "prices": {"TICKER": px}}``. Missing file is None.
+    """
+    path = (root or PREOPEN_PX_DIR) / f"{date}_preopen_px.json"
+    if not path.is_file():
+        return None
+    obj = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(obj, dict) or obj.get("date") != date:
+        raise SealedH1Error(f"pre-open price file for {date} is not for {date}")
+    out = {}
+    for k, v in (obj.get("prices") or {}).items():
+        try:
+            px = float(v)
+        except (TypeError, ValueError):
+            continue
+        if px > 0 and math.isfinite(px):
+            out[str(k).upper().strip()] = px
+    return out
+
+
+def _sell_px(ticker: str, lot: dict, fresh: dict[str, float] | None, date: str) -> float:
+    try:
+        last_px = float(lot.get("last_px"))
+    except (TypeError, ValueError):
+        last_px = 0.0
+    if not (last_px > 0 and math.isfinite(last_px)):
+        last_px = 0.0
+    if fresh is None:
+        return last_px
+    px = fresh.get(ticker)
+    if px is None:
+        raise SealedH1Error(
+            f"no fresh pre-open price for sell {ticker} on {date}; refusing to size buys"
+        )
+    # Never assume more cash than the stale mark either.
+    return min(px, last_px) if last_px > 0 else px
+
+
+def _plan_sells(plan: dict, held: dict, fees: dict, date: str,
+                fresh: dict[str, float] | None = None) -> tuple[list[dict], float, set[str]]:
     try:
         cash = float(plan.get("cash_before"))
     except (TypeError, ValueError) as exc:
@@ -285,10 +334,7 @@ def _plan_sells(plan: dict, held: dict, fees: dict, date: str) -> tuple[list[dic
         if shares < 1:
             raise SealedH1Error(f"sealed h1 plan {date} sell {ticker} shares {shares}")
         lot = held.get(ticker) or {}
-        try:
-            last_px = float(lot.get("last_px"))
-        except (TypeError, ValueError):
-            last_px = 0.0
+        last_px = _sell_px(ticker, lot, fresh, date)
         if last_px > 0 and math.isfinite(last_px):
             fee = _order_fees(shares, last_px, "sell", fees)
             cash += shares * last_px * (1.0 - SLIP_PRIMARY) - fee
@@ -351,6 +397,18 @@ def _size_new_buys(picks: list[dict], cash: float, fees: dict, date: str) -> lis
             "sources": list(pick.get("sources") or []),
         })
     return sized
+
+
+def assert_buys_within_cash(sized: list[dict], cash: float, fees: dict, date: str) -> None:
+    """Buy cost (0.5% slip + fees) must fit the cash the sells really bring in."""
+    cost = 0.0
+    for row in sized:
+        px = float(row["px"])
+        cost += row["shares"] * px * (1.0 + SLIP_PRIMARY) + _order_fees(row["shares"], px, "buy", fees)
+    if cost > cash + 1e-6:
+        raise SealedH1Error(
+            f"h1 {date} buys cost {cost:.2f} but sells plus cash give {cash:.2f}; refusing"
+        )
 
 
 def _buys_from_open_fill(fill: dict, new_picks: list[dict], sells: list[dict], date: str) -> list[dict]:
@@ -418,7 +476,8 @@ def _buys_from_open_fill(fill: dict, new_picks: list[dict], sells: list[dict], d
     return sized
 
 
-def sealed_h1_orders(date: str, *, log_path: Path | None = None) -> dict:
+def sealed_h1_orders(date: str, *, log_path: Path | None = None,
+                     fresh_prices: dict[str, float] | None = None) -> dict:
     """New-buy and sell legs for session ``date``.
 
     Buys are the sealed new-buy set, in rank order: plan picks that are
@@ -444,16 +503,24 @@ def sealed_h1_orders(date: str, *, log_path: Path | None = None) -> dict:
         )
     fees = _load_fees()
     held = _held_lots(_state_before(records, date) or {})
-    sells, cash, sold = _plan_sells(plan, held, fees, date)
+    fill = _effective_open_fill(records, date)
+    fresh = None
+    if fill is None and date >= FRESH_SELL_FROM and plan.get("planned_sells"):
+        fresh = fresh_prices if fresh_prices is not None else load_preopen_prices(date)
+        if fresh is None:
+            raise SealedH1Error(
+                f"no fresh pre-open sell prices for {date}; refusing to size buys"
+            )
+    sells, cash, sold = _plan_sells(plan, held, fees, date, fresh)
     held_after = set(held) - sold
     new_picks, carry = _split_picks(plan, held_after, date)
-    fill = _effective_open_fill(records, date)
     if fill is not None:
         sized = _buys_from_open_fill(fill, new_picks, sells, date)
         source = "open_fill"
         fill_sha = fill.get("sha256") or ""
     else:
         sized = _size_new_buys(new_picks, cash, fees, date)
+        assert_buys_within_cash(sized, cash, fees, date)
         source = "preopen"
         fill_sha = ""
     assert_buys_match_new_set(
