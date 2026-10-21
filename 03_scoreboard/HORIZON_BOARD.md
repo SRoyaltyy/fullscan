@@ -85,5 +85,5 @@ Updated: 2026-10-20. Calls are graded at T+h trading days using the scoreboard's
 | 2026-08-27 | sector:Communication Services | 1m | flat/mild | +0.78% (up/flat) | ❌ | ❌ |
 | 2026-08-26 | sector:Technology | 1m | up/notable | +7.35% (up/notable) | ✅ | ✅ |
 
-*250 calls still maturing (T+h close not recorded yet).*
+*254 calls still maturing (T+h close not recorded yet).*
 
