@@ -1,0 +1,691 @@
+{
+  "best": "only_earn",
+  "fingerprint": "eeca5d61cf6f2f6d6723b4e084fe1b560e5b7ff455e8e5f6c68059e91ce6cb55",
+  "n_grid": 68,
+  "n_passers": 34,
+  "rank_head": [
+    {
+      "eligible": true,
+      "id": "only_earn",
+      "inputs": "earn=1",
+      "rank_key": 0.421875,
+      "worst": {
+        "joint": 0.421875,
+        "start": "2026-08-20",
+        "x": 8
+      }
+    },
+    {
+      "eligible": true,
+      "id": "only_yday",
+      "inputs": "yday=1",
+      "rank_key": 0.4,
+      "worst": {
+        "joint": 0.4,
+        "start": "2026-08-26",
+        "x": 8
+      }
+    },
+    {
+      "eligible": true,
+      "id": "cam_rsi",
+      "inputs": "cam=1, rsi=1",
+      "rank_key": 0.375,
+      "worst": {
+        "joint": 0.375,
+        "start": "2026-08-20",
+        "x": 4
+      }
+    },
+    {
+      "eligible": true,
+      "id": "cam_yday",
+      "inputs": "cam=1, yday=1",
+      "rank_key": 0.375,
+      "worst": {
+        "joint": 0.375,
+        "start": "2026-08-26",
+        "x": 8
+      }
+    },
+    {
+      "eligible": true,
+      "id": "w2_yday",
+      "inputs": "cam=1, yday=2, rsi=1, macd=1, flow=1, earn=1",
+      "rank_key": 0.375,
+      "worst": {
+        "joint": 0.375,
+        "start": "2026-08-20",
+        "x": 4
+      }
+    },
+    {
+      "eligible": true,
+      "id": "flow_earn",
+      "inputs": "flow=1, earn=1",
+      "rank_key": 0.3333333333333333,
+      "worst": {
+        "joint": 0.3333333333333333,
+        "start": "2026-08-25",
+        "x": 8
+      }
+    },
+    {
+      "eligible": true,
+      "id": "only_macd",
+      "inputs": "macd=1",
+      "rank_key": 0.25,
+      "worst": {
+        "joint": 0.25,
+        "start": "2026-08-27",
+        "x": 8
+      }
+    },
+    {
+      "eligible": true,
+      "id": "rsi_mom",
+      "inputs": "cam=1, yday=1, rsi=1, macd=1, flow=1, earn=1, rsi_mode=mom",
+      "rank_key": 0.25,
+      "worst": {
+        "joint": 0.25,
+        "start": "2026-08-20",
+        "x": 4
+      }
+    },
+    {
+      "eligible": true,
+      "id": "yday_macd",
+      "inputs": "yday=1, macd=1",
+      "rank_key": 0.2,
+      "worst": {
+        "joint": 0.2,
+        "start": "2026-08-26",
+        "x": 8
+      }
+    },
+    {
+      "eligible": true,
+      "id": "drop_flow",
+      "inputs": "cam=1, yday=1, rsi=1, macd=1, earn=1",
+      "rank_key": 0.2,
+      "worst": {
+        "joint": 0.2,
+        "start": "2026-08-26",
+        "x": 8
+      }
+    },
+    {
+      "eligible": true,
+      "id": "cam_macd",
+      "inputs": "cam=1, macd=1",
+      "rank_key": 0.2,
+      "worst": {
+        "joint": 0.2,
+        "start": "2026-08-26",
+        "x": 8
+      }
+    },
+    {
+      "eligible": true,
+      "id": "cap_yday_10_macd_0_5",
+      "inputs": "cam=1, yday=1, rsi=1, macd=1, flow=1, earn=1, cap_yday=10, cap_macd=0.5",
+      "rank_key": 0.2,
+      "worst": {
+        "joint": 0.2,
+        "start": "2026-08-26",
+        "x": 8
+      }
+    },
+    {
+      "eligible": true,
+      "id": "cap_yday_20",
+      "inputs": "cam=1, yday=1, rsi=1, macd=1, flow=1, earn=1, cap_yday=20",
+      "rank_key": 0.2,
+      "worst": {
+        "joint": 0.2,
+        "start": "2026-08-26",
+        "x": 8
+      }
+    },
+    {
+      "eligible": true,
+      "id": "all_equal",
+      "inputs": "cam=1, yday=1, rsi=1, macd=1, flow=1, earn=1",
+      "rank_key": 0.2,
+      "worst": {
+        "joint": 0.2,
+        "start": "2026-08-26",
+        "x": 8
+      }
+    },
+    {
+      "eligible": true,
+      "id": "cap_macd_2",
+      "inputs": "cam=1, yday=1, rsi=1, macd=1, flow=1, earn=1, cap_macd=2",
+      "rank_key": 0.2,
+      "worst": {
+        "joint": 0.2,
+        "start": "2026-08-26",
+        "x": 8
+      }
+    },
+    {
+      "eligible": true,
+      "id": "cap_yday_10",
+      "inputs": "cam=1, yday=1, rsi=1, macd=1, flow=1, earn=1, cap_yday=10",
+      "rank_key": 0.2,
+      "worst": {
+        "joint": 0.2,
+        "start": "2026-08-26",
+        "x": 8
+      }
+    },
+    {
+      "eligible": true,
+      "id": "w2_rsi",
+      "inputs": "cam=1, yday=1, rsi=2, macd=1, flow=1, earn=1",
+      "rank_key": 0.2,
+      "worst": {
+        "joint": 0.2,
+        "start": "2026-08-26",
+        "x": 8
+      }
+    },
+    {
+      "eligible": true,
+      "id": "cam_flow",
+      "inputs": "cam=1, flow=1",
+      "rank_key": 0.2,
+      "worst": {
+        "joint": 0.2,
+        "start": "2026-08-26",
+        "x": 8
+      }
+    },
+    {
+      "eligible": true,
+      "id": "cap_macd_0_5",
+      "inputs": "cam=1, yday=1, rsi=1, macd=1, flow=1, earn=1, cap_macd=0.5",
+      "rank_key": 0.2,
+      "worst": {
+        "joint": 0.2,
+        "start": "2026-08-26",
+        "x": 8
+      }
+    },
+    {
+      "eligible": true,
+      "id": "drop_earn",
+      "inputs": "cam=1, yday=1, rsi=1, macd=1, flow=1",
+      "rank_key": 0.2,
+      "worst": {
+        "joint": 0.2,
+        "start": "2026-08-26",
+        "x": 8
+      }
+    }
+  ],
+  "top10": [
+    "only_earn",
+    "only_yday",
+    "cam_rsi",
+    "cam_yday",
+    "w2_yday",
+    "flow_earn",
+    "only_macd",
+    "rsi_mom",
+    "yday_macd",
+    "drop_flow"
+  ],
+  "top20": [
+    "only_earn",
+    "only_yday",
+    "cam_rsi",
+    "cam_yday",
+    "w2_yday",
+    "flow_earn",
+    "only_macd",
+    "rsi_mom",
+    "yday_macd",
+    "drop_flow",
+    "cam_macd",
+    "cap_yday_10_macd_0_5",
+    "cap_yday_20",
+    "all_equal",
+    "cap_macd_2",
+    "cap_yday_10",
+    "w2_rsi",
+    "cam_flow",
+    "cap_macd_0_5",
+    "drop_earn"
+  ],
+  "versions": {
+    "clean": {
+      "forward": {
+        "best": {
+          "2": {
+            "closed_mean": 14.0,
+            "compound_15_mean": -0.08479364057946548,
+            "compound_mean": -0.11540804588107212,
+            "days_entered_mean": 7.0,
+            "days_traded_mean": 7.0,
+            "down_mean": 6.0,
+            "entries_mean": 14.0,
+            "ex_best_mean": -0.12251968495238663,
+            "flat_mean": 3.0,
+            "n": 1,
+            "positive_share": 0.0,
+            "too_few": 1,
+            "up_mean": 1.0,
+            "up_share_mean": 0.14285714285714285,
+            "win_rate_mean": 0.07142857142857142
+          },
+          "4": {
+            "closed_mean": 28.0,
+            "compound_15_mean": -0.0639865945184489,
+            "compound_mean": -0.09348999114460455,
+            "days_entered_mean": 7.0,
+            "days_traded_mean": 7.0,
+            "down_mean": 5.0,
+            "entries_mean": 28.0,
+            "ex_best_mean": -0.1035011364939683,
+            "flat_mean": 3.0,
+            "n": 1,
+            "positive_share": 0.0,
+            "too_few": 1,
+            "up_mean": 2.0,
+            "up_share_mean": 0.2857142857142857,
+            "win_rate_mean": 0.14285714285714285
+          },
+          "8": {
+            "closed_mean": 46.0,
+            "compound_15_mean": -0.050050969928448596,
+            "compound_mean": -0.08016374237286783,
+            "days_entered_mean": 7.0,
+            "days_traded_mean": 7.0,
+            "down_mean": 6.0,
+            "entries_mean": 46.0,
+            "ex_best_mean": -0.08762579326110165,
+            "flat_mean": 3.0,
+            "n": 1,
+            "positive_share": 0.0,
+            "too_few": 0,
+            "up_mean": 1.0,
+            "up_share_mean": 0.14285714285714285,
+            "win_rate_mean": 0.2826086956521739
+          }
+        },
+        "dropped_77": {
+          "dropped_pnl": 0.0,
+          "share_of_sum": -0.0,
+          "total_pnl": -50897.94429501791
+        },
+        "iwm": {
+          "compound": -0.023277385842441767,
+          "down": 6,
+          "flat": 0,
+          "missing": [],
+          "n_marked": 10,
+          "up": 4
+        },
+        "random4": {
+          "compound_mean": -0.0991099718180614,
+          "compound_median": -0.10045233970146311,
+          "n": 1000
+        },
+        "top10": {
+          "2": {
+            "closed_mean": 14.0,
+            "compound_15_mean": -0.11170739792031567,
+            "compound_mean": -0.12632048568145032,
+            "days_entered_mean": 7.0,
+            "days_traded_mean": 7.0,
+            "down_mean": 5.6,
+            "entries_mean": 14.0,
+            "ex_best_mean": -0.14304472837387794,
+            "flat_mean": 3.0,
+            "n": 10,
+            "positive_share": 0.2,
+            "too_few": 10,
+            "up_mean": 1.4,
+            "up_share_mean": 0.2,
+            "win_rate_mean": 0.15714285714285714
+          },
+          "4": {
+            "closed_mean": 28.0,
+            "compound_15_mean": -0.08655683751017701,
+            "compound_mean": -0.10502229219205014,
+            "days_entered_mean": 7.0,
+            "days_traded_mean": 7.0,
+            "down_mean": 5.8,
+            "entries_mean": 28.0,
+            "ex_best_mean": -0.11667932559263376,
+            "flat_mean": 3.0,
+            "n": 10,
+            "positive_share": 0.0,
+            "too_few": 10,
+            "up_mean": 1.2,
+            "up_share_mean": 0.17142857142857143,
+            "win_rate_mean": 0.18928571428571428
+          },
+          "8": {
+            "closed_mean": 44.5,
+            "compound_15_mean": -0.07814076242368355,
+            "compound_mean": -0.10129929655121321,
+            "days_entered_mean": 7.0,
+            "days_traded_mean": 7.0,
+            "down_mean": 6.4,
+            "entries_mean": 44.5,
+            "ex_best_mean": -0.10985580697140995,
+            "flat_mean": 3.0,
+            "n": 10,
+            "positive_share": 0.0,
+            "too_few": 0,
+            "up_mean": 0.6,
+            "up_share_mean": 0.08571428571428572,
+            "win_rate_mean": 0.26375126390293224
+          }
+        },
+        "top20": {
+          "2": {
+            "closed_mean": 14.0,
+            "compound_15_mean": -0.07694841198100147,
+            "compound_mean": -0.08896388209347603,
+            "days_entered_mean": 7.0,
+            "days_traded_mean": 7.0,
+            "down_mean": 5.3,
+            "entries_mean": 14.0,
+            "ex_best_mean": -0.10968554360707101,
+            "flat_mean": 3.0,
+            "n": 20,
+            "positive_share": 0.2,
+            "too_few": 20,
+            "up_mean": 1.7,
+            "up_share_mean": 0.24285714285714283,
+            "win_rate_mean": 0.19642857142857142
+          },
+          "4": {
+            "closed_mean": 28.0,
+            "compound_15_mean": -0.0749088709015848,
+            "compound_mean": -0.09240365811496506,
+            "days_entered_mean": 7.0,
+            "days_traded_mean": 7.0,
+            "down_mean": 5.6,
+            "entries_mean": 28.0,
+            "ex_best_mean": -0.10331475733675217,
+            "flat_mean": 3.0,
+            "n": 20,
+            "positive_share": 0.0,
+            "too_few": 20,
+            "up_mean": 1.4,
+            "up_share_mean": 0.2,
+            "win_rate_mean": 0.20357142857142857
+          },
+          "8": {
+            "closed_mean": 44.05,
+            "compound_15_mean": -0.07378880726129526,
+            "compound_mean": -0.09571550907096113,
+            "days_entered_mean": 7.0,
+            "days_traded_mean": 7.0,
+            "down_mean": 6.3,
+            "entries_mean": 44.05,
+            "ex_best_mean": -0.10319089567818078,
+            "flat_mean": 3.0,
+            "n": 20,
+            "positive_share": 0.0,
+            "too_few": 0,
+            "up_mean": 0.7,
+            "up_share_mean": 0.1,
+            "win_rate_mean": 0.26486809449397924
+          }
+        }
+      },
+      "halted": false,
+      "tune": {
+        "best": {
+          "2": {
+            "closed_mean": 22.0,
+            "compound_15_mean": -0.005023122428055027,
+            "compound_mean": -0.058369902816915675,
+            "days_entered_mean": 11.0,
+            "days_traded_mean": 11.0,
+            "down_mean": 4.0,
+            "entries_mean": 22.0,
+            "ex_best_mean": -0.09502477637162732,
+            "flat_mean": 10.0,
+            "n": 1,
+            "positive_share": 0.0,
+            "too_few": 1,
+            "up_mean": 7.0,
+            "up_share_mean": 0.6363636363636364,
+            "win_rate_mean": 0.5454545454545454
+          },
+          "4": {
+            "closed_mean": 44.0,
+            "compound_15_mean": 0.05181873194742148,
+            "compound_mean": 0.0016693904439553098,
+            "days_entered_mean": 11.0,
+            "days_traded_mean": 11.0,
+            "down_mean": 5.0,
+            "entries_mean": 44.0,
+            "ex_best_mean": -0.031003836071767932,
+            "flat_mean": 10.0,
+            "n": 1,
+            "positive_share": 1.0,
+            "too_few": 0,
+            "up_mean": 6.0,
+            "up_share_mean": 0.5454545454545454,
+            "win_rate_mean": 0.5227272727272727
+          },
+          "8": {
+            "closed_mean": 88.0,
+            "compound_15_mean": 0.007826780171708903,
+            "compound_mean": -0.04669593862117849,
+            "days_entered_mean": 11.0,
+            "days_traded_mean": 11.0,
+            "down_mean": 5.0,
+            "entries_mean": 88.0,
+            "ex_best_mean": -0.06196687589257066,
+            "flat_mean": 10.0,
+            "n": 1,
+            "positive_share": 0.0,
+            "too_few": 0,
+            "up_mean": 6.0,
+            "up_share_mean": 0.5454545454545454,
+            "win_rate_mean": 0.4431818181818182
+          }
+        },
+        "dropped_77": {
+          "dropped_pnl": 0.0,
+          "share_of_sum": -0.0,
+          "total_pnl": -39970.11564240512
+        },
+        "iwm": {
+          "compound": -0.04868858046874969,
+          "down": 12,
+          "flat": 0,
+          "missing": [],
+          "n_marked": 21,
+          "up": 9
+        },
+        "random4": {
+          "compound_mean": -0.03737640255176208,
+          "compound_median": -0.04546282398983931,
+          "n": 1000
+        },
+        "top10": {
+          "2": {
+            "closed_mean": 22.0,
+            "compound_15_mean": -0.014988293182249045,
+            "compound_mean": -0.052871548914523156,
+            "days_entered_mean": 11.0,
+            "days_traded_mean": 11.0,
+            "down_mean": 5.6,
+            "entries_mean": 22.0,
+            "ex_best_mean": -0.10374324145961322,
+            "flat_mean": 10.0,
+            "n": 10,
+            "positive_share": 0.3,
+            "too_few": 10,
+            "up_mean": 5.4,
+            "up_share_mean": 0.4909090909090909,
+            "win_rate_mean": 0.48636363636363633
+          },
+          "4": {
+            "closed_mean": 44.0,
+            "compound_15_mean": -0.006106561852350467,
+            "compound_mean": -0.04762374559513275,
+            "days_entered_mean": 11.0,
+            "days_traded_mean": 11.0,
+            "down_mean": 5.5,
+            "entries_mean": 44.0,
+            "ex_best_mean": -0.07909980386512815,
+            "flat_mean": 10.0,
+            "n": 10,
+            "positive_share": 0.3,
+            "too_few": 0,
+            "up_mean": 5.5,
+            "up_share_mean": 0.5,
+            "win_rate_mean": 0.4818181818181818
+          },
+          "8": {
+            "closed_mean": 87.4,
+            "compound_15_mean": 0.004343104784286666,
+            "compound_mean": -0.05054716630503865,
+            "days_entered_mean": 11.0,
+            "days_traded_mean": 11.0,
+            "down_mean": 5.8,
+            "entries_mean": 87.4,
+            "ex_best_mean": -0.06879828708336169,
+            "flat_mean": 10.0,
+            "n": 10,
+            "positive_share": 0.1,
+            "too_few": 0,
+            "up_mean": 5.2,
+            "up_share_mean": 0.47272727272727266,
+            "win_rate_mean": 0.4714994775339603
+          }
+        },
+        "top20": {
+          "2": {
+            "closed_mean": 22.0,
+            "compound_15_mean": -0.06186900305503842,
+            "compound_mean": -0.09020998121994978,
+            "days_entered_mean": 11.0,
+            "days_traded_mean": 11.0,
+            "down_mean": 6.25,
+            "entries_mean": 22.0,
+            "ex_best_mean": -0.13401459958266096,
+            "flat_mean": 10.0,
+            "n": 20,
+            "positive_share": 0.2,
+            "too_few": 20,
+            "up_mean": 4.75,
+            "up_share_mean": 0.4318181818181818,
+            "win_rate_mean": 0.43636363636363634
+          },
+          "4": {
+            "closed_mean": 44.0,
+            "compound_15_mean": -0.01789824390771972,
+            "compound_mean": -0.05483312970608325,
+            "days_entered_mean": 11.0,
+            "days_traded_mean": 11.0,
+            "down_mean": 5.85,
+            "entries_mean": 44.0,
+            "ex_best_mean": -0.08575885090155182,
+            "flat_mean": 10.0,
+            "n": 20,
+            "positive_share": 0.15,
+            "too_few": 0,
+            "up_mean": 5.15,
+            "up_share_mean": 0.46818181818181814,
+            "win_rate_mean": 0.4704545454545455
+          },
+          "8": {
+            "closed_mean": 87.25,
+            "compound_15_mean": -0.0035427034682672665,
+            "compound_mean": -0.05480746728599277,
+            "days_entered_mean": 11.0,
+            "days_traded_mean": 11.0,
+            "down_mean": 5.85,
+            "entries_mean": 87.25,
+            "ex_best_mean": -0.07792733848594421,
+            "flat_mean": 10.0,
+            "n": 20,
+            "positive_share": 0.05,
+            "too_few": 0,
+            "up_mean": 5.15,
+            "up_share_mean": 0.46818181818181814,
+            "win_rate_mean": 0.4590909090909091
+          }
+        }
+      }
+    },
+    "yahoo": {
+      "halted": true,
+      "jumps": [
+        {
+          "date": "2025-07-23",
+          "leg": "open_over_prev_close",
+          "ratio": 6.31,
+          "ticker": "ABVX"
+        },
+        {
+          "date": "2025-07-28",
+          "leg": "open_over_prev_close",
+          "ratio": 5.858028,
+          "ticker": "BNC"
+        },
+        {
+          "date": "2026-08-17",
+          "leg": "open_over_prev_close",
+          "ratio": 30.693779,
+          "ticker": "BYND"
+        },
+        {
+          "date": "2025-07-28",
+          "leg": "open_over_prev_close",
+          "ratio": 3.33769,
+          "ticker": "CELC"
+        },
+        {
+          "date": "2025-11-12",
+          "leg": "close_over_open",
+          "ratio": 3.38843,
+          "ticker": "CYPH"
+        },
+        {
+          "date": "2025-12-22",
+          "leg": "close_over_open",
+          "ratio": 4.075032,
+          "ticker": "FJET"
+        },
+        {
+          "date": "2025-09-08",
+          "leg": "open_over_prev_close",
+          "ratio": 13.006897,
+          "ticker": "ORBS"
+        },
+        {
+          "date": "2025-08-28",
+          "leg": "open_over_prev_close",
+          "ratio": 0.333053,
+          "ticker": "OTLK"
+        },
+        {
+          "date": "2026-08-20",
+          "leg": "open_over_prev_close",
+          "ratio": 9.856631,
+          "ticker": "REAX"
+        },
+        {
+          "date": "2025-12-11",
+          "leg": "open_over_prev_close",
+          "ratio": 0.111974,
+          "ticker": "RZLT"
+        }
+      ],
+      "n": 10
+    }
+  }
+}
