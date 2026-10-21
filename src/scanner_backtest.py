@@ -10,6 +10,7 @@ import argparse
 import hashlib
 import json
 import random
+import re
 import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -79,9 +80,9 @@ def open_program(descriptions: Path, sectors: Path | None, universe: Path | None
     if filing_profiles is not None:
         if not as_of:
             raise ValueError('--filing-profiles requires an explicit --as-of date')
-        from .deep_profile_store import attach_profiles
+        from .stock_keyword_store import attach_keyword_profiles
         from .stock_evidence import Catalog
-        board.evidence_board, coverage = attach_profiles(board.evidence_board, filing_profiles,
+        board.evidence_board, coverage = attach_keyword_profiles(board.evidence_board, filing_profiles,
                                                        as_of=as_of, catalog=Catalog(board.source_rows))
     board.filing_coverage = coverage
     names = NameIndex(catalog_from_csv(descriptions)) if descriptions.is_file() else None
@@ -113,7 +114,7 @@ def snapshot_metadata(board, input_mode: str = 'headline') -> dict:
     """Bind cached results to source code, lexical resources and compiled inputs."""
     root = Path(__file__).resolve().parents[1]
     source_names = ('correlation', 'evidence_matcher', 'stock_evidence', 'filing_evidence', 'deep_profile_store', 'filing_relationships',
-                    'names', 'aliases', 'linguistics', 'semantic_lookup', 'synonyms',
+                    'stock_keywords', 'stock_keyword_store', 'names', 'aliases', 'linguistics', 'semantic_lookup', 'synonyms',
                     'places', 'spelling', 'profile_cache', 'link_correlation', 'scanner_backtest')
     paths = [root / 'src' / (name + '.py') for name in source_names]
     paths += [root / 'scripts/export_backtest_static.py']
@@ -147,6 +148,10 @@ def profile_view(profile) -> dict:
             'source': 'scoring_board', 'enriched': any(s.get('filing_date') for s in profile.sources),
             'warnings': list(profile.warnings), 'facts': facts, 'sources': profile.sources,
             'deep_profile': getattr(profile, 'deep_profile', None),
+            'keyword_schema': 'stock-keywords-1.0',
+            'keywords': getattr(profile, 'keyword_records', []),
+            'keyword_evidence': getattr(profile, 'keyword_evidence', {}),
+            'keyword_coverage': getattr(profile, 'keyword_coverage', {}),
             'display_limits': {'facts_per_kind': None, 'passage_characters': None},
             'used_for_scoring': True}
 
@@ -195,6 +200,8 @@ def run_article(board, article: dict, *, names=None, input_mode='headline', snap
     selected = select_input(article, input_mode)
     linked = link_articles(board, [selected], names=names, engine=ENGINE)
     result = present(linked[0])
+    from .stock_keywords import compare_article
+    result['keyword_comparison'] = compare_article(board,selected['text'],article_date=str(selected.get('published_at') or '')[:10])
     result.update({'input_mode': input_mode,
                    'input_sha256': hashlib.sha256(str(selected.get('text') or '').encode()).hexdigest(),
                    'snapshot_id': (snapshot or {}).get('snapshot_id', '')})
@@ -311,6 +318,20 @@ def dispatch(gate: Gate, method: str, path: str, body: bytes | None = None):
         except RuntimeError as exc:
             return 503, {"error": str(exc)}, "application/json"
         return 200, result, "application/json"
+    if method == 'POST' and path == '/api/keywords':
+        if not gate.ready or gate.board is None:
+            return 503, {'error':'stock board is still loading'}, 'application/json'
+        try:
+            payload = json.loads((body or b'{}').decode())
+            if not isinstance(payload,dict) or not isinstance(payload.get('text'),str) or not payload['text'].strip():
+                raise ValueError('nonempty article text is required')
+            date = payload.get('article_date','')
+            if not isinstance(date,str) or (date and not re.fullmatch(r'\d{4}-\d{2}-\d{2}',date)):
+                raise ValueError('article_date must be YYYY-MM-DD')
+        except (ValueError,UnicodeError) as exc:
+            return 400, {'error':str(exc)}, 'application/json'
+        from .stock_keywords import compare_article
+        return 200, compare_article(gate.board,payload['text'],article_date=date), 'application/json'
     return 404, {"error": "not found"}, "application/json"
 
 
@@ -383,5 +404,6 @@ def main(argv: list[str] | None = None) -> None:
 
 if __name__ == "__main__":
     main()
+
 
 

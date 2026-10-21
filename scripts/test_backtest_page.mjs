@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import {gzipSync} from 'node:zlib';
 import {webcrypto} from 'node:crypto';
+import {spawnSync} from 'node:child_process';
 const html = fs.readFileSync(new URL('../dashboard/scanner-backtest/index.html', import.meta.url), 'utf8');
 const code = html.match(/<script>([\s\S]*?)<\/script>/)[1];
 new vm.Script(code);
@@ -67,4 +68,36 @@ box.children[5].value = 'high';
 box.children[5].listeners.change();
 assert.match(paragraphList.children[0].textContent, /0 of 101/);
 console.log('Every paragraph is reachable, searchable, filterable, and rendered as safe full text.');
+
+// Both paths must match the same normalized phrase, direction, status and exact
+// article offsets. Python exports relevant dictionary forms to the browser.
+const parity = spawnSync('python',['-I','-S','-c',`
+import json,sys
+sys.path.insert(0,sys.argv[1])
+from src.test_stock_keywords import graph,profile
+from src.stock_keywords import compile_keywords,KeywordIndex
+index=KeywordIndex({'BLZE':profile(compile_keywords(graph(),as_of='2026-04-01'))})
+texts=['Western Digital faces hard-drive disruption','Stripe disruption; Backblaze shares fall','Western. Digital shares rise','unrelated article','HARD DRIVES and Western Digital']
+print(json.dumps({'payload':index.browser_payload(),'cases':[{'text':t,'result':index.compare(t)} for t in texts]}))
+`,new URL('..',import.meta.url).pathname],{encoding:'utf8',maxBuffer:10_000_000});
+assert.equal(parity.status,0,parity.stderr);
+const fixture = JSON.parse(parity.stdout);
+context.parityPayload = fixture.payload;
+vm.runInContext('keywordSearchIndex = prepareKeywordIndex(parityPayload)',context);
+const signature = result => result.matches.map(r => [r.id,r.stock,r.relationship,r.assertion,r.current_as_of_cutoff,
+  r.usable_for_scoring,r.article_span.start,r.article_span.end,r.article_span.text]).sort((a,b) => JSON.stringify(a).localeCompare(JSON.stringify(b)));
+for (const test of fixture.cases) {
+  context.parityText = test.text;
+  const actual = vm.runInContext('compareKeywordText(keywordSearchIndex,parityText)',context);
+  assert.equal(JSON.stringify(signature(actual)),JSON.stringify(signature(test.result)),test.text);
+  assert.equal(actual.stock_passes_changed,false);
+}
+context.keywordBox = element();
+context.keywordRows = fixture.payload.phrases.filter(p => p.row.relationship !== 'issuer').map(p => p.row);
+vm.runInContext('renderKeywordRecords(keywordBox,keywordRows)',context);
+assert.match(context.keywordBox.children[1].children[0].textContent,/keyword records/);
+vm.runInContext('renderMatches({decision:"no_pass",pass_count:0,passes:[],keyword_comparison:{matches:keywordRows,broad_matches:[]}})',context);
+assert.match(elements.get('article-keywords').children[0].textContent,/relationship/);
+console.log('Python/browser keyword matching parity, exact offsets, direction labels, and no-pass visibility passed.');
+
 

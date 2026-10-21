@@ -6,6 +6,9 @@ on:
       - 'src/correlation.py'
       - 'src/evidence_matcher.py'
       - 'src/stock_evidence.py'
+      - 'src/stock_keywords.py'
+      - 'src/stock_keyword_store.py'
+      - 'scripts/publish_filing_objects.py'
       - 'src/filing*.py'
       - 'src/deep_profile_store.py'
       - 'scripts/build_filing_profiles.py'
@@ -30,7 +33,7 @@ on:
       - 'data/news_intake/2026-10-17/documents.json'
       - '.github/workflows/scanner-backtest-publish.yml'
   workflow_run:
-    workflows: [Deep SEC filing profiles]
+    workflows: [Deep SEC filing profiles, Recover deep SEC filing profiles]
     types: [completed]
   workflow_dispatch:
 permissions:
@@ -47,6 +50,8 @@ jobs:
     outputs:
       ready: ${{ steps.profiles.outputs.ready }}
       run: ${{ steps.profiles.outputs.run }}
+      artifact: ${{ steps.profiles.outputs.artifact }}
+      scope: ${{ steps.profiles.outputs.scope }}
     steps:
       - name: Resolve the latest complete archived filing profile set
         id: profiles
@@ -54,14 +59,18 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=deep-filing-profiles-complete&per_page=50" > artifacts.json
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=deep-filing-real-source-check&per_page=50" > samples.json
           python - <<'PY'
           import json, os
-          data = json.load(open('artifacts.json'))
-          candidates = [a for a in data['artifacts'] if not a['expired'] and a.get('workflow_run', {}).get('head_branch') == 'main']
+          def candidates(path):
+              return [a for a in json.load(open(path))['artifacts'] if not a['expired'] and a.get('workflow_run', {}).get('head_branch') == 'main']
+          full,samples = candidates('artifacts.json'),candidates('samples.json')
           with open(os.environ['GITHUB_OUTPUT'], 'a') as stream:
-              if candidates:
-                  selected = max(candidates, key=lambda a: a['created_at'])
+              if full or samples:
+                  selected = max(full or samples, key=lambda a: a['created_at'])
                   stream.write('ready=true\nrun='+str(selected['workflow_run']['id'])+'\n')
+                  stream.write('artifact='+selected['name']+'\nscope='+('archive_set' if full else 'development_sample')+'\n')
+                  if not full: print('Publish a clearly labelled real-filing development sample while recovery continues. Never label it whole-archive coverage.')
               else:
                   stream.write('ready=false\n')
                   print('Keep the current page until the complete whole-archive profile set is available.')
@@ -96,7 +105,7 @@ jobs:
           python -m scripts.bootstrap_semantics
       - uses: actions/download-artifact@v4
         with:
-          name: deep-filing-profiles-complete
+          name: ${{ needs.source.outputs.artifact }}
           path: filing-profiles
           run-id: ${{ needs.source.outputs.run }}
           github-token: ${{ github.token }}
@@ -112,11 +121,28 @@ jobs:
           with open(os.environ['GITHUB_ENV'], 'a') as stream:
               stream.write('FILING_AS_OF='+index['as_of']+'\n')
           PY
+      - name: Check optional durable archive storage without exposing credentials
+        id: storage
+        env:
+          R2_ENDPOINT_URL: ${{ secrets.R2_ENDPOINT_URL || vars.R2_ENDPOINT_URL }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET || vars.R2_BUCKET }}
+          R2_PUBLIC_BASE_URL: ${{ vars.R2_PUBLIC_BASE_URL }}
+        run: |
+          python -m scripts.publish_filing_objects --preflight
+          if [ -n "$R2_ENDPOINT_URL" ] && [ -n "$R2_ACCESS_KEY_ID" ] && [ -n "$R2_SECRET_ACCESS_KEY" ] && [ -n "$R2_BUCKET" ] && [ -n "$R2_PUBLIC_BASE_URL" ]; then
+            python -m pip install boto3==1.35.99
+            python -m scripts.publish_filing_objects --directory filing-profiles
+          else
+            echo 'Full graphs remain in the GitHub archive; publishing complete compact keywords and evidence to Pages.'
+          fi
       - name: Regressions must pass before replacing the public snapshot
         run: >-
           python -I -S scripts/offline_evidence_checks.py --unittest
           src.test_correlation src.test_eval_harness src.test_evidence_matcher
           src.test_scanner_backtest src.test_deep_profile_store scripts.test_materialize_filing_texts
+          src.test_stock_keywords scripts.test_publish_filing_objects
           scripts.test_scan_validation_batches scripts.test_export_backtest_static
           scripts.test_publish_scanner_snapshot
       - name: Score full intake through the current headline evidence engine
@@ -125,7 +151,18 @@ jobs:
         run: >-
           python -I -S scripts/offline_evidence_checks.py --backtest-export
           --filing-profiles filing-profiles --as-of "$FILING_AS_OF"
+          --profile-assets keywords
+          --dataset-scope "${{ needs.source.outputs.scope }}"
+          --profile-archive-url "https://github.com/$GITHUB_REPOSITORY/actions/runs/${{ needs.source.outputs.run }}"
+          --profile-base-url "${PROFILE_PUBLIC_BASE_URL:-}"
           --workers 1 --shard-size 200 --out-dir generated-scanner
+      - name: Check the complete snapshot budget before touching the public page
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from scripts.publish_scanner_snapshot import validate_budget
+          print('Compact snapshot bytes:',validate_budget(Path('generated-scanner')))
+          PY
       - name: Stage the complete page before publication
         run: cp dashboard/scanner-backtest/index.html generated-scanner/index.html
       - uses: actions/upload-artifact@v4
@@ -167,6 +204,17 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p dashboard/scanner-backtest scanner-backtest
+          python - <<'PY'
+          from pathlib import Path
+          import os
+          source=Path(os.environ['SNAPSHOT_DIRECTORY'])
+          outside=sum(p.stat().st_size for p in Path('.').rglob('*') if p.is_file()
+              and '.git' not in p.parts and not p.is_relative_to(Path('dashboard/scanner-backtest'))
+              and not p.is_relative_to(Path('scanner-backtest')))
+          incoming=sum(p.stat().st_size for p in source.rglob('*') if p.is_file())
+          assert outside+incoming < 950_000_000, 'Whole published site exceeds safe Pages budget'
+          PY
+          git rm -r --ignore-unmatch dashboard/scanner-backtest/scoring-profiles dashboard/scanner-backtest/filing-profiles
           cp -a "$SNAPSHOT_DIRECTORY/." dashboard/scanner-backtest/
           printf '%s\n' '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=../dashboard/scanner-backtest/"><a href="../dashboard/scanner-backtest/">Open the SEC parser test page</a>' > scanner-backtest/index.html
           git config user.name 'Scanner page publisher'
@@ -200,4 +248,5 @@ jobs:
               time.sleep(10)
           else: raise SystemExit('Pages did not serve the expected snapshot; publication is not verified')
           PY
+
 

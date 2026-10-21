@@ -10,6 +10,16 @@ from scripts.publish_scanner_snapshot import artifact_names
 
 
 class SnapshotPublishTests(unittest.TestCase):
+    def test_budget_failure_prevents_publication_without_truncating(self):
+        from scripts.publish_scanner_snapshot import validate_budget
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);self.fixture(root)
+            before=(root/'meta.json').read_bytes()
+            with self.assertRaisesRegex(ValueError,'budget'):
+                validate_budget(root,total_limit=1)
+            with self.assertRaisesRegex(ValueError,'budget'):
+                validate_budget(root,file_limit=1)
+            self.assertEqual(before,(root/'meta.json').read_bytes())
     def test_api_publisher_updates_only_five_paths_without_force(self):
         calls=[]
         def api(method,path,payload=None):
@@ -130,4 +140,5 @@ class SnapshotPublishTests(unittest.TestCase):
 
 if __name__=='__main__':
     unittest.main()
+
 
