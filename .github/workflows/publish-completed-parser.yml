@@ -26,6 +26,8 @@ jobs:
           sparse-checkout: |
             scripts/export_completed_parser.py
             scripts/test_export_completed_parser.py
+            scripts/materialize_filing_texts.py
+            scripts/resilient_filing_texts.py
             dashboard/scanner-backtest/completed/index.html
           sparse-checkout-cone-mode: false
       - uses: actions/setup-python@v5
@@ -33,16 +35,11 @@ jobs:
           python-version: '3.12'
       - name: Check exact quotation, paragraph and Unicode projection
         run: python -m unittest scripts.test_export_completed_parser -v
-      - name: Download the already completed all-stock extraction
-        uses: actions/download-artifact@v4
-        with:
-          name: deep-filing-profiles-complete
-          run-id: 39522456843
-          github-token: ${{ github.token }}
-          path: existing-profiles
       - name: Package existing decisions without SEC downloads or spaCy
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          python -u scripts/export_completed_parser.py --profiles existing-profiles --out completed-view
+          python -u scripts/export_completed_parser.py --saved-zip --out completed-view
           cp dashboard/scanner-backtest/completed/index.html completed-view/index.html
           cp scripts/export_completed_parser.py completed-view/export_completed_parser.py
       - uses: actions/upload-artifact@v4
