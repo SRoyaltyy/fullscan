@@ -26545,6 +26545,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-21",
+          "actual_pct": -0.1,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.58
         }
       },
       "lesson_schema_ok": true
@@ -33204,6 +33216,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "flat",
           "confidence": 0.45
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-10-21",
+          "actual_pct": 0.5,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -33575,7 +33599,20 @@
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
       "outlier_watch": "Dow only −0.34% with an early +0.78% spike vs NDX −2.15% trend-down; KOSPI +2.05% vs US chips lower; HY OAS quiet vs CoreWeave distressed; Indonesia −11% local shock",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-10-21",
+          "actual_pct": 1.28,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -33933,7 +33970,7 @@
           "status": "miss"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-21_lesson.md",
       "sources_used": [
         {
           "url": "https://www.cnbc.com/2026/10/20/stock-market-today-live-updates.html",
@@ -34026,7 +34063,9 @@
       "key_interaction": null,
       "knowable_at_9am": null,
       "attribution_contested": null,
-      "outlier_watch": null
+      "outlier_watch": null,
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     }
   ]
 }
