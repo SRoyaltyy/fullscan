@@ -101,18 +101,18 @@
       "base_url": ""
     },
     "engine_snapshot_id": "23e1cb54a5887d4e4894a1c5c9533424c1e38db39151fa4797b703af655db29c",
-    "source_revision": "ec628e91609c3dfc3d301f9f9b5171dc51d0a674",
+    "source_revision": "13588f864555b34fa9c0ad82743b8caf4f72d329",
     "news_sha256": "c178bcd3b7265f9de3d1186beee0ee1199c1aa28526da27133e8cd245a8630eb",
-    "article_entities_sha256": "c39c8e9628225be941719adfabf549835bec1bf3431aebeea9faf227c40bec60",
-    "snapshot_id": "b85c6be43898a16ca8dffb0a8237dc01e29d02ecb283e7478b00578505be0d5e"
+    "article_entities_sha256": "9467be18f4ce42345826be09bae87d330f68d4c17586f97c5c71c45c599f8d48",
+    "snapshot_id": "ef543a0eee773604278e9d03085be3661e4e9ac9e38ba75da79631b4ef07167d"
   },
   "articles": 11255,
   "articles_with_passes": 2565,
   "keyword_index": {
     "path": "keyword-index.json.gz",
-    "sha256": "d597b0c15ea315d568507d247cd1835062306d030524457de5cf719bd9b518f6",
+    "sha256": "7c2d7efc1dbf4dba4095a4bd5bd50df8a3bf61f2a34adcd983eeb105afaa30eb",
     "schema": "stock-keywords-1.1",
     "phrases": 11240
   },
-  "generated_at": "2026-10-21T13:47:05Z"
+  "generated_at": "2026-10-21T14:07:07Z"
 }
