@@ -12,9 +12,9 @@
       "src/filing_evidence.py": "e5b006ab47c07d798e5fafaad368d790572d42953f3c66767cb5ba56f39e555b",
       "src/deep_profile_store.py": "4061382c089b079e0ce403ad9ca237adedb5c2fe1afbe900bf2055cbbb4a7cde",
       "src/filing_relationships.py": "f31b2b6f1e526503fa6f0f9c6531a2bd7707dbe010337de1a599d1e271bf70f4",
-      "src/stock_keywords.py": "0c7a84a7c17643604f9174beb234e0454b475ca0db0530f100f2f46701709920",
+      "src/stock_keywords.py": "d7413ab66a79802dedb2ddab2f0a85f0df424faefd3aec9a407f5737713aca6a",
       "src/stock_keyword_store.py": "51f1514947aa6aa9db6c59911793b22a14e7c19066caadf4049e6409d10de558",
-      "src/entity_resolution.py": "60d8e04a066857946cbbc593875eb75f01359a52de02ff7cf35d1993c03476ef",
+      "src/entity_resolution.py": "3b2ac30f76b267ae87935673b1aba176a80b7e9d72b1d836cd1be7db68b08724",
       "src/term_inventory.py": "31c77a221844957830b4ce4282479324ff5516da2495bac7161cffe0f87a8a49",
       "src/names.py": "5576394d9d2ae105ff219b91c5ad10784ccc430f9e2ef262bc1e31945e735ad8",
       "src/aliases.py": "6d578666a2e0de65c0434c7304084ae2d3e519d8e090d688d73cb801f451e827",
@@ -100,19 +100,19 @@
       "archive_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/39660625047",
       "base_url": ""
     },
-    "engine_snapshot_id": "6b541d9c47f14dd22c4d26114129859164bb1352184d49ae7c755fa204c59bab",
-    "source_revision": "d072daf0bce2aff7596d1a38c25d0b0564177aa2",
+    "engine_snapshot_id": "50a9551ed145536593d9346a623d89e0d58086db9322cb9cfaa864a295865c6b",
+    "source_revision": "f2132df37e7296add799c838b935b80ebb9a031e",
     "news_sha256": "c178bcd3b7265f9de3d1186beee0ee1199c1aa28526da27133e8cd245a8630eb",
     "article_entities_sha256": "c39c8e9628225be941719adfabf549835bec1bf3431aebeea9faf227c40bec60",
-    "snapshot_id": "019ffc233ce23813faacdf1980769ed52d031558139560fc573e0cde10888ebc"
+    "snapshot_id": "f022ec96b92ee5e61f71d001bae5561634c00badf28a9792eb58aaca73871292"
   },
   "articles": 11255,
   "articles_with_passes": 2565,
   "keyword_index": {
     "path": "keyword-index.json.gz",
-    "sha256": "5b8e799d557dc6dacab2b95e586e3312e2aee8b0cc1d0a7977f7a83b8727e71f",
+    "sha256": "8f16f2f4ae8c5476b09cdcc8fbf537ba0032a2658826492271feb02a12e0cd4d",
     "schema": "stock-keywords-1.1",
-    "phrases": 11309
+    "phrases": 11313
   },
-  "generated_at": "2026-10-21T19:48:20Z"
+  "generated_at": "2026-10-21T20:15:25Z"
 }
