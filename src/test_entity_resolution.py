@@ -3,7 +3,7 @@ import unittest
 from types import SimpleNamespace
 from .stock_keywords import compile_keywords,KeywordIndex
 from .test_stock_keywords import graph,profile
-from .entity_resolution import decide,validate_annotations,person_fact_alignment
+from .entity_resolution import decide,validate_annotations,person_fact_alignment,project_annotations
 
 
 def fixture():
@@ -83,6 +83,14 @@ class EntityResolutionControls(unittest.TestCase):
         self.assertFalse(result['matches'])
         self.assertGreaterEqual(len(result['unresolved_matches']),2)
 
+    def test_omitted_middle_name_preserves_first_and_last_identity(self):
+        profiles=fixture();p=profiles['ACME']
+        row=next(r for r in p.keyword_records if r['relationship']=='officer')
+        row.update(keyword='John Alan McDonald',normalized='john alan mcdonald')
+        result=KeywordIndex(profiles).compare('John McDonald resigns')
+        self.assertEqual(len(result['matches']),1)
+        self.assertEqual(result['matches'][0]['identity']['name'],'John Alan McDonald')
+
     def test_same_gate_protects_legacy_person_stock_pass_route(self):
         from .stock_evidence import Fact,Profile,index_profiles
         p=Profile('ACME','Acme Industries','','')
@@ -90,6 +98,14 @@ class EntityResolutionControls(unittest.TestCase):
         p.facts=[fact];board=index_profiles({'ACME':p})
         self.assertFalse(person_fact_alignment(board,p,fact,"McDonald's restaurant earnings rise",'mcdonald'))
         self.assertTrue(person_fact_alignment(board,p,fact,'Acme Industries CEO McDonald resigns','mcdonald'))
+        text='John McDonald resigns'
+        self.assertFalse(person_fact_alignment(board,p,fact,text,'mcdonald',annotations=[{'start':0,'end':13,'text':'John McDonald','label':'ORG'}]))
+
+    def test_grammar_types_survive_legacy_unicode_and_passage_normalization(self):
+        text='Context. John McDonald’s business expands'
+        parsed=[{'start':9,'end':22,'text':'John McDonald','label':'ORG'}]
+        projected=project_annotations(text,parsed,"John McDonald's business expands")
+        self.assertEqual(projected,[{'start':0,'end':13,'text':'John McDonald','label':'ORG'}])
 
 
 if __name__=='__main__':unittest.main()

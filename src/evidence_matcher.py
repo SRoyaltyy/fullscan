@@ -333,8 +333,11 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
     output = []
     for article in articles:
         text = str(article.get('text') or article.get('body') or '')
+        from .entity_resolution import validate_annotations,project_annotations
+        article_annotations=validate_annotations(text,article.get('entity_annotations'))
         title = str(article.get('title') or '')
         if title and not text.lstrip().startswith(title):
+            article_annotations=[{**a,'start':a['start']+len(title)+1,'end':a['end']+len(title)+1} for a in article_annotations]
             text = title + '\n' + text
         ps = passages(text,title)
         quality = input_quality(text,title)
@@ -384,6 +387,7 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                 row['reasons'].append(route)
 
         for passage in ps:
+            typed_mentions=project_annotations(text,article_annotations,passage.text)
             literal_query = set(passage.terms)
             event_object=_event_object(passage.text)
             query,semantic_origin,semantic_evidence = expand(literal_query)
@@ -547,7 +551,7 @@ def link_evidence(legacy_board, articles: list[dict], *, names=None, profiles=No
                     continue
                 if kind=='person':
                     from .entity_resolution import person_fact_alignment
-                    if not person_fact_alignment(board,p,fact,passage.text,key):continue
+                    if not person_fact_alignment(board,p,fact,passage.text,key,annotations=typed_mentions):continue
                 if kind=='person' and key in english_words() and not re.search(r'\b'+re.escape(fact.text.split()[0])+r'\s+(?:[A-Za-z]+\.?\s+){0,2}'+re.escape(fact.text.split()[-1])+r'\b',identity_text):continue
                 if kind=='owned_product' and not _product_surface(fact,passage.text):
                     continue

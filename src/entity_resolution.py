@@ -47,6 +47,8 @@ def aliases(value, kind):
         forms.update(f.replace("'",'') for f in list(forms))
     if kind == 'PERSON' and len(surface(value).split()) > 1:
         forms.add(surface(value).split()[-1])
+        parts=surface(value).split()
+        if len(parts)>2:forms.add(parts[0]+' '+parts[-1])
     return sorted(f for f in forms if f)
 
 
@@ -182,7 +184,23 @@ def validate_annotations(text, payload):
     return payload.get('mentions',[])
 
 
-def person_fact_alignment(board, profile, fact, text, key):
+def project_annotations(text, annotations, passage):
+    """Keep validated NER types when the older scanner normalizes passages."""
+    if not annotations:return []
+    from unicodedata import normalize
+    def normalized(value):return normalize('NFKC',value).replace('’',"'")
+    offset=normalized(text).find(passage)
+    if offset<0:return []
+    result=[]
+    for annotation in annotations:
+        start=len(normalized(text[:annotation['start']]))-offset
+        end=len(normalized(text[:annotation['end']]))-offset
+        if 0<=start<end<=len(passage) and passage[start:end]==normalized(annotation['text']):
+            result.append({**annotation,'start':start,'end':end,'text':passage[start:end]})
+    return result
+
+
+def person_fact_alignment(board, profile, fact, text, key, *, annotations=()):
     """Use the same person gate in the older stock-pass path as keyword search."""
     def descriptor(p,f):
         return identity({'stock':p.ticker,'keyword':f.text,'relationship':'officer','object_type':'PERSON',
@@ -196,5 +214,5 @@ def person_fact_alignment(board, profile, fact, text, key):
         for i in range(len(sequence)-len(expected)+1):
             found=sequence[i:i+len(expected)]
             if [lemma(m.group()) for m in found]==expected:
-                if decide(entity,text,found[0].start(),found[-1].end(),peers=peers)['status']=='resolved':return True
+                if decide(entity,text,found[0].start(),found[-1].end(),peers=peers,annotations=annotations)['status']=='resolved':return True
     return False
