@@ -1,0 +1,199 @@
+name: Recover deep SEC filing profiles
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/deep-filing-profiles-recover.yml'
+      - 'scripts/resilient_filing_texts.py'
+      - 'scripts/recover_filing_profiles.py'
+      - 'scripts/test_resilient_filing_texts.py'
+      - 'scripts/test_recover_filing_profiles.py'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/deep-filing-profiles-recover.yml'
+      - 'scripts/resilient_filing_texts.py'
+      - 'scripts/recover_filing_profiles.py'
+  workflow_dispatch:
+    inputs:
+      source_run_id:
+        description: Original Deep SEC filing profiles run to complete
+        type: string
+        required: false
+  workflow_run:
+    workflows: [Deep SEC filing profiles]
+    types: [completed]
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: deep-filing-recovery-main
+  cancel-in-progress: false
+env:
+  PIP_CONFIG_FILE: /dev/null
+  PIP_DISABLE_PIP_VERSION_CHECK: '1'
+  DO_NOT_TRACK: '1'
+  HF_HUB_DISABLE_TELEMETRY: '1'
+jobs:
+  resolve:
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.conclusion != 'success' && github.event.workflow_run.event != 'pull_request')
+    runs-on: ubuntu-latest
+    outputs:
+      source_run: ${{ steps.source.outputs.source_run }}
+      source_sha: ${{ steps.source.outputs.source_sha }}
+      asof: ${{ steps.source.outputs.asof }}
+      matrix: ${{ steps.source.outputs.matrix }}
+      shards: ${{ steps.source.outputs.shards }}
+      companies: ${{ steps.source.outputs.companies }}
+      filings: ${{ steps.source.outputs.filings }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: scripts
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test bounded retries, exact ranges and credential isolation
+        run: python -m unittest scripts.test_resilient_filing_texts scripts.test_recover_filing_profiles -v
+      - name: Reuse completed shards and pin the original source date and parser
+        if: github.event_name != 'pull_request'
+        id: source
+        env:
+          GH_TOKEN: ${{ github.token }}
+          INPUT_RUN: ${{ inputs.source_run_id }}
+          EVENT_RUN: ${{ github.event.workflow_run.id }}
+        run: |
+          python - <<'PY'
+          import json, os, subprocess
+          def api(path):
+              return json.loads(subprocess.check_output(['gh','api',path],text=True))
+          repo=os.environ['GITHUB_REPOSITORY']
+          run_id=os.environ.get('INPUT_RUN') or os.environ.get('EVENT_RUN')
+          if not run_id:
+              runs=api(f'repos/{repo}/actions/workflows/deep-filing-profiles.yml/runs?branch=main&per_page=20')['workflow_runs']
+              run_id=next(str(r['id']) for r in runs if r['event']!='pull_request')
+          run=api(f'repos/{repo}/actions/runs/{run_id}')
+          assert run['head_branch']=='main' and run['event']!='pull_request'
+          release=api(f'repos/{repo}/contents/data/company_filings_full_release.json?ref='+run['head_sha'])
+          import base64
+          release=json.loads(base64.b64decode(release['content']))
+          assert release['complete']
+          artifacts=api(f'repos/{repo}/actions/runs/{run_id}/artifacts?per_page=100')['artifacts']
+          available={a['name'] for a in artifacts if not a['expired']}
+          missing=[{'shard':s['shard'],'artifact_id':s['id']} for s in release['source_artifacts'] if f"deep-filing-profiles-{s['shard']}" not in available]
+          outputs={'source_run':str(run_id),'source_sha':run['head_sha'],
+              'asof':run['created_at'][:10], 'matrix':json.dumps(missing),
+              'shards':json.dumps([s['shard'] for s in release['source_artifacts']]),
+              'companies':str(release['coverage']['expected_issuers']),
+              'filings':str(release['coverage']['expected_filings'])}
+          with open(os.environ['GITHUB_OUTPUT'],'a') as out:
+              for k,v in outputs.items():out.write(f'{k}={v}\n')
+          print(json.dumps({'source_run':run_id,'reuse':sorted(available),'recover':missing}))
+          PY
+  recover:
+    needs: resolve
+    if: github.event_name != 'pull_request' && needs.resolve.outputs.matrix != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        include: ${{ fromJSON(needs.resolve.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: scripts
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.resolve.outputs.source_sha }}
+          path: parser-source
+          persist-credentials: false
+          sparse-checkout: |
+            src
+            scripts
+            requirements-filing-parser.txt
+            excel_bot/data/finviz_with_descriptions.csv
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install the original pinned grammar engine
+        run: >-
+          python -m pip install --only-binary=:all: --index-url https://pypi.org/simple -r parser-source/requirements-filing-parser.txt
+      - uses: actions/cache@v4
+        with:
+          path: full-text-source
+          key: whole-filing-texts-${{ matrix.artifact_id }}
+      - name: Recover complete source text with resumable ZIP downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ ! -f full-text-source/text-materialization-report.json ]; then
+            python scripts/resilient_filing_texts.py --repository "$GITHUB_REPOSITORY" --artifact-id '${{ matrix.artifact_id }}' --out full-text-source --reader parser-source/scripts/materialize_filing_texts.py
+          fi
+      - uses: actions/cache@v4
+        with:
+          path: compiled-profiles
+          key: deep-recovered-${{ matrix.shard }}-${{ needs.resolve.outputs.source_sha }}-${{ github.run_id }}
+          restore-keys: |
+            deep-recovered-${{ matrix.shard }}-${{ needs.resolve.outputs.source_sha }}-
+            deep-profiles-${{ matrix.shard }}-${{ needs.resolve.outputs.source_sha }}
+      - name: Compile only the missing shard with the original parser and cutoff
+        working-directory: parser-source
+        run: >-
+          python -u -m scripts.build_filing_profiles --objects ../full-text-source/objects
+          --as-of '${{ needs.resolve.outputs.asof }}' --descriptions excel_bot/data/finviz_with_descriptions.csv --out ../compiled-profiles
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deep-filing-profiles-recovered-${{ matrix.shard }}
+          path: compiled-profiles/
+          retention-days: 90
+  combine:
+    needs: [resolve, recover]
+    if: always() && github.event_name != 'pull_request' && needs.resolve.result == 'success' && (needs.recover.result == 'success' || needs.recover.result == 'skipped')
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: scripts
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.resolve.outputs.source_sha }}
+          path: parser-source
+          persist-credentials: false
+          sparse-checkout: |
+            src
+            scripts
+            requirements-filing-parser.txt
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: deep-filing-profiles-*
+          path: downloaded-shards
+          run-id: ${{ needs.resolve.outputs.source_run }}
+          github-token: ${{ github.token }}
+      - uses: actions/download-artifact@v4
+        if: needs.recover.result == 'success'
+        with:
+          pattern: deep-filing-profiles-recovered-*
+          path: downloaded-shards
+      - name: Verify every paragraph and merge without duplicating large files
+        run: >-
+          python scripts/recover_filing_profiles.py --downloads downloaded-shards
+          --selected selected-shards --out filing-profiles --parser-root parser-source
+          --shards '${{ needs.resolve.outputs.shards }}'
+          --companies '${{ needs.resolve.outputs.companies }}' --filings '${{ needs.resolve.outputs.filings }}'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deep-filing-profiles-complete
+          path: filing-profiles/
+          compression-level: 0
+          retention-days: 90
