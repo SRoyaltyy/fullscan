@@ -8,8 +8,8 @@ import json
 import re
 from .linguistics import lemma, STOP
 
-VERSION = 'entity-alignment-1.1'
-WORD = re.compile(r"[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*")
+VERSION = 'entity-alignment-1.2'
+WORD = re.compile(r"\d+(?:[./-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*")
 SUFFIX = re.compile(r'(?:[, ]+(?:incorporated|corporation|company|limited|holdings|corp|inc|ltd|plc|llc)\.?)+$',re.I)
 TYPES = {'person':'PERSON','PERSON':'PERSON','organization':'ORG','company':'ORG','ORG':'ORG',
          'PRODUCT':'PRODUCT','product':'PRODUCT','GPE':'GPE','geography':'GPE','location':'GPE',
@@ -60,6 +60,10 @@ def identity(row, profile, organizations, *, as_of=''):
     elif role in ('regulator','approval_authority'):kind='GOV_AGENCY'
     name = row['keyword']
     forms = aliases(name,kind)
+    # Only the validated disclosure projection supplies these source-declared
+    # alternatives; no acronym or cross-law equivalence is guessed here.
+    if kind in ('LAW','GOV_AGENCY') and row.get('qualifiers',{}).get('disclosure_extractor'):
+        forms=sorted(set(forms)|{form for value in row['qualifiers'].get('disclosed_aliases',[]) for form in aliases(value,kind)})
     owner_aliases = aliases(profile.name,'ORG')
     pool = getattr(profile,'keyword_evidence',{})
     context = ' '.join(w['quote'] for ref in row.get('evidence_ids',[]) for w in pool.get(ref,{}).get('witnesses',[])
