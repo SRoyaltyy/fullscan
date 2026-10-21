@@ -131,20 +131,34 @@ assert.match(reviewList.children[0].textContent,/2 of 2/);
 reviewRoot.children[2].value='space';reviewRoot.children[2].listeners.input();
 assert.match(reviewList.children[0].textContent,/2 of 2/);
 console.log('Keyword decisions open exact paragraphs, preserve Unicode spans, expose rule evidence, and keep repeated unresolved occurrences separate.');
+context.legalReviewBox=element();
+context.legalReviewGraph={...context.reviewGraph,specific_records:{records:[{id:'detail-law',rule:'filing-specificity-1.1:law',entity:'space',applicability:'issuer_context',paragraph_id:'office',evidence:{quote:'🛰 We lease space',anchor:{start:11,end:16,text:'space'}}}]}};
+context.inspectLegal=vm.runInContext('renderTermReview(legalReviewBox,legalReviewGraph)',context);
+context.inspectLegal({stock:'BLZE',relationship:'disclosed_law',keyword:'space',assertion:'reported',term_occurrence_ids:[],evidence_ids:['specific:detail-law']});
+const legalList=context.legalReviewBox.children[0].children.at(-1);
+assert.ok(legalList.children.some(e=>e.textContent.includes('filing-specificity-1.1:law')));
+const legalParagraph=legalList.children.find(e=>e.children?.[0]?.textContent.includes('Paragraph office'));
+assert.ok(legalParagraph);
+assert.equal(legalParagraph.children[1].children.map(e=>e.textContent).join(''),'🛰 We lease space');
+assert.equal(legalParagraph.children[1].children.find(e=>e.textContent==='space').textContent,'space');
+console.log('Specific disclosure decisions open their complete paragraph without inventing a spaCy occurrence link.');
 
 // Both paths must match the same normalized phrase, direction, status and exact
 // article offsets. Python exports relevant dictionary forms to the browser.
 const parity = spawnSync('python',['-I','-S','-c',`
 import json,sys
 sys.path.insert(0,sys.argv[1])
-from src.test_stock_keywords import graph,profile
+from src.test_stock_keywords import graph,profile,KeywordTests
 from src.stock_keywords import compile_keywords,KeywordIndex
 from src.test_entity_resolution import fixture,CASES
 index=KeywordIndex({'BLZE':profile(compile_keywords(graph(),as_of='2026-04-01'))})
 texts=['Western Digital faces hard-drive disruption','Stripe disruption; Backblaze shares fall','Western. Digital shares rise','unrelated article','HARD DRIVES and Western Digital','📉 Western Digital hard drives']
 collision=KeywordIndex(fixture())
+laws=KeywordIndex({'BLZE':profile(compile_keywords(KeywordTests().disclosure_graph(),as_of='2026-04-01'))})
+law_texts=['Backblaze discusses GDPR.','Backblaze discusses Regulation (EU) 2016/679.','Backblaze discusses Regulation (EU) 2024/1689.','Backblaze discusses the Digital Markets Act.']
 print(json.dumps({'payload':index.browser_payload(),'cases':[{'text':t,'result':index.compare(t)} for t in texts],
- 'collisions':{'payload':collision.browser_payload(),'cases':[{'text':t,'result':collision.compare(t)} for t,_,_ in CASES]}}))
+ 'collisions':{'payload':collision.browser_payload(),'cases':[{'text':t,'result':collision.compare(t)} for t,_,_ in CASES]},
+ 'laws':{'payload':laws.browser_payload(),'cases':[{'text':t,'result':laws.compare(t)} for t in law_texts]}}))
 `,new URL('..',import.meta.url).pathname],{encoding:'utf8',maxBuffer:10_000_000});
 assert.equal(parity.status,0,parity.stderr);
 const fixture = JSON.parse(parity.stdout);
@@ -170,6 +184,15 @@ for (const test of fixture.collisions.cases) {
   assert.equal(JSON.stringify(identitySignature(actual)),JSON.stringify(identitySignature(test.result)),test.text);
 }
 console.log('Person/company, same-surname, employer scope, and contextual concept sense decisions agree in Python and browser.');
+context.lawPayload=fixture.laws.payload;
+vm.runInContext('keywordSearchIndex=prepareKeywordIndex(lawPayload)',context);
+for (const test of fixture.laws.cases) {
+  context.parityText=test.text;
+  const actual=vm.runInContext('compareKeywordText(keywordSearchIndex,parityText)',context);
+  assert.equal(JSON.stringify(identitySignature(actual)),JSON.stringify(identitySignature(test.result)),test.text);
+  assert.ok(actual.matches.every(r=>!r.usable_for_scoring));
+}
+console.log('Disclosed law aliases, numeric instrument identifiers, explicit exclusions, and review-only decisions agree in Python and browser.');
 context.keywordBox = element();
 context.keywordRows = fixture.payload.phrases.filter(p => p.row.relationship !== 'issuer').map(p => p.row);
 vm.runInContext('renderKeywordRecords(keywordBox,keywordRows)',context);

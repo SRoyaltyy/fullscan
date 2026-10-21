@@ -667,12 +667,12 @@ function prepareKeywordIndex(payload) {
 }
 
 function entitySurface(value) {
-  return [...value.matchAll(/[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(m=>m[0].replaceAll("’", "'").toLowerCase()).join(" ");
+  return [...value.matchAll(/\d+(?:[.\/-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(m=>m[0].replaceAll("’", "'").toLowerCase()).join(" ");
 }
 
 function entityContextWords(index,text) {
   const stop=new Set(index.stopwords || []);
-  return new Set([...text.matchAll(/[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(m=>{
+  return new Set([...text.matchAll(/\d+(?:[.\/-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(m=>{
     const raw=m[0].replaceAll("’", "'").toLowerCase().replace(/'s$/,"");
     return index.normalization[raw] || raw;
   }).filter(w=>w.length>=3 && !stop.has(w)));
@@ -733,7 +733,7 @@ function alignKeywordEntity(index,entity,text,start,end,peers=[]) {
 }
 
 function compareKeywordText(index, text) {
-  const tokens = [...text.matchAll(/[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)];
+  const tokens = [...text.matchAll(/\d+(?:[.\/-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)];
   const words = tokens.map(t => {
     const word = t[0].toLowerCase().replaceAll("’", "'").replace(/'s$/, "");
     return index.normalization[word] || word;
@@ -785,7 +785,7 @@ async function compareCustomKeywords() {
       const asset = staticMeta && staticMeta.keyword_index;
       if (!asset) throw new Error("The current published snapshot has no keyword index yet.");
       if (!keywordManifest) keywordManifest = await loadPackedProfile(asset.path,asset.sha256);
-      const wanted = new Set([...article.matchAll(/[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(t => {
+      const wanted = new Set([...article.matchAll(/\d+(?:[.\/-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(t => {
         const raw = t[0].toLowerCase().replaceAll("’", "'").replace(/'s$/, "");
         const word = keywordManifest.normalization[raw] || raw;
         return (word.charCodeAt(0)%16).toString(16);
@@ -847,6 +847,7 @@ function renderTermReview(container, graph) {
   const paragraphs=new Map((graph.paragraphs || []).map(p=>[p.id,p]));
   const sources=new Map(graph.sources.map(s=>[s.id,s]));
   const facts=new Map(graph.facts.map(f=>[f.id,f]));
+  const disclosures=new Map((graph.specific_records?.records || []).map(r=>["specific:"+r.id,r]));
   const root=document.createElement("section"), heading=document.createElement("h3");
   heading.textContent="Review keywords and their exact source paragraphs";
   const note=document.createElement("p");
@@ -873,6 +874,12 @@ function renderTermReview(container, graph) {
     if (chosen) {
       const witnessIds=new Set(chosen.evidence_ids || []), seen=new Set();
       for (const id of witnessIds) {
+        const disclosure=disclosures.get(id);
+        if(disclosure) {
+          const p=paragraphs.get(disclosure.paragraph_id),why=document.createElement("p");
+          why.textContent=`Rule ${disclosure.rule} · ${disclosure.entity} · ${disclosure.applicability.replaceAll("_"," ")} · ${disclosure.evidence.quote}`;list.append(why);
+          if(p&&!seen.has(p.id)) {list.append(sourceBlock(p,[disclosure.evidence.anchor]));seen.add(p.id);}
+        }
         const fact=facts.get(id);
         const witnesses=fact?.evidence || [];
         if (id.startsWith("paragraph:")) { const p=paragraphs.get(id.slice(10)); if(p) {list.append(sourceBlock(p,[]));seen.add(p.id);} }

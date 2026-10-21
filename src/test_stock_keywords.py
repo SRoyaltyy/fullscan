@@ -49,6 +49,46 @@ class KeywordTests(unittest.TestCase):
         self.assertTrue(all(r['review_required'] and not r['usable_for_scoring'] for r in bundle['records']))
         self.assertTrue(any(r['relationship']=='talent_competition' for r in bundle['records']))
 
+    def disclosure_graph(self):
+        import hashlib
+        from .specific_filing_records import details
+        g=graph();g['facts']=[];g['name']='Backblaze Inc.'
+        text='We are subject to Regulation (EU) 2016/679 (also known as the General Data Protection Regulation or “GDPR”). We are not in scope of the Digital Markets Act.'
+        g['paragraphs']=[{'id':'legal','source_id':'2026-01-01','start':0,'end':len(text),'text':text,
+            'kind':'prose','signals':[],'labels':['regulation_legal'],'sha256':hashlib.sha256(text.encode()).hexdigest()}]
+        g['specific_records']=details(g)
+        return g
+
+    def test_specific_law_alias_is_dated_evidenced_and_never_an_automatic_pass(self):
+        g=self.disclosure_graph();bundle=compile_keywords(g,as_of='2026-04-01')
+        self.assertEqual(bundle['coverage']['retained_relationships'],0)
+        self.assertEqual(bundle['coverage']['specific_disclosure_records'],2)
+        index=KeywordIndex({'BLZE':profile(bundle)})
+        result=index.compare('Backblaze discusses GDPR and the Digital Markets Act.',article_date='2026-02-01')
+        gdpr=next(r for r in result['matches'] if r['keyword']=='Regulation (EU) 2016/679')
+        self.assertEqual(gdpr['article_span']['text'],'GDPR')
+        self.assertFalse(gdpr['usable_for_scoring'])
+        self.assertTrue(gdpr['review_required'])
+        self.assertTrue(gdpr['evidence_ids'][0].startswith('specific:'))
+        dma=next(r for r in result['matches'] if r['keyword']=='Digital Markets Act')
+        self.assertEqual(dma['qualifiers']['applicability'],'explicitly_out_of_scope')
+        self.assertFalse(dma['usable_for_scoring'])
+        self.assertEqual(index.compare('Backblaze discusses GDPR.',article_date='2025-12-31')['matches'],[])
+
+    def test_law_codes_and_years_cannot_collapse_to_the_same_identity(self):
+        from .entity_resolution import surface
+        self.assertNotEqual(normalized_words('Regulation (EU) 2016/679'),normalized_words('Regulation (EU) 2024/1689'))
+        self.assertNotEqual(surface('Example Act of 1933'),surface('Example Act of 1934'))
+        index=KeywordIndex({'BLZE':profile(compile_keywords(self.disclosure_graph(),as_of='2026-04-01'))})
+        hits=index.compare('Backblaze discusses Regulation (EU) 2024/1689.')
+        self.assertFalse(hits['matches'] or hits['unresolved_matches'])
+
+    def test_generic_background_is_retained_for_review_without_an_identity_upgrade(self):
+        g=graph();g['facts']=[g['claim']('generic','subject_to','litigation matters')]
+        row=compile_keywords(g,as_of='2026-04-01')['records'][0]
+        self.assertIn('generic_background_head',row['review_reasons'])
+        self.assertFalse(row['usable_for_scoring'])
+
     def test_qualifiers_not_merged_between_suppliers(self):
         g = graph()
         g['facts'] = [g['claim']('a','buys_from','Western Digital',qualifiers={'description':'hard drive suppliers'}),

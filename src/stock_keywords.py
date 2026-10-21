@@ -13,7 +13,7 @@ from .linguistics import lemma
 from .entity_resolution import VERSION as ALIGNMENT_VERSION, POLICY, STOP, aliases, identity, decide, validate_annotations
 
 # Hyphens separate words, but offsets always refer to the unmodified article.
-TOKEN = re.compile(r"[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*")
+TOKEN = re.compile(r"\d+(?:[./-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*")
 
 SCHEMA = 'stock-keywords-1.1'
 ROLES = {'buys_from':'supplier', 'sells_to':'customer', 'uses_input':'input',
@@ -41,6 +41,9 @@ def normalized_words(value):
 
 def quality_issues(predicate, value, quote):
     issues = []
+    from .specific_filing_records import GENERIC
+    if GENERIC.fullmatch(value.strip()):
+        issues.append('generic_background_head')
     if AUDITOR.search(quote):
         issues.append('auditor_voice_is_not_issuer')
     if predicate in ('offers','uses_input') and ADMIN.fullmatch(value.strip()):
@@ -120,6 +123,30 @@ def compile_keywords(graph, *, as_of, ticker=None):
             for value in dict.fromkeys(inputs):
                 add(value,'input','uses_input',fact['status'],fact['id'],qualifiers={'via_supplier':fact['object']},issues=issues,current=current)
 
+    # These are separately versioned, evidence-bound disclosures, not new
+    # assertions manufactured from the old generic relationship heads.
+    specific=graph.get('specific_records')
+    if specific:
+        from .specific_filing_records import validate_details
+        validate_details(graph,specific)
+        for detail in specific['records']:
+            if not detail['entity_match_eligible']:
+                continue
+            source=sources[detail['source_id']]
+            if source['id'] not in allowed_sources:
+                continue
+            reference='specific:'+detail['id']
+            evidence[reference]={'subject':ticker,'predicate':detail['relation'],
+                'object':detail['entity'],'object_type':'law' if detail['category']=='law' else 'agency' if detail['category']=='authority' else 'concept',
+                'assertion':'reported','witnesses':[{**detail['evidence'],'source_id':source['id'],'source':source}],
+                'specific_disclosure_id':detail['id'],'paragraph_id':detail['paragraph_id']}
+            add(detail['entity'],'disclosed_'+detail['category'],detail['relation'],'reported',reference,
+                qualifiers={'disclosure_extractor':specific['version'],'disclosed_aliases':detail['aliases'],
+                    'applicability':detail['applicability'],'direct_obligation_asserted':detail['direct_obligation_asserted'],
+                    'details':detail['fields'],'missing_fields':detail['missing_fields']},
+                issues=('disclosure_requires_applicability_and_article_relevance_review',),
+                current=False,object_type=evidence[reference]['object_type'])
+
     # Quantities keep their exact paragraph. Only a fully matched range-change
     # construction is normalized; unrelated table values are never combined.
     for p in graph.get('paragraphs',[]):
@@ -154,7 +181,8 @@ def compile_keywords(graph, *, as_of, ticker=None):
         'term_inventory':None if inventory is None else {**inventory,'terms':terms,
             'windows':[w for w in inventory['windows'] if w['source_id'] in allowed_sources]},
         'coverage':{'raw_relationships':len(graph['facts']),
-            'retained_relationships':sum(not k.startswith('paragraph:') for k in evidence),
+            'retained_relationships':sum(not k.startswith(('paragraph:','specific:')) for k in evidence),
+            'specific_disclosure_records':sum(k.startswith('specific:') for k in evidence),
             'keywords':len(rows),'review_required':sum(r['review_required'] for r in rows),
             'term_inventory_available':inventory is not None,'term_occurrences':len(terms),
             'terms_without_resolved_relationship':sum(not t['relationships'] for t in terms),
