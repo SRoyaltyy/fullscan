@@ -134,6 +134,12 @@ jobs:
           git fetch --depth 1 origin main
           git reset --hard origin/main
           python3 -m src.webull_seal_gate check
+      - name: Pre-open fresh sell prices (h1, #663)
+        if: steps.final.outputs.go == 'true'
+        run: |
+          set -euo pipefail
+          pip install requests
+          python3 -m src.preopen_px --date "$(TZ=America/New_York date +%F)"
       - name: Install client
         if: steps.final.outputs.go == 'true' || steps.gate.outputs.bell == 'true'
         run: pip install webull-openapi-python-sdk pandas numpy pyarrow yfinance requests
