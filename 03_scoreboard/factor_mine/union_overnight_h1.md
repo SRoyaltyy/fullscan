@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ overnight, no 🚨
 
-Cash book **-24.67%** ($7,533) · signal-only (no cash/fees) was -26.59%. Starts YES **0/30**. Fills 144 · skips 73 · realized $-2767.20.
+Cash book **-24.18%** ($7,582) · signal-only (no cash/fees) was -26.59%. Starts YES **0/30**. Fills 150 · skips 73 · realized $-2767.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -312,6 +312,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,532.92 | ▲ close $7,532.92 vs 09:30 $7,532.92 (session +0.00) | 16:00 close · cash $7,532.92 · no lots left · equity $7,532.92. | — |
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,532.92 | ▲ 09:30 equity $7,532.92 vs yday $7,532.92 (+0.00) | 09:30 open · cash $7,532.92 · no holdings · equity $7,532.92 vs prior close $7,532.92 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,532.92 | ▲ close $7,532.92 vs 09:30 $7,532.92 (session +0.00) | 16:00 close · cash $7,532.92 · no lots left · equity $7,532.92. | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,532.92 | ▲ 09:30 equity $7,532.92 vs yday $7,532.92 (+0.00) | 09:30 open · cash $7,532.92 · no holdings · equity $7,532.92 vs prior close $7,532.92 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-21 09:30 ET | **BUY** | `CSX` | 26 | $48.03 | $2.07 | — | $6,282.07 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight,overnight_mega; ret5=+0.7; leftover $1255.49 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `IBM` | 5 | $241.91 | $2.00 | — | $5,070.49 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight,overnight_mega; 🔵; ret5=+4.8; leftover $1255.49 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `LUV` | 31 | $39.87 | $2.08 | — | $3,832.44 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-2.5; leftover $1255.49 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `MOH` | 5 | $221.00 | $2.00 | — | $2,725.43 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=+4.9; leftover $1255.49 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `PNFP` | 13 | $96.00 | $2.03 | — | $1,475.41 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=+1.9; leftover $1255.49 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `SAP` | 5 | $231.57 | $2.00 | — | $315.55 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight,overnight_mega; ret5=+4.2; leftover $1255.49 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $315.55 | ▲ close $7,582.41 vs 09:30 $7,532.92 (session +61.69) | 16:00 close · cash $315.55 · equity $7,582.41 vs 09:30 $7,532.92 (+49.49; session marks +61.69) · 6 name(s) marked open→close (per-name table). CSX×26 09:30 $48.03 → close $48.40 +9.62; IBM×5 09:30 $241.91 → close $251.46 +47.73; LUV×31 09:30 $39.87 → close $39.88 +0.31; MOH×5 09:30 $221.00 → close $214.90 -30.50; PNFP×13 09:30 $96.00 → close $98.21 +28.73; SAP×5 09:30 $231.57 → close $232.73 +5.80 | — |
 
 ## Not taken
 

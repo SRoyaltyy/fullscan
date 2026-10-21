@@ -26,7 +26,8 @@
     "2026-10-15",
     "2026-10-16",
     "2026-10-19",
-    "2026-10-20"
+    "2026-10-20",
+    "2026-10-21"
   ],
   "rules": [
     {
@@ -976,14 +977,53 @@
           "equity": 9315.16,
           "mean": 0.9937,
           "mean_flat_15bp": 0.9557
+        },
+        {
+          "date": "2026-10-21",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 2.06,
+              "shares": 1130,
+              "side": "BUY",
+              "ticker": "WIT"
+            },
+            {
+              "fill_rule": "open",
+              "price": 19.59,
+              "shares": 118,
+              "side": "BUY",
+              "ticker": "KVYO"
+            },
+            {
+              "fill_rule": "open",
+              "price": 12.91,
+              "shares": 180,
+              "side": "BUY",
+              "ticker": "KLRA"
+            },
+            {
+              "fill_rule": "open",
+              "price": 77.62,
+              "shares": 30,
+              "side": "BUY",
+              "ticker": "TRU"
+            }
+          ],
+          "sells": [],
+          "fees": 21.531,
+          "cash": 1.81,
+          "equity": 9507.23,
+          "mean": 2.0619,
+          "mean_flat_15bp": 2.1271
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -6.848,
-      "start_day_win_rate": 0.3333,
+      "after_fees_return": -4.928,
+      "start_day_win_rate": 0.4643,
       "best_stock": "SDGR",
-      "without_best_stock_return": -10.257
+      "without_best_stock_return": -8.418
     },
     {
       "name": "oos0914_rvol_lg_h1_sx",
@@ -2303,14 +2343,53 @@
           "equity": 10989.28,
           "mean": 0.8086,
           "mean_flat_15bp": 0.7516
+        },
+        {
+          "date": "2026-10-21",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 32.64,
+              "shares": 84,
+              "side": "BUY",
+              "ticker": "ARQT"
+            },
+            {
+              "fill_rule": "open",
+              "price": 2.06,
+              "shares": 1333,
+              "side": "BUY",
+              "ticker": "WIT"
+            },
+            {
+              "fill_rule": "open",
+              "price": 19.59,
+              "shares": 140,
+              "side": "BUY",
+              "ticker": "KVYO"
+            },
+            {
+              "fill_rule": "open",
+              "price": 3.75,
+              "shares": 727,
+              "side": "BUY",
+              "ticker": "CMRC"
+            }
+          ],
+          "sells": [],
+          "fees": 31.226,
+          "cash": 1.46,
+          "equity": 11002.83,
+          "mean": 0.1233,
+          "mean_flat_15bp": 0.3078
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": 9.893,
-      "start_day_win_rate": 0.6296,
+      "after_fees_return": 10.028,
+      "start_day_win_rate": 0.6429,
       "best_stock": "SDEV",
-      "without_best_stock_return": -9.055
+      "without_best_stock_return": -8.95
     },
     {
       "name": "oos0914_break10_h1_sx",
@@ -3629,14 +3708,53 @@
           "equity": 7136.77,
           "mean": 0.5553,
           "mean_flat_15bp": 0.547
+        },
+        {
+          "date": "2026-10-21",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 2.06,
+              "shares": 866,
+              "side": "BUY",
+              "ticker": "WIT"
+            },
+            {
+              "fill_rule": "open",
+              "price": 19.59,
+              "shares": 91,
+              "side": "BUY",
+              "ticker": "KVYO"
+            },
+            {
+              "fill_rule": "open",
+              "price": 12.91,
+              "shares": 138,
+              "side": "BUY",
+              "ticker": "KLRA"
+            },
+            {
+              "fill_rule": "open",
+              "price": 77.62,
+              "shares": 22,
+              "side": "BUY",
+              "ticker": "TRU"
+            }
+          ],
+          "sells": [],
+          "fees": 17.8944,
+          "cash": 63.01,
+          "equity": 7281.62,
+          "mean": 2.0296,
+          "mean_flat_15bp": 2.01
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -28.632,
-      "start_day_win_rate": 0.0741,
+      "after_fees_return": -27.184,
+      "start_day_win_rate": 0.1786,
       "best_stock": "QSI",
-      "without_best_stock_return": -31.898
+      "without_best_stock_return": -30.523
     },
     {
       "name": "oos0914_zero_candle_h2_sx",
@@ -4349,12 +4467,22 @@
           "equity": 10269.61,
           "mean": 0.0,
           "mean_flat_15bp": 0.0
+        },
+        {
+          "date": "2026-10-21",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 10269.61,
+          "equity": 10269.61,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
       "after_fees_return": 2.696,
-      "start_day_win_rate": 0.3333,
+      "start_day_win_rate": 0.3214,
       "best_stock": "NAUT",
       "without_best_stock_return": -0.241
     }

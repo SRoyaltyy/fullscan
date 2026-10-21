@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_join_vol_green_h1 w=0.3,0.7 net=priority
 
-Cash book **-4.67%** ($9,533) · signal-only (no cash/fees) was —. Starts YES **10/30**. Fills 463 · skips 173 · realized $+1600.28.
+Cash book **-5.15%** ($9,485) · signal-only (no cash/fees) was —. Starts YES **10/30**. Fills 472 · skips 173 · realized $+1600.28.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $15,257.63.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $13,900.05.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -632,6 +632,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20,227.83 | ▲ 09:30 equity $9,663.31 vs yday $9,559.34 (+103.97) | 09:30 open · cash $20,227.83 (unchanged overnight, no fees) · equity $9,663.31 vs prior close $9,559.34 (+103.97) | — |
 | 2026-10-20 09:30 ET | **COVER** | `AA` | 122 | $40.72 | $2.36 | $-120.80 | $15,257.63 | ▼ -120.80 after sell → book $9,660.95; vs 09:30 mark -2.36 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,257.63 | ▼ close $9,532.61 vs 09:30 $9,663.31 (session -128.34) | 16:00 close · cash $15,257.63 · equity $9,532.61 vs 09:30 $9,663.31 (-130.70; session marks -128.34) · 2 name(s) marked open→close (per-name table). NOG×33 09:30 $28.00 → close $27.54 +15.18; RBLX×92 09:30 $50.79 → close $52.35 -143.52 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,257.63 | ▲ 09:30 equity $9,547.28 vs yday $9,532.61 (+14.67) | 09:30 open · cash $15,257.63 (unchanged overnight, no fees) · equity $9,547.28 vs prior close $9,532.61 (+14.67) | — |
+| 2026-10-21 09:30 ET | **COVER** | `NOG` | 33 | $27.43 | $2.09 | $-33.92 | $14,350.35 | ▼ -33.92 after sell → book $9,545.19; vs 09:30 mark -2.09 | short_news_r_h3: dropped from list after 5 sess (min 3) | — |
+| 2026-10-21 09:30 ET | **COVER** | `RBLX` | 92 | $52.23 | $2.27 | $-71.88 | $9,542.92 | ▼ -71.88 after sell → book $9,542.92; vs 09:30 mark -2.27 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-21 09:30 ET | **SHORT** | `KD` | 48 | $13.94 | $2.17 | — | $10,209.87 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.5; combo leftover $681.64; owner short_news_r_h3 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `CTSH` | 9 | $68.54 | $2.05 | — | $10,824.68 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+11.2; combo leftover $681.64; owner short_news_r_h3 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `HALO` | 5 | $123.90 | $2.04 | — | $11,442.14 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.5; combo leftover $681.64; owner short_news_r_h3 | join🟢 sector🟡 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `NFLX` | 10 | $64.15 | $2.06 | — | $12,081.58 | — | news🔴; gate news=bad; list earn_react; 🔵; ret5=-2.5; combo leftover $681.64; owner short_news_r_h3 | join🟢 sector🟢 gen🟢 news🔴 digest🔴 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `IBM` | 2 | $241.91 | $2.03 | — | $12,563.38 | — | news🔴; gate news=bad; list overnight,overnight_mega; 🔵; ret5=+4.8; combo leftover $681.64; owner short_news_r_h3 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `LUV` | 17 | $39.87 | $2.08 | — | $13,239.09 | — | news🔴; gate news=bad; list overnight; ret5=-2.5; combo leftover $681.64; owner short_news_r_h3 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `MOH` | 3 | $221.00 | $2.04 | — | $13,900.05 | — | news🔴; gate news=bad; list overnight; 🔵; ret5=+4.9; combo leftover $681.64; owner short_news_r_h3 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,900.05 | ▼ close $9,485.17 vs 09:30 $9,547.28 (session -43.28) | 16:00 close · cash $13,900.05 · equity $9,485.17 vs 09:30 $9,547.28 (-62.11; session marks -43.28) · 7 name(s) marked open→close (per-name table). KD×48 09:30 $13.94 → close $14.35 -19.68; CTSH×9 09:30 $68.54 → close $69.55 -9.09; HALO×5 09:30 $123.90 → close $124.83 -4.65; NFLX×10 09:30 $64.15 → close $65.04 -8.90; IBM×2 09:30 $241.91 → close $251.46 -19.09; LUV×17 09:30 $39.87 → close $39.88 -0.17; MOH×3 09:30 $221.00 → close $214.90 +18.30 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short news🔴 ∩ prior MACD histogram > 0
 
-Cash book **+9.78%** ($10,978) · signal-only (no cash/fees) was +37.55%. Starts YES **29/30**. Fills 106 · skips 81 · realized $+1277.69.
+Cash book **+9.14%** ($10,914) · signal-only (no cash/fees) was +37.55%. Starts YES **29/30**. Fills 114 · skips 81 · realized $+1277.69.
 
 ## How this sleeve decides (like you are 10)
 
@@ -273,6 +273,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,460.61 | ▼ close $11,142.36 vs 09:30 $11,199.39 (session -55.03) | 16:00 close · cash $17,460.61 · equity $11,142.36 vs 09:30 $11,199.39 (-57.03; session marks -55.03) · 2 name(s) marked open→close (per-name table). NOG×32 09:30 $27.00 → close $27.75 -24.00; RBLX×107 09:30 $50.46 → close $50.75 -31.03 | — |
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17,460.61 | ▼ 09:30 equity $11,130.08 vs yday $11,142.36 (-12.28) | 09:30 open · cash $17,460.61 (unchanged overnight, no fees) · equity $11,130.08 vs prior close $11,142.36 (-12.28) · 2 name(s) re-marked at the open (per-name table). NOG×32 yday $27.75 → 09:30 $28.00 -8.00; RBLX×107 yday $50.75 → 09:30 $50.79 -4.28 | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,460.61 | ▼ close $10,977.88 vs 09:30 $11,130.08 (session -152.20) | 16:00 close · cash $17,460.61 · equity $10,977.88 vs 09:30 $11,130.08 (-152.20; session marks -152.20) · 2 name(s) marked open→close (per-name table). NOG×32 09:30 $28.00 → close $27.54 +14.72; RBLX×107 09:30 $50.79 → close $52.35 -166.92 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17,460.61 | ▲ 09:30 equity $10,994.24 vs yday $10,977.88 (+16.36) | 09:30 open · cash $17,460.61 (unchanged overnight, no fees) · equity $10,994.24 vs prior close $10,977.88 (+16.36) · 2 name(s) re-marked at the open (per-name table). NOG×32 yday $27.54 → 09:30 $27.43 +3.52; RBLX×107 yday $52.35 → 09:30 $52.23 +12.84 | — |
+| 2026-10-21 09:30 ET | **COVER** | `NOG` | 32 | $27.43 | $2.09 | $-33.02 | $16,580.76 | ▼ -33.02 after sell → book $10,992.15; vs 09:30 mark -2.09 | dropped from list after 5 sess (min 3) | — |
+| 2026-10-21 09:30 ET | **COVER** | `RBLX` | 107 | $52.23 | $2.31 | $-82.94 | $10,989.84 | ▼ -82.94 after sell → book $10,989.84; vs 09:30 mark -2.31 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-21 09:30 ET | **SHORT** | `KD` | 65 | $13.94 | $2.23 | — | $11,893.71 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list ohlc_hot; 🔵; ret5=+13.5; leftover $915.82 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `CTSH` | 13 | $68.54 | $2.07 | — | $12,782.66 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list ohlc_hot; ret5=+11.2; leftover $915.82 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `HALO` | 7 | $123.90 | $2.05 | — | $13,647.90 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list ohlc_hot; 🔵; ret5=+13.5; leftover $915.82 | join🟢 sector🟡 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `NFLX` | 14 | $64.15 | $2.08 | — | $14,543.93 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list earn_react; 🔵; ret5=-2.5; leftover $915.82 | join🟢 sector🟢 gen🟢 news🔴 digest🔴 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `IBM` | 3 | $241.91 | $2.04 | — | $15,267.63 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list overnight,overnight_mega; 🔵; ret5=+4.8; leftover $915.82 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `MOH` | 4 | $221.00 | $2.05 | — | $16,149.59 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list overnight; 🔵; ret5=+4.9; leftover $915.82 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,149.59 | ▼ close $10,914.34 vs 09:30 $10,994.24 (session -62.99) | 16:00 close · cash $16,149.59 · equity $10,914.34 vs 09:30 $10,994.24 (-79.90; session marks -62.99) · 6 name(s) marked open→close (per-name table). KD×65 09:30 $13.94 → close $14.35 -26.65; CTSH×13 09:30 $68.54 → close $69.55 -13.13; HALO×7 09:30 $123.90 → close $124.83 -6.51; NFLX×14 09:30 $64.15 → close $65.04 -12.46; IBM×3 09:30 $241.91 → close $251.46 -28.64; MOH×4 09:30 $221.00 → close $214.90 +24.40 | — |
 
 ## Not taken
 

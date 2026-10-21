@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-2.06%** ($9,794) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 366 · skips 88 · realized $-1484.16.
+Cash book **-1.08%** ($9,892) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 374 · skips 88 · realized $-1484.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -532,6 +532,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,030.70 | ▲ close $9,865.92 vs 09:30 $9,825.76 (session +61.98) | 16:00 close · cash $17,030.70 · equity $9,865.92 vs 09:30 $9,825.76 (+40.16; session marks +61.98) · 2 name(s) marked open→close (per-name table). GLND×773 09:30 $3.00 → close $3.02 -15.46; EGG×968 09:30 $5.07 → close $4.99 +77.44 | — |
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17,030.70 | ▲ 09:30 equity $10,119.41 vs yday $9,865.92 (+253.49) | 09:30 open · cash $17,030.70 (unchanged overnight, no fees) · equity $10,119.41 vs prior close $9,865.92 (+253.49) · 2 name(s) re-marked at the open (per-name table). EGG×968 yday $4.99 → 09:30 $4.80 +183.92; GLND×773 yday $3.02 → 09:30 $2.93 +69.57 | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,030.70 | ▼ close $9,794.40 vs 09:30 $10,119.41 (session -325.01) | 16:00 close · cash $17,030.70 · equity $9,794.40 vs 09:30 $10,119.41 (-325.01; session marks -325.01) · 2 name(s) marked open→close (per-name table). EGG×968 09:30 $4.80 → close $5.00 -193.60; GLND×773 09:30 $2.93 → close $3.10 -131.41 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17,030.70 | ▲ 09:30 equity $9,863.97 vs yday $9,794.40 (+69.57) | 09:30 open · cash $17,030.70 (unchanged overnight, no fees) · equity $9,863.97 vs prior close $9,794.40 (+69.57) · 2 name(s) re-marked at the open (per-name table). EGG×968 yday $5.00 → 09:30 $5.00 -0.00; GLND×773 yday $3.10 → 09:30 $3.01 +69.57 | — |
+| 2026-10-21 09:30 ET | **COVER** | `EGG` | 968 | $5.00 | $12.49 | $+42.45 | $12,178.21 | ▲ +42.45 after sell → book $9,851.48; vs 09:30 mark -12.49 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `ARQT` | 21 | $32.64 | $2.09 | — | $12,861.56 | — | ret_5>15; gate ret_5_min=15.0; list flatten; 🔵; ret5=+25.8; leftover $703.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `TRU` | 9 | $77.62 | $2.06 | — | $13,558.08 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,ohlc_hot; ret5=+15.9; leftover $703.68 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `KLRA` | 54 | $12.91 | $2.19 | — | $14,253.03 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer; 🔵; ret5=+19.7; leftover $703.68 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `KVYO` | 35 | $19.59 | $2.13 | — | $14,936.55 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+15.7; leftover $703.68 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `BROS` | 16 | $43.05 | $2.08 | — | $15,623.27 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; ret5=+15.4; leftover $703.68 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `Z` | 21 | $32.22 | $2.09 | — | $16,297.80 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; ret5=+15.3; leftover $703.68 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `SRPT` | 36 | $19.05 | $2.14 | — | $16,981.46 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+16.1; leftover $703.68 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,981.46 | ▲ close $9,892.12 vs 09:30 $9,863.97 (session +55.42) | 16:00 close · cash $16,981.46 · equity $9,892.12 vs 09:30 $9,863.97 (+28.15; session marks +55.42) · 8 name(s) marked open→close (per-name table). GLND×773 09:30 $3.01 → close $2.98 +23.19; ARQT×21 09:30 $32.64 → close $31.87 +16.17; TRU×9 09:30 $77.62 → close $78.93 -11.79; KLRA×54 09:30 $12.91 → close $12.92 -0.54; KVYO×35 09:30 $19.59 → close $20.19 -21.00; BROS×16 09:30 $43.05 → close $42.26 +12.64; Z×21 09:30 $32.22 → close $31.31 +19.11; SRPT×36 09:30 $19.05 → close $18.56 +17.64 | — |
 
 ## Not taken
 

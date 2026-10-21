@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **-10.97%** ($8,903) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 95 · skips 105 · realized $-281.48.
+Cash book **-11.08%** ($8,892) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 96 · skips 105 · realized $-281.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -263,6 +263,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $135.93 | ▼ close $8,920.97 vs 09:30 $8,944.15 (session -14.40) | 16:00 close · cash $135.93 · equity $8,920.97 vs 09:30 $8,944.15 (-23.18; session marks -14.40) · 3 name(s) marked open→close (per-name table). WSE×1 09:30 $10.95 → close $10.95 +0.00; PRIM×59 09:30 $75.36 → close $74.51 -50.15; BR×25 09:30 $173.69 → close $175.12 +35.75 | — |
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $135.93 | ▼ 09:30 equity $8,897.15 vs yday $8,920.97 (-23.82) | 09:30 open · cash $135.93 (unchanged overnight, no fees) · equity $8,897.15 vs prior close $8,920.97 (-23.82) · 3 name(s) re-marked at the open (per-name table). BR×25 yday $175.12 → 09:30 $177.40 +57.00; PRIM×59 yday $74.51 → 09:30 $73.14 -80.83; WSE×1 yday $10.95 → 09:30 $10.96 +0.01 | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $135.93 | ▲ close $8,902.95 vs 09:30 $8,897.15 (session +5.80) | 16:00 close · cash $135.93 · equity $8,902.95 vs 09:30 $8,897.15 (+5.80; session marks +5.80) · 3 name(s) marked open→close (per-name table). BR×25 09:30 $177.40 → close $179.99 +64.75; PRIM×59 09:30 $73.14 → close $72.14 -59.00; WSE×1 09:30 $10.96 → close $11.01 +0.05 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $135.93 | ▲ 09:30 equity $8,995.14 vs yday $8,902.95 (+92.19) | 09:30 open · cash $135.93 (unchanged overnight, no fees) · equity $8,995.14 vs prior close $8,902.95 (+92.19) · 3 name(s) re-marked at the open (per-name table). BR×25 yday $179.99 → 09:30 $179.78 -5.25; PRIM×59 yday $72.14 → 09:30 $73.79 +97.35; WSE×1 yday $11.01 → 09:30 $11.10 +0.09 | — |
+| 2026-10-21 09:30 ET | **SELL** | `WSE` | 1 | $11.10 | $0.13 | $-1.21 | $146.90 | ▼ -1.21 after sell → book $8,995.01; vs 09:30 mark -0.13 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $146.90 | ▼ close $8,891.93 vs 09:30 $8,995.14 (session -103.08) | 16:00 close · cash $146.90 · equity $8,891.93 vs 09:30 $8,995.14 (-103.21; session marks -103.08) · 2 name(s) marked open→close (per-name table). BR×25 09:30 $179.78 → close $178.30 -37.00; PRIM×59 09:30 $73.79 → close $72.67 -66.08 | — |
 
 ## Not taken
 

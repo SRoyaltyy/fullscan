@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+17.94%** ($11,794) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 35 · skips 0 · realized $-826.45.
+Cash book **+17.73%** ($11,773) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 39 · skips 0 · realized $-826.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -205,3 +205,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `DGX` | 4 | $236.00 | $2.02 | $-18.70 | $9,715.70 | ▼ -18.70 after sell → book $11,801.52; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-20 09:30 ET | **SELL** | `WM` | 4 | $228.80 | $2.02 | $+12.06 | $10,628.88 | ▲ +12.06 after sell → book $11,799.50; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,628.88 | ▼ close $11,794.00 vs 09:30 $11,805.72 (session -5.50) | 16:00 close · cash $10,628.88 · equity $11,794.00 vs 09:30 $11,805.72 (-11.72; session marks -5.50) · 1 name(s) marked open→close (per-name table). PLNT×22 09:30 $53.21 → close $52.96 -5.50 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,628.88 | ▼ 09:30 equity $11,781.24 vs yday $11,794.00 (-12.76) | 09:30 open · cash $10,628.88 (unchanged overnight, no fees) · equity $11,781.24 vs prior close $11,794.00 (-12.76) · 1 name(s) re-marked at the open (per-name table). PLNT×22 yday $52.96 → 09:30 $52.38 -12.76 | — |
+| 2026-10-21 09:30 ET | **BUY** | `DGX` | 9 | $235.34 | $2.02 | — | $8,508.80 | — | combo gate; gate macd_up=True,rsi_os=True; list yday_mover; ret5=+2.9; leftover $2125.78 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `QTWO` | 32 | $65.96 | $2.09 | — | $6,396.00 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; 🔵; ret5=+11.3; leftover $2125.78 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `BROS` | 49 | $43.05 | $2.14 | — | $4,284.41 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; ret5=+15.4; leftover $2125.78 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `BRO` | 30 | $70.29 | $2.08 | — | $2,173.63 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; 🔵; ret5=+10.7; leftover $2125.78 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,173.63 | ▲ close $11,772.94 vs 09:30 $11,781.24 (session +0.02) | 16:00 close · cash $2,173.63 · equity $11,772.94 vs 09:30 $11,781.24 (-8.30; session marks +0.02) · 5 name(s) marked open→close (per-name table). PLNT×22 09:30 $52.38 → close $51.69 -15.18; DGX×9 09:30 $235.34 → close $238.93 +32.31; QTWO×32 09:30 $65.96 → close $66.41 +14.40; BROS×49 09:30 $43.05 → close $42.26 -38.71; BRO×30 09:30 $70.29 → close $70.53 +7.20 | — |

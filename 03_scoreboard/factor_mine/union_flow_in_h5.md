@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in hold 5, no 🚨
 
-Cash book **-13.23%** ($8,677) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 65 · skips 144 · realized $+404.42.
+Cash book **-8.46%** ($9,154) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 70 · skips 144 · realized $+404.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -233,6 +233,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $44.05 | ▼ close $8,668.09 vs 09:30 $8,716.84 (session -48.75) | 16:00 close · cash $44.05 · equity $8,668.09 vs 09:30 $8,716.84 (-48.75; session marks -48.75) · 3 name(s) marked open→close (per-name table). EPR×78 09:30 $55.28 → close $54.28 -78.00; TBBB×75 09:30 $58.00 → close $58.39 +29.25; WSE×1 09:30 $10.95 → close $10.95 +0.00 | — |
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $44.05 | ▲ 09:30 equity $8,709.44 vs yday $8,668.09 (+41.35) | 09:30 open · cash $44.05 (unchanged overnight, no fees) · equity $8,709.44 vs prior close $8,668.09 (+41.35) · 3 name(s) re-marked at the open (per-name table). EPR×78 yday $54.28 → 09:30 $54.56 +21.84; TBBB×75 yday $58.39 → 09:30 $58.65 +19.50; WSE×1 yday $10.95 → 09:30 $10.96 +0.01 | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $44.05 | ▼ close $8,676.67 vs 09:30 $8,709.44 (session -32.77) | 16:00 close · cash $44.05 · equity $8,676.67 vs 09:30 $8,709.44 (-32.77; session marks -32.77) · 3 name(s) marked open→close (per-name table). EPR×78 09:30 $54.56 → close $55.37 +63.18; TBBB×75 09:30 $58.65 → close $57.37 -96.00; WSE×1 09:30 $10.96 → close $11.01 +0.05 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $44.05 | ▲ 09:30 equity $8,773.24 vs yday $8,676.67 (+96.57) | 09:30 open · cash $44.05 (unchanged overnight, no fees) · equity $8,773.24 vs prior close $8,676.67 (+96.57) · 3 name(s) re-marked at the open (per-name table). EPR×78 yday $55.37 → 09:30 $55.53 +12.48; TBBB×75 yday $57.37 → 09:30 $58.49 +84.00; WSE×1 yday $11.01 → 09:30 $11.10 +0.09 | — |
+| 2026-10-21 09:30 ET | **SELL** | `EPR` | 78 | $55.53 | $2.27 | $+78.18 | $4,373.12 | ▲ +78.18 after sell → book $8,770.97; vs 09:30 mark -2.27 | dropped from list after 5 sess (min 5) | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SELL** | `TBBB` | 75 | $58.49 | $2.26 | $+180.02 | $8,757.61 | ▲ +180.02 after sell → book $8,768.71; vs 09:30 mark -2.26 | dropped from list after 5 sess (min 5) | join🔴 sector🟢 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CME` | 9 | $295.77 | $2.02 | — | $6,093.66 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list earn_react; 🔵; ret5=+6.2; leftover $2919.20 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `DHR` | 13 | $217.56 | $2.03 | — | $3,263.35 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list earn_react; ret5=+0.6; leftover $2919.20 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ISRG` | 7 | $402.50 | $2.01 | — | $443.87 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list earn_react; ret5=+3.8; leftover $2919.20 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $443.87 | ▲ close $9,154.05 vs 09:30 $8,773.24 (session +391.41) | 16:00 close · cash $443.87 · equity $9,154.05 vs 09:30 $8,773.24 (+380.81; session marks +391.41) · 4 name(s) marked open→close (per-name table). WSE×1 09:30 $11.10 → close $11.05 -0.05; CME×9 09:30 $295.77 → close $295.79 +0.18; DHR×13 09:30 $217.56 → close $233.86 +211.90; ISRG×7 09:30 $402.50 → close $428.12 +179.38 | — |
 
 ## Not taken
 

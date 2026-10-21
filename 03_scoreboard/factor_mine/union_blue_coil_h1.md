@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-19.39%** ($8,061) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 390 · skips 79 · realized $-1931.95.
+Cash book **-19.29%** ($8,071) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 398 · skips 79 · realized $-1931.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -560,6 +560,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `SMMT` | 67 | $15.50 | $2.21 | $+2.97 | $7,109.34 | ▲ +2.97 after sell → book $8,063.34; vs 09:30 mark -2.21 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-20 09:30 ET | **SELL** | `VEEV` | 3 | $318.00 | $2.02 | $+18.99 | $8,061.32 | ▲ +18.99 after sell → book $8,061.32; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,061.32 | ▲ close $8,061.32 vs 09:30 $8,077.92 (session +0.00) | 16:00 close · cash $8,061.32 · no lots left · equity $8,061.32. | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,061.32 | ▲ 09:30 equity $8,061.32 vs yday $8,061.32 (+0.00) | 09:30 open · cash $8,061.32 · no holdings · equity $8,061.32 vs prior close $8,061.32 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-21 09:30 ET | **BUY** | `CORT` | 8 | $116.45 | $2.01 | — | $7,127.71 | — | combo gate; gate blue=True,ret_5_max=10.0; list flatten; 🔵; ret5=-1.1; leftover $1007.66 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CRON` | 305 | $3.30 | $3.93 | — | $6,117.27 | — | combo gate; gate blue=True,ret_5_max=10.0; list flatten; 🔵; ret5=+2.5; leftover $1007.66 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ETON` | 19 | $50.93 | $2.05 | — | $5,147.55 | — | combo gate; gate blue=True,ret_5_max=10.0; list flatten; 🔵; ret5=-5.9; leftover $1007.66 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `EPR` | 18 | $55.53 | $2.04 | — | $4,145.97 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.0; leftover $1007.66 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `PDFS` | 23 | $42.76 | $2.06 | — | $3,160.43 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-13.5; leftover $1007.66 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `AIP` | 49 | $20.38 | $2.14 | — | $2,159.67 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-6.6; leftover $1007.66 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ACRS` | 269 | $3.74 | $3.47 | — | $1,150.14 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.6; leftover $1007.66 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `MX` | 381 | $2.64 | $4.91 | — | $139.39 | — | combo gate; gate blue=True,ret_5_max=10.0; list yday_gainer,yday_mover; 🔵; ret5=-9.2; leftover $1007.66 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $139.39 | ▲ close $8,071.48 vs 09:30 $8,061.32 (session +32.78) | 16:00 close · cash $139.39 · equity $8,071.48 vs 09:30 $8,061.32 (+10.16; session marks +32.78) · 8 name(s) marked open→close (per-name table). CORT×8 09:30 $116.45 → close $116.28 -1.36; CRON×305 09:30 $3.30 → close $3.39 +27.45; ETON×19 09:30 $50.93 → close $49.30 -30.97; EPR×18 09:30 $55.53 → close $54.54 -17.82; PDFS×23 09:30 $42.76 → close $44.01 +28.75; AIP×49 09:30 $20.38 → close $20.93 +26.95; ACRS×269 09:30 $3.74 → close $3.81 +18.83; MX×381 09:30 $2.64 → close $2.59 -19.05 | — |
 
 ## Not taken
 

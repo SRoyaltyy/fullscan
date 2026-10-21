@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+15.28%** ($11,528) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 415 · skips 100 · realized $+370.60.
+Cash book **+13.59%** ($11,359) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 425 · skips 100 · realized $+370.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -582,6 +582,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `TRU` | 19 | $75.62 | $2.07 | $+9.56 | $4,387.47 | ▲ +9.56 after sell → book $11,317.64; vs 09:30 mark -2.07 | dropped from list after 2 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-20 09:30 ET | **SELL** | `WMG` | 45 | $31.13 | $2.15 | $-10.12 | $5,786.17 | ▼ -10.12 after sell → book $11,315.49; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,786.17 | ▲ close $11,528.14 vs 09:30 $11,323.80 (session +212.65) | 16:00 close · cash $5,786.17 · equity $11,528.14 vs 09:30 $11,323.80 (+204.34; session marks +212.65) · 4 name(s) marked open→close (per-name table). ACN×6 09:30 $238.00 → close $239.12 +6.72; EGG×283 09:30 $4.80 → close $5.00 +56.60; GLND×439 09:30 $2.93 → close $3.10 +74.63; WIT×747 09:30 $1.95 → close $2.05 +74.70 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,786.17 | ▼ 09:30 equity $11,471.38 vs yday $11,528.14 (-56.76) | 09:30 open · cash $5,786.17 (unchanged overnight, no fees) · equity $11,471.38 vs prior close $11,528.14 (-56.76) · 4 name(s) re-marked at the open (per-name table). ACN×6 yday $239.12 → 09:30 $235.00 -24.72; EGG×283 yday $5.00 → 09:30 $5.00 +0.00; GLND×439 yday $3.10 → 09:30 $3.01 -39.51; WIT×747 yday $2.05 → 09:30 $2.06 +7.47 | — |
+| 2026-10-21 09:30 ET | **SELL** | `ACN` | 6 | $235.00 | $2.03 | $+35.08 | $7,194.14 | ▲ +35.08 after sell → book $11,469.35; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SELL** | `EGG` | 283 | $5.00 | $3.71 | $-27.17 | $8,605.43 | ▼ -27.17 after sell → book $11,465.64; vs 09:30 mark -3.71 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-21 09:30 ET | **SELL** | `WIT` | 747 | $2.06 | $9.77 | $+85.17 | $10,134.48 | ▲ +85.17 after sell → book $11,455.87; vs 09:30 mark -9.77 | dropped from list after 2 sess (min 1) | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ARQT` | 44 | $32.64 | $2.12 | — | $8,696.20 | — | rank by ret_5; rank ret_5; list flatten; 🔵; ret5=+25.8; leftover $1447.78 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `KLRA` | 112 | $12.91 | $2.33 | — | $7,247.95 | — | rank by ret_5; rank ret_5; list yday_gainer; 🔵; ret5=+19.7; leftover $1447.78 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `SRPT` | 75 | $19.05 | $2.21 | — | $5,816.99 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+16.1; leftover $1447.78 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `TRU` | 18 | $77.62 | $2.04 | — | $4,417.78 | — | rank by ret_5; rank ret_5; list yday_gainer,ohlc_hot; ret5=+15.9; leftover $1447.78 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `KVYO` | 73 | $19.59 | $2.21 | — | $2,985.50 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+15.7; leftover $1447.78 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `BROS` | 33 | $43.05 | $2.09 | — | $1,562.76 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+15.4; leftover $1447.78 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `Z` | 44 | $32.22 | $2.12 | — | $142.96 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+15.3; leftover $1447.78 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $142.96 | ▼ close $11,359.33 vs 09:30 $11,471.38 (session -81.41) | 16:00 close · cash $142.96 · equity $11,359.33 vs 09:30 $11,471.38 (-112.05; session marks -81.41) · 8 name(s) marked open→close (per-name table). GLND×439 09:30 $3.01 → close $2.98 -13.17; ARQT×44 09:30 $32.64 → close $31.87 -33.88; KLRA×112 09:30 $12.91 → close $12.92 +1.12; SRPT×75 09:30 $19.05 → close $18.56 -36.75; TRU×18 09:30 $77.62 → close $78.93 +23.58; KVYO×73 09:30 $19.59 → close $20.19 +43.80; BROS×33 09:30 $43.05 → close $42.26 -26.07; Z×44 09:30 $32.22 → close $31.31 -40.04 | — |
 
 ## Not taken
 

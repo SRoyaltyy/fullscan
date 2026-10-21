@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+18.26%** ($11,826) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 426 · skips 96 · realized $-9.27.
+Cash book **+19.62%** ($11,962) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 434 · skips 96 · realized $-9.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -593,6 +593,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `RELX` | 38 | $39.08 | $2.13 | $+0.14 | $7,603.76 | ▲ +0.14 after sell → book $11,780.06; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 09:30 ET | **SELL** | `VEEV` | 4 | $318.00 | $2.02 | $-11.82 | $8,873.74 | ▼ -11.82 after sell → book $11,778.04; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,873.74 | ▲ close $11,825.71 vs 09:30 $11,790.46 (session +47.67) | 16:00 close · cash $8,873.74 · equity $11,825.71 vs 09:30 $11,790.46 (+35.25; session marks +47.67) · 2 name(s) marked open→close (per-name table). AMX×64 09:30 $22.93 → close $22.90 -1.92; TRU×19 09:30 $75.62 → close $78.23 +49.59 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,873.74 | ▲ 09:30 equity $11,833.32 vs yday $11,825.71 (+7.61) | 09:30 open · cash $8,873.74 (unchanged overnight, no fees) · equity $11,833.32 vs prior close $11,825.71 (+7.61) · 2 name(s) re-marked at the open (per-name table). AMX×64 yday $22.90 → 09:30 $23.20 +19.20; TRU×19 yday $78.23 → 09:30 $77.62 -11.59 | — |
+| 2026-10-21 09:30 ET | **SELL** | `AMX` | 64 | $23.20 | $2.20 | $+18.65 | $10,356.34 | ▲ +18.65 after sell → book $11,831.12; vs 09:30 mark -2.20 | dropped from list after 2 sess (min 1) | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `IT` | 6 | $216.34 | $2.01 | — | $9,056.29 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+11.5; leftover $1479.48 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ARQT` | 45 | $32.64 | $2.12 | — | $7,585.36 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; 🔵; ret5=+25.8; leftover $1479.48 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `PAYC` | 5 | $260.69 | $2.00 | — | $6,279.91 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+10.8; leftover $1479.48 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `DOCU` | 18 | $80.00 | $2.04 | — | $4,837.86 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+11.0; leftover $1479.48 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `EPAM` | 11 | $129.12 | $2.02 | — | $3,415.52 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+13.1; leftover $1479.48 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `HLT` | 4 | $360.00 | $2.00 | — | $1,973.52 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+9.0; leftover $1479.48 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `KVYO` | 75 | $19.59 | $2.21 | — | $502.05 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+15.7; leftover $1479.48 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $502.05 | ▲ close $11,962.23 vs 09:30 $11,833.32 (session +145.54) | 16:00 close · cash $502.05 · equity $11,962.23 vs 09:30 $11,833.32 (+128.91; session marks +145.54) · 8 name(s) marked open→close (per-name table). TRU×19 09:30 $77.62 → close $78.93 +24.89; IT×6 09:30 $216.34 → close $219.57 +19.38; ARQT×45 09:30 $32.64 → close $31.87 -34.65; PAYC×5 09:30 $260.69 → close $261.01 +1.60; DOCU×18 09:30 $80.00 → close $81.48 +26.64; EPAM×11 09:30 $129.12 → close $134.00 +53.68; HLT×4 09:30 $360.00 → close $362.25 +9.00; KVYO×75 09:30 $19.59 → close $20.19 +45.00 | — |
 
 ## Not taken
 

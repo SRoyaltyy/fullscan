@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-25.11%** ($7,488) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 397 · skips 93 · realized $-1456.67.
+Cash book **-24.27%** ($7,573) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 404 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -561,6 +561,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `WIT` | 485 | $1.95 | $6.35 | $+1.95 | $5,631.34 | ▲ +1.95 after sell → book $7,486.11; vs 09:30 mark -6.35 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-10-20 09:30 ET | **SELL** | `WMG` | 29 | $31.13 | $2.10 | $-7.94 | $6,532.01 | ▼ -7.94 after sell → book $7,484.01; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,532.01 | ▲ close $7,488.49 vs 09:30 $7,502.75 (session +4.48) | 16:00 close · cash $6,532.01 · equity $7,488.49 vs 09:30 $7,502.75 (-14.26; session marks +4.48) · 1 name(s) marked open→close (per-name table). ACN×4 09:30 $238.00 → close $239.12 +4.48 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,532.01 | ▼ 09:30 equity $7,472.01 vs yday $7,488.49 (-16.48) | 09:30 open · cash $6,532.01 (unchanged overnight, no fees) · equity $7,472.01 vs prior close $7,488.49 (-16.48) · 1 name(s) re-marked at the open (per-name table). ACN×4 yday $239.12 → 09:30 $235.00 -16.48 | — |
+| 2026-10-21 09:30 ET | **BUY** | `TRU` | 12 | $77.62 | $2.03 | — | $5,598.54 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; ret5=+15.9; leftover $933.14 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `BMBL` | 156 | $5.95 | $2.46 | — | $4,667.89 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+0.0; leftover $933.14 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `WIT` | 452 | $2.06 | $5.83 | — | $3,730.94 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+13.9; leftover $933.14 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `KVYO` | 47 | $19.59 | $2.13 | — | $2,808.07 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+15.7; leftover $933.14 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CMRC` | 248 | $3.75 | $3.20 | — | $1,874.87 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+13.1; leftover $933.14 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `IT` | 4 | $216.34 | $2.00 | — | $1,007.51 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+11.5; leftover $933.14 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `EPAM` | 7 | $129.12 | $2.01 | — | $101.66 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+13.1; leftover $933.14 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $101.66 | ▲ close $7,572.83 vs 09:30 $7,472.01 (session +120.48) | 16:00 close · cash $101.66 · equity $7,572.83 vs 09:30 $7,472.01 (+100.82; session marks +120.48) · 8 name(s) marked open→close (per-name table). ACN×4 09:30 $235.00 → close $240.26 +21.04; TRU×12 09:30 $77.62 → close $78.93 +15.72; BMBL×156 09:30 $5.95 → close $5.95 +0.00; WIT×452 09:30 $2.06 → close $2.15 +40.68; KVYO×47 09:30 $19.59 → close $20.19 +28.20; CMRC×248 09:30 $3.75 → close $3.62 -32.24; IT×4 09:30 $216.34 → close $219.57 +12.92; EPAM×7 09:30 $129.12 → close $134.00 +34.16 | — |
 
 ## Not taken
 

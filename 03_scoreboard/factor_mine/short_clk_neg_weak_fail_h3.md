@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 neg catalyst + weakness + failed recovery
 
-Cash book **+5.95%** ($10,595) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 233 · skips 270 · realized $-967.53.
+Cash book **+5.54%** ($10,554) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 235 · skips 270 · realized $-967.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -399,6 +399,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,054.09 | ▲ 09:30 equity $10,597.61 vs yday $10,470.31 (+127.30) | 09:30 open · cash $16,054.09 (unchanged overnight, no fees) · equity $10,597.61 vs prior close $10,470.31 (+127.30) · 1 name(s) re-marked at the open (per-name table). AA×134 yday $41.67 → 09:30 $40.72 +127.30 | — |
 | 2026-10-20 09:30 ET | **COVER** | `AA` | 134 | $40.72 | $2.39 | $-132.29 | $10,595.22 | ▼ -132.29 after sell → book $10,595.22; vs 09:30 mark -2.39 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,595.22 | ▲ close $10,595.22 vs 09:30 $10,597.61 (session +0.00) | 16:00 close · cash $10,595.22 · no lots left · equity $10,595.22. | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,595.22 | ▲ 09:30 equity $10,595.22 vs yday $10,595.22 (+0.00) | 09:30 open · cash $10,595.22 · no holdings · equity $10,595.22 vs prior close $10,595.22 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-21 09:30 ET | **SHORT** | `NFLX` | 41 | $64.15 | $2.22 | — | $13,223.15 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list earn_react; 🔵; ret5=-2.5; leftover $2648.80 | join🟢 sector🟢 gen🟢 news🔴 digest🔴 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `LUV` | 66 | $39.87 | $2.29 | — | $15,852.28 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list overnight; ret5=-2.5; leftover $2648.80 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,852.28 | ▼ close $10,553.56 vs 09:30 $10,595.22 (session -37.15) | 16:00 close · cash $15,852.28 · equity $10,553.56 vs 09:30 $10,595.22 (-41.66; session marks -37.15) · 2 name(s) marked open→close (per-name table). NFLX×41 09:30 $64.15 → close $65.04 -36.49; LUV×66 09:30 $39.87 → close $39.88 -0.66 | — |
 
 ## Not taken
 

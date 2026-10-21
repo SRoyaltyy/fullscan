@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **+1.23%** ($10,123) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 397 · skips 108 · realized $-743.47.
+Cash book **-0.06%** ($9,994) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 402 · skips 108 · realized $-743.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -563,6 +563,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **COVER** | `CDNA` | 26 | $67.20 | $2.07 | $-61.41 | $15,656.03 | ▼ -61.41 after sell → book $10,235.92; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 09:30 ET | **COVER** | `ILMN` | 6 | $264.13 | $2.01 | $+24.72 | $14,069.24 | ▲ +24.72 after sell → book $10,233.91; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,069.24 | ▼ close $10,122.77 vs 09:30 $10,237.99 (session -111.14) | 16:00 close · cash $14,069.24 · equity $10,122.77 vs 09:30 $10,237.99 (-115.22; session marks -111.14) · 5 name(s) marked open→close (per-name table). AIP×30 09:30 $18.64 → close $19.76 -33.60; CXW×53 09:30 $29.96 → close $30.34 -20.14; NVTS×63 09:30 $8.38 → close $8.74 -22.68; PDFS×13 09:30 $40.37 → close $41.18 -10.53; SMMT×41 09:30 $15.50 → close $16.09 -24.19 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,069.24 | ▼ 09:30 equity $10,041.78 vs yday $10,122.77 (-80.99) | 09:30 open · cash $14,069.24 (unchanged overnight, no fees) · equity $10,041.78 vs prior close $10,122.77 (-80.99) · 5 name(s) re-marked at the open (per-name table). AIP×30 yday $19.76 → 09:30 $20.38 -18.60; CXW×53 yday $30.34 → 09:30 $30.56 -11.66; NVTS×63 yday $8.74 → 09:30 $9.05 -19.53; PDFS×13 yday $41.18 → 09:30 $42.76 -20.54; SMMT×41 yday $16.09 → 09:30 $16.35 -10.66 | — |
+| 2026-10-21 09:30 ET | **COVER** | `CXW` | 53 | $30.56 | $2.15 | $+31.14 | $12,447.41 | ▲ +31.14 after sell → book $10,039.63; vs 09:30 mark -2.15 | dropped from list after 3 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `CORT` | 10 | $116.45 | $2.07 | — | $13,609.84 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ret5=-1.1; leftover $1254.95 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `CDNA` | 18 | $69.50 | $2.10 | — | $14,858.69 | — | MACD histogram < 0; gate macd_down=True; list flatten; ret5=+5.8; leftover $1254.95 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `CRON` | 380 | $3.30 | $5.01 | — | $16,107.68 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ret5=+2.5; leftover $1254.95 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `ETON` | 24 | $50.93 | $2.12 | — | $17,327.88 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ret5=-5.9; leftover $1254.95 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,327.88 | ▼ close $9,994.22 vs 09:30 $10,041.78 (session -34.11) | 16:00 close · cash $17,327.88 · equity $9,994.22 vs 09:30 $10,041.78 (-47.56; session marks -34.11) · 8 name(s) marked open→close (per-name table). AIP×30 09:30 $20.38 → close $20.93 -16.50; NVTS×63 09:30 $9.05 → close $9.16 -6.93; PDFS×13 09:30 $42.76 → close $44.01 -16.25; SMMT×41 09:30 $16.35 → close $15.83 +21.32; CORT×10 09:30 $116.45 → close $116.28 +1.70; CDNA×18 09:30 $69.50 → close $70.74 -22.37; CRON×380 09:30 $3.30 → close $3.39 -34.20; ETON×24 09:30 $50.93 → close $49.30 +39.12 | — |
 
 ## Not taken
 

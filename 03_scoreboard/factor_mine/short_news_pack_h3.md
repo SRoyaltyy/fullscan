@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short morning packet news🔴
 
-Cash book **+11.74%** ($11,174) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 36 · skips 26 · realized $+60.75.
+Cash book **+11.30%** ($11,130) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 38 · skips 26 · realized $+60.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -202,6 +202,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,173.56 | ▲ close $11,173.56 vs 09:30 $11,173.56 (session +0.00) | 16:00 close · cash $11,173.56 · no lots left · equity $11,173.56. | — |
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,173.56 | ▲ 09:30 equity $11,173.56 vs yday $11,173.56 (+0.00) | 09:30 open · cash $11,173.56 · no holdings · equity $11,173.56 vs prior close $11,173.56 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,173.56 | ▲ close $11,173.56 vs 09:30 $11,173.56 (session +0.00) | 16:00 close · cash $11,173.56 · no lots left · equity $11,173.56. | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,173.56 | ▲ 09:30 equity $11,173.56 vs yday $11,173.56 (+0.00) | 09:30 open · cash $11,173.56 · no holdings · equity $11,173.56 vs prior close $11,173.56 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-21 09:30 ET | **SHORT** | `NFLX` | 43 | $64.15 | $2.23 | — | $13,929.78 | — | short morning packet news🔴; gate news_box=bad; list earn_react; 🔵; ret5=-2.5; leftover $2793.39 | join🟢 sector🟢 gen🟢 news🔴 digest🔴 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `LUV` | 70 | $39.87 | $2.31 | — | $16,718.37 | — | short morning packet news🔴; gate news_box=bad; list overnight; ret5=-2.5; leftover $2793.39 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,718.37 | ▼ close $11,130.05 vs 09:30 $11,173.56 (session -38.97) | 16:00 close · cash $16,718.37 · equity $11,130.05 vs 09:30 $11,173.56 (-43.51; session marks -38.97) · 2 name(s) marked open→close (per-name table). NFLX×43 09:30 $64.15 → close $65.04 -38.27; LUV×70 09:30 $39.87 → close $39.88 -0.70 | — |
 
 ## Not taken
 

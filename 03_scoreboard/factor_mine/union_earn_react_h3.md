@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ earn_react, no 🚨
 
-Cash book **-26.69%** ($7,331) · signal-only (no cash/fees) was -14.12%. Starts YES **25/30**. Fills 174 · skips 198 · realized $+2100.34.
+Cash book **-25.29%** ($7,471) · signal-only (no cash/fees) was -14.12%. Starts YES **25/30**. Fills 185 · skips 198 · realized $+2100.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -342,6 +342,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `PNC` | 1 | $217.13 | $2.01 | $+4.63 | $7,051.63 | ▲ +4.63 after sell → book $7,331.68; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-20 09:30 ET | **SELL** | `SCHW` | 2 | $89.60 | $1.82 | $-11.28 | $7,229.01 | ▼ -11.28 after sell → book $7,329.86; vs 09:30 mark -1.82 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,229.01 | ▲ close $7,330.68 vs 09:30 $7,343.21 (session +0.82) | 16:00 close · cash $7,229.01 · equity $7,330.68 vs 09:30 $7,343.21 (-12.53; session marks +0.82) · 3 name(s) marked open→close (per-name table). AA×1 09:30 $40.72 → close $40.79 +0.07; RF×1 09:30 $27.25 → close $27.85 +0.60; WSE×3 09:30 $10.96 → close $11.01 +0.15 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,229.01 | ▲ 09:30 equity $7,331.04 vs yday $7,330.68 (+0.36) | 09:30 open · cash $7,229.01 (unchanged overnight, no fees) · equity $7,331.04 vs prior close $7,330.68 (+0.36) · 3 name(s) re-marked at the open (per-name table). AA×1 yday $40.79 → 09:30 $40.70 -0.09; RF×1 yday $27.85 → 09:30 $28.03 +0.18; WSE×3 yday $11.01 → 09:30 $11.10 +0.27 | — |
+| 2026-10-21 09:30 ET | **SELL** | `AA` | 1 | $40.70 | $0.43 | $-1.80 | $7,269.28 | ▼ -1.80 after sell → book $7,330.61; vs 09:30 mark -0.43 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-21 09:30 ET | **SELL** | `RF` | 1 | $28.03 | $0.30 | $-0.45 | $7,297.01 | ▼ -0.45 after sell → book $7,330.31; vs 09:30 mark -0.30 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-21 09:30 ET | **SELL** | `WSE` | 3 | $11.10 | $0.36 | $-3.58 | $7,329.94 | ▼ -3.58 after sell → book $7,329.94; vs 09:30 mark -0.37 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-21 09:30 ET | **BUY** | `BKU` | 21 | $42.79 | $2.05 | — | $6,429.30 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+1.5; leftover $916.24 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CME` | 3 | $295.77 | $2.00 | — | $5,539.99 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+6.2; leftover $916.24 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `COF` | 4 | $206.37 | $2.00 | — | $4,712.51 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+1.8; leftover $916.24 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `DHR` | 4 | $217.56 | $2.00 | — | $3,840.27 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=+0.6; leftover $916.24 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ISRG` | 2 | $402.50 | $2.00 | — | $3,033.28 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=+3.8; leftover $916.24 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `NFLX` | 14 | $64.15 | $2.03 | — | $2,133.15 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-2.5; leftover $916.24 | join🟢 sector🟢 gen🟢 news🔴 digest🔴 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `PM` | 4 | $187.14 | $2.00 | — | $1,382.59 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+0.3; leftover $916.24 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `T` | 41 | $21.89 | $2.11 | — | $483.11 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=+2.5; leftover $916.24 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $483.11 | ▲ close $7,471.19 vs 09:30 $7,331.04 (session +157.44) | 16:00 close · cash $483.11 · equity $7,471.19 vs 09:30 $7,331.04 (+140.15; session marks +157.44) · 8 name(s) marked open→close (per-name table). BKU×21 09:30 $42.79 → close $42.08 -14.91; CME×3 09:30 $295.77 → close $295.79 +0.06; COF×4 09:30 $206.37 → close $206.66 +1.16; DHR×4 09:30 $217.56 → close $233.86 +65.20; ISRG×2 09:30 $402.50 → close $428.12 +51.25; NFLX×14 09:30 $64.15 → close $65.04 +12.46; PM×4 09:30 $187.14 → close $197.46 +41.28; T×41 09:30 $21.89 → close $21.91 +0.94 | — |
 
 ## Not taken
 

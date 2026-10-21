@@ -239,6 +239,11 @@
       "bytes": 94165,
       "sha256": "938b85b82aa0d0c7d66342dfd8b13bb00c404201a5ffda369d70242565f0d269",
       "written_at": "2026-10-20T17:07:09.803273-04:00"
+    },
+    "2026-10-21": {
+      "bytes": 94261,
+      "sha256": "a8401b4d0cbe20e915cf119c0bb990623a812a1af9ef61cbe01b3ff7726c5ccf",
+      "written_at": "2026-10-21T17:02:18.001792-04:00"
     }
   },
   "excel_signals": {
@@ -1534,6 +1539,12 @@
       "encoding": "gzip",
       "sha256": "6a0f27f780308c0ddbe245c16ba9c883e61efb8ffbc67bef68a3315b4e2bcc13",
       "written_at": "2026-10-20T17:08:28.946946-04:00"
+    },
+    "2026-10-21": {
+      "bytes": 20991585,
+      "encoding": "gzip",
+      "sha256": "e69facc34eb906fc3d4802815854036fef774fe6246977931ccfcc3b84f8f08d",
+      "written_at": "2026-10-21T17:03:16.522382-04:00"
     }
   },
   "lineups": {
@@ -1776,6 +1787,11 @@
       "bytes": 689,
       "sha256": "2fb911e666c5695138dedc91c6d2eac1646d1368cc513b58c1b3e1399e1b04e6",
       "written_at": "2026-10-20T17:09:13.589201-04:00"
+    },
+    "2026-10-21": {
+      "bytes": 743,
+      "sha256": "75879c9149cecd58273dcc0edaa2f79d86ba12632c28c62d51c5f13d3d50a280",
+      "written_at": "2026-10-21T17:03:55.570682-04:00"
     }
   },
   "prices": {
@@ -1868,6 +1884,11 @@
       "bytes": 624967,
       "sha256": "3c300cc50a77422c4e5f9ab3f3335490bf908a1e339267b2ee9b21f845c6324e",
       "written_at": "2026-10-20T17:07:09.828819-04:00"
+    },
+    "2026-10-21": {
+      "bytes": 692154,
+      "sha256": "6b5a26ccd6f75eaefeb8ce84d3645d257776302d4f0de14868d6c8ac6de33ab7",
+      "written_at": "2026-10-21T17:02:18.021887-04:00"
     }
   },
   "recipe_rules": {
@@ -13040,6 +13061,26 @@
         "TJGC"
       ],
       "written_at": "2026-10-20T17:07:17.050712-04:00"
+    },
+    "2026-10-21": {
+      "bytes": 227705,
+      "dropped_missing_bars": [
+        "CCO",
+        "DBRG",
+        "PSKY",
+        "QRVO",
+        "TJGC",
+        "WBD"
+      ],
+      "heat_vintage": "2026-10-21",
+      "n_rows": 82,
+      "sha256": "4ceb27ae6d276e4ef4208351d4cb7dfccbf389ca10a27edd426a87e860a9fb42",
+      "unpriced_held": [
+        "BLFS",
+        "DBRG",
+        "TJGC"
+      ],
+      "written_at": "2026-10-21T17:02:21.913438-04:00"
     }
   },
   "version": 1

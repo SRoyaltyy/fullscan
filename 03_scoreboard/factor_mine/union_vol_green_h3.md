@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-8.54%** ($9,145) · signal-only (no cash/fees) was -2.67%. Starts YES **12/30**. Fills 296 · skips 272 · realized $-923.90.
+Cash book **-7.87%** ($9,213) · signal-only (no cash/fees) was -2.67%. Starts YES **12/30**. Fills 297 · skips 272 · realized $-923.90.
 
 ## How this sleeve decides (like you are 10)
 
@@ -466,6 +466,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16.88 | ▼ 09:30 equity $9,170.48 vs yday $9,532.81 (-362.33) | 09:30 open · cash $16.88 (unchanged overnight, no fees) · equity $9,170.48 vs prior close $9,532.81 (-362.33) · 1 name(s) re-marked at the open (per-name table). EGG×1907 yday $4.99 → 09:30 $4.80 -362.33 | — |
 | 2026-10-20 09:30 ET | **SELL** | `EGG` | 1907 | $4.80 | $24.99 | $+827.63 | $9,145.49 | ▲ +827.63 after sell → book $9,145.49; vs 09:30 mark -24.99 | dropped from list after 4 sess (min 3) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,145.49 | ▲ close $9,145.49 vs 09:30 $9,170.48 (session +0.00) | 16:00 close · cash $9,145.49 · no lots left · equity $9,145.49. | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,145.49 | ▲ 09:30 equity $9,145.49 vs yday $9,145.49 (+0.00) | 09:30 open · cash $9,145.49 · no holdings · equity $9,145.49 vs prior close $9,145.49 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-21 09:30 ET | **BUY** | `EGG` | 1824 | $5.00 | $23.53 | — | $1.96 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; ret5=+11.9; leftover $9145.49 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.96 | ▲ close $9,213.16 vs 09:30 $9,145.49 (session +91.20) | 16:00 close · cash $1.96 · equity $9,213.16 vs 09:30 $9,145.49 (+67.67; session marks +91.20) · 1 name(s) marked open→close (per-name table). EGG×1824 09:30 $5.00 → close $5.05 +91.20 | — |
 
 ## Not taken
 

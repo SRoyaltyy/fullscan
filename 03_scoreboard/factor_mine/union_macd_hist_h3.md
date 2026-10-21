@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-14.82%** ($8,518) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 276 · skips 257 · realized $-743.63.
+Cash book **-14.85%** ($8,515) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 282 · skips 257 · realized $-743.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -443,6 +443,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `JBHT` | 1 | $223.41 | $2.01 | $-13.53 | $1,888.62 | ▼ -13.53 after sell → book $8,474.22; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-20 09:30 ET | **SELL** | `PSX` | 1 | $291.65 | $2.01 | $-7.35 | $2,178.26 | ▼ -7.35 after sell → book $8,472.20; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,178.26 | ▲ close $8,517.88 vs 09:30 $8,480.26 (session +45.67) | 16:00 close · cash $2,178.26 · equity $8,517.88 vs 09:30 $8,480.26 (+37.61; session marks +45.67) · 8 name(s) marked open→close (per-name table). ACN×4 09:30 $238.00 → close $239.12 +4.48; ALL×4 09:30 $250.00 → close $249.91 -0.36; CRS×2 09:30 $372.13 → close $372.53 +0.80; EFX×1 09:30 $166.11 → close $176.54 +10.43; LMT×1 09:30 $553.00 → close $548.71 -4.29; POOL×6 09:30 $168.23 → close $171.71 +20.88; VEEV×3 09:30 $318.00 → close $318.67 +2.01; WM×4 09:30 $228.80 → close $231.73 +11.72 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,178.26 | ▼ 09:30 equity $8,493.99 vs yday $8,517.88 (-23.89) | 09:30 open · cash $2,178.26 (unchanged overnight, no fees) · equity $8,493.99 vs prior close $8,517.88 (-23.89) · 8 name(s) re-marked at the open (per-name table). ACN×4 yday $239.12 → 09:30 $235.00 -16.48; ALL×4 yday $249.91 → 09:30 $250.58 +2.68; CRS×2 yday $372.53 → 09:30 $375.04 +5.02; EFX×1 yday $176.54 → 09:30 $175.78 -0.76; LMT×1 yday $548.71 → 09:30 $547.14 -1.57; POOL×6 yday $171.71 → 09:30 $171.39 -1.92; VEEV×3 yday $318.67 → 09:30 $317.01 -4.98; WM×4 yday $231.73 → 09:30 $230.26 -5.88 | — |
+| 2026-10-21 09:30 ET | **SELL** | `EFX` | 1 | $175.78 | $1.78 | $+10.60 | $2,352.25 | ▲ +10.60 after sell → book $8,492.20; vs 09:30 mark -1.78 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-21 09:30 ET | **BUY** | `HLT` | 1 | $360.00 | $1.99 | — | $1,990.26 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+9.0; leftover $392.04 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `HUBS` | 1 | $250.41 | $1.99 | — | $1,737.86 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+13.3; leftover $392.04 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `PAYC` | 1 | $260.69 | $1.99 | — | $1,475.18 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+10.8; leftover $392.04 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CME` | 1 | $295.77 | $1.99 | — | $1,177.41 | — | rank by macd_hist; rank macd_hist; list earn_react; 🔵; ret5=+6.2; leftover $392.04 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `IT` | 1 | $216.34 | $1.99 | — | $959.08 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+11.5; leftover $392.04 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $959.08 | ▲ close $8,515.24 vs 09:30 $8,493.99 (session +33.00) | 16:00 close · cash $959.08 · equity $8,515.24 vs 09:30 $8,493.99 (+21.25; session marks +33.00) · 12 name(s) marked open→close (per-name table). ACN×4 09:30 $235.00 → close $240.26 +21.04; ALL×4 09:30 $250.58 → close $251.04 +1.84; CRS×2 09:30 $375.04 → close $368.16 -13.76; LMT×1 09:30 $547.14 → close $551.51 +4.37; POOL×6 09:30 $171.39 → close $172.44 +6.30; VEEV×3 09:30 $317.01 → close $320.55 +10.62; WM×4 09:30 $230.26 → close $229.58 -2.72; HLT×1 09:30 $360.00 → close $362.25 +2.25; HUBS×1 09:30 $250.41 → close $249.90 -0.51; PAYC×1 09:30 $260.69 → close $261.01 +0.32; CME×1 09:30 $295.77 → close $295.79 +0.02; IT×1 09:30 $216.34 → close $219.57 +3.23 | — |
 
 ## Not taken
 

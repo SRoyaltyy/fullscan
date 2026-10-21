@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight_mega` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · prior-calendar AMC-today / BMO-next, mcap≥$50B; hold 1 sells at next 09:30 so the print gap is in the book
 
-Cash book **-8.21%** ($9,179) · signal-only (no cash/fees) was -15.28%. Starts YES **0/30**. Fills 26 · skips 15 · realized $-576.24.
+Cash book **-6.75%** ($9,325) · signal-only (no cash/fees) was -15.28%. Starts YES **0/30**. Fills 29 · skips 15 · realized $-576.24.
 
 ## How this sleeve decides (like you are 10)
 
@@ -192,6 +192,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,178.58 | ▲ close $9,178.58 vs 09:30 $9,178.58 (session +0.00) | 16:00 close · cash $9,178.58 · no lots left · equity $9,178.58. | — |
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,178.58 | ▲ 09:30 equity $9,178.58 vs yday $9,178.58 (+0.00) | 09:30 open · cash $9,178.58 · no holdings · equity $9,178.58 vs prior close $9,178.58 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,178.58 | ▲ close $9,178.58 vs 09:30 $9,178.58 (session +0.00) | 16:00 close · cash $9,178.58 · no lots left · equity $9,178.58. | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,178.58 | ▲ 09:30 equity $9,178.58 vs yday $9,178.58 (+0.00) | 09:30 open · cash $9,178.58 · no holdings · equity $9,178.58 vs prior close $9,178.58 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-21 09:30 ET | **BUY** | `CSX` | 63 | $48.03 | $2.18 | — | $6,150.51 | — | prior-calendar AMC-today / BMO-next, mcap≥$50B; hold 1 sells at next 09:30 so the print gap is in the book; list overnight,overnight_mega; ret5=+0.7; leftover $3059.53 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `IBM` | 12 | $241.91 | $2.03 | — | $3,245.51 | — | prior-calendar AMC-today / BMO-next, mcap≥$50B; hold 1 sells at next 09:30 so the print gap is in the book; list overnight,overnight_mega; 🔵; ret5=+4.8; leftover $3059.53 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `SAP` | 13 | $231.57 | $2.03 | — | $233.07 | — | prior-calendar AMC-today / BMO-next, mcap≥$50B; hold 1 sells at next 09:30 so the print gap is in the book; list overnight,overnight_mega; ret5=+4.2; leftover $3059.53 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $233.07 | ▲ close $9,325.28 vs 09:30 $9,178.58 (session +152.93) | 16:00 close · cash $233.07 · equity $9,325.28 vs 09:30 $9,178.58 (+146.70; session marks +152.93) · 3 name(s) marked open→close (per-name table). CSX×63 09:30 $48.03 → close $48.40 +23.31; IBM×12 09:30 $241.91 → close $251.46 +114.54; SAP×13 09:30 $231.57 → close $232.73 +15.08 | — |
 
 ## Not taken
 

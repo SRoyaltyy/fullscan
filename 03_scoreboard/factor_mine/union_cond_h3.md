@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-5.97%** ($9,403) · signal-only (no cash/fees) was -15.16%. Starts YES **0/30**. Fills 304 · skips 307 · realized $-613.92.
+Cash book **-5.76%** ($9,424) · signal-only (no cash/fees) was -15.16%. Starts YES **0/30**. Fills 311 · skips 307 · realized $-613.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -471,6 +471,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `KURA` | 3 | $9.45 | $0.31 | $-1.12 | $1,477.73 | ▼ -1.12 after sell → book $9,212.88; vs 09:30 mark -0.31 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-20 09:30 ET | **SELL** | `SMMT` | 70 | $15.50 | $2.22 | $+10.28 | $2,560.51 | ▲ +10.28 after sell → book $9,210.66; vs 09:30 mark -2.22 | dropped from list after 4 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,560.51 | ▲ close $9,402.82 vs 09:30 $9,213.58 (session +192.16) | 16:00 close · cash $2,560.51 · equity $9,402.82 vs 09:30 $9,213.58 (+189.24; session marks +192.16) · 7 name(s) marked open→close (per-name table). ACRS×339 09:30 $3.37 → close $3.77 +135.60; ARQT×37 09:30 $31.89 → close $32.82 +34.41; AVPT×1 09:30 $14.80 → close $15.23 +0.43; COP×7 09:30 $147.15 → close $145.95 -8.40; EOG×7 09:30 $159.86 → close $157.91 -13.65; TRU×16 09:30 $75.62 → close $78.23 +41.76; VEEV×3 09:30 $318.00 → close $318.67 +2.01 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,560.51 | ▼ 09:30 equity $9,364.32 vs yday $9,402.82 (-38.50) | 09:30 open · cash $2,560.51 (unchanged overnight, no fees) · equity $9,364.32 vs prior close $9,402.82 (-38.50) · 7 name(s) re-marked at the open (per-name table). ACRS×339 yday $3.77 → 09:30 $3.74 -10.17; ARQT×37 yday $32.82 → 09:30 $32.64 -6.66; AVPT×1 yday $15.23 → 09:30 $15.23 +0.00; COP×7 yday $145.95 → 09:30 $145.61 -2.38; EOG×7 yday $157.91 → 09:30 $157.26 -4.55; TRU×16 yday $78.23 → 09:30 $77.62 -9.76; VEEV×3 yday $318.67 → 09:30 $317.01 -4.98 | — |
+| 2026-10-21 09:30 ET | **SELL** | `AVPT` | 1 | $15.23 | $0.18 | $-0.13 | $2,575.56 | ▼ -0.13 after sell → book $9,364.14; vs 09:30 mark -0.18 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-21 09:30 ET | **BUY** | `DOCU` | 5 | $80.00 | $2.00 | — | $2,173.56 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ret5=+11.0; leftover $429.26 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `IT` | 1 | $216.34 | $1.99 | — | $1,955.23 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ret5=+11.5; leftover $429.26 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `PAYC` | 1 | $260.69 | $1.99 | — | $1,692.54 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ret5=+10.8; leftover $429.26 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `AMX` | 18 | $23.20 | $2.04 | — | $1,272.90 | — | rank by cond; rank cond; list yday_gainer; ret5=+5.6; leftover $429.26 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `HLT` | 1 | $360.00 | $1.99 | — | $910.91 | — | rank by cond; rank cond; list ohlc_hot; ret5=+9.0; leftover $429.26 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CDNA` | 6 | $69.50 | $2.01 | — | $491.92 | — | rank by cond; rank cond; list flatten; ret5=+5.8; leftover $429.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $491.92 | ▲ close $9,423.97 vs 09:30 $9,364.32 (session +71.86) | 16:00 close · cash $491.92 · equity $9,423.97 vs 09:30 $9,364.32 (+59.65; session marks +71.86) · 12 name(s) marked open→close (per-name table). ACRS×339 09:30 $3.74 → close $3.81 +23.73; ARQT×37 09:30 $32.64 → close $31.87 -28.49; COP×7 09:30 $145.61 → close $145.67 +0.42; EOG×7 09:30 $157.26 → close $157.88 +4.34; TRU×16 09:30 $77.62 → close $78.93 +20.96; VEEV×3 09:30 $317.01 → close $320.55 +10.62; DOCU×5 09:30 $80.00 → close $81.48 +7.40; IT×1 09:30 $216.34 → close $219.57 +3.23; PAYC×1 09:30 $260.69 → close $261.01 +0.32; AMX×18 09:30 $23.20 → close $24.29 +19.62; HLT×1 09:30 $360.00 → close $362.25 +2.25; CDNA×6 09:30 $69.50 → close $70.74 +7.46 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ earn_react, no 🚨
 
-Cash book **-13.34%** ($8,666) · signal-only (no cash/fees) was -3.08%. Starts YES **4/30**. Fills 240 · skips 54 · realized $-117.67.
+Cash book **-11.84%** ($8,816) · signal-only (no cash/fees) was -3.08%. Starts YES **4/30**. Fills 248 · skips 54 · realized $-117.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -408,6 +408,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,665.57 | ▲ close $8,665.57 vs 09:30 $8,680.32 (session +0.00) | 16:00 close · cash $8,665.57 · no lots left · equity $8,665.57. | — |
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,665.57 | ▲ 09:30 equity $8,665.57 vs yday $8,665.57 (+0.00) | 09:30 open · cash $8,665.57 · no holdings · equity $8,665.57 vs prior close $8,665.57 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,665.57 | ▲ close $8,665.57 vs 09:30 $8,665.57 (session +0.00) | 16:00 close · cash $8,665.57 · no lots left · equity $8,665.57. | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,665.57 | ▲ 09:30 equity $8,665.57 vs yday $8,665.57 (+0.00) | 09:30 open · cash $8,665.57 · no holdings · equity $8,665.57 vs prior close $8,665.57 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-21 09:30 ET | **BUY** | `BKU` | 25 | $42.79 | $2.06 | — | $7,593.75 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+1.5; leftover $1083.20 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CME` | 3 | $295.77 | $2.00 | — | $6,704.45 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+6.2; leftover $1083.20 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `COF` | 5 | $206.37 | $2.00 | — | $5,670.59 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+1.8; leftover $1083.20 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `DHR` | 4 | $217.56 | $2.00 | — | $4,798.35 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=+0.6; leftover $1083.20 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ISRG` | 2 | $402.50 | $2.00 | — | $3,991.36 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=+3.8; leftover $1083.20 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `NFLX` | 16 | $64.15 | $2.04 | — | $2,962.92 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-2.5; leftover $1083.20 | join🟢 sector🟢 gen🟢 news🔴 digest🔴 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `PM` | 5 | $187.14 | $2.00 | — | $2,025.22 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+0.3; leftover $1083.20 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `T` | 49 | $21.89 | $2.14 | — | $950.62 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=+2.5; leftover $1083.20 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $950.62 | ▲ close $8,816.50 vs 09:30 $8,665.57 (session +167.18) | 16:00 close · cash $950.62 · equity $8,816.50 vs 09:30 $8,665.57 (+150.93; session marks +167.18) · 8 name(s) marked open→close (per-name table). BKU×25 09:30 $42.79 → close $42.08 -17.75; CME×3 09:30 $295.77 → close $295.79 +0.06; COF×5 09:30 $206.37 → close $206.66 +1.45; DHR×4 09:30 $217.56 → close $233.86 +65.20; ISRG×2 09:30 $402.50 → close $428.12 +51.25; NFLX×16 09:30 $64.15 → close $65.04 +14.24; PM×5 09:30 $187.14 → close $197.46 +51.60; T×49 09:30 $21.89 → close $21.91 +1.13 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **-2.23%** ($9,777) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 314 · skips 289 · realized $+901.34.
+Cash book **-1.89%** ($9,811) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 320 · skips 289 · realized $+901.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -481,6 +481,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `CHWY` | 1 | $20.85 | $0.23 | $-0.59 | $412.67 | ▼ -0.59 after sell → book $9,727.30; vs 09:30 mark -0.23 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-20 09:30 ET | **SELL** | `ENGS` | 10 | $3.78 | $0.43 | $+1.99 | $450.04 | ▲ +1.99 after sell → book $9,726.87; vs 09:30 mark -0.43 | dropped from list after 3 sess (min 3) | join🟡 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $450.04 | ▲ close $9,776.57 vs 09:30 $9,727.75 (session +49.70) | 16:00 close · cash $450.04 · equity $9,776.57 vs 09:30 $9,727.75 (+48.82; session marks +49.70) · 10 name(s) marked open→close (per-name table). ACN×5 09:30 $238.00 → close $239.12 +5.60; BLMN×2 09:30 $9.99 → close $10.34 +0.70; BR×6 09:30 $177.40 → close $179.99 +15.54; HONA×7 09:30 $162.75 → close $159.90 -19.95; NAVN×46 09:30 $25.67 → close $26.28 +28.06; OTIS×16 09:30 $71.42 → close $72.07 +10.40; OXSQ×18 09:30 $1.29 → close $1.29 +0.00; SU×15 09:30 $79.30 → close $78.44 -12.90; WM×5 09:30 $228.80 → close $231.73 +14.65; WMG×38 09:30 $31.13 → close $31.33 +7.60 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $450.04 | ▼ 09:30 equity $9,739.46 vs yday $9,776.57 (-37.11) | 09:30 open · cash $450.04 (unchanged overnight, no fees) · equity $9,739.46 vs prior close $9,776.57 (-37.11) · 10 name(s) re-marked at the open (per-name table). ACN×5 yday $239.12 → 09:30 $235.00 -20.60; BLMN×2 yday $10.34 → 09:30 $10.29 -0.10; BR×6 yday $179.99 → 09:30 $179.78 -1.26; HONA×7 yday $159.90 → 09:30 $159.99 +0.63; NAVN×46 yday $26.28 → 09:30 $26.45 +7.82; OTIS×16 yday $72.07 → 09:30 $72.00 -1.12; OXSQ×18 yday $1.29 → 09:30 $1.30 +0.18; SU×15 yday $78.44 → 09:30 $78.23 -3.15; WM×5 yday $231.73 → 09:30 $230.26 -7.35; WMG×38 yday $31.33 → 09:30 $31.01 -12.16 | — |
+| 2026-10-21 09:30 ET | **SELL** | `BLMN` | 2 | $10.29 | $0.23 | $+0.33 | $470.39 | ▲ +0.33 after sell → book $9,739.23; vs 09:30 mark -0.23 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-21 09:30 ET | **SELL** | `OXSQ` | 18 | $1.30 | $0.31 | $-1.50 | $493.48 | ▼ -1.50 after sell → book $9,738.92; vs 09:30 mark -0.31 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-21 09:30 ET | **BUY** | `WIT` | 34 | $2.06 | $0.80 | — | $422.64 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+13.9; leftover $70.50 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ARQT` | 2 | $32.64 | $0.66 | — | $356.70 | — | rank by w_hot_candle; rank w_hot_candle; list flatten; 🔵; ret5=+25.8; leftover $70.50 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `BMBL` | 11 | $5.95 | $0.69 | — | $290.56 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+0.0; leftover $70.50 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `KLRA` | 5 | $12.91 | $0.66 | — | $225.35 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer; 🔵; ret5=+19.7; leftover $70.50 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $225.35 | ▲ close $9,810.60 vs 09:30 $9,739.46 (session +74.49) | 16:00 close · cash $225.35 · equity $9,810.60 vs 09:30 $9,739.46 (+71.14; session marks +74.49) · 12 name(s) marked open→close (per-name table). ACN×5 09:30 $235.00 → close $240.26 +26.30; BR×6 09:30 $179.78 → close $178.30 -8.88; HONA×7 09:30 $159.99 → close $162.46 +17.29; NAVN×46 09:30 $26.45 → close $26.62 +7.82; OTIS×16 09:30 $72.00 → close $72.35 +5.60; SU×15 09:30 $78.23 → close $79.02 +11.85; WM×5 09:30 $230.26 → close $229.58 -3.40; WMG×38 09:30 $31.01 → close $31.44 +16.34; WIT×34 09:30 $2.06 → close $2.15 +3.06; ARQT×2 09:30 $32.64 → close $31.87 -1.54; BMBL×11 09:30 $5.95 → close $5.95 +0.00; KLRA×5 09:30 $12.91 → close $12.92 +0.05 | — |
 
 ## Not taken
 

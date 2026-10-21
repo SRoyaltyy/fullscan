@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #1 mom+breakout+peer/sector (research; not KEEP)
 
-Cash book **-12.37%** ($8,763) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 390 · skips 96 · realized $-120.43.
+Cash book **-11.61%** ($8,839) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 399 · skips 96 · realized $-120.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -560,6 +560,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `RELX` | 27 | $39.08 | $2.09 | $-1.06 | $6,679.69 | ▼ -1.06 after sell → book $8,774.84; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 09:30 ET | **SELL** | `SU` | 13 | $79.30 | $2.05 | $+20.75 | $7,708.54 | ▲ +20.75 after sell → book $8,772.79; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,708.54 | ▼ close $8,762.89 vs 09:30 $8,787.06 (session -9.90) | 16:00 close · cash $7,708.54 · equity $8,762.89 vs 09:30 $8,787.06 (-24.17; session marks -9.90) · 1 name(s) marked open→close (per-name table). OVV×15 09:30 $70.95 → close $70.29 -9.90 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,708.54 | ▼ 09:30 equity $8,758.24 vs yday $8,762.89 (-4.65) | 09:30 open · cash $7,708.54 (unchanged overnight, no fees) · equity $8,758.24 vs prior close $8,762.89 (-4.65) · 1 name(s) re-marked at the open (per-name table). OVV×15 yday $70.29 → 09:30 $69.98 -4.65 | — |
+| 2026-10-21 09:30 ET | **SELL** | `OVV` | 15 | $69.98 | $2.06 | $+10.46 | $8,756.18 | ▲ +10.46 after sell → book $8,756.18; vs 09:30 mark -2.06 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-21 09:30 ET | **BUY** | `HLT` | 3 | $360.00 | $2.00 | — | $7,674.19 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+9.0; leftover $1094.52 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `NAVN` | 41 | $26.45 | $2.11 | — | $6,587.62 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+10.0; leftover $1094.52 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `VFC` | 63 | $17.36 | $2.18 | — | $5,491.76 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+8.6; leftover $1094.52 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ISRG` | 2 | $402.50 | $2.00 | — | $4,684.78 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list earn_react; ret5=+3.8; leftover $1094.52 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `IBM` | 4 | $241.91 | $2.00 | — | $3,715.12 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list overnight,overnight_mega; 🔵; ret5=+4.8; leftover $1094.52 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CME` | 3 | $295.77 | $2.00 | — | $2,825.81 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list earn_react; 🔵; ret5=+6.2; leftover $1094.52 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `FRSH` | 73 | $14.84 | $2.21 | — | $1,740.28 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list yday_mover; 🔵; ret5=+6.8; leftover $1094.52 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `VEEV` | 3 | $317.01 | $2.00 | — | $787.25 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten; ret5=+5.6; leftover $1094.52 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $787.25 | ▲ close $8,839.19 vs 09:30 $8,758.24 (session +99.50) | 16:00 close · cash $787.25 · equity $8,839.19 vs 09:30 $8,758.24 (+80.95; session marks +99.50) · 8 name(s) marked open→close (per-name table). HLT×3 09:30 $360.00 → close $362.25 +6.75; NAVN×41 09:30 $26.45 → close $26.62 +6.97; VFC×63 09:30 $17.36 → close $17.15 -13.23; ISRG×2 09:30 $402.50 → close $428.12 +51.25; IBM×4 09:30 $241.91 → close $251.46 +38.18; CME×3 09:30 $295.77 → close $295.79 +0.06; FRSH×73 09:30 $14.84 → close $14.82 -1.10; VEEV×3 09:30 $317.01 → close $320.55 +10.62 | — |
 
 ## Not taken
 

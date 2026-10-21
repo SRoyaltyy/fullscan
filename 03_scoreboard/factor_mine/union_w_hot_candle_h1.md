@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+14.26%** ($11,426) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 422 · skips 97 · realized $+14.68.
+Cash book **+14.46%** ($11,446) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 431 · skips 97 · realized $+14.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -589,6 +589,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `WM` | 6 | $228.80 | $2.03 | $+21.52 | $8,592.94 | ▲ +21.52 after sell → book $11,421.79; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 09:30 ET | **SELL** | `WMG` | 45 | $31.13 | $2.15 | $-10.12 | $9,991.64 | ▼ -10.12 after sell → book $11,419.64; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,991.64 | ▲ close $11,426.36 vs 09:30 $11,434.20 (session +6.72) | 16:00 close · cash $9,991.64 · equity $11,426.36 vs 09:30 $11,434.20 (-7.84; session marks +6.72) · 1 name(s) marked open→close (per-name table). ACN×6 09:30 $238.00 → close $239.12 +6.72 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,991.64 | ▼ 09:30 equity $11,401.64 vs yday $11,426.36 (-24.72) | 09:30 open · cash $9,991.64 (unchanged overnight, no fees) · equity $11,401.64 vs prior close $11,426.36 (-24.72) · 1 name(s) re-marked at the open (per-name table). ACN×6 yday $239.12 → 09:30 $235.00 -24.72 | — |
+| 2026-10-21 09:30 ET | **SELL** | `ACN` | 6 | $235.00 | $2.03 | $+35.08 | $11,399.61 | ▲ +35.08 after sell → book $11,399.61; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `TRU` | 18 | $77.62 | $2.04 | — | $10,000.41 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,ohlc_hot; ret5=+15.9; leftover $1424.95 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `WIT` | 691 | $2.06 | $8.91 | — | $8,568.03 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+13.9; leftover $1424.95 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ARQT` | 43 | $32.64 | $2.12 | — | $7,162.39 | — | rank by w_hot_candle; rank w_hot_candle; list flatten; 🔵; ret5=+25.8; leftover $1424.95 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `BMBL` | 239 | $5.95 | $3.08 | — | $5,737.26 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+0.0; leftover $1424.95 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `NAVN` | 53 | $26.45 | $2.15 | — | $4,333.26 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+10.0; leftover $1424.95 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `HLT` | 3 | $360.00 | $2.00 | — | $3,251.26 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+9.0; leftover $1424.95 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `KLRA` | 110 | $12.91 | $2.32 | — | $1,828.84 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer; 🔵; ret5=+19.7; leftover $1424.95 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `PAYC` | 5 | $260.69 | $2.00 | — | $523.39 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+10.8; leftover $1424.95 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $523.39 | ▲ close $11,446.10 vs 09:30 $11,401.64 (session +71.12) | 16:00 close · cash $523.39 · equity $11,446.10 vs 09:30 $11,401.64 (+44.46; session marks +71.12) · 8 name(s) marked open→close (per-name table). TRU×18 09:30 $77.62 → close $78.93 +23.58; WIT×691 09:30 $2.06 → close $2.15 +62.19; ARQT×43 09:30 $32.64 → close $31.87 -33.11; BMBL×239 09:30 $5.95 → close $5.95 +0.00; NAVN×53 09:30 $26.45 → close $26.62 +9.01; HLT×3 09:30 $360.00 → close $362.25 +6.75; KLRA×110 09:30 $12.91 → close $12.92 +1.10; PAYC×5 09:30 $260.69 → close $261.01 +1.60 | — |
 
 ## Not taken
 

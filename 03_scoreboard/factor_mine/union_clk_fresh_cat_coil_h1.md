@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #2 fresh catalyst + limited extension (research; not KEEP)
 
-Cash book **-21.53%** ($7,847) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 352 · skips 106 · realized $-137.13.
+Cash book **-19.28%** ($8,072) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 360 · skips 106 · realized $-137.13.
 
 ## How this sleeve decides (like you are 10)
 
@@ -522,6 +522,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `NVTS` | 109 | $8.38 | $2.35 | $-54.80 | $5,033.24 | ▼ -54.80 after sell → book $7,834.80; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-20 09:30 ET | **SELL** | `RELX` | 24 | $39.08 | $2.08 | $-1.38 | $5,968.95 | ▼ -1.38 after sell → book $7,832.71; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,968.95 | ▲ close $7,847.26 vs 09:30 $7,845.29 (session +14.55) | 16:00 close · cash $5,968.95 · equity $7,847.26 vs 09:30 $7,845.29 (+1.97; session marks +14.55) · 2 name(s) marked open→close (per-name table). AMX×46 09:30 $22.93 → close $22.90 -1.38; ITW×3 09:30 $269.66 → close $274.97 +15.93 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,968.95 | ▲ 09:30 equity $7,863.10 vs yday $7,847.26 (+15.84) | 09:30 open · cash $5,968.95 (unchanged overnight, no fees) · equity $7,863.10 vs prior close $7,847.26 (+15.84) · 2 name(s) re-marked at the open (per-name table). AMX×46 yday $22.90 → 09:30 $23.20 +13.80; ITW×3 yday $274.97 → 09:30 $275.65 +2.04 | — |
+| 2026-10-21 09:30 ET | **SELL** | `ITW` | 3 | $275.65 | $2.02 | $+8.49 | $6,793.88 | ▲ +8.49 after sell → book $7,861.08; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CME` | 3 | $295.77 | $2.00 | — | $5,904.57 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=+6.2; leftover $970.55 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `COF` | 4 | $206.37 | $2.00 | — | $5,077.09 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=+1.8; leftover $970.55 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `PM` | 5 | $187.14 | $2.00 | — | $4,139.38 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=+0.3; leftover $970.55 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `SAP` | 4 | $231.57 | $2.00 | — | $3,211.10 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list overnight,overnight_mega; ret5=+4.2; leftover $970.55 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `DHR` | 4 | $217.56 | $2.00 | — | $2,338.86 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; ret5=+0.6; leftover $970.55 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ISRG` | 2 | $402.50 | $2.00 | — | $1,531.87 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; ret5=+3.8; leftover $970.55 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `T` | 44 | $21.89 | $2.12 | — | $566.72 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; ret5=+2.5; leftover $970.55 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $566.72 | ▲ close $8,072.01 vs 09:30 $7,863.10 (session +225.06) | 16:00 close · cash $566.72 · equity $8,072.01 vs 09:30 $7,863.10 (+208.91; session marks +225.06) · 8 name(s) marked open→close (per-name table). AMX×46 09:30 $23.20 → close $24.29 +50.14; CME×3 09:30 $295.77 → close $295.79 +0.06; COF×4 09:30 $206.37 → close $206.66 +1.16; PM×5 09:30 $187.14 → close $197.46 +51.60; SAP×4 09:30 $231.57 → close $232.73 +4.64; DHR×4 09:30 $217.56 → close $233.86 +65.20; ISRG×2 09:30 $402.50 → close $428.12 +51.25; T×44 09:30 $21.89 → close $21.91 +1.01 | — |
 
 ## Not taken
 

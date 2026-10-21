@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off, no 🚨
 
-Cash book **-22.74%** ($7,726) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 398 · skips 105 · realized $-1593.31.
+Cash book **-22.58%** ($7,742) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 409 · skips 105 · realized $-1593.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -569,6 +569,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `PACS` | 21 | $45.98 | $2.07 | $-25.97 | $3,818.06 | ▼ -25.97 after sell → book $7,733.83; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 09:30 ET | **SELL** | `VEEV` | 3 | $318.00 | $2.02 | $+18.99 | $4,770.04 | ▲ +18.99 after sell → book $7,731.81; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,770.04 | ▼ close $7,725.98 vs 09:30 $7,742.09 (session -5.83) | 16:00 close · cash $4,770.04 · equity $7,725.98 vs 09:30 $7,742.09 (-16.11; session marks -5.83) · 3 name(s) marked open→close (per-name table). AMX×49 09:30 $22.93 → close $22.90 -1.47; POOL×5 09:30 $168.23 → close $171.71 +17.40; TBBB×17 09:30 $58.65 → close $57.37 -21.76 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,770.04 | ▲ 09:30 equity $7,758.12 vs yday $7,725.98 (+32.14) | 09:30 open · cash $4,770.04 (unchanged overnight, no fees) · equity $7,758.12 vs prior close $7,725.98 (+32.14) · 3 name(s) re-marked at the open (per-name table). AMX×49 yday $22.90 → 09:30 $23.20 +14.70; POOL×5 yday $171.71 → 09:30 $171.39 -1.60; TBBB×17 yday $57.37 → 09:30 $58.49 +19.04 | — |
+| 2026-10-21 09:30 ET | **SELL** | `AMX` | 49 | $23.20 | $2.16 | $+24.13 | $5,904.68 | ▲ +24.13 after sell → book $7,755.96; vs 09:30 mark -2.16 | dropped from list after 3 sess (min 1) | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SELL** | `POOL` | 5 | $171.39 | $2.02 | $+55.67 | $6,759.61 | ▲ +55.67 after sell → book $7,753.94; vs 09:30 mark -2.02 | dropped from list after 5 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SELL** | `TBBB` | 17 | $58.49 | $2.06 | $+4.23 | $7,751.88 | ▲ +4.23 after sell → book $7,751.88; vs 09:30 mark -2.06 | dropped from list after 2 sess (min 1) | join🔴 sector🟢 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `VEEV` | 3 | $317.01 | $2.00 | — | $6,798.85 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ret5=+5.6; leftover $968.98 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CDNA` | 13 | $69.50 | $2.03 | — | $5,893.36 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ret5=+5.8; leftover $968.98 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CRON` | 293 | $3.30 | $3.78 | — | $4,922.68 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+2.5; leftover $968.98 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `SMMT` | 59 | $16.35 | $2.17 | — | $3,955.86 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; ret5=+3.7; leftover $968.98 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `PRMB` | 48 | $20.00 | $2.13 | — | $2,993.73 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; ret5=+5.8; leftover $968.98 | join🟡 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `EPR` | 17 | $55.53 | $2.04 | — | $2,047.68 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.0; leftover $968.98 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ACRS` | 259 | $3.74 | $3.34 | — | $1,075.67 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.6; leftover $968.98 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `KURA` | 96 | $10.04 | $2.28 | — | $109.56 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer,yday_mover; 🔵; ret5=+1.5; leftover $968.98 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $109.56 | ▲ close $7,741.96 vs 09:30 $7,758.12 (session +9.85) | 16:00 close · cash $109.56 · equity $7,741.96 vs 09:30 $7,758.12 (-16.16; session marks +9.85) · 8 name(s) marked open→close (per-name table). VEEV×3 09:30 $317.01 → close $320.55 +10.62; CDNA×13 09:30 $69.50 → close $70.74 +16.16; CRON×293 09:30 $3.30 → close $3.39 +26.37; SMMT×59 09:30 $16.35 → close $15.83 -30.68; PRMB×48 09:30 $20.00 → close $20.03 +1.44; EPR×17 09:30 $55.53 → close $54.54 -16.83; ACRS×259 09:30 $3.74 → close $3.81 +18.13; KURA×96 09:30 $10.04 → close $9.88 -15.36 | — |
 
 ## Not taken
 

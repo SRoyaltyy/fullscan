@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢
 
-Cash book **-35.25%** ($6,475) · signal-only (no cash/fees) was +9.53%. Starts YES **0/30**. Fills 307 · skips 79 · realized $-327.36.
+Cash book **-34.27%** ($6,573) · signal-only (no cash/fees) was +9.53%. Starts YES **0/30**. Fills 314 · skips 79 · realized $-327.36.
 
 ## How this sleeve decides (like you are 10)
 
@@ -476,6 +476,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `GLND` | 266 | $2.93 | $3.49 | $-25.54 | $3,263.90 | ▼ -25.54 after sell → book $6,507.84; vs 09:30 mark -3.49 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-20 09:30 ET | **SELL** | `RELX` | 20 | $39.08 | $2.07 | $-1.82 | $4,043.33 | ▼ -1.82 after sell → book $6,505.77; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,043.33 | ▼ close $6,475.23 vs 09:30 $6,517.40 (session -30.54) | 16:00 close · cash $4,043.33 · equity $6,475.23 vs 09:30 $6,517.40 (-42.17; session marks -30.54) · 3 name(s) marked open→close (per-name table). AMX×38 09:30 $22.93 → close $22.90 -1.14; CNQ×14 09:30 $55.00 → close $54.18 -11.48; TBBB×14 09:30 $58.65 → close $57.37 -17.92 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,043.33 | ▲ 09:30 equity $6,499.79 vs yday $6,475.23 (+24.56) | 09:30 open · cash $4,043.33 (unchanged overnight, no fees) · equity $6,499.79 vs prior close $6,475.23 (+24.56) · 3 name(s) re-marked at the open (per-name table). AMX×38 yday $22.90 → 09:30 $23.20 +11.40; CNQ×14 yday $54.18 → 09:30 $54.00 -2.52; TBBB×14 yday $57.37 → 09:30 $58.49 +15.68 | — |
+| 2026-10-21 09:30 ET | **SELL** | `CNQ` | 14 | $54.00 | $2.05 | $+2.78 | $4,797.28 | ▲ +2.78 after sell → book $6,497.74; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-21 09:30 ET | **BUY** | `HLT` | 2 | $360.00 | $2.00 | — | $4,075.28 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list ohlc_hot; ret5=+9.0; leftover $799.55 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `SAP` | 3 | $231.57 | $2.00 | — | $3,378.57 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list overnight,overnight_mega; ret5=+4.2; leftover $799.55 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CSX` | 16 | $48.03 | $2.04 | — | $2,608.06 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list overnight,overnight_mega; ret5=+0.7; leftover $799.55 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `AIP` | 39 | $20.38 | $2.11 | — | $1,811.13 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=-6.6; leftover $799.55 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ITW` | 2 | $275.65 | $2.00 | — | $1,257.83 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list yday_gainer; ret5=+3.2; leftover $799.55 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `NVTS` | 88 | $9.05 | $2.25 | — | $459.18 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list probable,yday_gainer,yday_mover; ret5=-16.4; leftover $799.55 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $459.18 | ▲ close $6,573.40 vs 09:30 $6,499.79 (session +88.05) | 16:00 close · cash $459.18 · equity $6,573.40 vs 09:30 $6,499.79 (+73.61; session marks +88.05) · 8 name(s) marked open→close (per-name table). AMX×38 09:30 $23.20 → close $24.29 +41.42; TBBB×14 09:30 $58.49 → close $58.44 -0.70; HLT×2 09:30 $360.00 → close $362.25 +4.50; SAP×3 09:30 $231.57 → close $232.73 +3.48; CSX×16 09:30 $48.03 → close $48.40 +5.92; AIP×39 09:30 $20.38 → close $20.93 +21.45; ITW×2 09:30 $275.65 → close $276.80 +2.30; NVTS×88 09:30 $9.05 → close $9.16 +9.68 | — |
 
 ## Not taken
 

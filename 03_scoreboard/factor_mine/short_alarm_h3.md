@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+2.29%** ($10,229) · signal-only (no cash/fees) was -2.80%. Starts YES **2/30**. Fills 235 · skips 221 · realized $+639.78.
+Cash book **+1.83%** ($10,183) · signal-only (no cash/fees) was -2.80%. Starts YES **2/30**. Fills 236 · skips 221 · realized $+639.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -401,6 +401,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **COVER** | `SHOO` | 19 | $45.14 | $2.05 | $-11.74 | $16,536.25 | ▼ -11.74 after sell → book $10,260.55; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-20 09:30 ET | **COVER** | `USB` | 15 | $58.05 | $2.04 | $-32.76 | $15,663.46 | ▼ -32.76 after sell → book $10,258.51; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,663.46 | ▼ close $10,229.37 vs 09:30 $10,270.43 (session -29.14) | 16:00 close · cash $15,663.46 · equity $10,229.37 vs 09:30 $10,270.43 (-41.06; session marks -29.14) · 8 name(s) marked open→close (per-name table). BP×13 09:30 $49.90 → close $49.39 +6.63; BRO×9 09:30 $69.39 → close $70.90 -13.59; CDNA×9 09:30 $67.20 → close $69.20 -18.00; NOG×24 09:30 $28.00 → close $27.54 +11.04; PRMB×33 09:30 $19.77 → close $20.00 -7.59; SMMT×57 09:30 $15.50 → close $16.09 -33.63; VET×49 09:30 $13.79 → close $13.41 +18.62; VIST×9 09:30 $71.48 → close $70.66 +7.38 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,663.46 | ▼ 09:30 equity $10,221.43 vs yday $10,229.37 (-7.94) | 09:30 open · cash $15,663.46 (unchanged overnight, no fees) · equity $10,221.43 vs prior close $10,229.37 (-7.94) · 8 name(s) re-marked at the open (per-name table). BP×13 yday $49.39 → 09:30 $49.73 -4.42; BRO×9 yday $70.90 → 09:30 $70.29 +5.49; CDNA×9 yday $69.20 → 09:30 $69.50 -2.67; NOG×24 yday $27.54 → 09:30 $27.43 +2.64; PRMB×33 yday $20.00 → 09:30 $20.00 -0.00; SMMT×57 yday $16.09 → 09:30 $16.35 -14.82; VET×49 yday $13.41 → 09:30 $13.30 +5.39; VIST×9 yday $70.66 → 09:30 $70.61 +0.45 | — |
+| 2026-10-21 09:30 ET | **COVER** | `SMMT` | 57 | $16.35 | $2.16 | $-76.19 | $14,729.35 | ▼ -76.19 after sell → book $10,219.27; vs 09:30 mark -2.16 | dropped from list after 4 sess (min 3) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,729.35 | ▼ close $10,183.41 vs 09:30 $10,221.43 (session -35.86) | 16:00 close · cash $14,729.35 · equity $10,183.41 vs 09:30 $10,221.43 (-38.02; session marks -35.86) · 7 name(s) marked open→close (per-name table). BP×13 09:30 $49.73 → close $49.85 -1.56; BRO×9 09:30 $70.29 → close $70.53 -2.16; CDNA×9 09:30 $69.50 → close $70.74 -11.19; NOG×24 09:30 $27.43 → close $27.44 -0.24; PRMB×33 09:30 $20.00 → close $20.03 -0.99; VET×49 09:30 $13.30 → close $13.55 -12.25; VIST×9 09:30 $70.61 → close $71.44 -7.47 | — |
 
 ## Not taken
 

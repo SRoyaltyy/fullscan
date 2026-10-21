@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-42.52%** ($5,748) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 234 · skips 65 · realized $-814.48.
+Cash book **-42.63%** ($5,737) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 236 · skips 65 · realized $-814.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -403,6 +403,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $32.52 | ▼ 09:30 equity $5,678.18 vs yday $5,702.82 (-24.64) | 09:30 open · cash $32.52 (unchanged overnight, no fees) · equity $5,678.18 vs prior close $5,702.82 (-24.64) · 5 name(s) re-marked at the open (per-name table). BTI×42 yday $58.51 → 09:30 $58.94 +17.85; GLND×254 yday $3.02 → 09:30 $2.93 -22.86; ITW×3 yday $270.17 → 09:30 $269.66 -1.53; NVTS×88 yday $8.63 → 09:30 $8.38 -22.00; TBBB×15 yday $58.39 → 09:30 $58.65 +3.90 | — |
 | 2026-10-20 09:30 ET | **SELL** | `BTI` | 42 | $58.94 | $2.15 | $-12.45 | $2,505.64 | ▼ -12.45 after sell → book $5,676.03; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,505.64 | ▲ close $5,747.62 vs 09:30 $5,678.18 (session +71.59) | 16:00 close · cash $2,505.64 · equity $5,747.62 vs 09:30 $5,678.18 (+69.44; session marks +71.59) · 4 name(s) marked open→close (per-name table). GLND×254 09:30 $2.93 → close $3.10 +43.18; ITW×3 09:30 $269.66 → close $274.97 +15.93; NVTS×88 09:30 $8.38 → close $8.74 +31.68; TBBB×15 09:30 $58.65 → close $57.37 -19.20 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,505.64 | ▲ 09:30 equity $5,770.88 vs yday $5,747.62 (+23.26) | 09:30 open · cash $2,505.64 (unchanged overnight, no fees) · equity $5,770.88 vs prior close $5,747.62 (+23.26) · 4 name(s) re-marked at the open (per-name table). GLND×254 yday $3.10 → 09:30 $3.01 -22.86; ITW×3 yday $274.97 → 09:30 $275.65 +2.04; NVTS×88 yday $8.74 → 09:30 $9.05 +27.28; TBBB×15 yday $57.37 → 09:30 $58.49 +16.80 | — |
+| 2026-10-21 09:30 ET | **BUY** | `Z` | 38 | $32.22 | $2.10 | — | $1,279.18 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+15.3; leftover $1252.82 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `LUV` | 31 | $39.87 | $2.08 | — | $41.12 | — | prior-export headline🟢 only; gate headline=good; rank cond; list overnight; ret5=-2.5; leftover $1252.82 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $41.12 | ▼ close $5,737.18 vs 09:30 $5,770.88 (session -29.51) | 16:00 close · cash $41.12 · equity $5,737.18 vs 09:30 $5,770.88 (-33.70; session marks -29.51) · 6 name(s) marked open→close (per-name table). GLND×254 09:30 $3.01 → close $2.98 -7.62; ITW×3 09:30 $275.65 → close $276.80 +3.45; NVTS×88 09:30 $9.05 → close $9.16 +9.68; TBBB×15 09:30 $58.49 → close $58.44 -0.75; Z×38 09:30 $32.22 → close $31.31 -34.58; LUV×31 09:30 $39.87 → close $39.88 +0.31 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **+1.52%** ($10,152) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 421 · skips 107 · realized $-717.78.
+Cash book **+0.34%** ($10,034) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 432 · skips 107 · realized $-717.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -587,6 +587,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **COVER** | `SMMT` | 43 | $15.50 | $2.12 | $-30.08 | $12,717.39 | ▼ -30.08 after sell → book $10,191.84; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-20 09:30 ET | **COVER** | `VEEV` | 2 | $318.00 | $2.00 | $-19.37 | $12,079.39 | ▼ -19.37 after sell → book $10,189.84; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,079.39 | ▼ close $10,151.77 vs 09:30 $10,202.05 (session -38.07) | 16:00 close · cash $12,079.39 · equity $10,151.77 vs 09:30 $10,202.05 (-50.28; session marks -38.07) · 3 name(s) marked open→close (per-name table). CECO×12 09:30 $56.72 → close $56.72 -0.00; NVTS×72 09:30 $8.38 → close $8.74 -25.92; PDFS×15 09:30 $40.37 → close $41.18 -12.15 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,079.39 | ▼ 09:30 equity $10,072.39 vs yday $10,151.77 (-79.38) | 09:30 open · cash $12,079.39 (unchanged overnight, no fees) · equity $10,072.39 vs prior close $10,151.77 (-79.38) · 3 name(s) re-marked at the open (per-name table). CECO×12 yday $56.72 → 09:30 $59.50 -33.36; NVTS×72 yday $8.74 → 09:30 $9.05 -22.32; PDFS×15 yday $41.18 → 09:30 $42.76 -23.70 | — |
+| 2026-10-21 09:30 ET | **COVER** | `CECO` | 12 | $59.50 | $2.03 | $+1.19 | $11,363.36 | ▲ +1.19 after sell → book $10,070.36; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 3 sess | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟡 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **COVER** | `NVTS` | 72 | $9.05 | $2.21 | $-19.57 | $10,709.56 | ▼ -19.57 after sell → book $10,068.16; vs 09:30 mark -2.20 | dropped from list after 2 sess (min 1) | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **COVER** | `PDFS` | 15 | $42.76 | $2.04 | $-26.16 | $10,066.12 | ▼ -26.16 after sell → book $10,066.12; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `PRIM` | 8 | $73.79 | $2.05 | — | $10,654.39 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; ret5=-12.6; leftover $629.13 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `TLSA` | 610 | $1.03 | $8.00 | — | $11,274.70 | — | last bar red; gate last_red=True; list yday_gainer; ret5=-7.3; leftover $629.13 | join🟡 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `AMX` | 27 | $23.20 | $2.11 | — | $11,898.99 | — | last bar red; gate last_red=True; list yday_gainer; ret5=+5.6; leftover $629.13 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `TBBB` | 10 | $58.49 | $2.06 | — | $12,481.83 | — | last bar red; gate last_red=True; list yday_gainer; 🔵; ret5=+1.6; leftover $629.13 | join🔴 sector🟢 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `ENHA` | 533 | $1.18 | $6.99 | — | $13,103.78 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=-8.1; leftover $629.13 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `INTA` | 14 | $44.56 | $2.07 | — | $13,725.55 | — | last bar red; gate last_red=True; list ohlc_hot; ret5=+13.0; leftover $629.13 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `PLNT` | 12 | $52.38 | $2.06 | — | $14,352.05 | — | last bar red; gate last_red=True; list ohlc_hot; ret5=+11.6; leftover $629.13 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `CME` | 2 | $295.77 | $2.03 | — | $14,941.56 | — | last bar red; gate last_red=True; list earn_react; 🔵; ret5=+6.2; leftover $629.13 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,941.56 | ▼ close $10,033.78 vs 09:30 $10,072.39 (session -4.98) | 16:00 close · cash $14,941.56 · equity $10,033.78 vs 09:30 $10,072.39 (-38.61; session marks -4.98) · 8 name(s) marked open→close (per-name table). PRIM×8 09:30 $73.79 → close $72.67 +8.96; TLSA×610 09:30 $1.03 → close $1.01 +12.20; AMX×27 09:30 $23.20 → close $24.29 -29.43; TBBB×10 09:30 $58.49 → close $58.44 +0.50; ENHA×533 09:30 $1.18 → close $1.17 +5.33; INTA×14 09:30 $44.56 → close $45.33 -10.78; PLNT×12 09:30 $52.38 → close $51.69 +8.28; CME×2 09:30 $295.77 → close $295.79 -0.04 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data)
 
-Cash book **-7.27%** ($9,273) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 10 · skips 7 · realized $-603.63.
+Cash book **-6.72%** ($9,327) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 11 · skips 7 · realized $-603.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -180,6 +180,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `FIS` | 125 | $36.47 | $2.42 | $+3.96 | $4,584.25 | ▲ +3.96 after sell → book $9,275.59; vs 09:30 mark -2.42 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-20 09:30 ET | **SELL** | `PBR-A` | 201 | $23.34 | $2.67 | $+105.28 | $9,272.92 | ▲ +105.28 after sell → book $9,272.92; vs 09:30 mark -2.67 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,272.92 | ▲ close $9,272.92 vs 09:30 $9,278.01 (session +0.00) | 16:00 close · cash $9,272.92 · no lots left · equity $9,272.92. | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,272.92 | ▲ 09:30 equity $9,272.92 vs yday $9,272.92 (+0.00) | 09:30 open · cash $9,272.92 · no holdings · equity $9,272.92 vs prior close $9,272.92 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-21 09:30 ET | **BUY** | `POOL` | 54 | $171.39 | $2.15 | — | $15.71 | — | Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data); gate clk_insider_cash_stab=True; rank cond; list yday_gainer; ret5=+6.9; leftover $9272.92 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.71 | ▲ close $9,327.47 vs 09:30 $9,272.92 (session +56.70) | 16:00 close · cash $15.71 · equity $9,327.47 vs 09:30 $9,272.92 (+54.55; session marks +56.70) · 1 name(s) marked open→close (per-name table). POOL×54 09:30 $171.39 → close $172.44 +56.70 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `both` · S≥+5: sizeup + more names
 
-Cash book **-17.96%** ($8,204) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 444 · skips 108 · realized $-308.78.
+Cash book **-18.27%** ($8,173) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 450 · skips 108 · realized $-308.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -609,6 +609,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `PACS` | 21 | $45.98 | $2.07 | $-25.97 | $5,182.60 | ▼ -25.97 after sell → book $8,156.64; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 09:30 ET | **SELL** | `VEEV` | 3 | $318.00 | $2.02 | $+18.99 | $6,134.58 | ▲ +18.99 after sell → book $8,154.62; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,134.58 | ▲ close $8,204.34 vs 09:30 $8,164.90 (session +49.72) | 16:00 close · cash $6,134.58 · equity $8,204.34 vs 09:30 $8,164.90 (+39.44; session marks +49.72) · 2 name(s) marked open→close (per-name table). PRMB×52 09:30 $19.77 → close $20.00 +11.96; SMMT×64 09:30 $15.50 → close $16.09 +37.76 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,134.58 | ▲ 09:30 equity $8,220.98 vs yday $8,204.34 (+16.64) | 09:30 open · cash $6,134.58 (unchanged overnight, no fees) · equity $8,220.98 vs prior close $8,204.34 (+16.64) · 2 name(s) re-marked at the open (per-name table). PRMB×52 yday $20.00 → 09:30 $20.00 +0.00; SMMT×64 yday $16.09 → 09:30 $16.35 +16.64 | — |
+| 2026-10-21 09:30 ET | **BUY** | `CORT` | 8 | $116.45 | $2.01 | — | $5,200.97 | — | S≥+5: sizeup + more names; list flatten; 🔵; ret5=-1.1; leftover $1022.43 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `VEEV` | 3 | $317.01 | $2.00 | — | $4,247.94 | — | S≥+5: sizeup + more names; list flatten; ret5=+5.6; leftover $1022.43 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CDNA` | 14 | $69.50 | $2.03 | — | $3,272.95 | — | S≥+5: sizeup + more names; list flatten; ret5=+5.8; leftover $1022.43 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ARQT` | 31 | $32.64 | $2.08 | — | $2,259.02 | — | S≥+5: sizeup + more names; list flatten; 🔵; ret5=+25.8; leftover $1022.43 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CRON` | 309 | $3.30 | $3.99 | — | $1,235.34 | — | S≥+5: sizeup + more names; list flatten; 🔵; ret5=+2.5; leftover $1022.43 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ETON` | 20 | $50.93 | $2.05 | — | $214.69 | — | S≥+5: sizeup + more names; list flatten; 🔵; ret5=-5.9; leftover $1022.43 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $214.69 | ▼ close $8,173.10 vs 09:30 $8,220.98 (session -33.72) | 16:00 close · cash $214.69 · equity $8,173.10 vs 09:30 $8,220.98 (-47.88; session marks -33.72) · 8 name(s) marked open→close (per-name table). PRMB×52 09:30 $20.00 → close $20.03 +1.56; SMMT×64 09:30 $16.35 → close $15.83 -33.28; CORT×8 09:30 $116.45 → close $116.28 -1.36; VEEV×3 09:30 $317.01 → close $320.55 +10.62; CDNA×14 09:30 $69.50 → close $70.74 +17.40; ARQT×31 09:30 $32.64 → close $31.87 -23.87; CRON×309 09:30 $3.30 → close $3.39 +27.81; ETON×20 09:30 $50.93 → close $49.30 -32.60 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-42.24%** ($5,776) · signal-only (no cash/fees) was +1.46%. Starts YES **0/30**. Fills 247 · skips 201 · realized $-2103.38.
+Cash book **-43.10%** ($5,690) · signal-only (no cash/fees) was +1.46%. Starts YES **0/30**. Fills 247 · skips 201 · realized $-2103.38.
 
 ## How this sleeve decides (like you are 10)
 
@@ -417,6 +417,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $44.94 | ▼ close $5,662.53 vs 09:30 $5,774.14 (session -102.03) | 16:00 close · cash $44.94 · equity $5,662.53 vs 09:30 $5,774.14 (-111.61; session marks -102.03) · 3 name(s) marked open→close (per-name table). ACRS×2 09:30 $3.28 → close $3.48 +0.40; PRMB×1 09:30 $19.22 → close $19.79 +0.57; EPR×103 09:30 $55.28 → close $54.28 -103.00 | — |
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $44.94 | ▲ 09:30 equity $5,691.13 vs yday $5,662.53 (+28.60) | 09:30 open · cash $44.94 (unchanged overnight, no fees) · equity $5,691.13 vs prior close $5,662.53 (+28.60) · 3 name(s) re-marked at the open (per-name table). ACRS×2 yday $3.48 → 09:30 $3.37 -0.22; EPR×103 yday $54.28 → 09:30 $54.56 +28.84; PRMB×1 yday $19.79 → 09:30 $19.77 -0.02 | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $44.94 | ▲ close $5,775.59 vs 09:30 $5,691.13 (session +84.46) | 16:00 close · cash $44.94 · equity $5,775.59 vs 09:30 $5,691.13 (+84.46; session marks +84.46) · 3 name(s) marked open→close (per-name table). ACRS×2 09:30 $3.37 → close $3.77 +0.80; EPR×103 09:30 $54.56 → close $55.37 +83.43; PRMB×1 09:30 $19.77 → close $20.00 +0.23 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $44.94 | ▲ 09:30 equity $5,792.01 vs yday $5,775.59 (+16.42) | 09:30 open · cash $44.94 (unchanged overnight, no fees) · equity $5,792.01 vs prior close $5,775.59 (+16.42) · 3 name(s) re-marked at the open (per-name table). ACRS×2 yday $3.77 → 09:30 $3.74 -0.06; EPR×103 yday $55.37 → 09:30 $55.53 +16.48; PRMB×1 yday $20.00 → 09:30 $20.00 +0.00 | — |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $44.94 | ▼ close $5,690.21 vs 09:30 $5,792.01 (session -101.80) | 16:00 close · cash $44.94 · equity $5,690.21 vs 09:30 $5,792.01 (-101.80; session marks -101.80) · 3 name(s) marked open→close (per-name table). ACRS×2 09:30 $3.74 → close $3.81 +0.14; EPR×103 09:30 $55.53 → close $54.54 -101.97; PRMB×1 09:30 $20.00 → close $20.03 +0.03 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #8 flow-in + green + not extended
 
-Cash book **-0.05%** ($9,995) · signal-only (no cash/fees) was -14.71%. Starts YES **10/30**. Fills 34 · skips 8 · realized $-732.31.
+Cash book **+6.08%** ($10,608) · signal-only (no cash/fees) was -14.71%. Starts YES **10/30**. Fills 35 · skips 8 · realized $-732.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -204,6 +204,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $62.88 | ▲ 09:30 equity $9,997.28 vs yday $9,869.60 (+127.68) | 09:30 open · cash $62.88 (unchanged overnight, no fees) · equity $9,997.28 vs prior close $9,869.60 (+127.68) · 1 name(s) re-marked at the open (per-name table). BR×56 yday $175.12 → 09:30 $177.40 +127.68 | — |
 | 2026-10-20 09:30 ET | **SELL** | `BR` | 56 | $177.40 | $2.25 | $+203.35 | $9,995.03 | ▲ +203.35 after sell → book $9,995.03; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,995.03 | ▲ close $9,995.03 vs 09:30 $9,997.28 (session +0.00) | 16:00 close · cash $9,995.03 · no lots left · equity $9,995.03. | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,995.03 | ▲ 09:30 equity $9,995.03 vs yday $9,995.03 (+0.00) | 09:30 open · cash $9,995.03 · no holdings · equity $9,995.03 vs prior close $9,995.03 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-21 09:30 ET | **BUY** | `ISRG` | 24 | $402.50 | $2.06 | — | $333.09 | — | Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list earn_react; ret5=+3.8; leftover $9995.03 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $333.09 | ▲ close $10,607.97 vs 09:30 $9,995.03 (session +615.00) | 16:00 close · cash $333.09 · equity $10,607.97 vs 09:30 $9,995.03 (+612.94; session marks +615.00) · 1 name(s) marked open→close (per-name table). ISRG×24 09:30 $402.50 → close $428.12 +615.00 | — |
 
 ## Not taken
 

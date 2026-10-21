@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-10.67%** ($8,933) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 136 · skips 17 · realized $-2405.95.
+Cash book **-9.79%** ($9,021) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 140 · skips 17 · realized $-2405.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -306,6 +306,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,933.03 | ▲ close $8,933.03 vs 09:30 $8,941.34 (session +0.00) | 16:00 close · cash $8,933.03 · no lots left · equity $8,933.03. | — |
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,933.03 | ▲ 09:30 equity $8,933.03 vs yday $8,933.03 (+0.00) | 09:30 open · cash $8,933.03 · no holdings · equity $8,933.03 vs prior close $8,933.03 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,933.03 | ▲ close $8,933.03 vs 09:30 $8,933.03 (session +0.00) | 16:00 close · cash $8,933.03 · no lots left · equity $8,933.03. | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,933.03 | ▲ 09:30 equity $8,933.03 vs yday $8,933.03 (+0.00) | 09:30 open · cash $8,933.03 · no holdings · equity $8,933.03 vs prior close $8,933.03 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-21 09:30 ET | **BUY** | `BKU` | 52 | $42.79 | $2.15 | — | $6,705.80 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+1.5; leftover $2233.26 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `COF` | 10 | $206.37 | $2.02 | — | $4,640.08 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+1.8; leftover $2233.26 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ISRG` | 5 | $402.50 | $2.00 | — | $2,625.60 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+3.8; leftover $2233.26 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `T` | 102 | $21.89 | $2.30 | — | $390.83 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+2.5; leftover $2233.26 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $390.83 | ▲ close $9,021.01 vs 09:30 $8,933.03 (session +96.45) | 16:00 close · cash $390.83 · equity $9,021.01 vs 09:30 $8,933.03 (+87.98; session marks +96.45) · 4 name(s) marked open→close (per-name table). BKU×52 09:30 $42.79 → close $42.08 -36.92; COF×10 09:30 $206.37 → close $206.66 +2.90; ISRG×5 09:30 $402.50 → close $428.12 +128.12; T×102 09:30 $21.89 → close $21.91 +2.35 | — |
 
 ## Not taken
 

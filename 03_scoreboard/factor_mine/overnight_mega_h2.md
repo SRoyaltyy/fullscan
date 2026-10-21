@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight_mega` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · same mega calendar; hold 2 also keeps the session after the print
 
-Cash book **-4.65%** ($9,535) · signal-only (no cash/fees) was -8.07%. Starts YES **1/30**. Fills 12 · skips 27 · realized $-735.01.
+Cash book **-3.08%** ($9,692) · signal-only (no cash/fees) was -8.07%. Starts YES **1/30**. Fills 15 · skips 27 · realized $-735.01.
 
 ## How this sleeve decides (like you are 10)
 
@@ -178,6 +178,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,534.60 | ▲ close $9,534.60 vs 09:30 $9,534.60 (session +0.00) | 16:00 close · cash $9,534.60 · no lots left · equity $9,534.60. | — |
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,534.60 | ▲ 09:30 equity $9,534.60 vs yday $9,534.60 (+0.00) | 09:30 open · cash $9,534.60 · no holdings · equity $9,534.60 vs prior close $9,534.60 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,534.60 | ▲ close $9,534.60 vs 09:30 $9,534.60 (session +0.00) | 16:00 close · cash $9,534.60 · no lots left · equity $9,534.60. | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,534.60 | ▲ 09:30 equity $9,534.60 vs yday $9,534.60 (+0.00) | 09:30 open · cash $9,534.60 · no holdings · equity $9,534.60 vs prior close $9,534.60 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-21 09:30 ET | **BUY** | `CSX` | 66 | $48.03 | $2.19 | — | $6,362.43 | — | same mega calendar; hold 2 also keeps the session after the print; list overnight,overnight_mega; ret5=+0.7; leftover $3178.20 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `IBM` | 13 | $241.91 | $2.03 | — | $3,215.51 | — | same mega calendar; hold 2 also keeps the session after the print; list overnight,overnight_mega; 🔵; ret5=+4.8; leftover $3178.20 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `SAP` | 13 | $231.57 | $2.03 | — | $203.07 | — | same mega calendar; hold 2 also keeps the session after the print; list overnight,overnight_mega; ret5=+4.2; leftover $3178.20 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $203.07 | ▲ close $9,691.94 vs 09:30 $9,534.60 (session +163.59) | 16:00 close · cash $203.07 · equity $9,691.94 vs 09:30 $9,534.60 (+157.34; session marks +163.59) · 3 name(s) marked open→close (per-name table). CSX×66 09:30 $48.03 → close $48.40 +24.42; IBM×13 09:30 $241.91 → close $251.46 +124.09; SAP×13 09:30 $231.57 → close $232.73 +15.08 | — |
 
 ## Not taken
 

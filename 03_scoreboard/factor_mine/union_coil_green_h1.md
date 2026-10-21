@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-20.14%** ($7,986) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 411 · skips 101 · realized $-768.45.
+Cash book **-20.07%** ($7,993) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 420 · skips 101 · realized $-768.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -584,6 +584,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `POOL` | 6 | $168.23 | $2.03 | $-15.02 | $6,047.47 | ▼ -15.02 after sell → book $8,009.55; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-20 09:30 ET | **SELL** | `WMG` | 31 | $31.13 | $2.10 | $-8.22 | $7,010.40 | ▼ -8.22 after sell → book $8,007.45; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,010.40 | ▼ close $7,985.69 vs 09:30 $8,021.97 (session -21.76) | 16:00 close · cash $7,010.40 · equity $7,985.69 vs 09:30 $8,021.97 (-36.28; session marks -21.76) · 1 name(s) marked open→close (per-name table). TBBB×17 09:30 $58.65 → close $57.37 -21.76 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,010.40 | ▲ 09:30 equity $8,004.73 vs yday $7,985.69 (+19.04) | 09:30 open · cash $7,010.40 (unchanged overnight, no fees) · equity $8,004.73 vs prior close $7,985.69 (+19.04) · 1 name(s) re-marked at the open (per-name table). TBBB×17 yday $57.37 → 09:30 $58.49 +19.04 | — |
+| 2026-10-21 09:30 ET | **SELL** | `TBBB` | 17 | $58.49 | $2.06 | $+4.23 | $8,002.67 | ▲ +4.23 after sell → book $8,002.67; vs 09:30 mark -2.06 | dropped from list after 2 sess (min 1) | join🔴 sector🟢 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `VEEV` | 3 | $317.01 | $2.00 | — | $7,049.64 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ret5=+5.6; leftover $1000.33 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CDNA` | 14 | $69.50 | $2.03 | — | $6,074.65 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ret5=+5.8; leftover $1000.33 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CRON` | 303 | $3.30 | $3.91 | — | $5,070.84 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+2.5; leftover $1000.33 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `SMMT` | 61 | $16.35 | $2.17 | — | $4,071.32 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; ret5=+3.7; leftover $1000.33 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `PRMB` | 50 | $20.00 | $2.14 | — | $3,069.18 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; ret5=+5.8; leftover $1000.33 | join🟡 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `EPR` | 18 | $55.53 | $2.04 | — | $2,067.59 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.0; leftover $1000.33 | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ACRS` | 267 | $3.74 | $3.44 | — | $1,065.57 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.6; leftover $1000.33 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `KURA` | 99 | $10.04 | $2.29 | — | $69.32 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer,yday_mover; 🔵; ret5=+1.5; leftover $1000.33 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $69.32 | ▲ close $7,992.74 vs 09:30 $8,004.73 (session +10.10) | 16:00 close · cash $69.32 · equity $7,992.74 vs 09:30 $8,004.73 (-11.99; session marks +10.10) · 8 name(s) marked open→close (per-name table). VEEV×3 09:30 $317.01 → close $320.55 +10.62; CDNA×14 09:30 $69.50 → close $70.74 +17.40; CRON×303 09:30 $3.30 → close $3.39 +27.27; SMMT×61 09:30 $16.35 → close $15.83 -31.72; PRMB×50 09:30 $20.00 → close $20.03 +1.50; EPR×18 09:30 $55.53 → close $54.54 -17.82; ACRS×267 09:30 $3.74 → close $3.81 +18.69; KURA×99 09:30 $10.04 → close $9.88 -15.84 | — |
 
 ## Not taken
 

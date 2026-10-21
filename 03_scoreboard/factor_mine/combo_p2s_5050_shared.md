@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_pack_net2_h1/short_news_r_h3 w=0.5,0.5 net=priority
 
-Cash book **-7.14%** ($9,286) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 238 · skips 145 · realized $+1088.80.
+Cash book **-5.33%** ($9,467) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 250 · skips 145 · realized $+1088.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,237.40.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6,152.26.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -407,6 +407,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `EOG` | 23 | $159.86 | $2.10 | $+49.66 | $7,488.52 | ▲ +49.66 after sell → book $9,417.98; vs 09:30 mark -2.10 | union_news_pack_net2_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 09:30 ET | **SELL** | `RELX` | 96 | $39.08 | $2.32 | $+6.44 | $11,237.40 | ▲ +6.44 after sell → book $9,415.66; vs 09:30 mark -2.32 | union_news_pack_net2_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,237.40 | ▼ close $9,285.50 vs 09:30 $9,426.57 (session -130.16) | 16:00 close · cash $11,237.40 · equity $9,285.50 vs 09:30 $9,426.57 (-141.07; session marks -130.16) · 3 name(s) marked open→close (per-name table). AMX×146 09:30 $22.93 → close $22.90 -4.38; NOG×25 09:30 $28.00 → close $27.54 +11.50; RBLX×88 09:30 $50.79 → close $52.35 -137.28 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,237.40 | ▲ 09:30 equity $9,342.61 vs yday $9,285.50 (+57.11) | 09:30 open · cash $11,237.40 (unchanged overnight, no fees) · equity $9,342.61 vs prior close $9,285.50 (+57.11) | — |
+| 2026-10-21 09:30 ET | **COVER** | `NOG` | 25 | $27.43 | $2.06 | $-26.67 | $10,549.58 | ▼ -26.67 after sell → book $9,340.54; vs 09:30 mark -2.07 | short_news_r_h3: dropped from list after 5 sess (min 3) | — |
+| 2026-10-21 09:30 ET | **COVER** | `RBLX` | 88 | $52.23 | $2.25 | $-68.92 | $5,951.09 | ▼ -68.92 after sell → book $9,338.29; vs 09:30 mark -2.25 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-21 09:30 ET | **BUY** | `HLT` | 2 | $360.00 | $2.00 | — | $5,229.09 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; ret5=+9.0; combo leftover $991.85; owner union_news_pack_net2_h1 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `SAP` | 4 | $231.57 | $2.00 | — | $4,300.81 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list overnight,overnight_mega; ret5=+4.2; combo leftover $991.85; owner union_news_pack_net2_h1 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CSX` | 20 | $48.03 | $2.05 | — | $3,338.16 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list overnight,overnight_mega; ret5=+0.7; combo leftover $991.85; owner union_news_pack_net2_h1 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `KD` | 34 | $13.94 | $2.12 | — | $3,810.00 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.5; combo leftover $476.88; owner short_news_r_h3 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `CTSH` | 6 | $68.54 | $2.04 | — | $4,219.20 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+11.2; combo leftover $476.88; owner short_news_r_h3 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `HALO` | 3 | $123.90 | $2.03 | — | $4,588.87 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+13.5; combo leftover $476.88; owner short_news_r_h3 | join🟢 sector🟡 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `NFLX` | 7 | $64.15 | $2.04 | — | $5,035.88 | — | news🔴; gate news=bad; list earn_react; 🔵; ret5=-2.5; combo leftover $476.88; owner short_news_r_h3 | join🟢 sector🟢 gen🟢 news🔴 digest🔴 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `IBM` | 1 | $241.91 | $2.02 | — | $5,275.77 | — | news🔴; gate news=bad; list overnight,overnight_mega; 🔵; ret5=+4.8; combo leftover $476.88; owner short_news_r_h3 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `LUV` | 11 | $39.87 | $2.06 | — | $5,712.29 | — | news🔴; gate news=bad; list overnight; ret5=-2.5; combo leftover $476.88; owner short_news_r_h3 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `MOH` | 2 | $221.00 | $2.03 | — | $6,152.26 | — | news🔴; gate news=bad; list overnight; 🔵; ret5=+4.9; combo leftover $476.88; owner short_news_r_h3 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,152.26 | ▲ close $9,467.11 vs 09:30 $9,342.61 (session +149.20) | 16:00 close · cash $6,152.26 · equity $9,467.11 vs 09:30 $9,342.61 (+124.50; session marks +149.20) · 11 name(s) marked open→close (per-name table). AMX×146 09:30 $23.20 → close $24.29 +159.14; HLT×2 09:30 $360.00 → close $362.25 +4.50; SAP×4 09:30 $231.57 → close $232.73 +4.64; CSX×20 09:30 $48.03 → close $48.40 +7.40; KD×34 09:30 $13.94 → close $14.35 -13.94; CTSH×6 09:30 $68.54 → close $69.55 -6.06; HALO×3 09:30 $123.90 → close $124.83 -2.79; NFLX×7 09:30 $64.15 → close $65.04 -6.23; IBM×1 09:30 $241.91 → close $251.46 -9.55; LUV×11 09:30 $39.87 → close $39.88 -0.11; MOH×2 09:30 $221.00 → close $214.90 +12.20 | — |
 
 ## Not taken
 

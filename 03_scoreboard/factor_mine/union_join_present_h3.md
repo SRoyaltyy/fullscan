@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ join_present, no 🚨
 
-Cash book **-24.13%** ($7,587) · signal-only (no cash/fees) was +0.57%. Starts YES **1/30**. Fills 310 · skips 302 · realized $-248.23.
+Cash book **-24.13%** ($7,587) · signal-only (no cash/fees) was +0.57%. Starts YES **1/30**. Fills 320 · skips 302 · realized $-248.23.
 
 ## How this sleeve decides (like you are 10)
 
@@ -478,6 +478,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `TOST` | 2 | $31.65 | $0.66 | $+2.14 | $2,563.66 | ▲ +2.14 after sell → book $7,465.74; vs 09:30 mark -0.66 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-20 09:30 ET | **SELL** | `YOU` | 1 | $45.43 | $0.48 | $+0.11 | $2,608.61 | ▲ +0.11 after sell → book $7,465.26; vs 09:30 mark -0.48 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,608.61 | ▲ close $7,587.27 vs 09:30 $7,469.34 (session +122.01) | 16:00 close · cash $2,608.61 · equity $7,587.27 vs 09:30 $7,469.34 (+117.93; session marks +122.01) · 8 name(s) marked open→close (per-name table). ARQT×36 09:30 $31.89 → close $32.82 +33.48; AVPT×3 09:30 $14.80 → close $15.23 +1.29; EPR×1 09:30 $54.56 → close $55.37 +0.81; ILMN×3 09:30 $264.13 → close $267.93 +11.40; NVTS×92 09:30 $8.38 → close $8.74 +33.12; PACS×22 09:30 $45.98 → close $47.72 +38.28; PDFS×2 09:30 $40.37 → close $41.18 +1.62; VEEV×3 09:30 $318.00 → close $318.67 +2.01 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,608.61 | ▲ 09:30 equity $7,601.51 vs yday $7,587.27 (+14.24) | 09:30 open · cash $2,608.61 (unchanged overnight, no fees) · equity $7,601.51 vs prior close $7,587.27 (+14.24) · 8 name(s) re-marked at the open (per-name table). ARQT×36 yday $32.82 → 09:30 $32.64 -6.48; AVPT×3 yday $15.23 → 09:30 $15.23 +0.00; EPR×1 yday $55.37 → 09:30 $55.53 +0.16; ILMN×3 yday $267.93 → 09:30 $267.35 -1.74; NVTS×92 yday $8.74 → 09:30 $9.05 +28.52; PACS×22 yday $47.72 → 09:30 $47.52 -4.40; PDFS×2 yday $41.18 → 09:30 $42.76 +3.16; VEEV×3 yday $318.67 → 09:30 $317.01 -4.98 | — |
+| 2026-10-21 09:30 ET | **SELL** | `AVPT` | 3 | $15.23 | $0.49 | $-0.35 | $2,653.81 | ▼ -0.35 after sell → book $7,601.02; vs 09:30 mark -0.49 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-21 09:30 ET | **SELL** | `EPR` | 1 | $55.53 | $0.58 | $-1.18 | $2,708.77 | ▼ -1.18 after sell → book $7,600.45; vs 09:30 mark -0.57 | dropped from list after 4 sess (min 3) | join🟡 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SELL** | `NVTS` | 92 | $9.05 | $2.29 | $-88.74 | $3,539.07 | ▼ -88.74 after sell → book $7,598.15; vs 09:30 mark -2.30 | dropped from list after 5 sess (min 3) | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SELL** | `PDFS` | 2 | $42.76 | $0.88 | $+2.42 | $3,623.71 | ▲ +2.42 after sell → book $7,597.27; vs 09:30 mark -0.88 | dropped from list after 4 sess (min 3) | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CORT` | 5 | $116.45 | $2.00 | — | $3,039.46 | — | union ∩ join_present, no 🚨; gate join_present=True; list flatten; 🔵; ret5=-1.1; leftover $603.95 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CDNA` | 8 | $69.50 | $2.01 | — | $2,481.47 | — | union ∩ join_present, no 🚨; gate join_present=True; list flatten; ret5=+5.8; leftover $603.95 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CRON` | 183 | $3.30 | $2.54 | — | $1,875.03 | — | union ∩ join_present, no 🚨; gate join_present=True; list flatten; 🔵; ret5=+2.5; leftover $603.95 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ETON` | 11 | $50.93 | $2.02 | — | $1,312.78 | — | union ∩ join_present, no 🚨; gate join_present=True; list flatten; 🔵; ret5=-5.9; leftover $603.95 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `SMMT` | 36 | $16.35 | $2.10 | — | $722.08 | — | union ∩ join_present, no 🚨; gate join_present=True; list probable,yday_gainer,yday_mover; ret5=+3.7; leftover $603.95 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `PRMB` | 30 | $20.00 | $2.08 | — | $120.00 | — | union ∩ join_present, no 🚨; gate join_present=True; list probable,yday_gainer,yday_mover; ret5=+5.8; leftover $603.95 | join🟡 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $120.00 | ▲ close $7,587.04 vs 09:30 $7,601.51 (session +2.52) | 16:00 close · cash $120.00 · equity $7,587.04 vs 09:30 $7,601.51 (-14.47; session marks +2.52) · 10 name(s) marked open→close (per-name table). ARQT×36 09:30 $32.64 → close $31.87 -27.72; ILMN×3 09:30 $267.35 → close $282.86 +46.53; PACS×22 09:30 $47.52 → close $46.76 -16.72; VEEV×3 09:30 $317.01 → close $320.55 +10.62; CORT×5 09:30 $116.45 → close $116.28 -0.85; CDNA×8 09:30 $69.50 → close $70.74 +9.94; CRON×183 09:30 $3.30 → close $3.39 +16.47; ETON×11 09:30 $50.93 → close $49.30 -17.93; SMMT×36 09:30 $16.35 → close $15.83 -18.72; PRMB×30 09:30 $20.00 → close $20.03 +0.90 | — |
 
 ## Not taken
 

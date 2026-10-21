@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-11.03%** ($8,897) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 323 · skips 96 · realized $+387.41.
+Cash book **-12.34%** ($8,766) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 331 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -493,6 +493,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **SELL** | `OVV` | 18 | $70.95 | $2.06 | $+30.81 | $7,630.55 | ▲ +30.81 after sell → book $8,899.35; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-20 09:30 ET | **SELL** | `SU` | 16 | $79.30 | $2.06 | $+26.46 | $8,897.29 | ▲ +26.46 after sell → book $8,897.29; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,897.29 | ▲ close $8,897.29 vs 09:30 $8,911.68 (session +0.00) | 16:00 close · cash $8,897.29 · no lots left · equity $8,897.29. | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,897.29 | ▲ 09:30 equity $8,897.29 vs yday $8,897.29 (+0.00) | 09:30 open · cash $8,897.29 · no holdings · equity $8,897.29 vs prior close $8,897.29 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-21 09:30 ET | **BUY** | `HLT` | 3 | $360.00 | $2.00 | — | $7,815.29 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+9.0; leftover $1112.16 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `BROS` | 25 | $43.05 | $2.06 | — | $6,736.98 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+15.4; leftover $1112.16 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `VFC` | 64 | $17.36 | $2.18 | — | $5,623.75 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+8.6; leftover $1112.16 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CSX` | 23 | $48.03 | $2.06 | — | $4,517.01 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list overnight,overnight_mega; ret5=+0.7; leftover $1112.16 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `CXW` | 36 | $30.56 | $2.10 | — | $3,414.75 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable,yday_gainer,yday_mover; ret5=-10.8; leftover $1112.16 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `EGG` | 222 | $5.00 | $2.86 | — | $2,301.88 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer,yday_mover; ret5=+11.9; leftover $1112.16 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `DY` | 4 | $256.01 | $2.00 | — | $1,275.84 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; ret5=-6.5; leftover $1112.16 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **BUY** | `ITW` | 4 | $275.65 | $2.00 | — | $171.24 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; ret5=+3.2; leftover $1112.16 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $171.24 | ▼ close $8,766.11 vs 09:30 $8,897.29 (session -113.91) | 16:00 close · cash $171.24 · equity $8,766.11 vs 09:30 $8,897.29 (-131.18; session marks -113.91) · 8 name(s) marked open→close (per-name table). HLT×3 09:30 $360.00 → close $362.25 +6.75; BROS×25 09:30 $43.05 → close $42.26 -19.75; VFC×64 09:30 $17.36 → close $17.15 -13.44; CSX×23 09:30 $48.03 → close $48.40 +8.51; CXW×36 09:30 $30.56 → close $29.52 -37.44; EGG×222 09:30 $5.00 → close $5.05 +11.10; DY×4 09:30 $256.01 → close $237.45 -74.24; ITW×4 09:30 $275.65 → close $276.80 +4.60 | — |
 
 ## Not taken
 

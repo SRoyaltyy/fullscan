@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-1.82%** ($9,817) · signal-only (no cash/fees) was -55.91%. Starts YES **1/30**. Fills 337 · skips 265 · realized $-1568.09.
+Cash book **-1.22%** ($9,879) · signal-only (no cash/fees) was -55.91%. Starts YES **1/30**. Fills 346 · skips 265 · realized $-1568.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -503,6 +503,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $24,392.38 | ▲ 09:30 equity $10,396.77 vs yday $10,154.92 (+241.85) | 09:30 open · cash $24,392.38 (unchanged overnight, no fees) · equity $10,396.77 vs prior close $10,154.92 (+241.85) · 7 name(s) re-marked at the open (per-name table). BBWI×56 yday $19.84 → 09:30 $19.84 -0.00; BLMN×117 yday $9.95 → 09:30 $9.99 -4.68; EGG×997 yday $4.99 → 09:30 $4.80 +189.43; ETSY×28 yday $85.26 → 09:30 $85.75 -13.72; GLND×772 yday $3.02 → 09:30 $2.93 +69.48; KLRA×98 yday $11.43 → 09:30 $11.43 -0.00; VFC×67 yday $17.14 → 09:30 $17.12 +1.34 | — |
 | 2026-10-20 09:30 ET | **COVER** | `ETSY` | 28 | $85.75 | $2.07 | $-40.08 | $21,989.31 | ▼ -40.08 after sell → book $10,394.70; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21,989.31 | ▼ close $9,817.49 vs 09:30 $10,396.77 (session -577.21) | 16:00 close · cash $21,989.31 · equity $9,817.49 vs 09:30 $10,396.77 (-579.28; session marks -577.21) · 6 name(s) marked open→close (per-name table). BBWI×56 09:30 $19.84 → close $20.55 -39.76; BLMN×117 09:30 $9.99 → close $10.34 -40.95; EGG×997 09:30 $4.80 → close $5.00 -199.40; GLND×772 09:30 $2.93 → close $3.10 -131.24; KLRA×98 09:30 $11.43 → close $12.89 -143.08; VFC×67 09:30 $17.12 → close $17.46 -22.78 | — |
+| 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $21,989.31 | ▲ 09:30 equity $9,885.80 vs yday $9,817.49 (+68.31) | 09:30 open · cash $21,989.31 (unchanged overnight, no fees) · equity $9,885.80 vs prior close $9,817.49 (+68.31) · 6 name(s) re-marked at the open (per-name table). BBWI×56 yday $20.55 → 09:30 $20.76 -11.76; BLMN×117 yday $10.34 → 09:30 $10.29 +5.85; EGG×997 yday $5.00 → 09:30 $5.00 -0.00; GLND×772 yday $3.10 → 09:30 $3.01 +69.48; KLRA×98 yday $12.89 → 09:30 $12.91 -1.96; VFC×67 yday $17.46 → 09:30 $17.36 +6.70 | — |
+| 2026-10-21 09:30 ET | **COVER** | `BBWI` | 56 | $20.76 | $2.16 | $-21.73 | $20,824.59 | ▼ -21.73 after sell → book $9,883.64; vs 09:30 mark -2.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-21 09:30 ET | **COVER** | `BLMN` | 117 | $10.29 | $2.34 | $-49.79 | $19,618.32 | ▼ -49.79 after sell → book $9,881.30; vs 09:30 mark -2.34 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-21 09:30 ET | **COVER** | `VFC` | 67 | $17.36 | $2.19 | $-7.11 | $18,453.01 | ▼ -7.11 after sell → book $9,879.11; vs 09:30 mark -2.19 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `ARQT` | 25 | $32.64 | $2.11 | — | $19,266.90 | — | ret_5>15; gate ret_5_min=15.0; list flatten; 🔵; ret5=+25.8; leftover $823.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `TRU` | 10 | $77.62 | $2.06 | — | $20,041.04 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,ohlc_hot; ret5=+15.9; leftover $823.26 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `KVYO` | 42 | $19.59 | $2.16 | — | $20,861.66 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+15.7; leftover $823.26 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `BROS` | 19 | $43.05 | $2.09 | — | $21,677.52 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; ret5=+15.4; leftover $823.26 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `Z` | 25 | $32.22 | $2.11 | — | $22,480.92 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; ret5=+15.3; leftover $823.26 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 09:30 ET | **SHORT** | `SRPT` | 43 | $19.05 | $2.16 | — | $23,297.90 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+16.1; leftover $823.26 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23,297.90 | ▲ close $9,878.53 vs 09:30 $9,885.80 (session +12.11) | 16:00 close · cash $23,297.90 · equity $9,878.53 vs 09:30 $9,885.80 (-7.27; session marks +12.11) · 9 name(s) marked open→close (per-name table). EGG×997 09:30 $5.00 → close $5.05 -49.85; GLND×772 09:30 $3.01 → close $2.98 +23.16; KLRA×98 09:30 $12.91 → close $12.92 -0.98; ARQT×25 09:30 $32.64 → close $31.87 +19.25; TRU×10 09:30 $77.62 → close $78.93 -13.10; KVYO×42 09:30 $19.59 → close $20.19 -25.20; BROS×19 09:30 $43.05 → close $42.26 +15.01; Z×25 09:30 $32.22 → close $31.31 +22.75; SRPT×43 09:30 $19.05 → close $18.56 +21.07 | — |
 
 ## Not taken
 
