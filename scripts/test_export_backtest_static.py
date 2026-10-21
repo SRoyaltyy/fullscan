@@ -36,8 +36,23 @@ class ExportTests(unittest.TestCase):
         from scripts.publish_scanner_snapshot import validate
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);source=root/'source';source.mkdir();out=root/'out';out.mkdir()
-            DeepProfileControls().fixture(source)
+            entry=DeepProfileControls().fixture(source)
+            # Exercise the complete source -> keywords -> compressed assets ->
+            # publication gate with a disclosure that has no old relationship.
+            graph_path=source/entry['path']
+            graph=json.loads(gzip.decompress(graph_path.read_bytes()))
+            text='\nWe comply with the Alpha Privacy Act.'
+            from src.filing_relationships import classify_paragraph
+            start=graph['sources'][0]['characters']
+            graph['paragraphs'].append(classify_paragraph(text,source_id=graph['sources'][0]['id'],start=start,end=start+len(text)))
+            combined=''.join(p['text'] for p in graph['paragraphs'])
+            graph['sources'][0].update(characters=len(combined),sha256=hashlib.sha256(combined.encode()).hexdigest())
+            graph['coverage'].update(paragraphs=2,characters_read=len(combined),prose_characters_analyzed=len(combined))
+            from src.specific_filing_records import details
+            graph['specific_records']=details(graph)
+            packed=gzip.compress(json.dumps(graph).encode());graph_path.write_bytes(packed)
             index=json.loads((source/'index.json').read_text());index['profiles']['TEST']['facts']=1
+            index['profiles']['TEST']['sha256']=hashlib.sha256(packed).hexdigest()
             (source/'index.json').write_text(json.dumps(index))
             board,coverage=attach_keyword_profiles(index_profiles({'TEST':Profile('TEST','Example','','')}),source,
                 as_of='2026-10-20',catalog=Catalog([]))
@@ -46,7 +61,8 @@ class ExportTests(unittest.TestCase):
                 filing_profiles=source,profile_assets='keywords',archive_url='https://github.com/SRoyaltyy/fullscan/actions/runs/1')
             payload=json.loads(gzip.decompress((out/profiles['TEST']['profile_path']).read_bytes()))
             self.assertEqual(payload['keyword_coverage']['retained_relationships'],1)
-            self.assertEqual(len(payload['keyword_evidence']),1)
+            self.assertEqual(payload['keyword_coverage']['specific_disclosure_records'],1)
+            self.assertEqual(len(payload['keyword_evidence']),2)
             self.assertFalse((out/'filing-profiles/issuers').exists())
             self.assertNotIn('path',payload['deep_profile'])
             self.assertEqual(board.profiles['TEST'].deep_profile,original)
