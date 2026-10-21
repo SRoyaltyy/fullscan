@@ -1,6 +1,6 @@
 {
   "date": "2026-10-21",
-  "generated_at": "2026-10-21T04:28:25.858274-04:00",
+  "generated_at": "2026-10-21T04:28:48.798515-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -62,7 +62,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 275344,
+          "size": 275345,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -76,7 +76,7 @@
           "size": 18421,
           "said": "MAP HEAT \u2014 2026-10-21",
           "bullets": [
-            "Export `finviz_2026-10-21.csv` \u00b7 11616 names \u00b7 generated 2026-10-21T04:28:25.593997-04:00",
+            "Export `finviz_2026-10-20.csv` \u00b7 11616 names \u00b7 generated 2026-10-21T04:28:48.460619-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -120,7 +120,7 @@
           "size": 11769,
           "said": "Finviz Daily Digest \u2014 2026-10-21",
           "bullets": [
-            "_Generated 2026-10-21T04:22:38.518306-04:00 \u00b7 export=data/exports/finviz_2026-10-21.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-21T04:23:09.086364-04:00 \u00b7 export=data/exports/finviz_2026-10-20.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -145,7 +145,7 @@
           "size": 2906,
           "said": "Finviz homepage market digest \u2014 2026-10-21",
           "bullets": [
-            "Generated:** 2026-10-21T04:22:46.257736-04:00 (America/New_York)",
+            "Generated:** 2026-10-21T04:23:19.749552-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -236,7 +236,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 275344,
+          "size": 275345,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -1058,6 +1058,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-21\nExport `finviz_2026-10-21.csv` \u00b7 11616 names \u00b7 generated 2026-10-21T04:28:25.593997-04:00"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-10-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-21T04:28:48.508116-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-21_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 275345,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-21_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18778,
+          "preview": "# MAP HEAT \u2014 2026-10-21\nExport `finviz_2026-10-20.csv` \u00b7 11616 names \u00b7 generated 2026-10-21T04:28:48.460619-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-21\nExport `finviz_2026-10-20.csv` \u00b7 11616 names \u00b7 generated 2026-10-21T04:28:48.460619-04:00"
     }
   ],
   "href": {
