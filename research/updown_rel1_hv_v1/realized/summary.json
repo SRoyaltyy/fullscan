@@ -2,7 +2,7 @@
  "strategy": "updown_rel1_hv_v1",
  "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
  "days_locked": 11,
- "days_realized": 9,
+ "days_realized": 10,
  "days_missed": 0,
  "missed_dates": [],
  "rule": {
@@ -11,44 +11,44 @@
   "missed": "Missed days (not frozen before 09:25 ET) are recorded in MISSED.jsonl, never back-filled, and earn nothing."
  },
  "gross": {
-  "cum": 0.0471323726,
-  "mean_bp": 52.4656599159,
-  "t_nw": 1.5597796112
+  "cum": 0.0067136662,
+  "mean_bp": 9.7014209865,
+  "t_nw": 0.1558846124
  },
  "net5": {
-  "cum": 0.0346783693,
-  "mean_bp": 39.1323265826,
-  "t_nw": 1.1324742902
+  "cum": -0.0065129627,
+  "mean_bp": -3.4785790135,
+  "t_nw": -0.0552175291
  },
  "net10": {
-  "cum": 0.0223555661,
-  "mean_bp": 25.7989932493,
-  "t_nw": 0.7271184306
+  "cum": -0.019583711,
+  "mean_bp": -16.6585790135,
+  "t_nw": -0.2612549474
  },
  "net15": {
-  "cum": 0.0101627578,
-  "mean_bp": 12.4656599159,
-  "t_nw": 0.3423198965
+  "cum": -0.0325002064,
+  "mean_bp": -29.8385790135,
+  "t_nw": -0.4623813597
  },
  "hedged_net10": {
-  "cum": -0.0545930495,
-  "mean_bp": -60.572842686,
-  "t_nw": -1.1329641717
+  "cum": -0.0862675882,
+  "mean_bp": -87.4040435599,
+  "t_nw": -1.2907114727
  },
  "iwm_oo1": {
-  "cum": null,
-  "mean_bp": null,
-  "t_nw": null
+  "cum": -0.0049955603,
+  "mean_bp": -4.3989946316,
+  "t_nw": -0.19009419
  },
  "rand_med_net10": {
-  "cum": -0.0302016674,
-  "mean_bp": -34.0151469492,
-  "t_nw": -30.9099243452
+  "cum": -0.0334868867,
+  "mean_bp": -34.0011536286,
+  "t_nw": -34.3262574234
  },
  "best_stock": "CIFR",
- "best_stock_contrib": 0.0093550864,
- "net10_ex_best_cum": 0.0129711611,
- "mean_turnover": 2.6666666667,
- "status": "collecting (9 realized days; kill check from day 20/60, promotion review not before day 120)",
+ "best_stock_contrib": 0.0091898327,
+ "net10_ex_best_cum": -0.0282774686,
+ "mean_turnover": 2.636,
+ "status": "collecting (10 realized days; kill check from day 20/60, promotion review not before day 120)",
  "killed": false
 }
