@@ -1,0 +1,159 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 12.91,
+      "shares": 179,
+      "side": "BUY",
+      "ticker": "KLRA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 15.19,
+      "shares": 152,
+      "side": "BUY",
+      "ticker": "SGRY"
+    },
+    {
+      "fill_rule": "open",
+      "price": 19.05,
+      "shares": 121,
+      "side": "BUY",
+      "ticker": "SRPT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 25.55,
+      "shares": 90,
+      "side": "BUY",
+      "ticker": "TNGX"
+    }
+  ],
+  "cash": 48.82,
+  "date": "2026-10-21",
+  "equity": 9376.26,
+  "fees": 9.586,
+  "fills": [
+    {
+      "fees": 2.527,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 12.91,
+      "shares": 179,
+      "side": "BUY",
+      "ticker": "KLRA"
+    },
+    {
+      "fees": 2.446,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 15.19,
+      "shares": 152,
+      "side": "BUY",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 2.353,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 19.05,
+      "shares": 121,
+      "side": "BUY",
+      "ticker": "SRPT"
+    },
+    {
+      "fees": 2.26,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 25.55,
+      "shares": 90,
+      "side": "BUY",
+      "ticker": "TNGX"
+    }
+  ],
+  "holdings": [
+    "KLRA",
+    "SGRY",
+    "SRPT",
+    "TNGX"
+  ],
+  "label": "starts 10-08 open, no past days",
+  "mean": 1.0076,
+  "n_trades_today": 4,
+  "parent": "union_hot_n4_h1",
+  "picks": [
+    "KLRA",
+    "SGRY",
+    "SRPT",
+    "TNGX"
+  ],
+  "reasons": [],
+  "recipe": "union_hot_n4_h1_preopen",
+  "s": 4.644,
+  "seal_sha256": "5319c60803f52947cfc3182cf6d2d2195e17fafdf334208bdf0ce1e90b0b6b21",
+  "sells": [],
+  "sit": false,
+  "state": {
+    "after": "2026-10-21",
+    "cash": 48.82,
+    "pos": {
+      "KLRA": {
+        "close_px": 12.92,
+        "cost": 2313.417,
+        "entry_date": "2026-10-21",
+        "entry_px": 12.91,
+        "fee_in": 2.527,
+        "last_px": 12.91,
+        "min_hold": 1,
+        "notional": 2310.89,
+        "peak_px": 12.91,
+        "reason": "top 4 by hot | pre-open inputs only; starts 10-08 open, no past days; rank hot_score; list preopen_seal; leftover $2320.68",
+        "shares": 179,
+        "ticker": "KLRA"
+      },
+      "SGRY": {
+        "close_px": 15.4,
+        "cost": 2311.326,
+        "entry_date": "2026-10-21",
+        "entry_px": 15.19,
+        "fee_in": 2.446,
+        "last_px": 15.19,
+        "min_hold": 1,
+        "notional": 2308.88,
+        "peak_px": 15.19,
+        "reason": "top 4 by hot | pre-open inputs only; starts 10-08 open, no past days; rank hot_score; list preopen_seal; leftover $2320.68",
+        "shares": 152,
+        "ticker": "SGRY"
+      },
+      "SRPT": {
+        "close_px": 18.56,
+        "cost": 2307.4030000000002,
+        "entry_date": "2026-10-21",
+        "entry_px": 19.05,
+        "fee_in": 2.353,
+        "last_px": 19.05,
+        "min_hold": 1,
+        "notional": 2305.05,
+        "peak_px": 19.05,
+        "reason": "top 4 by hot | pre-open inputs only; starts 10-08 open, no past days; rank hot_score; list preopen_seal; leftover $2320.68",
+        "shares": 121,
+        "ticker": "SRPT"
+      },
+      "TNGX": {
+        "close_px": 26.98,
+        "cost": 2301.76,
+        "entry_date": "2026-10-21",
+        "entry_px": 25.55,
+        "fee_in": 2.26,
+        "last_px": 25.55,
+        "min_hold": 1,
+        "notional": 2299.5,
+        "peak_px": 25.55,
+        "reason": "top 4 by hot | pre-open inputs only; starts 10-08 open, no past days; rank hot_score; list preopen_seal; leftover $2320.68",
+        "shares": 90,
+        "ticker": "TNGX"
+      }
+    },
+    "yday_equity": 9376.26
+  }
+}
