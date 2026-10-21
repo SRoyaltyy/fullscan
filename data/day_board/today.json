@@ -1,6 +1,6 @@
 {
   "date": "2026-10-21",
-  "generated_at": "2026-10-21T10:50:25.665776-04:00",
+  "generated_at": "2026-10-21T10:50:50.387743-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,126 +11,126 @@
   },
   "buy_1d": [
     {
+      "ticker": "CDNA",
+      "score": 0.8822083769168356
+    },
+    {
       "ticker": "PRCH",
       "score": 0.8385429209840265
     },
     {
-      "ticker": "AVPT",
-      "score": 0.782834036619781
-    },
-    {
-      "ticker": "CORT",
-      "score": 0.3924106332259807
-    },
-    {
-      "ticker": "VEEV",
-      "score": 0.41256815189198504
-    },
-    {
-      "ticker": "CDNA",
-      "score": 0.8298636020396053
+      "ticker": "BLFS",
+      "score": 0.8221946972488299
     },
     {
       "ticker": "ARQT",
-      "score": 0.7812704038915628
+      "score": 0.7997375823452195
+    },
+    {
+      "ticker": "AVPT",
+      "score": 0.784055146709429
+    },
+    {
+      "ticker": "CORT",
+      "score": 0.3944581715870077
+    },
+    {
+      "ticker": "TOST",
+      "score": 0.6236248477968108
+    },
+    {
+      "ticker": "IT",
+      "score": 0.5804636258626622
     },
     {
       "ticker": "NTAP",
-      "score": 0.3672381992469095
-    },
-    {
-      "ticker": "ABX",
-      "score": 0.659986200076544
-    },
-    {
-      "ticker": "TRU",
-      "score": 0.5505929098468964
-    },
-    {
-      "ticker": "LAUR",
-      "score": 0.6437080147216908
-    },
-    {
-      "ticker": "PAYS",
-      "score": 0.6549498116886701
-    },
-    {
-      "ticker": "SONO",
-      "score": 0.7393501502154107
-    },
-    {
-      "ticker": "EZPW",
-      "score": 0.5711134990796938
+      "score": 0.3903011929446152
     },
     {
       "ticker": "CNK",
-      "score": 0.6834163757139815
+      "score": 0.6956115984655271
     },
     {
-      "ticker": "IMAX",
-      "score": 0.6413513483471072
+      "ticker": "ABX",
+      "score": 0.6385324029579993
+    },
+    {
+      "ticker": "EZPW",
+      "score": 0.5709536188174151
+    },
+    {
+      "ticker": "JXN",
+      "score": 0.5857564998786386
+    },
+    {
+      "ticker": "LAUR",
+      "score": 0.6048513122260069
+    },
+    {
+      "ticker": "OLLI",
+      "score": 0.5971189408733557
     }
   ],
   "sell_1d": [
     {
-      "ticker": "INTC",
-      "score": -0.4372885377372172
+      "ticker": "ROIV",
+      "score": -0.4236033412550032
     },
     {
-      "ticker": "ROIV",
-      "score": -0.42662620714773924
+      "ticker": "INTC",
+      "score": -0.38689724129800285
     },
     {
       "ticker": "TIGO",
-      "score": -0.33885518247447566
+      "score": -0.3534121613187943
     },
     {
       "ticker": "SOC",
-      "score": -0.33502909303130934
-    },
-    {
-      "ticker": "BIDU",
-      "score": -0.32447956456578003
+      "score": -0.3377611186665702
     },
     {
       "ticker": "NEOV",
-      "score": -0.3184840572779986
+      "score": -0.3319116089789184
+    },
+    {
+      "ticker": "BIDU",
+      "score": -0.32785660797380006
     },
     {
       "ticker": "AXSM",
-      "score": -0.3042351395784257
+      "score": -0.3080990189187854
     },
     {
-      "ticker": "AU",
-      "score": -0.2954448040851456
+      "ticker": "SSP",
+      "score": -0.28717727273076415
     },
     {
-      "ticker": "PCT",
-      "score": -0.28127910956701896
+      "ticker": "CMTG",
+      "score": -0.2827060420781435
     },
     {
-      "ticker": "NRXP",
-      "score": -0.2809218691928413
+      "ticker": "HMY",
+      "score": -0.2797292432808775
     },
     {
-      "ticker": "AIRS",
-      "score": -0.27826264788858196
-    },
-    {
-      "ticker": "WVE",
-      "score": -0.27624062480205547
+      "ticker": "GOGO",
+      "score": -0.27882988787790763
     },
     {
       "ticker": "BAK",
-      "score": -0.27450788670502185
+      "score": -0.2752768543518484
     },
     {
-      "ticker": "VSAT",
-      "score": -0.2694149929941799
+      "ticker": "LYB",
+      "score": -0.2679858469975157
     },
     {
-      "ticker": "PUMP",
-      "score": -0.2638495509286929
+      "ticker": "PCT",
+      "score": -0.26739082415611615
+    },
+    {
+      "ticker": "NRGV",
+      "score": -0.26678737928496254
     }
   ],
   "flatten": {
@@ -155,31 +155,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-10-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-21T05:41:44.327781-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-10-21_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7561873,
-          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ELV, AUPH, OXY, TRI, ISRG"
-        },
-        {
-          "path": "data/ab_checklist/2026-10-21_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8352734,
-          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 HAS, TLYS, CDNA, SN, BB"
-        }
-      ],
-      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ELV, AUPH, OXY, TRI, ISRG \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 HAS, TLYS, CDNA, SN, BB"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -487,6 +462,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-21T10:50:49.808857-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-21_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1515013,
+          "preview": "1d BUY CDNA, PRCH, BLFS, ARQT, AVPT, CORT, TOST, IT \u00b7 SELL ROIV, INTC, TIGO, SOC, NEOV, BIDU, AXSM, SSP"
+        },
+        {
+          "path": "data/stock_book/2026-10-21_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 1949,
+          "preview": "green 111 \u00b7 JXN, PRCH, VCTR, WT, FNF, TRU, EZPW, ARQT, FHI, SONO"
+        },
+        {
+          "path": "data/stock_book/2026-10-21_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2503,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-21_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13835,
+          "preview": "2026-10-21 BUY CDNA, PRCH, BLFS, ARQT, AVPT, CORT, TOST, IT \u00b7 SELL ROIV, INTC, TIGO, SOC, NEOV, BIDU, AXSM, SSP"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13835,
+          "preview": "2026-10-21 BUY CDNA, PRCH, BLFS, ARQT, AVPT, CORT, TOST, IT \u00b7 SELL ROIV, INTC, TIGO, SOC, NEOV, BIDU, AXSM, SSP"
+        },
+        {
+          "path": "01_daily/2026-10-21_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 88396,
+          "preview": "# Stock book \u2014 2026-10-21\n_Generated 2026-10-21T10:50:33.667237-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CDNA, PRCH, BLFS, ARQT, AVPT, CORT, TOST, IT \u00b7 SELL ROIV, INTC, TIGO, SOC, NEOV, BIDU, AXSM, SSP \u00b7 green 111 \u00b7 JXN, PRCH, VCTR, WT, FNF, TRU, EZPW, ARQT, FHI, SONO \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-21 BUY CDNA, PRCH, BLFS, ARQT, AVPT, CORT, TOST, IT \u00b7 SELL ROIV, INTC, TIGO, SOC, NEOV, BIDU, AXSM, SSP \u00b7 2026-10-21 BUY CDNA, PRCH, BLFS, ARQT, AVPT, CORT, TOST, IT \u00b7 SELL ROIV, INTC, TIGO, SOC, NEOV, BIDU, AXSM, SSP \u00b7 # Stock book \u2014 2026-10-21\n_Generated 2026-10-21T10:50:33.667237-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
