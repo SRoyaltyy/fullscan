@@ -3,3 +3,4 @@
 {"at":"2026-10-13T20:04:34Z","date":"2026-10-13","reason":"sent share lock missing for 2026-10-13; refusing to size buys from the open","recipe":"union_hot_n4_h1__w0"}
 {"at":"2026-10-16T17:45:02Z","date":"2026-10-16","reason":"sent share lock missing for 2026-10-16; refusing to size buys from the open","recipe":"union_hot_n4_h1__w0"}
 {"at":"2026-10-20T18:10:05Z","date":"2026-10-20","reason":"sent share lock BYRN 503 at open 5.15 costs 2609.89095 and book cash is 51.45415907377719; refusing to resize","recipe":"union_hot_n4_h1__w0"}
+{"at":"2026-10-21T21:11:36Z","date":"2026-10-21","reason":"price store latest bar is 2026-10-20; 2026-10-21 open is not in the file yet","recipe":"union_hot_n4_h1__w0"}
