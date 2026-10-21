@@ -8,15 +8,22 @@
 <h1>Completed stock parser results</h1>
 <p id="coverage" class="muted">Loading the completed extraction…</p>
 <p id="version" class="source"></p>
-<p class="muted">These are the existing saved stock-side decisions. Open any relationship to inspect its original label, rule, exact quote, full supporting paragraphs and SEC source. Labels can be wrong; missing relationships remain unknown. The newer exhaustive noun/entity occurrence inventory is not part of this older extraction.</p>
+<p class="muted">Review named legal instruments, examining authorities, disclosed operating requirements and the original saved relationships. Specific details are extracted from the archived text; a law mention does not by itself establish that the company is legally subject to it. Missing names remain explicit gaps.</p>
 <div class="row"><label for="ticker">Stock</label><input id="ticker" list="tickers" placeholder="Ticker, e.g. AAPL" maxlength="12"><datalist id="tickers"></datalist><button id="analyze" disabled>Analyze stock</button><button id="random" disabled>Random stock</button></div>
-<section id="profile" class="card" hidden><h2 id="name"></h2><p id="stats" class="muted"></p><input id="search" aria-label="Search recorded relationships" placeholder="Search term, label, relationship or quoted context"><p id="count"></p><div id="records"></div><button id="more" hidden>Show more</button></section>
+<section id="profile" class="card" hidden><h2 id="name"></h2><p id="stats" class="muted"></p>
+<h3>Named laws, authorities and operating requirements</h3><p id="detail-coverage" class="muted"></p>
+<div class="row"><input id="detail-search" aria-label="Search specific disclosures" placeholder="Law, authority, permit, subject, jurisdiction or alias"><label><input id="unattached" type="checkbox"> Include unattached and third-party mentions</label></div>
+<p id="detail-count"></p><div id="detail-records"></div><button id="detail-more" hidden>Show more specific disclosures</button>
+<details><summary id="gap-title">Missing specifics</summary><p class="muted">These passages do not identify a unique entity or complete obligation. They cannot supply a named-entity match. Additional source research may be required.</p><div id="gaps"></div></details>
+<h3>Original saved relationship claims</h3><p class="muted">These older claim heads can be vague or incorrectly labelled. They are retained for comparison with the source, separately from the specific disclosures above.</p><label><input id="background" type="checkbox"> Include generic background heads</label>
+<input id="search" aria-label="Search recorded relationships" placeholder="Search original term, label, relationship or quoted context"><p id="count"></p><div id="records"></div><button id="more" hidden>Show more</button></section>
 <p id="error" role="status"></p>
 <p class="muted">Paragraph boundaries follow archived text lines. This view retains every recorded relationship and every full paragraph supporting it. The complete source archive also retains paragraphs without extracted relationships.</p>
 <p><a href="https://github.com/SRoyaltyy/fullscan/actions/runs/39522456843/artifacts/12321883294" target="_blank" rel="noopener noreferrer">Original completed archive (GitHub sign-in may be required)</a></p>
 <script>
 const $=id=>document.getElementById(id);
-let manifest=null,profile=null,request=0,filtered=[],position=0;
+let manifest=null,profile=null,request=0,filtered=[],position=0,detailRows=[],detailPosition=0;
+const genericHead=/^(?:(?:the|a|an|our|their|certain|various|periodic|applicable|other|such)\s+)*(?:laws?|rules?|regulations?|litigation(?: matters)?|claims?|examinations?|audits?|risks?|requirements?|approvals?|permits?|obligations?)$/i;
 function el(tag,text){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;return e;}
 async function packed(entry){
   if(!/^profiles\/\d{10}\.json\.gz$/.test(entry.path))throw Error('Invalid profile path');
@@ -37,6 +44,50 @@ function fullParagraph(p,ev){
   const start=Math.max(0,ev.start-p.start),end=Math.min(chars.length,ev.end-p.start);
   pre.append(el('span',chars.slice(0,start).join('')),el('mark',chars.slice(start,end).join('')),el('span',chars.slice(end).join('')));
   return pre;
+}
+function detailCard(record){
+  const detail=el('details');
+  detail.append(el('summary',`${record.stock} → ${record.relation.replaceAll('_',' ')} → ${record.entity} [${record.applicability.replaceAll('_',' ')}]`));
+  let rendered=false;
+  detail.addEventListener('toggle',()=>{
+    if(!detail.open||rendered)return;rendered=true;
+    detail.append(el('p',`Specificity: ${record.specificity} · Direct obligation asserted in disclosure: ${record.direct_obligation_asserted?'yes':'no'} · Named-entity identity candidate: ${record.entity_match_eligible?'yes':'no'}`));
+    if(record.aliases.length>1)detail.append(el('p','Explicit names / aliases: '+record.aliases.join(' · ')));
+    const labels={jurisdictions:'Jurisdiction cues',provisions:'Named provisions',reported_requirements:'Disclosed requirements',reported_quantities:'Reported quantities',subject_matter:'Examination / claim subject',authorities:'Named issuing authorities',permit_identifier:'Permit identifier',disclosed_subjects:'Disclosed claim subjects'};
+    for(const [key,value]of Object.entries(record.fields)){
+      if(key.endsWith('_evidence')||!value||(Array.isArray(value)&&!value.length))continue;
+      detail.append(el('p',`${labels[key]||key}: ${Array.isArray(value)?value.join(' · '):value}`));
+    }
+    if(record.missing_fields.length)detail.append(el('p','Not established here: '+record.missing_fields.map(x=>x.replaceAll('_',' ')).join('; ')));
+    const paragraph=profile.paragraphs.find(p=>p.id===record.paragraph_id);
+    const source=profile.sources.find(s=>s.id===record.source_id)||{};
+    const line=el('p',sourceLine(source,paragraph));line.className='source';detail.append(line,el('blockquote',record.evidence.quote));
+    if(paragraph)detail.append(fullParagraph(paragraph,record.evidence.anchor));
+    if(/^https:\/\/www\.sec\.gov\/Archives\//.test(source.url||'')){
+      const link=el('a','Read SEC source');link.href=source.url;link.target='_blank';link.rel='noopener noreferrer';detail.append(link);
+    }
+  });
+  return detail;
+}
+function moreDetails(){
+  const batch=detailRows.slice(detailPosition,detailPosition+50);detailPosition+=batch.length;
+  for(const record of batch)$('detail-records').append(detailCard(record));
+  $('detail-more').hidden=detailPosition>=detailRows.length;
+}
+function drawDetails(){
+  if(!profile)return;
+  const extracted=profile.specific_records;
+  $('detail-records').replaceChildren();$('gaps').replaceChildren();detailPosition=0;
+  if(!extracted){$('detail-coverage').textContent='This saved payload has not received the specific-disclosure pass yet. No complete legal inventory is implied.';$('detail-count').textContent='';$('detail-more').hidden=true;return;}
+  $('detail-coverage').textContent=`${extracted.version} · ${extracted.paragraphs_examined.toLocaleString()} archived blocks examined · ${extracted.paragraph_scope.replaceAll('_',' ')}. Complete legal coverage and external applicability verification remain unfinished.`;
+  const q=$('detail-search').value.trim().toLowerCase(),unattached=$('unattached').checked;
+  const visible=extracted.records.filter(r=>!q||JSON.stringify([r.entity,r.aliases,r.fields,r.applicability,r.evidence.quote]).toLowerCase().includes(q));
+  detailRows=visible.filter(r=>r.category!=='coverage_gap'&&(unattached||r.entity_match_eligible||r.category==='operating_requirement'));
+  $('detail-count').textContent=`${detailRows.length.toLocaleString()} specific disclosure occurrences · repeated dates and source paragraphs remain separate`;
+  const gaps=visible.filter(r=>r.category==='coverage_gap');
+  $('gap-title').textContent=`Missing specifics (${gaps.length.toLocaleString()} passages)`;
+  for(const record of gaps)$('gaps').append(detailCard(record));
+  moreDetails();
 }
 function showMore(){
   const paragraphs=new Map(profile.paragraphs.map(p=>[p.id,p]));
@@ -70,8 +121,8 @@ function showMore(){
 function draw(){
   if(!profile)return;
   const q=$('search').value.trim().toLowerCase();
-  filtered=profile.facts.filter(f=>!q||[f.object,f.object_type,f.predicate,f.status,...f.evidence.map(e=>e.quote)].join(' ').toLowerCase().includes(q));
-  position=0;$('records').replaceChildren();$('count').textContent=`${filtered.length.toLocaleString()} of ${profile.facts.length.toLocaleString()} stored relationships · all searchable`;showMore();
+  filtered=profile.facts.filter(f=>($('background').checked||!genericHead.test(f.object))&&(!q||[f.object,f.object_type,f.predicate,f.status,...f.evidence.map(e=>e.quote)].join(' ').toLowerCase().includes(q)));
+  position=0;$('records').replaceChildren();$('count').textContent=`${filtered.length.toLocaleString()} of ${profile.facts.length.toLocaleString()} stored relationships · generic heads excluded unless selected`;showMore();
 }
 async function analyze(){
   const ticket=++request,ticker=$('ticker').value.trim().toUpperCase(),entry=manifest?.profiles[ticker];
@@ -81,21 +132,22 @@ async function analyze(){
   try{
     const result=await packed(entry);if(ticket!==request)return;profile=result;
     $('name').textContent=`${ticker} — ${profile.name}`;
-    $('stats').textContent=`${profile.facts.length.toLocaleString()} recorded relationships · ${profile.paragraphs.length.toLocaleString()} supporting paragraphs · ${profile.coverage.paragraphs.toLocaleString()} original source blocks · filing cutoff ${profile.as_of} · saved extraction ${profile.compiler_sha256.slice(0,12)}`;
-    $('search').value='';draw();
+    $('stats').textContent=`${profile.facts.length.toLocaleString()} original relationships · ${profile.paragraphs.length.toLocaleString()} retained review paragraphs · ${profile.coverage.paragraphs.toLocaleString()} original source blocks · filing cutoff ${profile.as_of} · saved extraction ${profile.compiler_sha256.slice(0,12)}`;
+    $('search').value='';$('detail-search').value='';draw();drawDetails();
   }catch(error){if(ticket===request)$('error').textContent=error.message;}
   finally{if(ticket===request)$('analyze').disabled=false;}
 }
 $('analyze').addEventListener('click',analyze);$('ticker').addEventListener('keydown',e=>{if(e.key==='Enter')analyze();});
 $('random').addEventListener('click',()=>{const tickers=Object.keys(manifest.profiles);$('ticker').value=tickers[Math.floor(Math.random()*tickers.length)];analyze();});
 $('search').addEventListener('input',draw);$('more').addEventListener('click',showMore);
+$('background').addEventListener('change',draw);$('detail-search').addEventListener('input',drawDetails);$('unattached').addEventListener('change',drawDetails);$('detail-more').addEventListener('click',moreDetails);
 async function init(){
   try{
     const response=await fetch('manifest.json',{credentials:'omit'});if(!response.ok)throw Error('Completed results are not published yet');
     manifest=await response.json();if(!manifest.complete||manifest.schema!=='completed-parser-review-1')throw Error('Incomplete publication');
     const totals=manifest.archive_totals,p=manifest.published;
     $('coverage').textContent=`${p.tickers.toLocaleString()} stock associations · ${p.issuers.toLocaleString()} issuers · ${totals.filings.toLocaleString()} filings · ${p.relationships.toLocaleString()} stored relationships. Reused completed output; no extraction rerun.`;
-    $('version').textContent=`Extraction ${manifest.extraction_schema} · compiler ${manifest.compiler_sha256.slice(0,12)} · cutoff ${manifest.as_of} · source run ${manifest.source_run_id} · viewer ${manifest.viewer_revision.slice(0,12)}`;
+    $('version').textContent=`Saved extraction ${manifest.extraction_schema} · compiler ${manifest.compiler_sha256.slice(0,12)} · detail pass ${manifest.detail_extractor||'not yet published'} · cutoff ${manifest.as_of} · source run ${manifest.source_run_id} · viewer ${manifest.viewer_revision.slice(0,12)}`;
     for(const [ticker,entry]of Object.entries(manifest.profiles)) {const option=el('option');option.value=ticker;option.label=entry.name;$('tickers').append(option);}
     $('analyze').disabled=false;$('random').disabled=false;
     const selected=new URLSearchParams(location.search).get('ticker');if(selected){$('ticker').value=selected;await analyze();}

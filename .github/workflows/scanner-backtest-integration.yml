@@ -44,6 +44,7 @@ jobs:
           scripts.test_publish_scanner_snapshot
           scripts.test_select_parser_profiles
           scripts.test_preserve_completed_parser_view scripts.test_export_completed_parser
+          src.test_specific_filing_records
       - name: Export synthetic headline snapshot with sockets disabled
         run: >-
           python -I -S scripts/offline_evidence_checks.py --backtest-export

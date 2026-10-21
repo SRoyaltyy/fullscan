@@ -21,6 +21,7 @@ MODEL_VERSION = '3.8.0'
 def compiler_fingerprint():
     root = Path(__file__).resolve().parents[1]
     paths = ('src/filing_relationships.py', 'src/filing_evidence.py', 'src/term_inventory.py',
+             'src/specific_filing_records.py',
              'scripts/build_filing_profiles.py', 'requirements-filing-parser.txt')
     digest = hashlib.sha256()
     for name in paths:
@@ -599,5 +600,8 @@ def extract_sections(sections, *, ticker, name, nlp):
                          'strategy': 'every prose window dependency-parsed; every source block classified and retained; unknown relations may remain',
                          'facts': len(ordered), 'predicates': dict(Counter(f['predicate'] for f in ordered)),
                          'statuses': dict(Counter(f['status'] for f in ordered))}}
+    from .specific_filing_records import details,validate_details
+    graph['specific_records']=details(graph)
+    validate_details(graph,graph['specific_records'])
     validate_paragraph_coverage(graph)
     return graph
