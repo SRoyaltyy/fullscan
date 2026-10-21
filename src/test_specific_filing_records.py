@@ -79,6 +79,22 @@ class SpecificDisclosureControls(unittest.TestCase):
         rows=self.parse('We are regulated by the Food and Drug Administration.')
         self.assertEqual(next(r for r in rows if r['category']=='authority')['entity'],'Food and Drug Administration')
 
+    def test_plural_instrument_retains_explicitly_attached_administrator(self):
+        text='We are subject to U.S. laws and regulations, including the Export Administration Regulations (EAR) administered by the Bureau of Industry and Security (BIS) of the U.S. Department of Commerce.'
+        laws=[r for r in self.parse(text) if r['category']=='law']
+        self.assertEqual(len(laws),1)
+        self.assertEqual(laws[0]['entity'],'Export Administration Regulations')
+        self.assertEqual(laws[0]['aliases'],['Export Administration Regulations','EAR'])
+        self.assertEqual(laws[0]['fields']['administering_authorities'],['Bureau of Industry and Security'])
+        self.assertNotIn('enforcing_authority_not_named_in_this_statement',laws[0]['missing_fields'])
+
+    def test_punctuated_titles_stay_complete_and_lists_stay_separate(self):
+        rows=self.parse('We are subject to the Comprehensive Environmental Response, Compensation, and Liability Act of 1980 and the Toxic Substances Control Act of 1976.')
+        self.assertEqual([r['entity'] for r in rows if r['category']=='law'],['Comprehensive Environmental Response, Compensation, and Liability Act of 1980','Toxic Substances Control Act of 1976'])
+        rows=self.parse('We comply with the Foreign Corrupt Practices Act and UK Bribery Act.')
+        self.assertEqual([r['entity'] for r in rows if r['category']=='law'],['Foreign Corrupt Practices Act','UK Bribery Act'])
+        self.assertFalse(self.parse('Governmental Regulation.'))
+
     def test_examining_authority_and_exact_subject_are_recovered(self):
         rows=self.parse('We are subject to the periodic examination of our domestic and foreign tax returns by the Internal Revenue Service, state, local, and foreign tax authorities.')
         authority=next(r for r in rows if r['category']=='authority')

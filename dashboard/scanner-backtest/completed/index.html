@@ -53,7 +53,7 @@ function detailCard(record){
     if(!detail.open||rendered)return;rendered=true;
     detail.append(el('p',`Specificity: ${record.specificity} · Direct obligation asserted in disclosure: ${record.direct_obligation_asserted?'yes':'no'} · Named-entity identity candidate: ${record.entity_match_eligible?'yes':'no'}`));
     if(record.aliases.length>1)detail.append(el('p','Explicit names / aliases: '+record.aliases.join(' · ')));
-    const labels={jurisdictions:'Jurisdiction cues',provisions:'Named provisions',reported_requirements:'Disclosed requirements',reported_quantities:'Reported quantities',subject_matter:'Examination / claim subject',authorities:'Named issuing authorities',permit_identifier:'Permit identifier',disclosed_subjects:'Disclosed claim subjects'};
+    const labels={jurisdictions:'Jurisdiction cues',provisions:'Named provisions',reported_requirements:'Disclosed requirements',reported_quantities:'Reported quantities',subject_matter:'Examination / claim subject',authorities:'Named issuing authorities',administering_authorities:'Explicitly attached administering authorities',permit_identifier:'Permit identifier',disclosed_subjects:'Disclosed claim subjects'};
     for(const [key,value]of Object.entries(record.fields)){
       if(key.endsWith('_evidence')||!value||(Array.isArray(value)&&!value.length))continue;
       detail.append(el('p',`${labels[key]||key}: ${Array.isArray(value)?value.join(' · '):value}`));

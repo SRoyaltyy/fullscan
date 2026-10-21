@@ -9,12 +9,15 @@ import hashlib
 import re
 from collections import Counter
 
-VERSION = 'filing-specificity-1'
+VERSION = 'filing-specificity-1.1'
 WORD = r"[A-Z][A-Za-z0-9]*(?:[-’'][A-Za-z0-9]+)*"
-LAW = re.compile(r'\bRegulation\s*\([A-Z]{2,5}\)\s*\d{4}/\d+\b|\bDirective\s*\([A-Z]{2,5}\)\s*\d{4}/\d+\b|\b(?:'+WORD+r'\s+){1,12}(?:Act|Directive|Regulation|Code|Law)(?:\s+of\s+\d{4})?\b')
+# An instrument ending cannot be swallowed as a title word and joined to the
+# next law in a list. Lowercase connectors and commas are part of real names.
+TITLE_WORD = r'(?!(?:Acts?|Directives?|Regulations?|Laws?)\b)'+WORD
+LAW = re.compile(r'\bRegulation\s*\([A-Z]{2,5}\)\s*\d{4}/\d+\b|\bDirective\s*\([A-Z]{2,5}\)\s*\d{4}/\d+\b|\b(?:'+TITLE_WORD+r'(?:\s+|,\s*)(?:(?:and|of|the|for|on|in|to)\s+)?){1,16}(?:Act|Directive|Regulations?|Code|Law)(?:\s+of\s+\d{4})?\b')
 AGENCY = re.compile(r'\b(?:(?:'+WORD+r'\s+){0,3})(?:Department|Ministry|Bureau|Office)\s+of\s+(?:the\s+)?'+WORD+r'(?:\s+(?:'+WORD+r'|and)){0,7}\b|\b(?:'+WORD+r'\s+(?:(?:and|of|the)\s+)?){1,8}(?:Commission|Authority|Department|Ministry|Agency|Administration|Bureau|Board|Service)\b')
 PERMIT = re.compile(r'\b(?P<title>(?:'+WORD+r'\s+){0,6}(?:Permit|Licen[sc]e|Authorization|Registration))\s+(?:No\.?|Number|#)\s*(?P<number>[A-Z0-9]+(?:[-/][A-Z0-9]+)*)\b')
-GENERIC = re.compile(r'^(?:(?:the|a|an|our|their|certain|various|periodic|applicable|other|such)\s+)*(?:laws?|rules?|regulations?|litigation(?: matters)?|claims?|examinations?|audits?|risks?|requirements?|approvals?|permits?|obligations?)$',re.I)
+GENERIC = re.compile(r'^(?:(?:the|a|an|our|their|certain|various|periodic|applicable|other|such|governmental|government)\s+)*(?:laws?|rules?|regulations?|litigation(?: matters)?|claims?|examinations?|audits?|risks?|requirements?|approvals?|permits?|obligations?)$',re.I)
 LEGAL = re.compile(r'\b(?:acts?|codes?|laws?|regulat\w*|directives?|litigat\w*|lawsuits?|claims?|examin\w*|audits?|permits?|licen[sc]\w*|authoriz\w*|quotas?|levies|obligations?)\b',re.I)
 ISSUER = re.compile(r"\b(?:we|us|our|the company|the registrant)\b",re.I)
 EXCLUSION = re.compile(r'\b(?:we|the company|the registrant)\s+(?:are|is)\s+(?:explicitly\s+)?(?:not\s+(?:in\s+scope|subject|covered)|outside\s+(?:the\s+)?scope)|\b(?:does|do)\s+not\s+apply\s+to\s+(?:us|the company)',re.I)
@@ -44,7 +47,7 @@ def _trim(match):
 
 def _names(text,pattern):
     return [dict(start=a,end=b,text=value) for m in pattern.finditer(text)
-            for a,b,value in [_trim(m)] if len(value.split())>=2]
+            for a,b,value in [_trim(m)] if len(value.split())>=2 and not GENERIC.fullmatch(value)]
 
 
 def _law_groups(text):
@@ -146,7 +149,17 @@ def details(graph, *, paragraph_scope='complete_source_paragraphs'):
                     # Do not distribute one law's quota/Article to every law in
                     # a list. The unassigned sentence remains visible evidence.
                     fields.update(provisions=[],reported_requirements=[],reported_quantities=[])
-                gaps=['enforcing_authority_not_named_in_this_statement']
+                # Bind only an authority explicitly attached after this
+                # instrument. A nearby regulator is not assigned to every law.
+                authority_link=re.match(r'\s*(?:\([^)]{1,80}\)\s*)?(?:administered|enforced|implemented|overseen)\s+by\s+(?:the\s+)?',suffix,re.I)
+                attached_authorities=[]
+                if authority_link:
+                    tail=suffix[authority_link.end():]
+                    names=_names(tail,AGENCY)
+                    if names and names[0]['start']==0:
+                        attached_authorities=[names[0]['text']]
+                fields['administering_authorities']=attached_authorities
+                gaps=[] if attached_authorities else ['enforcing_authority_not_named_in_this_statement']
                 if not places:gaps.append('jurisdiction_not_explicit_in_this_statement')
                 emit(p,'law',law['text'],start,end,sa,sb,relation='disclosed_legal_instrument',
                      aliases=aliases,fields=fields,gaps=gaps,
