@@ -586,7 +586,7 @@ function compareKeywordText(index, text) {
     const count = (index.df.get(row.normalized) || new Set()).size;
     if (count >= Math.max(8,Math.ceil(index.catalog_tickers*.05)) && !entityRoles.has(row.relationship) && !named.has(row.stock)) {
       broad.set(`${row.normalized}:${row.relationship}`,{keyword:row.keyword,relationship:row.relationship,candidate_stock_count:count});
-    } else matches.push({...row,article_span:{start,end,text:text.slice(start,end)},decision:"keyword_overlap_only"});
+    } else matches.push({...row,article_span:{start:[...text.slice(0,start)].length,end:[...text.slice(0,end)].length,text:text.slice(start,end)},decision:"keyword_overlap_only"});
   }
   return {matches,broad_matches:[...broad.values()],stock_passes_changed:false};
 }

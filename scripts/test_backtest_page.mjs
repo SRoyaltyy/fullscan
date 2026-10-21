@@ -77,7 +77,7 @@ sys.path.insert(0,sys.argv[1])
 from src.test_stock_keywords import graph,profile
 from src.stock_keywords import compile_keywords,KeywordIndex
 index=KeywordIndex({'BLZE':profile(compile_keywords(graph(),as_of='2026-04-01'))})
-texts=['Western Digital faces hard-drive disruption','Stripe disruption; Backblaze shares fall','Western. Digital shares rise','unrelated article','HARD DRIVES and Western Digital']
+texts=['Western Digital faces hard-drive disruption','Stripe disruption; Backblaze shares fall','Western. Digital shares rise','unrelated article','HARD DRIVES and Western Digital','📉 Western Digital hard drives']
 print(json.dumps({'payload':index.browser_payload(),'cases':[{'text':t,'result':index.compare(t)} for t in texts]}))
 `,new URL('..',import.meta.url).pathname],{encoding:'utf8',maxBuffer:10_000_000});
 assert.equal(parity.status,0,parity.stderr);
