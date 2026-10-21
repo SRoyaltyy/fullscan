@@ -7,13 +7,15 @@
     "input_mode": "headline",
     "source_hashes": {
       "src/correlation.py": "fe2ef438b84996e2a2765f5ddb3ceb91d2b7ba9c891c9bb7fbcb41ab3b1ef23e",
-      "src/evidence_matcher.py": "9b9e3899f8e8eeca8baf14c656bcb362c7d24b892eead769e558cda519b03dbf",
+      "src/evidence_matcher.py": "1fcccee654e2d327d08cfc772dedbbe76bb43b8d9e66d310226754b9b7959df1",
       "src/stock_evidence.py": "007ef2686d2b6b8efd935bdaee8dabc71c32a5ecbc727a84e52638bb132955b1",
       "src/filing_evidence.py": "e5b006ab47c07d798e5fafaad368d790572d42953f3c66767cb5ba56f39e555b",
       "src/deep_profile_store.py": "4061382c089b079e0ce403ad9ca237adedb5c2fe1afbe900bf2055cbbb4a7cde",
-      "src/filing_relationships.py": "e7ed4ba92709365966c2bc06a920a832ed2a695de94be5f54134268c2dc46574",
-      "src/stock_keywords.py": "7058ea9bbc5ebf4bfb8db0ba8efb5fce13b7e405e4756c5679b1e44c9d46831a",
+      "src/filing_relationships.py": "0dc2a1ff95db2a5a717213815f20bca656d97233b6000ef54b421b04516e2cb6",
+      "src/stock_keywords.py": "fa53415b833feaddba990e3cb1e904ebcf3268810255e7e2c634432435f9493b",
       "src/stock_keyword_store.py": "51f1514947aa6aa9db6c59911793b22a14e7c19066caadf4049e6409d10de558",
+      "src/entity_resolution.py": "445db6f04101cfdae16f4b99133844395595a12d68622f31e2f625055a9d7535",
+      "src/term_inventory.py": "31c77a221844957830b4ce4282479324ff5516da2495bac7161cffe0f87a8a49",
       "src/names.py": "5576394d9d2ae105ff219b91c5ad10784ccc430f9e2ef262bc1e31945e735ad8",
       "src/aliases.py": "6d578666a2e0de65c0434c7304084ae2d3e519d8e090d688d73cb801f451e827",
       "src/linguistics.py": "b35aa6950670806d55edd22b6bee7d3790e1cec84184ae3c5e679e25762b6a6a",
@@ -23,8 +25,9 @@
       "src/spelling.py": "68b3891a997cb1efb87a13387a0b59b64d4fd58f88cd5a3599da082a3d99778a",
       "src/profile_cache.py": "c8a2bde0649d3edde41fb390b70f5ffa964f06e23a46822e6455960e36c57c74",
       "src/link_correlation.py": "f51bcd06965c63c036e7f6a4477865cce903ab5275156902af0b6d1fc5bec500",
-      "src/scanner_backtest.py": "49c6fbe8baf9fb104b64a3de44029a018a04935328481509f32c85b1e9d02a0a",
-      "scripts/export_backtest_static.py": "f2cda74e4a174989fc30c200b1a9bec1fe333a161ea7e6712946eb04b8566572",
+      "src/scanner_backtest.py": "b2ade7995d562f7ee74b37e5c25a773bbb9d4433c4e3455ad95819a42ea6c8cd",
+      "scripts/export_backtest_static.py": "d0db7d5232013e3495861a3972db3bac7aff7d4fa95a706ec98c6fdd7517e223",
+      "scripts/annotate_article_entities.py": "ffcfd2735de1a82d9177585467a9ef3b7b61cce456914565e9eabe75b5f4f765",
       "requirements-filing-parser.txt": "ffacc7df159645007921956720e1a848510c6fbb1b079afebc66f3ad067c7145",
       "src/data/english_words.txt": "7328b4033db8ffb2229b84223927b0b5adc7a75ce855a6383c4f3c7dbd1ddfe6",
       "src/data/lemma_lookup.json.gz": "595b56654e92b54ace68f4fc60212a240b4f48e72f1c3c4a95bdbaad6e7dfc8c",
@@ -60,13 +63,13 @@
       "src/data/senses/verb.social.json.gz": "07a63b5796437d236b9de5a2190e6db1afdbc8aaa6871bb2b1c3838921149c2d",
       "src/data/senses/verb.stative.json.gz": "1dcdb6a84b8aa35b22b405d28d17762c507f2c2bfe0099f2de3624a893774acf"
     },
-    "profile_fingerprint": "106693691f7239c7baec385c89a11dfc3c61780acb0534e0f094f835369674df",
-    "profile_inputs_sha256": "f487767e53ff7c7c3729f02452749abb4b851fe3cd9be40461fe3dd228038102",
+    "profile_fingerprint": "0635053069afa9e431c0e08eb3063d71d953db581a159c17c6e1c8b56c123caa",
+    "profile_inputs_sha256": "62be624952e9572e089b3828c72b4a32b18d219149955af5b11f39916ed8ed79",
     "filing_coverage": {
       "scope": "deep_filing_relationships",
       "complete": true,
       "compiler_version": "filing-relationships-1.1",
-      "keyword_schema": "stock-keywords-1.0",
+      "keyword_schema": "stock-keywords-1.1",
       "source_coverage_complete": true,
       "extraction_complete": false,
       "all_paragraphs_classified": true,
@@ -80,34 +83,36 @@
       "archive_tickers": 1,
       "catalog_tickers": 5961,
       "archive_tickers_outside_catalog": [],
-      "profile_index_sha256": "d3b6d7ff3b1949765061ee9e7bc05dbe840d9896ff59a7a161ea8472f4224adc",
+      "profile_index_sha256": "0adda8e4cc6f7a197017e00cbded25025fa6ed43c2240b3b5fdc239c2e4805ba",
       "characters": 17279556,
       "companies": 1,
       "documents": 381,
       "facts": 455,
       "filings": 10,
       "paragraphs": 31069,
-      "paragraphs_requiring_review": 24858
+      "paragraphs_requiring_review": 24858,
+      "term_occurrences": 302422
     },
     "profile_publication": {
-      "mode": "keywords",
+      "mode": "full",
       "dataset_scope": "development_sample",
       "whole_archive_complete": false,
-      "archive_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/39464899371",
+      "archive_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/39606651593",
       "base_url": ""
     },
-    "engine_snapshot_id": "a976fd24ff960d8f9d7507a9fdd1ed324ec7b652849093b06e5f1c7ad2a0756d",
-    "source_revision": "1a9e55ae9c9806c5ed8fdd01a278bf40aa7eb729",
+    "engine_snapshot_id": "23e1cb54a5887d4e4894a1c5c9533424c1e38db39151fa4797b703af655db29c",
+    "source_revision": "ec628e91609c3dfc3d301f9f9b5171dc51d0a674",
     "news_sha256": "c178bcd3b7265f9de3d1186beee0ee1199c1aa28526da27133e8cd245a8630eb",
-    "snapshot_id": "dfd7ca91b5cc3c031d4f3b45421eda369546804a41b6fb4fa4bd1063b7fa109a"
+    "article_entities_sha256": "c39c8e9628225be941719adfabf549835bec1bf3431aebeea9faf227c40bec60",
+    "snapshot_id": "b85c6be43898a16ca8dffb0a8237dc01e29d02ecb283e7478b00578505be0d5e"
   },
   "articles": 11255,
-  "articles_with_passes": 2567,
+  "articles_with_passes": 2565,
   "keyword_index": {
     "path": "keyword-index.json.gz",
-    "sha256": "ea6adc17c5f782043a30938591f82e590bd8898da1029ae047418bc68f988757",
-    "schema": "stock-keywords-1.0",
-    "phrases": 11237
+    "sha256": "d597b0c15ea315d568507d247cd1835062306d030524457de5cf719bd9b518f6",
+    "schema": "stock-keywords-1.1",
+    "phrases": 11240
   },
-  "generated_at": "2026-10-21T01:55:49Z"
+  "generated_at": "2026-10-21T13:47:05Z"
 }
