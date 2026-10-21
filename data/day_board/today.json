@@ -1,6 +1,6 @@
 {
   "date": "2026-10-20",
-  "generated_at": "2026-10-20T16:22:23.155722-04:00",
+  "generated_at": "2026-10-20T19:46:41.820193-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -76,7 +76,22 @@
     "score": "-8.071",
     "direction": "down"
   },
-  "sectors": {},
+  "sectors": {
+    "said": "0 up / 0 down / 0 flat",
+    "bullets": [
+      "XLB missing",
+      "XLC missing",
+      "XLY missing",
+      "XLP missing",
+      "XLE missing",
+      "XLF missing",
+      "XLV missing",
+      "XLI missing",
+      "XLRE missing",
+      "XLK missing",
+      "XLU missing"
+    ]
+  },
   "lands": [
     {
       "key": "paper",

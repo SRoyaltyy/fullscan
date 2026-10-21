@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20T16:48:41.547137-04:00",
+  "updated_at": "2026-10-20T19:25:37.334829-04:00",
   "grading_rule": {
     "entry": "open of first trading day at/after generated_at (same day if signal < 09:30 ET, else next day)",
     "window_trading_days": 14,
@@ -82258,7 +82258,7 @@
         "ai_chip_demand_spike"
       ],
       "entry_date": "2026-10-20",
-      "entry_open": 215.97,
+      "entry_open": 215.98,
       "window_through": "2026-10-20",
       "trading_days_elapsed": 0,
       "complete": false,
@@ -82478,14 +82478,14 @@
         "ai_chip_demand_spike"
       ],
       "entry_date": "2026-10-20",
-      "entry_open": 267.76,
+      "entry_open": 268.21,
       "window_through": "2026-10-20",
       "trading_days_elapsed": 0,
       "complete": false,
       "latest_close": 263.45,
-      "current_return_pct": -1.61,
+      "current_return_pct": -1.77,
       "horizon_returns_pct": {},
-      "mfe_pct": 1.2,
+      "mfe_pct": 1.03,
       "mfe_day": "2026-10-20",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-20"

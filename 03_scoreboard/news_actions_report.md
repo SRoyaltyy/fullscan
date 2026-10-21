@@ -1,6 +1,6 @@
 # News Actions — Backtest Report
 
-_Generated 2026-10-20 16:48 EDT_
+_Generated 2026-10-20 19:25 EDT_
 
 How to read this: each section is one prediction day. **Entry** is the open of the first trading day at/after the signal timestamp (same day if the signal ran pre-market, next day otherwise). A buy is `ever ✓` if price traded ABOVE the entry open at any point within the tracked window (up to 14 trading days); a sell/short is `ever ✓` if price traded BELOW it. `now%` is the return at the latest close in the window.
 
@@ -53,7 +53,7 @@ Entry: **2026-10-20** open — window through **2026-10-20** (still open)
 | UTL | buy | +4.0 | 53.42 | 2026-10-20 | +0.52 | +1.52 (2026-10-20) | ✓ |
 | HNRG | buy | +4.0 | 11.66 | 2026-10-20 | -2.74 | +1.85 (2026-10-20) | ✓ |
 | XLE | buy | +4.0 | 68.45 | 2026-10-20 | -0.70 | +0.04 (2026-10-20) | ✓ |
-| NVDA | buy | +2.5 | 215.97 | 2026-10-20 | +0.23 | +1.15 (2026-10-20) | ✓ |
+| NVDA | buy | +2.5 | 215.98 | 2026-10-20 | +0.23 | +1.15 (2026-10-20) | ✓ |
 | AVGO | buy | +2.5 | 334.28 | 2026-10-20 | +0.03 | +2.04 (2026-10-20) | ✓ |
 | SLAB | buy | +2.5 | 221.0 | 2026-10-20 | +0.05 | +0.23 (2026-10-20) | ✓ |
 | MXL | buy | +2.5 | 74.42 | 2026-10-20 | -1.22 | +3.52 (2026-10-20) | ✓ |
@@ -63,7 +63,7 @@ Entry: **2026-10-20** open — window through **2026-10-20** (still open)
 | AMD | buy | +2.5 | 530.02 | 2026-10-20 | +0.89 | +3.41 (2026-10-20) | ✓ |
 | ASML | buy | +1.8 | 1633.36 | 2026-10-20 | -0.15 | +1.28 (2026-10-20) | ✓ |
 | AMAT | buy | +1.8 | 406.155 | 2026-10-20 | -0.29 | +1.54 (2026-10-20) | ✓ |
-| LRCX | buy | +1.8 | 267.76 | 2026-10-20 | -1.61 | +1.20 (2026-10-20) | ✓ |
+| LRCX | buy | +1.8 | 268.21 | 2026-10-20 | -1.77 | +1.03 (2026-10-20) | ✓ |
 | FORM | buy | +1.8 | 106.95 | 2026-10-20 | +0.70 | +2.50 (2026-10-20) | ✓ |
 | KLIC | buy | +1.8 | 79.52 | 2026-10-20 | +1.14 | +2.42 (2026-10-20) | ✓ |
 | KLAC | buy | +1.8 | 163.895 | 2026-10-20 | -1.31 | +0.85 (2026-10-20) | ✓ |

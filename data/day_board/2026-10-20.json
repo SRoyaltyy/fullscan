@@ -1,6 +1,6 @@
 {
   "date": "2026-10-20",
-  "generated_at": "2026-10-20T16:22:23.155722-04:00",
+  "generated_at": "2026-10-20T19:46:41.820193-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -182,7 +182,7 @@
       "inputs_ready": true,
       "n_req_ok": 6,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 14,
       "files": [
         {
@@ -334,11 +334,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-20/_board.json",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -502,13 +507,18 @@
           "bullets": []
         }
       ],
-      "said": "general DOWN  -8.071",
+      "said": "general DOWN  -8.071 \u00b7 sectors 0 up / 0 down / 0 flat",
       "bullets": [
         "bad: Fresh Hormuz tanker mines/fires",
         "bad: Houthi Saudi energy claim",
         "bad: Kospi -3.7% tech selloff",
         "good: Warsh dovish, Oct pause 83% priced",
-        "good: China LPR hold expected"
+        "good: China LPR hold expected",
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -676,7 +686,7 @@
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
-      "n_opt": 4,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_general",
@@ -698,12 +708,17 @@
           "key": "in_board",
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-20/_board.json",
-          "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -811,7 +826,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=115",
-          "size": 986840,
+          "size": 986836,
           "said": "1d BUY SGRY \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, ENVX \u00b7 -0.6995499999999999",
           "bullets": []
         },
@@ -822,10 +837,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 30023,
+          "size": 29987,
           "said": "Stock book \u2014 2026-10-20",
           "bullets": [
-            "_Generated 2026-10-20T06:47:35.872636-04:00_",
+            "_Generated 2026-10-20T19:46:40.331891-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -889,7 +904,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=115",
-          "size": 986840,
+          "size": 986836,
           "said": "1d BUY SGRY \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, ENVX \u00b7 -0.6995499999999999",
           "bullets": []
         },
@@ -1004,7 +1019,22 @@
       "score": "-8.071",
       "direction": "down"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {},
     "weather": {
       "said": "hostile 9 \u00b7 neutral 2",
@@ -3015,6 +3045,54 @@
       "commit_msg": "auto: land finviz_market_digest_close [2026-10-20]",
       "workflow": "Finviz homepage market digest",
       "run_id": "39490781565",
+      "manifest": "research/input_freeze/2026-10-20/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-20_stock_book.md",
+      "at": "2026-10-20T19:34:00-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-20",
+      "workflow": "Publish strategy tickets",
+      "run_id": "39514474478",
+      "manifest": "research/input_freeze/2026-10-20/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-20_input_health.json",
+      "at": "2026-10-20T19:34:00-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-20",
+      "workflow": "Publish strategy tickets",
+      "run_id": "39514474478",
+      "manifest": "research/input_freeze/2026-10-20/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-20_stock_book.json",
+      "at": "2026-10-20T19:34:00-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-20",
+      "workflow": "Publish strategy tickets",
+      "run_id": "39514474478",
+      "manifest": "research/input_freeze/2026-10-20/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-20_stock_book.md",
+      "at": "2026-10-20T19:47:01-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-20",
+      "workflow": "Publish strategy tickets",
+      "run_id": "39514729070",
+      "manifest": "research/input_freeze/2026-10-20/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-20_input_health.json",
+      "at": "2026-10-20T19:47:01-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-20",
+      "workflow": "Publish strategy tickets",
+      "run_id": "39514729070",
+      "manifest": "research/input_freeze/2026-10-20/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-20_stock_book.json",
+      "at": "2026-10-20T19:47:01-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-20",
+      "workflow": "Publish strategy tickets",
+      "run_id": "39514729070",
       "manifest": "research/input_freeze/2026-10-20/manifest.json"
     }
   ]
