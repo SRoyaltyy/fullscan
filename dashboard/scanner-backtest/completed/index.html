@@ -143,7 +143,7 @@ $('search').addEventListener('input',draw);$('more').addEventListener('click',sh
 $('background').addEventListener('change',draw);$('detail-search').addEventListener('input',drawDetails);$('unattached').addEventListener('change',drawDetails);$('detail-more').addEventListener('click',moreDetails);
 async function init(){
   try{
-    const response=await fetch('manifest.json',{credentials:'omit'});if(!response.ok)throw Error('Completed results are not published yet');
+    const response=await fetch('manifest.json?refresh='+Date.now(),{credentials:'omit',cache:'no-store'});if(!response.ok)throw Error('Completed results are not published yet');
     manifest=await response.json();if(!manifest.complete||manifest.schema!=='completed-parser-review-1')throw Error('Incomplete publication');
     const totals=manifest.archive_totals,p=manifest.published;
     $('coverage').textContent=`${p.tickers.toLocaleString()} stock associations · ${p.issuers.toLocaleString()} issuers · ${totals.filings.toLocaleString()} filings · ${p.relationships.toLocaleString()} stored relationships. Reused completed output; no extraction rerun.`;

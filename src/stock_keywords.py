@@ -10,7 +10,7 @@ import math
 import re
 
 from .linguistics import lemma
-from .entity_resolution import VERSION as ALIGNMENT_VERSION, POLICY, STOP, aliases, identity, decide, validate_annotations
+from .entity_resolution import VERSION as ALIGNMENT_VERSION, POLICY, STOP, aliases, identity, decide, validate_annotations, surface
 
 # Hyphens separate words, but offsets always refer to the unmodified article.
 TOKEN = re.compile(r"\d+(?:[./-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*")
@@ -177,6 +177,24 @@ def compile_keywords(graph, *, as_of, ticker=None):
             for ident in evidence[ref].get('term_occurrence_ids',[])})
         row['term_occurrence_dates']={ident:term_dates[ident] for ident in row['term_occurrence_ids']}
         rows.append(row)
+    declarations=defaultdict(list)
+    for row in rows:
+        if row['object_type'] not in ('law','agency') or not row['qualifiers'].get('disclosure_extractor'):
+            continue
+        for alias in row['qualifiers']['disclosed_aliases']:
+            declarations[(row['object_type'],surface(alias))].append(row)
+    for row in rows:
+        candidates=[r for r in declarations.get((row['object_type'],surface(row['keyword'])),())
+                    if r['first_filing_date']<=row['first_filing_date']]
+        names={surface(r['keyword']) for r in candidates}
+        # An explicitly declared alias can connect an old short claim to its
+        # complete name. Conflicting names stay unresolved, and a later alias
+        # declaration cannot supply historical evidence to an earlier claim.
+        if len(names)==1:
+            row['source_declared_identity']={'name':candidates[0]['keyword'],
+                'aliases':sorted({a for r in candidates for a in r['qualifiers']['disclosed_aliases']}),
+                'known_from':min(r['first_filing_date'] for r in candidates),
+                'evidence_ids':sorted({ref for r in candidates for ref in r['evidence_ids']})}
     return {'schema':SCHEMA,'as_of':as_of,'records':rows,'evidence':evidence,
         'term_inventory':None if inventory is None else {**inventory,'terms':terms,
             'windows':[w for w in inventory['windows'] if w['source_id'] in allowed_sources]},

@@ -8,7 +8,7 @@ import json
 import re
 from .linguistics import lemma, STOP
 
-VERSION = 'entity-alignment-1.2'
+VERSION = 'entity-alignment-1.3'
 WORD = re.compile(r"\d+(?:[./-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*")
 SUFFIX = re.compile(r'(?:[, ]+(?:incorporated|corporation|company|limited|holdings|corp|inc|ltd|plc|llc)\.?)+$',re.I)
 TYPES = {'person':'PERSON','PERSON':'PERSON','organization':'ORG','company':'ORG','ORG':'ORG',
@@ -73,6 +73,10 @@ def identity(row, profile, organizations, *, as_of=''):
     normalized = row.get('normalized',' '.join(tokens(name,stop=False)))
     org_ids = {ticker for form in forms for ticker in organizations.get(form,())}
     canonical = 'org:'+next(iter(org_ids)) if kind=='ORG' and len(org_ids)==1 else kind.lower()+':'+row['stock']+':'+surface(name)
+    declared=row.get('source_declared_identity')
+    if declared and kind in ('LAW','GOV_AGENCY'):
+        forms=sorted(set(forms)|{form for value in declared['aliases'] for form in aliases(value,kind)})
+        canonical=kind.lower()+':'+row['stock']+':'+surface(declared['name'])
     sense = None
     options = []
     if kind == 'CONCEPT':
