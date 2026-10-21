@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Completed stock parser results</title>
+<style>
+:root{color-scheme:dark}body{margin:0;background:#0b1020;color:#edf2ff;font:15px/1.5 system-ui,sans-serif}main{max-width:980px;margin:auto;padding:24px 18px}h1{margin:0;font-size:28px}.muted{color:#a7b5d1}a,summary{color:#93c5fd}button{padding:10px 16px;border:0;border-radius:8px;background:#1d4ed8;color:white;font:600 15px system-ui;cursor:pointer}input{padding:10px;background:#131b31;color:#edf2ff;border:1px solid #3b4868;border-radius:8px;font:15px system-ui}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:18px 0}.card{padding:16px;margin:14px 0;background:#131b31;border:1px solid #2b3552;border-radius:10px}details{margin:12px 0}summary{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit}blockquote{margin:12px 0;padding-left:12px;border-left:3px solid #53668c}mark{background:#fde047;color:#111827}button:disabled{opacity:.5}#search{width:min(100%,600px)}.source{font-size:13px;color:#b5c2db;overflow-wrap:anywhere}
+</style></head><body><main>
+<a href="../">← Latest parser and article tests</a>
+<h1>Completed stock parser results</h1>
+<p id="coverage" class="muted">Loading the completed extraction…</p>
+<p id="version" class="source"></p>
+<p class="muted">These are the existing saved stock-side decisions. Open any relationship to inspect its original label, rule, exact quote, full supporting paragraphs and SEC source. Labels can be wrong; missing relationships remain unknown. The newer exhaustive noun/entity occurrence inventory is not part of this older extraction.</p>
+<div class="row"><label for="ticker">Stock</label><input id="ticker" list="tickers" placeholder="Ticker, e.g. AAPL" maxlength="12"><datalist id="tickers"></datalist><button id="analyze" disabled>Analyze stock</button><button id="random" disabled>Random stock</button></div>
+<section id="profile" class="card" hidden><h2 id="name"></h2><p id="stats" class="muted"></p><input id="search" aria-label="Search recorded relationships" placeholder="Search term, label, relationship or quoted context"><p id="count"></p><div id="records"></div><button id="more" hidden>Show more</button></section>
+<p id="error" role="status"></p>
+<p class="muted">Paragraph boundaries follow archived text lines. This view retains every recorded relationship and every full paragraph supporting it. The complete source archive also retains paragraphs without extracted relationships.</p>
+<p><a href="https://github.com/SRoyaltyy/fullscan/actions/runs/39522456843/artifacts/12321883294" target="_blank" rel="noopener noreferrer">Original completed archive (GitHub sign-in may be required)</a></p>
+<script>
+const $=id=>document.getElementById(id);
+let manifest=null,profile=null,request=0,filtered=[],position=0;
+function el(tag,text){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;return e;}
+async function packed(entry){
+  if(!/^profiles\/\d{10}\.json\.gz$/.test(entry.path))throw Error('Invalid profile path');
+  const base=manifest.asset_base_url || './';
+  if(base!=='./'&&!/^https:\/\/raw\.githubusercontent\.com\/SRoyaltyy\/fullscan\/[a-f0-9]{40}\/$/.test(base))throw Error('Invalid saved asset origin');
+  const response=await fetch(base+entry.path,{credentials:'omit'});if(!response.ok)throw Error('Stock result unavailable');
+  const bytes=await response.arrayBuffer();
+  const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),b=>b.toString(16).padStart(2,'0')).join('');
+  if(hash!==entry.sha256)throw Error('Profile does not match the completed archive');
+  return JSON.parse(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text());
+}
+function sourceLine(source,p){
+  return [source.form,source.filing_date,source.accession,source.document,source.section,
+    p?`Paragraph ${p.id} · characters ${p.start}–${p.end}`:''].filter(Boolean).join(' · ');
+}
+function fullParagraph(p,ev){
+  const pre=el('pre'),chars=Array.from(p.text);
+  const start=Math.max(0,ev.start-p.start),end=Math.min(chars.length,ev.end-p.start);
+  pre.append(el('span',chars.slice(0,start).join('')),el('mark',chars.slice(start,end).join('')),el('span',chars.slice(end).join('')));
+  return pre;
+}
+function showMore(){
+  const paragraphs=new Map(profile.paragraphs.map(p=>[p.id,p]));
+  const sources=new Map(profile.sources.map(s=>[s.id,s]));
+  const batch=filtered.slice(position,position+50);position+=batch.length;
+  for(const fact of batch){
+    const detail=el('details'),title=el('summary',`${fact.subject} → ${fact.predicate.replaceAll('_',' ')} → ${fact.object} [${fact.status}]`);
+    detail.append(title);
+    let rendered=false;
+    detail.addEventListener('toggle',()=>{
+      if(!detail.open||rendered)return;rendered=true;
+      detail.append(el('p',`Recorded label: ${fact.object_type || 'unrecorded'} · Rule: ${fact.rule || 'unrecorded'} · Assertion: ${fact.status}`));
+      if(Object.keys(fact.qualifiers || {}).length)detail.append(el('p',JSON.stringify(fact.qualifiers)));
+      for(const ev of fact.evidence){
+        const source=sources.get(ev.source_id)||{};
+        const origin=el('p',sourceLine(source)+` · Witness characters ${ev.start}–${ev.end}`);origin.className='source';detail.append(origin,el('blockquote',ev.quote));
+        for(const id of ev.paragraph_ids){
+          const p=paragraphs.get(id);if(!p)throw Error('Missing witness paragraph');
+          const metadata=el('p',sourceLine(source,p));metadata.className='source';detail.append(metadata,fullParagraph(p,ev));
+        }
+        if(/^https:\/\/www\.sec\.gov\/Archives\//.test(source.url || '')){
+          const link=el('a','Read SEC source');link.href=source.url;link.target='_blank';link.rel='noopener noreferrer';detail.append(link);
+        }
+      }
+    });
+    $('records').append(detail);
+  }
+  $('more').hidden=position>=filtered.length;
+  $('more').textContent=`Show more (${(filtered.length-position).toLocaleString()} remaining)`;
+}
+function draw(){
+  if(!profile)return;
+  const q=$('search').value.trim().toLowerCase();
+  filtered=profile.facts.filter(f=>!q||[f.object,f.object_type,f.predicate,f.status,...f.evidence.map(e=>e.quote)].join(' ').toLowerCase().includes(q));
+  position=0;$('records').replaceChildren();$('count').textContent=`${filtered.length.toLocaleString()} of ${profile.facts.length.toLocaleString()} stored relationships · all searchable`;showMore();
+}
+async function analyze(){
+  const ticket=++request,ticker=$('ticker').value.trim().toUpperCase(),entry=manifest?.profiles[ticker];
+  $('error').textContent='';
+  if(!entry){$('error').textContent=`${ticker || 'This ticker'} is not in the completed 2,032-stock archive. No SEC result is implied.`;return;}
+  $('analyze').disabled=true;$('stats').textContent='Loading saved stock results…';$('profile').hidden=false;
+  try{
+    const result=await packed(entry);if(ticket!==request)return;profile=result;
+    $('name').textContent=`${ticker} — ${profile.name}`;
+    $('stats').textContent=`${profile.facts.length.toLocaleString()} recorded relationships · ${profile.paragraphs.length.toLocaleString()} supporting paragraphs · ${profile.coverage.paragraphs.toLocaleString()} original source blocks · filing cutoff ${profile.as_of} · saved extraction ${profile.compiler_sha256.slice(0,12)}`;
+    $('search').value='';draw();
+  }catch(error){if(ticket===request)$('error').textContent=error.message;}
+  finally{if(ticket===request)$('analyze').disabled=false;}
+}
+$('analyze').addEventListener('click',analyze);$('ticker').addEventListener('keydown',e=>{if(e.key==='Enter')analyze();});
+$('random').addEventListener('click',()=>{const tickers=Object.keys(manifest.profiles);$('ticker').value=tickers[Math.floor(Math.random()*tickers.length)];analyze();});
+$('search').addEventListener('input',draw);$('more').addEventListener('click',showMore);
+async function init(){
+  try{
+    const response=await fetch('manifest.json',{credentials:'omit'});if(!response.ok)throw Error('Completed results are not published yet');
+    manifest=await response.json();if(!manifest.complete||manifest.schema!=='completed-parser-review-1')throw Error('Incomplete publication');
+    const totals=manifest.archive_totals,p=manifest.published;
+    $('coverage').textContent=`${p.tickers.toLocaleString()} stock associations · ${p.issuers.toLocaleString()} issuers · ${totals.filings.toLocaleString()} filings · ${p.relationships.toLocaleString()} stored relationships. Reused completed output; no extraction rerun.`;
+    $('version').textContent=`Extraction ${manifest.extraction_schema} · compiler ${manifest.compiler_sha256.slice(0,12)} · cutoff ${manifest.as_of} · source run ${manifest.source_run_id} · viewer ${manifest.viewer_revision.slice(0,12)}`;
+    for(const [ticker,entry]of Object.entries(manifest.profiles)) {const option=el('option');option.value=ticker;option.label=entry.name;$('tickers').append(option);}
+    $('analyze').disabled=false;$('random').disabled=false;
+    const selected=new URLSearchParams(location.search).get('ticker');if(selected){$('ticker').value=selected;await analyze();}
+  }catch(error){$('error').textContent=error.message;}
+}
+init();
+</script></main></body></html>
