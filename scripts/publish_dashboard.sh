@@ -2,8 +2,8 @@
 # Publish dashboard/ (buy/sell paper book) to the gh-pages branch.
 # Used by Pre-Open ALL and Stock Book ALL so suggestions land on
 # https://SRoyaltyy.github.io/fullscan/dashboard/ without waiting
-# for a second workflow. Never prints tokens. Never fails the job
-# if Pages cannot be updated — the git commit already saved the files.
+# for a second workflow. Never prints tokens. Publication failures fail
+# the job so a green run means the site was actually updated.
 #
 # 2026-09-10: deploy-dashboard.yml (peaceiris force_orphan) and this
 # script force-pushed gh-pages at the same second →
@@ -88,12 +88,29 @@ git -C "$TMP" remote add origin \
 
 ATTEMPTS="${PAGES_PUSH_ATTEMPTS:-5}"
 for n in $(seq 1 "$ATTEMPTS"); do
-  if git -C "$TMP" push -q --force origin gh-pages; then
+  # The saved filing view is published separately and is absent from main.
+  # Preserve it from the current remote tree on every retry, then use a lease
+  # so a concurrent publisher cannot be silently overwritten.
+  if ! git -C "$TMP" fetch -q --depth=1 --filter=blob:none origin gh-pages; then
+    echo "[pages] WARN: cannot read current Pages tree; retaining the published site"
+    sleep $((6 * n))
+    continue
+  fi
+  prior=$(git -C "$TMP" rev-parse FETCH_HEAD)
+  if ! python3 scripts/preserve_completed_parser_view.py --site "$TMP" --ref "$prior"; then
+    echo "[pages] ERROR: cannot preserve completed parser results; retaining the published site"
+    exit 1
+  fi
+  git -C "$TMP" add -A
+  if ! git -C "$TMP" diff --cached --quiet; then
+    git -C "$TMP" commit -qm "Preserve published completed parser review"
+  fi
+  if git -C "$TMP" push -q --force-with-lease="refs/heads/gh-pages:$prior" origin gh-pages; then
     echo "[pages] published https://SRoyaltyy.github.io/fullscan/dashboard/ (attempt ${n})"
     exit 0
   fi
   echo "[pages] WARN: gh-pages push failed (${n}/${ATTEMPTS}) — another deploy holds the ref; retry"
   sleep $((6 * n))
 done
-echo "[pages] WARN: gh-pages push failed after ${ATTEMPTS} attempts — files are on main"
-exit 0
+echo "[pages] ERROR: gh-pages publication failed after ${ATTEMPTS} attempts — previous site retained"
+exit 1
