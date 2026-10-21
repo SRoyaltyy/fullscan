@@ -1,21 +1,21 @@
 {
   "date": "2026-10-21",
   "policy": "flatten_robust",
-  "generated": "2026-10-21T09:47:51",
-  "cash": 97088.64,
+  "generated": "2026-10-21T15:24:49",
+  "cash": 111312.75,
   "io": [
     {
       "ticker": "TWLO",
       "sleeve": "io_core",
-      "shares": 37,
+      "shares": 8,
       "entry_px": 244.37,
       "entry_date": "2026-10-16",
       "last_px": 258.69,
       "yday_px": 258.69,
-      "open_px": 258.69,
-      "overnight": 0.0,
-      "pct": 0.0,
-      "mv": 9571.53,
+      "open_px": 267.74,
+      "overnight": 72.4,
+      "pct": 3.498,
+      "mv": 2141.92,
       "exit_date": "2026-10-21",
       "reason": ""
     }
