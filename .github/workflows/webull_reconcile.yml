@@ -58,4 +58,5 @@ jobs:
         if: always()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: bash scripts/safe_git_push.sh "auto: webull sandbox reconcile notes" data/paper_open/reconcile_log.jsonl
+        run: |
+          bash scripts/safe_git_push.sh "auto: webull sandbox reconcile notes" data/paper_open/reconcile_log.jsonl
