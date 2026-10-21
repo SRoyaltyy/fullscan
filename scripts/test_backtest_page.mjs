@@ -98,6 +98,40 @@ assert.equal(termInventory.children.filter(e=>e.textContent.startsWith('term '))
 assert.ok(termInventory.children.some(e=>e.textContent.startsWith('term 100 <script>')));
 console.log('All term occurrences remain reachable with their phrase context and unresolved relationships.');
 
+// Same term, separate paragraphs/senses; an emoji before the term exercises
+// Python code-point offsets rather than JavaScript UTF-16 indexing.
+context.reviewBox=element();
+context.reviewGraph={sources:[{id:'s',form:'10-K',filing_date:'2026-01-01',accession:'filing-1'}],
+  paragraphs:[{id:'office',source_id:'s',start:0,end:16,text:'🛰 We lease space'},
+    {id:'orbit',source_id:'s',start:17,end:29,text:'Space flight'}],
+  facts:[{id:'f',subject:'BLZE',predicate:'uses_input',object:'space',status:'asserted',rule:'test:lease',
+    evidence:[{source_id:'s',start:0,end:16,quote:'🛰 We lease space',trigger:{start:5,end:10,text:'lease'},argument:{start:11,end:16,text:'space'}}]}],
+  term_inventory:{terms:[{id:'t1',source_id:'s',text:'space',start:11,end:16,paragraph_ids:['office'],
+    kinds:['noun_token'],entity_types:[],context:{noun_phrase:{text:'space'}},capacity:{dependency:'dobj',governor:{text:'lease'}},
+    relationships:[{relationship_id:'f',subject:'BLZE',predicate:'uses_input',object:'space',assertion:'asserted',attachment:'within_extracted_argument'}]},
+    {id:'t2',source_id:'s',text:'Space',start:17,end:22,paragraph_ids:['orbit'],kinds:['noun_token'],entity_types:[],
+      context:{noun_phrase:{text:'Space flight'}},capacity:{dependency:'compound',governor:{text:'flight'}},relationships:[]}]}};
+context.inspectDecision=vm.runInContext('renderTermReview(reviewBox,reviewGraph)',context);
+const reviewRoot=context.reviewBox.children[0], reviewList=reviewRoot.children.at(-1);
+assert.match(reviewList.children[0].textContent,/2 of 2/);
+const firstTerm=reviewList.children[1], secondTerm=reviewList.children[2];
+assert.match(firstTerm.children[2].textContent,/test:lease/);
+assert.match(secondTerm.children[0].textContent,/relationship unresolved/);
+const sourceParagraph=firstTerm.children.at(-1);
+assert.match(sourceParagraph.children[0].textContent,/Paragraph office/);
+assert.equal(sourceParagraph.children[1].children[1].textContent,'space');
+assert.equal(sourceParagraph.children[1].children.map(c=>c.textContent).join(''),'🛰 We lease space');
+context.inspectDecision({stock:'BLZE',relationship:'input',keyword:'space',assertion:'asserted',term_occurrence_ids:['t1'],evidence_ids:['f']});
+assert.match(reviewList.children[0].textContent,/1 of 2/);
+assert.ok(reviewList.children.some(c=>c.textContent.includes('Trigger: lease')));
+context.inspectDecision({stock:'BLZE',relationship:'issuer',keyword:'BLZE',assertion:'identity',term_occurrence_ids:[],evidence_ids:[]});
+assert.ok(reviewList.children.some(c=>c.textContent.includes('No complete SEC paragraph witness')));
+reviewRoot.children[3].listeners.click();
+assert.match(reviewList.children[0].textContent,/2 of 2/);
+reviewRoot.children[2].value='space';reviewRoot.children[2].listeners.input();
+assert.match(reviewList.children[0].textContent,/2 of 2/);
+console.log('Keyword decisions open exact paragraphs, preserve Unicode spans, expose rule evidence, and keep repeated unresolved occurrences separate.');
+
 // Both paths must match the same normalized phrase, direction, status and exact
 // article offsets. Python exports relevant dictionary forms to the browser.
 const parity = spawnSync('python',['-I','-S','-c',`

@@ -569,7 +569,7 @@ async function decodePackedBytes(bytes, expectedHash) {
   return JSON.parse(await new Response(stream).text());
 }
 
-function renderKeywordRecords(container, records, evidence = {}) {
+function renderKeywordRecords(container, records, evidence = {}, inspectSource = null) {
   const query = document.createElement("input");
   query.placeholder = "Search keyword, stock or relationship";
   query.setAttribute("aria-label", "Search stock keyword records");
@@ -597,6 +597,12 @@ function renderKeywordRecords(container, records, evidence = {}) {
       stock.textContent = `Inspect ${row.stock} and its filing evidence`;
       stock.addEventListener("click", () => showTickerProfile(row.stock));
       detail.append(title, flags, qualifiers, stock);
+      if (inspectSource) {
+        const inspect = document.createElement("button");
+        inspect.textContent = "Review exact source paragraphs for this keyword";
+        inspect.addEventListener("click", () => inspectSource(row));
+        detail.append(inspect);
+      }
       const witnesses = (row.evidence_ids || []).flatMap(id => (evidence[id] || {}).witnesses || []);
       appendPaged(detail,witnesses,w => {
         const block = document.createElement("blockquote");
@@ -816,6 +822,89 @@ function appendPaged(container, entries, render, pageSize = 100) {
   next();
 }
 
+function highlightedParagraph(paragraph, spans) {
+  const block = document.createElement("div");
+  block.className = "article"; block.style = "white-space:pre-wrap";
+  // Python source offsets count Unicode code points, not JavaScript UTF-16 units.
+  const chars = Array.from(paragraph.text);
+  const ranges = spans.filter(s=>s.start < paragraph.end && s.end > paragraph.start)
+    .map(s=>[Math.max(0,s.start-paragraph.start),Math.min(chars.length,s.end-paragraph.start)])
+    .sort((a,b)=>a[0]-b[0]);
+  let cursor=0;
+  for (const [start,end] of ranges) {
+    if (end<=cursor) continue;
+    if (start>cursor) { const text=document.createElement("span"); text.textContent=chars.slice(cursor,start).join(""); block.append(text); }
+    const mark=document.createElement("mark"); mark.textContent=chars.slice(Math.max(cursor,start),end).join(""); block.append(mark);
+    cursor=end;
+  }
+  const tail=document.createElement("span"); tail.textContent=chars.slice(cursor).join(""); block.append(tail);
+  return block;
+}
+
+function renderTermReview(container, graph) {
+  if (!graph.term_inventory) return null;
+  const terms=graph.term_inventory.terms || [];
+  const paragraphs=new Map((graph.paragraphs || []).map(p=>[p.id,p]));
+  const sources=new Map(graph.sources.map(s=>[s.id,s]));
+  const facts=new Map(graph.facts.map(f=>[f.id,f]));
+  const root=document.createElement("section"), heading=document.createElement("h3");
+  heading.textContent="Review keywords and their exact source paragraphs";
+  const note=document.createElement("p");
+  note.textContent="Every entity and terminology occurrence remains separate. Labels are parser observations; relationship rules can be wrong. Unresolved relationships and concept senses are shown explicitly. Source offsets refer to archived text, whose paragraph boundaries may differ from SEC page layout.";
+  const query=document.createElement("input"); query.setAttribute("aria-label","Search all stock term occurrences"); query.placeholder="Search keyword, label or company relationship";
+  const selection=document.createElement("p"), list=document.createElement("div");
+  let chosen=null;
+  function sourceBlock(p, spans) {
+    const source=sources.get(p.source_id) || {}, wrap=document.createElement("div"), origin=document.createElement("p");
+    origin.textContent=[source.form,source.filing_date,source.accession,source.document,source.section,`Paragraph ${p.id}`,`characters ${p.start}–${p.end}`].filter(Boolean).join(" · ");
+    wrap.append(origin,highlightedParagraph(p,spans));
+    if (/^https:\/\/www\.sec\.gov\/Archives\//.test(source.url || "")) {
+      const link=document.createElement("a");link.href=source.url;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Read SEC source";wrap.append(link);
+    }
+    return wrap;
+  }
+  function draw() {
+    list.replaceChildren();
+    const q=(query.value || "").trim().toLowerCase();
+    const ids=chosen ? new Set(chosen.term_occurrence_ids || []) : null;
+    const rows=terms.filter(t=>(!ids || ids.has(t.id)) && (!q || [t.text,...(t.entity_types || []),...(t.kinds || []),...(t.relationships || []).flatMap(r=>[r.subject,r.predicate,r.object])].join(" ").toLowerCase().includes(q)));
+    const count=document.createElement("p"); count.textContent=`${rows.length.toLocaleString()} of ${terms.length.toLocaleString()} term occurrences · each has its own source references`;list.append(count);
+    selection.textContent=chosen ? `Selected decision: ${chosen.stock} → ${chosen.relationship} → ${chosen.keyword} [${chosen.assertion}].` : "All extracted occurrences, including terms with unresolved company relationships.";
+    if (chosen) {
+      const witnessIds=new Set(chosen.evidence_ids || []), seen=new Set();
+      for (const id of witnessIds) {
+        const fact=facts.get(id);
+        const witnesses=fact?.evidence || [];
+        if (id.startsWith("paragraph:")) { const p=paragraphs.get(id.slice(10)); if(p) {list.append(sourceBlock(p,[]));seen.add(p.id);} }
+        for (const ev of witnesses) {
+          const why=document.createElement("p");why.textContent=`Rule ${fact.rule || "unrecorded"} · ${fact.subject} → ${fact.predicate} → ${fact.object} [${fact.status}] · Trigger: ${ev.trigger?.text || "unrecorded"} · Argument: ${ev.argument?.text || "unrecorded"}`;list.append(why);
+          for (const p of paragraphs.values()) if(p.source_id===ev.source_id && p.start<ev.end && p.end>ev.start && !seen.has(p.id)) {list.append(sourceBlock(p,[ev.argument,ev.trigger].filter(Boolean)));seen.add(p.id);}
+        }
+      }
+      if (!seen.size) {const empty=document.createElement("p");empty.textContent="No complete SEC paragraph witness is available for this decision. Check its original quote and source metadata in the keyword record.";list.append(empty);}
+      if (!rows.length) {const empty=document.createElement("p");empty.textContent="No spaCy occurrence was linked to this decision; an occurrence link is not inferred.";list.append(empty);}
+    }
+    appendPaged(list,rows,term=>{
+      const detail=document.createElement("details"), title=document.createElement("summary");
+      title.textContent=`${term.text} · ${(term.entity_types || []).join(", ") || (term.kinds || []).join(", ")} · characters ${term.start}–${term.end} · ${(term.relationships || []).length ? "company argument linked" : "company relationship unresolved"}`;
+      const why=document.createElement("p"); why.textContent=`Extraction: ${(term.kinds || []).join(", ")} · spaCy entity label: ${(term.entity_types || []).join(", ") || "none"} · Phrase: ${term.context.noun_phrase.text} · Dependency: ${term.capacity.dependency} → ${term.capacity.governor.text} · Concept sense: unresolved`;
+      detail.append(title,why);
+      for(const relation of term.relationships || []) {
+        const fact=facts.get(relation.relationship_id), claim=document.createElement("p");
+        claim.textContent=`${relation.subject} → ${relation.predicate} → ${relation.object} [${relation.assertion}] · Rule: ${fact?.rule || "unrecorded"} · Link: ${relation.attachment || "unrecorded"}`;detail.append(claim);
+        for(const ev of fact?.evidence || []) if(ev.source_id===term.source_id && ev.argument?.start<=term.start && ev.argument?.end>=term.end) {const evidence=document.createElement("p");evidence.textContent=`Trigger: ${ev.trigger?.text || "unrecorded"} · Argument: ${ev.argument.text} · Relationship witness: ${ev.quote}`;detail.append(evidence);}
+      }
+      for(const id of term.paragraph_ids || []) {const p=paragraphs.get(id);if(p) detail.append(sourceBlock(p,[term]));}
+      return detail;
+    });
+  }
+  query.addEventListener("input",()=>{chosen=null;draw();});
+  const reset=document.createElement("button");reset.textContent="Show all term occurrences";
+  reset.addEventListener("click",()=>{chosen=null;query.value="";draw();});
+  root.append(heading,note,query,reset,selection,list);container.append(root);draw();
+  return row=>{chosen=row;query.value="";draw();root.scrollIntoView({block:"start"});};
+}
+
 function renderParagraphs(container, graph) {
   const paragraphs = graph.paragraphs || [];
   const terms = new Map((graph.term_inventory?.terms || []).map(t=>[t.id,t]));
@@ -916,6 +1005,7 @@ function renderParagraphs(container, graph) {
 }
 
 function renderFilingGraph(container, graph) {
+  activeTermReview=renderTermReview(container,graph);
   renderParagraphs(container, graph);
   const title = document.createElement("h3");
   title.textContent = `All filing relationships (${graph.facts.length.toLocaleString()})`;
@@ -966,8 +1056,10 @@ function renderFilingGraph(container, graph) {
 }
 
 let activeProfileRequest = 0;
+let activeTermReview = null;
 async function showTickerProfile(rawTicker) {
   const request = ++activeProfileRequest;
+  activeTermReview=null;
   const ticker = String(rawTicker || "").trim().toUpperCase();
   if (!ticker) return;
   selectedTicker=ticker;
@@ -1022,7 +1114,10 @@ async function showTickerProfile(rawTicker) {
   if (prof.keyword_schema) {
     const heading = document.createElement("h3"); heading.textContent = `Labelled stock keywords (${(prof.keywords || []).length})`;
     factsBox.append(heading);
-    renderKeywordRecords(factsBox,prof.keywords || [],prof.keyword_evidence || {});
+    renderKeywordRecords(factsBox,prof.keywords || [],prof.keyword_evidence || {},row=>{
+      if(activeTermReview) activeTermReview(row);
+      else { const note=document.createElement("p");note.textContent="The full source graph is loading or unavailable. Exact decision quotes are shown below; paragraph review needs the complete graph.";factsBox.append(note); }
+    });
   }
   const bits = [prof.industry, prof.sector].filter(Boolean);
   const srcBadge = document.createElement("span");
