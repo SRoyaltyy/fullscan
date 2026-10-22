@@ -7920,5 +7920,89 @@
     "sha256": "c585467e6d7248626778e8afa1efd2ded37c9876b01b6766e276cf5a37722dbf",
     "shares": 1222,
     "ticker": "SDEV"
+  },
+  {
+    "bar_cutoff": "2026-10-21",
+    "cash_before": 731.9023495987781,
+    "committed_at": "2026-10-22T12:20:34Z",
+    "date": "2026-10-22",
+    "excluded_unexplained_legs": [],
+    "finviz_source": {
+      "commit": "3873644226fc1007c5fc730900e998ea7199b84b",
+      "commit_time": "2026-10-21T20:54:00Z",
+      "file_sha256": "605971ea4995db9f13251db7fbc41317fb4711b17ba22699f8be1a035b46bd8a",
+      "path": "data/snapshots/2026-10-21.csv",
+      "snapshot_date": "2026-10-21",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": false,
+    "kind": "plan",
+    "morning_s": -14.314,
+    "picks": [
+      {
+        "fv_avg_volume": 5665.6,
+        "fv_price": 5.95,
+        "rank": 1,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "BMBL"
+      },
+      {
+        "fv_avg_volume": 3148.79,
+        "fv_price": 38.86,
+        "rank": 2,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "LQDA"
+      },
+      {
+        "fv_avg_volume": 11038.78,
+        "fv_price": 3.33,
+        "rank": 3,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CYPH"
+      },
+      {
+        "fv_avg_volume": 7636.41,
+        "fv_price": 30.75,
+        "rank": 4,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "ASST"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "hold-expired",
+        "shares": 43,
+        "ticker": "BRZE"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 399,
+        "ticker": "BYRN"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 47,
+        "ticker": "TRAX"
+      }
+    ],
+    "recipe": "union_hot_n4_h1__w0",
+    "s_source": {
+      "blob_sha": "794bac55057ce7a491300cc3ab84d159449a71df",
+      "kind": "predict",
+      "path": "01_daily/general/2026-10-22_predict.md",
+      "server_time_utc": "2026-10-22T17:44:01+08:00",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "6151fb7bcc18452f28872147ff52a2ab3d3163a79f8d762fb6801cc29eeb3317"
   }
 ]
