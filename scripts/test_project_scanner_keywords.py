@@ -14,6 +14,7 @@ from scripts import project_scanner_keywords as projection
 class ProjectionTests(unittest.TestCase):
     def test_workflow_checks_out_every_artifact_required_by_source_validation(self):
         workflow=(projection.ROOT/'.github/workflows/scanner-keyword-publish.yml').read_text()
+        self.assertIn("'src/stock_keywords.py'",workflow)
         for name in (*projection.ARTIFACTS,'keyword-index.json.gz','keyword-index/',
                      'scoring-profiles/','filing-profiles/index.json','filing-profiles/publication.json'):
             self.assertIn('/dashboard/scanner-backtest/'+name+'\n',workflow)

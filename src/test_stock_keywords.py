@@ -19,6 +19,29 @@ def profile(bundle, name='Backblaze Inc.'):
 
 
 class KeywordTests(unittest.TestCase):
+    def test_source_argument_whitespace_padding_is_bounded_and_keeps_word_boundaries(self):
+        import subprocess,sys,textwrap
+        from pathlib import Path
+        command=textwrap.dedent('''
+            from src.stock_keywords import annotate_scanner_rows
+            def check(keyword, quote):
+                row={'id':'test','stock':'TEST','keyword':keyword,'relationship':'supplier',
+                     'object_type':'ORG','assertion':'asserted','qualifiers':{},'evidence_ids':['e']}
+                evidence={'e':{'witnesses':[{'quote':quote,'source':{'filing_date':'2026-01-01'}}]}}
+                annotate_scanner_rows([row],evidence)
+                return row['scanner']
+            failed=check('Named'+' '*110+'Supplier','We buy from Named'+' '*220+'SupplierX.')
+            assert not failed['eligible'] and failed['reason']=='incomplete_or_nonliteral_argument'
+            valid=check('Named  Supplier','We buy from Named\\tSupplier.')
+            assert valid['eligible']
+            padded='Operations'+' '*80+'Risk'+' '*100+'Committee'
+            layout=check(padded,'We partner with '+padded+'.')
+            assert not layout['eligible'] and layout['reason']=='table_layout_fragment_requires_named_identity'
+        ''')
+        result=subprocess.run([sys.executable,'-c',command],cwd=Path(__file__).resolve().parents[1],
+            capture_output=True,text=True,timeout=5)
+        self.assertEqual(result.returncode,0,result.stderr)
+
     def test_concrete_framework_rejects_classes_and_fragments_for_every_issuer(self):
         for ticker in ('NORTH', 'SOUTH', 'EAST'):
             for value in ('customers', 'business partners', 'advertising agencies', 'internal systems',

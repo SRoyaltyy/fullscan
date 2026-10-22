@@ -213,10 +213,16 @@ def annotate_scanner_rows(rows, evidence):
             row['scanner'].update(eligible=False,reason='explicitly_no_connection')
         declared = bool(row.get('source_declared_identity'))
         validated_detail = any(ref.startswith('specific:') for ref in row['evidence_ids'])
-        literal = re.compile(r'(?<![\w-])'+re.escape(row['keyword']).replace(r'\ ',r'\s+')+r'(?![\w-])')
+        # A whitespace run is one separator. Turning each padding character
+        # into a separate \s+ creates catastrophic backtracking on table text.
+        argument = r'\s+'.join(re.escape(part) for part in re.split(r'\s+', row['keyword'].strip()))
+        literal = re.compile(r'(?<![\w-])'+argument+r'(?![\w-])')
         reason = ''
         if not witnesses:
             reason = 'missing_source_evidence'
+        elif not (declared or validated_detail) and len(re.findall(r'[ \t]{8,}', row['keyword'])) >= 2:
+            # Several wide column gaps are layout, not a resolved entity name.
+            reason = 'table_layout_fragment_requires_named_identity'
         elif not (declared or validated_detail or any(literal.search(w['quote']) for w in witnesses)):
             reason = 'incomplete_or_nonliteral_argument'
         elif re.match(r'^\d', row['keyword']) and row.get('object_type') != 'law' and not validated_detail:

@@ -3,6 +3,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'src/stock_keywords.py'
       - 'scripts/project_scanner_keywords.py'
       - '.github/workflows/scanner-keyword-publish.yml'
   workflow_dispatch:
