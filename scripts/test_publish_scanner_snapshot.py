@@ -54,6 +54,21 @@ class SnapshotPublishTests(unittest.TestCase):
             self.assertFalse(result['external_assets'])
             self.assertTrue((root/'local/scoring-profiles/aa.json.gz').is_file())
 
+    def test_market_archive_budget_is_separate_from_the_pages_budget(self):
+        from scripts.publish_scanner_snapshot import validate_budget, stage_page
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);source=root/'snapshot';self.fixture(source)
+            (source/'index.html').write_text('page')
+            assets=source/'scoring-profiles';assets.mkdir()
+            for i in range(12):
+                with (assets/(format(i,'x')+'.json.gz')).open('wb') as stream:stream.truncate(90_000_000)
+            self.assertGreater(validate_budget(source),1_000_000_000)
+            result=stage_page(source,root/'page',snapshot_commit='a'*40,outside_bytes=0)
+            self.assertTrue(result['external_assets'])
+            self.assertFalse((root/'page/scoring-profiles').exists())
+            self.assertEqual(len(list(assets.iterdir())),12)
+            self.assertTrue(all(p.stat().st_size==90_000_000 for p in assets.iterdir()))
+
     def test_budget_failure_prevents_publication_without_truncating(self):
         from scripts.publish_scanner_snapshot import validate_budget
         with tempfile.TemporaryDirectory() as directory:

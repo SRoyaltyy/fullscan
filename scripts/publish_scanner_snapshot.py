@@ -46,8 +46,8 @@ def artifact_names(directory):
     return names
 
 
-def validate_budget(directory, *, total_limit=850_000_000, file_limit=99_000_000):
-    """Leave space for the rest of the published site. Never truncate to fit."""
+def validate_budget(directory, *, total_limit=1_800_000_000, file_limit=99_000_000):
+    """Bound the immutable snapshot; stage_page separately enforces Pages space."""
     total = 0
     for name in artifact_names(directory):
         path = directory/name
@@ -58,7 +58,7 @@ def validate_budget(directory, *, total_limit=850_000_000, file_limit=99_000_000
             raise ValueError('snapshot file exceeds safe publication budget: '+name)
         total += size
     if total >= total_limit:
-        raise ValueError('snapshot exceeds safe Pages budget; retain previous page and use object storage')
+        raise ValueError('snapshot exceeds immutable archive budget; retain previous page and use object storage')
     return total
 
 
