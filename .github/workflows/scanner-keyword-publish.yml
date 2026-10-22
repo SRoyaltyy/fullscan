@@ -34,6 +34,8 @@ jobs:
             /dashboard/scanner-backtest/results.jsonl
             /dashboard/scanner-backtest/ticker-index.json
             /dashboard/scanner-backtest/profiles.json
+            /dashboard/scanner-backtest/keyword-index.json.gz
+            /dashboard/scanner-backtest/keyword-index/
             /dashboard/scanner-backtest/scoring-profiles/
             /dashboard/scanner-backtest/filing-profiles/index.json
             /dashboard/scanner-backtest/filing-profiles/publication.json
