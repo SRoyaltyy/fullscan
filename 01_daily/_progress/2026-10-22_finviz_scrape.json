@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "workflow": "finviz_scrape",
+  "date": "2026-10-22",
+  "run_id": "39747013362",
+  "model": "",
+  "started_at": "2026-10-22T04:25:41-04:00",
+  "updated_at": "2026-10-22T04:25:41-04:00",
+  "heartbeat_at": "2026-10-22T04:25:41-04:00",
+  "stages": [
+    {
+      "name": "elite",
+      "state": "pending",
+      "started_at": "",
+      "ended_at": "",
+      "heartbeat_at": "",
+      "done": 0,
+      "total": 1,
+      "model": "",
+      "error": ""
+    },
+    {
+      "name": "digest",
+      "state": "running",
+      "started_at": "2026-10-22T04:25:41-04:00",
+      "ended_at": "",
+      "heartbeat_at": "2026-10-22T04:25:41-04:00",
+      "done": 0,
+      "total": 1,
+      "model": "",
+      "error": ""
+    },
+    {
+      "name": "homepage",
+      "state": "pending",
+      "started_at": "",
+      "ended_at": "",
+      "heartbeat_at": "",
+      "done": 0,
+      "total": 1,
+      "model": "",
+      "error": ""
+    },
+    {
+      "name": "overlay",
+      "state": "pending",
+      "started_at": "",
+      "ended_at": "",
+      "heartbeat_at": "",
+      "done": 0,
+      "total": 1,
+      "model": "",
+      "error": ""
+    }
+  ]
+}
