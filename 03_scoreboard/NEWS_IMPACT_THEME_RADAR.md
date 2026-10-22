@@ -16,17 +16,17 @@ Rubric hit rates count a call only when q5=impulse, direction in {up, down}, tra
 
 | step | n |
 | --- | ---: |
-| Elite raw titles | 493415 |
-| unique (ticker + title, earliest News Time) | 52739 |
-| non-weather | 23494 |
-| reaction-in-title (killed by the router) | 829 |
-| impulse + up/down + listed | 12107 |
-| graded articles 0-1d | 1418 |
-| graded articles 2d | 1373 |
-| graded articles 3d | 1351 |
-| graded articles 4d | 1332 |
-| graded articles 5d | 1314 |
-| graded articles 1-4w | 6648 |
+| Elite raw titles | 502955 |
+| unique (ticker + title, earliest News Time) | 53912 |
+| non-weather | 24008 |
+| reaction-in-title (killed by the router) | 855 |
+| impulse + up/down + listed | 12350 |
+| graded articles 0-1d | 1439 |
+| graded articles 2d | 1397 |
+| graded articles 3d | 1373 |
+| graded articles 4d | 1351 |
+| graded articles 5d | 1330 |
+| graded articles 1-4w | 6724 |
 
 ## Hit rates
 
@@ -34,12 +34,12 @@ Rubric column skips long-horizon classes on 0-1d and 2-5d. Broad column keeps th
 
 | horizon | rubric hits | rubric n | rubric rate | broad hits | broad n | broad rate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0-1d | 1249 | 2516 | 1249/2516 = 49.6% | 6354 | 13108 | 6354/13108 = 48.5% |
-| 2d | 1224 | 2407 | 1224/2407 = 50.9% | 6294 | 12826 | 6294/12826 = 49.1% |
-| 3d | 1197 | 2374 | 1197/2374 = 50.4% | 6187 | 12672 | 6187/12672 = 48.8% |
-| 4d | 1212 | 2340 | 1212/2340 = 51.8% | 6184 | 12523 | 6184/12523 = 49.4% |
-| 5d | 1193 | 2315 | 1193/2315 = 51.5% | 6014 | 12404 | 6014/12404 = 48.5% |
-| 1-4w | 4670 | 10005 | 4670/10005 = 46.7% | — | — | — |
+| 0-1d | 1285 | 2592 | 1285/2592 = 49.6% | 6462 | 13309 | 6462/13309 = 48.6% |
+| 2d | 1254 | 2459 | 1254/2459 = 51.0% | 6368 | 12968 | 6368/12968 = 49.1% |
+| 3d | 1222 | 2407 | 1222/2407 = 50.8% | 6272 | 12826 | 6272/12826 = 48.9% |
+| 4d | 1228 | 2374 | 1228/2374 = 51.7% | 6262 | 12672 | 6262/12672 = 49.4% |
+| 5d | 1204 | 2337 | 1204/2337 = 51.5% | 6078 | 12515 | 6078/12515 = 48.6% |
+| 1-4w | 4747 | 10135 | 4747/10135 = 46.8% | — | — | — |
 
 ## Convergence / clash ledger
 
@@ -47,20 +47,20 @@ One entity per session. n_bull / n_bear count impulse up/down stories after titl
 
 Direct = the article names the ticker. Indirect = substitute / stays_out / arms_dealer / peer / sector basket from the family template. Theme groups are router factor/macro keys only. They are not a second trade. The Elite Sector column is not a key.
 
-Router theme keys (not traded): **13**. Name groups: **8487**.
+Router theme keys (not traded): **13**. Name groups: **8708**.
 
 | bucket | groups |
 | --- | ---: |
-| singleton | 7799 |
-| converge | 604 (up 403, down 201) |
-| clash | 84 |
+| singleton | 8010 |
+| converge | 610 (up 407, down 203) |
+| clash | 88 |
 
 Hit rates grade the entity once per session. Converge uses that side. Clash uses the net side (net 0 is ungraded). Long-horizon classes are out of these denominators.
 
 | bucket | 0-1d | 2d | 3d | 4d | 5d |
 | --- | --- | --- | --- | --- | --- |
-| singleton | 632/1353 = 46.7% | 647/1306 = 49.5% | 643/1283 = 50.1% | 646/1262 = 51.2% | 637/1244 = 51.2% |
-| converge | 72/130 = 55.4% | 61/127 = 48.0% | 64/126 = 50.8% | 64/126 = 50.8% | 65/126 = 51.6% |
+| singleton | 643/1377 = 46.7% | 660/1328 = 49.7% | 657/1305 = 50.3% | 653/1282 = 50.9% | 648/1260 = 51.4% |
+| converge | 72/130 = 55.4% | 62/129 = 48.1% | 65/127 = 51.2% | 64/126 = 50.8% | 65/126 = 51.6% |
 | clash | 3/10 = 30.0% | 5/10 = 50.0% | 8/10 = 80.0% | 4/10 = 40.0% | 4/10 = 40.0% |
 
 ### Top converge names
@@ -99,14 +99,14 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 
 ### 0-1d
 
-- ≥5% and <10%: **583**
-- ≥10%: **317**
+- ≥5% and <10%: **589**
+- ≥10%: **319**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
 | ≥10% | JZ | 2026-10-09 | +60.00% | capital_return | Jianzhi Education Announces Share Repurchase Program |
 | ≥10% | SUNE | 2026-09-09 | +49.83% | capacity | Suniva Completes $835 Million Capital Raise to Build Second Major U.S. Solar Cell Manufacturing Facility and M |
-| ≥10% | DKI | 2026-10-09 | -44.84% | dilution | DarkIris Prices $6 Million Public Offering at $1.44 Per Unit With Potential for Significant Share Dilution |
+| ≥10% | DKI | 2026-10-09 | -44.77% | dilution | DarkIris Prices $6 Million Public Offering at $1.44 Per Unit With Potential for Significant Share Dilution |
 | ≥10% | OLB | 2026-10-07 | +44.19% | capital_return | The OLB Group Launches Share Buyback; Suspends ATM Program |
 | ≥10% | SPAI | 2026-08-14 | +43.49% | print_vs_priced | Safe Pro Reports Record 1,336% Revenue Growth in Q2 2026 Driven by Multiple Government Contracts for AI-Powere |
 | ≥10% | FGI | 2026-08-13 | +38.37% | print_vs_priced | FGI Industries Ltd. Q2 2026 Earnings Call Summary |
@@ -129,12 +129,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | AEYE | 2026-08-14 | +29.08% | guidance | AudioEye, Inc. Q2 2026 Earnings Call Summary |
 | ≥10% | OPRX | 2026-08-13 | +28.74% | print_vs_priced | OptimizeRx Corp (OPRX) (Q2 2026) Earnings Call Highlights: Navigating Revenue Headwinds with ... |
 | ≥10% | OPRX | 2026-08-13 | +28.74% | print_vs_priced | OptimizeRx Corporation Q2 2026 Earnings Call Summary |
-| … | | | | | 875 more in the JSON |
+| … | | | | | 883 more in the JSON |
 
 ### 2d
 
-- ≥5% and <10%: **1112**
-- ≥10%: **620**
+- ≥5% and <10%: **1122**
+- ≥10%: **624**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -145,7 +145,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | MRNA | 2026-08-18 | +111.48% | gate | Behind the Ticker: How VFLO Beats Growth at Its Own Game |
 | ≥10% | MRNA | 2026-08-18 | +111.48% | gate | Behind the Ticker: How VFLO Beats Growth at Its Own Game |
 | ≥10% | MRNA | 2026-08-18 | +111.48% | gate | Behind the Ticker: How VFLO Beats Growth at Its Own Game |
-| ≥10% | DKI | 2026-10-09 | -86.13% | dilution | DarkIris Prices $6 Million Public Offering at $1.44 Per Unit With Potential for Significant Share Dilution |
+| ≥10% | DKI | 2026-10-09 | -86.18% | dilution | DarkIris Prices $6 Million Public Offering at $1.44 Per Unit With Potential for Significant Share Dilution |
 | ≥10% | OLB | 2026-10-07 | +84.43% | capital_return | The OLB Group Launches Share Buyback; Suspends ATM Program |
 | ≥10% | ALGS | 2026-08-06 | +83.01% | print_vs_priced | Aligos Therapeutics Reports Recent Business Progress and Second Quarter 2026 Financial Results |
 | ≥10% | LHSW | 2026-09-04 | -76.28% | dilution | Lianhe Sowell International Group Ltd. Announces Closing of an $11 Million Best-efforts Follow-on Public Offer |
@@ -163,12 +163,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | CYCU | 2026-09-30 | +45.80% | gate | Cycurion Discusses Record Contract Win, Public Safety Expansion and Growth Strategy in New Interview |
 | ≥10% | SDGR | 2026-09-15 | +45.52% | guidance | AI Drug Discovery Market Projected to Reach $13.8 Billion by 2033 |
 | ≥10% | SDGR | 2026-09-15 | +45.52% | guidance | AI Drug Discovery Market Projected to Reach $13.8 Billion by 2033 |
-| … | | | | | 1707 more in the JSON |
+| … | | | | | 1721 more in the JSON |
 
 ### 3d
 
-- ≥5% and <10%: **1244**
-- ≥10%: **754**
+- ≥5% and <10%: **1255**
+- ≥10%: **759**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -183,7 +183,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | MRNA | 2026-08-18 | +130.22% | gate | Behind the Ticker: How VFLO Beats Growth at Its Own Game |
 | ≥10% | PMI | 2026-08-24 | +100.66% | print_vs_priced | Picard Medical Shares Soar After Quarterly Revenue Beats Forecasts |
 | ≥10% | YQ | 2026-09-03 | +95.30% | capital_return | 17 Education & Technology Group Inc. Announces New Share Repurchase Program of Up to US$10 Million |
-| ≥10% | DKI | 2026-10-09 | -89.03% | dilution | DarkIris Prices $6 Million Public Offering at $1.44 Per Unit With Potential for Significant Share Dilution |
+| ≥10% | DKI | 2026-10-09 | -89.10% | dilution | DarkIris Prices $6 Million Public Offering at $1.44 Per Unit With Potential for Significant Share Dilution |
 | ≥10% | JZ | 2026-10-09 | +85.00% | capital_return | Jianzhi Education Announces Share Repurchase Program |
 | ≥10% | LHSW | 2026-09-04 | -84.88% | dilution | Lianhe Sowell International Group Ltd. Announces Closing of an $11 Million Best-efforts Follow-on Public Offer |
 | ≥10% | QMCO | 2026-08-11 | +79.82% | print_vs_priced | Quantum Corp (QMCO) (Q1 2027) Earnings Call Highlights: Debt-Free Turnaround with Record ... |
@@ -197,12 +197,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | Robinhood Rises as the SEC Clears Tokenized Stocks |
 | ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | Securitize Surges After SEC Clears Path for Tokenized Stock Trading |
 | ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | Polymarket Hires Coinbase's Failed Social-Coin Architect |
-| … | | | | | 1973 more in the JSON |
+| … | | | | | 1989 more in the JSON |
 
 ### 4d
 
-- ≥5% and <10%: **1337**
-- ≥10%: **918**
+- ≥5% and <10%: **1357**
+- ≥10%: **927**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -220,7 +220,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | PMI | 2026-08-24 | +94.26% | print_vs_priced | Picard Medical Shares Soar After Quarterly Revenue Beats Forecasts |
 | ≥10% | QMCO | 2026-08-06 | +92.63% | print_vs_priced | IonQ CEO Niccolo de Masi: Quantum growth accelerates with record demand |
 | ≥10% | OLB | 2026-10-07 | +90.05% | capital_return | The OLB Group Launches Share Buyback; Suspends ATM Program |
-| ≥10% | DKI | 2026-10-09 | -89.84% | dilution | DarkIris Prices $6 Million Public Offering at $1.44 Per Unit With Potential for Significant Share Dilution |
+| ≥10% | DKI | 2026-10-09 | -89.92% | dilution | DarkIris Prices $6 Million Public Offering at $1.44 Per Unit With Potential for Significant Share Dilution |
 | ≥10% | LHSW | 2026-09-04 | -88.79% | dilution | Lianhe Sowell International Group Ltd. Announces Closing of an $11 Million Best-efforts Follow-on Public Offer |
 | ≥10% | JZ | 2026-10-09 | +83.75% | capital_return | Jianzhi Education Announces Share Repurchase Program |
 | ≥10% | YQ | 2026-09-03 | +81.84% | capital_return | 17 Education & Technology Group Inc. Announces New Share Repurchase Program of Up to US$10 Million |
@@ -231,12 +231,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | Securitize Surges After SEC Clears Path for Tokenized Stock Trading |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | Polymarket Hires Coinbase's Failed Social-Coin Architect |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
-| … | | | | | 2230 more in the JSON |
+| … | | | | | 2259 more in the JSON |
 
 ### 5d
 
-- ≥5% and <10%: **1394**
-- ≥10%: **1022**
+- ≥5% and <10%: **1410**
+- ≥10%: **1028**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -253,7 +253,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | MRNA | 2026-08-18 | +151.95% | gate | Behind the Ticker: How VFLO Beats Growth at Its Own Game |
 | ≥10% | MRNA | 2026-08-18 | +151.95% | gate | Behind the Ticker: How VFLO Beats Growth at Its Own Game |
 | ≥10% | QMCO | 2026-08-06 | +116.68% | print_vs_priced | IonQ CEO Niccolo de Masi: Quantum growth accelerates with record demand |
-| ≥10% | DKI | 2026-10-09 | -91.45% | dilution | DarkIris Prices $6 Million Public Offering at $1.44 Per Unit With Potential for Significant Share Dilution |
+| ≥10% | DKI | 2026-10-09 | -91.40% | dilution | DarkIris Prices $6 Million Public Offering at $1.44 Per Unit With Potential for Significant Share Dilution |
 | ≥10% | ABCL | 2026-08-06 | +89.46% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +89.46% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +89.46% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
@@ -265,7 +265,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Allows Tokenized Stocks After Clarity Act Falters |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
-| … | | | | | 2391 more in the JSON |
+| … | | | | | 2413 more in the JSON |
 
 ## AMRX
 
@@ -285,7 +285,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | 4d | +4.27% agree=True |
 | 5d | +8.12% agree=True |
 | 1-4w | +2.11% agree=True |
-| note | window open (1-6m not elapsed; through 2026-10-20) |
+| note | window open (1-6m not elapsed; through 2026-10-21) |
 
 Friday 2026-09-18 16:01 is after the cash close. Entry is Monday 2026-09-21 open→close for 0-1d, never Friday cash. Published at/after 09:30 ET (09:30+30m included) waits for the next RTH.
 
@@ -306,13 +306,13 @@ Elite is in the book. `unused_readonly` applies only when no snapshot file is on
 
 | source | raw titles | unique |
 | --- | ---: | ---: |
-| theme_radar_elite | 493415 | 52739 |
+| theme_radar_elite | 502955 | 53912 |
 
-theme_radar_elite unique n = **52739**.
+theme_radar_elite unique n = **53912**.
 
 ## Hopper watermark (lane::model::source)
 
-- `deterministic::news_impact_v2::theme_radar_elite`: 52739
+- `deterministic::news_impact_v2::theme_radar_elite`: 53912
 
 ## FOMC / macro collapse
 
