@@ -1,8 +1,104 @@
 [
   {
-    "title": "USITC Makes Determination in Five-Year (Sunset) Review Concerning Diamond Sawblades and Parts Thereof from China",
-    "url": "https://www.usitc.gov/press_room/news_release/2026/er1021_69376.htm",
-    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1021_69376.htm",
+    "title": "In the Matter of Shane Kelly",
+    "url": "https://www.fcc.gov/edoc/426102",
+    "native_id": "426102",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "FCC Affirms $20,000 Fine for PIRATE Act Violations.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Orders",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-eeb7d739be",
+    "n": 6130,
+    "first_seen": "2026-10-22T17:59:58.860252+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
+    "source_ids": [
+      "us-fcc-eeb7d739be"
+    ]
+  },
+  {
+    "title": "In the Matter of Henderson Lennox Elcock",
+    "url": "https://www.fcc.gov/edoc/426103",
+    "native_id": "426103",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "FCC Affirms $20,000 Fine for PIRATE Act Violations.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Orders",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-eeb7d739be",
+    "n": 6131,
+    "first_seen": "2026-10-22T17:59:58.860252+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
+    "source_ids": [
+      "us-fcc-eeb7d739be"
+    ]
+  },
+  {
+    "title": "In the Matter of Etzer Toussaint",
+    "url": "https://www.fcc.gov/edoc/426100",
+    "native_id": "426100",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "FCC Affirms $20,000 Fine for PIRATE Act Violations.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Orders",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-eeb7d739be",
+    "n": 6132,
+    "first_seen": "2026-10-22T17:59:58.860252+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
+    "source_ids": [
+      "us-fcc-eeb7d739be"
+    ]
+  },
+  {
+    "title": "Leeds office move",
+    "url": "https://www.fca.org.uk/news/news-stories/leeds-office-move",
+    "native_id": "176896",
+    "published_at": null,
+    "published_raw": "Thursday, October 22, 2026 - 11:00",
+    "summary": "We have signed an agreement for a new office at 2 Wellington Place, which will become our long-term home in Leeds from 2028. The new office will provide 36,097 sq ft of space for our growing Leeds presence.Our Leeds office, currently at 6 Queen Street, has continued to grow since opening in 2022.Securing a new permanent base reflects our commitment to the city and supports our 5-year strategy ambition to have 1,000 roles based outside London by 2030.There is still some time before the move, and we'll share more about our new office and plans closer to 2028.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Financial Conduct Authority",
+      "jurisdiction": "UK",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "uk-fca-7b9977ec8e",
+    "n": 6145,
+    "first_seen": "2026-10-22T17:59:58.860252+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
+    "source_ids": [
+      "uk-fca-7b9977ec8e"
+    ]
+  },
+  {
+    "title": "China issues guidelines for reinforcing integration of sci-tech, industrial innovations",
+    "url": "https://english.www.gov.cn/policies/latestreleases/202610/22/content_WS6ad9ff7fc6d00ca5f9a0de77.html",
+    "native_id": "https://english.www.gov.cn/policies/latestreleases/202610/22/content_WS6ad9ff7fc6d00ca5f9a0de77.html",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -11,22 +107,22 @@
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "United States International Trade Commission",
-      "jurisdiction": "US",
-      "family": "trade_and_judicial"
+      "issuer": "State Council of China policies",
+      "jurisdiction": "CN",
+      "family": "executive_instruments"
     },
-    "primary_source_id": "us-itc-index",
-    "n": 6038,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
+    "primary_source_id": "cn-state-council-index",
+    "n": 6151,
+    "first_seen": "2026-10-22T17:59:58.860252+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
     "source_ids": [
-      "us-itc-index"
+      "cn-state-council-index"
     ]
   },
   {
-    "title": "USITC Makes Determinations in Five-Year (Sunset) Reviews Concerning Chassis and Subassemblies from China",
-    "url": "https://www.usitc.gov/press_room/news_release/2026/er1021_69375.htm",
-    "native_id": "https://www.usitc.gov/press_room/news_release/2026/er1021_69375.htm",
+    "title": "State Minister TAKAGI Attends the Fourth Japan-Romania Innovation Forum",
+    "url": "https://www.meti.go.jp/english/press/2026/10/20261020002.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261020002.html",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -35,640 +131,16 @@
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "United States International Trade Commission",
-      "jurisdiction": "US",
-      "family": "trade_and_judicial"
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
     },
-    "primary_source_id": "us-itc-index",
-    "n": 6039,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
+    "primary_source_id": "jp-meti-index",
+    "n": 6154,
+    "first_seen": "2026-10-22T17:59:58.860252+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
     "source_ids": [
-      "us-itc-index"
-    ]
-  },
-  {
-    "title": "Wireless Telecommunications Bureau Site Based Licenses Termination Pending Public Notice",
-    "url": "https://www.fcc.gov/edoc/426054",
-    "native_id": "426054",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6043,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Actions",
-    "url": "https://www.fcc.gov/edoc/426079",
-    "native_id": "426079",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6044,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Public Safety and Homeland Security Bureau Site-By-Site Action",
-    "url": "https://www.fcc.gov/edoc/426024",
-    "native_id": "426024",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6045,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Cable Television Relay Service (CARS) Applications",
-    "url": "https://www.fcc.gov/edoc/426094",
-    "native_id": "426094",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6046,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Wireless Telecommunications Bureau Site-By-Site Accepted for Filing",
-    "url": "https://www.fcc.gov/edoc/426023",
-    "native_id": "426023",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6047,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Satellite Communications Services - SES",
-    "url": "https://www.fcc.gov/edoc/426088",
-    "native_id": "426088",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6048,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Wireless Telecommunications Bureau Assignment of License Authorization Applications, Transfer of Control of Licensee Applications, and De Facto Transfer Lease Applications, and Designated Entity Reportable Eligibility Event Applications Accepted for",
-    "url": "https://www.fcc.gov/edoc/426040",
-    "native_id": "426040",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "Filing",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6049,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Public Safety and Homeland Security Bureau Assignment of License Authorization Applications, Transfer of Control of Licensee Applications, and De Facto Transfer Lease Applications, and Designated Entity Reportable Eligibility Event Applications Accepted",
-    "url": "https://www.fcc.gov/edoc/426042",
-    "native_id": "426042",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "For Filing",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6050,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Public Safety and Homeland Security Bureau Market Based Licenses Termination Pending Public Notice",
-    "url": "https://www.fcc.gov/edoc/426056",
-    "native_id": "426056",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6051,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Satellite Communications Services - SES",
-    "url": "https://www.fcc.gov/edoc/426087",
-    "native_id": "426087",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6052,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Applications",
-    "url": "https://www.fcc.gov/edoc/426078",
-    "native_id": "426078",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6053,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Wireless Telecommunications Bureau Assignment of License Authorization Applications, Transfer of Control of Licensee Applications, De Facto Transfer Lease Applications and Spectrum Manager Lease Notifications, Designated Entity Reportable Eligibility",
-    "url": "https://www.fcc.gov/edoc/426044",
-    "native_id": "426044",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "Event Applications, And Designated Entity Annual Reports Action",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6054,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Public Safety and Homeland Security Bureau Site-By-Site Accepted for Filing",
-    "url": "https://www.fcc.gov/edoc/426021",
-    "native_id": "426021",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6055,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Antenna Structure Registration Service Information - Environmental Action",
-    "url": "https://www.fcc.gov/edoc/426091",
-    "native_id": "426091",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6056,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Public Safety and Homeland Security Bureau Market-Based Applications Action",
-    "url": "https://www.fcc.gov/edoc/426029",
-    "native_id": "426029",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6057,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Wireless Telecommunications Bureau Market-Based Applications Accepted for Filing",
-    "url": "https://www.fcc.gov/edoc/426028",
-    "native_id": "426028",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6058,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Wireless Telecommunications Bureau Market Based Licenses Termination Pending Public Notice",
-    "url": "https://www.fcc.gov/edoc/426051",
-    "native_id": "426051",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6059,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Public Safety and Homeland Security Bureau Market-Based Applications Accepted for Filing",
-    "url": "https://www.fcc.gov/edoc/426027",
-    "native_id": "426027",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6060,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Wireless Telecommunications Bureau Market-Based Applications Action",
-    "url": "https://www.fcc.gov/edoc/426030",
-    "native_id": "426030",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6061,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Domestic Section 214 Application Filed For The Transfer Of Control Telephone USA of Wisconsin, LLC To Connect Holding II LLC d/b/a Brightspeed",
-    "url": "https://www.fcc.gov/edoc/426114",
-    "native_id": "426114",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6062,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Public Safety and Homeland Security Bureau Assignment of License authorization Applications, Transfer of Control of Licensee Applications, De Facto Transfer Lease Applications and Spectrum Manager Lease Notifications, Designated Entity Reportable",
-    "url": "https://www.fcc.gov/edoc/426048",
-    "native_id": "426048",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "Eligibility Event Applications, And Designated Entity Annual Reports Action",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6063,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Public Safety and Homeland Security Bureau Site Based Licenses Termination Pending Public Notice",
-    "url": "https://www.fcc.gov/edoc/426059",
-    "native_id": "426059",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6064,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Pleadings",
-    "url": "https://www.fcc.gov/edoc/426080",
-    "native_id": "426080",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6065,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Wireless Telecommunications Bureau Site-By-Site Action",
-    "url": "https://www.fcc.gov/edoc/426025",
-    "native_id": "426025",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6066,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "The Public Safety and Homeland Security Bureau Announces Conditional Approval and Exemption of Certain Routers and Advanced Robotic Devices from FCC Covered List",
-    "url": "https://www.fcc.gov/edoc/426096",
-    "native_id": "426096",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6067,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Domestic Section 214 Application Filed For The Transfer Of Control Of Visionary Communications, LLC To Point Broadband Holdings, LLC",
-    "url": "https://www.fcc.gov/edoc/426106",
-    "native_id": "426106",
-    "published_at": null,
-    "published_raw": "",
-    "summary": "Non-Streamlined Pleading Cycle Established",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6068,
-    "first_seen": "2026-10-22T06:08:32.882533+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
+      "jp-meti-index"
     ]
   }
 ]

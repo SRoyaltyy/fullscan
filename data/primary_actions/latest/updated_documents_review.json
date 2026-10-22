@@ -1,98 +1,135 @@
 [
   {
-    "title": "What’s New for Biologics",
-    "url": "http://www.fda.gov/vaccines-blood-biologics/news-events-biologics/whats-new-biologics",
-    "native_id": "http://www.fda.gov/vaccines-blood-biologics/news-events-biologics/whats-new-biologics",
-    "published_at": "2026-10-21T18:30:20+00:00",
-    "published_raw": "Wed, 21 Oct 2026 14:30:20 EDT",
-    "summary": "Latest news from the Center for Biologics Evaluation and Research",
+    "title": "Notice of proposed amendments (NPA) reference table",
+    "url": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-reference-table",
+    "native_id": "/government/publications/notice-of-proposed-amendments-npa-reference-table",
+    "published_at": "2026-10-22T16:30:33+00:00",
+    "published_raw": "2026-10-22T16:30:33Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Military Aviation Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:military-aviation-authority"
+    ],
+    "summary": "The Military Aviation Authority (MAA) NPA table provides information of proposed changes in regulations and release date.",
+    "source_metadata": {
+      "document_type": "regulation",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Ministry of Defence; Military Aviation Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 22,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "title": "Notice of proposed amendments (NPA) documents",
+    "url": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-2014-documents",
+    "native_id": "/government/publications/notice-of-proposed-amendments-npa-2014-documents",
+    "published_at": "2026-10-22T16:30:42+00:00",
+    "published_raw": "2026-10-22T16:30:42Z",
+    "document_type": "regulation",
+    "issuer": "Ministry of Defence; Military Aviation Authority",
+    "issuer_ids": [
+      "uk-gov:ministry-of-defence",
+      "uk-gov:military-aviation-authority"
+    ],
+    "summary": "MAA issuing of an NPA allows a consultation period to be undertaken on a proposed amendment or the implementation of new regulation.",
+    "source_metadata": {
+      "document_type": "regulation",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Ministry of Defence; Military Aviation Authority",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-regulation",
+    "n": 23,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
+    "source_ids": [
+      "uk-govuk-regulation"
+    ]
+  },
+  {
+    "title": "FDA Rare Disease Framework Initiative Public Meeting - 10/28/2026",
+    "url": "http://www.fda.gov/news-events/fda-meetings-conferences-and-workshops/fda-rare-disease-framework-initiative-public-meeting-10282026",
+    "native_id": "http://www.fda.gov/news-events/fda-meetings-conferences-and-workshops/fda-rare-disease-framework-initiative-public-meeting-10282026",
+    "published_at": "2026-10-22T14:40:41+00:00",
+    "published_raw": "Thu, 22 Oct 2026 10:40:41 EDT",
+    "summary": "On October 28, 2026, the U.S. Food and Drug Administration, in partnership with the Reagan-Udall Foundation for the FDA, will convene a hybrid public meeting to seek input related to the FDA’s Rare Disease Framework Initiative to reimagine the agency’s approach to rare disease development.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
       "jurisdiction": "US",
       "family": "product_permissions_and_safety"
     },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 1413,
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1392,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
     "source_ids": [
-      "us-fda-03f7703006"
+      "us-fda-5696b24295"
     ]
   },
   {
-    "title": "DCPD-2026ACTSAPPROVED - Acts Approved by the President",
-    "url": "https://www.govinfo.gov/app/details/DCPD-2026ACTSAPPROVED",
-    "native_id": "DCPD-2026ACTSAPPROVED",
-    "published_at": "2026-10-21T20:46:00+00:00",
-    "published_raw": "Wed, 21 Oct 2026 20:46:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "Drugs@FDA Data Files",
+    "url": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+    "native_id": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+    "published_at": "2026-10-22T12:06:37+00:00",
+    "published_raw": "Thu, 22 Oct 2026 08:06:37 EDT",
+    "summary": "Drugs@FDA Downloadable Data File in ZIP format, Data Definitions, and Entity Relationship Diagram (ERD)",
     "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
       "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
+      "family": "product_permissions_and_safety"
     },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 2475,
-    "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1398,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
     "source_ids": [
-      "us-govinfo-dcpd"
+      "us-fda-03f7703006",
+      "us-fda-5696b24295"
     ]
   },
   {
-    "title": "DCPD-2026CHECKLIST - Checklist of White House Press Releases",
-    "url": "https://www.govinfo.gov/app/details/DCPD-2026CHECKLIST",
-    "native_id": "DCPD-2026CHECKLIST",
-    "published_at": "2026-10-21T20:46:00+00:00",
-    "published_raw": "Wed, 21 Oct 2026 20:46:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "Registered Outsourcing Facilities",
+    "url": "http://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities",
+    "native_id": "http://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities",
+    "published_at": "2026-10-22T15:09:46+00:00",
+    "published_raw": "Thu, 22 Oct 2026 11:09:46 EDT",
+    "summary": "Discover FDA's comprehensive list of registered outsourcing facilities engaged in human drug compounding. Get the latest updates, compliance guidelines, and resources to ensure safe, high-quality compounded medications. Explore regulations and stay informed with verified facility details.",
     "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
+      "issuer": "Food and Drug Administration — What's New: Drugs",
       "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
+      "family": "product_permissions_and_safety"
     },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 2477,
-    "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
+    "primary_source_id": "us-fda-5696b24295",
+    "n": 1404,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
     "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-2026DIGEST - Digest of Other White House Announcements",
-    "url": "https://www.govinfo.gov/app/details/DCPD-2026DIGEST",
-    "native_id": "DCPD-2026DIGEST",
-    "published_at": "2026-10-21T20:46:00+00:00",
-    "published_raw": "Wed, 21 Oct 2026 20:46:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 2481,
-    "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
+      "us-fda-5696b24295"
     ]
   },
   {
@@ -114,18 +151,18 @@
     "primary_source_id": "us-cpsc-08fe06e2e6",
     "n": 3537,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
     "source_ids": [
       "us-cpsc-08fe06e2e6"
     ]
   },
   {
-    "title": "Put Safety on the Menu: Consumer Product Safety Commission Offers Safe Cooking Tips for a Joyful Holiday Season",
-    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
+    "title": "Ponga la seguridad en el menú para unas felices fiestas: la Comisión de Seguridad de Productos del Consumidor ofrece consejos para cocinar con seguridad",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
     "native_id": "https://www.cpsc.gov/_59de4207-4ace-44ca-ace0-3cde0cfb8ddb",
     "published_at": null,
     "published_raw": "Wed, 11/19/2025 - 12:00",
-    "summary": "WASHINGTON, D.C. – As families across America prepare to gather for Thanksgiving, the U.S. Consumer Product Safety Commission (CPSC) is issuing an urgent reminder that the holiday season marks the most dangerous time of year for cooking-related fires and",
+    "summary": "WASHINGTON, D.C. – A medida que las familias de todo Estados Unidos se preparan para reunirse en Acción de Gracias, la Comisión de Seguridad de Productos del Consumidor de Estados Unidos (CPSC, por sus siglas en inglés) emite un recordatorio urgente: la",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -138,18 +175,18 @@
     "primary_source_id": "us-cpsc-08fe06e2e6",
     "n": 3538,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
     "source_ids": [
       "us-cpsc-08fe06e2e6"
     ]
   },
   {
-    "title": "CPSC Approves New Federal Safety Standard for Water Beads to Reduce the Risk of Injury and Death to Young Children",
-    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Water-Beads-to-Reduce-the-Risk-of-Injury-and-Death-to-Young-Children",
+    "title": "La CPSC aprueba nueva norma federal de seguridad para las bolas de gel con el fin de reducir el riesgo de lesiones y muerte niños pequeños",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Water-Beads-to-Reduce-the-Risk-of-Injury-and-Death-to-Young-Children",
     "native_id": "https://www.cpsc.gov/_51cc46a0-5dc1-4f70-8cc1-c6b5b0f0a782",
     "published_at": null,
     "published_raw": "Thu, 08/21/2025 - 12:00",
-    "summary": "The U.S. Consumer Product Safety Commission (CPSC) has approved a consumer product safety standard for water bead toys, reflecting the agency’s ongoing commitment to protecting vulnerable consumers and preventing avoidable tragedies in American homes.",
+    "summary": "WASHINGTON D. C. – La Comisión de Seguridad de Productos del Consumidor (CPSC, por sus iniciales en inglés) aprobó una norma de seguridad de productos de consumo para juguetes tipo bolas de gel, lo que refleja el compromiso constante de la entidad con la",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -162,18 +199,18 @@
     "primary_source_id": "us-cpsc-08fe06e2e6",
     "n": 3539,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
     "source_ids": [
       "us-cpsc-08fe06e2e6"
     ]
   },
   {
-    "title": "La CPSC aprueba nueva norma federal de seguridad para flotadores de cuello con el fin de prevenir muertes de bebés y lesiones graves",
-    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Neck-Floats-to-Prevent-Infant-Deaths-and-Serious-Injuries",
+    "title": "CPSC Approves New Federal Safety Standard for Neck Floats to Prevent Infant Deaths and Serious Injuries",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Neck-Floats-to-Prevent-Infant-Deaths-and-Serious-Injuries",
     "native_id": "https://www.cpsc.gov/_4014aab3-f30e-41aa-ad48-dd7587119b4c",
     "published_at": null,
     "published_raw": "Thu, 08/21/2025 - 12:00",
-    "summary": "La Comisión de Seguridad de Productos del Consumidor de EE. UU. (CPSC) aprobó una norma de seguridad de productos de consumo para mejorar la seguridad de los flotadores de cuello, un juguete acuático destinado a niños de hasta cuatro años de edad.",
+    "summary": "The U.S. Consumer Product Safety Commission (CPSC) has approved a consumer product safety standard to improve the safety of neck floats, an aquatic toy intended for use by children up to and including four years of age.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -186,18 +223,18 @@
     "primary_source_id": "us-cpsc-08fe06e2e6",
     "n": 3540,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
     "source_ids": [
       "us-cpsc-08fe06e2e6"
     ]
   },
   {
-    "title": "La CPSC Retira Normas Desactualizadas, Que No Contribuyen a Un Avance en la Seguridad; El Nuevo Liderazgo Se Enfoca en Peligros Que Representan Riesgos Reales",
-    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/La-CPSC-Retira-Normas-Desactualizadas-Que-No-Contribuyen-a-Un-Avance-en-la-Seguridad-El-Nuevo-Liderazgo-Se-Enfoca-en-Peligros-Que-Representan-Riesgos-Reales",
+    "title": "CPSC Withdraws Rules That Are Outdated, Fail to Advance Safety; New Leadership Focuses on Hazards That Pose Real Risks",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2025/CPSC-Withdraws-Rules-That-Are-Outdated-Fail-to-Advance-Safety-New-Leadership-Focuses-on-Hazards-That-Pose-Real-Risks",
     "native_id": "https://www.cpsc.gov/_ff913f8e-db56-4208-ba2f-a2582d4d76f7",
     "published_at": null,
     "published_raw": "Wed, 08/20/2025 - 12:00",
-    "summary": "La Comisión de Seguridad de Productos del Consumidor (CPSC) anunció hoy que retirará varias normas vigentes y proyectos de reglamentación que ya no concuerdan con las prioridades de la entidad y que no contribuyen a mejorar la seguridad.",
+    "summary": "The U.S. Consumer Product Safety Commission (CPSC) today announced it will withdraw several existing and pending rulemakings that no longer align with agency priorities, and which fail to advance safety.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -210,57 +247,105 @@
     "primary_source_id": "us-cpsc-08fe06e2e6",
     "n": 3541,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
     "source_ids": [
       "us-cpsc-08fe06e2e6"
     ]
   },
   {
-    "title": "CDER Leadership Bios",
-    "url": "http://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-leadership-bios",
-    "native_id": "http://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/cder-leadership-bios",
-    "published_at": "2026-10-21T18:54:39+00:00",
-    "published_raw": "Wed, 21 Oct 2026 14:54:39 EDT",
-    "summary": "CDER Leadership Bios",
+    "title": "eSubmitter Application History",
+    "url": "http://www.fda.gov/industry/fda-esubmitter/esubmitter-application-history",
+    "native_id": "http://www.fda.gov/industry/fda-esubmitter/esubmitter-application-history",
+    "published_at": "2026-10-22T13:04:12+00:00",
+    "published_raw": "Thu, 22 Oct 2026 09:04:12 EDT",
+    "summary": "History of all updates to the application software in reverse chronological order by version number",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
       "jurisdiction": "US",
       "family": "product_permissions_and_safety"
     },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 5436,
-    "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 3796,
+    "first_seen": "2026-10-16T16:03:14.310875+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
     "source_ids": [
-      "us-fda-5696b24295"
+      "us-fda-03f7703006"
     ]
   },
   {
-    "title": "Over-The-Counter Monograph Drug User Fee Program (OMUFA)",
-    "url": "http://www.fda.gov/industry/fda-user-fee-programs/over-counter-monograph-drug-user-fee-program-omufa",
-    "native_id": "http://www.fda.gov/industry/fda-user-fee-programs/over-counter-monograph-drug-user-fee-program-omufa",
-    "published_at": "2026-10-21T18:41:40+00:00",
-    "published_raw": "Wed, 21 Oct 2026 14:41:40 EDT",
-    "summary": "A user fee program for nonprescription (over-the-counter or OTC) monograph drugs would be a potential funding mechanism to supplement congressional non user-fee appropriations.",
+    "title": "Public Meeting on the Reauthorization of the Biosimilar User Fee Act (BsUFA) - 10/26/2026",
+    "url": "http://www.fda.gov/drugs/news-events-human-drugs/public-meeting-reauthorization-biosimilar-user-fee-act-bsufa-10262026",
+    "native_id": "http://www.fda.gov/drugs/news-events-human-drugs/public-meeting-reauthorization-biosimilar-user-fee-act-bsufa-10262026",
+    "published_at": "2026-10-22T15:00:59+00:00",
+    "published_raw": "Thu, 22 Oct 2026 11:00:59 EDT",
+    "summary": "Public Meeting on the Reauthorization of the Biosimilar User Fee Act (BsUFA)",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
       "jurisdiction": "US",
       "family": "product_permissions_and_safety"
     },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 5867,
-    "first_seen": "2026-10-21T18:05:07.789957+00:00",
-    "last_seen": "2026-10-22T06:08:32.882533+00:00",
+    "primary_source_id": "us-fda-03f7703006",
+    "n": 5514,
+    "first_seen": "2026-10-20T06:03:48.509691+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
     "source_ids": [
-      "us-fda-5696b24295"
+      "us-fda-03f7703006"
+    ]
+  },
+  {
+    "title": "Report by President António Costa to the European Parliament plenary session",
+    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/21/report-by-president-antonio-costa-to-the-european-parliament-plenary-session/",
+    "native_id": "151522",
+    "published_at": "2026-10-21T10:25:00+00:00",
+    "published_raw": "2026-10-21T10:25:00Z",
+    "summary": "European Council President António Costa debriefed the European Parliament plenary in Strasbourg on the discussions held during the European Council meeting of 15 and 16 October 2026.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Council of the European Union",
+      "jurisdiction": "EU",
+      "family": "sanctions_and_legislation"
+    },
+    "primary_source_id": "eu-council-9d9e9444da",
+    "n": 5888,
+    "first_seen": "2026-10-21T18:05:07.789957+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
+    "source_ids": [
+      "eu-council-9d9e9444da"
+    ]
+  },
+  {
+    "title": "Minutes of the Monetary Policy Committee Meeting, October 5 to 7, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63839",
+    "native_id": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63839",
+    "published_at": "2026-10-21T17:00:00+00:00",
+    "published_raw": "Wed, 21 Oct 2026 17:00:00",
+    "summary": "[Under Section 45ZL of the Reserve Bank of India Act, 1934] The sixty third meeting of the Monetary Policy Committee (MPC), constituted under Section 45ZB of the Reserve Bank of India Act, 1934, was held during October 5 to 7, 2026. 2. The meeting was chaired by Shri Sanjay Malhotra, Governor and was attended by all the members – Dr. Nagesh Kumar, Director and Chief Executive, Institute for Studies in Industrial Development, New Delhi; Shri Saugata Bhattacharya, Economist, Mumbai; Professor Ram Singh, Director, Delhi School of Economics, Delhi; Dr. Poonam Gupta, Deputy Governor in charge of monetary policy and Shri Indranil Bhattacharyya, Executive Director (the officer of the Reserve Bank nominated by the Central Board under Section 45ZB(2)(c) of the Reserve Bank of India Act, 1934). 3. According to Section 45ZL of the Reserve Bank of India Act, 1934, the Reserve Bank shall publish, on the fourteenth day after every meeting of the Monetary Policy Committee, the minutes of the proceedings of the meeting which shall include the following, namely: the resolution adopted at the meeting of the Monetary Policy Committee; the vote of each member of the Monetary Policy Committee, ascribed",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Reserve Bank of India",
+      "jurisdiction": "IN",
+      "family": "monetary_and_supervisory"
+    },
+    "primary_source_id": "in-rbi-cc71120b98",
+    "n": 5895,
+    "first_seen": "2026-10-21T18:05:07.789957+00:00",
+    "last_seen": "2026-10-22T17:59:58.860252+00:00",
+    "source_ids": [
+      "in-rbi-cc71120b98"
     ]
   }
 ]
