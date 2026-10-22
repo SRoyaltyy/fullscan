@@ -1,6 +1,6 @@
 {
   "date": "2026-10-22",
-  "generated_at": "2026-10-22T05:51:35.709313-04:00",
+  "generated_at": "2026-10-22T05:51:43.683493-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -69,31 +69,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-10-22",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-22T05:44:05.057339-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-10-22_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7559522,
-          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 KMI, CRSR, ISRG, AUPH, ELV"
-        },
-        {
-          "path": "data/ab_checklist/2026-10-22_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8350405,
-          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ISRG, A, WAB, HAS, WAT"
-        }
-      ],
-      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 KMI, CRSR, ISRG, AUPH, ELV \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ISRG, A, WAB, HAS, WAT"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -401,6 +376,122 @@
         }
       ],
       "preview": "1d BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 # Stock book \u2014 2026-10-22\n_Generated 2026-10-22T05:47:15.988768-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T05:51:42.488568-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 20708,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1098,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-22.json",
+          "ok": true,
+          "reason": "",
+          "size": 72579,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-22_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 25266,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 818603,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-22_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 818603,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-10-22.json",
+          "ok": true,
+          "reason": "",
+          "size": 191746,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1153509,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 818603,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 25266,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 818603,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 818603,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1153509,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1548,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1548,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
