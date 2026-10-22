@@ -103,6 +103,26 @@ class SpecificDisclosureControls(unittest.TestCase):
         self.assertEqual(authority['fields']['subject_matter'],'our domestic and foreign tax returns')
         self.assertIn('named_authorities_only_others_unspecified',authority['missing_fields'])
 
+    def test_an_acronym_before_another_law_does_not_become_its_title_or_alias(self):
+        rows=self.parse('We may be subject to GDPR, the California Consumer Privacy Act ("CCPA"), and other privacy laws.')
+        laws=[r for r in rows if r['category']=='law']
+        self.assertEqual([r['entity'] for r in laws],['California Consumer Privacy Act'])
+        self.assertEqual(laws[0]['aliases'],['California Consumer Privacy Act','CCPA'])
+        self.assertNotIn('GDPR',laws[0]['aliases'])
+        self.assertEqual(laws[0]['evidence']['anchor']['text'],'California Consumer Privacy Act')
+        self.assertFalse(laws[0]['direct_obligation_asserted'])
+
+    def test_form_fields_contract_headings_and_unnamed_law_classes_are_not_entities(self):
+        for title in ('Country Code','Entity Address, Postal Zip Code',
+                      'City Area Code','Zip Code','Entity Incorporation State Country Code',
+                      'Compliance With Code','Choice of Law','Governing Law',
+                      'General Rules and Regulations','Rules and Regulations',
+                      'Signature Law','Shareholder Right to Act','Opined-on Law','Bankruptcy Law'):
+            with self.subTest(title=title):
+                self.assertFalse(any(r['category']=='law' for r in self.parse('Our report includes '+title+'.')))
+        rows=self.parse('We comply with the United States Bankruptcy Code and the Internal Revenue Code.')
+        self.assertEqual([r['entity'] for r in rows if r['category']=='law'],['United States Bankruptcy Code','Internal Revenue Code'])
+
     def test_primary_nflx_cases_recover_specifics_and_explicit_dma_exclusion(self):
         fixture=json.loads((Path(__file__).resolve().parents[1]/'eval/nflx-specific-disclosure-cases.json').read_text())
         rows=[]
@@ -121,3 +141,4 @@ class SpecificDisclosureControls(unittest.TestCase):
 
 
 if __name__=='__main__':unittest.main()
+
