@@ -54,6 +54,21 @@ class SnapshotPublishTests(unittest.TestCase):
             self.assertFalse(result['external_assets'])
             self.assertTrue((root/'local/scoring-profiles/aa.json.gz').is_file())
 
+    def test_market_archive_budget_is_separate_from_the_pages_budget(self):
+        from scripts.publish_scanner_snapshot import validate_budget, stage_page
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);source=root/'snapshot';self.fixture(source)
+            (source/'index.html').write_text('page')
+            assets=source/'scoring-profiles';assets.mkdir()
+            for i in range(12):
+                with (assets/(format(i,'x')+'.json.gz')).open('wb') as stream:stream.truncate(90_000_000)
+            self.assertGreater(validate_budget(source),1_000_000_000)
+            result=stage_page(source,root/'page',snapshot_commit='a'*40,outside_bytes=0)
+            self.assertTrue(result['external_assets'])
+            self.assertFalse((root/'page/scoring-profiles').exists())
+            self.assertEqual(len(list(assets.iterdir())),12)
+            self.assertTrue(all(p.stat().st_size==90_000_000 for p in assets.iterdir()))
+
     def test_budget_failure_prevents_publication_without_truncating(self):
         from scripts.publish_scanner_snapshot import validate_budget
         with tempfile.TemporaryDirectory() as directory:
@@ -64,6 +79,20 @@ class SnapshotPublishTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'budget'):
                 validate_budget(root,file_limit=1)
             self.assertEqual(before,(root/'meta.json').read_bytes())
+    def test_browser_preview_cannot_be_mislabeled_as_an_offline_comparison(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);self.fixture(root)
+            meta=json.loads((root/'meta.json').read_text())
+            meta['snapshot']['keyword_comparison_mode']='browser_preview'
+            (root/'meta.json').write_text(json.dumps(meta))
+            rows=[json.loads(line) for line in (root/'results.jsonl').read_text().splitlines()]
+            for row in rows:row['keyword_comparison_mode']='browser_preview'
+            (root/'results.jsonl').write_text('\n'.join(json.dumps(row) for row in rows))
+            validate(root,'source')
+            rows[0]['keyword_comparison']={'matches':[]}
+            (root/'results.jsonl').write_text('\n'.join(json.dumps(row) for row in rows))
+            with self.assertRaisesRegex(ValueError,'offline keyword comparison'):validate(root,'source')
+
     def test_api_publisher_updates_only_five_paths_without_force(self):
         calls=[]
         def api(method,path,payload=None):

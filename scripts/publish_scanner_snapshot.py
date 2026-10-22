@@ -46,8 +46,8 @@ def artifact_names(directory):
     return names
 
 
-def validate_budget(directory, *, total_limit=850_000_000, file_limit=99_000_000):
-    """Leave space for the rest of the published site. Never truncate to fit."""
+def validate_budget(directory, *, total_limit=1_800_000_000, file_limit=99_000_000):
+    """Bound the immutable snapshot; stage_page separately enforces Pages space."""
     total = 0
     for name in artifact_names(directory):
         path = directory/name
@@ -58,7 +58,7 @@ def validate_budget(directory, *, total_limit=850_000_000, file_limit=99_000_000
             raise ValueError('snapshot file exceeds safe publication budget: '+name)
         total += size
     if total >= total_limit:
-        raise ValueError('snapshot exceeds safe Pages budget; retain previous page and use object storage')
+        raise ValueError('snapshot exceeds immutable archive budget; retain previous page and use object storage')
     return total
 
 
@@ -169,6 +169,9 @@ def validate(directory, source_sha):
         raise ValueError('display articles do not match scored results')
     if any(row.get('snapshot_id') != snapshot['snapshot_id'] for row in rows):
         raise ValueError('mixed result snapshots')
+    if snapshot.get('keyword_comparison_mode')=='browser_preview' and any(
+            row.get('keyword_comparison_mode')!='browser_preview' or 'keyword_comparison' in row for row in rows):
+        raise ValueError('on-demand browser preview was incorrectly recorded as an offline keyword comparison')
     profiles = json.loads((directory/'profiles.json').read_text())
     if not profiles or not all(p.get('used_for_scoring') for p in profiles.values()):
         raise ValueError('profiles are not the actual scoring board')

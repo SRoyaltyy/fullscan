@@ -342,24 +342,31 @@ function renderMatches(result) {
 
 async function runTest() {
   if (!current || !current.id) return;
+  const testedArticle=current;
   const button = document.getElementById("test");
   button.disabled = true;
   button.textContent = "Running…";
   try {
     if (mode === "static") {
-      const result = staticResults.get(String(current.id));
+      const result = staticResults.get(String(testedArticle.id));
       if (!result) throw new Error("no precomputed result for this article id");
       if (staticMeta.snapshot && result.snapshot_id !== staticMeta.snapshot.snapshot_id)
         throw new Error("Cached result does not match this snapshot; regenerate artifacts.");
+      if(result.keyword_comparison_mode==="browser_preview" && !result.keyword_comparison) {
+        const index=await keywordIndexForText(testedArticle.text || "");
+        result.keyword_comparison=browserKeywordPreview(index,testedArticle.text || "",String(testedArticle.published_at || "").slice(0,10));
+      }
+      if(current?.id!==testedArticle.id) return;
       renderMatches(result);
     } else {
       const response = await fetch("/api/test", {
         method: "POST",
         headers: {"content-type": "application/json"},
-        body: JSON.stringify({id: current.id}),
+        body: JSON.stringify({id: testedArticle.id}),
       });
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || "test failed");
+      if(current?.id!==testedArticle.id) return;
       renderMatches(result);
     }
   } catch (err) {
@@ -510,13 +517,13 @@ async function loadProfiles() {
   return true;
 }
 
-function jumpToArticle(id) {
+async function jumpToArticle(id) {
   const index = staticArticles.findIndex((a) => String(a.id) === String(id));
   if (index < 0) return;
   showDrawNo(index);
   renderArticle(staticArticles[index]);
   const result = staticResults.get(String(id));
-  if (result) renderMatches(result);
+  if (result) await runTest();
   document.getElementById("article").scrollIntoView({behavior: "smooth"});
 }
 
@@ -630,6 +637,7 @@ function renderKeywordComparison(container, comparison) {
   const title = document.createElement("h3"); title.textContent = "Stock → relationship → keyword";
   const note = document.createElement("p");
   note.textContent = comparison ? (comparison.alignment_version ? "Entity/concept alignment checked before relevance. Inspect the identity, context reasons, filing date and quote. Uncertain candidates require review." : "Historical keyword-only comparison; entity alignment was not recorded.") : "Keyword comparison is unavailable in this older snapshot. Waiting for the new parser export.";
+  if(comparison?.execution==="browser_preview") note.textContent="On-demand browser keyword preview, not an offline spaCy comparison. Cached engine passes remain separate. Historical previews abstain on mixed or future-dated source evidence; applicability and relevance still require review.";
   container.append(title,note);
   if (!comparison) return;
   renderKeywordRecords(container,comparison.matches || []);
@@ -735,7 +743,7 @@ function alignKeywordEntity(index,entity,text,start,end,peers=[]) {
   return {status,reasons:[reason],stock_entity_id:entity.id,article_entity_id:status==="resolved" ? entity.id : null,source_type:kind,article_types:[],context_score};
 }
 
-function compareKeywordText(index, text) {
+function compareKeywordText(index, text, {articleDate=""}={}) {
   const tokens = [...text.matchAll(/\d+(?:[.\/-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)];
   const words = tokens.map(t => {
     const word = t[0].toLowerCase().replaceAll("’", "'").replace(/'s$/, "");
@@ -744,6 +752,9 @@ function compareKeywordText(index, text) {
   const hits = [], named = new Set(), seen = new Set(), broad = new Map(), matches = [], unresolved_matches=[],rejected_matches=[];
   for (let i = 0; i < words.length; i++) {
     for (const {phrase,row} of index.first.get(words[i]) || []) {
+      // A preview cannot reconstruct a historical subset of a mixed-date
+      // context. Abstain on the entire row instead of importing later evidence.
+      if(articleDate && row.relationship!=="issuer" && (!row.latest_filing_date || row.latest_filing_date>articleDate || (row.source_declared_identity?.known_from || "")>articleDate)) continue;
       const end = i+phrase.length;
       if (end > words.length || phrase.some((w,j) => w !== words[i+j]) || /[.!?;:\n]/.test(text.slice(tokens[i].index+tokens[i][0].length,tokens[end-1].index))) continue;
       const start=tokens[i].index, finish=tokens[end-1].index+tokens[end-1][0].length;
@@ -774,6 +785,34 @@ function compareKeywordText(index, text) {
   return {matches,broad_matches:[...broad.values()],unresolved_matches,rejected_matches,alignment_version:index.alignment_version,stock_passes_changed:false};
 }
 
+function browserKeywordPreview(index,value,articleDate="") {
+  const result=compareKeywordText(index,value,{articleDate});
+  result.execution="browser_preview";
+  for(const key of ["matches","unresolved_matches","rejected_matches"]) result[key]=result[key].map(row=>({...row,
+    usable_for_scoring:false,review_required:true,
+    review_reasons:[...(row.review_reasons || []),"browser_preview_requires_offline_validation"]}));
+  return result;
+}
+
+async function keywordIndexForText(article) {
+  const asset = staticMeta && staticMeta.keyword_index;
+  if (!asset) throw new Error("The current published snapshot has no keyword index yet.");
+  if (!keywordManifest) keywordManifest = await loadPackedProfile(asset.path,asset.sha256);
+  const wanted = new Set([...article.matchAll(/\d+(?:[.\/-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(t => {
+    const raw = t[0].toLowerCase().replaceAll("’", "'").replace(/'s$/, "");
+    const word = keywordManifest.normalization[raw] || raw;
+    return (word.charCodeAt(0)%16).toString(16);
+  }));
+  await Promise.all([...wanted].map(async bucket => {
+    if (!keywordBuckets.has(bucket) && keywordManifest.buckets[bucket]) {
+      const entry = keywordManifest.buckets[bucket];
+      keywordBuckets.set(bucket,await loadPackedProfile(entry.path,entry.sha256));
+    }
+  }));
+  keywordSearchIndex = prepareKeywordIndex({...keywordManifest,phrases:[...keywordBuckets.values()].flat()});
+  return keywordSearchIndex;
+}
+
 async function compareCustomKeywords() {
   const button = document.getElementById("compare-keywords"), box = document.getElementById("custom-keywords");
   const article = document.getElementById("keyword-text").value || "";
@@ -785,22 +824,8 @@ async function compareCustomKeywords() {
       const response = await fetch("/api/keywords",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({text:article})});
       result = await response.json(); if (!response.ok) throw new Error(result.error);
     } else {
-      const asset = staticMeta && staticMeta.keyword_index;
-      if (!asset) throw new Error("The current published snapshot has no keyword index yet.");
-      if (!keywordManifest) keywordManifest = await loadPackedProfile(asset.path,asset.sha256);
-      const wanted = new Set([...article.matchAll(/\d+(?:[.\/-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(t => {
-        const raw = t[0].toLowerCase().replaceAll("’", "'").replace(/'s$/, "");
-        const word = keywordManifest.normalization[raw] || raw;
-        return (word.charCodeAt(0)%16).toString(16);
-      }));
-      await Promise.all([...wanted].map(async bucket => {
-        if (!keywordBuckets.has(bucket) && keywordManifest.buckets[bucket]) {
-          const entry = keywordManifest.buckets[bucket];
-          keywordBuckets.set(bucket,await loadPackedProfile(entry.path,entry.sha256));
-        }
-      }));
-      keywordSearchIndex = prepareKeywordIndex({...keywordManifest,phrases:[...keywordBuckets.values()].flat()});
-      result = compareKeywordText(keywordSearchIndex,article);
+      const index=await keywordIndexForText(article);
+      result = browserKeywordPreview(index,article);
     }
     renderKeywordComparison(box,result);
   } catch (err) { box.textContent = err.message; }
