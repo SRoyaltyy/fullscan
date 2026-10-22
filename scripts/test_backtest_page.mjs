@@ -263,3 +263,41 @@ assert.ok(lazyRows.every(row=>row.review_required && !row.usable_for_scoring));
 assert.deepEqual(Array.from(lazy.passes),[]);
 assert.ok(elements.get('article-keywords').children.some(e=>e.textContent.includes('not an offline spaCy comparison')));
 console.log('Cached headlines load on-demand review-only previews; historical mixed-date rows abstain and engine passes remain separate.');
+
+// The market index shards on a whole token hash. Query-local assembly and a
+// bounded cache preserve complete matches without accumulating the full market.
+context.TextEncoder=TextEncoder;
+const hashedAssets=new Map(),hashedManifest={...manifest,buckets:{},bucket_method:'token_sha256_2'};
+const hashedRows=new Map();
+for(const entry of fixture.payload.phrases) {
+  const hash=Buffer.from(await webcrypto.subtle.digest('SHA-256',new TextEncoder().encode(entry.phrase[0]))).toString('hex').slice(0,2);
+  if(!hashedRows.has(hash)) hashedRows.set(hash,[]);hashedRows.get(hash).push(entry);
+}
+for(const [bucket,rows] of hashedRows) {
+  const bytes=gzipSync(JSON.stringify(rows)),path=`keyword-index/${bucket}.json.gz`;
+  hashedAssets.set('./'+path,bytes);hashedManifest.buckets[bucket]={path,sha256:Buffer.from(await webcrypto.subtle.digest('SHA-256',bytes)).toString('hex')};
+}
+context.hashedManifest=hashedManifest;
+const hashedRequests=[];
+context.fetch=async url=>{const path=url.split('?')[0];hashedRequests.push(path);return hashedAssets.has(path)?new Response(hashedAssets.get(path)):new Response('missing',{status:404});};
+context.cachedSentinel={phrase:['sentinel'],row:fixture.payload.phrases[0].row};
+vm.runInContext('keywordManifest=hashedManifest;keywordBuckets.clear();for(let i=0;i<40;i++)keywordBuckets.set("old-"+i,[cachedSentinel])',context);
+const hashedIndex=await vm.runInContext('keywordIndexForText("Western Digital")',context);
+const hashedResult=vm.runInContext('compareKeywordText(keywordSearchIndex,"Western Digital")',context);
+const expectedHash=Buffer.from(await webcrypto.subtle.digest('SHA-256',new TextEncoder().encode('western'))).toString('hex').slice(0,2);
+assert.ok(hashedRequests.includes(`./keyword-index/${expectedHash}.json.gz`));
+assert.ok(vm.runInContext('keywordBuckets.size',context)<=32);
+context.hashCompareText='Western Digital';
+context.legacyFullIndex=fixture.payload;
+const legacyResult=vm.runInContext('compareKeywordText(prepareKeywordIndex(legacyFullIndex),hashCompareText)',context);
+assert.equal(JSON.stringify(signature(hashedResult)),JSON.stringify(signature(legacyResult)));
+assert.ok(!hashedIndex.first.has('sentinel'),'Query-local index excludes unrelated cached buckets');
+for(const test of fixture.cases) {
+  context.hashCompareText=test.text;
+  await vm.runInContext('keywordIndexForText(hashCompareText)',context);
+  const actual=vm.runInContext('compareKeywordText(keywordSearchIndex,hashCompareText)',context);
+  for(const key of ['matches','unresolved_matches','rejected_matches']) assert.equal(JSON.stringify(signature({...actual,matches:actual[key]})),JSON.stringify(signature({...test.result,matches:test.result[key]})),test.text+' '+key);
+}
+vm.runInContext('keywordManifest={...hashedManifest,bucket_method:"unknown"}',context);
+await assert.rejects(vm.runInContext('keywordIndexForText("Western Digital")',context),/Unsupported keyword bucket method/);
+console.log('Whole-token hash shards retain matching parity and bound cached market data.');
