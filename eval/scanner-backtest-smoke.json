@@ -1,5 +1,0 @@
-[
-  {"id":"synthetic-apple","title":"Apple shares rise","body":"Exxon shares fall. This body is not headline input.","published_at":"2026-10-19"},
-  {"id":"synthetic-body-only","title":"Weather stays calm","body":"Apple shares rise. This body must not create a headline match.","published_at":"2026-10-19"},
-  {"id":"synthetic-meta","title":"Meta shares rise","body":"","published_at":"2026-10-19"}
-]

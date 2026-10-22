@@ -1,8 +1,0 @@
-{
-  "error": "Step 1 parse failure",
-  "raw": "[\n  {\n    \"event_date\": \"2026-08-28\",\n    \"description\": \"Energy Fuels Inc (UUUU) completed its acquisition of Australian Strategic Materials, adding the Korean Metals Plant\u2019s 1,300 tpa NdFeB alloy capacity and the Dubbo project.\",\n    \"evidence_excerpt\": \"\\\"today announced it has completed its acquisition of Australian Strategic Materials Limited (ASM)\\\"\",\n    \"source_urls\": [\n      \"https://www.prnewswire.com/news-releases/energy-fuels-completes-acquisition-of-australian-strategic-materials-30",
-  "ticker": "UUUU",
-  "generated_at": "2026-08-28",
-  "cutoff_date": null,
-  "role": "override_captain"
-}

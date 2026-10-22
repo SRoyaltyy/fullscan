@@ -1,9 +1,0 @@
-{
-  "upstream": "https://github.com/unicode-org/cldr-json",
-  "commit": "91c267402229a59e3ef2774544f001bf959e8809",
-  "path": "cldr-json/cldr-localenames-full/main/en/territories.json",
-  "blob_sha": "3f3a27182aee6260c3e5a4ee6ba5c8327550c199",
-  "sha256": "158c1d575308f7e46912edbeda435c8fe2ef5dad280798231f3a432e406b1807",
-  "license": "Unicode License V3; see territories.LICENSE",
-  "purpose": "Country and territory names are geographic scope, never business-exposure anchors."
-}

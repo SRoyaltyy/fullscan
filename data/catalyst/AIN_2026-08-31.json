@@ -1,8 +1,0 @@
-{
-  "error": "Step 1 parse failure",
-  "raw": "I found another important event - the strategic review of the Structures Assembly business (Oct 28, 2025) and the dividend increase (Dec 5, 2025). Let me compile all the distinct events now.\n\nLet me finalize the JSON output with the distinct events, excluding the Finviz-confirmed event (Pratt & Whitney Geared Turbofan contract + Q2 2026 EPS beat).\n\n```json\n[\n  {\n    \"event_date\": \"2026-02-24\",\n    \"description\": \"Albany International reported Q4 2025 net revenue of $321.2 million (up from $286.9",
-  "ticker": "AIN",
-  "generated_at": "2026-08-31",
-  "cutoff_date": null,
-  "role": "override_captain"
-}

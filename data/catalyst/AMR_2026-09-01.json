@@ -1,8 +1,0 @@
-{
-  "error": "Step 1 parse failure",
-  "raw": "[\n  {\n    \"event_date\": \"2025-08-08\",\n    \"description\": \"Alpha Metallurgical Resources reported a Q2 2025 net loss of $5.0 million, or $0.38 per diluted share, with Adjusted EBITDA of $46.1 million on 3.9 million tons sold.\",\n    \"evidence_excerpt\": \"\\\"$(5.0) million or $(0.38) per diluted share (vs. $58.9 million or $4.49 in Q2 2024\\\"\",\n    \"source_urls\": [\n      \"https://finance.yahoo.com/news/alpha-announces-second-quarter-2025-113000717.html\",\n      \"https://www.fool.com/earnings/call-trans",
-  "ticker": "AMR",
-  "generated_at": "2026-09-01",
-  "cutoff_date": null,
-  "role": "override_captain"
-}

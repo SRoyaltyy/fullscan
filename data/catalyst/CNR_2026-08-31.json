@@ -1,8 +1,0 @@
-{
-  "error": "Step 1 parse failure",
-  "raw": "I now have comprehensive information. Let me compile the events. Note that the Finviz event already covers the CFO appointment/executive succession (dated 2026-08-31). However, the Finviz event is dated 2026-08-31 while the actual announcement was 2026-08-19. The Finviz event covers \"Core Natural Resources Expands President's Responsibilities and Appoints New CFO\" - so I should NOT duplicate that specific event. But I can extract the related CFO insider holding and other events.\n\nLet me compile ",
-  "ticker": "CNR",
-  "generated_at": "2026-08-31",
-  "cutoff_date": null,
-  "role": "override_captain"
-}

@@ -551,7 +551,7 @@ const KIND_LABELS = {
 };
 
 async function loadPackedProfile(path, expectedHash) {
-  if (!/^(scoring-profiles\/[a-f0-9]+|filing-profiles\/issuers\/\d{10}|keyword-index(?:\/[a-f0-9])?)\.json\.gz$/.test(path))
+  if (!/^(scoring-profiles\/[a-f0-9]+|filing-profiles\/issuers\/\d{10}|keyword-index(?:\/[a-f0-9]{1,2})?)\.json\.gz$/.test(path))
     throw new Error("Invalid profile asset path");
   const query = staticMeta.snapshot ? "?snapshot=" + encodeURIComponent(staticMeta.snapshot.snapshot_id) : "";
   const base = staticMeta.asset_base_url || "./";
@@ -798,18 +798,29 @@ async function keywordIndexForText(article) {
   const asset = staticMeta && staticMeta.keyword_index;
   if (!asset) throw new Error("The current published snapshot has no keyword index yet.");
   if (!keywordManifest) keywordManifest = await loadPackedProfile(asset.path,asset.sha256);
-  const wanted = new Set([...article.matchAll(/\d+(?:[.\/-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(t => {
+  if(keywordManifest.bucket_method && keywordManifest.bucket_method!=="token_sha256_2") throw new Error("Unsupported keyword bucket method");
+  const wanted = new Set(await Promise.all([...article.matchAll(/\d+(?:[.\/-]\d+)*|[A-Za-z][A-Za-z0-9]*(?:['’][A-Za-z0-9]+)*/g)].map(async t => {
     const raw = t[0].toLowerCase().replaceAll("’", "'").replace(/'s$/, "");
     const word = keywordManifest.normalization[raw] || raw;
+    if(keywordManifest.bucket_method==="token_sha256_2") {
+      const digest=new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(word)));
+      return digest[0].toString(16).padStart(2,"0");
+    }
     return (word.charCodeAt(0)%16).toString(16);
-  }));
+  })));
   await Promise.all([...wanted].map(async bucket => {
     if (!keywordBuckets.has(bucket) && keywordManifest.buckets[bucket]) {
       const entry = keywordManifest.buckets[bucket];
       keywordBuckets.set(bucket,await loadPackedProfile(entry.path,entry.sha256));
+    } else if(keywordBuckets.has(bucket)) {
+      const cached=keywordBuckets.get(bucket);keywordBuckets.delete(bucket);keywordBuckets.set(bucket,cached);
     }
   }));
-  keywordSearchIndex = prepareKeywordIndex({...keywordManifest,phrases:[...keywordBuckets.values()].flat()});
+  for(const bucket of keywordBuckets.keys()) {
+    if(keywordBuckets.size<=Math.max(32,wanted.size)) break;
+    if(!wanted.has(bucket)) keywordBuckets.delete(bucket);
+  }
+  keywordSearchIndex = prepareKeywordIndex({...keywordManifest,phrases:[...wanted].flatMap(bucket=>keywordBuckets.get(bucket) || [])});
   return keywordSearchIndex;
 }
 

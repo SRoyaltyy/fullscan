@@ -1,8 +1,0 @@
-{
-  "error": "Step 1 parse failure",
-  "raw": "[\n  {\n    \"event_date\": \"2025-07-22\",\n    \"description\": \"OpenAI confirmed it is the customer on Oracle\u2019s roughly $30 billion-per-year, 4.5-gigawatt Stargate data-center cloud contract.\",\n    \"evidence_excerpt\": \"\\\"OpenAI agreed to pay Oracle $30B a year for data center services\\\"\",\n    \"source_urls\": [\n      \"https://techcrunch.com/2025/07/22/openai-agreed-to-pay-oracle-30b-a-year-for-data-center-services/\",\n      \"https://openai.com/index/stargate-advances-with-partnership-with-oracle/\",\n     ",
-  "ticker": "ORCL",
-  "generated_at": "2026-09-01",
-  "cutoff_date": null,
-  "role": "earnings"
-}

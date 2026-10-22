@@ -1,8 +1,0 @@
-{
-  "error": "Step 2 parse failure",
-  "raw": "LLM request failed.\n\nI'll research live GOOGL/Alphabet sources first, then build the structured context JSON from those facts.\n\nI have the core filings picture; next I\u2019ll pull the 10-K and fill remaining gaps on margins, moat, supply chain, and ownership.",
-  "ticker": "GOOGL",
-  "generated_at": "2026-10-13",
-  "cutoff_date": null,
-  "role": "earnings"
-}

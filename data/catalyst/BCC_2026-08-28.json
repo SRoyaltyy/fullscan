@@ -1,8 +1,0 @@
-{
-  "error": "Step 1 parse failure",
-  "raw": "[\n  {\n    \"event_date\": \"2026-08-27\",\n    \"description\": \"Boise Cascade Co (BCC) SVP and General Counsel Jill Twedt sold 1,250 shares at an average price of $79.40, or about $99,250, leaving her with 25,295 shares.\",\n    \"evidence_excerpt\": \"\\\"SVP Jill Twedt sold 1,250 shares of the stock in a transaction on Thursday, August 27th. The stock was sold at an average price of $79.40\\\"\",\n    \"source_urls\": [\n      \"https://www.marketbeat.com/instant-alerts/insider-jill-twedt-sells-1250-shares-of-bois",
-  "ticker": "BCC",
-  "generated_at": "2026-08-28",
-  "cutoff_date": null,
-  "role": "override_captain"
-}

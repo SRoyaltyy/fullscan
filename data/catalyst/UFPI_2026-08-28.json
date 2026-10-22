@@ -1,8 +1,0 @@
-{
-  "error": "Step 1 parse failure",
-  "raw": "[\n  {\n    \"event_date\": \"2026-07-29\",\n    \"description\": \"UFP Industries Inc (UFPI) reported Q2 2026 net sales of $1.88 billion (up 3% YoY) and diluted EPS of $1.48, beating consensus while net earnings fell to $83 million on higher freight costs, and reaffirmed 2026 demand toward the lower end of flat-to-slightly-down unit guidance.\",\n    \"evidence_excerpt\": \"\\\"Diluted earnings per share of $1.48 compared to $1.70 a year ago\\\"\",\n    \"source_urls\": [\n      \"https://www.prnewswire.com/news-releas",
-  "ticker": "UFPI",
-  "generated_at": "2026-08-28",
-  "cutoff_date": null,
-  "role": "override_captain"
-}
