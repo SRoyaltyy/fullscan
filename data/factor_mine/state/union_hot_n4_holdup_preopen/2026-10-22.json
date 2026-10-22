@@ -1,0 +1,90 @@
+{
+  "buys": [],
+  "cash": 21.88,
+  "date": "2026-10-22",
+  "equity": 9423.04,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "KLRA",
+    "SGRY",
+    "SRPT",
+    "TNGX"
+  ],
+  "label": "starts 10-08 open, no past days",
+  "mean": 1.9022,
+  "n_trades_today": 0,
+  "parent": "union_hot_n4_holdup",
+  "picks": [],
+  "reasons": [
+    "S=-14.31 <= -3: no buys"
+  ],
+  "recipe": "union_hot_n4_holdup_preopen",
+  "s": -14.314,
+  "seal_sha256": "b58ea8888d3fc31434ef629b359edfc2381ccdab880bf61b8c5c4b20bd7f5c73",
+  "sells": [],
+  "sit": true,
+  "state": {
+    "after": "2026-10-22",
+    "cash": 21.88,
+    "pos": {
+      "KLRA": {
+        "close_px": 13.27,
+        "cost": 2287.5910000000003,
+        "entry_date": "2026-10-21",
+        "entry_px": 12.91,
+        "fee_in": 2.521,
+        "last_px": 12.8,
+        "min_hold": 2,
+        "notional": 2285.07,
+        "peak_px": 12.91,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book | pre-open inputs only; starts 10-08 open, no past days; rank hot_score; list preopen_seal; leftover $2288.74",
+        "shares": 177,
+        "ticker": "KLRA"
+      },
+      "SGRY": {
+        "close_px": 15.9,
+        "cost": 2280.94,
+        "entry_date": "2026-10-21",
+        "entry_px": 15.19,
+        "fee_in": 2.44,
+        "last_px": 15.52,
+        "min_hold": 2,
+        "notional": 2278.5,
+        "peak_px": 15.52,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book | pre-open inputs only; starts 10-08 open, no past days; rank hot_score; list preopen_seal; leftover $2288.74",
+        "shares": 150,
+        "ticker": "SGRY"
+      },
+      "SRPT": {
+        "close_px": 18.18,
+        "cost": 2288.35,
+        "entry_date": "2026-10-21",
+        "entry_px": 19.05,
+        "fee_in": 2.35,
+        "last_px": 18.4,
+        "min_hold": 2,
+        "notional": 2286.0,
+        "peak_px": 19.05,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book | pre-open inputs only; starts 10-08 open, no past days; rank hot_score; list preopen_seal; leftover $2288.74",
+        "shares": 120,
+        "ticker": "SRPT"
+      },
+      "TNGX": {
+        "close_px": 27.93,
+        "cost": 2276.2070000000003,
+        "entry_date": "2026-10-21",
+        "entry_px": 25.55,
+        "fee_in": 2.257,
+        "last_px": 26.67,
+        "min_hold": 2,
+        "notional": 2273.9500000000003,
+        "peak_px": 26.67,
+        "reason": "hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book | pre-open inputs only; starts 10-08 open, no past days; rank hot_score; list preopen_seal; leftover $2288.74",
+        "shares": 89,
+        "ticker": "TNGX"
+      }
+    },
+    "yday_equity": 9423.04
+  }
+}

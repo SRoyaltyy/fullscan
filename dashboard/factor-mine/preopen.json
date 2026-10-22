@@ -172,6 +172,24 @@
           "s": 4.644,
           "sells": [],
           "sit": false
+        },
+        {
+          "buys": [],
+          "date": "2026-10-22",
+          "equity": 9316.01,
+          "mean": -0.6426,
+          "picks": [],
+          "reasons": [
+            "S=-14.31 <= -3: no buys"
+          ],
+          "s": -14.314,
+          "sells": [
+            "KLRA",
+            "SGRY",
+            "SRPT",
+            "TNGX"
+          ],
+          "sit": true
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -342,6 +360,19 @@
             "WMG"
           ],
           "sit": false
+        },
+        {
+          "buys": [],
+          "date": "2026-10-22",
+          "equity": 9423.04,
+          "mean": 1.9022,
+          "picks": [],
+          "reasons": [
+            "S=-14.31 <= -3: no buys"
+          ],
+          "s": -14.314,
+          "sells": [],
+          "sit": true
         }
       ],
       "label": "starts 10-08 open, no past days",
