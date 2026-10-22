@@ -28,7 +28,7 @@
       "src/profile_cache.py": "c8a2bde0649d3edde41fb390b70f5ffa964f06e23a46822e6455960e36c57c74",
       "src/link_correlation.py": "f51bcd06965c63c036e7f6a4477865cce903ab5275156902af0b6d1fc5bec500",
       "src/scanner_backtest.py": "0d9bf771f44adeef2e33d7104e6309eb2f969f42d44f7baa75169c7b49e70a73",
-      "scripts/export_backtest_static.py": "acc31801fb3516c8d661045f2f50cfaad15c1cda6bb32a3349aec456b71b7e5c",
+      "scripts/export_backtest_static.py": "ceb123bb30e2cd7a01595da546fa748b8afcabfcc1f66815daf5e99ae0edff3e",
       "scripts/annotate_article_entities.py": "ffcfd2735de1a82d9177585467a9ef3b7b61cce456914565e9eabe75b5f4f765",
       "requirements-filing-parser.txt": "ffacc7df159645007921956720e1a848510c6fbb1b079afebc66f3ad067c7145",
       "src/data/english_words.txt": "7328b4033db8ffb2229b84223927b0b5adc7a75ce855a6383c4f3c7dbd1ddfe6",
@@ -2176,19 +2176,19 @@
       "base_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/"
     },
     "keyword_comparison_mode": "browser_preview",
-    "engine_snapshot_id": "e75a04f99d532f3267702d4b4bef70cab11c7484b1e80f8a20b5c2c2c094dadc",
-    "source_revision": "2f880f4c281108e37b187e9b6ef19f32a78616ad",
+    "engine_snapshot_id": "1359a067a304194cb0ee2593a43bc5778107d583120262903ec28c73ab907bac",
+    "source_revision": "82de97ed242a5afd205223bc1ebaac5a87040449",
     "news_sha256": "c178bcd3b7265f9de3d1186beee0ee1199c1aa28526da27133e8cd245a8630eb",
     "article_entities_sha256": "c39c8e9628225be941719adfabf549835bec1bf3431aebeea9faf227c40bec60",
-    "snapshot_id": "d7bf4c0d4abbd8d80aa6b9ead53892d673ab73af9b236f4f3a4068e9eb587583"
+    "snapshot_id": "0ccc249f4adaad0a0dd86360a3aa9bb85d74ed9daa79cd7d124ce02ead1fa880"
   },
   "articles": 11255,
   "articles_with_passes": 2574,
   "keyword_index": {
     "path": "keyword-index.json.gz",
-    "sha256": "6fc132659d4ad39db0a4c99b48fb38cc098d89838ffad11cc29367ac266e0d99",
+    "sha256": "4c9f62ca0ba6cc0674a9bee3872ec031b22e75973aa43cf67af2e3ea52fbd2e4",
     "schema": "stock-keywords-1.1",
     "phrases": 761406
   },
-  "generated_at": "2026-10-22T04:42:03Z"
+  "generated_at": "2026-10-22T14:06:03Z"
 }
