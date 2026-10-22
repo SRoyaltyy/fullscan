@@ -6,16 +6,36 @@ import json
 from pathlib import Path
 import re
 import sys
+import time
+import http.client
+import urllib.error
 import urllib.request
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from src.completed_profile_store import validate_manifest, validate_profile
 
 
+def fetch_url(url):
+    """Retry transient transport failures; never accept partial issuer coverage."""
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(url,timeout=90) as stream:
+                return stream.read()
+        except urllib.error.HTTPError as error:
+            if error.code not in (408,429) and not 500 <= error.code < 600:
+                raise
+            if attempt == 3:
+                raise
+        except (urllib.error.URLError, TimeoutError, ConnectionError, http.client.IncompleteRead):
+            if attempt == 3:
+                raise
+        time.sleep(2 ** attempt)
+
+
 def materialize(manifest, out, *, fetch=None, workers=8):
     import gzip
     validate_manifest(manifest)
-    fetch=fetch or (lambda url: urllib.request.urlopen(url,timeout=90).read())
+    fetch=fetch or fetch_url
     out=Path(out);out.mkdir(parents=True,exist_ok=True)
     entries={e['path']:e for e in manifest['profiles'].values()}
     def download(item):
@@ -53,7 +73,7 @@ def main():
     a=p.parse_args()
     if not re.fullmatch(r'https://raw\.githubusercontent\.com/SRoyaltyy/fullscan/[a-f0-9]{40}/dashboard/scanner-backtest/completed/manifest.json',a.manifest_url):
         p.error('an immutable approved manifest URL is required')
-    with urllib.request.urlopen(a.manifest_url,timeout=30) as stream:manifest=json.load(stream)
+    manifest=json.loads(fetch_url(a.manifest_url))
     materialize(manifest,a.out)
 
 
