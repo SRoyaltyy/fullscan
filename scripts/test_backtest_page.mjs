@@ -243,3 +243,23 @@ vm.runInContext('renderParagraphs(archivedBox,archivedGraph);renderTermReview(ar
 assert.ok(context.archivedBox.children.some(e=>e.textContent?.includes('Retained complete source paragraphs')));
 assert.ok(context.archivedBox.children.some(e=>e.children?.some(c=>c.textContent?.includes('exhaustive new spaCy occurrence inventory is unavailable'))));
 console.log('Archived stock pool and retained paragraph review work without claiming a rebuilt spaCy inventory.');
+
+// Historical browser previews must abstain on mixed-date contexts and cannot
+// modify the offline engine decision or present themselves as spaCy output.
+const datedPayload=JSON.parse(JSON.stringify(fixture.payload));
+for(const entry of datedPayload.phrases) if(entry.row.relationship!=='issuer') {
+  entry.row.first_filing_date='2024-01-01';entry.row.latest_filing_date='2026-01-01';
+}
+context.datedPayload=datedPayload;context.previewText=fixture.cases[0].text;
+const dated=vm.runInContext('compareKeywordText(prepareKeywordIndex(datedPayload),previewText,{articleDate:"2025-01-01"})',context);
+assert.equal(dated.matches.length+dated.unresolved_matches.length+dated.rejected_matches.length+dated.broad_matches.length,0);
+vm.runInContext('staticMeta={snapshot:{snapshot_id:"test"},keyword_index:{path:"keyword-index.json.gz",sha256:manifestHash}};current={id:"lazy",text:"Western Digital",published_at:"2026-10-20"};staticResults.set("lazy",{id:"lazy",snapshot_id:"test",keyword_comparison_mode:"browser_preview",passes:[],pass_count:0})',context);
+await vm.runInContext('runTest()',context);
+const lazy=vm.runInContext('lastPairResult',context);
+assert.equal(lazy.keyword_comparison.execution,'browser_preview');
+const lazyRows=['matches','unresolved_matches','rejected_matches'].flatMap(key=>Array.from(lazy.keyword_comparison[key]));
+assert.ok(lazyRows.length);
+assert.ok(lazyRows.every(row=>row.review_required && !row.usable_for_scoring));
+assert.deepEqual(Array.from(lazy.passes),[]);
+assert.ok(elements.get('article-keywords').children.some(e=>e.textContent.includes('not an offline spaCy comparison')));
+console.log('Cached headlines load on-demand review-only previews; historical mixed-date rows abstain and engine passes remain separate.');

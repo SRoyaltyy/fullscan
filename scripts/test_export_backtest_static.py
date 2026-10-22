@@ -147,6 +147,17 @@ class ExportTests(unittest.TestCase):
         self.assertEqual(result[0]['snapshot_id'], 'test')
         self.assertEqual(result[0]['input_mode'], 'headline')
 
+    def test_browser_preview_keeps_engine_decisions_without_materializing_cross_product(self):
+        article={'id':'one','title':'A headline'}
+        with patch.object(export,'link_articles',return_value=[{'stocks':[]}]), \
+             patch.object(export,'compare_article',side_effect=AssertionError('must be lazy')), \
+             patch.object(export,'_SNAPSHOT',{'snapshot_id':'frozen','keyword_comparison_mode':'browser_preview'}):
+            row=export._score_shard([article])[0]
+        self.assertEqual(row['keyword_comparison_mode'],'browser_preview')
+        self.assertNotIn('keyword_comparison',row)
+        self.assertEqual(row['pass_count'],0)
+        self.assertEqual(row['snapshot_id'],'frozen')
+
     def test_empty_engine_shard_cannot_be_silently_zipped_away(self):
         with patch.object(export, 'link_articles', return_value=[]):
             with self.assertRaisesRegex(ValueError, 'incomplete'):

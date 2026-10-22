@@ -39,7 +39,10 @@ def _score_shard(shard):
     results = []
     for article, item in zip(selected, linked):
         row = present(item)
-        row['keyword_comparison'] = compare_article(_BOARD,article['text'],article_date=str(article.get('published_at') or '')[:10],entity_annotations=article.get('entity_annotations'))
+        if _SNAPSHOT.get('keyword_comparison_mode')=='browser_preview':
+            row['keyword_comparison_mode']='browser_preview'
+        else:
+            row['keyword_comparison'] = compare_article(_BOARD,article['text'],article_date=str(article.get('published_at') or '')[:10],entity_annotations=article.get('entity_annotations'))
         row.update(id=article['id'], input_mode=_INPUT_MODE,
                    input_sha256=hashlib.sha256(article['text'].encode()).hexdigest(),
                    snapshot_id=_SNAPSHOT['snapshot_id'])
@@ -170,6 +173,7 @@ def main(argv=None):
     p.add_argument('--identity-filings', type=Path)
     p.add_argument('--filing-profiles', type=Path)
     p.add_argument('--article-entities',type=Path)
+    p.add_argument('--keyword-comparisons',choices=('materialized','browser_preview'),default='materialized')
     p.add_argument('--profile-assets',choices=('full','keywords'),default='full')
     p.add_argument('--dataset-scope',choices=('archive_set','development_sample'),default='archive_set')
     p.add_argument('--profile-archive-url',default='')
@@ -194,6 +198,7 @@ def main(argv=None):
                                        'whole_archive_complete':a.dataset_scope != 'development_sample',
                                        'archive_url':a.profile_archive_url,
                                        'base_url':a.profile_base_url}
+    snapshot['keyword_comparison_mode']=a.keyword_comparisons
     snapshot['engine_snapshot_id'] = snapshot.pop('snapshot_id')
     snapshot['source_revision'] = os.environ.get('SCANNER_SOURCE_SHA') or os.environ.get('GITHUB_SHA') or ''
     snapshot['news_sha256'] = hashlib.sha256(a.news.read_bytes()).hexdigest()

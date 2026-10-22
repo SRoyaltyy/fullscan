@@ -181,7 +181,7 @@ jobs:
         run: >-
           python -I -S scripts/offline_evidence_checks.py --backtest-export
           --filing-profiles filing-profiles --as-of "$FILING_AS_OF"
-          --article-entities article-entities.json
+          --article-entities article-entities.json --keyword-comparisons browser_preview
           --profile-assets "${{ needs.source.outputs.profile_assets }}"
           --dataset-scope "${{ needs.source.outputs.scope }}"
           --profile-archive-url "https://github.com/$GITHUB_REPOSITORY/actions/runs/${{ needs.source.outputs.run }}"

@@ -169,6 +169,9 @@ def validate(directory, source_sha):
         raise ValueError('display articles do not match scored results')
     if any(row.get('snapshot_id') != snapshot['snapshot_id'] for row in rows):
         raise ValueError('mixed result snapshots')
+    if snapshot.get('keyword_comparison_mode')=='browser_preview' and any(
+            row.get('keyword_comparison_mode')!='browser_preview' or 'keyword_comparison' in row for row in rows):
+        raise ValueError('on-demand browser preview was incorrectly recorded as an offline keyword comparison')
     profiles = json.loads((directory/'profiles.json').read_text())
     if not profiles or not all(p.get('used_for_scoring') for p in profiles.values()):
         raise ValueError('profiles are not the actual scoring board')

@@ -64,6 +64,20 @@ class SnapshotPublishTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'budget'):
                 validate_budget(root,file_limit=1)
             self.assertEqual(before,(root/'meta.json').read_bytes())
+    def test_browser_preview_cannot_be_mislabeled_as_an_offline_comparison(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);self.fixture(root)
+            meta=json.loads((root/'meta.json').read_text())
+            meta['snapshot']['keyword_comparison_mode']='browser_preview'
+            (root/'meta.json').write_text(json.dumps(meta))
+            rows=[json.loads(line) for line in (root/'results.jsonl').read_text().splitlines()]
+            for row in rows:row['keyword_comparison_mode']='browser_preview'
+            (root/'results.jsonl').write_text('\n'.join(json.dumps(row) for row in rows))
+            validate(root,'source')
+            rows[0]['keyword_comparison']={'matches':[]}
+            (root/'results.jsonl').write_text('\n'.join(json.dumps(row) for row in rows))
+            with self.assertRaisesRegex(ValueError,'offline keyword comparison'):validate(root,'source')
+
     def test_api_publisher_updates_only_five_paths_without_force(self):
         calls=[]
         def api(method,path,payload=None):
