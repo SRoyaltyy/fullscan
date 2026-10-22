@@ -407,14 +407,14 @@
       "window_through": "2026-10-21",
       "trading_days_elapsed": 14,
       "complete": true,
-      "latest_close": 12.235,
-      "current_return_pct": 8.46,
+      "latest_close": 12.24,
+      "current_return_pct": 8.42,
       "horizon_returns_pct": {
         "1d": 2.55,
         "3d": 2.08,
         "5d": 3.67,
         "10d": 8.06,
-        "14d": 8.46
+        "14d": 8.42
       },
       "mfe_pct": 14.1,
       "mfe_day": "2026-10-20",
@@ -1635,7 +1635,7 @@
         "10d": -1.09,
         "14d": 1.52
       },
-      "mfe_pct": 2.21,
+      "mfe_pct": 2.23,
       "mfe_day": "2026-10-21",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-01"

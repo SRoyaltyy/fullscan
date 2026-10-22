@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T19:32:20.152755-04:00",
+  "generated_at": "2026-10-22T15:33:42.263471-04:00",
   "dates": [
     "2026-07-31",
     "2026-08-02",
@@ -66,12 +66,13 @@
     "2026-10-16",
     "2026-10-19",
     "2026-10-20",
-    "2026-10-21"
+    "2026-10-21",
+    "2026-10-22"
   ],
   "general": {
     "overall": {
       "n_graded": 48,
-      "n_predicts": 51,
+      "n_predicts": 52,
       "dir_hits": 26,
       "dir_hit_pct": 54.166666666666664,
       "mag_hits": 24,
@@ -104,7 +105,7 @@
     },
     "legacy_all_graded": {
       "n_graded": 51,
-      "n_predicts": 51,
+      "n_predicts": 52,
       "dir_hits": 26,
       "dir_hit_pct": 50.98039215686274,
       "mag_hits": 24,
@@ -861,6 +862,17 @@
         "actual_direction": "up",
         "direction_hit": true,
         "magnitude_hit": true
+      },
+      {
+        "date": "2026-10-22",
+        "has_predict": true,
+        "predicted_direction": "down",
+        "predicted_magnitude_band": "notable",
+        "total_score": -14.314,
+        "actual_pct_change": null,
+        "actual_direction": null,
+        "direction_hit": null,
+        "magnitude_hit": null
       }
     ]
   },
@@ -1864,6 +1876,21 @@
       },
       {
         "date": "2026-10-21",
+        "n_graded": 0,
+        "n_predicts": 0,
+        "dir_hits": 0,
+        "dir_hit_pct": null,
+        "mag_hits": 0,
+        "mag_n": 0,
+        "mag_hit_pct": null,
+        "n_pipeline_blank": 0,
+        "pipeline_blank_dates": [],
+        "n_auto_miss_no_predict": 0,
+        "auto_miss_dates": [],
+        "n_sectors": 0
+      },
+      {
+        "date": "2026-10-22",
         "n_graded": 0,
         "n_predicts": 0,
         "dir_hits": 0,
@@ -6503,6 +6530,74 @@
         }
       },
       "2026-10-21": {
+        "Basic Materials": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Communication Services": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Consumer Cyclical": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Consumer Defensive": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Energy": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Financial": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Healthcare": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Industrials": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Real Estate": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Technology": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        },
+        "Utilities": {
+          "dir": null,
+          "hit": null,
+          "pct": null,
+          "has_predict": false
+        }
+      },
+      "2026-10-22": {
         "Basic Materials": {
           "dir": null,
           "hit": null,
