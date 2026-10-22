@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-22",
+  "generated_at": "2026-10-22T04:25:33.724052-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-10-22",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US equity futures point lower as Gulf tensions lift oil over 2% ahead of jobless claims and busy earnings slate",
+  "raw_text": "- S&P 500 Futures (@ES) are down 1.01%, Dow Jones Futures (@YM) fall 0.62%, Nasdaq 100 Futures (@NQ) decline 1.76%, and Russell 2000 Futures (@ER2) drop 0.91%.\n- Escalating geopolitical risks in the Gulf, including Houthi attacks, US diplomatic evacuations from Saudi Arabia, and reported strike planning on Iran, weigh on risk assets and push oil (@CL) prices up over 2%.\n- Asian shares retreat overnight with the Kospi and Nikkei (@NKD) each down more than 2% and broader regional indexes weaker on combined tech/AI spending concerns and energy supply worries.\n- European equity futures also point lower, mirroring weakness in US and Asian markets amid Mideast tensions and higher energy prices.\n- Tesla (TSLA) slides about 5% pre-market as Bloomberg reports Elon Musk is pushing a Tesla–SpaceX merger targeted for early 2027, with the company also beating EPS estimates, missing on revenue, and cutting its 2026 capex outlook.\n- Meta (META) trades slightly lower pre-market after an SEC filing details a Founder Alignment pact stapling 80% of Zuckerberg’s new Class C shares with an eight-year lockup, following mixed results that beat on revenue.\n- Procter & Gamble (PG), Union Pacific (UNP), Lockheed Martin (LMT), Valero Energy (VLO), Spotify (SPOT), and Blackstone (BX) are scheduled to report earnings before the market open.\n- Initial jobless claims are due at 8:30 AM ET and represent the main scheduled US economic data release for the session.",
+  "raw_summary_md": "- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) are down **1.01%**, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) fall **0.62%**, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) decline **1.76%**, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) drop **0.91%**.\n- **Escalating geopolitical risks in the Gulf**, including Houthi attacks, US diplomatic evacuations from Saudi Arabia, and reported strike planning on Iran, weigh on risk assets and push **oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices up **over 2%**.\n- **Asian shares retreat overnight** with the **Kospi** and **Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD)) each down **more than 2%** and broader regional indexes weaker on combined tech/AI spending concerns and energy supply worries.\n- **European equity futures** also **point lower**, mirroring weakness in **US and Asian markets** amid **Mideast tensions** and higher energy prices.\n- **Tesla** ([TSLA](https://finviz.com/quote?t=TSLA)) slides about **5% pre-market** as **Bloomberg** reports **Elon Musk** is pushing a **Tesla–SpaceX merger** targeted for **early 2027**, with the company also **beating EPS estimates**, **missing on revenue**, and **cutting its 2026 capex outlook**.\n- **Meta** ([META](https://finviz.com/quote?t=META)) trades **slightly lower pre-market** after an SEC filing details a **Founder Alignment pact** stapling **80%** of Zuckerberg’s new Class C shares with an **eight-year lockup**, following mixed results that **beat on revenue**.\n- **Procter & Gamble** ([PG](https://finviz.com/quote?t=PG)), **Union Pacific** ([UNP](https://finviz.com/quote?t=UNP)), **Lockheed Martin** ([LMT](https://finviz.com/quote?t=LMT)), **Valero Energy** ([VLO](https://finviz.com/quote?t=VLO)), **Spotify** ([SPOT](https://finviz.com/quote?t=SPOT)), and **Blackstone** ([BX](https://finviz.com/quote?t=BX)) are scheduled to **report earnings before the market open**.\n- **Initial jobless claims** are due at **8:30 AM ET** and represent the **main scheduled US economic data release** for the session.",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "TSLA",
+    "META",
+    "PG",
+    "UNP",
+    "LMT",
+    "VLO",
+    "SPOT",
+    "BX"
+  ],
+  "named_leaders": [
+    "TSLA",
+    "META",
+    "PG",
+    "UNP",
+    "LMT",
+    "VLO",
+    "SPOT",
+    "BX"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "PG",
+      "UNP",
+      "LMT",
+      "VLO",
+      "SPOT",
+      "BX"
+    ],
+    "text": "Procter & Gamble (PG), Union Pacific (UNP), Lockheed Martin (LMT), Valero Energy (VLO), Spotify (SPOT), and Blackstone (BX) are scheduled to report earnings before the market open."
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Escalating geopolitical risks in the Gulf, including Houthi attacks, US diplomatic evacuations from Saudi Arabia, and reported strike planning on Iran, weigh on risk assets and push oil (@CL) prices up over 2%."
+  },
+  "finviz_id": 314976,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-22T04:06:51.047",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
