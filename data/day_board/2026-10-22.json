@@ -2526,6 +2526,38 @@
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "39798019622",
       "manifest": "research/input_freeze/2026-10-22/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-22_stock_book.md",
+      "at": "2026-10-22T10:54:06-04:00",
+      "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-22]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39798019622",
+      "manifest": "research/input_freeze/2026-10-22/manifest.json"
+    },
+    {
+      "path": "01_daily/weather/2026-10-22_weather.json",
+      "at": "2026-10-22T10:54:06-04:00",
+      "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-22]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39798019622",
+      "manifest": "research/input_freeze/2026-10-22/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-22_input_health.json",
+      "at": "2026-10-22T10:54:06-04:00",
+      "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-22]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39798019622",
+      "manifest": "research/input_freeze/2026-10-22/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-22_stock_book.json",
+      "at": "2026-10-22T10:54:06-04:00",
+      "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-22]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39798019622",
+      "manifest": "research/input_freeze/2026-10-22/manifest.json"
     }
   ]
 }
