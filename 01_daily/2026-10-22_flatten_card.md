@@ -1,10 +1,10 @@
 # flatten_robust card — 2026-10-22
 
-_Generated 2026-10-22T09:55:50 — live `flatten_robust`._
+_Generated 2026-10-22T10:05:17 — live `flatten_robust`._
 
-**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
+**S=-14.31; hard-red: no new buys; holds and due 1d exits stay**
 
-- Score **—** (—) · route **io**
+- Score **-14.31** (DOWN) · route **hold** · HARD-RED
 - Cash leftover **$20,135.31** (after 09:30 $20,135.31 · after 16:00 $108,671.69)
 - Prior close **$108,704.09** · 09:30 **$108,704.09** · overnight **$+0.00** · session **$-32.40** · 16:00 **$108,671.69**
 - Overnight lots **7** · priced mover BUYs **0** · prior book yes
@@ -50,7 +50,7 @@ _Generated 2026-10-22T09:55:50 — live `flatten_robust`._
 
 | Clock | Ticker | Why |
 |---|---|---|
-| 16:00 ET | * | io 3d cannot settle |
+| 16:00 ET | NET | hard-red: no new buys |
 
 ## Would have bought — holdings disregarded
 
@@ -58,9 +58,6 @@ Sized from marked equity **$108,704.09** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | CHRD | io_core | 180 | $150.85 | $27,153.00 | cash tied |
-| 16:00 ET | NEO | io_core | 1594 | $17.04 | $27,161.76 | cash tied |
-| 16:00 ET | NEOG | io_core | 2305 | $11.79 | $27,175.95 | cash tied |
-| 16:00 ET | MNR | io_core | 2542 | $10.67 | $27,123.14 | cash tied |
+| 16:00 ET | NET | io_core | 353 | $307.22 | $108,448.66 | hard-red |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
