@@ -2,7 +2,9 @@
 import argparse
 import json
 import re
+import shutil
 import subprocess
+import tarfile
 from pathlib import Path
 
 
@@ -13,9 +15,54 @@ def preserve(site, ref='FETCH_HEAD'):
     site = Path(site)
     def git(*args):
         return subprocess.check_output(['git', '-C', str(site), *args])
+    # Scanner snapshots have their own validated publisher. A routine dashboard
+    # rebuild must retain that whole publication, including its HTML/provenance
+    # and external asset URLs, rather than mixing it with an older checkout.
+    scanner = 'dashboard/scanner-backtest'
+    metadata = git('ls-tree', '--name-only', ref, '--', scanner+'/meta.json').decode().strip()
+    restored = False
+    if metadata:
+        data = json.loads(git('show', ref+':'+metadata))
+        snapshot = data.get('snapshot', {})
+        if not (re.fullmatch(r'[a-f0-9]{40}', snapshot.get('source_revision', ''))
+                and re.fullmatch(r'[a-f0-9]{64}', snapshot.get('snapshot_id', ''))):
+            raise ValueError('Published scanner provenance is invalid; retain previous site')
+        target = site/scanner
+        if target.exists():
+            shutil.rmtree(target)
+        process = subprocess.Popen(['git', '-C', str(site), 'archive', ref, scanner], stdout=subprocess.PIPE)
+        try:
+            with tarfile.open(fileobj=process.stdout, mode='r|') as archive:
+                for member in archive:
+                    path = Path(member.name)
+                    if path.is_absolute() or '..' in path.parts:
+                        raise ValueError('Invalid scanner archive path')
+                    if not path.is_relative_to(scanner):
+                        if member.isdir() and Path(scanner).is_relative_to(path):
+                            continue  # git archive includes ancestor directories.
+                        raise ValueError('Invalid scanner archive path')
+                    destination = site/path
+                    if member.isdir():
+                        destination.mkdir(parents=True, exist_ok=True)
+                    elif member.isfile():
+                        destination.parent.mkdir(parents=True, exist_ok=True)
+                        with archive.extractfile(member) as source, destination.open('wb') as output:
+                            shutil.copyfileobj(source, output)
+                    else:
+                        raise ValueError('Unsupported scanner archive entry')
+            if process.wait() != 0:
+                raise ValueError('Cannot preserve published scanner assets')
+        finally:
+            if process.poll() is None:
+                process.kill(); process.wait()
+        alias = site/'scanner-backtest'
+        if alias.exists():
+            shutil.rmtree(alias)
+        shutil.copytree(target, alias)
+        restored = True
     names = git('ls-tree', '-r', '--name-only', ref, '--', PREFIX).decode().splitlines()
     if PREFIX+'manifest.json' not in names:
-        return False  # Initial full-stock publication has not happened yet.
+        return restored  # Initial full-stock publication has not happened yet.
     manifest = git('show', ref+':'+PREFIX+'manifest.json')
     data = json.loads(manifest)
     if (not data.get('complete') or data.get('schema') != 'completed-parser-review-1'

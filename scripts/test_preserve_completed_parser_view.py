@@ -69,12 +69,21 @@ class PreserveCompletedView(unittest.TestCase):
             original = json.dumps(manifest).encode()
             (target/'manifest.json').write_bytes(original)
             (target/'index.html').write_text('published viewer')
+            scanner = work/'dashboard/scanner-backtest'
+            snapshot = json.dumps({'snapshot': {'source_revision': 'b'*40, 'snapshot_id': 'c'*64},
+                'keyword_projection': {'source_revision': 'd'*40}, 'asset_base_url': 'immutable-assets/'})
+            (scanner/'meta.json').write_text(snapshot)
+            (scanner/'index.html').write_text('<h1>Scanner backtest</h1><p>published keyword model</p>')
+            (scanner/'profiles.json').write_text('published profile hashes')
             git('add', '.'); git('commit', '-m', 'saved stock output')
             git('push', str(remote), 'HEAD:gh-pages')
             (target/'manifest.json').unlink()
             (target/'index.html').write_text('stale main viewer')
             (work/'dashboard/index.html').write_text('<h1>Dashboard</h1>')
             (work/'dashboard/scanner-backtest/index.html').write_text('<h1>Scanner backtest</h1><p>latest article model</p>')
+            (scanner/'meta.json').write_text('stale metadata')
+            (scanner/'profiles.json').unlink()
+            (scanner/'stale-only.json').write_text('must not mix with the published snapshot')
             scripts = work/'scripts'; scripts.mkdir()
             source = Path(__file__).parent
             for name in ('publish_dashboard.sh', 'preserve_completed_parser_view.py'):
@@ -90,8 +99,12 @@ class PreserveCompletedView(unittest.TestCase):
             self.assertEqual(git('show', 'FETCH_HEAD:'+PREFIX+'manifest.json').encode(), original)
             for prefix in ('dashboard/scanner-backtest', 'scanner-backtest'):
                 page = git('show', 'FETCH_HEAD:'+prefix+'/index.html')
-                self.assertIn('latest article model', page)
+                self.assertIn('published keyword model', page)
+                self.assertNotIn('latest article model', page)
                 self.assertIn('id="completed-stock-results"', page)
+                self.assertEqual(git('show', 'FETCH_HEAD:'+prefix+'/meta.json'), snapshot)
+                self.assertEqual(git('show', 'FETCH_HEAD:'+prefix+'/profiles.json'), 'published profile hashes')
+                self.assertNotIn(prefix+'/stale-only.json', git('ls-tree', '-r', '--name-only', 'FETCH_HEAD'))
 
 
 if __name__ == '__main__':

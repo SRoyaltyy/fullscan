@@ -89,8 +89,8 @@ git -C "$TMP" remote add origin \
 
 ATTEMPTS="${PAGES_PUSH_ATTEMPTS:-5}"
 for n in $(seq 1 "$ATTEMPTS"); do
-  # The saved filing view is published separately and is absent from main.
-  # Preserve it from the current remote tree on every retry, then use a lease
+  # Scanner snapshots and the saved filing view have separate publishers.
+  # Preserve them from the current remote tree on every retry, then use a lease
   # so a concurrent publisher cannot be silently overwritten.
   if ! remote_head=$(git -C "$TMP" ls-remote --heads origin refs/heads/gh-pages); then
     echo "[pages] WARN: cannot read current Pages tree; retaining the published site"
@@ -106,13 +106,13 @@ for n in $(seq 1 "$ATTEMPTS"); do
     fi
     prior=$(git -C "$TMP" rev-parse FETCH_HEAD)
     if ! python3 "$PUBLISH_SCRIPT_DIR/preserve_completed_parser_view.py" --site "$TMP" --ref "$prior"; then
-      echo "[pages] ERROR: cannot preserve completed parser results; retaining the published site"
+      echo "[pages] ERROR: cannot preserve scanner publication; retaining the published site"
       exit 1
     fi
   fi
   git -C "$TMP" add -A
   if ! git -C "$TMP" diff --cached --quiet; then
-    git -C "$TMP" commit -qm "Preserve published completed parser review"
+    git -C "$TMP" commit -qm "Preserve published scanner and completed parser review"
   fi
   if git -C "$TMP" push -q --force-with-lease="refs/heads/gh-pages:$prior" origin gh-pages; then
     echo "[pages] published https://SRoyaltyy.github.io/fullscan/dashboard/ (attempt ${n})"
