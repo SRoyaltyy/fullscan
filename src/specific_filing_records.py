@@ -9,7 +9,7 @@ import hashlib
 import re
 from collections import Counter
 
-VERSION = 'filing-specificity-1.1'
+VERSION = 'filing-specificity-1.2'
 WORD = r"[A-Z][A-Za-z0-9]*(?:[-’'][A-Za-z0-9]+)*"
 # An instrument ending cannot be swallowed as a title word and joined to the
 # next law in a list. Lowercase connectors and commas are part of real names.
@@ -25,6 +25,15 @@ POTENTIAL = re.compile(r'\b(?:may|might|could|if|proposed|proposal|considering)\
 DIRECT = re.compile(r'\b(?:we|the company|the registrant)\s+(?:(?:are|is)\s+(?:subject\s+to|required\s+to|regulated\s+by|bound\s+by)|must|shall|compl(?:y|ies)\s+with)|\bour\s+(?:business|operations?|service)\s+(?:is|are)\s+subject\s+to\b',re.I)
 REQUIREMENTS = re.compile(r'\b(?:content\s+(?:catalog\s+)?quotas?|local\s+content\s+quotas?|investment\s+obligations?|levies|data\s+localization|data\s+transfer|restrictions\s+on\s+data\s+export|local\s+ownership\s+requirements?|ownership\s+rights|net\s+neutrality|(?:broadcasting|operating|environmental|export)\s+(?:permits?|licen[sc]es?)|distribution\s+rights|public\s+performance\s+of\s+music)\b',re.I)
 PLACES = re.compile(r'\b(?:European Union|EU|United States|U\.S\.|UK|United Kingdom|California|Brazil|Japan|Delaware|Canada|France|Germany|India|Australia)\b')
+# Contract headings and XBRL cover fields are not named legal instruments.
+# Keep this separate from GENERIC, which also classifies old relationship heads.
+NON_INSTRUMENT_TITLES = frozenset(name.casefold() for name in (
+    'Country Code', 'Entity Address, Postal Zip Code', 'City Area Code',
+    'Zip Code', 'Entity Incorporation State Country Code',
+    'Compliance With Code', 'Choice of Law', 'Governing Law',
+    'General Rules and Regulations', 'Rules and Regulations', 'Signature Law',
+    'Shareholder Right to Act', 'Opined-on Law', 'Bankruptcy Law',
+))
 
 
 def _sentence_spans(text):
@@ -42,6 +51,11 @@ def _trim(match):
     text=match.group()
     prefix=re.match(r'(?:(?:The|Under|Our|We|For|Such|In|Any)\s+)+',text)
     trim=prefix.end() if prefix else 0
+    # A determiner after a comma starts a new enumerated name. For example,
+    # "GDPR, the California Consumer Privacy Act" contains two instruments,
+    # not one long title. Commas inside titles such as CERCLA remain intact.
+    boundaries=list(re.finditer(r',\s+(?:the|a|an)\s+',text[trim:]))
+    if boundaries:trim+=boundaries[-1].end()
     return match.start()+trim,match.end(),text[trim:]
 
 
@@ -53,6 +67,7 @@ def _names(text,pattern):
 def _law_groups(text):
     groups=[]
     for mention in _names(text,LAW):
+        if mention['text'].casefold() in NON_INSTRUMENT_TITLES:continue
         # A code and its explicitly stated alternative title are one identity.
         prior=groups[-1] if groups else None
         gap=text[prior['end']:mention['start']] if prior else ''
@@ -250,3 +265,4 @@ def validate_details(graph, extracted):
         if record['applicability'] in ('explicitly_out_of_scope','mention_only','third_party_context') and record['direct_obligation_asserted']:
             raise ValueError('unestablished or excluded obligation asserted')
     return len(extracted['records'])
+
