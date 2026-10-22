@@ -34087,18 +34087,101 @@
         "B7_OIL_DOLLAR": -1.0
       },
       "leading_sum": -14.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7694.62,
+      "actual_close": 7663.43,
+      "actual_pct_change": -1.21,
+      "actual_direction": "down",
+      "actual_magnitude_band": "notable",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": -2.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": -1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -3.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": -1.0,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://prod.chosunbiz.com/international/international_economy/2026/10/23/RS3LUWWGUJGYLL477OAWEYOMRA/",
+          "date_accessed": "2026-10-22",
+          "summary": "Confirms the bifurcated close and the defensive/defense-stock support that kept the Dow positive.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://prod.chosunbiz.com/international/international_economy/2026/10/23/RS3LUWWGUJGYLL477OAWEYOMRA/",
+          "date_accessed": "2026-10-22",
+          "summary": "Establishes NDX magnitude and the AI-capex causal channel.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.wsj.com/finance/investing/ai-stocks-slide-after-earnings-disappoint-french-bonds-tumble-and-oil-tops-112-734e47a7",
+          "date_accessed": "2026-10-22",
+          "summary": "Corroborates the earnings-driven AI selloff and the “beat sold” reaction function.",
+          "verification": "http_401"
+        },
+        {
+          "url": "https://tradingeconomics.com/france/government-bond-yield/news/594088",
+          "date_accessed": "2026-10-22",
+          "summary": "Establishes the French rates backdrop and its European-risk relevance.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.mitrade.com/insights/more/Central-Banks/fed-october-hold-december-hike-20261022J1428",
+          "date_accessed": "2026-10-22",
+          "summary": "Confirms the Fed-path backdrop was knowable and not a same-day surprise.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://prod.chosunbiz.com/international/international_economy/2026/10/23/RS3LUWWGUJGYLL477OAWEYOMRA/",
+          "date_accessed": "2026-10-22",
+          "summary": "Confirms the volatility regime shift from low-18s to near-20.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -34128,7 +34211,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": -8.314,
-      "overlay_score": -6.0
+      "overlay_score": -6.0,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "AI earnings/capex disappointment (Meta beat sold, Lam/IBM outlooks, Tesla capex cut) driving a concentrated tech/semiconductor liquidation",
+      "key_interaction": "Offsetting/masking — AI/tech liquidation was largely cancelled at the index level by violent rotation into defensives and Dow components, producing a muted SPX print inside a bifurcated tape",
+      "knowable_at_9am": "yes — the AI earnings disappointments and Hormuz oil spike were fully in the premarket tape; no major driver emerged after 9:00 AM ET",
+      "attribution_contested": "yes — WSJ leads with AI earnings + French bonds; Chosun Biz emphasizes AI capex burden + Middle East war risk; Business Insider gives oil co-equal headline weight; Trading Economics frames OAT as a standalone European story",
+      "outlier_watch": "XLE fell -2.01% despite Brent >$112, showing the oil shock did not transmit as a clean energy-equity bid; gold also fell ~2.7% despite risk-off"
     }
   ]
 }
