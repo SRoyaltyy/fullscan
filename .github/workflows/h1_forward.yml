@@ -76,7 +76,12 @@ concurrency:
 jobs:
   chain:
     # Pre-Open ALL finished. Dispatch today's seal inside the window only.
-    if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success'
+    # 2026-10-23: run on ANY Pre-Open ALL completion, not only success.
+    # Pre-Open ALL failed 10-20..10-22 (ECS offline) after its land job had
+    # already pushed the predict, so the chain was skipped and GitHub's cron
+    # fallback fired hours late. The seal's PREDICT GATE still refuses if the
+    # predict is missing, and the ledger check makes repeats a no-op.
+    if: github.event_name == 'workflow_run'
     runs-on: ubuntu-latest
     timeout-minutes: 355
     steps:
@@ -180,6 +185,30 @@ jobs:
           gh workflow run h1_forward.yml --repo "$REPO" --ref main \
             -f session_date="$SESSION" -f chain=true
           echo "dispatched h1 forward session_date=${SESSION} chain=true"
+      - name: Dispatch Factor Mine pre-open seal at 09:01 ET
+        # fm_preopen.yml only seals 09:00-09:25 ET and GitHub has dropped its
+        # 13:02/13:07/13:15/13:19 UTC crons (10-16, 10-22). Same chain job,
+        # so no new trigger. The FM seal is write-once; a repeat is a no-op.
+        if: always() && steps.clock.outputs.go == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          SESSION: ${{ steps.clock.outputs.session }}
+        run: |
+          set -euo pipefail
+          now() { echo "$((10#$(TZ=America/New_York date +%H%M)))"; }
+          while [ "$(now)" -lt 901 ]; do sleep 30; done
+          if [ "$(now)" -ge 920 ]; then
+            echo "09:20 ET passed; leaving the FM seal for ${SESSION} to its crons"
+            exit 0
+          fi
+          if gh api "repos/${REPO}/contents/data/factor_mine/preopen/seals/${SESSION}.json?ref=main" >/dev/null 2>&1; then
+            echo "FM seal for ${SESSION} already on main; nothing to dispatch"
+            exit 0
+          fi
+          gh workflow run fm_preopen.yml --repo "$REPO" --ref main \
+            -f step=seal -f date="$SESSION"
+          echo "dispatched Factor Mine seal date=${SESSION}"
 
   append:
     if: github.event_name != 'workflow_run'
