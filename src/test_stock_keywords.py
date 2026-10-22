@@ -40,6 +40,16 @@ class KeywordTests(unittest.TestCase):
         for value in ('ability', 'assurance', 'information', 'internal systems'):
             self.assertFalse(scanner_policy(dict(keyword=value,relationship='input'))['eligible'],value)
 
+    def test_dated_officer_adapter_exports_the_same_concrete_policy(self):
+        from .stock_evidence import Fact
+        person=Fact('person','John McDonald','John McDonald is our Chief Executive Officer.',
+                    source='SEC',filing_date='2026-01-01',accession='filing',section='Executive officers')
+        p=SimpleNamespace(name='Orion Inc.',facts=[person],keyword_records=[],keyword_evidence={})
+        index=KeywordIndex({'ORION':p})
+        rows=[e['row'] for e in index.browser_payload()['phrases'] if e['row']['relationship']=='officer']
+        self.assertTrue(rows)
+        self.assertTrue(all(r['scanner']['eligible'] and r['scanner']['label']=='has officer' for r in rows))
+
     def test_negative_latest_connection_cannot_leak_into_any_search_result(self):
         index=KeywordIndex({'BLZE':profile(compile_keywords(graph(),as_of='2026-04-01'))})
         for date in ('', '2026-04-01'):
