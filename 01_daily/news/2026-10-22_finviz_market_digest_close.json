@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-22",
+  "generated_at": "2026-10-22T16:30:40.566586-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-23",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-23) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed lower as AI spending concerns hit tech and semis while Brent crude topped $113 and the 10-year yield slipped to 5.01%",
+  "raw_text": "- The S&P 500 ($SPX) fell about 1.2% to 7,663, the Nasdaq Composite ($COMP) lost roughly 2.6% to 26,009 for its worst session since June, the Dow Jones ($DJI) finished roughly flat at 52,868, and the Russell 2000 (IWM) edged up about 0.1%.\n- Meta Platforms (META) dropped about 7% after Q3 results highlighted elevated AI capital spending, its first negative free cash flow in over a decade, and plans for non-voting share issuance to fund further AI buildout.\n- Tesla (TSLA) declined roughly 3% after mixed Q3 results that emphasized future AI and robotics investment, raising investor questions about the pace of that spending.\n- The Philadelphia Semiconductor Index sank around 6.3–6.5%, with Nvidia (NVDA) (down about 4% earlier), Lam Research (LRCX), and Micron Technology (MU) among the laggards, as Lam cited supply chain constraints.\n- Moderna (MRNA) fell about 18% to around $203 after an apparent embargo breach related to positive melanoma cancer vaccine data from its partnership with Merck (MRK).\n- Spotify (SPOT) gained about 11% after Q3 earnings and guidance projected fourth-quarter profit above estimates and highlighted improved margins supported by AI-powered features.\n- Lockheed Martin (LMT) rose after raising its annual sales and profit guidance, while Procter & Gamble (PG) advanced following an earnings beat.\n- Defensive sectors outperformed as consumer staples and utilities each climbed more than 2%, supported by a flight into Treasuries that pushed the 10-year yield down to 5.01%.\n- Brent crude oil (@QA) topped $113 per barrel amid renewed Middle East tensions, including deadly attacks in Saudi Arabia, reinforcing the risk-off tone in broader markets.\n- After the close, Newmont (NEM), Western Digital (WDC), Bloom Energy (BE), and Comfort Systems USA (FIX) are scheduled to report earnings.",
+  "raw_summary_md": "- The S&P 500 ([$SPX](https://finviz.com/index/SPX?p=d)) **fell about 1.2% to 7,663**, the Nasdaq Composite ([$COMP](https://finviz.com/index/COMP?p=d)) **lost roughly 2.6% to 26,009 for its worst session since June**, the Dow Jones ([$DJI](https://finviz.com/index/DJI?p=d)) **finished roughly flat at 52,868**, and the Russell 2000 ([IWM](https://finviz.com/quote?t=IWM)) **edged up about 0.1%**.\n- Meta Platforms ([META](https://finviz.com/quote?t=META)) **dropped about 7%** after Q3 results highlighted **elevated AI capital spending**, its **first negative free cash flow in over a decade**, and plans for non-voting share issuance to fund further AI buildout.\n- Tesla ([TSLA](https://finviz.com/quote?t=TSLA)) **declined roughly 3%** after mixed Q3 results that emphasized **future AI and robotics investment**, raising investor questions about the pace of that spending.\n- The Philadelphia Semiconductor Index **sank around 6.3–6.5%**, with Nvidia ([NVDA](https://finviz.com/quote?t=NVDA)) (down about 4% earlier), Lam Research ([LRCX](https://finviz.com/quote?t=LRCX)), and Micron Technology ([MU](https://finviz.com/quote?t=MU)) among the laggards, as Lam cited **supply chain constraints**.\n- Moderna ([MRNA](https://finviz.com/quote?t=MRNA)) **fell about 18% to around $203** after an **apparent embargo breach** related to **positive melanoma cancer vaccine data** from its partnership with Merck ([MRK](https://finviz.com/quote?t=MRK)).\n- Spotify ([SPOT](https://finviz.com/quote?t=SPOT)) **gained about 11%** after Q3 earnings and guidance projected **fourth-quarter profit above estimates** and highlighted **improved margins** supported by AI-powered features.\n- Lockheed Martin ([LMT](https://finviz.com/quote?t=LMT)) **rose after raising its annual sales and profit guidance**, while Procter & Gamble ([PG](https://finviz.com/quote?t=PG)) **advanced following an earnings beat**.\n- **Defensive sectors outperformed** as consumer staples and utilities each **climbed more than 2%**, supported by a flight into Treasuries that pushed the **10-year yield down to 5.01%**.\n- Brent crude oil ([@QA](https://finviz.com/futures_charts?t=QA)) **topped $113 per barrel** amid **renewed Middle East tensions**, including **deadly attacks in Saudi Arabia**, reinforcing the risk-off tone in broader markets.\n- **After the close**, Newmont ([NEM](https://finviz.com/quote?t=NEM)), Western Digital ([WDC](https://finviz.com/quote?t=WDC)), Bloom Energy ([BE](https://finviz.com/quote?t=BE)), and Comfort Systems USA ([FIX](https://finviz.com/quote?t=FIX)) are **scheduled to report earnings**.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -1.2,
+      "verb": "fell"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -2.6,
+      "verb": "lost"
+    }
+  ],
+  "oil": {
+    "name": "Brent crude",
+    "price": 113.0,
+    "verb": null,
+    "direction": null
+  },
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "META",
+    "TSLA",
+    "NVDA",
+    "LRCX",
+    "MU",
+    "MRNA",
+    "MRK",
+    "SPOT",
+    "LMT",
+    "PG",
+    "NEM",
+    "WDC",
+    "BE",
+    "FIX"
+  ],
+  "named_leaders": [
+    "META",
+    "TSLA",
+    "NVDA",
+    "LRCX",
+    "MU",
+    "MRNA",
+    "MRK",
+    "SPOT",
+    "LMT",
+    "PG",
+    "NEM",
+    "WDC",
+    "BE",
+    "FIX"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": -1.2,
+    "nasdaq": -2.6,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Brent crude oil (@QA) topped $113 per barrel amid renewed Middle East tensions, including deadly attacks in Saudi Arabia, reinforcing the risk-off tone in broader markets."
+  },
+  "finviz_id": 315914,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-22T16:08:04.28",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
