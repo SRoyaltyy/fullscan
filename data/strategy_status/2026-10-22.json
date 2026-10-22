@@ -26,8 +26,8 @@
    "SIT": 0
   },
   "holdup": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "paper": {
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-10-22",
- "generated_at": "2026-10-22T06:25:07-04:00",
+ "generated_at": "2026-10-22T08:13:42-04:00",
  "strategies": [
   {
    "buys": [
@@ -5919,13 +5919,18 @@
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "BMBL",
+    "LQDA",
+    "CYPH",
+    "ASST"
+   ],
    "family": "holdup",
    "name": "holdup",
-   "note": "no sealed plan row",
+   "note": "sealed 2026-10-22T12:08:34Z",
    "sells": [],
    "source": "research/hot_n4_clean_v4/forward/holdup_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
