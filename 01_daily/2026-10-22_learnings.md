@@ -1,6 +1,6 @@
 # Learnings report — 2026-10-22
 
-Generated: **2026-10-22T16:39:17.750536-04:00** by `src/learn_cycle.py`.
+Generated: **2026-10-22T19:32:58.826155-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -13,18 +13,18 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Item | Value |
 |------|-------|
 | Graded runs mined | 180 |
-| Hypotheses written | 181 (wins=76, losses=105) |
+| Hypotheses written | 181 (wins=77, losses=104) |
 | News hypotheses | 1 |
 | Lessons promoted to active | 0 |
 | Lessons retired (efficacy-gated) | 10 |
-| Active lesson files now | 211 |
-| Engine policy version | 113 |
+| Active lesson files now | 201 |
+| Engine policy version | 115 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
 | Topic | Direction HIT% | hits/n | Read |
 |-------|----------------|--------|------|
-| general | 47% | 7/15 | weak — priority |
+| general | 53% | 8/15 | weak — priority |
 | sector:Basic Materials | 20% | 3/15 | weak — priority |
 | sector:Communication Services | 13% | 2/15 | weak — priority |
 | sector:Consumer Cyclical | 27% | 4/15 | weak — priority |
@@ -41,14 +41,7 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 
 Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the **experiment** to run next, and the **policy candidate** (do instead).
 
-### `general` — 7 wins, 8 losses
-
-#### WIN — 2026-10-14
-- **When:** [general] Predicted down, market/sector went down (pct=-1.11, score=-1.645, sector=).
-- **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
-- **Experiment:** [general] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
-- **Do instead:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
-- **Wrong if:** [general] Wrong if milder bands hurt direction accuracy over 10 runs.
+### `general` — 8 wins, 7 losses
 
 #### LOSS — 2026-10-16
 - **When:** [general] Predicted up but went down (pct=-1.09, score=5.526, sector=).
@@ -78,10 +71,17 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 - **Do instead:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **Wrong if:** [general] Wrong if milder bands hurt direction accuracy over 10 runs.
 
+#### WIN — 2026-10-22
+- **When:** [general] Predicted down, market/sector went down (pct=-1.21, score=-14.314, sector=).
+- **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
+- **Experiment:** [general] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
+- **Do instead:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **Wrong if:** [general] Wrong if milder bands hurt direction accuracy over 10 runs.
+
 ### `news` — 0 wins, 1 losses
 
 #### LOSS — news
-- **When:** [news] Global 1d close win rate 52.3% (n=3185).
+- **When:** [news] Global 1d close win rate 52.3% (n=3180).
 - **Ask:** Entry timing, side mix, or event taxonomy noise?
 - **Experiment:** [news] Raise min net weight to map a ticker; drop weak edges.
 - **Do instead:** [news] Only emit actions with |net| above a higher floor.
@@ -502,31 +502,31 @@ Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`
 
 ## 4b. Retired this cycle (topic got worse after the lesson went live)
 
-- `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on-gro.md` (sector:Utilities): 80% → 14% (-66%) → `02_lessons/retired/`
-- `a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md` (sector:Financial): 75% → 14% (-61%) → `02_lessons/retired/`
-- `in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md` (sector:Utilities): 75% → 14% (-61%) → `02_lessons/retired/`
-- `a-consumer-cyclical-down-call-is-driven-by-a-genuinely-negat.md` (sector:Consumer Cyclical): 86% → 29% (-57%) → `02_lessons/retired/`
-- `a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md` (sector:Consumer Cyclical): 71% → 14% (-57%) → `02_lessons/retired/`
-- `when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md` (sector:Energy): 71% → 14% (-57%) → `02_lessons/retired/`
-- `a-sector-call-has-a-decisively-negative-fundamental-spine-fr.md` (sector:Consumer Cyclical): 83% → 29% (-55%) → `02_lessons/retired/`
-- `a-utility-defensive-sector-call-is-built-on-a-carried-defens.md` (sector:Utilities): 67% → 14% (-52%) → `02_lessons/retired/`
-- `sector-prediction-made-when-the-sector-s-dominant-commodity.md` (sector:Energy): 67% → 14% (-52%) → `02_lessons/retired/`
-- `a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-rele.md` (sector:Financial): 60% → 14% (-46%) → `02_lessons/retired/`
+- `a-fresh-top-holding-legal-regulatory-catalyst-e-g-a-trial-op.md` (sector:Communication Services): 43% → 0% (-43%) → `02_lessons/retired/`
+- `a-cyclical-industrials-etf-xli-like-posts-an-all-zero-s0-s4.md` (sector:Industrials): 71% → 29% (-43%) → `02_lessons/retired/`
+- `a-defensive-bond-proxy-sector-utilities-faces-a-risk-off-tap.md` (sector:Utilities): 57% → 14% (-43%) → `02_lessons/retired/`
+- `a-healthcare-xlv-call-with-s0-0-flat-mixed-es-nq-leftover-te.md` (sector:Healthcare): 71% → 29% (-43%) → `02_lessons/retired/`
+- `a-live-macro-shock-oil-geopolitical-is-present-at-the-open-t.md` (sector:Consumer Cyclical): 57% → 14% (-43%) → `02_lessons/retired/`
+- `a-long-duration-rate-sensitive-sector-reits-faces-a-live-rat.md` (sector:Real Estate): 71% → 29% (-43%) → `02_lessons/retired/`
+- `a-single-macro-shock-oil-rates-is-scored-as-multiple-indepen.md` (sector:Consumer Cyclical): 57% → 14% (-43%) → `02_lessons/retired/`
+- `a-technology-xlk-down-call-has-strongly-negative-leading-com.md` (sector:Technology): 57% → 14% (-43%) → `02_lessons/retired/`
+- `sector-etf-prediction-where-the-prior-session-had-a-modest-p.md` (sector:Healthcare): 71% → 29% (-43%) → `02_lessons/retired/`
+- `sector-prediction-emits-flat-flat-when-broad-market-tape-is.md` (sector:Healthcare): 71% → 29% (-43%) → `02_lessons/retired/`
 
 ## 4c. Numeric factor weights (engine_policy.json)
 
 These are applied by `compute_scores` / `compute_sector_scores` regardless of what the LLM writes — the part of learning that cannot be ignored.
 
 General (B0–B7 LLM components; multiplier applied by compute_scores):
-- B0_ASIA: n=27 sign-hit=0.56 → ×1.0
-- B0_EUROPE: n=18 sign-hit=0.67 → ×1.25
-- B1_CATALYSTS: n=32 sign-hit=0.72 → ×1.25
-- B2_BONDS: n=41 sign-hit=0.39 → ×0.0
+- B0_ASIA: n=28 sign-hit=0.57 → ×1.0
+- B0_EUROPE: n=19 sign-hit=0.68 → ×1.25
+- B1_CATALYSTS: n=33 sign-hit=0.73 → ×1.25
+- B2_BONDS: n=42 sign-hit=0.38 → ×0.0
 - B3_FEDPATH: n=31 sign-hit=0.45 → ×0.5
 - B4_VIX: n=13 sign-hit=0.54 → ×0.5
-- B5_SENTIMENT: n=23 sign-hit=0.30 → ×0.0
-- B6_FUTURES: n=29 sign-hit=0.76 → ×1.25
-- B7_OIL_DOLLAR: n=41 sign-hit=0.56 → ×1.0
+- B5_SENTIMENT: n=24 sign-hit=0.33 → ×0.0
+- B6_FUTURES: n=30 sign-hit=0.77 → ×1.25
+- B7_OIL_DOLLAR: n=42 sign-hit=0.57 → ×1.0
 Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S0_SHARED_MACRO: n=204 sign-hit=0.58 → ×1.0
 - S1_SECTOR_FACTORS: n=226 sign-hit=0.54 → ×0.5
