@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-22
 
-**Generated:** 2026-10-22T04:25:33.724052-04:00 (America/New_York)
+**Generated:** 2026-10-22T04:26:21.096705-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US equity futures point lower as Gulf tensions lift oil over 2% ahead of jobless claims and busy earnings slate
 **Prior close:** SPX —  Nasdaq —  Dow —
