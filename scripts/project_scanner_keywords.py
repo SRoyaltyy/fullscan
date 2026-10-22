@@ -1,11 +1,11 @@
 """Publish a keyword-only projection without rerunning cached article scores.
 
 The scoring snapshot, articles, decisions, source facts and evidence stay bound
-to their original revision. Only derived retrieval identities and the concrete
-connection admission policy are regenerated, using the shared Python compiler.
+to their original revision. The concrete-connection admission policy is applied
+by the shared Python compiler; verified unchanged retrieval identities are reused.
 """
 import argparse
-import copy
+import ast
 import gzip
 import hashlib
 import json
@@ -13,11 +13,11 @@ import os
 from pathlib import Path
 import shutil
 import tempfile
-from types import SimpleNamespace
 
 from scripts.publish_scanner_snapshot import (ARTIFACTS, INPUT_PATHS, artifact_names,
     git, git_input, validate, validate_budget)
-from src.stock_keywords import KeywordIndex, SCANNER_POLICY, annotate_scanner_rows, scanner_visible
+from src.stock_keywords import SCANNER_POLICY, SCHEMA, annotate_scanner_rows, scanner_visible
+from src.entity_resolution import POLICY, VERSION as ALIGNMENT_VERSION
 
 ROOT = Path(__file__).resolve().parents[1]
 UNCHANGED = ('articles.json', 'results.jsonl', 'ticker-index.json')
@@ -37,10 +37,38 @@ def source_hashes():
             if p.is_file() and '__pycache__' not in p.parts}
 
 
+def ensure_identity_compatibility(meta):
+    """Reuse only identities produced by unchanged code and pinned meanings."""
+    snapshot=meta['snapshot']
+    for name in ('src/entity_resolution.py','src/linguistics.py','src/semantic_lookup.py',
+                 'src/data/english_words.txt','src/data/lemma_lookup.json.gz'):
+        if snapshot.get('source_hashes',{}).get(name) != digest((ROOT/name).read_bytes()):
+            raise ValueError('cached identity method changed; full rebuild required: '+name)
+    revision=snapshot['source_revision']
+    def original(path):
+        try:return git('show',revision+':'+path)
+        except Exception:
+            git('fetch','--filter=blob:none','--depth=1','origin',revision)
+            return git('show',revision+':'+path)
+    def normalization_definitions(source):
+        return [ast.dump(node,include_attributes=False) for node in ast.parse(source).body
+            if isinstance(node,(ast.FunctionDef,ast.AsyncFunctionDef)) and node.name=='normalized_words'
+            or isinstance(node,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='TOKEN' for t in node.targets)]
+    if normalization_definitions(original('src/stock_keywords.py')) != normalization_definitions((ROOT/'src/stock_keywords.py').read_text()):
+        raise ValueError('cached keyword normalization changed; full rebuild required')
+    old=json.loads(original('src/data/senses/manifest.json'))
+    current=json.loads((ROOT/'src/data/senses/manifest.json').read_text())
+    if {e['file']:e['sha256'] for e in old['files']} != {e['file']:e['sha256'] for e in current['files']}:
+        raise ValueError('cached semantic meanings changed; full rebuild required')
+
+
 def project(source, destination, revision):
     meta = json.loads((source/'meta.json').read_text())
     original_revision = meta['snapshot']['source_revision']
+    print('Validating the complete cached scoring snapshot',flush=True)
     validate(source, original_revision)
+    ensure_identity_compatibility(meta)
+    print('Verified unchanged identity and normalization methods',flush=True)
     if meta['snapshot'].get('keyword_comparison_mode') != 'browser_preview':
         raise ValueError('cached keyword comparisons require a full rescore')
     meta.pop('asset_base_url', None)
@@ -49,7 +77,7 @@ def project(source, destination, revision):
         shutil.copyfile(source/name, destination/name)
     shutil.copytree(source/'filing-profiles', destination/'filing-profiles')
     summaries = json.loads((source/'profiles.json').read_text())
-    profiles = {}
+    policies = {}
     total = visible = 0
     for ticker, summary in sorted(summaries.items()):
         path = source/summary['profile_path']
@@ -57,52 +85,56 @@ def project(source, destination, revision):
         if digest(raw) != summary['profile_sha256']:
             raise ValueError('scoring profile checksum mismatch: '+ticker)
         payload = json.loads(gzip.decompress(raw))
-        before = copy.deepcopy(payload)
+        original_records=digest(json.dumps([{k:v for k,v in r.items() if k!='scanner'} for r in payload['keywords']],sort_keys=True).encode())
         annotate_scanner_rows(payload['keywords'], payload['keyword_evidence'])
-        profiles[ticker] = SimpleNamespace(name=payload['name'], facts=[],
-            keyword_records=payload['keywords'], keyword_evidence=payload['keyword_evidence'],
-            keyword_coverage=payload['keyword_coverage'])
-        def original_fields(p):
-            p = copy.deepcopy(p)
-            for row in p['keywords']:
-                row.pop('scanner', None)
-                row.pop('identity', None)
-            return p
-        if original_fields(payload) != original_fields(before):
+        if original_records != digest(json.dumps([{k:v for k,v in r.items() if k!='scanner'} for r in payload['keywords']],sort_keys=True).encode()):
             raise ValueError('projection changed a source record: '+ticker)
+        policies[ticker]={row['id']:row['scanner'] for row in payload['keywords']}
         target=destination/summary['profile_path']
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_bytes(gzip.compress(json.dumps(payload, ensure_ascii=False, sort_keys=True).encode(),mtime=0))
+        raw=gzip.compress(json.dumps(payload, ensure_ascii=False, sort_keys=True).encode(),compresslevel=6,mtime=0)
+        target.write_bytes(raw)
+        summaries[ticker]['profile_sha256']=digest(raw)
         total += len(payload['keywords'])
         visible += sum(scanner_visible(row) for row in payload['keywords'])
-    # Reuse the exact compiler and identity policy used by the normal exporter.
-    index = KeywordIndex(profiles)
-    for ticker, profile in profiles.items():
-        target=destination/summaries[ticker]['profile_path']
-        payload=json.loads(gzip.decompress(target.read_bytes()))
-        payload['keywords']=profile.keyword_records
-        raw = gzip.compress(json.dumps(payload, ensure_ascii=False, sort_keys=True).encode(), mtime=0)
-        target.write_bytes(raw)
-        summaries[ticker]['profile_sha256'] = digest(raw)
-    payload = index.browser_payload()
-    phrases = payload.pop('phrases')
-    buckets = {}
-    for entry in phrases:
-        bucket = digest(entry['phrase'][0].encode())[:2]
-        buckets.setdefault(bucket, []).append(entry)
+        if len(policies)%250==0:print('Filtered',len(policies),'of',len(summaries),'stock assets',flush=True)
+    # The identity compiler is unchanged (guarded above). Stream its verified
+    # index one bucket at a time, applying the shared policy by exact record ID.
+    # No cross-company alias, normalized phrase or source identity is guessed.
+    original_index=json.loads(gzip.decompress((source/'keyword-index.json.gz').read_bytes()))
+    if (original_index.get('schema')!=SCHEMA or original_index.get('identity_policy')!=POLICY
+            or original_index.get('alignment_version')!=ALIGNMENT_VERSION
+            or original_index.get('bucket_method')!='token_sha256_2'):
+        raise ValueError('unsupported cached identity index; full rebuild required')
     (destination/'keyword-index').mkdir()
-    payload.update(bucket_method='token_sha256_2', buckets={})
-    for bucket, entries in sorted(buckets.items()):
-        raw = gzip.compress(json.dumps(entries, ensure_ascii=False, separators=(',', ':')).encode(), mtime=0)
+    payload={**original_index,'scanner_policy':SCANNER_POLICY,'buckets':{}}
+    phrase_count=0
+    for position,(bucket, definition) in enumerate(sorted(original_index['buckets'].items()),1):
+        raw=(source/definition['path']).read_bytes()
+        if digest(raw)!=definition['sha256']:raise ValueError('cached keyword bucket checksum mismatch')
+        entries=[]
+        for entry in json.loads(gzip.decompress(raw)):
+            row=entry['row']
+            if row['relationship']!='issuer':
+                policy=policies.get(row['stock'],{}).get(row['id'])
+                if policy is None:raise ValueError('cached keyword is absent from its stock profile')
+                if not policy['eligible']:continue
+                row['scanner']=policy
+            entries.append(entry)
+        if not entries:continue
+        phrase_count+=len(entries)
+        raw = gzip.compress(json.dumps(entries, ensure_ascii=False, separators=(',', ':')).encode(), compresslevel=6,mtime=0)
         path = 'keyword-index/'+bucket+'.json.gz'
         (destination/path).write_bytes(raw)
         payload['buckets'][bucket] = {'path':path, 'sha256':digest(raw)}
+        if position%32==0:print('Filtered',position,'of',len(original_index['buckets']),'keyword buckets',flush=True)
     raw = gzip.compress(json.dumps(payload, ensure_ascii=False, separators=(',', ':')).encode(), mtime=0)
     (destination/'keyword-index.json.gz').write_bytes(raw)
-    meta['keyword_index'].update(sha256=digest(raw), phrases=len(phrases))
+    meta['keyword_index'].update(sha256=digest(raw), phrases=phrase_count)
     projection = {'source_revision':revision, 'policy':SCANNER_POLICY,
         'based_on_snapshot':meta['snapshot']['snapshot_id'], 'source_hashes':source_hashes(),
-        'cached_scores_unchanged':True, 'profiles':len(profiles),
+        'cached_scores_unchanged':True, 'profiles':len(summaries),
+        'identity_revision':original_revision, 'identities_recompiled':False,
         'covered_tickers':len(meta['snapshot']['filing_coverage']['covered_tickers']),
         'retained_records':total, 'visible_current_connections':visible,
         'unchanged_sha256':{name:digest((source/name).read_bytes()) for name in UNCHANGED}}
