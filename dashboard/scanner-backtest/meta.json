@@ -63,8 +63,8 @@
       "src/data/senses/verb.social.json.gz": "07a63b5796437d236b9de5a2190e6db1afdbc8aaa6871bb2b1c3838921149c2d",
       "src/data/senses/verb.stative.json.gz": "1dcdb6a84b8aa35b22b405d28d17762c507f2c2bfe0099f2de3624a893774acf"
     },
-    "profile_fingerprint": "6d75e83e86c95ab42effe2f0664479c568852972c0e5cd9655e28d2cce527efc",
-    "profile_inputs_sha256": "45fd82be2dbc76a8744a2e74deb6917019a2bd001b17d5c5fe13e2a6d757fde6",
+    "profile_fingerprint": "b184a78dd62f86997ea67b8e50713600a974b378c8b602faecff146119377911",
+    "profile_inputs_sha256": "a66386a3bfb863a81ef2ab7374030b291aa87a86dc4407b5cbb946258fafeace",
     "filing_coverage": {
       "scope": "deep_filing_relationships",
       "complete": true,
@@ -83,7 +83,7 @@
       "archive_tickers": 1,
       "catalog_tickers": 5961,
       "archive_tickers_outside_catalog": [],
-      "profile_index_sha256": "2817347fb3686f5a39b6f783cc0be3ef417cd3cc8acef17a80bcaf9e343f7e8d",
+      "profile_index_sha256": "540e8b3f67179695eeb24a6d995b4b8898be7a5514022b7cdab00f2276412161",
       "characters": 17279556,
       "companies": 1,
       "documents": 381,
@@ -97,22 +97,22 @@
       "mode": "full",
       "dataset_scope": "development_sample",
       "whole_archive_complete": false,
-      "archive_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/39660625047",
+      "archive_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/39705766890",
       "base_url": ""
     },
-    "engine_snapshot_id": "50a9551ed145536593d9346a623d89e0d58086db9322cb9cfaa864a295865c6b",
-    "source_revision": "f2132df37e7296add799c838b935b80ebb9a031e",
+    "engine_snapshot_id": "011ea9ee4eb846e8039a833624c603aafad67382fc68238b27fd0f9834711466",
+    "source_revision": "dbc2f15da12e44facff994c55ac0a0ed4895641e",
     "news_sha256": "c178bcd3b7265f9de3d1186beee0ee1199c1aa28526da27133e8cd245a8630eb",
     "article_entities_sha256": "c39c8e9628225be941719adfabf549835bec1bf3431aebeea9faf227c40bec60",
-    "snapshot_id": "f022ec96b92ee5e61f71d001bae5561634c00badf28a9792eb58aaca73871292"
+    "snapshot_id": "296d7558bd04da3b101801ff359fe8afdccd4df41faf63abddde4cda4557f824"
   },
   "articles": 11255,
   "articles_with_passes": 2565,
   "keyword_index": {
     "path": "keyword-index.json.gz",
-    "sha256": "8f16f2f4ae8c5476b09cdcc8fbf537ba0032a2658826492271feb02a12e0cd4d",
+    "sha256": "6949a002d78f4ff8fe93370c289a91331a60ad87b2a1dbe42ef8203bf03e2635",
     "schema": "stock-keywords-1.1",
     "phrases": 11313
   },
-  "generated_at": "2026-10-21T20:15:25Z"
+  "generated_at": "2026-10-22T01:44:08Z"
 }
