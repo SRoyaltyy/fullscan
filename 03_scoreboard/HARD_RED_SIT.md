@@ -26,13 +26,292 @@ Clock split: (A) short-only is a pre-open policy call — shorts fire at the clo
 
 ## RESEARCH per sleeve (paper, not a wire)
 
-**2026-10-22** — `1` sit sleeves with looked names / `1` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
+**2026-10-22** — `280` sit sleeves with looked names / `342` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
 
 Per-sleeve paper counterfactuals on looked names. Live sit stays default. KEEP bar unchanged. (A) short-only fires the short kid at the 09:30 open. (B) dip-scoop longs wait for open−X% (session low / Elite live). Close does not trigger.
 
 | Sleeve | Side | (A) short-only @ open | (B) dip-scoop X% |
 |---|---|---|---|
-| `flatten_robust` | long | — | CORT miss; VEEV miss; CDNA miss; ARQT miss; CRON miss; ETON miss; TWLO miss |
+| `flatten_robust` | long | — | CHRD miss; NEO miss; NEOG miss; MNR miss; SMMT miss; PRMB miss; VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss |
+| `union_h1` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h3` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h5` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `flatten_h1` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h3` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h5` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `probable_h1` | long | — | NVTS miss; EGG miss; SMMT miss; PRMB miss; EPR miss; PDFS miss; AIP miss; CXW miss |
+| `probable_h3` | long | — | NVTS miss; EGG miss; SMMT miss; PRMB miss; EPR miss; PDFS miss; AIP miss; CXW miss |
+| `probable_h5` | long | — | NVTS miss; EGG miss; SMMT miss; PRMB miss; EPR miss; PDFS miss; AIP miss; CXW miss |
+| `yday_gainer_h1` | long | — | ITW miss; POOL miss; NVTS miss; EGG miss; QTTB miss; SMMT miss; PRMB miss; EPR miss |
+| `yday_gainer_h3` | long | — | ITW miss; POOL miss; NVTS miss; EGG miss; QTTB miss; SMMT miss; PRMB miss; EPR miss |
+| `yday_gainer_h5` | long | — | ITW miss; POOL miss; NVTS miss; EGG miss; QTTB miss; SMMT miss; PRMB miss; EPR miss |
+| `ohlc_hot_h1` | long | — | DOCU miss; SHO miss; IBM miss; TRI miss; TRU miss; AMX miss; BMBL miss; ENGS miss |
+| `ohlc_hot_h3` | long | — | DOCU miss; SHO miss; IBM miss; TRI miss; TRU miss; AMX miss; BMBL miss; ENGS miss |
+| `ohlc_hot_h5` | long | — | DOCU miss; SHO miss; IBM miss; TRI miss; TRU miss; AMX miss; BMBL miss; ENGS miss |
+| `overnight_h1` | long | — | NEM miss; BBD miss |
+| `overnight_h3` | long | — | NEM miss; BBD miss |
+| `overnight_h5` | long | — | NEM miss; BBD miss |
+| `union_vol_g_h1` | long | — | EGG miss |
+| `union_vol_g_h3` | long | — | EGG miss |
+| `union_ab_g_h1` | long | — | CSX miss; DOV miss; SPOT miss; VEEV miss; ITW miss; POOL miss; DGX miss; DOW miss |
+| `union_ab_g_h3` | long | — | CSX miss; DOV miss; SPOT miss; VEEV miss; ITW miss; POOL miss; DGX miss; DOW miss |
+| `union_join_g_h1` | long | — | VEEV miss; PHM miss; CDNA miss; CRON miss; QTTB miss; NEM miss; CORT miss; ARQT miss |
+| `union_join_g_h3` | long | — | VEEV miss; PHM miss; CDNA miss; CRON miss; QTTB miss; NEM miss; CORT miss; ARQT miss |
+| `union_join_present_h1` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_join_present_h3` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_news_g_h1` | long | — | CSX miss; SAP miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss |
+| `union_news_g_h3` | long | — | CSX miss; SAP miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss |
+| `union_news_present_h1` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_news_present_h3` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_blue_h1` | long | — | CSX miss; DOV miss; PCG miss; VEEV miss; ITW miss; POOL miss; HON miss; LUV miss |
+| `union_blue_h3` | long | — | CSX miss; DOV miss; PCG miss; VEEV miss; ITW miss; POOL miss; HON miss; LUV miss |
+| `union_last_green_h1` | long | — | CSX miss; DOV miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss; DGX miss |
+| `union_last_green_h3` | long | — | CSX miss; DOV miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss; DGX miss |
+| `union_last_red_h1` | long | — | PCG miss; DOW miss; HON miss; MOH miss; PHM miss; GLND miss; NEM miss; CORT miss |
+| `union_last_red_h3` | long | — | PCG miss; DOW miss; HON miss; MOH miss; PHM miss; GLND miss; NEM miss; CORT miss |
+| `union_candle_h1` | long | — | CSX miss; DOV miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss; DGX miss |
+| `union_candle_h3` | long | — | CSX miss; DOV miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss; DGX miss |
+| `union_coil_off_h1` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_coil_off_h3` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_earn_react_h1` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `union_earn_react_h3` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `union_overnight_h1` | long | — | NEM miss |
+| `union_overnight_h3` | long | — | NEM miss |
+| `union_e_fresh_h1` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `union_e_fresh_h3` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `union_break10_h1` | long | — | DOV miss; SAP miss; ITW miss; CRON miss; SHO miss; IBM miss; TRI miss; TRU miss |
+| `union_break10_h3` | long | — | DOV miss; SAP miss; ITW miss; CRON miss; SHO miss; IBM miss; TRI miss; TRU miss |
+| `union_rsi_os_h1` | long | — | PCG miss; DGX miss |
+| `union_rsi_os_h3` | long | — | PCG miss; DGX miss |
+| `union_macd_up_h1` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_macd_up_h3` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_macd_xup_h1` | long | — | CDNA miss; CRON miss; ACRS miss; CRCL miss |
+| `union_macd_xup_h3` | long | — | CDNA miss; CRON miss; ACRS miss; CRCL miss |
+| `union_flow_in_h1` | long | — | CSX miss; CECO miss; HLT miss |
+| `union_flow_in_h3` | long | — | CSX miss; CECO miss; HLT miss |
+| `union_vol_g_h5` | long | — | EGG miss |
+| `union_coil_off_h5` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_last_green_h5` | long | — | CSX miss; DOV miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss; DGX miss |
+| `union_news_g_h5` | long | — | CSX miss; SAP miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss |
+| `union_rsi_os_h5` | long | — | PCG miss; DGX miss |
+| `union_flow_in_h5` | long | — | CSX miss; CECO miss; HLT miss |
+| `union_news_pack_h1` | long | — | CSX miss; SAP miss; UNP miss; HLT miss |
+| `union_news_head_h1` | long | — | ITW miss; LUV miss; GLND miss; CRCL miss |
+| `union_news_or_h1` | long | — | CSX miss; SAP miss; UNP miss; ITW miss; LUV miss; GLND miss; HLT miss; CRCL miss |
+| `union_news_g_cond_h1` | long | — | CSX miss; SAP miss; UNP miss; ITW miss; GLND miss; HLT miss; CRCL miss |
+| `union_news_g_cam71_h1` | long | — | HLT miss |
+| `union_news_g_cam61_h1` | long | — | HLT miss |
+| `union_news_or_net2_h1` | long | — | CSX miss; SAP miss; UNP miss; HLT miss; CRCL miss |
+| `union_news_or_net3_h1` | long | — | CSX miss; SAP miss; HLT miss |
+| `union_news_or_net4_h1` | long | — | HLT miss |
+| `union_news_or_net5_h1` | long | — | HLT miss |
+| `union_news_pack_net3_h1` | long | — | CSX miss; SAP miss; HLT miss |
+| `union_news_pack_net2_h1` | long | — | CSX miss; SAP miss; UNP miss; HLT miss |
+| `union_news_pack_h3` | long | — | CSX miss; SAP miss; UNP miss; HLT miss |
+| `union_news_head_h3` | long | — | ITW miss; LUV miss; GLND miss; CRCL miss |
+| `union_news_or_h3` | long | — | CSX miss; SAP miss; UNP miss; ITW miss; LUV miss; GLND miss; HLT miss; CRCL miss |
+| `union_news_g_cond_h3` | long | — | CSX miss; SAP miss; UNP miss; ITW miss; GLND miss; HLT miss; CRCL miss |
+| `union_news_g_cam71_h3` | long | — | HLT miss |
+| `union_news_g_cam61_h3` | long | — | HLT miss |
+| `union_news_or_net2_h3` | long | — | CSX miss; SAP miss; UNP miss; HLT miss; CRCL miss |
+| `union_news_or_net3_h3` | long | — | CSX miss; SAP miss; HLT miss |
+| `union_news_or_net4_h3` | long | — | HLT miss |
+| `union_news_or_net5_h3` | long | — | HLT miss |
+| `union_news_pack_net3_h3` | long | — | CSX miss; SAP miss; HLT miss |
+| `union_news_pack_net2_h3` | long | — | CSX miss; SAP miss; UNP miss; HLT miss |
+| `union_news_or_net4_rw_h1` | long | — | HLT miss |
+| `union_news_or_net4_conv_h1` | long | — | HLT miss |
+| `union_news_g_cam71_n2_h1` | long | — | HLT miss |
+| `union_news_g_conv_h1` | long | — | CSX miss; SAP miss; UNP miss; ITW miss |
+| `union_news_g_conv_h3` | long | — | CSX miss; SAP miss; UNP miss; ITW miss |
+| `union_news_g_cam71_conv_h1` | long | — | HLT miss |
+| `short_news_pack_h3` | short | LUV @—; CMCSA @—; NEM @— | — |
+| `short_news_head_h3` | short | MOH @—; IBM @—; CTSH @— | — |
+| `short_news_or_h3` | short | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | — |
+| `union_blue_vol_h1` | long | — | EGG miss |
+| `union_blue_vol_h3` | long | — | EGG miss |
+| `union_e_green_h1` | long | — | CSX miss; DOV miss; SAP miss; SPOT miss; DGX miss; UNP miss |
+| `union_e_green_h3` | long | — | CSX miss; DOV miss; SAP miss; SPOT miss; DGX miss; UNP miss |
+| `probable_probable_ok_h1` | long | — | EGG miss |
+| `probable_probable_ok_h3` | long | — | EGG miss |
+| `union_vol_green_h1` | long | — | EGG miss |
+| `union_vol_green_h3` | long | — | EGG miss |
+| `union_coil_green_h1` | long | — | CSX miss; DOV miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss; DGX miss |
+| `union_coil_green_h3` | long | — | CSX miss; DOV miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss; DGX miss |
+| `union_blue_coil_h1` | long | — | CSX miss; DOV miss; PCG miss; VEEV miss; ITW miss; POOL miss; HON miss; PHM miss |
+| `union_blue_coil_h3` | long | — | CSX miss; DOV miss; PCG miss; VEEV miss; ITW miss; POOL miss; HON miss; PHM miss |
+| `union_rsi_os_macd_h1` | long | — | PCG miss; DGX miss |
+| `union_rsi_os_macd_h3` | long | — | PCG miss; DGX miss |
+| `ohlc_hot_coil_h1` | long | — | SHO miss; TRI miss; HNGE miss; MAR miss |
+| `union_hot_score_h1` | long | — | SAP miss; DOV miss; CSX miss; SPOT miss; PCG miss; ITW miss; POOL miss; VEEV miss |
+| `union_hot_score_h3` | long | — | SAP miss; DOV miss; CSX miss; SPOT miss; PCG miss; ITW miss; POOL miss; VEEV miss |
+| `union_candle_score_h1` | long | — | DOV miss; SAP miss; SPOT miss; CSX miss; PCG miss; DGX miss; ITW miss; VEEV miss |
+| `union_candle_score_h3` | long | — | DOV miss; SAP miss; SPOT miss; CSX miss; PCG miss; DGX miss; ITW miss; VEEV miss |
+| `union_ret_5_h1` | long | — | SAP miss; DOV miss; SPOT miss; CSX miss; PCG miss; POOL miss; VEEV miss; DOW miss |
+| `union_ret_5_h3` | long | — | SAP miss; DOV miss; SPOT miss; CSX miss; PCG miss; POOL miss; VEEV miss; DOW miss |
+| `union_cond_h1` | long | — | CSX miss; SAP miss; SPOT miss; DOV miss; PCG miss; VEEV miss; PHM miss; UNP miss |
+| `union_cond_h3` | long | — | CSX miss; SAP miss; SPOT miss; DOV miss; PCG miss; VEEV miss; PHM miss; UNP miss |
+| `union_w_hot_cond_h1` | long | — | SAP miss; DOV miss; CSX miss; SPOT miss; PCG miss; VEEV miss; ITW miss; POOL miss |
+| `union_w_hot_cond_h3` | long | — | SAP miss; DOV miss; CSX miss; SPOT miss; PCG miss; VEEV miss; ITW miss; POOL miss |
+| `union_w_hot_candle_h1` | long | — | DOV miss; SAP miss; SPOT miss; CSX miss; PCG miss; ITW miss; VEEV miss; POOL miss |
+| `union_w_hot_candle_h3` | long | — | DOV miss; SAP miss; SPOT miss; CSX miss; PCG miss; ITW miss; VEEV miss; POOL miss |
+| `union_rsi_h1` | long | — | PCG miss; CSX miss; SPOT miss; DOV miss; SAP miss; DGX miss; UNP miss; DOW miss |
+| `union_rsi_h3` | long | — | PCG miss; CSX miss; SPOT miss; DOV miss; SAP miss; DGX miss; UNP miss; DOW miss |
+| `union_macd_hist_h1` | long | — | SPOT miss; SAP miss; DOV miss; CSX miss; PCG miss; VEEV miss; POOL miss; MOH miss |
+| `union_macd_hist_h3` | long | — | SPOT miss; SAP miss; DOV miss; CSX miss; PCG miss; VEEV miss; POOL miss; MOH miss |
+| `union_hot_n4_h1` | long | — | LQDA miss; ENGS miss; TRU miss; INN miss; BMBL miss; ARQT miss; WIT miss; KVYO miss |
+| `union_hot_n4_holdup` | long | — | LQDA miss; ENGS miss; TRU miss; INN miss |
+| `overnight_mega_h1` | long | — | NEM miss |
+| `overnight_mega_h2` | long | — | NEM miss |
+| `union_hot_n12_h1` | long | — | SAP miss; DOV miss; CSX miss; SPOT miss; PCG miss; ITW miss; POOL miss; VEEV miss; MOH miss; DGX miss; DOW miss; PHM miss |
+| `union_cond_n4_h3` | long | — | CSX miss; SAP miss; SPOT miss; DOV miss |
+| `union_h3_exit_alarm` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h5_exit_alarm` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h3_exit_red` | long | — | CSX miss; DOV miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss; DGX miss |
+| `union_h3_exit_news_r` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `coil_h3_exit_alarm` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `short_alarm_h1` | short | DOCU @—; PNFP @—; NVTS @—; TBBB @—; DBRG @—; CMCSA @—; HBAN @—; PG @— | — |
+| `short_alarm_h3` | short | DOCU @—; PNFP @—; NVTS @—; TBBB @—; DBRG @—; CMCSA @—; HBAN @—; PG @— | — |
+| `short_news_r_h1` | short | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | — |
+| `short_news_r_h3` | short | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | — |
+| `short_extended_h1` | short | ARQT @—; TRU @—; KLRA @—; ENGS @—; EPAM @—; GLOB @—; RH @—; VERA @— | — |
+| `short_extended_h3` | short | ARQT @—; TRU @—; KLRA @—; ENGS @—; EPAM @—; GLOB @—; RH @—; VERA @— | — |
+| `short_last_red_h1` | short | MOH @—; PCG @—; DOW @—; HON @—; PHM @—; TBBB @—; GLND @—; PG @— | — |
+| `short_last_red_h3` | short | MOH @—; PCG @—; DOW @—; HON @—; PHM @—; TBBB @—; GLND @—; PG @— | — |
+| `short_rsi_ob_h1` | short | ITW @—; CDNA @—; EGG @—; TBBB @—; MRNA @—; EPR @—; MX @— | — |
+| `short_rsi_ob_h3` | short | ITW @—; CDNA @—; EGG @—; TBBB @—; MRNA @—; EPR @—; MX @— | — |
+| `short_macd_dn_h1` | short | LUV @—; NVTS @—; GLND @—; VLO @—; CORT @—; ETON @—; SMMT @—; PDFS @— | — |
+| `short_macd_dn_h3` | short | LUV @—; NVTS @—; GLND @—; VLO @—; CORT @—; ETON @—; SMMT @—; PDFS @— | — |
+| `short_news_r_macd_h3` | short | MOH @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | — |
+| `flatten_h5_rankw` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h5_topheavy` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h5_half` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h5_time` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h5_cut` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h5_trail` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h5_sboost` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h5_sizeup` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h3_rankw` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h3_topheavy` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h3_half` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h3_time` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h3_cut` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h3_trail` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h3_sboost` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `flatten_h3_sizeup` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `union_h5_rankw` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h5_topheavy` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h5_half` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h5_time` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h5_cut` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h5_trail` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h5_sboost` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h5_sizeup` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h3_rankw` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h3_topheavy` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h3_half` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h3_time` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h3_cut` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h3_trail` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h3_sboost` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h3_sizeup` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h1_rankw` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h1_topheavy` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h1_half` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h1_time` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h1_cut` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h1_trail` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h1_sboost` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_h1_sizeup` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `flatten_h5_s8` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `union_clk_mom_break_peer_h1` | long | — | SAP miss; DOV miss; CSX miss; SPOT miss; ITW miss; POOL miss; VEEV miss; SHO miss |
+| `union_clk_fresh_cat_coil_h1` | long | — | CSX miss; SAP miss; SPOT miss; DOV miss; PCG miss; PHM miss; UNP miss; DGX miss |
+| `short_clk_neg_weak_fail_h3` | short | MOH @— | — |
+| `short_clk_ext_veto_h3` | short | TBBB @—; MRNA @—; LQDA @— | — |
+| `union_clk_insider_cash_stab_h3` | long | — | POOL miss |
+| `union_clk_flow_coil_h1` | long | — | CSX miss |
+| `union_clk_nr7_mom_h1` | long | — | PCG miss; POOL miss; VEEV miss; QTTB miss; EGG miss |
+| `combo_seh_333_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_seh_333_split` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_seh_502525_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_seh_502525_split` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_seh_404020_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_seh_403525_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_seh_451540_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_seh_601525_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_se_5050_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_se_7030_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_eh_5050_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_sh_5050_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | SAP miss; DOV miss; CSX miss; SPOT miss |
+| `combo_sh_macd_5050_shared` | mixed | MOH @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | SAP miss; DOV miss; CSX miss; SPOT miss |
+| `combo_se_5050_skip` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_seh_333_skip` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_seh_333_weather` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_se_5050_weather` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_se_5050_split` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_es_8020_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_es_9010_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_ehs_702010_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_ehs_601525_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_ps_5050_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; SAP miss; UNP miss; HLT miss |
+| `combo_ps_7030_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; SAP miss; UNP miss; HLT miss |
+| `combo_p2s_5050_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; SAP miss; UNP miss; HLT miss |
+| `combo_oh_5050_shared` | long | — | NEM miss; SAP miss; DOV miss; CSX miss; SPOT miss |
+| `combo_sn_5050_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; SAP miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss |
+| `combo_sj_5050_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | — |
+| `combo_sf_5050_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `combo_snj_333_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; SAP miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss |
+| `combo_nse_333_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; SAP miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss; DOV miss; PCG miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_jse_333_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_fse_333_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss; CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_e1s_7030_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_ers_7030_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_eh_7030_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_fh_7030_shared` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss; SAP miss; DOV miss; CSX miss; SPOT miss |
+| `combo_fe_5050_shared` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss; CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_fes_403030_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss; CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_se1_5050_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_ser_5050_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_en_5050_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss |
+| `combo_ej_5050_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_ef_5050_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss; VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `combo_ee1_5050_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_eer_5050_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_hn_5050_shared` | long | — | SAP miss; DOV miss; CSX miss; SPOT miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss |
+| `combo_hj_5050_shared` | long | — | SAP miss; DOV miss; CSX miss; SPOT miss |
+| `combo_hf_5050_shared` | long | — | SAP miss; DOV miss; CSX miss; SPOT miss; VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `combo_he1_5050_shared` | long | — | SAP miss; DOV miss; CSX miss; SPOT miss; PCG miss; DGX miss; DOW miss; HON miss |
+| `combo_her_5050_shared` | long | — | SAP miss; DOV miss; CSX miss; SPOT miss; PCG miss; DGX miss; DOW miss; HON miss |
+| `combo_nj_5050_shared` | long | — | CSX miss; SAP miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss |
+| `combo_nf_5050_shared` | long | — | CSX miss; SAP miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss; VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `combo_ne1_5050_shared` | long | — | CSX miss; SAP miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss; DOV miss; PCG miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_ner_5050_shared` | long | — | CSX miss; SAP miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss; DOV miss; PCG miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_jf_5050_shared` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `combo_je1_5050_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_jer_5050_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_fe1_5050_shared` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss; CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_fer_5050_shared` | long | — | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss; CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_e1er_5050_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_se_3070_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_sh_7030_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | SAP miss; DOV miss; CSX miss; SPOT miss |
+| `combo_sh_3070_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | SAP miss; DOV miss; CSX miss; SPOT miss |
+| `combo_eh_3070_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_sn_7030_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; SAP miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss |
+| `combo_sn_3070_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | CSX miss; SAP miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss |
+| `combo_sj_7030_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | — |
+| `combo_sj_3070_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | — |
+| `combo_sf_7030_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `combo_sf_3070_shared` | mixed | MOH @—; LUV @—; IBM @—; CMCSA @—; NEM @—; CTSH @— | VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `combo_en_7030_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss |
+| `combo_en_3070_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss |
+| `combo_ef_7030_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss; VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `combo_ef_3070_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss; VEEV miss; CDNA miss; CRON miss; CORT miss; ARQT miss; ETON miss |
+| `combo_hn_7030_shared` | long | — | SAP miss; DOV miss; CSX miss; SPOT miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss |
+| `combo_hn_3070_shared` | long | — | SAP miss; DOV miss; CSX miss; SPOT miss; ITW miss; UNP miss; GLND miss; CRCL miss; HLT miss |
+| `combo_ee1_7030_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `combo_ee1_3070_shared` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; DGX miss; DOW miss; HON miss |
+| `union_hot_n4_holdup_preopen` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
+| `union_hot_n4_h1_preopen` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
 
 Scoop trigger = official open + session low (Elite live only when the low has not printed). Close / last / Theme Radar never trigger. #236 KILL of global short-only / dip-scoop stands — this table is display/paper only.
 
