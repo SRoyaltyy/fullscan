@@ -716,7 +716,7 @@
       "horizon_returns_pct": {
         "1d": 3.36
       },
-      "mfe_pct": 3.4,
+      "mfe_pct": 3.43,
       "mfe_day": "2026-10-22",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-21"
@@ -2784,7 +2784,7 @@
         "n": 71,
         "wins": 71,
         "win_rate": 100.0,
-        "avg": 2.06
+        "avg": 2.07
       },
       "close_5d": null
     },

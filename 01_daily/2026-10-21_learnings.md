@@ -1,6 +1,6 @@
 # Learnings report — 2026-10-21
 
-Generated: **2026-10-22T15:33:49.526491-04:00** by `src/learn_cycle.py`.
+Generated: **2026-10-22T19:30:27.148353-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -13,18 +13,18 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Item | Value |
 |------|-------|
 | Graded runs mined | 180 |
-| Hypotheses written | 181 (wins=76, losses=105) |
+| Hypotheses written | 181 (wins=77, losses=104) |
 | News hypotheses | 1 |
 | Lessons promoted to active | 0 |
 | Lessons retired (efficacy-gated) | 10 |
 | Active lesson files now | 211 |
-| Engine policy version | 112 |
+| Engine policy version | 114 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
 | Topic | Direction HIT% | hits/n | Read |
 |-------|----------------|--------|------|
-| general | 47% | 7/15 | weak — priority |
+| general | 53% | 8/15 | weak — priority |
 | sector:Basic Materials | 20% | 3/15 | weak — priority |
 | sector:Communication Services | 13% | 2/15 | weak — priority |
 | sector:Consumer Cyclical | 27% | 4/15 | weak — priority |
@@ -41,14 +41,7 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 
 Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the **experiment** to run next, and the **policy candidate** (do instead).
 
-### `general` — 7 wins, 8 losses
-
-#### WIN — 2026-10-14
-- **When:** [general] Predicted down, market/sector went down (pct=-1.11, score=-1.645, sector=).
-- **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
-- **Experiment:** [general] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
-- **Do instead:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
-- **Wrong if:** [general] Wrong if milder bands hurt direction accuracy over 10 runs.
+### `general` — 8 wins, 7 losses
 
 #### LOSS — 2026-10-16
 - **When:** [general] Predicted up but went down (pct=-1.09, score=5.526, sector=).
@@ -73,6 +66,13 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 
 #### WIN — 2026-10-21
 - **When:** [general] Predicted up, market/sector went up (pct=0.58, score=4.644, sector=).
+- **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
+- **Experiment:** [general] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
+- **Do instead:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **Wrong if:** [general] Wrong if milder bands hurt direction accuracy over 10 runs.
+
+#### WIN — 2026-10-22
+- **When:** [general] Predicted down, market/sector went down (pct=-1.21, score=-14.314, sector=).
 - **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
 - **Experiment:** [general] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
 - **Do instead:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
@@ -518,15 +518,15 @@ Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`
 These are applied by `compute_scores` / `compute_sector_scores` regardless of what the LLM writes — the part of learning that cannot be ignored.
 
 General (B0–B7 LLM components; multiplier applied by compute_scores):
-- B0_ASIA: n=27 sign-hit=0.56 → ×1.0
-- B0_EUROPE: n=18 sign-hit=0.67 → ×1.25
-- B1_CATALYSTS: n=32 sign-hit=0.72 → ×1.25
-- B2_BONDS: n=41 sign-hit=0.39 → ×0.0
+- B0_ASIA: n=28 sign-hit=0.57 → ×1.0
+- B0_EUROPE: n=19 sign-hit=0.68 → ×1.25
+- B1_CATALYSTS: n=33 sign-hit=0.73 → ×1.25
+- B2_BONDS: n=42 sign-hit=0.38 → ×0.0
 - B3_FEDPATH: n=31 sign-hit=0.45 → ×0.5
 - B4_VIX: n=13 sign-hit=0.54 → ×0.5
-- B5_SENTIMENT: n=23 sign-hit=0.30 → ×0.0
-- B6_FUTURES: n=29 sign-hit=0.76 → ×1.25
-- B7_OIL_DOLLAR: n=41 sign-hit=0.56 → ×1.0
+- B5_SENTIMENT: n=24 sign-hit=0.33 → ×0.0
+- B6_FUTURES: n=30 sign-hit=0.77 → ×1.25
+- B7_OIL_DOLLAR: n=42 sign-hit=0.57 → ×1.0
 Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S0_SHARED_MACRO: n=204 sign-hit=0.58 → ×1.0
 - S1_SECTOR_FACTORS: n=226 sign-hit=0.54 → ×0.5

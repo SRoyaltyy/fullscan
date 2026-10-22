@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T16:39:23-04:00",
+ "generated": "2026-10-22T19:30:33-04:00",
  "replay_reference": {
   "general": {
    "n": 28,
@@ -16,16 +16,16 @@
  },
  "scopes": {
   "general": {
-   "n_runs": 48,
-   "n_sessions": 48,
+   "n_runs": 49,
+   "n_sessions": 49,
    "all": {
-    "n": 48,
-    "dir": 0.542,
-    "mag": 0.5,
-    "always_up": 0.458,
-    "always_down": 0.458,
-    "same_as_yesterday": 0.468,
-    "edge_vs_best_baseline": 0.074
+    "n": 49,
+    "dir": 0.551,
+    "mag": 0.51,
+    "always_up": 0.449,
+    "always_down": 0.469,
+    "same_as_yesterday": 0.458,
+    "edge_vs_best_baseline": 0.082
    },
    "legacy_era": {
     "n": 26,
@@ -39,13 +39,13 @@
    "since_v2": {
     "live": true,
     "since": "2026-09-14",
-    "n": 22,
-    "dir": 0.545,
-    "mag": 0.545,
-    "always_up": 0.455,
-    "always_down": 0.409,
-    "same_as_yesterday": 0.455,
-    "edge_vs_best_baseline": 0.09,
+    "n": 23,
+    "dir": 0.565,
+    "mag": 0.565,
+    "always_up": 0.435,
+    "always_down": 0.435,
+    "same_as_yesterday": 0.435,
+    "edge_vs_best_baseline": 0.13,
     "cumulative": [
      {
       "date": "2026-09-14",
@@ -200,6 +200,13 @@
       "n": 22,
       "cum_dir": 0.545,
       "cum_mag": 0.545
+     },
+     {
+      "date": "2026-10-22",
+      "topic": "general",
+      "n": 23,
+      "cum_dir": 0.565,
+      "cum_mag": 0.565
      }
     ]
    },
@@ -1307,10 +1314,33 @@
       "same_as_yesterday": 0.45
      },
      "edge_20": 0.0
+    },
+    {
+     "date": "2026-10-22",
+     "n": 1,
+     "engine": "v2",
+     "session_dir": 1.0,
+     "session_mag": 1.0,
+     "dir_10": 0.6,
+     "mag_10": 0.5,
+     "base_10": {
+      "always_up": 0.5,
+      "always_down": 0.4,
+      "same_as_yesterday": 0.5
+     },
+     "edge_10": 0.1,
+     "dir_20": 0.55,
+     "mag_20": 0.5,
+     "base_20": {
+      "always_up": 0.5,
+      "always_down": 0.35,
+      "same_as_yesterday": 0.4
+     },
+     "edge_20": 0.05
     }
    ],
    "by_sector": {},
-   "verdict": "steady; not beating best baseline by -10% (last 10 sessions)"
+   "verdict": "improving; beating best baseline by +10% (last 10 sessions)"
   },
   "sectors": {
    "n_runs": 336,
