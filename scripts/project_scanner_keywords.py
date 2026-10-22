@@ -202,7 +202,10 @@ def publish(directory, revision):
                 blob=git('hash-object','-w',str((directory/name).resolve()))
                 updates.append('100644 '+blob+'\tdashboard/scanner-backtest/'+name+'\n')
             git_input(['update-index','--index-info'], ''.join(updates), env=env)
-            tree=git('write-tree',env=env)
+            # The parent is already on origin. Sparse partial clones need not
+            # download unchanged parent blobs merely to retain their tree IDs.
+            # Every replacement blob above was written locally and validated.
+            tree=git('write-tree','--missing-ok',env=env)
             commit=git_input(['commit-tree',tree,'-p',parent],
                 'Publish concrete keyword view '+meta['keyword_projection']['projection_id'][:12]+'\n', env=env)
             import subprocess
