@@ -1,0 +1,15 @@
+{
+ "date": "2026-10-22",
+ "missing": [],
+ "prices": {
+  "BRZE": 45.6123,
+  "BYRN": 4.93,
+  "TRAX": 41.158
+ },
+ "sources": {
+  "BRZE": "yahoo_premarket",
+  "BYRN": "yahoo_prior_close",
+  "TRAX": "yahoo_premarket"
+ },
+ "written_at": "2026-10-22T12:21:08+00:00"
+}
