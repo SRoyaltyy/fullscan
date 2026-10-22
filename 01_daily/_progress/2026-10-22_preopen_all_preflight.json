@@ -1,8 +1,8 @@
 {
  "workflow": "preopen_all",
  "date": "2026-10-22",
- "checked_at": "2026-10-22 04:32 ET",
- "run_id": "39747021007",
+ "checked_at": "2026-10-22 05:49 ET",
+ "run_id": "39756879537",
  "ok": false,
  "failed": [
   "runner_is_ecs",
@@ -15,19 +15,19 @@
    "id": "ecs_code_current",
    "ok": true,
    "plain": "ecs code stale: code on this ECS checkout (src, scripts, config, .github) must match GitHub main",
-   "detail": "code matches main (HEAD 13e93386, main 5223dc8f)"
+   "detail": "code matches main (HEAD 38147608, main 73244b0c)"
   },
   {
    "id": "runner_is_ecs",
    "ok": false,
    "plain": "Pre-Open is not on the ECS box (GitHub's own servers cannot reach Grok)",
-   "detail": "runner 'GitHub Actions 1000037056' is GitHub-hosted"
+   "detail": "runner 'GitHub Actions 1000037129' is GitHub-hosted"
   },
   {
    "id": "backend_grok",
    "ok": false,
    "plain": "LLM_BACKEND is not grok",
-   "detail": "LLM_BACKEND=auto"
+   "detail": "LLM_BACKEND=deepseek"
   },
   {
    "id": "gateway_up",
