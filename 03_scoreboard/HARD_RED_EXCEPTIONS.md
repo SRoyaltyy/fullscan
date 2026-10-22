@@ -2,7 +2,7 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-10-22T06:59:02.188987-04:00 · 2026-08-13 → 2026-10-21 · live sit **untouched**.
+Generated 2026-10-22T11:57:30.869831-04:00 · 2026-08-13 → 2026-10-21 · live sit **untouched**.
 
 ## Latest morning
 
@@ -10,24 +10,24 @@ Generated 2026-10-22T06:59:02.188987-04:00 · 2026-08-13 → 2026-10-21 · live 
 
 ### Longs weather sat on (top)
 
-- **TRU** idio +23 · +7 −1 · E good · H1 None% H3 None%
-- **DOCU** idio +20 · +7 −1 · E good · H1 None% H3 None%
-- **HLT** idio +20 · +7 −2 · E good · H1 None% H3 None%
-- **IT** idio +20 · +7 −1 · E good · H1 None% H3 None%
-- **PAYC** idio +20 · +7 −1 · E good · H1 None% H3 None%
-- **ARQT** idio +20 · +6 −1 · E good · H1 None% H3 None%
-- **CME** idio +20 · +6 −1 · E good · H1 None% H3 None%
-- **VEEV** idio +20 · +6 −1 · E good · H1 None% H3 None%
+- **TRU** idio +23 · +7 −1 · E good · H1 7.25% H3 None%
+- **DOCU** idio +20 · +7 −1 · E good · H1 6.14% H3 None%
+- **HLT** idio +20 · +7 −2 · E good · H1 -1.37% H3 None%
+- **IT** idio +20 · +7 −1 · E good · H1 5.68% H3 None%
+- **PAYC** idio +20 · +7 −1 · E good · H1 3.18% H3 None%
+- **ARQT** idio +20 · +6 −1 · E good · H1 -1.87% H3 None%
+- **CME** idio +20 · +6 −1 · E good · H1 3.3% H3 None%
+- **VEEV** idio +20 · +6 −1 · E good · H1 2.1% H3 None%
 
 ### Shorts weather sat on (top)
 
-- **BMBL** idio -6 · +4 −4 · H1 None%
-- **SRPT** idio -5 · +3 −4 · H1 None%
-- **JLHL** idio -5 · +2 −5 · H1 None%
-- **ENHA** idio -4 · +3 −3 · H1 None%
-- **ANGI** idio -4 · +4 −4 · H1 None%
-- **MOH** idio -4 · +3 −4 · H1 None%
-- **LUV** idio -3 · +4 −5 · H1 None%
+- **BMBL** idio -6 · +4 −4 · H1 0.17%
+- **SRPT** idio -5 · +3 −4 · H1 3.1%
+- **JLHL** idio -5 · +2 −5 · H1 -8.25%
+- **ENHA** idio -4 · +3 −3 · H1 0.55%
+- **ANGI** idio -4 · +4 −4 · H1 -4.81%
+- **MOH** idio -4 · +3 −4 · H1 0.62%
+- **LUV** idio -3 · +4 −5 · H1 -5.03%
 
 ## If we had taken them on hard-red sits (research)
 
