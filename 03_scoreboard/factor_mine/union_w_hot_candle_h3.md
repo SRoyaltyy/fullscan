@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **-1.89%** ($9,811) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 320 · skips 289 · realized $+901.34.
+Cash book **-1.37%** ($9,863) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 328 · skips 289 · realized $+901.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -489,6 +489,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `BMBL` | 11 | $5.95 | $0.69 | — | $290.56 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+0.0; leftover $70.50 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `KLRA` | 5 | $12.91 | $0.66 | — | $225.35 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer; 🔵; ret5=+19.7; leftover $70.50 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $225.35 | ▲ close $9,810.60 vs 09:30 $9,739.46 (session +74.49) | 16:00 close · cash $225.35 · equity $9,810.60 vs 09:30 $9,739.46 (+71.14; session marks +74.49) · 12 name(s) marked open→close (per-name table). ACN×5 09:30 $235.00 → close $240.26 +26.30; BR×6 09:30 $179.78 → close $178.30 -8.88; HONA×7 09:30 $159.99 → close $162.46 +17.29; NAVN×46 09:30 $26.45 → close $26.62 +7.82; OTIS×16 09:30 $72.00 → close $72.35 +5.60; SU×15 09:30 $78.23 → close $79.02 +11.85; WM×5 09:30 $230.26 → close $229.58 -3.40; WMG×38 09:30 $31.01 → close $31.44 +16.34; WIT×34 09:30 $2.06 → close $2.15 +3.06; ARQT×2 09:30 $32.64 → close $31.87 -1.54; BMBL×11 09:30 $5.95 → close $5.95 +0.00; KLRA×5 09:30 $12.91 → close $12.92 +0.05 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $225.35 | ▲ 09:30 equity $9,874.12 vs yday $9,810.60 (+63.52) | 09:30 open · cash $225.35 (unchanged overnight, no fees) · equity $9,874.12 vs prior close $9,810.60 (+63.52) · 12 name(s) re-marked at the open (per-name table). ACN×5 yday $240.26 → 09:30 $242.00 +8.70; ARQT×2 yday $31.87 → 09:30 $31.68 -0.38; BMBL×11 yday $5.95 → 09:30 $5.94 -0.11; BR×6 yday $178.30 → 09:30 $180.16 +11.16; HONA×7 yday $162.46 → 09:30 $162.25 -1.47; KLRA×5 yday $12.92 → 09:30 $12.80 -0.60; NAVN×46 yday $26.62 → 09:30 $26.84 +10.12; OTIS×16 yday $72.35 → 09:30 $73.14 +12.72; SU×15 yday $79.02 → 09:30 $79.90 +13.20; WIT×34 yday $2.15 → 09:30 $2.14 -0.34; WM×5 yday $229.58 → 09:30 $231.38 +9.00; WMG×38 yday $31.44 → 09:30 $31.48 +1.52 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ACN` | 5 | $242.00 | $2.02 | $+63.57 | $1,433.32 | ▲ +63.57 after sell → book $9,872.10; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `BR` | 6 | $180.16 | $2.03 | $+34.78 | $2,512.26 | ▲ +34.78 after sell → book $9,870.07; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `HONA` | 7 | $162.25 | $2.03 | $-51.99 | $3,645.98 | ▼ -51.99 after sell → book $9,868.04; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `NAVN` | 46 | $26.84 | $2.15 | $+47.24 | $4,878.47 | ▲ +47.24 after sell → book $9,865.89; vs 09:30 mark -2.15 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `OTIS` | 16 | $73.14 | $2.06 | $+28.46 | $6,046.73 | ▲ +28.46 after sell → book $9,863.83; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `SU` | 15 | $79.90 | $2.06 | $+33.56 | $7,243.17 | ▲ +33.56 after sell → book $9,861.77; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `WM` | 5 | $231.38 | $2.02 | $+30.17 | $8,398.05 | ▲ +30.17 after sell → book $9,859.75; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `WMG` | 38 | $31.48 | $2.12 | $+4.13 | $9,592.17 | ▲ +4.13 after sell → book $9,857.63; vs 09:30 mark -2.12 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,592.17 | ▲ close $9,862.72 vs 09:30 $9,874.12 (session +5.09) | 16:00 close · cash $9,592.17 · equity $9,862.72 vs 09:30 $9,874.12 (-11.40; session marks +5.09) · 4 name(s) marked open→close (per-name table). ARQT×2 09:30 $31.68 → close $32.20 +1.04; BMBL×11 09:30 $5.94 → close $5.94 +0.00; KLRA×5 09:30 $12.80 → close $13.27 +2.35; WIT×34 09:30 $2.14 → close $2.19 +1.70 | — |
 
 ## Not taken
 

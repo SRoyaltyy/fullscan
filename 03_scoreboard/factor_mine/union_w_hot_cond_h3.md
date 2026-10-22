@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+22.66%** ($12,266) · signal-only (no cash/fees) was +337.30%. Starts YES **29/30**. Fills 327 · skips 286 · realized $+834.44.
+Cash book **+25.03%** ($12,503) · signal-only (no cash/fees) was +337.30%. Starts YES **29/30**. Fills 331 · skips 286 · realized $+834.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -496,6 +496,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `EPAM` | 2 | $129.12 | $2.00 | — | $627.55 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+13.1; leftover $268.47 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `KVYO` | 13 | $19.59 | $2.03 | — | $370.86 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+15.7; leftover $268.47 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $370.86 | ▲ close $12,266.34 vs 09:30 $12,156.64 (session +120.93) | 16:00 close · cash $370.86 · equity $12,266.34 vs 09:30 $12,156.64 (+109.70; session marks +120.93) · 11 name(s) marked open→close (per-name table). ALL×7 09:30 $250.58 → close $251.04 +3.22; AMX×78 09:30 $23.20 → close $24.29 +85.02; ARQT×60 09:30 $32.64 → close $31.87 -46.20; EOG×11 09:30 $157.26 → close $157.88 +6.82; TRU×22 09:30 $77.62 → close $78.93 +28.82; VEEV×5 09:30 $317.01 → close $320.55 +17.70; IT×1 09:30 $216.34 → close $219.57 +3.23; PAYC×1 09:30 $260.69 → close $261.01 +0.32; DOCU×3 09:30 $80.00 → close $81.48 +4.44; EPAM×2 09:30 $129.12 → close $134.00 +9.76; KVYO×13 09:30 $19.59 → close $20.19 +7.80 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $370.86 | ▲ 09:30 equity $12,325.15 vs yday $12,266.34 (+58.81) | 09:30 open · cash $370.86 (unchanged overnight, no fees) · equity $12,325.15 vs prior close $12,266.34 (+58.81) · 11 name(s) re-marked at the open (per-name table). ALL×7 yday $251.04 → 09:30 $252.86 +12.74; AMX×78 yday $24.29 → 09:30 $24.14 -11.70; ARQT×60 yday $31.87 → 09:30 $31.68 -11.40; DOCU×3 yday $81.48 → 09:30 $82.22 +2.22; EOG×11 yday $157.88 → 09:30 $160.00 +23.32; EPAM×2 yday $134.00 → 09:30 $133.58 -0.84; IT×1 yday $219.57 → 09:30 $221.23 +1.66; KVYO×13 yday $20.19 → 09:30 $20.29 +1.30; PAYC×1 yday $261.01 → 09:30 $264.42 +3.41; TRU×22 yday $78.93 → 09:30 $79.88 +20.90; VEEV×5 yday $320.55 → 09:30 $323.99 +17.20 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ALL` | 7 | $252.86 | $2.04 | $+44.60 | $2,138.84 | ▲ +44.60 after sell → book $12,323.11; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 60 | $31.68 | $2.20 | $+131.83 | $4,037.45 | ▲ +131.83 after sell → book $12,320.92; vs 09:30 mark -2.19 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `EOG` | 11 | $160.00 | $2.05 | $+23.21 | $5,795.40 | ▲ +23.21 after sell → book $12,318.87; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `VEEV` | 5 | $323.99 | $2.03 | $+64.27 | $7,413.32 | ▲ +64.27 after sell → book $12,316.84; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,413.32 | ▲ close $12,503.17 vs 09:30 $12,325.15 (session +186.33) | 16:00 close · cash $7,413.32 · equity $12,503.17 vs 09:30 $12,325.15 (+178.02; session marks +186.33) · 7 name(s) marked open→close (per-name table). AMX×78 09:30 $24.14 → close $24.98 +65.52; DOCU×3 09:30 $82.22 → close $84.41 +6.57; EPAM×2 09:30 $133.58 → close $138.67 +10.18; IT×1 09:30 $221.23 → close $234.44 +13.21; KVYO×13 09:30 $20.29 → close $20.59 +3.90; PAYC×1 09:30 $264.42 → close $272.61 +8.19; TRU×22 09:30 $79.88 → close $83.46 +78.76 | — |
 
 ## Not taken
 

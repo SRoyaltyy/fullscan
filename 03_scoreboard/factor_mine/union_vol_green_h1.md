@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-11.69%** ($8,831) · signal-only (no cash/fees) was -4.91%. Starts YES **5/30**. Fills 363 · skips 78 · realized $-2.02.
+Cash book **-8.54%** ($9,146) · signal-only (no cash/fees) was -4.91%. Starts YES **5/30**. Fills 363 · skips 78 · realized $-2.02.
 
 ## How this sleeve decides (like you are 10)
 
@@ -535,6 +535,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,766.47 | ▲ 09:30 equity $8,766.47 vs yday $8,766.47 (+0.00) | 09:30 open · cash $8,766.47 · no holdings · equity $8,766.47 vs prior close $8,766.47 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-21 09:30 ET | **BUY** | `EGG` | 1748 | $5.00 | $22.55 | — | $3.92 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; ret5=+11.9; leftover $8766.47 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.92 | ▲ close $8,831.32 vs 09:30 $8,766.47 (session +87.40) | 16:00 close · cash $3.92 · equity $8,831.32 vs 09:30 $8,766.47 (+64.85; session marks +87.40) · 1 name(s) marked open→close (per-name table). EGG×1748 09:30 $5.00 → close $5.05 +87.40 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.92 | ▼ 09:30 equity $8,743.92 vs yday $8,831.32 (-87.40) | 09:30 open · cash $3.92 (unchanged overnight, no fees) · equity $8,743.92 vs prior close $8,831.32 (-87.40) · 1 name(s) re-marked at the open (per-name table). EGG×1748 yday $5.05 → 09:30 $5.00 -87.40 | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.92 | ▲ close $9,145.96 vs 09:30 $8,743.92 (session +402.04) | 16:00 close · cash $3.92 · equity $9,145.96 vs 09:30 $8,743.92 (+402.04; session marks +402.04) · 1 name(s) marked open→close (per-name table). EGG×1748 09:30 $5.00 → close $5.23 +402.04 | — |
 
 ## Not taken
 

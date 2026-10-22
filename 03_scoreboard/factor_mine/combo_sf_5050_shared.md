@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/flatten_h5 w=0.5,0.5 net=priority
 
-Cash book **+6.20%** ($10,620) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 326 · skips 449 · realized $+800.90.
+Cash book **+5.48%** ($10,548) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 331 · skips 449 · realized $+800.90.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $-24.77.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $440.07.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -497,6 +497,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **SELL** | `WLY` | 8 | $52.18 | $2.03 | $-4.93 | $-275.77 | ▼ -4.93 after sell → book $10,458.39; vs 09:30 mark -2.04 | flatten_h5: dropped from list after 5 sess (min 5) | — |
 | 2026-10-21 09:30 ET | **SELL** | `WSM` | 1 | $253.01 | $2.01 | $+10.71 | $-24.77 | ▲ +10.71 after sell → book $10,456.38; vs 09:30 mark -2.01 | flatten_h5: dropped from list after 5 sess (min 5) | — |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $-24.77 | ▲ close $10,619.76 vs 09:30 $10,472.88 (session +163.38) | 16:00 close · cash $-24.77 · equity $10,619.76 vs 09:30 $10,472.88 (+146.88; session marks +163.38) · 12 name(s) marked open→close (per-name table). BLFS×15 09:30 $38.61 → close $38.61 +0.00; CDNA×27 09:30 $69.50 → close $70.74 +33.56; FIS×3 09:30 $36.31 → close $36.42 +0.33; ILMN×6 09:30 $267.35 → close $282.86 +93.06; IT×6 09:30 $216.34 → close $219.57 +19.38; PACS×37 09:30 $47.52 → close $46.76 -28.12; PDFS×2 09:30 $42.76 → close $44.01 +2.50; SHOO×2 09:30 $45.13 → close $44.69 -0.89; TOST×3 09:30 $32.72 → close $32.54 -0.54; TWLO×5 09:30 $261.26 → close $266.68 +27.10; VEEV×5 09:30 $317.01 → close $320.55 +17.70; YOU×2 09:30 $45.49 → close $45.14 -0.70 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $-24.77 | ▼ 09:30 equity $10,586.78 vs yday $10,619.76 (-32.98) | 09:30 open · cash $-24.77 (unchanged overnight, no fees) · equity $10,586.78 vs prior close $10,619.76 (-32.98) | — |
+| 2026-10-22 09:30 ET | **SELL** | `FIS` | 3 | $36.60 | $1.13 | $-1.63 | $83.90 | ▼ -1.63 after sell → book $10,585.65; vs 09:30 mark -1.13 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-10-22 09:30 ET | **SELL** | `PDFS` | 2 | $41.57 | $0.86 | $+0.06 | $166.19 | ▲ +0.06 after sell → book $10,584.80; vs 09:30 mark -0.85 | flatten_h5: dropped from list after 5 sess (min 5) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `SHOO` | 2 | $44.03 | $0.91 | $-3.23 | $253.34 | ▼ -3.23 after sell → book $10,583.89; vs 09:30 mark -0.91 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-10-22 09:30 ET | **SELL** | `TOST` | 3 | $32.63 | $1.01 | $+6.12 | $350.22 | ▲ +6.12 after sell → book $10,582.88; vs 09:30 mark -1.01 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-10-22 09:30 ET | **SELL** | `YOU` | 2 | $45.39 | $0.93 | $+0.15 | $440.07 | ▲ +0.15 after sell → book $10,581.95; vs 09:30 mark -0.93 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $440.07 | ▼ close $10,547.98 vs 09:30 $10,586.78 (session -33.97) | 16:00 close · cash $440.07 · equity $10,547.98 vs 09:30 $10,586.78 (-38.80; session marks -33.97) · 7 name(s) marked open→close (per-name table). BLFS×15 09:30 $38.61 → close $38.61 +0.00; CDNA×27 09:30 $69.65 → close $69.16 -13.23; ILMN×6 09:30 $280.81 → close $269.40 -68.46; IT×6 09:30 $221.23 → close $234.44 +79.26; PACS×37 09:30 $46.62 → close $47.50 +32.56; TWLO×5 09:30 $265.01 → close $253.63 -56.90; VEEV×5 09:30 $323.99 → close $322.55 -7.20 | — |
 
 ## Not taken
 

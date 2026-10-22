@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short morning packet news🔴
 
-Cash book **+11.30%** ($11,130) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 38 · skips 26 · realized $+60.75.
+Cash book **+8.93%** ($10,893) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 38 · skips 26 · realized $+60.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -206,6 +206,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **SHORT** | `NFLX` | 43 | $64.15 | $2.23 | — | $13,929.78 | — | short morning packet news🔴; gate news_box=bad; list earn_react; 🔵; ret5=-2.5; leftover $2793.39 | join🟢 sector🟢 gen🟢 news🔴 digest🔴 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **SHORT** | `LUV` | 70 | $39.87 | $2.31 | — | $16,718.37 | — | short morning packet news🔴; gate news_box=bad; list overnight; ret5=-2.5; leftover $2793.39 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,718.37 | ▼ close $11,130.05 vs 09:30 $11,173.56 (session -38.97) | 16:00 close · cash $16,718.37 · equity $11,130.05 vs 09:30 $11,173.56 (-43.51; session marks -38.97) · 2 name(s) marked open→close (per-name table). NFLX×43 09:30 $64.15 → close $65.04 -38.27; LUV×70 09:30 $39.87 → close $39.88 -0.70 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,718.37 | ▲ 09:30 equity $11,177.35 vs yday $11,130.05 (+47.31) | 09:30 open · cash $16,718.37 (unchanged overnight, no fees) · equity $11,177.35 vs prior close $11,130.05 (+47.31) · 2 name(s) re-marked at the open (per-name table). LUV×70 yday $39.88 → 09:30 $39.20 +47.95; NFLX×43 yday $65.04 → 09:30 $65.06 -0.65 | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,718.37 | ▼ close $10,893.12 vs 09:30 $11,177.35 (session -284.23) | 16:00 close · cash $16,718.37 · equity $10,893.12 vs 09:30 $11,177.35 (-284.23; session marks -284.23) · 2 name(s) marked open→close (per-name table). LUV×70 09:30 $39.20 → close $42.03 -198.45; NFLX×43 09:30 $65.06 → close $67.05 -85.78 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **-31.47%** ($6,853) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 430 · skips 105 · realized $-1315.32.
+Cash book **-32.23%** ($6,777) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 436 · skips 105 · realized $-1315.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -600,6 +600,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `PLNT` | 16 | $52.38 | $2.04 | — | $956.49 | — | union ∩ last_red, no 🚨; gate last_red=True; list ohlc_hot; ret5=+11.6; leftover $859.83 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `CME` | 2 | $295.77 | $2.00 | — | $362.95 | — | union ∩ last_red, no 🚨; gate last_red=True; list earn_react; 🔵; ret5=+6.2; leftover $859.83 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $362.95 | ▲ close $6,853.20 vs 09:30 $6,887.11 (session +6.98) | 16:00 close · cash $362.95 · equity $6,853.20 vs 09:30 $6,887.11 (-33.91; session marks +6.98) · 8 name(s) marked open→close (per-name table). PRIM×11 09:30 $73.79 → close $72.67 -12.32; TLSA×834 09:30 $1.03 → close $1.01 -16.68; AMX×37 09:30 $23.20 → close $24.29 +40.33; TBBB×14 09:30 $58.49 → close $58.44 -0.70; ENHA×728 09:30 $1.18 → close $1.17 -7.28; INTA×19 09:30 $44.56 → close $45.33 +14.63; PLNT×16 09:30 $52.38 → close $51.69 -11.04; CME×2 09:30 $295.77 → close $295.79 +0.04 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $362.95 | ▼ 09:30 equity $6,827.90 vs yday $6,853.20 (-25.30) | 09:30 open · cash $362.95 (unchanged overnight, no fees) · equity $6,827.90 vs prior close $6,853.20 (-25.30) · 8 name(s) re-marked at the open (per-name table). AMX×37 yday $24.29 → 09:30 $24.14 -5.55; CME×2 yday $295.79 → 09:30 $301.99 +12.40; ENHA×728 yday $1.17 → 09:30 $1.17 +0.00; INTA×19 yday $45.33 → 09:30 $45.58 +4.75; PLNT×16 yday $51.69 → 09:30 $52.21 +8.32; PRIM×11 yday $72.67 → 09:30 $71.34 -14.63; TBBB×14 yday $58.44 → 09:30 $58.06 -5.32; TLSA×834 yday $1.01 → 09:30 $0.98 -25.27 | — |
+| 2026-10-22 09:30 ET | **SELL** | `AMX` | 37 | $24.14 | $2.12 | $+30.56 | $1,254.01 | ▲ +30.56 after sell → book $6,825.78; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `CME` | 2 | $301.99 | $2.02 | $+8.43 | $1,855.97 | ▲ +8.43 after sell → book $6,823.76; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `ENHA` | 728 | $1.17 | $9.52 | $-26.19 | $2,698.21 | ▼ -26.19 after sell → book $6,814.24; vs 09:30 mark -9.52 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `INTA` | 19 | $45.58 | $2.07 | $+15.27 | $3,562.16 | ▲ +15.27 after sell → book $6,812.17; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `PLNT` | 16 | $52.21 | $2.06 | $-6.82 | $4,395.47 | ▼ -6.82 after sell → book $6,810.12; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `TBBB` | 14 | $58.06 | $2.05 | $-10.10 | $5,206.25 | ▼ -10.10 after sell → book $6,808.06; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,206.25 | ▼ close $6,776.59 vs 09:30 $6,827.90 (session -31.47) | 16:00 close · cash $5,206.25 · equity $6,776.59 vs 09:30 $6,827.90 (-51.31; session marks -31.47) · 2 name(s) marked open→close (per-name table). PRIM×11 09:30 $71.34 → close $66.94 -48.40; TLSA×834 09:30 $0.98 → close $1.00 +16.93 | — |
 
 ## Not taken
 

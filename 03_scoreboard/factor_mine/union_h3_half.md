@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `half` · sell `list` · S-boost `none` · deploy half leftover
 
-Cash book **-15.56%** ($8,444) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 378 · skips 313 · realized $-594.04.
+Cash book **-16.19%** ($8,381) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 383 · skips 313 · realized $-594.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -544,6 +544,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `CRON` | 289 | $3.30 | $3.73 | — | $3,844.09 | — | deploy half leftover; list flatten; 🔵; ret5=+2.5; leftover $955.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `ETON` | 18 | $50.93 | $2.04 | — | $2,925.31 | — | deploy half leftover; list flatten; 🔵; ret5=-5.9; leftover $955.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,925.31 | ▼ close $8,444.31 vs 09:30 $8,461.75 (session -5.59) | 16:00 close · cash $2,925.31 · equity $8,444.31 vs 09:30 $8,461.75 (-17.44; session marks -5.59) · 11 name(s) marked open→close (per-name table). ARQT×11 09:30 $32.64 → close $31.87 -8.47; BLFS×7 09:30 $38.61 → close $38.61 +0.00; CDNA×5 09:30 $69.50 → close $70.74 +6.21; ILMN×1 09:30 $267.35 → close $282.86 +15.51; PACS×7 09:30 $47.52 → close $46.76 -5.32; PRMB×21 09:30 $20.00 → close $20.03 +0.63; SMMT×25 09:30 $16.35 → close $15.83 -13.00; VEEV×1 09:30 $317.01 → close $320.55 +3.54; CORT×8 09:30 $116.45 → close $116.28 -1.36; CRON×289 09:30 $3.30 → close $3.39 +26.01; ETON×18 09:30 $50.93 → close $49.30 -29.34 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,925.31 | ▼ 09:30 equity $8,412.23 vs yday $8,444.31 (-32.08) | 09:30 open · cash $2,925.31 (unchanged overnight, no fees) · equity $8,412.23 vs prior close $8,444.31 (-32.08) · 11 name(s) re-marked at the open (per-name table). ARQT×11 yday $31.87 → 09:30 $31.68 -2.09; BLFS×7 yday $38.61 → 09:30 $38.61 +0.00; CDNA×5 yday $70.74 → 09:30 $69.65 -5.45; CORT×8 yday $116.28 → 09:30 $115.16 -8.96; CRON×289 yday $3.39 → 09:30 $3.39 +0.00; ETON×18 yday $49.30 → 09:30 $49.36 +1.08; ILMN×1 yday $282.86 → 09:30 $280.81 -2.05; PACS×7 yday $46.76 → 09:30 $46.62 -0.98; PRMB×21 yday $20.03 → 09:30 $19.86 -3.57; SMMT×25 yday $15.83 → 09:30 $15.29 -13.50; VEEV×1 yday $320.55 → 09:30 $323.99 +3.44 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 11 | $31.68 | $2.04 | $+20.90 | $3,271.75 | ▲ +20.90 after sell → book $8,410.19; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `CDNA` | 5 | $69.65 | $2.02 | $+19.22 | $3,617.97 | ▲ +19.22 after sell → book $8,408.16; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `ILMN` | 1 | $280.81 | $2.01 | $+7.87 | $3,896.77 | ▲ +7.87 after sell → book $8,406.15; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `PACS` | 7 | $46.62 | $2.03 | $-6.84 | $4,221.08 | ▼ -6.84 after sell → book $8,404.12; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `VEEV` | 1 | $323.99 | $2.01 | $+9.65 | $4,543.05 | ▲ +9.65 after sell → book $8,402.10; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,543.05 | ▼ close $8,380.98 vs 09:30 $8,412.23 (session -21.13) | 16:00 close · cash $4,543.05 · equity $8,380.98 vs 09:30 $8,412.23 (-31.25; session marks -21.13) · 6 name(s) marked open→close (per-name table). BLFS×7 09:30 $38.61 → close $38.61 +0.00; CORT×8 09:30 $115.16 → close $107.50 -61.28; CRON×289 09:30 $3.39 → close $3.44 +15.89; ETON×18 09:30 $49.36 → close $50.02 +11.88; PRMB×21 09:30 $19.86 → close $20.14 +5.88; SMMT×25 09:30 $15.29 → close $15.55 +6.50 | — |
 
 ## Not taken
 

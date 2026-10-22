@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · OR news + net≥4; 70% leftover if #1 net ≥ 5
 
-Cash book **-32.73%** ($6,727) · signal-only (no cash/fees) was -7.44%. Starts YES **12/30**. Fills 126 · skips 31 · realized $+852.81.
+Cash book **-33.25%** ($6,675) · signal-only (no cash/fees) was -7.44%. Starts YES **12/30**. Fills 127 · skips 31 · realized $+852.81.
 
 ## How this sleeve decides (like you are 10)
 
@@ -298,6 +298,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,126.53 | ▲ 09:30 equity $6,511.33 vs yday $6,454.63 (+56.70) | 09:30 open · cash $2,126.53 (unchanged overnight, no fees) · equity $6,511.33 vs prior close $6,454.63 (+56.70) · 1 name(s) re-marked at the open (per-name table). AMX×189 yday $22.90 → 09:30 $23.20 +56.70 | — |
 | 2026-10-21 09:30 ET | **BUY** | `HLT` | 5 | $360.00 | $2.00 | — | $324.53 | — | OR news + net≥4; 70% leftover if #1 net ≥ 5; gate cam_net_min=4,news_or_headline=True; rank cond; list ohlc_hot; ret5=+9.0; leftover $2126.53 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $324.53 | ▲ close $6,726.58 vs 09:30 $6,511.33 (session +217.26) | 16:00 close · cash $324.53 · equity $6,726.58 vs 09:30 $6,511.33 (+215.25; session marks +217.26) · 2 name(s) marked open→close (per-name table). AMX×189 09:30 $23.20 → close $24.29 +206.01; HLT×5 09:30 $360.00 → close $362.25 +11.25 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $324.53 | ▼ 09:30 equity $6,691.19 vs yday $6,726.58 (-35.39) | 09:30 open · cash $324.53 (unchanged overnight, no fees) · equity $6,691.19 vs prior close $6,726.58 (-35.39) · 2 name(s) re-marked at the open (per-name table). AMX×189 yday $24.29 → 09:30 $24.14 -28.35; HLT×5 yday $362.25 → 09:30 $360.84 -7.05 | — |
+| 2026-10-22 09:30 ET | **SELL** | `AMX` | 189 | $24.14 | $2.62 | $+414.40 | $4,884.37 | ▲ +414.40 after sell → book $6,688.57; vs 09:30 mark -2.62 | dropped from list after 5 sess (min 1) | join🟡 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,884.37 | ▼ close $6,674.72 vs 09:30 $6,691.19 (session -13.85) | 16:00 close · cash $4,884.37 · equity $6,674.72 vs 09:30 $6,691.19 (-16.47; session marks -13.85) · 1 name(s) marked open→close (per-name table). HLT×5 09:30 $360.84 → close $358.07 -13.85 | — |
 
 ## Not taken
 

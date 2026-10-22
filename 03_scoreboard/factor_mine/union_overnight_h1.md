@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ overnight, no 🚨
 
-Cash book **-24.18%** ($7,582) · signal-only (no cash/fees) was -26.59%. Starts YES **0/30**. Fills 150 · skips 73 · realized $-2767.20.
+Cash book **-24.54%** ($7,546) · signal-only (no cash/fees) was -26.59%. Starts YES **0/30**. Fills 156 · skips 73 · realized $-2767.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -320,6 +320,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `PNFP` | 13 | $96.00 | $2.03 | — | $1,475.41 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=+1.9; leftover $1255.49 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `SAP` | 5 | $231.57 | $2.00 | — | $315.55 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight,overnight_mega; ret5=+4.2; leftover $1255.49 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $315.55 | ▲ close $7,582.41 vs 09:30 $7,532.92 (session +61.69) | 16:00 close · cash $315.55 · equity $7,582.41 vs 09:30 $7,532.92 (+49.49; session marks +61.69) · 6 name(s) marked open→close (per-name table). CSX×26 09:30 $48.03 → close $48.40 +9.62; IBM×5 09:30 $241.91 → close $251.46 +47.73; LUV×31 09:30 $39.87 → close $39.88 +0.31; MOH×5 09:30 $221.00 → close $214.90 -30.50; PNFP×13 09:30 $96.00 → close $98.21 +28.73; SAP×5 09:30 $231.57 → close $232.73 +5.80 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $315.55 | ▼ 09:30 equity $7,558.03 vs yday $7,582.41 (-24.38) | 09:30 open · cash $315.55 (unchanged overnight, no fees) · equity $7,558.03 vs prior close $7,582.41 (-24.38) · 6 name(s) re-marked at the open (per-name table). CSX×26 yday $48.40 → 09:30 $50.09 +43.94; IBM×5 yday $251.46 → 09:30 $241.25 -51.08; LUV×31 yday $39.88 → 09:30 $39.20 -21.24; MOH×5 yday $214.90 → 09:30 $211.68 -16.10; PNFP×13 yday $98.21 → 09:30 $98.09 -1.56; SAP×5 yday $232.73 → 09:30 $237.06 +21.65 | — |
+| 2026-10-22 09:30 ET | **SELL** | `CSX` | 26 | $50.09 | $2.09 | $+49.40 | $1,615.80 | ▲ +49.40 after sell → book $7,555.94; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `IBM` | 5 | $241.25 | $2.02 | $-7.38 | $2,820.00 | ▼ -7.38 after sell → book $7,553.92; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `LUV` | 31 | $39.20 | $2.10 | $-25.11 | $4,032.94 | ▼ -25.11 after sell → book $7,551.81; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `MOH` | 5 | $211.68 | $2.02 | $-50.63 | $5,089.32 | ▼ -50.63 after sell → book $7,549.79; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `PNFP` | 13 | $98.09 | $2.05 | $+23.09 | $6,362.44 | ▲ +23.09 after sell → book $7,547.74; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `SAP` | 5 | $237.06 | $2.02 | $+23.42 | $7,545.71 | ▲ +23.42 after sell → book $7,545.71; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,545.71 | ▲ close $7,545.71 vs 09:30 $7,558.03 (session +0.00) | 16:00 close · cash $7,545.71 · no lots left · equity $7,545.71. | — |
 
 ## Not taken
 

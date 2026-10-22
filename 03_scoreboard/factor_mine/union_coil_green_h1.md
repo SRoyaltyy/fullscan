@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-20.07%** ($7,993) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 420 · skips 101 · realized $-768.45.
+Cash book **-20.70%** ($7,930) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 427 · skips 101 · realized $-768.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -595,6 +595,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `ACRS` | 267 | $3.74 | $3.44 | — | $1,065.57 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.6; leftover $1000.33 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `KURA` | 99 | $10.04 | $2.29 | — | $69.32 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer,yday_mover; 🔵; ret5=+1.5; leftover $1000.33 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $69.32 | ▲ close $7,992.74 vs 09:30 $8,004.73 (session +10.10) | 16:00 close · cash $69.32 · equity $7,992.74 vs 09:30 $8,004.73 (-11.99; session marks +10.10) · 8 name(s) marked open→close (per-name table). VEEV×3 09:30 $317.01 → close $320.55 +10.62; CDNA×14 09:30 $69.50 → close $70.74 +17.40; CRON×303 09:30 $3.30 → close $3.39 +27.27; SMMT×61 09:30 $16.35 → close $15.83 -31.72; PRMB×50 09:30 $20.00 → close $20.03 +1.50; EPR×18 09:30 $55.53 → close $54.54 -17.82; ACRS×267 09:30 $3.74 → close $3.81 +18.69; KURA×99 09:30 $10.04 → close $9.88 -15.84 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $69.32 | ▼ 09:30 equity $7,933.82 vs yday $7,992.74 (-58.92) | 09:30 open · cash $69.32 (unchanged overnight, no fees) · equity $7,933.82 vs prior close $7,992.74 (-58.92) · 8 name(s) re-marked at the open (per-name table). ACRS×267 yday $3.81 → 09:30 $3.76 -13.35; CDNA×14 yday $70.74 → 09:30 $69.65 -15.26; CRON×303 yday $3.39 → 09:30 $3.39 +0.00; EPR×18 yday $54.54 → 09:30 $54.75 +3.78; KURA×99 yday $9.88 → 09:30 $9.85 -2.97; PRMB×50 yday $20.03 → 09:30 $19.86 -8.50; SMMT×61 yday $15.83 → 09:30 $15.29 -32.94; VEEV×3 yday $320.55 → 09:30 $323.99 +10.32 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ACRS` | 267 | $3.76 | $3.50 | $-1.60 | $1,069.74 | ▼ -1.60 after sell → book $7,930.32; vs 09:30 mark -3.50 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `CDNA` | 14 | $69.65 | $2.05 | $-1.94 | $2,042.79 | ▼ -1.94 after sell → book $7,928.27; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `CRON` | 303 | $3.39 | $3.97 | $+19.39 | $3,065.99 | ▲ +19.39 after sell → book $7,924.30; vs 09:30 mark -3.97 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `EPR` | 18 | $54.75 | $2.06 | $-18.15 | $4,049.43 | ▼ -18.15 after sell → book $7,922.24; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `KURA` | 99 | $9.85 | $2.31 | $-23.41 | $5,022.26 | ▼ -23.41 after sell → book $7,919.92; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `SMMT` | 61 | $15.29 | $2.19 | $-69.03 | $5,952.76 | ▼ -69.03 after sell → book $7,917.73; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `VEEV` | 3 | $323.99 | $2.02 | $+16.92 | $6,922.71 | ▲ +16.92 after sell → book $7,915.71; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,922.71 | ▲ close $7,929.71 vs 09:30 $7,933.82 (session +14.00) | 16:00 close · cash $6,922.71 · equity $7,929.71 vs 09:30 $7,933.82 (-4.11; session marks +14.00) · 1 name(s) marked open→close (per-name table). PRMB×50 09:30 $19.86 → close $20.14 +14.00 | — |
 
 ## Not taken
 

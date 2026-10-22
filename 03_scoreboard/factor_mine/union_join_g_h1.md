@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ join_g, no 🚨
 
-Cash book **-16.50%** ($8,351) · signal-only (no cash/fees) was -3.42%. Starts YES **0/30**. Fills 442 · skips 104 · realized $-96.65.
+Cash book **-16.97%** ($8,303) · signal-only (no cash/fees) was -3.42%. Starts YES **0/30**. Fills 449 · skips 104 · realized $-96.65.
 
 ## How this sleeve decides (like you are 10)
 
@@ -612,6 +612,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `CXW` | 34 | $30.56 | $2.09 | — | $1,256.03 | — | union ∩ join_g, no 🚨; gate join=good; list probable,yday_gainer,yday_mover; ret5=-10.8; leftover $1059.01 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `RCKT` | 452 | $2.34 | $5.83 | — | $192.52 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer; 🔵; ret5=+1.7; leftover $1059.01 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $192.52 | ▼ close $8,350.51 vs 09:30 $8,472.09 (session -99.35) | 16:00 close · cash $192.52 · equity $8,350.51 vs 09:30 $8,472.09 (-121.58; session marks -99.35) · 8 name(s) marked open→close (per-name table). CORT×9 09:30 $116.45 → close $116.28 -1.53; VEEV×3 09:30 $317.01 → close $320.55 +10.62; CDNA×15 09:30 $69.50 → close $70.74 +18.64; ARQT×32 09:30 $32.64 → close $31.87 -24.64; CRON×320 09:30 $3.30 → close $3.39 +28.80; ETON×20 09:30 $50.93 → close $49.30 -32.60; CXW×34 09:30 $30.56 → close $29.52 -35.36; RCKT×452 09:30 $2.34 → close $2.20 -63.28 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $192.52 | ▼ 09:30 equity $8,324.42 vs yday $8,350.51 (-26.09) | 09:30 open · cash $192.52 (unchanged overnight, no fees) · equity $8,324.42 vs prior close $8,350.51 (-26.09) · 8 name(s) re-marked at the open (per-name table). ARQT×32 yday $31.87 → 09:30 $31.68 -6.08; CDNA×15 yday $70.74 → 09:30 $69.65 -16.35; CORT×9 yday $116.28 → 09:30 $115.16 -10.08; CRON×320 yday $3.39 → 09:30 $3.39 +0.00; CXW×34 yday $29.52 → 09:30 $29.37 -5.10; ETON×20 yday $49.30 → 09:30 $49.36 +1.20; RCKT×452 yday $2.20 → 09:30 $2.20 +0.00; VEEV×3 yday $320.55 → 09:30 $323.99 +10.32 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 32 | $31.68 | $2.11 | $-34.91 | $1,204.17 | ▼ -34.91 after sell → book $8,322.31; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `CDNA` | 15 | $69.65 | $2.06 | $-1.80 | $2,246.87 | ▼ -1.80 after sell → book $8,320.26; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `CORT` | 9 | $115.16 | $2.04 | $-15.66 | $3,281.27 | ▼ -15.66 after sell → book $8,318.22; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `CRON` | 320 | $3.39 | $4.19 | $+20.48 | $4,361.88 | ▲ +20.48 after sell → book $8,314.03; vs 09:30 mark -4.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `ETON` | 20 | $49.36 | $2.07 | $-35.52 | $5,347.01 | ▼ -35.52 after sell → book $8,311.96; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `RCKT` | 452 | $2.20 | $5.92 | $-75.03 | $6,335.50 | ▼ -75.03 after sell → book $8,306.05; vs 09:30 mark -5.91 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `VEEV` | 3 | $323.99 | $2.02 | $+16.92 | $7,305.45 | ▲ +16.92 after sell → book $8,304.03; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,305.45 | ▼ close $8,302.67 vs 09:30 $8,324.42 (session -1.36) | 16:00 close · cash $7,305.45 · equity $8,302.67 vs 09:30 $8,324.42 (-21.75; session marks -1.36) · 1 name(s) marked open→close (per-name table). CXW×34 09:30 $29.37 → close $29.33 -1.36 | — |
 
 ## Not taken
 

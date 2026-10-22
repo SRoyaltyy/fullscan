@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-5.76%** ($9,424) · signal-only (no cash/fees) was -15.16%. Starts YES **0/30**. Fills 311 · skips 307 · realized $-613.92.
+Cash book **-4.67%** ($9,533) · signal-only (no cash/fees) was -15.16%. Starts YES **0/30**. Fills 316 · skips 307 · realized $-613.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -480,6 +480,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `HLT` | 1 | $360.00 | $1.99 | — | $910.91 | — | rank by cond; rank cond; list ohlc_hot; ret5=+9.0; leftover $429.26 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `CDNA` | 6 | $69.50 | $2.01 | — | $491.92 | — | rank by cond; rank cond; list flatten; ret5=+5.8; leftover $429.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $491.92 | ▲ close $9,423.97 vs 09:30 $9,364.32 (session +71.86) | 16:00 close · cash $491.92 · equity $9,423.97 vs 09:30 $9,364.32 (+59.65; session marks +71.86) · 12 name(s) marked open→close (per-name table). ACRS×339 09:30 $3.74 → close $3.81 +23.73; ARQT×37 09:30 $32.64 → close $31.87 -28.49; COP×7 09:30 $145.61 → close $145.67 +0.42; EOG×7 09:30 $157.26 → close $157.88 +4.34; TRU×16 09:30 $77.62 → close $78.93 +20.96; VEEV×3 09:30 $317.01 → close $320.55 +10.62; DOCU×5 09:30 $80.00 → close $81.48 +7.40; IT×1 09:30 $216.34 → close $219.57 +3.23; PAYC×1 09:30 $260.69 → close $261.01 +0.32; AMX×18 09:30 $23.20 → close $24.29 +19.62; HLT×1 09:30 $360.00 → close $362.25 +2.25; CDNA×6 09:30 $69.50 → close $70.74 +7.46 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $491.92 | ▲ 09:30 equity $9,446.73 vs yday $9,423.97 (+22.76) | 09:30 open · cash $491.92 (unchanged overnight, no fees) · equity $9,446.73 vs prior close $9,423.97 (+22.76) · 12 name(s) re-marked at the open (per-name table). ACRS×339 yday $3.81 → 09:30 $3.76 -16.95; AMX×18 yday $24.29 → 09:30 $24.14 -2.70; ARQT×37 yday $31.87 → 09:30 $31.68 -7.03; CDNA×6 yday $70.74 → 09:30 $69.65 -6.54; COP×7 yday $145.67 → 09:30 $146.85 +8.26; DOCU×5 yday $81.48 → 09:30 $82.22 +3.70; EOG×7 yday $157.88 → 09:30 $160.00 +14.84; HLT×1 yday $362.25 → 09:30 $360.84 -1.41; IT×1 yday $219.57 → 09:30 $221.23 +1.66; PAYC×1 yday $261.01 → 09:30 $264.42 +3.41; TRU×16 yday $78.93 → 09:30 $79.88 +15.20; VEEV×3 yday $320.55 → 09:30 $323.99 +10.32 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ACRS` | 339 | $3.76 | $4.44 | $+153.91 | $1,762.12 | ▲ +153.91 after sell → book $9,442.29; vs 09:30 mark -4.44 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 37 | $31.68 | $2.12 | $+79.77 | $2,932.16 | ▲ +79.77 after sell → book $9,440.17; vs 09:30 mark -2.12 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `COP` | 7 | $146.85 | $2.03 | $+3.80 | $3,958.08 | ▲ +3.80 after sell → book $9,438.14; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `EOG` | 7 | $160.00 | $2.03 | $+13.32 | $5,076.05 | ▲ +13.32 after sell → book $9,436.11; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `VEEV` | 3 | $323.99 | $2.02 | $+36.96 | $6,046.00 | ▲ +36.96 after sell → book $9,434.09; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,046.00 | ▲ close $9,533.13 vs 09:30 $9,446.73 (session +99.04) | 16:00 close · cash $6,046.00 · equity $9,533.13 vs 09:30 $9,446.73 (+86.40; session marks +99.04) · 7 name(s) marked open→close (per-name table). AMX×18 09:30 $24.14 → close $24.98 +15.12; CDNA×6 09:30 $69.65 → close $69.16 -2.94; DOCU×5 09:30 $82.22 → close $84.41 +10.95; HLT×1 09:30 $360.84 → close $358.07 -2.77; IT×1 09:30 $221.23 → close $234.44 +13.21; PAYC×1 09:30 $264.42 → close $272.61 +8.19; TRU×16 09:30 $79.88 → close $83.46 +57.28 | — |
 
 ## Not taken
 

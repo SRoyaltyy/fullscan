@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_green, no 🚨
 
-Cash book **-14.70%** ($8,530) · signal-only (no cash/fees) was +7.64%. Starts YES **9/30**. Fills 444 · skips 107 · realized $+492.16.
+Cash book **-15.37%** ($8,463) · signal-only (no cash/fees) was +7.64%. Starts YES **9/30**. Fills 451 · skips 107 · realized $+492.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -614,6 +614,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `SMMT` | 65 | $16.35 | $2.19 | — | $1,275.18 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=+3.7; leftover $1072.82 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `PRMB` | 53 | $20.00 | $2.15 | — | $213.03 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=+5.8; leftover $1072.82 | join🟡 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $213.03 | ▼ close $8,529.73 vs 09:30 $8,584.61 (session -34.10) | 16:00 close · cash $213.03 · equity $8,529.73 vs 09:30 $8,584.61 (-54.88; session marks -34.10) · 8 name(s) marked open→close (per-name table). CORT×9 09:30 $116.45 → close $116.28 -1.53; VEEV×3 09:30 $317.01 → close $320.55 +10.62; CDNA×15 09:30 $69.50 → close $70.74 +18.64; ARQT×32 09:30 $32.64 → close $31.87 -24.64; CRON×325 09:30 $3.30 → close $3.39 +29.25; ETON×21 09:30 $50.93 → close $49.30 -34.23; SMMT×65 09:30 $16.35 → close $15.83 -33.80; PRMB×53 09:30 $20.00 → close $20.03 +1.59 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $213.03 | ▼ 09:30 equity $8,464.69 vs yday $8,529.73 (-65.04) | 09:30 open · cash $213.03 (unchanged overnight, no fees) · equity $8,464.69 vs prior close $8,529.73 (-65.04) · 8 name(s) re-marked at the open (per-name table). ARQT×32 yday $31.87 → 09:30 $31.68 -6.08; CDNA×15 yday $70.74 → 09:30 $69.65 -16.35; CORT×9 yday $116.28 → 09:30 $115.16 -10.08; CRON×325 yday $3.39 → 09:30 $3.39 +0.00; ETON×21 yday $49.30 → 09:30 $49.36 +1.26; PRMB×53 yday $20.03 → 09:30 $19.86 -9.01; SMMT×65 yday $15.83 → 09:30 $15.29 -35.10; VEEV×3 yday $320.55 → 09:30 $323.99 +10.32 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 32 | $31.68 | $2.11 | $-34.91 | $1,224.68 | ▼ -34.91 after sell → book $8,462.58; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `CDNA` | 15 | $69.65 | $2.06 | $-1.80 | $2,267.38 | ▼ -1.80 after sell → book $8,460.53; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `CORT` | 9 | $115.16 | $2.04 | $-15.66 | $3,301.78 | ▼ -15.66 after sell → book $8,458.49; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `CRON` | 325 | $3.39 | $4.26 | $+20.80 | $4,399.28 | ▲ +20.80 after sell → book $8,454.24; vs 09:30 mark -4.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `ETON` | 21 | $49.36 | $2.07 | $-37.10 | $5,433.76 | ▼ -37.10 after sell → book $8,452.16; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `SMMT` | 65 | $15.29 | $2.21 | $-73.29 | $6,425.41 | ▼ -73.29 after sell → book $8,449.96; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `VEEV` | 3 | $323.99 | $2.02 | $+16.92 | $7,395.36 | ▲ +16.92 after sell → book $8,447.94; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,395.36 | ▲ close $8,462.78 vs 09:30 $8,464.69 (session +14.84) | 16:00 close · cash $7,395.36 · equity $8,462.78 vs 09:30 $8,464.69 (-1.91; session marks +14.84) · 1 name(s) marked open→close (per-name table). PRMB×53 09:30 $19.86 → close $20.14 +14.84 | — |
 
 ## Not taken
 

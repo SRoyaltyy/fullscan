@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #10 NR7 + moderate momentum
 
-Cash book **-1.77%** ($9,823) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 87 · skips 16 · realized $+1589.64.
+Cash book **-1.32%** ($9,868) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 90 · skips 16 · realized $+1589.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -259,6 +259,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `SAP` | 10 | $231.57 | $2.02 | — | $5,044.27 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list overnight,overnight_mega; ret5=+4.2; leftover $2454.68 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `T` | 112 | $21.89 | $2.33 | — | $2,590.60 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list earn_react; ret5=+2.5; leftover $2454.68 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,590.60 | ▲ close $9,823.22 vs 09:30 $9,821.17 (session +14.18) | 16:00 close · cash $2,590.60 · equity $9,823.22 vs 09:30 $9,821.17 (+2.05; session marks +14.18) · 3 name(s) marked open→close (per-name table). BMBL×412 09:30 $5.95 → close $5.95 +0.00; SAP×10 09:30 $231.57 → close $232.73 +11.60; T×112 09:30 $21.89 → close $21.91 +2.58 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,590.60 | ▲ 09:30 equity $9,877.52 vs yday $9,823.22 (+54.30) | 09:30 open · cash $2,590.60 (unchanged overnight, no fees) · equity $9,877.52 vs prior close $9,823.22 (+54.30) · 3 name(s) re-marked at the open (per-name table). BMBL×412 yday $5.95 → 09:30 $5.94 -4.12; SAP×10 yday $232.73 → 09:30 $237.06 +43.30; T×112 yday $21.91 → 09:30 $22.05 +15.12 | — |
+| 2026-10-22 09:30 ET | **SELL** | `BMBL` | 412 | $5.94 | $5.40 | $-14.84 | $5,032.48 | ▼ -14.84 after sell → book $9,872.12; vs 09:30 mark -5.40 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `SAP` | 10 | $237.06 | $2.05 | $+50.83 | $7,401.03 | ▲ +50.83 after sell → book $9,870.07; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `T` | 112 | $22.05 | $2.36 | $+13.01 | $9,867.70 | ▲ +13.01 after sell → book $9,867.70; vs 09:30 mark -2.37 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,867.70 | ▲ close $9,867.70 vs 09:30 $9,877.52 (session +0.00) | 16:00 close · cash $9,867.70 · no lots left · equity $9,867.70. | — |
 
 ## Not taken
 

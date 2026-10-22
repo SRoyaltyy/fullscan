@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-9.79%** ($9,021) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 140 · skips 17 · realized $-2405.95.
+Cash book **-9.83%** ($9,017) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 144 · skips 17 · realized $-2405.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -312,6 +312,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `ISRG` | 5 | $402.50 | $2.00 | — | $2,625.60 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+3.8; leftover $2233.26 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `T` | 102 | $21.89 | $2.30 | — | $390.83 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+2.5; leftover $2233.26 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $390.83 | ▲ close $9,021.01 vs 09:30 $8,933.03 (session +96.45) | 16:00 close · cash $390.83 · equity $9,021.01 vs 09:30 $8,933.03 (+87.98; session marks +96.45) · 4 name(s) marked open→close (per-name table). BKU×52 09:30 $42.79 → close $42.08 -36.92; COF×10 09:30 $206.37 → close $206.66 +2.90; ISRG×5 09:30 $402.50 → close $428.12 +128.12; T×102 09:30 $21.89 → close $21.91 +2.35 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $390.83 | ▲ 09:30 equity $9,025.75 vs yday $9,021.01 (+4.74) | 09:30 open · cash $390.83 (unchanged overnight, no fees) · equity $9,025.75 vs prior close $9,021.01 (+4.74) · 4 name(s) re-marked at the open (per-name table). BKU×52 yday $42.08 → 09:30 $41.80 -14.56; COF×10 yday $206.66 → 09:30 $205.94 -7.20; ISRG×5 yday $428.12 → 09:30 $430.67 +12.73; T×102 yday $21.91 → 09:30 $22.05 +13.77 | — |
+| 2026-10-22 09:30 ET | **SELL** | `BKU` | 52 | $41.80 | $2.17 | $-55.80 | $2,562.26 | ▼ -55.80 after sell → book $9,023.57; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `COF` | 10 | $205.94 | $2.05 | $-8.37 | $4,619.61 | ▼ -8.37 after sell → book $9,021.53; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `ISRG` | 5 | $430.67 | $2.03 | $+136.81 | $6,770.90 | ▲ +136.81 after sell → book $9,019.49; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `T` | 102 | $22.05 | $2.33 | $+11.49 | $9,017.16 | ▲ +11.49 after sell → book $9,017.16; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,017.16 | ▲ close $9,017.16 vs 09:30 $9,025.75 (session +0.00) | 16:00 close · cash $9,017.16 · no lots left · equity $9,017.16. | — |
 
 ## Not taken
 

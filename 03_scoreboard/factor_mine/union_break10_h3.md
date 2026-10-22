@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **+6.59%** ($10,659) · signal-only (no cash/fees) was +49.44%. Starts YES **25/30**. Fills 312 · skips 298 · realized $+167.97.
+Cash book **+7.81%** ($10,781) · signal-only (no cash/fees) was +49.44%. Starts YES **25/30**. Fills 318 · skips 298 · realized $+167.97.
 
 ## How this sleeve decides (like you are 10)
 
@@ -482,6 +482,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `IT` | 1 | $216.34 | $1.99 | — | $320.61 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+11.5; leftover $252.29 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `EPAM` | 1 | $129.12 | $1.29 | — | $190.19 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+13.1; leftover $252.29 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $190.19 | ▲ close $10,659.00 vs 09:30 $10,486.13 (session +188.52) | 16:00 close · cash $190.19 · equity $10,659.00 vs 09:30 $10,486.13 (+172.87; session marks +188.52) · 14 name(s) marked open→close (per-name table). ACN×5 09:30 $235.00 → close $240.26 +26.30; AMX×56 09:30 $23.20 → close $24.29 +61.04; BTI×21 09:30 $58.66 → close $58.90 +5.14; COP×8 09:30 $145.61 → close $145.67 +0.48; POOL×7 09:30 $171.39 → close $172.44 +7.35; WIT×668 09:30 $2.06 → close $2.15 +60.12; WMG×41 09:30 $31.01 → close $31.44 +17.63; TRU×3 09:30 $77.62 → close $78.93 +3.93; KLRA×19 09:30 $12.91 → close $12.92 +0.19; FRSH×17 09:30 $14.84 → close $14.82 -0.26; KVYO×12 09:30 $19.59 → close $20.19 +7.20; CMRC×67 09:30 $3.75 → close $3.62 -8.71; IT×1 09:30 $216.34 → close $219.57 +3.23; EPAM×1 09:30 $129.12 → close $134.00 +4.88 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $190.19 | ▲ 09:30 equity $10,704.65 vs yday $10,659.00 (+45.65) | 09:30 open · cash $190.19 (unchanged overnight, no fees) · equity $10,704.65 vs prior close $10,659.00 (+45.65) · 14 name(s) re-marked at the open (per-name table). ACN×5 yday $240.26 → 09:30 $242.00 +8.70; AMX×56 yday $24.29 → 09:30 $24.14 -8.40; BTI×21 yday $58.90 → 09:30 $59.51 +12.81; CMRC×67 yday $3.62 → 09:30 $3.69 +4.69; COP×8 yday $145.67 → 09:30 $146.85 +9.44; EPAM×1 yday $134.00 → 09:30 $133.58 -0.42; FRSH×17 yday $14.82 → 09:30 $14.85 +0.43; IT×1 yday $219.57 → 09:30 $221.23 +1.66; KLRA×19 yday $12.92 → 09:30 $12.80 -2.28; KVYO×12 yday $20.19 → 09:30 $20.29 +1.20; POOL×7 yday $172.44 → 09:30 $175.30 +20.02; TRU×3 yday $78.93 → 09:30 $79.88 +2.85; WIT×668 yday $2.15 → 09:30 $2.14 -6.68; WMG×41 yday $31.44 → 09:30 $31.48 +1.64 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ACN` | 5 | $242.00 | $2.02 | $+63.57 | $1,398.16 | ▲ +63.57 after sell → book $10,702.62; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `BTI` | 21 | $59.51 | $2.07 | $+3.85 | $2,645.80 | ▲ +3.85 after sell → book $10,700.55; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `COP` | 8 | $146.85 | $2.03 | $+4.91 | $3,818.57 | ▲ +4.91 after sell → book $10,698.52; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `POOL` | 7 | $175.30 | $2.03 | $+22.70 | $5,043.64 | ▲ +22.70 after sell → book $10,696.49; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `WIT` | 668 | $2.14 | $8.74 | $+129.60 | $6,464.42 | ▲ +129.60 after sell → book $10,687.75; vs 09:30 mark -8.74 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `WMG` | 41 | $31.48 | $2.13 | $+4.77 | $7,752.96 | ▲ +4.77 after sell → book $10,685.61; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,752.96 | ▲ close $10,780.87 vs 09:30 $10,704.65 (session +95.26) | 16:00 close · cash $7,752.96 · equity $10,780.87 vs 09:30 $10,704.65 (+76.22; session marks +95.26) · 8 name(s) marked open→close (per-name table). AMX×56 09:30 $24.14 → close $24.98 +47.04; CMRC×67 09:30 $3.69 → close $3.67 -1.34; EPAM×1 09:30 $133.58 → close $138.67 +5.09; FRSH×17 09:30 $14.85 → close $15.32 +7.99; IT×1 09:30 $221.23 → close $234.44 +13.21; KLRA×19 09:30 $12.80 → close $13.27 +8.93; KVYO×12 09:30 $20.29 → close $20.59 +3.60; TRU×3 09:30 $79.88 → close $83.46 +10.74 | — |
 
 ## Not taken
 

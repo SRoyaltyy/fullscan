@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 5
 
-Cash book **-25.88%** ($7,412) · signal-only (no cash/fees) was -10.75%. Starts YES **1/30**. Fills 134 · skips 18 · realized $-1136.92.
+Cash book **-26.30%** ($7,370) · signal-only (no cash/fees) was -10.75%. Starts YES **1/30**. Fills 136 · skips 18 · realized $-1136.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -306,6 +306,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `AMX` | 155 | $23.20 | $2.46 | — | $3,626.18 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list yday_gainer; ret5=+5.6; leftover $3612.32 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `HLT` | 10 | $360.00 | $2.02 | — | $24.16 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list ohlc_hot; ret5=+9.0; leftover $3612.32 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.16 | ▲ close $7,411.60 vs 09:30 $7,224.63 (session +191.45) | 16:00 close · cash $24.16 · equity $7,411.60 vs 09:30 $7,224.63 (+186.97; session marks +191.45) · 2 name(s) marked open→close (per-name table). AMX×155 09:30 $23.20 → close $24.29 +168.95; HLT×10 09:30 $360.00 → close $362.25 +22.50 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $24.16 | ▼ 09:30 equity $7,374.26 vs yday $7,411.60 (-37.34) | 09:30 open · cash $24.16 (unchanged overnight, no fees) · equity $7,374.26 vs prior close $7,411.60 (-37.34) · 2 name(s) re-marked at the open (per-name table). AMX×155 yday $24.29 → 09:30 $24.14 -23.25; HLT×10 yday $362.25 → 09:30 $360.84 -14.10 | — |
+| 2026-10-22 09:30 ET | **SELL** | `AMX` | 155 | $24.14 | $2.51 | $+140.73 | $3,763.35 | ▲ +140.73 after sell → book $7,371.75; vs 09:30 mark -2.51 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `HLT` | 10 | $360.84 | $2.06 | $+4.32 | $7,369.69 | ▲ +4.32 after sell → book $7,369.69; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,369.69 | ▲ close $7,369.69 vs 09:30 $7,374.26 (session +0.00) | 16:00 close · cash $7,369.69 · no lots left · equity $7,369.69. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared overnight_mega_h1/union_hot_n4_holdup w=0.5,0.5 net=priority
 
-Cash book **+40.45%** ($14,045) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 228 · skips 62 · realized $+1377.50.
+Cash book **+40.35%** ($14,035) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 235 · skips 62 · realized $+1377.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $358.37.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $14,034.75.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -399,6 +399,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `IBM` | 9 | $241.91 | $2.02 | — | $2,444.51 | — | prior-calendar AMC-today / BMO-next, mcap≥$50B; hold 1 sells at next 09:30 so the print gap is in the book; list overnight,overnight_mega; 🔵; ret5=+4.8; combo leftover $2310.45; owner overnight_mega_h1 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `SAP` | 9 | $231.57 | $2.02 | — | $358.37 | — | prior-calendar AMC-today / BMO-next, mcap≥$50B; hold 1 sells at next 09:30 so the print gap is in the book; list overnight,overnight_mega; ret5=+4.2; combo leftover $2310.45; owner overnight_mega_h1 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $358.37 | ▲ close $14,044.71 vs 09:30 $13,870.17 (session +201.79) | 16:00 close · cash $358.37 · equity $14,044.71 vs 09:30 $13,870.17 (+174.54; session marks +201.79) · 7 name(s) marked open→close (per-name table). BMBL×291 09:30 $5.95 → close $5.95 +0.00; ARQT×53 09:30 $32.64 → close $31.87 -40.81; WIT×841 09:30 $2.06 → close $2.15 +75.69; KVYO×88 09:30 $19.59 → close $20.19 +52.80; CSX×48 09:30 $48.03 → close $48.40 +17.76; IBM×9 09:30 $241.91 → close $251.46 +85.91; SAP×9 09:30 $231.57 → close $232.73 +10.44 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $358.37 | ▲ 09:30 equity $14,060.28 vs yday $14,044.71 (+15.57) | 09:30 open · cash $358.37 (unchanged overnight, no fees) · equity $14,060.28 vs prior close $14,044.71 (+15.57) | — |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 53 | $31.68 | $2.17 | $-55.20 | $2,035.24 | ▼ -55.20 after sell → book $14,058.10; vs 09:30 mark -2.18 | union_hot_n4_holdup: dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `BMBL` | 291 | $5.94 | $3.82 | $-10.48 | $3,759.96 | ▼ -10.48 after sell → book $14,054.29; vs 09:30 mark -3.81 | union_hot_n4_holdup: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `CSX` | 48 | $50.09 | $2.16 | $+94.58 | $6,162.12 | ▲ +94.58 after sell → book $14,052.12; vs 09:30 mark -2.17 | overnight_mega_h1: dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `IBM` | 9 | $241.25 | $2.04 | $-10.09 | $8,331.28 | ▼ -10.09 after sell → book $14,050.08; vs 09:30 mark -2.04 | overnight_mega_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `KVYO` | 88 | $20.29 | $2.28 | $+57.06 | $10,114.52 | ▲ +57.06 after sell → book $14,047.80; vs 09:30 mark -2.28 | union_hot_n4_holdup: dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `SAP` | 9 | $237.06 | $2.04 | $+45.35 | $12,246.01 | ▲ +45.35 after sell → book $14,045.75; vs 09:30 mark -2.05 | overnight_mega_h1: dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `WIT` | 841 | $2.14 | $11.00 | $+45.43 | $14,034.75 | ▲ +45.43 after sell → book $14,034.75; vs 09:30 mark -11.00 | union_hot_n4_holdup: dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,034.75 | ▲ close $14,034.75 vs 09:30 $14,060.28 (session +0.00) | 16:00 close · cash $14,034.75 · no lots left · equity $14,034.75. | — |
 
 ## Not taken
 

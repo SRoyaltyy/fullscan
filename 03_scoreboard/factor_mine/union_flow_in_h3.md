@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **-11.08%** ($8,892) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 96 · skips 105 · realized $-281.48.
+Cash book **-11.44%** ($8,856) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 98 · skips 105 · realized $-281.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -266,6 +266,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $135.93 | ▲ 09:30 equity $8,995.14 vs yday $8,902.95 (+92.19) | 09:30 open · cash $135.93 (unchanged overnight, no fees) · equity $8,995.14 vs prior close $8,902.95 (+92.19) · 3 name(s) re-marked at the open (per-name table). BR×25 yday $179.99 → 09:30 $179.78 -5.25; PRIM×59 yday $72.14 → 09:30 $73.79 +97.35; WSE×1 yday $11.01 → 09:30 $11.10 +0.09 | — |
 | 2026-10-21 09:30 ET | **SELL** | `WSE` | 1 | $11.10 | $0.13 | $-1.21 | $146.90 | ▼ -1.21 after sell → book $8,995.01; vs 09:30 mark -0.13 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $146.90 | ▼ close $8,891.93 vs 09:30 $8,995.14 (session -103.08) | 16:00 close · cash $146.90 · equity $8,891.93 vs 09:30 $8,995.14 (-103.21; session marks -103.08) · 2 name(s) marked open→close (per-name table). BR×25 09:30 $179.78 → close $178.30 -37.00; PRIM×59 09:30 $73.79 → close $72.67 -66.08 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $146.90 | ▼ 09:30 equity $8,859.96 vs yday $8,891.93 (-31.97) | 09:30 open · cash $146.90 (unchanged overnight, no fees) · equity $8,859.96 vs prior close $8,891.93 (-31.97) · 2 name(s) re-marked at the open (per-name table). BR×25 yday $178.30 → 09:30 $180.16 +46.50; PRIM×59 yday $72.67 → 09:30 $71.34 -78.47 | — |
+| 2026-10-22 09:30 ET | **SELL** | `BR` | 25 | $180.16 | $2.11 | $+157.57 | $4,648.79 | ▲ +157.57 after sell → book $8,857.85; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `PRIM` | 59 | $71.34 | $2.21 | $-241.56 | $8,855.64 | ▼ -241.56 after sell → book $8,855.64; vs 09:30 mark -2.21 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,855.64 | ▲ close $8,855.64 vs 09:30 $8,859.96 (session +0.00) | 16:00 close · cash $8,855.64 · no lots left · equity $8,855.64. | — |
 
 ## Not taken
 

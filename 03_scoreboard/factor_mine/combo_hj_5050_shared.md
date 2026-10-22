@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/union_join_vol_green_h1 w=0.5,0.5 net=priority
 
-Cash book **+19.56%** ($11,956) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 475 · skips 100 · realized $+1412.04.
+Cash book **+19.05%** ($11,905) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 479 · skips 100 · realized $+1412.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $14.86.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,904.69.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -646,6 +646,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `WIT` | 1436 | $2.06 | $18.52 | — | $2,955.80 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+13.9; combo leftover $2958.98; owner union_hot_n4_h1 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `KVYO` | 150 | $19.59 | $2.44 | — | $14.86 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+15.7; combo leftover $2958.98; owner union_hot_n4_h1 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14.86 | ▲ close $11,956.21 vs 09:30 $11,837.96 (session +149.94) | 16:00 close · cash $14.86 · equity $11,956.21 vs 09:30 $11,837.96 (+118.25; session marks +149.94) · 4 name(s) marked open→close (per-name table). BMBL×497 09:30 $5.95 → close $5.95 +0.00; ARQT×90 09:30 $32.64 → close $31.87 -69.30; WIT×1436 09:30 $2.06 → close $2.15 +129.24; KVYO×150 09:30 $19.59 → close $20.19 +90.00 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14.86 | ▼ 09:30 equity $11,934.78 vs yday $11,956.21 (-21.43) | 09:30 open · cash $14.86 (unchanged overnight, no fees) · equity $11,934.78 vs prior close $11,956.21 (-21.43) | — |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 90 | $31.68 | $2.30 | $-90.96 | $2,863.76 | ▼ -90.96 after sell → book $11,932.48; vs 09:30 mark -2.30 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `BMBL` | 497 | $5.94 | $6.52 | $-17.90 | $5,809.42 | ▼ -17.90 after sell → book $11,925.96; vs 09:30 mark -6.52 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `KVYO` | 150 | $20.29 | $2.49 | $+100.07 | $8,850.44 | ▲ +100.07 after sell → book $11,923.48; vs 09:30 mark -2.48 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `WIT` | 1436 | $2.14 | $18.79 | $+77.57 | $11,904.69 | ▲ +77.57 after sell → book $11,904.69; vs 09:30 mark -18.79 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,904.69 | ▲ close $11,904.69 vs 09:30 $11,934.78 (session +0.00) | 16:00 close · cash $11,904.69 · no lots left · equity $11,904.69. | — |
 
 ## Not taken
 

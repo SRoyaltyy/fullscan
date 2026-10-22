@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data)
 
-Cash book **-6.72%** ($9,327) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 11 · skips 7 · realized $-603.63.
+Cash book **+6.65%** ($10,665) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 11 · skips 7 · realized $-603.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -183,6 +183,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,272.92 | ▲ 09:30 equity $9,272.92 vs yday $9,272.92 (+0.00) | 09:30 open · cash $9,272.92 · no holdings · equity $9,272.92 vs prior close $9,272.92 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-21 09:30 ET | **BUY** | `POOL` | 54 | $171.39 | $2.15 | — | $15.71 | — | Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data); gate clk_insider_cash_stab=True; rank cond; list yday_gainer; ret5=+6.9; leftover $9272.92 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.71 | ▲ close $9,327.47 vs 09:30 $9,272.92 (session +56.70) | 16:00 close · cash $15.71 · equity $9,327.47 vs 09:30 $9,272.92 (+54.55; session marks +56.70) · 1 name(s) marked open→close (per-name table). POOL×54 09:30 $171.39 → close $172.44 +56.70 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15.71 | ▲ 09:30 equity $9,481.91 vs yday $9,327.47 (+154.44) | 09:30 open · cash $15.71 (unchanged overnight, no fees) · equity $9,481.91 vs prior close $9,327.47 (+154.44) · 1 name(s) re-marked at the open (per-name table). POOL×54 yday $172.44 → 09:30 $175.30 +154.44 | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.71 | ▲ close $10,665.05 vs 09:30 $9,481.91 (session +1,183.14) | 16:00 close · cash $15.71 · equity $10,665.05 vs 09:30 $9,481.91 (+1183.14; session marks +1183.14) · 1 name(s) marked open→close (per-name table). POOL×54 09:30 $175.30 → close $197.21 +1183.14 | — |
 
 ## Not taken
 

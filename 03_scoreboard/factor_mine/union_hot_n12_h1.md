@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 12 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · top 12 by hot
 
-Cash book **+5.93%** ($10,593) · signal-only (no cash/fees) was +34.72%. Starts YES **29/30**. Fills 629 · skips 145 · realized $-34.73.
+Cash book **+5.98%** ($10,598) · signal-only (no cash/fees) was +34.72%. Starts YES **29/30**. Fills 640 · skips 145 · realized $-34.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -798,6 +798,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `KD` | 63 | $13.94 | $2.18 | — | $1,094.73 | — | top 12 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+13.5; leftover $892.13 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `GLND` | 296 | $3.01 | $3.82 | — | $199.95 | — | top 12 by hot; rank hot_score; list yday_mover; ret5=+40.3; leftover $892.13 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $199.95 | ▲ close $10,593.33 vs 09:30 $10,520.48 (session +104.40) | 16:00 close · cash $199.95 · equity $10,593.33 vs 09:30 $10,520.48 (+72.85; session marks +104.40) · 12 name(s) marked open→close (per-name table). ACN×3 09:30 $235.00 → close $240.26 +15.78; BMBL×149 09:30 $5.95 → close $5.95 +0.00; ARQT×27 09:30 $32.64 → close $31.87 -20.79; WIT×433 09:30 $2.06 → close $2.15 +38.97; KVYO×45 09:30 $19.59 → close $20.19 +27.00; KLRA×69 09:30 $12.91 → close $12.92 +0.69; TRU×11 09:30 $77.62 → close $78.93 +14.41; CMRC×237 09:30 $3.75 → close $3.62 -30.81; IT×4 09:30 $216.34 → close $219.57 +12.92; EPAM×6 09:30 $129.12 → close $134.00 +29.28; KD×63 09:30 $13.94 → close $14.35 +25.83; GLND×296 09:30 $3.01 → close $2.98 -8.88 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $199.95 | ▼ 09:30 equity $10,588.34 vs yday $10,593.33 (-4.99) | 09:30 open · cash $199.95 (unchanged overnight, no fees) · equity $10,588.34 vs prior close $10,593.33 (-4.99) · 12 name(s) re-marked at the open (per-name table). ACN×3 yday $240.26 → 09:30 $242.00 +5.22; ARQT×27 yday $31.87 → 09:30 $31.68 -5.13; BMBL×149 yday $5.95 → 09:30 $5.94 -1.49; CMRC×237 yday $3.62 → 09:30 $3.69 +16.59; EPAM×6 yday $134.00 → 09:30 $133.58 -2.52; GLND×296 yday $2.98 → 09:30 $2.89 -26.64; IT×4 yday $219.57 → 09:30 $221.23 +6.64; KD×63 yday $14.35 → 09:30 $14.35 +0.00; KLRA×69 yday $12.92 → 09:30 $12.80 -8.28; KVYO×45 yday $20.19 → 09:30 $20.29 +4.50; TRU×11 yday $78.93 → 09:30 $79.88 +10.45; WIT×433 yday $2.15 → 09:30 $2.14 -4.33 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ACN` | 3 | $242.00 | $2.02 | $+36.54 | $923.93 | ▲ +36.54 after sell → book $10,586.32; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 27 | $31.68 | $2.09 | $-30.08 | $1,777.20 | ▼ -30.08 after sell → book $10,584.23; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `BMBL` | 149 | $5.94 | $2.47 | $-6.40 | $2,659.79 | ▼ -6.40 after sell → book $10,581.76; vs 09:30 mark -2.47 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `CMRC` | 237 | $3.69 | $3.11 | $-20.38 | $3,531.21 | ▼ -20.38 after sell → book $10,578.65; vs 09:30 mark -3.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `EPAM` | 6 | $133.58 | $2.03 | $+22.72 | $4,330.66 | ▲ +22.72 after sell → book $10,576.62; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `GLND` | 296 | $2.89 | $3.88 | $-43.22 | $5,182.23 | ▼ -43.22 after sell → book $10,572.75; vs 09:30 mark -3.87 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `IT` | 4 | $221.23 | $2.02 | $+15.54 | $6,065.12 | ▲ +15.54 after sell → book $10,570.72; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `KD` | 63 | $14.35 | $2.20 | $+21.45 | $6,966.97 | ▲ +21.45 after sell → book $10,568.52; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `KLRA` | 69 | $12.80 | $2.22 | $-12.01 | $7,847.96 | ▼ -12.01 after sell → book $10,566.31; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `KVYO` | 45 | $20.29 | $2.15 | $+27.23 | $8,758.86 | ▲ +27.23 after sell → book $10,564.16; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `WIT` | 433 | $2.14 | $5.67 | $+23.39 | $9,679.81 | ▲ +23.39 after sell → book $10,558.49; vs 09:30 mark -5.67 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,679.81 | ▲ close $10,597.87 vs 09:30 $10,588.34 (session +39.38) | 16:00 close · cash $9,679.81 · equity $10,597.87 vs 09:30 $10,588.34 (+9.53; session marks +39.38) · 1 name(s) marked open→close (per-name table). TRU×11 09:30 $79.88 → close $83.46 +39.38 | — |
 
 ## Not taken
 

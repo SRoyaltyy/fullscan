@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ earn_react, no 🚨
 
-Cash book **-11.84%** ($8,816) · signal-only (no cash/fees) was -3.08%. Starts YES **4/30**. Fills 248 · skips 54 · realized $-117.67.
+Cash book **-11.82%** ($8,818) · signal-only (no cash/fees) was -3.08%. Starts YES **4/30**. Fills 256 · skips 54 · realized $-117.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -418,6 +418,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `PM` | 5 | $187.14 | $2.00 | — | $2,025.22 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+0.3; leftover $1083.20 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `T` | 49 | $21.89 | $2.14 | — | $950.62 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=+2.5; leftover $1083.20 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $950.62 | ▲ close $8,816.50 vs 09:30 $8,665.57 (session +167.18) | 16:00 close · cash $950.62 · equity $8,816.50 vs 09:30 $8,665.57 (+150.93; session marks +167.18) · 8 name(s) marked open→close (per-name table). BKU×25 09:30 $42.79 → close $42.08 -17.75; CME×3 09:30 $295.77 → close $295.79 +0.06; COF×5 09:30 $206.37 → close $206.66 +1.45; DHR×4 09:30 $217.56 → close $233.86 +65.20; ISRG×2 09:30 $402.50 → close $428.12 +51.25; NFLX×16 09:30 $64.15 → close $65.04 +14.24; PM×5 09:30 $187.14 → close $197.46 +51.60; T×49 09:30 $21.89 → close $21.91 +1.13 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $950.62 | ▲ 09:30 equity $8,834.10 vs yday $8,816.50 (+17.60) | 09:30 open · cash $950.62 (unchanged overnight, no fees) · equity $8,834.10 vs prior close $8,816.50 (+17.60) · 8 name(s) re-marked at the open (per-name table). BKU×25 yday $42.08 → 09:30 $41.80 -7.00; CME×3 yday $295.79 → 09:30 $301.99 +18.60; COF×5 yday $206.66 → 09:30 $205.94 -3.60; DHR×4 yday $233.86 → 09:30 $233.80 -0.24; ISRG×2 yday $428.12 → 09:30 $430.67 +5.09; NFLX×16 yday $65.04 → 09:30 $65.06 +0.24; PM×5 yday $197.46 → 09:30 $197.04 -2.10; T×49 yday $21.91 → 09:30 $22.05 +6.62 | — |
+| 2026-10-22 09:30 ET | **SELL** | `BKU` | 25 | $41.80 | $2.08 | $-28.90 | $1,993.53 | ▼ -28.90 after sell → book $8,832.02; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `CME` | 3 | $301.99 | $2.02 | $+14.64 | $2,897.49 | ▲ +14.64 after sell → book $8,830.00; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `COF` | 5 | $205.94 | $2.02 | $-6.18 | $3,925.16 | ▼ -6.18 after sell → book $8,827.98; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `DHR` | 4 | $233.80 | $2.02 | $+60.94 | $4,858.34 | ▲ +60.94 after sell → book $8,825.95; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `ISRG` | 2 | $430.67 | $2.02 | $+52.33 | $5,717.65 | ▲ +52.33 after sell → book $8,823.94; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `NFLX` | 16 | $65.06 | $2.06 | $+10.38 | $6,756.48 | ▲ +10.38 after sell → book $8,821.88; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `PM` | 5 | $197.04 | $2.02 | $+45.47 | $7,739.65 | ▲ +45.47 after sell → book $8,819.86; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `T` | 49 | $22.05 | $2.16 | $+3.45 | $8,817.70 | ▲ +3.45 after sell → book $8,817.70; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,817.70 | ▲ close $8,817.70 vs 09:30 $8,834.10 (session +0.00) | 16:00 close · cash $8,817.70 · no lots left · equity $8,817.70. | — |
 
 ## Not taken
 

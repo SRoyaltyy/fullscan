@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-22.32%** ($7,768) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 306 · skips 294 · realized $-410.95.
+Cash book **-22.66%** ($7,733) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 311 · skips 294 · realized $-410.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -472,6 +472,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `CRON` | 53 | $3.30 | $1.91 | — | $173.20 | — | 40% to #1, rest split; list flatten; 🔵; ret5=+2.5; leftover $175.47 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `ETON` | 3 | $50.93 | $1.54 | — | $18.87 | — | 40% to #1, rest split; list flatten; 🔵; ret5=-5.9; leftover $175.47 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.87 | ▲ close $7,768.39 vs 09:30 $7,744.62 (session +29.66) | 16:00 close · cash $18.87 · equity $7,768.39 vs 09:30 $7,744.62 (+23.77; session marks +29.66) · 11 name(s) marked open→close (per-name table). ARQT×30 09:30 $32.64 → close $31.87 -23.10; BLFS×1 09:30 $38.61 → close $38.61 +0.00; CDNA×13 09:30 $69.50 → close $70.74 +16.16; ILMN×3 09:30 $267.35 → close $282.86 +46.53; PACS×19 09:30 $47.52 → close $46.76 -14.44; PRMB×33 09:30 $20.00 → close $20.03 +0.99; SMMT×40 09:30 $16.35 → close $15.83 -20.80; VEEV×7 09:30 $317.01 → close $320.55 +24.78; CORT×2 09:30 $116.45 → close $116.28 -0.34; CRON×53 09:30 $3.30 → close $3.39 +4.77; ETON×3 09:30 $50.93 → close $49.30 -4.89 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18.87 | ▼ 09:30 equity $7,734.52 vs yday $7,768.39 (-33.87) | 09:30 open · cash $18.87 (unchanged overnight, no fees) · equity $7,734.52 vs prior close $7,768.39 (-33.87) · 11 name(s) re-marked at the open (per-name table). ARQT×30 yday $31.87 → 09:30 $31.68 -5.70; BLFS×1 yday $38.61 → 09:30 $38.61 +0.00; CDNA×13 yday $70.74 → 09:30 $69.65 -14.17; CORT×2 yday $116.28 → 09:30 $115.16 -2.24; CRON×53 yday $3.39 → 09:30 $3.39 +0.00; ETON×3 yday $49.30 → 09:30 $49.36 +0.18; ILMN×3 yday $282.86 → 09:30 $280.81 -6.15; PACS×19 yday $46.76 → 09:30 $46.62 -2.66; PRMB×33 yday $20.03 → 09:30 $19.86 -5.61; SMMT×40 yday $15.83 → 09:30 $15.29 -21.60; VEEV×7 yday $320.55 → 09:30 $323.99 +24.08 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 30 | $31.68 | $2.10 | $+63.92 | $967.17 | ▲ +63.92 after sell → book $7,732.42; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `CDNA` | 13 | $69.65 | $2.05 | $+56.37 | $1,870.57 | ▲ +56.37 after sell → book $7,730.37; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `ILMN` | 3 | $280.81 | $2.02 | $+31.62 | $2,710.98 | ▲ +31.62 after sell → book $7,728.35; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `PACS` | 19 | $46.62 | $2.07 | $-11.71 | $3,594.69 | ▼ -11.71 after sell → book $7,726.28; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `VEEV` | 7 | $323.99 | $2.04 | $+91.57 | $5,860.59 | ▲ +91.57 after sell → book $7,724.25; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,860.59 | ▲ close $7,733.46 vs 09:30 $7,734.52 (session +9.21) | 16:00 close · cash $5,860.59 · equity $7,733.46 vs 09:30 $7,734.52 (-1.06; session marks +9.21) · 6 name(s) marked open→close (per-name table). BLFS×1 09:30 $38.61 → close $38.61 +0.00; CORT×2 09:30 $115.16 → close $107.50 -15.32; CRON×53 09:30 $3.39 → close $3.44 +2.91; ETON×3 09:30 $49.36 → close $50.02 +1.98; PRMB×33 09:30 $19.86 → close $20.14 +9.24; SMMT×40 09:30 $15.29 → close $15.55 +10.40 | — |
 
 ## Not taken
 

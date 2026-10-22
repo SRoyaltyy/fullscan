@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **+14.60%** ($11,460) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 121 · skips 27 · realized $+766.09.
+Cash book **+15.50%** ($11,550) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 124 · skips 27 · realized $+766.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -291,6 +291,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `DHR` | 16 | $217.56 | $2.04 | — | $3,940.03 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; ret5=+0.6; leftover $3658.10 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `ISRG` | 9 | $402.50 | $2.02 | — | $315.55 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; ret5=+3.8; leftover $3658.10 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $315.55 | ▲ close $11,459.87 vs 09:30 $10,974.29 (session +491.66) | 16:00 close · cash $315.55 · equity $11,459.87 vs 09:30 $10,974.29 (+485.58; session marks +491.66) · 3 name(s) marked open→close (per-name table). CME×12 09:30 $295.77 → close $295.79 +0.24; DHR×16 09:30 $217.56 → close $233.86 +260.80; ISRG×9 09:30 $402.50 → close $428.12 +230.62 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $315.55 | ▲ 09:30 equity $11,556.22 vs yday $11,459.87 (+96.34) | 09:30 open · cash $315.55 (unchanged overnight, no fees) · equity $11,556.22 vs prior close $11,459.87 (+96.34) · 3 name(s) re-marked at the open (per-name table). CME×12 yday $295.79 → 09:30 $301.99 +74.40; DHR×16 yday $233.86 → 09:30 $233.80 -0.96; ISRG×9 yday $428.12 → 09:30 $430.67 +22.91 | — |
+| 2026-10-22 09:30 ET | **SELL** | `CME` | 12 | $301.99 | $2.06 | $+70.55 | $3,937.37 | ▲ +70.55 after sell → book $11,554.15; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `DHR` | 16 | $233.80 | $2.08 | $+255.72 | $7,676.09 | ▲ +255.72 after sell → book $11,552.07; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `ISRG` | 9 | $430.67 | $2.06 | $+249.46 | $11,550.01 | ▲ +249.46 after sell → book $11,550.01; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,550.01 | ▲ close $11,550.01 vs 09:30 $11,556.22 (session +0.00) | 16:00 close · cash $11,550.01 · no lots left · equity $11,550.01. | — |
 
 ## Not taken
 

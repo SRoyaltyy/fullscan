@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+1.83%** ($10,183) · signal-only (no cash/fees) was -2.80%. Starts YES **2/30**. Fills 236 · skips 221 · realized $+639.78.
+Cash book **+1.46%** ($10,146) · signal-only (no cash/fees) was -2.80%. Starts YES **2/30**. Fills 243 · skips 221 · realized $+639.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -404,6 +404,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,663.46 | ▼ 09:30 equity $10,221.43 vs yday $10,229.37 (-7.94) | 09:30 open · cash $15,663.46 (unchanged overnight, no fees) · equity $10,221.43 vs prior close $10,229.37 (-7.94) · 8 name(s) re-marked at the open (per-name table). BP×13 yday $49.39 → 09:30 $49.73 -4.42; BRO×9 yday $70.90 → 09:30 $70.29 +5.49; CDNA×9 yday $69.20 → 09:30 $69.50 -2.67; NOG×24 yday $27.54 → 09:30 $27.43 +2.64; PRMB×33 yday $20.00 → 09:30 $20.00 -0.00; SMMT×57 yday $16.09 → 09:30 $16.35 -14.82; VET×49 yday $13.41 → 09:30 $13.30 +5.39; VIST×9 yday $70.66 → 09:30 $70.61 +0.45 | — |
 | 2026-10-21 09:30 ET | **COVER** | `SMMT` | 57 | $16.35 | $2.16 | $-76.19 | $14,729.35 | ▼ -76.19 after sell → book $10,219.27; vs 09:30 mark -2.16 | dropped from list after 4 sess (min 3) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,729.35 | ▼ close $10,183.41 vs 09:30 $10,221.43 (session -35.86) | 16:00 close · cash $14,729.35 · equity $10,183.41 vs 09:30 $10,221.43 (-38.02; session marks -35.86) · 7 name(s) marked open→close (per-name table). BP×13 09:30 $49.73 → close $49.85 -1.56; BRO×9 09:30 $70.29 → close $70.53 -2.16; CDNA×9 09:30 $69.50 → close $70.74 -11.19; NOG×24 09:30 $27.43 → close $27.44 -0.24; PRMB×33 09:30 $20.00 → close $20.03 -0.99; VET×49 09:30 $13.30 → close $13.55 -12.25; VIST×9 09:30 $70.61 → close $71.44 -7.47 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,729.35 | ▼ 09:30 equity $10,159.93 vs yday $10,183.41 (-23.48) | 09:30 open · cash $14,729.35 (unchanged overnight, no fees) · equity $10,159.93 vs prior close $10,183.41 (-23.48) · 7 name(s) re-marked at the open (per-name table). BP×13 yday $49.85 → 09:30 $50.29 -5.72; BRO×9 yday $70.53 → 09:30 $71.47 -8.46; CDNA×9 yday $70.74 → 09:30 $69.65 +9.81; NOG×24 yday $27.44 → 09:30 $27.85 -9.84; PRMB×33 yday $20.03 → 09:30 $19.86 +5.61; VET×49 yday $13.55 → 09:30 $13.76 -10.29; VIST×9 yday $71.44 → 09:30 $71.95 -4.59 | — |
+| 2026-10-22 09:30 ET | **COVER** | `BP` | 13 | $50.29 | $2.03 | $-15.02 | $14,073.55 | ▼ -15.02 after sell → book $10,157.90; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **COVER** | `BRO` | 9 | $71.47 | $2.02 | $-31.34 | $13,428.30 | ▼ -31.34 after sell → book $10,155.88; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **COVER** | `CDNA` | 9 | $69.65 | $2.02 | $-45.92 | $12,799.44 | ▼ -45.92 after sell → book $10,153.87; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **COVER** | `NOG` | 24 | $27.85 | $2.06 | $-24.56 | $12,128.98 | ▼ -24.56 after sell → book $10,151.81; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **COVER** | `PRMB` | 33 | $19.86 | $2.09 | $-25.34 | $11,471.51 | ▼ -25.34 after sell → book $10,149.72; vs 09:30 mark -2.09 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **COVER** | `VET` | 49 | $13.76 | $2.14 | $-33.22 | $10,795.13 | ▼ -33.22 after sell → book $10,147.58; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **COVER** | `VIST` | 9 | $71.95 | $2.02 | $-3.17 | $10,145.56 | ▼ -3.17 after sell → book $10,145.56; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,145.56 | ▲ close $10,145.56 vs 09:30 $10,159.93 (session +0.00) | 16:00 close · cash $10,145.56 · no lots left · equity $10,145.56. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_macd_h3/union_hot_n4_h1 w=0.5,0.5 net=priority
 
-Cash book **+94.21%** ($19,421) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 313 · skips 122 · realized $+3569.64.
+Cash book **+91.21%** ($19,121) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 317 · skips 122 · realized $+3569.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $19,120.38.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $28,903.95.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -484,6 +484,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **SHORT** | `IBM` | 6 | $241.91 | $2.07 | — | $17,575.46 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list overnight,overnight_mega; 🔵; ret5=+4.8; combo leftover $1619.15; owner short_news_r_macd_h3 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **SHORT** | `MOH` | 7 | $221.00 | $2.08 | — | $19,120.38 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list overnight; 🔵; ret5=+4.9; combo leftover $1619.15; owner short_news_r_macd_h3 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,120.38 | ▲ close $19,420.82 vs 09:30 $19,461.64 (session +3.92) | 16:00 close · cash $19,120.38 · equity $19,420.82 vs 09:30 $19,461.64 (-40.82; session marks +3.92) · 10 name(s) marked open→close (per-name table). BMBL×408 09:30 $5.95 → close $5.95 +0.00; ARQT×74 09:30 $32.64 → close $31.87 -56.98; WIT×1180 09:30 $2.06 → close $2.15 +106.20; KVYO×124 09:30 $19.59 → close $20.19 +74.40; KD×116 09:30 $13.94 → close $14.35 -47.56; CTSH×23 09:30 $68.54 → close $69.55 -23.23; HALO×13 09:30 $123.90 → close $124.83 -12.09; NFLX×25 09:30 $64.15 → close $65.04 -22.25; IBM×6 09:30 $241.91 → close $251.46 -57.27; MOH×7 09:30 $221.00 → close $214.90 +42.70 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $19,120.38 | ▲ 09:30 equity $19,476.67 vs yday $19,420.82 (+55.85) | 09:30 open · cash $19,120.38 (unchanged overnight, no fees) · equity $19,476.67 vs prior close $19,420.82 (+55.85) | — |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 74 | $31.68 | $2.24 | $-75.49 | $21,462.46 | ▼ -75.49 after sell → book $19,474.42; vs 09:30 mark -2.25 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `BMBL` | 408 | $5.94 | $5.35 | $-14.69 | $23,880.63 | ▼ -14.69 after sell → book $19,469.07; vs 09:30 mark -5.35 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `KVYO` | 124 | $20.29 | $2.40 | $+82.04 | $26,394.18 | ▲ +82.04 after sell → book $19,466.67; vs 09:30 mark -2.40 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `WIT` | 1180 | $2.14 | $15.44 | $+63.74 | $28,903.95 | ▲ +63.74 after sell → book $19,451.23; vs 09:30 mark -15.44 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $28,903.95 | ▼ close $19,120.78 vs 09:30 $19,476.67 (session -330.45) | 16:00 close · cash $28,903.95 · equity $19,120.78 vs 09:30 $19,476.67 (-355.89; session marks -330.45) · 6 name(s) marked open→close (per-name table). CTSH×23 09:30 $70.05 → close $73.72 -84.41; HALO×13 09:30 $124.72 → close $124.54 +2.34; IBM×6 09:30 $241.25 → close $252.11 -65.19; KD×116 09:30 $14.35 → close $15.20 -98.60; MOH×7 09:30 $211.68 → close $216.64 -34.72; NFLX×25 09:30 $65.06 → close $67.05 -49.87 | — |
 
 ## Not taken
 

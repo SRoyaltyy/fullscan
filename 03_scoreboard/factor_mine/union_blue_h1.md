@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ blue, no 🚨
 
-Cash book **-23.87%** ($7,613) · signal-only (no cash/fees) was -5.21%. Starts YES **0/30**. Fills 412 · skips 91 · realized $-561.25.
+Cash book **-25.20%** ($7,480) · signal-only (no cash/fees) was -5.21%. Starts YES **0/30**. Fills 420 · skips 91 · realized $-561.25.
 
 ## How this sleeve decides (like you are 10)
 
@@ -582,6 +582,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `AIP` | 46 | $20.38 | $2.13 | — | $1,021.96 | — | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-6.6; leftover $950.69 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `ACRS` | 254 | $3.74 | $3.28 | — | $68.73 | — | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.6; leftover $950.69 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $68.73 | ▲ close $7,612.84 vs 09:30 $7,605.55 (session +26.64) | 16:00 close · cash $68.73 · equity $7,612.84 vs 09:30 $7,605.55 (+7.29; session marks +26.64) · 8 name(s) marked open→close (per-name table). CORT×8 09:30 $116.45 → close $116.28 -1.36; ARQT×29 09:30 $32.64 → close $31.87 -22.33; CRON×288 09:30 $3.30 → close $3.39 +25.92; ETON×18 09:30 $50.93 → close $49.30 -29.34; EPR×17 09:30 $55.53 → close $54.54 -16.83; PDFS×22 09:30 $42.76 → close $44.01 +27.50; AIP×46 09:30 $20.38 → close $20.93 +25.30; ACRS×254 09:30 $3.74 → close $3.81 +17.78 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $68.73 | ▼ 09:30 equity $7,499.38 vs yday $7,612.84 (-113.46) | 09:30 open · cash $68.73 (unchanged overnight, no fees) · equity $7,499.38 vs prior close $7,612.84 (-113.46) · 8 name(s) re-marked at the open (per-name table). ACRS×254 yday $3.81 → 09:30 $3.76 -12.70; AIP×46 yday $20.93 → 09:30 $20.12 -37.26; ARQT×29 yday $31.87 → 09:30 $31.68 -5.51; CORT×8 yday $116.28 → 09:30 $115.16 -8.96; CRON×288 yday $3.39 → 09:30 $3.39 +0.00; EPR×17 yday $54.54 → 09:30 $54.75 +3.57; ETON×18 yday $49.30 → 09:30 $49.36 +1.08; PDFS×22 yday $44.01 → 09:30 $41.57 -53.68 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ACRS` | 254 | $3.76 | $3.33 | $-1.53 | $1,020.44 | ▼ -1.53 after sell → book $7,496.05; vs 09:30 mark -3.33 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `AIP` | 46 | $20.12 | $2.15 | $-16.24 | $1,943.81 | ▼ -16.24 after sell → book $7,493.90; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 29 | $31.68 | $2.10 | $-32.01 | $2,860.44 | ▼ -32.01 after sell → book $7,491.81; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `CORT` | 8 | $115.16 | $2.03 | $-14.37 | $3,779.68 | ▼ -14.37 after sell → book $7,489.77; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `CRON` | 288 | $3.39 | $3.77 | $+18.43 | $4,752.23 | ▲ +18.43 after sell → book $7,486.00; vs 09:30 mark -3.77 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `EPR` | 17 | $54.75 | $2.06 | $-17.36 | $5,680.92 | ▼ -17.36 after sell → book $7,483.94; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🟡 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `ETON` | 18 | $49.36 | $2.06 | $-32.37 | $6,567.33 | ▼ -32.37 after sell → book $7,481.87; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `PDFS` | 22 | $41.57 | $2.08 | $-30.31 | $7,479.80 | ▼ -30.31 after sell → book $7,479.80; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,479.80 | ▲ close $7,479.80 vs 09:30 $7,499.38 (session +0.00) | 16:00 close · cash $7,479.80 · no lots left · equity $7,479.80. | — |
 
 ## Not taken
 

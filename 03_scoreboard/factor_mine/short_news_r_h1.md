@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · news🔴
 
-Cash book **-8.37%** ($9,163) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 160 · skips 28 · realized $+7.41.
+Cash book **-9.19%** ($9,081) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 163 · skips 28 · realized $+7.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -328,6 +328,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **SHORT** | `LUV` | 16 | $39.87 | $2.08 | — | $12,868.85 | — | news🔴; gate news=bad; list overnight; ret5=-2.5; leftover $659.03 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **SHORT** | `MOH` | 2 | $221.00 | $2.03 | — | $13,308.82 | — | news🔴; gate news=bad; list overnight; 🔵; ret5=+4.9; leftover $659.03 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,308.82 | ▼ close $9,163.07 vs 09:30 $9,228.99 (session -48.96) | 16:00 close · cash $13,308.82 · equity $9,163.07 vs 09:30 $9,228.99 (-65.92; session marks -48.96) · 7 name(s) marked open→close (per-name table). KD×47 09:30 $13.94 → close $14.35 -19.27; CTSH×9 09:30 $68.54 → close $69.55 -9.09; HALO×5 09:30 $123.90 → close $124.83 -4.65; NFLX×10 09:30 $64.15 → close $65.04 -8.90; IBM×2 09:30 $241.91 → close $251.46 -19.09; LUV×16 09:30 $39.87 → close $39.88 -0.16; MOH×2 09:30 $221.00 → close $214.90 +12.20 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,308.82 | ▲ 09:30 equity $9,196.80 vs yday $9,163.07 (+33.73) | 09:30 open · cash $13,308.82 (unchanged overnight, no fees) · equity $9,196.80 vs prior close $9,163.07 (+33.73) · 7 name(s) re-marked at the open (per-name table). CTSH×9 yday $69.55 → 09:30 $70.05 -4.50; HALO×5 yday $124.83 → 09:30 $124.72 +0.55; IBM×2 yday $251.46 → 09:30 $241.25 +20.43; KD×47 yday $14.35 → 09:30 $14.35 -0.00; LUV×16 yday $39.88 → 09:30 $39.20 +10.96; MOH×2 yday $214.90 → 09:30 $211.68 +6.44; NFLX×10 yday $65.04 → 09:30 $65.06 -0.15 | — |
+| 2026-10-22 09:30 ET | **COVER** | `HALO` | 5 | $124.72 | $2.00 | $-8.15 | $12,683.22 | ▼ -8.15 after sell → book $9,194.80; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **COVER** | `KD` | 47 | $14.35 | $2.13 | $-23.57 | $12,006.63 | ▼ -23.57 after sell → book $9,192.66; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **COVER** | `NFLX` | 10 | $65.06 | $2.02 | $-13.13 | $11,354.06 | ▼ -13.13 after sell → book $9,190.64; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,354.06 | ▼ close $9,080.60 vs 09:30 $9,196.80 (session -110.04) | 16:00 close · cash $11,354.06 · equity $9,080.60 vs 09:30 $9,196.80 (-116.20; session marks -110.04) · 4 name(s) marked open→close (per-name table). CTSH×9 09:30 $70.05 → close $73.72 -33.03; IBM×2 09:30 $241.25 → close $252.11 -21.73; LUV×16 09:30 $39.20 → close $42.03 -45.36; MOH×2 09:30 $211.68 → close $216.64 -9.92 | — |
 
 ## Not taken
 

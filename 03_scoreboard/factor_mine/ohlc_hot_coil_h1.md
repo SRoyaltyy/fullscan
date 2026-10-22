@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-23.52%** ($7,648) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 294 · skips 74 · realized $-1849.08.
+Cash book **-23.70%** ($7,630) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 297 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -466,6 +466,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `NAVN` | 96 | $26.45 | $2.28 | — | $2,572.80 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+10.0; leftover $2557.45 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `VFC` | 147 | $17.36 | $2.43 | — | $18.45 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+8.6; leftover $2557.45 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.45 | ▼ close $7,647.57 vs 09:30 $7,674.41 (session -14.55) | 16:00 close · cash $18.45 · equity $7,647.57 vs 09:30 $7,674.41 (-26.84; session marks -14.55) · 3 name(s) marked open→close (per-name table). BMBL×429 09:30 $5.95 → close $5.95 +0.00; NAVN×96 09:30 $26.45 → close $26.62 +16.32; VFC×147 09:30 $17.36 → close $17.15 -30.87 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18.45 | ▼ 09:30 equity $7,640.88 vs yday $7,647.57 (-6.69) | 09:30 open · cash $18.45 (unchanged overnight, no fees) · equity $7,640.88 vs prior close $7,647.57 (-6.69) · 3 name(s) re-marked at the open (per-name table). BMBL×429 yday $5.95 → 09:30 $5.94 -4.29; NAVN×96 yday $26.62 → 09:30 $26.84 +21.12; VFC×147 yday $17.15 → 09:30 $16.99 -23.52 | — |
+| 2026-10-22 09:30 ET | **SELL** | `BMBL` | 429 | $5.94 | $5.63 | $-15.45 | $2,561.08 | ▼ -15.45 after sell → book $7,635.25; vs 09:30 mark -5.63 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `NAVN` | 96 | $26.84 | $2.31 | $+32.85 | $5,135.41 | ▲ +32.85 after sell → book $7,632.94; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `VFC` | 147 | $16.99 | $2.48 | $-59.30 | $7,630.46 | ▼ -59.30 after sell → book $7,630.46; vs 09:30 mark -2.48 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,630.46 | ▲ close $7,630.46 vs 09:30 $7,640.88 (session +0.00) | 16:00 close · cash $7,630.46 · no lots left · equity $7,630.46. | — |
 
 ## Not taken
 

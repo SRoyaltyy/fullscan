@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_e_fresh_h3 w=0.3,0.7 net=priority
 
-Cash book **-6.83%** ($9,317) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 360 · skips 324 · realized $+3855.15.
+Cash book **-6.79%** ($9,321) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 360 · skips 324 · realized $+3855.15.
 
 ## How this sleeve decides (like you are 10)
 
@@ -531,6 +531,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **SHORT** | `LUV` | 15 | $39.87 | $2.07 | — | $6,652.97 | — | news🔴; gate news=bad; list overnight; ret5=-2.5; combo leftover $621.95; owner short_news_r_h3 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **SHORT** | `MOH` | 2 | $221.00 | $2.03 | — | $7,092.94 | — | news🔴; gate news=bad; list overnight; 🔵; ret5=+4.9; combo leftover $621.95; owner short_news_r_h3 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,092.94 | ▲ close $9,316.97 vs 09:30 $9,252.35 (session +103.53) | 16:00 close · cash $7,092.94 · equity $9,316.97 vs 09:30 $9,252.35 (+64.62; session marks +103.53) · 14 name(s) marked open→close (per-name table). NFLX×12 09:30 $64.15 → close $65.04 +10.68; NOC×1 09:30 $537.20 → close $539.31 +2.11; BKU×18 09:30 $42.79 → close $42.08 -12.78; CME×2 09:30 $295.77 → close $295.79 +0.04; COF×3 09:30 $206.37 → close $206.66 +0.87; DHR×3 09:30 $217.56 → close $233.86 +48.90; ISRG×2 09:30 $402.50 → close $428.12 +51.25; PM×4 09:30 $187.14 → close $197.46 +41.28; KD×44 09:30 $13.94 → close $14.35 -18.04; CTSH×9 09:30 $68.54 → close $69.55 -9.09; HALO×5 09:30 $123.90 → close $124.83 -4.65; IBM×2 09:30 $241.91 → close $251.46 -19.09; LUV×15 09:30 $39.87 → close $39.88 -0.15; MOH×2 09:30 $221.00 → close $214.90 +12.20 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,092.94 | ▲ 09:30 equity $9,364.17 vs yday $9,316.97 (+47.20) | 09:30 open · cash $7,092.94 (unchanged overnight, no fees) · equity $9,364.17 vs prior close $9,316.97 (+47.20) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,092.94 | ▼ close $9,320.80 vs 09:30 $9,364.17 (session -43.37) | 16:00 close · cash $7,092.94 · equity $9,320.80 vs 09:30 $9,364.17 (-43.37; session marks -43.37) · 14 name(s) marked open→close (per-name table). BKU×18 09:30 $41.80 → close $43.76 +35.28; CME×2 09:30 $301.99 → close $305.98 +7.98; COF×3 09:30 $205.94 → close $203.43 -7.53; CTSH×9 09:30 $70.05 → close $73.72 -33.03; DHR×3 09:30 $233.80 → close $229.75 -12.15; HALO×5 09:30 $124.72 → close $124.54 +0.90; IBM×2 09:30 $241.25 → close $252.11 -21.73; ISRG×2 09:30 $430.67 → close $443.85 +26.37; KD×44 09:30 $14.35 → close $15.20 -37.40; LUV×15 09:30 $39.20 → close $42.03 -42.53; MOH×2 09:30 $211.68 → close $216.64 -9.92; NFLX×12 09:30 $65.06 → close $67.05 +23.94; NOC×1 09:30 $544.70 → close $552.35 +7.65; PM×4 09:30 $197.04 → close $201.74 +18.80 | — |
 
 ## Not taken
 

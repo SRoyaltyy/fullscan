@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-16.39%** ($8,361) · signal-only (no cash/fees) was +107.52%. Starts YES **4/30**. Fills 325 · skips 271 · realized $-671.83.
+Cash book **-15.46%** ($8,454) · signal-only (no cash/fees) was +107.52%. Starts YES **4/30**. Fills 333 · skips 271 · realized $-671.83.
 
 ## How this sleeve decides (like you are 10)
 
@@ -491,6 +491,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `IT` | 2 | $216.34 | $2.00 | — | $624.23 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+11.5; leftover $522.77 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `EPAM` | 4 | $129.12 | $2.00 | — | $105.75 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+13.1; leftover $522.77 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $105.75 | ▲ close $8,360.93 vs 09:30 $8,291.35 (session +90.51) | 16:00 close · cash $105.75 · equity $8,360.93 vs 09:30 $8,291.35 (+69.58; session marks +90.51) · 14 name(s) marked open→close (per-name table). ACN×3 09:30 $235.00 → close $240.26 +15.78; BRO×10 09:30 $70.29 → close $70.53 +2.40; BTI×11 09:30 $58.66 → close $58.90 +2.69; COP×4 09:30 $145.61 → close $145.67 +0.24; DEO×7 09:30 $93.53 → close $92.85 -4.76; NAVN×27 09:30 $26.45 → close $26.62 +4.59; TRU×3 09:30 $77.62 → close $78.93 +3.93; WIT×363 09:30 $2.06 → close $2.15 +32.67; WMG×22 09:30 $31.01 → close $31.44 +9.46; BMBL×87 09:30 $5.95 → close $5.95 +0.00; KVYO×26 09:30 $19.59 → close $20.19 +15.60; CMRC×139 09:30 $3.75 → close $3.62 -18.07; IT×2 09:30 $216.34 → close $219.57 +6.46; EPAM×4 09:30 $129.12 → close $134.00 +19.52 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $105.75 | ▲ 09:30 equity $8,410.67 vs yday $8,360.93 (+49.74) | 09:30 open · cash $105.75 (unchanged overnight, no fees) · equity $8,410.67 vs prior close $8,360.93 (+49.74) · 14 name(s) re-marked at the open (per-name table). ACN×3 yday $240.26 → 09:30 $242.00 +5.22; BMBL×87 yday $5.95 → 09:30 $5.94 -0.87; BRO×10 yday $70.53 → 09:30 $71.47 +9.40; BTI×11 yday $58.90 → 09:30 $59.51 +6.71; CMRC×139 yday $3.62 → 09:30 $3.69 +9.73; COP×4 yday $145.67 → 09:30 $146.85 +4.72; DEO×7 yday $92.85 → 09:30 $93.50 +4.55; EPAM×4 yday $134.00 → 09:30 $133.58 -1.68; IT×2 yday $219.57 → 09:30 $221.23 +3.32; KVYO×26 yday $20.19 → 09:30 $20.29 +2.60; NAVN×27 yday $26.62 → 09:30 $26.84 +5.94; TRU×3 yday $78.93 → 09:30 $79.88 +2.85; WIT×363 yday $2.15 → 09:30 $2.14 -3.63; WMG×22 yday $31.44 → 09:30 $31.48 +0.88 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ACN` | 3 | $242.00 | $2.02 | $+36.54 | $829.73 | ▲ +36.54 after sell → book $8,408.65; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `BRO` | 10 | $71.47 | $2.04 | $+26.24 | $1,542.39 | ▲ +26.24 after sell → book $8,406.61; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `BTI` | 11 | $59.51 | $2.04 | $+0.11 | $2,194.96 | ▲ +0.11 after sell → book $8,404.57; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `COP` | 4 | $146.85 | $2.02 | $+0.46 | $2,780.34 | ▲ +0.46 after sell → book $8,402.55; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `DEO` | 7 | $93.50 | $2.03 | $-7.12 | $3,432.81 | ▼ -7.12 after sell → book $8,400.51; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `NAVN` | 27 | $26.84 | $2.09 | $+26.08 | $4,155.39 | ▲ +26.08 after sell → book $8,398.42; vs 09:30 mark -2.09 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `WIT` | 363 | $2.14 | $4.75 | $+70.42 | $4,927.46 | ▲ +70.42 after sell → book $8,393.67; vs 09:30 mark -4.75 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `WMG` | 22 | $31.48 | $2.08 | $+0.71 | $5,617.95 | ▲ +0.71 after sell → book $8,391.60; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,617.95 | ▲ close $8,454.14 vs 09:30 $8,410.67 (session +62.54) | 16:00 close · cash $5,617.95 · equity $8,454.14 vs 09:30 $8,410.67 (+43.47; session marks +62.54) · 6 name(s) marked open→close (per-name table). BMBL×87 09:30 $5.94 → close $5.94 +0.00; CMRC×139 09:30 $3.69 → close $3.67 -2.78; EPAM×4 09:30 $133.58 → close $138.67 +20.36; IT×2 09:30 $221.23 → close $234.44 +26.42; KVYO×26 09:30 $20.29 → close $20.59 +7.80; TRU×3 09:30 $79.88 → close $83.46 +10.74 | — |
 
 ## Not taken
 

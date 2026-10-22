@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ white, no 🚨
 
-Cash book **-16.23%** ($8,377) · signal-only (no cash/fees) was +12.04%. Starts YES **3/30**. Fills 191 · skips 157 · realized $-1586.47.
+Cash book **-18.79%** ($8,121) · signal-only (no cash/fees) was +12.04%. Starts YES **3/30**. Fills 192 · skips 157 · realized $-1586.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -361,6 +361,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.08 | ▲ close $8,497.22 vs 09:30 $8,224.05 (session +273.17) | 16:00 close · cash $5.08 · equity $8,497.22 vs 09:30 $8,224.05 (+273.17; session marks +273.17) · 2 name(s) marked open→close (per-name table). BLFS×27 09:30 $38.61 → close $38.61 +0.00; SMMT×463 09:30 $15.50 → close $16.09 +273.17 | — |
 | 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.08 | ▲ 09:30 equity $8,617.60 vs yday $8,497.22 (+120.38) | 09:30 open · cash $5.08 (unchanged overnight, no fees) · equity $8,617.60 vs prior close $8,497.22 (+120.38) · 2 name(s) re-marked at the open (per-name table). BLFS×27 yday $38.61 → 09:30 $38.61 +0.00; SMMT×463 yday $16.09 → 09:30 $16.35 +120.38 | — |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.08 | ▼ close $8,376.84 vs 09:30 $8,617.60 (session -240.76) | 16:00 close · cash $5.08 · equity $8,376.84 vs 09:30 $8,617.60 (-240.76; session marks -240.76) · 2 name(s) marked open→close (per-name table). BLFS×27 09:30 $38.61 → close $38.61 +0.00; SMMT×463 09:30 $16.35 → close $15.83 -240.76 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.08 | ▼ 09:30 equity $8,126.82 vs yday $8,376.84 (-250.02) | 09:30 open · cash $5.08 (unchanged overnight, no fees) · equity $8,126.82 vs prior close $8,376.84 (-250.02) · 2 name(s) re-marked at the open (per-name table). BLFS×27 yday $38.61 → 09:30 $38.61 +0.00; SMMT×463 yday $15.83 → 09:30 $15.29 -250.02 | — |
+| 2026-10-22 09:30 ET | **SELL** | `SMMT` | 463 | $15.29 | $6.11 | $+168.49 | $7,078.24 | ▲ +168.49 after sell → book $8,120.71; vs 09:30 mark -6.11 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,078.24 | ▲ close $8,120.71 vs 09:30 $8,126.82 (session +0.00) | 16:00 close · cash $7,078.24 · equity $8,120.71 vs 09:30 $8,126.82 (-6.11; session marks +0.00) · 1 name(s) marked open→close (per-name table). BLFS×27 09:30 $38.61 → close $38.61 +0.00 | — |
 
 ## Not taken
 

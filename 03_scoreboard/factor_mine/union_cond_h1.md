@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-9.31%** ($9,069) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 438 · skips 105 · realized $-723.91.
+Cash book **-8.40%** ($9,160) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 443 · skips 105 · realized $-723.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -607,6 +607,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `ARQT` | 33 | $32.64 | $2.09 | — | $1,308.33 | — | rank by cond; rank cond; list flatten; 🔵; ret5=+25.8; leftover $1104.65 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `CDNA` | 15 | $69.50 | $2.04 | — | $263.84 | — | rank by cond; rank cond; list flatten; ret5=+5.8; leftover $1104.65 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $263.84 | ▲ close $9,069.04 vs 09:30 $8,974.49 (session +108.84) | 16:00 close · cash $263.84 · equity $9,069.04 vs 09:30 $8,974.49 (+94.55; session marks +108.84) · 8 name(s) marked open→close (per-name table). TRU×16 09:30 $77.62 → close $78.93 +20.96; DOCU×13 09:30 $80.00 → close $81.48 +19.24; IT×5 09:30 $216.34 → close $219.57 +16.15; PAYC×4 09:30 $260.69 → close $261.01 +1.28; AMX×47 09:30 $23.20 → close $24.29 +51.23; HLT×3 09:30 $360.00 → close $362.25 +6.75; ARQT×33 09:30 $32.64 → close $31.87 -25.41; CDNA×15 09:30 $69.50 → close $70.74 +18.64 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $263.84 | ▲ 09:30 equity $9,081.90 vs yday $9,069.04 (+12.86) | 09:30 open · cash $263.84 (unchanged overnight, no fees) · equity $9,081.90 vs prior close $9,069.04 (+12.86) · 8 name(s) re-marked at the open (per-name table). AMX×47 yday $24.29 → 09:30 $24.14 -7.05; ARQT×33 yday $31.87 → 09:30 $31.68 -6.27; CDNA×15 yday $70.74 → 09:30 $69.65 -16.35; DOCU×13 yday $81.48 → 09:30 $82.22 +9.62; HLT×3 yday $362.25 → 09:30 $360.84 -4.23; IT×5 yday $219.57 → 09:30 $221.23 +8.30; PAYC×4 yday $261.01 → 09:30 $264.42 +13.64; TRU×16 yday $78.93 → 09:30 $79.88 +15.20 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 33 | $31.68 | $2.11 | $-35.88 | $1,307.17 | ▼ -35.88 after sell → book $9,079.79; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `CDNA` | 15 | $69.65 | $2.06 | $-1.80 | $2,349.87 | ▼ -1.80 after sell → book $9,077.74; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `DOCU` | 13 | $82.22 | $2.05 | $+24.78 | $3,416.68 | ▲ +24.78 after sell → book $9,075.69; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `IT` | 5 | $221.23 | $2.02 | $+20.42 | $4,520.80 | ▲ +20.42 after sell → book $9,073.66; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `PAYC` | 4 | $264.42 | $2.02 | $+10.90 | $5,576.46 | ▲ +10.90 after sell → book $9,071.64; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,576.46 | ▲ close $9,160.09 vs 09:30 $9,081.90 (session +88.45) | 16:00 close · cash $5,576.46 · equity $9,160.09 vs 09:30 $9,081.90 (+78.19; session marks +88.45) · 3 name(s) marked open→close (per-name table). AMX×47 09:30 $24.14 → close $24.98 +39.48; HLT×3 09:30 $360.84 → close $358.07 -8.31; TRU×16 09:30 $79.88 → close $83.46 +57.28 | — |
 
 ## Not taken
 

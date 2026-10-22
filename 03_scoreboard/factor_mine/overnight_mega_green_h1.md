@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight_mega` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · mega calendar ∩ last bar green; still a print-night long, not a reaction
 
-Cash book **+1.60%** ($10,160) · signal-only (no cash/fees) was -9.06%. Starts YES **0/30**. Fills 23 · skips 7 · realized $-886.90.
+Cash book **+1.98%** ($10,198) · signal-only (no cash/fees) was -9.06%. Starts YES **0/30**. Fills 26 · skips 7 · realized $-886.90.
 
 ## How this sleeve decides (like you are 10)
 
@@ -193,6 +193,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `IBM` | 13 | $241.91 | $2.03 | — | $3,536.81 | — | mega calendar ∩ last bar green; still a print-night long, not a reaction; gate last_green=True; list overnight,overnight_mega; 🔵; ret5=+4.8; leftover $3333.33 | join🔴 sector🟢 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `SAP` | 14 | $231.57 | $2.03 | — | $292.80 | — | mega calendar ∩ last bar green; still a print-night long, not a reaction; gate last_green=True; list overnight,overnight_mega; ret5=+4.2; leftover $3333.33 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $292.80 | ▲ close $10,159.60 vs 09:30 $10,000.00 (session +165.86) | 16:00 close · cash $292.80 · equity $10,159.60 vs 09:30 $10,000.00 (+159.60; session marks +165.86) · 3 name(s) marked open→close (per-name table). CSX×69 09:30 $48.03 → close $48.40 +25.53; IBM×13 09:30 $241.91 → close $251.46 +124.09; SAP×14 09:30 $231.57 → close $232.73 +16.24 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $292.80 | ▲ 09:30 equity $10,204.03 vs yday $10,159.60 (+44.43) | 09:30 open · cash $292.80 (unchanged overnight, no fees) · equity $10,204.03 vs prior close $10,159.60 (+44.43) · 3 name(s) re-marked at the open (per-name table). CSX×69 yday $48.40 → 09:30 $50.09 +116.61; IBM×13 yday $251.46 → 09:30 $241.25 -132.80; SAP×14 yday $232.73 → 09:30 $237.06 +60.62 | — |
+| 2026-10-22 09:30 ET | **SELL** | `CSX` | 69 | $50.09 | $2.24 | $+137.71 | $3,746.77 | ▲ +137.71 after sell → book $10,201.80; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `IBM` | 13 | $241.25 | $2.06 | $-12.80 | $6,880.89 | ▼ -12.80 after sell → book $10,199.73; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `SAP` | 14 | $237.06 | $2.07 | $+72.76 | $10,197.67 | ▲ +72.76 after sell → book $10,197.67; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,197.67 | ▲ close $10,197.67 vs 09:30 $10,204.03 (session +0.00) | 16:00 close · cash $10,197.67 · no lots left · equity $10,197.67. | — |
 
 ## Not taken
 

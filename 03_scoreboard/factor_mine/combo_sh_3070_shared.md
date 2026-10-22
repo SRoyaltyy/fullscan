@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_hot_n4_h1 w=0.3,0.7 net=priority
 
-Cash book **+66.00%** ($16,600) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 347 · skips 159 · realized $+2678.50.
+Cash book **+64.01%** ($16,401) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 351 · skips 159 · realized $+2678.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,492.88.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $21,127.36.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -518,6 +518,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **SHORT** | `LUV` | 17 | $39.87 | $2.08 | — | $8,831.91 | — | news🔴; gate news=bad; list overnight; ret5=-2.5; combo leftover $710.74; owner short_news_r_h3 | join🔴 sector🔴 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **SHORT** | `MOH` | 3 | $221.00 | $2.04 | — | $9,492.88 | — | news🔴; gate news=bad; list overnight; 🔵; ret5=+4.9; combo leftover $710.74; owner short_news_r_h3 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,492.88 | ▲ close $16,599.65 vs 09:30 $16,549.13 (session +100.89) | 16:00 close · cash $9,492.88 · equity $16,599.65 vs 09:30 $16,549.13 (+50.52; session marks +100.89) · 11 name(s) marked open→close (per-name table). BMBL×486 09:30 $5.95 → close $5.95 +0.00; ARQT×88 09:30 $32.64 → close $31.87 -67.76; WIT×1405 09:30 $2.06 → close $2.15 +126.45; KVYO×147 09:30 $19.59 → close $20.19 +88.20; KD×50 09:30 $13.94 → close $14.35 -20.50; CTSH×10 09:30 $68.54 → close $69.55 -10.10; HALO×5 09:30 $123.90 → close $124.83 -4.65; NFLX×11 09:30 $64.15 → close $65.04 -9.79; IBM×2 09:30 $241.91 → close $251.46 -19.09; LUV×17 09:30 $39.87 → close $39.88 -0.17; MOH×3 09:30 $221.00 → close $214.90 +18.30 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,492.88 | ▲ 09:30 equity $16,615.84 vs yday $16,599.65 (+16.19) | 09:30 open · cash $9,492.88 (unchanged overnight, no fees) · equity $16,615.84 vs prior close $16,599.65 (+16.19) | — |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 88 | $31.68 | $2.29 | $-89.02 | $12,278.43 | ▼ -89.02 after sell → book $16,613.55; vs 09:30 mark -2.29 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `BMBL` | 486 | $5.94 | $6.37 | $-17.50 | $15,158.90 | ▼ -17.50 after sell → book $16,607.18; vs 09:30 mark -6.37 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `KVYO` | 147 | $20.29 | $2.48 | $+97.99 | $18,139.05 | ▲ +97.99 after sell → book $16,604.70; vs 09:30 mark -2.48 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `WIT` | 1405 | $2.14 | $18.38 | $+75.89 | $21,127.36 | ▲ +75.89 after sell → book $16,586.31; vs 09:30 mark -18.39 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21,127.36 | ▼ close $16,401.26 vs 09:30 $16,615.84 (session -185.05) | 16:00 close · cash $21,127.36 · equity $16,401.26 vs 09:30 $16,615.84 (-214.58; session marks -185.05) · 7 name(s) marked open→close (per-name table). CTSH×10 09:30 $70.05 → close $73.72 -36.70; HALO×5 09:30 $124.72 → close $124.54 +0.90; IBM×2 09:30 $241.25 → close $252.11 -21.73; KD×50 09:30 $14.35 → close $15.20 -42.50; LUV×17 09:30 $39.20 → close $42.03 -48.20; MOH×3 09:30 $211.68 → close $216.64 -14.88; NFLX×11 09:30 $65.06 → close $67.05 -21.94 | — |
 
 ## Not taken
 

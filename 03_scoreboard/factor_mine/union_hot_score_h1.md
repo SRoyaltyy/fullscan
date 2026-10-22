@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · rank by hot_score
 
-Cash book **+15.96%** ($11,596) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 426 · skips 90 · realized $+477.92.
+Cash book **+16.65%** ($11,665) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 433 · skips 90 · realized $+477.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -595,6 +595,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `CMRC` | 385 | $3.75 | $4.97 | — | $1,507.01 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+13.1; leftover $1444.62 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `IT` | 6 | $216.34 | $2.01 | — | $206.96 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+11.5; leftover $1444.62 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $206.96 | ▲ close $11,596.14 vs 09:30 $11,558.98 (session +67.03) | 16:00 close · cash $206.96 · equity $11,596.14 vs 09:30 $11,558.98 (+37.16; session marks +67.03) · 8 name(s) marked open→close (per-name table). BMBL×242 09:30 $5.95 → close $5.95 +0.00; ARQT×44 09:30 $32.64 → close $31.87 -33.88; WIT×701 09:30 $2.06 → close $2.15 +63.09; KVYO×73 09:30 $19.59 → close $20.19 +43.80; KLRA×111 09:30 $12.91 → close $12.92 +1.11; TRU×18 09:30 $77.62 → close $78.93 +23.58; CMRC×385 09:30 $3.75 → close $3.62 -50.05; IT×6 09:30 $216.34 → close $219.57 +19.38 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $206.96 | ▲ 09:30 equity $11,626.34 vs yday $11,596.14 (+30.20) | 09:30 open · cash $206.96 (unchanged overnight, no fees) · equity $11,626.34 vs prior close $11,596.14 (+30.20) · 8 name(s) re-marked at the open (per-name table). ARQT×44 yday $31.87 → 09:30 $31.68 -8.36; BMBL×242 yday $5.95 → 09:30 $5.94 -2.42; CMRC×385 yday $3.62 → 09:30 $3.69 +26.95; IT×6 yday $219.57 → 09:30 $221.23 +9.96; KLRA×111 yday $12.92 → 09:30 $12.80 -13.32; KVYO×73 yday $20.19 → 09:30 $20.29 +7.30; TRU×18 yday $78.93 → 09:30 $79.88 +17.10; WIT×701 yday $2.15 → 09:30 $2.14 -7.01 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 44 | $31.68 | $2.14 | $-46.51 | $1,598.74 | ▼ -46.51 after sell → book $11,624.20; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `BMBL` | 242 | $5.94 | $3.17 | $-8.72 | $3,033.04 | ▼ -8.72 after sell → book $11,621.02; vs 09:30 mark -3.18 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `CMRC` | 385 | $3.69 | $5.04 | $-33.11 | $4,448.65 | ▼ -33.11 after sell → book $11,615.98; vs 09:30 mark -5.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `IT` | 6 | $221.23 | $2.03 | $+25.30 | $5,774.00 | ▲ +25.30 after sell → book $11,613.95; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `KLRA` | 111 | $12.80 | $2.35 | $-16.89 | $7,192.45 | ▼ -16.89 after sell → book $11,611.60; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `KVYO` | 73 | $20.29 | $2.23 | $+46.66 | $8,671.39 | ▲ +46.66 after sell → book $11,609.37; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `WIT` | 701 | $2.14 | $9.17 | $+37.87 | $10,162.36 | ▲ +37.87 after sell → book $11,600.20; vs 09:30 mark -9.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,162.36 | ▲ close $11,664.64 vs 09:30 $11,626.34 (session +64.44) | 16:00 close · cash $10,162.36 · equity $11,664.64 vs 09:30 $11,626.34 (+38.30; session marks +64.44) · 1 name(s) marked open→close (per-name table). TRU×18 09:30 $79.88 → close $83.46 +64.44 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #1 mom+breakout+peer/sector (research; not KEEP)
 
-Cash book **-11.61%** ($8,839) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 399 · skips 96 · realized $-120.43.
+Cash book **-11.88%** ($8,812) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 407 · skips 96 · realized $-120.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -571,6 +571,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `FRSH` | 73 | $14.84 | $2.21 | — | $1,740.28 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list yday_mover; 🔵; ret5=+6.8; leftover $1094.52 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `VEEV` | 3 | $317.01 | $2.00 | — | $787.25 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten; ret5=+5.6; leftover $1094.52 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $787.25 | ▲ close $8,839.19 vs 09:30 $8,758.24 (session +99.50) | 16:00 close · cash $787.25 · equity $8,839.19 vs 09:30 $8,758.24 (+80.95; session marks +99.50) · 8 name(s) marked open→close (per-name table). HLT×3 09:30 $360.00 → close $362.25 +6.75; NAVN×41 09:30 $26.45 → close $26.62 +6.97; VFC×63 09:30 $17.36 → close $17.15 -13.23; ISRG×2 09:30 $402.50 → close $428.12 +51.25; IBM×4 09:30 $241.91 → close $251.46 +38.18; CME×3 09:30 $295.77 → close $295.79 +0.06; FRSH×73 09:30 $14.84 → close $14.82 -1.10; VEEV×3 09:30 $317.01 → close $320.55 +10.62 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $787.25 | ▼ 09:30 equity $8,828.88 vs yday $8,839.19 (-10.31) | 09:30 open · cash $787.25 (unchanged overnight, no fees) · equity $8,828.88 vs prior close $8,839.19 (-10.31) · 8 name(s) re-marked at the open (per-name table). CME×3 yday $295.79 → 09:30 $301.99 +18.60; FRSH×73 yday $14.82 → 09:30 $14.85 +1.83; HLT×3 yday $362.25 → 09:30 $360.84 -4.23; IBM×4 yday $251.46 → 09:30 $241.25 -40.86; ISRG×2 yday $428.12 → 09:30 $430.67 +5.09; NAVN×41 yday $26.62 → 09:30 $26.84 +9.02; VEEV×3 yday $320.55 → 09:30 $323.99 +10.32; VFC×63 yday $17.15 → 09:30 $16.99 -10.08 | — |
+| 2026-10-22 09:30 ET | **SELL** | `CME` | 3 | $301.99 | $2.02 | $+14.64 | $1,691.20 | ▲ +14.64 after sell → book $8,826.86; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `FRSH` | 73 | $14.85 | $2.23 | $-3.71 | $2,773.02 | ▼ -3.71 after sell → book $8,824.63; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `HLT` | 3 | $360.84 | $2.02 | $-1.50 | $3,853.52 | ▼ -1.50 after sell → book $8,822.61; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `IBM` | 4 | $241.25 | $2.02 | $-6.70 | $4,816.48 | ▼ -6.70 after sell → book $8,820.59; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `ISRG` | 2 | $430.67 | $2.02 | $+52.33 | $5,675.79 | ▲ +52.33 after sell → book $8,818.57; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `NAVN` | 41 | $26.84 | $2.13 | $+11.74 | $6,774.10 | ▲ +11.74 after sell → book $8,816.44; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `VEEV` | 3 | $323.99 | $2.02 | $+16.92 | $7,744.05 | ▲ +16.92 after sell → book $8,814.42; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `VFC` | 63 | $16.99 | $2.20 | $-27.69 | $8,812.22 | ▼ -27.69 after sell → book $8,812.22; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,812.22 | ▲ close $8,812.22 vs 09:30 $8,828.88 (session +0.00) | 16:00 close · cash $8,812.22 · no lots left · equity $8,812.22. | — |
 
 ## Not taken
 

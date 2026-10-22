@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-7.16%** ($9,284) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 403 · skips 94 · realized $-657.32.
+Cash book **-8.93%** ($9,107) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 409 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -572,6 +572,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `CME` | 3 | $295.77 | $2.00 | — | $1,867.45 | — | rank by macd_hist; rank macd_hist; list earn_react; 🔵; ret5=+6.2; leftover $1160.59 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `IT` | 5 | $216.34 | $2.00 | — | $783.74 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+11.5; leftover $1160.59 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $783.74 | ▲ close $9,283.75 vs 09:30 $9,267.72 (session +32.08) | 16:00 close · cash $783.74 · equity $9,283.75 vs 09:30 $9,267.72 (+16.03; session marks +32.08) · 8 name(s) marked open→close (per-name table). ACN×5 09:30 $235.00 → close $240.26 +26.30; CRS×3 09:30 $375.04 → close $368.16 -20.64; NOC×2 09:30 $537.20 → close $539.31 +4.22; HLT×3 09:30 $360.00 → close $362.25 +6.75; HUBS×4 09:30 $250.41 → close $249.90 -2.04; PAYC×4 09:30 $260.69 → close $261.01 +1.28; CME×3 09:30 $295.77 → close $295.79 +0.06; IT×5 09:30 $216.34 → close $219.57 +16.15 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $783.74 | ▼ 09:30 equity $9,240.66 vs yday $9,283.75 (-43.09) | 09:30 open · cash $783.74 (unchanged overnight, no fees) · equity $9,240.66 vs prior close $9,283.75 (-43.09) · 8 name(s) re-marked at the open (per-name table). ACN×5 yday $240.26 → 09:30 $242.00 +8.70; CME×3 yday $295.79 → 09:30 $301.99 +18.60; CRS×3 yday $368.16 → 09:30 $330.00 -114.48; HLT×3 yday $362.25 → 09:30 $360.84 -4.23; HUBS×4 yday $249.90 → 09:30 $253.80 +15.60; IT×5 yday $219.57 → 09:30 $221.23 +8.30; NOC×2 yday $539.31 → 09:30 $544.70 +10.78; PAYC×4 yday $261.01 → 09:30 $264.42 +13.64 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ACN` | 5 | $242.00 | $2.02 | $+63.57 | $1,991.71 | ▲ +63.57 after sell → book $9,238.64; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `CME` | 3 | $301.99 | $2.02 | $+14.64 | $2,895.67 | ▲ +14.64 after sell → book $9,236.62; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `HUBS` | 4 | $253.80 | $2.02 | $+9.54 | $3,908.84 | ▲ +9.54 after sell → book $9,234.59; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `IT` | 5 | $221.23 | $2.02 | $+20.42 | $5,012.97 | ▲ +20.42 after sell → book $9,232.57; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `NOC` | 2 | $544.70 | $2.02 | $+10.99 | $6,100.35 | ▲ +10.99 after sell → book $9,230.55; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `PAYC` | 4 | $264.42 | $2.02 | $+10.90 | $7,156.01 | ▲ +10.90 after sell → book $9,228.53; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,156.01 | ▼ close $9,107.00 vs 09:30 $9,240.66 (session -121.53) | 16:00 close · cash $7,156.01 · equity $9,107.00 vs 09:30 $9,240.66 (-133.66; session marks -121.53) · 2 name(s) marked open→close (per-name table). CRS×3 09:30 $330.00 → close $292.26 -113.22; HLT×3 09:30 $360.84 → close $358.07 -8.31 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+19.62%** ($11,962) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 434 · skips 96 · realized $-9.27.
+Cash book **+20.54%** ($12,054) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 440 · skips 96 · realized $-9.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -603,6 +603,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `HLT` | 4 | $360.00 | $2.00 | — | $1,973.52 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+9.0; leftover $1479.48 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `KVYO` | 75 | $19.59 | $2.21 | — | $502.05 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+15.7; leftover $1479.48 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $502.05 | ▲ close $11,962.23 vs 09:30 $11,833.32 (session +145.54) | 16:00 close · cash $502.05 · equity $11,962.23 vs 09:30 $11,833.32 (+128.91; session marks +145.54) · 8 name(s) marked open→close (per-name table). TRU×19 09:30 $77.62 → close $78.93 +24.89; IT×6 09:30 $216.34 → close $219.57 +19.38; ARQT×45 09:30 $32.64 → close $31.87 -34.65; PAYC×5 09:30 $260.69 → close $261.01 +1.60; DOCU×18 09:30 $80.00 → close $81.48 +26.64; EPAM×11 09:30 $129.12 → close $134.00 +53.68; HLT×4 09:30 $360.00 → close $362.25 +9.00; KVYO×75 09:30 $19.59 → close $20.19 +45.00 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $502.05 | ▲ 09:30 equity $12,009.30 vs yday $11,962.23 (+47.07) | 09:30 open · cash $502.05 (unchanged overnight, no fees) · equity $12,009.30 vs prior close $11,962.23 (+47.07) · 8 name(s) re-marked at the open (per-name table). ARQT×45 yday $31.87 → 09:30 $31.68 -8.55; DOCU×18 yday $81.48 → 09:30 $82.22 +13.32; EPAM×11 yday $134.00 → 09:30 $133.58 -4.62; HLT×4 yday $362.25 → 09:30 $360.84 -5.64; IT×6 yday $219.57 → 09:30 $221.23 +9.96; KVYO×75 yday $20.19 → 09:30 $20.29 +7.50; PAYC×5 yday $261.01 → 09:30 $264.42 +17.05; TRU×19 yday $78.93 → 09:30 $79.88 +18.05 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 45 | $31.68 | $2.15 | $-47.47 | $1,925.50 | ▼ -47.47 after sell → book $12,007.15; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `DOCU` | 18 | $82.22 | $2.07 | $+35.85 | $3,403.40 | ▲ +35.85 after sell → book $12,005.09; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `EPAM` | 11 | $133.58 | $2.04 | $+44.99 | $4,870.73 | ▲ +44.99 after sell → book $12,003.04; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `IT` | 6 | $221.23 | $2.03 | $+25.30 | $6,196.08 | ▲ +25.30 after sell → book $12,001.01; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `KVYO` | 75 | $20.29 | $2.24 | $+48.05 | $7,715.59 | ▲ +48.05 after sell → book $11,998.77; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `PAYC` | 5 | $264.42 | $2.03 | $+14.62 | $9,035.67 | ▲ +14.62 after sell → book $11,996.75; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,035.67 | ▲ close $12,053.69 vs 09:30 $12,009.30 (session +56.94) | 16:00 close · cash $9,035.67 · equity $12,053.69 vs 09:30 $12,009.30 (+44.39; session marks +56.94) · 2 name(s) marked open→close (per-name table). HLT×4 09:30 $360.84 → close $358.07 -11.08; TRU×19 09:30 $79.88 → close $83.46 +68.02 | — |
 
 ## Not taken
 

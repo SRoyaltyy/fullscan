@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 1.81,
+  "date": "2026-10-22",
+  "equity": 9798.53,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "KLRA",
+    "KVYO",
+    "TRU",
+    "WIT"
+  ],
+  "mean": 3.064,
+  "n_trades_today": 0,
+  "recipe": "oos0914_break10_h2_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-10-22",
+    "cash": 1.81,
+    "pos": {
+      "KLRA": {
+        "close_px": 13.27,
+        "cost": 2326.3300000000004,
+        "entry_date": "2026-10-21",
+        "entry_px": 12.91,
+        "fee_in": 2.53,
+        "last_px": 12.8,
+        "min_hold": 2,
+        "notional": 2323.8,
+        "peak_px": 12.91,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer; \ud83d\udd35; ret5=+19.7; leftover $2328.79",
+        "shares": 180,
+        "ticker": "KLRA"
+      },
+      "KVYO": {
+        "close_px": 20.59000015258789,
+        "cost": 2313.964,
+        "entry_date": "2026-10-21",
+        "entry_px": 19.59,
+        "fee_in": 2.344,
+        "last_px": 20.290000915527344,
+        "min_hold": 2,
+        "notional": 2311.62,
+        "peak_px": 20.290000915527344,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+15.7; leftover $2328.79",
+        "shares": 118,
+        "ticker": "KVYO"
+      },
+      "TRU": {
+        "close_px": 83.46,
+        "cost": 2330.6800000000003,
+        "entry_date": "2026-10-21",
+        "entry_px": 77.62,
+        "fee_in": 2.08,
+        "last_px": 79.88,
+        "min_hold": 2,
+        "notional": 2328.6000000000004,
+        "peak_px": 79.88,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,ohlc_hot; ret5=+15.9; leftover $2328.79",
+        "shares": 30,
+        "ticker": "TRU"
+      },
+      "WIT": {
+        "close_px": 2.190000057220459,
+        "cost": 2342.3770000000004,
+        "entry_date": "2026-10-21",
+        "entry_px": 2.06,
+        "fee_in": 14.577,
+        "last_px": 2.140000104904175,
+        "min_hold": 2,
+        "notional": 2327.8,
+        "peak_px": 2.140000104904175,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+13.9; leftover $2328.79",
+        "shares": 1130,
+        "ticker": "WIT"
+      }
+    },
+    "yday_equity": 9798.53
+  }
+}

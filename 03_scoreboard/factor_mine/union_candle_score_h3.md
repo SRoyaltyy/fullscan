@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-9.90%** ($9,010) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 322 · skips 288 · realized $+91.50.
+Cash book **-9.19%** ($9,081) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 331 · skips 288 · realized $+91.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -491,6 +491,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `WIT` | 168 | $2.06 | $2.49 | — | $731.34 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+13.9; leftover $346.99 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `HALO` | 2 | $123.90 | $2.00 | — | $481.55 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+13.5; leftover $346.99 | join🟢 sector🟡 gen🟢 news🔴 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $481.55 | ▲ close $9,010.05 vs 09:30 $8,981.57 (session +45.87) | 16:00 close · cash $481.55 · equity $9,010.05 vs 09:30 $8,981.57 (+28.48; session marks +45.87) · 14 name(s) marked open→close (per-name table). BR×5 09:30 $179.78 → close $178.30 -7.40; HONA×5 09:30 $159.99 → close $162.46 +12.35; NAVN×10 09:30 $26.45 → close $26.62 +1.70; OTIS×13 09:30 $72.00 → close $72.35 +4.55; PAYC×1 09:30 $260.69 → close $261.01 +0.32; PLNT×18 09:30 $52.38 → close $51.69 -12.42; SU×12 09:30 $78.23 → close $79.02 +9.48; WM×4 09:30 $230.26 → close $229.58 -2.72; WMG×30 09:30 $31.01 → close $31.44 +12.90; TRU×4 09:30 $77.62 → close $78.93 +5.24; PRMB×17 09:30 $20.00 → close $20.03 +0.51; JLHL×73 09:30 $4.73 → close $4.79 +4.38; WIT×168 09:30 $2.06 → close $2.15 +15.12; HALO×2 09:30 $123.90 → close $124.83 +1.86 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $481.55 | ▲ 09:30 equity $9,054.27 vs yday $9,010.05 (+44.23) | 09:30 open · cash $481.55 (unchanged overnight, no fees) · equity $9,054.27 vs prior close $9,010.05 (+44.23) · 14 name(s) re-marked at the open (per-name table). BR×5 yday $178.30 → 09:30 $180.16 +9.30; HALO×2 yday $124.83 → 09:30 $124.72 -0.22; HONA×5 yday $162.46 → 09:30 $162.25 -1.05; JLHL×73 yday $4.79 → 09:30 $4.69 -7.30; NAVN×10 yday $26.62 → 09:30 $26.84 +2.20; OTIS×13 yday $72.35 → 09:30 $73.14 +10.34; PAYC×1 yday $261.01 → 09:30 $264.42 +3.41; PLNT×18 yday $51.69 → 09:30 $52.21 +9.36; PRMB×17 yday $20.03 → 09:30 $19.86 -2.89; SU×12 yday $79.02 → 09:30 $79.90 +10.56; TRU×4 yday $78.93 → 09:30 $79.88 +3.80; WIT×168 yday $2.15 → 09:30 $2.14 -1.68; WM×4 yday $229.58 → 09:30 $231.38 +7.20; WMG×30 yday $31.44 → 09:30 $31.48 +1.20 | — |
+| 2026-10-22 09:30 ET | **SELL** | `BR` | 5 | $180.16 | $2.02 | $+28.32 | $1,380.33 | ▲ +28.32 after sell → book $9,052.25; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `HONA` | 5 | $162.25 | $2.02 | $-38.28 | $2,189.55 | ▼ -38.28 after sell → book $9,050.23; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `NAVN` | 10 | $26.84 | $2.04 | $+12.34 | $2,455.91 | ▲ +12.34 after sell → book $9,048.18; vs 09:30 mark -2.05 | dropped from list after 4 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `OTIS` | 13 | $73.14 | $2.05 | $+22.38 | $3,404.75 | ▲ +22.38 after sell → book $9,046.14; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `PAYC` | 1 | $264.42 | $2.01 | $+5.50 | $3,667.15 | ▲ +5.50 after sell → book $9,044.12; vs 09:30 mark -2.02 | dropped from list after 4 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `PLNT` | 18 | $52.21 | $2.06 | $+16.23 | $4,604.87 | ▲ +16.23 after sell → book $9,042.06; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `SU` | 12 | $79.90 | $2.05 | $+26.05 | $5,561.62 | ▲ +26.05 after sell → book $9,040.01; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `WM` | 4 | $231.38 | $2.02 | $+23.34 | $6,485.12 | ▲ +23.34 after sell → book $9,037.99; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `WMG` | 30 | $31.48 | $2.10 | $+2.42 | $7,427.42 | ▲ +2.42 after sell → book $9,035.89; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,427.42 | ▲ close $9,081.26 vs 09:30 $9,054.27 (session +45.37) | 16:00 close · cash $7,427.42 · equity $9,081.26 vs 09:30 $9,054.27 (+26.99; session marks +45.37) · 5 name(s) marked open→close (per-name table). HALO×2 09:30 $124.72 → close $124.54 -0.36; JLHL×73 09:30 $4.69 → close $4.94 +18.25; PRMB×17 09:30 $19.86 → close $20.14 +4.76; TRU×4 09:30 $79.88 → close $83.46 +14.32; WIT×168 09:30 $2.14 → close $2.19 +8.40 | — |
 
 ## Not taken
 

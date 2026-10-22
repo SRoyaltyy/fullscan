@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ earn_react, no 🚨
 
-Cash book **-25.29%** ($7,471) · signal-only (no cash/fees) was -14.12%. Starts YES **25/30**. Fills 185 · skips 198 · realized $+2100.34.
+Cash book **-23.82%** ($7,618) · signal-only (no cash/fees) was -14.12%. Starts YES **25/30**. Fills 185 · skips 198 · realized $+2100.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -355,6 +355,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `PM` | 4 | $187.14 | $2.00 | — | $1,382.59 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=+0.3; leftover $916.24 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `T` | 41 | $21.89 | $2.11 | — | $483.11 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=+2.5; leftover $916.24 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $483.11 | ▲ close $7,471.19 vs 09:30 $7,331.04 (session +157.44) | 16:00 close · cash $483.11 · equity $7,471.19 vs 09:30 $7,331.04 (+140.15; session marks +157.44) · 8 name(s) marked open→close (per-name table). BKU×21 09:30 $42.79 → close $42.08 -14.91; CME×3 09:30 $295.77 → close $295.79 +0.06; COF×4 09:30 $206.37 → close $206.66 +1.16; DHR×4 09:30 $217.56 → close $233.86 +65.20; ISRG×2 09:30 $402.50 → close $428.12 +51.25; NFLX×14 09:30 $64.15 → close $65.04 +12.46; PM×4 09:30 $187.14 → close $197.46 +41.28; T×41 09:30 $21.89 → close $21.91 +0.94 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $483.11 | ▲ 09:30 equity $7,489.94 vs yday $7,471.19 (+18.76) | 09:30 open · cash $483.11 (unchanged overnight, no fees) · equity $7,489.94 vs prior close $7,471.19 (+18.76) · 8 name(s) re-marked at the open (per-name table). BKU×21 yday $42.08 → 09:30 $41.80 -5.88; CME×3 yday $295.79 → 09:30 $301.99 +18.60; COF×4 yday $206.66 → 09:30 $205.94 -2.88; DHR×4 yday $233.86 → 09:30 $233.80 -0.24; ISRG×2 yday $428.12 → 09:30 $430.67 +5.09; NFLX×14 yday $65.04 → 09:30 $65.06 +0.21; PM×4 yday $197.46 → 09:30 $197.04 -1.68; T×41 yday $21.91 → 09:30 $22.05 +5.54 | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $483.11 | ▲ close $7,618.43 vs 09:30 $7,489.94 (session +128.48) | 16:00 close · cash $483.11 · equity $7,618.43 vs 09:30 $7,489.94 (+128.49; session marks +128.48) · 8 name(s) marked open→close (per-name table). BKU×21 09:30 $41.80 → close $43.76 +41.16; CME×3 09:30 $301.99 → close $305.98 +11.97; COF×4 09:30 $205.94 → close $203.43 -10.04; DHR×4 09:30 $233.80 → close $229.75 -16.20; ISRG×2 09:30 $430.67 → close $443.85 +26.37; NFLX×14 09:30 $65.06 → close $67.05 +27.93; PM×4 09:30 $197.04 → close $201.74 +18.80; T×41 09:30 $22.05 → close $22.74 +28.49 | — |
 
 ## Not taken
 

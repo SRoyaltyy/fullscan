@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in hold 5, no 🚨
 
-Cash book **-8.46%** ($9,154) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 70 · skips 144 · realized $+404.42.
+Cash book **-6.97%** ($9,302) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 70 · skips 144 · realized $+404.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -240,6 +240,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `DHR` | 13 | $217.56 | $2.03 | — | $3,263.35 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list earn_react; ret5=+0.6; leftover $2919.20 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `ISRG` | 7 | $402.50 | $2.01 | — | $443.87 | — | union ∩ flow_in hold 5, no 🚨; gate flow_in=True; list earn_react; ret5=+3.8; leftover $2919.20 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $443.87 | ▲ close $9,154.05 vs 09:30 $8,773.24 (session +391.41) | 16:00 close · cash $443.87 · equity $9,154.05 vs 09:30 $8,773.24 (+380.81; session marks +391.41) · 4 name(s) marked open→close (per-name table). WSE×1 09:30 $11.10 → close $11.05 -0.05; CME×9 09:30 $295.77 → close $295.79 +0.18; DHR×13 09:30 $217.56 → close $233.86 +211.90; ISRG×7 09:30 $402.50 → close $428.12 +179.38 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $443.87 | ▲ 09:30 equity $9,226.98 vs yday $9,154.05 (+72.93) | 09:30 open · cash $443.87 (unchanged overnight, no fees) · equity $9,226.98 vs prior close $9,154.05 (+72.93) · 4 name(s) re-marked at the open (per-name table). CME×9 yday $295.79 → 09:30 $301.99 +55.80; DHR×13 yday $233.86 → 09:30 $233.80 -0.78; ISRG×7 yday $428.12 → 09:30 $430.67 +17.82; WSE×1 yday $11.05 → 09:30 $11.14 +0.09 | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $443.87 | ▲ close $9,302.47 vs 09:30 $9,226.98 (session +75.50) | 16:00 close · cash $443.87 · equity $9,302.47 vs 09:30 $9,226.98 (+75.49; session marks +75.50) · 4 name(s) marked open→close (per-name table). CME×9 09:30 $301.99 → close $305.98 +35.91; DHR×13 09:30 $233.80 → close $229.75 -52.65; ISRG×7 09:30 $430.67 → close $443.85 +92.30; WSE×1 09:30 $11.14 → close $11.08 -0.06 | — |
 
 ## Not taken
 

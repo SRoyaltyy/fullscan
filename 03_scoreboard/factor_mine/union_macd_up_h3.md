@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_up, no 🚨
 
-Cash book **-3.31%** ($9,670) · signal-only (no cash/fees) was +63.53%. Starts YES **26/30**. Fills 319 · skips 288 · realized $-45.00.
+Cash book **-5.18%** ($9,482) · signal-only (no cash/fees) was +63.53%. Starts YES **26/30**. Fills 324 · skips 288 · realized $-45.00.
 
 ## How this sleeve decides (like you are 10)
 
@@ -489,6 +489,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `EGG` | 142 | $5.00 | $2.42 | — | $718.58 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list yday_gainer,yday_mover; ret5=+11.9; leftover $711.03 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `RCKT` | 303 | $2.34 | $3.91 | — | $5.65 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list yday_gainer; 🔵; ret5=+1.7; leftover $711.03 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.65 | ▼ close $9,669.50 vs 09:30 $9,860.25 (session -182.00) | 16:00 close · cash $5.65 · equity $9,669.50 vs 09:30 $9,860.25 (-190.75; session marks -182.00) · 10 name(s) marked open→close (per-name table). ARQT×39 09:30 $32.64 → close $31.87 -30.03; CRS×3 09:30 $375.04 → close $368.16 -20.64; DY×4 09:30 $256.01 → close $237.45 -74.24; EPR×20 09:30 $55.53 → close $54.54 -19.80; ITW×4 09:30 $275.65 → close $276.80 +4.60; PACS×24 09:30 $47.52 → close $46.76 -18.24; VEEV×3 09:30 $317.01 → close $320.55 +10.62; PRMB×35 09:30 $20.00 → close $20.03 +1.05; EGG×142 09:30 $5.00 → close $5.05 +7.10; RCKT×303 09:30 $2.34 → close $2.20 -42.42 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.65 | ▼ 09:30 equity $9,523.88 vs yday $9,669.50 (-145.62) | 09:30 open · cash $5.65 (unchanged overnight, no fees) · equity $9,523.88 vs prior close $9,669.50 (-145.62) · 10 name(s) re-marked at the open (per-name table). ARQT×39 yday $31.87 → 09:30 $31.68 -7.41; CRS×3 yday $368.16 → 09:30 $330.00 -114.48; DY×4 yday $237.45 → 09:30 $231.11 -25.36; EGG×142 yday $5.05 → 09:30 $5.00 -7.10; EPR×20 yday $54.54 → 09:30 $54.75 +4.20; ITW×4 yday $276.80 → 09:30 $277.68 +3.52; PACS×24 yday $46.76 → 09:30 $46.62 -3.36; PRMB×35 yday $20.03 → 09:30 $19.86 -5.95; RCKT×303 yday $2.20 → 09:30 $2.20 +0.00; VEEV×3 yday $320.55 → 09:30 $323.99 +10.32 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 39 | $31.68 | $2.13 | $+84.30 | $1,239.04 | ▲ +84.30 after sell → book $9,521.75; vs 09:30 mark -2.13 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `DY` | 4 | $231.11 | $2.02 | $-111.68 | $2,161.46 | ▼ -111.68 after sell → book $9,519.73; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `EPR` | 20 | $54.75 | $2.07 | $-14.72 | $3,254.39 | ▼ -14.72 after sell → book $9,517.66; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | join🟡 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `PACS` | 24 | $46.62 | $2.08 | $-13.74 | $4,371.19 | ▼ -13.74 after sell → book $9,515.58; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 09:30 ET | **SELL** | `VEEV` | 3 | $323.99 | $2.02 | $+36.96 | $5,341.14 | ▲ +36.96 after sell → book $9,513.56; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,341.14 | ▼ close $9,482.37 vs 09:30 $9,523.88 (session -31.19) | 16:00 close · cash $5,341.14 · equity $9,482.37 vs 09:30 $9,523.88 (-41.51; session marks -31.19) · 5 name(s) marked open→close (per-name table). CRS×3 09:30 $330.00 → close $292.26 -113.22; EGG×142 09:30 $5.00 → close $5.23 +32.66; ITW×4 09:30 $277.68 → close $279.24 +6.24; PRMB×35 09:30 $19.86 → close $20.14 +9.80; RCKT×303 09:30 $2.20 → close $2.31 +33.33 | — |
 
 ## Not taken
 

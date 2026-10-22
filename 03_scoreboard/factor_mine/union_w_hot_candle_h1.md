@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+14.46%** ($11,446) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 431 · skips 97 · realized $+14.68.
+Cash book **+14.92%** ($11,492) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 437 · skips 97 · realized $+14.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -600,6 +600,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `KLRA` | 110 | $12.91 | $2.32 | — | $1,828.84 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer; 🔵; ret5=+19.7; leftover $1424.95 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `PAYC` | 5 | $260.69 | $2.00 | — | $523.39 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+10.8; leftover $1424.95 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $523.39 | ▲ close $11,446.10 vs 09:30 $11,401.64 (session +71.12) | 16:00 close · cash $523.39 · equity $11,446.10 vs 09:30 $11,401.64 (+44.46; session marks +71.12) · 8 name(s) marked open→close (per-name table). TRU×18 09:30 $77.62 → close $78.93 +23.58; WIT×691 09:30 $2.06 → close $2.15 +62.19; ARQT×43 09:30 $32.64 → close $31.87 -33.11; BMBL×239 09:30 $5.95 → close $5.95 +0.00; NAVN×53 09:30 $26.45 → close $26.62 +9.01; HLT×3 09:30 $360.00 → close $362.25 +6.75; KLRA×110 09:30 $12.91 → close $12.92 +1.10; PAYC×5 09:30 $260.69 → close $261.01 +1.60 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $523.39 | ▲ 09:30 equity $11,457.01 vs yday $11,446.10 (+10.91) | 09:30 open · cash $523.39 (unchanged overnight, no fees) · equity $11,457.01 vs prior close $11,446.10 (+10.91) · 8 name(s) re-marked at the open (per-name table). ARQT×43 yday $31.87 → 09:30 $31.68 -8.17; BMBL×239 yday $5.95 → 09:30 $5.94 -2.39; HLT×3 yday $362.25 → 09:30 $360.84 -4.23; KLRA×110 yday $12.92 → 09:30 $12.80 -13.20; NAVN×53 yday $26.62 → 09:30 $26.84 +11.66; PAYC×5 yday $261.01 → 09:30 $264.42 +17.05; TRU×18 yday $78.93 → 09:30 $79.88 +17.10; WIT×691 yday $2.15 → 09:30 $2.14 -6.91 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ARQT` | 43 | $31.68 | $2.14 | $-45.54 | $1,883.49 | ▼ -45.54 after sell → book $11,454.87; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `BMBL` | 239 | $5.94 | $3.13 | $-8.61 | $3,300.02 | ▼ -8.61 after sell → book $11,451.74; vs 09:30 mark -3.13 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `KLRA` | 110 | $12.80 | $2.35 | $-16.77 | $4,705.67 | ▼ -16.77 after sell → book $11,449.39; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `NAVN` | 53 | $26.84 | $2.17 | $+16.35 | $6,126.02 | ▲ +16.35 after sell → book $11,447.22; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `PAYC` | 5 | $264.42 | $2.03 | $+14.62 | $7,446.09 | ▲ +14.62 after sell → book $11,445.19; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `WIT` | 691 | $2.14 | $9.04 | $+37.33 | $8,915.79 | ▲ +37.33 after sell → book $11,436.15; vs 09:30 mark -9.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,915.79 | ▲ close $11,492.28 vs 09:30 $11,457.01 (session +56.13) | 16:00 close · cash $8,915.79 · equity $11,492.28 vs 09:30 $11,457.01 (+35.27; session marks +56.13) · 2 name(s) marked open→close (per-name table). HLT×3 09:30 $360.84 → close $358.07 -8.31; TRU×18 09:30 $79.88 → close $83.46 +64.44 | — |
 
 ## Not taken
 

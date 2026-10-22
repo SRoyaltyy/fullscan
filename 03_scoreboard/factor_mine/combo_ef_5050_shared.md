@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/flatten_h5 w=0.5,0.5 net=priority
 
-Cash book **-8.69%** ($9,131) · signal-only (no cash/fees) was —. Starts YES **16/30**. Fills 416 · skips 546 · realized $+1249.30.
+Cash book **-9.25%** ($9,075) · signal-only (no cash/fees) was —. Starts YES **16/30**. Fills 417 · skips 546 · realized $+1249.30.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $87.61.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $119.89.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -587,6 +587,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `CRON` | 323 | $3.30 | $4.17 | — | $1,108.26 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+2.5; combo leftover $1068.74; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `ETON` | 20 | $50.93 | $2.05 | — | $87.61 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=-5.9; combo leftover $1068.74; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $87.61 | ▲ close $9,131.41 vs 09:30 $9,140.68 (session +39.42) | 16:00 close · cash $87.61 · equity $9,131.41 vs 09:30 $9,140.68 (-9.27; session marks +39.42) · 19 name(s) marked open→close (per-name table). CDNA×6 09:30 $69.50 → close $70.74 +7.46; ILMN×1 09:30 $267.35 → close $282.86 +15.51; IT×2 09:30 $216.34 → close $219.57 +6.46; PACS×9 09:30 $47.52 → close $46.76 -6.84; PDFS×13 09:30 $42.76 → close $44.01 +16.25; TOST×1 09:30 $32.72 → close $32.54 -0.18; TWLO×1 09:30 $261.26 → close $266.68 +5.42; VEEV×1 09:30 $317.01 → close $320.55 +3.54; YOU×12 09:30 $45.49 → close $45.14 -4.20; BKU×8 09:30 $42.79 → close $42.08 -5.68; CME×1 09:30 $295.77 → close $295.79 +0.02; COF×1 09:30 $206.37 → close $206.66 +0.29; DHR×1 09:30 $217.56 → close $233.86 +16.30; NFLX×5 09:30 $64.15 → close $65.04 +4.45; PM×1 09:30 $187.14 → close $197.46 +10.32; CORT×9 09:30 $116.45 → close $116.28 -1.53; ARQT×32 09:30 $32.64 → close $31.87 -24.64; CRON×323 09:30 $3.30 → close $3.39 +29.07; ETON×20 09:30 $50.93 → close $49.30 -32.60 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $87.61 | ▼ 09:30 equity $9,085.90 vs yday $9,131.41 (-45.51) | 09:30 open · cash $87.61 (unchanged overnight, no fees) · equity $9,085.90 vs prior close $9,131.41 (-45.51) | — |
+| 2026-10-22 09:30 ET | **SELL** | `TOST` | 1 | $32.63 | $0.35 | $+2.03 | $119.89 | ▲ +2.03 after sell → book $9,085.55; vs 09:30 mark -0.35 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $119.89 | ▼ close $9,074.63 vs 09:30 $9,085.90 (session -10.93) | 16:00 close · cash $119.89 · equity $9,074.63 vs 09:30 $9,085.90 (-11.27; session marks -10.93) · 18 name(s) marked open→close (per-name table). ARQT×32 09:30 $31.68 → close $32.20 +16.64; BKU×8 09:30 $41.80 → close $43.76 +15.68; CDNA×6 09:30 $69.65 → close $69.16 -2.94; CME×1 09:30 $301.99 → close $305.98 +3.99; COF×1 09:30 $205.94 → close $203.43 -2.51; CORT×9 09:30 $115.16 → close $107.50 -68.94; CRON×323 09:30 $3.39 → close $3.44 +17.76; DHR×1 09:30 $233.80 → close $229.75 -4.05; ETON×20 09:30 $49.36 → close $50.02 +13.20; ILMN×1 09:30 $280.81 → close $269.40 -11.41; IT×2 09:30 $221.23 → close $234.44 +26.42; NFLX×5 09:30 $65.06 → close $67.05 +9.97; PACS×9 09:30 $46.62 → close $47.50 +7.92; PDFS×13 09:30 $41.57 → close $39.47 -27.30; PM×1 09:30 $197.04 → close $201.74 +4.70; TWLO×1 09:30 $265.01 → close $253.63 -11.38; VEEV×1 09:30 $323.99 → close $322.55 -1.44; YOU×12 09:30 $45.39 → close $45.62 +2.76 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #2 fresh catalyst + limited extension (research; not KEEP)
 
-Cash book **-19.28%** ($8,072) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 360 · skips 106 · realized $-137.13.
+Cash book **-18.93%** ($8,107) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 367 · skips 106 · realized $-137.13.
 
 ## How this sleeve decides (like you are 10)
 
@@ -532,6 +532,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `ISRG` | 2 | $402.50 | $2.00 | — | $1,531.87 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; ret5=+3.8; leftover $970.55 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `T` | 44 | $21.89 | $2.12 | — | $566.72 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; ret5=+2.5; leftover $970.55 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $566.72 | ▲ close $8,072.01 vs 09:30 $7,863.10 (session +225.06) | 16:00 close · cash $566.72 · equity $8,072.01 vs 09:30 $7,863.10 (+208.91; session marks +225.06) · 8 name(s) marked open→close (per-name table). AMX×46 09:30 $23.20 → close $24.29 +50.14; CME×3 09:30 $295.77 → close $295.79 +0.06; COF×4 09:30 $206.37 → close $206.66 +1.16; PM×5 09:30 $187.14 → close $197.46 +51.60; SAP×4 09:30 $231.57 → close $232.73 +4.64; DHR×4 09:30 $217.56 → close $233.86 +65.20; ISRG×2 09:30 $402.50 → close $428.12 +51.25; T×44 09:30 $21.89 → close $21.91 +1.01 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $566.72 | ▲ 09:30 equity $8,106.84 vs yday $8,072.01 (+34.83) | 09:30 open · cash $566.72 (unchanged overnight, no fees) · equity $8,106.84 vs prior close $8,072.01 (+34.83) · 8 name(s) re-marked at the open (per-name table). AMX×46 yday $24.29 → 09:30 $24.14 -6.90; CME×3 yday $295.79 → 09:30 $301.99 +18.60; COF×4 yday $206.66 → 09:30 $205.94 -2.88; DHR×4 yday $233.86 → 09:30 $233.80 -0.24; ISRG×2 yday $428.12 → 09:30 $430.67 +5.09; PM×5 yday $197.46 → 09:30 $197.04 -2.10; SAP×4 yday $232.73 → 09:30 $237.06 +17.32; T×44 yday $21.91 → 09:30 $22.05 +5.94 | — |
+| 2026-10-22 09:30 ET | **SELL** | `AMX` | 46 | $24.14 | $2.15 | $+111.64 | $1,675.01 | ▲ +111.64 after sell → book $8,104.69; vs 09:30 mark -2.15 | dropped from list after 6 sess (min 1) | join🟡 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `CME` | 3 | $301.99 | $2.02 | $+14.64 | $2,578.96 | ▲ +14.64 after sell → book $8,102.67; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `COF` | 4 | $205.94 | $2.02 | $-5.74 | $3,400.70 | ▼ -5.74 after sell → book $8,100.65; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `DHR` | 4 | $233.80 | $2.02 | $+60.94 | $4,333.88 | ▲ +60.94 after sell → book $8,098.63; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `ISRG` | 2 | $430.67 | $2.02 | $+52.33 | $5,193.19 | ▲ +52.33 after sell → book $8,096.61; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `PM` | 5 | $197.04 | $2.02 | $+45.47 | $6,176.37 | ▲ +45.47 after sell → book $8,094.59; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `T` | 44 | $22.05 | $2.14 | $+2.69 | $7,144.21 | ▲ +2.69 after sell → book $8,092.45; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,144.21 | ▲ close $8,106.57 vs 09:30 $8,106.84 (session +14.12) | 16:00 close · cash $7,144.21 · equity $8,106.57 vs 09:30 $8,106.84 (-0.27; session marks +14.12) · 1 name(s) marked open→close (per-name table). SAP×4 09:30 $237.06 → close $240.59 +14.12 | — |
 
 ## Not taken
 

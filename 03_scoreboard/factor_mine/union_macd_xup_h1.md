@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-15.96%** ($8,404) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 274 · skips 71 · realized $-1788.82.
+Cash book **-16.23%** ($8,377) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 278 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -444,6 +444,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `SRPT` | 112 | $19.05 | $2.33 | — | $2,129.09 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+16.1; leftover $2141.64 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `TNGX` | 83 | $25.55 | $2.24 | — | $6.21 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+13.6; leftover $2141.64 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.21 | ▼ close $8,404.29 vs 09:30 $8,566.54 (session -138.52) | 16:00 close · cash $6.21 · equity $8,404.29 vs 09:30 $8,566.54 (-162.25; session marks -138.52) · 4 name(s) marked open→close (per-name table). RCKT×915 09:30 $2.34 → close $2.20 -128.10; CMRC×571 09:30 $3.75 → close $3.62 -74.23; SRPT×112 09:30 $19.05 → close $18.56 -54.88; TNGX×83 09:30 $25.55 → close $26.98 +118.69 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.21 | ▼ 09:30 equity $8,400.61 vs yday $8,404.29 (-3.68) | 09:30 open · cash $6.21 (unchanged overnight, no fees) · equity $8,400.61 vs prior close $8,404.29 (-3.68) · 4 name(s) re-marked at the open (per-name table). CMRC×571 yday $3.62 → 09:30 $3.69 +39.97; RCKT×915 yday $2.20 → 09:30 $2.20 +0.00; SRPT×112 yday $18.56 → 09:30 $18.40 -17.92; TNGX×83 yday $26.98 → 09:30 $26.67 -25.73 | — |
+| 2026-10-22 09:30 ET | **SELL** | `CMRC` | 571 | $3.69 | $7.48 | $-49.10 | $2,105.72 | ▼ -49.10 after sell → book $8,393.13; vs 09:30 mark -7.48 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `RCKT` | 915 | $2.20 | $11.97 | $-151.87 | $4,106.75 | ▼ -151.87 after sell → book $8,381.16; vs 09:30 mark -11.97 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `SRPT` | 112 | $18.40 | $2.36 | $-77.49 | $6,165.19 | ▼ -77.49 after sell → book $8,378.80; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `TNGX` | 83 | $26.67 | $2.27 | $+88.45 | $8,376.53 | ▲ +88.45 after sell → book $8,376.53; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,376.53 | ▲ close $8,376.53 vs 09:30 $8,400.61 (session +0.00) | 16:00 close · cash $8,376.53 · no lots left · equity $8,376.53. | — |
 
 ## Not taken
 

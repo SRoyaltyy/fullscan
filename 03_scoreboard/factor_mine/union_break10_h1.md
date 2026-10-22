@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **-17.43%** ($8,257) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 445 · skips 100 · realized $-529.03.
+Cash book **-16.89%** ($8,311) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 452 · skips 100 · realized $-529.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -615,6 +615,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **BUY** | `IT` | 4 | $216.34 | $2.00 | — | $1,191.14 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+11.5; leftover $1021.94 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 09:30 ET | **BUY** | `EPAM` | 7 | $129.12 | $2.01 | — | $285.29 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+13.1; leftover $1021.94 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $285.29 | ▲ close $8,257.36 vs 09:30 $8,179.60 (session +104.36) | 16:00 close · cash $285.29 · equity $8,257.36 vs 09:30 $8,179.60 (+77.76; session marks +104.36) · 8 name(s) marked open→close (per-name table). TRU×13 09:30 $77.62 → close $78.93 +17.03; KLRA×79 09:30 $12.91 → close $12.92 +0.79; FRSH×68 09:30 $14.84 → close $14.82 -1.02; WIT×496 09:30 $2.06 → close $2.15 +44.64; KVYO×52 09:30 $19.59 → close $20.19 +31.20; CMRC×272 09:30 $3.75 → close $3.62 -35.36; IT×4 09:30 $216.34 → close $219.57 +12.92; EPAM×7 09:30 $129.12 → close $134.00 +34.16 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $285.29 | ▲ 09:30 equity $8,284.91 vs yday $8,257.36 (+27.55) | 09:30 open · cash $285.29 (unchanged overnight, no fees) · equity $8,284.91 vs prior close $8,257.36 (+27.55) · 8 name(s) re-marked at the open (per-name table). CMRC×272 yday $3.62 → 09:30 $3.69 +19.04; EPAM×7 yday $134.00 → 09:30 $133.58 -2.94; FRSH×68 yday $14.82 → 09:30 $14.85 +1.70; IT×4 yday $219.57 → 09:30 $221.23 +6.64; KLRA×79 yday $12.92 → 09:30 $12.80 -9.48; KVYO×52 yday $20.19 → 09:30 $20.29 +5.20; TRU×13 yday $78.93 → 09:30 $79.88 +12.35; WIT×496 yday $2.15 → 09:30 $2.14 -4.96 | — |
+| 2026-10-22 09:30 ET | **SELL** | `CMRC` | 272 | $3.69 | $3.56 | $-23.39 | $1,285.41 | ▼ -23.39 after sell → book $8,281.35; vs 09:30 mark -3.56 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `EPAM` | 7 | $133.58 | $2.03 | $+27.18 | $2,218.43 | ▲ +27.18 after sell → book $8,279.32; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `FRSH` | 68 | $14.85 | $2.22 | $-3.73 | $3,226.02 | ▼ -3.73 after sell → book $8,277.10; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `IT` | 4 | $221.23 | $2.02 | $+15.54 | $4,108.92 | ▲ +15.54 after sell → book $8,275.08; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `KLRA` | 79 | $12.80 | $2.25 | $-13.17 | $5,117.87 | ▼ -13.17 after sell → book $8,272.83; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-22 09:30 ET | **SELL** | `KVYO` | 52 | $20.29 | $2.17 | $+32.09 | $6,170.78 | ▲ +32.09 after sell → book $8,270.66; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 09:30 ET | **SELL** | `WIT` | 496 | $2.14 | $6.49 | $+26.79 | $7,225.73 | ▲ +26.79 after sell → book $8,264.17; vs 09:30 mark -6.49 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,225.73 | ▲ close $8,310.71 vs 09:30 $8,284.91 (session +46.54) | 16:00 close · cash $7,225.73 · equity $8,310.71 vs 09:30 $8,284.91 (+25.80; session marks +46.54) · 1 name(s) marked open→close (per-name table). TRU×13 09:30 $79.88 → close $83.46 +46.54 | — |
 
 ## Not taken
 

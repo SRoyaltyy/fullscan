@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #8 flow-in + green + not extended
 
-Cash book **+6.08%** ($10,608) · signal-only (no cash/fees) was -14.71%. Starts YES **10/30**. Fills 35 · skips 8 · realized $-732.31.
+Cash book **+6.67%** ($10,667) · signal-only (no cash/fees) was -14.71%. Starts YES **10/30**. Fills 36 · skips 8 · realized $-732.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -207,6 +207,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,995.03 | ▲ 09:30 equity $9,995.03 vs yday $9,995.03 (+0.00) | 09:30 open · cash $9,995.03 · no holdings · equity $9,995.03 vs prior close $9,995.03 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-21 09:30 ET | **BUY** | `ISRG` | 24 | $402.50 | $2.06 | — | $333.09 | — | Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list earn_react; ret5=+3.8; leftover $9995.03 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $333.09 | ▲ close $10,607.97 vs 09:30 $9,995.03 (session +615.00) | 16:00 close · cash $333.09 · equity $10,607.97 vs 09:30 $9,995.03 (+612.94; session marks +615.00) · 1 name(s) marked open→close (per-name table). ISRG×24 09:30 $402.50 → close $428.12 +615.00 | — |
+| 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $333.09 | ▲ 09:30 equity $10,669.05 vs yday $10,607.97 (+61.08) | 09:30 open · cash $333.09 (unchanged overnight, no fees) · equity $10,669.05 vs prior close $10,607.97 (+61.08) · 1 name(s) re-marked at the open (per-name table). ISRG×24 yday $428.12 → 09:30 $430.67 +61.08 | — |
+| 2026-10-22 09:30 ET | **SELL** | `ISRG` | 24 | $430.67 | $2.15 | $+671.86 | $10,666.90 | ▲ +671.86 after sell → book $10,666.90; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,666.90 | ▲ close $10,666.90 vs 09:30 $10,669.05 (session +0.00) | 16:00 close · cash $10,666.90 · no lots left · equity $10,666.90. | — |
 
 ## Not taken
 
