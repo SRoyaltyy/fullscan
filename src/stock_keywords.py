@@ -4,6 +4,7 @@ Keyword overlap is retrieval evidence. It never independently creates a stock
 pass or a bullish/bearish conclusion. All candidate claims remain inspectable.
 """
 from collections import defaultdict
+from functools import lru_cache
 import hashlib
 import json
 import math
@@ -90,6 +91,28 @@ _ABSTRACT_HEAD = re.compile(r'\b(?:benefits?|assurances?|understanding|assistanc
 _ENTITY_CLASS = re.compile(r'\b(?:manufacturers?|operators?|agencies|providers?|institutions?|counterparties)$', re.I)
 
 
+@lru_cache(maxsize=1)
+def _physical_input_terms():
+    """Pinned WordNet classes admit materials without a commodity allowlist."""
+    import gzip
+    from pathlib import Path
+    root = Path(__file__).with_name('data')/'senses'
+    manifest = json.loads((root/'manifest.json').read_text())
+    terms = set()
+    for entry in manifest['files']:
+        if entry['file'] not in {name+'.json.gz' for name in ('noun.substance','noun.artifact','noun.food','noun.plant','noun.animal')}:
+            continue
+        raw = (root/entry['file']).read_bytes()
+        if entry.get('stored_sha256') and hashlib.sha256(raw).hexdigest() != entry['stored_sha256']:
+            raise ValueError('physical input resource checksum mismatch')
+        raw = gzip.decompress(raw)
+        if hashlib.sha256(raw).hexdigest() != entry['sha256']:
+            raise ValueError('physical input resource checksum mismatch')
+        for _, names, _, _ in json.loads(raw):
+            terms.update(normalized_words(name) for name in names)
+    return terms
+
+
 def scanner_policy(row):
     """Admit identifiable names/citations or qualified operating inputs only.
 
@@ -129,7 +152,8 @@ def scanner_policy(row):
         # retain their separate context/identity gate at article comparison.
         typed_input = role in ('input', 'dependency') and any(
             normalized_words(value) in {normalized_words(a) for a in rule['aliases']} for rule in POLICY['concepts'])
-        if not (named or citation or declared or qualified_input or typed_input):
+        physical_input = role in ('input', 'dependency') and normalized_words(value) in _physical_input_terms()
+        if not (named or citation or declared or qualified_input or typed_input or physical_input):
             reason = 'unnamed_or_unqualified_object'
     if not reason and role in ENTITY_ROLES:
         from .specific_filing_records import PLACES

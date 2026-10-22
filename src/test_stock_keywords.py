@@ -34,6 +34,12 @@ class KeywordTests(unittest.TestCase):
                            ('hard drives', 'input'), ('Amazon Web Services', 'dependency')):
             self.assertTrue(scanner_policy(dict(keyword=value,relationship=role,assertion='asserted'))['eligible'],value)
 
+    def test_physical_input_classes_preserve_materials_without_a_ticker_allowlist(self):
+        for value in ('copper', 'oil', 'steel', 'wheat', 'silicon'):
+            self.assertTrue(scanner_policy(dict(keyword=value,relationship='input'))['eligible'],value)
+        for value in ('ability', 'assurance', 'information', 'internal systems'):
+            self.assertFalse(scanner_policy(dict(keyword=value,relationship='input'))['eligible'],value)
+
     def test_negative_latest_connection_cannot_leak_into_any_search_result(self):
         index=KeywordIndex({'BLZE':profile(compile_keywords(graph(),as_of='2026-04-01'))})
         for date in ('', '2026-04-01'):
