@@ -1,6 +1,6 @@
 {
   "date": "2026-10-22",
-  "generated_at": "2026-10-22T06:05:20.315389-04:00",
+  "generated_at": "2026-10-22T10:52:50.690838-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -535,8 +535,8 @@
           "path": "01_daily/weather/2026-10-22_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10521 vix=spiking yields=falling",
-          "size": 10521,
+          "reason": "sectors=11 bytes=10519 vix=spiking yields=falling",
+          "size": 10519,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -749,8 +749,8 @@
           "path": "01_daily/weather/2026-10-22_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10521 vix=spiking yields=falling",
-          "size": 10521,
+          "reason": "sectors=11 bytes=10519 vix=spiking yields=falling",
+          "size": 10519,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -2183,6 +2183,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-22\n_Generated 2026-10-22T10:05:17 \u2014 live `flatten_robust`._\n**S=-14.31; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-14.31** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$20,135.31** (after 09:30 $20,135.31 \u00b7 after 16:00 $108,671.69)\n- Prior close **$108,704.09** \u00b7 09:30 **$108,704.09** \u00b7 overnight **$+0.00** \u00b7 session **$-32.40** \u00b7 16:00 **$108,671.69**\n- Overnight lots **7** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,671.69** \u00b7 2026-10-21 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_da"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T10:52:49.574926-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-22_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10519,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-22_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5978,
+          "preview": "# Weather report \u2014 2026-10-22\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-22\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
@@ -2190,5 +2215,23 @@
     "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",
     "factor_mine": "https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/",
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
-  }
+  },
+  "frozen_write_skips": [
+    {
+      "path": "01_daily/weather/2026-10-22_weather.json",
+      "at": "2026-10-22T10:52:51-04:00",
+      "commit_msg": "auto: land weather [2026-10-22]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39798019622",
+      "manifest": "research/input_freeze/2026-10-22/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-22.json",
+      "at": "2026-10-22T10:52:51-04:00",
+      "commit_msg": "auto: land weather [2026-10-22]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39798019622",
+      "manifest": "research/input_freeze/2026-10-22/manifest.json"
+    }
+  ]
 }
