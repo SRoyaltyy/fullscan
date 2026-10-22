@@ -26,7 +26,7 @@ concurrency:
 jobs:
   ping:
     runs-on: [self-hosted, ecs]
-    timeout-minutes: 20
+    timeout-minutes: 35
     env:
       FULLSCAN_HOME: "/home/gha"
       HOME: "/home/gha"
