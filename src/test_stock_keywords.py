@@ -1,6 +1,6 @@
 import unittest
 from types import SimpleNamespace
-from .stock_keywords import compile_keywords, KeywordIndex, quality_issues, normalized_words
+from .stock_keywords import compile_keywords, KeywordIndex, quality_issues, normalized_words, scanner_policy, scanner_visible
 
 
 def graph(facts=None):
@@ -19,6 +19,59 @@ def profile(bundle, name='Backblaze Inc.'):
 
 
 class KeywordTests(unittest.TestCase):
+    def test_concrete_framework_rejects_classes_and_fragments_for_every_issuer(self):
+        for ticker in ('NORTH', 'SOUTH', 'EAST'):
+            for value in ('customers', 'business partners', 'advertising agencies', 'internal systems',
+                          'written notice', 'Medical Benefits', 'Equity Vesting Benefits',
+                          'Executive valuable Confidential Information', 'all', 'performance marketing leads',
+                          'internal forecast numbers', 'periodic examination', 'litigation matters'):
+                for role in ('customer', 'partner', 'dependency', 'product_or_service', 'input'):
+                    with self.subTest(ticker=ticker, value=value, role=role):
+                        self.assertFalse(scanner_policy(dict(stock=ticker,keyword=value,relationship=role,assertion='asserted'))['eligible'])
+        # A plural form can still name a precise entity or operating input.
+        for value,role in (('Orion Precision Components', 'supplier'), ('Zephyr Medical Devices', 'customer'),
+                           ('Atlas Payment Networks', 'partner'), ('warehouse lines', 'input'),
+                           ('hard drives', 'input'), ('Amazon Web Services', 'dependency')):
+            self.assertTrue(scanner_policy(dict(keyword=value,relationship=role,assertion='asserted'))['eligible'],value)
+
+    def test_negative_latest_connection_cannot_leak_into_any_search_result(self):
+        index=KeywordIndex({'BLZE':profile(compile_keywords(graph(),as_of='2026-04-01'))})
+        for date in ('', '2026-04-01'):
+            result=index.compare('Backblaze uses Stripe payment processing.',article_date=date)
+            self.assertFalse(any(r['keyword']=='Stripe' for key in ('matches','unresolved_matches','rejected_matches','broad_matches') for r in result[key]))
+        old=index.compare('Backblaze uses Stripe payment processing.',article_date='2026-02-01')
+        self.assertTrue(old['matches'])
+        bundle=compile_keywords(graph(),as_of='2026-04-01')
+        self.assertFalse(any(scanner_visible(r) for r in bundle['records'] if r['keyword']=='Stripe'))
+
+    def test_legal_exclusion_closes_old_positive_alias_and_its_full_name(self):
+        g=self.disclosure_graph()
+        old=g['claim']('old-dma','subject_to','Digital Markets Act');old['object_type']='law';g['facts']=[old]
+        rows=compile_keywords(g,as_of='2026-04-01')
+        index=KeywordIndex({'BLZE':profile(rows)})
+        result=index.compare('Backblaze discusses the Digital Markets Act.')
+        self.assertFalse(any(result[key] for key in ('matches','unresolved_matches','rejected_matches','broad_matches')))
+        self.assertFalse(any(scanner_visible(r) for r in rows['records'] if r['keyword']=='Digital Markets Act'))
+
+    def test_relationship_direction_and_legal_scope_are_plain_labels(self):
+        for role,label in (('supplier','buys from'),('customer','sells to'),('dependency','relies on'),('partner','partners with')):
+            self.assertEqual(scanner_policy(dict(keyword='Orion Components',relationship=role))['label'],label)
+        law=dict(keyword='Zorvan Water Act',relationship='disclosed_law',qualifiers={'direct_obligation_asserted':True})
+        self.assertEqual(scanner_policy(law)['label'],'is subject to')
+        law['qualifiers']['direct_obligation_asserted']=False
+        self.assertEqual(scanner_policy(law)['label'],'reports legal exposure to')
+
+    def test_explicit_unaffected_statement_overrides_a_positive_old_parse(self):
+        g=graph();g['facts']=[g['claim']('wrong','depends_on','Orion Components',
+            quote='We do not rely on Orion Components. We rely on Zephyr Networks.')]
+        g['facts'].append(g['claim']('right','depends_on','Zephyr Networks',
+            quote='We do not rely on Orion Components. We rely on Zephyr Networks.'))
+        bundle=compile_keywords(g,as_of='2026-04-01')
+        self.assertEqual([r['keyword'] for r in bundle['records'] if scanner_visible(r)],['Zephyr Networks'])
+        g['facts']=[g['claim']('law','subject_to','Zorvan Water Act',quote='We are not affected by the Zorvan Water Act.')]
+        g['facts'][0]['object_type']='law'
+        self.assertFalse(scanner_visible(compile_keywords(g,as_of='2026-04-01')['records'][0]))
+
     def test_all_candidates_retained_and_directional(self):
         bundle = compile_keywords(graph(),as_of='2026-04-01')
         self.assertEqual(bundle['coverage']['retained_relationships'],3)
@@ -71,9 +124,8 @@ class KeywordTests(unittest.TestCase):
         self.assertFalse(gdpr['usable_for_scoring'])
         self.assertTrue(gdpr['review_required'])
         self.assertTrue(gdpr['evidence_ids'][0].startswith('specific:'))
-        dma=next(r for r in result['matches'] if r['keyword']=='Digital Markets Act')
-        self.assertEqual(dma['qualifiers']['applicability'],'explicitly_out_of_scope')
-        self.assertFalse(dma['usable_for_scoring'])
+        self.assertFalse(any(r['keyword']=='Digital Markets Act' for key in ('matches','unresolved_matches','rejected_matches','broad_matches') for r in result[key]))
+        self.assertFalse(any(e['row']['keyword']=='Digital Markets Act' for e in index.browser_payload()['phrases']))
         self.assertEqual(index.compare('Backblaze discusses GDPR.',article_date='2025-12-31')['matches'],[])
 
     def test_law_codes_and_years_cannot_collapse_to_the_same_identity(self):
@@ -150,7 +202,8 @@ class KeywordTests(unittest.TestCase):
             profiles[ticker] = profile(compile_keywords(g,as_of='2026-04-01',ticker=ticker),'Company '+str(i))
         result = KeywordIndex(profiles).compare('Tariffs rise')
         self.assertEqual(result['matches'],[])
-        self.assertEqual(result['broad_matches'][0]['candidate_stock_count'],10)
+        self.assertEqual(result['broad_matches'],[])
+        self.assertEqual(result['unresolved_matches'],[])
 
     def test_guidance_ranges_remain_separate_and_period_unknown(self):
         g = graph(); g['facts'] = []

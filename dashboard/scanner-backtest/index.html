@@ -579,22 +579,35 @@ async function decodePackedBytes(bytes, expectedHash) {
   return JSON.parse(await new Response(stream).text());
 }
 
+function scannerRowVisible(row, articleDate="") {
+  if(row.relationship==="issuer") return true;
+  const policy=row.scanner;
+  if(!policy?.eligible || row.assertion==="negated" || row.qualifiers?.applicability==="explicitly_out_of_scope") return false;
+  const events=(policy.connection_events || []).filter(e=>!articleDate || e.date<=articleDate);
+  return events.length ? events.at(-1).connected : !(policy.connection_events || []).length;
+}
+
 function renderKeywordRecords(container, records, evidence = {}, inspectSource = null) {
+  records = records.filter(row=>scannerRowVisible(row,row.article_date || ""));
   const query = document.createElement("input");
-  query.placeholder = "Search keyword, stock or relationship";
+  query.placeholder = "Search concrete term, stock or relationship";
   query.setAttribute("aria-label", "Search stock keyword records");
   const list = document.createElement("div");
   function draw() {
     list.replaceChildren();
     const q = (query.value || "").trim().toLowerCase();
-    const rows = records.filter(r => !q || [r.stock,r.keyword,r.relationship,r.assertion,...(r.review_reasons || [])].join(" ").toLowerCase().includes(q));
+    const rows = records.filter(r => !q || [r.stock,r.keyword,r.scanner?.group,r.scanner?.label,r.assertion].join(" ").toLowerCase().includes(q));
     const count = document.createElement("p");
-    count.textContent = `${rows.length.toLocaleString()} of ${records.length.toLocaleString()} keyword records · all remain searchable`;
+    count.textContent = `${rows.length.toLocaleString()} of ${records.length.toLocaleString()} concrete connections · source evidence available`;
     list.append(count);
-    appendPaged(list, rows, row => {
+    const groups=new Map();
+    for(const row of rows) {const group=row.scanner?.group || "Company identity";if(!groups.has(group))groups.set(group,[]);groups.get(group).push(row);}
+    for(const [group,items] of groups) {
+    const heading=document.createElement("h4");heading.textContent=`${group} (${items.length})`;list.append(heading);
+    appendPaged(list, items, row => {
       const detail = document.createElement("details");
       const title = document.createElement("summary");
-      title.textContent = `${row.stock} → ${row.relationship.replaceAll("_"," ")} → ${row.keyword} [${row.assertion || "identity"}${row.review_required ? "; review required" : ""}${row.current_as_of_cutoff ? "; current filing claim" : "; not a current assertion"}]`;
+      title.textContent = `${row.stock} → ${row.scanner?.label || "company identity"} → ${row.keyword}${row.assertion==="potential" ? " [possible connection]" : row.assertion==="historical" ? " [historical]" : ""}${row.review_required ? " [review required]" : ""}`;
       const flags = document.createElement("p");
       flags.textContent = (row.review_reasons || []).join(" · ")+(row.article_span ? ` · Article: ${row.article_span.text} (${row.article_span.start}–${row.article_span.end})` : "")+` · Filing dates ${row.first_filing_date || "—"} to ${row.latest_filing_date || "—"}`;
       if (row.identity) flags.textContent += ` · Source ${row.identity.type}: ${row.identity.id}`;
@@ -627,6 +640,7 @@ function renderKeywordRecords(container, records, evidence = {}, inspectSource =
       });
       return detail;
     });
+    }
   }
   query.addEventListener("input",draw);
   container.append(query,list); draw();
@@ -661,6 +675,7 @@ const keywordBuckets = new Map();
 function prepareKeywordIndex(payload) {
   const first = new Map(), df = new Map(), peers = new Map();
   for (const entry of payload.phrases) {
+    if(entry.row.relationship!=="issuer" && !entry.row.scanner?.eligible) continue;
     const initial = entry.phrase[0];
     if (!first.has(initial)) first.set(initial,[]);
     first.get(initial).push(entry);
@@ -752,6 +767,7 @@ function compareKeywordText(index, text, {articleDate=""}={}) {
   const hits = [], named = new Set(), seen = new Set(), broad = new Map(), matches = [], unresolved_matches=[],rejected_matches=[];
   for (let i = 0; i < words.length; i++) {
     for (const {phrase,row} of index.first.get(words[i]) || []) {
+      if(!scannerRowVisible(row,articleDate)) continue;
       // A preview cannot reconstruct a historical subset of a mixed-date
       // context. Abstain on the entire row instead of importing later evidence.
       if(articleDate && row.relationship!=="issuer" && (!row.latest_filing_date || row.latest_filing_date>articleDate || (row.source_declared_identity?.known_from || "")>articleDate)) continue;
@@ -774,7 +790,7 @@ function compareKeywordText(index, text, {articleDate=""}={}) {
     const key = `${row.id}:${start}:${end}`;
     if (seen.has(key)) continue; seen.add(key);
     const alignment=alignKeywordEntity(index,row.identity,text,start,end,index.peers.get(phrase.join(" ")) || []);
-    const candidate={...row,alignment,article_span:{start:[...text.slice(0,start)].length,end:[...text.slice(0,end)].length,text:text.slice(start,end)}};
+    const candidate={...row,article_date:articleDate,alignment,article_span:{start:[...text.slice(0,start)].length,end:[...text.slice(0,end)].length,text:text.slice(start,end)}};
     if (entityRoles.has(row.relationship) && row.relationship!=="issuer") candidate.exposure_path={stock:row.stock,relationship:row.relationship,entity:row.keyword,entity_id:row.identity.id,order:2,core_industry_inferred:false,context_alignment:"not_assessed",impact:"not_inferred"};
     if (alignment.status!=="resolved") {(alignment.status==="rejected" ? rejected_matches : unresolved_matches).push(candidate);continue;}
     const count = (index.df.get(row.normalized) || new Set()).size;
@@ -1057,52 +1073,7 @@ function renderParagraphs(container, graph) {
 function renderFilingGraph(container, graph) {
   activeTermReview=renderTermReview(container,graph);
   renderParagraphs(container, graph);
-  const title = document.createElement("h3");
-  title.textContent = `All filing relationships (${graph.facts.length.toLocaleString()})`;
-  const note = document.createElement("p");
-  note.textContent = graph.archive_coverage ? `${graph.archive_coverage.filings} filings; ${graph.archive_coverage.documents.toLocaleString()} documents; ${graph.coverage.characters_read.toLocaleString()} characters read. Historical, negative and possible claims remain visible. Missing relationships are unknown.` : `Preserved grammar decisions with current ${graph.specific_records?.version || "disclosure"} records. Historical, negative and possible claims remain visible. Missing relationships are unknown.`;
-  const filter = document.createElement("input");
-  filter.placeholder = "Search relationships, companies or quoted text";
-  filter.setAttribute("aria-label", "Search all filing relationships");
-  const list = document.createElement("div");
-  const sources = new Map(graph.sources.map(s => [s.id, s]));
-  function draw() {
-    list.replaceChildren();
-    const query = filter.value.trim().toLowerCase();
-    const selected = graph.facts.filter(f => !query || [f.predicate, f.object, f.status, ...f.evidence.map(e => e.quote)].join(" ").toLowerCase().includes(query));
-    const count = document.createElement("p");
-    count.textContent = `${selected.length.toLocaleString()} relationships match`;
-    list.append(count);
-    appendPaged(list, selected, fact => {
-      const detail = document.createElement("details");
-      const summary = document.createElement("summary");
-      summary.textContent = `${fact.subject} → ${fact.predicate.replaceAll("_", " ")} → ${fact.object} [${fact.status}]`;
-      detail.append(summary);
-      const qualifiers = document.createElement("p");
-      qualifiers.textContent = Object.entries(fact.qualifiers || {}).map(([k, v]) => `${k}: ${Array.isArray(v) ? v.join(", ") : v}`).join(" · ");
-      detail.append(qualifiers);
-      appendPaged(detail, fact.evidence, evidence => {
-        const block = document.createElement("div");
-        const source = sources.get(evidence.source_id) || {};
-        const label = document.createElement("p");
-        label.textContent = [source.form, source.filing_date, source.accession, source.document, source.section].filter(Boolean).join(" · ");
-        const quote = document.createElement("blockquote");
-        quote.textContent = evidence.quote;
-        block.append(label, quote);
-        if (source.url && /^https:\/\/www\.sec\.gov\/Archives\//.test(source.url)) {
-          const link = document.createElement("a");
-          link.href = source.url; link.target = "_blank"; link.rel = "noopener noreferrer";
-          link.textContent = "Read SEC source";
-          block.append(link);
-        }
-        return block;
-      });
-      return detail;
-    });
-  }
-  filter.addEventListener("input", draw);
-  container.append(title, note, filter, list);
-  draw();
+
 }
 
 let activeProfileRequest = 0;
@@ -1162,8 +1133,9 @@ async function showTickerProfile(rawTicker) {
   }
   title.textContent = `${ticker} — ${prof.name || "(no name)"}`;
   if (prof.keyword_schema) {
-    const heading = document.createElement("h3"); heading.textContent = `Labelled stock keywords (${(prof.keywords || []).length})`;
+    const heading = document.createElement("h3"); heading.textContent = `Concrete company connections (${(prof.keywords || []).filter(row=>scannerRowVisible(row)).length})`;
     factsBox.append(heading);
+    const policyNote=document.createElement("p");policyNote.textContent="Named entities, legal instruments and specific operating inputs only. Generic fragments and explicitly negated connections are excluded. Filing mentions still require identity, applicability and relevance review.";factsBox.append(policyNote);
     renderKeywordRecords(factsBox,prof.keywords || [],prof.keyword_evidence || {},row=>{
       if(activeTermReview) activeTermReview(row);
       else { const note=document.createElement("p");note.textContent="The full source graph is loading or unavailable. Exact decision quotes are shown below; paragraph review needs the complete graph.";factsBox.append(note); }
@@ -1189,7 +1161,7 @@ async function showTickerProfile(rawTicker) {
     p.textContent = "⚠ " + w;
     warnings.append(p);
   });
-  const kinds = Object.entries(prof.facts || {}).sort((a, b) => b[1].length - a[1].length);
+  const kinds = Object.entries(prof.keyword_schema ? {} : (prof.facts || {})).sort((a, b) => b[1].length - a[1].length);
   for (const [kind, entries] of kinds) {
     const group = document.createElement("div");
     group.className = "factgroup";

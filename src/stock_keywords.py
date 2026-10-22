@@ -39,6 +39,182 @@ def normalized_words(value):
     return tuple(lemma(m.group()) for m in TOKEN.finditer(value or ''))
 
 
+# A retrieval/display contract, not a ticker-specific list or an accuracy score.
+# Complete source decisions remain in the archive, including excluded claims.
+SCANNER_POLICY = 'concrete-connections-1'
+RELATION_LABELS = {
+    'supplier': ('Upstream suppliers', 'buys from'),
+    'customer': ('Downstream customers', 'sells to'),
+    'partner': ('Business partners', 'partners with'),
+    'dependency': ('Operating dependencies', 'relies on'),
+    'input': ('Upstream inputs', 'uses as an input'),
+    'product_or_service': ('Products and services', 'offers'),
+    'competitor': ('Competitors', 'competes with'),
+    'subsidiary': ('Subsidiaries', 'owns'),
+    'acquisition_target': ('Acquisitions', 'acquires'),
+    'divestiture_target': ('Divestitures', 'divests'),
+    'officer': ('Company officers', 'has officer'),
+    'regulator': ('Government institutions', 'is regulated by'),
+    'approval_authority': ('Government institutions', 'requires approval from'),
+    'regulatory_exposure': ('Laws and government institutions', 'reports exposure to'),
+    'disclosed_authority': ('Government institutions', 'reports dealings with'),
+    'disclosed_law': ('Laws and policies', 'reports legal exposure to'),
+    'disclosed_permit': ('Permits and licences', 'reports permit or licence'),
+    'disclosed_named_permit': ('Permits and licences', 'reports permit or licence'),
+    'disclosed_named_case': ('Named legal proceedings', 'reports legal proceedings involving'),
+    'operating_geography': ('Operating jurisdictions', 'operates in'),
+}
+_BACKGROUND_WORDS = set('''a an the our their its all any such other certain various
+    new additional internal external own third party parties business businesses
+    partner partners customer customers consumer consumers member members client clients
+    supplier suppliers vendor vendors agency agencies advertising marketing lead leads
+    system systems service services product products offering offerings technology technologies
+    information data process processes procedure procedures operation operations
+    company companies entity entities institution institutions government governmental
+    law laws regulation regulations rule rules risk risks litigation matter matters
+    examination examinations audit audits requirement requirements obligation obligations
+    approval approvals permit permits licence licences license licenses authority authorities
+    ability assurance reasonable understanding performance value variety range success
+    experience experiences quality superior continued inaccurate representation representations
+    number numbers forecast notice notices written statement statements oral securities
+    shareholder shareholders holder holders underwriter underwriters executive participant
+    benefit benefits agreement agreements time conversion exchange issue issues exercise
+    content games security payment payments right rights tools model models proprietary
+    innovation technological confidential necessary required respective applicable
+    full valuable assistance financing opinion opinions amount equal several hedging
+    national federal state local global international major minor relevant regulator regulators
+    counterparty counterparties loan purchaser purchasers person persons'''.split())
+_BACKGROUND_WORDS.update('effect effects amendment termination trustee trustees agent agents firm shares common stock'.split())
+_BAD_OBJECT = re.compile(r"^(?:[a-z]\)|unresolved\b|(?:we|it|they|this|that|these|those|such|our|their|its|any|all|most)\b)|\b(?:of|with|to|and|or|subject)$", re.I)
+_ABSTRACT_HEAD = re.compile(r'\b(?:benefits?|assurances?|understanding|assistance|representations?|numbers?|notices?|agreements?|information|limitations?|matters?|risks?|requirements?)$', re.I)
+_ENTITY_CLASS = re.compile(r'\b(?:manufacturers?|operators?|agencies|providers?|institutions?|counterparties)$', re.I)
+
+
+def scanner_policy(row):
+    """Admit identifiable names/citations or qualified operating inputs only.
+
+    Plurals are allowed: distinctiveness and relationship capacity matter.
+    Generic participant classes, abstract assertions and malformed arguments
+    cannot be repaired merely by capitalizing them or assigning an entity type.
+    """
+    role, value = row['relationship'], row['keyword'].strip()
+    q = row.get('qualifiers') or {}
+    group, label = RELATION_LABELS.get(role, ('', ''))
+    reason = ''
+    words = re.findall(r'[A-Za-z0-9]+', value)
+    distinctive = [w for w in words if w.lower() not in _BACKGROUND_WORDS]
+    issues = set(row.get('review_reasons', ()))
+    if row.get('assertion') == 'negated' or q.get('applicability') == 'explicitly_out_of_scope':
+        reason = 'explicitly_no_connection'
+    elif not group:
+        reason = 'no_specific_operating_relationship'
+    elif not distinctive or _BAD_OBJECT.search(value) or _ABSTRACT_HEAD.search(value) or len(words) > 14:
+        reason = 'generic_class_abstract_or_fragment'
+    elif issues & {'generic_background_head', 'administrative_or_abstract_object',
+                   'unresolved_or_generic_object', 'auditor_voice_is_not_issuer',
+                   'object_requires_phrase_resolution'}:
+        reason = 'unsupported_argument_or_voice'
+    elif role in ENTITY_ROLES and (
+            (_ENTITY_CLASS.search(value) and sum(w[0].isupper() for w in distinctive) < 2)
+            or re.fullmatch(r'[A-Z]{2,}s', value)):
+        reason = 'participant_class_without_named_entity'
+    elif role in ENTITY_ROLES and row.get('object_type') in ('geography', 'location', 'GPE'):
+        reason = 'place_is_not_a_business_counterparty'
+    else:
+        named = any(w[0].isupper() and len(w) > 1 for w in distinctive)
+        citation = bool(re.search(r'\d', value)) and row.get('object_type') == 'law'
+        declared = bool(row.get('source_declared_identity'))
+        qualified_input = role in ('input', 'dependency') and len(distinctive) >= 2
+        # Existing typed concept definitions (e.g. computing versus weather)
+        # retain their separate context/identity gate at article comparison.
+        typed_input = role in ('input', 'dependency') and any(
+            normalized_words(value) in {normalized_words(a) for a in rule['aliases']} for rule in POLICY['concepts'])
+        if not (named or citation or declared or qualified_input or typed_input):
+            reason = 'unnamed_or_unqualified_object'
+    if not reason and role in ENTITY_ROLES:
+        from .specific_filing_records import PLACES
+        if PLACES.fullmatch(value):
+            reason = 'place_is_not_a_business_counterparty'
+    if not reason and role in ('input', 'dependency') and re.fullmatch(r'[A-Z]{1,3}', value):
+        reason = 'unqualified_input_abbreviation'
+    if role == 'disclosed_law' and q.get('direct_obligation_asserted'):
+        label = 'is subject to'
+    elif role == 'disclosed_law' and q.get('applicability') == 'third_party_context':
+        label = 'reports indirect policy exposure to'
+    return {'version': SCANNER_POLICY, 'eligible': not reason, 'reason': reason,
+            'group': group, 'label': label}
+
+
+def scanner_visible(row, article_date=''):
+    policy = row.get('scanner') or scanner_policy(row)
+    if not policy['eligible']:
+        return False
+    events = [e for e in policy.get('connection_events', ()) if not article_date or e['date'] <= article_date]
+    return bool(events[-1]['connected']) if events else not policy.get('connection_events')
+
+
+def _negative_connection_witness(row, quote):
+    """An explicit issuer negation attached to this named argument only."""
+    q = row.get('qualifiers') or {}
+    names = {row['keyword'], *q.get('disclosed_aliases', ())}
+    names.update((row.get('source_declared_identity') or {}).get('aliases', ()))
+    before = re.compile(r'\b(?:we|the company|the registrant|our (?:business|operations?))\s+'
+        r'(?:(?:are|is|were|was)\s+(?:unaffected by|not affected by|not subject to|not in scope of|not dependent on)'
+        r'|(?:do|does|did)\s+not\s+(?:rely on|depend on|use|purchase from|buy from|sell to|partner with))\s+(?:the\s+)?$',re.I)
+    after = re.compile(r'^\s+(?:does|do)\s+not\s+apply\s+to\s+(?:us|the company|the registrant)\b',re.I)
+    for name in names:
+        for m in re.finditer(r'(?<![\w-])'+re.escape(name)+r'(?![\w-])',quote,re.I):
+            if before.search(quote[max(0,m.start()-160):m.start()]) or after.search(quote[m.end():m.end()+100]):
+                return True
+    return False
+
+
+def annotate_scanner_rows(rows, evidence):
+    # Explicit negatives close the same named connection, including older
+    # positive grammar heads. Same-date contradictions abstain. Date gates
+    # retain a supported connection for an article preceding its termination.
+    events = defaultdict(dict)
+    def key(row):
+        name = (row.get('source_declared_identity') or {}).get('name', row['keyword'])
+        # A regulator/customer can have several independent roles. Legal
+        # exclusions apply across the old and new legal record representations.
+        family = 'legal' if row.get('object_type') == 'law' else row['relationship']
+        return (row['stock'], surface(name), family)
+    for row in rows:
+        row['scanner'] = scanner_policy(row)
+        # Verify a whole literal argument, rather than a suffix of a hyphenated
+        # law, a page heading, or separated words accidentally joined by a rule.
+        witnesses = [w for ref in row['evidence_ids'] for w in evidence[ref]['witnesses']]
+        if witnesses and all(_negative_connection_witness(row,w['quote']) for w in witnesses):
+            row['scanner'].update(eligible=False,reason='explicitly_no_connection')
+        declared = bool(row.get('source_declared_identity'))
+        validated_detail = any(ref.startswith('specific:') for ref in row['evidence_ids'])
+        literal = re.compile(r'(?<![\w-])'+re.escape(row['keyword']).replace(r'\ ',r'\s+')+r'(?![\w-])')
+        reason = ''
+        if not witnesses:
+            reason = 'missing_source_evidence'
+        elif not (declared or validated_detail or any(literal.search(w['quote']) for w in witnesses)):
+            reason = 'incomplete_or_nonliteral_argument'
+        elif re.match(r'^\d', row['keyword']) and row.get('object_type') != 'law' and not validated_detail:
+            reason = 'quantity_or_table_fragment'
+        elif row['relationship'] == 'product_or_service' and not any(
+                re.search(r'\b(?:offers?|offering|launch\w*|sell\w*|market\w*|platform|products?|services?|technology)\b',w['quote'],re.I)
+                and not re.search(r'\b(?:divest\w*|sale transaction|planned (?:sale|divestiture))\b',w['quote'],re.I)
+                for w in witnesses):
+            reason = 'no_commercial_offering_evidence'
+        if reason and row['scanner']['eligible']:
+            row['scanner'].update(eligible=False, reason=reason)
+        connected = row['scanner']['reason'] != 'explicitly_no_connection'
+        if not connected or row['scanner']['eligible']:
+            for ref in row['evidence_ids']:
+                for w in evidence[ref]['witnesses']:
+                    date = w['source']['filing_date']
+                    existing = events[key(row)].get(date, True)
+                    events[key(row)][date] = existing and connected and not _negative_connection_witness(row,w['quote'])
+    for row in rows:
+        row['scanner']['connection_events'] = [dict(date=d, connected=v) for d,v in sorted(events[key(row)].items())]
+
+
 def quality_issues(predicate, value, quote):
     issues = []
     from .specific_filing_records import GENERIC
@@ -198,6 +374,7 @@ def compile_keywords(graph, *, as_of, ticker=None):
                 'aliases':sorted({a for r in candidates for a in r['qualifiers']['disclosed_aliases']}),
                 'known_from':min(r['first_filing_date'] for r in candidates),
                 'evidence_ids':sorted({ref for r in candidates for ref in r['evidence_ids']})}
+    annotate_scanner_rows(rows, evidence)
     return {'schema':SCHEMA,'as_of':as_of,'records':rows,'evidence':evidence,
         'term_inventory':None if inventory is None else {**inventory,'terms':terms,
             'windows':[w for w in inventory['windows'] if w['source_id'] in allowed_sources]},
@@ -253,6 +430,8 @@ class KeywordIndex:
                     issuer['identity']=identity(issuer,profile,self.organizations)
                     self.first[words[0]].append((words,issuer))
             for row in getattr(profile,'keyword_records',[]):
+                if not (row.get('scanner') or scanner_policy(row))['eligible']:
+                    continue
                 row['identity'] = identity(row,profile,self.organizations)
                 row['identity']['known_from']=row['first_filing_date']
                 words = tuple(row['normalized'].split())
@@ -297,6 +476,7 @@ class KeywordIndex:
             if base in vocabulary and base != form:
                 normalization[form] = base
         return {'schema':SCHEMA, 'catalog_tickers':self.count, 'phrases':phrases,
+                'scanner_policy':SCANNER_POLICY,
                 'normalization':normalization,'alignment_version':ALIGNMENT_VERSION,'identity_policy':POLICY,
                 'stopwords':sorted(STOP), 'comparison':'typed identity and sense alignment; unresolved candidates abstain'}
 
@@ -329,6 +509,8 @@ class KeywordIndex:
                 if hit[3]<=previous_end:continue
                 hits.append(hit);previous_end=hit[3]
         for phrase,row,start,end in hits:
+            if not scanner_visible(row, article_date):
+                continue
             if article_date and row['first_filing_date'] > article_date:
                 continue
             key = (row['id'],start,end)
@@ -343,6 +525,8 @@ class KeywordIndex:
             mentions=[t for t in article_terms if t['start']<=start and t['end']>=end]
             if mentions:
                 mention=min(mentions,key=lambda t:t['end']-t['start'])
+                if mention['capacity'].get('negated'):
+                    continue
                 candidate['article_capacity']={**mention['capacity'],'context':mention['context']}
             if row['relationship'] in ENTITY_ROLES-{'issuer'}:
                 candidate['exposure_path']={'stock':row['stock'],'relationship':row['relationship'],

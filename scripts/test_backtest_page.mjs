@@ -198,7 +198,7 @@ console.log('Disclosed law aliases, numeric instrument identifiers, explicit exc
 context.keywordBox = element();
 context.keywordRows = fixture.payload.phrases.filter(p => p.row.relationship !== 'issuer').map(p => p.row);
 vm.runInContext('renderKeywordRecords(keywordBox,keywordRows)',context);
-assert.match(context.keywordBox.children[1].children[0].textContent,/keyword records/);
+assert.match(context.keywordBox.children[1].children[0].textContent,/concrete connections/);
 vm.runInContext('renderMatches({decision:"no_pass",pass_count:0,passes:[],keyword_comparison:{matches:keywordRows,broad_matches:[]}})',context);
 assert.match(elements.get('article-keywords').children[0].textContent,/relationship/);
 console.log('Python/browser keyword matching parity, exact offsets, direction labels, and no-pass visibility passed.');
@@ -301,3 +301,23 @@ for(const test of fixture.cases) {
 vm.runInContext('keywordManifest={...hashedManifest,bucket_method:"unknown"}',context);
 await assert.rejects(vm.runInContext('keywordIndexForText("Western Digital")',context),/Unsupported keyword bucket method/);
 console.log('Whole-token hash shards retain matching parity and bound cached market data.');
+
+// The public list and matching engine share the exported admission policy.
+context.filteredBox=element();
+context.filteredRows=[
+ {stock:'TEST',keyword:'customers',relationship:'customer',scanner:{eligible:false}},
+ {stock:'TEST',keyword:'Zorvan Act',relationship:'disclosed_law',assertion:'reported',qualifiers:{applicability:'explicitly_out_of_scope'},scanner:{eligible:true}},
+ {stock:'TEST',keyword:'Old Supplier',relationship:'supplier',assertion:'asserted',scanner:{eligible:true,connection_events:[{date:'2026-01-01',connected:true},{date:'2026-03-01',connected:false}]}},
+ {stock:'TEST',keyword:'Orion Components',relationship:'supplier',assertion:'asserted',scanner:{eligible:true,group:'Upstream suppliers',label:'buys from'}}
+];
+vm.runInContext('renderKeywordRecords(filteredBox,filteredRows)',context);
+const flattened=e=>[e.textContent,...(e.children||[]).flatMap(flattened)].join(' ');
+const concreteOutput=flattened(context.filteredBox);
+assert.match(concreteOutput,/Upstream suppliers/);
+assert.match(concreteOutput,/TEST → buys from → Orion Components/);
+assert.doesNotMatch(concreteOutput,/customers|Zorvan Act|Old Supplier/);
+assert.equal(vm.runInContext('scannerRowVisible(filteredRows[2],"2026-02-01")',context),true);
+assert.equal(vm.runInContext('scannerRowVisible(filteredRows[2])',context),false);
+assert.ok(!html.includes('All filing relationships ('),'Raw generic grammar list is absent');
+assert.ok(html.includes('prof.keyword_schema ? {}'),'Legacy chips cannot bypass the curated record list');
+console.log('Concrete relation groups and direction labels exclude generic and null connections from the public view.');

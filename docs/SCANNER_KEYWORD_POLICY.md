@@ -1,0 +1,13 @@
+# Concrete company connections
+
+The scanner's public keyword view and retrieval index use `concrete-connections-1` in `src/stock_keywords.py`. This contract applies to every issuer. It is a conservative admission filter over extracted records, not a claim of complete or 90% accurate extraction.
+
+A candidate needs an identifiable name, statutory citation, source-declared identity, or qualified operating input; a supported relationship capacity; and dated, exact source evidence. Named entities and specific inputs can be plural. Capitalization or an assigned entity type alone does not rescue generic participant classes, abstract objects, administrative terms, page/table fragments, incomplete arguments or quantities without a named instrument. Commercial offerings require commercial source context. A country is not admitted as a subsidiary or counterparty.
+
+Explicitly negated relationships and explicit legal scope exclusions are null connections. They cannot appear in keyword results, including unresolved and rejected result lists. Dated termination events also close older positive versions of the same connection. A supported historical connection can still be tested at a date before its termination; same-date contradictions abstain. An exclusion does not erase independent relationships to other entities in the sentence.
+
+The public view groups accepted records by upstream suppliers, downstream customers, business partners, operating dependencies, upstream inputs, products/services, competitors, subsidiaries, acquisitions/divestitures, officers, government institutions, laws/policies, named legal proceedings, permits/licences and jurisdictions. Labels preserve direction: buys from, sells to, relies on, partners with, offers, and so forth. A named legal exposure is labelled 'is subject to' only when the disclosure record explicitly asserts a direct obligation; other qualifying mentions retain an exposure label and review requirement.
+
+Rejected candidates remain in immutable source archives for evaluation. The scanner does not render the old generic category chips or raw grammar relationship list. Whole source paragraphs remain available for evidence review; their wording is not a keyword connection list.
+
+This filter does not resolve every named entity, repair every old grammatical attachment, certify a law's applicability, or infer trading impact. It does not add external licence/court/regulator coverage. Existing review requirements and typed article identity gates remain in force. Benchmark extraction recall and precision must be measured separately from filtering tests.
