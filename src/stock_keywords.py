@@ -454,7 +454,10 @@ class KeywordIndex:
                     issuer['identity']=identity(issuer,profile,self.organizations)
                     self.first[words[0]].append((words,issuer))
             for row in getattr(profile,'keyword_records',[]):
-                if not (row.get('scanner') or scanner_policy(row))['eligible']:
+                # The dated officer adapter above also feeds browser exports.
+                if 'scanner' not in row:
+                    row['scanner'] = scanner_policy(row)
+                if not row['scanner']['eligible']:
                     continue
                 row['identity'] = identity(row,profile,self.organizations)
                 row['identity']['known_from']=row['first_filing_date']
