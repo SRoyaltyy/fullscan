@@ -1,0 +1,138 @@
+name: Publish concrete scanner keywords
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/project_scanner_keywords.py'
+      - '.github/workflows/scanner-keyword-publish.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: scanner-keyword-projection
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    outputs:
+      commit: ${{ steps.retain.outputs.commit }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/
+            /scripts/
+            /requirements-filing-parser.txt
+            /dashboard/scanner-backtest/index.html
+            /dashboard/scanner-backtest/meta.json
+            /dashboard/scanner-backtest/articles.json
+            /dashboard/scanner-backtest/results.jsonl
+            /dashboard/scanner-backtest/ticker-index.json
+            /dashboard/scanner-backtest/profiles.json
+            /dashboard/scanner-backtest/scoring-profiles/
+            /dashboard/scanner-backtest/filing-profiles/index.json
+            /dashboard/scanner-backtest/filing-profiles/publication.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Load pinned resources
+        run: |
+          python -m pip install PyYAML==6.0.3
+          python -m scripts.bootstrap_semantics
+      - name: Verify projection integrity and browser parity
+        run: |
+          python -m unittest scripts.test_project_scanner_keywords src.test_stock_keywords
+          node scripts/test_backtest_page.mjs
+      - name: Apply the shared admission policy to every cached issuer
+        env:
+          PROJECTION_SOURCE_SHA: ${{ github.sha }}
+        run: >-
+          python -u -m scripts.project_scanner_keywords
+          --source-dir dashboard/scanner-backtest --out-dir generated-keywords
+          --source-sha "$PROJECTION_SOURCE_SHA"
+      - name: Retain verified immutable assets without rescoring articles
+        id: retain
+        env:
+          PROJECTION_SOURCE_SHA: ${{ github.sha }}
+        run: |
+          python -u - <<'PY'
+          import os
+          from pathlib import Path
+          from scripts.project_scanner_keywords import publish
+          commit=publish(Path('generated-keywords'),os.environ['PROJECTION_SOURCE_SHA'])
+          with open(os.environ['GITHUB_OUTPUT'],'a') as stream:stream.write('commit='+commit+'\n')
+          print('Retained keyword projection',commit)
+          PY
+          cp scripts/publish_scanner_snapshot.py generated-keywords/publication-helper.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: scanner-keyword-projection
+          path: generated-keywords/
+          retention-days: 30
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      actions: read
+      pages: write
+    concurrency:
+      group: gh-pages-deploy
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 1
+      - uses: actions/download-artifact@v4
+        with:
+          name: scanner-keyword-projection
+          path: ${{ runner.temp }}/scanner-keyword-projection
+      - name: Publish the complete keyword view
+        env:
+          SNAPSHOT_DIRECTORY: ${{ runner.temp }}/scanner-keyword-projection
+          SNAPSHOT_COMMIT: ${{ needs.build.outputs.commit }}
+        run: |
+          git rm -r --ignore-unmatch dashboard/scanner-backtest/scoring-profiles dashboard/scanner-backtest/keyword-index
+          python - <<'PY'
+          import os,runpy
+          from pathlib import Path
+          source=Path(os.environ['SNAPSHOT_DIRECTORY'])
+          outside=sum(p.stat().st_size for p in Path('.').rglob('*') if p.is_file() and '.git' not in p.parts and not p.is_relative_to(Path('dashboard/scanner-backtest')) and not p.is_relative_to(Path('scanner-backtest')))
+          stage=runpy.run_path(str(source/'publication-helper.py'))['stage_page']
+          print(stage(source,Path('dashboard/scanner-backtest'),snapshot_commit=os.environ['SNAPSHOT_COMMIT'],outside_bytes=outside))
+          PY
+          git config user.name 'Scanner keyword publisher'
+          git config user.email 'bot@users.noreply.github.com'
+          git add dashboard/scanner-backtest
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish concrete keyword view for $GITHUB_SHA"
+            git push origin HEAD:gh-pages
+          fi
+      - name: Request GitHub Pages publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --jq '.status'
+      - name: Verify the served keyword projection
+        env:
+          SNAPSHOT_DIRECTORY: ${{ runner.temp }}/scanner-keyword-projection
+        run: |
+          python - <<'PY'
+          import json,os,time,urllib.request
+          from pathlib import Path
+          expected=json.loads((Path(os.environ['SNAPSHOT_DIRECTORY'])/'meta.json').read_text())['keyword_projection']['projection_id']
+          for attempt in range(36):
+              try:
+                  with urllib.request.urlopen('https://sroyaltyy.github.io/fullscan/dashboard/scanner-backtest/meta.json?projection='+expected,timeout=20) as response:actual=json.load(response)
+                  if actual.get('keyword_projection',{}).get('projection_id')==expected:
+                      print('Verified deployed keyword projection',expected);break
+              except (OSError,ValueError):pass
+              time.sleep(10)
+          else:raise SystemExit('The public page has not served the expected keyword projection')
+          PY
