@@ -32,7 +32,7 @@ Per-sleeve paper counterfactuals on looked names. Live sit stays default. KEEP b
 
 | Sleeve | Side | (A) short-only @ open | (B) dip-scoop X% |
 |---|---|---|---|
-| `flatten_robust` | long | — | CHRD miss; NEO miss; NEOG miss; MNR miss; SMMT miss; PRMB miss; VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss |
+| `flatten_robust` | long | — | NET miss; SMMT miss; PRMB miss; VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss |
 | `union_h1` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
 | `union_h3` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
 | `union_h5` | long | — | CSX miss; DOV miss; PCG miss; SAP miss; SPOT miss; VEEV miss; ITW miss; POOL miss |
