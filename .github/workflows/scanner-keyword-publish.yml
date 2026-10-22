@@ -27,6 +27,7 @@ jobs:
           sparse-checkout: |
             /src/
             /scripts/
+            /.github/workflows/scanner-keyword-publish.yml
             /requirements-filing-parser.txt
             /dashboard/scanner-backtest/index.html
             /dashboard/scanner-backtest/meta.json
