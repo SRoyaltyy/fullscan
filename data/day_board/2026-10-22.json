@@ -1,6 +1,6 @@
 {
   "date": "2026-10-22",
-  "generated_at": "2026-10-22T10:53:07.155808-04:00",
+  "generated_at": "2026-10-22T10:53:44.888616-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -803,7 +803,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=115",
-          "size": 986426,
+          "size": 986427,
           "said": "1d BUY NET \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, INDI \u00b7 -0.7224999999999999",
           "bullets": []
         },
@@ -817,7 +817,7 @@
           "size": 30101,
           "said": "Stock book \u2014 2026-10-22",
           "bullets": [
-            "_Generated 2026-10-22T06:02:33.310828-04:00_",
+            "_Generated 2026-10-22T10:53:17.156652-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -881,7 +881,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=115",
-          "size": 986426,
+          "size": 986427,
           "said": "1d BUY NET \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, INDI \u00b7 -0.7224999999999999",
           "bullets": []
         },
@@ -2244,6 +2244,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T10:53:43.865846-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-22_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 986427,
+          "preview": "1d BUY NET \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/2026-10-22_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-22_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2503,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-22_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7111,
+          "preview": "2026-10-22 BUY NET \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7111,
+          "preview": "2026-10-22 BUY NET \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, INDI, TE, SKYX"
+        },
+        {
+          "path": "01_daily/2026-10-22_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 30961,
+          "preview": "# Stock book \u2014 2026-10-22\n_Generated 2026-10-22T10:53:17.156652-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY NET \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, INDI, TE, SKYX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-22 BUY NET \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, INDI, TE, SKYX \u00b7 2026-10-22 BUY NET \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, INDI, TE, SKYX \u00b7 # Stock book \u2014 2026-10-22\n_Generated 2026-10-22T10:53:17.156652-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -2281,6 +2334,38 @@
       "path": "data/day_board/2026-10-22.json",
       "at": "2026-10-22T10:53:07-04:00",
       "commit_msg": "auto: land peer_rs [2026-10-22]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39798019622",
+      "manifest": "research/input_freeze/2026-10-22/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-22_stock_book.md",
+      "at": "2026-10-22T10:53:45-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-22]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39798019622",
+      "manifest": "research/input_freeze/2026-10-22/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-22.json",
+      "at": "2026-10-22T10:53:45-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-22]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39798019622",
+      "manifest": "research/input_freeze/2026-10-22/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-22_input_health.json",
+      "at": "2026-10-22T10:53:45-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-22]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "39798019622",
+      "manifest": "research/input_freeze/2026-10-22/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-22_stock_book.json",
+      "at": "2026-10-22T10:53:45-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-22]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "39798019622",
       "manifest": "research/input_freeze/2026-10-22/manifest.json"
