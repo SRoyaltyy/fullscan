@@ -1,8 +1,8 @@
 {
   "date": "2026-10-22",
-  "generated_at": "2026-10-22T05:44:23.339694-04:00",
+  "generated_at": "2026-10-22T06:02:36.699575-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
     "ok": 6,
     "partial": 2,
@@ -11,62 +11,72 @@
   },
   "buy_1d": [
     {
-      "ticker": "TMUS",
-      "score": 0.4147003129681371
-    },
-    {
       "ticker": "NET",
-      "score": -0.12048232562857564
-    },
-    {
-      "ticker": "SAIL",
-      "score": 0.005518428155813909
-    },
-    {
-      "ticker": "NEOG",
-      "score": 0.40454752692468116
-    },
-    {
-      "ticker": "CHRD",
-      "score": 0.6337877400642327
+      "score": -0.1699682854974174
     }
   ],
   "sell_1d": [
     {
       "ticker": "NEOV",
-      "score": -0.42926215911508725
+      "score": -0.39088581493332275
     },
     {
       "ticker": "OKLO",
-      "score": -0.17998544359327684
+      "score": -0.1805380235977112
     },
     {
       "ticker": "FCEL",
-      "score": -0.24270654720067958
-    },
-    {
-      "ticker": "NNDM",
-      "score": -0.24206537242900417
+      "score": -0.26774139524133034
     },
     {
       "ticker": "EOSE",
-      "score": -0.3952818313166689
-    },
-    {
-      "ticker": "POWL",
-      "score": -0.05619368589076318
-    },
-    {
-      "ticker": "INDI",
-      "score": -0.3273444420553599
+      "score": -0.4088001189875517
     },
     {
       "ticker": "NRGV",
-      "score": -0.3234481289752768
+      "score": -0.3225881765107435
+    },
+    {
+      "ticker": "INDI",
+      "score": -0.34849062850105644
+    },
+    {
+      "ticker": "TE",
+      "score": -0.38554218120549505
+    },
+    {
+      "ticker": "SKYX",
+      "score": -0.4225425990740169
+    },
+    {
+      "ticker": "NNDM",
+      "score": -0.1691243363315767
+    },
+    {
+      "ticker": "LUNR",
+      "score": -0.36599920169389416
     }
   ],
-  "flatten": {},
-  "general": {},
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $20,135.31 \u00b7 morning S missing",
+    "bullets": [
+      "0 priced buys",
+      "cash $20,135.31",
+      "morning S missing"
+    ]
+  },
+  "general": {
+    "said": "DOWN  -14.314",
+    "bullets": [
+      "bad: 7 Hormuz tankers hit overnight",
+      "bad: Brent >$112 / WTI ~$100",
+      "bad: AI earnings disappoint (Lam \u22128.5%, IBM \u22125.4%)",
+      "good: Meta Q3 revenue +26% beat",
+      "good: DXY soft"
+    ],
+    "score": "-14.314",
+    "direction": "down"
+  },
   "sectors": {},
   "lands": [
     {
@@ -382,6 +392,622 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 KMI, CRSR, ISRG, AUPH, ELV \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ISRG, A, WAB, HAS, WAT"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T05:46:48.833428-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-22_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9576,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-22_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5197,
+          "preview": "# Weather report \u2014 2026-10-22\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-22\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T05:46:57.412378-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-22_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2278861,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, LLY, WAY, CORT, ARGX"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, LLY, WAY, CORT, ARGX"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T05:47:03.727633-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-22_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T05:48:38.587994-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-22_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1160484,
+          "preview": "1d BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "data/stock_book/2026-10-22_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-22_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2557,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-22_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 10097,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 10097,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "01_daily/2026-10-22_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 48912,
+          "preview": "# Stock book \u2014 2026-10-22\n_Generated 2026-10-22T05:44:19.819755-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 # Stock book \u2014 2026-10-22\n_Generated 2026-10-22T05:44:19.819755-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T05:48:46.898816-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 12720,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1098,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-22.json",
+          "ok": true,
+          "reason": "",
+          "size": 60768,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-22_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 21443,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 818603,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-22_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 818603,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-10-22.json",
+          "ok": true,
+          "reason": "",
+          "size": 191746,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1153509,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 818603,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 21443,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 818603,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 818603,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1153509,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1548,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1548,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok"
+    },
+    {
+      "key": "paper",
+      "title": "Paper dashboard",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T05:49:28.300818-04:00",
+      "files": [
+        {
+          "path": "03_scoreboard/PAPER_TRADING.md",
+          "ok": true,
+          "reason": "",
+          "size": 1837,
+          "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 | "
+        },
+        {
+          "path": "dashboard/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 10510817,
+          "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.merge-hero{display:block;margin:0 0 14px;padding:14px 16px;border-radius:12px;\nbackground:linear-gradient(180deg,#1a2744,#171e2e);border:1px solid #3b4d78;\ncolor:var(--fg);text-decoration:none}\n."
+        }
+      ],
+      "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T05:51:34.383836-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-22_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1160484,
+          "preview": "1d BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "data/stock_book/2026-10-22_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-22_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2557,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-22_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 10097,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 10097,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "01_daily/2026-10-22_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 48912,
+          "preview": "# Stock book \u2014 2026-10-22\n_Generated 2026-10-22T05:47:15.988768-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 # Stock book \u2014 2026-10-22\n_Generated 2026-10-22T05:47:15.988768-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T05:51:42.488568-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 20708,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1098,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-22.json",
+          "ok": true,
+          "reason": "",
+          "size": 72579,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-22_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 25266,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 818603,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-22_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 818603,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-10-22.json",
+          "ok": true,
+          "reason": "",
+          "size": 191746,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1153509,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 818603,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 25266,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 818603,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 818603,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1153509,
+          "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1548,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1548,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-22 BUY TMUS, NET, SAIL, NEOG, CHRD \u00b7 SELL NEOV, OKLO, FCEL, NNDM, EOSE, POWL, INDI, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok"
+    },
+    {
+      "key": "paper",
+      "title": "Paper dashboard",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T05:52:23.835734-04:00",
+      "files": [
+        {
+          "path": "03_scoreboard/PAPER_TRADING.md",
+          "ok": true,
+          "reason": "",
+          "size": 1837,
+          "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 | "
+        },
+        {
+          "path": "dashboard/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 10510817,
+          "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.merge-hero{display:block;margin:0 0 14px;padding:14px 16px;border-radius:12px;\nbackground:linear-gradient(180deg,#1a2744,#171e2e);border:1px solid #3b4d78;\ncolor:var(--fg);text-decoration:none}\n."
+        }
+      ],
+      "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T05:52:49.969942-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-10-22_flatten_card.md",
+          "ok": true,
+          "reason": "",
+          "size": 3555,
+          "preview": "# flatten_robust card \u2014 2026-10-22\n_Generated 2026-10-22T09:52:48 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$20,135.31** (after 09:30 $20,135.31 \u00b7 after 16:00 $108,671.69)\n- Prior close **$108,704.09** \u00b7 09:30 **$108,704.09** \u00b7 overnight **$+0.00** \u00b7 session **$-32.40** \u00b7 16:00 **$108,671.69**\n- Overnight lots **7** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,671.69**"
+        },
+        {
+          "path": "data/sleeve_merge/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 5994,
+          "preview": "2026-10-21 BUY \u2014 \u00b7 SELL \u2014"
+        },
+        {
+          "path": "data/sleeve_merge/today_live.json",
+          "ok": true,
+          "reason": "",
+          "size": 13552,
+          "preview": "keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
+        },
+        {
+          "path": "data/sleeve_merge/daily_marks.json",
+          "ok": true,
+          "reason": "",
+          "size": 161757,
+          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
+        },
+        {
+          "path": "data/sleeve_merge/equity_curve.csv",
+          "ok": true,
+          "reason": "",
+          "size": 4033,
+          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
+        },
+        {
+          "path": "dashboard/sleeve-merge/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 55133,
+          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
+        }
+      ],
+      "preview": "# flatten_robust card \u2014 2026-10-22\n_Generated 2026-10-22T09:52:48 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$20,135.31** (after 09:30 $20,135.31 \u00b7 after 16:00 $108,671.69)\n- Prior close **$108,704.09** \u00b7 09:30 **$108,704.09** \u00b7 overnight **$+0.00** \u00b7 session **$-32.40** \u00b7 16:00 **$108,671.69**\n- Overnight lots **7** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,671.69** \u00b7 2026-10-21 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": "
+    },
+    {
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T05:55:52.246436-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-10-22_flatten_card.md",
+          "ok": true,
+          "reason": "",
+          "size": 3555,
+          "preview": "# flatten_robust card \u2014 2026-10-22\n_Generated 2026-10-22T09:55:50 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$20,135.31** (after 09:30 $20,135.31 \u00b7 after 16:00 $108,671.69)\n- Prior close **$108,704.09** \u00b7 09:30 **$108,704.09** \u00b7 overnight **$+0.00** \u00b7 session **$-32.40** \u00b7 16:00 **$108,671.69**\n- Overnight lots **7** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,671.69**"
+        },
+        {
+          "path": "data/sleeve_merge/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 5994,
+          "preview": "2026-10-21 BUY \u2014 \u00b7 SELL \u2014"
+        },
+        {
+          "path": "data/sleeve_merge/today_live.json",
+          "ok": true,
+          "reason": "",
+          "size": 13552,
+          "preview": "keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
+        },
+        {
+          "path": "data/sleeve_merge/daily_marks.json",
+          "ok": true,
+          "reason": "",
+          "size": 161757,
+          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
+        },
+        {
+          "path": "data/sleeve_merge/equity_curve.csv",
+          "ok": true,
+          "reason": "",
+          "size": 4033,
+          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
+        },
+        {
+          "path": "dashboard/sleeve-merge/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 55133,
+          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
+        }
+      ],
+      "preview": "# flatten_robust card \u2014 2026-10-22\n_Generated 2026-10-22T09:55:50 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$20,135.31** (after 09:30 $20,135.31 \u00b7 after 16:00 $108,671.69)\n- Prior close **$108,704.09** \u00b7 09:30 **$108,704.09** \u00b7 overnight **$+0.00** \u00b7 session **$-32.40** \u00b7 16:00 **$108,671.69**\n- Overnight lots **7** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,671.69** \u00b7 2026-10-21 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": "
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T06:02:04.766806-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-22_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10521,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-22_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5978,
+          "preview": "# Weather report \u2014 2026-10-22\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-22\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T06:02:13.047622-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-22_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2249867,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FUTU, GLBE, BPOP, EBC, SLDE"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FUTU, GLBE, BPOP, EBC, SLDE"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T06:02:21.041397-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-22_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "source": "publish_live_boards"
