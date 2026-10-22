@@ -85,5 +85,5 @@ Updated: 2026-10-21. Calls are graded at T+h trading days using the scoreboard's
 | 2026-08-28 | sector:Consumer Cyclical | 1m | flat/mild | -4.14% (down/mild) | ❌ | ✅ |
 | 2026-08-28 | sector:Basic Materials | 1m | down/mild | -6.51% (down/notable) | ✅ | ❌ |
 
-*251 calls still maturing (T+h close not recorded yet).*
+*255 calls still maturing (T+h close not recorded yet).*
 
