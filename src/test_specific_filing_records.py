@@ -19,7 +19,8 @@ class SpecificDisclosureControls(unittest.TestCase):
     def test_nested_identifiers_and_parenthetical_aliases_preserve_one_law_identity(self):
         rows=self.parse('We are subject to Regulation (EU) 2016/679 (also known as the General Data Protection Regulation or “GDPR”) and the California Privacy Rights Act (“CPRA”).')
         laws=[r for r in rows if r['category']=='law']
-        self.assertEqual(len(laws),2)
+        self.assertEqual({r['entity'] for r in laws},{'Regulation (EU) 2016/679','California Privacy Rights Act'})
+        self.assertEqual(len({(r['evidence']['anchor']['start'],r['evidence']['anchor']['end']) for r in laws}),len(laws))
         gdpr=next(r for r in laws if r['entity'].startswith('Regulation'))
         self.assertEqual(gdpr['aliases'],['Regulation (EU) 2016/679','General Data Protection Regulation','GDPR'])
         self.assertTrue(gdpr['direct_obligation_asserted'])
@@ -82,7 +83,7 @@ class SpecificDisclosureControls(unittest.TestCase):
     def test_plural_instrument_retains_explicitly_attached_administrator(self):
         text='We are subject to U.S. laws and regulations, including the Export Administration Regulations (EAR) administered by the Bureau of Industry and Security (BIS) of the U.S. Department of Commerce.'
         laws=[r for r in self.parse(text) if r['category']=='law']
-        self.assertEqual(len(laws),1)
+        self.assertEqual({r['entity'] for r in laws},{'Export Administration Regulations'})
         self.assertEqual(laws[0]['entity'],'Export Administration Regulations')
         self.assertEqual(laws[0]['aliases'],['Export Administration Regulations','EAR'])
         self.assertEqual(laws[0]['fields']['administering_authorities'],['Bureau of Industry and Security'])
@@ -106,7 +107,8 @@ class SpecificDisclosureControls(unittest.TestCase):
     def test_an_acronym_before_another_law_does_not_become_its_title_or_alias(self):
         rows=self.parse('We may be subject to GDPR, the California Consumer Privacy Act ("CCPA"), and other privacy laws.')
         laws=[r for r in rows if r['category']=='law']
-        self.assertEqual([r['entity'] for r in laws],['California Consumer Privacy Act'])
+        self.assertEqual({r['entity'] for r in laws},{'California Consumer Privacy Act'})
+        self.assertTrue(all('GDPR' not in r['aliases'] for r in laws))
         self.assertEqual(laws[0]['aliases'],['California Consumer Privacy Act','CCPA'])
         self.assertNotIn('GDPR',laws[0]['aliases'])
         self.assertEqual(laws[0]['evidence']['anchor']['text'],'California Consumer Privacy Act')
@@ -138,6 +140,73 @@ class SpecificDisclosureControls(unittest.TestCase):
         g=graph('We comply with the Alpha Privacy Act.')
         d=details(g);d['records'][0]['evidence']['anchor']['text']='invented'
         with self.assertRaisesRegex(ValueError,'evidence'):validate_details(g,d)
+
+    def test_unseen_names_follow_the_same_statutory_structure(self):
+        for title in ('Zorvan Data Assurance Act','Talven Water Conservation Act',
+                      'Internal Revenue Code','Uniform Commercial Code'):
+            with self.subTest(title=title):
+                self.assertIn(title,[r['entity'] for r in self.parse('We comply with the '+title+'.') if r['category']=='law'])
+        for title in ('Device Identification Code','Record Locator Code','Regional Shipping Code'):
+            self.assertFalse(any(r['category']=='law' for r in self.parse('Our form contains '+title+'.')))
+
+    def test_numbered_citations_and_unseen_jurisdictions_preserve_identity(self):
+        rows=self.parse('We are subject to 47 U.S.C. 310 and the Communications Act of 1934.')
+        self.assertIn('47 U.S.C. 310',[r['entity'] for r in rows if r['category']=='law'])
+        for country in ('South Africa','Singapore','Norway','South Korea','New Zealand'):
+            rows=self.parse('We comply with the Data Assurance Act in '+country+'.')
+            self.assertEqual(next(r for r in rows if r['category']=='law')['fields']['jurisdictions'],[country])
+
+    def test_document_definitions_resolve_unseen_aliases_with_separate_evidence(self):
+        g=graph('The Zorvan Water Protection Act (the "ZWPA") governs permits.\nWe comply with ZWPA.')
+        d=details(g);validate_details(g,d)
+        reference=next(r for r in d['records'] if r.get('definition_evidence') and r['direct_obligation_asserted'])
+        self.assertEqual(reference['entity'],'Zorvan Water Protection Act')
+        self.assertEqual(reference['evidence']['anchor']['text'],'ZWPA')
+        self.assertIn('ZWPA',reference['aliases'])
+        self.assertEqual(reference['definition_evidence']['name']['text'],'Zorvan Water Protection Act')
+        self.assertTrue(reference['direct_obligation_asserted'])
+
+    def test_aliases_never_cross_filings_or_resolve_conflicting_definitions(self):
+        text='The Zorvan Privacy Act ("ZPA") and the Zorvan Payments Act ("ZPA") regulate trade. We comply with ZPA.'
+        self.assertFalse(any(r.get('definition_evidence') for r in self.parse(text)))
+        g=graph('The Zorvan Privacy Act ("ZPA") regulates trade.')
+        g['sources'].append({'id':'other','kind':'risk'})
+        text='We comply with ZPA.'
+        g['paragraphs'].append({'id':'other','source_id':'other','start':0,'end':len(text),'text':text,'kind':'prose'})
+        self.assertFalse(any(r.get('definition_evidence') for r in details(g)['records'] if r['source_id']=='other'))
+
+    def test_document_alias_can_cross_sections_but_not_document_or_date(self):
+        for changed in (None,'document','filing_date'):
+            g=graph('The Zorvan Water Protection Act ("ZWPA") governs permits.')
+            g['sources'][0].update(accession='filing-1',document='annual.htm',filing_date='2026-01-01')
+            other={**g['sources'][0],'id':'other'}
+            if changed:other[changed]='different'
+            g['sources'].append(other)
+            text='We comply with ZWPA.'
+            g['paragraphs'].append({'id':'other','source_id':'other','start':0,'end':len(text),'text':text,'kind':'prose'})
+            d=details(g);validate_details(g,d)
+            references=[r for r in d['records'] if r['source_id']=='other' and r.get('definition_evidence')]
+            self.assertEqual(bool(references),changed is None)
+
+    def test_numbered_rules_and_professional_permits_preserve_exact_holder(self):
+        rows=self.parse('We comply with Rules 13a-15(e) and 15d-15(f).')
+        self.assertEqual({r['entity'] for r in rows if r['category']=='law'},{'Rules 13a-15(e)','Rule 15d-15(f)'})
+        rows=self.parse('The report was prepared by our independent auditor under Professional Permit No. AB-42.')
+        permit=next(r for r in rows if r['category']=='named_permit')
+        self.assertEqual(permit['applicability'],'third_party_context')
+        self.assertFalse(permit['direct_obligation_asserted'])
+
+    def test_auditor_voice_cannot_assert_issuer_compliance(self):
+        law=next(r for r in self.parse('We are a public accounting firm and we comply with the Zorvan Audit Act with respect to the Company.') if r['category']=='law')
+        self.assertEqual(law['applicability'],'third_party_context')
+        self.assertFalse(law['direct_obligation_asserted'])
+
+    def test_parenthesized_country_is_not_an_agency_alias(self):
+        rows=self.parse('The Zorvan Audit Authority (United States) (ZAA) issues rules. We are regulated by ZAA. Our customers operate in United States.')
+        refs=[r for r in rows if r.get('definition_evidence')]
+        self.assertEqual(len(refs),1)
+        self.assertEqual(refs[0]['entity'],'Zorvan Audit Authority')
+        self.assertEqual(refs[0]['evidence']['anchor']['text'],'ZAA')
 
 
 if __name__=='__main__':unittest.main()

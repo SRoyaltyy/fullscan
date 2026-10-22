@@ -20,6 +20,12 @@ def read_index(directory):
     root = Path(directory).resolve()
     raw = (root/'index.json').read_bytes()
     index = json.loads(raw)
+    from .completed_profile_store import SCHEMA, validate_manifest
+    if index.get('schema') == SCHEMA:
+        validate_manifest(index)
+        # Original grammar provenance stays unchanged; details have their own
+        # current source hash. No compatibility gate is silently weakened.
+        return root, {**index, 'totals':index['archive_totals']}, hashlib.sha256(raw).hexdigest()
     from .filing_relationships import VERSION, compiler_fingerprint
     if not index.get('complete') or index.get('schema') != VERSION:
         raise ValueError('incomplete or unsupported deep filing profile set')
@@ -36,6 +42,9 @@ def read_profile(root, entry):
     if hashlib.sha256(raw).hexdigest() != entry['sha256']:
         raise ValueError('deep filing profile checksum mismatch')
     graph = json.loads(gzip.decompress(raw))
+    from .completed_profile_store import SCHEMA, validate_profile
+    if graph.get('schema') == SCHEMA:
+        return validate_profile(graph)
     from .filing_relationships import validate_paragraph_coverage
     validate_paragraph_coverage(graph)
     return graph

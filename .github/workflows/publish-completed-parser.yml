@@ -8,11 +8,12 @@ on:
       - 'scripts/test_export_completed_parser.py'
       - 'src/specific_filing_records.py'
       - 'src/test_specific_filing_records.py'
+      - 'src/places.py'
+      - 'src/data/territories.json'
+      - 'eval/market-disclosure-benchmark.json'
+      - 'scripts/evaluate_market_disclosures.py'
       - 'dashboard/scanner-backtest/completed/index.html'
   workflow_dispatch:
-  workflow_run:
-    workflows: [Refresh scanner test page]
-    types: [completed]
 permissions:
   contents: read
   actions: read
@@ -32,6 +33,10 @@ jobs:
             scripts/resilient_filing_texts.py
             src/specific_filing_records.py
             src/test_specific_filing_records.py
+            src/places.py
+            src/data/territories.json
+            scripts/evaluate_market_disclosures.py
+            eval/market-disclosure-benchmark.json
             eval/nflx-specific-disclosure-cases.json
             dashboard/scanner-backtest/completed/index.html
           sparse-checkout-cone-mode: false
@@ -40,11 +45,23 @@ jobs:
           python-version: '3.12'
       - name: Check exact quotation, paragraph and Unicode projection
         run: python -m unittest scripts.test_export_completed_parser src.test_specific_filing_records -v
+      - name: Measure cross-issuer extraction against the 90 percent acceptance target
+        run: python -m scripts.evaluate_market_disclosures --out completed-view/accuracy.json
       - name: Package existing decisions without SEC downloads or spaCy
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           python -u scripts/export_completed_parser.py --saved-zip --out completed-view
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          directory=Path('completed-view')
+          manifest=json.loads((directory/'manifest.json').read_text())
+          report=json.loads((directory/'accuracy.json').read_text())
+          assert report['extractor_source_sha256']==manifest['detail_source_sha256']
+          manifest['accuracy_evaluation']=report
+          (directory/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,separators=(',',':'))+'\n')
+          PY
           cp dashboard/scanner-backtest/completed/index.html completed-view/index.html
           cp scripts/export_completed_parser.py completed-view/export_completed_parser.py
       - uses: actions/upload-artifact@v4
@@ -92,7 +109,7 @@ jobs:
               manifest=json.loads((incoming/'manifest.json').read_text())
               assert manifest['complete'] and manifest['published']['tickers']==2032 and manifest['published']['relationships']==754258
               outside=sum(p.stat().st_size for p in Path('.').rglob('*') if p.is_file() and '.git' not in p.parts and not any(p.is_relative_to(t) for t in targets))
-              names=('index.html','manifest.json')
+              names=('index.html','manifest.json','accuracy.json')
               size=sum((incoming/name).stat().st_size for name in names)*len(targets)
               assert outside+size<1_073_741_824, 'Complete saved review exceeds Pages budget; retain previous site'
               for target in targets:

@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 ARTIFACTS = ('articles.json', 'results.jsonl', 'profiles.json', 'ticker-index.json', 'meta.json')
 INPUT_PATHS = ('src/correlation.py', 'src/evidence_matcher.py', 'src/stock_evidence.py',
     'src/stock_keywords.py','src/stock_keyword_store.py',
-    'src/entity_resolution.py','src/term_inventory.py','scripts/annotate_article_entities.py',
+    'src/entity_resolution.py','src/term_inventory.py','src/completed_profile_store.py','scripts/annotate_article_entities.py',
     'src/filing_relationships.py', 'src/specific_filing_records.py', 'src/deep_profile_store.py', 'requirements-filing-parser.txt',
     'scripts/build_filing_profiles.py', 'data/company_filings_full_release.json',
     'src/filing_evidence.py', 'src/filing_business.py', 'src/filing_parts.py',
@@ -173,7 +173,7 @@ def validate(directory, source_sha):
     if not profiles or not all(p.get('used_for_scoring') for p in profiles.values()):
         raise ValueError('profiles are not the actual scoring board')
     coverage = snapshot.get('filing_coverage') or {}
-    if coverage.get('scope') not in ('dated_identity_overlay', 'deep_filing_relationships') or not coverage.get('complete') or coverage.get('errors'):
+    if coverage.get('scope') not in ('dated_identity_overlay', 'deep_filing_relationships','archived_relationships_with_current_disclosures') or not coverage.get('complete') or coverage.get('errors'):
         raise ValueError('dated filing identity source was not verified')
     keyword_coverage = {}
     for ticker, profile in profiles.items():
@@ -209,7 +209,7 @@ def validate(directory, source_sha):
                 raise ValueError('unsafe keyword index bucket')
             if hashlib.sha256((directory/entry['path']).read_bytes()).hexdigest() != entry['sha256']:
                 raise ValueError('keyword index bucket checksum mismatch')
-    if coverage.get('scope') == 'deep_filing_relationships':
+    if coverage.get('scope') in ('deep_filing_relationships','archived_relationships_with_current_disclosures'):
         from src.deep_profile_store import read_index, read_profile
         root, index, fingerprint = read_index(directory/'filing-profiles')
         if fingerprint != coverage['profile_index_sha256']:

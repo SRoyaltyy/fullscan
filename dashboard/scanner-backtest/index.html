@@ -44,6 +44,7 @@ textarea{width:100%;min-height:110px;background:#0f172a;color:var(--text);border
 <body>
 <main>
 <h1>Scanner backtest</h1>
+<p id="completed-stock-results"><a href="completed/">Browse the archived stock universe: specific disclosures and exact source paragraphs</a></p>
 <p class="muted" id="status">Loading…</p>
 <p class="muted" id="snapshot">Checking scoring snapshot…</p>
 <p class="muted">Experimental classifier, not a validated accuracy result. The static page looks up an offline run; only live mode reruns Python. Filing identities cover only the issuers listed for that run.</p>
@@ -127,7 +128,8 @@ function renderSnapshot(snapshot) {
   }
   const coverage = snapshot.filing_coverage || {};
   const tickers = coverage.covered_tickers || [];
-  const deep = coverage.scope === "deep_filing_relationships";
+  const review = coverage.scope === "archived_relationships_with_current_disclosures";
+  const deep = coverage.scope === "deep_filing_relationships" || review;
   text("snapshot", `${snapshot.compiler_version} · input=${snapshot.input_mode} · snapshot ${snapshot.snapshot_id.slice(0, 16)}` +
     (snapshot.source_revision ? ` · parser commit ${snapshot.source_revision.slice(0, 12)}` : "") +
     ` · ${deep ? "SEC relationships" : "filing identities"}: ${tickers.length}/${coverage.catalog_tickers || "?"} tickers` +
@@ -135,13 +137,14 @@ function renderSnapshot(snapshot) {
     (coverage.as_of ? ` · cutoff ${coverage.as_of}` : "") +
     (tickers.length && tickers.length <= 10 ? ` · ${tickers.join(", ")}` : tickers.length ? "" : " · description-only") +
     (deep ? " · missing relationships remain unknown" : " · full filing-business coverage: not established") +
-    (snapshot.profile_publication?.dataset_scope === "development_sample" ? " · DEVELOPMENT SAMPLE ONLY — whole-archive recovery is still running" : ""));
+    (snapshot.profile_publication?.dataset_scope === "development_sample" ? " · DEVELOPMENT SAMPLE ONLY — whole-archive recovery is still running" : "") +
+    (review ? ` · ${coverage.detail_extractor} across the archived universe · original grammar retained; exhaustive new term inventory unavailable` : ""));
   renderStockPool();
 }
 
 function coveredStockPool() {
   const coverage=staticMeta?.snapshot?.filing_coverage;
-  return coverage?.scope==="deep_filing_relationships" ? coverage.covered_tickers || [] : [];
+  return ["deep_filing_relationships","archived_relationships_with_current_disclosures"].includes(coverage?.scope) ? coverage.covered_tickers || [] : [];
 }
 
 function renderStockPool() {
@@ -842,8 +845,8 @@ function highlightedParagraph(paragraph, spans) {
 }
 
 function renderTermReview(container, graph) {
-  if (!graph.term_inventory) return null;
-  const terms=graph.term_inventory.terms || [];
+  if (!graph.term_inventory && !graph.specific_records) return null;
+  const terms=graph.term_inventory?.terms || [];
   const paragraphs=new Map((graph.paragraphs || []).map(p=>[p.id,p]));
   const sources=new Map(graph.sources.map(s=>[s.id,s]));
   const facts=new Map(graph.facts.map(f=>[f.id,f]));
@@ -852,6 +855,7 @@ function renderTermReview(container, graph) {
   heading.textContent="Review keywords and their exact source paragraphs";
   const note=document.createElement("p");
   note.textContent="Every entity and terminology occurrence remains separate. Labels are parser observations; relationship rules can be wrong. Unresolved relationships and concept senses are shown explicitly. Source offsets refer to archived text, whose paragraph boundaries may differ from SEC page layout.";
+  if (!graph.term_inventory) note.textContent="Current disclosure records and preserved relationship witnesses retain exact source paragraphs. An exhaustive new spaCy occurrence inventory is unavailable for this archive projection. Source offsets refer to archived text.";
   const query=document.createElement("input"); query.setAttribute("aria-label","Search all stock term occurrences"); query.placeholder="Search keyword, label or company relationship";
   const selection=document.createElement("p"), list=document.createElement("div");
   let chosen=null;
@@ -913,13 +917,16 @@ function renderTermReview(container, graph) {
 }
 
 function renderParagraphs(container, graph) {
-  const paragraphs = graph.paragraphs || [];
+  const archivedReview=graph.schema==="completed-parser-review-1";
+  const paragraphs = (graph.paragraphs || []).map(p=>archivedReview ? {...p,importance:{priority:"review",reasons:["Retained source witness; original paragraph classification is in the full archive"]},extraction_status:"retained_source_witness",review_required:true,classification_evidence:[],signals:[],relationship_ids:[]} : p);
   const terms = new Map((graph.term_inventory?.terms || []).map(t=>[t.id,t]));
   const title = document.createElement("h3");
   title.textContent = `Every filing paragraph and attachment block (${paragraphs.length.toLocaleString()})`;
+  if(archivedReview) title.textContent=`Retained complete source paragraphs (${paragraphs.length.toLocaleString()})`;
   const note = document.createElement("p");
   const outcomes = Object.entries(graph.coverage.paragraph_outcomes || {}).map(([k,v]) => `${k.replaceAll("_", " ")}: ${v.toLocaleString()}`).join(" · ");
   note.textContent = `${outcomes}. Review priority is a rule-based aid, not a materiality verdict. Every prose passage is grammar analyzed; unknown topics remain flagged. Paragraph boundaries follow archived text lines, which may differ from the original page layout.`;
+  if(archivedReview) note.textContent="All archived blocks were scanned by the current disclosure pass. This projection retains paragraphs supporting disclosures or preserved relationships. Original full text and classifications remain in the source archive.";
   const query = document.createElement("input");
   query.value = "";
   query.placeholder = "Search every paragraph, filing or topic";
@@ -1017,7 +1024,7 @@ function renderFilingGraph(container, graph) {
   const title = document.createElement("h3");
   title.textContent = `All filing relationships (${graph.facts.length.toLocaleString()})`;
   const note = document.createElement("p");
-  note.textContent = `${graph.archive_coverage.filings} filings; ${graph.archive_coverage.documents.toLocaleString()} documents; ${graph.coverage.characters_read.toLocaleString()} characters read. Historical, negative and possible claims remain visible. Missing relationships are unknown.`;
+  note.textContent = graph.archive_coverage ? `${graph.archive_coverage.filings} filings; ${graph.archive_coverage.documents.toLocaleString()} documents; ${graph.coverage.characters_read.toLocaleString()} characters read. Historical, negative and possible claims remain visible. Missing relationships are unknown.` : `Preserved grammar decisions with current ${graph.specific_records?.version || "disclosure"} records. Historical, negative and possible claims remain visible. Missing relationships are unknown.`;
   const filter = document.createElement("input");
   filter.placeholder = "Search relationships, companies or quoted text";
   filter.setAttribute("aria-label", "Search all filing relationships");

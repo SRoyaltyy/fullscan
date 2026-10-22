@@ -12,6 +12,8 @@ def attach_keyword_profiles(board, directory, *, as_of, catalog):
     if index['as_of'] > as_of:
         raise ValueError('profile set is newer than the requested cutoff; rebuild it for this date')
     loaded, missing = [], []
+    from .completed_profile_store import SCHEMA as REVIEW_SCHEMA
+    archived_review = index['schema'] == REVIEW_SCHEMA
     for ticker, entry in sorted(index['profiles'].items()):
         if ticker not in board.profiles:
             missing.append(ticker)
@@ -27,6 +29,11 @@ def attach_keyword_profiles(board, directory, *, as_of, catalog):
                                 'section': graph['schema'], 'filing_date': graph['as_of']})
         profile.deep_profile = {'path': 'filing-profiles/'+entry['path'], 'sha256': entry['sha256'],
                                 'coverage': graph['coverage'], 'as_of': graph['as_of']}
+        if archived_review:
+            profile.deep_profile.update(input_kind=REVIEW_SCHEMA,
+                grammar_compiler_sha256=graph['compiler_sha256'],
+                detail_extractor=graph['specific_records']['version'],
+                exhaustive_term_inventory_available=False)
         for claim, evidence, source in latest_claims(graph, as_of):
             kind = KINDS.get(claim['predicate'], 'filing_relationship')
             if kind == 'regulatory_exposure' and claim['object_type'] not in ('agency', 'law'):
@@ -34,6 +41,7 @@ def attach_keyword_profiles(board, directory, *, as_of, catalog):
             # Preserve uncertain/latest negative claims on the board for
             # inspection without indexing them as current identities/exposures.
             issues = quality_issues(claim['predicate'], claim['object'], evidence['quote'])
+            if archived_review:issues.append('preserved_relationship_requires_current_method_validation')
             active = claim['status'] == 'asserted' and not issues
             fact = Fact(kind if active else 'inactive_'+kind, claim['object'], evidence['quote'],
                         source='SEC deep relationship', filing_date=source['filing_date'],
@@ -57,10 +65,14 @@ def attach_keyword_profiles(board, directory, *, as_of, catalog):
             profile.facts.append(fact)
         loaded.append(ticker)
     rebuilt = index_profiles(board.profiles)
-    return rebuilt, {'scope': 'deep_filing_relationships', 'complete': True,
+    return rebuilt, {'scope': 'archived_relationships_with_current_disclosures' if archived_review else 'deep_filing_relationships', 'complete': True,
         'compiler_version': index['schema'], 'keyword_schema': SCHEMA,
         'source_coverage_complete': True, 'extraction_complete': False,
-        'all_paragraphs_classified': True, 'all_prose_dependency_analyzed': True,
+        'all_paragraphs_classified': not archived_review, 'all_prose_dependency_analyzed': not archived_review,
+        'current_disclosures_scan_all_archived_paragraphs': archived_review,
+        'grammar_compiler_sha256':index['compiler_sha256'],
+        'detail_extractor':index.get('detail_extractor'),
+        'detail_source_sha256':index.get('detail_source_sha256'),
         'full_business_coverage': False, 'errors': [], 'as_of': as_of,
         'covered_tickers': loaded, 'archive_tickers': len(index['profiles']),
         'catalog_tickers': len(board.profiles), 'archive_tickers_outside_catalog': missing,

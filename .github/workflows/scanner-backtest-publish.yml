@@ -15,6 +15,9 @@ on:
       - 'scripts/publish_filing_objects.py'
       - 'src/filing*.py'
       - 'src/deep_profile_store.py'
+      - 'src/completed_profile_store.py'
+      - 'scripts/materialize_completed_profiles.py'
+      - 'scripts/select_parser_profiles.py'
       - 'scripts/build_filing_profiles.py'
       - 'src/names.py'
       - 'src/aliases.py'
@@ -37,9 +40,14 @@ on:
       - 'data/news_intake/2026-10-17/documents.json'
       - '.github/workflows/scanner-backtest-publish.yml'
   workflow_run:
-    workflows: [Deep SEC filing profiles, Recover deep SEC filing profiles]
+    workflows: [Deep SEC filing profiles, Recover deep SEC filing profiles, Publish existing completed stock parser]
     types: [completed]
   workflow_dispatch:
+    inputs:
+      allow_development_sample:
+        description: Explicitly publish a one-issuer development sample
+        type: boolean
+        default: false
 permissions:
   contents: read
   actions: read
@@ -57,6 +65,8 @@ jobs:
       artifact: ${{ steps.profiles.outputs.artifact }}
       scope: ${{ steps.profiles.outputs.scope }}
       profile_assets: ${{ steps.profiles.outputs.profile_assets }}
+      input_kind: ${{ steps.profiles.outputs.input_kind }}
+      manifest_url: ${{ steps.profiles.outputs.manifest_url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -72,7 +82,13 @@ jobs:
         run: |
           gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=deep-filing-profiles-complete&per_page=50" > artifacts.json
           gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=deep-filing-real-source-check&per_page=50" > samples.json
-          python -m scripts.select_parser_profiles --repository "$GITHUB_REPOSITORY" --full artifacts.json --samples samples.json
+          pages_sha=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/gh-pages" --jq '.object.sha')
+          if ! gh api "repos/$GITHUB_REPOSITORY/contents/dashboard/scanner-backtest/completed/manifest.json?ref=$pages_sha" --jq '.content' | base64 --decode > completed.json; then
+            printf '{}\n' > completed.json
+          fi
+          args=()
+          if [ '${{ inputs.allow_development_sample }}' = 'true' ]; then args+=(--allow-development-sample); fi
+          python -m scripts.select_parser_profiles --repository "$GITHUB_REPOSITORY" --full artifacts.json --samples samples.json --completed completed.json --manifest-url "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$pages_sha/dashboard/scanner-backtest/completed/manifest.json" "${args[@]}"
   build:
     needs: source
     if: needs.source.outputs.ready == 'true'
@@ -104,24 +120,31 @@ jobs:
           python -m pip install PyYAML==6.0.3
           python -m scripts.bootstrap_semantics
       - uses: actions/download-artifact@v4
+        if: needs.source.outputs.input_kind == 'grammar_archive'
         with:
           name: ${{ needs.source.outputs.artifact }}
           path: filing-profiles
           run-id: ${{ needs.source.outputs.run }}
           github-token: ${{ github.token }}
+      - name: Reuse the complete archived universe with the current disclosure methodology
+        if: needs.source.outputs.input_kind == 'completed_review'
+        run: >-
+          python -u -m scripts.materialize_completed_profiles
+          --manifest-url "${{ needs.source.outputs.manifest_url }}" --out filing-profiles
       - name: Require complete profiles from the current extraction source
         run: |
           python - <<'PY'
           import hashlib, json, os
           from pathlib import Path
           index = json.loads(Path('filing-profiles/index.json').read_text())
-          from src.filing_relationships import compiler_fingerprint
-          expected = compiler_fingerprint()
-          assert index['complete'] and index['compiler_sha256'] == expected, 'Current parser profiles are still compiling; refusing an older set'
+          from src.deep_profile_store import read_index
+          _, index, _ = read_index('filing-profiles')
           with open(os.environ['GITHUB_ENV'], 'a') as stream:
               stream.write('FILING_AS_OF='+index['as_of']+'\n')
+              stream.write('PROFILE_PUBLIC_BASE_URL='+index.get('asset_base_url','')+'\n')
           PY
       - name: Check optional durable archive storage without exposing credentials
+        if: needs.source.outputs.input_kind == 'grammar_archive'
         id: storage
         env:
           R2_ENDPOINT_URL: ${{ secrets.R2_ENDPOINT_URL || vars.R2_ENDPOINT_URL }}
@@ -147,6 +170,7 @@ jobs:
           scripts.test_scan_validation_batches scripts.test_export_backtest_static
           scripts.test_publish_scanner_snapshot
           scripts.test_select_parser_profiles
+          scripts.test_materialize_completed_profiles src.test_completed_profile_store
       - name: Parse the exact article headlines with the pinned grammar engine
         run: |
           python -m pip install --only-binary=:all: --index-url https://pypi.org/simple -r requirements-filing-parser.txt

@@ -62,7 +62,8 @@ class KeywordTests(unittest.TestCase):
     def test_specific_law_alias_is_dated_evidenced_and_never_an_automatic_pass(self):
         g=self.disclosure_graph();bundle=compile_keywords(g,as_of='2026-04-01')
         self.assertEqual(bundle['coverage']['retained_relationships'],0)
-        self.assertEqual(bundle['coverage']['specific_disclosure_records'],2)
+        self.assertEqual(bundle['coverage']['specific_disclosure_records'],len(g['specific_records']['records']))
+        self.assertEqual({r['entity'] for r in g['specific_records']['records']},{'Regulation (EU) 2016/679','Digital Markets Act'})
         index=KeywordIndex({'BLZE':profile(bundle)})
         result=index.compare('Backblaze discusses GDPR and the Digital Markets Act.',article_date='2026-02-01')
         gdpr=next(r for r in result['matches'] if r['keyword']=='Regulation (EU) 2016/679')

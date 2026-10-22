@@ -1,0 +1,3225 @@
+{
+  "schema": "market-disclosure-benchmark-1",
+  "threshold": 0.9,
+  "annotation": {
+    "author": "source-based model annotation before inspecting benchmark predictions",
+    "human_reviewed": false,
+    "audit_notes": [
+      "Removed nested substring double-counting independently of predictions.",
+      "Attachment labels reviewed against complete source paragraphs, including administrative questions and the complete MPWR anti-corruption statement.",
+      "The original unaudited benchmark and diagnostic output are preserved in eval/history."
+    ]
+  },
+  "selection": {
+    "issuer_seed": "market-disclosure-holdout-20261022-v2",
+    "sectors": 11,
+    "issuers_per_sector": 2,
+    "passages_per_issuer": 3,
+    "excludes_development_issuers": true,
+    "method_sha256_before_prediction": "d7cec7fdf4be4fd603889ffcf852bc5ee3cc2e252b66bf3a39f016c49a4fbafd",
+    "evaluation_kind": "cross-sector development diagnostic; a fresh independent holdout remains required"
+  },
+  "scope": "Named legal instruments (including numbered rules), authorities, and permit identifiers, with issuer attachment and direct-obligation status. The sampling frame is retained public review passages. This does not measure recall in unretained prose, complete operating-law coverage, product/supplier extraction, article disambiguation, or investment relevance.",
+  "asset_base_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/59fcab824cff3b0598426d3980823f1c45a7d33d/",
+  "profiles": {
+    "BMNR": {
+      "cik": "0001829311",
+      "facts": 257,
+      "name": "BitMine Immersion Technologies Inc",
+      "path": "profiles/0001829311.json.gz",
+      "sha256": "a558f3de86a57fbea577b4a55359733e8a1d4c37c42adfc0068c6c64e6d50bdf"
+    },
+    "BOOT": {
+      "cik": "0001610250",
+      "facts": 248,
+      "name": "Boot Barn Holdings Inc",
+      "path": "profiles/0001610250.json.gz",
+      "sha256": "e3338ba16d4ff4fc7d7c3b3d77e97b417eb704b6a6c9e5c87e011bb5cd54663f"
+    },
+    "CAL": {
+      "cik": "0000014707",
+      "facts": 262,
+      "name": "Caleres Inc",
+      "path": "profiles/0000014707.json.gz",
+      "sha256": "c7a0ca6ebeec221b19baa8f52cd1ac113c43b74602449fbe08db37cccb228026"
+    },
+    "CDE": {
+      "cik": "0000215466",
+      "facts": 280,
+      "name": "Coeur Mining Inc",
+      "path": "profiles/0000215466.json.gz",
+      "sha256": "15b228b4429f6b3a619474a104a80b6fd233c76af6009b341fe3a3256bf019f0"
+    },
+    "CMCSA": {
+      "cik": "0001166691",
+      "facts": 293,
+      "name": "Comcast Corp",
+      "path": "profiles/0001166691.json.gz",
+      "sha256": "5408842fcbc67ee373073ea0d2a7939136875ed9840b423f65f31fcab2988cb6"
+    },
+    "DLTR": {
+      "cik": "0000935703",
+      "facts": 225,
+      "name": "Dollar Tree Inc",
+      "path": "profiles/0000935703.json.gz",
+      "sha256": "80975b5b8f5f360741c9c10f5afaf6abbb428f6efb0e8ae96d98cbc4e0cde4cc"
+    },
+    "DNUT": {
+      "cik": "0001857154",
+      "facts": 250,
+      "name": "Krispy Kreme Inc",
+      "path": "profiles/0001857154.json.gz",
+      "sha256": "82b04d4ec550b81c18f3cca929ceacfd731e814d814d1eb4120b54e60967bc3b"
+    },
+    "ENIC": {
+      "cik": "0001659939",
+      "facts": 256,
+      "name": "Enel Chile SA ADR",
+      "path": "profiles/0001659939.json.gz",
+      "sha256": "32bf47b6667d70516ed3ee0fd9f04cf0a32e9cd4d9851ac8a593a00f872a978e"
+    },
+    "GPRK": {
+      "cik": "0001464591",
+      "facts": 338,
+      "name": "Geopark Limited",
+      "path": "profiles/0001464591.json.gz",
+      "sha256": "639704a42782ce5dbb2e8bd9f2876d3de243cd939947d80ef1d3753502c3811b"
+    },
+    "GRPN": {
+      "cik": "0001490281",
+      "facts": 326,
+      "name": "Groupon Inc",
+      "path": "profiles/0001490281.json.gz",
+      "sha256": "a6294dc5fdc48f8cdef7115824719835b1e83def20e36dd8303363c532af504a"
+    },
+    "HPP": {
+      "cik": "0001482512",
+      "facts": 222,
+      "name": "Hudson Pacific Properties Inc",
+      "path": "profiles/0001482512.json.gz",
+      "sha256": "f9bbecf9f38f79dba0aa0d03bc4dbb99c5043d3a42509fcd9eb810722e526ac2"
+    },
+    "LPX": {
+      "cik": "0000060519",
+      "facts": 244,
+      "name": "Louisiana-Pacific Corp",
+      "path": "profiles/0000060519.json.gz",
+      "sha256": "b2d615816a285a86b7bd521c360947af3426a5954427c035ea352d4c4ee52e0a"
+    },
+    "MNTS": {
+      "cik": "0001781162",
+      "facts": 405,
+      "name": "Momentus Inc",
+      "path": "profiles/0001781162.json.gz",
+      "sha256": "253c6041fcc1554941a898c9accf42c98deb292ca44d6118b5335561030c4059"
+    },
+    "MPWR": {
+      "cik": "0001280452",
+      "facts": 316,
+      "name": "Monolithic Power System Inc",
+      "path": "profiles/0001280452.json.gz",
+      "sha256": "b15fa603ea7567519548b6004496d98baadafe0d5c2ecbade477ebdbbb39837d"
+    },
+    "MUR": {
+      "cik": "0000717423",
+      "facts": 170,
+      "name": "Murphy Oil Corp",
+      "path": "profiles/0000717423.json.gz",
+      "sha256": "7258d3d35adfc9f2719123cbc11018d67e25060c766aa76a57a0c5cbb76369e2"
+    },
+    "MWH": {
+      "cik": "0002065636",
+      "facts": 526,
+      "name": "SOLV Energy Inc",
+      "path": "profiles/0002065636.json.gz",
+      "sha256": "36846e25fbd2907f2fef9482b51b96abebb95a67f2e8d56e6a6540902e129c6b"
+    },
+    "NVTS": {
+      "cik": "0001821769",
+      "facts": 338,
+      "name": "Navitas Semiconductor Corp",
+      "path": "profiles/0001821769.json.gz",
+      "sha256": "aba741e4cf501cd93a98384bae77fcf05bf0c2f36e886fb11e5f64eb9c8466ae"
+    },
+    "ORIC": {
+      "cik": "0001796280",
+      "facts": 652,
+      "name": "ORIC Pharmaceuticals Inc",
+      "path": "profiles/0001796280.json.gz",
+      "sha256": "8e65ec569f6b44cb941bc4a6a9b76f85248dbdddaf43c66a896ddc392375d727"
+    },
+    "PRME": {
+      "cik": "0001894562",
+      "facts": 680,
+      "name": "Prime Medicine Inc",
+      "path": "profiles/0001894562.json.gz",
+      "sha256": "2efd7e8b11d81f1307551693910856428f5d3eebf1fbe58af4b7ed8f44725845"
+    },
+    "PSA": {
+      "cik": "0001393311",
+      "facts": 324,
+      "name": "Public Storage",
+      "path": "profiles/0001393311.json.gz",
+      "sha256": "112b53f27f9dfc87138be522f1a9352b5aadc51153b61c2e07be63ec3cb201d0"
+    },
+    "SLI": {
+      "cik": "0001537137",
+      "facts": 234,
+      "name": "Standard Lithium Ltd",
+      "path": "profiles/0001537137.json.gz",
+      "sha256": "4ed39fb7ee9d9ef77afddc98cc0d7760d7d18a75d2c50a60baf55e9af368ed0c"
+    },
+    "SLQT": {
+      "cik": "0001794783",
+      "facts": 255,
+      "name": "SelectQuote Inc",
+      "path": "profiles/0001794783.json.gz",
+      "sha256": "c316d7a8cd122bfff3c5dfb3ecf8c61d8ead4e6f8c571451f65912357405b3b7"
+    }
+  },
+  "cases": [
+    {
+      "id": "SLI-1",
+      "ticker": "SLI",
+      "name": "Standard Lithium Ltd",
+      "sector": "Basic Materials",
+      "profile_sha256": "4ed39fb7ee9d9ef77afddc98cc0d7760d7d18a75d2c50a60baf55e9af368ed0c",
+      "source": {
+        "accepted_at": "2026-09-11T01:03:25.000Z",
+        "accession": "0001104659-26-106754",
+        "characters": 54278,
+        "document": "tm2625054d1_ex99-1.htm",
+        "filing_date": "2026-09-10",
+        "form": "6-K",
+        "id": "69a55f71a4d7b01dca133a74ca19e87ab7d4f9f67cdfb4f6ce58ee131901741e",
+        "kind": "update",
+        "report_date": "2026-09-10",
+        "section": "tm2625054d1_ex99-1.htm",
+        "section_ordinal": 261,
+        "sha256": "361118a4ecb8da917ae372c689dc70c70444598a5dd3aec351546c03487b2129",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1537137/000110465926106754/tm2625054d1_ex99-1.htm"
+      },
+      "paragraph_id": "1bf1e4122ab14e434c4a232467de2c3b902cb7c16bbb618a6f62147537ecef80",
+      "source_span": [
+        32657,
+        32774
+      ],
+      "text": "material changes to Buyer’s Code of Conduct for Suppliers after the date of this Agreement will only apply to Seller\n",
+      "expected": [],
+      "context_text": "material changes to Buyer’s Code of Conduct for Suppliers after the date of this Agreement will only apply to Seller\n"
+    },
+    {
+      "id": "SLI-2",
+      "ticker": "SLI",
+      "name": "Standard Lithium Ltd",
+      "sector": "Basic Materials",
+      "profile_sha256": "4ed39fb7ee9d9ef77afddc98cc0d7760d7d18a75d2c50a60baf55e9af368ed0c",
+      "source": {
+        "accepted_at": "2026-08-11T03:48:25.000Z",
+        "accession": "0001104659-26-093567",
+        "characters": 197006,
+        "document": "tm2622588d2_ex99-1.htm",
+        "filing_date": "2026-08-11",
+        "form": "6-K",
+        "id": "4fc44a7d81c9cb3a7fcedbb9b8a855f1a6b6074a91e248bdf731606158e79b38",
+        "kind": "update",
+        "report_date": "2026-08-10",
+        "section": "tm2622588d2_ex99-1.htm",
+        "section_ordinal": 245,
+        "sha256": "b75409a91cab8eeb5e3cae71694aed8b4d62304347a94db2b5522f2cb15ee839",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1537137/000110465926093567/tm2622588d2_ex99-1.htm"
+      },
+      "paragraph_id": "45a69744322cefe9dd69e6c21b769033998f0b10cbe5373ccb609224e1b364b9",
+      "source_span": [
+        115435,
+        115568
+      ],
+      "text": "will comply with all requirements imposed upon it by the Securities Act and Canadian Securities Laws, as from time to time in force,\n",
+      "expected": [
+        {
+          "text": "Securities Act",
+          "span": [
+            57,
+            71
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "will comply with all requirements imposed upon it by the Securities Act and Canadian Securities Laws, as from time to time in force,\n"
+    },
+    {
+      "id": "SLI-3",
+      "ticker": "SLI",
+      "name": "Standard Lithium Ltd",
+      "sector": "Basic Materials",
+      "profile_sha256": "4ed39fb7ee9d9ef77afddc98cc0d7760d7d18a75d2c50a60baf55e9af368ed0c",
+      "source": {
+        "accepted_at": "2026-03-30T16:01:07.000Z",
+        "accession": "0001193125-26-130448",
+        "characters": 29929,
+        "document": "ck0001537137-20251231.htm",
+        "filing_date": "2026-03-30",
+        "form": "40-F",
+        "id": "04855e74280da0c1a870240a1dfd6aac52b89e37a0ef2573479fc4b129f0c787",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "ck0001537137-20251231.htm",
+        "section_ordinal": 79,
+        "sha256": "2e49faaf1a697d92a74668f899d34964a1853e19d4a3544786979b288bfa60d9",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1537137/000119312526130448/ck0001537137-20251231.htm"
+      },
+      "paragraph_id": "e1b12b0e8c4481bff0d0ae2ac97775e931bd365d55fbad20e12e99f1afaa94e9",
+      "source_span": [
+        3733,
+        4074
+      ],
+      "text": "Indicate by check mark whether the registrant has filed a report on and attestation to its management’s assessment of the effectiveness of its internal control over financial reporting under Section 404(b) of the Sarbanes-Oxley Act (15 U.S.C. 7262(b)) by the registered public accounting firm that prepared or issued its audit report. ☐\n\n \n\n",
+      "expected": [
+        {
+          "text": "Sarbanes-Oxley Act",
+          "span": [
+            213,
+            231
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "15 U.S.C. 7262(b)",
+          "span": [
+            233,
+            250
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "Indicate by check mark whether the registrant has filed a report on and attestation to its management’s assessment of the effectiveness of its internal control over financial reporting under Section 404(b) of the Sarbanes-Oxley Act (15 U.S.C. 7262(b)) by the registered public accounting firm that prepared or issued its audit report. ☐\n\n \n\n"
+    },
+    {
+      "id": "CDE-1",
+      "ticker": "CDE",
+      "name": "Coeur Mining Inc",
+      "sector": "Basic Materials",
+      "profile_sha256": "15b228b4429f6b3a619474a104a80b6fd233c76af6009b341fe3a3256bf019f0",
+      "source": {
+        "accepted_at": "2026-04-22T22:24:50.000Z",
+        "accession": "0001140361-26-016178",
+        "characters": 400367,
+        "document": "ef20071153_ex4-1.htm",
+        "filing_date": "2026-04-23",
+        "form": "8-K",
+        "id": "8d20f7c890910c6c157324e0a6c3649fde8da519945b59c29868eab24daeec83",
+        "kind": "update",
+        "report_date": "2026-04-22",
+        "section": "ef20071153_ex4-1.htm",
+        "section_ordinal": 243,
+        "sha256": "5cdb938aeaa488c51a0620b9ad77b8bfde679adf0189cdd97f0f8092f57af334",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/215466/000114036126016178/ef20071153_ex4-1.htm"
+      },
+      "paragraph_id": "73831456268c1616f15e6192d8345ef35240901d02b9d6310019f282f261f7ea",
+      "source_span": [
+        132378,
+        132703
+      ],
+      "text": "and, in each such case set forth in this subparagraph (A), if the Registrar so requests or if the Applicable Procedures so require, an Opinion of Counsel in form reasonably acceptable to the Registrar to the effect that such exchange or transfer is in compliance with the Securities Act and that the restrictions on transfer\n",
+      "expected": [
+        {
+          "text": "Securities Act",
+          "span": [
+            272,
+            286
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "and, in each such case set forth in this subparagraph (A), if the Registrar so requests or if the Applicable Procedures so require, an Opinion of Counsel in form reasonably acceptable to the Registrar to the effect that such exchange or transfer is in compliance with the Securities Act and that the restrictions on transfer\n"
+    },
+    {
+      "id": "CDE-2",
+      "ticker": "CDE",
+      "name": "Coeur Mining Inc",
+      "sector": "Basic Materials",
+      "profile_sha256": "15b228b4429f6b3a619474a104a80b6fd233c76af6009b341fe3a3256bf019f0",
+      "source": {
+        "accepted_at": "2026-04-22T22:24:50.000Z",
+        "accession": "0001140361-26-016178",
+        "characters": 400367,
+        "document": "ef20071153_ex4-1.htm",
+        "filing_date": "2026-04-23",
+        "form": "8-K",
+        "id": "8d20f7c890910c6c157324e0a6c3649fde8da519945b59c29868eab24daeec83",
+        "kind": "update",
+        "report_date": "2026-04-22",
+        "section": "ef20071153_ex4-1.htm",
+        "section_ordinal": 243,
+        "sha256": "5cdb938aeaa488c51a0620b9ad77b8bfde679adf0189cdd97f0f8092f57af334",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/215466/000114036126016178/ef20071153_ex4-1.htm"
+      },
+      "paragraph_id": "efd6754431f5ff75b09cf121674c6208596d778c6184fe27a31d47f60bf6c3e0",
+      "source_span": [
+        105314,
+        105476
+      ],
+      "text": " rules under the Exchange Act, the Securities Act or the TIA will be deemed to include substitute, replacement of successor sections or rules adopted by the SEC\n\n",
+      "expected": [
+        {
+          "text": "Exchange Act",
+          "span": [
+            17,
+            29
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "Securities Act",
+          "span": [
+            35,
+            49
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "TIA",
+          "span": [
+            57,
+            60
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "SEC",
+          "span": [
+            157,
+            160
+          ],
+          "category": "authority",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": " rules under the Exchange Act, the Securities Act or the TIA will be deemed to include substitute, replacement of successor sections or rules adopted by the SEC\n\n"
+    },
+    {
+      "id": "CDE-3",
+      "ticker": "CDE",
+      "name": "Coeur Mining Inc",
+      "sector": "Basic Materials",
+      "profile_sha256": "15b228b4429f6b3a619474a104a80b6fd233c76af6009b341fe3a3256bf019f0",
+      "source": {
+        "accepted_at": "2026-02-18T21:46:35.000Z",
+        "accession": "0001140361-26-006019",
+        "characters": 678828,
+        "document": "ef20065606_ex99-2.htm",
+        "filing_date": "2026-02-18",
+        "form": "8-K",
+        "id": "fb5c08403d73c049c4e1e32ad7e2268344fde88427b24113bf69fd321f6f58a0",
+        "kind": "update",
+        "report_date": "2026-02-13",
+        "section": "ef20065606_ex99-2.htm",
+        "section_ordinal": 192,
+        "sha256": "206b6bb9b3b83cb33c864cae6f96c173f1075fff19915839f18798960f700d98",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/215466/000114036126006019/ef20065606_ex99-2.htm"
+      },
+      "paragraph_id": "e28cea427c05103c33f827d853d78498d665e99efccbf845416fc3c08b567444",
+      "source_span": [
+        305824,
+        305887
+      ],
+      "text": "Construction Demolition Debris Permit # 97-22- 054\n\n \n\n \n\n \n\n \n",
+      "expected": [
+        {
+          "text": "Construction Demolition Debris Permit # 97-22- 054",
+          "span": [
+            0,
+            50
+          ],
+          "category": "named_permit",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "Construction Demolition Debris Permit # 97-22- 054\n\n \n\n \n\n \n\n \n"
+    },
+    {
+      "id": "CMCSA-1",
+      "ticker": "CMCSA",
+      "name": "Comcast Corp",
+      "sector": "Communication Services",
+      "profile_sha256": "5408842fcbc67ee373073ea0d2a7939136875ed9840b423f65f31fcab2988cb6",
+      "source": {
+        "accepted_at": "2026-03-16T13:36:48.000Z",
+        "accession": "0001628280-26-017950",
+        "characters": 4299,
+        "document": "cmcsa-20260316.htm",
+        "filing_date": "2026-03-16",
+        "form": "8-K",
+        "id": "362ae043515b3dd69d4ae91ee8ee046aa6c6f7a4fac3b1aa56f189f47ec9fd08",
+        "kind": "update",
+        "report_date": "2026-03-16",
+        "section": "cmcsa-20260316.htm",
+        "section_ordinal": 177,
+        "sha256": "c2b6920a15a817357a7200bfbad0e0d3cb36d13c01595ff859a2ff8aaf423c32",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1166691/000162828026017950/cmcsa-20260316.htm"
+      },
+      "paragraph_id": "4dee6995f1dc94cd576df9aee7a59294d8714f96d067aacec6605fbe53a45206",
+      "source_span": [
+        3440,
+        3687
+      ],
+      "text": "Comcast Corporation does not intend for this Item 7.01 or Exhibit 99.1 to be treated as “filed” under the Securities Exchange Act of 1934, as amended, or incorporated by reference into its filings under the Securities Act of 1933, as amended.\n\n \n\n",
+      "expected": [
+        {
+          "text": "Securities Exchange Act of 1934",
+          "span": [
+            106,
+            137
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "Securities Act of 1933",
+          "span": [
+            207,
+            229
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        }
+      ],
+      "context_text": "For additional detail on pro forma information, segment revenue and expenses, customer metrics, capital expenditures, and free cash flow, refer to the updated trending schedule attached hereto as Exhibit 99.1. Comcast Corporation does not intend for this Item 7.01 or Exhibit 99.1 to be treated as “filed” under the Securities Exchange Act of 1934, as amended, or incorporated by reference into its filings under the Securities Act of 1933, as amended.\n\n \n\n"
+    },
+    {
+      "id": "CMCSA-2",
+      "ticker": "CMCSA",
+      "name": "Comcast Corp",
+      "sector": "Communication Services",
+      "profile_sha256": "5408842fcbc67ee373073ea0d2a7939136875ed9840b423f65f31fcab2988cb6",
+      "source": {
+        "accepted_at": "2026-02-03T21:09:01.000Z",
+        "accession": "0001628280-26-004994",
+        "characters": 52446,
+        "document": "ex103-12312025.htm",
+        "filing_date": "2026-02-03",
+        "form": "10-K",
+        "id": "24f61bef7682c2e73a7729eb16497e3bc1424f4ab420d4d1b01cae80c04a7756",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "ex103-12312025.htm",
+        "section_ordinal": 153,
+        "sha256": "5b01e8a32ed1cb1b8d73feb5238af7a16c8da473d03bfcfcbfc064a70e08d24f",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1166691/000162828026004994/ex103-12312025.htm"
+      },
+      "paragraph_id": "e296e333d765190dbbbe0dcdce10cd92dd21005bff81b18ba78afe73c7a16132",
+      "source_span": [
+        1901,
+        2528
+      ],
+      "text": "(e)“Cause” means (i) fraud; (ii) misappropriation; (iii) embezzlement; (iv) gross negligence in the performance of duties; (v) self-dealing; (vi) dishonesty; (vii) misrepresentation; (viii) conviction of a crime of a felony; (ix) material violation of any Company policy; (x) material violation of the Sponsor’s Code of Conduct or, (xi) in the case of an employee of a Company who is a party to an employment agreement with a Company, material breach of such agreement; provided that as to items (ix), (x) and (xi), if capable of being cured, such event or condition remains uncured following 30 days written notice thereof. \n\n",
+      "expected": [],
+      "context_text": "(e)“Cause” means (i) fraud; (ii) misappropriation; (iii) embezzlement; (iv) gross negligence in the performance of duties; (v) self-dealing; (vi) dishonesty; (vii) misrepresentation; (viii) conviction of a crime of a felony; (ix) material violation of any Company policy; (x) material violation of the Sponsor’s Code of Conduct or, (xi) in the case of an employee of a Company who is a party to an employment agreement with a Company, material breach of such agreement; provided that as to items (ix), (x) and (xi), if capable of being cured, such event or condition remains uncured following 30 days written notice thereof. \n\n"
+    },
+    {
+      "id": "CMCSA-3",
+      "ticker": "CMCSA",
+      "name": "Comcast Corp",
+      "sector": "Communication Services",
+      "profile_sha256": "5408842fcbc67ee373073ea0d2a7939136875ed9840b423f65f31fcab2988cb6",
+      "source": {
+        "accepted_at": "2026-07-23T19:11:20.000Z",
+        "accession": "0001628280-26-049360",
+        "characters": 1333,
+        "document": "ex32-6302026.htm",
+        "filing_date": "2026-07-23",
+        "form": "10-Q",
+        "id": "68dc9063003b7d7a71043e2bc433dbd7c50b4c6c33ef17b15250efd49bc5a8bb",
+        "kind": "update",
+        "report_date": "2026-06-30",
+        "section": "ex32-6302026.htm",
+        "section_ordinal": 426,
+        "sha256": "5ea2b092c91879d63277317fb70eadec35d33b0662b421559ae1e77d761c2788",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1166691/000162828026049360/ex32-6302026.htm"
+      },
+      "paragraph_id": "ab9654294fde8f6abec66b9f9e754df6d729c89580c3361c36cd86b787936ac3",
+      "source_span": [
+        261,
+        603
+      ],
+      "text": "The certification set forth below is being submitted in connection with the Quarterly Report on Form 10-Q of Comcast Corporation (the “Report”) for the purpose of complying with Rule 13a-14(b) or Rule 15d-14(b) of the Securities Exchange Act of 1934 (the “Exchange Act”) and Section 1350 of Chapter 63 of Title 18 of the United States Code.\n\n",
+      "expected": [
+        {
+          "text": "Rule 13a-14(b)",
+          "span": [
+            178,
+            192
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "Rule 15d-14(b)",
+          "span": [
+            196,
+            210
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "Securities Exchange Act of 1934",
+          "span": [
+            218,
+            249
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "Exchange Act",
+          "span": [
+            256,
+            268
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "Title 18 of the United States Code",
+          "span": [
+            305,
+            339
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        }
+      ],
+      "context_text": "The certification set forth below is being submitted in connection with the Quarterly Report on Form 10-Q of Comcast Corporation (the “Report”) for the purpose of complying with Rule 13a-14(b) or Rule 15d-14(b) of the Securities Exchange Act of 1934 (the “Exchange Act”) and Section 1350 of Chapter 63 of Title 18 of the United States Code.\n\n"
+    },
+    {
+      "id": "GRPN-1",
+      "ticker": "GRPN",
+      "name": "Groupon Inc",
+      "sector": "Communication Services",
+      "profile_sha256": "a6294dc5fdc48f8cdef7115824719835b1e83def20e36dd8303363c532af504a",
+      "source": {
+        "accepted_at": "2026-03-10T20:14:34.000Z",
+        "accession": "0001628280-26-016429",
+        "characters": 1172,
+        "document": "exhibit321-2025q4.htm",
+        "filing_date": "2026-03-10",
+        "form": "10-K",
+        "id": "2d26097ea8a7c3017c0b4d6096b457457d0038330c59deb995f97370394d4107",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "exhibit321-2025q4.htm",
+        "section_ordinal": 108,
+        "sha256": "30717748ab537e01b42640336ce872b3c67797a87ec3cc4650f9aabf91d400ec",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1490281/000162828026016429/exhibit321-2025q4.htm"
+      },
+      "paragraph_id": "101a8f977a22b954bf51c85d49e32b23e246b9931ba6a5edea864e7be0f53d02",
+      "source_span": [
+        202,
+        559
+      ],
+      "text": "In connection with the Annual Report of Groupon, Inc. (the \"Company\") on Form 10-K for the period ended December 31, 2025, as filed with the Securities and Exchange Commission on the date hereof (the \"Report\"), I, Dusan Senkypl, Chief Executive Officer of the Company, and Rana Kashyap, Chief Financial Officer of the Company, certify, pursuant to 18 U.S.C.",
+      "expected": [
+        {
+          "text": "Securities and Exchange Commission",
+          "span": [
+            141,
+            175
+          ],
+          "category": "authority",
+          "attachment": "issuer",
+          "direct": false
+        }
+      ],
+      "context_text": "In connection with the Annual Report of Groupon, Inc. (the \"Company\") on Form 10-K for the period ended December 31, 2025, as filed with the Securities and Exchange Commission on the date hereof (the \"Report\"), I, Dusan Senkypl, Chief Executive Officer of the Company, and Rana Kashyap, Chief Financial Officer of the Company, certify, pursuant to 18 U.S.C. Section 1350, as adopted pursuant to Section 906 of the Sarbanes-Oxley Act of 2002, to our knowledge, that:\n\n"
+    },
+    {
+      "id": "GRPN-2",
+      "ticker": "GRPN",
+      "name": "Groupon Inc",
+      "sector": "Communication Services",
+      "profile_sha256": "a6294dc5fdc48f8cdef7115824719835b1e83def20e36dd8303363c532af504a",
+      "source": {
+        "accepted_at": "2026-03-10T20:14:34.000Z",
+        "accession": "0001628280-26-016429",
+        "characters": 2448,
+        "document": "R88.htm",
+        "filing_date": "2026-03-10",
+        "form": "10-K",
+        "id": "c2691fbe5523ecee7abb0b5ffcdae745fe1775d9a963f9fbe81763062d550395",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "R88.htm",
+        "section_ordinal": 89,
+        "sha256": "1e46c39dbc4461f004ec00bca7ee794ffa4e294b28714c187031052a42a55078",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1490281/000162828026016429/R88.htm"
+      },
+      "paragraph_id": "0467adcc83dad4d84dfe93c3be539128eb3c937a42ef262c9497e322bbf326f9",
+      "source_span": [
+        1888,
+        1965
+      ],
+      "text": " Income tax examination, penalties expense, net of previously paid\n\n \n\n \n\n \n\n",
+      "expected": [],
+      "context_text": " Income tax examination, penalties expense, net of previously paid\n\n \n\n \n\n \n\n"
+    },
+    {
+      "id": "GRPN-3",
+      "ticker": "GRPN",
+      "name": "Groupon Inc",
+      "sector": "Communication Services",
+      "profile_sha256": "a6294dc5fdc48f8cdef7115824719835b1e83def20e36dd8303363c532af504a",
+      "source": {
+        "accepted_at": "2026-03-10T20:14:34.000Z",
+        "accession": "0001628280-26-016429",
+        "characters": 153912,
+        "document": "grpn-20251231.htm",
+        "filing_date": "2026-03-10",
+        "form": "10-K",
+        "id": "c5ce4c093c0b2408978b5694f360aac4f97ad4515f6ceec1fecab4af6f89d61d",
+        "kind": "financial",
+        "report_date": "2025-12-31",
+        "section": "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+        "section_ordinal": 145,
+        "sha256": "13ff1235cb82d33733f0c7bb2f9673dba44c33883d012c70a039a5646467fa80",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1490281/000162828026016429/grpn-20251231.htm"
+      },
+      "paragraph_id": "a6d7d43142f01f6e6dbae029f6a9ee588de51bfc8f12f5fe44aa740aa8f4014b",
+      "source_span": [
+        137536,
+        137598
+      ],
+      "text": "On July 4, 2025, the OBBB Act was enacted into law in the U.S.",
+      "expected": [
+        {
+          "text": "OBBB Act",
+          "span": [
+            21,
+            29
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "On July 4, 2025, the OBBB Act was enacted into law in the U.S. The OBBB Act introduces significant changes to the federal income tax code, including changes to the deductibility of R&D expenses, bonus depreciation, limitation on interest deductibility, international taxation and minimum tax rules. \n\n"
+    },
+    {
+      "id": "BOOT-1",
+      "ticker": "BOOT",
+      "name": "Boot Barn Holdings Inc",
+      "sector": "Consumer Cyclical",
+      "profile_sha256": "e3338ba16d4ff4fc7d7c3b3d77e97b417eb704b6a6c9e5c87e011bb5cd54663f",
+      "source": {
+        "accepted_at": "2026-08-27T20:13:19.000Z",
+        "accession": "0001104659-26-102449",
+        "characters": 70354,
+        "document": "boot-20260826xex10d1.htm",
+        "filing_date": "2026-08-27",
+        "form": "8-K",
+        "id": "d875e686d1106a175ac55e38c59f07e3bfa426502571ba2217b8e1e4216669b4",
+        "kind": "update",
+        "report_date": "2026-08-26",
+        "section": "boot-20260826xex10d1.htm",
+        "section_ordinal": 256,
+        "sha256": "4ab96d7861cc34b0a4b3c50208d29fc89463edb9fa30b268f89b278b63359e07",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1610250/000110465926102449/boot-20260826xex10d1.htm"
+      },
+      "paragraph_id": "affd9e36d6996c9f858797466f5b7b1bf21d5edec4775f6bdea291b503895f40",
+      "source_span": [
+        60772,
+        61014
+      ],
+      "text": "With respect to persons subject to Section 16 of the Exchange Act, it is the intent of the Company that the Plan and all transactions under the Plan comply with all applicable provisions of Rule 16b-3 or its successors under the Exchange Act.",
+      "expected": [
+        {
+          "text": "Exchange Act",
+          "span": [
+            53,
+            65
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "Exchange Act",
+          "span": [
+            229,
+            241
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "Rule 16b-3",
+          "span": [
+            190,
+            200
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        }
+      ],
+      "context_text": "(i)The Plan, the exercise of Options and SARs and the obligations of the Company to issue or transfer shares of Company Stock under Awards shall be subject to all applicable laws and regulations, and to approvals by any governmental or regulatory agency as may be required. With respect to persons subject to Section 16 of the Exchange Act, it is the intent of the Company that the Plan and all transactions under the Plan comply with all applicable provisions of Rule 16b-3 or its successors under the Exchange Act. In addition, it is the intent of the Company that Incentive Stock Options comply with the applicable provisions of Section 422 of the Code, and that, to the extent applicable, Awards comply with the requirements of Section 409A of the Code. To the extent that any legal requirement of Section 16 of the Exchange Act or Section 422 or 409A of the Code as set forth in the Plan ceases to be required under Section 16 of the Exchange Act or Section 422 or 409A of the Code, that Plan provision shall cease to apply. The Committee may revoke any Award if it is contrary to law or modify an Award to bring it into compliance with any valid and mandatory \n\n"
+    },
+    {
+      "id": "BOOT-2",
+      "ticker": "BOOT",
+      "name": "Boot Barn Holdings Inc",
+      "sector": "Consumer Cyclical",
+      "profile_sha256": "e3338ba16d4ff4fc7d7c3b3d77e97b417eb704b6a6c9e5c87e011bb5cd54663f",
+      "source": {
+        "accepted_at": "2026-09-14T20:08:20.000Z",
+        "accession": "0001104659-26-107497",
+        "characters": 7675,
+        "document": "boot-20260914x8k.htm",
+        "filing_date": "2026-09-14",
+        "form": "8-K",
+        "id": "98ff6e35b47138269d05a035cb97d64b36f2a63ccdde307d09cabb81e675973a",
+        "kind": "update",
+        "report_date": "2026-09-14",
+        "section": "boot-20260914x8k.htm",
+        "section_ordinal": 265,
+        "sha256": "345240ab736890a23a36031b7c380ee71302449718fb4391f1a3e471a9e4d92f",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1610250/000110465926107497/boot-20260914x8k.htm"
+      },
+      "paragraph_id": "3fa333a4321371bf552936f0fbfb0581e67c6e4b58ed7c57daf73bd5d61282d1",
+      "source_span": [
+        1332,
+        1422
+      ],
+      "text": "Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12)\n\n \n",
+      "expected": [
+        {
+          "text": "Rule 14a-12",
+          "span": [
+            32,
+            43
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "Exchange Act",
+          "span": [
+            54,
+            66
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "17 CFR 240.14a-12",
+          "span": [
+            68,
+            85
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12)\n\n \n"
+    },
+    {
+      "id": "BOOT-3",
+      "ticker": "BOOT",
+      "name": "Boot Barn Holdings Inc",
+      "sector": "Consumer Cyclical",
+      "profile_sha256": "e3338ba16d4ff4fc7d7c3b3d77e97b417eb704b6a6c9e5c87e011bb5cd54663f",
+      "source": {
+        "accepted_at": "2026-08-27T20:13:19.000Z",
+        "accession": "0001104659-26-102449",
+        "characters": 70354,
+        "document": "boot-20260826xex10d1.htm",
+        "filing_date": "2026-08-27",
+        "form": "8-K",
+        "id": "d875e686d1106a175ac55e38c59f07e3bfa426502571ba2217b8e1e4216669b4",
+        "kind": "update",
+        "report_date": "2026-08-26",
+        "section": "boot-20260826xex10d1.htm",
+        "section_ordinal": 256,
+        "sha256": "4ab96d7861cc34b0a4b3c50208d29fc89463edb9fa30b268f89b278b63359e07",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1610250/000110465926102449/boot-20260826xex10d1.htm"
+      },
+      "paragraph_id": "fbb35118a2d07668e5dbe9f196e9c0aba037c90c94ff322e01b6e346a4afba45",
+      "source_span": [
+        9973,
+        10047
+      ],
+      "text": "(q)“Exchange Act” means the Securities Exchange Act of 1934, as amended.\n\n",
+      "expected": [
+        {
+          "text": "Exchange Act",
+          "span": [
+            4,
+            16
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "Securities Exchange Act of 1934",
+          "span": [
+            28,
+            59
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "(q)“Exchange Act” means the Securities Exchange Act of 1934, as amended.\n\n"
+    },
+    {
+      "id": "CAL-1",
+      "ticker": "CAL",
+      "name": "Caleres Inc",
+      "sector": "Consumer Cyclical",
+      "profile_sha256": "c7a0ca6ebeec221b19baa8f52cd1ac113c43b74602449fbe08db37cccb228026",
+      "source": {
+        "accepted_at": "2026-09-10T11:48:26.000Z",
+        "accession": "0000014707-26-000144",
+        "characters": 3059,
+        "document": "cal-20260801x10q.htm",
+        "filing_date": "2026-09-10",
+        "form": "10-Q",
+        "id": "b7b181e6642b1649921ac4ca791daa3cdd4632e35b85d18fbc6ff23ef2dac204",
+        "kind": "identity_source",
+        "report_date": "2026-08-01",
+        "section": "preamble",
+        "section_ordinal": 407,
+        "sha256": "d09baed6e01de643fceb67539faf09b9ed242164e2ec35b7dae15a5e878dc96f",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/14707/000001470726000144/cal-20260801x10q.htm"
+      },
+      "paragraph_id": "3e382d03a88765f6f1a9e8bea2ca3a2c21a90d1cf2a429da93a2c8070fd581e9",
+      "source_span": [
+        2250,
+        2424
+      ],
+      "text": "See the definitions of “large accelerated filer,” “accelerated filer,” “smaller reporting company,\" and \"emerging growth company” in Rule 12b-2 of the Exchange Act:\n\n \n\n \n\n \n",
+      "expected": [
+        {
+          "text": "Rule 12b-2",
+          "span": [
+            133,
+            143
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "Exchange Act",
+          "span": [
+            151,
+            163
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "Indicate by check mark whether the registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, a smaller reporting company, or an emerging growth company. See the definitions of “large accelerated filer,” “accelerated filer,” “smaller reporting company,\" and \"emerging growth company” in Rule 12b-2 of the Exchange Act:\n\n \n\n \n\n \n"
+    },
+    {
+      "id": "CAL-2",
+      "ticker": "CAL",
+      "name": "Caleres Inc",
+      "sector": "Consumer Cyclical",
+      "profile_sha256": "c7a0ca6ebeec221b19baa8f52cd1ac113c43b74602449fbe08db37cccb228026",
+      "source": {
+        "accepted_at": "2026-05-28T21:22:24.000Z",
+        "accession": "0000014707-26-000070",
+        "characters": 59956,
+        "document": "cal-20260528xex3d1.htm",
+        "filing_date": "2026-05-28",
+        "form": "8-K",
+        "id": "28f1a4d2b719c7dd3bde99ff37f5b90bddb5290204e39f94d598bdcba5388baf",
+        "kind": "update",
+        "report_date": "2026-05-28",
+        "section": "cal-20260528xex3d1.htm",
+        "section_ordinal": 190,
+        "sha256": "86ba0585aa0d2562451b26c6955cecca8a513f0f0ba6f8f73f68615e21ea1eaa",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/14707/000001470726000070/cal-20260528xex3d1.htm"
+      },
+      "paragraph_id": "548a8518778a09026ddb6a321496aa5bc22a98bcb3606a6089ee0ee08662117a",
+      "source_span": [
+        28509,
+        28623
+      ],
+      "text": "j.“Regulation S-K” means Regulation S-K under the Securities Act of 1933, as amended (the “Securities Act”); and\n\n",
+      "expected": [
+        {
+          "text": "Regulation S-K",
+          "span": [
+            3,
+            17
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "Regulation S-K",
+          "span": [
+            25,
+            39
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "Securities Act of 1933",
+          "span": [
+            50,
+            72
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "Securities Act",
+          "span": [
+            91,
+            105
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "j.“Regulation S-K” means Regulation S-K under the Securities Act of 1933, as amended (the “Securities Act”); and\n\n"
+    },
+    {
+      "id": "CAL-3",
+      "ticker": "CAL",
+      "name": "Caleres Inc",
+      "sector": "Consumer Cyclical",
+      "profile_sha256": "c7a0ca6ebeec221b19baa8f52cd1ac113c43b74602449fbe08db37cccb228026",
+      "source": {
+        "accepted_at": "2026-09-10T11:48:26.000Z",
+        "accession": "0000014707-26-000144",
+        "characters": 3476,
+        "document": "cal-20260801x10q.htm",
+        "filing_date": "2026-09-10",
+        "form": "10-Q",
+        "id": "82c6b72fb456563c92ba1c9d6039a5f123bdc3a2e3da3f21556ff966633618fb",
+        "kind": "financial",
+        "report_date": "2026-08-01",
+        "section": "ITEM 4 CONTROLS AND PROCEDURES",
+        "section_ordinal": 422,
+        "sha256": "543a5abb29461bdb2399a88ef7925afe21b995897fefc7d61f8caa191bfa8976",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/14707/000001470726000144/cal-20260801x10q.htm"
+      },
+      "paragraph_id": "c9c868ec5521ae044dddcf0b0b5241525867f5a6c7e383ad9a80e46881b99695",
+      "source_span": [
+        2552,
+        2828
+      ],
+      "text": "As of August 1, 2026, management of the Company, including the Chief Executive Officer and Chief Financial Officer, conducted an evaluation of the effectiveness of our disclosure controls and procedures (as defined in Rule 13a-15(e) under the Securities Exchange Act of 1934).",
+      "expected": [
+        {
+          "text": "Rule 13a-15(e)",
+          "span": [
+            218,
+            232
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "Securities Exchange Act of 1934",
+          "span": [
+            243,
+            274
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        }
+      ],
+      "context_text": "A control system, no matter how well conceived or operated, can provide only reasonable, not absolute, assurance that the objectives of the control system are met. Furthermore, the design of a control system must reflect the fact there are resource constraints, and the benefits of controls must be considered relative to their costs. Because of the inherent limitations in all control systems, no evaluation of controls can provide absolute assurance that all control issues and instances of fraud, if any, have been detected. These inherent limitations include the realities that judgments in decision-making can be faulty, and breakdowns can occur because of simple error or mistake. Additionally, controls can be circumvented by the individual acts of some persons, by collusion of two or more people, or by management override of the controls. The design of any system of controls is based in part upon certain assumptions about the likelihood of future events, and there can be no assurance any design will succeed in achieving its stated goals under all potential future conditions; over time, controls may become inadequate because of changes in conditions, or the degree of compliance with the policies or procedures may deteriorate. Because of the inherent limitations in a cost-effective control system, misstatements due to errors or fraud may occur and not be detected. Our disclosure controls and procedures are designed to provide a reasonable level of assurance that their objectives are achieved. As of August 1, 2026, management of the Company, including the Chief Executive Officer and Chief Financial Officer, conducted an evaluation of the effectiveness of our disclosure controls and procedures (as defined in Rule 13a-15(e) under the Securities Exchange Act of 1934). Based upon and as of the date of that evaluation, the Chief Executive Officer and Chief Financial Officer have concluded our disclosure controls and procedures were effective at the reasonable assurance level.\n\n"
+    },
+    {
+      "id": "DLTR-1",
+      "ticker": "DLTR",
+      "name": "Dollar Tree Inc",
+      "sector": "Consumer Defensive",
+      "profile_sha256": "80975b5b8f5f360741c9c10f5afaf6abbb428f6efb0e8ae96d98cbc4e0cde4cc",
+      "source": {
+        "accepted_at": "2026-03-16T10:33:12.000Z",
+        "accession": "0000935703-26-000025",
+        "characters": 76183,
+        "document": "dltr-20260131.htm",
+        "filing_date": "2026-03-16",
+        "form": "10-K",
+        "id": "9b565e90024168e44ee834be9d1e7afbad1c3d60ac524c507b982a0fb9c0cda6",
+        "kind": "risk",
+        "report_date": "2026-01-31",
+        "section": "Item 1A. Risk Factors",
+        "section_ordinal": 120,
+        "sha256": "a9dd441c3d2d9029142c8fa5f179c9b23151bb34cb0b9f5a489e02bce73e4aa3",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/935703/000093570326000025/dltr-20260131.htm"
+      },
+      "paragraph_id": "ac74f1d57e9171100d6ebfd362a2e198ec5f9aedb6bde4143b9eea7724cac029",
+      "source_span": [
+        9620,
+        9821
+      ],
+      "text": "For example, based on determinations by the Department of Commerce and International Trade Commission, we accrued $25.0 million related to additional duties on paper plates imported during fiscal 2024.",
+      "expected": [
+        {
+          "text": "Department of Commerce",
+          "span": [
+            44,
+            66
+          ],
+          "category": "authority",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "International Trade Commission",
+          "span": [
+            71,
+            101
+          ],
+          "category": "authority",
+          "attachment": "issuer",
+          "direct": false
+        }
+      ],
+      "context_text": "In addition, the U.S. Department of Commerce recently has conducted investigations of anti-dumping and countervailing duties with respect to various goods we import from foreign countries. For example, based on determinations by the Department of Commerce and International Trade Commission, we accrued $25.0 million related to additional duties on paper plates imported during fiscal 2024. Any additional duties related to these or other goods that we import, including any imposed on a retroactive basis, could increase the cost of our imported merchandise and adversely impact our operations and profit margins. Please see “Our profitability is vulnerable to cost pressures from increases in merchandise, shipping, freight and fuel costs, wage and benefit and other operating costs” and Note 5 to our consolidated financial statements under the caption “Contingencies” for further discussion of the effect of costs on our operations.\n\n"
+    },
+    {
+      "id": "DLTR-2",
+      "ticker": "DLTR",
+      "name": "Dollar Tree Inc",
+      "sector": "Consumer Defensive",
+      "profile_sha256": "80975b5b8f5f360741c9c10f5afaf6abbb428f6efb0e8ae96d98cbc4e0cde4cc",
+      "source": {
+        "accepted_at": "2026-03-16T10:33:12.000Z",
+        "accession": "0000935703-26-000025",
+        "characters": 1205,
+        "document": "dltr-2026x01x31x10kxex322.htm",
+        "filing_date": "2026-03-16",
+        "form": "10-K",
+        "id": "7c40b2acf5d8d3ebd597e3b8373ac3e3f10d34316d281b0edc3b37ed6ac14d6b",
+        "kind": "business",
+        "report_date": "2026-01-31",
+        "section": "dltr-2026x01x31x10kxex322.htm",
+        "section_ordinal": 153,
+        "sha256": "c01848cfb4cb1519ef8ea48b93caaaec0fbd249a79145404cd24c06fbc38f832",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/935703/000093570326000025/dltr-2026x01x31x10kxex322.htm"
+      },
+      "paragraph_id": "5627ac4b5bf6b6d155f5ba6887e3a12413f870596870e0e36e0ed91e06fdd061",
+      "source_span": [
+        200,
+        601
+      ],
+      "text": "In connection with the Annual Report of Dollar Tree, Inc. (the Company) on Form 10-K for the year ending January 31, 2026, as filed with the Securities and Exchange Commission on the date hereof (the Report), I, Stewart Glendinning, Chief Financial Officer of the Company, certify, pursuant to 18 U.S.C. ss.1350, as adopted pursuant to ss.906 of the Sarbanes-Oxley Act of 2002, that to my knowledge:\n\n",
+      "expected": [
+        {
+          "text": "Securities and Exchange Commission",
+          "span": [
+            141,
+            175
+          ],
+          "category": "authority",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "18 U.S.C. ss.1350",
+          "span": [
+            294,
+            311
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "Sarbanes-Oxley Act of 2002",
+          "span": [
+            350,
+            376
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        }
+      ],
+      "context_text": "In connection with the Annual Report of Dollar Tree, Inc. (the Company) on Form 10-K for the year ending January 31, 2026, as filed with the Securities and Exchange Commission on the date hereof (the Report), I, Stewart Glendinning, Chief Financial Officer of the Company, certify, pursuant to 18 U.S.C. ss.1350, as adopted pursuant to ss.906 of the Sarbanes-Oxley Act of 2002, that to my knowledge:\n\n"
+    },
+    {
+      "id": "DLTR-3",
+      "ticker": "DLTR",
+      "name": "Dollar Tree Inc",
+      "sector": "Consumer Defensive",
+      "profile_sha256": "80975b5b8f5f360741c9c10f5afaf6abbb428f6efb0e8ae96d98cbc4e0cde4cc",
+      "source": {
+        "accepted_at": "2026-08-27T10:31:24.000Z",
+        "accession": "0000935703-26-000108",
+        "characters": 3896,
+        "document": "dltr-20260827.htm",
+        "filing_date": "2026-08-27",
+        "form": "8-K",
+        "id": "6df556e939bbaea63fbc8046d7cce7af2e755017461e7d50f761b2eaf4ba472e",
+        "kind": "update",
+        "report_date": "2026-08-27",
+        "section": "dltr-20260827.htm",
+        "section_ordinal": 306,
+        "sha256": "37bc21be1b8895f5d4bfd7cc03d6866c43e8b6a9a3fa08a315a28e6fcad5b601",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/935703/000093570326000108/dltr-20260827.htm"
+      },
+      "paragraph_id": "a3f57cd0d20f4d76dddf04871dba08a23c0b0fc01b34e0df2c3de9bdd6830514",
+      "source_span": [
+        2764,
+        2931
+      ],
+      "text": "Such information shall not be deemed \"filed\" for purposes of Section 18 of the Securities Exchange Act of 1934 or otherwise subject to the liabilities of that Section.",
+      "expected": [
+        {
+          "text": "Securities Exchange Act of 1934",
+          "span": [
+            79,
+            110
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "The information contained in items 2.02 and 7.01, including that incorporated by reference, is being furnished to the Securities and Exchange Commission. Such information shall not be deemed \"filed\" for purposes of Section 18 of the Securities Exchange Act of 1934 or otherwise subject to the liabilities of that Section. The information shall not be deemed incorporated by reference into any registration statement or other document filed pursuant to the Securities Act of 1933, except as expressly set forth by specific reference in such filing.\n\n"
+    },
+    {
+      "id": "DNUT-1",
+      "ticker": "DNUT",
+      "name": "Krispy Kreme Inc",
+      "sector": "Consumer Defensive",
+      "profile_sha256": "82b04d4ec550b81c18f3cca929ceacfd731e814d814d1eb4120b54e60967bc3b",
+      "source": {
+        "accepted_at": "2026-03-06T21:26:30.000Z",
+        "accession": "0001857154-26-000015",
+        "characters": 105180,
+        "document": "dnut-20251228.htm",
+        "filing_date": "2026-03-06",
+        "form": "10-K",
+        "id": "a44405579ad2f11e55a90352eca5dae2b2362fbad91604535fd1f9d95bfa0daf",
+        "kind": "risk",
+        "report_date": "2025-12-28",
+        "section": "Item 1A. Risk Factors",
+        "section_ordinal": 140,
+        "sha256": "5743e4624441c481afa71de9c7caf377484331b32b2ab5759073238d3a152743",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1857154/000185715426000015/dnut-20251228.htm"
+      },
+      "paragraph_id": "fdab0bd56b01f360eeb5647fb1d72580976faa3e49c5521ae4d7f9f132f2a555",
+      "source_span": [
+        99937,
+        99997
+      ],
+      "text": "We are subject to Delaware General Corporation Law (“DGCL”).",
+      "expected": [
+        {
+          "text": "Delaware General Corporation Law",
+          "span": [
+            18,
+            50
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": true
+        }
+      ],
+      "context_text": "We are subject to Delaware General Corporation Law (“DGCL”). Section 203 of the DGCL restricts certain stockholders owning over 15% of our outstanding common stock (referred to as \"interested stockholders\"), including JAB, from engaging in specific business combinations without approval from at least two-thirds of our outstanding common stock not held by the interested stockholder.\n\n"
+    },
+    {
+      "id": "DNUT-2",
+      "ticker": "DNUT",
+      "name": "Krispy Kreme Inc",
+      "sector": "Consumer Defensive",
+      "profile_sha256": "82b04d4ec550b81c18f3cca929ceacfd731e814d814d1eb4120b54e60967bc3b",
+      "source": {
+        "accepted_at": "2026-03-06T21:26:30.000Z",
+        "accession": "0001857154-26-000015",
+        "characters": 105180,
+        "document": "dnut-20251228.htm",
+        "filing_date": "2026-03-06",
+        "form": "10-K",
+        "id": "a44405579ad2f11e55a90352eca5dae2b2362fbad91604535fd1f9d95bfa0daf",
+        "kind": "risk",
+        "report_date": "2025-12-28",
+        "section": "Item 1A. Risk Factors",
+        "section_ordinal": 140,
+        "sha256": "5743e4624441c481afa71de9c7caf377484331b32b2ab5759073238d3a152743",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1857154/000185715426000015/dnut-20251228.htm"
+      },
+      "paragraph_id": "4de7419d95ea964a651cb4accf1db8a079001f68188052c5ed8a0e0d2fa4baeb",
+      "source_span": [
+        80727,
+        81000
+      ],
+      "text": "As a food service business, we face potential adverse impacts stemming from litigation, regulatory actions, and consumer or government complaints related to food or occupational safety, food quality, illness, injuries, health concerns, environmental, or operational issues.",
+      "expected": [],
+      "context_text": "As a food service business, we face potential adverse impacts stemming from litigation, regulatory actions, and consumer or government complaints related to food or occupational safety, food quality, illness, injuries, health concerns, environmental, or operational issues. These concerns may arise from individual shops or a limited number of shops, including those operated by our franchisees. Additionally, such risks may increase as we introduce new products or expand distribution channels, such as our fresh delivery business channel, and our business becomes subject to new regulations and higher regulatory scrutiny.\n\n"
+    },
+    {
+      "id": "DNUT-3",
+      "ticker": "DNUT",
+      "name": "Krispy Kreme Inc",
+      "sector": "Consumer Defensive",
+      "profile_sha256": "82b04d4ec550b81c18f3cca929ceacfd731e814d814d1eb4120b54e60967bc3b",
+      "source": {
+        "accepted_at": "2026-04-06T20:27:16.000Z",
+        "accession": "0001857154-26-000022",
+        "characters": 61415,
+        "document": "kkdc-employmentagreementdu.htm",
+        "filing_date": "2026-04-06",
+        "form": "8-K",
+        "id": "52763e17b59de1b27c23ca08b7d20bf2493564e6a930ffc982c2d54d860ab37a",
+        "kind": "update",
+        "report_date": "2026-04-01",
+        "section": "kkdc-employmentagreementdu.htm",
+        "section_ordinal": 208,
+        "sha256": "1ffba674f88e191b27972a1c6e9d4c353b670b9b87f57bc019080da920870024",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1857154/000185715426000022/kkdc-employmentagreementdu.htm"
+      },
+      "paragraph_id": "48fae2b3559ef8ed7835b0dbca8610cf45c7c4ea4efdda3936652bb8474f938d",
+      "source_span": [
+        20259,
+        20608
+      ],
+      "text": "premium for Consolidated Omnibus Budget Reconciliation Act of 1985, as amended (“COBRA”) healthcare coverage payable by Executive for Executive and Executive’s dependents as of the termination date and (y) the monthly premium amount paid by active employees of the Company for healthcare coverage under the Company’s plan as of the termination date.",
+      "expected": [
+        {
+          "text": "Consolidated Omnibus Budget Reconciliation Act of 1985",
+          "span": [
+            12,
+            66
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        }
+      ],
+      "context_text": "premium for Consolidated Omnibus Budget Reconciliation Act of 1985, as amended (“COBRA”) healthcare coverage payable by Executive for Executive and Executive’s dependents as of the termination date and (y) the monthly premium amount paid by active employees of the Company for healthcare coverage under the Company’s plan as of the termination date. The COBRA Subsidy Payment shall be payable on the first payroll date following the 30th day after the date of such termination (the Base Salary Payment and the COBRA Subsidy Payment, collectively, the “Severance Payments”).\n\n"
+    },
+    {
+      "id": "GPRK-1",
+      "ticker": "GPRK",
+      "name": "Geopark Limited",
+      "sector": "Energy",
+      "profile_sha256": "639704a42782ce5dbb2e8bd9f2876d3de243cd939947d80ef1d3753502c3811b",
+      "source": {
+        "accepted_at": "2026-04-01T00:35:16.000Z",
+        "accession": "0001104659-26-037819",
+        "characters": 5948,
+        "document": "gprk-20251231x20f.htm",
+        "filing_date": "2026-03-31",
+        "form": "20-F",
+        "id": "e30cc05a84e8353fe5d87b3749f6847b900ab649459977a080164f91ad85cf1e",
+        "kind": "identity_source",
+        "report_date": "2025-12-31",
+        "section": "preamble",
+        "section_ordinal": 167,
+        "sha256": "9566bc94c982797cdbaec5daf45d98a81937912d3f7471454dceecacdbcabc7c",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1464591/000110465926037819/gprk-20251231x20f.htm"
+      },
+      "paragraph_id": "0fafaa2a1d5bdd70a6be3875da4044b86a42bfddd0752a166414d77def198bc0",
+      "source_span": [
+        2482,
+        2678
+      ],
+      "text": "If this report is an annual or transition report, indicate by check mark if the registrant is not required to file reports pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934.\n\n",
+      "expected": [
+        {
+          "text": "Securities Exchange Act of 1934",
+          "span": [
+            162,
+            193
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "If this report is an annual or transition report, indicate by check mark if the registrant is not required to file reports pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934.\n\n"
+    },
+    {
+      "id": "GPRK-2",
+      "ticker": "GPRK",
+      "name": "Geopark Limited",
+      "sector": "Energy",
+      "profile_sha256": "639704a42782ce5dbb2e8bd9f2876d3de243cd939947d80ef1d3753502c3811b",
+      "source": {
+        "accepted_at": "2026-04-01T00:35:16.000Z",
+        "accession": "0001104659-26-037819",
+        "characters": 22930,
+        "document": "gprk-20251231xex99d1.htm",
+        "filing_date": "2026-03-31",
+        "form": "20-F",
+        "id": "082e7b79821050bce59a9932a2430505c7038013a55e24a14ae4fe6eab65be1f",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "gprk-20251231xex99d1.htm",
+        "section_ordinal": 242,
+        "sha256": "a48a926adbe4115e76fa68783d817676fbc19e8551ba10d61d14967fb35bf0b5",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1464591/000110465926037819/gprk-20251231xex99d1.htm"
+      },
+      "paragraph_id": "52a8324dfd4f04a7202b45c61eca812a54ba852e9cefa2835e9457c5b5546079",
+      "source_span": [
+        2356,
+        2439
+      ],
+      "text": "A field examination was not considered necessary for the purposes of this report.\n\n",
+      "expected": [],
+      "context_text": "Information used in this evaluation was obtained from GeoPark. In the preparation of this report we have relied, without independent verification, upon such information furnished by GeoPark with respect to the property interests being evaluated, production from such properties, current costs of operation and development, current prices for production, agreements relating to current and future operations and sale of production, and various other information and data that were accepted as represented. A field examination was not considered necessary for the purposes of this report.\n\n"
+    },
+    {
+      "id": "GPRK-3",
+      "ticker": "GPRK",
+      "name": "Geopark Limited",
+      "sector": "Energy",
+      "profile_sha256": "639704a42782ce5dbb2e8bd9f2876d3de243cd939947d80ef1d3753502c3811b",
+      "source": {
+        "accepted_at": "2026-04-01T00:35:16.000Z",
+        "accession": "0001104659-26-037819",
+        "characters": 58943,
+        "document": "gprk-20251231x20f.htm",
+        "filing_date": "2026-03-31",
+        "form": "20-F",
+        "id": "2624723643fa4700b7089ea17c6660b57b3d7e2f2db8503a82c366cf6145a142",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "ITEM 10. ADDITIONAL INFORMATION",
+        "section_ordinal": 209,
+        "sha256": "c03d288a5fa7644548f3197d41b1707d5d735ab01a6bcdcdcc0cbbb24fb12bec",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1464591/000110465926037819/gprk-20251231x20f.htm"
+      },
+      "paragraph_id": "35a61af9bd10f2bb4bb3a64b644963cb441e3212a6da910b17355d28fd4e7a50",
+      "source_span": [
+        42571,
+        42840
+      ],
+      "text": "Further, no claim may be brought in Bermuda against us or our directors and officers in the first instance for violations of U.S. federal securities laws because these laws have no extraterritorial jurisdiction under Bermuda law and do not have force of law in Bermuda.",
+      "expected": [],
+      "context_text": "An action brought pursuant to a public or penal law, the purpose of which is the enforcement of a sanction, power or right at the instance of the state in its sovereign capacity, may not be entertained by a Bermuda court. Certain remedies available under the laws of U.S. jurisdictions, including certain remedies under U.S. federal securities laws, may not be available under Bermuda law or enforceable in a Bermuda court, as they may be contrary to Bermuda public policy. Further, no claim may be brought in Bermuda against us or our directors and officers in the first instance for violations of U.S. federal securities laws because these laws have no extraterritorial jurisdiction under Bermuda law and do not have force of law in Bermuda. A Bermuda court may, however, impose civil liability on us or our directors and officers if the facts alleged in a complaint constitute or give rise to a cause of action under Bermuda law. However, section 281 of the Companies Act allows a Bermuda court, in certain circumstances, to relieve officers and directors of Bermuda companies of liability for acts of negligence, breach of duty or trust or other defaults.\n\n"
+    },
+    {
+      "id": "MUR-1",
+      "ticker": "MUR",
+      "name": "Murphy Oil Corp",
+      "sector": "Energy",
+      "profile_sha256": "7258d3d35adfc9f2719123cbc11018d67e25060c766aa76a57a0c5cbb76369e2",
+      "source": {
+        "accepted_at": "2026-02-26T02:30:50.000Z",
+        "accession": "0001628280-26-011709",
+        "characters": 32772,
+        "document": "mur-20251231xex995.htm",
+        "filing_date": "2026-02-25",
+        "form": "10-K",
+        "id": "86435b00d181885ef3c145ffba6aa479aa17b19eb8d947d005fd2b36165a93ca",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "mur-20251231xex995.htm",
+        "section_ordinal": 245,
+        "sha256": "96b3ea681f626028f048056d2c6a0f74f95b48fd9c93287e513641db1cc69f43",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/717423/000162828026011709/mur-20251231xex995.htm"
+      },
+      "paragraph_id": "16bb348cc69594ea48dde7283e40b41e657acbb828a4337d9deefa26c154428b",
+      "source_span": [
+        8344,
+        8779
+      ],
+      "text": "RM Signature: RM APEGA ID#: 73297 Date: January 27, 2026 PERMIT NUMBER: P 2066 The Association of Professional Engineers and Geoscientists of Alberta (APEGA) Page: 5 of 19 INTRODUCTION GLJ Ltd. (GLJ) was commissioned by Murphy Oil Corporation (the “Company”), to prepare a reserves audit of the Company’s proved (1P) reserves and net oil and gas reserves in the Hibernia and Terra Nova assets, located offshore in Newfoundland, Canada.",
+      "expected": [
+        {
+          "text": "PERMIT NUMBER: P 2066",
+          "span": [
+            57,
+            78
+          ],
+          "category": "named_permit",
+          "attachment": "third_party",
+          "direct": false
+        }
+      ],
+      "context_text": "INDEPENDENT PETROLEUM CONSULTANTS’ CONSENT The undersigned firm of Independent Petroleum Consultants of Calgary, Alberta, Canada has prepared Audit of Murphy Oil Corporation (the “Company”) Canadian oil and gas properties and hereby gives consent to the use of its name and to the said estimates. In the course of the audit, the Company provided GLJ Ltd. personnel with basic information which included land data, well information, geological information, reservoir studies, estimates of on-stream dates, contract information, current hydrocarbon product prices, operating cost data, capital budget forecasts, financial data and future operating plans. According to the Standards Pertaining to the Estimating and Auditing of Oil and Gas Reserves Information (SPE auditing standards) published by the Society of Petroleum Engineers (2019), “An audit is an examination of Reserves information that is conducted for the purpose of expressing an opinion as to whether such Reserves information, in the aggregate, is reasonable and has been estimated by qualified individuals and presented in conformity with generally accepted petroleum engineering and evaluation principles and in compliance with the relevant Reserves definitions”. Based on our review, including the data, technical processes and interpretations presented by the Company, it is our opinion that the overall procedures and methodologies utilized by the Company in preparing their estimates of the proved reserves as of December 31, 2025 comply with the current SEC regulations, and that the overall proved reserves for the reviewed properties as estimated by the Company are, in the aggregate, reasonable within the established audit tolerance guidelines of 10 percent set forth in the SPE auditing standards. Sarah C. Taylor, P.Geo. Manager January 27, 2026 ID#73044 Patrick A. Olenick, P.Eng. Senior Vice President January 27, 2026 ID#67686 PERMIT TO PRACTICE GLJ LTD. RM Signature: RM APEGA ID#: 73297 Date: January 27, 2026 PERMIT NUMBER: P 2066 The Association of Professional Engineers and Geoscientists of Alberta (APEGA) Page: 5 of 19 INTRODUCTION GLJ Ltd. (GLJ) was commissioned by Murphy Oil Corporation (the “Company”), to prepare a reserves audit of the Company’s proved (1P) reserves and net oil and gas reserves in the Hibernia and Terra Nova assets, located offshore in Newfoundland, Canada. The effective date of the reserves estimates is December 31, 2025 and the reserves audit was completed on January 21, 2026. The estimates audited by GLJ were prepared by the Company based on the definitions and disclosure guidelines of the United States Securities and Exchange Commission contained in the Title 17, Code of Federal Regulations, Modernization of Oil and Gas Reporting, Final Rule released January 14, 2009, in the Federal Register (SEC regulations). GLJ’s third party reserves audit was prepared for public disclosure by the Company in filings made with the SEC in accordance with the disclosure requirements set forth in the SEC regulations. According to the Standards Pertaining to the Estimating and Auditing of Oil and Gas Reserves Information (SPE auditing standards) published by the Society of Petroleum Engineers (2019), “A Reserves audit is the process of reviewing certain of the pertinent facts interpreted and assumptions made that have resulted in an estimate of Reserves and/or Reserves information prepared by others and the rendering of an opinion about the appropriateness of the methodologies used, the adequacy and quality of the data relied upon, the depth and thoroughness of the Reserves estimation process, the categorization of Reserves appropriate to the relevant definitions used, and the reasonableness of the estimated Reserves quantities and/or the Reserves information.” (section 2.2 (g)). Reserves Information may consist of various estimates pertaining to the extent and value of petroleum properties. Estimates of reserves and projections of production were generally prepared using well information and production data available to approximately July 31, 2025. Based on our review, including the data, technical processes and interpretations presented by the Company, it is our opinion that the overall procedures and methodologies utilized by the Company in preparing their estimates of the proved reserves as of December 31, 2025 comply with the current SEC regulations, and that the overall proved reserves for the reviewed properties as estimated by the Company are, in the aggregate, reasonable within the established audit tolerance guidelines of 10 percent set forth in the SPE auditing standards. For the reserves and income projections, the Company stated they used unweighted arithmetic average prices in effect at the first day of the month during the 12-month period prior to December 31, 2025 (the effective date), unless prices were defined by contractual arrangements, as required by the SEC regulations. Reserves were estimated by the Company to the economic limit of production. The following table sets forth the total proved net after royalty reserves under constant prices and costs as estimated by the Company attributable to the properties that GLJ reviewed: Page: 6 of 19 \n\n \n\n"
+    },
+    {
+      "id": "MUR-2",
+      "ticker": "MUR",
+      "name": "Murphy Oil Corp",
+      "sector": "Energy",
+      "profile_sha256": "7258d3d35adfc9f2719123cbc11018d67e25060c766aa76a57a0c5cbb76369e2",
+      "source": {
+        "accepted_at": "2026-08-06T00:39:19.000Z",
+        "accession": "0001628280-26-053437",
+        "characters": 3422,
+        "document": "mur-20260630xex312.htm",
+        "filing_date": "2026-08-05",
+        "form": "10-Q",
+        "id": "281400626ef891e5810289612872cf6f63265a6f17c95bea636fcaec5979d317",
+        "kind": "update",
+        "report_date": "2026-06-30",
+        "section": "mur-20260630xex312.htm",
+        "section_ordinal": 518,
+        "sha256": "4d2407995879d4bd5da0bca2b4161fa3b9a354599a924deb4c51b6185a6ad561",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/717423/000162828026053437/mur-20260630xex312.htm"
+      },
+      "paragraph_id": "1289f3918a7669f73e1de1876fbc419629aee88096d7b84ed44ce0a790ead6ab",
+      "source_span": [
+        856,
+        1184
+      ],
+      "text": "4.The registrant’s other certifying officer and I are responsible for establishing and maintaining disclosure controls and procedures (as defined in Exchange Act Rules 13a-15(e) and 15d-15(e)) and internal control over financial reporting (as defined in Exchange Act Rules 13a-15(f) and 15d-15(f)) for the registrant and have:\n\n",
+      "expected": [
+        {
+          "text": "Exchange Act",
+          "span": [
+            149,
+            161
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "Exchange Act",
+          "span": [
+            254,
+            266
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "Rules 13a-15(e)",
+          "span": [
+            162,
+            177
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "15d-15(e)",
+          "span": [
+            182,
+            191
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "Rules 13a-15(f)",
+          "span": [
+            267,
+            282
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "15d-15(f)",
+          "span": [
+            287,
+            296
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        }
+      ],
+      "context_text": "4.The registrant’s other certifying officer and I are responsible for establishing and maintaining disclosure controls and procedures (as defined in Exchange Act Rules 13a-15(e) and 15d-15(e)) and internal control over financial reporting (as defined in Exchange Act Rules 13a-15(f) and 15d-15(f)) for the registrant and have:\n\n"
+    },
+    {
+      "id": "MUR-3",
+      "ticker": "MUR",
+      "name": "Murphy Oil Corp",
+      "sector": "Energy",
+      "profile_sha256": "7258d3d35adfc9f2719123cbc11018d67e25060c766aa76a57a0c5cbb76369e2",
+      "source": {
+        "accepted_at": "2026-02-26T02:30:50.000Z",
+        "accession": "0001628280-26-011709",
+        "characters": 4722,
+        "document": "mur-20251231.htm",
+        "filing_date": "2026-02-25",
+        "form": "10-K",
+        "id": "b738fca80a726c4387b4b170ce10dc902ce856b773eefbadd00a0e7413fad758",
+        "kind": "identity_source",
+        "report_date": "2025-12-31",
+        "section": "preamble",
+        "section_ordinal": 126,
+        "sha256": "9f90f7aecdb6abb0bcbf070af93c585809d74a58340940c55e28dc8560d04394",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/717423/000162828026011709/mur-20251231.htm"
+      },
+      "paragraph_id": "d87b36aabbacbf1f4a2374ffa61c38754d49ea298023364dfe02829eac44d323",
+      "source_span": [
+        1299,
+        1418
+      ],
+      "text": "Indicate by check mark if the registrant is a well-known seasoned issuer, as defined in Rule 405 of the Securities Act.",
+      "expected": [
+        {
+          "text": "Rule 405",
+          "span": [
+            88,
+            96
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "Securities Act",
+          "span": [
+            104,
+            118
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "Indicate by check mark if the registrant is a well-known seasoned issuer, as defined in Rule 405 of the Securities Act. Yes ☒ No ☐ \n\n"
+    },
+    {
+      "id": "BMNR-1",
+      "ticker": "BMNR",
+      "name": "BitMine Immersion Technologies Inc",
+      "sector": "Financial",
+      "profile_sha256": "a558f3de86a57fbea577b4a55359733e8a1d4c37c42adfc0068c6c64e6d50bdf",
+      "source": {
+        "accepted_at": "2026-06-06T00:30:45.000Z",
+        "accession": "0001493152-26-027502",
+        "characters": 108030,
+        "document": "ex1-1.htm",
+        "filing_date": "2026-06-05",
+        "form": "8-K",
+        "id": "4832316251c3c1ef6c0d184e8abf6823199ee881baed434eb0b95672374e0b21",
+        "kind": "update",
+        "report_date": "2026-06-04",
+        "section": "ex1-1.htm",
+        "section_ordinal": 844,
+        "sha256": "2b6c086931e75f655279c5e2df7140b067d291a9d03fbbf5ee7518f98f797699",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1829311/000149315226027502/ex1-1.htm"
+      },
+      "paragraph_id": "51ddbe9550341ed23a6499f0aa50b86820494045330dc7322608eaa843420246",
+      "source_span": [
+        18278,
+        18411
+      ],
+      "text": "Act and the Exchange Act, including pursuant to Section 13(a) or 15(d) thereof, for the 12 months preceding the date hereof (or such\n",
+      "expected": [
+        {
+          "text": "Exchange Act",
+          "span": [
+            12,
+            24
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "Act and the Exchange Act, including pursuant to Section 13(a) or 15(d) thereof, for the 12 months preceding the date hereof (or such\n"
+    },
+    {
+      "id": "BMNR-2",
+      "ticker": "BMNR",
+      "name": "BitMine Immersion Technologies Inc",
+      "sector": "Financial",
+      "profile_sha256": "a558f3de86a57fbea577b4a55359733e8a1d4c37c42adfc0068c6c64e6d50bdf",
+      "source": {
+        "accepted_at": "2026-07-15T00:15:37.000Z",
+        "accession": "0001628280-26-048157",
+        "characters": 3162,
+        "document": "bmnr-20260531.htm",
+        "filing_date": "2026-07-14",
+        "form": "10-Q",
+        "id": "ec241afa49a453ff03ed0a3f2e4b9d140959002b30d93357c8161e6a208e41de",
+        "kind": "identity_source",
+        "report_date": "2026-05-31",
+        "section": "preamble",
+        "section_ordinal": 1021,
+        "sha256": "8aaa70608ff7bfb5114b11630ad614e883bed394ada48574368bc7abb16676a2",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1829311/000162828026048157/bmnr-20260531.htm"
+      },
+      "paragraph_id": "0868673917fc7dcf06ccb18ef74f3f8393532977c74e026cce591bdc9195aa7f",
+      "source_span": [
+        2600,
+        2857
+      ],
+      "text": "If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. ☐\n\n \n\n",
+      "expected": [
+        {
+          "text": "Exchange Act",
+          "span": [
+            237,
+            249
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. ☐\n\n \n\n"
+    },
+    {
+      "id": "BMNR-3",
+      "ticker": "BMNR",
+      "name": "BitMine Immersion Technologies Inc",
+      "sector": "Financial",
+      "profile_sha256": "a558f3de86a57fbea577b4a55359733e8a1d4c37c42adfc0068c6c64e6d50bdf",
+      "source": {
+        "accepted_at": "2026-07-15T00:15:37.000Z",
+        "accession": "0001628280-26-048157",
+        "characters": 3249,
+        "document": "bmnr-20260531.htm",
+        "filing_date": "2026-07-14",
+        "form": "10-Q",
+        "id": "1869153bba59cc25c47f6daee525ebd208f43c9496e6ead94ad2c8b772cc7a50",
+        "kind": "financial",
+        "report_date": "2026-05-31",
+        "section": "Item 6. Exhibits.",
+        "section_ordinal": 1043,
+        "sha256": "60df5a62af8f7a9803b7233571cb5f535a221f4acf05cf3895c89fda92452255",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1829311/000162828026048157/bmnr-20260531.htm"
+      },
+      "paragraph_id": "069ea1515838be815ac0ea2aa5350a4ce2d3210f6af7b4b19c5315bb4f1c7da8",
+      "source_span": [
+        2030,
+        2126
+      ],
+      "text": "Section 1350, as adopted pursuant to Section 906 of the Sarbanes-Oxley Act of 2002, as amended\n\n",
+      "expected": [
+        {
+          "text": "Sarbanes-Oxley Act of 2002",
+          "span": [
+            56,
+            82
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "Certification of principal financial officer pursuant to 18 U.S.C. Section 1350, as adopted pursuant to Section 906 of the Sarbanes-Oxley Act of 2002, as amended\n\n"
+    },
+    {
+      "id": "SLQT-1",
+      "ticker": "SLQT",
+      "name": "SelectQuote Inc",
+      "sector": "Financial",
+      "profile_sha256": "c316d7a8cd122bfff3c5dfb3ecf8c61d8ead4e6f8c571451f65912357405b3b7",
+      "source": {
+        "accepted_at": "2026-08-25T11:02:13.000Z",
+        "accession": "0001794783-26-000056",
+        "characters": 12562,
+        "document": "selectquoteincjune302026.htm",
+        "filing_date": "2026-08-25",
+        "form": "8-K",
+        "id": "3aed9e972876831136910e04a9b76b10390c30a1f99b34320f96d1b85d6dec2d",
+        "kind": "update",
+        "report_date": "2026-08-25",
+        "section": "selectquoteincjune302026.htm",
+        "section_ordinal": 5,
+        "sha256": "1b9ab9bd6711ddd47c4e06b13b0cbb1f539fa4929299ba0a07250a1b45796ffd",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1794783/000179478326000056/selectquoteincjune302026.htm"
+      },
+      "paragraph_id": "3b8d96e2930c2960d15e6fd28e584c563429952e3123dfef9939113106c4eeb9",
+      "source_span": [
+        5401,
+        5689
+      ],
+      "text": "Any forward-looking statement speaks only as of the date on which it is made, and, except as otherwise required by law, we do not undertake any obligation to publicly update or review any forward-looking statement, whether as a result of new information, future developments or otherwise.",
+      "expected": [],
+      "context_text": "Forward-Looking Statements This presentation contains forward-looking statements. These forward-looking statements reflect our current views with respect to, among other things, future events and our financial performance. These statements are often, but not always, made through the use of words or phrases such as “may,” “should,” “could,” “predict,” “potential,” “believe,” “will likely result,” “expect,” “continue,” “will,” “anticipate,” “seek,” “estimate,” “intend,” “plan,” “projection,” “would” and “outlook,” or the negative version of those words or other comparable words or phrases of a future or forward-looking nature. These forward-looking statements are not historical facts and are based on current expectations, estimates and projections about our industry, management’s beliefs and certain assumptions made by management, many of which, by their nature, are inherently uncertain and beyond our control. Accordingly, we caution you that any such forward-looking statements are not guarantees of future performance and are subject to risks, assumptions and uncertainties that are difficult to predict. Although we believe that the expectations reflected in these forward-looking statements are reasonable as of the date made, actual results may prove to be materially different from the results expressed or implied by the forward-looking statements. There are or will be important factors that could cause our actual results to differ materially from those indicated in these forward-looking statements, including, but not limited to, the following: our reliance on a limited number of insurance carrier partners and any potential termination of those relationships or failure to develop new relationships; existing and future laws and regulations affecting the health insurance market; changes in health insurance products offered by our insurance carrier partners and the health insurance market generally; insurance carriers offering products and services directly to consumers; changes to commissions paid by insurance carriers and underwriting practices; competition with brokers, exclusively online brokers and carriers who opt to sell policies directly to consumers; competition from government-run health insurance exchanges; developments in the U.S. health insurance system; our dependence on revenue from carriers in our senior segment and downturns in the senior health as well as life, automotive and home insurance industries; our ability to develop new offerings and penetrate new vertical markets; risks from third-party products; failure to enroll individuals during the Medicare annual enrollment period; our ability to attract, integrate and retain qualified personnel; our dependence on lead providers and ability to compete for leads; failure to obtain and/or convert sales leads to actual sales of insurance policies; access to data from consumers and insurance carriers; accuracy of information provided from and to consumers during the insurance shopping process; cost- effective advertisement through internet search engines; ability to contact consumers and market products by telephone; global economic conditions, including inflation; disruption to operations as a result of future acquisitions; significant estimates and assumptions in the preparation of our financial statements; impairment of goodwill; potential litigation and other legal proceedings or inquiries; our existing and future indebtedness; our ability to maintain compliance with our debt covenants; access to additional capital; our ability to regain and maintain compliance with NYSE listing standards; failure to protect our intellectual property and our brand; fluctuations in our financial results caused by seasonality; accuracy and timeliness of commissions reports from insurance carriers; timing of insurance carriers’ approval and payment practices; factors that impact our estimate of the constrained lifetime value of commissions per policyholder; changes in accounting rules, tax legislation and other legislation; disruptions or failures of our technological infrastructure and platform; failure to maintain relationships with third-party service providers; cybersecurity breaches or other attacks involving our systems or those of our insurance carrier partners or third-party service providers; our ability to protect consumer information and other data; failure to market and sell Medicare plans effectively or in compliance with laws; and other factors related to our pharmacy business, including manufacturing or supply chain disruptions, access to and demand for prescription drugs, changes in reimbursement rates under our contracts with pharmacy benefit managers, and regulatory changes or other industry developments that may affect our pharmacy operations. For a further discussion of these and other risk factors that could impact our future results and performance, see the section entitled “Risk Factors” in the most recent Annual Report on Form 10-K (the “Annual Report”) and subsequent periodic reports filed by us with the Securities and Exchange Commission. Accordingly, you should not place undue reliance on any such forward-looking statements. Any forward-looking statement speaks only as of the date on which it is made, and, except as otherwise required by law, we do not undertake any obligation to publicly update or review any forward-looking statement, whether as a result of new information, future developments or otherwise. No Offer or Solicitation; Further Information This presentation is for informational purposes only and is not an offer to sell with respect to any securities. This presentation should be read together with “Management’s Discussion and Analysis of Financial Condition and Results of Operations” and the consolidated financial statements and the related notes thereto included in the Annual Report and subsequent quarterly reports. Non-GAAP Financial Measures This presentation includes certain non-GAAP financial measures intended to supplement, not substitute for, comparable GAAP measures. To supplement our financial statements presented in accordance with GAAP and to provide investors with additional information regarding our GAAP financial results, we have presented in this presentation Adjusted EBITDA, which, when presented on a consolidated basis, is a non-GAAP financial measure. This non-GAAP financial measure is not based on any standardized methodology prescribed by GAAP and is not necessarily comparable to any similarly titled measure presented by other companies. We define Adjusted EBITDA as net income (loss) plus interest expense, income taxes, depreciation and amortization, changes in fair value of warrant liabilities, loss on extinguishment of debt, and certain add-backs for non-cash or non-recurring expenses, including restructuring and share-based compensation expenses. The most directly comparable GAAP measure for Adjusted EBITDA is net income (loss). We monitor and have presented in this presentation Adjusted EBITDA because it is a key measure used by our management and Board of Directors in understanding and evaluating our operating performance, establishing budgets, and developing operational goals for managing our business. In particular, we believe that excluding the impact of certain expenses in calculating Adjusted EBITDA can provide a useful measure for period-to-period comparisons of our core operating performance. For further discussion regarding this non-GAAP measure, please see today’s press release. A reconciliation of the differences between Adjusted EBITDA and its most directly comparable GAAP financial measure, net income (loss), is set forth below on slide 13. The Company is unable to provide a quantitative reconciliation of forward-looking Adjusted EBITDA to its most directly comparable GAAP measure without unreasonable effort because it is not possible to predict certain items included in the calculation of such GAAP measure, including the fair value of outstanding warrants to purchase shares of the Company's common stock. The unavailable information could have a significant impact on the Company's GAAP financial results. Disclaimer 2 \n\n \n\n"
+    },
+    {
+      "id": "SLQT-2",
+      "ticker": "SLQT",
+      "name": "SelectQuote Inc",
+      "sector": "Financial",
+      "profile_sha256": "c316d7a8cd122bfff3c5dfb3ecf8c61d8ead4e6f8c571451f65912357405b3b7",
+      "source": {
+        "accepted_at": "2026-08-25T13:23:04.000Z",
+        "accession": "0001794783-26-000057",
+        "characters": 2530,
+        "document": "slqt-20260630.htm",
+        "filing_date": "2026-08-25",
+        "form": "10-K",
+        "id": "12c17633dabf11933e0e995eeb95e4a7e5227e76232cf912cdb5ee57ea37177c",
+        "kind": "people",
+        "report_date": "2026-06-30",
+        "section": "PART III\n\nITEM 10. DIRECTORS, EXECUTIVE OFFICERS AND CORPORATE GOVERNANCE",
+        "section_ordinal": 159,
+        "sha256": "1338859a92a81e945317703f40a8ff7934d8fda5aca950222103cb01fe84b265",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1794783/000179478326000057/slqt-20260630.htm"
+      },
+      "paragraph_id": "6b5b63f3d442b416f71dd46498f91bf0be66781315328e2625622f9e03aee355",
+      "source_span": [
+        2337,
+        2530
+      ],
+      "text": "We intend to make all required disclosure regarding any amendments to, or waivers from, any provisions of our Code of Business Conduct at the same location of our website, www.selectquote.com.\n",
+      "expected": [],
+      "context_text": "We have adopted a written Code of Business Conduct and Ethics (our “Code of Business Conduct”), which applies to all our directors, officers, and other employees, including our principal executive officer and principal financial officer. A copy of our Code of Business Conduct is available on our corporate website, www.selectquote.com, under “Investor Relations—Governance—Governance Documents.” The information contained on our website does not constitute a part of this Annual Report on Form 10-K. We will provide any person, without charge, upon request, a copy of our Code of Business Conduct. Such requests should be made in writing to the attention of our General Counsel at the following address: SelectQuote, Inc., 6800 West 115th Street, Suite 2511, Overland Park, Kansas 66211. We intend to make all required disclosure regarding any amendments to, or waivers from, any provisions of our Code of Business Conduct at the same location of our website, www.selectquote.com.\n"
+    },
+    {
+      "id": "SLQT-3",
+      "ticker": "SLQT",
+      "name": "SelectQuote Inc",
+      "sector": "Financial",
+      "profile_sha256": "c316d7a8cd122bfff3c5dfb3ecf8c61d8ead4e6f8c571451f65912357405b3b7",
+      "source": {
+        "accepted_at": "2026-08-25T13:23:04.000Z",
+        "accession": "0001794783-26-000057",
+        "characters": 11359,
+        "document": "slqt-20260630.htm",
+        "filing_date": "2026-08-25",
+        "form": "10-K",
+        "id": "84a7a29bc686fd484e88f549668e3847593d787bd5461bc9c4ff71e026d5c220",
+        "kind": "financial",
+        "report_date": "2026-06-30",
+        "section": "PART IV\n\nITEM 15. EXHIBIT AND FINANCIAL STATEMENT SCHEDULES",
+        "section_ordinal": 164,
+        "sha256": "57d9335fa050116cca85fbc5f359c66bc05e4b431ae46942ff4f4c9709ba093b",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1794783/000179478326000057/slqt-20260630.htm"
+      },
+      "paragraph_id": "6be94a71096a49cfd49b840e5920eefe66a6fcfe3fe57f771d126e24cf9e2061",
+      "source_span": [
+        10078,
+        10164
+      ],
+      "text": "Section 1350, as adopted pursuant to Section 906 of the Sarbanes-Oxley Act of 2002\n\n \n",
+      "expected": [
+        {
+          "text": "Sarbanes-Oxley Act of 2002",
+          "span": [
+            56,
+            82
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": " Certification of Chief Financial Officer of SelectQuote, Inc. pursuant to 18 U.S.C. Section 1350, as adopted pursuant to Section 906 of the Sarbanes-Oxley Act of 2002\n\n \n"
+    },
+    {
+      "id": "ORIC-1",
+      "ticker": "ORIC",
+      "name": "ORIC Pharmaceuticals Inc",
+      "sector": "Healthcare",
+      "profile_sha256": "8e65ec569f6b44cb941bc4a6a9b76f85248dbdddaf43c66a896ddc392375d727",
+      "source": {
+        "accepted_at": "2026-08-03T20:20:34.000Z",
+        "accession": "0001193125-26-330631",
+        "characters": 335811,
+        "document": "oric-20260630.htm",
+        "filing_date": "2026-08-03",
+        "form": "10-Q",
+        "id": "9bacd75fd6dbca53586800c4beb389203dda9457f1df8a53ade91f5887cfd257",
+        "kind": "risk",
+        "report_date": "2026-06-30",
+        "section": "Item 1A. Risk Factors.",
+        "section_ordinal": 313,
+        "sha256": "58610023312a894a1a0849a1501317dc5fc0004efd0925aac712845f7d2fcab4",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1796280/000119312526330631/oric-20260630.htm"
+      },
+      "paragraph_id": "d4cee175c2926245f9f34cd9f31e771361c32c50758d8fe20d5d88fb48426283",
+      "source_span": [
+        278796,
+        278908
+      ],
+      "text": "our diligence obligations under the license agreement and what activities satisfy those diligence obligations;\n\n",
+      "expected": [],
+      "context_text": "our diligence obligations under the license agreement and what activities satisfy those diligence obligations;\n\n"
+    },
+    {
+      "id": "ORIC-2",
+      "ticker": "ORIC",
+      "name": "ORIC Pharmaceuticals Inc",
+      "sector": "Healthcare",
+      "profile_sha256": "8e65ec569f6b44cb941bc4a6a9b76f85248dbdddaf43c66a896ddc392375d727",
+      "source": {
+        "accepted_at": "2026-02-23T21:15:53.000Z",
+        "accession": "0001193125-26-064005",
+        "characters": 36533,
+        "document": "oric-20251231.htm",
+        "filing_date": "2026-02-23",
+        "form": "10-K",
+        "id": "4be0aefb34971901b3b1f950b230607a0165cfa5685915676e70955fec6b9b66",
+        "kind": "update",
+        "report_date": "2025-12-31",
+        "section": "Item 7. Management’s Discussion and Analysis of Financial Condition and Results of Operations.",
+        "section_ordinal": 104,
+        "sha256": "230db97aa1f3ce24e54cd49f207764a88a3a77c0ecc9a8bcf1a037712250f9aa",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1796280/000119312526064005/oric-20251231.htm"
+      },
+      "paragraph_id": "b6ff24b69aac252f3ce167ed5e89ae246bedcb9d96169f014060557b73075470",
+      "source_span": [
+        4390,
+        4649
+      ],
+      "text": "Enozertinib (formerly ORIC-114), a brain-penetrant, orally bioavailable, irreversible inhibitor targeting EGFR exon 20 and EGFR atypical mutations, for which we licensed development and commercialization rights from Voronoi with the Voronoi License Agreement.",
+      "expected": [],
+      "context_text": "Enozertinib (formerly ORIC-114), a brain-penetrant, orally bioavailable, irreversible inhibitor targeting EGFR exon 20 and EGFR atypical mutations, for which we licensed development and commercialization rights from Voronoi with the Voronoi License Agreement. In the fourth quarter of 2021, we filed a CTA in South Korea for enozertinib, which was cleared in the first quarter of 2022. We also filed and cleared an IND with the FDA for enozertinib in the third quarter of 2022. Enozertinib is being evaluated in Phase 1b trials in EGFR exon 20 and PACC mutated NSCLC, which allow enrollment of patients with CNS metastases that are either treated or untreated but asymptomatic. We reported initial Phase 1b data with enozertinib as a monotherapy in patients with EGFR exon 20 mutations at the ESMO Congress in October 2023, which demonstrated both systemic and intracranial activity across multiple dose levels in a heavily pre-treated patient population. In April 2024, we announced the selection of two provisional RP2Ds of enozertinib at 80 mg and 120 mg QD. In December 2025, we reported additional Phase 1b data at the 2025 ESMO Asia Congress in treatment-naïve and in previously treated NSCLC patients with EGFR exon 20 and EGFR atypical mutations. EGFR atypical mutations are a heterogeneous group of non-classical mutations, with PACC mutations comprising the largest subset. Enozertinib achieved highly competitive systemic response rates as well as profound antitumor activity in the CNS in EGFR exon 20 and EGFR PACC patients. Enozertinib also demonstrated a well-tolerated safety profile in \n\n \n\n"
+    },
+    {
+      "id": "ORIC-3",
+      "ticker": "ORIC",
+      "name": "ORIC Pharmaceuticals Inc",
+      "sector": "Healthcare",
+      "profile_sha256": "8e65ec569f6b44cb941bc4a6a9b76f85248dbdddaf43c66a896ddc392375d727",
+      "source": {
+        "accepted_at": "2026-02-23T21:15:53.000Z",
+        "accession": "0001193125-26-064005",
+        "characters": 166803,
+        "document": "oric-20251231.htm",
+        "filing_date": "2026-02-23",
+        "form": "10-K",
+        "id": "4fd9180ec947aedfb3cb08618b606427e49592381306975c335331c2292e1c84",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "PART I\n\nItem 1. Business.",
+        "section_ordinal": 95,
+        "sha256": "69aa5f0d91150bb81a2e7fca01dceb7c41091021501e10df98c8e7c9cfd0bbe5",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1796280/000119312526064005/oric-20251231.htm"
+      },
+      "paragraph_id": "931e2edb1829b862a155cdaaad93d52915613ef7889cb1076e76a962089831bf",
+      "source_span": [
+        60744,
+        61102
+      ],
+      "text": "Pursuant to an amendment to the Voronoi License Agreement that we entered into with Voronoi on March 20, 2024, we also obtained the right to conduct and control certain clinical trials for the licensed products at specified clinical sites within Voronoi’s territory to support the development and commercialization of licensed products in the ORIC Territory.",
+      "expected": [],
+      "context_text": "On October 19, 2020, we entered into the Voronoi License Agreement, a license and collaboration agreement, with Voronoi. The Voronoi License Agreement gives us access to Voronoi’s preclinical stage EGFR exon 20 mutation program, including a lead product candidate now designated as enozertinib. Under the Voronoi License Agreement, Voronoi granted us an exclusive, sublicensable license under Voronoi’s rights to certain patent applications directed to certain small molecule compounds that bind to EGFR with one or more exon 20 mutations and certain related know-how, in each case, to develop and commercialize certain licensed compounds and licensed products incorporating any such compound in the ORIC Territory, defined as worldwide other than in the People’s Republic of China, Hong Kong, Macau and Taiwan. Pursuant to an amendment to the Voronoi License Agreement that we entered into with Voronoi on March 20, 2024, we also obtained the right to conduct and control certain clinical trials for the licensed products at specified clinical sites within Voronoi’s territory to support the development and commercialization of licensed products in the ORIC Territory. Under the Voronoi License Agreement, Voronoi had the right to perform certain mutually agreed upon development activities. Except for Voronoi’s right to participate in such development activities, we are wholly responsible for development and commercialization of licensed products in the ORIC Territory. In addition, we are obligated to use commercially reasonable efforts to develop and commercialize at least one licensed product in certain major markets in the ORIC Territory. \n\n"
+    },
+    {
+      "id": "PRME-1",
+      "ticker": "PRME",
+      "name": "Prime Medicine Inc",
+      "sector": "Healthcare",
+      "profile_sha256": "2efd7e8b11d81f1307551693910856428f5d3eebf1fbe58af4b7ed8f44725845",
+      "source": {
+        "accepted_at": "2026-08-06T12:03:39.000Z",
+        "accession": "0001628280-26-053883",
+        "characters": 10858,
+        "document": "prme-20260630.htm",
+        "filing_date": "2026-08-06",
+        "form": "10-Q",
+        "id": "93b08275165788556f88d5dd5f28a3bf96daa37da94829fcbf853f3758e63c3b",
+        "kind": "identity_source",
+        "report_date": "2026-06-30",
+        "section": "preamble",
+        "section_ordinal": 325,
+        "sha256": "7457a3aa9f23f34f08852726a427534602c091ad8e10ff415e1def5b53a94412",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1894562/000162828026053883/prme-20260630.htm"
+      },
+      "paragraph_id": "05c32996ed3799c36924644583bbbd4bbbdae1b338ae7d1375ffec3303857062",
+      "source_span": [
+        2803,
+        2915
+      ],
+      "text": "Indicate by check mark whether the registrant is a shell company (as defined in Rule 12b-2 of the Exchange Act).",
+      "expected": [
+        {
+          "text": "Rule 12b-2",
+          "span": [
+            80,
+            90
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "Exchange Act",
+          "span": [
+            98,
+            110
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "Indicate by check mark whether the registrant is a shell company (as defined in Rule 12b-2 of the Exchange Act). Yes ☐ No ☒\n\n"
+    },
+    {
+      "id": "PRME-2",
+      "ticker": "PRME",
+      "name": "Prime Medicine Inc",
+      "sector": "Healthcare",
+      "profile_sha256": "2efd7e8b11d81f1307551693910856428f5d3eebf1fbe58af4b7ed8f44725845",
+      "source": {
+        "accepted_at": "2026-03-03T13:19:51.000Z",
+        "accession": "0001628280-26-013569",
+        "characters": 125066,
+        "document": "prme-20251231.htm",
+        "filing_date": "2026-03-03",
+        "form": "10-K",
+        "id": "172ad544f5d69c16f79db6e5b9b11e5d8f494c2214dc038e267c1aa1bde60ade",
+        "kind": "financial",
+        "report_date": "2025-12-31",
+        "section": "Item 16. Form 10-K Summary",
+        "section_ordinal": 135,
+        "sha256": "e1fb10990d88f982b89492c1fde77e6e890ae4ebfad7c979e14cbf312f99aa90",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1894562/000162828026013569/prme-20251231.htm"
+      },
+      "paragraph_id": "b30561277e23ad6727ee0c32bd969d92d1110856c8c1a5e83da0a83179fd46d4",
+      "source_span": [
+        1375,
+        1585
+      ],
+      "text": "Pursuant to the requirements of the Securities Exchange Act of 1934, this report has been signed below by the following persons on behalf of the registrant and in the capacities and on the dates indicated.\n\n \n\n",
+      "expected": [
+        {
+          "text": "Securities Exchange Act of 1934",
+          "span": [
+            36,
+            67
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        }
+      ],
+      "context_text": "Pursuant to the requirements of the Securities Exchange Act of 1934, this report has been signed below by the following persons on behalf of the registrant and in the capacities and on the dates indicated.\n\n \n\n"
+    },
+    {
+      "id": "PRME-3",
+      "ticker": "PRME",
+      "name": "Prime Medicine Inc",
+      "sector": "Healthcare",
+      "profile_sha256": "2efd7e8b11d81f1307551693910856428f5d3eebf1fbe58af4b7ed8f44725845",
+      "source": {
+        "accepted_at": "2026-03-03T13:19:51.000Z",
+        "accession": "0001628280-26-013569",
+        "characters": 364108,
+        "document": "prme-20251231.htm",
+        "filing_date": "2026-03-03",
+        "form": "10-K",
+        "id": "2de8d94fa9d4e8ae0747239fba3beb3551eae1d32c4d4b5358d8827bc67701fb",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "Item 1A. Risk Factors",
+        "section_ordinal": 114,
+        "sha256": "1522bb763331ff1cc265af217f14af02dde97715f814a6b98f97dc49291954cd",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1894562/000162828026013569/prme-20251231.htm"
+      },
+      "paragraph_id": "0b0f844de327ff1ee95bff8f2b81174860f20846584725d7474fda76ddd46b89",
+      "source_span": [
+        146029,
+        146231
+      ],
+      "text": "The patent position of biotechnology and pharmaceutical companies generally is highly uncertain, involves complex legal and factual questions and has been the subject of much litigation in recent years.",
+      "expected": [],
+      "context_text": "The patent position of biotechnology and pharmaceutical companies generally is highly uncertain, involves complex legal and factual questions and has been the subject of much litigation in recent years. The field of genome editing has been the subject of extensive patenting activity and litigation. As a result, the issuance, scope, validity, enforceability and commercial value of our patent rights are highly uncertain and we may become involved in complex and costly litigation. Our pending and future patent applications may not result in patents being issued which protect our Prime Editing technology and product candidates we may develop or which effectively prevent others from commercializing competitive technologies and product candidates. For example, our provisional applications may never result in issued patents. A provisional patent application is not eligible to become an issued patent until, among other things, we file a non-provisional patent application within 12 months of filing the related provisional patent application. If we do not timely file non-provisional patent applications, we may lose our priority dates with respect to our provisional patent applications and any patent protection on the inventions disclosed in our provisional patent applications. While we intend to timely file non-provisional patent applications relating to our provisional patent applications, we cannot predict whether any of our patent applications for our technology and product candidates will result in the issuance of patents that effectively protect our technology and product candidates. Any failure to obtain or maintain patent protection with respect to our technology and product candidates would have a material adverse effect on our business, financial condition, results of operations and prospects.\n\n"
+    },
+    {
+      "id": "MNTS-1",
+      "ticker": "MNTS",
+      "name": "Momentus Inc",
+      "sector": "Industrials",
+      "profile_sha256": "253c6041fcc1554941a898c9accf42c98deb292ca44d6118b5335561030c4059",
+      "source": {
+        "accepted_at": "2026-08-11T18:23:12.000Z",
+        "accession": "0001628280-26-055624",
+        "characters": 1386,
+        "document": "a20260630-ex322xcfo.htm",
+        "filing_date": "2026-08-11",
+        "form": "10-Q",
+        "id": "779e5f22fdd38be70deb04d544588179a3000290f7614712179d93ace2337b9d",
+        "kind": "update",
+        "report_date": "2026-06-30",
+        "section": "a20260630-ex322xcfo.htm",
+        "section_ordinal": 491,
+        "sha256": "aacb28d1937120220eda243a9dc6b96306aa0b3b9aea560c79b1e0e12f15a0b6",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1781162/000162828026055624/a20260630-ex322xcfo.htm"
+      },
+      "paragraph_id": "a48877faea26ed14d8b3e23e5accee08ae228d0655d47f7fae1ff452e94700d7",
+      "source_span": [
+        1051,
+        1386
+      ],
+      "text": "This certification shall not be deemed “filed” for purposes of Section 18 of the Securities Exchange Act of 1934, as amended (the “Exchange Act”), or incorporated by reference in any filing under the Securities Act of 1933, as amended, or the Exchange Act, except as shall be expressly set forth by specific reference in such a filing.",
+      "expected": [
+        {
+          "text": "Securities Exchange Act of 1934",
+          "span": [
+            81,
+            112
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "Exchange Act",
+          "span": [
+            131,
+            143
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "Exchange Act",
+          "span": [
+            243,
+            255
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "Securities Act of 1933",
+          "span": [
+            200,
+            222
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "This certification shall not be deemed “filed” for purposes of Section 18 of the Securities Exchange Act of 1934, as amended (the “Exchange Act”), or incorporated by reference in any filing under the Securities Act of 1933, as amended, or the Exchange Act, except as shall be expressly set forth by specific reference in such a filing."
+    },
+    {
+      "id": "MNTS-2",
+      "ticker": "MNTS",
+      "name": "Momentus Inc",
+      "sector": "Industrials",
+      "profile_sha256": "253c6041fcc1554941a898c9accf42c98deb292ca44d6118b5335561030c4059",
+      "source": {
+        "accepted_at": "2026-08-14T20:01:53.000Z",
+        "accession": "0001140361-26-033135",
+        "characters": 7877,
+        "document": "ny20080239x1_8k.htm",
+        "filing_date": "2026-08-14",
+        "form": "8-K",
+        "id": "4bbc7de1670fbb9d47aec67f2255b1e1dd3a34addf1aac96f40e688265ae05fa",
+        "kind": "update",
+        "report_date": "2026-08-11",
+        "section": "ny20080239x1_8k.htm",
+        "section_ordinal": 529,
+        "sha256": "4bd9e8b20b5e63866a66ec64a15e0aa30635ae438063f5a67e686b6aa1bece54",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1781162/000114036126033135/ny20080239x1_8k.htm"
+      },
+      "paragraph_id": "b7c4c8cd63cf201cd81bcb9d5db4796e179fd9ca39e739a746734667268d93df",
+      "source_span": [
+        1249,
+        1348
+      ],
+      "text": "Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)\n\n \n\n \n\n \n\n \n\n",
+      "expected": [
+        {
+          "text": "Rule 425",
+          "span": [
+            35,
+            43
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "Securities Act",
+          "span": [
+            54,
+            68
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "17 CFR 230.425",
+          "span": [
+            70,
+            84
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)\n\n \n\n \n\n \n\n \n\n"
+    },
+    {
+      "id": "MNTS-3",
+      "ticker": "MNTS",
+      "name": "Momentus Inc",
+      "sector": "Industrials",
+      "profile_sha256": "253c6041fcc1554941a898c9accf42c98deb292ca44d6118b5335561030c4059",
+      "source": {
+        "accepted_at": "2026-04-16T13:25:34.000Z",
+        "accession": "0001140361-26-014988",
+        "characters": 76330,
+        "document": "ef20070575_ex10-2.htm",
+        "filing_date": "2026-04-16",
+        "form": "8-K",
+        "id": "4d486f52b66633e0ca36fd6d8094edc1c7c6c4749a1693e25d4d438bd93eb1e1",
+        "kind": "update",
+        "report_date": "2026-04-14",
+        "section": "ef20070575_ex10-2.htm",
+        "section_ordinal": 183,
+        "sha256": "069411f1484c1e25ec00643007a3345aca4ec7ecb77eaf94245d6c892ca32e36",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1781162/000114036126014988/ef20070575_ex10-2.htm"
+      },
+      "paragraph_id": "97b5d6427857019c43563718f69d8c5f210adf41c9c89b3b59024a86a20388db",
+      "source_span": [
+        22901,
+        23143
+      ],
+      "text": " (iv) comply in all material respects with the applicable provisions of the Securities Act and the Exchange Act with respect to the disposition of all Registrable Securities covered by a Registration Statement during the applicable period in\n",
+      "expected": [
+        {
+          "text": "Securities Act",
+          "span": [
+            76,
+            90
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "Exchange Act",
+          "span": [
+            99,
+            111
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": " (iv) comply in all material respects with the applicable provisions of the Securities Act and the Exchange Act with respect to the disposition of all Registrable Securities covered by a Registration Statement during the applicable period in\n"
+    },
+    {
+      "id": "LPX-1",
+      "ticker": "LPX",
+      "name": "Louisiana-Pacific Corp",
+      "sector": "Industrials",
+      "profile_sha256": "b2d615816a285a86b7bd521c360947af3426a5954427c035ea352d4c4ee52e0a",
+      "source": {
+        "accepted_at": "2026-02-17T17:34:37.000Z",
+        "accession": "0000060519-26-000012",
+        "characters": 2981,
+        "document": "lpx-20251231.htm",
+        "filing_date": "2026-02-17",
+        "form": "10-K",
+        "id": "c551892d2e2da4b665d5dc5edeb38e96ccc468197d3f4ed1a2a86b893ecb3846",
+        "kind": "financial",
+        "report_date": "2025-12-31",
+        "section": "PART II\n\n \n\nITEM 5. Market for Registrant’s Common Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities",
+        "section_ordinal": 143,
+        "sha256": "9c48b64e81342a87e055e868ddab5d52de88578ae0a1a10f6e9ad1a60a4f0458",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/60519/000006051926000012/lpx-20251231.htm"
+      },
+      "paragraph_id": "1775f475c9485052dbd5b3680c61557055ef3da825baa56c0beeaff9362b79b0",
+      "source_span": [
+        2693,
+        2981
+      ],
+      "text": "The graph is not deemed to be “soliciting material” and is “furnished” and shall not be deemed to be “filed” with the SEC or incorporated by reference in any filing under Exchange Act or the Securities Act, except as shall be expressly set forth by specific reference in any such filing.\n",
+      "expected": [
+        {
+          "text": "Exchange Act",
+          "span": [
+            171,
+            183
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "Securities Act",
+          "span": [
+            191,
+            205
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "SEC",
+          "span": [
+            118,
+            121
+          ],
+          "category": "authority",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "The graph is not deemed to be “soliciting material” and is “furnished” and shall not be deemed to be “filed” with the SEC or incorporated by reference in any filing under Exchange Act or the Securities Act, except as shall be expressly set forth by specific reference in any such filing.\n"
+    },
+    {
+      "id": "LPX-2",
+      "ticker": "LPX",
+      "name": "Louisiana-Pacific Corp",
+      "sector": "Industrials",
+      "profile_sha256": "b2d615816a285a86b7bd521c360947af3426a5954427c035ea352d4c4ee52e0a",
+      "source": {
+        "accepted_at": "2026-02-17T17:34:37.000Z",
+        "accession": "0000060519-26-000012",
+        "characters": 1631,
+        "document": "lpx12312025ex32.htm",
+        "filing_date": "2026-02-17",
+        "form": "10-K",
+        "id": "021e4e661b4a8547c443d875c74e86db0aedccbd78ff650bcde1b931fe9d9c4c",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "lpx12312025ex32.htm",
+        "section_ordinal": 169,
+        "sha256": "6b0d001e682d9fc4872629797aad6bf4a3b33aae764010d7e9295194bb957722",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/60519/000006051926000012/lpx12312025ex32.htm"
+      },
+      "paragraph_id": "2aa273473cc1760bb6d41315eb599b58eccb77dc3c73e487a1edc3bfc3cf12b6",
+      "source_span": [
+        296,
+        373
+      ],
+      "text": "Re: Certification Pursuant to Section 906 of the Sarbanes-Oxley Act of 2002\n\n",
+      "expected": [
+        {
+          "text": "Sarbanes-Oxley Act of 2002",
+          "span": [
+            49,
+            75
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "Re: Certification Pursuant to Section 906 of the Sarbanes-Oxley Act of 2002\n\n"
+    },
+    {
+      "id": "LPX-3",
+      "ticker": "LPX",
+      "name": "Louisiana-Pacific Corp",
+      "sector": "Industrials",
+      "profile_sha256": "b2d615816a285a86b7bd521c360947af3426a5954427c035ea352d4c4ee52e0a",
+      "source": {
+        "accepted_at": "2026-02-17T11:06:35.000Z",
+        "accession": "0000060519-26-000010",
+        "characters": 34494,
+        "document": "exhibit991pressrelease1231.htm",
+        "filing_date": "2026-02-17",
+        "form": "8-K",
+        "id": "b5d079fd896e14c5d0e4a8753579d1f9056821c9d8a50bc61bebaa8a2e70f4a4",
+        "kind": "update",
+        "report_date": "2026-02-17",
+        "section": "exhibit991pressrelease1231.htm",
+        "section_ordinal": 15,
+        "sha256": "3dd3e78be3daa961a15b336835bfc4b053dfaf788e2cf615285bdbe2a0e3237a",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/60519/000006051926000010/exhibit991pressrelease1231.htm"
+      },
+      "paragraph_id": "1886b8b48c930dd2cd0a97936ad19e31f3a823846bbe0065c56197fd8a784ba7",
+      "source_span": [
+        13525,
+        13753
+      ],
+      "text": "This news release contains statements concerning Louisiana-Pacific Corporation's (LP) future results and performance that are forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995.",
+      "expected": [
+        {
+          "text": "Private Securities Litigation Reform Act of 1995",
+          "span": [
+            179,
+            227
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        }
+      ],
+      "context_text": "This news release contains statements concerning Louisiana-Pacific Corporation's (LP) future results and performance that are forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. These statements are based upon the current beliefs and assumptions of, and on information available to, our management; assumptions upon which such forward-looking statements are based are also forward-looking statements. Forward looking statements can be identified by words such as “may,” “will,” “could,” “should,” “believe,” “expect,” “anticipate,” “assume,” “intend,” “plan,” “seek,” “estimate,” “project,” “target,” “potential,” “continue,” “likely,” or “future,” as well as similar expressions, or the negative or other variations thereof. Forward-looking statements include other statements regarding matters that are not historical facts, including without limitation, plans for product development, forecasts of future costs and expenditures, possible outcomes of legal proceedings, capacity expansion and other growth initiatives, the adequacy of reserves for loss contingencies, and any statements regarding the Company’s financial outlook. Factors that could cause actual results to differ materially from those expressed or implied by forward-looking statements include, but are not limited to, the following: changes in governmental fiscal, trade, and monetary policies, including the imposition of higher or new tariffs, trade barriers, and levels of employment; changes in general and global economic conditions, including impacts from rising inflation, supply chain disruptions, new, ongoing, or escalated geopolitical or military conflicts or tensions; the commodity nature of a segment of our products and the prices for those products, which are determined in significant part by external factors such as total industry capacity and wider industry cycles affecting supply and demand trends; changes in the cost and availability of capital; changes in the cost and availability of financing for home mortgages; changes in the level of home construction and repair and remodel activity, including as a result of labor shortages; changes in competitive conditions and prices for our products; changes in the relationship between supply of and demand for building products; changes in the financial or business conditions of third-party wholesale distributors and dealers of building products; changes in prices and the relationship between the supply of and demand for raw materials, including wood fiber and resins, used in manufacturing our products; changes in the cost and availability of energy, primarily natural gas, electricity, and diesel fuel; changes in the cost and availability of transportation, including transportation services provided by third parties; our dependence on third-party vendors and suppliers for certain goods and services critical to our business; operational and financial impacts from manufacturing our products internationally; difficulties in the development, launch or production ramp-up of new products; our ability to attract and retain qualified executives, management and other key employees; the need to formulate and implement effective succession plans from time to time for key members of our management team; impacts from public health issues (including global pandemics) on the economy, demand for our products or our operations, including the actions and recommendations of governmental authorities to contain such public health issues; our ability to identify and successfully complete and integrate acquisitions, divestitures, joint ventures, capital investments and other corporate strategic transactions; unplanned interruptions to our manufacturing operations, such as explosions, fires, inclement weather, natural disasters, accidents, equipment failures, labor shortages or \n\n"
+    },
+    {
+      "id": "HPP-1",
+      "ticker": "HPP",
+      "name": "Hudson Pacific Properties Inc",
+      "sector": "Real Estate",
+      "profile_sha256": "f9bbecf9f38f79dba0aa0d03bc4dbb99c5043d3a42509fcd9eb810722e526ac2",
+      "source": {
+        "accepted_at": "2026-08-10T21:15:18.000Z",
+        "accession": "0001482512-26-000069",
+        "characters": 71438,
+        "document": "hpp-20260630.htm",
+        "filing_date": "2026-08-10",
+        "form": "10-Q",
+        "id": "c4e778c29317faf19ef876f20bb6d6688498133c0307787bb6fbf9012f690f85",
+        "kind": "update",
+        "report_date": "2026-06-30",
+        "section": "ITEM 2. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+        "section_ordinal": 515,
+        "sha256": "aaa29bb55f6523094fe9af5c70043e937e97a191b798f07be5c0eb3d4a769829",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1482512/000148251226000069/hpp-20260630.htm"
+      },
+      "paragraph_id": "9ba6355362b5ddfb2dd9156e38e0fb605ba5abbd949ce3797aa7412fe8b9844b",
+      "source_span": [
+        984,
+        1477
+      ],
+      "text": "Certain written and oral statements made or incorporated by reference from time to time by us or our representatives in this Quarterly Report on Form 10-Q, other filings or reports filed with the SEC, press releases, conferences, or otherwise, are “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995 (set forth in Section 27A of the Securities Act of 1933, as amended, or the Securities Act, as amended, and Section 21E of the Exchange Act).",
+      "expected": [
+        {
+          "text": "Private Securities Litigation Reform Act of 1995",
+          "span": [
+            303,
+            351
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "Securities Act of 1933",
+          "span": [
+            385,
+            407
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "Securities Act",
+          "span": [
+            428,
+            442
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "Exchange Act",
+          "span": [
+            479,
+            491
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        },
+        {
+          "text": "SEC",
+          "span": [
+            196,
+            199
+          ],
+          "category": "authority",
+          "attachment": "issuer",
+          "direct": false
+        }
+      ],
+      "context_text": "Certain written and oral statements made or incorporated by reference from time to time by us or our representatives in this Quarterly Report on Form 10-Q, other filings or reports filed with the SEC, press releases, conferences, or otherwise, are “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995 (set forth in Section 27A of the Securities Act of 1933, as amended, or the Securities Act, as amended, and Section 21E of the Exchange Act). In particular, statements relating to our liquidity and capital resources, portfolio performance and results of operations contain forward-looking statements. Furthermore, all of the statements regarding future financial performance (including anticipated funds from operations, or “FFO”, market conditions and demographics) are forward-looking statements. We are including this cautionary statement to make applicable and take advantage of the safe harbor provisions of the Private Securities Litigation Reform Act of 1995 for any such forward-looking statements. We caution investors that any forward-looking statements presented in this Quarterly Report on Form 10-Q, or that management may make orally or in writing from time to time, are based on management’s beliefs and assumptions made by, and information currently available to, management. When used, the words “anticipate,” “believe,” “expect,” “intend,” “may,” “might,” “plan,” “estimate,” “project,” “should,” “will,” “result” and similar expressions that do not relate solely to historical matters are intended to identify forward-looking statements. Such statements are subject to risks, uncertainties and assumptions and may be affected by known and unknown risks, trends, uncertainties and factors that are beyond our control. Should one or more of these risks or uncertainties materialize, or should underlying assumptions prove incorrect, actual results may vary materially from those anticipated, estimated or projected. We expressly disclaim any responsibility to update forward-looking statements, whether as a result of new information, future events or otherwise. Accordingly, investors should use caution in relying on past forward-looking statements, which were based on results and trends at the time they were made, to anticipate future results or trends.\n\n"
+    },
+    {
+      "id": "HPP-2",
+      "ticker": "HPP",
+      "name": "Hudson Pacific Properties Inc",
+      "sector": "Real Estate",
+      "profile_sha256": "f9bbecf9f38f79dba0aa0d03bc4dbb99c5043d3a42509fcd9eb810722e526ac2",
+      "source": {
+        "accepted_at": "2026-08-10T21:15:18.000Z",
+        "accession": "0001482512-26-000069",
+        "characters": 71438,
+        "document": "hpp-20260630.htm",
+        "filing_date": "2026-08-10",
+        "form": "10-Q",
+        "id": "c4e778c29317faf19ef876f20bb6d6688498133c0307787bb6fbf9012f690f85",
+        "kind": "update",
+        "report_date": "2026-06-30",
+        "section": "ITEM 2. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS",
+        "section_ordinal": 515,
+        "sha256": "aaa29bb55f6523094fe9af5c70043e937e97a191b798f07be5c0eb3d4a769829",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1482512/000148251226000069/hpp-20260630.htm"
+      },
+      "paragraph_id": "9ba6355362b5ddfb2dd9156e38e0fb605ba5abbd949ce3797aa7412fe8b9844b",
+      "source_span": [
+        1835,
+        2042
+      ],
+      "text": "We are including this cautionary statement to make applicable and take advantage of the safe harbor provisions of the Private Securities Litigation Reform Act of 1995 for any such forward-looking statements.",
+      "expected": [
+        {
+          "text": "Private Securities Litigation Reform Act of 1995",
+          "span": [
+            118,
+            166
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": false
+        }
+      ],
+      "context_text": "Certain written and oral statements made or incorporated by reference from time to time by us or our representatives in this Quarterly Report on Form 10-Q, other filings or reports filed with the SEC, press releases, conferences, or otherwise, are “forward-looking statements” within the meaning of the Private Securities Litigation Reform Act of 1995 (set forth in Section 27A of the Securities Act of 1933, as amended, or the Securities Act, as amended, and Section 21E of the Exchange Act). In particular, statements relating to our liquidity and capital resources, portfolio performance and results of operations contain forward-looking statements. Furthermore, all of the statements regarding future financial performance (including anticipated funds from operations, or “FFO”, market conditions and demographics) are forward-looking statements. We are including this cautionary statement to make applicable and take advantage of the safe harbor provisions of the Private Securities Litigation Reform Act of 1995 for any such forward-looking statements. We caution investors that any forward-looking statements presented in this Quarterly Report on Form 10-Q, or that management may make orally or in writing from time to time, are based on management’s beliefs and assumptions made by, and information currently available to, management. When used, the words “anticipate,” “believe,” “expect,” “intend,” “may,” “might,” “plan,” “estimate,” “project,” “should,” “will,” “result” and similar expressions that do not relate solely to historical matters are intended to identify forward-looking statements. Such statements are subject to risks, uncertainties and assumptions and may be affected by known and unknown risks, trends, uncertainties and factors that are beyond our control. Should one or more of these risks or uncertainties materialize, or should underlying assumptions prove incorrect, actual results may vary materially from those anticipated, estimated or projected. We expressly disclaim any responsibility to update forward-looking statements, whether as a result of new information, future events or otherwise. Accordingly, investors should use caution in relying on past forward-looking statements, which were based on results and trends at the time they were made, to anticipate future results or trends.\n\n"
+    },
+    {
+      "id": "HPP-3",
+      "ticker": "HPP",
+      "name": "Hudson Pacific Properties Inc",
+      "sector": "Real Estate",
+      "profile_sha256": "f9bbecf9f38f79dba0aa0d03bc4dbb99c5043d3a42509fcd9eb810722e526ac2",
+      "source": {
+        "accepted_at": "2026-02-28T02:07:34.000Z",
+        "accession": "0001482512-26-000038",
+        "characters": 101434,
+        "document": "hpp-20251231.htm",
+        "filing_date": "2026-02-27",
+        "form": "10-K",
+        "id": "1c3aed6407fe99877f96a9b85764bc59b42d35b6e027f68df398f2980c86eaa2",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "ITEM 1A. Risk Factors",
+        "section_ordinal": 166,
+        "sha256": "050f432f4a69ef1b117b557f9472de0ab7851591e791273035feaa90289ffaf8",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1482512/000148251226000038/hpp-20251231.htm"
+      },
+      "paragraph_id": "8fdfa1f40b05c7753639c72e281907fd24fd7757f5501ec41095c2a245c7229c",
+      "source_span": [
+        85939,
+        86150
+      ],
+      "text": "Also, the law relating to the tax treatment of other entities, or an investment in other entities, could change, making an investment in such other entities more attractive relative to an investment in a REIT.\n\n",
+      "expected": [],
+      "context_text": "could adversely affect our investors or us. We cannot predict how changes in the tax laws might affect our investors or us. New legislation, Treasury Regulations, administrative interpretations or court decisions could significantly and negatively affect our ability to qualify as a REIT, the federal income tax consequences of such qualification, or the federal income tax consequences of an investment in us. Also, the law relating to the tax treatment of other entities, or an investment in other entities, could change, making an investment in such other entities more attractive relative to an investment in a REIT.\n\n"
+    },
+    {
+      "id": "PSA-1",
+      "ticker": "PSA",
+      "name": "Public Storage",
+      "sector": "Real Estate",
+      "profile_sha256": "112b53f27f9dfc87138be522f1a9352b5aadc51153b61c2e07be63ec3cb201d0",
+      "source": {
+        "accepted_at": "2026-09-15T01:08:22.000Z",
+        "accession": "0001628280-26-061900",
+        "characters": 6708,
+        "document": "R1.htm",
+        "filing_date": "2026-09-14",
+        "form": "8-K",
+        "id": "aa33a9f121e9457842dcca50ea807ec7b50e677ef88e261318f547f9e28227f1",
+        "kind": "update",
+        "report_date": "2026-09-14",
+        "section": "R1.htm",
+        "section_ordinal": 567,
+        "sha256": "9863453ed9936d6987f5e052633d89703300e0d6e8d1963193f371815ab12fed",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1393311/000162828026061900/R1.htm"
+      },
+      "paragraph_id": "6d13db26ae8847cd761bb5c89439e935de92d42b478ad44ef1e2b3e4b5751261",
+      "source_span": [
+        164,
+        209
+      ],
+      "text": " Entity Incorporation, State or Country Code\n",
+      "expected": [],
+      "context_text": " Entity Incorporation, State or Country Code\n"
+    },
+    {
+      "id": "PSA-2",
+      "ticker": "PSA",
+      "name": "Public Storage",
+      "sector": "Real Estate",
+      "profile_sha256": "112b53f27f9dfc87138be522f1a9352b5aadc51153b61c2e07be63ec3cb201d0",
+      "source": {
+        "accepted_at": "2026-04-03T00:42:51.000Z",
+        "accession": "0001193125-26-140334",
+        "characters": 86520,
+        "document": "d55390dex11.htm",
+        "filing_date": "2026-04-02",
+        "form": "8-K",
+        "id": "d012f6dd9926a3cb8f38c3f87a77b81ecb5e23f5a22c15a6edde54afd4b146be",
+        "kind": "update",
+        "report_date": "2026-04-01",
+        "section": "d55390dex11.htm",
+        "section_ordinal": 203,
+        "sha256": "c19d8f20068b0273c82c7584b51c7d58fc98a858c4104fe6661d841f5d6f2467",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1393311/000119312526140334/d55390dex11.htm"
+      },
+      "paragraph_id": "1c638ed0bdaf8e8c3b12ed0f8c95b219f38b3808c0230494fb6a425a393862b6",
+      "source_span": [
+        80567,
+        80690
+      ],
+      "text": "L. 107-56 (signed into law October 26, 2001)), the Underwriters are required to obtain, verify and record information that\n",
+      "expected": [],
+      "context_text": "accordance with the requirements of the USA PATRIOT Act (Title III of Pub. L. 107-56 (signed into law October 26, 2001)), the Underwriters are required to obtain, verify and record information that\n"
+    },
+    {
+      "id": "PSA-3",
+      "ticker": "PSA",
+      "name": "Public Storage",
+      "sector": "Real Estate",
+      "profile_sha256": "112b53f27f9dfc87138be522f1a9352b5aadc51153b61c2e07be63ec3cb201d0",
+      "source": {
+        "accepted_at": "2026-03-17T17:09:39.000Z",
+        "accession": "0001193125-26-109593",
+        "characters": 443997,
+        "document": "d110292dex21.htm",
+        "filing_date": "2026-03-17",
+        "form": "8-K",
+        "id": "8b42fd4a2a36afad5824dd183ade207d316373beec18ed0cf1089ff79ed88f67",
+        "kind": "subsidiary",
+        "report_date": "2026-03-16",
+        "section": "Exhibit 21",
+        "section_ordinal": 190,
+        "sha256": "6253bf7026795d5e361e01f00278e59a21ffaa825dc014ab24b28625a6b847ea",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1393311/000119312526109593/d110292dex21.htm"
+      },
+      "paragraph_id": "fcbb3d38f6d8b17f1f2d51bec99c0ef74704df563067284f159b22006f94d054",
+      "source_span": [
+        106107,
+        106334
+      ],
+      "text": "claim, action, investigation, litigation, arbitration, mediation, proceeding or other investigation or audit (each, an “Action”) which is against the Company or any Company Subsidiary (or any of their properties or assets), or\n",
+      "expected": [],
+      "context_text": "claim, action, investigation, litigation, arbitration, mediation, proceeding or other investigation or audit (each, an “Action”) which is against the Company or any Company Subsidiary (or any of their properties or assets), or\n"
+    },
+    {
+      "id": "MPWR-1",
+      "ticker": "MPWR",
+      "name": "Monolithic Power System Inc",
+      "sector": "Technology",
+      "profile_sha256": "b15fa603ea7567519548b6004496d98baadafe0d5c2ecbade477ebdbbb39837d",
+      "source": {
+        "accepted_at": "2026-08-05T20:01:35.000Z",
+        "accession": "0001628280-26-053275",
+        "characters": 2056,
+        "document": "mpwr-20260630.htm",
+        "filing_date": "2026-08-05",
+        "form": "10-Q",
+        "id": "779ea99be7cf09dfec9e3c970b563f4e33a9843698664eb089a0d230f3415125",
+        "kind": "financial",
+        "report_date": "2026-06-30",
+        "section": "Item 1. Legal Proceedings",
+        "section_ordinal": 380,
+        "sha256": "898d2b79854eb26de5174e9e5ec773d669ec2a2ce0c7d49b9ad9448daca1a873",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1280452/000162828026053275/mpwr-20260630.htm"
+      },
+      "paragraph_id": "c6d4ef0aaf38516b7a91760a2e83898c245666fca5dc6a09ecce0fd1a37c6795",
+      "source_span": [
+        361,
+        541
+      ],
+      "text": "These proceedings often involve complex questions of fact and law and may require the expenditure of significant funds and the diversion of other resources to prosecute and defend.",
+      "expected": [],
+      "context_text": "We are a party to actions and proceedings in the ordinary course of business, including challenges to the enforceability or validity of our intellectual property, claims that our products infringe on the intellectual property rights of others, and employment matters. We are also subject to litigation initiated by our stockholders. These proceedings often involve complex questions of fact and law and may require the expenditure of significant funds and the diversion of other resources to prosecute and defend. We defend ourselves vigorously against any such claims. Based on current information and management assessment, we do not believe that a material loss from known matters is probable as of June 30, 2026.\n\n"
+    },
+    {
+      "id": "MPWR-2",
+      "ticker": "MPWR",
+      "name": "Monolithic Power System Inc",
+      "sector": "Technology",
+      "profile_sha256": "b15fa603ea7567519548b6004496d98baadafe0d5c2ecbade477ebdbbb39837d",
+      "source": {
+        "accepted_at": "2026-02-27T21:33:25.000Z",
+        "accession": "0001437749-26-006113",
+        "characters": 114328,
+        "document": "mpwr20251231_10k.htm",
+        "filing_date": "2026-02-27",
+        "form": "10-K",
+        "id": "cc7fdf168b5c2ac2a81bcad05cae9a8b8c3d7b160094bf2090028146783f36c7",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "Item 1A.\n\n \nRisk Factors",
+        "section_ordinal": 144,
+        "sha256": "ef5acaa609e5621fa5749622cc982a0881179e5506ba3b7d9e9dc3ac7601f799",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1280452/000143774926006113/mpwr20251231_10k.htm"
+      },
+      "paragraph_id": "111bf8f72e227aa9fef2d7d94a36c5bbc25a0bf7298a96374a2f1c219d8b03ed",
+      "source_span": [
+        84891,
+        84939
+      ],
+      "text": "Foreign Corrupt Practices Act, or FCPA, the U.K.",
+      "expected": [
+        {
+          "text": "Foreign Corrupt Practices Act",
+          "span": [
+            0,
+            29
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": true
+        },
+        {
+          "text": "FCPA",
+          "span": [
+            34,
+            38
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": true
+        }
+      ],
+      "context_text": " We are subject to the U.S. Foreign Corrupt Practices Act, or FCPA, the U.K. Bribery Act and various anti-corruption laws of other jurisdictions, which generally prohibit companies and their intermediaries from making improper payments to foreign officials for the purpose of obtaining or keeping business and/or other benefits. While the U.S. administration has suspended the commencement of new investigations and enforcement actions under the FCPA, the FCPA remains in effect and it is uncertain whether enforcement actions and investigations will re-commence or whether the law will be changed or re-interpreted. Moreover, non‑U.S. enforcement authorities may continue investigations or actions irrespective of U.S. policy, resulting in multi‑jurisdictional inquiries, duplicative penalties, or heightened remediation costs. Although we have implemented policies and procedures designed to ensure that we, our employees and other intermediaries comply with anti-corruption laws to which we are subject, there is no assurance that such policies or procedures will work effectively all the time or protect us against liability under these laws for actions taken by our employees and other intermediaries with respect to our business or any businesses that we may acquire. We have significant operations in Asia, which place us in frequent contact with individuals who may be considered “foreign officials” under the FCPA or other anti-corruption laws, resulting in an elevated risk of potential violations. If we are not in compliance with applicable anti-corruption laws (including local laws), we may be subject to criminal and civil penalties and other remedial measures, including restatements of our financial reports, which could have a material adverse impact on our business, financial condition, results of operations and liquidity. Any investigation or allegations of any potential violations of anti-corruption laws by the U.S. or foreign authorities could harm our reputation and have an adverse impact on our business, financial condition and results of operations.\n\n \n\n \n"
+    },
+    {
+      "id": "MPWR-3",
+      "ticker": "MPWR",
+      "name": "Monolithic Power System Inc",
+      "sector": "Technology",
+      "profile_sha256": "b15fa603ea7567519548b6004496d98baadafe0d5c2ecbade477ebdbbb39837d",
+      "source": {
+        "accepted_at": "2026-02-27T21:33:25.000Z",
+        "accession": "0001437749-26-006113",
+        "characters": 1726,
+        "document": "ex_886149.htm",
+        "filing_date": "2026-02-27",
+        "form": "10-K",
+        "id": "67a5907dd3149271778b143507e74cf6ba3ef808866c266ac5bb383447596711",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "ex_886149.htm",
+        "section_ordinal": 113,
+        "sha256": "9c55dba4d887e308e21b13ba4e0cbb95a44d1deacfcb781700cf4b068ba20212",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1280452/000143774926006113/ex_886149.htm"
+      },
+      "paragraph_id": "ff90f596648c18b00058332afb25a1e0ba32b5508f1b540fc8f11a28ff7696cf",
+      "source_span": [
+        706,
+        1020
+      ],
+      "text": "In connection with the Annual Report on Form 10-K of Monolithic Power Systems, Inc., a Delaware corporation, for the year ended December 31, 2025 (the “Report”), as filed with the Securities and Exchange Commission, each of the undersigned officers of Monolithic Power Systems, Inc. certifies pursuant to 18 U.S.C.",
+      "expected": [
+        {
+          "text": "Securities and Exchange Commission",
+          "span": [
+            180,
+            214
+          ],
+          "category": "authority",
+          "attachment": "issuer",
+          "direct": false
+        }
+      ],
+      "context_text": "In connection with the Annual Report on Form 10-K of Monolithic Power Systems, Inc., a Delaware corporation, for the year ended December 31, 2025 (the “Report”), as filed with the Securities and Exchange Commission, each of the undersigned officers of Monolithic Power Systems, Inc. certifies pursuant to 18 U.S.C. Section 1350, as adopted pursuant to Section 906 of the Sarbanes-Oxley Act of 2002, that:\n\n \n\n"
+    },
+    {
+      "id": "NVTS-1",
+      "ticker": "NVTS",
+      "name": "Navitas Semiconductor Corp",
+      "sector": "Technology",
+      "profile_sha256": "aba741e4cf501cd93a98384bae77fcf05bf0c2f36e886fb11e5f64eb9c8466ae",
+      "source": {
+        "accepted_at": "2026-07-28T00:05:39.000Z",
+        "accession": "0001628280-26-049795",
+        "characters": 3928,
+        "document": "i-20260727.htm",
+        "filing_date": "2026-07-27",
+        "form": "8-K",
+        "id": "d1a206d10318a50bba9a853a44a076c3e60557ea6cec0b55662b0d84c92ab768",
+        "kind": "update",
+        "report_date": "2026-07-27",
+        "section": "i-20260727.htm",
+        "section_ordinal": 423,
+        "sha256": "e5b107e873d82576cf1b750d7d16fa70b18e9a43b781094acbf37dedfccd6fac",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1821769/000162828026049795/i-20260727.htm"
+      },
+      "paragraph_id": "e1baec9c4e4936a951e78192d5cf65a5b59c61a6c8d1404fea8112a37a569a63",
+      "source_span": [
+        2811,
+        3083
+      ],
+      "text": "The information provided under Items 2.02 and 7.01 of this Form 8-K, including Exhibits 99.1 and 99.2, is being furnished and shall not be considered “filed” for purposes of Section 18 of the Securities Exchange Act of 1934, nor subject to the liabilities of that section.",
+      "expected": [
+        {
+          "text": "Securities Exchange Act of 1934",
+          "span": [
+            192,
+            223
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "The information provided under Items 2.02 and 7.01 of this Form 8-K, including Exhibits 99.1 and 99.2, is being furnished and shall not be considered “filed” for purposes of Section 18 of the Securities Exchange Act of 1934, nor subject to the liabilities of that section. In addition, such information and exhibits shall not be deemed incorporated by reference into any of the Company’s filings under the Securities Act of 1933, as amended, unless specifically stated otherwise.\n\n"
+    },
+    {
+      "id": "NVTS-2",
+      "ticker": "NVTS",
+      "name": "Navitas Semiconductor Corp",
+      "sector": "Technology",
+      "profile_sha256": "aba741e4cf501cd93a98384bae77fcf05bf0c2f36e886fb11e5f64eb9c8466ae",
+      "source": {
+        "accepted_at": "2026-08-25T14:04:47.000Z",
+        "accession": "0001104659-26-100478",
+        "characters": 416831,
+        "document": "tm2623854d1_ex2-1.htm",
+        "filing_date": "2026-08-25",
+        "form": "8-K",
+        "id": "0aac59c5044277f50128620e3240ee9c7f1a1da590d176564f865f1cd6df24c6",
+        "kind": "update",
+        "report_date": "2026-08-24",
+        "section": "tm2623854d1_ex2-1.htm",
+        "section_ordinal": 531,
+        "sha256": "d89851b0d6d7a88dcf08d8b6721bdf8906757e56a86315c21d8b9e8e90433950",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1821769/000110465926100478/tm2623854d1_ex2-1.htm"
+      },
+      "paragraph_id": "9003e8f8e4844971822edc1511c0ff2e332d5d44eb1b703a3c6019eb504688ab",
+      "source_span": [
+        155069,
+        155192
+      ],
+      "text": "applicable Laws, including ERISA, the Code, the requirements of Part 6 of Subtitle B of Title I of ERISA and Section 4980B\n",
+      "expected": [
+        {
+          "text": "ERISA",
+          "span": [
+            27,
+            32
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "ERISA",
+          "span": [
+            99,
+            104
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "applicable Laws, including ERISA, the Code, the requirements of Part 6 of Subtitle B of Title I of ERISA and Section 4980B\n"
+    },
+    {
+      "id": "NVTS-3",
+      "ticker": "NVTS",
+      "name": "Navitas Semiconductor Corp",
+      "sector": "Technology",
+      "profile_sha256": "aba741e4cf501cd93a98384bae77fcf05bf0c2f36e886fb11e5f64eb9c8466ae",
+      "source": {
+        "accepted_at": "2026-02-28T00:58:40.000Z",
+        "accession": "0001821769-26-000007",
+        "characters": 103389,
+        "document": "nvts-20251231.htm",
+        "filing_date": "2026-02-27",
+        "form": "10-K",
+        "id": "1594355ff1cc2d7fa08afdded1a236c01285706ede87f6bc98864222b9e5a25e",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "Item 1A. Risk Factors.",
+        "section_ordinal": 119,
+        "sha256": "f0ff0723665bc8e41134a578a0f846c81a5cc4ce0f5d1523282a96f5c1cfc2b1",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1821769/000182176926000007/nvts-20251231.htm"
+      },
+      "paragraph_id": "0c4f905fa195f9ba49a1411190e5ded34dfd70c7603074a0eac29524514bb64e",
+      "source_span": [
+        72600,
+        72749
+      ],
+      "text": "In addition, because Legacy Navitas is also incorporated under Irish law, Legacy Navitas is also subject to Irish income tax on its worldwide income.",
+      "expected": [],
+      "context_text": "The Company and Legacy Navitas are a U.S. corporation for U.S. federal income tax purposes and thus subject to U.S. corporate income tax on our worldwide income. In addition, because Legacy Navitas is also incorporated under Irish law, Legacy Navitas is also subject to Irish income tax on its worldwide income. We, through our foreign subsidiaries, are subject to income taxes in other foreign jurisdictions as a result of foreign operations in such jurisdictions. Thus, new laws and policy relating to either U.S., Irish or other applicable foreign jurisdiction taxes may have an adverse effect on our business and future profitability. Further, existing U.S., Irish or other foreign tax laws, statutes, rules, regulations, ordinances or treaties could be interpreted, changed, modified or applied adversely to us, possibly with retroactive effect. The passage of any legislation resulting in changes in U.S. federal income tax laws could adversely affect our business and future profitability. Further, we could be adversely impacted by changes in tax treaties or the interpretation or enforcement thereof by any tax authority. Such changes could materially and adversely affect the effective tax rate of our business and require us to take further action, at potentially significant expense, to seek to preserve our effective tax rate.\n\n"
+    },
+    {
+      "id": "ENIC-1",
+      "ticker": "ENIC",
+      "name": "Enel Chile SA ADR",
+      "sector": "Utilities",
+      "profile_sha256": "32bf47b6667d70516ed3ee0fd9f04cf0a32e9cd4d9851ac8a593a00f872a978e",
+      "source": {
+        "accepted_at": "2026-04-28T19:24:13.000Z",
+        "accession": "0001104659-26-050251",
+        "characters": 139842,
+        "document": "enic-20251231xex2d1.htm",
+        "filing_date": "2026-04-28",
+        "form": "20-F",
+        "id": "bd6dadad8d9dceff28e3e7f9a143271bfacc8f6ff80c8d51163e5139de87839f",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "enic-20251231xex2d1.htm",
+        "section_ordinal": 300,
+        "sha256": "92d1106e4e691c22ac3e0b79b020acdd1596702ae199f8c5b217b3ed27435b2a",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1659939/000110465926050251/enic-20251231xex2d1.htm"
+      },
+      "paragraph_id": "385f895a5a90179d118b44cb45965752844bbd7e9b71a5937b8ff6f9f87eecd4",
+      "source_span": [
+        24846,
+        24934
+      ],
+      "text": "The Capital Markets Law establishes a comprehensive regulation related to tender offers.",
+      "expected": [
+        {
+          "text": "Capital Markets Law",
+          "span": [
+            4,
+            23
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "The Capital Markets Law establishes a comprehensive regulation related to tender offers. The law defines a tender offer as the offer to purchase shares of companies that publicly offer their shares or convertible securities and which offer is made to shareholders to purchase their shares under conditions that allow the bidder to reach a certain percentage of ownership of the company within a fixed period. These provisions apply to both voluntary and hostile tender offers.\n\n"
+    },
+    {
+      "id": "ENIC-2",
+      "ticker": "ENIC",
+      "name": "Enel Chile SA ADR",
+      "sector": "Utilities",
+      "profile_sha256": "32bf47b6667d70516ed3ee0fd9f04cf0a32e9cd4d9851ac8a593a00f872a978e",
+      "source": {
+        "accepted_at": "2026-04-28T19:24:13.000Z",
+        "accession": "0001104659-26-050251",
+        "characters": 72730,
+        "document": "enic-20251231x20f.htm",
+        "filing_date": "2026-04-28",
+        "form": "20-F",
+        "id": "9dcc6708baa9e4ca72b3c8665474782738705264781f2f8270d881b8b0cb3fe7",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "Item 4. Information on the Company",
+        "section_ordinal": 267,
+        "sha256": "38319e5b17a088b01a698269438c3a14d9131ed5dfe992299e16a81f7fc655fd",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1659939/000110465926050251/enic-20251231x20f.htm"
+      },
+      "paragraph_id": "bf80ba1eac5739cd8d8136cc8435d2f44031a54970fafe55c35fb0fa6ebdd344",
+      "source_span": [
+        50027,
+        50164
+      ],
+      "text": "The law establishes that Chile be carbon neutral and climate resilient by 2050, which could be accelerated if circumstances allow for it.",
+      "expected": [],
+      "context_text": "On June 13, 2022, Law No. 21,455 (the “Climate Change Framework Law”) was enacted. The law establishes that Chile be carbon neutral and climate resilient by 2050, which could be accelerated if circumstances allow for it. To address climate change, the law establishes concrete actions for 17 executive departments as well as powers and obligations at regional and local levels. It also establishes the Long-Term Climate Strategy, a roadmap detailing how Chile will fulfill its commitments through concrete actions over a 30-year period and requires the preparation of sectoral mitigation and adaptation plans with concrete measures and actions to meet these goals.\n\n"
+    },
+    {
+      "id": "ENIC-3",
+      "ticker": "ENIC",
+      "name": "Enel Chile SA ADR",
+      "sector": "Utilities",
+      "profile_sha256": "32bf47b6667d70516ed3ee0fd9f04cf0a32e9cd4d9851ac8a593a00f872a978e",
+      "source": {
+        "accepted_at": "2026-04-28T19:24:13.000Z",
+        "accession": "0001104659-26-050251",
+        "characters": 62959,
+        "document": "enic-20251231x20f.htm",
+        "filing_date": "2026-04-28",
+        "form": "20-F",
+        "id": "3a9453037f7dcadcfece3340807af35de85637acf0faf4054a1c3f0673d28318",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "Item 3. Key Information",
+        "section_ordinal": 266,
+        "sha256": "3244e21604b4d4cf74c80951628c37e62f0ace027bf02b062aebc4a6c14cf8cc",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1659939/000110465926050251/enic-20251231x20f.htm"
+      },
+      "paragraph_id": "354534fd6aaa988d8ec9bdb16f31293e421c4347998941d125a0d5798d993fe3",
+      "source_span": [
+        37905,
+        38096
+      ],
+      "text": "Law No. 21,667 increased the stabilization fund established under Law No. 21,472 to US$5.5 billion, of which the US$3.7 billion increased amount has a 30% guarantee of the Chilean government.",
+      "expected": [
+        {
+          "text": "Law No. 21,667",
+          "span": [
+            0,
+            14
+          ],
+          "category": "law",
+          "attachment": "context",
+          "direct": false
+        },
+        {
+          "text": "Law No. 21,472",
+          "span": [
+            66,
+            80
+          ],
+          "category": "law",
+          "attachment": "context",
+          "direct": false
+        }
+      ],
+      "context_text": "In April 2024, Law No. 21,667 was enacted to prevent generation companies from continuing to accumulate debt due to stabilized prices under the regulated price system. Under this law, tariffs for regulated customers will be gradually adjusted to reflect the real costs of energy, and generation companies will be able to recover the balance of debt accumulated under the price stabilization mechanisms generated by Laws No. 21,185 and No. 21,472. Law No. 21,667 increased the stabilization fund established under Law No. 21,472 to US$5.5 billion, of which the US$3.7 billion increased amount has a 30% guarantee of the Chilean government. The increased maximum amount of the stabilization fund program established by Law No. 21,472 of US$5.5 billion was reached in April 2025. The accounts receivable balances must be repaid no later than December 31, 2035.\n\n"
+    },
+    {
+      "id": "MWH-1",
+      "ticker": "MWH",
+      "name": "SOLV Energy Inc",
+      "sector": "Utilities",
+      "profile_sha256": "36846e25fbd2907f2fef9482b51b96abebb95a67f2e8d56e6a6540902e129c6b",
+      "source": {
+        "accepted_at": "2026-03-25T20:10:52.000Z",
+        "accession": "0001193125-26-124117",
+        "characters": 62050,
+        "document": "d31834d10k.htm",
+        "filing_date": "2026-03-25",
+        "form": "10-K",
+        "id": "bc8004fe8dc7b8f584b3a22785b668fc77c9c2787fc51a31a0ff424d14bb9f1d",
+        "kind": "financial",
+        "report_date": "2025-12-31",
+        "section": "ITEM 11.\n\nEXECUTIVE COMPENSATION.",
+        "section_ordinal": 41,
+        "sha256": "3cb826898700237e7bc83d3c6795ed1f8e0693d54777d72f620a944f8d2f508f",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/2065636/000119312526124117/d31834d10k.htm"
+      },
+      "paragraph_id": "0715da8eaa8972ad9caeda48bbacf4eb0c5d5b784e3e8dbb54b240cc336f2ef4",
+      "source_span": [
+        31880,
+        32104
+      ],
+      "text": "may be subject to recoupment in accordance with Section 954 of the Dodd-Frank Act, as well as rules and regulations adopted, or to be adopted, by the SEC and Nasdaq (regarding recoupment of erroneously awarded compensation).",
+      "expected": [
+        {
+          "text": "Dodd-Frank Act",
+          "span": [
+            67,
+            81
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "SEC",
+          "span": [
+            150,
+            153
+          ],
+          "category": "authority",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "may be subject to recoupment in accordance with Section 954 of the Dodd-Frank Act, as well as rules and regulations adopted, or to be adopted, by the SEC and Nasdaq (regarding recoupment of erroneously awarded compensation). The Company has the\n"
+    },
+    {
+      "id": "MWH-2",
+      "ticker": "MWH",
+      "name": "SOLV Energy Inc",
+      "sector": "Utilities",
+      "profile_sha256": "36846e25fbd2907f2fef9482b51b96abebb95a67f2e8d56e6a6540902e129c6b",
+      "source": {
+        "accepted_at": "2026-03-25T20:10:52.000Z",
+        "accession": "0001193125-26-124117",
+        "characters": 60052,
+        "document": "d31834dex31.htm",
+        "filing_date": "2026-03-25",
+        "form": "10-K",
+        "id": "a1e582319d36a3e26aab98cf3bd54c6567ced763f51e2e92a03d651f85ff3545",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "d31834dex31.htm",
+        "section_ordinal": 50,
+        "sha256": "3827187d1fdcbcad569ee73f3eb98d8069f98aa08ff278f48414df4a5e7b7de5",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/2065636/000119312526124117/d31834dex31.htm"
+      },
+      "paragraph_id": "a2c8dd394079dc8f667cf948cea57b3560de9f030170839b50d734fd51bdef0c",
+      "source_span": [
+        29891,
+        30177
+      ],
+      "text": "At any time when American Securities Related Parties (as defined below) beneficially own (within the meaning of Rules 13d-3 and 13d-5 under the Exchange Act) less than a majority of the combined voting power of all then-outstanding shares of capital stock of the Corporation, except as\n",
+      "expected": [
+        {
+          "text": "Rules 13d-3",
+          "span": [
+            112,
+            123
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "13d-5",
+          "span": [
+            128,
+            133
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        },
+        {
+          "text": "Exchange Act",
+          "span": [
+            144,
+            156
+          ],
+          "category": "law",
+          "attachment": "mention",
+          "direct": false
+        }
+      ],
+      "context_text": "of at least a majority of the combined voting power of all then-outstanding shares of capital stock of the Corporation. At any time when American Securities Related Parties (as defined below) beneficially own (within the meaning of Rules 13d-3 and 13d-5 under the Exchange Act) less than a majority of the combined voting power of all then-outstanding shares of capital stock of the Corporation, except as\n"
+    },
+    {
+      "id": "MWH-3",
+      "ticker": "MWH",
+      "name": "SOLV Energy Inc",
+      "sector": "Utilities",
+      "profile_sha256": "36846e25fbd2907f2fef9482b51b96abebb95a67f2e8d56e6a6540902e129c6b",
+      "source": {
+        "accepted_at": "2026-03-25T20:10:52.000Z",
+        "accession": "0001193125-26-124117",
+        "characters": 200105,
+        "document": "d31834d10k.htm",
+        "filing_date": "2026-03-25",
+        "form": "10-K",
+        "id": "e4d92f0dc216b57d2463b95ca3f06a4b2e51b3bb96589be41a1783083e7bfd0c",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "ITEM 1A.\n\nRISK FACTORS.",
+        "section_ordinal": 25,
+        "sha256": "13e57ff670ff548b9fd3c51b1e63b9d4293868ffd78014420e2d506759268fdf",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/2065636/000119312526124117/d31834d10k.htm"
+      },
+      "paragraph_id": "cd500eb426049a037261814c8744142d0110105cc4a7705b1a53545041bff9ab",
+      "source_span": [
+        186233,
+        186468
+      ],
+      "text": "required to comply with the Sarbanes-Oxley Act of 2002 (the “Sarbanes-Oxley Act”), which requires our management to certify financial and other information in our quarterly and annual reports and provide an annual management report on\n",
+      "expected": [
+        {
+          "text": "Sarbanes-Oxley Act of 2002",
+          "span": [
+            28,
+            54
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": true
+        },
+        {
+          "text": "Sarbanes-Oxley Act",
+          "span": [
+            61,
+            79
+          ],
+          "category": "law",
+          "attachment": "issuer",
+          "direct": true
+        }
+      ],
+      "context_text": "required to comply with the Sarbanes-Oxley Act of 2002 (the “Sarbanes-Oxley Act”), which requires our management to certify financial and other information in our quarterly and annual reports and provide an annual management report on\n"
+    }
+  ]
+}
