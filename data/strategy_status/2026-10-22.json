@@ -21,8 +21,8 @@
    "SIT": 0
   },
   "h1": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "holdup": {
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-10-22",
- "generated_at": "2026-10-22T08:13:42-04:00",
+ "generated_at": "2026-10-22T08:21:03-04:00",
  "strategies": [
   {
    "buys": [
@@ -5910,13 +5910,22 @@
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "BMBL",
+    "LQDA",
+    "CYPH",
+    "ASST"
+   ],
    "family": "h1",
    "name": "h1",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-10-22T12:20:34Z",
+   "sells": [
+    "BRZE 43",
+    "BYRN 399",
+    "TRAX 47"
+   ],
    "source": "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
