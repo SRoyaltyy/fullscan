@@ -207,8 +207,12 @@ def validate(directory, source_sha):
             raise ValueError('keyword index checksum mismatch')
         import gzip
         manifest=json.loads(gzip.decompress((directory/keyword_index['path']).read_bytes()))
+        import re
+        if manifest.get('bucket_method') not in (None,'token_sha256_2'):
+            raise ValueError('unsupported keyword bucket method')
+        bucket_pattern=r'[a-f0-9]{2}' if manifest.get('bucket_method')=='token_sha256_2' else r'[a-f0-9]'
         for bucket,entry in manifest.get('buckets',{}).items():
-            if entry['path'] != 'keyword-index/'+bucket+'.json.gz' or bucket not in '0123456789abcdef':
+            if entry['path'] != 'keyword-index/'+bucket+'.json.gz' or not re.fullmatch(bucket_pattern,bucket):
                 raise ValueError('unsafe keyword index bucket')
             if hashlib.sha256((directory/entry['path']).read_bytes()).hexdigest() != entry['sha256']:
                 raise ValueError('keyword index bucket checksum mismatch')

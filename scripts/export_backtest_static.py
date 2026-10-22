@@ -149,9 +149,10 @@ def export_profiles(board, out_dir, *, filing_profiles=None, profile_assets='ful
     phrases = payload.pop('phrases')
     buckets = {}
     for entry in phrases:
-        bucket = format(ord(entry['phrase'][0][0]) % 16,'x')
+        bucket = hashlib.sha256(entry['phrase'][0].encode()).hexdigest()[:2]
         buckets.setdefault(bucket,[]).append(entry)
     (out_dir/'keyword-index').mkdir(exist_ok=True)
+    payload['bucket_method']='token_sha256_2'
     payload['buckets'] = {}
     for bucket, entries in sorted(buckets.items()):
         packed = gzip.compress(json.dumps(entries,ensure_ascii=False,separators=(',',':')).encode(),mtime=0)
