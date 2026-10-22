@@ -1,6 +1,6 @@
 {
   "date": "2026-10-22",
-  "generated_at": "2026-10-22T16:43:09.774148-04:00",
+  "generated_at": "2026-10-22T17:03:54.007303-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,13 +12,13 @@
   "buy_1d": [
     {
       "ticker": "NET",
-      "score": -0.18467245880375988
+      "score": -0.1699682854974174
     }
   ],
   "sell_1d": [
     {
       "ticker": "NEOV",
-      "score": -0.3949062464602766
+      "score": -0.39088581493332275
     },
     {
       "ticker": "OKLO",
@@ -26,7 +26,7 @@
     },
     {
       "ticker": "FCEL",
-      "score": -0.26849064073815776
+      "score": -0.26774139524133034
     },
     {
       "ticker": "EOSE",
@@ -34,7 +34,7 @@
     },
     {
       "ticker": "NRGV",
-      "score": -0.3250967133660612
+      "score": -0.3225881765107435
     },
     {
       "ticker": "INDI",
@@ -46,15 +46,15 @@
     },
     {
       "ticker": "SKYX",
-      "score": -0.4243264654122815
+      "score": -0.4225425990740169
     },
     {
       "ticker": "NNDM",
-      "score": -0.17506770385322673
+      "score": -0.1691243363315767
     },
     {
-      "ticker": "AMSC",
-      "score": -0.13568116842938543
+      "ticker": "LUNR",
+      "score": -0.36599920169389416
     }
   ],
   "flatten": {
@@ -76,7 +76,22 @@
     "score": "-14.314",
     "direction": "down"
   },
-  "sectors": {},
+  "sectors": {
+    "said": "0 up / 0 down / 0 flat",
+    "bullets": [
+      "XLB missing",
+      "XLC missing",
+      "XLY missing",
+      "XLP missing",
+      "XLE missing",
+      "XLF missing",
+      "XLV missing",
+      "XLI missing",
+      "XLRE missing",
+      "XLK missing",
+      "XLU missing"
+    ]
+  },
   "lands": [
     {
       "key": "paper",

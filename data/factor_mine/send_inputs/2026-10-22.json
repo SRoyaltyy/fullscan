@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-22",
+  "files": [
+    {
+      "bytes": 9501594,
+      "path": "data/factor_mine/panel.json",
+      "sha256": "ffee66a247f41f2f4d6890366cf7cd92d04ef5892c86171dada8e76929129018"
+    },
+    {
+      "path": "01_daily/general/2026-10-22_predict.md",
+      "sha256": "45f757eb71e2c22512aefc0ce066b31de3046443b53e4e428e8fe5ddca54b3b9"
+    },
+    {
+      "path": "01_daily/news/2026-10-22_actions.json",
+      "sha256": "87b700a458ddd0b226aa43e327835c1f04f9d65b6d420d20336b973cc338861c"
+    },
+    {
+      "path": "01_daily/news/2026-10-22_finviz_digest.json",
+      "sha256": "2b88ee96b0f43ee021a0494eb3309870c9ab4009ad8c32cfd83af988ffaa4e80"
+    },
+    {
+      "path": "01_daily/news/2026-10-22_judge.md",
+      "sha256": "736f7edc25b122e85145993d363d74b28d63ef1ccbf14b42df78797124925aa4"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-22/_board.json",
+      "sha256": "0d4d878c6453537c09b50f75bf85190172701c78854eab26dd1a9666676918d1"
+    },
+    {
+      "path": "01_daily/weather/2026-10-22_weather.json",
+      "sha256": "55dc3da3a03295d5f4a1dcba7e1971aa2ef4d6b8939d683f1adc77b5aebc30bd"
+    },
+    {
+      "path": "data/ab_checklist/2026-10-22_ab_checklist_enriched.csv",
+      "sha256": "049e46a3ff1731a5efa100ca5c0a00d611dcf20a230255ab7d92e16bf917f5c9"
+    },
+    {
+      "path": "data/join/2026-10-22_ranked.csv",
+      "sha256": "5de0215bed43a28bb639e4615d84ba8d5d73203e85ad6fc61b9b6251f2dde19a"
+    },
+    {
+      "path": "data/peers/2026-10-22_peer_rs.csv",
+      "sha256": "ddfb7334677cd9faeca962d70765b32d2761a81b9eb437bd02384acd0fa85445"
+    },
+    {
+      "path": "data/sleeve_merge/today.json",
+      "sha256": "1aef33e95fa601f96445b0865b163657c2148d55cdd8ff3f75edd2f596b5e15c"
+    },
+    {
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "sha256": "5e9bc114ec3b74363b813dd0b8fd5aaefc6f91b32e75bd77ff91808d39e7c6cf"
+    }
+  ],
+  "picks": {
+    "union_hot_n4_h1": [
+      "LQDA",
+      "ENGS",
+      "TRU",
+      "INN"
+    ],
+    "union_hot_n4_holdup": [
+      "LQDA",
+      "ENGS",
+      "TRU",
+      "INN"
+    ]
+  },
+  "prices": [
+    {
+      "px": 39.69,
+      "px_src": "elite_live",
+      "ticker": "LQDA"
+    },
+    {
+      "px": 4.21,
+      "px_src": "elite_live",
+      "ticker": "ENGS"
+    },
+    {
+      "px": 83.46,
+      "px_src": "elite_live",
+      "ticker": "TRU"
+    },
+    {
+      "px": 7.03,
+      "px_src": "elite_live",
+      "ticker": "INN"
+    },
+    {
+      "px": 5.94,
+      "px_src": "elite_live",
+      "ticker": "BMBL"
+    },
+    {
+      "px": 32.2,
+      "px_src": "elite_live",
+      "ticker": "ARQT"
+    },
+    {
+      "px": 2.19,
+      "px_src": "elite_live",
+      "ticker": "WIT"
+    },
+    {
+      "px": 20.59,
+      "px_src": "elite_live",
+      "ticker": "KVYO"
+    }
+  ],
+  "reason": "",
+  "rows": [],
+  "sha256": "fa052519581805df5a81cab487b8045477c86b274aebff09191050e7caf5175d",
+  "source": "no_same_day_panel"
+}
