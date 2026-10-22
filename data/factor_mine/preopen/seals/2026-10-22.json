@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-22",
+  "inputs": [
+    {
+      "commit": "f073720cd4b59df6e8c8aa19f607d2d76f4337dd",
+      "committed_at": "2026-10-22T06:02:09-04:00",
+      "ok": true,
+      "path": "01_daily/weather/2026-10-22_weather.json",
+      "reason": "",
+      "sha256": "55dc3da3a03295d5f4a1dcba7e1971aa2ef4d6b8939d683f1adc77b5aebc30bd"
+    },
+    {
+      "commit": "e6d06b3a25586a4b9f860546b391afb698d3d6bb",
+      "committed_at": "2026-10-22T06:03:12-04:00",
+      "ok": true,
+      "path": "data/day_board/2026-10-22_strategy_tickets.json",
+      "reason": "",
+      "sha256": "b75240a4e671e1bb531371afd9ac46f564dfce4acb89e4d04bdbca151d86d139"
+    },
+    {
+      "commit": "65a0a96554973748ac9b9b160cc53481f97cbba1",
+      "committed_at": "2026-10-21T17:13:23-04:00",
+      "ok": true,
+      "path": "data/factor_mine/state/union_hot_n4_h1_preopen/2026-10-21.json",
+      "reason": "",
+      "sha256": "ea42c9a5f191db1ad30f338c054ecc0a1dfab56297ace8a3f4e1c842ea7dc1e9"
+    },
+    {
+      "commit": "65a0a96554973748ac9b9b160cc53481f97cbba1",
+      "committed_at": "2026-10-21T17:13:23-04:00",
+      "ok": true,
+      "path": "data/factor_mine/state/union_hot_n4_holdup_preopen/2026-10-21.json",
+      "reason": "",
+      "sha256": "7ba94842834ba37321f06cfc1a81fef58d7a060504033c568b089c02b464dcf0"
+    }
+  ],
+  "inputs_rule": "tickets look.source=look, weather general_score, prior state; last commit before 09:30 ET only",
+  "log": [
+    "tickets commit e6d06b3a25586a4b9f860546b391afb698d3d6bb at 2026-10-22T06:03:12-04:00 is before 09:30 ET",
+    "weather commit f073720cd4b59df6e8c8aa19f607d2d76f4337dd at 2026-10-22T06:02:09-04:00 is before 09:30 ET",
+    "union_hot_n4_h1_preopen prior state 2026-10-21 commit 65a0a96554973748ac9b9b160cc53481f97cbba1 at 2026-10-21T17:13:23-04:00 is before 09:30 ET",
+    "union_hot_n4_holdup_preopen prior state 2026-10-21 commit 65a0a96554973748ac9b9b160cc53481f97cbba1 at 2026-10-21T17:13:23-04:00 is before 09:30 ET"
+  ],
+  "open_cutoff_et": "2026-10-22T09:30:00-04:00",
+  "s": -14.314,
+  "s_source": "weather",
+  "sha256": "b58ea8888d3fc31434ef629b359edfc2381ccdab880bf61b8c5c4b20bd7f5c73",
+  "sleeves": {
+    "union_hot_n4_h1_preopen": {
+      "parent": "union_hot_n4_h1",
+      "pick_source": "tickets_look",
+      "picks": [],
+      "reasons": [
+        "S=-14.31 <= -3: no buys"
+      ],
+      "sit": true,
+      "would_pick": [
+        "LQDA",
+        "ENGS",
+        "TRU",
+        "INN"
+      ]
+    },
+    "union_hot_n4_holdup_preopen": {
+      "parent": "union_hot_n4_holdup",
+      "pick_source": "tickets_look",
+      "picks": [],
+      "reasons": [
+        "S=-14.31 <= -3: no buys"
+      ],
+      "sit": true,
+      "would_pick": [
+        "LQDA",
+        "ENGS",
+        "TRU",
+        "INN"
+      ]
+    }
+  },
+  "start": "2026-10-08"
+}
