@@ -1,8 +1,8 @@
 {
   "date": "2026-10-22",
-  "generated_at": "2026-10-22T04:31:37.159388-04:00",
+  "generated_at": "2026-10-22T04:32:02.795318-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-10-21.csv",
+  "export": "finviz_2026-10-22.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8944,7 +8944,16 @@
       ]
     },
     {
-      "time": "13 min",
+      "time": "4 min",
+      "title": "Kinder Morgan approves $4.7bn for US gas pipelines",
+      "url": "https://finance.yahoo.com/energy/articles/kinder-morgan-approves-4-7bn-082717716.html",
+      "source": "Offshore Technology",
+      "tickers": [
+        "KMI"
+      ]
+    },
+    {
+      "time": "14 min",
       "title": "Meta shares jump 5% as AI investments fuel revenue growth",
       "url": "https://finance.yahoo.com/technology/ai/articles/meta-shares-jump-5-ai-081735024.html",
       "source": "Euronews",
@@ -8972,7 +8981,7 @@
       ]
     },
     {
-      "time": "23 min",
+      "time": "24 min",
       "title": "NIO Stock Hits 18-Month Low As CEO Questions Self-Drivings Payoff  If Users Are Unwilling To Pay, Where Is The Value?",
       "url": "https://finance.yahoo.com/markets/stocks/articles/nio-stock-hits-18-month-080749223.html",
       "source": "Stocktwits",
@@ -8990,7 +8999,7 @@
       ]
     },
     {
-      "time": "26 min",
+      "time": "27 min",
       "title": "Tesla reports Q3 earnings beat, positive free cash flow, and better-than-expected capex",
       "url": "https://finance.yahoo.com/markets/stocks/article/tesla-reports-q3-earnings-beat-positive-free-cash-flow-and-better-than-expected-capex-202153389.html",
       "source": "Yahoo Finance",
@@ -9030,7 +9039,7 @@
       ]
     },
     {
-      "time": "45 min",
+      "time": "46 min",
       "title": "GENIUS Act Rules Are Reshaping the USDC vs. USDT Battle",
       "url": "https://finance.yahoo.com/markets/crypto/articles/genius-act-rules-reshaping-usdc-074536389.html",
       "source": "Cryptonews",
@@ -9048,7 +9057,7 @@
       ]
     },
     {
-      "time": "50 min",
+      "time": "51 min",
       "title": "Barclays to Cut 5,000 Jobs in AI-Fueled Push to Lower Costs",
       "url": "https://finance.yahoo.com/technology/ai/articles/barclays-cut-5-000-jobs-074030266.html",
       "source": "Bloomberg",
@@ -9057,7 +9066,7 @@
       ]
     },
     {
-      "time": "51 min",
+      "time": "52 min",
       "title": "LSEG agrees $3.54 billion Octus deal, lifts 2026 revenue, margin outlook",
       "url": "https://finance.yahoo.com/markets/stocks/articles/lseg-agrees-3-54-billion-073947849.html",
       "source": "Investing.com",
@@ -9066,7 +9075,7 @@
       ]
     },
     {
-      "time": "55 min",
+      "time": "56 min",
       "title": "Stock Market Today: Dow, S&P 500 and Nasdaq set to fall as tech stocks slide and investors weigh Meta and Tesla earnings",
       "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-investors-weigh-meta-tesla-financial-earnings?mod=mw_FV",
       "source": "MarketWatch",
@@ -9079,7 +9088,7 @@
       ]
     },
     {
-      "time": "56 min",
+      "time": "57 min",
       "title": "Top Software Stocks to Watch Going Into Sept-Qtr Earnings, According to Jefferies",
       "url": "https://finance.yahoo.com/markets/stocks/articles/top-software-stocks-watch-going-073450676.html",
       "source": "Investing.com",
@@ -9089,7 +9098,7 @@
       ]
     },
     {
-      "time": "56 min",
+      "time": "57 min",
       "title": "Nasdaq poised to fall more than 450 points as tech stocks slip",
       "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-investors-weigh-meta-tesla-financial-earnings/card/nasdaq-poised-to-fall-more-than-450-points-as-tech-stocks-slip-D91dHrTJzxqVahR3jur6?mod=mw_FV",
       "source": "MarketWatch",
@@ -9099,7 +9108,7 @@
       ]
     },
     {
-      "time": "59 min",
+      "time": "1 hour",
       "title": "Asian stocks retreat as tech mood sours again",
       "url": "https://finance.yahoo.com/markets/world-indices/articles/asian-stocks-back-retreat-tech-024129180.html",
       "source": "AFP",
@@ -9583,8 +9592,8 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/why-did-mrna-cvx-v-040107227.html",
       "source": "Stocktwits",
       "tickers": [
-        "CVX",
         "MRNA",
+        "CVX",
         "V"
       ]
     },
@@ -9778,16 +9787,6 @@
       "title": "Tesla's new Roadster opens two paths for Taiwanese suppliers, from EV components to aerospace",
       "url": "https://www.digitimes.com/news/a20261022PD224/tesla-vehicle-spacex-technology-production.html",
       "source": "DigiTimes",
-      "tickers": [
-        "SPCX",
-        "TSLA"
-      ]
-    },
-    {
-      "time": "Oct-21",
-      "title": "TSLA, SPCX Slip Overnight: Musk Reportedly Pushes Merger Before Trumps Exit  ARK Sees Tesla Holders 5x Better Off By 2036",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/tsla-spcx-slip-overnight-musk-014422511.html",
-      "source": "Stocktwits",
       "tickers": [
         "SPCX",
         "TSLA"
@@ -10693,5 +10692,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 188,
   "earnings_window_count": 679,
-  "overlay_at": "2026-10-22T04:31:37.159388-04:00"
+  "overlay_at": "2026-10-22T04:32:02.795318-04:00"
 }
