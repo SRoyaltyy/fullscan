@@ -231,3 +231,15 @@ assert.equal(elements.get('compare-keywords').disabled,false);
 console.log('Custom article comparisons load and verify keyword buckets as needed.');
 
 
+
+// Archived full-universe projections have current disclosure paragraphs but no
+// newly rebuilt exhaustive noun inventory. Keep that distinction visible.
+vm.runInContext('staticMeta={snapshot:{filing_coverage:{scope:"archived_relationships_with_current_disclosures",covered_tickers:["TEST","OTHER"]}}}',context);
+assert.deepEqual(Array.from(vm.runInContext('coveredStockPool()',context)),['TEST','OTHER']);
+context.archivedBox=element();
+context.archivedGraph={schema:'completed-parser-review-1',coverage:{},sources:[{id:'s',form:'10-K',filing_date:'2026-01-01'}],facts:[],
+  paragraphs:[{id:'p',source_id:'s',start:0,end:22,text:'Exact source paragraph',labels:['regulation_legal']}],specific_records:{records:[]}};
+vm.runInContext('renderParagraphs(archivedBox,archivedGraph);renderTermReview(archivedBox,archivedGraph)',context);
+assert.ok(context.archivedBox.children.some(e=>e.textContent?.includes('Retained complete source paragraphs')));
+assert.ok(context.archivedBox.children.some(e=>e.children?.some(c=>c.textContent?.includes('exhaustive new spaCy occurrence inventory is unavailable'))));
+console.log('Archived stock pool and retained paragraph review work without claiming a rebuilt spaCy inventory.');

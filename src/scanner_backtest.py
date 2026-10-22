@@ -51,6 +51,16 @@ def open_program(descriptions: Path, sectors: Path | None, universe: Path | None
                  filing_profiles: Path | None = None):
     """Load the same description board the evidence CLI scores, then compile it."""
     stocks = load_stocks(descriptions, universe, sectors, {})
+    catalog_count=len(stocks)
+    added_archive_tickers=[]
+    if filing_profiles is not None and universe is None:
+        from .deep_profile_store import read_index
+        _,index,_=read_index(filing_profiles)
+        known={r['ticker'] for r in stocks}
+        for ticker,entry in sorted(index['profiles'].items()):
+            if ticker not in known:
+                stocks.append({'ticker':ticker,'name':entry['name'],'description':'','industry':'','sector':''})
+                added_archive_tickers.append(ticker)
     coverage = {"scope": "description_only", "covered_tickers": [],
                 "catalog_tickers": len(stocks), "full_business_coverage": False}
     if identity_filings is not None:
@@ -84,10 +94,16 @@ def open_program(descriptions: Path, sectors: Path | None, universe: Path | None
         from .stock_evidence import Catalog
         board.evidence_board, coverage = attach_keyword_profiles(board.evidence_board, filing_profiles,
                                                        as_of=as_of, catalog=Catalog(board.source_rows))
+        coverage.update(archive_tickers_added_to_catalog=added_archive_tickers,
+                        catalog_tickers_with_descriptions=catalog_count,
+                        catalog_tickers_without_archived_filings=len(board.evidence_board.profiles)-len(coverage['covered_tickers']))
     board.filing_coverage = coverage
     from .stock_keywords import KeywordIndex
     board.evidence_board.keyword_index=KeywordIndex(board.evidence_board.profiles)
-    names = NameIndex(catalog_from_csv(descriptions)) if descriptions.is_file() else None
+    from .names import Name
+    from .correlation import _alias
+    names = NameIndex([Name(r['ticker'],r['name'],_alias(r['name']),r.get('industry',''),r.get('sector',''))
+        for r in board.source_rows]) if descriptions.is_file() else None
     return board, names
 
 
@@ -116,7 +132,7 @@ def snapshot_metadata(board, input_mode: str = 'headline') -> dict:
     """Bind cached results to source code, lexical resources and compiled inputs."""
     root = Path(__file__).resolve().parents[1]
     source_names = ('correlation', 'evidence_matcher', 'stock_evidence', 'filing_evidence', 'deep_profile_store', 'filing_relationships',
-                    'stock_keywords', 'stock_keyword_store', 'entity_resolution', 'term_inventory', 'names', 'aliases', 'linguistics', 'semantic_lookup', 'synonyms',
+                    'stock_keywords', 'stock_keyword_store', 'completed_profile_store', 'specific_filing_records', 'entity_resolution', 'term_inventory', 'names', 'aliases', 'linguistics', 'semantic_lookup', 'synonyms',
                     'places', 'spelling', 'profile_cache', 'link_correlation', 'scanner_backtest')
     paths = [root / 'src' / (name + '.py') for name in source_names]
     paths += [root / 'scripts/export_backtest_static.py']

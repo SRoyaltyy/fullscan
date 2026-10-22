@@ -104,6 +104,8 @@ def compile_keywords(graph, *, as_of, ticker=None):
         if fact['predicate'] == 'subject_to' and fact['object_type'] in ('agency','law'):
             role = 'regulatory_exposure'
         issues = sorted(set(issue for ev in witnesses for issue in quality_issues(fact['predicate'],fact['object'],ev['quote'])))
+        if graph.get('schema')=='completed-parser-review-1':
+            issues=sorted(set(issues+['preserved_relationship_requires_current_method_validation']))
         if 'labor_competition_is_not_product_competition' in issues:
             role = 'talent_competition'
         values = [fact['object']]
@@ -143,7 +145,8 @@ def compile_keywords(graph, *, as_of, ticker=None):
             add(detail['entity'],'disclosed_'+detail['category'],detail['relation'],'reported',reference,
                 qualifiers={'disclosure_extractor':specific['version'],'disclosed_aliases':detail['aliases'],
                     'applicability':detail['applicability'],'direct_obligation_asserted':detail['direct_obligation_asserted'],
-                    'details':detail['fields'],'missing_fields':detail['missing_fields']},
+                    'details':detail['fields'],'missing_fields':detail['missing_fields'],
+                    **({'definition_evidence':detail['definition_evidence']} if detail.get('definition_evidence') else {})},
                 issues=('disclosure_requires_applicability_and_article_relevance_review',),
                 current=False,object_type=evidence[reference]['object_type'])
 
@@ -151,7 +154,7 @@ def compile_keywords(graph, *, as_of, ticker=None):
     # construction is normalized; unrelated table values are never combined.
     for p in graph.get('paragraphs',[]):
         source = sources[p['source_id']]
-        if not source.get('filing_date') or source['filing_date'] > as_of or p['kind'] != 'prose' or not p.get('signals'):
+        if not source.get('filing_date') or source['filing_date'] > as_of or p.get('kind') != 'prose' or not p.get('signals'):
             continue
         metrics = list(dict.fromkeys(m.group() for m in METRIC.finditer(p['text'])))
         if not metrics:

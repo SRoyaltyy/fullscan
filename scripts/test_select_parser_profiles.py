@@ -8,11 +8,22 @@ def artifact(sha,created,name='full',branch='main',expired=False):
 
 
 class ProfileSelectionControls(unittest.TestCase):
-    def test_stale_full_set_cannot_hide_current_sample(self):
-        result=select([artifact('old',3)],[artifact('current',2,'sample')],lambda sha:sha=='current')
+    def test_development_sample_requires_explicit_opt_in(self):
+        args=([artifact('old',3)],[artifact('current',2,'sample')],lambda sha:sha=='current')
+        self.assertEqual(select(*args),{'ready':'false'})
+        result=select(*args,allow_sample=True)
         self.assertEqual(result['artifact'],'sample')
         self.assertEqual(result['scope'],'development_sample')
         self.assertEqual(result['profile_assets'],'full')
+
+    def test_current_market_disclosures_take_precedence_over_single_issuer_sample(self):
+        from src.test_completed_profile_store import fixture
+        manifest,_,_=fixture()
+        result=select([artifact('old',3)],[artifact('current',2,'sample')],lambda sha:sha=='current',
+            completed=manifest,manifest_url='immutable-manifest',allow_sample=True)
+        self.assertEqual(result['input_kind'],'completed_review')
+        self.assertEqual(result['scope'],'archive_set')
+        self.assertEqual(result['manifest_url'],'immutable-manifest')
 
     def test_compatible_full_set_takes_precedence(self):
         result=select([artifact('current',1)],[artifact('current',2,'sample')],lambda sha:True)

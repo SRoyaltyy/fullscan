@@ -61,6 +61,7 @@ def project(graph):
     refined=details(graph)
     validate_details(graph,refined)
     detail_paragraphs={r['paragraph_id'] for r in refined['records']}
+    detail_paragraphs.update(r['definition_evidence']['paragraph_id'] for r in refined['records'] if r.get('definition_evidence'))
     for p in graph['paragraphs']:
         if p['id'] in detail_paragraphs:
             if hashlib.sha256(p['text'].encode()).hexdigest()!=p['sha256']:
@@ -84,7 +85,7 @@ def project(graph):
 
 def export(root, out, *, expected_compiler=COMPILER, expected_companies=2026,
            expected_tickers=2032, expected_facts=754258, viewer_revision='', read_bytes=None):
-    from src.specific_filing_records import VERSION as DETAILS_VERSION
+    from src.specific_filing_records import VERSION as DETAILS_VERSION, source_fingerprint
     root, out = Path(root).resolve(), Path(out)
     raw_index = read_bytes('index.json') if read_bytes else (root/'index.json').read_bytes()
     index = json.loads(raw_index)
@@ -128,6 +129,7 @@ def export(root, out, *, expected_compiler=COMPILER, expected_companies=2026,
     if len(processed) != expected_companies or facts != expected_facts:
         raise ValueError('publication omitted completed issuers or relationships')
     manifest = {'schema':'completed-parser-review-1','complete':True,'detail_extractor':DETAILS_VERSION,
+        'detail_source_sha256':source_fingerprint(),
         'artifact_id':ARTIFACT,'source_run_id':RUN,'compiler_sha256':expected_compiler,
         'extraction_schema':index['schema'],'as_of':index['as_of'],
         'source_index_sha256':hashlib.sha256(raw_index).hexdigest(),

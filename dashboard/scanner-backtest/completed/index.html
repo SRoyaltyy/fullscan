@@ -8,6 +8,7 @@
 <h1>Completed stock parser results</h1>
 <p id="coverage" class="muted">Loading the completed extraction…</p>
 <p id="version" class="source"></p>
+<p id="accuracy" class="card"></p>
 <p class="muted">Review named legal instruments, examining authorities, disclosed operating requirements and the original saved relationships. Specific details are extracted from the archived text; a law mention does not by itself establish that the company is legally subject to it. Missing names remain explicit gaps.</p>
 <div class="row"><label for="ticker">Stock</label><input id="ticker" list="tickers" placeholder="Ticker, e.g. AAPL" maxlength="12"><datalist id="tickers"></datalist><button id="analyze" disabled>Analyze stock</button><button id="random" disabled>Random stock</button></div>
 <section id="profile" class="card" hidden><h2 id="name"></h2><p id="stats" class="muted"></p>
@@ -146,8 +147,13 @@ async function init(){
     const response=await fetch('manifest.json?refresh='+Date.now(),{credentials:'omit',cache:'no-store'});if(!response.ok)throw Error('Completed results are not published yet');
     manifest=await response.json();if(!manifest.complete||manifest.schema!=='completed-parser-review-1')throw Error('Incomplete publication');
     const totals=manifest.archive_totals,p=manifest.published;
-    $('coverage').textContent=`${p.tickers.toLocaleString()} stock associations · ${p.issuers.toLocaleString()} issuers · ${totals.filings.toLocaleString()} filings · ${p.relationships.toLocaleString()} stored relationships. Reused completed output; no extraction rerun.`;
+    $('coverage').textContent=`${p.tickers.toLocaleString()} stock associations · ${p.issuers.toLocaleString()} issuers · ${totals.filings.toLocaleString()} filings · ${p.relationships.toLocaleString()} stored relationships. Original relationships preserved; current specific-disclosure pass scans all archived source paragraphs.`;
     $('version').textContent=`Saved extraction ${manifest.extraction_schema} · compiler ${manifest.compiler_sha256.slice(0,12)} · detail pass ${manifest.detail_extractor||'not yet published'} · cutoff ${manifest.as_of} · source run ${manifest.source_run_id} · viewer ${manifest.viewer_revision.slice(0,12)}`;
+    const accuracy=manifest.accuracy_evaluation;
+    if(accuracy){
+      const m=accuracy.metrics,pct=n=>(100*n).toFixed(1)+'%';
+      $('accuracy').textContent=`Development diagnostic: ${accuracy.passed?'sample target met':'BELOW 90% acceptance target'} · complete cases ${pct(m.exact_case_accuracy)} · precision ${pct(m.precision)} · recall ${pct(m.recall)} · attachment ${pct(m.attachment_accuracy)}. ${accuracy.issuers} issuers across ${accuracy.sectors_tested} sectors; model-authored labels, not independently reviewed. Market-wide accuracy is not established. Scope: named legal disclosures in retained review passages.`;
+    }else $('accuracy').textContent='Accuracy against the 90% acceptance target has not been published for this version.';
     for(const [ticker,entry]of Object.entries(manifest.profiles)) {const option=el('option');option.value=ticker;option.label=entry.name;$('tickers').append(option);}
     $('analyze').disabled=false;$('random').disabled=false;
     const selected=new URLSearchParams(location.search).get('ticker');if(selected){$('ticker').value=selected;await analyze();}
