@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-22
 
-Export `finviz_2026-10-21.csv` · 11616 names · generated 2026-10-22T04:31:37.159388-04:00
+Export `finviz_2026-10-22.csv` · 11616 names · generated 2026-10-22T04:32:02.795318-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -281,30 +281,30 @@ COLD (1w):
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
 - 3 min **SHEL** Transaction in Own Shares (GlobeNewswire)
-- 13 min **META** Meta shares jump 5% as AI investments fuel revenue growth (Euronews)
+- 4 min **KMI** Kinder Morgan approves $4.7bn for US gas pipelines (Offshore Technology)
+- 14 min **META** Meta shares jump 5% as AI investments fuel revenue growth (Euronews)
 - 15 min **META** Meta earnings live: Meta beats Q3 revenue expectations, announces 2-for-1 stock split (Yahoo Finance)
 - 23 min **CL,LCO** FTSE 100 today: Stocks fall as Gulf war lifts oil, miners slide on weaker metals (Investing.com)
-- 23 min **NIO** NIO Stock Hits 18-Month Low As CEO Questions Self-Drivings Payoff  If Users Are Unwilling To Pay, Where Is The Value? (Stocktwits)
+- 24 min **NIO** NIO Stock Hits 18-Month Low As CEO Questions Self-Drivings Payoff  If Users Are Unwilling To Pay, Where Is The Value? (Stocktwits)
 - 26 min **APP** Kaplan Fox & Kilsheimer LLP Encourages AppLovin Corporation (APP) Investors With Losses to Seek Appointment as Lead Plaintiff Before November 16, 2026 (Newsfile)
-- 26 min **TSLA,SPCX** Tesla reports Q3 earnings beat, positive free cash flow, and better-than-expected capex (Yahoo Finance)
+- 27 min **TSLA,SPCX** Tesla reports Q3 earnings beat, positive free cash flow, and better-than-expected capex (Yahoo Finance)
 - 31 min **IDCC** InterDigital's Joseph Levy Elected to the IEEE SA Board of Governors for Second Term (GlobeNewswire)
 - 31 min **MSTY,NVDY,JEPI,CAIE** Options ETFs Are Booming. Beware of the Tradeoffs. (Barrons.com)
 - 32 min **BKYI** BIO-key Secures Another Middle East Government Contract for its Passwordless, Biometric, Identity and Access Management Solutions (GlobeNewswire)
-- 45 min **CRCL** GENIUS Act Rules Are Reshaping the USDC vs. USDT Battle (Cryptonews)
+- 46 min **CRCL** GENIUS Act Rules Are Reshaping the USDC vs. USDT Battle (Cryptonews)
 - 46 min **META** European stocks buckle as French yields cross 5% barrier (Investing.com)
-- 50 min **BCS** Barclays to Cut 5,000 Jobs in AI-Fueled Push to Lower Costs (Bloomberg)
-- 51 min **TW** LSEG agrees $3.54 billion Octus deal, lifts 2026 revenue, margin outlook (Investing.com)
-- 55 min **BE,WDC,NEM,SPCX,RNG** Stock Market Today: Dow, S&P 500 and Nasdaq set to fall as tech stocks slide and investors weigh Meta and Tesla earnings (MarketWatch)
-- 56 min **JEF,DT** Top Software Stocks to Watch Going Into Sept-Qtr Earnings, According to Jefferies (Investing.com)
-- 56 min **SPCX,META** Nasdaq poised to fall more than 450 points as tech stocks slip (MarketWatch)
-- 59 min **TSLA,SPCX,META** Asian stocks retreat as tech mood sours again (AFP)
+- 51 min **BCS** Barclays to Cut 5,000 Jobs in AI-Fueled Push to Lower Costs (Bloomberg)
+- 52 min **TW** LSEG agrees $3.54 billion Octus deal, lifts 2026 revenue, margin outlook (Investing.com)
+- 56 min **BE,WDC,NEM,SPCX,RNG** Stock Market Today: Dow, S&P 500 and Nasdaq set to fall as tech stocks slide and investors weigh Meta and Tesla earnings (MarketWatch)
+- 57 min **JEF,DT** Top Software Stocks to Watch Going Into Sept-Qtr Earnings, According to Jefferies (Investing.com)
+- 57 min **SPCX,META** Nasdaq poised to fall more than 450 points as tech stocks slip (MarketWatch)
+- 1 hour **TSLA,SPCX,META** Asian stocks retreat as tech mood sours again (AFP)
 - 1 hour **BCS** STOXX 600 slips as Barclays, Hermes disappoint; oil climbs (Reuters)
 - 1 hour **QS** Why Is QS Stock Surging Over 8% Overnight? (Stocktwits)
 - 1 hour **RTO** Rentokil Initial expects 2026 profit to meet market forecasts, shares jump (Investing.com)
 - 1 hour **SAN,BCS** Barclays Names Top Spanish Banks Ahead of Third-Quarter Results (Investing.com)
 - 1 hour **BCS** Barclays to axe 5,000 jobs on AI-driven efficiencies; shares dip (Investing.com)
 - 1 hour **BCS** Barclays Fixed-Income Traders Lag Wall Street as Equities Shine (Bloomberg)
-- 1 hour **CRWV,NBIS,RKLB,ASTS,SPCX** RKLB Is Among Nasdaqs Top 5 Losers So Far This Month, Yet Analysts See 90% Upside  Can Neutron Justify Its SpaceX Premium? (Stocktwits)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
