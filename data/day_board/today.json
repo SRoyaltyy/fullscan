@@ -1,6 +1,6 @@
 {
   "date": "2026-10-22",
-  "generated_at": "2026-10-22T05:44:06.174728-04:00",
+  "generated_at": "2026-10-22T05:46:50.077104-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-10-22",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-22T04:26:33.418364-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-22_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 6206,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-10-22_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2811,
-          "preview": "# Finviz homepage market digest \u2014 2026-10-22\n**Generated:** 2026-10-22T04:26:33.405529-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point lower as Gulf tensions lift oil over 2% ahead of jobless claims and busy earnings slate\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** TSLA, META, PG, UNP, LMT, VLO, SPOT, BX\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** PG, UNP, LMT, VLO, SPOT, BX\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-22\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-22\n**Generated:** 2026-10-22T04:26:33.405529-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point lower as Gulf tensions lift oil over 2% ahead of jobless claims and busy earnings slate\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** TSLA, META, PG, UNP, LMT, VLO, SPOT, BX\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** PG, UNP, LMT, VLO, SPOT, BX\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-22\n**Clock use:** `same_morning`"
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -193,6 +168,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 KMI, CRSR, ISRG, AUPH, ELV \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ISRG, A, WAB, HAS, WAT"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-22T05:46:48.833428-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-22_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9576,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-22_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5197,
+          "preview": "# Weather report \u2014 2026-10-22\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-22\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
