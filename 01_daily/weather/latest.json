@@ -1,6 +1,6 @@
 {
  "date": "2026-10-22",
- "generated_at": "2026-10-22T05:54:32.652219-04:00",
+ "generated_at": "2026-10-22T05:46:48.680758-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -14,17 +14,19 @@
   "fed_score": null,
   "dollar_oil_score": null,
   "futures_score": null,
-  "yields": "unknown",
-  "yields_source": "llm_factor_fallback",
+  "yields": "falling",
+  "yields_source": "fred_dgs10",
+  "dgs10_delta_1d": -0.03,
+  "dgs10_current": 5.12,
   "dollar": "soft",
   "dollar_source": "dxy",
   "dxy_pct_1d": -0.22,
-  "vix_ratio": 0.991,
-  "vix_spot": 18.55,
-  "vix_delta_1d": 1.87,
+  "vix_ratio": 0.988,
+  "vix_spot": 18.49,
+  "vix_delta_1d": 1.81,
   "vix_ratio_source": "vix/vix3m",
   "vix": "spiking",
-  "oil_pct_1d": 2.62,
+  "oil_pct_1d": 2.43,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -147,14 +149,14 @@
     "why": "finviz sector median week -1.40% [tape]"
    },
    "Healthcare": {
-    "stance": "hostile",
+    "stance": "favorable",
     "confidence": "medium",
-    "why": "finviz sector median week -2.99% [tape]"
+    "why": "news_judge SECTOR Healthcare [bullish]"
    },
    "Industrials": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -1.83% [tape]"
+    "why": "news_judge SECTOR Industrials [bearish]"
    },
    "Real Estate": {
     "stance": "hostile",
@@ -296,58 +298,58 @@
   },
   "profit": {
    "no": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no yields/risk signals"
-   },
-   "thin": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no yields/risk signals"
+    "why": "risk-unknown, F&G None"
    },
    "yes": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no yields/risk signals"
+    "why": "—"
+   },
+   "thin": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
    }
   },
   "lev": {
-   "low": {
-    "stance": "unknown",
+   "high": {
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no signals"
+    "why": "—"
+   },
+   "low": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
    },
    "mid": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no signals"
-   },
-   "high": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no signals"
+    "why": "—"
    },
    "neg_equity": {
-    "stance": "unknown",
+    "stance": "hostile",
     "confidence": "low",
-    "why": "no signals"
+    "why": "negative equity is distressed in any regime"
    }
   },
   "style": {
    "growth": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no yields/risk signals"
-   },
-   "blend": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no yields/risk signals"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "yields falling — duration/growth re-rates [factor: Bond yields]"
    },
    "value": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no yields/risk signals"
+    "why": "value lags duration rallies"
+   },
+   "blend": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
    }
   },
   "mom": {
