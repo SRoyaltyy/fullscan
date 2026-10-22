@@ -1,6 +1,6 @@
 {
  "date": "2026-10-22",
- "generated_at": "2026-10-22T11:17:53.027820-04:00",
+ "generated_at": "2026-10-22T14:05:50.760676-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -21,19 +21,19 @@
   "yields_source": "fred_dgs10",
   "dgs10_delta_1d": -0.03,
   "dgs10_current": 5.12,
-  "dollar": "flat",
+  "dollar": "soft",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.01,
-  "vix_ratio": 0.947,
-  "vix_spot": 19.17,
-  "vix_delta_1d": 2.49,
+  "dxy_pct_1d": -0.17,
+  "vix_ratio": 0.946,
+  "vix_spot": 19.14,
+  "vix_delta_1d": 2.46,
   "vix_ratio_source": "vix/vix3m",
   "vix": "spiking",
-  "oil_pct_1d": 1.68,
+  "oil_pct_1d": 2.97,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.687,
+  "regime_corr": 0.731,
   "sectors": {
    "Basic Materials": {
     "score": -4.97,
@@ -181,12 +181,12 @@
    "micro": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors]"
+    "why": "risk-off — small caps de-rate first; risk-off, dollar soft [general predict + factors]"
    },
    "small": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors]"
+    "why": "risk-off — small caps de-rate first; risk-off, dollar soft [general predict + factors]"
    },
    "large": {
     "stance": "favorable",
@@ -223,7 +223,7 @@
    "rut": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors]"
+    "why": "risk-off — small caps de-rate first; risk-off, dollar soft [general predict + factors]"
    },
    "none": {
     "stance": "neutral",
