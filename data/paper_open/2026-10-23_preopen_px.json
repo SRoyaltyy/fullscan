@@ -1,0 +1,15 @@
+{
+ "date": "2026-10-23",
+ "missing": [],
+ "prices": {
+  "ASST": 29.11,
+  "CYPH": 2.95,
+  "LQDA": 39.7
+ },
+ "sources": {
+  "ASST": "yahoo_premarket",
+  "CYPH": "yahoo_premarket",
+  "LQDA": "yahoo_premarket"
+ },
+ "written_at": "2026-10-23T13:01:47+00:00"
+}
