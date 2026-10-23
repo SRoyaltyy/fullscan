@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T10:40:52.011294-04:00",
+  "generated_at": "2026-10-23T10:41:29.584639-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -110,31 +110,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "news_actions",
-      "title": "News actions",
-      "date": "2026-10-23",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-23T07:10:51.218225-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-23_actions.json",
-          "ok": true,
-          "reason": "",
-          "size": 96066,
-          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
-        },
-        {
-          "path": "01_daily/news/2026-10-23_actions.md",
-          "ok": true,
-          "reason": "",
-          "size": 19715,
-          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-23T07:10:51.199597-04:00\nraw=9390 unique_events=9 tickers=127"
-        }
-      ],
-      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-23T07:10:51.199597-04:00\nraw=9390 unique_events=9 tickers=127"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -442,6 +417,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-23T10:41:28.482322-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-23_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1394102,
+          "preview": "1d BUY SGRY, MD, ASTH, HITI, CON, NTAP, AMN, BLFS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, NRGV, INDI, TE"
+        },
+        {
+          "path": "data/stock_book/2026-10-23_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-23_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2433,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-23_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11691,
+          "preview": "2026-10-23 BUY SGRY, MD, ASTH, HITI, CON, NTAP, AMN, BLFS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, NRGV, INDI, TE"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11691,
+          "preview": "2026-10-23 BUY SGRY, MD, ASTH, HITI, CON, NTAP, AMN, BLFS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, NRGV, INDI, TE"
+        },
+        {
+          "path": "01_daily/2026-10-23_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 63129,
+          "preview": "# Stock book \u2014 2026-10-23\n_Generated 2026-10-23T10:41:02.258732-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY SGRY, MD, ASTH, HITI, CON, NTAP, AMN, BLFS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, NRGV, INDI, TE \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-23 BUY SGRY, MD, ASTH, HITI, CON, NTAP, AMN, BLFS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, NRGV, INDI, TE \u00b7 2026-10-23 BUY SGRY, MD, ASTH, HITI, CON, NTAP, AMN, BLFS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, NRGV, INDI, TE \u00b7 # Stock book \u2014 2026-10-23\n_Generated 2026-10-23T10:41:02.258732-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
