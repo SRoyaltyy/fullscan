@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T17:32:07.243401-04:00",
+  "generated_at": "2026-10-23T17:32:29.610979-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -184,7 +184,7 @@
       "inputs_ready": true,
       "n_req_ok": 6,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 14,
       "files": [
         {
@@ -338,11 +338,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-23/_board.json",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -506,13 +511,18 @@
           "bullets": []
         }
       ],
-      "said": "general DOWN  -7.538",
+      "said": "general DOWN  -7.538 \u00b7 sectors 0 up / 0 down / 0 flat",
       "bullets": [
         "bad: Meta -7% / AI-capex fatigue",
         "bad: Hormuz 7-tanker attack, Brent >$114",
         "bad: Moody's France downgrade risk tonight",
         "good: SpaceX +2.8% premarket",
-        "good: memory/optical chips green"
+        "good: memory/optical chips green",
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -547,8 +557,8 @@
           "path": "01_daily/weather/2026-10-23_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10488 vix=calm yields=falling",
-          "size": 10488,
+          "reason": "sectors=11 bytes=10434 vix=calm yields=flat",
+          "size": 10434,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
@@ -680,7 +690,7 @@
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
-      "n_opt": 4,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_general",
@@ -702,12 +712,17 @@
           "key": "in_board",
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-23/_board.json",
-          "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -761,8 +776,8 @@
           "path": "01_daily/weather/2026-10-23_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10488 vix=calm yields=falling",
-          "size": 10488,
+          "reason": "sectors=11 bytes=10434 vix=calm yields=flat",
+          "size": 10434,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
@@ -789,10 +804,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2249435,
-          "said": "216 rows",
+          "size": 2259124,
+          "said": "215 rows",
           "bullets": [
-            "ARGX, ONC, INCY, REGN, WAY, AZN, CORT, LLY"
+            "ARGX, ONC, REGN, INCY, AZN, EXEL, WAY, CORT"
           ]
         },
         {
@@ -815,8 +830,8 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=167",
-          "size": 1393873,
-          "said": "1d BUY SGRY, MD, ASTH, HITI, CON, NTAP, AMN, MQ \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, NNDM \u00b7 -0.6817",
+          "size": 1394099,
+          "said": "1d BUY SGRY, MD, ASTH, HITI, CON, NTAP, AMN, BLFS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, NRGV \u00b7 -0.6817",
           "bullets": []
         },
         {
@@ -826,10 +841,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 61898,
+          "size": 62028,
           "said": "Stock book \u2014 2026-10-23",
           "bullets": [
-            "_Generated 2026-10-23T17:31:30.575584-04:00_",
+            "_Generated 2026-10-23T17:32:26.776170-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -870,9 +885,9 @@
           "bullets": []
         }
       ],
-      "said": "216 rows",
+      "said": "215 rows",
       "bullets": [
-        "ARGX, ONC, INCY, REGN, WAY"
+        "ARGX, ONC, REGN, INCY, AZN"
       ]
     },
     {
@@ -893,8 +908,8 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=167",
-          "size": 1393873,
-          "said": "1d BUY SGRY, MD, ASTH, HITI, CON, NTAP, AMN, MQ \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, NNDM \u00b7 -0.6817",
+          "size": 1394099,
+          "said": "1d BUY SGRY, MD, ASTH, HITI, CON, NTAP, AMN, BLFS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, NRGV \u00b7 -0.6817",
           "bullets": []
         },
         {
@@ -944,45 +959,45 @@
     "buy_1d": [
       {
         "ticker": "SGRY",
-        "score": 0.5842419130032749
+        "score": 0.5926681627830884
       },
       {
         "ticker": "MD",
-        "score": 0.6476169543703272
+        "score": 0.6484129422770065
       },
       {
         "ticker": "ASTH",
-        "score": 0.5261967639878277
+        "score": 0.5209478522678647
       },
       {
         "ticker": "HITI",
-        "score": 0.5341618113141667
+        "score": 0.5327698950624696
       },
       {
         "ticker": "CON",
-        "score": 0.706427495462129
+        "score": 0.7067167946445465
       },
       {
         "ticker": "NTAP",
-        "score": 0.13671835700897633
+        "score": 0.14622946023797162
       },
       {
         "ticker": "AMN",
-        "score": 0.6565423687607799
-      },
-      {
-        "ticker": "MQ",
-        "score": 0.5845585936894127
+        "score": 0.6555300606786498
       },
       {
         "ticker": "BLFS",
-        "score": 0.7242785589053895
+        "score": 0.725232707786846
+      },
+      {
+        "ticker": "IT",
+        "score": 0.4741305297839037
       }
     ],
     "sell_1d": [
       {
         "ticker": "NEOV",
-        "score": -0.378441703375094
+        "score": -0.38135458684411905
       },
       {
         "ticker": "OKLO",
@@ -990,19 +1005,19 @@
       },
       {
         "ticker": "FCEL",
-        "score": -0.31324339745770485
+        "score": -0.3139111917167317
       },
       {
         "ticker": "EOSE",
         "score": -0.22766642662970887
       },
       {
-        "ticker": "NRGV",
-        "score": -0.3450015100962536
+        "ticker": "NNDM",
+        "score": -0.20782272962095727
       },
       {
-        "ticker": "NNDM",
-        "score": -0.20305640490738308
+        "ticker": "NRGV",
+        "score": -0.34695715680568334
       },
       {
         "ticker": "INDI",
@@ -1014,11 +1029,11 @@
       },
       {
         "ticker": "SKYX",
-        "score": -0.3696705841025718
+        "score": -0.3710394118059481
       },
       {
         "ticker": "AMSC",
-        "score": -0.20015638094134153
+        "score": -0.20472374728531445
       }
     ],
     "flatten": {
@@ -1040,7 +1055,22 @@
       "score": "-7.538",
       "direction": "down"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {},
     "weather": {
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
@@ -3831,6 +3861,30 @@
       "commit_msg": "auto: land paper [2026-10-23]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "40018991772",
+      "manifest": "research/input_freeze/2026-10-23/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-23_stock_book.md",
+      "at": "2026-10-23T17:32:57-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-23",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40025091735",
+      "manifest": "research/input_freeze/2026-10-23/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-23_input_health.json",
+      "at": "2026-10-23T17:32:57-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-23",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40025091735",
+      "manifest": "research/input_freeze/2026-10-23/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-23_stock_book.json",
+      "at": "2026-10-23T17:32:57-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-23",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40025091735",
       "manifest": "research/input_freeze/2026-10-23/manifest.json"
     }
   ]
