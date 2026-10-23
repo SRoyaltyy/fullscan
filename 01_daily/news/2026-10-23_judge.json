@@ -1,0 +1,10 @@
+{
+ "risk_tilt": null,
+ "macros": [],
+ "sector_tilts": {},
+ "tickers": {
+  "META": -1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=0\nMACRO rates: [pol] hawkish Fed/Oct hike odds + CPI 3.7% keep front-end risk live (regime/1w)\nMACRO risk: [pol] Nasdaq-100 worst day on capex/debt fatigue; mega-cap AI capex scrutiny (session/1d-1w)\nSECTOR semis/AI: [pol] China AI/chip-design export curbs + Taiwan server/chip controls tighten supply chain (SOXX/SMH)\nMACRO energy: [pol] Brent >$111 Hormuz attacks; oil/inflation/energy force (regime/session)\nSECTOR industrials: [pol] Boeing 737 MAX 10 FAA cert halt risks 31% undelivered order book (BA/aerospace)\nMACRO policy: [pol] IEEPA tariff refunds class certified; importer/tariff overhang (sector_policy)\nSECTOR mega-cap: [pol] Meta/MSFT/GOOG Q3 capex/AI spend read-through for Nasdaq beta (session)\nINTERACTION: hawkish Fed/CPI + capex fatigue \u2192 do not buy duration on dovish hope; oil + hawkish = rates/energy cluster\nWATCH: noise sample empty; foreign political items low US beta",
+ "date": "2026-10-23"
+}
