@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-23",
+  "generated_at": "2026-10-23T04:24:39.117817-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-10-23",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures trade mixed ahead of flash PMIs and Michigan sentiment as oil holds near five-month highs on Middle East risks",
+  "raw_text": "- S&P 500 Futures (@ES) are at -0.08%, Dow Jones Futures (@YM) at -0.39%, Nasdaq 100 Futures (@NQ) at +0.16%, and Russell 2000 Futures (@ER2) at -0.33% indicating a mixed open\n- American Express (AXP) reports pre-bell with consensus EPS estimates of roughly $4.50–$4.58, with investor focus on spending trends, credit metrics, and forward guidance\n- SLB (SLB) is due to report pre-bell with consensus EPS of $0.62, with attention on management guidance alongside headline results\n- Flash PMIs for manufacturing, services, and composite are scheduled for 9:45 AM ET and are flagged as primary intraday volatility catalysts\n- University of Michigan consumer sentiment data are due at 10:00 AM ET and represent another key macro release for the session\n- Asian equity markets pared earlier losses that had been tied to weakness in AI and semiconductor names overnight\n- Crude oil (@CL) prices held near five-month highs amid ongoing Middle East supply risks\n- Gold (@GC) prices remained near three-month lows in quiet overnight trading",
+  "raw_summary_md": "- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) are at **-0.08%**, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) at **-0.39%**, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) at **+0.16%**, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) at **-0.33%** indicating a **mixed open**\n- **American Express** ([AXP](https://finviz.com/quote?t=AXP)) reports pre-bell with consensus EPS estimates of roughly **$4.50–$4.58**, with investor focus on **spending trends, credit metrics, and forward guidance**\n- **SLB** ([SLB](https://finviz.com/quote?t=SLB)) is due to report pre-bell with consensus EPS of **$0.62**, with attention on **management guidance** alongside headline results\n- **Flash PMIs** for manufacturing, services, and composite are scheduled for **9:45 AM ET** and are flagged as **primary intraday volatility catalysts**\n- **University of Michigan consumer sentiment data** are due at **10:00 AM ET** and represent another **key macro release** for the session\n- **Asian equity markets** pared earlier losses that had been tied to weakness in **AI and semiconductor names** overnight\n- **Crude oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices held near **five-month highs** amid ongoing **Middle East supply risks**\n- **Gold** ([@GC](https://finviz.com/futures_charts?t=GC)) prices remained near **three-month lows** in quiet overnight trading",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "AXP",
+    "SLB"
+  ],
+  "named_leaders": [
+    "AXP",
+    "SLB"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Crude oil (@CL) prices held near five-month highs amid ongoing Middle East supply risks"
+  },
+  "finviz_id": 316409,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-23T04:06:29.49",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
