@@ -11,9 +11,9 @@
    "SIT": 80
   },
   "factor_mine_preopen": {
-   "MISSING": 2,
+   "MISSING": 0,
    "OK": 0,
-   "SIT": 0
+   "SIT": 2
   },
   "flatten_robust": {
    "MISSING": 0,
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-10-23",
- "generated_at": "2026-10-23T09:01:40-04:00",
+ "generated_at": "2026-10-23T10:40:17-04:00",
  "strategies": [
   {
    "buys": [
@@ -5278,19 +5278,19 @@
    "buys": [],
    "family": "factor_mine_preopen",
    "name": "union_hot_n4_h1_preopen",
-   "note": "no pre-open seal",
+   "note": "S=-7.54 <= -3: no buys",
    "sells": [],
    "source": "data/factor_mine/preopen/seals/2026-10-23.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine_preopen",
    "name": "union_hot_n4_holdup_preopen",
-   "note": "no pre-open seal",
+   "note": "S=-7.54 <= -3: no buys",
    "sells": [],
    "source": "data/factor_mine/preopen/seals/2026-10-23.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
