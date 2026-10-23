@@ -9,7 +9,7 @@ def graph(facts=None):
             'status':status,'qualifiers':qualifiers or {},'confidence':'explicit',
             'evidence':[{'source_id':date,'start':0,'end':len(quote or value),'quote':quote or value}]}
     return {'ticker':'BLZE','facts':facts or [claim('s','buys_from','Western Digital',quote='Western Digital is one of our hard drive suppliers.',qualifiers={'description':'hard drive suppliers'}),
-        claim('d','depends_on','Stripe'), claim('n','depends_on','Stripe','2026-03-01','negated')],
+        claim('d','depends_on','Stripe',quote='We rely on Stripe for payment processing.'), claim('n','depends_on','Stripe','2026-03-01','negated',quote='We do not rely on Stripe.')],
         'sources':[{'id':date,'filing_date':date,'accession':'accession','section':'Item 1','document':'doc.htm'}
                    for date in ('2026-01-01','2026-03-01')], 'paragraphs':[], 'coverage':{}, 'claim':claim}
 
@@ -19,6 +19,38 @@ def profile(bundle, name='Backblaze Inc.'):
 
 
 class KeywordTests(unittest.TestCase):
+    def test_semantic_types_and_local_sentence_attachment(self):
+        from .stock_keywords import annotate_scanner_rows
+        def admitted(value, role, quote, object_type='organization'):
+            row=dict(id='r',stock='TEST',keyword=value,relationship=role,object_type=object_type,
+                assertion='asserted',qualifiers={},evidence_ids=['e'])
+            annotate_scanner_rows([row],{'e':{'witnesses':[dict(quote=quote,source={'filing_date':'2026-01-01'})]}})
+            return scanner_visible(row)
+        bad=[('Exhibit 3.1','customer','We provide notice. Exhibit 3.1'),
+            ('the Foreign Corrupt Practices Act','subsidiary','Our subsidiaries must comply with the Foreign Corrupt Practices Act.'),
+            ('natural disasters','input','We use suppliers and face natural disasters.'),
+            ('key personnel','dependency','We depend on key personnel.'),
+            ('materials','input','We purchase materials.'),
+            ('SAT','customer','SAT is committed to meeting the needs of our customers.'),
+            ('Carbon Fiber Sprayer Booms','customer','PRODUCT\n\nCarbon Fiber Sprayer Booms\n\nWe serve customers.'),
+            ('Trust-Based Solutions','customer','We make loans to our Trust-Based Solutions customers.'),
+            ('New York Stock exchange','competitor',"Our stakeholders (investors, competitors) operate in the US, coupled with shares traded on the New York Stock exchange."),
+            ('Cloud Platform','dependency','We rely on Google Cloud Platform.'),
+            ('Audit Committee','approval_authority','We require approval from our Audit Committee.')]
+        for value,role,quote in bad:
+            with self.subTest(value=value):self.assertFalse(admitted(value,role,quote))
+        good=[('TikTok','customer','TikTok remains one of our largest customers.'),
+            ('PACCAR','customer','Our customers include PACCAR, AB Volvo and Stellantis.'),
+            ('Cyxtera Technologies','customer','The acquisition of one of our customers, Cyxtera Technologies, was completed.'),
+            ('Amazon Web Services','dependency','We rely on Amazon Web Services to run our service.'),
+            ('Microsoft Azure','dependency','We rely on infrastructure of third parties such as Microsoft Azure.'),
+            ('DiePak Loader','product_or_service','The Company offers the DiePak Loader for DiePak Carriers.'),
+            ('hard drives','input','We purchase hard drives from Western Digital.'),
+            ('copper','input','We use copper in manufacturing.'),
+            ('Cloudflare','competitor','We compete with providers such as Akamai and Cloudflare.')]
+        for value,role,quote in good:
+            with self.subTest(value=value):self.assertTrue(admitted(value,role,quote))
+
     def test_source_argument_whitespace_padding_is_bounded_and_keeps_word_boundaries(self):
         import subprocess,sys,textwrap
         from pathlib import Path
@@ -36,7 +68,7 @@ class KeywordTests(unittest.TestCase):
             assert valid['eligible']
             padded='Operations'+' '*80+'Risk'+' '*100+'Committee'
             layout=check(padded,'We partner with '+padded+'.')
-            assert not layout['eligible'] and layout['reason']=='table_layout_fragment_requires_named_identity'
+            assert not layout['eligible'] and layout['reason'] in ('table_layout_fragment_requires_named_identity','generic_class_abstract_or_fragment')
         ''')
         result=subprocess.run([sys.executable,'-c',command],cwd=Path(__file__).resolve().parents[1],
             capture_output=True,text=True,timeout=5)

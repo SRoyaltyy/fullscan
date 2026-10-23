@@ -42,14 +42,14 @@ def normalized_words(value):
 
 # A retrieval/display contract, not a ticker-specific list or an accuracy score.
 # Complete source decisions remain in the archive, including excluded claims.
-SCANNER_POLICY = 'concrete-connections-1'
+SCANNER_POLICY = 'concrete-connections-2'
 RELATION_LABELS = {
     'supplier': ('Upstream suppliers', 'buys from'),
     'customer': ('Downstream customers', 'sells to'),
     'partner': ('Business partners', 'partners with'),
     'dependency': ('Operating dependencies', 'relies on'),
     'input': ('Upstream inputs', 'uses as an input'),
-    'product_or_service': ('Products and services', 'offers'),
+    'product_or_service': ('Products and downstream outputs', 'offers'),
     'competitor': ('Competitors', 'competes with'),
     'subsidiary': ('Subsidiaries', 'owns'),
     'acquisition_target': ('Acquisitions', 'acquires'),
@@ -86,6 +86,23 @@ _BACKGROUND_WORDS = set('''a an the our their its all any such other certain var
     national federal state local global international major minor relevant regulator regulators
     counterparty counterparties loan purchaser purchasers person persons'''.split())
 _BACKGROUND_WORDS.update('effect effects amendment termination trustee trustees agent agents firm shares common stock'.split())
+_BACKGROUND_WORDS.update('''key personnel staff employees workforce talent core primary
+    material materials raw manufactured component components part parts replacement
+    software application applications computer computers channel channels indirect
+    strategic distribution complex worldwide supply chain production original originals
+    document documents corporate network networks market markets condition conditions
+    economic numerous extensive portfolio note notes interest interests purchased
+    associated consolidated financial operating partnership general sole'''.split())
+_BACKGROUND_WORDS.update('''largest developer developers programmer programmers
+    multiple outsourced provider providers adequate alternative replacements existing
+    statutes brands strong driven strategies group compute asset assets intangible
+    insurance inventory pound pounds dollar dollars euro euros currency currencies
+    percent percentage up three shares venture ventures manufacturing cdn cdns waf
+    ic audit committee board directors'''.split())
+_BACKGROUND_WORDS.update('automation trade secrets interconnection'.split())
+_FILING_FRAGMENT = re.compile(r'\b(?:exhibits?\s+[\dA-Z]|financial statements?|table of contents|corporate documents|signature pages?|percentage|certificates? of|opinion of counsel)\b|\n\s*\n', re.I)
+_CLASS_ONLY = re.compile(r'^(?:LLC|Inc\.?|Ltd\.?|PLC|OEMs?|ODMs?|REITs?|TRSs?|USD|ISO|SOC|[kMG]W(?:h)?|kW/MW)$', re.I)
+_NON_INPUT = re.compile(r'\b(?:disasters?|earthquakes?|hurricanes?|pandemics?|recessions?|inflation|economic conditions|disruptions?|uncertainty)\b', re.I)
 _BAD_OBJECT = re.compile(r"^(?:[a-z]\)|unresolved\b|(?:we|it|they|this|that|these|those|such|our|their|its|any|all|most)\b)|\b(?:of|with|to|and|or|subject)$", re.I)
 _ABSTRACT_HEAD = re.compile(r'\b(?:benefits?|assurances?|understanding|assistance|representations?|numbers?|notices?|agreements?|information|limitations?|matters?|risks?|requirements?)$', re.I)
 _ENTITY_CLASS = re.compile(r'\b(?:manufacturers?|operators?|agencies|providers?|institutions?|counterparties)$', re.I)
@@ -131,6 +148,16 @@ def scanner_policy(row):
         reason = 'explicitly_no_connection'
     elif not group:
         reason = 'no_specific_operating_relationship'
+    elif _FILING_FRAGMENT.search(value) or _CLASS_ONLY.fullmatch(value):
+        reason = 'filing_fragment_or_unnamed_class'
+    elif role in ('input', 'dependency') and _NON_INPUT.search(value):
+        reason = 'risk_event_is_not_an_operating_input'
+    elif role == 'input' and re.search(r'\b(?:percent|shares|assets?|ventures?|calls?)\b', value, re.I):
+        reason = 'financial_or_organizational_object_is_not_an_upstream_input'
+    elif role in ('disclosed_law', 'regulatory_exposure') and row.get('object_type') == 'law' and (
+            re.search(r'\b(?:and|or|,)\s+Regulation$', value) or
+            (re.search(r'\bRegulations?$', value) and len(distinctive) < 2)):
+        reason = 'incomplete_or_unspecified_legal_instrument'
     elif not distinctive or _BAD_OBJECT.search(value) or _ABSTRACT_HEAD.search(value) or len(words) > 14:
         reason = 'generic_class_abstract_or_fragment'
     elif issues & {'generic_background_head', 'administrative_or_abstract_object',
@@ -156,17 +183,95 @@ def scanner_policy(row):
         if not (named or citation or declared or qualified_input or typed_input or physical_input):
             reason = 'unnamed_or_unqualified_object'
     if not reason and role in ENTITY_ROLES:
-        from .specific_filing_records import PLACES
-        if PLACES.fullmatch(value):
+        from .specific_filing_records import PLACES, LAW
+        stripped = re.sub(r'^the\s+', '', value, flags=re.I)
+        if PLACES.fullmatch(stripped):
             reason = 'place_is_not_a_business_counterparty'
+        elif row.get('object_type') == 'law' or (row.get('identity') or {}).get('type') == 'LAW' or LAW.fullmatch(stripped):
+            reason = 'law_is_not_a_business_counterparty'
+        elif surface(value) in (row.get('identity') or {}).get('owner_aliases', ()):
+            reason = 'issuer_is_not_its_own_counterparty'
     if not reason and role in ('input', 'dependency') and re.fullmatch(r'[A-Z]{1,3}', value):
         reason = 'unqualified_input_abbreviation'
+    if not reason and role == 'dependency':
+        from .specific_filing_records import PLACES
+        if PLACES.fullmatch(re.sub(r'^the\s+', '', value, flags=re.I)):
+            reason = 'jurisdiction_is_not_an_operating_dependency'
     if role == 'disclosed_law' and q.get('direct_obligation_asserted'):
         label = 'is subject to'
     elif role == 'disclosed_law' and q.get('applicability') == 'third_party_context':
         label = 'reports indirect policy exposure to'
+    if role == 'regulatory_exposure':
+        group = 'Laws and policies' if row.get('object_type') == 'law' else 'Government and regulatory institutions'
+    if role in ('disclosed_authority', 'regulator', 'approval_authority'):
+        group = 'Government and regulatory institutions'
+        if re.search(r"\b(?:(?:company[’']s|our|directors?)\s+board|audit committee|board of directors)\b", value, re.I):
+            reason = 'internal_governance_is_not_a_government_institution'
     return {'version': SCANNER_POLICY, 'eligible': not reason, 'reason': reason,
             'group': group, 'label': label}
+
+
+_CAPACITY = {
+    'supplier': r'\b(?:suppliers?|vendors?|purchas\w*|buy\w*|sourc\w*)\b',
+    'customer': r'\b(?:customers?|clients?|sell\w*|sold|sales|suppl\w*)\b',
+    'partner': r'\b(?:partners?|partnership|collaborat\w*|alliances?|joint venture)\b',
+    'competitor': r'\b(?:compet\w*|rivals?)\b',
+    'subsidiary': r'\b(?:subsidiar\w*|wholly.owned|majority.owned|controlling interest)\b',
+    'acquisition_target': r'\b(?:acquir\w*|acquisitions?|purchas\w*|merg\w*)\b',
+    'divestiture_target': r'\b(?:divest\w*|sold|sell\w*|sale of)\b',
+    'dependency': r'\b(?:rel(?:y|ies|ied)|relian\w*|depend\w*)\b',
+    'input': r'\b(?:us(?:e|es|ed|ing)|purchas\w*|buy\w*|sourc\w*|inputs?|raw materials?|components?|suppliers?)\b',
+    'product_or_service': r'\b(?:offers?|offering|launch\w*|sell\w*|sold|manufactur\w*|produc\w*|market\w*|products?|services?|platform|technology)\b',
+}
+
+
+def _local_capacity(row, quote):
+    """Require the capacity in the argument's own prose block and sentence.
+
+    Old extraction windows can span risk lists, tables and several paragraphs.
+    A customer cue in the next block cannot turn a product table into buyers.
+    This validates preserved assertions; it never invents a replacement role.
+    """
+    pattern = _CAPACITY.get(row['relationship'])
+    if not pattern:
+        return True
+    from .specific_filing_records import _sentence_spans
+    name = re.compile(r'(?<![\w-])'+r'\s+'.join(re.escape(p) for p in row['keyword'].split())+r'(?![\w-])', re.I)
+    for block in re.split(r'\n\s*\n|[•●]', quote):
+        if not name.search(block):
+            continue
+        for start, end in _sentence_spans(block):
+            sentence = block[start:end]
+            mention = name.search(sentence)
+            if mention and re.search(pattern, sentence, re.I):
+                if re.search(r'\b(?:opinions? expressed|independent investigation|legal opinion|as counsel|we have assumed)\b', sentence, re.I):
+                    continue
+                before, after = sentence[:mention.start()], sentence[mention.end():]
+                # A model's ORG label is not enough: an object has to be in
+                # the named participant list or apposition, not elsewhere in
+                # the sentence (e.g. SAT meeting the needs of its customers).
+                if row['relationship'] in ('supplier', 'customer', 'partner'):
+                    head = {'supplier':r'suppliers?|vendors?', 'customer':r'customers?|clients?', 'partner':r'partners?'}[row['relationship']]
+                    list_intro = re.search(r'\b(?:'+head+r')\b[^.!?;]{0,220}?(?:\b(?:include|including|includes|such as|namely|are|were|is|was)\b|:)\s*[^.!?;]*$', before, re.I)
+                    apposition = re.match(r'^\s*(?:(?:is|are|was|were|remains?)\s+|,\s*(?=one of|our|a |an ))(?:one of\s+)?(?:the\s+)?(?:(?:our|a|an)\s+)?(?:(?!(?:of|to|for|with|is|are)\b)[A-Za-z-]+\s+){0,4}(?:'+head+r')\b', after, re.I)
+                    direct = re.search({'supplier':r'\b(?:purchas\w*|buy\w*|sourc\w*)\b[^.!?;]{0,100}\bfrom\s+(?:the\s+)?$', 'customer':r'\b(?:sell\w*|sold|sales|suppl\w*)\b[^.!?;]{0,100}\bto\s+(?:the\s+)?$', 'partner':r'\b(?:partner\w*|collaborat\w*)\s+with\s+(?:the\s+)?$'}[row['relationship']], before, re.I)
+                    # "one of our customers, Cyxtera Technologies".
+                    following_head = re.search(r'\b(?:our|a|an)\s+(?:'+head+r')\s*[,:(]\s*$', before, re.I)
+                    if not (list_intro or apposition or direct or following_head):
+                        continue
+                if row['relationship'] == 'competitor' and re.search(r'\bcompet\w*\s+(?:for|in)\s+(?:capital|investors?|talent|employees?|personnel)\b', sentence, re.I):
+                    continue
+                if row['relationship'] == 'competitor' and not (re.search(r'\b(?:compet(?:e|es|ed|ing|ition)\b[^.!?;]{0,100}\b(?:with|against|from)|competitors?\b[^.!?;]{0,80}\b(?:include|including|such as|like|are))\b[^.!?;]*$', before, re.I) or re.match(r'^\s*(?:is|are|was|were)\s+(?:one of\s+)?(?:our\s+)?(?:\w+\s+){0,3}competitor', after, re.I)):
+                    continue
+                if row['relationship'] == 'dependency' and re.search(r'\bfor\s*$', before) and not re.search(r'\b(?:on|upon)\s*$', before):
+                    continue
+                if row['relationship'] == 'product_or_service' and re.search(r'\b(?:our competitors|foreign exchange|currency|hedg\w*|stock options?|preferred stock|common stock)\b', sentence, re.I):
+                    continue
+                # Do not cut "Google" off the front of "Google Cloud Platform".
+                if re.search(r'\b[A-Z][a-z]+\s+$', before) and row['keyword'][0].isupper() and not re.search(r'\b(?:Our|The|Company|including|as)\s+$', before):
+                    continue
+                return True
+    return False
 
 
 def scanner_visible(row, article_date=''):
@@ -228,12 +333,18 @@ def annotate_scanner_rows(rows, evidence):
         elif re.match(r'^\d', row['keyword']) and row.get('object_type') != 'law' and not validated_detail:
             reason = 'quantity_or_table_fragment'
         elif row['relationship'] == 'product_or_service' and not any(
-                re.search(r'\b(?:offers?|offering|launch\w*|sell\w*|market\w*|platform|products?|services?|technology)\b',w['quote'],re.I)
+                re.search(r'\b(?:offers?|offering|launch\w*|sell\w*|manufactur\w*|produc\w*|market\w*|platform|products?|services?|technology)\b',w['quote'],re.I)
                 and not re.search(r'\b(?:divest\w*|sale transaction|planned (?:sale|divestiture))\b',w['quote'],re.I)
                 for w in witnesses):
             reason = 'no_commercial_offering_evidence'
+        elif row.get('object_type') == 'law' and not declared and any(
+                (match := literal.search(w['quote'])) and re.match(r'\s*(?:-[A-Za-z0-9]|\([a-z0-9]|\s+Authority\b)', w['quote'][match.end():])
+                for w in witnesses):
+            reason = 'partial_legal_instrument_or_institution'
         if reason and row['scanner']['eligible']:
             row['scanner'].update(eligible=False, reason=reason)
+        if row['scanner']['eligible'] and not any(_local_capacity(row, w['quote']) for w in witnesses):
+            row['scanner'].update(eligible=False, reason='relationship_not_supported_in_argument_sentence')
         connected = row['scanner']['reason'] != 'explicitly_no_connection'
         if not connected or row['scanner']['eligible']:
             for ref in row['evidence_ids']:
