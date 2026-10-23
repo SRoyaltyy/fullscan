@@ -1,15 +1,16 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T05:49:06.173300-04:00",
+  "generated_at": "2026-10-23T05:49:20.264007-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-23_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-10-23_actions.json` \u2014 missing"
+    "MISSING News actions JSON `01_daily/news/2026-10-23_actions.json` \u2014 missing",
+    "MISSING News judge MD `01_daily/news/2026-10-23_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -182,7 +183,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 4,
+      "n_req_ok": 3,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -269,15 +270,11 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-23_judge.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 9314,
-          "said": "1. Nasdaq 100 worst day in four months on capex/debt fatigue; META/SPCX/BE/MRNA focus \u2014 broad Nasdaq/SPX risk-appetite hit outranks single-name color \u2014 channel:",
-          "bullets": [
-            "2. Hawkish Fed comments lift October hike expectations; gold drops >$100 \u2014 rates/hike-odds shock hits SPX beta and gold/miners \u2014 channel: rates.",
-            "3. China restricts AI/chip-design exports; Taiwan tightens AI chip/server controls \u2014 direct semis/AI supply-chain policy shock \u2014 channel: sector_policy.",
-            "4. Brent crude above $111 on Strait of Hormuz attacks \u2014 energy/inflation/geopolitical risk force \u2014 channel: rates."
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "research_json",
@@ -531,18 +528,18 @@
           "path": "01_daily/weather/2026-10-23_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9373 vix=calm yields=flat",
-          "size": 9373,
-          "said": "hostile 9 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=9374 vix=calm yields=flat",
+          "size": 9374,
+          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
             "events bull 5 / bear 8"
           ]
         }
       ],
-      "said": "hostile 9 \u00b7 neutral 2",
+      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
         "events bull 5 / bear 8"
       ]
     },
@@ -645,11 +642,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 4,
       "files": [
         {
@@ -705,15 +702,11 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-23_judge.md",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 9314,
-          "said": "1. Nasdaq 100 worst day in four months on capex/debt fatigue; META/SPCX/BE/MRNA focus \u2014 broad Nasdaq/SPX risk-appetite hit outranks single-name color \u2014 channel:",
-          "bullets": [
-            "2. Hawkish Fed comments lift October hike expectations; gold drops >$100 \u2014 rates/hike-odds shock hits SPX beta and gold/miners \u2014 channel: rates.",
-            "3. China restricts AI/chip-design exports; Taiwan tightens AI chip/server controls \u2014 direct semis/AI supply-chain policy shock \u2014 channel: sector_policy.",
-            "4. Brent crude above $111 on Strait of Hormuz attacks \u2014 energy/inflation/geopolitical risk force \u2014 channel: rates."
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_weather",
@@ -721,11 +714,11 @@
           "path": "01_daily/weather/2026-10-23_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9373 vix=calm yields=flat",
-          "size": 9373,
-          "said": "hostile 9 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=9374 vix=calm yields=flat",
+          "size": 9374,
+          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
             "events bull 5 / bear 8"
           ]
         },
@@ -749,10 +742,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2218694,
-          "said": "220 rows",
+          "size": 2217520,
+          "said": "208 rows",
           "bullets": [
-            "GLBE, SHOO, HLNE, VCTR, WT, HOOD, AAMI, ANF"
+            "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, WAY"
           ]
         },
         {
@@ -773,10 +766,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-23_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1481894,
+          "said": "1d BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -784,21 +777,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-10-23_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 84015,
+          "said": "Stock book \u2014 2026-10-23",
+          "bullets": [
+            "_Generated 2026-10-23T05:45:15.104044-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-10-23_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -820,25 +816,25 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-10-23 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-23)",
           "size": 10510589,
-          "said": "session 2026-10-23 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-10-23)",
           "bullets": []
         }
       ],
-      "said": "220 rows",
+      "said": "208 rows",
       "bullets": [
-        "GLBE, SHOO, HLNE, VCTR, WT"
+        "HALO, ONC, LLY, HRMY, ETON"
       ]
     },
     {
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -848,10 +844,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-23_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1481894,
+          "said": "1d BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -859,10 +855,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-10-23 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-23)",
           "size": 10510589,
-          "said": "session 2026-10-23 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-10-23)",
           "bullets": []
         },
         {
@@ -1317,6 +1313,122 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-23T05:49:19.454877-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 13014,
+          "preview": "2026-10-23 BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1116,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-23.json",
+          "ok": true,
+          "reason": "",
+          "size": 55317,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-23_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 15733,
+          "preview": "2026-10-23 BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 631201,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-23_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 631201,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-10-23.json",
+          "ok": true,
+          "reason": "",
+          "size": 146653,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 3173590,
+          "preview": "2026-10-22 BUY NET \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 631201,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 15733,
+          "preview": "2026-10-23 BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 631201,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 631201,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 851409,
+          "preview": "2026-10-23 BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1533,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1548,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-23 BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-23 BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-22 BUY NET \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NRGV, INDI, TE, SKYX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-23 BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, ge"
     }
   ],
   "href": {
