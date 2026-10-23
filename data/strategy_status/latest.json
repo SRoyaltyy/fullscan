@@ -21,8 +21,8 @@
    "SIT": 0
   },
   "h1": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "holdup": {
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-10-23",
- "generated_at": "2026-10-23T08:11:56-04:00",
+ "generated_at": "2026-10-23T09:01:40-04:00",
  "strategies": [
   {
    "buys": [
@@ -5293,13 +5293,22 @@
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "TRON",
+    "BHVN",
+    "BMBL",
+    "POOL"
+   ],
    "family": "h1",
    "name": "h1",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-10-23T12:17:56Z",
+   "sells": [
+    "ASST 70",
+    "CYPH 648",
+    "LQDA 55"
+   ],
    "source": "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
