@@ -85,5 +85,5 @@ Updated: 2026-10-22. Calls are graded at T+h trading days using the scoreboard's
 | 2026-09-28 | general | 2w | flat/mild | +1.58% (up/mild) | ❌ | ✅ |
 | 2026-09-11 | general | 1m | down/mild | +1.94% (up/mild) | ❌ | ✅ |
 
-*253 calls still maturing (T+h close not recorded yet).*
+*257 calls still maturing (T+h close not recorded yet).*
 
