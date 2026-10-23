@@ -18720,7 +18720,7 @@
     "dry_run": false
   },
   {
-    "at": "2026-10-23T19:20:51-04:00",
+    "at": "2026-10-23T19:25:49-04:00",
     "lesson": "a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on-gro.md",
     "topic": "sector:Utilities",
     "active_since": "2026-08-17",
@@ -18736,7 +18736,7 @@
     "dry_run": false
   },
   {
-    "at": "2026-10-23T19:20:51-04:00",
+    "at": "2026-10-23T19:25:49-04:00",
     "lesson": "a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md",
     "topic": "sector:Financial",
     "active_since": "2026-08-14",
@@ -18752,7 +18752,7 @@
     "dry_run": false
   },
   {
-    "at": "2026-10-23T19:20:51-04:00",
+    "at": "2026-10-23T19:25:49-04:00",
     "lesson": "in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md",
     "topic": "sector:Utilities",
     "active_since": "2026-08-14",
@@ -18768,7 +18768,7 @@
     "dry_run": false
   },
   {
-    "at": "2026-10-23T19:20:51-04:00",
+    "at": "2026-10-23T19:25:49-04:00",
     "lesson": "a-consumer-cyclical-down-call-is-driven-by-a-genuinely-negat.md",
     "topic": "sector:Consumer Cyclical",
     "active_since": "2026-08-19",
@@ -18784,7 +18784,7 @@
     "dry_run": false
   },
   {
-    "at": "2026-10-23T19:20:51-04:00",
+    "at": "2026-10-23T19:25:49-04:00",
     "lesson": "a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md",
     "topic": "sector:Consumer Cyclical",
     "active_since": "2026-09-16",
@@ -18800,7 +18800,7 @@
     "dry_run": false
   },
   {
-    "at": "2026-10-23T19:20:51-04:00",
+    "at": "2026-10-23T19:25:49-04:00",
     "lesson": "when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md",
     "topic": "sector:Energy",
     "active_since": "2026-08-19",
@@ -18816,7 +18816,7 @@
     "dry_run": false
   },
   {
-    "at": "2026-10-23T19:20:51-04:00",
+    "at": "2026-10-23T19:25:49-04:00",
     "lesson": "a-sector-call-has-a-decisively-negative-fundamental-spine-fr.md",
     "topic": "sector:Consumer Cyclical",
     "active_since": "2026-08-18",
@@ -18832,7 +18832,7 @@
     "dry_run": false
   },
   {
-    "at": "2026-10-23T19:20:51-04:00",
+    "at": "2026-10-23T19:25:49-04:00",
     "lesson": "a-utility-defensive-sector-call-is-built-on-a-carried-defens.md",
     "topic": "sector:Utilities",
     "active_since": "2026-08-18",
@@ -18848,7 +18848,7 @@
     "dry_run": false
   },
   {
-    "at": "2026-10-23T19:20:51-04:00",
+    "at": "2026-10-23T19:25:49-04:00",
     "lesson": "sector-prediction-made-when-the-sector-s-dominant-commodity.md",
     "topic": "sector:Energy",
     "active_since": "2026-08-18",
@@ -18864,7 +18864,7 @@
     "dry_run": false
   },
   {
-    "at": "2026-10-23T19:20:51-04:00",
+    "at": "2026-10-23T19:25:49-04:00",
     "lesson": "a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-rele.md",
     "topic": "sector:Financial",
     "active_since": "2026-08-17",
@@ -18877,166 +18877,6 @@
       "n": 7
     },
     "delta": -0.457,
-    "dry_run": false
-  },
-  {
-    "at": "2026-10-23T19:23:18-04:00",
-    "lesson": "a-fresh-top-holding-legal-regulatory-catalyst-e-g-a-trial-op.md",
-    "topic": "sector:Communication Services",
-    "active_since": "2026-08-19",
-    "before": {
-      "hit": 0.429,
-      "n": 7
-    },
-    "after": {
-      "hit": 0.0,
-      "n": 7
-    },
-    "delta": -0.429,
-    "dry_run": false
-  },
-  {
-    "at": "2026-10-23T19:23:18-04:00",
-    "lesson": "a-cyclical-industrials-etf-xli-like-posts-an-all-zero-s0-s4.md",
-    "topic": "sector:Industrials",
-    "active_since": "2026-09-17",
-    "before": {
-      "hit": 0.714,
-      "n": 7
-    },
-    "after": {
-      "hit": 0.286,
-      "n": 7
-    },
-    "delta": -0.428,
-    "dry_run": false
-  },
-  {
-    "at": "2026-10-23T19:23:18-04:00",
-    "lesson": "a-defensive-bond-proxy-sector-utilities-faces-a-risk-off-tap.md",
-    "topic": "sector:Utilities",
-    "active_since": "2026-08-19",
-    "before": {
-      "hit": 0.571,
-      "n": 7
-    },
-    "after": {
-      "hit": 0.143,
-      "n": 7
-    },
-    "delta": -0.428,
-    "dry_run": false
-  },
-  {
-    "at": "2026-10-23T19:23:18-04:00",
-    "lesson": "a-healthcare-xlv-call-with-s0-0-flat-mixed-es-nq-leftover-te.md",
-    "topic": "sector:Healthcare",
-    "active_since": "2026-08-28",
-    "before": {
-      "hit": 0.714,
-      "n": 7
-    },
-    "after": {
-      "hit": 0.286,
-      "n": 7
-    },
-    "delta": -0.428,
-    "dry_run": false
-  },
-  {
-    "at": "2026-10-23T19:23:18-04:00",
-    "lesson": "a-live-macro-shock-oil-geopolitical-is-present-at-the-open-t.md",
-    "topic": "sector:Consumer Cyclical",
-    "active_since": "2026-09-10",
-    "before": {
-      "hit": 0.571,
-      "n": 7
-    },
-    "after": {
-      "hit": 0.143,
-      "n": 7
-    },
-    "delta": -0.428,
-    "dry_run": false
-  },
-  {
-    "at": "2026-10-23T19:23:18-04:00",
-    "lesson": "a-long-duration-rate-sensitive-sector-reits-faces-a-live-rat.md",
-    "topic": "sector:Real Estate",
-    "active_since": "2026-08-19",
-    "before": {
-      "hit": 0.714,
-      "n": 7
-    },
-    "after": {
-      "hit": 0.286,
-      "n": 7
-    },
-    "delta": -0.428,
-    "dry_run": false
-  },
-  {
-    "at": "2026-10-23T19:23:18-04:00",
-    "lesson": "a-single-macro-shock-oil-rates-is-scored-as-multiple-indepen.md",
-    "topic": "sector:Consumer Cyclical",
-    "active_since": "2026-09-10",
-    "before": {
-      "hit": 0.571,
-      "n": 7
-    },
-    "after": {
-      "hit": 0.143,
-      "n": 7
-    },
-    "delta": -0.428,
-    "dry_run": false
-  },
-  {
-    "at": "2026-10-23T19:23:18-04:00",
-    "lesson": "a-technology-xlk-down-call-has-strongly-negative-leading-com.md",
-    "topic": "sector:Technology",
-    "active_since": "2026-08-19",
-    "before": {
-      "hit": 0.571,
-      "n": 7
-    },
-    "after": {
-      "hit": 0.143,
-      "n": 7
-    },
-    "delta": -0.428,
-    "dry_run": false
-  },
-  {
-    "at": "2026-10-23T19:23:18-04:00",
-    "lesson": "sector-etf-prediction-where-the-prior-session-had-a-modest-p.md",
-    "topic": "sector:Healthcare",
-    "active_since": "2026-09-04",
-    "before": {
-      "hit": 0.714,
-      "n": 7
-    },
-    "after": {
-      "hit": 0.286,
-      "n": 7
-    },
-    "delta": -0.428,
-    "dry_run": false
-  },
-  {
-    "at": "2026-10-23T19:23:18-04:00",
-    "lesson": "sector-prediction-emits-flat-flat-when-broad-market-tape-is.md",
-    "topic": "sector:Healthcare",
-    "active_since": "2026-09-04",
-    "before": {
-      "hit": 0.714,
-      "n": 7
-    },
-    "after": {
-      "hit": 0.286,
-      "n": 7
-    },
-    "delta": -0.428,
     "dry_run": false
   }
 ]

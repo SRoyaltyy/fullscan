@@ -2580,7 +2580,7 @@
       "horizon_returns_pct": {
         "1d": 2.83
       },
-      "mfe_pct": 8.65,
+      "mfe_pct": 8.84,
       "mfe_day": "2026-10-23",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-21"
@@ -2680,7 +2680,7 @@
       "horizon_returns_pct": {
         "1d": 8.18
       },
-      "mfe_pct": 12.94,
+      "mfe_pct": 12.98,
       "mfe_day": "2026-10-23",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-21"
