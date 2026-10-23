@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T05:45:12.461144-04:00",
+  "generated_at": "2026-10-23T05:49:11.540896-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -21,7 +21,7 @@
       "family": "join",
       "status": "ok",
       "n": 5901,
-      "detail": "std=0.974"
+      "detail": "std=0.987"
     },
     {
       "name": "news_actions",
@@ -33,9 +33,9 @@
     {
       "name": "news_judge",
       "family": "news",
-      "status": "missing",
+      "status": "ok",
       "n": null,
-      "detail": "LLM ticker tilts absent"
+      "detail": ""
     },
     {
       "name": "finviz_digest",

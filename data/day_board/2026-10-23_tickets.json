@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T05:45:17.684000-04:00",
+  "generated_at": "2026-10-23T05:49:15.495411-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -11,70 +11,70 @@
   },
   "buy_1d": [
     {
-      "ticker": "SGRY",
-      "score": 0.7818977896101147
-    },
-    {
       "ticker": "HITI",
-      "score": 0.556296109961579
+      "score": 0.48182250828813955
     },
     {
       "ticker": "CON",
-      "score": 0.7856556108017361
-    },
-    {
-      "ticker": "ASTH",
-      "score": 0.7546626412694215
+      "score": 0.71026054948096
     },
     {
       "ticker": "AMN",
-      "score": 0.7524019787203875
+      "score": 0.7041946393379503
     },
     {
-      "ticker": "MD",
-      "score": 0.6982193716254808
+      "ticker": "SGRY",
+      "score": 0.6156111177905604
     },
     {
-      "ticker": "PACS",
-      "score": 0.8932406667174411
+      "ticker": "ASTH",
+      "score": 0.5884464496419931
     },
     {
       "ticker": "NTAP",
-      "score": 0.2843313440021954
+      "score": 0.3590733313453158
+    },
+    {
+      "ticker": "MQ",
+      "score": 0.7346115863308051
+    },
+    {
+      "ticker": "BAND",
+      "score": 0.5961939935247551
     }
   ],
   "sell_1d": [
     {
-      "ticker": "NEOV",
-      "score": -0.3635560613260153
+      "ticker": "OKLO",
+      "score": -0.21200677871608986
     },
     {
-      "ticker": "OKLO",
-      "score": -0.210330478560946
+      "ticker": "NEOV",
+      "score": -0.3317004690030632
     },
     {
       "ticker": "FCEL",
-      "score": -0.24391521322627752
-    },
-    {
-      "ticker": "NNDM",
-      "score": -0.2523903920751626
+      "score": -0.24607324118842755
     },
     {
       "ticker": "POWL",
-      "score": -0.07412996045865838
+      "score": -0.07007452095835792
+    },
+    {
+      "ticker": "NNDM",
+      "score": -0.21777148465927926
     },
     {
       "ticker": "EOSE",
-      "score": -0.20159420068361716
+      "score": -0.20417045441802623
     },
     {
       "ticker": "NRGV",
-      "score": -0.2977514218486169
+      "score": -0.2954859033945786
     },
     {
       "ticker": "INDI",
-      "score": -0.24410292703592523
+      "score": -0.2459547781871677
     }
   ],
   "flatten": {},
@@ -305,6 +305,67 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AUPH, ELV, TRI, GCT, YPF \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 A, DHR, CDNA, ILMN, HAS"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-23T05:48:52.755682-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-23_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9373,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-23_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5000,
+          "preview": "# Weather report \u2014 2026-10-23\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-23\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-23T05:48:59.553273-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-23_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2218694,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-23T05:49:05.710010-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-23_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "source": "publish_live_boards"
