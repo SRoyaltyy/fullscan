@@ -15,7 +15,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 360
     permissions:
       contents: write
     outputs:
@@ -81,7 +81,7 @@ jobs:
   publish:
     needs: build
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 360
     permissions:
       contents: write
       actions: read
