@@ -37,6 +37,15 @@ class KeywordTests(unittest.TestCase):
             ('New York Stock exchange','competitor',"Our stakeholders (investors, competitors) operate in the US, coupled with shares traded on the New York Stock exchange."),
             ('Cloud Platform','dependency','We rely on Google Cloud Platform.'),
             ('Audit Committee','approval_authority','We require approval from our Audit Committee.')]
+        bad += [('AAdvantage','partner','Our partners include AAdvantage partners and other partners.'),
+            ('AAdvantage','dependency','We depend on commercial partners, including AAdvantage partners.'),
+            ('Consolidated Net Income','subsidiary','Our subsidiaries contribute to Consolidated Net Income.'),
+            ('Bank of America','subsidiary','Bank of America lends money to our subsidiaries.'),
+            ('Convertible Note security','input','We purchased a Convertible Note security.'),
+            ('Chief Executive Officer','product_or_service','We offer our Chief Executive Officer an employment agreement.'),
+            ('FDA','product_or_service','We offer products subject to FDA approval.'),
+            ('equipment','input','We purchase equipment.'),
+            ('four','input','We purchase four production lines.')]
         for value,role,quote in bad:
             with self.subTest(value=value):self.assertFalse(admitted(value,role,quote))
         good=[('TikTok','customer','TikTok remains one of our largest customers.'),

@@ -29,7 +29,7 @@ def digest(raw):
 
 def source_hashes():
     paths = [ROOT/'src'/name for name in ('stock_keywords.py', 'entity_resolution.py',
-        'linguistics.py', 'semantic_lookup.py', 'specific_filing_records.py')]
+        'linguistics.py', 'semantic_lookup.py', 'specific_filing_records.py', 'filing_relationships.py')]
     paths += [ROOT/'scripts/project_scanner_keywords.py',
         ROOT/'dashboard/scanner-backtest/index.html']
     paths += sorted((ROOT/'src/data').rglob('*'))

@@ -100,6 +100,16 @@ _BACKGROUND_WORDS.update('''largest developer developers programmer programmers
     percent percentage up three shares venture ventures manufacturing cdn cdns waf
     ic audit committee board directors'''.split())
 _BACKGROUND_WORDS.update('automation trade secrets interconnection'.split())
+_BACKGROUND_WORDS.update('''property properties qualified vessel vessels significant
+    restricted entity entities income net liability umbrella excess needed supplies
+    protection level portion four buyer buyers investor investors each combination
+    business contributed surplus premium chief legal officer executive dealer
+    notifies feedstock loan payable receivable capital hardware equipment
+    results adjusted non gaap eps quantity quantities specified target transaction
+    transactions negotiated teaming arrangements organizations collaborators
+    independent regional carrier carriers single source manufacturers contract
+    manufacturing patents patent intellectual research foreign cmo cmos cro cros'''.split())
+_BACKGROUND_WORDS.update('convertible comprehensive individual training programs courses knowledge resources change management saas'.split())
 _FILING_FRAGMENT = re.compile(r'\b(?:exhibits?\s+[\dA-Z]|financial statements?|table of contents|corporate documents|signature pages?|percentage|certificates? of|opinion of counsel)\b|\n\s*\n', re.I)
 _CLASS_ONLY = re.compile(r'^(?:LLC|Inc\.?|Ltd\.?|PLC|OEMs?|ODMs?|REITs?|TRSs?|USD|ISO|SOC|[kMG]W(?:h)?|kW/MW)$', re.I)
 _NON_INPUT = re.compile(r'\b(?:disasters?|earthquakes?|hurricanes?|pandemics?|recessions?|inflation|economic conditions|disruptions?|uncertainty)\b', re.I)
@@ -117,7 +127,7 @@ def _physical_input_terms():
     manifest = json.loads((root/'manifest.json').read_text())
     terms = set()
     for entry in manifest['files']:
-        if entry['file'] not in {name+'.json.gz' for name in ('noun.substance','noun.artifact','noun.food','noun.plant','noun.animal')}:
+        if entry['file'] not in {name+'.json.gz' for name in ('noun.substance','noun.food','noun.plant','noun.animal')}:
             continue
         raw = (root/entry['file']).read_bytes()
         if entry.get('stored_sha256') and hashlib.sha256(raw).hexdigest() != entry['stored_sha256']:
@@ -197,6 +207,15 @@ def scanner_policy(row):
         from .specific_filing_records import PLACES
         if PLACES.fullmatch(re.sub(r'^the\s+', '', value, flags=re.I)):
             reason = 'jurisdiction_is_not_an_operating_dependency'
+    if not reason and role in ('regulator', 'approval_authority'):
+        from .specific_filing_records import AGENCY
+        from .filing_relationships import AGENCIES
+        if row.get('object_type') not in ('agency', 'GOV_AGENCY') and value not in AGENCIES and value not in AGENCIES.values() and not AGENCY.fullmatch(re.sub(r'^the\s+', '', value, flags=re.I)):
+            reason = 'authority_role_requires_a_named_external_institution'
+    if not reason and role == 'product_or_service':
+        from .filing_relationships import AGENCIES
+        if value in AGENCIES or value in AGENCIES.values() or re.search(r'\b(?:Debentures?|Securities|Note\s+(?:Receivable|Payable)|notifies)\b', value, re.I):
+            reason = 'authority_or_filing_instrument_is_not_a_commercial_product'
     if role == 'disclosed_law' and q.get('direct_obligation_asserted'):
         label = 'is subject to'
     elif role == 'disclosed_law' and q.get('applicability') == 'third_party_context':
@@ -225,18 +244,19 @@ _CAPACITY = {
 }
 
 
-def _local_capacity(row, quote):
+@lru_cache(maxsize=256)
+def _local_capacity(role, keyword, quote):
     """Require the capacity in the argument's own prose block and sentence.
 
     Old extraction windows can span risk lists, tables and several paragraphs.
     A customer cue in the next block cannot turn a product table into buyers.
     This validates preserved assertions; it never invents a replacement role.
     """
-    pattern = _CAPACITY.get(row['relationship'])
+    pattern = _CAPACITY.get(role)
     if not pattern:
         return True
     from .specific_filing_records import _sentence_spans
-    name = re.compile(r'(?<![\w-])'+r'\s+'.join(re.escape(p) for p in row['keyword'].split())+r'(?![\w-])', re.I)
+    name = re.compile(r'(?<![\w-])'+r'\s+'.join(re.escape(p) for p in keyword.split())+r'(?![\w-])', re.I)
     for block in re.split(r'\n\s*\n|[•●]', quote):
         if not name.search(block):
             continue
@@ -247,28 +267,32 @@ def _local_capacity(row, quote):
                 if re.search(r'\b(?:opinions? expressed|independent investigation|legal opinion|as counsel|we have assumed)\b', sentence, re.I):
                     continue
                 before, after = sentence[:mention.start()], sentence[mention.end():]
+                if role in ('supplier','customer','partner','dependency') and re.match(r'^\s+(?:partners?|customers?|suppliers?|vendors?|providers?)\b', after, re.I):
+                    # A programme/brand modifying a participant class is not
+                    # the identity of one of those unnamed participants.
+                    continue
                 # A model's ORG label is not enough: an object has to be in
                 # the named participant list or apposition, not elsewhere in
                 # the sentence (e.g. SAT meeting the needs of its customers).
-                if row['relationship'] in ('supplier', 'customer', 'partner'):
-                    head = {'supplier':r'suppliers?|vendors?', 'customer':r'customers?|clients?', 'partner':r'partners?'}[row['relationship']]
+                if role in ('supplier', 'customer', 'partner', 'subsidiary'):
+                    head = {'supplier':r'suppliers?|vendors?', 'customer':r'customers?|clients?', 'partner':r'partners?', 'subsidiary':r'subsidiar(?:y|ies)'}[role]
                     list_intro = re.search(r'\b(?:'+head+r')\b[^.!?;]{0,220}?(?:\b(?:include|including|includes|such as|namely|are|were|is|was)\b|:)\s*[^.!?;]*$', before, re.I)
                     apposition = re.match(r'^\s*(?:(?:is|are|was|were|remains?)\s+|,\s*(?=one of|our|a |an ))(?:one of\s+)?(?:the\s+)?(?:(?:our|a|an)\s+)?(?:(?!(?:of|to|for|with|is|are)\b)[A-Za-z-]+\s+){0,4}(?:'+head+r')\b', after, re.I)
-                    direct = re.search({'supplier':r'\b(?:purchas\w*|buy\w*|sourc\w*)\b[^.!?;]{0,100}\bfrom\s+(?:the\s+)?$', 'customer':r'\b(?:sell\w*|sold|sales|suppl\w*)\b[^.!?;]{0,100}\bto\s+(?:the\s+)?$', 'partner':r'\b(?:partner\w*|collaborat\w*)\s+with\s+(?:the\s+)?$'}[row['relationship']], before, re.I)
+                    direct = re.search({'supplier':r'\b(?:purchas\w*|buy\w*|sourc\w*)\b[^.!?;]{0,100}\bfrom\s+(?:the\s+)?$', 'customer':r'\b(?:sell\w*|sold|sales|suppl\w*)\b[^.!?;]{0,100}\bto\s+(?:the\s+)?$', 'partner':r'\b(?:partner\w*|collaborat\w*)\s+with\s+(?:the\s+)?$', 'subsidiary':r'\b(?:wholly.owned|majority.owned)\s+(?:subsidiar(?:y|ies)\s+)?$'}[role], before, re.I)
                     # "one of our customers, Cyxtera Technologies".
                     following_head = re.search(r'\b(?:our|a|an)\s+(?:'+head+r')\s*[,:(]\s*$', before, re.I)
                     if not (list_intro or apposition or direct or following_head):
                         continue
-                if row['relationship'] == 'competitor' and re.search(r'\bcompet\w*\s+(?:for|in)\s+(?:capital|investors?|talent|employees?|personnel)\b', sentence, re.I):
+                if role == 'competitor' and re.search(r'\bcompet\w*\s+(?:for|in)\s+(?:capital|investors?|talent|employees?|personnel)\b', sentence, re.I):
                     continue
-                if row['relationship'] == 'competitor' and not (re.search(r'\b(?:compet(?:e|es|ed|ing|ition)\b[^.!?;]{0,100}\b(?:with|against|from)|competitors?\b[^.!?;]{0,80}\b(?:include|including|such as|like|are))\b[^.!?;]*$', before, re.I) or re.match(r'^\s*(?:is|are|was|were)\s+(?:one of\s+)?(?:our\s+)?(?:\w+\s+){0,3}competitor', after, re.I)):
+                if role == 'competitor' and not (re.search(r'\b(?:compet(?:e|es|ed|ing|ition)\b[^.!?;]{0,100}\b(?:with|against|from)|competitors?\b[^.!?;]{0,80}\b(?:include|including|such as|like|are))\b[^.!?;]*$', before, re.I) or re.match(r'^\s*(?:is|are|was|were)\s+(?:one of\s+)?(?:our\s+)?(?:\w+\s+){0,3}competitor', after, re.I)):
                     continue
-                if row['relationship'] == 'dependency' and re.search(r'\bfor\s*$', before) and not re.search(r'\b(?:on|upon)\s*$', before):
+                if role == 'dependency' and re.search(r'\bfor\s*$', before) and not re.search(r'\b(?:on|upon)\s*$', before):
                     continue
-                if row['relationship'] == 'product_or_service' and re.search(r'\b(?:our competitors|foreign exchange|currency|hedg\w*|stock options?|preferred stock|common stock)\b', sentence, re.I):
+                if role == 'product_or_service' and re.search(r'\b(?:our competitors|foreign exchange|currency|hedg\w*|stock options?|preferred stock|common stock)\b', sentence, re.I):
                     continue
                 # Do not cut "Google" off the front of "Google Cloud Platform".
-                if re.search(r'\b[A-Z][a-z]+\s+$', before) and row['keyword'][0].isupper() and not re.search(r'\b(?:Our|The|Company|including|as)\s+$', before):
+                if re.search(r'\b[A-Z][a-z]+\s+$', before) and keyword[0].isupper() and not re.search(r'\b(?:Our|The|Company|including|as)\s+$', before):
                     continue
                 return True
     return False
@@ -343,7 +367,7 @@ def annotate_scanner_rows(rows, evidence):
             reason = 'partial_legal_instrument_or_institution'
         if reason and row['scanner']['eligible']:
             row['scanner'].update(eligible=False, reason=reason)
-        if row['scanner']['eligible'] and not any(_local_capacity(row, w['quote']) for w in witnesses):
+        if row['scanner']['eligible'] and not any(_local_capacity(row['relationship'], row['keyword'], w['quote']) for w in witnesses):
             row['scanner'].update(eligible=False, reason='relationship_not_supported_in_argument_sentence')
         connected = row['scanner']['reason'] != 'explicitly_no_connection'
         if not connected or row['scanner']['eligible']:
