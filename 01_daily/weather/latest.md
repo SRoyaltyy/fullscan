@@ -5,8 +5,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** OFF (general predict down score -7.5, conf 0.802)
-- **Yields:** flat (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** rising | **VIX:** calm (ratio 0.96 via vix/vix3m) spot 20.12
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.85
+- **Yields:** falling (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** rising | **VIX:** calm (ratio 0.95 via vix/vix3m) spot 19.45
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.78
 - **High-impact events:** 5 bullish vs 8 bearish
 
 ## Sectors
@@ -29,8 +29,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| size:micro | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors] |
-| size:small | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors] |
+| size:micro | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors] |
+| size:small | 🌧️ hostile | medium | risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors] |
 | size:large | 🌤️ favorable | medium | risk-off — defensive/quality bid concentrates in large & mega [general predict] |
 | size:mega | 🌤️ favorable | medium | risk-off — defensive/quality bid concentrates in large & mega [general predict] |
 | size:mid | ⛅ neutral | low | no dedicated mid-cap signal in v1 |
@@ -64,8 +64,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | ⛅ neutral | low | yields flat/unknown |
-| style:value | ⛅ neutral | low | yields flat/unknown |
+| style:growth | 🌤️ favorable | medium | yields falling — duration/growth re-rates [factor: Bond yields] |
+| style:value | ⛅ neutral | low | value lags duration rallies |
 | style:blend | ⛅ neutral | low | — |
 
 ## Leverage

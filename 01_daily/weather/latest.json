@@ -1,6 +1,6 @@
 {
  "date": "2026-10-23",
- "generated_at": "2026-10-23T13:58:42.861495-04:00",
+ "generated_at": "2026-10-23T17:31:02.420695-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,23 +17,23 @@
   "fed_score": 0.0,
   "dollar_oil_score": -1.0,
   "futures_score": 0.0,
-  "yields": "flat",
+  "yields": "falling",
   "yields_source": "fred_dgs10",
-  "dgs10_delta_1d": 0.01,
-  "dgs10_current": 5.13,
-  "dollar": "strong",
+  "dgs10_delta_1d": -0.17,
+  "dgs10_current": 4.96,
+  "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.21,
-  "vix_ratio": 0.965,
-  "vix_spot": 20.12,
-  "vix_delta_1d": 1.09,
+  "dxy_pct_1d": 0.14,
+  "vix_ratio": 0.95,
+  "vix_spot": 19.45,
+  "vix_delta_1d": 0.42,
   "vix_ratio_source": "vix/vix3m",
   "vix": "calm",
-  "oil_pct_1d": 3.59,
+  "oil_pct_1d": 3.99,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.849,
+  "regime_corr": 0.783,
   "sectors": {
    "Basic Materials": {
     "score": -4.97,
@@ -181,12 +181,12 @@
    "micro": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors]"
+    "why": "risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors]"
    },
    "small": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors]"
+    "why": "risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors]"
    },
    "large": {
     "stance": "favorable",
@@ -223,7 +223,7 @@
    "rut": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors]"
+    "why": "risk-off — small caps de-rate first; risk-off, dollar flat [general predict + factors]"
    },
    "none": {
     "stance": "neutral",
@@ -340,14 +340,14 @@
   },
   "style": {
    "growth": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "yields falling — duration/growth re-rates [factor: Bond yields]"
    },
    "value": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "yields flat/unknown"
+    "why": "value lags duration rallies"
    },
    "blend": {
     "stance": "neutral",
