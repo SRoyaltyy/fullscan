@@ -19,6 +19,30 @@ def profile(bundle, name='Backblaze Inc.'):
 
 
 class KeywordTests(unittest.TestCase):
+    def test_canonical_law_declarations_cannot_rescue_clipped_titles(self):
+        from .stock_keywords import annotate_scanner_rows
+        for value,quote in [('Rule 10b','We comply with Rule 10b‑5.'),
+                            ('Rule 15c','We comply with Rule 15c3‑1.'),
+                            ('Disabilities Act','We comply with the Americans with Disabilities Act.'),
+                            ('Accurate Credit Transactions Act','We comply with the Fair and Accurate Credit Transactions Act.')]:
+            row=dict(id='r',stock='TEST',keyword=value,relationship='disclosed_law',object_type='law',
+                assertion='reported',qualifiers={},source_declared_identity={'name':value,'aliases':[value]},evidence_ids=['e'])
+            annotate_scanner_rows([row],{'e':{'witnesses':[dict(quote=quote,source={'filing_date':'2026-01-01'})]}})
+            self.assertFalse(scanner_visible(row),value)
+        for value in ['Rule 10b‑5','Americans with Disabilities Act','Fair and Accurate Credit Transactions Act']:
+            row=dict(id='r',stock='TEST',keyword=value,relationship='disclosed_law',object_type='law',
+                assertion='reported',qualifiers={},source_declared_identity={'name':value,'aliases':[value]},evidence_ids=['e'])
+            annotate_scanner_rows([row],{'e':{'witnesses':[dict(quote='We comply with the '+value+'.',source={'filing_date':'2026-01-01'})]}})
+            self.assertTrue(scanner_visible(row),value)
+        for value,quote in [('Rule 10b-5','We comply with SEC Rule 10b-5.'),
+                            ('Regulation B','We comply with the Equal Credit Opportunity Act and Regulation B.'),
+                            ('Public Health Service Act','We comply with the Food, Drug, and Cosmetic Act and Public Health Service Act.'),
+                            ('Hatch-Waxman Act','Government Regulation—The Hatch-Waxman Act—Patent term extension.')]:
+            row=dict(id='r',stock='TEST',keyword=value,relationship='disclosed_law',object_type='law',
+                assertion='reported',qualifiers={},source_declared_identity={'name':value,'aliases':[value]},evidence_ids=['e'])
+            annotate_scanner_rows([row],{'e':{'witnesses':[dict(quote=quote,source={'filing_date':'2026-01-01'})]}})
+            self.assertTrue(scanner_visible(row),value)
+
     def test_semantic_types_and_local_sentence_attachment(self):
         from .stock_keywords import annotate_scanner_rows
         def admitted(value, role, quote, object_type='organization'):

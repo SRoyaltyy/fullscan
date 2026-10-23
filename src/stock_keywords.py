@@ -322,6 +322,27 @@ def _negative_connection_witness(row, quote):
     return False
 
 
+def _partial_law_title(row, witnesses):
+    """A declaration cannot validate a clipped canonical law name itself."""
+    if row.get('object_type') != 'law':
+        return False
+    canonical=(row.get('source_declared_identity') or {}).get('name', row['keyword'])
+    if canonical != row['keyword']:
+        return False  # A separately evidenced full-name/short-alias binding.
+    argument=r'\s+'.join(re.escape(part) for part in row['keyword'].split())
+    raw=re.compile(r'(?<![\w-])'+argument, re.I)
+    clipped=[]
+    for witness in witnesses:
+        for match in raw.finditer(witness['quote']):
+            before=witness['quote'][:match.start()]
+            after=witness['quote'][match.end():]
+            continuation=bool(re.match(r'[\w]', after) or (re.search(r'\d', row['keyword']) and re.match(r'\s*[-‐‑‒–—−]\s*[A-Za-z0-9]', after)))
+            prefix=re.search(r'\b([A-Z][A-Za-z]+)\s+(?:(?:with|and|of|the|for|on|in|to)\s+)?$', before)
+            title_prefix=bool(re.search(r'\b(?:Act|Law|Directive|Legislation)\b', row['keyword']) and prefix and prefix.group(1) not in {'The','Our','We','Under','For','In','Such','This','That','Section','Article','Act','Acts','Law','Laws','Directive','Regulation','Regulations'})
+            clipped.append(continuation or title_prefix)
+    return bool(clipped) and all(clipped)
+
+
 def annotate_scanner_rows(rows, evidence):
     # Explicit negatives close the same named connection, including older
     # positive grammar heads. Same-date contradictions abstain. Date gates
@@ -367,6 +388,8 @@ def annotate_scanner_rows(rows, evidence):
             reason = 'partial_legal_instrument_or_institution'
         if reason and row['scanner']['eligible']:
             row['scanner'].update(eligible=False, reason=reason)
+        if row['scanner']['eligible'] and _partial_law_title(row, witnesses):
+            row['scanner'].update(eligible=False, reason='clipped_canonical_legal_name')
         if row['scanner']['eligible'] and not any(_local_capacity(row['relationship'], row['keyword'], w['quote']) for w in witnesses):
             row['scanner'].update(eligible=False, reason='relationship_not_supported_in_argument_sentence')
         connected = row['scanner']['reason'] != 'explicitly_no_connection'
