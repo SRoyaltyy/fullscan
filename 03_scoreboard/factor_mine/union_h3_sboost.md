@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `both` · S≥+5: sizeup + more names
 
-Cash book **-20.55%** ($7,946) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 334 · skips 326 · realized $-641.46.
+Cash book **-21.54%** ($7,846) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 335 · skips 326 · realized $-641.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -503,6 +503,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `PACS` | 19 | $46.62 | $2.07 | $-11.71 | $3,825.39 | ▼ -11.71 after sell → book $7,927.84; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 09:30 ET | **SELL** | `VEEV` | 3 | $323.99 | $2.02 | $+36.96 | $4,795.34 | ▲ +36.96 after sell → book $7,925.82; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,795.34 | ▲ close $7,945.52 vs 09:30 $7,936.08 (session +19.69) | 16:00 close · cash $4,795.34 · equity $7,945.52 vs 09:30 $7,936.08 (+9.44; session marks +19.69) · 5 name(s) marked open→close (per-name table). CORT×3 09:30 $115.16 → close $107.50 -22.98; CRON×137 09:30 $3.39 → close $3.44 +7.53; ETON×8 09:30 $49.36 → close $50.02 +5.28; PRMB×50 09:30 $19.86 → close $20.14 +14.00; SMMT×61 09:30 $15.29 → close $15.55 +15.86 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,795.34 | ▼ 09:30 equity $7,917.90 vs yday $7,945.52 (-27.62) | 09:30 open · cash $4,795.34 (unchanged overnight, no fees) · equity $7,917.90 vs prior close $7,945.52 (-27.62) · 5 name(s) re-marked at the open (per-name table). CORT×3 yday $107.50 → 09:30 $106.05 -4.35; CRON×137 yday $3.44 → 09:30 $3.42 -2.74; ETON×8 yday $50.02 → 09:30 $49.89 -1.04; PRMB×50 yday $20.14 → 09:30 $19.86 -14.00; SMMT×61 yday $15.55 → 09:30 $15.46 -5.49 | — |
+| 2026-10-23 09:30 ET | **SELL** | `PRMB` | 50 | $19.86 | $2.16 | $+51.20 | $5,786.18 | ▲ +51.20 after sell → book $7,915.74; vs 09:30 mark -2.16 | dropped from list after 7 sess (min 3) | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,786.18 | ▼ close $7,846.38 vs 09:30 $7,917.90 (session -69.35) | 16:00 close · cash $5,786.18 · equity $7,846.38 vs 09:30 $7,917.90 (-71.52; session marks -69.35) · 4 name(s) marked open→close (per-name table). CORT×3 09:30 $106.05 → close $85.86 -60.57; CRON×137 09:30 $3.42 → close $3.35 -10.27; ETON×8 09:30 $49.89 → close $50.00 +0.88; SMMT×61 09:30 $15.46 → close $15.47 +0.61 | — |
 
 ## Not taken
 

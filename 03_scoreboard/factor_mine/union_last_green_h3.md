@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_green, no 🚨
 
-Cash book **-20.89%** ($7,911) · signal-only (no cash/fees) was +37.42%. Starts YES **3/30**. Fills 294 · skips 312 · realized $-335.16.
+Cash book **-21.50%** ($7,850) · signal-only (no cash/fees) was +37.42%. Starts YES **3/30**. Fills 296 · skips 312 · realized $-335.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -466,6 +466,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `TBBB` | 16 | $58.06 | $2.06 | $-3.14 | $4,009.37 | ▼ -3.14 after sell → book $7,768.46; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 09:30 ET | **SELL** | `WMG` | 30 | $31.48 | $2.10 | $+2.42 | $4,951.67 | ▲ +2.42 after sell → book $7,766.36; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,951.67 | ▲ close $7,910.78 vs 09:30 $7,776.83 (session +144.42) | 16:00 close · cash $4,951.67 · equity $7,910.78 vs 09:30 $7,776.83 (+133.95; session marks +144.42) · 8 name(s) marked open→close (per-name table). AMX×41 09:30 $24.14 → close $24.98 +34.44; ARQT×6 09:30 $31.68 → close $32.20 +3.12; CDNA×3 09:30 $69.65 → close $69.16 -1.47; CORT×1 09:30 $115.16 → close $107.50 -7.66; CRON×64 09:30 $3.39 → close $3.44 +3.52; ETON×4 09:30 $49.36 → close $50.02 +2.64; POOL×5 09:30 $175.30 → close $197.21 +109.55; PRMB×1 09:30 $19.86 → close $20.14 +0.28 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,951.67 | ▼ 09:30 equity $7,882.45 vs yday $7,910.78 (-28.33) | 09:30 open · cash $4,951.67 (unchanged overnight, no fees) · equity $7,882.45 vs prior close $7,910.78 (-28.33) · 8 name(s) re-marked at the open (per-name table). AMX×41 yday $24.98 → 09:30 $24.81 -6.97; ARQT×6 yday $32.20 → 09:30 $32.13 -0.42; CDNA×3 yday $69.16 → 09:30 $68.54 -1.86; CORT×1 yday $107.50 → 09:30 $106.05 -1.45; CRON×64 yday $3.44 → 09:30 $3.42 -1.28; ETON×4 yday $50.02 → 09:30 $49.89 -0.52; POOL×5 yday $197.21 → 09:30 $194.10 -15.55; PRMB×1 yday $20.14 → 09:30 $19.86 -0.28 | — |
+| 2026-10-23 09:30 ET | **SELL** | `AMX` | 41 | $24.81 | $2.13 | $+76.52 | $5,966.75 | ▲ +76.52 after sell → book $7,880.32; vs 09:30 mark -2.13 | dropped from list after 4 sess (min 3) | join🔴 sector🟢 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-23 09:30 ET | **SELL** | `POOL` | 5 | $194.10 | $2.02 | $+109.07 | $6,935.22 | ▲ +109.07 after sell → book $7,878.29; vs 09:30 mark -2.03 | dropped from list after 4 sess (min 3) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,935.22 | ▼ close $7,850.00 vs 09:30 $7,882.45 (session -28.29) | 16:00 close · cash $6,935.22 · equity $7,850.00 vs 09:30 $7,882.45 (-32.45; session marks -28.29) · 6 name(s) marked open→close (per-name table). ARQT×6 09:30 $32.13 → close $31.20 -5.58; CDNA×3 09:30 $68.54 → close $69.21 +2.01; CORT×1 09:30 $106.05 → close $85.86 -20.19; CRON×64 09:30 $3.42 → close $3.35 -4.80; ETON×4 09:30 $49.89 → close $50.00 +0.44; PRMB×1 09:30 $19.86 → close $19.69 -0.17 | — |
 
 ## Not taken
 

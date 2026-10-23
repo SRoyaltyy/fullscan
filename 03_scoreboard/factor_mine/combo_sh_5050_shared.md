@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_hot_n4_h1 w=0.5,0.5 net=priority
 
-Cash book **+66.89%** ($16,689) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 351 · skips 159 · realized $+2615.03.
+Cash book **+68.32%** ($16,832) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 351 · skips 159 · realized $+2615.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -524,6 +524,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `KVYO` | 108 | $20.29 | $2.35 | $+70.94 | $23,004.29 | ▲ +70.94 after sell → book $17,037.38; vs 09:30 mark -2.35 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `WIT` | 1031 | $2.14 | $13.49 | $+55.69 | $25,197.14 | ▲ +55.69 after sell → book $17,023.89; vs 09:30 mark -13.49 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $25,197.14 | ▼ close $16,689.09 vs 09:30 $17,046.62 (session -334.81) | 16:00 close · cash $25,197.14 · equity $16,689.09 vs 09:30 $17,046.62 (-357.53; session marks -334.81) · 7 name(s) marked open→close (per-name table). CTSH×17 09:30 $70.05 → close $73.72 -62.39; HALO×9 09:30 $124.72 → close $124.54 +1.62; IBM×5 09:30 $241.25 → close $252.11 -54.33; KD×87 09:30 $14.35 → close $15.20 -73.95; LUV×30 09:30 $39.20 → close $42.03 -85.05; MOH×5 09:30 $211.68 → close $216.64 -24.80; NFLX×18 09:30 $65.06 → close $67.05 -35.91 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $25,197.14 | ▲ 09:30 equity $16,788.18 vs yday $16,689.09 (+99.09) | 09:30 open · cash $25,197.14 (unchanged overnight, no fees) · equity $16,788.18 vs prior close $16,689.09 (+99.09) | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $25,197.14 | ▲ close $16,831.82 vs 09:30 $16,788.18 (session +43.64) | 16:00 close · cash $25,197.14 · equity $16,831.82 vs 09:30 $16,788.18 (+43.64; session marks +43.64) · 7 name(s) marked open→close (per-name table). CTSH×17 09:30 $72.77 → close $70.54 +37.91; HALO×9 09:30 $124.54 → close $125.63 -9.81; IBM×5 09:30 $249.73 → close $253.56 -19.15; KD×87 09:30 $14.94 → close $14.76 +15.66; LUV×30 09:30 $41.01 → close $41.75 -22.20; MOH×5 09:30 $213.22 → close $209.15 +20.35; NFLX×18 09:30 $67.01 → close $65.85 +20.88 | — |
 
 ## Not taken
 

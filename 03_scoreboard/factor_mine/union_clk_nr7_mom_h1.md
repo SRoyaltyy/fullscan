@@ -264,6 +264,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `SAP` | 10 | $237.06 | $2.05 | $+50.83 | $7,401.03 | ▲ +50.83 after sell → book $9,870.07; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 09:30 ET | **SELL** | `T` | 112 | $22.05 | $2.36 | $+13.01 | $9,867.70 | ▲ +13.01 after sell → book $9,867.70; vs 09:30 mark -2.37 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,867.70 | ▲ close $9,867.70 vs 09:30 $9,877.52 (session +0.00) | 16:00 close · cash $9,867.70 · no lots left · equity $9,867.70. | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,867.70 | ▲ 09:30 equity $9,867.70 vs yday $9,867.70 (+0.00) | 09:30 open · cash $9,867.70 · no holdings · equity $9,867.70 vs prior close $9,867.70 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,867.70 | ▲ close $9,867.70 vs 09:30 $9,867.70 (session +0.00) | 16:00 close · cash $9,867.70 · no lots left · equity $9,867.70. | — |
 
 ## Not taken
 

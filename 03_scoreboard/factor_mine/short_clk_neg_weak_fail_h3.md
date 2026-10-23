@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 neg catalyst + weakness + failed recovery
 
-Cash book **+3.29%** ($10,329) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 235 · skips 270 · realized $-967.53.
+Cash book **+3.97%** ($10,397) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 235 · skips 270 · realized $-967.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -405,6 +405,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,852.28 | ▼ close $10,553.56 vs 09:30 $10,595.22 (session -37.15) | 16:00 close · cash $15,852.28 · equity $10,553.56 vs 09:30 $10,595.22 (-41.66; session marks -37.15) · 2 name(s) marked open→close (per-name table). NFLX×41 09:30 $64.15 → close $65.04 -36.49; LUV×66 09:30 $39.87 → close $39.88 -0.66 | — |
 | 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,852.28 | ▲ 09:30 equity $10,598.16 vs yday $10,553.56 (+44.60) | 09:30 open · cash $15,852.28 (unchanged overnight, no fees) · equity $10,598.16 vs prior close $10,553.56 (+44.60) · 2 name(s) re-marked at the open (per-name table). LUV×66 yday $39.88 → 09:30 $39.20 +45.21; NFLX×41 yday $65.04 → 09:30 $65.06 -0.62 | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,852.28 | ▼ close $10,329.25 vs 09:30 $10,598.16 (session -268.90) | 16:00 close · cash $15,852.28 · equity $10,329.25 vs 09:30 $10,598.16 (-268.91; session marks -268.90) · 2 name(s) marked open→close (per-name table). LUV×66 09:30 $39.20 → close $42.03 -187.11; NFLX×41 09:30 $65.06 → close $67.05 -81.79 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,852.28 | ▲ 09:30 equity $10,398.21 vs yday $10,329.25 (+68.96) | 09:30 open · cash $15,852.28 (unchanged overnight, no fees) · equity $10,398.21 vs prior close $10,329.25 (+68.96) · 2 name(s) re-marked at the open (per-name table). LUV×66 yday $42.03 → 09:30 $41.01 +67.32; NFLX×41 yday $67.05 → 09:30 $67.01 +1.64 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,852.28 | ▼ close $10,396.93 vs 09:30 $10,398.21 (session -1.28) | 16:00 close · cash $15,852.28 · equity $10,396.93 vs 09:30 $10,398.21 (-1.28; session marks -1.28) · 2 name(s) marked open→close (per-name table). LUV×66 09:30 $41.01 → close $41.75 -48.84; NFLX×41 09:30 $67.01 → close $65.85 +47.56 | — |
 
 ## Not taken
 

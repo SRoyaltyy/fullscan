@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h1/union_earn_react_h3 w=0.5,0.5 net=priority
 
-Cash book **-7.38%** ($9,262) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 291 · skips 137 · realized $-376.82.
+Cash book **-11.72%** ($8,828) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 291 · skips 137 · realized $-376.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -464,6 +464,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `NOC` | 1 | $544.70 | $2.01 | $+3.49 | $3,215.37 | ▲ +3.49 after sell → book $9,097.29; vs 09:30 mark -2.01 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `PM` | 3 | $197.04 | $2.02 | $+25.68 | $3,804.47 | ▲ +25.68 after sell → book $9,095.27; vs 09:30 mark -2.02 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,804.47 | ▲ close $9,262.07 vs 09:30 $9,111.45 (session +166.80) | 16:00 close · cash $3,804.47 · equity $9,262.07 vs 09:30 $9,111.45 (+150.62; session marks +166.80) · 1 name(s) marked open→close (per-name table). T×240 09:30 $22.05 → close $22.74 +166.80 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,804.47 | ▼ 09:30 equity $9,022.07 vs yday $9,262.07 (-240.00) | 09:30 open · cash $3,804.47 (unchanged overnight, no fees) · equity $9,022.07 vs prior close $9,262.07 (-240.00) | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,804.47 | ▼ close $8,827.67 vs 09:30 $9,022.07 (session -194.40) | 16:00 close · cash $3,804.47 · equity $8,827.67 vs 09:30 $9,022.07 (-194.40; session marks -194.40) · 1 name(s) marked open→close (per-name table). T×240 09:30 $21.74 → close $20.93 -194.40 | — |
 
 ## Not taken
 

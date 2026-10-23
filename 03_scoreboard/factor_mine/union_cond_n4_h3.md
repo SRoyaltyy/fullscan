@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-8.95%** ($9,105) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 145 · skips 159 · realized $-515.67.
+Cash book **-9.00%** ($9,100) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 146 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -316,6 +316,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `EOG` | 13 | $160.00 | $2.06 | $+28.16 | $4,658.44 | ▲ +28.16 after sell → book $9,001.12; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 09:30 ET | **SELL** | `VEEV` | 6 | $323.99 | $2.03 | $+77.92 | $6,600.34 | ▲ +77.92 after sell → book $8,999.08; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,600.34 | ▲ close $9,105.09 vs 09:30 $9,005.41 (session +106.01) | 16:00 close · cash $6,600.34 · equity $9,105.09 vs 09:30 $9,005.41 (+99.68; session marks +106.01) · 2 name(s) marked open→close (per-name table). DOCU×1 09:30 $82.22 → close $84.41 +2.19; TRU×29 09:30 $79.88 → close $83.46 +103.82 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,600.34 | ▼ 09:30 equity $9,100.60 vs yday $9,105.09 (-4.49) | 09:30 open · cash $6,600.34 (unchanged overnight, no fees) · equity $9,100.60 vs prior close $9,105.09 (-4.49) · 2 name(s) re-marked at the open (per-name table). DOCU×1 yday $84.41 → 09:30 $83.98 -0.43; TRU×29 yday $83.46 → 09:30 $83.32 -4.06 | — |
+| 2026-10-23 09:30 ET | **SELL** | `TRU` | 29 | $83.32 | $2.11 | $+291.62 | $9,014.51 | ▲ +291.62 after sell → book $9,098.49; vs 09:30 mark -2.11 | dropped from list after 4 sess (min 3) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,014.51 | ▲ close $9,099.78 vs 09:30 $9,100.60 (session +1.29) | 16:00 close · cash $9,014.51 · equity $9,099.78 vs 09:30 $9,100.60 (-0.82; session marks +1.29) · 1 name(s) marked open→close (per-name table). DOCU×1 09:30 $83.98 → close $85.27 +1.29 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · split short_news_r_h3/union_e_fresh_h3/union_hot_n4_h1 w=0.33,0.33,0.33 net=priority
 
-Cash book **-0.43%** ($9,957) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 537 · skips 367 · realized $+2181.46.
+Cash book **-0.34%** ($9,966) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 537 · skips 367 · realized $+2181.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -831,6 +831,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `BMBL` | 182 | $5.94 | $2.58 | $-6.93 | $2,126.93 | ▼ -6.93 after sell → book $4,368.52; vs 09:30 mark -2.58 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 09:30 ET | **SELL** | `KVYO` | 55 | $20.29 | $2.17 | $+34.17 | $3,240.71 | ▲ +34.17 after sell → book $4,366.35; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `WIT` | 526 | $2.14 | $6.88 | $+28.41 | $4,359.47 | ▲ +28.41 after sell → book $4,359.47; vs 09:30 mark -6.88 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,852.49 | ▲ close $2,887.54 vs 09:30 $2,879.46 (session +8.08) | 16:00 close · cash $3,852.49 · equity $2,887.54 vs 09:30 $2,879.46 (+8.08; session marks +8.08) · 5 name(s) marked open→close (per-name table). CTSH×3 09:30 $72.77 → close $70.54 +6.69; HALO×1 09:30 $124.54 → close $125.63 -1.09; KD×15 09:30 $14.94 → close $14.76 +2.70; LUV×5 09:30 $41.01 → close $41.75 -3.70; NFLX×3 09:30 $67.01 → close $65.85 +3.48 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,852.49 | ▲ 09:30 equity $2,879.46 vs yday $2,867.49 (+11.97) | 09:30 open · cash $3,852.49 (unchanged overnight, no fees) · equity $2,879.46 vs prior close $2,867.49 (+11.97) · 5 name(s) re-marked at the open (per-name table). CTSH×3 yday $73.72 → 09:30 $72.77 +2.85; HALO×1 yday $124.54 → 09:30 $124.54 -0.00; KD×15 yday $15.20 → 09:30 $14.94 +3.90; LUV×5 yday $42.03 → 09:30 $41.01 +5.10; NFLX×3 yday $67.05 → 09:30 $67.01 +0.12 | — |
 
 ## Not taken
 

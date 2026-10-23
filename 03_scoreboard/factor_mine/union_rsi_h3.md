@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-23.62%** ($7,638) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 296 · skips 269 · realized $-1699.80.
+Cash book **-23.79%** ($7,621) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 296 · skips 269 · realized $-1699.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -467,6 +467,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `WIT` | 507 | $2.14 | $6.63 | $+98.37 | $4,338.02 | ▲ +98.37 after sell → book $7,522.53; vs 09:30 mark -6.64 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 09:30 ET | **SELL** | `WM` | 4 | $231.38 | $2.02 | $+23.34 | $5,261.52 | ▲ +23.34 after sell → book $7,520.51; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,261.52 | ▲ close $7,637.87 vs 09:30 $7,543.87 (session +117.36) | 16:00 close · cash $5,261.52 · equity $7,637.87 vs 09:30 $7,543.87 (+94.00; session marks +117.36) · 5 name(s) marked open→close (per-name table). BKU×8 09:30 $41.80 → close $43.76 +15.68; BRO×5 09:30 $71.47 → close $74.49 +15.10; BROS×8 09:30 $40.78 → close $41.75 +7.76; DGX×4 09:30 $226.50 → close $243.28 +67.12; QTWO×5 09:30 $67.00 → close $69.34 +11.70 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,261.52 | ▼ 09:30 equity $7,608.21 vs yday $7,637.87 (-29.66) | 09:30 open · cash $5,261.52 (unchanged overnight, no fees) · equity $7,608.21 vs prior close $7,637.87 (-29.66) · 5 name(s) re-marked at the open (per-name table). BKU×8 yday $43.76 → 09:30 $43.34 -3.36; BRO×5 yday $74.49 → 09:30 $74.16 -1.65; BROS×8 yday $41.75 → 09:30 $40.80 -7.60; DGX×4 yday $243.28 → 09:30 $239.63 -14.60; QTWO×5 yday $69.34 → 09:30 $68.85 -2.45 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,261.52 | ▲ close $7,621.36 vs 09:30 $7,608.21 (session +13.15) | 16:00 close · cash $5,261.52 · equity $7,621.36 vs 09:30 $7,608.21 (+13.15; session marks +13.15) · 5 name(s) marked open→close (per-name table). BKU×8 09:30 $43.34 → close $43.57 +1.84; BRO×5 09:30 $74.16 → close $72.97 -5.95; BROS×8 09:30 $40.80 → close $41.49 +5.52; DGX×4 09:30 $239.63 → close $241.89 +9.04; QTWO×5 09:30 $68.85 → close $69.39 +2.70 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢, rank +G−R
 
-Cash book **-36.52%** ($6,348) · signal-only (no cash/fees) was +177.97%. Starts YES **1/30**. Fills 251 · skips 246 · realized $-1849.04.
+Cash book **-36.74%** ($6,326) · signal-only (no cash/fees) was +177.97%. Starts YES **1/30**. Fills 251 · skips 246 · realized $-1849.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -424,6 +424,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `NVTS` | 10 | $8.65 | $0.92 | $-5.10 | $3,929.15 | ▼ -5.10 after sell → book $6,319.86; vs 09:30 mark -0.92 | dropped from list after 4 sess (min 3) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-22 09:30 ET | **SELL** | `TBBB` | 14 | $58.06 | $2.05 | $+24.34 | $4,739.94 | ▲ +24.34 after sell → book $6,317.81; vs 09:30 mark -2.05 | dropped from list after 6 sess (min 3) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,739.94 | ▲ close $6,348.15 vs 09:30 $6,326.91 (session +30.34) | 16:00 close · cash $4,739.94 · equity $6,348.15 vs 09:30 $6,326.91 (+21.24; session marks +30.34) · 4 name(s) marked open→close (per-name table). AIP×11 09:30 $20.12 → close $19.09 -11.33; AMX×36 09:30 $24.14 → close $24.98 +30.24; CSX×5 09:30 $50.09 → close $51.67 +7.90; SAP×1 09:30 $237.06 → close $240.59 +3.53 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,739.94 | ▼ 09:30 equity $6,338.11 vs yday $6,348.15 (-10.04) | 09:30 open · cash $4,739.94 (unchanged overnight, no fees) · equity $6,338.11 vs prior close $6,348.15 (-10.04) · 4 name(s) re-marked at the open (per-name table). AIP×11 yday $19.09 → 09:30 $19.02 -0.77; AMX×36 yday $24.98 → 09:30 $24.81 -6.12; CSX×5 yday $51.67 → 09:30 $51.23 -2.20; SAP×1 yday $240.59 → 09:30 $239.64 -0.95 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,739.94 | ▼ close $6,326.21 vs 09:30 $6,338.11 (session -11.90) | 16:00 close · cash $4,739.94 · equity $6,326.21 vs 09:30 $6,338.11 (-11.90; session marks -11.90) · 4 name(s) marked open→close (per-name table). AIP×11 09:30 $19.02 → close $19.06 +0.44; AMX×36 09:30 $24.81 → close $24.57 -8.64; CSX×5 09:30 $51.23 → close $50.79 -2.20; SAP×1 09:30 $239.64 → close $238.14 -1.50 | — |
 
 ## Not taken
 

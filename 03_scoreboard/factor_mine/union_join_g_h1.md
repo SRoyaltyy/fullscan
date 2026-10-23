@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ join_g, no 🚨
 
-Cash book **-16.97%** ($8,303) · signal-only (no cash/fees) was -3.42%. Starts YES **0/30**. Fills 449 · skips 104 · realized $-96.65.
+Cash book **-16.98%** ($8,302) · signal-only (no cash/fees) was -3.42%. Starts YES **0/30**. Fills 450 · skips 104 · realized $-96.65.
 
 ## How this sleeve decides (like you are 10)
 
@@ -621,6 +621,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `RCKT` | 452 | $2.20 | $5.92 | $-75.03 | $6,335.50 | ▼ -75.03 after sell → book $8,306.05; vs 09:30 mark -5.91 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 09:30 ET | **SELL** | `VEEV` | 3 | $323.99 | $2.02 | $+16.92 | $7,305.45 | ▲ +16.92 after sell → book $8,304.03; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,305.45 | ▼ close $8,302.67 vs 09:30 $8,324.42 (session -1.36) | 16:00 close · cash $7,305.45 · equity $8,302.67 vs 09:30 $8,324.42 (-21.75; session marks -1.36) · 1 name(s) marked open→close (per-name table). CXW×34 09:30 $29.37 → close $29.33 -1.36 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,305.45 | ▲ 09:30 equity $8,304.03 vs yday $8,302.67 (+1.36) | 09:30 open · cash $7,305.45 (unchanged overnight, no fees) · equity $8,304.03 vs prior close $8,302.67 (+1.36) · 1 name(s) re-marked at the open (per-name table). CXW×34 yday $29.33 → 09:30 $29.37 +1.36 | — |
+| 2026-10-23 09:30 ET | **SELL** | `CXW` | 34 | $29.37 | $2.11 | $-44.66 | $8,301.92 | ▼ -44.66 after sell → book $8,301.92; vs 09:30 mark -2.11 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,301.92 | ▲ close $8,301.92 vs 09:30 $8,304.03 (session +0.00) | 16:00 close · cash $8,301.92 · no lots left · equity $8,301.92. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **+7.81%** ($10,781) · signal-only (no cash/fees) was +49.44%. Starts YES **25/30**. Fills 318 · skips 298 · realized $+167.97.
+Cash book **+7.39%** ($10,739) · signal-only (no cash/fees) was +49.44%. Starts YES **25/30**. Fills 318 · skips 298 · realized $+167.97.
 
 ## How this sleeve decides (like you are 10)
 
@@ -490,6 +490,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `WIT` | 668 | $2.14 | $8.74 | $+129.60 | $6,464.42 | ▲ +129.60 after sell → book $10,687.75; vs 09:30 mark -8.74 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 09:30 ET | **SELL** | `WMG` | 41 | $31.48 | $2.13 | $+4.77 | $7,752.96 | ▲ +4.77 after sell → book $10,685.61; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,752.96 | ▲ close $10,780.87 vs 09:30 $10,704.65 (session +95.26) | 16:00 close · cash $7,752.96 · equity $10,780.87 vs 09:30 $10,704.65 (+76.22; session marks +95.26) · 8 name(s) marked open→close (per-name table). AMX×56 09:30 $24.14 → close $24.98 +47.04; CMRC×67 09:30 $3.69 → close $3.67 -1.34; EPAM×1 09:30 $133.58 → close $138.67 +5.09; FRSH×17 09:30 $14.85 → close $15.32 +7.99; IT×1 09:30 $221.23 → close $234.44 +13.21; KLRA×19 09:30 $12.80 → close $13.27 +8.93; KVYO×12 09:30 $20.29 → close $20.59 +3.60; TRU×3 09:30 $79.88 → close $83.46 +10.74 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,752.96 | ▼ 09:30 equity $10,759.44 vs yday $10,780.87 (-21.43) | 09:30 open · cash $7,752.96 (unchanged overnight, no fees) · equity $10,759.44 vs prior close $10,780.87 (-21.43) · 8 name(s) re-marked at the open (per-name table). AMX×56 yday $24.98 → 09:30 $24.81 -9.52; CMRC×67 yday $3.67 → 09:30 $3.65 -1.34; EPAM×1 yday $138.67 → 09:30 $135.74 -2.93; FRSH×17 yday $15.32 → 09:30 $15.29 -0.51; IT×1 yday $234.44 → 09:30 $231.60 -2.84; KLRA×19 yday $13.27 → 09:30 $13.18 -1.71; KVYO×12 yday $20.59 → 09:30 $20.41 -2.16; TRU×3 yday $83.46 → 09:30 $83.32 -0.42 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,752.96 | ▼ close $10,739.17 vs 09:30 $10,759.44 (session -20.27) | 16:00 close · cash $7,752.96 · equity $10,739.17 vs 09:30 $10,759.44 (-20.27; session marks -20.27) · 8 name(s) marked open→close (per-name table). AMX×56 09:30 $24.81 → close $24.57 -13.44; CMRC×67 09:30 $3.65 → close $3.56 -6.03; EPAM×1 09:30 $135.74 → close $136.25 +0.51; FRSH×17 09:30 $15.29 → close $15.49 +3.40; IT×1 09:30 $231.60 → close $230.28 -1.32; KLRA×19 09:30 $13.18 → close $12.85 -6.27; KVYO×12 09:30 $20.41 → close $21.11 +8.40; TRU×3 09:30 $83.32 → close $81.48 -5.52 | — |
 
 ## Not taken
 

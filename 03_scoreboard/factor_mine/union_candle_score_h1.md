@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-13.45%** ($8,655) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 437 · skips 104 · realized $-563.45.
+Cash book **-14.14%** ($8,586) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 440 · skips 104 · realized $-563.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -608,6 +608,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `PAYC` | 4 | $264.42 | $2.02 | $+10.90 | $3,586.23 | ▲ +10.90 after sell → book $8,549.45; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `WIT` | 514 | $2.14 | $6.73 | $+27.76 | $4,679.47 | ▲ +27.76 after sell → book $8,542.73; vs 09:30 mark -6.72 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,679.47 | ▲ close $8,654.57 vs 09:30 $8,555.64 (session +111.84) | 16:00 close · cash $4,679.47 · equity $8,654.57 vs 09:30 $8,555.64 (+98.93; session marks +111.84) · 4 name(s) marked open→close (per-name table). HLT×2 09:30 $360.84 → close $358.07 -5.54; JLHL×224 09:30 $4.69 → close $4.94 +56.00; PRMB×53 09:30 $19.86 → close $20.14 +14.84; TRU×13 09:30 $79.88 → close $83.46 +46.54 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,679.47 | ▼ 09:30 equity $8,601.79 vs yday $8,654.57 (-52.78) | 09:30 open · cash $4,679.47 (unchanged overnight, no fees) · equity $8,601.79 vs prior close $8,654.57 (-52.78) · 4 name(s) re-marked at the open (per-name table). HLT×2 yday $358.07 → 09:30 $354.57 -7.00; JLHL×224 yday $4.94 → 09:30 $4.81 -29.12; PRMB×53 yday $20.14 → 09:30 $19.86 -14.84; TRU×13 yday $83.46 → 09:30 $83.32 -1.82 | — |
+| 2026-10-23 09:30 ET | **SELL** | `HLT` | 2 | $354.57 | $2.02 | $-14.87 | $5,386.59 | ▼ -14.87 after sell → book $8,599.77; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-23 09:30 ET | **SELL** | `JLHL` | 224 | $4.81 | $2.94 | $+12.09 | $6,461.10 | ▲ +12.09 after sell → book $8,596.84; vs 09:30 mark -2.93 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-23 09:30 ET | **SELL** | `TRU` | 13 | $83.32 | $2.05 | $+70.02 | $7,542.21 | ▲ +70.02 after sell → book $8,594.79; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,542.21 | ▼ close $8,585.78 vs 09:30 $8,601.79 (session -9.01) | 16:00 close · cash $7,542.21 · equity $8,585.78 vs 09:30 $8,601.79 (-16.01; session marks -9.01) · 1 name(s) marked open→close (per-name table). PRMB×53 09:30 $19.86 → close $19.69 -9.01 | — |
 
 ## Not taken
 

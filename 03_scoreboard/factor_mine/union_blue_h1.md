@@ -592,6 +592,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `ETON` | 18 | $49.36 | $2.06 | $-32.37 | $6,567.33 | ▼ -32.37 after sell → book $7,481.87; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `PDFS` | 22 | $41.57 | $2.08 | $-30.31 | $7,479.80 | ▼ -30.31 after sell → book $7,479.80; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,479.80 | ▲ close $7,479.80 vs 09:30 $7,499.38 (session +0.00) | 16:00 close · cash $7,479.80 · no lots left · equity $7,479.80. | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,479.80 | ▲ 09:30 equity $7,479.80 vs yday $7,479.80 (+0.00) | 09:30 open · cash $7,479.80 · no holdings · equity $7,479.80 vs prior close $7,479.80 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,479.80 | ▲ close $7,479.80 vs 09:30 $7,479.80 (session +0.00) | 16:00 close · cash $7,479.80 · no lots left · equity $7,479.80. | — |
 
 ## Not taken
 

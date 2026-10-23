@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **+1.80%** ($10,180) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 406 · skips 108 · realized $-743.47.
+Cash book **+1.94%** ($10,194) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 406 · skips 108 · realized $-743.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -576,6 +576,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **COVER** | `CRON` | 380 | $3.39 | $4.90 | $-44.11 | $13,625.41 | ▼ -44.11 after sell → book $10,124.77; vs 09:30 mark -4.90 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **COVER** | `ETON` | 24 | $49.36 | $2.06 | $+33.50 | $12,438.71 | ▲ +33.50 after sell → book $10,122.70; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,438.71 | ▲ close $10,180.48 vs 09:30 $10,133.73 (session +57.78) | 16:00 close · cash $12,438.71 · equity $10,180.48 vs 09:30 $10,133.73 (+46.75; session marks +57.78) · 4 name(s) marked open→close (per-name table). AIP×30 09:30 $20.12 → close $19.09 +30.90; NVTS×63 09:30 $8.65 → close $8.49 +10.24; PDFS×13 09:30 $41.57 → close $39.47 +27.30; SMMT×41 09:30 $15.29 → close $15.55 -10.66 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,438.71 | ▲ 09:30 equity $10,194.77 vs yday $10,180.48 (+14.29) | 09:30 open · cash $12,438.71 (unchanged overnight, no fees) · equity $10,194.77 vs prior close $10,180.48 (+14.29) · 4 name(s) re-marked at the open (per-name table). AIP×30 yday $19.09 → 09:30 $19.02 +2.10; NVTS×63 yday $8.49 → 09:30 $8.45 +2.52; PDFS×13 yday $39.47 → 09:30 $39.01 +5.98; SMMT×41 yday $15.55 → 09:30 $15.46 +3.69 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,438.71 | ▼ close $10,193.54 vs 09:30 $10,194.77 (session -1.23) | 16:00 close · cash $12,438.71 · equity $10,193.54 vs 09:30 $10,194.77 (-1.23; session marks -1.23) · 4 name(s) marked open→close (per-name table). AIP×30 09:30 $19.02 → close $19.06 -1.20; NVTS×63 09:30 $8.45 → close $8.38 +4.41; PDFS×13 09:30 $39.01 → close $39.32 -4.03; SMMT×41 09:30 $15.46 → close $15.47 -0.41 | — |
 
 ## Not taken
 

@@ -581,6 +581,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `VEEV` | 3 | $323.99 | $2.02 | $+16.92 | $7,744.05 | ▲ +16.92 after sell → book $8,814.42; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `VFC` | 63 | $16.99 | $2.20 | $-27.69 | $8,812.22 | ▼ -27.69 after sell → book $8,812.22; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,812.22 | ▲ close $8,812.22 vs 09:30 $8,828.88 (session +0.00) | 16:00 close · cash $8,812.22 · no lots left · equity $8,812.22. | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,812.22 | ▲ 09:30 equity $8,812.22 vs yday $8,812.22 (+0.00) | 09:30 open · cash $8,812.22 · no holdings · equity $8,812.22 vs prior close $8,812.22 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,812.22 | ▲ close $8,812.22 vs 09:30 $8,812.22 (session +0.00) | 16:00 close · cash $8,812.22 · no lots left · equity $8,812.22. | — |
 
 ## Not taken
 

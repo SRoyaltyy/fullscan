@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `rank_w` · sell `list` · S-boost `none` · rank-weighted leftover
 
-Cash book **-15.96%** ($8,404) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 414 · skips 107 · realized $-24.70.
+Cash book **-16.04%** ($8,396) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 415 · skips 107 · realized $-24.70.
 
 ## How this sleeve decides (like you are 10)
 
@@ -582,6 +582,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `ETON` | 7 | $49.36 | $2.03 | $-15.03 | $6,093.18 | ▼ -15.03 after sell → book $8,394.86; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `VEEV` | 5 | $323.99 | $2.03 | $+30.87 | $7,711.10 | ▲ +30.87 after sell → book $8,392.83; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,711.10 | ▲ close $8,403.73 vs 09:30 $8,406.07 (session +10.90) | 16:00 close · cash $7,711.10 · equity $8,403.73 vs 09:30 $8,406.07 (-2.34; session marks +10.90) · 2 name(s) marked open→close (per-name table). PRMB×12 09:30 $19.86 → close $20.14 +3.36; SMMT×29 09:30 $15.29 → close $15.55 +7.54 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,711.10 | ▼ 09:30 equity $8,397.76 vs yday $8,403.73 (-5.97) | 09:30 open · cash $7,711.10 (unchanged overnight, no fees) · equity $8,397.76 vs prior close $8,403.73 (-5.97) · 2 name(s) re-marked at the open (per-name table). PRMB×12 yday $20.14 → 09:30 $19.86 -3.36; SMMT×29 yday $15.55 → 09:30 $15.46 -2.61 | — |
+| 2026-10-23 09:30 ET | **SELL** | `PRMB` | 12 | $19.86 | $2.05 | $+9.25 | $7,947.37 | ▲ +9.25 after sell → book $8,395.71; vs 09:30 mark -2.05 | dropped from list after 7 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,947.37 | ▲ close $8,396.00 vs 09:30 $8,397.76 (session +0.29) | 16:00 close · cash $7,947.37 · equity $8,396.00 vs 09:30 $8,397.76 (-1.76; session marks +0.29) · 1 name(s) marked open→close (per-name table). SMMT×29 09:30 $15.46 → close $15.47 +0.29 | — |
 
 ## Not taken
 

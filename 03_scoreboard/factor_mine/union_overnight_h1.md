@@ -328,6 +328,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `PNFP` | 13 | $98.09 | $2.05 | $+23.09 | $6,362.44 | ▲ +23.09 after sell → book $7,547.74; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-22 09:30 ET | **SELL** | `SAP` | 5 | $237.06 | $2.02 | $+23.42 | $7,545.71 | ▲ +23.42 after sell → book $7,545.71; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,545.71 | ▲ close $7,545.71 vs 09:30 $7,558.03 (session +0.00) | 16:00 close · cash $7,545.71 · no lots left · equity $7,545.71. | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,545.71 | ▲ 09:30 equity $7,545.71 vs yday $7,545.71 (+0.00) | 09:30 open · cash $7,545.71 · no holdings · equity $7,545.71 vs prior close $7,545.71 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,545.71 | ▲ close $7,545.71 vs 09:30 $7,545.71 (session +0.00) | 16:00 close · cash $7,545.71 · no lots left · equity $7,545.71. | — |
 
 ## Not taken
 

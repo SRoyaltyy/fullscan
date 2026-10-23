@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `rank_w` · sell `list` · S-boost `none` · rank-weighted leftover
 
-Cash book **-17.13%** ($8,287) · signal-only (no cash/fees) was -10.41%. Starts YES **1/30**. Fills 220 · skips 213 · realized $-994.96.
+Cash book **-17.61%** ($8,239) · signal-only (no cash/fees) was -10.41%. Starts YES **1/30**. Fills 220 · skips 213 · realized $-994.96.
 
 ## How this sleeve decides (like you are 10)
 
@@ -388,6 +388,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `PACS` | 16 | $46.62 | $2.06 | $-10.50 | $5,573.73 | ▼ -10.50 after sell → book $8,301.01; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 09:30 ET | **SELL** | `VEEV` | 7 | $323.99 | $2.04 | $+91.57 | $7,839.62 | ▲ +91.57 after sell → book $8,298.97; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,839.62 | ▼ close $8,287.23 vs 09:30 $8,309.31 (session -11.75) | 16:00 close · cash $7,839.62 · equity $8,287.23 vs 09:30 $8,309.31 (-22.08; session marks -11.75) · 3 name(s) marked open→close (per-name table). CORT×2 09:30 $115.16 → close $107.50 -15.32; CRON×53 09:30 $3.39 → close $3.44 +2.91; ETON×1 09:30 $49.36 → close $50.02 +0.66 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,839.62 | ▼ 09:30 equity $8,283.14 vs yday $8,287.23 (-4.09) | 09:30 open · cash $7,839.62 (unchanged overnight, no fees) · equity $8,283.14 vs prior close $8,287.23 (-4.09) · 3 name(s) re-marked at the open (per-name table). CORT×2 yday $107.50 → 09:30 $106.05 -2.90; CRON×53 yday $3.44 → 09:30 $3.42 -1.06; ETON×1 yday $50.02 → 09:30 $49.89 -0.13 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,839.62 | ▼ close $8,238.89 vs 09:30 $8,283.14 (session -44.24) | 16:00 close · cash $7,839.62 · equity $8,238.89 vs 09:30 $8,283.14 (-44.25; session marks -44.24) · 3 name(s) marked open→close (per-name table). CORT×2 09:30 $106.05 → close $85.86 -40.38; CRON×53 09:30 $3.42 → close $3.35 -3.97; ETON×1 09:30 $49.89 → close $50.00 +0.11 | — |
 
 ## Not taken
 

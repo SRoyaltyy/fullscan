@@ -413,6 +413,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **COVER** | `VET` | 49 | $13.76 | $2.14 | $-33.22 | $10,795.13 | ▼ -33.22 after sell → book $10,147.58; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 09:30 ET | **COVER** | `VIST` | 9 | $71.95 | $2.02 | $-3.17 | $10,145.56 | ▼ -3.17 after sell → book $10,145.56; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,145.56 | ▲ close $10,145.56 vs 09:30 $10,159.93 (session +0.00) | 16:00 close · cash $10,145.56 · no lots left · equity $10,145.56. | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,145.56 | ▲ 09:30 equity $10,145.56 vs yday $10,145.56 (+0.00) | 09:30 open · cash $10,145.56 · no holdings · equity $10,145.56 vs prior close $10,145.56 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,145.56 | ▲ close $10,145.56 vs 09:30 $10,145.56 (session +0.00) | 16:00 close · cash $10,145.56 · no lots left · equity $10,145.56. | — |
 
 ## Not taken
 

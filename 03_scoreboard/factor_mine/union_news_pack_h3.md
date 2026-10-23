@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **-2.73%** ($9,727) · signal-only (no cash/fees) was -16.54%. Starts YES **11/30**. Fills 66 · skips 85 · realized $-1342.35.
+Cash book **-3.58%** ($9,642) · signal-only (no cash/fees) was -16.54%. Starts YES **11/30**. Fills 66 · skips 85 · realized $-1342.35.
 
 ## How this sleeve decides (like you are 10)
 
@@ -239,6 +239,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `EOG` | 5 | $160.00 | $2.02 | $+8.37 | $3,579.88 | ▲ +8.37 after sell → book $9,558.11; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 09:30 ET | **SELL** | `RELX` | 23 | $39.96 | $2.08 | $+18.86 | $4,496.88 | ▲ +18.86 after sell → book $9,556.03; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,496.88 | ▲ close $9,726.72 vs 09:30 $9,566.25 (session +170.69) | 16:00 close · cash $4,496.88 · equity $9,726.72 vs 09:30 $9,566.25 (+160.47; session marks +170.69) · 3 name(s) marked open→close (per-name table). AIP×3 09:30 $20.12 → close $19.09 -3.09; AMX×205 09:30 $24.14 → close $24.98 +172.20; CSX×1 09:30 $50.09 → close $51.67 +1.58 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,496.88 | ▼ 09:30 equity $9,691.22 vs yday $9,726.72 (-35.50) | 09:30 open · cash $4,496.88 (unchanged overnight, no fees) · equity $9,691.22 vs prior close $9,726.72 (-35.50) · 3 name(s) re-marked at the open (per-name table). AIP×3 yday $19.09 → 09:30 $19.02 -0.21; AMX×205 yday $24.98 → 09:30 $24.81 -34.85; CSX×1 yday $51.67 → 09:30 $51.23 -0.44 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,496.88 | ▼ close $9,641.70 vs 09:30 $9,691.22 (session -49.52) | 16:00 close · cash $4,496.88 · equity $9,641.70 vs 09:30 $9,691.22 (-49.52; session marks -49.52) · 3 name(s) marked open→close (per-name table). AIP×3 09:30 $19.02 → close $19.06 +0.12; AMX×205 09:30 $24.81 → close $24.57 -49.20; CSX×1 09:30 $51.23 → close $50.79 -0.44 | — |
 
 ## Not taken
 

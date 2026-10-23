@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `half` · sell `list` · S-boost `none` · deploy half leftover
 
-Cash book **-10.39%** ($8,961) · signal-only (no cash/fees) was -10.41%. Starts YES **0/30**. Fills 298 · skips 239 · realized $-557.10.
+Cash book **-12.67%** ($8,733) · signal-only (no cash/fees) was -10.41%. Starts YES **0/30**. Fills 298 · skips 239 · realized $-557.10.
 
 ## How this sleeve decides (like you are 10)
 
@@ -466,6 +466,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `PACS` | 9 | $46.62 | $2.04 | $-7.65 | $5,108.87 | ▼ -7.65 after sell → book $8,999.17; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 09:30 ET | **SELL** | `VEEV` | 1 | $323.99 | $2.01 | $+9.65 | $5,430.85 | ▲ +9.65 after sell → book $8,997.16; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,430.85 | ▼ close $8,960.67 vs 09:30 $9,007.31 (session -36.49) | 16:00 close · cash $5,430.85 · equity $8,960.67 vs 09:30 $9,007.31 (-46.64; session marks -36.49) · 4 name(s) marked open→close (per-name table). BLFS×9 09:30 $38.61 → close $38.61 +0.00; CORT×9 09:30 $115.16 → close $107.50 -68.94; CRON×338 09:30 $3.39 → close $3.44 +18.59; ETON×21 09:30 $49.36 → close $50.02 +13.86 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,430.85 | ▼ 09:30 equity $8,938.13 vs yday $8,960.67 (-22.54) | 09:30 open · cash $5,430.85 (unchanged overnight, no fees) · equity $8,938.13 vs prior close $8,960.67 (-22.54) · 4 name(s) re-marked at the open (per-name table). BLFS×9 yday $38.61 → 09:30 $38.61 +0.00; CORT×9 yday $107.50 → 09:30 $106.05 -13.05; CRON×338 yday $3.44 → 09:30 $3.42 -6.76; ETON×21 yday $50.02 → 09:30 $49.89 -2.73 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,430.85 | ▼ close $8,733.38 vs 09:30 $8,938.13 (session -204.75) | 16:00 close · cash $5,430.85 · equity $8,733.38 vs 09:30 $8,938.13 (-204.75; session marks -204.75) · 4 name(s) marked open→close (per-name table). BLFS×9 09:30 $38.61 → close $38.61 +0.00; CORT×9 09:30 $106.05 → close $85.86 -181.71; CRON×338 09:30 $3.42 → close $3.35 -25.35; ETON×21 09:30 $49.89 → close $50.00 +2.31 | — |
 
 ## Not taken
 

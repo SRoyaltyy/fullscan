@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `cut_loser` · S-boost `none` · after min-hold, cut −3% losers
 
-Cash book **-17.75%** ($8,226) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 416 · skips 108 · realized $-123.31.
+Cash book **-17.97%** ($8,203) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 417 · skips 108 · realized $-123.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -584,6 +584,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `ETON` | 20 | $49.36 | $2.07 | $-35.52 | $5,161.83 | ▼ -35.52 after sell → book $8,195.52; vs 09:30 mark -2.07 | cut loser after 1 sess (−3% vs entry) | — |
 | 2026-10-22 09:30 ET | **SELL** | `VEEV` | 3 | $323.99 | $2.02 | $+16.92 | $6,131.79 | ▲ +16.92 after sell → book $8,193.51; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,131.79 | ▲ close $8,225.51 vs 09:30 $8,207.87 (session +32.00) | 16:00 close · cash $6,131.79 · equity $8,225.51 vs 09:30 $8,207.87 (+17.64; session marks +32.00) · 2 name(s) marked open→close (per-name table). PRMB×53 09:30 $19.86 → close $20.14 +14.84; SMMT×66 09:30 $15.29 → close $15.55 +17.16 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,131.79 | ▼ 09:30 equity $8,204.73 vs yday $8,225.51 (-20.78) | 09:30 open · cash $6,131.79 (unchanged overnight, no fees) · equity $8,204.73 vs prior close $8,225.51 (-20.78) · 2 name(s) re-marked at the open (per-name table). PRMB×53 yday $20.14 → 09:30 $19.86 -14.84; SMMT×66 yday $15.55 → 09:30 $15.46 -5.94 | — |
+| 2026-10-23 09:30 ET | **SELL** | `PRMB` | 53 | $19.86 | $2.17 | $+54.51 | $7,182.20 | ▲ +54.51 after sell → book $8,202.56; vs 09:30 mark -2.17 | dropped from list after 7 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,182.20 | ▲ close $8,203.22 vs 09:30 $8,204.73 (session +0.66) | 16:00 close · cash $7,182.20 · equity $8,203.22 vs 09:30 $8,204.73 (-1.51; session marks +0.66) · 1 name(s) marked open→close (per-name table). SMMT×66 09:30 $15.46 → close $15.47 +0.66 | — |
 
 ## Not taken
 

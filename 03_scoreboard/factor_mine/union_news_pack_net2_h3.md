@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **-4.93%** ($9,507) · signal-only (no cash/fees) was -9.47%. Starts YES **16/30**. Fills 59 · skips 82 · realized $-1172.71.
+Cash book **-5.76%** ($9,424) · signal-only (no cash/fees) was -9.47%. Starts YES **16/30**. Fills 59 · skips 82 · realized $-1172.71.
 
 ## How this sleeve decides (like you are 10)
 
@@ -233,6 +233,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `EOG` | 7 | $160.00 | $2.03 | $+13.32 | $3,342.17 | ▲ +13.32 after sell → book $9,339.14; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 09:30 ET | **SELL** | `RELX` | 28 | $39.96 | $2.09 | $+23.83 | $4,458.95 | ▲ +23.83 after sell → book $9,337.04; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,458.95 | ▲ close $9,506.62 vs 09:30 $9,345.23 (session +169.58) | 16:00 close · cash $4,458.95 · equity $9,506.62 vs 09:30 $9,345.23 (+161.39; session marks +169.58) · 2 name(s) marked open→close (per-name table). AMX×200 09:30 $24.14 → close $24.98 +168.00; CSX×1 09:30 $50.09 → close $51.67 +1.58 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,458.95 | ▼ 09:30 equity $9,472.18 vs yday $9,506.62 (-34.44) | 09:30 open · cash $4,458.95 (unchanged overnight, no fees) · equity $9,472.18 vs prior close $9,506.62 (-34.44) · 2 name(s) re-marked at the open (per-name table). AMX×200 yday $24.98 → 09:30 $24.81 -34.00; CSX×1 yday $51.67 → 09:30 $51.23 -0.44 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,458.95 | ▼ close $9,423.74 vs 09:30 $9,472.18 (session -48.44) | 16:00 close · cash $4,458.95 · equity $9,423.74 vs 09:30 $9,472.18 (-48.44; session marks -48.44) · 2 name(s) marked open→close (per-name table). AMX×200 09:30 $24.81 → close $24.57 -48.00; CSX×1 09:30 $51.23 → close $50.79 -0.44 | — |
 
 ## Not taken
 

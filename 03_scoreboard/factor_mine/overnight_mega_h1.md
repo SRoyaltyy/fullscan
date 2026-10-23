@@ -202,6 +202,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `IBM` | 12 | $241.25 | $2.06 | $-12.13 | $6,279.41 | ▼ -12.13 after sell → book $9,361.19; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟡 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 09:30 ET | **SELL** | `SAP` | 13 | $237.06 | $2.06 | $+67.28 | $9,359.12 | ▲ +67.28 after sell → book $9,359.12; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,359.12 | ▲ close $9,359.12 vs 09:30 $9,365.46 (session +0.00) | 16:00 close · cash $9,359.12 · no lots left · equity $9,359.12. | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,359.12 | ▲ 09:30 equity $9,359.12 vs yday $9,359.12 (+0.00) | 09:30 open · cash $9,359.12 · no holdings · equity $9,359.12 vs prior close $9,359.12 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,359.12 | ▲ close $9,359.12 vs 09:30 $9,359.12 (session +0.00) | 16:00 close · cash $9,359.12 · no lots left · equity $9,359.12. | — |
 
 ## Not taken
 

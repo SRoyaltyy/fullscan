@@ -249,6 +249,11 @@
       "bytes": 94398,
       "sha256": "c231e94f9faedeea943b894d0473722610965b59b45fbd6f93ac828053f0717e",
       "written_at": "2026-10-22T17:23:30.682461-04:00"
+    },
+    "2026-10-23": {
+      "bytes": 93892,
+      "sha256": "7cfb2fb66f6850054ebdc133e5d9e69c69d66fd96afc92ef31bd2853685dbc00",
+      "written_at": "2026-10-23T17:06:06.415601-04:00"
     }
   },
   "excel_signals": {
@@ -1556,6 +1561,12 @@
       "encoding": "gzip",
       "sha256": "0fea724709b5a93eb0ef5475faaf26bb60e020294db5550f6761e12fd40c21c1",
       "written_at": "2026-10-22T17:24:47.724840-04:00"
+    },
+    "2026-10-23": {
+      "bytes": 7531570,
+      "encoding": "gzip",
+      "sha256": "5c10cf389064da342876e39393e28076d0b4e359ccc285a43775bd8fcbd87622",
+      "written_at": "2026-10-23T17:07:14.994766-04:00"
     }
   },
   "lineups": {
@@ -1808,6 +1819,11 @@
       "bytes": 743,
       "sha256": "d36707a5cef59763922092e8ee1f7c204104ee656e21fbcdfbddc977a7cd620c",
       "written_at": "2026-10-22T17:25:26.330108-04:00"
+    },
+    "2026-10-23": {
+      "bytes": 691,
+      "sha256": "f0896190f30d91457a8e983de098f8de0c723dc7f71c94731f94e76fa56395e1",
+      "written_at": "2026-10-23T17:08:01.173639-04:00"
     }
   },
   "prices": {
@@ -1910,6 +1926,11 @@
       "bytes": 674929,
       "sha256": "c1eda766ded6c21da6f1a165f2a255837c1c6e341136603b58ae4889086b5573",
       "written_at": "2026-10-22T17:23:30.703092-04:00"
+    },
+    "2026-10-23": {
+      "bytes": 599649,
+      "sha256": "bbe1c98f8afe998846a77a3c92b51c91cfb8f0f863d2f24b47089917d1a62783",
+      "written_at": "2026-10-23T17:06:06.441333-04:00"
     }
   },
   "recipe_rules": {
@@ -13122,6 +13143,30 @@
         "TJGC"
       ],
       "written_at": "2026-10-22T17:23:36.836319-04:00"
+    },
+    "2026-10-23": {
+      "bytes": 210202,
+      "dropped_missing_bars": [
+        "ABCL",
+        "BLFS",
+        "CCO",
+        "DBRG",
+        "PSKY",
+        "QRVO",
+        "TD",
+        "TIGR",
+        "TJGC",
+        "WBD"
+      ],
+      "heat_vintage": "2026-10-23",
+      "n_rows": 71,
+      "sha256": "694ffa37fdb028cf31c31b6b7bc54bbb795b3759db9bf16faf0e67a8f25cf27f",
+      "unpriced_held": [
+        "BLFS",
+        "DBRG",
+        "TJGC"
+      ],
+      "written_at": "2026-10-23T17:06:12.024503-04:00"
     }
   },
   "version": 1

@@ -513,6 +513,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `ITW` | 4 | $277.68 | $2.02 | $+4.10 | $7,612.55 | ▲ +4.10 after sell → book $8,699.91; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-22 09:30 ET | **SELL** | `VFC` | 64 | $16.99 | $2.20 | $-28.06 | $8,697.71 | ▼ -28.06 after sell → book $8,697.71; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,697.71 | ▲ close $8,697.71 vs 09:30 $8,715.17 (session +0.00) | 16:00 close · cash $8,697.71 · no lots left · equity $8,697.71. | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,697.71 | ▲ 09:30 equity $8,697.71 vs yday $8,697.71 (+0.00) | 09:30 open · cash $8,697.71 · no holdings · equity $8,697.71 vs prior close $8,697.71 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,697.71 | ▲ close $8,697.71 vs 09:30 $8,697.71 (session +0.00) | 16:00 close · cash $8,697.71 · no lots left · equity $8,697.71. | — |
 
 ## Not taken
 

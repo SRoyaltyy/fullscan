@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-9.19%** ($9,081) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 331 · skips 288 · realized $+91.50.
+Cash book **-9.48%** ($9,052) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 331 · skips 288 · realized $+91.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -502,6 +502,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `WM` | 4 | $231.38 | $2.02 | $+23.34 | $6,485.12 | ▲ +23.34 after sell → book $9,037.99; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 09:30 ET | **SELL** | `WMG` | 30 | $31.48 | $2.10 | $+2.42 | $7,427.42 | ▲ +2.42 after sell → book $9,035.89; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,427.42 | ▲ close $9,081.26 vs 09:30 $9,054.27 (session +45.37) | 16:00 close · cash $7,427.42 · equity $9,081.26 vs 09:30 $9,054.27 (+26.99; session marks +45.37) · 5 name(s) marked open→close (per-name table). HALO×2 09:30 $124.72 → close $124.54 -0.36; JLHL×73 09:30 $4.69 → close $4.94 +18.25; PRMB×17 09:30 $19.86 → close $20.14 +4.76; TRU×4 09:30 $79.88 → close $83.46 +14.32; WIT×168 09:30 $2.14 → close $2.19 +8.40 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,427.42 | ▼ 09:30 equity $9,059.73 vs yday $9,081.26 (-21.53) | 09:30 open · cash $7,427.42 (unchanged overnight, no fees) · equity $9,059.73 vs prior close $9,081.26 (-21.53) · 5 name(s) re-marked at the open (per-name table). HALO×2 yday $124.54 → 09:30 $124.54 +0.00; JLHL×73 yday $4.94 → 09:30 $4.81 -9.49; PRMB×17 yday $20.14 → 09:30 $19.86 -4.76; TRU×4 yday $83.46 → 09:30 $83.32 -0.56; WIT×168 yday $2.19 → 09:30 $2.15 -6.72 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,427.42 | ▼ close $9,052.24 vs 09:30 $9,059.73 (session -7.49) | 16:00 close · cash $7,427.42 · equity $9,052.24 vs 09:30 $9,059.73 (-7.49; session marks -7.49) · 5 name(s) marked open→close (per-name table). HALO×2 09:30 $124.54 → close $125.63 +2.18; JLHL×73 09:30 $4.81 → close $4.91 +7.30; PRMB×17 09:30 $19.86 → close $19.69 -2.89; TRU×4 09:30 $83.32 → close $81.48 -7.36; WIT×168 09:30 $2.15 → close $2.11 -6.72 | — |
 
 ## Not taken
 

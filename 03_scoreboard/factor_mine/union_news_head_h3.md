@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-39.95%** ($6,005) · signal-only (no cash/fees) was +184.18%. Starts YES **1/30**. Fills 199 · skips 192 · realized $-2398.84.
+Cash book **-40.40%** ($5,960) · signal-only (no cash/fees) was +184.18%. Starts YES **1/30**. Fills 201 · skips 192 · realized $-2398.84.
 
 ## How this sleeve decides (like you are 10)
 
@@ -372,6 +372,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `TBBB` | 15 | $58.06 | $2.06 | $+26.36 | $3,512.72 | ▲ +26.36 after sell → book $5,936.64; vs 09:30 mark -2.06 | dropped from list after 6 sess (min 3) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 09:30 ET | **SELL** | `Z` | 17 | $31.50 | $2.06 | $-1.04 | $4,046.16 | ▼ -1.04 after sell → book $5,934.58; vs 09:30 mark -2.06 | dropped from list after 4 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,046.16 | ▲ close $6,005.01 vs 09:30 $5,943.09 (session +70.43) | 16:00 close · cash $4,046.16 · equity $6,005.01 vs 09:30 $5,943.09 (+61.92; session marks +70.43) · 3 name(s) marked open→close (per-name table). GLND×216 09:30 $2.89 → close $3.05 +34.56; ITW×3 09:30 $277.68 → close $279.24 +4.68; LUV×11 09:30 $39.20 → close $42.03 +31.19 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,046.16 | ▼ 09:30 equity $5,956.32 vs yday $6,005.01 (-48.69) | 09:30 open · cash $4,046.16 (unchanged overnight, no fees) · equity $5,956.32 vs prior close $6,005.01 (-48.69) · 3 name(s) re-marked at the open (per-name table). GLND×216 yday $3.05 → 09:30 $2.91 -30.24; ITW×3 yday $279.24 → 09:30 $276.83 -7.23; LUV×11 yday $42.03 → 09:30 $41.01 -11.22 | — |
+| 2026-10-23 09:30 ET | **SELL** | `GLND` | 216 | $2.91 | $2.83 | $-270.22 | $4,671.89 | ▼ -270.22 after sell → book $5,953.49; vs 09:30 mark -2.83 | dropped from list after 7 sess (min 3) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-23 09:30 ET | **SELL** | `ITW` | 3 | $276.83 | $2.02 | $+28.71 | $5,500.36 | ▲ +28.71 after sell → book $5,951.47; vs 09:30 mark -2.02 | dropped from list after 7 sess (min 3) | join🟡 sector🔴 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,500.36 | ▲ close $5,959.61 vs 09:30 $5,956.32 (session +8.14) | 16:00 close · cash $5,500.36 · equity $5,959.61 vs 09:30 $5,956.32 (+3.29; session marks +8.14) · 1 name(s) marked open→close (per-name table). LUV×11 09:30 $41.01 → close $41.75 +8.14 | — |
 
 ## Not taken
 

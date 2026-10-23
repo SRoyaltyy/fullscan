@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hold 3d, sell next 09:30 if news🔴
 
-Cash book **-26.35%** ($7,365) · signal-only (no cash/fees) was +1.29%. Starts YES **0/30**. Fills 322 · skips 301 · realized $-427.03.
+Cash book **-27.53%** ($7,247) · signal-only (no cash/fees) was +1.29%. Starts YES **0/30**. Fills 322 · skips 301 · realized $-427.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -493,6 +493,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `PACS` | 22 | $46.62 | $2.08 | $-12.93 | $3,154.06 | ▼ -12.93 after sell → book $7,367.92; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 09:30 ET | **SELL** | `VEEV` | 3 | $323.99 | $2.02 | $+36.96 | $4,124.01 | ▲ +36.96 after sell → book $7,365.90; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,124.01 | ▼ close $7,365.11 vs 09:30 $7,374.13 (session -0.79) | 16:00 close · cash $4,124.01 · equity $7,365.11 vs 09:30 $7,374.13 (-9.02; session marks -0.79) · 6 name(s) marked open→close (per-name table). CDNA×8 09:30 $69.65 → close $69.16 -3.92; CORT×4 09:30 $115.16 → close $107.50 -30.64; CRON×174 09:30 $3.39 → close $3.44 +9.57; ETON×11 09:30 $49.36 → close $50.02 +7.26; PRMB×28 09:30 $19.86 → close $20.14 +7.84; SMMT×35 09:30 $15.29 → close $15.55 +9.10 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,124.01 | ▼ 09:30 equity $7,338.45 vs yday $7,365.11 (-26.66) | 09:30 open · cash $4,124.01 (unchanged overnight, no fees) · equity $7,338.45 vs prior close $7,365.11 (-26.66) · 6 name(s) re-marked at the open (per-name table). CDNA×8 yday $69.16 → 09:30 $68.54 -4.96; CORT×4 yday $107.50 → 09:30 $106.05 -5.80; CRON×174 yday $3.44 → 09:30 $3.42 -3.48; ETON×11 yday $50.02 → 09:30 $49.89 -1.43; PRMB×28 yday $20.14 → 09:30 $19.86 -7.84; SMMT×35 yday $15.55 → 09:30 $15.46 -3.15 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,124.01 | ▼ close $7,246.80 vs 09:30 $7,338.45 (session -91.65) | 16:00 close · cash $4,124.01 · equity $7,246.80 vs 09:30 $7,338.45 (-91.65; session marks -91.65) · 6 name(s) marked open→close (per-name table). CDNA×8 09:30 $68.54 → close $69.21 +5.36; CORT×4 09:30 $106.05 → close $85.86 -80.76; CRON×174 09:30 $3.42 → close $3.35 -13.05; ETON×11 09:30 $49.89 → close $50.00 +1.21; PRMB×28 09:30 $19.86 → close $19.69 -4.76; SMMT×35 09:30 $15.46 → close $15.47 +0.35 | — |
 
 ## Not taken
 

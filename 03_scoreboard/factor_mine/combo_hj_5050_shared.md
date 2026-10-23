@@ -652,6 +652,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `KVYO` | 150 | $20.29 | $2.49 | $+100.07 | $8,850.44 | ▲ +100.07 after sell → book $11,923.48; vs 09:30 mark -2.48 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `WIT` | 1436 | $2.14 | $18.79 | $+77.57 | $11,904.69 | ▲ +77.57 after sell → book $11,904.69; vs 09:30 mark -18.79 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,904.69 | ▲ close $11,904.69 vs 09:30 $11,934.78 (session +0.00) | 16:00 close · cash $11,904.69 · no lots left · equity $11,904.69. | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,904.69 | ▲ 09:30 equity $11,904.69 vs yday $11,904.69 (+0.00) | 09:30 open · cash $11,904.69 (unchanged overnight, no fees) · equity $11,904.69 vs prior close $11,904.69 (+0.00) | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,904.69 | ▲ close $11,904.69 vs 09:30 $11,904.69 (session +0.00) | 16:00 close · cash $11,904.69 · no lots left · equity $11,904.69. | — |
 
 ## Not taken
 

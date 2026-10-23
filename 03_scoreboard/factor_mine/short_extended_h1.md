@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-0.92%** ($9,908) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 380 · skips 88 · realized $-1484.16.
+Cash book **-0.90%** ($9,910) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 382 · skips 88 · realized $-1484.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -550,6 +550,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **COVER** | `SRPT` | 36 | $18.40 | $2.10 | $+19.17 | $12,038.92 | ▲ +19.17 after sell → book $9,967.30; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **COVER** | `Z` | 21 | $31.50 | $2.05 | $+10.98 | $11,375.37 | ▲ +10.98 after sell → book $9,965.25; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,375.37 | ▼ close $9,907.65 vs 09:30 $9,985.56 (session -57.60) | 16:00 close · cash $11,375.37 · equity $9,907.65 vs 09:30 $9,985.56 (-77.91; session marks -57.60) · 2 name(s) marked open→close (per-name table). KLRA×54 09:30 $12.80 → close $13.27 -25.38; TRU×9 09:30 $79.88 → close $83.46 -32.22 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,375.37 | ▲ 09:30 equity $9,913.77 vs yday $9,907.65 (+6.12) | 09:30 open · cash $11,375.37 (unchanged overnight, no fees) · equity $9,913.77 vs prior close $9,907.65 (+6.12) · 2 name(s) re-marked at the open (per-name table). KLRA×54 yday $13.27 → 09:30 $13.18 +4.86; TRU×9 yday $83.46 → 09:30 $83.32 +1.26 | — |
+| 2026-10-23 09:30 ET | **COVER** | `KLRA` | 54 | $13.18 | $2.15 | $-18.92 | $10,661.50 | ▼ -18.92 after sell → book $9,911.62; vs 09:30 mark -2.15 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-23 09:30 ET | **COVER** | `TRU` | 9 | $83.32 | $2.02 | $-55.37 | $9,909.60 | ▼ -55.37 after sell → book $9,909.60; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,909.60 | ▲ close $9,909.60 vs 09:30 $9,913.77 (session +0.00) | 16:00 close · cash $9,909.60 · no lots left · equity $9,909.60. | — |
 
 ## Not taken
 

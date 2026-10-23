@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ candle, no 🚨
 
-Cash book **-16.50%** ($8,350) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 445 · skips 106 · realized $-563.17.
+Cash book **-16.73%** ($8,327) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 445 · skips 106 · realized $-563.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -617,6 +617,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `SMMT` | 64 | $15.29 | $2.20 | $-72.22 | $6,333.24 | ▼ -72.22 after sell → book $8,337.93; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-22 09:30 ET | **SELL** | `VEEV` | 3 | $323.99 | $2.02 | $+16.92 | $7,303.19 | ▲ +16.92 after sell → book $8,335.91; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,303.19 | ▲ close $8,350.47 vs 09:30 $8,352.85 (session +14.56) | 16:00 close · cash $7,303.19 · equity $8,350.47 vs 09:30 $8,352.85 (-2.38; session marks +14.56) · 1 name(s) marked open→close (per-name table). PRMB×52 09:30 $19.86 → close $20.14 +14.56 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,303.19 | ▼ 09:30 equity $8,335.91 vs yday $8,350.47 (-14.56) | 09:30 open · cash $7,303.19 (unchanged overnight, no fees) · equity $8,335.91 vs prior close $8,350.47 (-14.56) · 1 name(s) re-marked at the open (per-name table). PRMB×52 yday $20.14 → 09:30 $19.86 -14.56 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,303.19 | ▼ close $8,327.07 vs 09:30 $8,335.91 (session -8.84) | 16:00 close · cash $7,303.19 · equity $8,327.07 vs 09:30 $8,335.91 (-8.84; session marks -8.84) · 1 name(s) marked open→close (per-name table). PRMB×52 09:30 $19.86 → close $19.69 -8.84 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-27.64%** ($7,237) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 317 · skips 53 · realized $-864.75.
+Cash book **-27.84%** ($7,216) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 317 · skips 53 · realized $-864.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -491,6 +491,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `PDFS` | 21 | $41.57 | $2.07 | $-29.12 | $5,456.03 | ▼ -29.12 after sell → book $7,225.83; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 09:30 ET | **SELL** | `SMMT` | 56 | $15.29 | $2.18 | $-63.70 | $6,310.09 | ▼ -63.70 after sell → book $7,223.65; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,310.09 | ▲ close $7,236.53 vs 09:30 $7,239.78 (session +12.88) | 16:00 close · cash $6,310.09 · equity $7,236.53 vs 09:30 $7,239.78 (-3.25; session marks +12.88) · 1 name(s) marked open→close (per-name table). PRMB×46 09:30 $19.86 → close $20.14 +12.88 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,310.09 | ▼ 09:30 equity $7,223.65 vs yday $7,236.53 (-12.88) | 09:30 open · cash $6,310.09 (unchanged overnight, no fees) · equity $7,223.65 vs prior close $7,236.53 (-12.88) · 1 name(s) re-marked at the open (per-name table). PRMB×46 yday $20.14 → 09:30 $19.86 -12.88 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,310.09 | ▼ close $7,215.83 vs 09:30 $7,223.65 (session -7.82) | 16:00 close · cash $6,310.09 · equity $7,215.83 vs 09:30 $7,223.65 (-7.82; session marks -7.82) · 1 name(s) marked open→close (per-name table). PRMB×46 09:30 $19.86 → close $19.69 -7.82 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **-32.23%** ($6,777) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 436 · skips 105 · realized $-1315.32.
+Cash book **-32.63%** ($6,737) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 438 · skips 105 · realized $-1315.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -608,6 +608,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `PLNT` | 16 | $52.21 | $2.06 | $-6.82 | $4,395.47 | ▼ -6.82 after sell → book $6,810.12; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `TBBB` | 14 | $58.06 | $2.05 | $-10.10 | $5,206.25 | ▼ -10.10 after sell → book $6,808.06; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,206.25 | ▼ close $6,776.59 vs 09:30 $6,827.90 (session -31.47) | 16:00 close · cash $5,206.25 · equity $6,776.59 vs 09:30 $6,827.90 (-51.31; session marks -31.47) · 2 name(s) marked open→close (per-name table). PRIM×11 09:30 $71.34 → close $66.94 -48.40; TLSA×834 09:30 $0.98 → close $1.00 +16.93 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,206.25 | ▼ 09:30 equity $6,749.59 vs yday $6,776.59 (-27.00) | 09:30 open · cash $5,206.25 (unchanged overnight, no fees) · equity $6,749.59 vs prior close $6,776.59 (-27.00) · 2 name(s) re-marked at the open (per-name table). PRIM×11 yday $66.94 → 09:30 $66.76 -1.98; TLSA×834 yday $1.00 → 09:30 $0.97 -25.02 | — |
+| 2026-10-23 09:30 ET | **SELL** | `PRIM` | 11 | $66.76 | $2.04 | $-81.40 | $5,938.57 | ▼ -81.40 after sell → book $6,747.55; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-23 09:30 ET | **SELL** | `TLSA` | 834 | $0.97 | $10.74 | $-71.54 | $6,736.81 | ▼ -71.54 after sell → book $6,736.81; vs 09:30 mark -10.74 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,736.81 | ▲ close $6,736.81 vs 09:30 $6,749.59 (session +0.00) | 16:00 close · cash $6,736.81 · no lots left · equity $6,736.81. | — |
 
 ## Not taken
 

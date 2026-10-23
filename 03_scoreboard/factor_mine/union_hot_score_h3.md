@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · rank by hot_score
 
-Cash book **+4.71%** ($10,471) · signal-only (no cash/fees) was +392.57%. Starts YES **29/30**. Fills 317 · skips 265 · realized $+1176.18.
+Cash book **+4.67%** ($10,468) · signal-only (no cash/fees) was +392.57%. Starts YES **29/30**. Fills 317 · skips 265 · realized $+1176.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -488,6 +488,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `WIT` | 660 | $2.14 | $8.63 | $+128.05 | $8,982.18 | ▲ +128.05 after sell → book $10,469.96; vs 09:30 mark -8.64 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 09:30 ET | **SELL** | `WMG` | 40 | $31.48 | $2.13 | $+4.56 | $10,239.25 | ▲ +4.56 after sell → book $10,467.83; vs 09:30 mark -2.13 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,239.25 | ▲ close $10,470.55 vs 09:30 $10,490.97 (session +2.72) | 16:00 close · cash $10,239.25 · equity $10,470.55 vs 09:30 $10,490.97 (-20.42; session marks +2.72) · 5 name(s) marked open→close (per-name table). ARQT×1 09:30 $31.68 → close $32.20 +0.52; BMBL×9 09:30 $5.94 → close $5.94 +0.00; CMRC×14 09:30 $3.69 → close $3.67 -0.28; KLRA×4 09:30 $12.80 → close $13.27 +1.88; KVYO×2 09:30 $20.29 → close $20.59 +0.60 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,239.25 | ▼ 09:30 equity $10,469.48 vs yday $10,470.55 (-1.07) | 09:30 open · cash $10,239.25 (unchanged overnight, no fees) · equity $10,469.48 vs prior close $10,470.55 (-1.07) · 5 name(s) re-marked at the open (per-name table). ARQT×1 yday $32.20 → 09:30 $32.13 -0.07; BMBL×9 yday $5.94 → 09:30 $5.94 +0.00; CMRC×14 yday $3.67 → 09:30 $3.65 -0.28; KLRA×4 yday $13.27 → 09:30 $13.18 -0.36; KVYO×2 yday $20.59 → 09:30 $20.41 -0.36 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,239.25 | ▼ close $10,467.55 vs 09:30 $10,469.48 (session -1.93) | 16:00 close · cash $10,239.25 · equity $10,467.55 vs 09:30 $10,469.48 (-1.93; session marks -1.93) · 5 name(s) marked open→close (per-name table). ARQT×1 09:30 $32.13 → close $31.20 -0.93; BMBL×9 09:30 $5.94 → close $5.96 +0.18; CMRC×14 09:30 $3.65 → close $3.56 -1.26; KLRA×4 09:30 $13.18 → close $12.85 -1.32; KVYO×2 09:30 $20.41 → close $21.11 +1.40 | — |
 
 ## Not taken
 

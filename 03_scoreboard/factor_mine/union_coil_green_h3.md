@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-26.15%** ($7,385) · signal-only (no cash/fees) was -21.07%. Starts YES **1/30**. Fills 324 · skips 304 · realized $-1242.34.
+Cash book **-26.52%** ($7,348) · signal-only (no cash/fees) was -21.07%. Starts YES **1/30**. Fills 325 · skips 304 · realized $-1242.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -501,6 +501,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `NAVN` | 49 | $26.84 | $2.16 | $+50.59 | $3,963.88 | ▲ +50.59 after sell → book $7,223.23; vs 09:30 mark -2.16 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 09:30 ET | **SELL** | `WMG` | 40 | $31.48 | $2.13 | $+4.56 | $5,220.95 | ▲ +4.56 after sell → book $7,221.10; vs 09:30 mark -2.13 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,220.95 | ▲ close $7,385.17 vs 09:30 $7,229.46 (session +164.06) | 16:00 close · cash $5,220.95 · equity $7,385.17 vs 09:30 $7,229.46 (+155.71; session marks +164.06) · 8 name(s) marked open→close (per-name table). ACRS×33 09:30 $3.76 → close $3.83 +2.31; CDNA×1 09:30 $69.65 → close $69.16 -0.49; CRON×37 09:30 $3.39 → close $3.44 +2.03; EPR×2 09:30 $54.75 → close $56.36 +3.22; KURA×12 09:30 $9.85 → close $9.86 +0.12; POOL×7 09:30 $175.30 → close $197.21 +153.37; PRMB×6 09:30 $19.86 → close $20.14 +1.68; SMMT×7 09:30 $15.29 → close $15.55 +1.82 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,220.95 | ▼ 09:30 equity $7,358.86 vs yday $7,385.17 (-26.31) | 09:30 open · cash $5,220.95 (unchanged overnight, no fees) · equity $7,358.86 vs prior close $7,385.17 (-26.31) · 8 name(s) re-marked at the open (per-name table). ACRS×33 yday $3.83 → 09:30 $3.81 -0.66; CDNA×1 yday $69.16 → 09:30 $68.54 -0.62; CRON×37 yday $3.44 → 09:30 $3.42 -0.74; EPR×2 yday $56.36 → 09:30 $56.62 +0.52; KURA×12 yday $9.86 → 09:30 $9.80 -0.72; POOL×7 yday $197.21 → 09:30 $194.10 -21.77; PRMB×6 yday $20.14 → 09:30 $19.86 -1.68; SMMT×7 yday $15.55 → 09:30 $15.46 -0.63 | — |
+| 2026-10-23 09:30 ET | **SELL** | `POOL` | 7 | $194.10 | $2.03 | $+154.30 | $6,577.62 | ▲ +154.30 after sell → book $7,356.83; vs 09:30 mark -2.03 | dropped from list after 4 sess (min 3) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,577.62 | ▼ close $7,348.22 vs 09:30 $7,358.86 (session -8.61) | 16:00 close · cash $6,577.62 · equity $7,348.22 vs 09:30 $7,358.86 (-10.64; session marks -8.61) · 7 name(s) marked open→close (per-name table). ACRS×33 09:30 $3.81 → close $3.75 -1.98; CDNA×1 09:30 $68.54 → close $69.21 +0.67; CRON×37 09:30 $3.42 → close $3.35 -2.77; EPR×2 09:30 $56.62 → close $55.97 -1.30; KURA×12 09:30 $9.80 → close $9.61 -2.28; PRMB×6 09:30 $19.86 → close $19.69 -1.02; SMMT×7 09:30 $15.46 → close $15.47 +0.07 | — |
 
 ## Not taken
 

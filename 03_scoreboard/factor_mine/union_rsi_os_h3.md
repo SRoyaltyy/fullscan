@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-21.16%** ($7,884) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 138 · skips 88 · realized $-2389.72.
+Cash book **-21.25%** ($7,875) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 138 · skips 88 · realized $-2389.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -310,6 +310,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `PLNT` | 3 | $52.21 | $1.60 | $+5.10 | $3,697.68 | ▲ +5.10 after sell → book $7,838.46; vs 09:30 mark -1.60 | dropped from list after 4 sess (min 3) | — |
 | 2026-10-22 09:30 ET | **SELL** | `WM` | 13 | $231.38 | $2.06 | $+84.83 | $6,703.56 | ▲ +84.83 after sell → book $7,836.40; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,703.56 | ▲ close $7,883.75 vs 09:30 $7,842.12 (session +47.35) | 16:00 close · cash $6,703.56 · equity $7,883.75 vs 09:30 $7,842.12 (+41.63; session marks +47.35) · 4 name(s) marked open→close (per-name table). BRO×4 09:30 $71.47 → close $74.49 +12.08; BROS×7 09:30 $40.78 → close $41.75 +6.79; DGX×1 09:30 $226.50 → close $243.28 +16.78; QTWO×5 09:30 $67.00 → close $69.34 +11.70 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,703.56 | ▼ 09:30 equity $7,869.68 vs yday $7,883.75 (-14.07) | 09:30 open · cash $6,703.56 (unchanged overnight, no fees) · equity $7,869.68 vs prior close $7,883.75 (-14.07) · 4 name(s) re-marked at the open (per-name table). BRO×4 yday $74.49 → 09:30 $74.16 -1.32; BROS×7 yday $41.75 → 09:30 $40.80 -6.65; DGX×1 yday $243.28 → 09:30 $239.63 -3.65; QTWO×5 yday $69.34 → 09:30 $68.85 -2.45 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,703.56 | ▲ close $7,874.71 vs 09:30 $7,869.68 (session +5.03) | 16:00 close · cash $6,703.56 · equity $7,874.71 vs 09:30 $7,869.68 (+5.03; session marks +5.03) · 4 name(s) marked open→close (per-name table). BRO×4 09:30 $74.16 → close $72.97 -4.76; BROS×7 09:30 $40.80 → close $41.49 +4.83; DGX×1 09:30 $239.63 → close $241.89 +2.26; QTWO×5 09:30 $68.85 → close $69.39 +2.70 | — |
 
 ## Not taken
 

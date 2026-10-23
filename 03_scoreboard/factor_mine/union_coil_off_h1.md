@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off, no 🚨
 
-Cash book **-23.01%** ($7,699) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 415 · skips 105 · realized $-1593.31.
+Cash book **-23.30%** ($7,670) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 416 · skips 105 · realized $-1593.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -590,6 +590,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `KURA` | 96 | $9.85 | $2.30 | $-22.82 | $4,844.82 | ▼ -22.82 after sell → book $7,672.18; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 09:30 ET | **SELL** | `VEEV` | 3 | $323.99 | $2.02 | $+16.92 | $5,814.77 | ▲ +16.92 after sell → book $7,670.16; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,814.77 | ▲ close $7,698.94 vs 09:30 $7,685.83 (session +28.78) | 16:00 close · cash $5,814.77 · equity $7,698.94 vs 09:30 $7,685.83 (+13.11; session marks +28.78) · 2 name(s) marked open→close (per-name table). PRMB×48 09:30 $19.86 → close $20.14 +13.44; SMMT×59 09:30 $15.29 → close $15.55 +15.34 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,814.77 | ▼ 09:30 equity $7,680.19 vs yday $7,698.94 (-18.75) | 09:30 open · cash $5,814.77 (unchanged overnight, no fees) · equity $7,680.19 vs prior close $7,698.94 (-18.75) · 2 name(s) re-marked at the open (per-name table). PRMB×48 yday $20.14 → 09:30 $19.86 -13.44; SMMT×59 yday $15.55 → 09:30 $15.46 -5.31 | — |
+| 2026-10-23 09:30 ET | **SELL** | `SMMT` | 59 | $15.46 | $2.19 | $-56.86 | $6,724.72 | ▼ -56.86 after sell → book $7,678.00; vs 09:30 mark -2.19 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,724.72 | ▼ close $7,669.84 vs 09:30 $7,680.19 (session -8.16) | 16:00 close · cash $6,724.72 · equity $7,669.84 vs 09:30 $7,680.19 (-10.35; session marks -8.16) · 1 name(s) marked open→close (per-name table). PRMB×48 09:30 $19.86 → close $19.69 -8.16 | — |
 
 ## Not taken
 

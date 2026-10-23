@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared flatten_h5/union_e_fresh_h3/short_news_r_h3 w=0.4,0.3,0.3 net=priority
 
-Cash book **-4.73%** ($9,527) · signal-only (no cash/fees) was —. Starts YES **11/30**. Fills 581 · skips 657 · realized $+1073.23.
+Cash book **-5.29%** ($9,471) · signal-only (no cash/fees) was —. Starts YES **11/30**. Fills 582 · skips 657 · realized $+1073.23.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $3,011.32.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $4,801.28.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -755,6 +755,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `TOST` | 7 | $32.63 | $2.03 | $+14.72 | $2,786.40 | ▲ +14.72 after sell → book $9,666.25; vs 09:30 mark -2.04 | flatten_h5: dropped from list after 5 sess (min 5) | — |
 | 2026-10-22 09:30 ET | **SELL** | `YOU` | 5 | $45.39 | $2.02 | $+0.92 | $3,011.32 | ▲ +0.92 after sell → book $9,664.23; vs 09:30 mark -2.02 | flatten_h5: dropped from list after 5 sess (min 5) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,011.32 | ▼ close $9,527.03 vs 09:30 $9,676.15 (session -137.20) | 16:00 close · cash $3,011.32 · equity $9,527.03 vs 09:30 $9,676.15 (-149.12; session marks -137.20) · 15 name(s) marked open→close (per-name table). ARQT×11 09:30 $31.68 → close $32.20 +5.72; BKU×2 09:30 $41.80 → close $43.76 +3.92; CDNA×15 09:30 $69.65 → close $69.16 -7.35; CORT×3 09:30 $115.16 → close $107.50 -22.98; CRON×112 09:30 $3.39 → close $3.44 +6.16; CTSH×2 09:30 $70.05 → close $73.72 -7.34; ETON×7 09:30 $49.36 → close $50.02 +4.62; HALO×1 09:30 $124.72 → close $124.54 +0.18; ILMN×3 09:30 $280.81 → close $269.40 -34.23; KD×13 09:30 $14.35 → close $15.20 -11.05; LUV×4 09:30 $39.20 → close $42.03 -11.34; NFLX×1 09:30 $65.06 → close $67.05 +1.99; PACS×21 09:30 $46.62 → close $47.50 +18.48; TWLO×7 09:30 $265.01 → close $253.63 -79.66; VEEV×3 09:30 $323.99 → close $322.55 -4.32 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,011.32 | ▼ 09:30 equity $9,513.95 vs yday $9,527.03 (-13.08) | 09:30 open · cash $3,011.32 (unchanged overnight, no fees) · equity $9,513.95 vs prior close $9,527.03 (-13.08) | — |
+| 2026-10-23 09:30 ET | **SELL** | `TWLO` | 7 | $256.00 | $2.04 | $-148.11 | $4,801.28 | ▼ -148.11 after sell → book $9,511.91; vs 09:30 mark -2.04 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,801.28 | ▼ close $9,470.63 vs 09:30 $9,513.95 (session -41.28) | 16:00 close · cash $4,801.28 · equity $9,470.63 vs 09:30 $9,513.95 (-43.32; session marks -41.28) · 14 name(s) marked open→close (per-name table). ARQT×11 09:30 $32.13 → close $31.20 -10.23; BKU×2 09:30 $43.34 → close $43.57 +0.46; CDNA×15 09:30 $68.54 → close $69.21 +10.05; CORT×3 09:30 $106.05 → close $85.86 -60.57; CRON×112 09:30 $3.42 → close $3.35 -8.40; CTSH×2 09:30 $72.77 → close $70.54 +4.46; ETON×7 09:30 $49.89 → close $50.00 +0.77; HALO×1 09:30 $124.54 → close $125.63 -1.09; ILMN×3 09:30 $264.42 → close $269.42 +15.00; KD×13 09:30 $14.94 → close $14.76 +2.34; LUV×4 09:30 $41.01 → close $41.75 -2.96; NFLX×1 09:30 $67.01 → close $65.85 -1.16; PACS×21 09:30 $47.50 → close $47.64 +2.94; VEEV×3 09:30 $320.67 → close $323.04 +7.11 | — |
 
 ## Not taken
 

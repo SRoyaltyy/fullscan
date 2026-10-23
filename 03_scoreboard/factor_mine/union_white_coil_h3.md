@@ -346,6 +346,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.48 | ▼ 09:30 equity $7,474.01 vs yday $7,702.43 (-228.42) | 09:30 open · cash $2.48 (unchanged overnight, no fees) · equity $7,474.01 vs prior close $7,702.43 (-228.42) · 2 name(s) re-marked at the open (per-name table). BLFS×26 yday $38.61 → 09:30 $38.61 +0.00; SMMT×423 yday $15.83 → 09:30 $15.29 -228.42 | — |
 | 2026-10-22 09:30 ET | **SELL** | `SMMT` | 423 | $15.29 | $5.58 | $+153.93 | $6,464.57 | ▲ +153.93 after sell → book $7,468.43; vs 09:30 mark -5.58 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,464.57 | ▲ close $7,468.43 vs 09:30 $7,474.01 (session +0.00) | 16:00 close · cash $6,464.57 · equity $7,468.43 vs 09:30 $7,474.01 (-5.58; session marks +0.00) · 1 name(s) marked open→close (per-name table). BLFS×26 09:30 $38.61 → close $38.61 +0.00 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,464.57 | ▲ 09:30 equity $7,468.43 vs yday $7,468.43 (-0.00) | 09:30 open · cash $6,464.57 (unchanged overnight, no fees) · equity $7,468.43 vs prior close $7,468.43 (-0.00) · 1 name(s) re-marked at the open (per-name table). BLFS×26 yday $38.61 → 09:30 $38.61 +0.00 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,464.57 | ▲ close $7,468.43 vs 09:30 $7,468.43 (session +0.00) | 16:00 close · cash $6,464.57 · equity $7,468.43 vs 09:30 $7,468.43 (-0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). BLFS×26 09:30 $38.61 → close $38.61 +0.00 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-23.26%** ($7,674) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 409 · skips 93 · realized $-1456.67.
+Cash book **-23.69%** ($7,631) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 410 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -577,6 +577,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `KVYO` | 47 | $20.29 | $2.15 | $+28.62 | $3,813.88 | ▲ +28.62 after sell → book $7,601.42; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `WIT` | 452 | $2.14 | $5.92 | $+24.41 | $4,775.25 | ▲ +24.41 after sell → book $7,595.51; vs 09:30 mark -5.91 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,775.25 | ▲ close $7,674.10 vs 09:30 $7,610.87 (session +78.59) | 16:00 close · cash $4,775.25 · equity $7,674.10 vs 09:30 $7,610.87 (+63.23; session marks +78.59) · 3 name(s) marked open→close (per-name table). BMBL×156 09:30 $5.94 → close $5.94 +0.00; EPAM×7 09:30 $133.58 → close $138.67 +35.63; TRU×12 09:30 $79.88 → close $83.46 +42.96 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,775.25 | ▼ 09:30 equity $7,651.91 vs yday $7,674.10 (-22.19) | 09:30 open · cash $4,775.25 (unchanged overnight, no fees) · equity $7,651.91 vs prior close $7,674.10 (-22.19) · 3 name(s) re-marked at the open (per-name table). BMBL×156 yday $5.94 → 09:30 $5.94 +0.00; EPAM×7 yday $138.67 → 09:30 $135.74 -20.51; TRU×12 yday $83.46 → 09:30 $83.32 -1.68 | — |
+| 2026-10-23 09:30 ET | **SELL** | `EPAM` | 7 | $135.74 | $2.03 | $+42.30 | $5,723.40 | ▲ +42.30 after sell → book $7,649.88; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,723.40 | ▼ close $7,630.92 vs 09:30 $7,651.91 (session -18.96) | 16:00 close · cash $5,723.40 · equity $7,630.92 vs 09:30 $7,651.91 (-20.99; session marks -18.96) · 2 name(s) marked open→close (per-name table). BMBL×156 09:30 $5.94 → close $5.96 +3.12; TRU×12 09:30 $83.32 → close $81.48 -22.08 | — |
 
 ## Not taken
 

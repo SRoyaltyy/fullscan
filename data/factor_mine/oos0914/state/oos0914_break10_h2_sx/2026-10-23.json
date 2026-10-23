@@ -1,0 +1,85 @@
+{
+  "buys": [],
+  "cash": 9689.83,
+  "date": "2026-10-23",
+  "equity": 9689.83,
+  "fees": 21.8558,
+  "fills": [
+    {
+      "fees": 2.5789,
+      "fill_rule": "open",
+      "pnl": 43.49,
+      "price": 13.18,
+      "shares": 180,
+      "side": "SELL",
+      "ticker": "KLRA"
+    },
+    {
+      "fees": 2.3829,
+      "fill_rule": "open",
+      "pnl": 92.03,
+      "price": 20.41,
+      "shares": 118,
+      "side": "SELL",
+      "ticker": "KVYO"
+    },
+    {
+      "fees": 2.11,
+      "fill_rule": "open",
+      "pnl": 166.81,
+      "price": 83.32,
+      "shares": 30,
+      "side": "SELL",
+      "ticker": "TRU"
+    },
+    {
+      "fees": 14.784,
+      "fill_rule": "open",
+      "pnl": 72.34,
+      "price": 2.15,
+      "shares": 1130,
+      "side": "SELL",
+      "ticker": "WIT"
+    }
+  ],
+  "holdings": [],
+  "mean": -1.1094,
+  "n_trades_today": 4,
+  "recipe": "oos0914_break10_h2_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 13.18,
+      "shares": 180,
+      "side": "SELL",
+      "ticker": "KLRA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 20.41,
+      "shares": 118,
+      "side": "SELL",
+      "ticker": "KVYO"
+    },
+    {
+      "fill_rule": "open",
+      "price": 83.32,
+      "shares": 30,
+      "side": "SELL",
+      "ticker": "TRU"
+    },
+    {
+      "fill_rule": "open",
+      "price": 2.15,
+      "shares": 1130,
+      "side": "SELL",
+      "ticker": "WIT"
+    }
+  ],
+  "state": {
+    "after": "2026-10-23",
+    "cash": 9689.83,
+    "pos": {},
+    "yday_equity": 9689.83
+  }
+}

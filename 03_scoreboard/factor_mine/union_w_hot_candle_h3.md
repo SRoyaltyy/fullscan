@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **-1.37%** ($9,863) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 328 · skips 289 · realized $+901.34.
+Cash book **-1.44%** ($9,856) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 328 · skips 289 · realized $+901.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -499,6 +499,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `WM` | 5 | $231.38 | $2.02 | $+30.17 | $8,398.05 | ▲ +30.17 after sell → book $9,859.75; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 09:30 ET | **SELL** | `WMG` | 38 | $31.48 | $2.12 | $+4.13 | $9,592.17 | ▲ +4.13 after sell → book $9,857.63; vs 09:30 mark -2.12 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,592.17 | ▲ close $9,862.72 vs 09:30 $9,874.12 (session +5.09) | 16:00 close · cash $9,592.17 · equity $9,862.72 vs 09:30 $9,874.12 (-11.40; session marks +5.09) · 4 name(s) marked open→close (per-name table). ARQT×2 09:30 $31.68 → close $32.20 +1.04; BMBL×11 09:30 $5.94 → close $5.94 +0.00; KLRA×5 09:30 $12.80 → close $13.27 +2.35; WIT×34 09:30 $2.14 → close $2.19 +1.70 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,592.17 | ▼ 09:30 equity $9,860.77 vs yday $9,862.72 (-1.95) | 09:30 open · cash $9,592.17 (unchanged overnight, no fees) · equity $9,860.77 vs prior close $9,862.72 (-1.95) · 4 name(s) re-marked at the open (per-name table). ARQT×2 yday $32.20 → 09:30 $32.13 -0.14; BMBL×11 yday $5.94 → 09:30 $5.94 +0.00; KLRA×5 yday $13.27 → 09:30 $13.18 -0.45; WIT×34 yday $2.19 → 09:30 $2.15 -1.36 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,592.17 | ▼ close $9,856.12 vs 09:30 $9,860.77 (session -4.65) | 16:00 close · cash $9,592.17 · equity $9,856.12 vs 09:30 $9,860.77 (-4.65; session marks -4.65) · 4 name(s) marked open→close (per-name table). ARQT×2 09:30 $32.13 → close $31.20 -1.86; BMBL×11 09:30 $5.94 → close $5.96 +0.22; KLRA×5 09:30 $13.18 → close $12.85 -1.65; WIT×34 09:30 $2.15 → close $2.11 -1.36 | — |
 
 ## Not taken
 

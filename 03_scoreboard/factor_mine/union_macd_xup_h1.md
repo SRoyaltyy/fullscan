@@ -450,6 +450,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `SRPT` | 112 | $18.40 | $2.36 | $-77.49 | $6,165.19 | ▼ -77.49 after sell → book $8,378.80; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `TNGX` | 83 | $26.67 | $2.27 | $+88.45 | $8,376.53 | ▲ +88.45 after sell → book $8,376.53; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,376.53 | ▲ close $8,376.53 vs 09:30 $8,400.61 (session +0.00) | 16:00 close · cash $8,376.53 · no lots left · equity $8,376.53. | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,376.53 | ▲ 09:30 equity $8,376.53 vs yday $8,376.53 (+0.00) | 09:30 open · cash $8,376.53 · no holdings · equity $8,376.53 vs prior close $8,376.53 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,376.53 | ▲ close $8,376.53 vs 09:30 $8,376.53 (session +0.00) | 16:00 close · cash $8,376.53 · no lots left · equity $8,376.53. | — |
 
 ## Not taken
 

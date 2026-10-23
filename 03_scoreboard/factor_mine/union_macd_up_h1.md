@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_up, no 🚨
 
-Cash book **-19.33%** ($8,067) · signal-only (no cash/fees) was +22.07%. Starts YES **11/30**. Fills 414 · skips 104 · realized $+158.57.
+Cash book **-19.92%** ($8,008) · signal-only (no cash/fees) was +22.07%. Starts YES **11/30**. Fills 417 · skips 104 · realized $+158.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -586,6 +586,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `RCKT` | 487 | $2.20 | $6.37 | $-80.84 | $3,334.08 | ▼ -80.84 after sell → book $8,071.11; vs 09:30 mark -6.37 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 09:30 ET | **SELL** | `VEEV` | 3 | $323.99 | $2.02 | $+16.92 | $4,304.03 | ▲ +16.92 after sell → book $8,069.09; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,304.03 | ▼ close $8,066.69 vs 09:30 $8,081.66 (session -2.40) | 16:00 close · cash $4,304.03 · equity $8,066.69 vs 09:30 $8,081.66 (-14.97; session marks -2.40) · 4 name(s) marked open→close (per-name table). CRS×2 09:30 $330.00 → close $292.26 -75.48; EGG×228 09:30 $5.00 → close $5.23 +52.44; ITW×3 09:30 $277.68 → close $279.24 +4.68; PRMB×57 09:30 $19.86 → close $20.14 +15.96 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,304.03 | ▼ 09:30 equity $8,024.70 vs yday $8,066.69 (-41.99) | 09:30 open · cash $4,304.03 (unchanged overnight, no fees) · equity $8,024.70 vs prior close $8,066.69 (-41.99) · 4 name(s) re-marked at the open (per-name table). CRS×2 yday $292.26 → 09:30 $284.00 -16.52; EGG×228 yday $5.23 → 09:30 $5.22 -2.28; ITW×3 yday $279.24 → 09:30 $276.83 -7.23; PRMB×57 yday $20.14 → 09:30 $19.86 -15.96 | — |
+| 2026-10-23 09:30 ET | **SELL** | `CRS` | 2 | $284.00 | $2.02 | $-197.13 | $4,870.01 | ▼ -197.13 after sell → book $8,022.68; vs 09:30 mark -2.02 | dropped from list after 5 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-23 09:30 ET | **SELL** | `EGG` | 228 | $5.22 | $2.99 | $+44.23 | $6,057.18 | ▲ +44.23 after sell → book $8,019.69; vs 09:30 mark -2.99 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-23 09:30 ET | **SELL** | `ITW` | 3 | $276.83 | $2.02 | $+6.78 | $6,885.66 | ▲ +6.78 after sell → book $8,017.68; vs 09:30 mark -2.01 | dropped from list after 5 sess (min 1) | join🟡 sector🔴 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,885.66 | ▼ close $8,007.99 vs 09:30 $8,024.70 (session -9.69) | 16:00 close · cash $6,885.66 · equity $8,007.99 vs 09:30 $8,024.70 (-16.71; session marks -9.69) · 1 name(s) marked open→close (per-name table). PRMB×57 09:30 $19.86 → close $19.69 -9.69 | — |
 
 ## Not taken
 

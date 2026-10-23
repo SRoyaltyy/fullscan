@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-15.46%** ($8,454) · signal-only (no cash/fees) was +107.52%. Starts YES **4/30**. Fills 333 · skips 271 · realized $-671.83.
+Cash book **-15.70%** ($8,430) · signal-only (no cash/fees) was +107.52%. Starts YES **4/30**. Fills 333 · skips 271 · realized $-671.83.
 
 ## How this sleeve decides (like you are 10)
 
@@ -501,6 +501,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `WIT` | 363 | $2.14 | $4.75 | $+70.42 | $4,927.46 | ▲ +70.42 after sell → book $8,393.67; vs 09:30 mark -4.75 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 09:30 ET | **SELL** | `WMG` | 22 | $31.48 | $2.08 | $+0.71 | $5,617.95 | ▲ +0.71 after sell → book $8,391.60; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,617.95 | ▲ close $8,454.14 vs 09:30 $8,410.67 (session +62.54) | 16:00 close · cash $5,617.95 · equity $8,454.14 vs 09:30 $8,410.67 (+43.47; session marks +62.54) · 6 name(s) marked open→close (per-name table). BMBL×87 09:30 $5.94 → close $5.94 +0.00; CMRC×139 09:30 $3.69 → close $3.67 -2.78; EPAM×4 09:30 $133.58 → close $138.67 +20.36; IT×2 09:30 $221.23 → close $234.44 +26.42; KVYO×26 09:30 $20.29 → close $20.59 +7.80; TRU×3 09:30 $79.88 → close $83.46 +10.74 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,617.95 | ▼ 09:30 equity $8,428.86 vs yday $8,454.14 (-25.28) | 09:30 open · cash $5,617.95 (unchanged overnight, no fees) · equity $8,428.86 vs prior close $8,454.14 (-25.28) · 6 name(s) re-marked at the open (per-name table). BMBL×87 yday $5.94 → 09:30 $5.94 +0.00; CMRC×139 yday $3.67 → 09:30 $3.65 -2.78; EPAM×4 yday $138.67 → 09:30 $135.74 -11.72; IT×2 yday $234.44 → 09:30 $231.60 -5.68; KVYO×26 yday $20.59 → 09:30 $20.41 -4.68; TRU×3 yday $83.46 → 09:30 $83.32 -0.42 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,617.95 | ▲ close $8,430.17 vs 09:30 $8,428.86 (session +1.31) | 16:00 close · cash $5,617.95 · equity $8,430.17 vs 09:30 $8,428.86 (+1.31; session marks +1.31) · 6 name(s) marked open→close (per-name table). BMBL×87 09:30 $5.94 → close $5.96 +1.74; CMRC×139 09:30 $3.65 → close $3.56 -12.51; EPAM×4 09:30 $135.74 → close $136.25 +2.04; IT×2 09:30 $231.60 → close $230.28 -2.64; KVYO×26 09:30 $20.41 → close $21.11 +18.20; TRU×3 09:30 $83.32 → close $81.48 -5.52 | — |
 
 ## Not taken
 

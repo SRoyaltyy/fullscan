@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_hot_n4_h1 w=0.7,0.3 net=priority
 
-Cash book **+9.78%** ($10,978) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 432 · skips 270 · realized $+3272.06.
+Cash book **+9.58%** ($10,958) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 432 · skips 270 · realized $+3272.06.
 
 ## How this sleeve decides (like you are 10)
 
@@ -605,6 +605,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `KVYO` | 53 | $20.29 | $2.17 | $+32.78 | $3,137.95 | ▲ +32.78 after sell → book $10,877.04; vs 09:30 mark -2.17 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `WIT` | 510 | $2.14 | $6.67 | $+27.55 | $4,222.67 | ▲ +27.55 after sell → book $10,870.36; vs 09:30 mark -6.68 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,222.67 | ▲ close $10,978.00 vs 09:30 $10,883.87 (session +107.64) | 16:00 close · cash $4,222.67 · equity $10,978.00 vs 09:30 $10,883.87 (+94.13; session marks +107.64) · 8 name(s) marked open→close (per-name table). BKU×21 09:30 $41.80 → close $43.76 +41.16; CME×3 09:30 $301.99 → close $305.98 +11.97; COF×4 09:30 $205.94 → close $203.43 -10.04; DHR×4 09:30 $233.80 → close $229.75 -16.20; ISRG×2 09:30 $430.67 → close $443.85 +26.37; NFLX×14 09:30 $65.06 → close $67.05 +27.93; NOC×1 09:30 $544.70 → close $552.35 +7.65; PM×4 09:30 $197.04 → close $201.74 +18.80 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,222.67 | ▼ 09:30 equity $10,940.62 vs yday $10,978.00 (-37.38) | 09:30 open · cash $4,222.67 (unchanged overnight, no fees) · equity $10,940.62 vs prior close $10,978.00 (-37.38) | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,222.67 | ▲ close $10,957.93 vs 09:30 $10,940.62 (session +17.31) | 16:00 close · cash $4,222.67 · equity $10,957.93 vs 09:30 $10,940.62 (+17.31; session marks +17.31) · 8 name(s) marked open→close (per-name table). BKU×21 09:30 $43.34 → close $43.57 +4.83; CME×3 09:30 $305.06 → close $305.71 +1.95; COF×4 09:30 $200.73 → close $201.34 +2.44; DHR×4 09:30 $229.17 → close $230.50 +5.32; ISRG×2 09:30 $443.65 → close $452.29 +17.28; NFLX×14 09:30 $67.01 → close $65.85 -16.24; NOC×1 09:30 $546.59 → close $551.44 +4.85; PM×4 09:30 $200.25 → close $199.47 -3.12 | — |
 
 ## Not taken
 

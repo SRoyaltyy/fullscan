@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-1.70%** ($9,830) · signal-only (no cash/fees) was -55.91%. Starts YES **1/30**. Fills 348 · skips 265 · realized $-1568.09.
+Cash book **-0.92%** ($9,908) · signal-only (no cash/fees) was -55.91%. Starts YES **1/30**. Fills 349 · skips 265 · realized $-1568.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -518,6 +518,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **COVER** | `EGG` | 997 | $5.00 | $12.86 | $+43.72 | $18,300.04 | ▲ +43.72 after sell → book $10,018.06; vs 09:30 mark -12.86 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-10-22 09:30 ET | **COVER** | `GLND` | 772 | $2.89 | $9.96 | $+188.31 | $16,059.00 | ▲ +188.31 after sell → book $10,008.10; vs 09:30 mark -9.96 | dropped from list after 5 sess (min 3) | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,059.00 | ▼ close $9,829.67 vs 09:30 $10,030.92 (session -178.43) | 16:00 close · cash $16,059.00 · equity $9,829.67 vs 09:30 $10,030.92 (-201.25; session marks -178.43) · 7 name(s) marked open→close (per-name table). ARQT×25 09:30 $31.68 → close $32.20 -13.00; BROS×19 09:30 $40.78 → close $41.75 -18.43; KLRA×98 09:30 $12.80 → close $13.27 -46.06; KVYO×42 09:30 $20.29 → close $20.59 -12.60; SRPT×43 09:30 $18.40 → close $18.18 +9.46; TRU×10 09:30 $79.88 → close $83.46 -35.80; Z×25 09:30 $31.50 → close $33.98 -62.00 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,059.00 | ▲ 09:30 equity $9,890.57 vs yday $9,829.67 (+60.90) | 09:30 open · cash $16,059.00 (unchanged overnight, no fees) · equity $9,890.57 vs prior close $9,829.67 (+60.90) · 7 name(s) re-marked at the open (per-name table). ARQT×25 yday $32.20 → 09:30 $32.13 +1.75; BROS×19 yday $41.75 → 09:30 $40.80 +18.05; KLRA×98 yday $13.27 → 09:30 $13.18 +8.82; KVYO×42 yday $20.59 → 09:30 $20.41 +7.56; SRPT×43 yday $18.18 → 09:30 $17.94 +10.32; TRU×10 yday $83.46 → 09:30 $83.32 +1.40; Z×25 yday $33.98 → 09:30 $33.46 +13.00 | — |
+| 2026-10-23 09:30 ET | **COVER** | `KLRA` | 98 | $13.18 | $2.28 | $-144.77 | $14,765.08 | ▼ -144.77 after sell → book $9,888.29; vs 09:30 mark -2.28 | dropped from list after 5 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,765.08 | ▲ close $9,908.46 vs 09:30 $9,890.57 (session +20.17) | 16:00 close · cash $14,765.08 · equity $9,908.46 vs 09:30 $9,890.57 (+17.89; session marks +20.17) · 6 name(s) marked open→close (per-name table). ARQT×25 09:30 $32.13 → close $31.20 +23.25; BROS×19 09:30 $40.80 → close $41.49 -13.11; KVYO×42 09:30 $20.41 → close $21.11 -29.40; SRPT×43 09:30 $17.94 → close $17.73 +9.03; TRU×10 09:30 $83.32 → close $81.48 +18.40; Z×25 09:30 $33.46 → close $32.98 +12.00 | — |
 
 ## Not taken
 

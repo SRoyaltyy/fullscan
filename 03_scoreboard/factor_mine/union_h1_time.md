@@ -648,6 +648,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `SMMT` | 62 | $15.29 | $2.20 | $-70.09 | $7,105.55 | ▼ -70.09 after sell → book $8,077.52; vs 09:30 mark -2.20 | time-stop after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-22 09:30 ET | **SELL** | `VEEV` | 3 | $323.99 | $2.02 | $+16.92 | $8,075.50 | ▲ +16.92 after sell → book $8,075.50; vs 09:30 mark -2.02 | time-stop after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,075.50 | ▲ close $8,075.50 vs 09:30 $8,094.20 (session +0.00) | 16:00 close · cash $8,075.50 · no lots left · equity $8,075.50. | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,075.50 | ▲ 09:30 equity $8,075.50 vs yday $8,075.50 (+0.00) | 09:30 open · cash $8,075.50 · no holdings · equity $8,075.50 vs prior close $8,075.50 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,075.50 | ▲ close $8,075.50 vs 09:30 $8,075.50 (session +0.00) | 16:00 close · cash $8,075.50 · no lots left · equity $8,075.50. | — |
 
 ## Not taken
 

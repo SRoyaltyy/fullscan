@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+17.90%** ($11,790) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 43 · skips 0 · realized $-826.45.
+Cash book **+17.77%** ($11,777) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 43 · skips 0 · realized $-826.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -217,3 +217,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `PLNT` | 22 | $52.21 | $2.08 | $+55.93 | $7,458.22 | ▲ +55.93 after sell → book $11,640.72; vs 09:30 mark -2.08 | dropped from list after 4 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `QTWO` | 32 | $67.00 | $2.11 | $+29.08 | $9,600.11 | ▲ +29.08 after sell → book $11,638.61; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,600.11 | ▲ close $11,789.63 vs 09:30 $11,647.07 (session +151.02) | 16:00 close · cash $9,600.11 · equity $11,789.63 vs 09:30 $11,647.07 (+142.56; session marks +151.02) · 1 name(s) marked open→close (per-name table). DGX×9 09:30 $226.50 → close $243.28 +151.02 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,600.11 | ▼ 09:30 equity $11,756.78 vs yday $11,789.63 (-32.85) | 09:30 open · cash $9,600.11 (unchanged overnight, no fees) · equity $11,756.78 vs prior close $11,789.63 (-32.85) · 1 name(s) re-marked at the open (per-name table). DGX×9 yday $243.28 → 09:30 $239.63 -32.85 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,600.11 | ▲ close $11,777.12 vs 09:30 $11,756.78 (session +20.34) | 16:00 close · cash $9,600.11 · equity $11,777.12 vs 09:30 $11,756.78 (+20.34; session marks +20.34) · 1 name(s) marked open→close (per-name table). DGX×9 09:30 $239.63 → close $241.89 +20.34 | — |

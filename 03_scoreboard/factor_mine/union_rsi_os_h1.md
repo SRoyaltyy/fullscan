@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-30.52%** ($6,948) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 179 · skips 20 · realized $-3180.18.
+Cash book **-30.59%** ($6,941) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 179 · skips 20 · realized $-3180.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -351,6 +351,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `PLNT` | 15 | $52.21 | $2.06 | $+36.86 | $4,527.54 | ▲ +36.86 after sell → book $6,866.04; vs 09:30 mark -2.06 | dropped from list after 4 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `QTWO` | 18 | $67.00 | $2.06 | $+14.61 | $5,731.48 | ▲ +14.61 after sell → book $6,863.98; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,731.48 | ▲ close $6,947.88 vs 09:30 $6,872.25 (session +83.90) | 16:00 close · cash $5,731.48 · equity $6,947.88 vs 09:30 $6,872.25 (+75.63; session marks +83.90) · 1 name(s) marked open→close (per-name table). DGX×5 09:30 $226.50 → close $243.28 +83.90 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,731.48 | ▼ 09:30 equity $6,929.63 vs yday $6,947.88 (-18.25) | 09:30 open · cash $5,731.48 (unchanged overnight, no fees) · equity $6,929.63 vs prior close $6,947.88 (-18.25) · 1 name(s) re-marked at the open (per-name table). DGX×5 yday $243.28 → 09:30 $239.63 -18.25 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,731.48 | ▲ close $6,940.93 vs 09:30 $6,929.63 (session +11.30) | 16:00 close · cash $5,731.48 · equity $6,940.93 vs 09:30 $6,929.63 (+11.30; session marks +11.30) · 1 name(s) marked open→close (per-name table). DGX×5 09:30 $239.63 → close $241.89 +11.30 | — |
 
 ## Not taken
 

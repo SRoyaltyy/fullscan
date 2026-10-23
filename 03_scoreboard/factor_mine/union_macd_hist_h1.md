@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-8.93%** ($9,107) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 409 · skips 94 · realized $-657.32.
+Cash book **-9.32%** ($9,068) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 411 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -580,6 +580,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `NOC` | 2 | $544.70 | $2.02 | $+10.99 | $6,100.35 | ▲ +10.99 after sell → book $9,230.55; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `PAYC` | 4 | $264.42 | $2.02 | $+10.90 | $7,156.01 | ▲ +10.90 after sell → book $9,228.53; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,156.01 | ▼ close $9,107.00 vs 09:30 $9,240.66 (session -121.53) | 16:00 close · cash $7,156.01 · equity $9,107.00 vs 09:30 $9,240.66 (-133.66; session marks -121.53) · 2 name(s) marked open→close (per-name table). CRS×3 09:30 $330.00 → close $292.26 -113.22; HLT×3 09:30 $360.84 → close $358.07 -8.31 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,156.01 | ▼ 09:30 equity $9,071.72 vs yday $9,107.00 (-35.28) | 09:30 open · cash $7,156.01 (unchanged overnight, no fees) · equity $9,071.72 vs prior close $9,107.00 (-35.28) · 2 name(s) re-marked at the open (per-name table). CRS×3 yday $292.26 → 09:30 $284.00 -24.78; HLT×3 yday $358.07 → 09:30 $354.57 -10.50 | — |
+| 2026-10-23 09:30 ET | **SELL** | `CRS` | 3 | $284.00 | $2.02 | $-278.55 | $8,005.99 | ▼ -278.55 after sell → book $9,069.70; vs 09:30 mark -2.02 | dropped from list after 7 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-23 09:30 ET | **SELL** | `HLT` | 3 | $354.57 | $2.02 | $-20.31 | $9,067.68 | ▼ -20.31 after sell → book $9,067.68; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,067.68 | ▲ close $9,067.68 vs 09:30 $9,071.72 (session +0.00) | 16:00 close · cash $9,067.68 · no lots left · equity $9,067.68. | — |
 
 ## Not taken
 

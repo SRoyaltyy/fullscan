@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 2
 
-Cash book **-24.19%** ($7,581) · signal-only (no cash/fees) was -3.45%. Starts YES **0/30**. Fills 240 · skips 55 · realized $-720.09.
+Cash book **-25.08%** ($7,492) · signal-only (no cash/fees) was -3.45%. Starts YES **0/30**. Fills 243 · skips 55 · realized $-720.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -414,6 +414,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $421.87 | ▲ 09:30 equity $7,417.23 vs yday $7,405.89 (+11.34) | 09:30 open · cash $421.87 (unchanged overnight, no fees) · equity $7,417.23 vs prior close $7,405.89 (+11.34) · 5 name(s) re-marked at the open (per-name table). AMX×157 yday $24.29 → 09:30 $24.14 -23.55; CSX×18 yday $48.40 → 09:30 $50.09 +30.42; HLT×2 yday $362.25 → 09:30 $360.84 -2.82; SAP×3 yday $232.73 → 09:30 $237.06 +12.99; TBBB×15 yday $58.44 → 09:30 $58.06 -5.70 | — |
 | 2026-10-22 09:30 ET | **SELL** | `TBBB` | 15 | $58.06 | $2.06 | $-10.54 | $1,290.72 | ▼ -10.54 after sell → book $7,415.18; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,290.72 | ▲ close $7,580.55 vs 09:30 $7,417.23 (session +165.37) | 16:00 close · cash $1,290.72 · equity $7,580.55 vs 09:30 $7,417.23 (+163.32; session marks +165.37) · 4 name(s) marked open→close (per-name table). AMX×157 09:30 $24.14 → close $24.98 +131.88; CSX×18 09:30 $50.09 → close $51.67 +28.44; HLT×2 09:30 $360.84 → close $358.07 -5.54; SAP×3 09:30 $237.06 → close $240.59 +10.59 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,290.72 | ▼ 09:30 equity $7,536.09 vs yday $7,580.55 (-44.46) | 09:30 open · cash $1,290.72 (unchanged overnight, no fees) · equity $7,536.09 vs prior close $7,580.55 (-44.46) · 4 name(s) re-marked at the open (per-name table). AMX×157 yday $24.98 → 09:30 $24.81 -26.69; CSX×18 yday $51.67 → 09:30 $51.23 -7.92; HLT×2 yday $358.07 → 09:30 $354.57 -7.00; SAP×3 yday $240.59 → 09:30 $239.64 -2.85 | — |
+| 2026-10-23 09:30 ET | **SELL** | `CSX` | 18 | $51.23 | $2.06 | $+53.49 | $2,210.80 | ▲ +53.49 after sell → book $7,534.03; vs 09:30 mark -2.06 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-23 09:30 ET | **SELL** | `HLT` | 2 | $354.57 | $2.02 | $-14.87 | $2,917.92 | ▼ -14.87 after sell → book $7,532.01; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-23 09:30 ET | **SELL** | `SAP` | 3 | $239.64 | $2.02 | $+20.19 | $3,634.82 | ▲ +20.19 after sell → book $7,529.99; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,634.82 | ▼ close $7,492.31 vs 09:30 $7,536.09 (session -37.68) | 16:00 close · cash $3,634.82 · equity $7,492.31 vs 09:30 $7,536.09 (-43.78; session marks -37.68) · 1 name(s) marked open→close (per-name table). AMX×157 09:30 $24.81 → close $24.57 -37.68 | — |
 
 ## Not taken
 

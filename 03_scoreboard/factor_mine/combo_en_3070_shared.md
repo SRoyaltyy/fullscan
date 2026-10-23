@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_news_g_h1 w=0.3,0.7 net=priority
 
-Cash book **-26.86%** ($7,314) · signal-only (no cash/fees) was —. Starts YES **5/30**. Fills 444 · skips 299 · realized $+1868.98.
+Cash book **-27.47%** ($7,253) · signal-only (no cash/fees) was —. Starts YES **5/30**. Fills 447 · skips 299 · realized $+1868.98.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $3,791.05.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6,057.10.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -617,6 +617,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `TBBB` | 14 | $58.06 | $2.05 | $+24.34 | $2,690.67 | ▲ +24.34 after sell → book $7,257.26; vs 09:30 mark -2.05 | union_news_g_h1: dropped from list after 6 sess (min 1) | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-22 09:30 ET | **SELL** | `Z` | 35 | $31.50 | $2.12 | $-29.41 | $3,791.05 | ▼ -29.41 after sell → book $7,255.14; vs 09:30 mark -2.12 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,791.05 | ▲ close $7,314.10 vs 09:30 $7,263.75 (session +58.96) | 16:00 close · cash $3,791.05 · equity $7,314.10 vs 09:30 $7,263.75 (+50.35; session marks +58.96) · 6 name(s) marked open→close (per-name table). AMX×38 09:30 $24.14 → close $24.98 +31.92; BKU×3 09:30 $41.80 → close $43.76 +5.88; GLND×130 09:30 $2.89 → close $3.05 +20.80; HLT×3 09:30 $360.84 → close $358.07 -8.31; ITW×3 09:30 $277.68 → close $279.24 +4.68; NFLX×2 09:30 $65.06 → close $67.05 +3.99 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,791.05 | ▼ 09:30 equity $7,270.37 vs yday $7,314.10 (-43.73) | 09:30 open · cash $3,791.05 (unchanged overnight, no fees) · equity $7,270.37 vs prior close $7,314.10 (-43.73) | — |
+| 2026-10-23 09:30 ET | **SELL** | `GLND` | 130 | $2.91 | $2.41 | $-59.39 | $4,166.94 | ▼ -59.39 after sell → book $7,267.96; vs 09:30 mark -2.41 | union_news_g_h1: dropped from list after 5 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-23 09:30 ET | **SELL** | `HLT` | 3 | $354.57 | $2.02 | $-20.31 | $5,228.63 | ▼ -20.31 after sell → book $7,265.94; vs 09:30 mark -2.02 | union_news_g_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-10-23 09:30 ET | **SELL** | `ITW` | 3 | $276.83 | $2.02 | $+28.71 | $6,057.10 | ▲ +28.71 after sell → book $7,263.92; vs 09:30 mark -2.02 | union_news_g_h1: dropped from list after 7 sess (min 1) | join🟡 sector🔴 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,057.10 | ▼ close $7,253.17 vs 09:30 $7,270.37 (session -10.75) | 16:00 close · cash $6,057.10 · equity $7,253.17 vs 09:30 $7,270.37 (-17.20; session marks -10.75) · 3 name(s) marked open→close (per-name table). AMX×38 09:30 $24.81 → close $24.57 -9.12; BKU×3 09:30 $43.34 → close $43.57 +0.69; NFLX×2 09:30 $67.01 → close $65.85 -2.32 | — |
 
 ## Not taken
 

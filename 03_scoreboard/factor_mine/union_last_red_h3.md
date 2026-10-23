@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **-39.60%** ($6,040) · signal-only (no cash/fees) was +0.15%. Starts YES **10/30**. Fills 311 · skips 295 · realized $+93.52.
+Cash book **-39.85%** ($6,015) · signal-only (no cash/fees) was +0.15%. Starts YES **10/30**. Fills 311 · skips 295 · realized $+93.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -483,6 +483,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `PACS` | 22 | $46.62 | $2.08 | $-12.93 | $3,412.46 | ▼ -12.93 after sell → book $6,039.40; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 09:30 ET | **SELL** | `VEEV` | 3 | $323.99 | $2.02 | $+36.96 | $4,382.41 | ▲ +36.96 after sell → book $6,037.38; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,382.41 | ▲ close $6,040.12 vs 09:30 $6,045.61 (session +2.74) | 16:00 close · cash $4,382.41 · equity $6,040.12 vs 09:30 $6,045.61 (-5.49; session marks +2.74) · 7 name(s) marked open→close (per-name table). AMX×11 09:30 $24.14 → close $24.98 +9.24; ENHA×221 09:30 $1.17 → close $1.13 -8.84; INTA×5 09:30 $45.58 → close $47.18 +8.00; PLNT×4 09:30 $52.21 → close $53.27 +4.24; PRIM×3 09:30 $71.34 → close $66.94 -13.20; TBBB×4 09:30 $58.06 → close $57.60 -1.84; TLSA×253 09:30 $0.98 → close $1.00 +5.14 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,382.41 | ▼ 09:30 equity $6,025.75 vs yday $6,040.12 (-14.37) | 09:30 open · cash $4,382.41 (unchanged overnight, no fees) · equity $6,025.75 vs prior close $6,040.12 (-14.37) · 7 name(s) re-marked at the open (per-name table). AMX×11 yday $24.98 → 09:30 $24.81 -1.87; ENHA×221 yday $1.13 → 09:30 $1.12 -2.21; INTA×5 yday $47.18 → 09:30 $46.94 -1.20; PLNT×4 yday $53.27 → 09:30 $53.08 -0.76; PRIM×3 yday $66.94 → 09:30 $66.76 -0.54; TBBB×4 yday $57.60 → 09:30 $57.55 -0.20; TLSA×253 yday $1.00 → 09:30 $0.97 -7.59 | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,382.41 | ▼ close $6,015.28 vs 09:30 $6,025.75 (session -10.47) | 16:00 close · cash $4,382.41 · equity $6,015.28 vs 09:30 $6,025.75 (-10.47; session marks -10.47) · 7 name(s) marked open→close (per-name table). AMX×11 09:30 $24.81 → close $24.57 -2.64; ENHA×221 09:30 $1.12 → close $1.10 -4.42; INTA×5 09:30 $46.94 → close $47.99 +5.25; PLNT×4 09:30 $53.08 → close $52.52 -2.24; PRIM×3 09:30 $66.76 → close $65.03 -5.19; TBBB×4 09:30 $57.55 → close $58.50 +3.80; TLSA×253 09:30 $0.97 → close $0.95 -5.03 | — |
 
 ## Not taken
 

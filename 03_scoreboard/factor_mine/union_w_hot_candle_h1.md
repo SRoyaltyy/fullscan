@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+14.92%** ($11,492) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 437 · skips 97 · realized $+14.68.
+Cash book **+14.75%** ($11,475) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 439 · skips 97 · realized $+14.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -608,6 +608,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `PAYC` | 5 | $264.42 | $2.03 | $+14.62 | $7,446.09 | ▲ +14.62 after sell → book $11,445.19; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `WIT` | 691 | $2.14 | $9.04 | $+37.33 | $8,915.79 | ▲ +37.33 after sell → book $11,436.15; vs 09:30 mark -9.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,915.79 | ▲ close $11,492.28 vs 09:30 $11,457.01 (session +56.13) | 16:00 close · cash $8,915.79 · equity $11,492.28 vs 09:30 $11,457.01 (+35.27; session marks +56.13) · 2 name(s) marked open→close (per-name table). HLT×3 09:30 $360.84 → close $358.07 -8.31; TRU×18 09:30 $79.88 → close $83.46 +64.44 | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,915.79 | ▼ 09:30 equity $11,479.26 vs yday $11,492.28 (-13.02) | 09:30 open · cash $8,915.79 (unchanged overnight, no fees) · equity $11,479.26 vs prior close $11,492.28 (-13.02) · 2 name(s) re-marked at the open (per-name table). HLT×3 yday $358.07 → 09:30 $354.57 -10.50; TRU×18 yday $83.46 → 09:30 $83.32 -2.52 | — |
+| 2026-10-23 09:30 ET | **SELL** | `HLT` | 3 | $354.57 | $2.02 | $-20.31 | $9,977.48 | ▼ -20.31 after sell → book $11,477.24; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-23 09:30 ET | **SELL** | `TRU` | 18 | $83.32 | $2.07 | $+98.49 | $11,475.18 | ▲ +98.49 after sell → book $11,475.18; vs 09:30 mark -2.06 | dropped from list after 2 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,475.18 | ▲ close $11,475.18 vs 09:30 $11,479.26 (session +0.00) | 16:00 close · cash $11,475.18 · no lots left · equity $11,475.18. | — |
 
 ## Not taken
 

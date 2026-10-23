@@ -626,6 +626,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 09:30 ET | **SELL** | `PM` | 3 | $197.04 | $2.02 | $+25.68 | $9,515.88 | ▲ +25.68 after sell → book $11,155.12; vs 09:30 mark -2.02 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 09:30 ET | **SELL** | `WIT` | 766 | $2.14 | $10.02 | $+41.38 | $11,145.10 | ▲ +41.38 after sell → book $11,145.10; vs 09:30 mark -10.02 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,145.10 | ▲ close $11,145.10 vs 09:30 $11,179.20 (session +0.00) | 16:00 close · cash $11,145.10 · no lots left · equity $11,145.10. | — |
+| 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,145.10 | ▲ 09:30 equity $11,145.10 vs yday $11,145.10 (+0.00) | 09:30 open · cash $11,145.10 (unchanged overnight, no fees) · equity $11,145.10 vs prior close $11,145.10 (+0.00) | — |
+| 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,145.10 | ▲ close $11,145.10 vs 09:30 $11,145.10 (session +0.00) | 16:00 close · cash $11,145.10 · no lots left · equity $11,145.10. | — |
 
 ## Not taken
 
