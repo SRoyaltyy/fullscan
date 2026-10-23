@@ -1,12 +1,12 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T05:44:40.820715-04:00",
+  "generated_at": "2026-10-23T05:45:04.492958-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-10-23",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-23T04:24:39.326627-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-23_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 4577,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-10-23_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2296,
-          "preview": "# Finviz homepage market digest \u2014 2026-10-23\n**Generated:** 2026-10-23T04:24:39.117817-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed ahead of flash PMIs and Michigan sentiment as oil holds near five-month highs on Middle East risks\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** AXP, SLB\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-23\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-23\n**Generated:** 2026-10-23T04:24:39.117817-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures trade mixed ahead of flash PMIs and Michigan sentiment as oil holds near five-month highs on Middle East risks\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** AXP, SLB\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-23\n**Clock use:** `same_morning`"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -214,6 +189,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-23T05:45:03.756190-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-23_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7557698,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AUPH, ELV, TRI, GCT, YPF"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-23_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8366852,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 A, DHR, CDNA, ILMN, HAS"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AUPH, ELV, TRI, GCT, YPF \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 A, DHR, CDNA, ILMN, HAS"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
