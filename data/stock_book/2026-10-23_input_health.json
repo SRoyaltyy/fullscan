@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T05:49:11.540896-04:00",
+  "generated_at": "2026-10-23T07:10:59.767761-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -21,13 +21,13 @@
       "family": "join",
       "status": "ok",
       "n": 5901,
-      "detail": "std=0.987"
+      "detail": "std=0.966"
     },
     {
       "name": "news_actions",
       "family": "news",
-      "status": "missing",
-      "n": 0,
+      "status": "ok",
+      "n": 127,
       "detail": ""
     },
     {
@@ -61,9 +61,9 @@
     {
       "name": "ticker_checklist",
       "family": "addon",
-      "status": "stale",
-      "n": null,
-      "detail": "no dated file \u2014 rebound flags use latest/history (can be stale)"
+      "status": "ok",
+      "n": 11720,
+      "detail": ""
     },
     {
       "name": "events",
@@ -82,9 +82,9 @@
     {
       "name": "general_predict",
       "family": "general",
-      "status": "missing",
+      "status": "ok",
       "n": null,
-      "detail": "s_general=0 \u2014 weight renormalized away"
+      "detail": ""
     },
     {
       "name": "sector_predicts",
@@ -103,20 +103,20 @@
   ],
   "family_status": {
     "join": "ok",
-    "news": "missing",
+    "news": "ok",
     "ab": "ok",
     "peer": "ok",
     "heat": "degraded",
-    "general": "missing",
+    "general": "ok",
     "sector": "missing"
   },
   "families_present": {
     "join": true,
-    "news": false,
+    "news": true,
     "ab": true,
     "peer": true,
     "heat": true,
-    "general": false,
+    "general": true,
     "sector": false
   },
   "learn_grade": true,
