@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T04:30:11.843535-04:00",
+  "generated_at": "2026-10-23T05:44:09.513817-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -135,6 +135,24 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-23\nExport `finviz_2026-10-23.csv` \u00b7 11616 names \u00b7 generated 2026-10-23T04:30:11.677304-04:00"
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-10-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-23T05:44:09.213130-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-10-23_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1122722,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

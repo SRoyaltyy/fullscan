@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T04:30:11.843535-04:00",
+  "generated_at": "2026-10-23T05:44:09.513817-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -145,7 +145,7 @@
           "size": 2296,
           "said": "Finviz homepage market digest \u2014 2026-10-23",
           "bullets": [
-            "Generated:** 2026-10-23T04:25:02.475918-04:00 (America/New_York)",
+            "Generated:** 2026-10-23T04:24:39.117817-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -185,7 +185,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 3,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -256,11 +256,16 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-10-23_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 32502,
+          "said": "40 events \u00b7 elevated uncertainty \u00b7 Markets enter the final week of October with a dovish Fed on hold, sticky 3.7% CPI, Brent above $111 on Hormuz disruption and a pivotal mega",
+          "bullets": [
+            "US September CPI \u2014 +0.6% m/m, 3.7% y/y",
+            "US September retail sales \u2014 +0.8% m/m",
+            "China Q3 GDP \u2014 4.5% y/y, beats 4.3% prior",
+            "China September industrial production +5.5%, retail sales +1.1%"
+          ]
         },
         {
           "key": "judge",
@@ -994,6 +999,24 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-23\nExport `finviz_2026-10-23.csv` \u00b7 11616 names \u00b7 generated 2026-10-23T04:30:11.677304-04:00"
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-10-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-23T05:44:09.213130-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-10-23_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1122722,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "href": {
