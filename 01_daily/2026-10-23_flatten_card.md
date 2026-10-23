@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-10-23
 
-_Generated 2026-10-23T15:17:37 — live `flatten_robust`._
+_Generated 2026-10-23T17:58:56 — live `flatten_robust`._
 
 **S=-7.54; hard-red: no new buys; holds and due 1d exits stay**
 
@@ -46,12 +46,12 @@ Sized from marked equity **$115,088.25** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | BAX | io_core | 645 | $25.49 | $16,441.05 | hard-red |
-| 16:00 ET | PACS | io_core | 339 | $48.45 | $16,422.85 | hard-red |
-| 16:00 ET | PRGO | io_core | 1030 | $15.96 | $16,438.80 | hard-red |
-| 16:00 ET | CON | io_core | 413 | $39.74 | $16,412.62 | hard-red |
+| 16:00 ET | BAX | io_core | 650 | $25.27 | $16,422.25 | hard-red |
+| 16:00 ET | PACS | io_core | 335 | $48.96 | $16,401.60 | hard-red |
+| 16:00 ET | PRGO | io_core | 1030 | $15.96 | $16,433.65 | hard-red |
+| 16:00 ET | CON | io_core | 413 | $39.72 | $16,404.36 | hard-red |
 | 16:00 ET | BLFS | io_core | 0 | $0.00 | $0.00 | no price |
-| 16:00 ET | PCRX | io_core | 452 | $36.35 | $16,432.46 | hard-red |
-| 16:00 ET | CNMD | io_core | 336 | $48.90 | $16,430.40 | hard-red |
+| 16:00 ET | PCRX | io_core | 452 | $36.36 | $16,434.72 | hard-red |
+| 16:00 ET | CNMD | io_core | 338 | $48.63 | $16,436.94 | hard-red |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
