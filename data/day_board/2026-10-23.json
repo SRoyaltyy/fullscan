@@ -1,12 +1,11 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T05:52:49.314376-04:00",
+  "generated_at": "2026-10-23T05:54:54.132230-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-23_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-10-23_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-23_judge.md` \u2014 missing"
+    "MISSING News actions JSON `01_daily/news/2026-10-23_actions.json` \u2014 missing"
   ],
   "counts": {
     "ok": 6,
@@ -183,7 +182,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 4,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -270,11 +269,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-23_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9314,
+          "said": "1. Nasdaq 100 worst day in four months on capex/debt fatigue; META/SPCX/BE/MRNA focus \u2014 broad Nasdaq/SPX risk-appetite hit outranks single-name color \u2014 channel:",
+          "bullets": [
+            "2. Hawkish Fed comments lift October hike expectations; gold drops >$100 \u2014 rates/hike-odds shock hits SPX beta and gold/miners \u2014 channel: rates.",
+            "3. China restricts AI/chip-design exports; Taiwan tightens AI chip/server controls \u2014 direct semis/AI supply-chain policy shock \u2014 channel: sector_policy.",
+            "4. Brent crude above $111 on Strait of Hormuz attacks \u2014 energy/inflation/geopolitical risk force \u2014 channel: rates."
+          ]
         },
         {
           "key": "research_json",
@@ -528,18 +531,18 @@
           "path": "01_daily/weather/2026-10-23_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9374 vix=calm yields=flat",
-          "size": 9374,
-          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=9373 vix=calm yields=flat",
+          "size": 9373,
+          "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
             "events bull 5 / bear 8"
           ]
         }
       ],
-      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
         "events bull 5 / bear 8"
       ]
     },
@@ -702,11 +705,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-23_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9314,
+          "said": "1. Nasdaq 100 worst day in four months on capex/debt fatigue; META/SPCX/BE/MRNA focus \u2014 broad Nasdaq/SPX risk-appetite hit outranks single-name color \u2014 channel:",
+          "bullets": [
+            "2. Hawkish Fed comments lift October hike expectations; gold drops >$100 \u2014 rates/hike-odds shock hits SPX beta and gold/miners \u2014 channel: rates.",
+            "3. China restricts AI/chip-design exports; Taiwan tightens AI chip/server controls \u2014 direct semis/AI supply-chain policy shock \u2014 channel: sector_policy.",
+            "4. Brent crude above $111 on Strait of Hormuz attacks \u2014 energy/inflation/geopolitical risk force \u2014 channel: rates."
+          ]
         },
         {
           "key": "in_weather",
@@ -714,11 +721,11 @@
           "path": "01_daily/weather/2026-10-23_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9374 vix=calm yields=flat",
-          "size": 9374,
-          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=9373 vix=calm yields=flat",
+          "size": 9373,
+          "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
             "events bull 5 / bear 8"
           ]
         },
@@ -742,10 +749,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2217520,
-          "said": "208 rows",
+          "size": 2218694,
+          "said": "220 rows",
           "bullets": [
-            "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, WAY"
+            "GLBE, SHOO, HLNE, VCTR, WT, HOOD, AAMI, ANF"
           ]
         },
         {
@@ -768,8 +775,8 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1481894,
-          "said": "1d BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
+          "size": 1470086,
+          "said": "1d BUY HITI, CON, AMN, SGRY, ASTH, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE",
           "bullets": []
         },
         {
@@ -779,10 +786,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 84015,
+          "size": 83993,
           "said": "Stock book \u2014 2026-10-23",
           "bullets": [
-            "_Generated 2026-10-23T05:45:15.104044-04:00_",
+            "_Generated 2026-10-23T05:49:13.530768-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -823,9 +830,9 @@
           "bullets": []
         }
       ],
-      "said": "208 rows",
+      "said": "220 rows",
       "bullets": [
-        "HALO, ONC, LLY, HRMY, ETON"
+        "GLBE, SHOO, HLNE, VCTR, WT"
       ]
     },
     {
@@ -846,8 +853,8 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1481894,
-          "said": "1d BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
+          "size": 1470086,
+          "said": "1d BUY HITI, CON, AMN, SGRY, ASTH, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, EOSE",
           "bullets": []
         },
         {
@@ -896,70 +903,70 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "SGRY",
-        "score": 0.7818977896101147
-      },
-      {
         "ticker": "HITI",
-        "score": 0.556296109961579
+        "score": 0.48182250828813955
       },
       {
         "ticker": "CON",
-        "score": 0.7856556108017361
-      },
-      {
-        "ticker": "ASTH",
-        "score": 0.7546626412694215
+        "score": 0.71026054948096
       },
       {
         "ticker": "AMN",
-        "score": 0.7524019787203875
+        "score": 0.7041946393379503
       },
       {
-        "ticker": "MD",
-        "score": 0.6982193716254808
+        "ticker": "SGRY",
+        "score": 0.6156111177905604
       },
       {
-        "ticker": "PACS",
-        "score": 0.8932406667174411
+        "ticker": "ASTH",
+        "score": 0.5884464496419931
       },
       {
         "ticker": "NTAP",
-        "score": 0.2843313440021954
+        "score": 0.3590733313453158
+      },
+      {
+        "ticker": "MQ",
+        "score": 0.7346115863308051
+      },
+      {
+        "ticker": "BAND",
+        "score": 0.5961939935247551
       }
     ],
     "sell_1d": [
       {
-        "ticker": "NEOV",
-        "score": -0.3635560613260153
+        "ticker": "OKLO",
+        "score": -0.21200677871608986
       },
       {
-        "ticker": "OKLO",
-        "score": -0.210330478560946
+        "ticker": "NEOV",
+        "score": -0.3317004690030632
       },
       {
         "ticker": "FCEL",
-        "score": -0.24391521322627752
-      },
-      {
-        "ticker": "NNDM",
-        "score": -0.2523903920751626
+        "score": -0.24607324118842755
       },
       {
         "ticker": "POWL",
-        "score": -0.07412996045865838
+        "score": -0.07007452095835792
+      },
+      {
+        "ticker": "NNDM",
+        "score": -0.21777148465927926
       },
       {
         "ticker": "EOSE",
-        "score": -0.20159420068361716
+        "score": -0.20417045441802623
       },
       {
         "ticker": "NRGV",
-        "score": -0.2977514218486169
+        "score": -0.2954859033945786
       },
       {
         "ticker": "INDI",
-        "score": -0.24410292703592523
+        "score": -0.2459547781871677
       }
     ],
     "flatten": {
@@ -974,9 +981,9 @@
     "sectors": {},
     "news": {},
     "weather": {
-      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
         "events bull 5 / bear 8"
       ]
     }
@@ -1708,6 +1715,59 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-23\n_Generated 2026-10-23T09:52:47 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,007.76** (after 09:30 $108,007.76 \u00b7 after 16:00 $108,007.76)\n- Prior close **$108,007.76** \u00b7 09:30 **$108,007.76** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$108,007.76**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,007.76** \u00b7 2026-10-22 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\":"
+    },
+    {
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-10-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-23T05:54:53.610685-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-10-23_flatten_card.md",
+          "ok": true,
+          "reason": "",
+          "size": 2017,
+          "preview": "# flatten_robust card \u2014 2026-10-23\n_Generated 2026-10-23T09:54:52 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,007.76** (after 09:30 $108,007.76 \u00b7 after 16:00 $108,007.76)\n- Prior close **$108,007.76** \u00b7 09:30 **$108,007.76** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$108,007.76**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,007.76**"
+        },
+        {
+          "path": "data/sleeve_merge/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 9488,
+          "preview": "2026-10-22 BUY \u2014 \u00b7 SELL \u2014"
+        },
+        {
+          "path": "data/sleeve_merge/today_live.json",
+          "ok": true,
+          "reason": "",
+          "size": 4616,
+          "preview": "keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930"
+        },
+        {
+          "path": "data/sleeve_merge/daily_marks.json",
+          "ok": true,
+          "reason": "",
+          "size": 161757,
+          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
+        },
+        {
+          "path": "data/sleeve_merge/equity_curve.csv",
+          "ok": true,
+          "reason": "",
+          "size": 4033,
+          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
+        },
+        {
+          "path": "dashboard/sleeve-merge/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 51956,
+          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
+        }
+      ],
+      "preview": "# flatten_robust card \u2014 2026-10-23\n_Generated 2026-10-23T09:54:52 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,007.76** (after 09:30 $108,007.76 \u00b7 after 16:00 $108,007.76)\n- Prior close **$108,007.76** \u00b7 09:30 **$108,007.76** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$108,007.76**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,007.76** \u00b7 2026-10-22 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\":"
     }
   ],
   "href": {
