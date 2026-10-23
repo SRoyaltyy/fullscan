@@ -1,10 +1,9 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T05:54:54.132230-04:00",
+  "generated_at": "2026-10-23T07:08:45.334008-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-23_predict.md` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-10-23_actions.json` \u2014 missing"
   ],
   "counts": {
@@ -182,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 4,
+      "n_req_ok": 6,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -242,10 +241,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-10-23_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 6693892,
+          "said": "6693892B on disk",
           "bullets": []
         },
         {
@@ -317,11 +316,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-23_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 14895,
+          "said": "DOWN -7.538",
+          "bullets": [
+            "bad: Meta -7% / AI-capex fatigue",
+            "bad: Hormuz 7-tanker attack, Brent >$114",
+            "bad: Moody's France downgrade risk tonight",
+            "good: SpaceX +2.8% premarket"
+          ]
         },
         {
           "key": "board",
@@ -496,8 +500,14 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "general DOWN  -7.538",
+      "bullets": [
+        "bad: Meta -7% / AI-capex fatigue",
+        "bad: Hormuz 7-tanker attack, Brent >$114",
+        "bad: Moody's France downgrade risk tonight",
+        "good: SpaceX +2.8% premarket",
+        "good: memory/optical chips green"
+      ]
     },
     {
       "key": "weather",
@@ -531,18 +541,18 @@
           "path": "01_daily/weather/2026-10-23_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9373 vix=calm yields=flat",
-          "size": 9373,
-          "said": "hostile 9 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=10434 vix=calm yields=flat",
+          "size": 10434,
+          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
             "events bull 5 / bear 8"
           ]
         }
       ],
-      "said": "hostile 9 \u00b7 neutral 2",
+      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
         "events bull 5 / bear 8"
       ]
     },
@@ -564,10 +574,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 7557698,
+          "size": 7563606,
           "said": "27 rows",
           "bullets": [
-            "AUPH, ELV, TRI, GCT, YPF, PM, ICE, GMAB"
+            "ASC, HSIC, NWBI, TRI, RCI, PAGP, AUPH, PM"
           ]
         },
         {
@@ -577,16 +587,16 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8366852,
+          "size": 8372755,
           "said": "25 rows",
           "bullets": [
-            "A, DHR, CDNA, ILMN, HAS, ISRG, EMBC, ATRC"
+            "DHR, BIIB, ICLR, A, CDNA, HAS, CP, ILMN"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "A, DHR, CDNA, ILMN, HAS"
+        "DHR, BIIB, ICLR, A, CDNA"
       ]
     },
     {
@@ -657,11 +667,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-23_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 14895,
+          "said": "DOWN -7.538",
+          "bullets": [
+            "bad: Meta -7% / AI-capex fatigue",
+            "bad: Hormuz 7-tanker attack, Brent >$114",
+            "bad: Moody's France downgrade risk tonight",
+            "good: SpaceX +2.8% premarket"
+          ]
         },
         {
           "key": "in_board",
@@ -721,11 +736,11 @@
           "path": "01_daily/weather/2026-10-23_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9373 vix=calm yields=flat",
-          "size": 9373,
-          "said": "hostile 9 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=10434 vix=calm yields=flat",
+          "size": 10434,
+          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
             "events bull 5 / bear 8"
           ]
         },
@@ -736,10 +751,10 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8366852,
+          "size": 8372755,
           "said": "25 rows",
           "bullets": [
-            "A, DHR, CDNA, ILMN, HAS, ISRG, EMBC, ATRC"
+            "DHR, BIIB, ICLR, A, CDNA, HAS, CP, ILMN"
           ]
         },
         {
@@ -749,10 +764,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2218694,
-          "said": "220 rows",
+          "size": 2217520,
+          "said": "208 rows",
           "bullets": [
-            "GLBE, SHOO, HLNE, VCTR, WT, HOOD, AAMI, ANF"
+            "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, WAY"
           ]
         },
         {
@@ -830,9 +845,9 @@
           "bullets": []
         }
       ],
-      "said": "220 rows",
+      "said": "208 rows",
       "bullets": [
-        "GLBE, SHOO, HLNE, VCTR, WT"
+        "HALO, ONC, LLY, HRMY, ETON"
       ]
     },
     {
@@ -977,13 +992,24 @@
         "morning S missing"
       ]
     },
-    "general": {},
+    "general": {
+      "said": "DOWN  -7.538",
+      "bullets": [
+        "bad: Meta -7% / AI-capex fatigue",
+        "bad: Hormuz 7-tanker attack, Brent >$114",
+        "bad: Moody's France downgrade risk tonight",
+        "good: SpaceX +2.8% premarket",
+        "good: memory/optical chips green"
+      ],
+      "score": "-7.538",
+      "direction": "down"
+    },
     "sectors": {},
     "news": {},
     "weather": {
-      "said": "hostile 9 \u00b7 neutral 2",
+      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
         "events bull 5 / bear 8"
       ]
     }
@@ -1768,6 +1794,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-23\n_Generated 2026-10-23T09:54:52 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,007.76** (after 09:30 $108,007.76 \u00b7 after 16:00 $108,007.76)\n- Prior close **$108,007.76** \u00b7 09:30 **$108,007.76** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$108,007.76**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,007.76** \u00b7 2026-10-22 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\":"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-23T07:08:44.165517-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-23_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10434,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-23_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5873,
+          "preview": "# Weather report \u2014 2026-10-23\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-23\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
