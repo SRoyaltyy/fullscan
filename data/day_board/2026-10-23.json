@@ -898,16 +898,82 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "SGRY",
+        "score": 0.7818977896101147
+      },
+      {
+        "ticker": "HITI",
+        "score": 0.556296109961579
+      },
+      {
+        "ticker": "CON",
+        "score": 0.7856556108017361
+      },
+      {
+        "ticker": "ASTH",
+        "score": 0.7546626412694215
+      },
+      {
+        "ticker": "AMN",
+        "score": 0.7524019787203875
+      },
+      {
+        "ticker": "MD",
+        "score": 0.6982193716254808
+      },
+      {
+        "ticker": "PACS",
+        "score": 0.8932406667174411
+      },
+      {
+        "ticker": "NTAP",
+        "score": 0.2843313440021954
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "NEOV",
+        "score": -0.3635560613260153
+      },
+      {
+        "ticker": "OKLO",
+        "score": -0.210330478560946
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.24391521322627752
+      },
+      {
+        "ticker": "NNDM",
+        "score": -0.2523903920751626
+      },
+      {
+        "ticker": "POWL",
+        "score": -0.07412996045865838
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.20159420068361716
+      },
+      {
+        "ticker": "NRGV",
+        "score": -0.2977514218486169
+      },
+      {
+        "ticker": "INDI",
+        "score": -0.24410292703592523
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {},
     "news": {},
     "weather": {
-      "said": "hostile 9 \u00b7 neutral 2",
+      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
         "events bull 5 / bear 8"
       ]
     }
@@ -1180,6 +1246,59 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-23T05:49:03.797252-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-23_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1481894,
+          "preview": "1d BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "data/stock_book/2026-10-23_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-23_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2594,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-23_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12460,
+          "preview": "2026-10-23 BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12460,
+          "preview": "2026-10-23 BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "01_daily/2026-10-23_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 85134,
+          "preview": "# Stock book \u2014 2026-10-23\n_Generated 2026-10-23T05:45:15.104044-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-23 BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 2026-10-23 BUY SGRY, HITI, CON, ASTH, AMN, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 # Stock book \u2014 2026-10-23\n_Generated 2026-10-23T05:45:15.104044-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     },
     {
       "key": "peer_rs",
