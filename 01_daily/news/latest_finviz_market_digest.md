@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-23
 
-**Generated:** 2026-10-23T04:24:39.117817-04:00 (America/New_York)
+**Generated:** 2026-10-23T04:25:02.475918-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures trade mixed ahead of flash PMIs and Michigan sentiment as oil holds near five-month highs on Middle East risks
 **Prior close:** SPX —  Nasdaq —  Dow —
