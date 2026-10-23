@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-23",
+  "files": [
+    {
+      "bytes": 9687141,
+      "path": "data/factor_mine/panel.json",
+      "sha256": "2c68083c19dd865d4de49672a729e771f7b6012801ed3cf6b0487c4a81c3f717"
+    },
+    {
+      "path": "01_daily/general/2026-10-23_predict.md",
+      "sha256": "77dd5fdbeb7123a38619f515fac463b3e3046393098b1b3a4f96327c6a408720"
+    },
+    {
+      "path": "01_daily/news/2026-10-23_actions.json",
+      "sha256": "621cd066678cd29c0c19dea9fdc2118e52d39bca04fee1a449133437a55eb6ce"
+    },
+    {
+      "path": "01_daily/news/2026-10-23_finviz_digest.json",
+      "sha256": "69486cecef2b3a935d357feef65742c05e60f5bb3aff0996f77aa16bf5c5543e"
+    },
+    {
+      "path": "01_daily/news/2026-10-23_judge.md",
+      "sha256": "73f5fe7a18426ad673fb9bca24b2cad6f88fd13c52e2b80129207ee8e4ad2a28"
+    },
+    {
+      "path": "01_daily/weather/2026-10-23_weather.json",
+      "sha256": "fc45031f22e641ce25ab976246ded209cfcfd66f73286d74078385b5f0a77adc"
+    },
+    {
+      "path": "data/ab_checklist/2026-10-23_ab_checklist_enriched.csv",
+      "sha256": "73331d6d920336979417e8f18aef8a6288f7d2c2bfbf1968684778be8248db4a"
+    },
+    {
+      "path": "data/join/2026-10-23_ranked.csv",
+      "sha256": "20f1d384863b98c1d6bcdcc6f1d4fb5ffb3fd549259e21e8a4a84528e4ecf4d7"
+    },
+    {
+      "path": "data/peers/2026-10-23_peer_rs.csv",
+      "sha256": "ddfb7334677cd9faeca962d70765b32d2761a81b9eb437bd02384acd0fa85445"
+    },
+    {
+      "path": "data/sleeve_merge/today.json",
+      "sha256": "7cc033f80033a244133df304aca005b964f0e61c04289309ad6f67cec2176656"
+    },
+    {
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "sha256": "6a8d76dd12dbfe162b6b1730ec7ba8e57a3a3ae668d7ded1ab0ade9b9d21a458"
+    }
+  ],
+  "picks": {
+    "union_hot_n4_h1": [
+      "BMBL",
+      "LQDA",
+      "KLRA",
+      "ACN"
+    ],
+    "union_hot_n4_holdup": [
+      "BMBL",
+      "LQDA",
+      "KLRA",
+      "ACN"
+    ]
+  },
+  "prices": [
+    {
+      "px": 5.95,
+      "px_src": "elite_live",
+      "ticker": "BMBL"
+    },
+    {
+      "px": 41.22,
+      "px_src": "elite_live",
+      "ticker": "LQDA"
+    },
+    {
+      "px": 12.79,
+      "px_src": "elite_live",
+      "ticker": "KLRA"
+    },
+    {
+      "px": 247.22,
+      "px_src": "elite_live",
+      "ticker": "ACN"
+    }
+  ],
+  "reason": "",
+  "rows": [],
+  "sha256": "b6ceffa930cf051edc3d940c018390eaaa3970991cad40f275ba213bcb9640a1",
+  "source": "no_same_day_panel"
+}
