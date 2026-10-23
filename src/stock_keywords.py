@@ -127,7 +127,7 @@ def _physical_input_terms():
     manifest = json.loads((root/'manifest.json').read_text())
     terms = set()
     for entry in manifest['files']:
-        if entry['file'] not in {name+'.json.gz' for name in ('noun.substance','noun.food','noun.plant','noun.animal')}:
+        if entry['file'] not in {name+'.json.gz' for name in ('noun.substance','noun.artifact','noun.food','noun.plant','noun.animal')}:
             continue
         raw = (root/entry['file']).read_bytes()
         if entry.get('stored_sha256') and hashlib.sha256(raw).hexdigest() != entry['stored_sha256']:

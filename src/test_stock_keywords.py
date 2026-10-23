@@ -99,7 +99,7 @@ class KeywordTests(unittest.TestCase):
             self.assertTrue(scanner_policy(dict(keyword=value,relationship=role,assertion='asserted'))['eligible'],value)
 
     def test_physical_input_classes_preserve_materials_without_a_ticker_allowlist(self):
-        for value in ('copper', 'oil', 'steel', 'wheat', 'silicon'):
+        for value in ('copper', 'oil', 'steel', 'wheat', 'silicon', 'batteries', 'turbines'):
             self.assertTrue(scanner_policy(dict(keyword=value,relationship='input'))['eligible'],value)
         for value in ('ability', 'assurance', 'information', 'internal systems'):
             self.assertFalse(scanner_policy(dict(keyword=value,relationship='input'))['eligible'],value)
