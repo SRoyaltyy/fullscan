@@ -1,6 +1,6 @@
 {
  "date": "2026-10-23",
- "generated_at": "2026-10-23T05:44:22.609195-04:00",
+ "generated_at": "2026-10-23T05:48:52.572955-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -20,13 +20,13 @@
   "dgs10_current": 5.13,
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.14,
+  "dxy_pct_1d": 0.13,
   "vix_ratio": 0.966,
   "vix_spot": 19.44,
   "vix_delta_1d": 0.41,
   "vix_ratio_source": "vix/vix3m",
   "vix": "calm",
-  "oil_pct_1d": 1.56,
+  "oil_pct_1d": 1.82,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -149,14 +149,14 @@
     "why": "finviz sector median week -1.40% [tape]"
    },
    "Healthcare": {
-    "stance": "favorable",
+    "stance": "hostile",
     "confidence": "medium",
-    "why": "news_judge SECTOR Healthcare [bullish]"
+    "why": "finviz sector median week -2.99% [tape]"
    },
    "Industrials": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "news_judge SECTOR Industrials [bearish]"
+    "why": "finviz sector median week -1.83% [tape]"
    },
    "Real Estate": {
     "stance": "hostile",

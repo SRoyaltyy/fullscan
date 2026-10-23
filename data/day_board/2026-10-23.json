@@ -1,12 +1,11 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T05:45:04.492958-04:00",
+  "generated_at": "2026-10-23T05:48:53.299774-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-23_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-10-23_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-23_judge.md` \u2014 missing"
+    "MISSING News actions JSON `01_daily/news/2026-10-23_actions.json` \u2014 missing"
   ],
   "counts": {
     "ok": 4,
@@ -183,7 +182,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 4,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -270,11 +269,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-23_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9314,
+          "said": "1. Nasdaq 100 worst day in four months on capex/debt fatigue; META/SPCX/BE/MRNA focus \u2014 broad Nasdaq/SPX risk-appetite hit outranks single-name color \u2014 channel:",
+          "bullets": [
+            "2. Hawkish Fed comments lift October hike expectations; gold drops >$100 \u2014 rates/hike-odds shock hits SPX beta and gold/miners \u2014 channel: rates.",
+            "3. China restricts AI/chip-design exports; Taiwan tightens AI chip/server controls \u2014 direct semis/AI supply-chain policy shock \u2014 channel: sector_policy.",
+            "4. Brent crude above $111 on Strait of Hormuz attacks \u2014 energy/inflation/geopolitical risk force \u2014 channel: rates."
+          ]
         },
         {
           "key": "research_json",
@@ -528,18 +531,18 @@
           "path": "01_daily/weather/2026-10-23_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9374 vix=calm yields=flat",
-          "size": 9374,
-          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=9373 vix=calm yields=flat",
+          "size": 9373,
+          "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
             "events bull 5 / bear 8"
           ]
         }
       ],
-      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
         "events bull 5 / bear 8"
       ]
     },
@@ -702,11 +705,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-23_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9314,
+          "said": "1. Nasdaq 100 worst day in four months on capex/debt fatigue; META/SPCX/BE/MRNA focus \u2014 broad Nasdaq/SPX risk-appetite hit outranks single-name color \u2014 channel:",
+          "bullets": [
+            "2. Hawkish Fed comments lift October hike expectations; gold drops >$100 \u2014 rates/hike-odds shock hits SPX beta and gold/miners \u2014 channel: rates.",
+            "3. China restricts AI/chip-design exports; Taiwan tightens AI chip/server controls \u2014 direct semis/AI supply-chain policy shock \u2014 channel: sector_policy.",
+            "4. Brent crude above $111 on Strait of Hormuz attacks \u2014 energy/inflation/geopolitical risk force \u2014 channel: rates."
+          ]
         },
         {
           "key": "in_weather",
@@ -714,11 +721,11 @@
           "path": "01_daily/weather/2026-10-23_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9374 vix=calm yields=flat",
-          "size": 9374,
-          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=9373 vix=calm yields=flat",
+          "size": 9373,
+          "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
             "events bull 5 / bear 8"
           ]
         },
@@ -898,9 +905,9 @@
     "sectors": {},
     "news": {},
     "weather": {
-      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
         "events bull 5 / bear 8"
       ]
     }
@@ -1130,6 +1137,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AUPH, ELV, TRI, GCT, YPF \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 A, DHR, CDNA, ILMN, HAS"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-23T05:48:52.755682-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-23_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9373,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-23_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5000,
+          "preview": "# Weather report \u2014 2026-10-23\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-23\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
