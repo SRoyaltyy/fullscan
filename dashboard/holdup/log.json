@@ -5869,5 +5869,13 @@
     "pnl_status": "marked",
     "recipe": "union_hot_n4_holdup__w0",
     "sha256": "4cd870ceb4f85425f8d41095154073e0875c79cd8ab61d4fee7ba9df3324f0a4"
+  },
+  {
+    "committed_at": "2026-10-23T20:59:33Z",
+    "date": "2026-10-23",
+    "kind": "missing",
+    "reason": "missing: plan not sealed before open",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "bed546f601d9e8b0eb5cad0f46a07c389070b24d5918e36137d4f5e8e2131b8c"
   }
 ]
