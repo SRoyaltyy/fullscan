@@ -1,46 +1,47 @@
-# Finviz homepage market digest (close) — 2026-10-22
+# Finviz homepage market digest (close) — 2026-10-23
 
-**Generated:** 2026-10-22T16:30:40.566586-04:00 (America/New_York)
+**Generated:** 2026-10-23T16:28:35.149846-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks closed lower as AI spending concerns hit tech and semis while Brent crude topped $113 and the 10-year yield slipped to 5.01%
-**Prior close:** SPX -1.20%  Nasdaq -2.60%  Dow —
-**SPX:** -1.20%  **Nasdaq:** -2.60%  **Dow:** —
-**Oil:** Brent crude $113.0
+**Banner:** US stocks closed broadly lower as WTI crude hit about $104 on Middle East tensions ahead of next week’s earnings-heavy calendar and Federal Reserve meeting
+**Prior close:** SPX -0.52%  Nasdaq -0.21%  Dow -1.23%
+**SPX:** -0.52%  **Nasdaq:** -0.21%  **Dow:** -1.23%
+**Oil:** WTI crude $104.0
 **CPI/Fed:** —
-**Leaders:** META, TSLA, NVDA, LRCX, MU, MRNA, MRK, SPOT, LMT, PG, NEM, WDC, BE, FIX
+**Leaders:** SLB, SPCX, CCI, AMT, T, TMUS, AMD, NVDA, META, PANW, CRWD, AXP, FCNCA, RCI
 **Next session:** housing no · retail no · Fed no
 **Earnings slate:** —
 **Geo/grain:** geo
-**Clock legal for:** 2026-10-23
+**Clock legal for:** 2026-10-26
 **Clock use:** `next_open`
 
 ## Clock
 
-Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-10-23) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
+Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-10-26) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX -1.20% · Nasdaq -2.60% · Dow —
-- **Oil:** Brent crude $113.0
+- **Prior close:** SPX -0.52% · Nasdaq -0.21% · Dow -1.23%
+- **Oil:** WTI crude $104.0
 - **CPI / Fed-odds:** —
-- **Named leaders:** META, TSLA, NVDA, LRCX, MU, MRNA, MRK, SPOT, LMT, PG, NEM, WDC, BE, FIX
+- **Named leaders:** SLB, SPCX, CCI, AMT, T, TMUS, AMD, NVDA, META, PANW, CRWD, AXP, FCNCA, RCI
 - **Next-session calendar:** housing no · retail no · Fed no
+  - Technology shares steadied following Thursday’s selloff, with the Philadelphia Semiconductor Index up 0.6% as AMD (AMD) gained about 1.7% while Nvidia (NVDA) slipped roughly 0.6%, despite ongoing AI capex worries highlighted by Meta (META)’s spending outlook.
 - **Earnings slate:** —
 - **Geo / grain:** geo
 
 ## Narrative
 
-**US stocks closed lower as AI spending concerns hit tech and semis while Brent crude topped $113 and the 10-year yield slipped to 5.01%**
+**US stocks closed broadly lower as WTI crude hit about $104 on Middle East tensions ahead of next week’s earnings-heavy calendar and Federal Reserve meeting**
 
-- The S&P 500 ($SPX) fell about 1.2% to 7,663, the Nasdaq Composite ($COMP) lost roughly 2.6% to 26,009 for its worst session since June, the Dow Jones ($DJI) finished roughly flat at 52,868, and the Russell 2000 (IWM) edged up about 0.1%.
-- Meta Platforms (META) dropped about 7% after Q3 results highlighted elevated AI capital spending, its first negative free cash flow in over a decade, and plans for non-voting share issuance to fund further AI buildout.
-- Tesla (TSLA) declined roughly 3% after mixed Q3 results that emphasized future AI and robotics investment, raising investor questions about the pace of that spending.
-- The Philadelphia Semiconductor Index sank around 6.3–6.5%, with Nvidia (NVDA) (down about 4% earlier), Lam Research (LRCX), and Micron Technology (MU) among the laggards, as Lam cited supply chain constraints.
-- Moderna (MRNA) fell about 18% to around $203 after an apparent embargo breach related to positive melanoma cancer vaccine data from its partnership with Merck (MRK).
-- Spotify (SPOT) gained about 11% after Q3 earnings and guidance projected fourth-quarter profit above estimates and highlighted improved margins supported by AI-powered features.
-- Lockheed Martin (LMT) rose after raising its annual sales and profit guidance, while Procter & Gamble (PG) advanced following an earnings beat.
-- Defensive sectors outperformed as consumer staples and utilities each climbed more than 2%, supported by a flight into Treasuries that pushed the 10-year yield down to 5.01%.
-- Brent crude oil (@QA) topped $113 per barrel amid renewed Middle East tensions, including deadly attacks in Saudi Arabia, reinforcing the risk-off tone in broader markets.
-- After the close, Newmont (NEM), Western Digital (WDC), Bloom Energy (BE), and Comfort Systems USA (FIX) are scheduled to report earnings.
+- The Dow Jones Industrial Average ($DJI) fell about 650 points, or 1.23%, to 52,215, the S&P 500 ($SPX) declined 0.52% to 7,624, the Nasdaq Composite ($COMP) slipped 0.21% to 25,955, while the Russell 2000 (IWM) lost 0.35% and the Nasdaq 100 ($NDX) finished roughly unchanged.
+- WTI crude oil (@CL) climbed to about $104 a barrel, its highest level since April, on Houthi attacks on Saudi energy sites, heightened U.S.-Iran tensions and related supply fears.
+- Energy stocks outperformed as SLB (SLB) gained about 7% after a Q3 earnings beat and a raised fourth-quarter outlook, even as Middle East activity remained constrained.
+- Tower operators advanced after a Bloomberg report that SpaceX (SPCX) is negotiating leases for at least 80,000 U.S. cell sites to build a fourth wireless carrier, sending Crown Castle (CCI) up around 9% and lifting American Tower (AMT), while AT&T (T) and T-Mobile (TMUS) slumped roughly 8%.
+- Technology shares steadied following Thursday’s selloff, with the Philadelphia Semiconductor Index up 0.6% as AMD (AMD) gained about 1.7% while Nvidia (NVDA) slipped roughly 0.6%, despite ongoing AI capex worries highlighted by Meta (META)’s spending outlook.
+- Cybersecurity names including Palo Alto Networks (PANW) and CrowdStrike (CRWD) also advanced within the tech space.
+- American Express (AXP) shares dropped about 4% even after reporting Q3 EPS of $5.42 versus $4.53 expected, raising full-year guidance to $18.30–$18.60, and announcing a 5% global workforce reduction.
+- First Citizens BancShares (FCNCA) jumped about 8% following a Q3 earnings beat.
+- Eight of 11 S&P 500 ($SPX) sectors declined, with financials and industrials among the laggards, as University of Michigan consumer sentiment fell to a five-month low.
+- After the bell, Rogers Communications (RCI) beat estimates with adjusted EPS of $1.29 versus $1.24 expected and reaffirmed its 2026 outlook.
