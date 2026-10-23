@@ -8427,5 +8427,102 @@
     ],
     "sha256": "5ccfac65c250f0228d945be7d7242e089cfb543e213dcd12e9ad7c6105e08dfd",
     "unfilled": []
+  },
+  {
+    "added_buys": [],
+    "added_sells": [],
+    "cash_primary": 266.1243940237787,
+    "date": "2026-10-23",
+    "equity_primary": 8289.339414023778,
+    "holdings": [
+      {
+        "cost_primary": 2234.9249499999996,
+        "entry_date": "2026-10-23",
+        "entry_px": 15.215,
+        "last_px": 15.215,
+        "min_hold": 1,
+        "peak_px": 15.215,
+        "shares": 146,
+        "ticker": "BHVN"
+      },
+      {
+        "cost_primary": 1977.5745,
+        "entry_date": "2026-10-21",
+        "entry_px": 5.95,
+        "last_px": 5.94,
+        "min_hold": 1,
+        "peak_px": 5.95,
+        "shares": 330,
+        "ticker": "BMBL"
+      },
+      {
+        "cost_primary": 1952.7250602999998,
+        "entry_date": "2026-10-23",
+        "entry_px": 194.100006,
+        "last_px": 194.100006,
+        "min_hold": 1,
+        "peak_px": 194.100006,
+        "shares": 10,
+        "ticker": "POOL"
+      },
+      {
+        "cost_primary": 2117.6452499999996,
+        "entry_date": "2026-10-23",
+        "entry_px": 1.47,
+        "last_px": 1.47,
+        "min_hold": 1,
+        "peak_px": 1.47,
+        "shares": 1421,
+        "ticker": "TRON"
+      }
+    ],
+    "kind": "mark",
+    "open_fill_sha256": "5ccfac65c250f0228d945be7d7242e089cfb543e213dcd12e9ad7c6105e08dfd",
+    "plan_sha256": "0fd018f98c33b3eed2bbef342f3ba395f811efb330acd2ba9325d77ee958c867",
+    "pnl_status": "marked",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "d5ff5ba668e0786470b3d026b1691e1609d0b52cfc243df4a6e736158a1f7f38"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-23",
+    "entry_date": "2026-10-22",
+    "entry_px": 29.215,
+    "fill": 29.105,
+    "kind": "close",
+    "pnl_primary": -32.539899999999534,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "07a30d90fb07fc9277132e1fa8ce2882acc3f3aa0f21e3a7beb759400ce3de45",
+    "shares": 70,
+    "ticker": "ASST"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-23",
+    "entry_date": "2026-10-22",
+    "entry_px": 2.93,
+    "fill": 2.97,
+    "kind": "close",
+    "pnl_primary": -10.037399999999934,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "8ffadc263c185acc756271f7ea1e2c1d378238b95bddd6f17bcf5cf3b1b81328",
+    "shares": 648,
+    "ticker": "CYPH"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-23",
+    "entry_date": "2026-10-22",
+    "entry_px": 38.75,
+    "fill": 39.860001,
+    "kind": "close",
+    "pnl_primary": 35.09480472499945,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "61d633c3e335e936ad65e47c95f89d5b3b363c6d32896bd603c223c7b7f18878",
+    "shares": 55,
+    "ticker": "LQDA"
   }
 ]

@@ -1452,5 +1452,42 @@
       "open": 42.27,
       "prior_close": 42.77
     }
+  },
+  "2026-10-23": {
+    "ASST": {
+      "close": 28.969999,
+      "open": 29.105,
+      "prior_close": 29.030001
+    },
+    "BHVN": {
+      "close": 13.88,
+      "open": 15.215,
+      "prior_close": 14.69
+    },
+    "BMBL": {
+      "close": 5.96,
+      "open": 5.94,
+      "prior_close": 5.94
+    },
+    "CYPH": {
+      "close": 2.82,
+      "open": 2.97,
+      "prior_close": 2.98
+    },
+    "LQDA": {
+      "close": 42.650002,
+      "open": 39.860001,
+      "prior_close": 39.689999
+    },
+    "POOL": {
+      "close": 199.080002,
+      "open": 194.100006,
+      "prior_close": 197.210007
+    },
+    "TRON": {
+      "close": 1.435,
+      "open": 1.47,
+      "prior_close": 1.5
+    }
   }
 }
