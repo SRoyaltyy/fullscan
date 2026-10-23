@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T17:10:45.693148-04:00",
+  "generated_at": "2026-10-23T17:31:03.497802-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -184,7 +184,7 @@
       "inputs_ready": true,
       "n_req_ok": 6,
       "n_req": 9,
-      "n_opt_ok": 3,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -338,16 +338,11 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-23/_board.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 6085,
-          "said": "0 up / 0 down / 0 flat",
-          "bullets": [
-            "XLB missing",
-            "XLC missing",
-            "XLY missing",
-            "XLP missing"
-          ]
+          "status": "SKIP",
+          "reason": "optional \u2014 sector board not required",
+          "size": 0,
+          "said": "optional \u2014 sector board not required",
+          "bullets": []
         },
         {
           "key": "qc",
@@ -511,18 +506,13 @@
           "bullets": []
         }
       ],
-      "said": "general DOWN  -7.538 \u00b7 sectors 0 up / 0 down / 0 flat",
+      "said": "general DOWN  -7.538",
       "bullets": [
         "bad: Meta -7% / AI-capex fatigue",
         "bad: Hormuz 7-tanker attack, Brent >$114",
         "bad: Moody's France downgrade risk tonight",
         "good: SpaceX +2.8% premarket",
-        "good: memory/optical chips green",
-        "XLB missing",
-        "XLC missing",
-        "XLY missing",
-        "XLP missing",
-        "XLE missing"
+        "good: memory/optical chips green"
       ]
     },
     {
@@ -557,8 +547,8 @@
           "path": "01_daily/weather/2026-10-23_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10434 vix=calm yields=flat",
-          "size": 10434,
+          "reason": "sectors=11 bytes=10488 vix=calm yields=falling",
+          "size": 10488,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
@@ -690,7 +680,7 @@
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
-      "n_opt": 3,
+      "n_opt": 4,
       "files": [
         {
           "key": "in_general",
@@ -712,17 +702,12 @@
           "key": "in_board",
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-23/_board.json",
-          "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 6085,
-          "said": "0 up / 0 down / 0 flat",
-          "bullets": [
-            "XLB missing",
-            "XLC missing",
-            "XLY missing",
-            "XLP missing"
-          ]
+          "role": "optional",
+          "status": "SKIP",
+          "reason": "optional \u2014 sector board not required",
+          "size": 0,
+          "said": "optional \u2014 sector board not required",
+          "bullets": []
         },
         {
           "key": "in_actions",
@@ -776,8 +761,8 @@
           "path": "01_daily/weather/2026-10-23_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10434 vix=calm yields=flat",
-          "size": 10434,
+          "reason": "sectors=11 bytes=10488 vix=calm yields=falling",
+          "size": 10488,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
@@ -830,7 +815,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=167",
-          "size": 1394099,
+          "size": 1394102,
           "said": "1d BUY SGRY, MD, ASTH, HITI, CON, NTAP, AMN, BLFS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, NRGV \u00b7 -0.6817",
           "bullets": []
         },
@@ -841,10 +826,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 62028,
+          "size": 62064,
           "said": "Stock book \u2014 2026-10-23",
           "bullets": [
-            "_Generated 2026-10-23T17:10:42.490075-04:00_",
+            "_Generated 2026-10-23T07:11:03.431159-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -908,7 +893,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=167",
-          "size": 1394099,
+          "size": 1394102,
           "said": "1d BUY SGRY, MD, ASTH, HITI, CON, NTAP, AMN, BLFS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, NRGV \u00b7 -0.6817",
           "bullets": []
         },
@@ -1055,22 +1040,7 @@
       "score": "-7.538",
       "direction": "down"
     },
-    "sectors": {
-      "said": "0 up / 0 down / 0 flat",
-      "bullets": [
-        "XLB missing",
-        "XLC missing",
-        "XLY missing",
-        "XLP missing",
-        "XLE missing",
-        "XLF missing",
-        "XLV missing",
-        "XLI missing",
-        "XLRE missing",
-        "XLK missing",
-        "XLU missing"
-      ]
-    },
+    "sectors": {},
     "news": {},
     "weather": {
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
@@ -2983,6 +2953,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-23\n**Generated:** 2026-10-23T16:28:35.149846-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed broadly lower as WTI crude hit about $104 on Middle East tensions ahead of next week\u2019s earnings-heavy calendar and Federal Reserve meeting\n**Prior close:** SPX -0.52%  Nasdaq -0.21%  Dow -1.23%\n**SPX:** -0.52%  **Nasdaq:** -0.21%  **Dow:** -1.23%\n**Oil:** WTI crude $104.0\n**CPI/Fed:** \u2014\n**Leaders:** SLB, SPCX, CCI, AMT, T, TMUS, AMD, NVDA, META, PANW, CRWD, AXP, FCNCA, RCI\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-26\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-23T17:31:02.571017-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-23_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10488,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-23_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5933,
+          "preview": "# Weather report \u2014 2026-10-23\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-23\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
@@ -3502,6 +3497,22 @@
       "commit_msg": "auto: strategy tickets 2026-10-23",
       "workflow": "Publish strategy tickets",
       "run_id": "40020704127",
+      "manifest": "research/input_freeze/2026-10-23/manifest.json"
+    },
+    {
+      "path": "01_daily/weather/2026-10-23_weather.json",
+      "at": "2026-10-23T17:31:04-04:00",
+      "commit_msg": "auto: land weather [2026-10-23]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "40018991772",
+      "manifest": "research/input_freeze/2026-10-23/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-23.json",
+      "at": "2026-10-23T17:31:04-04:00",
+      "commit_msg": "auto: land weather [2026-10-23]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "40018991772",
       "manifest": "research/input_freeze/2026-10-23/manifest.json"
     }
   ]
