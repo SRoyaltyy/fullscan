@@ -1,6 +1,6 @@
 # Stock book — 2026-10-23
 
-_Generated 2026-10-23T15:54:06.673759-04:00_
+_Generated 2026-10-23T16:48:18.188080-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -61,8 +61,8 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 | 8 | **BLFS** | 🔴🟡🟡🟡🟢🟢 | probable | no direct company event; Medical Instruments & Supplies +1.9% d1 / -1.6% 1w / +0.8% vs parent | BUY PROBABLE — most-probable long on HARD_RED (size ×0.25); clocks: lookback 🔵 blue — market=HARD_RED; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 9 | **OKTA** | 🔴🔴🟢🟡🟢🟢 | probable | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY PROBABLE — most-probable long on HARD_RED (size ×0.25); clocks: child/theme outperform +1.4% 1w / +3.4% rel — market=HARD_RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
 | 10 | **IT** | 🔴🔴🟢🟡🟢🟢 | probable | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY PROBABLE — most-probable long on HARD_RED (size ×0.25); clocks: child/theme outperform +1.9% 1w / +3.9% rel — market=HARD_RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
-| 11 | **RVTY** | 🔴🟡🟡🟡🟢🟢 | probable | no direct company event; Diagnostics & Research +1.2% d1 / -1.0% 1w / +1.5% vs parent | BUY PROBABLE — most-probable long on HARD_RED (size ×0.25); clocks: lookback 🔵 blue — market=HARD_RED; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 12 | **AVPT** | 🔴🔴🟢🟡🟢🟢 | probable | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY PROBABLE — most-probable long on HARD_RED (size ×0.25); clocks: child/theme outperform +1.4% 1w / +3.4% rel — market=HARD_RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 11 | **AVPT** | 🔴🔴🟢🟡🟢🟢 | probable | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY PROBABLE — most-probable long on HARD_RED (size ×0.25); clocks: child/theme outperform +1.4% 1w / +3.4% rel — market=HARD_RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 12 | **RVTY** | 🔴🟡🟡🟡🟢🟢 | probable | no direct company event; Diagnostics & Research +1.2% d1 / -1.0% 1w / +1.5% vs parent | BUY PROBABLE — most-probable long on HARD_RED (size ×0.25); clocks: lookback 🔵 blue — market=HARD_RED; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 13 | **TOST** | 🔴🔴🟢🟡🟢🟢 | probable | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY PROBABLE — most-probable long on HARD_RED (size ×0.25); clocks: child/theme outperform +1.4% 1w / +3.4% rel — market=HARD_RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
 | 14 | **AMRX** | 🔴🟡🟡🟡🟢🟢 | probable | no direct company event; Drug Manufacturers - Specialty & Generic +1.7% d1 / -0.7% 1w / +1.8% vs parent | BUY PROBABLE — most-probable long on HARD_RED (size ×0.25); clocks: lookback 🔵 blue — market=HARD_RED; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 15 | **PACS** | 🔴🟡🟢🟡🟢🟡 | probable | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY PROBABLE — most-probable long on HARD_RED (size ×0.25); clocks: child/theme outperform +3.1% 1w / +5.6% rel — market=HARD_RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green |
@@ -196,7 +196,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | News judge | **found** | s_news ticker tilts |
 | Finviz daily digest | **found** | s_news company headlines |
 | General predict | **found** | s_general × beta |
-| Sector LLM essays | **missing / not in ranker** | s_sector (0 if essays missing) |
+| Sector LLM essays | **found** | s_sector (0 if essays missing) |
 | AB checklist + P01–P04 | **found** | s_ab |
 | Peer RS | **found** | s_peer |
 | Ticker checklist (rebound) | **found** | rebound_floor (dated file, else latest — can be stale) |
@@ -206,7 +206,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Catalyst overlays | **missing / not in ranker** | not in ranker — separate chart workflow |
 | Insider / politician flow | **missing / not in ranker** | no daily file in repo |
 | Industry predict | **found** | not scored (ad-hoc only) |
-| Learnings / mutable policy | **missing / not in ranker** | next predict prompt, not a ticker score |
+| Learnings / mutable policy | **found** | next predict prompt, not a ticker score |
 
 ### Sector LLM bias (1d) — 0 / empty means that essay was not run today
 
