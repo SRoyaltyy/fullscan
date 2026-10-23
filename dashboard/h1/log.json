@@ -8221,5 +8221,90 @@
     "sha256": "6c0d449bca10682cadd0a2d5f0d721ffe807d5863e6aa5ca055c7328adc7d008",
     "shares": 47,
     "ticker": "TRAX"
+  },
+  {
+    "bar_cutoff": "2026-10-22",
+    "cash_before": 460.8732495987779,
+    "committed_at": "2026-10-23T12:17:56Z",
+    "date": "2026-10-23",
+    "excluded_unexplained_legs": [],
+    "finviz_source": {
+      "commit": "053e2ebfa8563259ba260a92fc189f91a5afe36f",
+      "commit_time": "2026-10-22T20:46:32Z",
+      "file_sha256": "7fedea3f2b48f63666633b96f969199ff8ed80dcb0e15715e3542cfdea76e266",
+      "path": "data/snapshots/2026-10-22.csv",
+      "snapshot_date": "2026-10-22",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": false,
+    "kind": "plan",
+    "morning_s": -7.538,
+    "picks": [
+      {
+        "fv_avg_volume": 920.65,
+        "fv_price": 1.5,
+        "rank": 1,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "TRON"
+      },
+      {
+        "fv_avg_volume": 2592.58,
+        "fv_price": 14.69,
+        "rank": 2,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "BHVN"
+      },
+      {
+        "fv_avg_volume": 5720.4,
+        "fv_price": 5.94,
+        "rank": 3,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "BMBL"
+      },
+      {
+        "fv_avg_volume": 785.51,
+        "fv_price": 197.21,
+        "rank": 4,
+        "sources": [
+          "ohlc_hot",
+          "yday_gainer"
+        ],
+        "ticker": "POOL"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "hold-expired",
+        "shares": 70,
+        "ticker": "ASST"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 648,
+        "ticker": "CYPH"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 55,
+        "ticker": "LQDA"
+      }
+    ],
+    "recipe": "union_hot_n4_h1__w0",
+    "s_source": {
+      "blob_sha": "9937b593a7f0744e470b0f30b98fdc1d94abd95a",
+      "kind": "predict",
+      "path": "01_daily/general/2026-10-23_predict.md",
+      "server_time_utc": "2026-10-23T17:55:48+08:00",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "0fd018f98c33b3eed2bbef342f3ba395f811efb330acd2ba9325d77ee958c867"
   }
 ]
