@@ -58,7 +58,7 @@ jobs:
   source:
     if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.event != 'pull_request')
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 360
     outputs:
       ready: ${{ steps.profiles.outputs.ready }}
       run: ${{ steps.profiles.outputs.run }}
@@ -93,7 +93,7 @@ jobs:
     needs: source
     if: needs.source.outputs.ready == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 360
     outputs:
       commit: ${{ steps.retain.outputs.commit }}
     permissions:
@@ -205,7 +205,7 @@ jobs:
           retention-days: 30
       - name: Verify and retain the snapshot on main without touching other files
         id: retain
-        timeout-minutes: 20
+        timeout-minutes: 360
         env:
           SCANNER_SOURCE_SHA: ${{ github.sha }}
           GH_TOKEN: ${{ github.token }}
@@ -221,7 +221,7 @@ jobs:
   publish:
     needs: build
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 360
     permissions:
       contents: write
       actions: read
