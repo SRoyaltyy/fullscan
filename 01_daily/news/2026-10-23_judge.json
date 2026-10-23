@@ -1,10 +1,23 @@
 {
- "risk_tilt": null,
- "macros": [],
- "sector_tilts": {},
- "tickers": {
-  "META": -1.5
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "hawkish",
+  "hawkish",
+  "hawkish"
+ ],
+ "sector_tilts": {
+  "Tech/Ai": "bullish",
+  "Industrials": "bearish",
+  "Healthcare": "bullish",
+  "Airlines": "bearish",
+  "Materials/Risk": "bearish"
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=0\nMACRO rates: [pol] hawkish Fed/Oct hike odds + CPI 3.7% keep front-end risk live (regime/1w)\nMACRO risk: [pol] Nasdaq-100 worst day on capex/debt fatigue; mega-cap AI capex scrutiny (session/1d-1w)\nSECTOR semis/AI: [pol] China AI/chip-design export curbs + Taiwan server/chip controls tighten supply chain (SOXX/SMH)\nMACRO energy: [pol] Brent >$111 Hormuz attacks; oil/inflation/energy force (regime/session)\nSECTOR industrials: [pol] Boeing 737 MAX 10 FAA cert halt risks 31% undelivered order book (BA/aerospace)\nMACRO policy: [pol] IEEPA tariff refunds class certified; importer/tariff overhang (sector_policy)\nSECTOR mega-cap: [pol] Meta/MSFT/GOOG Q3 capex/AI spend read-through for Nasdaq beta (session)\nINTERACTION: hawkish Fed/CPI + capex fatigue \u2192 do not buy duration on dovish hope; oil + hawkish = rates/energy cluster\nWATCH: noise sample empty; foreign political items low US beta",
+ "tickers": {
+  "AMGN": 5.5,
+  "JETS": -4.0,
+  "XLB": -4.0
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO rates: [hawkish] Fed comments lift Oct hike odds; gold -$100 (session/1d-1w)\nMACRO global_rates: [hawkish] UK CPI 3.5% cements hike expectations (session/1d)\nSECTOR tech/AI: [bullish] Tesla beat + SpaceX AI momentum lifts chip/AI complex (QQQ/SMH basket)\nSECTOR industrials: [bearish] Boeing MAX 10 FAA certification halt risks order book (BA/industrials)\nSECTOR healthcare: [bullish] Amgen Phase 3 positive + ABBV Parkinson's approval support biotech/pharma (XLV/XBI basket)\nSECTOR airlines: [bearish] United jet-fuel cost miss pressures carriers (JETS)\nSECTOR materials/risk: [bearish] copper falls on tech selloff/risk appetite (XLB)\nINTERACTION: hawkish rates vs AI/Tesla risk-on -> NDX/SPX mixed; do not double-count AI across semis/autos\nWATCH: thin hard macro; Fed-speak and merger chatter can flip risk appetite intraday",
  "date": "2026-10-23"
 }
