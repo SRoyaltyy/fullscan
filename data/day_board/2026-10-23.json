@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T14:23:12.532500-04:00",
+  "generated_at": "2026-10-23T15:54:08.245198-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -826,7 +826,7 @@
           "size": 62064,
           "said": "Stock book \u2014 2026-10-23",
           "bullets": [
-            "_Generated 2026-10-23T14:23:09.298390-04:00_",
+            "_Generated 2026-10-23T15:54:06.673759-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -3364,6 +3364,30 @@
       "commit_msg": "auto: strategy tickets 2026-10-23",
       "workflow": "Publish strategy tickets",
       "run_id": "39999923724",
+      "manifest": "research/input_freeze/2026-10-23/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-23_stock_book.md",
+      "at": "2026-10-23T15:54:29-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-23",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40012468747",
+      "manifest": "research/input_freeze/2026-10-23/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-23_input_health.json",
+      "at": "2026-10-23T15:54:29-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-23",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40012468747",
+      "manifest": "research/input_freeze/2026-10-23/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-23_stock_book.json",
+      "at": "2026-10-23T15:54:29-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-23",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40012468747",
       "manifest": "research/input_freeze/2026-10-23/manifest.json"
     }
   ]
