@@ -321,3 +321,17 @@ assert.equal(vm.runInContext('scannerRowVisible(filteredRows[2])',context),false
 assert.ok(!html.includes('All filing relationships ('),'Raw generic grammar list is absent');
 assert.ok(html.includes('prof.keyword_schema ? {}'),'Legacy chips cannot bypass the curated record list');
 console.log('Concrete relation groups and direction labels exclude generic and null connections from the public view.');
+context.duplicates=[
+ {id:'old',stock:'T',keyword:'Amazon Web Services',normalized:'amazon web services',relationship:'supplier',identity:{id:'org:aws'},scanner:{eligible:true,group:'Upstream suppliers',label:'buys from'},evidence_ids:['e1'],first_filing_date:'2025-01-01',latest_filing_date:'2025-01-01'},
+ {id:'new',stock:'T',keyword:'AWS',normalized:'aws',relationship:'supplier',identity:{id:'org:aws'},scanner:{eligible:true,group:'Upstream suppliers',label:'buys from'},evidence_ids:['e2'],first_filing_date:'2026-01-01',latest_filing_date:'2026-01-01'},
+ {id:'other-role',stock:'T',keyword:'AWS',relationship:'competitor',identity:{id:'org:aws'},scanner:{eligible:true,group:'Competitors',label:'competes with'},evidence_ids:['e3']}
+];
+const consolidated=vm.runInContext('consolidateKeywordRecords(duplicates)',context);
+assert.equal(consolidated.length,2);
+const supplier=consolidated.find(r=>r.relationship==='supplier');
+assert.equal(JSON.stringify(supplier.evidence_ids),JSON.stringify(['e1','e2']));
+assert.equal(supplier.first_filing_date,'2025-01-01');
+assert.equal(supplier.latest_filing_date,'2026-01-01');
+assert.equal(supplier.keyword_aliases.length,2);
+assert.equal(context.duplicates[0].evidence_ids.length,1);
+console.log('Duplicate identities consolidate every dated witness without merging distinct relationships or mutating source records.');

@@ -587,8 +587,28 @@ function scannerRowVisible(row, articleDate="") {
   return events.length ? events.at(-1).connected : !(policy.connection_events || []).length;
 }
 
+function consolidateKeywordRecords(records) {
+  const groups=new Map();
+  for(const row of records) {
+    // An alias is consolidated only when the existing identity is resolved.
+    // Distinct roles, legal scope and article spans stay separate.
+    const identity=typeof row.identity?.id==="string" && !row.identity.id.startsWith("unresolved-") ? row.identity.id : (row.id || JSON.stringify([row.keyword,row.object_type,row.qualifiers || {}]));
+    const key=JSON.stringify([row.stock,identity,row.scanner?.group,row.scanner?.label,row.qualifiers?.applicability || "",row.assertion==="historical",row.assertion==="potential",row.article_span || null]);
+    if(!groups.has(key)) groups.set(key,{...row,evidence_ids:[],term_occurrence_ids:[],source_record_ids:[],keyword_aliases:[],review_reasons:[]});
+    const item=groups.get(key);
+    for(const field of ["evidence_ids","term_occurrence_ids","review_reasons"]) item[field]=[...new Set([...item[field],...(row[field] || [])])];
+    item.source_record_ids.push(row.id);
+    item.keyword_aliases=[...new Set([...item.keyword_aliases,row.keyword])];
+    item.first_filing_date=[item.first_filing_date,row.first_filing_date].filter(Boolean).sort()[0];
+    item.latest_filing_date=[item.latest_filing_date,row.latest_filing_date].filter(Boolean).sort().at(-1);
+  }
+  return [...groups.values()].sort((a,b)=>(a.scanner?.group || "").localeCompare(b.scanner?.group || "") || a.keyword.localeCompare(b.keyword));
+}
+
 function renderKeywordRecords(container, records, evidence = {}, inspectSource = null) {
   records = records.filter(row=>scannerRowVisible(row,row.article_date || ""));
+  const sourceRecordCount=records.length;
+  records = consolidateKeywordRecords(records);
   const query = document.createElement("input");
   query.placeholder = "Search concrete term, stock or relationship";
   query.setAttribute("aria-label", "Search stock keyword records");
@@ -596,9 +616,9 @@ function renderKeywordRecords(container, records, evidence = {}, inspectSource =
   function draw() {
     list.replaceChildren();
     const q = (query.value || "").trim().toLowerCase();
-    const rows = records.filter(r => !q || [r.stock,r.keyword,r.scanner?.group,r.scanner?.label,r.assertion].join(" ").toLowerCase().includes(q));
+    const rows = records.filter(r => !q || [r.stock,...r.keyword_aliases,r.scanner?.group,r.scanner?.label,r.assertion].join(" ").toLowerCase().includes(q));
     const count = document.createElement("p");
-    count.textContent = `${rows.length.toLocaleString()} of ${records.length.toLocaleString()} concrete connections · source evidence available`;
+    count.textContent = `${rows.length.toLocaleString()} of ${records.length.toLocaleString()} unique concrete connections · ${sourceRecordCount.toLocaleString()} source records consolidated · all retained evidence available`;
     list.append(count);
     const groups=new Map();
     for(const row of rows) {const group=row.scanner?.group || "Company identity";if(!groups.has(group))groups.set(group,[]);groups.get(group).push(row);}
@@ -610,6 +630,7 @@ function renderKeywordRecords(container, records, evidence = {}, inspectSource =
       title.textContent = `${row.stock} → ${row.scanner?.label || "company identity"} → ${row.keyword}${row.assertion==="potential" ? " [possible connection]" : row.assertion==="historical" ? " [historical]" : ""}${row.review_required ? " [review required]" : ""}`;
       const flags = document.createElement("p");
       flags.textContent = (row.review_reasons || []).join(" · ")+(row.article_span ? ` · Article: ${row.article_span.text} (${row.article_span.start}–${row.article_span.end})` : "")+` · Filing dates ${row.first_filing_date || "—"} to ${row.latest_filing_date || "—"}`;
+      if(row.keyword_aliases.length>1) flags.textContent+=` · Source names: ${row.keyword_aliases.join(" / ")}`;
       if (row.identity) flags.textContent += ` · Source ${row.identity.type}: ${row.identity.id}`;
       if (row.alignment) flags.textContent += ` · Alignment ${row.alignment.status}: ${row.alignment.reasons.join(", ")} · Context support ${row.alignment.context_score}`;
       if (row.article_capacity) flags.textContent += ` · Article role: ${row.article_capacity.dependency}; ${row.article_capacity.governor.text} → ${row.article_capacity.objects.map(o=>o.text).join(", ")}${row.article_capacity.negated ? " (negated)" : ""}`;
@@ -1133,9 +1154,16 @@ async function showTickerProfile(rawTicker) {
   }
   title.textContent = `${ticker} — ${prof.name || "(no name)"}`;
   if (prof.keyword_schema) {
-    const heading = document.createElement("h3"); heading.textContent = `Concrete company connections (${(prof.keywords || []).filter(row=>scannerRowVisible(row)).length})`;
+    const heading = document.createElement("h3"); heading.textContent = `Concrete company connections (${consolidateKeywordRecords((prof.keywords || []).filter(row=>scannerRowVisible(row))).length})`;
     factsBox.append(heading);
-    const policyNote=document.createElement("p");policyNote.textContent="Named entities, legal instruments and specific operating inputs only. Generic fragments and explicitly negated connections are excluded. Filing mentions still require identity, applicability and relevance review.";factsBox.append(policyNote);
+    const policyNote=document.createElement("p");policyNote.textContent="All admitted concrete terms found in the stored filing records, grouped by relationship. Repeated records are consolidated with their dates and evidence. No new web research is added. Generic fragments, unsupported relationship attachments and explicitly negated connections are excluded. Extraction can still miss terms; this view does not certify complete recovery or trading importance.";factsBox.append(policyNote);
+    const coverage=prof.keyword_coverage?.paragraph_coverage || {};
+    const sourceNote=document.createElement("p");
+    const stored=(prof.sources || []).filter(s=>s.accession);
+    sourceNote.textContent=`Stored evidence: ${new Set(stored.map(s=>s.accession)).size} filings; ${[...new Set(stored.map(s=>s.form).filter(Boolean))].sort().join(", ") || "source forms unavailable"}.`+
+      (coverage.source_sections ? ` Archive scan: ${coverage.source_sections.toLocaleString()} source sections, ${(coverage.characters_read || 0).toLocaleString()} characters.` : "")+
+      " All admitted terms are searchable below; source dates and quotations are retained for each connection.";
+    factsBox.append(sourceNote);
     renderKeywordRecords(factsBox,prof.keywords || [],prof.keyword_evidence || {},row=>{
       if(activeTermReview) activeTermReview(row);
       else { const note=document.createElement("p");note.textContent="The full source graph is loading or unavailable. Exact decision quotes are shown below; paragraph review needs the complete graph.";factsBox.append(note); }

@@ -29,7 +29,7 @@ def digest(raw):
 
 def source_hashes():
     paths = [ROOT/'src'/name for name in ('stock_keywords.py', 'entity_resolution.py',
-        'linguistics.py', 'semantic_lookup.py', 'specific_filing_records.py')]
+        'linguistics.py', 'semantic_lookup.py', 'specific_filing_records.py', 'filing_relationships.py')]
     paths += [ROOT/'scripts/project_scanner_keywords.py',
         ROOT/'dashboard/scanner-backtest/index.html']
     paths += sorted((ROOT/'src/data').rglob('*'))
@@ -186,7 +186,7 @@ def publish(directory, revision):
     guard_paths = (*INPUT_PATHS, 'scripts/project_scanner_keywords.py',
         '.github/workflows/scanner-keyword-publish.yml',
         *(f'dashboard/scanner-backtest/{name}' for name in ARTIFACTS))
-    for _ in range(3):
+    for _ in range(6):
         git('fetch', '--depth=1', 'origin', 'main')
         parent = git('rev-parse', 'FETCH_HEAD')
         changed = git('diff', '--name-only', revision, parent, '--', *guard_paths)
@@ -211,9 +211,15 @@ def publish(directory, revision):
             import subprocess
             result=subprocess.run(['git','push','origin',commit+':refs/heads/main'],capture_output=True,text=True)
             if result.returncode==0:return commit
-            if not any(term in result.stderr for term in ('fetch first','non-fast-forward','failed to update ref')):
+            if not retryable_main_race(result.stderr):
                 raise RuntimeError('keyword snapshot push failed: '+result.stderr)
     raise RuntimeError('main kept moving; keyword view not published')
+
+
+def retryable_main_race(stderr):
+    import re
+    return any(term in stderr for term in ('fetch first', 'non-fast-forward', 'failed to update ref')) or bool(
+        re.search(r"cannot lock ref 'refs/heads/main': is at [0-9a-f]{40} but expected [0-9a-f]{40}", stderr))
 
 
 def main():

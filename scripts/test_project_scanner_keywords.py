@@ -90,6 +90,11 @@ class ProjectionTests(unittest.TestCase):
 
 
 class IdentityCompatibilityTests(unittest.TestCase):
+    def test_atomic_main_update_conflict_retries_but_permissions_do_not(self):
+        self.assertTrue(projection.retryable_main_race("cannot lock ref 'refs/heads/main': is at "+'a'*40+' but expected '+'b'*40))
+        self.assertFalse(projection.retryable_main_race('permission denied: cannot lock ref'))
+        self.assertFalse(projection.retryable_main_race('protected branch update rejected'))
+
     def metadata(self):
         names=('src/entity_resolution.py','src/linguistics.py','src/semantic_lookup.py',
             'src/data/english_words.txt','src/data/lemma_lookup.json.gz')
