@@ -26,13 +26,274 @@ Clock split: (A) short-only is a pre-open policy call — shorts fire at the clo
 
 ## RESEARCH per sleeve (paper, not a wire)
 
-**2026-10-23** — `1` sit sleeves with looked names / `1` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
+**2026-10-23** — `262` sit sleeves with looked names / `342` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
 
 Per-sleeve paper counterfactuals on looked names. Live sit stays default. KEEP bar unchanged. (A) short-only fires the short kid at the 09:30 open. (B) dip-scoop longs wait for open−X% (session low / Elite live). Close does not trigger.
 
 | Sleeve | Side | (A) short-only @ open | (B) dip-scoop X% |
 |---|---|---|---|
-| `flatten_robust` | long | — | NET miss; VEEV miss; ILMN miss; CDNA miss; ARQT miss; PACS miss |
+| `flatten_robust` | long | — | CDNA miss; IT miss; TOST miss; SN miss; AVPT miss; CAKE miss |
+| `union_h1` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h3` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h5` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `flatten_h1` | long | — | NET miss |
+| `flatten_h3` | long | — | NET miss |
+| `flatten_h5` | long | — | NET miss |
+| `probable_h1` | long | — | PRMB miss; NVTS miss; EPR miss; SMMT miss; PDFS miss; AIP miss; CXW miss; ACRS miss |
+| `probable_h3` | long | — | PRMB miss; NVTS miss; EPR miss; SMMT miss; PDFS miss; AIP miss; CXW miss; ACRS miss |
+| `probable_h5` | long | — | PRMB miss; NVTS miss; EPR miss; SMMT miss; PDFS miss; AIP miss; CXW miss; ACRS miss |
+| `yday_gainer_h1` | long | — | ITW miss; PRMB miss; NVTS miss; EPR miss; EGG miss; KURA miss; POOL miss; SMMT miss |
+| `yday_gainer_h3` | long | — | ITW miss; PRMB miss; NVTS miss; EPR miss; EGG miss; KURA miss; POOL miss; SMMT miss |
+| `yday_gainer_h5` | long | — | ITW miss; PRMB miss; NVTS miss; EPR miss; EGG miss; KURA miss; POOL miss; SMMT miss |
+| `ohlc_hot_h1` | long | — | INFY miss; TYL miss; INTA miss; POOL miss; BMBL miss; WIT miss; GLOB miss; ROP miss |
+| `ohlc_hot_h3` | long | — | INFY miss; TYL miss; INTA miss; POOL miss; BMBL miss; WIT miss; GLOB miss; ROP miss |
+| `ohlc_hot_h5` | long | — | INFY miss; TYL miss; INTA miss; POOL miss; BMBL miss; WIT miss; GLOB miss; ROP miss |
+| `union_vol_g_h1` | long | — | EGG miss |
+| `union_vol_g_h3` | long | — | EGG miss |
+| `union_ab_g_h1` | long | — | AXP miss; PRMB miss; NVTS miss; EPR miss; EGG miss; KURA miss; DGX miss; ACN miss |
+| `union_ab_g_h3` | long | — | AXP miss; PRMB miss; NVTS miss; EPR miss; EGG miss; KURA miss; DGX miss; ACN miss |
+| `union_join_g_h1` | long | — | AXP miss; NEM miss; PRMB miss; DGX miss; ACN miss; SMMT miss; QTTB miss; TLSA miss |
+| `union_join_g_h3` | long | — | AXP miss; NEM miss; PRMB miss; DGX miss; ACN miss; SMMT miss; QTTB miss; TLSA miss |
+| `union_join_present_h1` | long | — | AXP miss; INFY miss; NEM miss; PRMB miss; NVTS miss; EPR miss; EGG miss; KURA miss |
+| `union_join_present_h3` | long | — | AXP miss; INFY miss; NEM miss; PRMB miss; NVTS miss; EPR miss; EGG miss; KURA miss |
+| `union_news_g_h1` | long | — | NVTS miss; AMX miss |
+| `union_news_g_h3` | long | — | NVTS miss; AMX miss |
+| `union_news_present_h1` | long | — | AXP miss; INFY miss; NEM miss; PRMB miss; NVTS miss; EPR miss; EGG miss; KURA miss |
+| `union_news_present_h3` | long | — | AXP miss; INFY miss; NEM miss; PRMB miss; NVTS miss; EPR miss; EGG miss; KURA miss |
+| `union_blue_h1` | long | — | PRMB miss; KURA miss; DGX miss; ANGI miss; BMBL miss; SMMT miss; ACRS miss; RCKT miss |
+| `union_blue_h3` | long | — | PRMB miss; KURA miss; DGX miss; ANGI miss; BMBL miss; SMMT miss; ACRS miss; RCKT miss |
+| `union_last_green_h1` | long | — | AXP miss; INFY miss; NEM miss; PRMB miss; EPR miss; EGG miss; KURA miss; DGX miss |
+| `union_last_green_h3` | long | — | AXP miss; INFY miss; NEM miss; PRMB miss; EPR miss; EGG miss; KURA miss; DGX miss |
+| `union_last_red_h1` | long | — | NVTS miss; NET miss; NBP miss; ENHA miss |
+| `union_last_red_h3` | long | — | NVTS miss; NET miss; NBP miss; ENHA miss |
+| `union_candle_h1` | long | — | AXP miss; INFY miss; NEM miss; PRMB miss; EPR miss; EGG miss; DGX miss; ANGI miss |
+| `union_candle_h3` | long | — | AXP miss; INFY miss; NEM miss; PRMB miss; EPR miss; EGG miss; DGX miss; ANGI miss |
+| `union_coil_off_h1` | long | — | AXP miss; INFY miss; PRMB miss; EPR miss; DGX miss; ANGI miss; ACRS miss; AURA miss |
+| `union_coil_off_h3` | long | — | AXP miss; INFY miss; PRMB miss; EPR miss; DGX miss; ANGI miss; ACRS miss; AURA miss |
+| `union_earn_react_h1` | long | — | AXP miss; INFY miss; NEM miss |
+| `union_earn_react_h3` | long | — | AXP miss; INFY miss; NEM miss |
+| `union_e_fresh_h1` | long | — | AXP miss; INFY miss; NEM miss; DGX miss |
+| `union_e_fresh_h3` | long | — | AXP miss; INFY miss; NEM miss; DGX miss |
+| `union_break10_h1` | long | — | INFY miss; EPR miss; EGG miss; DGX miss; ACN miss; AMX miss; ARHS miss; CSGP miss |
+| `union_break10_h3` | long | — | INFY miss; EPR miss; EGG miss; DGX miss; ACN miss; AMX miss; ARHS miss; CSGP miss |
+| `union_rsi_os_h1` | long | — | DGX miss |
+| `union_rsi_os_h3` | long | — | DGX miss |
+| `union_macd_up_h1` | long | — | AXP miss; INFY miss; NEM miss; PRMB miss; EPR miss; EGG miss; DGX miss; ANGI miss |
+| `union_macd_up_h3` | long | — | AXP miss; INFY miss; NEM miss; PRMB miss; EPR miss; EGG miss; DGX miss; ANGI miss |
+| `union_macd_xup_h1` | long | — | ANGI miss |
+| `union_macd_xup_h3` | long | — | ANGI miss |
+| `union_flow_in_h1` | long | — | NET miss |
+| `union_flow_in_h3` | long | — | NET miss |
+| `union_vol_g_h5` | long | — | EGG miss |
+| `union_coil_off_h5` | long | — | AXP miss; INFY miss; PRMB miss; EPR miss; DGX miss; ANGI miss; ACRS miss; AURA miss |
+| `union_last_green_h5` | long | — | AXP miss; INFY miss; NEM miss; PRMB miss; EPR miss; EGG miss; KURA miss; DGX miss |
+| `union_news_g_h5` | long | — | NVTS miss; AMX miss |
+| `union_rsi_os_h5` | long | — | DGX miss |
+| `union_flow_in_h5` | long | — | NET miss |
+| `union_news_pack_h1` | long | — | AMX miss |
+| `union_news_head_h1` | long | — | NVTS miss |
+| `union_news_or_h1` | long | — | NVTS miss; AMX miss |
+| `union_news_g_cond_h1` | long | — | NVTS miss; AMX miss |
+| `union_news_or_net2_h1` | long | — | AMX miss |
+| `union_news_or_net3_h1` | long | — | AMX miss |
+| `union_news_or_net4_h1` | long | — | AMX miss |
+| `union_news_pack_net3_h1` | long | — | AMX miss |
+| `union_news_pack_net2_h1` | long | — | AMX miss |
+| `union_news_pack_h3` | long | — | AMX miss |
+| `union_news_head_h3` | long | — | NVTS miss |
+| `union_news_or_h3` | long | — | NVTS miss; AMX miss |
+| `union_news_g_cond_h3` | long | — | NVTS miss; AMX miss |
+| `union_news_or_net2_h3` | long | — | AMX miss |
+| `union_news_or_net3_h3` | long | — | AMX miss |
+| `union_news_or_net4_h3` | long | — | AMX miss |
+| `union_news_pack_net3_h3` | long | — | AMX miss |
+| `union_news_pack_net2_h3` | long | — | AMX miss |
+| `union_news_or_net4_rw_h1` | long | — | AMX miss |
+| `union_news_or_net4_conv_h1` | long | — | AMX miss |
+| `union_news_g_conv_h1` | long | — | NVTS miss; AMX miss |
+| `union_news_g_conv_h3` | long | — | NVTS miss; AMX miss |
+| `short_news_head_h3` | short | BAH @—; KD @—; CTSH @— | — |
+| `short_news_or_h3` | short | BAH @—; KD @—; CTSH @— | — |
+| `union_vol_ab_h1` | long | — | EGG miss |
+| `union_vol_ab_h3` | long | — | EGG miss |
+| `union_e_green_h1` | long | — | AXP miss; INFY miss; NEM miss |
+| `union_e_green_h3` | long | — | AXP miss; INFY miss; NEM miss |
+| `probable_probable_ok_h1` | long | — | PRMB miss; EPR miss; SMMT miss; ACRS miss |
+| `probable_probable_ok_h3` | long | — | PRMB miss; EPR miss; SMMT miss; ACRS miss |
+| `union_vol_green_h1` | long | — | EGG miss |
+| `union_vol_green_h3` | long | — | EGG miss |
+| `union_coil_green_h1` | long | — | AXP miss; INFY miss; PRMB miss; EPR miss; DGX miss; ANGI miss; ACRS miss |
+| `union_coil_green_h3` | long | — | AXP miss; INFY miss; PRMB miss; EPR miss; DGX miss; ANGI miss; ACRS miss |
+| `union_blue_coil_h1` | long | — | PRMB miss; KURA miss; DGX miss; ANGI miss; BMBL miss; SMMT miss; ACRS miss; RCKT miss |
+| `union_blue_coil_h3` | long | — | PRMB miss; KURA miss; DGX miss; ANGI miss; BMBL miss; SMMT miss; ACRS miss; RCKT miss |
+| `union_rsi_os_macd_h1` | long | — | DGX miss |
+| `union_rsi_os_macd_h3` | long | — | DGX miss |
+| `ohlc_hot_coil_h1` | long | — | INFY miss; BMBL miss |
+| `union_hot_score_h1` | long | — | AXP miss; INFY miss; NEM miss; BMBL miss; ACN miss; EGG miss; DGX miss; EPR miss |
+| `union_hot_score_h3` | long | — | AXP miss; INFY miss; NEM miss; BMBL miss; ACN miss; EGG miss; DGX miss; EPR miss |
+| `union_candle_score_h1` | long | — | AXP miss; INFY miss; NEM miss; EGG miss; ACN miss; PRMB miss; DGX miss; ANGI miss |
+| `union_candle_score_h3` | long | — | AXP miss; INFY miss; NEM miss; EGG miss; ACN miss; PRMB miss; DGX miss; ANGI miss |
+| `union_ret_5_h1` | long | — | AXP miss; INFY miss; NEM miss; ACN miss; EGG miss; PRMB miss; ANGI miss; EPR miss |
+| `union_ret_5_h3` | long | — | AXP miss; INFY miss; NEM miss; ACN miss; EGG miss; PRMB miss; ANGI miss; EPR miss |
+| `union_cond_h1` | long | — | AXP miss; INFY miss; NEM miss; DGX miss; KURA miss; PRMB miss; ACN miss; EGG miss |
+| `union_cond_h3` | long | — | AXP miss; INFY miss; NEM miss; DGX miss; KURA miss; PRMB miss; ACN miss; EGG miss |
+| `union_w_hot_cond_h1` | long | — | AXP miss; INFY miss; NEM miss; BMBL miss; ACN miss; DGX miss; EGG miss; EPR miss |
+| `union_w_hot_cond_h3` | long | — | AXP miss; INFY miss; NEM miss; BMBL miss; ACN miss; DGX miss; EGG miss; EPR miss |
+| `union_w_hot_candle_h1` | long | — | AXP miss; INFY miss; NEM miss; ACN miss; EGG miss; DGX miss; BMBL miss; PRMB miss |
+| `union_w_hot_candle_h3` | long | — | AXP miss; INFY miss; NEM miss; ACN miss; EGG miss; DGX miss; BMBL miss; PRMB miss |
+| `union_rsi_h1` | long | — | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss; ACN miss; ANGI miss; KURA miss |
+| `union_rsi_h3` | long | — | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss; ACN miss; ANGI miss; KURA miss |
+| `union_macd_hist_h1` | long | — | AXP miss; INFY miss; NEM miss; ACN miss; DGX miss; BMBL miss; PRMB miss; EPR miss |
+| `union_macd_hist_h3` | long | — | AXP miss; INFY miss; NEM miss; ACN miss; DGX miss; BMBL miss; PRMB miss; EPR miss |
+| `union_hot_n4_h1` | long | — | BMBL miss; LQDA miss; KLRA miss; ACN miss |
+| `union_hot_n4_holdup` | long | — | BMBL miss; LQDA miss; KLRA miss; ACN miss |
+| `union_hot_n12_h1` | long | — | AXP miss; INFY miss; NEM miss; BMBL miss; ACN miss; EGG miss; DGX miss; EPR miss; PRMB miss; ANGI miss; KURA miss; NVTS miss |
+| `union_cond_n4_h3` | long | — | AXP miss; INFY miss; NEM miss; DGX miss |
+| `union_h3_exit_alarm` | long | — | AXP miss; INFY miss; NEM miss; PRMB miss; NVTS miss; EPR miss; EGG miss; KURA miss |
+| `union_h5_exit_alarm` | long | — | AXP miss; INFY miss; NEM miss; PRMB miss; NVTS miss; EPR miss; EGG miss; KURA miss |
+| `union_h3_exit_red` | long | — | AXP miss; INFY miss; NEM miss; PRMB miss; EPR miss; EGG miss; KURA miss; DGX miss |
+| `union_h3_exit_news_r` | long | — | AXP miss; INFY miss; NEM miss; PRMB miss; NVTS miss; EPR miss; EGG miss; KURA miss |
+| `coil_h3_exit_alarm` | long | — | AXP miss; INFY miss; PRMB miss; EPR miss; KURA miss; DGX miss; ANGI miss; BMBL miss |
+| `short_alarm_h1` | short | ITW @—; DBRG @—; GLND @—; TYL @—; INTA @—; BAH @—; POOL @—; TRU @— | — |
+| `short_alarm_h3` | short | ITW @—; DBRG @—; GLND @—; TYL @—; INTA @—; BAH @—; POOL @—; TRU @— | — |
+| `short_news_r_h1` | short | BAH @—; KD @—; CTSH @— | — |
+| `short_news_r_h3` | short | BAH @—; KD @—; CTSH @— | — |
+| `short_extended_h1` | short | POOL @—; WIT @—; GLOB @—; EFX @—; KD @—; ACN @— | — |
+| `short_extended_h3` | short | POOL @—; WIT @—; GLOB @—; EFX @—; KD @—; ACN @— | — |
+| `short_last_red_h1` | short | NVTS @—; TBBB @—; BBD @—; NET @—; PDFS @—; AIP @—; CXW @—; MX @— | — |
+| `short_last_red_h3` | short | NVTS @—; TBBB @—; BBD @—; NET @—; PDFS @—; AIP @—; CXW @—; MX @— | — |
+| `short_rsi_ob_h1` | short | ITW @—; EPR @—; EGG @—; TBBB @—; MX @— | — |
+| `short_rsi_ob_h3` | short | ITW @—; EPR @—; EGG @—; TBBB @—; MX @— | — |
+| `short_macd_dn_h1` | short | GLND @—; NVTS @—; KURA @—; BBD @—; NET @—; SMMT @—; PDFS @—; AIP @— | — |
+| `short_macd_dn_h3` | short | GLND @—; NVTS @—; KURA @—; BBD @—; NET @—; SMMT @—; PDFS @—; AIP @— | — |
+| `short_news_r_macd_h3` | short | BAH @—; KD @—; CTSH @— | — |
+| `flatten_h5_rankw` | long | — | NET miss |
+| `flatten_h5_topheavy` | long | — | NET miss |
+| `flatten_h5_half` | long | — | NET miss |
+| `flatten_h5_time` | long | — | NET miss |
+| `flatten_h5_cut` | long | — | NET miss |
+| `flatten_h5_trail` | long | — | NET miss |
+| `flatten_h5_sboost` | long | — | NET miss |
+| `flatten_h5_sizeup` | long | — | NET miss |
+| `flatten_h3_rankw` | long | — | NET miss |
+| `flatten_h3_topheavy` | long | — | NET miss |
+| `flatten_h3_half` | long | — | NET miss |
+| `flatten_h3_time` | long | — | NET miss |
+| `flatten_h3_cut` | long | — | NET miss |
+| `flatten_h3_trail` | long | — | NET miss |
+| `flatten_h3_sboost` | long | — | NET miss |
+| `flatten_h3_sizeup` | long | — | NET miss |
+| `union_h5_rankw` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h5_topheavy` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h5_half` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h5_time` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h5_cut` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h5_trail` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h5_sboost` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h5_sizeup` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h3_rankw` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h3_topheavy` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h3_half` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h3_time` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h3_cut` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h3_trail` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h3_sboost` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h3_sizeup` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h1_rankw` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h1_topheavy` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h1_half` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h1_time` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h1_cut` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h1_trail` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h1_sboost` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_h1_sizeup` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `flatten_h5_s8` | long | — | NET miss |
+| `union_clk_mom_break_peer_h1` | long | — | AXP miss; INFY miss; EPR miss; PRMB miss; ANGI miss |
+| `union_clk_fresh_cat_coil_h1` | long | — | AXP miss; INFY miss; NEM miss; NVTS miss |
+| `short_clk_ext_veto_h3` | short | TRU @—; TBBB @—; KLRA @—; LQDA @— | — |
+| `union_clk_hold_vs_sector_h1` | long | — | AXP miss; INFY miss; ACN miss; EGG miss |
+| `union_clk_nr7_mom_h1` | long | — | AXP miss; BMBL miss; KURA miss |
+| `combo_seh_333_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss |
+| `combo_seh_333_split` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss |
+| `combo_seh_502525_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss |
+| `combo_seh_502525_split` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss |
+| `combo_seh_404020_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss |
+| `combo_seh_403525_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss |
+| `combo_seh_451540_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss |
+| `combo_seh_601525_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss |
+| `combo_se_5050_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_se_7030_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_eh_5050_shared` | long | — | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss |
+| `combo_sh_5050_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; BMBL miss |
+| `combo_sh_macd_5050_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; BMBL miss |
+| `combo_se_5050_skip` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_seh_333_skip` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss |
+| `combo_seh_333_weather` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss |
+| `combo_se_5050_weather` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_se_5050_split` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_es_8020_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_es_9010_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_ehs_702010_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss |
+| `combo_ehs_601525_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss |
+| `combo_ps_5050_shared` | mixed | BAH @—; KD @—; CTSH @— | AMX miss |
+| `combo_ps_7030_shared` | mixed | BAH @—; KD @—; CTSH @— | AMX miss |
+| `combo_p2s_5050_shared` | mixed | BAH @—; KD @—; CTSH @— | AMX miss |
+| `combo_oh_5050_shared` | long | — | AXP miss; INFY miss; NEM miss; BMBL miss |
+| `combo_sn_5050_shared` | mixed | BAH @—; KD @—; CTSH @— | NVTS miss; AMX miss |
+| `combo_sj_5050_shared` | mixed | BAH @—; KD @—; CTSH @— | — |
+| `combo_sf_5050_shared` | mixed | BAH @—; KD @—; CTSH @— | NET miss |
+| `combo_snj_333_shared` | mixed | BAH @—; KD @—; CTSH @— | NVTS miss; AMX miss |
+| `combo_nse_333_shared` | mixed | BAH @—; KD @—; CTSH @— | NVTS miss; AMX miss; AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_jse_333_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_fse_333_shared` | mixed | BAH @—; KD @—; CTSH @— | NET miss; AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_e1s_7030_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_ers_7030_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss |
+| `combo_eh_7030_shared` | long | — | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss |
+| `combo_fh_7030_shared` | long | — | NET miss; AXP miss; INFY miss; NEM miss; BMBL miss |
+| `combo_fe_5050_shared` | long | — | NET miss; AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_fes_403030_shared` | mixed | BAH @—; KD @—; CTSH @— | NET miss; AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_se1_5050_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_ser_5050_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss |
+| `combo_en_5050_shared` | long | — | AXP miss; INFY miss; NEM miss; DGX miss; NVTS miss; AMX miss |
+| `combo_ej_5050_shared` | long | — | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_ef_5050_shared` | long | — | AXP miss; INFY miss; NEM miss; DGX miss; NET miss |
+| `combo_ee1_5050_shared` | long | — | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_eer_5050_shared` | long | — | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_hn_5050_shared` | long | — | AXP miss; INFY miss; NEM miss; BMBL miss; NVTS miss; AMX miss |
+| `combo_hj_5050_shared` | long | — | AXP miss; INFY miss; NEM miss; BMBL miss |
+| `combo_hf_5050_shared` | long | — | AXP miss; INFY miss; NEM miss; BMBL miss; NET miss |
+| `combo_he1_5050_shared` | long | — | AXP miss; INFY miss; NEM miss; BMBL miss; DGX miss |
+| `combo_her_5050_shared` | long | — | AXP miss; INFY miss; NEM miss; BMBL miss |
+| `combo_nj_5050_shared` | long | — | NVTS miss; AMX miss |
+| `combo_nf_5050_shared` | long | — | NVTS miss; AMX miss; NET miss |
+| `combo_ne1_5050_shared` | long | — | NVTS miss; AMX miss; AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_ner_5050_shared` | long | — | NVTS miss; AMX miss; AXP miss; INFY miss; NEM miss |
+| `combo_jf_5050_shared` | long | — | NET miss |
+| `combo_je1_5050_shared` | long | — | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_jer_5050_shared` | long | — | AXP miss; INFY miss; NEM miss |
+| `combo_fe1_5050_shared` | long | — | NET miss; AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_fer_5050_shared` | long | — | NET miss; AXP miss; INFY miss; NEM miss |
+| `combo_e1er_5050_shared` | long | — | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_se_3070_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_sh_7030_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; BMBL miss |
+| `combo_sh_3070_shared` | mixed | BAH @—; KD @—; CTSH @— | AXP miss; INFY miss; NEM miss; BMBL miss |
+| `combo_eh_3070_shared` | long | — | AXP miss; INFY miss; NEM miss; DGX miss; BMBL miss |
+| `combo_sn_7030_shared` | mixed | BAH @—; KD @—; CTSH @— | NVTS miss; AMX miss |
+| `combo_sn_3070_shared` | mixed | BAH @—; KD @—; CTSH @— | NVTS miss; AMX miss |
+| `combo_sj_7030_shared` | mixed | BAH @—; KD @—; CTSH @— | — |
+| `combo_sj_3070_shared` | mixed | BAH @—; KD @—; CTSH @— | — |
+| `combo_sf_7030_shared` | mixed | BAH @—; KD @—; CTSH @— | NET miss |
+| `combo_sf_3070_shared` | mixed | BAH @—; KD @—; CTSH @— | NET miss |
+| `combo_en_7030_shared` | long | — | AXP miss; INFY miss; NEM miss; DGX miss; NVTS miss; AMX miss |
+| `combo_en_3070_shared` | long | — | AXP miss; INFY miss; NEM miss; DGX miss; NVTS miss; AMX miss |
+| `combo_ef_7030_shared` | long | — | AXP miss; INFY miss; NEM miss; DGX miss; NET miss |
+| `combo_ef_3070_shared` | long | — | AXP miss; INFY miss; NEM miss; DGX miss; NET miss |
+| `combo_hn_7030_shared` | long | — | AXP miss; INFY miss; NEM miss; BMBL miss; NVTS miss; AMX miss |
+| `combo_hn_3070_shared` | long | — | AXP miss; INFY miss; NEM miss; BMBL miss; NVTS miss; AMX miss |
+| `combo_ee1_7030_shared` | long | — | AXP miss; INFY miss; NEM miss; DGX miss |
+| `combo_ee1_3070_shared` | long | — | AXP miss; INFY miss; NEM miss; DGX miss |
+| `union_hot_n4_holdup_preopen` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
+| `union_hot_n4_h1_preopen` | long | — | AXP miss; INFY miss; ITW miss; DBRG miss; GLND miss; TYL miss; INTA miss; BAH miss |
 
 Scoop trigger = official open + session low (Elite live only when the low has not printed). Close / last / Theme Radar never trigger. #236 KILL of global short-only / dip-scoop stands — this table is display/paper only.
 

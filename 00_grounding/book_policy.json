@@ -1,7 +1,7 @@
 {
-  "version": 15,
-  "updated": "2026-09-17T07:14:42.975236-04:00",
-  "asof": "2026-09-17",
+  "version": 16,
+  "updated": "2026-10-23T07:42:11.522622-04:00",
+  "asof": "2026-10-23",
   "weights": {
     "1d": [
       0.12,
@@ -46,7 +46,7 @@
   },
   "sell_excludes_addons": false,
   "heat_scale": 0.25,
-  "risk_off_entry_scale": 0.5,
+  "risk_off_entry_scale": 1.0,
   "risk_scaling_effective": "2026-08-25",
   "objective": "mean top-10 buy fwd return in excess of liquid-universe median",
   "guardrails": {
@@ -263,6 +263,20 @@
       "sell": "core=0.236pp full=0.777pp \u2192 sell_excludes_addons=False",
       "risk": "book loses -0.33% on risk-off days \u2192 keep entry scale 0.5",
       "heat": "hold 0.25 \u2014 best 0.00, improvement 0.048pp, wins 25%"
+    },
+    {
+      "version": 16,
+      "asof": "2026-10-23",
+      "decisions": {
+        "1d": "hold \u2014 wins only 39% of dates (< 60%)",
+        "3d": "hold \u2014 wins only 36% of dates (< 60%)",
+        "1w": "hold \u2014 wins only 30% of dates (< 60%)",
+        "2w": "hold \u2014 wins only 25% of dates (< 60%)",
+        "1m": "hold \u2014 wins only 25% of dates (< 60%)"
+      },
+      "sell": "core=3.295pp full=2.564pp \u2192 sell_excludes_addons=False",
+      "risk": "book still makes +0.11% on risk-off days \u2192 scale back to 1.0 (cash drag not justified)",
+      "heat": "hold 0.25 \u2014 best 0.00, improvement 0.038pp, wins 32%"
     }
   ]
 }
