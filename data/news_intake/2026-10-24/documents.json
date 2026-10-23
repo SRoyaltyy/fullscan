@@ -1,5 +1,166 @@
 [
   {
+    "title": "John Healey to give £20bn boost to UK’s business lender and infrastructure bank",
+    "url": "https://www.ft.com/content/4111c10c-c13c-4620-8ce7-df3b4f9324f1?syn-25a6b1a6=1",
+    "publisher": "",
+    "body": "Treasury predicts extra funding will create and support 100,000 jobs as chancellor seeks to exploit flexibility in government’s fiscal rules",
+    "published_at": "2026-10-23T23:01:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 23:01:00 GMT",
+    "source": "rss_ft_world",
+    "primary": false,
+    "query_classes": [],
+    "query": "",
+    "id": "94e65c71af283e18b6d21218",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "rss_ft_world",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "feed_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
+  },
+  {
+    "title": "Kenya announces second Ebola death, says ‘no evidence’ of community spread",
+    "url": "https://www.aljazeera.com/news/2026/10/23/kenya-announces-second-ebola-death-says-no-evidence-of-community-spread?traffic_source=rss",
+    "publisher": "",
+    "body": "The Ebola outbreak has now spread to four countries across eastern, central ⁠⁠and western Africa.",
+    "published_at": "2026-10-23T22:33:48+00:00",
+    "published_raw": "Fri, 23 Oct 2026 22:33:48 +0000",
+    "source": "rss_aljazeera_economy",
+    "primary": false,
+    "query_classes": [],
+    "query": "",
+    "id": "c97917ca683ccda5df3c0085",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "rss_aljazeera_economy",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "feed_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
+  },
+  {
+    "title": "Why is Israel increasing its presence in the Balkans?",
+    "url": "https://www.aljazeera.com/video/newsfeed/2026/10/23/why-is-israel-increasing-its-presence-in-the-balkans?traffic_source=rss",
+    "publisher": "",
+    "body": "In the Balkans, leaders are deepening ties with Israel through defence, surveillance, and political backing. But why?",
+    "published_at": "2026-10-23T22:01:52+00:00",
+    "published_raw": "Fri, 23 Oct 2026 22:01:52 +0000",
+    "source": "rss_aljazeera_economy",
+    "primary": false,
+    "query_classes": [],
+    "query": "",
+    "id": "9f60e46a107e791b48c89b3d",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "rss_aljazeera_economy",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "feed_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
+  },
+  {
+    "title": "Will Anthropic pull off a November IPO? Time is running out to file key paperwork.",
+    "url": "https://www.marketwatch.com/story/will-anthropic-pull-off-a-november-ipo-time-is-running-out-to-file-key-paperwork-52677343?mod=mw_rss_topstories",
+    "publisher": "",
+    "body": "Joel Saget/Agence France-Presse/Getty Images",
+    "published_at": "2026-10-23T22:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 22:00:00 GMT",
+    "source": "rss_marketwatch_top",
+    "primary": false,
+    "query_classes": [],
+    "query": "",
+    "id": "73b5f4e48c1f2c97750494d0",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "rss_marketwatch_top",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "feed_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
+  },
+  {
+    "title": "Investors piled a record sum into a leveraged semiconductor ETF last week. Things didn’t work out.",
+    "url": "https://www.marketwatch.com/story/investors-piled-a-record-sum-into-a-leveraged-semiconductor-etf-last-week-things-didnt-work-out-4680b2f3?mod=mw_rss_topstories",
+    "publisher": "",
+    "body": "Getty Images",
+    "published_at": "2026-10-23T21:46:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 21:46:00 GMT",
+    "source": "rss_marketwatch_top",
+    "primary": false,
+    "query_classes": [],
+    "query": "",
+    "id": "7efca453cece23777bca2ffc",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "rss_marketwatch_top",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "feed_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
+  },
+  {
+    "title": "Masked gunmen kill seven in attack on church funeral in Jordan",
+    "url": "https://www.aljazeera.com/video/newsfeed/2026/10/23/aje-onl-nf_masked-gunmen-kill-seven-in-attack-on-church-jordan-231026?traffic_source=rss",
+    "publisher": "",
+    "body": "At least seven people were killed and 34 wounded after two masked gunmen opened fire at a church in Karak, Jordan.",
+    "published_at": "2026-10-23T21:27:32+00:00",
+    "published_raw": "Fri, 23 Oct 2026 21:27:32 +0000",
+    "source": "rss_aljazeera_economy",
+    "primary": false,
+    "query_classes": [],
+    "query": "",
+    "id": "84100e574b083cb75d51ed06",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "rss_aljazeera_economy",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "feed_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
+  },
+  {
+    "title": "The mobile ambitions of SpaceX are hitting telecom stocks again. Here’s what the latest developments mean.",
+    "url": "https://www.marketwatch.com/story/the-mobile-ambitions-of-spacex-see-telecom-stocks-get-hit-again-what-the-latest-developments-mean-9a4159b5?mod=mw_rss_topstories",
+    "publisher": "",
+    "body": "Getty Images",
+    "published_at": "2026-10-23T21:11:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 21:11:00 GMT",
+    "source": "rss_marketwatch_top",
+    "primary": false,
+    "query_classes": [],
+    "query": "",
+    "id": "f20442e9962a5a21d3a5d183",
+    "first_seen": "2026-10-23T11:41:09.412725+00:00",
+    "observations": [
+      {
+        "source": "rss_marketwatch_top",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "feed_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
+  },
+  {
     "title": "Form 4 CervoMed Inc. For: Oct 22 Filed by: De Rosch Mark - StreetInsider",
     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQV2JyMDBLbmtrZkh1NGxlQUE2c08tT2E0alNMX3ZxZTdJeHhaRVZiYU51WWVsQVljSVdEQXlnYlpKY25oZjU0SHhtdlF0c0g0cW5CUEJZS0N1VTRpZ0E2c2RmalBxcGx1eFZiWk5EV1lVVDloNkNpcEk1YUk0a3dUNE1BUTlNRE01RmlQaWVPV0R3T0tuTVNGN0hOOGZiSVhPZ3FSd2RuRC1YWGdINDgwMmRmRm0wem8?oc=5",
     "publisher": "StreetInsider",
@@ -97,7 +258,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "ODPEM Urges Jamaicans Not to Overlook Earthquake Preparedness - Jamaica Information Service",
@@ -484,6 +645,29 @@
     "last_seen": "2026-10-23T21:03:29.374508+00:00"
   },
   {
+    "title": "‘Generation Right’: Israeli youth show strong support for the right",
+    "url": "https://www.aljazeera.com/news/2026/10/23/generation-right-israeli-youth-show-strong-support-for-the-right?traffic_source=rss",
+    "publisher": "",
+    "body": "Some three quarters of Jewish first-time voters identify as right or centre-right, higher than rest of Israeli society.",
+    "published_at": "2026-10-23T20:52:32+00:00",
+    "published_raw": "Fri, 23 Oct 2026 20:52:32 +0000",
+    "source": "rss_aljazeera_economy",
+    "primary": false,
+    "query_classes": [],
+    "query": "",
+    "id": "db3ec32bb8876da8d2f40301",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "rss_aljazeera_economy",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "feed_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
+  },
+  {
     "title": "Melania Trump Brokers Localized Ceasefire in Ukrainian City of Oleshky - The Well News",
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPZEZ2RW9XLVkweXl1VDNRWHdLV2hNTTZYSVRQcEt4eHJlcFNkR2tmRlo5dnV3UU9tcndUSmFVNDhiOFpRVndKSm0xdW9uWmktN1JEdzg4b3JKTUpncmtLb0wzai05VUZPOGxQVnZueXl6NExiSy1sOHRDOUYtcWhHT1kyLW0yYkI2ZWR2bi1ndWxEVXVha0k2T3RaM2VJZGhxLWpOdnppc3JGRjlGeUE?oc=5",
     "publisher": "The Well News",
@@ -689,7 +873,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Some Republicans are opposing Trump on tariffs. Maine’s Susan Collins just got him to back down on Canadian levies. - MarketWatch",
@@ -1146,6 +1330,52 @@
     "last_seen": "2026-10-23T21:03:29.374508+00:00"
   },
   {
+    "title": "FCC Democrat warns broadcasters to resist Trump’s media pressure tactics",
+    "url": "https://www.aljazeera.com/economy/2026/10/23/fcc-democrat-warns-broadcasters-to-resist-trumps-media-pressure-tactics?traffic_source=rss",
+    "publisher": "",
+    "body": "Democrat Anna Gomez warns broadcasters against yielding to the Trump-era FCC's claims of fake polls and news distortions.",
+    "published_at": "2026-10-23T20:44:14+00:00",
+    "published_raw": "Fri, 23 Oct 2026 20:44:14 +0000",
+    "source": "rss_aljazeera_economy",
+    "primary": false,
+    "query_classes": [],
+    "query": "",
+    "id": "192d788d3212d3151ee835c4",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "rss_aljazeera_economy",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "feed_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
+  },
+  {
+    "title": "Time ‘running out’ to reach Yemen’s Taiz amid deepening crisis, UN says",
+    "url": "https://www.aljazeera.com/news/2026/10/23/time-running-out-to-reach-yemens-taiz-amid-deepening-crisis-un-says?traffic_source=rss",
+    "publisher": "",
+    "body": "More than 800,000 people have been cut off from aid since the Houthis encircled Taiz city in early October.",
+    "published_at": "2026-10-23T20:44:02+00:00",
+    "published_raw": "Fri, 23 Oct 2026 20:44:02 +0000",
+    "source": "rss_aljazeera_economy",
+    "primary": false,
+    "query_classes": [],
+    "query": "",
+    "id": "09e1f1de62449edd04b4b8e4",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "rss_aljazeera_economy",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "feed_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
+  },
+  {
     "title": "Wall Street loses ground under pressure from rising oil prices - The Frederick News-Post",
     "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOR2o3a25BcEVReVlTWjN6a0ZlVHAxUFJVTkFLMkE1SkxkZmM2Q0lYQ1RaYmt0ZmFWQnY3LTZrSWRkZkZiRjE2ZWZhT2d1T0xRNzJiSHpZcnd3TnlBWmJnSlRVWnBwMFk0bXVoTTg0SlJSUllCTXBvc3Q4S3Vjc0poWmRGODNiamQ0bDFDVnJ3ejR4Y1JJbGVRY3Y0cWZtOFZsWGdkTHlKWktta0I3d1NRbDNyWjdsM09mQnRvMHJSZVlZYUtzemluVmNKR1dmX0JSc3VoaUd4a3NPV1M3eDV0SVlHMDRXRFJlZDNWVGRGczB6eTlHeDJhTnBFUEdNaWlTTEE?oc=5",
     "publisher": "The Frederick News-Post",
@@ -1201,6 +1431,29 @@
     ],
     "extraction_status": "feed_text",
     "last_seen": "2026-10-23T21:03:29.374508+00:00"
+  },
+  {
+    "title": "Why is the UK at the forefront of AI-driven job cuts?",
+    "url": "https://www.aljazeera.com/video/inside-story/2026/10/23/why-is-the-uk-at-the-forefront-of-ai-driven-job-cuts?traffic_source=rss",
+    "publisher": "",
+    "body": "AI-linked job losses in the UK are running at twice the rate of US and Germany.",
+    "published_at": "2026-10-23T20:43:47+00:00",
+    "published_raw": "Fri, 23 Oct 2026 20:43:47 +0000",
+    "source": "rss_aljazeera_economy",
+    "primary": false,
+    "query_classes": [],
+    "query": "",
+    "id": "20b66649d2ebf411d01b8b8f",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "rss_aljazeera_economy",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "feed_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Ashurst Perkins Coie Launches Houston Office - The Texas Lawbook",
@@ -1620,7 +1873,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Trump Intensifies Support for Ramaswamy Ad Despite GOP Blowback - Bloomberg",
@@ -1716,7 +1969,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Mississippi police officer resigns after fatal shooting of 1-year-old - WKYC",
@@ -2987,7 +3240,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "From tariffs to data centers, Michigan’s big economic stories | Marketplace Morning Report - WDET 101.9 FM",
@@ -3165,7 +3418,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Freed US citizen was tortured in Russian jail, former Ukrainian prisoners say",
@@ -3188,7 +3441,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "CTVA Stock Plunges As Vylor Spin-Off Triggers Massive Repricing - StocksToTrade",
@@ -3376,7 +3629,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Massachusetts High Court Rejects Presumed Harm in Trade Secret Injunction Cases - Holland & Knight",
@@ -4450,7 +4703,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "I want to pay off $4,500 in credit-card debt in 2 months. Is this possible?",
@@ -4473,7 +4726,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Powell teen’s parents hold ‘Day of Grace’ to honor daughter two years after her death - WVLT",
@@ -4588,7 +4841,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Russia, Ukraine agree to local ceasefire brokered by Melania Trump - JNS.org",
@@ -4742,7 +4995,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "SGEU members strike tentative six-year deal with employer - Country 600 CJWW",
@@ -5256,7 +5509,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Thermal Dynamics Launches New Cutmaster 90X And 110X - Marine Link",
@@ -5739,7 +5992,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "FDA approves subcutaneous induction regimen for AbbVie’s Skyrizi By Investing.com - Investing.com Canada",
@@ -8412,7 +8665,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "University Of Copenhagen Hit By Cyber Attack - Mirage News",
@@ -9302,7 +9555,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Municipal Bond Sales Cross $500 Billion Mark at Record Pace - Bloomberg.com",
@@ -9440,7 +9693,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Merck/Moderna's Melanoma Combination Therapy Delivers Promising Phase 3 Trial Results - Seeking Alpha",
@@ -9997,7 +10250,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Trump administration cancels some Canada tariffs, Sen. Susan Collins says - NBC News",
@@ -10972,7 +11225,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Energea commits $10M credit facility to Tesla Supercharger developer ChargedEV - Dealroom",
@@ -11871,7 +12124,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Ohio could decide control of the Senate. Its rural voters might decide the winner - NPR",
@@ -12619,7 +12872,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Exile Tibetan leader urges free access, open information on Nagchu earthquake disaster - Tibetan Review",
@@ -14675,7 +14928,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Mississippi officer who fatally shot 1-year-old Kohen Wiley resigns - Mezha.net",
@@ -15270,7 +15523,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Exclusive | Trump Expected to Remove Some Tariffs on Canada in Bid to Help Susan Collins - WSJ",
@@ -15343,7 +15596,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "ORAU launches new platform for emergency readiness - Oak Ridger",
@@ -15590,7 +15843,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Trump again invokes claim he has the ‘right’ to run for third term as president - The Guardian",
@@ -17165,7 +17418,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "The Case Against (Rate) Hiking - Policy Magazine",
@@ -17440,7 +17693,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Romania blames Russia after drone sinks ship in the Black Sea",
@@ -17463,7 +17716,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Hyundai Motor America Lobbies on EV Fees and Auto Tariffs - Legis1",
@@ -17968,7 +18221,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Peel Regional Police halt Crime Stoppers involvement after data breach - Brampton Guardian",
@@ -20078,7 +20331,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Lycia Therapeutics stock surges in IPO debut after pricing about $317.5M offering - Quartz",
@@ -20185,7 +20438,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "FDA approves hepatitis B shot that may let some patients stop all treatment - Medical Xpress",
@@ -20258,7 +20511,7 @@
       }
     ],
     "extraction_status": "fetch_failed",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T20:53:17.098461+00:00",
     "extraction_attempts": 2,
     "extraction_error": "HTTPError: HTTP Error 403: Forbidden"
@@ -27277,7 +27530,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Indiana Fever Make Major Leadership Announcement as Kelly Krauskopf Steps Down After Nearly 30 Years With Franchise - Yahoo Sports",
@@ -27479,7 +27732,7 @@
       }
     ],
     "extraction_status": "thin_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [],
     "publisher_published_at": null,
     "publisher_publication_status": "ambiguous_or_absent",
@@ -27970,7 +28223,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-23",
       "2026-10-23T16:00:00+00:00"
@@ -28311,7 +28564,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Mystic Alerts Act Signed Into Law to Expand Warnings Through Satellites - KLBJ-AM",
@@ -30053,7 +30306,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Tibet earthquake kills 16 and destroys hundreds of homes - The Independent",
@@ -31118,7 +31371,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Crown Castle Soars on SpaceX News as Record Oil Prices Plunge Delta Air Lines - marketscreener.com",
@@ -31673,7 +31926,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Hunter Foster, police officer who shot and killed Kohen Wiley, resigns - Yahoo",
@@ -32077,7 +32330,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "The Chill Brothers Acquires Bowles Heating and Cooling, Expanding West Texas HVAC Operations - citybiz",
@@ -32925,7 +33178,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Belgian court rules UEFA's homegrown player quotas are legal - Mundo Deportivo",
@@ -34912,7 +35165,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Mississippi officer resigns after bodycam shows him fire into car, killing 1-year-old - WCYB",
@@ -34962,7 +35215,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "When a 9.9% tax increase isn’t high enough | The lighter side of The News - Buffalo News",
@@ -39307,7 +39560,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Monroe County health officer resigns before scheduled hearing on her removal - Indiana Daily Student",
@@ -41214,7 +41467,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Massive 7.0 Earthquake Strikes Tibet Leaving Over A Dozen People Dead - Talk 650 KSTE",
@@ -41735,7 +41988,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T17:54:15.607828+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Apalachee head football coach resigns after reports of racially offensive language - Now Georgia",
@@ -41965,7 +42218,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Gold drops below $4,000 as ‘haven’ asset joins market sell-off - Financial Times",
@@ -44110,7 +44363,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Advancing Transit Cybersecurity, System Assurance, and Artificial Intelligence Governance - Passenger Transport",
@@ -44595,7 +44848,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Fever president steps down after career that saw franchise’s start, NBA pioneer. What we know - Yahoo Sports",
@@ -45482,7 +45735,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Moderna’s Stock Just Stumbled. Is It a Buy on the Dip? - Yahoo Finance",
@@ -45528,7 +45781,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T17:54:15.607828+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "New York cautiously advances a key clean heat technology - Syracuse.com",
@@ -52598,7 +52851,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "At least seven killed after gunmen open fire at church in Jordan",
@@ -60016,7 +60269,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Prominent semiconductor supplier lands incentives for $20M Round Rock expansion - The Business Journals",
@@ -62343,7 +62596,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "How Passive Investing Has Reshaped the Market - Bloomberg.com",
@@ -63073,7 +63326,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Burger King launches Hello Kitty and Friends kids meals - East Bay Times",
@@ -64057,7 +64310,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Investors pile into Ambani’s Jio IPO as bids top 13 times By Reuters - Investing.com",
@@ -65808,7 +66061,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-23T16:55:31-04:00"
     ],
@@ -66062,6 +66315,38 @@
     "last_seen": "2026-10-23T21:03:29.374508+00:00"
   },
   {
+    "title": "Deadly Arson Spree in Northeast Yields 25 Years in Prison for D.C. Man",
+    "url": "https://www.justice.gov/usao-dc/pr/deadly-arson-spree-northeast-yields-25-years-prison-dc-man",
+    "publisher": "",
+    "body": "Press Release Deadly Arson Spree in Northeast Yields 25 Years in Prison for D.C. Man Friday, October 23, 2026 Share Facebook X LinkedIn Email For Immediate Release U.S. Attorney's Office,               District of Columbia USADC.Media@usdoj.gov WASHINGTON – D’Aundrey Scott, 32, of Washington, D.C., was sentenced today to 25 years in prison for charges related to a spree of arsons, one of which killed of 62-year-old Darryl Finney, in May 2020, announced U.S. Attorney Jeanine Ferris Pirro. “D’Aundrey Scott deliberately set two men on fire in the middle of the night, killing Darryl Finney in an act of horrific violence,\" said U.S. Attorney Pirro. \"His actions were cruel, calculated, and utterly unconscionable. Now, he will spend the next 25 years behind prison walls, answering for his crimes.” Scott pleaded guilty to one count of second-degree murder and one count each of assault with a dangerous weapon, arson, and felony destruction of property, on August 14, 2026, before D.C. Superior Court Judge Todd Edelman. In addition to the 25-year prison sentence, Judge Edelman ordered Scott to serve five years of supervised release. According to court documents, at approximately 12:23 a.m., on May 13, 2020, Scott went on an arson spree. He first approached an adult male who was lying on the sidewalk in the 1300 block of H Street Northeast, Washington, D.C. The defendant ignited a small, flammable object and threw that burning object onto the man who kicked the object off, avoiding injury. Then at approximately 1:04 a.m., Scott approached a second male, Darryl Finney, who was sleeping on the sidewalk in the 900 block of H Street Northeast, Washington, D.C. The defendant ignited a small, flammable object and tossed it onto Mr. Finney. The defendant then splashed an ignitable liquid onto Mr. Finney, causing Mr. Finney and his personal effects to catch fire. Mr. Finney, who was engulfed in flames, managed to get up and walk toward H Street, where the Metropolitan Police Department and D.C. Fire and EMS responded to assist. The victim suffered second and third degree burns to multiple parts of his body and despite treatment at a local hospital, he died due to his injuries on May 15, 2020. Scott was arrested on May 19, 2020, and has been in custody since. Joining the announcement was Interim Chief Jeffery Carroll of the Metropolitan Police Department. In announcing the sentence, U.S. Attorney Pirro and Interim Chief Carroll commended the work of those who investigated the case from the Metropolitan Police Department. They also thanked Assistant U.S. Attorney Brian Ganjei, who prosecuted the case. 2020 CF1 004775 Contact USADC.Media@usdoj.gov Updated October 23, 2026 Topic Violent Crime Component USAO - District of Columbia",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "source": "official_doj",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "d9ad63c9e1a0fcf0171b035a",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "official_doj",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "page_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
+    "publisher_publication_candidates": [
+      "2026-10-23T17:38:54-04:00"
+    ],
+    "publisher_published_at": "2026-10-23T17:38:54-04:00",
+    "publisher_publication_status": "unique_structured_candidate",
+    "extraction_method": "html_article_candidate",
+    "extraction_attempted_at": "2026-10-23T23:18:57.137595+00:00",
+    "extraction_attempts": 1,
+    "retained_feed_body": "D’Aundrey Scott, 32, of Washington, D.C., was sentenced today to 25 years in prison for charges related to a spree of arsons, one of which killed of 62-year-old Darryl Finney, in May 2020, announced U.S. Attorney Jeanine Ferris Pirro."
+  },
+  {
     "title": "Illegal Alien from Dominican Republic Sentenced for Trafficking Methamphetamine, Fentanyl, and Cocaine",
     "url": "https://www.justice.gov/usao-me/pr/illegal-alien-dominican-republic-sentenced-trafficking-methamphetamine-fentanyl-and",
     "publisher": "",
@@ -66169,7 +66454,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-23T16:33:29-04:00"
     ],
@@ -66179,6 +66464,29 @@
     "extraction_attempted_at": "2026-10-23T21:03:47.008885+00:00",
     "extraction_attempts": 1,
     "retained_feed_body": "Adrian Thomas Knight Jr., of Chesapeake, was sentenced to two and a half years in prison for firearms crime in addition to a six-year sentence for fraud."
+  },
+  {
+    "title": "Suburban Chicago Man Sentenced to Two Years in Federal Prison for Staging Robberies To Help Others Fraudulently Apply for Immigration Visas",
+    "url": "https://www.justice.gov/usao-ndil/pr/suburban-chicago-man-sentenced-two-years-federal-prison-staging-robberies-help-others",
+    "publisher": "",
+    "body": "Individuals who posed as victims paid PARTH NAYI up to $30,000 apiece to participate in the scam.",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "source": "official_doj",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "ca875f1ad7a8b6b00d158e5b",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "official_doj",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "feed_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Vidalia man sentenced to 24 years in prison for firearms-related charge",
@@ -66211,6 +66519,29 @@
     "extraction_attempted_at": "2026-10-23T20:53:17.098485+00:00",
     "extraction_attempts": 1,
     "retained_feed_body": "A Toombs County man has been sentenced to federal prison after pleading guilty to a firearms-related charge."
+  },
+  {
+    "title": "Alien Charged for Illegal Voting",
+    "url": "https://www.justice.gov/usao-nv/pr/alien-charged-illegal-voting",
+    "publisher": "",
+    "body": "LAS VEGAS – An alien was charged today for illegally voting in a federal election in Nevada.",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "source": "official_doj",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "c866a0bff03bdf815e1bcf7f",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "official_doj",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "feed_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Capitol agenda: Bennie Thompson warns about Dems’ late bet - Politico",
@@ -66505,6 +66836,38 @@
     "last_seen": "2026-10-23T17:54:15.607828+00:00"
   },
   {
+    "title": "Glenvil Man Convicted for Conspiracy to Distribute Cocaine",
+    "url": "https://www.justice.gov/usao-ne/pr/glenvil-man-convicted-conspiracy-distribute-cocaine",
+    "publisher": "",
+    "body": "Press Release Glenvil Man Convicted for Conspiracy to Distribute Cocaine Friday, October 23, 2026 Share Facebook X LinkedIn Email For Immediate Release U.S. Attorney's Office,               District of Nebraska United States Attorney Lesley A. Woods announced that Luis Molina, 33, of Glenvil, Nebraska, was sentenced on October 22, 2026, in federal court in Lincoln, Nebraska, for conspiracy to distribute and possess with intent to distribute 500 grams or more of a mixture or substance containing cocaine and possession with intent to distribute 500 grams or more of a mixture or substance containing cocaine. United States District Judge Susan M. Bazis sentenced Molina to a total of 72 months’ imprisonment. There is no parole in the federal system. After Molina’s release from prison, he will begin a 5-year term of supervised release. On June 9, 2025, Molina and his co-defendants, Kenneth Palenzuela, Chanda Schroyer, and another individual, drove from Nebraska to Chicago in Schroyer’s vehicle.  Upon their arrival, Molina met with an individual to pick up a kilogram of cocaine.  On June 10, 2025, the group began their drive back to Nebraska.  After they entered the state, a Nebraska State Patrol trooper observed their vehicle speeding and conducted a traffic stop.  Molina was the driver, Palenzuela was in the passenger seat, and Schroyer and the other individual were in the backseat. The trooper smelled marijuana when he approached the vehicle and a search of the vehicle was conducted.  A small amount of marijuana was found in a purse in the front passenger area.  A black backpack was found under the seat at the back.  The backpack contained a clear cellophane bundle of suspected cocaine. The state crime laboratory confirmed that the bundle contained over one kilogram of cocaine.  A drug ledger was also found in the vehicle. Palenzuela pleaded guilty to possession with intent to distribute 500 grams or more of a mixture or substance containing cocaine on July 8, 2026. He was sentenced to 24 months’ imprisonment followed by 5 years of supervised release on October 15, 2026. Schroyer pleaded guilty to possession with intent to distribute 500 grams or more of a mixture or substance containing cocaine on January 14, 2026. She is set for sentencing on November 5, 2026. This case was investigated by the Nebraska State Patrol Commercial Interdiction Unit in Omaha Nebraska and the TRIDENT and CODE Task Forces which are made up of law enforcement agencies throughout a 22-county area in west-central/southwest Nebraska and includes the North Platte Police Department, Lexington Police Department, Dawson County Sheriff’s Office, Ogallala Police Department, Nebraska State Patrol, Federal Bureau of Investigation (FBI), and Homeland Security Investigations (HSI). Contact Amy Donato 402-661-3700 Updated October 23, 2026 Component USAO - Nebraska",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "source": "official_doj",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "abf82998552b8122e12afa87",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "official_doj",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "page_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
+    "publisher_publication_candidates": [
+      "2026-10-23T18:34:47-04:00"
+    ],
+    "publisher_published_at": "2026-10-23T18:34:47-04:00",
+    "publisher_publication_status": "unique_structured_candidate",
+    "extraction_method": "html_article_candidate",
+    "extraction_attempted_at": "2026-10-23T23:18:57.137561+00:00",
+    "extraction_attempts": 1,
+    "retained_feed_body": "Luis Molina, 33, of Glenvil, Nebraska, was sentenced on October 22, 2026, in federal court in Lincoln, Nebraska, for conspiracy to distribute and possess with intent to distribute 500 grams or more of a mixture or substance containing cocaine and possession with intent to distribute 500 grams or more of a mixture or substance containing cocaine."
+  },
+  {
     "title": "Registered Sex Offender from Rhode Island Indicted for Transportation of Child Pornography",
     "url": "https://www.justice.gov/usao-ma/pr/registered-sex-offender-rhode-island-indicted-transportation-child-pornography",
     "publisher": "",
@@ -66594,6 +66957,38 @@
     ],
     "extraction_status": "feed_text",
     "last_seen": "2026-10-23T21:03:29.374508+00:00"
+  },
+  {
+    "title": "Over 250 New Immigration Cases Filed This Week in Western District of Texas",
+    "url": "https://www.justice.gov/usao-wdtx/pr/over-250-new-immigration-cases-filed-week-western-district-texas",
+    "publisher": "",
+    "body": "Press Release Over 250 New Immigration Cases Filed This Week in Western District of Texas Friday, October 23, 2026 Share Facebook X LinkedIn Email For Immediate Release U.S. Attorney's Office,               Western District of Texas SAN ANTONIO – Federal prosecutors in the Western District of Texas filed 255 new immigration and immigration-related criminal cases from October 16 through October 22, announced U.S. Attorney Justin R. Simmons. Charges were brought against alien smugglers and illegal aliens with past convictions for violent crimes, thefts, and multiple prior removals. Among the new cases, a U.S. citizen was arrested and charged with alien smuggling after she allegedly attempted to bring two undocumented minors into the U.S. via the Paso Del Norte Port of Entry. A criminal complaint alleges that Hilary Freyre presented her Texas identification card to a Customs and Border Protection officer (CBPO), along with two birth certificates—one from Texas and one from New Mexico—on behalf of two minors sitting in the backseat of her vehicle. The complaint alleges that while the CBPO was questioning the minors, Freyre repeatedly interrupted. A photo on her phone allegedly showed Freyre with two children but the officer noticed facial discrepancies between the children in the photo and the children in the vehicle. After Freyre was referred to secondary inspection, she allegedly stated the minors in the vehicle were not her children and that the birth certificates she presented actually belonged to her two biological children. Additionally, the complaint alleges, Freyre possessed $1,123 U.S. Dollars and $5400 Mexican pesos, despite claiming she had only $400 when she was initially asked. Oscar David Hernandez-Gonzalez aka Juan Higera-Medrano was arrested after he allegedly jumped out of a rail car during a Customs and Border Protection inspection on a train at the BNSF railyard in El Paso. Hernandez-Gonzalez, an illegal alien from Mexico, has been previously removed from the U.S. seven times, the last being in 2015. He’s been previously convicted of prostitution, sex battery, and burglary of a building, and now faces an illegal re-entry charge. Raul Azahel Zubia-Alvidrez , an illegal alien from Mexico, was found and arrested by U.S. Border Patrol agents just under 13 miles west of the Fort Hancock Port of Entry. Zubia-Alvidrez was deported for the first time in July 2025 but has multiple felony convictions dating back to 2012, including aggravated robbery, robbery, and aggravated assault. Juan Jose Aguilar-Gonzalez , an illegal alien from Mexico, was pulled over on Oct. 17 in Balcones Heights for driving without lights when required. According to a criminal complaint, Aguilar-Gonzalez provided the officer with a Mexican driver’s license and was positively identified as a Mexican national unlawfully in the United States. Aguilar-Gonzalez was arrested and turned over to Immigration and Customs Enforcement (ICE) Enforcement Removal Operations (ERO). Aguilar-Gonzalez is a convicted felon who, in May 2006, was convicted under the name Juan Carlos Turrubiartes-Cruz for illegal re-entry.  He was convicted again in 2008 under the same name for alien smuggling. Aguilar-Gonzalez has been removed from the U.S. at least three times and now faces his second illegal re-entry charge. Also an illegal alien from Mexico, Fermin Gonzalez-Sanchez was encountered by ICE ERO at the Bexar County Adult Detention Center following his arrest for criminal mischief. Gonzalez-Sanchez was transferred to ICE custody on Oct. 17. He has four prior convictions for illegal re-entry and now faces the same charge for the fifth time. He was most recently removed from the U.S. in July 2023. Ruben Salazar-Lopez , an illegal alien from Mexico, was arrested by U.S. Border Patrol agents on Oct. 17, near Eagle Pass. Salazar-Lopez is a convicted felon with two prior convictions for illegal re-entry. He was also convicted in 2017 for assault causing bodily injury to a family member. He’s been removed from the U.S. four times and now faces his third illegal re-entry charge. Anacleto Silva-Herrera is also an illegal alien from Mexico. He faces an illegal re-entry charge after being arrested near Del Rio on Oct. 16. In Dec. 2023, Silva-Herrera was convicted of possession with intent to distribute cocaine. He was sentenced to 37 months in prison. Silva-Herrera has been deported three times, the last being in July through Harlingen. In Austin, Galdino Cortes-Cortes was arrested in Manor on Oct. 18. Cortes-Cortes is an illegal alien from Mexico who was previously removed for the second time in March 2021, following a conviction for alien smuggling. Cortes-Cortes has also been previously convicted of a DWI and aggravated assault with a deadly weapon. He’s currently charged with illegal re-entry. These cases were referred or supported by federal law enforcement partners, including ICE, U.S. Border Patrol, the Drug Enforcement Administration (DEA), the FBI, the U.S. Marshals Service (USMS), and the Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF), with additional assistance from state and local law enforcement partners. The U.S. Attorney’s Office for the Western District of Texas comprises 68 counties located in the central and western areas of Texas, encompasses nearly 93,000 square miles and an estimated population of 7.6 million people. The district includes three of the five largest cities in Texas—San Antonio, Austin and El Paso—and shares 660 miles of common border with the Republic of Mexico. Indictments and criminal complaints are merely allegations and all defendants are presumed innocent until proven guilty beyond a reasonable doubt in a court of law. These cases are part of Operation Take Back America a nationwide initiative that marshals the full resources of the Department of Justice to repel the invasion of illegal immigration, achieve the total elimination of cartels and transnational criminal organizations (TCOs), and protect our communities from the perpetrators of violent crime. ### Contact USATXW.MediaInquiry@usdoj.gov Updated October 23, 2026 Topics Operation Take Back America Human Smuggling Immigration Component USAO - Texas, Western",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "source": "official_doj",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "a575689fd4d3f02ac0ad47e5",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "official_doj",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "page_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
+    "publisher_publication_candidates": [
+      "2026-10-23T18:22:59-04:00"
+    ],
+    "publisher_published_at": "2026-10-23T18:22:59-04:00",
+    "publisher_publication_status": "unique_structured_candidate",
+    "extraction_method": "html_article_candidate",
+    "extraction_attempted_at": "2026-10-23T23:18:57.181611+00:00",
+    "extraction_attempts": 1,
+    "retained_feed_body": "Federal prosecutors in the Western District of Texas filed 255 new immigration and immigration-related criminal cases from October 16 through October 22"
   },
   {
     "title": "California Couple Sentenced for Trafficking Protected Wildlife",
@@ -67216,7 +67611,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-23T14:46:15-04:00"
     ],
@@ -67324,6 +67719,38 @@
     "retained_feed_body": "A Pennsylvania man admitted to paying approximately $70,000 in cash kickbacks to former Hillsborough Township School District (HTSD) Business Administrator Aiman Mahmoud as part of a fraudulent overtime scheme undertaken by the two men in relation to a large-scale project involving the construction and upgrade of HTSD facilities."
   },
   {
+    "title": "Chinese National Extradited for Alleged Role in  Multimillion-Dollar Cryptocurrency Scam Targeting U.S. Citizens",
+    "url": "https://www.justice.gov/opa/pr/chinese-national-extradited-alleged-role-multimillion-dollar-cryptocurrency-scam-targeting",
+    "publisher": "",
+    "body": "Press Release Chinese National Extradited for Alleged Role in  Multimillion-Dollar Cryptocurrency Scam Targeting U.S. Citizens Friday, October 23, 2026 Share Facebook X LinkedIn Email For Immediate Release Office of Public Affairs Case is Part of Cyber-Enabled Scam Initiative Zheng Zhao, 44, a Chinese national, was arraigned today in the Central District of California after being extradited from the Netherlands for his alleged role in an international cryptocurrency investment conspiracy carried out from scam centers in the Kingdom of Cambodia that targeted U.S. citizens. Ultimately, the government was able to identify 174 U.S. victims. “This extradition should be a lesson to all those who seek to exploit vulnerable Americans from overseas,” said Assistant Attorney General A. Tysen Duva of the Justice Department’s Criminal Division. “We will pursue charged defendants anywhere in the world, especially those who are alleged to have stolen money, converted it to cryptocurrency, and used foreign financial institutions in the process to try to hide and obfuscate their crimes. Wherever you are, we have the reach to find you.” “As crime has globalized, so has law enforcement’s ability to locate and catch criminals,” said First Assistant U.S. Attorney Bill Essayli for the Central District of California. “When innocent Americans are harmed by cybercriminals and their enablers, we and our partners around the globe will relentlessly ensure they face justice in a U.S. courtroom.” “Today’s arraignment demonstrates our collective commitment to pursuing transnational criminal networks that exploit the American people,” said Special Agent in Charge Todd Bratz of the U.S. Secret Service (USSS) Criminal Investigative Division. “This case should serve as a warning to scammers in every corner of the world: there is nowhere to hide. Secret Service investigators and our law enforcement partners remain unwavering in their commitment to identify those who operate scam centers, disrupt their financial infrastructure, and bring them to justice.” According to court documents, Zhao was allegedly part of an international criminal network that induced U.S. victims to transfer funds to accounts controlled by co-conspirators, who then laundered victim money through U.S. shell companies, international bank accounts, and digital asset wallets. The cycle of the scheme began when overseas co-conspirators contacted U.S. victims via unsolicited social media interactions, telephone calls, text messages, and online dating services to gain the victims’ trust. The co-conspirators promoted fraudulent digital asset investments to the victims. The co-conspirators created fake websites that resembled real cryptocurrency trading platforms and convinced victims to send funds through the fake websites for investments. The scammers would then tell the victims that their investments were appreciating in value when, in fact, the scammers had stolen the victims’ money. More than $36.9 million in victim funds were transferred from U.S. bank accounts controlled by the co-conspirators to a single account at Deltec Bank in the Bahamas. Zhao and other co-conspirators arranged for Deltec Bank to convert victim funds to the stablecoin Tether (USDT) and to transfer the converted funds to a digital asset wallet controlled in Cambodia. From there, co-conspirators in Cambodia transferred the USDT to the leaders of scam centers throughout the region. In August 2025, Zhao was charged with conspiracy to commit money laundering. If convicted, he faces a maximum penalty of 20 years in prison. Eight co-conspirators have pleaded guilty so far, including ShengSheng He and Jingliang Su. He and Su each pleaded guilty to conspiracy to operate an unlicensed money transmitting business and were sentenced to 51 months and 46 months in prison, respectively. USSS’s Global Investigative Operations Center is investigating the case. The Homeland Security Investigations’ El Camino Real Financial Crimes Task Force, Customs and Border Protection’s National Targeting Center, U.S. Department of State’s Diplomatic Security Service, and U.S. Marshals Service provided valuable assistance. The Justice Department’s Office of International Affairs worked closely with Dutch authorities to secure the arrest and extradition of Zhao and provided significant assistance throughout the investigation.  The United States sincerely thank Dutch authorities for their assistance. Trial Attorney Tamara Livshiz of the Criminal Division’s White Collar and Corporate Enforcement Section, Acting Assistant Deputy Chief James S. Yoon of the Criminal Division’s Computer Crime and Intellectual Property Section (CCIPS), and Assistant U.S. Attorneys Nisha Chandran and Alexander Gorin for the Central District of California are prosecuting the case. The Justice Department’s Office of International Affairs worked closely with Dutch authorities to secure the arrest and extradition of Zhao and provided significant assistance throughout the investigation. The United States sincerely thanks Dutch authorities for their assistance. CCIPS investigates and prosecutes cybercrime in coordination with domestic and international law enforcement agencies, often with assistance from the private sector. Since 2020, CCIPS has secured the conviction of over 180 cybercriminals and court orders for the return of over $350 million in victim funds. This case is part of efforts being undertaken by the Criminal Division’s Cyber-Enabled Scam Initiative (CSI). The CSI is a dedicated team of prosecutors built to find scammers who prey on Americans, disrupt their networks, and hold them accountable. CSI coordinates across the Criminal Division’s Sections, bringing together prosecutors and subject matter experts in complex frauds and investment schemes, cybercrimes and dismantling cyber infrastructure, online child exploitation, international evidence gathering and extradition, overseas prosecutorial development and assistance, and financial tracing and asset forfeiture. If you or someone you know is a victim of a digital asset investment fraud, report it to IC3.gov . A criminal complaint is merely an allegation. All defendants are presumed innocent until proven guilty beyond a reasonable doubt in a court of law. Updated October 23, 2026 Topic Cybercrime Components Criminal Division Criminal - Computer Crime and Intellectual Property Section Criminal - Criminal White Collar and Corporate Enforcement Criminal - Office of International Affairs USAO - California, Central Press Release Number: 26-1258",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "source": "official_doj",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "46c87946e1cd014d7928e918",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "official_doj",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "page_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
+    "publisher_publication_candidates": [
+      "2026-10-23T17:49:20-04:00"
+    ],
+    "publisher_published_at": "2026-10-23T17:49:20-04:00",
+    "publisher_publication_status": "unique_structured_candidate",
+    "extraction_method": "html_article_candidate",
+    "extraction_attempted_at": "2026-10-23T23:18:57.137580+00:00",
+    "extraction_attempts": 1,
+    "retained_feed_body": "Zheng Zhao, 44, a Chinese national, was arraigned today in the Central District of California after being extradited from the Netherlands for his alleged role in an international cryptocurrency investment conspiracy carried out from scam centers in the Kingdom of Cambodia that targeted U.S. citizens."
+  },
+  {
     "title": "United States Attorneys Available To Receive Election Complaints",
     "url": "https://www.justice.gov/usao-sdny/pr/united-states-attorneys-available-receive-election-complaints-6",
     "publisher": "",
@@ -67386,6 +67813,38 @@
     "extraction_attempted_at": "2026-10-23T17:45:41.910380+00:00",
     "extraction_attempts": 1,
     "retained_feed_body": "Memphis, TN – The U.S. Drug Enforcement Administration, in collaboration with more than 4,300 law enforcement partners, will host the 31st National Prescription Drug Take Back Day on Saturday, October 24th, from 10 a.m. to 2 p.m.More than 4,400 collection sites will be set up across the country to dispose of unneeded, expired, and unused prescription medications. This is a..."
+  },
+  {
+    "title": "Manchester Resident Charged with Smuggling Machine Gun Conversion Devices from China",
+    "url": "https://www.justice.gov/usao-ct/pr/manchester-resident-charged-smuggling-machine-gun-conversion-devices-china",
+    "publisher": "",
+    "body": "Press Release Manchester Resident Charged with Smuggling Machine Gun Conversion Devices from China Friday, October 23, 2026 Share Facebook X LinkedIn Email For Immediate Release U.S. Attorney's Office,               District of Connecticut David X. Sullivan, United States Attorney for the District of Connecticut, and Jeff Grimming, Acting Special Agent in Charge of Homeland Security Investigations (HSI), New England, today announced that DAVID WILLIAMS, JR., also known as “Lavish David,” 23, of Manchester, has been charged by indictment with offenses related to the importation and trafficking of machine gun conversion devices. As alleged in court documents and statements made in court, on June 16, 2026, U.S. Customs and Border Protection (“CBP”) officers at Chicago O’Hare International Airport examined a package en route from China to “Lavish David” at an address in Bloomfield, Connecticut, that contained a machine gun conversion device concealed within portable camping stove components.  Commonly referred to as a “Glock switch,” a conversion device allows certain firearms to fire fully automatically.  On July 10, 2024, CBP officers at New York’s John F. Kennedy International Airport examined a package en route from China to “Lavish David” at the same Bloomfield address that contained multiple machine gun conversion device components concealed within portable camping stove components.  On July 21, 2026, HSI conducted a controlled delivery of the two packages to the Bloomfield address and confirmed that Williams had ordered the items for delivery to the residence. It is further alleged that a court-authorized search of Williams’ Apple account revealed photos, videos, and messages involving the possession of firearms and trafficking of machine gun conversion devices. Williams was arrested on a federal criminal complaint on October 2, 2026.  On October 14, 2026, a grand jury in Hartford returned an indictment charging Williams with firearms trafficking conspiracy, an offense that carries a maximum term of imprisonment of 15 years; unlawful possession of a machinegun, an offense that carries a maximum term of imprisonment of 10 years; possession of an unregistered machinegun, an offense that carries a maximum term of imprisonment of 10 years; and smuggling goods into the United States, an offense that carries a maximum term of imprisonment of 20 years. Williams appeared today in Hartford federal court and pleaded not guilty to the charges.  He is released on a $100,000 bond pending trial. U.S. Attorney Sullivan stressed that an indictment is not evidence of guilt.  Charges are only allegations, and a defendant is presumed innocent unless and until proven guilty beyond a reasonable doubt. This investigation is being conducted by Homeland Security Investigations, and U.S. Customs and Border Protection, with the assistance of the Manchester Police Department.  The case is being prosecuted by Assistant U.S. Attorney Geoffrey M. Stone. Updated October 23, 2026 Topic Firearms Offenses Component USAO - Connecticut",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "source": "official_doj",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "43b284bf399c7c1c3d269d38",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "official_doj",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "page_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
+    "publisher_publication_candidates": [
+      "2026-10-23T17:38:10-04:00"
+    ],
+    "publisher_published_at": "2026-10-23T17:38:10-04:00",
+    "publisher_publication_status": "unique_structured_candidate",
+    "extraction_method": "html_article_candidate",
+    "extraction_attempted_at": "2026-10-23T23:18:57.137601+00:00",
+    "extraction_attempts": 1,
+    "retained_feed_body": "DAVID WILLIAMS, JR., also known as “Lavish David,” 23, of Manchester, has been charged by indictment with offenses related to the importation and trafficking of machine gun conversion devices."
   },
   {
     "title": "Nine Pennsylvania Non-Citizens Charged with Illegally Voting",
@@ -67511,6 +67970,38 @@
     "retained_feed_body": "A Kansas firearms dealer was sentenced to 18 months in prison for having dozens of unregistered firearms devices."
   },
   {
+    "title": "North Carolina man pleads guilty for his role in gun trafficking conspiracy",
+    "url": "https://www.justice.gov/usao-wdny/pr/north-carolina-man-pleads-guilty-his-role-gun-trafficking-conspiracy",
+    "publisher": "",
+    "body": "Press Release North Carolina man pleads guilty for his role in gun trafficking conspiracy Friday, October 23, 2026 Share Facebook X LinkedIn Email For Immediate Release U.S. Attorney's Office,               Western District of New York BUFFALO, N.Y.-U.S. Attorney Michael DiGiacomo announced today that Jerry Antonio Baine a/k/a Bank 3x, 23, of Durham, NC, pleaded guilty to conspiracy to engage in the firearms business without a license, which carries a maximum penalty of five years in prison. Between March 2023, and June 23, 2025, Baine conspired with Hassain Humphrey, Keishawn Turner, Jylin Woods, and Benjamin Martin, to illegally sell firearms. During this time, Baine sent Humphrey photographs of approximately 19 firearms, several were privately manufactured firearms, bearing no serial number. On multiple occasions, he indicated that the firearms were for sale, and he and Humphrey would often discuss a potential sale price. On one occasion, Baine indicated that a sale price proposed by Humphrey would not leave him with enough “profit.” When discussing certain firearms via text message, Baine and/or Humphrey used the terms “ghost” and “p80,” terms commonly used to refer to privately manufactured firearms bearing no serial number. During the conspiracy, Baine purchased multiple firearms from retail establishments in North Carolina, one of which was recovered in a separate criminal investigation in Buffalo, on July 4, 2024. Another firearm was recovered in a separate criminal investigation in Buffalo on June 19, 2026. In October 2024, Baine was interviewed by members of the ATF, during which he stated that he purchased multiple firearms for Humphrey in North Carolina. He also confirmed that he had knowledge that Humphrey and another individual were reselling the firearms in New York. Baine that he sold the firearms to Humphrey because he was unemployed and needed the money. Baine admits that neither he or Humphrey were licensed importers, manufacturers, dealers, and collectors of firearms. Humphrey and Turner were previously convicted and are awaiting sentencing. Charges remain pending against Jylin Woods and Benjamin Martin. This case is part of Operation Take Back America, a nationwide initiative that marshals the full resources of the Department of Justice to repel the invasion of illegal immigration, achieve the total elimination of cartels and transnational criminal organizations (TCOs), and protect our communities from the perpetrators of violent crime. The case is being prosecuted by Assistant U.S. Attorneys Louis A. Testani and Monica Benjovsky. The plea is the result of an investigation by the Buffalo Police Department, under the direction of Police Commissioner Erika Shields and the Bureau of Alcohol, Tobacco, Firearms, and Explosives, under the direction of Special Agent-in-Charge Bryan DiGirolamo. Sentencing is scheduled for March 5, 2027, before U.S. District Judge Lawrence J. Vilardo. # # # # Contact Barbara Burns 716-843-5817 Updated October 23, 2026 Topic Firearms Offenses Component USAO - New York, Western",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "source": "official_doj",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "2bdd0d40ea0a04a04dd8d818",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "official_doj",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "page_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
+    "publisher_publication_candidates": [
+      "2026-10-23T18:20:23-04:00"
+    ],
+    "publisher_published_at": "2026-10-23T18:20:23-04:00",
+    "publisher_publication_status": "unique_structured_candidate",
+    "extraction_method": "html_article_candidate",
+    "extraction_attempted_at": "2026-10-23T23:18:57.137588+00:00",
+    "extraction_attempts": 1,
+    "retained_feed_body": "U.S. Attorney Michael DiGiacomo announced today that Jerry Antonio Baine a/k/a Bank 3x, 23, of Durham, NC, pleaded guilty to conspiracy to engage in the firearms business without a license, which carries a maximum penalty of five years in prison."
+  },
+  {
     "title": "Kansas man receives prison sentence for distributing child pornography",
     "url": "https://www.justice.gov/usao-ks/pr/kansas-man-receives-prison-sentence-distributing-child-pornography",
     "publisher": "",
@@ -67596,6 +68087,61 @@
     "extraction_attempted_at": "2026-10-23T20:09:46.706512+00:00",
     "extraction_attempts": 1,
     "retained_feed_body": "The Justice Department today announced that four additional individuals have pleaded guilty in connection with a conspiracy to create and distribute videos depicting extreme violence and sexual abuse against monkeys."
+  },
+  {
+    "title": "Grand Jury for the District of Nebraska - October 2026",
+    "url": "https://www.justice.gov/usao-ne/pr/grand-jury-district-nebraska-october-2026",
+    "publisher": "",
+    "body": "The federal Grand Jury for the District of Nebraska has returned 9 unsealed Indictments charging 10 defendants.",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "source": "official_doj",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "17444deb6e4928e3b2333d6a",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "official_doj",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "feed_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
+  },
+  {
+    "title": "Rochester man going to prison for conspiring to defraud victims, including taxpayers, of more than $2,000,000 and money laundering",
+    "url": "https://www.justice.gov/usao-wdny/pr/rochester-man-going-prison-conspiring-defraud-victims-including-taxpayers-more-2000000",
+    "publisher": "",
+    "body": "Press Release Rochester man going to prison for conspiring to defraud victims, including taxpayers, of more than $2,000,000 and money laundering Friday, October 23, 2026 Share Facebook X LinkedIn Email For Immediate Release U.S. Attorney's Office,               Western District of New York ROCHESTER, N.Y.-U.S. Attorney Michael DiGiacomo announced today that Timothy Wadsworth, 35, of Rochester, NY, who was convicted of conspiracy to commit wire fraud and money laundering, was sentenced to serve 51 months in prison and pay $810,965.19 in restitution by U.S. District Judge Frank P. Geraci, Jr. In addition, Wadsworth was ordered to forfeit $810,956.19, which represents the wire fraud proceeds he received. This case is part of the Trump Administration’s Task Force to Eliminate Fraud. Between March 2020, and September 2021, Wadsworth conspired with others to fraudulently obtain money. To execute the scheme, he obtained credit card account numbers from coconspirators and processed unauthorized credit card transactions from those accounts, transferring the money to his bank accounts, transferring a portion of the money to his Coinbase account to purchase Bitcoin, and transferring Bitcoin to his coconspirators. Between March 10, 2020, and May 15, 2020, Wadsworth, using a Stripe, Inc. account, which allows merchants to receive funds from consumers as payments for goods and services, attempted to process 310 payments totaling $1,673,578. Of the 310 attempted transactions, 116 were initially successful totaling $730,728.22. These transactions were fraudulent. The account holders did not authorize the transactions, and their account information was used to make the payments without authorization. Once credit card payments were successfully processed, Wadsworth transferred the funds from his Stripe account to bank accounts he owned with HSBC and Evolve Federal Credit Union. He then transferred funds from those bank accounts to his Coinbase account, purchased Bitcoin with the money, and transferred the Bitcoin to various external addresses. These transactions were often in excess of $10,000 each. For example, between April 22 and April 28, 2020, Wadsworth transferred fraudulently obtained proceeds from his Stripe account to his HSBC account on three separate occasions, in the amounts of $49,419.99, $45,501.85, and $53,496.75. In addition, between May 13, 2020, through May 5, 2021, Wadsworth and others submitted nine false Economic Injury Disaster Loan (EIDL) applications in an attempt to obtain money they were not entitled to. The applications contained misrepresentations about the businesses’ revenue and operation, which was material in assessing the businesses’ eligibility for the EIDL funds. Three of the EIDL applications were approved, and a total of $161,200 was paid to Wadsworth’s bank accounts as a result of the fraud. Between March 7 and April 26, 2021, Wadsworth applied for six Payroll Protection Program (PPP) loans totaling $91,219. Two of the loans were funded for $20,833 and $20,416, respectively, which was paid to Wadsworth’s bank account. Once again, the applications contained misrepresentations about the businesses they were submitted for. From May 2020 through September 2021, Wadsworth fraudulently received approximately $65,896 in unemployment benefits from New York State, the State of Washington, and the Department of Labor. He was not eligible to receive any unemployment funds from any source during that time. Wadsworth also participated in a romance fraud scheme in 2020. The victim, recently widowed, met an individual on Facebook that represented himself as an oil rig worker, and requested $42,000 from her to pay for travel expenses to return to the United States. The victim was directed to wire the money to Wadsworth’s bank account, which she did on March 20, 2020. Wadsworth also defrauded six other victims out of $26,000 as a result of his schemes. Wadsworth’s actions, including the credit card fraud, the PPP and EIDL fraud, the unemployment fraud, and the other frauds, resulted in actual and intended losses of approximately $2,059,893.00. On April 7, the Department of Justice announced the creation of the National Fraud Enforcement Division (“Fraud Division”). The Fraud Division is laser-focused on investigating and prosecuting those who commit fraud against the American people. The Department’s work to combat fraud supports President Trump’s Task Force to Eliminate Fraud, a whole-of-government effort chaired by Vice President J.D. Vance to eliminate fraud, waste, and abuse within Federal benefit programs. The case was prosecuted by Assistant U.S. Attorney Katelyn M. Hartford. The sentencing is the result of an investigation by Federal Bureau of Investigation, under the direction of Special Agent-in-Charge Allen D. Davis, II, the Internal Revenue Service Criminal Investigation, under the direction of Special Agent-in-Charge Harry T. Chavis, Jr., New York Field Office, the New York State Department of Financial Services, under the direction of Acting Superintendent Kaitlin Asrow, and the New York State Department of Labor, under the direction of Commissioner Roberta Reardon. # # # # Contact Barbara Burns 716-843-5817 Updated October 23, 2026 Topics Benefit Fraud COVID-Related Fraud Financial Fraud Component USAO - New York, Western",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "source": "official_doj",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "166cbef96563d999a118b8c1",
+    "first_seen": "2026-10-23T23:16:41.574207+00:00",
+    "observations": [
+      {
+        "source": "official_doj",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "page_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
+    "publisher_publication_candidates": [
+      "2026-10-23T18:29:00-04:00"
+    ],
+    "publisher_published_at": "2026-10-23T18:29:00-04:00",
+    "publisher_publication_status": "unique_structured_candidate",
+    "extraction_method": "html_article_candidate",
+    "extraction_attempted_at": "2026-10-23T23:18:57.128244+00:00",
+    "extraction_attempts": 1,
+    "retained_feed_body": "U.S. Attorney Michael DiGiacomo announced today that Timothy Wadsworth, 35, of Rochester, NY, who was convicted of conspiracy to commit wire fraud and money laundering, was sentenced to serve 51 months in prison and pay $810,965.19 in restitution by U.S. District Judge Frank P. Geraci, Jr. In addition, Wadsworth was ordered to forfeit $810,956.19, which represents the wire fraud proceeds he received. This case is part of the Trump Administration’s Task Force to Eliminate Fraud."
   },
   {
     "title": "Telemedicine Company Owner Sentenced to 20 Years in Prison for $46M Medicare Fraud Scheme",
@@ -67854,7 +68400,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Preferred stock and warrants join potential subsidiary debt offerings at United Rentals (URI). - Stock Titan",
@@ -68488,7 +69034,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "IT’S THEIR FAULT: Trump Accuses Iran of Deliberately Driving Up Oil Prices Ahead of U.S. Midterm Elections - EnergyNow.com",
@@ -68946,7 +69492,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Tech Mahindra acquires Finastra’s Cash Management suite - IBS Intelligence",
@@ -70142,7 +70688,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Argentina Metals plans $3M CAD private placement for Mendoza exploration - StreetInsider",
@@ -73347,7 +73893,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "‘They wanted to make a scene’: the 72-year-old paraded in dramatic arrest for ‘voter fraud’ - The Guardian",
@@ -78365,7 +78911,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Woman with Ebola in Nigeria confirmed as wife of Swiss diplomat",
@@ -78388,7 +78934,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Is Cognex Stock's Market Price Justified? - Yahoo Finance",
@@ -80082,9 +80628,9 @@
       }
     ],
     "extraction_status": "fetch_failed",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
-    "extraction_attempted_at": "2026-10-23T20:53:16.840737+00:00",
-    "extraction_attempts": 1,
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
+    "extraction_attempted_at": "2026-10-23T23:18:57.181630+00:00",
+    "extraction_attempts": 2,
     "extraction_error": "HTTPError: HTTP Error 403: Forbidden"
   },
   {
@@ -82824,7 +83370,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "CT municipal assistant majority leader resigns with year to go in term. He says ‘decision was not an easy one’ - Hartford Courant",
@@ -83162,7 +83708,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Abbott to spin off Nutrition business by the end of 2027 - FoodBev Media",
@@ -84726,7 +85272,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Brazil’s Most Divided Town Shows the Nation’s Shift to the Right - The New York Times",
@@ -87072,7 +87618,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Marco Rubio: Did domestic pressure make US secretary of state visit an Indian port town? - BBC",
@@ -88829,7 +89375,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Tech Giants' Chip Financing Myth: Li Auto, SenseTime-Spun Chip Firms Raise Staggering 11.2 Billion Yuan in 2024 - 36Kr",
@@ -89861,7 +90407,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Lloyds appoints Chris Rhodes. October 29 results guide Lloyds Banking stock - AD HOC NEWS",
@@ -90293,7 +90839,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-23"
     ],
@@ -95530,7 +96076,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "VOLO: Acquisition-led sales growth masked weaker reported earnings and 3.1x leverage - TradingView",
@@ -100241,7 +100787,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Roseville launches training program to address shortage of water utility workers - CBS News",
@@ -100688,7 +101234,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "“Dissent, not a crime”: Karnataka HC quashes sedition case over posters against Babri verdict - Maktoob",
@@ -102892,7 +103438,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Safran sales rise, but aftermarket concerns knock shares - Reuters",
@@ -114904,7 +115450,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-23T02:00:13+00:00"
     ],
@@ -121702,7 +122248,7 @@
       }
     ],
     "extraction_status": "fetch_failed",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T20:53:16.786483+00:00",
     "extraction_attempts": 3,
     "extraction_error": "HTTPError: HTTP Error 403: Forbidden"
@@ -121909,7 +122455,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Amaero Inc. Issues 5,012,697 Common Stock Shares at US$4.25 in US Public Offering - Kalkine",
@@ -124817,7 +125363,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "NASS Staff Pension Reform Bill Scales Third Reading as House Passes HB 2240 - NALTF",
@@ -125096,7 +125642,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Rising input costs may portend rate hike: CIBC - Investment Executive",
@@ -128613,7 +129159,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Purdue Trusts Say Sackler Bid Again Destabilizes Ch. 11 Plan - Law360",
@@ -137330,7 +137876,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [],
     "publisher_published_at": null,
     "publisher_publication_status": "ambiguous_or_absent",
@@ -138567,7 +139113,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Appeals Court Rules Rutgers Does Not Need State Approval To Add Degree Programs - WDHA FM",
@@ -140333,7 +140879,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-22T13:33:10-07:00"
     ],
@@ -145490,7 +146036,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [],
     "publisher_published_at": null,
     "publisher_publication_status": "ambiguous_or_absent",
@@ -145652,7 +146198,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [],
     "publisher_published_at": null,
     "publisher_publication_status": "ambiguous_or_absent",
@@ -148751,7 +149297,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Everett mayor proposes sales tax hike to help balance 2027 budget - HeraldNet.com",
@@ -150344,7 +150890,7 @@
       }
     ],
     "extraction_status": "fetch_failed",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:47.008925+00:00",
     "extraction_attempts": 2,
     "extraction_error": "HTTPError: HTTP Error 403: Forbidden"
@@ -152656,7 +153202,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "NowVertical Group Raises $10 Million in Final Tranche of 'Best Efforts' Private Placement - marketscreener.com",
@@ -160627,7 +161173,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "NowVertical Closes the Final Tranche of a $15.1 Million Brokered Private Placement - Toronto Star",
@@ -164121,7 +164667,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Mortgage rate predictions for the next 5 years: When should you buy? - Yahoo Finance",
@@ -166133,7 +166679,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [],
     "publisher_published_at": null,
     "publisher_publication_status": "ambiguous_or_absent",
@@ -167619,7 +168165,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Federal court rules switchblades OK under Second Amendment | WORLD - WORLD News Group",
@@ -168121,7 +168667,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "US ban on switchblades is unconstitutional, appeals court rules - Yahoo News Singapore",
@@ -168456,7 +169002,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-22T15:00:02+00:00"
     ],
@@ -170969,7 +171515,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "FDA approves fifth indication for AstraZeneca's Ultomiris, this time in IgA nephropathy - FirstWord Pharma",
@@ -171964,7 +172510,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Innovative Renal Care Pays $900,000 to Settle Data Breach Litigation - The HIPAA Journal",
@@ -172419,7 +172965,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "EEOC Sends OIRA Final Rule Rescinding Uniform Guidelines on Employee Selection Procedures - The National Law Review",
@@ -174234,7 +174780,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Rancher's Premium Smokehouse to double production capacity - The National Provisioner",
@@ -176824,7 +177370,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "FDA finalizes its guidance on apps related to drugs, pharma rejoices - STAT",
@@ -176877,7 +177423,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "A 3,194-share award goes to Accenture (ACN) EMEA CEO Mauro Macchi. - Stock Titan",
@@ -178035,7 +178581,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-22T13:00:20+00:00"
     ],
@@ -178267,7 +178813,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [],
     "publisher_published_at": null,
     "publisher_publication_status": "ambiguous_or_absent",
@@ -178669,7 +179215,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-22",
       "2026-10-22T13:00:00+00:00"
@@ -183587,7 +184133,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Cassiar Gold plans $3M private placement at C$0.35-0.50 - Investing.com",
@@ -184331,7 +184877,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-22",
       "2026-10-22T11:30:00+00:00"
@@ -190471,7 +191017,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Lynch’s rhPDGF-BB IND secures FDA clearance for Phase II trial - Clinical Trials Arena",
@@ -192499,7 +193045,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Norebo owner seeks injunction against Norwegian news site over Russian espionage allegations - Undercurrent News",
@@ -198106,7 +198652,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "WTI Holds Steady After U.S. Crude Stocks Fall 3.06 Million Barrels - TOKENPOST",
@@ -200328,7 +200874,7 @@
       }
     ],
     "extraction_status": "fetch_failed",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:47.008932+00:00",
     "extraction_attempts": 2,
     "extraction_error": "HTTPError: HTTP Error 403: Forbidden"
@@ -201862,7 +202408,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Could market volatility affect DayOne’s IPO? - W.Media",
@@ -201912,7 +202458,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-22T05:00:56+00:00"
     ],
@@ -201944,7 +202490,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-22T05:00:27+00:00"
     ],
@@ -201976,7 +202522,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-22T05:00:25+00:00"
     ],
@@ -202008,7 +202554,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-22T05:00:23+00:00"
     ],
@@ -202040,7 +202586,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-22T05:00:19+00:00"
     ],
@@ -202072,7 +202618,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "2026-10-22T05:00:02+00:00"
     ],
@@ -202421,7 +202967,7 @@
       }
     ],
     "extraction_status": "thin_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [],
     "publisher_published_at": null,
     "publisher_publication_status": "ambiguous_or_absent",
@@ -203319,7 +203865,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Ahold Delhaize Cyberattack Hits US and EU Stores [2026] - shattered.io",
@@ -203548,7 +204094,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "Thu, 10/22/2026 - 12:58"
     ],
@@ -211117,7 +211663,7 @@
       }
     ],
     "extraction_status": "fetch_failed",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T20:53:16.786510+00:00",
     "extraction_attempts": 3,
     "extraction_error": "HTTPError: HTTP Error 403: Forbidden"
@@ -212450,7 +212996,7 @@
       }
     ],
     "extraction_status": "feed_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "New Mexico attorney general accuses Epstein attorney, accountant of abuse cover-up at ranch - AP News",
@@ -220561,8 +221107,8 @@
     ],
     "extraction_status": "fetch_failed",
     "last_seen": "2026-10-23T20:53:02.234877+00:00",
-    "extraction_attempted_at": "2026-10-23T20:53:16.840744+00:00",
-    "extraction_attempts": 2,
+    "extraction_attempted_at": "2026-10-23T23:18:57.181643+00:00",
+    "extraction_attempts": 3,
     "extraction_error": "HTTPError: HTTP Error 403: Forbidden"
   },
   {
@@ -232706,8 +233252,8 @@
     ],
     "extraction_status": "fetch_failed",
     "last_seen": "2026-10-23T16:06:47.738331+00:00",
-    "extraction_attempted_at": "2026-10-23T20:53:17.090657+00:00",
-    "extraction_attempts": 2,
+    "extraction_attempted_at": "2026-10-23T23:18:57.194542+00:00",
+    "extraction_attempts": 3,
     "extraction_error": "HTTPError: HTTP Error 403: Forbidden"
   },
   {
@@ -232730,7 +233276,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [],
     "publisher_published_at": null,
     "publisher_publication_status": "ambiguous_or_absent",
@@ -234004,7 +234550,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "Tue, 10/20/2026 - 09:03"
     ],
@@ -234036,7 +234582,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "Tue, 10/20/2026 - 12:02"
     ],
@@ -234068,7 +234614,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "Tue, 10/20/2026 - 15:40"
     ],
@@ -234100,7 +234646,7 @@
       }
     ],
     "extraction_status": "unsupported_format",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:47.254122+00:00",
     "extraction_attempts": 1,
     "extraction_error": ""
@@ -234125,7 +234671,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [],
     "publisher_published_at": null,
     "publisher_publication_status": "ambiguous_or_absent",
@@ -234155,7 +234701,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [
       "Mon, 10/19/2026 - 13:17"
     ],
@@ -234187,7 +234733,7 @@
       }
     ],
     "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "publisher_publication_candidates": [],
     "publisher_published_at": null,
     "publisher_publication_status": "ambiguous_or_absent",
@@ -234217,7 +234763,7 @@
       }
     ],
     "extraction_status": "unsupported_format",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:57.142675+00:00",
     "extraction_attempts": 1,
     "extraction_error": ""
@@ -234242,7 +234788,7 @@
       }
     ],
     "extraction_status": "unsupported_format",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:57.142683+00:00",
     "extraction_attempts": 1,
     "extraction_error": ""
@@ -234267,7 +234813,7 @@
       }
     ],
     "extraction_status": "unsupported_format",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:57.142689+00:00",
     "extraction_attempts": 1,
     "extraction_error": ""
@@ -234292,7 +234838,7 @@
       }
     ],
     "extraction_status": "unsupported_format",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:57.142695+00:00",
     "extraction_attempts": 1,
     "extraction_error": ""
@@ -234317,7 +234863,7 @@
       }
     ],
     "extraction_status": "unsupported_format",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:57.142701+00:00",
     "extraction_attempts": 1,
     "extraction_error": ""
@@ -234342,7 +234888,7 @@
       }
     ],
     "extraction_status": "unsupported_format",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:57.142706+00:00",
     "extraction_attempts": 1,
     "extraction_error": ""
@@ -234367,7 +234913,7 @@
       }
     ],
     "extraction_status": "unsupported_format",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:57.142713+00:00",
     "extraction_attempts": 1,
     "extraction_error": ""
@@ -234392,7 +234938,7 @@
       }
     ],
     "extraction_status": "unsupported_format",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:57.142718+00:00",
     "extraction_attempts": 1,
     "extraction_error": ""
@@ -234417,42 +234963,10 @@
       }
     ],
     "extraction_status": "unsupported_format",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:57.142723+00:00",
     "extraction_attempts": 1,
     "extraction_error": ""
-  },
-  {
-    "title": "October 14, 2026 - FDA Launches the Rare Disease Framework Initiative to Develop a Holistic, Fit-For-Purpose Framework for Rare Disease Drug Development",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-rare-disease-framework-initiative-develop-holistic-fit-purpose-framework-rare-disease",
-    "body": "FDA News Release FDA Launches the Rare Disease Framework Initiative to Develop a Holistic, Fit-For-Purpose Framework for Rare Disease Drug Development Effort begins by Soliciting Public Feedback For Immediate Release: October 14, 2026 The U.S. Food and Drug Administration, a division within the U.S. Department of Health and Human Services (HHS), today announced the Rare Disease Framework Initiative to reimagine the development of drugs and biologics for rare diseases. As outlined in a new white paper , the Initiative will develop an optimized, fit-for-purpose framework that reflects the realities of rare disease drug development by considering the nuances of each disease, patient needs, product type and the evidence that can be realistically generated in small patient populations. To solicit feedback on the Rare Disease Framework Initiative from patients and disease advocates, industry, and others, the FDA will host an October 28 meeting at the FDA’s White Oak campus. The meeting will be facilitated by the Reagan-Udall Foundation for the FDA. “Americans with rare diseases cannot afford a regulatory system that treats every condition the same,” said HHS Secretary Robert F. Kennedy, Jr. “Under President Trump, FDA is rethinking rare disease drug development by putting patients at the center and matching regulatory requirements to the realities of small patient populations. We will remove unnecessary barriers, embrace cutting-edge science, and accelerate promising treatments while upholding FDA’s rigorous standards.” “Patients and families living with rare diseases have few or no approved treatment options, and the burden of uncertainty can extend across every part of their lives,” said Acting FDA Commissioner Kyle Diamantas, J.D. “As we learn more about rare diseases and better understand the breadth of suffering they cause, we must ensure that America’s regulatory system remains at the forefront — prepared to respond to emerging science, anticipate the needs of patients and families, and help bring safe and effective therapies to those who need them. The FDA will fight hard for patients by building a more consistent, predictable, and innovative approach to rare disease drug development while maintaining the rigorous standards Americans expect from the FDA.” The FDA has long used regulatory flexibility and developed targeted programs to support innovation in the development of drugs and biologics for rare diseases. These efforts have led to meaningful advances for patients and families. Nevertheless, with only 5% or so of rare conditions having an FDA-approved treatment, the FDA agrees with patients, drug developers, and providers that more must be done to speed the development of safe and effective treatments for rare diseases. In developing the framework, the FDA is committed to the following: Providing greater clarity, consistency, and predictability in regulatory decision-making through tailored guidance and transparent communication. Embedding the patient’s voice both early, and at clearly defined milestones, in the drug development and review process. Further leveraging external expertise to support customization of regulatory review. Building shared resources, robust training, and institutional knowledge on rare disease drug development and review. Applying risk-based approaches, particularly to chemistry, manufacturing, and controls review and pre-approval inspections. Championing the use of cutting-edge science, novel methods and innovative statistical approaches in rare disease drug development. The Initiative is led by the FDA’s Rare Disease Innovation Hub, partnering with the Office of the Commissioner, the Center for Biologics Evaluation and Research, and the Center for Drug Evaluation and Research. “Patients with rare diseases and their families deserve a regulatory process that addresses the uniqueness of each of their conditions while maintaining the FDA’s rigorous standards,” said the Hub’s Director, Amy Comstock Rick, J.D. “A bold vision to reimagine the framework for rare disease drug development that builds on key learnings and milestones is necessary to meet this moment. This new framework will enhance consistency and predictability for both sponsors and for patients.” Further opportunities to provide input will follow the public meeting, including sector-specific roundtables, Requests for Information, and internal FDA feedback sessions. This feedback will inform the detailed development of a new framework, which might include potential new or revised guidance, revisions to regulations, staff training, and organizational changes. Additional Resources • FDA Rare Disease Innovation Hub • Rare Disease Framework Media: FDA Request for Comment 202-690-6343 Consumer: 888-INFO-FDA The FDA, an agency within the U.S. Department of Health and Human Services, protects the public health by assuring the safety, effectiveness, and security of human and veterinary drugs, vaccines and other biological products for human use, and medical devices. The agency also is responsible for the safety and security of our nation’s food supply, cosmetics, dietary supplements, radiation-emitting electronic products, and for regulating tobacco products. ###",
-    "published_at": "2026-10-14T04:00:00+00:00",
-    "published_raw": "",
-    "source": "official_fda_releases",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "bfdc0202ba06f9e6b9abe1d1",
-    "first_seen": "2026-10-16T10:43:12.031029+00:00",
-    "observations": [
-      {
-        "source": "official_fda_releases",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
-    "publisher_publication_candidates": [
-      "Wed, 10/14/2026 - 11:50"
-    ],
-    "publisher_published_at": "Wed, 10/14/2026 - 11:50",
-    "publisher_publication_status": "unique_structured_candidate",
-    "extraction_method": "html_article_candidate",
-    "publication_time_source": "page_metadata",
-    "extraction_attempted_at": "2026-10-23T21:03:57.142729+00:00",
-    "extraction_attempts": 1,
-    "retained_feed_body": ""
   },
   {
     "title": "Enbridge Energy, LP v. Nessel",
@@ -234474,7 +234988,7 @@
       }
     ],
     "extraction_status": "unsupported_format",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:57.142737+00:00",
     "extraction_attempts": 1,
     "extraction_error": ""
@@ -234499,7 +235013,7 @@
       }
     ],
     "extraction_status": "unsupported_format",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:57.142742+00:00",
     "extraction_attempts": 1,
     "extraction_error": ""
@@ -234524,7 +235038,7 @@
       }
     ],
     "extraction_status": "unsupported_format",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:57.142747+00:00",
     "extraction_attempts": 1,
     "extraction_error": ""
@@ -234549,7 +235063,7 @@
       }
     ],
     "extraction_status": "unsupported_format",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:57.142753+00:00",
     "extraction_attempts": 1,
     "extraction_error": ""
@@ -234574,40 +235088,10 @@
       }
     ],
     "extraction_status": "unsupported_format",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
     "extraction_attempted_at": "2026-10-23T21:03:57.142758+00:00",
     "extraction_attempts": 1,
     "extraction_error": ""
-  },
-  {
-    "title": "Operation Economic Outcast Targets Iran’s International Financial Networks and Shadow Banking Architecture",
-    "url": "https://home.treasury.gov/news/press-releases/sb0660/",
-    "body": "October 15, 2026 Action Disrupts Iraqi Bank Enabling Iranian Sanctions Evasion and Cuts Off Key Foreign Currency Lifelines WASHINGTON —Today, as part of Operation Economic Outcast, the U.S. Department of the Treasury disrupted Iran’s efforts to infiltrate the international financial system through an Iraqi bank that also supports Iran’s terrorist proxy militia groups.  By dismantling these institutions—including offshore banks and shadow financiers that have moved hundreds of millions of dollars through shell companies and foreign‑exchange specialists across the Middle East and Asia—Treasury is severing critical revenue streams that sustain Iran’s military and proxy forces. “The noose is tightening around Iran’s economy, and not even Iran’s so-called allies can save it,” said Secretary of the Treasury Scott Bessent .  “The Department of the Treasury will not relent until the Iranian regime’s coffers are empty and every remaining financial lifeline sustaining its war machine has been severed.” In coordination with today’s action, the U.S. Department of State is concurrently designating Cuba-based Banco Internacional de Comercio S.A. (BICSA) pursuant to Section 2(a)(i)(A) of Executive Order (E.O.) 14404 for operating in or having operated in the financial services sector of the Cuban economy.  BICSA has provided services to the designated Iran-based Karafarin Bank since at least 2022. These designations, coupled with additional sanctions on Iran’s shadow banking networks, cut off some of the few remaining financial lifelines the regime can access to prop up its failing economy and fund its military.  The designations also expose the regime’s deliberate use of complex offshore structures and front companies to circumvent sanctions and stabilize its economy despite mounting pressure.  Taken together, today’s measures target the core financial architecture that enables Iran to evade international scrutiny and fund its destabilizing regional activities.  Treasury’s action is being taken pursuant to E.O. 13902, which targets certain sectors of the Iranian economy, including Iran’s financial and petroleum sectors. OPERATION ECONOMIC OUTCAST IS ISOLATING THE IRANIAN REGIME Announced by Secretary Bessent on August 24, 2026, dubbed Economic D-Day, Operation Economic Outcast is severing the remaining economic lifelines that sustain the Iranian regime. Treasury has mapped the networks, facilitators, and financial channels that Iran uses to smuggle oil, evade sanctions, and fund terror.  Working with partners across the U.S. government, the European Union, the United Kingdom, Gulf partners, and others, Treasury is targeting any source of the regime’s illicit revenue, as well as its sanctions evasion schemes to move funds. Operation Economic Outcast significantly expanded sanctions risk for those who continue to choose to do business with Iran.  Treasury warned that any entity facilitating money laundering or sanctions evasion on behalf of Iran risks being cut off from the U.S. financial system.  It also expanded secondary sanctions exposure for those who continue doing business with the Iranian regime and will accelerate the pace of U.S. enforcement. More information on Operation Economic Outcast is available here . Because Iran is already subject to comprehensive U.S. sanctions, it relies on multi-jurisdictional shadow banking networks to generate revenue and transfer funds abroad.  Iran uses these shadow banking networks to launder funds, procure weapons, access U.S. dollar correspondent banking relationships, and bankroll its regional terrorist proxy groups.  These networks rely on financial institutions such as the recently designated Golden Global Bank , and Operation Economic Outcast will continue to identify these banks and remove their access to the U.S. dollar. IRAQI BANK PROVIDING U.S. DOLLAR ACCESS FOR IRAN Iraq-based International Development Bank for Investment and Finance (IDB) provides financial facilitation services and U.S. dollar access for Iran.  IDB has abused its access to the now-dissolved U.S. dollar wire auction and maintains ties to Iranian government entities and Iran-aligned militia groups (IAMGs) in Iraq.  IDB was initially established by Iranian companies to support the Iranian economy and supply Iran with U.S. dollars.  U.S.-designated Bank Melli , which was located next to IDB in Iraq, closed due to U.S. sanctions and transferred its capital to IDB.  IDB uses Iranian capital to conduct business, then collects any profit made and sends it back to Iran in the form of U.S. dollars each month.  The bank’s current leadership received ownership of IDB from a dual-Iranian Iraqi financier working for the U.S.-designated Iranian Islamic Revolutionary Guard Corps–Qods Force (IRGC-QF).  The financier continues to use his familial relationships to exert influence over the bank. IDB is being designated pursuant to E.O. 13902 for operating in the financial sector of the Iranian economy. IRANIAN “OFFSHORE” BANKS In addition to establishing correspondent banking relationships with financial institutions in allied countries, the Iranian government has authorized certain banks to operate “ offshore ” in free trade zones.  These Iranian banks have been approved by the Central Bank of Iran and the Supreme National Security Council to conduct their operations using foreign currency to aid sanctions evasion schemes.  Iran-based Jazireh International Bank Company is an Iranian offshore bank affiliated with Bank Mellat, while Chabahar International Bank Overseas Company is an offshore bank affiliated with Bank Shahr. Jazireh International Bank Company and Chabahar International Bank Overseas Company are being designated pursuant to E.O. 13902 for operating in the financial sector of the Iranian economy. IRANIAN OIL “TRUSTEE” Many of Iran’s key revenue generation streams are corruptly controlled by Iranian regime elites.  These revenue streams include the shipping empire of Mohammad Hossein Shamkhani , son of Ali Shamkhani, the late advisor to Iran’s Supreme Leader, and the vast overseas property holdings of Ali Ansari , a key benefactor of Mojtaba Khamenei.  One of the elites controlling Iran’s key revenue streams is Iranian national Sayyed Ruhollah Razavi (Razavi), son-in-law of Iran’s hardline Paydari Front leader and one of the top oil trustees on whom the Iranian regime relies to sell oil and repatriate the revenue. Living in Dubai as one of Iran’s top oil intermediaries, Razavi has worked hand-in-hand with Seyed Naiemaei Badroddin Moosavi , a Hizballah financier and Islamic Revolutionary Guard Corps-Qods Force facilitator designated on April 15, 2026.  Prior to the U.S. blockade preventing Iranian oil exports, Razavi was responsible for shipping millions of barrels of oil overseas each month on behalf of the National Iranian Oil Company and its subsidiary, Naftiran Intertrade Company.  Razavi has also used his network to move the revenue generated from these oil sales through Iran’s clandestine banking system of shell companies and cash and gold couriers.  These networks move funds through Hong Kong to the UAE and Türkiye where they are converted to gold and cash and then smuggled on Mahan Air flights to Iran and its terrorist proxies around the world.  Razavi is being designated pursuant to E.O. 13902 for operating in the petroleum sector of the Iranian economy. In addition to his overseas work on behalf of Iran, Razavi manages Iran-based companies Tejarat Gostar Atlas Parsian Kish Company and Farzanegan Energy Pars Company , the latter of which is currently developing the Farzanegan Gas Condensate Refinery in Iran’s Bushehr Province.  Tejarat Gostar Atlas Parsian Kish Company and Farzanegan Energy Pars Company are being designated pursuant to E.O. 13902 for being owned or controlled by, or having acted or purported to act for or on behalf of, directly or indirectly, Razavi. SHADOW BANKING OPERATIVES Farab Sorough Qeshm Company (FSAQ), an affiliate of Iran’s Shahr Bank, relies on a cadre of foreign exchange experts to process transactions essential to the operations of Iran’s leading oil sales companies and brokers, including the National Iranian Oil Company, Triliance Petrochemical Company, and the military-controlled Sepehr Energy Jahan Nama Pars Company.  FSAQ employees help to coordinate financial transactions through its rahbar network using shell companies established in Hong Kong and the UAE.  Today, OFAC is designating seven FSAQ employees who have been involved in foreign exchange operations linked to FSAQ: Zhila Mohammadi , Milad Katebi , Amir Sabeti , Nazanin Borji , Fatemeh Vasighi Meraji , Azadeh Abdolalipur , and Farzad Allahyar .  Hong Kong-based Elitesphere Trading Co., Limited , which has been used by FSAQ to move funds through the rahbar network of brokers and front companies in support of Iranian sanctions evasion, is also being designated for operating in the financial sector of the Iranian economy. Zhila Mohammadi, Milad Katebi, Amir Sabeti, Nazanin Borji, Fatemeh Vasighi Meraji, Azadeh Abdolalipur, and Farzad Allahyar are being designated pursuant to E.O. 13902 for having acted or purported to act for or on behalf of, directly or indirectly, FSAQ. Iran-based exchange house Seyyed Abbas Hosseini Parsa and Partners Qeshm General Partnership (Hosseini Parsa Exchange), owned and operated by Iranian nationals Seyyed Abbas Hosseini Parsa and Khaled Mohiesnejad , assists the rahbar financial activities of sanctioned Iranian banks alongside Dominican/Iranian national Sadegh Bavi .  Sadegh Bavi, an IRGC-Qods Force facilitator and money launderer who also assists in weapons purchases for Iran, is the owner and general manager of the Bavi General Trading Company LLC , which was previously designated by OFAC for helping coordinate tens of millions of dollars’ worth of payments for front companies operated by the Persian Gulf Petrochemical Industry Commercial Co. and Triliance Petrochemical Co. Ltd .  Hosseini Parsa Exchange has a close relationship with Bavi General Trading, which has used Hosseini Parsa Exchange’s official documents and letterhead to carry out its own business operations.  Sadegh Bavi also owns and operates Bavi and Partners Exchange Company , another Iran-based currency exchange house. Iran-based exchange house Soheil and Sorush Najafzadeh and Partners Company (Najafzadeh Exchange), owned and operated by Iranian nationals Sorush Najafzadeh , Soheil Najafzadeh , and Mansureh Mirmohammadi , has processed transactions worth hundreds of millions of dollars’ worth of financial transactions for Iranian financial institutions, including entities linked to Bank Mellat and its rahbar, Tejarat Sarir Afrooz Kish .  Iran-based exchange house Abolhasan Jalali and Partners Exchange Company (Jalali Exchange), owned and operated by Iranian nationals Abolhassan Jalali and Ensiyeh Mullah Mohammadi , has likewise facilitated tens of millions of dollars’ worth of payments for Iran’s shadow banking networks and sanctioned rahbar entities. Elitesphere Trading Co., Limited, Hosseini Parsa Exchange, Jalali Exchange, Najafzadeh Exchange, Bavi and Partners Exchange Company, Sorush Najafzadeh, Soheil Najafzadeh, Abolhassan Jalali, Ensiyeh Mullah Mohammadi, and Sadegh Bavi are being designated pursuant to E.O. 13902 for operating in the financial sector of the Iranian economy.  Seyyed Abbas Hosseini Parsa and Khaled Mohiesnejad are being designated pursuant to E.O. 13902 for having acted or purported to act for or on behalf of, directly or indirectly, Hosseini Parsa Exchange.  Mansureh Mirmohammadi is being designated pursuant to E.O. 13902 for having acted or purported to act for or on behalf of, directly or indirectly, Najafzadeh Exchange. SANCTIONS IMPLICATIONS As a result of today’s action, all property and interests in property of the designated or blocked persons described above that are in the United States or in the possession or control of U.S. persons are blocked and must be reported to OFAC.  In addition, any entities that are owned, directly or indirectly, individually or in the aggregate, 50 percent or more by one or more blocked persons are also blocked. Unless authorized by a general or specific license issued by OFAC, or exempt, OFAC’s regulations generally prohibit all transactions by U.S. persons or within (or transiting) the United States that involve any property or interests in property of blocked persons. Violations of U.S. sanctions may result in the imposition of civil or criminal penalties on U.S. and foreign persons. OFAC may impose civil penalties for sanctions violations on a strict liability basis. OFAC’s Economic Sanctions Enforcement Guidelines provide more information regarding OFAC’s enforcement of U.S. economic sanctions.  The prohibitions include the making of any contribution or provision of funds, goods, or services by, to, or for the benefit of any designated or blocked person, or the receipt of any contribution or provision of funds, goods, or services from any such person.  Non-U.S. persons are also prohibited from causing or conspiring to cause U.S. persons to wittingly or unwittingly violate U.S. sanctions, and from engaging in conduct that evades U.S.  sanctions. Individuals located in the U.S. or abroad who provide information about sanctions violations to FinCEN’s whistleblower incentive program may be eligible for awards if the information they provide leads to a successful enforcement action that results in monetary penalties exceeding $1,000,000.  In addition, financial institutions and other persons may risk exposure to sanctions for engaging in certain transactions or activities with designated or otherwise blocked persons. Furthermore, engaging in certain transactions involving the persons designated today may risk the imposition of secondary sanctions on participating foreign financial institutions.  OFAC can prohibit or impose strict conditions on opening or maintaining, in the United States, a correspondent account or a payable-through account of a foreign financial institution that knowingly conducts or facilitates any significant transaction on behalf of a person who is designated pursuant to the relevant authority. The power and integrity of OFAC sanctions derive not only from OFAC’s ability to designate and add persons to the Specially Designated Nationals and Blocked Persons List (SDN List), but also from its willingness to remove persons from the SDN List consistent with the law.  The ultimate goal of sanctions is not to punish, but to bring about a positive change in behavior. For information concerning the process for seeking removal from an OFAC list, including the SDN List, or to submit a request, please refer to OFAC’s guidance on Filing a Petition for Removal from an OFAC List . Click here for more information on the persons designated today . ###",
-    "published_at": "2026-10-15T17:00:00+00:00",
-    "published_raw": "",
-    "source": "official_treasury",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "aae9d72ef63697fac0cfd2d9",
-    "first_seen": "2026-10-16T10:43:12.031029+00:00",
-    "observations": [
-      {
-        "source": "official_treasury",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "page_text",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00",
-    "publisher_publication_candidates": [],
-    "publisher_published_at": null,
-    "publisher_publication_status": "ambiguous_or_absent",
-    "extraction_method": "html_article_candidate",
-    "publication_time_source": "page_metadata",
-    "extraction_attempted_at": "2026-10-23T21:03:57.142764+00:00",
-    "extraction_attempts": 1,
-    "retained_feed_body": ""
   },
   {
     "title": "Postal Service v. Konan",
@@ -234629,7 +235113,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Abouammo v. United States",
@@ -234651,7 +235135,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "T. M. v. University of Md. Medical System Corporation",
@@ -234673,7 +235157,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Bowe v. United States",
@@ -234695,7 +235179,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "FS Credit Opportunities Corp. v. Saba Capital Master Fund, Ltd.",
@@ -234717,7 +235201,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "District of Columbia v. R.W.",
@@ -234739,7 +235223,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "September 30, 2026 - FDA Launches Nationwide Effort to Expand Scientific Expertise and Consumer Voices to Advisory Committees",
@@ -234761,7 +235245,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Keathley v. Buddy Ayers Construction, Inc.",
@@ -234783,7 +235267,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Flowers Foods, Inc. v. Brock",
@@ -234805,7 +235289,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Statement from U.S. Secretary of the Treasury Scott Bessent for the World Bank Development Committee and IMF International Monetary and Financial Committee",
@@ -234827,7 +235311,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "October 1, 2026 - FDA Approves First Heart Valve Designed to Grow with Children",
@@ -234849,7 +235333,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Galette v. New Jersey Transit Corp.",
@@ -234871,7 +235355,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Cisco Systems, Inc. v. Doe",
@@ -234893,7 +235377,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "West Virginia v. B. P. J.",
@@ -234915,7 +235399,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Montgomery v. Caribe Transport II, LLC",
@@ -234937,7 +235421,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Barrett v. United States",
@@ -234959,7 +235443,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Treasury and IRS Move to Protect Health Care Benefits for Eligible Americans",
@@ -234981,7 +235465,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "First Choice Women’s Resource Centers, Inc. v. Davenport",
@@ -235003,7 +235487,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "October 5, 2026 - FDA Seeks Public Input to Support Ibogaine Research",
@@ -235025,7 +235509,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "October 14, 2026 - FDA Approves First Treatment for Certain People With BCG-Unresponsive Bladder Cancer",
@@ -235047,7 +235531,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Pitts v. Mississippi",
@@ -235069,7 +235553,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Hencely v. Fluor Corp.",
@@ -235091,7 +235575,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Rico v. United States",
@@ -235113,7 +235597,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "People Not Politicians v. Onder",
@@ -235135,7 +235619,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Bost v. Illinois Bd. of Elections",
@@ -235157,7 +235641,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Learning Resources, Inc. v. Trump",
@@ -235179,7 +235663,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Hikma Pharmaceuticals USA Inc. v. Amarin Pharma, Inc.",
@@ -235201,7 +235685,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Department of Homeland Security v. League of Women Voters",
@@ -235223,7 +235707,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Operation Economic Outcast Targets Iranian Regime’s Abuse of Religious Charity Networks",
@@ -235245,7 +235729,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Cox Communications, Inc. v. Sony Music Entertainment",
@@ -235267,7 +235751,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Pung v. Isabella County",
@@ -235289,7 +235773,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Chevron USA Inc. v. Plaquemines Parish",
@@ -235311,7 +235795,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Watson v. Republican National Committee",
@@ -235333,7 +235817,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Olivier v. City of Brandon",
@@ -235355,7 +235839,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Ellingburg v. United States",
@@ -235377,7 +235861,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Fernandez v. United States",
@@ -235399,7 +235883,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Chatrie v. United States",
@@ -235421,7 +235905,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Havana Docks Corp. v. Royal Caribbean Cruises, Ltd.",
@@ -235443,7 +235927,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "M & K Employee Solutions, Inc. v. Trustees of IAM Nat. Pension",
@@ -235465,7 +235949,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Exxon Mobil Corp. v. Corporación Cimex, S. A. (Cuba)",
@@ -235487,7 +235971,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Hain Celestial Group, Inc. v. Palmquist",
@@ -235509,7 +235993,7 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
   },
   {
     "title": "Hunter v. United States",
@@ -235531,6 +236015,68 @@
       }
     ],
     "extraction_status": "headline_only",
-    "last_seen": "2026-10-23T21:03:29.374508+00:00"
+    "last_seen": "2026-10-23T23:16:41.574207+00:00"
+  },
+  {
+    "title": "Operation Economic Outcast Targets Iran’s International Financial Networks and Shadow Banking Architecture",
+    "url": "https://home.treasury.gov/news/press-releases/sb0660/",
+    "body": "October 15, 2026 Action Disrupts Iraqi Bank Enabling Iranian Sanctions Evasion and Cuts Off Key Foreign Currency Lifelines WASHINGTON —Today, as part of Operation Economic Outcast, the U.S. Department of the Treasury disrupted Iran’s efforts to infiltrate the international financial system through an Iraqi bank that also supports Iran’s terrorist proxy militia groups.  By dismantling these institutions—including offshore banks and shadow financiers that have moved hundreds of millions of dollars through shell companies and foreign‑exchange specialists across the Middle East and Asia—Treasury is severing critical revenue streams that sustain Iran’s military and proxy forces. “The noose is tightening around Iran’s economy, and not even Iran’s so-called allies can save it,” said Secretary of the Treasury Scott Bessent .  “The Department of the Treasury will not relent until the Iranian regime’s coffers are empty and every remaining financial lifeline sustaining its war machine has been severed.” In coordination with today’s action, the U.S. Department of State is concurrently designating Cuba-based Banco Internacional de Comercio S.A. (BICSA) pursuant to Section 2(a)(i)(A) of Executive Order (E.O.) 14404 for operating in or having operated in the financial services sector of the Cuban economy.  BICSA has provided services to the designated Iran-based Karafarin Bank since at least 2022. These designations, coupled with additional sanctions on Iran’s shadow banking networks, cut off some of the few remaining financial lifelines the regime can access to prop up its failing economy and fund its military.  The designations also expose the regime’s deliberate use of complex offshore structures and front companies to circumvent sanctions and stabilize its economy despite mounting pressure.  Taken together, today’s measures target the core financial architecture that enables Iran to evade international scrutiny and fund its destabilizing regional activities.  Treasury’s action is being taken pursuant to E.O. 13902, which targets certain sectors of the Iranian economy, including Iran’s financial and petroleum sectors. OPERATION ECONOMIC OUTCAST IS ISOLATING THE IRANIAN REGIME Announced by Secretary Bessent on August 24, 2026, dubbed Economic D-Day, Operation Economic Outcast is severing the remaining economic lifelines that sustain the Iranian regime. Treasury has mapped the networks, facilitators, and financial channels that Iran uses to smuggle oil, evade sanctions, and fund terror.  Working with partners across the U.S. government, the European Union, the United Kingdom, Gulf partners, and others, Treasury is targeting any source of the regime’s illicit revenue, as well as its sanctions evasion schemes to move funds. Operation Economic Outcast significantly expanded sanctions risk for those who continue to choose to do business with Iran.  Treasury warned that any entity facilitating money laundering or sanctions evasion on behalf of Iran risks being cut off from the U.S. financial system.  It also expanded secondary sanctions exposure for those who continue doing business with the Iranian regime and will accelerate the pace of U.S. enforcement. More information on Operation Economic Outcast is available here . Because Iran is already subject to comprehensive U.S. sanctions, it relies on multi-jurisdictional shadow banking networks to generate revenue and transfer funds abroad.  Iran uses these shadow banking networks to launder funds, procure weapons, access U.S. dollar correspondent banking relationships, and bankroll its regional terrorist proxy groups.  These networks rely on financial institutions such as the recently designated Golden Global Bank , and Operation Economic Outcast will continue to identify these banks and remove their access to the U.S. dollar. IRAQI BANK PROVIDING U.S. DOLLAR ACCESS FOR IRAN Iraq-based International Development Bank for Investment and Finance (IDB) provides financial facilitation services and U.S. dollar access for Iran.  IDB has abused its access to the now-dissolved U.S. dollar wire auction and maintains ties to Iranian government entities and Iran-aligned militia groups (IAMGs) in Iraq.  IDB was initially established by Iranian companies to support the Iranian economy and supply Iran with U.S. dollars.  U.S.-designated Bank Melli , which was located next to IDB in Iraq, closed due to U.S. sanctions and transferred its capital to IDB.  IDB uses Iranian capital to conduct business, then collects any profit made and sends it back to Iran in the form of U.S. dollars each month.  The bank’s current leadership received ownership of IDB from a dual-Iranian Iraqi financier working for the U.S.-designated Iranian Islamic Revolutionary Guard Corps–Qods Force (IRGC-QF).  The financier continues to use his familial relationships to exert influence over the bank. IDB is being designated pursuant to E.O. 13902 for operating in the financial sector of the Iranian economy. IRANIAN “OFFSHORE” BANKS In addition to establishing correspondent banking relationships with financial institutions in allied countries, the Iranian government has authorized certain banks to operate “ offshore ” in free trade zones.  These Iranian banks have been approved by the Central Bank of Iran and the Supreme National Security Council to conduct their operations using foreign currency to aid sanctions evasion schemes.  Iran-based Jazireh International Bank Company is an Iranian offshore bank affiliated with Bank Mellat, while Chabahar International Bank Overseas Company is an offshore bank affiliated with Bank Shahr. Jazireh International Bank Company and Chabahar International Bank Overseas Company are being designated pursuant to E.O. 13902 for operating in the financial sector of the Iranian economy. IRANIAN OIL “TRUSTEE” Many of Iran’s key revenue generation streams are corruptly controlled by Iranian regime elites.  These revenue streams include the shipping empire of Mohammad Hossein Shamkhani , son of Ali Shamkhani, the late advisor to Iran’s Supreme Leader, and the vast overseas property holdings of Ali Ansari , a key benefactor of Mojtaba Khamenei.  One of the elites controlling Iran’s key revenue streams is Iranian national Sayyed Ruhollah Razavi (Razavi), son-in-law of Iran’s hardline Paydari Front leader and one of the top oil trustees on whom the Iranian regime relies to sell oil and repatriate the revenue. Living in Dubai as one of Iran’s top oil intermediaries, Razavi has worked hand-in-hand with Seyed Naiemaei Badroddin Moosavi , a Hizballah financier and Islamic Revolutionary Guard Corps-Qods Force facilitator designated on April 15, 2026.  Prior to the U.S. blockade preventing Iranian oil exports, Razavi was responsible for shipping millions of barrels of oil overseas each month on behalf of the National Iranian Oil Company and its subsidiary, Naftiran Intertrade Company.  Razavi has also used his network to move the revenue generated from these oil sales through Iran’s clandestine banking system of shell companies and cash and gold couriers.  These networks move funds through Hong Kong to the UAE and Türkiye where they are converted to gold and cash and then smuggled on Mahan Air flights to Iran and its terrorist proxies around the world.  Razavi is being designated pursuant to E.O. 13902 for operating in the petroleum sector of the Iranian economy. In addition to his overseas work on behalf of Iran, Razavi manages Iran-based companies Tejarat Gostar Atlas Parsian Kish Company and Farzanegan Energy Pars Company , the latter of which is currently developing the Farzanegan Gas Condensate Refinery in Iran’s Bushehr Province.  Tejarat Gostar Atlas Parsian Kish Company and Farzanegan Energy Pars Company are being designated pursuant to E.O. 13902 for being owned or controlled by, or having acted or purported to act for or on behalf of, directly or indirectly, Razavi. SHADOW BANKING OPERATIVES Farab Sorough Qeshm Company (FSAQ), an affiliate of Iran’s Shahr Bank, relies on a cadre of foreign exchange experts to process transactions essential to the operations of Iran’s leading oil sales companies and brokers, including the National Iranian Oil Company, Triliance Petrochemical Company, and the military-controlled Sepehr Energy Jahan Nama Pars Company.  FSAQ employees help to coordinate financial transactions through its rahbar network using shell companies established in Hong Kong and the UAE.  Today, OFAC is designating seven FSAQ employees who have been involved in foreign exchange operations linked to FSAQ: Zhila Mohammadi , Milad Katebi , Amir Sabeti , Nazanin Borji , Fatemeh Vasighi Meraji , Azadeh Abdolalipur , and Farzad Allahyar .  Hong Kong-based Elitesphere Trading Co., Limited , which has been used by FSAQ to move funds through the rahbar network of brokers and front companies in support of Iranian sanctions evasion, is also being designated for operating in the financial sector of the Iranian economy. Zhila Mohammadi, Milad Katebi, Amir Sabeti, Nazanin Borji, Fatemeh Vasighi Meraji, Azadeh Abdolalipur, and Farzad Allahyar are being designated pursuant to E.O. 13902 for having acted or purported to act for or on behalf of, directly or indirectly, FSAQ. Iran-based exchange house Seyyed Abbas Hosseini Parsa and Partners Qeshm General Partnership (Hosseini Parsa Exchange), owned and operated by Iranian nationals Seyyed Abbas Hosseini Parsa and Khaled Mohiesnejad , assists the rahbar financial activities of sanctioned Iranian banks alongside Dominican/Iranian national Sadegh Bavi .  Sadegh Bavi, an IRGC-Qods Force facilitator and money launderer who also assists in weapons purchases for Iran, is the owner and general manager of the Bavi General Trading Company LLC , which was previously designated by OFAC for helping coordinate tens of millions of dollars’ worth of payments for front companies operated by the Persian Gulf Petrochemical Industry Commercial Co. and Triliance Petrochemical Co. Ltd .  Hosseini Parsa Exchange has a close relationship with Bavi General Trading, which has used Hosseini Parsa Exchange’s official documents and letterhead to carry out its own business operations.  Sadegh Bavi also owns and operates Bavi and Partners Exchange Company , another Iran-based currency exchange house. Iran-based exchange house Soheil and Sorush Najafzadeh and Partners Company (Najafzadeh Exchange), owned and operated by Iranian nationals Sorush Najafzadeh , Soheil Najafzadeh , and Mansureh Mirmohammadi , has processed transactions worth hundreds of millions of dollars’ worth of financial transactions for Iranian financial institutions, including entities linked to Bank Mellat and its rahbar, Tejarat Sarir Afrooz Kish .  Iran-based exchange house Abolhasan Jalali and Partners Exchange Company (Jalali Exchange), owned and operated by Iranian nationals Abolhassan Jalali and Ensiyeh Mullah Mohammadi , has likewise facilitated tens of millions of dollars’ worth of payments for Iran’s shadow banking networks and sanctioned rahbar entities. Elitesphere Trading Co., Limited, Hosseini Parsa Exchange, Jalali Exchange, Najafzadeh Exchange, Bavi and Partners Exchange Company, Sorush Najafzadeh, Soheil Najafzadeh, Abolhassan Jalali, Ensiyeh Mullah Mohammadi, and Sadegh Bavi are being designated pursuant to E.O. 13902 for operating in the financial sector of the Iranian economy.  Seyyed Abbas Hosseini Parsa and Khaled Mohiesnejad are being designated pursuant to E.O. 13902 for having acted or purported to act for or on behalf of, directly or indirectly, Hosseini Parsa Exchange.  Mansureh Mirmohammadi is being designated pursuant to E.O. 13902 for having acted or purported to act for or on behalf of, directly or indirectly, Najafzadeh Exchange. SANCTIONS IMPLICATIONS As a result of today’s action, all property and interests in property of the designated or blocked persons described above that are in the United States or in the possession or control of U.S. persons are blocked and must be reported to OFAC.  In addition, any entities that are owned, directly or indirectly, individually or in the aggregate, 50 percent or more by one or more blocked persons are also blocked. Unless authorized by a general or specific license issued by OFAC, or exempt, OFAC’s regulations generally prohibit all transactions by U.S. persons or within (or transiting) the United States that involve any property or interests in property of blocked persons. Violations of U.S. sanctions may result in the imposition of civil or criminal penalties on U.S. and foreign persons. OFAC may impose civil penalties for sanctions violations on a strict liability basis. OFAC’s Economic Sanctions Enforcement Guidelines provide more information regarding OFAC’s enforcement of U.S. economic sanctions.  The prohibitions include the making of any contribution or provision of funds, goods, or services by, to, or for the benefit of any designated or blocked person, or the receipt of any contribution or provision of funds, goods, or services from any such person.  Non-U.S. persons are also prohibited from causing or conspiring to cause U.S. persons to wittingly or unwittingly violate U.S. sanctions, and from engaging in conduct that evades U.S.  sanctions. Individuals located in the U.S. or abroad who provide information about sanctions violations to FinCEN’s whistleblower incentive program may be eligible for awards if the information they provide leads to a successful enforcement action that results in monetary penalties exceeding $1,000,000.  In addition, financial institutions and other persons may risk exposure to sanctions for engaging in certain transactions or activities with designated or otherwise blocked persons. Furthermore, engaging in certain transactions involving the persons designated today may risk the imposition of secondary sanctions on participating foreign financial institutions.  OFAC can prohibit or impose strict conditions on opening or maintaining, in the United States, a correspondent account or a payable-through account of a foreign financial institution that knowingly conducts or facilitates any significant transaction on behalf of a person who is designated pursuant to the relevant authority. The power and integrity of OFAC sanctions derive not only from OFAC’s ability to designate and add persons to the Specially Designated Nationals and Blocked Persons List (SDN List), but also from its willingness to remove persons from the SDN List consistent with the law.  The ultimate goal of sanctions is not to punish, but to bring about a positive change in behavior. For information concerning the process for seeking removal from an OFAC list, including the SDN List, or to submit a request, please refer to OFAC’s guidance on Filing a Petition for Removal from an OFAC List . Click here for more information on the persons designated today . ###",
+    "published_at": "2026-10-15T17:00:00+00:00",
+    "published_raw": "",
+    "source": "official_treasury",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "aae9d72ef63697fac0cfd2d9",
+    "first_seen": "2026-10-16T10:43:12.031029+00:00",
+    "observations": [
+      {
+        "source": "official_treasury",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "page_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
+    "publisher_publication_candidates": [],
+    "publisher_published_at": null,
+    "publisher_publication_status": "ambiguous_or_absent",
+    "extraction_method": "html_article_candidate",
+    "publication_time_source": "page_metadata",
+    "extraction_attempted_at": "2026-10-23T21:03:57.142764+00:00",
+    "extraction_attempts": 1,
+    "retained_feed_body": ""
+  },
+  {
+    "title": "October 14, 2026 - FDA Launches the Rare Disease Framework Initiative to Develop a Holistic, Fit-For-Purpose Framework for Rare Disease Drug Development",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-rare-disease-framework-initiative-develop-holistic-fit-purpose-framework-rare-disease",
+    "body": "FDA News Release FDA Launches the Rare Disease Framework Initiative to Develop a Holistic, Fit-For-Purpose Framework for Rare Disease Drug Development Effort begins by Soliciting Public Feedback For Immediate Release: October 14, 2026 The U.S. Food and Drug Administration, a division within the U.S. Department of Health and Human Services (HHS), today announced the Rare Disease Framework Initiative to reimagine the development of drugs and biologics for rare diseases. As outlined in a new white paper , the Initiative will develop an optimized, fit-for-purpose framework that reflects the realities of rare disease drug development by considering the nuances of each disease, patient needs, product type and the evidence that can be realistically generated in small patient populations. To solicit feedback on the Rare Disease Framework Initiative from patients and disease advocates, industry, and others, the FDA will host an October 28 meeting at the FDA’s White Oak campus. The meeting will be facilitated by the Reagan-Udall Foundation for the FDA. “Americans with rare diseases cannot afford a regulatory system that treats every condition the same,” said HHS Secretary Robert F. Kennedy, Jr. “Under President Trump, FDA is rethinking rare disease drug development by putting patients at the center and matching regulatory requirements to the realities of small patient populations. We will remove unnecessary barriers, embrace cutting-edge science, and accelerate promising treatments while upholding FDA’s rigorous standards.” “Patients and families living with rare diseases have few or no approved treatment options, and the burden of uncertainty can extend across every part of their lives,” said Acting FDA Commissioner Kyle Diamantas, J.D. “As we learn more about rare diseases and better understand the breadth of suffering they cause, we must ensure that America’s regulatory system remains at the forefront — prepared to respond to emerging science, anticipate the needs of patients and families, and help bring safe and effective therapies to those who need them. The FDA will fight hard for patients by building a more consistent, predictable, and innovative approach to rare disease drug development while maintaining the rigorous standards Americans expect from the FDA.” The FDA has long used regulatory flexibility and developed targeted programs to support innovation in the development of drugs and biologics for rare diseases. These efforts have led to meaningful advances for patients and families. Nevertheless, with only 5% or so of rare conditions having an FDA-approved treatment, the FDA agrees with patients, drug developers, and providers that more must be done to speed the development of safe and effective treatments for rare diseases. In developing the framework, the FDA is committed to the following: Providing greater clarity, consistency, and predictability in regulatory decision-making through tailored guidance and transparent communication. Embedding the patient’s voice both early, and at clearly defined milestones, in the drug development and review process. Further leveraging external expertise to support customization of regulatory review. Building shared resources, robust training, and institutional knowledge on rare disease drug development and review. Applying risk-based approaches, particularly to chemistry, manufacturing, and controls review and pre-approval inspections. Championing the use of cutting-edge science, novel methods and innovative statistical approaches in rare disease drug development. The Initiative is led by the FDA’s Rare Disease Innovation Hub, partnering with the Office of the Commissioner, the Center for Biologics Evaluation and Research, and the Center for Drug Evaluation and Research. “Patients with rare diseases and their families deserve a regulatory process that addresses the uniqueness of each of their conditions while maintaining the FDA’s rigorous standards,” said the Hub’s Director, Amy Comstock Rick, J.D. “A bold vision to reimagine the framework for rare disease drug development that builds on key learnings and milestones is necessary to meet this moment. This new framework will enhance consistency and predictability for both sponsors and for patients.” Further opportunities to provide input will follow the public meeting, including sector-specific roundtables, Requests for Information, and internal FDA feedback sessions. This feedback will inform the detailed development of a new framework, which might include potential new or revised guidance, revisions to regulations, staff training, and organizational changes. Additional Resources • FDA Rare Disease Innovation Hub • Rare Disease Framework Media: FDA Request for Comment 202-690-6343 Consumer: 888-INFO-FDA The FDA, an agency within the U.S. Department of Health and Human Services, protects the public health by assuring the safety, effectiveness, and security of human and veterinary drugs, vaccines and other biological products for human use, and medical devices. The agency also is responsible for the safety and security of our nation’s food supply, cosmetics, dietary supplements, radiation-emitting electronic products, and for regulating tobacco products. ###",
+    "published_at": "2026-10-14T04:00:00+00:00",
+    "published_raw": "",
+    "source": "official_fda_releases",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "bfdc0202ba06f9e6b9abe1d1",
+    "first_seen": "2026-10-16T10:43:12.031029+00:00",
+    "observations": [
+      {
+        "source": "official_fda_releases",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "page_text",
+    "last_seen": "2026-10-23T23:16:41.574207+00:00",
+    "publisher_publication_candidates": [
+      "Wed, 10/14/2026 - 11:50"
+    ],
+    "publisher_published_at": "Wed, 10/14/2026 - 11:50",
+    "publisher_publication_status": "unique_structured_candidate",
+    "extraction_method": "html_article_candidate",
+    "publication_time_source": "page_metadata",
+    "extraction_attempted_at": "2026-10-23T21:03:57.142729+00:00",
+    "extraction_attempts": 1,
+    "retained_feed_body": ""
   }
 ]
