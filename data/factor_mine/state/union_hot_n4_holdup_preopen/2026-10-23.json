@@ -1,0 +1,94 @@
+{
+  "buys": [],
+  "cash": 9139.37,
+  "date": "2026-10-23",
+  "equity": 9139.37,
+  "fees": 9.7299,
+  "fills": [
+    {
+      "fees": 2.569,
+      "fill_rule": "open",
+      "pnl": 42.7,
+      "price": 13.18,
+      "shares": 177,
+      "side": "SELL",
+      "ticker": "KLRA"
+    },
+    {
+      "fees": 2.4838,
+      "fill_rule": "open",
+      "pnl": 85.08,
+      "price": 15.79,
+      "shares": 150,
+      "side": "SELL",
+      "ticker": "SGRY"
+    },
+    {
+      "fees": 2.3871,
+      "fill_rule": "open",
+      "pnl": -137.94,
+      "price": 17.94,
+      "shares": 120,
+      "side": "SELL",
+      "ticker": "SRPT"
+    },
+    {
+      "fees": 2.29,
+      "fill_rule": "open",
+      "pnl": -5.44,
+      "price": 25.54,
+      "shares": 89,
+      "side": "SELL",
+      "ticker": "TNGX"
+    }
+  ],
+  "holdings": [],
+  "label": "starts 10-08 open, no past days",
+  "mean": -3.0104,
+  "n_trades_today": 4,
+  "parent": "union_hot_n4_holdup",
+  "picks": [],
+  "reasons": [
+    "S=-7.54 <= -3: no buys"
+  ],
+  "recipe": "union_hot_n4_holdup_preopen",
+  "s": -7.538,
+  "seal_sha256": "2331e75bb33e61c7f746aec4abc1254a0a5907003bd28f1d610f81b9ad2a94c1",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 13.18,
+      "shares": 177,
+      "side": "SELL",
+      "ticker": "KLRA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 15.79,
+      "shares": 150,
+      "side": "SELL",
+      "ticker": "SGRY"
+    },
+    {
+      "fill_rule": "open",
+      "price": 17.94,
+      "shares": 120,
+      "side": "SELL",
+      "ticker": "SRPT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 25.54,
+      "shares": 89,
+      "side": "SELL",
+      "ticker": "TNGX"
+    }
+  ],
+  "sit": true,
+  "state": {
+    "after": "2026-10-23",
+    "cash": 9139.37,
+    "pos": {},
+    "yday_equity": 9139.37
+  }
+}

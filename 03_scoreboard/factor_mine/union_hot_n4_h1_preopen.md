@@ -4,7 +4,7 @@ _starts 10-08 open, no past days. Parent recipe `union_hot_n4_h1` (same selectio
 
 _Factor Mine recipe union_hot_n4_h1, not the separate IRONCLAD h1 book (research/hot_n4_clean_v4/forward_h1)._
 
-Equity: 9316.01 | days: 11
+Equity: 9316.01 | days: 12
 
 | date | S | picks | buys | sells | cash | equity | mean% | sit / reason |
 |---|---|---|---|---|---|---|---|---|
@@ -19,3 +19,4 @@ Equity: 9316.01 | days: 11
 | 2026-10-20 | None | - | - | BTI 38@58.935, COP 15@147.15, VET 174@13.79, WMG 73@31.13 | 9282.73 | 9282.73 | 0.8194 | seal not committed before 09:30 ET: never committed |
 | 2026-10-21 | 4.644 | KLRA, SGRY, SRPT, TNGX | KLRA 179@12.91, SGRY 152@15.19, SRPT 121@19.05, TNGX 90@25.55 | - | 48.82 | 9376.26 | 1.0076 | - |
 | 2026-10-22 | -14.314 | - | - | KLRA 179@12.8, SGRY 152@15.52, SRPT 121@18.4, TNGX 90@26.67 | 9316.01 | 9316.01 | -0.6426 | S=-14.31 <= -3: no buys |
+| 2026-10-23 | -7.538 | - | - | - | 9316.01 | 9316.01 | 0.0 | S=-7.54 <= -3: no buys |

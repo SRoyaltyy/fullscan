@@ -190,6 +190,19 @@
             "TNGX"
           ],
           "sit": true
+        },
+        {
+          "buys": [],
+          "date": "2026-10-23",
+          "equity": 9316.01,
+          "mean": 0.0,
+          "picks": [],
+          "reasons": [
+            "S=-7.54 <= -3: no buys"
+          ],
+          "s": -7.538,
+          "sells": [],
+          "sit": true
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -372,6 +385,24 @@
           ],
           "s": -14.314,
           "sells": [],
+          "sit": true
+        },
+        {
+          "buys": [],
+          "date": "2026-10-23",
+          "equity": 9139.37,
+          "mean": -3.0104,
+          "picks": [],
+          "reasons": [
+            "S=-7.54 <= -3: no buys"
+          ],
+          "s": -7.538,
+          "sells": [
+            "KLRA",
+            "SGRY",
+            "SRPT",
+            "TNGX"
+          ],
           "sit": true
         }
       ],
