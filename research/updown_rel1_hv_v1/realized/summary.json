@@ -1,8 +1,8 @@
 {
  "strategy": "updown_rel1_hv_v1",
  "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
- "days_locked": 12,
- "days_realized": 11,
+ "days_locked": 14,
+ "days_realized": 12,
  "days_missed": 0,
  "missed_dates": [],
  "rule": {
@@ -11,44 +11,44 @@
   "missed": "Missed days (not frozen before 09:25 ET) are recorded in MISSED.jsonl, never back-filled, and earn nothing."
  },
  "gross": {
-  "cum": 0.0257567025,
-  "mean_bp": 26.0160497152,
-  "t_nw": 0.5113770208
+  "cum": 0.0626956476,
+  "mean_bp": 53.8624046728,
+  "t_nw": 1.0997633789
  },
  "net5": {
-  "cum": 0.0107898185,
-  "mean_bp": 12.6705951698,
-  "t_nw": 0.2455644335
+  "cum": 0.045976724,
+  "mean_bp": 40.6290713394,
+  "t_nw": 0.8205701877
  },
  "net10": {
-  "cum": -0.0039790281,
-  "mean_bp": -0.6748593757,
-  "t_nw": -0.0128973422
+  "cum": 0.0294984176,
+  "mean_bp": 27.3957380061,
+  "t_nw": 0.5473014798
  },
  "net15": {
-  "cum": -0.0185521898,
-  "mean_bp": -14.0203139211,
-  "t_nw": -0.2642491567
+  "cum": 0.0132575867,
+  "mean_bp": 14.1624046728,
+  "t_nw": 0.2798640195
  },
  "hedged_net10": {
-  "cum": -0.0883728832,
-  "mean_bp": -81.558165765,
-  "t_nw": -1.3682071841
+  "cum": -0.0615197301,
+  "mean_bp": -50.2071673016,
+  "t_nw": -0.8893887146
  },
  "iwm_oo1": {
-  "cum": -0.0123629917,
-  "mean_bp": -10.7303775296,
-  "t_nw": -0.6285626775
+  "cum": -0.0122192054,
+  "mean_bp": -9.7148575638,
+  "t_nw": -0.6041484295
  },
  "rand_med_net10": {
-  "cum": -0.0368712288,
-  "mean_bp": -34.0934069488,
-  "t_nw": -37.2683154428
+  "cum": -0.0403358091,
+  "mean_bp": -34.2499657389,
+  "t_nw": -38.9231013169
  },
- "best_stock": "CIFR",
- "best_stock_contrib": 0.0078929419,
- "net10_ex_best_cum": -0.0115525519,
- "mean_turnover": 2.6690909091,
- "status": "collecting (11 realized days; kill check from day 20/60, promotion review not before day 120)",
+ "best_stock": "PURR",
+ "best_stock_contrib": 0.0083134389,
+ "net10_ex_best_cum": 0.0211353606,
+ "mean_turnover": 2.6466666667,
+ "status": "collecting (12 realized days; kill check from day 20/60, promotion review not before day 120)",
  "killed": false
 }
