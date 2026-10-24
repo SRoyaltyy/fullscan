@@ -3,6 +3,9 @@
 # obsolete comparison-page publisher from occupying runners or replacing the UI.
 name: Catalog-wide stock parser and same-stock comparison
 on:
+  push:
+    branches: ['codex/cumulative-scanner-validation']
+    paths: ['.github/workflows/stock-catalog-rollout.yml']
   pull_request:
     paths:
       - '.github/workflows/stock-catalog-rollout.yml'
@@ -13,7 +16,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   superseded:
-    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'codex/cumulative-scanner-validation'
+    if: github.event_name == 'push' || (github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'codex/cumulative-scanner-validation')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
