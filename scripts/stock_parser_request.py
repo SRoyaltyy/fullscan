@@ -90,6 +90,8 @@ def prepare(catalog_path, parser_root, ticker, out):
         parts.append({'source':'catalog_description', 'kind':'business', 'section':'stored description',
                       'document':'catalog description', 'form':'DESCRIPTION', 'filing_date':'',
                       'complete':False, 'text':description})
+    if not parts:
+        raise ValueError('No stored source text is available for the requested stock')
     receipt.update(description_sha256=digest(description.encode()), description_characters=len(description),
                    description_csv_sha256=digest(csvraw), archive_artifact_id=archive_id)
     payload = {'schema':'stock-parser-input-1', 'ticker':ticker, 'name':row['name'], 'cik':cik,

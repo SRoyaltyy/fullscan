@@ -70,7 +70,7 @@ async function load(){
   }});
   if(n!==sequence||signal.aborted)return;
   oldData=result.old;newData=result.new;currentBundle=result;
-  $('stock-summary').innerHTML='<strong>'+esc(ticker)+' · '+esc(row.name)+'</strong><p>'+esc(result.coverage_kind.replaceAll('_',' '))+' · fresh old/new execution on identical source bytes</p><p class="small">Fetch '+result.timings.fetch_seconds+'s · old parse '+result.timings.old_parse_seconds+'s · new parse '+result.timings.new_parse_seconds+'s · total request '+Math.round(result.wall_seconds)+'s (includes GitHub queue, setup and publication).</p>';
+  $('stock-summary').innerHTML='<strong>'+esc(ticker)+' · '+esc(row.name)+'</strong><p>'+esc(result.coverage_kind.replaceAll('_',' '))+' · fresh old/new execution on identical source bytes</p><p class="small">Fetch '+esc(result.timings.fetch_seconds)+'s · old parse '+esc(result.timings.old_parse_seconds)+'s · new parse '+esc(result.timings.new_parse_seconds)+'s · total request '+Math.round(result.wall_seconds)+'s (includes GitHub queue, setup and publication).</p>';
   $('coverage').innerHTML='<p>Old parser: <code>'+esc(result.old_sha)+'</code><br>New parser: <code>'+esc(result.new_sha)+'</code><br>Shared input SHA-256: <code>'+esc(result.input_sha256)+'</code><br>Cutoff: '+esc(result.as_of)+'</p><details><summary>Stored source receipt</summary><pre>'+esc(JSON.stringify(result.source_receipt,null,2))+'</pre></details>';
   if(result.coverage_kind==='description_only')$('stock-summary').innerHTML+='<p class="notice">Description only. This stock has no archived filings. The old searchable keyword compiler requires dated evidence; undated descriptions may yield no old keywords.</p>';
   history.replaceState(null,'','?ticker='+encodeURIComponent(ticker));render();

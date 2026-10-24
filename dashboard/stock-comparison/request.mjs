@@ -49,7 +49,7 @@ export async function requestComparison(config,ticker,token,{signal,onProgress=(
  const started=Date.now();onProgress({state:'Dispatching',seconds:0,request});
  await api('/repos/'+REPO+'/actions/workflows/'+config.workflow+'/dispatches',token,
   {method:'POST',signal,body:{ref:config.execution_ref,inputs:{...request,catalog_revision:config.catalog_revision}}});
- let run;
+ let run,completedAt;
  while(Date.now()-started<2*60*60*1000){
   if(signal?.aborted)throw new DOMException('Aborted','AbortError');
   if(!run){
@@ -75,7 +75,11 @@ export async function requestComparison(config,ticker,token,{signal,onProgress=(
     const decoded=await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).json();
     return {...verifyBundle(decoded,receipt),workflow_url:run.html_url,wall_seconds:(Date.now()-started)/1000};
    }
-   if(run.status==='completed')throw Error('Workflow '+run.conclusion+'; no verified comparison result was published. Inspect the linked run.');
+   if(run.status==='completed'){
+    if(run.conclusion!=='success')throw Error('Workflow '+run.conclusion+'; no verified comparison result was published. Inspect the linked run.');
+    completedAt ||= Date.now();
+    if(Date.now()-completedAt>90000)throw Error('Workflow succeeded but its verified result is not available yet. Inspect the linked run.');
+   }
   }
   await wait(5000,signal);
  }
