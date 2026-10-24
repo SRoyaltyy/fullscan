@@ -5,6 +5,12 @@
 </style>
 <main><h1>Stock extraction · old vs new</h1>
 <div class="notice"><strong>Catalog rollout — experimental accuracy.</strong> Compare the same stock’s previous searchable keywords with the new extracted terms and relationship statements. Added terms and changed relationships are output differences, not verified improvements. Description-only stocks have no archived filing extraction.</div>
+<section id="on-demand-workflow" class="panel" aria-labelledby="on-demand-title">
+<h2 id="on-demand-title">Required workflow: parse the selected stock on Enter</h2>
+<p>Select a stock and press Enter. The program should fetch that stock’s already stored source text from GitHub and run the deterministic parser on that input, returning specific keywords, their relationships with the firm, and the supporting source passages.</p>
+<ul><li>Run the old and new parser versions on the same input and show their outputs side by side.</li><li>Testing an individual stock must not require a catalog-wide rebuild.</li><li>Use optional caches keyed by parser version and source hashes; keep the stored source text separate from generated results.</li><li>Show fetching and parsing progress and measured elapsed time. Fast response is the goal; timing must be measured on the actual input.</li></ul>
+<p><strong>Current implementation: saved-output comparison.</strong> Pressing Enter currently loads saved results. Live Python parsing on Enter has not yet been connected.</p>
+</section>
 <p id="revisions" class="small">Loading version pins…</p><p id="progress" aria-live="polite">Loading catalog coverage…</p>
 <div class="toolbar"><input id="ticker" list="tickers" aria-label="Stock ticker" placeholder="Ticker or company name"><datalist id="tickers"></datalist><button id="compare">Compare stock</button><button id="random">Random stock</button><button id="refresh">Refresh rollout progress</button><button id="download">Download comparison JSON</button></div>
 <div id="error" role="alert"></div><section id="stock-summary" class="panel" aria-live="polite">Select a stock.</section>
