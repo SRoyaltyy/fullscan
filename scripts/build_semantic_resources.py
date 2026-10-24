@@ -27,7 +27,12 @@ def build(source: Path, destination: Path):
             rows.append([sense,words,gloss,item.get('partOfSpeech','')])
         target = destination / (path.stem + '.json.gz')
         decoded=json.dumps(rows,ensure_ascii=True,separators=(',',':')).encode('utf-8')
-        target.write_bytes(gzip.compress(decoded,mtime=0))
+        packed=bytearray(gzip.compress(decoded,mtime=0))
+        # Python 3.11/3.12 delegate mtime=0 to zlib and write a platform OS
+        # byte; later Python versions use 255. Canonicalize this metadata so
+        # identical pinned dictionaries have identical compressed hashes.
+        packed[9]=255
+        target.write_bytes(packed)
         manifest['files'].append({'file':target.name,'source':path.name,'source_sha256':hashlib.sha256(raw).hexdigest(),
             'sha256':hashlib.sha256(decoded).hexdigest(),'stored_sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'senses':len(rows)})
         manifest['senses'] += len(rows)

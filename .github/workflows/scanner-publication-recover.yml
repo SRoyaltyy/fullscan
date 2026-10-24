@@ -32,11 +32,15 @@ jobs:
           sparse-checkout: |
             src
             scripts
+            eval/scanner-failures
+            dashboard/scanner-backtest/index.html
             requirements-filing-parser.txt
           sparse-checkout-cone-mode: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Require cumulative and fresh-issuer methodology validation
+        run: python -m scripts.check_scanner_methodology --out cumulative-validation.json --require-pass
       - name: Resolve a complete page artifact from a trusted main workflow
         id: source
         env:

@@ -25,6 +25,18 @@ ROLES = {'buys_from':'supplier', 'sells_to':'customer', 'uses_input':'input',
     'owns_subsidiary':'subsidiary', 'acquires':'acquisition_target',
     'divests':'divestiture_target', 'differentiation_claim':'differentiation_claim'}
 ROLES['has_officer']='officer'
+ROLES.update({'provides_employee_benefit':'employee_benefit',
+    'holds_financial_instrument':'financial_instrument',
+    'issues_financial_instrument':'financial_instrument',
+    'financing_counterparty':'financing_counterparty',
+    'transaction_counterparty':'transaction_counterparty',
+    'benefit_recipient':'benefit_recipient',
+    'mentions_clinical_trial':'clinical_trial',
+    'mentions_product_platform':'product_platform',
+    'mentions_transaction_asset':'transaction_asset',
+    'mentions_legal_reference':'legal_reference',
+    'mentions_governance_body':'governance_body',
+    'unresolved_relationship':'unresolved_relationship'})
 ENTITY_ROLES = {'issuer','supplier','customer','competitor','partner','subsidiary',
                 'regulator','approval_authority','acquisition_target','divestiture_target'}
 LEGAL_SUFFIX = re.compile(r'(?:[, ]+(?:incorporated|corporation|company|limited|holdings|corp|inc|ltd|plc|llc)\.?)+$',re.I)
@@ -44,6 +56,17 @@ def normalized_words(value):
 # Complete source decisions remain in the archive, including excluded claims.
 SCANNER_POLICY = 'concrete-connections-2'
 RELATION_LABELS = {
+    'employee_benefit': ('Employee benefits', 'provides employee benefit'),
+    'financial_instrument': ('Financial instruments', 'reports financial instrument'),
+    'financing_counterparty': ('Financing counterparties', 'financing transaction with'),
+    'transaction_counterparty': ('Asset transaction counterparties', 'asset transaction with'),
+    'benefit_recipient': ('Employee benefits', 'provides benefits to'),
+    'clinical_trial': ('Clinical trials', 'mentions clinical trial'),
+    'product_platform': ('Product platforms', 'mentions platform'),
+    'transaction_asset': ('Transaction assets', 'mentions transaction asset'),
+    'legal_reference': ('Legal references', 'mentions legal reference'),
+    'governance_body': ('Corporate governance', 'mentions internal body'),
+    'unresolved_relationship': ('Unresolved relationships', 'relationship needs review'),
     'supplier': ('Upstream suppliers', 'buys from'),
     'customer': ('Downstream customers', 'sells to'),
     'partner': ('Business partners', 'partners with'),
@@ -468,6 +491,8 @@ def compile_keywords(graph, *, as_of, ticker=None):
         if fact['predicate'] == 'subject_to' and fact['object_type'] in ('agency','law'):
             role = 'regulatory_exposure'
         issues = sorted(set(issue for ev in witnesses for issue in quality_issues(fact['predicate'],fact['object'],ev['quote'])))
+        if (fact.get('qualifiers') or {}).get('frame', {}).get('resolution') == 'needs_review':
+            issues=sorted(set(issues+['relationship_capacity_unresolved']))
         if graph.get('schema')=='completed-parser-review-1':
             issues=sorted(set(issues+['preserved_relationship_requires_current_method_validation']))
         if 'labor_competition_is_not_product_competition' in issues:

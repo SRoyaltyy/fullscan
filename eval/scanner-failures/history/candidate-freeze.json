@@ -1,0 +1,5 @@
+{
+  "sha256": "00480e7300560289d1793cef7c3e8e5f3d5ee5e43231853c0aa5e19427f2ea5b",
+  "policy": "concrete-connections-3",
+  "note": "Candidate frozen before inspecting holdout examples. Development failures are retained. Do not retune against this holdout and claim an independent pass."
+}

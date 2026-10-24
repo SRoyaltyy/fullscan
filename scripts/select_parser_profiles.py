@@ -8,7 +8,7 @@ from pathlib import Path
 import subprocess
 
 INPUTS=('src/filing_relationships.py','src/filing_evidence.py','src/term_inventory.py',
-        'src/specific_filing_records.py',
+        'src/specific_filing_records.py','src/relationship_frames.py','src/stock_evidence_graph.py',
         'scripts/build_filing_profiles.py','requirements-filing-parser.txt')
 ROOT=Path(__file__).resolve().parents[1]
 

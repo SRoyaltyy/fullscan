@@ -1,0 +1,192 @@
+{
+  "schema": "scanner-validation-1",
+  "seed": 27208006024057953201732871442313201140,
+  "methodology_sha256": "46948daeaa79e4cfe6b144e47a73eb36839d8adb880568010bef17df509741e4",
+  "catalog_sha256": "a79e905bacc6a9acfbf8c9c0510d970b4cec3590d276c947c5a20a6e8649e8f9",
+  "eligible_issuers": 1968,
+  "issuers": [
+    {
+      "issuer_id": "0001610601",
+      "ticker": "MOMO",
+      "split": "development",
+      "source_asset": {
+        "sha256": "304cdf9e45a7ee115af8afc801811d7ecd887bda836fed4caffc12e7cd4ec67b",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001610601.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0000880266",
+      "ticker": "AGCO",
+      "split": "development",
+      "source_asset": {
+        "sha256": "1d48c7d91bbf0d6e12b2880e83bf3ad44ca213a5dd5ef6623f466b6cb3e69655",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0000880266.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001723690",
+      "ticker": "BILI",
+      "split": "development",
+      "source_asset": {
+        "sha256": "671ed442b25e113b4a7fa76344e723ba5847f6dd99dd9fba03259684572faea4",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001723690.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001590364",
+      "ticker": "FTAI",
+      "split": "development",
+      "source_asset": {
+        "sha256": "e30ab2b1e3d620ffd25931cd34567240675f1f8a201de183bd59806276b7d5ec",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001590364.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0000073756",
+      "ticker": "OII",
+      "split": "development",
+      "source_asset": {
+        "sha256": "ff3c985de4e60711bd53f357fe1febb3790d66c21a14659f5a674a28c70d60f7",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0000073756.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001788451",
+      "ticker": "LIFE",
+      "split": "development",
+      "source_asset": {
+        "sha256": "4c902b417ec0a441a917c43a0b84a434e91025ee2e8cf16581fb59966b5c166c",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001788451.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001846069",
+      "ticker": "NXDR",
+      "split": "development",
+      "source_asset": {
+        "sha256": "97d087a38f389538316bef289182d58f04fd2223c9cdce6ee0fa57907228b248",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001846069.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001579298",
+      "ticker": "BURL",
+      "split": "development",
+      "source_asset": {
+        "sha256": "0da0e45f8664cf9f5e1c2dbac7d941ba6e903a7ff37a0203e786c23f29886d7e",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001579298.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001964504",
+      "ticker": "ARIS",
+      "split": "development",
+      "source_asset": {
+        "sha256": "ad6ced3a4d61ddbe496ff9769722696edfe0d410388edb79d45727ed7224a443",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001964504.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001826836",
+      "ticker": "AYA",
+      "split": "development",
+      "source_asset": {
+        "sha256": "5383c6eca1241dc127cc510bb1ded7192c0c4da642ff6f837892637e54c6e21f",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001826836.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001626450",
+      "ticker": "CMRC",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "cdceed23e3c3360a4d185721de7bde78ef72f6f7e907bc92dfebd6331b50a5ed",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001626450.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0000833079",
+      "ticker": "MTH",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "9c5bb69ebe30ca6b87399261d5a8de58e594e39292223c3dbb37def7c47ea187",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0000833079.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0000935703",
+      "ticker": "DLTR",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "3dae9d699ac315f362ba6a48c3dd2b57c685fa0099707ca95a5d12c330faadb2",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0000935703.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001033767",
+      "ticker": "UMC",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "28f0efeb9e9e995999d6f80f2cd9725416c43c5a9a0232089f9400761235a221",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001033767.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001262823",
+      "ticker": "WLK",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "ed0dfa622b2bf82ccd1458b7efd6a4d45890463a84553a6fe3bf2bace48fb25e",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001262823.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001852353",
+      "ticker": "DC",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "73cd56786d18bf9c18ffd951b0fc5b291799580e7f1bf2375a0c59e13a21ba3f",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001852353.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001832038",
+      "ticker": "IVVD",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "fb2c23db703dfca97248be042dc47d2d7c3dee5c1e597c8afde898b4a3721aa5",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001832038.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0000949157",
+      "ticker": "CENX",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "b49353890de61b364f0fbb0bf637c5a046aaf3124839e63e97741dd9604cd325",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0000949157.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0002067129",
+      "ticker": "NP",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "118181519b2e353438462aef2fa745d396a8922a4170d1174aeee8236b6ac243",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0002067129.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001944558",
+      "ticker": "VTS",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "061ae2a3353ca025122f272475ba73bf8dc42293363fab6f67552997af20d327",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001944558.json.gz"
+      }
+    }
+  ],
+  "state": "reserved",
+  "previous_ledger_sha256": "eaa05c63da27ead4fcbbe9e9375ded66fb574188079d9f3fec6585bacb54cd65",
+  "id": "88cc8b0e6d796e3545152ae39e61260089a33fb902617fc1f5b1678c517d4538"
+}

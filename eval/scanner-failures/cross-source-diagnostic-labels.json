@@ -1,0 +1,498 @@
+{
+  "scope": "Five-issuer, definition-enriched diagnostic; 10 stored witness paragraphs. Not full-source recall or market-wide accuracy.",
+  "annotation": "Assistant source review before baseline/candidate output; not independent human validation.",
+  "annotation_unit": "unique stock-specific named entities and specific operating/financial concepts in the selected paragraphs; explicit aliases consolidated; metadata/forms, nested country substrings, unnamed generic classes and issuer self-name excluded.",
+  "frozen_candidate": "19ced03a3df398509789cee03bf90514a693fa23e38a9ac4873caa9fe05f687d",
+  "draw_id": "f7d60e8ac43b696dfb4f17d5334a48ed0b7be60a90ff52b084d172bf060bc0ca",
+  "source_sample_sha256": "6aeb870f259d136eed208184aca193bcf68a5bd73ff750c5c724dd6d2eb3d909",
+  "cases": [
+    {
+      "ticker": "ARM",
+      "split": "development",
+      "terms": [
+        {
+          "name": "DreamBig Semiconductor, Inc.",
+          "accepted_names": [
+            "DreamBig Semiconductor, Inc.",
+            "DreamBig"
+          ],
+          "relationships": [
+            [
+              "acquires",
+              "potential"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 119,
+              "end": 147,
+              "text": "DreamBig Semiconductor, Inc."
+            },
+            {
+              "paragraph": 0,
+              "start": 119,
+              "end": 127,
+              "text": "DreamBig"
+            },
+            {
+              "paragraph": 1,
+              "start": 119,
+              "end": 147,
+              "text": "DreamBig Semiconductor, Inc."
+            },
+            {
+              "paragraph": 1,
+              "start": 119,
+              "end": 127,
+              "text": "DreamBig"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "ZURA",
+      "split": "development",
+      "terms": [
+        {
+          "name": "Securities and Exchange Commission",
+          "accepted_names": [
+            "Securities and Exchange Commission",
+            "SEC"
+          ],
+          "relationships": [
+            [
+              "mentions_institution",
+              "reported"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 116,
+              "end": 150,
+              "text": "Securities and Exchange Commission"
+            },
+            {
+              "paragraph": 0,
+              "start": 157,
+              "end": 160,
+              "text": "SEC"
+            },
+            {
+              "paragraph": 1,
+              "start": 166,
+              "end": 169,
+              "text": "SEC"
+            }
+          ]
+        },
+        {
+          "name": "U.S. GAAP",
+          "accepted_names": [
+            "U.S. GAAP"
+          ],
+          "relationships": [
+            [
+              "financial_reporting_standard",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 288,
+              "end": 297,
+              "text": "U.S. GAAP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "PSA",
+      "split": "development",
+      "terms": [
+        {
+          "name": "self-storage facilities",
+          "accepted_names": [
+            "self-storage facilities"
+          ],
+          "relationships": [
+            [
+              "operating_asset",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 38,
+              "end": 61,
+              "text": "self-storage facilities"
+            }
+          ]
+        },
+        {
+          "name": "United States",
+          "accepted_names": [
+            "United States",
+            "U.S."
+          ],
+          "relationships": [
+            [
+              "operates_in",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 217,
+              "end": 230,
+              "text": "United States"
+            },
+            {
+              "paragraph": 0,
+              "start": 233,
+              "end": 237,
+              "text": "U.S."
+            },
+            {
+              "paragraph": 1,
+              "start": 259,
+              "end": 263,
+              "text": "U.S."
+            }
+          ]
+        },
+        {
+          "name": "Shurgard",
+          "accepted_names": [
+            "Shurgard"
+          ],
+          "relationships": [
+            [
+              "investment_in",
+              "reported"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 1,
+              "start": 57,
+              "end": 65,
+              "text": "Shurgard"
+            }
+          ]
+        },
+        {
+          "name": "Euro",
+          "accepted_names": [
+            "Euro",
+            "Euros"
+          ],
+          "relationships": [
+            [
+              "currency_exposure",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 1,
+              "start": 112,
+              "end": 116,
+              "text": "Euro"
+            },
+            {
+              "paragraph": 1,
+              "start": 112,
+              "end": 117,
+              "text": "Euros"
+            }
+          ]
+        },
+        {
+          "name": "U.S. Dollar",
+          "accepted_names": [
+            "U.S. Dollar",
+            "U.S. Dollars"
+          ],
+          "relationships": [
+            [
+              "currency_exposure",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 1,
+              "start": 259,
+              "end": 270,
+              "text": "U.S. Dollar"
+            },
+            {
+              "paragraph": 1,
+              "start": 337,
+              "end": 349,
+              "text": "U.S. Dollars"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "FUL",
+      "split": "holdout",
+      "terms": [
+        {
+          "name": "Third Amended and Restated H.B. Fuller Company 2020 Master Incentive Plan",
+          "accepted_names": [
+            "Third Amended and Restated H.B. Fuller Company 2020 Master Incentive Plan",
+            "Plan"
+          ],
+          "relationships": [
+            [
+              "employee_equity_plan",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 38,
+              "end": 111,
+              "text": "Third Amended and Restated H.B. Fuller Company 2020 Master Incentive Plan"
+            },
+            {
+              "paragraph": 0,
+              "start": 107,
+              "end": 111,
+              "text": "Plan"
+            },
+            {
+              "paragraph": 1,
+              "start": 159,
+              "end": 163,
+              "text": "Plan"
+            }
+          ]
+        },
+        {
+          "name": "Performance Share Award",
+          "accepted_names": [
+            "Performance Share Award"
+          ],
+          "relationships": [
+            [
+              "provides_employee_benefit",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 163,
+              "end": 186,
+              "text": "Performance Share Award"
+            }
+          ]
+        },
+        {
+          "name": "Performance Share Award Agreement",
+          "accepted_names": [
+            "Performance Share Award Agreement"
+          ],
+          "relationships": [
+            [
+              "employee_benefit_agreement",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 398,
+              "end": 431,
+              "text": "Performance Share Award Agreement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "XIFR",
+      "split": "holdout",
+      "terms": [
+        {
+          "name": "Investment Company Act of 1940",
+          "accepted_names": [
+            "Investment Company Act of 1940",
+            "Investment Company Act"
+          ],
+          "relationships": [
+            [
+              "potential_regulatory_exposure",
+              "potential"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 223,
+              "end": 253,
+              "text": "Investment Company Act of 1940"
+            },
+            {
+              "paragraph": 0,
+              "start": 223,
+              "end": 245,
+              "text": "Investment Company Act"
+            },
+            {
+              "paragraph": 1,
+              "start": 238,
+              "end": 260,
+              "text": "Investment Company Act"
+            }
+          ]
+        },
+        {
+          "name": "Investment Advisers Act of 1940",
+          "accepted_names": [
+            "Investment Advisers Act of 1940",
+            "Advisers Act"
+          ],
+          "relationships": [
+            [
+              "potential_regulatory_exposure",
+              "potential"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 298,
+              "end": 329,
+              "text": "Investment Advisers Act of 1940"
+            },
+            {
+              "paragraph": 0,
+              "start": 309,
+              "end": 321,
+              "text": "Advisers Act"
+            },
+            {
+              "paragraph": 1,
+              "start": 266,
+              "end": 278,
+              "text": "Advisers Act"
+            }
+          ]
+        },
+        {
+          "name": "Employee Retirement Income Security Act of 1974",
+          "accepted_names": [
+            "Employee Retirement Income Security Act of 1974",
+            "ERISA"
+          ],
+          "relationships": [
+            [
+              "mentions_legal_reference",
+              "reported"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 406,
+              "end": 453,
+              "text": "Employee Retirement Income Security Act of 1974"
+            },
+            {
+              "paragraph": 0,
+              "start": 468,
+              "end": 473,
+              "text": "ERISA"
+            },
+            {
+              "paragraph": 1,
+              "start": 322,
+              "end": 327,
+              "text": "ERISA"
+            }
+          ]
+        },
+        {
+          "name": "U.S. Department of Labor",
+          "accepted_names": [
+            "U.S. Department of Labor"
+          ],
+          "relationships": [
+            [
+              "administering_authority",
+              "reported"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 593,
+              "end": 617,
+              "text": "U.S. Department of Labor"
+            },
+            {
+              "paragraph": 1,
+              "start": 444,
+              "end": 468,
+              "text": "U.S. Department of Labor"
+            }
+          ]
+        },
+        {
+          "name": "XPLR OpCo",
+          "accepted_names": [
+            "XPLR OpCo"
+          ],
+          "relationships": [
+            [
+              "mentions_organization",
+              "reported"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 1,
+              "start": 53,
+              "end": 62,
+              "text": "XPLR OpCo"
+            }
+          ]
+        },
+        {
+          "name": "XPLR GP",
+          "accepted_names": [
+            "XPLR GP"
+          ],
+          "relationships": [
+            [
+              "mentions_organization",
+              "reported"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 1,
+              "start": 121,
+              "end": 128,
+              "text": "XPLR GP"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "unevaluable_reserved_issuer": "NU has no eligible stored witness paragraphs; not counted as a passing case."
+}
