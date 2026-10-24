@@ -1,0 +1,46 @@
+name: Cumulative scanner methodology validation
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'scripts/**'
+      - 'eval/scanner-failures/**'
+      - 'requirements*.txt'
+      - 'dashboard/scanner-backtest/index.html'
+      - '.github/workflows/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  cumulative-failures:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify validation controls
+        run: python -m unittest src.test_scanner_validation
+      - name: Preserve all historical failures against the PR base
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          if git cat-file -e "$BASE_SHA:eval/scanner-failures/register.json" 2>/dev/null; then
+            git show "$BASE_SHA:eval/scanner-failures/register.json" > previous-register.json
+            python -m scripts.check_scanner_methodology --previous-register previous-register.json --out register-check.json
+          fi
+      - name: Check every registered mode and fresh source-based holdout
+        run: python -m scripts.check_scanner_methodology --out cumulative-validation.json --require-pass
+      - name: Retain every open or failed result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cumulative-scanner-validation
+          path: cumulative-validation.json
+          if-no-files-found: error
+          retention-days: 90

@@ -24,6 +24,7 @@ def attach_keyword_profiles(board, directory, *, as_of, catalog):
         profile.keyword_records = bundle['records']
         profile.keyword_evidence = bundle['evidence']
         profile.keyword_coverage = bundle['coverage']
+        profile.stock_evidence = bundle.get('stock_evidence')
         profile.sources.extend(graph['sources'])
         profile.sources.append({'source': 'deep_filing_profile', 'sha256': entry['sha256'],
                                 'section': graph['schema'], 'filing_date': graph['as_of']})

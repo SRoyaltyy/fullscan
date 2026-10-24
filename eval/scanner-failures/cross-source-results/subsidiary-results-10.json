@@ -1,0 +1,1060 @@
+{
+  "scope": "Complete EX-21/EX-21.1 documents present in four randomly reserved issuers. Subsidiary-name/relationship channel only; not overall extraction accuracy. Footnote laws, authoring software and jurisdictions are outside this channel. Clegg d/b/a Homefront is treated as one legal entity, legal name scored; no separate alias score.",
+  "annotation": "Assistant source-first review before any candidate/baseline outputs; not independent human review. Exact complete names; country/jurisdiction excluded.",
+  "labels_sha256": "1617db354b727411d0a35a944149e019f5f61f898585e5037bd7ea76ac3bbcf4",
+  "baseline_revision": "b05eb1b13d01f81f33a30c772c6f092541cf8fd0",
+  "candidate_methodology_sha256": "c5ba4374f5e0d590ba2442644104ae2375c0515c4f8a94bb411b9c5759e4d59b",
+  "summary": {
+    "baseline": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 53,
+      "precision": null,
+      "recall": 0.0
+    },
+    "candidate": {
+      "tp": 38,
+      "fp": 2,
+      "fn": 15,
+      "precision": 0.95,
+      "recall": 0.7169811320754716
+    },
+    "candidate_verified_terms_with_supported_schedule_role": 38
+  },
+  "cases": [
+    {
+      "ticker": "LZ",
+      "reference_names": 3,
+      "documents": 1,
+      "characters": 268,
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "predictions": [],
+        "missed": [
+          "earth class mail, inc.",
+          "formation nation, llc",
+          "inc authority, llc"
+        ],
+        "extras": []
+      },
+      "candidate": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "predictions": [
+          "earth class mail, inc.",
+          "formation nation, llc",
+          "inc authority, llc"
+        ],
+        "missed": [],
+        "extras": []
+      },
+      "candidate_isolated_classification_correct": 3,
+      "candidate_assertions": [
+        {
+          "id": "fe838f021300089b57888f4b28935d50ed57b14964ec3ce174bc0fad7c03cdaf",
+          "entity_id": "192d9646a7bee739d1e52e0d2f67a2a09b9ad1fe89360a59900dfaeb8a577efa",
+          "subject": "LZ",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-02-23",
+          "source_id": "0fe2297a898958d23a965dec76d449b98e24c7c0071d62d0608c323ae4368584",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "0fe2297a898958d23a965dec76d449b98e24c7c0071d62d0608c323ae4368584",
+            "start": 173,
+            "end": 195,
+            "text": "Earth Class Mail, Inc."
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "9d1d85ecac78bd7e5426422e79d7a796154abf3f63be23ccd8e0530bba9ce247",
+          "entity_id": "0a5738edbfad9aa06f91fe4a59d76eb1fa33cbb108893e1d01cf9dc852d29052",
+          "subject": "LZ",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-02-23",
+          "source_id": "0fe2297a898958d23a965dec76d449b98e24c7c0071d62d0608c323ae4368584",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "0fe2297a898958d23a965dec76d449b98e24c7c0071d62d0608c323ae4368584",
+            "start": 209,
+            "end": 230,
+            "text": "Formation Nation, LLC"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "62b44c721a6831f6ef3291b2880b6e53bfc12bd7e9d2c7d23156469e75459e43",
+          "entity_id": "cf495171896fc64bda94d33b015f118184ec1fce1cb3239e4168ff4e02441bb5",
+          "subject": "LZ",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-02-23",
+          "source_id": "0fe2297a898958d23a965dec76d449b98e24c7c0071d62d0608c323ae4368584",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "0fe2297a898958d23a965dec76d449b98e24c7c0071d62d0608c323ae4368584",
+            "start": 242,
+            "end": 260,
+            "text": "Inc Authority, LLC"
+          },
+          "capacity": "group_ownership_disclosure"
+        }
+      ]
+    },
+    {
+      "ticker": "LRCX",
+      "reference_names": 40,
+      "documents": 1,
+      "characters": 2201,
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 40,
+        "predictions": [],
+        "missed": [
+          "coventor, inc.",
+          "lam research (h.k.) limited",
+          "lam research (india) private limited",
+          "lam research (ireland) limited",
+          "lam research (israel) ltd.",
+          "lam research (shanghai) co., ltd.",
+          "lam research ag",
+          "lam research belgium bv",
+          "lam research capital llc",
+          "lam research capital ltd.",
+          "lam research co., ltd.",
+          "lam research gk",
+          "lam research gmbh",
+          "lam research holding gmbh",
+          "lam research holdings b.v.",
+          "lam research international b.v.",
+          "lam research international holding company",
+          "lam research international sdn. bhd.",
+          "lam research international sàrl",
+          "lam research korea llc yh",
+          "lam research korea technology llc yh",
+          "lam research malaysia sdn. bhd.",
+          "lam research management gmbh",
+          "lam research manufacturing korea llc",
+          "lam research manufacturing, ltd.",
+          "lam research s.r.l.",
+          "lam research salzburg gmbh",
+          "lam research sas",
+          "lam research semiconductor (shanghai) co. ltd.",
+          "lam research service co., ltd.",
+          "lam research services (india) private limited",
+          "lam research services ltd.",
+          "lam research singapore pte ltd",
+          "lam research taiwan technology co, ltd.",
+          "lam research u.k. ltd.",
+          "novellus systems international, llc",
+          "novellus systems, inc.",
+          "silfex india mfg private limited",
+          "silfex, inc.",
+          "speedfam-ipec international services, llc"
+        ],
+        "extras": []
+      },
+      "candidate": {
+        "tp": 28,
+        "fp": 2,
+        "fn": 12,
+        "predictions": [
+          "coventor, inc.",
+          "lam research (h.k.) limited",
+          "lam research (india) private limited",
+          "lam research (ireland) limited",
+          "lam research (israel) ltd.",
+          "lam research (shanghai) co., ltd.",
+          "lam research capital llc",
+          "lam research capital ltd.",
+          "lam research co., ltd.",
+          "lam research gmbh",
+          "lam research holding gmbh",
+          "lam research international holding company",
+          "lam research korea llc",
+          "lam research korea technology llc",
+          "lam research management gmbh",
+          "lam research manufacturing korea llc",
+          "lam research manufacturing, ltd.",
+          "lam research salzburg gmbh",
+          "lam research semiconductor (shanghai) co. ltd.",
+          "lam research service co., ltd.",
+          "lam research services (india) private limited",
+          "lam research services ltd.",
+          "lam research singapore pte ltd",
+          "lam research taiwan technology co, ltd.",
+          "lam research u.k. ltd.",
+          "novellus systems international, llc",
+          "novellus systems, inc.",
+          "silfex india mfg private limited",
+          "silfex, inc.",
+          "speedfam-ipec international services, llc"
+        ],
+        "missed": [
+          "lam research ag",
+          "lam research belgium bv",
+          "lam research gk",
+          "lam research holdings b.v.",
+          "lam research international b.v.",
+          "lam research international sdn. bhd.",
+          "lam research international sàrl",
+          "lam research korea llc yh",
+          "lam research korea technology llc yh",
+          "lam research malaysia sdn. bhd.",
+          "lam research s.r.l.",
+          "lam research sas"
+        ],
+        "extras": [
+          "lam research korea llc",
+          "lam research korea technology llc"
+        ]
+      },
+      "candidate_isolated_classification_correct": 28,
+      "candidate_assertions": [
+        {
+          "id": "742d2b5b6390b83d2dedad551f3fecdad0b2e1b7f13ddcf67fd6e0b77b0127dc",
+          "entity_id": "8bba1222a3311904ac8aafee8330bdf9d6a264258f3d959058e452b1cff9d55a",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 219,
+            "end": 247,
+            "text": "Lam Research Management GmbH"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "01e9f83b6c9dd709695b9d17faf7c9f5fc0cff3431f895ee579a2c239090e75a",
+          "entity_id": "40bf8844da5ba34d7d180bc62d131a3f52200907ed683c6511b488bd63c61ec4",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 258,
+            "end": 284,
+            "text": "Lam Research Salzburg GmbH"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "9b159674e57edd7fd5af3f23a4cba8560eeb6cdaea6128a285ff8cb4f02e70ed",
+          "entity_id": "f99ee580d2c0f8935fb8d9e7c21dad29c795052098fad550be0c82436c8d102a",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 329,
+            "end": 351,
+            "text": "Novellus Systems, Inc."
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "3f4ff41e0d571dd624cade6f928b994e8ff5c4face8941d0ac8bd600df8bb4bf",
+          "entity_id": "72544c680cfb5f9323b7e7545ff4388765d232387671df61a60b0b3f72e2a4b7",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 380,
+            "end": 415,
+            "text": "Novellus Systems International, LLC"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "0b9e243ea77e357903ba6934a290123e3983171874134426352f00e4018c3471",
+          "entity_id": "ca7f19b037bd9d8d27eb4a7ccfd548b21275ff9a56dc2ba2fd5420d34441ce55",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 444,
+            "end": 469,
+            "text": "Lam Research Capital Ltd."
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "a41b053c5aeb77502a911f4aa10cfb368e61e29dee61a005fad6561e62b01241",
+          "entity_id": "ef69fc6937f6180429b992161e3469036b4ea9d0cc44556ba816bf33e3ba3e2e",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 487,
+            "end": 533,
+            "text": "Lam Research Semiconductor (Shanghai) Co. Ltd."
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "aec94928053860a3931ed371bc79de7c58d5b794d999a0e0356dbe0d626a22fe",
+          "entity_id": "6a03b575d0cf9a22b191697c9be42f7afb870048ef31649afe4f236713b6d37d",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 542,
+            "end": 575,
+            "text": "Lam Research (Shanghai) Co., Ltd."
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "c2a1b8c070975fe9125222a1c0464a3e68b250a8446878b1a0a2a923a08d88eb",
+          "entity_id": "5196bf9ed599c726d52e4e5a2fb67dcda8a92174d5ba203cdda5d93fd1f6999b",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 584,
+            "end": 614,
+            "text": "Lam Research Service Co., Ltd."
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "6a662a46b4276ccd6c64b19f8396311fb33c70e76694d36438a9992add1949e9",
+          "entity_id": "a00ec570d3f964d468293989d219fdba19f1697acab2d41c43bda75ddf06ddba",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 623,
+            "end": 637,
+            "text": "Coventor, Inc."
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "bee2a30650f1f6a00c32fc00ccf350bac0bc0f6977c8bfcf105819a08b63c563",
+          "entity_id": "911eeb31da395866a4b8d912c277653ee1977708451d9aa6affedf9dc35abce6",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 664,
+            "end": 688,
+            "text": "Lam Research Capital LLC"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "05ab90597e57d6948f5219785e285fecef35c6ce67bd49249bd1d67af610ddbc",
+          "entity_id": "425da2f7fc07c3f833fa7b807da31bb9dd5b260aae28561b6f5f41d28f3ea781",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 715,
+            "end": 757,
+            "text": "Lam Research International Holding Company"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "7a8219e6e1c6e04cad71aeac8089969c7662de7a1184d6910a8f24c9cc0091d1",
+          "entity_id": "4099c2e26f2f6725da1fbc9997b0972f3b46bf0c490b1b9f65d59f20df5ad210",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 784,
+            "end": 796,
+            "text": "Silfex, Inc."
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "376a1951a6583d4f35e1bde9ed8d0958667eea51940740cd4625e85b06708b2c",
+          "entity_id": "b9f7be5cafabbd52b82c6f3d4ac599515bc27972fd70f82ae63a3e83cf6ea4cd",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 823,
+            "end": 864,
+            "text": "SpeedFam-IPEC International Services, LLC"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "320ff933467ea5778f4343c28edde4095f90e731c1a10a45e0109c1d27adbe9f",
+          "entity_id": "56da20c4da2742434f70d090a7b55255743d555dcab210402dc8e6a86a70c6ce",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 917,
+            "end": 934,
+            "text": "Lam Research GmbH"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "a80a5a7bec9b1a72d0ee9043c16bba5ef5991de3c1994e359721f13b2a5a522d",
+          "entity_id": "9698f819d1f4a21b4e121f3f427c5f56b163ce5ce53e39abde0465d95a2cbeb2",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 945,
+            "end": 972,
+            "text": "Lam Research (H.K.) Limited"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "3b6ddf4881073c598b0973031fbbf59ca104068f8aab48f814ef16bcfd0fbd8f",
+          "entity_id": "9c3477c0500af54cc7bc504054c904a017e3d3a913dcd08e61708cbd28d02e72",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 985,
+            "end": 1021,
+            "text": "Lam Research (India) Private Limited"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "2a60240090197886b0b2519c21f7d10648faf46f6aaf2447edd8c0e31a6d7166",
+          "entity_id": "0565c71cd0780972d76367555436eeb9f6289e5b8586b0e72cbcfbf17a0bf625",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 1030,
+            "end": 1075,
+            "text": "Lam Research Services (India) Private Limited"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "4f73be4fe68f7f9dd4ef759d5b2412f8e78b65a4dd219cb529175ceb7d63f1db",
+          "entity_id": "d563bedc22acbc11015a0638da39aa247a4250ec3b0d6ec29659c66d850c797d",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 1084,
+            "end": 1116,
+            "text": "Silfex India Mfg Private Limited"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "22e83207285dea4b4d4c0ecbb7d71e4eeb229f80a7f918c823cfdd678e91f5cb",
+          "entity_id": "869b58178a538c97c44d70ed55ac68ec9f3db11ce776409f0910555c314e5e91",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 1125,
+            "end": 1155,
+            "text": "Lam Research (Ireland) Limited"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "c27b386886c1dc69e08af32c805d06b08e3a49cebb0781bc40209fea3030765b",
+          "entity_id": "12274f9f2ae20059e8dec00df5d0900c4cbd12d2729824922e09ad30d780f020",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 1166,
+            "end": 1192,
+            "text": "Lam Research (Israel) Ltd."
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "577e26f701778155f859d39ac26cb435b9fcd5ae2451a5022efada256cbf552e",
+          "entity_id": "b59da7f737a13f1a6ff8e8844f06d5127f983da0f939118eed22f98131459b7a",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 1202,
+            "end": 1228,
+            "text": "Lam Research Services Ltd."
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "34222ee6a2db4eca606e5ab7ad4661362496031d355f6458dd33a812a48ab61d",
+          "entity_id": "43d17ed51f469d3c4e6bf0c04550446008019cad3444b6effefe9453bc6851f6",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 1468,
+            "end": 1490,
+            "text": "Lam Research Korea LLC"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "91fc16442fea5b727dec932722518ae0f35c405ba5866a18f343e2ab01591447",
+          "entity_id": "c8ab078227b64690e8c88685d34cef7b8478c127edc2795f9bd914137df96272",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 1514,
+            "end": 1547,
+            "text": "Lam Research Korea Technology LLC"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "dcf16e6deae3c87c0b4e7c11cb81113988b0e0481caaa2dc6fc00158790032dc",
+          "entity_id": "003aed695173458711534e013ff2cd250355465f4309161b340fad70fba3256a",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 1571,
+            "end": 1607,
+            "text": "Lam Research Manufacturing Korea LLC"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "d927b7554ad65dd228cd093b89b1d24364247af96a12d7c4522194519dc1bd58",
+          "entity_id": "85399e146dd5e5fb4a388170cafaffcdc124b1b0e7a1537a5f73937f6e99516d",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 1628,
+            "end": 1658,
+            "text": "Lam Research Singapore Pte Ltd"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "69c776d868d2487298ba8b59393f2ab04b03b79bcd36166d3cfcf4d4ac394875",
+          "entity_id": "dd06e200a6e78a2b09f841ac77c5fc14fa6e91b2d37258973f000e78d7da591b",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 1671,
+            "end": 1696,
+            "text": "Lam Research Holding GmbH"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "ca4b8b56738eff21512e290be2c1b955bdbc4c6ca064bd46003afd9fdcc60d25",
+          "entity_id": "8c284098fead2891090c352e43822d6fe9a5091ab141de85c2cb452267a08293",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 1757,
+            "end": 1779,
+            "text": "Lam Research Co., Ltd."
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "8fdd6f7163bdf6b0b4c23ebbeba51f992ed54872e47bd137a628f614107a1608",
+          "entity_id": "f232f1d4d0ef10d1951c4c6ff5ac3aee0b5d8f509d5d1d7a155730f297a32368",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 1789,
+            "end": 1821,
+            "text": "Lam Research Manufacturing, Ltd."
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "9788e66feeee62e5095168ad3a4dea3177a671753238e0846a1a76075f90f266",
+          "entity_id": "72e355e0f614c42808567a535040e4892ed109631fae3646c28195fc0ea7313d",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 1831,
+            "end": 1870,
+            "text": "Lam Research Taiwan Technology Co, Ltd."
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "4863f347e33a05e42234a02752e2e0c14b3864e0e8b1529d04318df929791168",
+          "entity_id": "68f528c42df50e7ece1c0ae7eb51f74f4d694d9bad4cad374893f9705b5aeb4b",
+          "subject": "LRCX",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+            "start": 1880,
+            "end": 1902,
+            "text": "Lam Research U.K. Ltd."
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "5bcdd5c557a3e9e160ea388bc06a3f560247b1016a8fca46b6761df5593a1355",
+          "entity_id": "769577472dbf26ec1c5ed3e3154e8eeb49b0f1ff1007b2004ced3712d3cac978",
+          "subject": "LRCX",
+          "predicate": "mentions_legal_reference",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "effective_date": null,
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "evidence": {
+            "quote": "*In accordance with Item 601(b)(21) of Regulation S-K, the Company has omitted from this Exhibit the names of some of its subsidiaries which, considered in the aggregate as a single subsidiary, do not constitute a significant subsidiary as defined in Rule 1-02(w) of Regulation S-X.",
+            "start": 1919,
+            "end": 2201,
+            "anchor": {
+              "text": "Regulation S-K",
+              "start": 1958,
+              "end": 1972
+            }
+          },
+          "basis": "explicit_disclosure",
+          "capacity": "legal_reference",
+          "applicability": "issuer_context"
+        },
+        {
+          "id": "844724693915c8f3f0e43c48957220fc82677ae8e6cdca4e490f4fc6f7bc1882",
+          "entity_id": "b624354c95a565b86a0d7896b94787f47b6352fe7208d9367092b237147a253e",
+          "subject": "LRCX",
+          "predicate": "mentions_legal_reference",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "effective_date": null,
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "evidence": {
+            "quote": "*In accordance with Item 601(b)(21) of Regulation S-K, the Company has omitted from this Exhibit the names of some of its subsidiaries which, considered in the aggregate as a single subsidiary, do not constitute a significant subsidiary as defined in Rule 1-02(w) of Regulation S-X.",
+            "start": 1919,
+            "end": 2201,
+            "anchor": {
+              "text": "Rule 1-02(w)",
+              "start": 2170,
+              "end": 2182
+            }
+          },
+          "basis": "explicit_disclosure",
+          "capacity": "legal_reference",
+          "applicability": "issuer_context"
+        },
+        {
+          "id": "265c748eb6aa3baaebee1b78266d4e93436d73bb96b0329174aa9c9bda6df5d2",
+          "entity_id": "8f74090d60d0b11192797564207bd6c5a4252b4219040411aa1bd7979a44be90",
+          "subject": "LRCX",
+          "predicate": "mentions_legal_reference",
+          "assertion": "reported",
+          "filing_date": "2026-08-07",
+          "effective_date": null,
+          "source_id": "43b4cb0da6d9d4a1c33480416509a336eb66061e4ad19d73d9c6b512fe2e258f",
+          "evidence": {
+            "quote": "*In accordance with Item 601(b)(21) of Regulation S-K, the Company has omitted from this Exhibit the names of some of its subsidiaries which, considered in the aggregate as a single subsidiary, do not constitute a significant subsidiary as defined in Rule 1-02(w) of Regulation S-X.",
+            "start": 1919,
+            "end": 2201,
+            "anchor": {
+              "text": "Regulation S-X",
+              "start": 2186,
+              "end": 2200
+            }
+          },
+          "basis": "explicit_disclosure",
+          "capacity": "legal_reference",
+          "applicability": "issuer_context"
+        }
+      ]
+    },
+    {
+      "ticker": "SLDE",
+      "reference_names": 10,
+      "documents": 1,
+      "characters": 723,
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "predictions": [],
+        "missed": [
+          "clegg insurance advisors, llc",
+          "sih technologies llp",
+          "sjig target, llc",
+          "slide insurance co.",
+          "slide mga, llc",
+          "slide reinsurance holdings, llc",
+          "slide specialty insurance company",
+          "slide technologies, llc",
+          "stat claims co.",
+          "trusted mitigation contractors, inc."
+        ],
+        "extras": []
+      },
+      "candidate": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 3,
+        "predictions": [
+          "clegg insurance advisors, llc",
+          "sjig target, llc",
+          "slide mga, llc",
+          "slide reinsurance holdings, llc",
+          "slide specialty insurance company",
+          "slide technologies, llc",
+          "trusted mitigation contractors, inc."
+        ],
+        "missed": [
+          "sih technologies llp",
+          "slide insurance co.",
+          "stat claims co."
+        ],
+        "extras": []
+      },
+      "candidate_isolated_classification_correct": 7,
+      "candidate_assertions": [
+        {
+          "id": "db673db16e4ba5720d050b4da4c4560ba2e904c0da5a9f751059d6815cd3029d",
+          "entity_id": "0a27004ebde4a1bf5b55b0780a4f2f12574261a3f07b34d5ed1f1c50723d988f",
+          "subject": "SLDE",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-03-02",
+          "source_id": "938d29408c7498bab20bb343f21027281e5968fa8397b1e54bd24686494036fd",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "938d29408c7498bab20bb343f21027281e5968fa8397b1e54bd24686494036fd",
+            "start": 307,
+            "end": 340,
+            "text": "Slide Specialty Insurance Company"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "872adae064d0821216e070c8a4c631f5aef91dce7014af17d0f3950660efd078",
+          "entity_id": "93a3de23e33a59b6ee5ee233619bf51063cf52bd9902f47d7cb77e8f44c46e19",
+          "subject": "SLDE",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-03-02",
+          "source_id": "938d29408c7498bab20bb343f21027281e5968fa8397b1e54bd24686494036fd",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "938d29408c7498bab20bb343f21027281e5968fa8397b1e54bd24686494036fd",
+            "start": 366,
+            "end": 380,
+            "text": "Slide MGA, LLC"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "6e56c985b939d9d68222c132b0ba2b7608d885c9df2c86b68e07d526da152937",
+          "entity_id": "59a8bfeee277d63297ac04c34ec7387fee2aa9812259ae9f7dbcd50351eeca89",
+          "subject": "SLDE",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-03-02",
+          "source_id": "938d29408c7498bab20bb343f21027281e5968fa8397b1e54bd24686494036fd",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "938d29408c7498bab20bb343f21027281e5968fa8397b1e54bd24686494036fd",
+            "start": 401,
+            "end": 424,
+            "text": "Slide Technologies, LLC"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "b48190c61415508f071971c0cc5144ed1d19d083b4cbf61456c0d974e2e61fea",
+          "entity_id": "3cfb332267a196b11c81b15a6dbc32edc0131e5b7966895e98035a77e3de370c",
+          "subject": "SLDE",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-03-02",
+          "source_id": "938d29408c7498bab20bb343f21027281e5968fa8397b1e54bd24686494036fd",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "938d29408c7498bab20bb343f21027281e5968fa8397b1e54bd24686494036fd",
+            "start": 445,
+            "end": 476,
+            "text": "Slide Reinsurance Holdings, LLC"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "fe9995c34e535e8ba3c0975fcafc2a469e492d545247f5e1b29de36a854bcecb",
+          "entity_id": "4aaac29f98ebe9bb361252db2bb1911da7d70ecacf83e662951aa3a669a626eb",
+          "subject": "SLDE",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-03-02",
+          "source_id": "938d29408c7498bab20bb343f21027281e5968fa8397b1e54bd24686494036fd",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "938d29408c7498bab20bb343f21027281e5968fa8397b1e54bd24686494036fd",
+            "start": 533,
+            "end": 569,
+            "text": "Trusted Mitigation Contractors, Inc."
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "62b51770641788d30e475927642ecf50311379bdf972689d196a4c0793188c23",
+          "entity_id": "70f797179be899f8ee6ac578c917082e78d2e48316f541974690b59d74c3a0ca",
+          "subject": "SLDE",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-03-02",
+          "source_id": "938d29408c7498bab20bb343f21027281e5968fa8397b1e54bd24686494036fd",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "938d29408c7498bab20bb343f21027281e5968fa8397b1e54bd24686494036fd",
+            "start": 590,
+            "end": 619,
+            "text": "Clegg Insurance Advisors, LLC"
+          },
+          "capacity": "group_ownership_disclosure"
+        },
+        {
+          "id": "3ae824321af8bced5b55d1b91189c801ddc63cd5eacf167cf3744d20c808fbf7",
+          "entity_id": "f551823d6ec2cc99b6a0e0fa2410fb71781b60c71b85df345416eb2cee199d36",
+          "subject": "SLDE",
+          "predicate": "listed_subsidiary",
+          "assertion": "reported",
+          "filing_date": "2026-03-02",
+          "source_id": "938d29408c7498bab20bb343f21027281e5968fa8397b1e54bd24686494036fd",
+          "basis": "explicit_subsidiary_document_scope",
+          "direct_ownership_established": false,
+          "effective_date": null,
+          "evidence": {
+            "source_id": "938d29408c7498bab20bb343f21027281e5968fa8397b1e54bd24686494036fd",
+            "start": 695,
+            "end": 711,
+            "text": "SJIG Target, LLC"
+          },
+          "capacity": "group_ownership_disclosure"
+        }
+      ]
+    },
+    {
+      "ticker": "MIRM",
+      "status": "unavailable_no_EX21_in_archive"
+    }
+  ],
+  "limitations": [
+    "Three available documents across four randomly reserved issuers; MIRM missing EX-21 remains unavailable, not passed.",
+    "Assistant reviewed subset; not independent human market-wide accuracy.",
+    "Baseline measures owns_subsidiary channel, candidate measures explicit listed_subsidiary channel. No overall extraction precision or full-stock recall is claimed.",
+    "Classification credit requires reported group relationship and direct_ownership_established false; no current/direct ownership inferred.",
+    "Verified-term metric tests support for the explicit schedule role only, not the exact complete set of all possible classifications. Do not compare it with the broad diagnostic classification score."
+  ]
+}

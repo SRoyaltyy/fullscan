@@ -1,0 +1,48 @@
+{
+  "schema": "scanner-validation-1",
+  "seed": 103349342543871561412665402471798361432,
+  "methodology_sha256": "0bbc7968768f05f53d0e66700940c19f68e8a9daee916942b33d268e0422ef30",
+  "catalog_sha256": "a79e905bacc6a9acfbf8c9c0510d970b4cec3590d276c947c5a20a6e8649e8f9",
+  "eligible_issuers": 1848,
+  "issuers": [
+    {
+      "issuer_id": "0001490978",
+      "ticker": "SDGR",
+      "split": "development",
+      "source_asset": {
+        "sha256": "0c97812ab4f136c3ae0b8c69b0884116b0dfbf2938f77dc8f3cbee20f5773288",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001490978.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0002020795",
+      "ticker": "UNIT",
+      "split": "development",
+      "source_asset": {
+        "sha256": "b9e50342361d57a60fccd53ff00ff75292ae8d13fe2df55cc4864df6cb3f81be",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0002020795.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001878848",
+      "ticker": "IREN",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "d1bc4788a23972ab77ec01ceb0ed0182c95f7bec849b6a9d0028063e8b74c888",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001878848.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001639300",
+      "ticker": "OLLI",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "b36c62f25bacad24b915e289186eaf0151d92d39fb88f603b7414445d06a7fa6",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001639300.json.gz"
+      }
+    }
+  ],
+  "state": "reserved",
+  "previous_ledger_sha256": "58b05e8c4184f6ed651d84e5bc1f0d3d77c9718c427cae7fbac865ea05ca87c3",
+  "id": "51f8654995f1c6c6ef0cca2cd3e98faefcbf5366d55406a384e0ba4c3f836329"
+}

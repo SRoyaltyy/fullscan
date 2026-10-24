@@ -1,0 +1,48 @@
+{
+  "schema": "scanner-validation-1",
+  "seed": 115508333672465359147889491835566112494,
+  "methodology_sha256": "494f0d067575f5f2e7b958f94638800f0b6e1bac5288c5b17798017c4f49b7da",
+  "catalog_sha256": "a79e905bacc6a9acfbf8c9c0510d970b4cec3590d276c947c5a20a6e8649e8f9",
+  "eligible_issuers": 1832,
+  "issuers": [
+    {
+      "issuer_id": "0001104485",
+      "ticker": "NOG",
+      "split": "development",
+      "source_asset": {
+        "sha256": "945aa2bc78b2ee555365770b3f5c3d19455560142108751675dbb640965a6cfb",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001104485.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001777835",
+      "ticker": "PWP",
+      "split": "development",
+      "source_asset": {
+        "sha256": "e179a77b990201c1a970158391f287bca2bec9e1ba21bce6eb082f2fe45051d7",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001777835.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001821159",
+      "ticker": "EVGO",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "852282b74f7e1b7122209b36e5aa12853a75e060ab741dbf1fd7011c80661b65",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001821159.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001784570",
+      "ticker": "BETA",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "ab64bbf322ed580139394b204ad4420ee81ab77589673554807f7b052dba7f54",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001784570.json.gz"
+      }
+    }
+  ],
+  "state": "reserved",
+  "previous_ledger_sha256": "aadecfb4decc12576583d76978af49aa52dc4ee95f093c0592ed18e9c468b9c2",
+  "id": "7eb0731cf60079a5179ceceb4a60843cea739f5d3c4805a287a66bb0d3f6e360"
+}

@@ -1,0 +1,74 @@
+name: Publish completed experimental stock outputs
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/stock-experiment-recover.yml'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: stock-experiment-preview
+  cancel-in-progress: true
+jobs:
+  publish:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'codex/cumulative-scanner-validation'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pages: write
+      actions: read
+    concurrency:
+      group: gh-pages-deploy
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 629279628434865e8e8958f31c648822d67f7055
+          path: candidate
+          persist-credentials: false
+          sparse-checkout: dashboard/stock-experiment
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: site
+          sparse-checkout: dashboard/scanner-backtest
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: stock-experiment-*
+          run-id: 40073778087
+          github-token: ${{ github.token }}
+          merge-multiple: true
+          path: site/dashboard/scanner-backtest/experimental
+      - name: Publish explicitly experimental stock view without changing certified status
+        env:
+          CANDIDATE_SHA: 629279628434865e8e8958f31c648822d67f7055
+        run: |
+          python - <<'PY'
+          import hashlib,json,os,shutil,subprocess
+          from pathlib import Path
+          dest=Path('site/dashboard/scanner-backtest/experimental')
+          rows=[json.loads(p.read_text()) for p in sorted(dest.glob('*.summary.json'))]
+          assert len(rows)==8 and all(r['source_sha']==os.environ['CANDIDATE_SHA'] for r in rows)
+          for r in rows:assert hashlib.sha256((dest/r['asset']).read_bytes()).hexdigest()==r['sha256']
+          assert sum(p.stat().st_size for p in dest.rglob('*') if p.is_file())<50_000_000
+          assert all(p.stat().st_size<99_000_000 for p in dest.rglob('*') if p.is_file())
+          shutil.copyfile('candidate/dashboard/stock-experiment/index.html',dest/'index.html')
+          (dest/'meta.json').write_text(json.dumps({'source_sha':os.environ['CANDIDATE_SHA'],'experimental':True,'accuracy_certified':False,'stocks':rows,'coverage':'Eight complete archived stock-source sets re-parsed with candidate. Other stocks remain in the existing view. Filing archive covers 2032 of 5996 catalog stocks; remainder description-only.'},indent=2)+'\n')
+          page=Path('site/dashboard/scanner-backtest/index.html');s=page.read_text()
+          banner='<aside id="stock-experiment-link" style="padding:16px;background:#fff4c2;color:#17202a;font:16px system-ui">Current experimental stock parser: <a href="experimental/">test 8 freshly parsed stocks and inspect source evidence</a>. Accuracy is not certified.</aside>'
+          if 'id="stock-experiment-link"' not in s:
+           import re
+           s,n=re.subn(r'(<body\b[^>]*>)',lambda m:m.group(0)+banner,s,count=1,flags=re.I);assert n==1
+           page.write_text(s)
+          PY
+          cd site
+          git config user.name 'Scanner experimental publisher'
+          git config user.email 'bot@users.noreply.github.com'
+          git add dashboard/scanner-backtest/experimental dashboard/scanner-backtest/index.html
+          git commit -m 'Publish user-requested experimental stock parser with explicit limits'
+          git push origin HEAD:gh-pages
+      - name: Request normal Pages build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST 'repos/${{ github.repository }}/pages/builds'

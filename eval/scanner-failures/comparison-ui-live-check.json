@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-24",
+  "url": "https://sroyaltyy.github.io/fullscan/dashboard/scanner-backtest/compare/?ticker=NTR",
+  "ticker": "NTR",
+  "issuer_id": "0001725964",
+  "scope": "Live interface verification only; not extraction/classification accuracy evaluation",
+  "old_source": "7adb09dd5091fb51ac68859645a26e2292951e46",
+  "new_source": "6a3fd0cedeedd61404e4d6a823f82780cc9a540e",
+  "status": "both versions loaded, checksum and source alignment guards passed, UI error empty",
+  "source_receipt": {
+    "filings": 17,
+    "documents": 206,
+    "filing_characters": 17919149
+  },
+  "output_differences": {
+    "added": 2061,
+    "removed": 6,
+    "changed": 25
+  },
+  "checks": [
+    "Both version pins visible in served page",
+    "Clean Air Act shows the identical dated source passage side by side, with the actual predicate labels from each version",
+    "New unclassified filter works; MGA retains dated source occurrences while indicating no supported relationship",
+    "Catalog remains in progress; comparisons are not restricted to the original eight stocks"
+  ],
+  "accuracy_certified": false,
+  "full_catalog_rollout_complete": false,
+  "rollout_workflow_run": 40078301600
+}

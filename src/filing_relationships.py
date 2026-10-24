@@ -11,8 +11,9 @@ import re
 from collections import Counter
 from pathlib import Path
 from .term_inventory import parse_terms, bind_window, relocate, validate_inventory
+from .relationship_frames import assertion as frame_assertion, refine as refine_frame
 
-VERSION = 'filing-relationships-1.1'
+VERSION = 'filing-relationships-1.2'
 SPACY_VERSION = '3.8.11'
 MODEL = 'en_core_web_sm'
 MODEL_VERSION = '3.8.0'
@@ -21,7 +22,8 @@ MODEL_VERSION = '3.8.0'
 def compiler_fingerprint():
     root = Path(__file__).resolve().parents[1]
     paths = ('src/filing_relationships.py', 'src/filing_evidence.py', 'src/term_inventory.py',
-             'src/specific_filing_records.py',
+             'src/specific_filing_records.py', 'src/relationship_frames.py', 'src/stock_evidence_graph.py',
+             'src/stock_document_context.py',
              'scripts/build_filing_profiles.py', 'requirements-filing-parser.txt')
     digest = hashlib.sha256()
     for name in paths:
@@ -46,6 +48,7 @@ GENERIC = {'it', 'they', 'them', 'this', 'that', 'these', 'those', 'one', 'other
 
 def load_parser():
     import spacy
+    from spacy.language import Language
     spacy.util.fix_random_seed(0)
     if spacy.__version__ != SPACY_VERSION:
         raise ValueError('expected spaCy '+SPACY_VERSION)
@@ -53,6 +56,21 @@ def load_parser():
     if nlp.meta.get('version') != MODEL_VERSION:
         raise ValueError('expected '+MODEL+' '+MODEL_VERSION)
     nlp.max_length = 100_000
+    # Filings contain headings, bullets and tables without sentence punctuation.
+    # Otherwise the dependency parser can attach an entire press release to
+    # "EXHIBIT", borrowing roles across unrelated archive paragraphs.
+    if not Language.has_factory('filing_paragraph_boundaries'):
+        @Language.component('filing_paragraph_boundaries')
+        def filing_paragraph_boundaries(doc):
+            last_end = 0
+            for token in doc:
+                if token.is_space:
+                    continue
+                if re.search(r'\n[^\S\n]*\n', doc.text[last_end:token.idx]):
+                    token.is_sent_start = True
+                last_end = token.idx+len(token.text)
+            return doc
+    nlp.add_pipe('filing_paragraph_boundaries', before='parser')
     ruler = nlp.add_pipe('entity_ruler', before='ner')
     patterns = []
     for short, full in AGENCIES.items():
@@ -119,7 +137,7 @@ def _objects(token):
 
 
 def _preps(token, names):
-    return [o for p in token.children if p.dep_ in ('prep', 'agent') and p.lower_ in names
+    return [o for p in token.children if p.dep_ in ('prep', 'agent', 'dative') and p.lower_ in names
             for o in p.children if o.dep_ in ('pobj', 'obj')]
 
 
@@ -132,6 +150,12 @@ def _coordinated(token):
 
 def _subjects(token):
     subjects = [c for c in token.children if c.dep_ in ('nsubj', 'nsubjpass', 'csubj')]
+    if not subjects and token.dep_ == 'acl' and token.head.lemma_ in ('agreement','contract','commitment','plan','decision'):
+        anchor=token.head
+        while anchor.head!=anchor and anchor.pos_ not in ('VERB','AUX'):
+            anchor=anchor.head
+        if anchor.lemma_ in ('enter','sign','approve','announce','make'):
+            return _subjects(anchor)
     if not subjects and token.dep_ in ('conj', 'xcomp', 'acomp', 'attr', 'oprd') and token.head != token:
         return _subjects(token.head)
     return subjects
@@ -158,18 +182,27 @@ def _named_in(token):
             and all(t.i in ids for t in e)]
 
 
+def _direct_named_arguments(anchor):
+    """A list/apposition's own names, not names inside a different nested role."""
+    for entity in _named_in(anchor):
+        current = entity.root
+        allowed = True
+        while current != anchor:
+            if current.head == current:
+                allowed = False
+                break
+            current = current.head
+            if current != anchor and (current.pos_ in ('VERB', 'AUX') or
+                    current.lemma_ in ('trial', 'study', 'platform', 'customer', 'client',
+                                      'supplier', 'partner', 'subsidiary', 'law', 'authority')):
+                allowed = False
+                break
+        if allowed and ';' not in anchor.doc[min(anchor.i,entity.start):max(anchor.i+1,entity.end)].text:
+            yield entity
+
+
 def _status(token, sentence):
-    # Clause-local negation: never turn "do not rely" into a current supplier.
-    chain = [token]
-    while chain[-1].dep_ in ('acomp', 'attr', 'oprd', 'xcomp') and chain[-1].head != chain[-1]:
-        chain.append(chain[-1].head)
-    if any(c.dep_ == 'neg' for part in chain for c in part.children):
-        return 'negated'
-    if re.search(r'\b(?:no longer|previously|formerly|ceased|terminated|discontinued)\b', sentence.text, re.I):
-        return 'historical'
-    if any(c.lemma_ in ('may', 'might', 'could', 'would', 'will') for part in chain for c in part.children) or re.search(r'\bif\b', sentence.text, re.I):
-        return 'potential'
-    return 'asserted'
+    return frame_assertion(token)[0]
 
 
 def extract_doc(doc, *, ticker, name, source, offset=0):
@@ -187,7 +220,13 @@ def extract_doc(doc, *, ticker, name, source, offset=0):
         if not value or value.lower() in ISSUER | GENERIC or not re.search(r'[A-Za-z]', value):
             return
         sentence = trigger.sent
-        status = _status(trigger, sentence)
+        status, assertion_scope = frame_assertion(trigger)
+        predicate, value_type, frame = refine_frame(predicate, obj, trigger,
+            objects=_objects(trigger), recipients=_preps(trigger, {'to', 'from'}),
+            value_type=value_type, offset=offset)
+        if frame['argument_negated']:
+            status = 'negated'
+        qualifiers = {**(qualifiers or {}), 'frame': frame, 'assertion_scope': assertion_scope}
         actor = subject or ticker
         signature = (predicate, actor, value, value_type, status, sentence.start_char)
         if signature in seen:
@@ -261,6 +300,12 @@ def extract_doc(doc, *, ticker, name, source, offset=0):
                         emit(predicate, entity, token, value_type='agency' if entity.label_ == 'GOV_AGENCY' else 'organization')
                     for law in LAW.finditer(' '.join(t.text for t in obj.subtree)):
                         emit('subject_to', law.group(), token, value_type='law')
+            # Named trials/platforms need not occur in an offer/partner clause.
+            # Keep descriptive mentions distinct from sponsorship/commercial sale.
+            if word in ('trial', 'study', 'platform') and _owned(token):
+                for entity in _direct_named_arguments(token):
+                    emit('mentions_product_platform' if word == 'platform' else 'mentions_clinical_trial',
+                         entity, token, value_type='product' if word == 'platform' else 'clinical_trial')
             # Supplier/customer/competitor appositions: "Toshiba Corp., one of
             # our hard drive suppliers". The owner is part of the same noun tree.
             if word in ('supplier', 'customer', 'client', 'competitor', 'partner', 'subsidiary'):
@@ -298,7 +343,7 @@ def extract_doc(doc, *, ticker, name, source, offset=0):
                     anchor = holder.head if holder.dep_ == 'appos' else holder
                     # A whole sentence subtree would mix unrelated roles.
                     if anchor.pos_ not in ('VERB', 'AUX'):
-                        candidates = [e for e in _named_in(anchor) if not any(_issuer(t, name) for t in e)]
+                        candidates = [e for e in _direct_named_arguments(anchor) if not any(_issuer(t, name) for t in e)]
                         for entity in candidates:
                             emit(relation, entity, token, value_type='organization',
                                  qualifiers={'description': _phrase(token)})
@@ -310,6 +355,8 @@ def extract_doc(doc, *, ticker, name, source, offset=0):
             if own and word in ('acquire', 'divest', 'dispose'):
                 for obj in objects:
                     emit('acquires' if word == 'acquire' else 'divests', obj, token, value_type='organization')
+                    for entity in _direct_named_arguments(obj):
+                        emit('acquires' if word == 'acquire' else 'divests', entity, token, value_type='organization')
         # Risk statements are kept as risk mentions, not invented causal links.
         # Section context permits issuer risks but never asserts an affected
         # product/country unless the grammatical extraction above supplies it.
@@ -486,7 +533,7 @@ def extract_sections(sections, *, ticker, name, nlp):
     parse_cache = {}
     for section in sections:
         raw = str(section.get('text') or '')
-        metadata = {k: section.get(k, '') for k in ('source', 'form', 'filing_date', 'accepted_at', 'report_date', 'accession', 'section', 'document', 'kind', 'url')}
+        metadata = {k: section.get(k, '') for k in ('source', 'form', 'filing_date', 'accepted_at', 'report_date', 'accession', 'section', 'document', 'document_type', 'document_description', 'kind', 'url')}
         metadata['sha256'] = hashlib.sha256(raw.encode()).hexdigest()
         metadata['characters'] = len(raw)
         metadata['section_ordinal'] = len(sources)
@@ -604,4 +651,6 @@ def extract_sections(sections, *, ticker, name, nlp):
     graph['specific_records']=details(graph)
     validate_details(graph,graph['specific_records'])
     validate_paragraph_coverage(graph)
+    from .stock_evidence_graph import build
+    graph['stock_evidence']=build(graph)
     return graph

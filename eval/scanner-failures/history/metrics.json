@@ -1,0 +1,55 @@
+{
+  "evaluated_code_sha256": "00480e7300560289d1793cef7c3e8e5f3d5ee5e43231853c0aa5e19427f2ea5b",
+  "development": {
+    "baseline": {
+      "tp": 34,
+      "fp": 16,
+      "fn": 7,
+      "tn": 43,
+      "n": 100,
+      "precision": 0.68,
+      "recall_of_labeled_existing_rows": 0.8292682926829268,
+      "exact_decision_accuracy": 0.77
+    },
+    "candidate": {
+      "tp": 41,
+      "fp": 4,
+      "fn": 0,
+      "tn": 55,
+      "n": 100,
+      "precision": 0.9111111111111111,
+      "recall_of_labeled_existing_rows": 1.0,
+      "exact_decision_accuracy": 0.96
+    }
+  },
+  "holdout": {
+    "baseline": {
+      "tp": 31,
+      "fp": 19,
+      "fn": 3,
+      "tn": 47,
+      "n": 100,
+      "precision": 0.62,
+      "recall_of_labeled_existing_rows": 0.9117647058823529,
+      "exact_decision_accuracy": 0.78
+    },
+    "candidate": {
+      "tp": 32,
+      "fp": 19,
+      "fn": 2,
+      "tn": 47,
+      "n": 100,
+      "precision": 0.6274509803921569,
+      "recall_of_labeled_existing_rows": 0.9411764705882353,
+      "exact_decision_accuracy": 0.79
+    }
+  },
+  "acceptance": {
+    "threshold": 0.9,
+    "holdout_pass": false,
+    "source_extraction_recall": "not measured",
+    "population_accuracy_estimate": false,
+    "sampling": "50 previously admitted and 50 rejected rows per split, role-stratified within random tickers",
+    "judge": "assistant source-evidence review; not external independent human review"
+  }
+}

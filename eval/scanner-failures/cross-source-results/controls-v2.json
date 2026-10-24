@@ -1,0 +1,7 @@
+{
+  "methodology_sha256": "c5ba4374f5e0d590ba2442644104ae2375c0515c4f8a94bb411b9c5759e4d59b",
+  "tests": 142,
+  "result": "passed",
+  "command": "python -m unittest src.test_stock_document_context src.test_stock_evidence_graph src.test_filing_relationships src.test_term_inventory src.test_relationship_frames src.test_scanner_validation src.test_stock_keywords src.test_entity_resolution scripts.test_project_scanner_keywords scripts.test_select_parser_profiles scripts.test_publish_scanner_snapshot scripts.test_materialize_filing_texts -q",
+  "accuracy_certification": false
+}

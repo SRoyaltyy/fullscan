@@ -1,0 +1,48 @@
+{
+  "schema": "scanner-validation-1",
+  "seed": 299877204201781354928265619620750023708,
+  "methodology_sha256": "5acd7333122e1f68a1aff0b3106346a8600e9289f0b3e1d777e1439514376caa",
+  "catalog_sha256": "a79e905bacc6a9acfbf8c9c0510d970b4cec3590d276c947c5a20a6e8649e8f9",
+  "eligible_issuers": 1828,
+  "issuers": [
+    {
+      "issuer_id": "0001854368",
+      "ticker": "DGXX",
+      "split": "development",
+      "source_asset": {
+        "sha256": "b16d18a4734864a0fbd36ab7c86ef33eab5bb6a143c7fcd4b4db355250cd00a1",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001854368.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0002017206",
+      "ticker": "MRP",
+      "split": "development",
+      "source_asset": {
+        "sha256": "8b01ff0589650caee947a09694b9a06fa22198ed7559dbfd95cfbf3860336c5e",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0002017206.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001006281",
+      "ticker": "PLX",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "e42d74e7135f1b039c2e594a9ba3d6368133297a5ce0909c260f19fc77f37372",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001006281.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0002109150",
+      "ticker": "INIO",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "8fece893d3895a0661b3dcfd5b1e5dcaa0f4b7e97715c769afcaf368c09636c3",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0002109150.json.gz"
+      }
+    }
+  ],
+  "state": "reserved",
+  "previous_ledger_sha256": "2f6b3dc109595180e9566d6d64fabebb5dba03c1c027ea79592fa42dda7e3024",
+  "id": "de2f20f8c085a502b773d4132e2befee5810dfd0df2f319ae83e0cb40afbb227"
+}

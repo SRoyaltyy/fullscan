@@ -1,0 +1,50 @@
+name: Materialize full sources for stock evidence validation
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'src/stock_evidence_graph.py'
+      - 'src/stock_document_context.py'
+      - 'scripts/materialize_stock_validation_archive.py'
+      - '.github/workflows/stock-evidence-full-source-validation.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  full-source-selection:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/
+            /scripts/
+            /eval/scanner-failures/
+            /data/company_filings_full_release.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Locate the latest committed random draw
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          ledger=json.loads(Path('eval/scanner-failures/issuer-ledger.json').read_text())
+          Path('selected-draw.json').write_text(json.dumps(ledger['runs'][-1]))
+          PY
+      - name: Materialize verified complete text objects, not published witness excerpts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          python -u -m scripts.materialize_stock_validation_archive
+          --draw selected-draw.json --release data/company_filings_full_release.json
+          --out validation-full-texts
+      - name: Retain only full-text objects and manifests
+        uses: actions/upload-artifact@v4
+        with:
+          name: stock-evidence-selected-full-texts
+          path: validation-full-texts/
+          retention-days: 90
+          if-no-files-found: error

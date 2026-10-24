@@ -1,0 +1,549 @@
+{
+  "scope": "Five-issuer, definition-enriched diagnostic; 10 stored witness paragraphs. Not full-source recall or market-wide accuracy.",
+  "annotation": "Assistant source review before baseline/candidate output; not independent human validation.",
+  "baseline_revision": "b05eb1b13d01f81f33a30c772c6f092541cf8fd0",
+  "candidate_commit": "d74cc655df0b7f18b3391c1d33ece04871612643",
+  "summary": {
+    "development": {
+      "baseline": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 7,
+        "isolated_classification_correct": 1,
+        "end_to_end_correct": 1,
+        "gold_terms": 8,
+        "issuers": 3,
+        "precision": 1.0,
+        "recall": 0.125,
+        "isolated_classification_accuracy": 0.125,
+        "end_to_end_accuracy": 0.125
+      },
+      "candidate": {
+        "tp": 4,
+        "fp": 10,
+        "fn": 4,
+        "isolated_classification_correct": 1,
+        "end_to_end_correct": 1,
+        "gold_terms": 8,
+        "issuers": 3,
+        "precision": 0.2857142857142857,
+        "recall": 0.5,
+        "isolated_classification_accuracy": 0.125,
+        "end_to_end_accuracy": 0.125
+      }
+    },
+    "holdout": {
+      "baseline": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 6,
+        "isolated_classification_correct": 1,
+        "end_to_end_correct": 1,
+        "gold_terms": 9,
+        "issuers": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "isolated_classification_accuracy": 0.1111111111111111,
+        "end_to_end_accuracy": 0.1111111111111111
+      },
+      "candidate": {
+        "tp": 5,
+        "fp": 15,
+        "fn": 4,
+        "isolated_classification_correct": 1,
+        "end_to_end_correct": 1,
+        "gold_terms": 9,
+        "issuers": 2,
+        "precision": 0.25,
+        "recall": 0.5555555555555556,
+        "isolated_classification_accuracy": 0.1111111111111111,
+        "end_to_end_accuracy": 0.1111111111111111
+      }
+    },
+    "all": {
+      "baseline": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 13,
+        "isolated_classification_correct": 2,
+        "end_to_end_correct": 2,
+        "gold_terms": 17,
+        "issuers": 5,
+        "precision": 1.0,
+        "recall": 0.23529411764705882,
+        "isolated_classification_accuracy": 0.11764705882352941,
+        "end_to_end_accuracy": 0.11764705882352941
+      },
+      "candidate": {
+        "tp": 9,
+        "fp": 25,
+        "fn": 8,
+        "isolated_classification_correct": 2,
+        "end_to_end_correct": 2,
+        "gold_terms": 17,
+        "issuers": 5,
+        "precision": 0.2647058823529412,
+        "recall": 0.5294117647058824,
+        "isolated_classification_accuracy": 0.11764705882352941,
+        "end_to_end_accuracy": 0.11764705882352941
+      }
+    }
+  },
+  "cases": [
+    {
+      "ticker": "ARM",
+      "split": "development",
+      "gold_terms": 1,
+      "terms": [
+        {
+          "name": "DreamBig Semiconductor, Inc.",
+          "expected": [
+            [
+              "acquires",
+              "potential"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        }
+      ],
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "isolated_classification_correct": 0,
+        "end_to_end_correct": 0,
+        "extra_terms": [],
+        "missed_terms": [
+          "DreamBig Semiconductor, Inc."
+        ]
+      },
+      "candidate": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "isolated_classification_correct": 0,
+        "end_to_end_correct": 0,
+        "extra_terms": [
+          "purchase price adjustments"
+        ],
+        "missed_terms": []
+      }
+    },
+    {
+      "ticker": "ZURA",
+      "split": "development",
+      "gold_terms": 2,
+      "terms": [
+        {
+          "name": "Securities and Exchange Commission",
+          "expected": [
+            [
+              "mentions_institution",
+              "reported"
+            ]
+          ],
+          "baseline": [
+            [
+              "mentions_institution",
+              "reported"
+            ]
+          ],
+          "candidate": [
+            [
+              "mentions_institution",
+              "reported"
+            ]
+          ],
+          "isolated_candidate": [
+            [
+              "mentions_institution",
+              "reported"
+            ]
+          ]
+        },
+        {
+          "name": "U.S. GAAP",
+          "expected": [
+            [
+              "financial_reporting_standard",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        }
+      ],
+      "baseline": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "isolated_classification_correct": 1,
+        "end_to_end_correct": 1,
+        "extra_terms": [],
+        "missed_terms": [
+          "U.S. GAAP"
+        ]
+      },
+      "candidate": {
+        "tp": 1,
+        "fp": 6,
+        "fn": 1,
+        "isolated_classification_correct": 1,
+        "end_to_end_correct": 1,
+        "extra_terms": [
+          "march 19, 2026",
+          "restated memorandum of association of zura bio limited",
+          "second amended",
+          "the current report on form 8-k",
+          "the securities and exchange commission",
+          "the year ended december 31, 2025"
+        ],
+        "missed_terms": [
+          "U.S. GAAP"
+        ]
+      }
+    },
+    {
+      "ticker": "PSA",
+      "split": "development",
+      "gold_terms": 5,
+      "terms": [
+        {
+          "name": "self-storage facilities",
+          "expected": [
+            [
+              "operating_asset",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "United States",
+          "expected": [
+            [
+              "operates_in",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "Shurgard",
+          "expected": [
+            [
+              "investment_in",
+              "reported"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "Euro",
+          "expected": [
+            [
+              "currency_exposure",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "U.S. Dollar",
+          "expected": [
+            [
+              "currency_exposure",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        }
+      ],
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "isolated_classification_correct": 0,
+        "end_to_end_correct": 0,
+        "extra_terms": [],
+        "missed_terms": [
+          "self-storage facilities",
+          "United States",
+          "Shurgard",
+          "Euro",
+          "U.S. Dollar"
+        ]
+      },
+      "candidate": {
+        "tp": 2,
+        "fp": 3,
+        "fn": 3,
+        "isolated_classification_correct": 0,
+        "end_to_end_correct": 0,
+        "extra_terms": [
+          "the public storage®",
+          "the u.s. dollar",
+          "the united states"
+        ],
+        "missed_terms": [
+          "self-storage facilities",
+          "United States",
+          "U.S. Dollar"
+        ]
+      }
+    },
+    {
+      "ticker": "FUL",
+      "split": "holdout",
+      "gold_terms": 3,
+      "terms": [
+        {
+          "name": "Third Amended and Restated H.B. Fuller Company 2020 Master Incentive Plan",
+          "expected": [
+            [
+              "employee_equity_plan",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "Performance Share Award",
+          "expected": [
+            [
+              "provides_employee_benefit",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "Performance Share Award Agreement",
+          "expected": [
+            [
+              "employee_benefit_agreement",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        }
+      ],
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "isolated_classification_correct": 0,
+        "end_to_end_correct": 0,
+        "extra_terms": [],
+        "missed_terms": [
+          "Third Amended and Restated H.B. Fuller Company 2020 Master Incentive Plan",
+          "Performance Share Award",
+          "Performance Share Award Agreement"
+        ]
+      },
+      "candidate": {
+        "tp": 0,
+        "fp": 9,
+        "fn": 3,
+        "isolated_classification_correct": 0,
+        "end_to_end_correct": 0,
+        "extra_terms": [
+          "certain restrictions",
+          "data",
+          "data retention",
+          "participant",
+          "restated h.b. fuller company",
+          "shares",
+          "the company",
+          "the participant a performance share award",
+          "the third amended and restated h.b. fuller company 2020 master incentive plan"
+        ],
+        "missed_terms": [
+          "Third Amended and Restated H.B. Fuller Company 2020 Master Incentive Plan",
+          "Performance Share Award",
+          "Performance Share Award Agreement"
+        ]
+      }
+    },
+    {
+      "ticker": "XIFR",
+      "split": "holdout",
+      "gold_terms": 6,
+      "terms": [
+        {
+          "name": "Investment Company Act of 1940",
+          "expected": [
+            [
+              "potential_regulatory_exposure",
+              "potential"
+            ]
+          ],
+          "baseline": [
+            [
+              "mentions_legal_reference",
+              "reported"
+            ]
+          ],
+          "candidate": [
+            [
+              "mentions_legal_reference",
+              "reported"
+            ]
+          ],
+          "isolated_candidate": [
+            [
+              "mentions_legal_reference",
+              "reported"
+            ]
+          ]
+        },
+        {
+          "name": "Investment Advisers Act of 1940",
+          "expected": [
+            [
+              "potential_regulatory_exposure",
+              "potential"
+            ]
+          ],
+          "baseline": [
+            [
+              "mentions_legal_reference",
+              "reported"
+            ]
+          ],
+          "candidate": [
+            [
+              "mentions_legal_reference",
+              "reported"
+            ]
+          ],
+          "isolated_candidate": [
+            [
+              "mentions_legal_reference",
+              "reported"
+            ]
+          ]
+        },
+        {
+          "name": "Employee Retirement Income Security Act of 1974",
+          "expected": [
+            [
+              "mentions_legal_reference",
+              "reported"
+            ]
+          ],
+          "baseline": [
+            [
+              "mentions_legal_reference",
+              "reported"
+            ]
+          ],
+          "candidate": [
+            [
+              "mentions_legal_reference",
+              "reported"
+            ]
+          ],
+          "isolated_candidate": [
+            [
+              "mentions_legal_reference",
+              "reported"
+            ]
+          ]
+        },
+        {
+          "name": "U.S. Department of Labor",
+          "expected": [
+            [
+              "administering_authority",
+              "reported"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "XPLR OpCo",
+          "expected": [
+            [
+              "mentions_organization",
+              "reported"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "XPLR GP",
+          "expected": [
+            [
+              "mentions_organization",
+              "reported"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        }
+      ],
+      "baseline": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 3,
+        "isolated_classification_correct": 1,
+        "end_to_end_correct": 1,
+        "extra_terms": [],
+        "missed_terms": [
+          "U.S. Department of Labor",
+          "XPLR OpCo",
+          "XPLR GP"
+        ]
+      },
+      "candidate": {
+        "tp": 5,
+        "fp": 6,
+        "fn": 1,
+        "isolated_classification_correct": 1,
+        "end_to_end_correct": 1,
+        "extra_terms": [
+          "the advisers act",
+          "the employee retirement income security act",
+          "the investment advisers act",
+          "the investment company act",
+          "the u.s. department of labor",
+          "xplr opco’s"
+        ],
+        "missed_terms": [
+          "U.S. Department of Labor"
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Assistant-reviewed, definition-enriched witness diagnostic. Not full-filing recall, independent human review or population estimates.",
+    "ARM pair repeats the same passage at different original source positions; it does not validate complementary distant context.",
+    "NU had zero eligible witness paragraphs and remains unevaluable; it is not a pass.",
+    "Entity-level exact names/explicit aliases consolidated per issuer. Classification requires exact supported predicate/assertion sets."
+  ]
+}

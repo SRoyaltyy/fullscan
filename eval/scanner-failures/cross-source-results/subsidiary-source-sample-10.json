@@ -1,0 +1,62 @@
+[
+  {
+    "ticker": "LZ",
+    "name": "LegalZoom.com, Inc.",
+    "cik": "0001286139",
+    "documents": [
+      {
+        "source": {
+          "id": "0:0",
+          "document": "ex211lz-2025123110xk.htm",
+          "document_type": "EX-21.1",
+          "filing_date": "2026-02-23",
+          "accession": "0001286139-26-000012",
+          "complete": true
+        },
+        "text": "Document created using Wdesk \n Copyright 2026 Workiva \nDocument\n\nExhibit 21.1\n\nSubsidiaries of LegalZoom.com, Inc.\n\n \n\n \nName of Subsidiary\n\nJurisdiction of Organization\n\n \nEarth Class Mail, Inc.\n\nDelaware\n\n \nFormation Nation, LLC\n\nNevada\n\n \nInc Authority, LLC\n\nNevada"
+      }
+    ]
+  },
+  {
+    "ticker": "LRCX",
+    "name": "Lam Research Corporation",
+    "cik": "0000707549",
+    "documents": [
+      {
+        "source": {
+          "id": "1:0",
+          "document": "exhibit21june2026.htm",
+          "document_type": "EX-21",
+          "filing_date": "2026-08-07",
+          "accession": "0000707549-26-000037",
+          "complete": true
+        },
+        "text": "Document created using Wdesk \n Copyright 2026 Workiva \nDocument\n\nExhibit 21\n\nSUBSIDIARIES OF THE REGISTRANT*\n\n \n\n \nSUBSIDIARY (as of August 7, 2026)\n STATE OR OTHER JURISDICTION OF OPERATION\n\n Lam Research AG Austria\n\n Lam Research Management GmbH Austria\n\n Lam Research Salzburg GmbH Austria\n\n Lam Research Belgium BV Belgium\n\n Novellus Systems, Inc. California, United States\n\n Novellus Systems International, LLC California, United States\n\n Lam Research Capital Ltd. Cayman Islands\n\n Lam Research Semiconductor (Shanghai) Co. Ltd. China\n\n Lam Research (Shanghai) Co., Ltd. China\n\n Lam Research Service Co., Ltd. China\n\n Coventor, Inc. Delaware, United States\n\n Lam Research Capital LLC Delaware, United States\n\n Lam Research International Holding Company Delaware, United States\n\n Silfex, Inc. Delaware, United States\n\n SpeedFam-IPEC International Services, LLC Delaware, United States\n\n Lam Research SAS France\n\n Lam Research GmbH Germany\n\n Lam Research (H.K.) Limited Hong Kong\n\n Lam Research (India) Private Limited India\n\n Lam Research Services (India) Private Limited India\n\n Silfex India Mfg Private Limited India\n\n Lam Research (Ireland) Limited Ireland\n\n Lam Research (Israel) Ltd. Israel\n\n Lam Research Services Ltd. Israel\n\n Lam Research S.r.l. Italy\n\n Lam Research GK Japan\n\n Lam Research Malaysia Sdn. Bhd. Malaysia\n\n Lam Research International Sdn. Bhd. Malaysia\n\n Lam Research Holdings B.V. Netherlands\n\n Lam Research International B.V. Netherlands\n\n Lam Research Korea LLC YH Republic of Korea\n\n Lam Research Korea Technology LLC YH Republic of Korea\n\n Lam Research Manufacturing Korea LLC Republic of Korea\n\n Lam Research Singapore Pte Ltd Singapore\n\n Lam Research Holding GmbH Switzerland\n\n Lam Research International Sàrl Switzerland\n\n Lam Research Co., Ltd. Taiwan\n\n Lam Research Manufacturing, Ltd. Taiwan\n\n Lam Research Taiwan Technology Co, Ltd. Taiwan\n\n Lam Research U.K. Ltd. United Kingdom\n\n*In accordance with Item 601(b)(21) of Regulation S-K, the Company has omitted from this Exhibit the names of some of its subsidiaries which, considered in the aggregate as a single subsidiary, do not constitute a significant subsidiary as defined in Rule 1-02(w) of Regulation S-X."
+      }
+    ]
+  },
+  {
+    "ticker": "SLDE",
+    "name": "Slide Insurance Holdings, Inc.",
+    "cik": "0001886428",
+    "documents": [
+      {
+        "source": {
+          "id": "2:0",
+          "document": "slde-ex21_1.htm",
+          "document_type": "EX-21.1",
+          "filing_date": "2026-03-02",
+          "accession": "0001193125-26-083277",
+          "complete": true
+        },
+        "text": "EX-21.1\n\n \n\nExhibit 21.1\n\n \n\nSubsidiaries of the Registrant\n\n \n\nThe following is a list of subsidiaries of which Slide Insurance Holdings, Inc. has controlling interest.\n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \nName\n\n \nState or Country of Incorporation or Organization\n\n \n\n \n\n \nSlide Insurance Co.\n\n \nFlorida\n\n \n\n \n\n \nSlide Specialty Insurance Company\n\n \nRhode Island\n\n \n\n \n\n \nSlide MGA, LLC\n\n \nFlorida\n\n \n\n \n\n \nSlide Technologies, LLC\n\n \nFlorida\n\n \n\n \n\n \nSlide Reinsurance Holdings, LLC\n\n \nFlorida\n\n \n\n \n\n \nStat Claims Co.\n\n \nFlorida\n\n \n\n \n\n \nTrusted Mitigation Contractors, Inc.\n\n \nFlorida\n\n \n\n \n\n \nClegg Insurance Advisors, LLC D/B/A Homefront\n\n \nFlorida\n\n \n\n \n\n \nSIH Technologies LLP\n\n \nIndia\n\n \n\n \n\n \nSJIG Target, LLC\n\n \nDelaware"
+      }
+    ]
+  },
+  {
+    "ticker": "MIRM",
+    "name": "Mirum Pharmaceuticals, Inc.",
+    "cik": "0001759425",
+    "documents": []
+  }
+]

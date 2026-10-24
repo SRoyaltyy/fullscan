@@ -1,0 +1,71 @@
+{
+  "archive_report": {
+    "source": "PR642-full-text",
+    "companies": 4,
+    "filings": 34,
+    "documents": 1228,
+    "characters": 57786657,
+    "errors": [],
+    "as_of": null,
+    "full_source_archive": true,
+    "complete": true
+  },
+  "stocks": [
+    {
+      "ticker": "OLLI",
+      "elapsed_seconds": 138.55,
+      "source_sections": 335,
+      "characters": 10049945,
+      "parsed_prose_characters": 1127196,
+      "raw_term_candidates": 101024,
+      "entities": 864,
+      "occurrences": 3678,
+      "definitions": 147,
+      "assertions": 442,
+      "sha256": "574a0d6d0d82374a7758d67929b104bed2e4e610a6b1c5a088a2ca2b6bf02123"
+    },
+    {
+      "ticker": "IREN",
+      "elapsed_seconds": 381.19,
+      "source_sections": 221,
+      "characters": 9371618,
+      "parsed_prose_characters": 2418781,
+      "raw_term_candidates": 223192,
+      "entities": 3197,
+      "occurrences": 13594,
+      "definitions": 426,
+      "assertions": 650,
+      "sha256": "772acef60927f10e5d479dca9d0cb7820f7360493bb4680220d6258619a21347"
+    },
+    {
+      "ticker": "SDGR",
+      "elapsed_seconds": 429.9,
+      "source_sections": 416,
+      "characters": 13366303,
+      "parsed_prose_characters": 2813681,
+      "raw_term_candidates": 250995,
+      "entities": 1997,
+      "occurrences": 11063,
+      "definitions": 352,
+      "assertions": 1354,
+      "sha256": "f486cb757fe264e769e6592978ac42609f9361114247670e039c7ae8dec6b8fa"
+    },
+    {
+      "ticker": "UNIT",
+      "elapsed_seconds": 517.99,
+      "source_sections": 563,
+      "characters": 24998791,
+      "parsed_prose_characters": 3231216,
+      "raw_term_candidates": 318605,
+      "entities": 2614,
+      "occurrences": 16030,
+      "definitions": 828,
+      "assertions": 900,
+      "sha256": "ea48e15e2806f451069251e511b780cd6cbe1f2c9080bdf23cd1f67ff940adfe"
+    }
+  ],
+  "method": "stock-evidence-graph-1",
+  "scope": "Execution receipt only; no complete source-first reference inventories, no accuracy score. Superseded by document-context candidate v2.",
+  "source_artifact_id": 12549582539,
+  "source_artifact_sha256": "7601d1710113e1d6bfe79d333ce24ee6b03efed532dcc1bbae3f9cb3270e413c"
+}

@@ -1,0 +1,188 @@
+name: Catalog-wide stock parser and same-stock comparison
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/stock-catalog-rollout.yml'
+      - 'scripts/catalog_stock_rollout.py'
+      - 'scripts/test_catalog_stock_rollout.py'
+      - 'dashboard/stock-comparison/**'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: stock-catalog-rollout
+  cancel-in-progress: false
+jobs:
+  plan:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'codex/cumulative-scanner-validation'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            src
+            scripts
+            data/company_filings_full_release.json
+            dashboard/stock-comparison
+            requirements-filing-parser.txt
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Comparison and completion controls
+        run: |
+          python -m unittest scripts.test_catalog_stock_rollout -q
+          node dashboard/stock-comparison/test_comparison.mjs
+      - name: Enumerate the entire verified source release and freeze the served baseline
+        id: plan
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CANDIDATE_SHA: ${{ github.event.pull_request.head.sha }}
+        run: python -u -m scripts.catalog_stock_rollout plan --out rollout-plan
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stock-catalog-plan
+          path: rollout-plan/
+          retention-days: 90
+  compile:
+    needs: [plan, initial-page]
+    if: always() && needs.plan.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    permissions:
+      contents: write
+      actions: read
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            src
+            scripts
+            requirements-filing-parser.txt
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: stock-catalog-plan
+          path: rollout-plan
+      - name: Install the pinned parser
+        run: >-
+          python -m pip install --only-binary=:all: --index-url https://pypi.org/simple -r requirements-filing-parser.txt
+      - name: Compile complete stock sources and retain resumable per-issuer data
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          python -u -m scripts.catalog_stock_rollout batch --plan rollout-plan/plan.json
+          --batch '${{ matrix.id }}' --out generated-batch
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: catalog-${{ matrix.id }}
+          path: generated-batch/index.json
+          retention-days: 90
+  initial-page:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pages: write
+      actions: read
+    concurrency:
+      group: gh-pages-deploy
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            src
+            scripts
+            dashboard/stock-comparison
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: rollout-site
+          sparse-checkout: dashboard/scanner-backtest
+      - uses: actions/download-artifact@v4
+        with:
+          name: stock-catalog-plan
+          path: rollout-plan
+      - name: Publish the full catalog comparison with explicit pending states
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -u -m scripts.catalog_stock_rollout site --plan rollout-plan/plan.json --out rollout-site/dashboard/scanner-backtest
+          cd rollout-site
+          git config user.name 'Stock catalog publisher'
+          git config user.email 'bot@users.noreply.github.com'
+          git add dashboard/scanner-backtest/index.html dashboard/scanner-backtest/comparison.mjs dashboard/scanner-backtest/catalog.json dashboard/scanner-backtest/compare
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish same-stock comparison for the full catalog; rebuild status explicit'
+            git push origin HEAD:gh-pages
+          fi
+          gh api --method POST 'repos/${{ github.repository }}/pages/builds'
+  final-page:
+    needs: [plan, compile, initial-page]
+    if: always() && needs.plan.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+      pages: write
+      actions: read
+    concurrency:
+      group: gh-pages-deploy
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            src
+            scripts
+            dashboard/stock-comparison
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: rollout-site
+          sparse-checkout: dashboard/scanner-backtest
+      - uses: actions/download-artifact@v4
+        with:
+          name: stock-catalog-plan
+          path: rollout-plan
+      - name: Publish actual completed coverage, even when a batch failed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -u -m scripts.catalog_stock_rollout site --plan rollout-plan/plan.json --out rollout-site/dashboard/scanner-backtest
+          cd rollout-site
+          git config user.name 'Stock catalog publisher'
+          git config user.email 'bot@users.noreply.github.com'
+          git add dashboard/scanner-backtest/index.html dashboard/scanner-backtest/comparison.mjs dashboard/scanner-backtest/catalog.json dashboard/scanner-backtest/compare
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish catalog rollout coverage and retained old/new comparisons'
+            git push origin HEAD:gh-pages
+          fi
+          gh api --method POST 'repos/${{ github.repository }}/pages/builds'
+      - name: Require all catalog stocks before declaring rollout complete
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python -u -m scripts.catalog_stock_rollout assemble --plan rollout-plan/plan.json --out coverage-verification --require-complete

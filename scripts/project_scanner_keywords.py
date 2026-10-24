@@ -29,7 +29,8 @@ def digest(raw):
 
 def source_hashes():
     paths = [ROOT/'src'/name for name in ('stock_keywords.py', 'entity_resolution.py',
-        'linguistics.py', 'semantic_lookup.py', 'specific_filing_records.py', 'filing_relationships.py')]
+        'linguistics.py', 'semantic_lookup.py', 'specific_filing_records.py', 'filing_relationships.py',
+        'relationship_frames.py', 'term_inventory.py', 'stock_evidence_graph.py', 'stock_document_context.py')]
     paths += [ROOT/'scripts/project_scanner_keywords.py',
         ROOT/'dashboard/scanner-backtest/index.html']
     paths += sorted((ROOT/'src/data').rglob('*'))
@@ -54,6 +55,13 @@ def ensure_identity_compatibility(meta):
         return [ast.dump(node,include_attributes=False) for node in ast.parse(source).body
             if isinstance(node,(ast.FunctionDef,ast.AsyncFunctionDef)) and node.name=='normalized_words'
             or isinstance(node,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='TOKEN' for t in node.targets)]
+    for path in ('src/filing_relationships.py', 'src/relationship_frames.py', 'src/term_inventory.py', 'src/stock_evidence_graph.py', 'src/stock_document_context.py'):
+        try:
+            old_source=original(path)
+        except Exception as exc:
+            raise ValueError('cached extraction provenance missing; full rebuild required: '+path) from exc
+        if old_source != (ROOT/path).read_text():
+            raise ValueError('cached extraction method changed; full rebuild required: '+path)
     if normalization_definitions(original('src/stock_keywords.py')) != normalization_definitions((ROOT/'src/stock_keywords.py').read_text()):
         raise ValueError('cached keyword normalization changed; full rebuild required')
     old=json.loads(original('src/data/senses/manifest.json'))

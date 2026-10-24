@@ -1,0 +1,1313 @@
+{
+  "schema_version": 1,
+  "title": "Fullscan historical failure register",
+  "as_of": "2026-10-24 Asia/Hong_Kong",
+  "scope": "Exhaustive compilation of recoverable sources reviewed for this task, not guaranteed complete history. Historical incidents are not all currently reproduced.",
+  "sources": {
+    "audit": "23 October audit: audit-work/eval/keyword-generalization/{README.md,development-labels.json,holdout-labels.json,metrics.json,manifest.json,replay-integrity.json}; local audit commit 9e34518. Full dated source witnesses preserved.",
+    "thread": "User-supplied external conversation, messages 218–317, October 2026. Prior assistant claims recorded as history, not independently reverified in this compilation.",
+    "pasted": "Pasted text (2).txt, Library libfile_fe666bb144bc819181bd23069afa12d5, read locally in full (52,274 bytes). Contains prior transcript/code-review accounts.",
+    "taxonomy": "concrete-scanner/eval/problem-taxonomy.md and eval/rubric.md. Historical prospective taxonomy; SOLVED/MITIGATED/OPEN labels are not current deployment certification.",
+    "fixtures": "concrete-scanner/eval/cases.jsonl and eval/evidence-identity-cases.jsonl. Synthetic, excerpt and production-derived cases retain their provenance.",
+    "controls": "audit-work/src/test_entity_resolution.py, test_term_inventory.py, test_stock_keywords.py, test_keyword_generalization.py. Tests are controls, not proof that a production failure occurred.",
+    "history_sources": "Personal Context retrieval on 24 October 2026, source/filing history dated 15–21 October. Historical assistant reports; original raw incident logs not recovered here.",
+    "history_lane": "Personal Context retrieval on 24 October 2026, Lane/JEV/FACA reports dated 1–13 October. Historical assistant reports; original run artifacts not recovered here.",
+    "history_ops": "Personal Context retrieval on 24 October 2026, operating and backtest reports dated 17–18 September. Peripheral to current keyword task; retained separately."
+  },
+  "scoring_contract": {
+    "extraction_precision_target": 0.98,
+    "extraction_recall_target": 0.98,
+    "classification_target": null,
+    "recall_reference": "complete selected stored source text, not only previously extracted rows",
+    "headline_side": "titles only"
+  },
+  "modes": [
+    {
+      "id": "SRC-01",
+      "stage": "source coverage",
+      "mode": "Fetch success mistaken for usable content",
+      "example": "Historical corpus marked 2,032/2,032 ok, despite SUZ yielding zero meaningful points, TIGO two contents points and CALM fragmented prose.",
+      "expected": "Measure meaningful sections and full source text separately from HTTP/decoding success.",
+      "cause": "Transport/integrity checks did not establish content completeness.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "SRC-02",
+      "stage": "source coverage",
+      "mode": "Missing exhibits and attachments",
+      "example": "Earlier filing archive stored zero exhibits; subsidiary and contract evidence was absent.",
+      "expected": "Inventory and retain accessible filing attachments, including Exhibit 21; report every omission.",
+      "cause": "Collection limits omitted an entire evidence class.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources",
+        "pasted"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "SRC-03",
+      "stage": "source coverage",
+      "mode": "Truncated documents",
+      "example": "316 historical documents carried explicit truncation markers; earlier path capped or excerpted text.",
+      "expected": "Keep complete stored accessible documents with dates and hashes; expose any cap as incomplete.",
+      "cause": "Text/section caps were incompatible with full-document coverage.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "SRC-04",
+      "stage": "source coverage",
+      "mode": "Wrong section or machine text",
+      "example": "43 annuals lacked Business/fallback; ASML sample contained substantial XBRL metadata; SUZ/TIGO had contents text.",
+      "expected": "Locate substantive prose; separately identify contents, XBRL and non-prose tables.",
+      "cause": "Header/fallback and document-kind selection were unreliable.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "SRC-05",
+      "stage": "source coverage",
+      "mode": "Useful table content removed",
+      "example": "Old corpus removed numeric tables while ownership, quantities and business evidence can live in tables.",
+      "expected": "Preserve tables with structure and source positions; distinguish source retention from prose parsing.",
+      "cause": "Cleaning was lossy before extraction.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "SRC-06",
+      "stage": "cache/reuse",
+      "mode": "Defective cached extracts skipped on resume",
+      "example": "Only 23 rows had extractor v3 while 1,974 were unversioned; unchanged raw files bypassed corrected extraction.",
+      "expected": "Cache identity must include extractor, parser/model and resource revisions, not just source bytes.",
+      "cause": "Resume logic reused known-defective output.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "SRC-07",
+      "stage": "source coverage",
+      "mode": "Catalog breadth confused with filing coverage",
+      "example": "Recorded catalog: 2,032 filing-backed and 3,964 description-only tickers.",
+      "expected": "Show coverage for each source family and ticker; description-only cannot count as filing-extracted.",
+      "cause": "A catalog row is not proof of source processing.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit",
+        "thread"
+      ],
+      "evidence_level": "observed",
+      "status": "Coverage limitation at last recorded audit; no new live coverage check"
+    },
+    {
+      "id": "SRC-08",
+      "stage": "pipeline integration",
+      "mode": "Richer profiles lost during integration",
+      "example": "Historical identity-only integration exposed filing data for only 5 of 5,961 tickers.",
+      "expected": "Preserve rich profiles when adding identity annotations; assert coverage parity.",
+      "cause": "Integration selected a narrow identity slice instead of full profiles.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "SRC-09",
+      "stage": "pipeline integration",
+      "mode": "Filing information not connected to headline path",
+      "example": "Early SEC filings were isolated from Lane, and Lane scans remained manual.",
+      "expected": "Verify the production path consumes the intended stored filings and classifications.",
+      "cause": "Components existed without end-to-end wiring.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "SRC-10",
+      "stage": "source access",
+      "mode": "Access blocks and thin or mismatched responses",
+      "example": "EDGAR datacenter refusals; publisher 403/thin/mismatched pages; Barron's free excerpt/401; Hong Kong feed 403.",
+      "expected": "Record source access and completeness states; unavailable content must not become complete evidence.",
+      "cause": "Fetch environment/access policy and response validation constrained input.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "thread",
+        "history_sources",
+        "history_lane",
+        "pasted"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "SRC-11",
+      "stage": "source parser",
+      "mode": "Identifier corruption masquerading as missing document",
+      "example": "FDA parser corrupted submission IDs and generated misleading 404s.",
+      "expected": "Preserve and validate exact source identifiers; distinguish bad URL construction from absent documents.",
+      "cause": "Parser transformed identifiers incorrectly.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "SRC-12",
+      "stage": "source health",
+      "mode": "Different API failures collapsed into one status",
+      "example": "Invalid keys, rate limits and stale missing-key checks conflated; Grok timeout/database text called authentication failure.",
+      "expected": "Track auth, throttling, timeout, parse and service errors separately; reverify stale states.",
+      "cause": "Error handling inferred the wrong operational cause.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources",
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "SRC-13",
+      "stage": "source access",
+      "mode": "Redirect handling risked credential leakage",
+      "example": "Historical source-pipeline review reported redirect credential leakage.",
+      "expected": "Strip credentials on untrusted redirects and test origin changes.",
+      "cause": "Authenticated redirect behavior did not adequately scope credentials.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Historical fix reported; not retested here"
+    },
+    {
+      "id": "SRC-14",
+      "stage": "source access",
+      "mode": "Conditional request headers broke feeds",
+      "example": "Fed feeds returned 406 with conditional-cache headers.",
+      "expected": "Retry with a valid header set while preserving truthful health state.",
+      "cause": "Cache negotiation was incompatible with the endpoint.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Historical retry fix reported; not retested here"
+    },
+    {
+      "id": "SRC-15",
+      "stage": "source identity",
+      "mode": "Deduplication destroyed provenance",
+      "example": "GovInfo API and RSS shared a source ID; URL dedup erased feed labels.",
+      "expected": "Deduplicate documents while retaining each collection route and source identity.",
+      "cause": "Source identity and document identity were conflated.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "SRC-16",
+      "stage": "source intake",
+      "mode": "Ordering and fallback suppressed usable sources",
+      "example": "400-headline cap applied before publisher feeds; DB/RSS/local fallbacks mutually suppressed each other.",
+      "expected": "Measure every intake channel and order/cap policy; supplement without suppressing independent sources.",
+      "cause": "Caps and mutually exclusive fallback paths restricted the input.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "SRC-17",
+      "stage": "source text",
+      "mode": "Page furniture contaminated analysis",
+      "example": "Related Posts on a Paramount page produced 16 copper-company effects; navigation oil became a false event.",
+      "expected": "Restrict evidence to the actual story; record rejected boilerplate regions.",
+      "cause": "Unrelated page regions entered the evidence window.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "SRC-18",
+      "stage": "input contract",
+      "mode": "Headline-only data treated like whole articles",
+      "example": "Google News bodies duplicated titles; historical intake median 88 characters, only 70/9,188 at least 2,000 chars.",
+      "expected": "Evaluate article matching on the actual title-only input, as the user requires; full stored filings remain the stock-side evidence.",
+      "cause": "Input length/availability was assumed rather than measured.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane",
+        "pasted"
+      ],
+      "evidence_level": "observed",
+      "status": "Constraint to preserve: headline-only article matching, not a request to add web parsing"
+    },
+    {
+      "id": "EXT-01",
+      "stage": "extraction",
+      "mode": "Generic classes treated as specific identities",
+      "example": "materials, equipment, key personnel, various software applications; CYTK key registered starting materials; HCAT Solution.",
+      "expected": "Retain complete identifiable concepts at an explicitly defined specificity level; unnamed classes remain separately marked.",
+      "cause": "Specificity relied too much on surface form and nearby role cues.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "thread",
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EXT-02",
+      "stage": "extraction",
+      "mode": "Document fragments admitted as terms",
+      "example": "DLR Exhibit 3.1 as customer; ALOY the “Merger; enumeration i; APG maximum aggregate principal amount as input.",
+      "expected": "Identify exhibit references, enumerations, quantity heads and malformed fragments before asserting a term.",
+      "cause": "Formatting and noun-phrase heads were mistaken for identities.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "thread",
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EXT-03",
+      "stage": "extraction",
+      "mode": "Incomplete legal names or provisions",
+      "example": "Rule 10b; Disabilities Act; HCAT Bribery Act stripped from year 2010 and jurisdiction; NUS Securities Exchange Act from Act of….",
+      "expected": "Recover the full supported title/provision and jurisdiction where supplied; do not guess missing suffixes.",
+      "cause": "Boundary detection clipped meaningful tokens and citations.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "thread",
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Known cases reportedly fixed earlier, but new issuers exhibited recurrence"
+    },
+    {
+      "id": "EXT-04",
+      "stage": "extraction",
+      "mode": "Incomplete company and technical names",
+      "example": "APG Group DE, Inc. clipped from APi Group DE; IBM Francisco; INOD secret protections; PROK GLP-1 clipped from GLP-1 RAs.",
+      "expected": "Preserve the complete identity and distinguish abbreviated, truncated and normalized forms.",
+      "cause": "Span boundaries cut identity-bearing words.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated",
+      "incidents": [
+        {
+          "id": "EXT-04-20261024-document-scope",
+          "status": "open",
+          "source": "cross-source-results/subsidiary-results-10.json",
+          "example": "Fresh draw: LRCX complete names ending LLC YH were clipped to LLC; international legal endings and SLDE Co./LLP names were missed.",
+          "expected": "Preserve the full named entity and accept subsidiary rows from explicit source document scope without issuer-specific exceptions.",
+          "candidate_methodology_sha256": "c5ba4374f5e0d590ba2442644104ae2375c0515c4f8a94bb411b9c5759e4d59b"
+        }
+      ]
+    },
+    {
+      "id": "EXT-05",
+      "stage": "extraction",
+      "mode": "Table columns merged into an identity",
+      "example": "JXN JNAM Jackson National Asset Management LLC combined abbreviation and name.",
+      "expected": "Represent JNAM as an alias of the full name, with table-column provenance.",
+      "cause": "Flattened tables lost column boundaries.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EXT-06",
+      "stage": "extraction",
+      "mode": "Generic summary hid recoverable specifics",
+      "example": "NFLX periodic examination omitted IRS and domestic/foreign tax-return detail recoverable in stored text.",
+      "expected": "Recover concrete terms from the source, retaining the supporting quotation.",
+      "cause": "Summarization or coarse extraction discarded named details.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EXT-07",
+      "stage": "extraction recall",
+      "mode": "Extraction depended on relationship triggers",
+      "example": "Live output reused saved relationship records and had not run the broad grammar inventory over all source prose.",
+      "expected": "Collect candidate terms independently of supported relationship; classify later, allowing unresolved terms.",
+      "cause": "A missing relationship pattern could prevent the term from ever entering the output.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "thread"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EXT-08",
+      "stage": "extraction filtering",
+      "mode": "Single-word or commodity terms over-filtered",
+      "example": "RRC natural gas hidden; batteries and turbines hidden by a follow-up filter.",
+      "expected": "Keep specific commodities/components independent of capitalization or word count.",
+      "cause": "Broad generic/length rules removed useful concepts.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "thread",
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Single-word follow-up historically merged; generalization remains unproven"
+    },
+    {
+      "id": "EXT-09",
+      "stage": "extraction filtering",
+      "mode": "Named organizations over-filtered",
+      "example": "FWRD Millhouse Logistics Services, AUTL AGC Biologics, BTG Kitikmeot Inuit Association were hidden.",
+      "expected": "Keep explicitly evidenced named organizations regardless of apposition/list phrasing.",
+      "cause": "Gate rules did not accept supported argument forms.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit",
+        "thread"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated",
+      "incidents": [
+        {
+          "id": "EXT-09-20261024-document-scope",
+          "status": "open",
+          "source": "cross-source-results/subsidiary-results-10.json",
+          "example": "Fresh draw: LRCX complete names ending LLC YH were clipped to LLC; international legal endings and SLDE Co./LLP names were missed.",
+          "expected": "Preserve the full named entity and accept subsidiary rows from explicit source document scope without issuer-specific exceptions.",
+          "candidate_methodology_sha256": "c5ba4374f5e0d590ba2442644104ae2375c0515c4f8a94bb411b9c5759e4d59b"
+        }
+      ]
+    },
+    {
+      "id": "EXT-10",
+      "stage": "extraction filtering",
+      "mode": "Specific legal references over-filtered",
+      "example": "GDPR for NUS/APG, HTA Regulation for AUTL, Quality Management System Regulation for STAA hidden.",
+      "expected": "Legal identity recognition must accept full names and evidenced acronym-qualified regulations.",
+      "cause": "Specificity and alias rules rejected valid titles.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EXT-11",
+      "stage": "extraction normalization",
+      "mode": "Spelling, inflection and expression mismatches",
+      "example": "defence versus defense missed in Pentagon case; historical lexical path lacked zero-overlap reentry/splashdown matching.",
+      "expected": "Normalize genuine variants; test meaning-preserving expression differences without collapsing related but distinct events.",
+      "cause": "Lexical identity was mistaken for semantic identity.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "pasted",
+        "taxonomy"
+      ],
+      "evidence_level": "observed",
+      "status": "Spelling fix reported historically; open-vocabulary equivalence remains unproven"
+    },
+    {
+      "id": "CLS-01",
+      "stage": "classification",
+      "mode": "Transaction counterparty mistaken for operating customer or supplier",
+      "example": "BTG Agnico Eagle divestiture buyer → customer; KGC Rio Tinto equity-stake seller → supplier.",
+      "expected": "Extract the named company, then label divestiture/acquisition counterparty in that statement; require separate evidence for operating trade.",
+      "cause": "buy/sell cues ignored the object and transaction purpose.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "CLS-02",
+      "stage": "classification",
+      "mode": "Financing mistaken for commercial operation",
+      "example": "AUTL ADSs → products; TRN Initial Purchasers → customers; APG principal amount → input.",
+      "expected": "Classify shares, financing purchasers and quantities in financing capacity.",
+      "cause": "Sales/purchase grammar was applied without business-capacity interpretation.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "CLS-03",
+      "stage": "classification",
+      "mode": "Employee benefits mistaken for products",
+      "example": "CDNS Employee Stock Purchase Plan and IBM DB pension plans → commercial products.",
+      "expected": "Retain the terms as employee benefits where relevant; product classification requires offering to external customers.",
+      "cause": "offer/provide did not distinguish employees from customers.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit",
+        "thread"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "CLS-04",
+      "stage": "classification",
+      "mode": "Legal-professional reliance mistaken for issuer operating dependency",
+      "example": "ADM following assumptions; JXN certified copy; AUTL provision → dependencies.",
+      "expected": "Attribute reliance to counsel or the relevant speaker; retain legal-document capacity separately.",
+      "cause": "Speaker, section and purpose were ignored.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit",
+        "thread"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "CLS-05",
+      "stage": "classification",
+      "mode": "Financial instruments mistaken for upstream materials",
+      "example": "IAG gold puts; JXN equity options → inputs.",
+      "expected": "Recognize hedges/derivatives separately from physical commodities and operating purchases.",
+      "cause": "purchase/use rules ignored financial purpose and object sense.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit",
+        "thread"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "CLS-06",
+      "stage": "classification",
+      "mode": "Entity type incompatible with the relationship",
+      "example": "GEN owns Foreign Corrupt Practices Act; AMD GPU → organization; AUTL AI and ALOY NdFeB → competitors.",
+      "expected": "Type laws, technologies and materials independently; only attach compatible relationships supported by evidence.",
+      "cause": "Entity type was inherited from an already wrong relationship or shallow noun detection.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "thread",
+        "history_sources",
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "CLS-07",
+      "stage": "classification",
+      "mode": "Wrong argument borrowed from same sentence",
+      "example": "CYTK COMET-HF trial → partner; HCAT DOS platform → customer.",
+      "expected": "Attach each complete term to its own actor/action/object clause; keep trial and platform identities.",
+      "cause": "A nearby partner/customer cue was enough even when it governed a different term.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "CLS-08",
+      "stage": "classification",
+      "mode": "Customer/supplier direction reversed",
+      "example": "ALOY SRC mentioned in feedstock supply → customer.",
+      "expected": "Represent who supplies what to whom; direction must be explicit.",
+      "cause": "Relation direction was not reconstructed from the proposition.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "CLS-09",
+      "stage": "classification",
+      "mode": "Internal or nongovernmental body treated as government authority",
+      "example": "VFC VF’s Board; internal officers in fresh sample; NUS Treadway Commission without government evidence.",
+      "expected": "Distinguish internal board/officer, private standard-setter and government institution.",
+      "cause": "Board/Commission/authority-like words substituted for institutional type.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit",
+        "thread"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "CLS-10",
+      "stage": "classification",
+      "mode": "Risk, quantity or abstract condition treated as input/dependency",
+      "example": "DE natural disasters → input; VFC volume; STOK successful development; CRMD proper functioning → dependencies.",
+      "expected": "Represent risk/condition separately; do not manufacture a concrete operating entity.",
+      "cause": "Verb/noun-head rules lacked semantic role and specificity checks.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "thread",
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "CLS-11",
+      "stage": "ownership",
+      "mode": "Valid subsidiary ownership not attached",
+      "example": "PROK ProKidney Acquisition Company, TRN Tribute Rail LLC hidden; candidate also suppressed JXN Jackson Brooke LLC.",
+      "expected": "Resolve issuer versus subsidiary/partner ownership, coordinated lists and indirect ownership explicitly.",
+      "cause": "Owner checks and aliases lost the issuer-to-entity attachment.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "CLS-12",
+      "stage": "classification/negation",
+      "mode": "Issuer exclusion treated as positive regulatory exposure",
+      "example": "ALOY does not believe it is subject to FINRA oversight → positive exposure; NFLX DMA explicitly out of scope in earlier review.",
+      "expected": "Keep FINRA/DMA as mentioned terms if relevant, but mark issuer's denied/uncertain scope and never assert positive exposure.",
+      "cause": "Negation/modality was matched as a simple nearby phrase rather than scoped proposition.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit",
+        "history_sources"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "CLS-13",
+      "stage": "classification/negation",
+      "mode": "Conditional expression over-rejected",
+      "example": "HCAT Employee Retirement Income Security Act of 1974 hidden because whether or not subject to was interpreted as exclusion.",
+      "expected": "Retain the legal reference with conditional scope; do not turn whether or not into categorical denial.",
+      "cause": "Negation gate erased terms instead of representing assertion scope.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "CLS-14",
+      "stage": "classification/time",
+      "mode": "Threat, forecast or intention treated as completed event",
+      "example": "Threatened export ban → implemented; Court justice will overturn an order → completed ruling; Iran risks → price rise.",
+      "expected": "Separate announcement, proposal/threat, forecast, implementation and observed outcome.",
+      "cause": "Modality and temporal qualification were flattened.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "CLS-15",
+      "stage": "classification/event state",
+      "mode": "Different completion stages conflated",
+      "example": "Financing completion versus acquisition closing; reserve commitment versus physical delivery.",
+      "expected": "Preserve the exact event object and state; one completed prerequisite is not the completed transaction.",
+      "cause": "Shared completion vocabulary overrode the distinct action.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "CLS-16",
+      "stage": "sentence parsing",
+      "mode": "Sentence boundary split discarded qualifiers",
+      "example": "U.S. and decimal splits lost mulling and other scope language.",
+      "expected": "Keep valid sentence boundaries, complete clauses and their qualifiers.",
+      "cause": "Punctuation heuristics split inside abbreviations/numbers.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "ID-01",
+      "stage": "identity",
+      "mode": "Common words or publishers mistaken for ticker aliases",
+      "example": "Washington Post → POST; ordinary now/dollar; publisher AP; MD title; SAN JUAN/agency abbreviations.",
+      "expected": "Use full organization, exchange/symbol syntax, entity type and capacity; retain true $POST positive control.",
+      "cause": "Short strings were promoted to company identity without referent proof.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "pasted",
+        "fixtures",
+        "history_lane"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "ID-02",
+      "stage": "identity",
+      "mode": "Different full organizations collapsed",
+      "example": "Frontline Managed Services acquisition mapped to tanker Frontline.",
+      "expected": "Match complete organization identity before a shared short alias.",
+      "cause": "Alias substring overrode the longer organization name.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "ID-03",
+      "stage": "identity/sense",
+      "mode": "Same word assigned to wrong concept",
+      "example": "Palm oil → petroleum; office-space/aerospace control; GPU typed ORG.",
+      "expected": "Resolve the phrase in its local context; distinguish term, organization and material.",
+      "cause": "Overlap or dictionary membership was used without contextual sense selection.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane",
+        "pasted",
+        "history_sources"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "ID-04",
+      "stage": "identity/sense",
+      "mode": "Dictionary's possible meaning treated as current meaning",
+      "example": "Candidate admitted plans, projections and support-related generic senses through physical WordNet checks.",
+      "expected": "Select the evidenced sense; any physical dictionary sense is not enough.",
+      "cause": "Existential dictionary-category test was too permissive.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "ID-05",
+      "stage": "identity/linking",
+      "mode": "Explicit company and list mentions missed",
+      "example": "Historical Netflix headlines missed NFLX; Entegris/Micron/AMD/Marvell/Western Digital headline missed the named companies.",
+      "expected": "Enumerate all evidenced named entities and map each independently.",
+      "cause": "Name recognition/alias integration failed; exact per-case root cause needs recovered raw runs.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "ID-06",
+      "stage": "identity/linking",
+      "mode": "Brand/product or subsidiary owner missing",
+      "example": "Pixel→owner link missed; KFC Pepsi/Coca-Cola headline omitted PEP; missing subsidiary/brand evidence in random samples.",
+      "expected": "Use dated supported ownership and complete product/brand names; distinguish supplier from owner.",
+      "cause": "Identity registry/ownership coverage was incomplete.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources",
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "ID-07",
+      "stage": "article relevance",
+      "mode": "Second-order link promoted to direct topical exposure",
+      "example": "DraftKings mentioned in Playboy filing; unrelated event then treated as Playboy's core exposure.",
+      "expected": "Show the typed second-order path; establish actual article capacity and affected activity separately.",
+      "cause": "Mere graph adjacency was confused with exposure relevance.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "pasted",
+        "fixtures",
+        "controls"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "ID-08",
+      "stage": "article relevance",
+      "mode": "Industry-wide expansion from one weak match",
+      "example": "Fresh sample: 10/14 false links came from one foreign-company expansion; Consumers Energy rate-hike article linked many energy names while missing CMS.",
+      "expected": "Require company-specific exposure and jurisdiction evidence; sector words alone do not establish a direct link.",
+      "cause": "Broad expansion propagated one uncertain identity/industry match.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "ID-09",
+      "stage": "article relevance",
+      "mode": "Speaker/analyst/exchange/place leakage",
+      "example": "Historical candidate 2.5 audit reported analyst, exchange and place leakage.",
+      "expected": "Label mentioned actors by role; do not turn attribution or location into the affected company.",
+      "cause": "Mention detection was not separated from event-subject attribution.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "ID-10",
+      "stage": "universe",
+      "mode": "Valid named firms excluded before matching",
+      "example": "ATR screen excluded LMT, RTX, NOC, GD from linkage universe in the historical Pentagon review.",
+      "expected": "Look up named entities over full catalog; trading eligibility is a separate filter.",
+      "cause": "Trading universe constraints leaked into information extraction.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "pasted"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "ID-11",
+      "stage": "identity/aliases",
+      "mode": "Alias collision blocked correct legal matching",
+      "example": "Earlier law-matching review reported valid aliases blocked by collision handling.",
+      "expected": "Keep multiple candidate identities with document/date/type constraints and unresolved state where needed.",
+      "cause": "Ambiguity handling became unconditional suppression.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "LANE-01",
+      "stage": "event actor",
+      "mode": "Wrong person attached to action",
+      "example": "Bishop who asked Trump for mercy resigns → Trump resigns; Russia action → Trump.",
+      "expected": "Use the actor of the actual predicate, with relative clauses preserved.",
+      "cause": "Nearby salient name displaced the grammatical/event actor.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "LANE-02",
+      "stage": "event existence",
+      "mode": "Keyword phrase mistaken for concrete event",
+      "example": "Product recall playbook → actual recall; Purchase Order → policy Order.",
+      "expected": "Distinguish discussion, document title and actual action with an evidenced actor and predicate.",
+      "cause": "Trigger word was treated as evidence of occurrence.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "LANE-03",
+      "stage": "taxonomy",
+      "mode": "Valid action detected but Lane/sector wrong",
+      "example": "18/18 action flags, but 0/11 sectors and 2/9 Lane correct in one test; device approval → drug.",
+      "expected": "Score action detection, taxonomy and granular sector independently.",
+      "cause": "Broad action detection hid downstream classification failures.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "LANE-04",
+      "stage": "taxonomy",
+      "mode": "Financial/regulatory meanings assigned to wrong lane",
+      "example": "Equity placement → credit_funding; FDA approval → access_control; Brent price → price_cap.",
+      "expected": "Use complete lane definitions and event arguments, allowing open-set/unclassified outputs.",
+      "cause": "Surface semantics lacked exact taxonomy boundaries.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "LANE-05",
+      "stage": "event recall",
+      "mode": "Useful actions or event families absent",
+      "example": "Radar firm triples production capacity discarded; FDA recall absent; ECB forecast/subsidy/sanctions missing; Iran/Hormuz/reserve-release/HBM tests returned zero.",
+      "expected": "Test coverage of event families on frozen title inputs, including complete miss cases.",
+      "cause": "Coverage/mapping was too narrow and curated examples hid gaps.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "OPS-01",
+      "stage": "workflow",
+      "mode": "Production ran an older implementation",
+      "example": "JEV workflow still selected candidate-v2; local checkout older than deployed fixes; stale day-level output predated rules.",
+      "expected": "Record code/resource/input revisions and verify the actual scheduled and served path.",
+      "cause": "Intended code and executed code diverged.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane",
+        "pasted",
+        "thread"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "OPS-02",
+      "stage": "workflow",
+      "mode": "Green health status concealed failures",
+      "example": "Green run despite all_ok=False/grok_ok=False; HTTP 200 model health response failed arithmetic.",
+      "expected": "Assert semantic task success and degraded/error status rather than exit/HTTP alone.",
+      "cause": "Transport/runner success substituted for task correctness.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "OPS-03",
+      "stage": "workflow",
+      "mode": "Arbitrary timeout stopped publication",
+      "example": "30-minute jobs cancelled around 500/5,996 profiles; streaming did not resolve the actual delay.",
+      "expected": "Measure phases, preserve checkpoints and use configured supported durations; never call timed-out publish complete.",
+      "cause": "Short local cap plus unlocated processing costs.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "thread"
+      ],
+      "evidence_level": "observed",
+      "status": "Limits raised historically; this compilation does not rerun workflows"
+    },
+    {
+      "id": "OPS-04",
+      "stage": "workflow",
+      "mode": "Concurrent writers conflicted",
+      "example": "Asset-saving push failed after main changed; earlier superseded build blocked by source guard.",
+      "expected": "Serialize/retry valid writes and preserve source revision guard.",
+      "cause": "Multiple workflows mutated shared branch state.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "thread",
+        "history_ops"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "OPS-05",
+      "stage": "deployment",
+      "mode": "Merged/tested code confused with live behavior",
+      "example": "Repeated not live claims despite filter controls present; later fixed claims before new served output verified.",
+      "expected": "Record implemented, tested, merged and served revisions separately; verify live stock and article behavior.",
+      "cause": "Revision metadata and UI feature presence were interpreted too broadly.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "thread"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "OPS-06",
+      "stage": "deployment/cache",
+      "mode": "Stale viewer manifest",
+      "example": "Earlier stock-viewer manifest caching served stale metadata.",
+      "expected": "Version assets and verify served manifest/content together.",
+      "cause": "Browser/CDN manifest lifetime differed from publication lifecycle.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "OPS-07",
+      "stage": "artifact retention",
+      "mode": "Audit/corpus continuity lost",
+      "example": "Earlier frozen 20-ticker sample not recovered; corpus previously held in a temporary 90-day artifact with no configured permanent R2.",
+      "expected": "Persist immutable manifest, labels, hashes and content; mark replacement draws and expiry.",
+      "cause": "Durable retention was missing or unverified.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit",
+        "history_sources"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "OPS-08",
+      "stage": "workflow environment",
+      "mode": "Environment or settings differed from assumptions",
+      "example": "Source work reported Actions external-network limitations; README scheduler contradicted actual workflow; unpinned dependencies and dynamic loading noted.",
+      "expected": "Validate real runner capabilities, active schedule and pinned resources.",
+      "cause": "Documentation/local behavior was mistaken for production behavior.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_sources",
+        "history_ops"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EVAL-01",
+      "stage": "evaluation",
+      "mode": "Extraction and classification collapsed into one score",
+      "example": "23 October gate score combined term specificity and existing relationship correctness.",
+      "expected": "Extraction precision/recall against source-text reference terms; separate classification on gold terms and actual extracted terms.",
+      "cause": "The scored unit was retain/reject of a prelabelled row, not either agreed stage.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit",
+        "thread"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EVAL-02",
+      "stage": "evaluation",
+      "mode": "Recall computed only from already extracted rows",
+      "example": "91.2% holdout recall was recall of labeled existing rows, not all useful source terms.",
+      "expected": "Build reference terms from full selected stored source text, including absent program terms.",
+      "cause": "Missing-from-inventory terms were outside the denominator.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit",
+        "thread"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EVAL-03",
+      "stage": "evaluation",
+      "mode": "Development success mistaken for generalization",
+      "example": "Candidate 77→96 development decisions; holdout only 78→79, precision 62.0→62.7%.",
+      "expected": "Freeze candidate and holdout before judging; report both and block release on failed generalization.",
+      "cause": "Rules fit observed development shapes without adequate semantic generalization.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Candidate remains failed in recorded audit; no release certification here"
+    },
+    {
+      "id": "EVAL-04",
+      "stage": "evaluation",
+      "mode": "New regressions hidden by aggregate improvement",
+      "example": "Candidate admitted plans/projections/the “Merger and hid Jackson Brooke LLC; earlier within-industry z helped biotech but broke space memo.",
+      "expected": "Inspect all changed decisions and class-level tradeoffs, not only aggregate or repaired examples.",
+      "cause": "Fixes were assessed narrowly and introduced collateral errors.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit",
+        "fixtures"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EVAL-05",
+      "stage": "evaluation",
+      "mode": "Passing regression/unit/browser tests treated as accuracy proof",
+      "example": "103 earlier checks and 57 candidate regressions passed while fresh semantic holdout failed.",
+      "expected": "Use unit tests for known controls and fresh source-based cases for generalization.",
+      "cause": "Implementation consistency was confused with unseen semantic correctness.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "thread",
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EVAL-06",
+      "stage": "evaluation",
+      "mode": "Ticker invariance treated as semantic proof",
+      "example": "All 6,030 synthetic ticker substitutions preserved decisions; candidate still failed holdout.",
+      "expected": "Keep invariance as anti-hardcoding control; require semantic/recall validation separately.",
+      "cause": "Issuer-independent rules can still be universally wrong.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EVAL-07",
+      "stage": "evaluation",
+      "mode": "Biased sample extrapolated to whole scanner",
+      "example": "50 admitted and 50 rejected per split, role-stratified over 20 filing-backed stocks.",
+      "expected": "Report diagnostic sample design; use appropriate sampling/weights and uncertainty for population claims.",
+      "cause": "Case balance and filing-backed restriction differ from deployment population.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "audit"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EVAL-08",
+      "stage": "evaluation",
+      "mode": "No useful frozen real-world corpus / easy-negative sampling",
+      "example": "Early loop used six random articles and six synthetic stocks; most unrelated cases were trivial; same tiny batch used for keyness control.",
+      "expected": "Maintain permanent regressions plus representative and adversarial untouched holdouts.",
+      "cause": "Tiny dependent samples supplied little reliable improvement signal.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "pasted"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EVAL-09",
+      "stage": "evaluation",
+      "mode": "Holdout reuse and label drift",
+      "example": "Historical supposedly unseen 100-headline set reused; DKNG/Charlotte label versions changed; judges recreated expectations across rounds.",
+      "expected": "Version source labels/rubric, record amendments, and retire inspected holdouts into regression material.",
+      "cause": "The target and training/evaluation boundary moved.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "pasted",
+        "fixtures",
+        "history_lane"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EVAL-10",
+      "stage": "evaluation",
+      "mode": "Synthetic evidence presented as production-equivalent text",
+      "example": "Fuel-oil fixture note says real headline was restated with added sentences; several snippets labeled full; other fixtures were excerpt placeholders.",
+      "expected": "Keep production headlines unchanged; synthetic controls explicitly synthetic and separate from accuracy metrics.",
+      "cause": "Test input was enriched beyond what production received.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "fixtures",
+        "pasted"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EVAL-11",
+      "stage": "evaluation",
+      "mode": "Unreviewed or wrong identity labels treated as gold",
+      "example": "Many fixtures human_checked:false; historical SpaceX profile/case used SPCX; other recorded expectations conflicted with private/off-board treatment.",
+      "expected": "Audit gold entity identities and as-of dates before scoring; preserve questionable historical labels as disputed, not facts.",
+      "cause": "Model-generated benchmark expectations can contain the same identity mistakes as the program.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "fixtures",
+        "pasted",
+        "history_lane"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EVAL-12",
+      "stage": "evaluation",
+      "mode": "Comparator/schema errors hid or created failures",
+      "example": "Markets moved. unscorable due to minimum 40 chars; 14 single_name_top stories dropped by judge field mismatch; review-ledger hash mismatch.",
+      "expected": "Separate harness/schema/input-integrity failures from content verdicts and fail visibly.",
+      "cause": "Scoring plumbing silently altered the evaluated set.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "pasted",
+        "history_lane"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EVAL-13",
+      "stage": "evaluation",
+      "mode": "Error/unknown/unlabeled conflated with negative/correct",
+      "example": "JEV API errors became DROP; many review outputs touted as high retention; unresolved ownership/identity cases lacked labels.",
+      "expected": "Preserve error, abstain, unresolved and labeled negative as distinct states with coverage counts.",
+      "cause": "Missing judgment was converted to a content decision or hidden in aggregate.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane",
+        "history_sources"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EVAL-14",
+      "stage": "evaluation",
+      "mode": "Calibrated confidence inferred from overlap/statistical scores",
+      "example": "Hand-set z/cosine thresholds; K/context word overlap treated as confidence; dictionary or source hash check suggested understanding.",
+      "expected": "Call scores what they measure; calibrate on independent labels; evidence integrity is separate from semantics.",
+      "cause": "Uncalibrated proxies were mistaken for probabilities or meaning correctness.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "pasted",
+        "thread"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EVAL-15",
+      "stage": "evaluation",
+      "mode": "Curated coverage mistaken for broad implementation",
+      "example": "Earlier Yen/FCC successes used eight curated exposures; 71 distinct titles stood in for 10,441 raw records.",
+      "expected": "Record exact population, input units and coverage; run unchanged production program over fresh samples.",
+      "cause": "Demonstration paths and partial samples did not represent full production.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "EVAL-16",
+      "stage": "evaluation/reporting",
+      "mode": "Unsupported output and premature completion claims",
+      "example": "Small-model output invented evidence/invalid fields; proposed DeepSeek examples partly unverified; earlier fixed wording despite later recurrence.",
+      "expected": "Only attribute output to actual runs and preserve source witness; state unresolved and release status precisely.",
+      "cause": "Generated explanations and intended behavior outran verified execution.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "thread",
+        "history_lane",
+        "history_sources"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "IMPACT-01",
+      "stage": "downstream impact",
+      "mode": "Identity match mistaken for financial effect",
+      "example": "PACCAR headline linked CMI supplier/customer path and AUR partner; this did not establish bullish/bearish impact.",
+      "expected": "Separate same-entity match, relationship, event relevance and financially signed exposure.",
+      "cause": "A valid graph path does not specify magnitude/direction/current exposure.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "thread"
+      ],
+      "evidence_level": "observed",
+      "status": "Open or current recurrence status not revalidated"
+    },
+    {
+      "id": "IMPACT-02",
+      "stage": "downstream impact",
+      "mode": "Missing dates, net exposure and business scope",
+      "example": "profile_activity_candidate lacked current net exposure/segment weights; business-effective dates, hedges, pass-through/geography unresolved.",
+      "expected": "Keep source/publication/event/effective dates distinct and mark missing net/segment exposure.",
+      "cause": "Gross historic profile mention was not evidence of current economic sensitivity.",
+      "cause_status": "Interpretation supported by recorded behavior; not necessarily a line-level root-cause proof",
+      "sources": [
+        "history_lane"
+      ],
+      "evidence_level": "historical_report",
+      "status": "Open or current recurrence status not revalidated"
+    }
+  ],
+  "closure_criteria": "See future-workflow.md. Historical solved labels are not re-certified.",
+  "automation_installed": false
+}
