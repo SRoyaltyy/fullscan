@@ -1,0 +1,9 @@
+{
+  "scope": "Random fresh issuer for live comparison UI verification only; not extraction accuracy evaluation",
+  "seed": 17305665222683618315,
+  "eligible_available": 442,
+  "ticker": "NTR",
+  "issuer_id": "0001725964",
+  "source_sha": "6a3fd0cedeedd61404e4d6a823f82780cc9a540e",
+  "candidate_frozen_before_ui_source_review": true
+}

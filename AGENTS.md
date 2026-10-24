@@ -54,3 +54,26 @@ Current user scope is STOCK-SIDE ONLY: extraction/precision/recall and the
 term's relationship to its stock across stored company sources. Article-side
 matching, Lane and financial impact remain recorded but are OUT OF SCOPE for
 this milestone and must not block it. Out-of-scope is not a passing result.
+
+# Standing old/new comparison page requirement — user instruction, 24 October 2026
+
+Every future scanner methodology update must publish its stock-side outputs at
+https://sroyaltyy.github.io/fullscan/dashboard/scanner-backtest/compare/ with the
+previous published version and the new version shown side by side for the SAME
+stock. Preserve previous output assets immutably; show source revisions, source
+coverage, dates, term additions/removals, changed relationship statements and
+the supporting source evidence. Use the preceding published release as the old
+version for each future update, rather than keeping an arbitrarily old baseline
+forever. Preserve an earlier comparison when advancing to the next release.
+
+Roll updates out across the entire available catalog. Fresh randomly selected
+stocks are for regression/generalization testing and must not become a limit on
+deployment coverage. Keep filing-backed and description-only inputs distinct.
+Show pending, failed and unavailable rebuilds explicitly; never relabel an old
+result as a new one or call a partial catalog rollout complete.
+
+The user authorizes publishing experimental versions for testing before accuracy
+acceptance. Keep experimental/deployment readiness separate from independently
+reviewed extraction precision, recall and classification accuracy. A term count
+increase or an output difference is not an accuracy improvement. Verify both
+versions on the actual served page before calling the comparison usable.

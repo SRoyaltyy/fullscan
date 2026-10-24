@@ -29,6 +29,7 @@
     "MFP",
     "MPWR",
     "NFLX",
+    "NTR",
     "NUS",
     "PROK",
     "RRC",
@@ -40,7 +41,9 @@
     "VFC",
     "VRRM"
   ],
-  "excluded_issuer_ids": [],
+  "excluded_issuer_ids": [
+    "0001725964"
+  ],
   "history_note": "Known reviewed tickers only; earlier lost sample may overlap. Do not claim all history was recovered.",
   "runs": [
     {
@@ -1675,5 +1678,8 @@
       "previous_ledger_sha256": "2f6b3dc109595180e9566d6d64fabebb5dba03c1c027ea79592fa42dda7e3024",
       "id": "de2f20f8c085a502b773d4132e2befee5810dfd0df2f319ae83e0cb40afbb227"
     }
-  ]
+  ],
+  "additional_exclusion_reasons": {
+    "0001725964": "Fresh randomly chosen NTR reviewed for live old/new comparison UI on 2026-10-24; not an extraction accuracy benchmark. See comparison-ui-random-draw.json and comparison-ui-live-check.json."
+  }
 }
