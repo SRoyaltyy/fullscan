@@ -10,7 +10,7 @@ permissions:
   actions: read
 concurrency:
   group: stock-experiment-preview
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   parse:
     if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'codex/cumulative-scanner-validation'
@@ -25,6 +25,10 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           persist-credentials: false
+          sparse-checkout: |
+            src
+            scripts
+            requirements-filing-parser.txt
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -63,10 +67,12 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
           path: candidate
           persist-credentials: false
+          sparse-checkout: dashboard/stock-experiment
       - uses: actions/checkout@v4
         with:
           ref: gh-pages
           path: site
+          sparse-checkout: dashboard/scanner-backtest
       - uses: actions/download-artifact@v4
         with:
           pattern: stock-experiment-*
@@ -77,13 +83,14 @@ jobs:
           CANDIDATE_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           python - <<'PY'
-          import hashlib,json,os,shutil
+          import hashlib,json,os,shutil,subprocess
           from pathlib import Path
           dest=Path('site/dashboard/scanner-backtest/experimental')
           rows=[json.loads(p.read_text()) for p in sorted(dest.glob('*.summary.json'))]
           assert len(rows)==8 and all(r['source_sha']==os.environ['CANDIDATE_SHA'] for r in rows)
           for r in rows:assert hashlib.sha256((dest/r['asset']).read_bytes()).hexdigest()==r['sha256']
-          assert sum(p.stat().st_size for p in Path('site').rglob('*') if p.is_file() and '.git' not in p.parts)<950_000_000
+          existing=sum(int(line.split()[3]) for line in subprocess.check_output(['git','ls-tree','-r','-l','HEAD'],cwd='site',text=True).splitlines() if line.split()[3].isdigit())
+          assert existing+sum(p.stat().st_size for p in dest.rglob('*') if p.is_file())<950_000_000
           shutil.copyfile('candidate/dashboard/stock-experiment/index.html',dest/'index.html')
           (dest/'meta.json').write_text(json.dumps({'source_sha':os.environ['CANDIDATE_SHA'],'experimental':True,'accuracy_certified':False,'stocks':rows,'coverage':'Eight complete archived stock-source sets re-parsed with candidate. Other stocks remain in the existing view. Filing archive covers 2032 of 5996 catalog stocks; remainder description-only.'},indent=2)+'\n')
           page=Path('site/dashboard/scanner-backtest/index.html');s=page.read_text()
