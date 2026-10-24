@@ -41,7 +41,7 @@ try{
  const catalog=await (await fetch(BASE+'catalog.json')).json();
  const description=Object.entries(catalog.catalog).find(([,row])=>row.coverage==='description_only')?.[0];
  assert(description,'catalog has description-only coverage controls');
- for(const ticker of ['BLZE',description]){
+ for(const ticker of ['LRCX',description]){
   await page.getByRole('combobox',{name:'Stock ticker'}).fill(ticker);
   await page.getByRole('combobox',{name:'Stock ticker'}).press('Enter');
   assert.equal(await page.locator('#rows tr').count(),0,'previous stock output clears immediately');
@@ -67,7 +67,7 @@ try{
   assert.equal(output.old.input_sha256,output.input_sha256);
   assert.equal(output.new.input_sha256,output.input_sha256);
   assert.equal(output.catalog_sha256,config.catalog_sha256);
-  if(ticker==='BLZE'){
+  if(ticker==='LRCX'){
    assert.equal(output.coverage_kind,'filing_backed');
    assert(output.source_receipt.filings>0);
    assert(await page.locator('#rows tr').count()>0);
@@ -77,7 +77,7 @@ try{
     if(await page.locator('#old-detail blockquote, #new-detail blockquote').count())break;
    }
    assert(await page.locator('#old-detail blockquote, #new-detail blockquote').count()>0,'supporting source evidence renders');
-   await page.screenshot({path:'artifacts/live-BLZE.png',fullPage:true});
+   await page.screenshot({path:'artifacts/live-LRCX.png',fullPage:true});
    await page.getByRole('searchbox',{name:'Search comparison terms'}).fill('__no_such_term_for_ui_control__');
    assert((await page.locator('#rows').textContent()).includes('No matching output terms'));
    await page.getByRole('searchbox',{name:'Search comparison terms'}).fill('');
