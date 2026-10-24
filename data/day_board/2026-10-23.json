@@ -1,16 +1,16 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23T05:54:54.132230-04:00",
+  "generated_at": "2026-10-23T07:04:47.416876-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-23_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-10-23_actions.json` \u2014 missing"
+    "MISSING News actions JSON `01_daily/news/2026-10-23_actions.json` \u2014 missing",
+    "FAIL Weather JSON `01_daily/weather/2026-10-23_weather.json` \u2014 yields_unknown"
   ],
   "counts": {
-    "ok": 6,
+    "ok": 5,
     "partial": 1,
-    "fail": 1,
+    "fail": 2,
     "n": 8
   },
   "processes": [
@@ -182,7 +182,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 4,
+      "n_req_ok": 6,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -242,10 +242,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-10-23_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 6693892,
+          "said": "6693892B on disk",
           "bullets": []
         },
         {
@@ -317,11 +317,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-23_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 14895,
+          "said": "DOWN -7.538",
+          "bullets": [
+            "bad: Meta -7% / AI-capex fatigue",
+            "bad: Hormuz 7-tanker attack, Brent >$114",
+            "bad: Moody's France downgrade risk tonight",
+            "good: SpaceX +2.8% premarket"
+          ]
         },
         {
           "key": "board",
@@ -341,13 +346,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7575,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7564,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
           "bullets": [
-            "general_predict:missing",
-            "events:missing",
-            "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing",
+            "finviz_market_digest:missing",
+            "map_heat_research:missing",
+            "sector_predict:missing"
           ]
         },
         {
@@ -496,16 +501,22 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "general DOWN  -7.538",
+      "bullets": [
+        "bad: Meta -7% / AI-capex fatigue",
+        "bad: Hormuz 7-tanker attack, Brent >$114",
+        "bad: Moody's France downgrade risk tonight",
+        "good: SpaceX +2.8% premarket",
+        "good: memory/optical chips green"
+      ]
     },
     {
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -530,19 +541,19 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-10-23_weather.json",
           "role": "required",
-          "status": "OK",
-          "reason": "sectors=11 bytes=9373 vix=calm yields=flat",
-          "size": 9373,
-          "said": "hostile 9 \u00b7 neutral 2",
+          "status": "FAIL",
+          "reason": "yields_unknown",
+          "size": 9386,
+          "said": "yields_unknown \u00b7 favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
             "events bull 5 / bear 8"
           ]
         }
       ],
-      "said": "hostile 9 \u00b7 neutral 2",
+      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
         "events bull 5 / bear 8"
       ]
     },
@@ -657,11 +668,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-23_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 14895,
+          "said": "DOWN -7.538",
+          "bullets": [
+            "bad: Meta -7% / AI-capex fatigue",
+            "bad: Hormuz 7-tanker attack, Brent >$114",
+            "bad: Moody's France downgrade risk tonight",
+            "good: SpaceX +2.8% premarket"
+          ]
         },
         {
           "key": "in_board",
@@ -720,12 +736,12 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-10-23_weather.json",
           "role": "input",
-          "status": "OK",
-          "reason": "sectors=11 bytes=9373 vix=calm yields=flat",
-          "size": 9373,
-          "said": "hostile 9 \u00b7 neutral 2",
+          "status": "FAIL",
+          "reason": "yields_unknown",
+          "size": 9386,
+          "said": "yields_unknown \u00b7 favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
             "events bull 5 / bear 8"
           ]
         },
@@ -749,10 +765,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2218694,
-          "said": "220 rows",
+          "size": 2217520,
+          "said": "208 rows",
           "bullets": [
-            "GLBE, SHOO, HLNE, VCTR, WT, HOOD, AAMI, ANF"
+            "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, WAY"
           ]
         },
         {
@@ -830,9 +846,9 @@
           "bullets": []
         }
       ],
-      "said": "220 rows",
+      "said": "208 rows",
       "bullets": [
-        "GLBE, SHOO, HLNE, VCTR, WT"
+        "HALO, ONC, LLY, HRMY, ETON"
       ]
     },
     {
@@ -977,13 +993,24 @@
         "morning S missing"
       ]
     },
-    "general": {},
+    "general": {
+      "said": "DOWN  -7.538",
+      "bullets": [
+        "bad: Meta -7% / AI-capex fatigue",
+        "bad: Hormuz 7-tanker attack, Brent >$114",
+        "bad: Moody's France downgrade risk tonight",
+        "good: SpaceX +2.8% premarket",
+        "good: memory/optical chips green"
+      ],
+      "score": "-7.538",
+      "direction": "down"
+    },
     "sectors": {},
     "news": {},
     "weather": {
-      "said": "hostile 9 \u00b7 neutral 2",
+      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
         "events bull 5 / bear 8"
       ]
     }
@@ -1768,6 +1795,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-23\n_Generated 2026-10-23T09:54:52 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$108,007.76** (after 09:30 $108,007.76 \u00b7 after 16:00 $108,007.76)\n- Prior close **$108,007.76** \u00b7 09:30 **$108,007.76** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$108,007.76**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,007.76** \u00b7 2026-10-22 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\":"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-23T07:04:46.609676-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-23_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 6693892,
+          "preview": "raw=9411 usable=605 single=509 \u00b7 The decline in U.S. Treasury yields and expectations that the Federal Reserve wi | Nasdaq 100 Drops as Oil Rise Fuels Risk-Off Mood - Bloomberg.com | US weekly jobless claims near 57-year lows, underscore labor market stability -  | Watch US Economy: Jobless Claims Hit Three-Month Low at 194,000 - Bloomberg.com | COIN Stock Price Forecast After Jobless Claims Hit 194,000 Ahead of FOMC - Crypt"
+        },
+        {
+          "path": "01_daily/news/2026-10-23_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 13067,
+          "preview": "# News Parse v2 \u2014 2026-10-23T07:04:46.032770-04:00\nWindow\u224848h | news_mode=on | raw=9411 | usable=605 | single_name=509 | noise_dropped=7972\nusable polarity={'+': 13, '-': 130, 'mixed': 5, 'neutral': 457}"
+        }
+      ],
+      "preview": "raw=9411 usable=605 single=509 \u00b7 The decline in U.S. Treasury yields and expectations that the Federal Reserve wi | Nasdaq 100 Drops as Oil Rise Fuels Risk-Off Mood - Bloomberg.com | US weekly jobless claims near 57-year lows, underscore labor market stability -  | Watch US Economy: Jobless Claims Hit Three-Month Low at 194,000 - Bloomberg.com | COIN Stock Price Forecast After Jobless Claims Hit 194,000 Ahead of FOMC - Crypt \u00b7 # News Parse v2 \u2014 2026-10-23T07:04:46.032770-04:00\nWindow\u224848h | news_mode=on | raw=9411 | usable=605 | single_name=509 | noise_dropped=7972\nusable polarity={'+': 13, '-': 130, 'mixed': 5, 'neutral': 457}"
     }
   ],
   "href": {
