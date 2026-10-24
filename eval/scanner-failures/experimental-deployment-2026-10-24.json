@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-24",
+  "status": "deployed_and_live_verified_experimental_only",
+  "url": "https://sroyaltyy.github.io/fullscan/dashboard/scanner-backtest/experimental/",
+  "source_sha": "629279628434865e8e8958f31c648822d67f7055",
+  "method": "stock-evidence-graph-2",
+  "accuracy_certified": false,
+  "merged_to_main": false,
+  "scope": "Eight complete archived stock source sets only. Existing catalog remains on its earlier version.",
+  "parse_workflow_run": 40073778087,
+  "publication_workflow_run": 40074812592,
+  "stocks": [
+    {
+      "ticker": "IREN",
+      "sha256": "8a2526faa9eebe4c6133eeba4c73bcbfc3b94552246a3b361546f132c05149f4",
+      "source_receipt": {
+        "source": "PR642-full-text",
+        "companies": 1,
+        "filings": 2,
+        "documents": 176,
+        "characters": 9371618,
+        "errors": [],
+        "as_of": null,
+        "full_source_archive": true,
+        "complete": true
+      },
+      "entities": 3199,
+      "assertions": 657
+    },
+    {
+      "ticker": "LRCX",
+      "sha256": "f5f37e1e4725dc014f368760a9ddd18f7f73c749071f3ba26c6cde58b5d5e58f",
+      "source_receipt": {
+        "source": "PR642-full-text",
+        "companies": 1,
+        "filings": 2,
+        "documents": 126,
+        "characters": 5098218,
+        "errors": [],
+        "as_of": null,
+        "full_source_archive": true,
+        "complete": true
+      },
+      "entities": 865,
+      "assertions": 278
+    },
+    {
+      "ticker": "LZ",
+      "sha256": "7eebe75cb43980b357df4e7e49e9fa388e413dbc0c7333e8883e389e2c2aecac",
+      "source_receipt": {
+        "source": "PR642-full-text",
+        "companies": 1,
+        "filings": 6,
+        "documents": 275,
+        "characters": 12133912,
+        "errors": [],
+        "as_of": null,
+        "full_source_archive": true,
+        "complete": true
+      },
+      "entities": 935,
+      "assertions": 517
+    },
+    {
+      "ticker": "MIRM",
+      "sha256": "3948b4b0e7c819a384938e62c142a195893e6c2bdaca9b4f0e813ee8c89f0a1d",
+      "source_receipt": {
+        "source": "PR642-full-text",
+        "companies": 1,
+        "filings": 14,
+        "documents": 396,
+        "characters": 15975705,
+        "errors": [],
+        "as_of": null,
+        "full_source_archive": true,
+        "complete": true
+      },
+      "entities": 2251,
+      "assertions": 1656
+    },
+    {
+      "ticker": "OLLI",
+      "sha256": "dfd332cbef2ad5ea2c091594cd6d61cbd515c2f6877f5890e49542ddb32f1e54",
+      "source_receipt": {
+        "source": "PR642-full-text",
+        "companies": 1,
+        "filings": 7,
+        "documents": 253,
+        "characters": 10049945,
+        "errors": [],
+        "as_of": null,
+        "full_source_archive": true,
+        "complete": true
+      },
+      "entities": 864,
+      "assertions": 442
+    },
+    {
+      "ticker": "SDGR",
+      "sha256": "21e6fadb338bba2a104dee43584cef3ba92e442a6a221914f8f68713b894a195",
+      "source_receipt": {
+        "source": "PR642-full-text",
+        "companies": 1,
+        "filings": 11,
+        "documents": 326,
+        "characters": 13366303,
+        "errors": [],
+        "as_of": null,
+        "full_source_archive": true,
+        "complete": true
+      },
+      "entities": 1999,
+      "assertions": 1356
+    },
+    {
+      "ticker": "SLDE",
+      "sha256": "7a75a1ffbb594c4ead94b12f6f243c0d434bb73b3a7631831b40d5724c683bd5",
+      "source_receipt": {
+        "source": "PR642-full-text",
+        "companies": 1,
+        "filings": 10,
+        "documents": 357,
+        "characters": 20068535,
+        "errors": [],
+        "as_of": null,
+        "full_source_archive": true,
+        "complete": true
+      },
+      "entities": 2146,
+      "assertions": 863
+    },
+    {
+      "ticker": "UNIT",
+      "sha256": "96bb7f4c9abd972530773f87e35b19965e81261e560008665cdab4d623508e63",
+      "source_receipt": {
+        "source": "PR642-full-text",
+        "companies": 1,
+        "filings": 14,
+        "documents": 473,
+        "characters": 24998791,
+        "errors": [],
+        "as_of": null,
+        "full_source_archive": true,
+        "complete": true
+      },
+      "entities": 2678,
+      "assertions": 993
+    }
+  ],
+  "live_checks": [
+    "Served candidate revision equals 629279628434865e8e8958f31c648822d67f7055.",
+    "All eight stock assets loaded through browser checksum validation without errors.",
+    "Stock switching, keyword search, unclassified filter and no-result behavior exercised.",
+    "LZ Earth Class Mail, Inc. displays reported listed_subsidiary with explicit_subsidiary_document_scope; filing date 2026-02-23 and original SEC exhibit link.",
+    "Earth Class Mail evidence includes three occurrences across nonadjacent documents; direct ownership is explicitly not established."
+  ],
+  "limitations": [
+    "Experimental user-requested preview; no claim of accuracy or generalization.",
+    "Full catalog has 2032 filing-backed of 5996 stocks; remainder description-only.",
+    "Current candidate remains draft and unmerged. Broader diagnostics failed acceptance; most relationships remain unclassified."
+  ]
+}
