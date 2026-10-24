@@ -1,6 +1,6 @@
 # Mover paper — empty list + skip days defer to live .io 2w_size
 
-_Generated 2026-10-07T04:47:26 — calls 2026-08-13 → 2026-10-06_
+_Generated 2026-10-24T14:05:53 — calls 2026-08-13 → 2026-10-23_
 
 **Strategy:** LONG-only · top 10/day by cond / live 2w_size · entry open+close (16:00 ET) · hold 1d / 2w_size mark (exit 16:00 ET) · 10% of equity per trade · Futubull fees · cash-accounted (unfittable trades skipped and logged). Mover 1d at 09:30 when S ≥ +1 and the BUY list is non-empty. Empty BUY list and S ≥ 0 takes live .io 2w_size (source gap). Every mover-skip morning (S < +1, including hard-red) also takes that mark.
 
@@ -10,11 +10,11 @@ _Generated 2026-10-07T04:47:26 — calls 2026-08-13 → 2026-10-06_
 
 | Start capital | Final equity | Return | Max DD | Trades | Skipped | Win rate |
 |---:|---:|---:|---:|---:|---:|---:|
-| $100,000 | $114,705.15 | **14.71%** | 7.59% | 119 | 0 | 55.5% |
+| $100,000 | $116,463.69 | **16.46%** | 7.83% | 175 | 0 | 53.7% |
 
 | Side | Trades | Win rate | P&L |
 |---:|---:|---:|---:|
-| BUY (long) | 119 | 55.5% | $10,265.00 |
+| BUY (long) | 175 | 53.7% | $12,648.01 |
 | SELL (short) | 0 | 0% | $0.00 |
 
 ## Day gate (per session)
@@ -59,18 +59,24 @@ _Generated 2026-10-07T04:47:26 — calls 2026-08-13 → 2026-10-06_
 | 2026-10-02 | UP | 4.365 | 0 | **MOVER** — predict +4.37 >= +1.0 — mover 1d (09:30) | — |
 | 2026-10-05 | FLAT | 0.086 | 0 | **IO** — predict +0.09 < +1.0 — mover skip; live .io 2w_size mark (already on; not a new 1d ticket) | live 2w_size +1.25% |
 | 2026-10-06 | UP | 2.623 | 0 | **MOVER** — predict +2.62 >= +1.0 — mover 1d (09:30) | — |
+| 2026-10-07 | DOWN | -5.211 | 0 | **IO** — predict -5.21 < +1.0 — mover skip; live .io 2w_size mark (already on; not a new 1d ticket) | live 2w_size -0.63% |
+| 2026-10-08 | DOWN | -6.787 | 0 | **IO** — predict -6.79 < +1.0 — mover skip; live .io 2w_size mark (already on; not a new 1d ticket) | live 2w_size -0.66% |
+| 2026-10-09 | — | — | 0 | **MOVER** — no predict on file — mover (the rest) | — |
+| 2026-10-12 | — | — | 0 | **MOVER** — no predict on file — mover (the rest) | — |
+| 2026-10-13 | DOWN | -6.767 | 0 | **IO** — predict -6.77 < +1.0 — mover skip; live .io 2w_size mark (already on; not a new 1d ticket) | live 2w_size +0.42% |
+| 2026-10-14 | DOWN | -1.645 | 0 | **IO** — predict -1.65 < +1.0 — mover skip; live .io 2w_size mark (already on; not a new 1d ticket) | live 2w_size +0.42% |
+| 2026-10-15 | — | — | 0 | **MOVER** — no predict on file — mover (the rest) | — |
+| 2026-10-16 | UP | 5.526 | 0 | **MOVER** — predict +5.53 >= +1.0 — mover 1d (09:30) | — |
+| 2026-10-19 | UP | 2.125 | 1 | **MOVER** — predict +2.12 >= +1.0 — mover 1d (09:30) | — |
+| 2026-10-20 | DOWN | -8.071 | 1 | **IO** — predict -8.07 < +1.0 — mover skip; live .io 2w_size mark (already on; not a new 1d ticket) | live 2w_size +0.66% |
+| 2026-10-21 | UP | 4.644 | 1 | **MOVER** — predict +4.64 >= +1.0 — mover 1d (09:30) | — |
+| 2026-10-22 | DOWN | -14.314 | 1 | **IO** — predict -14.31 < +1.0 — mover skip; live .io 2w_size mark (already on; not a new 1d ticket) | live 2w_size +0.55% |
+| 2026-10-23 | DOWN | -7.538 | 1 | **IO** — predict -7.54 < +1.0 — mover skip; live .io 2w_size mark (already on; not a new 1d ticket) | live 2w_size -0.69% |
 
 ## Last 25 filled trades
 
 | Entry (ET) | Ticker | Side | Shares | Entry px | Exit (ET) | Exit px | P&L | Ret | Cond |
 |---|---|---|---:|---:|---|---:|---:|---:|---|
-| 2026-10-02 09:30 ET | `CTKB` | BUY | 1687 | $5.86 | 2026-10-05 16:00 ET | $6.09 | $344.13 | 3.48% | mover |
-| 2026-10-02 09:30 ET | `ETON` | BUY | 188 | $52.42 | 2026-10-05 16:00 ET | $55.62 | $596.38 | 6.05% | mover |
-| 2026-10-02 09:30 ET | `LQDA` | BUY | 372 | $26.69 | 2026-10-05 16:00 ET | $27.64 | $343.66 | 3.46% | mover |
-| 2026-10-02 09:30 ET | `MQ` | BUY | 581 | $17.23 | 2026-10-05 16:00 ET | $17.03 | $-131.36 | -1.31% | mover |
-| 2026-08-13 16:00 ET | `2w_size` | BUY | 0 | $0.00 | 2026-08-13 16:00 ET | $0.00 | $0.00 | 0% | io |
-| 2026-08-14 16:00 ET | `2w_size` | BUY | 0 | $0.00 | 2026-08-14 16:00 ET | $0.00 | $3,166.97 | 3.17% | io |
-| 2026-08-18 16:00 ET | `2w_size` | BUY | 0 | $0.00 | 2026-08-18 16:00 ET | $0.00 | $2,040.33 | 1.97% | io |
 | 2026-08-19 16:00 ET | `2w_size` | BUY | 0 | $0.00 | 2026-08-19 16:00 ET | $0.00 | $4,306.12 | 4.08% | io |
 | 2026-08-24 16:00 ET | `2w_size` | BUY | 0 | $0.00 | 2026-08-24 16:00 ET | $0.00 | $0.00 | 0% | io |
 | 2026-08-28 16:00 ET | `2w_size` | BUY | 0 | $0.00 | 2026-08-28 16:00 ET | $0.00 | $0.00 | 0% | io |
@@ -89,6 +95,13 @@ _Generated 2026-10-07T04:47:26 — calls 2026-08-13 → 2026-10-06_
 | 2026-09-28 16:00 ET | `2w_size` | BUY | 0 | $0.00 | 2026-09-28 16:00 ET | $0.00 | $-1,817.08 | -1.59% | io |
 | 2026-10-01 16:00 ET | `2w_size` | BUY | 0 | $0.00 | 2026-10-01 16:00 ET | $0.00 | $-1,085.29 | -0.96% | io |
 | 2026-10-05 16:00 ET | `2w_size` | BUY | 0 | $0.00 | 2026-10-05 16:00 ET | $0.00 | $1,418.83 | 1.25% | io |
+| 2026-10-07 16:00 ET | `2w_size` | BUY | 0 | $0.00 | 2026-10-07 16:00 ET | $0.00 | $-716.71 | -0.63% | io |
+| 2026-10-08 16:00 ET | `2w_size` | BUY | 0 | $0.00 | 2026-10-08 16:00 ET | $0.00 | $-740.67 | -0.66% | io |
+| 2026-10-13 16:00 ET | `2w_size` | BUY | 0 | $0.00 | 2026-10-13 16:00 ET | $0.00 | $470.19 | 0.42% | io |
+| 2026-10-14 16:00 ET | `2w_size` | BUY | 0 | $0.00 | 2026-10-14 16:00 ET | $0.00 | $472.53 | 0.42% | io |
+| 2026-10-20 16:00 ET | `2w_size` | BUY | 0 | $0.00 | 2026-10-20 16:00 ET | $0.00 | $750.79 | 0.66% | io |
+| 2026-10-22 16:00 ET | `2w_size` | BUY | 0 | $0.00 | 2026-10-22 16:00 ET | $0.00 | $642.14 | 0.55% | io |
+| 2026-10-23 16:00 ET | `2w_size` | BUY | 0 | $0.00 | 2026-10-23 16:00 ET | $0.00 | $-814.54 | -0.69% | io |
 
 Full records: `data/mover_paper/trades.csv` (every fill with ET timestamps, prices, fees), `skipped.csv`, `equity_curve.csv`. Lever sweep: `MOVER_STRATEGY_SWEEP.md`. Dashboard: `dashboard/mover-paper/index.html`.
 
