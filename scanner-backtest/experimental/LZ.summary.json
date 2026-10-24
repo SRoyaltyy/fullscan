@@ -1,0 +1,23 @@
+{
+  "ticker": "LZ",
+  "name": "LegalZoom.com, Inc.",
+  "source_sha": "629279628434865e8e8958f31c648822d67f7055",
+  "method": "stock-evidence-graph-2",
+  "source_receipt": {
+    "source": "PR642-full-text",
+    "companies": 1,
+    "filings": 6,
+    "documents": 275,
+    "characters": 12133912,
+    "errors": [],
+    "as_of": null,
+    "full_source_archive": true,
+    "complete": true
+  },
+  "elapsed_seconds": 201.85,
+  "entities": 935,
+  "assertions": 517,
+  "asset": "LZ.json.gz",
+  "sha256": "7eebe75cb43980b357df4e7e49e9fa388e413dbc0c7333e8883e389e2c2aecac",
+  "bytes": 922016
+}
