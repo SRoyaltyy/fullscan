@@ -30,7 +30,7 @@ def digest(raw):
 def source_hashes():
     paths = [ROOT/'src'/name for name in ('stock_keywords.py', 'entity_resolution.py',
         'linguistics.py', 'semantic_lookup.py', 'specific_filing_records.py', 'filing_relationships.py',
-        'relationship_frames.py', 'term_inventory.py')]
+        'relationship_frames.py', 'term_inventory.py', 'stock_evidence_graph.py')]
     paths += [ROOT/'scripts/project_scanner_keywords.py',
         ROOT/'dashboard/scanner-backtest/index.html']
     paths += sorted((ROOT/'src/data').rglob('*'))
@@ -55,7 +55,7 @@ def ensure_identity_compatibility(meta):
         return [ast.dump(node,include_attributes=False) for node in ast.parse(source).body
             if isinstance(node,(ast.FunctionDef,ast.AsyncFunctionDef)) and node.name=='normalized_words'
             or isinstance(node,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='TOKEN' for t in node.targets)]
-    for path in ('src/filing_relationships.py', 'src/relationship_frames.py', 'src/term_inventory.py'):
+    for path in ('src/filing_relationships.py', 'src/relationship_frames.py', 'src/term_inventory.py', 'src/stock_evidence_graph.py'):
         try:
             old_source=original(path)
         except Exception as exc:

@@ -1,0 +1,534 @@
+{
+  "scope": "Four unseen issuers, eight definition-enriched source witness paragraphs; not full-filing or market-wide scores.",
+  "annotation": "Assistant source review frozen before predictions; no independent human validation.",
+  "baseline_revision": "b05eb1b13d01f81f33a30c772c6f092541cf8fd0",
+  "candidate_commit": "8bb178dc014455574aa15fd6c7a3da63266541bf",
+  "summary": {
+    "development": {
+      "baseline": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 13,
+        "isolated_classification_correct": 0,
+        "end_to_end_correct": 0,
+        "gold_terms": 14,
+        "issuers": 2,
+        "precision": 1.0,
+        "recall": 0.07142857142857142,
+        "isolated_classification_accuracy": 0.0,
+        "end_to_end_accuracy": 0.0
+      },
+      "candidate": {
+        "tp": 4,
+        "fp": 6,
+        "fn": 10,
+        "isolated_classification_correct": 0,
+        "end_to_end_correct": 0,
+        "gold_terms": 14,
+        "issuers": 2,
+        "precision": 0.4,
+        "recall": 0.2857142857142857,
+        "isolated_classification_accuracy": 0.0,
+        "end_to_end_accuracy": 0.0
+      }
+    },
+    "holdout": {
+      "baseline": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 4,
+        "isolated_classification_correct": 2,
+        "end_to_end_correct": 1,
+        "gold_terms": 5,
+        "issuers": 2,
+        "precision": 1.0,
+        "recall": 0.2,
+        "isolated_classification_accuracy": 0.4,
+        "end_to_end_accuracy": 0.2
+      },
+      "candidate": {
+        "tp": 2,
+        "fp": 3,
+        "fn": 3,
+        "isolated_classification_correct": 2,
+        "end_to_end_correct": 2,
+        "gold_terms": 5,
+        "issuers": 2,
+        "precision": 0.4,
+        "recall": 0.4,
+        "isolated_classification_accuracy": 0.4,
+        "end_to_end_accuracy": 0.4
+      }
+    },
+    "all": {
+      "baseline": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 17,
+        "isolated_classification_correct": 2,
+        "end_to_end_correct": 1,
+        "gold_terms": 19,
+        "issuers": 4,
+        "precision": 1.0,
+        "recall": 0.10526315789473684,
+        "isolated_classification_accuracy": 0.10526315789473684,
+        "end_to_end_accuracy": 0.05263157894736842
+      },
+      "candidate": {
+        "tp": 6,
+        "fp": 9,
+        "fn": 13,
+        "isolated_classification_correct": 2,
+        "end_to_end_correct": 2,
+        "gold_terms": 19,
+        "issuers": 4,
+        "precision": 0.4,
+        "recall": 0.3157894736842105,
+        "isolated_classification_accuracy": 0.10526315789473684,
+        "end_to_end_accuracy": 0.10526315789473684
+      }
+    }
+  },
+  "cases": [
+    {
+      "ticker": "SDGR",
+      "split": "development",
+      "gold_terms": 3,
+      "terms": [
+        {
+          "name": "Structure Therapeutics Inc.",
+          "expected": [
+            [
+              "investment_in",
+              "asserted"
+            ]
+          ],
+          "baseline": [
+            [
+              "uses_input",
+              "asserted"
+            ]
+          ],
+          "candidate": [
+            [
+              "uses_input",
+              "asserted"
+            ]
+          ],
+          "isolated_candidate": [
+            [
+              "uses_input",
+              "asserted"
+            ]
+          ]
+        },
+        {
+          "name": "Series B preferred stock",
+          "expected": [
+            [
+              "holds_financial_instrument",
+              "historical"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "American Depository Shares",
+          "expected": [
+            [
+              "holds_financial_instrument",
+              "historical"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [
+            [
+              "holds_financial_instrument",
+              "asserted"
+            ]
+          ],
+          "isolated_candidate": [
+            [
+              "holds_financial_instrument",
+              "asserted"
+            ]
+          ]
+        }
+      ],
+      "baseline": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "isolated_classification_correct": 0,
+        "end_to_end_correct": 0,
+        "extra_terms": [],
+        "missed_terms": [
+          "Series B preferred stock",
+          "American Depository Shares"
+        ]
+      },
+      "candidate": {
+        "tp": 2,
+        "fp": 3,
+        "fn": 1,
+        "isolated_classification_correct": 0,
+        "end_to_end_correct": 0,
+        "extra_terms": [
+          "275,000 american depository shares",
+          "its initial public offering",
+          "structure therapeutics'"
+        ],
+        "missed_terms": [
+          "Series B preferred stock"
+        ]
+      }
+    },
+    {
+      "ticker": "UNIT",
+      "split": "development",
+      "gold_terms": 11,
+      "terms": [
+        {
+          "name": "artificial intelligence",
+          "expected": [
+            [
+              "demand_exposure",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "high-performance computing",
+          "expected": [
+            [
+              "demand_exposure",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "dark fiber",
+          "expected": [
+            [
+              "offers",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "colocation facilities",
+          "expected": [
+            [
+              "operating_asset",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "10 - 400 Gbps wave services",
+          "expected": [
+            [
+              "offers",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "spectrum",
+          "expected": [
+            [
+              "offers",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "Ethernet",
+          "expected": [
+            [
+              "offers",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "internet",
+          "expected": [
+            [
+              "offers",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "colocation services",
+          "expected": [
+            [
+              "offers",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "fiber-to-the-tower connections",
+          "expected": [
+            [
+              "offers",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "iconnect",
+          "expected": [
+            [
+              "mentions_product_platform",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        }
+      ],
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 11,
+        "isolated_classification_correct": 0,
+        "end_to_end_correct": 0,
+        "extra_terms": [],
+        "missed_terms": [
+          "artificial intelligence",
+          "high-performance computing",
+          "dark fiber",
+          "colocation facilities",
+          "10 - 400 Gbps wave services",
+          "spectrum",
+          "Ethernet",
+          "internet",
+          "colocation services",
+          "fiber-to-the-tower connections",
+          "iconnect"
+        ]
+      },
+      "candidate": {
+        "tp": 2,
+        "fp": 3,
+        "fn": 9,
+        "isolated_classification_correct": 0,
+        "end_to_end_correct": 0,
+        "extra_terms": [
+          "cable operators",
+          "wholesale services",
+          "wireless carriers"
+        ],
+        "missed_terms": [
+          "high-performance computing",
+          "dark fiber",
+          "colocation facilities",
+          "10 - 400 Gbps wave services",
+          "spectrum",
+          "internet",
+          "colocation services",
+          "fiber-to-the-tower connections",
+          "iconnect"
+        ]
+      }
+    },
+    {
+      "ticker": "IREN",
+      "split": "holdout",
+      "gold_terms": 3,
+      "terms": [
+        {
+          "name": "U.S. generally accepted accounting principles",
+          "expected": [
+            [
+              "financial_reporting_standard",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "Securities and Exchange Commission",
+          "expected": [
+            [
+              "mentions_institution",
+              "reported"
+            ]
+          ],
+          "baseline": [
+            [
+              "mentions_institution",
+              "reported"
+            ]
+          ],
+          "candidate": [
+            [
+              "mentions_institution",
+              "reported"
+            ]
+          ],
+          "isolated_candidate": [
+            [
+              "mentions_institution",
+              "reported"
+            ]
+          ]
+        },
+        {
+          "name": "U.S. dollars",
+          "expected": [
+            [
+              "presentation_currency",
+              "reported"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        }
+      ],
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "isolated_classification_correct": 1,
+        "end_to_end_correct": 0,
+        "extra_terms": [],
+        "missed_terms": [
+          "U.S. generally accepted accounting principles",
+          "Securities and Exchange Commission",
+          "U.S. dollars"
+        ]
+      },
+      "candidate": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 2,
+        "isolated_classification_correct": 1,
+        "end_to_end_correct": 1,
+        "extra_terms": [
+          "accompanying audited consolidated financial statements",
+          "accounting principles"
+        ],
+        "missed_terms": [
+          "U.S. generally accepted accounting principles",
+          "U.S. dollars"
+        ]
+      }
+    },
+    {
+      "ticker": "OLLI",
+      "split": "holdout",
+      "gold_terms": 2,
+      "terms": [
+        {
+          "name": "U.S. generally accepted accounting principles",
+          "expected": [
+            [
+              "financial_reporting_standard",
+              "asserted"
+            ]
+          ],
+          "baseline": [],
+          "candidate": [],
+          "isolated_candidate": []
+        },
+        {
+          "name": "Securities and Exchange Commission",
+          "expected": [
+            [
+              "mentions_institution",
+              "reported"
+            ]
+          ],
+          "baseline": [
+            [
+              "mentions_institution",
+              "reported"
+            ]
+          ],
+          "candidate": [
+            [
+              "mentions_institution",
+              "reported"
+            ]
+          ],
+          "isolated_candidate": [
+            [
+              "mentions_institution",
+              "reported"
+            ]
+          ]
+        }
+      ],
+      "baseline": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "isolated_classification_correct": 1,
+        "end_to_end_correct": 1,
+        "extra_terms": [],
+        "missed_terms": [
+          "U.S. generally accepted accounting principles"
+        ]
+      },
+      "candidate": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "isolated_classification_correct": 1,
+        "end_to_end_correct": 1,
+        "extra_terms": [
+          "accounting principles"
+        ],
+        "missed_terms": [
+          "U.S. generally accepted accounting principles"
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Assistant-reviewed, definition-enriched witness diagnostic. Not full-filing recall, independent human review or population estimates.",
+    "The four new issuers are SDGR, UNIT, IREN and OLLI; each contributes two original source-witness paragraphs.",
+    "The 19 reference identities/concepts and relationship labels were frozen before baseline/candidate predictions.",
+    "Full text for all four issuers was subsequently materialized separately; the scores here still concern the eight selected witness paragraphs, not whole-filings recall."
+  ]
+}

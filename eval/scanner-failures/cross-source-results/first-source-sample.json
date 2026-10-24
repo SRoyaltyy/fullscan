@@ -1,0 +1,1037 @@
+{
+  "draw_id": "f7d60e8ac43b696dfb4f17d5334a48ed0b7be60a90ff52b084d172bf060bc0ca",
+  "methodology_sha256": "19ced03a3df398509789cee03bf90514a693fa23e38a9ac4873caa9fe05f687d",
+  "scope": "source-witness diagnostic only; source-first labels must be frozen before predictions",
+  "cases": [
+    {
+      "ticker": "ARM",
+      "issuer_id": "0001973239",
+      "name": "Arm Holdings Plc ADR",
+      "split": "development",
+      "asset_sha256": "0430c23d74f1d9d92c6ff07cf902b11537a10bc1f34f26b34f2c228d01163073",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "DreamBig",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "In October 2025, the Company entered into a definitive agreement to acquire all of the outstanding equity interests of DreamBig Semiconductor, Inc. (“DreamBig”) for approximately $265.0 million in cash, subject to purchase price adjustments. The addition of DreamBig’s advanced networking capabilities, technology, and engineering expertise is expected to enhance the Company’s portfolio and help it deliver more complete solutions. The transaction is expected to close by the end of the second quarter of the fiscal year ending March 31, 2027, subject to customary closing conditions, including the receipt of regulatory approvals.",
+          "start": 3027,
+          "end": 3659,
+          "sha256": "782f145522f5d02450424231a0f3cc5dd471aad51eefc6878638274aa369fde1",
+          "source": {
+            "accepted_at": "2026-05-26T20:35:23.000Z",
+            "accession": "0001973239-26-000097",
+            "characters": 3659,
+            "document": "R14.htm",
+            "filing_date": "2026-05-26",
+            "form": "20-F",
+            "id": "6a6bb11db1211c862e9883474533103cc1c18dd838163c1fe16f50b24c3ad259",
+            "kind": "business",
+            "report_date": "2026-03-31",
+            "section": "R14.htm",
+            "section_ordinal": 22,
+            "sha256": "33e5926fffd43e39792140478896d483bff278a7b5c433abea37f9f309f11b6a",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/R14.htm"
+          }
+        },
+        {
+          "text": "In October 2025, the Company entered into a definitive agreement to acquire all of the outstanding equity interests of DreamBig Semiconductor, Inc. (“DreamBig”) for approximately $265.0 million in cash, subject to purchase price adjustments. The addition of DreamBig’s advanced networking capabilities, technology, and engineering expertise is expected to enhance the Company’s portfolio and help it deliver more complete solutions. The transaction is expected to close by the end of the second quarter of the fiscal year ending March 31, 2027, subject to customary closing conditions, including the receipt of regulatory approvals.\n\n",
+          "start": 1258,
+          "end": 1892,
+          "sha256": "2aa38d41aa28cbb28c9e9e013f1c89a93d5cb87970438c4df4b1c1d8e138ed0f",
+          "source": {
+            "accepted_at": "2026-05-26T20:35:23.000Z",
+            "accession": "0001973239-26-000097",
+            "characters": 3659,
+            "document": "R14.htm",
+            "filing_date": "2026-05-26",
+            "form": "20-F",
+            "id": "6a6bb11db1211c862e9883474533103cc1c18dd838163c1fe16f50b24c3ad259",
+            "kind": "business",
+            "report_date": "2026-03-31",
+            "section": "R14.htm",
+            "section_ordinal": 22,
+            "sha256": "33e5926fffd43e39792140478896d483bff278a7b5c433abea37f9f309f11b6a",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/R14.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "ZURA",
+      "issuer_id": "0001855644",
+      "name": "Zura Bio Ltd",
+      "split": "development",
+      "asset_sha256": "869f8e3c5cd1ec847192b373504062d8353754e5e3ccc3c9ea56e08d9516253c",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "SEC",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "These condensed consolidated financial statements are presented in accordance with the rules and regulations of the Securities and Exchange Commission (the “SEC”) and do not include all disclosures normally required in annual consolidated financial statements prepared in accordance with U.S. GAAP. As such, the information included herein should be read in conjunction with the Company’s consolidated financial statements and accompanying notes as of and for the year ended December 31, 2025 (the “audited consolidated financial statements”) that were included in the Company’s Form 10-K filed with the SEC on March 19, 2026 (the “Annual Report”). In management’s opinion, these condensed \n\n",
+          "start": 12453,
+          "end": 13145,
+          "sha256": "820e4a571b27f30e3343e4500eaf0be37d00c8f56a757fa57298df7e14ccf3e9",
+          "source": {
+            "accepted_at": "2026-08-11T11:34:30.000Z",
+            "accession": "0001855644-26-000006",
+            "characters": 50217,
+            "document": "zura-20260630.htm",
+            "filing_date": "2026-08-11",
+            "form": "10-Q",
+            "id": "eb6fe6b5603d38b3703bdd593a4fe79e0ab78bf299763030180a0fb921079c74",
+            "kind": "financial",
+            "report_date": "2026-06-30",
+            "section": "Item 1. Financial Statements.",
+            "section_ordinal": 336,
+            "sha256": "6299a8b04d7b7d50e955d2c163556736783194ff963a578d88acfadf6c9d329b",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000185564426000006/zura-20260630.htm"
+          }
+        },
+        {
+          "text": "Second Amended and Restated Memorandum of Association of Zura Bio Limited (incorporated by reference to Exhibit 3.1 to the Current Report on Form 8-K, filed with the SEC on March 24, 2023).\n\n",
+          "start": 524,
+          "end": 715,
+          "sha256": "d3bcb9c58f0fd1ec46df9c128808c5343ba2c56b3389a3e344c19afbcba4b9ef",
+          "source": {
+            "accepted_at": "2026-08-11T11:34:30.000Z",
+            "accession": "0001855644-26-000006",
+            "characters": 3692,
+            "document": "zura-20260630.htm",
+            "filing_date": "2026-08-11",
+            "form": "10-Q",
+            "id": "6c3561b73a9b237e22b189fa310dedc75ce358a11dbaf29e14144da69d4bfc37",
+            "kind": "financial",
+            "report_date": "2026-06-30",
+            "section": "Item 6. Exhibits.",
+            "section_ordinal": 346,
+            "sha256": "2604b7afead6b631747334d4e31475de01349f6ae0b8332b38b9904a634e06e9",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1855644/000185564426000006/zura-20260630.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "PSA",
+      "issuer_id": "0001393311",
+      "name": "Public Storage",
+      "split": "development",
+      "asset_sha256": "802bc7b2b11941ef9c434d39c92a0f1c372f37897d161d1624ab19e70ec124df",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "U.S.",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "We acquire, develop, own, and operate self-storage facilities, which offer storage spaces for lease on a month-to-month basis, for personal and business use. We are the largest owner of self-storage facilities in the United States (“U.S.”), with physical presence in most major markets and 40 states. We believe our scale, brand name, and technology platform afford us competitive advantages. At December 31, 2025, we held interests in and consolidated 3,171 self-storage facilities (an aggregate of 229 million net rentable square feet of space) operating under the Public Storage® name.\n\n",
+          "start": 5083,
+          "end": 5673,
+          "sha256": "76f07f350b293722f87315f7b8ec627c72cab09aec3772f68ac9b5c3da6ea899",
+          "source": {
+            "accepted_at": "2026-02-13T02:20:46.000Z",
+            "accession": "0001628280-26-007696",
+            "characters": 31316,
+            "document": "psa-20251231.htm",
+            "filing_date": "2026-02-12",
+            "form": "10-K",
+            "id": "66a58a5b7c35d18f0a291dde44f2fc135a1164374a77591bebf73c88e42f1631",
+            "kind": "business",
+            "report_date": "2025-12-31",
+            "section": "PART I\n\nITEM 1. Business",
+            "section_ordinal": 131,
+            "sha256": "01273678147fb94f88a07b97d31e21974ef68a03ebef677465a38483fad77212",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1393311/000162828026007696/psa-20251231.htm"
+          }
+        },
+        {
+          "text": "At December 31, 2025, due primarily to our investment in Shurgard (Note 4) and our notes payable denominated in Euros (Note 8), our operating results and financial position are affected by fluctuations in currency exchange rates between the Euro, against the U.S. Dollar. The Euro was translated at exchange rates of approximately 1.174 U.S. Dollars per Euro at December 31, 2025 (1.039 at December 31, 2024), and average exchange rates of 1.130, 1.082 and 1.081 for the years ended December 31, 2025, 2024, and 2023, respectively. \n\n",
+          "start": 58088,
+          "end": 58622,
+          "sha256": "50ef48389af7cec00e1003fc33b31ae1522f26d3f892c4380a98b11ab58dd9f7",
+          "source": {
+            "accepted_at": "2026-02-13T02:20:46.000Z",
+            "accession": "0001628280-26-007696",
+            "characters": 138535,
+            "document": "psa-20251231.htm",
+            "filing_date": "2026-02-12",
+            "form": "10-K",
+            "id": "7993a395d0725db74c87d28ab7b7de3c614d22074690e7c2b818b5382c7d7317",
+            "kind": "financial",
+            "report_date": "2025-12-31",
+            "section": "PART IV\n\nITEM 15. Exhibits and Financial Statement Schedules",
+            "section_ordinal": 152,
+            "sha256": "65552870c97c33b15654f00ecd84f234ef52200001813905579d12f4f9923f6b",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1393311/000162828026007696/psa-20251231.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "MAS",
+      "issuer_id": "0000062996",
+      "name": "Masco Corp",
+      "split": "development",
+      "asset_sha256": "13d7269226348342aba674c2e6792209a1123970b87fae714dac6635cecda62d",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "IEEPA",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "In the first quarter of 2026, the U.S. Supreme Court ruled that tariffs imposed under the International Emergency Economic Powers Act (“IEEPA”) were unlawful. Subsequently, the U.S. Court of International Trade ordered U.S. Customs and Border Protection to refund IEEPA tariffs previously collected. During the second quarter of 2026, we began receiving refunds related to IEEPA tariffs. Additionally, as of June 30, 2026, we have recognized a receivable for tariff refunds not yet paid that are considered to be probable of collection and reasonably estimable.\n\n",
+          "start": 921,
+          "end": 1484,
+          "sha256": "620932fc4aefadc3f05e4f916e4cc7103b0e7b9fb70d0f86789472f13c199de7",
+          "source": {
+            "accepted_at": "2026-07-29T11:03:47.000Z",
+            "accession": "0000062996-26-000027",
+            "characters": 23720,
+            "document": "mas-20260630.htm",
+            "filing_date": "2026-07-29",
+            "form": "10-Q",
+            "id": "33049039cb2d05e9062ecf8ed1f113643227def5c598abcc091ac5cc01173ac3",
+            "kind": "update",
+            "report_date": "2026-06-30",
+            "section": "Item 2. \n\n MANAGEMENT'S DISCUSSION AND ANALYSIS OF",
+            "section_ordinal": 365,
+            "sha256": "168fb34d8cdf3231332cdd0ef893d7c0d3f305848e057a0e9e1bd8d5f756eff3",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/62996/000006299626000027/mas-20260630.htm"
+          }
+        },
+        {
+          "text": "Our operating profit for the three months ended June 30, 2026, was $470 million, an increase of 14 percent, and was positively impacted by increased gross profit, partially offset by higher selling, general and administrative expenses. These results were inclusive of the net tariff benefit from IEEPA tariff refunds of approximately $95 million for the three months ended June 30, 2026, principally within the Plumbing Products segment.\n\n",
+          "start": 7274,
+          "end": 7713,
+          "sha256": "0faf475475d21c2465062c6b943717809bbf903181797d2729bb3f0597598892",
+          "source": {
+            "accepted_at": "2026-07-29T11:03:47.000Z",
+            "accession": "0000062996-26-000027",
+            "characters": 23720,
+            "document": "mas-20260630.htm",
+            "filing_date": "2026-07-29",
+            "form": "10-Q",
+            "id": "33049039cb2d05e9062ecf8ed1f113643227def5c598abcc091ac5cc01173ac3",
+            "kind": "update",
+            "report_date": "2026-06-30",
+            "section": "Item 2. \n\n MANAGEMENT'S DISCUSSION AND ANALYSIS OF",
+            "section_ordinal": 365,
+            "sha256": "168fb34d8cdf3231332cdd0ef893d7c0d3f305848e057a0e9e1bd8d5f756eff3",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/62996/000006299626000027/mas-20260630.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "TDC",
+      "issuer_id": "0000816761",
+      "name": "Teradata Corp",
+      "split": "development",
+      "asset_sha256": "61fc02a4fa90c7303e575988a007a5c2c1811334e084a69c0f03888ce7c1b026",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "CCMT",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "Executive Oversight of Cybersecurity. Management is responsible for the Company’s planning, identification, assessment, and mitigation of risks from cybersecurity threats. Our CISO, Chief Administrative Officer, and Chief Operating Officer comprise our Core Cybersecurity Management Team (the \"CCMT\"). The CCMT has oversight of Teradata’s CIRP and is informed and consulted on the response and resolution process for cybersecurity incidents. The CCMT is responsible for determining communications to inform relevant stakeholders of cybersecurity incidents as applicable, relevant, and/or required, including the Board; Audit Committee; the executive leadership team; investors; customers; employees; law enforcement; and regulators.\n\n",
+          "start": 14844,
+          "end": 15578,
+          "sha256": "98ee9a285b401cd0bf36f0fb9d7ee19ec002ba1b043c1772939a590cdc4d10ea",
+          "source": {
+            "accepted_at": "2026-02-27T18:13:31.000Z",
+            "accession": "0001628280-26-012671",
+            "characters": 19902,
+            "document": "R29.htm",
+            "filing_date": "2026-02-27",
+            "form": "10-K",
+            "id": "a473bbdb4e38f662c0fc5fbca13ea04b0395355301ff620b5c9e07c2c695796e",
+            "kind": "business",
+            "report_date": "2025-12-31",
+            "section": "R29.htm",
+            "section_ordinal": 37,
+            "sha256": "1656f698fb2c0ee3ed7b5756e8024080ae9f671f1f218b6b2e710c024583f96e",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/816761/000162828026012671/R29.htm"
+          }
+        },
+        {
+          "text": " Management is responsible for the Company’s planning, identification, assessment, and mitigation of risks from cybersecurity threats. Our CISO, Chief Administrative Officer, and Chief Operating Officer comprise our Core Cybersecurity Management Team (the \"CCMT\"). The CCMT has oversight of Teradata’s CIRP and is informed and consulted on the response and resolution process for cybersecurity incidents. The CCMT is responsible for determining communications to inform relevant stakeholders of cybersecurity incidents as applicable, relevant, and/or required, including the Board; Audit Committee; the executive leadership team; investors; customers; employees; law enforcement; and regulators.\n",
+          "start": 10684,
+          "end": 11380,
+          "sha256": "b96d2936ec896c7954bf94ac68a178df37f83881fbeb6d985809c85905064ed7",
+          "source": {
+            "accepted_at": "2026-02-27T18:13:31.000Z",
+            "accession": "0001628280-26-012671",
+            "characters": 19902,
+            "document": "R29.htm",
+            "filing_date": "2026-02-27",
+            "form": "10-K",
+            "id": "a473bbdb4e38f662c0fc5fbca13ea04b0395355301ff620b5c9e07c2c695796e",
+            "kind": "business",
+            "report_date": "2025-12-31",
+            "section": "R29.htm",
+            "section_ordinal": 37,
+            "sha256": "1656f698fb2c0ee3ed7b5756e8024080ae9f671f1f218b6b2e710c024583f96e",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/816761/000162828026012671/R29.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "VGNT",
+      "issuer_id": "0002078008",
+      "name": "Versigent Plc",
+      "split": "development",
+      "asset_sha256": "30cd584a0da4cb45be7c70025cbeba7e93be594b9e9257c4a4d50cb52770796f",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "Information Statement",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "A summary of certain material terms of each of the Spin Agreements can be found in the section entitled “Certain Relationships and Related Person Transactions—Agreements with Aptiv” in the Information Statement attached as Exhibit 99.1 to Versigent’s Current Report on Form 8-K filed with the Securities and Exchange Commission (“SEC”) on March 12, 2026 (the “Information Statement”), and is incorporated herein by reference. The summary is qualified in its entirety by reference to the Separation and Distribution Agreement, the Transition Services Agreement, the Tax Matters Agreement and the Employee Matters Agreement, which are filed as Exhibits 2.1, 10.1, 10.2 and 10.3, respectively, to this Current Report on Form 8-K, and are incorporated herein by reference.\n\n",
+          "start": 3268,
+          "end": 4038,
+          "sha256": "f5bef02375757fa751e07b1c3a26afb7211ad74ee238b00170681cab6dd5dc17",
+          "source": {
+            "accepted_at": "2026-04-02T01:18:21.000Z",
+            "accession": "0001193125-26-138219",
+            "characters": 20909,
+            "document": "d52176d8k.htm",
+            "filing_date": "2026-04-01",
+            "form": "8-K",
+            "id": "5b3bd800b6698c0e8d2d20089d2cf86a57ff03005eba483e59be9a3fcff6534b",
+            "kind": "update",
+            "report_date": "2026-03-26",
+            "section": "d52176d8k.htm",
+            "section_ordinal": 96,
+            "sha256": "2209baa6413b9fc6a87b98374bc43b2817abad97193d0cc41b31bf5ba9364345",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/2078008/000119312526138219/d52176d8k.htm"
+          }
+        },
+        {
+          "text": "The Information Statement under the sections entitled “Management” contains the ages and biographical information about the directors of the Company. Such information is incorporated herein by reference. There are no arrangements or understandings between any of the directors named above and any other person pursuant to which such director was appointed to the Board. There are no other relationships between the directors named above and the Company that would require disclosure pursuant to Item 404(a) of Regulation S-K.\n\n",
+          "start": 10976,
+          "end": 11503,
+          "sha256": "cdd868e37819aa738fabe9fc1f1d558ab06b2406a1e9afaf60e2e648ca05f38b",
+          "source": {
+            "accepted_at": "2026-04-02T01:18:21.000Z",
+            "accession": "0001193125-26-138219",
+            "characters": 20909,
+            "document": "d52176d8k.htm",
+            "filing_date": "2026-04-01",
+            "form": "8-K",
+            "id": "5b3bd800b6698c0e8d2d20089d2cf86a57ff03005eba483e59be9a3fcff6534b",
+            "kind": "update",
+            "report_date": "2026-03-26",
+            "section": "d52176d8k.htm",
+            "section_ordinal": 96,
+            "sha256": "2209baa6413b9fc6a87b98374bc43b2817abad97193d0cc41b31bf5ba9364345",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/2078008/000119312526138219/d52176d8k.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "AMRC",
+      "issuer_id": "0001488139",
+      "name": "Ameresco Inc",
+      "split": "development",
+      "asset_sha256": "40dbbc8f019908b2d58c11ce3016ece920bb4d843580a7812894870a998aa6c2",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "Navy",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "We have a future lease commitment for a project lease with the United States Navy (“Navy”) which has not yet met the criteria for recording a right-of-use (“ROU”) asset or lease liability. The estimated net present value of this commitment totals $40,335 as of June 30, 2026. We will provide IKCPs over a thirty-six-year period, which the Navy will credit as consideration towards our lease obligation upon the Navy’s final acceptance of the IKCPs. Once the lease commences, the ROU asset and lease liability will be recorded, which we estimate to be later in 2026.\n\n",
+          "start": 2348,
+          "end": 2915,
+          "sha256": "5323659124057d4c66c58d917264525a36064815b949e7dd391473d52e883045",
+          "source": {
+            "accepted_at": "2026-08-04T16:50:59.000Z",
+            "accession": "0001628280-26-052190",
+            "characters": 12063,
+            "document": "R15.htm",
+            "filing_date": "2026-08-04",
+            "form": "10-Q",
+            "id": "42b3351c40b3ce66af304e832d4683dfa5c01bcc48a7f75632631ea744bf37ba",
+            "kind": "update",
+            "report_date": "2026-06-30",
+            "section": "R15.htm",
+            "section_ordinal": 258,
+            "sha256": "637473226687987c1802039414e6564b5a28c196d9452b0be172ebe3e4a64fbe",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1488139/000162828026052190/R15.htm"
+          }
+        },
+        {
+          "text": "We have a future lease commitment for a project lease with the United States Navy (“Navy”) which has not yet met the criteria for recording a right-of-use (“ROU”) asset or lease liability. The estimated net present value of this commitment totals $40,335 as of June 30, 2026. We will provide IKCPs over a thirty-six-year period, which the Navy will credit as consideration towards our lease obligation upon the Navy’s final acceptance of the IKCPs. Once the lease commences, the ROU asset and lease liability will be recorded, which we estimate to be later in 2026.\n\n",
+          "start": 6349,
+          "end": 6916,
+          "sha256": "5323659124057d4c66c58d917264525a36064815b949e7dd391473d52e883045",
+          "source": {
+            "accepted_at": "2026-08-04T16:50:59.000Z",
+            "accession": "0001628280-26-052190",
+            "characters": 12063,
+            "document": "R15.htm",
+            "filing_date": "2026-08-04",
+            "form": "10-Q",
+            "id": "42b3351c40b3ce66af304e832d4683dfa5c01bcc48a7f75632631ea744bf37ba",
+            "kind": "update",
+            "report_date": "2026-06-30",
+            "section": "R15.htm",
+            "section_ordinal": 258,
+            "sha256": "637473226687987c1802039414e6564b5a28c196d9452b0be172ebe3e4a64fbe",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1488139/000162828026052190/R15.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "CYH",
+      "issuer_id": "0001108109",
+      "name": "Community Health Systems Inc",
+      "split": "development",
+      "asset_sha256": "2cb380ca4eea260d5d0efa397e3fc8700c6c41eb1d06d18b1258af82211a268f",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "SEC",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "Certain information and disclosures normally included in the notes to the consolidated financial statements have been condensed or omitted as permitted by the rules and regulations of the Securities and Exchange Commission (the “SEC”). The Company believes the disclosures are adequate to make the information presented not misleading. The accompanying unaudited condensed consolidated financial statements should be read in conjunction with the consolidated financial statements and notes thereto for the year ended December 31, 2025, contained in the Company’s Annual Report on Form 10-K filed with the SEC on February 19, 2026 (“2025 Form 10-K”).\n\n",
+          "start": 13175,
+          "end": 13826,
+          "sha256": "7d3582a42b8898e54d11f7e60907e65482314805e2ca97825cc8fc11f537cc4d",
+          "source": {
+            "accepted_at": "2026-07-23T20:30:41.000Z",
+            "accession": "0001193125-26-314196",
+            "characters": 88766,
+            "document": "cyh-20260630.htm",
+            "filing_date": "2026-07-23",
+            "form": "10-Q",
+            "id": "61c964f0a7b097f9887e01f14f2378ee5ddf826b121edd5605868fadc679259a",
+            "kind": "financial",
+            "report_date": "2026-06-30",
+            "section": "Item 6.\n\n \n\n \nExhibits",
+            "section_ordinal": 448,
+            "sha256": "34bd173f2009b5d1f43e8a2273b70907cccc61cec85a8a7b364672a263784758",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1108109/000119312526314196/cyh-20260630.htm"
+          }
+        },
+        {
+          "text": "Our Chief Executive Officer and Chief Financial Officer, with the participation of other members of management, have evaluated the effectiveness of our disclosure controls and procedures (as defined in Rules 13a-15(e) and 15d-15(e)) under the Securities Exchange Act of 1934, as amended, as of the end of the period covered by this report. Based on such evaluations, our Chief Executive Officer and Chief Financial Officer concluded that, as of such date, our disclosure controls and procedures were effective (at the reasonable assurance level) to ensure that the information required to be included in this report has been recorded, processed, summarized and reported within the time periods specified in the SEC’s rules and forms and to ensure that the information required to be included in this report was accumulated and communicated to management, including our Chief Executive Officer and Chief Financial Officer, to allow timely decisions regarding required disclosure. \n\n",
+          "start": 35,
+          "end": 1016,
+          "sha256": "641216d52e1acb0bcf45de20493f27f1730a2d4e03475ac3d413d80728c4a2ab",
+          "source": {
+            "accepted_at": "2026-07-23T20:30:41.000Z",
+            "accession": "0001193125-26-314196",
+            "characters": 1303,
+            "document": "cyh-20260630.htm",
+            "filing_date": "2026-07-23",
+            "form": "10-Q",
+            "id": "0f5335ed8496d55d9539251570e4d391a940f8a685b9f560bf37d145a3b44549",
+            "kind": "financial",
+            "report_date": "2026-06-30",
+            "section": "Item 4. Controls and Procedures",
+            "section_ordinal": 451,
+            "sha256": "860fd26cadcc099b5ca9f223b79b14b0d2dbe27e59eea93b4cd3724847438bc9",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1108109/000119312526314196/cyh-20260630.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "AMRZ",
+      "issuer_id": "0002035989",
+      "name": "Amrize Ltd",
+      "split": "development",
+      "asset_sha256": "35e34a65c633241f99da7989b06856ec78077206c40feca415e27a2083fa3815",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "Holcim",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": " current, pending and future legislation and regulation; factors related to the failure of Amrize to achieve some or all of the expected strategic benefits or opportunities expected from the separation from Holcim Ltd (“Holcim”); material costs and\n",
+          "start": 6272,
+          "end": 6521,
+          "sha256": "87752ec9f9edcb35d62f66ee21985c9dfbd2030720ea801d696d5836cdc8f8f9",
+          "source": {
+            "accepted_at": "2026-08-24T21:00:28.000Z",
+            "accession": "0001140361-26-034208",
+            "characters": 9092,
+            "document": "ef20080964_ex99-1.htm",
+            "filing_date": "2026-08-24",
+            "form": "8-K",
+            "id": "c4c259332d8dabeb89a8a459e30f20115f5e70ec8c9da3ff0d798eda85191c36",
+            "kind": "update",
+            "report_date": "2026-08-24",
+            "section": "ef20080964_ex99-1.htm",
+            "section_ordinal": 556,
+            "sha256": "b005c365bff7f9defb4d9807ccc3f49c8ea034eee9a7c4fbe84a3e2b07edcc5f",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/2035989/000114036126034208/ef20080964_ex99-1.htm"
+          }
+        },
+        {
+          "text": " interest because of their previous positions at Holcim; and potential difficulties in maintaining relationships with key personnel; and other factors which can be found in Amrize’s media releases and Amrize’s filings with the SEC, including in the\n",
+          "start": 7261,
+          "end": 7510,
+          "sha256": "cfafcf364a7cc2a71ef5c43842f3c0db3b53a429d88833e6f3de59a9e556b375",
+          "source": {
+            "accepted_at": "2026-08-24T21:00:28.000Z",
+            "accession": "0001140361-26-034208",
+            "characters": 9092,
+            "document": "ef20080964_ex99-1.htm",
+            "filing_date": "2026-08-24",
+            "form": "8-K",
+            "id": "c4c259332d8dabeb89a8a459e30f20115f5e70ec8c9da3ff0d798eda85191c36",
+            "kind": "update",
+            "report_date": "2026-08-24",
+            "section": "ef20080964_ex99-1.htm",
+            "section_ordinal": 556,
+            "sha256": "b005c365bff7f9defb4d9807ccc3f49c8ea034eee9a7c4fbe84a3e2b07edcc5f",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/2035989/000114036126034208/ef20080964_ex99-1.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "NNBR",
+      "issuer_id": "0000918541",
+      "name": "NN Inc",
+      "split": "development",
+      "asset_sha256": "652d4ac21d407a8cf103e9d912380bf58c8486086d7bbf02613ab26b4e891701",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "Registrable Securities",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "The undersigned beneficial owner of shares of common stock and/or Pre-Funded Warrant Shares (the “Registrable Securities”) of NN, Inc., a Delaware corporation (the “Company”), understands that the Company has filed or intends to file with the Securities and Exchange Commission (the “Commission”) a registration statement (the “Registration Statement”) for the registration and resale under Rule 415 of the Securities Act of 1933, as amended (the “Securities Act”), of the Registrable Securities, in accordance with the terms of the Registration Rights Agreement (the “Registration Rights Agreement”) to which this document is annexed. A copy of the Registration Rights Agreement is available from the Company upon request at the address set forth below. All capitalized terms not otherwise defined herein shall have the meanings ascribed thereto in the Registration Rights Agreement.\n\n",
+          "start": 68941,
+          "end": 69827,
+          "sha256": "2c52d86ccd36fdb384407cb650b575124888b0d5881596c56f04ea1c76ac59ec",
+          "source": {
+            "accepted_at": "2026-10-06T00:32:36.000Z",
+            "accession": "0000918541-26-000105",
+            "characters": 75787,
+            "document": "formofregistrationrightsag.htm",
+            "filing_date": "2026-10-05",
+            "form": "8-K",
+            "id": "9129e3fa6e362909c1a7d850b1a373fbd5a6a716cb9e40a2046d241c3b29375e",
+            "kind": "update",
+            "report_date": "2026-10-01",
+            "section": "formofregistrationrightsag.htm",
+            "section_ordinal": 583,
+            "sha256": "4e3b69e6c67dc970e13d8704416f17c42a1c4dfa0d012d28ba7e7c21fb386c39",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/918541/000091854126000105/formofregistrationrightsag.htm"
+          }
+        },
+        {
+          "text": "(k) Otherwise use commercially reasonable efforts to comply with all applicable rules and regulations of the Commission under the Securities Act and the Exchange Act, including, without limitation, Rule 172 under the Securities Act, file any final Prospectus, including any supplement or amendment thereof, with the Commission pursuant to Rule 424 under the Securities Act, promptly inform the Holders in writing if, at any time during the Effectiveness Period, the Company does not satisfy the conditions specified in Rule 172 and, as a result thereof, the Holders are required to deliver a Prospectus in connection with any disposition of Registrable Securities and take such other actions as may be reasonably necessary to facilitate the registration of the Registrable Securities hereunder.\n\n",
+          "start": 32789,
+          "end": 33585,
+          "sha256": "ba24cd27af8e5163fdbd7b03ff03f833542752bf708ff5945ad98c2a0fdf72c8",
+          "source": {
+            "accepted_at": "2026-10-06T00:32:36.000Z",
+            "accession": "0000918541-26-000105",
+            "characters": 75787,
+            "document": "formofregistrationrightsag.htm",
+            "filing_date": "2026-10-05",
+            "form": "8-K",
+            "id": "9129e3fa6e362909c1a7d850b1a373fbd5a6a716cb9e40a2046d241c3b29375e",
+            "kind": "update",
+            "report_date": "2026-10-01",
+            "section": "formofregistrationrightsag.htm",
+            "section_ordinal": 583,
+            "sha256": "4e3b69e6c67dc970e13d8704416f17c42a1c4dfa0d012d28ba7e7c21fb386c39",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/918541/000091854126000105/formofregistrationrightsag.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "FUL",
+      "issuer_id": "0000039368",
+      "name": "H.B. Fuller Company",
+      "split": "holdout",
+      "asset_sha256": "12894aab0920fead20edaa15566bea0c5c4aa96445bcd0b11caf3bfa1dafbfc0",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "Plan",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "WHEREAS, the Company, pursuant to the Third Amended and Restated H.B. Fuller Company 2020 Master Incentive Plan (the “Plan”), wishes to award to the Participant a Performance Share Award representing the right to receive shares (“Shares”) of common stock, par value $1.00 per share, of the Company (“Common Stock”), subject to certain restrictions and on the terms and conditions contained in this Performance Share Award Agreement and the Plan;\n\n \n\n",
+          "start": 494,
+          "end": 944,
+          "sha256": "ad2b6d7c0fc81f8eb591661de6f902c1cffa7668553b06b2ea81f10e2dc41431",
+          "source": {
+            "accepted_at": "2026-03-26T22:46:32.000Z",
+            "accession": "0001437749-26-009924",
+            "characters": 47592,
+            "document": "ex_935318.htm",
+            "filing_date": "2026-03-26",
+            "form": "10-Q",
+            "id": "022c722fccfcee20f0ce5820edd8bec31436ecb7045ce16e1fef0b7efe274e63",
+            "kind": "update",
+            "report_date": "2026-02-28",
+            "section": "ex_935318.htm",
+            "section_ordinal": 263,
+            "sha256": "12b391d5a606bb05ab8771ecefd658dccafe51e6c481a32d81ef10dfd13dea0a",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/39368/000143774926009924/ex_935318.htm"
+          }
+        },
+        {
+          "text": "Data Retention. The Company will hold and use the Data only as long as is necessary to implement, administer and manage the Participant’s participation in the Plan, or as required to comply with legal or regulatory obligations, including under tax and securities laws.\n\n \n\n \n\n \n\n \n\n \n",
+          "start": 39686,
+          "end": 39970,
+          "sha256": "076637342579809098ba36388bd6534a108688464ef40b4feb58c999a23d2af3",
+          "source": {
+            "accepted_at": "2026-03-26T22:46:32.000Z",
+            "accession": "0001437749-26-009924",
+            "characters": 47592,
+            "document": "ex_935318.htm",
+            "filing_date": "2026-03-26",
+            "form": "10-Q",
+            "id": "022c722fccfcee20f0ce5820edd8bec31436ecb7045ce16e1fef0b7efe274e63",
+            "kind": "update",
+            "report_date": "2026-02-28",
+            "section": "ex_935318.htm",
+            "section_ordinal": 263,
+            "sha256": "12b391d5a606bb05ab8771ecefd658dccafe51e6c481a32d81ef10dfd13dea0a",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/39368/000143774926009924/ex_935318.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "XIFR",
+      "issuer_id": "0001603145",
+      "name": "XPLR Infrastructure LP",
+      "split": "holdout",
+      "asset_sha256": "93a17a99339e8f0d3ea73f8fdea446f3be064caefe2ba44d226f27782aeb8605",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "Investment Company Act",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "· any amendment that is necessary, in the opinion of our counsel, to prevent us, our general partner or their respective directors, officers, agents or trustees from, in any manner, being subjected to the provisions of the Investment Company Act of 1940, as amended (“Investment Company Act”), the Investment Advisers Act of 1940, as amended (“Advisers Act”), or “plan asset” regulations adopted under the Employee Retirement Income Security Act of 1974, as amended (“ERISA”), regardless of whether such are substantially similar to plan asset regulations currently applied or proposed by the U.S. Department of Labor;\n\n",
+          "start": 79413,
+          "end": 80033,
+          "sha256": "222e1db934640c2b1ec841a8bfbb712edcc17500f62036b839baab305dde55e9",
+          "source": {
+            "accepted_at": "2026-02-17T21:18:04.000Z",
+            "accession": "0001603145-26-000007",
+            "characters": 135779,
+            "document": "xplr-q42025xex412.htm",
+            "filing_date": "2026-02-17",
+            "form": "10-K",
+            "id": "5e85d5530fc0f9841417b614ac754d2b3585619a2fa86ebcc54f8cc5e8d30948",
+            "kind": "business",
+            "report_date": "2025-12-31",
+            "section": "xplr-q42025xex412.htm",
+            "section_ordinal": 155,
+            "sha256": "de1173d801662a854a5d17f98f87d238052055b94db9a615c727d1fd2fec3c94",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1603145/000160314526000007/xplr-q42025xex412.htm"
+          }
+        },
+        {
+          "text": "· any amendment that is necessary, in the opinion of XPLR OpCo’s counsel, to prevent XPLR OpCo or its general partner or XPLR GP or its directors, officers, agents or trustees from, in any manner, being subjected to the provisions of the Investment Company Act, the Advisers Act, or “plan asset” regulations adopted under ERISA regardless of whether such are substantially similar to plan asset regulations currently applied or proposed by the U.S. Department of Labor;\n\n",
+          "start": 121112,
+          "end": 121583,
+          "sha256": "5337d1143f00c6a53ce913f21d496866986f2c28fcb0cb3ce015a6c8771f831b",
+          "source": {
+            "accepted_at": "2026-02-17T21:18:04.000Z",
+            "accession": "0001603145-26-000007",
+            "characters": 135779,
+            "document": "xplr-q42025xex412.htm",
+            "filing_date": "2026-02-17",
+            "form": "10-K",
+            "id": "5e85d5530fc0f9841417b614ac754d2b3585619a2fa86ebcc54f8cc5e8d30948",
+            "kind": "business",
+            "report_date": "2025-12-31",
+            "section": "xplr-q42025xex412.htm",
+            "section_ordinal": 155,
+            "sha256": "de1173d801662a854a5d17f98f87d238052055b94db9a615c727d1fd2fec3c94",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1603145/000160314526000007/xplr-q42025xex412.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "NU",
+      "issuer_id": "0001691493",
+      "name": "Nu Holdings Ltd",
+      "split": "holdout",
+      "asset_sha256": "b416256fc796ea10c38991bc3bcf79cdf7b8a1a190b2d5b8054d75029fe04ad7",
+      "design": "random witness paragraphs; no eligible distant definition pair",
+      "target_alias": null,
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": []
+    },
+    {
+      "ticker": "NEOV",
+      "issuer_id": "0001748137",
+      "name": "NeoVolta Inc",
+      "split": "holdout",
+      "asset_sha256": "b0b3d7ebf4c958407e6ece8dec83cd092ed14f2840cdb3d83669190014924ac3",
+      "design": "random witness paragraphs; no eligible distant definition pair",
+      "target_alias": null,
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": []
+    },
+    {
+      "ticker": "TLS",
+      "issuer_id": "0000320121",
+      "name": "Telos Corp",
+      "split": "holdout",
+      "asset_sha256": "58488c15fafadece28ff0844e80cbaac6852b37d3ac7f14f9f0a03887374db2c",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "1934 Act",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "(b) 10b5-1 Trading Plan Exception. These trading restrictions do not apply to transactions effectuated on behalf of an Insider under a pre-existing written plan, contract, instruction, or arrangement that complies with Rule 10b5-1 under the Securities Exchange Act of 1934 (the “1934 Act”) and all of the requirements set forth in the Company’s “Guidelines for Rule 10b5-1 Plans” attached to this Policy as Appendix A.\n\n",
+          "start": 7830,
+          "end": 8250,
+          "sha256": "cbc07d1e27624f0150de6464a07c64d6e42f41aa6129f2b45d46634f768c7ed8",
+          "source": {
+            "accepted_at": "2026-03-16T20:01:55.000Z",
+            "accession": "0000320121-26-000010",
+            "characters": 31857,
+            "document": "ex-191insidertradingpolicy.htm",
+            "filing_date": "2026-03-16",
+            "form": "10-K",
+            "id": "4525b2aad3d7fcc9b49f526d34785793f24e68e8cd95890c1d0ba2885ae165d5",
+            "kind": "business",
+            "report_date": "2025-12-31",
+            "section": "ex-191insidertradingpolicy.htm",
+            "section_ordinal": 108,
+            "sha256": "1ea081ceeebf9c0f20192f6aa945a14b2f0b6fa92ffcffa7cde64b6f39a1ca85",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/320121/000032012126000010/ex-191insidertradingpolicy.htm"
+          }
+        },
+        {
+          "text": "Each director, officer and other Section 16 Individual (as defined in the Policy) understands that the approval or adoption of a pre-planned selling program in no way reduces or eliminates such person’s obligations under Section 16 of the 1934 Act, including such person’s disclosure and short-swing trading liabilities thereunder. If any questions arise, such person should consult with their own counsel in implementing a Rule 10b5-1 Plan.\n\n",
+          "start": 31358,
+          "end": 31801,
+          "sha256": "1064a77943a3810286446158782182847cede4d8c0fe504060a21af858ce568f",
+          "source": {
+            "accepted_at": "2026-03-16T20:01:55.000Z",
+            "accession": "0000320121-26-000010",
+            "characters": 31857,
+            "document": "ex-191insidertradingpolicy.htm",
+            "filing_date": "2026-03-16",
+            "form": "10-K",
+            "id": "4525b2aad3d7fcc9b49f526d34785793f24e68e8cd95890c1d0ba2885ae165d5",
+            "kind": "business",
+            "report_date": "2025-12-31",
+            "section": "ex-191insidertradingpolicy.htm",
+            "section_ordinal": 108,
+            "sha256": "1ea081ceeebf9c0f20192f6aa945a14b2f0b6fa92ffcffa7cde64b6f39a1ca85",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/320121/000032012126000010/ex-191insidertradingpolicy.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "ONDS",
+      "issuer_id": "0001646188",
+      "name": "Ondas Inc",
+      "split": "holdout",
+      "asset_sha256": "597c7d40f55d0dad038884214f560a55258213d44864e785a1ad065d64075f39",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "NCI",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "Net income increased $296.5 million to $271.6 million for the six months ended June 30, 2026, from a net loss of $24.9 million for the six months ended June 30, 2025. For the six months ended June 30, 2026, the Company attributed $3.1 million of net loss to noncontrolling interests (“NCI”), related to the subsidiaries in which we acquired less than 100% ownership during the fourth quarter of 2025. These subsidiaries incurred operating losses due to early-stage operating performance.\n\n",
+          "start": 16221,
+          "end": 16710,
+          "sha256": "fcad7d1bed708a817665780b88c48650e4970006c982de54f94b513127373334",
+          "source": {
+            "accepted_at": "2026-08-14T00:27:25.000Z",
+            "accession": "0001193125-26-349288",
+            "characters": 36287,
+            "document": "onds-20260630.htm",
+            "filing_date": "2026-08-13",
+            "form": "10-Q",
+            "id": "7f68f121a317f339444a9e9895a6f9dbacf1440ce4dffbea0e856d4851d542aa",
+            "kind": "update",
+            "report_date": "2026-06-30",
+            "section": "Item 2. Management’s Discussion and Analysis of Financial Condition and Results of Operations",
+            "section_ordinal": 770,
+            "sha256": "d2b564db9c4a304f7176258a000db646495fa2b276c8f7d011e4cdbc0c96c678",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1646188/000119312526349288/onds-20260630.htm"
+          }
+        },
+        {
+          "text": "Net loss increased $78.9 million, to $89.7 million for the three months ended June 30, 2026, from a net loss of $10.8 million for the three months ended June 30, 2025. For the three months ended June 30, 2026, the Company attributed $1.5 million of net loss to noncontrolling interests (“NCI”), related to the subsidiaries in which we acquired less than 100% ownership during the fourth quarter of 2025. These subsidiaries incurred operating losses due to early-stage operating performance.\n\n \n\n",
+          "start": 9895,
+          "end": 10390,
+          "sha256": "48ffa9994e70ff1015728bf582797c9fed1eeb999c3f64389f1caa5b0b9f1fa6",
+          "source": {
+            "accepted_at": "2026-08-14T00:27:25.000Z",
+            "accession": "0001193125-26-349288",
+            "characters": 36287,
+            "document": "onds-20260630.htm",
+            "filing_date": "2026-08-13",
+            "form": "10-Q",
+            "id": "7f68f121a317f339444a9e9895a6f9dbacf1440ce4dffbea0e856d4851d542aa",
+            "kind": "update",
+            "report_date": "2026-06-30",
+            "section": "Item 2. Management’s Discussion and Analysis of Financial Condition and Results of Operations",
+            "section_ordinal": 770,
+            "sha256": "d2b564db9c4a304f7176258a000db646495fa2b276c8f7d011e4cdbc0c96c678",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1646188/000119312526349288/onds-20260630.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "OPK",
+      "issuer_id": "0000944809",
+      "name": "Opko Health Inc",
+      "split": "holdout",
+      "asset_sha256": "1858413ed253f0d1cf85a4661538bace3ee1d49ceb4a415f847c31a221d0a3fd",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "Pfizer",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "We are a diversified healthcare company that seeks to establish industry-leading positions in large and rapidly growing medical markets. Our pharmaceutical business features NGENLA® (somatrogon-ghla), also referred to as Somatrogon (hGH-CTP), a once-weekly human growth hormone injection. We have partnered with Pfizer Inc. (“Pfizer”) for further development and commercialization of Somatrogon (hGH-CTP). Regulatory approvals for Somatrogon (hGH-CTP) for the treatment of children and adolescents, as young as three years of age, with growth disturbance due to insufficient secretion of growth hormone, have been secured in more than 50 markets worldwide, including in the United States, European Union Member States, Japan, Canada, and Australia under the brand name NGENLA®. \n\n",
+          "start": 977,
+          "end": 1757,
+          "sha256": "6455ff5fb53b8b2991936c358a712954ebaeb18000b33a0e136010ac7ade80dc",
+          "source": {
+            "accepted_at": "2026-04-29T00:09:42.000Z",
+            "accession": "0001193125-26-187007",
+            "characters": 45317,
+            "document": "opk-20260331.htm",
+            "filing_date": "2026-04-28",
+            "form": "10-Q",
+            "id": "6588bca7aeb30af685670290e2bf872ce0b4492146d6f41c1f1bdb9ac34356a1",
+            "kind": "update",
+            "report_date": "2026-03-31",
+            "section": "ITEM 2. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS.",
+            "section_ordinal": 268,
+            "sha256": "031d7bd052d071e8a733989f525d92308e083b5a73b839fae8c850614474d097",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/944809/000119312526187007/opk-20260331.htm"
+          }
+        },
+        {
+          "text": "OPKO Health, Inc., a Delaware corporation (“OPKO”, the “Company”, “we”, “us”, or “our”), is a diversified healthcare company that seeks to establish industry-leading positions in large and rapidly growing medical markets. Our pharmaceutical business features NGENLA® (somatrogon-ghla), also referred to as Somatrogon (hGH-CTP), a once-weekly human growth hormone injection. We have partnered with Pfizer Inc. (“Pfizer”) for further development and commercialization of Somatrogon (hGH-CTP). Regulatory approvals for Somatrogon (hGH-CTP) for the treatment of children and adolescents, as young as three years of age, with growth disturbance due to insufficient secretion of growth hormone, have been secured in more than 50 markets worldwide, including in the United States, European Union Member States, Japan, Canada, and Australia under the brand name NGENLA®. \n\n",
+          "start": 14035,
+          "end": 14900,
+          "sha256": "3eddc8953ab5af0afbab235ef1404071bd67e9603330a0a0c501cfa556cca2d7",
+          "source": {
+            "accepted_at": "2026-04-29T00:09:42.000Z",
+            "accession": "0001193125-26-187007",
+            "characters": 163040,
+            "document": "opk-20260331.htm",
+            "filing_date": "2026-04-28",
+            "form": "10-Q",
+            "id": "0fbf11151ad75654a2432beb607bd89b3e6d9f8c4a23d0cb2cedbe5e127231aa",
+            "kind": "financial",
+            "report_date": "2026-03-31",
+            "section": "Item 1. Financial Statements",
+            "section_ordinal": 267,
+            "sha256": "56093d879101a25c5993e3e2db228efdf19fd5d0fe78654e1655da15ee8a9097",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/944809/000119312526187007/opk-20260331.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "FISV",
+      "issuer_id": "0000798354",
+      "name": "Fiserv Inc",
+      "split": "holdout",
+      "asset_sha256": "e37e9006251c8848cf29905557ef26df456c34269766f2b0069d4988b4bf3743",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "Financial",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "Fiserv, Inc. and its subsidiaries (collectively, the “Company”) is a leading global provider of payments and financial services technology solutions, serving clients around the globe, including merchants, banks, credit unions, other financial institutions, corporate and public sector clients. The Company provides account processing and digital banking solutions; card issuer processing and network services; payments; e-commerce; merchant acquiring and processing; and the Clover® cloud-based point-of-sale (“POS”) and business management platform. The Company’s reportable segments are Merchant Solutions (“Merchant”) and Financial Solutions (“Financial”).\n\n",
+          "start": 12455,
+          "end": 13116,
+          "sha256": "4218cef0c7c78a3d3142445e654d87b98555f8ede80df8731c6710366e63092d",
+          "source": {
+            "accepted_at": "2026-02-19T21:18:00.000Z",
+            "accession": "0000798354-26-000009",
+            "characters": 176498,
+            "document": "fi-20251231.htm",
+            "filing_date": "2026-02-19",
+            "form": "10-K",
+            "id": "96df0908ac13048cd68215f4915aab3f747e1ffc2e528302c5b12e4b0fa43ed8",
+            "kind": "financial",
+            "report_date": "2025-12-31",
+            "section": "Item 8. Financial Statements and Supplementary Data",
+            "section_ordinal": 165,
+            "sha256": "8703f2a64b616b17fa52ff2e507e45b2d72eb074b7b7528f5c2f19163874a41c",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/798354/000079835426000009/fi-20251231.htm"
+          }
+        },
+        {
+          "text": "On December 17, 2025, the Company acquired StoneCastle Cash Management, LLC, INDX Processing, LLC and StoneCastle Trust Co. (collectively, “StoneCastle”), a provider of deposit funding solutions, for $415 million, net of $4 million of acquired cash. StoneCastle is included within the Financial segment and provides its network of depository institutions easy access to stable, cost efficient deposit funding.\n\n",
+          "start": 72493,
+          "end": 72904,
+          "sha256": "7eceb5581de5e365277166f961432f74d263767ea73861d8ad281ba6b72d8040",
+          "source": {
+            "accepted_at": "2026-02-19T21:18:00.000Z",
+            "accession": "0000798354-26-000009",
+            "characters": 176498,
+            "document": "fi-20251231.htm",
+            "filing_date": "2026-02-19",
+            "form": "10-K",
+            "id": "96df0908ac13048cd68215f4915aab3f747e1ffc2e528302c5b12e4b0fa43ed8",
+            "kind": "financial",
+            "report_date": "2025-12-31",
+            "section": "Item 8. Financial Statements and Supplementary Data",
+            "section_ordinal": 165,
+            "sha256": "8703f2a64b616b17fa52ff2e507e45b2d72eb074b7b7528f5c2f19163874a41c",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/798354/000079835426000009/fi-20251231.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "JBL",
+      "issuer_id": "0000898293",
+      "name": "Jabil Inc",
+      "split": "holdout",
+      "asset_sha256": "38554a4aa501ce252277052c721174489780a868b2bd1fbbf9f7c309e074fbc9",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "SFA",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "Securities Law Information. The Restricted Stock Units are being granted to grantees pursuant to the “Qualifying Person” exemption under section 273(1)(f) of the Singapore Securities and Futures Act (Chapter 289, 2006 Ed.) (“SFA”). The Plan has not been lodged or registered as a prospectus with the Monetary Authority of Singapore. The Grantee should note that the Restricted Stock Units are subject to section 257 of the SFA and the Grantee will not be able to make (i) any subsequent sale of the Shares in Singapore or (ii) any offer of such subsequent sale of Shares subject to the Restricted Stock Units in Singapore, unless such sale or offer is made pursuant to the exemptions under Part XIII Division 1 Subdivision (4) (other than section 280) of the SFA.\n\n",
+          "start": 166122,
+          "end": 166887,
+          "sha256": "39536eef88eb66c969ed4d1e3a69b3683120bba204f23e436757815d7d8f514a",
+          "source": {
+            "accepted_at": "2026-01-09T17:34:16.000Z",
+            "accession": "0001628280-26-001450",
+            "characters": 191538,
+            "document": "jbl-20251130ex103.htm",
+            "filing_date": "2026-01-09",
+            "form": "10-Q",
+            "id": "ca26c56ce1d60054329414c75e0d0c7f63c88d4f2410b8dfccef029007fa21f1",
+            "kind": "update",
+            "report_date": "2025-11-30",
+            "section": "jbl-20251130ex103.htm",
+            "section_ordinal": 322,
+            "sha256": "63c2770e950b3699e5fb2c5d3ea9d32826f95b6d35fb02f97be04fcc7d67f7a5",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/898293/000162828026001450/jbl-20251130ex103.htm"
+          }
+        },
+        {
+          "text": "(4) of Division 1 of Part 13 of the Singapore Securities and Futures Act 2001 (“SFA”), save for section 280 of the SFA. The Grantee further acknowledge that any transfer and/or disposal of the Stock Unit Award and/or shares of common stock underlying the Stock Unit Award by you (as may be allowed under the Plan, this Stock Unit Award and the Terms and subject to compliance with applicable laws) shall be subject to the condition that the foregoing restrictions shall be imposed on each and every transferee and purchaser, and subsequent transferee and purchaser, of the relevant Stock Unit Award and/or shares of common stock underlying the Stock Unit Award.\n\n",
+          "start": 164006,
+          "end": 164669,
+          "sha256": "895f6ccfdca3af65eafe3954dd0ff42eae20619ce32202e2b751bede7051a01e",
+          "source": {
+            "accepted_at": "2026-01-09T17:34:16.000Z",
+            "accession": "0001628280-26-001450",
+            "characters": 191538,
+            "document": "jbl-20251130ex103.htm",
+            "filing_date": "2026-01-09",
+            "form": "10-Q",
+            "id": "ca26c56ce1d60054329414c75e0d0c7f63c88d4f2410b8dfccef029007fa21f1",
+            "kind": "update",
+            "report_date": "2025-11-30",
+            "section": "jbl-20251130ex103.htm",
+            "section_ordinal": 322,
+            "sha256": "63c2770e950b3699e5fb2c5d3ea9d32826f95b6d35fb02f97be04fcc7d67f7a5",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/898293/000162828026001450/jbl-20251130ex103.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "PTEN",
+      "issuer_id": "0000889900",
+      "name": "Patterson-UTI Energy Inc",
+      "split": "holdout",
+      "asset_sha256": "610abf15f64a1a82e053ac415ccfdf8c5f7187bd4e5c6cf515e5100b79dfad16",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "E&Ps",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "Our revenues, profitability and cash flows are highly dependent upon capital expenditures of exploration and production companies (“E&Ps”), which are largely driven by capital budgets set to achieve respective production targets in relation to current and expected future prices for oil and natural gas, as well as broader macroeconomic conditions. Commodity prices have historically been volatile and are affected by global supply and demand dynamics, geopolitical conditions and other factors, but were relatively range-bound in recent years. The current demand for equipment and services remains impacted by macro conditions that are outside of our control, including commodity prices, geopolitical environment, changes to international tariffs and trade policies, inflationary pressures, global economic conditions, as well as customer consolidation and focus by E&Ps and service companies on capital returns.\n\n",
+          "start": 38335,
+          "end": 39250,
+          "sha256": "b050d2ee802ea9774540bbbf417fe5b57f9476398fcd7d42f8e78cfa4d0a074f",
+          "source": {
+            "accepted_at": "2026-04-28T20:06:56.000Z",
+            "accession": "0000889900-26-000033",
+            "characters": 43144,
+            "document": "pten-20260331.htm",
+            "filing_date": "2026-04-28",
+            "form": "10-Q",
+            "id": "a02598a8d25a434cfd71701e6b6377262061cf9cfca32f7952985af0ada09773",
+            "kind": "update",
+            "report_date": "2026-03-31",
+            "section": "ITEM 2. Management’s Discussion and Analysis of Financial Condition and Results of Operations",
+            "section_ordinal": 276,
+            "sha256": "6cc9eadd6578e62d64a87ca4581bf94bcf151f7824d1966be2746e22f3b1ede1",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/889900/000088990026000033/pten-20260331.htm"
+          }
+        },
+        {
+          "text": "Recent Developments in Market Conditions and Outlook — Our revenues, profitability and cash flows are highly dependent upon capital expenditures of exploration and production companies (“E&Ps”), which are largely driven by capital budgets set to achieve respective production targets in relation to current and expected future prices for oil and natural gas, as well as broader macroeconomic conditions. Commodity prices have historically been volatile and are affected by global supply and demand dynamics, geopolitical conditions and other factors, but were relatively range-bound in recent years. The current demand for equipment and services remains impacted by macro conditions that are outside of our control, including commodity prices, geopolitical environment, changes to international tariffs and trade policies, inflationary pressures, global economic conditions, as well as customer consolidation and focus by E&Ps and service companies on capital returns.\n\n",
+          "start": 4182,
+          "end": 5152,
+          "sha256": "c65368303f8fdb013ac63b6b94d17a999849734049322c140c9cb99a10c05172",
+          "source": {
+            "accepted_at": "2026-04-28T20:06:56.000Z",
+            "accession": "0000889900-26-000033",
+            "characters": 43144,
+            "document": "pten-20260331.htm",
+            "filing_date": "2026-04-28",
+            "form": "10-Q",
+            "id": "a02598a8d25a434cfd71701e6b6377262061cf9cfca32f7952985af0ada09773",
+            "kind": "update",
+            "report_date": "2026-03-31",
+            "section": "ITEM 2. Management’s Discussion and Analysis of Financial Condition and Results of Operations",
+            "section_ordinal": 276,
+            "sha256": "6cc9eadd6578e62d64a87ca4581bf94bcf151f7824d1966be2746e22f3b1ede1",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/889900/000088990026000033/pten-20260331.htm"
+          }
+        }
+      ]
+    }
+  ]
+}

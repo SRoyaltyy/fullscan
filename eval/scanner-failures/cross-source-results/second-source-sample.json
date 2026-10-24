@@ -1,0 +1,231 @@
+{
+  "draw_id": "51f8654995f1c6c6ef0cca2cd3e98faefcbf5366d55406a384e0ba4c3f836329",
+  "methodology_sha256": "0bbc7968768f05f53d0e66700940c19f68e8a9daee916942b33d268e0422ef30",
+  "scope": "source-witness diagnostic only; source-first labels must be frozen before predictions",
+  "cases": [
+    {
+      "ticker": "SDGR",
+      "issuer_id": "0001490978",
+      "name": "Schrodinger Inc",
+      "split": "development",
+      "asset_sha256": "0c97812ab4f136c3ae0b8c69b0884116b0dfbf2938f77dc8f3cbee20f5773288",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "Structure Therapeutics",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "In July 2021, the Company purchased 494,035 shares of Series B preferred stock of Structure Therapeutics Inc. (\"Structure Therapeutics\") for $2,000 in cash. In April 2022, the Company purchased an additional 148,210 shares of Series B preferred stock for $600 in cash. On February 7, 2023, Structure Therapeutics completed its initial public offering (\"IPO\"). Immediately upon the closing of Structure Therapeutics' IPO, all of the outstanding Series B preferred stock automatically converted into ordinary shares on a one-for-one basis. The Company purchased 275,000 American Depository Shares (\"ADSs\") at $15.00 per ADS in the IPO. Each ADS represents three ordinary shares. The Company accounts for its investment in Structure Therapeutics at fair value based on the closing price of Structure Therapeutics' ADSs as of the reporting date.\n\n",
+          "start": 102036,
+          "end": 102879,
+          "sha256": "b202ce3c5782d768d8b2e8a94454266ab23e513d5e5dfd6a288ca3c174aa3821",
+          "source": {
+            "accepted_at": "2026-02-25T21:11:39.000Z",
+            "accession": "0001490978-26-000010",
+            "characters": 111223,
+            "document": "sdgr-20251231.htm",
+            "filing_date": "2026-02-25",
+            "form": "10-K",
+            "id": "5730240d38ec316ebdb7dec73813ae62ddd07df1c978755de8a2b4f786ae115c",
+            "kind": "financial",
+            "report_date": "2025-12-31",
+            "section": "Item 8. Financial Statements and Supplementary Data.",
+            "section_ordinal": 123,
+            "sha256": "c638eedb6bcc9bbf5440636461233090c559116dded1fba67e542cd1f93204ae",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1490978/000149097826000010/sdgr-20251231.htm"
+          }
+        },
+        {
+          "text": "During the year ended December 31, 2025, the Company sold a portion of its equity stake in Structure Therapeutics for aggregate consideration of $17,735. The Company recorded a mark-to-market gain of $7,519 on the portion of the investment sold during the year ended December 31, 2025. The Company recorded a mark-to-market gain of $40,655 on the portion of the investment held as of December 31, 2025. During the year ended December 31, 2024, the Company recorded a mark-to-market loss of $18,096 on the investment. During the year ended December 31, 2023, the Company recorded a mark-to-market gain of $49,755 on the investment.\n\n",
+          "start": 102879,
+          "end": 103511,
+          "sha256": "638bba38a2ee19f198272d31410834a466a050be12470a2a07ea6a075748d950",
+          "source": {
+            "accepted_at": "2026-02-25T21:11:39.000Z",
+            "accession": "0001490978-26-000010",
+            "characters": 111223,
+            "document": "sdgr-20251231.htm",
+            "filing_date": "2026-02-25",
+            "form": "10-K",
+            "id": "5730240d38ec316ebdb7dec73813ae62ddd07df1c978755de8a2b4f786ae115c",
+            "kind": "financial",
+            "report_date": "2025-12-31",
+            "section": "Item 8. Financial Statements and Supplementary Data.",
+            "section_ordinal": 123,
+            "sha256": "c638eedb6bcc9bbf5440636461233090c559116dded1fba67e542cd1f93204ae",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1490978/000149097826000010/sdgr-20251231.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "UNIT",
+      "issuer_id": "0002020795",
+      "name": "Uniti Group Inc",
+      "split": "development",
+      "asset_sha256": "b9e50342361d57a60fccd53ff00ff75292ae8d13fe2df55cc4864df6cb3f81be",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "AI",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "AI-driven demand focus: We are prioritizing infrastructure construction projects that support artificial intelligence (“AI”) and high-performance computing workloads, including high-count dark fiber and expanded space/power at our colocation facilities. Our operational advantages in Tier 2/Tier 3 markets enable us to reach newly developing, power-adjacent AI compute centers efficiently with services operated and managed locally. \n\n",
+          "start": 31736,
+          "end": 32171,
+          "sha256": "790e09ba1088b05157a522e762a8c55db43bf415e64e158ac159ba1be3990bc0",
+          "source": {
+            "accepted_at": "2026-03-02T21:08:28.000Z",
+            "accession": "0001628280-26-013196",
+            "characters": 57627,
+            "document": "unit-20251231.htm",
+            "filing_date": "2026-03-02",
+            "form": "10-K",
+            "id": "90eb13f45b9640be1e6ab95e616855c615729b6537d9f37b8423036bdb161842",
+            "kind": "business",
+            "report_date": "2025-12-31",
+            "section": "PART I\n\nItem 1. Business",
+            "section_ordinal": 189,
+            "sha256": "fcec852badd1009105704b50cc0e170c6a5a71332d8f8fe6514d02b0e89f4012",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/2020795/000162828026013196/unit-20251231.htm"
+          }
+        },
+        {
+          "text": "Wholesale Services: We provide network bandwidth to hyperscalers and content providers, other domestic and international telecommunications providers, cable operators and wireless carriers. These services include 10 - 400 Gbps wave services, spectrum, Ethernet, internet, and dark fiber and colocation services. Wholesale services also include fiber-to-the-tower connections to support the wireless backhaul market. Dark fiber offerings (including long‑haul and metro) are available under multi‑year structures such as leases and IRUs to support customers’ long‑term capacity requirements. Our hyperscale customers have partnered with us to drive the construction and delivery of extremely high-count fiber systems along with colocation sites with space and power to drive AI traffic. Customers manage our wholesale services via our customer-facing portal (iconnect) with map-based visibility, inventory accuracy and operational insights that improve planning, ordering, and delivery.\n\n",
+          "start": 35364,
+          "end": 36350,
+          "sha256": "79182f26c83b868067927b7a037da1dde9b068b4370f03b174f389425f36ed8b",
+          "source": {
+            "accepted_at": "2026-03-02T21:08:28.000Z",
+            "accession": "0001628280-26-013196",
+            "characters": 57627,
+            "document": "unit-20251231.htm",
+            "filing_date": "2026-03-02",
+            "form": "10-K",
+            "id": "90eb13f45b9640be1e6ab95e616855c615729b6537d9f37b8423036bdb161842",
+            "kind": "business",
+            "report_date": "2025-12-31",
+            "section": "PART I\n\nItem 1. Business",
+            "section_ordinal": 189,
+            "sha256": "fcec852badd1009105704b50cc0e170c6a5a71332d8f8fe6514d02b0e89f4012",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/2020795/000162828026013196/unit-20251231.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "IREN",
+      "issuer_id": "0001878848",
+      "name": "IREN Ltd",
+      "split": "holdout",
+      "asset_sha256": "d1bc4788a23972ab77ec01ceb0ed0182c95f7bec849b6a9d0028063e8b74c888",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "Consolidated Financial Statements",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "The accompanying audited consolidated financial statements (“Consolidated Financial Statements”) and these notes (these “Notes”) have been prepared in accordance with U.S. generally accepted accounting principles (“GAAP”) and the rules of the Securities and Exchange Commission (the “SEC”). The Consolidated Financial Statements are presented in U.S. dollars.\n\n",
+          "start": 28829,
+          "end": 29190,
+          "sha256": "0b4a94270989b89c43870ba296946e8354cb49b17974114d1af66aea87716f3f",
+          "source": {
+            "accepted_at": "2026-08-28T00:18:57.000Z",
+            "accession": "0001878848-26-000052",
+            "characters": 185408,
+            "document": "iren-20260630.htm",
+            "filing_date": "2026-08-27",
+            "form": "10-K",
+            "id": "972e5ba3d2f6945e8bd628cd2cc3d8bf6a6bb3c5459f1191476a2070c0089008",
+            "kind": "financial",
+            "report_date": "2026-06-30",
+            "section": "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+            "section_ordinal": 202,
+            "sha256": "d1c0e2869bb8ef23d317c15609ce2d8187d7d4f1986c5781cce0b13511a6881b",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/iren-20260630.htm"
+          }
+        },
+        {
+          "text": "The Group recognizes positions taken or expected to be taken in a tax return in the Consolidated Financial Statements when it is more-likely-than-not that the position would be sustained upon examination by tax authorities. The Group recognizes any interest and penalties related to unrecognized tax benefits in income tax expense. There were no interest or penalties related to income taxes that have been accrued or recognized as of June 30, 2026, 2025, 2024. \n\n",
+          "start": 79200,
+          "end": 79664,
+          "sha256": "c3d7b8bf276d93822a00c0659caa9a2735a50fa113577746287d4a018e12f0b9",
+          "source": {
+            "accepted_at": "2026-08-28T00:18:57.000Z",
+            "accession": "0001878848-26-000052",
+            "characters": 185408,
+            "document": "iren-20260630.htm",
+            "filing_date": "2026-08-27",
+            "form": "10-K",
+            "id": "972e5ba3d2f6945e8bd628cd2cc3d8bf6a6bb3c5459f1191476a2070c0089008",
+            "kind": "financial",
+            "report_date": "2026-06-30",
+            "section": "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA",
+            "section_ordinal": 202,
+            "sha256": "d1c0e2869bb8ef23d317c15609ce2d8187d7d4f1986c5781cce0b13511a6881b",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/iren-20260630.htm"
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "OLLI",
+      "issuer_id": "0001639300",
+      "name": "Ollies Bargain Outlet Holdings Inc",
+      "split": "holdout",
+      "asset_sha256": "b36c62f25bacad24b915e289186eaf0151d92d39fb88f603b7414445d06a7fa6",
+      "design": "definition-enriched, nonadjacent paragraph pair",
+      "target_alias": "SEC",
+      "coverage": "two existing source witness paragraphs; not full filing text",
+      "paragraphs": [
+        {
+          "text": "The accompanying unaudited condensed consolidated financial statements have been prepared in accordance with U.S. generally accepted accounting principles (“GAAP”) for interim financial information and applicable rules and regulations of the Securities and Exchange Commission (“SEC”) regarding interim financial reporting. The condensed consolidated financial statements reflect all normal recurring adjustments which management believes are necessary to present fairly the Company’s results of operations, financial condition, and cash flows for all periods presented. The Company’s business is seasonal in nature and results of operations for the interim periods presented are not necessarily indicative of the results expected for the full fiscal year or any other period. All intercompany accounts, transactions, and balances have been eliminated in consolidation.\n\n",
+          "start": 2238,
+          "end": 3109,
+          "sha256": "5e0c9f305b71ddf93347f71ca0e450088def862691ca593dd618f2b221e583dc",
+          "source": {
+            "accepted_at": "2026-09-03T00:31:10.000Z",
+            "accession": "0001104659-26-104755",
+            "characters": 12183,
+            "document": "R7.htm",
+            "filing_date": "2026-09-02",
+            "form": "10-Q",
+            "id": "8cc546b1d237dd5ee5d04b35928b151593ee9213c918a922db53121bec74fa94",
+            "kind": "update",
+            "report_date": "2026-08-01",
+            "section": "R7.htm",
+            "section_ordinal": 279,
+            "sha256": "8019f7705960e86ac43c34045552fe67a05cb0b744736003ad98043904489cc0",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1639300/000110465926104755/R7.htm"
+          }
+        },
+        {
+          "text": "The Company’s balance sheet as of January 31, 2026, presented herein, has been derived from the audited balance sheet included in the Company’s Annual Report on Form 10-K for fiscal 2025 as filed with the SEC on March 19, 2026 and referred to herein as the “Annual Report”, but does not include all disclosures required by GAAP. These condensed consolidated financial statements should be read in conjunction with the consolidated financial statements for fiscal 2025 and footnotes thereto included in the Annual Report.\n\n",
+          "start": 3109,
+          "end": 3631,
+          "sha256": "729650781c64a6055167123bbdf90d6aa2993f555e3fdb54c3a1db1c5e9e6f06",
+          "source": {
+            "accepted_at": "2026-09-03T00:31:10.000Z",
+            "accession": "0001104659-26-104755",
+            "characters": 12183,
+            "document": "R7.htm",
+            "filing_date": "2026-09-02",
+            "form": "10-Q",
+            "id": "8cc546b1d237dd5ee5d04b35928b151593ee9213c918a922db53121bec74fa94",
+            "kind": "update",
+            "report_date": "2026-08-01",
+            "section": "R7.htm",
+            "section_ordinal": 279,
+            "sha256": "8019f7705960e86ac43c34045552fe67a05cb0b744736003ad98043904489cc0",
+            "source": "PR642",
+            "url": "https://www.sec.gov/Archives/edgar/data/1639300/000110465926104755/R7.htm"
+          }
+        }
+      ]
+    }
+  ]
+}

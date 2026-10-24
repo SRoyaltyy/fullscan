@@ -11,6 +11,7 @@ on:
       - 'src/entity_resolution.py'
       - 'src/term_inventory.py'
       - 'src/relationship_frames.py'
+      - 'src/stock_evidence_graph.py'
       - 'src/specific_filing_records.py'
       - 'scripts/annotate_article_entities.py'
       - 'scripts/publish_filing_objects.py'

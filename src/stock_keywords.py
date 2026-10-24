@@ -588,7 +588,15 @@ def compile_keywords(graph, *, as_of, ticker=None):
                 'known_from':min(r['first_filing_date'] for r in candidates),
                 'evidence_ids':sorted({ref for r in candidates for ref in r['evidence_ids']})}
     annotate_scanner_rows(rows, evidence)
+    stock_evidence=None
+    if graph.get('stock_evidence'):
+        if set(sources)<=allowed_sources:
+            stock_evidence=graph['stock_evidence']
+        else:
+            from .stock_evidence_graph import build
+            stock_evidence=build(graph,as_of=as_of)
     return {'schema':SCHEMA,'as_of':as_of,'records':rows,'evidence':evidence,
+        'stock_evidence':stock_evidence,'stock_evidence_review_only':True,
         'term_inventory':None if inventory is None else {**inventory,'terms':terms,
             'windows':[w for w in inventory['windows'] if w['source_id'] in allowed_sources]},
         'coverage':{'raw_relationships':len(graph['facts']),
