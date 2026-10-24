@@ -87,3 +87,45 @@ copy the corresponding source sample there before reproducing. Baseline code is
 loaded from commit b05eb1b13d01f81f33a30c772c6f092541cf8fd0. Install the pinned grammar
 resources and bootstrap the pinned semantic resources first. Do not substitute
 article matching or a combined retain/reject score for these stock-side results.
+
+## Document-scope candidate v2 — fresh draw 10
+
+The original SEC manifest exhibit type now reaches the evidence graph. An EX-21
+subsidiary schedule establishes a dated, reported group relationship without
+requiring an adjacent ownership verb. Direct ownership is explicitly unknown.
+This is a general source-schema rule; there are no ticker branches.
+
+A committed random draw selected MIRM, SLDE, LZ and LRCX before source inspection.
+Complete archived EX-21 documents existed for SLDE, LZ and LRCX; MIRM had none and
+remains unavailable, not passed. Source-only labels were committed before outputs.
+The 53 reference legal names cover all subsidiary rows of those three documents;
+software credits, countries and footnote laws are outside this channel.
+
+| Subsidiary-name/relationship channel only | Baseline | Candidate v2 |
+|---|---:|---:|
+| Correct complete subsidiary names | 0/53 | 38/53 |
+| Precision | undefined (no output) | 38/40 = 95% |
+| Recall | 0/53 = 0% | 38/53 = 71.7% |
+
+On supplied verified terms, the v2 classifier supports the expected reported
+schedule role for 38/53 names. This is role-specific support, not exact-set
+classification accuracy across all relationships, and must not be combined with
+the earlier broad diagnostic. Fifteen names remain missed; two incomplete Korean
+legal names are extra predictions. The misses include Co., LLP, AG, BV, SAS, GK,
+S.r.l., Sdn. Bhd., B.V. and Sàrl endings. These are observed general boundary
+failures, not reasons to add issuer-specific exceptions. The candidate remains
+below the extraction acceptance target and must stay draft and undeployed.
+
+Raw selected sources and labels are retained alongside predictions. Full-source
+artifact 12551540583 from run 40070478763 is SHA-256
+`e8e6f0d44c0dbb242707f2da99912f7f08d8a1fae862467bff144b6520039ab4`.
+The exact frozen candidate passed 142 controls; `controls-v2.json` records the
+command. `cumulative-v2-open.json` visits all 87 registered modes: 75 stock-side
+modes open, 12 article/Lane/impact modes out of scope, zero certified closures.
+`full-source-execution-v1.json` records the earlier four full-company parsing
+runs; those counts are execution receipts, not reference-labelled accuracy.
+
+Next unresolved work is semantic classification and complete-name extraction,
+followed by independently reviewed whole-source reference inventories on further
+unused issuers. More source access and literal evidence joins have not by
+themselves established the requested stock-side completion.

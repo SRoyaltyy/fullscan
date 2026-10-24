@@ -1,0 +1,1313 @@
+{
+  "schema": "scanner-validation-1",
+  "methodology_sha256": "c5ba4374f5e0d590ba2442644104ae2375c0515c4f8a94bb411b9c5759e4d59b",
+  "release_allowed": false,
+  "reasons": [
+    "missing or stale validation report",
+    "candidate not frozen before holdout review",
+    "random draw not retained before review",
+    "fresh draw absent, superseded, altered or bound to different code",
+    "complete source-based scores required for every reserved issuer",
+    "one or more cumulative failure modes remains open"
+  ],
+  "modes": [
+    {
+      "id": "SRC-01",
+      "mode": "Fetch success mistaken for usable content",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "mode": "Missing exhibits and attachments",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "mode": "Truncated documents",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "mode": "Wrong section or machine text",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "mode": "Useful table content removed",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "mode": "Defective cached extracts skipped on resume",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "mode": "Catalog breadth confused with filing coverage",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "mode": "Richer profiles lost during integration",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "mode": "Filing information not connected to headline path",
+      "status": "out_of_scope",
+      "reasons": [
+        "Retained in the cumulative register; article/Lane/impact work does not block this stock-only milestone."
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "mode": "Access blocks and thin or mismatched responses",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "mode": "Identifier corruption masquerading as missing document",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "mode": "Different API failures collapsed into one status",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "mode": "Redirect handling risked credential leakage",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "mode": "Conditional request headers broke feeds",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "mode": "Deduplication destroyed provenance",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "mode": "Ordering and fallback suppressed usable sources",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "mode": "Page furniture contaminated analysis",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "mode": "Headline-only data treated like whole articles",
+      "status": "out_of_scope",
+      "reasons": [
+        "Retained in the cumulative register; article/Lane/impact work does not block this stock-only milestone."
+      ]
+    },
+    {
+      "id": "EXT-01",
+      "mode": "Generic classes treated as specific identities",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EXT-02",
+      "mode": "Document fragments admitted as terms",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EXT-03",
+      "mode": "Incomplete legal names or provisions",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EXT-04",
+      "mode": "Incomplete company and technical names",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EXT-05",
+      "mode": "Table columns merged into an identity",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EXT-06",
+      "mode": "Generic summary hid recoverable specifics",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EXT-07",
+      "mode": "Extraction depended on relationship triggers",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EXT-08",
+      "mode": "Single-word or commodity terms over-filtered",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EXT-09",
+      "mode": "Named organizations over-filtered",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EXT-10",
+      "mode": "Specific legal references over-filtered",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EXT-11",
+      "mode": "Spelling, inflection and expression mismatches",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "CLS-01",
+      "mode": "Transaction counterparty mistaken for operating customer or supplier",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "CLS-02",
+      "mode": "Financing mistaken for commercial operation",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "CLS-03",
+      "mode": "Employee benefits mistaken for products",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "CLS-04",
+      "mode": "Legal-professional reliance mistaken for issuer operating dependency",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "CLS-05",
+      "mode": "Financial instruments mistaken for upstream materials",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "CLS-06",
+      "mode": "Entity type incompatible with the relationship",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "CLS-07",
+      "mode": "Wrong argument borrowed from same sentence",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "CLS-08",
+      "mode": "Customer/supplier direction reversed",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "CLS-09",
+      "mode": "Internal or nongovernmental body treated as government authority",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "CLS-10",
+      "mode": "Risk, quantity or abstract condition treated as input/dependency",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "CLS-11",
+      "mode": "Valid subsidiary ownership not attached",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "CLS-12",
+      "mode": "Issuer exclusion treated as positive regulatory exposure",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "CLS-13",
+      "mode": "Conditional expression over-rejected",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "CLS-14",
+      "mode": "Threat, forecast or intention treated as completed event",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "CLS-15",
+      "mode": "Different completion stages conflated",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "CLS-16",
+      "mode": "Sentence boundary split discarded qualifiers",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "ID-01",
+      "mode": "Common words or publishers mistaken for ticker aliases",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "ID-02",
+      "mode": "Different full organizations collapsed",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "ID-03",
+      "mode": "Same word assigned to wrong concept",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "ID-04",
+      "mode": "Dictionary's possible meaning treated as current meaning",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "ID-05",
+      "mode": "Explicit company and list mentions missed",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "ID-06",
+      "mode": "Brand/product or subsidiary owner missing",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "ID-07",
+      "mode": "Second-order link promoted to direct topical exposure",
+      "status": "out_of_scope",
+      "reasons": [
+        "Retained in the cumulative register; article/Lane/impact work does not block this stock-only milestone."
+      ]
+    },
+    {
+      "id": "ID-08",
+      "mode": "Industry-wide expansion from one weak match",
+      "status": "out_of_scope",
+      "reasons": [
+        "Retained in the cumulative register; article/Lane/impact work does not block this stock-only milestone."
+      ]
+    },
+    {
+      "id": "ID-09",
+      "mode": "Speaker/analyst/exchange/place leakage",
+      "status": "out_of_scope",
+      "reasons": [
+        "Retained in the cumulative register; article/Lane/impact work does not block this stock-only milestone."
+      ]
+    },
+    {
+      "id": "ID-10",
+      "mode": "Valid named firms excluded before matching",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "ID-11",
+      "mode": "Alias collision blocked correct legal matching",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "LANE-01",
+      "mode": "Wrong person attached to action",
+      "status": "out_of_scope",
+      "reasons": [
+        "Retained in the cumulative register; article/Lane/impact work does not block this stock-only milestone."
+      ]
+    },
+    {
+      "id": "LANE-02",
+      "mode": "Keyword phrase mistaken for concrete event",
+      "status": "out_of_scope",
+      "reasons": [
+        "Retained in the cumulative register; article/Lane/impact work does not block this stock-only milestone."
+      ]
+    },
+    {
+      "id": "LANE-03",
+      "mode": "Valid action detected but Lane/sector wrong",
+      "status": "out_of_scope",
+      "reasons": [
+        "Retained in the cumulative register; article/Lane/impact work does not block this stock-only milestone."
+      ]
+    },
+    {
+      "id": "LANE-04",
+      "mode": "Financial/regulatory meanings assigned to wrong lane",
+      "status": "out_of_scope",
+      "reasons": [
+        "Retained in the cumulative register; article/Lane/impact work does not block this stock-only milestone."
+      ]
+    },
+    {
+      "id": "LANE-05",
+      "mode": "Useful actions or event families absent",
+      "status": "out_of_scope",
+      "reasons": [
+        "Retained in the cumulative register; article/Lane/impact work does not block this stock-only milestone."
+      ]
+    },
+    {
+      "id": "OPS-01",
+      "mode": "Production ran an older implementation",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "OPS-02",
+      "mode": "Green health status concealed failures",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "OPS-03",
+      "mode": "Arbitrary timeout stopped publication",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "OPS-04",
+      "mode": "Concurrent writers conflicted",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "OPS-05",
+      "mode": "Merged/tested code confused with live behavior",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "OPS-06",
+      "mode": "Stale viewer manifest",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "OPS-07",
+      "mode": "Audit/corpus continuity lost",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "OPS-08",
+      "mode": "Environment or settings differed from assumptions",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EVAL-01",
+      "mode": "Extraction and classification collapsed into one score",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EVAL-02",
+      "mode": "Recall computed only from already extracted rows",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EVAL-03",
+      "mode": "Development success mistaken for generalization",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EVAL-04",
+      "mode": "New regressions hidden by aggregate improvement",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EVAL-05",
+      "mode": "Passing regression/unit/browser tests treated as accuracy proof",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EVAL-06",
+      "mode": "Ticker invariance treated as semantic proof",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EVAL-07",
+      "mode": "Biased sample extrapolated to whole scanner",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EVAL-08",
+      "mode": "No useful frozen real-world corpus / easy-negative sampling",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EVAL-09",
+      "mode": "Holdout reuse and label drift",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EVAL-10",
+      "mode": "Synthetic evidence presented as production-equivalent text",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EVAL-11",
+      "mode": "Unreviewed or wrong identity labels treated as gold",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EVAL-12",
+      "mode": "Comparator/schema errors hid or created failures",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EVAL-13",
+      "mode": "Error/unknown/unlabeled conflated with negative/correct",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EVAL-14",
+      "mode": "Calibrated confidence inferred from overlap/statistical scores",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EVAL-15",
+      "mode": "Curated coverage mistaken for broad implementation",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "EVAL-16",
+      "mode": "Unsupported output and premature completion claims",
+      "status": "open",
+      "reasons": [
+        "original_reproducer missing, unreviewed or failed",
+        "fresh_real_issuer missing, unreviewed or failed",
+        "useful_positive_control missing, unreviewed or failed",
+        "changed_decisions missing, unreviewed or failed",
+        "result is not bound to current methodology",
+        "fresh test not bound to this reserved draw",
+        "fresh test is not real stored source text",
+        "fresh issuer is not a different reserved holdout issuer",
+        "fresh reproducer lacks a verified unchanged source quotation"
+      ]
+    },
+    {
+      "id": "IMPACT-01",
+      "mode": "Identity match mistaken for financial effect",
+      "status": "out_of_scope",
+      "reasons": [
+        "Retained in the cumulative register; article/Lane/impact work does not block this stock-only milestone."
+      ]
+    },
+    {
+      "id": "IMPACT-02",
+      "mode": "Missing dates, net exposure and business scope",
+      "status": "out_of_scope",
+      "reasons": [
+        "Retained in the cumulative register; article/Lane/impact work does not block this stock-only milestone."
+      ]
+    }
+  ],
+  "classification_threshold": null,
+  "classification_policy": "Report isolated and end-to-end scores; no user-specified aggregate threshold."
+}

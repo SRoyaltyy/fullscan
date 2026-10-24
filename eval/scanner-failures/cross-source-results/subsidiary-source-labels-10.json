@@ -1,0 +1,776 @@
+{
+  "scope": "Complete EX-21/EX-21.1 documents present in four randomly reserved issuers. Subsidiary-name/relationship channel only; not overall extraction accuracy. Footnote laws, authoring software and jurisdictions are outside this channel. Clegg d/b/a Homefront is treated as one legal entity, legal name scored; no separate alias score.",
+  "annotation": "Assistant source-first review before any candidate/baseline outputs; not independent human review. Exact complete names; country/jurisdiction excluded.",
+  "draw_id": "d713d319e4686cd56fc3d4736f760470ce7e8520aae52f1c8ef02920f908a8b6",
+  "methodology_sha256": "c5ba4374f5e0d590ba2442644104ae2375c0515c4f8a94bb411b9c5759e4d59b",
+  "source_sha256": "1257654a6148572c800cf196add4dc5d112418a9e282c9cefe2b3ed0840f645c",
+  "artifact_id": 12551540583,
+  "artifact_sha256": "e8e6f0d44c0dbb242707f2da99912f7f08d8a1fae862467bff144b6520039ab4",
+  "cases": [
+    {
+      "ticker": "LZ",
+      "terms": [
+        {
+          "name": "Earth Class Mail, Inc.",
+          "witnesses": [
+            {
+              "source_id": "0:0",
+              "start": 173,
+              "end": 195,
+              "text": "Earth Class Mail, Inc."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Formation Nation, LLC",
+          "witnesses": [
+            {
+              "source_id": "0:0",
+              "start": 209,
+              "end": 230,
+              "text": "Formation Nation, LLC"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Inc Authority, LLC",
+          "witnesses": [
+            {
+              "source_id": "0:0",
+              "start": 242,
+              "end": 260,
+              "text": "Inc Authority, LLC"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        }
+      ],
+      "status": "available"
+    },
+    {
+      "ticker": "LRCX",
+      "terms": [
+        {
+          "name": "Lam Research AG",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 193,
+              "end": 208,
+              "text": "Lam Research AG"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Management GmbH",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 219,
+              "end": 247,
+              "text": "Lam Research Management GmbH"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Salzburg GmbH",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 258,
+              "end": 284,
+              "text": "Lam Research Salzburg GmbH"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Belgium BV",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 295,
+              "end": 318,
+              "text": "Lam Research Belgium BV"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Novellus Systems, Inc.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 329,
+              "end": 351,
+              "text": "Novellus Systems, Inc."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Novellus Systems International, LLC",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 380,
+              "end": 415,
+              "text": "Novellus Systems International, LLC"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Capital Ltd.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 444,
+              "end": 469,
+              "text": "Lam Research Capital Ltd."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Semiconductor (Shanghai) Co. Ltd.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 487,
+              "end": 533,
+              "text": "Lam Research Semiconductor (Shanghai) Co. Ltd."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research (Shanghai) Co., Ltd.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 542,
+              "end": 575,
+              "text": "Lam Research (Shanghai) Co., Ltd."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Service Co., Ltd.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 584,
+              "end": 614,
+              "text": "Lam Research Service Co., Ltd."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Coventor, Inc.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 623,
+              "end": 637,
+              "text": "Coventor, Inc."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Capital LLC",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 664,
+              "end": 688,
+              "text": "Lam Research Capital LLC"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research International Holding Company",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 715,
+              "end": 757,
+              "text": "Lam Research International Holding Company"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Silfex, Inc.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 784,
+              "end": 796,
+              "text": "Silfex, Inc."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "SpeedFam-IPEC International Services, LLC",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 823,
+              "end": 864,
+              "text": "SpeedFam-IPEC International Services, LLC"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research SAS",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 891,
+              "end": 907,
+              "text": "Lam Research SAS"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research GmbH",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 917,
+              "end": 934,
+              "text": "Lam Research GmbH"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research (H.K.) Limited",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 945,
+              "end": 972,
+              "text": "Lam Research (H.K.) Limited"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research (India) Private Limited",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 985,
+              "end": 1021,
+              "text": "Lam Research (India) Private Limited"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Services (India) Private Limited",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1030,
+              "end": 1075,
+              "text": "Lam Research Services (India) Private Limited"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Silfex India Mfg Private Limited",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1084,
+              "end": 1116,
+              "text": "Silfex India Mfg Private Limited"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research (Ireland) Limited",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1125,
+              "end": 1155,
+              "text": "Lam Research (Ireland) Limited"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research (Israel) Ltd.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1166,
+              "end": 1192,
+              "text": "Lam Research (Israel) Ltd."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Services Ltd.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1202,
+              "end": 1228,
+              "text": "Lam Research Services Ltd."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research S.r.l.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1238,
+              "end": 1257,
+              "text": "Lam Research S.r.l."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research GK",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1266,
+              "end": 1281,
+              "text": "Lam Research GK"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Malaysia Sdn. Bhd.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1290,
+              "end": 1321,
+              "text": "Lam Research Malaysia Sdn. Bhd."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research International Sdn. Bhd.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1333,
+              "end": 1369,
+              "text": "Lam Research International Sdn. Bhd."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Holdings B.V.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1381,
+              "end": 1407,
+              "text": "Lam Research Holdings B.V."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research International B.V.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1422,
+              "end": 1453,
+              "text": "Lam Research International B.V."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Korea LLC YH",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1468,
+              "end": 1493,
+              "text": "Lam Research Korea LLC YH"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Korea Technology LLC YH",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1514,
+              "end": 1550,
+              "text": "Lam Research Korea Technology LLC YH"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Manufacturing Korea LLC",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1571,
+              "end": 1607,
+              "text": "Lam Research Manufacturing Korea LLC"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Singapore Pte Ltd",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1628,
+              "end": 1658,
+              "text": "Lam Research Singapore Pte Ltd"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Holding GmbH",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1671,
+              "end": 1696,
+              "text": "Lam Research Holding GmbH"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research International Sàrl",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1711,
+              "end": 1742,
+              "text": "Lam Research International Sàrl"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Co., Ltd.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1757,
+              "end": 1779,
+              "text": "Lam Research Co., Ltd."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Manufacturing, Ltd.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1789,
+              "end": 1821,
+              "text": "Lam Research Manufacturing, Ltd."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research Taiwan Technology Co, Ltd.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1831,
+              "end": 1870,
+              "text": "Lam Research Taiwan Technology Co, Ltd."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Lam Research U.K. Ltd.",
+          "witnesses": [
+            {
+              "source_id": "1:0",
+              "start": 1880,
+              "end": 1902,
+              "text": "Lam Research U.K. Ltd."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        }
+      ],
+      "status": "available"
+    },
+    {
+      "ticker": "SLDE",
+      "terms": [
+        {
+          "name": "Slide Insurance Co.",
+          "witnesses": [
+            {
+              "source_id": "2:0",
+              "start": 267,
+              "end": 286,
+              "text": "Slide Insurance Co."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Slide Specialty Insurance Company",
+          "witnesses": [
+            {
+              "source_id": "2:0",
+              "start": 307,
+              "end": 340,
+              "text": "Slide Specialty Insurance Company"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Slide MGA, LLC",
+          "witnesses": [
+            {
+              "source_id": "2:0",
+              "start": 366,
+              "end": 380,
+              "text": "Slide MGA, LLC"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Slide Technologies, LLC",
+          "witnesses": [
+            {
+              "source_id": "2:0",
+              "start": 401,
+              "end": 424,
+              "text": "Slide Technologies, LLC"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Slide Reinsurance Holdings, LLC",
+          "witnesses": [
+            {
+              "source_id": "2:0",
+              "start": 445,
+              "end": 476,
+              "text": "Slide Reinsurance Holdings, LLC"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Stat Claims Co.",
+          "witnesses": [
+            {
+              "source_id": "2:0",
+              "start": 497,
+              "end": 512,
+              "text": "Stat Claims Co."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Trusted Mitigation Contractors, Inc.",
+          "witnesses": [
+            {
+              "source_id": "2:0",
+              "start": 533,
+              "end": 569,
+              "text": "Trusted Mitigation Contractors, Inc."
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "Clegg Insurance Advisors, LLC",
+          "witnesses": [
+            {
+              "source_id": "2:0",
+              "start": 590,
+              "end": 619,
+              "text": "Clegg Insurance Advisors, LLC"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "SIH Technologies LLP",
+          "witnesses": [
+            {
+              "source_id": "2:0",
+              "start": 656,
+              "end": 676,
+              "text": "SIH Technologies LLP"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        },
+        {
+          "name": "SJIG Target, LLC",
+          "witnesses": [
+            {
+              "source_id": "2:0",
+              "start": 695,
+              "end": 711,
+              "text": "SJIG Target, LLC"
+            }
+          ],
+          "expected_role": "listed_subsidiary",
+          "assertion": "reported",
+          "direct_ownership_established": false
+        }
+      ],
+      "status": "available"
+    },
+    {
+      "ticker": "MIRM",
+      "terms": [],
+      "status": "unavailable_no_EX21_in_archive"
+    }
+  ]
+}

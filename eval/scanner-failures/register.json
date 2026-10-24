@@ -338,7 +338,17 @@
         "audit"
       ],
       "evidence_level": "observed",
-      "status": "Open or current recurrence status not revalidated"
+      "status": "Open or current recurrence status not revalidated",
+      "incidents": [
+        {
+          "id": "EXT-04-20261024-document-scope",
+          "status": "open",
+          "source": "cross-source-results/subsidiary-results-10.json",
+          "example": "Fresh draw: LRCX complete names ending LLC YH were clipped to LLC; international legal endings and SLDE Co./LLP names were missed.",
+          "expected": "Preserve the full named entity and accept subsidiary rows from explicit source document scope without issuer-specific exceptions.",
+          "candidate_methodology_sha256": "c5ba4374f5e0d590ba2442644104ae2375c0515c4f8a94bb411b9c5759e4d59b"
+        }
+      ]
     },
     {
       "id": "EXT-05",
@@ -410,7 +420,17 @@
         "thread"
       ],
       "evidence_level": "observed",
-      "status": "Open or current recurrence status not revalidated"
+      "status": "Open or current recurrence status not revalidated",
+      "incidents": [
+        {
+          "id": "EXT-09-20261024-document-scope",
+          "status": "open",
+          "source": "cross-source-results/subsidiary-results-10.json",
+          "example": "Fresh draw: LRCX complete names ending LLC YH were clipped to LLC; international legal endings and SLDE Co./LLP names were missed.",
+          "expected": "Preserve the full named entity and accept subsidiary rows from explicit source document scope without issuer-specific exceptions.",
+          "candidate_methodology_sha256": "c5ba4374f5e0d590ba2442644104ae2375c0515c4f8a94bb411b9c5759e4d59b"
+        }
+      ]
     },
     {
       "id": "EXT-10",
