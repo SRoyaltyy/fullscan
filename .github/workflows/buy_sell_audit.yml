@@ -61,7 +61,7 @@ on:
       - "dashboard/factor-mine/preopen.json"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   audit:
@@ -78,6 +78,20 @@ jobs:
         run: git fetch --depth=1 --no-tags origin main
       - name: Buy/sell audit tests
         run: python3 -m src.test_buy_sell_audit
+      - name: Record first-seal baselines for newly sealed days (add-only)
+        # Before 10-18 this was a manual `--seed` step; nobody ran it after
+        # 10-17, so every later sealed day showed NEW and the job went red.
+        # seed() only appends missing strategy-days and refuses (exit 1) to
+        # rewrite any existing first seal. Never runs on pull requests.
+        if: github.event_name != 'pull_request'
+        run: |
+          set -euo pipefail
+          python3 -m src.buy_sell_audit --seed
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          bash scripts/safe_git_push.sh \
+            "chore: buy-sell audit first-seal baselines (add-only)" \
+            data/buy_sell_audit/baselines.jsonl
       - name: Checkout Theme Radar main
         run: |
           set -euo pipefail
