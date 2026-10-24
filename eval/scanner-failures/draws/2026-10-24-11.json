@@ -1,0 +1,48 @@
+{
+  "schema": "scanner-validation-1",
+  "seed": 74936595410908583168289886545214251539,
+  "methodology_sha256": "1abc2b514c750c97ac3b58cd4467b7b42c0f3c3a1dae2e578fa50bbc72818b39",
+  "catalog_sha256": "a79e905bacc6a9acfbf8c9c0510d970b4cec3590d276c947c5a20a6e8649e8f9",
+  "eligible_issuers": 1836,
+  "issuers": [
+    {
+      "issuer_id": "0001385157",
+      "ticker": "TEL",
+      "split": "development",
+      "source_asset": {
+        "sha256": "781ba59bdac65e2729567068f76258c9449b09bd91e9661db9fffe3378803708",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001385157.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001515964",
+      "ticker": "GORO",
+      "split": "development",
+      "source_asset": {
+        "sha256": "93aacd13c6c14ff330dc0b32ede09a4b4fba72835c2b378f92c36a0e40fbf37b",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001515964.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0001671933",
+      "ticker": "TTD",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "6f3e3d53ee4705b22fc64fa358229437e71a98ae4800ca055a71e4e3516c6fd2",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001671933.json.gz"
+      }
+    },
+    {
+      "issuer_id": "0002055592",
+      "ticker": "GEMI",
+      "split": "holdout",
+      "source_asset": {
+        "sha256": "75751e137e04f3805791add1bd8f4ce32cb5bb0c79012d1d65041944317477e1",
+        "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0002055592.json.gz"
+      }
+    }
+  ],
+  "state": "reserved",
+  "previous_ledger_sha256": "16a191c9267bb93311b30bd045ca1f1441af2a17e27c47f7f0d1f431e40f08da",
+  "id": "38b8a17737162201e11fde99d20eb16c7e4bff73349ea697fe0226af9681bb13"
+}

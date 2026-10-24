@@ -1530,6 +1530,150 @@
       "state": "reserved",
       "previous_ledger_sha256": "fc81e946b10a89f6be1a98e98362aa282f218b5e57f43fc6709934cc8b70653d",
       "id": "d713d319e4686cd56fc3d4736f760470ce7e8520aae52f1c8ef02920f908a8b6"
+    },
+    {
+      "schema": "scanner-validation-1",
+      "seed": 74936595410908583168289886545214251539,
+      "methodology_sha256": "1abc2b514c750c97ac3b58cd4467b7b42c0f3c3a1dae2e578fa50bbc72818b39",
+      "catalog_sha256": "a79e905bacc6a9acfbf8c9c0510d970b4cec3590d276c947c5a20a6e8649e8f9",
+      "eligible_issuers": 1836,
+      "issuers": [
+        {
+          "issuer_id": "0001385157",
+          "ticker": "TEL",
+          "split": "development",
+          "source_asset": {
+            "sha256": "781ba59bdac65e2729567068f76258c9449b09bd91e9661db9fffe3378803708",
+            "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001385157.json.gz"
+          }
+        },
+        {
+          "issuer_id": "0001515964",
+          "ticker": "GORO",
+          "split": "development",
+          "source_asset": {
+            "sha256": "93aacd13c6c14ff330dc0b32ede09a4b4fba72835c2b378f92c36a0e40fbf37b",
+            "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001515964.json.gz"
+          }
+        },
+        {
+          "issuer_id": "0001671933",
+          "ticker": "TTD",
+          "split": "holdout",
+          "source_asset": {
+            "sha256": "6f3e3d53ee4705b22fc64fa358229437e71a98ae4800ca055a71e4e3516c6fd2",
+            "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001671933.json.gz"
+          }
+        },
+        {
+          "issuer_id": "0002055592",
+          "ticker": "GEMI",
+          "split": "holdout",
+          "source_asset": {
+            "sha256": "75751e137e04f3805791add1bd8f4ce32cb5bb0c79012d1d65041944317477e1",
+            "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0002055592.json.gz"
+          }
+        }
+      ],
+      "state": "reserved",
+      "previous_ledger_sha256": "16a191c9267bb93311b30bd045ca1f1441af2a17e27c47f7f0d1f431e40f08da",
+      "id": "38b8a17737162201e11fde99d20eb16c7e4bff73349ea697fe0226af9681bb13"
+    },
+    {
+      "schema": "scanner-validation-1",
+      "seed": 115508333672465359147889491835566112494,
+      "methodology_sha256": "494f0d067575f5f2e7b958f94638800f0b6e1bac5288c5b17798017c4f49b7da",
+      "catalog_sha256": "a79e905bacc6a9acfbf8c9c0510d970b4cec3590d276c947c5a20a6e8649e8f9",
+      "eligible_issuers": 1832,
+      "issuers": [
+        {
+          "issuer_id": "0001104485",
+          "ticker": "NOG",
+          "split": "development",
+          "source_asset": {
+            "sha256": "945aa2bc78b2ee555365770b3f5c3d19455560142108751675dbb640965a6cfb",
+            "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001104485.json.gz"
+          }
+        },
+        {
+          "issuer_id": "0001777835",
+          "ticker": "PWP",
+          "split": "development",
+          "source_asset": {
+            "sha256": "e179a77b990201c1a970158391f287bca2bec9e1ba21bce6eb082f2fe45051d7",
+            "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001777835.json.gz"
+          }
+        },
+        {
+          "issuer_id": "0001821159",
+          "ticker": "EVGO",
+          "split": "holdout",
+          "source_asset": {
+            "sha256": "852282b74f7e1b7122209b36e5aa12853a75e060ab741dbf1fd7011c80661b65",
+            "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001821159.json.gz"
+          }
+        },
+        {
+          "issuer_id": "0001784570",
+          "ticker": "BETA",
+          "split": "holdout",
+          "source_asset": {
+            "sha256": "ab64bbf322ed580139394b204ad4420ee81ab77589673554807f7b052dba7f54",
+            "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001784570.json.gz"
+          }
+        }
+      ],
+      "state": "reserved",
+      "previous_ledger_sha256": "aadecfb4decc12576583d76978af49aa52dc4ee95f093c0592ed18e9c468b9c2",
+      "id": "7eb0731cf60079a5179ceceb4a60843cea739f5d3c4805a287a66bb0d3f6e360"
+    },
+    {
+      "schema": "scanner-validation-1",
+      "seed": 299877204201781354928265619620750023708,
+      "methodology_sha256": "5acd7333122e1f68a1aff0b3106346a8600e9289f0b3e1d777e1439514376caa",
+      "catalog_sha256": "a79e905bacc6a9acfbf8c9c0510d970b4cec3590d276c947c5a20a6e8649e8f9",
+      "eligible_issuers": 1828,
+      "issuers": [
+        {
+          "issuer_id": "0001854368",
+          "ticker": "DGXX",
+          "split": "development",
+          "source_asset": {
+            "sha256": "b16d18a4734864a0fbd36ab7c86ef33eab5bb6a143c7fcd4b4db355250cd00a1",
+            "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001854368.json.gz"
+          }
+        },
+        {
+          "issuer_id": "0002017206",
+          "ticker": "MRP",
+          "split": "development",
+          "source_asset": {
+            "sha256": "8b01ff0589650caee947a09694b9a06fa22198ed7559dbfd95cfbf3860336c5e",
+            "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0002017206.json.gz"
+          }
+        },
+        {
+          "issuer_id": "0001006281",
+          "ticker": "PLX",
+          "split": "holdout",
+          "source_asset": {
+            "sha256": "e42d74e7135f1b039c2e594a9ba3d6368133297a5ce0909c260f19fc77f37372",
+            "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001006281.json.gz"
+          }
+        },
+        {
+          "issuer_id": "0002109150",
+          "ticker": "INIO",
+          "split": "holdout",
+          "source_asset": {
+            "sha256": "8fece893d3895a0661b3dcfd5b1e5dcaa0f4b7e97715c769afcaf368c09636c3",
+            "url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0002109150.json.gz"
+          }
+        }
+      ],
+      "state": "reserved",
+      "previous_ledger_sha256": "2f6b3dc109595180e9566d6d64fabebb5dba03c1c027ea79592fa42dda7e3024",
+      "id": "de2f20f8c085a502b773d4132e2befee5810dfd0df2f319ae83e0cb40afbb227"
     }
   ]
 }
