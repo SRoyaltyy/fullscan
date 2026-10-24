@@ -1,5 +1,1145 @@
 [
   {
+    "document_id": "9b1d1f14a9b8f9bec8a19d49",
+    "title": "Vanessa Trump says she is cancer-free six months after revealing diagnosis",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.bbc.co.uk/news/articles/cm1dwzvn6227o?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-10-24T14:45:30+00:00",
+    "known_at": "2026-10-24T14:45:30+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Vanessa Trump says she is cancer-free six months after revealing diagnosis",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "bfe56580c156d0a03a1c7636",
+    "title": "Looking for AI stocks that are still cheap? Consider these two under-the-radar picks.",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.marketwatch.com/story/looking-for-ai-stocks-that-are-still-cheap-consider-these-two-under-the-radar-picks-b4ca2b28?mod=mw_rss_topstories",
+    "published_at": "2026-10-24T14:40:00+00:00",
+    "known_at": "2026-10-24T14:40:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Looking for AI stocks that are still cheap? Consider these two under-the-radar picks.",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "5dec89aa3d7b0639d84ce5ef",
+    "title": "Full lockdown of occupied West Bank begins",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/full-lockdown-of-occupied-west-bank-begins-2?traffic_source=rss",
+    "published_at": "2026-10-24T14:24:19+00:00",
+    "known_at": "2026-10-24T14:24:19+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Full lockdown of occupied West Bank begins",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "94a22b6e7f4c10af846f9c7d",
+    "title": "Ukraine says Starlink restored as attacks continue in Russia and Ukraine",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/2026/10/24/ukraine-says-starlink-restored-as-attacks-continue-in-russia-and-ukraine?traffic_source=rss",
+    "published_at": "2026-10-24T14:23:40+00:00",
+    "known_at": "2026-10-24T14:23:40+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Ukraine says Starlink restored as attacks continue in Russia and Ukraine",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "5b8dce020baeb2f2182409a4",
+    "title": "Ballon d’Or 2026: Can Kylian Mbappe’s Real Madrid and France record win it?",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/sports/2026/10/24/ballon-dor-2026-can-kylian-mbappes-real-madrid-and-france-record-win-it?traffic_source=rss",
+    "published_at": "2026-10-24T14:21:34+00:00",
+    "known_at": "2026-10-24T14:21:34+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Ballon d’Or 2026: Can Kylian Mbappe’s Real Madrid and France record win it?",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "7c28a0402996f9271bf99d1f",
+    "title": "Man City beaten at Aston Villa as perfect Premier League start ends",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/sports/2026/10/24/aston-villa-inflict-man-citys-first-premier-league-defeat-of-the-season?traffic_source=rss",
+    "published_at": "2026-10-24T14:04:27+00:00",
+    "known_at": "2026-10-24T14:04:27+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Man City beaten at Aston Villa as perfect Premier League start ends",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "f185701a972dd236e1721cc4",
+    "title": "Do abstaining voters hold the key to Brazil’s 2026 presidential election?",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/longform/2026/10/24/do-abstaining-voters-hold-the-key-to-brazils-2026-presidential-election?traffic_source=rss",
+    "published_at": "2026-10-24T13:58:14+00:00",
+    "known_at": "2026-10-24T13:58:14+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Do abstaining voters hold the key to Brazil’s 2026 presidential election?",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "2b0b0e939bd83a3ab133e7c1",
+    "title": "Rybakina readies for title defence at Ningbo Open in final with Fernandez",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/sports/2026/10/24/rybakina-readies-for-title-defence-at-ningbo-open-in-final-with-fernandez?traffic_source=rss",
+    "published_at": "2026-10-24T13:52:08+00:00",
+    "known_at": "2026-10-24T13:52:08+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Rybakina readies for title defence at Ningbo Open in final with Fernandez",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "bde65e19fa800b5ce5c05537",
+    "title": "Sudan’s soaring fuel prices make getting by harder for workers",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/economy/2026/10/24/sudans-soaring-fuel-prices-makes-getting-by-harder-for-workers?traffic_source=rss",
+    "published_at": "2026-10-24T13:51:08+00:00",
+    "known_at": "2026-10-24T13:51:08+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Sudan’s soaring fuel prices make getting by harder for workers",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "dd97a3b73a37cc20c3a74d55",
+    "title": "Who was behind the deadly church shooting in Jordan?",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/2026/10/24/who-was-behind-the-deadly-church-shooting-in-jordan?traffic_source=rss",
+    "published_at": "2026-10-24T13:39:26+00:00",
+    "known_at": "2026-10-24T13:39:26+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Who was behind the deadly church shooting in Jordan?",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "eb1e65a477c1ca94dcf97e9a",
+    "title": "Investors’ recent money moves show a preference for lowering risks over boosting rewards",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.marketwatch.com/story/investors-recent-money-moves-show-a-preference-for-quality-over-momentum-within-the-s-p-500-ed6b5149?mod=mw_rss_topstories",
+    "published_at": "2026-10-24T13:37:00+00:00",
+    "known_at": "2026-10-24T13:37:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Investors’ recent money moves show a preference for lowering risks over boosting rewards",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "97d25e1735d35c7dce5ec905",
+    "title": "My niece’s college rent is covered by a 529 plan. What else can I pay for tax-free?",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.marketwatch.com/story/my-nieces-college-rent-is-covered-by-a-529-plan-what-else-can-i-pay-for-tax-free-d1686b63?mod=mw_rss_topstories",
+    "published_at": "2026-10-24T13:28:00+00:00",
+    "known_at": "2026-10-24T13:28:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: My niece’s college rent is covered by a 529 plan. What else can I pay for tax-free?",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "2580e8ace053b205c779ca96",
+    "title": "Netanyahu floats Crypto to bypass sanctions",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/netanyahu-floats-crypto-to-bypass-sanctions?traffic_source=rss",
+    "published_at": "2026-10-24T13:27:11+00:00",
+    "known_at": "2026-10-24T13:27:11+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Netanyahu floats Crypto to bypass sanctions",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "305d4953415f3861db1f1a69",
+    "title": "Armed Israeli settlers try to break into Palestinian grandfather’s home",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/armed-israeli-settlers-try-to-break-into-palestinian-grandfathers-home?traffic_source=rss",
+    "published_at": "2026-10-24T13:16:23+00:00",
+    "known_at": "2026-10-24T13:16:23+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Armed Israeli settlers try to break into Palestinian grandfather’s home",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "2b05c2266898a2e79b43061e",
+    "title": "FIFA’s Infantino touts global re-election support amid resignation questions",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/sports/2026/10/24/fifas-infantino-touts-global-re-election-support-amid-resignation-questions?traffic_source=rss",
+    "published_at": "2026-10-24T13:12:03+00:00",
+    "known_at": "2026-10-24T13:12:03+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: FIFA’s Infantino touts global re-election support amid resignation questions",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "b031477879e3b70294abd3f5",
+    "title": "Iran says won’t allow US warships to get close as Trump ponders new attacks",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/2026/10/24/iran-says-wont-allow-us-warships-to-get-close-as-trump-ponders-new-attacks?traffic_source=rss",
+    "published_at": "2026-10-24T13:06:03+00:00",
+    "known_at": "2026-10-24T13:06:03+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Iran says won’t allow US warships to get close as Trump ponders new attacks",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "a7dd7230764684f6b2dcd0fd",
+    "title": "Jordan’s King Abdullah orders firm response after deadly church attack",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/2026/10/24/jordans-king-abdullah-orders-firm-response-after-deadly-church-attack?traffic_source=rss",
+    "published_at": "2026-10-24T13:02:51+00:00",
+    "known_at": "2026-10-24T13:02:51+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Jordan’s King Abdullah orders firm response after deadly church attack",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "9ce58a0e2586f2c49692be41",
+    "title": "France protests live: 135 arrested as marches held under tight security",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/liveblog/2026/10/24/france-protests-live-135-arrested-as-marches-held-under-tight-security?traffic_source=rss",
+    "published_at": "2026-10-24T12:55:37+00:00",
+    "known_at": "2026-10-24T12:55:37+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: France protests live: 135 arrested as marches held under tight security",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "b8133e4e69d10730660781ba",
+    "title": "Is Iran planning attacks on Americans; why is the US on alert?",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/2026/10/24/is-iran-planning-attacks-on-americans-why-is-the-us-on-alert?traffic_source=rss",
+    "published_at": "2026-10-24T12:51:21+00:00",
+    "known_at": "2026-10-24T12:51:21+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Is Iran planning attacks on Americans; why is the US on alert?",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "cf91efcadfe843e2850b5f0b",
+    "title": "Malaysia considers complete ban on Israel-based navigation app Waze",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/video/newsfeed/2026/10/24/malaysia-waze-israel-ban?traffic_source=rss",
+    "published_at": "2026-10-24T12:30:42+00:00",
+    "known_at": "2026-10-24T12:30:42+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Malaysia considers complete ban on Israel-based navigation app Waze",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "47f6c029a11469e635cc376f",
     "title": "5.3-magnitude earthquake strikes Qinghai days after deadly Tibet quake - India Today",
     "evidence_file": "documents.json",
@@ -10973,6 +12113,63 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: No Tsunami threat to PH after 7.2 magnitude Vanuatu earthquake - Phivolcs - Daily Tribune",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "d14f1415a00f6f282482545a",
+    "title": "Three released without charge after fatal arson attack in Ireland",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.bbc.co.uk/news/articles/cv0ld9571511o?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-10-24T09:38:28+00:00",
+    "known_at": "2026-10-24T09:38:28+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Three released without charge after fatal arson attack in Ireland",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -580527,7 +581724,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -580716,7 +581913,7 @@
     "published_at": "2026-10-22T15:00:02+00:00",
     "known_at": "2026-10-22T15:00:02+00:00",
     "candidate_classes": [],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "discard",
@@ -581114,7 +582311,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -581230,7 +582427,7 @@
     "candidate_classes": [
       "cat_weather"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "cat_weather",
@@ -581408,7 +582605,7 @@
     "candidate_classes": [
       "cat_weather"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "cat_weather",
@@ -581703,7 +582900,7 @@
       "capital_return",
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -581781,7 +582978,7 @@
       "capital_return",
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -581859,7 +583056,7 @@
       "capital_return",
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -581994,7 +583191,7 @@
       "access_control",
       "sanction_lift"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "sanction_lift",
@@ -582053,7 +583250,7 @@
     "candidate_classes": [
       "guidance"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "guidance",
@@ -582196,7 +583393,7 @@
     "candidate_classes": [
       "trial_readout"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "trial_readout",
@@ -582335,7 +583532,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -582394,7 +583591,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -582574,7 +583771,7 @@
     "candidate_classes": [
       "cat_weather"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "cat_weather",
@@ -583286,7 +584483,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -583691,7 +584888,7 @@
     "candidate_classes": [
       "strategic_review"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "strategic_review",
@@ -584058,7 +585255,7 @@
     "candidate_classes": [
       "input_cost"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "input_cost",
@@ -584484,7 +585681,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -584677,7 +585874,7 @@
     "candidate_classes": [
       "blast_ops"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_ops",
@@ -585016,7 +586213,7 @@
     "candidate_classes": [
       "guidance"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "guidance",
@@ -585330,7 +586527,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -585508,7 +586705,7 @@
       "gate",
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -585644,7 +586841,7 @@
     "candidate_classes": [
       "product_harm"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "product_harm",
@@ -586132,7 +587329,7 @@
     "candidate_classes": [
       "dilution"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "dilution",
@@ -586287,7 +587484,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -586369,7 +587566,7 @@
     "candidate_classes": [
       "sanction_lift"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "sanction_lift",
@@ -586549,7 +587746,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -586763,7 +587960,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -586827,7 +588024,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -586948,7 +588145,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -587082,7 +588279,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -587336,7 +588533,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -587457,7 +588654,7 @@
     "candidate_classes": [
       "access_control"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "access_control",
@@ -587705,7 +588902,7 @@
     "candidate_classes": [
       "key_person"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "key_person",
@@ -587828,7 +589025,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -587949,7 +589146,7 @@
     "candidate_classes": [
       "capacity"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "capacity",
@@ -588070,7 +589267,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -588261,7 +589458,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -588630,7 +589827,7 @@
     "candidate_classes": [
       "guidance"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "guidance",
@@ -588776,7 +589973,7 @@
     "candidate_classes": [
       "labor_stop"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
@@ -588835,7 +590032,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -588970,7 +590167,7 @@
       "integrity",
       "key_person"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "key_person",
@@ -589234,7 +590431,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -589298,7 +590495,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -589419,7 +590616,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -589535,7 +590732,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -589594,7 +590791,7 @@
     "candidate_classes": [
       "labor_stop"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
@@ -589802,7 +590999,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -589866,7 +591063,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -590154,7 +591351,7 @@
       "distress_restruct",
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -590500,7 +591697,7 @@
     "candidate_classes": [
       "dilution"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "dilution",
@@ -591046,7 +592243,7 @@
     "candidate_classes": [
       "blast_legal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -591741,7 +592938,7 @@
     "candidate_classes": [
       "capacity"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "capacity",
@@ -592012,7 +593209,7 @@
     "candidate_classes": [
       "trial_readout"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "trial_readout",
@@ -592244,7 +593441,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -592326,7 +593523,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -592385,7 +593582,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -592444,7 +593641,7 @@
     "candidate_classes": [
       "distress_restruct"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "distress_restruct",
@@ -592701,7 +593898,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -592760,7 +593957,7 @@
     "candidate_classes": [
       "guidance"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "guidance",
@@ -593015,7 +594212,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -593266,7 +594463,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -593387,7 +594584,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -593567,7 +594764,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -593781,7 +594978,7 @@
     "candidate_classes": [
       "distress_restruct"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "distress_restruct",
@@ -593845,7 +595042,7 @@
     "candidate_classes": [
       "distress_restruct"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "distress_restruct",
@@ -594025,7 +595222,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -594230,7 +595427,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "regime_state",
@@ -594824,7 +596021,7 @@
     "candidate_classes": [
       "key_person"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "key_person",
@@ -594947,7 +596144,7 @@
     "candidate_classes": [
       "guidance"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "guidance",
@@ -595177,7 +596374,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -596010,7 +597207,7 @@
     "candidate_classes": [
       "access_control"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "access_control",
@@ -596242,7 +597439,7 @@
     "candidate_classes": [
       "dilution"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "dilution",
@@ -596381,7 +597578,7 @@
     "candidate_classes": [
       "product_harm"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "product_harm",
@@ -596556,7 +597753,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -596692,7 +597889,7 @@
     "candidate_classes": [
       "labor_stop"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
@@ -596751,7 +597948,7 @@
     "candidate_classes": [
       "factor_impulse"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "regime_state",
@@ -596810,7 +598007,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -597476,7 +598673,7 @@
     "candidate_classes": [
       "dilution"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "dilution",
@@ -597860,7 +599057,7 @@
       "dilution",
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "dilution",
@@ -597925,7 +599122,7 @@
       "corporate_action_mna",
       "rumor"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -598143,7 +599340,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -598251,7 +599448,7 @@
     "candidate_classes": [
       "labor_stop"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
@@ -598310,7 +599507,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -598501,7 +599698,7 @@
     "candidate_classes": [
       "trial_readout"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "trial_readout",
@@ -599120,7 +600317,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -599999,7 +601196,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -600179,7 +601376,7 @@
     "candidate_classes": [
       "blast_ops"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_ops",
@@ -600318,7 +601515,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -600382,7 +601579,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -600635,7 +601832,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -600694,7 +601891,7 @@
     "candidate_classes": [
       "input_cost"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "input_cost",
@@ -600976,7 +602173,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -601188,7 +602385,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -601623,7 +602820,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -601819,7 +603016,7 @@
     "candidate_classes": [
       "labor_stop"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
@@ -601878,7 +603075,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -602149,7 +603346,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -602208,7 +603405,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -602290,7 +603487,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -602372,7 +603569,7 @@
     "candidate_classes": [
       "distress_restruct"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "distress_restruct",
@@ -602455,7 +603652,7 @@
       "standard_mandate",
       "product_harm"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "product_harm",
@@ -602648,7 +603845,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -602787,7 +603984,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -603582,7 +604779,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -603758,7 +604955,7 @@
       "listing_flow",
       "regime_state"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -603840,7 +605037,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -604044,7 +605241,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -604299,7 +605496,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -604589,7 +605786,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -605291,7 +606488,7 @@
     "candidate_classes": [
       "blast_legal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -605441,7 +606638,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -605851,7 +607048,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -605910,7 +607107,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -606231,7 +607428,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -606308,7 +607505,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -606385,7 +607582,7 @@
     "candidate_classes": [
       "capacity"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "capacity",
@@ -606449,7 +607646,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -606526,7 +607723,7 @@
     "candidate_classes": [
       "market_structure"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "market_structure",
@@ -606599,7 +607796,7 @@
     "published_at": "2026-10-22T13:00:20+00:00",
     "known_at": "2026-10-22T13:00:20+00:00",
     "candidate_classes": [],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "discard",
@@ -606658,7 +607855,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -606735,7 +607932,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -606812,7 +608009,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -606962,7 +608159,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -607039,7 +608236,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -607175,7 +608372,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -607327,7 +608524,7 @@
     "published_at": "2026-10-22T13:00:00+00:00",
     "known_at": "2026-10-22T13:00:00+00:00",
     "candidate_classes": [],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "discard",
@@ -607386,7 +608583,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -607582,7 +608779,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -607647,7 +608844,7 @@
       "blast_cyber",
       "blast_legal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -608290,7 +609487,7 @@
     "published_at": "2026-10-22T13:00:00+00:00",
     "known_at": "2026-10-22T13:00:00+00:00",
     "candidate_classes": [],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "discard",
@@ -608439,7 +609636,7 @@
     "candidate_classes": [
       "capacity"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "capacity",
@@ -608560,7 +609757,7 @@
     "candidate_classes": [
       "guidance"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "guidance",
@@ -608853,7 +610050,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -608917,7 +610114,7 @@
     "candidate_classes": [
       "cat_weather"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "cat_weather",
@@ -609097,7 +610294,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -609293,7 +610490,7 @@
     "candidate_classes": [
       "factor_impulse"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "regime_state",
@@ -609429,7 +610626,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -609604,7 +610801,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -609739,7 +610936,7 @@
       "product_harm",
       "statement_public"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "statement_public",
@@ -609803,7 +611000,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -609919,7 +611116,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -610189,7 +611386,7 @@
     "candidate_classes": [
       "capacity"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "capacity",
@@ -610444,7 +611641,7 @@
     "candidate_classes": [
       "credit_funding"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "credit_funding",
@@ -610955,7 +612152,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -611078,7 +612275,7 @@
     "candidate_classes": [
       "input_cost"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "input_cost",
@@ -611196,7 +612393,7 @@
     "candidate_classes": [
       "reserve_revision"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "reserve_revision",
@@ -611522,7 +612719,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -612001,7 +613198,7 @@
     "candidate_classes": [
       "activist_campaign"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "activist_campaign",
@@ -612385,7 +613582,7 @@
     "candidate_classes": [
       "trial_readout"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "trial_readout",
@@ -612449,7 +613646,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -612911,7 +614108,7 @@
     "candidate_classes": [
       "distress_restruct"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "distress_restruct",
@@ -613221,7 +614418,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -613355,7 +614552,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -613551,7 +614748,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -613881,7 +615078,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -755017,63 +756214,6 @@
     }
   },
   {
-    "document_id": "2f898a2f7a7ef078da003999",
-    "title": "Operation Economic Outcast Targets Iranian Regime’s Abuse of Religious Charity Networks",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://home.treasury.gov/news/press-releases/sb0661/",
-    "published_at": "2026-10-15T17:00:00+00:00",
-    "known_at": "2026-10-15T17:00:00+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1",
-    "lane_rule_classification": {
-      "event_class": "discard",
-      "sign": null,
-      "q5": "regime",
-      "constraint": "discard: Operation Economic Outcast Targets Iranian Regime’s Abuse of Religious Charity Networks",
-      "split": false,
-      "split_facts": [],
-      "why": "no constraint identified",
-      "family": "time",
-      "factor": ""
-    },
-    "institutional_actions": {
-      "version": "institutional-actions-v2",
-      "input_scope": "title_only",
-      "actions": [],
-      "status": "no_supported_action_identified",
-      "has_concrete_reported_action": false,
-      "has_us_action": false
-    },
-    "headline_event": {
-      "version": "headline-events-v1",
-      "status": "no_supported_event",
-      "lane_class": null,
-      "event_type": null,
-      "stage": "unknown",
-      "evidence": null,
-      "sign": null
-    },
-    "sector_classification": {
-      "version": "headline-sectors-v1",
-      "input_scope": "title_only",
-      "status": "unknown",
-      "matches": [],
-      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
-      "catalog_available": true,
-      "market_sectors": [],
-      "market_activities": [],
-      "unknowns": [
-        "Sector relevance does not establish material exposure, winners, losers or price direction"
-      ]
-    }
-  },
-  {
     "document_id": "297f47a0054ca023fd0e651d",
     "title": "Cox Communications, Inc. v. Sony Music Entertainment",
     "evidence_file": "documents.json",
@@ -755919,6 +757059,63 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: Operation Economic Outcast Targets Iran’s International Financial Networks and Shadow Banking Architecture",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "2f898a2f7a7ef078da003999",
+    "title": "Operation Economic Outcast Targets Iranian Regime’s Abuse of Religious Charity Networks",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://home.treasury.gov/news/press-releases/sb0661/",
+    "published_at": "2026-10-15T17:00:00+00:00",
+    "known_at": "2026-10-15T17:00:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Operation Economic Outcast Targets Iranian Regime’s Abuse of Religious Charity Networks",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
