@@ -30,6 +30,7 @@ jobs:
             scripts
             data/company_filings_full_release.json
             dashboard/stock-comparison
+            requirements-filing-parser.txt
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
