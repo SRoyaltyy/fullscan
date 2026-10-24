@@ -746,19 +746,36 @@ def _slim_called(r: dict) -> dict:
 
 
 def write(payload: dict) -> dict:
+    """Write scoreboard + phone HTML. JSON stays under GitHub's 100 MB push
+    limit: compact encoding (no indent) and slim called_rows only. The live
+    mover-lookback page is self-contained HTML and does not fetch the JSON.
+    """
     OUT_MD.parent.mkdir(parents=True, exist_ok=True)
     DAILY_MD.parent.mkdir(parents=True, exist_ok=True)
     OUT_HTML.parent.mkdir(parents=True, exist_ok=True)
-    slim = {k: v for k, v in payload.items() if k != "called_rows"}
+    # Drop duplicate full sweep under "chosen" — same object as sweeps[preset].
+    slim = {k: v for k, v in payload.items()
+            if k not in ("called_rows", "chosen")}
     slim["called_rows"] = [_slim_called(r) for r in payload.get("called_rows") or []]
     md = render_markdown(payload)
     OUT_MD.write_text(md, encoding="utf-8")
     DAILY_MD.write_text(md, encoding="utf-8")
-    OUT_JSON.write_text(json.dumps(slim, indent=2, default=str), encoding="utf-8")
+    # indent=2 blew this past 100 MB once the window reached late October.
+    blob = json.dumps(slim, separators=(",", ":"), default=str)
+    OUT_JSON.write_text(blob, encoding="utf-8")
     OUT_HTML.write_text(render_html(payload), encoding="utf-8")
+    nbytes = OUT_JSON.stat().st_size
     print(f"[mover-lookback-action] wrote {OUT_MD}")
-    print(f"[mover-lookback-action] wrote {OUT_JSON}")
+    print(f"[mover-lookback-action] wrote {OUT_JSON} ({nbytes / 1e6:.1f} MB)")
     print(f"[mover-lookback-action] phone {OUT_HTML}")
+    if nbytes > 80_000_000:
+        print(f"::warning::mover_lookback_action.json is {nbytes / 1e6:.1f} MB "
+              f"(keep under ~80 MB; GitHub hard-rejects over 100 MB)")
+    if nbytes > 100_000_000:
+        raise SystemExit(
+            f"[mover-lookback-action] FATAL: {OUT_JSON} is {nbytes / 1e6:.1f} MB; "
+            "GitHub rejects files over 100 MB. Slim called_rows further or split."
+        )
     return payload
 
 

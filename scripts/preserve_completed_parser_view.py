@@ -28,6 +28,17 @@ def preserve(site, ref='FETCH_HEAD'):
                 and re.fullmatch(r'[a-f0-9]{64}', snapshot.get('snapshot_id', ''))):
             raise ValueError('Published scanner provenance is invalid; retain previous site')
         target = site/scanner
+        # Keep a local scanner page that is still a real scanner backtest when
+        # the published index was overwritten (e.g. by a stock-comparison page).
+        # Restoring a non-scanner index made the completed-parser link step raise
+        # ValueError and blocked every Deploy. Prefer published when it is valid.
+        SCANNER_TITLE = '<h1>Scanner backtest</h1>'
+        local_index = target/'index.html'
+        keep_local_index = None
+        if local_index.is_file():
+            local_html = local_index.read_text(encoding='utf-8', errors='replace')
+            if SCANNER_TITLE in local_html:
+                keep_local_index = local_html
         if target.exists():
             shutil.rmtree(target)
         process = subprocess.Popen(['git', '-C', str(site), 'archive', ref, scanner], stdout=subprocess.PIPE)
@@ -55,6 +66,16 @@ def preserve(site, ref='FETCH_HEAD'):
         finally:
             if process.poll() is None:
                 process.kill(); process.wait()
+        published_index = target/'index.html'
+        published_html = ''
+        if published_index.is_file():
+            published_html = published_index.read_text(encoding='utf-8', errors='replace')
+        if keep_local_index is not None and SCANNER_TITLE not in published_html:
+            # Published index is not a scanner page — put the local one back so
+            # the completed-parser link can still inject. meta/profiles/assets
+            # still come from the published archive above.
+            published_index.parent.mkdir(parents=True, exist_ok=True)
+            published_index.write_text(keep_local_index, encoding='utf-8')
         alias = site/'scanner-backtest'
         if alias.exists():
             shutil.rmtree(alias)
