@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T07:31:19-04:00",
+  "generated_at": "2026-10-24T10:24:53-04:00",
   "window": [
     "2026-08-13",
     "2026-10-23"
@@ -12,44 +12,44 @@
       "hold": "1d",
       "mode": "combine",
       "io_select": "size",
-      "n_trades": 139,
-      "hit": 0.547,
-      "total_ret_pct": 2.98,
+      "n_trades": 159,
+      "hit": 0.579,
+      "total_ret_pct": 8.98,
       "max_dd_pct": 8.32,
-      "final_equity": 102983.14,
-      "n_skipped": 291,
-      "n_gap_days": 25,
+      "final_equity": 108975.98,
+      "n_skipped": 348,
+      "n_gap_days": 22,
       "by_source": {
         "mover": {
-          "n": 80,
-          "hit": 0.588,
-          "pnl": 4843.16
+          "n": 100,
+          "hit": 0.63,
+          "pnl": 10836.02
         },
         "io": {
           "n": 59,
           "hit": 0.492,
-          "pnl": -1859.9
+          "pnl": -1859.89
         }
       },
-      "gross_win": 22752.14,
-      "gross_loss": -19768.88
+      "gross_win": 29660.85,
+      "gross_loss": -20684.72
     },
     {
       "hold": "1d",
       "mode": "mover_only",
       "io_select": "size",
-      "n_trades": 108,
-      "hit": 0.491,
-      "total_ret_pct": -2.06,
-      "max_dd_pct": 9.08,
-      "final_equity": 97944.76,
-      "n_skipped": 213,
-      "n_gap_days": 34,
+      "n_trades": 147,
+      "hit": 0.524,
+      "total_ret_pct": 3.77,
+      "max_dd_pct": 9.69,
+      "final_equity": 103768.24,
+      "n_skipped": 295,
+      "n_gap_days": 28,
       "by_source": {
         "mover": {
-          "n": 108,
-          "hit": 0.491,
-          "pnl": -2055.12
+          "n": 147,
+          "hit": 0.524,
+          "pnl": 3768.32
         },
         "io": {
           "n": 0,
@@ -57,8 +57,8 @@
           "pnl": 0
         }
       },
-      "gross_win": 18059.82,
-      "gross_loss": -20114.94
+      "gross_win": 26258.52,
+      "gross_loss": -22490.2
     },
     {
       "hold": "1d",
@@ -66,9 +66,9 @@
       "io_select": "size",
       "n_trades": 302,
       "hit": 0.52,
-      "total_ret_pct": 10.41,
+      "total_ret_pct": 11.69,
       "max_dd_pct": 9.28,
-      "final_equity": 110410.78,
+      "final_equity": 111693.97,
       "n_skipped": 8,
       "n_gap_days": 5,
       "by_source": {
@@ -80,45 +80,45 @@
         "io": {
           "n": 302,
           "hit": 0.52,
-          "pnl": 10410.9
+          "pnl": 11694.08
         }
       },
-      "gross_win": 45316.66,
-      "gross_loss": -34905.76
+      "gross_win": 46626.86,
+      "gross_loss": -34932.78
     },
     {
       "hold": "1d",
       "mode": "dual",
       "io_select": "size",
-      "n_trades": 411,
-      "hit": 0.513,
-      "total_ret_pct": 3.98,
+      "n_trades": 451,
+      "hit": 0.523,
+      "total_ret_pct": 7.9,
       "max_dd_pct": 8.19,
-      "final_equity": 103979.19,
-      "n_skipped": 201,
-      "n_gap_days": 13,
+      "final_equity": 107896.52,
+      "n_skipped": 267,
+      "n_gap_days": 7,
       "by_source": {
         "mover": {
-          "n": 109,
-          "hit": 0.495,
-          "pnl": -840.03
+          "n": 149,
+          "hit": 0.53,
+          "pnl": 2417.2
         },
         "io": {
           "n": 302,
           "hit": 0.52,
-          "pnl": 4819.28
+          "pnl": 5479.43
         }
       },
-      "gross_win": 31538.28,
-      "gross_loss": -27559.03,
+      "gross_win": 36657.61,
+      "gross_loss": -28760.98,
       "wallets": {
         "mover": {
-          "ret": -1.68,
-          "dd": 9.17,
-          "trades": 109
+          "ret": 4.83,
+          "dd": 9.36,
+          "trades": 149
         },
         "io": {
-          "ret": 9.64,
+          "ret": 10.96,
           "dd": 9.4,
           "trades": 302
         }
@@ -128,64 +128,64 @@
       "hold": "1d",
       "mode": "overlay",
       "io_select": "size",
-      "n_trades": 309,
-      "hit": 0.528,
-      "total_ret_pct": 12.52,
+      "n_trades": 314,
+      "hit": 0.535,
+      "total_ret_pct": 15.92,
       "max_dd_pct": 9.17,
-      "final_equity": 112517.91,
-      "n_skipped": 117,
-      "n_gap_days": 13,
+      "final_equity": 115918.45,
+      "n_skipped": 149,
+      "n_gap_days": 7,
       "by_source": {
         "mover": {
-          "n": 14,
-          "hit": 0.5,
-          "pnl": 17.82
+          "n": 19,
+          "hit": 0.632,
+          "pnl": 2041.24
         },
         "io": {
           "n": 295,
           "hit": 0.529,
-          "pnl": 12500.16
+          "pnl": 13877.31
         }
       },
-      "gross_win": 48139.18,
-      "gross_loss": -35621.2
+      "gross_win": 51608.69,
+      "gross_loss": -35690.14
     },
     {
       "hold": "1d",
       "mode": "overlay_boost",
       "io_select": "size+mover",
-      "n_trades": 264,
-      "hit": 0.538,
-      "total_ret_pct": 15.12,
+      "n_trades": 242,
+      "hit": 0.521,
+      "total_ret_pct": 17.37,
       "max_dd_pct": 9.08,
-      "final_equity": 115121.8,
-      "n_skipped": 489,
-      "n_gap_days": 13,
+      "final_equity": 117368.63,
+      "n_skipped": 692,
+      "n_gap_days": 7,
       "by_source": {
         "mover": {
-          "n": 6,
-          "hit": 0.333,
-          "pnl": -445.77
+          "n": 7,
+          "hit": 0.429,
+          "pnl": -200.66
         },
         "io": {
-          "n": 258,
-          "hit": 0.543,
-          "pnl": 15567.55
+          "n": 235,
+          "hit": 0.523,
+          "pnl": 17569.24
         }
       },
-      "gross_win": 56318.02,
-      "gross_loss": -41196.24
+      "gross_win": 59472.57,
+      "gross_loss": -42103.99
     },
     {
       "hold": "1d",
       "mode": "io_boost",
       "io_select": "size+mover",
-      "n_trades": 260,
-      "hit": 0.538,
-      "total_ret_pct": 14.13,
+      "n_trades": 238,
+      "hit": 0.517,
+      "total_ret_pct": 15.58,
       "max_dd_pct": 8.74,
-      "final_equity": 114130.8,
-      "n_skipped": 156,
+      "final_equity": 115584.01,
+      "n_skipped": 208,
       "n_gap_days": 5,
       "by_source": {
         "mover": {
@@ -194,30 +194,30 @@
           "pnl": 0
         },
         "io": {
-          "n": 260,
-          "hit": 0.538,
-          "pnl": 14130.9
+          "n": 238,
+          "hit": 0.517,
+          "pnl": 15584.07
         }
       },
-      "gross_win": 54951.41,
-      "gross_loss": -40820.51
+      "gross_win": 57842.76,
+      "gross_loss": -42258.69
     },
     {
       "hold": "3d",
       "mode": "combine",
       "io_select": "size",
-      "n_trades": 97,
-      "hit": 0.505,
-      "total_ret_pct": 3.93,
+      "n_trades": 98,
+      "hit": 0.51,
+      "total_ret_pct": 4.86,
       "max_dd_pct": 14.89,
-      "final_equity": 103930.66,
-      "n_skipped": 424,
-      "n_gap_days": 25,
+      "final_equity": 104862.65,
+      "n_skipped": 513,
+      "n_gap_days": 23,
       "by_source": {
         "mover": {
-          "n": 41,
-          "hit": 0.537,
-          "pnl": 9060.98
+          "n": 42,
+          "hit": 0.548,
+          "pnl": 9992.97
         },
         "io": {
           "n": 56,
@@ -225,25 +225,25 @@
           "pnl": -5130.3
         }
       },
-      "gross_win": 26239.01,
+      "gross_win": 27171.0,
       "gross_loss": -22308.33
     },
     {
       "hold": "3d",
       "mode": "mover_only",
       "io_select": "size",
-      "n_trades": 70,
-      "hit": 0.371,
-      "total_ret_pct": -9.5,
+      "n_trades": 89,
+      "hit": 0.416,
+      "total_ret_pct": -6.93,
       "max_dd_pct": 20.16,
-      "final_equity": 90495.53,
-      "n_skipped": 311,
-      "n_gap_days": 34,
+      "final_equity": 93066.41,
+      "n_skipped": 452,
+      "n_gap_days": 29,
       "by_source": {
         "mover": {
-          "n": 70,
-          "hit": 0.371,
-          "pnl": -9504.45
+          "n": 89,
+          "hit": 0.416,
+          "pnl": -6933.56
         },
         "io": {
           "n": 0,
@@ -251,8 +251,8 @@
           "pnl": 0
         }
       },
-      "gross_win": 15316.13,
-      "gross_loss": -24820.58
+      "gross_win": 20990.35,
+      "gross_loss": -27923.91
     },
     {
       "hold": "3d",
@@ -262,7 +262,7 @@
       "hit": 0.542,
       "total_ret_pct": 12.78,
       "max_dd_pct": 14.55,
-      "final_equity": 112781.9,
+      "final_equity": 112781.89,
       "n_skipped": 235,
       "n_gap_days": 7,
       "by_source": {
@@ -274,28 +274,28 @@
         "io": {
           "n": 155,
           "hit": 0.542,
-          "pnl": 12781.93
+          "pnl": 12781.92
         }
       },
-      "gross_win": 44246.13,
+      "gross_win": 44246.12,
       "gross_loss": -31464.2
     },
     {
       "hold": "3d",
       "mode": "dual",
       "io_select": "size",
-      "n_trades": 227,
-      "hit": 0.48,
-      "total_ret_pct": 0.58,
+      "n_trades": 246,
+      "hit": 0.488,
+      "total_ret_pct": 1.93,
       "max_dd_pct": 14.06,
-      "final_equity": 100576.22,
-      "n_skipped": 544,
-      "n_gap_days": 14,
+      "final_equity": 101928.71,
+      "n_skipped": 705,
+      "n_gap_days": 9,
       "by_source": {
         "mover": {
-          "n": 70,
-          "hit": 0.371,
-          "pnl": -4820.05
+          "n": 89,
+          "hit": 0.416,
+          "pnl": -3467.54
         },
         "io": {
           "n": 157,
@@ -303,13 +303,13 @@
           "pnl": 5396.19
         }
       },
-      "gross_win": 29335.2,
-      "gross_loss": -28759.06,
+      "gross_win": 32244.46,
+      "gross_loss": -30315.81,
       "wallets": {
         "mover": {
-          "ret": -9.64,
+          "ret": -6.93,
           "dd": 20.23,
-          "trades": 70
+          "trades": 89
         },
         "io": {
           "ret": 10.79,
@@ -322,39 +322,39 @@
       "hold": "3d",
       "mode": "overlay",
       "io_select": "size",
-      "n_trades": 156,
-      "hit": 0.551,
-      "total_ret_pct": 10.75,
+      "n_trades": 157,
+      "hit": 0.554,
+      "total_ret_pct": 10.99,
       "max_dd_pct": 15.49,
-      "final_equity": 110754.65,
-      "n_skipped": 657,
-      "n_gap_days": 14,
+      "final_equity": 110987.07,
+      "n_skipped": 807,
+      "n_gap_days": 9,
       "by_source": {
         "mover": {
-          "n": 2,
-          "hit": 0.0,
-          "pnl": -1031.37
+          "n": 3,
+          "hit": 0.333,
+          "pnl": -798.95
         },
         "io": {
           "n": 154,
           "hit": 0.558,
-          "pnl": 11785.93
+          "pnl": 11785.94
         }
       },
-      "gross_win": 42365.98,
+      "gross_win": 42598.41,
       "gross_loss": -31611.42
     },
     {
       "hold": "3d",
       "mode": "overlay_boost",
       "io_select": "size+mover",
-      "n_trades": 110,
-      "hit": 0.582,
-      "total_ret_pct": 20.78,
+      "n_trades": 97,
+      "hit": 0.567,
+      "total_ret_pct": 23.38,
       "max_dd_pct": 11.65,
-      "final_equity": 120783.95,
-      "n_skipped": 922,
-      "n_gap_days": 14,
+      "final_equity": 123379.31,
+      "n_skipped": 1213,
+      "n_gap_days": 9,
       "by_source": {
         "mover": {
           "n": 2,
@@ -362,24 +362,24 @@
           "pnl": -1031.37
         },
         "io": {
-          "n": 108,
-          "hit": 0.593,
-          "pnl": 21815.28
+          "n": 95,
+          "hit": 0.579,
+          "pnl": 24410.67
         }
       },
-      "gross_win": 48751.5,
-      "gross_loss": -27967.59
+      "gross_win": 48979.29,
+      "gross_loss": -25599.99
     },
     {
       "hold": "3d",
       "mode": "io_boost",
       "io_select": "size+mover",
-      "n_trades": 110,
-      "hit": 0.6,
-      "total_ret_pct": 22.53,
+      "n_trades": 96,
+      "hit": 0.583,
+      "total_ret_pct": 25.07,
       "max_dd_pct": 10.07,
-      "final_equity": 122534.69,
-      "n_skipped": 499,
+      "final_equity": 125074.56,
+      "n_skipped": 611,
       "n_gap_days": 7,
       "by_source": {
         "mover": {
@@ -388,13 +388,13 @@
           "pnl": 0
         },
         "io": {
-          "n": 110,
-          "hit": 0.6,
-          "pnl": 22534.65
+          "n": 96,
+          "hit": 0.583,
+          "pnl": 25074.57
         }
       },
-      "gross_win": 49731.55,
-      "gross_loss": -27196.9
+      "gross_win": 49872.97,
+      "gross_loss": -24798.4
     },
     {
       "hold": "1w",
@@ -405,8 +405,8 @@
       "total_ret_pct": 2.62,
       "max_dd_pct": 11.7,
       "final_equity": 102616.41,
-      "n_skipped": 472,
-      "n_gap_days": 25,
+      "n_skipped": 562,
+      "n_gap_days": 24,
       "by_source": {
         "mover": {
           "n": 32,
@@ -416,28 +416,28 @@
         "io": {
           "n": 37,
           "hit": 0.405,
-          "pnl": -654.98
+          "pnl": -654.99
         }
       },
       "gross_win": 21721.0,
-      "gross_loss": -19104.56
+      "gross_loss": -19104.57
     },
     {
       "hold": "1w",
       "mode": "mover_only",
       "io_select": "size",
-      "n_trades": 50,
-      "hit": 0.36,
-      "total_ret_pct": -11.41,
+      "n_trades": 60,
+      "hit": 0.4,
+      "total_ret_pct": -9.43,
       "max_dd_pct": 19.52,
-      "final_equity": 88588.24,
-      "n_skipped": 351,
-      "n_gap_days": 34,
+      "final_equity": 90568.03,
+      "n_skipped": 521,
+      "n_gap_days": 30,
       "by_source": {
         "mover": {
-          "n": 50,
-          "hit": 0.36,
-          "pnl": -11411.73
+          "n": 60,
+          "hit": 0.4,
+          "pnl": -9431.93
         },
         "io": {
           "n": 0,
@@ -445,8 +445,8 @@
           "pnl": 0
         }
       },
-      "gross_win": 10771.34,
-      "gross_loss": -22183.07
+      "gross_win": 13896.75,
+      "gross_loss": -23328.68
     },
     {
       "hold": "1w",
@@ -454,9 +454,9 @@
       "io_select": "size",
       "n_trades": 96,
       "hit": 0.583,
-      "total_ret_pct": 23.07,
+      "total_ret_pct": 24.5,
       "max_dd_pct": 10.34,
-      "final_equity": 123069.96,
+      "final_equity": 124502.28,
       "n_skipped": 294,
       "n_gap_days": 9,
       "by_source": {
@@ -468,42 +468,42 @@
         "io": {
           "n": 96,
           "hit": 0.583,
-          "pnl": 23069.93
+          "pnl": 24502.24
         }
       },
-      "gross_win": 43045.83,
+      "gross_win": 44478.14,
       "gross_loss": -19975.9
     },
     {
       "hold": "1w",
       "mode": "dual",
       "io_select": "size",
-      "n_trades": 147,
-      "hit": 0.503,
-      "total_ret_pct": 4.71,
+      "n_trades": 157,
+      "hit": 0.51,
+      "total_ret_pct": 5.88,
       "max_dd_pct": 11.22,
-      "final_equity": 104712.59,
-      "n_skipped": 644,
-      "n_gap_days": 15,
+      "final_equity": 105877.26,
+      "n_skipped": 794,
+      "n_gap_days": 11,
       "by_source": {
         "mover": {
-          "n": 50,
-          "hit": 0.36,
-          "pnl": -5722.45
+          "n": 60,
+          "hit": 0.4,
+          "pnl": -4557.78
         },
         "io": {
           "n": 97,
           "hit": 0.577,
-          "pnl": 10435.06
+          "pnl": 10435.05
         }
       },
-      "gross_win": 26212.02,
-      "gross_loss": -21499.41,
+      "gross_win": 27951.12,
+      "gross_loss": -22073.85,
       "wallets": {
         "mover": {
-          "ret": -11.44,
+          "ret": -9.12,
           "dd": 19.53,
-          "trades": 50
+          "trades": 60
         },
         "io": {
           "ret": 20.87,
@@ -516,64 +516,64 @@
       "hold": "1w",
       "mode": "overlay",
       "io_select": "size",
-      "n_trades": 97,
-      "hit": 0.577,
-      "total_ret_pct": 21.04,
+      "n_trades": 98,
+      "hit": 0.582,
+      "total_ret_pct": 22.72,
       "max_dd_pct": 10.34,
-      "final_equity": 121036.41,
-      "n_skipped": 728,
-      "n_gap_days": 15,
+      "final_equity": 122719.83,
+      "n_skipped": 878,
+      "n_gap_days": 11,
       "by_source": {
         "mover": {
-          "n": 2,
-          "hit": 0.5,
-          "pnl": 24.52
+          "n": 3,
+          "hit": 0.667,
+          "pnl": 283.38
         },
         "io": {
           "n": 95,
           "hit": 0.579,
-          "pnl": 21011.89
+          "pnl": 22436.45
         }
       },
-      "gross_win": 41098.19,
+      "gross_win": 42781.61,
       "gross_loss": -20061.78
     },
     {
       "hold": "1w",
       "mode": "overlay_boost",
       "io_select": "size+mover",
-      "n_trades": 71,
-      "hit": 0.648,
-      "total_ret_pct": 27.3,
+      "n_trades": 64,
+      "hit": 0.609,
+      "total_ret_pct": 24.77,
       "max_dd_pct": 11.15,
-      "final_equity": 127298.71,
-      "n_skipped": 964,
-      "n_gap_days": 15,
+      "final_equity": 124773.52,
+      "n_skipped": 1219,
+      "n_gap_days": 11,
       "by_source": {
         "mover": {
-          "n": 2,
-          "hit": 0.5,
-          "pnl": -297.39
+          "n": 3,
+          "hit": 0.667,
+          "pnl": 11.69
         },
         "io": {
-          "n": 69,
-          "hit": 0.652,
-          "pnl": 27596.11
+          "n": 61,
+          "hit": 0.607,
+          "pnl": 24761.82
         }
       },
-      "gross_win": 47313.35,
-      "gross_loss": -20014.63
+      "gross_win": 44532.34,
+      "gross_loss": -19758.83
     },
     {
       "hold": "1w",
       "mode": "io_boost",
       "io_select": "size+mover",
-      "n_trades": 68,
-      "hit": 0.691,
-      "total_ret_pct": 33.8,
+      "n_trades": 59,
+      "hit": 0.627,
+      "total_ret_pct": 30.31,
       "max_dd_pct": 7.49,
-      "final_equity": 133803.26,
-      "n_skipped": 544,
+      "final_equity": 130305.7,
+      "n_skipped": 650,
       "n_gap_days": 9,
       "by_source": {
         "mover": {
@@ -582,13 +582,13 @@
           "pnl": 0
         },
         "io": {
-          "n": 68,
-          "hit": 0.691,
-          "pnl": 33803.2
+          "n": 59,
+          "hit": 0.627,
+          "pnl": 30305.66
         }
       },
-      "gross_win": 48398.73,
-      "gross_loss": -14595.53
+      "gross_win": 45524.42,
+      "gross_loss": -15218.76
     },
     {
       "hold": "2w",
@@ -625,7 +625,7 @@
     "cuts": {
       "all": {
         "n": 302,
-        "mean": 0.505,
+        "mean": 0.545,
         "hit": 0.533
       },
       "down": {
@@ -635,7 +635,7 @@
       },
       "green": {
         "n": 164,
-        "mean": 0.617,
+        "mean": 0.69,
         "hit": 0.53
       },
       "hard_red": {
@@ -774,11 +774,11 @@
   },
   "io_attr_books": [
     {
-      "total_ret_pct": 10.41,
+      "total_ret_pct": 11.69,
       "max_dd_pct": 9.28,
       "n_trades": 302,
       "hit": 0.52,
-      "final_equity": 110410.78,
+      "final_equity": 111693.97,
       "by_source": {
         "mover": {
           "n": 0,
@@ -788,7 +788,7 @@
         "io": {
           "n": 302,
           "hit": 0.52,
-          "pnl": 10410.9
+          "pnl": 11694.08
         }
       },
       "filter": "all",
@@ -800,7 +800,7 @@
       "max_dd_pct": 2.85,
       "n_trades": 106,
       "hit": 0.528,
-      "final_equity": 101154.81,
+      "final_equity": 101154.8,
       "by_source": {
         "mover": {
           "n": 0,
@@ -832,7 +832,7 @@
         "io": {
           "n": 103,
           "hit": 0.485,
-          "pnl": 207.54
+          "pnl": 207.55
         }
       },
       "filter": "mid",
@@ -840,11 +840,11 @@
       "mode": "io_only"
     },
     {
-      "total_ret_pct": 9.06,
+      "total_ret_pct": 10.36,
       "max_dd_pct": 3.49,
       "n_trades": 93,
       "hit": 0.548,
-      "final_equity": 109063.96,
+      "final_equity": 110363.0,
       "by_source": {
         "mover": {
           "n": 0,
@@ -854,7 +854,7 @@
         "io": {
           "n": 93,
           "hit": 0.548,
-          "pnl": 9063.96
+          "pnl": 10362.98
         }
       },
       "filter": "small",
@@ -950,11 +950,11 @@
       "mode": "io_only"
     },
     {
-      "total_ret_pct": 3.42,
+      "total_ret_pct": 4.65,
       "max_dd_pct": 7.75,
       "n_trades": 236,
       "hit": 0.504,
-      "final_equity": 103423.96,
+      "final_equity": 104651.62,
       "by_source": {
         "mover": {
           "n": 0,
@@ -964,7 +964,7 @@
         "io": {
           "n": 236,
           "hit": 0.504,
-          "pnl": 3423.87
+          "pnl": 4651.54
         }
       },
       "filter": "large+_on_down",
@@ -973,6 +973,6 @@
     }
   ],
   "n_sessions": 51,
-  "n_mover_call_days": 36,
+  "n_mover_call_days": 49,
   "n_book_days": 47
 }
