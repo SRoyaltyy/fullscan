@@ -1,0 +1,1007 @@
+{
+  "date": "2026-09-28",
+  "stamp": "2026-09-28",
+  "n": 200,
+  "items": [
+    {
+      "title": "Boeing identifies 737 MAX software glitch affecting landing navigation feature - NBC News",
+      "decision": "KEEP",
+      "reason": "core_material"
+    },
+    {
+      "title": "Apple hit with $5.7 billion verdict over Taptic Engine patent infringement - 9to5Mac",
+      "decision": "KEEP",
+      "reason": "core_material"
+    },
+    {
+      "title": "Only US private passenger train files Chapter 11 bankruptcy - thestreet.com",
+      "decision": "KEEP",
+      "reason": "core_material"
+    },
+    {
+      "title": "Oil Price Today: Brent Rises Above $105 as US–Iran Talks Stall - Markets.com",
+      "decision": "KEEP",
+      "reason": "chokepoint"
+    },
+    {
+      "title": "Bessent tells the Fed AI productivity gains mean it can ease up on rate hikes - Startup Fortune",
+      "decision": "KEEP",
+      "reason": "core_material"
+    },
+    {
+      "title": "Trump administration set to roll out lower fuel economy standards for cars, light trucks - AP News",
+      "decision": "KEEP",
+      "reason": "core_material"
+    },
+    {
+      "title": "Gold falls more than 2% amid expectations of Fed rate hikes — Asharq Al-Awsat - UA.NEWS",
+      "decision": "KEEP",
+      "reason": "core_material"
+    },
+    {
+      "title": "Crude Oil Futures Separate From Reality as Asia Physical Market Buckles: Russell - EnergyNow.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Dire Straits: How the United States Could Break Canada to Own It - Geopolitical Monitor",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "McDonald’s Selloff Hits 30% as Big Mac Inflation Spurs Pushback - Bloomberg",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "The 10-year Treasury yield is at its highest in nearly two decades. How we got here",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Fed Chair Kevin Warsh Has an Inflation Conundrum, and Trumpflation Is Only Part of the Problem - The Motley Fool",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "China Won't Move Chip Stocks Anymore (NASDAQ:SMH) - Seeking Alpha",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "This may be the ‘missing piece’ for investors looking to boost AI exposure",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Average gas price in Los Angeles County approaches all-time record high - ABC7 Los Angeles",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Federal Reserve rate hike reflects new world of sticky inflation, faster growth - The North State Journal",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Insurers claim AI is already increasing healthcare costs - TechCrunch",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "U.S. consumers and businesses are now facing a future of more expensive borrowing - japantoday.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Crude Oil Futures (Derivatives) Price (CL/USD) Today | Live Price, Market Cap & Chart - Binance",
+      "decision": "DROP",
+      "reason": "geo_other"
+    },
+    {
+      "title": "San Diego County issues health warning over recalled cheese - NBC 7 San Diego",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Berkshire investors brace for a harsh dividend reality - thestreet.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Watch Inflation Keeps Pressure on the Fed - Bloomberg",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "What’s luring investors to Asia-Pacific property despite higher borrowing costs? - South China Morning Post",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "Is AI Really Fueling Inflation? It’s Not That Simple - Morningstar",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "Operation Save the Yen: Japan partially turns off the cheap money tap, with a little help from its ‘American friend’ - EL PAÍS English",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Value of old supertankers soars past new builds as market goes ‘bananas’ - Financial Times",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Sahi launches commodity trading on MCX: crude oil, gold and silver in one app - Business Upturn",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "'Funflation' is on the rise as hobbies get pricier, but consumers keep spending anyway - CNBC",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "SpaceX boosted revenue but isn't profitable, first-ever earnings report shows - ABC News - Breaking News, Latest News and Videos",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Amazon Shoppers’ Most-Loved Kitchen Gadgets Include OXO, Le Creuset, and More for Under $25 - Allrecipes",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "US, China should treat AI risk like a pathogen, not a missile - Asia Times",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Geopolitical developments, crude oil likely to steer stock market this week - Business Standard",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Warning: Two Unpatched Citrix NetScaler RCE Zero-Days Under Active Exploitation - The Hacker News",
+      "decision": "DROP",
+      "reason": "geo_other"
+    },
+    {
+      "title": "Analysts say that even in the era of high interest rates, where the U.S. 10-year Treasury bond rate - 매일경제",
+      "decision": "DROP",
+      "reason": "junk_shape"
+    },
+    {
+      "title": "Crude oil price forecast as Trump rejects Iran proposal to reopen Strait of Hormuz - Invezz",
+      "decision": "DROP",
+      "reason": "reprint_weather"
+    },
+    {
+      "title": "$1,000 invested in SpaceX stock 2 months ago is now worth - Finbold",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Geopolitical developments, crude oil to steer stock market in holiday-shortened week: Analysts - cfo.economictimes.indiatimes.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "The Next Phase of Trumpflation Has Arrived, and It's Terrible News for the Federal Reserve and Wall Street - The Globe and Mail",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "What to Expect in Markets This Week: Latest US Inflation, Jobs Data; Micron, CarMax Report - Investopedia",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "US Jobs and Consumer Spending Stay Strong, Odds of Fed Rate Hike in October Surge Past 70% - finance.biggo.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Ford’s Latest Employee of the Month Is a Hawk Named ‘El Charro’ - WSJ",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "With no heirs to leave it to, this billionaire is pouring his fortune into a Texas ghost town of about 25 people - Fortune",
+      "decision": "DROP",
+      "reason": "tabloid"
+    },
+    {
+      "title": "2 key checks for the AI trade and the economy: What to watch this week - Yahoo Finance",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Bill Ackman thinks the Fed ‘just made a mistake’ — and higher rates will make inflation worse, not better - moneywise.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Before Stock Earnings Season Begins, Here Is How To Play Q3 Pre-Announcements - Forbes",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Booms, Bombs and Bonds: Interest Rates, Part I - Paul Krugman | Substack",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Buyers snap up new Hong Kong flats ahead of likely interest rate rises - South China Morning Post",
+      "decision": "DROP",
+      "reason": "crowd"
+    },
+    {
+      "title": "Fed October Decision Polymarket Odds: October Rate Hike Sits at 64% - Cryptonews",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "FCNR bounty may spark bank lending rate war - financialexpress.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "The AI gold rush is fueling a record corporate bond boom: Chart of the Day - Yahoo Finance",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "What the Fed Rate Hike Means for Your Wallet Right Now — and How to Protect Your Money - Kiplinger",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Why the Fed’s rate hike just came at the worst possible moment - Washington Examiner",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Tremors are rippling across the U.S. Treasury market - https://tipswatch.com/",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "The deeper reason behind the relentless rise in bond yields - Yahoo Finance",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Türkiye bolsters 'agro diplomacy' to minimize impact of geopolitical risks | Daily Sabah - Daily Sabah",
+      "decision": "DROP",
+      "reason": "geo_other"
+    },
+    {
+      "title": "Iced Coffee at a Job Interview? Let the Culture Debate Begin - Newser",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "Look closer, and Wall Street’s rally is showing cracks",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "The Fed is fighting the wrong inflation war — and you’re collateral damage - Washington Examiner",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "'Out of nowhere came Muse': Wall Street weighs in on Meta's AI catch-up moment - Yahoo Finance",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Baby boomers are aging in place and plunking down hundreds of thousands on renovating their homes - Fortune",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Bank of America drops bombshell verdict on Nike stock - thestreet.com",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "U.S. Dollar Rebounds as Fed Reshapes Forex Markets - stl.news",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Guan Tao Warns: The Fed's Rate-Hike Endgame May Hinge on a Tug-of-War Between Interest Rates and AI Capex - finance.biggo.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Fed Interest Rate Forecast: PCE Report Nears as 10-Year Yield Remains Above 5% - FXEmpire",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Losing the shine - Gold suffers weekly loss as Fed rate hike expectations build - The Star",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Micron could dethrone Nvidia and become the biggest driver of S&P 500 profit growth",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Gold and silver outlook: What's in store for traders this week? Job data, crude and more in focus - The Times of India",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "Treasury Secretary Bessent Says Core Inflation Remains Calm - tokenpost.com",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "President Trump urges Fed to cut rate after jobs data — Cyprus Mail - UA.NEWS",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "U.S. Treasury Yields Surpass 5% as ETF Returns Plummet - 조선일보",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "I’m 77, pay rent and live off Social Security, but I help homeless people. Why are so many people going hungry?",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "New financing rules are about to make buying or selling a condo even more complicated - Yahoo Finance",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Fed rate hikes signal economic strength, not just inflation risk - NZ Herald",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "AT&T and T-Mobile rate hikes come back to bite them - PhoneArena",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "My friend is terminally ill. Should she sell her rental home and pay $100,000 in capital gains?",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "Intel CEO Lip-Bu Tan Has Incredible News for AMD Stock Investors - Yahoo Finance",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Debt-hungry AI companies face increased risk as bond yields spike",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Peso seen rangebound as Fed rate bets hinge on US job report - BusinessWorld Online",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Crude Oil Price Trends Keep Indian Markets Focused on Energy Costs - kalkine.co.in",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "U.S. stocks rise as Fed signals more rate hikes; key earnings and inflation data ahead. - Pluang",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "My husband and I are in our 50s and have no kids. We have $2 million in IRAs and 401(k)s. Do we really need a will?",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "‘It doesn’t seem fair’: I’m retired and have plenty of money. Why can’t I qualify for a retail credit card?",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "Oil Price (WTI) on Sep 29, 2026 - Robinhood",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "New Orleans financial expert explains how Fed rate hike could affect your money - WDSU",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Bessent Urges Fed to Keep ‘Open Mind’ on US Inflation Outlook - Bloomberg",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "The Moves That Backfired on Trump and Drove Interest Rates and Inflation Higher - WSJ",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Barclays Keeps $100 Brent Oil Forecast for 2026 But Risks Skew Higher - EnergyNow.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "JPMorgan doubles down on diesel as record prices test inflation - thestreet.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Goldman Sachs Raises 2026 Brent Crude Average Price Forecast by $8 to $85 a Barrel, WTI to $79 a Barrel - EnergyNow.com",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Global Oil Inventories Depleted, Next Price Spike Could Roil Economies, Markets - EnergyNow.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Social Security overpaid my 82-year-old mother by $20,000. What else is hiding in her finances?",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "AMERICAN ENERGY SNAPSHOT: Why Gasoline Prices Don’t Always Move in Lockstep with Crude Oil Prices - EnergyNow.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "August Kicks Off: Palantir, AMD, SanDisk Earnings and NFP Jobs Report - 5 Stocks and 3 Macro Events to Watch - TradingKey",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Core Differences Between West Texas Intermediate (WTI) and Brent Crude and the Affect of the Iran War - EnergyNow.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Foreign banks have expressed UBS merger interest, Swiss newspaper reports - Reuters",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Treasury Secretary Scott Urges Fed To Keep 'Open Mind' On US Inflation Outlook - NDTV Profit",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Bank stocks are sinking even though the Fed just handed them a rate hike - Startup Fortune",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "China may permit Alibaba, ByteDance to buy new Nvidia chips – The Information - Yahoo Finance",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Bessent urges Fed to keep ‘open mind’ on rates as AI boosts productivity - TradingView",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Emergency: Delta flight DL251 to Boston turned around over Atlantic and diverted to Porto - airlive",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "THOR Industries (THO) Stock Looks About Right On Earnings - Yahoo Finance",
+      "decision": "DROP",
+      "reason": "junk_shape"
+    },
+    {
+      "title": "NRG Energy (NRG) Stock May Be Cheap Relative To Earnings - Yahoo Finance",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Amtrak Cascades Airo trains debut Sept. 30 in the Pacific Northwest - Oregon Public Broadcasting - OPB",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Wall Street Braces for Jobs and Inflation Data as Rate Hike Fears Loom - finance.biggo.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Wizards Announces Five New Controversial Land-Filled Secret Lairs - MTG Rocks",
+      "decision": "DROP",
+      "reason": "geo_other"
+    },
+    {
+      "title": "China May Reopen Nvidia's AI Market. How Will NVDA Stock React Monday? - Yahoo Finance",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "Coke Plus is the fibermaxxing soda that Americans haven’t caught on to yet - The Guardian",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "A ‘death cross’ is coming for the dollar. Why Trump will be happy.",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Fed raises rates for first time in years: What it means for your wallet - Fox Business",
+      "decision": "DROP",
+      "reason": "junk_shape"
+    },
+    {
+      "title": "Exclusive | Californians flee for off-grid safe houses in Montana and Idaho with doomsday bunkers - New York Post",
+      "decision": "DROP",
+      "reason": "tabloid"
+    },
+    {
+      "title": "Popular pantry product can't legally be called peanut butter — here's why - Fox News",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Why I'd Still Buy This 10%-Yielding Dividend Stock After the Fed's Latest Hike - The Motley Fool",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Did Anthropic’s A.I. Really Make a Scientific Discovery on Its Own? - The New York Times",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "Why Meta Platforms Stock Jumped 13% This Week - The Motley Fool",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Equity in earnings of Oura Inc. – NASDAQ:OURA - TradingView",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "‘We lived within our means’: I earned $30,000 as a pastor and still retired comfortably. Why don’t you tell people that?",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "Trump Says He’s ‘Very Seriously’ Looking at Diesel Export Ban - Bloomberg",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "OpenAI pauses training of latest models after agents searched U.S. government sites in unexpected ways - NBC News",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "‘I want to make her proud’: My mother, a divorcée, died and I’m her executor. Do I need to file for probate?",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "How AI Could Actually Kill Us, According to Expert - Newser",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "CBIZ (CBZ) Stock May Be Below Fair Value On Earnings Strength - Yahoo Finance",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "I'd Buy Amazon Stock While It Sits 12% Below Its Record - The Motley Fool",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Price to earnings forward of Oura Inc. – NASDAQ:OURA - TradingView",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Oil Rises as Iran Says It Won’t Soften Strait of Hormuz Demands - Livemint",
+      "decision": "DROP",
+      "reason": "reprint_weather"
+    },
+    {
+      "title": "Top 5 Market Catalysts That Could Move Stocks and Crypto This Week - BeInCrypto",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "COMMENTARY: Where will Fed tightening hit hardest in Asia? - Reuters",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "Shocker: Last Night's 'Viral' Pro-Data Center Party Is Tied to Thiel, the Koch Institute, and Other AI Boosters - Gizmodo",
+      "decision": "DROP",
+      "reason": "tabloid"
+    },
+    {
+      "title": "Hana Securities predicted on the 28th that long-term U.S. government bond rates, which soared during.. - 매일경제",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "You need £17,000 for a first home - here's how to do it - bbc.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Australian Dollar softens to near 0.7000 on hawkish Fed signals, RBA rate decision looms - FXStreet",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "What Fed’s rate hike means for gold, the rupee and Indian markets - Deccan Herald",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Oil climbs, stock futures slip as Trump rejects Iran’s Hormuz proposal - TradingView",
+      "decision": "DROP",
+      "reason": "reprint_weather"
+    },
+    {
+      "title": "TSLA Stock Slips Overnight: SpaceX IPO Hype Is Starting To Look Like Amazon's Dot-Com Bubble Peak In 2000, Warns Ex-Lehman Trader - Stocktwits",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Walmart vows not to use customer data for personalized pricing: 'We won't do it' - Fox Business",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Brent gains 2.7% as Trump rejects Iranian proposal to reopen Hormuz Strait - CNBC",
+      "decision": "DROP",
+      "reason": "reprint_weather"
+    },
+    {
+      "title": "BREAKING: Geely to take 30% stake in Nio Power with battery swap assets and cash - CnEVPost",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Following the Federal Reserve's rate hike, is the Reserve Bank of Australia poised for consecutive moves? Market focus shifts to a potential restart of rate hikes in September, followed by another increase in November. - 富途牛牛",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "Fed Rate Hikes Put Asian Markets Under Pressure, but Banks and Insurers May Benefit - Межа. Новини України.",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Price to earnings forward of BNY Mellon High Yield Strategies Fund – NASDAQ:XDHFX - TradingView",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Stocks slip in Asia as oil and yields climb - Reuters",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Gold declines as Hormuz impasse keeps rate hike bets elevated - The Business Times",
+      "decision": "DROP",
+      "reason": "reprint_weather"
+    },
+    {
+      "title": "Fed rate hikes: What happens to gold prices when US interest rates rise? - The Economic Times",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "Meta pushes back on claims Instagram Plus exposes repeat story viewers - Fox Business",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Oil Rises on Geopolitical Risks, Stockpile Decline - WSJ",
+      "decision": "DROP",
+      "reason": "geo_other"
+    },
+    {
+      "title": "Stock futures slip after winning week on Wall Street: Live updates - CNBC",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "British Pound gains as US Dollar weakens despite hawkish Fed, geopolitical tensions - tmgm.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Did your favorite local Starbucks just close? These 36 SoCal locations are likely shuttered - Los Angeles Times",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "Gold drops more than 2% on US rate-hike bets - Reuters",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "ASTRO: Siemens unveils Accela radiotherapy system - AuntMinnie",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Markets pricing an excessive 125bps rate hike over the next one year: Nomura - Business Standard",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Oil Price Today (September 28): Crude oil gains to $106 as Trump rejects Iran deal. Where are prices heade - The Economic Times",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Gold drops more than 1% on US rate-hike bets - Business Recorder",
+      "decision": "DROP",
+      "reason": "dup"
+    },
+    {
+      "title": "Indian equity markets open higher on easing crude oil prices - DD News",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Gold fell to $4,262 per ounce after dropping more than 2% over the week - Українські Національні Новини (УНН)",
+      "decision": "DROP",
+      "reason": "reaction"
+    },
+    {
+      "title": "The market’s betting AI will outrun bond yields, Fed rate hikes - AFR",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Dow Jones Futures Fall, Oil Prices Rise Amid Trump Iran Comments; Micron, SpaceX, Tesla Eye Buy Points - Investor's Business Daily",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Gold falls over 1% as oil, Fed rate-hike bets weigh - Banglanews24",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Oil Tensions and Fed Rate Bets Keep the Dollar Near a Two-Month High - Межа. Новини України.",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Silver Price Forecast: XAG/USD falls to near $62.00 amid Fed rate hike odds - FXStreet",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Gold Slides Over 1% as Surging Oil Prices Revive Fed Rate-Hike Fears - finance.biggo.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "August Core PCE: Fed's Key Rate Test - Bitget",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "For once, the Fed has put Main Street before Wall Street - Financial Times",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "U.S. Dollar Strengthens: Rates, Havens, Data - Bitget",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Gold’s next leg higher faces hurdle as yields rise, Fed rate-hike bets return - Moneycontrol.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Gold, Silver rate today live updates: Gold drops more than 2 % as oil surge boosts US rate hike bets - The Times of India",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Scott Bessent Says Fed Should Keep 'Open Mind' on Interest Rates - Benzinga",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "September NFP: August Rebound Test? - Bitget",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "US Market: Wall Street rally faces fresh test as jobs, inflation data loom - The Economic Times",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Gold prices dip Rs 3,200/10 gram; silver falls Rs 6,700/kg as high oil prices raise rate hike bets. Time t - The Economic Times",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Why Bitcoin is holding near $84,000 despite rate and geopolitical risks - CNBC TV18",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "U.S. Treasury Secretary Scott Bessant is again putting pressure on the Fed amid a surge in governmen.. - 매일경제",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "What Fed’s rate hike means, how it impacts Americans - The New Political",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Gold seems vulnerable below $4,200, lowest since August 5 as Fed hike bets rise - FXStreet",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Scott Bessent Says Kevin Warsh Is 'Well Aware' of AI Productivity Gains: Fed Should Keep an 'Open Mind' on Interest Rates - Longbridge",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Stock earnings pick of the week: Can Micron earnings keep the AI memory boom running? - investingLive",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "India VIX spikes 14% as oil, geopolitical risks trigger market sell-off - Business Standard",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Strait of Hormuz Standoff Fuels Rate Hike Bets as Gold Plunges Nearly $100 in Asian Trading, Breaching $4,200 - finance.biggo.com",
+      "decision": "DROP",
+      "reason": "reprint_weather"
+    },
+    {
+      "title": "Gold Falls Below $4,200 in Single-Day Drop of Over $100: Why Are Gold Prices Plunging? - TradingKey",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "Markets Brief: Are We in an Earnings Bubble? - Morningstar",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "5 key market themes investors need to watch this week - The Economic Times",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Fed Officials' Hawkish Remarks on Same Day Lift October Rate Hike Expectations to 69% - eu.36kr.com",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Markets Push Fed Rate-Cut Expectations to Mid-2028 as Oil and Bond Yields Rise - Межа. Новини України.",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Rising expectations of Federal Reserve rate hikes, combined with a stronger U.S. dollar, pushed gold below the $4,200 integer threshold. - 富途牛牛",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Global Gold Prices Plunge Over 2 Percent: What Is the Cause? - Aktualita.co",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "Dollar Holds Near Two-Month High As Oil Fuels Rate Hike Bets - BusinessToday Malaysia",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Gold price prediction today: Will gold continue to fall? Check outlook for September 28, 2026 week - The Times of India",
+      "decision": "DROP",
+      "reason": "punct"
+    },
+    {
+      "title": "The Bond Market Is Getting Closer to Sounding Alarm on Economy - Bloomberg",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Bitcoin Pulls Back to $84,000 Amid Renewed Geopolitical Tensions - Intellectia AI",
+      "decision": "DROP",
+      "reason": "geo_other"
+    },
+    {
+      "title": "Gold drops more than 1% as higher oil prices fuel Fed rate-hike bets - The Peninsula Qatar",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "Mexican Peso Extends Decline as USMCA Talks Delayed and Rate Differential Narrows - finance.biggo.com",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Australia’s biggest gold miner rejects $27bn takeover bid - Financial Times",
+      "decision": "DROP",
+      "reason": "geo_other"
+    },
+    {
+      "title": "Nvidia’s 2026 Dividend Hike Puts Dividend Growth Stocks in the Spotlight - Morningstar",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Gold, silver ETFs tumble up to 3.6% as precious metals slide on US Fed rate-hike fears - Moneycontrol.com",
+      "decision": "DROP",
+      "reason": "low_material"
+    },
+    {
+      "title": "USD/MXN (USDMXN) Volatility Intensified on Sep 28: Factors to Watch - TradingKey",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Trump-Xi summit analysis: 'Tangible outcomes' needed for U.S.-China truce to hold",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Swiss Franc weakens as US Dollar gains on Fed rate hike bets - FXStreet",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "The 10-Year Treasury Pays 5.2%. The S&P 500 Only Needs 4% Earnings Growth to Keep Up. - The Motley Fool",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "Dow Jones futures drop as rising oil, US Treasury yields fuel Fed rate hike fears - FXStreet",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "US Money Markets: Value in extensions given the aggressive Fed discount - ING Think",
+      "decision": "DROP",
+      "reason": "opinion"
+    },
+    {
+      "title": "US Stock Market Today: S&P 500 Futures Rise As Traders Eye Jobs And PCE Data - simplywall.st",
+      "decision": "DROP",
+      "reason": "opinion"
+    }
+  ]
+}
