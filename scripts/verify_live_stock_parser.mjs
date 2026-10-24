@@ -33,10 +33,10 @@ try{
  assert.equal(config?.ui_revision,process.env.EXPECTED_UI_REVISION,'expected deployed UI revision');
  await page.goto(BASE+'?verify='+process.env.EXPECTED_UI_REVISION,{waitUntil:'domcontentloaded'});
  await page.locator('#stock-summary').filter({hasText:'Connect GitHub'}).waitFor({timeout:90000});
- await page.getByRole('textbox',{name:'GitHub token',exact:true}).fill(token);
+ await page.getByLabel('GitHub token',{exact:true}).fill(token);
  await page.getByRole('button',{name:'Connect GitHub',exact:true}).click();
  await page.locator('#connection').filter({hasText:'GitHub connected'}).waitFor();
- assert.equal(await page.getByRole('textbox',{name:'GitHub token',exact:true}).inputValue(),'');
+ assert.equal(await page.getByLabel('GitHub token',{exact:true}).inputValue(),'');
  report.checks.push('served revision and temporary GitHub connection');
  const catalog=await (await fetch(BASE+'catalog.json')).json();
  const description=Object.entries(catalog.catalog).find(([,row])=>row.coverage==='description_only')?.[0];
