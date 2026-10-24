@@ -23,6 +23,7 @@ def compiler_fingerprint():
     root = Path(__file__).resolve().parents[1]
     paths = ('src/filing_relationships.py', 'src/filing_evidence.py', 'src/term_inventory.py',
              'src/specific_filing_records.py', 'src/relationship_frames.py', 'src/stock_evidence_graph.py',
+             'src/stock_document_context.py',
              'scripts/build_filing_profiles.py', 'requirements-filing-parser.txt')
     digest = hashlib.sha256()
     for name in paths:
@@ -532,7 +533,7 @@ def extract_sections(sections, *, ticker, name, nlp):
     parse_cache = {}
     for section in sections:
         raw = str(section.get('text') or '')
-        metadata = {k: section.get(k, '') for k in ('source', 'form', 'filing_date', 'accepted_at', 'report_date', 'accession', 'section', 'document', 'kind', 'url')}
+        metadata = {k: section.get(k, '') for k in ('source', 'form', 'filing_date', 'accepted_at', 'report_date', 'accession', 'section', 'document', 'document_type', 'document_description', 'kind', 'url')}
         metadata['sha256'] = hashlib.sha256(raw.encode()).hexdigest()
         metadata['characters'] = len(raw)
         metadata['section_ordinal'] = len(sources)

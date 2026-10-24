@@ -9,7 +9,7 @@ from collections import defaultdict
 import hashlib
 import re
 
-VERSION = 'stock-evidence-graph-1'
+VERSION = 'stock-evidence-graph-2'
 NAME_TYPES = {'ORG', 'PERSON', 'PRODUCT', 'LAW', 'GOV_AGENCY'}
 GENERIC = {'we','us','our','ours','company','the company','registrant','issuer',
            'customers','business partners','internal systems','subsidiaries',
@@ -87,6 +87,10 @@ def build(graph, *, as_of=None, verified_terms=()):
         row['extraction_basis'].add(basis)
 
     # First pass: names are retained even if no relation was extracted.
+    from .stock_document_context import listed_names
+    schedule_rows=[r for sid,text in texts.items() for r in listed_names(sources[sid],text,graph['name'])]
+    for row in schedule_rows:
+        add(row['source_id'],row['start'],row['end'],'ORG','subsidiary_schedule_name')
     for t in terms:
         types=set(t.get('entity_types',[])) & NAME_TYPES
         for label in types:add(t['source_id'],t['start'],t['end'],label,'grammar_named_entity')
@@ -163,6 +167,8 @@ def build(graph, *, as_of=None, verified_terms=()):
 
     entities={};occurrences=[]
     for (sid,start,end),row in sorted(selected.items()):
+        if any(s['source_id']==sid and s['start']<=start<end<=s['end'] and
+               (s['start'],s['end'])!=(start,end) for s in schedule_rows):continue
         if any(d['source_id']==sid and d['definition_span']['start']<=start<end<=d['definition_span']['end']
                and (start,end)!=(d['definition_span']['start'],d['definition_span']['end'])
                for d in definitions):continue
@@ -189,6 +195,15 @@ def build(graph, *, as_of=None, verified_terms=()):
             ent['definition_ids'].update(d['id'] for d in defs)
 
     assertions=[]
+    for row in schedule_rows:
+        for o in occurrences:
+            if (o['source_id'],o['start'],o['end'])!=(row['source_id'],row['start'],row['end']) or not o['entity_id']:continue
+            aid=ident('subsidiary_schedule',o['entity_id'],row['source_id'],row['start'])
+            assertions.append({'id':aid,'entity_id':o['entity_id'],'subject':graph['ticker'],
+                **{k:row[k] for k in ('predicate','assertion','filing_date','source_id','basis','direct_ownership_established')},
+                'effective_date':None,'evidence':{k:row[k] for k in ('source_id','start','end','text')},
+                'capacity':'group_ownership_disclosure'})
+            entities[o['entity_id']]['assertion_ids'].append(aid)
     for detail,anchor in disclosures:
         for o in occurrences:
             if (o['source_id'],o['start'],o['end'])!=(detail['source_id'],anchor['start'],anchor['end']) or not o['entity_id']:continue

@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'src/stock_evidence_graph.py'
+      - 'src/stock_document_context.py'
       - 'scripts/materialize_stock_validation_archive.py'
       - '.github/workflows/stock-evidence-full-source-validation.yml'
 permissions:

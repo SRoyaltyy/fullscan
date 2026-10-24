@@ -7,6 +7,7 @@ on:
       - 'src/filing_relationships.py'
       - 'src/relationship_frames.py'
       - 'src/stock_evidence_graph.py'
+      - 'src/stock_document_context.py'
       - 'src/term_inventory.py'
       - 'src/entity_resolution.py'
       - 'src/specific_filing_records.py'

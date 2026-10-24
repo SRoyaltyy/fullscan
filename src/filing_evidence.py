@@ -119,6 +119,7 @@ def load_filing_sections(objects: Path, *, as_of: str | None = None, strict: boo
                 if missing:
                     raise ValueError('text views missing: '+','.join(missing[:10]))
                 report['filings'] += 1
+                file_metadata={f.get('filename'):f for f in manifest.get('files',[])}
                 for filename, document in views.items():
                     text = str(document.get('text') or '') if isinstance(document,dict) else str(document or '')
                     if not text.strip():
@@ -128,6 +129,8 @@ def load_filing_sections(objects: Path, *, as_of: str | None = None, strict: boo
                     for section in section_views(text,str(filing.get('form') or manifest.get('form') or ''),filename):
                         section.update({'source':'PR642','filing_date':date,'accession':accession,'form':filing.get('form',''),
                             'document':filename,'complete':True,
+                            'document_type':file_metadata.get(filename,{}).get('type',''),
+                            'document_description':file_metadata.get(filename,{}).get('description',''),
                             'accepted_at':filing.get('accepted_at_raw',''), 'report_date':filing.get('report_date',''),
                             'url':f'https://www.sec.gov/Archives/edgar/data/{int(company["cik"])}/{accession.replace("-", "")}/{filename}'})
                         chunks.append(section)

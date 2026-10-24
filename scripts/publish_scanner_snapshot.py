@@ -22,6 +22,7 @@ INPUT_PATHS = ('src/correlation.py', 'src/evidence_matcher.py', 'src/stock_evide
     'src/entity_resolution.py','src/term_inventory.py','src/completed_profile_store.py','scripts/annotate_article_entities.py',
     'src/filing_relationships.py', 'src/relationship_frames.py', 'src/scanner_validation.py',
     'src/stock_evidence_graph.py',
+    'src/stock_document_context.py',
     'src/specific_filing_records.py', 'src/deep_profile_store.py', 'requirements-filing-parser.txt',
     'eval/scanner-failures', 'scripts/check_scanner_methodology.py',
     'scripts/build_filing_profiles.py', 'data/company_filings_full_release.json',
