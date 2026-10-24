@@ -1,0 +1,187 @@
+name: Stock parser on demand
+run-name: Stock parser ${{ inputs.ticker || 'BLZE' }} [${{ inputs.request_id || github.run_id }}]
+on:
+  workflow_dispatch:
+    inputs:
+      ticker: {description: One catalog ticker, required: true}
+      request_id: {description: Unique comparison request ID, required: true}
+      old_sha: {description: Full old parser commit, required: true}
+      new_sha: {description: Full new parser commit, required: true}
+      catalog_revision: {description: Full published catalog commit, required: true}
+  pull_request:
+    paths:
+      - '.github/workflows/stock-parser-request.yml'
+      - 'scripts/stock_parser_request.py'
+      - 'scripts/install_parser_request_page.py'
+      - 'scripts/test_stock_parser_request.py'
+      - 'dashboard/stock-comparison/**'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  parse:
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'codex/on-demand-parser-comparison')
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      REQUEST_ID: ${{ inputs.request_id || format('pr-validation-{0}', github.run_id) }}
+      TICKER: ${{ inputs.ticker || 'BLZE' }}
+      OLD_SHA: ${{ inputs.old_sha || '7adb09dd5091fb51ac68859645a26e2292951e46' }}
+      NEW_SHA: ${{ inputs.new_sha || '4d221aa78f21d1968fe4878998a2ac9455d3b6aa' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          path: runner
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/stock_parser_request.py
+            /scripts/test_stock_parser_request.py
+            /dashboard/stock-comparison/
+      - name: Validate request and test result-isolation controls
+        working-directory: runner
+        run: |
+          python -m unittest scripts.test_stock_parser_request
+          node --test dashboard/stock-comparison/test_request.mjs dashboard/stock-comparison/test_comparison.mjs
+          python -c "import os; from scripts.stock_parser_request import validate_request; validate_request(os.environ['TICKER'],os.environ['REQUEST_ID'],os.environ['OLD_SHA'],os.environ['NEW_SHA'])"
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.catalog_revision || 'gh-pages' }}
+          path: published
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: /dashboard/scanner-backtest/compare/catalog.json
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.OLD_SHA }}
+          path: old
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/
+            /scripts/
+            /requirements-filing-parser.txt
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.NEW_SHA }}
+          path: new
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/
+            /scripts/
+            /requirements-filing-parser.txt
+            /data/company_filings_full_release.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: old/requirements-filing-parser.txt
+      - name: Install pinned parser and verify shared runtime requirements
+        run: |
+          cmp old/requirements-filing-parser.txt new/requirements-filing-parser.txt
+          python -m pip install --only-binary=:all: --index-url https://pypi.org/simple -r old/requirements-filing-parser.txt PyYAML==6.0.3
+      - uses: actions/cache@v4
+        id: senses
+        with:
+          path: old/src/data/senses
+          key: parser-wordnet-${{ hashFiles('old/src/data/senses/manifest.json', 'old/scripts/build_semantic_resources.py') }}
+      - name: Restore checksum-pinned semantic resources
+        if: steps.senses.outputs.cache-hit != 'true'
+        working-directory: old
+        run: python -m scripts.bootstrap_semantics
+      - name: Fetch and verify only the requested stock stored sources
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          python -u runner/scripts/stock_parser_request.py prepare
+          --catalog published/dashboard/scanner-backtest/compare/catalog.json
+          --parser-root new --ticker "$TICKER" --out shared-input.json
+      - name: Run old parser on the shared input
+        run: >-
+          python -u runner/scripts/stock_parser_request.py parse
+          --input shared-input.json --parser-root old --kind old
+          --revision "$OLD_SHA" --out old-output.json
+      - name: Run new parser on identical input bytes
+        run: >-
+          python -u runner/scripts/stock_parser_request.py parse
+          --input shared-input.json --parser-root new --kind new
+          --revision "$NEW_SHA" --out new-output.json
+      - name: Verify both results and package the comparison
+        run: >-
+          python -u runner/scripts/stock_parser_request.py assemble
+          --input shared-input.json --old old-output.json --new new-output.json
+          --out result
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stock-parser-comparison
+          path: result/
+          retention-days: 30
+  retain:
+    needs: parse
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    env:
+      REQUEST_ID: ${{ inputs.request_id || format('pr-validation-{0}', github.run_id) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          sparse-checkout-cone-mode: false
+          sparse-checkout: /scripts/stock_parser_request.py
+      - uses: actions/download-artifact@v4
+        with:
+          name: stock-parser-comparison
+          path: result
+      - name: Retain verified result on its immutable request path
+        run: python -u -m scripts.stock_parser_request publish --out result
+  page:
+    if: github.event_name == 'pull_request'
+    needs: [parse, retain]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pages: write
+    concurrency:
+      group: gh-pages-deploy
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: runner
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/stock_parser_request.py
+            /scripts/install_parser_request_page.py
+            /dashboard/stock-comparison/
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: site
+          sparse-checkout-cone-mode: false
+          sparse-checkout: /dashboard/scanner-backtest/compare/
+      - name: Publish the comparison UI and preserve the preceding saved view
+        working-directory: runner
+        env:
+          SOURCE_REVISION: ${{ github.event.pull_request.head.sha }}
+        run: |
+          CATALOG_REVISION=$(git -C ../site rev-parse HEAD)
+          python -m scripts.install_parser_request_page --site ../site --source-revision "$SOURCE_REVISION" --catalog-revision "$CATALOG_REVISION"
+          cd ../site
+          git config user.name 'Stock parser comparison publisher'
+          git config user.email 'bot@users.noreply.github.com'
+          git add dashboard/scanner-backtest/compare
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish experimental on-demand same-input parser comparison'
+            git push origin HEAD:gh-pages
+          fi
+      - name: Request GitHub Pages publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
