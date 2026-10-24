@@ -1,28 +1,28 @@
 {
  "date": "2026-10-24",
- "generated_at": "2026-10-24T05:57:12.100947+00:00",
+ "generated_at": "2026-10-24T16:41:45.896589+00:00",
  "catalog": {
-  "generated_at": "2026-10-17T13:03:20.405263+00:00",
+  "generated_at": "2026-10-24T16:39:29.833670+00:00",
   "channels": 365,
-  "enabled": 123,
-  "verified_ok": 116,
+  "enabled": 121,
+  "verified_ok": 111,
   "by_adapter": {
    "federal_register": 1,
    "hkma_press": 1,
    "govuk_search": 9,
-   "rss": 99,
+   "rss": 97,
    "html_index": 11,
    "google_news_rss": 2
   },
   "by_jurisdiction": {
-   "US": 71,
+   "US": 69,
    "UK": 11,
    "CA": 11,
-   "EU": 7,
+   "EU": 6,
    "DE": 4,
+   "INT": 4,
    "AU": 3,
    "JP": 3,
-   "INT": 3,
    "IN": 2,
    "CH": 2,
    "HK": 1,
@@ -34,51 +34,41 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-24T05:56:48.534199+00:00",
-  "enabled_sources": 123,
-  "sources_ok": 121,
-  "sources_failed": 2,
+  "generated_at": "2026-10-24T16:41:23.639966+00:00",
+  "enabled_sources": 121,
+  "sources_ok": 118,
+  "sources_failed": 3,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 2046,
-   "old": 1277,
-   "future": 14,
-   "undated": 303,
-   "new": 37,
-   "duplicates": 718
+   "observed": 1812,
+   "old": 1212,
+   "future": 2,
+   "undated": 223,
+   "new": 3,
+   "duplicates": 595
   },
-  "current_dated_documents": 585
+  "current_dated_documents": 493
  },
  "new_today": {
-  "count": 37,
+  "count": 3,
   "by_source": {
-   "us-doj-b3d27e1dc3": 13,
-   "us-govinfo-dcpd": 8,
-   "us-doj-e05071794d": 3,
-   "us-fda-5696b24295": 3,
-   "us-hhs-6f995a5754": 3,
    "us-govinfo-bills": 1,
-   "us-white-house-0691096d16": 1,
-   "us-ustr-index": 1,
-   "us-fcc-685c5e7dd2": 1,
-   "us-fcc-e95ecda3bb": 1,
-   "us-fcc-364d1b4932": 1,
-   "us-dol-99f477805a": 1
+   "eu-ecb-991c113079": 1,
+   "nz-rbnz-gnews": 1
   },
   "by_class": {
-   "routine": 11,
-   "docket": 4,
-   "watch": 14,
-   "high": 8
+   "routine": 1,
+   "watch": 2
   }
  },
  "parsed_today": {
-  "count": 1,
+  "count": 3,
   "by_class": {
-   "routine": 1
+   "routine": 2,
+   "watch": 1
   }
  },
- "n_failures": 2,
+ "n_failures": 3,
  "dates": [
   "2026-10-24"
  ],

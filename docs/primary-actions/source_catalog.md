@@ -1,6 +1,6 @@
 # Primary-origin source catalog
 
-Verified 2026-10-17T13:03:20.405263+00:00. 1985 institution records; 123 enabled publication channels out of 365 checked candidates.
+Verified 2026-10-24T16:39:29.833670+00:00. 1987 institution records; 121 enabled publication channels out of 365 checked candidates.
 
 Institution records include historical/closed bodies and shared portals. This is a maintained coverage catalog, not an exhaustive worldwide directory. Disabled/blocked channels remain visible below.
 
@@ -13,8 +13,8 @@ Institution records include historical/closed bodies and shared portals. This is
 | GOV.UK statutory instrument | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
 | GOV.UK consultation outcome | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
 | GOV.UK government response | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
-| GOV.UK medical safety alert | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
-| GOV.UK drug safety update | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
+| GOV.UK medical safety alert | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
+| GOV.UK drug safety update | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
 | GOV.UK product safety alert report recall | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | ok |
 | GOV.UK international treaty | UK | typed_government_documents | [govuk_search](https://www.gov.uk/api/search.json) | True | valid_empty |
 | Congressional Bills | US | legislative_and_presidential_documents | [rss](https://www.govinfo.gov/rss/bills.xml) | True | ok |
@@ -24,7 +24,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Congressional Hearings | US | legislative_and_presidential_documents | [rss](https://www.govinfo.gov/rss/chrg.xml) | False | ok; congressional_record_floor_proceedings |
 | Congressional Reports | US | legislative_and_presidential_documents | [rss](https://www.govinfo.gov/rss/crpt.xml) | True | ok |
 | White House presidential actions | US | executive_instruments | [rss](https://www.whitehouse.gov/presidential-actions/feed/) | True | ok |
-| Congress.gov legislative status | US | legislative_procedure | [rss](https://www.congress.gov/rss/presented-to-president.xml) | True | ok |
+| Congress.gov legislative status | US | legislative_procedure | [rss](https://www.congress.gov/rss/presented-to-president.xml) | True | valid_empty |
 | Supreme Court opinions and orders | US | judicial_decisions | [html_index](https://www.supremecourt.gov/opinions/slipopinion/26) | True | ok |
 | Securities and Exchange Commission | US | enforcement_and_market_rules | [rss](https://www.sec.gov/news/pressreleases.rss) | True | ok |
 | Securities and Exchange Commission | US | enforcement_and_market_rules | [rss](https://www.sec.gov/enforcement-litigation/litigation-releases/rss) | True | ok |
@@ -63,7 +63,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Reserve Board — Governor Christopher J. Waller | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/s_t_waller.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Credit and Liquidity Programs and the Balance Sheet | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/clp.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Current Frequently Asked Questions | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/currentfaqs.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
-| Federal Reserve Board — Office of Inspector General | US | monetary_operations | [rss](https://oig.federalreserve.gov/feeds/oig.xml) | False | invalid_feed_or_network_error |
+| Federal Reserve Board — Office of Inspector General | US | monetary_operations | [rss](https://oig.federalreserve.gov/feeds/oig.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
 | Federal Reserve Board — Regulatory Reform | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/regreform.xml) | True | valid_empty |
 | Federal Reserve Board — Board Meetings | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/boardmeetings.xml) | True | ok |
 | Federal Reserve Board — Reporting Forms | US | monetary_operations | [rss](https://www.federalreserve.gov/feeds/reportforms-rss.xml) | False | ok; Fed research, speeches/testimony or reference data; policy releases remain enabled |
@@ -114,7 +114,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Consumer Product Safety Commission | US | product_safety | [rss](https://www.cpsc.gov/Newsroom/CPSC-RSS-Feed/Recalls-RSS) | True | ok |
 | Consumer Product Safety Commission | US | product_safety | [rss](https://www.cpsc.gov/Newsroom/CPSC-RSS-Feed/News-RSS) | True | ok |
 | USDA Food Safety and Inspection Service — News & Events | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/news-release) | True | ok |
-| USDA Food Safety and Inspection Service — Recalls | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/recalls) | True | ok |
+| USDA Food Safety and Inspection Service — Recalls | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/recalls) | False | invalid_feed_or_network_error |
 | USDA Food Safety and Inspection Service — FSIS Directives | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/directives) | False | ok; FSIS internal directives; recalls and news remain enabled |
 | USDA Food Safety and Inspection Service — FSIS Notices | US | product_safety | [rss](https://www.fsis.usda.gov/fsis-content/rss/notices) | False | ok; FSIS internal directives; recalls and news remain enabled |
 | Health and Human Services | US | health_administration | [rss](https://www.hhs.gov/rss/news.xml) | True | ok |
@@ -122,7 +122,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Communications Commission | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/feed) | False | invalid_feed_or_network_error |
 | Federal Communications Commission — Wireline Competition Bureau - Industry Analysis Reports | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/bureaus/wcb/iatd/reports-rss-feed.xml) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Federal Communications Commission Record | US | telecom_rules_and_licences | [rss](https://www.govinfo.gov/rss/gpo-fcc.xml) | True | ok |
-| Federal Communications Commission — Blog | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/blog/feed/) | False | ok; reference data, research, speeches or commentary |
+| Federal Communications Commission — Blog | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/blog/feed/) | False | blocked; reference data, research, speeches or commentary |
 | Federal Communications Commission — Events | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/events/feed/) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Guides | US | telecom_rules_and_licences | [rss](https://www.fcc.gov/guides/feed/) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — FCC Recent Releases (Combined) | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
@@ -163,7 +163,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Federal Communications Commission — Office of Economics and Analytics - Auctions | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/AU) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Office of Engineering & Technology | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OET) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Office of General Counsel | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OGC) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
-| Federal Communications Commission — Office of Inspector General | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OIG) | False | invalid_feed_or_network_error |
+| Federal Communications Commission — Office of Inspector General | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OIG) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Office of International Affairs | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OIA) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Office of Legislative Affairs | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OLA) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
 | Federal Communications Commission — Office of Managing Director | US | telecom_rules_and_licences | [rss](https://api2.fcc.gov/api/exp/v1.0.0/edocspublic/rss/bureaus/OMD) | False | ok; FCC licence, callsign or admin feed; enforcement and rulemaking remain enabled |
@@ -180,7 +180,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | National Labor Relations Board — https://www.nlrb.gov/rss/rssWeeklySummaries.xml | US | labour_decisions | [rss](https://www.nlrb.gov/rss/rssWeeklySummaries.xml) | True | ok |
 | National Labor Relations Board — https://www.nlrb.gov/rss/rssAnnouncements.xml | US | labour_decisions | [rss](https://www.nlrb.gov/rss/rssAnnouncements.xml) | False | ok; NLRB procedural announcements; decisions remain enabled |
 | Department of the Interior | US | permits_and_resources | [rss](https://www.doi.gov/feeds/content/36980/rss.xml) | False | valid_empty; agency_output_not_us_market_actionable |
-| Department of Transportation | US | transport_permissions | [rss](https://www.transportation.gov/rss.xml) | True | ok |
+| Department of Transportation | US | transport_permissions | [rss](https://www.transportation.gov/rss.xml) | False | blocked |
 | Department of State | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/press-releases/feed/) | True | valid_empty |
 | Department of State — United States Department of State » Feed | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/feed/) | False | valid_empty; State Department catch-all or comments feed; press releases remain enabled |
 | Department of State — United States Department of State » Comments Feed | US | diplomatic_engagements_and_sanctions | [rss](https://www.state.gov/comments/feed/) | False | valid_empty; State Department catch-all or comments feed; press releases remain enabled |
@@ -264,7 +264,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | European Central Bank — Thai baht (THB) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-thb.html) | False | ok; ECB reference data or research; press releases remain enabled |
 | European Central Bank — South African rand (ZAR) | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss/fxref-zar.html) | False | ok; ECB reference data or research; press releases remain enabled |
 | European Central Bank | EU | monetary_operations | [rss](https://www.ecb.europa.eu/rss) | False | invalid_feed_or_network_error |
-| European Securities and Markets Authority | EU | market_rules_and_enforcement | [rss](https://www.esma.europa.eu/rss.xml) | True | ok |
+| European Securities and Markets Authority | EU | market_rules_and_enforcement | [rss](https://www.esma.europa.eu/rss.xml) | False | invalid_feed_or_network_error |
 | European Banking Authority | EU | financial_supervision | [rss](https://www.eba.europa.eu/news-press/news/rss.xml) | True | ok |
 | European Medicines Agency | EU | product_permissions_and_safety | [rss](https://www.ema.europa.eu/en/whats-new.xml) | False | ok; agency_output_not_us_market_actionable |
 | UK legislation | UK | legal_instruments | [rss](https://www.legislation.gov.uk/new/data.feed) | False | ok; agency_output_not_us_market_actionable |
@@ -363,8 +363,8 @@ Institution records include historical/closed bodies and shared portals. This is
 | Deutsche Bundesbank — Speeches, Interview and Contributions | DE | monetary_and_supervisory | [rss](https://www.bundesbank.de/service/rss/en/633296/feed.rss) | True | ok |
 | Deutsche Bundesbank — Topics | DE | monetary_and_supervisory | [rss](https://www.bundesbank.de/service/rss/en/633312/feed.rss) | True | ok |
 | Deutsche Bundesbank — RSS | DE | monetary_and_supervisory | [rss](https://www.bundesbank.de/en/homepage/rss) | False | invalid_feed_or_network_error |
-| World Trade Organization disputes and decisions | INT | trade_and_dispute_decisions | [rss](https://www.wto.org/library/rss/latest_news_e.xml) | False | invalid_feed_or_network_error |
-| World Trade Organization disputes and decisions | INT | trade_and_dispute_decisions | [rss](https://www.wto.org/library/rss/podcasts_e.xml) | False | invalid_feed_or_network_error |
+| World Trade Organization disputes and decisions | INT | trade_and_dispute_decisions | [rss](https://www.wto.org/library/rss/latest_news_e.xml) | True | ok |
+| World Trade Organization disputes and decisions | INT | trade_and_dispute_decisions | [rss](https://www.wto.org/library/rss/podcasts_e.xml) | False | ok; reference data, research, speeches or commentary |
 | Bank for International Settlements — View feed | INT | supervisory_standards | [rss](https://www.bis.org/doclist/all_pressrels.rss) | True | ok |
 | Bank for International Settlements — View feed | INT | supervisory_standards | [rss](https://www.bis.org/doclist/bis_fsi_publs.rss) | False | ok; BIS vacancies or research publications |
 | Bank for International Settlements — View feed | INT | supervisory_standards | [rss](https://www.bis.org/doclist/vacancies.rss) | False | ok; BIS vacancies or research publications |
@@ -1336,7 +1336,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Government Recruitment Service | UK | live | [source](https://www.gov.uk/government/organisations/government-recruitment-service) |
 | Government Science & Engineering Profession | UK | live | [source](https://www.gov.uk/government/organisations/civil-service-government-science-engineering) |
 | Government Security Profession | UK | live | [source](https://www.gov.uk/government/organisations/government-security-profession) |
-| Government Skills | UK | live | [source](https://www.gov.uk/government/organisations/government-skills) |
+| Government Skills | UK | closed | [source](https://www.gov.uk/government/organisations/government-skills) |
 | Government Skills and Curriculum Unit | UK | closed | [source](https://www.gov.uk/government/organisations/government-skills-and-curriculum-unit) |
 | Government Social Research Profession | UK | live | [source](https://www.gov.uk/government/organisations/civil-service-government-social-research-profession) |
 | Government Statistical Service | UK | exempt | [source](https://www.gov.uk/government/organisations/civil-service-government-statistical-service) |
@@ -1475,6 +1475,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Iraq Inquiry | UK | exempt | [source](https://www.gov.uk/government/organisations/iraq-inquiry) |
 | jHub Defence Innovation | UK | live | [source](https://www.gov.uk/government/organisations/jhub-defence-innovation) |
 | Joint Forces Command | UK | closed | [source](https://www.gov.uk/government/organisations/joint-forces-command) |
+| Joint Maritime Security Centre | UK | joining | [source](https://www.gov.uk/government/organisations/joint-maritime-security-centre) |
 | Joint Nature Conservation Committee | UK | exempt | [source](https://www.gov.uk/government/organisations/joint-nature-conservation-committee) |
 | Judicial Appointments and Conduct Ombudsman | UK | live | [source](https://www.gov.uk/government/organisations/judicial-appointments-and-conduct-ombudsman) |
 | Judicial Appointments Commission | UK | exempt | [source](https://www.gov.uk/government/organisations/judicial-appointments-commission) |
@@ -1603,6 +1604,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | National Records of Scotland | UK | closed | [source](https://www.gov.uk/government/organisations/national-records-of-scotland) |
 | National Savings and Investments | UK | exempt | [source](https://www.gov.uk/government/organisations/nsandi) |
 | National School of Government | UK | closed | [source](https://www.gov.uk/government/organisations/national-school-of-government) |
+| National School of Government and Public Services | UK | exempt | [source](https://www.gov.uk/government/organisations/national-school-of-government-and-public-services) |
 | National Security and Intelligence | UK | live | [source](https://www.gov.uk/government/organisations/national-security) |
 | National Security Technology and Innovation Exchange | UK | closed | [source](https://www.gov.uk/government/organisations/national-security-technology-and-innovation-exchange) |
 | National Space Operations Centre | UK | live | [source](https://www.gov.uk/government/organisations/national-space-operations-centre) |
@@ -2261,7 +2263,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | USDA Food Safety and Inspection Service | US | official_publication_page_checked | [source](https://www.fsis.usda.gov/news-events/news-feeds-subscriptions) |
 | USDA Animal and Plant Health Inspection Service | US | official_publication_page_checked | [source](https://www.aphis.usda.gov/news) |
 | Health and Human Services | US | official_publication_page_checked | [source](https://www.hhs.gov/press-room/index.html) |
-| Centers for Medicare and Medicaid Services | US | official_publication_page_checked | [source](https://www.cms.gov/about-cms/web-policies-important-links/rss-feeds) |
+| Centers for Medicare and Medicaid Services | US | page_unavailable; verification pending | [source](https://www.cms.gov/about-cms/web-policies-important-links/rss-feeds) |
 | Environmental Protection Agency | US | official_publication_page_checked | [source](https://www.epa.gov/newsreleases) |
 | Federal Communications Commission | US | official_publication_page_checked | [source](https://www.fcc.gov/rss) |
 | Federal Energy Regulatory Commission | US | official_publication_page_checked | [source](https://www.ferc.gov/news-events/news/decisions-notices) |
@@ -2270,7 +2272,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | National Labor Relations Board | US | official_publication_page_checked | [source](https://www.nlrb.gov/resources/rss-feeds) |
 | Department of Energy | US | official_publication_page_checked | [source](https://www.energy.gov/newsroom) |
 | Department of the Interior | US | official_publication_page_checked | [source](https://www.doi.gov/news) |
-| Department of Transportation | US | official_publication_page_checked | [source](https://www.transportation.gov/briefing-room) |
+| Department of Transportation | US | page_unavailable; verification pending | [source](https://www.transportation.gov/briefing-room) |
 | Federal Aviation Administration | US | official_publication_page_checked | [source](https://www.faa.gov/newsroom) |
 | National Highway Traffic Safety Administration | US | official_publication_page_checked | [source](https://www.nhtsa.gov/press-releases) |
 | Department of State | US | official_publication_page_checked | [source](https://www.state.gov/press-releases/) |
@@ -2319,7 +2321,7 @@ Institution records include historical/closed bodies and shared portals. This is
 | Hong Kong Government Gazette | HK | official_publication_page_checked | [source](https://www.gld.gov.hk/egazette/) |
 | Hong Kong Monetary Authority | HK | official_publication_page_checked | [source](https://apidocs.hkma.gov.hk/documentation/press-releases/) |
 | Hong Kong Securities and Futures Commission | HK | official_publication_page_checked | [source](https://www.sfc.hk/en/RSS-Feeds) |
-| Hong Kong Legislative Council | HK | page_unavailable; verification pending | [source](https://www.legco.gov.hk/english/rss.html) |
+| Hong Kong Legislative Council | HK | official_publication_page_checked | [source](https://www.legco.gov.hk/english/rss.html) |
 | Hong Kong Judiciary judgments | HK | official_publication_page_checked | [source](https://www.judiciary.hk/en/judgments_legal_reference/judgments.html) |
 | Monetary Authority of Singapore | SG | official_publication_page_checked | [source](https://www.mas.gov.sg/news) |
 | Singapore Courts judgments | SG | official_publication_page_checked | [source](https://www.judiciary.gov.sg/judgments) |
