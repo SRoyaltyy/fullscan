@@ -4,6 +4,9 @@ name: Flatten Lookback Action
 # priced mover BUYs) with ticker-lookback cameras / setups / 09:30 action.
 
 on:
+  schedule:
+    # Weekdays after the US close (22:45 UTC = 06:45 HKT next day).
+    - cron: "45 22 * * 1-5"
   workflow_dispatch:
     inputs:
       from_date:
@@ -71,6 +74,8 @@ jobs:
           test -s 03_scoreboard/FLATTEN_LOOKBACK_ACTION.md
           test -s 03_scoreboard/flatten_lookback_action.json
           test -s dashboard/flatten-lookback/index.html
+      - name: Replay lock (add-only day fingerprints)
+        run: python scripts/replay_lock.py flatten-lookback 03_scoreboard/flatten_lookback_action.json
       - name: Publish scoreboard to main
         run: |
           bash scripts/safe_git_push.sh \
@@ -78,7 +83,8 @@ jobs:
             01_daily/flatten_lookback_action.md \
             03_scoreboard/FLATTEN_LOOKBACK_ACTION.md \
             03_scoreboard/flatten_lookback_action.json \
-            dashboard/flatten-lookback/
+            dashboard/flatten-lookback/ \
+            data/replay_locks/flatten-lookback.jsonl
         env:
           FROM_DATE: ${{ inputs.from_date }}
       - name: Upload artifact

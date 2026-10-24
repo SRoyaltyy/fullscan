@@ -5,6 +5,10 @@ name: Sleeve combine backtest
 # lookback payload + paper close cache.
 
 on:
+  workflow_run:
+    # Runs after the nightly mover lookback refreshes its payload.
+    workflows: ["Mover Lookback Action"]
+    types: [completed]
   workflow_dispatch:
     inputs:
       hold:
@@ -22,12 +26,21 @@ permissions:
 jobs:
   backtest:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    timeout-minutes: 30
+    concurrency:
+      group: sleeve-combine-bt
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install numpy pandas pyarrow
       - name: Integrity tests
         run: |
           python -m src.test_sleeve_combine_bt
@@ -43,17 +56,17 @@ jobs:
           echo "======== blotter ========"
           head -80 03_scoreboard/SLEEVE_COMBINE_BT.md || true
           test -s dashboard/sleeve-combine/index.html
+      - name: Replay lock (add-only day fingerprints)
+        run: python scripts/replay_lock.py sleeve-combine data/sleeve_combine/bt_curve.csv data/sleeve_combine/bt_trades.csv
       - name: Commit
         run: |
-          git config user.name "Market-Bot-Automaton"
-          git config user.email "bot@users.noreply.github.com"
-          git add 03_scoreboard/SLEEVE_COMBINE_BT.md \
-                  data/sleeve_combine/bt.json \
-                  data/sleeve_combine/bt_primary.json \
-                  data/sleeve_combine/bt_trades.csv \
-                  data/sleeve_combine/bt_curve.csv \
-                  data/sleeve_combine/bt_fills.csv \
-                  dashboard/sleeve-combine/index.html || true
-          git commit -m "auto: sleeve combine backtest" || echo "No changes"
-          git pull --rebase origin main || true
-          git push origin main || true
+          bash scripts/safe_git_push.sh \
+            "auto: sleeve combine backtest" \
+            03_scoreboard/SLEEVE_COMBINE_BT.md \
+            data/sleeve_combine/bt.json \
+            data/sleeve_combine/bt_primary.json \
+            data/sleeve_combine/bt_trades.csv \
+            data/sleeve_combine/bt_curve.csv \
+            data/sleeve_combine/bt_fills.csv \
+            dashboard/sleeve-combine/index.html \
+            data/replay_locks/sleeve-combine.jsonl

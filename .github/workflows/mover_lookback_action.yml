@@ -6,6 +6,9 @@ name: Mover Lookback Action
 # catch on forward +1d/+3d/+1w. Same-day Change% does not pick the list.
 
 on:
+  schedule:
+    # Weekdays after the US close (22:30 UTC = 06:30 HKT next day).
+    - cron: "30 22 * * 1-5"
   workflow_dispatch:
     inputs:
       from_date:
@@ -66,6 +69,10 @@ jobs:
           test -s data/book_paper/state.json
           test -s 03_scoreboard/BOOK_PAPER.md
           test -s dashboard/book-paper/index.html
+      - name: Replay lock (add-only day fingerprints)
+        run: |
+          python scripts/replay_lock.py mover-paper data/mover_paper/equity_curve.csv data/mover_paper/trades.csv
+          python scripts/replay_lock.py book-paper data/book_paper/equity_curve.csv data/book_paper/trades.csv
       - name: Publish scoreboard to main
         run: |
           bash scripts/safe_git_push.sh \
@@ -80,7 +87,9 @@ jobs:
             dashboard/mover-paper/ \
             dashboard/book-paper/ \
             data/mover_paper/ \
-            data/book_paper/
+            data/book_paper/ \
+            data/replay_locks/mover-paper.jsonl \
+            data/replay_locks/book-paper.jsonl
         env:
           FROM_DATE: ${{ inputs.from_date }}
       - name: Upload artifact

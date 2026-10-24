@@ -21,7 +21,7 @@ jobs:
   seat:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
     steps:
       - name: Clock gate (no clone before 09:00)
         if: github.event_name == 'workflow_run'
@@ -81,6 +81,9 @@ jobs:
           test -n "$(ls 03_scoreboard/boring_winners/*.md)"
           test -s 01_daily/latest_boring_winners.md
 
+      - name: Replay lock (add-only day fingerprints)
+        if: env.skip != 'yes'
+        run: python scripts/replay_lock.py boring-winners 03_scoreboard/boring_winners_daily.csv
       - name: Publish
         if: env.skip != 'yes'
         run: |
@@ -98,7 +101,8 @@ jobs:
               03_scoreboard/boring_winners_lab_daily.csv \
               dashboard/boring-winners/index.html \
               01_daily/*_boring_winners.md \
-              01_daily/latest_boring_winners.md
+              01_daily/latest_boring_winners.md \
+              data/replay_locks/boring-winners.jsonl
           )
           bash scripts/safe_git_push.sh \
             "chore: boring winners book×mine overlay" \
