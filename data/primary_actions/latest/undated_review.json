@@ -1,32 +1,32 @@
 [
   {
-    "title": "Telnyx, LLC International Signaling Point Code Applications, File Nos. SPC-NEW-20260420-00003, SPC-NEW-20260430-00004, SPC-NEW-20260430-00005",
-    "url": "https://www.fcc.gov/edoc/426132",
-    "native_id": "426132",
+    "title": "Gomez Urges Broadcasters to Push Back on Election-Year Intimidation",
+    "url": "https://www.fcc.gov/edoc/426167",
+    "native_id": "426167",
     "published_at": null,
     "published_raw": "",
-    "summary": "OIA grant of Telnyx, LLC's applications for three International Signaling Point Codes and provisional assignment of two codes for use in Chicago. IL and one code for use in Ashburn, VA.",
+    "summary": ".",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Orders",
+      "issuer": "Federal Communications Commission — News Releases",
       "jurisdiction": "US",
       "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fcc-eeb7d739be",
-    "n": 6387,
-    "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 6470,
+    "first_seen": "2026-10-24T05:56:48.534199+00:00",
+    "last_seen": "2026-10-24T05:56:48.534199+00:00",
     "source_ids": [
-      "us-fcc-eeb7d739be"
+      "us-fcc-685c5e7dd2"
     ]
   },
   {
-    "title": "Satellite Licensing Division and Satellite Programs and Policy Division Information - SAT - Actions Taken",
-    "url": "https://www.fcc.gov/edoc/426146",
-    "native_id": "426146",
+    "title": "The Public Safety and Homeland Security Bureau Announces Conditional Approval and Exemption of Certain Uncrewed Aircraft Systems, Routers and Power Inverters, Advanced Robotic Devices from FCC Covered List",
+    "url": "https://www.fcc.gov/edoc/426162",
+    "native_id": "426162",
     "published_at": null,
     "published_raw": "",
     "summary": ".",
@@ -40,347 +40,35 @@
       "family": "telecom_rules_and_licences"
     },
     "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6388,
-    "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
+    "n": 6471,
+    "first_seen": "2026-10-24T05:56:48.534199+00:00",
+    "last_seen": "2026-10-24T05:56:48.534199+00:00",
     "source_ids": [
       "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Non Streamlined International Applications/Petitions Accepted For Filing - ITC",
-    "url": "https://www.fcc.gov/edoc/426152",
-    "native_id": "426152",
+    "title": "In the Matter of BMG Billings, LLC -- Billings, Montana",
+    "url": "https://www.fcc.gov/edoc/426053",
+    "native_id": "426053",
     "published_at": null,
     "published_raw": "",
-    "summary": ".",
+    "summary": "Notice of Violation issued for violation(s) as noted in the attached.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
+      "issuer": "Federal Communications Commission — Enforcement Bureau",
       "jurisdiction": "US",
       "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6389,
-    "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
+    "primary_source_id": "us-fcc-364d1b4932",
+    "n": 6472,
+    "first_seen": "2026-10-24T05:56:48.534199+00:00",
+    "last_seen": "2026-10-24T05:56:48.534199+00:00",
     "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Streamlined International Applications Accepted For Filing - ITC",
-    "url": "https://www.fcc.gov/edoc/426153",
-    "native_id": "426153",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6390,
-    "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Streamlined Submarine Cable Landing License Applications - SCL",
-    "url": "https://www.fcc.gov/edoc/426155",
-    "native_id": "426155",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6391,
-    "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Section 310(b) Petitions for Declaratory Ruling - ISP",
-    "url": "https://www.fcc.gov/edoc/426157",
-    "native_id": "426157",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6392,
-    "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Non-Streamlined Submarine Cable Landing License Applications - SCL",
-    "url": "https://www.fcc.gov/edoc/426160",
-    "native_id": "426160",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6393,
-    "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Pleadings",
-    "url": "https://www.fcc.gov/edoc/426143",
-    "native_id": "426143",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6394,
-    "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Applications",
-    "url": "https://www.fcc.gov/edoc/426141",
-    "native_id": "426141",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6395,
-    "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Actions",
-    "url": "https://www.fcc.gov/edoc/426142",
-    "native_id": "426142",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6396,
-    "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Public Safety and Homeland Security Bureau Highlights Cybersecurity Best Practices for Communications Service Providers",
-    "url": "https://www.fcc.gov/edoc/425850",
-    "native_id": "425850",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6397,
-    "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "FCA calls on private market firms to manage conflicts of interest in line with rapid growth",
-    "url": "https://www.fca.org.uk/news/press-releases/fca-calls-private-market-firms-manage-conflicts-interest-line-rapid-growth",
-    "native_id": "176956",
-    "published_at": null,
-    "published_raw": "Friday, October 23, 2026 - 11:31",
-    "summary": "Private market firms vary in how well they identify and manage conflicts of interest, according to an FCA review. Private markets refer to investments in assets, companies, or debt not listed or traded on public exchanges. They’ve grown significantly in recent years, and the UK is a leading international centre. Private markets play an increasingly important role in providing capital to businesses and opportunities for returns to investors. Private markets can give rise to conflicts that differ from those in public markets, and effective disclosure is important to enable investors to assess whether their interests are being protected.The FCA found examples of good practice by firms across private equity, private credit and real estate asset classes. These included strong governance arrangements, effective oversight and independent challenge. It also identified some areas where firms could strengthen governance, oversight and conflicts management arrangements to support fair investor outcomes.As private markets grow and business models become more complex, the FCA found that some firms were failing to identify conflicts adequately or keep their controls up to date. Recurring weaknes",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Conduct Authority",
-      "jurisdiction": "UK",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 6415,
-    "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "uk-fca-7b9977ec8e"
-    ]
-  },
-  {
-    "title": "Beyond borders: Regulating the risks we share",
-    "url": "https://www.fca.org.uk/news/speeches/beyond-borders-regulating-risks-we-share",
-    "native_id": "176941",
-    "published_at": null,
-    "published_raw": "Friday, October 23, 2026 - 11:18",
-    "summary": "Speech by Ashley Alder, FCA Chair, at the Michael D. Gill Lecture on International Financial Regulatory Understanding and Cooperation. I wasn’t fortunate enough to work as closely with Mike as many of you in this room.But I knew him well enough during my time with the IOSCO board to appreciate someone who was kind and unassuming, whilst being absolutely determined to make lives better through his work.He personified the very best attributes of dedicated public service.In his 2024 lecture Andrew Bailey described Mike as a passionate internationalist, and reflected on what this meant for the UK after the Brexit referendum.Two years on, the values that Mike championed are even more on point.Mike understood implicitly that relationships between regulators are about so much more than institutional goodwill – they depend on trust, candour and constructive practical action.That’s an aspect of his legacy that is just as relevant – perhaps even more so – today.In an increasingly interconnected global financial system, no institution can see the whole picture on its own.Success depends not only on what each regulator does individually, but on what we can see, understand, test, and address to",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Conduct Authority",
-      "jurisdiction": "UK",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 6416,
-    "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "uk-fca-7b9977ec8e"
-    ]
-  },
-  {
-    "title": "FCA restricts 6 firms following concerns over anti-money laundering controls",
-    "url": "https://www.fca.org.uk/news/press-releases/fca-restricts-6-firms-following-concerns-over-anti-money-laundering-controls",
-    "native_id": "176936",
-    "published_at": null,
-    "published_raw": "Friday, October 23, 2026 - 09:47",
-    "summary": "Restrictions have been placed on 6 unregulated lenders, known as Annex 1 firms, after the FCA raised concerns about their anti-money laundering policies, controls and procedures while assessing their applications. The restrictions were imposed by the FCA on each firm’s request and limit their ability to take on new customers or do new business with existing customers, including extending existing credit.This action forms part of the FCA’s enhanced oversight of Annex 1 firms. These firms operate in sectors that can present a heightened risk of money laundering and other financial crime and are required to register with the FCA for supervision under the Money Laundering Regulations. They are not authorised or subject to wider FCA regulation.The FCA has previously warned Annex 1 firms that they will be subject to increased scrutiny. They must be able to demonstrate they understand the financial crime risks they face and have effective systems and controls in place to manage those risks, or face action.More widely, the FCA is assessing responses to an information request sent to around 900 registered Annex 1 firms to identify and disrupt financial crime risks and determine where furthe",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Conduct Authority",
-      "jurisdiction": "UK",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 6417,
-    "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "uk-fca-7b9977ec8e"
-    ]
-  },
-  {
-    "title": "China issues guidelines to promote employment amid AI advances",
-    "url": "https://english.www.gov.cn/policies/latestreleases/202610/23/content_WS6adb4e53c6d00ca5f9a0deb7.html",
-    "native_id": "https://english.www.gov.cn/policies/latestreleases/202610/23/content_WS6adb4e53c6d00ca5f9a0deb7.html",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "State Council of China policies",
-      "jurisdiction": "CN",
-      "family": "executive_instruments"
-    },
-    "primary_source_id": "cn-state-council-index",
-    "n": 6432,
-    "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "cn-state-council-index"
-    ]
-  },
-  {
-    "title": "State Minister MIYAMOTO Holds Meeting with H.E. Dr. Kao Kim Hourn, Secretary-General of ASEAN",
-    "url": "https://www.meti.go.jp/english/press/2026/10/20261023001.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261023001.html",
-    "published_at": null,
-    "published_raw": null,
-    "summary": "",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
-    },
-    "primary_source_id": "jp-meti-index",
-    "n": 6433,
-    "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "jp-meti-index"
+      "us-fcc-364d1b4932"
     ]
   }
 ]

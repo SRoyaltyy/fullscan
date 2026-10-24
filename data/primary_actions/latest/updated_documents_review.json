@@ -3,8 +3,8 @@
     "title": "GDUFA Paid Facilities List",
     "url": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list",
     "native_id": "http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list",
-    "published_at": "2026-10-23T12:02:54+00:00",
-    "published_raw": "Fri, 23 Oct 2026 08:02:54 EDT",
+    "published_at": "2026-10-23T19:46:26+00:00",
+    "published_raw": "Fri, 23 Oct 2026 15:46:26 EDT",
     "summary": "This list contains GDUFA facility payments received by the Agency. Data are extract from the User Fee System and GDUFA Facility User Fee Coversheets. The following table explains the terms used in the list:",
     "source_metadata": {
       "document_type": "official_announcement",
@@ -18,31 +18,7 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 1388,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Drug Alerts and Statements",
-    "url": "http://www.fda.gov/drugs/drug-safety-and-availability/drug-alerts-and-statements",
-    "native_id": "http://www.fda.gov/drugs/drug-safety-and-availability/drug-alerts-and-statements",
-    "published_at": "2026-10-22T19:42:22+00:00",
-    "published_raw": "Thu, 22 Oct 2026 15:42:22 EDT",
-    "summary": "See updates from CDER on fast-moving issues and learn about CDER's work to enhance public health",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 1390,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
+    "last_seen": "2026-10-24T05:56:48.534199+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
@@ -51,8 +27,8 @@
     "title": "What's New Related to Drugs",
     "url": "http://www.fda.gov/drugs/news-events-human-drugs/whats-new-related-drugs",
     "native_id": "http://www.fda.gov/drugs/news-events-human-drugs/whats-new-related-drugs",
-    "published_at": "2026-10-22T19:52:12+00:00",
-    "published_raw": "Thu, 22 Oct 2026 15:52:12 EDT",
+    "published_at": "2026-10-23T18:09:49+00:00",
+    "published_raw": "Fri, 23 Oct 2026 14:09:49 EDT",
     "summary": "Want to know what's new on drugs from FDA? This page provides quick links to the latest on a variety of topics including: drug approvals, safety warnings, drug shortages, etc.",
     "source_metadata": {
       "document_type": "official_announcement",
@@ -66,169 +42,114 @@
     "primary_source_id": "us-fda-5696b24295",
     "n": 1394,
     "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
+    "last_seen": "2026-10-24T05:56:48.534199+00:00",
     "source_ids": [
       "us-fda-5696b24295"
     ]
   },
   {
-    "title": "Oncology (Cancer)/Hematologic Malignancies Approval Notifications",
-    "url": "http://www.fda.gov/drugs/resources-information-approved-drugs/oncology-cancerhematologic-malignancies-approval-notifications",
-    "native_id": "http://www.fda.gov/drugs/resources-information-approved-drugs/oncology-cancerhematologic-malignancies-approval-notifications",
-    "published_at": "2026-10-22T18:57:05+00:00",
-    "published_raw": "Thu, 22 Oct 2026 14:57:05 EDT",
-    "summary": "FDA does not issue approval announcements for every approval or drug label update that occurs in oncology and hematology. Please refer to Drugs@FDA for the latest approvals and prescribing information for specific products.",
+    "title": "Que no lo dejen colgado esta temporada festiva con regalos inseguros: Compre de fuentes confiables",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2026/Dont-Be-Left-Out-in-the-Cold-This-Holiday-Season-with-Unsafe-Presents-Buy-from-Trusted-Sources",
+    "native_id": "https://www.cpsc.gov/_6d039050-7fba-4cdf-8361-f7db2f5e3963",
+    "published_at": null,
+    "published_raw": "Tue, 12/09/2025 - 12:00",
+    "summary": "La CPSC les recuerda a los consumidores comprar de manera segura esta temporada festiva",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
+      "issuer": "Consumer Product Safety Commission",
       "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
+      "family": "product_safety"
     },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 1395,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Drugs@FDA Data Files",
-    "url": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-    "native_id": "http://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
-    "published_at": "2026-10-23T13:39:20+00:00",
-    "published_raw": "Fri, 23 Oct 2026 09:39:20 EDT",
-    "summary": "Drugs@FDA Downloadable Data File in ZIP format, Data Definitions, and Entity Relationship Diagram (ERD)",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 1398,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fda-03f7703006",
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Registered Outsourcing Facilities",
-    "url": "http://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities",
-    "native_id": "http://www.fda.gov/drugs/human-drug-compounding/registered-outsourcing-facilities",
-    "published_at": "2026-10-23T15:38:27+00:00",
-    "published_raw": "Fri, 23 Oct 2026 11:38:27 EDT",
-    "summary": "Discover FDA's comprehensive list of registered outsourcing facilities engaged in human drug compounding. Get the latest updates, compliance guidelines, and resources to ensure safe, high-quality compounded medications. Explore regulations and stay informed with verified facility details.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 1404,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Patient Listening Session Summaries",
-    "url": "http://www.fda.gov/patients/fda-patient-listening-sessions/patient-listening-session-summaries",
-    "native_id": "http://www.fda.gov/patients/fda-patient-listening-sessions/patient-listening-session-summaries",
-    "published_at": "2026-10-22T20:21:19+00:00",
-    "published_raw": "Thu, 22 Oct 2026 16:21:19 EDT",
-    "summary": "Patient Listening Session summaries are published after each session to share a high-level summary of the discussion. The Office of Public Engagement draft summaries for FDA-requested sessions and the patient community requester drafts summaries for Patient-led sessions.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 1405,
-    "first_seen": "2026-10-15T10:17:11.133023+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fda-03f7703006",
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "CDER Small Business & Industry Assistance (SBIA)",
-    "url": "http://www.fda.gov/drugs/development-approval-process-drugs/cder-small-business-industry-assistance-sbia",
-    "native_id": "http://www.fda.gov/drugs/development-approval-process-drugs/cder-small-business-industry-assistance-sbia",
-    "published_at": "2026-10-22T18:14:38+00:00",
-    "published_raw": "Thu, 22 Oct 2026 14:14:38 EDT",
-    "summary": "A Comprehensive Resource for Information on Human Drug Development in Regulation",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 3279,
-    "first_seen": "2026-10-16T05:53:15.995133+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Deep Drilling Screening Directions – 2026",
-    "url": "https://www.gov.uk/government/publications/deep-drilling-screening-directions-2026",
-    "native_id": "/government/publications/deep-drilling-screening-directions-2026",
-    "published_at": "2026-10-23T08:35:49+00:00",
-    "published_raw": "2026-10-23T08:35:49Z",
-    "document_type": "decision",
-    "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
-    "issuer_ids": [
-      "uk-gov:offshore-petroleum-regulator-for-environment-and-decommissioning"
-    ],
-    "summary": "Screening Directions",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Offshore Petroleum Regulator for Environment and Decommissioning",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 3303,
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3537,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
+    "last_seen": "2026-10-24T05:56:48.534199+00:00",
     "source_ids": [
-      "uk-govuk-decision"
+      "us-cpsc-08fe06e2e6"
     ]
   },
   {
-    "title": "Other | Cancer Accelerated Approvals",
-    "url": "http://www.fda.gov/drugs/resources-information-approved-drugs/other-cancer-accelerated-approvals",
-    "native_id": "http://www.fda.gov/drugs/resources-information-approved-drugs/other-cancer-accelerated-approvals",
-    "published_at": "2026-10-23T15:49:45+00:00",
-    "published_raw": "Fri, 23 Oct 2026 11:49:45 EDT",
-    "summary": "This listing includes accelerated approvals (AAs) for malignant hematology and oncology indications that have been granted for supportive care products and changes to dosing or formulation.",
+    "title": "Put Safety on the Menu: Consumer Product Safety Commission Offers Safe Cooking Tips for a Joyful Holiday Season",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2026/Put-Safety-on-the-Menu-Consumer-Product-Safety-Commission-Offers-Safe-Cooking-Tips-for-a-Joyful-Holiday-Season",
+    "native_id": "https://www.cpsc.gov/_59de4207-4ace-44ca-ace0-3cde0cfb8ddb",
+    "published_at": null,
+    "published_raw": "Wed, 11/19/2025 - 12:00",
+    "summary": "WASHINGTON, D.C. – As families across America prepare to gather for Thanksgiving, the U.S. Consumer Product Safety Commission (CPSC) is issuing an urgent reminder that the holiday season marks the most dangerous time of year for cooking-related fires and",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3538,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-24T05:56:48.534199+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "CPSC Approves New Federal Safety Standard for Water Beads to Reduce the Risk of Injury and Death to Young Children",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Water-Beads-to-Reduce-the-Risk-of-Injury-and-Death-to-Young-Children",
+    "native_id": "https://www.cpsc.gov/_51cc46a0-5dc1-4f70-8cc1-c6b5b0f0a782",
+    "published_at": null,
+    "published_raw": "Thu, 08/21/2025 - 12:00",
+    "summary": "The U.S. Consumer Product Safety Commission (CPSC) has approved a consumer product safety standard for water bead toys, reflecting the agency’s ongoing commitment to protecting vulnerable consumers and preventing avoidable tragedies in American homes.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3539,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-24T05:56:48.534199+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "La CPSC aprueba nueva norma federal de seguridad para flotadores de cuello con el fin de prevenir muertes de bebés y lesiones graves",
+    "url": "https://www.cpsc.gov/es/Newsroom/News-Releases/2025/CPSC-Approves-New-Federal-Safety-Standard-for-Neck-Floats-to-Prevent-Infant-Deaths-and-Serious-Injuries",
+    "native_id": "https://www.cpsc.gov/_4014aab3-f30e-41aa-ad48-dd7587119b4c",
+    "published_at": null,
+    "published_raw": "Thu, 08/21/2025 - 12:00",
+    "summary": "La Comisión de Seguridad de Productos del Consumidor de EE. UU. (CPSC) aprobó una norma de seguridad de productos de consumo para mejorar la seguridad de los flotadores de cuello, un juguete acuático destinado a niños de hasta cuatro años de edad.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 3540,
+    "first_seen": "2026-10-16T10:36:18.842579+00:00",
+    "last_seen": "2026-10-24T05:56:48.534199+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "October 30, 2026: Dermatologic and Ophthalmic Drugs Advisory Committee Meeting Announcement - 10/30/2026",
+    "url": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/october-30-2026-dermatologic-and-ophthalmic-drugs-advisory-committee-meeting-announcement-10302026",
+    "native_id": "http://www.fda.gov/advisory-committees/advisory-committee-calendar/october-30-2026-dermatologic-and-ophthalmic-drugs-advisory-committee-meeting-announcement-10302026",
+    "published_at": "2026-10-23T22:27:41+00:00",
+    "published_raw": "Fri, 23 Oct 2026 18:27:41 EDT",
+    "summary": "October 30, 2026: Dermatologic and Ophthalmic Drugs Advisory Committee Meeting Announcement",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -239,131 +160,11 @@
       "family": "product_permissions_and_safety"
     },
     "primary_source_id": "us-fda-5696b24295",
-    "n": 5196,
-    "first_seen": "2026-10-17T11:48:15.567792+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
+    "n": 6381,
+    "first_seen": "2026-10-23T17:53:51.765604+00:00",
+    "last_seen": "2026-10-24T05:56:48.534199+00:00",
     "source_ids": [
       "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Forward look: 26 October - 8 November 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/23/forward-look-2026/",
-    "native_id": "139339",
-    "published_at": "2026-10-23T17:00:00+00:00",
-    "published_raw": "2026-10-23T17:00:00Z",
-    "summary": "Overview of the main subjects to be discussed at meetings of the Council of the EU over the next two weeks and upcoming media events.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Council of the European Union",
-      "jurisdiction": "EU",
-      "family": "sanctions_and_legislation"
-    },
-    "primary_source_id": "eu-council-9d9e9444da",
-    "n": 5222,
-    "first_seen": "2026-10-17T12:51:21.988058+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "title": "UPDATED Media advisory - Accreditation for the Special European Council, 26-27 November 2026 and the EU-Western Balkans summit, 25 November 2026",
-    "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/23/media-advisory-accreditation-for-the-special-european-council-26-27-november-2026-and-the-eu-western-balkans-summit-25-november-2026/",
-    "native_id": "150485",
-    "published_at": "2026-10-23T11:30:00+00:00",
-    "published_raw": "2026-10-23T11:30:00Z",
-    "summary": "The Special European Council will take place on 26 and 27 November 2026 in the Europa building in Brussels. It will be preceded by the EU-Western Balkans summit on 25 November 2026.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Council of the European Union",
-      "jurisdiction": "EU",
-      "family": "sanctions_and_legislation"
-    },
-    "primary_source_id": "eu-council-9d9e9444da",
-    "n": 5454,
-    "first_seen": "2026-10-19T19:21:25.980956+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "eu-council-9d9e9444da"
-    ]
-  },
-  {
-    "title": "Generic Drug Research Priorities & Projects",
-    "url": "http://www.fda.gov/drugs/generic-drugs/generic-drug-research-priorities-projects",
-    "native_id": "http://www.fda.gov/drugs/generic-drugs/generic-drug-research-priorities-projects",
-    "published_at": "2026-10-23T13:53:07+00:00",
-    "published_raw": "Fri, 23 Oct 2026 09:53:07 EDT",
-    "summary": "In accordance with the Generic Drug User Fee Amendments (GDUFA), FDA consults with industry and the public to create an annual list of regulatory science initiatives on generic drugs. These priorities are discussed and developed in public meetings and workshops, resulting in several awarded projects",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 5665,
-    "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "Rare Disease News & Events",
-    "url": "http://www.fda.gov/about-fda/accelerating-rare-disease-cures-arc-program/rare-disease-news-events",
-    "native_id": "http://www.fda.gov/about-fda/accelerating-rare-disease-cures-arc-program/rare-disease-news-events",
-    "published_at": "2026-10-22T19:43:19+00:00",
-    "published_raw": "Thu, 22 Oct 2026 15:43:19 EDT",
-    "summary": "Learn more about recent news and events related to rare diseases.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Drugs",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-5696b24295",
-    "n": 5870,
-    "first_seen": "2026-10-21T18:05:07.789957+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fda-5696b24295"
-    ]
-  },
-  {
-    "title": "2026 Safety and Availability Communications",
-    "url": "http://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/2026-safety-and-availability-communications",
-    "native_id": "http://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/2026-safety-and-availability-communications",
-    "published_at": "2026-10-23T15:01:22+00:00",
-    "published_raw": "Fri, 23 Oct 2026 11:01:22 EDT",
-    "summary": "Listing of 2026 Safety and Availability Communications",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Food and Drug Administration — What's New: Vaccines, Blood and Biologics",
-      "jurisdiction": "US",
-      "family": "product_permissions_and_safety"
-    },
-    "primary_source_id": "us-fda-03f7703006",
-    "n": 6129,
-    "first_seen": "2026-10-22T17:59:58.860252+00:00",
-    "last_seen": "2026-10-23T17:53:51.765604+00:00",
-    "source_ids": [
-      "us-fda-03f7703006"
     ]
   }
 ]
