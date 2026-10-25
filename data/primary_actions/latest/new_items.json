@@ -1,74 +1,242 @@
 [
   {
-    "title": "H.R. 10879 (IH) - Workers’ Right to Compete Act",
-    "url": "https://www.govinfo.gov/app/details/BILLS-119hr10879ih",
-    "native_id": "BILLS-119hr10879ih",
-    "published_at": "2026-10-24T13:28:00+00:00",
-    "published_raw": "Sat, 24 Oct 2026 13:28:00 +0000",
-    "summary": "Content Files PDF XML TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "title": "Douglasville Man Arrested for Attempted Arson of ICE Facility in Downtown Atlanta",
+    "url": "https://www.justice.gov/usao-ndga/pr/douglasville-man-charged-attempted-arson-ice-facility-downtown-atlanta",
+    "native_id": "https://www.justice.gov/usao-ndga/pr/douglasville-man-charged-attempted-arson-ice-facility-downtown-atlanta",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "summary": "Inique Hinton, a Douglasville, Georgia resident, was arrested today on federal charges after he allegedly threw a Molotov cocktail at the Atlanta Immigration and Customs Enforcement (ICE) building earlier this week.",
     "source_metadata": {
-      "document_type": "bill",
-      "document_stage": "legislative_document_published",
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Congressional Bills",
+      "issuer": "Department of Justice",
       "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "us-govinfo-bills",
-    "n": 6474,
-    "first_seen": "2026-10-24T16:41:23.639966+00:00",
-    "last_seen": "2026-10-24T16:41:23.639966+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6477,
+    "first_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T07:17:54.617507+00:00",
     "source_ids": [
-      "us-govinfo-bills"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Piero Cipollone: Interview with Milano Finanza",
-    "url": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261024~ee2ba73cf3.en.html",
-    "native_id": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261024~ee2ba73cf3.en.html",
-    "published_at": "2026-10-24T06:00:00+00:00",
-    "published_raw": "Sat, 24 Oct 2026 08:00:00 +0200",
-    "summary": "",
+    "title": "District of Arizona Charges 318 Individuals for Immigration-Related Criminal Conduct this Week",
+    "url": "https://www.justice.gov/usao-az/pr/district-arizona-charges-318-individuals-immigration-related-criminal-conduct-week",
+    "native_id": "https://www.justice.gov/usao-az/pr/district-arizona-charges-318-individuals-immigration-related-criminal-conduct-week",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "summary": "PHOENIX, Ariz. – During the week of enforcement operations from Oct. 17 through Oct. 23, 2026, the U.S. Attorney’s Office for the District of Arizona brought immigration-related criminal charges against 318 individuals.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "European Central Bank",
-      "jurisdiction": "EU",
-      "family": "monetary_operations"
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "eu-ecb-991c113079",
-    "n": 6475,
-    "first_seen": "2026-10-24T16:41:23.639966+00:00",
-    "last_seen": "2026-10-24T16:41:23.639966+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6478,
+    "first_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T07:17:54.617507+00:00",
     "source_ids": [
-      "eu-ecb-991c113079"
+      "us-doj-b3d27e1dc3"
     ]
   },
   {
-    "title": "Legislative stewardship - Reserve Bank of New Zealand",
-    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9VdGVkVzZjT21nTTZvWko4MklhTzFYbWVIMzFMYkg2MFBxcjk3d0pkVzcwSW5TdElSYjZLcnRSNTRjOVJEMG9iQmdFNS1lWkl5cGFZZ1E4SkdlS1E5M3J0N1FHQjlYakhmUkJCcFRTeng3NDFnQ19yMg",
-    "native_id": "CBMieEFVX3lxTE9VdGVkVzZjT21nTTZvWko4MklhTzFYbWVIMzFMYkg2MFBxcjk3d0pkVzcwSW5TdElSYjZLcnRSNTRjOVJEMG9iQmdFNS1lWkl5cGFZZ1E4SkdlS1E5M3J0N1FHQjlYakhmUkJCcFRTeng3NDFnQ19yMg",
-    "published_at": "2026-10-23T19:30:57+00:00",
-    "published_raw": "Fri, 23 Oct 2026 19:30:57 GMT",
-    "summary": "Legislative stewardship Reserve Bank of New Zealand",
+    "title": "El Paso Man Sentenced for Defrauding Investors as Third-Party NBA Preseason Game Promoter",
+    "url": "https://www.justice.gov/usao-wdtx/pr/el-paso-man-sentenced-defrauding-investors-third-party-nba-preseason-game-promoter",
+    "native_id": "https://www.justice.gov/usao-wdtx/pr/el-paso-man-sentenced-defrauding-investors-third-party-nba-preseason-game-promoter",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "summary": "Timothy France Johnson was sentenced in to 51 months in federal prison along with a money judgement of $3,148,094.48 for running an 11-year Ponzi scheme in which he represented to investors that he would use their funds to promote NBA preseason games",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Reserve Bank of New Zealand (official-site news mirror)",
-      "jurisdiction": "NZ",
-      "family": "monetary_operations"
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
     },
-    "primary_source_id": "nz-rbnz-gnews",
-    "n": 6476,
-    "first_seen": "2026-10-24T16:41:23.639966+00:00",
-    "last_seen": "2026-10-24T16:41:23.639966+00:00",
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6479,
+    "first_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T07:17:54.617507+00:00",
     "source_ids": [
-      "nz-rbnz-gnews"
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Austin Man Sentenced to Federal Prison for Wire Fraud and Money Laundering",
+    "url": "https://www.justice.gov/usao-wdtx/pr/austin-man-sentenced-federal-prison-wire-fraud-and-money-laundering",
+    "native_id": "https://www.justice.gov/usao-wdtx/pr/austin-man-sentenced-federal-prison-wire-fraud-and-money-laundering",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "summary": "John Stuart Robison was sentenced to 41 months in federal prison for four counts of wire fraud and money laundering",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6480,
+    "first_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Rochester drug trafficker going to prison for more than 10 years",
+    "url": "https://www.justice.gov/usao-wdny/pr/rochester-drug-trafficker-going-prison-more-10-years",
+    "native_id": "https://www.justice.gov/usao-wdny/pr/rochester-drug-trafficker-going-prison-more-10-years",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "summary": "U.S. Attorney Michael DiGiacomo announced today that Reinaldo Suarez aka Popeye, 54, of Rochester, NY, who was convicted of conspiracy to possess with intent to distribute, 400 grams or more of fentanyl, 50 grams or more of methamphetamine and 500 grams or more of cocaine and being a felon in possession of a firearm, was sentenced to serve 121 months in prison by Chief U.S. District Court Judge Elizabeth A. Wolford.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6481,
+    "first_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Williamsville man pleads guilty to defrauding dozens of investors out of millions of dollars in multi-million dollar fraud scheme",
+    "url": "https://www.justice.gov/usao-wdny/pr/williamsville-man-pleads-guilty-defrauding-dozens-investors-out-millions-dollars-multi",
+    "native_id": "https://www.justice.gov/usao-wdny/pr/williamsville-man-pleads-guilty-defrauding-dozens-investors-out-millions-dollars-multi",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "summary": "U.S. Attorney Michael DiGiacomo announced today that Richard Teplitsky, 72, of Williamsville, NY, pleaded guilty before U.S. District Judge John L. Sinatra, Jr. to mail fraud, which carries a maximum penalty of 20 years in prison and a $250,000 fine.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6482,
+    "first_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Two men arrested, charged with trafficking firearms",
+    "url": "https://www.justice.gov/usao-wdny/pr/two-men-arrested-charged-trafficking-firearms",
+    "native_id": "https://www.justice.gov/usao-wdny/pr/two-men-arrested-charged-trafficking-firearms",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "summary": "U.S. Attorney Michael DiGiacomo announced that Dut Dour, 34, of Buffalo, NY, and Tommy Purdue, 28, of Buffalo, NY, were arrested and charged by criminal complaint with conspiracy to commit trafficking in firearms, which carries a maximum penalty of 15 years in prison and a $250,000 fine.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6483,
+    "first_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Chinese National Extradited for Alleged Role in Multimillion-Dollar Cryptocurrency Scam Targeting U.S. Citizens",
+    "url": "https://www.justice.gov/usao-cdca/pr/chinese-national-extradited-alleged-role-multimillion-dollar-cryptocurrency-scam",
+    "native_id": "https://www.justice.gov/usao-cdca/pr/chinese-national-extradited-alleged-role-multimillion-dollar-cryptocurrency-scam",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "summary": "A Chinese national made his initial court appearance today after being extradited from the Netherlands for his alleged role in an international cryptocurrency investment conspiracy carried out from scam centers in the Kingdom of Cambodia that targeted 174 identified U.S. citizens.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6484,
+    "first_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "California man pleads guilty to cyberstalking, including three victims in the Western District of New York",
+    "url": "https://www.justice.gov/usao-wdny/pr/california-man-pleads-guilty-cyberstalking-including-three-victims-western-district",
+    "native_id": "https://www.justice.gov/usao-wdny/pr/california-man-pleads-guilty-cyberstalking-including-three-victims-western-district",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "summary": "U.S. Attorney Michael DiGiacomo announced today that Max Yang Chen, 31, of San Jose, CA, pleaded guilty before U.S. District Judge John L. Sinatra, Jr. to cyberstalking and aggravated identity theft, which carry a maximum penalty of seven years in prison and a $250,000 fine.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6485,
+    "first_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
+    ]
+  },
+  {
+    "title": "Lincoln Man Sentenced to 15 Years for Receipt of Child Pornography",
+    "url": "https://www.justice.gov/usao-ne/pr/lincoln-man-sentenced-15-years-receipt-child-pornography",
+    "native_id": "https://www.justice.gov/usao-ne/pr/lincoln-man-sentenced-15-years-receipt-child-pornography",
+    "published_at": "2026-10-23T12:00:00+00:00",
+    "published_raw": "Fri, 23 Oct 2026 12:00:00 +0000",
+    "summary": "Jeffrey Ehlers, 67, of Lincoln, Nebraska, was sentenced on October 22, 2026, in federal court in Lincoln for receipt of child pornography following a prior conviction.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department of Justice",
+      "jurisdiction": "US",
+      "family": "judicial_and_enforcement"
+    },
+    "primary_source_id": "us-doj-b3d27e1dc3",
+    "n": 6486,
+    "first_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "source_ids": [
+      "us-doj-b3d27e1dc3"
     ]
   }
 ]
