@@ -67,6 +67,17 @@ try{
   assert.equal(output.old.input_sha256,output.input_sha256);
   assert.equal(output.new.input_sha256,output.input_sha256);
   assert.equal(output.catalog_sha256,config.catalog_sha256);
+  await page.locator('#filing-reader').waitFor({state:'visible'});
+  assert(output.source_texts?.length,'full shared source delivered');
+  const selectedSource=Number(await page.getByRole('combobox',{name:'Filing section',exact:true}).inputValue());
+  const expectedText=Array.from(output.source_texts[selectedSource].text).slice(0,12000).join('');
+  assert.equal(await page.locator('[data-role="text"]').textContent(),expectedText);
+  await page.getByRole('combobox',{name:'Parser highlights',exact:true}).selectOption('old');
+  assert.equal(await page.locator('[data-role="text"]').textContent(),expectedText);
+  await page.getByRole('combobox',{name:'Parser highlights',exact:true}).selectOption('new');
+  if(!await page.getByRole('searchbox',{name:'Search comparison terms'}).isVisible())
+   await page.getByText('Optional term index and relationship records',{exact:true}).click();
+  report.checks.push(ticker+': complete source rendering and old/new highlight switching');
   if(ticker==='LRCX'){
    assert.equal(output.coverage_kind,'filing_backed');
    assert(output.source_receipt.filings>0);

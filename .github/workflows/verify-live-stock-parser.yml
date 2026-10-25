@@ -32,7 +32,7 @@ jobs:
       - name: Exercise authenticated Enter through the actual served page
         env:
           GH_TOKEN: ${{ github.token }}
-          EXPECTED_UI_REVISION: 8fe3100e327ffeaeed899a7056bb0e5d428f2b5a
+          EXPECTED_UI_REVISION: b608415f92db9cd999a105de88cf15f9747c2353
         run: node scripts/verify_live_stock_parser.mjs
       - uses: actions/upload-artifact@v4
         if: always()
