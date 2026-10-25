@@ -1,0 +1,23 @@
+{
+  "revision": "6dad95df8f7c2bb3b49df4de62c9ab80813c20db",
+  "spacy_version": "3.8.11",
+  "model_version": "3.8.0",
+  "files": [
+    {
+      "path": "src/filing_term_candidates.py",
+      "sha256": "4ee1d46337a834db1c1654d6dc1e6d363286401b072e3cb0e8f54925f566cd38"
+    },
+    {
+      "path": "src/filing_relationships.py",
+      "sha256": "f31b2b6f1e526503fa6f0f9c6531a2bd7707dbe010337de1a599d1e271bf70f4"
+    },
+    {
+      "path": "src/term_inventory.py",
+      "sha256": "31c77a221844957830b4ce4282479324ff5516da2495bac7161cffe0f87a8a49"
+    },
+    {
+      "path": "requirements-filing-parser.txt",
+      "sha256": "ffacc7df159645007921956720e1a848510c6fbb1b079afebc66f3ad067c7145"
+    }
+  ]
+}

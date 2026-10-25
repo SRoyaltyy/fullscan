@@ -1,0 +1,253 @@
+{
+  "LYNX": [
+    [
+      "registration fee",
+      "Rule 457(a)",
+      {
+        "text": "Securities Act of 1933",
+        "aliases": [
+          "Securities Act"
+        ]
+      },
+      "aggregate offering price",
+      "additional shares",
+      "underwriters",
+      "option",
+      "Registrant",
+      "initial filing",
+      "Registration Statement on Form S-1",
+      "Form S-1",
+      "Rule 457(o)",
+      "Maximum Aggregate Offering Price"
+    ],
+    [],
+    [
+      "pricing",
+      "IPO",
+      "Selling Stockholders",
+      "Evercore Group L.L.C.",
+      "Citigroup Global Markets Inc.",
+      "Guggenheim Securities, LLC",
+      "representatives",
+      "Schedule II",
+      "Schedule I",
+      "underwriting agreement",
+      "Common Stock",
+      "IPO Price",
+      "30-day option",
+      "shares"
+    ]
+  ],
+  "BVN": [
+    [
+      "worker’s profit sharing",
+      "IAS 19",
+      "Peruvian laws",
+      "Legislative Decree No. 892",
+      "worker’s profit sharing rate",
+      "net taxable base",
+      "current year",
+      "employee",
+      "wages",
+      "Regional Government",
+      {
+        "text": "National Fund for Employment’s Promotion and Training",
+        "aliases": [
+          "FONDOEMPLEO"
+        ]
+      },
+      "liability",
+      "statements of financial position",
+      "operating expense",
+      "statements of comprehensive income"
+    ],
+    [
+      {
+        "text": "Law No. 28271",
+        "aliases": [
+          "Law that Regulates the Environmental Liabilities of Mining Activities",
+          "Ley que Regula los Pasivos Ambientales de la Actividad Minera"
+        ]
+      },
+      "environmental liabilities",
+      "financial responsibility",
+      "remediation",
+      "mining activities",
+      "negative impact",
+      "health",
+      "population",
+      "environment",
+      "property",
+      "Law No. 28526",
+      "Legislative Decree No. 1042",
+      "No. 1670",
+      "MEM",
+      "technical branch",
+      "mining companies",
+      "abandoned mining facilities",
+      "mining works",
+      "residue deposits",
+      "holders",
+      "inactive mining concessions",
+      "mining liabilities",
+      "Closure Plan",
+      "environmental remediation agreements",
+      "studies",
+      "risk",
+      "effects",
+      "contamination",
+      {
+        "text": "Regulations of Environmental Liabilities of Mining Activities",
+        "aliases": [
+          "Reglamento de Pasivos Ambientales de la Actividad Minera"
+        ]
+      },
+      "Supreme Decree No. 059-2005-EM",
+      "Supreme Decree No. 003-2009-EM"
+    ],
+    [
+      "Board of Directors",
+      "Chairman of the Board",
+      "Directors",
+      "meeting",
+      "Article 177 of the Peruvian Companies Law",
+      "Peruvian Companies Law",
+      "shareholders",
+      "third parties",
+      "willful misconduct",
+      "gross negligence",
+      "powers",
+      "Article 3 of Law No. 29720",
+      "Law No. 30050",
+      "managers",
+      "damages",
+      "transaction",
+      "related party’s interest",
+      "Company’s interest",
+      "shares",
+      "local stock exchange",
+      "shareholder",
+      "listed company",
+      "arm’s-length conditions",
+      "assets",
+      "Board meeting"
+    ]
+  ],
+  "SHEN": [
+    [
+      "incumbent broadband provider",
+      "homes",
+      "businesses",
+      "incumbent local telephone companies",
+      {
+        "text": "digital subscriber line",
+        "aliases": [
+          "DSL"
+        ]
+      },
+      "internet",
+      "voice services",
+      "hybrid fiber",
+      "copper-based networks",
+      "broadband overbuilder providers",
+      "data",
+      "voice",
+      "video services",
+      "hybrid coaxial cable",
+      "fiber optic networks",
+      "incumbent broadband passings",
+      "wireline broadband competitor",
+      "fixed wireless broadband services",
+      "wireless substitution",
+      "bandwidth speeds",
+      "wireless providers",
+      "5th generation network technology upgrades"
+    ],
+    [
+      "Regulatory changes",
+      {
+        "text": "VoIP service",
+        "aliases": [
+          "VoIP services"
+        ]
+      },
+      "FCC",
+      "state regulatory authorities",
+      "common carrier regulations",
+      "incumbent local exchange carriers",
+      "RLECs",
+      "common carrier requirements",
+      "VoIP providers",
+      "regulations",
+      "telephone services",
+      "911 emergency services",
+      {
+        "text": "Communications Assistance for Law Enforcement Act",
+        "aliases": [
+          "CALEA"
+        ]
+      },
+      {
+        "text": "Universal Service Fund",
+        "aliases": [
+          "USF"
+        ]
+      },
+      "contribution",
+      "customer privacy",
+      "CPNI issues",
+      "CPNI",
+      "number portability",
+      "network outage",
+      "rural call completion",
+      "disability access",
+      "battery backup",
+      "robocall mitigation",
+      "regulatory fees",
+      "discontinuance of service",
+      "obligations"
+    ],
+    [
+      "interruptions",
+      "information technology infrastructure",
+      "third party suppliers",
+      "operations",
+      "technology",
+      "cyber-attacks",
+      "incidents",
+      "material adverse effect",
+      "consequences",
+      "breach",
+      "security measures",
+      "third-party provider",
+      "cyber-related service",
+      "operational disruption",
+      "data",
+      "hacker",
+      "malicious actor",
+      "customers",
+      "third parties",
+      "damage",
+      "infrastructure",
+      "property",
+      "impairment of business operations",
+      "business operations",
+      "customer service",
+      "financial costs",
+      "liquidity",
+      "costs",
+      "remediation",
+      "loss of revenues",
+      "revenues",
+      "loss of customers",
+      "competitive disadvantage",
+      "legal expenses",
+      "litigation",
+      "regulatory action",
+      "fines",
+      "penalties",
+      "brand",
+      "reputation"
+    ]
+  ]
+}
