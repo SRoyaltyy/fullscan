@@ -1,0 +1,507 @@
+{
+  "scope": "Four unseen issuers, eight definition-enriched source witness paragraphs; not full-filing or market-wide scores.",
+  "annotation": "Assistant source review frozen before predictions; no independent human validation.",
+  "annotation_unit": "Unique stock-specific named entities, named-series financial instruments, specific offered network services and accounting/currency standards. Excludes issuer self-name, unnamed generic classes, metadata/forms and generic document titles. Full source aliases and noted service modifiers are explicit accepted forms.",
+  "frozen_candidate": "0bbc7968768f05f53d0e66700940c19f68e8a9daee916942b33d268e0422ef30",
+  "draw_id": "51f8654995f1c6c6ef0cca2cd3e98faefcbf5366d55406a384e0ba4c3f836329",
+  "source_sample_sha256": "ff40d8effba4a43a97283fc08d17bb037e03e40e76360ec77e16bf8a7b2ec692",
+  "cases": [
+    {
+      "ticker": "SDGR",
+      "split": "development",
+      "terms": [
+        {
+          "name": "Structure Therapeutics Inc.",
+          "accepted_names": [
+            "Structure Therapeutics Inc.",
+            "Structure Therapeutics"
+          ],
+          "relationships": [
+            [
+              "investment_in",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 82,
+              "end": 109,
+              "text": "Structure Therapeutics Inc."
+            },
+            {
+              "paragraph": 0,
+              "start": 82,
+              "end": 104,
+              "text": "Structure Therapeutics"
+            },
+            {
+              "paragraph": 1,
+              "start": 91,
+              "end": 113,
+              "text": "Structure Therapeutics"
+            }
+          ]
+        },
+        {
+          "name": "Series B preferred stock",
+          "accepted_names": [
+            "Series B preferred stock"
+          ],
+          "relationships": [
+            [
+              "holds_financial_instrument",
+              "historical"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 54,
+              "end": 78,
+              "text": "Series B preferred stock"
+            }
+          ]
+        },
+        {
+          "name": "American Depository Shares",
+          "accepted_names": [
+            "American Depository Shares",
+            "ADSs",
+            "ADS"
+          ],
+          "relationships": [
+            [
+              "holds_financial_instrument",
+              "historical"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 568,
+              "end": 594,
+              "text": "American Depository Shares"
+            },
+            {
+              "paragraph": 0,
+              "start": 597,
+              "end": 601,
+              "text": "ADSs"
+            },
+            {
+              "paragraph": 0,
+              "start": 597,
+              "end": 600,
+              "text": "ADS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "UNIT",
+      "split": "development",
+      "terms": [
+        {
+          "name": "artificial intelligence",
+          "accepted_names": [
+            "artificial intelligence",
+            "AI"
+          ],
+          "relationships": [
+            [
+              "demand_exposure",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 94,
+              "end": 117,
+              "text": "artificial intelligence"
+            },
+            {
+              "paragraph": 0,
+              "start": 0,
+              "end": 2,
+              "text": "AI"
+            },
+            {
+              "paragraph": 1,
+              "start": 773,
+              "end": 775,
+              "text": "AI"
+            }
+          ]
+        },
+        {
+          "name": "high-performance computing",
+          "accepted_names": [
+            "high-performance computing"
+          ],
+          "relationships": [
+            [
+              "demand_exposure",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 129,
+              "end": 155,
+              "text": "high-performance computing"
+            }
+          ]
+        },
+        {
+          "name": "dark fiber",
+          "accepted_names": [
+            "dark fiber",
+            "high-count dark fiber"
+          ],
+          "relationships": [
+            [
+              "offers",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 188,
+              "end": 198,
+              "text": "dark fiber"
+            },
+            {
+              "paragraph": 0,
+              "start": 177,
+              "end": 198,
+              "text": "high-count dark fiber"
+            },
+            {
+              "paragraph": 1,
+              "start": 276,
+              "end": 286,
+              "text": "dark fiber"
+            }
+          ]
+        },
+        {
+          "name": "colocation facilities",
+          "accepted_names": [
+            "colocation facilities"
+          ],
+          "relationships": [
+            [
+              "operating_asset",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 231,
+              "end": 252,
+              "text": "colocation facilities"
+            }
+          ]
+        },
+        {
+          "name": "10 - 400 Gbps wave services",
+          "accepted_names": [
+            "10 - 400 Gbps wave services"
+          ],
+          "relationships": [
+            [
+              "offers",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 1,
+              "start": 213,
+              "end": 240,
+              "text": "10 - 400 Gbps wave services"
+            }
+          ]
+        },
+        {
+          "name": "spectrum",
+          "accepted_names": [
+            "spectrum"
+          ],
+          "relationships": [
+            [
+              "offers",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 1,
+              "start": 242,
+              "end": 250,
+              "text": "spectrum"
+            }
+          ]
+        },
+        {
+          "name": "Ethernet",
+          "accepted_names": [
+            "Ethernet"
+          ],
+          "relationships": [
+            [
+              "offers",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 1,
+              "start": 252,
+              "end": 260,
+              "text": "Ethernet"
+            }
+          ]
+        },
+        {
+          "name": "internet",
+          "accepted_names": [
+            "internet"
+          ],
+          "relationships": [
+            [
+              "offers",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 1,
+              "start": 262,
+              "end": 270,
+              "text": "internet"
+            }
+          ]
+        },
+        {
+          "name": "colocation services",
+          "accepted_names": [
+            "colocation services"
+          ],
+          "relationships": [
+            [
+              "offers",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 1,
+              "start": 291,
+              "end": 310,
+              "text": "colocation services"
+            }
+          ]
+        },
+        {
+          "name": "fiber-to-the-tower connections",
+          "accepted_names": [
+            "fiber-to-the-tower connections"
+          ],
+          "relationships": [
+            [
+              "offers",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 1,
+              "start": 344,
+              "end": 374,
+              "text": "fiber-to-the-tower connections"
+            }
+          ]
+        },
+        {
+          "name": "iconnect",
+          "accepted_names": [
+            "iconnect"
+          ],
+          "relationships": [
+            [
+              "mentions_product_platform",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 1,
+              "start": 857,
+              "end": 865,
+              "text": "iconnect"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "IREN",
+      "split": "holdout",
+      "terms": [
+        {
+          "name": "U.S. generally accepted accounting principles",
+          "accepted_names": [
+            "U.S. generally accepted accounting principles",
+            "GAAP"
+          ],
+          "relationships": [
+            [
+              "financial_reporting_standard",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 167,
+              "end": 212,
+              "text": "U.S. generally accepted accounting principles"
+            },
+            {
+              "paragraph": 0,
+              "start": 215,
+              "end": 219,
+              "text": "GAAP"
+            }
+          ]
+        },
+        {
+          "name": "Securities and Exchange Commission",
+          "accepted_names": [
+            "Securities and Exchange Commission",
+            "SEC"
+          ],
+          "relationships": [
+            [
+              "mentions_institution",
+              "reported"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 243,
+              "end": 277,
+              "text": "Securities and Exchange Commission"
+            },
+            {
+              "paragraph": 0,
+              "start": 284,
+              "end": 287,
+              "text": "SEC"
+            }
+          ]
+        },
+        {
+          "name": "U.S. dollars",
+          "accepted_names": [
+            "U.S. dollars"
+          ],
+          "relationships": [
+            [
+              "presentation_currency",
+              "reported"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 346,
+              "end": 358,
+              "text": "U.S. dollars"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "OLLI",
+      "split": "holdout",
+      "terms": [
+        {
+          "name": "U.S. generally accepted accounting principles",
+          "accepted_names": [
+            "U.S. generally accepted accounting principles",
+            "GAAP"
+          ],
+          "relationships": [
+            [
+              "financial_reporting_standard",
+              "asserted"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 109,
+              "end": 154,
+              "text": "U.S. generally accepted accounting principles"
+            },
+            {
+              "paragraph": 0,
+              "start": 157,
+              "end": 161,
+              "text": "GAAP"
+            },
+            {
+              "paragraph": 1,
+              "start": 323,
+              "end": 327,
+              "text": "GAAP"
+            }
+          ]
+        },
+        {
+          "name": "Securities and Exchange Commission",
+          "accepted_names": [
+            "Securities and Exchange Commission",
+            "SEC"
+          ],
+          "relationships": [
+            [
+              "mentions_institution",
+              "reported"
+            ]
+          ],
+          "witnesses": [
+            {
+              "paragraph": 0,
+              "start": 242,
+              "end": 276,
+              "text": "Securities and Exchange Commission"
+            },
+            {
+              "paragraph": 0,
+              "start": 279,
+              "end": 282,
+              "text": "SEC"
+            },
+            {
+              "paragraph": 1,
+              "start": 205,
+              "end": 208,
+              "text": "SEC"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

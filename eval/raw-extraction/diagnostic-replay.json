@@ -1,0 +1,1207 @@
+{
+  "scope": "Existing eight witness paragraphs / four issuers / 19 reference terms; consumed replay.",
+  "annotation": "Assistant source review frozen before predictions; no independent human validation.",
+  "source_sha256": "ff40d8effba4a43a97283fc08d17bb037e03e40e76360ec77e16bf8a7b2ec692",
+  "labels_sha256": "219e011aa4cb55ad3bea5fc4d1eb9ab7b2852645823803ab7789eb0e6979e61d",
+  "raw_inventory_code_sha256": "31c77a221844957830b4ce4282479324ff5516da2495bac7161cffe0f87a8a49",
+  "spacy_version": "3.8.11",
+  "model_version": "3.8.0",
+  "candidate_code_sha256": "4ee1d46337a834db1c1654d6dc1e6d363286401b072e3cb0e8f54925f566cd38",
+  "fresh_holdout": false,
+  "global_accuracy_certified": false,
+  "summary": {
+    "raw": {
+      "reference_terms": 19,
+      "precision": null,
+      "exact_recovered": 14,
+      "complete_span_covered": 17,
+      "exact_missed": [
+        "high-performance computing",
+        "colocation facilities",
+        "colocation services",
+        "fiber-to-the-tower connections",
+        "iconnect"
+      ],
+      "uncovered": [
+        "fiber-to-the-tower connections",
+        "iconnect"
+      ]
+    },
+    "candidate": {
+      "reference_terms": 19,
+      "precision": null,
+      "exact_recovered": 19,
+      "complete_span_covered": 19,
+      "exact_missed": [],
+      "uncovered": []
+    }
+  },
+  "cases": [
+    {
+      "ticker": "SDGR",
+      "terms": [
+        {
+          "name": "Structure Therapeutics Inc.",
+          "raw": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "Structure Therapeutics Inc.",
+                "start": 82,
+                "end": 109
+              },
+              {
+                "paragraph": 0,
+                "text": "Structure Therapeutics",
+                "start": 112,
+                "end": 134
+              },
+              {
+                "paragraph": 0,
+                "text": "Structure Therapeutics",
+                "start": 290,
+                "end": 312
+              },
+              {
+                "paragraph": 0,
+                "text": "Structure Therapeutics",
+                "start": 720,
+                "end": 742
+              },
+              {
+                "paragraph": 1,
+                "text": "Structure Therapeutics",
+                "start": 91,
+                "end": 113
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "Structure Therapeutics Inc.",
+                "text": "Structure Therapeutics Inc."
+              },
+              {
+                "paragraph": 0,
+                "expected": "Structure Therapeutics",
+                "text": "Structure Therapeutics Inc."
+              },
+              {
+                "paragraph": 1,
+                "expected": "Structure Therapeutics",
+                "text": "Structure Therapeutics"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "Structure Therapeutics Inc.",
+                "start": 82,
+                "end": 109
+              },
+              {
+                "paragraph": 0,
+                "text": "Structure Therapeutics",
+                "start": 112,
+                "end": 134
+              },
+              {
+                "paragraph": 0,
+                "text": "Structure Therapeutics",
+                "start": 290,
+                "end": 312
+              },
+              {
+                "paragraph": 0,
+                "text": "Structure Therapeutics",
+                "start": 392,
+                "end": 414
+              },
+              {
+                "paragraph": 0,
+                "text": "Structure Therapeutics",
+                "start": 720,
+                "end": 742
+              },
+              {
+                "paragraph": 0,
+                "text": "Structure Therapeutics",
+                "start": 787,
+                "end": 809
+              },
+              {
+                "paragraph": 1,
+                "text": "Structure Therapeutics",
+                "start": 91,
+                "end": 113
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "Structure Therapeutics Inc.",
+                "text": "Structure Therapeutics Inc."
+              },
+              {
+                "paragraph": 0,
+                "expected": "Structure Therapeutics",
+                "text": "Structure Therapeutics Inc."
+              },
+              {
+                "paragraph": 1,
+                "expected": "Structure Therapeutics",
+                "text": "Structure Therapeutics"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Series B preferred stock",
+          "raw": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "Series B preferred stock",
+                "start": 54,
+                "end": 78
+              },
+              {
+                "paragraph": 0,
+                "text": "Series B preferred stock",
+                "start": 226,
+                "end": 250
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "Series B preferred stock",
+                "text": "Series B preferred stock"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "Series B preferred stock",
+                "start": 54,
+                "end": 78
+              },
+              {
+                "paragraph": 0,
+                "text": "Series B preferred stock",
+                "start": 226,
+                "end": 250
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "Series B preferred stock",
+                "text": "Series B preferred stock"
+              }
+            ]
+          }
+        },
+        {
+          "name": "American Depository Shares",
+          "raw": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "American Depository Shares",
+                "start": 568,
+                "end": 594
+              },
+              {
+                "paragraph": 0,
+                "text": "ADSs",
+                "start": 597,
+                "end": 601
+              },
+              {
+                "paragraph": 0,
+                "text": "ADS",
+                "start": 618,
+                "end": 621
+              },
+              {
+                "paragraph": 0,
+                "text": "ADS",
+                "start": 639,
+                "end": 642
+              },
+              {
+                "paragraph": 0,
+                "text": "ADSs",
+                "start": 811,
+                "end": 815
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "American Depository Shares",
+                "text": "275,000 American Depository Shares"
+              },
+              {
+                "paragraph": 0,
+                "expected": "American Depository Shares",
+                "text": "American Depository Shares"
+              },
+              {
+                "paragraph": 0,
+                "expected": "ADSs",
+                "text": "\"ADSs"
+              },
+              {
+                "paragraph": 0,
+                "expected": "ADSs",
+                "text": "ADSs"
+              },
+              {
+                "paragraph": 0,
+                "expected": "ADS",
+                "text": "\"ADSs"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "American Depository Shares",
+                "start": 568,
+                "end": 594
+              },
+              {
+                "paragraph": 0,
+                "text": "ADSs",
+                "start": 597,
+                "end": 601
+              },
+              {
+                "paragraph": 0,
+                "text": "ADS",
+                "start": 618,
+                "end": 621
+              },
+              {
+                "paragraph": 0,
+                "text": "ADS",
+                "start": 639,
+                "end": 642
+              },
+              {
+                "paragraph": 0,
+                "text": "ADSs",
+                "start": 811,
+                "end": 815
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "American Depository Shares",
+                "text": "275,000 American Depository Shares"
+              },
+              {
+                "paragraph": 0,
+                "expected": "American Depository Shares",
+                "text": "American Depository Shares"
+              },
+              {
+                "paragraph": 0,
+                "expected": "ADSs",
+                "text": "ADSs"
+              },
+              {
+                "paragraph": 0,
+                "expected": "ADS",
+                "text": "ADSs"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "UNIT",
+      "terms": [
+        {
+          "name": "artificial intelligence",
+          "raw": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "AI",
+                "start": 0,
+                "end": 2
+              },
+              {
+                "paragraph": 0,
+                "text": "artificial intelligence",
+                "start": 94,
+                "end": 117
+              },
+              {
+                "paragraph": 0,
+                "text": "AI",
+                "start": 120,
+                "end": 122
+              },
+              {
+                "paragraph": 0,
+                "text": "AI",
+                "start": 358,
+                "end": 360
+              },
+              {
+                "paragraph": 1,
+                "text": "AI",
+                "start": 773,
+                "end": 775
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "artificial intelligence",
+                "text": "artificial intelligence"
+              },
+              {
+                "paragraph": 0,
+                "expected": "AI",
+                "text": "AI"
+              },
+              {
+                "paragraph": 1,
+                "expected": "AI",
+                "text": "AI"
+              },
+              {
+                "paragraph": 1,
+                "expected": "AI",
+                "text": "AI traffic"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "AI",
+                "start": 0,
+                "end": 2
+              },
+              {
+                "paragraph": 0,
+                "text": "artificial intelligence",
+                "start": 94,
+                "end": 117
+              },
+              {
+                "paragraph": 0,
+                "text": "AI",
+                "start": 120,
+                "end": 122
+              },
+              {
+                "paragraph": 0,
+                "text": "AI",
+                "start": 358,
+                "end": 360
+              },
+              {
+                "paragraph": 1,
+                "text": "AI",
+                "start": 773,
+                "end": 775
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "artificial intelligence",
+                "text": "artificial intelligence"
+              },
+              {
+                "paragraph": 0,
+                "expected": "AI",
+                "text": "AI"
+              },
+              {
+                "paragraph": 0,
+                "expected": "AI",
+                "text": "AI-driven"
+              },
+              {
+                "paragraph": 0,
+                "expected": "AI",
+                "text": "AI-driven demand"
+              },
+              {
+                "paragraph": 0,
+                "expected": "AI",
+                "text": "AI-driven demand focus"
+              }
+            ]
+          }
+        },
+        {
+          "name": "high-performance computing",
+          "raw": {
+            "exact": false,
+            "complete_span_covered": true,
+            "exact_hits": [],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "high-performance computing",
+                "text": "high-performance computing workloads"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "high-performance computing",
+                "start": 129,
+                "end": 155
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "high-performance computing",
+                "text": "high-performance computing"
+              },
+              {
+                "paragraph": 0,
+                "expected": "high-performance computing",
+                "text": "high-performance computing workloads"
+              }
+            ]
+          }
+        },
+        {
+          "name": "dark fiber",
+          "raw": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "high-count dark fiber",
+                "start": 177,
+                "end": 198
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "dark fiber",
+                "text": "high-count dark fiber"
+              },
+              {
+                "paragraph": 0,
+                "expected": "high-count dark fiber",
+                "text": "high-count dark fiber"
+              },
+              {
+                "paragraph": 1,
+                "expected": "dark fiber",
+                "text": "dark fiber and colocation services"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "high-count dark fiber",
+                "start": 177,
+                "end": 198
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "dark fiber",
+                "text": "high-count dark fiber"
+              },
+              {
+                "paragraph": 0,
+                "expected": "high-count dark fiber",
+                "text": "high-count dark fiber"
+              },
+              {
+                "paragraph": 1,
+                "expected": "dark fiber",
+                "text": "dark fiber and colocation services"
+              }
+            ]
+          }
+        },
+        {
+          "name": "colocation facilities",
+          "raw": {
+            "exact": false,
+            "complete_span_covered": true,
+            "exact_hits": [],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "colocation facilities",
+                "text": "our colocation facilities"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "colocation facilities",
+                "start": 231,
+                "end": 252
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "colocation facilities",
+                "text": "colocation facilities"
+              }
+            ]
+          }
+        },
+        {
+          "name": "10 - 400 Gbps wave services",
+          "raw": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 1,
+                "text": "10 - 400 Gbps wave services",
+                "start": 213,
+                "end": 240
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 1,
+                "expected": "10 - 400 Gbps wave services",
+                "text": "10 - 400 Gbps wave services"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 1,
+                "text": "10 - 400 Gbps wave services",
+                "start": 213,
+                "end": 240
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 1,
+                "expected": "10 - 400 Gbps wave services",
+                "text": "10 - 400 Gbps wave services"
+              }
+            ]
+          }
+        },
+        {
+          "name": "spectrum",
+          "raw": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 1,
+                "text": "spectrum",
+                "start": 242,
+                "end": 250
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 1,
+                "expected": "spectrum",
+                "text": "spectrum"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 1,
+                "text": "spectrum",
+                "start": 242,
+                "end": 250
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 1,
+                "expected": "spectrum",
+                "text": "spectrum"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Ethernet",
+          "raw": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 1,
+                "text": "Ethernet",
+                "start": 252,
+                "end": 260
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 1,
+                "expected": "Ethernet",
+                "text": "Ethernet"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 1,
+                "text": "Ethernet",
+                "start": 252,
+                "end": 260
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 1,
+                "expected": "Ethernet",
+                "text": "Ethernet"
+              }
+            ]
+          }
+        },
+        {
+          "name": "internet",
+          "raw": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 1,
+                "text": "internet",
+                "start": 262,
+                "end": 270
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 1,
+                "expected": "internet",
+                "text": "internet"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 1,
+                "text": "internet",
+                "start": 262,
+                "end": 270
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 1,
+                "expected": "internet",
+                "text": "internet"
+              }
+            ]
+          }
+        },
+        {
+          "name": "colocation services",
+          "raw": {
+            "exact": false,
+            "complete_span_covered": true,
+            "exact_hits": [],
+            "covering_hits": [
+              {
+                "paragraph": 1,
+                "expected": "colocation services",
+                "text": "dark fiber and colocation services"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 1,
+                "text": "colocation services",
+                "start": 291,
+                "end": 310
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 1,
+                "expected": "colocation services",
+                "text": "dark fiber and colocation services"
+              },
+              {
+                "paragraph": 1,
+                "expected": "colocation services",
+                "text": "colocation services"
+              }
+            ]
+          }
+        },
+        {
+          "name": "fiber-to-the-tower connections",
+          "raw": {
+            "exact": false,
+            "complete_span_covered": false,
+            "exact_hits": [],
+            "covering_hits": []
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 1,
+                "text": "fiber-to-the-tower connections",
+                "start": 344,
+                "end": 374
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 1,
+                "expected": "fiber-to-the-tower connections",
+                "text": "fiber-to-the-tower connections"
+              }
+            ]
+          }
+        },
+        {
+          "name": "iconnect",
+          "raw": {
+            "exact": false,
+            "complete_span_covered": false,
+            "exact_hits": [],
+            "covering_hits": []
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 1,
+                "text": "iconnect",
+                "start": 857,
+                "end": 865
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 1,
+                "expected": "iconnect",
+                "text": "iconnect"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "IREN",
+      "terms": [
+        {
+          "name": "U.S. generally accepted accounting principles",
+          "raw": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "GAAP",
+                "start": 215,
+                "end": 219
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "GAAP",
+                "text": "(“GAAP"
+              },
+              {
+                "paragraph": 0,
+                "expected": "GAAP",
+                "text": "GAAP"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "GAAP",
+                "start": 215,
+                "end": 219
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "GAAP",
+                "text": "GAAP"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Securities and Exchange Commission",
+          "raw": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "Securities and Exchange Commission",
+                "start": 243,
+                "end": 277
+              },
+              {
+                "paragraph": 0,
+                "text": "SEC",
+                "start": 284,
+                "end": 287
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "Securities and Exchange Commission",
+                "text": "the Securities and Exchange Commission"
+              },
+              {
+                "paragraph": 0,
+                "expected": "Securities and Exchange Commission",
+                "text": "Securities and Exchange Commission"
+              },
+              {
+                "paragraph": 0,
+                "expected": "SEC",
+                "text": "(the “SEC"
+              },
+              {
+                "paragraph": 0,
+                "expected": "SEC",
+                "text": "SEC"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "Securities and Exchange Commission",
+                "start": 243,
+                "end": 277
+              },
+              {
+                "paragraph": 0,
+                "text": "SEC",
+                "start": 284,
+                "end": 287
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "Securities and Exchange Commission",
+                "text": "Securities and Exchange Commission"
+              },
+              {
+                "paragraph": 0,
+                "expected": "SEC",
+                "text": "SEC"
+              }
+            ]
+          }
+        },
+        {
+          "name": "U.S. dollars",
+          "raw": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "U.S. dollars",
+                "start": 346,
+                "end": 358
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "U.S. dollars",
+                "text": "U.S. dollars"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "U.S. dollars",
+                "start": 346,
+                "end": 358
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "U.S. dollars",
+                "text": "U.S. dollars"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "ticker": "OLLI",
+      "terms": [
+        {
+          "name": "U.S. generally accepted accounting principles",
+          "raw": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "GAAP",
+                "start": 157,
+                "end": 161
+              },
+              {
+                "paragraph": 1,
+                "text": "GAAP",
+                "start": 323,
+                "end": 327
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "GAAP",
+                "text": "(“GAAP"
+              },
+              {
+                "paragraph": 0,
+                "expected": "GAAP",
+                "text": "GAAP"
+              },
+              {
+                "paragraph": 1,
+                "expected": "GAAP",
+                "text": "GAAP"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "GAAP",
+                "start": 157,
+                "end": 161
+              },
+              {
+                "paragraph": 1,
+                "text": "GAAP",
+                "start": 323,
+                "end": 327
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "GAAP",
+                "text": "GAAP"
+              },
+              {
+                "paragraph": 1,
+                "expected": "GAAP",
+                "text": "GAAP"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Securities and Exchange Commission",
+          "raw": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "Securities and Exchange Commission",
+                "start": 242,
+                "end": 276
+              },
+              {
+                "paragraph": 0,
+                "text": "SEC",
+                "start": 279,
+                "end": 282
+              },
+              {
+                "paragraph": 1,
+                "text": "SEC",
+                "start": 205,
+                "end": 208
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "Securities and Exchange Commission",
+                "text": "the Securities and Exchange Commission"
+              },
+              {
+                "paragraph": 0,
+                "expected": "Securities and Exchange Commission",
+                "text": "Securities and Exchange Commission"
+              },
+              {
+                "paragraph": 0,
+                "expected": "SEC",
+                "text": "(“SEC"
+              },
+              {
+                "paragraph": 0,
+                "expected": "SEC",
+                "text": "SEC"
+              },
+              {
+                "paragraph": 1,
+                "expected": "SEC",
+                "text": "the SEC"
+              }
+            ]
+          },
+          "candidate": {
+            "exact": true,
+            "complete_span_covered": true,
+            "exact_hits": [
+              {
+                "paragraph": 0,
+                "text": "Securities and Exchange Commission",
+                "start": 242,
+                "end": 276
+              },
+              {
+                "paragraph": 0,
+                "text": "SEC",
+                "start": 279,
+                "end": 282
+              },
+              {
+                "paragraph": 1,
+                "text": "SEC",
+                "start": 205,
+                "end": 208
+              }
+            ],
+            "covering_hits": [
+              {
+                "paragraph": 0,
+                "expected": "Securities and Exchange Commission",
+                "text": "Securities and Exchange Commission"
+              },
+              {
+                "paragraph": 0,
+                "expected": "SEC",
+                "text": "SEC"
+              },
+              {
+                "paragraph": 1,
+                "expected": "SEC",
+                "text": "SEC"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Reference terms include concrete operating/financial concepts under the earlier annotation contract.",
+    "Candidate precision under the broader extract-first scope has not been reviewed.",
+    "Containing a full span in a larger noun phrase is reported separately from exact term recovery.",
+    "No relationship correctness is scored. This is not an independent or population accuracy estimate."
+  ],
+  "predictions_sha256": "362d14df8972507dfc11c347ff795a708fa4d786225f2600d59e47432faa599d",
+  "candidate_occurrences": 595
+}
