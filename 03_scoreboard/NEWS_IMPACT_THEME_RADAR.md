@@ -21,12 +21,12 @@ Rubric hit rates count a call only when q5=impulse, direction in {up, down}, tra
 | non-weather | 24955 |
 | reaction-in-title (killed by the router) | 883 |
 | impulse + up/down + listed | 12835 |
-| graded articles 0-1d | 1495 |
-| graded articles 2d | 1439 |
-| graded articles 3d | 1418 |
-| graded articles 4d | 1397 |
-| graded articles 5d | 1371 |
-| graded articles 1-4w | 6907 |
+| graded articles 0-1d | 1507 |
+| graded articles 2d | 1458 |
+| graded articles 3d | 1428 |
+| graded articles 4d | 1405 |
+| graded articles 5d | 1381 |
+| graded articles 1-4w | 6945 |
 
 ## Hit rates
 
@@ -34,12 +34,12 @@ Rubric column skips long-horizon classes on 0-1d and 2-5d. Broad column keeps th
 
 | horizon | rubric hits | rubric n | rubric rate | broad hits | broad n | broad rate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0-1d | 1333 | 2700 | 1333/2700 = 49.4% | 6694 | 13851 | 6694/13851 = 48.3% |
-| 2d | 1312 | 2592 | 1312/2592 = 50.6% | 6549 | 13321 | 6549/13321 = 49.2% |
-| 3d | 1268 | 2516 | 1268/2516 = 50.4% | 6424 | 13117 | 6424/13117 = 49.0% |
-| 4d | 1272 | 2459 | 1272/2459 = 51.7% | 6412 | 12979 | 6412/12979 = 49.4% |
-| 5d | 1241 | 2404 | 1241/2404 = 51.6% | 6237 | 12827 | 6237/12827 = 48.6% |
-| 1-4w | 4937 | 10498 | 4937/10498 = 47.0% | — | — | — |
+| 0-1d | 1339 | 2712 | 1339/2712 = 49.4% | 6759 | 14002 | 6759/14002 = 48.3% |
+| 2d | 1318 | 2612 | 1318/2612 = 50.5% | 6596 | 13421 | 6596/13421 = 49.1% |
+| 3d | 1272 | 2529 | 1272/2529 = 50.3% | 6466 | 13198 | 6466/13198 = 49.0% |
+| 4d | 1274 | 2472 | 1274/2472 = 51.5% | 6442 | 13031 | 6442/13031 = 49.4% |
+| 5d | 1247 | 2414 | 1247/2414 = 51.7% | 6266 | 12882 | 6266/12882 = 48.6% |
+| 1-4w | 4980 | 10574 | 4980/10574 = 47.1% | — | — | — |
 
 ## Convergence / clash ledger
 
@@ -59,8 +59,8 @@ Hit rates grade the entity once per session. Converge uses that side. Clash uses
 
 | bucket | 0-1d | 2d | 3d | 4d | 5d |
 | --- | --- | --- | --- | --- | --- |
-| singleton | 669/1422 = 47.0% | 681/1377 = 49.5% | 675/1352 = 49.9% | 676/1328 = 50.9% | 669/1304 = 51.3% |
-| converge | 75/138 = 54.3% | 63/130 = 48.5% | 67/130 = 51.5% | 67/129 = 51.9% | 66/127 = 52.0% |
+| singleton | 675/1433 = 47.1% | 688/1396 = 49.3% | 679/1362 = 49.9% | 678/1338 = 50.7% | 675/1314 = 51.4% |
+| converge | 75/139 = 54.0% | 63/131 = 48.1% | 67/130 = 51.5% | 67/129 = 51.9% | 66/127 = 52.0% |
 | clash | 4/11 = 36.4% | 5/10 = 50.0% | 8/10 = 80.0% | 4/10 = 40.0% | 4/10 = 40.0% |
 
 ### Top converge names
@@ -99,7 +99,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 
 ### 0-1d
 
-- ≥5% and <10%: **614**
+- ≥5% and <10%: **620**
 - ≥10%: **326**
 
 | threshold | ticker | date | ret | class | title |
@@ -129,12 +129,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | AEYE | 2026-08-14 | +29.08% | guidance | AudioEye, Inc. Q2 2026 Earnings Call Summary |
 | ≥10% | OPRX | 2026-08-13 | +28.74% | print_vs_priced | OptimizeRx Corp (OPRX) (Q2 2026) Earnings Call Highlights: Navigating Revenue Headwinds with ... |
 | ≥10% | OPRX | 2026-08-13 | +28.74% | print_vs_priced | OptimizeRx Corporation Q2 2026 Earnings Call Summary |
-| … | | | | | 915 more in the JSON |
+| … | | | | | 921 more in the JSON |
 
 ### 2d
 
-- ≥5% and <10%: **1160**
-- ≥10%: **634**
+- ≥5% and <10%: **1166**
+- ≥10%: **635**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -163,12 +163,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | LUNG | 2026-07-30 | +51.43% | print_vs_priced | Pulmonx Corporation Q2 2026 Earnings Call Summary |
 | ≥10% | CYCU | 2026-09-30 | +45.80% | gate | Cycurion Discusses Record Contract Win, Public Safety Expansion and Growth Strategy in New Interview |
 | ≥10% | SDGR | 2026-09-15 | +45.52% | guidance | AI Drug Discovery Market Projected to Reach $13.8 Billion by 2033 |
-| … | | | | | 1769 more in the JSON |
+| … | | | | | 1776 more in the JSON |
 
 ### 3d
 
-- ≥5% and <10%: **1282**
-- ≥10%: **770**
+- ≥5% and <10%: **1295**
+- ≥10%: **775**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -197,12 +197,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | BWMN | 2026-08-07 | +54.48% | gate | Earnings To Watch: Bowman Consulting Group Ltd (BWMN) Q2 2026 -- GF Value Sees 64% Upside |
 | ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | Robinhood Rises as the SEC Clears Tokenized Stocks |
 | ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | Securitize Surges After SEC Clears Path for Tokenized Stock Trading |
-| … | | | | | 2027 more in the JSON |
+| … | | | | | 2045 more in the JSON |
 
 ### 4d
 
-- ≥5% and <10%: **1388**
-- ≥10%: **942**
+- ≥5% and <10%: **1391**
+- ≥10%: **951**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -231,12 +231,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | Robinhood Rises as the SEC Clears Tokenized Stocks |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | Securitize Surges After SEC Clears Path for Tokenized Stock Trading |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | Polymarket Hires Coinbase's Failed Social-Coin Architect |
-| … | | | | | 2305 more in the JSON |
+| … | | | | | 2317 more in the JSON |
 
 ### 5d
 
-- ≥5% and <10%: **1454**
-- ≥10%: **1048**
+- ≥5% and <10%: **1465**
+- ≥10%: **1052**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -265,7 +265,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | Securitize Surges After SEC Clears Path for Tokenized Stock Trading |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | Polymarket Hires Coinbase's Failed Social-Coin Architect |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
-| … | | | | | 2477 more in the JSON |
+| … | | | | | 2492 more in the JSON |
 
 ## AMRX
 
