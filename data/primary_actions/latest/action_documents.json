@@ -215,7 +215,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6307,
     "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T17:04:23.943995+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -244,7 +244,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6308,
     "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T17:04:23.943995+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -273,7 +273,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6309,
     "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T17:04:23.943995+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -302,7 +302,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6310,
     "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T17:04:23.943995+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -331,7 +331,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 3303,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T17:04:23.943995+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -362,7 +362,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6208,
     "first_seen": "2026-10-23T06:03:51.082170+00:00",
-    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T17:04:23.943995+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -393,7 +393,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6198,
     "first_seen": "2026-10-23T06:03:51.082170+00:00",
-    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T17:04:23.943995+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -424,7 +424,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6194,
     "first_seen": "2026-10-23T06:03:51.082170+00:00",
-    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T17:04:23.943995+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -455,7 +455,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6188,
     "first_seen": "2026-10-23T06:03:51.082170+00:00",
-    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T17:04:23.943995+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -485,7 +485,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6175,
     "first_seen": "2026-10-23T06:03:51.082170+00:00",
-    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T17:04:23.943995+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -516,7 +516,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6168,
     "first_seen": "2026-10-23T06:03:51.082170+00:00",
-    "last_seen": "2026-10-25T07:17:54.617507+00:00",
+    "last_seen": "2026-10-25T17:04:23.943995+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -591,59 +591,6 @@
     "last_seen": "2026-10-24T05:56:48.534199+00:00",
     "source_ids": [
       "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "CAC Outcome: GMB & John Pye & Sons Ltd (2)",
-    "url": "https://www.gov.uk/government/publications/cac-outcome-gmb-john-pye-sons-ltd-2",
-    "native_id": "/government/publications/cac-outcome-gmb-john-pye-sons-ltd-2",
-    "published_at": "2026-10-22T15:18:17+00:00",
-    "published_raw": "2026-10-22T15:18:17Z",
-    "document_type": "decision",
-    "issuer": "Central Arbitration Committee",
-    "issuer_ids": [
-      "uk-gov:central-arbitration-committee"
-    ],
-    "summary": "Outcome(s) by the Central Arbitration Committee on an application from GMB.",
-    "source_metadata": {
-      "document_type": "decision",
-      "document_stage": "decision_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Central Arbitration Committee",
-      "jurisdiction": "UK",
-      "family": "typed_government_documents"
-    },
-    "primary_source_id": "uk-govuk-decision",
-    "n": 6080,
-    "first_seen": "2026-10-22T17:59:58.860252+00:00",
-    "last_seen": "2026-10-25T07:17:54.617507+00:00",
-    "source_ids": [
-      "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 122 - Crow Tribe Water Rights Settlement Amendments Act of 2025",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ122",
-    "native_id": "PLAW-119publ122",
-    "published_at": "2026-10-22T13:27:00+00:00",
-    "published_raw": "Thu, 22 Oct 2026 13:27:00 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 6090,
-    "first_seen": "2026-10-22T17:59:58.860252+00:00",
-    "last_seen": "2026-10-23T06:03:51.082170+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
     ]
   }
 ]

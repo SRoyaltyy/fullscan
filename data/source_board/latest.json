@@ -1,6 +1,6 @@
 {
  "date": "2026-10-25",
- "generated_at": "2026-10-25T07:18:15.640395+00:00",
+ "generated_at": "2026-10-25T17:04:45.958343+00:00",
  "catalog": {
   "generated_at": "2026-10-24T16:39:29.833670+00:00",
   "channels": 365,
@@ -34,35 +34,35 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-25T07:17:54.617507+00:00",
+  "generated_at": "2026-10-25T17:04:23.943995+00:00",
   "enabled_sources": 121,
   "sources_ok": 121,
   "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1719,
-   "old": 1172,
-   "future": 14,
-   "undated": 293,
-   "new": 10,
-   "duplicates": 523
+   "observed": 1612,
+   "old": 1215,
+   "future": 2,
+   "undated": 203,
+   "new": 1,
+   "duplicates": 394
   },
-  "current_dated_documents": 380
+  "current_dated_documents": 287
  },
  "new_today": {
-  "count": 10,
+  "count": 1,
   "by_source": {
-   "us-doj-b3d27e1dc3": 10
+   "in-rbi-cc71120b98": 1
   },
   "by_class": {
-   "watch": 2,
-   "docket": 4,
-   "high": 4
+   "watch": 1
   }
  },
  "parsed_today": {
-  "count": 0,
-  "by_class": {}
+  "count": 1,
+  "by_class": {
+   "watch": 1
+  }
  },
  "n_failures": 0,
  "dates": [

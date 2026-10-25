@@ -1,6 +1,6 @@
 {
  "date": "2026-10-25",
- "generated_at": "2026-10-25T07:18:15.640395+00:00",
+ "generated_at": "2026-10-25T17:04:45.958343+00:00",
  "catalog": {
   "generated_at": "2026-10-24T16:39:29.833670+00:00",
   "channels": 365,
@@ -34,20 +34,20 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-25T07:17:54.617507+00:00",
+  "generated_at": "2026-10-25T17:04:23.943995+00:00",
   "enabled_sources": 121,
   "sources_ok": 121,
   "sources_failed": 0,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1719,
-   "old": 1172,
-   "future": 14,
-   "undated": 293,
-   "new": 10,
-   "duplicates": 523
+   "observed": 1612,
+   "old": 1215,
+   "future": 2,
+   "undated": 203,
+   "new": 1,
+   "duplicates": 394
   },
-  "current_dated_documents": 380
+  "current_dated_documents": 287
  },
  "failures": [],
  "channels": [
@@ -411,7 +411,7 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 6,
+    "window": 5,
     "by_class": {},
     "items": [
      {
@@ -458,15 +458,6 @@
       "stage": "decision_published",
       "new": false,
       "cls": "routine"
-     },
-     {
-      "title": "CAC Outcome: GMB & John Pye & Sons Ltd (2)",
-      "url": "https://www.gov.uk/government/publications/cac-outcome-gmb-john-pye-sons-ltd-2",
-      "published_at": "2026-10-22T15:18:17+00:00",
-      "document_type": "decision",
-      "stage": "decision_published",
-      "new": false,
-      "cls": "routine"
      }
     ]
    }
@@ -491,28 +482,9 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Notice of proposed amendments (NPA) documents",
-      "url": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-2014-documents",
-      "published_at": "2026-10-22T16:30:42+00:00",
-      "document_type": "regulation",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Notice of proposed amendments (NPA) reference table",
-      "url": "https://www.gov.uk/government/publications/notice-of-proposed-amendments-npa-reference-table",
-      "published_at": "2026-10-22T16:30:33+00:00",
-      "document_type": "regulation",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -557,28 +529,9 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Make Work Pay: fire and rehire – changes to expenses, benefits, and shift patterns",
-      "url": "https://www.gov.uk/government/consultations/make-work-pay-fire-and-rehire-changes-to-expenses-benefits-and-shift-patterns",
-      "published_at": "2026-10-22T09:20:33+00:00",
-      "document_type": "consultation_outcome",
-      "stage": "consultation_response_published",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Make Work Pay: enhanced dismissal protections for pregnant women and new mothers",
-      "url": "https://www.gov.uk/government/consultations/make-work-pay-enhanced-dismissal-protections-for-pregnant-women-and-new-mothers",
-      "published_at": "2026-10-22T08:00:02+00:00",
-      "document_type": "consultation_outcome",
-      "stage": "consultation_response_published",
-      "new": false,
-      "cls": "routine"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -667,18 +620,9 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 10,
+    "window": 3,
     "by_class": {},
     "items": [
-     {
-      "title": "Product Recall: Axkid MiniKid Core Car Seats (2609-0213)",
-      "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-recall-axkid-minikid-core-car-seats-2609-0213",
-      "published_at": "2026-10-22T14:59:39+00:00",
-      "document_type": "product_safety_alert_report_recall",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
      {
       "title": "Product Safety Report: Goose Patting Baby Sleep Pillow sold via Wish (2610-0177)",
       "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-goose-patting-baby-sleep-pillow-sold-via-wish-2610-0177",
@@ -701,60 +645,6 @@
       "title": "Product Safety Report: Babymore Space Saver Cot (Grey) (2610-0027)",
       "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-babymore-space-saver-cot-grey-2610-0027",
       "published_at": "2026-10-23T14:08:19+00:00",
-      "document_type": "product_safety_alert_report_recall",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Product Safety Report: Kovar Windproof Camping Stove (2610-0157)",
-      "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-kovar-windproof-camping-stove-2610-0157",
-      "published_at": "2026-10-22T15:04:51+00:00",
-      "document_type": "product_safety_alert_report_recall",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Product Safety Report: Candle Warmer Lamp, TL-167 (2610-0093)",
-      "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-candle-warmer-lamp-tl-167-2610-0093",
-      "published_at": "2026-10-22T14:06:26+00:00",
-      "document_type": "product_safety_alert_report_recall",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Product Safety Report: Leafless Hair Dryer (2610-0107)",
-      "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-leafless-hair-dryer-2610-0107",
-      "published_at": "2026-10-22T14:04:49+00:00",
-      "document_type": "product_safety_alert_report_recall",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Product Safety Report: Wednesday Addams Costume sold via eBay (2609-0105)",
-      "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-wednesday-addams-costume-sold-via-ebay-2609-0105",
-      "published_at": "2026-10-22T14:02:41+00:00",
-      "document_type": "product_safety_alert_report_recall",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Product Safety Report: Shark Tail Baby Sleeping Bag sold via Wish (2610-0064)",
-      "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-shark-tail-baby-sleeping-bag-sold-via-wish-2610-0064",
-      "published_at": "2026-10-22T14:01:26+00:00",
-      "document_type": "product_safety_alert_report_recall",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Product Safety Report: Xin Yue AC PC Power Cable (2610-0158)",
-      "url": "https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-counterfeit-xin-yue-ac-pc-power-cable-2610-0158",
-      "published_at": "2026-10-22T13:59:17+00:00",
       "document_type": "product_safety_alert_report_recall",
       "stage": "requires_semantic_review",
       "new": false,
@@ -1092,18 +982,9 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 1,
     "by_class": {},
     "items": [
-     {
-      "title": "Public Law 119 - 122 - Crow Tribe Water Rights Settlement Amendments Act of 2025",
-      "url": "https://www.govinfo.gov/app/details/PLAW-119publ122",
-      "published_at": "2026-10-22T13:27:00+00:00",
-      "document_type": "public_law",
-      "stage": "law_published",
-      "new": false,
-      "cls": "high"
-     },
      {
       "title": "Public Law 119 - 1 - Laken Riley Act",
       "url": "https://www.govinfo.gov/app/details/PLAW-119publ1",
@@ -1544,28 +1425,9 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Court Permanently Shuts Down Illegal Debt Relief Operation Following FTC Allegation That Scheme’s Operators Impersonated Government and Business Entities",
-      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/10/court-permanently-shuts-down-illegal-debt-relief-operation-following-ftc-allegation-schemes",
-      "published_at": "2026-10-22T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "FTC Sues Perpetrators of Government Impersonation Scheme Over Deceptive Ads, Misleading Promises and Fake Reviews",
-      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-sues-perpetrators-government-impersonation-scheme-over-deceptive-ads-misleading-promises-fake",
-      "published_at": "2026-10-22T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -1615,28 +1477,9 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Court Permanently Shuts Down Illegal Debt Relief Operation Following FTC Allegation That Scheme’s Operators Impersonated Government and Business Entities",
-      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/10/court-permanently-shuts-down-illegal-debt-relief-operation-following-ftc-allegation-schemes",
-      "published_at": "2026-10-22T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "FTC Sues Perpetrators of Government Impersonation Scheme Over Deceptive Ads, Misleading Promises and Fake Reviews",
-      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-sues-perpetrators-government-impersonation-scheme-over-deceptive-ads-misleading-promises-fake",
-      "published_at": "2026-10-22T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -1659,7 +1502,7 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 19,
+    "window": 18,
     "by_class": {},
     "items": [
      {
@@ -1823,15 +1666,6 @@
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "watch"
-     },
-     {
-      "title": "20262194: Intercontinental Exchange, Inc.; MarketAxess Holdings Inc.",
-      "url": "https://www.ftc.gov/legal-library/browse/early-termination-notices/20262194",
-      "published_at": "2026-10-22T13:22:50+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
      }
     ]
    }
@@ -1984,7 +1818,7 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 86,
+    "window": 48,
     "by_class": {},
     "items": [
      {
@@ -2123,139 +1957,139 @@
       "cls": "high"
      },
      {
-      "title": "Convicted Felon Sentenced to Prison for Leaving a Residential Re-Entry Center",
-      "url": "https://www.justice.gov/usao-ma/pr/convicted-felon-sentenced-prison-leaving-residential-re-entry-center",
-      "published_at": "2026-10-22T12:00:00+00:00",
+      "title": "Chinese National Extradited for Alleged Role in Multimillion-Dollar Cryptocurrency Scam Targeting U.S. Citizens",
+      "url": "https://www.justice.gov/usao-cdca/pr/chinese-national-extradited-alleged-role-multimillion-dollar-cryptocurrency-scam",
+      "published_at": "2026-10-23T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
+      "new": true,
+      "cls": "watch"
      },
      {
-      "title": "Four Men Charged with Pandemic Relief Fraud",
-      "url": "https://www.justice.gov/usao-ma/pr/four-men-charged-pandemic-relief-fraud",
-      "published_at": "2026-10-22T12:00:00+00:00",
+      "title": "Douglasville Man Arrested for Attempted Arson of ICE Facility in Downtown Atlanta",
+      "url": "https://www.justice.gov/usao-ndga/pr/douglasville-man-charged-attempted-arson-ice-facility-downtown-atlanta",
+      "published_at": "2026-10-23T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
+      "new": true,
+      "cls": "watch"
      },
      {
-      "title": "Cartel Commander Charged with International Cocaine and Methamphetamine Trafficking Conspiracy and Firearm Offenses",
-      "url": "https://www.justice.gov/opa/pr/cartel-commander-charged-international-cocaine-and-methamphetamine-trafficking-conspiracy",
-      "published_at": "2026-10-22T12:00:00+00:00",
+      "title": "Three Defendants Charged with Offenses for Voting as Non-Citizens",
+      "url": "https://www.justice.gov/usao-edny/pr/three-defendants-charged-offenses-voting-non-citizens",
+      "published_at": "2026-10-23T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "high"
+      "cls": "watch"
      },
      {
-      "title": "Montco Man, 20, Pleads Guilty to 2024 Carjacking in Which He Shot and Seriously Wounded the Victim",
-      "url": "https://www.justice.gov/usao-edpa/pr/montco-man-20-pleads-guilty-2024-carjacking-which-he-shot-and-seriously-wounded-victim",
-      "published_at": "2026-10-22T12:00:00+00:00",
+      "title": "Justice Department Defends Army Corps’ Thorough Review for CWA Permit, Paving the Way for Much Needed Housing Development in Charleston, South Carolina",
+      "url": "https://www.justice.gov/opa/pr/justice-department-defends-army-corps-thorough-review-cwa-permit-paving-way-much-needed",
+      "published_at": "2026-10-23T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "high"
+      "cls": "watch"
      },
      {
-      "title": "Previously Convicted Felon Pleads Guilty to Illegal Possession of a Loaded Glock 27",
-      "url": "https://www.justice.gov/usao-dc/pr/previously-convicted-felon-pleads-guilty-illegal-possession-loaded-glock-27",
-      "published_at": "2026-10-22T12:00:00+00:00",
+      "title": "Deadly Arson Spree in Northeast Yields 25 Years in Prison for D.C. Man",
+      "url": "https://www.justice.gov/usao-dc/pr/deadly-arson-spree-northeast-yields-25-years-prison-dc-man",
+      "published_at": "2026-10-23T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "high"
+      "cls": "watch"
      },
      {
-      "title": "New Jersey Real Estate Investor and Online Influencer Admits to Committing Multi-Million Dollar Investment Fraud Scheme, Laundering Drug Proceeds, and Bribing a New Jersey Politician",
-      "url": "https://www.justice.gov/usao-nj/pr/new-jersey-real-estate-investor-and-online-influencer-admits-committing-multi-million",
-      "published_at": "2026-10-22T12:00:00+00:00",
+      "title": "Alien Charged for Illegal Voting",
+      "url": "https://www.justice.gov/usao-nv/pr/alien-charged-illegal-voting",
+      "published_at": "2026-10-23T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "high"
+      "cls": "watch"
      },
      {
-      "title": "THIRD ALABAMA MAN PLEADS GUILTY TO MULTISTATE PHARMACY BURGLARY CONSPIRACY",
-      "url": "https://www.justice.gov/usao-sdms/pr/third-alabama-man-pleads-guilty-multistate-pharmacy-burglary-conspiracy",
-      "published_at": "2026-10-22T12:00:00+00:00",
+      "title": "Chinese National Extradited for Alleged Role in Multimillion-Dollar Cryptocurrency Scam Targeting U.S. Citizens",
+      "url": "https://www.justice.gov/opa/pr/chinese-national-extradited-alleged-role-multimillion-dollar-cryptocurrency-scam-targeting",
+      "published_at": "2026-10-23T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "high"
+      "cls": "watch"
      },
      {
-      "title": "Virginia state senator indicted for leading a criminal marijuana distribution enterprise",
-      "url": "https://www.justice.gov/usao-edva/pr/virginia-state-senator-indicted-leading-criminal-marijuana-distribution-enterprise",
-      "published_at": "2026-10-22T12:00:00+00:00",
+      "title": "Grand Jury for the District of Nebraska - October 2026",
+      "url": "https://www.justice.gov/usao-ne/pr/grand-jury-district-nebraska-october-2026",
+      "published_at": "2026-10-23T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "high"
+      "cls": "watch"
      },
      {
-      "title": "Five individuals including three doctors indicted on charges of illegal distribution of prescription drugs",
-      "url": "https://www.justice.gov/usao-edmi/pr/five-individuals-including-three-doctors-indicted-charges-illegal-distribution",
-      "published_at": "2026-10-22T12:00:00+00:00",
+      "title": "DEA Hosts the 31st National Prescription Drug Take Back Day on Saturday, October 24th",
+      "url": "https://www.justice.gov/usao-wdtn/pr/dea-hosts-31st-national-prescription-drug-take-back-day-saturday-october-24th",
+      "published_at": "2026-10-23T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "high"
+      "cls": "watch"
      },
      {
-      "title": "Tallahassee Man Pleads Guilty to Attempted Enticement of a Minor",
-      "url": "https://www.justice.gov/usao-ndfl/pr/tallahassee-man-pleads-guilty-attempted-enticement-minor",
-      "published_at": "2026-10-22T12:00:00+00:00",
+      "title": "United States Attorneys Available To Receive Election Complaints",
+      "url": "https://www.justice.gov/usao-sdny/pr/united-states-attorneys-available-receive-election-complaints-6",
+      "published_at": "2026-10-23T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "high"
+      "cls": "watch"
      },
      {
-      "title": "U.S. Attorney Announces Results of Year-Long Effort to Prosecute Dangerous Illegal Aliens in the Western District of Wisconsin",
-      "url": "https://www.justice.gov/usao-wdwi/pr/us-attorney-announces-results-year-long-effort-prosecute-dangerous-illegal-aliens",
-      "published_at": "2026-10-22T12:00:00+00:00",
+      "title": "Jacksonville Woman Charged with Theft of Dependency and Indemnity Compensation Benefits from the Department of Veterans Affairs",
+      "url": "https://www.justice.gov/usao-mdfl/pr/jacksonville-woman-charged-theft-dependency-and-indemnity-compensation-benefits",
+      "published_at": "2026-10-23T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "high"
+      "cls": "watch"
      },
      {
-      "title": "New Orleans Man Indicted for Violating the Federal Controlled Substances Act",
-      "url": "https://www.justice.gov/usao-edla/pr/new-orleans-man-indicted-violating-federal-controlled-substances-act-0",
-      "published_at": "2026-10-22T12:00:00+00:00",
+      "title": "United States Attorneys Available to Receive Election Complaints",
+      "url": "https://www.justice.gov/usao-edny/pr/united-states-attorneys-available-receive-election-complaints-6",
+      "published_at": "2026-10-23T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "high"
+      "cls": "watch"
      },
      {
-      "title": "L.A. Health Care Fraud Takedown Results in 15 Defendants Charged, Including Six Medical Professionals, with $2 Billion in Losses Alleged",
-      "url": "https://www.justice.gov/usao-cdca/pr/la-health-care-fraud-takedown-results-15-defendants-charged-including-six-medical",
-      "published_at": "2026-10-22T12:00:00+00:00",
+      "title": "Nine Pennsylvania Non-Citizens Charged with Illegally Voting",
+      "url": "https://www.justice.gov/usao-edpa/pr/nine-pennsylvania-non-citizens-charged-illegally-voting",
+      "published_at": "2026-10-23T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "high"
+      "cls": "watch"
      },
      {
-      "title": "Former Eminem Employee Pleads Guilty to Criminal Infringement of Copyright",
-      "url": "https://www.justice.gov/opa/pr/former-eminem-employee-pleads-guilty-criminal-infringement-copyright",
-      "published_at": "2026-10-22T12:00:00+00:00",
+      "title": "U.S. Attorney’s Office Filed 114 Border-Related Cases This Week",
+      "url": "https://www.justice.gov/usao-sdca/pr/us-attorneys-office-filed-114-border-related-cases-week-2",
+      "published_at": "2026-10-23T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "high"
+      "cls": "watch"
      },
      {
-      "title": "Investment Advisor Admits Defrauding Financial Services Companies of $3.3 Million",
-      "url": "https://www.justice.gov/usao-ct/pr/investment-advisor-admits-defrauding-financial-services-companies-33-million",
-      "published_at": "2026-10-22T12:00:00+00:00",
+      "title": "Nine Pennsylvania Non-Citizens Charged with Illegally Voting",
+      "url": "https://www.justice.gov/usao-mdpa/pr/nine-pennsylvania-non-citizens-charged-illegally-voting",
+      "published_at": "2026-10-23T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
-      "cls": "high"
+      "cls": "watch"
      }
     ]
    }
@@ -2280,7 +2114,7 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 17,
+    "window": 7,
     "by_class": {},
     "items": [
      {
@@ -2296,60 +2130,6 @@
       "title": "Telemedicine Company Owner Sentenced to 20 Years in Prison for $46M Medicare Fraud Scheme",
       "url": "https://www.justice.gov/opa/pr/telemedicine-company-owner-sentenced-20-years-prison-46m-medicare-fraud-scheme",
       "published_at": "2026-10-23T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Justice Department’s Civil Division and the Department of Health & Human Services Announce Anti-Fraud Healthcare Self-Disclosure Pilot Program",
-      "url": "https://www.justice.gov/opa/pr/justice-departments-civil-division-and-department-health-human-services-announce-anti-fraud",
-      "published_at": "2026-10-22T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Cartel Commander Charged with International Cocaine and Methamphetamine Trafficking Conspiracy and Firearm Offenses",
-      "url": "https://www.justice.gov/opa/pr/cartel-commander-charged-international-cocaine-and-methamphetamine-trafficking-conspiracy",
-      "published_at": "2026-10-22T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Virginia State Senator Indicted for Leading a Criminal Marijuana Distribution Enterprise",
-      "url": "https://www.justice.gov/opa/pr/virginia-state-senator-indicted-leading-criminal-marijuana-distribution-enterprise",
-      "published_at": "2026-10-22T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Attorney General, FBI Director Announce Significant Law Enforcement Action",
-      "url": "https://www.justice.gov/opa/video/attorney-general-fbi-director-announce-significant-law-enforcement-action",
-      "published_at": "2026-10-22T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Former Eminem Employee Pleads Guilty to Criminal Infringement of Copyright",
-      "url": "https://www.justice.gov/opa/pr/former-eminem-employee-pleads-guilty-criminal-infringement-copyright",
-      "published_at": "2026-10-22T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Los Angeles Health Care Fraud Takedown Results in Charges Against 15 Defendants, Including 6 Medical Professionals, Nearly $2 Billion in Loss",
-      "url": "https://www.justice.gov/opa/pr/los-angeles-health-care-fraud-takedown-results-charges-against-15-defendants-including-6",
-      "published_at": "2026-10-22T12:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -2399,42 +2179,6 @@
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "watch"
-     },
-     {
-      "title": "Environmental Crimes Bulletin – September 2026",
-      "url": "https://www.justice.gov/enrd/blog/environmental-crimes-bulletin-september-2026",
-      "published_at": "2026-10-22T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Utah Man Charged with Attempted Hate Crime, and other Crimes After Allegedly Making Online Threats to “blow up” a Synagogue",
-      "url": "https://www.justice.gov/opa/pr/utah-man-charged-attempted-hate-crime-and-other-crimes-after-allegedly-making-online-threats",
-      "published_at": "2026-10-22T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Justice Department Opens Investigation into Alleged Firearm Permitting Abuses in Two Connecticut Municipalities",
-      "url": "https://www.justice.gov/opa/pr/justice-department-opens-investigation-alleged-firearm-permitting-abuses-two-connecticut",
-      "published_at": "2026-10-22T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "docket"
-     },
-     {
-      "title": "Justice Department Secures Settlement of Lawsuit Against Oklahoma Landlord for Refusing to Rent to a Family with a Child",
-      "url": "https://www.justice.gov/opa/pr/justice-department-secures-settlement-lawsuit-against-oklahoma-landlord-refusing-rent-family",
-      "published_at": "2026-10-22T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "docket"
      }
     ]
    }
@@ -3805,19 +3549,9 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "OCC Announces Enforcement Actions for October 2026",
-      "url": "https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-93.html",
-      "published_at": "2026-10-22T15:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -4221,19 +3955,9 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "FDA Launches New Program to Advance Neuroscience Medical Product Development",
-      "url": "http://www.fda.gov/news-events/press-announcements/fda-launches-new-program-advance-neuroscience-medical-product-development",
-      "published_at": "2026-10-22T16:58:19+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -4308,7 +4032,7 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 32,
+    "window": 23,
     "by_class": {},
     "items": [
      {
@@ -4351,15 +4075,6 @@
       "title": "FDA grants traditional approval for pembrolizumab or pembrolizumab and berahyaluronidase alfa-pmph for unresectable or metastatic TMB-H solid tumors with updated indication",
       "url": "http://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-traditional-approval-pembrolizumab-or-pembrolizumab-and-berahyaluronidase-alfa-pmph",
       "published_at": "2026-10-22T18:56:23+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Competitive Generic Therapy Approvals",
-      "url": "http://www.fda.gov/drugs/generic-drugs/competitive-generic-therapy-approvals",
-      "published_at": "2026-10-22T15:14:32+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -4526,60 +4241,6 @@
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "watch"
-     },
-     {
-      "title": "FDA Launches New Program to Advance Neuroscience Medical Product Development",
-      "url": "http://www.fda.gov/news-events/press-announcements/fda-launches-new-program-advance-neuroscience-medical-product-development",
-      "published_at": "2026-10-22T16:58:19+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "About NAIN",
-      "url": "http://www.fda.gov/industry/neuroscience-advancement-and-innovation-nexus-nain/about-nain",
-      "published_at": "2026-10-22T16:57:54+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Neuroscience Advancement and Innovation Nexus (NAIN)",
-      "url": "http://www.fda.gov/industry/neuroscience-advancement-and-innovation-nexus-nain",
-      "published_at": "2026-10-22T16:53:40+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Generic Drugs",
-      "url": "http://www.fda.gov/drugs/buying-using-medicine-safely/generic-drugs",
-      "published_at": "2026-10-22T16:12:57+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Expanded Access | Information for Industry",
-      "url": "http://www.fda.gov/news-events/expanded-access/expanded-access-information-industry",
-      "published_at": "2026-10-22T15:36:15+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "FDA Rare Disease Framework Initiative Public Meeting - 10/28/2026",
-      "url": "http://www.fda.gov/news-events/fda-meetings-conferences-and-workshops/fda-rare-disease-framework-initiative-public-meeting-10282026",
-      "published_at": "2026-10-22T14:40:41+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
      }
     ]
    }
@@ -4604,22 +4265,13 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 12,
+    "window": 7,
     "by_class": {},
     "items": [
      {
       "title": "2026 Biological License Application Approvals",
       "url": "http://www.fda.gov/vaccines-blood-biologics/development-approval-process-cber/2026-biological-license-application-approvals",
       "published_at": "2026-10-22T20:11:29+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
-     {
-      "title": "Public Meeting on the Reauthorization of the Biosimilar User Fee Act (BsUFA) - 10/26/2026",
-      "url": "http://www.fda.gov/drugs/news-events-human-drugs/public-meeting-reauthorization-biosimilar-user-fee-act-bsufa-10262026",
-      "published_at": "2026-10-22T15:00:59+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -4674,42 +4326,6 @@
       "title": "Alzheimer’s Prevention Accelerator",
       "url": "http://www.fda.gov/industry/neuroscience-advancement-and-innovation-nexus-nain/alzheimers-prevention-accelerator",
       "published_at": "2026-10-22T17:08:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "FDA Launches New Program to Advance Neuroscience Medical Product Development",
-      "url": "http://www.fda.gov/news-events/press-announcements/fda-launches-new-program-advance-neuroscience-medical-product-development",
-      "published_at": "2026-10-22T16:58:19+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "About NAIN",
-      "url": "http://www.fda.gov/industry/neuroscience-advancement-and-innovation-nexus-nain/about-nain",
-      "published_at": "2026-10-22T16:57:54+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Neuroscience Advancement and Innovation Nexus (NAIN)",
-      "url": "http://www.fda.gov/industry/neuroscience-advancement-and-innovation-nexus-nain",
-      "published_at": "2026-10-22T16:53:40+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "eSubmitter Application History",
-      "url": "http://www.fda.gov/industry/fda-esubmitter/esubmitter-application-history",
-      "published_at": "2026-10-22T13:04:12+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -4885,7 +4501,7 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 7,
+    "window": 6,
     "by_class": {},
     "items": [
      {
@@ -4937,15 +4553,6 @@
       "title": "WTAS: HHS Launches Landmark National Plan to Transform Kidney Care in America",
       "url": "https://www.hhs.gov/press-room/wtas-hhs-launches-landmark-national-plan-transform-kidney-care-america.html",
       "published_at": "2026-10-23T15:47:39+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "HHS Unveils Bold New Plan to Combat Alzheimer’s and Dementia",
-      "url": "https://www.hhs.gov/press-room/hhs-unveils-national-plan-alzheimers-dementia-prevention-care.html",
-      "published_at": "2026-10-22T17:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -6240,7 +5847,7 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 3,
+    "window": 1,
     "by_class": {},
     "items": [
      {
@@ -6251,24 +5858,6 @@
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "high"
-     },
-     {
-      "title": "Unemployment Insurance Weekly Claims Report",
-      "url": "http://www.dol.gov/newsroom/releases/eta/eta20261022",
-      "published_at": "2026-10-22T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "US Department of Labor secures court order requiring New Jersey employer to pay $700K in back wages, damages to 48 workers denied overtime pay",
-      "url": "http://www.dol.gov/newsroom/releases/whd/whd20261022",
-      "published_at": "2026-10-22T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
      }
     ]
    }
@@ -6374,19 +5963,9 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "US Department of Labor cites Illinois utility construction company for repeated exposure to trenching hazards",
-      "url": "https://www.osha.gov/news/newsreleases/chicago/20261022",
-      "published_at": "2026-10-22T12:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -6870,7 +6449,7 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 13,
+    "window": 8,
     "by_class": {},
     "items": [
      {
@@ -6944,51 +6523,6 @@
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "routine"
-     },
-     {
-      "title": "Speech by Commissioner Lahbib at the Resilient Europe Conference",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2239",
-      "published_at": "2026-10-22T11:45:29+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Commission welcomes commitments of Coca-Cola, Nestlé, and Danone to modify recycling claims on plastic bottles",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2238",
-      "published_at": "2026-10-22T09:10:13+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Online speech by Commissioner Albuquerque at the Nordic Financial Unions Conference: Resilience in an era of uncertainty and change",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2237",
-      "published_at": "2026-10-22T09:00:58+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Daily News 22 / 10 / 2026",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2236",
-      "published_at": "2026-10-22T09:00:52+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Joint press release following General Secretary of the Central Committee of the Communist Party of Viet Nam and President of the Socialist Republic of Viet Nam Lam Tô Lâm's visit to the European Commission and the European Council",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/jp_26_2234",
-      "published_at": "2026-10-22T08:42:09+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
      }
     ]
    }
@@ -7013,13 +6547,13 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 10,
+    "window": 13,
     "by_class": {},
     "items": [
      {
       "title": "Forward look: 26 October - 8 November 2026",
       "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/23/forward-look-2026/",
-      "published_at": "2026-10-23T17:00:00+00:00",
+      "published_at": "2026-10-23T15:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -7028,7 +6562,7 @@
      {
       "title": "Media advisory - Agriculture and Fisheries Council of 26-27 October 2026",
       "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/23/media-advisory-agriculture-and-fisheries-council-of-26-27-october-2026/",
-      "published_at": "2026-10-23T16:35:00+00:00",
+      "published_at": "2026-10-23T14:35:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -7037,7 +6571,16 @@
      {
       "title": "Press briefing - EU-Canada summit of 29-30 October 2026",
       "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/23/press-briefing-eu-canada-summit-of-29-30-october-2026/",
-      "published_at": "2026-10-23T16:00:00+00:00",
+      "published_at": "2026-10-23T14:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "routine"
+     },
+     {
+      "title": "Press briefing - EU-Canada summit of 29-30 October 2026",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/23/press-briefing-eu-canada-summit-of-29-30-october-2026/",
+      "published_at": "2026-10-23T14:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -7046,7 +6589,16 @@
      {
       "title": "Speech by President António Costa to the Hungarian National Assembly on the 70th anniversary of the Hungarian revolution of 1956",
       "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/23/speech-by-president-antonio-costa-to-the-hungarian-national-assembly-on-the-70th-anniversary-of-the-hungarian-revolution-of-1956/",
-      "published_at": "2026-10-23T15:30:00+00:00",
+      "published_at": "2026-10-23T13:30:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "routine"
+     },
+     {
+      "title": "Speech by President António Costa to the Hungarian National Assembly on the 70th anniversary of the Hungarian revolution of 1956",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/23/speech-by-president-antonio-costa-to-the-hungarian-national-assembly-on-the-70th-anniversary-of-the-hungarian-revolution-of-1956/",
+      "published_at": "2026-10-23T13:30:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -7055,7 +6607,16 @@
      {
       "title": "EU Inc: Council adopts position on a new EU corporate law for innovative companies",
       "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/23/eu-inc-council-adopts-position-on-a-new-eu-corporate-law-for-innovative-companies/",
-      "published_at": "2026-10-23T11:39:00+00:00",
+      "published_at": "2026-10-23T09:39:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "routine"
+     },
+     {
+      "title": "EU Inc: Council adopts position on a new EU corporate law for innovative companies",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/23/eu-inc-council-adopts-position-on-a-new-eu-corporate-law-for-innovative-companies/",
+      "published_at": "2026-10-23T09:39:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -7064,7 +6625,7 @@
      {
       "title": "UPDATED Media advisory - Accreditation for the Special European Council, 26-27 November 2026 and the EU-Western Balkans summit, 25 November 2026",
       "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/23/media-advisory-accreditation-for-the-special-european-council-26-27-november-2026-and-the-eu-western-balkans-summit-25-november-2026/",
-      "published_at": "2026-10-23T11:30:00+00:00",
+      "published_at": "2026-10-23T09:30:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -7073,25 +6634,16 @@
      {
       "title": "EU-Western Balkans summit to take place in Brussels on 25 November",
       "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/23/eu-western-balkans-summit-to-take-place-in-brussels-on-25-november/",
-      "published_at": "2026-10-23T10:00:00+00:00",
+      "published_at": "2026-10-23T08:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "routine"
      },
      {
-      "title": "Joint press release following General Secretary of the Central Committee of the Communist Party of Viet Nam and President of the Socialist Republic of Viet Nam Tô Lâm’s visit to the European Council and the European Commission",
-      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/22/joint-press-release-following-general-secretary-of-the-central-committee-of-the-communist-party-of-viet-nam-and-president-of-the-socialist-republic-of-viet-nam-to-lam-s-visit-to-the-european-council-and-the-european-commission/",
-      "published_at": "2026-10-22T16:20:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "Presentation of letters of credence to the President of the European Council António Costa and the President of the European Commission Ursula von der Leyen",
-      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/22/presentation-of-letters-of-credence-to-the-president-of-the-european-council-antonio-costa-and-the-president-of-the-european-commission-ursula-von-der-leyen/",
-      "published_at": "2026-10-22T11:00:00+00:00",
+      "title": "EU-Western Balkans summit to take place in Brussels on 25 November",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/23/eu-western-balkans-summit-to-take-place-in-brussels-on-25-november/",
+      "published_at": "2026-10-23T08:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -7100,7 +6652,16 @@
      {
       "title": "Weekly schedule of President António Costa",
       "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/23/weekly-schedule-of-president-antonio-costa/",
-      "published_at": "2026-10-23T17:00:00+00:00",
+      "published_at": "2026-10-23T15:00:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": false,
+      "cls": "noise"
+     },
+     {
+      "title": "Weekly schedule of President António Costa",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/10/23/weekly-schedule-of-president-antonio-costa/",
+      "published_at": "2026-10-23T15:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -7129,28 +6690,9 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "153/2026 : 22 October 2026 - Opinion of the Advocate General at the Court Athanasios Rantos in Cases",
-      "url": "https://curia.europa.eu/site/jcms/p1_1000088740",
-      "published_at": "2026-10-22T08:14:35+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "152/2026 : 22 October 2026 - Judgments of the Court in Cases",
-      "url": "https://curia.europa.eu/site/jcms/p1_1000088731",
-      "published_at": "2026-10-22T07:53:56+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -8838,22 +8380,13 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 1,
     "by_class": {},
     "items": [
      {
       "title": "​The EBA appoints Kristīne Černaja-Mežmale as its new Vice-Chair",
       "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-appoints-kristine-cernaja-mezmale-its-new-vice-chair",
       "published_at": "2026-10-23T13:19:12+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "routine"
-     },
-     {
-      "title": "The ​EBA extends some consultation deadlines due to website maintenance​",
-      "url": "https://www.eba.europa.eu/publications-and-media/press-releases/eba-extends-some-consultation-deadlines-due-website-maintenance",
-      "published_at": "2026-10-22T12:53:14+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -9009,7 +8542,7 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 1,
     "by_class": {},
     "items": [
      {
@@ -9020,15 +8553,6 @@
       "stage": "requires_semantic_review",
       "new": false,
       "cls": "watch"
-     },
-     {
-      "title": "Minutes of the Securities Lending Committee meeting – September 2026",
-      "url": "https://www.bankofengland.co.uk/minutes/2026/september/securities-lending-committee-meeting-september-2026",
-      "published_at": "2026-10-22T15:35:53+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "noise"
      }
     ]
    }
@@ -10587,10 +10111,21 @@
    "exception": "",
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
-    "today": 0,
-    "window": 20,
-    "by_class": {},
+    "today": 1,
+    "window": 17,
+    "by_class": {
+     "watch": 1
+    },
     "items": [
+     {
+      "title": "Hon’ble Prime Minister of India inaugurates the Reserve Bank of India’s Data Centre and Cybersecurity Training Institute in Bhubaneswar, Odisha",
+      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63862",
+      "published_at": "2026-10-25T19:50:00+00:00",
+      "document_type": "official_announcement",
+      "stage": "requires_semantic_review",
+      "new": true,
+      "cls": "watch"
+     },
      {
       "title": "RBI to conduct 4-day Variable Rate Repo (VRR) auction under LAF on October 26, 2026",
       "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63861",
@@ -10730,42 +10265,6 @@
       "title": "Reserve Money for the fortnight ended on October 15, 2026",
       "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63846",
       "published_at": "2026-10-22T17:05:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Directions under Section 35A read with Section 56 of the Banking Regulation Act, 1949 – The Suri Friends’ Union Co-operative Bank Ltd., Suri, West Bengal – Extension of period",
-      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63845",
-      "published_at": "2026-10-22T17:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Underwriting Auction for sale of Government Securities for ₹33,000 crore on October 23, 2026",
-      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63844",
-      "published_at": "2026-10-22T11:45:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Result of the Overnight Variable Rate Repo (VRR) auction held on October 22, 2026",
-      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63843",
-      "published_at": "2026-10-22T10:25:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Money Market Operations as on October 21, 2026",
-      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63842",
-      "published_at": "2026-10-22T09:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -11023,22 +10522,13 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 1,
     "by_class": {},
     "items": [
      {
       "title": "Financial System Report (October 2026)",
       "url": "http://www.boj.or.jp/en/research/brp/fsr/fsr261023.htm",
       "published_at": "2026-10-23T06:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     },
-     {
-      "title": "Japanese Government Bonds Held by the Bank of Japan",
-      "url": "http://www.boj.or.jp/en/statistics/boj/other/mei/release/2026/mei261020.xlsx",
-      "published_at": "2026-10-22T08:00:00+00:00",
       "document_type": "official_announcement",
       "stage": "requires_semantic_review",
       "new": false,
@@ -11398,18 +10888,9 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 2,
+    "window": 1,
     "by_class": {},
     "items": [
-     {
-      "title": "2026-10-22 - Monetary policy - Monetary policy assessment of September 2026: Summary of discussion",
-      "url": "https://www.snb.ch/en/publications/communication/summaries/zus_20261022",
-      "published_at": "2026-10-22T07:30:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "high"
-     },
      {
       "title": "WP - 2026-10-23 - Severin Joho and Enzo Rossi: The evolution of frequency, language complexity and policy narrative: benchmarking Python-based NLP and ChatGPT on a century of SNB rhetoric",
       "url": "https://www.snb.ch/en/publications/research/working-papers/2026/working_paper_2026_13",
@@ -11518,19 +10999,9 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Announcement of auction – Reopening 10-year Federal bond",
-      "url": "https://www.bundesbank.de/en/press/press-releases/federal-securities/announcement-of-auction-reopening-10-year-federal-bond--1012672",
-      "published_at": "2026-10-22T07:40:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -11634,19 +11105,9 @@
    "checked_at": "2026-10-24T16:39:29.833670+00:00",
    "parsed": {
     "today": 0,
-    "window": 1,
+    "window": 0,
     "by_class": {},
-    "items": [
-     {
-      "title": "Wechsel an der Spitze der Bundesbank-Hauptverwaltung in Baden-Württemberg",
-      "url": "https://www.bundesbank.de/de/aufgaben/themen/wechsel-an-der-spitze-der-bundesbank-hauptverwaltung-in-baden-wuerttemberg-1012780",
-      "published_at": "2026-10-22T10:00:00+00:00",
-      "document_type": "official_announcement",
-      "stage": "requires_semantic_review",
-      "new": false,
-      "cls": "watch"
-     }
-    ]
+    "items": []
    }
   },
   {
@@ -11884,101 +11345,42 @@
   }
  ],
  "parsed_today": {
-  "count": 0,
-  "by_source": {},
-  "by_class": {},
-  "items": []
- },
- "new_today": {
-  "count": 10,
+  "count": 1,
   "by_source": {
-   "us-doj-b3d27e1dc3": 10
+   "in-rbi-cc71120b98": 1
   },
   "by_class": {
-   "watch": 2,
-   "docket": 4,
-   "high": 4
+   "watch": 1
+  },
+  "items": [
+   {
+    "title": "Hon’ble Prime Minister of India inaugurates the Reserve Bank of India’s Data Centre and Cybersecurity Training Institute in Bhubaneswar, Odisha",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63862",
+    "published_at": "2026-10-25T19:50:00+00:00",
+    "document_type": "official_announcement",
+    "stage": "requires_semantic_review",
+    "new": true,
+    "cls": "watch",
+    "source": "in-rbi-cc71120b98"
+   }
+  ]
+ },
+ "new_today": {
+  "count": 1,
+  "by_source": {
+   "in-rbi-cc71120b98": 1
+  },
+  "by_class": {
+   "watch": 1
   },
   "headlines": [
    {
-    "title": "El Paso Man Sentenced for Defrauding Investors as Third-Party NBA Preseason Game Promoter",
-    "url": "https://www.justice.gov/usao-wdtx/pr/el-paso-man-sentenced-defrauding-investors-third-party-nba-preseason-game-promoter",
-    "published_at": "2026-10-23T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice",
-    "cls": "high"
-   },
-   {
-    "title": "Austin Man Sentenced to Federal Prison for Wire Fraud and Money Laundering",
-    "url": "https://www.justice.gov/usao-wdtx/pr/austin-man-sentenced-federal-prison-wire-fraud-and-money-laundering",
-    "published_at": "2026-10-23T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice",
-    "cls": "high"
-   },
-   {
-    "title": "Williamsville man pleads guilty to defrauding dozens of investors out of millions of dollars in multi-million dollar fraud scheme",
-    "url": "https://www.justice.gov/usao-wdny/pr/williamsville-man-pleads-guilty-defrauding-dozens-investors-out-millions-dollars-multi",
-    "published_at": "2026-10-23T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice",
-    "cls": "high"
-   },
-   {
-    "title": "California man pleads guilty to cyberstalking, including three victims in the Western District of New York",
-    "url": "https://www.justice.gov/usao-wdny/pr/california-man-pleads-guilty-cyberstalking-including-three-victims-western-district",
-    "published_at": "2026-10-23T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice",
-    "cls": "high"
-   },
-   {
-    "title": "Douglasville Man Arrested for Attempted Arson of ICE Facility in Downtown Atlanta",
-    "url": "https://www.justice.gov/usao-ndga/pr/douglasville-man-charged-attempted-arson-ice-facility-downtown-atlanta",
-    "published_at": "2026-10-23T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice",
+    "title": "Hon’ble Prime Minister of India inaugurates the Reserve Bank of India’s Data Centre and Cybersecurity Training Institute in Bhubaneswar, Odisha",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63862",
+    "published_at": "2026-10-25T19:50:00+00:00",
+    "source": "in-rbi-cc71120b98",
+    "issuer": "Reserve Bank of India",
     "cls": "watch"
-   },
-   {
-    "title": "Chinese National Extradited for Alleged Role in Multimillion-Dollar Cryptocurrency Scam Targeting U.S. Citizens",
-    "url": "https://www.justice.gov/usao-cdca/pr/chinese-national-extradited-alleged-role-multimillion-dollar-cryptocurrency-scam",
-    "published_at": "2026-10-23T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice",
-    "cls": "watch"
-   },
-   {
-    "title": "District of Arizona Charges 318 Individuals for Immigration-Related Criminal Conduct this Week",
-    "url": "https://www.justice.gov/usao-az/pr/district-arizona-charges-318-individuals-immigration-related-criminal-conduct-week",
-    "published_at": "2026-10-23T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice",
-    "cls": "docket"
-   },
-   {
-    "title": "Rochester drug trafficker going to prison for more than 10 years",
-    "url": "https://www.justice.gov/usao-wdny/pr/rochester-drug-trafficker-going-prison-more-10-years",
-    "published_at": "2026-10-23T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice",
-    "cls": "docket"
-   },
-   {
-    "title": "Two men arrested, charged with trafficking firearms",
-    "url": "https://www.justice.gov/usao-wdny/pr/two-men-arrested-charged-trafficking-firearms",
-    "published_at": "2026-10-23T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice",
-    "cls": "docket"
-   },
-   {
-    "title": "Lincoln Man Sentenced to 15 Years for Receipt of Child Pornography",
-    "url": "https://www.justice.gov/usao-ne/pr/lincoln-man-sentenced-15-years-receipt-child-pornography",
-    "published_at": "2026-10-23T12:00:00+00:00",
-    "source": "us-doj-b3d27e1dc3",
-    "issuer": "Department of Justice",
-    "cls": "docket"
    }
   ]
  },
