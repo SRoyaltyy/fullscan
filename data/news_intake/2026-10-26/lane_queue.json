@@ -1,12 +1,12 @@
 [
   {
-    "document_id": "f77968c5fb919c6a2f1a1f4b",
-    "title": "United States v. Hemani",
+    "document_id": "b13a2a451b2471ed5af7ba96",
+    "title": "Don Quijote Launches Discount Supermarket Robin Hood - News On Japan",
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r51_k4lo.pdf",
-    "published_at": "",
-    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5uVk1XelkzbmZNSzNxMjZuc2l6TkVTMFRTZW5WQV9aSWNncmJRSlhkb2hsaFN3cmhwalhsZWphWXNPU3dVVFZvYkxvR0pIRk1CY25YbA?oc=5",
+    "published_at": "2026-10-25T18:23:29+00:00",
+    "known_at": "2026-10-25T18:23:29+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -18,7 +18,7 @@
       "event_class": "discard",
       "sign": null,
       "q5": "regime",
-      "constraint": "discard: United States v. Hemani",
+      "constraint": "discard: Don Quijote Launches Discount Supermarket Robin Hood - News On Japan",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -57,13 +57,13 @@
     }
   },
   {
-    "document_id": "f1f0aa438c0fc79bcb9b3fa7",
-    "title": "McCarthy v. Hernandez",
+    "document_id": "413b4aa28ab4348c7c7b3458",
+    "title": "Uganda orders 21-day Ebola quarantine for citizens returning from DR Congo",
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r52_k5fm.pdf",
-    "published_at": "",
-    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "url": "https://www.aljazeera.com/news/2026/10/25/uganda-orders-21-day-ebola-quarantine-for-citizens-returning-from-dr-congo?traffic_source=rss",
+    "published_at": "2026-10-25T18:20:26+00:00",
+    "known_at": "2026-10-25T18:20:26+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -75,7 +75,7 @@
       "event_class": "discard",
       "sign": null,
       "q5": "regime",
-      "constraint": "discard: McCarthy v. Hernandez",
+      "constraint": "discard: Uganda orders 21-day Ebola quarantine for citizens returning from DR Congo",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -114,13 +114,13 @@
     }
   },
   {
-    "document_id": "e0c9171bbf0272815c3abead",
-    "title": "Landor v. Louisiana Dept of Corrections and Public Safety",
+    "document_id": "6c917ca8a0b2b1a788a248c7",
+    "title": "How a DAO Vote Becomes a Treasury Transfer - The Defiant",
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r55_h315.pdf",
-    "published_at": "",
-    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9saUdVb2VJQXNHOEVLcktGd1RVbTRCRl9Uai1udmlMeUlYVUZJbS1jcUphRHpxNUZ2N2NaS2psdnQ1dFl5Sk4zUm1QeklKOHA3Z2EtRG5Tc1Z5VnQ2OWZhX3dEVmREYWZGTVJqSGo2UXlyaC1LWkE0ZHQyUEhqbk0?oc=5",
+    "published_at": "2026-10-25T18:17:21+00:00",
+    "known_at": "2026-10-25T18:17:21+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -132,7 +132,7 @@
       "event_class": "discard",
       "sign": null,
       "q5": "regime",
-      "constraint": "discard: Landor v. Louisiana Dept of Corrections and Public Safety",
+      "constraint": "discard: How a DAO Vote Becomes a Treasury Transfer - The Defiant",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -171,13 +171,13 @@
     }
   },
   {
-    "document_id": "ae0b89aa8dda7f59de36f785",
-    "title": "Mullin v. Al Otro Lado",
+    "document_id": "2d5bff5f3e5dc0e09a5e1c76",
+    "title": "Britain will not join Canada-led defence bank",
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r59_kjfl.pdf",
-    "published_at": "",
-    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "url": "https://www.ft.com/content/1f7924c1-ab63-465d-94b8-e97861e2348e?syn-25a6b1a6=1",
+    "published_at": "2026-10-25T18:16:36+00:00",
+    "known_at": "2026-10-25T18:16:36+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -189,7 +189,7 @@
       "event_class": "discard",
       "sign": null,
       "q5": "regime",
-      "constraint": "discard: Mullin v. Al Otro Lado",
+      "constraint": "discard: Britain will not join Canada-led defence bank",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -228,13 +228,13 @@
     }
   },
   {
-    "document_id": "a7daba7bd35ccdd9975360b6",
-    "title": "Abouammo v. United States",
+    "document_id": "eeb1bea8125c35968469d37e",
+    "title": "Live: Kollel L’Rabbonei Chabad Launches New Zman - Anash.org",
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r46_2c8f.pdf",
-    "published_at": "",
-    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5rNmVCU19PM0pWdnk3Y0RLeUNtc240MGprM3V6bEk4WGRFR2hEaXZ1aFp2OWVyYVk1WXY3S0htUUZYQXVfVzFWWk1IanNycTdGYkZHRlVuX29HNzhHODVIZnRaTVVNR0FNUXZaTWVLMUFyT1k?oc=5",
+    "published_at": "2026-10-25T18:13:05+00:00",
+    "known_at": "2026-10-25T18:13:05+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -246,7 +246,7 @@
       "event_class": "discard",
       "sign": null,
       "q5": "regime",
-      "constraint": "discard: Abouammo v. United States",
+      "constraint": "discard: Live: Kollel L’Rabbonei Chabad Launches New Zman - Anash.org",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -285,13 +285,13 @@
     }
   },
   {
-    "document_id": "a6b763b6aeaa25405b574b80",
-    "title": "T. M. v. University of Md. Medical System Corporation",
+    "document_id": "9e6f04fa9f45770992aa1e5e",
+    "title": "Israeli air strike on Gaza City university kills three people",
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r49_mlho.pdf",
-    "published_at": "",
-    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "url": "https://www.aljazeera.com/video/newsfeed/2026/10/25/israeli-air-strike-on-gaza-city-university-kills-three-people?traffic_source=rss",
+    "published_at": "2026-10-25T18:12:13+00:00",
+    "known_at": "2026-10-25T18:12:13+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -303,458 +303,7 @@
       "event_class": "discard",
       "sign": null,
       "q5": "regime",
-      "constraint": "discard: T. M. v. University of Md. Medical System Corporation",
-      "split": false,
-      "split_facts": [],
-      "why": "no constraint identified",
-      "family": "time",
-      "factor": ""
-    },
-    "institutional_actions": {
-      "version": "institutional-actions-v2",
-      "input_scope": "title_only",
-      "actions": [],
-      "status": "no_supported_action_identified",
-      "has_concrete_reported_action": false,
-      "has_us_action": false
-    },
-    "headline_event": {
-      "version": "headline-events-v1",
-      "status": "no_supported_event",
-      "lane_class": null,
-      "event_type": null,
-      "stage": "unknown",
-      "evidence": null,
-      "sign": null
-    },
-    "sector_classification": {
-      "version": "headline-sectors-v1",
-      "input_scope": "title_only",
-      "status": "unknown",
-      "matches": [],
-      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
-      "catalog_available": true,
-      "market_sectors": [],
-      "market_activities": [],
-      "unknowns": [
-        "Sector relevance does not establish material exposure, winners, losers or price direction"
-      ]
-    }
-  },
-  {
-    "document_id": "9890b5e3d361983cdeb5137a",
-    "title": "FS Credit Opportunities Corp. v. Saba Capital Master Fund, Ltd.",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r47_m64o.pdf",
-    "published_at": "",
-    "known_at": "2026-10-16T10:43:12.031029+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1",
-    "lane_rule_classification": {
-      "event_class": "discard",
-      "sign": null,
-      "q5": "regime",
-      "constraint": "discard: FS Credit Opportunities Corp. v. Saba Capital Master Fund, Ltd.",
-      "split": false,
-      "split_facts": [],
-      "why": "no constraint identified",
-      "family": "time",
-      "factor": ""
-    },
-    "institutional_actions": {
-      "version": "institutional-actions-v2",
-      "input_scope": "title_only",
-      "actions": [],
-      "status": "no_supported_action_identified",
-      "has_concrete_reported_action": false,
-      "has_us_action": false
-    },
-    "headline_event": {
-      "version": "headline-events-v1",
-      "status": "no_supported_event",
-      "lane_class": null,
-      "event_type": null,
-      "stage": "unknown",
-      "evidence": null,
-      "sign": null
-    },
-    "sector_classification": {
-      "version": "headline-sectors-v1",
-      "input_scope": "title_only",
-      "status": "identified",
-      "matches": [
-        {
-          "sector": "Financial",
-          "activity": "Closed-End Fund - Debt",
-          "basis": "company_catalog",
-          "evidence": {
-            "quote": "FS Credit Opportunities",
-            "start": 0,
-            "end": 23
-          },
-          "exposure_verified": false,
-          "ticker": "FSCO",
-          "company": "FS Credit Opportunities Corp"
-        }
-      ],
-      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
-      "catalog_available": true,
-      "market_sectors": [
-        "Financial"
-      ],
-      "market_activities": [
-        "Closed-End Fund - Debt"
-      ],
-      "unknowns": [
-        "Sector relevance does not establish material exposure, winners, losers or price direction"
-      ]
-    }
-  },
-  {
-    "document_id": "8c19a546eb41806783f18511",
-    "title": "Keathley v. Buddy Ayers Construction, Inc.",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r48_k53m.pdf",
-    "published_at": "",
-    "known_at": "2026-10-16T10:43:12.031029+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1",
-    "lane_rule_classification": {
-      "event_class": "discard",
-      "sign": null,
-      "q5": "regime",
-      "constraint": "discard: Keathley v. Buddy Ayers Construction, Inc.",
-      "split": false,
-      "split_facts": [],
-      "why": "no constraint identified",
-      "family": "time",
-      "factor": ""
-    },
-    "institutional_actions": {
-      "version": "institutional-actions-v2",
-      "input_scope": "title_only",
-      "actions": [],
-      "status": "no_supported_action_identified",
-      "has_concrete_reported_action": false,
-      "has_us_action": false
-    },
-    "headline_event": {
-      "version": "headline-events-v1",
-      "status": "no_supported_event",
-      "lane_class": null,
-      "event_type": null,
-      "stage": "unknown",
-      "evidence": null,
-      "sign": null
-    },
-    "sector_classification": {
-      "version": "headline-sectors-v1",
-      "input_scope": "title_only",
-      "status": "unknown",
-      "matches": [],
-      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
-      "catalog_available": true,
-      "market_sectors": [],
-      "market_activities": [],
-      "unknowns": [
-        "Sector relevance does not establish material exposure, winners, losers or price direction"
-      ]
-    }
-  },
-  {
-    "document_id": "7b9af5273708f64b72ae06a1",
-    "title": "Cisco Systems, Inc. v. Doe",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r57_db8e.pdf",
-    "published_at": "",
-    "known_at": "2026-10-16T10:43:12.031029+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1",
-    "lane_rule_classification": {
-      "event_class": "discard",
-      "sign": null,
-      "q5": "regime",
-      "constraint": "discard: Cisco Systems, Inc. v. Doe",
-      "split": false,
-      "split_facts": [],
-      "why": "no constraint identified",
-      "family": "time",
-      "factor": ""
-    },
-    "institutional_actions": {
-      "version": "institutional-actions-v2",
-      "input_scope": "title_only",
-      "actions": [],
-      "status": "no_supported_action_identified",
-      "has_concrete_reported_action": false,
-      "has_us_action": false
-    },
-    "headline_event": {
-      "version": "headline-events-v1",
-      "status": "no_supported_event",
-      "lane_class": null,
-      "event_type": null,
-      "stage": "unknown",
-      "evidence": null,
-      "sign": null
-    },
-    "sector_classification": {
-      "version": "headline-sectors-v1",
-      "input_scope": "title_only",
-      "status": "identified",
-      "matches": [
-        {
-          "sector": "Technology",
-          "activity": "Communication Equipment",
-          "basis": "company_catalog",
-          "evidence": {
-            "quote": "Cisco Systems",
-            "start": 0,
-            "end": 13
-          },
-          "exposure_verified": false,
-          "ticker": "CSCO",
-          "company": "Cisco Systems Inc"
-        }
-      ],
-      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
-      "catalog_available": true,
-      "market_sectors": [
-        "Technology"
-      ],
-      "market_activities": [
-        "Communication Equipment"
-      ],
-      "unknowns": [
-        "Sector relevance does not establish material exposure, winners, losers or price direction"
-      ]
-    }
-  },
-  {
-    "document_id": "3d6c5517a02c70bdf9f73225",
-    "title": "Hikma Pharmaceuticals USA Inc. v. Amarin Pharma, Inc.",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r45_i4dk.pdf",
-    "published_at": "",
-    "known_at": "2026-10-16T10:43:12.031029+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1",
-    "lane_rule_classification": {
-      "event_class": "discard",
-      "sign": null,
-      "q5": "regime",
-      "constraint": "discard: Hikma Pharmaceuticals USA Inc. v. Amarin Pharma, Inc.",
-      "split": false,
-      "split_facts": [],
-      "why": "no constraint identified",
-      "family": "time",
-      "factor": ""
-    },
-    "institutional_actions": {
-      "version": "institutional-actions-v2",
-      "input_scope": "title_only",
-      "actions": [],
-      "status": "no_supported_action_identified",
-      "has_concrete_reported_action": false,
-      "has_us_action": false
-    },
-    "headline_event": {
-      "version": "headline-events-v1",
-      "status": "no_supported_event",
-      "lane_class": null,
-      "event_type": null,
-      "stage": "unknown",
-      "evidence": null,
-      "sign": null
-    },
-    "sector_classification": {
-      "version": "headline-sectors-v1",
-      "input_scope": "title_only",
-      "status": "identified",
-      "matches": [
-        {
-          "sector": "Healthcare",
-          "activity": "Biotechnology",
-          "basis": "title_activity",
-          "evidence": {
-            "quote": "Pharma",
-            "start": 41,
-            "end": 47
-          },
-          "exposure_verified": false
-        }
-      ],
-      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
-      "catalog_available": true,
-      "market_sectors": [
-        "Healthcare"
-      ],
-      "market_activities": [
-        "Biotechnology"
-      ],
-      "unknowns": [
-        "Sector relevance does not establish material exposure, winners, losers or price direction"
-      ]
-    }
-  },
-  {
-    "document_id": "29699a12f2fe80cbe1394f7d",
-    "title": "Pung v. Isabella County",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r54_d18e.pdf",
-    "published_at": "",
-    "known_at": "2026-10-16T10:43:12.031029+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1",
-    "lane_rule_classification": {
-      "event_class": "discard",
-      "sign": null,
-      "q5": "regime",
-      "constraint": "discard: Pung v. Isabella County",
-      "split": false,
-      "split_facts": [],
-      "why": "no constraint identified",
-      "family": "time",
-      "factor": ""
-    },
-    "institutional_actions": {
-      "version": "institutional-actions-v2",
-      "input_scope": "title_only",
-      "actions": [],
-      "status": "no_supported_action_identified",
-      "has_concrete_reported_action": false,
-      "has_us_action": false
-    },
-    "headline_event": {
-      "version": "headline-events-v1",
-      "status": "no_supported_event",
-      "lane_class": null,
-      "event_type": null,
-      "stage": "unknown",
-      "evidence": null,
-      "sign": null
-    },
-    "sector_classification": {
-      "version": "headline-sectors-v1",
-      "input_scope": "title_only",
-      "status": "unknown",
-      "matches": [],
-      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
-      "catalog_available": true,
-      "market_sectors": [],
-      "market_activities": [],
-      "unknowns": [
-        "Sector relevance does not establish material exposure, winners, losers or price direction"
-      ]
-    }
-  },
-  {
-    "document_id": "0aec2a08f68f2c1e4fc4bdad",
-    "title": "Exxon Mobil Corp. v. Corporación Cimex, S. A. (Cuba)",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r56_3e04.pdf",
-    "published_at": "",
-    "known_at": "2026-10-16T10:43:12.031029+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1",
-    "lane_rule_classification": {
-      "event_class": "discard",
-      "sign": null,
-      "q5": "regime",
-      "constraint": "discard: Exxon Mobil Corp. v. Corporación Cimex, S. A. (Cuba)",
-      "split": false,
-      "split_facts": [],
-      "why": "no constraint identified",
-      "family": "time",
-      "factor": ""
-    },
-    "institutional_actions": {
-      "version": "institutional-actions-v2",
-      "input_scope": "title_only",
-      "actions": [],
-      "status": "no_supported_action_identified",
-      "has_concrete_reported_action": false,
-      "has_us_action": false
-    },
-    "headline_event": {
-      "version": "headline-events-v1",
-      "status": "no_supported_event",
-      "lane_class": null,
-      "event_type": null,
-      "stage": "unknown",
-      "evidence": null,
-      "sign": null
-    },
-    "sector_classification": {
-      "version": "headline-sectors-v1",
-      "input_scope": "title_only",
-      "status": "unknown",
-      "matches": [],
-      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
-      "catalog_available": true,
-      "market_sectors": [],
-      "market_activities": [],
-      "unknowns": [
-        "Sector relevance does not establish material exposure, winners, losers or price direction"
-      ]
-    }
-  },
-  {
-    "document_id": "0085180a1679675d09a74b40",
-    "title": "Hunter v. United States",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r50_lkgn.pdf",
-    "published_at": "",
-    "known_at": "2026-10-16T10:43:12.031029+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1",
-    "lane_rule_classification": {
-      "event_class": "discard",
-      "sign": null,
-      "q5": "regime",
-      "constraint": "discard: Hunter v. United States",
+      "constraint": "discard: Israeli air strike on Gaza City university kills three people",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -844,6 +393,140 @@
       "catalog_available": true,
       "market_sectors": [],
       "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "3f18fb473d579b8b583975e6",
+    "title": "LA County Launches Hate Reporting Text Service in 15 Languages - AsAmNews",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPbWtWSng5VHlnOFJnNHBaSzV4UHczMEJRcmVhdi1iWDZEcmJJbmtiQ1pMNW1UVFJoV3VuaU5jQlRwSGloejVaeWVNejlGWmM5c1ZEOTBBS2swa0ZxX2lQQnlYN2FyTlVhYXhrOE9IWlZzQ3hlTmdTR1JSWllHNzJENzFR?oc=5",
+    "published_at": "2026-10-25T18:09:33+00:00",
+    "known_at": "2026-10-25T18:09:33+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: LA County Launches Hate Reporting Text Service in 15 Languages - AsAmNews",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "1e97365f1eade0b644c381a6",
+    "title": "Earnings Beat Might Change The Case For Investing In Valley National Bancorp (VLY) - Yahoo Finance",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOYmpjcFNNMUtvZnN3R192X01NTE9lWFlDWE1GRWR4V2E3RDRlZ1Fkbk5rNTE0T0YyTWdoWlVCTkJxaW41OWxTZFhtSnNVUTFtQUd6R1EwVUFiX0tXcFZhX2dJNGVDdFVDOHZLQ2twMGtvNml2bTZXdWZhMU1vMVFxcXVUTzkxdjJJM2JMWjEtNTQ4U1BsVlE2SGdISFc?oc=5",
+    "published_at": "2026-10-25T18:08:17+00:00",
+    "known_at": "2026-10-25T18:08:17+00:00",
+    "candidate_classes": [
+      "print_vs_priced"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "print",
+    "routing_class": "print_vs_priced",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "print_vs_priced",
+      "sign": null,
+      "q5": "impulse",
+      "constraint": "print_vs_priced: Earnings Beat Might Change The Case For Investing In Valley National Bancorp (VLY) - Yahoo Finance",
+      "split": false,
+      "split_facts": [],
+      "why": "named print, no other class matched",
+      "family": "print",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Financial",
+          "activity": "Banks - Regional",
+          "basis": "company_catalog",
+          "evidence": {
+            "quote": "Valley National Bancorp",
+            "start": 53,
+            "end": 76
+          },
+          "exposure_verified": false,
+          "ticker": "VLY",
+          "company": "Valley National Bancorp"
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Financial"
+      ],
+      "market_activities": [
+        "Banks - Regional"
+      ],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -1764,6 +1447,63 @@
     }
   },
   {
+    "document_id": "4ceec8a5f076d05779cfea80",
+    "title": "Jordan FA chief says AFC Congress ‘pure politics’ at behest of Infantino",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/sports/2026/10/25/jordan-fa-chief-says-afc-congress-pure-politics-at-behest-of-infantino?traffic_source=rss",
+    "published_at": "2026-10-25T18:05:14+00:00",
+    "known_at": "2026-10-25T18:05:14+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Jordan FA chief says AFC Congress ‘pure politics’ at behest of Infantino",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "ecd350098c733537fbf4a072",
     "title": "U.S. Central Command says Strait of Hormuz shipping routes remain clear of Iranian mines - Defence Industry Europe",
     "evidence_file": "documents.json",
@@ -1942,6 +1682,65 @@
         "end": 20
       },
       "verification": "headline_reported_not_primary_verified"
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "412c8e3f611197ac4e656eae",
+    "title": "Breath Alcohol Test Invalid Without Mouth Rinse, Top Court Rules - Seoul Economic Daily",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQNXY5NzF4cGJIMWNBZlJaRUREM2JaVWh1WlNDalc2TUo5dTZCcDZZZEdBNGhnQjI1X1g0ck5PY0N5c0EtRlUwdkpyNTBZdndvRmhtNVdtWmpQZFB2blhvSURKajhOV3B3TXpSZWRIcDhEdkI4Q0IwZ0RfajZiTmRCbnZ0U1MxdWRwdm9jeUtVaWw1TnFqbUxZTFB6Y0xRVjNf?oc=5",
+    "published_at": "2026-10-25T18:02:05+00:00",
+    "known_at": "2026-10-25T18:02:05+00:00",
+    "candidate_classes": [
+      "blast_legal"
+    ],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "unconfirmed_coverage_hints",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Breath Alcohol Test Invalid Without Mouth Rinse, Top Court Rules - Seoul Economic Daily",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
     },
     "sector_classification": {
       "version": "headline-sectors-v1",
@@ -3182,6 +2981,63 @@
     }
   },
   {
+    "document_id": "d1d3f6c4e1a3e242e30ca25e",
+    "title": "France’s Le Pen vows national ‘renewal’ in campaign launch",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.ft.com/content/fd1c3f30-2789-4fca-a93f-57850b1448a8?syn-25a6b1a6=1",
+    "published_at": "2026-10-25T17:47:48+00:00",
+    "known_at": "2026-10-25T17:47:48+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: France’s Le Pen vows national ‘renewal’ in campaign launch",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "46fca449e2f3107159574ff5",
     "title": "France's Le Pen launches presidential bid as protests rattle the nation - Reuters",
     "evidence_file": "documents.json",
@@ -3201,6 +3057,63 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: France's Le Pen launches presidential bid as protests rattle the nation - Reuters",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "9015a23e965996fa9b662340",
+    "title": "One More Roll Golf Media Launches “Different Lies” and “The Arena Game” - The Golf Wire",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE42SmozY3A5SGd1UFFXeGh5bkFQNDJ1Q1ZoZTFaemRpX0FEQXNFV01DcUdmRnlXZ3U2NUhiangxQXhtcHRzeThlQ0JseUtRYnlGSUpjbW9fVlZkX3o1Mjg4bWlDTkNqNS1IU1lrU25wSHpydw?oc=5",
+    "published_at": "2026-10-25T17:44:37+00:00",
+    "known_at": "2026-10-25T17:44:37+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: One More Roll Golf Media Launches “Different Lies” and “The Arena Game” - The Golf Wire",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -4202,6 +4115,120 @@
     }
   },
   {
+    "document_id": "422b045d077681f7329c747f",
+    "title": "Uvalde Foundation for Kids launches nationwide fundraiser for victims of Perry Street mass shooting - WCTV",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNMWZKaHpKb2lLZWg4MEhPVm83QzRjcEZzMjNoeWQ5cU1YNDF0cC1IbFF5ZmhHZGQ1bUlXUHhnUHFDS2d5TWprMDZWVDZiczhIS0NiYmd6VVVkcjQtVGl2UW1yWnY1SEZaaU02YlVYdnBYZHJ5WFJEeE1aeGtubTF0N092VkdKdnd0RkJzMm1DV2lwOGRVdEg1RWx6cTlXTFlZLU5rcGZNeGkwaEh4TEhGWU1sZUtoZjI0S1FMMw?oc=5",
+    "published_at": "2026-10-25T17:26:00+00:00",
+    "known_at": "2026-10-25T17:26:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Uvalde Foundation for Kids launches nationwide fundraiser for victims of Perry Street mass shooting - WCTV",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "10684e86ab7b392503a31a93",
+    "title": "Peltola postpones campaign stops after Saturday car crash - Politico",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTDVidEttNzcySnNuRUZpX0o2WDFKaE83cTc5QTZuRldEd25IVVpPYlJKc2JtMmxzT0t3VWl6STNoNGl6S2V0VnVEV1RWYWU2Yl9HNlVXMHNVREVHcjV4dFZpTE93bmhVT0Y4THJ2OFNSaG1xdm9VVU9pVUpXdkhwREhGa3pockNBYzdtMWlQaVBMWFpSdnpv?oc=5",
+    "published_at": "2026-10-25T17:26:00+00:00",
+    "known_at": "2026-10-25T17:26:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Peltola postpones campaign stops after Saturday car crash - Politico",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "31a6f4629b5cdc3c8d6d5f7d",
     "title": "Apple to Unveil Touch MacBook Pro After Two Decades of Resistance - Bloomberg.com",
     "evidence_file": "documents.json",
@@ -4679,6 +4706,63 @@
       "market_activities": [
         "Marine transport"
       ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "43957c96038d41df3388e05a",
+    "title": "Baylor fires Dave Aranda after Kansas loss, names defensive coordinator Joe Klanderman interim coach - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQVENCZkEtMXJ2OFlKZWptcEVEZ1AtYWxsVFVqRFo1b09EWnRTbWFCZUtTdmJHS2ZncmZjYlRFYnIweHdHLVExS1UtT0hfMDFXNWdfcXdLV2ZCaThKWWVqd21NUFJxOU5rSTJRcS1WcUp1U0V4WDZ5MkVfclJ1enFDbTlkSGx5T1V4WkROWWln?oc=5",
+    "published_at": "2026-10-25T17:17:00+00:00",
+    "known_at": "2026-10-25T17:17:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Baylor fires Dave Aranda after Kansas loss, names defensive coordinator Joe Klanderman interim coach - AP News",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -7187,6 +7271,63 @@
     }
   },
   {
+    "document_id": "2048df3f66bf1a71906ba8fe",
+    "title": "Blanche defends DoJ’s pre-emptive suit to block Alaska Senate results certification - The Guardian",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNbG9YWXRFWEV3SUtKUnVmX1laM1MyaTctemEyZWlFQzVnWm5ISkh4ZlBmZEo0NHk1cHBEc1VGWENsTFgzWWtEMmtKeFlLeGdBYURkeUxNRFBzbDdYVGM0c055RGplSkhPWi1JZlo4d0x5M3FGOTVkRGU5T2NmTURtcmUxdy1vNTlhV1BWNmppQTk0Q2lQbTVRcXJQblh5TlVWRG1fVVFR?oc=5",
+    "published_at": "2026-10-25T16:48:00+00:00",
+    "known_at": "2026-10-25T16:48:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Blanche defends DoJ’s pre-emptive suit to block Alaska Senate results certification - The Guardian",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "fbabc70987639f3b6ee8d339",
     "title": "‘I don’t feel sorry for myself’: I’m 64 and will be renting for the rest of my life. Is that so bad?",
     "evidence_file": "documents.json",
@@ -8840,6 +8981,63 @@
       "market_activities": [
         "Insurance - Property & Casualty"
       ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "9cd409af07a84d3dde06c6db",
+    "title": "Kam Powell Game Log - College Football - FOX Sports",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQN0c0eTZ1WmZUMmJuRVFjLXlIendhb1BPRVVweVNEM2dSeWFBZ1ZGVU5DQnZWRWRKMVRHTjdlQ0ZzV1M4ZUMtTU9BMGFBUV9GcnkxN2ZVeWJSRzZWeGRycU1JUEZoMjFQdXZEVUhPZGdUSkRMTVV3eF9rWkRnd3QzRzJJMHBJZ0U1QWlaeF8tY3JDZmhrREZjWDRVV3JGbkNW?oc=5",
+    "published_at": "2026-10-25T16:18:12+00:00",
+    "known_at": "2026-10-25T16:18:12+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Kam Powell Game Log - College Football - FOX Sports",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -21824,6 +22022,63 @@
     }
   },
   {
+    "document_id": "5c70866339138268b589bc3b",
+    "title": "Carney’s energy ambitions boosted by Conservative victory in British Columbia",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.ft.com/content/397d5d63-1d60-4218-b2bd-8ce6e8f527b1?syn-25a6b1a6=1",
+    "published_at": "2026-10-25T14:25:30+00:00",
+    "known_at": "2026-10-25T14:25:30+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Carney’s energy ambitions boosted by Conservative victory in British Columbia",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "229804c7b9fd6e10c7a80ec9",
     "title": "VW sub-brand Jetta launches M6 electric sedan in China from $11,950 - Notebookcheck",
     "evidence_file": "documents.json",
@@ -22032,6 +22287,63 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: Immersive physical activations and AI powered experiences: last week's most read retail technology articles - Retail Technology Innovation Hub",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "7b9f8fbdce1a6ba712f8eb4c",
+    "title": "Canva Enters AI Image Generation Race With In-House Canva Craft Model - AI Insider",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQY1VYbVRXMWFlNzJCemo4My1SaGd1V1V2MkJ3elRJR1lKaVJqNlVobnUxTnA5bEFNWklWaEZEZ0t2U2xQeFlXRS1peUVqVHdFeHJCVkxEQzZ2elZ6SU9FZE5IcHhCd0FzNUg5Tmthd3FITlUwelotMHk3d2F2a3cwOFBsT3hYZG15OGF5RUw1UnlJODhrUjJrdHBHRmN4ODMzWk1CZ3lGbnNyMHM?oc=5",
+    "published_at": "2026-10-25T14:20:59+00:00",
+    "known_at": "2026-10-25T14:20:59+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Canva Enters AI Image Generation Race With In-House Canva Craft Model - AI Insider",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -26049,6 +26361,63 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: This underrated stretch of Florida's East Coast has quiet beaches, rocket launches and bioluminescent waters - Lexington Herald Leader",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "0577c2c7796e8e98cc5b0874",
+    "title": "This underrated stretch of Florida's East Coast has quiet beaches, rocket launches and bioluminescent waters - San Luis Obispo Tribune",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5yRVJWTnZKbWZzNmIyOFpnUG5KUlQ4RVFxRnpVam1GUHhTV250UVNJTm51WGJ4ekVWMWtTWWRXaW1vcV9DLWNNamdPQUEyMGpJN29nZ3hwRjhMM2FsWUxvSUxkZk44ZkQyV0lGU3BOMnR0X1E?oc=5",
+    "published_at": "2026-10-25T13:32:06+00:00",
+    "known_at": "2026-10-25T13:32:06+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: This underrated stretch of Florida's East Coast has quiet beaches, rocket launches and bioluminescent waters - San Luis Obispo Tribune",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -30970,6 +31339,63 @@
     }
   },
   {
+    "document_id": "8067c5639396faf2df8d14ea",
+    "title": "Live: President Trump to speak in Port Huron today - Times Herald",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPM29UdHcyWmZJMVFkMkZSTU1YUnZzYk9qcVN1eWZ4RWJ2a1pxLVdsVmtiLWR6cE11Rkc2UW1UNG5QY0o2REZ2enRuTER0dGpiVkxvWVhsLURHY3I3SXJzdTM2SGtIUGNNWEZfQjRXV2RaMHcxZHZfdzNzOTZ0RWZZTWphdDVWSHk4WkVfNTFYM3JnX3dKMlFnbk5oUTM0ZnB0bkRHUkVZR0tvejhSU3UtWWJUcXdEMktaMGFUS2JsZDVOeEtJNlZld2NDYw?oc=5",
+    "published_at": "2026-10-25T12:40:00+00:00",
+    "known_at": "2026-10-25T12:40:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Live: President Trump to speak in Port Huron today - Times Herald",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "336d07ff0bf8ed86ad2c2f7a",
     "title": "UK PM Burnham says he wants to discuss a return to EU freedom of movement",
     "evidence_file": "documents.json",
@@ -31773,6 +32199,99 @@
       "actions": [],
       "status": "no_supported_action_identified",
       "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "d96eaff4605d07d9beb15d48",
+    "title": "Nicki Minaj Asks Judge to Reject Ex-Employee's $3,900 Sanctions Request in Assault Lawsuit - DancehallMag",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQMkduRmREYWh3SDlaNEN5SDA1aC1EcUloQzFsVFRvZ1pKSy1UMV9DOVR0NC1jNEFfMU4wLXdPVHdQd3l3UWNiaWQwaVFIU2lHd0tCd1BYaHNOZzdqclFZSVo5dGkzVWt5bG91QUJwUVJ4Skp3SDZhYWVJZ1lWd2kwcEJOX1B4bUhoblJnanZ5Z255UTNWMGsxNV95VmpkZkNhMmJFelNEaHctREpwaGc2azJ5RTlSZ1N5bW9VTjNXSFI1N19wbFdiVjJualRFc21aM3I4?oc=5",
+    "published_at": "2026-10-25T12:29:39+00:00",
+    "known_at": "2026-10-25T12:29:39+00:00",
+    "candidate_classes": [
+      "access_control"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "structure",
+    "routing_class": "access_control",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "access_control",
+      "sign": "tighten",
+      "q5": "impulse",
+      "constraint": "access_control: Nicki Minaj Asks Judge to Reject Ex-Employee's $3,900 Sanctions Request in Assault Lawsuit - DancehallMag",
+      "split": false,
+      "split_facts": [],
+      "why": "who may sell / who may stand in the room",
+      "family": "structure",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [
+        {
+          "authority": "Judge",
+          "authority_type": "court",
+          "jurisdiction": null,
+          "us_scope": false,
+          "authority_level": null,
+          "action_category": "regulatory_action",
+          "action": "Reject",
+          "subject": "Ex-Employee's $3,900 Sanctions Request in Assault Lawsuit",
+          "stage": "decision_reported",
+          "concrete_reported_action": true,
+          "authority_evidence": {
+            "quote": "Judge",
+            "start": 17,
+            "end": 22
+          },
+          "action_evidence": {
+            "quote": "Reject",
+            "start": 26,
+            "end": 32
+          },
+          "verification": "headline_reported_not_primary_verified",
+          "effective_date": null,
+          "implementation_verified": false,
+          "lane_classification": null,
+          "market_sectors": [],
+          "unknowns": [
+            "Legal scope, effective date and implementation require source terms",
+            "Institution recognition alone does not establish companies or market direction"
+          ],
+          "market_activities": [],
+          "sector_scope": "same_headline_segment_relevance_not_verified_exposure"
+        }
+      ],
+      "status": "identified",
+      "has_concrete_reported_action": true,
       "has_us_action": false
     },
     "headline_event": {
@@ -32641,6 +33160,63 @@
       "market_activities": [
         "Oil and gas"
       ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "81ac6701a0056f98f081d1fd",
+    "title": "Treasury chief lauds Türkiye's achievements in fiscal transparency | Daily Sabah - Daily Sabah",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNMFU3N2ZMb2xZbHA1eW1Ud3pGYmdxa0RSZVRiRjUyYjdVbWtBTUlsWXM1MmJxNTBqVUFXZGlEVDIwNWdZeDFwODlPNUFFZWVNR1dmbGRWWkZLVVpDeTdYOE1ZbWMza0lZWk9tWlpsVXFYa1BMRW5YUEJ6WU1PV1VzSm5VbkVHaVU3X2xoT2VOQjdFeEI5dGJGb2RaT2Q5ZThEMmlIYTkwUW8ycEhDRHfSAbMBQVVfeXFMTkEzSjk4cU13RW4zaEVjTGhsbWFSVFZKNFg5dlRVZzRDVzVGUmlmNldSdjlHZldXSFdQVkRyUll3UjM5QkFvT29RemhvRjc2QThLVDF3WEg2VGxlTGpoOWlPc05rNExiQlJ1MmUyZ2JyaDVpMkZPdGRVM0lfaTFGNEFaejNRZ0ZieUplcnVyTnBkUUprNGphR1Q0UE0xZTE4T2E1M0V4QldrNVFhVTFlTHlNem8?oc=5",
+    "published_at": "2026-10-25T12:21:00+00:00",
+    "known_at": "2026-10-25T12:21:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Treasury chief lauds Türkiye's achievements in fiscal transparency | Daily Sabah - Daily Sabah",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -38500,6 +39076,63 @@
       "market_activities": [
         "Banks - Diversified"
       ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "ce9a37f54cc01cd32612a180",
+    "title": "IMPD investigating fatal crash on Indy’s northeast side - Fox 59",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPOHZsZFNXbmxCalhXV3VhbEZyRXBjZFpSODFXZTFyZE9MNHpaQ1QxR0E4MDhfeWFJdlljYmk4b0hlelkyRjlsUTc0eVVEY3Jxekcwcld1SWFrUFFoYUhMOXVHVkozN3p3NEptQXROZjR3ZTNEdkNrX1djaHl5bGstYmdwU0HSAYoBQVVfeXFMUFVGU2Fub0tyR0lfTW5RUzJ4Smx2Ty1lMTZHMGtucUV5SFNQSHh2S1BpdzRzbXdGc3A5dDZVMEtISWNrQ1BweVpweXZCcXFwejRiQk9zQzQtdUVIOEdsNGR6MGJZYlY2b0g5OTNhSzBmb1VtR290QTVJNG9pdXFsckRXdFVkY0lYZ2Fn?oc=5",
+    "published_at": "2026-10-25T11:21:12+00:00",
+    "known_at": "2026-10-25T11:21:12+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: IMPD investigating fatal crash on Indy’s northeast side - Fox 59",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -49223,6 +49856,63 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: LIV Golf, which is undergoing bankruptcy procedures, has been controversial after it was revealed th.. - 매일경제",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "4bab9434dd7dbfbf73baa2ea",
+    "title": "Super Flower launches Leadex VIII Platinum Pro Premium power supplies - KitGuru",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQODVhdlFNdlQxYWtCYkJTYjlIbHgxWXg1cDBldzI4YTM4RTJwclotYjI3T2hHXzRxQ1NyOVlZUjZfLUNhTTM5cS1yN1JVZS1raW9hcjVZbE9aeXE1OFhTa0ROTmNtX0lVUWNDdVcxczVmTkJrRnRfMkdBdkozNnQzLU9XTW84c2pNSXZnbHRCYjhpYTdKbkZlZTk1cWh0a00xdmJBUi1zU1NhSGlBVjFlZnJwN2lpMDhaTGNNYWdXT1dWeVRPbW02RnF4R1k0bk5YQWRQRnVpamo5U2N6bnl5X1ZBcWxtcUI4QVJYYw?oc=5",
+    "published_at": "2026-10-25T09:15:42+00:00",
+    "known_at": "2026-10-25T09:15:42+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Super Flower launches Leadex VIII Platinum Pro Premium power supplies - KitGuru",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -76713,6 +77403,63 @@
     }
   },
   {
+    "document_id": "856fb78d4162356c8576bf24",
+    "title": "Pressley Powell - ESPN",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQc1EtdU45a2ZSWlNyTXNkZ24tcmVaWm9WX05LdEdmYkVyRkpvaGUydTNuM09DOE5vUEpBNmxrVDhtYlpIdk5EZHFtclVsWXhWSXNvUXp1blRZd290alBWUWo5OFN6OVR2bnBUWU5tbTdTTjNINkplRXBCM1E0Tng1SWNrVUJpSlhGdGFhQg?oc=5",
+    "published_at": "2026-10-25T02:04:43+00:00",
+    "known_at": "2026-10-25T02:04:43+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Pressley Powell - ESPN",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "d9744aaa567326ae08b528a0",
     "title": "Morgan Stanley-led credit line for TeraWulf grows to $400 million - Crypto Briefing",
     "evidence_file": "documents.json",
@@ -78500,6 +79247,63 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: Republican billionaire Rick Jackson is walking a Trump tightrope in his quest to lead Georgia - AP News",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "d32f01f1fde06334d063d992",
+    "title": "5-star hotel in the crosshairs as coastal flooding pushes SoCal to its limits - New York Post",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQR1hEcEVkLWdueXd3ZTM3VWhsM1VaUzdyeVlhaHFvTUgwWi1KT0R3ZVVfVVBKeG1QSm16aWpYeU1mOVdzWXdtME1BSGVxb1ZkR21GQmU2bVVjZl9WdmVrTEU3R1VxUmtMcGVOS2FaN3doU3BQSENZeTBkQUNLSmNJd19RWm1NX3VDc08teUVodWowTC1SUUtYT0NqRWtMUVdlNFo1YjlWV3BpZHBCcnYzcjFaZlV4cWp0a3JfU2hMYWtKQQ?oc=5",
+    "published_at": "2026-10-25T01:40:00+00:00",
+    "known_at": "2026-10-25T01:40:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: 5-star hotel in the crosshairs as coastal flooding pushes SoCal to its limits - New York Post",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -88637,6 +89441,63 @@
       "market_activities": [
         "Software - Infrastructure"
       ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "6492fcf2bce8d6aa94de377d",
+    "title": "Hitler’s German retreat, Eagle’s Nest, set ablaze; Suspect in custody - AL.com",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNd1p6aHJGZ2tLVzN4VFdKRFBoSUxDbjdHRHFJSzVlM3RWVzBDb25wUVotQXhjeUtBTTVYTExmaG1VVWU3bFBWM3MxSG9xb0g4MEtRbXpCM1hQSW4yT3hGOFl3UDk4TjZEcHFxbmhlNzlfOTRnTE16X3dLT0s1MGhScGthb085Q2pTTWtJMTZsNTJ4TUdtMjlQc3Y1MnV5RGlFY0000gG3AUFVX3lxTE1rdm1XaENHS0w2SHlEUkRmbXozamh3bEVnc3A0b3pidUlsMl85bGVxS2dieFZ4b21CTnBrMkQ0ZVBsdVJTZlJ1b2ZYeUdFSGJwcnNhMVJzVlV3X2dPT0NfU1YydXQ2U1c1RDV6VmJaTzFWbzVDcW9hZ0RTcFhoYW1ONGRkaTBrZmI2Y2xlcHY5TG5wWDFSU2FXc1lMSi1MX3VvNlZ2STRvNkxtZVRscW84OFpPUzFOZw?oc=5",
+    "published_at": "2026-10-24T22:02:00+00:00",
+    "known_at": "2026-10-24T22:02:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Hitler’s German retreat, Eagle’s Nest, set ablaze; Suspect in custody - AL.com",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -110051,6 +110912,63 @@
     }
   },
   {
+    "document_id": "1d3fc31fdee5a5eadd1e7cfa",
+    "title": "Belgian protesters and police skirmish at anti-government demonstrations in Brussels - Reuters",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNdWRmTGozX08xMlVRbHEtbWNESTBRVUg5eVNVR2dJTnh2UTNoU1F1aktWc2FYZVh6N0hkcFJxN05OS1hmNmQzLWZZODBIVFRBYlQ1SG5BUzJvUUdxMmFsRWJlcFdlR3pSRTdJT0pDWk1XYUl6UENiTzNja0ExT0VFbWZvU01iTmpjY0R4bnF1RmRscUtDSnJUQTFJeUtLeF9BZ2kzcWxQOGlOZUhyUThmY29IOTY5eWc?oc=5",
+    "published_at": "2026-10-24T16:06:20+00:00",
+    "known_at": "2026-10-24T16:06:20+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Belgian protesters and police skirmish at anti-government demonstrations in Brussels - Reuters",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "3cadf1fde585b2a9d9e59f48",
     "title": "IDFC First Bank Limited Reports Earnings Results for the Second Quarter and Six Months Ended September 30, 2026 - www.marketscreener.com",
     "evidence_file": "documents.json",
@@ -122612,6 +123530,63 @@
       "market_activities": [
         "Specialty Retail"
       ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "e1f041c09046aa32b8e248e4",
+    "title": "Canary Capital Files for US Spot PEPE ETF - CoinMarketCap",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQU3d3Nk1xMzZuQVFsSFBVcHlkWWtGVFJ2RC05b2ZpYUpwbDlERGRCR20wTWZLYlMyUUdxQVlkcldnRzFEZjlzZU1PSXlnS3Izb0hFY1VRU0pfZldyajJtQWhyYzVOSzhBU19hby1xVU8xblI4YjhfUEJzQUlhODhCRzFya3RpSDJUYkMw?oc=5",
+    "published_at": "2026-10-24T13:08:59+00:00",
+    "known_at": "2026-10-24T13:08:59+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Canary Capital Files for US Spot PEPE ETF - CoinMarketCap",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -150121,6 +151096,63 @@
     }
   },
   {
+    "document_id": "27fe17e2499e8e45a1616334",
+    "title": "Form S-3 RiceBran Technologies For: 24 October By Investing.com - Investing.com Australia",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOeXdFYzJBbGRJREFHQUEzaHRyU2RWN0U5WGJTUGlJOUo3NHFlNno3SDRkWG5qYjZMX3lTZ1VIdlJmR3ozM09ScjhvQ29vOVFDdFRwem1KMHBHSE04dzB3Qll2NVlfbWpLVmNBNzd1Z2hjamFqeVF5dExaMFZsdDFRMzdXM2tDUWdGei0wVlFZcnpRYno1VGpaSnE4eW5sNEJ0Sml3MmdRakM?oc=5",
+    "published_at": "2026-10-24T06:07:57+00:00",
+    "known_at": "2026-10-24T06:07:57+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Form S-3 RiceBran Technologies For: 24 October By Investing.com - Investing.com Australia",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "dcda2c6077ffa8ea02946652",
     "title": "Tata Chemicals Examines Options as Kenya High Court Rules No Jurisdiction Over Magadi Dispute - Sahi",
     "evidence_file": "documents.json",
@@ -152576,6 +153608,63 @@
     }
   },
   {
+    "document_id": "5176f3c8921d1cc028c6c538",
+    "title": "Form S-3/A iPower Inc. For: 24 October - Investing.com India",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQSGsyTmxoY0RpVklROWJYLWRvTk5WUS11UG5wR3BpZTdQTU0wek0xeEVpM21QV1lONkxkVUwxbDZ1dE1kdkU3VkhNWVVtbThBcmVMNENtU1BTbGo1WHFpNTQzNkh6eWZTVzVqS2RXV09uQmp6UnJnbEs3VHdudzMzZG5TR3hpNFdTaGVSbnk4Tlo3dmVFckQ1ZlZTdw?oc=5",
+    "published_at": "2026-10-24T05:18:08+00:00",
+    "known_at": "2026-10-24T05:18:08+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Form S-3/A iPower Inc. For: 24 October - Investing.com India",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "aeabb70ba387d660a0b7b713",
     "title": "Cottage Health Nurses Announce Intent to Hold Union Vote - Noozhawk",
     "evidence_file": "documents.json",
@@ -153209,6 +154298,99 @@
       "market_activities": [
         "Biotechnology"
       ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "1b763d275a2f7f06c65738c3",
+    "title": "Trump signs executive order lowering housing costs - WBMA",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPUTg3N2pFMGRWcF9pZ25OeG93aHBtWnNqZmtaN25HY1p2UUQ2VFlfcFJVcmY4YVZFNWQ0MlNVel9zVUxYaXZybE1NU3M1S1pIeEo1SkNvbmdKUU85cWljb1NycjJ1c1BQWmRTYV81bVNTaUtkZ1lXb2VQdmxpQTAzVkpmQVVMMko0YTFxYWFSQmUycFZEbVdhaG1rYUttZXlUcVFzdkRyR0lXSzZ3NXluZ0MwNWRwYjBYRXRCc0dNZ1JnYlNNcDQwZ0FOQ1huNlI2R0pucnU4S2FXZkZaaG1zaXgwVDcySDVLYXRLQUpHbXZwUDFhRDNHV1NIWnlOZmZORkxORQ?oc=5",
+    "published_at": "2026-10-24T05:03:35+00:00",
+    "known_at": "2026-10-24T05:03:35+00:00",
+    "candidate_classes": [
+      "tax_fiscal"
+    ],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "unconfirmed_coverage_hints",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Trump signs executive order lowering housing costs - WBMA",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [
+        {
+          "authority": "Trump",
+          "authority_type": "executive",
+          "jurisdiction": "US",
+          "us_scope": true,
+          "authority_level": "federal",
+          "action_category": "policy_action",
+          "action": "signs",
+          "subject": "executive order lowering housing costs",
+          "stage": "action_reported",
+          "concrete_reported_action": true,
+          "authority_evidence": {
+            "quote": "Trump",
+            "start": 0,
+            "end": 5
+          },
+          "action_evidence": {
+            "quote": "signs",
+            "start": 6,
+            "end": 11
+          },
+          "verification": "headline_reported_not_primary_verified",
+          "effective_date": null,
+          "implementation_verified": false,
+          "lane_classification": null,
+          "market_sectors": [],
+          "unknowns": [
+            "Legal scope, effective date and implementation require source terms",
+            "Institution recognition alone does not establish companies or market direction"
+          ],
+          "market_activities": [],
+          "sector_scope": "same_headline_segment_relevance_not_verified_exposure"
+        }
+      ],
+      "status": "identified",
+      "has_concrete_reported_action": true,
+      "has_us_action": true
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -162309,6 +163491,70 @@
     }
   },
   {
+    "document_id": "f6f59c2883130fba7631ad0e",
+    "title": "LIV Golf paid $15 million to retain executives before filing for bankruptcy, court records show - The Spec",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxPdXNEdEpfdUdMR0Q4a0FRc2l3ZHJqX3lfcWhxMldxeHZVTElyeWpPMk4tMXdUOXNBM0cwazhkeUk5MlcyeE0xcHZvYmJmWDZxbWpSV0hfMEJTcVdLSFVkVHJZRnctR3N5OTlFVDNtWnRDazJEeXlHYmtHYXNRWGNtRG8wUFgyZFM4LTRSNWt4dWtpaU9laUFmY3BURDZoSjlTbEw3S19oTGM2WTg4NjdXY1JhRzZ6T2o2UmY0MmlEdVZjbnpidzMwamlkeGozTVNmYmJ0b3RTMGl0OXk1RUVLVkE2N0dreTFKUXdIcnNMVER5c2MwY2lLUE5rM2Q2alh0cEd6M2FVRQ?oc=5",
+    "published_at": "2026-10-24T02:25:55+00:00",
+    "known_at": "2026-10-24T02:25:55+00:00",
+    "candidate_classes": [
+      "distress_restruct"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "firm",
+    "routing_class": "distress_restruct",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "distress_restruct",
+      "sign": null,
+      "q5": "impulse",
+      "constraint": "distress_restruct: LIV Golf paid $15 million to retain executives before filing for bankruptcy, court records show - The Spec",
+      "split": false,
+      "split_facts": [],
+      "why": "headline bankruptcy; stage=reported; evidence=filing for bankruptcy",
+      "family": "firm",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "identified",
+      "lane_class": "distress_restruct",
+      "event_type": "bankruptcy",
+      "stage": "reported",
+      "sign": null,
+      "evidence": {
+        "quote": "filing for bankruptcy",
+        "start": 54,
+        "end": 75
+      },
+      "verification": "headline_reported_not_primary_verified"
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "5afba0435d6db573ef38307d",
     "title": "435832 | United States Department of Justice - Department of Justice (.gov)",
     "evidence_file": "documents.json",
@@ -162328,6 +163574,63 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: 435832 | United States Department of Justice - Department of Justice (.gov)",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "6a0430c9ca171cefc08130a2",
+    "title": "Form 13D/A HeartSciences Inc. For: 23 October By Investing.com - Investing.com India",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVF9JUzVNNFVVd0VQeUJMU05ic043cUJaN2tTem82Ml9RRG5iM19RV2thNXBTdFUxaU9feWdCSjlRb2d2VmJwbS1LcVBFbVRSd01RN1dYMDhfVllLVFV5N0N3QUZUbHoxX0VwaU1hZTR1UEwybTdnRlBNb1dfd3laaF9hcGtUX2EwdFp3WE5HSHZlXy1TR01leHNJY3FZeDNnaTl0Mld3?oc=5",
+    "published_at": "2026-10-24T02:22:11+00:00",
+    "known_at": "2026-10-24T02:22:11+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Form 13D/A HeartSciences Inc. For: 23 October By Investing.com - Investing.com India",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -185902,6 +187205,63 @@
     }
   },
   {
+    "document_id": "aa026b7669b803649aa547de",
+    "title": "Advisory Committee Calendar - U.S. Food and Drug Administration (.gov)",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5GWnozblc3aWp6ZXNzTHZDUnpXMXhJb1MtdFZQbHcybnRsZlRhSDJBNVZOaURWamNTRENCR3c0VWFydFpZaTNRTWExQTdXYkRyOXdUSms4eG1sNjBQX0hISmhNSi1aOUxKaU55RXNKQzh1UE9zU3c?oc=5",
+    "published_at": "2026-10-23T22:27:46+00:00",
+    "known_at": "2026-10-23T22:27:46+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Advisory Committee Calendar - U.S. Food and Drug Administration (.gov)",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "82e63c34bfeaebf1e3117ed4",
     "title": "Indiana Fever President Kelly Krauskopf Steps Down After 2026 WNBA Season - Bleacher Report",
     "evidence_file": "documents.json",
@@ -205353,6 +206713,63 @@
       "market_activities": [
         "Banks - Regional"
       ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "e17f534902c4da0a79088bfa",
+    "title": "U.S. Treasury Bond Futures Overview - CME Group",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQSFpNb1pHdDFZcU1rMUo1a01PWGd5SlQydFRzcXRHVE1fTl9JMy1NV09FSmRhVF9fMEtOakh4RXRYOFZoS3hLcU5KS1BEVFZ0TWJzejNkY2JJblhKMWcwUEUyWFh1dEFNazliTU8wSzVFSzVWSE5KNFVkaG9XbnpNZHdfV1lqanZUMEU2X3lqaFpiN28?oc=5",
+    "published_at": "2026-10-23T20:44:45+00:00",
+    "known_at": "2026-10-23T20:44:45+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: U.S. Treasury Bond Futures Overview - CME Group",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -231457,7 +232874,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -232744,7 +234161,7 @@
       "factor_impulse",
       "regime_state"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "regime_state",
@@ -232933,7 +234350,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -233031,7 +234448,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -233152,7 +234569,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -233250,7 +234667,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -233600,7 +235017,7 @@
       "corporate_action_mna",
       "capacity"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "capacity",
@@ -233737,7 +235154,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -233911,7 +235328,7 @@
       "blast_legal",
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -234010,7 +235427,7 @@
       "blast_legal",
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -234108,7 +235525,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -235978,6 +237395,120 @@
     }
   },
   {
+    "document_id": "f77968c5fb919c6a2f1a1f4b",
+    "title": "United States v. Hemani",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r51_k4lo.pdf",
+    "published_at": "",
+    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: United States v. Hemani",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "f1f0aa438c0fc79bcb9b3fa7",
+    "title": "McCarthy v. Hernandez",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r52_k5fm.pdf",
+    "published_at": "",
+    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: McCarthy v. Hernandez",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "eeef1453d01cbf5b6aed5bbd",
     "title": "Geo Group, Inc. v. Menocal",
     "evidence_file": "documents.json",
@@ -236149,6 +237680,63 @@
     }
   },
   {
+    "document_id": "e0c9171bbf0272815c3abead",
+    "title": "Landor v. Louisiana Dept of Corrections and Public Safety",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r55_h315.pdf",
+    "published_at": "",
+    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Landor v. Louisiana Dept of Corrections and Public Safety",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "cf86a96e86dc1ed7ff96b9ba",
     "title": "Doe v. Dynamic Physical Therapy, LLC",
     "evidence_file": "documents.json",
@@ -236282,63 +237870,6 @@
       "sign": null,
       "q5": "regime",
       "constraint": "discard: Rutherford v. United States",
-      "split": false,
-      "split_facts": [],
-      "why": "no constraint identified",
-      "family": "time",
-      "factor": ""
-    },
-    "institutional_actions": {
-      "version": "institutional-actions-v2",
-      "input_scope": "title_only",
-      "actions": [],
-      "status": "no_supported_action_identified",
-      "has_concrete_reported_action": false,
-      "has_us_action": false
-    },
-    "headline_event": {
-      "version": "headline-events-v1",
-      "status": "no_supported_event",
-      "lane_class": null,
-      "event_type": null,
-      "stage": "unknown",
-      "evidence": null,
-      "sign": null
-    },
-    "sector_classification": {
-      "version": "headline-sectors-v1",
-      "input_scope": "title_only",
-      "status": "unknown",
-      "matches": [],
-      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
-      "catalog_available": true,
-      "market_sectors": [],
-      "market_activities": [],
-      "unknowns": [
-        "Sector relevance does not establish material exposure, winners, losers or price direction"
-      ]
-    }
-  },
-  {
-    "document_id": "bfdc0202ba06f9e6b9abe1d1",
-    "title": "October 14, 2026 - FDA Launches the Rare Disease Framework Initiative to Develop a Holistic, Fit-For-Purpose Framework for Rare Disease Drug Development",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-rare-disease-framework-initiative-develop-holistic-fit-purpose-framework-rare-disease",
-    "published_at": "2026-10-14T04:00:00+00:00",
-    "known_at": "2026-10-14T04:00:00+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1",
-    "lane_rule_classification": {
-      "event_class": "discard",
-      "sign": null,
-      "q5": "regime",
-      "constraint": "discard: October 14, 2026 - FDA Launches the Rare Disease Framework Initiative to Develop a Holistic, Fit-For-Purpose Framework for Rare Disease Drug Development",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -236623,13 +238154,70 @@
     }
   },
   {
+    "document_id": "ae0b89aa8dda7f59de36f785",
+    "title": "Mullin v. Al Otro Lado",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r59_kjfl.pdf",
+    "published_at": "",
+    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Mullin v. Al Otro Lado",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "aae9d72ef63697fac0cfd2d9",
     "title": "Operation Economic Outcast Targets Iran’s International Financial Networks and Shadow Banking Architecture",
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://home.treasury.gov/news/press-releases/sb0660/",
-    "published_at": "",
-    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "published_at": "2026-10-15T17:00:00+00:00",
+    "known_at": "2026-10-15T17:00:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -236737,6 +238325,120 @@
     }
   },
   {
+    "document_id": "a7daba7bd35ccdd9975360b6",
+    "title": "Abouammo v. United States",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r46_2c8f.pdf",
+    "published_at": "",
+    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Abouammo v. United States",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "a6b763b6aeaa25405b574b80",
+    "title": "T. M. v. University of Md. Medical System Corporation",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r49_mlho.pdf",
+    "published_at": "",
+    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: T. M. v. University of Md. Medical System Corporation",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "a37a14e308758b71a9caec86",
     "title": "Bowe v. United States",
     "evidence_file": "documents.json",
@@ -236788,6 +238490,81 @@
       "catalog_available": true,
       "market_sectors": [],
       "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "9890b5e3d361983cdeb5137a",
+    "title": "FS Credit Opportunities Corp. v. Saba Capital Master Fund, Ltd.",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r47_m64o.pdf",
+    "published_at": "",
+    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: FS Credit Opportunities Corp. v. Saba Capital Master Fund, Ltd.",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Financial",
+          "activity": "Closed-End Fund - Debt",
+          "basis": "company_catalog",
+          "evidence": {
+            "quote": "FS Credit Opportunities",
+            "start": 0,
+            "end": 23
+          },
+          "exposure_verified": false,
+          "ticker": "FSCO",
+          "company": "FS Credit Opportunities Corp"
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Financial"
+      ],
+      "market_activities": [
+        "Closed-End Fund - Debt"
+      ],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -236856,6 +238633,63 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-nationwide-effort-expand-scientific-expertise-and-consumer-voices-advisory-committees",
+    "published_at": "2026-09-30T04:00:00+00:00",
+    "known_at": "2026-09-30T04:00:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: September 30, 2026 - FDA Launches Nationwide Effort to Expand Scientific Expertise and Consumer Voices to Advisory Committees",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "8c19a546eb41806783f18511",
+    "title": "Keathley v. Buddy Ayers Construction, Inc.",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r48_k53m.pdf",
     "published_at": "",
     "known_at": "2026-10-16T10:43:12.031029+00:00",
     "candidate_classes": [],
@@ -236869,7 +238703,7 @@
       "event_class": "discard",
       "sign": null,
       "q5": "regime",
-      "constraint": "discard: September 30, 2026 - FDA Launches Nationwide Effort to Expand Scientific Expertise and Consumer Voices to Advisory Committees",
+      "constraint": "discard: Keathley v. Buddy Ayers Construction, Inc.",
       "split": false,
       "split_facts": [],
       "why": "no constraint identified",
@@ -236988,8 +238822,8 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://home.treasury.gov/news/press-releases/sb0659/",
-    "published_at": "",
-    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "published_at": "2026-10-14T16:00:00+00:00",
+    "known_at": "2026-10-14T16:00:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -237045,8 +238879,8 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-heart-valve-designed-grow-children",
-    "published_at": "",
-    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "published_at": "2026-10-01T04:00:00+00:00",
+    "known_at": "2026-10-01T04:00:00+00:00",
     "candidate_classes": [
       "gate"
     ],
@@ -237189,6 +239023,81 @@
       "catalog_available": true,
       "market_sectors": [],
       "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "7b9af5273708f64b72ae06a1",
+    "title": "Cisco Systems, Inc. v. Doe",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r57_db8e.pdf",
+    "published_at": "",
+    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Cisco Systems, Inc. v. Doe",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Technology",
+          "activity": "Communication Equipment",
+          "basis": "company_catalog",
+          "evidence": {
+            "quote": "Cisco Systems",
+            "start": 0,
+            "end": 13
+          },
+          "exposure_verified": false,
+          "ticker": "CSCO",
+          "company": "Cisco Systems Inc"
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Technology"
+      ],
+      "market_activities": [
+        "Communication Equipment"
+      ],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -237977,6 +239886,79 @@
     }
   },
   {
+    "document_id": "3d6c5517a02c70bdf9f73225",
+    "title": "Hikma Pharmaceuticals USA Inc. v. Amarin Pharma, Inc.",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r45_i4dk.pdf",
+    "published_at": "",
+    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Hikma Pharmaceuticals USA Inc. v. Amarin Pharma, Inc.",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "identified",
+      "matches": [
+        {
+          "sector": "Healthcare",
+          "activity": "Biotechnology",
+          "basis": "title_activity",
+          "evidence": {
+            "quote": "Pharma",
+            "start": 41,
+            "end": 47
+          },
+          "exposure_verified": false
+        }
+      ],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [
+        "Healthcare"
+      ],
+      "market_activities": [
+        "Biotechnology"
+      ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "3ae556f421c05f021bef0194",
     "title": "Department of Homeland Security v. League of Women Voters",
     "evidence_file": "documents.json",
@@ -238173,6 +240155,63 @@
         "Consumer Electronics",
         "Entertainment"
       ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "29699a12f2fe80cbe1394f7d",
+    "title": "Pung v. Isabella County",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r54_d18e.pdf",
+    "published_at": "",
+    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Pung v. Isabella County",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
@@ -238671,6 +240710,63 @@
     }
   },
   {
+    "document_id": "0aec2a08f68f2c1e4fc4bdad",
+    "title": "Exxon Mobil Corp. v. Corporación Cimex, S. A. (Cuba)",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r56_3e04.pdf",
+    "published_at": "",
+    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Exxon Mobil Corp. v. Corporación Cimex, S. A. (Cuba)",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
     "document_id": "01b96ba71c4954c9490f7aac",
     "title": "Hain Celestial Group, Inc. v. Palmquist",
     "evidence_file": "documents.json",
@@ -238740,6 +240836,120 @@
       "market_activities": [
         "Packaged Foods"
       ],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "0085180a1679675d09a74b40",
+    "title": "Hunter v. United States",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r50_lkgn.pdf",
+    "published_at": "",
+    "known_at": "2026-10-16T10:43:12.031029+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: Hunter v. United States",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
+      "unknowns": [
+        "Sector relevance does not establish material exposure, winners, losers or price direction"
+      ]
+    }
+  },
+  {
+    "document_id": "bfdc0202ba06f9e6b9abe1d1",
+    "title": "October 14, 2026 - FDA Launches the Rare Disease Framework Initiative to Develop a Holistic, Fit-For-Purpose Framework for Rare Disease Drug Development",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-rare-disease-framework-initiative-develop-holistic-fit-purpose-framework-rare-disease",
+    "published_at": "2026-10-14T04:00:00+00:00",
+    "known_at": "2026-10-14T04:00:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1",
+    "lane_rule_classification": {
+      "event_class": "discard",
+      "sign": null,
+      "q5": "regime",
+      "constraint": "discard: October 14, 2026 - FDA Launches the Rare Disease Framework Initiative to Develop a Holistic, Fit-For-Purpose Framework for Rare Disease Drug Development",
+      "split": false,
+      "split_facts": [],
+      "why": "no constraint identified",
+      "family": "time",
+      "factor": ""
+    },
+    "institutional_actions": {
+      "version": "institutional-actions-v2",
+      "input_scope": "title_only",
+      "actions": [],
+      "status": "no_supported_action_identified",
+      "has_concrete_reported_action": false,
+      "has_us_action": false
+    },
+    "headline_event": {
+      "version": "headline-events-v1",
+      "status": "no_supported_event",
+      "lane_class": null,
+      "event_type": null,
+      "stage": "unknown",
+      "evidence": null,
+      "sign": null
+    },
+    "sector_classification": {
+      "version": "headline-sectors-v1",
+      "input_scope": "title_only",
+      "status": "unknown",
+      "matches": [],
+      "catalog_source": "/home/runner/work/fullscan/fullscan/data/exports/finviz_2026-10-23.csv",
+      "catalog_available": true,
+      "market_sectors": [],
+      "market_activities": [],
       "unknowns": [
         "Sector relevance does not establish material exposure, winners, losers or price direction"
       ]
