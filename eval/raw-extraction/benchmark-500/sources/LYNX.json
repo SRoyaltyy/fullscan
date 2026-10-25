@@ -1,0 +1,82 @@
+{
+  "ticker": "LYNX",
+  "cik": "0002132582",
+  "name": "LYNX",
+  "sector": "",
+  "industry": "",
+  "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0002132582.json.gz",
+  "profile_sha256": "8d75b2cebe2c91669d4e42832a026f8c0f543f6ff03b8246aa00274c1029bda8",
+  "eligible_paragraphs": 4,
+  "source_scope": "Retained archived filing prose paragraphs; not a complete filing inventory.",
+  "paragraphs": [
+    {
+      "id": "269aec57f9f3695d98d57a44c0c177cf799d919d8ed2ae0706ea06d4f8673137",
+      "start": 435,
+      "end": 1134,
+      "text": " (a) Estimated solely for the purpose of calculating the registration fee pursuant to Rule 457(a) under the Securities Act of 1933, as amended (the \"Securities Act\"). (b) Includes the aggregate offering price of additional shares that the underwriters have the option to purchase. (2) (a) The Registrant previously paid a registration fee of $13,810.00 in connection with the initial filing of the Registration Statement on Form S-1 on July 23, 2026. The fee was estimated solely for the purpose of calculating the registration fee in accordance with Rule 457(o) under the Securities Act. This Maximum Aggregate Offering Price was originally registered under 457(o) and is now converted to 457(a).\n\n",
+      "sha256": "f6e6e5034b16cdd157e46566ff9abc435a1e3060d54b9c4528febdc05d375dd4",
+      "source": {
+        "accepted_at": "2026-08-10T11:22:59.000Z",
+        "accession": "0001193125-26-341244",
+        "characters": 1679,
+        "document": "R2.htm",
+        "filing_date": "2026-08-10",
+        "form": "S-1/A",
+        "id": "35d9bd66d546edeaaf371f944d2e111e02eeb7bfae15c9b6a33814f523d36ac2",
+        "kind": "business",
+        "report_date": null,
+        "section": "R2.htm",
+        "section_ordinal": 37,
+        "sha256": "dcac322db2742c22c982e66e0668a7f63ab1ab355ef485249748b1c972dbad1d",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/2132582/000119312526341244/R2.htm"
+      }
+    },
+    {
+      "id": "390aa57bb6095c15b6f5af1f987d9a85ddaae121f3772075ddfe9c7b9d237a3a",
+      "start": 1384,
+      "end": 2089,
+      "text": " (a) Estimated solely for the purpose of calculating the registration fee pursuant to Rule 457(a) under the Securities Act of 1933, as amended (the \"Securities Act\"). (b) Includes the aggregate offering price of additional shares that the underwriters have the option to purchase. (2) (a) The Registrant previously paid a registration fee of $13,810.00 in connection with the initial filing of the Registration Statement on Form S-1 on July 23, 2026. The fee was estimated solely for the purpose of calculating the registration fee in accordance with Rule 457(o) under the Securities Act. This Maximum Aggregate Offering Price was originally registered under 457(o) and is now converted to 457(a). \n\n \n\n \n",
+      "sha256": "642a6f79c3912ee9d0e55864a1edef6a3bfe0ef0206d48d2c8f469c1787831bb",
+      "source": {
+        "accepted_at": "2026-08-10T11:22:59.000Z",
+        "accession": "0001193125-26-341244",
+        "characters": 3310,
+        "document": "d23330dexfilingfees.htm",
+        "filing_date": "2026-08-10",
+        "form": "S-1/A",
+        "id": "ffe182a135bf7c8526a6d7ae468e1d94ab4b45fd7985c8502ffffe9049383d16",
+        "kind": "business",
+        "report_date": null,
+        "section": "d23330dexfilingfees.htm",
+        "section_ordinal": 45,
+        "sha256": "06e42a5622d95f389e529fd8c54bf295f79d21ffcf3450fe3bde8dd90d479fcb",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/2132582/000119312526341244/d23330dexfilingfees.htm"
+      }
+    },
+    {
+      "id": "85e270b25195f6ebff53b5c933d9464e80d8e7870a60a61905b4f8f35b5cc64b",
+      "start": 2792,
+      "end": 3635,
+      "text": "On August 18, 2026, in connection with the pricing of the IPO, the Company, the persons named in Schedule II thereto (the “Selling Stockholders”) and Evercore Group L.L.C., Citigroup Global Markets Inc. and Guggenheim Securities, LLC, as representatives of the several underwriters listed on Schedule I thereto (the “Underwriters”), entered into an underwriting agreement (the “Underwriting Agreement”), pursuant to which the Company agreed to offer and sell 5,714,286 shares of its Common Stock, and the Selling Stockholders agreed to offer and sell 11,285,714 shares of their Common Stock, in each case at the IPO Price. The Underwriters were granted a 30-day option to purchase up to an additional 2,550,000 shares of Common Stock from certain of the Selling Stockholders. The IPO closed and the shares were delivered on August 20, 2026. \n\n",
+      "sha256": "3fe33ba8a637d88e12e70c6a42b29d8c80cf99ab3db4637217a45e061596dae2",
+      "source": {
+        "accepted_at": "2026-08-21T12:12:57.000Z",
+        "accession": "0001193125-26-359991",
+        "characters": 12486,
+        "document": "d821382d8k.htm",
+        "filing_date": "2026-08-21",
+        "form": "8-K",
+        "id": "4d13f17e6c15a067103a501ffb3699fc29da582587fb62d20970e57d205e723a",
+        "kind": "update",
+        "report_date": "2026-08-18",
+        "section": "d821382d8k.htm",
+        "section_ordinal": 56,
+        "sha256": "cdcdd7250e1fc48e45c412b6d9d622c094c94427f9e9d476cecc767abb4d4075",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/2132582/000119312526359991/d821382d8k.htm"
+      }
+    }
+  ]
+}

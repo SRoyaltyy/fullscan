@@ -1,0 +1,82 @@
+{
+  "ticker": "BVN",
+  "cik": "0001013131",
+  "name": "Compania de Minas Buenaventura SA ADR",
+  "sector": "Basic Materials",
+  "industry": "Other Precious Metals & Mining",
+  "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001013131.json.gz",
+  "profile_sha256": "1f612ed78511ce96bdf6d635d50e44386ec31b341d82a3a85209b9b535a7e60c",
+  "eligible_paragraphs": 112,
+  "source_scope": "Retained archived filing prose paragraphs; not a complete filing inventory.",
+  "paragraphs": [
+    {
+      "id": "2e3251be652433ce46e84f04e41305ba1afd3df9b2d0d45e8f318bfb43f833c4",
+      "start": 114887,
+      "end": 115624,
+      "text": "The Company recognizes worker’s profit sharing in accordance with IAS 19. Worker’s profit sharing is calculated in accordance with Peruvian laws (Legislative Decree No. 892), and the Company’s worker’s profit sharing rate is 8% over the net taxable base of the current year. According to Peruvian law, the limit in the worker’s profit sharing that an employee can receive is equivalent to 18 months of wages, and any excess above such limit is transferred to the Regional Government and the National Fund for Employment’s Promotion and Training (FONDOEMPLEO). The Company’s worker’s profit share is recognized as a liability in the statements of financial position and as an operating expense in the statements of comprehensive income.\n\n",
+      "sha256": "1a634fc9ae1fa21717d196743af90a242feb89e9b9a537fc3ac22a979ae7688d",
+      "source": {
+        "accepted_at": "2026-05-01T00:57:26.000Z",
+        "accession": "0001104659-26-053101",
+        "characters": 121883,
+        "document": "R8.htm",
+        "filing_date": "2026-04-30",
+        "form": "20-F",
+        "id": "bae96ae9ec75446772b98cb87cffd63b09b7729ffccd79f5b9a5341706f83a24",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "R8.htm",
+        "section_ordinal": 220,
+        "sha256": "2b0d461d19037b959c0c9884f97d84aaae76e6734963f5f2029e78ae2d7a92be",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1013131/000110465926053101/R8.htm"
+      }
+    },
+    {
+      "id": "e9b1a5903509e91d1ae51e96d472091fddd7c0b7e2ee2cfa50f81f954427d553",
+      "start": 270233,
+      "end": 271615,
+      "text": "Law No. 28271, Law that Regulates the Environmental Liabilities of Mining Activities (Ley que Regula los Pasivos Ambientales de la Actividad Minera), came into force on July 7, 2004 and serves to regulate the identification of environmental liabilities and financial responsibility for remediation in mining activities, in each case to mitigate any negative impact mining may have with respect to the health of the population, environment and property. Pursuant to Law No. 28271, as amended by Law No. 28526 and Legislative Decree No. 1042 and No. 1670, MEM’s technical branch will identify environmental liabilities, mining companies responsible for abandoned mining facilities, mining works and residue deposits that may be linked to such environmental liabilities and holders of inactive mining concessions with mining liabilities. Holders of inactive mining concessions with environmental mining liabilities will be required to submit a Closure Plan and enter into environmental remediation agreements with MEM to perform any studies and work necessary to control and mitigate the risk and effects of any contamination. Regulations under Law No. 28271, Regulations of Environmental Liabilities of Mining Activities (Reglamento de Pasivos Ambientales de la Actividad Minera), were approved by Supreme Decree No. 059-2005-EM. and then modified by Supreme Decree No. 003-2009-EM.\n\n",
+      "sha256": "1233521b7e1fad991273dd690554912c93f25a7318345b0fb1c171a8d0b8d45c",
+      "source": {
+        "accepted_at": "2026-05-01T00:57:26.000Z",
+        "accession": "0001104659-26-053101",
+        "characters": 289767,
+        "document": "tmb-20251231x20f.htm",
+        "filing_date": "2026-04-30",
+        "form": "20-F",
+        "id": "e0ee7d567ede39ab2557b63862232441cc7406c84d727247e8745ac8fa7862a8",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "ITEM 4. Information on the Company",
+        "section_ordinal": 284,
+        "sha256": "46382695c7ee1493493f6719656221551831297881bc26db7e1e135ae5d56049",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1013131/000110465926053101/tmb-20251231x20f.htm"
+      }
+    },
+    {
+      "id": "94b16becdc266513ad9b8d11cc3f8309fcb974420ba158b84597f9319d65a14c",
+      "start": 3042,
+      "end": 4375,
+      "text": "The Board of Directors meets when called by the Chairman of the Board. The Board of Directors is validly convened when all Directors are present and unanimously agree to carry out the meeting for the purpose of transacting the business that has been proposed. Pursuant to Article 177 of the Peruvian Companies Law, Directors may be jointly and severally liable to us, the shareholders and third parties for their actions if they act with willful misconduct, gross negligence, or abuse their powers. In addition, Article 3 of Law No. 29720, which has been in force since June 26, 2011, as amended by Law No. 30050 in force since June 27, 2013, provides that directors and managers are civilly liable for damages caused to us by any transaction they have approved that favors such director’s, or a related party’s interest instead of the Company’s interest, when: (i) one of the parties involved in the transaction is a company whose shares are listed in the local stock exchange, as in our case; (ii) the shareholder controlling such listed company also controls the other party involved in the transaction; and (iii) the transaction is not made under arm’s-length conditions and represents at least 10% of such company’s assets. Directors not participating in the Board meeting or that voted against the transaction are not liable.\n\n",
+      "sha256": "cfa74074d54f40af83da9a2efe7baec9bc11ebd81ad6e3be3501b18b0088f3d2",
+      "source": {
+        "accepted_at": "2026-05-01T00:57:26.000Z",
+        "accession": "0001104659-26-053101",
+        "characters": 72373,
+        "document": "tmb-20251231x20f.htm",
+        "filing_date": "2026-04-30",
+        "form": "20-F",
+        "id": "bd276befe2853e131ab6e624a87521abfb614afd0de40e4c4cb0cc9789dba620",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "ITEM 10.Additional Information",
+        "section_ordinal": 291,
+        "sha256": "3ada32dbb6a4e35de5e5bb447446562d6dc08019576258403a6d27e67858b30d",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1013131/000110465926053101/tmb-20251231x20f.htm"
+      }
+    }
+  ]
+}

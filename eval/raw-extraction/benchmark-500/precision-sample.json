@@ -1,0 +1,9736 @@
+[
+  {
+    "id": 1,
+    "ticker": "LYNX",
+    "normalized": "s-1",
+    "forms": [
+      "S-1"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 429,
+        "end": 432,
+        "text": "S-1"
+      },
+      {
+        "paragraph": 1,
+        "start": 429,
+        "end": 432,
+        "text": "S-1"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "ticker": "LYNX",
+    "normalized": "august",
+    "forms": [
+      "August"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 3,
+        "end": 9,
+        "text": "August"
+      },
+      {
+        "paragraph": 2,
+        "start": 824,
+        "end": 830,
+        "text": "August"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "ticker": "LYNX",
+    "normalized": "common",
+    "forms": [
+      "Common"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 483,
+        "end": 489,
+        "text": "Common"
+      },
+      {
+        "paragraph": 2,
+        "start": 578,
+        "end": 584,
+        "text": "Common"
+      },
+      {
+        "paragraph": 2,
+        "start": 721,
+        "end": 727,
+        "text": "Common"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "ticker": "LYNX",
+    "normalized": "llc",
+    "forms": [
+      "LLC"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 230,
+        "end": 233,
+        "text": "LLC"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "ticker": "LYNX",
+    "normalized": "connection",
+    "forms": [
+      "connection"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 356,
+        "end": 366,
+        "text": "connection"
+      },
+      {
+        "paragraph": 1,
+        "start": 356,
+        "end": 366,
+        "text": "connection"
+      },
+      {
+        "paragraph": 2,
+        "start": 23,
+        "end": 33,
+        "text": "connection"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "ticker": "LYNX",
+    "normalized": "schedule",
+    "forms": [
+      "Schedule"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 97,
+        "end": 105,
+        "text": "Schedule"
+      },
+      {
+        "paragraph": 2,
+        "start": 292,
+        "end": 300,
+        "text": "Schedule"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "ticker": "LYNX",
+    "normalized": "guggenheim",
+    "forms": [
+      "Guggenheim"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 207,
+        "end": 217,
+        "text": "Guggenheim"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "ticker": "LYNX",
+    "normalized": "representative",
+    "forms": [
+      "representatives"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 238,
+        "end": 253,
+        "text": "representatives"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "ticker": "LYNX",
+    "normalized": "initial filing",
+    "forms": [
+      "initial filing"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 376,
+        "end": 390,
+        "text": "initial filing"
+      },
+      {
+        "paragraph": 1,
+        "start": 376,
+        "end": 390,
+        "text": "initial filing"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "ticker": "LYNX",
+    "normalized": "paid",
+    "forms": [
+      "paid"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 315,
+        "end": 319,
+        "text": "paid"
+      },
+      {
+        "paragraph": 1,
+        "start": 315,
+        "end": 319,
+        "text": "paid"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "ticker": "LYNX",
+    "normalized": "form",
+    "forms": [
+      "Form"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 424,
+        "end": 428,
+        "text": "Form"
+      },
+      {
+        "paragraph": 1,
+        "start": 424,
+        "end": 428,
+        "text": "Form"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "ticker": "LYNX",
+    "normalized": "offering price",
+    "forms": [
+      "offering price"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 194,
+        "end": 208,
+        "text": "offering price"
+      },
+      {
+        "paragraph": 1,
+        "start": 194,
+        "end": 208,
+        "text": "offering price"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "ticker": "LYNX",
+    "normalized": "form s-1",
+    "forms": [
+      "Form S-1"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 424,
+        "end": 432,
+        "text": "Form S-1"
+      },
+      {
+        "paragraph": 1,
+        "start": 424,
+        "end": 432,
+        "text": "Form S-1"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "ticker": "LYNX",
+    "normalized": "fee",
+    "forms": [
+      "fee"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 70,
+        "end": 73,
+        "text": "fee"
+      },
+      {
+        "paragraph": 0,
+        "start": 335,
+        "end": 338,
+        "text": "fee"
+      },
+      {
+        "paragraph": 0,
+        "start": 455,
+        "end": 458,
+        "text": "fee"
+      },
+      {
+        "paragraph": 0,
+        "start": 528,
+        "end": 531,
+        "text": "fee"
+      },
+      {
+        "paragraph": 1,
+        "start": 70,
+        "end": 73,
+        "text": "fee"
+      },
+      {
+        "paragraph": 1,
+        "start": 335,
+        "end": 338,
+        "text": "fee"
+      },
+      {
+        "paragraph": 1,
+        "start": 455,
+        "end": 458,
+        "text": "fee"
+      },
+      {
+        "paragraph": 1,
+        "start": 528,
+        "end": 531,
+        "text": "fee"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "ticker": "LYNX",
+    "normalized": "july",
+    "forms": [
+      "July"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 436,
+        "end": 440,
+        "text": "July"
+      },
+      {
+        "paragraph": 1,
+        "start": 436,
+        "end": 440,
+        "text": "July"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "ticker": "LYNX",
+    "normalized": "sell",
+    "forms": [
+      "sell"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 454,
+        "end": 458,
+        "text": "sell"
+      },
+      {
+        "paragraph": 2,
+        "start": 546,
+        "end": 550,
+        "text": "sell"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "ticker": "LYNX",
+    "normalized": "solely",
+    "forms": [
+      "solely"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 15,
+        "end": 21,
+        "text": "solely"
+      },
+      {
+        "paragraph": 0,
+        "start": 473,
+        "end": 479,
+        "text": "solely"
+      },
+      {
+        "paragraph": 1,
+        "start": 15,
+        "end": 21,
+        "text": "solely"
+      },
+      {
+        "paragraph": 1,
+        "start": 473,
+        "end": 479,
+        "text": "solely"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "ticker": "LYNX",
+    "normalized": "rule 457(a",
+    "forms": [
+      "Rule 457(a"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 86,
+        "end": 96,
+        "text": "Rule 457(a"
+      },
+      {
+        "paragraph": 1,
+        "start": 86,
+        "end": 96,
+        "text": "Rule 457(a"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "ticker": "LYNX",
+    "normalized": "additional share",
+    "forms": [
+      "additional shares"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 212,
+        "end": 229,
+        "text": "additional shares"
+      },
+      {
+        "paragraph": 1,
+        "start": 212,
+        "end": 229,
+        "text": "additional shares"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "ticker": "LYNX",
+    "normalized": "common stock",
+    "forms": [
+      "Common Stock"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 483,
+        "end": 495,
+        "text": "Common Stock"
+      },
+      {
+        "paragraph": 2,
+        "start": 578,
+        "end": 590,
+        "text": "Common Stock"
+      },
+      {
+        "paragraph": 2,
+        "start": 721,
+        "end": 733,
+        "text": "Common Stock"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "ticker": "LYNX",
+    "normalized": "purpose",
+    "forms": [
+      "purpose"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 30,
+        "end": 37,
+        "text": "purpose"
+      },
+      {
+        "paragraph": 0,
+        "start": 488,
+        "end": 495,
+        "text": "purpose"
+      },
+      {
+        "paragraph": 1,
+        "start": 30,
+        "end": 37,
+        "text": "purpose"
+      },
+      {
+        "paragraph": 1,
+        "start": 488,
+        "end": 495,
+        "text": "purpose"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "ticker": "LYNX",
+    "normalized": "closed",
+    "forms": [
+      "closed"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 784,
+        "end": 790,
+        "text": "closed"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "ticker": "LYNX",
+    "normalized": "previously",
+    "forms": [
+      "previously"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 304,
+        "end": 314,
+        "text": "previously"
+      },
+      {
+        "paragraph": 1,
+        "start": 304,
+        "end": 314,
+        "text": "previously"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "ticker": "LYNX",
+    "normalized": "aggregate",
+    "forms": [
+      "aggregate",
+      "Aggregate"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 184,
+        "end": 193,
+        "text": "aggregate"
+      },
+      {
+        "paragraph": 0,
+        "start": 602,
+        "end": 611,
+        "text": "Aggregate"
+      },
+      {
+        "paragraph": 1,
+        "start": 184,
+        "end": 193,
+        "text": "aggregate"
+      },
+      {
+        "paragraph": 1,
+        "start": 602,
+        "end": 611,
+        "text": "Aggregate"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "ticker": "LYNX",
+    "normalized": "entered",
+    "forms": [
+      "entered"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 333,
+        "end": 340,
+        "text": "entered"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "ticker": "LYNX",
+    "normalized": "day option",
+    "forms": [
+      "day option"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 658,
+        "end": 668,
+        "text": "day option"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "ticker": "LYNX",
+    "normalized": "l.l.c.",
+    "forms": [
+      "L.L.C."
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 165,
+        "end": 171,
+        "text": "L.L.C."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "ticker": "LYNX",
+    "normalized": "30-day option",
+    "forms": [
+      "30-day option"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 655,
+        "end": 668,
+        "text": "30-day option"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "ticker": "LYNX",
+    "normalized": "inc.",
+    "forms": [
+      "Inc."
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 198,
+        "end": 202,
+        "text": "Inc."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "ticker": "LYNX",
+    "normalized": "delivered",
+    "forms": [
+      "delivered"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 811,
+        "end": 820,
+        "text": "delivered"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "ticker": "LYNX",
+    "normalized": "granted",
+    "forms": [
+      "granted"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 645,
+        "end": 652,
+        "text": "granted"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "ticker": "LYNX",
+    "normalized": "estimated",
+    "forms": [
+      "Estimated",
+      "estimated"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 5,
+        "end": 14,
+        "text": "Estimated"
+      },
+      {
+        "paragraph": 0,
+        "start": 463,
+        "end": 472,
+        "text": "estimated"
+      },
+      {
+        "paragraph": 1,
+        "start": 5,
+        "end": 14,
+        "text": "Estimated"
+      },
+      {
+        "paragraph": 1,
+        "start": 463,
+        "end": 472,
+        "text": "estimated"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "ticker": "LYNX",
+    "normalized": "11,285,714 share",
+    "forms": [
+      "11,285,714 shares"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 551,
+        "end": 568,
+        "text": "11,285,714 shares"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "ticker": "LYNX",
+    "normalized": "act",
+    "forms": [
+      "Act"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 119,
+        "end": 122,
+        "text": "Act"
+      },
+      {
+        "paragraph": 0,
+        "start": 160,
+        "end": 163,
+        "text": "Act"
+      },
+      {
+        "paragraph": 0,
+        "start": 584,
+        "end": 587,
+        "text": "Act"
+      },
+      {
+        "paragraph": 1,
+        "start": 119,
+        "end": 122,
+        "text": "Act"
+      },
+      {
+        "paragraph": 1,
+        "start": 160,
+        "end": 163,
+        "text": "Act"
+      },
+      {
+        "paragraph": 1,
+        "start": 584,
+        "end": 587,
+        "text": "Act"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "ticker": "LYNX",
+    "normalized": "457(o",
+    "forms": [
+      "457(o"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 556,
+        "end": 561,
+        "text": "457(o"
+      },
+      {
+        "paragraph": 0,
+        "start": 659,
+        "end": 664,
+        "text": "457(o"
+      },
+      {
+        "paragraph": 1,
+        "start": 556,
+        "end": 561,
+        "text": "457(o"
+      },
+      {
+        "paragraph": 1,
+        "start": 659,
+        "end": 664,
+        "text": "457(o"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "ticker": "LYNX",
+    "normalized": "rule",
+    "forms": [
+      "Rule"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 86,
+        "end": 90,
+        "text": "Rule"
+      },
+      {
+        "paragraph": 0,
+        "start": 551,
+        "end": 555,
+        "text": "Rule"
+      },
+      {
+        "paragraph": 1,
+        "start": 86,
+        "end": 90,
+        "text": "Rule"
+      },
+      {
+        "paragraph": 1,
+        "start": 551,
+        "end": 555,
+        "text": "Rule"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "ticker": "LYNX",
+    "normalized": "schedule ii",
+    "forms": [
+      "Schedule II"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 97,
+        "end": 108,
+        "text": "Schedule II"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "ticker": "LYNX",
+    "normalized": "price",
+    "forms": [
+      "price",
+      "Price"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 203,
+        "end": 208,
+        "text": "price"
+      },
+      {
+        "paragraph": 0,
+        "start": 621,
+        "end": 626,
+        "text": "Price"
+      },
+      {
+        "paragraph": 1,
+        "start": 203,
+        "end": 208,
+        "text": "price"
+      },
+      {
+        "paragraph": 1,
+        "start": 621,
+        "end": 626,
+        "text": "Price"
+      },
+      {
+        "paragraph": 2,
+        "start": 616,
+        "end": 621,
+        "text": "Price"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "ticker": "LYNX",
+    "normalized": "amended",
+    "forms": [
+      "amended"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 135,
+        "end": 142,
+        "text": "amended"
+      },
+      {
+        "paragraph": 1,
+        "start": 135,
+        "end": 142,
+        "text": "amended"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "ticker": "LYNX",
+    "normalized": "securities",
+    "forms": [
+      "Securities"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 108,
+        "end": 118,
+        "text": "Securities"
+      },
+      {
+        "paragraph": 0,
+        "start": 149,
+        "end": 159,
+        "text": "Securities"
+      },
+      {
+        "paragraph": 0,
+        "start": 573,
+        "end": 583,
+        "text": "Securities"
+      },
+      {
+        "paragraph": 1,
+        "start": 108,
+        "end": 118,
+        "text": "Securities"
+      },
+      {
+        "paragraph": 1,
+        "start": 149,
+        "end": 159,
+        "text": "Securities"
+      },
+      {
+        "paragraph": 1,
+        "start": 573,
+        "end": 583,
+        "text": "Securities"
+      },
+      {
+        "paragraph": 2,
+        "start": 218,
+        "end": 228,
+        "text": "Securities"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "ticker": "LYNX",
+    "normalized": "case",
+    "forms": [
+      "case"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 600,
+        "end": 604,
+        "text": "case"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "ticker": "LYNX",
+    "normalized": "converted",
+    "forms": [
+      "converted"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 677,
+        "end": 686,
+        "text": "converted"
+      },
+      {
+        "paragraph": 1,
+        "start": 677,
+        "end": 686,
+        "text": "converted"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "ticker": "BVN",
+    "normalized": "net taxable base",
+    "forms": [
+      "net taxable base"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 237,
+        "end": 253,
+        "text": "net taxable base"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "ticker": "BVN",
+    "normalized": "mining liability",
+    "forms": [
+      "mining liabilities"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 815,
+        "end": 833,
+        "text": "mining liabilities"
+      },
+      {
+        "paragraph": 1,
+        "start": 893,
+        "end": 911,
+        "text": "mining liabilities"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "ticker": "BVN",
+    "normalized": "transferred",
+    "forms": [
+      "transferred"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 444,
+        "end": 455,
+        "text": "transferred"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "ticker": "BVN",
+    "normalized": "manager",
+    "forms": [
+      "managers"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 671,
+        "end": 679,
+        "text": "managers"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "ticker": "BVN",
+    "normalized": "civilly",
+    "forms": [
+      "civilly"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 684,
+        "end": 691,
+        "text": "civilly"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "ticker": "BVN",
+    "normalized": "june",
+    "forms": [
+      "June"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 570,
+        "end": 574,
+        "text": "June"
+      },
+      {
+        "paragraph": 2,
+        "start": 628,
+        "end": 632,
+        "text": "June"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "ticker": "BVN",
+    "normalized": "pasivos ambientales de la",
+    "forms": [
+      "Pasivos Ambientales de la"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 105,
+        "end": 130,
+        "text": "Pasivos Ambientales de la"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "ticker": "BVN",
+    "normalized": "regulate",
+    "forms": [
+      "regulate"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 196,
+        "end": 204,
+        "text": "regulate"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "ticker": "BVN",
+    "normalized": "ley",
+    "forms": [
+      "Ley"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 86,
+        "end": 89,
+        "text": "Ley"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "ticker": "BVN",
+    "normalized": "pasivos",
+    "forms": [
+      "Pasivos"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 105,
+        "end": 112,
+        "text": "Pasivos"
+      },
+      {
+        "paragraph": 1,
+        "start": 1234,
+        "end": 1241,
+        "text": "Pasivos"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "ticker": "BVN",
+    "normalized": "closure plan",
+    "forms": [
+      "Closure Plan"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 941,
+        "end": 953,
+        "text": "Closure Plan"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "ticker": "BVN",
+    "normalized": "meets",
+    "forms": [
+      "meets"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 23,
+        "end": 28,
+        "text": "meets"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "ticker": "BVN",
+    "normalized": "que",
+    "forms": [
+      "que"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 90,
+        "end": 93,
+        "text": "que"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "ticker": "BVN",
+    "normalized": "willful",
+    "forms": [
+      "willful"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 438,
+        "end": 445,
+        "text": "willful"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "ticker": "BVN",
+    "normalized": "fund",
+    "forms": [
+      "Fund"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 500,
+        "end": 504,
+        "text": "Fund"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "ticker": "BVN",
+    "normalized": "regulations",
+    "forms": [
+      "Regulations"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 1157,
+        "end": 1168,
+        "text": "Regulations"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "ticker": "BVN",
+    "normalized": "worker",
+    "forms": [
+      "worker",
+      "Worker"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 23,
+        "end": 29,
+        "text": "worker"
+      },
+      {
+        "paragraph": 0,
+        "start": 74,
+        "end": 80,
+        "text": "Worker"
+      },
+      {
+        "paragraph": 0,
+        "start": 193,
+        "end": 199,
+        "text": "worker"
+      },
+      {
+        "paragraph": 0,
+        "start": 319,
+        "end": 325,
+        "text": "worker"
+      },
+      {
+        "paragraph": 0,
+        "start": 574,
+        "end": 580,
+        "text": "worker"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "ticker": "BVN",
+    "normalized": "government",
+    "forms": [
+      "Government"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 472,
+        "end": 482,
+        "text": "Government"
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "ticker": "BVN",
+    "normalized": "regulations of environmental liabilities of mining activities",
+    "forms": [
+      "Regulations of Environmental Liabilities of Mining Activities"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 1157,
+        "end": 1218,
+        "text": "Regulations of Environmental Liabilities of Mining Activities"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "ticker": "BVN",
+    "normalized": "law no",
+    "forms": [
+      "Law No"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 0,
+        "end": 6,
+        "text": "Law No"
+      },
+      {
+        "paragraph": 1,
+        "start": 465,
+        "end": 471,
+        "text": "Law No"
+      },
+      {
+        "paragraph": 1,
+        "start": 494,
+        "end": 500,
+        "text": "Law No"
+      },
+      {
+        "paragraph": 1,
+        "start": 1142,
+        "end": 1148,
+        "text": "Law No"
+      },
+      {
+        "paragraph": 2,
+        "start": 525,
+        "end": 531,
+        "text": "Law No"
+      },
+      {
+        "paragraph": 2,
+        "start": 599,
+        "end": 605,
+        "text": "Law No"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "ticker": "BVN",
+    "normalized": "identification",
+    "forms": [
+      "identification"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 209,
+        "end": 223,
+        "text": "identification"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "ticker": "BVN",
+    "normalized": "003-2009-em",
+    "forms": [
+      "003-2009-EM"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 1368,
+        "end": 1379,
+        "text": "003-2009-EM"
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "ticker": "BVN",
+    "normalized": "los",
+    "forms": [
+      "los"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 101,
+        "end": 104,
+        "text": "los"
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "ticker": "BVN",
+    "normalized": "negative",
+    "forms": [
+      "negative"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 349,
+        "end": 357,
+        "text": "negative"
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "ticker": "BVN",
+    "normalized": "study",
+    "forms": [
+      "studies"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 1030,
+        "end": 1037,
+        "text": "studies"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "ticker": "BVN",
+    "normalized": "linked",
+    "forms": [
+      "linked"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 726,
+        "end": 732,
+        "text": "linked"
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "ticker": "BVN",
+    "normalized": "mem",
+    "forms": [
+      "MEM"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 554,
+        "end": 557,
+        "text": "MEM"
+      },
+      {
+        "paragraph": 1,
+        "start": 1011,
+        "end": 1014,
+        "text": "MEM"
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "ticker": "BVN",
+    "normalized": "controlling",
+    "forms": [
+      "controlling"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 1016,
+        "end": 1027,
+        "text": "controlling"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "ticker": "BVN",
+    "normalized": "identify",
+    "forms": [
+      "identify"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 582,
+        "end": 590,
+        "text": "identify"
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "ticker": "BVN",
+    "normalized": "mining concession",
+    "forms": [
+      "mining concessions"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 791,
+        "end": 809,
+        "text": "mining concessions"
+      },
+      {
+        "paragraph": 1,
+        "start": 855,
+        "end": 873,
+        "text": "mining concessions"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "ticker": "BVN",
+    "normalized": "recognizes",
+    "forms": [
+      "recognizes"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 12,
+        "end": 22,
+        "text": "recognizes"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "ticker": "BVN",
+    "normalized": "called",
+    "forms": [
+      "called"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 34,
+        "end": 40,
+        "text": "called"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "ticker": "BVN",
+    "normalized": "national fund",
+    "forms": [
+      "National Fund"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 491,
+        "end": 504,
+        "text": "National Fund"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "ticker": "BVN",
+    "normalized": "regional government",
+    "forms": [
+      "Regional Government"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 463,
+        "end": 482,
+        "text": "Regional Government"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "ticker": "BVN",
+    "normalized": "board",
+    "forms": [
+      "Board"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 4,
+        "end": 9,
+        "text": "Board"
+      },
+      {
+        "paragraph": 2,
+        "start": 64,
+        "end": 69,
+        "text": "Board"
+      },
+      {
+        "paragraph": 2,
+        "start": 75,
+        "end": 80,
+        "text": "Board"
+      },
+      {
+        "paragraph": 2,
+        "start": 1264,
+        "end": 1269,
+        "text": "Board"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "ticker": "BVN",
+    "normalized": "liabilities",
+    "forms": [
+      "Liabilities"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 52,
+        "end": 63,
+        "text": "Liabilities"
+      },
+      {
+        "paragraph": 1,
+        "start": 1186,
+        "end": 1197,
+        "text": "Liabilities"
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "ticker": "BVN",
+    "normalized": "profit",
+    "forms": [
+      "profit"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 32,
+        "end": 38,
+        "text": "profit"
+      },
+      {
+        "paragraph": 0,
+        "start": 83,
+        "end": 89,
+        "text": "profit"
+      },
+      {
+        "paragraph": 0,
+        "start": 202,
+        "end": 208,
+        "text": "profit"
+      },
+      {
+        "paragraph": 0,
+        "start": 328,
+        "end": 334,
+        "text": "profit"
+      },
+      {
+        "paragraph": 0,
+        "start": 583,
+        "end": 589,
+        "text": "profit"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "ticker": "BVN",
+    "normalized": "activities",
+    "forms": [
+      "Activities"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 74,
+        "end": 84,
+        "text": "Activities"
+      },
+      {
+        "paragraph": 1,
+        "start": 1208,
+        "end": 1218,
+        "text": "Activities"
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "ticker": "BVN",
+    "normalized": "agree",
+    "forms": [
+      "agree"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 161,
+        "end": 166,
+        "text": "agree"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "ticker": "BVN",
+    "normalized": "willful misconduct",
+    "forms": [
+      "willful misconduct"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 438,
+        "end": 456,
+        "text": "willful misconduct"
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "ticker": "BVN",
+    "normalized": "residue",
+    "forms": [
+      "residue"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 697,
+        "end": 704,
+        "text": "residue"
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "ticker": "BVN",
+    "normalized": "amended",
+    "forms": [
+      "amended"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 483,
+        "end": 490,
+        "text": "amended"
+      },
+      {
+        "paragraph": 2,
+        "start": 588,
+        "end": 595,
+        "text": "amended"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "ticker": "SHEN",
+    "normalized": "reduced",
+    "forms": [
+      "reduced"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 289,
+        "end": 296,
+        "text": "reduced"
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "ticker": "SHEN",
+    "normalized": "cyber-related",
+    "forms": [
+      "cyber-related"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 488,
+        "end": 501,
+        "text": "cyber-related"
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "ticker": "SHEN",
+    "normalized": "fixed",
+    "forms": [
+      "fixed"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 526,
+        "end": 531,
+        "text": "fixed"
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "ticker": "SHEN",
+    "normalized": "supplier",
+    "forms": [
+      "suppliers"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 84,
+        "end": 93,
+        "text": "suppliers"
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "ticker": "SHEN",
+    "normalized": "such incident",
+    "forms": [
+      "such incidents"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 320,
+        "end": 334,
+        "text": "such incidents"
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "ticker": "SHEN",
+    "normalized": "video",
+    "forms": [
+      "video"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 331,
+        "end": 336,
+        "text": "video"
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "ticker": "SHEN",
+    "normalized": "customer service",
+    "forms": [
+      "customer service"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 860,
+        "end": 876,
+        "text": "customer service"
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "ticker": "SHEN",
+    "normalized": "fiber optic network",
+    "forms": [
+      "fiber optic networks"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 375,
+        "end": 395,
+        "text": "fiber optic networks"
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "ticker": "SHEN",
+    "normalized": "fiber",
+    "forms": [
+      "fiber"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 228,
+        "end": 233,
+        "text": "fiber"
+      },
+      {
+        "paragraph": 0,
+        "start": 375,
+        "end": 380,
+        "text": "fiber"
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "ticker": "SHEN",
+    "normalized": "significant",
+    "forms": [
+      "significant"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 659,
+        "end": 670,
+        "text": "significant"
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "ticker": "SHEN",
+    "normalized": "law enforcement act",
+    "forms": [
+      "Law Enforcement Act"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 567,
+        "end": 586,
+        "text": "Law Enforcement Act"
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "ticker": "SHEN",
+    "normalized": "frequent",
+    "forms": [
+      "frequent"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 279,
+        "end": 287,
+        "text": "frequent"
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "ticker": "SHEN",
+    "normalized": "wireless provider",
+    "forms": [
+      "wireless providers"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 631,
+        "end": 649,
+        "text": "wireless providers"
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "ticker": "SHEN",
+    "normalized": "required",
+    "forms": [
+      "required"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 400,
+        "end": 408,
+        "text": "required"
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "ticker": "SHEN",
+    "normalized": "business",
+    "forms": [
+      "businesses",
+      "business"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 76,
+        "end": 86,
+        "text": "businesses"
+      },
+      {
+        "paragraph": 2,
+        "start": 824,
+        "end": 832,
+        "text": "business"
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "ticker": "SHEN",
+    "normalized": "call completion",
+    "forms": [
+      "call completion"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 719,
+        "end": 734,
+        "text": "call completion"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "ticker": "SHEN",
+    "normalized": "impairment",
+    "forms": [
+      "impairment"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 810,
+        "end": 820,
+        "text": "impairment"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "ticker": "SHEN",
+    "normalized": "attack",
+    "forms": [
+      "attacks"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 231,
+        "end": 238,
+        "text": "attacks"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "ticker": "SHEN",
+    "normalized": "communications",
+    "forms": [
+      "Communications"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 537,
+        "end": 551,
+        "text": "Communications"
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "ticker": "SHEN",
+    "normalized": "party",
+    "forms": [
+      "party",
+      "parties"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 78,
+        "end": 83,
+        "text": "party"
+      },
+      {
+        "paragraph": 2,
+        "start": 470,
+        "end": 475,
+        "text": "party"
+      },
+      {
+        "paragraph": 2,
+        "start": 718,
+        "end": 725,
+        "text": "parties"
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "ticker": "SHEN",
+    "normalized": "generation",
+    "forms": [
+      "generation"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 674,
+        "end": 684,
+        "text": "generation"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "ticker": "SHEN",
+    "normalized": "911 emergency service",
+    "forms": [
+      "911 emergency services"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 509,
+        "end": 531,
+        "text": "911 emergency services"
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "ticker": "SHEN",
+    "normalized": "incumbent broadband passing",
+    "forms": [
+      "incumbent broadband passings"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 422,
+        "end": 450,
+        "text": "incumbent broadband passings"
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "ticker": "SHEN",
+    "normalized": "robocall mitigation",
+    "forms": [
+      "robocall mitigation"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 771,
+        "end": 790,
+        "text": "robocall mitigation"
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "ticker": "SHEN",
+    "normalized": "broadband service",
+    "forms": [
+      "broadband services"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 541,
+        "end": 559,
+        "text": "broadband services"
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "ticker": "SHEN",
+    "normalized": "third-party provider",
+    "forms": [
+      "third-party provider"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 464,
+        "end": 484,
+        "text": "third-party provider"
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "ticker": "SHEN",
+    "normalized": "apply",
+    "forms": [
+      "apply"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 464,
+        "end": 469,
+        "text": "apply"
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "ticker": "SHEN",
+    "normalized": "voip",
+    "forms": [
+      "VoIP"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 62,
+        "end": 66,
+        "text": "VoIP"
+      },
+      {
+        "paragraph": 1,
+        "start": 372,
+        "end": 376,
+        "text": "VoIP"
+      },
+      {
+        "paragraph": 1,
+        "start": 409,
+        "end": 413,
+        "text": "VoIP"
+      },
+      {
+        "paragraph": 1,
+        "start": 915,
+        "end": 919,
+        "text": "VoIP"
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "ticker": "SHEN",
+    "normalized": "consequence",
+    "forms": [
+      "consequences"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 400,
+        "end": 412,
+        "text": "consequences"
+      },
+      {
+        "paragraph": 2,
+        "start": 744,
+        "end": 756,
+        "text": "consequences"
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "ticker": "SHEN",
+    "normalized": "example",
+    "forms": [
+      "example"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 138,
+        "end": 145,
+        "text": "example"
+      },
+      {
+        "paragraph": 2,
+        "start": 731,
+        "end": 738,
+        "text": "example"
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "ticker": "SHEN",
+    "normalized": "property",
+    "forms": [
+      "property"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 800,
+        "end": 808,
+        "text": "property"
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "ticker": "SHEN",
+    "normalized": "harm",
+    "forms": [
+      "harm"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 898,
+        "end": 902,
+        "text": "harm"
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "ticker": "SHEN",
+    "normalized": "line",
+    "forms": [
+      "line"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 175,
+        "end": 179,
+        "text": "line"
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "ticker": "SHEN",
+    "normalized": "additional obligation",
+    "forms": [
+      "additional obligations"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 885,
+        "end": 907,
+        "text": "additional obligations"
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "ticker": "SHEN",
+    "normalized": "cyber-attack",
+    "forms": [
+      "cyber-attacks"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 225,
+        "end": 238,
+        "text": "cyber-attacks"
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "ticker": "SHEN",
+    "normalized": "based",
+    "forms": [
+      "based"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 245,
+        "end": 250,
+        "text": "based"
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "ticker": "SHEN",
+    "normalized": "increasingly complex and cyber-attack",
+    "forms": [
+      "increasingly complex and cyber-attacks"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 200,
+        "end": 238,
+        "text": "increasingly complex and cyber-attacks"
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "ticker": "SHEN",
+    "normalized": "other malicious actor",
+    "forms": [
+      "other malicious actor"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 628,
+        "end": 649,
+        "text": "other malicious actor"
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "ticker": "SHEN",
+    "normalized": "communications assistance",
+    "forms": [
+      "Communications Assistance"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 537,
+        "end": 562,
+        "text": "Communications Assistance"
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "ticker": "SHEN",
+    "normalized": "regulatory fee",
+    "forms": [
+      "regulatory fees"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 792,
+        "end": 807,
+        "text": "regulatory fees"
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "ticker": "SHEN",
+    "normalized": "operational",
+    "forms": [
+      "operational"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 513,
+        "end": 524,
+        "text": "operational"
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "ticker": "SHEN",
+    "normalized": "network",
+    "forms": [
+      "networks",
+      "network"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 251,
+        "end": 259,
+        "text": "networks"
+      },
+      {
+        "paragraph": 0,
+        "start": 387,
+        "end": 395,
+        "text": "networks"
+      },
+      {
+        "paragraph": 0,
+        "start": 685,
+        "end": 692,
+        "text": "network"
+      },
+      {
+        "paragraph": 1,
+        "start": 697,
+        "end": 704,
+        "text": "network"
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "ticker": "NKE",
+    "normalized": "technology and consumer preference",
+    "forms": [
+      "technology and consumer preferences"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 555,
+        "end": 590,
+        "text": "technology and consumer preferences"
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "ticker": "NKE",
+    "normalized": "subject",
+    "forms": [
+      "subject"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 463,
+        "end": 470,
+        "text": "subject"
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "ticker": "NKE",
+    "normalized": "selling",
+    "forms": [
+      "selling"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 87,
+        "end": 94,
+        "text": "selling"
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "ticker": "NKE",
+    "normalized": "experience",
+    "forms": [
+      "experiences"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 628,
+        "end": 639,
+        "text": "experiences"
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "ticker": "NKE",
+    "normalized": "industry",
+    "forms": [
+      "industry"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 45,
+        "end": 53,
+        "text": "industry"
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "ticker": "NKE",
+    "normalized": "principal business activity",
+    "forms": [
+      "principal business activity"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 4,
+        "end": 31,
+        "text": "principal business activity"
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "ticker": "NKE",
+    "normalized": "rate",
+    "forms": [
+      "rates"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 479,
+        "end": 484,
+        "text": "rates"
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "ticker": "NKE",
+    "normalized": "train",
+    "forms": [
+      "train"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 337,
+        "end": 342,
+        "text": "train"
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "ticker": "NKE",
+    "normalized": "technology",
+    "forms": [
+      "technology"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 555,
+        "end": 565,
+        "text": "technology"
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "ticker": "NKE",
+    "normalized": "athletic and leisure apparel company",
+    "forms": [
+      "athletic and leisure apparel companies"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 195,
+        "end": 233,
+        "text": "athletic and leisure apparel companies"
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "ticker": "NKE",
+    "normalized": "internationally",
+    "forms": [
+      "internationally"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 109,
+        "end": 124,
+        "text": "internationally"
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "ticker": "NKE",
+    "normalized": "offer",
+    "forms": [
+      "offer"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 588,
+        "end": 593,
+        "text": "offer"
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "ticker": "NKE",
+    "normalized": "lululemon athletica",
+    "forms": [
+      "lululemon athletica"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 413,
+        "end": 432,
+        "text": "lululemon athletica"
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "ticker": "NKE",
+    "normalized": "include",
+    "forms": [
+      "include"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 459,
+        "end": 466,
+        "text": "include"
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "ticker": "NKE",
+    "normalized": "li ning",
+    "forms": [
+      "Li Ning"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 404,
+        "end": 411,
+        "text": "Li Ning"
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "ticker": "NKE",
+    "normalized": "item",
+    "forms": [
+      "Item"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 739,
+        "end": 743,
+        "text": "Item"
+      },
+      {
+        "paragraph": 2,
+        "start": 86,
+        "end": 90,
+        "text": "Item"
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "ticker": "NKE",
+    "normalized": "retain",
+    "forms": [
+      "retain"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 355,
+        "end": 361,
+        "text": "retain"
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "ticker": "NKE",
+    "normalized": "ability",
+    "forms": [
+      "ability"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 288,
+        "end": 295,
+        "text": "ability"
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "ticker": "NKE",
+    "normalized": "owned",
+    "forms": [
+      "owned"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 323,
+        "end": 328,
+        "text": "owned"
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "ticker": "NKE",
+    "normalized": "comprised",
+    "forms": [
+      "comprised"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 300,
+        "end": 309,
+        "text": "comprised"
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "ticker": "NKE",
+    "normalized": "principal material",
+    "forms": [
+      "principal materials"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 4,
+        "end": 23,
+        "text": "principal materials"
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "ticker": "NKE",
+    "normalized": "number",
+    "forms": [
+      "number"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 144,
+        "end": 150,
+        "text": "number"
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "ticker": "NKE",
+    "normalized": "distributor",
+    "forms": [
+      "distributors"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 488,
+        "end": 500,
+        "text": "distributors"
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "ticker": "NKE",
+    "normalized": "regulated",
+    "forms": [
+      "regulated"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 531,
+        "end": 540,
+        "text": "regulated"
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "ticker": "NKE",
+    "normalized": "sale",
+    "forms": [
+      "sales"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 347,
+        "end": 352,
+        "text": "sales"
+      },
+      {
+        "paragraph": 0,
+        "start": 516,
+        "end": 521,
+        "text": "sales"
+      }
+    ]
+  },
+  {
+    "id": 152,
+    "ticker": "NKE",
+    "normalized": "rapid change",
+    "forms": [
+      "rapid changes"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 538,
+        "end": 551,
+        "text": "rapid changes"
+      }
+    ]
+  },
+  {
+    "id": 153,
+    "ticker": "NKE",
+    "normalized": "significant number",
+    "forms": [
+      "significant number"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 132,
+        "end": 150,
+        "text": "significant number"
+      }
+    ]
+  },
+  {
+    "id": 154,
+    "ticker": "NKE",
+    "normalized": "equipment",
+    "forms": [
+      "equipment"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 126,
+        "end": 135,
+        "text": "equipment"
+      },
+      {
+        "paragraph": 0,
+        "start": 746,
+        "end": 755,
+        "text": "equipment"
+      },
+      {
+        "paragraph": 1,
+        "start": 35,
+        "end": 44,
+        "text": "equipment"
+      },
+      {
+        "paragraph": 1,
+        "start": 242,
+        "end": 251,
+        "text": "equipment"
+      },
+      {
+        "paragraph": 1,
+        "start": 353,
+        "end": 362,
+        "text": "equipment"
+      },
+      {
+        "paragraph": 1,
+        "start": 665,
+        "end": 674,
+        "text": "equipment"
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "ticker": "NKE",
+    "normalized": "li",
+    "forms": [
+      "Li"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 404,
+        "end": 406,
+        "text": "Li"
+      }
+    ]
+  },
+  {
+    "id": 156,
+    "ticker": "NKE",
+    "normalized": "digital",
+    "forms": [
+      "digital",
+      "Digital"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 365,
+        "end": 372,
+        "text": "digital"
+      },
+      {
+        "paragraph": 0,
+        "start": 416,
+        "end": 423,
+        "text": "Digital"
+      }
+    ]
+  },
+  {
+    "id": 157,
+    "ticker": "NKE",
+    "normalized": "platform",
+    "forms": [
+      "platforms"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 373,
+        "end": 382,
+        "text": "platforms"
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "ticker": "NKE",
+    "normalized": "factor",
+    "forms": [
+      "factors"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 703,
+        "end": 710,
+        "text": "factors"
+      }
+    ]
+  },
+  {
+    "id": 159,
+    "ticker": "NKE",
+    "normalized": "item 1",
+    "forms": [
+      "Item 1"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 86,
+        "end": 92,
+        "text": "Item 1"
+      }
+    ]
+  },
+  {
+    "id": 160,
+    "ticker": "NKE",
+    "normalized": "nike-owned retail store",
+    "forms": [
+      "NIKE-owned retail stores"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 318,
+        "end": 342,
+        "text": "NIKE-owned retail stores"
+      }
+    ]
+  },
+  {
+    "id": 161,
+    "ticker": "NKE",
+    "normalized": "1a.",
+    "forms": [
+      "1A."
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 744,
+        "end": 747,
+        "text": "1A."
+      }
+    ]
+  },
+  {
+    "id": 162,
+    "ticker": "NKE",
+    "normalized": "worldwide marketing",
+    "forms": [
+      "worldwide marketing"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 63,
+        "end": 82,
+        "text": "worldwide marketing"
+      }
+    ]
+  },
+  {
+    "id": 163,
+    "ticker": "NKE",
+    "normalized": "change",
+    "forms": [
+      "changes"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 544,
+        "end": 551,
+        "text": "changes"
+      }
+    ]
+  },
+  {
+    "id": 164,
+    "ticker": "NKE",
+    "normalized": "seller",
+    "forms": [
+      "seller"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 183,
+        "end": 189,
+        "text": "seller"
+      }
+    ]
+  },
+  {
+    "id": 165,
+    "ticker": "NKE",
+    "normalized": "nike",
+    "forms": [
+      "NIKE"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 163,
+        "end": 167,
+        "text": "NIKE"
+      },
+      {
+        "paragraph": 0,
+        "start": 266,
+        "end": 270,
+        "text": "NIKE"
+      },
+      {
+        "paragraph": 0,
+        "start": 318,
+        "end": 322,
+        "text": "NIKE"
+      },
+      {
+        "paragraph": 0,
+        "start": 405,
+        "end": 409,
+        "text": "NIKE"
+      },
+      {
+        "paragraph": 2,
+        "start": 382,
+        "end": 386,
+        "text": "NIKE"
+      }
+    ]
+  },
+  {
+    "id": 166,
+    "ticker": "NKE",
+    "normalized": "leisure footwear",
+    "forms": [
+      "leisure footwear"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 323,
+        "end": 339,
+        "text": "leisure footwear"
+      },
+      {
+        "paragraph": 1,
+        "start": 623,
+        "end": 639,
+        "text": "leisure footwear"
+      }
+    ]
+  },
+  {
+    "id": 167,
+    "ticker": "NKE",
+    "normalized": "accessory",
+    "forms": [
+      "accessories"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 137,
+        "end": 148,
+        "text": "accessories"
+      }
+    ]
+  },
+  {
+    "id": 168,
+    "ticker": "NKE",
+    "normalized": "raw material",
+    "forms": [
+      "raw materials"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 441,
+        "end": 454,
+        "text": "raw materials"
+      }
+    ]
+  },
+  {
+    "id": 169,
+    "ticker": "KLC",
+    "normalized": "company's unaudited condensed consolidated balance sheet",
+    "forms": [
+      "Company's unaudited condensed consolidated balance sheets"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 825,
+        "end": 882,
+        "text": "Company's unaudited condensed consolidated balance sheets"
+      }
+    ]
+  },
+  {
+    "id": 170,
+    "ticker": "KLC",
+    "normalized": "early",
+    "forms": [
+      "early"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 88,
+        "end": 93,
+        "text": "early"
+      }
+    ]
+  },
+  {
+    "id": 171,
+    "ticker": "KLC",
+    "normalized": "gain",
+    "forms": [
+      "gains"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 451,
+        "end": 456,
+        "text": "gains"
+      },
+      {
+        "paragraph": 1,
+        "start": 1049,
+        "end": 1054,
+        "text": "gains"
+      }
+    ]
+  },
+  {
+    "id": 172,
+    "ticker": "KLC",
+    "normalized": "hosted",
+    "forms": [
+      "hosted"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 521,
+        "end": 527,
+        "text": "hosted"
+      },
+      {
+        "paragraph": 2,
+        "start": 650,
+        "end": 656,
+        "text": "hosted"
+      }
+    ]
+  },
+  {
+    "id": 173,
+    "ticker": "KLC",
+    "normalized": "secure transmission",
+    "forms": [
+      "secure transmission"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 216,
+        "end": 235,
+        "text": "secure transmission"
+      }
+    ]
+  },
+  {
+    "id": 174,
+    "ticker": "KLC",
+    "normalized": "realized",
+    "forms": [
+      "realized"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 416,
+        "end": 424,
+        "text": "realized"
+      }
+    ]
+  },
+  {
+    "id": 175,
+    "ticker": "KLC",
+    "normalized": "failure",
+    "forms": [
+      "failures"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 778,
+        "end": 786,
+        "text": "failures"
+      },
+      {
+        "paragraph": 2,
+        "start": 960,
+        "end": 968,
+        "text": "failures"
+      }
+    ]
+  },
+  {
+    "id": 176,
+    "ticker": "KLC",
+    "normalized": "center",
+    "forms": [
+      "centers",
+      "center"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 114,
+        "end": 121,
+        "text": "centers"
+      },
+      {
+        "paragraph": 0,
+        "start": 219,
+        "end": 226,
+        "text": "centers"
+      },
+      {
+        "paragraph": 0,
+        "start": 551,
+        "end": 557,
+        "text": "center"
+      },
+      {
+        "paragraph": 0,
+        "start": 1411,
+        "end": 1418,
+        "text": "centers"
+      },
+      {
+        "paragraph": 2,
+        "start": 78,
+        "end": 85,
+        "text": "centers"
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "ticker": "KLC",
+    "normalized": "probability",
+    "forms": [
+      "probability"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 471,
+        "end": 482,
+        "text": "probability"
+      }
+    ]
+  },
+  {
+    "id": 178,
+    "ticker": "KLC",
+    "normalized": "additional",
+    "forms": [
+      "additional"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1077,
+        "end": 1087,
+        "text": "additional"
+      },
+      {
+        "paragraph": 1,
+        "start": 1238,
+        "end": 1248,
+        "text": "additional"
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "ticker": "KLC",
+    "normalized": "fiscal year ended january 3, 2026",
+    "forms": [
+      "fiscal year ended January 3, 2026",
+      "fiscal years ended January 3, 2026"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 29,
+        "end": 62,
+        "text": "fiscal year ended January 3, 2026"
+      },
+      {
+        "paragraph": 1,
+        "start": 1114,
+        "end": 1148,
+        "text": "fiscal years ended January 3, 2026"
+      }
+    ]
+  },
+  {
+    "id": 180,
+    "ticker": "KLC",
+    "normalized": "secure",
+    "forms": [
+      "secure"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 216,
+        "end": 222,
+        "text": "secure"
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "ticker": "KLC",
+    "normalized": "recognized",
+    "forms": [
+      "recognized"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 936,
+        "end": 946,
+        "text": "recognized"
+      },
+      {
+        "paragraph": 1,
+        "start": 927,
+        "end": 937,
+        "text": "recognized"
+      }
+    ]
+  },
+  {
+    "id": 182,
+    "ticker": "KLC",
+    "normalized": "mobile application",
+    "forms": [
+      "mobile application"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 388,
+        "end": 406,
+        "text": "mobile application"
+      },
+      {
+        "paragraph": 2,
+        "start": 499,
+        "end": 517,
+        "text": "mobile application"
+      },
+      {
+        "paragraph": 2,
+        "start": 810,
+        "end": 828,
+        "text": "mobile application"
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "ticker": "KLC",
+    "normalized": "application",
+    "forms": [
+      "applications",
+      "application"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 113,
+        "end": 125,
+        "text": "applications"
+      },
+      {
+        "paragraph": 2,
+        "start": 395,
+        "end": 406,
+        "text": "application"
+      },
+      {
+        "paragraph": 2,
+        "start": 506,
+        "end": 517,
+        "text": "application"
+      },
+      {
+        "paragraph": 2,
+        "start": 817,
+        "end": 828,
+        "text": "application"
+      },
+      {
+        "paragraph": 2,
+        "start": 875,
+        "end": 886,
+        "text": "application"
+      }
+    ]
+  },
+  {
+    "id": 184,
+    "ticker": "KLC",
+    "normalized": "closing",
+    "forms": [
+      "closing"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1238,
+        "end": 1245,
+        "text": "closing"
+      }
+    ]
+  },
+  {
+    "id": 185,
+    "ticker": "KLC",
+    "normalized": "provider",
+    "forms": [
+      "providers"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 1008,
+        "end": 1017,
+        "text": "providers"
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "ticker": "KLC",
+    "normalized": "excluded",
+    "forms": [
+      "excluded"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 98,
+        "end": 106,
+        "text": "excluded"
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "ticker": "KLC",
+    "normalized": "date",
+    "forms": [
+      "date",
+      "dates"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 618,
+        "end": 622,
+        "text": "date"
+      },
+      {
+        "paragraph": 0,
+        "start": 1246,
+        "end": 1250,
+        "text": "date"
+      },
+      {
+        "paragraph": 0,
+        "start": 1616,
+        "end": 1621,
+        "text": "dates"
+      }
+    ]
+  },
+  {
+    "id": 188,
+    "ticker": "KLC",
+    "normalized": "occur",
+    "forms": [
+      "occur"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 468,
+        "end": 473,
+        "text": "occur"
+      }
+    ]
+  },
+  {
+    "id": 189,
+    "ticker": "KLC",
+    "normalized": "related acquired center",
+    "forms": [
+      "related acquired center"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 534,
+        "end": 557,
+        "text": "related acquired center"
+      }
+    ]
+  },
+  {
+    "id": 190,
+    "ticker": "KLC",
+    "normalized": "401(k",
+    "forms": [
+      "401(k"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 133,
+        "end": 138,
+        "text": "401(k"
+      }
+    ]
+  },
+  {
+    "id": 191,
+    "ticker": "KLC",
+    "normalized": "adversely",
+    "forms": [
+      "adversely"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 1269,
+        "end": 1278,
+        "text": "adversely"
+      }
+    ]
+  },
+  {
+    "id": 192,
+    "ticker": "KLC",
+    "normalized": "condensed",
+    "forms": [
+      "condensed"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 845,
+        "end": 854,
+        "text": "condensed"
+      }
+    ]
+  },
+  {
+    "id": 193,
+    "ticker": "KLC",
+    "normalized": "adjustment",
+    "forms": [
+      "adjustments"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 559,
+        "end": 570,
+        "text": "adjustments"
+      }
+    ]
+  },
+  {
+    "id": 194,
+    "ticker": "KLC",
+    "normalized": "fair",
+    "forms": [
+      "fair",
+      "Fair"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 412,
+        "end": 416,
+        "text": "fair"
+      },
+      {
+        "paragraph": 0,
+        "start": 1048,
+        "end": 1052,
+        "text": "Fair"
+      }
+    ]
+  },
+  {
+    "id": 195,
+    "ticker": "KLC",
+    "normalized": "ability",
+    "forms": [
+      "ability"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 149,
+        "end": 156,
+        "text": "ability"
+      },
+      {
+        "paragraph": 2,
+        "start": 1191,
+        "end": 1198,
+        "text": "ability"
+      }
+    ]
+  },
+  {
+    "id": 196,
+    "ticker": "KLC",
+    "normalized": "company's contingent consideration",
+    "forms": [
+      "Company's contingent consideration"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1115,
+        "end": 1149,
+        "text": "Company's contingent consideration"
+      }
+    ]
+  },
+  {
+    "id": 197,
+    "ticker": "KLC",
+    "normalized": "agreement",
+    "forms": [
+      "agreement"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 694,
+        "end": 703,
+        "text": "agreement"
+      }
+    ]
+  },
+  {
+    "id": 198,
+    "ticker": "KLC",
+    "normalized": "term liability",
+    "forms": [
+      "term liabilities"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 801,
+        "end": 817,
+        "text": "term liabilities"
+      }
+    ]
+  },
+  {
+    "id": 199,
+    "ticker": "KLC",
+    "normalized": "incident",
+    "forms": [
+      "incidents"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 947,
+        "end": 956,
+        "text": "incidents"
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "ticker": "KLC",
+    "normalized": "affect",
+    "forms": [
+      "affect"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 1279,
+        "end": 1285,
+        "text": "affect"
+      }
+    ]
+  },
+  {
+    "id": 201,
+    "ticker": "KLC",
+    "normalized": "acquired",
+    "forms": [
+      "acquired"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 76,
+        "end": 84,
+        "text": "acquired"
+      },
+      {
+        "paragraph": 0,
+        "start": 232,
+        "end": 240,
+        "text": "acquired"
+      },
+      {
+        "paragraph": 0,
+        "start": 542,
+        "end": 550,
+        "text": "acquired"
+      },
+      {
+        "paragraph": 0,
+        "start": 1402,
+        "end": 1410,
+        "text": "acquired"
+      }
+    ]
+  },
+  {
+    "id": 202,
+    "ticker": "KLC",
+    "normalized": "separate",
+    "forms": [
+      "separate"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 128,
+        "end": 136,
+        "text": "separate"
+      }
+    ]
+  },
+  {
+    "id": 203,
+    "ticker": "KLC",
+    "normalized": "company",
+    "forms": [
+      "Company"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 68,
+        "end": 75,
+        "text": "Company"
+      },
+      {
+        "paragraph": 0,
+        "start": 825,
+        "end": 832,
+        "text": "Company"
+      },
+      {
+        "paragraph": 0,
+        "start": 1115,
+        "end": 1122,
+        "text": "Company"
+      },
+      {
+        "paragraph": 0,
+        "start": 1256,
+        "end": 1263,
+        "text": "Company"
+      },
+      {
+        "paragraph": 0,
+        "start": 1451,
+        "end": 1458,
+        "text": "Company"
+      },
+      {
+        "paragraph": 1,
+        "start": 46,
+        "end": 53,
+        "text": "Company"
+      },
+      {
+        "paragraph": 1,
+        "start": 179,
+        "end": 186,
+        "text": "Company"
+      },
+      {
+        "paragraph": 1,
+        "start": 319,
+        "end": 326,
+        "text": "Company"
+      },
+      {
+        "paragraph": 1,
+        "start": 479,
+        "end": 486,
+        "text": "Company"
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "ticker": "KLC",
+    "normalized": "million",
+    "forms": [
+      "million"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 274,
+        "end": 281,
+        "text": "million"
+      },
+      {
+        "paragraph": 0,
+        "start": 326,
+        "end": 333,
+        "text": "million"
+      },
+      {
+        "paragraph": 0,
+        "start": 368,
+        "end": 375,
+        "text": "million"
+      },
+      {
+        "paragraph": 0,
+        "start": 399,
+        "end": 406,
+        "text": "million"
+      },
+      {
+        "paragraph": 0,
+        "start": 729,
+        "end": 736,
+        "text": "million"
+      },
+      {
+        "paragraph": 0,
+        "start": 1291,
+        "end": 1298,
+        "text": "million"
+      },
+      {
+        "paragraph": 0,
+        "start": 1363,
+        "end": 1370,
+        "text": "million"
+      },
+      {
+        "paragraph": 1,
+        "start": 1063,
+        "end": 1070,
+        "text": "million"
+      },
+      {
+        "paragraph": 1,
+        "start": 1077,
+        "end": 1084,
+        "text": "million"
+      },
+      {
+        "paragraph": 1,
+        "start": 1095,
+        "end": 1102,
+        "text": "million"
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "ticker": "KLC",
+    "normalized": "fiscal year",
+    "forms": [
+      "fiscal year",
+      "fiscal years"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 29,
+        "end": 40,
+        "text": "fiscal year"
+      },
+      {
+        "paragraph": 1,
+        "start": 1114,
+        "end": 1126,
+        "text": "fiscal years"
+      }
+    ]
+  },
+  {
+    "id": 206,
+    "ticker": "KLC",
+    "normalized": "website",
+    "forms": [
+      "website"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 411,
+        "end": 418,
+        "text": "website"
+      },
+      {
+        "paragraph": 2,
+        "start": 629,
+        "end": 636,
+        "text": "website"
+      },
+      {
+        "paragraph": 2,
+        "start": 830,
+        "end": 837,
+        "text": "website"
+      }
+    ]
+  },
+  {
+    "id": 207,
+    "ticker": "KLC",
+    "normalized": "payable",
+    "forms": [
+      "payable"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 575,
+        "end": 582,
+        "text": "payable"
+      },
+      {
+        "paragraph": 0,
+        "start": 661,
+        "end": 668,
+        "text": "payable"
+      },
+      {
+        "paragraph": 0,
+        "start": 763,
+        "end": 770,
+        "text": "payable"
+      },
+      {
+        "paragraph": 0,
+        "start": 1150,
+        "end": 1157,
+        "text": "payable"
+      }
+    ]
+  },
+  {
+    "id": 208,
+    "ticker": "KLC",
+    "normalized": "participate",
+    "forms": [
+      "participate"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 160,
+        "end": 171,
+        "text": "participate"
+      }
+    ]
+  },
+  {
+    "id": 209,
+    "ticker": "KLC",
+    "normalized": "overall",
+    "forms": [
+      "overall"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1461,
+        "end": 1468,
+        "text": "overall"
+      }
+    ]
+  },
+  {
+    "id": 210,
+    "ticker": "KLC",
+    "normalized": "development",
+    "forms": [
+      "development"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 578,
+        "end": 589,
+        "text": "development"
+      }
+    ]
+  },
+  {
+    "id": 211,
+    "ticker": "BKR",
+    "normalized": "capital management effort",
+    "forms": [
+      "capital management efforts"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 184,
+        "end": 210,
+        "text": "capital management efforts"
+      }
+    ]
+  },
+  {
+    "id": 212,
+    "ticker": "BKR",
+    "normalized": "perform",
+    "forms": [
+      "perform"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 821,
+        "end": 828,
+        "text": "perform"
+      }
+    ]
+  },
+  {
+    "id": 213,
+    "ticker": "BKR",
+    "normalized": "scale",
+    "forms": [
+      "scale"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 838,
+        "end": 843,
+        "text": "scale"
+      }
+    ]
+  },
+  {
+    "id": 214,
+    "ticker": "BKR",
+    "normalized": "development",
+    "forms": [
+      "development"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 384,
+        "end": 395,
+        "text": "development"
+      }
+    ]
+  },
+  {
+    "id": 215,
+    "ticker": "BKR",
+    "normalized": "harsh",
+    "forms": [
+      "harsh"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 46,
+        "end": 51,
+        "text": "harsh"
+      }
+    ]
+  },
+  {
+    "id": 216,
+    "ticker": "BKR",
+    "normalized": "capital structure",
+    "forms": [
+      "capital structure"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1261,
+        "end": 1278,
+        "text": "capital structure"
+      }
+    ]
+  },
+  {
+    "id": 217,
+    "ticker": "BKR",
+    "normalized": "responsible",
+    "forms": [
+      "responsible"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 859,
+        "end": 870,
+        "text": "responsible"
+      }
+    ]
+  },
+  {
+    "id": 218,
+    "ticker": "BKR",
+    "normalized": "generation",
+    "forms": [
+      "generation"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 432,
+        "end": 442,
+        "text": "generation"
+      }
+    ]
+  },
+  {
+    "id": 219,
+    "ticker": "BKR",
+    "normalized": "advanced",
+    "forms": [
+      "advanced"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 154,
+        "end": 162,
+        "text": "advanced"
+      },
+      {
+        "paragraph": 1,
+        "start": 174,
+        "end": 182,
+        "text": "advanced"
+      },
+      {
+        "paragraph": 1,
+        "start": 272,
+        "end": 280,
+        "text": "advanced"
+      },
+      {
+        "paragraph": 1,
+        "start": 649,
+        "end": 657,
+        "text": "advanced"
+      }
+    ]
+  },
+  {
+    "id": 220,
+    "ticker": "BKR",
+    "normalized": "bently",
+    "forms": [
+      "Bently"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 848,
+        "end": 854,
+        "text": "Bently"
+      }
+    ]
+  },
+  {
+    "id": 221,
+    "ticker": "BKR",
+    "normalized": "bid",
+    "forms": [
+      "bids"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 154,
+        "end": 158,
+        "text": "bids"
+      },
+      {
+        "paragraph": 2,
+        "start": 935,
+        "end": 939,
+        "text": "bids"
+      }
+    ]
+  },
+  {
+    "id": 222,
+    "ticker": "BKR",
+    "normalized": "new inspection technology",
+    "forms": [
+      "new inspection technologies"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 1220,
+        "end": 1247,
+        "text": "new inspection technologies"
+      }
+    ]
+  },
+  {
+    "id": 223,
+    "ticker": "BKR",
+    "normalized": "financial",
+    "forms": [
+      "financial"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1152,
+        "end": 1161,
+        "text": "financial"
+      }
+    ]
+  },
+  {
+    "id": 224,
+    "ticker": "BKR",
+    "normalized": "future contract bid",
+    "forms": [
+      "future contract bids"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 919,
+        "end": 939,
+        "text": "future contract bids"
+      }
+    ]
+  },
+  {
+    "id": 225,
+    "ticker": "BKR",
+    "normalized": "manufacturing",
+    "forms": [
+      "manufacturing"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 183,
+        "end": 196,
+        "text": "manufacturing"
+      }
+    ]
+  },
+  {
+    "id": 226,
+    "ticker": "BKR",
+    "normalized": "novel",
+    "forms": [
+      "novel"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 211,
+        "end": 216,
+        "text": "novel"
+      }
+    ]
+  },
+  {
+    "id": 227,
+    "ticker": "BKR",
+    "normalized": "customer",
+    "forms": [
+      "customers",
+      "customer"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 1094,
+        "end": 1103,
+        "text": "customers"
+      },
+      {
+        "paragraph": 2,
+        "start": 118,
+        "end": 127,
+        "text": "customers"
+      },
+      {
+        "paragraph": 2,
+        "start": 132,
+        "end": 140,
+        "text": "customer"
+      }
+    ]
+  },
+  {
+    "id": 228,
+    "ticker": "BKR",
+    "normalized": "material",
+    "forms": [
+      "materials"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 163,
+        "end": 172,
+        "text": "materials"
+      },
+      {
+        "paragraph": 1,
+        "start": 1281,
+        "end": 1290,
+        "text": "materials"
+      }
+    ]
+  },
+  {
+    "id": 229,
+    "ticker": "BKR",
+    "normalized": "iet",
+    "forms": [
+      "IET"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 3,
+        "end": 6,
+        "text": "IET"
+      },
+      {
+        "paragraph": 1,
+        "start": 965,
+        "end": 968,
+        "text": "IET"
+      }
+    ]
+  },
+  {
+    "id": 230,
+    "ticker": "BKR",
+    "normalized": "solution",
+    "forms": [
+      "solutions"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 666,
+        "end": 675,
+        "text": "solutions"
+      },
+      {
+        "paragraph": 1,
+        "start": 1317,
+        "end": 1326,
+        "text": "solutions"
+      }
+    ]
+  },
+  {
+    "id": 231,
+    "ticker": "BKR",
+    "normalized": "transition",
+    "forms": [
+      "transition"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 116,
+        "end": 126,
+        "text": "transition"
+      }
+    ]
+  },
+  {
+    "id": 232,
+    "ticker": "BKR",
+    "normalized": "system",
+    "forms": [
+      "systems"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 911,
+        "end": 918,
+        "text": "systems"
+      }
+    ]
+  },
+  {
+    "id": 233,
+    "ticker": "BKR",
+    "normalized": "ccus",
+    "forms": [
+      "CCUS"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 555,
+        "end": 559,
+        "text": "CCUS"
+      }
+    ]
+  },
+  {
+    "id": 234,
+    "ticker": "BKR",
+    "normalized": "continue",
+    "forms": [
+      "continue"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 11,
+        "end": 19,
+        "text": "continue"
+      }
+    ]
+  },
+  {
+    "id": 235,
+    "ticker": "BKR",
+    "normalized": "committee",
+    "forms": [
+      "Committee"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 255,
+        "end": 264,
+        "text": "Committee"
+      },
+      {
+        "paragraph": 0,
+        "start": 511,
+        "end": 520,
+        "text": "Committee"
+      },
+      {
+        "paragraph": 0,
+        "start": 944,
+        "end": 953,
+        "text": "Committee"
+      },
+      {
+        "paragraph": 0,
+        "start": 1116,
+        "end": 1125,
+        "text": "Committee"
+      }
+    ]
+  },
+  {
+    "id": 236,
+    "ticker": "BKR",
+    "normalized": "latest",
+    "forms": [
+      "latest"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 425,
+        "end": 431,
+        "text": "latest"
+      }
+    ]
+  },
+  {
+    "id": 237,
+    "ticker": "BKR",
+    "normalized": "drilling industry",
+    "forms": [
+      "drilling industry"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 353,
+        "end": 370,
+        "text": "drilling industry"
+      }
+    ]
+  },
+  {
+    "id": 238,
+    "ticker": "BKR",
+    "normalized": "condition",
+    "forms": [
+      "conditions"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 781,
+        "end": 791,
+        "text": "conditions"
+      }
+    ]
+  },
+  {
+    "id": 239,
+    "ticker": "BKR",
+    "normalized": "full-scale testing",
+    "forms": [
+      "full-scale testing"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 833,
+        "end": 851,
+        "text": "full-scale testing"
+      }
+    ]
+  },
+  {
+    "id": 240,
+    "ticker": "BKR",
+    "normalized": "sensing",
+    "forms": [
+      "sensing"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 281,
+        "end": 288,
+        "text": "sensing"
+      }
+    ]
+  },
+  {
+    "id": 241,
+    "ticker": "BKR",
+    "normalized": "reduced",
+    "forms": [
+      "reduced"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 485,
+        "end": 492,
+        "text": "reduced"
+      }
+    ]
+  },
+  {
+    "id": 242,
+    "ticker": "BKR",
+    "normalized": "issue",
+    "forms": [
+      "issues"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 780,
+        "end": 786,
+        "text": "issues"
+      }
+    ]
+  },
+  {
+    "id": 243,
+    "ticker": "BKR",
+    "normalized": "severe service application",
+    "forms": [
+      "severe service applications"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 70,
+        "end": 97,
+        "text": "severe service applications"
+      }
+    ]
+  },
+  {
+    "id": 244,
+    "ticker": "BKR",
+    "normalized": "privacy",
+    "forms": [
+      "privacy"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 831,
+        "end": 838,
+        "text": "privacy"
+      },
+      {
+        "paragraph": 0,
+        "start": 1057,
+        "end": 1064,
+        "text": "privacy"
+      }
+    ]
+  },
+  {
+    "id": 245,
+    "ticker": "BKR",
+    "normalized": "gas technology services",
+    "forms": [
+      "Gas Technology Services"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 363,
+        "end": 386,
+        "text": "Gas Technology Services"
+      }
+    ]
+  },
+  {
+    "id": 246,
+    "ticker": "BKR",
+    "normalized": "measure",
+    "forms": [
+      "measure"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 1171,
+        "end": 1178,
+        "text": "measure"
+      }
+    ]
+  },
+  {
+    "id": 247,
+    "ticker": "BKR",
+    "normalized": "carbon emission",
+    "forms": [
+      "carbon emissions"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 1202,
+        "end": 1218,
+        "text": "carbon emissions"
+      }
+    ]
+  },
+  {
+    "id": 248,
+    "ticker": "BKR",
+    "normalized": "includes",
+    "forms": [
+      "includes"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 826,
+        "end": 834,
+        "text": "includes"
+      }
+    ]
+  },
+  {
+    "id": 249,
+    "ticker": "BKR",
+    "normalized": "hydrogen",
+    "forms": [
+      "hydrogen"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 561,
+        "end": 569,
+        "text": "hydrogen"
+      }
+    ]
+  },
+  {
+    "id": 250,
+    "ticker": "BKR",
+    "normalized": "latest generation",
+    "forms": [
+      "latest generation"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 425,
+        "end": 442,
+        "text": "latest generation"
+      }
+    ]
+  },
+  {
+    "id": 251,
+    "ticker": "BKR",
+    "normalized": "human",
+    "forms": [
+      "human",
+      "Human"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 178,
+        "end": 183,
+        "text": "human"
+      },
+      {
+        "paragraph": 0,
+        "start": 224,
+        "end": 229,
+        "text": "Human"
+      }
+    ]
+  },
+  {
+    "id": 252,
+    "ticker": "BKR",
+    "normalized": "carbon footprint",
+    "forms": [
+      "carbon footprint"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 493,
+        "end": 509,
+        "text": "carbon footprint"
+      }
+    ]
+  },
+  {
+    "id": 253,
+    "ticker": "BRO",
+    "normalized": "quarterly",
+    "forms": [
+      "quarterly"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 348,
+        "end": 357,
+        "text": "quarterly"
+      }
+    ]
+  },
+  {
+    "id": 254,
+    "ticker": "BRO",
+    "normalized": "form",
+    "forms": [
+      "Form",
+      "form"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 337,
+        "end": 341,
+        "text": "Form"
+      },
+      {
+        "paragraph": 0,
+        "start": 369,
+        "end": 373,
+        "text": "Form"
+      },
+      {
+        "paragraph": 0,
+        "start": 399,
+        "end": 403,
+        "text": "Form"
+      },
+      {
+        "paragraph": 0,
+        "start": 909,
+        "end": 913,
+        "text": "form"
+      },
+      {
+        "paragraph": 0,
+        "start": 947,
+        "end": 951,
+        "text": "Form"
+      }
+    ]
+  },
+  {
+    "id": 255,
+    "ticker": "BRO",
+    "normalized": "principles",
+    "forms": [
+      "Principles"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 139,
+        "end": 149,
+        "text": "Principles"
+      }
+    ]
+  },
+  {
+    "id": 256,
+    "ticker": "BRO",
+    "normalized": "significant increase",
+    "forms": [
+      "significant increases"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 436,
+        "end": 457,
+        "text": "significant increases"
+      }
+    ]
+  },
+  {
+    "id": 257,
+    "ticker": "BRO",
+    "normalized": "the exchange act",
+    "forms": [
+      "The Exchange Act"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 149,
+        "end": 165,
+        "text": "The Exchange Act"
+      }
+    ]
+  },
+  {
+    "id": 258,
+    "ticker": "BRO",
+    "normalized": "global",
+    "forms": [
+      "global"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 286,
+        "end": 292,
+        "text": "global"
+      }
+    ]
+  },
+  {
+    "id": 259,
+    "ticker": "BRO",
+    "normalized": "result",
+    "forms": [
+      "results"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 624,
+        "end": 631,
+        "text": "results"
+      }
+    ]
+  },
+  {
+    "id": 260,
+    "ticker": "BRO",
+    "normalized": "adverse effect",
+    "forms": [
+      "adverse effect"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 592,
+        "end": 606,
+        "text": "adverse effect"
+      }
+    ]
+  },
+  {
+    "id": 261,
+    "ticker": "BRO",
+    "normalized": "sustained",
+    "forms": [
+      "sustained"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 413,
+        "end": 422,
+        "text": "sustained"
+      }
+    ]
+  },
+  {
+    "id": 262,
+    "ticker": "BRO",
+    "normalized": "proxy statement",
+    "forms": [
+      "proxy statements"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 195,
+        "end": 211,
+        "text": "proxy statements"
+      }
+    ]
+  },
+  {
+    "id": 263,
+    "ticker": "BRO",
+    "normalized": "committees",
+    "forms": [
+      "Committees"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 66,
+        "end": 76,
+        "text": "Committees"
+      }
+    ]
+  },
+  {
+    "id": 264,
+    "ticker": "BRO",
+    "normalized": "q",
+    "forms": [
+      "Q"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 377,
+        "end": 378,
+        "text": "Q"
+      }
+    ]
+  },
+  {
+    "id": 265,
+    "ticker": "BRO",
+    "normalized": "higher interest rate",
+    "forms": [
+      "higher interest rates"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 224,
+        "end": 245,
+        "text": "higher interest rates"
+      }
+    ]
+  },
+  {
+    "id": 266,
+    "ticker": "BRO",
+    "normalized": "ceo",
+    "forms": [
+      "CEO"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 206,
+        "end": 209,
+        "text": "CEO"
+      }
+    ]
+  },
+  {
+    "id": 267,
+    "ticker": "BRO",
+    "normalized": "form 10-k",
+    "forms": [
+      "Form 10-K"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 947,
+        "end": 956,
+        "text": "Form 10-K"
+      }
+    ]
+  },
+  {
+    "id": 268,
+    "ticker": "BRO",
+    "normalized": "act",
+    "forms": [
+      "Act"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 72,
+        "end": 75,
+        "text": "Act"
+      },
+      {
+        "paragraph": 0,
+        "start": 111,
+        "end": 114,
+        "text": "Act"
+      },
+      {
+        "paragraph": 0,
+        "start": 162,
+        "end": 165,
+        "text": "Act"
+      },
+      {
+        "paragraph": 0,
+        "start": 511,
+        "end": 514,
+        "text": "Act"
+      }
+    ]
+  },
+  {
+    "id": 269,
+    "ticker": "BRO",
+    "normalized": "year",
+    "forms": [
+      "year"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 529,
+        "end": 533,
+        "text": "year"
+      }
+    ]
+  },
+  {
+    "id": 270,
+    "ticker": "BRO",
+    "normalized": "adversely",
+    "forms": [
+      "adversely"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 14,
+        "end": 23,
+        "text": "adversely"
+      }
+    ]
+  },
+  {
+    "id": 271,
+    "ticker": "BRO",
+    "normalized": "such material",
+    "forms": [
+      "such material"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 629,
+        "end": 642,
+        "text": "such material"
+      }
+    ]
+  },
+  {
+    "id": 272,
+    "ticker": "BRO",
+    "normalized": "conduct",
+    "forms": [
+      "Conduct"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 168,
+        "end": 175,
+        "text": "Conduct"
+      }
+    ]
+  },
+  {
+    "id": 273,
+    "ticker": "BRO",
+    "normalized": "securities",
+    "forms": [
+      "Securities"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 52,
+        "end": 62,
+        "text": "Securities"
+      }
+    ]
+  },
+  {
+    "id": 274,
+    "ticker": "BRO",
+    "normalized": "north beach",
+    "forms": [
+      "North Beach"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 522,
+        "end": 533,
+        "text": "North Beach"
+      }
+    ]
+  },
+  {
+    "id": 275,
+    "ticker": "BRO",
+    "normalized": "8-k",
+    "forms": [
+      "8-K"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 404,
+        "end": 407,
+        "text": "8-K"
+      }
+    ]
+  },
+  {
+    "id": 276,
+    "ticker": "BRO",
+    "normalized": "document",
+    "forms": [
+      "documents",
+      "document"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 661,
+        "end": 670,
+        "text": "documents"
+      },
+      {
+        "paragraph": 0,
+        "start": 980,
+        "end": 988,
+        "text": "document"
+      },
+      {
+        "paragraph": 1,
+        "start": 432,
+        "end": 441,
+        "text": "documents"
+      }
+    ]
+  },
+  {
+    "id": 277,
+    "ticker": "BRO",
+    "normalized": "proxy",
+    "forms": [
+      "proxy"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 195,
+        "end": 200,
+        "text": "proxy"
+      }
+    ]
+  },
+  {
+    "id": 278,
+    "ticker": "BRO",
+    "normalized": "inflation",
+    "forms": [
+      "Inflation",
+      "inflation"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 0,
+        "end": 9,
+        "text": "Inflation"
+      },
+      {
+        "paragraph": 2,
+        "start": 98,
+        "end": 107,
+        "text": "inflation"
+      },
+      {
+        "paragraph": 2,
+        "start": 190,
+        "end": 199,
+        "text": "inflation"
+      },
+      {
+        "paragraph": 2,
+        "start": 318,
+        "end": 327,
+        "text": "inflation"
+      },
+      {
+        "paragraph": 2,
+        "start": 423,
+        "end": 432,
+        "text": "inflation"
+      },
+      {
+        "paragraph": 2,
+        "start": 461,
+        "end": 470,
+        "text": "inflation"
+      },
+      {
+        "paragraph": 2,
+        "start": 489,
+        "end": 498,
+        "text": "inflation"
+      }
+    ]
+  },
+  {
+    "id": 279,
+    "ticker": "BRO",
+    "normalized": "provision",
+    "forms": [
+      "provision"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 288,
+        "end": 297,
+        "text": "provision"
+      }
+    ]
+  },
+  {
+    "id": 280,
+    "ticker": "BRO",
+    "normalized": "sustained inflation",
+    "forms": [
+      "sustained inflation"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 413,
+        "end": 432,
+        "text": "sustained inflation"
+      }
+    ]
+  },
+  {
+    "id": 281,
+    "ticker": "BRO",
+    "normalized": "financial",
+    "forms": [
+      "Financial",
+      "financial"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 221,
+        "end": 230,
+        "text": "Financial"
+      },
+      {
+        "paragraph": 2,
+        "start": 650,
+        "end": 659,
+        "text": "financial"
+      }
+    ]
+  },
+  {
+    "id": 282,
+    "ticker": "BRO",
+    "normalized": "salary",
+    "forms": [
+      "salary"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 69,
+        "end": 75,
+        "text": "salary"
+      }
+    ]
+  },
+  {
+    "id": 283,
+    "ticker": "BRO",
+    "normalized": "higher",
+    "forms": [
+      "higher"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 224,
+        "end": 230,
+        "text": "higher"
+      }
+    ]
+  },
+  {
+    "id": 284,
+    "ticker": "BRO",
+    "normalized": "code",
+    "forms": [
+      "Code",
+      "codes"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 151,
+        "end": 155,
+        "text": "Code"
+      },
+      {
+        "paragraph": 1,
+        "start": 191,
+        "end": 195,
+        "text": "Code"
+      },
+      {
+        "paragraph": 1,
+        "start": 338,
+        "end": 343,
+        "text": "codes"
+      }
+    ]
+  },
+  {
+    "id": 285,
+    "ticker": "BRO",
+    "normalized": "10-k",
+    "forms": [
+      "10-K"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 342,
+        "end": 346,
+        "text": "10-K"
+      },
+      {
+        "paragraph": 0,
+        "start": 952,
+        "end": 956,
+        "text": "10-K"
+      }
+    ]
+  },
+  {
+    "id": 286,
+    "ticker": "BRO",
+    "normalized": "economy",
+    "forms": [
+      "economy"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 293,
+        "end": 300,
+        "text": "economy"
+      }
+    ]
+  },
+  {
+    "id": 287,
+    "ticker": "BRO",
+    "normalized": "director",
+    "forms": [
+      "directors"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 93,
+        "end": 102,
+        "text": "directors"
+      }
+    ]
+  },
+  {
+    "id": 288,
+    "ticker": "BRO",
+    "normalized": "regulation",
+    "forms": [
+      "regulations"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 136,
+        "end": 147,
+        "text": "regulations"
+      }
+    ]
+  },
+  {
+    "id": 289,
+    "ticker": "BRO",
+    "normalized": "15(d",
+    "forms": [
+      "15(d"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 489,
+        "end": 493,
+        "text": "15(d"
+      }
+    ]
+  },
+  {
+    "id": 290,
+    "ticker": "BRO",
+    "normalized": "business",
+    "forms": [
+      "Business",
+      "business"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 159,
+        "end": 167,
+        "text": "Business"
+      },
+      {
+        "paragraph": 2,
+        "start": 614,
+        "end": 622,
+        "text": "business"
+      }
+    ]
+  },
+  {
+    "id": 291,
+    "ticker": "BRO",
+    "normalized": "incorporated",
+    "forms": [
+      "incorporated"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 877,
+        "end": 889,
+        "text": "incorporated"
+      }
+    ]
+  },
+  {
+    "id": 292,
+    "ticker": "BRO",
+    "normalized": "information",
+    "forms": [
+      "information",
+      "Information"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 222,
+        "end": 233,
+        "text": "information"
+      },
+      {
+        "paragraph": 0,
+        "start": 811,
+        "end": 822,
+        "text": "Information"
+      }
+    ]
+  },
+  {
+    "id": 293,
+    "ticker": "BRO",
+    "normalized": "global economy",
+    "forms": [
+      "global economy"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 286,
+        "end": 300,
+        "text": "global economy"
+      }
+    ]
+  },
+  {
+    "id": 294,
+    "ticker": "BRO",
+    "normalized": "investor relations",
+    "forms": [
+      "Investor Relations"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 753,
+        "end": 771,
+        "text": "Investor Relations"
+      }
+    ]
+  },
+  {
+    "id": 295,
+    "ticker": "INCY",
+    "normalized": "material fact",
+    "forms": [
+      "material fact"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 340,
+        "end": 353,
+        "text": "material fact"
+      },
+      {
+        "paragraph": 1,
+        "start": 374,
+        "end": 387,
+        "text": "material fact"
+      },
+      {
+        "paragraph": 1,
+        "start": 690,
+        "end": 703,
+        "text": "material fact"
+      },
+      {
+        "paragraph": 1,
+        "start": 723,
+        "end": 736,
+        "text": "material fact"
+      }
+    ]
+  },
+  {
+    "id": 296,
+    "ticker": "INCY",
+    "normalized": "accounted",
+    "forms": [
+      "accounted"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 640,
+        "end": 649,
+        "text": "accounted"
+      }
+    ]
+  },
+  {
+    "id": 297,
+    "ticker": "INCY",
+    "normalized": "ingredient",
+    "forms": [
+      "ingredient"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 366,
+        "end": 376,
+        "text": "ingredient"
+      }
+    ]
+  },
+  {
+    "id": 298,
+    "ticker": "INCY",
+    "normalized": "production",
+    "forms": [
+      "production"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 436,
+        "end": 446,
+        "text": "production"
+      }
+    ]
+  },
+  {
+    "id": 299,
+    "ticker": "INCY",
+    "normalized": "long term equity investment",
+    "forms": [
+      "long term equity investments"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 363,
+        "end": 391,
+        "text": "long term equity investments"
+      },
+      {
+        "paragraph": 0,
+        "start": 583,
+        "end": 611,
+        "text": "long term equity investments"
+      }
+    ]
+  },
+  {
+    "id": 300,
+    "ticker": "INCY",
+    "normalized": "applicable regulatory requirement",
+    "forms": [
+      "applicable regulatory requirements"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 1385,
+        "end": 1419,
+        "text": "applicable regulatory requirements"
+      }
+    ]
+  },
+  {
+    "id": 301,
+    "ticker": "INCY",
+    "normalized": "effort",
+    "forms": [
+      "efforts"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 568,
+        "end": 575,
+        "text": "efforts"
+      }
+    ]
+  },
+  {
+    "id": 302,
+    "ticker": "INCY",
+    "normalized": "fair value",
+    "forms": [
+      "fair value"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 657,
+        "end": 667,
+        "text": "fair value"
+      },
+      {
+        "paragraph": 0,
+        "start": 789,
+        "end": 799,
+        "text": "fair value"
+      }
+    ]
+  },
+  {
+    "id": 303,
+    "ticker": "INCY",
+    "normalized": "practices",
+    "forms": [
+      "Practices"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 1229,
+        "end": 1238,
+        "text": "Practices"
+      },
+      {
+        "paragraph": 2,
+        "start": 1367,
+        "end": 1376,
+        "text": "Practices"
+      }
+    ]
+  },
+  {
+    "id": 304,
+    "ticker": "INCY",
+    "normalized": "short term equity investment",
+    "forms": [
+      "short term equity investments"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 266,
+        "end": 295,
+        "text": "short term equity investments"
+      }
+    ]
+  },
+  {
+    "id": 305,
+    "ticker": "INCY",
+    "normalized": "license",
+    "forms": [
+      "license"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 158,
+        "end": 165,
+        "text": "license"
+      }
+    ]
+  },
+  {
+    "id": 306,
+    "ticker": "INCY",
+    "normalized": "investors",
+    "forms": [
+      "Investors"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 14,
+        "end": 23,
+        "text": "Investors"
+      }
+    ]
+  },
+  {
+    "id": 307,
+    "ticker": "INCY",
+    "normalized": "monjuvi/minjuvi drug substance manufacturing",
+    "forms": [
+      "MONJUVI/MINJUVI drug substance manufacturing"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 514,
+        "end": 558,
+        "text": "MONJUVI/MINJUVI drug substance manufacturing"
+      }
+    ]
+  },
+  {
+    "id": 308,
+    "ticker": "INCY",
+    "normalized": "requires",
+    "forms": [
+      "requires"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 1031,
+        "end": 1039,
+        "text": "requires"
+      }
+    ]
+  },
+  {
+    "id": 309,
+    "ticker": "INCY",
+    "normalized": "operate",
+    "forms": [
+      "operate"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 20,
+        "end": 27,
+        "text": "operate"
+      }
+    ]
+  },
+  {
+    "id": 310,
+    "ticker": "INCY",
+    "normalized": "develop",
+    "forms": [
+      "develop"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 943,
+        "end": 950,
+        "text": "develop"
+      }
+    ]
+  },
+  {
+    "id": 311,
+    "ticker": "INCY",
+    "normalized": "collaborator macrogenics",
+    "forms": [
+      "collaborator MacroGenics"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 641,
+        "end": 665,
+        "text": "collaborator MacroGenics"
+      }
+    ]
+  },
+  {
+    "id": 312,
+    "ticker": "INCY",
+    "normalized": "term equity investment",
+    "forms": [
+      "term equity investments"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 272,
+        "end": 295,
+        "text": "term equity investments"
+      },
+      {
+        "paragraph": 0,
+        "start": 368,
+        "end": 391,
+        "text": "term equity investments"
+      },
+      {
+        "paragraph": 0,
+        "start": 588,
+        "end": 611,
+        "text": "term equity investments"
+      }
+    ]
+  },
+  {
+    "id": 313,
+    "ticker": "INCY",
+    "normalized": "common stock",
+    "forms": [
+      "common stock"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 69,
+        "end": 81,
+        "text": "common stock"
+      },
+      {
+        "paragraph": 0,
+        "start": 216,
+        "end": 228,
+        "text": "common stock"
+      }
+    ]
+  },
+  {
+    "id": 314,
+    "ticker": "INCY",
+    "normalized": "intend",
+    "forms": [
+      "intend"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 328,
+        "end": 334,
+        "text": "intend"
+      },
+      {
+        "paragraph": 0,
+        "start": 424,
+        "end": 430,
+        "text": "intend"
+      }
+    ]
+  },
+  {
+    "id": 315,
+    "ticker": "INCY",
+    "normalized": "collaboration and license agreement",
+    "forms": [
+      "collaboration and license agreements"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 140,
+        "end": 176,
+        "text": "collaboration and license agreements"
+      }
+    ]
+  },
+  {
+    "id": 316,
+    "ticker": "INCY",
+    "normalized": "determinable",
+    "forms": [
+      "determinable"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 682,
+        "end": 694,
+        "text": "determinable"
+      }
+    ]
+  },
+  {
+    "id": 317,
+    "ticker": "INCY",
+    "normalized": "active",
+    "forms": [
+      "active"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 344,
+        "end": 350,
+        "text": "active"
+      }
+    ]
+  },
+  {
+    "id": 318,
+    "ticker": "INCY",
+    "normalized": "event",
+    "forms": [
+      "event"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 204,
+        "end": 209,
+        "text": "event"
+      }
+    ]
+  },
+  {
+    "id": 319,
+    "ticker": "INCY",
+    "normalized": "act",
+    "forms": [
+      "Act"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 176,
+        "end": 179,
+        "text": "Act"
+      }
+    ]
+  },
+  {
+    "id": 320,
+    "ticker": "INCY",
+    "normalized": "product and drug candidate",
+    "forms": [
+      "products and drug candidates"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 239,
+        "end": 267,
+        "text": "products and drug candidates"
+      }
+    ]
+  },
+  {
+    "id": 321,
+    "ticker": "INCY",
+    "normalized": "located",
+    "forms": [
+      "located"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 456,
+        "end": 463,
+        "text": "located"
+      }
+    ]
+  },
+  {
+    "id": 322,
+    "ticker": "INCY",
+    "normalized": "regulatory authority",
+    "forms": [
+      "regulatory authorities"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 1256,
+        "end": 1278,
+        "text": "regulatory authorities"
+      }
+    ]
+  },
+  {
+    "id": 323,
+    "ticker": "INCY",
+    "normalized": "publicly-held company",
+    "forms": [
+      "publicly-held companies"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 85,
+        "end": 108,
+        "text": "publicly-held companies"
+      },
+      {
+        "paragraph": 0,
+        "start": 232,
+        "end": 255,
+        "text": "publicly-held companies"
+      }
+    ]
+  },
+  {
+    "id": 324,
+    "ticker": "INCY",
+    "normalized": "statement",
+    "forms": [
+      "statements",
+      "Statement",
+      "statement"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 833,
+        "end": 843,
+        "text": "statements"
+      },
+      {
+        "paragraph": 1,
+        "start": 81,
+        "end": 90,
+        "text": "Statement"
+      },
+      {
+        "paragraph": 1,
+        "start": 276,
+        "end": 285,
+        "text": "Statement"
+      },
+      {
+        "paragraph": 1,
+        "start": 325,
+        "end": 334,
+        "text": "statement"
+      },
+      {
+        "paragraph": 1,
+        "start": 443,
+        "end": 453,
+        "text": "statements"
+      },
+      {
+        "paragraph": 1,
+        "start": 675,
+        "end": 684,
+        "text": "statement"
+      },
+      {
+        "paragraph": 1,
+        "start": 792,
+        "end": 802,
+        "text": "statements"
+      }
+    ]
+  },
+  {
+    "id": 325,
+    "ticker": "INCY",
+    "normalized": "manufacturing capacity",
+    "forms": [
+      "manufacturing capacity"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 701,
+        "end": 723,
+        "text": "manufacturing capacity"
+      }
+    ]
+  },
+  {
+    "id": 326,
+    "ticker": "INCY",
+    "normalized": "equity investment",
+    "forms": [
+      "equity investments"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 24,
+        "end": 42,
+        "text": "equity investments"
+      },
+      {
+        "paragraph": 0,
+        "start": 194,
+        "end": 212,
+        "text": "equity investments"
+      },
+      {
+        "paragraph": 0,
+        "start": 546,
+        "end": 564,
+        "text": "equity investments"
+      },
+      {
+        "paragraph": 0,
+        "start": 617,
+        "end": 635,
+        "text": "equity investments"
+      },
+      {
+        "paragraph": 0,
+        "start": 871,
+        "end": 889,
+        "text": "equity investments"
+      }
+    ]
+  },
+  {
+    "id": 327,
+    "ticker": "INCY",
+    "normalized": "initiating",
+    "forms": [
+      "initiating"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 1645,
+        "end": 1655,
+        "text": "initiating"
+      }
+    ]
+  },
+  {
+    "id": 328,
+    "ticker": "INCY",
+    "normalized": "include",
+    "forms": [
+      "include"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 656,
+        "end": 663,
+        "text": "include"
+      }
+    ]
+  },
+  {
+    "id": 329,
+    "ticker": "INCY",
+    "normalized": "opzelura",
+    "forms": [
+      "OPZELURA"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 139,
+        "end": 147,
+        "text": "OPZELURA"
+      },
+      {
+        "paragraph": 2,
+        "start": 1136,
+        "end": 1144,
+        "text": "OPZELURA"
+      }
+    ]
+  },
+  {
+    "id": 330,
+    "ticker": "INCY",
+    "normalized": "failure",
+    "forms": [
+      "Failure"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 1325,
+        "end": 1332,
+        "text": "Failure"
+      }
+    ]
+  },
+  {
+    "id": 331,
+    "ticker": "INCY",
+    "normalized": "registrable securities",
+    "forms": [
+      "Registrable Securities"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 104,
+        "end": 126,
+        "text": "Registrable Securities"
+      }
+    ]
+  },
+  {
+    "id": 332,
+    "ticker": "INCY",
+    "normalized": "state",
+    "forms": [
+      "state"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 366,
+        "end": 371,
+        "text": "state"
+      },
+      {
+        "paragraph": 1,
+        "start": 715,
+        "end": 720,
+        "text": "state"
+      }
+    ]
+  },
+  {
+    "id": 333,
+    "ticker": "INCY",
+    "normalized": "manufacturing facility",
+    "forms": [
+      "manufacturing facilities"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 28,
+        "end": 52,
+        "text": "manufacturing facilities"
+      }
+    ]
+  },
+  {
+    "id": 334,
+    "ticker": "INCY",
+    "normalized": "hold",
+    "forms": [
+      "hold"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 434,
+        "end": 438,
+        "text": "hold"
+      }
+    ]
+  },
+  {
+    "id": 335,
+    "ticker": "INCY",
+    "normalized": "other enforcement action",
+    "forms": [
+      "other enforcement actions"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 1682,
+        "end": 1707,
+        "text": "other enforcement actions"
+      }
+    ]
+  },
+  {
+    "id": 336,
+    "ticker": "INCY",
+    "normalized": "drug candidate",
+    "forms": [
+      "drug candidates"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 177,
+        "end": 192,
+        "text": "drug candidates"
+      },
+      {
+        "paragraph": 2,
+        "start": 252,
+        "end": 267,
+        "text": "drug candidates"
+      },
+      {
+        "paragraph": 2,
+        "start": 1153,
+        "end": 1168,
+        "text": "drug candidates"
+      },
+      {
+        "paragraph": 2,
+        "start": 1465,
+        "end": 1480,
+        "text": "drug candidates"
+      }
+    ]
+  },
+  {
+    "id": 337,
+    "ticker": "BW",
+    "normalized": "related",
+    "forms": [
+      "related"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 354,
+        "end": 361,
+        "text": "related"
+      }
+    ]
+  },
+  {
+    "id": 338,
+    "ticker": "BW",
+    "normalized": "advance",
+    "forms": [
+      "advances"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 521,
+        "end": 529,
+        "text": "advances"
+      }
+    ]
+  },
+  {
+    "id": 339,
+    "ticker": "BW",
+    "normalized": "future sale",
+    "forms": [
+      "future sales"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 323,
+        "end": 335,
+        "text": "future sales"
+      }
+    ]
+  },
+  {
+    "id": 340,
+    "ticker": "BW",
+    "normalized": "wilcox a",
+    "forms": [
+      "Wilcox A"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 94,
+        "end": 102,
+        "text": "Wilcox A"
+      }
+    ]
+  },
+  {
+    "id": 341,
+    "ticker": "BW",
+    "normalized": "investment",
+    "forms": [
+      "investment",
+      "investments"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 106,
+        "end": 116,
+        "text": "investment"
+      },
+      {
+        "paragraph": 2,
+        "start": 461,
+        "end": 472,
+        "text": "investments"
+      }
+    ]
+  },
+  {
+    "id": 342,
+    "ticker": "BW",
+    "normalized": "technique",
+    "forms": [
+      "techniques"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 660,
+        "end": 670,
+        "text": "techniques"
+      }
+    ]
+  },
+  {
+    "id": 343,
+    "ticker": "BW",
+    "normalized": "need",
+    "forms": [
+      "need",
+      "needs"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 951,
+        "end": 955,
+        "text": "need"
+      },
+      {
+        "paragraph": 1,
+        "start": 651,
+        "end": 656,
+        "text": "needs"
+      }
+    ]
+  },
+  {
+    "id": 344,
+    "ticker": "BW",
+    "normalized": "requires",
+    "forms": [
+      "requires"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 93,
+        "end": 101,
+        "text": "requires"
+      }
+    ]
+  },
+  {
+    "id": 345,
+    "ticker": "BW",
+    "normalized": "net cash proceed",
+    "forms": [
+      "net cash proceeds"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 274,
+        "end": 291,
+        "text": "net cash proceeds"
+      }
+    ]
+  },
+  {
+    "id": 346,
+    "ticker": "BW",
+    "normalized": "major",
+    "forms": [
+      "major"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 598,
+        "end": 603,
+        "text": "major"
+      }
+    ]
+  },
+  {
+    "id": 347,
+    "ticker": "BW",
+    "normalized": "october 30, 2024",
+    "forms": [
+      "October 30, 2024"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 3,
+        "end": 19,
+        "text": "October 30, 2024"
+      }
+    ]
+  },
+  {
+    "id": 348,
+    "ticker": "BW",
+    "normalized": "foundational cybersecurity principle",
+    "forms": [
+      "foundational cybersecurity principles"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 783,
+        "end": 820,
+        "text": "foundational cybersecurity principles"
+      }
+    ]
+  },
+  {
+    "id": 349,
+    "ticker": "BW",
+    "normalized": "million",
+    "forms": [
+      "million"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 301,
+        "end": 308,
+        "text": "million"
+      },
+      {
+        "paragraph": 1,
+        "start": 338,
+        "end": 345,
+        "text": "million"
+      },
+      {
+        "paragraph": 1,
+        "start": 480,
+        "end": 487,
+        "text": "million"
+      }
+    ]
+  },
+  {
+    "id": 350,
+    "ticker": "BW",
+    "normalized": "collected",
+    "forms": [
+      "collected"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 295,
+        "end": 304,
+        "text": "collected"
+      }
+    ]
+  },
+  {
+    "id": 351,
+    "ticker": "BW",
+    "normalized": "entire",
+    "forms": [
+      "entire"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 126,
+        "end": 132,
+        "text": "entire"
+      }
+    ]
+  },
+  {
+    "id": 352,
+    "ticker": "BW",
+    "normalized": "s.p",
+    "forms": [
+      "S.p"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 255,
+        "end": 258,
+        "text": "S.p"
+      }
+    ]
+  },
+  {
+    "id": 353,
+    "ticker": "BW",
+    "normalized": "information resource",
+    "forms": [
+      "information resources"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 441,
+        "end": 462,
+        "text": "information resources"
+      }
+    ]
+  },
+  {
+    "id": 354,
+    "ticker": "BW",
+    "normalized": "informed",
+    "forms": [
+      "informed"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 110,
+        "end": 118,
+        "text": "informed"
+      }
+    ]
+  },
+  {
+    "id": 355,
+    "ticker": "BW",
+    "normalized": "advantage",
+    "forms": [
+      "advantages"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 564,
+        "end": 574,
+        "text": "advantages"
+      }
+    ]
+  },
+  {
+    "id": 356,
+    "ticker": "BW",
+    "normalized": "entire issued and outstanding share capital",
+    "forms": [
+      "entire issued and outstanding share capital"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 126,
+        "end": 169,
+        "text": "entire issued and outstanding share capital"
+      }
+    ]
+  },
+  {
+    "id": 357,
+    "ticker": "BW",
+    "normalized": "new",
+    "forms": [
+      "new"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 34,
+        "end": 37,
+        "text": "new"
+      },
+      {
+        "paragraph": 2,
+        "start": 227,
+        "end": 230,
+        "text": "new"
+      },
+      {
+        "paragraph": 2,
+        "start": 281,
+        "end": 284,
+        "text": "new"
+      }
+    ]
+  },
+  {
+    "id": 358,
+    "ticker": "BW",
+    "normalized": "factor",
+    "forms": [
+      "factor"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 686,
+        "end": 692,
+        "text": "factor"
+      }
+    ]
+  },
+  {
+    "id": 359,
+    "ticker": "BW",
+    "normalized": "sárl",
+    "forms": [
+      "Sárl"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 64,
+        "end": 68,
+        "text": "Sárl"
+      }
+    ]
+  },
+  {
+    "id": 360,
+    "ticker": "BW",
+    "normalized": "market",
+    "forms": [
+      "market"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 260,
+        "end": 266,
+        "text": "market"
+      }
+    ]
+  },
+  {
+    "id": 361,
+    "ticker": "BW",
+    "normalized": "sweden-based",
+    "forms": [
+      "Sweden-based"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 198,
+        "end": 210,
+        "text": "Sweden-based"
+      }
+    ]
+  },
+  {
+    "id": 362,
+    "ticker": "BW",
+    "normalized": "standards",
+    "forms": [
+      "Standards"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 218,
+        "end": 227,
+        "text": "Standards"
+      }
+    ]
+  },
+  {
+    "id": 363,
+    "ticker": "BW",
+    "normalized": "integrity",
+    "forms": [
+      "integrity"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 961,
+        "end": 970,
+        "text": "integrity"
+      }
+    ]
+  },
+  {
+    "id": 364,
+    "ticker": "BW",
+    "normalized": "workstation",
+    "forms": [
+      "workstations"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 485,
+        "end": 497,
+        "text": "workstations"
+      }
+    ]
+  },
+  {
+    "id": 365,
+    "ticker": "BW",
+    "normalized": "innovative",
+    "forms": [
+      "innovative"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 23,
+        "end": 33,
+        "text": "innovative"
+      }
+    ]
+  },
+  {
+    "id": 366,
+    "ticker": "BW",
+    "normalized": "intellectual",
+    "forms": [
+      "intellectual"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 519,
+        "end": 531,
+        "text": "intellectual"
+      }
+    ]
+  },
+  {
+    "id": 367,
+    "ticker": "BW",
+    "normalized": "industry-standard technique",
+    "forms": [
+      "industry-standard techniques"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 642,
+        "end": 670,
+        "text": "industry-standard techniques"
+      }
+    ]
+  },
+  {
+    "id": 368,
+    "ticker": "BW",
+    "normalized": "affect",
+    "forms": [
+      "affect"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 51,
+        "end": 57,
+        "text": "affect"
+      },
+      {
+        "paragraph": 2,
+        "start": 350,
+        "end": 356,
+        "text": "affect"
+      }
+    ]
+  },
+  {
+    "id": 369,
+    "ticker": "BW",
+    "normalized": "solely",
+    "forms": [
+      "solely"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 347,
+        "end": 353,
+        "text": "solely"
+      }
+    ]
+  },
+  {
+    "id": 370,
+    "ticker": "BW",
+    "normalized": "gain",
+    "forms": [
+      "gain"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 324,
+        "end": 328,
+        "text": "gain"
+      },
+      {
+        "paragraph": 2,
+        "start": 255,
+        "end": 259,
+        "text": "gain"
+      }
+    ]
+  },
+  {
+    "id": 371,
+    "ticker": "BW",
+    "normalized": "integrate",
+    "forms": [
+      "integrate"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 773,
+        "end": 782,
+        "text": "integrate"
+      }
+    ]
+  },
+  {
+    "id": 372,
+    "ticker": "BW",
+    "normalized": "example",
+    "forms": [
+      "example"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 403,
+        "end": 410,
+        "text": "example"
+      }
+    ]
+  },
+  {
+    "id": 373,
+    "ticker": "BW",
+    "normalized": "industry-standard",
+    "forms": [
+      "industry-standard"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 642,
+        "end": 659,
+        "text": "industry-standard"
+      }
+    ]
+  },
+  {
+    "id": 374,
+    "ticker": "BW",
+    "normalized": "october",
+    "forms": [
+      "October"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 3,
+        "end": 10,
+        "text": "October"
+      }
+    ]
+  },
+  {
+    "id": 375,
+    "ticker": "BW",
+    "normalized": "national institute of standards and technology",
+    "forms": [
+      "National Institute of Standards and Technology"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 196,
+        "end": 242,
+        "text": "National Institute of Standards and Technology"
+      }
+    ]
+  },
+  {
+    "id": 376,
+    "ticker": "BW",
+    "normalized": "translation",
+    "forms": [
+      "translation"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 374,
+        "end": 385,
+        "text": "translation"
+      }
+    ]
+  },
+  {
+    "id": 377,
+    "ticker": "BW",
+    "normalized": "spig",
+    "forms": [
+      "SPIG"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 189,
+        "end": 193,
+        "text": "SPIG"
+      }
+    ]
+  },
+  {
+    "id": 378,
+    "ticker": "CBRE",
+    "normalized": "operation",
+    "forms": [
+      "operations",
+      "operation"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 332,
+        "end": 342,
+        "text": "operations"
+      },
+      {
+        "paragraph": 2,
+        "start": 380,
+        "end": 389,
+        "text": "operation"
+      },
+      {
+        "paragraph": 2,
+        "start": 504,
+        "end": 513,
+        "text": "operation"
+      },
+      {
+        "paragraph": 2,
+        "start": 1146,
+        "end": 1156,
+        "text": "operations"
+      }
+    ]
+  },
+  {
+    "id": 379,
+    "ticker": "CBRE",
+    "normalized": "government-sponsored fund",
+    "forms": [
+      "government-sponsored funds"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 973,
+        "end": 999,
+        "text": "government-sponsored funds"
+      }
+    ]
+  },
+  {
+    "id": 380,
+    "ticker": "CBRE",
+    "normalized": "business",
+    "forms": [
+      "business"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 301,
+        "end": 309,
+        "text": "business"
+      },
+      {
+        "paragraph": 0,
+        "start": 384,
+        "end": 392,
+        "text": "business"
+      },
+      {
+        "paragraph": 2,
+        "start": 964,
+        "end": 972,
+        "text": "business"
+      },
+      {
+        "paragraph": 2,
+        "start": 1125,
+        "end": 1133,
+        "text": "business"
+      }
+    ]
+  },
+  {
+    "id": 381,
+    "ticker": "CBRE",
+    "normalized": "wide",
+    "forms": [
+      "wide"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 90,
+        "end": 94,
+        "text": "wide"
+      },
+      {
+        "paragraph": 0,
+        "start": 774,
+        "end": 778,
+        "text": "wide"
+      }
+    ]
+  },
+  {
+    "id": 382,
+    "ticker": "CBRE",
+    "normalized": "wide variety",
+    "forms": [
+      "wide variety"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 90,
+        "end": 102,
+        "text": "wide variety"
+      }
+    ]
+  },
+  {
+    "id": 383,
+    "ticker": "CBRE",
+    "normalized": "economic",
+    "forms": [
+      "economic"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 473,
+        "end": 481,
+        "text": "economic"
+      },
+      {
+        "paragraph": 2,
+        "start": 946,
+        "end": 954,
+        "text": "economic"
+      }
+    ]
+  },
+  {
+    "id": 384,
+    "ticker": "CBRE",
+    "normalized": "life",
+    "forms": [
+      "life"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 742,
+        "end": 746,
+        "text": "life"
+      }
+    ]
+  },
+  {
+    "id": 385,
+    "ticker": "CBRE",
+    "normalized": "spectrum",
+    "forms": [
+      "spectrum"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 779,
+        "end": 787,
+        "text": "spectrum"
+      }
+    ]
+  },
+  {
+    "id": 386,
+    "ticker": "CBRE",
+    "normalized": "telford homes-constructed building",
+    "forms": [
+      "Telford Homes-constructed buildings"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 782,
+        "end": 817,
+        "text": "Telford Homes-constructed buildings"
+      }
+    ]
+  },
+  {
+    "id": 387,
+    "ticker": "CBRE",
+    "normalized": "line",
+    "forms": [
+      "lines"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 310,
+        "end": 315,
+        "text": "lines"
+      },
+      {
+        "paragraph": 0,
+        "start": 393,
+        "end": 398,
+        "text": "lines"
+      }
+    ]
+  },
+  {
+    "id": 388,
+    "ticker": "CBRE",
+    "normalized": "non-binding fire safety",
+    "forms": [
+      "non-binding Fire Safety"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 62,
+        "end": 85,
+        "text": "non-binding Fire Safety"
+      }
+    ]
+  },
+  {
+    "id": 389,
+    "ticker": "CBRE",
+    "normalized": "variety",
+    "forms": [
+      "variety"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 95,
+        "end": 102,
+        "text": "variety"
+      }
+    ]
+  },
+  {
+    "id": 390,
+    "ticker": "CBRE",
+    "normalized": "market-leading talent recruitment",
+    "forms": [
+      "market-leading talent recruitment"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1018,
+        "end": 1051,
+        "text": "market-leading talent recruitment"
+      }
+    ]
+  },
+  {
+    "id": 391,
+    "ticker": "CBRE",
+    "normalized": "new",
+    "forms": [
+      "new"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 179,
+        "end": 182,
+        "text": "new"
+      }
+    ]
+  },
+  {
+    "id": 392,
+    "ticker": "CBRE",
+    "normalized": "other participant",
+    "forms": [
+      "other participants"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 724,
+        "end": 742,
+        "text": "other participants"
+      },
+      {
+        "paragraph": 2,
+        "start": 885,
+        "end": 903,
+        "text": "other participants"
+      }
+    ]
+  },
+  {
+    "id": 393,
+    "ticker": "CBRE",
+    "normalized": "financial",
+    "forms": [
+      "financial"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 1161,
+        "end": 1170,
+        "text": "financial"
+      }
+    ]
+  },
+  {
+    "id": 394,
+    "ticker": "CBRE",
+    "normalized": "retrospectively",
+    "forms": [
+      "retrospectively"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 383,
+        "end": 398,
+        "text": "retrospectively"
+      }
+    ]
+  },
+  {
+    "id": 395,
+    "ticker": "CBRE",
+    "normalized": "specialist",
+    "forms": [
+      "specialists"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 249,
+        "end": 260,
+        "text": "specialists"
+      }
+    ]
+  },
+  {
+    "id": 396,
+    "ticker": "CBRE",
+    "normalized": "contrary",
+    "forms": [
+      "contrary"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 786,
+        "end": 794,
+        "text": "contrary"
+      },
+      {
+        "paragraph": 2,
+        "start": 1074,
+        "end": 1082,
+        "text": "contrary"
+      }
+    ]
+  },
+  {
+    "id": 397,
+    "ticker": "CBRE",
+    "normalized": "in-depth expertise",
+    "forms": [
+      "in-depth expertise"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 532,
+        "end": 550,
+        "text": "in-depth expertise"
+      }
+    ]
+  },
+  {
+    "id": 398,
+    "ticker": "CBRE",
+    "normalized": "talent recruitment",
+    "forms": [
+      "talent recruitment"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1033,
+        "end": 1051,
+        "text": "talent recruitment"
+      }
+    ]
+  },
+  {
+    "id": 399,
+    "ticker": "CBRE",
+    "normalized": "joint venture",
+    "forms": [
+      "joint ventures"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 17,
+        "end": 31,
+        "text": "joint ventures"
+      },
+      {
+        "paragraph": 2,
+        "start": 577,
+        "end": 591,
+        "text": "joint ventures"
+      },
+      {
+        "paragraph": 2,
+        "start": 690,
+        "end": 704,
+        "text": "joint ventures"
+      }
+    ]
+  },
+  {
+    "id": 400,
+    "ticker": "CBRE",
+    "normalized": "other operation",
+    "forms": [
+      "other operations"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 326,
+        "end": 342,
+        "text": "other operations"
+      }
+    ]
+  },
+  {
+    "id": 401,
+    "ticker": "CBRE",
+    "normalized": "legally",
+    "forms": [
+      "legally"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 604,
+        "end": 611,
+        "text": "legally"
+      }
+    ]
+  },
+  {
+    "id": 402,
+    "ticker": "CBRE",
+    "normalized": "leader",
+    "forms": [
+      "leaders"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 361,
+        "end": 368,
+        "text": "leaders"
+      }
+    ]
+  },
+  {
+    "id": 403,
+    "ticker": "CBRE",
+    "normalized": "continued",
+    "forms": [
+      "continued"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 435,
+        "end": 444,
+        "text": "continued"
+      }
+    ]
+  },
+  {
+    "id": 404,
+    "ticker": "CBRE",
+    "normalized": "critical fire safety issue",
+    "forms": [
+      "critical fire safety issues"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 341,
+        "end": 368,
+        "text": "critical fire safety issues"
+      }
+    ]
+  },
+  {
+    "id": 405,
+    "ticker": "CBRE",
+    "normalized": "bsa",
+    "forms": [
+      "BSA"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 154,
+        "end": 157,
+        "text": "BSA"
+      },
+      {
+        "paragraph": 1,
+        "start": 164,
+        "end": 167,
+        "text": "BSA"
+      },
+      {
+        "paragraph": 1,
+        "start": 374,
+        "end": 377,
+        "text": "BSA"
+      }
+    ]
+  },
+  {
+    "id": 406,
+    "ticker": "CBRE",
+    "normalized": "certain life-critical fire-safety issue",
+    "forms": [
+      "certain life-critical fire-safety issues"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 734,
+        "end": 774,
+        "text": "certain life-critical fire-safety issues"
+      }
+    ]
+  },
+  {
+    "id": 407,
+    "ticker": "CBRE",
+    "normalized": "market cycle",
+    "forms": [
+      "market cycles"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 929,
+        "end": 942,
+        "text": "market cycles"
+      }
+    ]
+  },
+  {
+    "id": 408,
+    "ticker": "CBRE",
+    "normalized": "license",
+    "forms": [
+      "license"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 364,
+        "end": 371,
+        "text": "license"
+      }
+    ]
+  },
+  {
+    "id": 409,
+    "ticker": "CBRE",
+    "normalized": "service",
+    "forms": [
+      "services",
+      "service"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 24,
+        "end": 32,
+        "text": "services"
+      },
+      {
+        "paragraph": 0,
+        "start": 199,
+        "end": 207,
+        "text": "services"
+      },
+      {
+        "paragraph": 0,
+        "start": 657,
+        "end": 664,
+        "text": "service"
+      }
+    ]
+  },
+  {
+    "id": 410,
+    "ticker": "CBRE",
+    "normalized": "in-scope",
+    "forms": [
+      "in-scope"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 897,
+        "end": 905,
+        "text": "in-scope"
+      }
+    ]
+  },
+  {
+    "id": 411,
+    "ticker": "CBRE",
+    "normalized": "action",
+    "forms": [
+      "action"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 779,
+        "end": 785,
+        "text": "action"
+      }
+    ]
+  },
+  {
+    "id": 412,
+    "ticker": "CBRE",
+    "normalized": "affiliate",
+    "forms": [
+      "affiliate",
+      "affiliates"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 222,
+        "end": 231,
+        "text": "affiliate"
+      },
+      {
+        "paragraph": 2,
+        "start": 708,
+        "end": 718,
+        "text": "affiliates"
+      },
+      {
+        "paragraph": 2,
+        "start": 759,
+        "end": 769,
+        "text": "affiliates"
+      },
+      {
+        "paragraph": 2,
+        "start": 1059,
+        "end": 1068,
+        "text": "affiliate"
+      }
+    ]
+  },
+  {
+    "id": 413,
+    "ticker": "CBRE",
+    "normalized": "historic",
+    "forms": [
+      "historic"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 238,
+        "end": 246,
+        "text": "historic"
+      }
+    ]
+  },
+  {
+    "id": 414,
+    "ticker": "CBRE",
+    "normalized": "value",
+    "forms": [
+      "value"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 494,
+        "end": 499,
+        "text": "value"
+      }
+    ]
+  },
+  {
+    "id": 415,
+    "ticker": "CBRE",
+    "normalized": "agreement",
+    "forms": [
+      "agreement"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 620,
+        "end": 629,
+        "text": "agreement"
+      }
+    ]
+  },
+  {
+    "id": 416,
+    "ticker": "CBRE",
+    "normalized": "solution",
+    "forms": [
+      "solutions"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 730,
+        "end": 739,
+        "text": "solutions"
+      }
+    ]
+  },
+  {
+    "id": 417,
+    "ticker": "CBRE",
+    "normalized": "continued growth",
+    "forms": [
+      "continued growth"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 435,
+        "end": 451,
+        "text": "continued growth"
+      }
+    ]
+  },
+  {
+    "id": 418,
+    "ticker": "CBRE",
+    "normalized": "affiliation",
+    "forms": [
+      "affiliations"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 93,
+        "end": 105,
+        "text": "affiliations"
+      },
+      {
+        "paragraph": 2,
+        "start": 596,
+        "end": 608,
+        "text": "affiliations"
+      }
+    ]
+  },
+  {
+    "id": 419,
+    "ticker": "CRUS",
+    "normalized": "component",
+    "forms": [
+      "components",
+      "component"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 10,
+        "end": 20,
+        "text": "components"
+      },
+      {
+        "paragraph": 0,
+        "start": 177,
+        "end": 186,
+        "text": "component"
+      }
+    ]
+  },
+  {
+    "id": 420,
+    "ticker": "CRUS",
+    "normalized": "generally",
+    "forms": [
+      "generally"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 60,
+        "end": 69,
+        "text": "generally"
+      }
+    ]
+  },
+  {
+    "id": 421,
+    "ticker": "CRUS",
+    "normalized": "difficulty",
+    "forms": [
+      "difficulties"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 14,
+        "end": 26,
+        "text": "difficulties"
+      }
+    ]
+  },
+  {
+    "id": 422,
+    "ticker": "CRUS",
+    "normalized": "technology and product design",
+    "forms": [
+      "technology and product design"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 56,
+        "end": 85,
+        "text": "technology and product design"
+      }
+    ]
+  },
+  {
+    "id": 423,
+    "ticker": "CRUS",
+    "normalized": "increasing",
+    "forms": [
+      "increasing"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 755,
+        "end": 765,
+        "text": "increasing"
+      }
+    ]
+  },
+  {
+    "id": 424,
+    "ticker": "CRUS",
+    "normalized": "condition",
+    "forms": [
+      "conditions"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 691,
+        "end": 701,
+        "text": "conditions"
+      }
+    ]
+  },
+  {
+    "id": 425,
+    "ticker": "CRUS",
+    "normalized": "respect",
+    "forms": [
+      "respects",
+      "respect"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 69,
+        "end": 77,
+        "text": "respects"
+      },
+      {
+        "paragraph": 1,
+        "start": 574,
+        "end": 581,
+        "text": "respect"
+      }
+    ]
+  },
+  {
+    "id": 426,
+    "ticker": "CRUS",
+    "normalized": "customer relationship",
+    "forms": [
+      "customer relationships"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 1097,
+        "end": 1119,
+        "text": "customer relationships"
+      }
+    ]
+  },
+  {
+    "id": 427,
+    "ticker": "CRUS",
+    "normalized": "time",
+    "forms": [
+      "time"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 781,
+        "end": 785,
+        "text": "time"
+      }
+    ]
+  },
+  {
+    "id": 428,
+    "ticker": "CRUS",
+    "normalized": "costly product",
+    "forms": [
+      "costly product"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 965,
+        "end": 979,
+        "text": "costly product"
+      }
+    ]
+  },
+  {
+    "id": 429,
+    "ticker": "CRUS",
+    "normalized": "location",
+    "forms": [
+      "location"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 713,
+        "end": 721,
+        "text": "location"
+      }
+    ]
+  },
+  {
+    "id": 430,
+    "ticker": "CRUS",
+    "normalized": "entity",
+    "forms": [
+      "entity"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 144,
+        "end": 150,
+        "text": "entity"
+      }
+    ]
+  },
+  {
+    "id": 431,
+    "ticker": "CRUS",
+    "normalized": "ten largest end customer",
+    "forms": [
+      "ten largest end customers"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 414,
+        "end": 439,
+        "text": "ten largest end customers"
+      }
+    ]
+  },
+  {
+    "id": 432,
+    "ticker": "CRUS",
+    "normalized": "communicate",
+    "forms": [
+      "communicate"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 808,
+        "end": 819,
+        "text": "communicate"
+      }
+    ]
+  },
+  {
+    "id": 433,
+    "ticker": "CRUS",
+    "normalized": "contract manufacturer",
+    "forms": [
+      "contract manufacturers"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 643,
+        "end": 665,
+        "text": "contract manufacturers"
+      }
+    ]
+  },
+  {
+    "id": 434,
+    "ticker": "CRUS",
+    "normalized": "95 percent",
+    "forms": [
+      "95 percent"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 493,
+        "end": 503,
+        "text": "95 percent"
+      }
+    ]
+  },
+  {
+    "id": 435,
+    "ticker": "CRUS",
+    "normalized": "largely",
+    "forms": [
+      "largely"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 36,
+        "end": 43,
+        "text": "largely"
+      }
+    ]
+  },
+  {
+    "id": 436,
+    "ticker": "CRUS",
+    "normalized": "directly",
+    "forms": [
+      "directly"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 255,
+        "end": 263,
+        "text": "directly"
+      }
+    ]
+  },
+  {
+    "id": 437,
+    "ticker": "CRUS",
+    "normalized": "exists",
+    "forms": [
+      "exists"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 370,
+        "end": 376,
+        "text": "exists"
+      }
+    ]
+  },
+  {
+    "id": 438,
+    "ticker": "CRUS",
+    "normalized": "other matter",
+    "forms": [
+      "other matters"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 585,
+        "end": 598,
+        "text": "other matters"
+      }
+    ]
+  },
+  {
+    "id": 439,
+    "ticker": "CRUS",
+    "normalized": "offshore location",
+    "forms": [
+      "offshore location"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 704,
+        "end": 721,
+        "text": "offshore location"
+      }
+    ]
+  },
+  {
+    "id": 440,
+    "ticker": "CRUS",
+    "normalized": "significant expenditure",
+    "forms": [
+      "significant expenditures"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 778,
+        "end": 802,
+        "text": "significant expenditures"
+      }
+    ]
+  },
+  {
+    "id": 441,
+    "ticker": "CRUS",
+    "normalized": "environmental compliance",
+    "forms": [
+      "environmental compliance"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 815,
+        "end": 839,
+        "text": "environmental compliance"
+      }
+    ]
+  },
+  {
+    "id": 442,
+    "ticker": "CRUS",
+    "normalized": "matter",
+    "forms": [
+      "matters"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 591,
+        "end": 598,
+        "text": "matters"
+      }
+    ]
+  },
+  {
+    "id": 443,
+    "ticker": "CRUS",
+    "normalized": "material respect",
+    "forms": [
+      "material respects"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 60,
+        "end": 77,
+        "text": "material respects"
+      }
+    ]
+  },
+  {
+    "id": 444,
+    "ticker": "CRUS",
+    "normalized": "small quantity",
+    "forms": [
+      "small quantities"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 410,
+        "end": 426,
+        "text": "small quantities"
+      }
+    ]
+  },
+  {
+    "id": 445,
+    "ticker": "CRUS",
+    "normalized": "process sensitivity",
+    "forms": [
+      "process sensitivities"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 421,
+        "end": 442,
+        "text": "process sensitivities"
+      }
+    ]
+  },
+  {
+    "id": 446,
+    "ticker": "CRUS",
+    "normalized": "small",
+    "forms": [
+      "small"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 410,
+        "end": 415,
+        "text": "small"
+      }
+    ]
+  },
+  {
+    "id": 447,
+    "ticker": "CRUS",
+    "normalized": "semiconductor company",
+    "forms": [
+      "semiconductor company"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 169,
+        "end": 190,
+        "text": "semiconductor company"
+      }
+    ]
+  },
+  {
+    "id": 448,
+    "ticker": "CRUS",
+    "normalized": "total",
+    "forms": [
+      "total"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 753,
+        "end": 758,
+        "text": "total"
+      }
+    ]
+  },
+  {
+    "id": 449,
+    "ticker": "CRUS",
+    "normalized": "safety",
+    "forms": [
+      "safety"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 148,
+        "end": 154,
+        "text": "safety"
+      },
+      {
+        "paragraph": 1,
+        "start": 619,
+        "end": 625,
+        "text": "safety"
+      }
+    ]
+  },
+  {
+    "id": 450,
+    "ticker": "CRUS",
+    "normalized": "applicable law",
+    "forms": [
+      "applicable laws",
+      "applicable law"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 83,
+        "end": 98,
+        "text": "applicable laws"
+      },
+      {
+        "paragraph": 1,
+        "start": 503,
+        "end": 517,
+        "text": "applicable law"
+      }
+    ]
+  },
+  {
+    "id": 451,
+    "ticker": "CRUS",
+    "normalized": "hazardous condition",
+    "forms": [
+      "hazardous conditions"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 681,
+        "end": 701,
+        "text": "hazardous conditions"
+      }
+    ]
+  },
+  {
+    "id": 452,
+    "ticker": "CRUS",
+    "normalized": "manufacturer",
+    "forms": [
+      "manufacturer",
+      "manufacturers"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 318,
+        "end": 330,
+        "text": "manufacturer"
+      },
+      {
+        "paragraph": 0,
+        "start": 652,
+        "end": 665,
+        "text": "manufacturers"
+      },
+      {
+        "paragraph": 2,
+        "start": 646,
+        "end": 658,
+        "text": "manufacturer"
+      },
+      {
+        "paragraph": 2,
+        "start": 740,
+        "end": 753,
+        "text": "manufacturers"
+      }
+    ]
+  },
+  {
+    "id": 453,
+    "ticker": "CRUS",
+    "normalized": "identify",
+    "forms": [
+      "identify"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 412,
+        "end": 420,
+        "text": "identify"
+      },
+      {
+        "paragraph": 2,
+        "start": 798,
+        "end": 806,
+        "text": "identify"
+      }
+    ]
+  },
+  {
+    "id": 454,
+    "ticker": "CRUS",
+    "normalized": "addition",
+    "forms": [
+      "addition"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 4,
+        "end": 12,
+        "text": "addition"
+      }
+    ]
+  },
+  {
+    "id": 455,
+    "ticker": "CRUS",
+    "normalized": "testing process",
+    "forms": [
+      "testing process"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 937,
+        "end": 952,
+        "text": "testing process"
+      }
+    ]
+  },
+  {
+    "id": 456,
+    "ticker": "CRUS",
+    "normalized": "produce",
+    "forms": [
+      "produce"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 24,
+        "end": 31,
+        "text": "produce"
+      },
+      {
+        "paragraph": 0,
+        "start": 345,
+        "end": 352,
+        "text": "produce"
+      }
+    ]
+  },
+  {
+    "id": 457,
+    "ticker": "CRUS",
+    "normalized": "operation",
+    "forms": [
+      "operations"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 35,
+        "end": 45,
+        "text": "operations"
+      }
+    ]
+  },
+  {
+    "id": 458,
+    "ticker": "CRUS",
+    "normalized": "design or process technology failure",
+    "forms": [
+      "design or process technology failures"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 246,
+        "end": 283,
+        "text": "design or process technology failures"
+      }
+    ]
+  },
+  {
+    "id": 459,
+    "ticker": "CRUS",
+    "normalized": "purchased",
+    "forms": [
+      "purchased"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 616,
+        "end": 625,
+        "text": "purchased"
+      }
+    ]
+  },
+  {
+    "id": 460,
+    "ticker": "VST",
+    "normalized": "accounts",
+    "forms": [
+      "accounts"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 589,
+        "end": 597,
+        "text": "accounts"
+      }
+    ]
+  },
+  {
+    "id": 461,
+    "ticker": "VST",
+    "normalized": "capital requirement",
+    "forms": [
+      "capital requirements"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 156,
+        "end": 176,
+        "text": "capital requirements"
+      }
+    ]
+  },
+  {
+    "id": 462,
+    "ticker": "VST",
+    "normalized": "non-regulated business",
+    "forms": [
+      "non-regulated businesses"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 486,
+        "end": 510,
+        "text": "non-regulated businesses"
+      }
+    ]
+  },
+  {
+    "id": 463,
+    "ticker": "VST",
+    "normalized": "support",
+    "forms": [
+      "support"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 447,
+        "end": 454,
+        "text": "support"
+      }
+    ]
+  },
+  {
+    "id": 464,
+    "ticker": "VST",
+    "normalized": "vistra",
+    "forms": [
+      "Vistra"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 0,
+        "end": 6,
+        "text": "Vistra"
+      },
+      {
+        "paragraph": 0,
+        "start": 34,
+        "end": 40,
+        "text": "Vistra"
+      },
+      {
+        "paragraph": 0,
+        "start": 221,
+        "end": 227,
+        "text": "Vistra"
+      },
+      {
+        "paragraph": 0,
+        "start": 514,
+        "end": 520,
+        "text": "Vistra"
+      },
+      {
+        "paragraph": 0,
+        "start": 571,
+        "end": 577,
+        "text": "Vistra"
+      },
+      {
+        "paragraph": 0,
+        "start": 582,
+        "end": 588,
+        "text": "Vistra"
+      },
+      {
+        "paragraph": 0,
+        "start": 673,
+        "end": 679,
+        "text": "Vistra"
+      },
+      {
+        "paragraph": 1,
+        "start": 0,
+        "end": 6,
+        "text": "Vistra"
+      },
+      {
+        "paragraph": 1,
+        "start": 299,
+        "end": 305,
+        "text": "Vistra"
+      },
+      {
+        "paragraph": 1,
+        "start": 583,
+        "end": 589,
+        "text": "Vistra"
+      }
+    ]
+  },
+  {
+    "id": 465,
+    "ticker": "VST",
+    "normalized": "result",
+    "forms": [
+      "results"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 979,
+        "end": 986,
+        "text": "results"
+      }
+    ]
+  },
+  {
+    "id": 466,
+    "ticker": "VST",
+    "normalized": "system",
+    "forms": [
+      "system"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 181,
+        "end": 187,
+        "text": "system"
+      }
+    ]
+  },
+  {
+    "id": 467,
+    "ticker": "VST",
+    "normalized": "plan",
+    "forms": [
+      "plan",
+      "Plan",
+      "plans"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 14,
+        "end": 18,
+        "text": "plan"
+      },
+      {
+        "paragraph": 0,
+        "start": 52,
+        "end": 56,
+        "text": "Plan"
+      },
+      {
+        "paragraph": 0,
+        "start": 73,
+        "end": 77,
+        "text": "Plan"
+      },
+      {
+        "paragraph": 0,
+        "start": 188,
+        "end": 192,
+        "text": "Plan"
+      },
+      {
+        "paragraph": 0,
+        "start": 634,
+        "end": 638,
+        "text": "Plan"
+      },
+      {
+        "paragraph": 0,
+        "start": 662,
+        "end": 666,
+        "text": "plan"
+      },
+      {
+        "paragraph": 0,
+        "start": 695,
+        "end": 699,
+        "text": "plan"
+      },
+      {
+        "paragraph": 0,
+        "start": 803,
+        "end": 807,
+        "text": "Plan"
+      },
+      {
+        "paragraph": 0,
+        "start": 847,
+        "end": 851,
+        "text": "plan"
+      },
+      {
+        "paragraph": 0,
+        "start": 988,
+        "end": 992,
+        "text": "Plan"
+      },
+      {
+        "paragraph": 0,
+        "start": 1284,
+        "end": 1288,
+        "text": "Plan"
+      },
+      {
+        "paragraph": 0,
+        "start": 1528,
+        "end": 1532,
+        "text": "Plan"
+      },
+      {
+        "paragraph": 0,
+        "start": 1631,
+        "end": 1635,
+        "text": "Plan"
+      },
+      {
+        "paragraph": 0,
+        "start": 1727,
+        "end": 1731,
+        "text": "Plan"
+      },
+      {
+        "paragraph": 0,
+        "start": 1894,
+        "end": 1898,
+        "text": "plan"
+      },
+      {
+        "paragraph": 0,
+        "start": 1959,
+        "end": 1964,
+        "text": "plans"
+      }
+    ]
+  },
+  {
+    "id": 468,
+    "ticker": "VST",
+    "normalized": "legal",
+    "forms": [
+      "legal"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 555,
+        "end": 560,
+        "text": "legal"
+      }
+    ]
+  },
+  {
+    "id": 469,
+    "ticker": "VST",
+    "normalized": "over 260 employee",
+    "forms": [
+      "Over 260 employees"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 780,
+        "end": 798,
+        "text": "Over 260 employees"
+      }
+    ]
+  },
+  {
+    "id": 470,
+    "ticker": "VST",
+    "normalized": "professional",
+    "forms": [
+      "professional"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 422,
+        "end": 434,
+        "text": "professional"
+      },
+      {
+        "paragraph": 1,
+        "start": 510,
+        "end": 522,
+        "text": "professional"
+      }
+    ]
+  },
+  {
+    "id": 471,
+    "ticker": "VST",
+    "normalized": "average",
+    "forms": [
+      "average"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1331,
+        "end": 1338,
+        "text": "average"
+      }
+    ]
+  },
+  {
+    "id": 472,
+    "ticker": "VST",
+    "normalized": "internal revenue code",
+    "forms": [
+      "Internal Revenue Code"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 880,
+        "end": 901,
+        "text": "Internal Revenue Code"
+      }
+    ]
+  },
+  {
+    "id": 473,
+    "ticker": "VST",
+    "normalized": "dynegy",
+    "forms": [
+      "Dynegy"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1979,
+        "end": 1985,
+        "text": "Dynegy"
+      }
+    ]
+  },
+  {
+    "id": 474,
+    "ticker": "VST",
+    "normalized": "future",
+    "forms": [
+      "future"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1420,
+        "end": 1426,
+        "text": "future"
+      }
+    ]
+  },
+  {
+    "id": 475,
+    "ticker": "VST",
+    "normalized": "energy harbor",
+    "forms": [
+      "Energy Harbor"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1990,
+        "end": 2003,
+        "text": "Energy Harbor"
+      }
+    ]
+  },
+  {
+    "id": 476,
+    "ticker": "VST",
+    "normalized": "strategically",
+    "forms": [
+      "strategically"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 353,
+        "end": 366,
+        "text": "strategically"
+      }
+    ]
+  },
+  {
+    "id": 477,
+    "ticker": "VST",
+    "normalized": "satisfied",
+    "forms": [
+      "satisfied"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 225,
+        "end": 234,
+        "text": "satisfied"
+      }
+    ]
+  },
+  {
+    "id": 478,
+    "ticker": "VST",
+    "normalized": "age and year",
+    "forms": [
+      "age and years"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1195,
+        "end": 1208,
+        "text": "age and years"
+      }
+    ]
+  },
+  {
+    "id": 479,
+    "ticker": "VST",
+    "normalized": "apply",
+    "forms": [
+      "apply"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1458,
+        "end": 1463,
+        "text": "apply"
+      }
+    ]
+  },
+  {
+    "id": 480,
+    "ticker": "VST",
+    "normalized": "improving",
+    "forms": [
+      "improving"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 969,
+        "end": 978,
+        "text": "improving"
+      }
+    ]
+  },
+  {
+    "id": 481,
+    "ticker": "VST",
+    "normalized": "hedging",
+    "forms": [
+      "hedging"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 178,
+        "end": 185,
+        "text": "hedging"
+      }
+    ]
+  },
+  {
+    "id": 482,
+    "ticker": "VST",
+    "normalized": "license",
+    "forms": [
+      "licenses"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 523,
+        "end": 531,
+        "text": "licenses"
+      }
+    ]
+  },
+  {
+    "id": 483,
+    "ticker": "VST",
+    "normalized": "webinar",
+    "forms": [
+      "webinars"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 206,
+        "end": 214,
+        "text": "webinars"
+      }
+    ]
+  },
+  {
+    "id": 484,
+    "ticker": "VST",
+    "normalized": "supports",
+    "forms": [
+      "supports"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 367,
+        "end": 375,
+        "text": "supports"
+      }
+    ]
+  },
+  {
+    "id": 485,
+    "ticker": "VST",
+    "normalized": "unit",
+    "forms": [
+      "unit"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1817,
+        "end": 1821,
+        "text": "unit"
+      },
+      {
+        "paragraph": 1,
+        "start": 903,
+        "end": 907,
+        "text": "unit"
+      }
+    ]
+  },
+  {
+    "id": 486,
+    "ticker": "VST",
+    "normalized": "employer",
+    "forms": [
+      "employer"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 653,
+        "end": 661,
+        "text": "employer"
+      }
+    ]
+  },
+  {
+    "id": 487,
+    "ticker": "VST",
+    "normalized": "favorable term",
+    "forms": [
+      "favorable terms"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 355,
+        "end": 370,
+        "text": "favorable terms"
+      }
+    ]
+  },
+  {
+    "id": 488,
+    "ticker": "VST",
+    "normalized": "earn",
+    "forms": [
+      "earn"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1106,
+        "end": 1110,
+        "text": "earn"
+      }
+    ]
+  },
+  {
+    "id": 489,
+    "ticker": "VST",
+    "normalized": "significant",
+    "forms": [
+      "significant"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 2,
+        "start": 116,
+        "end": 127,
+        "text": "significant"
+      }
+    ]
+  },
+  {
+    "id": 490,
+    "ticker": "VST",
+    "normalized": "full-time employee",
+    "forms": [
+      "full-time employees"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 838,
+        "end": 857,
+        "text": "full-time employees"
+      }
+    ]
+  },
+  {
+    "id": 491,
+    "ticker": "VST",
+    "normalized": "service cost",
+    "forms": [
+      "service costs"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1473,
+        "end": 1486,
+        "text": "service costs"
+      }
+    ]
+  },
+  {
+    "id": 492,
+    "ticker": "VST",
+    "normalized": "monthly interest credit",
+    "forms": [
+      "monthly interest credits"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1226,
+        "end": 1250,
+        "text": "monthly interest credits"
+      }
+    ]
+  },
+  {
+    "id": 493,
+    "ticker": "VST",
+    "normalized": "multiple employer plan",
+    "forms": [
+      "multiple employer plan"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 644,
+        "end": 666,
+        "text": "multiple employer plan"
+      }
+    ]
+  },
+  {
+    "id": 494,
+    "ticker": "VST",
+    "normalized": "regulation",
+    "forms": [
+      "regulations"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1591,
+        "end": 1602,
+        "text": "regulations"
+      }
+    ]
+  },
+  {
+    "id": 495,
+    "ticker": "VST",
+    "normalized": "harbor",
+    "forms": [
+      "Harbor"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1997,
+        "end": 2003,
+        "text": "Harbor"
+      }
+    ]
+  },
+  {
+    "id": 496,
+    "ticker": "VST",
+    "normalized": "topic",
+    "forms": [
+      "topics"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 668,
+        "end": 674,
+        "text": "topics"
+      }
+    ]
+  },
+  {
+    "id": 497,
+    "ticker": "VST",
+    "normalized": "employee-specific",
+    "forms": [
+      "employee-specific"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 261,
+        "end": 278,
+        "text": "employee-specific"
+      }
+    ]
+  },
+  {
+    "id": 498,
+    "ticker": "VST",
+    "normalized": "platform",
+    "forms": [
+      "platform"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 1,
+        "start": 143,
+        "end": 151,
+        "text": "platform"
+      },
+      {
+        "paragraph": 1,
+        "start": 339,
+        "end": 347,
+        "text": "platform"
+      }
+    ]
+  },
+  {
+    "id": 499,
+    "ticker": "VST",
+    "normalized": "presented",
+    "forms": [
+      "presented"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 771,
+        "end": 780,
+        "text": "presented"
+      }
+    ]
+  },
+  {
+    "id": 500,
+    "ticker": "VST",
+    "normalized": "based",
+    "forms": [
+      "based"
+    ],
+    "occurrences": [
+      {
+        "paragraph": 0,
+        "start": 1140,
+        "end": 1145,
+        "text": "based"
+      },
+      {
+        "paragraph": 0,
+        "start": 1297,
+        "end": 1302,
+        "text": "based"
+      }
+    ]
+  }
+]

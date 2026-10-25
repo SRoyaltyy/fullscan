@@ -1,0 +1,1125 @@
+{
+  "schema": "extraction-500-final-1",
+  "parser_revision": "6dad95df8f7c2bb3b49df4de62c9ab80813c20db",
+  "label_freeze_commit": "9ae093f2eff590a1cf784c57c6887ba154988117",
+  "labels_sha256": "489ecf8643519578a0ece3b4521a10fa43d6902d25a51ba0f9801dd6072c755a",
+  "draw_sha256": "b40c8b61ca2ba90182fbb45a561e19b4e0c363b6d5a0e598c2b30b2c4ff2713a",
+  "frozen_parser_sha256": "97f4dfed9d1286e2a9e93ba62ba4946026e58fd313b062a0060e1595a1464999",
+  "scorer_sha256": "a248a13ee5b27d2d782ae114cc811e4a105969c2c406516243bcde3c5115013c",
+  "spacy_version": "3.8.11",
+  "model_version": "3.8.0",
+  "scope": "Source-first lexical extraction on retained filing passages, not whole filings or resolved identities.",
+  "summary": {
+    "references": 851,
+    "raw_exact": 570,
+    "new_exact": 754,
+    "raw_complete_span": 775,
+    "new_complete_span": 785,
+    "raw_canonical_exact": 564,
+    "new_canonical_exact": 746,
+    "raw_canonical_span": 768,
+    "new_canonical_span": 777,
+    "raw_exact_rate": 0.6698002350176263,
+    "new_exact_rate": 0.8860164512338425,
+    "raw_complete_span_rate": 0.9106933019976499,
+    "new_complete_span_rate": 0.9224441833137486
+  },
+  "by_stock": {
+    "LYNX": {
+      "references": 27,
+      "raw_exact": 13,
+      "new_exact": 23,
+      "raw_complete_span": 23,
+      "new_complete_span": 23,
+      "raw_canonical_exact": 13,
+      "new_canonical_exact": 22,
+      "raw_canonical_span": 22,
+      "new_canonical_span": 22,
+      "raw_exact_rate": 0.48148148148148145,
+      "new_exact_rate": 0.8518518518518519,
+      "raw_complete_span_rate": 0.8518518518518519,
+      "new_complete_span_rate": 0.8518518518518519
+    },
+    "BVN": {
+      "references": 71,
+      "raw_exact": 42,
+      "new_exact": 53,
+      "raw_complete_span": 57,
+      "new_complete_span": 58,
+      "raw_canonical_exact": 41,
+      "new_canonical_exact": 51,
+      "raw_canonical_span": 56,
+      "new_canonical_span": 56,
+      "raw_exact_rate": 0.5915492957746479,
+      "new_exact_rate": 0.7464788732394366,
+      "raw_complete_span_rate": 0.8028169014084507,
+      "new_complete_span_rate": 0.8169014084507042
+    },
+    "SHEN": {
+      "references": 88,
+      "raw_exact": 65,
+      "new_exact": 79,
+      "raw_complete_span": 83,
+      "new_complete_span": 83,
+      "raw_canonical_exact": 64,
+      "new_canonical_exact": 79,
+      "raw_canonical_span": 83,
+      "new_canonical_span": 83,
+      "raw_exact_rate": 0.7386363636363636,
+      "new_exact_rate": 0.8977272727272727,
+      "raw_complete_span_rate": 0.9431818181818182,
+      "new_complete_span_rate": 0.9431818181818182
+    },
+    "NKE": {
+      "references": 56,
+      "raw_exact": 44,
+      "new_exact": 54,
+      "raw_complete_span": 54,
+      "new_complete_span": 54,
+      "raw_canonical_exact": 44,
+      "new_canonical_exact": 54,
+      "raw_canonical_span": 54,
+      "new_canonical_span": 54,
+      "raw_exact_rate": 0.7857142857142857,
+      "new_exact_rate": 0.9642857142857143,
+      "raw_complete_span_rate": 0.9642857142857143,
+      "new_complete_span_rate": 0.9642857142857143
+    },
+    "KLC": {
+      "references": 81,
+      "raw_exact": 45,
+      "new_exact": 66,
+      "raw_complete_span": 69,
+      "new_complete_span": 70,
+      "raw_canonical_exact": 45,
+      "new_canonical_exact": 66,
+      "raw_canonical_span": 69,
+      "new_canonical_span": 70,
+      "raw_exact_rate": 0.5555555555555556,
+      "new_exact_rate": 0.8148148148148148,
+      "raw_complete_span_rate": 0.8518518518518519,
+      "new_complete_span_rate": 0.8641975308641975
+    },
+    "BKR": {
+      "references": 117,
+      "raw_exact": 81,
+      "new_exact": 104,
+      "raw_complete_span": 109,
+      "new_complete_span": 110,
+      "raw_canonical_exact": 81,
+      "new_canonical_exact": 104,
+      "raw_canonical_span": 109,
+      "new_canonical_span": 110,
+      "raw_exact_rate": 0.6923076923076923,
+      "new_exact_rate": 0.8888888888888888,
+      "raw_complete_span_rate": 0.9316239316239316,
+      "new_complete_span_rate": 0.9401709401709402
+    },
+    "BRO": {
+      "references": 48,
+      "raw_exact": 30,
+      "new_exact": 40,
+      "raw_complete_span": 39,
+      "new_complete_span": 40,
+      "raw_canonical_exact": 29,
+      "new_canonical_exact": 38,
+      "raw_canonical_span": 37,
+      "new_canonical_span": 38,
+      "raw_exact_rate": 0.625,
+      "new_exact_rate": 0.8333333333333334,
+      "raw_complete_span_rate": 0.8125,
+      "new_complete_span_rate": 0.8333333333333334
+    },
+    "INCY": {
+      "references": 64,
+      "raw_exact": 40,
+      "new_exact": 59,
+      "raw_complete_span": 60,
+      "new_complete_span": 61,
+      "raw_canonical_exact": 40,
+      "new_canonical_exact": 59,
+      "raw_canonical_span": 60,
+      "new_canonical_span": 61,
+      "raw_exact_rate": 0.625,
+      "new_exact_rate": 0.921875,
+      "raw_complete_span_rate": 0.9375,
+      "new_complete_span_rate": 0.953125
+    },
+    "BW": {
+      "references": 64,
+      "raw_exact": 46,
+      "new_exact": 58,
+      "raw_complete_span": 61,
+      "new_complete_span": 61,
+      "raw_canonical_exact": 46,
+      "new_canonical_exact": 58,
+      "raw_canonical_span": 61,
+      "new_canonical_span": 61,
+      "raw_exact_rate": 0.71875,
+      "new_exact_rate": 0.90625,
+      "raw_complete_span_rate": 0.953125,
+      "new_complete_span_rate": 0.953125
+    },
+    "CBRE": {
+      "references": 90,
+      "raw_exact": 68,
+      "new_exact": 84,
+      "raw_complete_span": 86,
+      "new_complete_span": 88,
+      "raw_canonical_exact": 66,
+      "new_canonical_exact": 82,
+      "raw_canonical_span": 84,
+      "new_canonical_span": 86,
+      "raw_exact_rate": 0.7555555555555555,
+      "new_exact_rate": 0.9333333333333333,
+      "raw_complete_span_rate": 0.9555555555555556,
+      "new_complete_span_rate": 0.9777777777777777
+    },
+    "CRUS": {
+      "references": 60,
+      "raw_exact": 42,
+      "new_exact": 56,
+      "raw_complete_span": 56,
+      "new_complete_span": 56,
+      "raw_canonical_exact": 42,
+      "new_canonical_exact": 56,
+      "raw_canonical_span": 56,
+      "new_canonical_span": 56,
+      "raw_exact_rate": 0.7,
+      "new_exact_rate": 0.9333333333333333,
+      "raw_complete_span_rate": 0.9333333333333333,
+      "new_complete_span_rate": 0.9333333333333333
+    },
+    "VST": {
+      "references": 85,
+      "raw_exact": 54,
+      "new_exact": 78,
+      "raw_complete_span": 78,
+      "new_complete_span": 81,
+      "raw_canonical_exact": 53,
+      "new_canonical_exact": 77,
+      "raw_canonical_span": 77,
+      "new_canonical_span": 80,
+      "raw_exact_rate": 0.6352941176470588,
+      "new_exact_rate": 0.9176470588235294,
+      "raw_complete_span_rate": 0.9176470588235294,
+      "new_complete_span_rate": 0.9529411764705882
+    }
+  },
+  "by_stratum": {
+    "single_word": {
+      "references": 330,
+      "raw_exact": 319,
+      "new_exact": 328,
+      "raw_complete_span": 322,
+      "new_complete_span": 328,
+      "raw_canonical_exact": 319,
+      "new_canonical_exact": 328,
+      "raw_canonical_span": 322,
+      "new_canonical_span": 328,
+      "raw_exact_rate": 0.9666666666666667,
+      "new_exact_rate": 0.9939393939393939,
+      "raw_complete_span_rate": 0.9757575757575757,
+      "new_complete_span_rate": 0.9939393939393939
+    },
+    "multiword": {
+      "references": 521,
+      "raw_exact": 251,
+      "new_exact": 426,
+      "raw_complete_span": 453,
+      "new_complete_span": 457,
+      "raw_canonical_exact": 245,
+      "new_canonical_exact": 418,
+      "raw_canonical_span": 446,
+      "new_canonical_span": 449,
+      "raw_exact_rate": 0.4817658349328215,
+      "new_exact_rate": 0.817658349328215,
+      "raw_complete_span_rate": 0.8694817658349329,
+      "new_complete_span_rate": 0.8771593090211133
+    }
+  },
+  "source_receipts": [
+    {
+      "ticker": "LYNX",
+      "paragraphs": 3,
+      "characters": 2247,
+      "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0002132582.json.gz",
+      "profile_sha256": "8d75b2cebe2c91669d4e42832a026f8c0f543f6ff03b8246aa00274c1029bda8",
+      "candidate_groups": 110,
+      "raw_occurrences": 222,
+      "new_occurrences": 247
+    },
+    {
+      "ticker": "BVN",
+      "paragraphs": 3,
+      "characters": 3452,
+      "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001013131.json.gz",
+      "profile_sha256": "1f612ed78511ce96bdf6d635d50e44386ec31b341d82a3a85209b9b535a7e60c",
+      "candidate_groups": 253,
+      "raw_occurrences": 350,
+      "new_occurrences": 387
+    },
+    {
+      "ticker": "SHEN",
+      "paragraphs": 3,
+      "characters": 2801,
+      "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0000354963.json.gz",
+      "profile_sha256": "b81ba701565880467036930756f4c69f4728350a9145e1c887c43ff755904255",
+      "candidate_groups": 244,
+      "raw_occurrences": 255,
+      "new_occurrences": 320
+    },
+    {
+      "ticker": "NKE",
+      "paragraphs": 3,
+      "characters": 2218,
+      "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0000320187.json.gz",
+      "profile_sha256": "fcc8c5c64f896c11c812bcb5cb7b9207c850f64f9979fb362ac7c5111c437c8d",
+      "candidate_groups": 188,
+      "raw_occurrences": 202,
+      "new_occurrences": 258
+    },
+    {
+      "ticker": "KLC",
+      "paragraphs": 3,
+      "characters": 4250,
+      "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001873529.json.gz",
+      "profile_sha256": "f9e5c87fa95ee1e4b13f754d0b3d7822a5128c86b88b26df64bb6d1d0b8cd59c",
+      "candidate_groups": 282,
+      "raw_occurrences": 358,
+      "new_occurrences": 454
+    },
+    {
+      "ticker": "BKR",
+      "paragraphs": 3,
+      "characters": 3856,
+      "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001701605.json.gz",
+      "profile_sha256": "12f40e0ca81d0525659ce2ea21a13d2cb70581707144fc6ddc42c65f19057b0b",
+      "candidate_groups": 300,
+      "raw_occurrences": 343,
+      "new_occurrences": 437
+    },
+    {
+      "ticker": "BRO",
+      "paragraphs": 3,
+      "characters": 2379,
+      "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0000079282.json.gz",
+      "profile_sha256": "00622b9f44d6f6832d99b512850e7c6a91455b50b4624f16e276f6f2b87c6587",
+      "candidate_groups": 189,
+      "raw_occurrences": 226,
+      "new_occurrences": 260
+    },
+    {
+      "ticker": "INCY",
+      "paragraphs": 3,
+      "characters": 3539,
+      "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0000879169.json.gz",
+      "profile_sha256": "4b931b739b4701d3c1621d13e79193f03243c7d3ff362e233a5e1042e9b7489d",
+      "candidate_groups": 225,
+      "raw_occurrences": 296,
+      "new_occurrences": 382
+    },
+    {
+      "ticker": "BW",
+      "paragraphs": 3,
+      "characters": 2293,
+      "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001630805.json.gz",
+      "profile_sha256": "dacec9f9203986fd23d7db8797861fd65a18cafa14effd5c66ac3dc18ecade1e",
+      "candidate_groups": 201,
+      "raw_occurrences": 200,
+      "new_occurrences": 258
+    },
+    {
+      "ticker": "CBRE",
+      "paragraphs": 3,
+      "characters": 3337,
+      "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001138118.json.gz",
+      "profile_sha256": "bfa7e833eec99cee3ff1063ca8d2c4bc76d68ae3cf90500a3e279fee90d27e6a",
+      "candidate_groups": 298,
+      "raw_occurrences": 300,
+      "new_occurrences": 389
+    },
+    {
+      "ticker": "CRUS",
+      "paragraphs": 3,
+      "characters": 2885,
+      "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0000772406.json.gz",
+      "profile_sha256": "1cfe01073e50736a2564e0beaa5ed8b49b02fc783f657ba2448d98d5ed4cd586",
+      "candidate_groups": 194,
+      "raw_occurrences": 246,
+      "new_occurrences": 297
+    },
+    {
+      "ticker": "VST",
+      "paragraphs": 3,
+      "characters": 3616,
+      "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001692819.json.gz",
+      "profile_sha256": "06f938b3550288e3620888c2a10fdfb11032d2514ea2881940cd9d57260070f9",
+      "candidate_groups": 280,
+      "raw_occurrences": 328,
+      "new_occurrences": 412
+    }
+  ],
+  "precision": {
+    "sample_groups": 500,
+    "valid": 306,
+    "invalid": 182,
+    "uncertain": 12,
+    "definitely_valid_fraction": 0.612,
+    "valid_fraction_if_all_uncertain_valid": 0.636,
+    "resolved_precision": 0.6270491803278688,
+    "interval_type": "Annotation-uncertainty bounds, not a statistical confidence interval.",
+    "interpretation": "Standalone nominal/named/technical term validity under the frozen broad contract, not correct company relationships.",
+    "judgments_sha256": "96696a8eb4a283923f02ea1a372b42844f354b6d6f23d33d962ea342e4bb1f2b",
+    "invalid_categories": {
+      "incomplete_modifier": 58,
+      "discourse_filler": 8,
+      "name_fragment": 10,
+      "generic_verb": 71,
+      "discourse_adverb": 12,
+      "truncated_legal_identifier": 5,
+      "temporal_adverb": 1,
+      "broken_compound": 3,
+      "incomplete_foreign_name": 1,
+      "foreign_function_word": 2,
+      "malformed_phrase": 1,
+      "discourse_quantifier": 6,
+      "identifier_fragment": 2,
+      "partial_phrase": 2
+    },
+    "by_stock": {
+      "BKR": {
+        "valid": 29,
+        "invalid": 13
+      },
+      "BRO": {
+        "invalid": 10,
+        "valid": 32
+      },
+      "BVN": {
+        "valid": 23,
+        "invalid": 18,
+        "uncertain": 1
+      },
+      "BW": {
+        "invalid": 17,
+        "valid": 21,
+        "uncertain": 3
+      },
+      "CBRE": {
+        "valid": 26,
+        "invalid": 15
+      },
+      "CRUS": {
+        "valid": 24,
+        "invalid": 16,
+        "uncertain": 1
+      },
+      "INCY": {
+        "valid": 29,
+        "invalid": 13
+      },
+      "KLC": {
+        "valid": 22,
+        "invalid": 19,
+        "uncertain": 1
+      },
+      "LYNX": {
+        "valid": 20,
+        "uncertain": 2,
+        "invalid": 20
+      },
+      "NKE": {
+        "valid": 28,
+        "invalid": 12,
+        "uncertain": 2
+      },
+      "SHEN": {
+        "invalid": 13,
+        "valid": 29
+      },
+      "VST": {
+        "invalid": 16,
+        "valid": 23,
+        "uncertain": 2
+      }
+    }
+  },
+  "global_accuracy_certified": false,
+  "limitations": [
+    "Assistant labels, not independent human certification.",
+    "Stratified issuer sample and overlapping term units are clustered; this is not a market-wide guarantee.",
+    "Stored profiles contain retained passages; full-filing coverage is not established.",
+    "Exact term/alias recovery and containment in a longer phrase are separate metrics.",
+    "Source aliases can recover an identity without recovering its complete canonical name.",
+    "Relationships and semantic identity are outside this extraction test."
+  ],
+  "macro_new_exact_rate": 0.884151622885959,
+  "macro_new_complete_span_rate": 0.9153520737266883,
+  "first_run_results_sha256": "ffc04c14e254325b0b02ba66ac566759b54c952b3183240c0365d3463936483f",
+  "sampling_receipt": {
+    "issuers": 12,
+    "passages": 36,
+    "distinct_whitespace_normalized_passages": 35,
+    "characters": 36873,
+    "distinct_reference_strings_across_issuers": 770,
+    "single_word_references": 330,
+    "multiword_references": 521
+  },
+  "missing_exact": [
+    {
+      "ticker": "LYNX",
+      "term": "Rule 457(a)"
+    },
+    {
+      "ticker": "LYNX",
+      "term": "Rule 457(o)"
+    },
+    {
+      "ticker": "LYNX",
+      "term": "Guggenheim Securities, LLC"
+    },
+    {
+      "ticker": "LYNX",
+      "term": "Schedule I"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Legislative Decree No. 892"
+    },
+    {
+      "ticker": "BVN",
+      "term": "worker’s profit sharing rate"
+    },
+    {
+      "ticker": "BVN",
+      "term": "statements of financial position"
+    },
+    {
+      "ticker": "BVN",
+      "term": "statements of comprehensive income"
+    },
+    {
+      "ticker": "BVN",
+      "term": "negative impact"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Law No. 28526"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Legislative Decree No. 1042"
+    },
+    {
+      "ticker": "BVN",
+      "term": "No. 1670"
+    },
+    {
+      "ticker": "BVN",
+      "term": "technical branch"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Supreme Decree No. 059-2005-EM"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Supreme Decree No. 003-2009-EM"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Board of Directors"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Chairman of the Board"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Article 177 of the Peruvian Companies Law"
+    },
+    {
+      "ticker": "BVN",
+      "term": "third parties"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Article 3 of Law No. 29720"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Law No. 30050"
+    },
+    {
+      "ticker": "BVN",
+      "term": "listed company"
+    },
+    {
+      "ticker": "SHEN",
+      "term": "state regulatory authorities"
+    },
+    {
+      "ticker": "SHEN",
+      "term": "common carrier regulations"
+    },
+    {
+      "ticker": "SHEN",
+      "term": "incumbent local exchange carriers"
+    },
+    {
+      "ticker": "SHEN",
+      "term": "discontinuance of service"
+    },
+    {
+      "ticker": "SHEN",
+      "term": "malicious actor"
+    },
+    {
+      "ticker": "SHEN",
+      "term": "third parties"
+    },
+    {
+      "ticker": "SHEN",
+      "term": "impairment of business operations"
+    },
+    {
+      "ticker": "SHEN",
+      "term": "loss of revenues"
+    },
+    {
+      "ticker": "SHEN",
+      "term": "loss of customers"
+    },
+    {
+      "ticker": "NKE",
+      "term": "On"
+    },
+    {
+      "ticker": "NKE",
+      "term": "Under Armour"
+    },
+    {
+      "ticker": "KLC",
+      "term": "early childhood education centers"
+    },
+    {
+      "ticker": "KLC",
+      "term": "undiscounted amounts payable"
+    },
+    {
+      "ticker": "KLC",
+      "term": "Contingent consideration payable"
+    },
+    {
+      "ticker": "KLC",
+      "term": "unaudited condensed consolidated balance sheets"
+    },
+    {
+      "ticker": "KLC",
+      "term": "range of outcomes"
+    },
+    {
+      "ticker": "KLC",
+      "term": "financial results"
+    },
+    {
+      "ticker": "KLC",
+      "term": "consolidated statements of operations and comprehensive income (loss)"
+    },
+    {
+      "ticker": "KLC",
+      "term": "dates of acquisition"
+    },
+    {
+      "ticker": "KLC",
+      "term": "401(k) Plan"
+    },
+    {
+      "ticker": "KLC",
+      "term": "asset trusts"
+    },
+    {
+      "ticker": "KLC",
+      "term": "selling, general, and administrative expenses"
+    },
+    {
+      "ticker": "KLC",
+      "term": "other (income) expense, net"
+    },
+    {
+      "ticker": "KLC",
+      "term": "cloud platform"
+    },
+    {
+      "ticker": "KLC",
+      "term": "website hosting platform"
+    },
+    {
+      "ticker": "KLC",
+      "term": "results of operations"
+    },
+    {
+      "ticker": "BKR",
+      "term": "Human Capital and Compensation Committee"
+    },
+    {
+      "ticker": "BKR",
+      "term": "executive compensation and benefits"
+    },
+    {
+      "ticker": "BKR",
+      "term": "advanced sensing & diagnostics"
+    },
+    {
+      "ticker": "BKR",
+      "term": "product lines"
+    },
+    {
+      "ticker": "BKR",
+      "term": "Nova LTTM"
+    },
+    {
+      "ticker": "BKR",
+      "term": "oil and gas"
+    },
+    {
+      "ticker": "BKR",
+      "term": "industrial production"
+    },
+    {
+      "ticker": "BKR",
+      "term": "Orbit 60 Bently Nevada"
+    },
+    {
+      "ticker": "BKR",
+      "term": "digital applications"
+    },
+    {
+      "ticker": "BKR",
+      "term": "harsh environments"
+    },
+    {
+      "ticker": "BKR",
+      "term": "customer requests for bids"
+    },
+    {
+      "ticker": "BKR",
+      "term": "technical specifications"
+    },
+    {
+      "ticker": "BKR",
+      "term": "results of operations"
+    },
+    {
+      "ticker": "BRO",
+      "term": "quarterly reports on Form 10-Q"
+    },
+    {
+      "ticker": "BRO",
+      "term": "current reports on Form 8-K"
+    },
+    {
+      "ticker": "BRO",
+      "term": "Section 13(a)"
+    },
+    {
+      "ticker": "BRO",
+      "term": "15(d)"
+    },
+    {
+      "ticker": "BRO",
+      "term": "board of directors"
+    },
+    {
+      "ticker": "BRO",
+      "term": "Code of Business Conduct and Ethics"
+    },
+    {
+      "ticker": "BRO",
+      "term": "Code of Ethics-CEO and Senior Financial Officers"
+    },
+    {
+      "ticker": "BRO",
+      "term": "results of operations"
+    },
+    {
+      "ticker": "INCY",
+      "term": "consolidated statements of operations"
+    },
+    {
+      "ticker": "INCY",
+      "term": "gain on equity investments"
+    },
+    {
+      "ticker": "INCY",
+      "term": "commercial products"
+    },
+    {
+      "ticker": "INCY",
+      "term": "drug substance manufacturing"
+    },
+    {
+      "ticker": "INCY",
+      "term": "product recalls"
+    },
+    {
+      "ticker": "BW",
+      "term": "intellectual property"
+    },
+    {
+      "ticker": "BW",
+      "term": "multiple layers of cybersecurity defenses"
+    },
+    {
+      "ticker": "BW",
+      "term": "restricted access"
+    },
+    {
+      "ticker": "BW",
+      "term": "B&W PGG Luxembourg Finance Sárl"
+    },
+    {
+      "ticker": "BW",
+      "term": "Babcock & Wilcox A/S"
+    },
+    {
+      "ticker": "BW",
+      "term": "working capital"
+    },
+    {
+      "ticker": "CBRE",
+      "term": "globally diversified real estate services firms"
+    },
+    {
+      "ticker": "CBRE",
+      "term": "building safety"
+    },
+    {
+      "ticker": "CBRE",
+      "term": "life-critical fire-safety issues"
+    },
+    {
+      "ticker": "CBRE",
+      "term": "cost of remediation"
+    },
+    {
+      "ticker": "CBRE",
+      "term": "economic participation"
+    },
+    {
+      "ticker": "CBRE",
+      "term": "results of operations"
+    },
+    {
+      "ticker": "CRUS",
+      "term": "worker health and safety"
+    },
+    {
+      "ticker": "CRUS",
+      "term": "risk of liability"
+    },
+    {
+      "ticker": "CRUS",
+      "term": "Manufacturing defects"
+    },
+    {
+      "ticker": "CRUS",
+      "term": "product recalls"
+    },
+    {
+      "ticker": "VST",
+      "term": "Section 401(a)"
+    },
+    {
+      "ticker": "VST",
+      "term": "years of service"
+    },
+    {
+      "ticker": "VST",
+      "term": "federal regulations"
+    },
+    {
+      "ticker": "VST",
+      "term": "training and development programs"
+    },
+    {
+      "ticker": "VST",
+      "term": "learning management system courses"
+    },
+    {
+      "ticker": "VST",
+      "term": "professional licenses"
+    },
+    {
+      "ticker": "VST",
+      "term": "operating cash flows"
+    }
+  ],
+  "missing_complete_span": [
+    {
+      "ticker": "LYNX",
+      "term": "Rule 457(a)"
+    },
+    {
+      "ticker": "LYNX",
+      "term": "Rule 457(o)"
+    },
+    {
+      "ticker": "LYNX",
+      "term": "Guggenheim Securities, LLC"
+    },
+    {
+      "ticker": "LYNX",
+      "term": "Schedule I"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Legislative Decree No. 892"
+    },
+    {
+      "ticker": "BVN",
+      "term": "statements of financial position"
+    },
+    {
+      "ticker": "BVN",
+      "term": "statements of comprehensive income"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Law No. 28526"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Legislative Decree No. 1042"
+    },
+    {
+      "ticker": "BVN",
+      "term": "No. 1670"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Supreme Decree No. 059-2005-EM"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Supreme Decree No. 003-2009-EM"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Chairman of the Board"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Article 177 of the Peruvian Companies Law"
+    },
+    {
+      "ticker": "BVN",
+      "term": "third parties"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Article 3 of Law No. 29720"
+    },
+    {
+      "ticker": "BVN",
+      "term": "Law No. 30050"
+    },
+    {
+      "ticker": "SHEN",
+      "term": "incumbent local exchange carriers"
+    },
+    {
+      "ticker": "SHEN",
+      "term": "discontinuance of service"
+    },
+    {
+      "ticker": "SHEN",
+      "term": "impairment of business operations"
+    },
+    {
+      "ticker": "SHEN",
+      "term": "loss of revenues"
+    },
+    {
+      "ticker": "SHEN",
+      "term": "loss of customers"
+    },
+    {
+      "ticker": "NKE",
+      "term": "On"
+    },
+    {
+      "ticker": "NKE",
+      "term": "Under Armour"
+    },
+    {
+      "ticker": "KLC",
+      "term": "undiscounted amounts payable"
+    },
+    {
+      "ticker": "KLC",
+      "term": "Contingent consideration payable"
+    },
+    {
+      "ticker": "KLC",
+      "term": "range of outcomes"
+    },
+    {
+      "ticker": "KLC",
+      "term": "consolidated statements of operations and comprehensive income (loss)"
+    },
+    {
+      "ticker": "KLC",
+      "term": "dates of acquisition"
+    },
+    {
+      "ticker": "KLC",
+      "term": "401(k) Plan"
+    },
+    {
+      "ticker": "KLC",
+      "term": "asset trusts"
+    },
+    {
+      "ticker": "KLC",
+      "term": "selling, general, and administrative expenses"
+    },
+    {
+      "ticker": "KLC",
+      "term": "other (income) expense, net"
+    },
+    {
+      "ticker": "KLC",
+      "term": "website hosting platform"
+    },
+    {
+      "ticker": "KLC",
+      "term": "results of operations"
+    },
+    {
+      "ticker": "BKR",
+      "term": "executive compensation and benefits"
+    },
+    {
+      "ticker": "BKR",
+      "term": "advanced sensing & diagnostics"
+    },
+    {
+      "ticker": "BKR",
+      "term": "Nova LTTM"
+    },
+    {
+      "ticker": "BKR",
+      "term": "oil and gas"
+    },
+    {
+      "ticker": "BKR",
+      "term": "Orbit 60 Bently Nevada"
+    },
+    {
+      "ticker": "BKR",
+      "term": "customer requests for bids"
+    },
+    {
+      "ticker": "BKR",
+      "term": "results of operations"
+    },
+    {
+      "ticker": "BRO",
+      "term": "quarterly reports on Form 10-Q"
+    },
+    {
+      "ticker": "BRO",
+      "term": "current reports on Form 8-K"
+    },
+    {
+      "ticker": "BRO",
+      "term": "Section 13(a)"
+    },
+    {
+      "ticker": "BRO",
+      "term": "15(d)"
+    },
+    {
+      "ticker": "BRO",
+      "term": "board of directors"
+    },
+    {
+      "ticker": "BRO",
+      "term": "Code of Business Conduct and Ethics"
+    },
+    {
+      "ticker": "BRO",
+      "term": "Code of Ethics-CEO and Senior Financial Officers"
+    },
+    {
+      "ticker": "BRO",
+      "term": "results of operations"
+    },
+    {
+      "ticker": "INCY",
+      "term": "consolidated statements of operations"
+    },
+    {
+      "ticker": "INCY",
+      "term": "gain on equity investments"
+    },
+    {
+      "ticker": "INCY",
+      "term": "product recalls"
+    },
+    {
+      "ticker": "BW",
+      "term": "multiple layers of cybersecurity defenses"
+    },
+    {
+      "ticker": "BW",
+      "term": "restricted access"
+    },
+    {
+      "ticker": "BW",
+      "term": "Babcock & Wilcox A/S"
+    },
+    {
+      "ticker": "CBRE",
+      "term": "cost of remediation"
+    },
+    {
+      "ticker": "CBRE",
+      "term": "results of operations"
+    },
+    {
+      "ticker": "CRUS",
+      "term": "worker health and safety"
+    },
+    {
+      "ticker": "CRUS",
+      "term": "risk of liability"
+    },
+    {
+      "ticker": "CRUS",
+      "term": "Manufacturing defects"
+    },
+    {
+      "ticker": "CRUS",
+      "term": "product recalls"
+    },
+    {
+      "ticker": "VST",
+      "term": "Section 401(a)"
+    },
+    {
+      "ticker": "VST",
+      "term": "years of service"
+    },
+    {
+      "ticker": "VST",
+      "term": "learning management system courses"
+    },
+    {
+      "ticker": "VST",
+      "term": "operating cash flows"
+    }
+  ]
+}

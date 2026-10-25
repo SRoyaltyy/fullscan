@@ -1,0 +1,852 @@
+ticker,name,stratum,raw_exact,new_exact,raw_complete_span,new_complete_span,new_canonical_exact,new_canonical_span
+LYNX,registration fee,multiword,False,True,True,True,True,True
+LYNX,Rule 457(a),multiword,False,False,False,False,False,False
+LYNX,Securities Act of 1933,multiword,False,True,True,True,False,False
+LYNX,aggregate offering price,multiword,False,True,True,True,True,True
+LYNX,additional shares,multiword,True,True,True,True,True,True
+LYNX,underwriters,single_word,True,True,True,True,True,True
+LYNX,option,single_word,True,True,True,True,True,True
+LYNX,Registrant,single_word,True,True,True,True,True,True
+LYNX,initial filing,multiword,False,True,True,True,True,True
+LYNX,Registration Statement on Form S-1,multiword,False,True,True,True,True,True
+LYNX,Form S-1,multiword,False,True,True,True,True,True
+LYNX,Rule 457(o),multiword,False,False,False,False,False,False
+LYNX,Maximum Aggregate Offering Price,multiword,False,True,True,True,True,True
+LYNX,pricing,single_word,True,True,True,True,True,True
+LYNX,IPO,single_word,True,True,True,True,True,True
+LYNX,Selling Stockholders,multiword,True,True,True,True,True,True
+LYNX,Evercore Group L.L.C.,multiword,True,True,True,True,True,True
+LYNX,Citigroup Global Markets Inc.,multiword,True,True,True,True,True,True
+LYNX,"Guggenheim Securities, LLC",multiword,False,False,False,False,False,False
+LYNX,representatives,single_word,True,True,True,True,True,True
+LYNX,Schedule II,multiword,True,True,True,True,True,True
+LYNX,Schedule I,multiword,False,False,False,False,False,False
+LYNX,underwriting agreement,multiword,False,True,True,True,True,True
+LYNX,Common Stock,multiword,True,True,True,True,True,True
+LYNX,IPO Price,multiword,False,True,True,True,True,True
+LYNX,30-day option,multiword,False,True,True,True,True,True
+LYNX,shares,single_word,True,True,True,True,True,True
+BVN,worker’s profit sharing,multiword,True,True,True,True,True,True
+BVN,IAS 19,multiword,True,True,True,True,True,True
+BVN,Peruvian laws,multiword,True,True,True,True,True,True
+BVN,Legislative Decree No. 892,multiword,False,False,False,False,False,False
+BVN,worker’s profit sharing rate,multiword,False,False,True,True,False,True
+BVN,net taxable base,multiword,False,True,True,True,True,True
+BVN,current year,multiword,False,True,True,True,True,True
+BVN,employee,single_word,True,True,True,True,True,True
+BVN,wages,single_word,True,True,True,True,True,True
+BVN,Regional Government,multiword,False,True,True,True,True,True
+BVN,National Fund for Employment’s Promotion and Training,multiword,True,True,True,True,False,False
+BVN,liability,single_word,True,True,True,True,True,True
+BVN,statements of financial position,multiword,False,False,False,False,False,False
+BVN,operating expense,multiword,False,True,True,True,True,True
+BVN,statements of comprehensive income,multiword,False,False,False,False,False,False
+BVN,Law No. 28271,multiword,False,True,False,True,False,False
+BVN,environmental liabilities,multiword,True,True,True,True,True,True
+BVN,financial responsibility,multiword,True,True,True,True,True,True
+BVN,remediation,single_word,True,True,True,True,True,True
+BVN,mining activities,multiword,True,True,True,True,True,True
+BVN,negative impact,multiword,False,False,True,True,False,True
+BVN,health,single_word,True,True,True,True,True,True
+BVN,population,single_word,True,True,True,True,True,True
+BVN,environment,single_word,True,True,True,True,True,True
+BVN,property,single_word,True,True,True,True,True,True
+BVN,Law No. 28526,multiword,False,False,False,False,False,False
+BVN,Legislative Decree No. 1042,multiword,False,False,False,False,False,False
+BVN,No. 1670,multiword,False,False,False,False,False,False
+BVN,MEM,single_word,True,True,True,True,True,True
+BVN,technical branch,multiword,False,False,True,True,False,True
+BVN,mining companies,multiword,True,True,True,True,True,True
+BVN,abandoned mining facilities,multiword,True,True,True,True,True,True
+BVN,mining works,multiword,True,True,True,True,True,True
+BVN,residue deposits,multiword,True,True,True,True,True,True
+BVN,holders,single_word,True,True,True,True,True,True
+BVN,inactive mining concessions,multiword,True,True,True,True,True,True
+BVN,mining liabilities,multiword,True,True,True,True,True,True
+BVN,Closure Plan,multiword,False,True,True,True,True,True
+BVN,environmental remediation agreements,multiword,True,True,True,True,True,True
+BVN,studies,single_word,True,True,True,True,True,True
+BVN,risk,single_word,True,True,True,True,True,True
+BVN,effects,single_word,True,True,True,True,True,True
+BVN,contamination,single_word,True,True,True,True,True,True
+BVN,Regulations of Environmental Liabilities of Mining Activities,multiword,True,True,True,True,True,True
+BVN,Supreme Decree No. 059-2005-EM,multiword,False,False,False,False,False,False
+BVN,Supreme Decree No. 003-2009-EM,multiword,False,False,False,False,False,False
+BVN,Board of Directors,multiword,False,False,True,True,False,True
+BVN,Chairman of the Board,multiword,False,False,False,False,False,False
+BVN,Directors,single_word,True,True,True,True,True,True
+BVN,meeting,single_word,True,True,True,True,True,True
+BVN,Article 177 of the Peruvian Companies Law,multiword,False,False,False,False,False,False
+BVN,Peruvian Companies Law,multiword,False,True,True,True,True,True
+BVN,shareholders,single_word,True,True,True,True,True,True
+BVN,third parties,multiword,False,False,False,False,False,False
+BVN,willful misconduct,multiword,True,True,True,True,True,True
+BVN,gross negligence,multiword,True,True,True,True,True,True
+BVN,powers,single_word,True,True,True,True,True,True
+BVN,Article 3 of Law No. 29720,multiword,False,False,False,False,False,False
+BVN,Law No. 30050,multiword,False,False,False,False,False,False
+BVN,managers,single_word,True,True,True,True,True,True
+BVN,damages,single_word,True,True,True,True,True,True
+BVN,transaction,single_word,True,True,True,True,True,True
+BVN,related party’s interest,multiword,False,True,True,True,True,True
+BVN,Company’s interest,multiword,False,True,True,True,True,True
+BVN,shares,single_word,True,True,True,True,True,True
+BVN,local stock exchange,multiword,False,True,True,True,True,True
+BVN,shareholder,single_word,True,True,True,True,True,True
+BVN,listed company,multiword,False,False,True,True,False,True
+BVN,arm’s-length conditions,multiword,True,True,True,True,True,True
+BVN,assets,single_word,True,True,True,True,True,True
+BVN,Board meeting,multiword,False,True,True,True,True,True
+SHEN,incumbent broadband provider,multiword,False,True,True,True,True,True
+SHEN,homes,single_word,True,True,True,True,True,True
+SHEN,businesses,single_word,True,True,True,True,True,True
+SHEN,incumbent local telephone companies,multiword,True,True,True,True,True,True
+SHEN,digital subscriber line,multiword,True,True,True,True,True,True
+SHEN,internet,single_word,True,True,True,True,True,True
+SHEN,voice services,multiword,False,True,True,True,True,True
+SHEN,hybrid fiber,multiword,True,True,True,True,True,True
+SHEN,copper-based networks,multiword,True,True,True,True,True,True
+SHEN,broadband overbuilder providers,multiword,True,True,True,True,True,True
+SHEN,data,single_word,True,True,True,True,True,True
+SHEN,voice,single_word,True,True,True,True,True,True
+SHEN,video services,multiword,True,True,True,True,True,True
+SHEN,hybrid coaxial cable,multiword,True,True,True,True,True,True
+SHEN,fiber optic networks,multiword,True,True,True,True,True,True
+SHEN,incumbent broadband passings,multiword,False,True,True,True,True,True
+SHEN,wireline broadband competitor,multiword,False,True,True,True,True,True
+SHEN,fixed wireless broadband services,multiword,True,True,True,True,True,True
+SHEN,wireless substitution,multiword,True,True,True,True,True,True
+SHEN,bandwidth speeds,multiword,False,True,True,True,True,True
+SHEN,wireless providers,multiword,True,True,True,True,True,True
+SHEN,5th generation network technology upgrades,multiword,True,True,True,True,True,True
+SHEN,Regulatory changes,multiword,True,True,True,True,True,True
+SHEN,VoIP service,multiword,False,True,True,True,True,True
+SHEN,FCC,single_word,True,True,True,True,True,True
+SHEN,state regulatory authorities,multiword,False,False,True,True,False,True
+SHEN,common carrier regulations,multiword,False,False,True,True,False,True
+SHEN,incumbent local exchange carriers,multiword,False,False,False,False,False,False
+SHEN,RLECs,single_word,True,True,True,True,True,True
+SHEN,common carrier requirements,multiword,True,True,True,True,True,True
+SHEN,VoIP providers,multiword,True,True,True,True,True,True
+SHEN,regulations,single_word,True,True,True,True,True,True
+SHEN,telephone services,multiword,False,True,True,True,True,True
+SHEN,911 emergency services,multiword,True,True,True,True,True,True
+SHEN,Communications Assistance for Law Enforcement Act,multiword,True,True,True,True,True,True
+SHEN,Universal Service Fund,multiword,True,True,True,True,True,True
+SHEN,contribution,single_word,True,True,True,True,True,True
+SHEN,customer privacy,multiword,True,True,True,True,True,True
+SHEN,CPNI issues,multiword,True,True,True,True,True,True
+SHEN,CPNI,single_word,False,True,True,True,True,True
+SHEN,number portability,multiword,True,True,True,True,True,True
+SHEN,network outage,multiword,True,True,True,True,True,True
+SHEN,rural call completion,multiword,True,True,True,True,True,True
+SHEN,disability access,multiword,True,True,True,True,True,True
+SHEN,battery backup,multiword,True,True,True,True,True,True
+SHEN,robocall mitigation,multiword,True,True,True,True,True,True
+SHEN,regulatory fees,multiword,True,True,True,True,True,True
+SHEN,discontinuance of service,multiword,False,False,False,False,False,False
+SHEN,obligations,single_word,True,True,True,True,True,True
+SHEN,interruptions,single_word,True,True,True,True,True,True
+SHEN,information technology infrastructure,multiword,False,True,True,True,True,True
+SHEN,third party suppliers,multiword,True,True,True,True,True,True
+SHEN,operations,single_word,True,True,True,True,True,True
+SHEN,technology,single_word,True,True,True,True,True,True
+SHEN,cyber-attacks,single_word,False,True,True,True,True,True
+SHEN,incidents,single_word,True,True,True,True,True,True
+SHEN,material adverse effect,multiword,False,True,True,True,True,True
+SHEN,consequences,single_word,True,True,True,True,True,True
+SHEN,breach,single_word,True,True,True,True,True,True
+SHEN,security measures,multiword,False,True,True,True,True,True
+SHEN,third-party provider,multiword,False,True,True,True,True,True
+SHEN,cyber-related service,multiword,False,True,True,True,True,True
+SHEN,operational disruption,multiword,True,True,True,True,True,True
+SHEN,hacker,single_word,True,True,True,True,True,True
+SHEN,malicious actor,multiword,False,False,True,True,False,True
+SHEN,customers,single_word,True,True,True,True,True,True
+SHEN,third parties,multiword,False,False,True,True,False,True
+SHEN,damage,single_word,True,True,True,True,True,True
+SHEN,infrastructure,single_word,True,True,True,True,True,True
+SHEN,property,single_word,True,True,True,True,True,True
+SHEN,impairment of business operations,multiword,False,False,False,False,False,False
+SHEN,business operations,multiword,True,True,True,True,True,True
+SHEN,customer service,multiword,True,True,True,True,True,True
+SHEN,financial costs,multiword,True,True,True,True,True,True
+SHEN,liquidity,single_word,True,True,True,True,True,True
+SHEN,costs,single_word,True,True,True,True,True,True
+SHEN,remediation,single_word,True,True,True,True,True,True
+SHEN,loss of revenues,multiword,False,False,False,False,False,False
+SHEN,revenues,single_word,True,True,True,True,True,True
+SHEN,loss of customers,multiword,False,False,False,False,False,False
+SHEN,competitive disadvantage,multiword,True,True,True,True,True,True
+SHEN,legal expenses,multiword,True,True,True,True,True,True
+SHEN,litigation,single_word,True,True,True,True,True,True
+SHEN,regulatory action,multiword,True,True,True,True,True,True
+SHEN,fines,single_word,True,True,True,True,True,True
+SHEN,penalties,single_word,True,True,True,True,True,True
+SHEN,brand,single_word,True,True,True,True,True,True
+SHEN,reputation,single_word,True,True,True,True,True,True
+NKE,principal business activity,multiword,False,True,True,True,True,True
+NKE,design,single_word,True,True,True,True,True,True
+NKE,development,single_word,True,True,True,True,True,True
+NKE,worldwide marketing,multiword,True,True,True,True,True,True
+NKE,athletic footwear,multiword,True,True,True,True,True,True
+NKE,apparel,single_word,True,True,True,True,True,True
+NKE,equipment,single_word,True,True,True,True,True,True
+NKE,accessories,single_word,True,True,True,True,True,True
+NKE,services,single_word,True,True,True,True,True,True
+NKE,NIKE,single_word,True,True,True,True,True,True
+NKE,products,single_word,True,True,True,True,True,True
+NKE,NIKE Direct operations,multiword,True,True,True,True,True,True
+NKE,NIKE-owned retail stores,multiword,False,True,True,True,True,True
+NKE,digital platforms,multiword,False,True,True,True,True,True
+NKE,wholesale accounts,multiword,True,True,True,True,True,True
+NKE,independent distributors,multiword,True,True,True,True,True,True
+NKE,licensees,single_word,True,True,True,True,True,True
+NKE,sales representatives,multiword,True,True,True,True,True,True
+NKE,interactive consumer services,multiword,True,True,True,True,True,True
+NKE,experiences,single_word,True,True,True,True,True,True
+NKE,independent contractors,multiword,True,True,True,True,True,True
+NKE,United States,multiword,False,True,True,True,True,True
+NKE,industry,single_word,True,True,True,True,True,True
+NKE,athletic and leisure footwear companies,multiword,True,True,True,True,True,True
+NKE,athletic and leisure apparel companies,multiword,True,True,True,True,True,True
+NKE,sports equipment companies,multiword,True,True,True,True,True,True
+NKE,diversified lines,multiword,True,True,True,True,True,True
+NKE,adidas,single_word,True,True,True,True,True,True
+NKE,Anta,single_word,True,True,True,True,True,True
+NKE,ASICS,single_word,True,True,True,True,True,True
+NKE,Deckers,single_word,True,True,True,True,True,True
+NKE,Li Ning,multiword,True,True,True,True,True,True
+NKE,lululemon athletica,multiword,True,True,True,True,True,True
+NKE,New Balance,multiword,True,True,True,True,True,True
+NKE,On,single_word,False,False,False,False,False,False
+NKE,Puma,single_word,True,True,True,True,True,True
+NKE,Under Armour,multiword,False,False,False,False,False,False
+NKE,V.F. Corporation,multiword,True,True,True,True,True,True
+NKE,competition,single_word,True,True,True,True,True,True
+NKE,technology,single_word,True,True,True,True,True,True
+NKE,consumer preferences,multiword,False,True,True,True,True,True
+NKE,markets,single_word,True,True,True,True,True,True
+NKE,athletic equipment,multiword,True,True,True,True,True,True
+NKE,risk factors,multiword,False,True,True,True,True,True
+NKE,operations,single_word,True,True,True,True,True,True
+NKE,principal materials,multiword,False,True,True,True,True,True
+NKE,footwear and apparel products,multiword,False,True,True,True,True,True
+NKE,manufacturers,single_word,True,True,True,True,True,True
+NKE,manufacturing,single_word,True,True,True,True,True,True
+NKE,contract manufacturers,multiword,False,True,True,True,True,True
+NKE,personnel,single_word,True,True,True,True,True,True
+NKE,materials suppliers,multiword,True,True,True,True,True,True
+NKE,raw materials,multiword,True,True,True,True,True,True
+NKE,wage rates,multiword,True,True,True,True,True,True
+NKE,labor standards,multiword,False,True,True,True,True,True
+NKE,governments,single_word,True,True,True,True,True,True
+KLC,fiscal year,multiword,False,True,True,True,True,True
+KLC,Acquisitions,single_word,True,True,True,True,True,True
+KLC,early childhood education centers,multiword,False,False,True,True,False,True
+KLC,business acquisitions,multiword,False,True,True,True,True,True
+KLC,business combinations,multiword,True,True,True,True,True,True
+KLC,total consideration,multiword,True,True,True,True,True,True
+KLC,cash consideration,multiword,True,True,True,True,True,True
+KLC,contingent consideration,multiword,True,True,True,True,True,True
+KLC,holdbacks,single_word,True,True,True,True,True,True
+KLC,fair value,multiword,False,True,True,True,True,True
+KLC,probability,single_word,True,True,True,True,True,True
+KLC,timing,single_word,True,True,True,True,True,True
+KLC,lease,single_word,True,True,True,True,True,True
+KLC,acquisition date,multiword,True,True,True,True,True,True
+KLC,undiscounted amounts payable,multiword,False,False,False,False,False,False
+KLC,asset purchase agreement,multiword,False,True,True,True,True,True
+KLC,Contingent consideration payable,multiword,False,False,False,False,False,False
+KLC,other long-term liabilities,multiword,True,True,True,True,True,True
+KLC,unaudited condensed consolidated balance sheets,multiword,False,False,True,True,False,True
+KLC,recognized amounts,multiword,False,True,True,True,True,True
+KLC,range of outcomes,multiword,False,False,False,False,False,False
+KLC,Fair Value Measurements,multiword,True,True,True,True,True,True
+KLC,acquisition closing date,multiword,False,True,True,True,True,True
+KLC,goodwill,single_word,True,True,True,True,True,True
+KLC,tax purposes,multiword,True,True,True,True,True,True
+KLC,fixed assets,multiword,True,True,True,True,True,True
+KLC,operating results,multiword,False,True,True,True,True,True
+KLC,financial results,multiword,False,False,True,True,False,True
+KLC,consolidated statements of operations and comprehensive income (loss),multiword,False,False,False,False,False,False
+KLC,dates of acquisition,multiword,False,False,False,False,False,False
+KLC,Non-Qualified Deferred Compensation Plan,multiword,True,True,True,True,True,True
+KLC,highly compensated employees,multiword,True,True,True,True,True,True
+KLC,401(k) Plan,multiword,False,False,False,False,False,False
+KLC,employees,single_word,True,True,True,True,True,True
+KLC,investment,single_word,True,True,True,True,True,True
+KLC,account balances,multiword,False,True,True,True,True,True
+KLC,asset trusts,multiword,False,False,False,False,False,False
+KLC,investment gains,multiword,False,True,True,True,True,True
+KLC,losses,single_word,True,True,True,True,True,True
+KLC,deferred compensation obligation,multiword,False,True,True,True,True,True
+KLC,adjustments,single_word,True,True,True,True,True,True
+KLC,"selling, general, and administrative expenses",multiword,False,False,False,False,False,False
+KLC,investment trust assets,multiword,False,True,True,True,True,True
+KLC,"other (income) expense, net",multiword,False,False,False,False,False,False
+KLC,Employee Benefit Plans,multiword,True,True,True,True,True,True
+KLC,information technology systems,multiword,False,True,True,True,True,True
+KLC,data centers,multiword,True,True,True,True,True,True
+KLC,hardware,single_word,True,True,True,True,True,True
+KLC,software,single_word,True,True,True,True,True,True
+KLC,applications,single_word,True,True,True,True,True,True
+KLC,business,single_word,True,True,True,True,True,True
+KLC,operations,single_word,True,True,True,True,True,True
+KLC,secure transmission,multiword,False,True,True,True,True,True
+KLC,confidential and personal information,multiword,True,True,True,True,True,True
+KLC,public networks,multiword,True,True,True,True,True,True
+KLC,cashless payments,multiword,True,True,True,True,True,True
+KLC,mobile application,multiword,False,True,True,True,True,True
+KLC,website platform,multiword,True,True,True,True,True,True
+KLC,user engagement,multiword,False,True,True,True,True,True
+KLC,brand,single_word,True,True,True,True,True,True
+KLC,third-party,single_word,False,True,True,True,True,True
+KLC,outside development firm,multiword,False,True,True,True,True,True
+KLC,kindercare.com,single_word,True,True,True,True,True,True
+KLC,Infrastructure-as-a-Service solution,multiword,False,True,False,True,True,True
+KLC,cloud platform,multiword,False,False,True,True,False,True
+KLC,compromises,single_word,True,True,True,True,True,True
+KLC,shutdowns,single_word,True,True,True,True,True,True
+KLC,failures,single_word,True,True,True,True,True,True
+KLC,interruption,single_word,True,True,True,True,True,True
+KLC,website hosting platform,multiword,False,False,False,False,False,False
+KLC,payment processing application,multiword,True,True,True,True,True,True
+KLC,computer and information technology systems,multiword,False,True,True,True,True,True
+KLC,incidents,single_word,True,True,True,True,True,True
+KLC,third-party service providers,multiword,False,True,True,True,True,True
+KLC,delays,single_word,True,True,True,True,True,True
+KLC,business operations,multiword,False,True,True,True,True,True
+KLC,clients,single_word,True,True,True,True,True,True
+KLC,families,single_word,True,True,True,True,True,True
+KLC,channels,single_word,True,True,True,True,True,True
+KLC,financial condition,multiword,True,True,True,True,True,True
+KLC,results of operations,multiword,False,False,False,False,False,False
+BKR,Board,single_word,True,True,True,True,True,True
+BKR,oversight,single_word,True,True,True,True,True,True
+BKR,sustainability policies,multiword,False,True,True,True,True,True
+BKR,programs,single_word,True,True,True,True,True,True
+BKR,practices,single_word,True,True,True,True,True,True
+BKR,corporate responsibility,multiword,True,True,True,True,True,True
+BKR,human capital management efforts,multiword,False,True,True,True,True,True
+BKR,Human Capital and Compensation Committee,multiword,False,False,True,True,False,True
+BKR,social strategy,multiword,False,True,True,True,True,True
+BKR,policies,single_word,True,True,True,True,True,True
+BKR,initiatives,single_word,True,True,True,True,True,True
+BKR,pay equity,multiword,True,True,True,True,True,True
+BKR,culture,single_word,True,True,True,True,True,True
+BKR,talent development,multiword,True,True,True,True,True,True
+BKR,succession planning,multiword,True,True,True,True,True,True
+BKR,executive compensation and benefits,multiword,False,False,False,False,False,False
+BKR,Governance and Corporate Responsibility Committee,multiword,True,True,True,True,True,True
+BKR,environmental matters,multiword,False,True,True,True,True,True
+BKR,sustainability strategy,multiword,False,True,True,True,True,True
+BKR,employee health,multiword,True,True,True,True,True,True
+BKR,safety,single_word,True,True,True,True,True,True
+BKR,wellness matters,multiword,True,True,True,True,True,True
+BKR,corporate social responsibilities,multiword,True,True,True,True,True,True
+BKR,public issues,multiword,True,True,True,True,True,True
+BKR,privacy,single_word,True,True,True,True,True,True
+BKR,digital safety,multiword,True,True,True,True,True,True
+BKR,responsible AI,multiword,True,True,True,True,True,True
+BKR,investors,single_word,True,True,True,True,True,True
+BKR,stakeholders,single_word,True,True,True,True,True,True
+BKR,Audit Committee,multiword,False,True,True,True,True,True
+BKR,risk assessment,multiword,False,True,True,True,True,True
+BKR,risk management policies,multiword,True,True,True,True,True,True
+BKR,processes,single_word,True,True,True,True,True,True
+BKR,data privacy,multiword,True,True,True,True,True,True
+BKR,AI,single_word,True,True,True,True,True,True
+BKR,compliance reporting,multiword,True,True,True,True,True,True
+BKR,Finance Committee,multiword,False,True,True,True,True,True
+BKR,financial and investment policies,multiword,False,True,True,True,True,True
+BKR,finance,single_word,True,True,True,True,True,True
+BKR,banking,single_word,True,True,True,True,True,True
+BKR,treasury matters,multiword,True,True,True,True,True,True
+BKR,capital structure,multiword,False,True,True,True,True,True
+BKR,equity,single_word,True,True,True,True,True,True
+BKR,debt,single_word,True,True,True,True,True,True
+BKR,financing transactions,multiword,False,True,True,True,True,True
+BKR,requirements,single_word,True,True,True,True,True,True
+BKR,IET,single_word,True,True,True,True,True,True
+BKR,foundational technologies,multiword,True,True,True,True,True,True
+BKR,energy transition,multiword,False,True,True,True,True,True
+BKR,advanced materials,multiword,True,True,True,True,True,True
+BKR,advanced manufacturing technologies,multiword,True,True,True,True,True,True
+BKR,novel process technologies,multiword,True,True,True,True,True,True
+BKR,digital technologies,multiword,True,True,True,True,True,True
+BKR,advanced sensing & diagnostics,multiword,False,False,False,False,False,False
+BKR,data sciences,multiword,True,True,True,True,True,True
+BKR,Gas Technology Equipment,multiword,False,True,True,True,True,True
+BKR,Gas Technology Services,multiword,True,True,True,True,True,True
+BKR,product lines,multiword,False,False,True,True,False,True
+BKR,gas turbines,multiword,True,True,True,True,True,True
+BKR,energy efficiency,multiword,True,True,True,True,True,True
+BKR,carbon footprint,multiword,False,True,True,True,True,True
+BKR,LM9000TM,single_word,True,True,True,True,True,True
+BKR,Nova LTTM,multiword,False,False,False,False,False,False
+BKR,products,single_word,True,True,True,True,True,True
+BKR,CCUS,single_word,True,True,True,True,True,True
+BKR,hydrogen,single_word,True,True,True,True,True,True
+BKR,geothermal technologies,multiword,False,True,True,True,True,True
+BKR,Industrial Technology,multiword,True,True,True,True,True,True
+BKR,advanced digital solutions,multiword,True,True,True,True,True,True
+BKR,efficiency,single_word,True,True,True,True,True,True
+BKR,reliability,single_word,True,True,True,True,True,True
+BKR,oil and gas,multiword,False,False,False,False,False,False
+BKR,aerospace,single_word,True,True,True,True,True,True
+BKR,energy,single_word,True,True,True,True,True,True
+BKR,industrial production,multiword,False,False,True,True,False,True
+BKR,operations,single_word,True,True,True,True,True,True
+BKR,Orbit 60 Bently Nevada,multiword,False,False,False,False,False,False
+BKR,critical asset monitoring,multiword,True,True,True,True,True,True
+BKR,turbine systems,multiword,True,True,True,True,True,True
+BKR,wind,single_word,True,True,True,True,True,True
+BKR,hydro,single_word,True,True,True,True,True,True
+BKR,process and safety valve business,multiword,False,True,True,True,True,True
+BKR,digital applications,multiword,False,False,True,True,False,True
+BKR,analytics,single_word,True,True,True,True,True,True
+BKR,customers,single_word,True,True,True,True,True,True
+BKR,Investments,single_word,True,True,True,True,True,True
+BKR,carbon emissions,multiword,True,True,True,True,True,True
+BKR,inspection technologies,multiword,False,True,True,True,True,True
+BKR,nondestructive evaluation,multiword,True,True,True,True,True,True
+BKR,materials,single_word,True,True,True,True,True,True
+BKR,structures,single_word,True,True,True,True,True,True
+BKR,industrial asset management,multiword,True,True,True,True,True,True
+BKR,deepwater,single_word,False,True,False,True,True,True
+BKR,harsh environments,multiword,False,False,True,True,False,True
+BKR,severe service applications,multiword,True,True,True,True,True,True
+BKR,contracts,single_word,True,True,True,True,True,True
+BKR,customer requests for bids,multiword,False,False,False,False,False,False
+BKR,bids,single_word,True,True,True,True,True,True
+BKR,technical requirements,multiword,True,True,True,True,True,True
+BKR,services,single_word,True,True,True,True,True,True
+BKR,testing requirements,multiword,False,True,True,True,True,True
+BKR,offshore drilling industry,multiword,False,True,True,True,True,True
+BKR,LNG industry,multiword,True,True,True,True,True,True
+BKR,technical specifications,multiword,False,False,True,True,False,True
+BKR,testing,single_word,True,True,True,True,True,True
+BKR,compliance,single_word,True,True,True,True,True,True
+BKR,joint ventures,multiword,True,True,True,True,True,True
+BKR,third parties,multiword,True,True,True,True,True,True
+BKR,scenarios,single_word,True,True,True,True,True,True
+BKR,operating conditions,multiword,False,True,True,True,True,True
+BKR,full-scale testing,multiword,False,True,True,True,True,True
+BKR,product specifications,multiword,False,True,True,True,True,True
+BKR,future contract bids,multiword,True,True,True,True,True,True
+BKR,existing contracts,multiword,True,True,True,True,True,True
+BKR,costs,single_word,True,True,True,True,True,True
+BKR,modifications,single_word,True,True,True,True,True,True
+BKR,results of operations,multiword,False,False,False,False,False,False
+BRO,reporting requirements,multiword,False,True,True,True,True,True
+BRO,Securities Exchange Act of 1934,multiword,False,True,True,True,False,False
+BRO,rules,single_word,True,True,True,True,True,True
+BRO,regulations,single_word,True,True,True,True,True,True
+BRO,reports,single_word,True,True,True,True,True,True
+BRO,proxy statements,multiword,True,True,True,True,True,True
+BRO,SEC,single_word,True,True,True,True,True,True
+BRO,website,single_word,True,True,True,True,True,True
+BRO,www.bbrown.com,single_word,False,True,False,True,True,True
+BRO,Annual Report on Form 10-K,multiword,True,True,True,True,False,False
+BRO,quarterly reports on Form 10-Q,multiword,False,False,False,False,False,False
+BRO,current reports on Form 8-K,multiword,False,False,False,False,False,False
+BRO,amendments,single_word,True,True,True,True,True,True
+BRO,Section 13(a),multiword,False,False,False,False,False,False
+BRO,15(d),single_word,False,False,False,False,False,False
+BRO,Investor Relations,multiword,False,True,True,True,True,True
+BRO,SEC Filings,multiword,False,True,True,True,True,True
+BRO,inactive textual references,multiword,True,True,True,True,True,True
+BRO,charters,single_word,True,True,True,True,True,True
+BRO,Audit,single_word,True,True,True,True,True,True
+BRO,Compensation,single_word,True,True,True,True,True,True
+BRO,Nominating/Governance Committees,multiword,True,True,True,True,True,True
+BRO,board of directors,multiword,False,False,False,False,False,False
+BRO,Corporate Governance Principles,multiword,False,True,True,True,True,True
+BRO,Code of Business Conduct and Ethics,multiword,False,False,False,False,False,False
+BRO,Code of Ethics-CEO and Senior Financial Officers,multiword,False,False,False,False,False,False
+BRO,waivers,single_word,True,True,True,True,True,True
+BRO,provision,single_word,True,True,True,True,True,True
+BRO,principles,single_word,True,True,True,True,True,True
+BRO,codes,single_word,True,True,True,True,True,True
+BRO,Corporate Secretary,multiword,True,True,True,True,True,True
+BRO,"Brown & Brown, Inc.",multiword,True,True,True,True,True,True
+BRO,300 North Beach Street,multiword,True,True,True,True,True,True
+BRO,Daytona Beach,multiword,True,True,True,True,True,True
+BRO,Florida,single_word,True,True,True,True,True,True
+BRO,Inflation,single_word,True,True,True,True,True,True
+BRO,costs,single_word,True,True,True,True,True,True
+BRO,salary costs,multiword,True,True,True,True,True,True
+BRO,industry,single_word,True,True,True,True,True,True
+BRO,insurable asset values,multiword,True,True,True,True,True,True
+BRO,interest rates,multiword,True,True,True,True,True,True
+BRO,global economy,multiword,False,True,True,True,True,True
+BRO,revenue growth,multiword,False,True,True,True,True,True
+BRO,wage inflation,multiword,False,True,True,True,True,True
+BRO,fiscal year,multiword,False,True,True,True,True,True
+BRO,business,single_word,True,True,True,True,True,True
+BRO,results of operations,multiword,False,False,False,False,False,False
+BRO,financial condition,multiword,True,True,True,True,True,True
+INCY,Equity Investments,multiword,True,True,True,True,True,True
+INCY,common stock,multiword,True,True,True,True,True,True
+INCY,publicly-held companies,multiword,True,True,True,True,True,True
+INCY,collaboration and license agreements,multiword,True,True,True,True,True,True
+INCY,short term equity investments,multiword,False,True,True,True,True,True
+INCY,long term equity investments,multiword,True,True,True,True,True,True
+INCY,consolidated balance sheets,multiword,False,True,True,True,True,True
+INCY,fair value,multiword,True,True,True,True,True,True
+INCY,readily determinable pricing,multiword,True,True,True,True,True,True
+INCY,securities exchange,multiword,False,True,True,True,True,True
+INCY,consolidated statements of operations,multiword,False,False,False,False,False,False
+INCY,gain on equity investments,multiword,False,False,False,False,False,False
+INCY,Investors,single_word,True,True,True,True,True,True
+INCY,prospectus,single_word,True,True,True,True,True,True
+INCY,Registration Statement,multiword,True,True,True,True,True,True
+INCY,Registrable Securities,multiword,True,True,True,True,True,True
+INCY,Securities Act,multiword,False,True,True,True,True,True
+INCY,untrue statement,multiword,False,True,True,True,True,True
+INCY,material fact,multiword,False,True,True,True,True,True
+INCY,statements,single_word,True,True,True,True,True,True
+INCY,reasonable best efforts,multiword,False,True,True,True,True,True
+INCY,manufacturing facilities,multiword,True,True,True,True,True,True
+INCY,commercial products,multiword,False,False,True,True,False,True
+INCY,JAKAFI,single_word,True,True,True,True,True,True
+INCY,PEMAZYRE,single_word,True,True,True,True,True,True
+INCY,ICLUSIG,single_word,True,True,True,True,True,True
+INCY,OPZELURA,single_word,True,True,True,True,True,True
+INCY,ZYNYZ,single_word,True,True,True,True,True,True
+INCY,NIKTIMVO,single_word,True,True,True,True,True,True
+INCY,drug candidates,multiword,False,True,True,True,True,True
+INCY,manufacturing strategy,multiword,False,True,True,True,True,True
+INCY,third parties,multiword,True,True,True,True,True,True
+INCY,raw materials,multiword,True,True,True,True,True,True
+INCY,active pharmaceutical ingredient,multiword,True,True,True,True,True,True
+INCY,finished drug product,multiword,True,True,True,True,True,True
+INCY,biologics production facility,multiword,False,True,True,True,True,True
+INCY,Yverdon,single_word,True,True,True,True,True,True
+INCY,Switzerland,single_word,True,True,True,True,True,True
+INCY,MONJUVI,single_word,True,True,True,True,True,True
+INCY,MINJUVI,single_word,True,True,True,True,True,True
+INCY,drug substance manufacturing,multiword,False,False,True,True,False,True
+INCY,sourcing,single_word,False,True,False,True,True,True
+INCY,manufacturing,single_word,True,True,True,True,True,True
+INCY,collaborator,single_word,True,True,True,True,True,True
+INCY,MacroGenics,single_word,True,True,True,True,True,True
+INCY,manufacturing capacity,multiword,False,True,True,True,True,True
+INCY,Swiss bioplant site,multiword,False,True,True,True,True,True
+INCY,clinical and commercial supplies,multiword,True,True,True,True,True,True
+INCY,drugs,single_word,True,True,True,True,True,True
+INCY,products,single_word,True,True,True,True,True,True
+INCY,FDA,single_word,True,True,True,True,True,True
+INCY,drug products,multiword,True,True,True,True,True,True
+INCY,Good Manufacturing Practices,multiword,True,True,True,True,True,True
+INCY,regulatory authorities,multiword,True,True,True,True,True,True
+INCY,requirements,single_word,True,True,True,True,True,True
+INCY,applicable regulatory requirements,multiword,False,True,True,True,True,True
+INCY,foreign regulatory authority,multiword,False,True,True,True,True,True
+INCY,clinical trials,multiword,False,True,True,True,True,True
+INCY,regulatory approval,multiword,True,True,True,True,True,True
+INCY,drug product,multiword,False,True,True,True,True,True
+INCY,product recalls,multiword,False,False,False,False,False,False
+INCY,enforcement actions,multiword,False,True,True,True,True,True
+INCY,material adverse effect,multiword,False,True,True,True,True,True
+INCY,business,single_word,True,True,True,True,True,True
+BW,cybersecurity risk management program,multiword,False,True,True,True,True,True
+BW,enterprise risk management processes,multiword,False,True,True,True,True,True
+BW,cybersecurity industry frameworks,multiword,False,True,True,True,True,True
+BW,standards,single_word,True,True,True,True,True,True
+BW,National Institute of Standards and Technology,multiword,False,True,True,True,True,True
+BW,frameworks,single_word,True,True,True,True,True,True
+BW,internal assessments,multiword,True,True,True,True,True,True
+BW,policies,single_word,True,True,True,True,True,True
+BW,information systems,multiword,False,True,True,True,True,True
+BW,assets,single_word,True,True,True,True,True,True
+BW,B&W business information,multiword,True,True,True,True,True,True
+BW,B&W,single_word,True,True,True,True,True,True
+BW,information resources,multiword,True,True,True,True,True,True
+BW,computers,single_word,True,True,True,True,True,True
+BW,workstations,single_word,True,True,True,True,True,True
+BW,intellectual property,multiword,False,False,True,True,False,True
+BW,technologies,single_word,True,True,True,True,True,True
+BW,personal information,multiword,True,True,True,True,True,True
+BW,information assets,multiword,False,True,True,True,True,True
+BW,industry-standard techniques,multiword,True,True,True,True,True,True
+BW,multi-factor authentication,multiword,True,True,True,True,True,True
+BW,malware defenses,multiword,True,True,True,True,True,True
+BW,internal stakeholders,multiword,True,True,True,True,True,True
+BW,foundational cybersecurity principles,multiword,True,True,True,True,True,True
+BW,operations,single_word,True,True,True,True,True,True
+BW,multiple layers of cybersecurity defenses,multiword,False,False,False,False,False,False
+BW,restricted access,multiword,False,False,False,False,False,False
+BW,business need,multiword,True,True,True,True,True,True
+BW,integrity,single_word,True,True,True,True,True,True
+BW,business information,multiword,False,True,True,True,True,True
+BW,B&W PGG Luxembourg Finance Sárl,multiword,False,False,True,True,False,True
+BW,Babcock & Wilcox A/S,multiword,False,False,False,False,False,False
+BW,subsidiary,single_word,True,True,True,True,True,True
+BW,share capital,multiword,False,True,True,True,True,True
+BW,Italy,single_word,True,True,True,True,True,True
+BW,SPIG,single_word,True,True,True,True,True,True
+BW,Sweden,single_word,True,True,True,True,True,True
+BW,GMAB,single_word,True,True,True,True,True,True
+BW,Auctus Neptune Holding S.p.A.,multiword,True,True,True,True,True,True
+BW,net cash proceeds,multiword,True,True,True,True,True,True
+BW,gain,single_word,True,True,True,True,True,True
+BW,currency translation adjustments,multiword,True,True,True,True,True,True
+BW,sale,single_word,True,True,True,True,True,True
+BW,businesses,single_word,True,True,True,True,True,True
+BW,impairment,single_word,True,True,True,True,True,True
+BW,disposal group carrying value,multiword,False,True,True,True,True,True
+BW,expected net proceeds,multiword,False,True,True,True,True,True
+BW,working capital,multiword,False,False,True,True,False,True
+BW,outstanding debt,multiword,True,True,True,True,True,True
+BW,innovative new products,multiword,True,True,True,True,True,True
+BW,competitive position,multiword,False,True,True,True,True,True
+BW,investment,single_word,True,True,True,True,True,True
+BW,resources,single_word,True,True,True,True,True,True
+BW,Difficulties,single_word,True,True,True,True,True,True
+BW,delays,single_word,True,True,True,True,True,True
+BW,research,single_word,True,True,True,True,True,True
+BW,development,single_word,True,True,True,True,True,True
+BW,production,single_word,True,True,True,True,True,True
+BW,commercialization,single_word,True,True,True,True,True,True
+BW,new products,multiword,True,True,True,True,True,True
+BW,market acceptance,multiword,True,True,True,True,True,True
+BW,future sales,multiword,True,True,True,True,True,True
+BW,technological advances,multiword,False,True,True,True,True,True
+BW,competitive advantages,multiword,True,True,True,True,True,True
+CBRE,services,single_word,True,True,True,True,True,True
+CBRE,markets,single_word,True,True,True,True,True,True
+CBRE,competitors,single_word,True,True,True,True,True,True
+CBRE,globally diversified real estate services firms,multiword,False,False,True,True,False,True
+CBRE,CBRE,single_word,True,True,True,True,True,True
+CBRE,specialists,single_word,True,True,True,True,True,True
+CBRE,geographies,single_word,True,True,True,True,True,True
+CBRE,business lines,multiword,True,True,True,True,True,True
+CBRE,competition,single_word,True,True,True,True,True,True
+CBRE,market leaders,multiword,False,True,True,True,True,True
+CBRE,opportunities,single_word,True,True,True,True,True,True
+CBRE,continued growth,multiword,True,True,True,True,True,True
+CBRE,clients,single_word,True,True,True,True,True,True
+CBRE,scale,single_word,True,True,True,True,True,True
+CBRE,in-depth expertise,multiword,False,True,False,True,True,True
+CBRE,technology,single_word,True,True,True,True,True,True
+CBRE,data-led insights,multiword,True,True,True,True,True,True
+CBRE,service providers,multiword,True,True,True,True,True,True
+CBRE,integrated solutions,multiword,True,True,True,True,True,True
+CBRE,leadership,single_word,True,True,True,True,True,True
+CBRE,asset classes,multiword,True,True,True,True,True,True
+CBRE,secular growth sectors,multiword,True,True,True,True,True,True
+CBRE,logistics,single_word,True,True,True,True,True,True
+CBRE,data centers,multiword,False,True,True,True,True,True
+CBRE,diversified platform,multiword,False,True,True,True,True,True
+CBRE,market cycles,multiword,True,True,True,True,True,True
+CBRE,balance sheet,multiword,False,True,True,True,True,True
+CBRE,investments,single_word,True,True,True,True,True,True
+CBRE,market-leading talent recruitment,multiword,False,True,True,True,True,True
+CBRE,transformational M&A execution,multiword,True,True,True,True,True,True
+CBRE,M&A,single_word,True,True,True,True,True,True
+CBRE,Telford Homes,multiword,True,True,True,True,True,True
+CBRE,U.K. government,multiword,False,True,True,True,True,True
+CBRE,Fire Safety Pledge,multiword,True,True,True,True,True,True
+CBRE,Building Safety Act of 2022,multiword,True,True,True,True,False,False
+CBRE,laws,single_word,True,True,True,True,True,True
+CBRE,building safety,multiword,False,False,True,True,False,True
+CBRE,remediation,single_word,True,True,True,True,True,True
+CBRE,historic building safety defects,multiword,True,True,True,True,True,True
+CBRE,developers,single_word,True,True,True,True,True,True
+CBRE,buildings,single_word,True,True,True,True,True,True
+CBRE,critical fire safety issues,multiword,True,True,True,True,True,True
+CBRE,Defective Premises Act of 1972,multiword,True,True,True,True,False,False
+CBRE,claims,single_word,True,True,True,True,True,True
+CBRE,30-year limitation period,multiword,False,True,True,True,True,True
+CBRE,dwellings,single_word,True,True,True,True,True,True
+CBRE,legally binding agreement,multiword,False,True,True,True,True,True
+CBRE,responsibility,single_word,True,True,True,True,True,True
+CBRE,remediation works,multiword,True,True,True,True,True,True
+CBRE,life-critical fire-safety issues,multiword,False,False,True,True,False,True
+CBRE,Telford Homes-constructed buildings,multiword,False,True,True,True,True,True
+CBRE,England,single_word,True,True,True,True,True,True
+CBRE,in-scope buildings,multiword,False,True,False,True,True,True
+CBRE,government-sponsored funds,multiword,False,True,True,True,True,True
+CBRE,government funds,multiword,False,True,True,True,True,True
+CBRE,cost of remediation,multiword,False,False,False,False,False,False
+CBRE,joint ventures,multiword,True,True,True,True,True,True
+CBRE,commercial investments,multiword,True,True,True,True,True,True
+CBRE,local brokerage,multiword,True,True,True,True,True,True
+CBRE,affiliations,single_word,True,True,True,True,True,True
+CBRE,U.S.,single_word,True,True,True,True,True,True
+CBRE,interests,single_word,True,True,True,True,True,True
+CBRE,affiliate program,multiword,False,True,True,True,True,True
+CBRE,contractual relationships,multiword,True,True,True,True,True,True
+CBRE,property management,multiword,True,True,True,True,True,True
+CBRE,operations,single_word,True,True,True,True,True,True
+CBRE,name,single_word,True,True,True,True,True,True
+CBRE,resources,single_word,True,True,True,True,True,True
+CBRE,royalty,single_word,True,True,True,True,True,True
+CBRE,economic participation,multiword,False,False,True,True,False,True
+CBRE,revenue,single_word,True,True,True,True,True,True
+CBRE,profits,single_word,True,True,True,True,True,True
+CBRE,transactional activity,multiword,True,True,True,True,True,True
+CBRE,right,single_word,True,True,True,True,True,True
+CBRE,power,single_word,True,True,True,True,True,True
+CBRE,management,single_word,True,True,True,True,True,True
+CBRE,policies,single_word,True,True,True,True,True,True
+CBRE,affiliates,single_word,True,True,True,True,True,True
+CBRE,participants,single_word,True,True,True,True,True,True
+CBRE,operators,single_word,True,True,True,True,True,True
+CBRE,instructions,single_word,True,True,True,True,True,True
+CBRE,requests,single_word,True,True,True,True,True,True
+CBRE,objectives,single_word,True,True,True,True,True,True
+CBRE,business interests,multiword,False,True,True,True,True,True
+CBRE,goals,single_word,True,True,True,True,True,True
+CBRE,joint venture participant,multiword,False,True,True,True,True,True
+CBRE,brand,single_word,True,True,True,True,True,True
+CBRE,business,single_word,True,True,True,True,True,True
+CBRE,results of operations,multiword,False,False,False,False,False,False
+CBRE,financial condition,multiword,True,True,True,True,True,True
+CRUS,component,single_word,True,True,True,True,True,True
+CRUS,second sources,multiword,True,True,True,True,True,True
+CRUS,end customer,multiword,False,True,True,True,True,True
+CRUS,entity,single_word,True,True,True,True,True,True
+CRUS,design,single_word,True,True,True,True,True,True
+CRUS,products,single_word,True,True,True,True,True,True
+CRUS,distributor,single_word,True,True,True,True,True,True
+CRUS,third-party manufacturer,multiword,False,True,True,True,True,True
+CRUS,end product,multiword,False,True,True,True,True,True
+CRUS,fiscal years,multiword,True,True,True,True,True,True
+CRUS,net sales,multiword,True,True,True,True,True,True
+CRUS,Apple Inc.,multiword,True,True,True,True,True,True
+CRUS,contract manufacturers,multiword,False,True,True,True,True,True
+CRUS,properties,single_word,True,True,True,True,True,True
+CRUS,operations,single_word,True,True,True,True,True,True
+CRUS,applicable law,multiword,True,True,True,True,True,True
+CRUS,environment,single_word,True,True,True,True,True,True
+CRUS,worker health and safety,multiword,False,False,False,False,False,False
+CRUS,fabless semiconductor company,multiword,False,True,True,True,True,True
+CRUS,research and laboratory space,multiword,True,True,True,True,True,True
+CRUS,laboratory space,multiword,False,True,True,True,True,True
+CRUS,facilities,single_word,True,True,True,True,True,True
+CRUS,development,single_word,True,True,True,True,True,True
+CRUS,evaluation,single_word,True,True,True,True,True,True
+CRUS,testing,single_word,True,True,True,True,True,True
+CRUS,laboratories,single_word,True,True,True,True,True,True
+CRUS,hazardous materials,multiword,True,True,True,True,True,True
+CRUS,material compliance,multiword,True,True,True,True,True,True
+CRUS,safeguarding,single_word,True,True,True,True,True,True
+CRUS,health,single_word,True,True,True,True,True,True
+CRUS,safety,single_word,True,True,True,True,True,True
+CRUS,risk of liability,multiword,False,False,False,False,False,False
+CRUS,hazardous conditions,multiword,True,True,True,True,True,True
+CRUS,materials,single_word,True,True,True,True,True,True
+CRUS,expenditures,single_word,True,True,True,True,True,True
+CRUS,environmental compliance,multiword,True,True,True,True,True,True
+CRUS,technology,single_word,True,True,True,True,True,True
+CRUS,product design,multiword,False,True,True,True,True,True
+CRUS,proprietary process technology,multiword,False,True,True,True,True,True
+CRUS,design rules,multiword,True,True,True,True,True,True
+CRUS,outside foundries,multiword,True,True,True,True,True,True
+CRUS,yields,single_word,True,True,True,True,True,True
+CRUS,process technology failures,multiword,False,True,True,True,True,True
+CRUS,yield problems,multiword,True,True,True,True,True,True
+CRUS,actual product,multiword,False,True,True,True,True,True
+CRUS,process sensitivities,multiword,True,True,True,True,True,True
+CRUS,production process,multiword,False,True,True,True,True,True
+CRUS,resolution,single_word,True,True,True,True,True,True
+CRUS,cooperation,single_word,True,True,True,True,True,True
+CRUS,manufacturer,single_word,True,True,True,True,True,True
+CRUS,offshore location,multiword,False,True,True,True,True,True
+CRUS,manufacturing yield problems,multiword,True,True,True,True,True,True
+CRUS,Manufacturing defects,multiword,False,False,False,False,False,False
+CRUS,manufacturing or testing process,multiword,False,True,True,True,True,True
+CRUS,product recalls,multiword,False,False,False,False,False,False
+CRUS,risks,single_word,True,True,True,True,True,True
+CRUS,costs,single_word,True,True,True,True,True,True
+CRUS,product delivery,multiword,False,True,True,True,True,True
+CRUS,profitability,single_word,True,True,True,True,True,True
+CRUS,customer relationships,multiword,True,True,True,True,True,True
+VST,Vistra,single_word,True,True,True,True,True,True
+VST,plan sponsor,multiword,False,True,True,True,True,True
+VST,Vistra Retirement Plan,multiword,False,True,True,True,True,True
+VST,benefits,single_word,True,True,True,True,True,True
+VST,eligible employees,multiword,True,True,True,True,True,True
+VST,subsidiaries,single_word,True,True,True,True,True,True
+VST,Oncor,single_word,True,True,True,True,True,True
+VST,participant,single_word,True,True,True,True,True,True
+VST,contractual arrangement,multiword,False,True,True,True,True,True
+VST,costs,single_word,True,True,True,True,True,True
+VST,OPEB coverage,multiword,True,True,True,True,True,True
+VST,retirees,single_word,True,True,True,True,True,True
+VST,Split Participants,multiword,True,True,True,True,True,True
+VST,employment,single_word,True,True,True,True,True,True
+VST,service,single_word,True,True,True,True,True,True
+VST,regulated businesses,multiword,False,True,True,True,True,True
+VST,predecessors,single_word,True,True,True,True,True,True
+VST,non-regulated businesses,multiword,False,True,True,True,True,True
+VST,interests,single_word,True,True,True,True,True,True
+VST,multiple employer plan,multiword,False,True,True,True,True,True
+VST,plan assets,multiword,False,True,True,True,True,True
+VST,obligations,single_word,True,True,True,True,True,True
+VST,pension benefit information,multiword,False,True,True,True,True,True
+VST,qualified defined benefit pension plan,multiword,False,True,True,True,True,True
+VST,Section 401(a),multiword,False,False,False,False,False,False
+VST,Internal Revenue Code of 1986,multiword,True,True,True,True,False,False
+VST,provisions,single_word,True,True,True,True,True,True
+VST,ERISA,single_word,True,True,True,True,True,True
+VST,Cash Balance Formula,multiword,False,True,True,True,True,True
+VST,monthly contribution credits,multiword,True,True,True,True,True,True
+VST,compensation,single_word,True,True,True,True,True,True
+VST,age,single_word,True,True,True,True,True,True
+VST,years of service,multiword,False,False,False,False,False,False
+VST,monthly interest credits,multiword,True,True,True,True,True,True
+VST,Traditional Retirement Plan Formula,multiword,False,True,True,True,True,True
+VST,average earnings,multiword,False,True,True,True,True,True
+VST,earnings,single_word,True,True,True,True,True,True
+VST,prior service costs,multiword,True,True,True,True,True,True
+VST,policy,single_word,True,True,True,True,True,True
+VST,Retirement Plan assets,multiword,False,True,True,True,True,True
+VST,federal regulations,multiword,False,False,True,True,False,True
+VST,new participants,multiword,True,True,True,True,True,True
+VST,retired collective bargaining unit employees,multiword,True,True,True,True,True,True
+VST,ongoing expenses,multiword,True,True,True,True,True,True
+VST,pensions plans,multiword,True,True,True,True,True,True
+VST,Dynegy,single_word,True,True,True,True,True,True
+VST,Energy Harbor,multiword,True,True,True,True,True,True
+VST,training and development programs,multiword,False,False,True,True,False,True
+VST,employees,single_word,True,True,True,True,True,True
+VST,online learning platform courses,multiword,True,True,True,True,True,True
+VST,learning management system courses,multiword,False,False,False,False,False,False
+VST,recorded webinars,multiword,True,True,True,True,True,True
+VST,presentations,single_word,True,True,True,True,True,True
+VST,self-paced development,multiword,True,True,True,True,True,True
+VST,employee-specific skill training,multiword,True,True,True,True,True,True
+VST,Vistra Learning Community,multiword,False,True,True,True,True,True
+VST,online platform,multiword,False,True,True,True,True,True
+VST,professional training,multiword,True,True,True,True,True,True
+VST,continuing education requirements,multiword,True,True,True,True,True,True
+VST,professional licenses,multiword,False,False,True,True,False,True
+VST,accounting,single_word,True,True,True,True,True,True
+VST,legal,single_word,False,True,False,True,True,True
+VST,nuclear,single_word,False,True,False,True,True,True
+VST,formal mentoring program,multiword,False,True,True,True,True,True
+VST,organizational knowledge,multiword,True,True,True,True,True,True
+VST,career development,multiword,True,True,True,True,True,True
+VST,individual development,multiword,True,True,True,True,True,True
+VST,collaboration,single_word,True,True,True,True,True,True
+VST,leadership,single_word,True,True,True,True,True,True
+VST,full-time employees,multiword,False,True,True,True,True,True
+VST,collective bargaining unit,multiword,False,True,True,True,True,True
+VST,formal performance review,multiword,False,True,True,True,True,True
+VST,development,single_word,True,True,True,True,True,True
+VST,business,single_word,True,True,True,True,True,True
+VST,financial markets,multiword,True,True,True,True,True,True
+VST,credit facilities,multiword,True,True,True,True,True,True
+VST,liquidity,single_word,True,True,True,True,True,True
+VST,capital requirements,multiword,False,True,True,True,True,True
+VST,hedging transactions,multiword,True,True,True,True,True,True
+VST,cash-on-hand,single_word,False,True,False,True,True,True
+VST,operating cash flows,multiword,False,False,False,False,False,False
+VST,capital,single_word,True,True,True,True,True,True
+VST,capital costs,multiword,True,True,True,True,True,True
+VST,collateral requirements,multiword,True,True,True,True,True,True
+VST,material adverse effect,multiword,False,True,True,True,True,True

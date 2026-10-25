@@ -1,0 +1,82 @@
+{
+  "ticker": "VST",
+  "cik": "0001692819",
+  "name": "Vistra Corp",
+  "sector": "Utilities",
+  "industry": "Utilities - Independent Power Producers",
+  "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001692819.json.gz",
+  "profile_sha256": "06f938b3550288e3620888c2a10fdfb11032d2514ea2881940cd9d57260070f9",
+  "eligible_paragraphs": 185,
+  "source_scope": "Retained archived filing prose paragraphs; not a complete filing inventory.",
+  "paragraphs": [
+    {
+      "id": "96712ed4842dbfc6c74ea941a6b745db1cdd3a61b8a4b63868657620e08c6d1d",
+      "start": 292,
+      "end": 2299,
+      "text": "Vistra is the plan sponsor of the Vistra Retirement Plan (the Retirement Plan), which provides benefits to eligible employees of its subsidiaries. Oncor is a participant in the Retirement Plan. Effective January 1, 2018, Vistra entered into a contractual arrangement with Oncor whereby the costs associated with providing OPEB coverage for certain retirees (Split Participants) whose employment included service with both the regulated businesses of Oncor (or its predecessors) and the non-regulated businesses of Vistra (or its predecessors) are split between Oncor and Vistra. As Vistra accounts for its interests in the Retirement Plan as a multiple employer plan, only Vistra's share of the plan assets and obligations are reported in the pension benefit information presented below. The Retirement Plan is a qualified defined benefit pension plan under Section 401(a) of the Internal Revenue Code of 1986, as amended (Code), and is subject to the provisions of ERISA. The Retirement Plan provides benefits to participants under one of two formulas: (i) a Cash Balance Formula under which participants earn monthly contribution credits based on their compensation and a combination of their age and years of service, plus monthly interest credits or (ii) a Traditional Retirement Plan Formula based on years of service and the average earnings of the three years of highest earnings. Under the Cash Balance Formula, future increases in earnings will not apply to prior service costs. It is our policy to fund the Retirement Plan assets only to the extent required under existing federal regulations. Since 2012, the Retirement Plan has been closed to new participants and the only participants who remain in the Retirement Plan are employees who were active prior to 2012, including retired collective bargaining unit employees. Accordingly, ongoing expenses associated with the Retirement plan are immaterial, including expenses associated with pensions plans acquired from Dynegy and Energy Harbor. \n\n",
+      "sha256": "79fad036138a82faf093e59682dcca6c84f3faeb7c0e8ac5baf81f66c6f71149",
+      "source": {
+        "accepted_at": "2026-02-27T06:27:49.000Z",
+        "accession": "0001692819-26-000006",
+        "characters": 14148,
+        "document": "R27.htm",
+        "filing_date": "2026-02-27",
+        "form": "10-K",
+        "id": "94ff0602bb0f9397c31e828b4759857454ddd262e9faaf1abb482bca848a7416",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "R27.htm",
+        "section_ordinal": 69,
+        "sha256": "e9ec525d3c66b212d63c28558d3dac7ce76ccefb08fd19df2b2790aa3d77922d",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000006/R27.htm"
+      }
+    },
+    {
+      "id": "9057a17c7a53e14a99fd80f581c81dc3621dbf0d9cbed4fc70babbede0abbef7",
+      "start": 35999,
+      "end": 37004,
+      "text": "Vistra also provides many other training and development programs to help grow and develop employees at every level, including online learning platform courses, learning management system courses, recorded webinars and presentations, self-paced development and employee-specific skill training. The Vistra Learning Community is our online platform that strategically supports employees in completing thousands of hours of professional training to support continuing education requirements for their respective professional licenses, including accounting, legal and nuclear. In 2025, Vistra continued its formal mentoring program available to all employees to focus on topics like organizational knowledge, career development, individual development, collaboration and leadership. Over 260 employees participated in 2025. In addition, all full-time employees, other than those in a collective bargaining unit, receive a formal performance review guiding development and improving results of the business.\n\n",
+      "sha256": "f0724d1bd55999c608358fddda2230aa23482095d1c0318a505e11de6d7f4a97",
+      "source": {
+        "accepted_at": "2026-02-27T06:27:49.000Z",
+        "accession": "0001692819-26-000006",
+        "characters": 76357,
+        "document": "vistra-20251231.htm",
+        "filing_date": "2026-02-27",
+        "form": "10-K",
+        "id": "298e36a05c66f87ba28c24aa4702a7cde418c84f0b802515eca106ad160d3480",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "PART I\n\nItem 1.BUSINESS",
+        "section_ordinal": 175,
+        "sha256": "835d19450513186e92e86e5737a05f7d02309b154be1dc4c43b418f90d9c2beb",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000006/vistra-20251231.htm"
+      }
+    },
+    {
+      "id": "507e22866ddf0748cc94bca493a193e384b62b723ad11f4f023beec690e39622",
+      "start": 39748,
+      "end": 40352,
+      "text": "Our businesses are capital intensive. In general, we rely on access to financial markets and credit facilities as a significant source of liquidity for our capital requirements, hedging transactions and other obligations not satisfied by cash-on-hand or operating cash flows. The inability to raise capital or to access credit facilities, particularly on favorable terms, could adversely impact our liquidity and our ability to meet our obligations or sustain and grow our businesses and could increase capital costs and collateral requirements, any of which could have a material adverse effect on us.\n\n",
+      "sha256": "59f17d9a7bad8ebb940db3dabb930f754a54d3ea5fd2939b5a94d3feb06b12e6",
+      "source": {
+        "accepted_at": "2026-02-27T06:27:49.000Z",
+        "accession": "0001692819-26-000006",
+        "characters": 144824,
+        "document": "vistra-20251231.htm",
+        "filing_date": "2026-02-27",
+        "form": "10-K",
+        "id": "3d91f626d5c298bb3c46f83f1ad9c5c4537f11094d98f6b84781ed7a54545eb8",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "Item 1A.RISK FACTORS",
+        "section_ordinal": 176,
+        "sha256": "3dd8e56eff52034b07884fd089a375ca2a05f3ac66d454136234f967a7cee900",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000006/vistra-20251231.htm"
+      }
+    }
+  ]
+}

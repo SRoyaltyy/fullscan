@@ -1,0 +1,82 @@
+{
+  "ticker": "KLC",
+  "cik": "0001873529",
+  "name": "KinderCare Learning Companies Inc",
+  "sector": "Consumer Defensive",
+  "industry": "Education & Training Services",
+  "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001873529.json.gz",
+  "profile_sha256": "f9e5c87fa95ee1e4b13f754d0b3d7822a5128c86b88b26df64bb6d1d0b8cd59c",
+  "eligible_paragraphs": 152,
+  "source_scope": "Retained archived filing prose paragraphs; not a complete filing inventory.",
+  "paragraphs": [
+    {
+      "id": "8eb567e2db1ab073eb819c0cdc4ac6d2054d3c12d90d8a58fc88d55771d47403",
+      "start": 266,
+      "end": 1905,
+      "text": "2025 Acquisitions—During the fiscal year ended January 3, 2026, the Company acquired 26 early childhood education centers in 24 separate business acquisitions which were each accounted for as business combinations. The centers were acquired for total consideration of $24.7 million, which included cash consideration of $23.1 million, contingent consideration of $1.2 million, and holdbacks of $0.4 million. The fair value of the contingent consideration is based on the probability and timing of the continuation of the lease of the related acquired center. The amounts are payable six to nine years from acquisition date and the range of undiscounted amounts payable under the asset purchase agreement is between zero and $1.2 million. Contingent consideration payable is recorded within other long-term liabilities on the Company's unaudited condensed consolidated balance sheets. As of January 3, 2026, there were no changes in the recognized amounts or range of outcomes of the contingent consideration from the acquisition. Refer to Note 15, Fair Value Measurements, for additional information related to the Company's contingent consideration payable. Holdbacks are generally expected to be paid within one year of the acquisition closing date. The Company recorded goodwill of $23.1 million, which is deductible for tax purposes, and fixed assets of $1.7 million. The operating results for the acquired centers, which were not material to the Company’s overall financial results individually or in aggregate, are included in the consolidated statements of operations and comprehensive income (loss) from the dates of acquisition.\n\n",
+      "sha256": "a09544031f2775018e5bad2d8fc019d109500b719a6dac1a5c756f17e56546ee",
+      "source": {
+        "accepted_at": "2026-03-14T00:56:06.000Z",
+        "accession": "0001193125-26-106342",
+        "characters": 3186,
+        "document": "R13.htm",
+        "filing_date": "2026-03-13",
+        "form": "10-K",
+        "id": "cee8c95eef51cf85b95715d3f55ce1fa0dc074a5a6b8a0882fd1130eac043eee",
+        "kind": "business",
+        "report_date": "2026-01-03",
+        "section": "R13.htm",
+        "section_ordinal": 11,
+        "sha256": "d3d94dfdbaa22c3688ad8fe2d81528c78b976093dd288c7d1e319598efdc8635",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1873529/000119312526106342/R13.htm"
+      }
+    },
+    {
+      "id": "94e7cf800c85c7352ab76c24e0e0aedd694a4070658b57ff7efe7cb412ec9c62",
+      "start": 30132,
+      "end": 31395,
+      "text": "Non-Qualified Deferred Compensation Plan —The Company offers highly compensated employees who are excluded from participating in the 401(k) Plan the ability to participate in the Company's deferred compensation plan (“NQDC Plan”). Under the NQDC Plan, employees direct the investment of their account balances, and the Company invests amounts held in the associated asset trusts consistent with these directions. As realized and unrealized investment gains and losses occur, the Company’s deferred compensation obligation to employees changes accordingly and adjustments are recorded as a component of selling, general, and administrative expenses in the consolidated statements of operations and comprehensive (loss) income. The change in the value of the investment trust assets is primarily offset by the change in the value of the deferred compensation obligation. The offsetting changes in the investment trust assets are recognized in other (income) expense, net in the consolidated statements of operations and comprehensive (loss) income as gains of $5.2 million, $3.6 million, and $3.7 million during the fiscal years ended January 3, 2026, December 28, 2024, and December 30, 2023. Refer to Note 19, Employee Benefit Plans, for additional information.\n\n",
+      "sha256": "27254b1e8d178b83903be398656026011c371d2d0bffa29f65469bc59a1ee1f2",
+      "source": {
+        "accepted_at": "2026-03-14T00:56:06.000Z",
+        "accession": "0001193125-26-106342",
+        "characters": 44819,
+        "document": "R11.htm",
+        "filing_date": "2026-03-13",
+        "form": "10-K",
+        "id": "d6f4a79a9a7ee6145904bbcfedb017ea002e7e4872374acb9cab5e97b6193f15",
+        "kind": "business",
+        "report_date": "2026-01-03",
+        "section": "R11.htm",
+        "section_ordinal": 9,
+        "sha256": "1c76b0f7d972c3d07bc9f8a69aa34ad344100887cfa18a76d3b6c5d8f614ff3e",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1873529/000119312526106342/R11.htm"
+      }
+    },
+    {
+      "id": "94c5b4b2aee45b02ad7437a1fb186fbd068a73ddf8781e0d6dbc864cae21ed6e",
+      "start": 54322,
+      "end": 55670,
+      "text": "We rely extensively on various information technology systems, including data centers, hardware and software and applications to manage many aspects of our business and the success of our operations depends upon the secure transmission of confidential and personal information over public networks, including the use of cashless payments. In particular, we are heavily dependent upon our mobile application and website platform as a means of growing user engagement and perception of our brand. Our mobile application is hosted by a third-party and supported by another outside development firm. In addition, kindercare.com, our website platform, is hosted on an Infrastructure-as-a-Service solution provided to us by a third-party’s cloud platform. Any compromises, shutdowns, failures or interruption of our mobile application, website hosting platform, payment processing application, or any of our computer and information technology systems, incidents or failures experienced by our third-party service providers including any of our computer and information technology systems managed thereby, could intentionally or inadvertently lead to delays in our business operations or harm our ability to serve our clients and families through these channels, which could adversely affect our business, financial condition and results of operations.\n\n",
+      "sha256": "cccbf6e2dbfaf3e7e35c74a6309249639ef1cd3ff2794c5159378515bbe9ef27",
+      "source": {
+        "accepted_at": "2026-03-14T00:56:06.000Z",
+        "accession": "0001193125-26-106342",
+        "characters": 102275,
+        "document": "klc-20260103.htm",
+        "filing_date": "2026-03-13",
+        "form": "10-K",
+        "id": "a8a525479cc16fdbc4658a9734d6c5699997471d2fe344faaa8fb8e869ca74f4",
+        "kind": "risk",
+        "report_date": "2026-01-03",
+        "section": "Item 1A. Risk Factors",
+        "section_ordinal": 132,
+        "sha256": "a4ddd75ce6841234be49e881aa7563511755dfd2d29bed890038e78228ba79e4",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1873529/000119312526106342/klc-20260103.htm"
+      }
+    }
+  ]
+}

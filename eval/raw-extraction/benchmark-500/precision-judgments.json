@@ -1,0 +1,5042 @@
+{
+  "annotation": "Assistant source review of all sampled outputs; not independent human certification.",
+  "sample_sha256": "722a097813bd2da25f6e17629d171a3182e211afc7e89af712fc0946900d73c7",
+  "judgments": [
+    {
+      "id": 1,
+      "ticker": "LYNX",
+      "forms": [
+        "S-1"
+      ],
+      "normalized": "s-1",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 2,
+      "ticker": "LYNX",
+      "forms": [
+        "August"
+      ],
+      "normalized": "august",
+      "status": "uncertain",
+      "reason": "Temporal month name: complete named expression, but business-term scope is unclear."
+    },
+    {
+      "id": 3,
+      "ticker": "LYNX",
+      "forms": [
+        "Common"
+      ],
+      "normalized": "common",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 4,
+      "ticker": "LYNX",
+      "forms": [
+        "LLC"
+      ],
+      "normalized": "llc",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 5,
+      "ticker": "LYNX",
+      "forms": [
+        "connection"
+      ],
+      "normalized": "connection",
+      "status": "invalid",
+      "reason": "discourse_filler"
+    },
+    {
+      "id": 6,
+      "ticker": "LYNX",
+      "forms": [
+        "Schedule"
+      ],
+      "normalized": "schedule",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 7,
+      "ticker": "LYNX",
+      "forms": [
+        "Guggenheim"
+      ],
+      "normalized": "guggenheim",
+      "status": "invalid",
+      "reason": "name_fragment"
+    },
+    {
+      "id": 8,
+      "ticker": "LYNX",
+      "forms": [
+        "representatives"
+      ],
+      "normalized": "representative",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 9,
+      "ticker": "LYNX",
+      "forms": [
+        "initial filing"
+      ],
+      "normalized": "initial filing",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 10,
+      "ticker": "LYNX",
+      "forms": [
+        "paid"
+      ],
+      "normalized": "paid",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 11,
+      "ticker": "LYNX",
+      "forms": [
+        "Form"
+      ],
+      "normalized": "form",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 12,
+      "ticker": "LYNX",
+      "forms": [
+        "offering price"
+      ],
+      "normalized": "offering price",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 13,
+      "ticker": "LYNX",
+      "forms": [
+        "Form S-1"
+      ],
+      "normalized": "form s-1",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 14,
+      "ticker": "LYNX",
+      "forms": [
+        "fee"
+      ],
+      "normalized": "fee",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 15,
+      "ticker": "LYNX",
+      "forms": [
+        "July"
+      ],
+      "normalized": "july",
+      "status": "uncertain",
+      "reason": "Temporal month name: complete named expression, but business-term scope is unclear."
+    },
+    {
+      "id": 16,
+      "ticker": "LYNX",
+      "forms": [
+        "sell"
+      ],
+      "normalized": "sell",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 17,
+      "ticker": "LYNX",
+      "forms": [
+        "solely"
+      ],
+      "normalized": "solely",
+      "status": "invalid",
+      "reason": "discourse_adverb"
+    },
+    {
+      "id": 18,
+      "ticker": "LYNX",
+      "forms": [
+        "Rule 457(a"
+      ],
+      "normalized": "rule 457(a",
+      "status": "invalid",
+      "reason": "truncated_legal_identifier"
+    },
+    {
+      "id": 19,
+      "ticker": "LYNX",
+      "forms": [
+        "additional shares"
+      ],
+      "normalized": "additional share",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 20,
+      "ticker": "LYNX",
+      "forms": [
+        "Common Stock"
+      ],
+      "normalized": "common stock",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 21,
+      "ticker": "LYNX",
+      "forms": [
+        "purpose"
+      ],
+      "normalized": "purpose",
+      "status": "invalid",
+      "reason": "discourse_filler"
+    },
+    {
+      "id": 22,
+      "ticker": "LYNX",
+      "forms": [
+        "closed"
+      ],
+      "normalized": "closed",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 23,
+      "ticker": "LYNX",
+      "forms": [
+        "previously"
+      ],
+      "normalized": "previously",
+      "status": "invalid",
+      "reason": "temporal_adverb"
+    },
+    {
+      "id": 24,
+      "ticker": "LYNX",
+      "forms": [
+        "aggregate",
+        "Aggregate"
+      ],
+      "normalized": "aggregate",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 25,
+      "ticker": "LYNX",
+      "forms": [
+        "entered"
+      ],
+      "normalized": "entered",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 26,
+      "ticker": "LYNX",
+      "forms": [
+        "day option"
+      ],
+      "normalized": "day option",
+      "status": "invalid",
+      "reason": "broken_compound"
+    },
+    {
+      "id": 27,
+      "ticker": "LYNX",
+      "forms": [
+        "L.L.C."
+      ],
+      "normalized": "l.l.c.",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 28,
+      "ticker": "LYNX",
+      "forms": [
+        "30-day option"
+      ],
+      "normalized": "30-day option",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 29,
+      "ticker": "LYNX",
+      "forms": [
+        "Inc."
+      ],
+      "normalized": "inc.",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 30,
+      "ticker": "LYNX",
+      "forms": [
+        "delivered"
+      ],
+      "normalized": "delivered",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 31,
+      "ticker": "LYNX",
+      "forms": [
+        "granted"
+      ],
+      "normalized": "granted",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 32,
+      "ticker": "LYNX",
+      "forms": [
+        "Estimated",
+        "estimated"
+      ],
+      "normalized": "estimated",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 33,
+      "ticker": "LYNX",
+      "forms": [
+        "11,285,714 shares"
+      ],
+      "normalized": "11,285,714 share",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 34,
+      "ticker": "LYNX",
+      "forms": [
+        "Act"
+      ],
+      "normalized": "act",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 35,
+      "ticker": "LYNX",
+      "forms": [
+        "457(o"
+      ],
+      "normalized": "457(o",
+      "status": "invalid",
+      "reason": "truncated_legal_identifier"
+    },
+    {
+      "id": 36,
+      "ticker": "LYNX",
+      "forms": [
+        "Rule"
+      ],
+      "normalized": "rule",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 37,
+      "ticker": "LYNX",
+      "forms": [
+        "Schedule II"
+      ],
+      "normalized": "schedule ii",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 38,
+      "ticker": "LYNX",
+      "forms": [
+        "price",
+        "Price"
+      ],
+      "normalized": "price",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 39,
+      "ticker": "LYNX",
+      "forms": [
+        "amended"
+      ],
+      "normalized": "amended",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 40,
+      "ticker": "LYNX",
+      "forms": [
+        "Securities"
+      ],
+      "normalized": "securities",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 41,
+      "ticker": "LYNX",
+      "forms": [
+        "case"
+      ],
+      "normalized": "case",
+      "status": "invalid",
+      "reason": "discourse_filler"
+    },
+    {
+      "id": 42,
+      "ticker": "LYNX",
+      "forms": [
+        "converted"
+      ],
+      "normalized": "converted",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 43,
+      "ticker": "BVN",
+      "forms": [
+        "net taxable base"
+      ],
+      "normalized": "net taxable base",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 44,
+      "ticker": "BVN",
+      "forms": [
+        "mining liabilities"
+      ],
+      "normalized": "mining liability",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 45,
+      "ticker": "BVN",
+      "forms": [
+        "transferred"
+      ],
+      "normalized": "transferred",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 46,
+      "ticker": "BVN",
+      "forms": [
+        "managers"
+      ],
+      "normalized": "manager",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 47,
+      "ticker": "BVN",
+      "forms": [
+        "civilly"
+      ],
+      "normalized": "civilly",
+      "status": "invalid",
+      "reason": "discourse_adverb"
+    },
+    {
+      "id": 48,
+      "ticker": "BVN",
+      "forms": [
+        "June"
+      ],
+      "normalized": "june",
+      "status": "uncertain",
+      "reason": "Temporal month name: complete named expression, but business-term scope is unclear."
+    },
+    {
+      "id": 49,
+      "ticker": "BVN",
+      "forms": [
+        "Pasivos Ambientales de la"
+      ],
+      "normalized": "pasivos ambientales de la",
+      "status": "invalid",
+      "reason": "incomplete_foreign_name"
+    },
+    {
+      "id": 50,
+      "ticker": "BVN",
+      "forms": [
+        "regulate"
+      ],
+      "normalized": "regulate",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 51,
+      "ticker": "BVN",
+      "forms": [
+        "Ley"
+      ],
+      "normalized": "ley",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 52,
+      "ticker": "BVN",
+      "forms": [
+        "Pasivos"
+      ],
+      "normalized": "pasivos",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 53,
+      "ticker": "BVN",
+      "forms": [
+        "Closure Plan"
+      ],
+      "normalized": "closure plan",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 54,
+      "ticker": "BVN",
+      "forms": [
+        "meets"
+      ],
+      "normalized": "meets",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 55,
+      "ticker": "BVN",
+      "forms": [
+        "que"
+      ],
+      "normalized": "que",
+      "status": "invalid",
+      "reason": "foreign_function_word"
+    },
+    {
+      "id": 56,
+      "ticker": "BVN",
+      "forms": [
+        "willful"
+      ],
+      "normalized": "willful",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 57,
+      "ticker": "BVN",
+      "forms": [
+        "Fund"
+      ],
+      "normalized": "fund",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 58,
+      "ticker": "BVN",
+      "forms": [
+        "Regulations"
+      ],
+      "normalized": "regulations",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 59,
+      "ticker": "BVN",
+      "forms": [
+        "worker",
+        "Worker"
+      ],
+      "normalized": "worker",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 60,
+      "ticker": "BVN",
+      "forms": [
+        "Government"
+      ],
+      "normalized": "government",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 61,
+      "ticker": "BVN",
+      "forms": [
+        "Regulations of Environmental Liabilities of Mining Activities"
+      ],
+      "normalized": "regulations of environmental liabilities of mining activities",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 62,
+      "ticker": "BVN",
+      "forms": [
+        "Law No"
+      ],
+      "normalized": "law no",
+      "status": "invalid",
+      "reason": "truncated_legal_identifier"
+    },
+    {
+      "id": 63,
+      "ticker": "BVN",
+      "forms": [
+        "identification"
+      ],
+      "normalized": "identification",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 64,
+      "ticker": "BVN",
+      "forms": [
+        "003-2009-EM"
+      ],
+      "normalized": "003-2009-em",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 65,
+      "ticker": "BVN",
+      "forms": [
+        "los"
+      ],
+      "normalized": "los",
+      "status": "invalid",
+      "reason": "foreign_function_word"
+    },
+    {
+      "id": 66,
+      "ticker": "BVN",
+      "forms": [
+        "negative"
+      ],
+      "normalized": "negative",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 67,
+      "ticker": "BVN",
+      "forms": [
+        "studies"
+      ],
+      "normalized": "study",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 68,
+      "ticker": "BVN",
+      "forms": [
+        "linked"
+      ],
+      "normalized": "linked",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 69,
+      "ticker": "BVN",
+      "forms": [
+        "MEM"
+      ],
+      "normalized": "mem",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 70,
+      "ticker": "BVN",
+      "forms": [
+        "controlling"
+      ],
+      "normalized": "controlling",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 71,
+      "ticker": "BVN",
+      "forms": [
+        "identify"
+      ],
+      "normalized": "identify",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 72,
+      "ticker": "BVN",
+      "forms": [
+        "mining concessions"
+      ],
+      "normalized": "mining concession",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 73,
+      "ticker": "BVN",
+      "forms": [
+        "recognizes"
+      ],
+      "normalized": "recognizes",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 74,
+      "ticker": "BVN",
+      "forms": [
+        "called"
+      ],
+      "normalized": "called",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 75,
+      "ticker": "BVN",
+      "forms": [
+        "National Fund"
+      ],
+      "normalized": "national fund",
+      "status": "invalid",
+      "reason": "name_fragment"
+    },
+    {
+      "id": 76,
+      "ticker": "BVN",
+      "forms": [
+        "Regional Government"
+      ],
+      "normalized": "regional government",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 77,
+      "ticker": "BVN",
+      "forms": [
+        "Board"
+      ],
+      "normalized": "board",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 78,
+      "ticker": "BVN",
+      "forms": [
+        "Liabilities"
+      ],
+      "normalized": "liabilities",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 79,
+      "ticker": "BVN",
+      "forms": [
+        "profit"
+      ],
+      "normalized": "profit",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 80,
+      "ticker": "BVN",
+      "forms": [
+        "Activities"
+      ],
+      "normalized": "activities",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 81,
+      "ticker": "BVN",
+      "forms": [
+        "agree"
+      ],
+      "normalized": "agree",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 82,
+      "ticker": "BVN",
+      "forms": [
+        "willful misconduct"
+      ],
+      "normalized": "willful misconduct",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 83,
+      "ticker": "BVN",
+      "forms": [
+        "residue"
+      ],
+      "normalized": "residue",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 84,
+      "ticker": "BVN",
+      "forms": [
+        "amended"
+      ],
+      "normalized": "amended",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 85,
+      "ticker": "SHEN",
+      "forms": [
+        "reduced"
+      ],
+      "normalized": "reduced",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 86,
+      "ticker": "SHEN",
+      "forms": [
+        "cyber-related"
+      ],
+      "normalized": "cyber-related",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 87,
+      "ticker": "SHEN",
+      "forms": [
+        "fixed"
+      ],
+      "normalized": "fixed",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 88,
+      "ticker": "SHEN",
+      "forms": [
+        "suppliers"
+      ],
+      "normalized": "supplier",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 89,
+      "ticker": "SHEN",
+      "forms": [
+        "such incidents"
+      ],
+      "normalized": "such incident",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 90,
+      "ticker": "SHEN",
+      "forms": [
+        "video"
+      ],
+      "normalized": "video",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 91,
+      "ticker": "SHEN",
+      "forms": [
+        "customer service"
+      ],
+      "normalized": "customer service",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 92,
+      "ticker": "SHEN",
+      "forms": [
+        "fiber optic networks"
+      ],
+      "normalized": "fiber optic network",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 93,
+      "ticker": "SHEN",
+      "forms": [
+        "fiber"
+      ],
+      "normalized": "fiber",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 94,
+      "ticker": "SHEN",
+      "forms": [
+        "significant"
+      ],
+      "normalized": "significant",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 95,
+      "ticker": "SHEN",
+      "forms": [
+        "Law Enforcement Act"
+      ],
+      "normalized": "law enforcement act",
+      "status": "invalid",
+      "reason": "name_fragment"
+    },
+    {
+      "id": 96,
+      "ticker": "SHEN",
+      "forms": [
+        "frequent"
+      ],
+      "normalized": "frequent",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 97,
+      "ticker": "SHEN",
+      "forms": [
+        "wireless providers"
+      ],
+      "normalized": "wireless provider",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 98,
+      "ticker": "SHEN",
+      "forms": [
+        "required"
+      ],
+      "normalized": "required",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 99,
+      "ticker": "SHEN",
+      "forms": [
+        "businesses",
+        "business"
+      ],
+      "normalized": "business",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 100,
+      "ticker": "SHEN",
+      "forms": [
+        "call completion"
+      ],
+      "normalized": "call completion",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 101,
+      "ticker": "SHEN",
+      "forms": [
+        "impairment"
+      ],
+      "normalized": "impairment",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 102,
+      "ticker": "SHEN",
+      "forms": [
+        "attacks"
+      ],
+      "normalized": "attack",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 103,
+      "ticker": "SHEN",
+      "forms": [
+        "Communications"
+      ],
+      "normalized": "communications",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 104,
+      "ticker": "SHEN",
+      "forms": [
+        "party",
+        "parties"
+      ],
+      "normalized": "party",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 105,
+      "ticker": "SHEN",
+      "forms": [
+        "generation"
+      ],
+      "normalized": "generation",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 106,
+      "ticker": "SHEN",
+      "forms": [
+        "911 emergency services"
+      ],
+      "normalized": "911 emergency service",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 107,
+      "ticker": "SHEN",
+      "forms": [
+        "incumbent broadband passings"
+      ],
+      "normalized": "incumbent broadband passing",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 108,
+      "ticker": "SHEN",
+      "forms": [
+        "robocall mitigation"
+      ],
+      "normalized": "robocall mitigation",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 109,
+      "ticker": "SHEN",
+      "forms": [
+        "broadband services"
+      ],
+      "normalized": "broadband service",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 110,
+      "ticker": "SHEN",
+      "forms": [
+        "third-party provider"
+      ],
+      "normalized": "third-party provider",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 111,
+      "ticker": "SHEN",
+      "forms": [
+        "apply"
+      ],
+      "normalized": "apply",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 112,
+      "ticker": "SHEN",
+      "forms": [
+        "VoIP"
+      ],
+      "normalized": "voip",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 113,
+      "ticker": "SHEN",
+      "forms": [
+        "consequences"
+      ],
+      "normalized": "consequence",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 114,
+      "ticker": "SHEN",
+      "forms": [
+        "example"
+      ],
+      "normalized": "example",
+      "status": "invalid",
+      "reason": "discourse_filler"
+    },
+    {
+      "id": 115,
+      "ticker": "SHEN",
+      "forms": [
+        "property"
+      ],
+      "normalized": "property",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 116,
+      "ticker": "SHEN",
+      "forms": [
+        "harm"
+      ],
+      "normalized": "harm",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 117,
+      "ticker": "SHEN",
+      "forms": [
+        "line"
+      ],
+      "normalized": "line",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 118,
+      "ticker": "SHEN",
+      "forms": [
+        "additional obligations"
+      ],
+      "normalized": "additional obligation",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 119,
+      "ticker": "SHEN",
+      "forms": [
+        "cyber-attacks"
+      ],
+      "normalized": "cyber-attack",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 120,
+      "ticker": "SHEN",
+      "forms": [
+        "based"
+      ],
+      "normalized": "based",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 121,
+      "ticker": "SHEN",
+      "forms": [
+        "increasingly complex and cyber-attacks"
+      ],
+      "normalized": "increasingly complex and cyber-attack",
+      "status": "invalid",
+      "reason": "malformed_phrase"
+    },
+    {
+      "id": 122,
+      "ticker": "SHEN",
+      "forms": [
+        "other malicious actor"
+      ],
+      "normalized": "other malicious actor",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 123,
+      "ticker": "SHEN",
+      "forms": [
+        "Communications Assistance"
+      ],
+      "normalized": "communications assistance",
+      "status": "invalid",
+      "reason": "name_fragment"
+    },
+    {
+      "id": 124,
+      "ticker": "SHEN",
+      "forms": [
+        "regulatory fees"
+      ],
+      "normalized": "regulatory fee",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 125,
+      "ticker": "SHEN",
+      "forms": [
+        "operational"
+      ],
+      "normalized": "operational",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 126,
+      "ticker": "SHEN",
+      "forms": [
+        "networks",
+        "network"
+      ],
+      "normalized": "network",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence. Generic business classes, financial/legal forms and material types are accepted."
+    },
+    {
+      "id": 127,
+      "ticker": "NKE",
+      "forms": [
+        "technology and consumer preferences"
+      ],
+      "normalized": "technology and consumer preference",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 128,
+      "ticker": "NKE",
+      "forms": [
+        "subject"
+      ],
+      "normalized": "subject",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 129,
+      "ticker": "NKE",
+      "forms": [
+        "selling"
+      ],
+      "normalized": "selling",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 130,
+      "ticker": "NKE",
+      "forms": [
+        "experiences"
+      ],
+      "normalized": "experience",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 131,
+      "ticker": "NKE",
+      "forms": [
+        "industry"
+      ],
+      "normalized": "industry",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 132,
+      "ticker": "NKE",
+      "forms": [
+        "principal business activity"
+      ],
+      "normalized": "principal business activity",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 133,
+      "ticker": "NKE",
+      "forms": [
+        "rates"
+      ],
+      "normalized": "rate",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 134,
+      "ticker": "NKE",
+      "forms": [
+        "train"
+      ],
+      "normalized": "train",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 135,
+      "ticker": "NKE",
+      "forms": [
+        "technology"
+      ],
+      "normalized": "technology",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 136,
+      "ticker": "NKE",
+      "forms": [
+        "athletic and leisure apparel companies"
+      ],
+      "normalized": "athletic and leisure apparel company",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 137,
+      "ticker": "NKE",
+      "forms": [
+        "internationally"
+      ],
+      "normalized": "internationally",
+      "status": "invalid",
+      "reason": "discourse_adverb"
+    },
+    {
+      "id": 138,
+      "ticker": "NKE",
+      "forms": [
+        "offer"
+      ],
+      "normalized": "offer",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 139,
+      "ticker": "NKE",
+      "forms": [
+        "lululemon athletica"
+      ],
+      "normalized": "lululemon athletica",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 140,
+      "ticker": "NKE",
+      "forms": [
+        "include"
+      ],
+      "normalized": "include",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 141,
+      "ticker": "NKE",
+      "forms": [
+        "Li Ning"
+      ],
+      "normalized": "li ning",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 142,
+      "ticker": "NKE",
+      "forms": [
+        "Item"
+      ],
+      "normalized": "item",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 143,
+      "ticker": "NKE",
+      "forms": [
+        "retain"
+      ],
+      "normalized": "retain",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 144,
+      "ticker": "NKE",
+      "forms": [
+        "ability"
+      ],
+      "normalized": "ability",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 145,
+      "ticker": "NKE",
+      "forms": [
+        "owned"
+      ],
+      "normalized": "owned",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 146,
+      "ticker": "NKE",
+      "forms": [
+        "comprised"
+      ],
+      "normalized": "comprised",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 147,
+      "ticker": "NKE",
+      "forms": [
+        "principal materials"
+      ],
+      "normalized": "principal material",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 148,
+      "ticker": "NKE",
+      "forms": [
+        "number"
+      ],
+      "normalized": "number",
+      "status": "invalid",
+      "reason": "discourse_quantifier"
+    },
+    {
+      "id": 149,
+      "ticker": "NKE",
+      "forms": [
+        "distributors"
+      ],
+      "normalized": "distributor",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 150,
+      "ticker": "NKE",
+      "forms": [
+        "regulated"
+      ],
+      "normalized": "regulated",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 151,
+      "ticker": "NKE",
+      "forms": [
+        "sales"
+      ],
+      "normalized": "sale",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 152,
+      "ticker": "NKE",
+      "forms": [
+        "rapid changes"
+      ],
+      "normalized": "rapid change",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 153,
+      "ticker": "NKE",
+      "forms": [
+        "significant number"
+      ],
+      "normalized": "significant number",
+      "status": "invalid",
+      "reason": "discourse_quantifier"
+    },
+    {
+      "id": 154,
+      "ticker": "NKE",
+      "forms": [
+        "equipment"
+      ],
+      "normalized": "equipment",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 155,
+      "ticker": "NKE",
+      "forms": [
+        "Li"
+      ],
+      "normalized": "li",
+      "status": "invalid",
+      "reason": "name_fragment"
+    },
+    {
+      "id": 156,
+      "ticker": "NKE",
+      "forms": [
+        "digital",
+        "Digital"
+      ],
+      "normalized": "digital",
+      "status": "uncertain",
+      "reason": "Technical adjective and proper-name component; standalone-term scope unclear."
+    },
+    {
+      "id": 157,
+      "ticker": "NKE",
+      "forms": [
+        "platforms"
+      ],
+      "normalized": "platform",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 158,
+      "ticker": "NKE",
+      "forms": [
+        "factors"
+      ],
+      "normalized": "factor",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 159,
+      "ticker": "NKE",
+      "forms": [
+        "Item 1"
+      ],
+      "normalized": "item 1",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 160,
+      "ticker": "NKE",
+      "forms": [
+        "NIKE-owned retail stores"
+      ],
+      "normalized": "nike-owned retail store",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 161,
+      "ticker": "NKE",
+      "forms": [
+        "1A."
+      ],
+      "normalized": "1a.",
+      "status": "uncertain",
+      "reason": "Section identifier alone; nominal business-term scope unclear."
+    },
+    {
+      "id": 162,
+      "ticker": "NKE",
+      "forms": [
+        "worldwide marketing"
+      ],
+      "normalized": "worldwide marketing",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 163,
+      "ticker": "NKE",
+      "forms": [
+        "changes"
+      ],
+      "normalized": "change",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 164,
+      "ticker": "NKE",
+      "forms": [
+        "seller"
+      ],
+      "normalized": "seller",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 165,
+      "ticker": "NKE",
+      "forms": [
+        "NIKE"
+      ],
+      "normalized": "nike",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 166,
+      "ticker": "NKE",
+      "forms": [
+        "leisure footwear"
+      ],
+      "normalized": "leisure footwear",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 167,
+      "ticker": "NKE",
+      "forms": [
+        "accessories"
+      ],
+      "normalized": "accessory",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 168,
+      "ticker": "NKE",
+      "forms": [
+        "raw materials"
+      ],
+      "normalized": "raw material",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 169,
+      "ticker": "KLC",
+      "forms": [
+        "Company's unaudited condensed consolidated balance sheets"
+      ],
+      "normalized": "company's unaudited condensed consolidated balance sheet",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 170,
+      "ticker": "KLC",
+      "forms": [
+        "early"
+      ],
+      "normalized": "early",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 171,
+      "ticker": "KLC",
+      "forms": [
+        "gains"
+      ],
+      "normalized": "gain",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 172,
+      "ticker": "KLC",
+      "forms": [
+        "hosted"
+      ],
+      "normalized": "hosted",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 173,
+      "ticker": "KLC",
+      "forms": [
+        "secure transmission"
+      ],
+      "normalized": "secure transmission",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 174,
+      "ticker": "KLC",
+      "forms": [
+        "realized"
+      ],
+      "normalized": "realized",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 175,
+      "ticker": "KLC",
+      "forms": [
+        "failures"
+      ],
+      "normalized": "failure",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 176,
+      "ticker": "KLC",
+      "forms": [
+        "centers",
+        "center"
+      ],
+      "normalized": "center",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 177,
+      "ticker": "KLC",
+      "forms": [
+        "probability"
+      ],
+      "normalized": "probability",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 178,
+      "ticker": "KLC",
+      "forms": [
+        "additional"
+      ],
+      "normalized": "additional",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 179,
+      "ticker": "KLC",
+      "forms": [
+        "fiscal year ended January 3, 2026",
+        "fiscal years ended January 3, 2026"
+      ],
+      "normalized": "fiscal year ended january 3, 2026",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 180,
+      "ticker": "KLC",
+      "forms": [
+        "secure"
+      ],
+      "normalized": "secure",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 181,
+      "ticker": "KLC",
+      "forms": [
+        "recognized"
+      ],
+      "normalized": "recognized",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 182,
+      "ticker": "KLC",
+      "forms": [
+        "mobile application"
+      ],
+      "normalized": "mobile application",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 183,
+      "ticker": "KLC",
+      "forms": [
+        "applications",
+        "application"
+      ],
+      "normalized": "application",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 184,
+      "ticker": "KLC",
+      "forms": [
+        "closing"
+      ],
+      "normalized": "closing",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 185,
+      "ticker": "KLC",
+      "forms": [
+        "providers"
+      ],
+      "normalized": "provider",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 186,
+      "ticker": "KLC",
+      "forms": [
+        "excluded"
+      ],
+      "normalized": "excluded",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 187,
+      "ticker": "KLC",
+      "forms": [
+        "date",
+        "dates"
+      ],
+      "normalized": "date",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 188,
+      "ticker": "KLC",
+      "forms": [
+        "occur"
+      ],
+      "normalized": "occur",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 189,
+      "ticker": "KLC",
+      "forms": [
+        "related acquired center"
+      ],
+      "normalized": "related acquired center",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 190,
+      "ticker": "KLC",
+      "forms": [
+        "401(k"
+      ],
+      "normalized": "401(k",
+      "status": "invalid",
+      "reason": "truncated_legal_identifier"
+    },
+    {
+      "id": 191,
+      "ticker": "KLC",
+      "forms": [
+        "adversely"
+      ],
+      "normalized": "adversely",
+      "status": "invalid",
+      "reason": "discourse_adverb"
+    },
+    {
+      "id": 192,
+      "ticker": "KLC",
+      "forms": [
+        "condensed"
+      ],
+      "normalized": "condensed",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 193,
+      "ticker": "KLC",
+      "forms": [
+        "adjustments"
+      ],
+      "normalized": "adjustment",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 194,
+      "ticker": "KLC",
+      "forms": [
+        "fair",
+        "Fair"
+      ],
+      "normalized": "fair",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 195,
+      "ticker": "KLC",
+      "forms": [
+        "ability"
+      ],
+      "normalized": "ability",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 196,
+      "ticker": "KLC",
+      "forms": [
+        "Company's contingent consideration"
+      ],
+      "normalized": "company's contingent consideration",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 197,
+      "ticker": "KLC",
+      "forms": [
+        "agreement"
+      ],
+      "normalized": "agreement",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 198,
+      "ticker": "KLC",
+      "forms": [
+        "term liabilities"
+      ],
+      "normalized": "term liability",
+      "status": "invalid",
+      "reason": "broken_compound"
+    },
+    {
+      "id": 199,
+      "ticker": "KLC",
+      "forms": [
+        "incidents"
+      ],
+      "normalized": "incident",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 200,
+      "ticker": "KLC",
+      "forms": [
+        "affect"
+      ],
+      "normalized": "affect",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 201,
+      "ticker": "KLC",
+      "forms": [
+        "acquired"
+      ],
+      "normalized": "acquired",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 202,
+      "ticker": "KLC",
+      "forms": [
+        "separate"
+      ],
+      "normalized": "separate",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 203,
+      "ticker": "KLC",
+      "forms": [
+        "Company"
+      ],
+      "normalized": "company",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 204,
+      "ticker": "KLC",
+      "forms": [
+        "million"
+      ],
+      "normalized": "million",
+      "status": "uncertain",
+      "reason": "Quantity unit; business-term scope unclear."
+    },
+    {
+      "id": 205,
+      "ticker": "KLC",
+      "forms": [
+        "fiscal year",
+        "fiscal years"
+      ],
+      "normalized": "fiscal year",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 206,
+      "ticker": "KLC",
+      "forms": [
+        "website"
+      ],
+      "normalized": "website",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 207,
+      "ticker": "KLC",
+      "forms": [
+        "payable"
+      ],
+      "normalized": "payable",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 208,
+      "ticker": "KLC",
+      "forms": [
+        "participate"
+      ],
+      "normalized": "participate",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 209,
+      "ticker": "KLC",
+      "forms": [
+        "overall"
+      ],
+      "normalized": "overall",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 210,
+      "ticker": "KLC",
+      "forms": [
+        "development"
+      ],
+      "normalized": "development",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 211,
+      "ticker": "BKR",
+      "forms": [
+        "capital management efforts"
+      ],
+      "normalized": "capital management effort",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 212,
+      "ticker": "BKR",
+      "forms": [
+        "perform"
+      ],
+      "normalized": "perform",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 213,
+      "ticker": "BKR",
+      "forms": [
+        "scale"
+      ],
+      "normalized": "scale",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 214,
+      "ticker": "BKR",
+      "forms": [
+        "development"
+      ],
+      "normalized": "development",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 215,
+      "ticker": "BKR",
+      "forms": [
+        "harsh"
+      ],
+      "normalized": "harsh",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 216,
+      "ticker": "BKR",
+      "forms": [
+        "capital structure"
+      ],
+      "normalized": "capital structure",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 217,
+      "ticker": "BKR",
+      "forms": [
+        "responsible"
+      ],
+      "normalized": "responsible",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 218,
+      "ticker": "BKR",
+      "forms": [
+        "generation"
+      ],
+      "normalized": "generation",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 219,
+      "ticker": "BKR",
+      "forms": [
+        "advanced"
+      ],
+      "normalized": "advanced",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 220,
+      "ticker": "BKR",
+      "forms": [
+        "Bently"
+      ],
+      "normalized": "bently",
+      "status": "invalid",
+      "reason": "name_fragment"
+    },
+    {
+      "id": 221,
+      "ticker": "BKR",
+      "forms": [
+        "bids"
+      ],
+      "normalized": "bid",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 222,
+      "ticker": "BKR",
+      "forms": [
+        "new inspection technologies"
+      ],
+      "normalized": "new inspection technology",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 223,
+      "ticker": "BKR",
+      "forms": [
+        "financial"
+      ],
+      "normalized": "financial",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 224,
+      "ticker": "BKR",
+      "forms": [
+        "future contract bids"
+      ],
+      "normalized": "future contract bid",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 225,
+      "ticker": "BKR",
+      "forms": [
+        "manufacturing"
+      ],
+      "normalized": "manufacturing",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 226,
+      "ticker": "BKR",
+      "forms": [
+        "novel"
+      ],
+      "normalized": "novel",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 227,
+      "ticker": "BKR",
+      "forms": [
+        "customers",
+        "customer"
+      ],
+      "normalized": "customer",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 228,
+      "ticker": "BKR",
+      "forms": [
+        "materials"
+      ],
+      "normalized": "material",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 229,
+      "ticker": "BKR",
+      "forms": [
+        "IET"
+      ],
+      "normalized": "iet",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 230,
+      "ticker": "BKR",
+      "forms": [
+        "solutions"
+      ],
+      "normalized": "solution",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 231,
+      "ticker": "BKR",
+      "forms": [
+        "transition"
+      ],
+      "normalized": "transition",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 232,
+      "ticker": "BKR",
+      "forms": [
+        "systems"
+      ],
+      "normalized": "system",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 233,
+      "ticker": "BKR",
+      "forms": [
+        "CCUS"
+      ],
+      "normalized": "ccus",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 234,
+      "ticker": "BKR",
+      "forms": [
+        "continue"
+      ],
+      "normalized": "continue",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 235,
+      "ticker": "BKR",
+      "forms": [
+        "Committee"
+      ],
+      "normalized": "committee",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 236,
+      "ticker": "BKR",
+      "forms": [
+        "latest"
+      ],
+      "normalized": "latest",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 237,
+      "ticker": "BKR",
+      "forms": [
+        "drilling industry"
+      ],
+      "normalized": "drilling industry",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 238,
+      "ticker": "BKR",
+      "forms": [
+        "conditions"
+      ],
+      "normalized": "condition",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 239,
+      "ticker": "BKR",
+      "forms": [
+        "full-scale testing"
+      ],
+      "normalized": "full-scale testing",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 240,
+      "ticker": "BKR",
+      "forms": [
+        "sensing"
+      ],
+      "normalized": "sensing",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 241,
+      "ticker": "BKR",
+      "forms": [
+        "reduced"
+      ],
+      "normalized": "reduced",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 242,
+      "ticker": "BKR",
+      "forms": [
+        "issues"
+      ],
+      "normalized": "issue",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 243,
+      "ticker": "BKR",
+      "forms": [
+        "severe service applications"
+      ],
+      "normalized": "severe service application",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 244,
+      "ticker": "BKR",
+      "forms": [
+        "privacy"
+      ],
+      "normalized": "privacy",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 245,
+      "ticker": "BKR",
+      "forms": [
+        "Gas Technology Services"
+      ],
+      "normalized": "gas technology services",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 246,
+      "ticker": "BKR",
+      "forms": [
+        "measure"
+      ],
+      "normalized": "measure",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 247,
+      "ticker": "BKR",
+      "forms": [
+        "carbon emissions"
+      ],
+      "normalized": "carbon emission",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 248,
+      "ticker": "BKR",
+      "forms": [
+        "includes"
+      ],
+      "normalized": "includes",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 249,
+      "ticker": "BKR",
+      "forms": [
+        "hydrogen"
+      ],
+      "normalized": "hydrogen",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 250,
+      "ticker": "BKR",
+      "forms": [
+        "latest generation"
+      ],
+      "normalized": "latest generation",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 251,
+      "ticker": "BKR",
+      "forms": [
+        "human",
+        "Human"
+      ],
+      "normalized": "human",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 252,
+      "ticker": "BKR",
+      "forms": [
+        "carbon footprint"
+      ],
+      "normalized": "carbon footprint",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 253,
+      "ticker": "BRO",
+      "forms": [
+        "quarterly"
+      ],
+      "normalized": "quarterly",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 254,
+      "ticker": "BRO",
+      "forms": [
+        "Form",
+        "form"
+      ],
+      "normalized": "form",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 255,
+      "ticker": "BRO",
+      "forms": [
+        "Principles"
+      ],
+      "normalized": "principles",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 256,
+      "ticker": "BRO",
+      "forms": [
+        "significant increases"
+      ],
+      "normalized": "significant increase",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 257,
+      "ticker": "BRO",
+      "forms": [
+        "The Exchange Act"
+      ],
+      "normalized": "the exchange act",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 258,
+      "ticker": "BRO",
+      "forms": [
+        "global"
+      ],
+      "normalized": "global",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 259,
+      "ticker": "BRO",
+      "forms": [
+        "results"
+      ],
+      "normalized": "result",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 260,
+      "ticker": "BRO",
+      "forms": [
+        "adverse effect"
+      ],
+      "normalized": "adverse effect",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 261,
+      "ticker": "BRO",
+      "forms": [
+        "sustained"
+      ],
+      "normalized": "sustained",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 262,
+      "ticker": "BRO",
+      "forms": [
+        "proxy statements"
+      ],
+      "normalized": "proxy statement",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 263,
+      "ticker": "BRO",
+      "forms": [
+        "Committees"
+      ],
+      "normalized": "committees",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 264,
+      "ticker": "BRO",
+      "forms": [
+        "Q"
+      ],
+      "normalized": "q",
+      "status": "invalid",
+      "reason": "identifier_fragment"
+    },
+    {
+      "id": 265,
+      "ticker": "BRO",
+      "forms": [
+        "higher interest rates"
+      ],
+      "normalized": "higher interest rate",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 266,
+      "ticker": "BRO",
+      "forms": [
+        "CEO"
+      ],
+      "normalized": "ceo",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 267,
+      "ticker": "BRO",
+      "forms": [
+        "Form 10-K"
+      ],
+      "normalized": "form 10-k",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 268,
+      "ticker": "BRO",
+      "forms": [
+        "Act"
+      ],
+      "normalized": "act",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 269,
+      "ticker": "BRO",
+      "forms": [
+        "year"
+      ],
+      "normalized": "year",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 270,
+      "ticker": "BRO",
+      "forms": [
+        "adversely"
+      ],
+      "normalized": "adversely",
+      "status": "invalid",
+      "reason": "discourse_adverb"
+    },
+    {
+      "id": 271,
+      "ticker": "BRO",
+      "forms": [
+        "such material"
+      ],
+      "normalized": "such material",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 272,
+      "ticker": "BRO",
+      "forms": [
+        "Conduct"
+      ],
+      "normalized": "conduct",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 273,
+      "ticker": "BRO",
+      "forms": [
+        "Securities"
+      ],
+      "normalized": "securities",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 274,
+      "ticker": "BRO",
+      "forms": [
+        "North Beach"
+      ],
+      "normalized": "north beach",
+      "status": "invalid",
+      "reason": "name_fragment"
+    },
+    {
+      "id": 275,
+      "ticker": "BRO",
+      "forms": [
+        "8-K"
+      ],
+      "normalized": "8-k",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 276,
+      "ticker": "BRO",
+      "forms": [
+        "documents",
+        "document"
+      ],
+      "normalized": "document",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 277,
+      "ticker": "BRO",
+      "forms": [
+        "proxy"
+      ],
+      "normalized": "proxy",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 278,
+      "ticker": "BRO",
+      "forms": [
+        "Inflation",
+        "inflation"
+      ],
+      "normalized": "inflation",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 279,
+      "ticker": "BRO",
+      "forms": [
+        "provision"
+      ],
+      "normalized": "provision",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 280,
+      "ticker": "BRO",
+      "forms": [
+        "sustained inflation"
+      ],
+      "normalized": "sustained inflation",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 281,
+      "ticker": "BRO",
+      "forms": [
+        "Financial",
+        "financial"
+      ],
+      "normalized": "financial",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 282,
+      "ticker": "BRO",
+      "forms": [
+        "salary"
+      ],
+      "normalized": "salary",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 283,
+      "ticker": "BRO",
+      "forms": [
+        "higher"
+      ],
+      "normalized": "higher",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 284,
+      "ticker": "BRO",
+      "forms": [
+        "Code",
+        "codes"
+      ],
+      "normalized": "code",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 285,
+      "ticker": "BRO",
+      "forms": [
+        "10-K"
+      ],
+      "normalized": "10-k",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 286,
+      "ticker": "BRO",
+      "forms": [
+        "economy"
+      ],
+      "normalized": "economy",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 287,
+      "ticker": "BRO",
+      "forms": [
+        "directors"
+      ],
+      "normalized": "director",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 288,
+      "ticker": "BRO",
+      "forms": [
+        "regulations"
+      ],
+      "normalized": "regulation",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 289,
+      "ticker": "BRO",
+      "forms": [
+        "15(d"
+      ],
+      "normalized": "15(d",
+      "status": "invalid",
+      "reason": "truncated_legal_identifier"
+    },
+    {
+      "id": 290,
+      "ticker": "BRO",
+      "forms": [
+        "Business",
+        "business"
+      ],
+      "normalized": "business",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 291,
+      "ticker": "BRO",
+      "forms": [
+        "incorporated"
+      ],
+      "normalized": "incorporated",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 292,
+      "ticker": "BRO",
+      "forms": [
+        "information",
+        "Information"
+      ],
+      "normalized": "information",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 293,
+      "ticker": "BRO",
+      "forms": [
+        "global economy"
+      ],
+      "normalized": "global economy",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 294,
+      "ticker": "BRO",
+      "forms": [
+        "Investor Relations"
+      ],
+      "normalized": "investor relations",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 295,
+      "ticker": "INCY",
+      "forms": [
+        "material fact"
+      ],
+      "normalized": "material fact",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 296,
+      "ticker": "INCY",
+      "forms": [
+        "accounted"
+      ],
+      "normalized": "accounted",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 297,
+      "ticker": "INCY",
+      "forms": [
+        "ingredient"
+      ],
+      "normalized": "ingredient",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 298,
+      "ticker": "INCY",
+      "forms": [
+        "production"
+      ],
+      "normalized": "production",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 299,
+      "ticker": "INCY",
+      "forms": [
+        "long term equity investments"
+      ],
+      "normalized": "long term equity investment",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 300,
+      "ticker": "INCY",
+      "forms": [
+        "applicable regulatory requirements"
+      ],
+      "normalized": "applicable regulatory requirement",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 301,
+      "ticker": "INCY",
+      "forms": [
+        "efforts"
+      ],
+      "normalized": "effort",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 302,
+      "ticker": "INCY",
+      "forms": [
+        "fair value"
+      ],
+      "normalized": "fair value",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 303,
+      "ticker": "INCY",
+      "forms": [
+        "Practices"
+      ],
+      "normalized": "practices",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 304,
+      "ticker": "INCY",
+      "forms": [
+        "short term equity investments"
+      ],
+      "normalized": "short term equity investment",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 305,
+      "ticker": "INCY",
+      "forms": [
+        "license"
+      ],
+      "normalized": "license",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 306,
+      "ticker": "INCY",
+      "forms": [
+        "Investors"
+      ],
+      "normalized": "investors",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 307,
+      "ticker": "INCY",
+      "forms": [
+        "MONJUVI/MINJUVI drug substance manufacturing"
+      ],
+      "normalized": "monjuvi/minjuvi drug substance manufacturing",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 308,
+      "ticker": "INCY",
+      "forms": [
+        "requires"
+      ],
+      "normalized": "requires",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 309,
+      "ticker": "INCY",
+      "forms": [
+        "operate"
+      ],
+      "normalized": "operate",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 310,
+      "ticker": "INCY",
+      "forms": [
+        "develop"
+      ],
+      "normalized": "develop",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 311,
+      "ticker": "INCY",
+      "forms": [
+        "collaborator MacroGenics"
+      ],
+      "normalized": "collaborator macrogenics",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 312,
+      "ticker": "INCY",
+      "forms": [
+        "term equity investments"
+      ],
+      "normalized": "term equity investment",
+      "status": "invalid",
+      "reason": "broken_compound"
+    },
+    {
+      "id": 313,
+      "ticker": "INCY",
+      "forms": [
+        "common stock"
+      ],
+      "normalized": "common stock",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 314,
+      "ticker": "INCY",
+      "forms": [
+        "intend"
+      ],
+      "normalized": "intend",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 315,
+      "ticker": "INCY",
+      "forms": [
+        "collaboration and license agreements"
+      ],
+      "normalized": "collaboration and license agreement",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 316,
+      "ticker": "INCY",
+      "forms": [
+        "determinable"
+      ],
+      "normalized": "determinable",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 317,
+      "ticker": "INCY",
+      "forms": [
+        "active"
+      ],
+      "normalized": "active",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 318,
+      "ticker": "INCY",
+      "forms": [
+        "event"
+      ],
+      "normalized": "event",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 319,
+      "ticker": "INCY",
+      "forms": [
+        "Act"
+      ],
+      "normalized": "act",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 320,
+      "ticker": "INCY",
+      "forms": [
+        "products and drug candidates"
+      ],
+      "normalized": "product and drug candidate",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 321,
+      "ticker": "INCY",
+      "forms": [
+        "located"
+      ],
+      "normalized": "located",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 322,
+      "ticker": "INCY",
+      "forms": [
+        "regulatory authorities"
+      ],
+      "normalized": "regulatory authority",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 323,
+      "ticker": "INCY",
+      "forms": [
+        "publicly-held companies"
+      ],
+      "normalized": "publicly-held company",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 324,
+      "ticker": "INCY",
+      "forms": [
+        "statements",
+        "Statement",
+        "statement"
+      ],
+      "normalized": "statement",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 325,
+      "ticker": "INCY",
+      "forms": [
+        "manufacturing capacity"
+      ],
+      "normalized": "manufacturing capacity",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 326,
+      "ticker": "INCY",
+      "forms": [
+        "equity investments"
+      ],
+      "normalized": "equity investment",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 327,
+      "ticker": "INCY",
+      "forms": [
+        "initiating"
+      ],
+      "normalized": "initiating",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 328,
+      "ticker": "INCY",
+      "forms": [
+        "include"
+      ],
+      "normalized": "include",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 329,
+      "ticker": "INCY",
+      "forms": [
+        "OPZELURA"
+      ],
+      "normalized": "opzelura",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 330,
+      "ticker": "INCY",
+      "forms": [
+        "Failure"
+      ],
+      "normalized": "failure",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 331,
+      "ticker": "INCY",
+      "forms": [
+        "Registrable Securities"
+      ],
+      "normalized": "registrable securities",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 332,
+      "ticker": "INCY",
+      "forms": [
+        "state"
+      ],
+      "normalized": "state",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 333,
+      "ticker": "INCY",
+      "forms": [
+        "manufacturing facilities"
+      ],
+      "normalized": "manufacturing facility",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 334,
+      "ticker": "INCY",
+      "forms": [
+        "hold"
+      ],
+      "normalized": "hold",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 335,
+      "ticker": "INCY",
+      "forms": [
+        "other enforcement actions"
+      ],
+      "normalized": "other enforcement action",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 336,
+      "ticker": "INCY",
+      "forms": [
+        "drug candidates"
+      ],
+      "normalized": "drug candidate",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 337,
+      "ticker": "BW",
+      "forms": [
+        "related"
+      ],
+      "normalized": "related",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 338,
+      "ticker": "BW",
+      "forms": [
+        "advances"
+      ],
+      "normalized": "advance",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 339,
+      "ticker": "BW",
+      "forms": [
+        "future sales"
+      ],
+      "normalized": "future sale",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 340,
+      "ticker": "BW",
+      "forms": [
+        "Wilcox A"
+      ],
+      "normalized": "wilcox a",
+      "status": "invalid",
+      "reason": "name_fragment"
+    },
+    {
+      "id": 341,
+      "ticker": "BW",
+      "forms": [
+        "investment",
+        "investments"
+      ],
+      "normalized": "investment",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 342,
+      "ticker": "BW",
+      "forms": [
+        "techniques"
+      ],
+      "normalized": "technique",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 343,
+      "ticker": "BW",
+      "forms": [
+        "need",
+        "needs"
+      ],
+      "normalized": "need",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 344,
+      "ticker": "BW",
+      "forms": [
+        "requires"
+      ],
+      "normalized": "requires",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 345,
+      "ticker": "BW",
+      "forms": [
+        "net cash proceeds"
+      ],
+      "normalized": "net cash proceed",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 346,
+      "ticker": "BW",
+      "forms": [
+        "major"
+      ],
+      "normalized": "major",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 347,
+      "ticker": "BW",
+      "forms": [
+        "October 30, 2024"
+      ],
+      "normalized": "october 30, 2024",
+      "status": "uncertain",
+      "reason": "Complete temporal date; business-term scope unclear."
+    },
+    {
+      "id": 348,
+      "ticker": "BW",
+      "forms": [
+        "foundational cybersecurity principles"
+      ],
+      "normalized": "foundational cybersecurity principle",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 349,
+      "ticker": "BW",
+      "forms": [
+        "million"
+      ],
+      "normalized": "million",
+      "status": "uncertain",
+      "reason": "Quantity unit; business-term scope unclear."
+    },
+    {
+      "id": 350,
+      "ticker": "BW",
+      "forms": [
+        "collected"
+      ],
+      "normalized": "collected",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 351,
+      "ticker": "BW",
+      "forms": [
+        "entire"
+      ],
+      "normalized": "entire",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 352,
+      "ticker": "BW",
+      "forms": [
+        "S.p"
+      ],
+      "normalized": "s.p",
+      "status": "invalid",
+      "reason": "identifier_fragment"
+    },
+    {
+      "id": 353,
+      "ticker": "BW",
+      "forms": [
+        "information resources"
+      ],
+      "normalized": "information resource",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 354,
+      "ticker": "BW",
+      "forms": [
+        "informed"
+      ],
+      "normalized": "informed",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 355,
+      "ticker": "BW",
+      "forms": [
+        "advantages"
+      ],
+      "normalized": "advantage",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 356,
+      "ticker": "BW",
+      "forms": [
+        "entire issued and outstanding share capital"
+      ],
+      "normalized": "entire issued and outstanding share capital",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 357,
+      "ticker": "BW",
+      "forms": [
+        "new"
+      ],
+      "normalized": "new",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 358,
+      "ticker": "BW",
+      "forms": [
+        "factor"
+      ],
+      "normalized": "factor",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 359,
+      "ticker": "BW",
+      "forms": [
+        "Sárl"
+      ],
+      "normalized": "sárl",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 360,
+      "ticker": "BW",
+      "forms": [
+        "market"
+      ],
+      "normalized": "market",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 361,
+      "ticker": "BW",
+      "forms": [
+        "Sweden-based"
+      ],
+      "normalized": "sweden-based",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 362,
+      "ticker": "BW",
+      "forms": [
+        "Standards"
+      ],
+      "normalized": "standards",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 363,
+      "ticker": "BW",
+      "forms": [
+        "integrity"
+      ],
+      "normalized": "integrity",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 364,
+      "ticker": "BW",
+      "forms": [
+        "workstations"
+      ],
+      "normalized": "workstation",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 365,
+      "ticker": "BW",
+      "forms": [
+        "innovative"
+      ],
+      "normalized": "innovative",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 366,
+      "ticker": "BW",
+      "forms": [
+        "intellectual"
+      ],
+      "normalized": "intellectual",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 367,
+      "ticker": "BW",
+      "forms": [
+        "industry-standard techniques"
+      ],
+      "normalized": "industry-standard technique",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 368,
+      "ticker": "BW",
+      "forms": [
+        "affect"
+      ],
+      "normalized": "affect",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 369,
+      "ticker": "BW",
+      "forms": [
+        "solely"
+      ],
+      "normalized": "solely",
+      "status": "invalid",
+      "reason": "discourse_adverb"
+    },
+    {
+      "id": 370,
+      "ticker": "BW",
+      "forms": [
+        "gain"
+      ],
+      "normalized": "gain",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 371,
+      "ticker": "BW",
+      "forms": [
+        "integrate"
+      ],
+      "normalized": "integrate",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 372,
+      "ticker": "BW",
+      "forms": [
+        "example"
+      ],
+      "normalized": "example",
+      "status": "invalid",
+      "reason": "discourse_filler"
+    },
+    {
+      "id": 373,
+      "ticker": "BW",
+      "forms": [
+        "industry-standard"
+      ],
+      "normalized": "industry-standard",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 374,
+      "ticker": "BW",
+      "forms": [
+        "October"
+      ],
+      "normalized": "october",
+      "status": "uncertain",
+      "reason": "Temporal month name; business-term scope unclear."
+    },
+    {
+      "id": 375,
+      "ticker": "BW",
+      "forms": [
+        "National Institute of Standards and Technology"
+      ],
+      "normalized": "national institute of standards and technology",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 376,
+      "ticker": "BW",
+      "forms": [
+        "translation"
+      ],
+      "normalized": "translation",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 377,
+      "ticker": "BW",
+      "forms": [
+        "SPIG"
+      ],
+      "normalized": "spig",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes, process nouns and legal forms are accepted."
+    },
+    {
+      "id": 378,
+      "ticker": "CBRE",
+      "forms": [
+        "operations",
+        "operation"
+      ],
+      "normalized": "operation",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 379,
+      "ticker": "CBRE",
+      "forms": [
+        "government-sponsored funds"
+      ],
+      "normalized": "government-sponsored fund",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 380,
+      "ticker": "CBRE",
+      "forms": [
+        "business"
+      ],
+      "normalized": "business",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 381,
+      "ticker": "CBRE",
+      "forms": [
+        "wide"
+      ],
+      "normalized": "wide",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 382,
+      "ticker": "CBRE",
+      "forms": [
+        "wide variety"
+      ],
+      "normalized": "wide variety",
+      "status": "invalid",
+      "reason": "discourse_quantifier"
+    },
+    {
+      "id": 383,
+      "ticker": "CBRE",
+      "forms": [
+        "economic"
+      ],
+      "normalized": "economic",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 384,
+      "ticker": "CBRE",
+      "forms": [
+        "life"
+      ],
+      "normalized": "life",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 385,
+      "ticker": "CBRE",
+      "forms": [
+        "spectrum"
+      ],
+      "normalized": "spectrum",
+      "status": "invalid",
+      "reason": "discourse_quantifier"
+    },
+    {
+      "id": 386,
+      "ticker": "CBRE",
+      "forms": [
+        "Telford Homes-constructed buildings"
+      ],
+      "normalized": "telford homes-constructed building",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 387,
+      "ticker": "CBRE",
+      "forms": [
+        "lines"
+      ],
+      "normalized": "line",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 388,
+      "ticker": "CBRE",
+      "forms": [
+        "non-binding Fire Safety"
+      ],
+      "normalized": "non-binding fire safety",
+      "status": "invalid",
+      "reason": "name_fragment"
+    },
+    {
+      "id": 389,
+      "ticker": "CBRE",
+      "forms": [
+        "variety"
+      ],
+      "normalized": "variety",
+      "status": "invalid",
+      "reason": "discourse_quantifier"
+    },
+    {
+      "id": 390,
+      "ticker": "CBRE",
+      "forms": [
+        "market-leading talent recruitment"
+      ],
+      "normalized": "market-leading talent recruitment",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 391,
+      "ticker": "CBRE",
+      "forms": [
+        "new"
+      ],
+      "normalized": "new",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 392,
+      "ticker": "CBRE",
+      "forms": [
+        "other participants"
+      ],
+      "normalized": "other participant",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 393,
+      "ticker": "CBRE",
+      "forms": [
+        "financial"
+      ],
+      "normalized": "financial",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 394,
+      "ticker": "CBRE",
+      "forms": [
+        "retrospectively"
+      ],
+      "normalized": "retrospectively",
+      "status": "invalid",
+      "reason": "discourse_adverb"
+    },
+    {
+      "id": 395,
+      "ticker": "CBRE",
+      "forms": [
+        "specialists"
+      ],
+      "normalized": "specialist",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 396,
+      "ticker": "CBRE",
+      "forms": [
+        "contrary"
+      ],
+      "normalized": "contrary",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 397,
+      "ticker": "CBRE",
+      "forms": [
+        "in-depth expertise"
+      ],
+      "normalized": "in-depth expertise",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 398,
+      "ticker": "CBRE",
+      "forms": [
+        "talent recruitment"
+      ],
+      "normalized": "talent recruitment",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 399,
+      "ticker": "CBRE",
+      "forms": [
+        "joint ventures"
+      ],
+      "normalized": "joint venture",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 400,
+      "ticker": "CBRE",
+      "forms": [
+        "other operations"
+      ],
+      "normalized": "other operation",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 401,
+      "ticker": "CBRE",
+      "forms": [
+        "legally"
+      ],
+      "normalized": "legally",
+      "status": "invalid",
+      "reason": "discourse_adverb"
+    },
+    {
+      "id": 402,
+      "ticker": "CBRE",
+      "forms": [
+        "leaders"
+      ],
+      "normalized": "leader",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 403,
+      "ticker": "CBRE",
+      "forms": [
+        "continued"
+      ],
+      "normalized": "continued",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 404,
+      "ticker": "CBRE",
+      "forms": [
+        "critical fire safety issues"
+      ],
+      "normalized": "critical fire safety issue",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 405,
+      "ticker": "CBRE",
+      "forms": [
+        "BSA"
+      ],
+      "normalized": "bsa",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 406,
+      "ticker": "CBRE",
+      "forms": [
+        "certain life-critical fire-safety issues"
+      ],
+      "normalized": "certain life-critical fire-safety issue",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 407,
+      "ticker": "CBRE",
+      "forms": [
+        "market cycles"
+      ],
+      "normalized": "market cycle",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 408,
+      "ticker": "CBRE",
+      "forms": [
+        "license"
+      ],
+      "normalized": "license",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 409,
+      "ticker": "CBRE",
+      "forms": [
+        "services",
+        "service"
+      ],
+      "normalized": "service",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 410,
+      "ticker": "CBRE",
+      "forms": [
+        "in-scope"
+      ],
+      "normalized": "in-scope",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 411,
+      "ticker": "CBRE",
+      "forms": [
+        "action"
+      ],
+      "normalized": "action",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 412,
+      "ticker": "CBRE",
+      "forms": [
+        "affiliate",
+        "affiliates"
+      ],
+      "normalized": "affiliate",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 413,
+      "ticker": "CBRE",
+      "forms": [
+        "historic"
+      ],
+      "normalized": "historic",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 414,
+      "ticker": "CBRE",
+      "forms": [
+        "value"
+      ],
+      "normalized": "value",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 415,
+      "ticker": "CBRE",
+      "forms": [
+        "agreement"
+      ],
+      "normalized": "agreement",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 416,
+      "ticker": "CBRE",
+      "forms": [
+        "solutions"
+      ],
+      "normalized": "solution",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 417,
+      "ticker": "CBRE",
+      "forms": [
+        "continued growth"
+      ],
+      "normalized": "continued growth",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 418,
+      "ticker": "CBRE",
+      "forms": [
+        "affiliations"
+      ],
+      "normalized": "affiliation",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 419,
+      "ticker": "CRUS",
+      "forms": [
+        "components",
+        "component"
+      ],
+      "normalized": "component",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 420,
+      "ticker": "CRUS",
+      "forms": [
+        "generally"
+      ],
+      "normalized": "generally",
+      "status": "invalid",
+      "reason": "discourse_adverb"
+    },
+    {
+      "id": 421,
+      "ticker": "CRUS",
+      "forms": [
+        "difficulties"
+      ],
+      "normalized": "difficulty",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 422,
+      "ticker": "CRUS",
+      "forms": [
+        "technology and product design"
+      ],
+      "normalized": "technology and product design",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 423,
+      "ticker": "CRUS",
+      "forms": [
+        "increasing"
+      ],
+      "normalized": "increasing",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 424,
+      "ticker": "CRUS",
+      "forms": [
+        "conditions"
+      ],
+      "normalized": "condition",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 425,
+      "ticker": "CRUS",
+      "forms": [
+        "respects",
+        "respect"
+      ],
+      "normalized": "respect",
+      "status": "invalid",
+      "reason": "discourse_filler"
+    },
+    {
+      "id": 426,
+      "ticker": "CRUS",
+      "forms": [
+        "customer relationships"
+      ],
+      "normalized": "customer relationship",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 427,
+      "ticker": "CRUS",
+      "forms": [
+        "time"
+      ],
+      "normalized": "time",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 428,
+      "ticker": "CRUS",
+      "forms": [
+        "costly product"
+      ],
+      "normalized": "costly product",
+      "status": "invalid",
+      "reason": "partial_phrase"
+    },
+    {
+      "id": 429,
+      "ticker": "CRUS",
+      "forms": [
+        "location"
+      ],
+      "normalized": "location",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 430,
+      "ticker": "CRUS",
+      "forms": [
+        "entity"
+      ],
+      "normalized": "entity",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 431,
+      "ticker": "CRUS",
+      "forms": [
+        "ten largest end customers"
+      ],
+      "normalized": "ten largest end customer",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 432,
+      "ticker": "CRUS",
+      "forms": [
+        "communicate"
+      ],
+      "normalized": "communicate",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 433,
+      "ticker": "CRUS",
+      "forms": [
+        "contract manufacturers"
+      ],
+      "normalized": "contract manufacturer",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 434,
+      "ticker": "CRUS",
+      "forms": [
+        "95 percent"
+      ],
+      "normalized": "95 percent",
+      "status": "uncertain",
+      "reason": "Complete percentage expression; business-term scope unclear."
+    },
+    {
+      "id": 435,
+      "ticker": "CRUS",
+      "forms": [
+        "largely"
+      ],
+      "normalized": "largely",
+      "status": "invalid",
+      "reason": "discourse_adverb"
+    },
+    {
+      "id": 436,
+      "ticker": "CRUS",
+      "forms": [
+        "directly"
+      ],
+      "normalized": "directly",
+      "status": "invalid",
+      "reason": "discourse_adverb"
+    },
+    {
+      "id": 437,
+      "ticker": "CRUS",
+      "forms": [
+        "exists"
+      ],
+      "normalized": "exists",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 438,
+      "ticker": "CRUS",
+      "forms": [
+        "other matters"
+      ],
+      "normalized": "other matter",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 439,
+      "ticker": "CRUS",
+      "forms": [
+        "offshore location"
+      ],
+      "normalized": "offshore location",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 440,
+      "ticker": "CRUS",
+      "forms": [
+        "significant expenditures"
+      ],
+      "normalized": "significant expenditure",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 441,
+      "ticker": "CRUS",
+      "forms": [
+        "environmental compliance"
+      ],
+      "normalized": "environmental compliance",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 442,
+      "ticker": "CRUS",
+      "forms": [
+        "matters"
+      ],
+      "normalized": "matter",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 443,
+      "ticker": "CRUS",
+      "forms": [
+        "material respects"
+      ],
+      "normalized": "material respect",
+      "status": "invalid",
+      "reason": "discourse_filler"
+    },
+    {
+      "id": 444,
+      "ticker": "CRUS",
+      "forms": [
+        "small quantities"
+      ],
+      "normalized": "small quantity",
+      "status": "invalid",
+      "reason": "discourse_quantifier"
+    },
+    {
+      "id": 445,
+      "ticker": "CRUS",
+      "forms": [
+        "process sensitivities"
+      ],
+      "normalized": "process sensitivity",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 446,
+      "ticker": "CRUS",
+      "forms": [
+        "small"
+      ],
+      "normalized": "small",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 447,
+      "ticker": "CRUS",
+      "forms": [
+        "semiconductor company"
+      ],
+      "normalized": "semiconductor company",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 448,
+      "ticker": "CRUS",
+      "forms": [
+        "total"
+      ],
+      "normalized": "total",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 449,
+      "ticker": "CRUS",
+      "forms": [
+        "safety"
+      ],
+      "normalized": "safety",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 450,
+      "ticker": "CRUS",
+      "forms": [
+        "applicable laws",
+        "applicable law"
+      ],
+      "normalized": "applicable law",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 451,
+      "ticker": "CRUS",
+      "forms": [
+        "hazardous conditions"
+      ],
+      "normalized": "hazardous condition",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 452,
+      "ticker": "CRUS",
+      "forms": [
+        "manufacturer",
+        "manufacturers"
+      ],
+      "normalized": "manufacturer",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 453,
+      "ticker": "CRUS",
+      "forms": [
+        "identify"
+      ],
+      "normalized": "identify",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 454,
+      "ticker": "CRUS",
+      "forms": [
+        "addition"
+      ],
+      "normalized": "addition",
+      "status": "invalid",
+      "reason": "discourse_filler"
+    },
+    {
+      "id": 455,
+      "ticker": "CRUS",
+      "forms": [
+        "testing process"
+      ],
+      "normalized": "testing process",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 456,
+      "ticker": "CRUS",
+      "forms": [
+        "produce"
+      ],
+      "normalized": "produce",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 457,
+      "ticker": "CRUS",
+      "forms": [
+        "operations"
+      ],
+      "normalized": "operation",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 458,
+      "ticker": "CRUS",
+      "forms": [
+        "design or process technology failures"
+      ],
+      "normalized": "design or process technology failure",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 459,
+      "ticker": "CRUS",
+      "forms": [
+        "purchased"
+      ],
+      "normalized": "purchased",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 460,
+      "ticker": "VST",
+      "forms": [
+        "accounts"
+      ],
+      "normalized": "accounts",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 461,
+      "ticker": "VST",
+      "forms": [
+        "capital requirements"
+      ],
+      "normalized": "capital requirement",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 462,
+      "ticker": "VST",
+      "forms": [
+        "non-regulated businesses"
+      ],
+      "normalized": "non-regulated business",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 463,
+      "ticker": "VST",
+      "forms": [
+        "support"
+      ],
+      "normalized": "support",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 464,
+      "ticker": "VST",
+      "forms": [
+        "Vistra"
+      ],
+      "normalized": "vistra",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 465,
+      "ticker": "VST",
+      "forms": [
+        "results"
+      ],
+      "normalized": "result",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 466,
+      "ticker": "VST",
+      "forms": [
+        "system"
+      ],
+      "normalized": "system",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 467,
+      "ticker": "VST",
+      "forms": [
+        "plan",
+        "Plan",
+        "plans"
+      ],
+      "normalized": "plan",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 468,
+      "ticker": "VST",
+      "forms": [
+        "legal"
+      ],
+      "normalized": "legal",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 469,
+      "ticker": "VST",
+      "forms": [
+        "Over 260 employees"
+      ],
+      "normalized": "over 260 employee",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 470,
+      "ticker": "VST",
+      "forms": [
+        "professional"
+      ],
+      "normalized": "professional",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 471,
+      "ticker": "VST",
+      "forms": [
+        "average"
+      ],
+      "normalized": "average",
+      "status": "uncertain",
+      "reason": "Arithmetic modifier with a plausible technical reading; standalone-term boundary unclear."
+    },
+    {
+      "id": 472,
+      "ticker": "VST",
+      "forms": [
+        "Internal Revenue Code"
+      ],
+      "normalized": "internal revenue code",
+      "status": "uncertain",
+      "reason": "Core statute title is complete in ordinary usage but omits the source version year; full-name boundary scope unclear."
+    },
+    {
+      "id": 473,
+      "ticker": "VST",
+      "forms": [
+        "Dynegy"
+      ],
+      "normalized": "dynegy",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 474,
+      "ticker": "VST",
+      "forms": [
+        "future"
+      ],
+      "normalized": "future",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 475,
+      "ticker": "VST",
+      "forms": [
+        "Energy Harbor"
+      ],
+      "normalized": "energy harbor",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 476,
+      "ticker": "VST",
+      "forms": [
+        "strategically"
+      ],
+      "normalized": "strategically",
+      "status": "invalid",
+      "reason": "discourse_adverb"
+    },
+    {
+      "id": 477,
+      "ticker": "VST",
+      "forms": [
+        "satisfied"
+      ],
+      "normalized": "satisfied",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 478,
+      "ticker": "VST",
+      "forms": [
+        "age and years"
+      ],
+      "normalized": "age and year",
+      "status": "invalid",
+      "reason": "partial_phrase"
+    },
+    {
+      "id": 479,
+      "ticker": "VST",
+      "forms": [
+        "apply"
+      ],
+      "normalized": "apply",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 480,
+      "ticker": "VST",
+      "forms": [
+        "improving"
+      ],
+      "normalized": "improving",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 481,
+      "ticker": "VST",
+      "forms": [
+        "hedging"
+      ],
+      "normalized": "hedging",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 482,
+      "ticker": "VST",
+      "forms": [
+        "licenses"
+      ],
+      "normalized": "license",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 483,
+      "ticker": "VST",
+      "forms": [
+        "webinars"
+      ],
+      "normalized": "webinar",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 484,
+      "ticker": "VST",
+      "forms": [
+        "supports"
+      ],
+      "normalized": "supports",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 485,
+      "ticker": "VST",
+      "forms": [
+        "unit"
+      ],
+      "normalized": "unit",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 486,
+      "ticker": "VST",
+      "forms": [
+        "employer"
+      ],
+      "normalized": "employer",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 487,
+      "ticker": "VST",
+      "forms": [
+        "favorable terms"
+      ],
+      "normalized": "favorable term",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 488,
+      "ticker": "VST",
+      "forms": [
+        "earn"
+      ],
+      "normalized": "earn",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 489,
+      "ticker": "VST",
+      "forms": [
+        "significant"
+      ],
+      "normalized": "significant",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 490,
+      "ticker": "VST",
+      "forms": [
+        "full-time employees"
+      ],
+      "normalized": "full-time employee",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 491,
+      "ticker": "VST",
+      "forms": [
+        "service costs"
+      ],
+      "normalized": "service cost",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 492,
+      "ticker": "VST",
+      "forms": [
+        "monthly interest credits"
+      ],
+      "normalized": "monthly interest credit",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 493,
+      "ticker": "VST",
+      "forms": [
+        "multiple employer plan"
+      ],
+      "normalized": "multiple employer plan",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 494,
+      "ticker": "VST",
+      "forms": [
+        "regulations"
+      ],
+      "normalized": "regulation",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 495,
+      "ticker": "VST",
+      "forms": [
+        "Harbor"
+      ],
+      "normalized": "harbor",
+      "status": "invalid",
+      "reason": "name_fragment"
+    },
+    {
+      "id": 496,
+      "ticker": "VST",
+      "forms": [
+        "topics"
+      ],
+      "normalized": "topic",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 497,
+      "ticker": "VST",
+      "forms": [
+        "employee-specific"
+      ],
+      "normalized": "employee-specific",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    },
+    {
+      "id": 498,
+      "ticker": "VST",
+      "forms": [
+        "platform"
+      ],
+      "normalized": "platform",
+      "status": "valid",
+      "reason": "Supported complete nominal, named or technical term in at least one cited source occurrence; generic business classes and process nouns are accepted."
+    },
+    {
+      "id": 499,
+      "ticker": "VST",
+      "forms": [
+        "presented"
+      ],
+      "normalized": "presented",
+      "status": "invalid",
+      "reason": "generic_verb"
+    },
+    {
+      "id": 500,
+      "ticker": "VST",
+      "forms": [
+        "based"
+      ],
+      "normalized": "based",
+      "status": "invalid",
+      "reason": "incomplete_modifier"
+    }
+  ]
+}

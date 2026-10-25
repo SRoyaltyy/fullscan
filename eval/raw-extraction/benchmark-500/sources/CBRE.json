@@ -1,0 +1,82 @@
+{
+  "ticker": "CBRE",
+  "cik": "0001138118",
+  "name": "CBRE Group Inc",
+  "sector": "Real Estate",
+  "industry": "Real Estate Services",
+  "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001138118.json.gz",
+  "profile_sha256": "bfa7e833eec99cee3ff1063ca8d2c4bc76d68ae3cf90500a3e279fee90d27e6a",
+  "eligible_paragraphs": 235,
+  "source_scope": "Retained archived filing prose paragraphs; not a complete filing inventory.",
+  "paragraphs": [
+    {
+      "id": "107355d73d4af4480ca9817ec36088f82f11141da1575e04497814e5137f04cb",
+      "start": 11089,
+      "end": 12179,
+      "text": "Because of the range of services we provide and numerous markets we serve, we encounter a wide variety of competitors. These range from a handful of well-established globally diversified real estate services firms that are smaller than CBRE to many specialists that operate in specific geographies or business lines. Despite this competition, we are the market leaders in most of our business lines, with significant opportunities for continued growth. These opportunities result from the high value our clients place on our scale, in-depth expertise, technology and data-led insights, as well as their increasing preference for consolidating the number of service providers, which plays to our advantage in delivering integrated solutions globally. Our leadership across a wide spectrum of asset classes, including secular growth sectors like logistics and data centers, provides a diversified platform that is resilient across market cycles. Our strong balance sheet enables significant investments in our platform, market-leading talent recruitment and transformational M&A execution. \n\n",
+      "sha256": "4a507c37ddcbc50fc2b53b123b1309b8e259ff50b02c1478323d323ad299f8e6",
+      "source": {
+        "accepted_at": "2026-02-12T22:24:07.000Z",
+        "accession": "0001138118-26-000005",
+        "characters": 27444,
+        "document": "cbre-20251231.htm",
+        "filing_date": "2026-02-12",
+        "form": "10-K",
+        "id": "1cdef7e8c68181e5dd487fc5ad4ccf59896b5a0f67bd68a8454e4d7e671e6aae",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "PART I\n\nItem 1. Business.",
+        "section_ordinal": 162,
+        "sha256": "171f7ffc4e7aeff2c5a22317c4fb37da5148f2b9141ac87dc826fdfb76cfe11a",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1138118/000113811826000005/cbre-20251231.htm"
+      }
+    },
+    {
+      "id": "71bdc5af8836d13de99f9d04af9160af5cd23a03e274a172bb0d55f974d4e9e1",
+      "start": 189,
+      "end": 1253,
+      "text": "On April 28, 2022, Telford Homes signed the U.K. government’s non-binding Fire Safety Pledge (the Pledge) to comply with the Building Safety Act of 2022 (BSA). The BSA introduced new laws related to building safety and the remediation of historic building safety defects, effectively requiring developers to remediate certain buildings with critical fire safety issues. The BSA also retrospectively amended the Defective Premises Act of 1972 (DPA) to allow claims to be made within a 30-year limitation period for dwellings completed before June 28, 2022. On March 16, 2023, Telford Homes entered into a legally binding agreement with the U.K. government to take responsibility for performing or funding remediation works relating to certain life-critical fire-safety issues on all Telford Homes-constructed buildings of 11 meters in height or greater in England constructed in the last 30 years (in-scope buildings) and withdraw Telford Homes-developed buildings from the government-sponsored funds or reimburse the government funds for the cost of remediation.\n\n",
+      "sha256": "ab3f1166e9dcf6657cfb490eb79c669fc4c0446ed07ff459b7e92cd3665331b1",
+      "source": {
+        "accepted_at": "2026-02-12T22:24:07.000Z",
+        "accession": "0001138118-26-000005",
+        "characters": 3677,
+        "document": "R31.htm",
+        "filing_date": "2026-02-12",
+        "form": "10-K",
+        "id": "f95fe2c548892624869e8741a3efb53722a417e5ba3f4fe7fe699987042e626d",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "R31.htm",
+        "section_ordinal": 62,
+        "sha256": "b04e3b9ad4ab89b704c813af5e4b1628cdb84b66e108ea8b3d2193dc003da25d",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1138118/000113811826000005/R31.htm"
+      }
+    },
+    {
+      "id": "97c440e75fafc21145633d3b0e0a8c3eebd7e07cf1da44445220b8d7f6df67f8",
+      "start": 38227,
+      "end": 39410,
+      "text": "We have utilized joint ventures for commercial investments, select local brokerage and other affiliations both in the U.S. and internationally, and we may acquire interests in other joint ventures in the future. Under our affiliate program, we enter into contractual relationships with local brokerage, property management or other operations pursuant to which we license to that operation our name and make available certain of our resources, in exchange for a royalty or economic participation in that operation’s revenue, profits or transactional activity. In many of these joint ventures and affiliations, we may not have the right or power to direct the management and policies of the joint ventures or affiliates, and other participants or operators of affiliates may take action contrary to our instructions or requests and against our policies and objectives. In addition, the other participants and operators may become bankrupt or have economic or other business interests or goals that are inconsistent with ours. If a joint venture participant or affiliate acts contrary to our interest, it could harm our brand, business, results of operations and financial condition.\n\n",
+      "sha256": "9d58b4c12c86dbb0ac3d1774150a4c482ced4bf8ddc6987abfb8e3f42a851df4",
+      "source": {
+        "accepted_at": "2026-02-12T22:24:07.000Z",
+        "accession": "0001138118-26-000005",
+        "characters": 72491,
+        "document": "cbre-20251231.htm",
+        "filing_date": "2026-02-12",
+        "form": "10-K",
+        "id": "afce4b507c7c98896ab6f27ba2dc2a36ff01590cb8fa372a5d520921d74fe0d6",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "Item 1A. Risk Factors.",
+        "section_ordinal": 163,
+        "sha256": "ba8ea36e42613cfb435bf1f28775a7e7500833375e84406e901a46417f84034b",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1138118/000113811826000005/cbre-20251231.htm"
+      }
+    }
+  ]
+}

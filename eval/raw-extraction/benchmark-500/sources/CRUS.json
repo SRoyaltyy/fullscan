@@ -1,0 +1,82 @@
+{
+  "ticker": "CRUS",
+  "cik": "0000772406",
+  "name": "Cirrus Logic Inc",
+  "sector": "Technology",
+  "industry": "Semiconductors",
+  "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0000772406.json.gz",
+  "profile_sha256": "1cfe01073e50736a2564e0beaa5ed8b49b02fc783f657ba2448d98d5ed4cd586",
+  "eligible_paragraphs": 121,
+  "source_scope": "Retained archived filing prose paragraphs; not a complete filing inventory.",
+  "paragraphs": [
+    {
+      "id": "f267c31c1d7a5e6f7e36156fa3db12296f6a4524c5cc54d8151125af2d0c2638",
+      "start": 9686,
+      "end": 10587,
+      "text": "Since the components we produce are largely proprietary and generally not available from second sources, we consider our end customer to be the entity specifying the use of our component in their design. These end customers may then purchase our products directly from us, from a distributor, or through a third-party manufacturer contracted to produce their end product. For fiscal years 2026, 2025 and 2024, our ten largest end customers represented approximately 96 percent, 96 percent and 95 percent of our net sales, respectively. For fiscal years 2026, 2025, and 2024, we had one end customer, Apple Inc., who purchased through multiple contract manufacturers and represented approximately 91 percent, 89 percent, and 87 percent, of the Company’s total net sales, respectively. No other customer or distributor represented more than 10 percent of net sales in fiscal years 2026, 2025, or 2024.\n\n",
+      "sha256": "4f806e452090b89f5ab85573eda6ea91304cec0af5550ff1069f96a7ca701dbe",
+      "source": {
+        "accepted_at": "2026-05-22T00:11:56.000Z",
+        "accession": "0000772406-26-000018",
+        "characters": 22723,
+        "document": "R10.htm",
+        "filing_date": "2026-05-21",
+        "form": "10-K",
+        "id": "34d32120f747993cae3b662ffe9f974ae83df51d8795cc0dba7422e7b4469fb5",
+        "kind": "business",
+        "report_date": "2026-03-28",
+        "section": "R10.htm",
+        "section_ordinal": 3,
+        "sha256": "6dd252ca2fd18f681625b305ac2d7b3a087e2bd7875edaa98fc06257e04d5044",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/772406/000077240626000018/R10.htm"
+      }
+    },
+    {
+      "id": "a7aa6188a2eaca077c91c486645e994c133c6810eff5fef048d1804d8a6c486b",
+      "start": 18367,
+      "end": 19228,
+      "text": "We believe that our properties and operations comply in all material respects with applicable laws protecting the environment and worker health and safety. As a fabless semiconductor company, we do not manufacture our own products but do maintain research and laboratory space at certain of our facilities to facilitate the development, evaluation, and testing of our products. These laboratories may maintain small quantities of hazardous materials. While we believe we are in material compliance with applicable law concerning the safeguarding of these materials and with respect to other matters relating to health, safety and the environment, the risk of liability relating to hazardous conditions or materials cannot be eliminated completely. To date, we have not incurred significant expenditures relating to environmental compliance at our facilities. \n\n",
+      "sha256": "b90ec76edc09226fed3befec218514de94982a6f83d917d0a52ba074ae8d3595",
+      "source": {
+        "accepted_at": "2026-05-22T00:11:56.000Z",
+        "accession": "0000772406-26-000018",
+        "characters": 25540,
+        "document": "crus-20260328.htm",
+        "filing_date": "2026-05-21",
+        "form": "10-K",
+        "id": "8b3742dfe149f01eeb89f7e25e49aebf6ee9fbf00f84b89a18ad04c590972eed",
+        "kind": "business",
+        "report_date": "2026-03-28",
+        "section": "ITEM 1. Business",
+        "section_ordinal": 125,
+        "sha256": "b9a5b42df41dcef1fdda8b306680fdfa0c521fd811ed29b78009003322582998",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/772406/000077240626000018/crus-20260328.htm"
+      }
+    },
+    {
+      "id": "155471069551447b96cbf14eaeb933d858d8f5118d522d553f7481624b67fc1e",
+      "start": 16562,
+      "end": 17685,
+      "text": " In addition, difficulties associated with adapting our technology and product design to the proprietary process technology and design rules of outside foundries can lead to reduced yields of our products. Since low yields may result from either design or process technology failures, yield problems may not be effectively determined or resolved until an actual product exists that can be analyzed and tested to identify process sensitivities relating to the design rules that are used. As a result, yield problems may not be identified until well into the production process, and resolution of yield problems may require cooperation between our manufacturer and us. This risk could be compounded by the offshore location of certain of our manufacturers, increasing the effort and time required to identify, communicate, and resolve manufacturing yield problems. Manufacturing defects that we do not discover during the manufacturing or testing process may lead to costly product recalls. These risks may lead to increased costs or delayed product delivery, which would harm our profitability and customer relationships. \n\n",
+      "sha256": "d1ab22f8be775cc85a4125d9afc21761ea0cd1e14d3af73abaab422a19c426fe",
+      "source": {
+        "accepted_at": "2026-05-22T00:11:56.000Z",
+        "accession": "0000772406-26-000018",
+        "characters": 98918,
+        "document": "crus-20260328.htm",
+        "filing_date": "2026-05-21",
+        "form": "10-K",
+        "id": "aa6f495b1f71ff991f2593df0f6fbc060b70d9dda366cd44e126f58a4bf6aef8",
+        "kind": "risk",
+        "report_date": "2026-03-28",
+        "section": "ITEM 1A. Risk Factors",
+        "section_ordinal": 126,
+        "sha256": "319da523ac20456304b0577e929137c97ebcb2e823b26bb99d269fe70e5f1501",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/772406/000077240626000018/crus-20260328.htm"
+      }
+    }
+  ]
+}

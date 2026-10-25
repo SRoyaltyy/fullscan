@@ -1,0 +1,82 @@
+{
+  "ticker": "INCY",
+  "cik": "0000879169",
+  "name": "Incyte Corp",
+  "sector": "Healthcare",
+  "industry": "Biotechnology",
+  "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0000879169.json.gz",
+  "profile_sha256": "4b931b739b4701d3c1621d13e79193f03243c7d3ff362e233a5e1042e9b7489d",
+  "eligible_paragraphs": 302,
+  "source_scope": "Retained archived filing prose paragraphs; not a complete filing inventory.",
+  "paragraphs": [
+    {
+      "id": "0eeb98558d7b7bd6ebc746daf683c5d18878e4f014896f8d018560f7555b0613",
+      "start": 10346,
+      "end": 11239,
+      "text": "Equity Investments. Our equity investments consist of investments in common stock of publicly-held companies with whom we have entered into collaboration and license agreements. We classify our equity investments in common stock of publicly-held companies as either short term equity investments, for those investments which we intend to sell within one year, or long term equity investments, for those investments which we intend to hold for longer than one year, on the consolidated balance sheets. As of December 31, 2025 and 2024, all of our equity investments are classified as long term equity investments. Our equity investments are accounted for at fair value using readily determinable pricing available on a securities exchange on the consolidated balance sheets. All changes in fair value are reported in the consolidated statements of operations as a gain on equity investments. \n\n",
+      "sha256": "8533f02dba5175c27ed82140de658cd341abe7d04e409dff5856bce745bce6b0",
+      "source": {
+        "accepted_at": "2026-02-11T02:01:52.000Z",
+        "accession": "0000879169-26-000010",
+        "characters": 48125,
+        "document": "R10.htm",
+        "filing_date": "2026-02-10",
+        "form": "10-K",
+        "id": "041462e30489a407040cdb22e47a38618f962794c08aa79f2db5bdbe6ac66f6a",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "R10.htm",
+        "section_ordinal": 14,
+        "sha256": "6f5aa436fe3317eb2683ef71c514054505a9c51161be66c76b62e3c8fb5bb4bb",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/879169/000087916926000010/R10.htm"
+      }
+    },
+    {
+      "id": "3c4fcf3e94193a08ec4a40f34fbe3836a9ee9673764faa559abf8fa9f9a9c279",
+      "start": 21104,
+      "end": 21980,
+      "text": "(e)notify the Investors at any time when a prospectus relating to a Registration Statement covering any Registrable Securities is required to be delivered under the Securities Act of the happening of any event as a result of which the prospectus included in such Registration Statement, as then in effect, includes an untrue statement of a material fact or omits to state a material fact required to be stated therein or necessary to make the statements therein not misleading in the light of the circumstances then existing. The Company shall use its reasonable best efforts to amend or supplement such prospectus in order to cause such prospectus not to include any untrue statement of a material fact or omit to state a material fact required to be stated therein or necessary to make the statements therein not misleading in the light of the circumstances then existing;\n\n",
+      "sha256": "568e6e5e3db81a42b7aadd0f79e57e831d58425d9203dce273306f4e9d44c364",
+      "source": {
+        "accepted_at": "2026-02-11T02:01:52.000Z",
+        "accession": "0000879169-26-000010",
+        "characters": 48194,
+        "document": "exhibit1025-bbxrrafeb2026.htm",
+        "filing_date": "2026-02-10",
+        "form": "10-K",
+        "id": "c22382440cfde6322dc258a28cc0fbc659b56d0df6db6831bd0ad501e70d5d18",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "exhibit1025-bbxrrafeb2026.htm",
+        "section_ordinal": 115,
+        "sha256": "0ce541a7ca51a74221318b973b6036957b758ed7762b9c34708a53ddaa93a9f3",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/879169/000087916926000010/exhibit1025-bbxrrafeb2026.htm"
+      }
+    },
+    {
+      "id": "7b9e024811034e2648be6df334376eae41c5f77d666a88336a3873f7db4ce8b9",
+      "start": 73165,
+      "end": 74935,
+      "text": "We do not currently operate manufacturing facilities for most of our clinical or commercial products, including JAKAFI, PEMAZYRE, ICLUSIG, OPZELURA, ZYNYZ and NIKTIMVO, and our drug candidates. Our current manufacturing strategy for these products and drug candidates is to contract with third parties to manufacture the related raw materials, active pharmaceutical ingredient (“API”), and finished drug product. We do have a biologics production facility located in Yverdon, Switzerland, currently registered for MONJUVI/MINJUVI drug substance manufacturing. We are responsible for the sourcing and manufacturing of ZYNYZ together with our collaborator MacroGenics. While working to increase our own manufacturing capacity through our Swiss bioplant site, we expect to continue to rely on third parties for the manufacture of clinical and commercial supplies of raw materials, API and finished drug product for any drugs that we successfully develop. We also contract with third parties to package and label our products. The FDA requires that the raw materials, API and finished product for drug products such as JAKAFI, PEMAZYRE and OPZELURA and our drug candidates be manufactured according to its current Good Manufacturing Practices regulations, and regulatory authorities in other countries have similar requirements. Failure to comply with Good Manufacturing Practices and the applicable regulatory requirements of other countries in the manufacture of our drug candidates and products could result in the FDA or a foreign regulatory authority halting our clinical trials, withdrawing or denying regulatory approval of our drug product, initiating product recalls or taking other enforcement actions, which could have a material adverse effect on our business.\n\n",
+      "sha256": "3cde8f32eddc4e8c4cd89b5b34efeaeb386da741b8f7130ea59b88588c55bc5e",
+      "source": {
+        "accepted_at": "2026-02-11T02:01:52.000Z",
+        "accession": "0000879169-26-000010",
+        "characters": 134195,
+        "document": "incy-20251231.htm",
+        "filing_date": "2026-02-10",
+        "form": "10-K",
+        "id": "4d18c522a72f80715e75b300fa00439124761c90d37945d353ef5eace9b9098f",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "Item 1A. Risk Factors",
+        "section_ordinal": 147,
+        "sha256": "2087b77c0bb8b58d6915fc270631a30f1dd0c82fb642be3604fa1a8ba4ae9243",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/879169/000087916926000010/incy-20251231.htm"
+      }
+    }
+  ]
+}

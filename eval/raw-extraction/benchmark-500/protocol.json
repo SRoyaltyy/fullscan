@@ -1,0 +1,29 @@
+{
+  "schema": "extraction-500-protocol-1",
+  "parser_revision": "6dad95df8f7c2bb3b49df4de62c9ab80813c20db",
+  "unit": "Distinct (issuer, reference term/explicit source alias group) within sampled filing prose; repeated mentions count once.",
+  "scope": "Extraction only. Generic business nouns and concepts are eligible; no correct relationship, trading relevance or named-entity type required.",
+  "reference_contract": "Annotate plausible nominal terms and complete noun phrases, names, products/services, materials, customers/suppliers as generic classes, financial/accounting/legal concepts, abbreviations, and technical terms. Preserve exact source witnesses. Function words, standalone auxiliary/generic verbs and discourse adverbs are not reference terms. Do not invent terms absent from source. Overlapping atomic nouns and meaningful complete phrases may both be annotated, with their counts disclosed.",
+  "sources": "Archived source paragraph text from pinned issuer profiles; ignore previous parser facts, entities, labels, and eligibility. These are sampled prose passages, not a whole-filing completeness claim.",
+  "paragraph_sampling": "For each reserved issuer select 3 distinct paragraphs, seeded SHA256 rank: up to 2 from business sources, then up to 1 from risk sources, with any unfilled slots from remaining non-machine prose. Eligible paragraph length 600..2200 characters, at least 80 ASCII-letter words. Exclude sections explicitly machine_data. Failed/missing profiles or insufficient eligible paragraphs are reported, never substituted based on parser performance.",
+  "freeze_order": [
+    "Commit draw and this protocol before new source inspection.",
+    "Download and checksum selected issuer assets; select paragraphs by frozen rule; commit exact sampled sources.",
+    "Review and commit source-only reference labels before running extraction.",
+    "Run frozen extraction once with no changes or relabelling for misses.",
+    "Review a seeded random sample of at least 500 output candidates for broad nominal-term validity; keep unresolved judgments separate."
+  ],
+  "metrics": [
+    "Recall of exact source term or predeclared explicit alias, by issuer and pooled.",
+    "Complete reference span contained in a longer candidate, reported separately.",
+    "Atomic versus multiword reference recovery, reported separately.",
+    "Candidate precision on independently source-reviewed random output sample, with explicit denominator and uncertain cases.",
+    "Misses and extra/filler candidates with source evidence. No relationship score."
+  ],
+  "limits": [
+    "Assistant source-first annotations; not independent human certification.",
+    "Stratified issuer sample, not a market-weighted estimate.",
+    "Recoverable historical exclusions are incomplete; no claim of complete historical unseen status.",
+    "If fewer than 500 distinct source reference terms result, reserve additional issuers before source inspection; do not duplicate terms or use synthetic rows."
+  ]
+}

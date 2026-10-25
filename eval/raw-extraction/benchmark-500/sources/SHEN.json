@@ -1,0 +1,82 @@
+{
+  "ticker": "SHEN",
+  "cik": "0000354963",
+  "name": "Shenandoah Telecommunications Co",
+  "sector": "Communication Services",
+  "industry": "Telecom Services",
+  "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0000354963.json.gz",
+  "profile_sha256": "b81ba701565880467036930756f4c69f4728350a9145e1c887c43ff755904255",
+  "eligible_paragraphs": 89,
+  "source_scope": "Retained archived filing prose paragraphs; not a complete filing inventory.",
+  "paragraphs": [
+    {
+      "id": "78ff60aa5dc57abbb6190e08948173017b7df0d9eb295bb89969dd326d6855d7",
+      "start": 4255,
+      "end": 4971,
+      "text": "As the incumbent broadband provider passing approximately 252,000 homes and businesses, we compete against incumbent local telephone companies that provide digital subscriber line (“DSL”) internet and voice services over hybrid fiber and copper-based networks as well as broadband overbuilder providers that offer data, voice, and video services over hybrid coaxial cable or fiber optic networks. Approximately 30% of our incumbent broadband passings compete with a wireline broadband competitor. In addition, we compete with fixed wireless broadband services and indirectly with wireless substitution as the bandwidth speeds from wireless providers have increased with 5th generation network technology upgrades. \n\n",
+      "sha256": "7e42374b45bb7339eb57eed824faaeb2a388756ceff531a461a93aa312ada703",
+      "source": {
+        "accepted_at": "2026-02-26T17:11:08.000Z",
+        "accession": "0000354963-26-000125",
+        "characters": 52076,
+        "document": "shen-20251231.htm",
+        "filing_date": "2026-02-26",
+        "form": "10-K",
+        "id": "f8eaff14f9e9cab81d522e53ea1b94fdc34498537f1aa275cbe97b97004e7af5",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "ITEM 1.BUSINESS",
+        "section_ordinal": 112,
+        "sha256": "d93264031d008b88c07eda2af431545f7ce632669fe60efd929628674c89992d",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/354963/000035496326000125/shen-20251231.htm"
+      }
+    },
+    {
+      "id": "46265c28cd12b6740930f8159c023b510bc120a54e3fbef0bcf6f7325ad9273e",
+      "start": 23930,
+      "end": 24875,
+      "text": "Regulatory changes are being considered that could impact our VoIP service. The FCC and state regulatory authorities have considered, for example, whether certain common carrier regulations traditionally applied to incumbent local exchange carriers (including RLECs) should be modified or reduced, and the extent to which common carrier requirements should be extended to VoIP providers. The FCC has required VoIP providers to comply with several regulations that apply to other telephone services, including 911 emergency services, the Communications Assistance for Law Enforcement Act (“CALEA”), Universal Service Fund (“USF”) contribution, customer privacy and CPNI issues, number portability, network outage, rural call completion, disability access, battery backup, robocall mitigation, regulatory fees and discontinuance of service. We cannot predict whether the FCC will impose additional obligations on our VoIP services in the future.\n\n",
+      "sha256": "a574a8872b2ad37db02ab842be3636e6eccd350994079a113d52ec5ccf854a01",
+      "source": {
+        "accepted_at": "2026-02-26T17:11:08.000Z",
+        "accession": "0000354963-26-000125",
+        "characters": 52076,
+        "document": "shen-20251231.htm",
+        "filing_date": "2026-02-26",
+        "form": "10-K",
+        "id": "f8eaff14f9e9cab81d522e53ea1b94fdc34498537f1aa275cbe97b97004e7af5",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "ITEM 1.BUSINESS",
+        "section_ordinal": 112,
+        "sha256": "d93264031d008b88c07eda2af431545f7ce632669fe60efd929628674c89992d",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/354963/000035496326000125/shen-20251231.htm"
+      }
+    },
+    {
+      "id": "5ca4c81cc6f6edb98aa8a0503436f4c80af409d7aff5d9e52982436042cbcdef",
+      "start": 25980,
+      "end": 27120,
+      "text": "To date, interruptions of our information technology infrastructure and third party suppliers have been infrequent and have not had a material impact on our operations. However, because technology is increasingly complex and cyber-attacks are increasingly sophisticated and more frequent, there can be no assurance that such incidents will not have a material adverse effect on us in the future. The consequences of a breach of our security measures or those of a third-party provider, a cyber-related service or operational disruption, or a breach of personal, confidential, proprietary or sensitive data caused by a hacker or other malicious actor could be significant for us, our customers and other affected third parties. For example, the consequences could include damage to infrastructure and property, impairment of business operations, disruptions to customer service, financial costs and harm to our liquidity, costs associated with remediation, loss of revenues, loss of customers, competitive disadvantage, legal expenses associated with litigation, regulatory action, fines or penalties or damage to our brand and reputation.\n\n",
+      "sha256": "965a7d7674ca725c32f5bd381c94eff1bdb2076b36587581f57a6fc4899911f9",
+      "source": {
+        "accepted_at": "2026-02-26T17:11:08.000Z",
+        "accession": "0000354963-26-000125",
+        "characters": 48745,
+        "document": "shen-20251231.htm",
+        "filing_date": "2026-02-26",
+        "form": "10-K",
+        "id": "742f6866ec06e9d55b4f88525ecfdafde1c5f2061ad1a4baecab0d144233ed2e",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "ITEM 1A.RISK FACTORS",
+        "section_ordinal": 113,
+        "sha256": "d4928d3fb763dbb3f65112ca91a5bf72b4d4da6aaad304185a0d5acd59f245d8",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/354963/000035496326000125/shen-20251231.htm"
+      }
+    }
+  ]
+}

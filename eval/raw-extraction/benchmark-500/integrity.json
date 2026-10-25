@@ -1,0 +1,11 @@
+{
+  "schema": "extraction-500-integrity-1",
+  "reference_pairs": 851,
+  "issuers": 12,
+  "reviewed_output_groups": 500,
+  "exact_source_spans_verified": 7427,
+  "seeded_sample_reproduced": true,
+  "metrics_recomputed_from_predictions": true,
+  "csv_and_json_agree": true,
+  "checksums_verified": true
+}
