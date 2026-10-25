@@ -16,10 +16,10 @@ def install(source, site, source_revision, catalog_revision, candidate_revision=
     archive=dest/'history'/catalog_revision
     if not archive.exists():
         archive.mkdir(parents=True)
-        for name in ('index.html','comparison.mjs','request.mjs','catalog.json','request-config.json'):
+        for name in ('index.html','comparison.mjs','request.mjs','filing-viewer.mjs','catalog.json','request-config.json'):
             if (dest/name).exists():
                 shutil.copyfile(dest/name,archive/name)
-    for name in ('index.html','comparison.mjs','request.mjs'):
+    for name in ('index.html','comparison.mjs','request.mjs','filing-viewer.mjs'):
         shutil.copyfile(source/'dashboard/stock-comparison'/name,dest/name)
     config={'schema':'stock-parser-request-config-1','workflow':'stock-parser-request.yml',
             'execution_ref':'main','repository':REPO,'old_sha':old_sha,'new_sha':candidate_revision,

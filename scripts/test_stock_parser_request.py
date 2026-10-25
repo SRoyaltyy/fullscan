@@ -4,11 +4,14 @@ from scripts.stock_parser_request import assemble, digest, validate_request, wri
 class RequestIntegrity(unittest.TestCase):
     def fixture(self, root):
         source={'ticker':'BLZE','as_of':'2026-10-20','catalog_sha256':'a'*64,
-                'coverage_kind':'filing_backed','source_receipt':{'filings':2}}
+                'coverage_kind':'filing_backed','source_receipt':{'filings':2},
+                'sections':[{'text':'A 🙂 Bank & Company. Unhighlighted context <script> stays text.'}]}
+        text=source['sections'][0]['text']
+        meta={'id':'section-1','characters':len(text),'sha256':digest(text.encode()),'document':'filing.htm'}
         path=root/'input.json';write(path,source)
         write(str(path)+'.receipt.json',{'input_sha256':digest(path.read_bytes()),'fetch_seconds':1})
         result={'ticker':'BLZE','input_sha256':digest(path.read_bytes()),
-                'source_receipt':source['source_receipt'],'parse_seconds':2}
+                'source_receipt':source['source_receipt'],'parse_seconds':2,'sources':[meta]}
         write(root/'old.json',{**result,'source_sha':OLD})
         write(root/'new.json',{**result,'source_sha':NEW})
         return path
@@ -22,6 +25,7 @@ class RequestIntegrity(unittest.TestCase):
             self.assertEqual(receipt['sha256'],digest((root/'out/comparison.json.gz').read_bytes()))
             self.assertEqual(bundle['old']['input_sha256'],bundle['new']['input_sha256'])
             self.assertEqual(bundle['input_sha256'],digest(path.read_bytes()))
+            self.assertEqual(bundle['source_texts'][0]['text'],json.loads(path.read_bytes())['sections'][0]['text'])
     def test_other_stock_revision_hash_or_source_is_rejected(self):
         for role,field,value in [('old','ticker','OTHER'),('new','source_sha',OLD),
                                  ('new','input_sha256','f'*64),('old','source_receipt',{'filings':1})]:
@@ -33,6 +37,12 @@ class RequestIntegrity(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp);path=self.fixture(root);path.write_bytes(path.read_bytes()+b' ')
             with self.assertRaises(ValueError):self.assemble(root)
+    def test_filing_text_checksum_mismatch_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);self.fixture(root);path=root/'new.json'
+            value=json.loads(path.read_bytes());value['sources'][0]['sha256']='0'*64;write(path,value)
+            with self.assertRaises(ValueError):self.assemble(root)
+
     def test_path_shell_payloads_or_unpinned_revisions_are_rejected(self):
         for ticker,ident,old,new in [('BLZE','../../path',OLD,NEW),
                                      ('BLZE;whoami','test-request-123456',OLD,NEW),
