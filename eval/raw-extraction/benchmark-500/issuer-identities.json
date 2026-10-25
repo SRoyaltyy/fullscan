@@ -1,0 +1,98 @@
+[
+  {
+    "ticker": "LYNX",
+    "archived_ticker": "LYNX",
+    "aliases": [
+      "LYNX"
+    ],
+    "match": true
+  },
+  {
+    "ticker": "BVN",
+    "archived_ticker": "BVN",
+    "aliases": [
+      "BVN"
+    ],
+    "match": true
+  },
+  {
+    "ticker": "SHEN",
+    "archived_ticker": "SHEN",
+    "aliases": [
+      "SHEN"
+    ],
+    "match": true
+  },
+  {
+    "ticker": "NKE",
+    "archived_ticker": "NKE",
+    "aliases": [
+      "NKE"
+    ],
+    "match": true
+  },
+  {
+    "ticker": "KLC",
+    "archived_ticker": "KLC",
+    "aliases": [
+      "KLC"
+    ],
+    "match": true
+  },
+  {
+    "ticker": "BKR",
+    "archived_ticker": "BKR",
+    "aliases": [
+      "BKR"
+    ],
+    "match": true
+  },
+  {
+    "ticker": "BRO",
+    "archived_ticker": "BRO",
+    "aliases": [
+      "BRO"
+    ],
+    "match": true
+  },
+  {
+    "ticker": "INCY",
+    "archived_ticker": "INCY",
+    "aliases": [
+      "INCY"
+    ],
+    "match": true
+  },
+  {
+    "ticker": "BW",
+    "archived_ticker": "BW",
+    "aliases": [
+      "BW"
+    ],
+    "match": true
+  },
+  {
+    "ticker": "CBRE",
+    "archived_ticker": "CBRE",
+    "aliases": [
+      "CBRE"
+    ],
+    "match": true
+  },
+  {
+    "ticker": "CRUS",
+    "archived_ticker": "CRUS",
+    "aliases": [
+      "CRUS"
+    ],
+    "match": true
+  },
+  {
+    "ticker": "VST",
+    "archived_ticker": "VST",
+    "aliases": [
+      "VST"
+    ],
+    "match": true
+  }
+]
