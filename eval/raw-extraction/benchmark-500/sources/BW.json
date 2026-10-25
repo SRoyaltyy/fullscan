@@ -1,0 +1,82 @@
+{
+  "ticker": "BW",
+  "cik": "0001630805",
+  "name": "Babcock & Wilcox Enterprises Inc",
+  "sector": "Industrials",
+  "industry": "Specialty Industrial Machinery",
+  "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001630805.json.gz",
+  "profile_sha256": "dacec9f9203986fd23d7db8797861fd65a18cafa14effd5c66ac3dc18ecade1e",
+  "eligible_paragraphs": 128,
+  "source_scope": "Retained archived filing prose paragraphs; not a complete filing inventory.",
+  "paragraphs": [
+    {
+      "id": "10fe6017f407ebfcd93891e4960236d7e74cb8adf6635f5df2bc59b1b49cd77d",
+      "start": 4184,
+      "end": 5185,
+      "text": " Our cybersecurity risk management program is integrated into our enterprise risk management processes and is informed by recognized cybersecurity industry frameworks and standards, including the National Institute of Standards and Technology. We use these frameworks, together with information collected from internal assessments, to develop policies for use of our information systems and assets (for example, B&W business information and information resources such as computers and workstations), access to specific intellectual property or technologies, and protection of personal information. We protect these information assets through industry-standard techniques, such as multi-factor authentication and malware defenses. We also work with internal stakeholders to integrate foundational cybersecurity principles throughout our operations, including employment of multiple layers of cybersecurity defenses, restricted access based on business need, and integrity of our business information.\n\n",
+      "sha256": "e1204e065a1ffd714c3d1ddee52c24f0314b05e6b716fff26f9c1c6213abe222",
+      "source": {
+        "accepted_at": "2026-03-16T20:06:53.000Z",
+        "accession": "0001630805-26-000018",
+        "characters": 12391,
+        "document": "R37.htm",
+        "filing_date": "2026-03-16",
+        "form": "10-K",
+        "id": "0021da8df990fd2417fb59262fe1c51fe6537b0a4baecf8bf9a2edf314375a05",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "R37.htm",
+        "section_ordinal": 80,
+        "sha256": "7aec1d3449c7613e31b7eac78a2b89c192726bb58546ddb5f74c5595048c1556",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1630805/000163080526000018/R37.htm"
+      }
+    },
+    {
+      "id": "831e3ba121ae8fc7c21e2844dee9bb896174be63deb0e0251e942a5b48a5c3d7",
+      "start": 4046,
+      "end": 4732,
+      "text": "On October 30, 2024, we, through our B&W PGG Luxembourg Finance Sárl subsidiary and Babcock & Wilcox A/S subsidiary, sold the entire issued and outstanding share capital of our Italy-based SPIG and Sweden-based GMAB subsidiaries to Auctus Neptune Holding S.p.A. We received net cash proceeds of $33.7 million and recorded a gain of $14.1 million, solely related to currency translation adjustments that were realized upon sale of the businesses. We recorded an impairment of $5.8 million as of September 30, 2024, as the disposal group carrying value exceeded the expected net proceeds from the sale. The proceeds were used to support working capital needs and reduce outstanding debt.\n",
+      "sha256": "c45b5bdb83aad32db2c2a6a1cf1cb149f04dfafbeb5fcfcbb475a8ce4e1c343c",
+      "source": {
+        "accepted_at": "2026-03-16T20:06:53.000Z",
+        "accession": "0001630805-26-000018",
+        "characters": 15648,
+        "document": "R13.htm",
+        "filing_date": "2026-03-16",
+        "form": "10-K",
+        "id": "edecf3d4ccf2e0497f25d1a57eed75c1ed773f877405964c6865985cf095fcd7",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "R13.htm",
+        "section_ordinal": 48,
+        "sha256": "55ecd5bbb6e5a7834dadaeaea450cbcaf010a14df2a9c9d1827908a82ca1ea34",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1630805/000163080526000018/R13.htm"
+      }
+    },
+    {
+      "id": "185b626045b342f27ea6d0108ee53ce87009cdef8ee1f7f859c0ebda5a4cc17a",
+      "start": 24710,
+      "end": 25316,
+      "text": "Our ability to develop innovative new products can affect our competitive position and often requires the investment of significant resources. Difficulties or delays in research, development, production or commercialization of new products, or failure to gain market acceptance of new products and technologies, may reduce future sales and adversely affect our competitive position. There can be no assurance that we will have sufficient resources to make such investments, that we will be able to make the technological advances necessary to maintain competitive advantages or that we can recover major \n\n",
+      "sha256": "38219f7b176680c11b01532f4cfec64dcc550b4a359dcf3cff35c834cc847ebf",
+      "source": {
+        "accepted_at": "2026-03-16T20:06:53.000Z",
+        "accession": "0001630805-26-000018",
+        "characters": 86680,
+        "document": "bw-20251231.htm",
+        "filing_date": "2026-03-16",
+        "form": "10-K",
+        "id": "99e6c8dec4c4887d2857ef67591a933fe1f4cf7d5bd8e13491b68cf0d4eec628",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "Item 1A. Risk Factors",
+        "section_ordinal": 175,
+        "sha256": "9c9536ee0f0d4c1a8714b68183e62775c838d3ed19b2e38b8a94740c686df455",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1630805/000163080526000018/bw-20251231.htm"
+      }
+    }
+  ]
+}

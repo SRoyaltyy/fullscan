@@ -1,0 +1,82 @@
+{
+  "ticker": "BRO",
+  "cik": "0000079282",
+  "name": "Brown & Brown Inc",
+  "sector": "Financial",
+  "industry": "Insurance Brokers",
+  "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0000079282.json.gz",
+  "profile_sha256": "00622b9f44d6f6832d99b512850e7c6a91455b50b4624f16e276f6f2b87c6587",
+  "eligible_paragraphs": 167,
+  "source_scope": "Retained archived filing prose paragraphs; not a complete filing inventory.",
+  "paragraphs": [
+    {
+      "id": "bdf943e68d859f572a0436e9e4336e3a630c71a6463a31431d48ef18060a1b88",
+      "start": 24698,
+      "end": 25797,
+      "text": "We are subject to the reporting requirements of the Securities Exchange Act of 1934, as amended (the “Exchange Act”), and its rules and regulations. The Exchange Act requires us to file reports, proxy statements and other information with the SEC. We make available free of charge on our website, at www.bbrown.com, our Annual Report on Form 10-K, quarterly reports on Form 10-Q, current reports on Form 8-K, and amendments to those reports filed or furnished pursuant to Section 13(a) or 15(d) of the Exchange Act and the rules promulgated thereunder, as soon as reasonably practicable after electronically filing or furnishing such material to the SEC. These documents are posted on our website at www.bbrown.com and may be accessed by selecting the “Investor Relations” link and then the “SEC Filings” link. Information contained on or accessible through our website is not incorporated into, and does not form a part of, this Annual Report on Form 10-K or any other report or document we file with the SEC, and any references to our website are intended to be inactive textual references only.\n\n",
+      "sha256": "5008c7470ad6e0f9a58e8cbac0fc1bf501b35039c3de00fda2471357db50a5fd",
+      "source": {
+        "accepted_at": "2026-02-11T23:03:26.000Z",
+        "accession": "0001193125-26-046984",
+        "characters": 36021,
+        "document": "bro-20251231.htm",
+        "filing_date": "2026-02-12",
+        "form": "10-K",
+        "id": "9e4840e7d2f7bef01abfa51ed4aadc4671a71deecdb005ea804634d5818503dd",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "PART I\n\nITEM 1. Business.",
+        "section_ordinal": 130,
+        "sha256": "59f5cbb1d66e39c3e89fee444cacddf5a49bbf87e45d84342a6f956f3be03af8",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/79282/000119312526046984/bro-20251231.htm"
+      }
+    },
+    {
+      "id": "b36fe03dfe188110e3795e72208cb5270776919ecd4ef7fe16086bba44ca413c",
+      "start": 26039,
+      "end": 26646,
+      "text": "The charters of the Audit, Compensation and Nominating/Governance Committees of our board of directors as well as our Corporate Governance Principles, Code of Business Conduct and Ethics and Code of Ethics-CEO and Senior Financial Officers (including any amendments to, or waivers of any provision of any of these charters, principles or codes) are also available on our website or upon request. Requests for copies of any of these documents should be directed in writing to: Corporate Secretary, Brown & Brown, Inc., 300 North Beach Street, Daytona Beach, Florida 32114 or by telephone to (386)-252-9601.\n\n",
+      "sha256": "34d80cf53e659298d34dfa51b7d40dc044392e7ffffa434e9a1a41d2acceec15",
+      "source": {
+        "accepted_at": "2026-02-11T23:03:26.000Z",
+        "accession": "0001193125-26-046984",
+        "characters": 36021,
+        "document": "bro-20251231.htm",
+        "filing_date": "2026-02-12",
+        "form": "10-K",
+        "id": "9e4840e7d2f7bef01abfa51ed4aadc4671a71deecdb005ea804634d5818503dd",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "PART I\n\nITEM 1. Business.",
+        "section_ordinal": 130,
+        "sha256": "59f5cbb1d66e39c3e89fee444cacddf5a49bbf87e45d84342a6f956f3be03af8",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/79282/000119312526046984/bro-20251231.htm"
+      }
+    },
+    {
+      "id": "7d67cbb091ff8c17784acb5e14aabb40960678646fff7df0e3de780a320d7ff1",
+      "start": 43659,
+      "end": 44332,
+      "text": "Inflation can adversely affect us by increasing our costs, including salary costs. While moderate inflation generally benefits our industry by increasing insurable asset values, significant inflation is often accompanied by higher interest rates, which can have negative effects on the global economy. Lower levels of inflation may reduce our revenue growth by slowing the increase in insurable asset values. Any sustained inflation or significant increases in inflation, such as the wage inflation experienced during the fiscal year ended December 31, 2022, and interest rates could have an adverse effect on our business, results of operations and financial condition. \n\n",
+      "sha256": "da29864ebc0e00e95d2337db9a9a4c2c7ddb9f4527d21f9a4b54c9f0e21c7d15",
+      "source": {
+        "accepted_at": "2026-02-11T23:03:26.000Z",
+        "accession": "0001193125-26-046984",
+        "characters": 90713,
+        "document": "bro-20251231.htm",
+        "filing_date": "2026-02-12",
+        "form": "10-K",
+        "id": "ae30d4d35aed3665b0081dab80f5b19b78c43e3f44ae550006189f7f6455ffc9",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "ITEM 1A. Risk Factors.",
+        "section_ordinal": 131,
+        "sha256": "1382535bf8085ca29a95cdf10424b224c80ffd945af4a22b35897d62b01faa63",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/79282/000119312526046984/bro-20251231.htm"
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "ticker": "NKE",
+  "cik": "0000320187",
+  "name": "Nike Inc",
+  "sector": "Consumer Cyclical",
+  "industry": "Footwear & Accessories",
+  "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0000320187.json.gz",
+  "profile_sha256": "fcc8c5c64f896c11c812bcb5cb7b9207c850f64f9979fb362ac7c5111c437c8d",
+  "eligible_paragraphs": 100,
+  "source_scope": "Retained archived filing prose paragraphs; not a complete filing inventory.",
+  "paragraphs": [
+    {
+      "id": "2f443b228c2fea4779750e19612f9d5eb4bd0083d38ccf3d15623ac7dec408c4",
+      "start": 358,
+      "end": 1168,
+      "text": "Our principal business activity is the design, development and worldwide marketing and selling of athletic footwear, apparel, equipment, accessories and services. NIKE is the largest seller of athletic footwear and apparel in the world. We sell our products through NIKE Direct operations, which are comprised of both NIKE-owned retail stores and sales through our digital platforms (also referred to as \"NIKE Brand Digital\") and to wholesale accounts, which include a mix of independent distributors, licensees and sales representatives in nearly all countries around the world. We also offer interactive consumer services and experiences. Nearly all of our products are manufactured by independent contractors. Nearly all footwear, apparel and equipment products are manufactured outside the United States.\n\n",
+      "sha256": "6f73f0d64ad7b72411f9d85152f747d1a676ce592d2c01d2dd7e44f8cf7ec387",
+      "source": {
+        "accepted_at": "2026-07-16T00:43:49.000Z",
+        "accession": "0000320187-26-000088",
+        "characters": 37310,
+        "document": "nke-20260531.htm",
+        "filing_date": "2026-07-15",
+        "form": "10-K",
+        "id": "7538d43d52dac57e3134bf8afdd757cf522b2bc9797e77b367bdbb5402917947",
+        "kind": "business",
+        "report_date": "2026-05-31",
+        "section": "PART I\n\nITEM 1. BUSINESS",
+        "section_ordinal": 112,
+        "sha256": "5a1290e675b36f2485bf21ed0a44fc7f113547478975c0a181337827ae4e32a1",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm"
+      }
+    },
+    {
+      "id": "09081ad3c4ae0a03ef6b3b69743e6d89d2f51ad169572c0907c29c044e75da32",
+      "start": 17913,
+      "end": 18703,
+      "text": "The athletic footwear, apparel and equipment industry is highly competitive on a worldwide basis. We compete internationally with a significant number of athletic and leisure footwear companies, athletic and leisure apparel companies, sports equipment companies and large companies having diversified lines of athletic and leisure footwear, apparel and equipment, including adidas, Anta, ASICS, Deckers, Li Ning, lululemon athletica, New Balance, On, Puma, Under Armour and V.F. Corporation, among others. The intense competition and the rapid changes in technology and consumer preferences in the markets for athletic and leisure footwear and apparel and athletic equipment constitute significant risk factors in our operations. Refer to Item 1A. Risk Factors for additional information.\n\n",
+      "sha256": "e5db652e000cf035eaaaadbbb1c36511af0d891aa7ee0fa49c7ef83eafeee4e5",
+      "source": {
+        "accepted_at": "2026-07-16T00:43:49.000Z",
+        "accession": "0000320187-26-000088",
+        "characters": 37310,
+        "document": "nke-20260531.htm",
+        "filing_date": "2026-07-15",
+        "form": "10-K",
+        "id": "7538d43d52dac57e3134bf8afdd757cf522b2bc9797e77b367bdbb5402917947",
+        "kind": "business",
+        "report_date": "2026-05-31",
+        "section": "PART I\n\nITEM 1. BUSINESS",
+        "section_ordinal": 112,
+        "sha256": "5a1290e675b36f2485bf21ed0a44fc7f113547478975c0a181337827ae4e32a1",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm"
+      }
+    },
+    {
+      "id": "12bd75a3f244eda977177bf0118d25a43605bcc6be647eaab91bc4be35086647",
+      "start": 64643,
+      "end": 65261,
+      "text": "The principal materials used in our footwear and apparel products, as described under Item 1. Business \"Manufacturing,\" are generally available to manufacturers locally or in the countries where our manufacturing takes place. Both our apparel and footwear products are dependent upon the ability of our contract manufacturers to locate, train, employ and retain adequate personnel. NIKE contract manufacturers and materials suppliers source raw materials and are subject to wage rates and other labor standards that are oftentimes regulated by the governments of the countries in which our products are manufactured.\n\n",
+      "sha256": "fa73a841b58e7d0ae00398aa8c0cb71f82a98e981713741578bf6108a41c0a56",
+      "source": {
+        "accepted_at": "2026-07-16T00:43:49.000Z",
+        "accession": "0000320187-26-000088",
+        "characters": 97560,
+        "document": "nke-20260531.htm",
+        "filing_date": "2026-07-15",
+        "form": "10-K",
+        "id": "69abb8dca350d64e63e22b8c66c1f0ba99fe118dad587a8fd764ea069852e13c",
+        "kind": "risk",
+        "report_date": "2026-05-31",
+        "section": "ITEM 1A. RISK FACTORS",
+        "section_ordinal": 113,
+        "sha256": "e8dad91a7ac584c41a385417e75346944e52a24ea530848f05c546263d9e335a",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm"
+      }
+    }
+  ]
+}

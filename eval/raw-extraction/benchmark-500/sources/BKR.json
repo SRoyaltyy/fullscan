@@ -1,0 +1,82 @@
+{
+  "ticker": "BKR",
+  "cik": "0001701605",
+  "name": "Baker Hughes Co",
+  "sector": "Energy",
+  "industry": "Oil & Gas Equipment & Services",
+  "profile_url": "https://raw.githubusercontent.com/SRoyaltyy/fullscan/815f25dd3f145a21b6de0c46b5b266269ca6bfa8/profiles/0001701605.json.gz",
+  "profile_sha256": "12f40e0ca81d0525659ce2ea21a13d2cb70581707144fc6ddc42c65f19057b0b",
+  "eligible_paragraphs": 135,
+  "source_scope": "Retained archived filing prose paragraphs; not a complete filing inventory.",
+  "paragraphs": [
+    {
+      "id": "3fb610b8477474c28c369074aaa131027089c54ecd2fb37071f7916f1f00ad1a",
+      "start": 49147,
+      "end": 50526,
+      "text": "The Board monitors and provides oversight over our sustainability policies, programs, and practices regarding corporate responsibility and plays an active role in overseeing our human capital management efforts. The Board's Human Capital and Compensation Committee provides oversight of our social strategy, policies, programs, and initiatives focusing on pay equity, culture, talent development, succession planning, and executive compensation and benefits. The Board's Governance and Corporate Responsibility Committee provides oversight of our environmental matters, including monitoring its sustainability strategy and initiatives, the management of employee health, safety, and wellness matters, and oversight of our positions on corporate social responsibilities and public issues of significance, including those related to privacy, digital safety and responsible AI, which affect investors and other key stakeholders. The Board's Audit Committee provides oversight over our risk assessment and risk management policies and processes, including data privacy, AI, and compliance reporting. The Board's Finance Committee provides oversight of our financial and investment policies and of our principal finance, banking, and treasury matters, including our capital structure (both equity and debt) and the principal terms of related financing transactions and requirements.\n\n",
+      "sha256": "4138b1657a4fea741496176a9f35699c09ef3b104a5269945a1fa5e5d8d2b330",
+      "source": {
+        "accepted_at": "2026-02-05T21:16:11.000Z",
+        "accession": "0001701605-26-000007",
+        "characters": 69515,
+        "document": "bkr-20251231.htm",
+        "filing_date": "2026-02-05",
+        "form": "10-K",
+        "id": "238c939de70fbc7d1b73fc36b1cf28d862d93b4f468e4e2b201ef1f82b14cd44",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "PART I\n\nITEM 1. BUSINESS",
+        "section_ordinal": 149,
+        "sha256": "3fc66757fcfb6fcb0630309af12ba01d82a435e747803331ee95cda02254b3df",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1701605/000170160526000007/bkr-20251231.htm"
+      }
+    },
+    {
+      "id": "3e9a597f89d776494e91f81b88c26e4c7af58aa5c5b57c5433b6cf6d4f01b269",
+      "start": 27834,
+      "end": 29195,
+      "text": "In IET, we continue to invest in and develop foundational technologies which will enable our journey for the energy transition. Such technologies include advanced materials, advanced manufacturing technologies, novel process technologies, and digital technologies such as advanced sensing & diagnostics, data sciences, and AI. Within Gas Technology Equipment and Gas Technology Services product lines, we are focusing on our latest generation of gas turbines for energy efficiency and reduced carbon footprint such as our LM9000TM and Nova LTTM products, CCUS, hydrogen and geothermal technologies. Within Industrial Technology, we are investing in advanced digital solutions designed to improve the efficiency, reliability, and safety of oil and gas, aerospace, energy, and broader industrial production and operations. This includes our Orbit 60 Bently Nevada product for critical asset monitoring in turbine systems, including wind, hydro, and gas turbines. The IET segment is also enhancing its process and safety valve business bringing new digital applications including analytics to our customers. Investments in Industrial Technology also include technologies to measure, monitor, and minimize carbon emissions, new inspection technologies for nondestructive evaluation of materials and structures as well as solutions for industrial asset management.\n\n",
+      "sha256": "aab14820ec93d18a7ba77b8231cde14bfaf5a9b18536a9b3680e8722456374e6",
+      "source": {
+        "accepted_at": "2026-02-05T21:16:11.000Z",
+        "accession": "0001701605-26-000007",
+        "characters": 69515,
+        "document": "bkr-20251231.htm",
+        "filing_date": "2026-02-05",
+        "form": "10-K",
+        "id": "238c939de70fbc7d1b73fc36b1cf28d862d93b4f468e4e2b201ef1f82b14cd44",
+        "kind": "business",
+        "report_date": "2025-12-31",
+        "section": "PART I\n\nITEM 1. BUSINESS",
+        "section_ordinal": 149,
+        "sha256": "3fc66757fcfb6fcb0630309af12ba01d82a435e747803331ee95cda02254b3df",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1701605/000170160526000007/bkr-20251231.htm"
+      }
+    },
+    {
+      "id": "1616899f8955ddf29f56d69dd1781510dccb0e58e0d4267083ec51adf7b61c8c",
+      "start": 25145,
+      "end": 26261,
+      "text": "Our products are used in deepwater, and other harsh environments, and severe service applications. Our contracts with customers and customer requests for bids typically set forth detailed specifications or technical requirements for our products and services, which may also include extensive testing requirements. In addition, scrutiny of the offshore drilling industry and LNG industry has resulted in more stringent technical specifications for our products and more comprehensive testing requirements for our products to ensure compliance with such specifications. We cannot provide assurance that our products, including products supplied through joint ventures or by third parties, will be able to satisfy the specifications necessary in all scenarios or under all operating conditions, nor that we will be able to perform the full-scale testing required to prove that the product specifications are satisfied in future contract bids or under existing contracts, or that the costs of modifications to our products to satisfy the specifications and testing will not adversely affect our results of operations.\n\n",
+      "sha256": "f9f8275f5a76daea37e9504ac9026ff0ab2c4b95f551a036612ef09bb3efc4bf",
+      "source": {
+        "accepted_at": "2026-02-05T21:16:11.000Z",
+        "accession": "0001701605-26-000007",
+        "characters": 71474,
+        "document": "bkr-20251231.htm",
+        "filing_date": "2026-02-05",
+        "form": "10-K",
+        "id": "70913883786c31f5111805a8c56c919da96646fda34e15de2558a9a21e3dba88",
+        "kind": "risk",
+        "report_date": "2025-12-31",
+        "section": "ITEM 1A. RISK FACTORS",
+        "section_ordinal": 150,
+        "sha256": "e610b53dd886bfb8dd68fd927c593024eae29d30686293280f34b516255d75e7",
+        "source": "PR642",
+        "url": "https://www.sec.gov/Archives/edgar/data/1701605/000170160526000007/bkr-20251231.htm"
+      }
+    }
+  ]
+}
