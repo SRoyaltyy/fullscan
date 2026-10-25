@@ -1,4 +1,5 @@
 import {api,requestComparison} from './request.mjs';
+import {mountViewer} from './filing-viewer.mjs';
 export const key=s=>String(s??'').trim().replace(/\s+/g,' ').toLocaleLowerCase();
 export function signature(claims){return [...new Set(claims.map(c=>JSON.stringify([c.predicate||'',c.assertion||'',c.capacity||'unknown'])))].sort().join('|');}
 export function oldTerms(data,includeExcluded=false){
@@ -22,6 +23,7 @@ export function compareTerms(oldMap,newMap){
 if(typeof document!=='undefined'){
 const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 if(location.pathname.endsWith('/compare/')){$('archived-review').href='../completed/';$('earlier-preview').href='../experimental/';}
+const filingViewer=mountViewer($('filing-reader'));
 let catalog,oldData,newData,currentTicker,items=[],sequence=0;
 async function json(url){const r=await fetch(url,{cache:'no-store'});if(!r.ok){const e=Error('Request failed ('+r.status+'): '+url);e.status=r.status;throw e;}return r.json();}
 async function asset(url,expected){const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error('Stock data unavailable ('+r.status+').');const blob=await r.blob(),bytes=await blob.arrayBuffer();const digest=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(x=>x.toString(16).padStart(2,'0')).join('');if(digest!==expected)throw Error('Stock data checksum mismatch; no comparison is shown.');return JSON.parse(await new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).text());}
@@ -48,7 +50,7 @@ function detail(i){
  $('old-detail').innerHTML=old;$('new-detail').innerHTML=next;
 }
 let controller=null,token='',config,currentBundle=null;
-function clear(){oldData=null;newData=null;items=[];currentBundle=null;$('rows').replaceChildren();$('counts').replaceChildren();$('old-detail').innerHTML='<h2>Old version</h2><p>Select a term after parsing.</p>';$('new-detail').innerHTML='<h2>New version</h2><p>Select a term after parsing.</p>';}
+function clear(){filingViewer.clear();oldData=null;newData=null;items=[];currentBundle=null;$('rows').replaceChildren();$('counts').replaceChildren();$('old-detail').innerHTML='<h2>Old version</h2><p>Select a term after parsing.</p>';$('new-detail').innerHTML='<h2>New version</h2><p>Select a term after parsing.</p>';}
 $('connect').onclick=async()=>{
  try{
   const value=$('github-token').value.trim();if(!value)throw Error('Enter a GitHub token with Actions read/write access for SRoyaltyy/fullscan.');
@@ -68,6 +70,8 @@ async function load(){
    $('stock-summary').textContent=ticker+' · '+p.state+' · '+p.seconds+' seconds since request';
    if(p.runUrl){$('run-link').href=p.runUrl;$('run-link').hidden=false;}
   }});
+  if(n!==sequence||signal.aborted)return;
+  await filingViewer.load(result);
   if(n!==sequence||signal.aborted)return;
   oldData=result.old;newData=result.new;currentBundle=result;
   $('stock-summary').innerHTML='<strong>'+esc(ticker)+' · '+esc(row.name)+'</strong><p>'+esc(result.coverage_kind.replaceAll('_',' '))+' · fresh old/new execution on identical source bytes</p><p class="small">Fetch '+esc(result.timings.fetch_seconds)+'s · old parse '+esc(result.timings.old_parse_seconds)+'s · new parse '+esc(result.timings.new_parse_seconds)+'s · total request '+Math.round(result.wall_seconds)+'s (includes GitHub queue, setup and publication).</p>';

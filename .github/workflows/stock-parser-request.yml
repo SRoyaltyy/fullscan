@@ -23,14 +23,14 @@ permissions:
   actions: read
 jobs:
   parse:
-    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'codex/on-demand-parser-comparison')
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && (github.head_ref == 'codex/on-demand-parser-comparison' || github.head_ref == 'codex/filing-highlight-viewer'))
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
       REQUEST_ID: ${{ inputs.request_id || format('pr-validation-{0}', github.run_id) }}
       TICKER: ${{ inputs.ticker || 'BLZE' }}
       OLD_SHA: ${{ inputs.old_sha || '7adb09dd5091fb51ac68859645a26e2292951e46' }}
-      NEW_SHA: ${{ inputs.new_sha || '4d221aa78f21d1968fe4878998a2ac9455d3b6aa' }}
+      NEW_SHA: ${{ inputs.new_sha || '6dad95df8f7c2bb3b49df4de62c9ab80813c20db' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -46,7 +46,7 @@ jobs:
         working-directory: runner
         run: |
           python -m unittest scripts.test_stock_parser_request
-          node --test dashboard/stock-comparison/test_request.mjs dashboard/stock-comparison/test_comparison.mjs
+          node --test dashboard/stock-comparison/test_request.mjs dashboard/stock-comparison/test_comparison.mjs dashboard/stock-comparison/test_filing_viewer.mjs
           python -c "import os; from scripts.stock_parser_request import validate_request; validate_request(os.environ['TICKER'],os.environ['REQUEST_ID'],os.environ['OLD_SHA'],os.environ['NEW_SHA'])"
       - uses: actions/checkout@v4
         with:

@@ -8,7 +8,7 @@ from pathlib import Path
 
 REPO = 'SRoyaltyy/fullscan'
 OLD = '7adb09dd5091fb51ac68859645a26e2292951e46'
-NEW = '4d221aa78f21d1968fe4878998a2ac9455d3b6aa'
+NEW = '6dad95df8f7c2bb3b49df4de62c9ab80813c20db'
 RESULT_BRANCH = 'scanner-request-results'
 
 def digest(raw):
@@ -117,7 +117,8 @@ def parse(input_path, parser_root, output_path, revision, kind):
     sys.path.insert(0, str(parser_root.resolve()))
     from src.filing_relationships import extract_sections, load_parser, compiler_fingerprint
     started = time.monotonic()
-    graph = extract_sections(source['sections'], ticker=source['ticker'], name=source['name'], nlp=load_parser())
+    nlp = load_parser()
+    graph = extract_sections(source['sections'], ticker=source['ticker'], name=source['name'], nlp=nlp)
     result = {'ticker':source['ticker'], 'name':source['name'], 'source_sha':revision,
               'input_sha256':input_sha, 'compiler_sha256':compiler_fingerprint(),
               'as_of':source['as_of'], 'coverage_kind':source['coverage_kind'],
@@ -139,6 +140,30 @@ def parse(input_path, parser_root, output_path, revision, kind):
             high = min(len(text), occurrence['end']+500)
             occurrence.update(excerpt=text[low:high], excerpt_start=low)
         result.update(evidence=evidence, method=evidence['schema'])
+        # Keep broad extraction occurrences independent of relationship admission.
+        try:
+            from src.filing_term_candidates import extract_candidates
+        except ModuleNotFoundError:
+            extract_candidates = None
+        from src.filing_relationships import windows
+        raw_terms = []
+        if extract_candidates is None:
+            raw_terms = [{**{k:t[k] for k in ('source_id','start','end','text')},
+                          'types':t.get('entity_types',[]), 'kinds':t.get('kinds',[])}
+                         for t in graph.get('term_inventory',{}).get('terms',[])]
+        result['raw_terms_mode'] = 'broad' if extract_candidates else 'grammar_inventory'
+        for meta, part in zip(graph['sources'], source['sections'], strict=True):
+            if extract_candidates is None or meta.get('kind') == 'machine_data':
+                continue
+            text = str(part.get('text') or '')
+            for offset, value in windows(text):
+                for term in extract_candidates(nlp(value))['terms']:
+                    start, end = offset+term['start'], offset+term['end']
+                    if text[start:end] != term['text']:
+                        raise ValueError('raw candidate source span mismatch')
+                    raw_terms.append({'source_id':meta['id'], 'start':start, 'end':end,
+                        'text':term['text'], 'types':term['entity_types'], 'kinds':term['kinds']})
+        result['raw_terms'] = raw_terms
     else:
         raise ValueError('unknown parser role')
     if digest(Path(input_path).read_bytes()) != input_sha:
@@ -167,6 +192,15 @@ def assemble(input_path, old_path, new_path, out, request_id, old_sha, new_sha, 
               'catalog_sha256':source['catalog_sha256'], 'source_receipt':source['source_receipt'],
               'timings':{**timing, 'old_parse_seconds':old['parse_seconds'], 'new_parse_seconds':new['parse_seconds']},
               'old':old, 'new':new, 'experimental':True, 'accuracy_certified':False}
+    # Include the entire shared stored source once, never reconstruct from excerpts.
+    bundle['source_texts'] = []
+    for part, old_meta, new_meta in zip(source['sections'], old['sources'], new['sources'], strict=True):
+        text = str(part.get('text') or '')
+        if any(meta['sha256'] != digest(text.encode()) or meta['characters'] != len(text)
+               for meta in (old_meta,new_meta)):
+            raise ValueError('filing viewer source checksum mismatch')
+        bundle['source_texts'].append({**new_meta, 'text':text,
+            'old_source_id':old_meta['id'], 'new_source_id':new_meta['id']})
     raw = gzip.compress(encode(bundle), mtime=0)
     if len(raw) >= 90_000_000:
         raise ValueError('comparison exceeds the result publication size limit')
