@@ -1,6 +1,6 @@
 {
  "date": "2026-10-26",
- "generated_at": "2026-10-26T12:54:31.511788-04:00",
+ "generated_at": "2026-10-26T15:29:12.693192-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -21,19 +21,19 @@
   "yields_source": "fred_dgs10",
   "dgs10_delta_1d": -0.17,
   "dgs10_current": 4.96,
-  "dollar": "flat",
+  "dollar": "strong",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.14,
-  "vix_ratio": 0.925,
-  "vix_spot": 18.41,
-  "vix_delta_1d": -1.04,
+  "dxy_pct_1d": 0.17,
+  "vix_ratio": 0.922,
+  "vix_spot": 18.4,
+  "vix_delta_1d": -1.05,
   "vix_ratio_source": "vix/vix3m",
   "vix": "calm",
-  "oil_pct_1d": -0.36,
+  "oil_pct_1d": -0.83,
   "oil": "flat",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.708,
+  "regime_corr": 0.722,
   "sectors": {
    "Basic Materials": {
     "score": -4.97,
@@ -179,14 +179,14 @@
   },
   "size": {
    "micro": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "risk-mixed, dollar flat [general predict + factors]"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors]"
    },
    "small": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "risk-mixed, dollar flat [general predict + factors]"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors]"
    },
    "large": {
     "stance": "neutral",
@@ -221,9 +221,9 @@
     "why": "risk-mixed [general predict]"
    },
    "rut": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "risk-mixed, dollar flat [general predict + factors]"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors]"
    },
    "none": {
     "stance": "neutral",
