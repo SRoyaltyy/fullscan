@@ -1,22 +1,22 @@
-# Finviz homepage market digest — 2026-10-23
+# Finviz homepage market digest — 2026-10-26
 
-**Generated:** 2026-10-23T04:25:02.475918-04:00 (America/New_York)
+**Generated:** 2026-10-26T04:26:00.531841-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US futures trade mixed ahead of flash PMIs and Michigan sentiment as oil holds near five-month highs on Middle East risks
+**Banner:** US futures point to a mixed open as traders eye Verizon earnings, Chicago Fed data and upcoming Fed meeting
 **Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
 **Oil:** —
 **CPI/Fed:** —
-**Leaders:** AXP, SLB
-**Next session:** housing no · retail no · Fed no
-**Earnings slate:** —
-**Geo/grain:** geo
-**Clock legal for:** 2026-10-23
+**Leaders:** VZ, MSFT, GOOGL, AMZN
+**Next session:** housing no · retail no · Fed yes
+**Earnings slate:** MSFT, GOOGL, AMZN
+**Geo/grain:** —
+**Clock legal for:** 2026-10-26
 **Clock use:** `same_morning`
 
 ## Clock
 
-Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-10-23).
+Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-10-26).
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
@@ -25,20 +25,21 @@ Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page h
 - **Prior close:** SPX — · Nasdaq — · Dow —
 - **Oil:** —
 - **CPI / Fed-odds:** —
-- **Named leaders:** AXP, SLB
-- **Next-session calendar:** housing no · retail no · Fed no
-- **Earnings slate:** —
-- **Geo / grain:** geo
+- **Named leaders:** VZ, MSFT, GOOGL, AMZN
+- **Next-session calendar:** housing no · retail no · Fed yes
+  - The Federal Reserve begins its two-day policy meeting tomorrow with rates widely expected to hold steady
+- **Earnings slate:** MSFT, GOOGL, AMZN
+- **Geo / grain:** —
 
 ## Narrative
 
-**US futures trade mixed ahead of flash PMIs and Michigan sentiment as oil holds near five-month highs on Middle East risks**
+**US futures point to a mixed open as traders eye Verizon earnings, Chicago Fed data and upcoming Fed meeting**
 
-- S&P 500 Futures (@ES) are at -0.08%, Dow Jones Futures (@YM) at -0.39%, Nasdaq 100 Futures (@NQ) at +0.16%, and Russell 2000 Futures (@ER2) at -0.33% indicating a mixed open
-- American Express (AXP) reports pre-bell with consensus EPS estimates of roughly $4.50–$4.58, with investor focus on spending trends, credit metrics, and forward guidance
-- SLB (SLB) is due to report pre-bell with consensus EPS of $0.62, with attention on management guidance alongside headline results
-- Flash PMIs for manufacturing, services, and composite are scheduled for 9:45 AM ET and are flagged as primary intraday volatility catalysts
-- University of Michigan consumer sentiment data are due at 10:00 AM ET and represent another key macro release for the session
-- Asian equity markets pared earlier losses that had been tied to weakness in AI and semiconductor names overnight
-- Crude oil (@CL) prices held near five-month highs amid ongoing Middle East supply risks
-- Gold (@GC) prices remained near three-month lows in quiet overnight trading
+- S&P 500 Futures (@ES) edges higher 0.13% while Dow Jones Futures (@YM) rises 0.28%, Nasdaq 100 Futures (@NQ) dips 0.09% and Russell 2000 Futures (@ER2) gains 0.23% ahead of the US open
+- Verizon (VZ) is in focus with a pre-market earnings report expected to influence Dow components and telecom peers
+- The Chicago Fed National Activity Index is due at 8:30 AM ET and is being watched for clues on US growth momentum
+- The Federal Reserve begins its two-day policy meeting tomorrow with rates widely expected to hold steady
+- Oil (@CL) prices decline on demand concerns despite ongoing geopolitical headlines
+- Flows continue to rotate away from recent tech and AI-related weakness tied to spending and debt worries ahead of earnings from Microsoft (MSFT), Alphabet (GOOGL) and Amazon (AMZN) later this week
+- Asian equity sessions were mixed overnight, offering no clear directional lead for US trading
+- No major new US-specific catalysts have emerged since 4 AM ET, contributing to a quiet pre-market with limited fresh corporate or geopolitical developments
