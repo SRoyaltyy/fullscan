@@ -2919,17 +2919,17 @@
         "name": "flatten_robust",
         "family": "flatten",
         "sit": true,
-        "hard_red": true,
+        "hard_red": false,
         "side": "long",
-        "s": -7.538,
+        "s": "morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held",
         "short_only": [],
         "dip_scoop": [
           {
-            "ticker": "BAX",
+            "ticker": "CDNA",
             "side": "long",
             "open": null,
-            "px": 23.49,
-            "px_src": "session_export",
+            "px": 64.95,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2961,11 +2961,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "PACS",
+            "ticker": "ETON",
             "side": "long",
             "open": null,
-            "px": 42.84,
-            "px_src": "session_export",
+            "px": 59.18,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2997,11 +2997,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "PRGO",
+            "ticker": "TOST",
             "side": "long",
             "open": null,
-            "px": 15.1,
-            "px_src": "session_export",
+            "px": 30.38,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3033,11 +3033,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "CON",
+            "ticker": "SN",
             "side": "long",
             "open": null,
-            "px": 35.36,
-            "px_src": "session_export",
+            "px": 181.99,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3069,11 +3069,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "BLFS",
+            "ticker": "FIS",
             "side": "long",
             "open": null,
-            "px": 39.15,
-            "px_src": "session_export",
+            "px": 34.52,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3105,47 +3105,11 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "PCRX",
+            "ticker": "AVPT",
             "side": "long",
             "open": null,
-            "px": 25.39,
-            "px_src": "session_export",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "CNMD",
-            "side": "long",
-            "open": null,
-            "px": 46.48,
-            "px_src": "session_export",
+            "px": 13.67,
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
