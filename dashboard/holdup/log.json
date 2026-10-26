@@ -6093,5 +6093,116 @@
     ],
     "sha256": "91bddbc4f2c2245edbcf6efcedf21b77531986c3f04b97be1333ba0ab22b7c6c",
     "unfilled": []
+  },
+  {
+    "added_buys": [],
+    "added_sells": [],
+    "cash_primary": 22.328572716510735,
+    "date": "2026-10-26",
+    "equity_primary": 7738.5886667165105,
+    "holdings": [
+      {
+        "cost_primary": 2061.4716,
+        "entry_date": "2026-10-21",
+        "entry_px": 5.95,
+        "last_px": 5.95,
+        "min_hold": 2,
+        "peak_px": 5.95,
+        "shares": 344,
+        "ticker": "BMBL"
+      },
+      {
+        "cost_primary": 2022.37195,
+        "entry_date": "2026-10-26",
+        "entry_px": 42.77,
+        "last_px": 42.77,
+        "min_hold": 1,
+        "peak_px": 42.77,
+        "shares": 47,
+        "ticker": "LQDA"
+      },
+      {
+        "cost_primary": 2042.8451999999997,
+        "entry_date": "2026-10-26",
+        "entry_px": 3.1,
+        "last_px": 3.1,
+        "min_hold": 1,
+        "peak_px": 3.1,
+        "shares": 653,
+        "ticker": "NAUT"
+      },
+      {
+        "cost_primary": 2041.9685999999995,
+        "entry_date": "2026-10-26",
+        "entry_px": 1.41,
+        "last_px": 1.41,
+        "min_hold": 1,
+        "peak_px": 1.41,
+        "shares": 1428,
+        "ticker": "UWMC"
+      }
+    ],
+    "kind": "mark",
+    "open_fill_sha256": "91bddbc4f2c2245edbcf6efcedf21b77531986c3f04b97be1333ba0ab22b7c6c",
+    "plan_sha256": "f94c1297a01fb842ef6be5bfa49745a5f8a5405682af24ed9abb9f6f186cc75c",
+    "pnl_status": "marked",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "9e111020270f5ddda695392807a54a3063f73f58d99a4c318260700978e6a230"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-26",
+    "entry_date": "2026-10-21",
+    "entry_px": 45.490002,
+    "fill": 45.830002,
+    "kind": "close",
+    "pnl_primary": -9.523500899999817,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "1195295155aef0efa92042408167119dae9b54b6b56ba45589cf4e762c4e75b5",
+    "shares": 45,
+    "ticker": "BRZE"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-26",
+    "entry_date": "2026-10-22",
+    "entry_px": 2.93,
+    "fill": 2.725,
+    "kind": "close",
+    "pnl_primary": -1.4990749999999995,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "7b25f51265cf96072f34726e3471e503607f2d81063f324303798ad433cf1c4d",
+    "shares": 5,
+    "ticker": "CYPH"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-26",
+    "entry_date": "2026-10-21",
+    "entry_px": 32.52,
+    "fill": 30.93,
+    "kind": "close",
+    "pnl_primary": -124.54075000000012,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "6cebda74f66b9253e3845edc7eabdbf993ec64468a02b772955a0d0bd05bd51b",
+    "shares": 63,
+    "ticker": "MAZE"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-26",
+    "entry_date": "2026-10-21",
+    "entry_px": 41.200001,
+    "fill": 43.099998,
+    "kind": "close",
+    "pnl_primary": 68.14545324500045,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "ac78fa0a9c7ef8323da118d049c5a40a2b18eda87c261df875c2d8da5f58e563",
+    "shares": 49,
+    "ticker": "TRAX"
   }
 ]
