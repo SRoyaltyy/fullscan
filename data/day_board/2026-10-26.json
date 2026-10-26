@@ -1,17 +1,13 @@
 {
   "date": "2026-10-26",
-  "generated_at": "2026-10-26T05:55:20.386181-04:00",
+  "generated_at": "2026-10-26T12:31:48.668933-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-26_predict.md` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-10-26_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-26_judge.md` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
     "ok": 6,
-    "partial": 1,
-    "fail": 1,
+    "partial": 2,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -181,9 +177,9 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 6,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -239,10 +235,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-10-26_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 3975659,
+          "said": "3975659B on disk",
           "bullets": []
         },
         {
@@ -250,22 +246,31 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-10-26_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 28479,
+          "said": "35 events \u00b7 elevated uncertainty \u00b7 Markets enter the final week of October with a Fed hold largely priced, sticky inflation, Brent above $111 on Hormuz risk, and a pivotal meg",
+          "bullets": [
+            "US September CPI \u2014 +0.6% m/m, 3.7% y/y",
+            "US September retail sales \u2014 +0.8% m/m",
+            "China Q3 GDP \u2014 4.5% y/y, beats 4.3% prior",
+            "China September industrial production +5.5%, retail sales +1.1%"
+          ]
         },
         {
           "key": "judge",
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-26_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9898,
+          "said": "Input set is not empty, but mechanical usable is thin: it is dominated by Fed/Powell keyword noise. Ranking leans on elevated FINVIZ themes plus noise rescues.",
+          "bullets": [
+            "1. **FOMC + Big Tech earnings \u201cSuper Week\u201d; US futures higher** \u2014 dominant rates/risk binary and mega-cap index-beta cluster; outranks all FX Fed chatter. Provisional channel: **risk/rates**.",
+            "2. **Record October Hormuz shipping attacks; Brent eases from six-month high** \u2014 oil-supply/inflation transmission remains a live risk-appetite and energy-sector driver. Provisional channel: **risk**.",
+            "3. **Earnings week: MSFT, GOOGL, AMZN, XOM, BA, VZ; Big Tech earnings in focus** \u2014 mega-cap earnings are direct SPX/NDX beta, separate from the FOMC binary. Provisional channel: **sector_fundamental**."
+          ]
         },
         {
           "key": "research_json",
@@ -294,22 +299,32 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-10-26_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 66138,
+          "said": "77 ticker actions \u00b7 6 events \u00b7 5561 headlines \u00b7 CRM SELL, NOW SELL, QNT SELL, PCOR SELL, UPBD SELL, DSP SELL, UBER SELL, ADP SELL",
+          "bullets": [
+            "SELL CRM",
+            "SELL NOW",
+            "SELL QNT",
+            "SELL PCOR"
+          ]
         },
         {
           "key": "general",
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-26_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11438,
+          "said": "DOWN -2.128",
+          "bullets": [
+            "bad: fresh IRGC Hormuz tanker attack",
+            "bad: AI/semis selloff deepens (Kospi -1.46%)",
+            "bad: Big Tech earnings gate unsigned",
+            "good: France dodges Moody's downgrade"
+          ]
         },
         {
           "key": "board",
@@ -484,8 +499,14 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "general DOWN  -2.128",
+      "bullets": [
+        "bad: fresh IRGC Hormuz tanker attack",
+        "bad: AI/semis selloff deepens (Kospi -1.46%)",
+        "bad: Big Tech earnings gate unsigned",
+        "good: France dodges Moody's downgrade",
+        "good: oil retreats from six-month high"
+      ]
     },
     {
       "key": "weather",
@@ -519,19 +540,19 @@
           "path": "01_daily/weather/2026-10-26_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9440 vix=calm yields=falling",
-          "size": 9440,
-          "said": "hostile 9 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=9630 vix=calm yields=falling",
+          "size": 9630,
+          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
-            "events bull 5 / bear 8"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+            "events bull 3 / bear 4"
           ]
         }
       ],
-      "said": "hostile 9 \u00b7 neutral 2",
+      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
-        "events bull 5 / bear 8"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+        "events bull 3 / bear 4"
       ]
     },
     {
@@ -552,10 +573,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 7561212,
+          "size": 7564827,
           "said": "27 rows",
           "bullets": [
-            "ADSK, PM, SN, AUPH, ELV, TOST, V, SHEL"
+            "ADSK, ELV, SN, PM, SWKS, V, CURI, CRWD"
           ]
         },
         {
@@ -565,24 +586,24 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8370416,
+          "size": 8374046,
           "said": "25 rows",
           "bullets": [
-            "SN, HAS, SHEL, BP, ATRC, PM, CNK, PANW"
+            "SN, BIIB, BJ, BP, SHEL, HAS, PM, CVX"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "SN, HAS, SHEL, BP, ATRC"
+        "SN, BIIB, BJ, BP, SHEL"
       ]
     },
     {
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -593,11 +614,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-10-26_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 66138,
+          "said": "77 ticker actions \u00b7 6 events \u00b7 5561 headlines \u00b7 CRM SELL, NOW SELL, QNT SELL, PCOR SELL, UPBD SELL, DSP SELL, UBER SELL, ADP SELL",
+          "bullets": [
+            "SELL CRM",
+            "SELL NOW",
+            "SELL QNT",
+            "SELL PCOR"
+          ]
         },
         {
           "key": "in_digest",
@@ -626,15 +652,24 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "77 ticker actions \u00b7 6 events \u00b7 5561 headlines \u00b7 CRM SELL, NOW SELL, QNT SELL, PCOR SELL, UPBD SELL, DSP SELL, UBER SELL, ADP SELL",
+      "bullets": [
+        "SELL CRM",
+        "SELL NOW",
+        "SELL QNT",
+        "SELL PCOR",
+        "SELL UPBD",
+        "SELL DSP",
+        "SELL UBER",
+        "SELL ADP"
+      ]
     },
     {
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "OK",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
@@ -645,11 +680,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-26_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11438,
+          "said": "DOWN -2.128",
+          "bullets": [
+            "bad: fresh IRGC Hormuz tanker attack",
+            "bad: AI/semis selloff deepens (Kospi -1.46%)",
+            "bad: Big Tech earnings gate unsigned",
+            "good: France dodges Moody's downgrade"
+          ]
         },
         {
           "key": "in_board",
@@ -667,11 +707,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-10-26_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 66138,
+          "said": "77 ticker actions \u00b7 6 events \u00b7 5561 headlines \u00b7 CRM SELL, NOW SELL, QNT SELL, PCOR SELL, UPBD SELL, DSP SELL, UBER SELL, ADP SELL",
+          "bullets": [
+            "SELL CRM",
+            "SELL NOW",
+            "SELL QNT",
+            "SELL PCOR"
+          ]
         },
         {
           "key": "in_digest",
@@ -693,11 +738,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-26_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9898,
+          "said": "Input set is not empty, but mechanical usable is thin: it is dominated by Fed/Powell keyword noise. Ranking leans on elevated FINVIZ themes plus noise rescues.",
+          "bullets": [
+            "1. **FOMC + Big Tech earnings \u201cSuper Week\u201d; US futures higher** \u2014 dominant rates/risk binary and mega-cap index-beta cluster; outranks all FX Fed chatter. Provisional channel: **risk/rates**.",
+            "2. **Record October Hormuz shipping attacks; Brent eases from six-month high** \u2014 oil-supply/inflation transmission remains a live risk-appetite and energy-sector driver. Provisional channel: **risk**.",
+            "3. **Earnings week: MSFT, GOOGL, AMZN, XOM, BA, VZ; Big Tech earnings in focus** \u2014 mega-cap earnings are direct SPX/NDX beta, separate from the FOMC binary. Provisional channel: **sector_fundamental**."
+          ]
         },
         {
           "key": "in_weather",
@@ -705,12 +754,12 @@
           "path": "01_daily/weather/2026-10-26_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9440 vix=calm yields=falling",
-          "size": 9440,
-          "said": "hostile 9 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=9630 vix=calm yields=falling",
+          "size": 9630,
+          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
-            "events bull 5 / bear 8"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+            "events bull 3 / bear 4"
           ]
         },
         {
@@ -720,10 +769,10 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8370416,
+          "size": 8374046,
           "said": "25 rows",
           "bullets": [
-            "SN, HAS, SHEL, BP, ATRC, PM, CNK, PANW"
+            "SN, BIIB, BJ, BP, SHEL, HAS, PM, CVX"
           ]
         },
         {
@@ -733,10 +782,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2241694,
-          "said": "214 rows",
+          "size": 2218150,
+          "said": "221 rows",
           "bullets": [
-            "GLBE, SHOO, HLNE, VCTR, WT, HOOD, AAMI, RGA"
+            "GLBE, SHOO, HLNE, VCTR, WT, HOOD, ANF, AAMI"
           ]
         },
         {
@@ -814,7 +863,7 @@
           "bullets": []
         }
       ],
-      "said": "214 rows",
+      "said": "221 rows",
       "bullets": [
         "GLBE, SHOO, HLNE, VCTR, WT"
       ]
@@ -957,14 +1006,25 @@
         "morning S missing"
       ]
     },
-    "general": {},
+    "general": {
+      "said": "DOWN  -2.128",
+      "bullets": [
+        "bad: fresh IRGC Hormuz tanker attack",
+        "bad: AI/semis selloff deepens (Kospi -1.46%)",
+        "bad: Big Tech earnings gate unsigned",
+        "good: France dodges Moody's downgrade",
+        "good: oil retreats from six-month high"
+      ],
+      "score": "-2.128",
+      "direction": "down"
+    },
     "sectors": {},
     "news": {},
     "weather": {
-      "said": "hostile 9 \u00b7 neutral 2",
+      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
-        "events bull 5 / bear 8"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+        "events bull 3 / bear 4"
       ]
     }
   },
@@ -1748,6 +1808,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-26\n_Generated 2026-10-26T09:55:18 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$114,803.76** (after 09:30 $114,803.76 \u00b7 after 16:00 $114,803.76)\n- Prior close **$114,803.76** \u00b7 09:30 **$114,803.76** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$114,803.76**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$114,803.76** \u00b7 2026-10-23 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\":"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-26",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-26T12:31:47.612581-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-26_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9630,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-26_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5197,
+          "preview": "# Weather report \u2014 2026-10-26\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-26\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
@@ -1867,6 +1952,22 @@
       "commit_msg": "auto: free news intake [skip ci]",
       "workflow": "Free news intake",
       "run_id": "40341010822",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "01_daily/weather/2026-10-26_weather.json",
+      "at": "2026-10-26T12:31:49-04:00",
+      "commit_msg": "auto: land weather [2026-10-26]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "40357943992",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-26.json",
+      "at": "2026-10-26T12:31:49-04:00",
+      "commit_msg": "auto: land weather [2026-10-26]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "40357943992",
       "manifest": "research/input_freeze/2026-10-26/manifest.json"
     }
   ]
