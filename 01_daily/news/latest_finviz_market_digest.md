@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-26
 
-**Generated:** 2026-10-26T04:26:00.531841-04:00 (America/New_York)
+**Generated:** 2026-10-26T04:27:27.955002-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to a mixed open as traders eye Verizon earnings, Chicago Fed data and upcoming Fed meeting
 **Prior close:** SPX —  Nasdaq —  Dow —
