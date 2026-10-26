@@ -1755,5 +1755,39 @@
     "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",
     "factor_mine": "https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/",
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
-  }
+  },
+  "frozen_write_skips": [
+    {
+      "path": "01_daily/_channel1/2026-10-26_predict.json",
+      "at": "2026-10-26T09:33:32-04:00",
+      "commit_msg": "auto: universe labels + weather + match [2026-10-26]",
+      "workflow": "Label + Weather (daily)",
+      "run_id": "40329126612",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "01_daily/weather/2026-10-26_weather.json",
+      "at": "2026-10-26T09:33:32-04:00",
+      "commit_msg": "auto: universe labels + weather + match [2026-10-26]",
+      "workflow": "Label + Weather (daily)",
+      "run_id": "40329126612",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/exports/finviz_2026-10-26.scraped_at",
+      "at": "2026-10-26T09:33:32-04:00",
+      "commit_msg": "auto: universe labels + weather + match [2026-10-26]",
+      "workflow": "Label + Weather (daily)",
+      "run_id": "40329126612",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/join/2026-10-26_ranked.csv",
+      "at": "2026-10-26T09:33:32-04:00",
+      "commit_msg": "auto: universe labels + weather + match [2026-10-26]",
+      "workflow": "Label + Weather (daily)",
+      "run_id": "40329126612",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    }
+  ]
 }
