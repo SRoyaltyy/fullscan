@@ -5877,5 +5877,94 @@
     "reason": "missing: plan not sealed before open",
     "recipe": "union_hot_n4_holdup__w0",
     "sha256": "bed546f601d9e8b0eb5cad0f46a07c389070b24d5918e36137d4f5e8e2131b8c"
+  },
+  {
+    "bar_cutoff": "2026-10-23",
+    "cash_before": 30.423255676510678,
+    "committed_at": "2026-10-26T13:08:03Z",
+    "date": "2026-10-26",
+    "excluded_unexplained_legs": [],
+    "finviz_source": {
+      "commit": "bbff0188e231a4290962081ca2385da80e7fd0e5",
+      "commit_time": "2026-10-23T20:57:35Z",
+      "file_sha256": "8394e7e4812aa3df1d4bf508d983de1a3b33272c28dbb64b26f10da3ea0ac864",
+      "path": "data/snapshots/2026-10-23.csv",
+      "snapshot_date": "2026-10-23",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": false,
+    "kind": "plan",
+    "morning_s": -2.128,
+    "picks": [
+      {
+        "fv_avg_volume": 4129.46,
+        "fv_price": 3.24,
+        "rank": 1,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "NAUT"
+      },
+      {
+        "fv_avg_volume": 15834.11,
+        "fv_price": 1.45,
+        "rank": 2,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "UWMC"
+      },
+      {
+        "fv_avg_volume": 3192.78,
+        "fv_price": 42.65,
+        "rank": 3,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "LQDA"
+      },
+      {
+        "fv_avg_volume": 5756.66,
+        "fv_price": 5.96,
+        "rank": 4,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "BMBL"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "hold-expired",
+        "shares": 45,
+        "ticker": "BRZE"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 5,
+        "ticker": "CYPH"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 63,
+        "ticker": "MAZE"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 49,
+        "ticker": "TRAX"
+      }
+    ],
+    "recipe": "union_hot_n4_holdup__w0",
+    "s_source": {
+      "blob_sha": "83123e25f22d6185a9bcba157fccd8e7b818dc53",
+      "kind": "predict",
+      "path": "01_daily/general/2026-10-26_predict.md",
+      "server_time_utc": "2026-10-26T19:06:09+08:00",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "f94c1297a01fb842ef6be5bfa49745a5f8a5405682af24ed9abb9f6f186cc75c"
   }
 ]
