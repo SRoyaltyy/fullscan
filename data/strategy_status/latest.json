@@ -6,9 +6,9 @@
    "SIT": 0
   },
   "factor_mine": {
-   "MISSING": 341,
-   "OK": 0,
-   "SIT": 0
+   "MISSING": 0,
+   "OK": 203,
+   "SIT": 138
   },
   "factor_mine_preopen": {
    "MISSING": 2,
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-10-26",
- "generated_at": "2026-10-26T07:04:17-04:00",
+ "generated_at": "2026-10-26T07:06:30-04:00",
  "strategies": [
   {
    "buys": [
@@ -67,64 +67,64 @@
    ],
    "family": "factor_mine",
    "name": "coil_h3_exit_alarm",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_e1er_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_e1s_7030_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_ee1_3070_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_ee1_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_ee1_7030_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_eer_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -138,10 +138,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_ef_3070_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -155,10 +155,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_ef_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -172,10 +172,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_ef_7030_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -186,10 +186,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_eh_3070_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -200,10 +200,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_eh_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -214,10 +214,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_eh_7030_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -228,10 +228,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_ehs_601525_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -242,19 +242,19 @@
    ],
    "family": "factor_mine",
    "name": "combo_ehs_702010_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_ej_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -266,10 +266,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_en_3070_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -281,10 +281,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_en_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -296,37 +296,37 @@
    ],
    "family": "factor_mine",
    "name": "combo_en_7030_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_ers_7030_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_es_8020_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_es_9010_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -340,10 +340,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_fe1_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -357,10 +357,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_fe_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -374,10 +374,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_fer_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -391,10 +391,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_fes_403030_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -411,10 +411,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_fh_7030_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -428,10 +428,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_fse_333_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -442,10 +442,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_he1_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -456,10 +456,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_her_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -476,10 +476,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_hf_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -490,10 +490,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_hj_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -508,10 +508,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_hn_3070_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -526,10 +526,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_hn_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -544,28 +544,28 @@
    ],
    "family": "factor_mine",
    "name": "combo_hn_7030_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_je1_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_jer_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -579,19 +579,19 @@
    ],
    "family": "factor_mine",
    "name": "combo_jf_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_jse_333_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -603,10 +603,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_ne1_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -618,10 +618,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_ner_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -640,10 +640,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_nf_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -655,10 +655,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_nj_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -670,10 +670,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_nse_333_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -684,100 +684,100 @@
    ],
    "family": "factor_mine",
    "name": "combo_oh_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_p2s_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_ps_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_ps_7030_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_se1_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_se_3070_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_se_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_se_5050_skip",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_se_5050_split",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_se_5050_weather",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_se_7030_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -788,10 +788,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_333_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -802,10 +802,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_333_skip",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -816,10 +816,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_333_split",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -830,10 +830,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_333_weather",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -844,10 +844,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_403525_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -858,10 +858,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_404020_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -872,10 +872,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_451540_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -886,10 +886,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_502525_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -900,10 +900,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_502525_split",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -914,19 +914,19 @@
    ],
    "family": "factor_mine",
    "name": "combo_seh_601525_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_ser_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -940,10 +940,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_sf_3070_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -957,10 +957,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_sf_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -974,10 +974,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_sf_7030_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -988,10 +988,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_sh_3070_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1002,10 +1002,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_sh_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1016,10 +1016,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_sh_7030_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1030,37 +1030,37 @@
    ],
    "family": "factor_mine",
    "name": "combo_sh_macd_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_sj_3070_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_sj_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "combo_sj_7030_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -1072,10 +1072,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_sn_3070_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1087,10 +1087,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_sn_5050_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1102,10 +1102,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_sn_7030_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1117,10 +1117,10 @@
    ],
    "family": "factor_mine",
    "name": "combo_snj_333_shared",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
+   "note": "combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1134,10 +1134,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1151,10 +1151,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1168,10 +1168,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3_cut",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1185,10 +1185,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3_half",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1202,10 +1202,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3_rankw",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1219,10 +1219,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3_sboost",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1236,10 +1236,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3_sizeup",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1253,10 +1253,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3_time",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1270,10 +1270,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3_topheavy",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1287,10 +1287,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h3_trail",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1304,10 +1304,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1321,10 +1321,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_cut",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1338,10 +1338,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_half",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1355,10 +1355,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_rankw",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1372,10 +1372,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_s8",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1389,10 +1389,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_sboost",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1406,10 +1406,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_sizeup",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1423,10 +1423,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_time",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1440,10 +1440,10 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_topheavy",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1457,127 +1457,127 @@
    ],
    "family": "factor_mine",
    "name": "flatten_h5_trail",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_cut",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_half",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_rankw",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_sboost",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_sizeup",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_time",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_topheavy",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_trail",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_vol_g_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_white_yday_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -1590,10 +1590,10 @@
    ],
    "family": "factor_mine",
    "name": "ohlc_hot_coil_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1608,10 +1608,10 @@
    ],
    "family": "factor_mine",
    "name": "ohlc_hot_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1626,10 +1626,10 @@
    ],
    "family": "factor_mine",
    "name": "ohlc_hot_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1644,73 +1644,73 @@
    ],
    "family": "factor_mine",
    "name": "ohlc_hot_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "oppset_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_mega_green_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_mega_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_mega_h2",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -1724,10 +1724,10 @@
    ],
    "family": "factor_mine",
    "name": "probable_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1741,10 +1741,10 @@
    ],
    "family": "factor_mine",
    "name": "probable_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1758,10 +1758,10 @@
    ],
    "family": "factor_mine",
    "name": "probable_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1771,10 +1771,10 @@
    ],
    "family": "factor_mine",
    "name": "probable_probable_ok_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1784,10 +1784,10 @@
    ],
    "family": "factor_mine",
    "name": "probable_probable_ok_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1802,10 +1802,10 @@
    ],
    "family": "factor_mine",
    "name": "short_alarm_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1820,10 +1820,10 @@
    ],
    "family": "factor_mine",
    "name": "short_alarm_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1832,37 +1832,37 @@
    ],
    "family": "factor_mine",
    "name": "short_clk_ext_veto_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "short_clk_ext_veto_opp_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "short_clk_neg_weak_fail_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "short_clk_neg_weak_fail_opp_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -1877,10 +1877,10 @@
    ],
    "family": "factor_mine",
    "name": "short_extended_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1895,10 +1895,10 @@
    ],
    "family": "factor_mine",
    "name": "short_extended_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1913,10 +1913,10 @@
    ],
    "family": "factor_mine",
    "name": "short_last_red_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1931,10 +1931,10 @@
    ],
    "family": "factor_mine",
    "name": "short_last_red_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1949,10 +1949,10 @@
    ],
    "family": "factor_mine",
    "name": "short_macd_dn_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -1967,82 +1967,82 @@
    ],
    "family": "factor_mine",
    "name": "short_macd_dn_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "short_news_head_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "short_news_or_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "short_news_pack_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "short_news_r_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "short_news_r_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "short_news_r_macd_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "short_r_down_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "short_r_down_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -2056,10 +2056,10 @@
    ],
    "family": "factor_mine",
    "name": "short_rsi_ob_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2073,10 +2073,10 @@
    ],
    "family": "factor_mine",
    "name": "short_rsi_ob_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2091,10 +2091,10 @@
    ],
    "family": "factor_mine",
    "name": "union_ab_g_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2109,10 +2109,10 @@
    ],
    "family": "factor_mine",
    "name": "union_ab_g_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2127,10 +2127,10 @@
    ],
    "family": "factor_mine",
    "name": "union_blue_coil_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2145,10 +2145,10 @@
    ],
    "family": "factor_mine",
    "name": "union_blue_coil_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2163,10 +2163,10 @@
    ],
    "family": "factor_mine",
    "name": "union_blue_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2181,28 +2181,28 @@
    ],
    "family": "factor_mine",
    "name": "union_blue_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_blue_vol_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_blue_vol_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -2217,10 +2217,10 @@
    ],
    "family": "factor_mine",
    "name": "union_break10_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2235,10 +2235,10 @@
    ],
    "family": "factor_mine",
    "name": "union_break10_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2253,10 +2253,10 @@
    ],
    "family": "factor_mine",
    "name": "union_candle_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2271,10 +2271,10 @@
    ],
    "family": "factor_mine",
    "name": "union_candle_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2289,10 +2289,10 @@
    ],
    "family": "factor_mine",
    "name": "union_candle_score_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2307,37 +2307,37 @@
    ],
    "family": "factor_mine",
    "name": "union_candle_score_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_catal_present_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_catal_present_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_earn_guide_react_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -2345,10 +2345,10 @@
    ],
    "family": "factor_mine",
    "name": "union_clk_flow_coil_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2359,37 +2359,37 @@
    ],
    "family": "factor_mine",
    "name": "union_clk_fresh_cat_coil_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_fresh_cat_coil_opp_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_hold_vs_sector_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_hold_vs_sector_opp_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -2398,10 +2398,10 @@
    ],
    "family": "factor_mine",
    "name": "union_clk_insider_cash_stab_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2415,19 +2415,19 @@
    ],
    "family": "factor_mine",
    "name": "union_clk_mom_break_peer_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_mom_break_peer_opp_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -2439,28 +2439,28 @@
    ],
    "family": "factor_mine",
    "name": "union_clk_nr7_mom_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_nr7_mom_opp_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_r_up_coil_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -2475,10 +2475,10 @@
    ],
    "family": "factor_mine",
    "name": "union_coil_green_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2493,10 +2493,10 @@
    ],
    "family": "factor_mine",
    "name": "union_coil_green_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2511,10 +2511,10 @@
    ],
    "family": "factor_mine",
    "name": "union_coil_off_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2529,10 +2529,10 @@
    ],
    "family": "factor_mine",
    "name": "union_coil_off_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2547,10 +2547,10 @@
    ],
    "family": "factor_mine",
    "name": "union_coil_off_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2565,10 +2565,10 @@
    ],
    "family": "factor_mine",
    "name": "union_cond_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2583,10 +2583,10 @@
    ],
    "family": "factor_mine",
    "name": "union_cond_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2597,64 +2597,64 @@
    ],
    "family": "factor_mine",
    "name": "union_cond_n4_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_e_fresh_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_e_fresh_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_e_green_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_e_green_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_earn_react_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_earn_react_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -2663,10 +2663,10 @@
    ],
    "family": "factor_mine",
    "name": "union_flow_in_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2675,10 +2675,10 @@
    ],
    "family": "factor_mine",
    "name": "union_flow_in_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2687,28 +2687,28 @@
    ],
    "family": "factor_mine",
    "name": "union_flow_in_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_flow_in_white_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_flow_in_white_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -2723,10 +2723,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2741,10 +2741,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h1_cut",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2759,10 +2759,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h1_half",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2777,10 +2777,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h1_rankw",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2795,10 +2795,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h1_sboost",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2813,10 +2813,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h1_sizeup",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2831,10 +2831,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h1_time",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2849,10 +2849,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h1_topheavy",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2867,10 +2867,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h1_trail",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2885,10 +2885,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2903,10 +2903,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_cut",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2921,10 +2921,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_exit_alarm",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2939,10 +2939,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_exit_news_r",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2957,10 +2957,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_exit_red",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2975,10 +2975,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_half",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -2993,10 +2993,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_rankw",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3011,10 +3011,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_sboost",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3029,10 +3029,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_sizeup",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3047,10 +3047,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_time",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3065,10 +3065,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_topheavy",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3083,10 +3083,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h3_trail",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3101,10 +3101,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3119,10 +3119,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_cut",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3137,10 +3137,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_exit_alarm",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3155,10 +3155,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_half",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3173,10 +3173,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_rankw",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3191,10 +3191,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_sboost",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3209,10 +3209,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_sizeup",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3227,10 +3227,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_time",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3245,10 +3245,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_topheavy",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3263,10 +3263,10 @@
    ],
    "family": "factor_mine",
    "name": "union_h5_trail",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3285,10 +3285,10 @@
    ],
    "family": "factor_mine",
    "name": "union_hot_n12_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3299,10 +3299,10 @@
    ],
    "family": "factor_mine",
    "name": "union_hot_n4_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; factor-mine cash-start recipe (pick_day on the session panel); sells are the continuous $10k book list-drop after min-hold; Clock-B/oppset do not widen ",
+   "note": "factor-mine cash-start recipe (pick_day on the session panel); sells are the continuous $10k book list-drop after min-hold; Clock-B/oppset do not widen the Webull HOT4 wire \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3317,10 +3317,10 @@
    ],
    "family": "factor_mine",
    "name": "union_hot_n4_h1_preopen",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3331,10 +3331,10 @@
    ],
    "family": "factor_mine",
    "name": "union_hot_n4_holdup",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3349,10 +3349,10 @@
    ],
    "family": "factor_mine",
    "name": "union_hot_n4_holdup_preopen",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3367,10 +3367,10 @@
    ],
    "family": "factor_mine",
    "name": "union_hot_score_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3385,10 +3385,10 @@
    ],
    "family": "factor_mine",
    "name": "union_hot_score_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3403,10 +3403,10 @@
    ],
    "family": "factor_mine",
    "name": "union_join_g_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3421,10 +3421,10 @@
    ],
    "family": "factor_mine",
    "name": "union_join_g_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3439,10 +3439,10 @@
    ],
    "family": "factor_mine",
    "name": "union_join_present_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3457,28 +3457,28 @@
    ],
    "family": "factor_mine",
    "name": "union_join_present_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_join_vol_green_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_join_vol_green_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -3493,10 +3493,10 @@
    ],
    "family": "factor_mine",
    "name": "union_last_green_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3511,10 +3511,10 @@
    ],
    "family": "factor_mine",
    "name": "union_last_green_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3529,10 +3529,10 @@
    ],
    "family": "factor_mine",
    "name": "union_last_green_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3547,10 +3547,10 @@
    ],
    "family": "factor_mine",
    "name": "union_last_red_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3565,10 +3565,10 @@
    ],
    "family": "factor_mine",
    "name": "union_last_red_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3583,10 +3583,10 @@
    ],
    "family": "factor_mine",
    "name": "union_macd_hist_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3601,10 +3601,10 @@
    ],
    "family": "factor_mine",
    "name": "union_macd_hist_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3619,10 +3619,10 @@
    ],
    "family": "factor_mine",
    "name": "union_macd_up_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3637,10 +3637,10 @@
    ],
    "family": "factor_mine",
    "name": "union_macd_up_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3649,10 +3649,10 @@
    ],
    "family": "factor_mine",
    "name": "union_macd_xup_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3661,91 +3661,91 @@
    ],
    "family": "factor_mine",
    "name": "union_macd_xup_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_both_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_both_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam61_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam61_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam71_conv_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam71_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam71_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam71_n2_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam91_n1_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -3757,10 +3757,10 @@
    ],
    "family": "factor_mine",
    "name": "union_news_g_cond_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3772,10 +3772,10 @@
    ],
    "family": "factor_mine",
    "name": "union_news_g_cond_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3786,10 +3786,10 @@
    ],
    "family": "factor_mine",
    "name": "union_news_g_conv_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3800,10 +3800,10 @@
    ],
    "family": "factor_mine",
    "name": "union_news_g_conv_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3815,10 +3815,10 @@
    ],
    "family": "factor_mine",
    "name": "union_news_g_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3830,10 +3830,10 @@
    ],
    "family": "factor_mine",
    "name": "union_news_g_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3845,10 +3845,10 @@
    ],
    "family": "factor_mine",
    "name": "union_news_g_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3860,10 +3860,10 @@
    ],
    "family": "factor_mine",
    "name": "union_news_head_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3875,28 +3875,28 @@
    ],
    "family": "factor_mine",
    "name": "union_news_head_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_missing_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_missing_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -3908,10 +3908,10 @@
    ],
    "family": "factor_mine",
    "name": "union_news_or_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -3923,154 +3923,154 @@
    ],
    "family": "factor_mine",
    "name": "union_news_or_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net2_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net2_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net3_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net3_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net4_conv_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net4_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net4_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net4_rw_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net5_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net5_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_pack_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_pack_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_pack_net2_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_pack_net2_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_pack_net3_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_pack_net3_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -4085,10 +4085,10 @@
    ],
    "family": "factor_mine",
    "name": "union_news_present_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -4103,73 +4103,73 @@
    ],
    "family": "factor_mine",
    "name": "union_news_present_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_vol_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_vol_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_oppset_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_overnight_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_overnight_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_r_up_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_r_up_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -4184,10 +4184,10 @@
    ],
    "family": "factor_mine",
    "name": "union_ret_5_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -4202,10 +4202,10 @@
    ],
    "family": "factor_mine",
    "name": "union_ret_5_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -4220,10 +4220,10 @@
    ],
    "family": "factor_mine",
    "name": "union_rsi_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -4238,10 +4238,10 @@
    ],
    "family": "factor_mine",
    "name": "union_rsi_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -4251,10 +4251,10 @@
    ],
    "family": "factor_mine",
    "name": "union_rsi_os_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -4264,10 +4264,10 @@
    ],
    "family": "factor_mine",
    "name": "union_rsi_os_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -4277,10 +4277,10 @@
    ],
    "family": "factor_mine",
    "name": "union_rsi_os_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -4290,10 +4290,10 @@
    ],
    "family": "factor_mine",
    "name": "union_rsi_os_macd_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -4303,91 +4303,91 @@
    ],
    "family": "factor_mine",
    "name": "union_rsi_os_macd_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_ab_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_ab_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_g_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_g_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_g_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_green_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_green_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_missing_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_missing_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -4402,10 +4402,10 @@
    ],
    "family": "factor_mine",
    "name": "union_w_hot_candle_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -4420,10 +4420,10 @@
    ],
    "family": "factor_mine",
    "name": "union_w_hot_candle_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -4438,10 +4438,10 @@
    ],
    "family": "factor_mine",
    "name": "union_w_hot_cond_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -4456,154 +4456,154 @@
    ],
    "family": "factor_mine",
    "name": "union_w_hot_cond_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_any_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_any_h2",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_any_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_any_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h2",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h5_s12",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_coil_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_coil_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_yday_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_yday_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "SIT"
   },
   {
    "buys": [
@@ -4618,10 +4618,10 @@
    ],
    "family": "factor_mine",
    "name": "yday_gainer_h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -4636,10 +4636,10 @@
    ],
    "family": "factor_mine",
    "name": "yday_gainer_h3",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -4654,10 +4654,10 @@
    ],
    "family": "factor_mine",
    "name": "yday_gainer_h5",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "note": "would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-26_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -5110,7 +5110,7 @@
    "buys": [],
    "family": "h1",
    "name": "h1",
-   "note": "missing 01_daily/general/2026-10-26_predict.md; no sealed plan row",
+   "note": "no sealed plan row",
    "sells": [],
    "source": "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl",
    "status": "MISSING"
