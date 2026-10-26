@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-24T07:46:22.645802-04:00",
+  "generated": "2026-10-26T13:35:35.244069-04:00",
   "capital": 10000.0,
   "dates": [
     "2026-08-13",
@@ -56,7 +56,8 @@
     "2026-10-20",
     "2026-10-21",
     "2026-10-22",
-    "2026-10-23"
+    "2026-10-23",
+    "2026-10-26"
   ],
   "scenarios": [
     {
@@ -305,6 +306,7 @@
       -0.02,
       -0.02,
       -0.02,
+      -0.02,
       -0.02
     ],
     "equity": [
@@ -362,7 +364,8 @@
       10235.38,
       10233.33,
       10231.28,
-      10229.23
+      10229.23,
+      10227.18
     ]
   },
   "sleeves": {
@@ -378,15 +381,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 11,
-        "n_loss_days": 42,
-        "p_loss_day": 0.7636,
-        "p_win_day": 0.2,
-        "mean_day": -4.837,
+        "n_loss_days": 43,
+        "p_loss_day": 0.7679,
+        "p_win_day": 0.1964,
+        "mean_day": -4.931,
         "avg_win_day": 0.486,
-        "avg_loss_day": -6.462,
-        "cum_sum": -266.053
+        "avg_loss_day": -6.546,
+        "cum_sum": -276.138
       },
       "equity": [
         9953.57,
@@ -443,9 +446,10 @@
         270.34,
         266.34,
         257.43,
-        256.82
+        256.82,
+        230.92
       ],
-      "final": 256.82,
+      "final": 230.92,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -10350,6 +10354,39 @@
           "cash": 199.42,
           "invested": 57.4,
           "fees_cum": 702.76
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": -10.085,
+          "equity": 230.92,
+          "n_held": 7,
+          "n_buy": 0,
+          "n_sell": 1,
+          "n_skip": 6,
+          "n_cand": 7,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "HITI"
+          ],
+          "held": [
+            "SGRY"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "HITI",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.5899999141693115,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 199.42,
+          "invested": 31.5,
+          "fees_cum": 702.76
         }
       ]
     },
@@ -10365,15 +10402,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 8,
-        "n_loss_days": 45,
-        "p_loss_day": 0.8182,
-        "p_win_day": 0.1455,
-        "mean_day": -4.979,
+        "n_loss_days": 46,
+        "p_loss_day": 0.8214,
+        "p_win_day": 0.1429,
+        "mean_day": -5.267,
         "avg_win_day": 0.235,
-        "avg_loss_day": -6.127,
-        "cum_sum": -273.845
+        "avg_loss_day": -6.453,
+        "cum_sum": -294.963
       },
       "equity": [
         9955.38,
@@ -10430,9 +10467,10 @@
         283.36,
         283.85,
         274.95,
-        273.61
+        273.61,
+        215.83
       ],
-      "final": 273.61,
+      "final": 215.83,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -22040,6 +22078,49 @@
           "cash": 200.08,
           "invested": 73.53,
           "fees_cum": 808.3
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": -21.118,
+          "equity": 215.83,
+          "n_held": 11,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 10,
+          "n_cand": 11,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "MD",
+            "HITI"
+          ],
+          "held": [
+            "SGRY"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "MD",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 29.290000915527344,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "HITI",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.5899999141693115,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 200.08,
+          "invested": 15.75,
+          "fees_cum": 808.3
         }
       ]
     },
@@ -22055,15 +22136,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 9,
-        "n_loss_days": 45,
-        "p_loss_day": 0.8182,
-        "p_win_day": 0.1636,
-        "mean_day": 5.146,
+        "n_loss_days": 46,
+        "p_loss_day": 0.8214,
+        "p_win_day": 0.1607,
+        "mean_day": 4.472,
         "avg_win_day": 74.029,
-        "avg_loss_day": -8.516,
-        "cum_sum": 283.044
+        "avg_loss_day": -9.04,
+        "cum_sum": 250.427
       },
       "equity": [
         9880.7,
@@ -22120,9 +22201,10 @@
         424.41,
         421.98,
         393.08,
-        390.5
+        390.5,
+        263.13
       ],
-      "final": 390.5,
+      "final": 263.13,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -45495,6 +45577,97 @@
           "cash": 263.13,
           "invested": 127.37,
           "fees_cum": 2703.87
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": -32.617,
+          "equity": 263.13,
+          "n_held": 25,
+          "n_buy": 0,
+          "n_sell": 7,
+          "n_skip": 25,
+          "n_cand": 25,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "PACB",
+            "COLL",
+            "IOVA",
+            "QMCO",
+            "AEHL",
+            "DNUT",
+            "HTZ"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "PACB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.140000104904175,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "COLL",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 23.5,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "IOVA",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.09000015258789,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "QMCO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 17.6200008392334,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "AEHL",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.859999656677246,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "DNUT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.819999933242798,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "HTZ",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.0399999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 263.13,
+          "invested": 0.0,
+          "fees_cum": 2703.87
         }
       ]
     },
@@ -45510,15 +45683,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 6,
-        "n_loss_days": 47,
-        "p_loss_day": 0.8545,
-        "p_win_day": 0.1091,
-        "mean_day": -5.419,
+        "n_loss_days": 48,
+        "p_loss_day": 0.8571,
+        "p_win_day": 0.1071,
+        "mean_day": -5.524,
         "avg_win_day": 0.536,
-        "avg_loss_day": -6.409,
-        "cum_sum": -298.019
+        "avg_loss_day": -6.512,
+        "cum_sum": -309.335
       },
       "equity": [
         9918.74,
@@ -45575,9 +45748,10 @@
         228.58,
         228.55,
         184.06,
-        183.1
+        183.1,
+        162.38
       ],
-      "final": 183.1,
+      "final": 162.38,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -54142,6 +54316,39 @@
           "cash": 146.63,
           "invested": 36.47,
           "fees_cum": 710.61
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": -11.316,
+          "equity": 162.38,
+          "n_held": 10,
+          "n_buy": 0,
+          "n_sell": 1,
+          "n_skip": 9,
+          "n_cand": 10,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "HITI"
+          ],
+          "held": [
+            "SGRY"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "HITI",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.5899999141693115,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 146.63,
+          "invested": 15.75,
+          "fees_cum": 710.61
         }
       ]
     },
@@ -54157,15 +54364,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 7,
-        "n_loss_days": 46,
-        "p_loss_day": 0.8364,
-        "p_win_day": 0.1273,
-        "mean_day": -4.844,
+        "n_loss_days": 47,
+        "p_loss_day": 0.8393,
+        "p_win_day": 0.125,
+        "mean_day": -5.101,
         "avg_win_day": 0.203,
-        "avg_loss_day": -5.823,
-        "cum_sum": -266.424
+        "avg_loss_day": -6.108,
+        "cum_sum": -285.669
       },
       "equity": [
         9955.38,
@@ -54222,9 +54429,10 @@
         309.94,
         309.86,
         301.21,
-        300.23
+        300.23,
+        242.45
       ],
-      "final": 300.23,
+      "final": 242.45,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -66802,6 +67010,49 @@
           "cash": 210.95,
           "invested": 89.28,
           "fees_cum": 846.27
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": -19.245,
+          "equity": 242.45,
+          "n_held": 15,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 14,
+          "n_cand": 15,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "MD",
+            "HITI"
+          ],
+          "held": [
+            "SGRY"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "MD",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 29.290000915527344,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "HITI",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.5899999141693115,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 210.95,
+          "invested": 31.5,
+          "fees_cum": 846.27
         }
       ]
     },
@@ -66817,15 +67068,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 14,
-        "n_loss_days": 41,
-        "p_loss_day": 0.7455,
-        "p_win_day": 0.2545,
-        "mean_day": -5.35,
+        "n_loss_days": 42,
+        "p_loss_day": 0.75,
+        "p_win_day": 0.25,
+        "mean_day": -5.543,
         "avg_win_day": 0.467,
-        "avg_loss_day": -7.336,
-        "cum_sum": -294.238
+        "avg_loss_day": -7.547,
+        "cum_sum": -310.428
       },
       "equity": [
         9955.38,
@@ -66882,9 +67133,10 @@
         241.2,
         243.01,
         243.43,
-        242.86
+        242.86,
+        203.54
       ],
-      "final": 242.86,
+      "final": 203.54,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -76369,6 +76621,40 @@
           "cash": 164.48,
           "invested": 78.38,
           "fees_cum": 614.98
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": -16.19,
+          "equity": 203.54,
+          "n_held": 12,
+          "n_buy": 0,
+          "n_sell": 1,
+          "n_skip": 10,
+          "n_cand": 11,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "PDFS"
+          ],
+          "held": [
+            "SGRY",
+            "HITI"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "PDFS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 39.470001220703125,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 164.48,
+          "invested": 39.06,
+          "fees_cum": 614.98
         }
       ]
     },
@@ -76384,15 +76670,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 13,
-        "n_loss_days": 42,
-        "p_loss_day": 0.7636,
-        "p_win_day": 0.2364,
-        "mean_day": -3.481,
+        "n_loss_days": 43,
+        "p_loss_day": 0.7679,
+        "p_win_day": 0.2321,
+        "mean_day": -3.538,
         "avg_win_day": 0.608,
-        "avg_loss_day": -4.746,
-        "cum_sum": -191.442
+        "avg_loss_day": -4.792,
+        "cum_sum": -198.146
       },
       "equity": [
         9955.38,
@@ -76449,9 +76735,10 @@
         1271.26,
         1285.45,
         1270.13,
-        1258.18
+        1258.18,
+        1173.83
       ],
-      "final": 1258.18,
+      "final": 1173.83,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -88489,6 +88776,77 @@
           "cash": 368.15,
           "invested": 890.03,
           "fees_cum": 840.36
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": -6.704,
+          "equity": 1173.83,
+          "n_held": 16,
+          "n_buy": 0,
+          "n_sell": 4,
+          "n_skip": 7,
+          "n_cand": 11,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "PRCH",
+            "ABX",
+            "SONO",
+            "VFC"
+          ],
+          "held": [
+            "SGRY",
+            "ECO",
+            "PBF",
+            "PDFS",
+            "MD",
+            "ASTH",
+            "CON",
+            "AMN",
+            "HITI"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "PRCH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 18.59000015258789,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.5,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SONO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 17.469999313354492,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "VFC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 17.149999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 368.15,
+          "invested": 805.68,
+          "fees_cum": 840.36
         }
       ]
     },
@@ -88504,15 +88862,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 17,
-        "n_loss_days": 38,
-        "p_loss_day": 0.6909,
-        "p_win_day": 0.3091,
-        "mean_day": -3.835,
+        "n_loss_days": 39,
+        "p_loss_day": 0.6964,
+        "p_win_day": 0.3036,
+        "mean_day": -4.181,
         "avg_win_day": 0.799,
-        "avg_loss_day": -5.908,
-        "cum_sum": -210.932
+        "avg_loss_day": -6.351,
+        "cum_sum": -234.108
       },
       "equity": [
         9955.38,
@@ -88569,9 +88927,10 @@
         942.59,
         910.16,
         829.94,
-        823.25
+        823.25,
+        632.45
       ],
-      "final": 823.25,
+      "final": 632.45,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -97414,6 +97773,87 @@
           "cash": 156.57,
           "invested": 666.68,
           "fees_cum": 522.43
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": -23.176,
+          "equity": 632.45,
+          "n_held": 19,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 10,
+          "n_cand": 11,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "LAUR",
+            "SHOO",
+            "AVPT",
+            "RELY",
+            "PAYS"
+          ],
+          "held": [
+            "SGRY",
+            "LION",
+            "PRCH",
+            "SONO",
+            "VFC",
+            "PBF",
+            "PDFS",
+            "MD",
+            "HITI"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "LAUR",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 39.29999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SHOO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 44.959999084472656,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "AVPT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.739999771118164,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "RELY",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 24.360000610351562,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PAYS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 15.34000015258789,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 156.57,
+          "invested": 475.88,
+          "fees_cum": 522.43
         }
       ]
     },
@@ -97429,15 +97869,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 21,
-        "n_loss_days": 33,
-        "p_loss_day": 0.6,
-        "p_win_day": 0.3818,
+        "n_loss_days": 34,
+        "p_loss_day": 0.6071,
+        "p_win_day": 0.375,
         "mean_day": -2.216,
         "avg_win_day": 0.599,
-        "avg_loss_day": -4.075,
-        "cum_sum": -121.901
+        "avg_loss_day": -4.02,
+        "cum_sum": -124.08
       },
       "equity": [
         9953.57,
@@ -97494,9 +97934,10 @@
         2719.36,
         2717.47,
         2648.2,
-        2649.51
+        2649.51,
+        2591.77
       ],
-      "final": 2649.51,
+      "final": 2591.77,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -107762,6 +108203,29 @@
           "cash": 142.72,
           "invested": 2506.79,
           "fees_cum": 905.9
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": -2.179,
+          "equity": 2591.77,
+          "n_held": 9,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 6,
+          "n_cand": 7,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [
+            "SGRY",
+            "NET",
+            "HITI"
+          ],
+          "buys": [],
+          "sells": [],
+          "cash": 142.72,
+          "invested": 2449.05,
+          "fees_cum": 905.9
         }
       ]
     },
@@ -107777,15 +108241,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 21,
-        "n_loss_days": 33,
-        "p_loss_day": 0.6,
-        "p_win_day": 0.3818,
-        "mean_day": -3.687,
+        "n_loss_days": 34,
+        "p_loss_day": 0.6071,
+        "p_win_day": 0.375,
+        "mean_day": -3.931,
         "avg_win_day": 0.768,
-        "avg_loss_day": -6.634,
-        "cum_sum": -202.779
+        "avg_loss_day": -6.949,
+        "cum_sum": -220.146
       },
       "equity": [
         9918.74,
@@ -107842,9 +108306,10 @@
         1098.36,
         1105.95,
         982.18,
-        967.08
+        967.08,
+        799.13
       ],
-      "final": 967.08,
+      "final": 799.13,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -114475,6 +114940,55 @@
           "cash": 259.05,
           "invested": 708.03,
           "fees_cum": 705.06
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": -17.367,
+          "equity": 799.13,
+          "n_held": 10,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 6,
+          "n_cand": 10,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "ARQT",
+            "CNK"
+          ],
+          "held": [
+            "SGRY",
+            "PDFS",
+            "MD",
+            "ASTH",
+            "CON",
+            "AMN",
+            "HITI"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "ARQT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 31.8700008392334,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CNK",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 39.91999816894531,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 259.05,
+          "invested": 540.08,
+          "fees_cum": 705.06
         }
       ]
     },
@@ -114490,15 +115004,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 7,
-        "n_loss_days": 45,
-        "p_loss_day": 0.8182,
-        "p_win_day": 0.1273,
-        "mean_day": -5.204,
+        "n_loss_days": 46,
+        "p_loss_day": 0.8214,
+        "p_win_day": 0.125,
+        "mean_day": -5.942,
         "avg_win_day": 0.439,
-        "avg_loss_day": -6.428,
-        "cum_sum": -286.202
+        "avg_loss_day": -7.301,
+        "cum_sum": -332.765
       },
       "equity": [
         10000.0,
@@ -114555,9 +115069,10 @@
         200.98,
         202.87,
         194.37,
-        193.46
+        193.46,
+        103.38
       ],
-      "final": 193.46,
+      "final": 103.38,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -122724,6 +123239,47 @@
           "cash": 103.38,
           "invested": 90.08,
           "fees_cum": 485.87
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": -46.563,
+          "equity": 103.38,
+          "n_held": 4,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 4,
+          "n_cand": 4,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "MD",
+            "SGRY"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "MD",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 29.290000915527344,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SGRY",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 15.75,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 103.38,
+          "invested": 0.0,
+          "fees_cum": 485.87
         }
       ]
     },
@@ -122739,15 +123295,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 9,
-        "n_loss_days": 44,
-        "p_loss_day": 0.8,
-        "p_win_day": 0.1636,
-        "mean_day": -5.151,
+        "n_loss_days": 45,
+        "p_loss_day": 0.8036,
+        "p_win_day": 0.1607,
+        "mean_day": -5.256,
         "avg_win_day": 0.681,
-        "avg_loss_day": -6.578,
-        "cum_sum": -283.317
+        "avg_loss_day": -6.677,
+        "cum_sum": -294.322
       },
       "equity": [
         9955.38,
@@ -122804,9 +123360,10 @@
         218.51,
         215.11,
         204.8,
-        211.82
+        211.82,
+        188.51
       ],
-      "final": 211.82,
+      "final": 188.51,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -132990,6 +133547,39 @@
           "cash": 172.76,
           "invested": 39.06,
           "fees_cum": 717.96
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": -11.005,
+          "equity": 188.51,
+          "n_held": 9,
+          "n_buy": 0,
+          "n_sell": 1,
+          "n_skip": 8,
+          "n_cand": 9,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "HITI"
+          ],
+          "held": [
+            "SGRY"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "HITI",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.5899999141693115,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 172.76,
+          "invested": 15.75,
+          "fees_cum": 717.96
         }
       ]
     },
@@ -133005,15 +133595,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 8,
-        "n_loss_days": 45,
-        "p_loss_day": 0.8182,
-        "p_win_day": 0.1455,
-        "mean_day": -5.233,
+        "n_loss_days": 46,
+        "p_loss_day": 0.8214,
+        "p_win_day": 0.1429,
+        "mean_day": -5.335,
         "avg_win_day": 1.076,
-        "avg_loss_day": -6.587,
-        "cum_sum": -287.817
+        "avg_loss_day": -6.682,
+        "cum_sum": -298.774
       },
       "equity": [
         9918.74,
@@ -133070,9 +133660,10 @@
         223.13,
         219.46,
         182.06,
-        189.11
+        189.11,
+        168.39
       ],
-      "final": 189.11,
+      "final": 168.39,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -140554,6 +141145,39 @@
           "cash": 152.64,
           "invested": 36.47,
           "fees_cum": 625.38
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": -10.957,
+          "equity": 168.39,
+          "n_held": 8,
+          "n_buy": 0,
+          "n_sell": 1,
+          "n_skip": 7,
+          "n_cand": 8,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "HITI"
+          ],
+          "held": [
+            "SGRY"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "HITI",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.5899999141693115,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 152.64,
+          "invested": 15.75,
+          "fees_cum": 625.38
         }
       ]
     },
@@ -140569,15 +141193,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 12,
-        "n_loss_days": 42,
-        "p_loss_day": 0.7636,
-        "p_win_day": 0.2182,
-        "mean_day": -3.361,
+        "n_loss_days": 43,
+        "p_loss_day": 0.7679,
+        "p_win_day": 0.2143,
+        "mean_day": -3.444,
         "avg_win_day": 0.823,
-        "avg_loss_day": -4.636,
-        "cum_sum": -184.841
+        "avg_loss_day": -4.714,
+        "cum_sum": -192.848
       },
       "equity": [
         10000.0,
@@ -140634,9 +141258,10 @@
         1430.2,
         1451.38,
         1394.25,
-        1377.78
+        1377.78,
+        1267.46
       ],
-      "final": 1377.78,
+      "final": 1267.46,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -150726,6 +151351,91 @@
           "cash": 386.65,
           "invested": 991.13,
           "fees_cum": 609.37
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": -8.007,
+          "equity": 1267.46,
+          "n_held": 7,
+          "n_buy": 0,
+          "n_sell": 6,
+          "n_skip": 4,
+          "n_cand": 4,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "PRCH",
+            "ABX",
+            "AVPT",
+            "SONO",
+            "PAYS",
+            "VFC"
+          ],
+          "held": [
+            "MD",
+            "SGRY",
+            "ASTH"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "PRCH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 18.59000015258789,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.5,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "AVPT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 15.720000267028809,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SONO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 17.469999313354492,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PAYS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 15.619999885559082,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "VFC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 17.149999618530273,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 386.65,
+          "invested": 880.81,
+          "fees_cum": 609.37
         }
       ]
     },
@@ -150741,12 +151451,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 7,
         "n_loss_days": 37,
-        "p_loss_day": 0.6727,
-        "p_win_day": 0.1273,
-        "mean_day": -4.879,
+        "p_loss_day": 0.6607,
+        "p_win_day": 0.125,
+        "mean_day": -4.792,
         "avg_win_day": 0.284,
         "avg_loss_day": -7.307,
         "cum_sum": -268.365
@@ -150805,6 +151515,7 @@
         309.07,
         310.29,
         309.95,
+        293.13,
         293.13,
         293.13
       ],
@@ -160071,6 +160782,25 @@
           "cash": 293.13,
           "invested": 0.0,
           "fees_cum": 621.11
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": 0.0,
+          "equity": 293.13,
+          "n_held": 11,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 11,
+          "n_cand": 11,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 293.13,
+          "invested": 0.0,
+          "fees_cum": 621.11
         }
       ]
     },
@@ -160086,15 +160816,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 7,
-        "n_loss_days": 46,
-        "p_loss_day": 0.8364,
-        "p_win_day": 0.1273,
-        "mean_day": -4.99,
+        "n_loss_days": 47,
+        "p_loss_day": 0.8393,
+        "p_win_day": 0.125,
+        "mean_day": -5.262,
         "avg_win_day": 0.271,
-        "avg_loss_day": -6.008,
-        "cum_sum": -274.453
+        "avg_loss_day": -6.311,
+        "cum_sum": -294.697
       },
       "equity": [
         9955.38,
@@ -160151,9 +160881,10 @@
         282.37,
         282.85,
         273.93,
-        272.62
+        272.62,
+        217.43
       ],
-      "final": 272.62,
+      "final": 217.43,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -171697,6 +172428,49 @@
           "cash": 201.68,
           "invested": 70.94,
           "fees_cum": 803.83
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": -20.244,
+          "equity": 217.43,
+          "n_held": 11,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 10,
+          "n_cand": 11,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "MD",
+            "HITI"
+          ],
+          "held": [
+            "SGRY"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "MD",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 29.290000915527344,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "HITI",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.5899999141693115,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 201.68,
+          "invested": 15.75,
+          "fees_cum": 803.83
         }
       ]
     },
@@ -171712,12 +172486,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 8,
         "n_loss_days": 40,
-        "p_loss_day": 0.7273,
-        "p_win_day": 0.1455,
-        "mean_day": -4.928,
+        "p_loss_day": 0.7143,
+        "p_win_day": 0.1429,
+        "mean_day": -4.84,
         "avg_win_day": 0.532,
         "avg_loss_day": -6.883,
         "cum_sum": -271.057
@@ -171777,6 +172551,7 @@
         310.69,
         310.36,
         292.93,
+        287.95,
         287.95
       ],
       "final": 287.95,
@@ -181296,6 +182071,25 @@
           "cash": 287.95,
           "invested": 0.0,
           "fees_cum": 645.03
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": 0.0,
+          "equity": 287.95,
+          "n_held": 11,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 11,
+          "n_cand": 11,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 287.95,
+          "invested": 0.0,
+          "fees_cum": 645.03
         }
       ]
     },
@@ -181311,15 +182105,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 55,
+        "n_days": 56,
         "n_win_days": 8,
-        "n_loss_days": 45,
-        "p_loss_day": 0.8182,
-        "p_win_day": 0.1455,
-        "mean_day": -4.947,
+        "n_loss_days": 46,
+        "p_loss_day": 0.8214,
+        "p_win_day": 0.1429,
+        "mean_day": -5.227,
         "avg_win_day": 0.179,
-        "avg_loss_day": -6.078,
-        "cum_sum": -272.058
+        "avg_loss_day": -6.394,
+        "cum_sum": -292.694
       },
       "equity": [
         9955.38,
@@ -181376,9 +182170,10 @@
         289.55,
         289.63,
         280.8,
-        279.99
+        279.99,
+        222.21
       ],
-      "final": 279.99,
+      "final": 222.21,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -193891,6 +194686,49 @@
           ],
           "cash": 206.46,
           "invested": 73.53,
+          "fees_cum": 845.74
+        },
+        {
+          "date": "2026-10-26",
+          "day_pnl": -20.636,
+          "equity": 222.21,
+          "n_held": 15,
+          "n_buy": 0,
+          "n_sell": 2,
+          "n_skip": 14,
+          "n_cand": 15,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "MD",
+            "HITI"
+          ],
+          "held": [
+            "SGRY"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "MD",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 29.290000915527344,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "HITI",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.5899999141693115,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 206.46,
+          "invested": 15.75,
           "fees_cum": 845.74
         }
       ]
