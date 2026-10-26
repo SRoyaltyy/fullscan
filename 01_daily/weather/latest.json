@@ -1,6 +1,6 @@
 {
  "date": "2026-10-26",
- "generated_at": "2026-10-26T09:33:29.381114-04:00",
+ "generated_at": "2026-10-26T12:31:47.497892-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,21 +17,23 @@
   "fed_score": 0.0,
   "dollar_oil_score": 0.5,
   "futures_score": 0.0,
-  "yields": "flat",
-  "yields_source": "llm_factor_fallback",
-  "dollar": "flat",
+  "yields": "falling",
+  "yields_source": "fred_dgs10",
+  "dgs10_delta_1d": -0.17,
+  "dgs10_current": 4.96,
+  "dollar": "strong",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.14,
-  "vix_ratio": 0.93,
-  "vix_spot": 19.04,
-  "vix_delta_1d": -0.41,
+  "dxy_pct_1d": 0.18,
+  "vix_ratio": 0.926,
+  "vix_spot": 18.43,
+  "vix_delta_1d": -1.02,
   "vix_ratio_source": "vix/vix3m",
   "vix": "calm",
-  "oil_pct_1d": -1.57,
-  "oil": "falling",
+  "oil_pct_1d": -0.46,
+  "oil": "flat",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.755,
+  "regime_corr": 0.694,
   "sectors": {
    "Basic Materials": {
     "score": -4.97,
@@ -177,14 +179,14 @@
   },
   "size": {
    "micro": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "risk-mixed, dollar flat [general predict + factors]"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors]"
    },
    "small": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "risk-mixed, dollar flat [general predict + factors]"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors]"
    },
    "large": {
     "stance": "neutral",
@@ -219,9 +221,9 @@
     "why": "risk-mixed [general predict]"
    },
    "rut": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "risk-mixed, dollar flat [general predict + factors]"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors]"
    },
    "none": {
     "stance": "neutral",
@@ -338,14 +340,14 @@
   },
   "style": {
    "growth": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "yields falling — duration/growth re-rates [factor: Bond yields]"
    },
    "value": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "yields flat/unknown"
+    "why": "value lags duration rallies"
    },
    "blend": {
     "stance": "neutral",

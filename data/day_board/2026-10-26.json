@@ -2271,6 +2271,54 @@
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "40357943992",
       "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-26_stock_book.md",
+      "at": "2026-10-26T12:33:06-04:00",
+      "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-26]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "40357943992",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "01_daily/weather/2026-10-26_weather.json",
+      "at": "2026-10-26T12:33:06-04:00",
+      "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-26]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "40357943992",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/join/2026-10-26_ranked.csv",
+      "at": "2026-10-26T12:33:06-04:00",
+      "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-26]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "40357943992",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-26_input_health.json",
+      "at": "2026-10-26T12:33:06-04:00",
+      "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-26]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "40357943992",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-26_stock_book.json",
+      "at": "2026-10-26T12:33:06-04:00",
+      "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-26]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "40357943992",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-26_suggestions.json",
+      "at": "2026-10-26T12:33:06-04:00",
+      "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-26]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "40357943992",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
     }
   ]
 }
