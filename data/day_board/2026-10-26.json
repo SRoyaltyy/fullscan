@@ -1788,6 +1788,46 @@
       "workflow": "Label + Weather (daily)",
       "run_id": "40329126612",
       "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-10-26_intake.md",
+      "at": "2026-10-26T10:04:38-04:00",
+      "commit_msg": "auto: free news intake [skip ci]",
+      "workflow": "Free news intake",
+      "run_id": "40330892122",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/news_intake/2026-10-26/headline_groups.json",
+      "at": "2026-10-26T10:04:38-04:00",
+      "commit_msg": "auto: free news intake [skip ci]",
+      "workflow": "Free news intake",
+      "run_id": "40330892122",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/news_intake/2026-10-26/lane_queue.json",
+      "at": "2026-10-26T10:04:38-04:00",
+      "commit_msg": "auto: free news intake [skip ci]",
+      "workflow": "Free news intake",
+      "run_id": "40330892122",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/news_intake/2026-10-26/parsed.json",
+      "at": "2026-10-26T10:04:38-04:00",
+      "commit_msg": "auto: free news intake [skip ci]",
+      "workflow": "Free news intake",
+      "run_id": "40330892122",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/news_intake/2026-10-26/review_queue.json",
+      "at": "2026-10-26T10:04:38-04:00",
+      "commit_msg": "auto: free news intake [skip ci]",
+      "workflow": "Free news intake",
+      "run_id": "40330892122",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
     }
   ]
 }
