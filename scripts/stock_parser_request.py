@@ -11,16 +11,46 @@ OLD = '7adb09dd5091fb51ac68859645a26e2292951e46'
 NEW = '6dad95df8f7c2bb3b49df4de62c9ab80813c20db'
 RESULT_BRANCH = 'scanner-request-results'
 
+try:
+    from scripts.catalog_stock_rollout import remote_zip
+except ModuleNotFoundError:
+    import zipfile
+    from scripts.materialize_filing_texts import RangeReader, http_fetcher, signed_artifact_url
+
+    class _CompatRemoteZipArchive:
+        def __init__(self, artifact_id, repository=REPO):
+            self._zip = zipfile.ZipFile(RangeReader(http_fetcher(signed_artifact_url(repository, int(artifact_id)))))
+        def __enter__(self):
+            return self
+        def __exit__(self, exc_type, exc, tb):
+            self.close()
+            return False
+        def close(self):
+            self._zip.close()
+        def __getattr__(self, name):
+            return getattr(self._zip, name)
+        def read(self, *args, **kwargs):
+            return self._zip.read(*args, **kwargs)
+        def open(self, *args, **kwargs):
+            return self._zip.open(*args, **kwargs)
+
+    def remote_zip(artifact_id, repository=REPO):
+        return _CompatRemoteZipArchive(artifact_id, repository=repository)
+
+
 def digest(raw):
     return hashlib.sha256(raw).hexdigest()
 
+
 def encode(value):
     return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()
+
 
 def write(path, value):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(encode(value))
+
 
 def validate_request(ticker, request_id, old_sha, new_sha):
     if not re.fullmatch(r'[A-Z0-9][A-Z0-9.^/-]{0,19}', ticker):
@@ -33,13 +63,14 @@ def validate_request(ticker, request_id, old_sha, new_sha):
     if old_sha == new_sha:
         raise ValueError('old and new revisions must differ')
 
+
 def git_revision(root):
     return subprocess.check_output(['git', '-C', str(root), 'rev-parse', 'HEAD'], text=True).strip()
+
 
 def prepare(catalog_path, parser_root, ticker, out):
     """Use the archive's existing selective reader; never download the whole market."""
     sys.path.insert(0, str(parser_root.resolve()))
-    from scripts.catalog_stock_rollout import remote_zip
     from scripts.materialize_filing_texts import materialize
     from scripts.materialize_completed_profiles import fetch_url
     from src.filing_evidence import load_filing_sections
@@ -104,6 +135,7 @@ def prepare(catalog_path, parser_root, ticker, out):
     print(json.dumps(timing), flush=True)
     return payload
 
+
 def parse(input_path, parser_root, output_path, revision, kind):
     actual = git_revision(parser_root)
     if actual != revision:
@@ -140,7 +172,6 @@ def parse(input_path, parser_root, output_path, revision, kind):
             high = min(len(text), occurrence['end']+500)
             occurrence.update(excerpt=text[low:high], excerpt_start=low)
         result.update(evidence=evidence, method=evidence['schema'])
-        # Keep broad extraction occurrences independent of relationship admission.
         try:
             from src.filing_term_candidates import extract_candidates
         except ModuleNotFoundError:
@@ -174,6 +205,7 @@ def parse(input_path, parser_root, output_path, revision, kind):
                       'parse_seconds':result['parse_seconds']}), flush=True)
     return result
 
+
 def assemble(input_path, old_path, new_path, out, request_id, old_sha, new_sha, run_id):
     source = json.loads(Path(input_path).read_bytes())
     validate_request(source['ticker'], request_id, old_sha, new_sha)
@@ -192,7 +224,6 @@ def assemble(input_path, old_path, new_path, out, request_id, old_sha, new_sha, 
               'catalog_sha256':source['catalog_sha256'], 'source_receipt':source['source_receipt'],
               'timings':{**timing, 'old_parse_seconds':old['parse_seconds'], 'new_parse_seconds':new['parse_seconds']},
               'old':old, 'new':new, 'experimental':True, 'accuracy_certified':False}
-    # Include the entire shared stored source once, never reconstruct from excerpts.
     bundle['source_texts'] = []
     for part, old_meta, new_meta in zip(source['sections'], old['sources'], new['sources'], strict=True):
         text = str(part.get('text') or '')
@@ -211,6 +242,7 @@ def assemble(input_path, old_path, new_path, out, request_id, old_sha, new_sha, 
     summary.update(sha256=digest(raw), bytes=len(raw), experimental=True, accuracy_certified=False)
     write(out/'receipt.json', summary)
     return summary
+
 
 def publish(directory, request_id):
     """Only validated results enter a separate data branch; source branches are untouched."""
@@ -265,6 +297,7 @@ def publish(directory, request_id):
         time.sleep(min(2**attempt, 20))
     raise RuntimeError('result publication failed after concurrent-write retries')
 
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('command', choices=['prepare','parse','assemble','publish'])
@@ -291,6 +324,7 @@ def main():
         print(json.dumps(assemble(args.input,args.old,args.new,args.out,args.request_id,args.old_sha,args.new_sha,args.run_id)))
     else:
         print(publish(args.out,args.request_id))
+
 
 if __name__ == '__main__':
     main()
