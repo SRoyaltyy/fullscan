@@ -1,6 +1,6 @@
 {
   "date": "2026-10-26",
-  "generated_at": "2026-10-26T12:54:49.529071-04:00",
+  "generated_at": "2026-10-26T12:55:28.065046-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -807,9 +807,9 @@
           "path": "data/stock_book/2026-10-26_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1450602,
-          "said": "1d BUY CON, AMN, PACS, SGRY, ASTH, NTAP, MQ \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL",
+          "reason": "horizons=5 names=196",
+          "size": 1468679,
+          "said": "1d BUY NTSK, BAND, FIS, PRCH \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE \u00b7 -0.41225",
           "bullets": []
         },
         {
@@ -819,10 +819,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 82118,
+          "size": 71855,
           "said": "Stock book \u2014 2026-10-26",
           "bullets": [
-            "_Generated 2026-10-26T05:48:52.849717-04:00_",
+            "_Generated 2026-10-26T12:55:00.285476-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -885,9 +885,9 @@
           "path": "data/stock_book/2026-10-26_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1450602,
-          "said": "1d BUY CON, AMN, PACS, SGRY, ASTH, NTAP, MQ \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL",
+          "reason": "horizons=5 names=196",
+          "size": 1468679,
+          "said": "1d BUY NTSK, BAND, FIS, PRCH \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE \u00b7 -0.41225",
           "bullets": []
         },
         {
@@ -936,66 +936,54 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "CON",
-        "score": 0.6919862014728797
+        "ticker": "NTSK",
+        "score": 0.3464439711289036
       },
       {
-        "ticker": "AMN",
-        "score": 0.732539869623172
+        "ticker": "BAND",
+        "score": 0.43069037351595646
       },
       {
-        "ticker": "PACS",
-        "score": 0.7648840344805037
+        "ticker": "FIS",
+        "score": 0.35661909330435576
       },
       {
-        "ticker": "SGRY",
-        "score": 0.6041642603585892
-      },
-      {
-        "ticker": "ASTH",
-        "score": 0.559410352699385
-      },
-      {
-        "ticker": "NTAP",
-        "score": 0.3935820048123788
-      },
-      {
-        "ticker": "MQ",
-        "score": 0.7773147187519314
+        "ticker": "PRCH",
+        "score": 0.6301702991627383
       }
     ],
     "sell_1d": [
       {
-        "ticker": "OKLO",
-        "score": -0.16200677871608987
+        "ticker": "NEOV",
+        "score": -0.3476036562991085
       },
       {
-        "ticker": "NEOV",
-        "score": -0.30316820204974365
+        "ticker": "OKLO",
+        "score": -0.1945384772788865
       },
       {
         "ticker": "FCEL",
-        "score": -0.22256008308468223
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.285192098400174
+        "score": -0.2660979304586989
       },
       {
         "ticker": "NNDM",
-        "score": -0.11799740294460691
+        "score": -0.18938944421779302
       },
       {
         "ticker": "POWL",
-        "score": -0.12023265520332431
+        "score": -0.16908117328511152
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.2775211483741964
       },
       {
         "ticker": "TE",
-        "score": -0.2511986291239128
+        "score": -0.2921539365910313
       },
       {
-        "ticker": "INDI",
-        "score": -0.14090073563916705
+        "ticker": "NRGV",
+        "score": -0.2849571343867819
       }
     ],
     "flatten": {
@@ -2124,6 +2112,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-26",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-26T12:55:27.115857-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-26_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1468679,
+          "preview": "1d BUY NTSK, BAND, FIS, PRCH \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
+        },
+        {
+          "path": "data/stock_book/2026-10-26_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-26_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2502,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-26_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12072,
+          "preview": "2026-10-26 BUY NTSK, BAND, FIS, PRCH \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12072,
+          "preview": "2026-10-26 BUY NTSK, BAND, FIS, PRCH \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
+        },
+        {
+          "path": "01_daily/2026-10-26_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 72917,
+          "preview": "# Stock book \u2014 2026-10-26\n_Generated 2026-10-26T12:55:00.285476-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY NTSK, BAND, FIS, PRCH \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-26 BUY NTSK, BAND, FIS, PRCH \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 2026-10-26 BUY NTSK, BAND, FIS, PRCH \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 # Stock book \u2014 2026-10-26\n_Generated 2026-10-26T12:55:00.285476-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -2425,6 +2466,46 @@
       "path": "data/day_board/2026-10-26.json",
       "at": "2026-10-26T12:54:50-04:00",
       "commit_msg": "auto: land peer_rs [2026-10-26]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "40362315385",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-26_stock_book.md",
+      "at": "2026-10-26T12:55:28-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-26]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "40362315385",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-26.json",
+      "at": "2026-10-26T12:55:28-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-26]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "40362315385",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-26_input_health.json",
+      "at": "2026-10-26T12:55:28-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-26]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "40362315385",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-26_stock_book.json",
+      "at": "2026-10-26T12:55:28-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-26]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "40362315385",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-26_suggestions.json",
+      "at": "2026-10-26T12:55:28-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-26]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "40362315385",
       "manifest": "research/input_freeze/2026-10-26/manifest.json"
