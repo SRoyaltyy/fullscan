@@ -5966,5 +5966,132 @@
       "status": "BEFORE_1330"
     },
     "sha256": "f94c1297a01fb842ef6be5bfa49745a5f8a5405682af24ed9abb9f6f186cc75c"
+  },
+  {
+    "buys": [
+      {
+        "fee": 8.4237,
+        "fill": 3.1,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 43159,
+        "rank": 1,
+        "shares": 653,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "NAUT"
+      },
+      {
+        "fee": 18.4212,
+        "fill": 1.41,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 162833,
+        "rank": 2,
+        "shares": 1428,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "UWMC"
+      },
+      {
+        "fee": 2.131,
+        "fill": 42.77,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 31838,
+        "rank": 3,
+        "shares": 47,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "LQDA"
+      }
+    ],
+    "cash_primary": 22.328572716510735,
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-26",
+    "excluded_on_fill": [],
+    "holdings": [
+      {
+        "cost_primary": 2061.4716,
+        "entry_date": "2026-10-21",
+        "entry_px": 5.95,
+        "last_px": 5.95,
+        "min_hold": 2,
+        "peak_px": 5.95,
+        "shares": 344,
+        "ticker": "BMBL"
+      },
+      {
+        "cost_primary": 2022.37195,
+        "entry_date": "2026-10-26",
+        "entry_px": 42.77,
+        "last_px": 42.77,
+        "min_hold": 1,
+        "peak_px": 42.77,
+        "shares": 47,
+        "ticker": "LQDA"
+      },
+      {
+        "cost_primary": 2042.8451999999997,
+        "entry_date": "2026-10-26",
+        "entry_px": 3.1,
+        "last_px": 3.1,
+        "min_hold": 1,
+        "peak_px": 3.1,
+        "shares": 653,
+        "ticker": "NAUT"
+      },
+      {
+        "cost_primary": 2041.9685999999995,
+        "entry_date": "2026-10-26",
+        "entry_px": 1.41,
+        "last_px": 1.41,
+        "min_hold": 1,
+        "peak_px": 1.41,
+        "shares": 1428,
+        "ticker": "UWMC"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "open_fill",
+    "morning_s": -2.128,
+    "open_source": "yahoo_split_adjusted_daily_open",
+    "plan_sha256": "f94c1297a01fb842ef6be5bfa49745a5f8a5405682af24ed9abb9f6f186cc75c",
+    "pnl_status": "pending",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fee": 2.1515,
+        "fill": 45.830002,
+        "reason": "hold-expired",
+        "shares": 45,
+        "ticker": "BRZE"
+      },
+      {
+        "fee": 0.1712,
+        "fill": 2.725,
+        "reason": "hold-expired",
+        "shares": 5,
+        "ticker": "CYPH"
+      },
+      {
+        "fee": 2.205,
+        "fill": 30.93,
+        "reason": "hold-expired",
+        "shares": 63,
+        "ticker": "MAZE"
+      },
+      {
+        "fee": 2.1639,
+        "fill": 43.099998,
+        "reason": "hold-expired",
+        "shares": 49,
+        "ticker": "TRAX"
+      }
+    ],
+    "sha256": "91bddbc4f2c2245edbcf6efcedf21b77531986c3f04b97be1333ba0ab22b7c6c",
+    "unfilled": []
   }
 ]
