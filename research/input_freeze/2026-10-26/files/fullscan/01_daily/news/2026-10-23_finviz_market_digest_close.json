@@ -1,0 +1,126 @@
+{
+  "date": "2026-10-23",
+  "generated_at": "2026-10-23T16:28:35.149846-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-26",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-26) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed broadly lower as WTI crude hit about $104 on Middle East tensions ahead of next week’s earnings-heavy calendar and Federal Reserve meeting",
+  "raw_text": "- The Dow Jones Industrial Average ($DJI) fell about 650 points, or 1.23%, to 52,215, the S&P 500 ($SPX) declined 0.52% to 7,624, the Nasdaq Composite ($COMP) slipped 0.21% to 25,955, while the Russell 2000 (IWM) lost 0.35% and the Nasdaq 100 ($NDX) finished roughly unchanged.\n- WTI crude oil (@CL) climbed to about $104 a barrel, its highest level since April, on Houthi attacks on Saudi energy sites, heightened U.S.-Iran tensions and related supply fears.\n- Energy stocks outperformed as SLB (SLB) gained about 7% after a Q3 earnings beat and a raised fourth-quarter outlook, even as Middle East activity remained constrained.\n- Tower operators advanced after a Bloomberg report that SpaceX (SPCX) is negotiating leases for at least 80,000 U.S. cell sites to build a fourth wireless carrier, sending Crown Castle (CCI) up around 9% and lifting American Tower (AMT), while AT&T (T) and T-Mobile (TMUS) slumped roughly 8%.\n- Technology shares steadied following Thursday’s selloff, with the Philadelphia Semiconductor Index up 0.6% as AMD (AMD) gained about 1.7% while Nvidia (NVDA) slipped roughly 0.6%, despite ongoing AI capex worries highlighted by Meta (META)’s spending outlook.\n- Cybersecurity names including Palo Alto Networks (PANW) and CrowdStrike (CRWD) also advanced within the tech space.\n- American Express (AXP) shares dropped about 4% even after reporting Q3 EPS of $5.42 versus $4.53 expected, raising full-year guidance to $18.30–$18.60, and announcing a 5% global workforce reduction.\n- First Citizens BancShares (FCNCA) jumped about 8% following a Q3 earnings beat.\n- Eight of 11 S&P 500 ($SPX) sectors declined, with financials and industrials among the laggards, as University of Michigan consumer sentiment fell to a five-month low.\n- After the bell, Rogers Communications (RCI) beat estimates with adjusted EPS of $1.29 versus $1.24 expected and reaffirmed its 2026 outlook.",
+  "raw_summary_md": "- The **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) **fell about 650 points, or 1.23%, to 52,215**, the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **declined 0.52% to 7,624**, the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) **slipped 0.21% to 25,955**, while the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) **lost 0.35%** and the **Nasdaq 100** ([$NDX](https://finviz.com/index/NDX?p=d)) **finished roughly unchanged**.\n- **WTI crude oil** ([@CL](https://finviz.com/futures_charts?t=CL)) **climbed to about $104 a barrel, its highest level since April**, on **Houthi attacks on Saudi energy sites, heightened U.S.-Iran tensions** and related supply fears.\n- **Energy stocks outperformed** as **SLB** ([SLB](https://finviz.com/quote?t=SLB)) **gained about 7% after a Q3 earnings beat and a raised fourth-quarter outlook**, even as Middle East activity remained constrained.\n- **Tower operators advanced** after a Bloomberg report that **SpaceX** ([SPCX](https://finviz.com/quote?t=SPCX)) is negotiating leases for **at least 80,000 U.S. cell sites to build a fourth wireless carrier**, sending **Crown Castle** ([CCI](https://finviz.com/quote?t=CCI)) **up around 9%** and lifting **American Tower** ([AMT](https://finviz.com/quote?t=AMT)), while **AT&T** ([T](https://finviz.com/quote?t=T)) and **T-Mobile** ([TMUS](https://finviz.com/quote?t=TMUS)) **slumped roughly 8%**.\n- **Technology shares steadied** following Thursday’s selloff, with the **Philadelphia Semiconductor Index up 0.6%** as **AMD** ([AMD](https://finviz.com/quote?t=AMD)) **gained about 1.7%** while **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) **slipped roughly 0.6%**, despite ongoing **AI capex worries highlighted by Meta** ([META](https://finviz.com/quote?t=META))’s spending outlook.\n- **Cybersecurity names including Palo Alto Networks** ([PANW](https://finviz.com/quote?t=PANW)) **and CrowdStrike** ([CRWD](https://finviz.com/quote?t=CRWD)) **also advanced within the tech space**.\n- **American Express** ([AXP](https://finviz.com/quote?t=AXP)) **shares dropped about 4% even after reporting Q3 EPS of $5.42 versus $4.53 expected, raising full-year guidance to $18.30–$18.60, and announcing a 5% global workforce reduction**.\n- **First Citizens BancShares** ([FCNCA](https://finviz.com/quote?t=FCNCA)) **jumped about 8% following a Q3 earnings beat**.\n- **Eight of 11 S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **sectors declined, with financials and industrials among the laggards, as University of Michigan consumer sentiment fell to a five-month low**.\n- **After the bell, Rogers Communications** ([RCI](https://finviz.com/quote?t=RCI)) **beat estimates with adjusted EPS of $1.29 versus $1.24 expected and reaffirmed its 2026 outlook**.",
+  "index_moves": [
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -1.23,
+      "verb": "fell"
+    },
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.52,
+      "verb": "declined"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -0.21,
+      "verb": "slipped"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": -0.35,
+      "verb": "lost"
+    }
+  ],
+  "oil": {
+    "name": "WTI crude",
+    "price": 104.0,
+    "verb": null,
+    "direction": null
+  },
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "SLB",
+    "SPCX",
+    "CCI",
+    "AMT",
+    "T",
+    "TMUS",
+    "AMD",
+    "NVDA",
+    "META",
+    "PANW",
+    "CRWD",
+    "AXP",
+    "FCNCA",
+    "RCI"
+  ],
+  "named_leaders": [
+    "SLB",
+    "SPCX",
+    "CCI",
+    "AMT",
+    "T",
+    "TMUS",
+    "AMD",
+    "NVDA",
+    "META",
+    "PANW",
+    "CRWD",
+    "AXP",
+    "FCNCA",
+    "RCI"
+  ],
+  "calendar": [
+    "Technology shares steadied following Thursday’s selloff, with the Philadelphia Semiconductor Index up 0.6% as AMD (AMD) gained about 1.7% while Nvidia (NVDA) slipped roughly 0.6%, despite ongoing AI capex worries highlighted by Meta (META)’s spending outlook."
+  ],
+  "prior_close": {
+    "spx": -0.52,
+    "nasdaq": -0.21,
+    "dow": -1.23
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "Technology shares steadied following Thursday’s selloff, with the Philadelphia Semiconductor Index up 0.6% as AMD (AMD) gained about 1.7% while Nvidia (NVDA) slipped roughly 0.6%, despite ongoing AI capex worries highlighted by Meta (META)’s spending outlook."
+    ],
+    "text": "Technology shares steadied following Thursday’s selloff, with the Philadelphia Semiconductor Index up 0.6% as AMD (AMD) gained about 1.7% while Nvidia (NVDA) slipped roughly 0.6%, despite ongoing AI capex worries highlighted by Meta (META)’s spending outlook."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "WTI crude oil (@CL) climbed to about $104 a barrel, its highest level since April, on Houthi attacks on Saudi energy sites, heightened U.S.-Iran tensions and related supply fears. Energy stocks outperformed as SLB (SLB) gained about 7% after a Q3 earnings beat and a raised fourth-quarter outlook, even as Middle East activity remained constrained."
+  },
+  "finviz_id": 316990,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-23T16:08:04.85",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
