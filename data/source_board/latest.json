@@ -1,6 +1,6 @@
 {
  "date": "2026-10-26",
- "generated_at": "2026-10-26T06:18:02.982168+00:00",
+ "generated_at": "2026-10-26T19:21:57.248565+00:00",
  "catalog": {
   "generated_at": "2026-10-24T16:39:29.833670+00:00",
   "channels": 365,
@@ -34,44 +34,71 @@
   }
  },
  "collect": {
-  "generated_at": "2026-10-26T06:17:41.785248+00:00",
+  "generated_at": "2026-10-26T19:21:36.282284+00:00",
   "enabled_sources": 121,
-  "sources_ok": 121,
-  "sources_failed": 0,
+  "sources_ok": 119,
+  "sources_failed": 2,
   "coverage_status": "degraded",
   "counts": {
-   "observed": 1661,
-   "old": 1223,
-   "future": 2,
-   "undated": 243,
-   "new": 105,
-   "duplicates": 331
+   "observed": 1820,
+   "old": 1290,
+   "future": 4,
+   "undated": 294,
+   "new": 104,
+   "duplicates": 422
   },
-  "current_dated_documents": 271
+  "current_dated_documents": 238
  },
  "new_today": {
-  "count": 105,
+  "count": 104,
   "by_source": {
-   "us-federal-register": 99,
-   "in-rbi-cc71120b98": 4,
-   "us-nlrb-7c63020d7d": 1,
-   "eu-ecb-991c113079": 1
+   "us-doj-b3d27e1dc3": 25,
+   "uk-govuk-decision": 14,
+   "uk-govuk-product_safety_alert_report_recall": 9,
+   "io-bis-140216a5b6": 8,
+   "eu-commission-07d4f58ccf": 6,
+   "us-fda-5696b24295": 5,
+   "us-fda-03f7703006": 5,
+   "us-fcc-e95ecda3bb": 4,
+   "eu-council-9d9e9444da": 4,
+   "us-doj-e05071794d": 2,
+   "us-hhs-6f995a5754": 2,
+   "uk-fca-7b9977ec8e": 2,
+   "in-rbi-cc71120b98": 2,
+   "de-bundesbank-027ac4024f": 2,
+   "de-bundesbank-e5b1c4a067": 2,
+   "hk-hkma-public-press": 1,
+   "uk-govuk-medical_safety_alert": 1,
+   "uk-govuk-drug_safety_update": 1,
+   "us-sec-18c0a4ef1b": 1,
+   "us-ftc-58b0383166": 1,
+   "us-ofac-index": 1,
+   "us-fdic-index": 1,
+   "us-cftc-fda5c3631d": 1,
+   "eu-ecb-991c113079": 1,
+   "cn-state-council-index": 1,
+   "ch-snb-b0f42db828": 1,
+   "de-bundesbank-fe89ad3ac9": 1
   },
   "by_class": {
-   "routine": 89,
-   "high": 11,
-   "watch": 5
+   "watch": 30,
+   "routine": 43,
+   "high": 13,
+   "docket": 16,
+   "noise": 2
   }
  },
  "parsed_today": {
-  "count": 35,
+  "count": 147,
   "by_class": {
-   "high": 11,
-   "routine": 19,
-   "watch": 5
+   "high": 26,
+   "routine": 64,
+   "watch": 44,
+   "docket": 16,
+   "noise": 2
   }
  },
- "n_failures": 0,
+ "n_failures": 2,
  "dates": [
   "2026-10-26"
  ],
