@@ -1,10 +1,10 @@
-# Event Scan — 2026-10-23
+# Event Scan — 2026-10-26
 
-- events tracked: **40** (via deepseek-web)
+- events tracked: **35** (via openclaw)
 - uncertainty: **elevated**
-- summary: Markets enter the final week of October with a dovish Fed on hold, sticky 3.7% CPI, Brent above $111 on Hormuz disruption and a pivotal mega-cap earnings week. The October 28 FOMC, October 29 GDP/PCE, November 3 midterms and a possible post-election Iran escalation dominate the next two weeks, while the China Fifth Plenum and Brazil runoff add EM policy risk. The main tension is between a market pricing a benign Fed hold and a data-dependent path that could force a December hike.
+- summary: Markets enter the final week of October with a Fed hold largely priced, sticky inflation, Brent above $111 on Hormuz risk, and a pivotal mega-cap earnings week. The FOMC, Q3 GDP/core PCE, the US midterms and a possible post-election Iran escalation dominate the next two weeks, while China's Fifth Plenum and Anthropic's IPO add policy and liquidity risk. The main tension is between a market pricing a benign Fed pause and a data-dependent path that could force a December hike.
 
-## Events tracked (40)
+## Events tracked (35)
 
 1. **US September CPI — +0.6% m/m, 3.7% y/y**
    - macro_data | past | 2026-10-14 | impact 4/5 | bearish
@@ -62,110 +62,90 @@
    - ongoing | past | 2026-10-17..2026-10-23 | impact 2/5 | bearish
    - regions: France, EU | sectors: BROAD, Consumer Cyclical, Financial
    - France suffered its worst unrest in years, weakening the government and reinforcing the case for the ECB to hold rather than hike on October 29.
-15. **Japan September core CPI rises to 2.4%, above BOJ target**
-   - macro_data | today | 2026-10-23 | impact 3/5 | bearish
+15. **Japan September core CPI rises to 2.1%, core-core 2.4%**
+   - macro_data | past | 2026-10-23 | impact 3/5 | bearish
    - regions: Japan | sectors: BROAD, Financial
    - Core inflation exceeded 2% for the first time in nine months, strengthening the case for a December BOJ hike even as the October 30 meeting is expected to hold.
 16. **Eurozone October flash PMI misses — services 51.7 vs 52.5 expected**
-   - macro_data | today | 2026-10-23 | impact 2/5 | bearish
+   - macro_data | past | 2026-10-23 | impact 2/5 | bearish
    - regions: EU | sectors: BROAD
    - Growth momentum slowed in October while input prices accelerated on energy, leaving the ECB caught between a weak economy and 3.8% inflation.
 17. **Brent crude above $111 on Strait of Hormuz attacks**
-   - ongoing | today | 2026-10-23 | impact 4/5 | mixed
-   - regions: Global, Middle East, US | sectors: Energy, BROAD
-   - Brent is at five-month highs as Iranian attacks on tankers disrupt the world's most important energy chokepoint, feeding inflation and complicating the Fed's pause.
-18. **Brazil presidential runoff — Lula vs Flávio Bolsonaro**
-   - geopolitical | upcoming | 2026-10-25 | impact 3/5 | mixed
+   - ongoing | past | 2026-10-14..2026-10-25 | impact 4/5 | mixed
+   - regions: Global, Middle East, US, Iran | sectors: Energy
+   - The US-Israel-Iran conflict continues to disrupt oil flows and shipping through Hormuz, keeping a geopolitical risk premium in crude and global inflation expectations.
+18. **Brazil presidential runoff — Lula wins, Bolsonaro contests**
+   - geopolitical | past | 2026-10-25 | impact 2/5 | mixed
    - regions: Brazil | sectors: BROAD, Basic Materials, Financial
-   - Bolsonaro led the first round and polls; a Bolsonaro win would extend the market-friendly rally in Brazilian assets, while a Lula comeback would reverse it.
-19. **China Fifth Plenum of the 20th Central Committee**
-   - government | upcoming | 2026-10-26..2026-10-29 | impact 3/5 | mixed
-   - regions: China | sectors: BROAD, Technology, Industrials
-   - The plenum will signal the policy agenda on party discipline, self-reliance and likely the next five-year plan framework, a key input for China exposure.
-20. **US Conference Board consumer confidence — October**
-   - macro_data | upcoming | 2026-10-27 | impact 2/5 | bearish
-   - regions: US | sectors: Consumer Cyclical, Consumer Defensive
-   - Michigan sentiment fell to a 15-year low; the Conference Board print will show whether labour-market views are deteriorating ahead of the holiday season.
-21. **Boeing, Caterpillar and Visa Q3 earnings**
-   - earnings | upcoming | 2026-10-27 | impact 3/5 | mixed
-   - regions: US | sectors: Industrials, Financial
-   - Boeing's cash burn and Caterpillar's dealer inventories are key cyclical read-throughs, while Visa shows consumer spending resilience.
-22. **FOMC meeting — hold at 3.75%–4.00% expected**
+   - Lula's narrow victory removes immediate election uncertainty but the contested result raises the risk of political instability in Latin America's largest economy.
+19. **Trump lifts some Canada tariffs, adds new ones ahead of midterms**
+   - government | past | 2026-10-23 | impact 2/5 | mixed
+   - regions: US, Canada | sectors: BROAD, Consumer Defensive, Industrials
+   - The executive order removes 50% tariffs on some Canadian agricultural and forestry products from Oct 30 but adds tariffs on dozens of other goods, a pre-election political calculation with limited net trade impact.
+20. **South Korea semiconductor exports surge 222.5% in first 20 days of October**
+   - macro_data | past | 2026-10-21 | impact 2/5 | bullish
+   - regions: South Korea | sectors: Technology
+   - AI-driven chip demand is driving record Korean exports, confirming the semiconductor upcycle remains strong despite China's export restrictions.
+21. **China Fifth Plenum opens — 2027 growth targets in focus**
+   - government | today | 2026-10-26..2026-10-29 | impact 3/5 | mixed
+   - regions: China | sectors: BROAD, Basic Materials, Industrials, Technology
+   - The Plenum will finalise 2027 economic targets and signal the policy mix for the next year, with markets watching for any shift toward stronger consumption support or continued quality-over-quantity restraint.
+22. **Anthropic IPO — S-1 filing expected as early as today**
+   - ipo | today | 2026-10-26 | impact 3/5 | mixed
+   - regions: US | sectors: Technology
+   - A public filing for a potential $100bn raise and $2trn valuation would be the largest tech IPO ever, testing market appetite for AI mega-caps amid a choppy tech tape.
+23. **FOMC meeting — hold expected at 3.75–4.00%**
    - macro_data | upcoming | 2026-10-27..2026-10-28 | impact 4/5 | mixed
+   - regions: US | sectors: BROAD, Financial
+   - Markets price ~90% probability of a hold, but the statement and Powell's tone will be scrutinised for signals on a December hike given sticky inflation and firm growth.
+24. **US Q3 GDP advance and September PCE**
+   - macro_data | upcoming | 2026-10-29 | impact 4/5 | mixed
    - regions: US | sectors: BROAD
-   - The market prices a hold with a tightening bias; a hike is seen as less than 15% likely, but a hawkish statement could harden December hike expectations.
-23. **UK Autumn Budget — bank tax in focus, CGT held**
-   - government | upcoming | 2026-10-28 | impact 3/5 | mixed
-   - regions: UK | sectors: Financial, BROAD
-   - Chancellor Healey is expected to hold capital gains tax and target bank profits to fill a fiscal gap, with gilt and sterling sensitivity high.
-24. **Microsoft and Alphabet Q3 earnings**
-   - earnings | upcoming | 2026-10-28 | impact 4/5 | bullish
-   - regions: US | sectors: Technology, Communication Services
-   - Azure and Google Cloud growth plus AI capex guidance will determine whether the mega-cap AI trade can extend after a mixed Meta print.
-25. **ECB rate decision — hold at 2.50% expected**
+   - Consensus expects Q3 GDP at 3.2% annualised and core PCE at 2.4% q/q; a hot core PCE would cement a December hike, while a growth miss would complicate the Fed's path.
+25. **ECB meeting — hold expected, December signal in focus**
    - macro_data | upcoming | 2026-10-29 | impact 3/5 | mixed
    - regions: EU | sectors: BROAD, Financial
-   - The ECB is expected to hold and defer a December hike decision, with France's political crisis and weak PMIs reducing the urgency to tighten.
-26. **US Q3 GDP advance and September PCE inflation**
-   - macro_data | upcoming | 2026-10-29 | impact 4/5 | bearish
-   - regions: US | sectors: BROAD
-   - Core PCE is the Fed's preferred gauge; after a 3.7% CPI, a 3%+ core print would harden the December hike case and pressure duration-sensitive equities.
-27. **Samsung Electronics full Q3 results**
-   - earnings | upcoming | 2026-10-29 | impact 3/5 | bullish
-   - regions: South Korea | sectors: Technology
-   - Preliminary guidance showed record operating profit on AI memory demand; the divisional breakdown will confirm whether the HBM cycle still has legs.
-28. **Amazon and Apple Q3 earnings**
-   - earnings | upcoming | 2026-10-29 | impact 4/5 | mixed
-   - regions: US | sectors: Technology, Consumer Cyclical, Communication Services
-   - AWS growth and Apple's iPhone demand and services margins close out mega-cap peak week and set the tone for holiday-quarter guidance.
-29. **Bank of Japan meeting — hold at 1.25% expected**
+   - The ECB is expected to hold at 2.50%, but Lagarde may signal a December hike if energy-driven inflation persists, while French political turmoil complicates the outlook.
+26. **Bank of Japan meeting — hold expected at 1.25%**
    - macro_data | upcoming | 2026-10-29..2026-10-30 | impact 3/5 | mixed
    - regions: Japan | sectors: BROAD, Financial
-   - The BOJ is expected to hold but retain a December hike bias; the Outlook Report will be scrutinised for a upgrade to the inflation path.
-30. **Coordinated global port strike — 100+ ports across 17 countries**
-   - ongoing | upcoming | 2026-10-30 | impact 3/5 | bearish
-   - regions: Europe, US, Asia, Africa | sectors: Industrials, Consumer Cyclical, BROAD
-   - Dockworkers plan a coordinated strike at more than 100 ports, threatening container flows and adding supply-chain inflation just as holiday shipments peak.
-31. **China October official manufacturing PMI**
-   - macro_data | upcoming | 2026-10-31 | impact 2/5 | mixed
-   - regions: China | sectors: BROAD, Basic Materials, Industrials
-   - September PMI returned to 50.1; a print above 50 would confirm Q3 momentum, while a sub-50 print would revive stimulus expectations.
-32. **OPEC+ monthly meeting — November production review**
-   - geopolitical | upcoming | 2026-11-01 | impact 3/5 | mixed
-   - regions: Saudi Arabia, Russia, Global | sectors: Energy
-   - OPEC+ has held November production steady, but with Hormuz risk premium elevated the meeting could tighten or loosen the market.
-33. **US October ISM manufacturing**
-   - macro_data | upcoming | 2026-11-02 | impact 3/5 | mixed
-   - regions: US | sectors: Industrials, BROAD
-   - Manufacturing has been a soft spot; a print near the 54.5 prior would confirm the economy is holding up despite high rates.
-34. **US midterm elections — control of Congress**
+   - The BOJ is expected to hold but may revise up its 2027 inflation forecast, keeping a December hike on the table and supporting yen volatility.
+27. **Microsoft, Alphabet, and Amazon earnings**
+   - earnings | upcoming | 2026-10-28..2026-10-29 | impact 4/5 | mixed
+   - regions: US | sectors: Technology, Communication Services, Consumer Cyclical
+   - About 36% of the S&P 500 reports this week; AI capex, cloud growth and ad spending will determine whether the mega-cap tech rally can resume after a soft patch.
+28. **Apple Q3 2026 earnings**
+   - earnings | upcoming | 2026-11-02 | impact 3/5 | mixed
+   - regions: US | sectors: Technology, Consumer Cyclical
+   - Apple closes the mega-cap earnings series; iPhone demand, China revenue and services growth will be key for the consumer tech narrative.
+29. **US midterm elections**
    - geopolitical | upcoming | 2026-11-03 | impact 4/5 | mixed
-   - regions: US | sectors: BROAD
-   - A Democratic sweep would constrain Trump's legislative agenda and increase gridlock; history shows equities often rally after the result regardless of outcome.
-35. **US Treasury quarterly refunding announcement**
-   - government | upcoming | 2026-11-04 | impact 3/5 | mixed
-   - regions: US | sectors: Financial, BROAD
-   - Bessent's buyback programme has made the refunding a wildcard for the $31 trillion Treasury market, with a possible shift toward bills and shorter maturities.
-36. **US October jobs report**
-   - macro_data | upcoming | 2026-11-06 | impact 4/5 | mixed
-   - regions: US | sectors: BROAD
-   - With ADP running at only 18.5k per week and unemployment at 4.6%, the report will test whether the labour market is cracking under high rates.
-37. **US Section 301 China exclusions expire November 10**
-   - government | upcoming | 2026-11-10 | impact 3/5 | bearish
-   - regions: US, China | sectors: Technology, Industrials, Consumer Cyclical
-   - 178 product exclusions expire with no extension announced, raising costs for importers just as the broader truce runs to January 10, 2027.
-38. **Anthropic IPO — Nasdaq listing targeted for November**
-   - ipo | upcoming | 2026-11-09..2026-11-20 | impact 3/5 | mixed
+   - regions: US | sectors: BROAD, Technology, Healthcare, Financial
+   - Prediction markets price high odds of a Democratic sweep, which could constrain corporate tax cuts and increase regulation in tech and AI; markets may see a 'sell the rumor, buy the news' pattern.
+30. **OPEC+ November 1 meeting**
+   - geopolitical | upcoming | 2026-11-01 | impact 3/5 | mixed
+   - regions: Global, Middle East | sectors: Energy
+   - The group will review production after holding November quotas; with Brent above $111, any signal of a supply increase could ease prices, while a rollover would keep the risk premium elevated.
+31. **Anthropic IPO roadshow and potential listing**
+   - ipo | upcoming | 2026-11-09..2026-11-24 | impact 3/5 | mixed
    - regions: US | sectors: Technology
-   - Anthropic could list at up to a $2 trillion valuation after filing as soon as late October, a landmark test of AI investor appetite after a turbulent autumn.
-39. **US–Israel plans renewed Iran strikes after midterms**
-   - geopolitical | upcoming | 2026-11-03..2026-11-06 | impact 4/5 | bearish
-   - regions: US, Israel, Iran, Middle East | sectors: Energy, BROAD
-   - Reports say US and Israeli militaries have plans for a short, intensive campaign against Iran after the November 3 midterms, a major tail risk for oil.
-40. **Russia–Ukraine war — peace signals and continued strikes**
-   - ongoing | upcoming | 2026-10-24..2026-11-06 | impact 3/5 | mixed
-   - regions: Russia, Ukraine, Europe, US | sectors: Energy, BROAD, Basic Materials
-   - Ukraine has signalled support for an energy ceasefire and frozen-front peace deal, but Russia continues large-scale strikes on energy infrastructure.
+   - If completed, the IPO could set a new valuation benchmark for AI companies and absorb significant market liquidity, but timing is conditional on market conditions.
+32. **US October jobs report**
+   - macro_data | upcoming | 2026-11-06 | impact 3/5 | mixed
+   - regions: US | sectors: BROAD
+   - The last major labour-market print before the December FOMC; a strong report would reinforce the case for a hike, while a weak print would shift the debate toward growth risks.
+33. **SEMICON West 2026**
+   - ongoing | past | 2026-10-13..2026-10-15 | impact 2/5 | bullish
+   - regions: US | sectors: Technology
+   - The conference highlighted the industry's path to a $1 trillion milestone and showcased AI-driven demand, supporting the semiconductor capex narrative.
+34. **OPEC+ holds November production steady**
+   - geopolitical | past | 2026-10-04 | impact 2/5 | mixed
+   - regions: Global, Middle East | sectors: Energy
+   - The decision to maintain September quotas for November kept supply tight as US-Iran tensions disrupted flows, supporting elevated oil prices.
+35. **US new home sales and durable goods orders**
+   - macro_data | upcoming | 2026-10-27 | impact 1/5 | mixed
+   - regions: US | sectors: Real Estate, Industrials
+   - New home sales and durable goods provide an early read on interest-rate-sensitive demand and business investment ahead of the GDP and Fed decision.
 
 ---
 
