@@ -47,12 +47,12 @@
   },
   "webull_sim": {
    "MISSING": 5,
-   "OK": 13,
-   "SIT": 355
+   "OK": 15,
+   "SIT": 353
   }
  },
  "date": "2026-10-26",
- "generated_at": "2026-10-26T15:49:59-04:00",
+ "generated_at": "2026-10-26T16:08:23-04:00",
  "strategies": [
   {
    "buys": [
@@ -5147,7 +5147,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "1d_top_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: CON,AMN,PACS,SGRY,ASTH,NTAP,MQ mark not observed, carried at entry: KSPI,PRGS,MQ,WAY,PRCH,ABX,LAUR,EZPW,CNK,SGRY,MD,ASTH,HITI,CON,NTAP,AMN,IT",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5156,7 +5156,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "1m_top_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: CBRL,PRCH,CDNA,AVPT,SHOO,FIGS,ETON,SIG,WAY,AMN,MQ,SLDE,ABX,YOU,CVLT mark not observed, carried at entry: CBRL,SN,CDNA,VEEV,CORT,CAKE,AVPT,SHOO,DOCU,SONO,MQ,LAUR,CTOS,PBI,CBRL,CDNA",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5165,7 +5165,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "1w_top_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: CBRL,PRCH,CDNA,AVPT,SHOO,ETON,FIGS,SIG,MQ,WAY,AMN,YOU,SLDE,ABX,SONO mark not observed, carried at entry: CTOS,PBI,SPNT,SLDE,STGW,MQ,PRCH,WAY,EZPW,ABX,SGRY,PRCH,AVPT,CORT,VEEV,CDNA",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5174,7 +5174,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "2w_top_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: CBRL,PRCH,CDNA,AVPT,SHOO,FIGS,ETON,SIG,WAY,MQ,AMN,SLDE,YOU,ABX,CVLT mark not observed, carried at entry: MQ,CTOS,PBI,PRCH,FIGS,PVH,SGRY,PRCH,AVPT,CORT,VEEV,CDNA,ARQT,NTAP,ABX,TRU,",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5183,7 +5183,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "3d_top_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: CBRL,PRCH,CDNA,AVPT,SHOO,ETON,FIGS,MQ,SIG,AMN,WAY,YOU,SLDE,SONO,ABX mark not observed, carried at entry: PVH,SPNT,SLDE,STGW,MQ,PD,MQ,PRCH,AVPT,CORT,VEEV,CDNA,ARQT,NTAP,ABX,TRU,LAU",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5192,7 +5192,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "L1_long_green_tp8_lowvol_webull_sim",
-   "note": "open not observed",
+   "note": "Sim buys the next 09:30 open. The research card buys the signal-day close and is not a comparable result. no open, not filled: AUB,CATY,CURB,GBCI,KRC,TCBI mark not observed, carried at entry: BGC,BIPC",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5201,7 +5201,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "L2_long_green_tp3_lowvol_webull_sim",
-   "note": "open not observed",
+   "note": "Sim buys the next 09:30 open. The research card buys the signal-day close and is not a comparable result. no open, not filled: AUB,CATY,CURB,GBCI,KRC,TCBI mark not observed, carried at entry: BGC,BIPC",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5210,7 +5210,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "L3_long_green_hold2_midcap_webull_sim",
-   "note": "open not observed",
+   "note": "Sim buys the next 09:30 open. The research card buys the signal-day close and is not a comparable result. no open, not filled: CLF,COLB,CUBI,DOO,JBGS,LQDA,MCB,NBTX,NOVT,OI mark not observed, carried a",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5282,7 +5282,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "coil_h3_exit_alarm_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,BAX,PACS,CON,PCRX,CNMD,NVTS,EPR mark not observed, carried at entry: AXP,INFY,PRMB,EPR,KURA,DGX,ANGI,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5345,7 +5345,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_ef_3070_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: AXP,INFY,NEM,DGX,NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5354,7 +5354,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_ef_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: AXP,INFY,NEM,DGX,NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5363,7 +5363,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_ef_7030_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: AXP,INFY,NEM,DGX,NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5372,7 +5372,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_eh_3070_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: AXP,INFY,NEM,DGX,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5381,7 +5381,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_eh_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: AXP,INFY,NEM,DGX,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5390,7 +5390,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_eh_7030_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: AXP,INFY,NEM,DGX,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5399,7 +5399,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_ehs_601525_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: AXP,INFY,NEM,DGX,BMBL,BAH,KD,CTSH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5408,7 +5408,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_ehs_702010_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: AXP,INFY,NEM,DGX,BMBL,BAH,KD,CTSH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5426,7 +5426,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_en_3070_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: AUGO,AXP,INFY,NEM,DGX,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5435,7 +5435,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_en_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: AUGO,AXP,INFY,NEM,DGX,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5444,7 +5444,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_en_7030_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: AUGO,AXP,INFY,NEM,DGX,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5480,7 +5480,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_fe1_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET,AXP,INFY,NEM,DGX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5489,7 +5489,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_fe_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET,AXP,INFY,NEM,DGX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5498,7 +5498,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_fer_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET,AXP,INFY,NEM",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5507,7 +5507,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_fes_403030_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET,AXP,INFY,NEM,DGX,BAH,KD,CTSH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5516,7 +5516,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_fh_7030_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS,RITM,INTA,PAYC mark not observed, carried at entry: NET,AXP,INFY,NEM,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5525,7 +5525,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_fse_333_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET,BAH,KD,CTSH,AXP,INFY,NEM,DGX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5534,7 +5534,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_he1_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: AXP,INFY,NEM,BMBL,DGX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5543,7 +5543,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_her_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: AXP,INFY,NEM,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5552,7 +5552,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_hf_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD,BAX,PACS,CON,PCRX,PRGO,BLFS mark not observed, carried at entry: AXP,INFY,NEM,BMBL,NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5561,7 +5561,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_hj_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: AXP,INFY,NEM,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5570,7 +5570,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_hn_3070_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: AUGO,AXP,INFY,NEM,BMBL,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5579,7 +5579,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_hn_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: AUGO,AXP,INFY,NEM,BMBL,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5588,7 +5588,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_hn_7030_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: AUGO,AXP,INFY,NEM,BMBL,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5615,7 +5615,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_jf_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5633,7 +5633,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_ne1_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: AUGO,NVTS,AMX,AXP,INFY,NEM,DGX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5642,7 +5642,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_ner_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: AUGO,NVTS,AMX,AXP,INFY,NEM",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5651,7 +5651,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_nf_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,NVTS,ITW,GLND,AMTM,BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: AUGO,NVTS,AMX,NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5660,7 +5660,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_nj_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: AUGO,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5669,7 +5669,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_nse_333_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: AUGO,NVTS,AMX,BAH,KD,CTSH,AXP,INFY,NEM,DGX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5678,7 +5678,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_oh_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: AXP,INFY,NEM,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5777,7 +5777,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_seh_333_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: BAH,KD,CTSH,AXP,INFY,NEM,DGX,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5786,7 +5786,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_seh_333_skip_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: BAH,KD,CTSH,AXP,INFY,NEM,DGX,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5795,7 +5795,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_seh_333_split_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: BAH,KD,CTSH,AXP,INFY,NEM,DGX,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5804,7 +5804,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_seh_333_weather_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: BAH,KD,CTSH,AXP,INFY,NEM,DGX,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5813,7 +5813,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_seh_403525_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: BAH,KD,CTSH,AXP,INFY,NEM,DGX,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5822,7 +5822,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_seh_404020_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: BAH,KD,CTSH,AXP,INFY,NEM,DGX,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5831,7 +5831,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_seh_451540_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: BAH,KD,CTSH,AXP,INFY,NEM,DGX,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5840,7 +5840,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_seh_502525_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: BAH,KD,CTSH,AXP,INFY,NEM,DGX,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5849,7 +5849,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_seh_502525_split_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: BAH,KD,CTSH,AXP,INFY,NEM,DGX,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5858,7 +5858,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_seh_601525_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: BAH,KD,CTSH,AXP,INFY,NEM,DGX,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5876,7 +5876,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_sf_3070_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: BAH,KD,CTSH,NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5885,7 +5885,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_sf_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: BAH,KD,CTSH,NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5894,7 +5894,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_sf_7030_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: BAH,KD,CTSH,NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5903,7 +5903,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_sh_3070_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: BAH,KD,CTSH,AXP,INFY,NEM,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5912,7 +5912,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_sh_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: BAH,KD,CTSH,AXP,INFY,NEM,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5921,7 +5921,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_sh_7030_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: BAH,KD,CTSH,AXP,INFY,NEM,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5930,7 +5930,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_sh_macd_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD mark not observed, carried at entry: BAH,KD,CTSH,AXP,INFY,NEM,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5966,7 +5966,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_sn_3070_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: AUGO,BAH,KD,CTSH,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5975,7 +5975,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_sn_5050_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: AUGO,BAH,KD,CTSH,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5984,7 +5984,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_sn_7030_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: AUGO,BAH,KD,CTSH,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -5993,7 +5993,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "combo_snj_333_shared_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: AUGO,BAH,KD,CTSH,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6002,7 +6002,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6011,7 +6011,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h3_cut_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6020,7 +6020,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h3_half_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6029,7 +6029,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h3_rankw_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6038,7 +6038,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h3_sboost_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6047,7 +6047,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h3_sizeup_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6056,7 +6056,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h3_time_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6065,7 +6065,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h3_topheavy_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6074,7 +6074,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h3_trail_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6083,7 +6083,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: SGRY,VEEV,CDNA,CRON,CORT,ARQT,ETON,NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6092,7 +6092,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h5_cut_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6101,7 +6101,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h5_half_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6110,7 +6110,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h5_rankw_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6119,7 +6119,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h5_s8_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6128,7 +6128,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h5_sboost_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6137,7 +6137,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h5_sizeup_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6146,7 +6146,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h5_time_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6155,7 +6155,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h5_topheavy_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6164,7 +6164,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h5_trail_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6173,7 +6173,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_h5_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,PRGO,BLFS mark not observed, carried at entry: RRC,VEEV,ILMN,CDNA,ARQT,PACS,SGRY,VEEV,CDNA,CRON,CORT,ARQT,ETON,NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6281,7 +6281,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "flatten_robust_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,PRGO,CON,BLFS,PCRX,CNMD mark not observed, carried at entry: IOT,FIGS,NEO,MNR,CDNA,IT,TOST,SN,AVPT,CAKE",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6353,10 +6353,14 @@
    "buys": [],
    "family": "webull_sim",
    "name": "h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "Sealed h1 plan log. The plan sets its own count and equal weight. Sim cash starts at $10,000 and is not the research book's cash. no open, not filled: NAUT,UWMC,LQDA,BMBL,BHVN,POOL,TRON mark not obser",
+   "sells": [
+    "BHVN 0",
+    "POOL 0",
+    "TRON 0"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -6371,7 +6375,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "ohlc_hot_coil_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,VET,SWIM,APA mark not observed, carried at entry: INFY,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6380,7 +6384,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "ohlc_hot_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,DOW,POOL,FRSH,BMBL,CHKP mark not observed, carried at entry: SMWB,SBAC,INFY,TYL,INTA,POOL,BMBL,WIT,GLOB,ROP",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6389,7 +6393,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "ohlc_hot_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,DOW,POOL,FRSH,BMBL,CHKP mark not observed, carried at entry: KSS,SDEV,SMWB,SBAC,BMBL,HLT,VFC,TRU,WIT,KVYO,CMRC,IT,DOCU,SHO,INFY,TYL,INTA,POOL,BMBL,WIT,GLOB,ROP",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6398,7 +6402,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "ohlc_hot_h5_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,DOW,POOL,FRSH,BMBL,CHKP mark not observed, carried at entry: KSS,SDEV,FNKO,SMWB,FIGS,SBAC,LOGI,NOG,OVV,KRP,ADMA,CNQ,PR,MNST,BMBL,HLT,VFC,WIT,DOCU,SHO,IBM,TRI,TRU,AM",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6479,7 +6483,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "probable_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: NVTS,EPR,PDFS,SMMT,PRMB,AIP,CXW mark not observed, carried at entry: PRMB,NVTS,EPR,SMMT,PDFS,AIP,CXW,ACRS",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6488,7 +6492,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "probable_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: NVTS,EPR,PDFS,SMMT,PRMB,AIP,CXW mark not observed, carried at entry: OIG,SMMT,NVTS,EPR,ACRS,PRMB,PDFS,AIP,CXW,NVTS,EGG,SMMT,PRMB,PRMB,NVTS,EPR,SMMT,PDFS,AIP,CXW,ACRS",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6497,7 +6501,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "probable_h5_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: NVTS,EPR,PDFS,SMMT,PRMB,AIP,CXW mark not observed, carried at entry: BYRN,OIG,WFF,CCCC,PRMB,NVTS,AIP,SMMT,EPR,PDFS,CXW,ACRS,SMMT,NVTS,ACRS,NVTS,EGG,SMMT,PRMB,EPR,PDFS,NVTS,ACRS",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6506,7 +6510,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "probable_probable_ok_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: PDFS,AIP,CXW mark not observed, carried at entry: PRMB,EPR,SMMT,ACRS",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6515,7 +6519,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "probable_probable_ok_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: PDFS,AIP,CXW mark not observed, carried at entry: SMMT,EPR,ACRS,EGG,PRMB,EPR,SMMT,ACRS",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6524,7 +6528,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "short_alarm_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,AMX,ANGI,DOW,SMMT,PRMB,ACRS,KURA mark not observed, carried at entry: CBOE,DOCS,ITW,GLND,TYL,INTA,BAH,POOL,TRU",
    "sells": [
     "TBBB 0",
     "AMX 0",
@@ -6542,7 +6546,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "short_alarm_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,AMX,ANGI,DOW,SMMT,PRMB,ACRS,KURA mark not observed, carried at entry: EXTR,ADTN,CBOE,DOCS,SAP,ITW,BKU,CME,NVTS,AMX,TBBB,DOCU,PNFP,NVTS,TBBB,CMCSA,HBAN,PG,ITW,GLND,TYL,INTA,BA",
    "sells": [
     "TBBB 0",
     "AMX 0",
@@ -6560,7 +6564,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "short_clk_ext_veto_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: EGG,HLP mark not observed, carried at entry: TBBB,MRNA,LQDA,TRU,TBBB,KLRA,LQDA",
    "sells": [
     "EGG 0",
     "HLP 0"
@@ -6599,7 +6603,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "short_extended_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: POOL,QTTB,HLP,CHKP,ARHS,TTAN,HUBS,ALKT mark not observed, carried at entry: SBAC,POOL,WIT,GLOB,EFX,KD,ACN",
    "sells": [
     "POOL 0",
     "QTTB 0",
@@ -6617,7 +6621,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "short_extended_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: POOL,QTTB,HLP,CHKP,ARHS,TTAN,HUBS,ALKT mark not observed, carried at entry: SBAC,TRU,KLRA,GLND,KVYO,BROS,Z,SRPT,ARQT,TRU,KLRA,ENGS,EPAM,GLOB,RH,VERA,POOL,WIT,GLOB,EFX,KD,ACN",
    "sells": [
     "POOL 0",
     "QTTB 0",
@@ -6635,7 +6639,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "short_last_red_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,CON,NVTS,EPR,ITW,AMX,ANGI,PRGO mark not observed, carried at entry: NVTS,TBBB,BBD,NET,PDFS,AIP,CXW,MX",
    "sells": [
     "BAX 0",
     "CON 0",
@@ -6653,7 +6657,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "short_last_red_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,CON,NVTS,EPR,ITW,AMX,ANGI,PRGO mark not observed, carried at entry: SDEV,NFLX,CME,DHR,AMX,TBBB,PM,PRIM,TLSA,MOH,PCG,DOW,HON,PHM,TBBB,GLND,PG,NVTS,TBBB,BBD,NET,PDFS,AIP,CXW,MX",
    "sells": [
     "BAX 0",
     "CON 0",
@@ -6671,7 +6675,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "short_macd_dn_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: NVTS,PDFS,GLND,BLFS,SMMT,AIP,CXW,MX mark not observed, carried at entry: GLND,NVTS,KURA,BBD,NET,SMMT,PDFS,AIP",
    "sells": [
     "NVTS 0",
     "PDFS 0",
@@ -6689,7 +6693,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "short_macd_dn_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: NVTS,PDFS,GLND,BLFS,SMMT,AIP,CXW,MX mark not observed, carried at entry: T,SMMT,NVTS,ACRS,KURA,LUV,PDFS,AIP,LUV,NVTS,GLND,VLO,CORT,ETON,SMMT,PDFS,GLND,NVTS,KURA,BBD,NET,SMMT,PDFS,",
    "sells": [
     "NVTS 0",
     "PDFS 0",
@@ -6779,7 +6783,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "short_rsi_ob_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,EPR,ITW,BLFS,EGG,MX,HLP mark not observed, carried at entry: ITW,EPR,EGG,TBBB,MX",
    "sells": [
     "TBBB 0",
     "EPR 0",
@@ -6796,7 +6800,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "short_rsi_ob_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,EPR,ITW,BLFS,EGG,MX,HLP mark not observed, carried at entry: ITW,EPR,TBBB,EGG,MX,ITW,CDNA,EGG,TBBB,MRNA,EPR,MX,ITW,EPR,EGG,TBBB,MX",
    "sells": [
     "TBBB 0",
     "EPR 0",
@@ -6813,7 +6817,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "stock_book_1d_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: CON,AMN,PACS,SGRY,ASTH,NTAP,MQ mark not observed, carried at entry: KSPI,PRGS,MQ,WAY,PRCH,ABX,LAUR,EZPW,CNK,SGRY,MD,ASTH,HITI,CON,NTAP,AMN,IT",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6822,7 +6826,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "stock_book_1m_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: CBRL,PRCH,CDNA,AVPT,SHOO,FIGS,ETON,SIG,WAY,AMN,MQ,SLDE,ABX,YOU,CVLT mark not observed, carried at entry: CBRL,SN,CDNA,VEEV,CORT,CAKE,AVPT,SHOO,DOCU,SONO,MQ,LAUR,CTOS,PBI,CBRL,CDNA",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6831,7 +6835,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "stock_book_1w_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: CBRL,PRCH,CDNA,AVPT,SHOO,ETON,FIGS,SIG,MQ,WAY,AMN,YOU,SLDE,ABX,SONO mark not observed, carried at entry: CTOS,PBI,SPNT,SLDE,STGW,MQ,PRCH,WAY,EZPW,ABX,SGRY,PRCH,AVPT,CORT,VEEV,CDNA",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6840,7 +6844,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "stock_book_2w_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: CBRL,PRCH,CDNA,AVPT,SHOO,FIGS,ETON,SIG,WAY,MQ,AMN,SLDE,YOU,ABX,CVLT mark not observed, carried at entry: MQ,CTOS,PBI,PRCH,FIGS,PVH,SGRY,PRCH,AVPT,CORT,VEEV,CDNA,ARQT,NTAP,ABX,TRU,",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6849,22 +6853,61 @@
    "buys": [],
    "family": "webull_sim",
    "name": "stock_book_3d_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: CBRL,PRCH,CDNA,AVPT,SHOO,ETON,FIGS,MQ,SIG,AMN,WAY,YOU,SLDE,SONO,ABX mark not observed, carried at entry: PVH,SPNT,SLDE,STGW,MQ,PD,MQ,PRCH,AVPT,CORT,VEEV,CDNA,ARQT,NTAP,ABX,TRU,LAU",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "ALLY 5",
+    "ALV 1",
+    "BAH 2",
+    "BBD 48",
+    "BKU 4",
+    "CIVB 7",
+    "CMCSA 9",
+    "DOV 1",
+    "DOW 6",
+    "EWBC 1",
+    "FAF 2",
+    "FBP 7",
+    "FCCO 6",
+    "GSBC 2",
+    "HAL 5",
+    "HBAN 12",
+    "HWC 2",
+    "IIIN 6",
+    "INFY 15",
+    "KEY 9",
+    "KRC 5",
+    "NEM 1",
+    "NPB 14",
+    "OFG 3",
+    "OII 4",
+    "ONB 7",
+    "PCG 15",
+    "PG 1",
+    "PHM 1",
+    "PNFP 2",
+    "SBFG 6",
+    "SON 3",
+    "WFRD 2",
+    "WH 2"
+   ],
    "family": "webull_sim",
    "name": "theme_radar_fpe_delta_t3_earn_today_3d_webull_sim",
    "note": "sat out, 0 picks",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AIBZ 174",
+    "FRTT 890",
+    "ZENA 550"
+   ],
    "family": "webull_sim",
    "name": "theme_radar_fresh_dcp_t1_avoid_ah_3d_webull_sim",
    "note": "Research short. Off the real Webull paper account. Enters at the 09:30 open and covers at the close of the last hold day. borrow not modeled.",
@@ -6878,7 +6921,11 @@
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CHRN 34",
+    "SLNH 1049",
+    "VIVO 266"
+   ],
    "family": "webull_sim",
    "name": "theme_radar_fresh_dcp_t1_ep_ge03_2d_webull_sim",
    "note": "Research short. Off the real Webull paper account. Enters at the 09:30 open and covers at the close of the last hold day. borrow not modeled.",
@@ -6895,7 +6942,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_ab_g_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,EPR,PDFS,ITW mark not observed, carried at entry: AUGO,SMWB,AXP,PRMB,NVTS,EPR,EGG,KURA,DGX,ACN",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6904,7 +6951,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_ab_g_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,EPR,PDFS,ITW mark not observed, carried at entry: KSS,AUGO,SMWB,ISRG,DHR,SGRY,SMMT,EPR,KURA,DGX,HALO,CSX,DOV,VEEV,ITW,POOL,DGX,DOW,AXP,PRMB,NVTS,EPR,EGG",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6913,7 +6960,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_blue_coil_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: PACS,CON,PDFS,ITW,DBRG,GLND,INTA,PAYC mark not observed, carried at entry: PRMB,KURA,DGX,ANGI,BMBL,SMMT,ACRS,RCKT",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6922,7 +6969,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_blue_coil_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: PACS,CON,PDFS,ITW,DBRG,GLND,INTA,PAYC mark not observed, carried at entry: KSS,SGRY,KURA,CSX,DOV,PCG,VEEV,ITW,POOL,HON,PHM,PRMB,KURA,DGX,ANGI,BMBL,SMMT,ACRS,RCKT",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6931,7 +6978,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_blue_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: PACS,CON,PDFS,ITW,DBRG,GLND,INTA,PAYC mark not observed, carried at entry: AUGO,SMWB,PRMB,KURA,DGX,ANGI,BMBL,SMMT,ACRS,RCKT",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6940,7 +6987,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_blue_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: PACS,CON,PDFS,ITW,DBRG,GLND,INTA,PAYC mark not observed, carried at entry: KSS,AUGO,SMWB,SGRY,KURA,CSX,DOV,PCG,VEEV,ITW,POOL,HON,LUV,PRMB,KURA,DGX,ANGI,BMBL,SMMT,ACRS,RCKT",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6967,7 +7014,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_break10_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,POOL,FRSH,CHKP,ARHS,TTAN mark not observed, carried at entry: AUGO,SMWB,INFY,EPR,EGG,DGX,ACN,AMX,ARHS,CSGP",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6976,7 +7023,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_break10_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,POOL,FRSH,CHKP,ARHS,TTAN mark not observed, carried at entry: KSS,AUGO,SMWB,ISRG,SGRY,KLRA,SRPT,TNGX,HALO,BRO,CSGP,DOV,SAP,CRON,INFY,EPR,EGG,DGX,ACN,AMX,ARHS,CSGP",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6985,7 +7032,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_candle_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,BAX,PACS,PCRX,CNMD,EPR,DBRG,GLND mark not observed, carried at entry: AUGO,AXP,INFY,NEM,PRMB,EPR,EGG,DGX,ANGI",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -6994,7 +7041,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_candle_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,BAX,PACS,PCRX,CNMD,EPR,DBRG,GLND mark not observed, carried at entry: KSS,AUGO,ISRG,SGRY,SMMT,EPR,ACRS,KURA,AURA,RCKT,CSX,DOV,SAP,VEEV,ITW,POOL,DGX,AXP,INFY,NEM,PRMB,EPR,EGG",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7003,7 +7050,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_candle_score_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,PAYC,INTA,CNMD,PACS,ITW,PCRX,GLND mark not observed, carried at entry: AXP,INFY,NEM,EGG,ACN,PRMB,DGX,ANGI",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7012,7 +7059,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_candle_score_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,PAYC,INTA,CNMD,PACS,ITW,PCRX,GLND mark not observed, carried at entry: KSS,ISRG,T,NFLX,DHR,SGRY,ACRS,EPR,AURA,DOV,SAP,CSX,PCG,DGX,ITW,VEEV,AXP,INFY,NEM,EGG,ACN,PRMB,DGX,ANGI",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7048,7 +7095,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_clk_flow_coil_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: PACS",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7057,7 +7104,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_clk_fresh_cat_coil_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,ITW,GLND,NVTS mark not observed, carried at entry: AXP,INFY,NEM,NVTS",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7093,7 +7140,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_clk_insider_cash_stab_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: POOL,SWIM mark not observed, carried at entry: POOL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7102,7 +7149,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_clk_mom_break_peer_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD,PACS,PCRX,EPR mark not observed, carried at entry: AXP,INFY,EPR,PRMB,ANGI",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7120,7 +7167,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_clk_nr7_mom_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RCKT,CON,PDFS,DBRG,BAX mark not observed, carried at entry: AXP,BMBL,KURA",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7147,7 +7194,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_coil_green_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,PACS,CNMD,PDFS,RCKT,DBRG,INTA,PAYC mark not observed, carried at entry: AXP,INFY,PRMB,EPR,DGX,ANGI,ACRS",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7156,7 +7203,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_coil_green_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,PACS,CNMD,PDFS,RCKT,DBRG,INTA,PAYC mark not observed, carried at entry: KSS,ISRG,T,SMMT,EPR,ACRS,KURA,AURA,RCKT,CSX,DOV,SAP,VEEV,ITW,POOL,DGX,AXP,INFY,PRMB,EPR,DGX,ANGI,ACRS",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7165,7 +7212,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_coil_off_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,BAX,PACS,CON,CNMD,PDFS,ITW,RCKT mark not observed, carried at entry: AXP,INFY,PRMB,EPR,DGX,ANGI,ACRS,AURA",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7174,7 +7221,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_coil_off_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,BAX,PACS,CON,CNMD,PDFS,ITW,RCKT mark not observed, carried at entry: KSS,SDEV,ISRG,T,DHR,SMMT,EPR,ACRS,KURA,AURA,CSX,DOV,PCG,SAP,VEEV,ITW,POOL,AXP,INFY,PRMB,EPR,DGX,ANGI",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7183,7 +7230,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_coil_off_h5_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,BAX,PACS,CON,CNMD,PDFS,ITW,RCKT mark not observed, carried at entry: KSS,BYRN,SDEV,RRC,CCCC,SYF,AMX,GE,GM,HAL,ISRG,T,DHR,SMMT,EPR,ACRS,KURA,CSX,DOV,PCG,SAP,VEEV,POOL,INFY,ANG",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7192,7 +7239,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_cond_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,CON,PACS,CNMD,PAYC,PCRX,BAX,INTA mark not observed, carried at entry: AXP,INFY,NEM,DGX,KURA,PRMB,ACN,EGG",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7201,7 +7248,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_cond_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,CON,PACS,CNMD,PAYC,PCRX,BAX,INTA mark not observed, carried at entry: KSS,ISRG,T,DHR,NFLX,SMMT,SGRY,KURA,ACRS,CSX,SAP,DOV,PCG,VEEV,PHM,UNP,AXP,INFY,NEM,DGX,KURA,PRMB,EGG",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7210,7 +7257,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_cond_n4_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,CON,PACS,CNMD mark not observed, carried at entry: KSS,ISRG,T,DHR,NFLX,CSX,SAP,DOV,AXP,INFY,NEM,DGX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7273,7 +7320,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_flow_in_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: PACS,POOL mark not observed, carried at entry: NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7282,7 +7329,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_flow_in_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: PACS,POOL mark not observed, carried at entry: ISRG,DHR,CSX,CECO,HLT,NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7291,7 +7338,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_flow_in_h5_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: PACS,POOL mark not observed, carried at entry: SYF,ENGS,ISRG,DHR,CSX,CECO,HLT,NET",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7318,7 +7365,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h1_cut_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7327,7 +7374,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h1_half_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7336,7 +7383,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h1_rankw_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7345,7 +7392,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h1_sboost_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7354,7 +7401,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h1_sizeup_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7363,7 +7410,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h1_time_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7372,7 +7419,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h1_topheavy_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7381,7 +7428,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h1_trail_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7390,7 +7437,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7399,7 +7446,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h3_cut_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7408,7 +7455,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h3_exit_alarm_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,BAX,PACS,CON,PCRX,CNMD,NVTS,EPR mark not observed, carried at entry: AUGO,AXP,INFY,NEM,PRMB,NVTS,EPR,EGG,KURA",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7417,7 +7464,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h3_exit_news_r_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,BAX,PACS,CON,PCRX,CNMD,NVTS,EPR mark not observed, carried at entry: AUGO,AXP,INFY,NEM,PRMB,NVTS,EPR,EGG,KURA",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7426,7 +7473,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h3_exit_red_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,PACS,PCRX,CNMD,PDFS,RCKT,DBRG,GLND mark not observed, carried at entry: AUGO,AXP,INFY,NEM,PRMB,EPR,EGG,KURA,DGX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7435,7 +7482,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h3_half_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7444,7 +7491,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h3_rankw_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7453,7 +7500,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h3_sboost_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7462,7 +7509,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h3_sizeup_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7471,7 +7518,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h3_time_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7480,7 +7527,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h3_topheavy_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7489,7 +7536,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h3_trail_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7498,7 +7545,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: KSS,ISRG,T,SAP,ITW,BKU,CME,DHR,NFLX,CSX,DOV,PCG,SAP,VEEV,ITW,POOL,AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7507,7 +7554,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h5_cut_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7516,7 +7563,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h5_exit_alarm_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,BAX,PACS,CON,PCRX,CNMD,NVTS,EPR mark not observed, carried at entry: AUGO,AXP,INFY,NEM,PRMB,NVTS,EPR,EGG,KURA",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7525,7 +7572,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h5_half_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7534,7 +7581,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h5_rankw_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7543,7 +7590,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h5_sboost_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7552,7 +7599,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h5_sizeup_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7561,7 +7608,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h5_time_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7570,7 +7617,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h5_topheavy_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7579,7 +7626,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h5_trail_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7588,7 +7635,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_h5_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: KSS,LVWR,RRC,SVC,SYF,ITW,AMX,ALLY,GE,ISRG,T,SAP,ITW,BKU,CME,CSX,DOV,PCG,SAP,VEEV,ITW,POOL,AXP,INFY,GLND",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7597,7 +7644,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_hot_n12_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD,PACS,GLND,RCKT,CON,ITW,PDFS,DBRG,BAX mark not observed, carried at entry: SMWB,SBAC,AXP,INFY,NEM,BMBL,ACN,EGG,DGX,EPR,PRMB,ANGI,KURA,NVTS",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7606,7 +7653,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_hot_n4_h1_preopen_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7615,7 +7662,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_hot_n4_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: POOL,CHKP,ARHS,TTAN mark not observed, carried at entry: BMBL,LQDA,KLRA,ACN",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7624,7 +7671,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_hot_n4_holdup_preopen_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,RITM,BAX,PACS,CON,PCRX,CNMD,NVTS mark not observed, carried at entry: AXP,INFY,ITW,GLND,TYL,INTA,BAH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7633,7 +7680,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_hot_n4_holdup_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: POOL,CHKP,ARHS,TTAN mark not observed, carried at entry: BMBL,LQDA,KLRA,ACN",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7642,7 +7689,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_hot_score_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD,PACS,GLND,RCKT,CON mark not observed, carried at entry: SMWB,SBAC,AXP,INFY,NEM,BMBL,ACN,EGG,DGX,EPR",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7651,7 +7698,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_hot_score_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD,PACS,GLND,RCKT,CON mark not observed, carried at entry: KSS,SDEV,SMWB,SBAC,ISRG,T,DHR,NFLX,SGRY,ACRS,AURA,SMMT,SAP,DOV,CSX,PCG,ITW,POOL,AXP,INFY,NEM,BMBL,EGG",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7660,7 +7707,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_join_g_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,RCKT,DBRG,PAYC mark not observed, carried at entry: AUGO,SMWB,AXP,NEM,PRMB,DGX,ACN,SMMT,QTTB,TLSA",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7669,7 +7716,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_join_g_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,PACS,CON,PCRX,CNMD,RCKT,DBRG,PAYC mark not observed, carried at entry: AUGO,SMWB,ISRG,T,DHR,SMMT,DGX,HALO,BRO,CSGP,VEEV,PHM,CDNA,CRON,QTTB,NEM,AXP,NEM,PRMB,DGX,ACN,SMMT,QTTB,T",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7678,7 +7725,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_join_present_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,BAX,PACS,CON,PCRX,CNMD,NVTS,EPR mark not observed, carried at entry: AUGO,AXP,INFY,NEM,PRMB,NVTS,EPR,EGG,KURA",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7687,7 +7734,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_join_present_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,BAX,PACS,CON,PCRX,CNMD,NVTS,EPR mark not observed, carried at entry: KSS,AUGO,ISRG,T,DHR,NFLX,SGRY,SMMT,EPR,ACRS,CSX,DOV,PCG,SAP,VEEV,ITW,POOL,AXP,INFY,NEM,PRMB,NVTS,EPR,EGG",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7714,7 +7761,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_last_green_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,PACS,PCRX,CNMD,PDFS,RCKT,DBRG,GLND mark not observed, carried at entry: AUGO,AXP,INFY,NEM,PRMB,EPR,EGG,KURA,DGX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7723,7 +7770,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_last_green_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,PACS,PCRX,CNMD,PDFS,RCKT,DBRG,GLND mark not observed, carried at entry: KSS,AUGO,ISRG,T,SGRY,SMMT,EPR,ACRS,KURA,AURA,CSX,DOV,SAP,VEEV,ITW,POOL,AXP,INFY,NEM,PRMB,EPR,EGG,KURA",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7732,7 +7779,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_last_green_h5_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,PACS,PCRX,CNMD,PDFS,RCKT,DBRG,GLND mark not observed, carried at entry: KSS,LVWR,RRC,SVC,AUGO,SEZL,SYF,PRMB,JLHL,FRSH,LOGI,NOG,ISRG,T,ACRS,CSX,DOV,SAP,VEEV,ITW,POOL,DGX,AXP,I",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7741,7 +7788,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_last_red_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,CON,NVTS,EPR,ITW,PRGO,MX,PRIM mark not observed, carried at entry: NVTS,NET,NBP,ENHA",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7750,7 +7797,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_last_red_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BAX,CON,NVTS,EPR,ITW,PRGO,MX,PRIM mark not observed, carried at entry: SDEV,DHR,NFLX,PCG,DOW,HON,MOH,PHM,GLND,NEM,CORT,NVTS,NET,NBP,ENHA",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7759,7 +7806,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_macd_hist_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,PAYC,ITW,INTA,CNMD,PACS,EPR,PCRX mark not observed, carried at entry: SBAC,AXP,INFY,NEM,ACN,DGX,BMBL,PRMB,EPR",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7768,7 +7815,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_macd_hist_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,PAYC,ITW,INTA,CNMD,PACS,EPR,PCRX mark not observed, carried at entry: KSS,WING,SBAC,ISRG,T,NFLX,DHR,SGRY,EPR,AURA,ACRS,SAP,DOV,CSX,PCG,VEEV,POOL,MOH,AXP,INFY,NEM,ACN,DGX,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7777,7 +7824,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_macd_up_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,BAX,PACS,CON,PCRX,CNMD,EPR,ITW mark not observed, carried at entry: AUGO,AXP,INFY,NEM,PRMB,EPR,EGG,DGX,ANGI",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7786,7 +7833,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_macd_up_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,BAX,PACS,CON,PCRX,CNMD,EPR,ITW mark not observed, carried at entry: KSS,SDEV,AUGO,ISRG,DHR,NFLX,SGRY,EPR,AURA,RCKT,KLRA,CSX,DOV,PCG,SAP,VEEV,ITW,POOL,AXP,INFY,NEM,PRMB,EPR,EG",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7795,7 +7842,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_macd_xup_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: SAIL,VG mark not observed, carried at entry: AUGO,ANGI",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7804,7 +7851,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_macd_xup_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: SAIL,VG mark not observed, carried at entry: AUGO,RCKT,SRPT,TNGX,CDNA,CRON,ACRS,CRCL,ANGI",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7894,7 +7941,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_g_cond_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,ITW,GLND,NVTS,AMTM mark not observed, carried at entry: AUGO,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7903,7 +7950,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_g_cond_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,ITW,GLND,NVTS,AMTM mark not observed, carried at entry: AUGO,SGRY,CSX,SAP,UNP,ITW,GLND,HLT,CRCL,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7912,7 +7959,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_g_conv_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,ITW,GLND,NVTS mark not observed, carried at entry: AUGO,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7921,7 +7968,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_g_conv_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,ITW,GLND,NVTS mark not observed, carried at entry: AUGO,SGRY,CSX,SAP,UNP,ITW,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7930,7 +7977,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_g_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: AUGO,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7939,7 +7986,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_g_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: AUGO,SGRY,CSX,SAP,ITW,UNP,GLND,CRCL,HLT,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7948,7 +7995,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_g_h5_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,NVTS,ITW,GLND,AMTM mark not observed, carried at entry: RRC,AUGO,ITW,AMX,GE,NVTS,AIP,CNQ,OXY,GLND,SGRY,CSX,SAP,ITW,UNP,GLND,CRCL,HLT,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7957,7 +8004,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_head_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,ITW,GLND,NVTS,AMTM mark not observed, carried at entry: NVTS",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7966,7 +8013,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_head_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,ITW,GLND,NVTS,AMTM mark not observed, carried at entry: SGRY,ITW,LUV,GLND,CRCL,NVTS",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -7993,7 +8040,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_or_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,ITW,GLND,NVTS,AMTM mark not observed, carried at entry: AUGO,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8002,7 +8049,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_or_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,ITW,GLND,NVTS,AMTM mark not observed, carried at entry: AUGO,SGRY,CSX,SAP,UNP,ITW,LUV,GLND,HLT,CRCL,NVTS,AMX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8155,7 +8202,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_present_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,BAX,PACS,CON,PCRX,CNMD,NVTS,EPR mark not observed, carried at entry: AUGO,AXP,INFY,NEM,PRMB,NVTS,EPR,EGG,KURA",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8164,7 +8211,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_present_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,BAX,PACS,CON,PCRX,CNMD,NVTS,EPR mark not observed, carried at entry: KSS,AUGO,ISRG,T,DHR,NFLX,SGRY,SMMT,EPR,ACRS,CSX,DOV,PCG,SAP,VEEV,ITW,POOL,AXP,INFY,NEM,PRMB,NVTS,EPR,EGG",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8236,7 +8283,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_ret_5_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD,RCKT,CON,PACS,ITW mark not observed, carried at entry: SBAC,AXP,INFY,NEM,ACN,EGG,PRMB,ANGI,EPR",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8245,7 +8292,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_ret_5_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD,RCKT,CON,PACS,ITW mark not observed, carried at entry: KSS,SBAC,ISRG,T,DHR,NFLX,ACRS,SGRY,AURA,SMMT,SAP,DOV,CSX,PCG,POOL,VEEV,DOW,AXP,INFY,NEM,ACN,EGG,PRMB,ANG",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8254,7 +8301,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_rsi_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,DBRG,RCKT,INTA,BAX,CNMD,PACS,PCRX mark not observed, carried at entry: PTLO,AXP,INFY,NEM,DGX,BMBL,ACN,ANGI,KURA",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8263,7 +8310,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_rsi_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,DBRG,RCKT,INTA,BAX,CNMD,PACS,PCRX mark not observed, carried at entry: KSS,PTLO,T,ISRG,NFLX,DHR,AURA,KURA,SGRY,ACRS,PCG,CSX,DOV,SAP,DGX,UNP,DOW,AXP,INFY,NEM,DGX,BMBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8272,7 +8319,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_rsi_os_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: DBRG,DGX,ALKT mark not observed, carried at entry: DGX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8281,7 +8328,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_rsi_os_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: DBRG,DGX,ALKT mark not observed, carried at entry: DGX,BRO,PCG,DGX,DGX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8290,7 +8337,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_rsi_os_h5_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: DBRG,DGX,ALKT mark not observed, carried at entry: GLAS,ALHC,ALLY,PEP,RTO,PLNT,BROS,DGX,BRO,PCG,DGX,DGX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8299,7 +8346,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_rsi_os_macd_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: DBRG,DGX,ALKT mark not observed, carried at entry: DGX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8308,7 +8355,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_rsi_os_macd_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: DBRG,DGX,ALKT mark not observed, carried at entry: DGX,BRO,PCG,DGX,DGX",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8398,7 +8445,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_w_hot_candle_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD,PACS,GLND,RCKT,ITW mark not observed, carried at entry: AXP,INFY,NEM,ACN,EGG,DGX,BMBL,PRMB",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8407,7 +8454,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_w_hot_candle_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,INTA,PAYC,CNMD,PACS,GLND,RCKT,ITW mark not observed, carried at entry: KSS,SDEV,ISRG,T,DHR,NFLX,SGRY,ACRS,AURA,SMMT,DOV,SAP,CSX,PCG,ITW,VEEV,POOL,AXP,INFY,NEM,ACN,EGG,DGX,BMB",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8416,7 +8463,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_w_hot_cond_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,PAYC,INTA,PACS,CNMD,CON,PCRX,PDFS mark not observed, carried at entry: AXP,INFY,NEM,BMBL,ACN,DGX,EGG,EPR",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8425,7 +8472,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "union_w_hot_cond_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: RITM,PAYC,INTA,PACS,CNMD,CON,PCRX,PDFS mark not observed, carried at entry: KSS,SDEV,ISRG,T,DHR,NFLX,SGRY,SMMT,KURA,ACRS,SAP,DOV,CSX,PCG,VEEV,ITW,POOL,AXP,INFY,NEM,BMBL,ACN,DGX,EG",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8578,7 +8625,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "yday_gainer_h1_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,NVTS,EPR,PDFS,ITW,RCKT,AMX,SMMT mark not observed, carried at entry: AUGO,ITW,PRMB,NVTS,EPR,EGG,KURA,POOL,SMMT",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8587,7 +8634,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "yday_gainer_h3_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,NVTS,EPR,PDFS,ITW,RCKT,AMX,SMMT mark not observed, carried at entry: AUGO,ITW,SMMT,NVTS,EPR,ACRS,KURA,AURA,AMX,ITW,POOL,NVTS,EGG,QTTB,ITW,PRMB,NVTS,EPR,EGG,KURA,POOL,SMMT",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
@@ -8596,7 +8643,7 @@
    "buys": [],
    "family": "webull_sim",
    "name": "yday_gainer_h5_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: TBBB,NVTS,EPR,PDFS,ITW,RCKT,AMX,SMMT mark not observed, carried at entry: BYRN,LVWR,SVC,AUGO,SEZL,ITW,AMX,PRMB,NVTS,AIP,KLRA,SMMT,EPR,ITW,SMMT,ACRS,ITW,POOL,NVTS,EGG,QTTB,SMMT,PRM",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
    "status": "SIT"
