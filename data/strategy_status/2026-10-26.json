@@ -21,13 +21,13 @@
    "SIT": 0
   },
   "h1": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "holdup": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "paper": {
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-10-26",
- "generated_at": "2026-10-26T09:01:47-04:00",
+ "generated_at": "2026-10-26T09:15:37-04:00",
  "strategies": [
   {
    "buys": [
@@ -5107,22 +5107,41 @@
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NAUT",
+    "UWMC",
+    "LQDA",
+    "BMBL"
+   ],
    "family": "h1",
    "name": "h1",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-10-26T13:15:06Z",
+   "sells": [
+    "BHVN 146",
+    "POOL 10",
+    "TRON 1421"
+   ],
    "source": "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NAUT",
+    "UWMC",
+    "LQDA",
+    "BMBL"
+   ],
    "family": "holdup",
    "name": "holdup",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-10-26T13:08:03Z",
+   "sells": [
+    "BRZE 45",
+    "CYPH 5",
+    "MAZE 63",
+    "TRAX 49"
+   ],
    "source": "research/hot_n4_clean_v4/forward/holdup_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
