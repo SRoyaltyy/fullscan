@@ -1,9 +1,1257 @@
 [
   {
-    "n": 6487,
-    "title": "Hon’ble Prime Minister of India inaugurates the Reserve Bank of India’s Data Centre and Cybersecurity Training Institute in Bhubaneswar, Odisha",
-    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63862",
-    "published_at": "2026-10-25T19:50:00+00:00",
+    "n": 6488,
+    "title": "Self-Regulatory Organizations; MIAX PEARL, LLC; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend the MIAX Pearl Equities Fee Schedule",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21837/self-regulatory-organizations-miax-pearl-llc-notice-of-filing-and-immediate-effectiveness-of-a",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6489,
+    "title": "Wyoming Regulatory Program",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21835/wyoming-regulatory-program",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Interior Department; Surface Mining Reclamation and Enforcement Office",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6490,
+    "title": "Sunshine Act Meetings",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21825/sunshine-act-meetings",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Equal Employment Opportunity Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6491,
+    "title": "Senior Executive Service (SES) Performance Review Board; Notice of Membership",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21823/senior-executive-service-ses-performance-review-board-notice-of-membership",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "National Foundation on the Arts and the Humanities; National Endowment for the Arts",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6492,
+    "title": "Submission for OMB Review; Comment Request",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21822/submission-for-omb-review-comment-request",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Agriculture Department",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6493,
+    "title": "Enhancing the Ability of Consumers To Control the Robocalls",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21821/enhancing-the-ability-of-consumers-to-control-the-robocalls",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Federal Communications Commission",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6494,
+    "title": "Modernizing the Ability of Consumers To Control Robocalls",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21820/modernizing-the-ability-of-consumers-to-control-robocalls",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Federal Communications Commission",
+    "document_type": "Proposed Rule",
+    "document_stage": "proposal_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6495,
+    "title": "Certain Small Vertical Shaft Engines Between 99cc and up to 225cc, and Parts Thereof From the People's Republic of China: Continuation of Antidumping and Countervailing Duty Orders",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21819/certain-small-vertical-shaft-engines-between-99cc-and-up-to-225cc-and-parts-thereof-from-the-peoples",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6496,
+    "title": "Space Modernization for the 21st Century",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21818/space-modernization-for-the-21st-century",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Federal Communications Commission",
+    "document_type": "Proposed Rule",
+    "document_stage": "proposal_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6497,
+    "title": "Establishment of Class E Airspace; Canton, IL",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21817/establishment-of-class-e-airspace-canton-il",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Transportation Department; Federal Aviation Administration",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6498,
+    "title": "Center for Scientific Review; Notice of Closed Meetings",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21816/center-for-scientific-review-notice-of-closed-meetings",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; National Institutes of Health",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6499,
+    "title": "Eunice Kennedy Shriver National Institute of Child Health & Human Development; Notice of Meeting",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21815/eunice-kennedy-shriver-national-institute-of-child-health-and-human-development-notice-of-meeting",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; National Institutes of Health",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6500,
+    "title": "Fogarty International Center; Notice of Meeting",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21814/fogarty-international-center-notice-of-meeting",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; National Institutes of Health",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6501,
+    "title": "Astronomy and Astrophysics Advisory Committee; Notice of Meeting",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21813/astronomy-and-astrophysics-advisory-committee-notice-of-meeting",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "National Science Foundation",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6502,
+    "title": "Parts and Accessories Necessary for Safe Operation; Application for an Exemption From R.B. Stewart Petroleum Products, Inc., USDOT # 1290158",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21812/parts-and-accessories-necessary-for-safe-operation-application-for-an-exemption-from-rb-stewart",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Transportation Department; Federal Motor Carrier Safety Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6503,
+    "title": "Information Collection Being Reviewed by the Federal Communications Commission",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21811/information-collection-being-reviewed-by-the-federal-communications-commission",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Federal Communications Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6504,
+    "title": "Petition for Reconsideration of Action in Rulemaking Proceeding",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21810/petition-for-reconsideration-of-action-in-rulemaking-proceeding",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Federal Communications Commission",
+    "document_type": "Proposed Rule",
+    "document_stage": "proposal_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6505,
+    "title": "Information Collection Being Submitted for Review and Approval to Office of Management and Budget",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21809/information-collection-being-submitted-for-review-and-approval-to-office-of-management-and-budget",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Federal Communications Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6506,
+    "title": "Closed Captioning of Video Programming",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21808/closed-captioning-of-video-programming",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Federal Communications Commission",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6507,
+    "title": "Ohio Regulatory Program",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21807/ohio-regulatory-program",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Interior Department; Surface Mining Reclamation and Enforcement Office",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6508,
+    "title": "Fisheries of the Exclusive Economic Zone Off Alaska; Reallocation of Pacific Cod in the Bering Sea and Aleutian Islands Management Area",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21805/fisheries-of-the-exclusive-economic-zone-off-alaska-reallocation-of-pacific-cod-in-the-bering-sea",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6509,
+    "title": "Privacy Act of 1974; System of Records",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21804/privacy-act-of-1974-system-of-records",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Education Department",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6510,
+    "title": "Radio Broadcasting Services; AM or FM Proposals To Change the Community of License",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21802/radio-broadcasting-services-am-or-fm-proposals-to-change-the-community-of-license",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Federal Communications Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6511,
+    "title": "NRC Reviews of Reactor Designs Previously Authorized by U.S. Department of Energy or Department of War",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21801/nrc-reviews-of-reactor-designs-previously-authorized-by-us-department-of-energy-or-department-of-war",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Nuclear Regulatory Commission",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6512,
+    "title": "Agency Information Collection Activity: Maintenance of Records Under 38 CFR 36.4333",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21800/agency-information-collection-activity-maintenance-of-records-under-38-cfr-364333",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Veterans Affairs Department",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6513,
+    "title": "Vida Janson, M.D.; Decision and Order",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21799/vida-janson-md-decision-and-order",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Justice Department; Drug Enforcement Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6514,
+    "title": "Agency Information Collection Activities; Proposed Collection; Comment Request; Extension",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21798/agency-information-collection-activities-proposed-collection-comment-request-extension",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Federal Trade Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6515,
+    "title": "Agency Information Collection Activities: Proposed Request",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21797/agency-information-collection-activities-proposed-request",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Social Security Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6516,
+    "title": "Cost-of-Living Increase and Other Determinations for 2027",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21796/cost-of-living-increase-and-other-determinations-for-2027",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Social Security Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6517,
+    "title": "Notice of Public Meeting of the Alaska Advisory Committee to the U.S. Commission on Civil Rights; Time Change",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21795/notice-of-public-meeting-of-the-alaska-advisory-committee-to-the-us-commission-on-civil-rights-time",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Civil Rights Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6518,
+    "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 108 To Accommodate ADS-Equipped Vehicles",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21794/federal-motor-vehicle-safety-standards-modernization-of-fmvss-no-108-to-accommodate-ads-equipped",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Transportation Department; National Highway Traffic Safety Administration",
+    "document_type": "Proposed Rule",
+    "document_stage": "proposal_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6519,
+    "title": "Carbazole Violet Pigment-23 From India: Final Results, and Rescission, in Part of Countervailing Duty Administrative Review; 2023",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21793/carbazole-violet-pigment-23-from-india-final-results-and-rescission-in-part-of-countervailing-duty",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6520,
+    "title": "Notice of Extension of the Deadline for Determining the Adequacy of the Antidumping and Countervailing Duty Petitions: Certain Railway Tank Cars and Parts Thereof From Mexico",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21792/notice-of-extension-of-the-deadline-for-determining-the-adequacy-of-the-antidumping-and",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6521,
+    "title": "Prestressed Concrete Steel Wire Strand From Spain: Final Results of Antidumping Duty Administrative Review; 2024-2025",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21791/prestressed-concrete-steel-wire-strand-from-spain-final-results-of-antidumping-duty-administrative",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6522,
+    "title": "Heavy-Walled Rectangular Welded Carbon Steel Pipes and Tubes From Mexico: Initiation and Expedited Preliminary Results of Changed Circumstances Review",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21790/heavy-walled-rectangular-welded-carbon-steel-pipes-and-tubes-from-mexico-initiation-and-expedited",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6523,
+    "title": "Endangered and Threatened Species; Take of Anadromous Fish",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21789/endangered-and-threatened-species-take-of-anadromous-fish",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6524,
+    "title": "Outbound Investment Security Program Regulations",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21786/outbound-investment-security-program-regulations",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Treasury Department; Investment Security Office",
+    "document_type": "Proposed Rule",
+    "document_stage": "proposal_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6525,
+    "title": "Certain Corrugated Die-Cut Cardboard Boxes From the People's Republic of China, Malaysia, and the Republic of Türkiye: Initiation of Less-Than-Fair-Value Investigations",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21783/certain-corrugated-die-cut-cardboard-boxes-from-the-peoples-republic-of-china-malaysia-and-the",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6526,
+    "title": "New Postal Products",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21782/new-postal-products",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Postal Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6527,
+    "title": "Regulatory Guide: Acceptability of ASME OM-2 Code, Component Testing Requirements at Nuclear Facilities",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21781/regulatory-guide-acceptability-of-asme-om-2-code-component-testing-requirements-at-nuclear",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Nuclear Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6528,
+    "title": "Standard Steel Welded Wire Mesh From Mexico: Continuation of Antidumping and Countervailing Duty Orders",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21780/standard-steel-welded-wire-mesh-from-mexico-continuation-of-antidumping-and-countervailing-duty",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6529,
+    "title": "Common Alloy Aluminum Sheet From the People's Republic of China: Rescission of Countervailing Duty Administrative Review; 2025",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21779/common-alloy-aluminum-sheet-from-the-peoples-republic-of-china-rescission-of-countervailing-duty",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6530,
+    "title": "Certain Corrugated Die-Cut Cardboard Boxes From the Republic of Türkiye: Initiation of Countervailing Duty Investigation",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21778/certain-corrugated-die-cut-cardboard-boxes-from-the-republic-of-trkiye-initiation-of-countervailing",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6531,
+    "title": "Performance Review Board Membership",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21777/performance-review-board-membership",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Defense Department; Army Department",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6532,
+    "title": "Sunshine Act Meetings",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21776/sunshine-act-meetings",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Nuclear Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6533,
+    "title": "Agency Information Collection Activities; Proposed Collection eComments Requested; Revision of a Previously Approved Collection; Application for Cancellation of Removal (Form EOIR-42A) for Certain Permanent Residents; and Application for Cancellation of Removal and Adjustment of Status (Form EOIR-42B) for Certain Nonpermanent Residents",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21775/agency-information-collection-activities-proposed-collection-ecomments-requested-revision-of-a",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Justice Department",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6534,
+    "title": "Agency Information Collection Activities; Proposed Collection; Comment Request; Notice to Account Holder for Garnishment of Accounts Containing Federal Benefit Payments",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21774/agency-information-collection-activities-proposed-collection-comment-request-notice-to-account",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Treasury Department",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6535,
+    "title": "Combined Notice of Filings",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21773/combined-notice-of-filings",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6536,
+    "title": "Meeting of the CJIS Advisory Policy Board",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21772/meeting-of-the-cjis-advisory-policy-board",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Justice Department; Federal Bureau of Investigation",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6537,
+    "title": "Appointment of Individuals To Serve as Members of the Performance Review Board",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21771/appointment-of-individuals-to-serve-as-members-of-the-performance-review-board",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "International Trade Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6538,
+    "title": "Combined Notice of Filings #1",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21770/combined-notice-of-filings-1",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6539,
+    "title": "Presidential Declaration Amendment of a Major Disaster for the OGLALA SIOUX TRIBE",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21769/presidential-declaration-amendment-of-a-major-disaster-for-the-oglala-sioux-tribe",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Small Business Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6540,
+    "title": "Nightfall Renewable Inc.; Notice of Surrender of Preliminary Permit",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21768/nightfall-renewable-inc-notice-of-surrender-of-preliminary-permit",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6541,
+    "title": "Certain Amine Compounds From the People's Republic of China: Initiation of Countervailing Duty Investigation",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21767/certain-amine-compounds-from-the-peoples-republic-of-china-initiation-of-countervailing-duty",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6542,
+    "title": "Certain Amine Compounds From the People's Republic of China: Initiation of Less-Than-Fair-Value Investigation",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21766/certain-amine-compounds-from-the-peoples-republic-of-china-initiation-of-less-than-fair-value",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department; International Trade Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6543,
+    "title": "Agency Information Collection Activities: ICE FOIA Request Form, I-902",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21765/agency-information-collection-activities-ice-foia-request-form-i-902",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Homeland Security Department; U.S. Immigration and Customs Enforcement",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6544,
+    "title": "Streamlining the Regulations Governing Testimony by Employees and the Production of Documents in Legal Proceedings; Correction",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21764/streamlining-the-regulations-governing-testimony-by-employees-and-the-production-of-documents-in",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department",
+    "document_type": "Rule",
+    "document_stage": "final_rule_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6545,
+    "title": "Submission for Office of Management and Budget Review; Office of Refugee Resettlement (ORR) Unaccompanied Alien Child Health Forms",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21762/submission-for-office-of-management-and-budget-review-office-of-refugee-resettlement-orr",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; Children and Families Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6546,
+    "title": "Agency Information Collection Activities; Submission to the Office of Management and Budget (OMB) for Review and Approval; Comment Request; NOAA Diving Program",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21761/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-omb-for",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6547,
+    "title": "Agency Information Collection Activities; Submission to the Office of Management and Budget (OMB) for Review and Approval; Comment Request; High-Frequency Surveys Program/Household Trends and Outlook Pulse Survey (HTOPS)",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21759/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-omb-for",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department; Census Bureau",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6548,
+    "title": "Agency Information Collection Activities; Submission to the Office of Management and Budget (OMB) for Review and Approval; Comment Request; School District Review Program",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21758/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-omb-for",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Commerce Department; Census Bureau",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6549,
+    "title": "Eastern Research Group; Access to Confidential Business Information",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21757/eastern-research-group-access-to-confidential-business-information",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Environmental Protection Agency",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6550,
+    "title": "30-Day Notice of Proposed Information Collection: Foreign Assistance Requirements",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21756/30-day-notice-of-proposed-information-collection-foreign-assistance-requirements",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "State Department",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6551,
+    "title": "Request for Comments on Further Suspension of Section 301 Action: China's Targeting of the Maritime, Logistics, and Shipbuilding Sectors for Dominance",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21755/request-for-comments-on-further-suspension-of-section-301-action-chinas-targeting-of-the-maritime",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Trade Representative, Office of United States",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6552,
+    "title": "Large Diameter Graphite Electrodes From China and India; Scheduling of the Final Phase of Countervailing Duty and Antidumping Duty Investigations",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21754/large-diameter-graphite-electrodes-from-china-and-india-scheduling-of-the-final-phase-of",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "International Trade Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6553,
+    "title": "Melamine From China; Scheduling of Expedited Five-Year Reviews",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21753/melamine-from-china-scheduling-of-expedited-five-year-reviews",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "International Trade Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6554,
+    "title": "Data Collection Available for Public Comments",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21752/data-collection-available-for-public-comments",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Small Business Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6555,
+    "title": "Ratification of Civil Penalties",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21751/ratification-of-civil-penalties",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Homeland Security Department",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6556,
+    "title": "Notice of Formal Determination on Records Release",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21750/notice-of-formal-determination-on-records-release",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Civil Rights Cold Case Records Review Board",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6557,
+    "title": "Sunshine Act Meetings",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21749/sunshine-act-meetings",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Legal Services Corporation",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6558,
+    "title": "Self-Regulatory Organizations; NYSE American LLC; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Modify the NYSE American Options Fee Schedule Regarding Fees and Rebates Applicable to Manual Transactions",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21748/self-regulatory-organizations-nyse-american-llc-notice-of-filing-and-immediate-effectiveness-of-a",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6559,
+    "title": "Self-Regulatory Organizations; Cboe BYX Exchange, Inc.; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend Its Fee Schedule To Update the Definition of Trading Platform",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21747/self-regulatory-organizations-cboe-byx-exchange-inc-notice-of-filing-and-immediate-effectiveness-of",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6560,
+    "title": "Self-Regulatory Organizations; Cboe EDGA Exchange, Inc.; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend Its Fee Schedule To Update the Definition of Trading Platform",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21746/self-regulatory-organizations-cboe-edga-exchange-inc-notice-of-filing-and-immediate-effectiveness-of",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6561,
+    "title": "Chronic Wasting Disease Herd Certification Program Standards",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21745/chronic-wasting-disease-herd-certification-program-standards",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Agriculture Department; Animal and Plant Health Inspection Service",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6562,
+    "title": "Self-Regulatory Organizations; Cboe EDGX Exchange, Inc.; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend Rule 14.1 Regarding Information Circular Requirements",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21744/self-regulatory-organizations-cboe-edgx-exchange-inc-notice-of-filing-and-immediate-effectiveness-of",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6563,
+    "title": "Self-Regulatory Organizations; NYSE Texas, Inc.; Notice of Filing and Immediate Effectiveness of Proposed Rule Change To Amend Rules 7.18, 7.35(a)(8)(A), and 7.35(f) Regarding Trading Halts",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21743/self-regulatory-organizations-nyse-texas-inc-notice-of-filing-and-immediate-effectiveness-of",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6564,
+    "title": "Processing Public Comments in Agency Rulemaking; Request for Comments",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21742/processing-public-comments-in-agency-rulemaking-request-for-comments",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Administrative Conference of the United States",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6565,
+    "title": "Agency Information Collection Activities: Proposed Collection Renewal; Comment Request",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21741/agency-information-collection-activities-proposed-collection-renewal-comment-request",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Federal Deposit Insurance Corporation",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6566,
+    "title": "Self-Regulatory Organizations; Cboe BZX Exchange, Inc.; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend the Annual Listing Fees Applicable to Exchange-Traded Products Listed on the Exchange, Which Are Set Forth in BZX Rule 14.13(b)(2)(E), To Eliminate the Annual Listing Fee Applicable to Legacy Listings",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21740/self-regulatory-organizations-cboe-bzx-exchange-inc-notice-of-filing-and-immediate-effectiveness-of",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6567,
+    "title": "Self-Regulatory Organizations; NYSE Arca, Inc.; Notice of Filing and Immediate Effectiveness of Proposed Rule Change To Amend Rules 7.18-E, 7.35-E(a)(8)(A), and 7.35-E(f) Regarding Trading Halts",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21739/self-regulatory-organizations-nyse-arca-inc-notice-of-filing-and-immediate-effectiveness-of-proposed",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6568,
+    "title": "Self-Regulatory Organizations; NYSE Arca, Inc.; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Modify the NYSE Arca Options Fee Schedule Regarding Fees and Rebates Applicable to Manual Transactions",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21738/self-regulatory-organizations-nyse-arca-inc-notice-of-filing-and-immediate-effectiveness-of-a",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6569,
+    "title": "Self-Regulatory Organizations; Cboe BZX Exchange, Inc.; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend Its Fee Schedule To Update the Definition of Trading Platform",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21737/self-regulatory-organizations-cboe-bzx-exchange-inc-notice-of-filing-and-immediate-effectiveness-of",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6570,
+    "title": "Self-Regulatory Organizations; Cboe EDGA Exchange, Inc.; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend Rule 14.1 Regarding Information Circular Requirements",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21736/self-regulatory-organizations-cboe-edga-exchange-inc-notice-of-filing-and-immediate-effectiveness-of",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6571,
+    "title": "Self-Regulatory Organizations; The Options Clearing Corporation; Order Approving Proposed Rule Change by The Options Clearing Corporation Concerning Amendments to Clearing Member Standards",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21735/self-regulatory-organizations-the-options-clearing-corporation-order-approving-proposed-rule-change",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6572,
+    "title": "Self-Regulatory Organizations; Cboe EDGX Exchange, Inc.; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Amend Its Fee Schedule To Update the Definition of Trading Platform",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21734/self-regulatory-organizations-cboe-edgx-exchange-inc-notice-of-filing-and-immediate-effectiveness-of",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Securities and Exchange Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6573,
+    "title": "Notice of OFAC Sanctions Action",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21733/notice-of-ofac-sanctions-action",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Treasury Department; Foreign Assets Control Office",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6574,
+    "title": "Wireless Telecommunications Bureau Announces Upper C-Band Clearinghouse Selection Criteria and Submission Process",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21732/wireless-telecommunications-bureau-announces-upper-c-band-clearinghouse-selection-criteria-and",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Federal Communications Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6575,
+    "title": "Wireless Telecommunications Bureau Establishes a New Docket and the Process for Comment on Eligible Space Station Operator Transition Plans",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21731/wireless-telecommunications-bureau-establishes-a-new-docket-and-the-process-for-comment-on-eligible",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Federal Communications Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6576,
+    "title": "Civil Monetary Penalties Inflation Adjustments for 2026",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21727/civil-monetary-penalties-inflation-adjustments-for-2026",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Agriculture Department; Office of the Secretary",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6577,
+    "title": "Agency Information Collection Activities; 30 CFR 822-Special Permanent Program Performance Standards-Operations in Alluvial Valley Floors",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21726/agency-information-collection-activities-30-cfr-822-special-permanent-program-performance",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Interior Department; Surface Mining Reclamation and Enforcement Office",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6578,
+    "title": "Barry Backiewicz, D.D.S.; Decision and Order",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21725/barry-backiewicz-dds-decision-and-order",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Justice Department; Drug Enforcement Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6579,
+    "title": "Notice of Intent To Renew a Previously Approved Information Collection",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21724/notice-of-intent-to-renew-a-previously-approved-information-collection",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Agriculture Department; National Institute of Food and Agriculture",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6580,
+    "title": "Cooperative Research and Development Agreement: Super Intelligence (SI) Situational Awareness Tools for Analyzing Coast Guard (CG) Sensor Feeds for Search and Rescue (SAR)",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21723/cooperative-research-and-development-agreement-super-intelligence-si-situational-awareness-tools-for",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Homeland Security Department; Coast Guard",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6581,
+    "title": "National Organic Standards Board Call for Applications and Nominations",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21722/national-organic-standards-board-call-for-applications-and-nominations",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Agriculture Department; Agricultural Marketing Service",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6582,
+    "title": "Sandy Hollow Power Company, Inc.; Notice of Application for Surrender of License Accepted for Filing and Soliciting Comments, Motions To Intervene, and Protests",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21721/sandy-hollow-power-company-inc-notice-of-application-for-surrender-of-license-accepted-for-filing",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6583,
+    "title": "Combined Notice of Filings #1",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21720/combined-notice-of-filings-1",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6584,
+    "title": "Issuance of Priority Review Voucher; Rare Pediatric Disease Product; ISEMBYLD (apitegromab-mstn)",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21718/issuance-of-priority-review-voucher-rare-pediatric-disease-product-isembyld-apitegromab-mstn",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Health and Human Services Department; Food and Drug Administration",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6585,
+    "title": "Combined Notice of Filings",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21717/combined-notice-of-filings",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6586,
+    "title": "Records Governing Off-the-Record Communications; Public Notice",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21716/records-governing-off-the-record-communications-public-notice",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "official_issuer": "Energy Department; Federal Energy Regulatory Commission",
+    "document_type": "Notice",
+    "document_stage": "notice_published",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "n": 6587,
+    "title": "Summary of NLRB Decisions for Week of October 13 - 16, 2026",
+    "url": "https://www.nlrb.gov/cases-decisions/weekly-summaries-decisions/summary-of-nlrb-decisions-for-week-of-october-13-16-2026",
+    "published_at": "2026-10-25T17:26:44+00:00",
+    "official_issuer": "National Labor Relations Board — https://www.nlrb.gov/rss/rssWeeklySummaries.xml",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "us-nlrb-7c63020d7d"
+    ]
+  },
+  {
+    "n": 6588,
+    "title": "Frank Elderson: Taking action for nature – investing in economic resilience and prosperity",
+    "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261026~d903d7ad85.en.html",
+    "published_at": "2026-10-26T05:00:00+00:00",
+    "official_issuer": "European Central Bank",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "eu-ecb-991c113079"
+    ]
+  },
+  {
+    "n": 6589,
+    "title": "Money Market Operations as on October 25, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63866",
+    "published_at": "2026-10-26T10:50:00+00:00",
+    "official_issuer": "Reserve Bank of India",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "in-rbi-cc71120b98"
+    ]
+  },
+  {
+    "n": 6590,
+    "title": "Money Market Operations as on October 24, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63865",
+    "published_at": "2026-10-26T10:45:00+00:00",
+    "official_issuer": "Reserve Bank of India",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "in-rbi-cc71120b98"
+    ]
+  },
+  {
+    "n": 6591,
+    "title": "Result of the 4-day Variable Rate Repo (VRR) auction held on October 26, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63864",
+    "published_at": "2026-10-26T10:25:00+00:00",
+    "official_issuer": "Reserve Bank of India",
+    "document_type": "official_announcement",
+    "document_stage": "requires_semantic_review",
+    "source_ids": [
+      "in-rbi-cc71120b98"
+    ]
+  },
+  {
+    "n": 6592,
+    "title": "Money Market Operations as on October 23, 2026",
+    "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63863",
+    "published_at": "2026-10-26T09:00:00+00:00",
     "official_issuer": "Reserve Bank of India",
     "document_type": "official_announcement",
     "document_stage": "requires_semantic_review",

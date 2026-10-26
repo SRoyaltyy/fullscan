@@ -1,5 +1,249 @@
 [
   {
+    "title": "Streamlining the Regulations Governing Testimony by Employees and the Production of Documents in Legal Proceedings; Correction",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21764/streamlining-the-regulations-governing-testimony-by-employees-and-the-production-of-documents-in",
+    "native_id": "2026-21764",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "published_raw": "2026-10-26",
+    "document_type": "Rule",
+    "issuer": "Commerce Department",
+    "issuer_ids": [
+      "us-fr:54"
+    ],
+    "summary": "By this action, the Department makes a correcting amendment to its regulations governing testimony by its current and former employees and the production of its documents in legal proceedings. The Department previously amended those regulations via final rule by removing and/or replacing language that is redundant, that references other authorities, or that provides only unnecessary elaboration. One of the amendatory instructions set forth in that rule, however, indicated that certain introductory text and a certain subparagraph were being amended when, in fact, no such amendments were made to those portions. This action merely corrects that inaccurate amendatory instruction and does not make any further changes to the regulations.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21764.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Commerce Department",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 6544,
+    "first_seen": "2026-10-26T06:17:41.785248+00:00",
+    "last_seen": "2026-10-26T06:17:41.785248+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "NRC Reviews of Reactor Designs Previously Authorized by U.S. Department of Energy or Department of War",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21801/nrc-reviews-of-reactor-designs-previously-authorized-by-us-department-of-energy-or-department-of-war",
+    "native_id": "2026-21801",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "published_raw": "2026-10-26",
+    "document_type": "Rule",
+    "issuer": "Nuclear Regulatory Commission",
+    "issuer_ids": [
+      "us-fr:383"
+    ],
+    "summary": "The U.S. Nuclear Regulatory Commission (NRC) is amending its regulations to facilitate direct leveraging of prior U.S. Department of Energy or Department of War authorizations of demonstration reactors into the NRC's licensing reviews of commercial reactor facility applications that reference those designs. This rulemaking improves NRC licensing review efficiency, where applicable, by explicitly establishing by regulation an additional means for reactor applicants to demonstrate the safety functions of their reactor designs, thereby contributing to the safe and secure use and deployment of civilian nuclear energy technologies.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21801.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Nuclear Regulatory Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 6511,
+    "first_seen": "2026-10-26T06:17:41.785248+00:00",
+    "last_seen": "2026-10-26T06:17:41.785248+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Fisheries of the Exclusive Economic Zone Off Alaska; Reallocation of Pacific Cod in the Bering Sea and Aleutian Islands Management Area",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21805/fisheries-of-the-exclusive-economic-zone-off-alaska-reallocation-of-pacific-cod-in-the-bering-sea",
+    "native_id": "2026-21805",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "published_raw": "2026-10-26",
+    "document_type": "Rule",
+    "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
+    "issuer_ids": [
+      "us-fr:54",
+      "us-fr:361"
+    ],
+    "summary": "NMFS is reallocating the projected unused amounts of Pacific cod from catcher vessels using trawl gear to catcher vessels less than 60 feet (18.3 meters (m)) length overall (LOA) using hook-and-line or pot gear and American Fisheries Act (AFA) trawl catcher/processors in the Bering Sea and Aleutian Islands management area (BSAI). This action is necessary to allow the 2026 total allowable catch (TAC) of Pacific cod in the BSAI to be harvested.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21805.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 6508,
+    "first_seen": "2026-10-26T06:17:41.785248+00:00",
+    "last_seen": "2026-10-26T06:17:41.785248+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Ohio Regulatory Program",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21807/ohio-regulatory-program",
+    "native_id": "2026-21807",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "published_raw": "2026-10-26",
+    "document_type": "Rule",
+    "issuer": "Interior Department; Surface Mining Reclamation and Enforcement Office",
+    "issuer_ids": [
+      "us-fr:253",
+      "us-fr:480"
+    ],
+    "summary": "The Office of Surface Mining Reclamation and Enforcement (OSM) is approving an amendment to the Ohio regulatory program (Ohio program) under the Surface Mining Control and Reclamation Act of 1977 (SMCRA or the Act). OSM is approving Ohio's proposal to add, rescind, or modify 39 rules under the Ohio Administrative Code that relate to, among other things: permit applications, hydrologic map and cross-sections, general map requirements, requirements for permits for special categories of mining, underground mining permit application, small operator assistance program, and self-bonding.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21807.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Interior Department; Surface Mining Reclamation and Enforcement Office",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 6507,
+    "first_seen": "2026-10-26T06:17:41.785248+00:00",
+    "last_seen": "2026-10-26T06:17:41.785248+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Closed Captioning of Video Programming",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21808/closed-captioning-of-video-programming",
+    "native_id": "2026-21808",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "published_raw": "2026-10-26",
+    "document_type": "Rule",
+    "issuer": "Federal Communications Commission",
+    "issuer_ids": [
+      "us-fr:161"
+    ],
+    "summary": "In this document, the Federal Communications Commission (Commission) exempts video programmers for public, educational, and governmental access (PEG) channels from the requirement to register with the Commission and to certify captioning compliance if the PEG video programmers provide video programming exclusively to PEG channels that are exempt from closed captioning requirements. Additionally, providers of PEG programming are relieved of filing obligations if the administrators of non-exempt PEG channels certify compliance for programming carried on such channels. The Commission similarly exempts providers of programming carried on nonbroadcast networks for distribution by a cable operator or other multichannel video programming distributor (MVPD) from certifying when the nonbroadcast network itself certifies that it is exempt or that all programming comprising the network's linear line-up is either exempt from or compliant with the closed captioning rules.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21808.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 6506,
+    "first_seen": "2026-10-26T06:17:41.785248+00:00",
+    "last_seen": "2026-10-26T06:17:41.785248+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Establishment of Class E Airspace; Canton, IL",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21817/establishment-of-class-e-airspace-canton-il",
+    "native_id": "2026-21817",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "published_raw": "2026-10-26",
+    "document_type": "Rule",
+    "issuer": "Transportation Department; Federal Aviation Administration",
+    "issuer_ids": [
+      "us-fr:492",
+      "us-fr:159"
+    ],
+    "summary": "This action establishes Class E airspace at Graham Hospital Heliport, Canton, IL. This action supports new instrument procedures and instrument flight rule (IFR) operations.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21817.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Transportation Department; Federal Aviation Administration",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 6497,
+    "first_seen": "2026-10-26T06:17:41.785248+00:00",
+    "last_seen": "2026-10-26T06:17:41.785248+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Enhancing the Ability of Consumers To Control the Robocalls",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21821/enhancing-the-ability-of-consumers-to-control-the-robocalls",
+    "native_id": "2026-21821",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "published_raw": "2026-10-26",
+    "document_type": "Rule",
+    "issuer": "Federal Communications Commission",
+    "issuer_ids": [
+      "us-fr:161"
+    ],
+    "summary": "In this document, the Federal Communications Commission (Commission) modifies rules to ensure that consumers can revoke consent for robocalls they no longer wish to receive while continuing to receive those they still want. We also modernize our rules to ensure that consumers have clear, simple, and automated ways to revoke consent while streamlining callers' ability to process revocations. Specifically, we allow callers to interpret a revocation request as applying only to the specific category of informational robocalls to which the revocation was directed, allow callers to designate an exclusive means to revoke consent, and amend the exemption from the consent requirement for financial institutions to allow them to more easily alert customers to fraudulent activity on their account. In addition, we delegate authority to the Consumer and Governmental Affairs Bureau (CGB) in consultation with the Enforcement Bureau (EB) to review our robocall rules to ensure that those rules are clear and easy to read.",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21821.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 6493,
+    "first_seen": "2026-10-26T06:17:41.785248+00:00",
+    "last_seen": "2026-10-26T06:17:41.785248+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
+    "title": "Wyoming Regulatory Program",
+    "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21835/wyoming-regulatory-program",
+    "native_id": "2026-21835",
+    "published_at": "2026-10-26T00:00:00+00:00",
+    "published_raw": "2026-10-26",
+    "document_type": "Rule",
+    "issuer": "Interior Department; Surface Mining Reclamation and Enforcement Office",
+    "issuer_ids": [
+      "us-fr:253",
+      "us-fr:480"
+    ],
+    "summary": "The Office of Surface Mining Reclamation and Enforcement (OSM), are approving an amendment to the Wyoming regulatory program (Wyoming program) under the Surface Mining Control and Reclamation Act of 1977 (SMCRA or the Act). The Wyoming Land Quality Division (WLQD) submitted this proposed amendment in response to our January 19, 2024 partial approval of an amendment to WLQD's regulations for coal exploration by drilling (SATS No. WY-050-FOR; Docket ID No. OSM-2021- 0004). In the final rule, under the heading \"Revisions to Wyoming's Rules That We Are Not Approving,\" OSM listed several provisions containing typographical errors that WLQD would need to correct through future rulemaking. WLQD now proposes those corrections with this amendment (SATS No. WY-055-FOR; Docket ID No. OSM-2025-0002).",
+    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21835.pdf",
+    "source_metadata": {
+      "document_type": "Rule",
+      "document_stage": "final_rule_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Interior Department; Surface Mining Reclamation and Enforcement Office",
+      "jurisdiction": "US",
+      "family": "rules_notices_and_presidential_documents"
+    },
+    "primary_source_id": "us-federal-register",
+    "n": 6489,
+    "first_seen": "2026-10-26T06:17:41.785248+00:00",
+    "last_seen": "2026-10-26T06:17:41.785248+00:00",
+    "source_ids": [
+      "us-federal-register"
+    ]
+  },
+  {
     "title": "DCPD-202600641 - Proclamation 11070-Gold Star Mother's and Family's Day, 2026",
     "url": "https://www.govinfo.gov/app/details/DCPD-202600641",
     "native_id": "DCPD-202600641",
@@ -215,7 +459,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6307,
     "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-25T17:04:23.943995+00:00",
+    "last_seen": "2026-10-26T06:17:41.785248+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -244,7 +488,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6308,
     "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-25T17:04:23.943995+00:00",
+    "last_seen": "2026-10-26T06:17:41.785248+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -273,7 +517,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6309,
     "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-25T17:04:23.943995+00:00",
+    "last_seen": "2026-10-26T06:17:41.785248+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -302,7 +546,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6310,
     "first_seen": "2026-10-23T17:53:51.765604+00:00",
-    "last_seen": "2026-10-25T17:04:23.943995+00:00",
+    "last_seen": "2026-10-26T06:17:41.785248+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -331,266 +575,9 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 3303,
     "first_seen": "2026-10-16T10:36:18.842579+00:00",
-    "last_seen": "2026-10-25T17:04:23.943995+00:00",
+    "last_seen": "2026-10-26T06:17:41.785248+00:00",
     "source_ids": [
       "uk-govuk-decision"
-    ]
-  },
-  {
-    "title": "Airworthiness Directives; MD Helicopters, LLC Helicopters",
-    "url": "https://www.federalregister.gov/documents/2026/10/23/2026-21664/airworthiness-directives-md-helicopters-llc-helicopters",
-    "native_id": "2026-21664",
-    "published_at": "2026-10-23T00:00:00+00:00",
-    "published_raw": "2026-10-23",
-    "document_type": "Rule",
-    "issuer": "Transportation Department; Federal Aviation Administration",
-    "issuer_ids": [
-      "us-fr:492",
-      "us-fr:159"
-    ],
-    "summary": "The FAA is adopting a new airworthiness directive (AD) for certain MD Helicopters, LLC (MDHI) Model 369D, 369E, 369F, 369FF, 369H, and 500N helicopters. This AD was prompted by a report of mechanical damage to the main transmission drive shaft coupling (coupling). This AD requires a one-time visual inspection of the couplings for cracks of the splines and, depending on the results, replacement of the couplings. The FAA is issuing this AD to address the unsafe condition on these products.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-23/pdf/2026-21664.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Transportation Department; Federal Aviation Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 6208,
-    "first_seen": "2026-10-23T06:03:51.082170+00:00",
-    "last_seen": "2026-10-25T17:04:23.943995+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Fisheries of the Exclusive Economic Zone Off Alaska; Pollock in Statistical Area 620 in the Gulf of Alaska",
-    "url": "https://www.federalregister.gov/documents/2026/10/23/2026-21676/fisheries-of-the-exclusive-economic-zone-off-alaska-pollock-in-statistical-area-620-in-the-gulf-of",
-    "native_id": "2026-21676",
-    "published_at": "2026-10-23T00:00:00+00:00",
-    "published_raw": "2026-10-23",
-    "document_type": "Rule",
-    "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
-    "issuer_ids": [
-      "us-fr:54",
-      "us-fr:361"
-    ],
-    "summary": "NMFS is prohibiting directed fishing for pollock in Statistical Area 620 in the Gulf of Alaska (GOA). This action is necessary to prevent exceeding the annual 2026 total allowable catch (TAC) of pollock in Statistical Area 620 in the GOA.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-23/pdf/2026-21676.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 6198,
-    "first_seen": "2026-10-23T06:03:51.082170+00:00",
-    "last_seen": "2026-10-25T17:04:23.943995+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Fisheries of the Exclusive Economic Zone Off Alaska; Pacific Cod by Catcher Vessels Using Trawl Gear in the Central Regulatory Area of the Gulf of Alaska",
-    "url": "https://www.federalregister.gov/documents/2026/10/23/2026-21680/fisheries-of-the-exclusive-economic-zone-off-alaska-pacific-cod-by-catcher-vessels-using-trawl-gear",
-    "native_id": "2026-21680",
-    "published_at": "2026-10-23T00:00:00+00:00",
-    "published_raw": "2026-10-23",
-    "document_type": "Rule",
-    "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
-    "issuer_ids": [
-      "us-fr:54",
-      "us-fr:361"
-    ],
-    "summary": "NMFS is prohibiting directed fishing for Pacific cod by catcher vessels using trawl gear in the Central Regulatory Area of the Gulf of Alaska (GOA). This action is necessary to prevent exceeding the 2026 total allowable catch (TAC) of Pacific cod allocated to catcher vessels using trawl gear in the Central Regulatory Area of the GOA.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-23/pdf/2026-21680.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Commerce Department; National Oceanic and Atmospheric Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 6194,
-    "first_seen": "2026-10-23T06:03:51.082170+00:00",
-    "last_seen": "2026-10-25T17:04:23.943995+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Airworthiness Directives; The Boeing Company Airplanes; Correction",
-    "url": "https://www.federalregister.gov/documents/2026/10/23/2026-21686/airworthiness-directives-the-boeing-company-airplanes-correction",
-    "native_id": "2026-21686",
-    "published_at": "2026-10-23T00:00:00+00:00",
-    "published_raw": "2026-10-23",
-    "document_type": "Rule",
-    "issuer": "Transportation Department; Federal Aviation Administration",
-    "issuer_ids": [
-      "us-fr:492",
-      "us-fr:159"
-    ],
-    "summary": "The FAA is correcting an airworthiness directive (AD) that was published in the Federal Register. That AD applies to certain The Boeing Company Model 787-8, 787-9, and 787-10 airplanes. As published, a paragraph reference specified in the regulatory text is incorrect. This document corrects that error. In all other respects, the original document remains the same.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-23/pdf/2026-21686.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Transportation Department; Federal Aviation Administration",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 6188,
-    "first_seen": "2026-10-23T06:03:51.082170+00:00",
-    "last_seen": "2026-10-25T17:04:23.943995+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Revision of National Environmental Policy Act Implementing Procedures; Extension of Comment Period",
-    "url": "https://www.federalregister.gov/documents/2026/10/23/2026-21699/revision-of-national-environmental-policy-act-implementing-procedures-extension-of-comment-period",
-    "native_id": "2026-21699",
-    "published_at": "2026-10-23T00:00:00+00:00",
-    "published_raw": "2026-10-23",
-    "document_type": "Rule",
-    "issuer": "Postal Service",
-    "issuer_ids": [
-      "us-fr:410"
-    ],
-    "summary": "On September 25, 2026, the United States Postal Service (USPS) published an interim final rule with request for comments to partially rescind and update its remaining National Environmental Policy Act (NEPA) implementing procedures, which were promulgated to implement the now-rescinded Council on Environmental Quality (CEQ) regulations. USPS requested public comments by October 25, 2026. USPS is now extending the comment period until November 9, 2026, to allow the public additional review and submission time for any comments on the interim final rule.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-23/pdf/2026-21699.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Postal Service",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 6175,
-    "first_seen": "2026-10-23T06:03:51.082170+00:00",
-    "last_seen": "2026-10-25T17:04:23.943995+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Implementing the Guiding and Establishing National Innovation for U.S. Stablecoins Act for the Issuance of Stablecoins by Entities Subject to the Jurisdiction of the Office of the Comptroller of the Currency",
-    "url": "https://www.federalregister.gov/documents/2026/10/23/2026-21706/implementing-the-guiding-and-establishing-national-innovation-for-us-stablecoins-act-for-the",
-    "native_id": "2026-21706",
-    "published_at": "2026-10-23T00:00:00+00:00",
-    "published_raw": "2026-10-23",
-    "document_type": "Rule",
-    "issuer": "Treasury Department; Comptroller of the Currency",
-    "issuer_ids": [
-      "us-fr:497",
-      "us-fr:80"
-    ],
-    "summary": "The Office of the Comptroller of the Currency (OCC) is issuing regulations implementing the Guiding and Establishing National Innovation for U.S. Stablecoins Act regarding the issuance of payment stablecoins and certain related activities by entities subject to the OCC's jurisdiction.",
-    "official_pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-23/pdf/2026-21706.pdf",
-    "source_metadata": {
-      "document_type": "Rule",
-      "document_stage": "final_rule_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Treasury Department; Comptroller of the Currency",
-      "jurisdiction": "US",
-      "family": "rules_notices_and_presidential_documents"
-    },
-    "primary_source_id": "us-federal-register",
-    "n": 6168,
-    "first_seen": "2026-10-23T06:03:51.082170+00:00",
-    "last_seen": "2026-10-25T17:04:23.943995+00:00",
-    "source_ids": [
-      "us-federal-register"
-    ]
-  },
-  {
-    "title": "Public Law 119 - 1 - Laken Riley Act",
-    "url": "https://www.govinfo.gov/app/details/PLAW-119publ1",
-    "native_id": "PLAW-119publ1",
-    "published_at": "2026-10-22T21:23:29+00:00",
-    "published_raw": "Thu, 22 Oct 2026 21:23:29 +0000",
-    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "public_law",
-      "document_stage": "law_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Public and Private Laws",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-plaw",
-    "n": 6248,
-    "first_seen": "2026-10-23T06:03:51.082170+00:00",
-    "last_seen": "2026-10-23T06:03:51.082170+00:00",
-    "source_ids": [
-      "us-govinfo-plaw"
-    ]
-  },
-  {
-    "title": "DCPD-202600632 - Remarks Prior to a Meeting With President Volodymyr Zelenskyy of Ukraine and an Exchange With Reporters in New York City",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600632",
-    "native_id": "DCPD-202600632",
-    "published_at": "2026-10-22T20:11:00+00:00",
-    "published_raw": "Thu, 22 Oct 2026 20:11:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 6250,
-    "first_seen": "2026-10-23T06:03:51.082170+00:00",
-    "last_seen": "2026-10-24T05:56:48.534199+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
-    ]
-  },
-  {
-    "title": "DCPD-202600635 - Remarks in an Exchange With Reporters Upon Arrival From Joint Base Andrews, Maryland",
-    "url": "https://www.govinfo.gov/app/details/DCPD-202600635",
-    "native_id": "DCPD-202600635",
-    "published_at": "2026-10-22T20:11:00+00:00",
-    "published_raw": "Thu, 22 Oct 2026 20:11:00 +0000",
-    "summary": "Content Files PDF TEXT Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
-    "source_metadata": {
-      "document_type": "presidential_document",
-      "document_stage": "presidential_document_published",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Compilation of Presidential Documents",
-      "jurisdiction": "US",
-      "family": "legislative_and_presidential_documents"
-    },
-    "primary_source_id": "us-govinfo-dcpd",
-    "n": 6249,
-    "first_seen": "2026-10-23T06:03:51.082170+00:00",
-    "last_seen": "2026-10-24T05:56:48.534199+00:00",
-    "source_ids": [
-      "us-govinfo-dcpd"
     ]
   }
 ]
