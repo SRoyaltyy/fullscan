@@ -52,7 +52,7 @@
         "10d": 10.88,
         "14d": 14.66
       },
-      "mfe_pct": 16.12,
+      "mfe_pct": 16.13,
       "mfe_day": "2026-10-23",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-05"
@@ -80,7 +80,7 @@
         "10d": 13.46,
         "14d": 19.48
       },
-      "mfe_pct": 20.04,
+      "mfe_pct": 20.05,
       "mfe_day": "2026-10-23",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-05"
@@ -136,7 +136,7 @@
         "10d": 43.09,
         "14d": 45.35
       },
-      "mfe_pct": 49.62,
+      "mfe_pct": 49.75,
       "mfe_day": "2026-10-23",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-05"
@@ -536,7 +536,7 @@
         "10d": 1.93,
         "14d": 5.03
       },
-      "mfe_pct": 6.33,
+      "mfe_pct": 6.34,
       "mfe_day": "2026-10-23",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-05"
@@ -1040,7 +1040,7 @@
         "10d": 1.96,
         "14d": 7.08
       },
-      "mfe_pct": 7.57,
+      "mfe_pct": 7.58,
       "mfe_day": "2026-10-23",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-05"
@@ -1068,7 +1068,7 @@
         "10d": 6.59,
         "14d": 10.91
       },
-      "mfe_pct": 12.27,
+      "mfe_pct": 12.29,
       "mfe_day": "2026-10-23",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-05"
@@ -1124,8 +1124,8 @@
         "10d": 2.29,
         "14d": 5.76
       },
-      "mfe_pct": 6.86,
-      "mfe_day": "2026-10-22",
+      "mfe_pct": 7.03,
+      "mfe_day": "2026-10-23",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-05"
     },
@@ -1796,7 +1796,7 @@
         "10d": 36.47,
         "14d": 44.61
       },
-      "mfe_pct": 49.03,
+      "mfe_pct": 49.05,
       "mfe_day": "2026-10-23",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-05"
@@ -2054,7 +2054,7 @@
         "10d": 8.06,
         "14d": 17.09
       },
-      "mfe_pct": 21.32,
+      "mfe_pct": 21.43,
       "mfe_day": "2026-10-23",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-05"
@@ -2226,7 +2226,7 @@
         "10d": -2.35,
         "14d": 7.61
       },
-      "mfe_pct": 10.82,
+      "mfe_pct": 10.86,
       "mfe_day": "2026-10-23",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-05"
@@ -2391,7 +2391,7 @@
         "n": 28,
         "wins": 28,
         "win_rate": 100.0,
-        "avg": 11.88
+        "avg": 11.89
       },
       "close_5d": {
         "n": 28,
@@ -2406,7 +2406,7 @@
         "n": 55,
         "wins": 55,
         "win_rate": 100.0,
-        "avg": 20.64
+        "avg": 20.65
       },
       "close_5d": {
         "n": 55,
