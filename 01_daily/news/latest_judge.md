@@ -1,68 +1,74 @@
-# News Judge — 2026-10-23
+# News Judge — 2026-10-26
 
 ### IMPORTANT NEWS (my ranking)
-1. Nasdaq 100 worst day in four months on capex/debt fatigue; META/SPCX/BE/MRNA focus — broad Nasdaq/SPX risk-appetite hit outranks single-name color — channel: risk.
-2. Hawkish Fed comments lift October hike expectations; gold drops >$100 — rates/hike-odds shock hits SPX beta and gold/miners — channel: rates.
-3. China restricts AI/chip-design exports; Taiwan tightens AI chip/server controls — direct semis/AI supply-chain policy shock — channel: sector_policy.
-4. Brent crude above $111 on Strait of Hormuz attacks — energy/inflation/geopolitical risk force — channel: rates.
-5. US September CPI +0.6% m/m, 3.7% y/y — sticky inflation keeps rates/FOMC risk live — channel: rates.
-6. Mega-cap Q3 earnings: Meta; Microsoft/Alphabet capex read-through — AI capex scrutiny and Nasdaq beta — channel: risk.
-7. Boeing 737 MAX 10 certification halted by FAA over software glitch; 31% of undelivered order book at risk — aerospace/industrials basket force — channel: sector_fundamental.
-8. Supreme Court IEEPA tariff refunds — CIT certifies importer class — trade/legal overhang for tariff-exposed importers — channel: sector_policy.
+Input set is not empty, but mechanical usable is thin: it is dominated by Fed/Powell keyword noise. Ranking leans on elevated FINVIZ themes plus noise rescues.
+
+1. **FOMC + Big Tech earnings “Super Week”; US futures higher** — dominant rates/risk binary and mega-cap index-beta cluster; outranks all FX Fed chatter. Provisional channel: **risk/rates**.
+2. **Record October Hormuz shipping attacks; Brent eases from six-month high** — oil-supply/inflation transmission remains a live risk-appetite and energy-sector driver. Provisional channel: **risk**.
+3. **Earnings week: MSFT, GOOGL, AMZN, XOM, BA, VZ; Big Tech earnings in focus** — mega-cap earnings are direct SPX/NDX beta, separate from the FOMC binary. Provisional channel: **sector_fundamental**.
+4. **AI-related selloff: Bitcoin below $80k; SK Hynix leveraged funds delisted; APH drops on Fabrinet weakness/yields** — crowded AI/semis sentiment risk; rescued from noise. Provisional channel: **sentiment**.
+5. **Boeing 737 MAX 10 certification halted by FAA over software glitch** — industrials/Dow single-name with sector order-book force. Provisional channel: **sector_fundamental**.
+6. **Amgen positive Phase 3 dazodalibep data; AbbVie JUVMO FDA approval** — healthcare/biotech sector sympathy, not pure single-name color. Provisional channel: **sector_fundamental**.
+7. **Gold rebounds to $4,000 vs AEM falls on hawkish Fed October hike comments** — rates/substitution signal is mixed but relevant to gold miners and hike odds. Provisional channel: **rates/substitution**.
+8. **Trump defends tariffs at rally, touts new US Audi plant; Chinese carmakers overtake Japan in Europe** — autos/tariff policy headline risk for sector baskets. Provisional channel: **sector_policy**.
 
 ### STEP 1 — FRAMEWORK SCORE
-- Nasdaq 100 worst day/capex fatigue: keep | us_relevance high — direct SPX/Nasdaq beta | channel risk | geography us_domestic | severity session | horizon 1d-1w | object spx:Nasdaq-100/SPX beta | pol bearish | why capex/debt weariness hits mega-cap multiples | conf 0.82
-- Hawkish Fed/Oct hike odds + gold drop: keep | us_relevance high — rates/front-end repricing | channel rates | geography us_domestic | severity regime | horizon 1w | object spx:SPX beta/rates | pol hawkish | why higher hike odds pressure duration and risk appetite | conf 0.78
-- China/Taiwan AI-chip export controls: keep | us_relevance high — semis/AI supply chain | channel sector_policy | geography us_supply_chain | severity session | horizon 1w-1m | object sector_etf:SOXX/SMH/AI supply chain | pol bearish | why tighter export controls raise AI/semi revenue-risk | conf 0.80
-- Brent >$111 on Hormuz attacks: keep | us_relevance high — inflation/energy transmission | channel rates | geography global_priced | severity regime | horizon 1d-1w | object sector_etf:XLE/energy; SPX inflation risk | pol mixed | why energy bullish, broad risk/inflation bearish | conf 0.77
-- US September CPI +0.6% m/m, 3.7% y/y: keep | us_relevance high — sticky inflation constrains Fed | channel rates | geography us_domestic | severity session | horizon 1d-1w | object spx:SPX beta/rates | pol hawkish | why hot CPI keeps hike-risk alive | conf 0.76
-- Mega-cap Q3 earnings/capex read-through: conditional | us_relevance high — Nasdaq concentration | channel risk | geography us_domestic | severity session | horizon 1d-1w | object spx:MSFT/GOOGL/META Nasdaq beta | pol mixed | why capex scrutiny cuts both AI demand and multiples | conf 0.68
-- Boeing 737 MAX 10 FAA cert halt: conditional | us_relevance medium — BA plus aerospace suppliers | channel sector_fundamental | geography us_domestic | severity session | horizon 1w | object basket:BA/aerospace suppliers | pol bearish | why certification delay risks order-book timing | conf 0.70
-- IEEPA tariff refunds class certified: conditional | us_relevance medium — importer/tariff-exposed baskets | channel sector_policy | geography us_domestic | severity session | horizon 1w-1m | object basket:importers/tariff-exposed | pol mixed | why legal refund path adds policy uncertainty | conf 0.62
+- **FOMC + Big Tech super week** — keep; us_relevance high; channel risk; geography us_domestic; severity regime; horizon 1w; object spx:SPX beta; polarity mixed; why: two-sided FOMC/earnings binary; conf 0.80.
+- **Hormuz attacks / Brent six-month high** — keep; us_relevance high; channel risk; geography global_priced; severity session; horizon 1d-1w; object sector_etf:XLE plus SPX risk; polarity bearish; why: oil/inflation risk; conf 0.75.
+- **Big Tech earnings week** — keep; us_relevance high; channel sector_fundamental; geography us_domestic; severity session; horizon 1d-1w; object spx:mega-cap earnings beta; polarity mixed; why: MSFT/GOOGL/AMZN can swing index; conf 0.80.
+- **AI-related selloff / SK Hynix / APH** — conditional; us_relevance high; channel sentiment; geography global_priced; severity session; horizon 1d-1w; object basket:AI/semis; polarity bearish; why: crowded AI basket risk; conf 0.70.
+- **Boeing 737 MAX 10 halt** — conditional; us_relevance medium-high; channel sector_fundamental; geography us_domestic; severity session; horizon 1w; object basket:BA/industrials; polarity bearish; why: certification/order-book risk; conf 0.75.
+- **Amgen Phase 3 / AbbVie FDA approval** — conditional; us_relevance high; channel sector_fundamental; geography us_domestic; severity session; horizon 1d-1w; object sector_etf:XLV/Healthcare basket; polarity bullish; why: biotech/pharma sympathy; conf 0.70.
+- **Gold $4,000 vs AEM hawkish-Fed drop** — conditional; us_relevance medium; channel substitution; geography global_priced; severity session; horizon 1d-1w; object sector_etf:GLD/GDX; polarity mixed; why: gold/Fed hike odds conflict; conf 0.60.
+- **Tariffs/Audi plant + Chinese autos Europe** — conditional; us_relevance medium; channel sector_policy; geography us_supply_chain/global_priced; severity session; horizon 1w-1m; object basket:autos; polarity mixed; why: policy headline risk; conf 0.55.
 
 ### STEP 2 — INTERACTIONS
-Fired: hawkish Fed/CPI + capex/debt fatigue → do not buy long-duration software/semis on dovish-rates hope; China/Taiwan AI export controls + capex fatigue → semis/AI mixed, do not double-count as one clean bearish signal; Brent/Hormuz + CPI/hike odds → treat as one rates/energy inflation cluster; Boeing FAA halt + industrials earnings → aerospace basket caution; AMGN positive Phase 3 dazodalibep data + healthcare sympathy → healthcare basket, not only AMGN; IEEPA tariff class cert + importers → sector_policy overhang. Not fired: weak labor absent; offshore-wind cancel absent; yields-down cyclicals absent.
+Fed path + oil/inflation → treat as one rates/inflation cluster; do not double-count Hormuz and FOMC as separate SPX shocks.  
+Biotech Phase 3 success + FDA approval → Healthcare basket sympathy, not only AMGN/ABBV.  
+AI-related selloff + SK Hynix/APH weakness → semis/AI basket sentiment, not pure single-name color.  
+SaaS/labor, AI power/offshore wind, yields-down/cyclicals patterns: none fire.
 
 ### STEP 3 — RECLASSIFY AUDIT
-Dropped from usable: France riots/political crisis — foreign_weak_link, low direct US beta; Brazil runoff — foreign political, low US risk transmission; UK Autumn Budget — foreign fiscal/bank tax not US driver; ECB rate decision — second-order to FOMC/CPI; China October LPR held — no incremental surprise; China IP/retail sales — mixed China data already covered by GDP beat; Japan CPI — foreign inflation, weak US link; Eurozone PMI miss — foreign growth, weak US link. Rescued from noise: none — noise sample empty. Finviz ticker digests used only as elevated sector context, not mechanical-noise rescue.
-
-RULES_APPLIED: a-fresh-overnight-kinetic-oil-supply-escalation-iran-hormuz; a-scheduled-high-impact-macro-release-cpi-nfp-fomc-is-the-do.
+**Dropped from usable:** many Fed-keyword false positives — Powell obituaries, local sports, Lake Powell, Glen Powell celebrity items, FX-only Aussie/ringgit FOMC previews; these are not US equity risk drivers.  
+**Rescued from noise:** Bitcoin/AI selloff; SK Hynix leveraged delisting; Trump tariff/Audi plant; Chinese carmakers overtaking Japan in Europe.  
+**RULES_APPLIED:** none — no fresh overnight kinetic increment; FOMC is a next-week/forward binary in inputs, not a same-session open binary.
 
 ### STEP 4 — B1 / SECTOR INJECT
-NEWS_JUDGE: n=8 rescued=0
-MACRO rates: [pol] hawkish Fed/Oct hike odds + CPI 3.7% keep front-end risk live (regime/1w)
-MACRO risk: [pol] Nasdaq-100 worst day on capex/debt fatigue; mega-cap AI capex scrutiny (session/1d-1w)
-SECTOR semis/AI: [pol] China AI/chip-design export curbs + Taiwan server/chip controls tighten supply chain (SOXX/SMH)
-MACRO energy: [pol] Brent >$111 Hormuz attacks; oil/inflation/energy force (regime/session)
-SECTOR industrials: [pol] Boeing 737 MAX 10 FAA cert halt risks 31% undelivered order book (BA/aerospace)
-MACRO policy: [pol] IEEPA tariff refunds class certified; importer/tariff overhang (sector_policy)
-SECTOR mega-cap: [pol] Meta/MSFT/GOOG Q3 capex/AI spend read-through for Nasdaq beta (session)
-INTERACTION: hawkish Fed/CPI + capex fatigue → do not buy duration on dovish hope; oil + hawkish = rates/energy cluster
-WATCH: noise sample empty; foreign political items low US beta
+NEWS_JUDGE: n=8 rescued=4  
+MACRO FOMC/BigTech: [mixed] FOMC and mega-cap earnings super week drives rates/risk binary (regime/1w)  
+MACRO Oil/Hormuz: [bearish] record Hormuz attacks + Brent six-month high lift inflation/energy risk (session/1d-1w)  
+SECTOR Technology/AI: [bearish] AI selloff, SK Hynix delisting, APH/Fabrinet weakness weigh AI/semis basket (basket)  
+SECTOR Industrials: [bearish] BA 737 MAX 10 FAA certification halt risks order book (BA/industrials)  
+SECTOR Healthcare: [bullish] AMGN Phase 3 + ABBV FDA approval support pharma/biotech sympathy (XLV/basket)  
+MACRO Gold/Fed: [mixed] gold $4k rebound vs hawkish hike odds/AEM drop keeps metals volatile (GLD/GDX)  
+SECTOR Autos/Tariffs: [mixed] tariff defense/Audi plant and Chinese autos Europe share add policy headline risk (autos)  
+INTERACTION: Fed/oil inflation cluster; biotech sympathy; AI selloff not pure single-name.  
+WATCH: usable set thin; Powell/Fed keyword noise and stale BNY prime-rate item not ranked.
 
 NEWS_PARSE_BEGIN
 IMPORTANT_COUNT: 8
 TOP_ITEMS:
-- Nasdaq 100 worst day in four months on capex/debt fatigue; META/SPCX/BE/MRNA focus | keep=keep | channel=risk | severity=session | horizon=1d-1w | object=spx:Nasdaq-100/SPX beta | pol=bearish | conf=0.82
-- Hawkish Fed comments lift October hike expectations; gold drops >$100 | keep=keep | channel=rates | severity=regime | horizon=1w | object=spx:SPX beta/rates | pol=hawkish | conf=0.78
-- China restricts AI/chip-design exports; Taiwan tightens AI chip/server controls | keep=keep | channel=sector_policy | severity=session | horizon=1w-1m | object=sector_etf:SOXX/SMH/AI supply chain | pol=bearish | conf=0.80
-- Brent crude above $111 on Strait of Hormuz attacks | keep=keep | channel=rates | severity=regime | horizon=1d-1w | object=sector_etf:XLE/energy; SPX inflation risk | pol=mixed | conf=0.77
-- US September CPI +0.6% m/m, 3.7% y/y | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=spx:SPX beta/rates | pol=hawkish | conf=0.76
-- Mega-cap Q3 earnings: Meta; Microsoft and Alphabet capex read-through | keep=conditional | channel=risk | severity=session | horizon=1d-1w | object=spx:MSFT/GOOGL/META Nasdaq beta | pol=mixed | conf=0.68
-- Boeing 737 MAX 10 certification halted by FAA over software glitch; 31% undelivered order book at risk | keep=conditional | channel=sector_fundamental | severity=session | horizon=1w | object=basket:BA/aerospace suppliers | pol=bearish | conf=0.70
-- Supreme Court IEEPA tariff refunds — CIT certifies importer class | keep=conditional | channel=sector_policy | severity=session | horizon=1w-1m | object=basket:importers/tariff-exposed | pol=mixed | conf=0.62
-INTERACTIONS: hawkish Fed/CPI + capex fatigue → do not buy duration on dovish hope; China/Taiwan AI controls + capex fatigue → semis/AI mixed; Brent/Hormuz + CPI/hike odds → rates/energy cluster; Boeing FAA halt + industrials earnings → aerospace caution; AMGN Phase 3 positive + healthcare sympathy → healthcare basket; IEEPA tariff class cert + importers → sector_policy overhang
-RESCUED_FROM_NOISE: none
-DROPPED_FROM_USABLE: France riots and political crisis after cost-of-living protests; Brazil presidential runoff; UK Autumn Budget; ECB rate decision; China October LPR held; China September industrial production/retail sales; Japan September core CPI; Eurozone October flash PMI miss
+- FOMC + Big Tech earnings super week; US futures higher | keep=keep | channel=risk | severity=regime | horizon=1w | object=spx:SPX beta | pol=mixed | conf=0.80
+- Record October Hormuz shipping attacks; Brent eases from six-month high | keep=keep | channel=risk | severity=session | horizon=1d-1w | object=sector_etf:XLE plus SPX risk | pol=bearish | conf=0.75
+- Earnings week: MSFT, GOOGL, AMZN, XOM, BA, VZ; Big Tech earnings in focus | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=spx:mega-cap earnings beta | pol=mixed | conf=0.80
+- AI-related selloff: Bitcoin below $80k; SK Hynix leveraged delisting; APH drops on Fabrinet weakness/yields | keep=conditional | channel=sentiment | severity=session | horizon=1d-1w | object=basket:AI/semis | pol=bearish | conf=0.70
+- Boeing 737 MAX 10 certification halted by FAA over software glitch | keep=conditional | channel=sector_fundamental | severity=session | horizon=1w | object=basket:BA/industrials | pol=bearish | conf=0.75
+- Amgen positive Phase 3 dazodalibep data; AbbVie JUVMO FDA approval | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLV/Healthcare basket | pol=bullish | conf=0.70
+- Gold rebounds to $4,000 vs AEM falls on hawkish Fed October hike comments | keep=conditional | channel=substitution | severity=session | horizon=1d-1w | object=sector_etf:GLD/GDX | pol=mixed | conf=0.60
+- Trump defends tariffs at rally, touts new US Audi plant; Chinese carmakers overtake Japan in Europe | keep=conditional | channel=sector_policy | severity=session | horizon=1w-1m | object=basket:autos | pol=mixed | conf=0.55
+INTERACTIONS: Fed path + oil/inflation as one rates cluster; biotech Phase 3 + FDA approval -> Healthcare basket sympathy; AI selloff + SK Hynix/APH weakness -> AI/semis basket, not pure single-name; SaaS/labor, AI power/wind, yields/cyclicals none
+RESCUED_FROM_NOISE: Bitcoin Dips Below $80,000 as AI-Related Market Selloff Deepens; SK Hynix Leveraged Funds to Be Delisted in US as AI Rally Cools; Trump Defends Tariffs at Rally as He Touts New US Audi Plant; Chinese Carmakers Overtake Japan in Europe for First Time
+DROPPED_FROM_USABLE: Powell: Holy Cow History -- Central Park's cannon secret with surprise ending; Kam Powell Game Log - College Football - FOX Sports; Avery Powell Game Log - College Football - FOX Sports; Wilma Powell Obituary (1927 - 2026); City Health and Wellness Fair takes place October 24; David John "Dave" Walter Obituary; Pat Rasmussen Obituary; What Happens If Lake Powell Hits Dead Pool Before Lake Mead; Morgan County Varsity Softball @ Powell County; Glen Powell Wants No Part of Politics That ‘Divide People’; Powell River Kings @ Alberni Valley Bulldogs; Powell On Top in Oberhausen with Maiden Q Tour Win; Glen Powell goes wild as Texas upsets No. 7 Ole Miss; Gordon Ramsay, Glen Powell celebrities spotted in Austin during F1 weekend; Australian Dollar bulls hesitant before CPI/FOMC; Ringgit Edges Higher Ahead Of US Federal Reserve Meeting
 B1_INJECT:
-NEWS_JUDGE: n=8 rescued=0
-MACRO rates: [pol] hawkish Fed/Oct hike odds + CPI 3.7% keep front-end risk live (regime/1w)
-MACRO risk: [pol] Nasdaq-100 worst day on capex/debt fatigue; mega-cap AI capex scrutiny (session/1d-1w)
-SECTOR semis/AI: [pol] China AI/chip-design export curbs + Taiwan server/chip controls tighten supply chain (SOXX/SMH)
-MACRO energy: [pol] Brent >$111 Hormuz attacks; oil/inflation/energy force (regime/session)
-SECTOR industrials: [pol] Boeing 737 MAX 10 FAA cert halt risks 31% undelivered order book (BA/aerospace)
-MACRO policy: [pol] IEEPA tariff refunds class certified; importer/tariff overhang (sector_policy)
-SECTOR mega-cap: [pol] Meta/MSFT/GOOG Q3 capex/AI spend read-through for Nasdaq beta (session)
-INTERACTION: hawkish Fed/CPI + capex fatigue → do not buy duration on dovish hope; oil + hawkish = rates/energy cluster
-WATCH: noise sample empty; foreign political items low US beta
+NEWS_JUDGE: n=8 rescued=4
+MACRO FOMC/BigTech: [mixed] FOMC and mega-cap earnings super week drives rates/risk binary (regime/1w)
+MACRO Oil/Hormuz: [bearish] record Hormuz attacks + Brent six-month high lift inflation/energy risk (session/1d-1w)
+SECTOR Technology/AI: [bearish] AI selloff, SK Hynix delisting, APH/Fabrinet weakness weigh AI/semis basket (basket)
+SECTOR Industrials: [bearish] BA 737 MAX 10 FAA certification halt risks order book (BA/industrials)
+SECTOR Healthcare: [bullish] AMGN Phase 3 + ABBV FDA approval support pharma/biotech sympathy (XLV/basket)
+MACRO Gold/Fed: [mixed] gold $4k rebound vs hawkish hike odds/AEM drop keeps metals volatile (GLD/GDX)
+SECTOR Autos/Tariffs: [mixed] tariff defense/Audi plant and Chinese autos Europe share add policy headline risk (autos)
+INTERACTION: Fed/oil inflation cluster; biotech sympathy; AI selloff not pure single-name.
+WATCH: usable set thin; Powell/Fed keyword noise and stale BNY prime-rate item not ranked.
 NEWS_PARSE_END
+
