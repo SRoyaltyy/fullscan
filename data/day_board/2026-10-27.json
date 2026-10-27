@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "generated_at": "2026-10-27T16:30:03.594943-04:00",
+  "generated_at": "2026-10-27T16:56:19.471999-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -182,7 +182,7 @@
       "inputs_ready": true,
       "n_req_ok": 7,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 14,
       "files": [
         {
@@ -334,11 +334,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-27/_board.json",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -502,13 +507,18 @@
           "bullets": []
         }
       ],
-      "said": "general UP  5.515",
+      "said": "general UP  5.515 \u00b7 sectors 0 up / 0 down / 0 flat",
       "bullets": [
         "bad: FOMC binary pending",
         "bad: MSFT/GOOGL earnings after close",
         "bad: bitcoin below $80k",
         "good: Anthropic IPO lifts AI/semis sentiment",
-        "good: oil retreats from $117 on Iran diplomacy"
+        "good: oil retreats from $117 on Iran diplomacy",
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -681,7 +691,7 @@
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
-      "n_opt": 4,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_general",
@@ -703,12 +713,17 @@
           "key": "in_board",
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-27/_board.json",
-          "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -816,7 +831,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=190",
-          "size": 1418050,
+          "size": 1418048,
           "said": "1d BUY CDNA, SN, VEEV, BLFS, PACS, CBRL, SHOO, FIGS \u00b7 SELL JBLU, SKHY, SOC, BAK, NEOV, VNET \u00b7 0.61285",
           "bullets": []
         },
@@ -827,10 +842,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 70491,
+          "size": 70455,
           "said": "Stock book \u2014 2026-10-27",
           "bullets": [
-            "_Generated 2026-10-27T07:50:46.348317-04:00_",
+            "_Generated 2026-10-27T16:56:16.190747-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -894,7 +909,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=190",
-          "size": 1418050,
+          "size": 1418048,
           "said": "1d BUY CDNA, SN, VEEV, BLFS, PACS, CBRL, SHOO, FIGS \u00b7 SELL JBLU, SKHY, SOC, BAK, NEOV, VNET \u00b7 0.61285",
           "bullets": []
         },
@@ -1077,7 +1092,22 @@
       "score": "5.515",
       "direction": "up"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {},
     "weather": {
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
@@ -4557,6 +4587,30 @@
       "commit_msg": "auto: land finviz_market_digest_close [2026-10-27]",
       "workflow": "Finviz homepage market digest",
       "run_id": "40577579300",
+      "manifest": "research/input_freeze/2026-10-27/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-27_stock_book.md",
+      "at": "2026-10-27T16:56:49-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-27",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40578630210",
+      "manifest": "research/input_freeze/2026-10-27/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-27_input_health.json",
+      "at": "2026-10-27T16:56:49-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-27",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40578630210",
+      "manifest": "research/input_freeze/2026-10-27/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-27_stock_book.json",
+      "at": "2026-10-27T16:56:49-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-27",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40578630210",
       "manifest": "research/input_freeze/2026-10-27/manifest.json"
     }
   ]
