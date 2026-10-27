@@ -16,6 +16,14 @@ name: Catalyst daily (bounded dossiers)
 on:
   workflow_dispatch:
     inputs:
+      runner:
+        description: "ubuntu (GitHub-hosted, DeepSeek; default) or ecs (retired OpenClaw box; Grok)."
+        required: false
+        default: "ubuntu"
+        type: choice
+        options:
+          - ubuntu
+          - ecs
       run_date:
         description: "YYYY-MM-DD (empty = today ET)"
         required: false
@@ -48,7 +56,7 @@ concurrency:
 
 jobs:
   dossiers:
-    runs-on: [self-hosted, ecs]
+    runs-on: ${{ (github.event.inputs.runner == 'ecs') && fromJSON('["self-hosted","ecs"]') || 'ubuntu-latest' }}
     timeout-minutes: 120
     steps:
       - name: Clear stale git index.lock (shared ECS workspace)
@@ -87,7 +95,7 @@ jobs:
           FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
           FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
           GROK_ONLY: "0"
-          LLM_BACKEND: auto
+          LLM_BACKEND: ${{ (github.event.inputs.runner == 'ecs') && 'auto' || 'deepseek' }}
           FINVIZ_SKIP_LIVE: "1"
         run: |
           set -euo pipefail

@@ -6,17 +6,26 @@ on:
   #   # Sunday 11:00 AM ET (15:00 UTC EDT)
   #   - cron: '0 15 * * 0'
   workflow_dispatch:
+    inputs:
+      runner:
+        description: "ubuntu (GitHub-hosted, DeepSeek; default) or ecs (retired OpenClaw box; Grok)."
+        required: false
+        default: "ubuntu"
+        type: choice
+        options:
+          - ubuntu
+          - ecs
 
 permissions:
   contents: write
 
 jobs:
   promote:
-    runs-on: [self-hosted, ecs]
+    runs-on: ${{ (github.event.inputs.runner == 'ecs') && fromJSON('["self-hosted","ecs"]') || 'ubuntu-latest' }}
     timeout-minutes: 180
     env:
-      FULLSCAN_HOME: "/home/gha"
-      HOME: "/home/gha"
+      FULLSCAN_HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
+      HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
     steps:
       - name: Clear stale git index.lock (shared ECS workspace)
         shell: bash

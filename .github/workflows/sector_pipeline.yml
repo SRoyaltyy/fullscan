@@ -3,6 +3,14 @@ name: Sector Pipeline (per-sector sequential)
 on:
   workflow_dispatch:
     inputs:
+      runner:
+        description: "ubuntu (GitHub-hosted, DeepSeek; default) or ecs (retired OpenClaw box; Grok)."
+        required: false
+        default: "ubuntu"
+        type: choice
+        options:
+          - ubuntu
+          - ecs
       stage:
         description: "predict | outcome | reflect | all"
         required: true
@@ -29,12 +37,12 @@ env:
 
 jobs:
   sector-loop:
-    runs-on: [self-hosted, ecs]
+    runs-on: ${{ (github.event.inputs.runner == 'ecs') && fromJSON('["self-hosted","ecs"]') || 'ubuntu-latest' }}
     # 11 sectors × long tool loops; allow hours
     timeout-minutes: 360
     env:
-      FULLSCAN_HOME: "/home/gha"
-      HOME: "/home/gha"
+      FULLSCAN_HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
+      HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
     steps:
       - name: Clear stale git index.lock (shared ECS workspace)
         shell: bash

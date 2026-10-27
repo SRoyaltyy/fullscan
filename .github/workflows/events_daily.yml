@@ -18,6 +18,14 @@ name: Event Scanner
 on:
   workflow_dispatch:
     inputs:
+      runner:
+        description: "ubuntu (GitHub-hosted, DeepSeek; default) or ecs (retired OpenClaw box; Grok)."
+        required: false
+        default: "ubuntu"
+        type: choice
+        options:
+          - ubuntu
+          - ecs
       run_date:
         description: "YYYY-MM-DD (default: today ET)"
         required: false
@@ -36,7 +44,7 @@ concurrency:
 
 jobs:
   scan:
-    runs-on: [self-hosted, ecs]
+    runs-on: ${{ (github.event.inputs.runner == 'ecs') && fromJSON('["self-hosted","ecs"]') || 'ubuntu-latest' }}
     timeout-minutes: 240
     steps:
       - name: Clear stale git index.lock (shared ECS workspace)
@@ -69,7 +77,7 @@ jobs:
           OPENCLAW_TIMEOUT: "10800"
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           GROK_ONLY: "0"
-          LLM_BACKEND: auto
+          LLM_BACKEND: ${{ (github.event.inputs.runner == 'ecs') && 'auto' || 'deepseek' }}
           DATE: ${{ github.event.inputs.run_date }}
           FORCE: ${{ github.event.inputs.force || 'false' }}
         run: |
@@ -88,7 +96,7 @@ jobs:
           OPENCLAW_TIMEOUT: "10800"
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}
           GROK_ONLY: "0"
-          LLM_BACKEND: auto
+          LLM_BACKEND: ${{ (github.event.inputs.runner == 'ecs') && 'auto' || 'deepseek' }}
           DATE: ${{ github.event.inputs.run_date }}
           FORCE: ${{ github.event.inputs.force || 'false' }}
         run: |

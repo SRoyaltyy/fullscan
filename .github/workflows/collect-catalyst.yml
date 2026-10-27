@@ -9,6 +9,14 @@ name: "Catalyst Analysis Engine"
 on:
   workflow_dispatch:
     inputs:
+      runner:
+        description: "ubuntu (GitHub-hosted, DeepSeek; default) or ecs (retired OpenClaw box; Grok)."
+        required: false
+        default: "ubuntu"
+        type: choice
+        options:
+          - ubuntu
+          - ecs
       run_date:
         description: "YYYY-MM-DD (empty = today ET)"
         required: false
@@ -54,7 +62,7 @@ concurrency:
 
 jobs:
   analyze:
-    runs-on: [self-hosted, ecs]
+    runs-on: ${{ (github.event.inputs.runner == 'ecs') && fromJSON('["self-hosted","ecs"]') || 'ubuntu-latest' }}
     timeout-minutes: 120
     steps:
       - name: Clear stale git index.lock (shared ECS workspace)
@@ -84,9 +92,10 @@ jobs:
         env:
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OPENCLAW_BACKEND_MODEL: xai/grok-4.6
           OPENCLAW_TIMEOUT: "3600"
-          GROK_ONLY: "1"
+          GROK_ONLY: ${{ (github.event.inputs.runner == 'ecs') && '1' || '0' }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           FULLSCAN_DB_OPTIONAL: "1"
           FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
