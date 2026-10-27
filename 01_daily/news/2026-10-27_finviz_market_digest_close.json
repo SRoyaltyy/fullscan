@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-27",
+  "generated_at": "2026-10-27T16:30:02.368077-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-28",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-28) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed higher as AI chip momentum and stronger economic data supported gains ahead of Big Tech earnings and the Fed decision while oil declined",
+  "raw_text": "- The S&P 500 ($SPX) rose 0.60% to 7,722.67, the Dow Jones Industrial Average ($DJI) edged 0.03% higher to 52,378.40, the Nasdaq Composite ($COMP) climbed 1.18% to 26,477.81, and the Russell 2000 (IWM) outperformed with a 1.24% gain\n- AI-linked chip stocks advanced on revived optimism tied to Anthropic’s IPO filing, Broadcom (AVGO)’s $63 billion Anthropic debt financing that helped lift Broadcom (AVGO) about 4%, and Meta (META)’s oversubscribed $25 billion stock sale\n- SoFi Technologies (SOFI) jumped about 13% after a Q3 earnings beat, reporting adjusted EPS of $0.18 versus $0.16 expected, revenue of $1.4 billion, record loan originations of $16.9 billion, and raising full-year revenue guidance\n- JetBlue Airways (JBLU) gained about 19% after outlining an improved Q4 margin outlook and new liquidity measures despite missing quarterly estimates\n- Celestica (CLS) rose about 12% after Q3 results beat expectations and the company raised full-year guidance, citing strong AI infrastructure demand\n- Royal Caribbean Group (RCL) climbed about 5.5% after posting stronger-than-expected Q3 earnings and raising its full-year profit forecast\n- Boeing (BA) fell 10.8% after reporting a larger-than-expected Q3 loss and cutting its aircraft delivery target\n- GM (GM) shares rose after the company announced it will move its stock listing from the New York Stock Exchange to Nasdaq after more than 100 years\n- Healthcare was the top-performing sector with a 4.1% gain, while energy fell 1.7% as oil (@CL) dropped nearly $2 per barrel on Middle East diplomacy, reduced supply concerns, and increased Saudi spot supplies to Europe\n- US consumer confidence increased to 91.7 in October versus the 81.0 consensus, durable goods orders rose 1.8% in September, and the Federal Reserve opened its final meeting before the midterm elections with rates widely expected to remain on hold, as Visa (V), Robinhood Markets (HOOD), and Seagate Technology (STX) are scheduled to report earnings after the close",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) rose **0.60% to 7,722.67**, the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) edged **0.03% higher to 52,378.40**, the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) climbed **1.18% to 26,477.81**, and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) outperformed with a **1.24% gain**\n- **AI-linked chip stocks advanced** on revived optimism tied to **Anthropic’s IPO filing**, **Broadcom** ([AVGO](https://finviz.com/quote?t=AVGO))’s **$63 billion Anthropic debt financing** that helped lift Broadcom ([AVGO](https://finviz.com/quote?t=AVGO)) about **4%**, and **Meta** ([META](https://finviz.com/quote?t=META))’s oversubscribed **$25 billion stock sale**\n- **SoFi Technologies** ([SOFI](https://finviz.com/quote?t=SOFI)) **jumped about 13%** after a Q3 earnings beat, reporting adjusted EPS of **$0.18 versus $0.16 expected**, revenue of **$1.4 billion**, record loan originations of **$16.9 billion**, and **raising full-year revenue guidance**\n- **JetBlue Airways** ([JBLU](https://finviz.com/quote?t=JBLU)) gained **about 19%** after outlining an **improved Q4 margin outlook** and **new liquidity measures** despite missing quarterly estimates\n- **Celestica** ([CLS](https://finviz.com/quote?t=CLS)) rose **about 12%** after Q3 results **beat expectations** and the company **raised full-year guidance**, citing **strong AI infrastructure demand**\n- **Royal Caribbean Group** ([RCL](https://finviz.com/quote?t=RCL)) climbed **about 5.5%** after posting **stronger-than-expected Q3 earnings** and **raising its full-year profit forecast**\n- **Boeing** ([BA](https://finviz.com/quote?t=BA)) fell **10.8%** after reporting a **larger-than-expected Q3 loss** and **cutting its aircraft delivery target**\n- **GM** ([GM](https://finviz.com/quote?t=GM)) shares rose after the company announced it will **move its stock listing from the New York Stock Exchange to Nasdaq after more than 100 years**\n- **Healthcare was the top-performing sector with a 4.1% gain**, while **energy fell 1.7%** as oil ([@CL](https://finviz.com/futures_charts?t=CL)) **dropped nearly $2 per barrel** on Middle East diplomacy, reduced supply concerns, and increased Saudi spot supplies to Europe\n- **US consumer confidence increased to 91.7 in October versus the 81.0 consensus**, **durable goods orders rose 1.8% in September**, and the **Federal Reserve opened its final meeting before the midterm elections with rates widely expected to remain on hold**, as **Visa** ([V](https://finviz.com/quote?t=V)), **Robinhood Markets** ([HOOD](https://finviz.com/quote?t=HOOD)), and **Seagate Technology** ([STX](https://finviz.com/quote?t=STX)) are scheduled to report earnings after the close",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 0.6,
+      "verb": "rose"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 1.18,
+      "verb": "climbed"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "AVGO",
+    "META",
+    "SOFI",
+    "JBLU",
+    "CLS",
+    "RCL",
+    "BA",
+    "GM",
+    "V",
+    "HOOD",
+    "STX"
+  ],
+  "named_leaders": [
+    "AVGO",
+    "META",
+    "SOFI",
+    "JBLU",
+    "CLS",
+    "RCL",
+    "BA",
+    "GM",
+    "V",
+    "HOOD",
+    "STX"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": 0.6,
+    "nasdaq": null,
+    "dow": 1.18
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "US consumer confidence increased to 91.7 in October versus the 81.0 consensus, durable goods orders rose 1.8% in September, and the Federal Reserve opened its final meeting before the midterm elections with rates widely expected to remain on hold, as Visa (V), Robinhood Markets (HOOD), and Seagate Technology (STX) are scheduled to report earnings after the close"
+    ],
+    "text": "US consumer confidence increased to 91.7 in October versus the 81.0 consensus, durable goods orders rose 1.8% in September, and the Federal Reserve opened its final meeting before the midterm elections with rates widely expected to remain on hold, as Visa (V), Robinhood Markets (HOOD), and Seagate Technology (STX) are scheduled to report earnings after the close"
+  },
+  "earnings_slate": {
+    "tickers": [
+      "V",
+      "HOOD",
+      "STX"
+    ],
+    "text": "US consumer confidence increased to 91.7 in October versus the 81.0 consensus, durable goods orders rose 1.8% in September, and the Federal Reserve opened its final meeting before the midterm elections with rates widely expected to remain on hold, as Visa (V), Robinhood Markets (HOOD), and Seagate Technology (STX) are scheduled to report earnings after the close"
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Healthcare was the top-performing sector with a 4.1% gain, while energy fell 1.7% as oil (@CL) dropped nearly $2 per barrel on Middle East diplomacy, reduced supply concerns, and increased Saudi spot supplies to Europe"
+  },
+  "finviz_id": 319512,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-27T16:08:24.277",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
