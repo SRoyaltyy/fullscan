@@ -47,12 +47,12 @@
   },
   "webull_sim": {
    "MISSING": 0,
-   "OK": 13,
-   "SIT": 360
+   "OK": 289,
+   "SIT": 84
   }
  },
  "date": "2026-10-27",
- "generated_at": "2026-10-27T19:02:11-04:00",
+ "generated_at": "2026-10-27T19:58:05-04:00",
  "strategies": [
   {
    "buys": [
@@ -5230,76 +5230,194 @@
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "SN 2",
+    "VEEV 1",
+    "PACS 10",
+    "CBRL 7",
+    "SHOO 12",
+    "FIGS 25",
+    "LAUR 13",
+    "VLO 1",
+    "COP 2",
+    "CHEF 1",
+    "PEB 0"
+   ],
    "family": "webull_sim",
    "name": "1d_top_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: BLFS mark not observed, carried at entry: KSPI,PRGS,MQ,WAY,PRCH,ABX,EZPW,CNK,MD,ASTH,HITI,CON,AMN",
+   "sells": [
+    "LAUR 12",
+    "SGRY 32",
+    "NTAP 2",
+    "IT 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 0",
+    "SN 0",
+    "VEEV 0",
+    "PACS 0",
+    "CBRL 0",
+    "SHOO 0",
+    "FIGS 0",
+    "LAUR 0",
+    "VLO 0",
+    "COP 0",
+    "CHEF 0",
+    "PEB 0"
+   ],
    "family": "webull_sim",
    "name": "1m_top_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BLFS mark not observed, carried at entry: CAKE,MQ,CTOS,PBI,PRCH,PVH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "SN 1",
+    "VEEV 0",
+    "PACS 2",
+    "CBRL 0",
+    "SHOO 0",
+    "FIGS 1",
+    "LAUR 0",
+    "VLO 0",
+    "COP 0",
+    "CHEF 0",
+    "PEB 0"
+   ],
    "family": "webull_sim",
    "name": "1w_top_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: BLFS mark not observed, carried at entry: CTOS,PBI,SPNT,SLDE,STGW,MQ,PRCH,WAY,EZPW,ABX,PRCH,ABX,CON,RELY,NMAX",
+   "sells": [
+    "SGRY 35"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "SN 0",
+    "VEEV 0",
+    "PACS 3",
+    "CBRL 0",
+    "SHOO 0",
+    "FIGS 1",
+    "LAUR 0",
+    "VLO 0",
+    "COP 0",
+    "CHEF 0",
+    "PEB 0"
+   ],
    "family": "webull_sim",
    "name": "2w_top_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: BLFS mark not observed, carried at entry: MQ,CTOS,PBI,PRCH,PVH,PRCH,ABX,PAYS,CON,RELY,NMAX",
+   "sells": [
+    "FIGS 32"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "SN 2",
+    "VEEV 1",
+    "PACS 10",
+    "CBRL 7",
+    "SHOO 11",
+    "FIGS 24",
+    "LAUR 13",
+    "VLO 1",
+    "COP 0",
+    "CHEF 0",
+    "PEB 1"
+   ],
    "family": "webull_sim",
    "name": "3d_top_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: BLFS mark not observed, carried at entry: PVH,SPNT,SLDE,STGW,MQ,PD,MQ,PRCH,ABX,PAYS,EZPW,CON",
+   "sells": [
+    "AVPT 33",
+    "CORT 4",
+    "VEEV 1",
+    "CDNA 7",
+    "ARQT 15",
+    "NTAP 2",
+    "TRU 6",
+    "LAUR 12",
+    "SONO 29"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "FBRT 1",
+    "MKC 0",
+    "MTB 0"
+   ],
    "family": "webull_sim",
    "name": "L1_long_green_tp8_lowvol_webull_sim",
-   "note": "open not observed",
+   "note": "Sim buys the next 09:30 open. The research card buys the signal-day close and is not a comparable result. no open, not filled: ACEL,ACT,ALRS,AOMR,AROW,BANR,BXP,CIVB,CURB,CUZ,EMN,EPRT,FIBK,FRT,FUND,GBL",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "FBRT 35",
+    "MKC 4",
+    "MTB 1"
+   ],
    "family": "webull_sim",
    "name": "L2_long_green_tp3_lowvol_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "Sim buys the next 09:30 open. The research card buys the signal-day close and is not a comparable result. no open, not filled: ACEL,ACT,ALRS,AOMR,AROW,BANR,BXP,CIVB,CURB,CUZ,EMN,EPRT,FIBK,FRT,FUND,GBL",
+   "sells": [
+    "ARI 79",
+    "RQI 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ANAB 10",
+    "INOD 10",
+    "NEOG 40",
+    "RITM 54",
+    "RUN 67"
+   ],
    "family": "webull_sim",
    "name": "L3_long_green_hold2_midcap_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "Sim buys the next 09:30 open. The research card buys the signal-day close and is not a comparable result. no open, not filled: AUB,AXGN,BRX,CWK,ESTA,ITRI,JBTM,KRC,MSA,PB,PRDO,TILE,WKC mark not observe",
+   "sells": [
+    "CRGY 36",
+    "AGIO 6",
+    "CVLT 1",
+    "FNB 12",
+    "GKOS 1",
+    "GLBE 5",
+    "HTZ 102",
+    "MANE 1",
+    "OPK 140",
+    "SGRY 14",
+    "SLS 20",
+    "TNGX 8",
+    "TTD 17",
+    "WIX 2",
+    "WRBY 8",
+    "ZYME 7"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -5311,13 +5429,19 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "INOD 10",
+    "NEOG 40",
+    "RUN 66",
+    "SONO 28",
+    "VISN 78"
+   ],
    "family": "webull_sim",
    "name": "L5_long_green_hold2_midhibeta_webull_sim",
-   "note": "open not observed",
+   "note": "Sim buys the next 09:30 open. The research card buys the signal-day close and is not a comparable result. no open, not filled: INGM mark not observed, carried at entry: CSTM",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -5365,904 +5489,1979 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 7",
+    "RITM 49",
+    "CDNA 6",
+    "TOST 14",
+    "FIS 12",
+    "NVTS 53",
+    "EPR 8",
+    "PDFS 11"
+   ],
    "family": "webull_sim",
    "name": "coil_h3_exit_alarm_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 36",
+    "PRMB 23",
+    "EPR 8",
+    "KURA 47",
+    "DGX 1",
+    "ANGI 69",
+    "BMBL 78"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "combo_e1er_5050_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 40",
+    "NEM 4",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "combo_e1s_7030_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "NEM 4",
+    "DGX 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "combo_ee1_3070_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 40",
+    "NEM 4",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "combo_ee1_5050_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 40",
+    "NEM 4",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "combo_ee1_7030_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 40",
+    "NEM 4",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "combo_eer_5050_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 40",
+    "NEM 4",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 16",
+    "SN 2",
+    "FIS 14",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "combo_ef_3070_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 40",
+    "NEM 4",
+    "DGX 2",
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 16",
+    "SN 2",
+    "FIS 14",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "combo_ef_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 40",
+    "NEM 4",
+    "DGX 2",
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 16",
+    "SN 2",
+    "FIS 14",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "combo_ef_7030_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 40",
+    "NEM 4",
+    "DGX 2",
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 54",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_eh_3070_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "DGX 2",
+    "BMBL 84"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 54",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_eh_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "DGX 2",
+    "BMBL 84"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 54",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_eh_7030_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "DGX 2",
+    "BMBL 84"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "RITM 50",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_ehs_601525_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "NEM 4",
+    "DGX 1",
+    "BMBL 78"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "RITM 50",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_ehs_702010_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "NEM 4",
+    "DGX 1",
+    "BMBL 78"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "combo_ej_5050_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "NVTS 58",
+    "AMX 20",
+    "GLND 158"
+   ],
    "family": "webull_sim",
    "name": "combo_en_3070_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "DGX 2",
+    "NVTS 59",
+    "AMX 20"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "NVTS 58",
+    "AMX 20",
+    "GLND 158"
+   ],
    "family": "webull_sim",
    "name": "combo_en_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "DGX 2",
+    "NVTS 59",
+    "AMX 20"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "NVTS 58",
+    "AMX 20",
+    "GLND 158"
+   ],
    "family": "webull_sim",
    "name": "combo_en_7030_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "DGX 2",
+    "NVTS 59",
+    "AMX 20"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "combo_ers_7030_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "NEM 4"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "combo_es_8020_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "NEM 4",
+    "DGX 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "combo_es_9010_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "NEM 4",
+    "DGX 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 16",
+    "SN 2",
+    "FIS 14",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "combo_fe1_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1",
+    "AXP 1",
+    "INFY 40",
+    "NEM 4",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 16",
+    "SN 2",
+    "FIS 14",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "combo_fe_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1",
+    "AXP 1",
+    "INFY 40",
+    "NEM 4",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 16",
+    "SN 2",
+    "FIS 14",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "combo_fer_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1",
+    "AXP 1",
+    "INFY 40",
+    "NEM 4"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 6",
+    "KD 32",
+    "CTSH 6",
+    "CDNA 6",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 9",
+    "AVPT 28"
+   ],
    "family": "webull_sim",
    "name": "combo_fes_403030_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1",
+    "AXP 1",
+    "INFY 38",
+    "NEM 4",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30",
+    "RITM 54",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_fh_7030_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1",
+    "AXP 1",
+    "INFY 40",
+    "NEM 4",
+    "BMBL 85"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 6",
+    "KD 32",
+    "CTSH 6",
+    "CDNA 6",
+    "TOST 14",
+    "SN 2",
+    "FIS 13",
+    "ETON 9",
+    "AVPT 28"
+   ],
    "family": "webull_sim",
    "name": "combo_fse_333_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1",
+    "AXP 1",
+    "INFY 38",
+    "NEM 4",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 54",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_he1_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "BMBL 84",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 54",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_her_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "BMBL 84"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 54",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "combo_hf_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 40",
+    "NEM 4",
+    "BMBL 85",
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 53",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_hj_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "BMBL 83"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 53",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1",
+    "NVTS 57",
+    "AMX 20",
+    "GLND 156"
+   ],
    "family": "webull_sim",
    "name": "combo_hn_3070_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "BMBL 83",
+    "NVTS 58",
+    "AMX 19"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 53",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1",
+    "NVTS 57",
+    "AMX 20",
+    "GLND 156"
+   ],
    "family": "webull_sim",
    "name": "combo_hn_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "BMBL 83",
+    "NVTS 58",
+    "AMX 19"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 53",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1",
+    "NVTS 57",
+    "AMX 20",
+    "GLND 156"
+   ],
    "family": "webull_sim",
    "name": "combo_hn_7030_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "BMBL 83",
+    "NVTS 58",
+    "AMX 19"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "combo_je1_5050_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "combo_jer_5050_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 40",
+    "NEM 4"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "combo_jf_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "combo_jse_333_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "NEM 4",
+    "DGX 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "NVTS 58",
+    "AMX 20",
+    "GLND 158"
+   ],
    "family": "webull_sim",
    "name": "combo_ne1_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "NVTS 59",
+    "AMX 20",
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "NVTS 58",
+    "AMX 20",
+    "GLND 158"
+   ],
    "family": "webull_sim",
    "name": "combo_ner_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "NVTS 59",
+    "AMX 20",
+    "AXP 1",
+    "INFY 39",
+    "NEM 4"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "NVTS 59",
+    "AMX 20",
+    "GLND 161",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "combo_nf_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "NVTS 60",
+    "AMX 20",
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "NVTS 57",
+    "AMX 20",
+    "GLND 157"
+   ],
    "family": "webull_sim",
    "name": "combo_nj_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "NVTS 58",
+    "AMX 20"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "TBBB 8",
+    "RITM 50",
+    "NVTS 54",
+    "AMX 19",
+    "GLND 148"
+   ],
    "family": "webull_sim",
    "name": "combo_nse_333_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "NVTS 55",
+    "AMX 18",
+    "AXP 1",
+    "INFY 37",
+    "NEM 4",
+    "DGX 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 53",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_oh_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "BMBL 83"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "AMX 19"
+   ],
    "family": "webull_sim",
    "name": "combo_p2s_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AMX 18"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 6",
+    "KD 31",
+    "CTSH 6",
+    "AMX 19"
+   ],
    "family": "webull_sim",
    "name": "combo_ps_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AMX 19"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 6",
+    "KD 31",
+    "CTSH 6",
+    "AMX 19"
+   ],
    "family": "webull_sim",
    "name": "combo_ps_7030_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AMX 19"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "combo_se1_5050_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "NEM 4",
+    "DGX 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "combo_se_3070_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "NEM 4",
+    "DGX 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "combo_se_5050_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "NEM 4",
+    "DGX 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "combo_se_5050_skip_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "NEM 4",
+    "DGX 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "combo_se_5050_split_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "NEM 4",
+    "DGX 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "combo_se_5050_weather_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "NEM 4",
+    "DGX 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "combo_se_7030_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "NEM 4",
+    "DGX 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "RITM 50",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_seh_333_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 36",
+    "NEM 4",
+    "DGX 1",
+    "BMBL 78"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "RITM 50",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_seh_333_skip_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "NEM 4",
+    "DGX 1",
+    "BMBL 78"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "RITM 50",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_seh_333_split_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 36",
+    "NEM 4",
+    "DGX 1",
+    "BMBL 78"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "RITM 50",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_seh_333_weather_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 36",
+    "NEM 4",
+    "DGX 1",
+    "BMBL 78"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "RITM 50",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_seh_403525_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 36",
+    "NEM 4",
+    "DGX 1",
+    "BMBL 78"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "RITM 50",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_seh_404020_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 36",
+    "NEM 4",
+    "DGX 1",
+    "BMBL 78"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "RITM 50",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_seh_451540_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 36",
+    "NEM 4",
+    "DGX 1",
+    "BMBL 78"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "RITM 50",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_seh_502525_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 36",
+    "NEM 4",
+    "DGX 1",
+    "BMBL 78"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "RITM 50",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_seh_502525_split_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 36",
+    "NEM 4",
+    "DGX 1",
+    "BMBL 78"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "RITM 50",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_seh_601525_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 36",
+    "NEM 4",
+    "DGX 1",
+    "BMBL 78"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "combo_ser_5050_shared_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "NEM 4"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 6",
+    "KD 31",
+    "CTSH 6",
+    "CDNA 6",
+    "TOST 14",
+    "SN 2",
+    "FIS 12",
+    "ETON 9",
+    "AVPT 28"
+   ],
    "family": "webull_sim",
    "name": "combo_sf_3070_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 6",
+    "KD 31",
+    "CTSH 6",
+    "CDNA 6",
+    "TOST 14",
+    "SN 2",
+    "FIS 12",
+    "ETON 9",
+    "AVPT 28"
+   ],
    "family": "webull_sim",
    "name": "combo_sf_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 6",
+    "KD 31",
+    "CTSH 6",
+    "CDNA 6",
+    "TOST 14",
+    "SN 2",
+    "FIS 12",
+    "ETON 9",
+    "AVPT 28"
+   ],
    "family": "webull_sim",
    "name": "combo_sf_7030_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 30",
+    "CTSH 6",
+    "RITM 49",
+    "TBBB 7",
+    "INTA 9",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_sh_3070_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 36",
+    "NEM 4",
+    "BMBL 77"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 30",
+    "CTSH 6",
+    "RITM 49",
+    "TBBB 7",
+    "INTA 9",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_sh_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 36",
+    "NEM 4",
+    "BMBL 77"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 30",
+    "CTSH 6",
+    "RITM 49",
+    "TBBB 7",
+    "INTA 9",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_sh_7030_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 36",
+    "NEM 4",
+    "BMBL 77"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "RITM 50",
+    "TBBB 7",
+    "INTA 9",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "combo_sh_macd_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 36",
+    "NEM 4",
+    "BMBL 77"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "combo_sj_3070_shared_webull_sim",
    "note": "sat out, 0 picks",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "combo_sj_5050_shared_webull_sim",
    "note": "sat out, 0 picks",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "combo_sj_7030_shared_webull_sim",
    "note": "sat out, 0 picks",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "TBBB 7",
+    "RITM 50",
+    "NVTS 54",
+    "AMX 19",
+    "GLND 147"
+   ],
    "family": "webull_sim",
    "name": "combo_sn_3070_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "NVTS 55",
+    "AMX 18"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "TBBB 7",
+    "RITM 50",
+    "NVTS 54",
+    "AMX 19",
+    "GLND 147"
+   ],
    "family": "webull_sim",
    "name": "combo_sn_5050_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "NVTS 55",
+    "AMX 18"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6",
+    "TBBB 7",
+    "RITM 50",
+    "NVTS 54",
+    "AMX 19",
+    "GLND 147"
+   ],
    "family": "webull_sim",
    "name": "combo_sn_7030_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "NVTS 55",
+    "AMX 18"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 30",
+    "CTSH 6",
+    "TBBB 7",
+    "RITM 50",
+    "NVTS 53",
+    "AMX 19",
+    "GLND 146"
+   ],
    "family": "webull_sim",
    "name": "combo_snj_333_shared_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "NVTS 54",
+    "AMX 18"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h3_cut_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h3_half_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h3_rankw_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h3_sboost_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h3_sizeup_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h3_time_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h3_topheavy_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h3_trail_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 16",
+    "SN 2",
+    "FIS 14",
+    "ETON 10",
+    "AVPT 31"
+   ],
    "family": "webull_sim",
    "name": "flatten_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "SGRY 33",
+    "VEEV 1",
+    "CDNA 7",
+    "CRON 149",
+    "CORT 4",
+    "ARQT 15",
+    "ETON 10"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h5_cut_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h5_half_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h5_rankw_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h5_s8_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h5_sboost_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h5_sizeup_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h5_time_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h5_topheavy_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "ETON 10",
+    "AVPT 30"
+   ],
    "family": "webull_sim",
    "name": "flatten_h5_trail_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 16",
+    "SN 2",
+    "FIS 14",
+    "ETON 10",
+    "AVPT 31"
+   ],
    "family": "webull_sim",
    "name": "flatten_h5_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: RRC",
+   "sells": [
+    "VEEV 1",
+    "ILMN 1",
+    "CDNA 7",
+    "ARQT 15",
+    "PACS 11"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -6364,13 +7563,28 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "SYK 1",
+    "VEEV 1",
+    "CDNA 7",
+    "PACS 10",
+    "PRGO 32",
+    "SGRY 21",
+    "PCRX 13"
+   ],
    "family": "webull_sim",
    "name": "flatten_robust_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: BLFS mark not observed, carried at entry: IOT,NEO,MNR,CAKE",
+   "sells": [
+    "FIGS 25",
+    "CDNA 7",
+    "IT 2",
+    "TOST 15",
+    "SN 2",
+    "AVPT 31"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -6436,13 +7650,23 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "LQDA 39",
+    "UWMC 1237",
+    "CHKP 10",
+    "ARHS 147"
+   ],
    "family": "webull_sim",
    "name": "h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "Sealed h1 plan log. The plan sets its own count and equal weight. Sim cash starts at $10,000 and is not the research book's cash.",
+   "sells": [
+    "TRON 1243",
+    "BHVN 120",
+    "BMBL 307",
+    "POOL 9"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -6454,40 +7678,106 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 52",
+    "INTA 10",
+    "PAYC 1",
+    "BMBL 82",
+    "VET 35"
+   ],
    "family": "webull_sim",
    "name": "ohlc_hot_coil_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "INFY 38",
+    "BMBL 82"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 52",
+    "INTA 10",
+    "PAYC 1",
+    "DOW 14",
+    "POOL 2",
+    "FRSH 32",
+    "BMBL 82",
+    "CHKP 3"
+   ],
    "family": "webull_sim",
    "name": "ohlc_hot_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: SMWB,SBAC",
+   "sells": [
+    "INFY 39",
+    "TYL 1",
+    "INTA 10",
+    "POOL 2",
+    "BMBL 82",
+    "WIT 229",
+    "GLOB 11",
+    "ROP 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 52",
+    "INTA 10",
+    "PAYC 1",
+    "DOW 14",
+    "POOL 2",
+    "FRSH 31",
+    "BMBL 81",
+    "CHKP 3"
+   ],
    "family": "webull_sim",
    "name": "ohlc_hot_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: KSS,SDEV,SMWB,SBAC",
+   "sells": [
+    "BMBL 81",
+    "HLT 1",
+    "VFC 27",
+    "TRU 6",
+    "WIT 235",
+    "KVYO 24",
+    "CMRC 129",
+    "IT 2",
+    "DOCU 5",
+    "SHO 12"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 52",
+    "INTA 10",
+    "PAYC 1",
+    "DOW 14",
+    "POOL 2",
+    "FRSH 31",
+    "BMBL 81",
+    "CHKP 3"
+   ],
    "family": "webull_sim",
    "name": "ohlc_hot_h5_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: KSS,SDEV,FNKO,SMWB,SBAC",
+   "sells": [
+    "FIGS 31",
+    "LOGI 4",
+    "NOG 17",
+    "OVV 6",
+    "KRP 28",
+    "ADMA 42",
+    "CNQ 8",
+    "PR 18",
+    "MNST 10"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -6521,18 +7811,31 @@
    "family": "webull_sim",
    "name": "overnight_h3_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "SAP 2",
+    "CSX 10",
+    "LUV 12",
+    "PNFP 5",
+    "IBM 2",
+    "MOH 2",
+    "NEM 4",
+    "BBD 123"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "overnight_h5_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "ISRG 1",
+    "COF 2",
+    "NFLX 7"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -6562,94 +7865,196 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "NVTS 53",
+    "EPR 8",
+    "PDFS 10",
+    "SMMT 31",
+    "PRMB 23",
+    "AIP 23",
+    "CXW 15"
+   ],
    "family": "webull_sim",
    "name": "probable_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "PRMB 22",
+    "NVTS 53",
+    "EPR 8",
+    "SMMT 29",
+    "PDFS 11",
+    "AIP 23",
+    "CXW 15",
+    "ACRS 119"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NVTS 49",
+    "EPR 7",
+    "PDFS 10",
+    "SMMT 29",
+    "PRMB 21",
+    "AIP 21",
+    "CXW 14"
+   ],
    "family": "webull_sim",
    "name": "probable_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: OIG",
+   "sells": [
+    "SMMT 26",
+    "NVTS 48",
+    "EPR 7",
+    "ACRS 116",
+    "PRMB 21",
+    "PDFS 10",
+    "AIP 21",
+    "CXW 14",
+    "NVTS 49",
+    "EGG 85",
+    "SMMT 27",
+    "PRMB 4"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NVTS 53",
+    "EPR 8",
+    "PDFS 11",
+    "SMMT 32",
+    "PRMB 23",
+    "AIP 23",
+    "CXW 15"
+   ],
    "family": "webull_sim",
    "name": "probable_h5_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: BYRN,OIG,WFF,CCCC",
+   "sells": [
+    "PRMB 23",
+    "NVTS 54",
+    "AIP 24",
+    "SMMT 29",
+    "EPR 8",
+    "PDFS 11",
+    "CXW 15",
+    "ACRS 136"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "PDFS 11",
+    "SMMT 33",
+    "AIP 24",
+    "CXW 16"
+   ],
    "family": "webull_sim",
    "name": "probable_probable_ok_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "PRMB 24",
+    "EPR 8",
+    "SMMT 31",
+    "ACRS 126"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "PDFS 11",
+    "SMMT 32",
+    "AIP 23",
+    "CXW 15"
+   ],
    "family": "webull_sim",
    "name": "probable_probable_ok_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "SMMT 28",
+    "EPR 8",
+    "ACRS 126",
+    "EGG 94"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW 1",
+    "GLND 173",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6",
+    "POOL 2",
+    "TRU 6"
+   ],
    "family": "webull_sim",
    "name": "short_alarm_h1_webull_sim",
-   "note": "open not observed",
+   "note": "mark not observed, carried at entry: CBOE,DOCS",
    "sells": [
-    "SN 0",
-    "ITW 0",
-    "DOW 0",
-    "PRMB 0",
-    "EGG 0",
-    "KURA 0",
-    "PRIM 0",
-    "CRS 0"
+    "SN 2",
+    "ITW 1",
+    "DOW 14",
+    "PRMB 25",
+    "EGG 97",
+    "KURA 51",
+    "PRIM 7",
+    "CRS 1"
    ],
    "source": "data/webull_sim/days.jsonl",
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SAP 2",
+    "ITW 1",
+    "BKU 12",
+    "CME 1",
+    "NVTS 57",
+    "AMX 22",
+    "TBBB 8",
+    "DOCU 6",
+    "PNFP 5",
+    "NVTS 60",
+    "TBBB 9",
+    "CMCSA 23",
+    "HBAN 33",
+    "PG 3"
+   ],
    "family": "webull_sim",
    "name": "short_alarm_h3_webull_sim",
-   "note": "open not observed",
+   "note": "mark not observed, carried at entry: EXTR,ADTN,CBOE,DOCS",
    "sells": [
-    "SN 0",
-    "ITW 0",
-    "DOW 0",
-    "PRMB 0",
-    "EGG 0",
-    "KURA 0",
-    "PRIM 0",
-    "CRS 0"
+    "SN 2",
+    "ITW 1",
+    "DOW 15",
+    "PRMB 26",
+    "EGG 99",
+    "KURA 53",
+    "PRIM 7",
+    "CRS 1"
    ],
    "source": "data/webull_sim/days.jsonl",
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "MRNA 2",
+    "LQDA 13"
+   ],
    "family": "webull_sim",
    "name": "short_clk_ext_veto_h3_webull_sim",
-   "note": "open not observed",
+   "note": "",
    "sells": [
-    "EGG 0",
-    "HLP 0"
+    "EGG 98",
+    "HLP 145"
    ],
    "source": "data/webull_sim/days.jsonl",
    "status": "OK"
@@ -6664,13 +8069,16 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "NFLX 7",
+    "MOH 2"
+   ],
    "family": "webull_sim",
    "name": "short_clk_neg_weak_fail_h3_webull_sim",
    "note": "sat out, 0 picks",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -6682,166 +8090,297 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "POOL 2",
+    "WIT 233",
+    "GLOB 11",
+    "EFX 2",
+    "KD 33",
+    "ACN 1"
+   ],
    "family": "webull_sim",
    "name": "short_extended_h1_webull_sim",
-   "note": "open not observed",
+   "note": "mark not observed, carried at entry: SBAC",
    "sells": [
-    "AVPT 0",
-    "POOL 0",
-    "QTTB 0",
-    "HLP 0",
-    "CHKP 0",
-    "ARHS 0",
-    "TTAN 0",
-    "HUBS 0"
+    "AVPT 29",
+    "POOL 2",
+    "QTTB 59",
+    "HLP 144",
+    "CHKP 3",
+    "ARHS 42",
+    "TTAN 6",
+    "HUBS 1"
    ],
    "source": "data/webull_sim/days.jsonl",
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TRU 6",
+    "KLRA 39",
+    "GLND 167",
+    "KVYO 25",
+    "BROS 11",
+    "Z 15",
+    "SRPT 26",
+    "ARQT 16",
+    "TRU 6",
+    "KLRA 39",
+    "ENGS 122",
+    "EPAM 3",
+    "GLOB 11",
+    "RH 4",
+    "VERA 16"
+   ],
    "family": "webull_sim",
    "name": "short_extended_h3_webull_sim",
-   "note": "open not observed",
+   "note": "mark not observed, carried at entry: SBAC",
    "sells": [
-    "AVPT 0",
-    "POOL 0",
-    "QTTB 0",
-    "HLP 0",
-    "CHKP 0",
-    "ARHS 0",
-    "TTAN 0",
-    "HUBS 0"
+    "AVPT 29",
+    "POOL 2",
+    "QTTB 59",
+    "HLP 143",
+    "CHKP 3",
+    "ARHS 42",
+    "TTAN 6",
+    "HUBS 1"
    ],
    "source": "data/webull_sim/days.jsonl",
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NVTS 58",
+    "TBBB 8",
+    "BBD 126",
+    "NET 1",
+    "PDFS 12",
+    "AIP 25",
+    "CXW 16",
+    "MX 204"
+   ],
    "family": "webull_sim",
    "name": "short_last_red_h1_webull_sim",
-   "note": "open not observed",
+   "note": "",
    "sells": [
-    "TOST 0",
-    "SN 0",
-    "FIS 0",
-    "NVTS 0",
-    "EPR 0",
-    "ITW 0",
-    "AMX 0",
-    "ANGI 0"
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8",
+    "ITW 1",
+    "AMX 20",
+    "ANGI 77"
    ],
    "source": "data/webull_sim/days.jsonl",
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NFLX 8",
+    "CME 1",
+    "DHR 2",
+    "AMX 23",
+    "TBBB 9",
+    "PM 2",
+    "PRIM 7",
+    "TLSA 531",
+    "MOH 2",
+    "PCG 42",
+    "DOW 17",
+    "HON 2",
+    "PHM 4",
+    "TBBB 9",
+    "GLND 188",
+    "PG 3"
+   ],
    "family": "webull_sim",
    "name": "short_last_red_h3_webull_sim",
-   "note": "open not observed",
+   "note": "mark not observed, carried at entry: SDEV",
    "sells": [
-    "TOST 0",
-    "SN 0",
-    "FIS 0",
-    "NVTS 0",
-    "EPR 0",
-    "ITW 0",
-    "AMX 0",
-    "ANGI 0"
+    "TOST 16",
+    "SN 2",
+    "FIS 14",
+    "NVTS 62",
+    "EPR 9",
+    "ITW 1",
+    "AMX 22",
+    "ANGI 84"
    ],
    "source": "data/webull_sim/days.jsonl",
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "GLND 182",
+    "NVTS 63",
+    "KURA 54",
+    "BBD 136",
+    "NET 1",
+    "SMMT 34",
+    "PDFS 13",
+    "AIP 27"
+   ],
    "family": "webull_sim",
    "name": "short_macd_dn_h1_webull_sim",
-   "note": "open not observed",
+   "note": "",
    "sells": [
-    "CDNA 0",
-    "NVTS 0",
-    "PDFS 0",
-    "GLND 0",
-    "ETON 0",
-    "SMMT 0",
-    "AIP 0",
-    "CXW 0"
+    "CDNA 7",
+    "NVTS 61",
+    "PDFS 12",
+    "GLND 168",
+    "ETON 10",
+    "SMMT 36",
+    "AIP 26",
+    "CXW 17"
    ],
    "source": "data/webull_sim/days.jsonl",
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "T 24",
+    "SMMT 33",
+    "NVTS 60",
+    "ACRS 145",
+    "KURA 54",
+    "LUV 13",
+    "PDFS 12",
+    "AIP 26",
+    "LUV 14",
+    "NVTS 64",
+    "GLND 191",
+    "VLO 1",
+    "CORT 4",
+    "ETON 11",
+    "SMMT 36",
+    "PDFS 13"
+   ],
    "family": "webull_sim",
    "name": "short_macd_dn_h3_webull_sim",
-   "note": "open not observed",
+   "note": "",
    "sells": [
-    "CDNA 0",
-    "NVTS 0",
-    "PDFS 0",
-    "GLND 0",
-    "ETON 0",
-    "SMMT 0",
-    "AIP 0",
-    "CXW 0"
+    "CDNA 8",
+    "NVTS 65",
+    "PDFS 13",
+    "GLND 178",
+    "ETON 11",
+    "SMMT 38",
+    "AIP 28",
+    "CXW 18"
    ],
    "source": "data/webull_sim/days.jsonl",
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "KD 36",
+    "CTSH 7",
+    "HALO 4",
+    "IBM 2",
+    "MOH 2",
+    "MOH 2",
+    "IBM 2",
+    "CTSH 7"
+   ],
    "family": "webull_sim",
    "name": "short_news_head_h3_webull_sim",
    "note": "sat out, 0 picks",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NFLX 7",
+    "KD 36",
+    "CTSH 7",
+    "HALO 4",
+    "IBM 2",
+    "MOH 2",
+    "MOH 2",
+    "LUV 12",
+    "IBM 2",
+    "CMCSA 22",
+    "NEM 4",
+    "CTSH 7"
+   ],
    "family": "webull_sim",
    "name": "short_news_or_h3_webull_sim",
    "note": "sat out, 0 picks",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NFLX 7",
+    "LUV 12",
+    "CMCSA 22",
+    "NEM 4"
+   ],
    "family": "webull_sim",
    "name": "short_news_pack_h3_webull_sim",
    "note": "sat out, 0 picks",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 5",
+    "KD 31",
+    "CTSH 6"
+   ],
    "family": "webull_sim",
    "name": "short_news_r_h1_webull_sim",
    "note": "sat out, 0 picks",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NFLX 7",
+    "KD 36",
+    "CTSH 7",
+    "HALO 4",
+    "IBM 2",
+    "MOH 2",
+    "MOH 2",
+    "LUV 12",
+    "IBM 2",
+    "CMCSA 22",
+    "NEM 4",
+    "CTSH 7"
+   ],
    "family": "webull_sim",
    "name": "short_news_r_h3_webull_sim",
    "note": "sat out, 0 picks",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "NFLX 7",
+    "KD 36",
+    "CTSH 7",
+    "HALO 4",
+    "IBM 2",
+    "MOH 2",
+    "MOH 2",
+    "IBM 2",
+    "CMCSA 22",
+    "NEM 4",
+    "CTSH 7"
+   ],
    "family": "webull_sim",
    "name": "short_news_r_macd_h3_webull_sim",
    "note": "sat out, 0 picks",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -6862,95 +8401,237 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW 1",
+    "EPR 9",
+    "EGG 100",
+    "TBBB 9",
+    "MX 216"
+   ],
    "family": "webull_sim",
    "name": "short_rsi_ob_h1_webull_sim",
-   "note": "open not observed",
+   "note": "",
    "sells": [
-    "TBBB 0",
-    "CDNA 0",
-    "EPR 0",
-    "ITW 0",
-    "EGG 0",
-    "MX 0",
-    "HLP 0"
+    "TBBB 9",
+    "CDNA 7",
+    "EPR 9",
+    "ITW 1",
+    "EGG 101",
+    "MX 218",
+    "HLP 149"
    ],
    "source": "data/webull_sim/days.jsonl",
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "ITW 1",
+    "EPR 9",
+    "TBBB 8",
+    "EGG 105",
+    "MX 199",
+    "ITW 1",
+    "CDNA 7",
+    "EGG 105",
+    "TBBB 9",
+    "MRNA 2",
+    "EPR 9",
+    "MX 210"
+   ],
    "family": "webull_sim",
    "name": "short_rsi_ob_h3_webull_sim",
-   "note": "open not observed",
+   "note": "",
    "sells": [
-    "TBBB 0",
-    "CDNA 0",
-    "EPR 0",
-    "ITW 0",
-    "EGG 0",
-    "MX 0",
-    "HLP 0"
+    "TBBB 9",
+    "CDNA 7",
+    "EPR 9",
+    "ITW 1",
+    "EGG 103",
+    "MX 222",
+    "HLP 152"
    ],
    "source": "data/webull_sim/days.jsonl",
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "SN 2",
+    "VEEV 1",
+    "PACS 10",
+    "CBRL 7",
+    "SHOO 12",
+    "FIGS 25",
+    "LAUR 13",
+    "VLO 1",
+    "COP 2",
+    "CHEF 1",
+    "PEB 0"
+   ],
    "family": "webull_sim",
    "name": "stock_book_1d_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: BLFS mark not observed, carried at entry: KSPI,PRGS,MQ,WAY,PRCH,ABX,EZPW,CNK,MD,ASTH,HITI,CON,AMN",
+   "sells": [
+    "LAUR 12",
+    "SGRY 32",
+    "NTAP 2",
+    "IT 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 0",
+    "SN 0",
+    "VEEV 0",
+    "PACS 0",
+    "CBRL 0",
+    "SHOO 0",
+    "FIGS 0",
+    "LAUR 0",
+    "VLO 0",
+    "COP 0",
+    "CHEF 0",
+    "PEB 0"
+   ],
    "family": "webull_sim",
    "name": "stock_book_1m_webull_sim",
-   "note": "open not observed",
+   "note": "no open, not filled: BLFS mark not observed, carried at entry: CAKE,MQ,CTOS,PBI,PRCH,PVH",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "SN 1",
+    "VEEV 0",
+    "PACS 2",
+    "CBRL 0",
+    "SHOO 0",
+    "FIGS 1",
+    "LAUR 0",
+    "VLO 0",
+    "COP 0",
+    "CHEF 0",
+    "PEB 0"
+   ],
    "family": "webull_sim",
    "name": "stock_book_1w_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: BLFS mark not observed, carried at entry: CTOS,PBI,SPNT,SLDE,STGW,MQ,PRCH,WAY,EZPW,ABX,PRCH,ABX,CON,RELY,NMAX",
+   "sells": [
+    "SGRY 35"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "SN 0",
+    "VEEV 0",
+    "PACS 3",
+    "CBRL 0",
+    "SHOO 0",
+    "FIGS 1",
+    "LAUR 0",
+    "VLO 0",
+    "COP 0",
+    "CHEF 0",
+    "PEB 0"
+   ],
    "family": "webull_sim",
    "name": "stock_book_2w_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: BLFS mark not observed, carried at entry: MQ,CTOS,PBI,PRCH,PVH,PRCH,ABX,PAYS,CON,RELY,NMAX",
+   "sells": [
+    "FIGS 32"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "SN 2",
+    "VEEV 1",
+    "PACS 10",
+    "CBRL 7",
+    "SHOO 11",
+    "FIGS 24",
+    "LAUR 13",
+    "VLO 1",
+    "COP 0",
+    "CHEF 0",
+    "PEB 1"
+   ],
    "family": "webull_sim",
    "name": "stock_book_3d_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: BLFS mark not observed, carried at entry: PVH,SPNT,SLDE,STGW,MQ,PD,MQ,PRCH,ABX,PAYS,EZPW,CON",
+   "sells": [
+    "AVPT 33",
+    "CORT 4",
+    "VEEV 1",
+    "CDNA 7",
+    "ARQT 15",
+    "NTAP 2",
+    "TRU 6",
+    "LAUR 12",
+    "SONO 29"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BAH 3",
+    "BBD 68",
+    "BKU 6",
+    "CMCSA 12",
+    "DGX 1",
+    "DHR 1",
+    "DOV 1",
+    "DOW 8",
+    "EGP 1",
+    "FAF 4",
+    "FCCO 8",
+    "GSBC 3",
+    "HBAN 17",
+    "HON 1",
+    "IBM 1",
+    "IIIN 9",
+    "INFY 21",
+    "LUV 7",
+    "MOH 1",
+    "MSM 2",
+    "NTRS 1",
+    "OII 7",
+    "PCG 21",
+    "PKG 1",
+    "PNFP 2",
+    "R 1",
+    "SAP 1",
+    "SBFG 9",
+    "SON 5",
+    "WFRD 3",
+    "WH 3"
+   ],
    "family": "webull_sim",
    "name": "theme_radar_fpe_delta_t3_earn_today_3d_webull_sim",
    "note": "sat out, 0 picks",
    "sells": [],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CHRN 35",
+    "IREN 21",
+    "NEXR 933",
+    "NNBR 165",
+    "SLNH 1054",
+    "VIVO 268"
+   ],
    "family": "webull_sim",
    "name": "theme_radar_fresh_dcp_t1_avoid_ah_3d_webull_sim",
    "note": "Research short. Off the real Webull paper account. Enters at the 09:30 open and covers at the close of the last hold day. borrow not modeled.",
@@ -6959,7 +8640,7 @@
     "EMPD 205",
     "GEV 0",
     "GNS 4322",
-    "OPTT 921",
+    "OPTT 920",
     "SRTM 2213",
     "TAC 45",
     "VAI 245"
@@ -6968,7 +8649,14 @@
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "APLD 29",
+    "CEG 2",
+    "CRWV 10",
+    "D 8",
+    "INIO 35",
+    "VRT 2"
+   ],
    "family": "webull_sim",
    "name": "theme_radar_fresh_dcp_t1_ep_ge03_2d_webull_sim",
    "note": "Research short. Off the real Webull paper account. Enters at the 09:30 open and covers at the close of the last hold day. borrow not modeled.",
@@ -6984,58 +8672,173 @@
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "FIS 13",
+    "EPR 8",
+    "PDFS 11",
+    "AMX 20"
+   ],
    "family": "webull_sim",
    "name": "union_ab_g_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO,SMWB",
+   "sells": [
+    "AXP 1",
+    "PRMB 24",
+    "NVTS 58",
+    "EPR 8",
+    "EGG 94",
+    "KURA 50",
+    "DGX 2",
+    "ACN 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "CDNA 7",
+    "TOST 15",
+    "FIS 13",
+    "EPR 8",
+    "PDFS 12",
+    "AMX 20"
+   ],
    "family": "webull_sim",
    "name": "union_ab_g_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: KSS,AUGO,SMWB",
+   "sells": [
+    "ISRG 1",
+    "DHR 2",
+    "SGRY 31",
+    "SMMT 29",
+    "EPR 8",
+    "KURA 47",
+    "DGX 2",
+    "HALO 3",
+    "CSX 9",
+    "DOV 2",
+    "VEEV 1",
+    "ITW 1",
+    "POOL 2",
+    "DGX 2",
+    "DOW 14"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 49",
+    "CDNA 6",
+    "TOST 14",
+    "FIS 12",
+    "EPR 8",
+    "PDFS 11",
+    "INTA 9"
+   ],
    "family": "webull_sim",
    "name": "union_blue_coil_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG",
+   "sells": [
+    "PRMB 23",
+    "KURA 47",
+    "DGX 1",
+    "ANGI 69",
+    "BMBL 78",
+    "SMMT 30",
+    "ACRS 122",
+    "RCKT 204"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 50",
+    "CDNA 6",
+    "TOST 14",
+    "FIS 12",
+    "EPR 8",
+    "PDFS 11",
+    "INTA 10"
+   ],
    "family": "webull_sim",
    "name": "union_blue_coil_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: KSS",
+   "sells": [
+    "SGRY 29",
+    "KURA 44",
+    "CSX 8",
+    "DOV 2",
+    "PCG 34",
+    "VEEV 1",
+    "ITW 1",
+    "POOL 2",
+    "HON 2",
+    "PHM 4"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 52",
+    "CDNA 6",
+    "TOST 15",
+    "FIS 13",
+    "EPR 8",
+    "PDFS 11",
+    "INTA 10"
+   ],
    "family": "webull_sim",
    "name": "union_blue_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: AUGO,SMWB",
+   "sells": [
+    "PRMB 24",
+    "KURA 49",
+    "DGX 2",
+    "ANGI 72",
+    "BMBL 81",
+    "SMMT 31",
+    "ACRS 127",
+    "RCKT 213"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "FIS 13",
+    "EPR 8",
+    "PDFS 11",
+    "INTA 10"
+   ],
    "family": "webull_sim",
    "name": "union_blue_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: KSS,AUGO,SMWB",
+   "sells": [
+    "SGRY 31",
+    "KURA 47",
+    "CSX 9",
+    "DOV 2",
+    "PCG 36",
+    "VEEV 1",
+    "ITW 1",
+    "POOL 2",
+    "HON 2",
+    "LUV 12"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -7051,63 +8854,188 @@
    "family": "webull_sim",
    "name": "union_blue_vol_h3_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "EGG 91"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 53",
+    "INTA 10",
+    "PAYC 1",
+    "AVPT 29",
+    "FRSH 32",
+    "CHKP 3",
+    "TTAN 6",
+    "HUBS 1"
+   ],
    "family": "webull_sim",
    "name": "union_break10_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO,SMWB",
+   "sells": [
+    "INFY 39",
+    "EPR 8",
+    "EGG 95",
+    "DGX 2",
+    "ACN 1",
+    "AMX 20",
+    "ARHS 43",
+    "CSGP 14"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 54",
+    "INTA 10",
+    "PAYC 1",
+    "AVPT 30",
+    "FRSH 33",
+    "CHKP 3",
+    "TTAN 6",
+    "HUBS 1"
+   ],
    "family": "webull_sim",
    "name": "union_break10_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: KSS,AUGO,SMWB",
+   "sells": [
+    "ISRG 1",
+    "SGRY 32",
+    "KLRA 38",
+    "SRPT 25",
+    "TNGX 19",
+    "HALO 3",
+    "BRO 7",
+    "CSGP 15",
+    "DOV 2",
+    "SAP 2",
+    "CRON 48"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "TOST 15",
+    "FIS 13",
+    "EPR 8",
+    "GLND 156",
+    "ANGI 77"
+   ],
    "family": "webull_sim",
    "name": "union_candle_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "PRMB 24",
+    "EPR 8",
+    "EGG 94",
+    "DGX 2",
+    "ANGI 73"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "TOST 15",
+    "FIS 13",
+    "EPR 8",
+    "GLND 159",
+    "ANGI 78"
+   ],
    "family": "webull_sim",
    "name": "union_candle_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: KSS,AUGO",
+   "sells": [
+    "ISRG 1",
+    "SGRY 32",
+    "SMMT 29",
+    "EPR 8",
+    "ACRS 130",
+    "KURA 48",
+    "AURA 74",
+    "RCKT 208",
+    "CSX 9",
+    "DOV 2",
+    "SAP 2",
+    "VEEV 1",
+    "ITW 1",
+    "POOL 2",
+    "DGX 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 52",
+    "TBBB 8",
+    "PAYC 1",
+    "INTA 10",
+    "CDNA 7",
+    "AMX 20",
+    "FIS 13",
+    "ANGI 76"
+   ],
    "family": "webull_sim",
    "name": "union_candle_score_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "EGG 94",
+    "ACN 1",
+    "PRMB 24",
+    "DGX 2",
+    "ANGI 73"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 54",
+    "TBBB 8",
+    "PAYC 1",
+    "INTA 10",
+    "CDNA 7",
+    "AMX 20",
+    "FIS 13",
+    "ANGI 78"
+   ],
    "family": "webull_sim",
    "name": "union_candle_score_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: KSS",
+   "sells": [
+    "ISRG 1",
+    "T 22",
+    "NFLX 7",
+    "DHR 2",
+    "SGRY 31",
+    "ACRS 129",
+    "EPR 8",
+    "AURA 73",
+    "DOV 2",
+    "SAP 2",
+    "CSX 9",
+    "PCG 37",
+    "DGX 2",
+    "ITW 1",
+    "VEEV 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -7146,13 +9074,24 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "AMX 20",
+    "GLND 160",
+    "NVTS 58"
+   ],
    "family": "webull_sim",
    "name": "union_clk_fresh_cat_coil_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 40",
+    "NEM 4",
+    "NVTS 59"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -7168,9 +9107,14 @@
    "family": "webull_sim",
    "name": "union_clk_hold_vs_sector_h1_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "ACN 1",
+    "EGG 95"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -7182,22 +9126,40 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "FIS 13"
+   ],
    "family": "webull_sim",
    "name": "union_clk_insider_cash_stab_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "POOL 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 53",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1",
+    "FIS 13",
+    "TOST 15",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_clk_mom_break_peer_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "EPR 8",
+    "PRMB 25",
+    "ANGI 74"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -7209,13 +9171,22 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "RCKT 218",
+    "ANGI 78",
+    "PDFS 11"
+   ],
    "family": "webull_sim",
    "name": "union_clk_nr7_mom_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG",
+   "sells": [
+    "AXP 1",
+    "BMBL 84",
+    "KURA 50"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -7236,157 +9207,364 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 52",
+    "PDFS 11",
+    "RCKT 210",
+    "INTA 10",
+    "PAYC 1",
+    "NBP 395"
+   ],
    "family": "webull_sim",
    "name": "union_coil_green_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "PRMB 24",
+    "EPR 8",
+    "DGX 2",
+    "ANGI 72",
+    "ACRS 126"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 51",
+    "PDFS 11",
+    "RCKT 207",
+    "INTA 10",
+    "PAYC 1",
+    "NBP 389"
+   ],
    "family": "webull_sim",
    "name": "union_coil_green_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: KSS",
+   "sells": [
+    "ISRG 1",
+    "T 21",
+    "SMMT 28",
+    "EPR 8",
+    "ACRS 126",
+    "KURA 47",
+    "AURA 72",
+    "RCKT 202",
+    "CSX 9",
+    "DOV 2",
+    "SAP 1",
+    "VEEV 1",
+    "ITW 1",
+    "POOL 2",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 51",
+    "PDFS 11",
+    "RCKT 208",
+    "AMX 19",
+    "ANGI 74",
+    "INTA 10"
+   ],
    "family": "webull_sim",
    "name": "union_coil_off_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG",
+   "sells": [
+    "AXP 1",
+    "INFY 37",
+    "PRMB 24",
+    "EPR 8",
+    "DGX 1",
+    "ANGI 71",
+    "ACRS 125",
+    "AURA 75"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 51",
+    "PDFS 11",
+    "RCKT 206",
+    "AMX 19",
+    "ANGI 74",
+    "INTA 10"
+   ],
    "family": "webull_sim",
    "name": "union_coil_off_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: KSS,SDEV",
+   "sells": [
+    "ISRG 1",
+    "T 21",
+    "DHR 2",
+    "SMMT 28",
+    "EPR 8",
+    "ACRS 126",
+    "KURA 47",
+    "AURA 72",
+    "CSX 9",
+    "DOV 2",
+    "PCG 36",
+    "SAP 2",
+    "VEEV 1",
+    "ITW 1",
+    "POOL 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "PDFS 11",
+    "RCKT 215",
+    "AMX 12",
+    "ANGI 3",
+    "INTA 0"
+   ],
    "family": "webull_sim",
    "name": "union_coil_off_h5_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: KSS,BYRN,SDEV,RRC,CCCC",
+   "sells": [
+    "SYF 6",
+    "AMX 21",
+    "GE 1",
+    "GM 6",
+    "HAL 14"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "CDNA 7",
+    "PAYC 1",
+    "TOST 15",
+    "AMX 20",
+    "FIS 13",
+    "INTA 10"
+   ],
    "family": "webull_sim",
    "name": "union_cond_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "DGX 2",
+    "KURA 51",
+    "PRMB 25",
+    "ACN 1",
+    "EGG 96"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "CDNA 7",
+    "PAYC 1",
+    "TOST 15",
+    "AMX 20",
+    "FIS 13",
+    "INTA 10"
+   ],
    "family": "webull_sim",
    "name": "union_cond_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: KSS",
+   "sells": [
+    "ISRG 1",
+    "T 22",
+    "DHR 2",
+    "NFLX 7",
+    "SMMT 29",
+    "SGRY 32",
+    "KURA 48",
+    "ACRS 130",
+    "CSX 9",
+    "SAP 2",
+    "DOV 2",
+    "PCG 38",
+    "VEEV 1",
+    "PHM 4",
+    "UNP 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "CDNA 7",
+    "PAYC 1"
+   ],
    "family": "webull_sim",
    "name": "union_cond_n4_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: KSS",
+   "sells": [
+    "ISRG 1",
+    "T 22",
+    "DHR 2",
+    "NFLX 7",
+    "CSX 9",
+    "SAP 2",
+    "DOV 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_e_fresh_h1_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 40",
+    "NEM 4",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_e_fresh_h3_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "ISRG 1",
+    "T 22",
+    "DHR 2",
+    "NFLX 7",
+    "CSX 9",
+    "DOV 2",
+    "PCG 38",
+    "SAP 2",
+    "DGX 2",
+    "DOW 15",
+    "HON 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_e_green_h1_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_e_green_h3_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "ISRG 1",
+    "T 22",
+    "CSX 9",
+    "DOV 2",
+    "SAP 2",
+    "DGX 2",
+    "UNP 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_earn_react_h1_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AXP 1",
+    "INFY 40",
+    "NEM 4"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_earn_react_h3_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "ISRG 1",
+    "T 22",
+    "DHR 2",
+    "NFLX 7",
+    "CSX 9",
+    "DOV 2",
+    "PCG 38",
+    "SAP 2",
+    "DGX 2",
+    "DOW 15",
+    "HON 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_flow_in_h1_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "NET 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_flow_in_h3_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "ISRG 1",
+    "DHR 2",
+    "CSX 10",
+    "CECO 8",
+    "HLT 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_flow_in_h5_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "SYF 6",
+    "ENGS 131"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -7407,382 +9585,1123 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h1_cut_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h1_half_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h1_rankw_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h1_sboost_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h1_sizeup_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h1_time_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h1_topheavy_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h1_trail_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h3_cut_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8",
+    "PDFS 11"
+   ],
    "family": "webull_sim",
    "name": "union_h3_exit_alarm_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "PRMB 24",
+    "NVTS 58",
+    "EPR 8",
+    "EGG 94",
+    "KURA 50"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 52",
+    "CDNA 7",
+    "TOST 15",
+    "FIS 13",
+    "NVTS 56",
+    "EPR 8",
+    "PDFS 11"
+   ],
    "family": "webull_sim",
    "name": "union_h3_exit_news_r_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "NEM 4",
+    "PRMB 24",
+    "NVTS 58",
+    "EPR 8",
+    "EGG 94",
+    "KURA 50"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 52",
+    "CDNA 7",
+    "PDFS 11",
+    "RCKT 214",
+    "GLND 155",
+    "INTA 10"
+   ],
    "family": "webull_sim",
    "name": "union_h3_exit_red_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "PRMB 24",
+    "EPR 8",
+    "EGG 94",
+    "KURA 50",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h3_half_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h3_rankw_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h3_sboost_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h3_sizeup_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h3_time_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h3_topheavy_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h3_trail_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 52",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 56",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: KSS",
+   "sells": [
+    "ISRG 1",
+    "T 21",
+    "SAP 2",
+    "ITW 1",
+    "BKU 11",
+    "CME 1",
+    "DHR 2",
+    "NFLX 7",
+    "CSX 9",
+    "DOV 2",
+    "PCG 37",
+    "SAP 2",
+    "VEEV 1",
+    "ITW 1",
+    "POOL 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h5_cut_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8",
+    "PDFS 11"
+   ],
    "family": "webull_sim",
    "name": "union_h5_exit_alarm_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "PRMB 24",
+    "NVTS 58",
+    "EPR 8",
+    "EGG 94",
+    "KURA 50"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h5_half_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h5_rankw_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h5_sboost_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h5_sizeup_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h5_time_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h5_topheavy_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_h5_trail_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 52",
+    "CDNA 7",
+    "TOST 15",
+    "SN 0",
+    "FIS 1",
+    "NVTS 2",
+    "EPR 0"
+   ],
    "family": "webull_sim",
    "name": "union_h5_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: KSS,LVWR,RRC,SVC",
+   "sells": [
+    "SYF 6",
+    "ITW 1",
+    "AMX 20",
+    "ALLY 12",
+    "GE 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 52",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1",
+    "AMX 20",
+    "CDNA 7",
+    "GLND 155",
+    "FIS 13",
+    "RCKT 214",
+    "ANGI 76",
+    "TOST 15",
+    "PDFS 11"
+   ],
    "family": "webull_sim",
    "name": "union_hot_n12_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: SMWB,SBAC",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "BMBL 82",
+    "ACN 1",
+    "EGG 94",
+    "DGX 2",
+    "EPR 8",
+    "PRMB 24",
+    "ANGI 73",
+    "KURA 50",
+    "NVTS 58"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_hot_n4_h1_preopen_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BMBL 80",
+    "CHKP 3",
+    "TTAN 5",
+    "HUBS 1"
+   ],
    "family": "webull_sim",
    "name": "union_hot_n4_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "BMBL 80",
+    "LQDA 11",
+    "KLRA 36",
+    "ACN 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "SN 2",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_hot_n4_holdup_preopen_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "ITW 1",
+    "GLND 168",
+    "TYL 1",
+    "INTA 10",
+    "BAH 6"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BMBL 80",
+    "CHKP 3",
+    "TTAN 5",
+    "HUBS 1"
+   ],
    "family": "webull_sim",
    "name": "union_hot_n4_holdup_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "BMBL 80",
+    "LQDA 11",
+    "KLRA 36",
+    "ACN 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 53",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1",
+    "AMX 20",
+    "CDNA 7",
+    "GLND 156",
+    "FIS 13"
+   ],
    "family": "webull_sim",
    "name": "union_hot_score_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: SMWB,SBAC",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "BMBL 83",
+    "ACN 1",
+    "EGG 95",
+    "DGX 2",
+    "EPR 8"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 55",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1",
+    "AMX 21",
+    "CDNA 7",
+    "GLND 161",
+    "FIS 13"
+   ],
    "family": "webull_sim",
    "name": "union_hot_score_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: KSS,SDEV,SMWB,SBAC",
+   "sells": [
+    "ISRG 1",
+    "T 22",
+    "DHR 2",
+    "NFLX 7",
+    "SGRY 32",
+    "ACRS 132",
+    "AURA 75",
+    "SMMT 30",
+    "SAP 2",
+    "DOV 2",
+    "CSX 9",
+    "PCG 38",
+    "ITW 1",
+    "POOL 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "RCKT 219",
+    "PAYC 1",
+    "ETON 10",
+    "AVPT 29",
+    "CXW 16"
+   ],
    "family": "webull_sim",
    "name": "union_join_g_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: AUGO,SMWB",
+   "sells": [
+    "AXP 1",
+    "NEM 4",
+    "PRMB 25",
+    "DGX 2",
+    "ACN 2",
+    "SMMT 32",
+    "QTTB 57",
+    "TLSA 524"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "CDNA 7",
+    "TOST 15",
+    "RCKT 217",
+    "PAYC 1",
+    "ETON 9",
+    "AVPT 29",
+    "CXW 16"
+   ],
    "family": "webull_sim",
    "name": "union_join_g_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: AUGO,SMWB",
+   "sells": [
+    "ISRG 1",
+    "T 22",
+    "DHR 2",
+    "SMMT 30",
+    "DGX 2",
+    "HALO 4",
+    "BRO 7",
+    "CSGP 15",
+    "VEEV 1",
+    "PHM 4",
+    "CDNA 7",
+    "CRON 147",
+    "QTTB 57",
+    "NEM 3"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8",
+    "PDFS 11"
+   ],
    "family": "webull_sim",
    "name": "union_join_present_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "PRMB 24",
+    "NVTS 58",
+    "EPR 8",
+    "EGG 94",
+    "KURA 50"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "CDNA 7",
+    "TOST 15",
+    "FIS 13",
+    "NVTS 58",
+    "EPR 8",
+    "PDFS 12"
+   ],
    "family": "webull_sim",
    "name": "union_join_present_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: KSS,AUGO",
+   "sells": [
+    "ISRG 1",
+    "T 22",
+    "DHR 2",
+    "NFLX 7",
+    "SGRY 31",
+    "SMMT 29",
+    "EPR 8",
+    "ACRS 129",
+    "CSX 9",
+    "DOV 2",
+    "PCG 37",
+    "SAP 2",
+    "VEEV 1",
+    "ITW 1",
+    "POOL 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -7803,103 +10722,292 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 52",
+    "CDNA 7",
+    "PDFS 11",
+    "RCKT 214",
+    "GLND 155",
+    "INTA 10"
+   ],
    "family": "webull_sim",
    "name": "union_last_green_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "PRMB 24",
+    "EPR 8",
+    "EGG 94",
+    "KURA 50",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "PDFS 11",
+    "RCKT 214",
+    "GLND 155",
+    "INTA 10"
+   ],
    "family": "webull_sim",
    "name": "union_last_green_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: KSS,AUGO",
+   "sells": [
+    "ISRG 1",
+    "T 21",
+    "SGRY 31",
+    "SMMT 29",
+    "EPR 8",
+    "ACRS 128",
+    "KURA 47",
+    "AURA 73",
+    "CSX 9",
+    "DOV 2",
+    "SAP 2",
+    "VEEV 1",
+    "ITW 1",
+    "POOL 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "PDFS 11",
+    "RCKT 217",
+    "GLND 151",
+    "INTA 0"
+   ],
    "family": "webull_sim",
    "name": "union_last_green_h5_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: KSS,LVWR,RRC,SVC,AUGO,SEZL",
+   "sells": [
+    "SYF 6",
+    "PRMB 24",
+    "JLHL 104",
+    "FRSH 33",
+    "LOGI 4",
+    "NOG 17"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TOST 15",
+    "FIS 13",
+    "NVTS 58",
+    "EPR 8",
+    "AMX 20",
+    "ANGI 78",
+    "ACRS 125",
+    "MX 208"
+   ],
    "family": "webull_sim",
    "name": "union_last_red_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NVTS 59",
+    "NET 1",
+    "NBP 382",
+    "ENHA 447"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TOST 14",
+    "FIS 12",
+    "NVTS 52",
+    "EPR 8",
+    "AMX 18",
+    "ANGI 70",
+    "ACRS 113",
+    "MX 188"
+   ],
    "family": "webull_sim",
    "name": "union_last_red_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: SDEV",
+   "sells": [
+    "DHR 2",
+    "NFLX 7",
+    "PCG 35",
+    "DOW 14",
+    "HON 2",
+    "MOH 2",
+    "PHM 4",
+    "GLND 156",
+    "NEM 3",
+    "CORT 3"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "PAYC 1",
+    "INTA 10",
+    "FIS 13",
+    "AMX 20",
+    "TOST 15",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_macd_hist_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: SBAC",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "ACN 1",
+    "DGX 2",
+    "BMBL 84",
+    "PRMB 25",
+    "EPR 8"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "PAYC 1",
+    "INTA 10",
+    "FIS 13",
+    "AMX 20",
+    "TOST 15",
+    "EPR 8"
+   ],
    "family": "webull_sim",
    "name": "union_macd_hist_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: KSS,WING,SBAC",
+   "sells": [
+    "ISRG 1",
+    "T 22",
+    "NFLX 7",
+    "DHR 2",
+    "SGRY 31",
+    "EPR 8",
+    "AURA 73",
+    "ACRS 129",
+    "SAP 2",
+    "DOV 2",
+    "CSX 9",
+    "PCG 37",
+    "VEEV 1",
+    "POOL 2",
+    "MOH 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 52",
+    "TOST 15",
+    "FIS 13",
+    "EPR 8",
+    "RCKT 212",
+    "AMX 20"
+   ],
    "family": "webull_sim",
    "name": "union_macd_up_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "NEM 4",
+    "PRMB 24",
+    "EPR 8",
+    "EGG 93",
+    "DGX 2",
+    "ANGI 72"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "TOST 15",
+    "FIS 13",
+    "EPR 8",
+    "RCKT 220",
+    "AMX 20"
+   ],
    "family": "webull_sim",
    "name": "union_macd_up_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: KSS,SDEV,AUGO",
+   "sells": [
+    "ISRG 1",
+    "DHR 2",
+    "NFLX 7",
+    "SGRY 32",
+    "EPR 8",
+    "AURA 74",
+    "RCKT 208",
+    "KLRA 37",
+    "CSX 9",
+    "DOV 2",
+    "PCG 37",
+    "SAP 2",
+    "VEEV 1",
+    "ITW 1",
+    "POOL 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SAIL 22",
+    "VG 36"
+   ],
    "family": "webull_sim",
    "name": "union_macd_xup_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "ANGI 73"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "SAIL 22",
+    "VG 35"
+   ],
    "family": "webull_sim",
    "name": "union_macd_xup_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "RCKT 208",
+    "SRPT 25",
+    "TNGX 19",
+    "CDNA 6",
+    "CRON 143",
+    "ACRS 129",
+    "CRCL 5"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -7933,9 +11041,11 @@
    "family": "webull_sim",
    "name": "union_news_g_cam61_h3_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "HLT 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -7960,9 +11070,11 @@
    "family": "webull_sim",
    "name": "union_news_g_cam71_h3_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "HLT 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -7983,85 +11095,185 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "AMX 20",
+    "GLND 158",
+    "NVTS 57"
+   ],
    "family": "webull_sim",
    "name": "union_news_g_cond_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "NVTS 59",
+    "AMX 20"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "AMX 20",
+    "GLND 159",
+    "NVTS 58"
+   ],
    "family": "webull_sim",
    "name": "union_news_g_cond_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "SGRY 32",
+    "CSX 9",
+    "SAP 2",
+    "UNP 1",
+    "ITW 1",
+    "GLND 170",
+    "HLT 1",
+    "CRCL 5"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "AMX 20",
+    "GLND 159"
+   ],
    "family": "webull_sim",
    "name": "union_news_g_conv_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "NVTS 59",
+    "AMX 20"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 55",
+    "AMX 21",
+    "GLND 162"
+   ],
    "family": "webull_sim",
    "name": "union_news_g_conv_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "SGRY 32",
+    "CSX 9",
+    "SAP 2",
+    "UNP 1",
+    "ITW 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "NVTS 57",
+    "AMX 20",
+    "GLND 158"
+   ],
    "family": "webull_sim",
    "name": "union_news_g_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "NVTS 59",
+    "AMX 20"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "NVTS 58",
+    "AMX 20",
+    "GLND 159"
+   ],
    "family": "webull_sim",
    "name": "union_news_g_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "SGRY 32",
+    "CSX 9",
+    "SAP 2",
+    "ITW 1",
+    "UNP 1",
+    "GLND 169",
+    "CRCL 5",
+    "HLT 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "NVTS 58",
+    "AMX 20",
+    "GLND 159"
+   ],
    "family": "webull_sim",
    "name": "union_news_g_h5_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: RRC,AUGO",
+   "sells": [
+    "ITW 1",
+    "AMX 21",
+    "GE 1",
+    "NVTS 57",
+    "AIP 25",
+    "CNQ 8",
+    "OXY 7",
+    "GLND 33"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "GLND 156",
+    "NVTS 57"
+   ],
    "family": "webull_sim",
    "name": "union_news_head_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "NVTS 58"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "GLND 157",
+    "NVTS 57"
+   ],
    "family": "webull_sim",
    "name": "union_news_head_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "SGRY 31",
+    "ITW 1",
+    "LUV 12",
+    "GLND 167",
+    "CRCL 5"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -8082,94 +11294,146 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "AMX 20",
+    "GLND 158",
+    "NVTS 58"
+   ],
    "family": "webull_sim",
    "name": "union_news_or_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "NVTS 59",
+    "AMX 20"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "AMX 20",
+    "GLND 160",
+    "NVTS 58"
+   ],
    "family": "webull_sim",
    "name": "union_news_or_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "SGRY 32",
+    "CSX 9",
+    "SAP 2",
+    "UNP 1",
+    "ITW 1",
+    "LUV 12",
+    "GLND 170",
+    "HLT 1",
+    "CRCL 5"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX 20"
+   ],
    "family": "webull_sim",
    "name": "union_news_or_net2_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AMX 20"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX 21"
+   ],
    "family": "webull_sim",
    "name": "union_news_or_net2_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "SGRY 32",
+    "CSX 10",
+    "SAP 2",
+    "UNP 1",
+    "HLT 1",
+    "CRCL 5"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_or_net3_h1_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AMX 20"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_or_net3_h3_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "CSX 10",
+    "SAP 2",
+    "HLT 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_or_net4_conv_h1_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AMX 20"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_or_net4_h1_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AMX 20"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_or_net4_h3_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "HLT 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_or_net4_rw_h1_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AMX 20"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -8185,81 +11449,154 @@
    "family": "webull_sim",
    "name": "union_news_or_net5_h3_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "HLT 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX 20"
+   ],
    "family": "webull_sim",
    "name": "union_news_pack_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AMX 20"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX 20"
+   ],
    "family": "webull_sim",
    "name": "union_news_pack_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "CSX 10",
+    "SAP 2",
+    "UNP 1",
+    "HLT 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX 20"
+   ],
    "family": "webull_sim",
    "name": "union_news_pack_net2_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AMX 20"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMX 20"
+   ],
    "family": "webull_sim",
    "name": "union_news_pack_net2_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "CSX 10",
+    "SAP 2",
+    "UNP 1",
+    "HLT 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_pack_net3_h1_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "AMX 20"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_news_pack_net3_h3_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "CSX 10",
+    "SAP 2",
+    "HLT 1"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 53",
+    "CDNA 7",
+    "TOST 15",
+    "FIS 13",
+    "NVTS 57",
+    "EPR 8",
+    "PDFS 11"
+   ],
    "family": "webull_sim",
    "name": "union_news_present_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "PRMB 24",
+    "NVTS 58",
+    "EPR 8",
+    "EGG 94",
+    "KURA 50"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "RITM 54",
+    "CDNA 7",
+    "TOST 15",
+    "FIS 13",
+    "NVTS 58",
+    "EPR 8",
+    "PDFS 12"
+   ],
    "family": "webull_sim",
    "name": "union_news_present_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: KSS,AUGO",
+   "sells": [
+    "ISRG 1",
+    "T 22",
+    "DHR 2",
+    "NFLX 7",
+    "SGRY 31",
+    "SMMT 29",
+    "EPR 8",
+    "ACRS 129",
+    "CSX 9",
+    "DOV 2",
+    "PCG 37",
+    "SAP 2",
+    "VEEV 1",
+    "ITW 1",
+    "POOL 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -8302,9 +11639,12 @@
    "family": "webull_sim",
    "name": "union_overnight_h3_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "MOH 2",
+    "NEM 4"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -8325,94 +11665,215 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 53",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1",
+    "CDNA 7",
+    "AMX 20",
+    "ANGI 77",
+    "RCKT 217"
+   ],
    "family": "webull_sim",
    "name": "union_ret_5_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: SBAC",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "ACN 1",
+    "EGG 95",
+    "PRMB 25",
+    "ANGI 74",
+    "EPR 8"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 54",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1",
+    "CDNA 7",
+    "AMX 20",
+    "ANGI 79",
+    "RCKT 221"
+   ],
    "family": "webull_sim",
    "name": "union_ret_5_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: KSS,SBAC",
+   "sells": [
+    "ISRG 1",
+    "T 22",
+    "DHR 2",
+    "NFLX 7",
+    "ACRS 131",
+    "SGRY 32",
+    "AURA 74",
+    "SMMT 29",
+    "SAP 2",
+    "DOV 2",
+    "CSX 9",
+    "PCG 38",
+    "POOL 2",
+    "VEEV 1",
+    "DOW 10"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 53",
+    "TBBB 8",
+    "FIS 13",
+    "RCKT 215",
+    "TOST 15",
+    "INTA 10",
+    "ANGI 77"
+   ],
    "family": "webull_sim",
    "name": "union_rsi_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: PTLO",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "DGX 2",
+    "BMBL 83",
+    "ACN 1",
+    "ANGI 74",
+    "KURA 50"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 53",
+    "TBBB 8",
+    "FIS 13",
+    "RCKT 217",
+    "TOST 15",
+    "INTA 10",
+    "ANGI 77"
+   ],
    "family": "webull_sim",
    "name": "union_rsi_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: KSS,PTLO",
+   "sells": [
+    "T 21",
+    "ISRG 1",
+    "NFLX 7",
+    "DHR 2",
+    "AURA 73",
+    "KURA 47",
+    "SGRY 31",
+    "ACRS 128",
+    "PCG 37",
+    "CSX 9",
+    "DOV 2",
+    "SAP 2",
+    "DGX 2",
+    "UNP 1",
+    "DOW 9"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "FIS 13",
+    "ALKT 32"
+   ],
    "family": "webull_sim",
    "name": "union_rsi_os_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG",
+   "sells": [
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "FIS 13",
+    "ALKT 31"
+   ],
    "family": "webull_sim",
    "name": "union_rsi_os_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG",
+   "sells": [
+    "DGX 2",
+    "BRO 7",
+    "PCG 38",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "FIS 13",
+    "ALKT 32"
+   ],
    "family": "webull_sim",
    "name": "union_rsi_os_h5_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG mark not observed, carried at entry: GLAS,ALHC",
+   "sells": [
+    "ALLY 13",
+    "PEP 3",
+    "RTO 23",
+    "PLNT 9",
+    "BROS 11"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "FIS 13",
+    "ALKT 32"
+   ],
    "family": "webull_sim",
    "name": "union_rsi_os_macd_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG",
+   "sells": [
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "FIS 13",
+    "ALKT 32"
+   ],
    "family": "webull_sim",
    "name": "union_rsi_os_macd_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "no open, not filled: DBRG",
+   "sells": [
+    "DGX 2",
+    "BRO 7",
+    "PCG 39",
+    "DGX 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_vol_ab_h1_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "EGG 91"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -8428,45 +11889,55 @@
    "family": "webull_sim",
    "name": "union_vol_g_h1_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "EGG 92"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_vol_g_h3_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "EGG 95"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_vol_g_h5_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "EGG 100"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_vol_green_h1_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "EGG 94"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "webull_sim",
    "name": "union_vol_green_h3_webull_sim",
    "note": "sat out, 0 picks",
-   "sells": [],
+   "sells": [
+    "EGG 96"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -8487,40 +11958,126 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 52",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1",
+    "AMX 20",
+    "CDNA 7",
+    "FIS 13",
+    "GLND 154"
+   ],
    "family": "webull_sim",
    "name": "union_w_hot_candle_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 38",
+    "NEM 4",
+    "ACN 1",
+    "EGG 93",
+    "DGX 2",
+    "BMBL 82",
+    "PRMB 24"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 54",
+    "TBBB 8",
+    "INTA 10",
+    "PAYC 1",
+    "AMX 20",
+    "CDNA 7",
+    "FIS 13",
+    "GLND 159"
+   ],
    "family": "webull_sim",
    "name": "union_w_hot_candle_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: KSS,SDEV",
+   "sells": [
+    "ISRG 1",
+    "T 22",
+    "DHR 2",
+    "NFLX 7",
+    "SGRY 32",
+    "ACRS 130",
+    "AURA 74",
+    "SMMT 29",
+    "DOV 2",
+    "SAP 2",
+    "CSX 9",
+    "PCG 38",
+    "ITW 1",
+    "VEEV 1",
+    "POOL 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 53",
+    "TBBB 8",
+    "PAYC 1",
+    "CDNA 7",
+    "INTA 10",
+    "AMX 20",
+    "TOST 15",
+    "FIS 13"
+   ],
    "family": "webull_sim",
    "name": "union_w_hot_cond_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "",
+   "sells": [
+    "AXP 1",
+    "INFY 39",
+    "NEM 4",
+    "BMBL 83",
+    "ACN 1",
+    "DGX 2",
+    "EGG 94",
+    "EPR 8"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "RITM 55",
+    "TBBB 8",
+    "PAYC 1",
+    "CDNA 7",
+    "INTA 10",
+    "AMX 21",
+    "TOST 15",
+    "FIS 13"
+   ],
    "family": "webull_sim",
    "name": "union_w_hot_cond_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: KSS,SDEV",
+   "sells": [
+    "ISRG 1",
+    "T 22",
+    "DHR 2",
+    "NFLX 7",
+    "SGRY 32",
+    "SMMT 30",
+    "KURA 49",
+    "ACRS 131",
+    "SAP 2",
+    "DOV 2",
+    "CSX 9",
+    "PCG 38",
+    "VEEV 1",
+    "ITW 1",
+    "POOL 2"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
@@ -8667,31 +12224,90 @@
    "status": "SIT"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "NVTS 57",
+    "EPR 8",
+    "PDFS 11",
+    "ITW 1",
+    "RCKT 216",
+    "AMX 20",
+    "SMMT 34"
+   ],
    "family": "webull_sim",
    "name": "yday_gainer_h1_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "ITW 1",
+    "PRMB 25",
+    "NVTS 58",
+    "EPR 8",
+    "EGG 95",
+    "KURA 50",
+    "POOL 2",
+    "SMMT 32"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "NVTS 55",
+    "EPR 8",
+    "PDFS 11",
+    "ITW 1",
+    "RCKT 207",
+    "AMX 19",
+    "SMMT 32"
+   ],
    "family": "webull_sim",
    "name": "yday_gainer_h3_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: AUGO",
+   "sells": [
+    "ITW 1",
+    "SMMT 29",
+    "NVTS 53",
+    "EPR 8",
+    "ACRS 128",
+    "KURA 47",
+    "AURA 73",
+    "AMX 20",
+    "ITW 1",
+    "POOL 2",
+    "NVTS 55",
+    "EGG 95",
+    "QTTB 39"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "TBBB 8",
+    "NVTS 56",
+    "EPR 8",
+    "PDFS 11",
+    "ITW 1",
+    "RCKT 211",
+    "AMX 19",
+    "SMMT 33"
+   ],
    "family": "webull_sim",
    "name": "yday_gainer_h5_webull_sim",
-   "note": "open not observed",
-   "sells": [],
+   "note": "mark not observed, carried at entry: BYRN,LVWR,SVC,AUGO,SEZL",
+   "sells": [
+    "ITW 1",
+    "AMX 20",
+    "PRMB 24",
+    "NVTS 56",
+    "AIP 25",
+    "KLRA 41",
+    "SMMT 30",
+    "EPR 8"
+   ],
    "source": "data/webull_sim/days.jsonl",
-   "status": "SIT"
+   "status": "OK"
   },
   {
    "buys": [],
