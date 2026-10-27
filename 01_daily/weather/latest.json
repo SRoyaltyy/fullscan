@@ -1,6 +1,6 @@
 {
  "date": "2026-10-27",
- "generated_at": "2026-10-27T07:27:24.151589-04:00",
+ "generated_at": "2026-10-27T12:10:04.399980-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,21 +17,23 @@
   "fed_score": 0.0,
   "dollar_oil_score": 0.5,
   "futures_score": 0.0,
-  "yields": "flat",
-  "yields_source": "llm_factor_fallback",
+  "yields": "rising",
+  "yields_source": "fred_dgs10",
+  "dgs10_delta_1d": 0.04,
+  "dgs10_current": 5.0,
   "dollar": "strong",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.22,
-  "vix_ratio": 0.892,
-  "vix_spot": 17.79,
-  "vix_delta_1d": -0.6,
+  "dxy_pct_1d": 0.28,
+  "vix_ratio": 0.902,
+  "vix_spot": 17.56,
+  "vix_delta_1d": -0.83,
   "vix_ratio_source": "vix/vix3m",
-  "vix": "falling",
-  "oil_pct_1d": -0.93,
-  "oil": "flat",
+  "vix": "calm",
+  "oil_pct_1d": -1.84,
+  "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.724,
+  "regime_corr": 0.726,
   "sectors": {
    "Basic Materials": {
     "score": -4.97,
@@ -245,7 +247,7 @@
    "high": {
     "stance": "favorable",
     "confidence": "medium",
-    "why": "risk-on, VIX falling — high beta outperforms [general + channel1]"
+    "why": "risk-on, VIX calm — high beta outperforms [general + channel1]"
    },
    "low": {
     "stance": "neutral",
@@ -316,14 +318,14 @@
   },
   "lev": {
    "high": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "—"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "yields rising — leverage amplifies the downside [factors + general]"
    },
    "low": {
-    "stance": "neutral",
+    "stance": "favorable",
     "confidence": "low",
-    "why": "—"
+    "why": "balance-sheet strength preferred in stress"
    },
    "mid": {
     "stance": "neutral",
@@ -338,14 +340,14 @@
   },
   "style": {
    "growth": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "yields rising — long-duration growth de-rates [factor: Bond yields]"
    },
    "value": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "rising yields/reflation favors value & cyclicals [factor: Bond yields]"
    },
    "blend": {
     "stance": "neutral",
