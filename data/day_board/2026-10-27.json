@@ -2908,6 +2908,122 @@
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     },
     {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-27T12:10:07.131655-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 21581,
+          "preview": "2026-10-27 BUY CDNA, VEEV, SN, BLFS, ILMN, SHOO, FIGS, CBRL \u00b7 SELL JBLU, SKHY, INTC, SOC, CMTG, VNET, BAK, NEOV"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1115,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-27.json",
+          "ok": true,
+          "reason": "",
+          "size": 162635,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-27_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 121759,
+          "preview": "2026-10-27 BUY CDNA, VEEV, SN, BLFS, ILMN, SHOO, FIGS, CBRL \u00b7 SELL JBLU, SKHY, INTC, SOC, CMTG, VNET, BAK, NEOV"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 616663,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-27_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 616663,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-10-27.json",
+          "ok": true,
+          "reason": "",
+          "size": 151235,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 832472,
+          "preview": "2026-10-27 BUY CDNA, SN, VEEV, BLFS, PACS, CBRL, SHOO, FIGS \u00b7 SELL JBLU, SKHY, SOC, BAK, NEOV, VNET, INTC, CMTG"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 616663,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 121759,
+          "preview": "2026-10-27 BUY CDNA, VEEV, SN, BLFS, ILMN, SHOO, FIGS, CBRL \u00b7 SELL JBLU, SKHY, INTC, SOC, CMTG, VNET, BAK, NEOV"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 616663,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 616663,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 832472,
+          "preview": "2026-10-27 BUY CDNA, SN, VEEV, BLFS, PACS, CBRL, SHOO, FIGS \u00b7 SELL JBLU, SKHY, SOC, BAK, NEOV, VNET, INTC, CMTG"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1696,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1696,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-27 BUY CDNA, VEEV, SN, BLFS, ILMN, SHOO, FIGS, CBRL \u00b7 SELL JBLU, SKHY, INTC, SOC, CMTG, VNET, BAK, NEOV \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-27 BUY CDNA, VEEV, SN, BLFS, ILMN, SHOO, FIGS, CBRL \u00b7 SELL JBLU, SKHY, INTC, SOC, CMTG, VNET, BAK, NEOV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-27 BUY CDNA, SN, VEEV, BLFS, PACS, CBRL, SHOO, FIGS \u00b7 SELL JBLU, SKHY, SOC, BAK, NEOV, VNET, INTC, CMTG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-27 BUY CDNA, VEEV, SN, BLFS, ILMN, SHOO, FIGS, CBRL \u00b7 SELL JBLU, SKHY, INTC, SOC, CMTG, VNET, BAK, NEOV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
+    },
+    {
       "key": "join",
       "title": "Join / match rank",
       "date": "2026-10-27",
@@ -3053,6 +3169,14 @@
       "commit_msg": "auto: land weather [2026-10-27]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "40532178795",
+      "manifest": "research/input_freeze/2026-10-27/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-27.json",
+      "at": "2026-10-27T12:10:09-04:00",
+      "commit_msg": "auto: land live_boards [2026-10-27]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "40535086671",
       "manifest": "research/input_freeze/2026-10-27/manifest.json"
     },
     {
