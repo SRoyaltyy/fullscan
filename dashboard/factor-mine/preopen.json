@@ -216,6 +216,27 @@
           "s": null,
           "sells": [],
           "sit": true
+        },
+        {
+          "buys": [
+            "BMBL",
+            "CHKP",
+            "TTAN",
+            "HUBS"
+          ],
+          "date": "2026-10-27",
+          "equity": 9271.53,
+          "mean": -0.4775,
+          "picks": [
+            "BMBL",
+            "CHKP",
+            "TTAN",
+            "HUBS"
+          ],
+          "reasons": [],
+          "s": 5.515,
+          "sells": [],
+          "sit": false
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -430,6 +451,27 @@
           "s": null,
           "sells": [],
           "sit": true
+        },
+        {
+          "buys": [
+            "BMBL",
+            "CHKP",
+            "TTAN",
+            "HUBS"
+          ],
+          "date": "2026-10-27",
+          "equity": 9101.52,
+          "mean": -0.4141,
+          "picks": [
+            "BMBL",
+            "CHKP",
+            "TTAN",
+            "HUBS"
+          ],
+          "reasons": [],
+          "s": 5.515,
+          "sells": [],
+          "sit": false
         }
       ],
       "label": "starts 10-08 open, no past days",
