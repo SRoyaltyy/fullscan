@@ -11109,7 +11109,4 @@
 {"date":"2026-10-26","kind":"day","name":"yday_gainer_h5","record":"factor_mine","sha256":"f4cea837504d7686acdbdddc6a2aa628b0f99f3f29afbca1c49722d929f99ad8"}
 {"date":"2026-10-26","kind":"day","name":"union_hot_n4_h1_preopen","record":"factor_mine","sha256":"19d1311eedd91c43aee4c3b231ece6838181272362b7e624b2652126da21a6e8"}
 {"date":"2026-10-26","kind":"day","name":"union_hot_n4_holdup_preopen","record":"factor_mine","sha256":"a8697df55558a13308a207f732f7af23d8935ad705fe3bbeaa4d94909db16412"}
-{"date":"2026-10-26","kind":"day","name":"","record":"paper_equity","sha256":"9e5a877f39fcf25aae7514ea47434f7785c1014b64a162adc6d0657fb189d9cb"}
-{"date":"2026-10-26","kind":"day","name":"","record":"paper_trades","sha256":"025c7682ee9fc3bdba44d2e1fe79fab0c463c1c44675b6dca79b198e8d0c8515"}
-{"date":"2026-10-26","kind":"day","name":"","record":"paper_skipped","sha256":"55d233d21d92aa78aa61a2c9fac5b019402981e02b4ff9e210193d88b78673c9"}
 {"date":"2026-10-26","kind":"day","name":"","record":"flatten_robust","sha256":"b153dad8b0dbff10e10d1d23d1507a218f1998e53ec07c361ccb4f78ea8a059d"}

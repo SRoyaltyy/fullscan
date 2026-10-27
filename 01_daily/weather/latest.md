@@ -5,7 +5,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** UNKNOWN
-- **Yields:** unknown (llm_factor_fallback) | **Dollar:** strong (dxy) | **Oil:** flat | **VIX:** calm (ratio 0.92 via vix/vix3m) spot 18.26
+- **Yields:** rising (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** flat | **VIX:** calm (ratio 0.92 via vix/vix3m) spot 18.24
 - **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.72
 - **High-impact events:** 3 bullish vs 4 bearish
 - ⚠️ **Data gaps:** general predict run, general predict factor scoreboard
@@ -57,26 +57,26 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| profit:no | ❔ unknown | low | no yields/risk signals |
-| profit:thin | ❔ unknown | low | no yields/risk signals |
-| profit:yes | ❔ unknown | low | no yields/risk signals |
+| profit:no | ⛅ neutral | low | risk-unknown, F&G None |
+| profit:yes | ⛅ neutral | low | — |
+| profit:thin | ⛅ neutral | low | — |
 
 ## Style (growth/value)
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | ❔ unknown | low | no yields/risk signals |
-| style:blend | ❔ unknown | low | no yields/risk signals |
-| style:value | ❔ unknown | low | no yields/risk signals |
+| style:growth | 🌧️ hostile | medium | yields rising — long-duration growth de-rates [factor: Bond yields] |
+| style:value | 🌤️ favorable | medium | rising yields/reflation favors value & cyclicals [factor: Bond yields] |
+| style:blend | ⛅ neutral | low | — |
 
 ## Leverage
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| lev:low | ❔ unknown | low | no signals |
-| lev:mid | ❔ unknown | low | no signals |
-| lev:high | ❔ unknown | low | no signals |
-| lev:neg_equity | ❔ unknown | low | no signals |
+| lev:high | 🌧️ hostile | medium | yields rising — leverage amplifies the downside [factors + general] |
+| lev:low | 🌤️ favorable | low | balance-sheet strength preferred in stress |
+| lev:mid | ⛅ neutral | low | — |
+| lev:neg_equity | 🌧️ hostile | low | negative equity is distressed in any regime |
 
 ## Momentum state
 
