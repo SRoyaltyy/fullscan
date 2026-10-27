@@ -1472,6 +1472,26 @@ def test_ci_workflow_is_wired() -> None:
     assert "pip install" not in yml
 
 
+
+RETIRED_ECS_HAND_STARTED = (
+    "events_daily", "catalyst_daily", "collect-catalyst", "daily_pipeline",
+    "deepthink", "learn_cycle", "map_heat_postclose", "monthly_distillation",
+    "news_impact_scan", "sector_daily", "sector_pipeline", "sector_predict",
+    "weekly_consolidation",
+)
+
+
+def test_hand_started_workflows_hosted_by_default() -> None:
+    """ECS retired 2026-10-27: hosted unless runner=ecs is explicitly picked."""
+    for name in RETIRED_ECS_HAND_STARTED:
+        text = (WF / f"{name}.yml").read_text(encoding="utf-8")
+        for job, spec in parse_workflow_jobs(text).items():
+            raw = spec.get("runs-on")
+            if not raw:
+                continue
+            assert eval_runs_on(raw, event_name="workflow_dispatch") == "ubuntu-latest", (name, job)
+
+
 def main() -> None:
     tests = [
         test_bug_242_over_escape_is_invalid_json,
@@ -1485,7 +1505,8 @@ def main() -> None:
         test_stock_book_all_fromjson_resolves,
         test_openclaw_probe_stays_on_ecs,
         test_openclaw_grok_ping_stays_on_ecs,
-        test_news_impact_live_stays_on_ecs,
+        test_news_impact_live_hosted_unless_ecs_picked,
+        test_hand_started_workflows_hosted_by_default,
         test_self_hosted_fromjson_jobs_resolve_both_sides,
         test_lane_json_zero_dollar_hoppers,
         test_lane_news_and_dig_templates,
@@ -1514,21 +1535,3 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 
-
-RETIRED_ECS_HAND_STARTED = (
-    "events_daily", "catalyst_daily", "collect-catalyst", "daily_pipeline",
-    "deepthink", "learn_cycle", "map_heat_postclose", "monthly_distillation",
-    "news_impact_scan", "sector_daily", "sector_pipeline", "sector_predict",
-    "weekly_consolidation",
-)
-
-
-def test_hand_started_workflows_hosted_by_default() -> None:
-    """ECS retired 2026-10-27: hosted unless runner=ecs is explicitly picked."""
-    for name in RETIRED_ECS_HAND_STARTED:
-        text = (WF / f"{name}.yml").read_text(encoding="utf-8")
-        for job, spec in parse_workflow_jobs(text).items():
-            raw = spec.get("runs-on")
-            if not raw:
-                continue
-            assert eval_runs_on(raw, event_name="workflow_dispatch") == "ubuntu-latest", (name, job)
