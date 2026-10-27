@@ -6382,5 +6382,88 @@
     ],
     "sha256": "985b20a5f4f7fce4261f42325a97e2cad8bd27653d747c0a414c973e886b3dd1",
     "unfilled": []
+  },
+  {
+    "added_buys": [],
+    "added_sells": [],
+    "cash_primary": 38.542958896511664,
+    "date": "2026-10-27",
+    "equity_primary": 7895.642819896512,
+    "holdings": [
+      {
+        "cost_primary": 1753.3064499999996,
+        "entry_date": "2026-10-27",
+        "entry_px": 45.855,
+        "last_px": 45.855,
+        "min_hold": 2,
+        "peak_px": 45.855,
+        "shares": 38,
+        "ticker": "BRZE"
+      },
+      {
+        "cost_primary": 2022.37195,
+        "entry_date": "2026-10-26",
+        "entry_px": 42.77,
+        "last_px": 43.880001,
+        "min_hold": 1,
+        "peak_px": 43.880001,
+        "shares": 47,
+        "ticker": "LQDA"
+      },
+      {
+        "cost_primary": 1767.8723138199998,
+        "entry_date": "2026-10-27",
+        "entry_px": 195.229996,
+        "last_px": 195.229996,
+        "min_hold": 2,
+        "peak_px": 195.229996,
+        "shares": 9,
+        "ticker": "POOL"
+      },
+      {
+        "cost_primary": 2041.9685999999995,
+        "entry_date": "2026-10-26",
+        "entry_px": 1.41,
+        "last_px": 1.4,
+        "min_hold": 1,
+        "peak_px": 1.41,
+        "shares": 1428,
+        "ticker": "UWMC"
+      }
+    ],
+    "kind": "mark",
+    "open_fill_sha256": "985b20a5f4f7fce4261f42325a97e2cad8bd27653d747c0a414c973e886b3dd1",
+    "plan_sha256": "285d16060e82331d85d930ebc555d658f00ec2c98a9e04b100556001d3a73fdd",
+    "pnl_status": "marked",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "a85c715c720a76dfcabbe32c5f7354f75eecf40d7625e4e2178c2f39189b1df1"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-27",
+    "entry_date": "2026-10-21",
+    "entry_px": 5.95,
+    "fill": 5.95,
+    "kind": "close",
+    "pnl_primary": -29.416699999999764,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "8065fa58df6f95a01a94b2f3e8811451203e5e258962c8290d0d04921be938b2",
+    "shares": 344,
+    "ticker": "BMBL"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-27",
+    "entry_date": "2026-10-26",
+    "entry_px": 3.1,
+    "fill": 2.33,
+    "kind": "close",
+    "pnl_primary": -537.5069499999997,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "70e1523c9b9f705ac1722dd10ae5a0b154763ec02a4f7f8292a6b0483dea8ef5",
+    "shares": 653,
+    "ticker": "NAUT"
   }
 ]
