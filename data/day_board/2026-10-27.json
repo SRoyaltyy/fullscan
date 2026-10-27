@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "generated_at": "2026-10-27T06:14:20.332124-04:00",
+  "generated_at": "2026-10-27T06:16:39.109711-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -181,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 3,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -239,10 +239,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-10-27_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 6599168,
+          "said": "6599168B on disk",
           "bullets": []
         },
         {
@@ -329,13 +329,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7575,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7574,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -1837,6 +1837,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ADSK, SN, ELV, PM, AUPH \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SN, HAS, SHEL, BP, CNK"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-27T06:16:38.213937-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-27_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 6599168,
+          "preview": "raw=9222 usable=560 single=385 \u00b7 Today\u2019s Top Economic and Crypto Events: FOMC Day 1, US Durable Goods Orders - bl | IDR/USD: Indonesia 10-Year Yield at Four-Year High on MSCI Risk, Oil - Bloomberg | Asset Manager Australian Dollar Shorts Hit Record on Risk-Off - Bloomberg.com | AUD/USD Forecast: Holds above 0.7000 as Aussie CPI, FOMC loom - FXStreet | Iron Ore Declines to Two-Year Low as Demand Outlook Weakens - Bloomberg.com"
+        },
+        {
+          "path": "01_daily/news/2026-10-27_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 12554,
+          "preview": "# News Parse v2 \u2014 2026-10-27T06:16:35.668966-04:00\nWindow\u224848h | news_mode=on | raw=9222 | usable=560 | single_name=385 | noise_dropped=8003\nusable polarity={'+': 13, '-': 101, 'mixed': 3, 'neutral': 443}"
+        }
+      ],
+      "preview": "raw=9222 usable=560 single=385 \u00b7 Today\u2019s Top Economic and Crypto Events: FOMC Day 1, US Durable Goods Orders - bl | IDR/USD: Indonesia 10-Year Yield at Four-Year High on MSCI Risk, Oil - Bloomberg | Asset Manager Australian Dollar Shorts Hit Record on Risk-Off - Bloomberg.com | AUD/USD Forecast: Holds above 0.7000 as Aussie CPI, FOMC loom - FXStreet | Iron Ore Declines to Two-Year Low as Demand Outlook Weakens - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-10-27T06:16:35.668966-04:00\nWindow\u224848h | news_mode=on | raw=9222 | usable=560 | single_name=385 | noise_dropped=8003\nusable polarity={'+': 13, '-': 101, 'mixed': 3, 'neutral': 443}"
     }
   ],
   "href": {
