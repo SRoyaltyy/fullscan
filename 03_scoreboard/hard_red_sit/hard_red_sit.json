@@ -2921,14 +2921,14 @@
         "sit": true,
         "hard_red": false,
         "side": "long",
-        "s": "morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held",
+        "s": 5.515,
         "short_only": [],
         "dip_scoop": [
           {
-            "ticker": "SYK",
+            "ticker": "VEEV",
             "side": "long",
             "open": null,
-            "px": 275.44,
+            "px": 278.54,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -2961,10 +2961,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "VEEV",
+            "ticker": "ILMN",
             "side": "long",
             "open": null,
-            "px": 278.54,
+            "px": 271.8,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
@@ -3145,42 +3145,6 @@
             "side": "long",
             "open": null,
             "px": 14.69,
-            "px_src": "session_export+elite_live_skipped",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "PCRX",
-            "side": "long",
-            "open": null,
-            "px": 25.39,
             "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
