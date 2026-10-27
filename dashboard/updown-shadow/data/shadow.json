@@ -7793,8 +7793,8 @@
  "summary": {
   "strategy": "updown_rel1_hv_v1",
   "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
-  "days_locked": 14,
-  "days_realized": 12,
+  "days_locked": 15,
+  "days_realized": 13,
   "days_missed": 0,
   "missed_dates": [],
   "rule": {
@@ -7803,45 +7803,45 @@
    "missed": "Missed days (not frozen before 09:25 ET) are recorded in MISSED.jsonl, never back-filled, and earn nothing."
   },
   "gross": {
-   "cum": 0.0626956476,
-   "mean_bp": 53.8624046728,
-   "t_nw": 1.0997633789
+   "cum": 0.0625437692,
+   "mean_bp": 49.6052075504,
+   "t_nw": 1.1357919671
   },
   "net5": {
-   "cum": 0.045976724,
-   "mean_bp": 40.6290713394,
-   "t_nw": 0.8205701877
+   "cum": 0.0448021512,
+   "mean_bp": 36.6359767812,
+   "t_nw": 0.8274612729
   },
   "net10": {
-   "cum": 0.0294984176,
-   "mean_bp": 27.3957380061,
-   "t_nw": 0.5473014798
+   "cum": 0.0273334143,
+   "mean_bp": 23.666746012,
+   "t_nw": 0.5273338429
   },
   "net15": {
-   "cum": 0.0132575867,
-   "mean_bp": 14.1624046728,
-   "t_nw": 0.2798640195
+   "cum": 0.010133719,
+   "mean_bp": 10.6975152427,
+   "t_nw": 0.235167415
   },
   "hedged_net10": {
-   "cum": -0.0615197301,
-   "mean_bp": -50.2071673016,
-   "t_nw": -0.8893887146
+   "cum": -0.0748207026,
+   "mean_bp": -57.2411481483,
+   "t_nw": -1.150687523
   },
   "iwm_oo1": {
-   "cum": -0.0122192054,
-   "mean_bp": -9.7148575638,
-   "t_nw": -0.6041484295
+   "cum": null,
+   "mean_bp": null,
+   "t_nw": null
   },
   "rand_med_net10": {
-   "cum": -0.0403358091,
-   "mean_bp": -34.2499657389,
-   "t_nw": -38.9231013169
+   "cum": -0.0438355546,
+   "mean_bp": -34.4206181532,
+   "t_nw": -40.3371317975
   },
   "best_stock": "PURR",
-  "best_stock_contrib": 0.0083134389,
-  "net10_ex_best_cum": 0.0211353606,
-  "mean_turnover": 2.6466666667,
-  "status": "collecting (12 realized days; kill check from day 20/60, promotion review not before day 120)",
+  "best_stock_contrib": 0.0083357587,
+  "net10_ex_best_cum": 0.0189658179,
+  "mean_turnover": 2.5938461538,
+  "status": "collecting (13 realized days; kill check from day 20/60, promotion review not before day 120)",
   "killed": false
  },
  "realized_cols": [
@@ -8210,30 +8210,60 @@
    "2026-10-23",
    50,
    50,
-   0.036368288,
+   0.036220172,
    2.4,
    -2.7179422,
-   -0.0015502163,
-   0.03215489,
-   -0.0084476155,
+   -0.0014270638,
+   0.032341495,
+   -0.0084423591,
    0.0001455862,
    null,
    null,
-   0.035168288,
-   0.03095489,
-   0.033968288,
-   0.02975489,
-   0.032768288,
-   0.02855489,
-   0.011008157,
-   -0.0016781058,
-   0.012935153,
-   -0.0035220873,
-   0.011037153,
-   -0.0053462894,
-   0.0091391939,
+   0.035020172,
+   0.031141495,
+   0.033820172,
+   0.029941495,
+   0.032620172,
+   0.028741495,
+   0.010874328,
+   -0.001688932,
+   0.012907116,
+   -0.003528932,
+   0.011104116,
+   -0.0053539291,
+   0.0093011158,
    1.0,
-   0.033187037
+   0.033016602
+  ],
+  [
+   "2026-10-23",
+   "2026-10-26",
+   50,
+   50,
+   0.0,
+   1.96,
+   -1.8906636,
+   -0.0065540464,
+   -0.012391497,
+   null,
+   null,
+   "AAOI;AEHR;ALLE;AMD;ANF;APA;APLD;ARW;ASST;ASX;AVT;BB;BE;BMNR;BMRN;BRZE;BSP;BTE;BTSG;CAKE;CAT;CDNS;CIEN;CLF;CLSK;CORZ;CRDO;CRL;CRWD;DAL;DHT;DINO;DK;EXPE;FFIV;FIGR;FRO;FSLY;FTI;GKOS;GLXY;GRAL;HNGE;HUT;ICLR;INTC;IONQ;LEN;LEU;LQDA;LUNR;LUV;MARA;MOD;MPC;MRNA;MSTR;MTZ;MXL;NTAP;NTRA;NUE;NVAX;NVTS;OKLO;ONDS;OSCR;OUST;OVV;PBF;PENG;PLTR;PSX;PTGX;QBTS;RDW;RGTI;RIOT;RKLB;SITM;SLB;SMCI;SMMT;SMR;STLD;STRL;STX;TEM;TTMI;TVTX;TWST;TXG;UMC;VKTX;VSH;VSXY;WDC;WOLF;WULF;ZETA",
+   null,
+   -0.00098,
+   -0.013371497,
+   -0.00196,
+   -0.014351497,
+   -0.00294,
+   -0.015331497,
+   null,
+   -0.00182,
+   -0.0016734192,
+   -0.00364,
+   -0.0034,
+   -0.00546,
+   -0.0051534192,
+   1.0,
+   -0.00196
   ]
  ]
 }
