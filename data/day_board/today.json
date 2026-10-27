@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "generated_at": "2026-10-27T12:39:01.498388-04:00",
+  "generated_at": "2026-10-27T12:39:33.716954-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -15,114 +15,106 @@
       "score": 0.8940566036157818
     },
     {
-      "ticker": "SN",
-      "score": 0.4807725869143047
-    },
-    {
       "ticker": "VEEV",
       "score": 0.46786125233643583
+    },
+    {
+      "ticker": "SN",
+      "score": 0.4752717833517317
     },
     {
       "ticker": "BLFS",
       "score": 0.8458674143942335
     },
     {
-      "ticker": "PACS",
-      "score": 0.8486720452675756
-    },
-    {
-      "ticker": "CBRL",
-      "score": 0.8081895966908326
+      "ticker": "ILMN",
+      "score": 0.4736525636364405
     },
     {
       "ticker": "SHOO",
-      "score": 0.7678252989703935
+      "score": 0.7651791377577839
     },
     {
       "ticker": "FIGS",
-      "score": 0.7424185570707151
+      "score": 0.7423320564619411
     },
     {
-      "ticker": "LAUR",
-      "score": 0.5501012970022603
-    },
-    {
-      "ticker": "VLO",
-      "score": 0.1814231585646559
+      "ticker": "CBRL",
+      "score": 0.7800498826468065
     },
     {
       "ticker": "COP",
-      "score": 0.5358607504097501
+      "score": 0.5775164274477067
+    },
+    {
+      "ticker": "LRN",
+      "score": 0.5453703309885176
     },
     {
       "ticker": "CHEF",
-      "score": 0.49315497714049245
-    },
-    {
-      "ticker": "PEB",
-      "score": 0.5064495333727987
+      "score": 0.4288584433835128
     }
   ],
   "sell_1d": [
     {
       "ticker": "JBLU",
-      "score": -0.3393930632051787
+      "score": -0.34491567712686266
     },
     {
       "ticker": "SKHY",
-      "score": -0.33600227455737885
-    },
-    {
-      "ticker": "SOC",
-      "score": -0.3053738868080149
-    },
-    {
-      "ticker": "BAK",
-      "score": -0.3041697331480477
-    },
-    {
-      "ticker": "NEOV",
-      "score": -0.30368099451158354
-    },
-    {
-      "ticker": "VNET",
-      "score": -0.3010077099433638
+      "score": -0.3314421865317672
     },
     {
       "ticker": "INTC",
-      "score": -0.2932544995057852
+      "score": -0.3270314537248353
+    },
+    {
+      "ticker": "SOC",
+      "score": -0.3136821750998653
     },
     {
       "ticker": "CMTG",
-      "score": -0.29296262559600167
+      "score": -0.3023467526264217
+    },
+    {
+      "ticker": "VNET",
+      "score": -0.3011437702251296
+    },
+    {
+      "ticker": "BAK",
+      "score": -0.30021298725434536
+    },
+    {
+      "ticker": "NEOV",
+      "score": -0.29876580016354
     },
     {
       "ticker": "GFL",
-      "score": -0.28903333825739286
-    },
-    {
-      "ticker": "AU",
-      "score": -0.28218550094266065
-    },
-    {
-      "ticker": "SSTK",
-      "score": -0.28174115940615413
+      "score": -0.2971055925334446
     },
     {
       "ticker": "SSP",
-      "score": -0.279360190260411
+      "score": -0.2934166337993451
+    },
+    {
+      "ticker": "SSTK",
+      "score": -0.2784378582916249
+    },
+    {
+      "ticker": "PCT",
+      "score": -0.27441698473307774
     },
     {
       "ticker": "ROIV",
-      "score": -0.2792125390033606
+      "score": -0.27372998234577894
     },
     {
       "ticker": "BIDU",
-      "score": -0.26993584514462693
+      "score": -0.27102028072256307
     },
     {
-      "ticker": "PAL",
-      "score": -0.259877352848013
+      "ticker": "BWXT",
+      "score": -0.26451110170226333
     }
   ],
   "flatten": {
@@ -147,24 +139,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-27",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-27T12:10:21.960316-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-27_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -444,6 +418,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-27T12:39:32.895249-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-27_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1384282,
+          "preview": "1d BUY CDNA, VEEV, SN, BLFS, ILMN, SHOO, FIGS, CBRL \u00b7 SELL JBLU, SKHY, INTC, SOC, CMTG, VNET, BAK, NEOV"
+        },
+        {
+          "path": "data/stock_book/2026-10-27_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2325,
+          "preview": "green 144 \u00b7 ARQT, EXEL, CDNA, CORT, ADMA, INCY, VEEV, PTGX, WAY, ILMN"
+        },
+        {
+          "path": "data/stock_book/2026-10-27_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2502,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-27_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12066,
+          "preview": "2026-10-27 BUY CDNA, VEEV, SN, BLFS, ILMN, SHOO, FIGS, CBRL \u00b7 SELL JBLU, SKHY, INTC, SOC, CMTG, VNET, BAK, NEOV"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12066,
+          "preview": "2026-10-27 BUY CDNA, VEEV, SN, BLFS, ILMN, SHOO, FIGS, CBRL \u00b7 SELL JBLU, SKHY, INTC, SOC, CMTG, VNET, BAK, NEOV"
+        },
+        {
+          "path": "01_daily/2026-10-27_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 64958,
+          "preview": "# Stock book \u2014 2026-10-27\n_Generated 2026-10-27T12:39:10.839835-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CDNA, VEEV, SN, BLFS, ILMN, SHOO, FIGS, CBRL \u00b7 SELL JBLU, SKHY, INTC, SOC, CMTG, VNET, BAK, NEOV \u00b7 green 144 \u00b7 ARQT, EXEL, CDNA, CORT, ADMA, INCY, VEEV, PTGX, WAY, ILMN \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-27 BUY CDNA, VEEV, SN, BLFS, ILMN, SHOO, FIGS, CBRL \u00b7 SELL JBLU, SKHY, INTC, SOC, CMTG, VNET, BAK, NEOV \u00b7 2026-10-27 BUY CDNA, VEEV, SN, BLFS, ILMN, SHOO, FIGS, CBRL \u00b7 SELL JBLU, SKHY, INTC, SOC, CMTG, VNET, BAK, NEOV \u00b7 # Stock book \u2014 2026-10-27\n_Generated 2026-10-27T12:39:10.839835-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
