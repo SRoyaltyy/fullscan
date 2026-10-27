@@ -62,7 +62,7 @@ on:
       runner:
         description: "ecs (OpenClaw) or ubuntu (GitHub-hosted). ubuntu cannot reach Grok. The button, push, and schedule use ecs unless ubuntu is explicit."
         required: false
-        default: "ecs"
+        default: "ubuntu"
         type: choice
         options:
           - ecs
@@ -341,11 +341,11 @@ jobs:
     name: Preflight (prerequisites before writing)
     needs: gate
     if: ${{ needs.gate.outputs.go == 'yes' }}
-    runs-on: ${{ (github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    runs-on: ${{ (github.event.inputs.runner == 'ecs') && fromJSON('["self-hosted","ecs"]') || 'ubuntu-latest' }}
     timeout-minutes: 25
     env:
-      HOME: ${{ (github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
-      FULLSCAN_HOME: ${{ (github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
+      FULLSCAN_HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
       PREOPEN_LOCK: "/home/gha/fullscan-persist/locks/preopen.lock"
       # Keep these equal to the Pre-Open step env below.
       LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
@@ -423,13 +423,13 @@ jobs:
   preopen:
     needs: [gate, scrape, preflight]
     if: ${{ needs.gate.outputs.go == 'yes' && needs.preflight.result == 'success' && always() }}
-    runs-on: ${{ (github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    runs-on: ${{ (github.event.inputs.runner == 'ecs') && fromJSON('["self-hosted","ecs"]') || 'ubuntu-latest' }}
     timeout-minutes: 75
     env:
       OPENCLAW_TIMEOUT: "10800"
       FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
-      FULLSCAN_HOME: ${{ (github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
-      HOME: ${{ (github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      FULLSCAN_HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
+      HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
       FINVIZ_SKIP_LIVE: "1"
       PREOPEN_LOCK: "/home/gha/fullscan-persist/locks/preopen.lock"
       FULLSCAN_LAND: "1"
@@ -547,7 +547,7 @@ jobs:
           bash scripts/publish_open_pack.sh "$DATE"
 
       - name: Raise OpenClaw timeouts + enable 05:55 timer if missing
-        if: env.skip != 'yes'
+        if: env.skip != 'yes' && github.event.inputs.runner == 'ecs'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -591,7 +591,7 @@ jobs:
         # Schedule and push have no runner input and land on ECS (#608).
         # The old if required workflow_dispatch && runner == ecs, so the
         # 05:55 cron skipped this renew. Ubuntu is the only skip.
-        if: env.skip != 'yes' && github.event.inputs.runner != 'ubuntu'
+        if: env.skip != 'yes' && github.event.inputs.runner == 'ecs'
         env:
           OPENCLAW_RUN_COVER_MIN: "75"
           FULLSCAN_HOME: /home/gha
@@ -670,7 +670,7 @@ jobs:
           RUNNER="${{ github.event.inputs.runner }}"
           ARGS=(--llm-backend "$BACKEND")
           ON_UBUNTU=0
-          if [ "$RUNNER" = "ubuntu" ]; then
+          if [ "$RUNNER" != "ecs" ]; then
             ON_UBUNTU=1
           fi
           GW="${OPENCLAW_GATEWAY_URL:-}"
@@ -693,7 +693,7 @@ jobs:
           if [ "$FORCE" = "true" ]; then
             ARGS+=(--force)
             echo "explicit --force (rewrite quality-ok + bypass 09:25)"
-          elif [ "$ET_HM" -ge 925 ] && [ "$RUNNER" = "ubuntu" ]; then
+          elif [ "$ET_HM" -ge 925 ] && [ "$RUNNER" != "ecs" ]; then
             ARGS+=(--bypass-cutoff)
             echo "ubuntu late-heal --bypass-cutoff (after 09:25 ET; skip-if-good on)"
           fi

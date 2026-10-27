@@ -31,7 +31,7 @@ def test_runner_ubuntu_fails():
 
 
 def test_backend_must_be_grok():
-    it = _item("backend_grok")
+    it = {"id": "backend_grok", "expect": "grok"}  # retired from preopen_all 2026-10-27 (ECS gone)
     assert pf.check_backend_grok(it, {"LLM_BACKEND": "grok"}, "d")[0]
     assert not pf.check_backend_grok(it, {"LLM_BACKEND": "deepseek"}, "d")[0]
     assert not pf.check_backend_grok(it, {}, "d")[0]
@@ -65,10 +65,18 @@ def test_run_writes_named_failures(tmp_path, monkeypatch):
     rc = pf.run("preopen_all", "2026-10-15", env, tmp_path)
     assert rc == 1
     doc = json.loads((tmp_path / "2026-10-15_preopen_all_preflight.json").read_text())
-    assert set(doc["failed"]) == {"runner_is_ecs", "backend_grok", "gateway_up",
-                                  "no_unapproved_paid_fallback", "read_cap_fits"}
+    assert set(doc["failed"]) == {"no_unapproved_paid_fallback", "read_cap_fits"}
     md = (tmp_path / "2026-10-15_preopen_all_preflight.md").read_text()
-    assert "STOPPED" in md and "not on the ECS box" in md
+    assert "STOPPED" in md and "not on the ECS box" not in md
+
+
+def test_hosted_deepseek_passes_ecs_retired(tmp_path, monkeypatch):
+    # 2026-10-27: ECS retired; a hosted deepseek run must not be stopped by ECS/Grok checks.
+    monkeypatch.setitem(pf.CHECKS, "no_twin_preopen", lambda *a: (True, "no twin"))
+    monkeypatch.setitem(pf.CHECKS, "ecs_code_current", lambda *a: (True, "ok"))
+    env = {"RUNNER_ENVIRONMENT": "github-hosted", "RUNNER_NAME": "GitHub Actions 1",
+           "LLM_BACKEND": "deepseek", "OPENCLAW_PREDICT_READ_CAP_S": "300", "LLM_FALLBACK_MODEL": ""}
+    assert pf.run("preopen_all", "2026-10-15", env, tmp_path) == 0
 
 
 def test_run_pass(tmp_path, monkeypatch):
@@ -92,14 +100,14 @@ def test_wiring():
     assert "needs.preflight.result == 'success'" in pre
     assert "timeout-minutes: 2" in pre
     assert "scripts/preflight.py --workflow preopen_all" in pre
-    assert "default: \"ecs\"" in pre
+    assert "default: \"ubuntu\"" in pre  # 2026-10-27 ECS retired
     assert "llm_backend || 'grok'" in pre and "llm_backend || 'deepseek'" not in pre
     assert 'LLM_FALLBACK_MODEL: ""' in pre
     assert 'OPENCLAW_READ_CAP_S: "75"' in pre
     assert 'OPENCLAW_PREDICT_READ_CAP_S: "300"' in pre
     assert "essays use the free model" not in pre
     orch = (WF / "daily_orchestrator.yml").read_text()
-    assert "inputs[runner]=ecs" in orch and "inputs[runner]=ubuntu\" \\\n              -f \"inputs[llm_backend]=auto" not in orch
+    assert "inputs[runner]=ubuntu" in orch and "inputs[runner]=ecs" not in orch and "inputs[runner]=ubuntu\" \\\n              -f \"inputs[llm_backend]=auto" not in orch
     fm = (WF / "fm_preopen.yml").read_text()
     assert "--workflow fm_preopen" in fm and "predict missing" in fm
     ecs = (ROOT / "scripts" / "ecs_preopen.sh").read_text()

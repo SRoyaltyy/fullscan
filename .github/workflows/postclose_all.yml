@@ -32,7 +32,7 @@ on:
       runner:
         description: "ecs (OpenClaw) or ubuntu. ubuntu cannot reach Grok."
         required: false
-        default: "ecs"
+        default: "ubuntu"
         type: choice
         options:
           - ecs
@@ -66,14 +66,14 @@ permissions:
 concurrency:
   # Queued self-hosted runs sit forever if the ECS runner is offline.
   # Ubuntu must not share that group or the backup never starts.
-  group: postclose-all-${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu' || 'ecs' }}
+  group: postclose-all-${{ (github.event.inputs.runner != 'ecs') && 'ubuntu' || 'ecs' }}
   cancel-in-progress: false
 
 jobs:
   postclose:
     # Schedule + orch evening + explicit ubuntu dispatch = DeepSeek.
     # Manual default stays ECS/Grok. systemd 22:00 is independent.
-    runs-on: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    runs-on: ${{ (github.event.inputs.runner == 'ecs') && fromJSON('["self-hosted","ecs"]') || 'ubuntu-latest' }}
     # Two closed sessions × 11 sector grades + reflects + captains.
     # 12h died mid-pack when several Grok calls each burned the 900s cap.
     timeout-minutes: 1080
@@ -82,8 +82,8 @@ jobs:
       # ECS OpenClaw + persist live under /home/gha. ubuntu-latest must
       # keep the runner home or pip/git/gh write to a directory the
       # hosted image cannot create.
-      FULLSCAN_HOME: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
-      HOME: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      FULLSCAN_HOME: ${{ (github.event.inputs.runner != 'ecs') && '/home/runner' || '/home/gha' }}
+      HOME: ${{ (github.event.inputs.runner != 'ecs') && '/home/runner' || '/home/gha' }}
       FINVIZ_SKIP_LIVE: "1"
       FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
       MAP_POSTCLOSE_LOCK: "/home/gha/fullscan-persist/locks/map-postclose.lock"
@@ -107,7 +107,7 @@ jobs:
           # 04:00-10:30 ET the only ECS box belongs to xAI renew and Pre-Open.
           # Schedule and ubuntu dispatches are not this box.
           ON_ECS=1
-          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event_name }}" = "push" ] || [ "${{ github.event.inputs.runner }}" = "ubuntu" ]; then
+          if [ "${{ github.event.inputs.runner }}" != "ecs" ]; then
             ON_ECS=0
           fi
           if [ "$ON_ECS" = 1 ]; then
@@ -196,7 +196,7 @@ jobs:
           # ubuntu cannot reach the ECS loopback gateway. auto would
           # burn OPENCLAW_TIMEOUT (900s) per call when the URL hangs
           # instead of connection-refused (timeout is not a hard DOWN).
-          LLM_BACKEND: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'deepseek' || github.event.inputs.llm_backend || 'auto' }}
+          LLM_BACKEND: ${{ (github.event.inputs.runner != 'ecs') && 'deepseek' || github.event.inputs.llm_backend || 'auto' }}
           FINVIZ_SKIP_LIVE: "1"
         run: |
           set -e

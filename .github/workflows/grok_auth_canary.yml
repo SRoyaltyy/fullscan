@@ -5,10 +5,8 @@ name: Grok auth canary (pre-05:00 ET)
 # Red with "DEVICE LOGIN NEEDED" when xAI wants an interactive device login,
 # so it is seen before the 05:49 ET Pre-Open. No renew, no restart, no
 # XAI_API_KEY, no paid inference.
+# 2026-10-27: ECS retired (Cyrus unsubscribed). schedule/push triggers removed; manual only.
 on:
-  schedule:
-    # 08:30 UTC = 04:30 EDT / 03:30 EST, Mon-Fri.
-    - cron: "30 8 * * 1-5"
   workflow_dispatch:
     inputs:
       long:

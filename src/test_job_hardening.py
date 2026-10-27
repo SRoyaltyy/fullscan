@@ -106,7 +106,7 @@ def test_cancel_in_progress_off_on_grok_jobs() -> None:
         assert "cancel-in-progress: true" not in text, name
         assert "cancel-in-progress: false" in text, name
     book = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
-    assert "cancel-in-progress: ${{ github.event_name == 'schedule'" in book
+    assert "cancel-in-progress: ${{ github.event.inputs.runner != 'ecs'" in book
     # 2026-09-25: ECS and ubuntu share one Pre-Open group and queue.
     pre = (WF / "preopen_all.yml").read_text(encoding="utf-8")
     group_line = next(ln for ln in pre.splitlines() if ln.strip().startswith("group:"))
@@ -410,7 +410,7 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert 'cron: "10 20 * * 1-5"' in post_yml
     assert 'cron: "30 3 * * 2-6"' in post_yml
     assert "postclose-all-${{" in post_yml
-    assert "github.event_name == 'schedule'" in post_yml
+    assert "github.event.inputs.runner != 'ecs'" in post_yml  # 2026-10-27 hosted unless ecs
     # ubuntu/DeepSeek must not inherit ECS HOME or try Grok first.
     assert "HOME: \"/home/gha\"" not in post_yml
     assert "FULLSCAN_HOME: \"/home/gha\"" not in post_yml
@@ -486,9 +486,7 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert 'cron: "10 10 * * 1-5"' in book_yml
     assert 'cron: "15 13 * * 1-5"' in book_yml
     assert "ubuntu land-book" in book_yml
-    assert 'github.event_name == \'schedule\'' in book_yml
-    assert 'github.event_name == \'push\'' in book_yml
-    assert 'github.event_name == \'workflow_run\'' in book_yml
+    assert "github.event.inputs.runner != 'ecs'" in book_yml  # 2026-10-27 hosted unless ecs
     assert "stock-book-all-ubuntu" in book_yml
     assert "stock-book-all-ecs" in book_yml
     assert "HOME: \"/home/gha\"" not in book_yml
@@ -774,7 +772,7 @@ def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:
     assert "timeout=(15, config.OPENCLAW_TIMEOUT)" in ds
     assert '"connect timeout"' in ds
     # Merge of healer code must start ubuntu last-closed (dispatch is 403).
-    assert "github.event_name == 'push'" in post_yml
+    assert "github.event.inputs.runner != 'ecs'" in post_yml
     assert "push heal — last_closed=" in post_yml
     assert "src/skip_if_good.py" not in post_yml
     assert "01_daily/" not in post_yml.split("push:")[1].split("workflow_dispatch:")[0]
