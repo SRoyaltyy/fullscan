@@ -376,6 +376,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 09:30 ET | **SELL** | `GLND` | 216 | $2.91 | $2.83 | $-270.22 | $4,671.89 | ▼ -270.22 after sell → book $5,953.49; vs 09:30 mark -2.83 | dropped from list after 7 sess (min 3) | join🔴 sector🔴 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-23 09:30 ET | **SELL** | `ITW` | 3 | $276.83 | $2.02 | $+28.71 | $5,500.36 | ▲ +28.71 after sell → book $5,951.47; vs 09:30 mark -2.02 | dropped from list after 7 sess (min 3) | join🟡 sector🔴 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,500.36 | ▲ close $5,959.61 vs 09:30 $5,956.32 (session +8.14) | 16:00 close · cash $5,500.36 · equity $5,959.61 vs 09:30 $5,956.32 (+3.29; session marks +8.14) · 1 name(s) marked open→close (per-name table). LUV×11 09:30 $41.01 → close $41.75 +8.14 | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,500.36 | ▲ 09:30 equity $5,959.61 vs yday $5,959.61 (+0.00) | 09:30 open · cash $5,500.36 (unchanged overnight, no fees) · equity $5,959.61 vs prior close $5,959.61 (+0.00) · 1 name(s) re-marked at the open (per-name table). LUV×11 yday $41.75 → 09:30 $41.75 +0.00 | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,500.36 | ▲ close $5,959.61 vs 09:30 $5,959.61 (session +0.00) | 16:00 close · cash $5,500.36 · equity $5,959.61 vs 09:30 $5,959.61 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). LUV×11 09:30 $41.75 → close $41.75 +0.00 | — |
 
 ## Not taken
 

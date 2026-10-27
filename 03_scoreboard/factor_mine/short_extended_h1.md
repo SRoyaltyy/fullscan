@@ -554,6 +554,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 09:30 ET | **COVER** | `KLRA` | 54 | $13.18 | $2.15 | $-18.92 | $10,661.50 | ▼ -18.92 after sell → book $9,911.62; vs 09:30 mark -2.15 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-23 09:30 ET | **COVER** | `TRU` | 9 | $83.32 | $2.02 | $-55.37 | $9,909.60 | ▼ -55.37 after sell → book $9,909.60; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,909.60 | ▲ close $9,909.60 vs 09:30 $9,913.77 (session +0.00) | 16:00 close · cash $9,909.60 · no lots left · equity $9,909.60. | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,909.60 | ▲ 09:30 equity $9,909.60 vs yday $9,909.60 (+0.00) | 09:30 open · cash $9,909.60 · no holdings · equity $9,909.60 vs prior close $9,909.60 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,909.60 | ▲ close $9,909.60 vs 09:30 $9,909.60 (session +0.00) | 16:00 close · cash $9,909.60 · no lots left · equity $9,909.60. | — |
 
 ## Not taken
 

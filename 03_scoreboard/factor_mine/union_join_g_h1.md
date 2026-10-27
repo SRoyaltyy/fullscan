@@ -624,6 +624,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,305.45 | ▲ 09:30 equity $8,304.03 vs yday $8,302.67 (+1.36) | 09:30 open · cash $7,305.45 (unchanged overnight, no fees) · equity $8,304.03 vs prior close $8,302.67 (+1.36) · 1 name(s) re-marked at the open (per-name table). CXW×34 yday $29.33 → 09:30 $29.37 +1.36 | — |
 | 2026-10-23 09:30 ET | **SELL** | `CXW` | 34 | $29.37 | $2.11 | $-44.66 | $8,301.92 | ▼ -44.66 after sell → book $8,301.92; vs 09:30 mark -2.11 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,301.92 | ▲ close $8,301.92 vs 09:30 $8,304.03 (session +0.00) | 16:00 close · cash $8,301.92 · no lots left · equity $8,301.92. | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,301.92 | ▲ 09:30 equity $8,301.92 vs yday $8,301.92 (+0.00) | 09:30 open · cash $8,301.92 · no holdings · equity $8,301.92 vs prior close $8,301.92 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,301.92 | ▲ close $8,301.92 vs 09:30 $8,301.92 (session +0.00) | 16:00 close · cash $8,301.92 · no lots left · equity $8,301.92. | — |
 
 ## Not taken
 

@@ -612,6 +612,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 09:30 ET | **SELL** | `PRIM` | 11 | $66.76 | $2.04 | $-81.40 | $5,938.57 | ▼ -81.40 after sell → book $6,747.55; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-23 09:30 ET | **SELL** | `TLSA` | 834 | $0.97 | $10.74 | $-71.54 | $6,736.81 | ▼ -71.54 after sell → book $6,736.81; vs 09:30 mark -10.74 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,736.81 | ▲ close $6,736.81 vs 09:30 $6,749.59 (session +0.00) | 16:00 close · cash $6,736.81 · no lots left · equity $6,736.81. | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,736.81 | ▲ 09:30 equity $6,736.81 vs yday $6,736.81 (+0.00) | 09:30 open · cash $6,736.81 · no holdings · equity $6,736.81 vs prior close $6,736.81 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,736.81 | ▲ close $6,736.81 vs 09:30 $6,736.81 (session +0.00) | 16:00 close · cash $6,736.81 · no lots left · equity $6,736.81. | — |
 
 ## Not taken
 

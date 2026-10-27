@@ -619,6 +619,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 09:30 ET | **SELL** | `HLT` | 3 | $354.57 | $2.02 | $-20.31 | $7,802.07 | ▼ -20.31 after sell → book $9,135.19; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
 | 2026-10-23 09:30 ET | **SELL** | `TRU` | 16 | $83.32 | $2.06 | $+266.30 | $9,133.13 | ▲ +266.30 after sell → book $9,133.13; vs 09:30 mark -2.06 | dropped from list after 7 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,133.13 | ▲ close $9,133.13 vs 09:30 $9,139.36 (session +0.00) | 16:00 close · cash $9,133.13 · no lots left · equity $9,133.13. | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,133.13 | ▲ 09:30 equity $9,133.13 vs yday $9,133.13 (+0.00) | 09:30 open · cash $9,133.13 · no holdings · equity $9,133.13 vs prior close $9,133.13 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,133.13 | ▲ close $9,133.13 vs 09:30 $9,133.13 (session +0.00) | 16:00 close · cash $9,133.13 · no lots left · equity $9,133.13. | — |
 
 ## Not taken
 

@@ -537,6 +537,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.59 | ▲ close $9,420.82 vs 09:30 $9,006.59 (session +414.23) | 16:00 close · cash $1.59 · equity $9,420.82 vs 09:30 $9,006.59 (+414.23; session marks +414.23) · 1 name(s) marked open→close (per-name table). EGG×1801 09:30 $5.00 → close $5.23 +414.23 | — |
 | 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.59 | ▼ 09:30 equity $9,402.81 vs yday $9,420.82 (-18.01) | 09:30 open · cash $1.59 (unchanged overnight, no fees) · equity $9,402.81 vs prior close $9,420.82 (-18.01) · 1 name(s) re-marked at the open (per-name table). EGG×1801 yday $5.23 → 09:30 $5.22 -18.01 | — |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.59 | ▼ close $9,240.72 vs 09:30 $9,402.81 (session -162.09) | 16:00 close · cash $1.59 · equity $9,240.72 vs 09:30 $9,402.81 (-162.09; session marks -162.09) · 1 name(s) marked open→close (per-name table). EGG×1801 09:30 $5.22 → close $5.13 -162.09 | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.59 | ▲ 09:30 equity $9,240.72 vs yday $9,240.72 (+0.00) | 09:30 open · cash $1.59 (unchanged overnight, no fees) · equity $9,240.72 vs prior close $9,240.72 (+0.00) · 1 name(s) re-marked at the open (per-name table). EGG×1801 yday $5.13 → 09:30 $5.13 +0.00 | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.59 | ▲ close $9,240.72 vs 09:30 $9,240.72 (session +0.00) | 16:00 close · cash $1.59 · equity $9,240.72 vs 09:30 $9,240.72 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). EGG×1801 09:30 $5.13 → close $5.13 +0.00 | — |
 
 ## Not taken
 

@@ -296,6 +296,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 09:30 ET | **SELL** | `PLNT` | 19 | $53.08 | $2.07 | $+64.29 | $4,800.84 | ▲ +64.29 after sell → book $8,258.74; vs 09:30 mark -2.07 | dropped from list after 5 sess (min 5) | — |
 | 2026-10-23 09:30 ET | **SELL** | `WM` | 4 | $238.25 | $2.02 | $+49.86 | $5,751.82 | ▲ +49.86 after sell → book $8,256.72; vs 09:30 mark -2.02 | dropped from list after 5 sess (min 5) | — |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,751.82 | ▼ close $8,238.52 vs 09:30 $8,268.94 (session -18.20) | 16:00 close · cash $5,751.82 · equity $8,238.52 vs 09:30 $8,268.94 (-30.42; session marks -18.20) · 2 name(s) marked open→close (per-name table). ALL×6 09:30 $257.73 → close $253.19 -27.24; DGX×4 09:30 $239.63 → close $241.89 +9.04 | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,751.82 | ▲ 09:30 equity $8,238.52 vs yday $8,238.52 (+0.00) | 09:30 open · cash $5,751.82 (unchanged overnight, no fees) · equity $8,238.52 vs prior close $8,238.52 (+0.00) · 2 name(s) re-marked at the open (per-name table). ALL×6 yday $253.19 → 09:30 $253.19 +0.00; DGX×4 yday $241.89 → 09:30 $241.89 +0.00 | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,751.82 | ▲ close $8,238.52 vs 09:30 $8,238.52 (session +0.00) | 16:00 close · cash $5,751.82 · equity $8,238.52 vs 09:30 $8,238.52 (+0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). ALL×6 09:30 $253.19 → close $253.19 +0.00; DGX×4 09:30 $241.89 → close $241.89 +0.00 | — |
 
 ## Not taken
 

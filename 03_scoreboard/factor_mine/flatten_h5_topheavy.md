@@ -370,6 +370,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 09:30 ET | **SELL** | `TWLO` | 3 | $256.00 | $2.02 | $-65.76 | $7,724.27 | ▼ -65.76 after sell → book $9,019.23; vs 09:30 mark -2.02 | dropped from list after 5 sess (min 5) | — |
 | 2026-10-23 09:30 ET | **SELL** | `YOU` | 22 | $45.47 | $2.08 | $-6.99 | $8,722.54 | ▼ -6.99 after sell → book $9,017.15; vs 09:30 mark -2.08 | dropped from list after 5 sess (min 5) | — |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,722.54 | ▼ close $9,015.55 vs 09:30 $9,029.73 (session -1.60) | 16:00 close · cash $8,722.54 · equity $9,015.55 vs 09:30 $9,029.73 (-14.18; session marks -1.60) · 3 name(s) marked open→close (per-name table). ARQT×1 09:30 $32.13 → close $31.20 -0.93; BLFS×6 09:30 $38.61 → close $38.61 +0.00; CRON×9 09:30 $3.42 → close $3.35 -0.67 | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,722.54 | ▲ 09:30 equity $9,015.55 vs yday $9,015.55 (+0.00) | 09:30 open · cash $8,722.54 (unchanged overnight, no fees) · equity $9,015.55 vs prior close $9,015.55 (+0.00) · 3 name(s) re-marked at the open (per-name table). ARQT×1 yday $31.20 → 09:30 $31.20 +0.00; BLFS×6 yday $38.61 → 09:30 $38.61 +0.00; CRON×9 yday $3.35 → 09:30 $3.35 +0.00 | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,722.54 | ▲ close $9,015.55 vs 09:30 $9,015.55 (session +0.00) | 16:00 close · cash $8,722.54 · equity $9,015.55 vs 09:30 $9,015.55 (+0.00; session marks +0.00) · 3 name(s) marked open→close (per-name table). ARQT×1 09:30 $31.20 → close $31.20 +0.00; BLFS×6 09:30 $38.61 → close $38.61 +0.00; CRON×9 09:30 $3.35 → close $3.35 +0.00 | — |
 
 ## Not taken
 

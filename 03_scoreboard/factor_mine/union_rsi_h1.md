@@ -590,6 +590,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,329.20 | ▲ close $6,059.04 vs 09:30 $6,021.05 (session +50.34) | 16:00 close · cash $5,329.20 · equity $6,059.04 vs 09:30 $6,021.05 (+37.99; session marks +50.34) · 1 name(s) marked open→close (per-name table). DGX×3 09:30 $226.50 → close $243.28 +50.34 | — |
 | 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,329.20 | ▼ 09:30 equity $6,048.09 vs yday $6,059.04 (-10.95) | 09:30 open · cash $5,329.20 (unchanged overnight, no fees) · equity $6,048.09 vs prior close $6,059.04 (-10.95) · 1 name(s) re-marked at the open (per-name table). DGX×3 yday $243.28 → 09:30 $239.63 -10.95 | — |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,329.20 | ▲ close $6,054.87 vs 09:30 $6,048.09 (session +6.78) | 16:00 close · cash $5,329.20 · equity $6,054.87 vs 09:30 $6,048.09 (+6.78; session marks +6.78) · 1 name(s) marked open→close (per-name table). DGX×3 09:30 $239.63 → close $241.89 +6.78 | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,329.20 | ▲ 09:30 equity $6,054.87 vs yday $6,054.87 (+0.00) | 09:30 open · cash $5,329.20 (unchanged overnight, no fees) · equity $6,054.87 vs prior close $6,054.87 (+0.00) · 1 name(s) re-marked at the open (per-name table). DGX×3 yday $241.89 → 09:30 $241.89 +0.00 | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,329.20 | ▲ close $6,054.87 vs 09:30 $6,054.87 (session +0.00) | 16:00 close · cash $5,329.20 · equity $6,054.87 vs 09:30 $6,054.87 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). DGX×3 09:30 $241.89 → close $241.89 +0.00 | — |
 
 ## Not taken
 

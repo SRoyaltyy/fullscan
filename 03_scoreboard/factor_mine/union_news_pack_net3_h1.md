@@ -259,6 +259,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 09:30 ET | **SELL** | `HLT` | 5 | $354.57 | $2.03 | $-31.18 | $2,127.89 | ▼ -31.18 after sell → book $8,510.81; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | — |
 | 2026-10-23 09:30 ET | **SELL** | `SAP` | 8 | $239.64 | $2.04 | $+60.51 | $4,042.97 | ▲ +60.51 after sell → book $8,508.77; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,042.97 | ▼ close $8,465.57 vs 09:30 $8,512.84 (session -43.20) | 16:00 close · cash $4,042.97 · equity $8,465.57 vs 09:30 $8,512.84 (-47.27; session marks -43.20) · 1 name(s) marked open→close (per-name table). AMX×180 09:30 $24.81 → close $24.57 -43.20 | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,042.97 | ▲ 09:30 equity $8,465.57 vs yday $8,465.57 (+0.00) | 09:30 open · cash $4,042.97 (unchanged overnight, no fees) · equity $8,465.57 vs prior close $8,465.57 (+0.00) · 1 name(s) re-marked at the open (per-name table). AMX×180 yday $24.57 → 09:30 $24.57 +0.00 | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,042.97 | ▲ close $8,465.57 vs 09:30 $8,465.57 (session +0.00) | 16:00 close · cash $4,042.97 · equity $8,465.57 vs 09:30 $8,465.57 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). AMX×180 09:30 $24.57 → close $24.57 +0.00 | — |
 
 ## Not taken
 

@@ -266,6 +266,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,734.92 | ▲ close $7,784.88 vs 09:30 $7,785.41 (session +1.68) | 16:00 close · cash $7,734.92 · equity $7,784.88 vs 09:30 $7,785.41 (-0.53; session marks +1.68) · 1 name(s) marked open→close (per-name table). AMX×2 09:30 $24.14 → close $24.98 +1.68 | — |
 | 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,734.92 | ▼ 09:30 equity $7,784.54 vs yday $7,784.88 (-0.34) | 09:30 open · cash $7,734.92 (unchanged overnight, no fees) · equity $7,784.54 vs prior close $7,784.88 (-0.34) · 1 name(s) re-marked at the open (per-name table). AMX×2 yday $24.98 → 09:30 $24.81 -0.34 | — |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,734.92 | ▼ close $7,784.06 vs 09:30 $7,784.54 (session -0.48) | 16:00 close · cash $7,734.92 · equity $7,784.06 vs 09:30 $7,784.54 (-0.48; session marks -0.48) · 1 name(s) marked open→close (per-name table). AMX×2 09:30 $24.81 → close $24.57 -0.48 | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,734.92 | ▲ 09:30 equity $7,784.06 vs yday $7,784.06 (+0.00) | 09:30 open · cash $7,734.92 (unchanged overnight, no fees) · equity $7,784.06 vs prior close $7,784.06 (+0.00) · 1 name(s) re-marked at the open (per-name table). AMX×2 yday $24.57 → 09:30 $24.57 +0.00 | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,734.92 | ▲ close $7,784.06 vs 09:30 $7,784.06 (session +0.00) | 16:00 close · cash $7,734.92 · equity $7,784.06 vs 09:30 $7,784.06 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). AMX×2 09:30 $24.57 → close $24.57 +0.00 | — |
 
 ## Not taken
 

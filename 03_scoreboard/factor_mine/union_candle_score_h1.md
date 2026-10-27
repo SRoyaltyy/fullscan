@@ -613,6 +613,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 09:30 ET | **SELL** | `JLHL` | 224 | $4.81 | $2.94 | $+12.09 | $6,461.10 | ▲ +12.09 after sell → book $8,596.84; vs 09:30 mark -2.93 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-23 09:30 ET | **SELL** | `TRU` | 13 | $83.32 | $2.05 | $+70.02 | $7,542.21 | ▲ +70.02 after sell → book $8,594.79; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,542.21 | ▼ close $8,585.78 vs 09:30 $8,601.79 (session -9.01) | 16:00 close · cash $7,542.21 · equity $8,585.78 vs 09:30 $8,601.79 (-16.01; session marks -9.01) · 1 name(s) marked open→close (per-name table). PRMB×53 09:30 $19.86 → close $19.69 -9.01 | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,542.21 | ▲ 09:30 equity $8,585.78 vs yday $8,585.78 (+0.00) | 09:30 open · cash $7,542.21 (unchanged overnight, no fees) · equity $8,585.78 vs prior close $8,585.78 (+0.00) · 1 name(s) re-marked at the open (per-name table). PRMB×53 yday $19.69 → 09:30 $19.69 +0.00 | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,542.21 | ▲ close $8,585.78 vs 09:30 $8,585.78 (session +0.00) | 16:00 close · cash $7,542.21 · equity $8,585.78 vs 09:30 $8,585.78 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). PRMB×53 09:30 $19.69 → close $19.69 +0.00 | — |
 
 ## Not taken
 

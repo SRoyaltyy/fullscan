@@ -583,6 +583,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,610.24 | ▼ 09:30 equity $8,727.28 vs yday $8,738.55 (-11.27) | 09:30 open · cash $7,610.24 (unchanged overnight, no fees) · equity $8,727.28 vs prior close $8,738.55 (-11.27) · 2 name(s) re-marked at the open (per-name table). PRMB×29 yday $20.14 → 09:30 $19.86 -8.12; SMMT×35 yday $15.55 → 09:30 $15.46 -3.15 | — |
 | 2026-10-23 09:30 ET | **SELL** | `PRMB` | 29 | $19.86 | $2.10 | $+28.02 | $8,184.08 | ▲ +28.02 after sell → book $8,725.18; vs 09:30 mark -2.10 | dropped from list after 7 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,184.08 | ▲ close $8,725.53 vs 09:30 $8,727.28 (session +0.35) | 16:00 close · cash $8,184.08 · equity $8,725.53 vs 09:30 $8,727.28 (-1.75; session marks +0.35) · 1 name(s) marked open→close (per-name table). SMMT×35 09:30 $15.46 → close $15.47 +0.35 | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,184.08 | ▲ 09:30 equity $8,725.53 vs yday $8,725.53 (+0.00) | 09:30 open · cash $8,184.08 (unchanged overnight, no fees) · equity $8,725.53 vs prior close $8,725.53 (+0.00) · 1 name(s) re-marked at the open (per-name table). SMMT×35 yday $15.47 → 09:30 $15.47 +0.00 | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,184.08 | ▲ close $8,725.53 vs 09:30 $8,725.53 (session +0.00) | 16:00 close · cash $8,184.08 · equity $8,725.53 vs 09:30 $8,725.53 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). SMMT×35 09:30 $15.47 → close $15.47 +0.00 | — |
 
 ## Not taken
 

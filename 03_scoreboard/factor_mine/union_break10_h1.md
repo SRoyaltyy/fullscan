@@ -627,6 +627,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,225.73 | ▼ 09:30 equity $8,308.89 vs yday $8,310.71 (-1.82) | 09:30 open · cash $7,225.73 (unchanged overnight, no fees) · equity $8,308.89 vs prior close $8,310.71 (-1.82) · 1 name(s) re-marked at the open (per-name table). TRU×13 yday $83.46 → 09:30 $83.32 -1.82 | — |
 | 2026-10-23 09:30 ET | **SELL** | `TRU` | 13 | $83.32 | $2.05 | $+70.02 | $8,306.84 | ▲ +70.02 after sell → book $8,306.84; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,306.84 | ▲ close $8,306.84 vs 09:30 $8,308.89 (session +0.00) | 16:00 close · cash $8,306.84 · no lots left · equity $8,306.84. | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,306.84 | ▲ 09:30 equity $8,306.84 vs yday $8,306.84 (+0.00) | 09:30 open · cash $8,306.84 · no holdings · equity $8,306.84 vs prior close $8,306.84 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,306.84 | ▲ close $8,306.84 vs 09:30 $8,306.84 (session +0.00) | 16:00 close · cash $8,306.84 · no lots left · equity $8,306.84. | — |
 
 ## Not taken
 

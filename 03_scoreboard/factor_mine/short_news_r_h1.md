@@ -338,6 +338,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 09:30 ET | **COVER** | `LUV` | 16 | $41.01 | $2.04 | $-22.35 | $10,194.41 | ▼ -22.35 after sell → book $9,113.04; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | — |
 | 2026-10-23 09:30 ET | **COVER** | `MOH` | 2 | $213.22 | $2.00 | $+11.54 | $9,765.97 | ▲ +11.54 after sell → book $9,111.04; vs 09:30 mark -2.00 | dropped from list after 2 sess (min 1) | — |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,765.97 | ▲ close $9,131.11 vs 09:30 $9,117.07 (session +20.07) | 16:00 close · cash $9,765.97 · equity $9,131.11 vs 09:30 $9,117.07 (+14.04; session marks +20.07) · 1 name(s) marked open→close (per-name table). CTSH×9 09:30 $72.77 → close $70.54 +20.07 | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,765.97 | ▲ 09:30 equity $9,131.11 vs yday $9,131.11 (-0.00) | 09:30 open · cash $9,765.97 (unchanged overnight, no fees) · equity $9,131.11 vs prior close $9,131.11 (-0.00) · 1 name(s) re-marked at the open (per-name table). CTSH×9 yday $70.54 → 09:30 $70.54 -0.00 | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,765.97 | ▲ close $9,131.11 vs 09:30 $9,131.11 (session +0.00) | 16:00 close · cash $9,765.97 · equity $9,131.11 vs 09:30 $9,131.11 (-0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). CTSH×9 09:30 $70.54 → close $70.54 -0.00 | — |
 
 ## Not taken
 

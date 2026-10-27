@@ -319,6 +319,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,600.34 | ▼ 09:30 equity $9,100.60 vs yday $9,105.09 (-4.49) | 09:30 open · cash $6,600.34 (unchanged overnight, no fees) · equity $9,100.60 vs prior close $9,105.09 (-4.49) · 2 name(s) re-marked at the open (per-name table). DOCU×1 yday $84.41 → 09:30 $83.98 -0.43; TRU×29 yday $83.46 → 09:30 $83.32 -4.06 | — |
 | 2026-10-23 09:30 ET | **SELL** | `TRU` | 29 | $83.32 | $2.11 | $+291.62 | $9,014.51 | ▲ +291.62 after sell → book $9,098.49; vs 09:30 mark -2.11 | dropped from list after 4 sess (min 3) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,014.51 | ▲ close $9,099.78 vs 09:30 $9,100.60 (session +1.29) | 16:00 close · cash $9,014.51 · equity $9,099.78 vs 09:30 $9,100.60 (-0.82; session marks +1.29) · 1 name(s) marked open→close (per-name table). DOCU×1 09:30 $83.98 → close $85.27 +1.29 | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,014.51 | ▲ 09:30 equity $9,099.78 vs yday $9,099.78 (+0.00) | 09:30 open · cash $9,014.51 (unchanged overnight, no fees) · equity $9,099.78 vs prior close $9,099.78 (+0.00) · 1 name(s) re-marked at the open (per-name table). DOCU×1 yday $85.27 → 09:30 $85.27 +0.00 | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,014.51 | ▲ close $9,099.78 vs 09:30 $9,099.78 (session +0.00) | 16:00 close · cash $9,014.51 · equity $9,099.78 vs 09:30 $9,099.78 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). DOCU×1 09:30 $85.27 → close $85.27 +0.00 | — |
 
 ## Not taken
 

@@ -657,6 +657,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 09:30 ET | **SELL** | `HLT` | 2 | $354.57 | $2.02 | $-14.87 | $6,857.92 | ▼ -14.87 after sell → book $8,304.74; vs 09:30 mark -2.01 | union_news_g_h1: dropped from list after 2 sess (min 1) | — |
 | 2026-10-23 09:30 ET | **SELL** | `ITW` | 2 | $276.83 | $2.02 | $+17.81 | $7,409.56 | ▲ +17.81 after sell → book $8,302.72; vs 09:30 mark -2.02 | union_news_g_h1: dropped from list after 7 sess (min 1) | join🟡 sector🔴 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,409.56 | ▼ close $8,294.08 vs 09:30 $8,311.01 (session -8.64) | 16:00 close · cash $7,409.56 · equity $8,294.08 vs 09:30 $8,311.01 (-16.93; session marks -8.64) · 1 name(s) marked open→close (per-name table). AMX×36 09:30 $24.81 → close $24.57 -8.64 | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,409.56 | ▲ 09:30 equity $8,294.08 vs yday $8,294.08 (+0.00) | 09:30 open · cash $7,409.56 (unchanged overnight, no fees) · equity $8,294.08 vs prior close $8,294.08 (+0.00) | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,409.56 | ▲ close $8,294.08 vs 09:30 $8,294.08 (session +0.00) | 16:00 close · cash $7,409.56 · equity $8,294.08 vs 09:30 $8,294.08 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). AMX×36 09:30 $24.57 → close $24.57 +0.00 | — |
 
 ## Not taken
 

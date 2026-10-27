@@ -619,6 +619,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,303.19 | ▲ close $8,350.47 vs 09:30 $8,352.85 (session +14.56) | 16:00 close · cash $7,303.19 · equity $8,350.47 vs 09:30 $8,352.85 (-2.38; session marks +14.56) · 1 name(s) marked open→close (per-name table). PRMB×52 09:30 $19.86 → close $20.14 +14.56 | — |
 | 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,303.19 | ▼ 09:30 equity $8,335.91 vs yday $8,350.47 (-14.56) | 09:30 open · cash $7,303.19 (unchanged overnight, no fees) · equity $8,335.91 vs prior close $8,350.47 (-14.56) · 1 name(s) re-marked at the open (per-name table). PRMB×52 yday $20.14 → 09:30 $19.86 -14.56 | — |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,303.19 | ▼ close $8,327.07 vs 09:30 $8,335.91 (session -8.84) | 16:00 close · cash $7,303.19 · equity $8,327.07 vs 09:30 $8,335.91 (-8.84; session marks -8.84) · 1 name(s) marked open→close (per-name table). PRMB×52 09:30 $19.86 → close $19.69 -8.84 | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,303.19 | ▲ 09:30 equity $8,327.07 vs yday $8,327.07 (+0.00) | 09:30 open · cash $7,303.19 (unchanged overnight, no fees) · equity $8,327.07 vs prior close $8,327.07 (+0.00) · 1 name(s) re-marked at the open (per-name table). PRMB×52 yday $19.69 → 09:30 $19.69 +0.00 | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,303.19 | ▲ close $8,327.07 vs 09:30 $8,327.07 (session +0.00) | 16:00 close · cash $7,303.19 · equity $8,327.07 vs 09:30 $8,327.07 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). PRMB×52 09:30 $19.69 → close $19.69 +0.00 | — |
 
 ## Not taken
 

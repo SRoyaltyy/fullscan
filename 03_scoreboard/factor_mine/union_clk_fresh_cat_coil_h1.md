@@ -544,6 +544,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,144.21 | ▼ 09:30 equity $8,102.77 vs yday $8,106.57 (-3.80) | 09:30 open · cash $7,144.21 (unchanged overnight, no fees) · equity $8,102.77 vs prior close $8,106.57 (-3.80) · 1 name(s) re-marked at the open (per-name table). SAP×4 yday $240.59 → 09:30 $239.64 -3.80 | — |
 | 2026-10-23 09:30 ET | **SELL** | `SAP` | 4 | $239.64 | $2.02 | $+28.26 | $8,100.75 | ▲ +28.26 after sell → book $8,100.75; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,100.75 | ▲ close $8,100.75 vs 09:30 $8,102.77 (session +0.00) | 16:00 close · cash $8,100.75 · no lots left · equity $8,100.75. | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,100.75 | ▲ 09:30 equity $8,100.75 vs yday $8,100.75 (+0.00) | 09:30 open · cash $8,100.75 · no holdings · equity $8,100.75 vs prior close $8,100.75 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,100.75 | ▲ close $8,100.75 vs 09:30 $8,100.75 (session +0.00) | 16:00 close · cash $8,100.75 · no lots left · equity $8,100.75. | — |
 
 ## Not taken
 

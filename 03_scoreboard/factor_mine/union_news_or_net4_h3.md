@@ -295,6 +295,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,223.60 | ▼ close $7,804.30 vs 09:30 $7,834.56 (session -27.70) | 16:00 close · cash $4,223.60 · equity $7,804.30 vs 09:30 $7,834.56 (-30.26; session marks -27.70) · 1 name(s) marked open→close (per-name table). HLT×10 09:30 $360.84 → close $358.07 -27.70 | — |
 | 2026-10-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,223.60 | ▼ 09:30 equity $7,769.30 vs yday $7,804.30 (-35.00) | 09:30 open · cash $4,223.60 (unchanged overnight, no fees) · equity $7,769.30 vs prior close $7,804.30 (-35.00) · 1 name(s) re-marked at the open (per-name table). HLT×10 yday $358.07 → 09:30 $354.57 -35.00 | — |
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,223.60 | ▼ close $7,719.90 vs 09:30 $7,769.30 (session -49.40) | 16:00 close · cash $4,223.60 · equity $7,719.90 vs 09:30 $7,769.30 (-49.40; session marks -49.40) · 1 name(s) marked open→close (per-name table). HLT×10 09:30 $354.57 → close $349.63 -49.40 | — |
+| 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,223.60 | ▲ 09:30 equity $7,719.90 vs yday $7,719.90 (+0.00) | 09:30 open · cash $4,223.60 (unchanged overnight, no fees) · equity $7,719.90 vs prior close $7,719.90 (+0.00) · 1 name(s) re-marked at the open (per-name table). HLT×10 yday $349.63 → 09:30 $349.63 +0.00 | — |
+| 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,223.60 | ▲ close $7,719.90 vs 09:30 $7,719.90 (session +0.00) | 16:00 close · cash $4,223.60 · equity $7,719.90 vs 09:30 $7,719.90 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). HLT×10 09:30 $349.63 → close $349.63 +0.00 | — |
 
 ## Not taken
 
