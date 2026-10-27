@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-27",
+  "files": [
+    {
+      "bytes": 10008712,
+      "path": "data/factor_mine/panel.json",
+      "sha256": "5d3e960139b48d31e03d8dc0f41b433bebdcf314aa48c1ceea7736bfa65ef47f"
+    },
+    {
+      "path": "01_daily/general/2026-10-27_predict.md",
+      "sha256": "1cffd063ac7d1a919e3116f378854454e572091c9cf81fd733fac775c457db9b"
+    },
+    {
+      "path": "01_daily/news/2026-10-27_actions.json",
+      "sha256": "6f8ed434aa12809fe1c4d0797a78c10f3ad1979025c98304ee86c7309a1de7e4"
+    },
+    {
+      "path": "01_daily/news/2026-10-27_finviz_digest.json",
+      "sha256": "a6706807d725165fd8d4af26da6b1492601590f661bbdf9d22003122fcdd7de4"
+    },
+    {
+      "path": "01_daily/news/2026-10-27_judge.md",
+      "sha256": "1afd1dd89785faee41efa0728cb0702cad11ed59b4f436c98b33bf6f34152914"
+    },
+    {
+      "path": "01_daily/weather/2026-10-27_weather.json",
+      "sha256": "0dc492d57a3a56683cc02596b5bc9c2db80f92d5dfa36a1c090ed5d5d7cb716b"
+    },
+    {
+      "path": "data/ab_checklist/2026-10-27_ab_checklist_enriched.csv",
+      "sha256": "7cdc844d7540d26b8609bd9bdad2dff02e23bdc0eeded6f35d3bf973d9b4fd5d"
+    },
+    {
+      "path": "data/join/2026-10-27_ranked.csv",
+      "sha256": "2fde260bd9565bce31f1a4cca2a8db264cbbce7a374436d375bddb7e18c0ecc0"
+    },
+    {
+      "path": "data/peers/2026-10-27_peer_rs.csv",
+      "sha256": "ddfb7334677cd9faeca962d70765b32d2761a81b9eb437bd02384acd0fa85445"
+    },
+    {
+      "path": "data/sleeve_merge/today.json",
+      "sha256": "e42ce8a0aa19b5b08797583f01860d5e26f47ef25d61d783b4a68e280f567324"
+    },
+    {
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "sha256": "e32846fc6c528fcb87f2e6a1be0b9eb6550f74757f9296f5b18307bf048272d1"
+    }
+  ],
+  "picks": {
+    "union_hot_n4_h1": [
+      "BMBL",
+      "CHKP",
+      "TTAN",
+      "HUBS"
+    ],
+    "union_hot_n4_holdup": [
+      "BMBL",
+      "CHKP",
+      "TTAN",
+      "HUBS"
+    ]
+  },
+  "prices": [
+    {
+      "px": 2.56,
+      "px_src": "session_export",
+      "ticker": "BMBL"
+    },
+    {
+      "px": 130.52,
+      "px_src": "session_export",
+      "ticker": "CHKP"
+    },
+    {
+      "px": 59.7,
+      "px_src": "session_export",
+      "ticker": "TTAN"
+    },
+    {
+      "px": 202.04,
+      "px_src": "session_export",
+      "ticker": "HUBS"
+    },
+    {
+      "px": 2.39,
+      "px_src": "session_export",
+      "ticker": "HLP"
+    },
+    {
+      "px": 174.01,
+      "px_src": "session_export",
+      "ticker": "POOL"
+    },
+    {
+      "px": 9.58,
+      "px_src": "session_export",
+      "ticker": "ARHS"
+    }
+  ],
+  "reason": "",
+  "rows": [],
+  "sha256": "3c37f7174e518dc34c2918b151c804ca9b08bdb03bcd382028a9d0143fdb9511",
+  "source": "no_same_day_panel"
+}

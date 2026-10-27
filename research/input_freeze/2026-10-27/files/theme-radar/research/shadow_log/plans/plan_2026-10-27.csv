@@ -1,0 +1,18 @@
+cell,signal_date,ticker,entry_date,hold_days,rules_sha256,source
+fresh_dcp_t1_ep_ge03_2d,2026-10-26,BESS,2026-10-27,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-27
+fresh_dcp_t1_ep_ge03_2d,2026-10-26,ENPH,2026-10-27,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-27
+fresh_dcp_t1_ep_ge03_2d,2026-10-26,GNS,2026-10-27,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-27
+fresh_dcp_t1_ep_ge03_2d,2026-10-26,OPTT,2026-10-27,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-27
+fresh_dcp_t1_ep_ge03_2d,2026-10-26,SRTM,2026-10-27,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-27
+fresh_dcp_t1_ep_ge03_2d,2026-10-26,VAI,2026-10-27,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-27
+fresh_dcp_t1_avoid_ah_3d,2026-10-26,BESS,2026-10-27,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-27
+fresh_dcp_t1_avoid_ah_3d,2026-10-26,EMPD,2026-10-27,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-27
+fresh_dcp_t1_avoid_ah_3d,2026-10-26,GEV,2026-10-27,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-27
+fresh_dcp_t1_avoid_ah_3d,2026-10-26,GNS,2026-10-27,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-27
+fresh_dcp_t1_avoid_ah_3d,2026-10-26,OPTT,2026-10-27,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-27
+fresh_dcp_t1_avoid_ah_3d,2026-10-26,SRTM,2026-10-27,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-27
+fresh_dcp_t1_avoid_ah_3d,2026-10-26,TAC,2026-10-27,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-27
+fresh_dcp_t1_avoid_ah_3d,2026-10-26,VAI,2026-10-27,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-27
+# status=fires rows=14 fpe_delta_t3_earn_today_3d=0 fresh_dcp_t1_ep_ge03_2d=6 fresh_dcp_t1_avoid_ah_3d=8
+# built_at_utc=2026-10-27T09:56:39Z signal_date=2026-10-26 entry_date=2026-10-27 builder_sha256=9e70523ee355d655b125ffd46f8ccd08a25fe762fccfa6ee08c97eb3c5d52840
+# inputs: {"dcp_candidates":["BAM","BESS","CBRE","EMPD","ENPH","ETR","GEV","GNS","OPTT","SRTM","STWD","TAC","VAI"],"dcp_prior_snapshot":"2026-10-23","earn_gate_n":0,"fails":"[]","features_T_sha256":"97511545c1ee3b636bed5271a90f8ea6ac4611ada40df033b21554a44d1b6d47","fpe_prior_snapshot":"2026-10-21","fpe_signal_n":1658,"letters_log":"rows 13 skipped {'2026-10-27': 0} FAILS []","letters_rows":13,"letters_sha256":"483b5c21cd3d2a78e834e41ffb9937d2112c8062f080db571f9df6f1135f3beb","membership":"fullscan@afb895254 (committed 2026-10-27T09:44:37Z) sha256=2cafec018941d7b8f688e033da0c1081345e5e75dc4fcd768caac9c2a0fbe398","skipped":"{'2026-10-27': 0}","snapshot_T_sha256":"b35d18fa0902591c2a08df6a8c8a8dc2e43f58171d1bd44f8fb46e473477d0b7","snapshots_after_T_ignored":[],"tr_head":"3d0dbe316","universe_log":"2026-10-27 cand 13 in membership 12 liquid 8 universe 13 excluded []"}

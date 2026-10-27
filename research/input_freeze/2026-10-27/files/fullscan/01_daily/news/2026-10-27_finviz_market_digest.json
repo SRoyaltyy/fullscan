@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-27",
+  "generated_at": "2026-10-27T04:20:46.256840-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-10-27",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point to mixed open with tech under pressure ahead of durable goods data and heavy pre-market earnings slate as oil trades near $102",
+  "raw_text": "- S&P 500 futures (@ES) are down 0.12%, Dow Jones futures (@YM) edge higher by 0.02%, Nasdaq 100 futures (@NQ) decline 0.39%, and Russell 2000 futures (@ER2) fall 0.18% in early trade\n- Coca-Cola (KO), Boeing (BA), UPS (UPS), Corning (GLW), and HCA Healthcare (HCA) are scheduled to report earnings before the open, setting up potential single-stock volatility\n- US durable goods orders data are due at 8:30 AM ET, followed by consumer confidence and new home sales releases at 10:00 AM ET\n- Overnight Asian shares advanced, led by a 1.73% gain in the Nikkei (@NKD)\n- European markets were mostly higher in the prior session\n- WTI oil futures (@CL) ticked up modestly near $102 while gold (@GC) declined\n- Monday’s session benefited from AI-related sentiment tied to Anthropic (ANTW)’s IPO filing, though current futures point to a pause in that momentum",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) are **down 0.12%**, **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) edge higher by **0.02%**, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) decline **0.39%**, and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) fall **0.18%** in early trade\n- **Coca-Cola** ([KO](https://finviz.com/quote?t=KO)), **Boeing** ([BA](https://finviz.com/quote?t=BA)), **UPS** ([UPS](https://finviz.com/quote?t=UPS)), **Corning** ([GLW](https://finviz.com/quote?t=GLW)), and **HCA Healthcare** ([HCA](https://finviz.com/quote?t=HCA)) are scheduled to report **earnings before the open**, setting up potential single-stock volatility\n- **US durable goods orders** data are due at **8:30 AM ET**, followed by **consumer confidence** and **new home sales** releases at **10:00 AM ET**\n- **Overnight Asian shares advanced**, led by a **1.73% gain** in the **Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD))\n- **European markets** were **mostly higher** in the prior session\n- **WTI oil futures** ([@CL](https://finviz.com/futures_charts?t=CL)) ticked up modestly near **$102** while **gold** ([@GC](https://finviz.com/futures_charts?t=GC)) **declined**\n- **Monday’s session benefited** from **AI-related sentiment** tied to **Anthropic** ([ANTW](https://finviz.com/quote?t=ANTW))’s **IPO filing**, though current futures point to a **pause in that momentum**",
+  "index_moves": [],
+  "oil": {
+    "name": "WTI",
+    "price": 102.0,
+    "verb": null,
+    "direction": null
+  },
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "KO",
+    "BA",
+    "UPS",
+    "GLW",
+    "HCA",
+    "ANTW"
+  ],
+  "named_leaders": [
+    "KO",
+    "BA",
+    "UPS",
+    "GLW",
+    "HCA",
+    "ANTW"
+  ],
+  "calendar": [
+    "Monday’s session benefited from AI-related sentiment tied to Anthropic (ANTW)’s IPO filing, though current futures point to a pause in that momentum"
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": true,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "US durable goods orders data are due at 8:30 AM ET, followed by consumer confidence and new home sales releases at 10:00 AM ET",
+      "Monday’s session benefited from AI-related sentiment tied to Anthropic (ANTW)’s IPO filing, though current futures point to a pause in that momentum"
+    ],
+    "text": "US durable goods orders data are due at 8:30 AM ET, followed by consumer confidence and new home sales releases at 10:00 AM ET Monday’s session benefited from AI-related sentiment tied to Anthropic (ANTW)’s IPO filing, though current futures point to a pause in that momentum"
+  },
+  "earnings_slate": {
+    "tickers": [
+      "KO",
+      "BA",
+      "UPS",
+      "GLW",
+      "HCA"
+    ],
+    "text": "Coca-Cola (KO), Boeing (BA), UPS (UPS), Corning (GLW), and HCA Healthcare (HCA) are scheduled to report earnings before the open, setting up potential single-stock volatility"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 318567,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-27T04:06:33.247",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}

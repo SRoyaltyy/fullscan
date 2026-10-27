@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-26",
+  "generated_at": "2026-10-26T16:31:38.675733-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-27",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-27) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed higher as Anthropic IPO filing lifted AI chip shares while Brazil-linked equities fell after Lula election surprise and energy lagged on weaker oil",
+  "raw_text": "- The Nasdaq ($COMP) rose about 0.8% to 26,169, the S&P 500 ($SPX) gained 0.7%, the Dow Jones Industrial Average ($DJI) added 0.3%, and the Russell 2000 (IWM) advanced about 0.4% on Monday.\n- Anthropic (ANTW)’s IPO S-1 showed first-half 2026 revenue of $16.3 billion, described as more than 1,300% year-over-year and 1,368% quarterly growth despite an $80.7 billion net loss, boosting AI sentiment across tech.\n- Nvidia (NVDA) climbed about 2.4%, Broadcom (AVGO) 2.3%, Micron Technology (MU) 3%, and AMD (AMD) 2.8% as investors bought AI chipmakers after Anthropic (ANTW) filed for an IPO, lifting sentiment about future GPU demand.\n- Tesla (TSLA) gained about 5% after Barclays (BCS) upgraded the stock to Overweight with a $450 price target, citing a potential SpaceX merger in its bull case.\n- Meta Platforms (META) declined about 1.9% after launching a $35 billion stock offering intended to fund its AI infrastructure build-out.\n- Surgery Partners (SGRY) jumped 47% after confirming a $5.7 billion all-cash acquisition of the company.\n- Range Resources (RRC) rose about 18% after announcing an all-stock merger agreement with EQT (EQT).\n- Brazilian-linked names sold off after an unexpected Lula election win as investors unwound Bolsonaro bets, with MercadoLibre (MELI) down about 8% and Brazilian ADRs sliding, including XP Inc (XP) off about 48%, Itau Unibanco (ITUB) down about 20%, and Banco Bradesco (BBD) lower by about 28%.\n- Tech and semiconductor shares led the market advance, while energy lagged as declining oil (@CL) prices pressured the sector.\n- After the close, Verizon (VZ) reported a Q3 earnings beat of $1.31 per share versus $1.27 expected, DoorDash (DASH) and Instacart traded in opposite directions on reported buyout talks, and investors eyed Tuesday’s reports from PayPal (PYPL), UPS (UPS), Boeing (BA), and Coca-Cola (KO) plus consumer-confidence data ahead of this week’s Fed policy decision.",
+  "raw_summary_md": "- The **Nasdaq** ([$COMP](https://finviz.com/index/COMP?p=d)) rose about **0.8%** to **26,169**, the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) gained **0.7%**, the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) added **0.3%**, and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) advanced about **0.4%** on **Monday**.\n- **Anthropic** ([ANTW](https://finviz.com/quote?t=ANTW))’s IPO S-1 showed first-half **2026** revenue of **$16.3 billion**, described as more than **1,300%** year-over-year and **1,368%** quarterly growth despite an **$80.7 billion** net loss, boosting **AI sentiment** across **tech**.\n- **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) climbed about **2.4%**, **Broadcom** ([AVGO](https://finviz.com/quote?t=AVGO)) **2.3%**, **Micron Technology** ([MU](https://finviz.com/quote?t=MU)) **3%**, and **AMD** ([AMD](https://finviz.com/quote?t=AMD)) **2.8%** as investors bought **AI chipmakers** after **Anthropic** ([ANTW](https://finviz.com/quote?t=ANTW)) filed for an **IPO**, lifting sentiment about future **GPU demand**.\n- **Tesla** ([TSLA](https://finviz.com/quote?t=TSLA)) gained about **5%** after **Barclays** ([BCS](https://finviz.com/quote?t=BCS)) upgraded the stock to **Overweight** with a **$450** price target, citing a potential **SpaceX merger** in its bull case.\n- **Meta Platforms** ([META](https://finviz.com/quote?t=META)) declined about **1.9%** after launching a **$35 billion** stock offering intended to fund its **AI infrastructure** build-out.\n- **Surgery Partners** ([SGRY](https://finviz.com/quote?t=SGRY)) jumped **47%** after confirming a **$5.7 billion** all-cash acquisition of the company.\n- **Range Resources** ([RRC](https://finviz.com/quote?t=RRC)) rose about **18%** after announcing an **all-stock merger agreement** with **EQT** ([EQT](https://finviz.com/quote?t=EQT)).\n- **Brazilian-linked names** sold off after an **unexpected Lula election win** as investors unwound **Bolsonaro bets**, with **MercadoLibre** ([MELI](https://finviz.com/quote?t=MELI)) down about **8%** and Brazilian ADRs sliding, including **XP Inc** ([XP](https://finviz.com/quote?t=XP)) off about **48%**, **Itau Unibanco** ([ITUB](https://finviz.com/quote?t=ITUB)) down about **20%**, and **Banco Bradesco** ([BBD](https://finviz.com/quote?t=BBD)) lower by about **28%**.\n- **Tech and semiconductor shares** led the market advance, while **energy** lagged as declining **oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices pressured the sector.\n- After the close, **Verizon** ([VZ](https://finviz.com/quote?t=VZ)) reported a Q3 **earnings beat** of **$1.31 per share versus $1.27 expected**, **DoorDash** ([DASH](https://finviz.com/quote?t=DASH)) and **Instacart** traded in **opposite directions** on reported **buyout talks**, and investors eyed **Tuesday’s reports** from **PayPal** ([PYPL](https://finviz.com/quote?t=PYPL)), **UPS** ([UPS](https://finviz.com/quote?t=UPS)), **Boeing** ([BA](https://finviz.com/quote?t=BA)), and **Coca-Cola** ([KO](https://finviz.com/quote?t=KO)) plus **consumer-confidence data** ahead of this week’s **Fed policy decision**.",
+  "index_moves": [
+    {
+      "name": "Nasdaq",
+      "code": "COMP",
+      "change_pct": 0.8,
+      "verb": "rose"
+    },
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 0.7,
+      "verb": "gained"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 0.3,
+      "verb": "added"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": 0.4,
+      "verb": "advanced"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "ANTW",
+    "NVDA",
+    "AVGO",
+    "MU",
+    "AMD",
+    "TSLA",
+    "BCS",
+    "META",
+    "SGRY",
+    "RRC",
+    "EQT",
+    "MELI",
+    "XP",
+    "ITUB",
+    "BBD",
+    "VZ",
+    "DASH",
+    "PYPL",
+    "UPS",
+    "BA",
+    "KO"
+  ],
+  "named_leaders": [
+    "ANTW",
+    "NVDA",
+    "AVGO",
+    "MU",
+    "AMD",
+    "TSLA",
+    "BCS",
+    "META",
+    "SGRY",
+    "RRC",
+    "EQT",
+    "MELI",
+    "XP",
+    "ITUB",
+    "BBD",
+    "VZ",
+    "DASH",
+    "PYPL",
+    "UPS",
+    "BA",
+    "KO"
+  ],
+  "calendar": [
+    "The Nasdaq ($COMP) rose about 0.8% to 26,169, the S&P 500 ($SPX) gained 0.7%, the Dow Jones Industrial Average ($DJI) added 0.3%, and the Russell 2000 (IWM) advanced about 0.4% on Monday.",
+    "After the close, Verizon (VZ) reported a Q3 earnings beat of $1.31 per share versus $1.27 expected, DoorDash (DASH) and Instacart traded in opposite directions on reported buyout talks, and investors eyed Tuesday’s reports from PayPal (PYPL), UPS (UPS), Boeing (BA), and Coca-Cola (KO) plus consumer-confidence data ahead of this week’s Fed policy decision."
+  ],
+  "prior_close": {
+    "spx": 0.7,
+    "nasdaq": 0.8,
+    "dow": 0.3
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "The Nasdaq ($COMP) rose about 0.8% to 26,169, the S&P 500 ($SPX) gained 0.7%, the Dow Jones Industrial Average ($DJI) added 0.3%, and the Russell 2000 (IWM) advanced about 0.4% on Monday.",
+      "After the close, Verizon (VZ) reported a Q3 earnings beat of $1.31 per share versus $1.27 expected, DoorDash (DASH) and Instacart traded in opposite directions on reported buyout talks, and investors eyed Tuesday’s reports from PayPal (PYPL), UPS (UPS), Boeing (BA), and Coca-Cola (KO) plus consumer-confidence data ahead of this week’s Fed policy decision."
+    ],
+    "text": "The Nasdaq ($COMP) rose about 0.8% to 26,169, the S&P 500 ($SPX) gained 0.7%, the Dow Jones Industrial Average ($DJI) added 0.3%, and the Russell 2000 (IWM) advanced about 0.4% on Monday. After the close, Verizon (VZ) reported a Q3 earnings beat of $1.31 per share versus $1.27 expected, DoorDash (DASH) and Instacart traded in opposite directions on reported buyout talks, and investors eyed Tuesday’s reports from PayPal (PYPL), UPS (UPS), Boeing (BA), and Coca-Cola (KO) plus consumer-confidence data ahead of this week’s Fed policy decision."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 318037,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-26T16:08:29.157",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
