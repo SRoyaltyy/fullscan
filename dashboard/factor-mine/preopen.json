@@ -203,6 +203,19 @@
           "s": -7.538,
           "sells": [],
           "sit": true
+        },
+        {
+          "buys": [],
+          "date": "2026-10-26",
+          "equity": 9316.01,
+          "mean": 0.0,
+          "picks": [],
+          "reasons": [
+            "seal not committed before 09:30 ET: never committed"
+          ],
+          "s": null,
+          "sells": [],
+          "sit": true
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -403,6 +416,19 @@
             "SRPT",
             "TNGX"
           ],
+          "sit": true
+        },
+        {
+          "buys": [],
+          "date": "2026-10-26",
+          "equity": 9139.37,
+          "mean": 0.0,
+          "picks": [],
+          "reasons": [
+            "seal not committed before 09:30 ET: never committed"
+          ],
+          "s": null,
+          "sells": [],
           "sit": true
         }
       ],
