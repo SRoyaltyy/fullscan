@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "generated_at": "2026-10-27T12:10:16.952604-04:00",
+  "generated_at": "2026-10-27T12:10:22.831281-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -2924,6 +2924,24 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARQT, EXEL, REGN, HRMY, BFLY"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-27T12:10:21.960316-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-27_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "href": {
@@ -3049,6 +3067,14 @@
       "path": "data/join/2026-10-27_ranked.csv",
       "at": "2026-10-27T12:10:17-04:00",
       "commit_msg": "auto: land join [2026-10-27]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "40532178795",
+      "manifest": "research/input_freeze/2026-10-27/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-27.json",
+      "at": "2026-10-27T12:10:23-04:00",
+      "commit_msg": "auto: land peer_rs [2026-10-27]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "40532178795",
       "manifest": "research/input_freeze/2026-10-27/manifest.json"

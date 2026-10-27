@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "generated_at": "2026-10-27T12:10:16.952604-04:00",
+  "generated_at": "2026-10-27T12:10:22.831281-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -147,31 +147,6 @@
   },
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-10-27",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-27T07:00:33.721503-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-27_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 6564176,
-          "preview": "raw=9173 usable=560 single=384 \u00b7 Today\u2019s Top Economic and Crypto Events: FOMC Day 1, US Durable Goods Orders - bl | IDR/USD: Indonesia 10-Year Yield at Four-Year High on MSCI Risk, Oil - Bloomberg | Asset Manager Australian Dollar Shorts Hit Record on Risk-Off - Bloomberg.com | AUD/USD Forecast: Holds above 0.7000 as Aussie CPI, FOMC loom - FXStreet | Iron Ore Declines to Two-Year Low as Demand Outlook Weakens - Bloomberg.com"
-        },
-        {
-          "path": "01_daily/news/2026-10-27_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 12554,
-          "preview": "# News Parse v2 \u2014 2026-10-27T07:00:32.979333-04:00\nWindow\u224848h | news_mode=on | raw=9173 | usable=560 | single_name=384 | noise_dropped=7956\nusable polarity={'+': 13, '-': 101, 'mixed': 3, 'neutral': 443}"
-        }
-      ],
-      "preview": "raw=9173 usable=560 single=384 \u00b7 Today\u2019s Top Economic and Crypto Events: FOMC Day 1, US Durable Goods Orders - bl | IDR/USD: Indonesia 10-Year Yield at Four-Year High on MSCI Risk, Oil - Bloomberg | Asset Manager Australian Dollar Shorts Hit Record on Risk-Off - Bloomberg.com | AUD/USD Forecast: Holds above 0.7000 as Aussie CPI, FOMC loom - FXStreet | Iron Ore Declines to Two-Year Low as Demand Outlook Weakens - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-10-27T07:00:32.979333-04:00\nWindow\u224848h | news_mode=on | raw=9173 | usable=560 | single_name=384 | noise_dropped=7956\nusable polarity={'+': 13, '-': 101, 'mixed': 3, 'neutral': 443}"
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -353,6 +328,24 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARQT, EXEL, REGN, HRMY, BFLY"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-27T12:10:21.960316-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-27_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
