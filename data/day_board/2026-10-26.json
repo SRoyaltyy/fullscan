@@ -3178,6 +3178,14 @@
       "workflow": "Finviz homepage market digest",
       "run_id": "40395370916",
       "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/exports/finviz_2026-10-26.csv",
+      "at": "2026-10-27T02:18:33-04:00",
+      "commit_msg": "auto: land finviz export [2026-10-26]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "40459635405",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
     }
   ]
 }
