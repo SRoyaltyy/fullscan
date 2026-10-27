@@ -1,16 +1,25 @@
 {
-  "job": "postclose",
+  "job": "all",
   "date": "2026-10-27",
   "source_date": "2026-10-26",
   "target_date": "2026-10-27",
   "book_date": "2026-10-26",
-  "generated_at": "2026-10-27T02:23:31.626929-04:00",
+  "generated_at": "2026-10-27T03:18:51.817230-04:00",
   "ok": false,
-  "n_fail": 2,
-  "n_warn": 7,
+  "n_fail": 13,
+  "n_warn": 29,
   "round": 1,
   "fix_actions": null,
   "checks": [
+    {
+      "step": "clock.finviz_preopen_scrape.yml",
+      "name": "Finviz pre-open scrape (GH-hosted Elite) ran on 2026-10-27",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-10-27 \u2014 file checks below decide",
+      "path": ""
+    },
     {
       "step": "clock.map_heat_postclose.yml",
       "name": "Map heat captain research (post-close) ran on 2026-10-26",
@@ -30,6 +39,96 @@
       "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/40422222144"
     },
     {
+      "step": "clock.preopen_all.yml",
+      "name": "Pre-Open ALL ran on 2026-10-27",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "n=1 latest=success event=push",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/40451041448"
+    },
+    {
+      "step": "clock.collect-news-rss.yml",
+      "name": "Collect: RSS News ran on 2026-10-27",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-10-27 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.collect-news-newsapi.yml",
+      "name": "Collect: NewsAPI ran on 2026-10-27",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-10-27 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.collect-news-reddit.yml",
+      "name": "Collect: Reddit ran on 2026-10-27",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-10-27 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.collect-market-yfinance.yml",
+      "name": "Collect: yfinance Market Data ran on 2026-10-27",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-10-27 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.collect-macro-fred.yml",
+      "name": "Collect: FRED Macro ran on 2026-10-27",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-10-27 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.collect-catalyst.yml",
+      "name": "Collect: Catalyst ran on 2026-10-27",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-10-27 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.insider_fetch.yml",
+      "name": "Insider Fetch ran on 2026-10-27",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-10-27 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.events_daily.yml",
+      "name": "Event Scanner (fallback yml) ran on 2026-10-27",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-10-27 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.news_judge.yml",
+      "name": "News judge (fallback yml) ran on 2026-10-27",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-10-27 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
       "step": "clock.label_weather.yml",
       "name": "Label + Weather ran on 2026-10-26",
       "group": "clock",
@@ -46,6 +145,15 @@
       "required": false,
       "detail": "n=1 latest=success event=workflow_dispatch",
       "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/40301039813"
+    },
+    {
+      "step": "clock.catalyst_daily.yml",
+      "name": "Catalyst daily (midday extra) ran on 2026-10-27",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-10-27 \u2014 file checks below decide",
+      "path": ""
     },
     {
       "step": "clock.daily_pipeline.yml",
@@ -75,6 +183,24 @@
       "path": ""
     },
     {
+      "step": "clock.news_grade.yml",
+      "name": "News Actions Grader ran on 2026-10-26",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-10-26 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.hit_board.yml",
+      "name": "HIT Board ran on 2026-10-26",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-10-26 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
       "step": "clock.stock_book_all.yml",
       "name": "Stock Book ALL ran on 2026-10-26",
       "group": "clock",
@@ -82,6 +208,96 @@
       "required": false,
       "detail": "n=4 latest=success event=schedule",
       "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/40386013194"
+    },
+    {
+      "step": "clock.excel_bot.yml",
+      "name": "Excel Bot (cluster signals) ran on 2026-10-27",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-10-27 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "clock.deploy-dashboard.yml",
+      "name": "Deploy dashboard to Pages ran on 2026-10-26",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=0 on 2026-10-26 \u2014 file checks below decide",
+      "path": ""
+    },
+    {
+      "step": "scrape.digest_json",
+      "name": "Quote-page digest JSON (*_finviz_digest)",
+      "group": "scrape",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/news/2026-10-27_finviz_digest.json"
+    },
+    {
+      "step": "scrape.digest_md",
+      "name": "Quote-page digest MD (*_finviz_digest)",
+      "group": "scrape",
+      "status": "WARN",
+      "required": false,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/news/2026-10-27_finviz_digest.md"
+    },
+    {
+      "step": "scrape.market_digest_json",
+      "name": "Homepage warm-up JSON (*_finviz_market_digest)",
+      "group": "scrape",
+      "status": "WARN",
+      "required": false,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/news/2026-10-27_finviz_market_digest.json"
+    },
+    {
+      "step": "scrape.market_digest_md",
+      "name": "Homepage warm-up MD (*_finviz_market_digest)",
+      "group": "scrape",
+      "status": "WARN",
+      "required": false,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/news/2026-10-27_finviz_market_digest.md"
+    },
+    {
+      "step": "scrape.market_digest_close_json",
+      "name": "Close answer-key JSON (*_finviz_market_digest_close)",
+      "group": "scrape",
+      "status": "WARN",
+      "required": false,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/news/2026-10-27_finviz_market_digest_close.json"
+    },
+    {
+      "step": "scrape.market_digest_close_md",
+      "name": "Close answer-key MD (*_finviz_market_digest_close)",
+      "group": "scrape",
+      "status": "WARN",
+      "required": false,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/news/2026-10-27_finviz_market_digest_close.md"
+    },
+    {
+      "step": "scrape.map_heat",
+      "name": "Map heat JSON (groups + morning overlay)",
+      "group": "scrape",
+      "status": "FAIL",
+      "required": true,
+      "detail": "PASS-OVER from date=2026-10-26 (want 2026-10-27)",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/map_heat/2026-10-27_map_heat.json"
+    },
+    {
+      "step": "scrape.tape",
+      "name": "Futures tape + overlay_at today",
+      "group": "scrape",
+      "status": "FAIL",
+      "required": true,
+      "detail": "overlay_at=2026-10-26T04:33:19.374060-04:00 (pass-over / not overlaid today)",
+      "path": ""
     },
     {
       "step": "postclose.map_heat_json",
@@ -136,6 +352,249 @@
       "required": false,
       "detail": "n=0",
       "path": ""
+    },
+    {
+      "step": "preopen.in_digest",
+      "name": "INPUT: Quote-page digest (*_finviz_digest)",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/news/2026-10-27_finviz_digest.json"
+    },
+    {
+      "step": "preopen.in_market_digest",
+      "name": "INPUT: Homepage warm-up (*_finviz_market_digest)",
+      "group": "preopen",
+      "status": "WARN",
+      "required": false,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/news/2026-10-27_finviz_market_digest.json"
+    },
+    {
+      "step": "preopen.in_baseline",
+      "name": "INPUT: last-night captain baseline",
+      "group": "preopen",
+      "status": "OK",
+      "required": true,
+      "detail": "phase=postclose_baseline 187513 bytes",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/map_heat/2026-10-27_research_baseline.json"
+    },
+    {
+      "step": "preopen.news_parse_json",
+      "name": "News parse JSON",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/news/2026-10-27_parsed.json"
+    },
+    {
+      "step": "preopen.events",
+      "name": "Event scanner (primary, NOT carry)",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/events/2026-10-27_events.json"
+    },
+    {
+      "step": "preopen.judge_md",
+      "name": "News judge MD",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/news/2026-10-27_judge.md"
+    },
+    {
+      "step": "preopen.research_json",
+      "name": "Map-heat morning refresh JSON",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/map_heat/2026-10-27_research.json"
+    },
+    {
+      "step": "preopen.research_md",
+      "name": "Map-heat morning refresh MD",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/map_heat/2026-10-27_research.md"
+    },
+    {
+      "step": "preopen.actions",
+      "name": "News actions JSON",
+      "group": "preopen",
+      "status": "WARN",
+      "required": false,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/news/2026-10-27_actions.json"
+    },
+    {
+      "step": "preopen.catalyst_json",
+      "name": "Catalyst dossiers JSON",
+      "group": "preopen",
+      "status": "WARN",
+      "required": false,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/catalyst/2026-10-27_dossiers.json"
+    },
+    {
+      "step": "preopen.general",
+      "name": "General market predict",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/general/2026-10-27_predict.md"
+    },
+    {
+      "step": "preopen.sector.basic_materials",
+      "name": "Sector predict \u2014 Basic Materials",
+      "group": "preopen",
+      "status": "OK",
+      "required": false,
+      "detail": "optional \u2014 not run",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/sectors/2026-10-27/basic_materials_predict.md"
+    },
+    {
+      "step": "preopen.sector.communication_services",
+      "name": "Sector predict \u2014 Communication Services",
+      "group": "preopen",
+      "status": "OK",
+      "required": false,
+      "detail": "optional \u2014 not run",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/sectors/2026-10-27/communication_services_predict.md"
+    },
+    {
+      "step": "preopen.sector.consumer_cyclical",
+      "name": "Sector predict \u2014 Consumer Cyclical",
+      "group": "preopen",
+      "status": "OK",
+      "required": false,
+      "detail": "optional \u2014 not run",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/sectors/2026-10-27/consumer_cyclical_predict.md"
+    },
+    {
+      "step": "preopen.sector.consumer_defensive",
+      "name": "Sector predict \u2014 Consumer Defensive",
+      "group": "preopen",
+      "status": "OK",
+      "required": false,
+      "detail": "optional \u2014 not run",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/sectors/2026-10-27/consumer_defensive_predict.md"
+    },
+    {
+      "step": "preopen.sector.energy",
+      "name": "Sector predict \u2014 Energy",
+      "group": "preopen",
+      "status": "OK",
+      "required": false,
+      "detail": "optional \u2014 not run",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/sectors/2026-10-27/energy_predict.md"
+    },
+    {
+      "step": "preopen.sector.financial",
+      "name": "Sector predict \u2014 Financial",
+      "group": "preopen",
+      "status": "OK",
+      "required": false,
+      "detail": "optional \u2014 not run",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/sectors/2026-10-27/financial_predict.md"
+    },
+    {
+      "step": "preopen.sector.healthcare",
+      "name": "Sector predict \u2014 Healthcare",
+      "group": "preopen",
+      "status": "OK",
+      "required": false,
+      "detail": "optional \u2014 not run",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/sectors/2026-10-27/healthcare_predict.md"
+    },
+    {
+      "step": "preopen.sector.industrials",
+      "name": "Sector predict \u2014 Industrials",
+      "group": "preopen",
+      "status": "OK",
+      "required": false,
+      "detail": "optional \u2014 not run",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/sectors/2026-10-27/industrials_predict.md"
+    },
+    {
+      "step": "preopen.sector.real_estate",
+      "name": "Sector predict \u2014 Real Estate",
+      "group": "preopen",
+      "status": "OK",
+      "required": false,
+      "detail": "optional \u2014 not run",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/sectors/2026-10-27/real_estate_predict.md"
+    },
+    {
+      "step": "preopen.sector.technology",
+      "name": "Sector predict \u2014 Technology",
+      "group": "preopen",
+      "status": "OK",
+      "required": false,
+      "detail": "optional \u2014 not run",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/sectors/2026-10-27/technology_predict.md"
+    },
+    {
+      "step": "preopen.sector.utilities",
+      "name": "Sector predict \u2014 Utilities",
+      "group": "preopen",
+      "status": "OK",
+      "required": false,
+      "detail": "optional \u2014 not run",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/sectors/2026-10-27/utilities_predict.md"
+    },
+    {
+      "step": "preopen.sector_count",
+      "name": "\u22658/11 quality sector predicts",
+      "group": "preopen",
+      "status": "OK",
+      "required": false,
+      "detail": "0/11 optional",
+      "path": ""
+    },
+    {
+      "step": "preopen.board",
+      "name": "Sector board JSON",
+      "group": "preopen",
+      "status": "WARN",
+      "required": false,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/sectors/2026-10-27/_board.json"
+    },
+    {
+      "step": "preopen.qc",
+      "name": "Pre-open QC JSON",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/2026-10-27_preopen_qc.json"
+    },
+    {
+      "step": "preopen.status_json",
+      "name": "Pre-open status JSON",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/2026-10-27_preopen_status.json"
+    },
+    {
+      "step": "preopen.grok_review_json",
+      "name": "Grok text review JSON",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/runner/work/fullscan/fullscan/01_daily/2026-10-27_grok_review.json"
     },
     {
       "step": "book.finviz",
@@ -276,36 +735,36 @@
       "step": "outcome.general",
       "name": "General outcome (graded call)",
       "group": "outcome",
-      "status": "FAIL",
+      "status": "OK",
       "required": true,
-      "detail": "DID NOT RUN \u2014 file missing",
+      "detail": "28202 bytes",
       "path": "/home/runner/work/fullscan/fullscan/01_daily/general/2026-10-26_outcome.md"
     },
     {
       "step": "outcome.reflect",
       "name": "General reflect MD",
       "group": "outcome",
-      "status": "WARN",
+      "status": "OK",
       "required": false,
-      "detail": "DID NOT RUN \u2014 file missing",
+      "detail": "6001 bytes",
       "path": "/home/runner/work/fullscan/fullscan/01_daily/general/2026-10-26_reflect.md"
     },
     {
       "step": "outcome.candidate",
       "name": "Candidate lesson filed today",
       "group": "outcome",
-      "status": "WARN",
+      "status": "OK",
       "required": false,
-      "detail": "n=0",
+      "detail": "n=1",
       "path": ""
     },
     {
       "step": "outcome.sector_count",
       "name": "Sector outcomes graded (>=8/11)",
       "group": "outcome",
-      "status": "FAIL",
-      "required": true,
-      "detail": "0/11",
+      "status": "OK",
+      "required": false,
+      "detail": "SKIPPED \u2014 no sector predict files that day (sectors optional)",
       "path": ""
     },
     {
@@ -339,9 +798,9 @@
       "step": "learn.book_policy",
       "name": "book_policy.json (learned ranker weights)",
       "group": "learn",
-      "status": "FAIL",
+      "status": "OK",
       "required": false,
-      "detail": "PASS-OVER from asof=2026-10-23 (want 2026-10-26)",
+      "detail": "11495 bytes",
       "path": "/home/runner/work/fullscan/fullscan/00_grounding/book_policy.json"
     },
     {
