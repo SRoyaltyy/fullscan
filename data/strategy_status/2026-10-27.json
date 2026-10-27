@@ -26,8 +26,8 @@
    "SIT": 0
   },
   "holdup": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "paper": {
@@ -52,7 +52,7 @@
   }
  },
  "date": "2026-10-27",
- "generated_at": "2026-10-27T08:16:06-04:00",
+ "generated_at": "2026-10-27T09:01:36-04:00",
  "strategies": [
   {
    "buys": [
@@ -5203,13 +5203,21 @@
    "status": "OK"
   },
   {
-   "buys": [],
+   "buys": [
+    "BRZE",
+    "LQDA",
+    "UWMC",
+    "POOL"
+   ],
    "family": "holdup",
    "name": "holdup",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-10-27T12:20:56Z",
+   "sells": [
+    "BMBL 344",
+    "NAUT 653"
+   ],
    "source": "research/hot_n4_clean_v4/forward/holdup_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
