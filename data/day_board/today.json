@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "generated_at": "2026-10-27T06:13:23.175885-04:00",
+  "generated_at": "2026-10-27T06:13:34.718695-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,59 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-10-27",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-27T05:50:54.007783-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-10-27_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1481035,
-          "preview": "1d BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
-        },
-        {
-          "path": "data/stock_book/2026-10-27_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-10-27_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2594,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-10-27_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12449,
-          "preview": "2026-10-27 BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12449,
-          "preview": "2026-10-27 BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
-        },
-        {
-          "path": "01_daily/2026-10-27_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 85465,
-          "preview": "# Stock book \u2014 2026-10-27\n_Generated 2026-10-27T05:47:51.565697-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-27 BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 2026-10-27 BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 # Stock book \u2014 2026-10-27\n_Generated 2026-10-27T05:47:51.565697-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -389,6 +336,24 @@
         }
       ],
       "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-27\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-10-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-27T06:13:34.536788-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-10-27_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1122695,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
