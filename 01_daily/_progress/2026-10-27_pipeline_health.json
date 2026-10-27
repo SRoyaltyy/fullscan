@@ -5,14 +5,14 @@
   "run_id": "40451051088",
   "model": "",
   "started_at": "2026-10-27T00:56:15-04:00",
-  "updated_at": "2026-10-27T03:18:51-04:00",
-  "heartbeat_at": "2026-10-27T03:18:51-04:00",
+  "updated_at": "2026-10-27T03:19:13-04:00",
+  "heartbeat_at": "2026-10-27T03:19:13-04:00",
   "stages": [
     {
       "name": "audit",
-      "state": "running",
+      "state": "ok",
       "started_at": "2026-10-27T00:56:15-04:00",
-      "ended_at": "",
+      "ended_at": "2026-10-27T03:19:13-04:00",
       "heartbeat_at": "2026-10-27T03:18:51-04:00",
       "done": 1,
       "total": 1,
