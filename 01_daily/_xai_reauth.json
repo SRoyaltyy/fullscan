@@ -1,13 +1,13 @@
 {
   "status": "expiring",
   "oauth": "WARN",
-  "pong_ok": true,
-  "reason": "xAI token expiring but still usable | Config        : ~/.openclaw/openclaw.json Agent dir     : ~/.openclaw/agents/main/agent Default       : xai/grok-4.6 Fal",
+  "pong_ok": false,
+  "reason": "",
   "user_code": null,
   "verification_uri": "https://accounts.x.ai/oauth2/device",
   "expires_at": null,
-  "updated_at": "2026-10-19T19:11:13.118987-04:00",
+  "updated_at": "2026-10-27T00:56:38.952588-04:00",
   "source": "pipeline_health",
   "job": "postclose",
-  "date": "2026-10-19"
+  "date": "2026-10-27"
 }
