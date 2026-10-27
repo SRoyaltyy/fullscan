@@ -51,39 +51,18 @@ concurrency:
 
 jobs:
   health:
-    runs-on: [self-hosted, ecs]
-    timeout-minutes: 180
+    # 2026-10-27: ECS retired (Cyrus unsubscribed). Hosted runner; door/systemd checks skipped.
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
     env:
-      HOME: /home/gha
-      FULLSCAN_HOME: /home/gha
+      FULLSCAN_ECS: "0"
       GROK_ONLY: "0"
       HEALTH_HEAL_ROUNDS: "1"
     steps:
-      - name: Clear stale git index.lock (shared ECS workspace)
-        shell: bash
-        run: |
-          # A job killed mid-checkout leaves .git/index.lock; the next checkout then hangs.
-          # One ECS runner, so a lock older than 1 minute before checkout is stale.
-          W="${GITHUB_WORKSPACE:-.}"
-          for L in "$W/.git/index.lock" "$W/.git/shallow.lock" "$W/.git/HEAD.lock"; do
-            if [ -n "$(find "$L" -mmin +1 2>/dev/null)" ]; then echo "removing stale $L"; rm -f "$L" || sudo -n rm -f "$L" || true; fi
-          done
-          if [ "$(git -C "$W" config --get core.sparseCheckout 2>/dev/null)" = "true" ]; then
-            echo "::warning::shared ECS workspace is sparse; this checkout re-materializes the full tree"
-          fi
       - uses: actions/checkout@v4
         with:
           clean: false
-          fetch-depth: 0
-
-      - name: Full tree after leftover sparse-checkout
-        run: |
-          # Shared ECS work dir keeps a prior job's sparse-checkout.
-          git sparse-checkout disable || true
-          test -f requirements.txt || {
-            echo "ERROR: requirements.txt missing. A prior job left git sparse-checkout enabled on this self-hosted runner."
-            exit 1
-          }
+          fetch-depth: 1
 
       - uses: actions/setup-python@v5
         with:
@@ -102,7 +81,6 @@ jobs:
           GROK_ONLY: "0"
         run: |
           set -uo pipefail
-          export HOME=/home/gha
           DATE_P="${{ github.event.inputs.date }}"
           DATE_P="${DATE_P:-$(TZ=America/New_York date +%F)}"
           python3 -m src.workflow_progress beat --workflow pipeline_health --date "$DATE_P" --stages audit --stage audit >> /tmp/progress_beat.log 2>&1 &
@@ -149,7 +127,6 @@ jobs:
       - name: Commit health report
         if: always()
         run: |
-          export HOME=/home/gha
           bash scripts/safe_git_push.sh \
             "chore: pipeline health heal [$(date -u +%F_%H%M)]" \
             01_daily/*_pipeline_health.md \

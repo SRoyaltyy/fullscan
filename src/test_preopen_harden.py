@@ -228,9 +228,10 @@ def test_preopen_unattended_clock_is_ecs() -> None:
     orch = (ROOT / ".github" / "workflows" / "daily_orchestrator.yml").read_text(
         encoding="utf-8")
     assert 'cron: "55 9 * * 1-5"' in yml
-    assert "github.event.inputs.runner == 'ubuntu'" in yml
+    # 2026-10-27: ECS retired; unattended Pre-Open runs hosted.
+    assert "github.event.inputs.runner == 'ecs'" in yml
     assert "dispatch_preopen_ubuntu" in orch
-    assert '-f "inputs[runner]=ecs"' in orch
+    assert '-f "inputs[runner]=ubuntu"' in orch
     assert "inputs[llm_backend]=grok" in orch
     assert "maybe preopen_all.yml" in orch
 

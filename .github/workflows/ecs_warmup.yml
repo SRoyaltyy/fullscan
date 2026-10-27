@@ -6,10 +6,8 @@ name: ECS warm-up (refresh shared checkout before Pre-Open)
 # at ~02:30 ET so Pre-Open (05:55 ET) fetches a few hours of delta.
 # Read-only: no commit, no push, no book/ledger writes, no secrets beyond
 # the read-only job token used by actions/checkout.
+# 2026-10-27: ECS retired (Cyrus unsubscribed). schedule/push triggers removed; manual only.
 on:
-  schedule:
-    # 06:30 UTC = 02:30 EDT / 01:30 EST, Mon-Fri.
-    - cron: "30 6 * * 1-5"
   workflow_dispatch:
 
 permissions:

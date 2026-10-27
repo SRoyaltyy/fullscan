@@ -785,8 +785,17 @@ def _pull_book_paths(date: str) -> None:
 # A. Door
 # ---------------------------------------------------------------------------
 
+# 2026-10-27: ECS (ecs-openclaw) is retired; Cyrus unsubscribed. The door and
+# systemd clock checks only make sense on that box, so they are skipped unless
+# FULLSCAN_ECS=1. deepseek-web is the normal model path.
+ECS_RETIRED = os.environ.get("FULLSCAN_ECS", "0") != "1"
+
+
 def check_runtime(report: Report, skip_probe: bool = False) -> None:
     print("\n== A. DOOR (OpenClaw) ==", flush=True)
+    if ECS_RETIRED:
+        print("ECS retired 2026-10-27: OpenClaw door checks skipped", flush=True)
+        return
     home = os.environ.get("HOME") or ""
     _add(report, step="runtime.home", name="HOME is /home/gha on ECS",
          group="runtime",
@@ -943,7 +952,7 @@ def _gh_runs(date_map: dict[str, str]) -> list[dict]:
 def check_clocks(report: Report, job: str, preopen_date: str,
                  postclose_night: str, book_date: str) -> None:
     print("\n== B. DID THE JOBS FIRE ==", flush=True)
-    for unit, label, req in (
+    for unit, label, req in () if ECS_RETIRED else (
         ("fullscan-preopen.timer", "systemd pre-open timer enabled", job == "preopen"),
         ("fullscan-preopen.service", "systemd pre-open service (now)", False),
         ("fullscan-map-postclose.timer", "systemd post-close timer enabled",
@@ -961,7 +970,8 @@ def check_clocks(report: Report, job: str, preopen_date: str,
              detail=val or "not found")
 
     clock = ROOT / "01_daily" / "_ecs_clock.md"
-    artifact(report, step="clock.ecs_clock", name="ECS clock file written",
+    if not ECS_RETIRED:
+      artifact(report, step="clock.ecs_clock", name="ECS clock file written",
              group="clock", path=clock, required=False, expected_date=preopen_date)
 
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""

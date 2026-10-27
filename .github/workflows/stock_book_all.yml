@@ -19,7 +19,7 @@ on:
       runner:
         description: "ecs (OpenClaw) or ubuntu (GitHub-hosted). ubuntu cannot reach Grok."
         required: false
-        default: "ecs"
+        default: "ubuntu"
         type: choice
         options:
           - ecs
@@ -83,8 +83,8 @@ concurrency:
   # Ubuntu heal must not queue behind a 6h ECS Grok book.
   # Ubuntu twins cancel each other (09-08 commit-race pile-up).
   # ECS Grok stays uncanceled.
-  group: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 'stock-book-all-ubuntu' || 'stock-book-all-ecs' }}
-  cancel-in-progress: ${{ github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu' }}
+  group: ${{ (github.event.inputs.runner != 'ecs') && 'stock-book-all-ubuntu' || 'stock-book-all-ecs' }}
+  cancel-in-progress: ${{ github.event.inputs.runner != 'ecs' }}
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -131,14 +131,14 @@ jobs:
   all:
     needs: gate
     if: needs.gate.outputs.go == 'yes'
-    runs-on: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
-    timeout-minutes: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && 90 || 360 }}
+    runs-on: ${{ (github.event.inputs.runner == 'ecs') && fromJSON('["self-hosted","ecs"]') || 'ubuntu-latest' }}
+    timeout-minutes: ${{ (github.event.inputs.runner != 'ecs') && 90 || 360 }}
     env:
       # ECS persist / OpenClaw live under /home/gha. ubuntu-latest
       # (schedule / push / workflow_run / explicit ubuntu) must keep
       # the runner home or pip/git write to a missing directory.
-      FULLSCAN_HOME: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
-      HOME: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_run' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      FULLSCAN_HOME: ${{ (github.event.inputs.runner != 'ecs') && '/home/runner' || '/home/gha' }}
+      HOME: ${{ (github.event.inputs.runner != 'ecs') && '/home/runner' || '/home/gha' }}
       FINVIZ_SKIP_LIVE: "1"
       FULLSCAN_LAND: "1"
     steps:

@@ -372,13 +372,13 @@ def assert_preopen_job(text: str, *, source: str = "preopen_all.yml") -> None:
     if not raw:
         raise AssertionError(f"{source}: job `preopen` has no runs-on")
 
-    # 2026-10-15: schedule/push go to ECS (only box with Grok).
+    # 2026-10-27: ECS retired; schedule/push run hosted.
     for ev in ("push", "schedule"):
         unattended = as_labels(eval_runs_on(raw, event_name=ev, runner=""))
-        if unattended != ECS_LABELS:
+        if unattended != ["ubuntu-latest"]:
             raise AssertionError(
                 f"{source}: preopen {ev} resolved to {unattended}, "
-                f"expected {ECS_LABELS}"
+                "expected ['ubuntu-latest']"
             )
     ubuntu_dispatch = as_labels(
         eval_runs_on(raw, event_name="workflow_dispatch", runner="ubuntu")
@@ -482,9 +482,9 @@ def test_good_fromjson_resolves_both_branches() -> None:
     assert eval_runs_on(
         good, event_name="workflow_dispatch", runner="ecs"
     ) == ECS_LABELS
-    # assert_preopen_job now requires schedule/push -> ECS (2026-10-15).
-    new = ("${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' "
-           "|| fromJSON('[\"self-hosted\",\"ecs\"]') }}")
+    # 2026-10-27: assert_preopen_job requires schedule/push -> hosted (ECS retired).
+    new = ("${{ github.event.inputs.runner == 'ecs' && fromJSON('[\"self-hosted\",\"ecs\"]') "
+           "|| 'ubuntu-latest' }}")
     assert_preopen_job(
         "jobs:\n  preopen:\n    runs-on: " + new + "\n",
         source="good.yml",
@@ -538,14 +538,15 @@ def test_preopen_all_job_resolves_ubuntu_and_ecs() -> None:
     # Mode 43: push, schedule, and the button reach ECS unless ubuntu is
     # explicit (assert_preopen_job).
     runner = text.split("runner:", 1)[1].split("run_date:", 1)[0]
-    assert 'default: "ecs"' in runner
-    assert 'default: "ubuntu"' not in runner
+    # 2026-10-27: ECS retired; hosted is the default.
+    assert 'default: "ubuntu"' in runner
+    assert 'default: "ecs"' not in runner
     # Mode 39: the 05:55 schedule lands on ECS and has no runner input.
     # The in-job renew must run there. Only an explicit ubuntu dispatch skips it.
     renew = text.split("Renew xAI if the token dies before this run ends", 1)[1]
     renew = renew.split("- name: Pre-Open ALL", 1)[0]
-    assert "github.event.inputs.runner != 'ubuntu'" in renew
-    assert "github.event_name == 'workflow_dispatch' && github.event.inputs.runner == 'ecs'" not in renew
+    # 2026-10-27: ECS retired; the in-job Grok renew runs only on an explicit ecs dispatch.
+    assert "github.event.inputs.runner == 'ecs'" in renew
 
 
 def test_stock_book_all_fromjson_resolves() -> None:

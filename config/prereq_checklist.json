@@ -255,27 +255,7 @@
   "preopen_all": [
    {
     "id": "ecs_code_current",
-    "plain": "ecs code stale: code on this ECS checkout (src, scripts, config, .github) must match GitHub main"
-   },
-   {
-    "id": "runner_is_ecs",
-    "plain": "Pre-Open is not on the ECS box (GitHub's own servers cannot reach Grok)"
-   },
-   {
-    "id": "backend_grok",
-    "plain": "LLM_BACKEND is not grok",
-    "expect": "grok"
-   },
-   {
-    "id": "gateway_up",
-    "plain": "OpenClaw gateway 127.0.0.1:18789 did not answer within 5s",
-    "url": "http://127.0.0.1:18789/health",
-    "timeout_s": 5
-   },
-   {
-    "id": "xai_token_outlives_run",
-    "plain": "xAI login expires before this run can finish (needs >= 75 min left)",
-    "min_left_min": 75
+    "plain": "code stale: this checkout's code (src, scripts, config, .github) must match GitHub main"
    },
    {
     "id": "no_unapproved_paid_fallback",
@@ -301,5 +281,14 @@
     "plain": "predict missing: 01_daily/general/<date>_predict.md is not on main"
    }
   ]
+ },
+ "checks_retired_2026_10_27": {
+  "preopen_all": [
+   "backend_grok",
+   "gateway_up",
+   "runner_is_ecs",
+   "xai_token_outlives_run"
+  ],
+  "why": "ECS (ecs-openclaw) retired; Cyrus unsubscribed. deepseek-web is the normal model path."
  }
 }
