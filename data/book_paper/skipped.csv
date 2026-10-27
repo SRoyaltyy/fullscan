@@ -401,7 +401,7 @@ date,ticker,side,conviction,reason
 2026-10-14,PRCH,BUY,0.5404266780690136,day gate CLOSED: predict DOWN score -1.65 < +1.00
 2026-10-14,TMUS,BUY,0.4429443674043055,day gate CLOSED: predict DOWN score -1.65 < +1.00
 2026-10-14,UPWK,BUY,0.4411786722204654,day gate CLOSED: predict DOWN score -1.65 < +1.00
-2026-10-15,MQ,BUY,0.7904010382375091,no exit price (unsettleable)
+2026-10-15,MQ,BUY,0.7904010382375091,"insufficient cash ($10,566 > $307)"
 2026-10-15,AMN,BUY,0.6750506257507881,"insufficient cash ($10,563 > $307)"
 2026-10-15,IT,BUY,0.5855093291752584,"insufficient cash ($10,368 > $307)"
 2026-10-15,CON,BUY,0.5830630579022049,"insufficient cash ($10,535 > $307)"
@@ -409,13 +409,13 @@ date,ticker,side,conviction,reason
 2026-10-15,ASTH,BUY,0.48793905530768616,"insufficient cash ($10,538 > $307)"
 2026-10-15,HITI,BUY,0.37652405660275373,"insufficient cash ($10,616 > $307)"
 2026-10-15,NTAP,BUY,0.2924494562525348,"insufficient cash ($10,522 > $307)"
-2026-10-16,MQ,BUY,0.8511789715391587,no exit price (unsettleable)
-2026-10-16,PRCH,BUY,0.7457274747806698,no exit price (unsettleable)
-2026-10-16,WAY,BUY,0.6546862774511255,no exit price (unsettleable)
+2026-10-16,TOST,BUY,0.6468419674087901,"insufficient cash ($10,312 > $8,853)"
+2026-10-16,IT,BUY,0.627017225665278,"insufficient cash ($10,270 > $8,853)"
 2026-10-16,EZPW,BUY,0.5800061502991833,no exit price (unsettleable)
 2026-10-16,LAUR,BUY,0.5302736707886009,no exit price (unsettleable)
-2026-10-16,ABX,BUY,0.4913072001518869,no exit price (unsettleable)
-2026-10-16,VEEV,BUY,0.38742739960243766,"insufficient cash ($10,244 > $8,931)"
+2026-10-16,ABX,BUY,0.4913072001518869,"insufficient cash ($10,336 > $8,853)"
+2026-10-16,TRU,BUY,0.4908549938624168,"insufficient cash ($10,300 > $8,853)"
+2026-10-16,VEEV,BUY,0.38742739960243766,"insufficient cash ($10,244 > $8,853)"
 2026-10-19,CDNA,BUY,0.8337797636157818,no exit price (unsettleable)
 2026-10-19,PRCH,BUY,0.8070181406744832,no exit price (unsettleable)
 2026-10-19,BLFS,BUY,0.7855905743942335,no session bar (price data missing)
@@ -461,3 +461,10 @@ date,ticker,side,conviction,reason
 2026-10-23,AMN,BUY,0.6555300606786498,day gate CLOSED: predict DOWN score -7.54 < +1.00
 2026-10-23,BLFS,BUY,0.725232707786846,day gate CLOSED: predict DOWN score -7.54 < +1.00
 2026-10-23,IT,BUY,0.4741305297839037,day gate CLOSED: predict DOWN score -7.54 < +1.00
+2026-10-26,CON,BUY,0.6919862014728797,day gate CLOSED: predict DOWN score -2.13 < +1.00
+2026-10-26,AMN,BUY,0.732539869623172,day gate CLOSED: predict DOWN score -2.13 < +1.00
+2026-10-26,PACS,BUY,0.7648840344805037,day gate CLOSED: predict DOWN score -2.13 < +1.00
+2026-10-26,SGRY,BUY,0.6041642603585892,day gate CLOSED: predict DOWN score -2.13 < +1.00
+2026-10-26,ASTH,BUY,0.559410352699385,day gate CLOSED: predict DOWN score -2.13 < +1.00
+2026-10-26,NTAP,BUY,0.3935820048123788,day gate CLOSED: predict DOWN score -2.13 < +1.00
+2026-10-26,MQ,BUY,0.7773147187519314,day gate CLOSED: predict DOWN score -2.13 < +1.00
