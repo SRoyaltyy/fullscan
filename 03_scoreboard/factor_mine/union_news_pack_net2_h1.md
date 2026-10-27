@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **+4.89%** ($10,489) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 101 · skips 28 · realized $+1837.87.
+Cash book **+4.10%** ($10,410) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 103 · skips 28 · realized $+1837.87.
 
 ## How this sleeve decides (like you are 10)
 
@@ -279,6 +279,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,132.94 | ▼ close $10,489.20 vs 09:30 $10,547.69 (session -52.32) | 16:00 close · cash $5,132.94 · equity $10,489.20 vs 09:30 $10,547.69 (-58.49; session marks -52.32) · 1 name(s) marked open→close (per-name table). AMX×218 09:30 $24.81 → close $24.57 -52.32 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,132.94 | ▲ 09:30 equity $10,489.20 vs yday $10,489.20 (+0.00) | 09:30 open · cash $5,132.94 (unchanged overnight, no fees) · equity $10,489.20 vs prior close $10,489.20 (+0.00) · 1 name(s) re-marked at the open (per-name table). AMX×218 yday $24.57 → 09:30 $24.57 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,132.94 | ▲ close $10,489.20 vs 09:30 $10,489.20 (session +0.00) | 16:00 close · cash $5,132.94 · equity $10,489.20 vs 09:30 $10,489.20 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). AMX×218 09:30 $24.57 → close $24.57 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,132.94 | ▼ 09:30 equity $10,423.80 vs yday $10,489.20 (-65.40) | 09:30 open · cash $5,132.94 (unchanged overnight, no fees) · equity $10,423.80 vs prior close $10,489.20 (-65.40) · 1 name(s) re-marked at the open (per-name table). AMX×218 yday $24.57 → 09:30 $24.27 -65.40 | — |
+| 2026-10-27 09:30 ET | **SELL** | `AMX` | 218 | $24.27 | $2.89 | $+572.00 | $10,420.91 | ▲ +572.00 after sell → book $10,420.91; vs 09:30 mark -2.89 | exit unpriced hold on first bar after 9 sess | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RY` | 51 | $203.19 | $2.14 | — | $56.08 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+3.8; leftover $10420.91 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $56.08 | ▼ close $10,410.10 vs 09:30 $10,423.80 (session -8.67) | 16:00 close · cash $56.08 · equity $10,410.10 vs 09:30 $10,423.80 (-13.70; session marks -8.67) · 1 name(s) marked open→close (per-name table). RY×51 09:30 $203.19 → close $203.02 -8.67 | — |
 
 ## Not taken
 

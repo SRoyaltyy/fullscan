@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 12 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · top 12 by hot
 
-Cash book **+5.94%** ($10,594) · signal-only (no cash/fees) was +34.72%. Starts YES **29/30**. Fills 641 · skips 145 · realized $-34.73.
+Cash book **+6.06%** ($10,606) · signal-only (no cash/fees) was +34.72%. Starts YES **29/30**. Fills 653 · skips 145 · realized $-34.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -816,6 +816,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,594.29 | ▲ close $10,594.29 vs 09:30 $10,596.33 (session +0.00) | 16:00 close · cash $10,594.29 · no lots left · equity $10,594.29. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,594.29 | ▲ 09:30 equity $10,594.29 vs yday $10,594.29 (+0.00) | 09:30 open · cash $10,594.29 · no holdings · equity $10,594.29 vs prior close $10,594.29 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,594.29 | ▲ close $10,594.29 vs 09:30 $10,594.29 (session +0.00) | 16:00 close · cash $10,594.29 · no lots left · equity $10,594.29. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,594.29 | ▲ 09:30 equity $10,594.29 vs yday $10,594.29 (+0.00) | 09:30 open · cash $10,594.29 · no holdings · equity $10,594.29 vs prior close $10,594.29 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **BUY** | `SGRY` | 38 | $23.20 | $2.10 | — | $9,710.59 | — | top 12 by hot; rank hot_score; list flatten; 🔵; ret5=+58.1; leftover $882.86 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `SLN` | 44 | $19.78 | $2.12 | — | $8,838.14 | — | top 12 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+1.0; leftover $882.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ENGS` | 201 | $4.38 | $2.60 | — | $7,955.17 | — | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+16.0; leftover $882.86 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `LMT` | 1 | $626.91 | $1.99 | — | $7,326.26 | — | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+15.9; leftover $882.86 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `DOW` | 26 | $33.77 | $2.07 | — | $6,446.18 | — | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+13.0; leftover $882.86 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RBRK` | 6 | $132.49 | $2.01 | — | $5,649.23 | — | top 12 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+17.6; leftover $882.86 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `GMAB` | 19 | $44.41 | $2.05 | — | $4,803.39 | — | top 12 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+16.1; leftover $882.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RIG` | 136 | $6.48 | $2.40 | — | $3,919.71 | — | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+10.9; leftover $882.86 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `AMTM` | 40 | $21.97 | $2.11 | — | $3,038.80 | — | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+13.3; leftover $882.86 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `BAH` | 10 | $82.53 | $2.02 | — | $2,211.53 | — | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+12.6; leftover $882.86 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `BLLN` | 7 | $111.84 | $2.01 | — | $1,426.64 | — | top 12 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+10.3; leftover $882.86 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `VAL` | 9 | $98.07 | $2.02 | — | $541.99 | — | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+11.0; leftover $882.86 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $541.99 | ▲ close $10,605.73 vs 09:30 $10,594.29 (session +36.94) | 16:00 close · cash $541.99 · equity $10,605.73 vs 09:30 $10,594.29 (+11.44; session marks +36.94) · 12 name(s) marked open→close (per-name table). SGRY×38 09:30 $23.20 → close $23.36 +6.08; SLN×44 09:30 $19.78 → close $19.78 +0.00; ENGS×201 09:30 $4.38 → close $4.36 -4.02; LMT×1 09:30 $626.91 → close $622.99 -3.92; DOW×26 09:30 $33.77 → close $33.78 +0.26; RBRK×6 09:30 $132.49 → close $135.74 +19.50; GMAB×19 09:30 $44.41 → close $44.67 +4.94; RIG×136 09:30 $6.48 → close $6.46 -2.72; AMTM×40 09:30 $21.97 → close $21.75 -8.80; BAH×10 09:30 $82.53 → close $83.40 +8.75; BLLN×7 09:30 $111.84 → close $114.07 +15.61; VAL×9 09:30 $98.07 → close $98.21 +1.26 | — |
 
 ## Not taken
 

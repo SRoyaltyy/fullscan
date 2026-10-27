@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-8.67%** ($9,133) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 446 · skips 105 · realized $-723.91.
+Cash book **-6.94%** ($9,306) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 453 · skips 105 · realized $-723.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -621,6 +621,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,133.13 | ▲ close $9,133.13 vs 09:30 $9,139.36 (session +0.00) | 16:00 close · cash $9,133.13 · no lots left · equity $9,133.13. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,133.13 | ▲ 09:30 equity $9,133.13 vs yday $9,133.13 (+0.00) | 09:30 open · cash $9,133.13 · no holdings · equity $9,133.13 vs prior close $9,133.13 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,133.13 | ▲ close $9,133.13 vs 09:30 $9,133.13 (session +0.00) | 16:00 close · cash $9,133.13 · no lots left · equity $9,133.13. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,133.13 | ▲ 09:30 equity $9,133.13 vs yday $9,133.13 (+0.00) | 09:30 open · cash $9,133.13 · no holdings · equity $9,133.13 vs prior close $9,133.13 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **BUY** | `CDNA` | 16 | $69.10 | $2.04 | — | $8,025.49 | — | rank by cond; rank cond; list flatten; 🔵; ret5=+3.0; leftover $1141.64 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `PACS` | 23 | $48.23 | $2.06 | — | $6,914.14 | — | rank by cond; rank cond; list flatten; 🔵; ret5=+6.3; leftover $1141.64 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `SGRY` | 49 | $23.20 | $2.14 | — | $5,775.21 | — | rank by cond; rank cond; list flatten; 🔵; ret5=+58.1; leftover $1141.64 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `SMMT` | 78 | $14.50 | $2.22 | — | $4,641.98 | — | rank by cond; rank cond; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-6.9; leftover $1141.64 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `AMRX` | 54 | $20.93 | $2.15 | — | $3,509.61 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ret5=+8.6; leftover $1141.64 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ILMN` | 4 | $269.42 | $2.00 | — | $2,429.93 | — | rank by cond; rank cond; list flatten; 🔵; ret5=+3.2; leftover $1141.64 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `PRGO` | 73 | $15.56 | $2.21 | — | $1,291.84 | — | rank by cond; rank cond; list flatten; ret5=-1.7; leftover $1141.64 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,291.84 | ▲ close $9,306.35 vs 09:30 $9,133.13 (session +188.04) | 16:00 close · cash $1,291.84 · equity $9,306.35 vs 09:30 $9,133.13 (+173.22; session marks +188.04) · 7 name(s) marked open→close (per-name table). CDNA×16 09:30 $69.10 → close $70.53 +22.88; PACS×23 09:30 $48.23 → close $47.85 -8.74; SGRY×49 09:30 $23.20 → close $23.36 +7.84; SMMT×78 09:30 $14.50 → close $15.33 +64.74; AMRX×54 09:30 $20.93 → close $21.44 +27.54; ILMN×4 09:30 $269.42 → close $279.47 +40.20; PRGO×73 09:30 $15.56 → close $16.02 +33.58 | — |
 
 ## Not taken
 

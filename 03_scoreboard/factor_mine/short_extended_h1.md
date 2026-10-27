@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-0.90%** ($9,910) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 382 · skips 88 · realized $-1484.16.
+Cash book **-1.24%** ($9,876) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 388 · skips 88 · realized $-1484.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -556,6 +556,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,909.60 | ▲ close $9,909.60 vs 09:30 $9,913.77 (session +0.00) | 16:00 close · cash $9,909.60 · no lots left · equity $9,909.60. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,909.60 | ▲ 09:30 equity $9,909.60 vs yday $9,909.60 (+0.00) | 09:30 open · cash $9,909.60 · no holdings · equity $9,909.60 vs prior close $9,909.60 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,909.60 | ▲ close $9,909.60 vs 09:30 $9,909.60 (session +0.00) | 16:00 close · cash $9,909.60 · no lots left · equity $9,909.60. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,909.60 | ▲ 09:30 equity $9,909.60 vs yday $9,909.60 (+0.00) | 09:30 open · cash $9,909.60 · no holdings · equity $9,909.60 vs prior close $9,909.60 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **SHORT** | `SGRY` | 35 | $23.20 | $2.14 | — | $10,719.46 | — | ret_5>15; gate ret_5_min=15.0; list flatten; 🔵; ret5=+58.1; leftover $825.80 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **SHORT** | `POOL` | 4 | $195.23 | $2.04 | — | $11,498.34 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,ohlc_hot; ret5=+16.2; leftover $825.80 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SHORT** | `ENGS` | 188 | $4.38 | $2.62 | — | $12,319.16 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; ret5=+16.0; leftover $825.80 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SHORT** | `LMT` | 1 | $626.91 | $2.03 | — | $12,944.04 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; ret5=+15.9; leftover $825.80 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SHORT** | `RBRK` | 6 | $132.49 | $2.05 | — | $13,736.93 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+17.6; leftover $825.80 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SHORT** | `GMAB` | 18 | $44.41 | $2.09 | — | $14,534.23 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; 🔵; ret5=+16.1; leftover $825.80 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,534.23 | ▼ close $9,875.86 vs 09:30 $9,909.60 (session -20.78) | 16:00 close · cash $14,534.23 · equity $9,875.86 vs 09:30 $9,909.60 (-33.74; session marks -20.78) · 6 name(s) marked open→close (per-name table). SGRY×35 09:30 $23.20 → close $23.36 -5.60; POOL×4 09:30 $195.23 → close $194.90 +1.32; ENGS×188 09:30 $4.38 → close $4.36 +3.76; LMT×1 09:30 $626.91 → close $622.99 +3.92; RBRK×6 09:30 $132.49 → close $135.74 -19.50; GMAB×18 09:30 $44.41 → close $44.67 -4.68 | — |
 
 ## Not taken
 

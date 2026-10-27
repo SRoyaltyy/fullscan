@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #5 extreme ext + fade/fail-break as a short
 
-Cash book **-5.18%** ($9,482) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 272 · skips 219 · realized $-964.15.
+Cash book **-6.13%** ($9,387) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 275 · skips 219 · realized $-964.15.
 
 ## How this sleeve decides (like you are 10)
 
@@ -446,6 +446,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,481.54 | ▲ close $9,481.54 vs 09:30 $9,481.54 (session +0.00) | 16:00 close · cash $9,481.54 · no lots left · equity $9,481.54. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,481.54 | ▲ 09:30 equity $9,481.54 vs yday $9,481.54 (+0.00) | 09:30 open · cash $9,481.54 · no holdings · equity $9,481.54 vs prior close $9,481.54 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,481.54 | ▲ close $9,481.54 vs 09:30 $9,481.54 (session +0.00) | 16:00 close · cash $9,481.54 · no lots left · equity $9,481.54. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,481.54 | ▲ 09:30 equity $9,481.54 vs yday $9,481.54 (+0.00) | 09:30 open · cash $9,481.54 · no holdings · equity $9,481.54 vs prior close $9,481.54 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **SHORT** | `CDNA` | 22 | $69.10 | $2.12 | — | $10,999.62 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list flatten; 🔵; ret5=+3.0; leftover $1580.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **SHORT** | `EGG` | 305 | $5.17 | $4.04 | — | $12,572.43 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list yday_gainer,yday_mover; ret5=+3.2; leftover $1580.26 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-27 09:30 ET | **SHORT** | `GMAB` | 35 | $44.41 | $2.16 | — | $14,124.62 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; 🔵; ret5=+16.1; leftover $1580.26 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,124.62 | ▼ close $9,386.91 vs 09:30 $9,481.54 (session -86.31) | 16:00 close · cash $14,124.62 · equity $9,386.91 vs 09:30 $9,481.54 (-94.63; session marks -86.31) · 3 name(s) marked open→close (per-name table). CDNA×22 09:30 $69.10 → close $70.53 -31.46; EGG×305 09:30 $5.17 → close $5.32 -45.75; GMAB×35 09:30 $44.41 → close $44.67 -9.10 | — |
 
 ## Not taken
 

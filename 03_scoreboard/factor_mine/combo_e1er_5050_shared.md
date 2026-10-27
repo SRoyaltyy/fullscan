@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h1/union_earn_react_h3 w=0.5,0.5 net=priority
 
-Cash book **-11.72%** ($8,828) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 291 · skips 137 · realized $-376.82.
+Cash book **-12.09%** ($8,791) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 292 · skips 137 · realized $-376.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $3,804.47.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,790.89.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -468,6 +468,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,804.47 | ▼ close $8,827.67 vs 09:30 $9,022.07 (session -194.40) | 16:00 close · cash $3,804.47 · equity $8,827.67 vs 09:30 $9,022.07 (-194.40; session marks -194.40) · 1 name(s) marked open→close (per-name table). T×240 09:30 $21.74 → close $20.93 -194.40 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,804.47 | ▲ 09:30 equity $8,827.67 vs yday $8,827.67 (+0.00) | 09:30 open · cash $3,804.47 (unchanged overnight, no fees) · equity $8,827.67 vs prior close $8,827.67 (+0.00) | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,804.47 | ▲ close $8,827.67 vs 09:30 $8,827.67 (session +0.00) | 16:00 close · cash $3,804.47 · equity $8,827.67 vs 09:30 $8,827.67 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). T×240 09:30 $20.93 → close $20.93 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,804.47 | ▼ 09:30 equity $8,794.07 vs yday $8,827.67 (-33.60) | 09:30 open · cash $3,804.47 (unchanged overnight, no fees) · equity $8,794.07 vs prior close $8,827.67 (-33.60) | — |
+| 2026-10-27 09:30 ET | **SELL** | `T` | 240 | $20.79 | $3.18 | $-269.55 | $8,790.89 | ▼ -269.55 after sell → book $8,790.89; vs 09:30 mark -3.18 | union_earn_react_h3: dropped from list after 4 sess (min 3) | — |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,790.89 | ▲ close $8,790.89 vs 09:30 $8,794.07 (session +0.00) | 16:00 close · cash $8,790.89 · no lots left · equity $8,790.89. | — |
 
 ## Not taken
 

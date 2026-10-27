@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #10 NR7 + moderate momentum
 
-Cash book **-1.32%** ($9,868) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 90 · skips 16 · realized $+1589.64.
+Cash book **-0.42%** ($9,958) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 95 · skips 16 · realized $+1589.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -268,6 +268,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,867.70 | ▲ close $9,867.70 vs 09:30 $9,867.70 (session +0.00) | 16:00 close · cash $9,867.70 · no lots left · equity $9,867.70. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,867.70 | ▲ 09:30 equity $9,867.70 vs yday $9,867.70 (+0.00) | 09:30 open · cash $9,867.70 · no holdings · equity $9,867.70 vs prior close $9,867.70 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,867.70 | ▲ close $9,867.70 vs 09:30 $9,867.70 (session +0.00) | 16:00 close · cash $9,867.70 · no lots left · equity $9,867.70. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,867.70 | ▲ 09:30 equity $9,867.70 vs yday $9,867.70 (+0.00) | 09:30 open · cash $9,867.70 · no holdings · equity $9,867.70 vs prior close $9,867.70 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **BUY** | `GH` | 9 | $174.75 | $2.02 | — | $8,292.89 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; 🔵; ret5=+9.7; leftover $1644.62 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `PATH` | 115 | $14.19 | $2.33 | — | $6,658.70 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; 🔵; ret5=+9.0; leftover $1644.62 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ACRS` | 413 | $3.98 | $5.33 | — | $5,009.64 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.9; leftover $1644.62 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ILMN` | 6 | $269.42 | $2.01 | — | $3,391.11 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list flatten; 🔵; ret5=+3.2; leftover $1644.62 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RCKT` | 718 | $2.29 | $9.26 | — | $1,737.63 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list yday_gainer; 🔵; ret5=+1.8; leftover $1644.62 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,737.63 | ▲ close $9,958.26 vs 09:30 $9,867.70 (session +111.51) | 16:00 close · cash $1,737.63 · equity $9,958.26 vs 09:30 $9,867.70 (+90.56; session marks +111.51) · 5 name(s) marked open→close (per-name table). GH×9 09:30 $174.75 → close $178.06 +29.75; PATH×115 09:30 $14.19 → close $14.06 -14.95; ACRS×413 09:30 $3.98 → close $3.79 -78.47; ILMN×6 09:30 $269.42 → close $279.47 +60.30; RCKT×718 09:30 $2.29 → close $2.45 +114.88 | — |
 
 ## Not taken
 

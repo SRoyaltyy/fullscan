@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in hold 5, no 🚨
 
-Cash book **-6.31%** ($9,369) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 71 · skips 144 · realized $+404.42.
+Cash book **-6.42%** ($9,358) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 74 · skips 144 · realized $+404.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -247,6 +247,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $454.77 | ▲ close $9,368.69 vs 09:30 $9,285.20 (session +83.62) | 16:00 close · cash $454.77 · equity $9,368.69 vs 09:30 $9,285.20 (+83.49; session marks +83.62) · 3 name(s) marked open→close (per-name table). CME×9 09:30 $305.06 → close $305.71 +5.85; DHR×13 09:30 $229.17 → close $230.50 +17.29; ISRG×7 09:30 $443.65 → close $452.29 +60.48 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $454.77 | ▲ 09:30 equity $9,368.69 vs yday $9,368.69 (+0.00) | 09:30 open · cash $454.77 (unchanged overnight, no fees) · equity $9,368.69 vs prior close $9,368.69 (+0.00) · 3 name(s) re-marked at the open (per-name table). CME×9 yday $305.71 → 09:30 $305.71 +0.00; DHR×13 yday $230.50 → 09:30 $230.50 +0.00; ISRG×7 yday $452.29 → 09:30 $452.29 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $454.77 | ▲ close $9,368.69 vs 09:30 $9,368.69 (session +0.00) | 16:00 close · cash $454.77 · equity $9,368.69 vs 09:30 $9,368.69 (+0.00; session marks +0.00) · 3 name(s) marked open→close (per-name table). CME×9 09:30 $305.71 → close $305.71 +0.00; DHR×13 09:30 $230.50 → close $230.50 +0.00; ISRG×7 09:30 $452.29 → close $452.29 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $454.77 | ▼ 09:30 equity $9,364.00 vs yday $9,368.69 (-4.69) | 09:30 open · cash $454.77 (unchanged overnight, no fees) · equity $9,364.00 vs prior close $9,368.69 (-4.69) · 3 name(s) re-marked at the open (per-name table). CME×9 yday $305.71 → 09:30 $304.98 -6.57; DHR×13 yday $230.50 → 09:30 $231.00 +6.50; ISRG×7 yday $452.29 → 09:30 $451.63 -4.62 | — |
+| 2026-10-27 09:30 ET | **SELL** | `CME` | 9 | $304.98 | $2.05 | $+78.82 | $3,197.54 | ▲ +78.82 after sell → book $9,361.95; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `DHR` | 13 | $231.00 | $2.06 | $+170.63 | $6,198.48 | ▲ +170.63 after sell → book $9,359.89; vs 09:30 mark -2.06 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `ISRG` | 7 | $451.63 | $2.05 | $+339.89 | $9,357.84 | ▲ +339.89 after sell → book $9,357.84; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,357.84 | ▲ close $9,357.84 vs 09:30 $9,364.00 (session +0.00) | 16:00 close · cash $9,357.84 · no lots left · equity $9,357.84. | — |
 
 ## Not taken
 

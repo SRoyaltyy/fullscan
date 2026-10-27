@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-14.14%** ($8,586) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 440 · skips 104 · realized $-563.45.
+Cash book **-13.18%** ($8,682) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 449 · skips 104 · realized $-563.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -615,6 +615,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,542.21 | ▼ close $8,585.78 vs 09:30 $8,601.79 (session -9.01) | 16:00 close · cash $7,542.21 · equity $8,585.78 vs 09:30 $8,601.79 (-16.01; session marks -9.01) · 1 name(s) marked open→close (per-name table). PRMB×53 09:30 $19.86 → close $19.69 -9.01 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,542.21 | ▲ 09:30 equity $8,585.78 vs yday $8,585.78 (+0.00) | 09:30 open · cash $7,542.21 (unchanged overnight, no fees) · equity $8,585.78 vs prior close $8,585.78 (+0.00) · 1 name(s) re-marked at the open (per-name table). PRMB×53 yday $19.69 → 09:30 $19.69 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,542.21 | ▲ close $8,585.78 vs 09:30 $8,585.78 (session +0.00) | 16:00 close · cash $7,542.21 · equity $8,585.78 vs 09:30 $8,585.78 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). PRMB×53 09:30 $19.69 → close $19.69 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,542.21 | ▼ 09:30 equity $8,579.95 vs yday $8,585.78 (-5.83) | 09:30 open · cash $7,542.21 (unchanged overnight, no fees) · equity $8,579.95 vs prior close $8,585.78 (-5.83) · 1 name(s) re-marked at the open (per-name table). PRMB×53 yday $19.69 → 09:30 $19.58 -5.83 | — |
+| 2026-10-27 09:30 ET | **SELL** | `PRMB` | 53 | $19.58 | $2.17 | $-26.58 | $8,577.78 | ▼ -26.58 after sell → book $8,577.78; vs 09:30 mark -2.17 | exit unpriced hold on first bar after 4 sess | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ENGS` | 244 | $4.38 | $3.15 | — | $7,505.91 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+16.0; leftover $1072.22 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `LMT` | 1 | $626.91 | $1.99 | — | $6,877.01 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+15.9; leftover $1072.22 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `VVX` | 13 | $77.02 | $2.03 | — | $5,873.72 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+10.4; leftover $1072.22 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `AMRX` | 51 | $20.93 | $2.14 | — | $4,804.15 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+8.6; leftover $1072.22 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `AMTM` | 48 | $21.97 | $2.13 | — | $3,747.45 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+13.3; leftover $1072.22 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `BLLN` | 9 | $111.84 | $2.02 | — | $2,738.88 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+10.3; leftover $1072.22 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `JLHL` | 210 | $5.08 | $2.71 | — | $1,668.40 | — | rank by candle_score; rank candle_score; list yday_mover; ret5=+8.5; leftover $1072.22 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `POOL` | 5 | $195.23 | $2.00 | — | $690.25 | — | rank by candle_score; rank candle_score; list yday_gainer,ohlc_hot; ret5=+16.2; leftover $1072.22 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $690.25 | ▲ close $8,682.26 vs 09:30 $8,579.95 (session +122.65) | 16:00 close · cash $690.25 · equity $8,682.26 vs 09:30 $8,579.95 (+102.31; session marks +122.65) · 8 name(s) marked open→close (per-name table). ENGS×244 09:30 $4.38 → close $4.36 -4.88; LMT×1 09:30 $626.91 → close $622.99 -3.92; VVX×13 09:30 $77.02 → close $77.17 +1.95; AMRX×51 09:30 $20.93 → close $21.44 +26.01; AMTM×48 09:30 $21.97 → close $21.75 -10.56; BLLN×9 09:30 $111.84 → close $114.07 +20.07; JLHL×210 09:30 $5.08 → close $5.54 +95.63; POOL×5 09:30 $195.23 → close $194.90 -1.65 | — |
 
 ## Not taken
 

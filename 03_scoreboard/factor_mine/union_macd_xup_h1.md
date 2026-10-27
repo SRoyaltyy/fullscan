@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-16.23%** ($8,377) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 278 · skips 71 · realized $-1788.82.
+Cash book **-14.51%** ($8,549) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 280 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -454,6 +454,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,376.53 | ▲ close $8,376.53 vs 09:30 $8,376.53 (session +0.00) | 16:00 close · cash $8,376.53 · no lots left · equity $8,376.53. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,376.53 | ▲ 09:30 equity $8,376.53 vs yday $8,376.53 (+0.00) | 09:30 open · cash $8,376.53 · no holdings · equity $8,376.53 vs prior close $8,376.53 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,376.53 | ▲ close $8,376.53 vs 09:30 $8,376.53 (session +0.00) | 16:00 close · cash $8,376.53 · no lots left · equity $8,376.53. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,376.53 | ▲ 09:30 equity $8,376.53 vs yday $8,376.53 (+0.00) | 09:30 open · cash $8,376.53 · no holdings · equity $8,376.53 vs prior close $8,376.53 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **BUY** | `RBRK` | 31 | $132.49 | $2.08 | — | $4,267.26 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+17.6; leftover $4188.27 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `GH` | 23 | $174.75 | $2.06 | — | $245.83 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+9.7; leftover $4188.27 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $245.83 | ▲ close $8,549.15 vs 09:30 $8,376.53 (session +176.77) | 16:00 close · cash $245.83 · equity $8,549.15 vs 09:30 $8,376.53 (+172.62; session marks +176.77) · 2 name(s) marked open→close (per-name table). RBRK×31 09:30 $132.49 → close $135.74 +100.75; GH×23 09:30 $174.75 → close $178.06 +76.02 | — |
 
 ## Not taken
 

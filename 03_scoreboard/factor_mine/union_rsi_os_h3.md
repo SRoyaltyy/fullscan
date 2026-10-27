@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-21.25%** ($7,875) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 138 · skips 88 · realized $-2389.72.
+Cash book **-22.36%** ($7,764) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 144 · skips 88 · realized $-2389.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -314,6 +314,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,703.56 | ▲ close $7,874.71 vs 09:30 $7,869.68 (session +5.03) | 16:00 close · cash $6,703.56 · equity $7,874.71 vs 09:30 $7,869.68 (+5.03; session marks +5.03) · 4 name(s) marked open→close (per-name table). BRO×4 09:30 $74.16 → close $72.97 -4.76; BROS×7 09:30 $40.80 → close $41.49 +4.83; DGX×1 09:30 $239.63 → close $241.89 +2.26; QTWO×5 09:30 $68.85 → close $69.39 +2.70 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,703.56 | ▲ 09:30 equity $7,874.71 vs yday $7,874.71 (+0.00) | 09:30 open · cash $6,703.56 (unchanged overnight, no fees) · equity $7,874.71 vs prior close $7,874.71 (+0.00) · 4 name(s) re-marked at the open (per-name table). BRO×4 yday $72.97 → 09:30 $72.97 +0.00; BROS×7 yday $41.49 → 09:30 $41.49 +0.00; DGX×1 yday $241.89 → 09:30 $241.89 +0.00; QTWO×5 yday $69.39 → 09:30 $69.39 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,703.56 | ▲ close $7,874.71 vs 09:30 $7,874.71 (session +0.00) | 16:00 close · cash $6,703.56 · equity $7,874.71 vs 09:30 $7,874.71 (+0.00; session marks +0.00) · 4 name(s) marked open→close (per-name table). BRO×4 09:30 $72.97 → close $72.97 +0.00; BROS×7 09:30 $41.49 → close $41.49 +0.00; DGX×1 09:30 $241.89 → close $241.89 +0.00; QTWO×5 09:30 $69.39 → close $69.39 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,703.56 | ▼ 09:30 equity $7,856.91 vs yday $7,874.71 (-17.80) | 09:30 open · cash $6,703.56 (unchanged overnight, no fees) · equity $7,856.91 vs prior close $7,874.71 (-17.80) · 4 name(s) re-marked at the open (per-name table). BRO×4 yday $72.97 → 09:30 $68.00 -19.88; BROS×7 yday $41.49 → 09:30 $41.87 +2.66; DGX×1 yday $241.89 → 09:30 $241.96 +0.07; QTWO×5 yday $69.39 → 09:30 $69.26 -0.65 | — |
+| 2026-10-27 09:30 ET | **SELL** | `BRO` | 4 | $68.00 | $2.02 | $-13.18 | $6,973.54 | ▼ -13.18 after sell → book $7,854.89; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `BROS` | 7 | $41.87 | $2.03 | $-12.30 | $7,264.60 | ▼ -12.30 after sell → book $7,852.86; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `DGX` | 1 | $241.96 | $2.01 | $+2.61 | $7,504.54 | ▲ +2.61 after sell → book $7,850.84; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 4 sess | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SELL** | `QTWO` | 5 | $69.26 | $2.02 | $+12.47 | $7,848.82 | ▲ +12.47 after sell → book $7,848.82; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **BUY** | `ARI` | 395 | $6.61 | $5.10 | — | $5,232.77 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; 🔵; ret5=+4.4; leftover $2616.27 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `BX` | 21 | $120.00 | $2.05 | — | $2,710.72 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; 🔵; ret5=+11.2; leftover $2616.27 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,710.72 | ▼ close $7,764.47 vs 09:30 $7,856.91 (session -77.20) | 16:00 close · cash $2,710.72 · equity $7,764.47 vs 09:30 $7,856.91 (-92.44; session marks -77.20) · 2 name(s) marked open→close (per-name table). ARI×395 09:30 $6.61 → close $6.59 -7.90; BX×21 09:30 $120.00 → close $116.70 -69.30 | — |
 
 ## Not taken
 

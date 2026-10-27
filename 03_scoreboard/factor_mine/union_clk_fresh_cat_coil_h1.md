@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #2 fresh catalyst + limited extension (research; not KEEP)
 
-Cash book **-18.99%** ($8,101) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 368 · skips 106 · realized $-137.13.
+Cash book **-16.86%** ($8,314) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 375 · skips 106 · realized $-137.13.
 
 ## How this sleeve decides (like you are 10)
 
@@ -546,6 +546,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,100.75 | ▲ close $8,100.75 vs 09:30 $8,102.77 (session +0.00) | 16:00 close · cash $8,100.75 · no lots left · equity $8,100.75. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,100.75 | ▲ 09:30 equity $8,100.75 vs yday $8,100.75 (+0.00) | 09:30 open · cash $8,100.75 · no holdings · equity $8,100.75 vs prior close $8,100.75 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,100.75 | ▲ close $8,100.75 vs 09:30 $8,100.75 (session +0.00) | 16:00 close · cash $8,100.75 · no lots left · equity $8,100.75. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,100.75 | ▲ 09:30 equity $8,100.75 vs yday $8,100.75 (+0.00) | 09:30 open · cash $8,100.75 · no holdings · equity $8,100.75 vs prior close $8,100.75 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **BUY** | `AMX` | 47 | $24.27 | $2.13 | — | $6,957.93 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_gainer; 🔵; ret5=+5.9; leftover $1157.25 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `GH` | 6 | $174.75 | $2.01 | — | $5,907.39 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; 🔵; ret5=+9.7; leftover $1157.25 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `TBBB` | 19 | $58.24 | $2.05 | — | $4,798.78 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_gainer; ret5=+0.0; leftover $1157.25 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `AIP` | 58 | $19.89 | $2.16 | — | $3,643.00 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.9; leftover $1157.25 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ITW` | 4 | $272.30 | $2.00 | — | $2,551.80 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_gainer; ret5=+2.2; leftover $1157.25 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `NVTS` | 134 | $8.62 | $2.39 | — | $1,394.33 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=-2.7; leftover $1157.25 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `GLND` | 366 | $3.16 | $4.72 | — | $233.70 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_mover; ret5=+3.6; leftover $1157.25 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $233.70 | ▲ close $8,314.17 vs 09:30 $8,100.75 (session +230.89) | 16:00 close · cash $233.70 · equity $8,314.17 vs 09:30 $8,100.75 (+213.42; session marks +230.89) · 7 name(s) marked open→close (per-name table). AMX×47 09:30 $24.27 → close $24.06 -9.87; GH×6 09:30 $174.75 → close $178.06 +19.83; TBBB×19 09:30 $58.24 → close $57.41 -15.77; AIP×58 09:30 $19.89 → close $20.95 +61.48; ITW×4 09:30 $272.30 → close $275.93 +14.52; NVTS×134 09:30 $8.62 → close $9.35 +97.82; GLND×366 09:30 $3.16 → close $3.33 +62.88 | — |
 
 ## Not taken
 

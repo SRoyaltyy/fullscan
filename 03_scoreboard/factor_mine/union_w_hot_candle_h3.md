@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **-1.44%** ($9,856) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 328 · skips 289 · realized $+901.34.
+Cash book **-1.53%** ($9,847) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 340 · skips 289 · realized $+901.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -503,6 +503,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,592.17 | ▼ close $9,856.12 vs 09:30 $9,860.77 (session -4.65) | 16:00 close · cash $9,592.17 · equity $9,856.12 vs 09:30 $9,860.77 (-4.65; session marks -4.65) · 4 name(s) marked open→close (per-name table). ARQT×2 09:30 $32.13 → close $31.20 -1.86; BMBL×11 09:30 $5.94 → close $5.96 +0.22; KLRA×5 09:30 $13.18 → close $12.85 -1.65; WIT×34 09:30 $2.15 → close $2.11 -1.36 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,592.17 | ▲ 09:30 equity $9,856.12 vs yday $9,856.12 (+0.00) | 09:30 open · cash $9,592.17 (unchanged overnight, no fees) · equity $9,856.12 vs prior close $9,856.12 (+0.00) · 4 name(s) re-marked at the open (per-name table). ARQT×2 yday $31.20 → 09:30 $31.20 +0.00; BMBL×11 yday $5.96 → 09:30 $5.96 +0.00; KLRA×5 yday $12.85 → 09:30 $12.85 +0.00; WIT×34 yday $2.11 → 09:30 $2.11 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,592.17 | ▲ close $9,856.12 vs 09:30 $9,856.12 (session +0.00) | 16:00 close · cash $9,592.17 · equity $9,856.12 vs 09:30 $9,856.12 (+0.00; session marks +0.00) · 4 name(s) marked open→close (per-name table). ARQT×2 09:30 $31.20 → close $31.20 +0.00; BMBL×11 09:30 $5.96 → close $5.96 +0.00; KLRA×5 09:30 $12.85 → close $12.85 +0.00; WIT×34 09:30 $2.11 → close $2.11 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,592.17 | ▲ 09:30 equity $9,856.19 vs yday $9,856.12 (+0.07) | 09:30 open · cash $9,592.17 (unchanged overnight, no fees) · equity $9,856.19 vs prior close $9,856.12 (+0.07) · 4 name(s) re-marked at the open (per-name table). ARQT×2 yday $31.20 → 09:30 $31.41 +0.41; BMBL×11 yday $5.96 → 09:30 $5.95 -0.11; KLRA×5 yday $12.85 → 09:30 $12.94 +0.45; WIT×34 yday $2.11 → 09:30 $2.09 -0.68 | — |
+| 2026-10-27 09:30 ET | **SELL** | `ARQT` | 2 | $31.41 | $0.65 | $-3.78 | $9,654.33 | ▼ -3.78 after sell → book $9,855.54; vs 09:30 mark -0.65 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `BMBL` | 11 | $5.95 | $0.71 | $-1.39 | $9,719.07 | ▼ -1.39 after sell → book $9,854.83; vs 09:30 mark -0.71 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `KLRA` | 5 | $12.94 | $0.68 | $-1.19 | $9,783.09 | ▼ -1.19 after sell → book $9,854.15; vs 09:30 mark -0.68 | exit unpriced hold on first bar after 4 sess | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SELL** | `WIT` | 34 | $2.09 | $0.83 | $-0.62 | $9,853.31 | ▼ -0.62 after sell → book $9,853.31; vs 09:30 mark -0.84 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **BUY** | `SGRY` | 53 | $23.20 | $2.15 | — | $8,621.56 | — | rank by w_hot_candle; rank w_hot_candle; list flatten; 🔵; ret5=+58.1; leftover $1231.66 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `ENGS` | 281 | $4.38 | $3.62 | — | $7,387.16 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+16.0; leftover $1231.66 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `LMT` | 1 | $626.91 | $1.99 | — | $6,758.26 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+15.9; leftover $1231.66 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `DOW` | 36 | $33.77 | $2.10 | — | $5,540.44 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+13.0; leftover $1231.66 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `SLN` | 62 | $19.78 | $2.18 | — | $4,311.90 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+1.0; leftover $1231.66 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `AMTM` | 56 | $21.97 | $2.16 | — | $3,079.42 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+13.3; leftover $1231.66 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RBRK` | 9 | $132.49 | $2.02 | — | $1,885.00 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+17.6; leftover $1231.66 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RIG` | 190 | $6.48 | $2.56 | — | $651.24 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+10.9; leftover $1231.66 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $651.24 | ▲ close $9,846.97 vs 09:30 $9,856.19 (session +12.43) | 16:00 close · cash $651.24 · equity $9,846.97 vs 09:30 $9,856.19 (-9.22; session marks +12.43) · 8 name(s) marked open→close (per-name table). SGRY×53 09:30 $23.20 → close $23.36 +8.48; ENGS×281 09:30 $4.38 → close $4.36 -5.62; LMT×1 09:30 $626.91 → close $622.99 -3.92; DOW×36 09:30 $33.77 → close $33.78 +0.36; SLN×62 09:30 $19.78 → close $19.78 +0.00; AMTM×56 09:30 $21.97 → close $21.75 -12.32; RBRK×9 09:30 $132.49 → close $135.74 +29.25; RIG×190 09:30 $6.48 → close $6.46 -3.80 | — |
 
 ## Not taken
 

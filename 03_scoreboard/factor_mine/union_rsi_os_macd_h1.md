@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+17.77%** ($11,777) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 43 · skips 0 · realized $-826.45.
+Cash book **+16.48%** ($11,649) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 46 · skips 0 · realized $-826.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -221,3 +221,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,600.11 | ▲ close $11,777.12 vs 09:30 $11,756.78 (session +20.34) | 16:00 close · cash $9,600.11 · equity $11,777.12 vs 09:30 $11,756.78 (+20.34; session marks +20.34) · 1 name(s) marked open→close (per-name table). DGX×9 09:30 $239.63 → close $241.89 +20.34 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,600.11 | ▲ 09:30 equity $11,777.12 vs yday $11,777.12 (+0.00) | 09:30 open · cash $9,600.11 (unchanged overnight, no fees) · equity $11,777.12 vs prior close $11,777.12 (+0.00) · 1 name(s) re-marked at the open (per-name table). DGX×9 yday $241.89 → 09:30 $241.89 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,600.11 | ▲ close $11,777.12 vs 09:30 $11,777.12 (session +0.00) | 16:00 close · cash $9,600.11 · equity $11,777.12 vs 09:30 $11,777.12 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). DGX×9 09:30 $241.89 → close $241.89 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,600.11 | ▲ 09:30 equity $11,777.75 vs yday $11,777.12 (+0.63) | 09:30 open · cash $9,600.11 (unchanged overnight, no fees) · equity $11,777.75 vs prior close $11,777.12 (+0.63) · 1 name(s) re-marked at the open (per-name table). DGX×9 yday $241.89 → 09:30 $241.96 +0.63 | — |
+| 2026-10-27 09:30 ET | **SELL** | `DGX` | 9 | $241.96 | $2.04 | $+55.52 | $11,775.71 | ▲ +55.52 after sell → book $11,775.71; vs 09:30 mark -2.04 | exit unpriced hold on first bar after 4 sess | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ARI` | 593 | $6.61 | $7.65 | — | $7,848.33 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; 🔵; ret5=+4.4; leftover $3925.24 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `BX` | 32 | $120.00 | $2.09 | — | $4,006.24 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; 🔵; ret5=+11.2; leftover $3925.24 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,006.24 | ▼ close $11,648.51 vs 09:30 $11,777.75 (session -117.46) | 16:00 close · cash $4,006.24 · equity $11,648.51 vs 09:30 $11,777.75 (-129.24; session marks -117.46) · 2 name(s) marked open→close (per-name table). ARI×593 09:30 $6.61 → close $6.59 -11.86; BX×32 09:30 $120.00 → close $116.70 -105.60 | — |

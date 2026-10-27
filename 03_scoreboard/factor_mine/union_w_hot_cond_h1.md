@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+20.33%** ($12,033) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 442 · skips 96 · realized $-9.27.
+Cash book **+21.54%** ($12,154) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 450 · skips 96 · realized $-9.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -617,6 +617,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,032.94 | ▲ close $12,032.94 vs 09:30 $12,037.03 (session +0.00) | 16:00 close · cash $12,032.94 · no lots left · equity $12,032.94. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,032.94 | ▲ 09:30 equity $12,032.94 vs yday $12,032.94 (+0.00) | 09:30 open · cash $12,032.94 · no holdings · equity $12,032.94 vs prior close $12,032.94 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,032.94 | ▲ close $12,032.94 vs 09:30 $12,032.94 (session +0.00) | 16:00 close · cash $12,032.94 · no lots left · equity $12,032.94. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,032.94 | ▲ 09:30 equity $12,032.94 vs yday $12,032.94 (+0.00) | 09:30 open · cash $12,032.94 · no holdings · equity $12,032.94 vs prior close $12,032.94 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **BUY** | `SGRY` | 64 | $23.20 | $2.18 | — | $10,545.96 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; 🔵; ret5=+58.1; leftover $1504.12 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `SLN` | 76 | $19.78 | $2.22 | — | $9,040.46 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+1.0; leftover $1504.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RBRK` | 11 | $132.49 | $2.02 | — | $7,581.05 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+17.6; leftover $1504.12 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `AMRX` | 71 | $20.93 | $2.20 | — | $6,092.81 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+8.6; leftover $1504.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `BLLN` | 13 | $111.84 | $2.03 | — | $4,636.86 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+10.3; leftover $1504.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `GMAB` | 33 | $44.41 | $2.09 | — | $3,169.25 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+16.1; leftover $1504.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `PACS` | 31 | $48.23 | $2.08 | — | $1,672.03 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; 🔵; ret5=+6.3; leftover $1504.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `CDNA` | 21 | $69.10 | $2.05 | — | $218.88 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; 🔵; ret5=+3.0; leftover $1504.12 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $218.88 | ▲ close $12,154.08 vs 09:30 $12,032.94 (session +138.02) | 16:00 close · cash $218.88 · equity $12,154.08 vs 09:30 $12,032.94 (+121.14; session marks +138.02) · 8 name(s) marked open→close (per-name table). SGRY×64 09:30 $23.20 → close $23.36 +10.24; SLN×76 09:30 $19.78 → close $19.78 +0.00; RBRK×11 09:30 $132.49 → close $135.74 +35.75; AMRX×71 09:30 $20.93 → close $21.44 +36.21; BLLN×13 09:30 $111.84 → close $114.07 +28.99; GMAB×33 09:30 $44.41 → close $44.67 +8.58; PACS×31 09:30 $48.23 → close $47.85 -11.78; CDNA×21 09:30 $69.10 → close $70.53 +30.03 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-20.93%** ($7,907) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 427 · skips 101 · realized $-768.45.
+Cash book **-22.14%** ($7,786) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 435 · skips 101 · realized $-768.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -608,6 +608,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,922.71 | ▼ close $7,907.21 vs 09:30 $7,915.71 (session -8.50) | 16:00 close · cash $6,922.71 · equity $7,907.21 vs 09:30 $7,915.71 (-8.50; session marks -8.50) · 1 name(s) marked open→close (per-name table). PRMB×50 09:30 $19.86 → close $19.69 -8.50 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,922.71 | ▲ 09:30 equity $7,907.21 vs yday $7,907.21 (+0.00) | 09:30 open · cash $6,922.71 (unchanged overnight, no fees) · equity $7,907.21 vs prior close $7,907.21 (+0.00) · 1 name(s) re-marked at the open (per-name table). PRMB×50 yday $19.69 → 09:30 $19.69 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,922.71 | ▲ close $7,907.21 vs 09:30 $7,907.21 (session +0.00) | 16:00 close · cash $6,922.71 · equity $7,907.21 vs 09:30 $7,907.21 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). PRMB×50 09:30 $19.69 → close $19.69 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,922.71 | ▼ 09:30 equity $7,901.71 vs yday $7,907.21 (-5.50) | 09:30 open · cash $6,922.71 (unchanged overnight, no fees) · equity $7,901.71 vs prior close $7,907.21 (-5.50) · 1 name(s) re-marked at the open (per-name table). PRMB×50 yday $19.69 → 09:30 $19.58 -5.50 | — |
+| 2026-10-27 09:30 ET | **SELL** | `PRMB` | 50 | $19.58 | $2.16 | $-25.30 | $7,899.55 | ▼ -25.30 after sell → book $7,899.55; vs 09:30 mark -2.16 | exit unpriced hold on first bar after 4 sess | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `PACS` | 20 | $48.23 | $2.05 | — | $6,932.90 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+6.3; leftover $987.44 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `EPR` | 17 | $56.39 | $2.04 | — | $5,972.23 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.9; leftover $987.44 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `TRU` | 12 | $82.17 | $2.03 | — | $4,984.16 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; 🔵; ret5=+8.9; leftover $987.44 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `TBBB` | 16 | $58.24 | $2.04 | — | $4,050.29 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+0.0; leftover $987.44 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `SLN` | 49 | $19.78 | $2.14 | — | $3,078.93 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; 🔵; ret5=+1.0; leftover $987.44 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `PHM` | 8 | $121.54 | $2.01 | — | $2,104.59 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+9.4; leftover $987.44 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `LYB` | 14 | $66.86 | $2.03 | — | $1,166.52 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+5.7; leftover $987.44 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,166.52 | ▼ close $7,785.57 vs 09:30 $7,901.71 (session -99.64) | 16:00 close · cash $1,166.52 · equity $7,785.57 vs 09:30 $7,901.71 (-116.14; session marks -99.64) · 7 name(s) marked open→close (per-name table). PACS×20 09:30 $48.23 → close $47.85 -7.60; EPR×17 09:30 $56.39 → close $56.01 -6.46; TRU×12 09:30 $82.17 → close $75.42 -81.00; TBBB×16 09:30 $58.24 → close $57.41 -13.28; SLN×49 09:30 $19.78 → close $19.78 +0.00; PHM×8 09:30 $121.54 → close $121.63 +0.72; LYB×14 09:30 $66.86 → close $67.43 +7.98 | — |
 
 ## Not taken
 

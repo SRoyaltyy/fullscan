@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared flatten_h5/union_e_fresh_h1 w=0.5,0.5 net=priority
 
-Cash book **-4.08%** ($9,592) · signal-only (no cash/fees) was —. Starts YES **10/30**. Fills 504 · skips 447 · realized $+55.90.
+Cash book **-2.96%** ($9,705) · signal-only (no cash/fees) was —. Starts YES **10/30**. Fills 506 · skips 447 · realized $+55.90.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $3,599.80.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $1,214.12.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -681,6 +681,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,599.80 | ▼ close $9,592.15 vs 09:30 $9,756.36 (session -160.17) | 16:00 close · cash $3,599.80 · equity $9,592.15 vs 09:30 $9,756.36 (-164.21; session marks -160.17) · 8 name(s) marked open→close (per-name table). ARQT×27 09:30 $32.13 → close $31.20 -25.11; CDNA×12 09:30 $68.54 → close $69.21 +8.04; CORT×7 09:30 $106.05 → close $85.86 -141.33; CRON×275 09:30 $3.42 → close $3.35 -20.62; ETON×17 09:30 $49.89 → close $50.00 +1.87; ILMN×2 09:30 $264.42 → close $269.42 +10.00; PACS×16 09:30 $47.50 → close $47.64 +2.24; VEEV×2 09:30 $320.67 → close $323.04 +4.74 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,599.80 | ▲ 09:30 equity $9,592.15 vs yday $9,592.15 (+0.00) | 09:30 open · cash $3,599.80 (unchanged overnight, no fees) · equity $9,592.15 vs prior close $9,592.15 (+0.00) | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,599.80 | ▲ close $9,592.15 vs 09:30 $9,592.15 (session +0.00) | 16:00 close · cash $3,599.80 · equity $9,592.15 vs 09:30 $9,592.15 (+0.00; session marks +0.00) · 8 name(s) marked open→close (per-name table). ARQT×27 09:30 $31.20 → close $31.20 +0.00; CDNA×12 09:30 $69.21 → close $69.21 +0.00; CORT×7 09:30 $85.86 → close $85.86 +0.00; CRON×275 09:30 $3.35 → close $3.35 +0.00; ETON×17 09:30 $50.00 → close $50.00 +0.00; ILMN×2 09:30 $269.42 → close $269.42 +0.00; PACS×16 09:30 $47.64 → close $47.64 +0.00; VEEV×2 09:30 $323.04 → close $323.04 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,599.80 | ▼ 09:30 equity $9,574.83 vs yday $9,592.15 (-17.32) | 09:30 open · cash $3,599.80 (unchanged overnight, no fees) · equity $9,574.83 vs prior close $9,592.15 (-17.32) | — |
+| 2026-10-27 09:30 ET | **BUY** | `PRGO` | 77 | $15.56 | $2.22 | — | $2,399.46 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=-1.7; combo leftover $1199.93; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `SGRY` | 51 | $23.20 | $2.14 | — | $1,214.12 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+58.1; combo leftover $1199.93; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,214.12 | ▲ close $9,704.55 vs 09:30 $9,574.83 (session +134.08) | 16:00 close · cash $1,214.12 · equity $9,704.55 vs 09:30 $9,574.83 (+129.72; session marks +134.08) · 10 name(s) marked open→close (per-name table). ARQT×27 09:30 $31.41 → close $31.68 +7.42; CDNA×12 09:30 $69.10 → close $70.53 +17.16; CORT×7 09:30 $85.31 → close $87.59 +15.96; CRON×275 09:30 $3.30 → close $3.38 +22.00; ETON×17 09:30 $50.10 → close $51.16 +18.02; ILMN×2 09:30 $269.42 → close $279.47 +20.10; PACS×16 09:30 $48.23 → close $47.85 -6.08; VEEV×2 09:30 $315.50 → close $313.46 -4.08; PRGO×77 09:30 $15.56 → close $16.02 +35.42; SGRY×51 09:30 $23.20 → close $23.36 +8.16 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+23.00%** ($12,300) · signal-only (no cash/fees) was +8.48%. Starts YES **1/30**. Fills 34 · skips 9 · realized $-574.52.
+Cash book **+19.90%** ($11,990) · signal-only (no cash/fees) was +8.48%. Starts YES **1/30**. Fills 40 · skips 9 · realized $-574.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -212,6 +212,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,937.19 | ▲ close $12,299.92 vs 09:30 $12,278.50 (session +21.42) | 16:00 close · cash $3,937.19 · equity $12,299.92 vs 09:30 $12,278.50 (+21.42; session marks +21.42) · 4 name(s) marked open→close (per-name table). BRO×38 09:30 $74.16 → close $72.97 -45.22; BROS×62 09:30 $40.80 → close $41.49 +42.78; DGX×1 09:30 $239.63 → close $241.89 +2.26; QTWO×40 09:30 $68.85 → close $69.39 +21.60 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,937.19 | ▲ 09:30 equity $12,299.92 vs yday $12,299.92 (+0.00) | 09:30 open · cash $3,937.19 (unchanged overnight, no fees) · equity $12,299.92 vs prior close $12,299.92 (+0.00) · 4 name(s) re-marked at the open (per-name table). BRO×38 yday $72.97 → 09:30 $72.97 +0.00; BROS×62 yday $41.49 → 09:30 $41.49 +0.00; DGX×1 yday $241.89 → 09:30 $241.89 +0.00; QTWO×40 yday $69.39 → 09:30 $69.39 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,937.19 | ▲ close $12,299.92 vs 09:30 $12,299.92 (session +0.00) | 16:00 close · cash $3,937.19 · equity $12,299.92 vs 09:30 $12,299.92 (+0.00; session marks +0.00) · 4 name(s) marked open→close (per-name table). BRO×38 09:30 $72.97 → close $72.97 +0.00; BROS×62 09:30 $41.49 → close $41.49 +0.00; DGX×1 09:30 $241.89 → close $241.89 +0.00; QTWO×40 09:30 $69.39 → close $69.39 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,937.19 | ▼ 09:30 equity $12,129.49 vs yday $12,299.92 (-170.43) | 09:30 open · cash $3,937.19 (unchanged overnight, no fees) · equity $12,129.49 vs prior close $12,299.92 (-170.43) · 4 name(s) re-marked at the open (per-name table). BRO×38 yday $72.97 → 09:30 $68.00 -188.86; BROS×62 yday $41.49 → 09:30 $41.87 +23.56; DGX×1 yday $241.89 → 09:30 $241.96 +0.07; QTWO×40 yday $69.39 → 09:30 $69.26 -5.20 | — |
+| 2026-10-27 09:30 ET | **SELL** | `BRO` | 38 | $68.00 | $2.13 | $-91.26 | $6,519.06 | ▼ -91.26 after sell → book $12,127.36; vs 09:30 mark -2.13 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `BROS` | 62 | $41.87 | $2.21 | $-77.54 | $9,112.79 | ▼ -77.54 after sell → book $12,125.15; vs 09:30 mark -2.21 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `DGX` | 1 | $241.96 | $2.01 | $-1.72 | $9,352.74 | ▼ -1.72 after sell → book $12,123.14; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 7 sess | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SELL** | `QTWO` | 40 | $69.26 | $2.14 | $+127.75 | $12,120.99 | ▲ +127.75 after sell → book $12,120.99; vs 09:30 mark -2.15 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **BUY** | `ARI` | 611 | $6.61 | $7.88 | — | $8,074.40 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; 🔵; ret5=+4.4; leftover $4040.33 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `BX` | 33 | $120.00 | $2.09 | — | $4,112.31 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; 🔵; ret5=+11.2; leftover $4040.33 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,112.31 | ▼ close $11,989.90 vs 09:30 $12,129.49 (session -121.12) | 16:00 close · cash $4,112.31 · equity $11,989.90 vs 09:30 $12,129.49 (-139.59; session marks -121.12) · 2 name(s) marked open→close (per-name table). ARI×611 09:30 $6.61 → close $6.59 -12.22; BX×33 09:30 $120.00 → close $116.70 -108.90 | — |
 
 ## Not taken
 

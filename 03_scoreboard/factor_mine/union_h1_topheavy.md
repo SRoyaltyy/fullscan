@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-17.04%** ($8,296) · signal-only (no cash/fees) was -0.80%. Starts YES **9/30**. Fills 415 · skips 107 · realized $+589.32.
+Cash book **-17.13%** ($8,287) · signal-only (no cash/fees) was -0.80%. Starts YES **9/30**. Fills 422 · skips 107 · realized $+589.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -587,6 +587,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,599.91 | ▲ close $8,296.06 vs 09:30 $8,297.73 (session +0.45) | 16:00 close · cash $7,599.91 · equity $8,296.06 vs 09:30 $8,297.73 (-1.67; session marks +0.45) · 1 name(s) marked open→close (per-name table). SMMT×45 09:30 $15.46 → close $15.47 +0.45 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,599.91 | ▲ 09:30 equity $8,296.06 vs yday $8,296.06 (+0.00) | 09:30 open · cash $7,599.91 (unchanged overnight, no fees) · equity $8,296.06 vs prior close $8,296.06 (+0.00) · 1 name(s) re-marked at the open (per-name table). SMMT×45 yday $15.47 → 09:30 $15.47 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,599.91 | ▲ close $8,296.06 vs 09:30 $8,296.06 (session +0.00) | 16:00 close · cash $7,599.91 · equity $8,296.06 vs 09:30 $8,296.06 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). SMMT×45 09:30 $15.47 → close $15.47 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,599.91 | ▼ 09:30 equity $8,252.41 vs yday $8,296.06 (-43.65) | 09:30 open · cash $7,599.91 (unchanged overnight, no fees) · equity $8,252.41 vs prior close $8,296.06 (-43.65) · 1 name(s) re-marked at the open (per-name table). SMMT×45 yday $15.47 → 09:30 $14.50 -43.65 | — |
+| 2026-10-27 09:30 ET | **SELL** | `SMMT` | 45 | $14.50 | $2.15 | $-39.82 | $8,250.26 | ▼ -39.82 after sell → book $8,250.26; vs 09:30 mark -2.15 | exit unpriced hold on first bar after 9 sess | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `VEEV` | 10 | $315.50 | $2.02 | — | $5,093.24 | — | 40% to #1, rest split; list flatten; 🔵; ret5=+0.4; leftover $3300.11 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ILMN` | 3 | $269.42 | $2.00 | — | $4,282.99 | — | 40% to #1, rest split; list flatten; 🔵; ret5=+3.2; leftover $825.03 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `CDNA` | 11 | $69.10 | $2.02 | — | $3,520.86 | — | 40% to #1, rest split; list flatten; 🔵; ret5=+3.0; leftover $825.03 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `PACS` | 17 | $48.23 | $2.04 | — | $2,698.91 | — | 40% to #1, rest split; list flatten; 🔵; ret5=+6.3; leftover $825.03 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `PRGO` | 53 | $15.56 | $2.15 | — | $1,872.08 | — | 40% to #1, rest split; list flatten; ret5=-1.7; leftover $825.03 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `SGRY` | 35 | $23.20 | $2.10 | — | $1,057.99 | — | 40% to #1, rest split; list flatten; 🔵; ret5=+58.1; leftover $825.03 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,057.99 | ▲ close $8,286.94 vs 09:30 $8,252.41 (session +49.00) | 16:00 close · cash $1,057.99 · equity $8,286.94 vs 09:30 $8,252.41 (+34.53; session marks +49.00) · 6 name(s) marked open→close (per-name table). VEEV×10 09:30 $315.50 → close $313.46 -20.40; ILMN×3 09:30 $269.42 → close $279.47 +30.15; CDNA×11 09:30 $69.10 → close $70.53 +15.73; PACS×17 09:30 $48.23 → close $47.85 -6.46; PRGO×53 09:30 $15.56 → close $16.02 +24.38; SGRY×35 09:30 $23.20 → close $23.36 +5.60 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-14.64%** ($8,536) · signal-only (no cash/fees) was -40.60%. Starts YES **0/30**. Fills 120 · skips 188 · realized $-1635.94.
+Cash book **-14.54%** ($8,546) · signal-only (no cash/fees) was -40.60%. Starts YES **0/30**. Fills 126 · skips 188 · realized $-1635.94.
 
 ## How this sleeve decides (like you are 10)
 
@@ -292,6 +292,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $576.22 | ▼ close $8,536.14 vs 09:30 $8,551.61 (session -15.47) | 16:00 close · cash $576.22 · equity $8,536.14 vs 09:30 $8,551.61 (-15.47; session marks -15.47) · 6 name(s) marked open→close (per-name table). CSX×28 09:30 $51.23 → close $50.79 -12.32; IBM×5 09:30 $249.73 → close $253.56 +19.15; LUV×34 09:30 $41.01 → close $41.75 +25.16; MOH×6 09:30 $213.22 → close $209.15 -24.42; PNFP×14 09:30 $101.46 → close $100.35 -15.54; SAP×5 09:30 $239.64 → close $238.14 -7.50 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $576.22 | ▲ 09:30 equity $8,536.14 vs yday $8,536.14 (+0.00) | 09:30 open · cash $576.22 (unchanged overnight, no fees) · equity $8,536.14 vs prior close $8,536.14 (+0.00) · 6 name(s) re-marked at the open (per-name table). CSX×28 yday $50.79 → 09:30 $50.79 +0.00; IBM×5 yday $253.56 → 09:30 $253.56 +0.00; LUV×34 yday $41.75 → 09:30 $41.75 +0.00; MOH×6 yday $209.15 → 09:30 $209.15 +0.00; PNFP×14 yday $100.35 → 09:30 $100.35 +0.00; SAP×5 yday $238.14 → 09:30 $238.14 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $576.22 | ▲ close $8,536.14 vs 09:30 $8,536.14 (session +0.00) | 16:00 close · cash $576.22 · equity $8,536.14 vs 09:30 $8,536.14 (+0.00; session marks +0.00) · 6 name(s) marked open→close (per-name table). CSX×28 09:30 $50.79 → close $50.79 +0.00; IBM×5 09:30 $253.56 → close $253.56 +0.00; LUV×34 09:30 $41.75 → close $41.75 +0.00; MOH×6 09:30 $209.15 → close $209.15 +0.00; PNFP×14 09:30 $100.35 → close $100.35 +0.00; SAP×5 09:30 $238.14 → close $238.14 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $576.22 | ▲ 09:30 equity $8,558.02 vs yday $8,536.14 (+21.88) | 09:30 open · cash $576.22 (unchanged overnight, no fees) · equity $8,558.02 vs prior close $8,536.14 (+21.88) · 6 name(s) re-marked at the open (per-name table). CSX×28 yday $50.79 → 09:30 $51.36 +15.96; IBM×5 yday $253.56 → 09:30 $251.93 -8.14; LUV×34 yday $41.75 → 09:30 $42.98 +41.82; MOH×6 yday $209.15 → 09:30 $201.87 -43.68; PNFP×14 yday $100.35 → 09:30 $101.13 +10.92; SAP×5 yday $238.14 → 09:30 $239.14 +5.00 | — |
+| 2026-10-27 09:30 ET | **SELL** | `CSX` | 28 | $51.36 | $2.10 | $+89.07 | $2,012.20 | ▲ +89.07 after sell → book $8,555.93; vs 09:30 mark -2.09 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `IBM` | 5 | $251.93 | $2.03 | $+46.06 | $3,269.84 | ▲ +46.06 after sell → book $8,553.90; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `LUV` | 34 | $42.98 | $2.11 | $+101.53 | $4,729.05 | ▲ +101.53 after sell → book $8,551.79; vs 09:30 mark -2.11 | exit unpriced hold on first bar after 4 sess | join🔴 sector🟡 gen🟢 news🔴 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SELL** | `MOH` | 6 | $201.87 | $2.03 | $-118.82 | $5,938.24 | ▼ -118.82 after sell → book $8,549.76; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `PNFP` | 14 | $101.13 | $2.05 | $+67.73 | $7,352.01 | ▲ +67.73 after sell → book $8,547.71; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `SAP` | 5 | $239.14 | $2.02 | $+33.82 | $8,545.68 | ▲ +33.82 after sell → book $8,545.68; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,545.68 | ▲ close $8,545.68 vs 09:30 $8,558.02 (session +0.00) | 16:00 close · cash $8,545.68 · no lots left · equity $8,545.68. | — |
 
 ## Not taken
 

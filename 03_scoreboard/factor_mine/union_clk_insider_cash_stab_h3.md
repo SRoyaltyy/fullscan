@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data)
 
-Cash book **+7.66%** ($10,766) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 11 · skips 7 · realized $-603.63.
+Cash book **+5.56%** ($10,556) · signal-only (no cash/fees) was -5.54%. Starts YES **0/30**. Fills 12 · skips 7 · realized $-603.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -189,6 +189,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.71 | ▲ close $10,766.03 vs 09:30 $10,497.11 (session +268.92) | 16:00 close · cash $15.71 · equity $10,766.03 vs 09:30 $10,497.11 (+268.92; session marks +268.92) · 1 name(s) marked open→close (per-name table). POOL×54 09:30 $194.10 → close $199.08 +268.92 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15.71 | ▲ 09:30 equity $10,766.03 vs yday $10,766.03 (+0.00) | 09:30 open · cash $15.71 (unchanged overnight, no fees) · equity $10,766.03 vs prior close $10,766.03 (+0.00) · 1 name(s) re-marked at the open (per-name table). POOL×54 yday $199.08 → 09:30 $199.08 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.71 | ▲ close $10,766.03 vs 09:30 $10,766.03 (session +0.00) | 16:00 close · cash $15.71 · equity $10,766.03 vs 09:30 $10,766.03 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). POOL×54 09:30 $199.08 → close $199.08 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15.71 | ▼ 09:30 equity $10,558.13 vs yday $10,766.03 (-207.90) | 09:30 open · cash $15.71 (unchanged overnight, no fees) · equity $10,558.13 vs prior close $10,766.03 (-207.90) · 1 name(s) re-marked at the open (per-name table). POOL×54 yday $199.08 → 09:30 $195.23 -207.90 | — |
+| 2026-10-27 09:30 ET | **SELL** | `POOL` | 54 | $195.23 | $2.25 | $+1282.96 | $10,555.88 | ▲ +1,282.96 after sell → book $10,555.88; vs 09:30 mark -2.25 | exit unpriced hold on first bar after 4 sess | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,555.88 | ▲ close $10,555.88 vs 09:30 $10,558.13 (session +0.00) | 16:00 close · cash $10,555.88 · no lots left · equity $10,555.88. | — |
 
 ## Not taken
 

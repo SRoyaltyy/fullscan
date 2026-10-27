@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/flatten_h5 w=0.3,0.7 net=priority
 
-Cash book **-10.33%** ($8,967) · signal-only (no cash/fees) was —. Starts YES **7/30**. Fills 397 · skips 540 · realized $+600.22.
+Cash book **-9.21%** ($9,079) · signal-only (no cash/fees) was —. Starts YES **7/30**. Fills 401 · skips 540 · realized $+600.22.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $3,941.63.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7.34.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -574,6 +574,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,941.63 | ▼ close $8,966.80 vs 09:30 $9,146.47 (session -171.46) | 16:00 close · cash $3,941.63 · equity $8,966.80 vs 09:30 $9,146.47 (-179.67; session marks -171.46) · 11 name(s) marked open→close (per-name table). ARQT×26 09:30 $32.13 → close $31.20 -24.18; BKU×4 09:30 $43.34 → close $43.57 +0.92; BLFS×4 09:30 $38.61 → close $38.61 +0.00; CDNA×4 09:30 $68.54 → close $69.21 +2.68; CORT×7 09:30 $106.05 → close $85.86 -141.33; CRON×261 09:30 $3.42 → close $3.35 -19.57; ETON×16 09:30 $49.89 → close $50.00 +1.76; ILMN×1 09:30 $264.42 → close $269.42 +5.00; NFLX×2 09:30 $67.01 → close $65.85 -2.32; PACS×6 09:30 $47.50 → close $47.64 +0.84; VEEV×2 09:30 $320.67 → close $323.04 +4.74 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,941.63 | ▲ 09:30 equity $8,966.80 vs yday $8,966.80 (+0.00) | 09:30 open · cash $3,941.63 (unchanged overnight, no fees) · equity $8,966.80 vs prior close $8,966.80 (+0.00) | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,941.63 | ▲ close $8,966.80 vs 09:30 $8,966.80 (session +0.00) | 16:00 close · cash $3,941.63 · equity $8,966.80 vs 09:30 $8,966.80 (+0.00; session marks +0.00) · 11 name(s) marked open→close (per-name table). ARQT×26 09:30 $31.20 → close $31.20 +0.00; BKU×4 09:30 $43.57 → close $43.57 +0.00; BLFS×4 09:30 $38.61 → close $38.61 +0.00; CDNA×4 09:30 $69.21 → close $69.21 +0.00; CORT×7 09:30 $85.86 → close $85.86 +0.00; CRON×261 09:30 $3.35 → close $3.35 +0.00; ETON×16 09:30 $50.00 → close $50.00 +0.00; ILMN×1 09:30 $269.42 → close $269.42 +0.00; NFLX×2 09:30 $65.85 → close $65.85 +0.00; PACS×6 09:30 $47.64 → close $47.64 +0.00; VEEV×2 09:30 $323.04 → close $323.04 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,941.63 | ▼ 09:30 equity $8,939.67 vs yday $8,966.80 (-27.13) | 09:30 open · cash $3,941.63 (unchanged overnight, no fees) · equity $8,939.67 vs prior close $8,966.80 (-27.13) | — |
+| 2026-10-27 09:30 ET | **SELL** | `BKU` | 4 | $43.50 | $1.77 | $-0.66 | $4,113.86 | ▼ -0.66 after sell → book $8,937.90; vs 09:30 mark -1.77 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | — |
+| 2026-10-27 09:30 ET | **SELL** | `NFLX` | 2 | $63.40 | $1.29 | $-4.08 | $4,239.36 | ▼ -4.08 after sell → book $8,936.60; vs 09:30 mark -1.30 | union_e_fresh_h3: dropped from list after 4 sess (min 3) | — |
+| 2026-10-27 09:30 ET | **BUY** | `PRGO` | 136 | $15.56 | $2.40 | — | $2,120.81 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=-1.7; combo leftover $2119.68; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `SGRY` | 91 | $23.20 | $2.26 | — | $7.34 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+58.1; combo leftover $2119.68; owner flatten_h5 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.34 | ▲ close $9,079.42 vs 09:30 $8,939.67 (session +147.48) | 16:00 close · cash $7.34 · equity $9,079.42 vs 09:30 $8,939.67 (+139.75; session marks +147.48) · 11 name(s) marked open→close (per-name table). ARQT×26 09:30 $31.41 → close $31.68 +7.15; BLFS×4 09:30 $38.61 → close $38.61 +0.00; CDNA×4 09:30 $69.10 → close $70.53 +5.72; CORT×7 09:30 $85.31 → close $87.59 +15.96; CRON×261 09:30 $3.30 → close $3.38 +20.88; ETON×16 09:30 $50.10 → close $51.16 +16.96; ILMN×1 09:30 $269.42 → close $279.47 +10.05; PACS×6 09:30 $48.23 → close $47.85 -2.28; VEEV×2 09:30 $315.50 → close $313.46 -4.08; PRGO×136 09:30 $15.56 → close $16.02 +62.56; SGRY×91 09:30 $23.20 → close $23.36 +14.56 | — |
 
 ## Not taken
 

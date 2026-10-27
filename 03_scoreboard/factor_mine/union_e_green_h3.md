@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-8.48%** ($9,152) · signal-only (no cash/fees) was -18.73%. Starts YES **20/30**. Fills 92 · skips 104 · realized $-87.73.
+Cash book **-8.47%** ($9,153) · signal-only (no cash/fees) was -18.73%. Starts YES **20/30**. Fills 96 · skips 104 · realized $-87.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -270,6 +270,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $455.45 | ▼ close $9,151.73 vs 09:30 $9,173.90 (session -22.17) | 16:00 close · cash $455.45 · equity $9,151.73 vs 09:30 $9,173.90 (-22.17; session marks -22.17) · 4 name(s) marked open→close (per-name table). BKU×52 09:30 $43.34 → close $43.57 +11.96; COF×10 09:30 $200.73 → close $201.34 +6.10; ISRG×5 09:30 $443.65 → close $452.29 +43.20; T×103 09:30 $21.74 → close $20.93 -83.43 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $455.45 | ▲ 09:30 equity $9,151.73 vs yday $9,151.73 (+0.00) | 09:30 open · cash $455.45 (unchanged overnight, no fees) · equity $9,151.73 vs prior close $9,151.73 (+0.00) · 4 name(s) re-marked at the open (per-name table). BKU×52 yday $43.57 → 09:30 $43.57 +0.00; COF×10 yday $201.34 → 09:30 $201.34 +0.00; ISRG×5 yday $452.29 → 09:30 $452.29 +0.00; T×103 yday $20.93 → 09:30 $20.93 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $455.45 | ▲ close $9,151.73 vs 09:30 $9,151.73 (session +0.00) | 16:00 close · cash $455.45 · equity $9,151.73 vs 09:30 $9,151.73 (+0.00; session marks +0.00) · 4 name(s) marked open→close (per-name table). BKU×52 09:30 $43.57 → close $43.57 +0.00; COF×10 09:30 $201.34 → close $201.34 +0.00; ISRG×5 09:30 $452.29 → close $452.29 +0.00; T×103 09:30 $20.93 → close $20.93 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $455.45 | ▲ 09:30 equity $9,161.87 vs yday $9,151.73 (+10.14) | 09:30 open · cash $455.45 (unchanged overnight, no fees) · equity $9,161.87 vs prior close $9,151.73 (+10.14) · 4 name(s) re-marked at the open (per-name table). BKU×52 yday $43.57 → 09:30 $43.50 -3.64; COF×10 yday $201.34 → 09:30 $204.49 +31.50; ISRG×5 yday $452.29 → 09:30 $451.63 -3.30; T×103 yday $20.93 → 09:30 $20.79 -14.42 | — |
+| 2026-10-27 09:30 ET | **SELL** | `BKU` | 52 | $43.50 | $2.17 | $+32.60 | $2,715.28 | ▲ +32.60 after sell → book $9,159.70; vs 09:30 mark -2.17 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `COF` | 10 | $204.49 | $2.05 | $-22.87 | $4,758.13 | ▼ -22.87 after sell → book $9,157.65; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `ISRG` | 5 | $451.63 | $2.03 | $+241.64 | $7,014.25 | ▲ +241.64 after sell → book $9,155.62; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `T` | 103 | $20.79 | $2.33 | $-117.62 | $9,153.28 | ▼ -117.62 after sell → book $9,153.28; vs 09:30 mark -2.34 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,153.28 | ▲ close $9,153.28 vs 09:30 $9,161.87 (session +0.00) | 16:00 close · cash $9,153.28 · no lots left · equity $9,153.28. | — |
 
 ## Not taken
 

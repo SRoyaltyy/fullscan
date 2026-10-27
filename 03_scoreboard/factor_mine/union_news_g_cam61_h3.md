@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +6 −≤1
 
-Cash book **-26.42%** ($7,358) · signal-only (no cash/fees) was -22.84%. Starts YES **1/30**. Fills 80 · skips 85 · realized $-2058.05.
+Cash book **-25.96%** ($7,404) · signal-only (no cash/fees) was -22.84%. Starts YES **1/30**. Fills 81 · skips 85 · realized $-2058.05.
 
 ## How this sleeve decides (like you are 10)
 
@@ -259,6 +259,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,357.92 | ▲ close $7,357.92 vs 09:30 $7,357.92 (session +0.00) | 16:00 close · cash $7,357.92 · no lots left · equity $7,357.92. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,357.92 | ▲ 09:30 equity $7,357.92 vs yday $7,357.92 (+0.00) | 09:30 open · cash $7,357.92 · no holdings · equity $7,357.92 vs prior close $7,357.92 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,357.92 | ▲ close $7,357.92 vs 09:30 $7,357.92 (session +0.00) | 16:00 close · cash $7,357.92 · no lots left · equity $7,357.92. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,357.92 | ▲ 09:30 equity $7,357.92 vs yday $7,357.92 (+0.00) | 09:30 open · cash $7,357.92 · no holdings · equity $7,357.92 vs prior close $7,357.92 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **BUY** | `SGRY` | 316 | $23.20 | $4.08 | — | $22.64 | — | merged news🟢 and cameras +6 −≤1; gate cam_bad_max=1,n_pos_min=6,news=good; rank cond; list flatten; 🔵; ret5=+58.1; leftover $7357.92 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22.64 | ▲ close $7,404.40 vs 09:30 $7,357.92 (session +50.56) | 16:00 close · cash $22.64 · equity $7,404.40 vs 09:30 $7,357.92 (+46.48; session marks +50.56) · 1 name(s) marked open→close (per-name table). SGRY×316 09:30 $23.20 → close $23.36 +50.56 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **+0.74%** ($10,074) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 439 · skips 107 · realized $-717.78.
+Cash book **-1.08%** ($9,892) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 448 · skips 107 · realized $-717.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -613,6 +613,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,594.51 | ▲ close $10,074.27 vs 09:30 $10,060.43 (session +13.84) | 16:00 close · cash $10,594.51 · equity $10,074.27 vs 09:30 $10,060.43 (+13.84; session marks +13.84) · 1 name(s) marked open→close (per-name table). PRIM×8 09:30 $66.76 → close $65.03 +13.84 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,594.51 | ▲ 09:30 equity $10,074.27 vs yday $10,074.27 (+0.00) | 09:30 open · cash $10,594.51 (unchanged overnight, no fees) · equity $10,074.27 vs prior close $10,074.27 (+0.00) · 1 name(s) re-marked at the open (per-name table). PRIM×8 yday $65.03 → 09:30 $65.03 -0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,594.51 | ▲ close $10,074.27 vs 09:30 $10,074.27 (session +0.00) | 16:00 close · cash $10,594.51 · equity $10,074.27 vs 09:30 $10,074.27 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). PRIM×8 09:30 $65.03 → close $65.03 -0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,594.51 | ▼ 09:30 equity $10,053.87 vs yday $10,074.27 (-20.40) | 09:30 open · cash $10,594.51 (unchanged overnight, no fees) · equity $10,053.87 vs prior close $10,074.27 (-20.40) · 1 name(s) re-marked at the open (per-name table). PRIM×8 yday $65.03 → 09:30 $67.58 -20.40 | — |
+| 2026-10-27 09:30 ET | **COVER** | `PRIM` | 8 | $67.58 | $2.01 | $+45.62 | $10,051.86 | ▲ +45.62 after sell → book $10,051.86; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 4 sess | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SHORT** | `VEEV` | 1 | $315.50 | $2.02 | — | $10,365.33 | — | last bar red; gate last_red=True; list flatten; 🔵; ret5=+0.4; leftover $628.24 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SHORT** | `PRGO` | 40 | $15.56 | $2.15 | — | $10,985.59 | — | last bar red; gate last_red=True; list flatten; ret5=-1.7; leftover $628.24 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SHORT** | `SMMT` | 43 | $14.50 | $2.16 | — | $11,606.93 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-6.9; leftover $628.24 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-27 09:30 ET | **SHORT** | `PRMB` | 32 | $19.58 | $2.12 | — | $12,231.37 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=-0.7; leftover $628.24 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SHORT** | `AIP` | 31 | $19.89 | $2.12 | — | $12,845.84 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.9; leftover $628.24 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SHORT** | `CXW` | 21 | $29.89 | $2.09 | — | $13,471.44 | — | last bar red; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-0.1; leftover $628.24 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SHORT** | `EGG` | 121 | $5.17 | $2.40 | — | $14,094.61 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; ret5=+3.2; leftover $628.24 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-27 09:30 ET | **SHORT** | `MX` | 261 | $2.40 | $3.44 | — | $14,717.57 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; 🔵; ret5=-7.4; leftover $628.24 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,717.57 | ▼ close $9,891.71 vs 09:30 $10,053.87 (session -141.65) | 16:00 close · cash $14,717.57 · equity $9,891.71 vs 09:30 $10,053.87 (-162.16; session marks -141.65) · 8 name(s) marked open→close (per-name table). VEEV×1 09:30 $315.50 → close $313.46 +2.04; PRGO×40 09:30 $15.56 → close $16.02 -18.40; SMMT×43 09:30 $14.50 → close $15.33 -35.69; PRMB×32 09:30 $19.58 → close $19.21 +11.84; AIP×31 09:30 $19.89 → close $20.95 -32.86; CXW×21 09:30 $29.89 → close $30.80 -19.11; EGG×121 09:30 $5.17 → close $5.32 -18.15; MX×261 09:30 $2.40 → close $2.52 -31.32 | — |
 
 ## Not taken
 

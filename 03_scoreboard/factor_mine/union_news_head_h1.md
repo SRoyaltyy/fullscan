@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-43.02%** ($5,697) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 242 · skips 65 · realized $-814.48.
+Cash book **-42.32%** ($5,768) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 250 · skips 65 · realized $-814.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -419,6 +419,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,697.47 | ▲ close $5,697.47 vs 09:30 $5,704.92 (session +0.00) | 16:00 close · cash $5,697.47 · no lots left · equity $5,697.47. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,697.47 | ▲ 09:30 equity $5,697.47 vs yday $5,697.47 (+0.00) | 09:30 open · cash $5,697.47 · no holdings · equity $5,697.47 vs prior close $5,697.47 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,697.47 | ▲ close $5,697.47 vs 09:30 $5,697.47 (session +0.00) | 16:00 close · cash $5,697.47 · no lots left · equity $5,697.47. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,697.47 | ▲ 09:30 equity $5,697.47 vs yday $5,697.47 (+0.00) | 09:30 open · cash $5,697.47 · no holdings · equity $5,697.47 vs prior close $5,697.47 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **BUY** | `SGRY` | 30 | $23.20 | $2.08 | — | $4,999.39 | — | prior-export headline🟢 only; gate headline=good; rank cond; list flatten; 🔵; ret5=+58.1; leftover $712.18 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `GH` | 4 | $174.75 | $2.00 | — | $4,298.37 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; 🔵; ret5=+9.7; leftover $712.18 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `TBBB` | 12 | $58.24 | $2.03 | — | $3,597.46 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer; ret5=+0.0; leftover $712.18 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `AMTM` | 32 | $21.97 | $2.09 | — | $2,892.34 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+13.3; leftover $712.18 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ITW` | 2 | $272.30 | $2.00 | — | $2,345.74 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer; ret5=+2.2; leftover $712.18 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `NVTS` | 82 | $8.62 | $2.24 | — | $1,636.66 | — | prior-export headline🟢 only; gate headline=good; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=-2.7; leftover $712.18 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `SMRT` | 552 | $1.29 | $7.12 | — | $917.46 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; 🔵; ret5=+11.3; leftover $712.18 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `LUV` | 16 | $42.98 | $2.04 | — | $227.75 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+10.4; leftover $712.18 | join🔴 sector🟡 gen🟢 news🔴 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $227.75 | ▲ close $5,767.95 vs 09:30 $5,697.47 (session +92.06) | 16:00 close · cash $227.75 · equity $5,767.95 vs 09:30 $5,697.47 (+70.48; session marks +92.06) · 8 name(s) marked open→close (per-name table). SGRY×30 09:30 $23.20 → close $23.36 +4.80; GH×4 09:30 $174.75 → close $178.06 +13.22; TBBB×12 09:30 $58.24 → close $57.41 -9.96; AMTM×32 09:30 $21.97 → close $21.75 -7.04; ITW×2 09:30 $272.30 → close $275.93 +7.26; NVTS×82 09:30 $8.62 → close $9.35 +59.86; SMRT×552 09:30 $1.29 → close $1.32 +16.56; LUV×16 09:30 $42.98 → close $43.44 +7.36 | — |
 
 ## Not taken
 

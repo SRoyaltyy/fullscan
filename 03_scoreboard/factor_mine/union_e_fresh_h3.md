@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ e_fresh, no 🚨
 
-Cash book **-14.29%** ($8,571) · signal-only (no cash/fees) was +7.74%. Starts YES **29/30**. Fills 187 · skips 198 · realized $+4004.41.
+Cash book **-14.49%** ($8,550) · signal-only (no cash/fees) was +7.74%. Starts YES **29/30**. Fills 195 · skips 198 · realized $+4004.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -364,6 +364,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,172.94 | ▲ close $8,571.42 vs 09:30 $8,555.91 (session +15.51) | 16:00 close · cash $1,172.94 · equity $8,571.42 vs 09:30 $8,555.91 (+15.51; session marks +15.51) · 8 name(s) marked open→close (per-name table). BKU×24 09:30 $43.34 → close $43.57 +5.52; CME×3 09:30 $305.06 → close $305.71 +1.95; COF×5 09:30 $200.73 → close $201.34 +3.05; DHR×4 09:30 $229.17 → close $230.50 +5.32; ISRG×2 09:30 $443.65 → close $452.29 +17.28; NFLX×16 09:30 $67.01 → close $65.85 -18.56; NOC×1 09:30 $546.59 → close $551.44 +4.85; PM×5 09:30 $200.25 → close $199.47 -3.90 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,172.94 | ▲ 09:30 equity $8,571.42 vs yday $8,571.42 (+0.00) | 09:30 open · cash $1,172.94 (unchanged overnight, no fees) · equity $8,571.42 vs prior close $8,571.42 (+0.00) · 8 name(s) re-marked at the open (per-name table). BKU×24 yday $43.57 → 09:30 $43.57 +0.00; CME×3 yday $305.71 → 09:30 $305.71 +0.00; COF×5 yday $201.34 → 09:30 $201.34 +0.00; DHR×4 yday $230.50 → 09:30 $230.50 +0.00; ISRG×2 yday $452.29 → 09:30 $452.29 +0.00; NFLX×16 yday $65.85 → 09:30 $65.85 +0.00; NOC×1 yday $551.44 → 09:30 $551.44 +0.00; PM×5 yday $199.47 → 09:30 $199.47 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,172.94 | ▲ close $8,571.42 vs 09:30 $8,571.42 (session +0.00) | 16:00 close · cash $1,172.94 · equity $8,571.42 vs 09:30 $8,571.42 (+0.00; session marks +0.00) · 8 name(s) marked open→close (per-name table). BKU×24 09:30 $43.57 → close $43.57 +0.00; CME×3 09:30 $305.71 → close $305.71 +0.00; COF×5 09:30 $201.34 → close $201.34 +0.00; DHR×4 09:30 $230.50 → close $230.50 +0.00; ISRG×2 09:30 $452.29 → close $452.29 +0.00; NFLX×16 09:30 $65.85 → close $65.85 +0.00; NOC×1 09:30 $551.44 → close $551.44 +0.00; PM×5 09:30 $199.47 → close $199.47 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,172.94 | ▼ 09:30 equity $8,566.74 vs yday $8,571.42 (-4.68) | 09:30 open · cash $1,172.94 (unchanged overnight, no fees) · equity $8,566.74 vs prior close $8,571.42 (-4.68) · 8 name(s) re-marked at the open (per-name table). BKU×24 yday $43.57 → 09:30 $43.50 -1.68; CME×3 yday $305.71 → 09:30 $304.98 -2.19; COF×5 yday $201.34 → 09:30 $204.49 +15.75; DHR×4 yday $230.50 → 09:30 $231.00 +2.00; ISRG×2 yday $452.29 → 09:30 $451.63 -1.32; NFLX×16 yday $65.85 → 09:30 $63.40 -39.20; NOC×1 yday $551.44 → 09:30 $562.80 +11.36; PM×5 yday $199.47 → 09:30 $201.59 +10.60 | — |
+| 2026-10-27 09:30 ET | **SELL** | `BKU` | 24 | $43.50 | $2.08 | $+12.90 | $2,214.86 | ▲ +12.90 after sell → book $8,564.66; vs 09:30 mark -2.08 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `CME` | 3 | $304.98 | $2.02 | $+23.61 | $3,127.78 | ▲ +23.61 after sell → book $8,562.64; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `COF` | 5 | $204.49 | $2.02 | $-13.43 | $4,148.20 | ▼ -13.43 after sell → book $8,560.61; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `DHR` | 4 | $231.00 | $2.02 | $+49.74 | $5,070.18 | ▲ +49.74 after sell → book $8,558.59; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `ISRG` | 2 | $451.63 | $2.02 | $+94.26 | $5,971.43 | ▲ +94.26 after sell → book $8,556.58; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `NFLX` | 16 | $63.40 | $2.06 | $-16.10 | $6,983.77 | ▼ -16.10 after sell → book $8,554.52; vs 09:30 mark -2.06 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `NOC` | 1 | $562.80 | $2.01 | $+21.59 | $7,544.56 | ▲ +21.59 after sell → book $8,552.51; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 4 sess | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SELL** | `PM` | 5 | $201.59 | $2.02 | $+68.22 | $8,550.48 | ▲ +68.22 after sell → book $8,550.48; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,550.48 | ▲ close $8,550.48 vs 09:30 $8,566.74 (session +0.00) | 16:00 close · cash $8,550.48 · no lots left · equity $8,550.48. | — |
 
 ## Not taken
 

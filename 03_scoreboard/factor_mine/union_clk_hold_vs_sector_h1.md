@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-13.02%** ($8,698) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 339 · skips 96 · realized $+387.41.
+Cash book **-11.69%** ($8,831) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 342 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -517,6 +517,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,697.71 | ▲ close $8,697.71 vs 09:30 $8,697.71 (session +0.00) | 16:00 close · cash $8,697.71 · no lots left · equity $8,697.71. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,697.71 | ▲ 09:30 equity $8,697.71 vs yday $8,697.71 (+0.00) | 09:30 open · cash $8,697.71 · no holdings · equity $8,697.71 vs prior close $8,697.71 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,697.71 | ▲ close $8,697.71 vs 09:30 $8,697.71 (session +0.00) | 16:00 close · cash $8,697.71 · no lots left · equity $8,697.71. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,697.71 | ▲ 09:30 equity $8,697.71 vs yday $8,697.71 (+0.00) | 09:30 open · cash $8,697.71 · no holdings · equity $8,697.71 vs prior close $8,697.71 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **BUY** | `RIG` | 447 | $6.48 | $5.77 | — | $5,795.38 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+10.9; leftover $2899.24 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `GLND` | 918 | $3.16 | $11.84 | — | $2,884.31 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_mover; ret5=+3.6; leftover $2899.24 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `VAL` | 29 | $98.07 | $2.08 | — | $38.21 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+11.0; leftover $2899.24 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $38.21 | ▲ close $8,830.86 vs 09:30 $8,697.71 (session +152.83) | 16:00 close · cash $38.21 · equity $8,830.86 vs 09:30 $8,697.71 (+133.15; session marks +152.83) · 3 name(s) marked open→close (per-name table). RIG×447 09:30 $6.48 → close $6.46 -8.94; GLND×918 09:30 $3.16 → close $3.33 +157.71; VAL×29 09:30 $98.07 → close $98.21 +4.06 | — |
 
 ## Not taken
 

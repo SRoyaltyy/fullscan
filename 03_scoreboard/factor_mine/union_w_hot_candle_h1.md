@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+14.75%** ($11,475) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 439 · skips 97 · realized $+14.68.
+Cash book **+14.65%** ($11,465) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 447 · skips 97 · realized $+14.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -614,6 +614,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,475.18 | ▲ close $11,475.18 vs 09:30 $11,479.26 (session +0.00) | 16:00 close · cash $11,475.18 · no lots left · equity $11,475.18. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,475.18 | ▲ 09:30 equity $11,475.18 vs yday $11,475.18 (+0.00) | 09:30 open · cash $11,475.18 · no holdings · equity $11,475.18 vs prior close $11,475.18 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,475.18 | ▲ close $11,475.18 vs 09:30 $11,475.18 (session +0.00) | 16:00 close · cash $11,475.18 · no lots left · equity $11,475.18. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,475.18 | ▲ 09:30 equity $11,475.18 vs yday $11,475.18 (+0.00) | 09:30 open · cash $11,475.18 · no holdings · equity $11,475.18 vs prior close $11,475.18 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **BUY** | `SGRY` | 61 | $23.20 | $2.17 | — | $10,057.81 | — | rank by w_hot_candle; rank w_hot_candle; list flatten; 🔵; ret5=+58.1; leftover $1434.40 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `ENGS` | 327 | $4.38 | $4.22 | — | $8,621.33 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+16.0; leftover $1434.40 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `LMT` | 2 | $626.91 | $2.00 | — | $7,365.51 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+15.9; leftover $1434.40 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `DOW` | 42 | $33.77 | $2.12 | — | $5,945.06 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+13.0; leftover $1434.40 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `SLN` | 72 | $19.78 | $2.21 | — | $4,518.69 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+1.0; leftover $1434.40 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `AMTM` | 65 | $21.97 | $2.19 | — | $3,088.46 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+13.3; leftover $1434.40 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RBRK` | 10 | $132.49 | $2.02 | — | $1,761.54 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+17.6; leftover $1434.40 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RIG` | 221 | $6.48 | $2.85 | — | $326.60 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+10.9; leftover $1434.40 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $326.60 | ▲ close $11,464.99 vs 09:30 $11,475.18 (session +9.58) | 16:00 close · cash $326.60 · equity $11,464.99 vs 09:30 $11,475.18 (-10.19; session marks +9.58) · 8 name(s) marked open→close (per-name table). SGRY×61 09:30 $23.20 → close $23.36 +9.76; ENGS×327 09:30 $4.38 → close $4.36 -6.54; LMT×2 09:30 $626.91 → close $622.99 -7.84; DOW×42 09:30 $33.77 → close $33.78 +0.42; SLN×72 09:30 $19.78 → close $19.78 +0.00; AMTM×65 09:30 $21.97 → close $21.75 -14.30; RBRK×10 09:30 $132.49 → close $135.74 +32.50; RIG×221 09:30 $6.48 → close $6.46 -4.42 | — |
 
 ## Not taken
 

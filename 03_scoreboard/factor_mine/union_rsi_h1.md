@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-39.45%** ($6,055) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 417 · skips 98 · realized $-2571.92.
+Cash book **-40.01%** ($5,999) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 424 · skips 98 · realized $-2571.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -592,6 +592,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,329.20 | ▲ close $6,054.87 vs 09:30 $6,048.09 (session +6.78) | 16:00 close · cash $5,329.20 · equity $6,054.87 vs 09:30 $6,048.09 (+6.78; session marks +6.78) · 1 name(s) marked open→close (per-name table). DGX×3 09:30 $239.63 → close $241.89 +6.78 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,329.20 | ▲ 09:30 equity $6,054.87 vs yday $6,054.87 (+0.00) | 09:30 open · cash $5,329.20 (unchanged overnight, no fees) · equity $6,054.87 vs prior close $6,054.87 (+0.00) · 1 name(s) re-marked at the open (per-name table). DGX×3 yday $241.89 → 09:30 $241.89 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,329.20 | ▲ close $6,054.87 vs 09:30 $6,054.87 (session +0.00) | 16:00 close · cash $5,329.20 · equity $6,054.87 vs 09:30 $6,054.87 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). DGX×3 09:30 $241.89 → close $241.89 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,329.20 | ▲ 09:30 equity $6,055.08 vs yday $6,054.87 (+0.21) | 09:30 open · cash $5,329.20 (unchanged overnight, no fees) · equity $6,055.08 vs prior close $6,054.87 (+0.21) · 1 name(s) re-marked at the open (per-name table). DGX×3 yday $241.89 → 09:30 $241.96 +0.21 | — |
+| 2026-10-27 09:30 ET | **SELL** | `DGX` | 3 | $241.96 | $2.02 | $+15.84 | $6,053.06 | ▲ +15.84 after sell → book $6,053.06; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 4 sess | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ARI` | 130 | $6.61 | $2.38 | — | $5,191.38 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+4.4; leftover $864.72 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `BX` | 7 | $120.00 | $2.01 | — | $4,349.37 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+11.2; leftover $864.72 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `FRSH` | 56 | $15.21 | $2.16 | — | $3,495.45 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=+8.7; leftover $864.72 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `SLN` | 43 | $19.78 | $2.12 | — | $2,642.79 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+1.0; leftover $864.72 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `PATH` | 60 | $14.19 | $2.17 | — | $1,789.22 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+9.0; leftover $864.72 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ERIC` | 78 | $10.96 | $2.22 | — | $932.51 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+5.3; leftover $864.72 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $932.51 | ▼ close $5,998.89 vs 09:30 $6,055.08 (session -41.11) | 16:00 close · cash $932.51 · equity $5,998.89 vs 09:30 $6,055.08 (-56.19; session marks -41.11) · 6 name(s) marked open→close (per-name table). ARI×130 09:30 $6.61 → close $6.59 -2.60; BX×7 09:30 $120.00 → close $116.70 -23.10; FRSH×56 09:30 $15.21 → close $14.90 -17.36; SLN×43 09:30 $19.78 → close $19.78 +0.00; PATH×60 09:30 $14.19 → close $14.06 -7.80; ERIC×78 09:30 $10.96 → close $11.08 +9.75 | — |
 
 ## Not taken
 

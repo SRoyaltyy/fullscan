@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-23.69%** ($7,631) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 410 · skips 93 · realized $-1456.67.
+Cash book **-23.68%** ($7,632) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 420 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -582,6 +582,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,723.40 | ▼ close $7,630.92 vs 09:30 $7,651.91 (session -18.96) | 16:00 close · cash $5,723.40 · equity $7,630.92 vs 09:30 $7,651.91 (-20.99; session marks -18.96) · 2 name(s) marked open→close (per-name table). BMBL×156 09:30 $5.94 → close $5.96 +3.12; TRU×12 09:30 $83.32 → close $81.48 -22.08 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,723.40 | ▲ 09:30 equity $7,630.92 vs yday $7,630.92 (+0.00) | 09:30 open · cash $5,723.40 (unchanged overnight, no fees) · equity $7,630.92 vs prior close $7,630.92 (+0.00) · 2 name(s) re-marked at the open (per-name table). BMBL×156 yday $5.96 → 09:30 $5.96 +0.00; TRU×12 yday $81.48 → 09:30 $81.48 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,723.40 | ▲ close $7,630.92 vs 09:30 $7,630.92 (session +0.00) | 16:00 close · cash $5,723.40 · equity $7,630.92 vs 09:30 $7,630.92 (+0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). BMBL×156 09:30 $5.96 → close $5.96 +0.00; TRU×12 09:30 $81.48 → close $81.48 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,723.40 | ▲ 09:30 equity $7,637.64 vs yday $7,630.92 (+6.72) | 09:30 open · cash $5,723.40 (unchanged overnight, no fees) · equity $7,637.64 vs prior close $7,630.92 (+6.72) · 2 name(s) re-marked at the open (per-name table). BMBL×156 yday $5.96 → 09:30 $5.95 -1.56; TRU×12 yday $81.48 → 09:30 $82.17 +8.28 | — |
+| 2026-10-27 09:30 ET | **SELL** | `BMBL` | 156 | $5.95 | $2.49 | $-4.95 | $6,649.11 | ▼ -4.95 after sell → book $7,635.15; vs 09:30 mark -2.49 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `TRU` | 12 | $82.17 | $2.05 | $+50.53 | $7,633.10 | ▲ +50.53 after sell → book $7,633.10; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 4 sess | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `POOL` | 4 | $195.23 | $2.00 | — | $6,850.18 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; ret5=+16.2; leftover $954.14 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `SLN` | 48 | $19.78 | $2.13 | — | $5,898.60 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+1.0; leftover $954.14 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ENGS` | 217 | $4.38 | $2.80 | — | $4,945.34 | — | baseline list, no extra gate; list ohlc_hot; ret5=+16.0; leftover $954.14 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `LMT` | 1 | $626.91 | $1.99 | — | $4,316.44 | — | baseline list, no extra gate; list ohlc_hot; ret5=+15.9; leftover $954.14 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `DOW` | 28 | $33.77 | $2.07 | — | $3,368.81 | — | baseline list, no extra gate; list ohlc_hot; ret5=+13.0; leftover $954.14 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RBRK` | 7 | $132.49 | $2.01 | — | $2,439.37 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+17.6; leftover $954.14 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `GMAB` | 21 | $44.41 | $2.05 | — | $1,504.70 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+16.1; leftover $954.14 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RIG` | 147 | $6.48 | $2.43 | — | $549.71 | — | baseline list, no extra gate; list ohlc_hot; ret5=+10.9; leftover $954.14 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $549.71 | ▲ close $7,631.57 vs 09:30 $7,637.64 (session +15.97) | 16:00 close · cash $549.71 · equity $7,631.57 vs 09:30 $7,637.64 (-6.07; session marks +15.97) · 8 name(s) marked open→close (per-name table). POOL×4 09:30 $195.23 → close $194.90 -1.32; SLN×48 09:30 $19.78 → close $19.78 +0.00; ENGS×217 09:30 $4.38 → close $4.36 -4.34; LMT×1 09:30 $626.91 → close $622.99 -3.92; DOW×28 09:30 $33.77 → close $33.78 +0.28; RBRK×7 09:30 $132.49 → close $135.74 +22.75; GMAB×21 09:30 $44.41 → close $44.67 +5.46; RIG×147 09:30 $6.48 → close $6.46 -2.94 | — |
 
 ## Not taken
 

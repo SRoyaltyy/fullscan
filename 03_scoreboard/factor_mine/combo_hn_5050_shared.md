@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/union_news_g_h1 w=0.5,0.5 net=priority
 
-Cash book **-1.98%** ($9,802) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 474 · skips 124 · realized $+1265.29.
+Cash book **-0.87%** ($9,913) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 484 · skips 124 · realized $+1265.29.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,064.62.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $64.31.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -651,6 +651,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,064.62 | ▼ close $9,801.72 vs 09:30 $9,817.03 (session -7.20) | 16:00 close · cash $9,064.62 · equity $9,801.72 vs 09:30 $9,817.03 (-15.31; session marks -7.20) · 1 name(s) marked open→close (per-name table). AMX×30 09:30 $24.81 → close $24.57 -7.20 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,064.62 | ▲ 09:30 equity $9,801.72 vs yday $9,801.72 (+0.00) | 09:30 open · cash $9,064.62 (unchanged overnight, no fees) · equity $9,801.72 vs prior close $9,801.72 (+0.00) | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,064.62 | ▲ close $9,801.72 vs 09:30 $9,801.72 (session +0.00) | 16:00 close · cash $9,064.62 · equity $9,801.72 vs 09:30 $9,801.72 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). AMX×30 09:30 $24.57 → close $24.57 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,064.62 | ▼ 09:30 equity $9,792.72 vs yday $9,801.72 (-9.00) | 09:30 open · cash $9,064.62 (unchanged overnight, no fees) · equity $9,792.72 vs prior close $9,801.72 (-9.00) | — |
+| 2026-10-27 09:30 ET | **BUY** | `SGRY` | 48 | $23.20 | $2.13 | — | $7,948.89 | — | top 4 by hot; rank hot_score; list flatten; 🔵; ret5=+58.1; combo leftover $1133.08; owner union_hot_n4_h1 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `SLN` | 57 | $19.78 | $2.16 | — | $6,819.27 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+1.0; combo leftover $1133.08; owner union_hot_n4_h1 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ENGS` | 258 | $4.38 | $3.33 | — | $5,685.90 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+16.0; combo leftover $1133.08; owner union_hot_n4_h1 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `LMT` | 1 | $626.91 | $1.99 | — | $5,056.99 | — | top 4 by hot; rank hot_score; list ohlc_hot; ret5=+15.9; combo leftover $1133.08; owner union_hot_n4_h1 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `NVTS` | 97 | $8.62 | $2.28 | — | $4,218.57 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-2.7; combo leftover $842.83; owner union_news_g_h1 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `AIP` | 42 | $19.89 | $2.12 | — | $3,381.08 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.9; combo leftover $842.83; owner union_news_g_h1 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ITW` | 3 | $272.30 | $2.00 | — | $2,562.18 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; ret5=+2.2; combo leftover $842.83; owner union_news_g_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `TBBB` | 14 | $58.24 | $2.03 | — | $1,744.79 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; ret5=+0.0; combo leftover $842.83; owner union_news_g_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `GLND` | 266 | $3.16 | $3.43 | — | $901.27 | — | union ∩ news_g, no 🚨; gate news=good; list yday_mover; ret5=+3.6; combo leftover $842.83; owner union_news_g_h1 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `AMTM` | 38 | $21.97 | $2.10 | — | $64.31 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+13.3; combo leftover $842.83; owner union_news_g_h1 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $64.31 | ▲ close $9,913.38 vs 09:30 $9,792.72 (session +144.24) | 16:00 close · cash $64.31 · equity $9,913.38 vs 09:30 $9,792.72 (+120.66; session marks +144.24) · 11 name(s) marked open→close (per-name table). AMX×30 09:30 $24.27 → close $24.06 -6.30; SGRY×48 09:30 $23.20 → close $23.36 +7.68; SLN×57 09:30 $19.78 → close $19.78 +0.00; ENGS×258 09:30 $4.38 → close $4.36 -5.16; LMT×1 09:30 $626.91 → close $622.99 -3.92; NVTS×97 09:30 $8.62 → close $9.35 +70.81; AIP×42 09:30 $19.89 → close $20.95 +44.52; ITW×3 09:30 $272.30 → close $275.93 +10.89; TBBB×14 09:30 $58.24 → close $57.41 -11.62; GLND×266 09:30 $3.16 → close $3.33 +45.70; AMTM×38 09:30 $21.97 → close $21.75 -8.36 | — |
 
 ## Not taken
 

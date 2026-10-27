@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **-32.63%** ($6,737) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 438 · skips 105 · realized $-1315.32.
+Cash book **-30.93%** ($6,906) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 446 · skips 105 · realized $-1315.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -614,6 +614,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,736.81 | ▲ close $6,736.81 vs 09:30 $6,749.59 (session +0.00) | 16:00 close · cash $6,736.81 · no lots left · equity $6,736.81. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,736.81 | ▲ 09:30 equity $6,736.81 vs yday $6,736.81 (+0.00) | 09:30 open · cash $6,736.81 · no holdings · equity $6,736.81 vs prior close $6,736.81 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,736.81 | ▲ close $6,736.81 vs 09:30 $6,736.81 (session +0.00) | 16:00 close · cash $6,736.81 · no lots left · equity $6,736.81. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,736.81 | ▲ 09:30 equity $6,736.81 vs yday $6,736.81 (+0.00) | 09:30 open · cash $6,736.81 · no holdings · equity $6,736.81 vs prior close $6,736.81 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **BUY** | `VEEV` | 2 | $315.50 | $2.00 | — | $6,103.81 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; 🔵; ret5=+0.4; leftover $842.10 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `PRGO` | 54 | $15.56 | $2.15 | — | $5,261.42 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; ret5=-1.7; leftover $842.10 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `SMMT` | 58 | $14.50 | $2.16 | — | $4,418.26 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-6.9; leftover $842.10 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `PRMB` | 43 | $19.58 | $2.12 | — | $3,574.20 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=-0.7; leftover $842.10 | join🟡 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `AIP` | 42 | $19.89 | $2.12 | — | $2,736.70 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.9; leftover $842.10 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `CXW` | 28 | $29.89 | $2.07 | — | $1,897.71 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-0.1; leftover $842.10 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `EGG` | 162 | $5.17 | $2.48 | — | $1,057.69 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer,yday_mover; ret5=+3.2; leftover $842.10 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `MX` | 350 | $2.40 | $4.51 | — | $213.18 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer,yday_mover; 🔵; ret5=-7.4; leftover $842.10 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $213.18 | ▲ close $6,906.49 vs 09:30 $6,736.81 (session +189.29) | 16:00 close · cash $213.18 · equity $6,906.49 vs 09:30 $6,736.81 (+169.68; session marks +189.29) · 8 name(s) marked open→close (per-name table). VEEV×2 09:30 $315.50 → close $313.46 -4.08; PRGO×54 09:30 $15.56 → close $16.02 +24.84; SMMT×58 09:30 $14.50 → close $15.33 +48.14; PRMB×43 09:30 $19.58 → close $19.21 -15.91; AIP×42 09:30 $19.89 → close $20.95 +44.52; CXW×28 09:30 $29.89 → close $30.80 +25.48; EGG×162 09:30 $5.17 → close $5.32 +24.30; MX×350 09:30 $2.40 → close $2.52 +42.00 | — |
 
 ## Not taken
 

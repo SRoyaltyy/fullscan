@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **-3.58%** ($9,642) · signal-only (no cash/fees) was -16.54%. Starts YES **11/30**. Fills 66 · skips 85 · realized $-1342.35.
+Cash book **-4.31%** ($9,569) · signal-only (no cash/fees) was -16.54%. Starts YES **11/30**. Fills 70 · skips 85 · realized $-1342.35.
 
 ## How this sleeve decides (like you are 10)
 
@@ -243,6 +243,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,496.88 | ▼ close $9,641.70 vs 09:30 $9,691.22 (session -49.52) | 16:00 close · cash $4,496.88 · equity $9,641.70 vs 09:30 $9,691.22 (-49.52; session marks -49.52) · 3 name(s) marked open→close (per-name table). AIP×3 09:30 $19.02 → close $19.06 +0.12; AMX×205 09:30 $24.81 → close $24.57 -49.20; CSX×1 09:30 $51.23 → close $50.79 -0.44 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,496.88 | ▲ 09:30 equity $9,641.70 vs yday $9,641.70 (+0.00) | 09:30 open · cash $4,496.88 (unchanged overnight, no fees) · equity $9,641.70 vs prior close $9,641.70 (+0.00) · 3 name(s) re-marked at the open (per-name table). AIP×3 yday $19.06 → 09:30 $19.06 +0.00; AMX×205 yday $24.57 → 09:30 $24.57 +0.00; CSX×1 yday $50.79 → 09:30 $50.79 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,496.88 | ▲ close $9,641.70 vs 09:30 $9,641.70 (session +0.00) | 16:00 close · cash $4,496.88 · equity $9,641.70 vs 09:30 $9,641.70 (+0.00; session marks +0.00) · 3 name(s) marked open→close (per-name table). AIP×3 09:30 $19.06 → close $19.06 +0.00; AMX×205 09:30 $24.57 → close $24.57 +0.00; CSX×1 09:30 $50.79 → close $50.79 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,496.88 | ▼ 09:30 equity $9,583.26 vs yday $9,641.70 (-58.44) | 09:30 open · cash $4,496.88 (unchanged overnight, no fees) · equity $9,583.26 vs prior close $9,641.70 (-58.44) · 3 name(s) re-marked at the open (per-name table). AIP×3 yday $19.06 → 09:30 $19.89 +2.49; AMX×205 yday $24.57 → 09:30 $24.27 -61.50; CSX×1 yday $50.79 → 09:30 $51.36 +0.57 | — |
+| 2026-10-27 09:30 ET | **SELL** | `AIP` | 3 | $19.89 | $0.63 | $-2.72 | $4,555.92 | ▼ -2.72 after sell → book $9,582.63; vs 09:30 mark -0.63 | exit unpriced hold on first bar after 4 sess | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SELL** | `AMX` | 205 | $24.27 | $2.72 | $+537.89 | $9,528.56 | ▲ +537.89 after sell → book $9,579.92; vs 09:30 mark -2.71 | exit unpriced hold on first bar after 9 sess | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SELL** | `CSX` | 1 | $51.36 | $0.54 | $+2.31 | $9,579.38 | ▲ +2.31 after sell → book $9,579.38; vs 09:30 mark -0.54 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **BUY** | `RY` | 47 | $203.19 | $2.13 | — | $27.32 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list ohlc_hot; 🔵; ret5=+3.8; leftover $9579.38 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.32 | ▼ close $9,569.26 vs 09:30 $9,583.26 (session -7.99) | 16:00 close · cash $27.32 · equity $9,569.26 vs 09:30 $9,583.26 (-14.00; session marks -7.99) · 1 name(s) marked open→close (per-name table). RY×47 09:30 $203.19 → close $203.02 -7.99 | — |
 
 ## Not taken
 

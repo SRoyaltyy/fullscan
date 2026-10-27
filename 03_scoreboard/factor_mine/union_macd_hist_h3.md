@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-14.35%** ($8,565) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 289 · skips 257 · realized $-743.63.
+Cash book **-16.08%** ($8,392) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 302 · skips 257 · realized $-743.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -464,6 +464,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,133.98 | ▲ close $8,565.07 vs 09:30 $8,568.77 (session +0.34) | 16:00 close · cash $7,133.98 · equity $8,565.07 vs 09:30 $8,568.77 (-3.70; session marks +0.34) · 5 name(s) marked open→close (per-name table). CME×1 09:30 $305.06 → close $305.71 +0.65; HLT×1 09:30 $354.57 → close $349.63 -4.94; HUBS×1 09:30 $267.52 → close $270.88 +3.36; IT×1 09:30 $231.60 → close $230.28 -1.32; PAYC×1 09:30 $272.00 → close $274.59 +2.59 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,133.98 | ▲ 09:30 equity $8,565.07 vs yday $8,565.07 (+0.00) | 09:30 open · cash $7,133.98 (unchanged overnight, no fees) · equity $8,565.07 vs prior close $8,565.07 (+0.00) · 5 name(s) re-marked at the open (per-name table). CME×1 yday $305.71 → 09:30 $305.71 +0.00; HLT×1 yday $349.63 → 09:30 $349.63 +0.00; HUBS×1 yday $270.88 → 09:30 $270.88 +0.00; IT×1 yday $230.28 → 09:30 $230.28 +0.00; PAYC×1 yday $274.59 → 09:30 $274.59 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,133.98 | ▲ close $8,565.07 vs 09:30 $8,565.07 (session +0.00) | 16:00 close · cash $7,133.98 · equity $8,565.07 vs 09:30 $8,565.07 (+0.00; session marks +0.00) · 5 name(s) marked open→close (per-name table). CME×1 09:30 $305.71 → close $305.71 +0.00; HLT×1 09:30 $349.63 → close $349.63 +0.00; HUBS×1 09:30 $270.88 → close $270.88 +0.00; IT×1 09:30 $230.28 → close $230.28 +0.00; PAYC×1 09:30 $274.59 → close $274.59 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,133.98 | ▼ 09:30 equity $8,531.44 vs yday $8,565.07 (-33.63) | 09:30 open · cash $7,133.98 (unchanged overnight, no fees) · equity $8,531.44 vs prior close $8,565.07 (-33.63) · 5 name(s) re-marked at the open (per-name table). CME×1 yday $305.71 → 09:30 $304.98 -0.73; HLT×1 yday $349.63 → 09:30 $340.62 -9.01; HUBS×1 yday $270.88 → 09:30 $256.80 -14.08; IT×1 yday $230.28 → 09:30 $227.76 -2.52; PAYC×1 yday $274.59 → 09:30 $267.30 -7.29 | — |
+| 2026-10-27 09:30 ET | **SELL** | `CME` | 1 | $304.98 | $2.01 | $+5.20 | $7,436.95 | ▲ +5.20 after sell → book $8,529.43; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `HLT` | 1 | $340.62 | $2.01 | $-23.39 | $7,775.55 | ▼ -23.39 after sell → book $8,527.41; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `HUBS` | 1 | $256.80 | $2.01 | $+2.38 | $8,030.34 | ▲ +2.38 after sell → book $8,525.40; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `IT` | 1 | $227.76 | $2.01 | $+7.41 | $8,256.09 | ▲ +7.41 after sell → book $8,523.39; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `PAYC` | 1 | $267.30 | $2.01 | $+2.60 | $8,521.38 | ▲ +2.60 after sell → book $8,521.38; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **BUY** | `LMT` | 1 | $626.91 | $1.99 | — | $7,892.47 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+15.9; leftover $1065.17 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `NOC` | 1 | $562.80 | $1.99 | — | $7,327.68 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+10.7; leftover $1065.17 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `POOL` | 5 | $195.23 | $2.00 | — | $6,349.52 | — | rank by macd_hist; rank macd_hist; list yday_gainer,ohlc_hot; ret5=+16.2; leftover $1065.17 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `TRU` | 12 | $82.17 | $2.03 | — | $5,361.46 | — | rank by macd_hist; rank macd_hist; list yday_gainer; 🔵; ret5=+8.9; leftover $1065.17 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `BX` | 8 | $120.00 | $2.01 | — | $4,399.44 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+11.2; leftover $1065.17 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `VAL` | 10 | $98.07 | $2.02 | — | $3,416.72 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+11.0; leftover $1065.17 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ITW` | 3 | $272.30 | $2.00 | — | $2,597.83 | — | rank by macd_hist; rank macd_hist; list yday_gainer; ret5=+2.2; leftover $1065.17 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RY` | 5 | $203.19 | $2.00 | — | $1,579.87 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+3.8; leftover $1065.17 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,579.87 | ▼ close $8,392.22 vs 09:30 $8,531.44 (session -113.10) | 16:00 close · cash $1,579.87 · equity $8,392.22 vs 09:30 $8,531.44 (-139.22; session marks -113.10) · 8 name(s) marked open→close (per-name table). LMT×1 09:30 $626.91 → close $622.99 -3.92; NOC×1 09:30 $562.80 → close $551.23 -11.57; POOL×5 09:30 $195.23 → close $194.90 -1.65; TRU×12 09:30 $82.17 → close $75.42 -81.00; BX×8 09:30 $120.00 → close $116.70 -26.40; VAL×10 09:30 $98.07 → close $98.21 +1.40; ITW×3 09:30 $272.30 → close $275.93 +10.89; RY×5 09:30 $203.19 → close $203.02 -0.85 | — |
 
 ## Not taken
 

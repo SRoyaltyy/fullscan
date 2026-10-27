@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **-16.93%** ($8,307) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 453 · skips 100 · realized $-529.03.
+Cash book **-16.87%** ($8,313) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 461 · skips 100 · realized $-529.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -629,6 +629,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,306.84 | ▲ close $8,306.84 vs 09:30 $8,308.89 (session +0.00) | 16:00 close · cash $8,306.84 · no lots left · equity $8,306.84. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,306.84 | ▲ 09:30 equity $8,306.84 vs yday $8,306.84 (+0.00) | 09:30 open · cash $8,306.84 · no holdings · equity $8,306.84 vs prior close $8,306.84 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,306.84 | ▲ close $8,306.84 vs 09:30 $8,306.84 (session +0.00) | 16:00 close · cash $8,306.84 · no lots left · equity $8,306.84. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,306.84 | ▲ 09:30 equity $8,306.84 vs yday $8,306.84 (+0.00) | 09:30 open · cash $8,306.84 · no holdings · equity $8,306.84 vs prior close $8,306.84 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **BUY** | `SGRY` | 44 | $23.20 | $2.12 | — | $7,283.92 | — | union ∩ break10, no 🚨; gate break_10=True; list flatten; 🔵; ret5=+58.1; leftover $1038.36 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `SLN` | 52 | $19.78 | $2.15 | — | $6,253.21 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+1.0; leftover $1038.36 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ENGS` | 237 | $4.38 | $3.06 | — | $5,212.09 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+16.0; leftover $1038.36 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `LMT` | 1 | $626.91 | $1.99 | — | $4,583.19 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+15.9; leftover $1038.36 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `DOW` | 30 | $33.77 | $2.08 | — | $3,568.01 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+13.0; leftover $1038.36 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RBRK` | 7 | $132.49 | $2.01 | — | $2,638.57 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+17.6; leftover $1038.36 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `GMAB` | 23 | $44.41 | $2.06 | — | $1,615.08 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; 🔵; ret5=+16.1; leftover $1038.36 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RIG` | 160 | $6.48 | $2.47 | — | $575.81 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+10.9; leftover $1038.36 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $575.81 | ▲ close $8,313.11 vs 09:30 $8,306.84 (session +24.21) | 16:00 close · cash $575.81 · equity $8,313.11 vs 09:30 $8,306.84 (+6.27; session marks +24.21) · 8 name(s) marked open→close (per-name table). SGRY×44 09:30 $23.20 → close $23.36 +7.04; SLN×52 09:30 $19.78 → close $19.78 +0.00; ENGS×237 09:30 $4.38 → close $4.36 -4.74; LMT×1 09:30 $626.91 → close $622.99 -3.92; DOW×30 09:30 $33.77 → close $33.78 +0.30; RBRK×7 09:30 $132.49 → close $135.74 +22.75; GMAB×23 09:30 $44.41 → close $44.67 +5.98; RIG×160 09:30 $6.48 → close $6.46 -3.20 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os hold 5, no 🚨
 
-Cash book **-17.61%** ($8,239) · signal-only (no cash/fees) was -62.78%. Starts YES **4/30**. Fills 122 · skips 145 · realized $-2687.08.
+Cash book **-18.47%** ($8,153) · signal-only (no cash/fees) was -62.78%. Starts YES **4/30**. Fills 126 · skips 145 · realized $-2687.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -298,6 +298,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,751.82 | ▼ close $8,238.52 vs 09:30 $8,268.94 (session -18.20) | 16:00 close · cash $5,751.82 · equity $8,238.52 vs 09:30 $8,268.94 (-30.42; session marks -18.20) · 2 name(s) marked open→close (per-name table). ALL×6 09:30 $257.73 → close $253.19 -27.24; DGX×4 09:30 $239.63 → close $241.89 +9.04 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,751.82 | ▲ 09:30 equity $8,238.52 vs yday $8,238.52 (+0.00) | 09:30 open · cash $5,751.82 (unchanged overnight, no fees) · equity $8,238.52 vs prior close $8,238.52 (+0.00) · 2 name(s) re-marked at the open (per-name table). ALL×6 yday $253.19 → 09:30 $253.19 +0.00; DGX×4 yday $241.89 → 09:30 $241.89 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,751.82 | ▲ close $8,238.52 vs 09:30 $8,238.52 (session +0.00) | 16:00 close · cash $5,751.82 · equity $8,238.52 vs 09:30 $8,238.52 (+0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). ALL×6 09:30 $253.19 → close $253.19 +0.00; DGX×4 09:30 $241.89 → close $241.89 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,751.82 | ▲ 09:30 equity $8,245.64 vs yday $8,238.52 (+7.12) | 09:30 open · cash $5,751.82 (unchanged overnight, no fees) · equity $8,245.64 vs prior close $8,238.52 (+7.12) · 2 name(s) re-marked at the open (per-name table). ALL×6 yday $253.19 → 09:30 $254.33 +6.84; DGX×4 yday $241.89 → 09:30 $241.96 +0.28 | — |
+| 2026-10-27 09:30 ET | **SELL** | `ALL` | 6 | $254.33 | $2.03 | $+46.48 | $7,275.77 | ▲ +46.48 after sell → book $8,243.61; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `DGX` | 4 | $241.96 | $2.02 | $+5.14 | $8,241.59 | ▲ +5.14 after sell → book $8,241.59; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 7 sess | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ARI` | 415 | $6.61 | $5.35 | — | $5,493.08 | — | union ∩ rsi_os hold 5, no 🚨; gate rsi_os=True; list ohlc_hot; 🔵; ret5=+4.4; leftover $2747.20 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `BX` | 22 | $120.00 | $2.06 | — | $2,851.03 | — | union ∩ rsi_os hold 5, no 🚨; gate rsi_os=True; list ohlc_hot; 🔵; ret5=+11.2; leftover $2747.20 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,851.03 | ▼ close $8,153.28 vs 09:30 $8,245.64 (session -80.90) | 16:00 close · cash $2,851.03 · equity $8,153.28 vs 09:30 $8,245.64 (-92.36; session marks -80.90) · 2 name(s) marked open→close (per-name table). ARI×415 09:30 $6.61 → close $6.59 -8.30; BX×22 09:30 $120.00 → close $116.70 -72.60 | — |
 
 ## Not taken
 

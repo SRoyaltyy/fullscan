@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #1 mom+breakout+peer/sector (research; not KEEP)
 
-Cash book **-11.88%** ($8,812) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 407 · skips 96 · realized $-120.43.
+Cash book **-12.51%** ($8,749) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 415 · skips 96 · realized $-120.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -585,6 +585,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,812.22 | ▲ close $8,812.22 vs 09:30 $8,812.22 (session +0.00) | 16:00 close · cash $8,812.22 · no lots left · equity $8,812.22. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,812.22 | ▲ 09:30 equity $8,812.22 vs yday $8,812.22 (+0.00) | 09:30 open · cash $8,812.22 · no holdings · equity $8,812.22 vs prior close $8,812.22 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,812.22 | ▲ close $8,812.22 vs 09:30 $8,812.22 (session +0.00) | 16:00 close · cash $8,812.22 · no lots left · equity $8,812.22. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,812.22 | ▲ 09:30 equity $8,812.22 vs yday $8,812.22 (+0.00) | 09:30 open · cash $8,812.22 · no holdings · equity $8,812.22 vs prior close $8,812.22 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **BUY** | `RY` | 5 | $203.19 | $2.00 | — | $7,794.26 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+3.8; leftover $1101.53 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ARI` | 166 | $6.61 | $2.49 | — | $6,694.52 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+4.4; leftover $1101.53 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `FNB` | 60 | $18.34 | $2.17 | — | $5,591.95 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+8.1; leftover $1101.53 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ERIC` | 100 | $10.96 | $2.29 | — | $4,494.16 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+5.3; leftover $1101.53 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `AMRX` | 52 | $20.93 | $2.15 | — | $3,403.65 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+8.6; leftover $1101.53 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `NXPI` | 4 | $247.83 | $2.00 | — | $2,410.33 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+6.8; leftover $1101.53 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `PATH` | 77 | $14.19 | $2.22 | — | $1,315.48 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+9.0; leftover $1101.53 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `TRU` | 13 | $82.17 | $2.03 | — | $245.24 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list yday_gainer; 🔵; ret5=+8.9; leftover $1101.53 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $245.24 | ▼ close $8,748.64 vs 09:30 $8,812.22 (session -46.23) | 16:00 close · cash $245.24 · equity $8,748.64 vs 09:30 $8,812.22 (-63.58; session marks -46.23) · 8 name(s) marked open→close (per-name table). RY×5 09:30 $203.19 → close $203.02 -0.85; ARI×166 09:30 $6.61 → close $6.59 -3.32; FNB×60 09:30 $18.34 → close $18.24 -6.00; ERIC×100 09:30 $10.96 → close $11.08 +12.50; AMRX×52 09:30 $20.93 → close $21.44 +26.52; NXPI×4 09:30 $247.83 → close $253.50 +22.68; PATH×77 09:30 $14.19 → close $14.06 -10.01; TRU×13 09:30 $82.17 → close $75.42 -87.75 | — |
 
 ## Not taken
 

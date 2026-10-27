@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-20.95%** ($7,905) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 406 · skips 79 · realized $-1931.95.
+Cash book **-18.85%** ($8,115) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 414 · skips 79 · realized $-1931.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -584,6 +584,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,904.79 | ▲ close $7,904.79 vs 09:30 $7,904.79 (session +0.00) | 16:00 close · cash $7,904.79 · no lots left · equity $7,904.79. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,904.79 | ▲ 09:30 equity $7,904.79 vs yday $7,904.79 (+0.00) | 09:30 open · cash $7,904.79 · no holdings · equity $7,904.79 vs prior close $7,904.79 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,904.79 | ▲ close $7,904.79 vs 09:30 $7,904.79 (session +0.00) | 16:00 close · cash $7,904.79 · no lots left · equity $7,904.79. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,904.79 | ▲ 09:30 equity $7,904.79 vs yday $7,904.79 (+0.00) | 09:30 open · cash $7,904.79 · no holdings · equity $7,904.79 vs prior close $7,904.79 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **BUY** | `VEEV` | 3 | $315.50 | $2.00 | — | $6,956.29 | — | combo gate; gate blue=True,ret_5_max=10.0; list flatten; 🔵; ret5=+0.4; leftover $988.10 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ILMN` | 3 | $269.42 | $2.00 | — | $6,146.03 | — | combo gate; gate blue=True,ret_5_max=10.0; list flatten; 🔵; ret5=+3.2; leftover $988.10 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `CDNA` | 14 | $69.10 | $2.03 | — | $5,176.60 | — | combo gate; gate blue=True,ret_5_max=10.0; list flatten; 🔵; ret5=+3.0; leftover $988.10 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `PACS` | 20 | $48.23 | $2.05 | — | $4,209.95 | — | combo gate; gate blue=True,ret_5_max=10.0; list flatten; 🔵; ret5=+6.3; leftover $988.10 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `SMMT` | 68 | $14.50 | $2.19 | — | $3,221.76 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-6.9; leftover $988.10 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `NVTS` | 114 | $8.62 | $2.33 | — | $2,236.74 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-2.7; leftover $988.10 | join🔴 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `EPR` | 17 | $56.39 | $2.04 | — | $1,276.07 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.9; leftover $988.10 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `PDFS` | 23 | $41.74 | $2.06 | — | $313.99 | — | combo gate; gate blue=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=-1.0; leftover $988.10 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $313.99 | ▲ close $8,115.00 vs 09:30 $7,904.79 (session +226.92) | 16:00 close · cash $313.99 · equity $8,115.00 vs 09:30 $7,904.79 (+210.21; session marks +226.92) · 8 name(s) marked open→close (per-name table). VEEV×3 09:30 $315.50 → close $313.46 -6.12; ILMN×3 09:30 $269.42 → close $279.47 +30.15; CDNA×14 09:30 $69.10 → close $70.53 +20.02; PACS×20 09:30 $48.23 → close $47.85 -7.60; SMMT×68 09:30 $14.50 → close $15.33 +56.44; NVTS×114 09:30 $8.62 → close $9.35 +83.22; EPR×17 09:30 $56.39 → close $56.01 -6.46; PDFS×23 09:30 $41.74 → close $44.23 +57.27 | — |
 
 ## Not taken
 

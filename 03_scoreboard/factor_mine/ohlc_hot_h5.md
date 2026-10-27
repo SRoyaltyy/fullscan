@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-13.68%** ($8,632) · signal-only (no cash/fees) was +88.18%. Starts YES **4/30**. Fills 269 · skips 429 · realized $-1050.25.
+Cash book **-13.62%** ($8,638) · signal-only (no cash/fees) was +88.18%. Starts YES **4/30**. Fills 282 · skips 429 · realized $-1050.25.
 
 ## How this sleeve decides (like you are 10)
 
@@ -441,6 +441,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,415.37 | ▼ close $8,631.87 vs 09:30 $8,672.94 (session -25.81) | 16:00 close · cash $7,415.37 · equity $8,631.87 vs 09:30 $8,672.94 (-41.07; session marks -25.81) · 5 name(s) marked open→close (per-name table). BMBL×3 09:30 $5.94 → close $5.96 +0.06; CMRC×5 09:30 $3.65 → close $3.56 -0.45; KVYO×1 09:30 $20.41 → close $21.11 +0.70; TRU×14 09:30 $83.32 → close $81.48 -25.76; WIT×9 09:30 $2.15 → close $2.11 -0.36 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,415.37 | ▲ 09:30 equity $8,631.87 vs yday $8,631.87 (-0.00) | 09:30 open · cash $7,415.37 (unchanged overnight, no fees) · equity $8,631.87 vs prior close $8,631.87 (-0.00) · 5 name(s) re-marked at the open (per-name table). BMBL×3 yday $5.96 → 09:30 $5.96 +0.00; CMRC×5 yday $3.56 → 09:30 $3.56 +0.00; KVYO×1 yday $21.11 → 09:30 $21.11 +0.00; TRU×14 yday $81.48 → 09:30 $81.48 +0.00; WIT×9 yday $2.11 → 09:30 $2.11 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,415.37 | ▲ close $8,631.87 vs 09:30 $8,631.87 (session +0.00) | 16:00 close · cash $7,415.37 · equity $8,631.87 vs 09:30 $8,631.87 (-0.00; session marks +0.00) · 5 name(s) marked open→close (per-name table). BMBL×3 09:30 $5.96 → close $5.96 +0.00; CMRC×5 09:30 $3.56 → close $3.56 +0.00; KVYO×1 09:30 $21.11 → close $21.11 +0.00; TRU×14 09:30 $81.48 → close $81.48 +0.00; WIT×9 09:30 $2.11 → close $2.11 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,415.37 | ▲ 09:30 equity $8,640.51 vs yday $8,631.87 (+8.64) | 09:30 open · cash $7,415.37 (unchanged overnight, no fees) · equity $8,640.51 vs prior close $8,631.87 (+8.64) · 5 name(s) re-marked at the open (per-name table). BMBL×3 yday $5.96 → 09:30 $5.95 -0.03; CMRC×5 yday $3.56 → 09:30 $3.50 -0.30; KVYO×1 yday $21.11 → 09:30 $20.60 -0.51; TRU×14 yday $81.48 → 09:30 $82.17 +9.66; WIT×9 yday $2.11 → 09:30 $2.09 -0.18 | — |
+| 2026-10-27 09:30 ET | **SELL** | `BMBL` | 3 | $5.95 | $0.21 | $-0.39 | $7,433.01 | ▼ -0.39 after sell → book $8,640.30; vs 09:30 mark -0.21 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `CMRC` | 5 | $3.50 | $0.21 | $-1.66 | $7,450.30 | ▼ -1.66 after sell → book $8,640.09; vs 09:30 mark -0.21 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `KVYO` | 1 | $20.60 | $0.23 | $+0.58 | $7,470.67 | ▲ +0.58 after sell → book $8,639.86; vs 09:30 mark -0.23 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `TRU` | 14 | $82.17 | $2.05 | $+97.70 | $8,619.00 | ▲ +97.70 after sell → book $8,637.81; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 7 sess | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SELL** | `WIT` | 9 | $2.09 | $0.24 | $+1.10 | $8,637.58 | ▲ +1.10 after sell → book $8,637.58; vs 09:30 mark -0.23 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-10-27 09:30 ET | **BUY** | `POOL` | 5 | $195.23 | $2.00 | — | $7,659.42 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; ret5=+16.2; leftover $1079.70 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `SLN` | 54 | $19.78 | $2.15 | — | $6,589.15 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+1.0; leftover $1079.70 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ENGS` | 246 | $4.38 | $3.17 | — | $5,508.50 | — | baseline list, no extra gate; list ohlc_hot; ret5=+16.0; leftover $1079.70 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `LMT` | 1 | $626.91 | $1.99 | — | $4,879.59 | — | baseline list, no extra gate; list ohlc_hot; ret5=+15.9; leftover $1079.70 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `DOW` | 31 | $33.77 | $2.08 | — | $3,830.64 | — | baseline list, no extra gate; list ohlc_hot; ret5=+13.0; leftover $1079.70 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RBRK` | 8 | $132.49 | $2.01 | — | $2,768.71 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+17.6; leftover $1079.70 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `GMAB` | 24 | $44.41 | $2.06 | — | $1,700.80 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+16.1; leftover $1079.70 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RIG` | 166 | $6.48 | $2.49 | — | $622.64 | — | baseline list, no extra gate; list ohlc_hot; ret5=+10.9; leftover $1079.70 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $622.64 | ▲ close $8,638.35 vs 09:30 $8,640.51 (session +18.74) | 16:00 close · cash $622.64 · equity $8,638.35 vs 09:30 $8,640.51 (-2.16; session marks +18.74) · 8 name(s) marked open→close (per-name table). POOL×5 09:30 $195.23 → close $194.90 -1.65; SLN×54 09:30 $19.78 → close $19.78 +0.00; ENGS×246 09:30 $4.38 → close $4.36 -4.92; LMT×1 09:30 $626.91 → close $622.99 -3.92; DOW×31 09:30 $33.77 → close $33.78 +0.31; RBRK×8 09:30 $132.49 → close $135.74 +26.00; GMAB×24 09:30 $44.41 → close $44.67 +6.24; RIG×166 09:30 $6.48 → close $6.46 -3.32 | — |
 
 ## Not taken
 

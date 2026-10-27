@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-23.70%** ($7,630) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 297 · skips 74 · realized $-1849.08.
+Cash book **-23.31%** ($7,669) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 305 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -475,6 +475,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,630.46 | ▲ close $7,630.46 vs 09:30 $7,630.46 (session +0.00) | 16:00 close · cash $7,630.46 · no lots left · equity $7,630.46. | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,630.46 | ▲ 09:30 equity $7,630.46 vs yday $7,630.46 (+0.00) | 09:30 open · cash $7,630.46 · no holdings · equity $7,630.46 vs prior close $7,630.46 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,630.46 | ▲ close $7,630.46 vs 09:30 $7,630.46 (session +0.00) | 16:00 close · cash $7,630.46 · no lots left · equity $7,630.46. | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,630.46 | ▲ 09:30 equity $7,630.46 vs yday $7,630.46 (+0.00) | 09:30 open · cash $7,630.46 · no holdings · equity $7,630.46 vs prior close $7,630.46 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-27 09:30 ET | **BUY** | `SLN` | 48 | $19.78 | $2.13 | — | $6,678.89 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+1.0; leftover $953.81 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `PHM` | 7 | $121.54 | $2.01 | — | $5,826.10 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.4; leftover $953.81 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `LYB` | 14 | $66.86 | $2.03 | — | $4,888.02 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+5.7; leftover $953.81 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `FNB` | 52 | $18.34 | $2.15 | — | $3,932.20 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+8.1; leftover $953.81 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `GH` | 5 | $174.75 | $2.00 | — | $3,056.42 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+9.7; leftover $953.81 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `ERIC` | 87 | $10.96 | $2.25 | — | $2,101.08 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+5.3; leftover $953.81 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `MICC` | 49 | $19.21 | $2.14 | — | $1,157.65 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+3.3; leftover $953.81 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `AMRX` | 45 | $20.93 | $2.12 | — | $213.68 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+8.6; leftover $953.81 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $213.68 | ▲ close $7,669.34 vs 09:30 $7,630.46 (session +55.73) | 16:00 close · cash $213.68 · equity $7,669.34 vs 09:30 $7,630.46 (+38.88; session marks +55.73) · 8 name(s) marked open→close (per-name table). SLN×48 09:30 $19.78 → close $19.78 +0.00; PHM×7 09:30 $121.54 → close $121.63 +0.63; LYB×14 09:30 $66.86 → close $67.43 +7.98; FNB×52 09:30 $18.34 → close $18.24 -5.20; GH×5 09:30 $174.75 → close $178.06 +16.53; ERIC×87 09:30 $10.96 → close $11.08 +10.88; MICC×49 09:30 $19.21 → close $19.25 +1.96; AMRX×45 09:30 $20.93 → close $21.44 +22.95 | — |
 
 ## Not taken
 

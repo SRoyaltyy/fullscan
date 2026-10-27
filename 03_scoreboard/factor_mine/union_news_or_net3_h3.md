@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 3
 
-Cash book **-22.43%** ($7,757) · signal-only (no cash/fees) was -21.14%. Starts YES **1/30**. Fills 146 · skips 162 · realized $-2181.08.
+Cash book **-22.82%** ($7,718) · signal-only (no cash/fees) was -21.14%. Starts YES **1/30**. Fills 152 · skips 162 · realized $-2181.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -324,6 +324,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $263.42 | ▼ close $7,757.17 vs 09:30 $7,832.21 (session -75.04) | 16:00 close · cash $263.42 · equity $7,757.17 vs 09:30 $7,832.21 (-75.04; session marks -75.04) · 3 name(s) marked open→close (per-name table). AMX×166 09:30 $24.81 → close $24.57 -39.84; HLT×5 09:30 $354.57 → close $349.63 -24.70; SAP×7 09:30 $239.64 → close $238.14 -10.50 | — |
 | 2026-10-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $263.42 | ▲ 09:30 equity $7,757.17 vs yday $7,757.17 (+0.00) | 09:30 open · cash $263.42 (unchanged overnight, no fees) · equity $7,757.17 vs prior close $7,757.17 (+0.00) · 3 name(s) re-marked at the open (per-name table). AMX×166 yday $24.57 → 09:30 $24.57 +0.00; HLT×5 yday $349.63 → 09:30 $349.63 +0.00; SAP×7 yday $238.14 → 09:30 $238.14 +0.00 | — |
 | 2026-10-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $263.42 | ▲ close $7,757.17 vs 09:30 $7,757.17 (session +0.00) | 16:00 close · cash $263.42 · equity $7,757.17 vs 09:30 $7,757.17 (+0.00; session marks +0.00) · 3 name(s) marked open→close (per-name table). AMX×166 09:30 $24.57 → close $24.57 +0.00; HLT×5 09:30 $349.63 → close $349.63 +0.00; SAP×7 09:30 $238.14 → close $238.14 +0.00 | — |
+| 2026-10-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $263.42 | ▼ 09:30 equity $7,669.32 vs yday $7,757.17 (-87.85) | 09:30 open · cash $263.42 (unchanged overnight, no fees) · equity $7,669.32 vs prior close $7,757.17 (-87.85) · 3 name(s) re-marked at the open (per-name table). AMX×166 yday $24.57 → 09:30 $24.27 -49.80; HLT×5 yday $349.63 → 09:30 $340.62 -45.05; SAP×7 yday $238.14 → 09:30 $239.14 +7.00 | — |
+| 2026-10-27 09:30 ET | **SELL** | `AMX` | 166 | $24.27 | $2.55 | $+385.06 | $4,289.69 | ▲ +385.06 after sell → book $7,666.77; vs 09:30 mark -2.55 | exit unpriced hold on first bar after 8 sess | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **SELL** | `HLT` | 5 | $340.62 | $2.03 | $-100.93 | $5,990.76 | ▼ -100.93 after sell → book $7,664.74; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **SELL** | `SAP` | 7 | $239.14 | $2.03 | $+48.94 | $7,662.71 | ▲ +48.94 after sell → book $7,662.71; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-27 09:30 ET | **BUY** | `SGRY` | 110 | $23.20 | $2.32 | — | $5,108.39 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list flatten; 🔵; ret5=+58.1; leftover $2554.24 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-27 09:30 ET | **BUY** | `GH` | 14 | $174.75 | $2.03 | — | $2,659.79 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+9.7; leftover $2554.24 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-27 09:30 ET | **BUY** | `RY` | 12 | $203.19 | $2.03 | — | $219.48 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list ohlc_hot; 🔵; ret5=+3.8; leftover $2554.24 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $219.48 | ▲ close $7,718.16 vs 09:30 $7,669.32 (session +61.83) | 16:00 close · cash $219.48 · equity $7,718.16 vs 09:30 $7,669.32 (+48.84; session marks +61.83) · 3 name(s) marked open→close (per-name table). SGRY×110 09:30 $23.20 → close $23.36 +17.60; GH×14 09:30 $174.75 → close $178.06 +46.27; RY×12 09:30 $203.19 → close $203.02 -2.04 | — |
 
 ## Not taken
 
