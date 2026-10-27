@@ -309,3 +309,25 @@ if __name__ == "__main__":
         t()
         print("ok", t.__name__)
     print(f"{len(tests)} passed")
+
+
+def test_sector_outcomes_skipped_without_sector_predicts(tmp_path, monkeypatch):
+    from src import pipeline_health as ph
+    monkeypatch.setattr(ph, "ROOT", tmp_path)
+    (tmp_path / "01_daily" / "general").mkdir(parents=True)
+    rep = ph.Report(job="postclose", date="2026-10-26", source_date="2026-10-26", target_date="2026-10-27")
+    ph.check_outcomes(rep, "2026-10-26")
+    c = [x for x in rep.checks if x.step == "outcome.sector_count"][0]
+    assert c.status == "OK" and not c.required and "SKIPPED" in c.detail
+
+
+def test_sector_outcomes_fail_when_predicts_exist_but_ungraded(tmp_path, monkeypatch):
+    from src import pipeline_health as ph
+    monkeypatch.setattr(ph, "ROOT", tmp_path)
+    sec = tmp_path / "01_daily" / "sectors" / "2026-10-26"
+    sec.mkdir(parents=True)
+    (sec / "technology_predict.md").write_text("x" * 50)
+    rep = ph.Report(job="postclose", date="2026-10-26", source_date="2026-10-26", target_date="2026-10-27")
+    ph.check_outcomes(rep, "2026-10-26")
+    c = [x for x in rep.checks if x.step == "outcome.sector_count"][0]
+    assert c.status == "FAIL"

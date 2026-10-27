@@ -1372,6 +1372,15 @@ def check_outcomes(report: Report, date: str) -> None:
          group="outcome", status="OK" if cand else "WARN", required=False,
          detail=f"n={len(cand)}")
     sec = ROOT / "01_daily" / "sectors" / date
+    # Cyrus 10-06: sector essays are optional. A day with no sector predict
+    # files has nothing to grade -> SKIPPED, never FAIL / missing / blocking.
+    n_pred = sum(1 for sector in FINVIZ_SECTORS
+                 if (sec / f"{_slug(sector)}_predict.md").exists())
+    if n_pred == 0:
+        _add(report, step="outcome.sector_count", name="Sector outcomes graded (>=8/11)",
+             group="outcome", status="OK", required=False,
+             detail="SKIPPED — no sector predict files that day (sectors optional)")
+        return
     n_ok = sum(1 for sector in FINVIZ_SECTORS
                if (sec / f"{_slug(sector)}_outcome.md").exists()
                and (sec / f"{_slug(sector)}_outcome.md").stat().st_size >= 8)
