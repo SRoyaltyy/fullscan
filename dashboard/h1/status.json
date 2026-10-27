@@ -1,5 +1,7 @@
 {
-  "date": "2026-10-26",
-  "latest_skip": "not sent, fill missing: sent share lock missing for 2026-10-26; refusing to size buys from the open; no 2026-10-26_submit.json; 2026-10-26_status.json status missed_deadline submit false; add-only fill_missing note",
+  "date": "2026-10-27",
+  "latest_skip": null,
+  "pending": "2026-10-27",
+  "phase": "plan",
   "recipe": "union_hot_n4_h1__w0"
 }
