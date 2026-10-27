@@ -1,8 +1,8 @@
 {
   "date": "2026-10-26",
-  "generated_at": "2026-10-26T16:31:39.817618-04:00",
+  "generated_at": "2026-10-27T02:19:00.359109-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "blockers": [
     "FAIL Weather JSON `01_daily/weather/2026-10-26_weather.json` \u2014 yields_unknown"
   ],
@@ -96,12 +96,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97049,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97775,
+          "said": "5904 tickers \u00b7 1787 signals \u00b7 top AAPL, ABBV, ACN, AEM, AMD, AMGN, AMX, ANET",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Nvidia, Chipmakers Face Higher Costs? TSMC Reportedly Plans Up To 20% Price Hike For Advanced Chip Packaging",
+            "Allergan Aesthetics Celebrates Eight Years of Engaging Girls in STEM Through Continued Partnership with Girls Inc.",
+            "AI and Personal Finance: Yodlee CEO Farouk Ferchichi, Live from Money 20/20 2026"
           ]
         },
         {
@@ -111,10 +111,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11861,
+          "size": 10984,
           "said": "Finviz Daily Digest \u2014 2026-10-26",
           "bullets": [
-            "_Generated 2026-10-26T04:27:19.087873-04:00 \u00b7 export=data/exports/finviz_2026-10-26.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-27T02:18:59.168771-04:00 \u00b7 export=data/exports/finviz_2026-10-26.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1787_",
             "Major indices (live quote page)"
           ]
         },
@@ -169,11 +169,11 @@
           ]
         }
       ],
-      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+      "said": "5904 tickers \u00b7 1787 signals \u00b7 top AAPL, ABBV, ACN, AEM, AMD, AMGN, AMX, ANET",
       "bullets": [
-        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-        "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-        "Banks have profited from idle cash for years. AI agents could change that."
+        "Nvidia, Chipmakers Face Higher Costs? TSMC Reportedly Plans Up To 20% Price Hike For Advanced Chip Packaging",
+        "Allergan Aesthetics Celebrates Eight Years of Engaging Girls in STEM Through Continued Partnership with Girls Inc.",
+        "AI and Personal Finance: Yodlee CEO Farouk Ferchichi, Live from Money 20/20 2026"
       ]
     },
     {
@@ -184,7 +184,7 @@
       "inputs_ready": true,
       "n_req_ok": 6,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 14,
       "files": [
         {
@@ -194,12 +194,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97049,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97775,
+          "said": "5904 tickers \u00b7 1787 signals \u00b7 top AAPL, ABBV, ACN, AEM, AMD, AMGN, AMX, ANET",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Nvidia, Chipmakers Face Higher Costs? TSMC Reportedly Plans Up To 20% Price Hike For Advanced Chip Packaging",
+            "Allergan Aesthetics Celebrates Eight Years of Engaging Girls in STEM Through Continued Partnership with Girls Inc.",
+            "AI and Personal Finance: Yodlee CEO Farouk Ferchichi, Live from Money 20/20 2026"
           ]
         },
         {
@@ -336,11 +336,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-26/_board.json",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -348,14 +353,14 @@
           "path": "01_daily/2026-10-26_preopen_qc.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False",
-          "size": 7575,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "reason": "all_ok=True",
+          "size": 7556,
+          "said": "all_ok=True \u00b7 sectors 0/11 \u00b7 12 fail",
           "bullets": [
-            "general_predict:missing",
-            "events:missing",
-            "news_judge:missing",
-            "news_parse:missing"
+            "map_heat_research:missing",
+            "sector_predict:missing",
+            "sector_predict:missing",
+            "sector_predict:missing"
           ]
         },
         {
@@ -376,7 +381,7 @@
           "role": "required",
           "status": "OK",
           "reason": "ok=False Grok returned an empty review",
-          "size": 308,
+          "size": 309,
           "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
             "Grok returned an empty review"
@@ -504,13 +509,18 @@
           "bullets": []
         }
       ],
-      "said": "general DOWN  -2.128",
+      "said": "general DOWN  -2.128 \u00b7 sectors 0 up / 0 down / 0 flat",
       "bullets": [
         "bad: fresh IRGC Hormuz tanker attack",
         "bad: AI/semis selloff deepens (Kospi -1.46%)",
         "bad: Big Tech earnings gate unsigned",
         "good: France dodges Moody's downgrade",
-        "good: oil retreats from six-month high"
+        "good: oil retreats from six-month high",
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -531,12 +541,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97049,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97775,
+          "said": "5904 tickers \u00b7 1787 signals \u00b7 top AAPL, ABBV, ACN, AEM, AMD, AMGN, AMX, ANET",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Nvidia, Chipmakers Face Higher Costs? TSMC Reportedly Plans Up To 20% Price Hike For Advanced Chip Packaging",
+            "Allergan Aesthetics Celebrates Eight Years of Engaging Girls in STEM Through Continued Partnership with Girls Inc.",
+            "AI and Personal Finance: Yodlee CEO Farouk Ferchichi, Live from Money 20/20 2026"
           ]
         },
         {
@@ -637,12 +647,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97049,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97775,
+          "said": "5904 tickers \u00b7 1787 signals \u00b7 top AAPL, ABBV, ACN, AEM, AMD, AMGN, AMX, ANET",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Nvidia, Chipmakers Face Higher Costs? TSMC Reportedly Plans Up To 20% Price Hike For Advanced Chip Packaging",
+            "Allergan Aesthetics Celebrates Eight Years of Engaging Girls in STEM Through Continued Partnership with Girls Inc.",
+            "AI and Personal Finance: Yodlee CEO Farouk Ferchichi, Live from Money 20/20 2026"
           ]
         },
         {
@@ -678,7 +688,7 @@
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
-      "n_opt": 4,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_general",
@@ -700,12 +710,17 @@
           "key": "in_board",
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-26/_board.json",
-          "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 6085,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -730,12 +745,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97049,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97775,
+          "said": "5904 tickers \u00b7 1787 signals \u00b7 top AAPL, ABBV, ACN, AEM, AMD, AMGN, AMX, ANET",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Nvidia, Chipmakers Face Higher Costs? TSMC Reportedly Plans Up To 20% Price Hike For Advanced Chip Packaging",
+            "Allergan Aesthetics Celebrates Eight Years of Engaging Girls in STEM Through Continued Partnership with Girls Inc.",
+            "AI and Personal Finance: Yodlee CEO Farouk Ferchichi, Live from Money 20/20 2026"
           ]
         },
         {
@@ -1022,7 +1037,22 @@
       "score": "-2.128",
       "direction": "down"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {},
     "weather": {
       "said": "hostile 9 \u00b7 neutral 2",
@@ -2602,6 +2632,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-26\n**Generated:** 2026-10-26T16:31:38.675733-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher as Anthropic IPO filing lifted AI chip shares while Brazil-linked equities fell after Lula election surprise and energy lagged on weaker oil\n**Prior close:** SPX +0.70%  Nasdaq +0.80%  Dow +0.30%\n**SPX:** +0.70%  **Nasdaq:** +0.80%  **Dow:** +0.30%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** ANTW, NVDA, AVGO, MU, AMD, TSLA, BCS, META, SGRY, RRC, EQT, MELI, XP, ITUB, BBD, VZ, DASH, PYPL, UPS, BA, KO\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-27\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-26",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-27T02:18:59.492977-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-26_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97775,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-26_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11021,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-26\n_Generated 2026-10-27T02:18:59.168771-04:00 \u00b7 export=data/exports/finviz_2026-10-26.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1787_"
+        },
+        {
+          "path": "data/exports/finviz_2026-10-26.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11557941,
+          "preview": "11772 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11557941,
+          "preview": "11772 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\""
+        },
+        {
+          "path": "01_daily/news/2026-10-26_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97049,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-26\n_Generated 2026-10-27T02:18:59.168771-04:00 \u00b7 export=data/exports/finviz_2026-10-26.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1787_ \u00b7 11772 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 11772 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAB\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
@@ -3183,6 +3259,54 @@
       "path": "data/exports/finviz_2026-10-26.csv",
       "at": "2026-10-27T02:18:33-04:00",
       "commit_msg": "auto: land finviz export [2026-10-26]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "40459635405",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-26_grok_review.json",
+      "at": "2026-10-27T02:19:01-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-26]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "40459635405",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-26_preopen_qc.json",
+      "at": "2026-10-27T02:19:01-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-26]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "40459635405",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-10-26_finviz_digest.json",
+      "at": "2026-10-27T02:19:01-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-26]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "40459635405",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-10-26_finviz_digest.md",
+      "at": "2026-10-27T02:19:01-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-26]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "40459635405",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-26.json",
+      "at": "2026-10-27T02:19:01-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-26]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "40459635405",
+      "manifest": "research/input_freeze/2026-10-26/manifest.json"
+    },
+    {
+      "path": "data/exports/finviz_2026-10-26.csv",
+      "at": "2026-10-27T02:19:01-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-26]",
       "workflow": "Finviz ALL (GH-hosted Elite)",
       "run_id": "40459635405",
       "manifest": "research/input_freeze/2026-10-26/manifest.json"
