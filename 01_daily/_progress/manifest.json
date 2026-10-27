@@ -1,12 +1,6 @@
 {
-  "updated_at": "2026-10-27T17:27:07-04:00",
+  "updated_at": "2026-10-27T19:48:08-04:00",
   "runs": [
-    {
-      "date": "2026-10-20",
-      "workflow": "oauth_guard",
-      "file": "2026-10-20_oauth_guard.json",
-      "updated_at": "2026-10-20T03:45:15-04:00"
-    },
     {
       "date": "2026-10-20",
       "workflow": "finviz_scrape",
@@ -240,6 +234,12 @@
       "workflow": "fm_preopen",
       "file": "2026-10-27_fm_preopen.json",
       "updated_at": "2026-10-27T17:27:07-04:00"
+    },
+    {
+      "date": "2026-10-27",
+      "workflow": "homepage_digest",
+      "file": "2026-10-27_homepage_digest.json",
+      "updated_at": "2026-10-27T19:48:08-04:00"
     }
   ]
 }
