@@ -2243,18 +2243,20 @@
         "tariff_semis_solar",
         "ai_chip_demand_spike"
       ],
-      "entry_date": "2026-10-02",
-      "entry_open": 112.38,
-      "window_through": "2026-10-02",
-      "trading_days_elapsed": 0,
+      "entry_date": "2026-09-14",
+      "entry_open": 114.11,
+      "window_through": "2026-10-05",
+      "trading_days_elapsed": 1,
       "complete": false,
       "latest_close": 114.17,
-      "current_return_pct": 1.59,
-      "horizon_returns_pct": {},
-      "mfe_pct": 2.88,
-      "mfe_day": "2026-10-02",
+      "current_return_pct": 0.05,
+      "horizon_returns_pct": {
+        "1d": 0.05
+      },
+      "mfe_pct": 0.85,
+      "mfe_day": "2026-09-14",
       "ever_profitable": true,
-      "first_profitable_day": "2026-10-02"
+      "first_profitable_day": "2026-09-14"
     },
     {
       "signal_date": "2026-08-28",
@@ -2381,10 +2383,10 @@
       "win_rate": 98.8
     },
     "close_1d": {
-      "n": 83,
-      "wins": 57,
-      "win_rate": 68.7,
-      "avg": 2.13
+      "n": 84,
+      "wins": 58,
+      "win_rate": 69.0,
+      "avg": 2.11
     },
     "close_3d": {
       "n": 83,
@@ -2416,7 +2418,7 @@
         "n": 36,
         "wins": 36,
         "win_rate": 100.0,
-        "avg": 5.11
+        "avg": 5.05
       },
       "close_5d": {
         "n": 36,
