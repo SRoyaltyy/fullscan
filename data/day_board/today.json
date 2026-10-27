@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "generated_at": "2026-10-27T06:16:46.110119-04:00",
+  "generated_at": "2026-10-27T06:17:36.684725-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-27",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-27T06:13:13.171455-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-27_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 96994,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-27_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11830,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-27\n_Generated 2026-10-27T04:20:33.549521-04:00 \u00b7 export=data/exports/finviz_2026-10-27.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-27\n_Generated 2026-10-27T04:20:33.549521-04:00 \u00b7 export=data/exports/finviz_2026-10-27.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "raw=9222 usable=560 single=385 \u00b7 Today\u2019s Top Economic and Crypto Events: FOMC Day 1, US Durable Goods Orders - bl | IDR/USD: Indonesia 10-Year Yield at Four-Year High on MSCI Risk, Oil - Bloomberg | Asset Manager Australian Dollar Shorts Hit Record on Risk-Off - Bloomberg.com | AUD/USD Forecast: Holds above 0.7000 as Aussie CPI, FOMC loom - FXStreet | Iron Ore Declines to Two-Year Low as Demand Outlook Weakens - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-10-27T06:16:35.668966-04:00\nWindow\u224848h | news_mode=on | raw=9222 | usable=560 | single_name=385 | noise_dropped=8003\nusable polarity={'+': 13, '-': 101, 'mixed': 3, 'neutral': 443}"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-27T06:17:35.796978-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-27_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9595,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-27_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5238,
+          "preview": "# Weather report \u2014 2026-10-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
