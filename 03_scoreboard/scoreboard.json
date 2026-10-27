@@ -27841,6 +27841,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.4
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-26",
+          "actual_pct": -0.38,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.38
         }
       },
       "lesson_schema_ok": true
@@ -32074,6 +32086,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-10-26",
+          "actual_pct": -1.14,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -33623,6 +33647,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-10-26",
+          "actual_pct": 0.23,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -33916,7 +33952,20 @@
       "knowable_at_9am": null,
       "attribution_contested": null,
       "outlier_watch": null,
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-10-26",
+          "actual_pct": -0.46,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -34455,7 +34504,8 @@
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
       "outlier_watch": "Dow reversal down vs. SPX/NDX choppy——防御/能源尾盘拖累；半导体单日+2.8%但10月仍−12.2%，是轧空而非趋势反转；债市几乎未动，不背书权益反弹",
-      "lesson_schema_ok": true
+      "lesson_schema_ok": true,
+      "horizon_grades": {}
     },
     {
       "date": "2026-10-27",
