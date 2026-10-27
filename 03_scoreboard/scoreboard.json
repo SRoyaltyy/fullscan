@@ -34329,18 +34329,95 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": -2.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7639.7,
+      "actual_close": 7676.77,
+      "actual_pct_change": 0.7,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": true,
       "divergence_flagged": true,
-      "divergence_verdict": null,
-      "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
-      "sources_used": [],
+      "divergence_verdict": "futures_right",
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -1.0,
+          "status": "miss"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "hit"
+        }
+      ],
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-26_lesson.md",
+      "sources_used": [
+        {
+          "url": "https://m.jrj.com.cn/madapter/usstock/2026/10/27075058875093.shtml",
+          "date_accessed": "2026-10-26",
+          "summary": "Anthropic IPO申请是周一AI基础设施端（费半+2.8%）反弹的最直接叙事催化剂。",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.finanzen.at/nachrichten/aktien/bargain-hunting-contributes-to-rebound-on-wall-street-1036667608",
+          "date_accessed": "2026-10-26",
+          "summary": "超卖后的技术性抄底是周一反弹的结构性条件，与Anthropic叙事并行。",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.yna.co.kr/view/AKR20261027005500072",
+          "date_accessed": "2026-10-26",
+          "summary": "德黑兰外交会谈是油价下跌的直接触发，但Houthi袭击持续限制了跌幅。",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.ft.com/content/840f9c94-cb41-4340-9fc4-41e76d908831",
+          "date_accessed": "2026-10-26",
+          "summary": "法国评级 relief 是一个已被周五盘后定价的条件性正面，对美股的边际增量有限。",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://pro.thestreet.com/market-commentary/the-week-ahead-can-big-tech-earnings-save-the-day",
+          "date_accessed": "2026-10-26",
+          "summary": "周一的choppy路径在很大程度上是“等待FOMC + Mag7财报”的仓位行为，而不是方向性重定价。",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -34370,7 +34447,15 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 1.447,
-      "overlay_score": -3.575
+      "overlay_score": -3.575,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Anthropic IPO申请点燃半导体/AI基础设施开盘脉冲，与超卖bargain hunting叠加",
+      "key_interaction": "Anthropic IPO（正）× 超卖bargain hunting（正）在开盘放大，但上午即被FOMC/财报等待模式封顶，形成choppy而非trend；油价外交的正面与能源板块承压相互抵消",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes",
+      "outlier_watch": "Dow reversal down vs. SPX/NDX choppy——防御/能源尾盘拖累；半导体单日+2.8%但10月仍−12.2%，是轧空而非趋势反转；债市几乎未动，不背书权益反弹",
+      "lesson_schema_ok": true
     }
   ]
 }
