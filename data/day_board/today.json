@@ -1,12 +1,12 @@
 {
   "date": "2026-10-27",
-  "generated_at": "2026-10-27T05:55:17.117732-04:00",
+  "generated_at": "2026-10-27T06:13:13.435210-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 6,
-    "partial": 1,
-    "fail": 1,
+    "ok": 2,
+    "partial": 2,
+    "fail": 4,
     "n": 8
   },
   "buy_1d": [
@@ -88,59 +88,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-10-27",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-27T05:49:57.411035-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-10-27_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1481035,
-          "preview": "1d BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
-        },
-        {
-          "path": "data/stock_book/2026-10-27_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-10-27_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2594,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-10-27_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12449,
-          "preview": "2026-10-27 BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12449,
-          "preview": "2026-10-27 BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
-        },
-        {
-          "path": "01_daily/2026-10-27_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 85465,
-          "preview": "# Stock book \u2014 2026-10-27\n_Generated 2026-10-27T05:45:51.489355-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-27 BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 2026-10-27 BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 # Stock book \u2014 2026-10-27\n_Generated 2026-10-27T05:45:51.489355-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -581,6 +528,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-27\n_Generated 2026-10-27T09:55:15 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$114,811.52** (after 09:30 $114,811.52 \u00b7 after 16:00 $114,811.52)\n- Prior close **$114,811.52** \u00b7 09:30 **$114,811.52** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$114,811.52**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$114,811.52** \u00b7 2026-10-26 BUY \u2014 \u00b7 SELL \u2014 \u00b7 keys: date, policy, generated, score, predict, hard_red, flatten_ok, n_priced_buys, prior_book, route, cash_open, cash_after_0930 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\":"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-27T06:13:13.171455-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-27_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 96994,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-27_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11830,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-27\n_Generated 2026-10-27T04:20:33.549521-04:00 \u00b7 export=data/exports/finviz_2026-10-27.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-27\n_Generated 2026-10-27T04:20:33.549521-04:00 \u00b7 export=data/exports/finviz_2026-10-27.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
