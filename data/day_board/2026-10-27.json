@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "generated_at": "2026-10-27T06:31:46.540250-04:00",
+  "generated_at": "2026-10-27T06:32:11.080360-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -764,7 +764,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1481031,
+          "size": 1481035,
           "said": "1d BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
@@ -778,7 +778,7 @@
           "size": 84350,
           "said": "Stock book \u2014 2026-10-27",
           "bullets": [
-            "_Generated 2026-10-27T06:17:56.357278-04:00_",
+            "_Generated 2026-10-27T06:31:53.382072-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -842,7 +842,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1481031,
+          "size": 1481035,
           "said": "1d BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
@@ -939,7 +939,7 @@
       },
       {
         "ticker": "NNDM",
-        "score": -0.1560092122799765
+        "score": -0.15600921227997644
       },
       {
         "ticker": "POWL",
@@ -2362,6 +2362,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-27T06:32:10.486366-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-27_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1481035,
+          "preview": "1d BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "data/stock_book/2026-10-27_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-27_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2594,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-27_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12449,
+          "preview": "2026-10-27 BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12449,
+          "preview": "2026-10-27 BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "01_daily/2026-10-27_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 85465,
+          "preview": "# Stock book \u2014 2026-10-27\n_Generated 2026-10-27T06:31:53.382072-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-27 BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 2026-10-27 BUY SGRY, CON, ASTH, AMN, MD, PACS, NTAP, MQ \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 # Stock book \u2014 2026-10-27\n_Generated 2026-10-27T06:31:53.382072-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
