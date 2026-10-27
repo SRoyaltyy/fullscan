@@ -1,17 +1,13 @@
 {
   "date": "2026-10-27",
-  "generated_at": "2026-10-27T07:06:59.541999-04:00",
+  "generated_at": "2026-10-27T12:09:04.427670-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-27_predict.md` \u2014 missing",
-    "MISSING Weather JSON `01_daily/weather/2026-10-27_weather.json` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-10-27_ab_checklist_enriched.csv` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
-    "ok": 2,
-    "partial": 3,
-    "fail": 3,
+    "ok": 6,
+    "partial": 1,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -181,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 5,
+      "n_req_ok": 7,
       "n_req": 9,
       "n_opt_ok": 2,
       "n_opt": 14,
@@ -241,8 +237,8 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 6564176,
-          "said": "6564176B on disk",
+          "size": 6599168,
+          "said": "6599168B on disk",
           "bullets": []
         },
         {
@@ -319,11 +315,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-27_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 12013,
+          "said": "UP 5.515",
+          "bullets": [
+            "bad: FOMC binary pending",
+            "bad: MSFT/GOOGL earnings after close",
+            "bad: bitcoin below $80k",
+            "good: Anthropic IPO lifts AI/semis sentiment"
+          ]
         },
         {
           "key": "board",
@@ -357,10 +358,10 @@
           "name": "Pre-open status JSON",
           "path": "01_daily/2026-10-27_preopen_status.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "all_ok=False missing=['events', 'news_judge', 'map_heat_research', 'general_predict']",
+          "size": 6980,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, map_heat_research, general_predict",
           "bullets": []
         },
         {
@@ -498,16 +499,22 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "general UP  5.515",
+      "bullets": [
+        "bad: FOMC binary pending",
+        "bad: MSFT/GOOGL earnings after close",
+        "bad: bitcoin below $80k",
+        "good: Anthropic IPO lifts AI/semis sentiment",
+        "good: oil retreats from $117 on Iran diplomacy"
+      ]
     },
     {
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -532,25 +539,31 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-10-27_weather.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=10128 vix=calm yields=rising",
+          "size": 10128,
+          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+            "events bull 3 / bear 4"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "bullets": [
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+        "events bull 3 / bear 4"
+      ]
     },
     {
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -558,32 +571,38 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-10-27_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 7561499,
+          "said": "27 rows",
+          "bullets": [
+            "ADSK, SN, ELV, PM, AUPH, BP, HHH, CURI"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-27_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8352418,
+          "said": "25 rows",
+          "bullets": [
+            "SN, HAS, SHEL, BP, CNK, PM, AUPH, ABBV"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "SN, HAS, SHEL, BP, CNK"
+      ]
     },
     {
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
@@ -626,11 +645,16 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-10-27_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "FAIL",
+          "reason": "zero usable dossiers (n=8)",
+          "size": 2458,
+          "said": "zero usable dossiers (n=8) \u00b7 0/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 AAPL, MSFT, GOOG, GOOGL, AMZN, AMD, UEC, UUUU",
+          "bullets": [
+            "AAPL: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 AAPL",
+            "MSFT: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 MSFT",
+            "GOOG: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 GOOG",
+            "GOOGL: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 GOOGL"
+          ]
         }
       ],
       "said": "84 ticker actions \u00b7 7 events \u00b7 9204 headlines \u00b7 COP BUY, EOG BUY, SM BUY, CHRD BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
@@ -649,11 +673,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
-      "n_req_ok": 0,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 4,
       "files": [
         {
@@ -661,11 +685,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-27_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 12013,
+          "said": "UP 5.515",
+          "bullets": [
+            "bad: FOMC binary pending",
+            "bad: MSFT/GOOGL earnings after close",
+            "bad: bitcoin below $80k",
+            "good: Anthropic IPO lifts AI/semis sentiment"
+          ]
         },
         {
           "key": "in_board",
@@ -729,54 +758,63 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-10-27_weather.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "sectors=11 bytes=10128 vix=calm yields=rising",
+          "size": 10128,
+          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
+            "events bull 3 / bear 4"
+          ]
         },
         {
           "key": "in_ab",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-27_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8352418,
+          "said": "25 rows",
+          "bullets": [
+            "SN, HAS, SHEL, BP, CNK, PM, AUPH, ABBV"
+          ]
         },
         {
           "key": "join",
           "name": "Join ranked CSV",
           "path": "data/join/2026-10-27_ranked.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5901",
+          "size": 2287474,
+          "said": "204 rows",
+          "bullets": [
+            "ARQT, AVAH, HALO, LLY, HRMY, BFLY, CDNA, DXCM"
+          ]
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-10-27_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5096",
+          "size": 821534,
+          "said": "489 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-27_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=190",
+          "size": 1418050,
+          "said": "1d BUY CDNA, SN, VEEV, BLFS, PACS, CBRL, SHOO, FIGS \u00b7 SELL JBLU, SKHY, SOC, BAK, NEOV, VNET \u00b7 0.61285",
           "bullets": []
         },
         {
@@ -784,21 +822,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-10-27_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 70491,
+          "said": "Stock book \u2014 2026-10-27",
+          "bullets": [
+            "_Generated 2026-10-27T07:50:46.348317-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-10-27_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 2424,
+          "said": "153 green \u00b7 ARQT, CDNA, CORT, WAY, INCY, VEEV, EXEL, PTGX, BTSG, ADMA",
           "bullets": []
         },
         {
@@ -820,23 +861,25 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-27)",
+          "size": 10510589,
+          "said": "live-book poller + today.json (2026-10-27)",
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "204 rows",
+      "bullets": [
+        "ARQT, AVAH, HALO, LLY, HRMY"
+      ]
     },
     {
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -846,10 +889,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-27_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=190",
+          "size": 1418050,
+          "said": "1d BUY CDNA, SN, VEEV, BLFS, PACS, CBRL, SHOO, FIGS \u00b7 SELL JBLU, SKHY, SOC, BAK, NEOV, VNET \u00b7 0.61285",
           "bullets": []
         },
         {
@@ -857,10 +900,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-27)",
+          "size": 10510589,
+          "said": "live-book poller + today.json (2026-10-27)",
           "bullets": []
         },
         {
@@ -898,70 +941,118 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "SGRY",
-        "score": 0.8184899287798255
+        "ticker": "CDNA",
+        "score": 0.8940566036157818
       },
       {
-        "ticker": "CON",
-        "score": 0.7856556108017361
+        "ticker": "SN",
+        "score": 0.4807725869143047
       },
       {
-        "ticker": "ASTH",
-        "score": 0.7698427137515671
+        "ticker": "VEEV",
+        "score": 0.46786125233643583
       },
       {
-        "ticker": "AMN",
-        "score": 0.7601225205328173
-      },
-      {
-        "ticker": "MD",
-        "score": 0.7136370354701527
+        "ticker": "BLFS",
+        "score": 0.8458674143942335
       },
       {
         "ticker": "PACS",
-        "score": 0.8897415602437082
+        "score": 0.8486720452675756
       },
       {
-        "ticker": "NTAP",
-        "score": 0.2457235287083414
+        "ticker": "CBRL",
+        "score": 0.8081895966908326
       },
       {
-        "ticker": "MQ",
-        "score": 0.669637729713904
+        "ticker": "SHOO",
+        "score": 0.7678252989703935
+      },
+      {
+        "ticker": "FIGS",
+        "score": 0.7424185570707151
+      },
+      {
+        "ticker": "LAUR",
+        "score": 0.5501012970022603
+      },
+      {
+        "ticker": "VLO",
+        "score": 0.1814231585646559
+      },
+      {
+        "ticker": "COP",
+        "score": 0.5358607504097501
+      },
+      {
+        "ticker": "CHEF",
+        "score": 0.49315497714049245
+      },
+      {
+        "ticker": "PEB",
+        "score": 0.5064495333727987
       }
     ],
     "sell_1d": [
       {
+        "ticker": "JBLU",
+        "score": -0.3393930632051787
+      },
+      {
+        "ticker": "SKHY",
+        "score": -0.33600227455737885
+      },
+      {
+        "ticker": "SOC",
+        "score": -0.3053738868080149
+      },
+      {
+        "ticker": "BAK",
+        "score": -0.3041697331480477
+      },
+      {
         "ticker": "NEOV",
-        "score": -0.3382345098478818
+        "score": -0.30368099451158354
       },
       {
-        "ticker": "OKLO",
-        "score": -0.1551178862039319
+        "ticker": "VNET",
+        "score": -0.3010077099433638
       },
       {
-        "ticker": "FCEL",
-        "score": -0.22098003297586954
+        "ticker": "INTC",
+        "score": -0.2932544995057852
       },
       {
-        "ticker": "NNDM",
-        "score": -0.15600921227997644
+        "ticker": "CMTG",
+        "score": -0.29296262559600167
       },
       {
-        "ticker": "POWL",
-        "score": -0.14175373160434052
+        "ticker": "GFL",
+        "score": -0.28903333825739286
       },
       {
-        "ticker": "EOSE",
-        "score": -0.23807806406733173
+        "ticker": "AU",
+        "score": -0.28218550094266065
       },
       {
-        "ticker": "NRGV",
-        "score": -0.28846115631301994
+        "ticker": "SSTK",
+        "score": -0.28174115940615413
       },
       {
-        "ticker": "INDI",
-        "score": -0.1588387358995833
+        "ticker": "SSP",
+        "score": -0.279360190260411
+      },
+      {
+        "ticker": "ROIV",
+        "score": -0.2792125390033606
+      },
+      {
+        "ticker": "BIDU",
+        "score": -0.26993584514462693
+      },
+      {
+        "ticker": "PAL",
+        "score": -0.259877352848013
       }
     ],
     "flatten": {
@@ -972,7 +1063,18 @@
         "morning S missing"
       ]
     },
-    "general": {},
+    "general": {
+      "said": "UP  5.515",
+      "bullets": [
+        "bad: FOMC binary pending",
+        "bad: MSFT/GOOGL earnings after close",
+        "bad: bitcoin below $80k",
+        "good: Anthropic IPO lifts AI/semis sentiment",
+        "good: oil retreats from $117 on Iran diplomacy"
+      ],
+      "score": "5.515",
+      "direction": "up"
+    },
     "sectors": {},
     "news": {},
     "weather": {
@@ -2665,6 +2767,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-27T07:06:59.257648-04:00\nraw=9204 unique_events=7 tickers=84"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-27",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-27T12:09:03.273195-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-27_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10128,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-27_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5628,
+          "preview": "# Weather report \u2014 2026-10-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-27\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
@@ -2672,5 +2799,23 @@
     "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",
     "factor_mine": "https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/",
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
-  }
+  },
+  "frozen_write_skips": [
+    {
+      "path": "01_daily/weather/2026-10-27_weather.json",
+      "at": "2026-10-27T12:09:05-04:00",
+      "commit_msg": "auto: land weather [2026-10-27]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "40535086671",
+      "manifest": "research/input_freeze/2026-10-27/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-27.json",
+      "at": "2026-10-27T12:09:05-04:00",
+      "commit_msg": "auto: land weather [2026-10-27]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "40535086671",
+      "manifest": "research/input_freeze/2026-10-27/manifest.json"
+    }
+  ]
 }
