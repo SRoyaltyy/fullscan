@@ -6,6 +6,14 @@ on:
   #   - cron: '3 21 * * 0-6'
   workflow_dispatch:
     inputs:
+      runner:
+        description: "ubuntu (GitHub-hosted, DeepSeek; default) or ecs (retired OpenClaw box; Grok)."
+        required: false
+        default: "ubuntu"
+        type: choice
+        options:
+          - ubuntu
+          - ecs
       stage:
         description: 'predict | outcome | reflect | all'
         required: true
@@ -32,13 +40,13 @@ env:
 
 jobs:
   run-pipeline:
-    runs-on: [self-hosted, ecs]
+    runs-on: ${{ (github.event.inputs.runner == 'ecs') && fromJSON('["self-hosted","ecs"]') || 'ubuntu-latest' }}
     timeout-minutes: 360
     env:
-      HOME: /home/gha
-      FULLSCAN_HOME: /home/gha
+      HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
+      FULLSCAN_HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
       GROK_ONLY: "0"
-      LLM_BACKEND: auto
+      LLM_BACKEND: ${{ (github.event.inputs.runner == 'ecs') && 'auto' || 'deepseek' }}
     steps:
       - name: Clear stale git index.lock (shared ECS workspace)
         shell: bash

@@ -27,7 +27,7 @@ on:
       runner:
         description: "ecs (OpenClaw) or ubuntu (GitHub-hosted). ubuntu cannot reach Grok."
         required: false
-        default: "ecs"
+        default: "ubuntu"
         type: choice
         options:
           - ecs
@@ -55,7 +55,7 @@ concurrency:
 
 jobs:
   research:
-    runs-on: ${{ github.event.inputs.runner == 'ubuntu' && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    runs-on: ${{ (github.event.inputs.runner == 'ecs') && fromJSON('["self-hosted","ecs"]') || 'ubuntu-latest' }}
     timeout-minutes: 360
     env:
       OPENCLAW_TIMEOUT: "10800"
@@ -63,8 +63,8 @@ jobs:
       GROK_ONLY: "0"
       FINVIZ_SKIP_LIVE: "1"
       PYTHONUNBUFFERED: "1"
-      HOME: /home/gha
-      FULLSCAN_HOME: /home/gha
+      HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
+      FULLSCAN_HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
     steps:
       - name: Back off if ECS systemd research owns the box
         run: |
@@ -129,7 +129,7 @@ jobs:
         if: env.skip != 'yes'
         run: pip install -r requirements.txt
       - name: Ensure OpenClaw chat classroom is open
-        if: env.skip != 'yes'
+        if: env.skip != 'yes' && github.event.inputs.runner == 'ecs'
         env:
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
         run: bash scripts/enable_openclaw_chat.sh

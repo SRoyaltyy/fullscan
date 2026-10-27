@@ -7,6 +7,14 @@ name: Sector Predict
 on:
   workflow_dispatch:
     inputs:
+      runner:
+        description: "ubuntu (GitHub-hosted, DeepSeek; default) or ecs (retired OpenClaw box; Grok)."
+        required: false
+        default: "ubuntu"
+        type: choice
+        options:
+          - ubuntu
+          - ecs
       sectors:
         description: >
           Comma-separated Finviz sector names, or EMPTY for all 11.
@@ -31,11 +39,11 @@ env:
 
 jobs:
   predict:
-    runs-on: [self-hosted, ecs]
+    runs-on: ${{ (github.event.inputs.runner == 'ecs') && fromJSON('["self-hosted","ecs"]') || 'ubuntu-latest' }}
     timeout-minutes: 360
     env:
-      FULLSCAN_HOME: "/home/gha"
-      HOME: "/home/gha"
+      FULLSCAN_HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
+      HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
     steps:
       - name: Clear stale git index.lock (shared ECS workspace)
         shell: bash

@@ -9,6 +9,14 @@ name: News impact router
 on:
   workflow_dispatch:
     inputs:
+      runner:
+        description: "ubuntu (GitHub-hosted, DeepSeek; default) or ecs (retired OpenClaw box; Grok)."
+        required: false
+        default: "ubuntu"
+        type: choice
+        options:
+          - ubuntu
+          - ecs
       date:
         description: YYYY-MM-DD or all
         required: true
@@ -108,16 +116,17 @@ jobs:
 
   live:
     if: ${{ github.event.inputs.mode == 'live' }}
-    runs-on: [self-hosted, ecs]
+    runs-on: ${{ (github.event.inputs.runner == 'ecs') && fromJSON('["self-hosted","ecs"]') || 'ubuntu-latest' }}
     timeout-minutes: 180
     env:
-      FULLSCAN_HOME: "/home/gha"
-      HOME: "/home/gha"
+      FULLSCAN_HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
+      HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
       OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
       OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
       OPENCLAW_AGENT: "openclaw/default"
       OPENCLAW_NEWS_MODEL: "xai/grok-4.3"
-      GROK_ONLY: "1"
+      GROK_ONLY: ${{ (github.event.inputs.runner == 'ecs') && '1' || '0' }}
     steps:
       - name: Clear stale git index.lock (shared ECS workspace)
         shell: bash
@@ -147,10 +156,14 @@ jobs:
           set -euo pipefail
           export HOME="${FULLSCAN_HOME:-/home/gha}"
           chmod +x scripts/enable_openclaw_chat.sh scripts/safe_git_push.sh || true
-          bash scripts/enable_openclaw_chat.sh || true
           DATE="${{ github.event.inputs.date }}"
           LIMIT="${{ github.event.inputs.limit }}"
-          EXTRA="--openclaw"
+          EXTRA=""
+          # ECS retired: OpenClaw/SuperGrok only when runner=ecs is picked.
+          if [ "${{ github.event.inputs.runner }}" = "ecs" ]; then
+            bash scripts/enable_openclaw_chat.sh || true
+            EXTRA="--openclaw"
+          fi
           if [ "${{ github.event.inputs.lane }}" = "1" ]; then EXTRA="$EXTRA --lane"; fi
           if [ "${{ github.event.inputs.search }}" = "1" ]; then EXTRA="$EXTRA --search"; fi
           PYTHONPATH=. python3 -m src.news_impact_scan --date "$DATE" --limit "$LIMIT" --mode live $EXTRA

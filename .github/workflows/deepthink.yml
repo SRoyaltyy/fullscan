@@ -15,6 +15,14 @@ on:
   #   - cron: "0 13 * * 0"
   workflow_dispatch:
     inputs:
+      runner:
+        description: "ubuntu (GitHub-hosted, DeepSeek; default) or ecs (retired OpenClaw box; Grok)."
+        required: false
+        default: "ubuntu"
+        type: choice
+        options:
+          - ubuntu
+          - ecs
       run_date:
         description: "YYYY-MM-DD (default: today ET)"
         required: false
@@ -29,11 +37,11 @@ concurrency:
 
 jobs:
   think:
-    runs-on: [self-hosted, ecs]
+    runs-on: ${{ (github.event.inputs.runner == 'ecs') && fromJSON('["self-hosted","ecs"]') || 'ubuntu-latest' }}
     timeout-minutes: 240
     env:
-      FULLSCAN_HOME: "/home/gha"
-      HOME: "/home/gha"
+      FULLSCAN_HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
+      HOME: ${{ (github.event.inputs.runner == 'ecs') && '/home/gha' || '/home/runner' }}
     steps:
       - name: Clear stale git index.lock (shared ECS workspace)
         shell: bash
