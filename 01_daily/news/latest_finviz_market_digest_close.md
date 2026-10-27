@@ -1,48 +1,47 @@
-# Finviz homepage market digest (close) — 2026-10-26
+# Finviz homepage market digest (close) — 2026-10-27
 
-**Generated:** 2026-10-26T16:31:38.675733-04:00 (America/New_York)
+**Generated:** 2026-10-27T16:30:02.368077-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks closed higher as Anthropic IPO filing lifted AI chip shares while Brazil-linked equities fell after Lula election surprise and energy lagged on weaker oil
-**Prior close:** SPX +0.70%  Nasdaq +0.80%  Dow +0.30%
-**SPX:** +0.70%  **Nasdaq:** +0.80%  **Dow:** +0.30%
+**Banner:** US stocks closed higher as AI chip momentum and stronger economic data supported gains ahead of Big Tech earnings and the Fed decision while oil declined
+**Prior close:** SPX +0.60%  Nasdaq —  Dow +1.18%
+**SPX:** +0.60%  **Nasdaq:** —  **Dow:** +1.18%
 **Oil:** —
 **CPI/Fed:** —
-**Leaders:** ANTW, NVDA, AVGO, MU, AMD, TSLA, BCS, META, SGRY, RRC, EQT, MELI, XP, ITUB, BBD, VZ, DASH, PYPL, UPS, BA, KO
+**Leaders:** AVGO, META, SOFI, JBLU, CLS, RCL, BA, GM, V, HOOD, STX
 **Next session:** housing no · retail no · Fed yes
-**Earnings slate:** —
-**Geo/grain:** —
-**Clock legal for:** 2026-10-27
+**Earnings slate:** V, HOOD, STX
+**Geo/grain:** geo
+**Clock legal for:** 2026-10-28
 **Clock use:** `next_open`
 
 ## Clock
 
-Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-10-27) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
+Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-10-28) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX +0.70% · Nasdaq +0.80% · Dow +0.30%
+- **Prior close:** SPX +0.60% · Nasdaq — · Dow +1.18%
 - **Oil:** —
 - **CPI / Fed-odds:** —
-- **Named leaders:** ANTW, NVDA, AVGO, MU, AMD, TSLA, BCS, META, SGRY, RRC, EQT, MELI, XP, ITUB, BBD, VZ, DASH, PYPL, UPS, BA, KO
+- **Named leaders:** AVGO, META, SOFI, JBLU, CLS, RCL, BA, GM, V, HOOD, STX
 - **Next-session calendar:** housing no · retail no · Fed yes
-  - The Nasdaq ($COMP) rose about 0.8% to 26,169, the S&P 500 ($SPX) gained 0.7%, the Dow Jones Industrial Average ($DJI) added 0.3%, and the Russell 2000 (IWM) advanced about 0.4% on Monday.
-  - After the close, Verizon (VZ) reported a Q3 earnings beat of $1.31 per share versus $1.27 expected, DoorDash (DASH) and Instacart traded in opposite directions on reported buyout talks, and investors eyed Tuesday’s reports from PayPal (PYPL), UPS (UPS), Boeing (BA), and Coca-Cola (KO) plus consumer-confidence data ahead of this week’s Fed policy decision.
-- **Earnings slate:** —
-- **Geo / grain:** —
+  - US consumer confidence increased to 91.7 in October versus the 81.0 consensus, durable goods orders rose 1.8% in September, and the Federal Reserve opened its final meeting before the midterm elections with rates widely expected to remain on hold, as Visa (V), Robinhood Markets (HOOD), and Seagate Technology (STX) are scheduled to report earnings after the close
+- **Earnings slate:** V, HOOD, STX
+- **Geo / grain:** geo
 
 ## Narrative
 
-**US stocks closed higher as Anthropic IPO filing lifted AI chip shares while Brazil-linked equities fell after Lula election surprise and energy lagged on weaker oil**
+**US stocks closed higher as AI chip momentum and stronger economic data supported gains ahead of Big Tech earnings and the Fed decision while oil declined**
 
-- The Nasdaq ($COMP) rose about 0.8% to 26,169, the S&P 500 ($SPX) gained 0.7%, the Dow Jones Industrial Average ($DJI) added 0.3%, and the Russell 2000 (IWM) advanced about 0.4% on Monday.
-- Anthropic (ANTW)’s IPO S-1 showed first-half 2026 revenue of $16.3 billion, described as more than 1,300% year-over-year and 1,368% quarterly growth despite an $80.7 billion net loss, boosting AI sentiment across tech.
-- Nvidia (NVDA) climbed about 2.4%, Broadcom (AVGO) 2.3%, Micron Technology (MU) 3%, and AMD (AMD) 2.8% as investors bought AI chipmakers after Anthropic (ANTW) filed for an IPO, lifting sentiment about future GPU demand.
-- Tesla (TSLA) gained about 5% after Barclays (BCS) upgraded the stock to Overweight with a $450 price target, citing a potential SpaceX merger in its bull case.
-- Meta Platforms (META) declined about 1.9% after launching a $35 billion stock offering intended to fund its AI infrastructure build-out.
-- Surgery Partners (SGRY) jumped 47% after confirming a $5.7 billion all-cash acquisition of the company.
-- Range Resources (RRC) rose about 18% after announcing an all-stock merger agreement with EQT (EQT).
-- Brazilian-linked names sold off after an unexpected Lula election win as investors unwound Bolsonaro bets, with MercadoLibre (MELI) down about 8% and Brazilian ADRs sliding, including XP Inc (XP) off about 48%, Itau Unibanco (ITUB) down about 20%, and Banco Bradesco (BBD) lower by about 28%.
-- Tech and semiconductor shares led the market advance, while energy lagged as declining oil (@CL) prices pressured the sector.
-- After the close, Verizon (VZ) reported a Q3 earnings beat of $1.31 per share versus $1.27 expected, DoorDash (DASH) and Instacart traded in opposite directions on reported buyout talks, and investors eyed Tuesday’s reports from PayPal (PYPL), UPS (UPS), Boeing (BA), and Coca-Cola (KO) plus consumer-confidence data ahead of this week’s Fed policy decision.
+- The S&P 500 ($SPX) rose 0.60% to 7,722.67, the Dow Jones Industrial Average ($DJI) edged 0.03% higher to 52,378.40, the Nasdaq Composite ($COMP) climbed 1.18% to 26,477.81, and the Russell 2000 (IWM) outperformed with a 1.24% gain
+- AI-linked chip stocks advanced on revived optimism tied to Anthropic’s IPO filing, Broadcom (AVGO)’s $63 billion Anthropic debt financing that helped lift Broadcom (AVGO) about 4%, and Meta (META)’s oversubscribed $25 billion stock sale
+- SoFi Technologies (SOFI) jumped about 13% after a Q3 earnings beat, reporting adjusted EPS of $0.18 versus $0.16 expected, revenue of $1.4 billion, record loan originations of $16.9 billion, and raising full-year revenue guidance
+- JetBlue Airways (JBLU) gained about 19% after outlining an improved Q4 margin outlook and new liquidity measures despite missing quarterly estimates
+- Celestica (CLS) rose about 12% after Q3 results beat expectations and the company raised full-year guidance, citing strong AI infrastructure demand
+- Royal Caribbean Group (RCL) climbed about 5.5% after posting stronger-than-expected Q3 earnings and raising its full-year profit forecast
+- Boeing (BA) fell 10.8% after reporting a larger-than-expected Q3 loss and cutting its aircraft delivery target
+- GM (GM) shares rose after the company announced it will move its stock listing from the New York Stock Exchange to Nasdaq after more than 100 years
+- Healthcare was the top-performing sector with a 4.1% gain, while energy fell 1.7% as oil (@CL) dropped nearly $2 per barrel on Middle East diplomacy, reduced supply concerns, and increased Saudi spot supplies to Europe
+- US consumer confidence increased to 91.7 in October versus the 81.0 consensus, durable goods orders rose 1.8% in September, and the Federal Reserve opened its final meeting before the midterm elections with rates widely expected to remain on hold, as Visa (V), Robinhood Markets (HOOD), and Seagate Technology (STX) are scheduled to report earnings after the close
