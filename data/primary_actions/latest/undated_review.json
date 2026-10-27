@@ -1,152 +1,32 @@
 [
   {
-    "title": "Actions",
-    "url": "https://www.fcc.gov/edoc/426169",
-    "native_id": "426169",
+    "title": "In the Matter of ASUSTeK Computer Inc. Petition for Expedited Waiver of Sections 2.932(b) and 2.1043(b) of the Commission's Rules to Permit Targeted Class I and Class II Permissive Hardware Changes to Covered Routers",
+    "url": "https://www.fcc.gov/edoc/426179",
+    "native_id": "426179",
     "published_at": null,
     "published_raw": "",
-    "summary": ".",
+    "summary": "The Office of Engineering and Technology grants the request of ASUSTeK Computer Inc. for a waiver of Sections 2.932(b) and 2.1043(b) of the Commission's rules.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
+      "issuer": "Federal Communications Commission — Orders",
       "jurisdiction": "US",
       "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6663,
-    "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-26T19:21:36.282284+00:00",
+    "primary_source_id": "us-fcc-eeb7d739be",
+    "n": 6821,
+    "first_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T06:19:07.638287+00:00",
     "source_ids": [
-      "us-fcc-e95ecda3bb"
+      "us-fcc-eeb7d739be"
     ]
   },
   {
-    "title": "Applications",
-    "url": "https://www.fcc.gov/edoc/426168",
-    "native_id": "426168",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6664,
-    "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-26T19:21:36.282284+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Pleadings",
-    "url": "https://www.fcc.gov/edoc/426170",
-    "native_id": "426170",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6665,
-    "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-26T19:21:36.282284+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Domestic Section 214 Application Filed for the Acquisition of Certain Assets of The Nova Telephone Company by Nova Ohio Telephone LLC",
-    "url": "https://www.fcc.gov/edoc/426172",
-    "native_id": "426172",
-    "published_at": null,
-    "published_raw": "",
-    "summary": ".",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Federal Communications Commission — Public Notices",
-      "jurisdiction": "US",
-      "family": "telecom_rules_and_licences"
-    },
-    "primary_source_id": "us-fcc-e95ecda3bb",
-    "n": 6666,
-    "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-26T19:21:36.282284+00:00",
-    "source_ids": [
-      "us-fcc-e95ecda3bb"
-    ]
-  },
-  {
-    "title": "Defence SMEs need banking services that work",
-    "url": "https://www.fca.org.uk/news/blogs/defence-smes-need-banking-services-work",
-    "native_id": "176801",
-    "published_at": null,
-    "published_raw": "Monday, October 26, 2026 - 11:01",
-    "summary": "The UK's most innovative businesses often start small.Before they can develop new technologies, win contracts or expand into new markets, they need access to banking services to help them operate, invest and grow.Access to financial services can be easy to take for granted. When those services work well they're almost invisible. However, when access becomes difficult or delayed, the effects can extend far beyond a single business.Small-to-medium sized enterprises (SMEs) operating in or providing services to the defence sector play an important role in innovation and growth.But these businesses do more than contribute to economic growth. Many are helping to develop the technologies, expertise and capabilities that support the UK's national resilience and security.Banking services are part of that story. They help businesses secure contracts, invest in new opportunities and grow. They are one of the key links between innovation and capability, and between economic growth and national resilience.That's why we wanted to understand whether defence SMEs were able to access banking services efficiently and consistently.The challenge for defence SMEs is friction and delay, not exclusionThe",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Conduct Authority",
-      "jurisdiction": "UK",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 6678,
-    "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-26T19:21:36.282284+00:00",
-    "source_ids": [
-      "uk-fca-7b9977ec8e"
-    ]
-  },
-  {
-    "title": "Chandler King (City) Limited enters creditors’ voluntary liquidation",
-    "url": "https://www.fca.org.uk/news/news-stories/chandler-king-enters-creditors-voluntary-liquidation",
-    "native_id": "176966",
-    "published_at": null,
-    "published_raw": "Monday, October 26, 2026 - 10:00",
-    "summary": "On 17 September 2026, Chandler King (City) Limited (Chandler King) went into creditors’ voluntary liquidation. Grace Jones and Karyn Jones of Parker Andrews were appointed as joint liquidators. Chandler King, an FCA-authorised firm, was an independent financial adviser which advised on investments and pensions. On 28 April 2026, Chandler King agreed to a voluntary requirement with the FCA, which restricted its activities. Before entering liquidation, Chandler King applied to cancel its FCA permissions, which is subject to review by the FCA.",
-    "source_metadata": {
-      "document_type": "official_announcement",
-      "document_stage": "requires_semantic_review",
-      "concrete_public_action": null,
-      "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Financial Conduct Authority",
-      "jurisdiction": "UK",
-      "family": "financial_enforcement"
-    },
-    "primary_source_id": "uk-fca-7b9977ec8e",
-    "n": 6679,
-    "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-26T19:21:36.282284+00:00",
-    "source_ids": [
-      "uk-fca-7b9977ec8e"
-    ]
-  },
-  {
-    "title": "China issues regulation on registration, management of public institutions",
-    "url": "https://english.www.gov.cn/policies/latestreleases/202610/26/content_WS6adf3723c6d00ca5f9a0df23.html",
-    "native_id": "https://english.www.gov.cn/policies/latestreleases/202610/26/content_WS6adf3723c6d00ca5f9a0df23.html",
+    "title": "Dragan Stojkovic “Pixy” Appointed as Promotional Ambassador for the Japan Pavilion First Round of Japan Pavilion Sponsors Announced",
+    "url": "https://www.meti.go.jp/english/press/2026/10/20261027002.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261027002.html",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -155,16 +35,40 @@
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "State Council of China policies",
-      "jurisdiction": "CN",
-      "family": "executive_instruments"
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
     },
-    "primary_source_id": "cn-state-council-index",
-    "n": 6682,
-    "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-26T19:21:36.282284+00:00",
+    "primary_source_id": "jp-meti-index",
+    "n": 6828,
+    "first_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T06:19:07.638287+00:00",
     "source_ids": [
-      "cn-state-council-index"
+      "jp-meti-index"
+    ]
+  },
+  {
+    "title": "Decision to Impose a Definitive Anti-Dumping Duty on Nickel-Added Cold-Rolled Stainless Steel Coil, Sheet and Strip Originating in or Exported from the People’s Republic of China and the Separate Customs Territory of Taiwan, Penghu, Kinmen and Matsu",
+    "url": "https://www.meti.go.jp/english/press/2026/10/20261027001.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261027001.html",
+    "published_at": null,
+    "published_raw": null,
+    "summary": "",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Japan Ministry of Economy Trade and Industry",
+      "jurisdiction": "JP",
+      "family": "trade_and_industry_policy"
+    },
+    "primary_source_id": "jp-meti-index",
+    "n": 6829,
+    "first_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "source_ids": [
+      "jp-meti-index"
     ]
   }
 ]

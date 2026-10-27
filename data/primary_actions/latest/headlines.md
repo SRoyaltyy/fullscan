@@ -1,9 +1,13 @@
 # Primary-origin action documents
 
-Updated 2026-10-26T19:21:36.282284+00:00. 238 dated documents in the configured 3-day window; 104 newly retained; 422 repeat observations.
+Updated 2026-10-27T06:19:07.638287+00:00. 352 dated documents in the configured 3-day window; 133 newly retained; 443 repeat observations.
 Source health: 119/121 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
+
+## consultation_response_published
+
+- [Updating the minimum emission standard for new road vehicles](https://www.gov.uk/government/consultations/updating-the-minimum-emission-standard-for-new-road-vehicles) — Department for Transport; 2026-10-27T00:01:06+00:00
 
 ## decision_published
 
@@ -26,6 +30,19 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## final_rule_published
 
+- [Subsistence Management Regulations for Public Lands in Alaska-2026-27 and 2027-28 Subsistence Taking of Wildlife Regulations](https://www.federalregister.gov/documents/2026/10/27/2026-21849/subsistence-management-regulations-for-public-lands-in-alaska-2026-27-and-2027-28-subsistence-taking) — Agriculture Department; Forest Service; Interior Department; Office of the Secretary of the Interior; 2026-10-27T00:00:00+00:00
+- [Change of Address; Technical Amendment](https://www.federalregister.gov/documents/2026/10/27/2026-21851/change-of-address-technical-amendment) — National Mediation Board; 2026-10-27T00:00:00+00:00
+- [Airworthiness Directives; Airbus Helicopters](https://www.federalregister.gov/documents/2026/10/27/2026-21854/airworthiness-directives-airbus-helicopters) — Transportation Department; Federal Aviation Administration; 2026-10-27T00:00:00+00:00
+- [Airworthiness Directives; Airbus Helicopters Deutschland GmbH (AHD) Helicopters](https://www.federalregister.gov/documents/2026/10/27/2026-21855/airworthiness-directives-airbus-helicopters-deutschland-gmbh-ahd-helicopters) — Transportation Department; Federal Aviation Administration; 2026-10-27T00:00:00+00:00
+- [Airworthiness Directives; Airbus Helicopters](https://www.federalregister.gov/documents/2026/10/27/2026-21856/airworthiness-directives-airbus-helicopters) — Transportation Department; Federal Aviation Administration; 2026-10-27T00:00:00+00:00
+- [Airworthiness Directives; Airbus SAS Airplanes](https://www.federalregister.gov/documents/2026/10/27/2026-21861/airworthiness-directives-airbus-sas-airplanes) — Transportation Department; Federal Aviation Administration; 2026-10-27T00:00:00+00:00
+- [Airworthiness Directives; The Boeing Company Airplanes](https://www.federalregister.gov/documents/2026/10/27/2026-21862/airworthiness-directives-the-boeing-company-airplanes) — Transportation Department; Federal Aviation Administration; 2026-10-27T00:00:00+00:00
+- [Airworthiness Directives; The Boeing Company Airplanes](https://www.federalregister.gov/documents/2026/10/27/2026-21863/airworthiness-directives-the-boeing-company-airplanes) — Transportation Department; Federal Aviation Administration; 2026-10-27T00:00:00+00:00
+- [Airworthiness Directives; The Boeing Company Airplanes](https://www.federalregister.gov/documents/2026/10/27/2026-21864/airworthiness-directives-the-boeing-company-airplanes) — Transportation Department; Federal Aviation Administration; 2026-10-27T00:00:00+00:00
+- [Fisheries of the Exclusive Economic Zone Off Alaska; Pacific Cod by Vessels Using Pot Gear in the Western Regulatory Area of the Gulf of Alaska](https://www.federalregister.gov/documents/2026/10/27/2026-21888/fisheries-of-the-exclusive-economic-zone-off-alaska-pacific-cod-by-vessels-using-pot-gear-in-the) — Commerce Department; National Oceanic and Atmospheric Administration; 2026-10-27T00:00:00+00:00
+- [Airworthiness Directives; Ontic Engineering and Manufacturing, Inc. (Type Certificate Previously Held by Swearingen, Fairchild Aircraft, and M7 Aerospace) Airplanes](https://www.federalregister.gov/documents/2026/10/27/2026-21902/airworthiness-directives-ontic-engineering-and-manufacturing-inc-type-certificate-previously-held-by) — Transportation Department; Federal Aviation Administration; 2026-10-27T00:00:00+00:00
+- [Bipartisan Safer Communities Act of 2022-Criteria for National Instant Criminal Background Check System (“NICS”) Background Checks of Firearm Handlers](https://www.federalregister.gov/documents/2026/10/27/2026-21920/bipartisan-safer-communities-act-of-2022-criteria-for-national-instant-criminal-background-check) — Justice Department; 2026-10-27T00:00:00+00:00
+- [Implementation of HAVANA Act of 2021](https://www.federalregister.gov/documents/2026/10/27/2026-21923/implementation-of-havana-act-of-2021) — Justice Department; 2026-10-27T00:00:00+00:00
 - [Streamlining the Regulations Governing Testimony by Employees and the Production of Documents in Legal Proceedings; Correction](https://www.federalregister.gov/documents/2026/10/26/2026-21764/streamlining-the-regulations-governing-testimony-by-employees-and-the-production-of-documents-in) — Commerce Department; 2026-10-26T00:00:00+00:00
 - [NRC Reviews of Reactor Designs Previously Authorized by U.S. Department of Energy or Department of War](https://www.federalregister.gov/documents/2026/10/26/2026-21801/nrc-reviews-of-reactor-designs-previously-authorized-by-us-department-of-energy-or-department-of-war) — Nuclear Regulatory Commission; 2026-10-26T00:00:00+00:00
 - [Fisheries of the Exclusive Economic Zone Off Alaska; Reallocation of Pacific Cod in the Bering Sea and Aleutian Islands Management Area](https://www.federalregister.gov/documents/2026/10/26/2026-21805/fisheries-of-the-exclusive-economic-zone-off-alaska-reallocation-of-pacific-cod-in-the-bering-sea) — Commerce Department; National Oceanic and Atmospheric Administration; 2026-10-26T00:00:00+00:00
@@ -37,11 +54,90 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## legislative_document_published
 
+- [H.R. 10897 (IH) - Sami’s Law](https://www.govinfo.gov/app/details/BILLS-119hr10897ih) — Congressional Bills; 2026-10-27T04:59:00+00:00
+- [H.R. 10891 (IH) - Scams Tax Relief Act](https://www.govinfo.gov/app/details/BILLS-119hr10891ih) — Congressional Bills; 2026-10-27T04:59:00+00:00
+- [H.R. 10898 (IH) - Locality Pay Adjustment Act](https://www.govinfo.gov/app/details/BILLS-119hr10898ih) — Congressional Bills; 2026-10-27T04:59:00+00:00
+- [H.R. 10886 (IH) - Dual Citizen Disclosure Act](https://www.govinfo.gov/app/details/BILLS-119hr10886ih) — Congressional Bills; 2026-10-27T04:59:00+00:00
+- [H.R. 10892 (IH) - Performance Life Disclosure Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10892ih) — Congressional Bills; 2026-10-27T04:59:00+00:00
+- [H.R. 10885 (IH) - Providing Real Oversight of Third-parties Executing Certain Transactions for Small Restaurants Act](https://www.govinfo.gov/app/details/BILLS-119hr10885ih) — Congressional Bills; 2026-10-27T04:59:00+00:00
+- [H.R. 10889 (IH) - Giving Americans Savings Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10889ih) — Congressional Bills; 2026-10-27T04:59:00+00:00
+- [H.R. 10888 (IH) - Coastal Ocean Research for Management Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10888ih) — Congressional Bills; 2026-10-27T04:59:00+00:00
+- [H.R. 10896 (IH) - To terminate the diversity immigrant visa program.](https://www.govinfo.gov/app/details/BILLS-119hr10896ih) — Congressional Bills; 2026-10-27T04:59:00+00:00
+- [H.R. 10895 (IH) - Teaching Engaged Citizenship Act of 2026](https://www.govinfo.gov/app/details/BILLS-119hr10895ih) — Congressional Bills; 2026-10-27T04:59:00+00:00
+- [H.R. 10902 (IH) - Safe Transit Act](https://www.govinfo.gov/app/details/BILLS-119hr10902ih) — Congressional Bills; 2026-10-27T04:58:00+00:00
+- [H.R. 10906 (IH) - Strong American Wood Act](https://www.govinfo.gov/app/details/BILLS-119hr10906ih) — Congressional Bills; 2026-10-27T04:58:00+00:00
+- [H.R. 10900 (IH) - Law Enforcement Accountability for Plate Reader Abuse Act](https://www.govinfo.gov/app/details/BILLS-119hr10900ih) — Congressional Bills; 2026-10-27T04:58:00+00:00
+- [H.R. 10905 (IH) - No Personal Data in Grocery Pricing Act](https://www.govinfo.gov/app/details/BILLS-119hr10905ih) — Congressional Bills; 2026-10-27T04:58:00+00:00
+- [H.R. 10899 (IH) - Power Outage Family Assistance Act](https://www.govinfo.gov/app/details/BILLS-119hr10899ih) — Congressional Bills; 2026-10-27T04:58:00+00:00
+- [H.R. 10907 (IH) - Stop Harassment and Intimidations in Elections through Legal Defenses (SHIELD) Our Elections Act](https://www.govinfo.gov/app/details/BILLS-119hr10907ih) — Congressional Bills; 2026-10-27T04:58:00+00:00
+- [H.R. 10904 (IH) - American Cost of Living Defense Act](https://www.govinfo.gov/app/details/BILLS-119hr10904ih) — Congressional Bills; 2026-10-27T04:58:00+00:00
 - [H.R. 10879 (IH) - Workers’ Right to Compete Act](https://www.govinfo.gov/app/details/BILLS-119hr10879ih) — Congressional Bills; 2026-10-24T13:28:00+00:00
-- [H.R. 10882 (IH) - Veteran Breast Cancer Fairness Act](https://www.govinfo.gov/app/details/BILLS-119hr10882ih) — Congressional Bills; 2026-10-24T04:33:00+00:00
 
 ## notice_published
 
+- [Mattresses From Cambodia, China, Malaysia, Serbia, Thailand, Turkey, and Vietnam; Determinations](https://www.federalregister.gov/documents/2026/10/27/2026-21824/mattresses-from-cambodia-china-malaysia-serbia-thailand-turkey-and-vietnam-determinations) — International Trade Commission; 2026-10-27T00:00:00+00:00
+- [Agency Information Collection Activities; Extension of Collection; Comment Request; Standard for the Flammability of Mattresses and Mattress Pads and Standard for the Flammability (Open Flame) of Mattress Sets](https://www.federalregister.gov/documents/2026/10/27/2026-21826/agency-information-collection-activities-extension-of-collection-comment-request-standard-for-the) — Consumer Product Safety Commission; 2026-10-27T00:00:00+00:00
+- [Committee and Quarterly Board Meetings](https://www.federalregister.gov/documents/2026/10/27/2026-21827/committee-and-quarterly-board-meetings) — Education Department; National Assessment Governing Board; 2026-10-27T00:00:00+00:00
+- [Requirement for Attestation for All Airline or Other Aircraft Passengers Arriving in the United States From Any Foreign Country and Controlled Free Pratique for Airlines Confirming That Such Passengers Have Not Been in the Democratic Republic of the Congo in the Past 21 Days](https://www.federalregister.gov/documents/2026/10/27/2026-21828/requirement-for-attestation-for-all-airline-or-other-aircraft-passengers-arriving-in-the-united) — Health and Human Services Department; Centers for Disease Control and Prevention; 2026-10-27T00:00:00+00:00
+- [Proposed Data Collection Submitted for Public Comment and Recommendations](https://www.federalregister.gov/documents/2026/10/27/2026-21830/proposed-data-collection-submitted-for-public-comment-and-recommendations) — Health and Human Services Department; Centers for Disease Control and Prevention; 2026-10-27T00:00:00+00:00
+- [Proposed Data Collection Submitted for Public Comment and Recommendations](https://www.federalregister.gov/documents/2026/10/27/2026-21831/proposed-data-collection-submitted-for-public-comment-and-recommendations) — Health and Human Services Department; Centers for Disease Control and Prevention; 2026-10-27T00:00:00+00:00
+- [Biweekly Notice; Applications and Amendments to Facility Operating Licenses and Combined Licenses Involving No Significant Hazards Considerations](https://www.federalregister.gov/documents/2026/10/27/2026-21832/biweekly-notice-applications-and-amendments-to-facility-operating-licenses-and-combined-licenses) — Nuclear Regulatory Commission; 2026-10-27T00:00:00+00:00
+- [Nilsine Partners NP1X Fund, et al.](https://www.federalregister.gov/documents/2026/10/27/2026-21833/nilsine-partners-np1x-fund-et-al) — Securities and Exchange Commission; 2026-10-27T00:00:00+00:00
+- [Administrative Declaration of a Disaster for the State of West Virginia](https://www.federalregister.gov/documents/2026/10/27/2026-21834/administrative-declaration-of-a-disaster-for-the-state-of-west-virginia) — Small Business Administration; 2026-10-27T00:00:00+00:00
+- [Agency Information Collection Activities: Extension Without Change of an Existing Collection; Comment Request](https://www.federalregister.gov/documents/2026/10/27/2026-21836/agency-information-collection-activities-extension-without-change-of-an-existing-collection-comment) — Equal Employment Opportunity Commission; 2026-10-27T00:00:00+00:00
+- [U.S.-Origin Statements on Seafood; Draft Guidance for Industry; Availability](https://www.federalregister.gov/documents/2026/10/27/2026-21838/us-origin-statements-on-seafood-draft-guidance-for-industry-availability) — Health and Human Services Department; Food and Drug Administration; 2026-10-27T00:00:00+00:00
+- [Notice of Determinations; Culturally Significant Objects Being Imported for Exhibition-Determinations: “Stunning Patterns: Woven Textiles From Madagascar's Merina Kingdom” Exhibition](https://www.federalregister.gov/documents/2026/10/27/2026-21839/notice-of-determinations-culturally-significant-objects-being-imported-for-exhibition-determinations) — State Department; 2026-10-27T00:00:00+00:00
+- [Order Renewing Order Temporarily Denying Export Privileges](https://www.federalregister.gov/documents/2026/10/27/2026-21840/order-renewing-order-temporarily-denying-export-privileges) — Commerce Department; Industry and Security Bureau; 2026-10-27T00:00:00+00:00
+- [Proposed Agency Information Collection Activities; Comment Request](https://www.federalregister.gov/documents/2026/10/27/2026-21841/proposed-agency-information-collection-activities-comment-request) — Treasury Department; Comptroller of the Currency; Federal Reserve System; Federal Deposit Insurance Corporation; 2026-10-27T00:00:00+00:00
+- [Change in Bank Control Notices; Acquisitions of Shares of a Bank or Bank Holding Company; Correction](https://www.federalregister.gov/documents/2026/10/27/2026-21842/change-in-bank-control-notices-acquisitions-of-shares-of-a-bank-or-bank-holding-company-correction) — Federal Reserve System; 2026-10-27T00:00:00+00:00
+- [Official Release of the MOVES6 Motor Vehicle Emissions Model for SIPs and Transportation Conformity](https://www.federalregister.gov/documents/2026/10/27/2026-21843/official-release-of-the-moves6-motor-vehicle-emissions-model-for-sips-and-transportation-conformity) — Environmental Protection Agency; 2026-10-27T00:00:00+00:00
+- [Sunshine Act Meetings](https://www.federalregister.gov/documents/2026/10/27/2026-21844/sunshine-act-meetings) — Morris K. Udall and Stewart L. Udall Foundation; 2026-10-27T00:00:00+00:00
+- [Cboe Clear U.S., LLC; Order Granting an Application, as Amended, for Temporary Registration as a Clearing Agency Under Section 17A of the Securities Exchange Act of 1934](https://www.federalregister.gov/documents/2026/10/27/2026-21845/cboe-clear-us-llc-order-granting-an-application-as-amended-for-temporary-registration-as-a-clearing) — Securities and Exchange Commission; 2026-10-27T00:00:00+00:00
+- [National Emergency Medical Services Advisory Council Notice of Public Meeting](https://www.federalregister.gov/documents/2026/10/27/2026-21846/national-emergency-medical-services-advisory-council-notice-of-public-meeting) — Transportation Department; National Highway Traffic Safety Administration; 2026-10-27T00:00:00+00:00
+- [Notice of Appointments Panel Meeting](https://www.federalregister.gov/documents/2026/10/27/2026-21847/notice-of-appointments-panel-meeting) — Federal Accounting Standards Advisory Board; 2026-10-27T00:00:00+00:00
+- [Sunshine Act Meetings](https://www.federalregister.gov/documents/2026/10/27/2026-21848/sunshine-act-meetings) — Securities and Exchange Commission; 2026-10-27T00:00:00+00:00
+- [Notice of Suspension and Commencement of Proposed Debarment Proceedings](https://www.federalregister.gov/documents/2026/10/27/2026-21850/notice-of-suspension-and-commencement-of-proposed-debarment-proceedings) — Federal Communications Commission; 2026-10-27T00:00:00+00:00
+- [Customs Broker Permit User Fee Payment for 2027](https://www.federalregister.gov/documents/2026/10/27/2026-21853/customs-broker-permit-user-fee-payment-for-2027) — Homeland Security Department; U.S. Customs and Border Protection; 2026-10-27T00:00:00+00:00
+- [Agency Information Collection Activities: Submission to OMB for Review and Approval: Public Comment Request; Organ Procurement and Transplantation Network Board of Directors and Committee Member Applications and Forms](https://www.federalregister.gov/documents/2026/10/27/2026-21857/agency-information-collection-activities-submission-to-omb-for-review-and-approval-public-comment) — Health and Human Services Department; Health Resources and Services Administration; 2026-10-27T00:00:00+00:00
+- [Notice of Funding Opportunity for the Strengthening Processing for US Ranchers (SPUR) Guaranteed Loan Program for Fiscal Year 2027 and Guarantee Fee Rates/Loan Guarantee Percentage and Fee for Issuance of Loan Note Guarantee Prior to Construction Completion](https://www.federalregister.gov/documents/2026/10/27/2026-21858/notice-of-funding-opportunity-for-the-strengthening-processing-for-us-ranchers-spur-guaranteed-loan) — Agriculture Department; Rural Business-Cooperative Service; 2026-10-27T00:00:00+00:00
+- [Administrative Declaration of a Disaster for the State of Washington](https://www.federalregister.gov/documents/2026/10/27/2026-21859/administrative-declaration-of-a-disaster-for-the-state-of-washington) — Small Business Administration; 2026-10-27T00:00:00+00:00
+- [Administrative Declaration of an Economic Injury Disaster for the State of Minnesota](https://www.federalregister.gov/documents/2026/10/27/2026-21860/administrative-declaration-of-an-economic-injury-disaster-for-the-state-of-minnesota) — Small Business Administration; 2026-10-27T00:00:00+00:00
+- [Notification of the Imposition of Conditions of Entry on Vessels Arriving from Somalia](https://www.federalregister.gov/documents/2026/10/27/2026-21865/notification-of-the-imposition-of-conditions-of-entry-on-vessels-arriving-from-somalia) — Homeland Security Department; Coast Guard; 2026-10-27T00:00:00+00:00
+- [Erie Boulevard Hydropower, L.P. Notice of Intent To Prepare an Environmental Assessment](https://www.federalregister.gov/documents/2026/10/27/2026-21866/erie-boulevard-hydropower-lp-notice-of-intent-to-prepare-an-environmental-assessment) — Energy Department; Federal Energy Regulatory Commission; 2026-10-27T00:00:00+00:00
+- [Fall River Electric Cooperative, Inc.; Notice of Revised Schedule for Environmental Assessment](https://www.federalregister.gov/documents/2026/10/27/2026-21867/fall-river-electric-cooperative-inc-notice-of-revised-schedule-for-environmental-assessment) — Energy Department; Federal Energy Regulatory Commission; 2026-10-27T00:00:00+00:00
+- [Virginia Electric and Power Company d/b/a Dominion Energy Virginia, Allegheny Generating Company, and Bath County Energy, LLC; Notice of Revised Schedule for Environmental Assessment](https://www.federalregister.gov/documents/2026/10/27/2026-21868/virginia-electric-and-power-company-dba-dominion-energy-virginia-allegheny-generating-company-and) — Energy Department; Federal Energy Regulatory Commission; 2026-10-27T00:00:00+00:00
+- [Erie Boulevard Hydropower, L.P.; Notice of Intent To Prepare an Environmental Assessment](https://www.federalregister.gov/documents/2026/10/27/2026-21869/erie-boulevard-hydropower-lp-notice-of-intent-to-prepare-an-environmental-assessment) — Energy Department; Federal Energy Regulatory Commission; 2026-10-27T00:00:00+00:00
+- [Florida Gas Transmission Company, LLC; Notice of Scoping Period Requesting Comments on Environmental Issues for the Proposed Phase IX Project](https://www.federalregister.gov/documents/2026/10/27/2026-21870/florida-gas-transmission-company-llc-notice-of-scoping-period-requesting-comments-on-environmental) — Energy Department; Federal Energy Regulatory Commission; 2026-10-27T00:00:00+00:00
+- [Agency Information Collection Activity: Information Collected From Lenders of Condominium Projects](https://www.federalregister.gov/documents/2026/10/27/2026-21871/agency-information-collection-activity-information-collected-from-lenders-of-condominium-projects) — Veterans Affairs Department; 2026-10-27T00:00:00+00:00
+- [North Pacific Fishery Management Council; Public Meeting](https://www.federalregister.gov/documents/2026/10/27/2026-21872/north-pacific-fishery-management-council-public-meeting) — Commerce Department; National Oceanic and Atmospheric Administration; 2026-10-27T00:00:00+00:00
+- [North American Electric Reliability Corporation; Notice of Staff Review of Enforcement Programs](https://www.federalregister.gov/documents/2026/10/27/2026-21873/north-american-electric-reliability-corporation-notice-of-staff-review-of-enforcement-programs) — Energy Department; Federal Energy Regulatory Commission; 2026-10-27T00:00:00+00:00
+- [Erie Boulevard Hydropower, L.P.; Notice of Intent To Prepare an Environmental Assessment](https://www.federalregister.gov/documents/2026/10/27/2026-21874/erie-boulevard-hydropower-lp-notice-of-intent-to-prepare-an-environmental-assessment) — Energy Department; Federal Energy Regulatory Commission; 2026-10-27T00:00:00+00:00
+- [Combined Notice of Filings](https://www.federalregister.gov/documents/2026/10/27/2026-21875/combined-notice-of-filings) — Energy Department; Federal Energy Regulatory Commission; 2026-10-27T00:00:00+00:00
+- [Combined Notice of Filings #2](https://www.federalregister.gov/documents/2026/10/27/2026-21876/combined-notice-of-filings-2) — Energy Department; Federal Energy Regulatory Commission; 2026-10-27T00:00:00+00:00
+- [Combined Notice of Filings #1](https://www.federalregister.gov/documents/2026/10/27/2026-21877/combined-notice-of-filings-1) — Energy Department; Federal Energy Regulatory Commission; 2026-10-27T00:00:00+00:00
+- [Sunshine Act Meetings](https://www.federalregister.gov/documents/2026/10/27/2026-21878/sunshine-act-meetings) — Nuclear Regulatory Commission; 2026-10-27T00:00:00+00:00
+- [Agency Information Collection Activities; Extension of Previously Approved eCollection eComments Requested; Title-Annual Progress Report for the STOP Formula Grants Program](https://www.federalregister.gov/documents/2026/10/27/2026-21879/agency-information-collection-activities-extension-of-previously-approved-ecollection-ecomments) — Justice Department; 2026-10-27T00:00:00+00:00
+- [Suspension of the Commonwealth of the Northern Mariana Islands (CNMI) Economic Vitality & Security Travel Authorization Program (EVS-TAP)](https://www.federalregister.gov/documents/2026/10/27/2026-21880/suspension-of-the-commonwealth-of-the-northern-mariana-islands-cnmi-economic-vitality-and-security) — Homeland Security Department; 2026-10-27T00:00:00+00:00
+- [Advisory Committee on the Medical Uses of Isotopes: Call for Nominations](https://www.federalregister.gov/documents/2026/10/27/2026-21881/advisory-committee-on-the-medical-uses-of-isotopes-call-for-nominations) — Nuclear Regulatory Commission; 2026-10-27T00:00:00+00:00
+- [Agency Information Collection Activities; Extension of Previously Approved eCollection eComments Requested; STOP Match Calculation Worksheet](https://www.federalregister.gov/documents/2026/10/27/2026-21882/agency-information-collection-activities-extension-of-previously-approved-ecollection-ecomments) — Justice Department; 2026-10-27T00:00:00+00:00
+- [Advisory Committee on the Medical Uses of Isotopes: Call for Nominations](https://www.federalregister.gov/documents/2026/10/27/2026-21883/advisory-committee-on-the-medical-uses-of-isotopes-call-for-nominations) — Nuclear Regulatory Commission; 2026-10-27T00:00:00+00:00
+- [Critical Material List; Addition of Helium](https://www.federalregister.gov/documents/2026/10/27/2026-21884/critical-material-list-addition-of-helium) — Energy Department; 2026-10-27T00:00:00+00:00
+- [Certain Vaporizer Devices, Cartridges Used Therewith, and Components Thereof; Notice of Request for Submissions on the Public Interest](https://www.federalregister.gov/documents/2026/10/27/2026-21885/certain-vaporizer-devices-cartridges-used-therewith-and-components-thereof-notice-of-request-for) — International Trade Commission; 2026-10-27T00:00:00+00:00
+- [Notice of Regulatory Waiver Requests Granted for the First Quarter of Calendar Year 2026](https://www.federalregister.gov/documents/2026/10/27/2026-21886/notice-of-regulatory-waiver-requests-granted-for-the-first-quarter-of-calendar-year-2026) — Housing and Urban Development Department; 2026-10-27T00:00:00+00:00
+- [Agency Information Collection Activities; on Comment Request Relating to Communications Excise Tax; Prepaid Telephone Cards](https://www.federalregister.gov/documents/2026/10/27/2026-21887/agency-information-collection-activities-on-comment-request-relating-to-communications-excise-tax) — Treasury Department; Internal Revenue Service; 2026-10-27T00:00:00+00:00
+- [Notice of Intent To Establish a Negotiated Rulemaking Advisory Committee for Tire Safety; Request for Comments and Solicitation of Nominations for Membership](https://www.federalregister.gov/documents/2026/10/27/2026-21889/notice-of-intent-to-establish-a-negotiated-rulemaking-advisory-committee-for-tire-safety-request-for) — Transportation Department; National Highway Traffic Safety Administration; 2026-10-27T00:00:00+00:00
+- [Petition for Exemption; Summary of Petition Received; Placer Mosquito and Vector Control District](https://www.federalregister.gov/documents/2026/10/27/2026-21892/petition-for-exemption-summary-of-petition-received-placer-mosquito-and-vector-control-district) — Transportation Department; Federal Aviation Administration; 2026-10-27T00:00:00+00:00
+- [Agency Information Collection Activities: Requests for Comments; Clearance of a Renewed Approval of Information Collection: Aviation Research Grants Program](https://www.federalregister.gov/documents/2026/10/27/2026-21893/agency-information-collection-activities-requests-for-comments-clearance-of-a-renewed-approval-of) — Transportation Department; Federal Aviation Administration; 2026-10-27T00:00:00+00:00
+- [Formations of, Acquisitions by, and Mergers of Bank Holding Companies](https://www.federalregister.gov/documents/2026/10/27/2026-21894/formations-of-acquisitions-by-and-mergers-of-bank-holding-companies) — Federal Reserve System; 2026-10-27T00:00:00+00:00
+- [Notice of Agreements Filed](https://www.federalregister.gov/documents/2026/10/27/2026-21895/notice-of-agreements-filed) — Federal Maritime Commission; 2026-10-27T00:00:00+00:00
+- [Notice of Publication of U.S. Resources Management Industry Listing and Opportunity To Apply for the Listing](https://www.federalregister.gov/documents/2026/10/27/2026-21896/notice-of-publication-of-us-resources-management-industry-listing-and-opportunity-to-apply-for-the) — Commerce Department; 2026-10-27T00:00:00+00:00
+- [Determination That PEPCID RPD (Famotidine) Orally Disintegrating Tablets, 20 Milligrams and 40 Milligrams Were Not Withdrawn From Sale for Reasons of Safety or Effectiveness](https://www.federalregister.gov/documents/2026/10/27/2026-21897/determination-that-pepcid-rpd-famotidine-orally-disintegrating-tablets-20-milligrams-and-40) — Health and Human Services Department; Food and Drug Administration; 2026-10-27T00:00:00+00:00
+- [Agency Information Collection Activities: Comment Request: Survey of Earned Doctorates](https://www.federalregister.gov/documents/2026/10/27/2026-21898/agency-information-collection-activities-comment-request-survey-of-earned-doctorates) — National Science Foundation; 2026-10-27T00:00:00+00:00
+- [Establishment of Federal Advisory Committees-Advisory Council on Health and Human Performance Optimization](https://www.federalregister.gov/documents/2026/10/27/2026-21900/establishment-of-federal-advisory-committees-advisory-council-on-health-and-human-performance) — Defense Department; Office of the Secretary; 2026-10-27T00:00:00+00:00
+- [Center for Scientific Review; Notice of Closed Meetings](https://www.federalregister.gov/documents/2026/10/27/2026-21903/center-for-scientific-review-notice-of-closed-meetings) — Health and Human Services Department; National Institutes of Health; 2026-10-27T00:00:00+00:00
+- [Submission for OMB Review; 30-Day Comment Request; The Impact of Clinical Research Training and Medical Education at the Clinical Center on Physician Careers in Academia and Clinical Research](https://www.federalregister.gov/documents/2026/10/27/2026-21904/submission-for-omb-review-30-day-comment-request-the-impact-of-clinical-research-training-and) — Health and Human Services Department; National Institutes of Health; 2026-10-27T00:00:00+00:00
+- [Government-Owned Inventions; Availability for Licensing](https://www.federalregister.gov/documents/2026/10/27/2026-21905/government-owned-inventions-availability-for-licensing) — Health and Human Services Department; National Institutes of Health; 2026-10-27T00:00:00+00:00
+- [Commercial Driver's License: PAM Transport, Inc.; Application for Exemption](https://www.federalregister.gov/documents/2026/10/27/2026-21906/commercial-drivers-license-pam-transport-inc-application-for-exemption) — Transportation Department; Federal Motor Carrier Safety Administration; 2026-10-27T00:00:00+00:00
 - [Records Governing Off-the-Record Communications; Public Notice](https://www.federalregister.gov/documents/2026/10/26/2026-21716/records-governing-off-the-record-communications-public-notice) — Energy Department; Federal Energy Regulatory Commission; 2026-10-26T00:00:00+00:00
 - [Combined Notice of Filings](https://www.federalregister.gov/documents/2026/10/26/2026-21717/combined-notice-of-filings) — Energy Department; Federal Energy Regulatory Commission; 2026-10-26T00:00:00+00:00
 - [Issuance of Priority Review Voucher; Rare Pediatric Disease Product; ISEMBYLD (apitegromab-mstn)](https://www.federalregister.gov/documents/2026/10/26/2026-21718/issuance-of-priority-review-voucher-rare-pediatric-disease-product-isembyld-apitegromab-mstn) — Health and Human Services Department; Food and Drug Administration; 2026-10-26T00:00:00+00:00
@@ -131,17 +227,19 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## presidential_document_published
 
-- [DCPD-202600641 - Proclamation 11070-Gold Star Mother's and Family's Day, 2026](https://www.govinfo.gov/app/details/DCPD-202600641) — Compilation of Presidential Documents; 2026-10-23T20:42:00+00:00
-- [DCPD-202600640 - Remarks During a Tour of the National Archives and Records Administration With President Xi Jinping of China and an Exchange With Reporters](https://www.govinfo.gov/app/details/DCPD-202600640) — Compilation of Presidential Documents; 2026-10-23T20:42:00+00:00
-- [DCPD-202600639 - Remarks During a Tea With President Xi Jinping of China](https://www.govinfo.gov/app/details/DCPD-202600639) — Compilation of Presidential Documents; 2026-10-23T20:42:00+00:00
-- [DCPD-202600636 - Remarks at a Welcoming Ceremony for President Xi Jinping of China](https://www.govinfo.gov/app/details/DCPD-202600636) — Compilation of Presidential Documents; 2026-10-23T20:41:00+00:00
-- [DCPD-202600637 - Message on the Beatification of Archbishop Fulton J. Sheen](https://www.govinfo.gov/app/details/DCPD-202600637) — Compilation of Presidential Documents; 2026-10-23T20:40:59+00:00
-- [DCPD-202600642 - Presidential Determination on Refugee Admissions for Fiscal Year 2027](https://www.govinfo.gov/app/details/DCPD-202600642) — Compilation of Presidential Documents; 2026-10-23T20:40:59+00:00
-- [DCPD-202600633 - Remarks at a Meeting on the Shield of the Americas Initiative in New York City](https://www.govinfo.gov/app/details/DCPD-202600633) — Compilation of Presidential Documents; 2026-10-23T20:40:59+00:00
-- [DCPD-202600638 - Remarks at a State Dinner Honoring President Xi Jinping of China](https://www.govinfo.gov/app/details/DCPD-202600638) — Compilation of Presidential Documents; 2026-10-23T20:40:59+00:00
+- [DCPD-202600645 - Remarks to Reporters Prior to Departure for Medinah, Illinois](https://www.govinfo.gov/app/details/DCPD-202600645) — Compilation of Presidential Documents; 2026-10-26T20:00:00+00:00
+- [DCPD-202600620 - Remarks on Prescription Drug Prices and an Exchange With Reporters](https://www.govinfo.gov/app/details/DCPD-202600620) — Compilation of Presidential Documents; 2026-10-26T20:00:00+00:00
+- [DCPD-202600644 - Message on National Hunting and Fishing Day](https://www.govinfo.gov/app/details/DCPD-202600644) — Compilation of Presidential Documents; 2026-10-26T20:00:00+00:00
+- [DCPD-202600643 - Remarks in an Exchange With Reporters Prior to Departure for Knoxville, Tennessee](https://www.govinfo.gov/app/details/DCPD-202600643) — Compilation of Presidential Documents; 2026-10-26T20:00:00+00:00
+- [DCPD-202600634 - Remarks During a Multilateral Meeting With the Gulf Cooperation Council in New York City](https://www.govinfo.gov/app/details/DCPD-202600634) — Compilation of Presidential Documents; 2026-10-26T20:00:00+00:00
 
 ## proposal_published
 
+- [Airworthiness Directives; CFM International, S.A. Engines](https://www.federalregister.gov/documents/2026/10/27/2026-21852/airworthiness-directives-cfm-international-sa-engines) — Transportation Department; Federal Aviation Administration; 2026-10-27T00:00:00+00:00
+- [Patient Protection and Affordable Care Act, Exchange Pre-Eligibility Verification](https://www.federalregister.gov/documents/2026/10/27/2026-21891/patient-protection-and-affordable-care-act-exchange-pre-eligibility-verification) — Health and Human Services Department; 2026-10-27T00:00:00+00:00
+- [Special Conditions: Embraer S.A. Model ERJ 190-400 Airplane; Embraer Enhanced Takeoff System](https://www.federalregister.gov/documents/2026/10/27/2026-21907/special-conditions-embraer-sa-model-erj-190-400-airplane-embraer-enhanced-takeoff-system) — Transportation Department; Federal Aviation Administration; 2026-10-27T00:00:00+00:00
+- [Safety Zone; Southern California Annual Firework Events for the Los Angeles-Long Beach Captain of the Port Zone](https://www.federalregister.gov/documents/2026/10/27/2026-21918/safety-zone-southern-california-annual-firework-events-for-the-los-angeles-long-beach-captain-of-the) — Homeland Security Department; Coast Guard; 2026-10-27T00:00:00+00:00
+- [Hazardous Materials: Harmonization With International Standards](https://www.federalregister.gov/documents/2026/10/27/2026-21922/hazardous-materials-harmonization-with-international-standards) — Transportation Department; Pipeline and Hazardous Materials Safety Administration; 2026-10-27T00:00:00+00:00
 - [Outbound Investment Security Program Regulations](https://www.federalregister.gov/documents/2026/10/26/2026-21786/outbound-investment-security-program-regulations) — Treasury Department; Investment Security Office; 2026-10-26T00:00:00+00:00
 - [Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 108 To Accommodate ADS-Equipped Vehicles](https://www.federalregister.gov/documents/2026/10/26/2026-21794/federal-motor-vehicle-safety-standards-modernization-of-fmvss-no-108-to-accommodate-ads-equipped) — Transportation Department; National Highway Traffic Safety Administration; 2026-10-26T00:00:00+00:00
 - [Petition for Reconsideration of Action in Rulemaking Proceeding](https://www.federalregister.gov/documents/2026/10/26/2026-21810/petition-for-reconsideration-of-action-in-rulemaking-proceeding) — Federal Communications Commission; 2026-10-26T00:00:00+00:00
@@ -150,7 +248,19 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 
 ## requires_semantic_review
 
+- [Virtual Exemption 1 and Exemption 7 Training](https://www.justice.gov/oip/event/virtual-exemption-1-and-exemption-7-training-2) — Department of Justice; 2026-10-27T12:00:00+00:00
+- [Re-organisation of districts in the NCT of Delhi – Assignment and Review of Lead Bank Responsibility](https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=13746&Mode=0) — Reserve Bank of India; 2026-10-27T10:15:00+00:00
+- [Money Market Operations as on October 26, 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63869) — Reserve Bank of India; 2026-10-27T09:00:00+00:00
+- [Indicators for Core CPI](http://www.boj.or.jp/en/research/research_data/cpi/index.htm) — Bank of Japan; 2026-10-27T05:00:00+00:00
+- [Services Producer Price Index (Sept.)](http://www.boj.or.jp/en/statistics/pi/cspi_release/sppi2609.pdf) — Bank of Japan; 2026-10-26T23:50:00+00:00
+- [Non-Compliance Letters under 505B(d)(1) of the Federal Food, Drug, and Cosmetic Act](http://www.fda.gov/drugs/guidance-compliance-regulatory-information/non-compliance-letters-under-505bd1-federal-food-drug-and-cosmetic-act) — Food and Drug Administration — What's New: Drugs; 2026-10-26T20:47:10+00:00
+- [Walmart, Inc. - 736557 - 10/01/2026](http://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/walmart-inc-736557-10012026) — Food and Drug Administration — What's New: Drugs; 2026-10-26T20:34:09+00:00
+- [Secretary Kennedy Secures Commitments from More Than 250 Hospitals to Make Hospital Food Healthier](https://www.hhs.gov/press-room/secretary-kennedy-250-hospitals-make-hospital-food-healthier-pledge.html) — Health and Human Services; 2026-10-26T20:30:00+00:00
+- [Multimedia Education Materials | Biosimilars](http://www.fda.gov/drugs/biosimilars/multimedia-education-materials-biosimilars) — Food and Drug Administration — What's New: Drugs; 2026-10-26T20:01:52+00:00
+- [9 Things to Know About Biosimilars and Interchangeable Biosimilars](http://www.fda.gov/drugs/biosimilars/9-things-know-about-biosimilars-and-interchangeable-biosimilars) — Food and Drug Administration — What's New: Drugs; 2026-10-26T20:01:12+00:00
 - [Secretary Kennedy Brings ‘Take Back Your Health Tour’ to Texas and Florida to Advance Prevention and Improve Patient Care](https://www.hhs.gov/press-room/secretary-kennedy-take-back-your-health-tour-texas-florida.html) — Health and Human Services; 2026-10-26T18:32:07+00:00
+- [Greenwich Rx Issues Voluntary Nationwide Recall of Compounded Glutathione Due to Elevated Endotoxin Levels](http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/greenwich-rx-issues-voluntary-nationwide-recall-compounded-glutathione-due-elevated-endotoxin-levels) — Food and Drug Administration — What's New: Drugs; 2026-10-26T18:23:53+00:00
+- [GDUFA Paid Facilities List](http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list) — Food and Drug Administration — What's New: Drugs; 2026-10-26T18:23:45+00:00
 - [Auction of Government of India Dated Securities](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63868) — Reserve Bank of India; 2026-10-26T18:20:00+00:00
 - [Joseph Anthony Fabiilli](https://www.sec.gov/files/litigation/admin/2026/34-106736.pdf) — Securities and Exchange Commission; 2026-10-26T18:18:58+00:00
 - [Overseas Direct Investment for September 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63867) — Reserve Bank of India; 2026-10-26T17:45:00+00:00
@@ -195,6 +305,21 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Public Meeting on the Reauthorization of the Biosimilar User Fee Act (BsUFA) - 10/26/2026](http://www.fda.gov/drugs/news-events-human-drugs/public-meeting-reauthorization-biosimilar-user-fee-act-bsufa-10262026) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-26T12:35:17+00:00
 - [CDER Small Business & Industry Assistance (SBIA)](http://www.fda.gov/drugs/development-approval-process-drugs/cder-small-business-industry-assistance-sbia) — Food and Drug Administration — What's New: Drugs; 2026-10-26T12:28:35+00:00
 - [The Center for Drug Evaluation and Research's ARC Program Releases 2026 Annual Report](http://www.fda.gov/drugs/drug-alerts-and-statements/center-drug-evaluation-and-researchs-arc-program-releases-2026-annual-report) — Food and Drug Administration — What's New: Drugs; 2026-10-26T12:23:32+00:00
+- [US Department of Labor awards $250,000 in Brookwood-Sago Grants to promote mine safety, health education](http://www.dol.gov/newsroom/releases/msha/msha20261026) — Department of Labor; 2026-10-26T12:00:00+00:00
+- [US Department of Labor obtains consent order against retirement plan fiduciaries of defunct Chicago law firm for failing to distribute $6.4M in assets](http://www.dol.gov/newsroom/releases/ebsa/ebsa20261026) — Department of Labor; 2026-10-26T12:00:00+00:00
+- [Former Assistant Superintendent of Norfolk County Sheriff's Office Sentenced to Prison for Ordering Employees to Perform Maintenance at His Home, As Well As Witness Tampering](https://www.justice.gov/usao-ma/pr/former-assistant-superintendent-norfolk-county-sheriffs-office-sentenced-prison-ordering) — Department of Justice; 2026-10-26T12:00:00+00:00
+- [Fugitive Fraudster Herb Kimble Sentenced to 20 Years for International Healthcare Fraud Scheme](https://www.justice.gov/usao-sc/pr/fugitive-fraudster-herb-kimble-sentenced-20-years-international-healthcare-fraud-scheme) — Department of Justice; 2026-10-26T12:00:00+00:00
+- [Romanian National Sentenced for Fraud and Identity Theft](https://www.justice.gov/usao-ndny/pr/romanian-national-sentenced-fraud-and-identity-theft) — Department of Justice; 2026-10-26T12:00:00+00:00
+- [Florida CPA Sentenced for Tax Evasion](https://www.justice.gov/opa/pr/florida-cpa-sentenced-tax-evasion) — Department of Justice; 2026-10-26T12:00:00+00:00
+- [Florida Woman Pleads Guilty to Identity Theft and Money Laundering in $9.1 Million Nail Tech Licensing Scheme](https://www.justice.gov/usao-sdwv/pr/florida-woman-pleads-guilty-identity-theft-and-money-laundering-91-million-nail-tech) — Department of Justice; 2026-10-26T12:00:00+00:00
+- [New Orleans Man Guilty of Bank Robbery and Gun Charges](https://www.justice.gov/usao-edla/pr/new-orleans-man-guilty-bank-robbery-and-gun-charges) — Department of Justice; 2026-10-26T12:00:00+00:00
+- [Huntington Man Sentenced to Prison for Federal Drug Crime](https://www.justice.gov/usao-sdwv/pr/huntington-man-sentenced-prison-federal-drug-crime-28) — Department of Justice; 2026-10-26T12:00:00+00:00
+- [Mexican national charged with destruction of the Quantico Iwo Jima Memorial](https://www.justice.gov/usao-edva/pr/mexican-national-charged-destruction-quantico-iwo-jima-memorial) — Department of Justice; 2026-10-26T12:00:00+00:00
+- [Construction Company Owner and Employees Indicted for Wide-Ranging Tax and Financial Fraud Schemes](https://www.justice.gov/opa/pr/construction-company-owner-and-employees-indicted-wide-ranging-tax-and-financial-fraud-0) — Department of Justice; 2026-10-26T12:00:00+00:00
+- [Quincy Man Arrested and Charged with Mailing Hoax Letters Containing an Unknown Substance to Illinois Congressional Offices](https://www.justice.gov/usao-cdil/pr/quincy-man-arrested-and-charged-mailing-hoax-letters-containing-unknown-substance) — Department of Justice; 2026-10-26T12:00:00+00:00
+- [South Carolina Woman Sentenced to Prison for Aggravated Identity Theft](https://www.justice.gov/usao-sdwv/pr/south-carolina-woman-sentenced-prison-aggravated-identity-theft) — Department of Justice; 2026-10-26T12:00:00+00:00
+- [Beckley Man Pleads Guilty to Federal Drug and Gun Crimes](https://www.justice.gov/usao-sdwv/pr/beckley-man-pleads-guilty-federal-drug-and-gun-crimes-0) — Department of Justice; 2026-10-26T12:00:00+00:00
+- [Rata Data Validation Tool for Agency Annual FOIA Reports Now Available on FOIA.gov](https://www.justice.gov/oip/blog/rata-data-validation-tool-agency-annual-foia-reports-now-available-foiagov) — Department of Justice; 2026-10-26T12:00:00+00:00
 - [National Crime Victimization Survey Shows Violent Crime Plummeted in 2025](https://www.justice.gov/opa/pr/national-crime-victimization-survey-shows-violent-crime-plummeted-2025) — Department of Justice — RSS Feed; 2026-10-26T12:00:00+00:00
 - [Justice Department Announces Charges Involving 48 Aliens for Election-Related Crimes](https://www.justice.gov/opa/pr/justice-department-announces-charges-involving-48-aliens-election-related-crimes) — Department of Justice — RSS Feed; 2026-10-26T12:00:00+00:00
 - [Homeland Security Task Force Investigation in El Paso Charges 13 for Allegedly Transporting Stolen Vehicles from U.S. to Cartels in Mexico](https://www.justice.gov/usao-wdtx/pr/homeland-security-task-force-investigation-el-paso-charges-13-allegedly-transporting) — Department of Justice; 2026-10-26T12:00:00+00:00
@@ -240,6 +365,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Money Market Operations as on October 23, 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63863) — Reserve Bank of India; 2026-10-26T09:00:00+00:00
 - [Invitation to bid by auction – Reopening of Federal Treasury notes](https://www.bundesbank.de/en/press/press-releases/federal-securities/invitation-to-bid-by-auction-reopening-of-federal-treasury-notes-1012972) — Deutsche Bundesbank; 2026-10-26T08:45:00+00:00
 - [Frank Elderson: Taking action for nature – investing in economic resilience and prosperity](https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261026~d903d7ad85.en.html) — European Central Bank; 2026-10-26T05:00:00+00:00
+- [Ambassador Greer Issues Statement on the Status of the U.S.-EU Détente Following Record-Breaking Loan from the European Investment Bank to Airbus](https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/ambassador-greer-issues-statement-status-us-eu-detente-following-record-breaking-loan-european) — United States Trade Representative; 2026-10-26T00:00:00+00:00
 - [Purpose, perspective and possibility](https://www.bis.org/speeches/20261026-purpose-perspective-and-possibility) — Bank for International Settlements — View feed; 2026-10-26T00:00:00+00:00
 - [Women in economics - advancing research in economics internationally](https://www.bis.org/speeches/20261026-women-economics-advancing-research-economics-internationally) — Bank for International Settlements — View feed; 2026-10-26T00:00:00+00:00
 - [Rewiring payments - open. Connected. Inclusive.](https://www.bis.org/speeches/20261026-rewiring-payments-open-connected-inclusive) — Bank for International Settlements — View feed; 2026-10-26T00:00:00+00:00
@@ -254,19 +380,14 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [EU citizens think innovative foods can be useful but want more information, new Eurobarometer shows](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2231) — European Commission press and decisions; 2026-10-25T23:00:00+00:00
 - [Hon’ble Prime Minister of India inaugurates the Reserve Bank of India’s Data Centre and Cybersecurity Training Institute in Bhubaneswar, Odisha](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63862) — Reserve Bank of India; 2026-10-25T19:50:00+00:00
 - [Summary of NLRB Decisions for Week of October 13 - 16, 2026](https://www.nlrb.gov/cases-decisions/weekly-summaries-decisions/summary-of-nlrb-decisions-for-week-of-october-13-16-2026) — National Labor Relations Board — https://www.nlrb.gov/rss/rssWeeklySummaries.xml; 2026-10-25T17:26:44+00:00
-- [Piero Cipollone: Interview with Milano Finanza](https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261024~ee2ba73cf3.en.html) — European Central Bank; 2026-10-24T06:00:00+00:00
-- [October 30, 2026: Dermatologic and Ophthalmic Drugs Advisory Committee Meeting Announcement - 10/30/2026](http://www.fda.gov/advisory-committees/advisory-committee-calendar/october-30-2026-dermatologic-and-ophthalmic-drugs-advisory-committee-meeting-announcement-10302026) — Food and Drug Administration — What's New: Drugs; 2026-10-23T22:27:41+00:00
-- [White House Senior Advisor Kathryn Burgum Visits Florida Recovery Community to Highlight Pathways to Long-Term Recovery](https://www.hhs.gov/press-room/kathryn-burgum-florida-great-american-recovery.html) — Health and Human Services; 2026-10-23T21:15:00+00:00
-- [FDA Rare Disease Day 2027 - 03/05/2027](http://www.fda.gov/news-events/fda-meetings-conferences-and-workshops/fda-rare-disease-day-2027-03052027) — Food and Drug Administration — What's New: Drugs; 2026-10-23T20:35:08+00:00
-- [FDA Advances President Trump’s America First Seafood Strategy](https://www.hhs.gov/press-room/fda-advances-america-first-seafood-strategy-us-origin-labeling.html) — Health and Human Services; 2026-10-23T20:21:12+00:00
-- [FURTHER MODIFYING THE SCOPE OF PRODUCTS OF CANADA SUBJECT TO THE ADDITIONAL DUTIES IMPOSED TO OFFSET CANADIAN DISCRIMINATION AGAINST THE COMMERCE OF THE UNITED STATES WITH RESPECT TO MOTOR VEHICLES](https://www.whitehouse.gov/presidential-actions/2026/10/further-modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset-canadian-discrimination-against-the-commerce-of-the-united-states-with-respect-to-motor-vehicles/) — White House presidential actions; 2026-10-23T19:51:09+00:00
-- [GDUFA Paid Facilities List](http://www.fda.gov/industry/generic-drug-user-fee-amendments/gdufa-paid-facilities-list) — Food and Drug Administration — What's New: Drugs; 2026-10-23T19:46:26+00:00
-- [Legislative stewardship - Reserve Bank of New Zealand](https://news.google.com/rss/articles/CBMieEFVX3lxTE9VdGVkVzZjT21nTTZvWko4MklhTzFYbWVIMzFMYkg2MFBxcjk3d0pkVzcwSW5TdElSYjZLcnRSNTRjOVJEMG9iQmdFNS1lWkl5cGFZZ1E4SkdlS1E5M3J0N1FHQjlYakhmUkJCcFRTeng3NDFnQ19yMg) — Reserve Bank of New Zealand (official-site news mirror); 2026-10-23T19:30:57+00:00
-- [RBI to conduct 4-day Variable Rate Repo (VRR) auction under LAF on October 26, 2026](https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63861) — Reserve Bank of India; 2026-10-23T19:25:00+00:00
 
 ## Source failures and coverage warnings
 
-- us-govinfo-bills-enr: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
+- hk-hkma-public-press: parse_or_network_error; 
+- us-govinfo-bills-enr: ok; stale_feed_outside_requested_window
+- us-govinfo-plaw: ok; stale_feed_outside_requested_window
+- us-govinfo-crpt: ok; stale_feed_outside_requested_window
+- us-white-house-0691096d16: ok; stale_feed_outside_requested_window
 - us-supreme-court-index: unchanged; stale_feed_outside_requested_window
 - us-sec-8940dd7737: ok; stale_feed_outside_requested_window
 - us-sec-2476f14c28: ok; stale_feed_outside_requested_window
@@ -274,7 +395,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-ftc-df73e297e1: ok; stale_feed_outside_requested_window
 - us-ftc-69601f2e49: ok; stale_feed_outside_requested_window
 - us-treasury-a69e5b5ef0: ok; stale_feed_outside_requested_window
-- us-ustr-index: ok; stale_feed_outside_requested_window
 - us-fed-a12cd46677: ok; stale_feed_outside_requested_window
 - us-fed-7cfba7c4ca: ok; stale_feed_outside_requested_window
 - us-fed-a383ca0d09: ok; stale_feed_outside_requested_window
@@ -291,16 +411,14 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-fda-3eaddf14de: ok; stale_feed_outside_requested_window
 - us-fda-2cdcdcca63: ok; stale_feed_outside_requested_window
 - us-fda-00e9311ef2: ok; stale_feed_outside_requested_window
-- us-fcc-1ad902e468: unchanged; stale_feed_outside_requested_window
-- us-fcc-685c5e7dd2: parse_or_network_error; 
-- us-fcc-eeb7d739be: parse_or_network_error; 
-- us-dol-99f477805a: ok; stale_feed_outside_requested_window
+- us-fcc-1ad902e468: ok; stale_feed_outside_requested_window
 - us-osha-d8e445af0b: ok; stale_feed_outside_requested_window
 - us-osha-21c4745f76: ok; stale_feed_outside_requested_window
 - us-nlrb-3db5e72bf9: ok; stale_feed_outside_requested_window
 - us-fmc-fe8f0538ae: unchanged; stale_feed_outside_requested_window
-- us-fhfa-index: ok; stale_feed_outside_requested_window
+- us-fhfa-index: unchanged; stale_feed_outside_requested_window
 - us-ca-oal-c1209cfd66: unchanged; stale_feed_outside_requested_window
+- eu-council-9d9e9444da: parse_or_network_error; 
 - eu-court-1433471e58: ok; stale_feed_outside_requested_window
 - eu-ecb-fb5fd59aed: ok; stale_feed_outside_requested_window
 - eu-eba-60bdc59843: ok; stale_feed_outside_requested_window
@@ -309,15 +427,14 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - ca-boc-1f26bb2971: ok; stale_feed_outside_requested_window
 - ca-boc-4192a605ae: ok; stale_feed_outside_requested_window
 - ca-boc-5cc0603f1f: ok; stale_feed_outside_requested_window
-- ca-boc-1c9979e6ac: ok; stale_feed_outside_requested_window
+- ca-boc-1c9979e6ac: unchanged; stale_feed_outside_requested_window
 - ca-boc-e24c58f2d0: ok; stale_feed_outside_requested_window
 - ca-boc-cffefa81f7: ok; stale_feed_outside_requested_window
 - ca-boc-49364b93d8: ok; stale_feed_outside_requested_window
 - ca-boc-a5cb9e38c1: ok; stale_feed_outside_requested_window
 - au-rba-9e35f5f8d1: unchanged; stale_feed_outside_requested_window
 - au-rba-5ba995e001: unchanged; stale_feed_outside_requested_window
-- in-rbi-738b09bded: ok; stale_feed_outside_requested_window
-- jp-boj-d488538690: ok; stale_feed_outside_requested_window
+- nz-rbnz-gnews: ok; stale_feed_outside_requested_window
 - jp-jftc-gnews: ok; stale_feed_outside_requested_window
 - ch-snb-4a868c4407: ok; stale_feed_outside_requested_window
 - se-riksbank-8ea6f8481e: ok; stale_feed_outside_requested_window
