@@ -1,5 +1,395 @@
 [
   {
+    "title": "Public Law 119 - 131 - Enhancing Detection of Human Trafficking Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ131",
+    "native_id": "PLAW-119publ131",
+    "published_at": "2026-10-27T18:13:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 18:13:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 6846,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Public Law 118 - 7 - Changing Age-Determined Eligibility To Student Incentive Payments Act\" or the \"CADETS Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-118publ7",
+    "native_id": "PLAW-118publ7",
+    "published_at": "2026-10-27T16:44:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 16:44:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 6845,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Public Law 118 - 1 - Joint resolution disapproving the action of the District of Columbia Council in approving the Revised Criminal Code Act of 2022.",
+    "url": "https://www.govinfo.gov/app/details/PLAW-118publ1",
+    "native_id": "PLAW-118publ1",
+    "published_at": "2026-10-27T16:44:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 16:44:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 6844,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Frodsham Solar project: development consent order Planning Act 2008",
+    "url": "https://www.gov.uk/government/publications/frodsham-solar-project-development-consent-order-planning-act-2008",
+    "native_id": "/government/publications/frodsham-solar-project-development-consent-order-planning-act-2008",
+    "published_at": "2026-10-27T15:40:54+00:00",
+    "published_raw": "2026-10-27T15:40:54Z",
+    "document_type": "decision",
+    "issuer": "Department for Energy Security and Net Zero",
+    "issuer_ids": [
+      "uk-gov:department-for-energy-security-and-net-zero"
+    ],
+    "summary": "Decision on an application for the Frodsham Solar Farm.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Department for Energy Security and Net Zero",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 6831,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Lord Hermer - former Attorney General, Attorney General’s Office - advice under the government’s Business Appointment Rules",
+    "url": "https://www.gov.uk/government/publications/lord-hermer-former-attorney-general-attorney-generals-office-advice-under-the-governments-business-appointment-rules",
+    "native_id": "/government/publications/lord-hermer-former-attorney-general-attorney-generals-office-advice-under-the-governments-business-appointment-rules",
+    "published_at": "2026-10-27T15:16:24+00:00",
+    "published_raw": "2026-10-27T15:16:24Z",
+    "document_type": "decision",
+    "issuer": "Independent Adviser on Ministerial Standards",
+    "issuer_ids": [
+      "uk-gov:independent-adviser-on-ministers-interests"
+    ],
+    "summary": "Advice provided to The Rt Hon the Lord Hermer KC, former Attorney General at the Attorney General's Office, on appointments and employment taken up within two years of leaving office",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Independent Adviser on Ministerial Standards",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 6832,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 134 - License to Drill Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ134",
+    "native_id": "PLAW-119publ134",
+    "published_at": "2026-10-27T14:10:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 14:10:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 6843,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Teacher misconduct panel outcome: Mr Alastair Grandison",
+    "url": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-alastair-grandison",
+    "native_id": "/government/publications/teacher-misconduct-panel-outcome-mr-alastair-grandison",
+    "published_at": "2026-10-27T14:09:50+00:00",
+    "published_raw": "2026-10-27T14:09:50Z",
+    "document_type": "decision",
+    "issuer": "Teaching Regulation Agency",
+    "issuer_ids": [
+      "uk-gov:teaching-regulation-agency"
+    ],
+    "summary": "Professional conduct panel outcome, including decision and reasons.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Teaching Regulation Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 6833,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 129 - Romance Scam Prevention Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ129",
+    "native_id": "PLAW-119publ129",
+    "published_at": "2026-10-27T13:51:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 13:51:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 6842,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 127 - Critical Infrastructure Manufacturing Feasibility Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ127",
+    "native_id": "PLAW-119publ127",
+    "published_at": "2026-10-27T13:51:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 13:51:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 6841,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 132 - Vicksburg National Military Park Boundary Modification Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ132",
+    "native_id": "PLAW-119publ132",
+    "published_at": "2026-10-27T13:51:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 13:51:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 6840,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 126 - An act to require the Secretary of Agriculture to convey the Pleasant Valley Ranger District Administrative Site to Gila County, Arizona.",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ126",
+    "native_id": "PLAW-119publ126",
+    "published_at": "2026-10-27T13:51:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 13:51:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 6839,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Public Law 119 - 125 - Clergy Act",
+    "url": "https://www.govinfo.gov/app/details/PLAW-119publ125",
+    "native_id": "PLAW-119publ125",
+    "published_at": "2026-10-27T13:51:00+00:00",
+    "published_raw": "Tue, 27 Oct 2026 13:51:00 +0000",
+    "summary": "Content Files PDF TEXT USLM Metadata download Descriptive Metadata (MODS) Preservation Metadata (PREMIS) All Content and Metadata files, including granules ZIP",
+    "source_metadata": {
+      "document_type": "public_law",
+      "document_stage": "law_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Public and Private Laws",
+      "jurisdiction": "US",
+      "family": "legislative_and_presidential_documents"
+    },
+    "primary_source_id": "us-govinfo-plaw",
+    "n": 6838,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-govinfo-plaw"
+    ]
+  },
+  {
+    "title": "Medical devices given exceptional use authorisations",
+    "url": "https://www.gov.uk/government/publications/medical-devices-given-exceptional-use-authorisations",
+    "native_id": "/government/publications/medical-devices-given-exceptional-use-authorisations",
+    "published_at": "2026-10-27T13:46:22+00:00",
+    "published_raw": "2026-10-27T13:46:22Z",
+    "document_type": "decision",
+    "issuer": "Medicines and Healthcare products Regulatory Agency",
+    "issuer_ids": [
+      "uk-gov:medicines-and-healthcare-products-regulatory-agency"
+    ],
+    "summary": "List of manufacturers and their medical devices granted an exemption by MHRA. The list also includes manufacturers whose exemption expired or was cancelled.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Medicines and Healthcare products Regulatory Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 6834,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "LN2 3PU, Annyalla Chicks (UK) Broiler Breeders Limited: environmental permit issued– EPR/MP3621LD/A001",
+    "url": "https://www.gov.uk/government/publications/ln2-3pu-annyalla-chicks-uk-broiler-breeders-limited-environmental-permit-issued-eprmp3621lda001",
+    "native_id": "/government/publications/ln2-3pu-annyalla-chicks-uk-broiler-breeders-limited-environmental-permit-issued-eprmp3621lda001",
+    "published_at": "2026-10-27T10:06:21+00:00",
+    "published_raw": "2026-10-27T10:06:21Z",
+    "document_type": "decision",
+    "issuer": "Environment Agency",
+    "issuer_ids": [
+      "uk-gov:environment-agency"
+    ],
+    "summary": "View the permit issued for Welton Cliff Poultry Farm, Lincoln under the Industrial Emissions Directive.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Environment Agency",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 6835,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "CAC Outcome: PCS & Office of Gas and Electricity Markets (Ofgem)",
+    "url": "https://www.gov.uk/government/publications/cac-outcome-pcs-office-of-gas-and-electricity-markets-ofgem",
+    "native_id": "/government/publications/cac-outcome-pcs-office-of-gas-and-electricity-markets-ofgem",
+    "published_at": "2026-10-27T07:07:30+00:00",
+    "published_raw": "2026-10-27T07:07:30Z",
+    "document_type": "decision",
+    "issuer": "Central Arbitration Committee",
+    "issuer_ids": [
+      "uk-gov:central-arbitration-committee"
+    ],
+    "summary": "Outcome(s) by the Central Arbitration Committee on an application from the PCS.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Central Arbitration Committee",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 6309,
+    "first_seen": "2026-10-23T17:53:51.765604+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
     "title": "Subsistence Management Regulations for Public Lands in Alaska-2026-27 and 2027-28 Subsistence Taking of Wildlife Regulations",
     "url": "https://www.federalregister.gov/documents/2026/10/27/2026-21849/subsistence-management-regulations-for-public-lands-in-alaska-2026-27-and-2027-28-subsistence-taking",
     "native_id": "2026-21849",
@@ -26,7 +416,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6756,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -56,7 +446,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6754,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -87,7 +477,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6751,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -118,7 +508,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6750,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -149,7 +539,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6749,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -180,7 +570,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6744,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -211,7 +601,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6743,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -242,7 +632,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6742,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -273,7 +663,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6741,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -304,7 +694,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6717,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -335,7 +725,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6706,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -365,7 +755,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6699,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -395,7 +785,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6697,
     "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -544,7 +934,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6594,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -573,7 +963,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6595,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -602,7 +992,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6596,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -631,7 +1021,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 2103,
     "first_seen": "2026-10-15T12:16:32.997656+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -660,7 +1050,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6597,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -689,7 +1079,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6598,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -718,7 +1108,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6599,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -747,7 +1137,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6600,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -776,7 +1166,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 5623,
     "first_seen": "2026-10-20T18:00:04.951908+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -805,7 +1195,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6601,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -834,7 +1224,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6602,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -863,7 +1253,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6603,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -892,7 +1282,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6604,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -921,7 +1311,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6605,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -950,7 +1340,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6606,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -979,7 +1369,7 @@
     "primary_source_id": "uk-govuk-decision",
     "n": 6607,
     "first_seen": "2026-10-26T19:21:36.282284+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "uk-govuk-decision"
     ]
@@ -1009,7 +1399,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6544,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1039,7 +1429,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6511,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1070,7 +1460,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6508,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1101,7 +1491,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6507,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1131,7 +1521,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6506,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1162,7 +1552,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6497,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1192,7 +1582,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6493,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]
@@ -1223,7 +1613,7 @@
     "primary_source_id": "us-federal-register",
     "n": 6489,
     "first_seen": "2026-10-26T06:17:41.785248+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-federal-register"
     ]

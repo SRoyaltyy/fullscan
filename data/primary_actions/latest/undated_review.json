@@ -1,11 +1,155 @@
 [
   {
-    "title": "In the Matter of ASUSTeK Computer Inc. Petition for Expedited Waiver of Sections 2.932(b) and 2.1043(b) of the Commission's Rules to Permit Targeted Class I and Class II Permissive Hardware Changes to Covered Routers",
-    "url": "https://www.fcc.gov/edoc/426179",
-    "native_id": "426179",
+    "title": "H.R.8205",
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8205",
+    "native_id": "H.R.8205",
     "published_at": null,
     "published_raw": "",
-    "summary": "The Office of Engineering and Technology grants the request of ASUSTeK Computer Inc. for a waiver of Sections 2.932(b) and 2.1043(b) of the Commission's rules.",
+    "summary": "Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congress.gov legislative status",
+      "jurisdiction": "US",
+      "family": "legislative_procedure"
+    },
+    "primary_source_id": "us-congress-76128ee9ff",
+    "n": 6848,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-congress-76128ee9ff"
+    ]
+  },
+  {
+    "title": "H.R.1744",
+    "url": "https://www.congress.gov/bill/119th-congress/house-bill/1744",
+    "native_id": "H.R.1744",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "United States Commission on International Religious Freedom Reauthorization Act of 2026",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Congress.gov legislative status",
+      "jurisdiction": "US",
+      "family": "legislative_procedure"
+    },
+    "primary_source_id": "us-congress-76128ee9ff",
+    "n": 6849,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-congress-76128ee9ff"
+    ]
+  },
+  {
+    "title": "Independent Inspector General Credits CPSC Leadership with Reversing Longstanding Management Failures",
+    "url": "https://www.cpsc.gov/Newsroom/News-Releases/2027/Independent-Inspector-General-Credits-CPSC-Leadership-with-Reversing-Longstanding-Management-Failures",
+    "native_id": "https://www.cpsc.gov/_aa2e54a5-398c-40b1-8041-f0daaad3f5c3",
+    "published_at": null,
+    "published_raw": "Mon, 10/26/2026 - 12:00",
+    "summary": "CPSC independent Inspector General recognized progress under Acting Chairman Peter A. Feldman’s leadership in addressing longstanding management deficiencies, strengthening accountability, and improving agency operations.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Consumer Product Safety Commission",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-cpsc-08fe06e2e6",
+    "n": 6887,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-cpsc-08fe06e2e6"
+    ]
+  },
+  {
+    "title": "Constituent Update - October 23, 2026",
+    "url": "http://www.fsis.usda.gov/news-events/news-press-releases/constituent-update-october-23-2026",
+    "native_id": "4153c9c7-1a4c-4695-9986-2ea997f6be53",
+    "published_at": null,
+    "published_raw": "Fri, 10/23/2026 - 12:00",
+    "summary": "Save the Date: FSIS to Host Open House at Midwestern Laboratory The U.S. Department of Agriculture’s Food Safety and Inspection Service (FSIS) will host an Open House on Tuesday, November",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "USDA Food Safety and Inspection Service — News & Events",
+      "jurisdiction": "US",
+      "family": "product_safety"
+    },
+    "primary_source_id": "us-fsis-2f49ece915",
+    "n": 6888,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-fsis-2f49ece915"
+    ]
+  },
+  {
+    "title": "What They Are Saying: Stakeholders Support FCC Test Labs Order",
+    "url": "https://www.fcc.gov/edoc/426200",
+    "native_id": "426200",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "What They Are Saying: Stakeholders Support FCC Test Labs Order",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — News Releases",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 6890,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-fcc-685c5e7dd2"
+    ]
+  },
+  {
+    "title": "FCC Approves Amazon Leo's Acquisition of Globalstar",
+    "url": "https://www.fcc.gov/edoc/426214",
+    "native_id": "426214",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Transaction Will Expand Direct-to-Device Competition, Strengthen Emergency Communications, and Improve Service in Unserved and Underserved Areas",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — News Releases",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-685c5e7dd2",
+    "n": 6891,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-fcc-685c5e7dd2"
+    ]
+  },
+  {
+    "title": "FCC Approves Amazon Leo's Acquisition of Globalstar",
+    "url": "https://www.fcc.gov/edoc/426196",
+    "native_id": "426196",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Transaction will expand D2D competition, strengthen emergency communications, and improve service in unserved and underserved areas.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
@@ -16,41 +160,185 @@
       "family": "telecom_rules_and_licences"
     },
     "primary_source_id": "us-fcc-eeb7d739be",
-    "n": 6821,
-    "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "n": 6892,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "us-fcc-eeb7d739be"
     ]
   },
   {
-    "title": "Dragan Stojkovic “Pixy” Appointed as Promotional Ambassador for the Japan Pavilion First Round of Japan Pavilion Sponsors Announced",
-    "url": "https://www.meti.go.jp/english/press/2026/10/20261027002.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261027002.html",
+    "title": "Public Safety and Homeland Security Bureau Seeks Comment on Label Design, Certification Renewal, and Post-Market Surveillance Under the U.S. Cyber Trust Mark Program",
+    "url": "https://www.fcc.gov/edoc/426202",
+    "native_id": "426202",
     "published_at": null,
-    "published_raw": null,
-    "summary": "",
+    "published_raw": "",
+    "summary": "This Notice seeks comment on label design, product certification renewal, post market surveillance, and complaints.",
     "source_metadata": {
       "document_type": "official_announcement",
       "document_stage": "requires_semantic_review",
       "concrete_public_action": null,
       "classification_status": "source_metadata_only; semantic action verdict not inferred",
-      "issuer": "Japan Ministry of Economy Trade and Industry",
-      "jurisdiction": "JP",
-      "family": "trade_and_industry_policy"
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
     },
-    "primary_source_id": "jp-meti-index",
-    "n": 6828,
-    "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 6893,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
-      "jp-meti-index"
+      "us-fcc-e95ecda3bb"
     ]
   },
   {
-    "title": "Decision to Impose a Definitive Anti-Dumping Duty on Nickel-Added Cold-Rolled Stainless Steel Coil, Sheet and Strip Originating in or Exported from the People’s Republic of China and the Separate Customs Territory of Taiwan, Penghu, Kinmen and Matsu",
-    "url": "https://www.meti.go.jp/english/press/2026/10/20261027001.html",
-    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261027001.html",
+    "title": "Consumer and Governmental Affairs Bureau Announces Effective Date for Robocall Rules and Comment Dates for Related Further Notice",
+    "url": "https://www.fcc.gov/edoc/426190",
+    "native_id": "426190",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 6894,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Actions",
+    "url": "https://www.fcc.gov/edoc/426186",
+    "native_id": "426186",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 6895,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "PSHSB Announces Region 14 (Indiana) RPCs to Hold 700 MHZ and 800 MHZ Meetings",
+    "url": "https://www.fcc.gov/edoc/426197",
+    "native_id": "426197",
+    "published_at": null,
+    "published_raw": "",
+    "summary": "Announces Region 14 (Indiana) RPC Meetings for 700 MHZ and 800 MHZ",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 6896,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Pleadings",
+    "url": "https://www.fcc.gov/edoc/426187",
+    "native_id": "426187",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 6897,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Applications",
+    "url": "https://www.fcc.gov/edoc/426185",
+    "native_id": "426185",
+    "published_at": null,
+    "published_raw": "",
+    "summary": ".",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Federal Communications Commission — Public Notices",
+      "jurisdiction": "US",
+      "family": "telecom_rules_and_licences"
+    },
+    "primary_source_id": "us-fcc-e95ecda3bb",
+    "n": 6898,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "us-fcc-e95ecda3bb"
+    ]
+  },
+  {
+    "title": "Bullseye Financial Ltd enters administration",
+    "url": "https://www.fca.org.uk/news/news-stories/bullseye-financial-ltd-enters-administration",
+    "native_id": "176986",
+    "published_at": null,
+    "published_raw": "Tuesday, October 27, 2026 - 12:15",
+    "summary": "On 23 October 2026, Bullseye Financial Ltd (Bullseye Financial) entered administration. Robert Young of Azets Holdings Limited and Matthew Haw of RSM UK Restructuring Advisory LLP were appointed as joint administrators. The joint administrators are responsible for managing the affairs of the firm during the administration process.Bullseye Financial is authorised by the FCA. It served only professional investors, either managing investment portfolios for them within agreed limits or carrying out their instructions to buy or sell investments without giving investment advice.On 11 March 2026, Bullseye Financial agreed to a voluntary requirement to stop carrying out any regulated activity.Below we set out:How to contact the joint administrators.Support for customers.What to do if you are concerned about your investments.What to do if you have a complaint with the firm.How to protect yourself from fraudsters claiming to act on behalf of the firm, the joint administrators or the FCA.Who to contact if you're a customerCustomers of Bullseye Financial can contact the joint administrators on:Phone: 02074 031877Email: BFL@azets.co.ukWebsite: www.azets.com/en-uk/bullseye-financial-ltdAddress: ",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Financial Conduct Authority",
+      "jurisdiction": "UK",
+      "family": "financial_enforcement"
+    },
+    "primary_source_id": "uk-fca-7b9977ec8e",
+    "n": 6916,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
+    "source_ids": [
+      "uk-fca-7b9977ec8e"
+    ]
+  },
+  {
+    "title": "METI Opens Applications for the Sixth Round of J-Startup",
+    "url": "https://www.meti.go.jp/english/press/2026/10/20261023002.html",
+    "native_id": "https://www.meti.go.jp/english/press/2026/10/20261023002.html",
     "published_at": null,
     "published_raw": null,
     "summary": "",
@@ -64,9 +352,9 @@
       "family": "trade_and_industry_policy"
     },
     "primary_source_id": "jp-meti-index",
-    "n": 6829,
-    "first_seen": "2026-10-27T06:19:07.638287+00:00",
-    "last_seen": "2026-10-27T06:19:07.638287+00:00",
+    "n": 6926,
+    "first_seen": "2026-10-27T18:43:32.673853+00:00",
+    "last_seen": "2026-10-27T18:43:32.673853+00:00",
     "source_ids": [
       "jp-meti-index"
     ]
