@@ -4,7 +4,7 @@
   "source_date": "2026-10-26",
   "target_date": "2026-10-27",
   "book_date": "2026-10-26",
-  "generated_at": "2026-10-27T00:56:16.007845-04:00",
+  "generated_at": "2026-10-27T02:23:31.626929-04:00",
   "ok": false,
   "n_fail": 2,
   "n_warn": 7,
@@ -314,7 +314,7 @@
       "group": "learn",
       "status": "OK",
       "required": true,
-      "detail": "47586 bytes",
+      "detail": "47568 bytes",
       "path": "/home/runner/work/fullscan/fullscan/01_daily/2026-10-26_learnings.md"
     },
     {
@@ -323,7 +323,7 @@
       "group": "learn",
       "status": "OK",
       "required": true,
-      "detail": "47586 bytes",
+      "detail": "47568 bytes",
       "path": "/home/runner/work/fullscan/fullscan/03_scoreboard/LEARNINGS.md"
     },
     {
@@ -332,7 +332,7 @@
       "group": "learn",
       "status": "OK",
       "required": true,
-      "detail": "20190 bytes",
+      "detail": "20169 bytes",
       "path": "/home/runner/work/fullscan/fullscan/00_grounding/mutable_policy.md"
     },
     {

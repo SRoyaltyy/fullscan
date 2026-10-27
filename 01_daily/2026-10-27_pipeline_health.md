@@ -1,7 +1,7 @@
 # Pipeline health — postclose
 
 pre-open date=2026-10-27  post-close source=2026-10-26  post-close target=2026-10-27  book=2026-10-26
-generated 2026-10-27T00:56:16.007845-04:00  round=1
+generated 2026-10-27T02:23:31.626929-04:00  round=1
 **result=FAIL**  required_fails=2  warns=7
 
 Heal loop: audit → fix OpenClaw door / timers on this box → start systemd or spawn the owning ECS job (ubuntu workflows are GH-dispatched with force=true) → wait for files → re-audit. Finviz HTML is never scraped on ECS. xAI OAuth dies ~6h and cannot be refreshed (Cloudflare). Permanent auth is XAI_API_KEY in `~/.openclaw/.env`. An expiring token does not block Grok jobs.
@@ -41,9 +41,9 @@ Heal loop: audit → fix OpenClaw door / timers on this box → start systemd or
 | WARN | General reflect MD | outcome | no | DID NOT RUN — file missing | `/home/runner/work/fullscan/fullscan/01_daily/general/2026-10-26_reflect.md` |
 | WARN | Candidate lesson filed today | outcome | no | n=0 | `` |
 | FAIL | Sector outcomes graded (>=8/11) | outcome | yes | 0/11 | `` |
-| OK | 2026-10-26_learnings.md (session copy) | learn | yes | 47586 bytes | `/home/runner/work/fullscan/fullscan/01_daily/2026-10-26_learnings.md` |
-| OK | LEARNINGS.md digest | learn | yes | 47586 bytes | `/home/runner/work/fullscan/fullscan/03_scoreboard/LEARNINGS.md` |
-| OK | mutable_policy.md (machine injection) | learn | yes | 20190 bytes | `/home/runner/work/fullscan/fullscan/00_grounding/mutable_policy.md` |
+| OK | 2026-10-26_learnings.md (session copy) | learn | yes | 47568 bytes | `/home/runner/work/fullscan/fullscan/01_daily/2026-10-26_learnings.md` |
+| OK | LEARNINGS.md digest | learn | yes | 47568 bytes | `/home/runner/work/fullscan/fullscan/03_scoreboard/LEARNINGS.md` |
+| OK | mutable_policy.md (machine injection) | learn | yes | 20169 bytes | `/home/runner/work/fullscan/fullscan/00_grounding/mutable_policy.md` |
 | FAIL | book_policy.json (learned ranker weights) | learn | no | PASS-OVER from asof=2026-10-23 (want 2026-10-26) | `/home/runner/work/fullscan/fullscan/00_grounding/book_policy.json` |
 | OK | Live dashboard reachable + data injected | pages | yes | HTTP 200, data_injected=True | `https://sroyaltyy.github.io/fullscan/dashboard/` |
 
