@@ -12,91 +12,91 @@
     }
   },
   "watermark": {
-    "deterministic::news_impact_v2::theme_radar_elite": 55819
+    "deterministic::news_impact_v2::theme_radar_elite": 56898
   },
   "funnel": {
-    "elite_raw_titles": 522047,
-    "unique": 55819,
-    "non_weather": 24955,
-    "reaction_in_title": 883,
-    "impulse_updown_listed": 12835,
+    "elite_raw_titles": 531585,
+    "unique": 56898,
+    "non_weather": 25467,
+    "reaction_in_title": 917,
+    "impulse_updown_listed": 13084,
     "graded_articles": {
-      "0-1d": 1507,
-      "2d": 1458,
-      "3d": 1428,
-      "4d": 1405,
-      "5d": 1381,
-      "1-4w": 6945
+      "0-1d": 1506,
+      "2d": 1455,
+      "3d": 1423,
+      "4d": 1402,
+      "5d": 1375,
+      "1-4w": 6938
     }
   },
   "hit_rates": {
     "0-1d": {
-      "hits": 1339,
-      "n_calls": 2712,
-      "hit_rate": 0.4937,
-      "graded_articles": 1507
+      "hits": 1341,
+      "n_calls": 2711,
+      "hit_rate": 0.4947,
+      "graded_articles": 1506
     },
     "2d": {
-      "hits": 1318,
-      "n_calls": 2612,
-      "hit_rate": 0.5046,
-      "graded_articles": 1458
+      "hits": 1316,
+      "n_calls": 2609,
+      "hit_rate": 0.5044,
+      "graded_articles": 1455
     },
     "3d": {
-      "hits": 1272,
-      "n_calls": 2529,
-      "hit_rate": 0.503,
-      "graded_articles": 1428
+      "hits": 1268,
+      "n_calls": 2524,
+      "hit_rate": 0.5024,
+      "graded_articles": 1423
     },
     "4d": {
-      "hits": 1274,
-      "n_calls": 2472,
-      "hit_rate": 0.5154,
-      "graded_articles": 1405
+      "hits": 1271,
+      "n_calls": 2469,
+      "hit_rate": 0.5148,
+      "graded_articles": 1402
     },
     "5d": {
-      "hits": 1247,
-      "n_calls": 2414,
-      "hit_rate": 0.5166,
-      "graded_articles": 1381
+      "hits": 1242,
+      "n_calls": 2408,
+      "hit_rate": 0.5158,
+      "graded_articles": 1375
     },
     "1-4w": {
-      "hits": 4980,
-      "n_calls": 10574,
-      "hit_rate": 0.471,
-      "graded_articles": 6945
+      "hits": 4966,
+      "n_calls": 10559,
+      "hit_rate": 0.4703,
+      "graded_articles": 6938
     }
   },
   "hit_rates_broad_short": {
     "0-1d": {
-      "hits": 6759,
-      "n_calls": 14002,
-      "hit_rate": 0.4827,
-      "graded_articles": 9079
+      "hits": 6760,
+      "n_calls": 13995,
+      "hit_rate": 0.483,
+      "graded_articles": 9078
     },
     "2d": {
-      "hits": 6596,
-      "n_calls": 13421,
-      "hit_rate": 0.4915,
-      "graded_articles": 8614
+      "hits": 6600,
+      "n_calls": 13417,
+      "hit_rate": 0.4919,
+      "graded_articles": 8616
     },
     "3d": {
-      "hits": 6466,
-      "n_calls": 13198,
-      "hit_rate": 0.4899,
-      "graded_articles": 8455
+      "hits": 6452,
+      "n_calls": 13184,
+      "hit_rate": 0.4894,
+      "graded_articles": 8454
     },
     "4d": {
-      "hits": 6442,
-      "n_calls": 13031,
-      "hit_rate": 0.4944,
-      "graded_articles": 8343
+      "hits": 6427,
+      "n_calls": 13016,
+      "hit_rate": 0.4938,
+      "graded_articles": 8341
     },
     "5d": {
-      "hits": 6266,
-      "n_calls": 12882,
-      "hit_rate": 0.4864,
-      "graded_articles": 8263
+      "hits": 6248,
+      "n_calls": 12862,
+      "hit_rate": 0.4858,
+      "graded_articles": 8256
     }
   },
   "rippers": {
@@ -588,15 +588,6 @@
           "entry_date": "2026-07-28",
           "published_at": "2026-07-27 16:30:00",
           "title": "Farmers & Merchants Bancorp, Inc. Reports 2026 Second-Quarter and Year-to-Date Financial Results",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -9.0,
-          "entry_date": "2026-09-24",
-          "published_at": "2026-09-23 11:18:27",
-          "title": "WBD Stock Is Running. Is There Fuel Left?",
           "event_class": "print_vs_priced"
         },
         {
@@ -3615,6 +3606,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "APXC",
+          "direction": "down",
+          "ret": -6.08,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 15:55:00",
+          "title": "Apex Closes Offering and Completes NASDAQ Listing",
+          "event_class": "dilution"
+        },
+        {
           "ticker": "CALC",
           "direction": "down",
           "ret": -6.06,
@@ -6200,6 +6200,15 @@
           "event_class": "dilution"
         },
         {
+          "ticker": "LYCA",
+          "direction": "up",
+          "ret": 21.58,
+          "entry_date": "2026-10-26",
+          "published_at": "2026-10-23 13:03:47",
+          "title": "Lycia Therapeutics surges in debut following upsized $317.5M IPO",
+          "event_class": "listing_flow"
+        },
+        {
           "ticker": "NIQ",
           "direction": "up",
           "ret": 20.93,
@@ -6756,15 +6765,6 @@
           "published_at": "2026-08-13 01:01:05",
           "title": "A2Z Cust2Mate Solutions Corp (AZ) (Q2 2026) Earnings Call Highlights: Smart Cart Deliveries ...",
           "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "SBFM",
-          "direction": "down",
-          "ret": -15.71,
-          "entry_date": "2026-10-09",
-          "published_at": "2026-10-08 10:40:01",
-          "title": "Sunshine Biopharma Prices $6 Million Public Offering at $0.55 Per Unit, Raising Dilution Concerns",
-          "event_class": "dilution"
         },
         {
           "ticker": "IMMR",
@@ -8623,8 +8623,8 @@
       ]
     },
     "2d": {
-      "ge_5_n": 1166,
-      "ge_10_n": 635,
+      "ge_5_n": 1169,
+      "ge_10_n": 638,
       "ge_5": [
         {
           "ticker": "BBDC",
@@ -15053,6 +15053,24 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "FNLC",
+          "direction": "up",
+          "ret": 6.22,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:15:00",
+          "title": "The First Bancorp Announces Third Quarter Results",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "FNLC",
+          "direction": "up",
+          "ret": 6.22,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-21 16:56:11",
+          "title": "The First Bancorp Inc.: Q3 Earnings Snapshot",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "CBOE",
           "direction": "up",
           "ret": 6.21,
@@ -15411,6 +15429,15 @@
           "published_at": "2026-08-12 19:00:38",
           "title": "Elemental Royalty Corp (ELE) (Q2 2026) Earnings Call Highlights: Record Revenue and Strategic ...",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "OXLC",
+          "direction": "down",
+          "ret": -6.09,
+          "entry_date": "2026-10-22",
+          "published_at": "2026-10-22 08:00:00",
+          "title": "Oxford Lane Capital Corp. Prices Preferred Stock Offering",
+          "event_class": "dilution"
         },
         {
           "ticker": "NHP",
@@ -19222,15 +19249,6 @@
           "event_class": "print_vs_priced"
         },
         {
-          "ticker": "LHSW",
-          "direction": "down",
-          "ret": -76.28,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:10:00",
-          "title": "Lianhe Sowell International Group Ltd. Announces Closing of an $11 Million Best-efforts Follow-on Public Offering",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "JZ",
           "direction": "up",
           "ret": 73.75,
@@ -19292,6 +19310,69 @@
           "published_at": "2026-08-06 01:01:41",
           "title": "AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ...",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "PARA",
+          "direction": "down",
+          "ret": -61.31,
+          "entry_date": "2026-09-04",
+          "published_at": "2026-09-03 16:59:33",
+          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "PARA",
+          "direction": "down",
+          "ret": -61.31,
+          "entry_date": "2026-09-04",
+          "published_at": "2026-09-03 16:59:33",
+          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "PARA",
+          "direction": "down",
+          "ret": -61.31,
+          "entry_date": "2026-09-04",
+          "published_at": "2026-09-03 16:59:33",
+          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "PARA",
+          "direction": "down",
+          "ret": -61.31,
+          "entry_date": "2026-09-04",
+          "published_at": "2026-09-03 16:59:33",
+          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "PARA",
+          "direction": "down",
+          "ret": -61.31,
+          "entry_date": "2026-09-04",
+          "published_at": "2026-09-03 16:59:33",
+          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "PARA",
+          "direction": "down",
+          "ret": -61.31,
+          "entry_date": "2026-09-04",
+          "published_at": "2026-09-03 16:59:33",
+          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "PARA",
+          "direction": "down",
+          "ret": -61.31,
+          "entry_date": "2026-09-04",
+          "published_at": "2026-09-03 16:59:33",
+          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "PMI",
@@ -19409,15 +19490,6 @@
           "published_at": "2026-09-29 08:30:00",
           "title": "Veritone Partners with ATP Media to Unlock New Revenue from Tennis's Greatest Moments",
           "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "SBFM",
-          "direction": "down",
-          "ret": -41.15,
-          "entry_date": "2026-10-09",
-          "published_at": "2026-10-08 10:40:01",
-          "title": "Sunshine Biopharma Prices $6 Million Public Offering at $0.55 Per Unit, Raising Dilution Concerns",
-          "event_class": "dilution"
         },
         {
           "ticker": "MYO",
@@ -19859,15 +19931,6 @@
           "published_at": "2026-07-29 21:03:59",
           "title": "Meridian Holdings Inc (MRDN) (Q2 2026) Earnings Call Highlights: Record Revenue and ...",
           "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "GCTK",
-          "direction": "down",
-          "ret": -25.93,
-          "entry_date": "2026-09-24",
-          "published_at": "2026-09-24 08:45:00",
-          "title": "Glucotrack, Inc. Announces Pricing of $3 Million Public Offering",
-          "event_class": "dilution"
         },
         {
           "ticker": "AVAT",
@@ -20392,15 +20455,6 @@
           "event_class": "print_vs_priced"
         },
         {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -21.78,
-          "entry_date": "2026-09-24",
-          "published_at": "2026-09-23 11:18:27",
-          "title": "WBD Stock Is Running. Is There Fuel Left?",
-          "event_class": "print_vs_priced"
-        },
-        {
           "ticker": "EQX",
           "direction": "up",
           "ret": 21.74,
@@ -20462,15 +20516,6 @@
           "published_at": "2026-09-16 16:30:00",
           "title": "Aeluma Announces Fourth Quarter and Full Fiscal Year 2026 Financial Results",
           "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "SBFM",
-          "direction": "down",
-          "ret": -21.36,
-          "entry_date": "2026-10-12",
-          "published_at": "2026-10-09 11:17:00",
-          "title": "Sunshine Biopharma Announces Closing of up to $20.4 Million Public Offering",
-          "event_class": "dilution"
         },
         {
           "ticker": "GRML",
@@ -24836,12 +24881,21 @@
           "published_at": "2026-07-27 21:01:35",
           "title": "Comstock Inc (LODE) Q2 2026 Earnings Call Highlights: Strong Cash Position and Strategic ...",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "LHSW",
+          "direction": "down",
+          "ret": -10.0,
+          "entry_date": "2026-09-04",
+          "published_at": "2026-09-03 16:10:00",
+          "title": "Lianhe Sowell International Group Ltd. Announces Closing of an $11 Million Best-efforts Follow-on Public Offering",
+          "event_class": "dilution"
         }
       ]
     },
     "3d": {
-      "ge_5_n": 1295,
-      "ge_10_n": 775,
+      "ge_5_n": 1289,
+      "ge_10_n": 765,
       "ge_5": [
         {
           "ticker": "HOOD",
@@ -28846,69 +28900,6 @@
           "entry_date": "2026-10-02",
           "published_at": "2026-10-02 08:00:00",
           "title": "NETSOL Technologies appoints Michael Ramsey as Vice President of Sales for Asset Finance in the Americas",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -7.55,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:59:33",
-          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -7.55,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:59:33",
-          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -7.55,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:59:33",
-          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -7.55,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:59:33",
-          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -7.55,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:59:33",
-          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -7.55,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:59:33",
-          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -7.55,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:59:33",
-          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
           "event_class": "print_vs_priced"
         },
         {
@@ -35968,6 +35959,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "ORRF",
+          "direction": "up",
+          "ret": 5.13,
+          "entry_date": "2026-10-21",
+          "published_at": "2026-10-20 16:13:01",
+          "title": "Orrstown: Q3 Earnings Snapshot",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "COLM",
           "direction": "up",
           "ret": 5.12,
@@ -36627,15 +36627,6 @@
           "event_class": "capital_return"
         },
         {
-          "ticker": "LHSW",
-          "direction": "down",
-          "ret": -84.88,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:10:00",
-          "title": "Lianhe Sowell International Group Ltd. Announces Closing of an $11 Million Best-efforts Follow-on Public Offering",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "QMCO",
           "direction": "up",
           "ret": 79.82,
@@ -36993,15 +36984,6 @@
           "entry_date": "2026-10-13",
           "published_at": "2026-10-12 16:30:00",
           "title": "Biomea Fusion to Announce Phase I Results for BMF-650, Its Next-Generation Oral Small-Molecule GLP-1 Receptor Agonist",
-          "event_class": "dilution"
-        },
-        {
-          "ticker": "SBFM",
-          "direction": "down",
-          "ret": -39.4,
-          "entry_date": "2026-10-09",
-          "published_at": "2026-10-08 10:40:01",
-          "title": "Sunshine Biopharma Prices $6 Million Public Offering at $0.55 Per Unit, Raising Dilution Concerns",
           "event_class": "dilution"
         },
         {
@@ -37374,15 +37356,6 @@
           "event_class": "print_vs_priced"
         },
         {
-          "ticker": "GCTK",
-          "direction": "down",
-          "ret": -28.4,
-          "entry_date": "2026-09-24",
-          "published_at": "2026-09-24 08:45:00",
-          "title": "Glucotrack, Inc. Announces Pricing of $3 Million Public Offering",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "PRPL",
           "direction": "down",
           "ret": -27.8,
@@ -37570,15 +37543,6 @@
           "published_at": "2026-08-07 09:21:50",
           "title": "Proficient Auto Logistics Inc (PAL) Q2 2026: Everything You Need To Know Ahead Of Earnings",
           "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "SBFM",
-          "direction": "down",
-          "ret": -25.57,
-          "entry_date": "2026-10-12",
-          "published_at": "2026-10-09 11:17:00",
-          "title": "Sunshine Biopharma Announces Closing of up to $20.4 Million Public Offering",
-          "event_class": "dilution"
         },
         {
           "ticker": "THRY",
@@ -37794,15 +37758,6 @@
           "entry_date": "2026-08-13",
           "published_at": "2026-08-13 06:38:00",
           "title": "Shoe Station names chief marketing officer",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -23.78,
-          "entry_date": "2026-09-24",
-          "published_at": "2026-09-23 11:18:27",
-          "title": "WBD Stock Is Running. Is There Fuel Left?",
           "event_class": "print_vs_priced"
         },
         {
@@ -42297,51 +42252,6 @@
           "event_class": "print_vs_priced"
         },
         {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -10.98,
-          "entry_date": "2026-09-21",
-          "published_at": "2026-09-18 10:41:11",
-          "title": "Is Disney Stock A Bargain Or Just A Slower Grower?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -10.98,
-          "entry_date": "2026-09-21",
-          "published_at": "2026-09-18 10:41:11",
-          "title": "Is Disney Stock A Bargain Or Just A Slower Grower?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -10.98,
-          "entry_date": "2026-09-21",
-          "published_at": "2026-09-18 10:41:11",
-          "title": "Is Disney Stock A Bargain Or Just A Slower Grower?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -10.98,
-          "entry_date": "2026-09-21",
-          "published_at": "2026-09-18 10:41:11",
-          "title": "Is Disney Stock A Bargain Or Just A Slower Grower?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -10.98,
-          "entry_date": "2026-09-21",
-          "published_at": "2026-09-21 09:18:40",
-          "title": "Could You Have Seen Warner Bros Discovery Stock's Run Coming?",
-          "event_class": "print_vs_priced"
-        },
-        {
           "ticker": "FLNA",
           "direction": "down",
           "ret": -10.98,
@@ -43478,8 +43388,8 @@
       ]
     },
     "4d": {
-      "ge_5_n": 1391,
-      "ge_10_n": 951,
+      "ge_5_n": 1384,
+      "ge_10_n": 940,
       "ge_5": [
         {
           "ticker": "GORO",
@@ -53175,69 +53085,6 @@
           "event_class": "flow_index"
         },
         {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -5.75,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:59:33",
-          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -5.75,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:59:33",
-          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -5.75,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:59:33",
-          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -5.75,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:59:33",
-          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -5.75,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:59:33",
-          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -5.75,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:59:33",
-          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -5.75,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:59:33",
-          "title": "DIS Is Priced Like The Best Of Its Group. Is It?",
-          "event_class": "print_vs_priced"
-        },
-        {
           "ticker": "AA",
           "direction": "down",
           "ret": -5.75,
@@ -56147,15 +55994,6 @@
           "event_class": "capital_return"
         },
         {
-          "ticker": "LHSW",
-          "direction": "down",
-          "ret": -88.79,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:10:00",
-          "title": "Lianhe Sowell International Group Ltd. Announces Closing of an $11 Million Best-efforts Follow-on Public Offering",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "JZ",
           "direction": "up",
           "ret": 83.75,
@@ -56318,15 +56156,6 @@
           "event_class": "print_vs_priced"
         },
         {
-          "ticker": "LHSW",
-          "direction": "down",
-          "ret": -54.67,
-          "entry_date": "2026-09-02",
-          "published_at": "2026-09-02 08:30:00",
-          "title": "Lianhe Sowell International Group Ltd. Announces Pricing of an $11 Million Best-efforts Follow-on Public Offering",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "BWMN",
           "direction": "up",
           "ret": 54.41,
@@ -56460,15 +56289,6 @@
           "published_at": "2026-08-06 01:08:07",
           "title": "Sight Sciences Inc (SGHT) (Q2 2026) Earnings Call Highlights: Record Revenue Growth and Raised ...",
           "event_class": "guidance"
-        },
-        {
-          "ticker": "SBFM",
-          "direction": "down",
-          "ret": -42.64,
-          "entry_date": "2026-10-09",
-          "published_at": "2026-10-08 10:40:01",
-          "title": "Sunshine Biopharma Prices $6 Million Public Offering at $0.55 Per Unit, Raising Dilution Concerns",
-          "event_class": "dilution"
         },
         {
           "ticker": "DFSC",
@@ -56876,15 +56696,6 @@
           "event_class": "print_vs_priced"
         },
         {
-          "ticker": "GCTK",
-          "direction": "down",
-          "ret": -32.51,
-          "entry_date": "2026-09-24",
-          "published_at": "2026-09-24 08:45:00",
-          "title": "Glucotrack, Inc. Announces Pricing of $3 Million Public Offering",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "ACB",
           "direction": "up",
           "ret": 32.18,
@@ -57074,15 +56885,6 @@
           "event_class": "market_structure"
         },
         {
-          "ticker": "SBFM",
-          "direction": "down",
-          "ret": -28.16,
-          "entry_date": "2026-10-12",
-          "published_at": "2026-10-09 11:17:00",
-          "title": "Sunshine Biopharma Announces Closing of up to $20.4 Million Public Offering",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "MODD",
           "direction": "down",
           "ret": -28.07,
@@ -57108,15 +56910,6 @@
           "published_at": "2026-08-17 13:44:37",
           "title": "Michael Saylor Says Fixing The Credit Takes Priority Over MSTR Stock Buybacks",
           "event_class": "capital_return"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -27.89,
-          "entry_date": "2026-09-24",
-          "published_at": "2026-09-23 11:18:27",
-          "title": "WBD Stock Is Running. Is There Fuel Left?",
-          "event_class": "print_vs_priced"
         },
         {
           "ticker": "TELA",
@@ -57593,51 +57386,6 @@
           "entry_date": "2026-08-11",
           "published_at": "2026-08-10 18:00:00",
           "title": "Gencor Releases Third Quarter Fiscal 2026 Results",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -23.91,
-          "entry_date": "2026-09-21",
-          "published_at": "2026-09-18 10:41:11",
-          "title": "Is Disney Stock A Bargain Or Just A Slower Grower?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -23.91,
-          "entry_date": "2026-09-21",
-          "published_at": "2026-09-18 10:41:11",
-          "title": "Is Disney Stock A Bargain Or Just A Slower Grower?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -23.91,
-          "entry_date": "2026-09-21",
-          "published_at": "2026-09-18 10:41:11",
-          "title": "Is Disney Stock A Bargain Or Just A Slower Grower?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -23.91,
-          "entry_date": "2026-09-21",
-          "published_at": "2026-09-18 10:41:11",
-          "title": "Is Disney Stock A Bargain Or Just A Slower Grower?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -23.91,
-          "entry_date": "2026-09-21",
-          "published_at": "2026-09-21 09:18:40",
-          "title": "Could You Have Seen Warner Bros Discovery Stock's Run Coming?",
           "event_class": "print_vs_priced"
         },
         {
@@ -64565,7 +64313,7 @@
     },
     "5d": {
       "ge_5_n": 1465,
-      "ge_10_n": 1052,
+      "ge_10_n": 1041,
       "ge_5": [
         {
           "ticker": "STRO",
@@ -77935,15 +77683,6 @@
           "event_class": "print_vs_priced"
         },
         {
-          "ticker": "LHSW",
-          "direction": "down",
-          "ret": -85.51,
-          "entry_date": "2026-09-04",
-          "published_at": "2026-09-03 16:10:00",
-          "title": "Lianhe Sowell International Group Ltd. Announces Closing of an $11 Million Best-efforts Follow-on Public Offering",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "SECZ",
           "direction": "up",
           "ret": 71.24,
@@ -78005,15 +77744,6 @@
           "published_at": "2026-09-18 00:01:00",
           "title": "SEC Greenlights Tokenized Stocks After Clarity Act Fails in Senate",
           "event_class": "market_structure"
-        },
-        {
-          "ticker": "LHSW",
-          "direction": "down",
-          "ret": -71.11,
-          "entry_date": "2026-09-02",
-          "published_at": "2026-09-02 08:30:00",
-          "title": "Lianhe Sowell International Group Ltd. Announces Pricing of an $11 Million Best-efforts Follow-on Public Offering",
-          "event_class": "dilution"
         },
         {
           "ticker": "JZ",
@@ -78259,15 +77989,6 @@
           "event_class": "print_vs_priced"
         },
         {
-          "ticker": "SBFM",
-          "direction": "down",
-          "ret": -44.64,
-          "entry_date": "2026-10-09",
-          "published_at": "2026-10-08 10:40:01",
-          "title": "Sunshine Biopharma Prices $6 Million Public Offering at $0.55 Per Unit, Raising Dilution Concerns",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "SGHT",
           "direction": "up",
           "ret": 43.7,
@@ -78385,15 +78106,6 @@
           "event_class": "market_structure"
         },
         {
-          "ticker": "GCTK",
-          "direction": "down",
-          "ret": -41.98,
-          "entry_date": "2026-09-24",
-          "published_at": "2026-09-24 08:45:00",
-          "title": "Glucotrack, Inc. Announces Pricing of $3 Million Public Offering",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "PEPG",
           "direction": "up",
           "ret": 41.9,
@@ -78509,15 +78221,6 @@
           "published_at": "2026-08-21 09:15:00",
           "title": "NFT LTD Announces Pricing of US$2.0 Million Public Offering",
           "event_class": "dilution"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -36.0,
-          "entry_date": "2026-09-24",
-          "published_at": "2026-09-23 11:18:27",
-          "title": "WBD Stock Is Running. Is There Fuel Left?",
-          "event_class": "print_vs_priced"
         },
         {
           "ticker": "SENS",
@@ -79537,51 +79240,6 @@
           "event_class": "dilution"
         },
         {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -23.48,
-          "entry_date": "2026-09-21",
-          "published_at": "2026-09-18 10:41:11",
-          "title": "Is Disney Stock A Bargain Or Just A Slower Grower?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -23.48,
-          "entry_date": "2026-09-21",
-          "published_at": "2026-09-18 10:41:11",
-          "title": "Is Disney Stock A Bargain Or Just A Slower Grower?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -23.48,
-          "entry_date": "2026-09-21",
-          "published_at": "2026-09-18 10:41:11",
-          "title": "Is Disney Stock A Bargain Or Just A Slower Grower?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -23.48,
-          "entry_date": "2026-09-21",
-          "published_at": "2026-09-18 10:41:11",
-          "title": "Is Disney Stock A Bargain Or Just A Slower Grower?",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PARA",
-          "direction": "down",
-          "ret": -23.48,
-          "entry_date": "2026-09-21",
-          "published_at": "2026-09-21 09:18:40",
-          "title": "Could You Have Seen Warner Bros Discovery Stock's Run Coming?",
-          "event_class": "print_vs_priced"
-        },
-        {
           "ticker": "PAL",
           "direction": "down",
           "ret": -23.4,
@@ -79984,15 +79642,6 @@
           "entry_date": "2026-10-16",
           "published_at": "2026-10-15 16:30:00",
           "title": "Conexeu Sciences Announces $5 Million Private Placement Led by Existing Shareholders, Management and Directors",
-          "event_class": "dilution"
-        },
-        {
-          "ticker": "SBFM",
-          "direction": "down",
-          "ret": -21.68,
-          "entry_date": "2026-10-12",
-          "published_at": "2026-10-09 11:17:00",
-          "title": "Sunshine Biopharma Announces Closing of up to $20.4 Million Public Offering",
           "event_class": "dilution"
         },
         {
@@ -87259,46 +86908,46 @@
   },
   "harvest_source_mix": {
     "raw": {
-      "theme_radar_elite": 522047
+      "theme_radar_elite": 531585
     },
     "unique": {
-      "theme_radar_elite": 55819
+      "theme_radar_elite": 56898
     }
   },
   "ledger": {
     "counts": {
-      "singleton": 8318,
-      "converge": 659,
-      "clash": 97,
-      "converge_up": 438,
-      "converge_down": 221
+      "singleton": 8515,
+      "converge": 662,
+      "clash": 98,
+      "converge_up": 440,
+      "converge_down": 222
     },
     "hit_rates": {
       "singleton": {
         "0-1d": {
-          "hits": 675,
-          "n": 1433,
-          "hit_rate": 0.471
+          "hits": 676,
+          "n": 1431,
+          "hit_rate": 0.4724
         },
         "2d": {
-          "hits": 688,
-          "n": 1396,
-          "hit_rate": 0.4928
+          "hits": 686,
+          "n": 1393,
+          "hit_rate": 0.4925
         },
         "3d": {
-          "hits": 679,
-          "n": 1362,
-          "hit_rate": 0.4985
+          "hits": 675,
+          "n": 1357,
+          "hit_rate": 0.4974
         },
         "4d": {
-          "hits": 678,
-          "n": 1338,
-          "hit_rate": 0.5067
+          "hits": 675,
+          "n": 1335,
+          "hit_rate": 0.5056
         },
         "5d": {
-          "hits": 675,
-          "n": 1314,
-          "hit_rate": 0.5137
+          "hits": 670,
+          "n": 1308,
+          "hit_rate": 0.5122
         }
       },
       "converge": {
@@ -87867,7 +87516,7 @@
         ]
       }
     ],
-    "n_name_groups": 9074,
+    "n_name_groups": 9275,
     "n_theme_groups": 13,
     "theme_note": "Theme groups are router factor/macro keys only. They are not a second trade. The Elite Sector column is not a key.",
     "amrx_week": {

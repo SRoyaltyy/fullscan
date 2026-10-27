@@ -16,17 +16,17 @@ Rubric hit rates count a call only when q5=impulse, direction in {up, down}, tra
 
 | step | n |
 | --- | ---: |
-| Elite raw titles | 522047 |
-| unique (ticker + title, earliest News Time) | 55819 |
-| non-weather | 24955 |
-| reaction-in-title (killed by the router) | 883 |
-| impulse + up/down + listed | 12835 |
-| graded articles 0-1d | 1507 |
-| graded articles 2d | 1458 |
-| graded articles 3d | 1428 |
-| graded articles 4d | 1405 |
-| graded articles 5d | 1381 |
-| graded articles 1-4w | 6945 |
+| Elite raw titles | 531585 |
+| unique (ticker + title, earliest News Time) | 56898 |
+| non-weather | 25467 |
+| reaction-in-title (killed by the router) | 917 |
+| impulse + up/down + listed | 13084 |
+| graded articles 0-1d | 1506 |
+| graded articles 2d | 1455 |
+| graded articles 3d | 1423 |
+| graded articles 4d | 1402 |
+| graded articles 5d | 1375 |
+| graded articles 1-4w | 6938 |
 
 ## Hit rates
 
@@ -34,12 +34,12 @@ Rubric column skips long-horizon classes on 0-1d and 2-5d. Broad column keeps th
 
 | horizon | rubric hits | rubric n | rubric rate | broad hits | broad n | broad rate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0-1d | 1339 | 2712 | 1339/2712 = 49.4% | 6759 | 14002 | 6759/14002 = 48.3% |
-| 2d | 1318 | 2612 | 1318/2612 = 50.5% | 6596 | 13421 | 6596/13421 = 49.1% |
-| 3d | 1272 | 2529 | 1272/2529 = 50.3% | 6466 | 13198 | 6466/13198 = 49.0% |
-| 4d | 1274 | 2472 | 1274/2472 = 51.5% | 6442 | 13031 | 6442/13031 = 49.4% |
-| 5d | 1247 | 2414 | 1247/2414 = 51.7% | 6266 | 12882 | 6266/12882 = 48.6% |
-| 1-4w | 4980 | 10574 | 4980/10574 = 47.1% | — | — | — |
+| 0-1d | 1341 | 2711 | 1341/2711 = 49.5% | 6760 | 13995 | 6760/13995 = 48.3% |
+| 2d | 1316 | 2609 | 1316/2609 = 50.4% | 6600 | 13417 | 6600/13417 = 49.2% |
+| 3d | 1268 | 2524 | 1268/2524 = 50.2% | 6452 | 13184 | 6452/13184 = 48.9% |
+| 4d | 1271 | 2469 | 1271/2469 = 51.5% | 6427 | 13016 | 6427/13016 = 49.4% |
+| 5d | 1242 | 2408 | 1242/2408 = 51.6% | 6248 | 12862 | 6248/12862 = 48.6% |
+| 1-4w | 4966 | 10559 | 4966/10559 = 47.0% | — | — | — |
 
 ## Convergence / clash ledger
 
@@ -47,19 +47,19 @@ One entity per session. n_bull / n_bear count impulse up/down stories after titl
 
 Direct = the article names the ticker. Indirect = substitute / stays_out / arms_dealer / peer / sector basket from the family template. Theme groups are router factor/macro keys only. They are not a second trade. The Elite Sector column is not a key.
 
-Router theme keys (not traded): **13**. Name groups: **9074**.
+Router theme keys (not traded): **13**. Name groups: **9275**.
 
 | bucket | groups |
 | --- | ---: |
-| singleton | 8318 |
-| converge | 659 (up 438, down 221) |
-| clash | 97 |
+| singleton | 8515 |
+| converge | 662 (up 440, down 222) |
+| clash | 98 |
 
 Hit rates grade the entity once per session. Converge uses that side. Clash uses the net side (net 0 is ungraded). Long-horizon classes are out of these denominators.
 
 | bucket | 0-1d | 2d | 3d | 4d | 5d |
 | --- | --- | --- | --- | --- | --- |
-| singleton | 675/1433 = 47.1% | 688/1396 = 49.3% | 679/1362 = 49.9% | 678/1338 = 50.7% | 675/1314 = 51.4% |
+| singleton | 676/1431 = 47.2% | 686/1393 = 49.2% | 675/1357 = 49.7% | 675/1335 = 50.6% | 670/1308 = 51.2% |
 | converge | 75/139 = 54.0% | 63/131 = 48.1% | 67/130 = 51.5% | 67/129 = 51.9% | 66/127 = 52.0% |
 | clash | 4/11 = 36.4% | 5/10 = 50.0% | 8/10 = 80.0% | 4/10 = 40.0% | 4/10 = 40.0% |
 
@@ -133,8 +133,8 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 
 ### 2d
 
-- ≥5% and <10%: **1166**
-- ≥10%: **635**
+- ≥5% and <10%: **1169**
+- ≥10%: **638**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -149,7 +149,6 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | DKI | 2026-10-09 | -86.13% | dilution | DarkIris Prices $6 Million Public Offering at $1.44 Per Unit With Potential for Significant Share Dilution |
 | ≥10% | OLB | 2026-10-07 | +84.43% | capital_return | The OLB Group Launches Share Buyback; Suspends ATM Program |
 | ≥10% | ALGS | 2026-08-06 | +83.01% | print_vs_priced | Aligos Therapeutics Reports Recent Business Progress and Second Quarter 2026 Financial Results |
-| ≥10% | LHSW | 2026-09-04 | -76.28% | dilution | Lianhe Sowell International Group Ltd. Announces Closing of an $11 Million Best-efforts Follow-on Public Offer |
 | ≥10% | JZ | 2026-10-09 | +73.75% | capital_return | Jianzhi Education Announces Share Repurchase Program |
 | ≥10% | QMCO | 2026-08-11 | +69.97% | print_vs_priced | Quantum Corp (QMCO) (Q1 2027) Earnings Call Highlights: Debt-Free Turnaround with Record ... |
 | ≥10% | QMCO | 2026-08-11 | +69.97% | print_vs_priced | Quantum Corporation Q1 2027 Earnings Call Summary |
@@ -157,18 +156,19 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | ABCL | 2026-08-06 | +61.31% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +61.31% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +61.31% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
-| ≥10% | PMI | 2026-08-20 | +60.31% | print_vs_priced | Picard Medical Reports Second Quarter 2026 Financial Results |
-| ≥10% | BWMN | 2026-08-07 | +55.03% | gate | Earnings To Watch: Bowman Consulting Group Ltd (BWMN) Q2 2026 -- GF Value Sees 64% Upside |
-| ≥10% | APH | 2026-08-19 | -51.54% | print_vs_priced | Amphenol Corp. Cl A stock underperforms Tuesday when compared to competitors |
-| ≥10% | LUNG | 2026-07-30 | +51.43% | print_vs_priced | Pulmonx Corporation Q2 2026 Earnings Call Summary |
-| ≥10% | CYCU | 2026-09-30 | +45.80% | gate | Cycurion Discusses Record Contract Win, Public Safety Expansion and Growth Strategy in New Interview |
-| ≥10% | SDGR | 2026-09-15 | +45.52% | guidance | AI Drug Discovery Market Projected to Reach $13.8 Billion by 2033 |
-| … | | | | | 1776 more in the JSON |
+| ≥10% | PARA | 2026-09-04 | -61.31% | print_vs_priced | DIS Is Priced Like The Best Of Its Group. Is It? |
+| ≥10% | PARA | 2026-09-04 | -61.31% | print_vs_priced | DIS Is Priced Like The Best Of Its Group. Is It? |
+| ≥10% | PARA | 2026-09-04 | -61.31% | print_vs_priced | DIS Is Priced Like The Best Of Its Group. Is It? |
+| ≥10% | PARA | 2026-09-04 | -61.31% | print_vs_priced | DIS Is Priced Like The Best Of Its Group. Is It? |
+| ≥10% | PARA | 2026-09-04 | -61.31% | print_vs_priced | DIS Is Priced Like The Best Of Its Group. Is It? |
+| ≥10% | PARA | 2026-09-04 | -61.31% | print_vs_priced | DIS Is Priced Like The Best Of Its Group. Is It? |
+| ≥10% | PARA | 2026-09-04 | -61.31% | print_vs_priced | DIS Is Priced Like The Best Of Its Group. Is It? |
+| … | | | | | 1782 more in the JSON |
 
 ### 3d
 
-- ≥5% and <10%: **1295**
-- ≥10%: **775**
+- ≥5% and <10%: **1289**
+- ≥10%: **765**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -186,7 +186,6 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | YQ | 2026-09-03 | +95.30% | capital_return | 17 Education & Technology Group Inc. Announces New Share Repurchase Program of Up to US$10 Million |
 | ≥10% | DKI | 2026-10-09 | -89.03% | dilution | DarkIris Prices $6 Million Public Offering at $1.44 Per Unit With Potential for Significant Share Dilution |
 | ≥10% | JZ | 2026-10-09 | +85.00% | capital_return | Jianzhi Education Announces Share Repurchase Program |
-| ≥10% | LHSW | 2026-09-04 | -84.88% | dilution | Lianhe Sowell International Group Ltd. Announces Closing of an $11 Million Best-efforts Follow-on Public Offer |
 | ≥10% | QMCO | 2026-08-11 | +79.82% | print_vs_priced | Quantum Corp (QMCO) (Q1 2027) Earnings Call Highlights: Debt-Free Turnaround with Record ... |
 | ≥10% | QMCO | 2026-08-11 | +79.82% | print_vs_priced | Quantum Corporation Q1 2027 Earnings Call Summary |
 | ≥10% | ALGS | 2026-08-06 | +74.16% | print_vs_priced | Aligos Therapeutics Reports Recent Business Progress and Second Quarter 2026 Financial Results |
@@ -197,12 +196,13 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | BWMN | 2026-08-07 | +54.48% | gate | Earnings To Watch: Bowman Consulting Group Ltd (BWMN) Q2 2026 -- GF Value Sees 64% Upside |
 | ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | Robinhood Rises as the SEC Clears Tokenized Stocks |
 | ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | Securitize Surges After SEC Clears Path for Tokenized Stock Trading |
-| … | | | | | 2045 more in the JSON |
+| ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | Polymarket Hires Coinbase's Failed Social-Coin Architect |
+| … | | | | | 2029 more in the JSON |
 
 ### 4d
 
-- ≥5% and <10%: **1391**
-- ≥10%: **951**
+- ≥5% and <10%: **1384**
+- ≥10%: **940**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -222,7 +222,6 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | PMI | 2026-08-24 | +94.26% | print_vs_priced | Picard Medical Shares Soar After Quarterly Revenue Beats Forecasts |
 | ≥10% | QMCO | 2026-08-06 | +92.63% | print_vs_priced | IonQ CEO Niccolo de Masi: Quantum growth accelerates with record demand |
 | ≥10% | OLB | 2026-10-07 | +90.05% | capital_return | The OLB Group Launches Share Buyback; Suspends ATM Program |
-| ≥10% | LHSW | 2026-09-04 | -88.79% | dilution | Lianhe Sowell International Group Ltd. Announces Closing of an $11 Million Best-efforts Follow-on Public Offer |
 | ≥10% | JZ | 2026-10-09 | +83.75% | capital_return | Jianzhi Education Announces Share Repurchase Program |
 | ≥10% | YQ | 2026-09-03 | +81.84% | capital_return | 17 Education & Technology Group Inc. Announces New Share Repurchase Program of Up to US$10 Million |
 | ≥10% | ABCL | 2026-08-06 | +78.84% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
@@ -231,12 +230,13 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | Robinhood Rises as the SEC Clears Tokenized Stocks |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | Securitize Surges After SEC Clears Path for Tokenized Stock Trading |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | Polymarket Hires Coinbase's Failed Social-Coin Architect |
-| … | | | | | 2317 more in the JSON |
+| ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
+| … | | | | | 2299 more in the JSON |
 
 ### 5d
 
 - ≥5% and <10%: **1465**
-- ≥10%: **1052**
+- ≥10%: **1041**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -260,12 +260,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | ABCL | 2026-08-06 | +89.46% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | ABCL | 2026-08-06 | +89.46% | guidance | AbCellera Biologics Inc (ABCL) (Q2 2026) Earnings Call Highlights: Strong Pipeline Progress and ... |
 | ≥10% | PMI | 2026-08-24 | +86.75% | print_vs_priced | Picard Medical Shares Soar After Quarterly Revenue Beats Forecasts |
-| ≥10% | LHSW | 2026-09-04 | -85.51% | dilution | Lianhe Sowell International Group Ltd. Announces Closing of an $11 Million Best-efforts Follow-on Public Offer |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | Robinhood Rises as the SEC Clears Tokenized Stocks |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | Securitize Surges After SEC Clears Path for Tokenized Stock Trading |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | Polymarket Hires Coinbase's Failed Social-Coin Architect |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
-| … | | | | | 2492 more in the JSON |
+| ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Allows Tokenized Stocks After Clarity Act Falters |
+| … | | | | | 2481 more in the JSON |
 
 ## AMRX
 
@@ -306,13 +306,13 @@ Elite is in the book. `unused_readonly` applies only when no snapshot file is on
 
 | source | raw titles | unique |
 | --- | ---: | ---: |
-| theme_radar_elite | 522047 | 55819 |
+| theme_radar_elite | 531585 | 56898 |
 
-theme_radar_elite unique n = **55819**.
+theme_radar_elite unique n = **56898**.
 
 ## Hopper watermark (lane::model::source)
 
-- `deterministic::news_impact_v2::theme_radar_elite`: 55819
+- `deterministic::news_impact_v2::theme_radar_elite`: 56898
 
 ## FOMC / macro collapse
 
