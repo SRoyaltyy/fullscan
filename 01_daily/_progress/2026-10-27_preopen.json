@@ -5,8 +5,8 @@
   "run_id": "40482236773",
   "model": "glm-5.3-flash",
   "started_at": "2026-10-27T06:13:13-04:00",
-  "updated_at": "2026-10-27T06:24:32-04:00",
-  "heartbeat_at": "2026-10-27T06:24:32-04:00",
+  "updated_at": "2026-10-27T06:26:18-04:00",
+  "heartbeat_at": "2026-10-27T06:26:18-04:00",
   "stages": [
     {
       "name": "prep",
@@ -109,11 +109,11 @@
     },
     {
       "name": "deploy",
-      "state": "running",
+      "state": "ok",
       "started_at": "2026-10-27T06:24:32-04:00",
-      "ended_at": "",
+      "ended_at": "2026-10-27T06:26:18-04:00",
       "heartbeat_at": "2026-10-27T06:24:32-04:00",
-      "done": 0,
+      "done": 1,
       "total": 1,
       "model": "glm-5.3-flash",
       "error": ""
