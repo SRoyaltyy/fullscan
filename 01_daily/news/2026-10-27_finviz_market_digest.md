@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-27
 
-**Generated:** 2026-10-27T04:19:55.446321-04:00 (America/New_York)
+**Generated:** 2026-10-27T04:20:46.256840-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to mixed open with tech under pressure ahead of durable goods data and heavy pre-market earnings slate as oil trades near $102
 **Prior close:** SPX —  Nasdaq —  Dow —
