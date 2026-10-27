@@ -1,6 +1,6 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-10-27T06:17:35.598564-04:00",
+  "fetched_at": "2026-10-27T06:31:33.654408-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -70,59 +70,59 @@
   "vix": {
     "vix": {
       "date": "2026-10-27",
-      "current": 18.24,
-      "delta_1d": -0.15,
-      "delta_1w": 0.93
+      "current": 18.36,
+      "delta_1d": -0.03,
+      "delta_1w": 1.05
     },
     "vix3m": {
       "date": "2026-10-26",
       "current": 19.94,
       "source": "^VIX3M"
     },
-    "ratio": 0.915,
+    "ratio": 0.921,
     "ratio_source": "vix/vix3m",
-    "vix_ma20": 16.76,
-    "ratio_ma20": 1.088
+    "vix_ma20": 16.77,
+    "ratio_ma20": 1.095
   },
   "commodities_fx": {
     "CL=F": {
       "available": true,
       "date": "2026-10-27",
-      "last": 101.97,
-      "pct_1d": 0.21
+      "last": 102.42,
+      "pct_1d": 0.65
     },
     "BZ=F": {
       "available": true,
       "date": "2026-10-27",
-      "last": 110.98,
-      "pct_1d": -4.17
+      "last": 111.34,
+      "pct_1d": -3.86
     },
     "GC=F": {
       "available": true,
       "date": "2026-10-27",
-      "last": 4012.7,
-      "pct_1d": -0.64
+      "last": 4006.3,
+      "pct_1d": -0.79
     },
     "DXY": {
       "available": true,
       "date": "2026-10-27",
       "source": "DX-Y.NYB",
-      "pct_1d": 0.28,
-      "pct_1m": 1.03
+      "pct_1d": 0.29,
+      "pct_1m": 1.04
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-10-27",
-      "last": 7713.25,
-      "pct_1d": -0.02
+      "last": 7708.25,
+      "pct_1d": -0.08
     },
     "NQ=F": {
       "available": true,
       "date": "2026-10-27",
-      "last": 29432.5,
-      "pct_1d": -0.02
+      "last": 29410.25,
+      "pct_1d": -0.09
     }
   },
   "finviz_futures_tape": {
@@ -526,35 +526,38 @@
         "FTSE": {
           "available": true,
           "date": "2026-10-27",
-          "last": 10677.87,
-          "pct_1d": -0.83
+          "last": 10671.0,
+          "pct_1d": -0.89
         },
         "DAX": {
           "available": true,
           "date": "2026-10-27",
-          "last": 25416.37,
-          "pct_1d": 0.02
+          "last": 25390.95,
+          "pct_1d": -0.08
         },
         "CAC": {
           "available": true,
           "date": "2026-10-27",
-          "last": 7853.53,
-          "pct_1d": 0.08
+          "last": 7849.61,
+          "pct_1d": 0.03
         },
         "EuroStoxx50": {
           "available": true,
           "date": "2026-10-27",
-          "last": 6115.56,
-          "pct_1d": -0.01
+          "last": 6108.49,
+          "pct_1d": -0.13
         }
       },
-      "composite_avg": -0.18
+      "composite_avg": -0.27
     }
   },
   "etf_premarket": {
     "XLB": {
-      "available": false,
-      "prev_close": 51.400001525878906
+      "available": true,
+      "prev_close": 51.4,
+      "last": 51.38,
+      "as_of": "2026-10-27T06:05:00-04:00",
+      "pct_vs_prev_close": -0.04
     },
     "XLC": {
       "available": true,
@@ -566,9 +569,9 @@
     "XLE": {
       "available": true,
       "prev_close": 69.64,
-      "last": 69.66,
-      "as_of": "2026-10-27T05:50:00-04:00",
-      "pct_vs_prev_close": 0.03
+      "last": 69.67,
+      "as_of": "2026-10-27T06:09:40-04:00",
+      "pct_vs_prev_close": 0.04
     },
     "XLF": {
       "available": true,
@@ -587,16 +590,16 @@
     "XLK": {
       "available": true,
       "prev_close": 186.32,
-      "last": 186.45,
-      "as_of": "2026-10-27T06:00:00-04:00",
-      "pct_vs_prev_close": 0.07
+      "last": 186.17,
+      "as_of": "2026-10-27T06:18:20-04:00",
+      "pct_vs_prev_close": -0.08
     },
     "XLP": {
       "available": true,
       "prev_close": 87.99,
-      "last": 87.83,
-      "as_of": "2026-10-27T05:51:36-04:00",
-      "pct_vs_prev_close": -0.18
+      "last": 87.76,
+      "as_of": "2026-10-27T06:12:29-04:00",
+      "pct_vs_prev_close": -0.26
     },
     "XLRE": {
       "available": false,
@@ -605,9 +608,9 @@
     "XLU": {
       "available": true,
       "prev_close": 42.56,
-      "last": 42.62,
-      "as_of": "2026-10-27T05:57:28-04:00",
-      "pct_vs_prev_close": 0.13
+      "last": 42.61,
+      "as_of": "2026-10-27T06:05:00-04:00",
+      "pct_vs_prev_close": 0.11
     },
     "XLV": {
       "available": true,
@@ -619,9 +622,9 @@
     "XLY": {
       "available": true,
       "prev_close": 114.28,
-      "last": 114.39,
-      "as_of": "2026-10-27T05:51:38-04:00",
-      "pct_vs_prev_close": 0.1
+      "last": 114.25,
+      "as_of": "2026-10-27T06:06:39-04:00",
+      "pct_vs_prev_close": -0.03
     }
   },
   "yield_spx_corr": {
