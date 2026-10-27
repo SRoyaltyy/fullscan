@@ -1,80 +1,128 @@
 {
   "date": "2026-10-27",
-  "generated_at": "2026-10-27T07:06:59.541999-04:00",
+  "generated_at": "2026-10-27T07:50:49.671428-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
-    "ok": 2,
-    "partial": 3,
-    "fail": 3,
+    "ok": 6,
+    "partial": 1,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [
     {
-      "ticker": "SGRY",
-      "score": 0.8184899287798255
+      "ticker": "CDNA",
+      "score": 0.8940566036157818
     },
     {
-      "ticker": "CON",
-      "score": 0.7856556108017361
+      "ticker": "SN",
+      "score": 0.4807725869143047
     },
     {
-      "ticker": "ASTH",
-      "score": 0.7698427137515671
+      "ticker": "VEEV",
+      "score": 0.46786125233643583
     },
     {
-      "ticker": "AMN",
-      "score": 0.7601225205328173
-    },
-    {
-      "ticker": "MD",
-      "score": 0.7136370354701527
+      "ticker": "BLFS",
+      "score": 0.8458674143942335
     },
     {
       "ticker": "PACS",
-      "score": 0.8897415602437082
+      "score": 0.8486720452675756
     },
     {
-      "ticker": "NTAP",
-      "score": 0.2457235287083414
+      "ticker": "CBRL",
+      "score": 0.8081895966908326
     },
     {
-      "ticker": "MQ",
-      "score": 0.669637729713904
+      "ticker": "SHOO",
+      "score": 0.7678252989703935
+    },
+    {
+      "ticker": "FIGS",
+      "score": 0.7424185570707151
+    },
+    {
+      "ticker": "LAUR",
+      "score": 0.5501012970022603
+    },
+    {
+      "ticker": "VLO",
+      "score": 0.1814231585646559
+    },
+    {
+      "ticker": "COP",
+      "score": 0.5358607504097501
+    },
+    {
+      "ticker": "CHEF",
+      "score": 0.49315497714049245
+    },
+    {
+      "ticker": "PEB",
+      "score": 0.5064495333727987
     }
   ],
   "sell_1d": [
     {
+      "ticker": "JBLU",
+      "score": -0.3393930632051787
+    },
+    {
+      "ticker": "SKHY",
+      "score": -0.33600227455737885
+    },
+    {
+      "ticker": "SOC",
+      "score": -0.3053738868080149
+    },
+    {
+      "ticker": "BAK",
+      "score": -0.3041697331480477
+    },
+    {
       "ticker": "NEOV",
-      "score": -0.3382345098478818
+      "score": -0.30368099451158354
     },
     {
-      "ticker": "OKLO",
-      "score": -0.1551178862039319
+      "ticker": "VNET",
+      "score": -0.3010077099433638
     },
     {
-      "ticker": "FCEL",
-      "score": -0.22098003297586954
+      "ticker": "INTC",
+      "score": -0.2932544995057852
     },
     {
-      "ticker": "NNDM",
-      "score": -0.15600921227997644
+      "ticker": "CMTG",
+      "score": -0.29296262559600167
     },
     {
-      "ticker": "POWL",
-      "score": -0.14175373160434052
+      "ticker": "GFL",
+      "score": -0.28903333825739286
     },
     {
-      "ticker": "EOSE",
-      "score": -0.23807806406733173
+      "ticker": "AU",
+      "score": -0.28218550094266065
     },
     {
-      "ticker": "NRGV",
-      "score": -0.28846115631301994
+      "ticker": "SSTK",
+      "score": -0.28174115940615413
     },
     {
-      "ticker": "INDI",
-      "score": -0.1588387358995833
+      "ticker": "SSP",
+      "score": -0.279360190260411
+    },
+    {
+      "ticker": "ROIV",
+      "score": -0.2792125390033606
+    },
+    {
+      "ticker": "BIDU",
+      "score": -0.26993584514462693
+    },
+    {
+      "ticker": "PAL",
+      "score": -0.259877352848013
     }
   ],
   "flatten": {
@@ -85,7 +133,18 @@
       "morning S missing"
     ]
   },
-  "general": {},
+  "general": {
+    "said": "UP  5.515",
+    "bullets": [
+      "bad: FOMC binary pending",
+      "bad: MSFT/GOOGL earnings after close",
+      "bad: bitcoin below $80k",
+      "good: Anthropic IPO lifts AI/semis sentiment",
+      "good: oil retreats from $117 on Iran diplomacy"
+    ],
+    "score": "5.515",
+    "direction": "up"
+  },
   "sectors": {},
   "lands": [
     {
