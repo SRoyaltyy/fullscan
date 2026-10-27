@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "generated_at": "2026-10-27T14:49:55.270898-04:00",
+  "generated_at": "2026-10-27T15:12:25.520137-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -540,8 +540,8 @@
           "path": "01_daily/weather/2026-10-27_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10129 vix=calm yields=rising",
-          "size": 10129,
+          "reason": "sectors=11 bytes=9869 vix=falling yields=flat",
+          "size": 9869,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
@@ -759,8 +759,8 @@
           "path": "01_daily/weather/2026-10-27_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10129 vix=calm yields=rising",
-          "size": 10129,
+          "reason": "sectors=11 bytes=9869 vix=falling yields=flat",
+          "size": 9869,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities",
@@ -787,10 +787,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2293969,
-          "said": "206 rows",
+          "size": 2287474,
+          "said": "204 rows",
           "bullets": [
-            "ARQT, EXEL, REGN, HRMY, BFLY, CDNA, SYRE, NUTX"
+            "ARQT, AVAH, HALO, LLY, HRMY, BFLY, CDNA, DXCM"
           ]
         },
         {
@@ -812,9 +812,9 @@
           "path": "data/stock_book/2026-10-27_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=180",
-          "size": 1384282,
-          "said": "1d BUY CDNA, VEEV, SN, BLFS, ILMN, SHOO, FIGS, CBRL \u00b7 SELL JBLU, SKHY, INTC, SOC, CMTG, VNET \u00b7 0.61285",
+          "reason": "horizons=5 names=190",
+          "size": 1418050,
+          "said": "1d BUY CDNA, SN, VEEV, BLFS, PACS, CBRL, SHOO, FIGS \u00b7 SELL JBLU, SKHY, SOC, BAK, NEOV, VNET \u00b7 0.61285",
           "bullets": []
         },
         {
@@ -824,10 +824,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 63876,
+          "size": 70491,
           "said": "Stock book \u2014 2026-10-27",
           "bullets": [
-            "_Generated 2026-10-27T14:49:24.501857-04:00_",
+            "_Generated 2026-10-27T15:12:22.787533-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -838,8 +838,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2325,
-          "said": "144 green \u00b7 ARQT, EXEL, CDNA, CORT, ADMA, INCY, VEEV, PTGX, WAY, ILMN",
+          "size": 2424,
+          "said": "153 green \u00b7 ARQT, CDNA, CORT, WAY, INCY, VEEV, EXEL, PTGX, BTSG, ADMA",
           "bullets": []
         },
         {
@@ -868,9 +868,9 @@
           "bullets": []
         }
       ],
-      "said": "206 rows",
+      "said": "204 rows",
       "bullets": [
-        "ARQT, EXEL, REGN, HRMY, BFLY"
+        "ARQT, AVAH, HALO, LLY, HRMY"
       ]
     },
     {
@@ -890,9 +890,9 @@
           "path": "data/stock_book/2026-10-27_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=180",
-          "size": 1384282,
-          "said": "1d BUY CDNA, VEEV, SN, BLFS, ILMN, SHOO, FIGS, CBRL \u00b7 SELL JBLU, SKHY, INTC, SOC, CMTG, VNET \u00b7 0.61285",
+          "reason": "horizons=5 names=190",
+          "size": 1418050,
+          "said": "1d BUY CDNA, SN, VEEV, BLFS, PACS, CBRL, SHOO, FIGS \u00b7 SELL JBLU, SKHY, SOC, BAK, NEOV, VNET \u00b7 0.61285",
           "bullets": []
         },
         {
@@ -945,106 +945,114 @@
         "score": 0.8940566036157818
       },
       {
-        "ticker": "VEEV",
-        "score": 0.46786125233643583
+        "ticker": "SN",
+        "score": 0.4807725869143047
       },
       {
-        "ticker": "SN",
-        "score": 0.4752717833517317
+        "ticker": "VEEV",
+        "score": 0.46786125233643583
       },
       {
         "ticker": "BLFS",
         "score": 0.8458674143942335
       },
       {
-        "ticker": "ILMN",
-        "score": 0.4736525636364405
-      },
-      {
-        "ticker": "SHOO",
-        "score": 0.7651791377577839
-      },
-      {
-        "ticker": "FIGS",
-        "score": 0.7423320564619411
+        "ticker": "PACS",
+        "score": 0.8486720452675756
       },
       {
         "ticker": "CBRL",
-        "score": 0.7800498826468065
+        "score": 0.8081895966908326
+      },
+      {
+        "ticker": "SHOO",
+        "score": 0.7678252989703935
+      },
+      {
+        "ticker": "FIGS",
+        "score": 0.7424185570707151
+      },
+      {
+        "ticker": "LAUR",
+        "score": 0.5501012970022603
+      },
+      {
+        "ticker": "VLO",
+        "score": 0.1814231585646559
       },
       {
         "ticker": "COP",
-        "score": 0.5775164274477067
-      },
-      {
-        "ticker": "LRN",
-        "score": 0.5453703309885176
+        "score": 0.5358607504097501
       },
       {
         "ticker": "CHEF",
-        "score": 0.4288584433835128
+        "score": 0.49315497714049245
+      },
+      {
+        "ticker": "PEB",
+        "score": 0.5064495333727987
       }
     ],
     "sell_1d": [
       {
         "ticker": "JBLU",
-        "score": -0.34491567712686266
+        "score": -0.3393930632051787
       },
       {
         "ticker": "SKHY",
-        "score": -0.3314421865317672
-      },
-      {
-        "ticker": "INTC",
-        "score": -0.3270314537248353
+        "score": -0.33600227455737885
       },
       {
         "ticker": "SOC",
-        "score": -0.3136821750998653
-      },
-      {
-        "ticker": "CMTG",
-        "score": -0.3023467526264217
-      },
-      {
-        "ticker": "VNET",
-        "score": -0.3011437702251296
+        "score": -0.3053738868080149
       },
       {
         "ticker": "BAK",
-        "score": -0.30021298725434536
+        "score": -0.3041697331480477
       },
       {
         "ticker": "NEOV",
-        "score": -0.29876580016354
+        "score": -0.30368099451158354
+      },
+      {
+        "ticker": "VNET",
+        "score": -0.3010077099433638
+      },
+      {
+        "ticker": "INTC",
+        "score": -0.2932544995057852
+      },
+      {
+        "ticker": "CMTG",
+        "score": -0.29296262559600167
       },
       {
         "ticker": "GFL",
-        "score": -0.2971055925334446
+        "score": -0.28903333825739286
       },
       {
-        "ticker": "SSP",
-        "score": -0.2934166337993451
+        "ticker": "AU",
+        "score": -0.28218550094266065
       },
       {
         "ticker": "SSTK",
-        "score": -0.2784378582916249
+        "score": -0.28174115940615413
       },
       {
-        "ticker": "PCT",
-        "score": -0.27441698473307774
+        "ticker": "SSP",
+        "score": -0.279360190260411
       },
       {
         "ticker": "ROIV",
-        "score": -0.27372998234577894
+        "score": -0.2792125390033606
       },
       {
         "ticker": "BIDU",
-        "score": -0.27102028072256307
+        "score": -0.26993584514462693
       },
       {
-        "ticker": "BWXT",
-        "score": -0.26451110170226333
+        "ticker": "PAL",
+        "score": -0.259877352848013
       }
     ],
     "flatten": {
@@ -4465,6 +4473,30 @@
       "commit_msg": "auto: stock book leftover sweep",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "40562501151",
+      "manifest": "research/input_freeze/2026-10-27/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-27_stock_book.md",
+      "at": "2026-10-27T15:12:53-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-27",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40563486542",
+      "manifest": "research/input_freeze/2026-10-27/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-27_input_health.json",
+      "at": "2026-10-27T15:12:53-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-27",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40563486542",
+      "manifest": "research/input_freeze/2026-10-27/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-27_stock_book.json",
+      "at": "2026-10-27T15:12:53-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-27",
+      "workflow": "Publish strategy tickets",
+      "run_id": "40563486542",
       "manifest": "research/input_freeze/2026-10-27/manifest.json"
     }
   ]
