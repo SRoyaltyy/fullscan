@@ -1,8 +1,8 @@
 {
  "strategy": "updown_rel1_hv_v1",
  "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
- "days_locked": 15,
- "days_realized": 13,
+ "days_locked": 16,
+ "days_realized": 14,
  "days_missed": 0,
  "missed_dates": [],
  "rule": {
@@ -11,29 +11,29 @@
   "missed": "Missed days (not frozen before 09:25 ET) are recorded in MISSED.jsonl, never back-filled, and earn nothing."
  },
  "gross": {
-  "cum": 0.0625437692,
-  "mean_bp": 49.6052075504,
-  "t_nw": 1.1357919671
+  "cum": 0.0752626814,
+  "mean_bp": 54.6121554763,
+  "t_nw": 1.2990442338
  },
  "net5": {
-  "cum": 0.0448021512,
-  "mean_bp": 36.6359767812,
-  "t_nw": 0.8274612729
+  "cum": 0.0556715396,
+  "mean_bp": 41.4550126192,
+  "t_nw": 0.9750403919
  },
  "net10": {
-  "cum": 0.0273334143,
-  "mean_bp": 23.666746012,
-  "t_nw": 0.5273338429
+  "cum": 0.0364112766,
+  "mean_bp": 28.297869762,
+  "t_nw": 0.6581395449
  },
  "net15": {
-  "cum": 0.010133719,
-  "mean_bp": 10.6975152427,
-  "t_nw": 0.235167415
+  "cum": 0.0174767428,
+  "mean_bp": 15.1407269049,
+  "t_nw": 0.3482084372
  },
  "hedged_net10": {
-  "cum": -0.0748207026,
-  "mean_bp": -57.2411481483,
-  "t_nw": -1.150687523
+  "cum": -0.0549243284,
+  "mean_bp": -37.983258028,
+  "t_nw": -0.7088918046
  },
  "iwm_oo1": {
   "cum": null,
@@ -41,14 +41,14 @@
   "t_nw": null
  },
  "rand_med_net10": {
-  "cum": -0.0438355546,
-  "mean_bp": -34.4206181532,
-  "t_nw": -40.3371317975
+  "cum": -0.0471739466,
+  "mean_bp": -34.4558878316,
+  "t_nw": -43.9317486781
  },
- "best_stock": "PURR",
- "best_stock_contrib": 0.0083357587,
- "net10_ex_best_cum": 0.0189658179,
- "mean_turnover": 2.5938461538,
- "status": "collecting (13 realized days; kill check from day 20/60, promotion review not before day 120)",
+ "best_stock": "TTMI",
+ "best_stock_contrib": 0.0092849057,
+ "net10_ex_best_cum": 0.0270451358,
+ "mean_turnover": 2.6314285714,
+ "status": "collecting (14 realized days; kill check from day 20/60, promotion review not before day 120)",
  "killed": false
 }
