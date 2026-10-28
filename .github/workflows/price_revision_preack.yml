@@ -1,0 +1,51 @@
+name: Price revision pre-ack (before h1 seal)
+# ~07:30 ET weekdays, before the h1 seal (13:05 UTC cron / morning chain).
+# GitHub cron is UTC and ignores DST: 11:30 UTC = 07:30 EDT, 12:30 UTC =
+# 07:30 EST (08:30 EDT). Both run; the second is a no-op if nothing new.
+# Appends ONLY add-only lines to each book's price_revision_acks.jsonl,
+# under Cyrus's standing approval (2026-10-20 / 2026-10-21 08:29 HKT).
+# Never touches sealed logs, ledgers or stored bars.
+on:
+  schedule:
+    - cron: "30 11 * * 1-5"
+    - cron: "30 12 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Print acks, write nothing"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: price-revision-preack
+  cancel-in-progress: false
+jobs:
+  preack:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy pandas pyarrow yfinance
+      - name: Detect sealed-bar Yahoo revisions and ack
+        run: |
+          set -euo pipefail
+          ARGS=""
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then ARGS="--dry-run"; fi
+          PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/preack_revisions.py $ARGS
+      - name: Push acks
+        if: github.event.inputs.dry_run != 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- research/hot_n4_clean_v4/forward/price_revision_acks.jsonl research/hot_n4_clean_v4/forward_h1/price_revision_acks.jsonl; then
+            echo "no new acks"; exit 0
+          fi
+          bash scripts/safe_git_push.sh \
+            "acks: add-only pre-seal price-revision acks $(TZ=America/New_York date +%F) (standing approval) [skip ci]" \
+            research/hot_n4_clean_v4/forward/price_revision_acks.jsonl \
+            research/hot_n4_clean_v4/forward_h1/price_revision_acks.jsonl
